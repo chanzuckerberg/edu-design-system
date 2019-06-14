@@ -1,0 +1,23 @@
+{
+  "name": "lp-design-system",
+  "version": "1.0.0",
+  "description": "Learning Platform Design System",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chanzuckerberg/lp-design-system.git"
+  },
+  "keywords": [
+    "CZI",
+    "Learning Platform"
+  ],
+  "author": "CZI",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chanzuckerberg/lp-design-system/issues"
+  },
+  "homepage": "https://github.com/chanzuckerberg/lp-design-system#readme"
+}
