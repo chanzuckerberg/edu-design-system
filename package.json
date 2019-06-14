@@ -4,7 +4,10 @@
   "description": "Learning Platform Design System",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "start-storybook -p $PORT --ci",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p $PORT",
+    "build-storybook": "build-storybook"
   },
   "repository": {
     "type": "git",
@@ -19,5 +22,14 @@
   "bugs": {
     "url": "https://github.com/chanzuckerberg/lp-design-system/issues"
   },
-  "homepage": "https://github.com/chanzuckerberg/lp-design-system#readme"
+  "homepage": "https://github.com/chanzuckerberg/lp-design-system#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@storybook/addon-actions": "^5.1.8",
+    "@storybook/addon-links": "^5.1.8",
+    "@storybook/addons": "^5.1.8",
+    "@storybook/react": "^5.1.8",
+    "babel-loader": "^8.0.6"
+  }
 }
