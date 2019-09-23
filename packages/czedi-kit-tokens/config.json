@@ -1,0 +1,48 @@
+{
+  "source": ["properties/**/*.json"],
+  "platforms": {
+    "scss": {
+      "transformGroup": "scss",
+      "buildPath": "dist/scss/",
+      "files": [{
+        "destination": "_variables.scss",
+        "format": "scss/variables"
+      }]
+    },
+    "css": {
+      "transformGroup": "css",
+      "buildPath": "dist/css/",
+      "files": [
+        {
+          "format": "css/variables",
+          "destination": "variables.css"
+        }
+      ]
+    },
+    "js": {
+      "transformGroup": "js",
+      "buildPath": "dist/js/",
+      "files": [
+        {
+          "format": "javascript/es6",
+          "destination": "colors.js",
+          "filter": {
+            "attributes": {
+              "category": "color"
+            }
+          }
+        }
+      ]
+    },
+    "json": {
+      "transformGroup": "js",
+      "buildPath": "dist/json/",
+      "files": [
+        {
+          "format": "json/flat",
+          "destination": "variables.json"
+        }
+      ]
+    }
+  }
+}
