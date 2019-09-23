@@ -1,0 +1,27 @@
+{
+  "name": "@chanzuckerberg/czedi-kit-tokens",
+  "version": "0.0.0",
+  "description": "Design tokens czedi-kit packages",
+  "keywords": [
+    "design",
+    "system"
+  ],
+  "author": "Devin Witherspoon <dcwither@gmail.com>",
+  "homepage": "https://github.com/chanzuckerberg/lp-design-system/tree/master/packages/czedi-kit-tokens#readme",
+  "license": "UNLICENSED",
+  "main": "src/index.js",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/",
+    "access": "restricted"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chanzuckerberg/lp-design-system.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/chanzuckerberg/lp-design-system/issues"
+  }
+}

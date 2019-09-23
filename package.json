@@ -1,6 +1,6 @@
 {
-  "name": "lp-design-system",
-  "version": "1.0.0",
+  "name": "@chanzuckerberg/czedi-kit",
+  "version": "0.0.0",
   "description": "Learning Platform Design System",
   "main": "index.js",
   "scripts": {
@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/chanzuckerberg/lp-design-system/issues"
   },
-  "homepage": "https://github.com/chanzuckerberg/lp-design-system#readme"
+  "homepage": "https://github.com/chanzuckerberg/lp-design-system#readme",
+  "devDependencies": {
+    "lerna": "^3.16.4"
+  }
 }
