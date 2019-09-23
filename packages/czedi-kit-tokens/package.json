@@ -19,9 +19,12 @@
     "url": "git+https://github.com/chanzuckerberg/lp-design-system.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "build": "style-dictionary build"
   },
   "bugs": {
     "url": "https://github.com/chanzuckerberg/lp-design-system/issues"
+  },
+  "devDependencies": {
+    "style-dictionary": "^2.8.2"
   }
 }

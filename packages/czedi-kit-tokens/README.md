@@ -1,11 +1,5 @@
-# `@chanzuckerberg/czedi-kit-tokens`
+## @chanzuckerberg/czedi-kit-tokens
 
-> TODO: description
+Built with https://github.com/amzn/style-dictionary
 
-## Usage
-
-```
-const czediKitTokens = require('@chanzuckerberg/czedi-kit-tokens');
-
-// TODO: DEMONSTRATE API
-```
+`czedi-kit-tokens` contains all the design tokens to be used by czedi-kit packages.
