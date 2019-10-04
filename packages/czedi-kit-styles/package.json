@@ -1,7 +1,6 @@
 {
   "name": "@chanzuckerberg/czedi-kit-styles",
   "version": "0.0.0",
-  "private": true,
   "description": "Styles for czedi-kit components",
   "keywords": [
     "design system",
@@ -13,7 +12,8 @@
   "homepage": "https://github.com/chanzuckerberg/lp-design-system/tree/master/packages/czedi-kit-styles#readme",
   "license": "UNLICENSED",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/",
+    "access": "restricted"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,9 @@
   "scripts": {
     "build": "npm run build:clean && npm run build:css",
     "build:clean": "rm -rf dist/",
-    "build:css": "npx postcss src/*.scss src/*/[a-z\\-]*.scss --no-map --ext=css --dir=dist/ --base=src/"
+    "build:css": "npx postcss src/*.scss src/*/[a-z\\-]*.scss --no-map --ext=css --dir=dist/ --base=src/",
+    "lint": "npx stylelint src/",
+    "lint:fix": "npm run lint -- --fix"
   },
   "bugs": {
     "url": "https://github.com/chanzuckerberg/lp-design-system/issues"
@@ -36,6 +38,8 @@
     "postcss-cli": "^6.1.3",
     "postcss-prefixer": "^2.1.1",
     "postcss-preset-env": "^6.7.0",
-    "postcss-scss": "^2.0.0"
+    "postcss-scss": "^2.0.0",
+    "stylelint": "^11.0.0",
+    "stylelint-config-standard": "^19.0.0"
   }
 }
