@@ -1,0 +1,8 @@
+@import './variables.scss';
+// @import '@chanzuckerberg/czedi-kit-tokens/dist/scss/variables.scss';
+
+.button {
+  // color: $color-base-gray-light;
+  margin: $local-variable;
+  padding: 20px;
+}
