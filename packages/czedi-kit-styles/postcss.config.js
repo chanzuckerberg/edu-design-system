@@ -1,13 +1,16 @@
 module.exports = {
   parser: 'postcss-scss',
-  
+
   plugins: [
-    require('@csstools/postcss-sass'),
+    require('@csstools/postcss-sass')({
+      includePaths: ["./node_modules"]
+    }),
     require('postcss-prefixer')({
       prefix: 'czedi-'
     }),
     require('postcss-preset-env')({
       stage: 3,
-    })
+    }),
+    require('cssnano')
   ]
 }
