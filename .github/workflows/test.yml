@@ -1,0 +1,28 @@
+name: Test CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [8.x, 10.x, 12.x]
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: npm install, lint, test, and build
+      run: |
+        npm install
+        npx lerna bootstrap
+        npx lerna run lint
+        npx lerna run test #currently no tests
+        npx lerna run build
+      env:
+        CI: true
