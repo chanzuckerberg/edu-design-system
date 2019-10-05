@@ -21,7 +21,7 @@ jobs:
       run: |
         npm install
         npx lerna bootstrap
-        npx lerna run lint
+        npm run lint
         npx lerna run test #currently no tests
         npx lerna run build
       env:
