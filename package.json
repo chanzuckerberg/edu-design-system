@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "npm run lint:styles",
     "lint:fix": "npm run lint:styles:fix",
-    "lint:styles": "stylelint \"packages/*/!(dist|node_modules)/**/*.scss\"",
+    "lint:styles": "stylelint packages",
     "lint:styles:fix": "npm run lint:styles -- --fix"
   },
   "repository": {

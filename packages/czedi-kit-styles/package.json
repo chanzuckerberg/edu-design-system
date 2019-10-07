@@ -20,9 +20,11 @@
     "url": "git+https://github.com/chanzuckerberg/lp-design-system.git"
   },
   "scripts": {
-    "build": "npm run build:clean && npm run build:css",
+    "build": "npm run build:css",
     "build:clean": "rm -rf dist/",
-    "build:css": "npx postcss src/*.scss src/*/[a-z\\-]*.scss --no-map --ext=css --dir=dist/ --base=src/"
+    "build:css": "npx postcss src/*.scss src/*/[a-z\\-]*.scss --no-map --ext=css --dir=dist/ --base=src/",
+    "build:prod": "npm run build:clean && NODE_ENV=production  npm run build:css",
+    "build:watch": "npm run build:css -- --watch"
   },
   "bugs": {
     "url": "https://github.com/chanzuckerberg/lp-design-system/issues"
@@ -36,6 +38,7 @@
     "postcss-cli": "^6.1.3",
     "postcss-prefixer": "^2.1.1",
     "postcss-preset-env": "^6.7.0",
+    "postcss-rtl": "^1.5.0",
     "postcss-scss": "^2.0.0"
   }
 }
