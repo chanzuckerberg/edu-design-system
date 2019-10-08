@@ -1,4 +1,4 @@
-name: Test CI
+name: Static Checks
 
 on: [push]
 
@@ -8,7 +8,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [8.x, 10.x, 12.x]
+        node-version: [10.x]
 
     steps:
       - uses: actions/checkout@v1
@@ -20,11 +20,6 @@ jobs:
         run: |
           npm install
           npx lerna bootstrap
-      - name: Run Tests
+      - name: Run Linters
         run: |
-          npx lerna run test #currently no tests
-      - name: Run Build
-        env:
-          NODE_ENV: production
-        run: |
-          npx lerna run build
+          npm run lint

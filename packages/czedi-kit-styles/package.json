@@ -20,10 +20,9 @@
     "url": "git+https://github.com/chanzuckerberg/lp-design-system.git"
   },
   "scripts": {
-    "build": "npm run build:css",
+    "build": "npm run build:clean && npm run build:css",
     "build:clean": "rm -rf dist/",
     "build:css": "npx postcss src/*.scss src/*/[a-z\\-]*.scss --no-map --ext=css --dir=dist/ --base=src/",
-    "build:prod": "npm run build:clean && NODE_ENV=production  npm run build:css",
     "build:watch": "npm run build:css -- --watch"
   },
   "bugs": {
