@@ -1,0 +1,34 @@
+{
+  "name": "@chanzuckerberg/czedi-kit-components",
+  "version": "0.0.0",
+  "description": "React components for czedi-kit",
+  "keywords": [
+    "\"design",
+    "system\"",
+    "\"components\""
+  ],
+  "author": "Devin Witherspoon <dcwither@gmail.com>",
+  "homepage": "https://github.com/chanzuckerberg/lp-design-system/tree/master/packages/czedi-kit-components#readme",
+  "license": "UNLICENSED",
+  "main": "src/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chanzuckerberg/lp-design-system.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/chanzuckerberg/lp-design-system/issues"
+  }
+}
