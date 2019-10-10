@@ -4,7 +4,10 @@
   "description": "Learning Platform Design System",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "npm run lint:styles",
+    "lint:fix": "npm run lint:styles:fix",
+    "lint:styles": "stylelint packages",
+    "lint:styles:fix": "npm run lint:styles -- --fix"
   },
   "repository": {
     "type": "git",
@@ -15,12 +18,14 @@
     "Learning Platform"
   ],
   "author": "CZI",
-  "license": "MIT",
+  "license": "UNLICENSED",
   "bugs": {
     "url": "https://github.com/chanzuckerberg/lp-design-system/issues"
   },
   "homepage": "https://github.com/chanzuckerberg/lp-design-system#readme",
   "devDependencies": {
-    "lerna": "^3.16.4"
+    "lerna": "^3.16.4",
+    "stylelint": "^11.0.0",
+    "stylelint-config-standard": "^19.0.0"
   }
 }

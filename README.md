@@ -11,6 +11,18 @@ npm install
 npx lerna bootstrap
 ```
 
+### Linting
+
+```bash
+npm run lint
+```
+
+or to fix any issues
+
+```bash
+npm run lint:fix
+```
+
 ### Build Packages
 
 To build all packages you can run
@@ -18,6 +30,7 @@ To build all packages you can run
 ```bash
 npx lerna run build
 ```
+
 
 ### Adding a new package
 
