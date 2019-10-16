@@ -3,9 +3,8 @@
   "version": "0.0.0",
   "description": "React components for czedi-kit",
   "keywords": [
-    "\"design",
-    "system\"",
-    "\"components\""
+    "design system",
+    "components"
   ],
   "author": "Devin Witherspoon <dcwither@gmail.com>",
   "homepage": "https://github.com/chanzuckerberg/lp-design-system/tree/master/packages/czedi-kit-components#readme",
