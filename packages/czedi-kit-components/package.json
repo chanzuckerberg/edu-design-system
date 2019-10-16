@@ -35,11 +35,17 @@
     "@babel/core": "^7.6.4",
     "@storybook/addon-a11y": "^5.2.3",
     "@storybook/addon-actions": "^5.2.3",
+    "@storybook/addon-info": "^5.2.4",
     "@storybook/addon-links": "^5.2.3",
     "@storybook/addons": "^5.2.3",
     "@storybook/react": "^5.2.3",
+    "@types/storybook__addon-info": "^4.1.2",
+    "@types/storybook__react": "^4.0.2",
     "babel-loader": "^8.0.6",
     "react": "^16.10.2",
-    "react-dom": "^16.10.2"
+    "react-docgen-typescript-loader": "^3.3.0",
+    "react-dom": "^16.10.2",
+    "ts-loader": "^6.2.0",
+    "typescript": "^3.6.4"
   }
 }
