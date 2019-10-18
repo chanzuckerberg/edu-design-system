@@ -4,10 +4,12 @@
   "description": "Learning Platform Design System",
   "main": "index.js",
   "scripts": {
-    "lint": "npm run lint:styles",
-    "lint:fix": "npm run lint:styles:fix",
+    "lint": "npm run lint:styles && npm run lint:scripts",
+    "lint:fix": "npm run lint:styles:fix && npm run lint:scripts:fix",
     "lint:styles": "stylelint packages",
-    "lint:styles:fix": "npm run lint:styles -- --fix"
+    "lint:styles:fix": "npm run lint:styles -- --fix",
+    "lint:scripts": "eslint --ext=js,jsx,ts,tsx .",
+    "lint:scripts:fix": "npm run lint:scripts -- --fix"
   },
   "repository": {
     "type": "git",
@@ -24,8 +26,16 @@
   },
   "homepage": "https://github.com/chanzuckerberg/lp-design-system#readme",
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.4.0",
+    "@typescript-eslint/parser": "^2.4.0",
+    "eslint": "^6.5.1",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.16.0",
     "lerna": "^3.16.4",
+    "prettier": "^1.18.2",
     "stylelint": "^11.0.0",
-    "stylelint-config-standard": "^19.0.0"
+    "stylelint-config-standard": "^19.0.0",
+    "typescript": "^3.6.4"
   }
 }

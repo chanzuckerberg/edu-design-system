@@ -7,11 +7,11 @@ export default {
   component: Button
 };
 
-export const text = () => (
+export const text = (): JSX.Element => (
   <Button onClick={action("clicked")}>Hello Button</Button>
 );
 
-export const emoji = () => (
+export const emoji = (): JSX.Element => (
   <Button onClick={action("clicked")}>
     <span aria-label="so cool">😀 😎 👍 💯</span>
   </Button>
