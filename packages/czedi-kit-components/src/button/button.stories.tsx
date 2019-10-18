@@ -4,7 +4,7 @@ import Button from "./button";
 
 export default {
   title: "Button",
-  component: Button,
+  component: Button
 };
 
 export const text = (): JSX.Element => (
