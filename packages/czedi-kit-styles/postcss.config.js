@@ -3,15 +3,15 @@ module.exports = ({ env }) => ({
 
   plugins: [
     require("@csstools/postcss-sass")({
-      includePaths: ["./node_modules"]
+      includePaths: ["./node_modules"],
     }),
     require("postcss-prefixer")({
-      prefix: "czedi-"
+      prefix: "czedi-",
     }),
     require("postcss-preset-env")({
-      stage: 3
+      stage: 3,
     }),
     require("postcss-rtl"),
-    ...(env === "production" ? [require("cssnano")] : [])
-  ]
+    ...(env === "production" ? [require("cssnano")] : []),
+  ],
 });
