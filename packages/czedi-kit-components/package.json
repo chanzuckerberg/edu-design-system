@@ -20,7 +20,8 @@
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "test": "jest"
+    "test": "jest",
+    "test:ci": "npm run test -- --ci"
   },
   "bugs": {
     "url": "https://github.com/chanzuckerberg/lp-design-system/issues"
