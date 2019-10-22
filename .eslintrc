@@ -22,6 +22,14 @@
     {
       "files": ["*.ts", "*.tsx"],
       "extends": ["plugin:@typescript-eslint/recommended"]
+    },
+    {
+      "files": ["*.spec.ts", "*.spec.tsx"],
+      "plugins": ["jest"],
+      "extends": ["plugin:jest/recommended"],
+      "env": {
+        "jest/globals": true
+      }
     }
   ]
 }
