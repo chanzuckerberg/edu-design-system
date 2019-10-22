@@ -9,7 +9,8 @@
     "lint:styles": "stylelint packages",
     "lint:styles:fix": "npm run lint:styles -- --fix",
     "lint:scripts": "eslint --ext=js,jsx,ts,tsx .",
-    "lint:scripts:fix": "npm run lint:scripts -- --fix"
+    "lint:scripts:fix": "npm run lint:scripts -- --fix",
+    "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx}\""
   },
   "repository": {
     "type": "git",
@@ -33,10 +34,28 @@
     "eslint-plugin-jest": "^22.19.0",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.16.0",
+    "husky": "^3.0.9",
     "lerna": "^3.16.4",
+    "lint-staged": "^9.4.2",
     "prettier": "^1.18.2",
     "stylelint": "^11.0.0",
     "stylelint-config-standard": "^19.0.0",
     "typescript": "^3.6.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ],
+    "*.scss": [
+      "stylelint --fix",
+      "git add"
+    ]
   }
 }
