@@ -1,0 +1,51 @@
+{
+  "name": "@chanzuckerberg/czedi-kit-components",
+  "version": "0.0.0",
+  "description": "React components for czedi-kit",
+  "keywords": [
+    "design system",
+    "components"
+  ],
+  "author": "Devin Witherspoon <dcwither@gmail.com>",
+  "homepage": "https://github.com/chanzuckerberg/lp-design-system/tree/master/packages/czedi-kit-components#readme",
+  "license": "UNLICENSED",
+  "main": "dist/index.js",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chanzuckerberg/lp-design-system.git"
+  },
+  "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "bugs": {
+    "url": "https://github.com/chanzuckerberg/lp-design-system/issues"
+  },
+  "peerDependencies": {
+    "react": ">= 16.8.0"
+  },
+  "dependencies": {
+    "@chanzuckerberg/czedi-kit-styles": "^0.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@storybook/addon-a11y": "^5.2.3",
+    "@storybook/addon-actions": "^5.2.3",
+    "@storybook/addon-docs": "^5.2.4",
+    "@storybook/addon-links": "^5.2.3",
+    "@storybook/addons": "^5.2.3",
+    "@storybook/preset-typescript": "^1.1.0",
+    "@storybook/react": "^5.2.3",
+    "@types/storybook__addon-info": "^4.1.2",
+    "@types/storybook__react": "^4.0.2",
+    "babel-loader": "^8.0.6",
+    "react": "^16.10.2",
+    "react-docgen-typescript-loader": "^3.3.0",
+    "react-dom": "^16.10.2",
+    "ts-loader": "^6.2.0",
+    "typescript": "^3.6.4"
+  }
+}
