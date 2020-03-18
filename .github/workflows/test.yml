@@ -22,9 +22,9 @@ jobs:
           npx lerna bootstrap
       - name: Run Tests
         run: |
-          npx lerna run test:ci
+          npx lerna run test:ci --stream
       - name: Run Build
         env:
           NODE_ENV: production
         run: |
-          npx lerna run build
+          npx lerna run build --stream
