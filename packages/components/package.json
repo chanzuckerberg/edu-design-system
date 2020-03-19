@@ -11,15 +11,21 @@
   "license": "UNLICENSED",
   "main": "dist/index.js",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/",
+    "access": "restricted",
+    "directory": "dist/"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/chanzuckerberg/lp-design-system.git"
   },
   "scripts": {
+    "build": "npm run build:clean && npm run build:ts -- --sourceMap false",
+    "build:clean": "rm -rf dist/",
+    "build:ts": "tsc -project . --rootDir src/ ",
+    "build:watch": "npm run build:ts -- --watch",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "build:storybook": "build-storybook",
     "test": "jest",
     "test:ci": "npm run test -- --ci"
   },
@@ -44,8 +50,6 @@
     "@testing-library/react": "^9.3.0",
     "@types/jest": "^24.0.19",
     "@types/jest-axe": "^3.2.0",
-    "@types/storybook__addon-info": "^4.1.2",
-    "@types/storybook__react": "^4.0.2",
     "babel-loader": "^8.0.6",
     "jest": "^24.9.0",
     "jest-axe": "^3.2.0",
