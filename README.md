@@ -1,4 +1,5 @@
-## lp-design-system
+# lp-design-system 
+![Test CI](https://github.com/chanzuckerberg/lp-design-system/workflows/Test%20CI/badge.svg)
 
 This is the Learning Platform Design System or `@chanzuckerberg/czedi-kit` (working title).
 
