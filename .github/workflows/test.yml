@@ -1,9 +1,9 @@
-name: Test CI
+name: Node.js CI
 
-on: [push]
+on: push
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
 
     strategy:
@@ -11,20 +11,72 @@ jobs:
         node-version: [8.x, 10.x, 12.x]
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Install Dependencies
+
+      - name: Install Dependencies ⬆️
         run: |
-          npm install
+          npm ci
           npx lerna bootstrap
-      - name: Run Tests
-        run: |
-          npx lerna run test:ci --stream
-      - name: Run Build
+
+      - name: Run CI Tests ✅
+        run: npx lerna run test:ci --stream
         env:
-          NODE_ENV: production
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+          CI: true
+
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install Dependencies ⬆️
         run: |
-          npx lerna run build --stream
+          npm ci
+          npx lerna bootstrap
+
+      - name: Build Dist 🔧
+        run: npx lerna run build --stream
+
+      - name: Build Storybook 🔧
+        run: npx lerna run build:storybook
+
+  lint:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install Dependencies ⬆️
+        run: |
+          npm ci
+          npx lerna bootstrap
+
+      - name: Lint Commit Messages 👕
+        uses: wagoid/commitlint-github-action@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Lint Javascript + SCSS 👕
+        run: npm run lint

@@ -27,7 +27,7 @@
     "storybook": "start-storybook -p 6006",
     "build:storybook": "build-storybook",
     "test": "jest",
-    "test:ci": "npm run test -- --ci"
+    "test:ci": "npm run test -- --ci --coverage && cat ./coverage/lcov.info | codecov"
   },
   "bugs": {
     "url": "https://github.com/chanzuckerberg/lp-design-system/issues"
@@ -39,6 +39,9 @@
     "@chanzuckerberg/czedi-kit-styles": "^0.0.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@commitlint/prompt-cli": "^8.3.5",
     "@babel/core": "^7.6.4",
     "@storybook/addon-a11y": "^5.2.3",
     "@storybook/addon-actions": "^5.2.3",
