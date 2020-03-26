@@ -50,7 +50,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-push": "npm test",
+      "pre-push": "lerna run test --stream",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
