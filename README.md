@@ -5,7 +5,7 @@ This is the Learning Platform Design System or `@chanzuckerberg/czedi-kit` (work
 
 ## Development
 
-### Instalation
+### Installation
 
 ```bash
 npm install
