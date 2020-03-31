@@ -10,8 +10,22 @@
     "lint:styles:fix": "npm run lint:styles -- --fix",
     "lint:scripts": "eslint --ext=js,jsx,ts,tsx .",
     "lint:scripts:fix": "npm run lint:scripts -- --fix",
-    "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx}\""
+    "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx}\"",
+    "size-build": "lerna run build",
+    "size-install": "npm install && lerna bootstrap"
   },
+  "size-limit": [
+    {
+      "path": "packages/components/dist/**/*.js",
+      "limit": "70KB",
+      "webpack": false
+    },
+    {
+      "path": "packages/styles/dist/all.css",
+      "limit": "30KB",
+      "webpack": false
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/chanzuckerberg/lp-design-system.git"
@@ -30,6 +44,7 @@
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
     "@commitlint/prompt-cli": "^8.3.5",
+    "@size-limit/preset-small-lib": "^4.4.2",
     "@typescript-eslint/eslint-plugin": "^2.4.0",
     "@typescript-eslint/parser": "^2.4.0",
     "codecov": "^3.6.5",
@@ -43,6 +58,7 @@
     "lerna": "^3.18.3",
     "lint-staged": "^9.4.2",
     "prettier": "^1.18.2",
+    "size-limit": "^4.4.2",
     "stylelint": "^13.2.1",
     "stylelint-config-standard": "^19.0.0",
     "typescript": "^3.6.4"
