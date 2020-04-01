@@ -2,9 +2,10 @@ module.exports = ({ env }) => ({
   parser: "postcss-scss",
 
   plugins: [
-    require("@csstools/postcss-sass")({
-      includePaths: ["./node_modules"],
+    require("postcss-import")({
+      addModulesDirectories: ["node_modules"],
     }),
+    require("@csstools/postcss-sass")(),
     require("postcss-prefixer")({
       prefix: "czedi-",
     }),

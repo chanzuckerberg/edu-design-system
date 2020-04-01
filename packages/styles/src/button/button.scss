@@ -1,5 +1,5 @@
-@import "./variables";
-@import "@chanzuckerberg/czedi-kit-tokens/scss/variables.scss";
+@import "./_variables.scss";
+@import "@chanzuckerberg/czedi-kit-tokens/scss/_variables.scss";
 
 .button {
   color: $color-base-gray-light;
