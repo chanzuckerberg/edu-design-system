@@ -6,6 +6,7 @@ module.exports = ({ env }) => ({
       addModulesDirectories: ["node_modules"],
     }),
     require("@csstools/postcss-sass")(),
+    require("tailwindcss"),
     require("postcss-prefixer")({
       prefix: "czedi-",
     }),

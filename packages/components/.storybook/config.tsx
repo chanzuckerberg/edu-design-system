@@ -1,3 +1,4 @@
+import "@chanzuckerberg/czedi-kit-styles/normalize.css";
 import "@chanzuckerberg/czedi-kit-styles/all.css";
 
 import * as React from "react";

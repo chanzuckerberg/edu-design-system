@@ -6,7 +6,9 @@ describe("<Button />", () => {
   it("renders the component", () => {
     const { container } = render(text());
     expect(container.firstChild).toMatchInlineSnapshot(`
-      <button>
+      <button
+        class="czedi-btn "
+      >
         Hello Button
       </button>
     `);
