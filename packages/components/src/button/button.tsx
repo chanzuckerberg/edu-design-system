@@ -6,7 +6,8 @@ function Button(
     HTMLButtonElement
   >
 ): JSX.Element {
-  return <button {...props}></button>;
+  const { className = "", ...rest } = props;
+  return <button className={`czedi-btn ${className}`} {...rest}></button>;
 }
 
 export default Button;

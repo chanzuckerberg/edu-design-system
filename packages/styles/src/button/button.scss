@@ -1,11 +1,10 @@
 @import "./_variables.scss";
 @import "@chanzuckerberg/czedi-kit-tokens/scss/_variables.scss";
 
-.button {
-  color: $color-base-gray-light;
-  margin: $local-variable;
-  padding: 20px;
-  // test rtlcss
-  text-align: left;
-  float: left;
+.btn {
+  @apply font-bold py-2 px-4 rounded bg-blue-500 text-white;
+}
+
+.btn:hover {
+  @apply bg-blue-700;
 }
