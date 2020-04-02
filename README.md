@@ -24,6 +24,12 @@ or to fix any issues
 npm run lint:fix
 ```
 
+### Run Locally
+
+```
+npm start
+```
+
 ### Build Packages
 
 To build all packages you can run

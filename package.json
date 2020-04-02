@@ -12,7 +12,8 @@
     "lint:scripts:fix": "npm run lint:scripts -- --fix",
     "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx}\"",
     "size-build": "lerna run build",
-    "size-install": "npm install && lerna bootstrap"
+    "size-install": "npm install && lerna bootstrap",
+    "start": "lerna run build && lerna run start --parallel"
   },
   "size-limit": [
     {
