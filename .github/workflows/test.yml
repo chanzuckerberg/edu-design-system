@@ -52,6 +52,11 @@ jobs:
 
       - name: Build Storybook 🔧
         run: npx lerna run build:storybook
+        
+      - name: Percy Snapshots 📸
+        run: npx lerna run snapshot
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
 
   lint:
     runs-on: ubuntu-latest
