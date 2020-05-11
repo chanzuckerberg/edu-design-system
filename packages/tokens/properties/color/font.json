@@ -1,9 +1,14 @@
 {
   "color": {
     "font": {
-      "base"     : { "value": "{color.base.red.value}" },
-      "secondary": { "value": "{color.base.green.value}" },
-      "tertiary" : { "value": "{color.base.gray.light.value}" }
+      "base": { 
+        "value": "{color.legacy.black.value}",
+        "comment": "Color for all standard typography in a light background" 
+      },
+      "link": { 
+        "value": "{color.legacy.purple.300.value}",
+        "comment": "Color for all standard links" 
+      }
     }
   }
 }
