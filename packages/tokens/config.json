@@ -6,7 +6,7 @@
       "buildPath": "dist/scss/",
       "files": [{
         "destination": "_variables.scss",
-        "format": "scss/variables"
+        "format": "scss/map-deep"
       }]
     },
     "css": {
@@ -41,6 +41,10 @@
         {
           "format": "json/flat",
           "destination": "variables.json"
+        },
+        {
+          "format": "json/nested",
+          "destination": "variables-nested.json"
         }
       ]
     }

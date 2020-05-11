@@ -1,21 +1,43 @@
 {
   "size": {
     "font": {
-      "small" : {
-        "value": "0.75",
-        "comment": "the small size of the font"
+      "heading-1": {
+        "value": "1.5rem",
+        "comment": "Font size for Heading 1 sized text"
+      },
+      "heading-2": {
+        "value": "1.125rem",
+        "comment": "Font size for Heading 2 sized text"
       },
       "medium": {
-        "value": "1",
-        "comment": "the medium size of the font"
+        "value": "1rem",
+        "comment": "Font size for medium text"
       },
-      "large" : {
-        "value": "2",
-        "comment": "the large size of the font"
+      "small": {
+        "value": "0.875rem",
+        "comment": "Font size for small text"
       },
-      "base"  : {
-        "value": "{size.font.medium.value}",
-        "comment": "the base size of the font"
+      "base": {
+        "value": "16px",
+        "comment": "Base font size for design system in px"
+      }
+    },
+    "line-height": {
+      "heading-1": {
+        "value": "2rem",
+        "comment": "Line height for Heading 1 sized text"
+      },
+      "heading-2": {
+        "value": "1.75rem",
+        "comment": "Line height for Heading 2 sized text"
+      },
+      "medium": {
+        "value": "1rem",
+        "comment": "Line height for medium text"
+      },
+      "small": {
+        "value": "0.875rem",
+        "comment": "Line height for small text"
       }
     }
   }
