@@ -1,21 +1,28 @@
 import { axe } from "jest-axe";
 import { render } from "@testing-library/react";
-import { text } from "./button.stories";
+import { variants } from "./button.stories";
 
 describe("<Button />", () => {
   it("renders the component", () => {
-    const { container } = render(text());
+    const { container } = render(variants());
     expect(container.firstChild).toMatchInlineSnapshot(`
-      <button
-        class="czedi-btn "
-      >
-        Hello Button
-      </button>
+      <div>
+        <button
+          class="czedi-btn czedi-btn-primary"
+        >
+          Hello Button
+        </button>
+        <button
+          class="czedi-btn czedi-btn-secondary"
+        >
+          Secondary Button
+        </button>
+      </div>
     `);
   });
 
   it("passes accessibility checks", async () => {
-    const { container } = render(text());
+    const { container } = render(variants());
     const results = await axe(container);
     expect(results).toHaveNoViolations();
   });

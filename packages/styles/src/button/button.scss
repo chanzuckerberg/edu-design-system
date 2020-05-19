@@ -1,10 +1,20 @@
-@import "./_variables.scss";
-@import "@chanzuckerberg/czedi-kit-tokens/scss/_variables.scss";
-
 .btn {
-  @apply font-bold py-2 px-4 rounded bg-blue-500 text-white;
+  @apply font-bold py-2 px-4 rounded text-white;
 }
 
-.btn:hover {
-  @apply bg-blue-700;
+.btn,
+.btn-primary {
+  @apply bg-blue-300;
+
+  &:hover {
+    @apply bg-blue-400;
+  }
+}
+
+.btn-secondary {
+  @apply bg-gray-600;
+
+  &:hover {
+    @apply bg-gray-800;
+  }
 }

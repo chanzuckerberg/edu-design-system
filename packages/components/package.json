@@ -39,7 +39,8 @@
   },
   "dependencies": {
     "@chanzuckerberg/czedi-kit-styles": "^0.0.0",
-    "@chanzuckerberg/czedi-kit-tokens": "^0.0.0"
+    "@chanzuckerberg/czedi-kit-tokens": "^0.0.0",
+    "classnames": "^2.2.6"
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",
