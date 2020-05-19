@@ -1,0 +1,44 @@
+import { Meta, Preview } from "@storybook/addon-docs/blocks";
+
+import TokenTable from "../docs/token-table.tsx";
+import tokens from "@chanzuckerberg/czedi-kit-tokens/json/variables-nested.json";
+
+import "./tokens.stories.scss";
+
+<Meta title="Tokens" />
+
+# Design Tokens
+
+## Legacy Colors
+
+export const mapLegacyColorToTokenArray = color => {
+  return Object.keys(tokens.color.legacy[color]).map(shade => ({
+    name: `$color-legacy-${color}-${shade}`,
+    value: tokens.color.legacy[color][shade],
+  }));
+};
+
+<TokenTable
+  tokens={[
+    // Neutral Colors In Order
+    {
+      name: "$color-legacy-white",
+      value: tokens.color.legacy.white,
+    },
+    ...mapLegacyColorToTokenArray("gray"),
+    {
+      name: "$color-legacy-black",
+      value: tokens.color.legacy.black,
+    },
+    // Remaining Colors
+    ...["red", "green", "blue", "yellow", "purple"]
+      .map(mapLegacyColorToTokenArray)
+      .flat(),
+  ]}
+  renderExample={(name, value) => (
+    <div
+      className="color-token-example-block"
+      style={{ backgroundColor: value }}
+    />
+  )}
+/>

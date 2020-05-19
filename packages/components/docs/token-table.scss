@@ -1,0 +1,13 @@
+.token-table {
+  border-collapse: separate;
+  border-spacing: 3em 0.5em;
+  text-align: left;
+
+  tbody th {
+    font-weight: normal;
+  }
+
+  td {
+    font-family: monospace;
+  }
+}
