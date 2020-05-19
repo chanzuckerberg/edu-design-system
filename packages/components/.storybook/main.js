@@ -1,8 +1,6 @@
 module.exports = {
-  addons: [
-    "@storybook/addon-docs/react/preset",
-    "@storybook/preset-typescript",
-  ],
+  stories: ["../src/*.stories.mdx", "../src/**/*.stories.(ts|tsx|mdx)"],
+  addons: ["@storybook/preset-typescript", "@storybook/addon-docs"],
   webpackFinal: config => {
     return {
       ...config,
