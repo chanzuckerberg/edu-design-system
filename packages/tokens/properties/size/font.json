@@ -2,19 +2,19 @@
   "legacy": {
     "size": {
       "font": {
-        "heading-1": {
+        "xl": {
           "value": "1.5rem",
           "comment": "Font size for Heading 1 sized text"
         },
-        "heading-2": {
+        "lg": {
           "value": "1.125rem",
           "comment": "Font size for Heading 2 sized text"
         },
-        "medium": {
+        "md": {
           "value": "1rem",
           "comment": "Font size for medium text"
         },
-        "small": {
+        "sm": {
           "value": "0.875rem",
           "comment": "Font size for small text"
         },
@@ -24,19 +24,19 @@
         }
       },
       "line-height": {
-        "heading-1": {
+        "xl": {
           "value": "2rem",
           "comment": "Line height for Heading 1 sized text"
         },
-        "heading-2": {
+        "lg": {
           "value": "1.75rem",
           "comment": "Line height for Heading 2 sized text"
         },
-        "medium": {
+        "md": {
           "value": "1rem",
           "comment": "Line height for medium text"
         },
-        "small": {
+        "sm": {
           "value": "0.875rem",
           "comment": "Line height for small text"
         }
