@@ -4,10 +4,12 @@
     "scss": {
       "transformGroup": "scss",
       "buildPath": "dist/scss/",
-      "files": [{
-        "destination": "_variables.scss",
-        "format": "scss/map-deep"
-      }]
+      "files": [
+        {
+          "destination": "_variables.scss",
+          "format": "scss/map-deep"
+        }
+      ]
     },
     "css": {
       "transformGroup": "css",
@@ -28,7 +30,7 @@
           "destination": "colors.js",
           "filter": {
             "attributes": {
-              "category": "color"
+              "type": "color"
             }
           }
         }
