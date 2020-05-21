@@ -4,15 +4,15 @@
   "description": "Learning Platform Design System",
   "main": "index.js",
   "scripts": {
+    "build": "NODE_ENV=production lerna run build",
     "lint": "npm run lint:styles && npm run lint:scripts",
     "lint:fix": "npm run lint:styles:fix && npm run lint:scripts:fix",
     "lint:styles": "stylelint packages",
     "lint:styles:fix": "npm run lint:styles -- --fix",
     "lint:scripts": "eslint --ext=js,jsx,ts,tsx .",
     "lint:scripts:fix": "npm run lint:scripts -- --fix",
+    "postinstall": "lerna bootstrap",
     "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx}\"",
-    "size-build": "NODE_ENV=production lerna run build",
-    "size-install": "npm install && lerna bootstrap",
     "start": "lerna run build && lerna run start --parallel"
   },
   "size-limit": [
