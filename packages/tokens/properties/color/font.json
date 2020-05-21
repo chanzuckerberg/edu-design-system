@@ -1,13 +1,15 @@
 {
-  "color": {
-    "font": {
-      "base": { 
-        "value": "{color.legacy.black.value}",
-        "comment": "Color for all standard typography in a light background" 
-      },
-      "link": { 
-        "value": "{color.legacy.purple.300.value}",
-        "comment": "Color for all standard links" 
+  "legacy": {
+    "color": {
+      "font": {
+        "base": {
+          "value": "{legacy.color.black.value}",
+          "comment": "Color for all standard typography in a light background"
+        },
+        "link": {
+          "value": "{legacy.color.purple.300.value}",
+          "comment": "Color for all standard links"
+        }
       }
     }
   }

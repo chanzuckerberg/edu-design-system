@@ -2,7 +2,7 @@ const tokens = require("@chanzuckerberg/czedi-kit-tokens/json/variables-nested.j
 
 module.exports = {
   theme: {
-    colors: tokens.color.legacy,
+    colors: tokens.legacy.color,
     extend: {},
   },
   variants: {},

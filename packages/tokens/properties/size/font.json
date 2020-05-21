@@ -1,43 +1,45 @@
 {
-  "size": {
-    "font": {
-      "heading-1": {
-        "value": "1.5rem",
-        "comment": "Font size for Heading 1 sized text"
+  "legacy": {
+    "size": {
+      "font": {
+        "heading-1": {
+          "value": "1.5rem",
+          "comment": "Font size for Heading 1 sized text"
+        },
+        "heading-2": {
+          "value": "1.125rem",
+          "comment": "Font size for Heading 2 sized text"
+        },
+        "medium": {
+          "value": "1rem",
+          "comment": "Font size for medium text"
+        },
+        "small": {
+          "value": "0.875rem",
+          "comment": "Font size for small text"
+        },
+        "base": {
+          "value": "16px",
+          "comment": "Base font size for design system in px"
+        }
       },
-      "heading-2": {
-        "value": "1.125rem",
-        "comment": "Font size for Heading 2 sized text"
-      },
-      "medium": {
-        "value": "1rem",
-        "comment": "Font size for medium text"
-      },
-      "small": {
-        "value": "0.875rem",
-        "comment": "Font size for small text"
-      },
-      "base": {
-        "value": "16px",
-        "comment": "Base font size for design system in px"
-      }
-    },
-    "line-height": {
-      "heading-1": {
-        "value": "2rem",
-        "comment": "Line height for Heading 1 sized text"
-      },
-      "heading-2": {
-        "value": "1.75rem",
-        "comment": "Line height for Heading 2 sized text"
-      },
-      "medium": {
-        "value": "1rem",
-        "comment": "Line height for medium text"
-      },
-      "small": {
-        "value": "0.875rem",
-        "comment": "Line height for small text"
+      "line-height": {
+        "heading-1": {
+          "value": "2rem",
+          "comment": "Line height for Heading 1 sized text"
+        },
+        "heading-2": {
+          "value": "1.75rem",
+          "comment": "Line height for Heading 2 sized text"
+        },
+        "medium": {
+          "value": "1rem",
+          "comment": "Line height for medium text"
+        },
+        "small": {
+          "value": "0.875rem",
+          "comment": "Line height for small text"
+        }
       }
     }
   }

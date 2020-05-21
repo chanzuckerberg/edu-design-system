@@ -12,9 +12,9 @@ import "./tokens.stories.scss";
 ## Legacy Colors
 
 export const mapLegacyColorToTokenArray = color => {
-  return Object.keys(tokens.color.legacy[color]).map(shade => ({
-    name: `$color-legacy-${color}-${shade}`,
-    value: tokens.color.legacy[color][shade],
+  return Object.keys(tokens.legacy.color[color]).map(shade => ({
+    name: `$legacy-color-${color}-${shade}`,
+    value: tokens.legacy.color[color][shade],
   }));
 };
 
@@ -22,13 +22,13 @@ export const mapLegacyColorToTokenArray = color => {
   tokens={[
     // Neutral Colors In Order
     {
-      name: "$color-legacy-white",
-      value: tokens.color.legacy.white,
+      name: "$legacy-color-white",
+      value: tokens.legacy.color.white,
     },
     ...mapLegacyColorToTokenArray("gray"),
     {
-      name: "$color-legacy-black",
-      value: tokens.color.legacy.black,
+      name: "$legacy-color-black",
+      value: tokens.legacy.color.black,
     },
     // Remaining Colors
     ...["red", "green", "blue", "yellow", "purple"]
