@@ -4,10 +4,10 @@
 
 .btn,
 .btn-primary {
-  @apply bg-blue-300;
+  @apply bg-blue-200;
 
   &:hover {
-    @apply bg-blue-400;
+    @apply bg-blue-300;
   }
 }
 
