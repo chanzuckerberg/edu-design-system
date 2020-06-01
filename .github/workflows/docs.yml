@@ -1,0 +1,36 @@
+name: Deploy Docs
+
+on: 
+  push:
+    branches:
+      - master
+
+jobs:
+
+  deploy_docs:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install Dependencies ⬆️
+        run: |
+          npm ci
+          npx lerna bootstrap
+
+      - name: Build Dist 🔧
+        run: npx lerna run build --stream
+
+      - name: Deploy Storybook Docs 🚀
+        run: npx lerna run deploy:docs
+        env:
+          GH_TOKEN: "${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}"
+      
