@@ -8,11 +8,11 @@
   ],
   "author": "Devin Witherspoon <dcwither@gmail.com>",
   "homepage": "https://github.com/chanzuckerberg/lp-design-system/tree/master/packages/czedi-kit-tokens#readme",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "main": "src/index.js",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/",
-    "access": "restricted",
+    "access": "public",
     "directory": "dist/"
   },
   "repository": {

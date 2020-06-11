@@ -10,7 +10,7 @@
   ],
   "author": "Devin Witherspoon <dcwither@gmail.com>",
   "homepage": "https://github.com/chanzuckerberg/lp-design-system/tree/master/packages/czedi-kit-styles#readme",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/",
     "access": "restricted",

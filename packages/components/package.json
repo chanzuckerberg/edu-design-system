@@ -8,7 +8,7 @@
   ],
   "author": "Devin Witherspoon <dcwither@gmail.com>",
   "homepage": "https://github.com/chanzuckerberg/lp-design-system/tree/master/packages/czedi-kit-components#readme",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "main": "dist/index.js",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/",
