@@ -1,9 +1,15 @@
-# lp-design-system 
+# lp-design-system
 ![Test CI](https://github.com/chanzuckerberg/lp-design-system/workflows/Test%20CI/badge.svg)
 
 This is the Learning Platform Design System or `@chanzuckerberg/czedi-kit` (working title).
 
 ## Development
+
+### Node
+
+Install the version of node specified in the `.nvmrc` file.
+
+If using [nvm](https://github.com/nvm-sh/nvm), this can be done by running `nvm install`. If the correct version is already installed, `nvm use` will switch to it.
 
 ### Installation
 
