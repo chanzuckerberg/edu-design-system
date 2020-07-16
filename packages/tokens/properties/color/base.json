@@ -2,6 +2,7 @@
   "legacy": {
     "color": {
       "gray": {
+        "50": { "value": "#F8F9FC" },
         "100": { "value": "#EBEBEC" },
         "200": { "value": "#D8D8D9" },
         "300": { "value": "#C5C5C6" },
@@ -14,7 +15,7 @@
         "1000": { "value": "#3F4041" }
       },
       "black": { "value": "#2C2D2E" },
-      "white": { "value": "#F8F9FC" },
+      "white": { "value": "#FFFFFF" },
       "red": {
         "100": { "value": "#F7DDDD" },
         "200": { "value": "#F15252" },
