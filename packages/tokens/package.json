@@ -11,21 +11,23 @@
   "license": "MIT",
   "main": "src/index.js",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/",
     "access": "public",
-    "directory": "dist/"
+    "directory": "dist/",
+    "registry": "https://registry.npmjs.org/"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/chanzuckerberg/lp-design-system.git"
   },
   "scripts": {
-    "build": "style-dictionary build"
+    "build": "style-dictionary build",
+    "prepack": "npm run build && cp ./package.json dist/"
   },
   "bugs": {
     "url": "https://github.com/chanzuckerberg/lp-design-system/issues"
   },
   "devDependencies": {
     "style-dictionary": "^2.8.2"
-  }
+  },
+  "gitHead": "901f254d36753d6d754dcbc996399a9db536fc13"
 }
