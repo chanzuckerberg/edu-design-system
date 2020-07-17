@@ -11,9 +11,9 @@
   "license": "MIT",
   "main": "dist/index.js",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/",
     "access": "restricted",
-    "directory": "dist/"
+    "directory": "dist/",
+    "registry": "https://registry.npmjs.org/"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,7 @@
     "build:watch": "npm run build:ts -- --watch",
     "build:storybook": "build-storybook",
     "deploy:docs": "storybook-to-ghpages --ci",
+    "prepack": "npm run build && cp ./package.json dist/",
     "snapshot": "percy-storybook --widths=320,1280",
     "storybook": "start-storybook -p 6006",
     "start": "npm run storybook",
@@ -71,5 +72,6 @@
     "ts-jest": "^24.1.0",
     "ts-loader": "^6.2.0",
     "typescript": "^3.6.4"
-  }
+  },
+  "gitHead": "901f254d36753d6d754dcbc996399a9db536fc13"
 }

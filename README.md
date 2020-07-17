@@ -50,7 +50,6 @@ This isn't something we'll be doing every day
 
 ```bash
 npx lerna create '@chanzuckerberg/czedi-kit-<package-name>' \
-  --registry="https://npm.pkg.github.com/" \
   --access="restricted" \
   --license="UNLICENSED"
 ```
