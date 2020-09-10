@@ -42,6 +42,6 @@
     "postcss-preset-env": "^6.7.0",
     "postcss-rtl": "^1.5.0",
     "postcss-scss": "^2.0.0",
-    "tailwindcss": "^1.2.0"
+    "tailwindcss": "^1.8.6"
   }
 }
