@@ -1,6 +1,6 @@
 {
   "name": "@chanzuckerberg/czedi-kit-styles",
-  "version": "0.0.1-alpha.1",
+  "version": "0.0.1-alpha.2",
   "description": "Styles for czedi-kit components",
   "keywords": [
     "design system",
@@ -32,7 +32,7 @@
     "url": "https://github.com/chanzuckerberg/lp-design-system/issues"
   },
   "dependencies": {
-    "@chanzuckerberg/czedi-kit-tokens": "^0.0.1-alpha.1"
+    "@chanzuckerberg/czedi-kit-tokens": "^0.0.1-alpha.2"
   },
   "devDependencies": {
     "@csstools/postcss-sass": "^4.0.0",
@@ -45,5 +45,5 @@
     "postcss-scss": "^2.0.0",
     "tailwindcss": "^1.2.0"
   },
-  "gitHead": "901f254d36753d6d754dcbc996399a9db536fc13"
+  "gitHead": "8680dac1fa3c685e2a35f80d9ceb157f5f5343bd"
 }
