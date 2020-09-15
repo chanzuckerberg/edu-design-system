@@ -30,6 +30,7 @@
     "snapshot": "percy-storybook --widths=320,1280",
     "storybook": "start-storybook -p 6006",
     "storybook:axe": "build-storybook && axe-storybook",
+    "storybook:axe-no-build": "axe-storybook",
     "start": "npm run storybook",
     "test": "jest",
     "test:ci": "npm run test -- --ci --coverage && cat ./coverage/lcov.info | codecov"

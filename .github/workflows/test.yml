@@ -52,11 +52,17 @@ jobs:
 
       - name: Build Storybook 🔧
         run: npx lerna run build:storybook
-        
+
       - name: Percy Snapshots 📸
         run: npx lerna run snapshot
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+
+      - name: Install dependencies needed for A11y testing
+        run: sudo apt-get install ffmpeg
+
+      - name: A11y Testing ❤️
+        run: npx lerna run storybook:axe-no-build --stream
 
   lint:
     runs-on: ubuntu-latest
