@@ -9,10 +9,46 @@ import "./tokens.stories.scss";
 
 # Design Tokens
 
-## Legacy Colors
+## EDS Colors
 
-export const mapLegacyColorToTokenArray = color => {
-  return Object.keys(tokens.legacy.color[color]).map(shade => ({
+export const mapEDSColorToTokenArray = (color) => {
+  return Object.keys(tokens.eds.color[color])
+    .sort((shade1, shade2) => shade1.localeCompare(shade2))
+    .map((shade) => ({
+      name: `$eds-color-${color}-${shade}`,
+      value: tokens.eds.color[color][shade],
+    }));
+};
+
+<TokenTable
+  tokens={[
+    // Neutral Colors In Order
+    {
+      name: "$eds-color-white",
+      value: tokens.eds.color.white,
+    },
+    ...mapEDSColorToTokenArray("neutral"),
+    {
+      name: "$eds-color-black",
+      value: tokens.eds.color.black,
+    },
+    // Remaining Colors
+    ...["alert", "warning", "success", "info", "brand", "highlight"]
+      .map(mapEDSColorToTokenArray)
+      .flat(),
+  ]}
+  renderExample={(name, value) => (
+    <div
+      className="color-token-example-block"
+      style={{ backgroundColor: value }}
+    />
+  )}
+/>
+
+## Legacy (Claro) Colors
+
+export const mapLegacyColorToTokenArray = (color) => {
+  return Object.keys(tokens.legacy.color[color]).map((shade) => ({
     name: `$legacy-color-${color}-${shade}`,
     value: tokens.legacy.color[color][shade],
   }));
