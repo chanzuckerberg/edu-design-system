@@ -13,7 +13,7 @@
     "lint:scripts:fix": "npm run lint:scripts -- --fix",
     "postinstall": "lerna bootstrap",
     "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx}\"",
-    "start": "lerna run build && lerna run start --parallel"
+    "start": "lerna run build --ignore=@chanzuckerberg/czedi-kit-components && lerna run start --parallel"
   },
   "size-limit": [
     {
