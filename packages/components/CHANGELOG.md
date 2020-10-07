@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.1-alpha.4](https://github.com/chanzuckerberg/lp-design-system/compare/v0.0.1-alpha.2...v0.0.1-alpha.4) (2020-10-07)
+
+
+### Features
+
+* **colors:** add eds colors to tokens ([c17a4fa](https://github.com/chanzuckerberg/lp-design-system/commit/c17a4fa084b7e89a587829b2a320e71f82b4a9dc))
+
+
+
+
+
 ## 0.0.1-alpha.2 (2020-09-11)
 
 

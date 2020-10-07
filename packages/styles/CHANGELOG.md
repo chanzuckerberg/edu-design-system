@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.1-alpha.4](https://github.com/chanzuckerberg/lp-design-system/compare/v0.0.1-alpha.2...v0.0.1-alpha.4) (2020-10-07)
+
+**Note:** Version bump only for package @chanzuckerberg/czedi-kit-styles
+
+
+
+
+
 ## 0.0.1-alpha.2 (2020-09-11)
 
 
