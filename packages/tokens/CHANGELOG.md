@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.1-alpha.5](https://github.com/chanzuckerberg/lp-design-system/compare/v0.0.1-alpha.4...v0.0.1-alpha.5) (2020-10-19)
+
+
+### Features
+
+* **tokens:** replace eds token numbers ([59b3552](https://github.com/chanzuckerberg/lp-design-system/commit/59b355274973098315ba0bd531a760c2a0d9499e))
+
+
+
+
+
 ## [0.0.1-alpha.4](https://github.com/chanzuckerberg/lp-design-system/compare/v0.0.1-alpha.2...v0.0.1-alpha.4) (2020-10-07)
 
 
