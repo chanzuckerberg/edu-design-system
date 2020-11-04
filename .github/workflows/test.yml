@@ -52,7 +52,7 @@ jobs:
 
       - name: Build Storybook 🔧
         run: npx lerna run build:storybook
-        
+
       - name: Percy Snapshots 📸
         run: npx lerna run snapshot
         env:
@@ -85,3 +85,25 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Lint Javascript + SCSS 👕
         run: npm run lint
+
+  typecheck:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install Dependencies ⬆️
+        run: |
+          npm ci
+          npx lerna bootstrap
+      - name: Run TypeScript type checking ✅
+        run: npx lerna run typecheck --stream
