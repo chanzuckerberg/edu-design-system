@@ -20,9 +20,10 @@
     "url": "git+https://github.com/chanzuckerberg/lp-design-system.git"
   },
   "scripts": {
-    "build": "npm run build:clean && npm run build:ts -- --sourceMap false",
+    "build": "npm run build:clean && npm run build:ts && npm run build:types",
     "build:clean": "rm -rf dist/",
-    "build:ts": "tsc -project . --rootDir src/ ",
+    "build:ts": "babel --extensions '.js,.ts,.tsx' --ignore '**/*.stories.tsx','**/*.spec.tsx' --out-dir dist/ src/",
+    "build:types": "npm run tsc -- --emitDeclarationOnly --outDir dist/",
     "build:watch": "npm run build:ts -- --watch",
     "build:storybook": "build-storybook",
     "deploy:docs": "storybook-to-ghpages --ci",
@@ -31,7 +32,9 @@
     "storybook": "start-storybook -p 6006",
     "start": "npm run storybook",
     "test": "jest",
-    "test:ci": "npm run test -- --ci --coverage && cat ./coverage/lcov.info | codecov"
+    "test:ci": "npm run test -- --ci --coverage && cat ./coverage/lcov.info | codecov",
+    "tsc": "tsc -project . --rootDir src/",
+    "typecheck": "npm run tsc -- --noEmit"
   },
   "bugs": {
     "url": "https://github.com/chanzuckerberg/lp-design-system/issues"
@@ -45,7 +48,11 @@
     "classnames": "^2.2.6"
   },
   "devDependencies": {
-    "@babel/core": "^7.6.4",
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-react": "^7.12.5",
+    "@babel/preset-typescript": "^7.12.1",
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
     "@commitlint/prompt-cli": "^8.3.5",
@@ -61,6 +68,7 @@
     "@testing-library/react": "^9.3.0",
     "@types/jest": "^24.0.19",
     "@types/jest-axe": "^3.2.0",
+    "babel-jest": "^26.6.3",
     "babel-loader": "^8.0.6",
     "jest": "^24.9.0",
     "jest-axe": "^3.2.0",
@@ -69,8 +77,7 @@
     "react-docgen-typescript-loader": "^3.3.0",
     "react-dom": "^16.10.2",
     "sass-loader": "^8.0.2",
-    "ts-jest": "^24.1.0",
-    "ts-loader": "^6.2.0",
+    "ts-loader": "^8.0.9",
     "typescript": "^4.0.5"
   },
   "gitHead": "8680dac1fa3c685e2a35f80d9ceb157f5f5343bd"

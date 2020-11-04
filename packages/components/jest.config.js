@@ -5,7 +5,4 @@ module.exports = {
   clearMocks: true,
   setupFilesAfterEnv: ["jest-axe/extend-expect"],
   coverageDirectory: "coverage",
-  transform: {
-    "^.+\\.tsx?$": "ts-jest",
-  },
 };
