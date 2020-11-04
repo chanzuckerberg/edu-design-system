@@ -7,11 +7,11 @@ type ButtonProps = React.DetailedHTMLProps<
   React.ButtonHTMLAttributes<HTMLButtonElement>,
   HTMLButtonElement
 > & {
-  variant: "primary" | "secondary";
+  variant?: "primary" | "secondary";
 };
 
 function Button(props: ButtonProps): JSX.Element {
-  const { className = "", variant, ...rest } = props;
+  const { className = "", variant = "primary", ...rest } = props;
   const classNames = cx("czedi-btn", className, {
     "czedi-btn-primary": variant === "primary",
     "czedi-btn-secondary": variant === "secondary",
@@ -19,9 +19,5 @@ function Button(props: ButtonProps): JSX.Element {
 
   return <button className={classNames} {...rest}></button>;
 }
-
-Button.defaultProps = {
-  variant: "primary",
-};
 
 export default Button;
