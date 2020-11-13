@@ -1,0 +1,17 @@
+{
+  "eds": {
+    "font": {
+      "family": { "value": ["Arimo", "sans-serif"] },
+      "color": {
+          "default": {
+              "value": "{eds.color.black.value}",
+              "comment": "Color for all standard typography in a light background"
+          },
+          "link": {
+              "value": "{eds.color.brand.700.value}",
+              "comment": "Color for all standard links"
+          }
+      }
+    }
+  }
+}

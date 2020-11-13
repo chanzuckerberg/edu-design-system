@@ -1,0 +1,74 @@
+{
+  "eds": {
+    "font": {
+      "size": {
+        "h1": {
+          "value": "3rem",
+          "comment": "Font size for Heading 1 sized text"
+        },
+        "h2": {
+          "value": "2.5rem",
+          "comment": "Font size for Heading 2 sized text"
+        },
+        "h3": {
+          "value": "2rem",
+          "comment": "Font size for Heading 3 sized text"
+        },
+        "h4": {
+          "value": "1.5rem",
+          "comment": "Font size for Heading 4 sized text"
+        },
+        "h5": {
+          "value": "1.125rem",
+          "comment": "Font size for Heading 5 sized text"
+        },
+        "default": {
+          "value": "16px",
+          "comment": "Base font size for design system in px"
+        },
+        "sm": {
+          "value": "0.875rem",
+          "comment": "Font size for small body text"
+        },
+        "xs": {
+          "value": "0.75rem",
+          "comment": "Font size for xsmall body text"
+        }
+      },
+      "line-height": {
+        "h1": {
+          "value": "4rem",
+          "comment": "Line height for Heading 1 sized text"
+        },
+        "h2": {
+          "value": "3.5rem",
+          "comment": "Line height for Heading 2 sized text"
+        },
+        "h3": {
+          "value": "2.5rem",
+          "comment": "Line height for Heading 3 sized text"
+        },
+        "h4": {
+          "value": "2rem",
+          "comment": "Line height for Heading 4 sized text"
+        },
+        "h5": {
+          "value": "1.75rem",
+          "comment": "Line height for Heading 5 sized text"
+        },
+        "default": {
+          "value": "1.5rem",
+          "comment": "Default line height for base font size"
+        },
+        "sm": {
+          "value": "1.25rem",
+          "comment": "Line height for small body text"
+        },
+        "xs": {
+          "value": "1rem",
+          "comment": "Line height for xsmall body text"
+        }
+      }
+    }
+  }
+}
