@@ -66,6 +66,9 @@ typings/
 # next.js build output
 .next
 
+# VS Code workspace file
+*.code-workspace
+
 # dist folders
 dist/
 storybook-static/
