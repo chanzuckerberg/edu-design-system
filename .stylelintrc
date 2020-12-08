@@ -15,5 +15,5 @@
       }
     ]
   },
-  "ignoreFiles": ["**/*.json"]
+  "ignoreFiles": ["**/*.json", "**/*.tsx"]
 }

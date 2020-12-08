@@ -12,7 +12,8 @@
           "last 2 edge versions"
         ]
       }
-    ]
+    ],
+    "@linaria"
   ],
   "plugins": [
     "@babel/plugin-transform-modules-commonjs",
