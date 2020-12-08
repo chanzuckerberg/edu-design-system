@@ -10,7 +10,7 @@ import { addParameters } from "@storybook/react";
 import { withA11y } from "@storybook/addon-a11y";
 
 addDecorator(withA11y);
-addDecorator(storyFn => <div dir="ltr">{storyFn()}</div>);
+addDecorator((storyFn) => <div dir="ltr">{storyFn()}</div>);
 addParameters({
   docs: {
     container: DocsContainer,
