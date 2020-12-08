@@ -5,7 +5,6 @@ module.exports = {
     extend: {
       colors: tokens.eds.color,
     },
-    font: tokens.eds.font,
   },
   variants: {},
   plugins: [],
