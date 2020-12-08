@@ -1,7 +1,7 @@
 {
   "eds": {
     "font": {
-      "family": { "value": ["Arimo", "sans-serif"] },
+      "family": { "value": "Arimo, sans-serif" },
       "color": {
           "default": {
               "value": "{eds.color.black.value}",
