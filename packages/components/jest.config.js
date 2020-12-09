@@ -6,6 +6,6 @@ module.exports = {
   setupFilesAfterEnv: ["jest-axe/extend-expect"],
   coverageDirectory: "coverage",
   transform: {
-    "^.+\\.tsx?$": "ts-jest",
+    "^.+\\.tsx?$": "babel-jest",
   },
 };
