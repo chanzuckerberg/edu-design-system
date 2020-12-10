@@ -16,6 +16,7 @@
     "@linaria"
   ],
   "plugins": [
+    "babel-plugin-macros",
     "@babel/plugin-transform-modules-commonjs",
     [
       "module-resolver",

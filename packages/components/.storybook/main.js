@@ -26,11 +26,6 @@ module.exports = {
       },
     });
 
-    config.watchOptions = {
-      ...config.watchOptions,
-      ignored: [/node_modules([\\]+|\/)+(?!@chanzuckerberg\/czedi-kit-styles)/],
-    };
-
     return config;
   },
 };

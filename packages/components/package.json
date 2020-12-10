@@ -41,7 +41,6 @@
     "react": ">= 16.8.0"
   },
   "dependencies": {
-    "@chanzuckerberg/czedi-kit-styles": "^0.0.1-alpha.5",
     "@chanzuckerberg/czedi-kit-tokens": "^0.0.1-alpha.5",
     "classnames": "^2.2.6"
   },
@@ -74,6 +73,7 @@
     "@types/jest-axe": "^3.5.1",
     "babel-jest": "^26.6.3",
     "babel-loader": "^8.2.2",
+    "babel-plugin-macros": "^3.0.0",
     "babel-plugin-module-resolver": "^4.0.0",
     "jest": "^24.9.0",
     "jest-axe": "^3.5.0",
@@ -82,6 +82,7 @@
     "react-docgen-typescript-loader": "^3.7.2",
     "react-dom": "^16.14.0",
     "sass-loader": "^8.0.2",
+    "twin.macro": "^2.0.7",
     "typescript": "^4.1.2"
   },
   "gitHead": "8680dac1fa3c685e2a35f80d9ceb157f5f5343bd"
