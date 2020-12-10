@@ -42,8 +42,12 @@ jspm_packages/
 # TypeScript v1 declaration files
 typings/
 
-# Optional npm cache directory
+# Caches
 .npm
+.linaria-cache/
+
+# VSCode Sharing Config
+.vsls.json
 
 # NPM publishing access
 .npmrc
@@ -68,6 +72,9 @@ typings/
 
 # VS Code workspace file
 *.code-workspace
+
+# VS Code Live Share
+.vsls.json
 
 # dist folders
 dist/
