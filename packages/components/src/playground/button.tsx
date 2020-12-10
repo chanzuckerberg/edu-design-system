@@ -1,6 +1,7 @@
 import React from "react";
 import { css } from "@linaria/core";
 import { styled } from "@linaria/react";
+import tw from "twin.macro";
 
 // Temporary props for button to test out css options for variants
 type ButtonProps = React.DetailedHTMLProps<
@@ -13,15 +14,14 @@ type ButtonProps = React.DetailedHTMLProps<
 function Button(props: ButtonProps): JSX.Element {
   const { variant = "primary", ...rest } = props;
   const primary = css`
-    --color-background: blue;
+    ${tw`bg-blue-300 hover:bg-blue-400`}
   `;
   const secondary = css`
-    --color-background: gray;
+    ${tw`bg-gray-600 hover:bg-blue-800`}
   `;
 
   const ButtonComponent = styled.button`
-    color: white;
-    background-color: var(--color-background);
+    ${tw`font-bold py-2 px-4 rounded text-white`}
   `;
 
   return (
