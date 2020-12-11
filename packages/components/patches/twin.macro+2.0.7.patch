@@ -1,0 +1,17 @@
+diff --git a/node_modules/twin.macro/macro.js b/node_modules/twin.macro/macro.js
+index a39f2b2..1788a9d 100644
+--- a/node_modules/twin.macro/macro.js
++++ b/node_modules/twin.macro/macro.js
+@@ -2583,11 +2583,10 @@ function parseTte(ref) {
+ }
+ 
+ function replaceWithLocation(path$$1, replacement) {
++  var loc = path$$1.node.loc;
+   var newPaths = replacement ? path$$1.replaceWith(replacement) : [];
+ 
+   if (Array.isArray(newPaths) && newPaths.length > 0) {
+-    var ref = path$$1.node;
+-    var loc = ref.loc;
+     newPaths.forEach(function (p) {
+       p.node.loc = loc;
+     });
