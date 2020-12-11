@@ -1,43 +1,25 @@
+import tw, { styled } from "twin.macro";
 import React from "react";
-import styled from "styled-components";
 
-// Temporary props for button to test out css options for variants
-type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
+type BaseButtonProps = {
   variant?: "primary" | "secondary";
 };
 
-const ButtonComponent = styled.button<ButtonProps>`
-  border: none;
-  border-radius: 0.25rem;
-  color: white;
-  font-weight: bold;
-  padding: 0.5rem 1rem;
-`;
+// Temporary props for button to test out css options for variants
+type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
+  BaseButtonProps;
 
-const PrimaryButton = styled(ButtonComponent)`
-  background-color: #574eff;
+const base = tw`font-bold py-2 px-4 rounded text-white border-none`;
+const primary = tw`bg-brand-600 hover:bg-brand-700`;
+const secondary = tw`bg-neutral-400 hover:bg-neutral-500`;
 
-  &:hover {
-    background-color: #433bde;
-  }
-`;
-
-const SecondaryButton = styled(ButtonComponent)`
-  background-color: #838c95;
-
-  &:hover {
-    background-color: #58636f;
-  }
-`;
+const ButtonComponent = styled.button<BaseButtonProps>(({ variant }) => [
+  base,
+  variant === "secondary" ? secondary : primary,
+]);
 
 function Button(props: ButtonProps): JSX.Element {
-  const { variant = "primary", ...rest } = props;
-
-  return variant === "primary" ? (
-    <PrimaryButton {...rest} />
-  ) : (
-    <SecondaryButton {...rest} />
-  );
+  return <ButtonComponent {...props} />;
 }
 
 export default Button;
