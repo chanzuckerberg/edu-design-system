@@ -8,12 +8,12 @@ describe("<Button />", () => {
     expect(container.firstChild).toMatchInlineSnapshot(`
       <div>
         <button
-          class="sc-bdfBwQ sc-gsTCUz fvVoTP enkIjw"
+          class="button__ButtonComponent-ak17f2-0 cBvwNx"
         >
           Hello Button
         </button>
         <button
-          class="sc-bdfBwQ sc-dlfnbm fvVoTP hteevf"
+          class="button__ButtonComponent-ak17f2-0 VxUNz"
         >
           Secondary Button
         </button>
