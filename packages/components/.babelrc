@@ -1,7 +1,6 @@
 {
   "presets": [
     "@babel/preset-typescript",
-    "@babel/preset-react",
     [
       "@babel/preset-env",
       {
@@ -12,7 +11,8 @@
           "last 2 edge versions"
         ]
       }
-    ]
+    ],
+    "@babel/preset-react"
   ],
   "plugins": [
     "@babel/plugin-transform-modules-commonjs",
