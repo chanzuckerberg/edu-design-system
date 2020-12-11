@@ -13,7 +13,6 @@ module.exports = ({ env }) => ({
     require("postcss-preset-env")({
       stage: 3,
     }),
-    require("postcss-rtl"),
     ...(env === "production" ? [require("cssnano")] : []),
   ],
 });
