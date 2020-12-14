@@ -1,13 +1,13 @@
 {
-  "legacy": {
+  "eds": {
     "color": {
       "font": {
         "base": {
-          "value": "{legacy.color.black.value}",
+          "value": "{eds.color.black.value}",
           "comment": "Color for all standard typography in a light background"
         },
         "link": {
-          "value": "{legacy.color.purple.300.value}",
+          "value": "{eds.color.brand.700.value}",
           "comment": "Color for all standard links"
         }
       }
