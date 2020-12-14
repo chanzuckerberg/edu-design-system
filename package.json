@@ -20,11 +20,6 @@
       "path": "packages/components/dist/**/*.js",
       "limit": "70KB",
       "webpack": false
-    },
-    {
-      "path": "packages/styles/dist/all.css",
-      "limit": "30KB",
-      "webpack": false
     }
   ],
   "repository": {

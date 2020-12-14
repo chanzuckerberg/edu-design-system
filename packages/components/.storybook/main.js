@@ -15,11 +15,6 @@ module.exports = {
       use: ["style-loader", "css-loader", "sass-loader"],
     });
 
-    config.watchOptions = {
-      ...config.watchOptions,
-      ignored: [/node_modules([\\]+|\/)+(?!@chanzuckerberg\/czedi-kit-styles)/],
-    };
-
     return config;
   },
 };
