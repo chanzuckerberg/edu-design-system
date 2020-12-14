@@ -26,6 +26,10 @@
           "value": "16px",
           "comment": "Base font size for design system in px"
         },
+        "body": {
+          "value": "1rem",
+          "comment": "Default font size for body text"
+        },
         "sm": {
           "value": "0.875rem",
           "comment": "Font size for small body text"
@@ -52,9 +56,9 @@
           "value": "2rem",
           "comment": "Line height for Heading 4 sized text"
         },
-        "base": {
+        "body": {
           "value": "1.5rem",
-          "comment": "Default line height for base font size"
+          "comment": "Default line height for body text"
         },
         "sm": {
           "value": "1.25rem",
