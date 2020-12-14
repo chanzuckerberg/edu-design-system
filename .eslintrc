@@ -43,7 +43,7 @@
       }
     },
     {
-      "files": ["*.config.js"],
+      "files": ["config.js", "*.config.js"],
       "env": {
         "browser": false,
         "node": true

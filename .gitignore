@@ -72,6 +72,7 @@ typings/
 # VS Code Live Share
 .vsls.json
 
-# dist folders
-dist/
+# dist folders (allowing built tokens)
+packages/components/dist/
+packages/styles/dist/
 storybook-static/
