@@ -74,5 +74,4 @@ typings/
 
 # dist folders (allowing built tokens)
 packages/components/dist/
-packages/styles/dist/
 storybook-static/
