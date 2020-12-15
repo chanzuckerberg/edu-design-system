@@ -11,7 +11,7 @@ describe("<Button />", () => {
           class="button__ButtonComponent-ak17f2-0 knVmlo"
         >
           <p
-            class="typography__TypographyComponent-sc-8fjfkf-0 kfXPFc"
+            class="typography__TypographyComponent-sc-8fjfkf-0 fBebuQ"
             color="white"
           >
             Hello Button
@@ -21,7 +21,7 @@ describe("<Button />", () => {
           class="button__ButtonComponent-ak17f2-0 jDwPyC"
         >
           <p
-            class="typography__TypographyComponent-sc-8fjfkf-0 kfXPFc"
+            class="typography__TypographyComponent-sc-8fjfkf-0 fBebuQ"
             color="white"
           >
             Secondary Button
