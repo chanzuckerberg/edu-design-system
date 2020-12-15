@@ -94,6 +94,7 @@ interface BaseTypographyProps {
 
 const TypographyComponent = styled.span<BaseTypographyProps>(
   ({ bold, color, size }) => [
+    tw`font-arimo`,
     bold ? tw`font-bold` : tw`font-normal`,
     styleFromColor(color),
     styleFromSize(size),
