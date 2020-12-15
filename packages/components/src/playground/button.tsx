@@ -1,5 +1,6 @@
 import tw, { styled } from "twin.macro";
 import React from "react";
+import Typography from "../typography/typography";
 
 type BaseButtonProps = {
   variant?: "primary" | "secondary";
@@ -9,17 +10,23 @@ type BaseButtonProps = {
 type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
   BaseButtonProps;
 
-const base = tw`font-bold py-2 px-4 rounded text-white border-none`;
-const primary = tw`bg-brand-600 hover:bg-brand-700`;
-const secondary = tw`bg-neutral-400 hover:bg-neutral-500`;
-
 const ButtonComponent = styled.button<BaseButtonProps>(({ variant }) => [
-  base,
-  variant === "secondary" ? secondary : primary,
+  tw`py-2 px-4 rounded border-none`,
+  variant === "secondary"
+    ? tw`bg-neutral-400 hover:bg-neutral-500`
+    : tw`bg-brand-600 hover:bg-brand-700`,
 ]);
 
 function Button(props: ButtonProps): JSX.Element {
-  return <ButtonComponent {...props} />;
+  const { children, ...rest } = props;
+
+  return (
+    <ButtonComponent {...rest}>
+      <Typography bold color="white" size="button">
+        {children}
+      </Typography>
+    </ButtonComponent>
+  );
 }
 
 export default Button;
