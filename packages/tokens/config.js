@@ -4,31 +4,35 @@ const EDSStyleDictionary = StyleDictionary.extend({
   platforms: {
     scss: {
       transforms: [...StyleDictionary.transformGroup.scss, "name/kebabCase"],
-      buildPath: "dist/scss/",
+      buildPath: "dist/",
       files: [
         {
-          destination: "_variables.scss",
+          destination: "scss/_variables.scss",
           format: "scss/map-deep",
         },
       ],
     },
     css: {
       transforms: [...StyleDictionary.transformGroup.css, "name/kebabCase"],
-      buildPath: "dist/css/",
+      buildPath: "dist/",
       files: [
         {
           format: "css/variables",
-          destination: "variables.css",
+          destination: "css/variables.css",
+        },
+        {
+          format: "json/nested-css-variables",
+          destination: "json/css-variables-nested.json",
         },
       ],
     },
     js: {
       transformGroup: "js",
-      buildPath: "dist/js/",
+      buildPath: "dist/",
       files: [
         {
           format: "javascript/es6",
-          destination: "colors.js",
+          destination: "js/colors.js",
           filter: {
             attributes: {
               type: "color",
@@ -39,15 +43,15 @@ const EDSStyleDictionary = StyleDictionary.extend({
     },
     json: {
       transformGroup: "js",
-      buildPath: "dist/json/",
+      buildPath: "dist/",
       files: [
         {
           format: "json/flat",
-          destination: "variables.json",
+          destination: "json/variables.json",
         },
         {
           format: "json/nested",
-          destination: "variables-nested.json",
+          destination: "json/variables-nested.json",
         },
       ],
     },
@@ -59,6 +63,31 @@ EDSStyleDictionary.registerTransform({
   type: "name",
   transformer: function ({ path }) {
     return path.join("-").toLowerCase();
+  },
+});
+
+// copied from https://github.com/amzn/style-dictionary/blob/v3.0.0-rc.1/lib/common/formats.js#L96
+function minifyDictionary(obj) {
+  if (typeof obj !== "object" || Array.isArray(obj)) {
+    return obj;
+  }
+
+  var toRet = {};
+
+  if (obj.value) {
+    return `var(--${obj.name})`;
+  } else {
+    for (var name in obj) {
+      toRet[name] = minifyDictionary(obj[name]);
+    }
+  }
+  return toRet;
+}
+
+EDSStyleDictionary.registerFormat({
+  name: "json/nested-css-variables",
+  formatter: function (dictionary) {
+    return JSON.stringify(minifyDictionary(dictionary.properties), null, 2);
   },
 });
 
