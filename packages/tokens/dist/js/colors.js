@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Mon, 14 Dec 2020 20:56:45 GMT
+ * Generated on Tue, 15 Dec 2020 23:47:48 GMT
  */
 
 export const LegacyColorGray50 = "#F8F9FC";
