@@ -1,38 +1,43 @@
+import { primary, secondary } from "./button.stories";
 import { axe } from "jest-axe";
+import { prepareStory } from "@chanzuckerberg/story-utils";
 import { render } from "@testing-library/react";
-import { variants } from "./button.stories";
 
 describe("<Button />", () => {
-  it("renders the component", () => {
-    const { container } = render(variants());
+  it("renders primary buttons", () => {
+    const { container } = render(prepareStory(primary));
     expect(container.firstChild).toMatchInlineSnapshot(`
-      <div>
-        <button
-          class="button__ButtonComponent-ak17f2-0 knVmlo"
+      <button
+        class="button__ButtonComponent-ak17f2-0 knVmlo"
+      >
+        <p
+          class="typography__TypographyComponent-sc-8fjfkf-0 fBebuQ"
+          color="white"
         >
-          <p
-            class="typography__TypographyComponent-sc-8fjfkf-0 fBebuQ"
-            color="white"
-          >
-            Hello Button
-          </p>
-        </button>
-        <button
-          class="button__ButtonComponent-ak17f2-0 jDwPyC"
+          Primary Button
+        </p>
+      </button>
+    `);
+  });
+
+  it("renders secondary buttons", () => {
+    const { container } = render(prepareStory(secondary));
+    expect(container.firstChild).toMatchInlineSnapshot(`
+      <button
+        class="button__ButtonComponent-ak17f2-0 jDwPyC"
+      >
+        <p
+          class="typography__TypographyComponent-sc-8fjfkf-0 fBebuQ"
+          color="white"
         >
-          <p
-            class="typography__TypographyComponent-sc-8fjfkf-0 fBebuQ"
-            color="white"
-          >
-            Secondary Button
-          </p>
-        </button>
-      </div>
+          Secondary Button
+        </p>
+      </button>
     `);
   });
 
   it("passes accessibility checks", async () => {
-    const { container } = render(variants());
+    const { container } = render(prepareStory(primary));
     const results = await axe(container);
     expect(results).toHaveNoViolations();
   });
