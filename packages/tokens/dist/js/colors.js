@@ -1,8 +1,3 @@
-/**
- * Do not edit directly
- * Generated on Tue, 15 Dec 2020 23:47:48 GMT
- */
-
 export const LegacyColorGray50 = "#F8F9FC";
 export const LegacyColorGray100 = "#EBEBEC";
 export const LegacyColorGray200 = "#D8D8D9";

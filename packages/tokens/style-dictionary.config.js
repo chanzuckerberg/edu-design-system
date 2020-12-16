@@ -7,8 +7,11 @@ const EDSStyleDictionary = StyleDictionary.extend({
       buildPath: "dist/",
       files: [
         {
-          destination: "scss/_variables.scss",
           format: "scss/map-deep",
+          destination: "scss/_variables.scss",
+          options: {
+            showFileHeader: false,
+          },
         },
       ],
     },
@@ -19,10 +22,16 @@ const EDSStyleDictionary = StyleDictionary.extend({
         {
           format: "css/variables",
           destination: "css/variables.css",
+          options: {
+            showFileHeader: false,
+          },
         },
         {
           format: "json/nested-css-variables",
           destination: "json/css-variables-nested.json",
+          options: {
+            showFileHeader: false,
+          },
         },
       ],
     },
@@ -33,6 +42,9 @@ const EDSStyleDictionary = StyleDictionary.extend({
         {
           format: "javascript/es6",
           destination: "js/colors.js",
+          options: {
+            showFileHeader: false,
+          },
           filter: {
             attributes: {
               type: "color",
@@ -48,10 +60,16 @@ const EDSStyleDictionary = StyleDictionary.extend({
         {
           format: "json/flat",
           destination: "json/variables.json",
+          options: {
+            showFileHeader: false,
+          },
         },
         {
           format: "json/nested",
           destination: "json/variables-nested.json",
+          options: {
+            showFileHeader: false,
+          },
         },
       ],
     },
@@ -67,7 +85,7 @@ EDSStyleDictionary.registerTransform({
 });
 
 // copied from https://github.com/amzn/style-dictionary/blob/v3.0.0-rc.1/lib/common/formats.js#L96
-function minifyDictionary(obj) {
+function minifyCSSVarDictionary(obj) {
   if (typeof obj !== "object" || Array.isArray(obj)) {
     return obj;
   }
@@ -78,7 +96,7 @@ function minifyDictionary(obj) {
     return `var(--${obj.name})`;
   } else {
     for (var name in obj) {
-      toRet[name] = minifyDictionary(obj[name]);
+      toRet[name] = minifyCSSVarDictionary(obj[name]);
     }
   }
   return toRet;
@@ -87,7 +105,11 @@ function minifyDictionary(obj) {
 EDSStyleDictionary.registerFormat({
   name: "json/nested-css-variables",
   formatter: function (dictionary) {
-    return JSON.stringify(minifyDictionary(dictionary.properties), null, 2);
+    return JSON.stringify(
+      minifyCSSVarDictionary(dictionary.properties),
+      null,
+      2
+    );
   },
 });
 

@@ -20,7 +20,7 @@
     "url": "git+https://github.com/chanzuckerberg/lp-design-system.git"
   },
   "scripts": {
-    "build": "style-dictionary build",
+    "build": "style-dictionary build --config=./style-dictionary.config.js",
     "prepack": "npm run build && cp ./package.json dist/",
     "start": "watch 'npm run build' ./properties ./node_modules"
   },

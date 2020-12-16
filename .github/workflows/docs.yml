@@ -1,12 +1,11 @@
 name: Deploy Docs
 
-on: 
+on:
   push:
     branches:
       - master
 
 jobs:
-
   deploy_docs:
     runs-on: ubuntu-latest
 
@@ -23,7 +22,7 @@ jobs:
 
       - name: Install Dependencies ⬆️
         run: |
-          npm ci
+          npm ci --no-optional
           npx lerna bootstrap
 
       - name: Build Dist 🔧
@@ -33,4 +32,3 @@ jobs:
         run: npx lerna run deploy:docs
         env:
           GH_TOKEN: "${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}"
-      

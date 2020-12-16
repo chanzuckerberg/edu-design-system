@@ -19,7 +19,7 @@ jobs:
 
       - name: Install Dependencies ⬆️
         run: |
-          npm ci
+          npm ci --no-optional
           npx lerna bootstrap
 
       - name: Run CI Tests ✅
@@ -44,7 +44,7 @@ jobs:
 
       - name: Install Dependencies ⬆️
         run: |
-          npm ci
+          npm ci --no-optional
           npx lerna bootstrap
 
       - name: Build Dist 🔧
@@ -52,7 +52,7 @@ jobs:
 
       - name: Build Storybook 🔧
         run: npx lerna run build:storybook
-        
+
       - name: Percy Snapshots 📸
         run: npx lerna run snapshot
         env:
@@ -76,7 +76,7 @@ jobs:
 
       - name: Install Dependencies ⬆️
         run: |
-          npm ci
+          npm ci --no-optional
           npx lerna bootstrap
 
       - name: Lint Commit Messages 👕
