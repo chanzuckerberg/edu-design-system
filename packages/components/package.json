@@ -22,7 +22,7 @@
   "scripts": {
     "build": "npm run build:clean && npm run build:types && npm run build:js",
     "build:clean": "rm -rf dist/",
-    "build:js": "babel src -d dist --extensions '.js,.jsx,.ts,.tsx' --ignore src/**/*.spec.* --ignore src/**/*.stories.*",
+    "build:js": "babel src -d dist --extensions '.js,.jsx,.ts,.tsx' --ignore src/**/*.spec.ts,src/**/*.spec.tsx --ignore src/**/*.stories.ts,src/**/*.stories.tsx",
     "build:types": "tsc --project . --declaration --emitDeclarationOnly",
     "build:watch": "npm run build:js -- --watch",
     "build:storybook": "build-storybook",

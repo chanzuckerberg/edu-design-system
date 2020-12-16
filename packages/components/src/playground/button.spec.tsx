@@ -8,14 +8,24 @@ describe("<Button />", () => {
     expect(container.firstChild).toMatchInlineSnapshot(`
       <div>
         <button
-          class="button__ButtonComponent-ak17f2-0 cBvwNx"
+          class="button__ButtonComponent-ak17f2-0 knVmlo"
         >
-          Hello Button
+          <p
+            class="typography__TypographyComponent-sc-8fjfkf-0 fBebuQ"
+            color="white"
+          >
+            Hello Button
+          </p>
         </button>
         <button
-          class="button__ButtonComponent-ak17f2-0 VxUNz"
+          class="button__ButtonComponent-ak17f2-0 jDwPyC"
         >
-          Secondary Button
+          <p
+            class="typography__TypographyComponent-sc-8fjfkf-0 fBebuQ"
+            color="white"
+          >
+            Secondary Button
+          </p>
         </button>
       </div>
     `);
