@@ -1,3 +1,5 @@
+import "@chanzuckerberg/czedi-kit-tokens/css/variables.css";
+
 import * as React from "react";
 import EDSGlobalStyles from "../src/styles/global";
 

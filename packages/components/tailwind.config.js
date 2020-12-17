@@ -1,5 +1,4 @@
-const tokens = require("@chanzuckerberg/czedi-kit-tokens/json/variables-nested.json");
-
+const tokens = require("@chanzuckerberg/czedi-kit-tokens/json/css-variables-nested.json");
 module.exports = {
   theme: {
     colors: tokens.eds.color,
@@ -8,6 +7,7 @@ module.exports = {
     },
     fontSize: tokens.eds.size.font,
     lineHeight: tokens.eds.size["line-height"],
+    extend: {},
   },
   variants: {},
   plugins: [],
