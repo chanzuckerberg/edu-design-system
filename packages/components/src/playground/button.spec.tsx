@@ -7,21 +7,15 @@ describe("<Button />", () => {
     const { container } = render(variants());
     expect(container.firstChild).toMatchInlineSnapshot(`
       <div>
-        <button
-          class="button__ButtonComponent-ak17f2-0 cKlymw"
-        >
+        <button>
           <p
-            class="typography__TypographyComponent-sc-8fjfkf-0 earSjG"
             color="white"
           >
             Hello Button
           </p>
         </button>
-        <button
-          class="button__ButtonComponent-ak17f2-0 dMLRAo"
-        >
+        <button>
           <p
-            class="typography__TypographyComponent-sc-8fjfkf-0 earSjG"
             color="white"
           >
             Secondary Button

@@ -8,25 +8,21 @@ describe("<Typography />", () => {
     expect(container.firstChild).toMatchInlineSnapshot(`
       <div>
         <p
-          class="typography__TypographyComponent-sc-8fjfkf-0 gwgBif"
           color="base"
         >
           Default body text
         </p>
         <p
-          class="typography__TypographyComponent-sc-8fjfkf-0 uqpCF"
           color="brand"
         >
           Brand color text
         </p>
         <h1
-          class="typography__TypographyComponent-sc-8fjfkf-0 gVQrMo"
           color="base"
         >
           Bold heading 1
         </h1>
         <h1
-          class="typography__TypographyComponent-sc-8fjfkf-0 evuFon"
           color="base"
         >
           Heading 1 styled as Heading 4

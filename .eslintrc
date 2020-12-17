@@ -35,7 +35,7 @@
       "extends": ["plugin:@typescript-eslint/recommended"]
     },
     {
-      "files": ["*.spec.ts", "*.spec.tsx"],
+      "files": ["*.spec.ts", "*.spec.tsx", "**/test/**"],
       "plugins": ["jest"],
       "extends": ["plugin:jest/recommended"],
       "env": {

@@ -3,7 +3,7 @@
 
 module.exports = {
   clearMocks: true,
-  setupFilesAfterEnv: ["jest-axe/extend-expect"],
+  setupFilesAfterEnv: ["jest-axe/extend-expect", "./test/jest.setup.ts"],
   coverageDirectory: "coverage",
   transform: {
     "^.+\\.tsx?$": "babel-jest",
