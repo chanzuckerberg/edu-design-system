@@ -1,6 +1,6 @@
-import "./token-table.scss";
-
 import * as React from "react";
+
+import { styled } from "twin.macro";
 
 type Token = {
   name: string;
@@ -11,12 +11,26 @@ type TokenTableProps = {
   renderExample: (name: string, value: string) => JSX.Element;
 };
 
+const StyledTable = styled.table`
+  border-collapse: separate;
+  border-spacing: 3em 0.5em;
+  text-align: left;
+
+  tbody th {
+    font-weight: normal;
+  }
+
+  td {
+    font-family: monospace;
+  }
+`;
+
 const TokenTable = ({
   tokens,
   renderExample,
 }: TokenTableProps): JSX.Element => {
   return (
-    <table className="token-table">
+    <StyledTable>
       <thead>
         <tr>
           <th scope="col">Name</th>
@@ -33,7 +47,7 @@ const TokenTable = ({
           </tr>
         ))}
       </tbody>
-    </table>
+    </StyledTable>
   );
 };
 

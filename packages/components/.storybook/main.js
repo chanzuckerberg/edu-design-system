@@ -8,13 +8,4 @@ module.exports = {
     "@storybook/addon-a11y",
     "@storybook/addon-docs",
   ],
-  webpackFinal: async (config) => {
-    config.module.rules.push({
-      test: /\.scss$/,
-      include: path.resolve(__dirname, "../"),
-      use: ["style-loader", "css-loader", "sass-loader"],
-    });
-
-    return config;
-  },
 };

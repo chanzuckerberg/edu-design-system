@@ -7,7 +7,7 @@
     "build": "NODE_ENV=production lerna run build",
     "lint": "npm run lint:styles && npm run lint:scripts",
     "lint:fix": "npm run lint:styles:fix && npm run lint:scripts:fix",
-    "lint:styles": "stylelint --ignore-path .gitignore packages/**/*.{css,scss,js,jsx,ts,tsx}",
+    "lint:styles": "stylelint --ignore-path .gitignore packages/**/*.{css,js,jsx,ts,tsx}",
     "lint:styles:fix": "npm run lint:styles -- --fix",
     "lint:scripts": "eslint --ignore-path .gitignore --ext=js,jsx,ts,tsx .",
     "lint:scripts:fix": "npm run lint:scripts -- --fix",
@@ -70,9 +70,10 @@
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "prettier --write",
-      "eslint --fix"
+      "eslint --fix",
+      "stylelint --fix"
     ],
-    "*.scss": [
+    "*.css": [
       "stylelint --fix"
     ]
   }
