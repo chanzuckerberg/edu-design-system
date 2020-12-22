@@ -42,6 +42,19 @@
   --legacy-color-purple-300: #5761BA;
   --legacy-color-purple-350: #454E9D;
   --legacy-color-purple-400: #32417C;
+  --legacy-size-font-h1: 1.5rem; /* Font size for Heading 1 sized text */
+  --legacy-size-font-h2: 1.125rem; /* Font size for Heading 2 sized text */
+  --legacy-size-font-h3: 1.125rem; /* Font size for Heading 3 sized text */
+  --legacy-size-font-base: 16px; /* Base font size for design system in px */
+  --legacy-size-font-body: 1rem; /* Default font size for body text */
+  --legacy-size-font-sm: 0.875rem; /* Font size for small body text */
+  --legacy-size-font-xs: 0.75rem; /* Font size for xsmall body text */
+  --legacy-size-line-height-h1: 2rem; /* Line height for Heading 1 sized text */
+  --legacy-size-line-height-h2: 1.5rem; /* Line height for Heading 2 sized text */
+  --legacy-size-line-height-h3: 1.5rem; /* Line height for Heading 3 sized text */
+  --legacy-size-line-height-body: 1.5rem; /* Default line height for body text */
+  --legacy-size-line-height-sm: 1.25rem; /* Line height for small body text */
+  --legacy-size-line-height-xs: 1rem; /* Line height for xsmall body text */
   --eds-color-neutral-100: #F3F3F3;
   --eds-color-neutral-200: #E8E8E9;
   --eds-color-neutral-300: #CAD1D8;

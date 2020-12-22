@@ -56,6 +56,25 @@
         "350": "var(--legacy-color-purple-350)",
         "400": "var(--legacy-color-purple-400)"
       }
+    },
+    "size": {
+      "font": {
+        "h1": "var(--legacy-size-font-h1)",
+        "h2": "var(--legacy-size-font-h2)",
+        "h3": "var(--legacy-size-font-h3)",
+        "base": "var(--legacy-size-font-base)",
+        "body": "var(--legacy-size-font-body)",
+        "sm": "var(--legacy-size-font-sm)",
+        "xs": "var(--legacy-size-font-xs)"
+      },
+      "line-height": {
+        "h1": "var(--legacy-size-line-height-h1)",
+        "h2": "var(--legacy-size-line-height-h2)",
+        "h3": "var(--legacy-size-line-height-h3)",
+        "body": "var(--legacy-size-line-height-body)",
+        "sm": "var(--legacy-size-line-height-sm)",
+        "xs": "var(--legacy-size-line-height-xs)"
+      }
     }
   },
   "eds": {
