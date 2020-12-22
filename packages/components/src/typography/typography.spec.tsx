@@ -1,4 +1,4 @@
-import { Colors, Examples, SizeRamp } from "./typography.stories";
+import { Colors, Examples, LegacySizeRamp } from "./typography.stories";
 import { axe } from "jest-axe";
 import { render } from "@testing-library/react";
 
@@ -32,7 +32,7 @@ describe("<Typography />", () => {
   });
 
   it("passes semantic accessibility checks", async () => {
-    const { container } = render(SizeRamp());
+    const { container } = render(LegacySizeRamp());
     const results = await axe(container);
     expect(results).toHaveNoViolations();
   });
