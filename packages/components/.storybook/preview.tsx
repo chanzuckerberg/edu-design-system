@@ -1,4 +1,5 @@
 import "@chanzuckerberg/czedi-kit-tokens/css/variables.css";
+import "../src/styles/fonts.css";
 
 import * as React from "react";
 
