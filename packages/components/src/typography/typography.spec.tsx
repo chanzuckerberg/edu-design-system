@@ -27,6 +27,11 @@ describe("<Typography />", () => {
         >
           Heading 1 styled as Heading 4
         </h1>
+        <h4
+          color="neutral"
+        >
+          Neutral color Heading 4
+        </h4>
       </div>
     `);
   });
