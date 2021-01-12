@@ -87,6 +87,9 @@ export const Examples = (): JSX.Element => (
     <Typography as="h1" size="h4">
       Heading 1 styled as Heading 4
     </Typography>
+    <Typography bold color="neutral" size="h4">
+      Neutral color Heading 4
+    </Typography>
   </div>
 );
 
@@ -101,6 +104,9 @@ export const Colors = (): JSX.Element => (
     </Typography>
     <Typography color="info" size="body">
       Info color text
+    </Typography>
+    <Typography color="neutral" size="body">
+      Neutral color text
     </Typography>
     <Typography color="success" size="body">
       Success color text

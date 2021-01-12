@@ -21,6 +21,7 @@ type TypographyColor =
   | "base"
   | "brand"
   | "info"
+  | "neutral"
   | "success"
   | "warning"
   | "white";
@@ -46,6 +47,8 @@ function styleFromColor(color: TypographyColor): TwStyle {
       return tw`text-brand-700`;
     case "info":
       return tw`text-info-700`;
+    case "neutral":
+      return tw`text-neutral-500`;
     case "success":
       return tw`text-success-700`;
     case "warning":
