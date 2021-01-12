@@ -7,45 +7,45 @@ export default {
   component: Typography,
 };
 
-export const SizeRamp = (): JSX.Element => (
+export const LegacySizeRamp = (): JSX.Element => (
   <div>
     <Typography bold size="h1">
-      H1 Heading 1
+      H1 Page Title
     </Typography>
     <br />
-    <Typography size="h1">H1 Heading 1 48/64</Typography>
+    <Typography size="h1">H1 Heading 1 24/32</Typography>
     <br />
     <br />
     <Typography bold size="h2">
       H2 Heading 2
     </Typography>
     <br />
-    <Typography size="h2">H2 Heading 2 40/56</Typography>
+    <Typography size="h2">H2 Heading 2 18/24</Typography>
     <br />
     <br />
     <Typography bold size="h3">
       H3 Heading 3
     </Typography>
     <br />
-    <Typography size="h3">H3 Heading 3 32/40</Typography>
+    <Typography size="h3">H3 Heading 3 18/24</Typography>
     <br />
     <br />
     <Typography bold size="h4">
-      H4 Section Head
+      H4 Heading 4
     </Typography>
     <br />
-    <Typography size="h4">H4 Page Title 24/32</Typography>
+    <Typography size="h4">H4 Heading 4 14/24</Typography>
     <br />
     <br />
     <Typography bold size="h5">
-      H5 Section Sub Head 18/24
+      H5 Heading 5
     </Typography>
     <br />
-    <Typography size="h5">H5 Heading 5 18/24</Typography>
+    <Typography size="h5">H5 Heading 5 12/20</Typography>
     <br />
     <br />
     <Typography bold size="body">
-      Body paragraph header 16/24
+      Body paragraph header
     </Typography>
     <br />
     <Typography size="body">Body paragraph 16/24</Typography>
@@ -62,7 +62,7 @@ export const SizeRamp = (): JSX.Element => (
       Body Xsmall text
     </Typography>
     <br />
-    <Typography size="xs">Year timeline, Year list 12/16</Typography>
+    <Typography size="xs">Body Xsmall 12/16</Typography>
     <br />
     <br />
     <Typography bold size="button">

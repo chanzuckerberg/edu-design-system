@@ -43,6 +43,19 @@ $legacy-color-purple-200: #7686D3 !default;
 $legacy-color-purple-300: #5761BA !default;
 $legacy-color-purple-350: #454E9D !default;
 $legacy-color-purple-400: #32417C !default;
+$legacy-size-font-h1: 1.5rem !default; // Font size for Heading 1 sized text
+$legacy-size-font-h2: 1.125rem !default; // Font size for Heading 2 sized text
+$legacy-size-font-h3: 1.125rem !default; // Font size for Heading 3 sized text
+$legacy-size-font-base: 16px !default; // Base font size for design system in px
+$legacy-size-font-body: 1rem !default; // Default font size for body text
+$legacy-size-font-sm: 0.875rem !default; // Font size for small body text
+$legacy-size-font-xs: 0.75rem !default; // Font size for xsmall body text
+$legacy-size-line-height-h1: 2rem !default; // Line height for Heading 1 sized text
+$legacy-size-line-height-h2: 1.5rem !default; // Line height for Heading 2 sized text
+$legacy-size-line-height-h3: 1.5rem !default; // Line height for Heading 3 sized text
+$legacy-size-line-height-body: 1.5rem !default; // Default line height for body text
+$legacy-size-line-height-sm: 1.25rem !default; // Line height for small body text
+$legacy-size-line-height-xs: 1rem !default; // Line height for xsmall body text
 $eds-color-neutral-100: #F3F3F3 !default;
 $eds-color-neutral-200: #E8E8E9 !default;
 $eds-color-neutral-300: #CAD1D8 !default;
@@ -169,6 +182,25 @@ $tokens: (
         '300': $legacy-color-purple-300,
         '350': $legacy-color-purple-350,
         '400': $legacy-color-purple-400
+      )
+    ),
+    'size': (
+      'font': (
+        'h1': $legacy-size-font-h1,
+        'h2': $legacy-size-font-h2,
+        'h3': $legacy-size-font-h3,
+        'base': $legacy-size-font-base,
+        'body': $legacy-size-font-body,
+        'sm': $legacy-size-font-sm,
+        'xs': $legacy-size-font-xs
+      ),
+      'line-height': (
+        'h1': $legacy-size-line-height-h1,
+        'h2': $legacy-size-line-height-h2,
+        'h3': $legacy-size-line-height-h3,
+        'body': $legacy-size-line-height-body,
+        'sm': $legacy-size-line-height-sm,
+        'xs': $legacy-size-line-height-xs
       )
     )
   ),

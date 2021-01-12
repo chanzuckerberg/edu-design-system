@@ -5,8 +5,8 @@ module.exports = {
     fontFamily: {
       arimo: "Arimo, sans-serif",
     },
-    fontSize: tokens.eds.size.font,
-    lineHeight: tokens.eds.size["line-height"],
+    fontSize: tokens.legacy.size.font,
+    lineHeight: tokens.legacy.size["line-height"],
     extend: {},
   },
   variants: {},
