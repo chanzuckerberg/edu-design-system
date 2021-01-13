@@ -7,13 +7,13 @@ type BaseButtonProps = {
 };
 
 // Temporary props for button to test out css options for variants
-type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
+export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
   BaseButtonProps;
 
 const ButtonComponent = styled.button<BaseButtonProps>(({ variant }) => [
   tw`py-2 px-4 rounded border-none`,
   variant === "secondary"
-    ? tw`bg-neutral-400 hover:bg-neutral-500`
+    ? tw`bg-neutral-500 hover:bg-neutral-600`
     : tw`bg-brand-600 hover:bg-brand-700`,
 ]);
 
