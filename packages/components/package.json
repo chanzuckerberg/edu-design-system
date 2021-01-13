@@ -73,7 +73,7 @@
     "babel-loader": "^8.2.2",
     "babel-plugin-module-resolver": "^4.0.0",
     "jest": "^24.9.0",
-    "jest-axe": "^3.5.0",
+    "jest-axe": "^4.1.0",
     "jest-styled-components": "^7.0.3",
     "postcss": "^8.2.1",
     "react": "^16.14.0",
