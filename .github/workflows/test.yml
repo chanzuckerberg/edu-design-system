@@ -50,8 +50,11 @@ jobs:
       - name: Build Dist 🔧
         run: npx lerna run build --stream
 
-      - name: Build Storybook 🔧
+      - name: Build Storybook 📚
         run: npx lerna run build:storybook
+
+      - name: Run Accessibility Tests 💛
+        run: npx lerna run storybook:axeOnly
 
       - name: Percy Snapshots 📸
         run: npx lerna run snapshot
