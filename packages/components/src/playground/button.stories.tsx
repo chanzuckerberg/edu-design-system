@@ -1,30 +1,34 @@
 import * as React from "react";
 
-import Button from "./button";
-import { action } from "@storybook/addon-actions";
+import Button, { ButtonProps } from "./button";
+import { Story } from "@storybook/react/types-6-0";
 
 export default {
   title: "ButtonPlayground",
   component: Button,
 };
 
-export const text = (): JSX.Element => (
-  <Button onClick={action("clicked")}>Hello Button</Button>
-);
+const Template: Story<ButtonProps> = (args) => <Button {...args} />;
 
-export const variants = (): JSX.Element => (
-  <div>
-    <Button onClick={action("clicked")} variant="primary">
-      Hello Button
-    </Button>
-    <Button onClick={action("clicked")} variant="secondary">
-      Secondary Button
-    </Button>
-  </div>
-);
+export const text = Template.bind(null);
+text.args = {
+  children: "Hello Button",
+};
 
-export const emoji = (): JSX.Element => (
-  <Button onClick={action("clicked")}>
-    <span aria-label="so cool">😀 😎 👍 💯</span>
-  </Button>
-);
+export const primary = Template.bind(null);
+primary.args = {
+  children: "Primary Button",
+  variant: "primary",
+};
+
+export const secondary = Template.bind(null);
+secondary.args = {
+  children: "Secondary Button",
+  variant: "secondary",
+};
+
+export const emoji = Template.bind(null);
+emoji.args = {
+  "aria-label": "so cool",
+  children: "😀 😎 👍 💯",
+};

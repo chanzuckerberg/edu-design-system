@@ -102,7 +102,7 @@ const TypographyComponent = styled.span<BaseTypographyProps>(
   ]
 );
 
-type TypographyProps = {
+export type TypographyProps = {
   /**
    * This prop can be used to specify which size text element should
    * actually be rendered, in the case that you want to render an element
