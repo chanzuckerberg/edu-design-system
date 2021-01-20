@@ -1,6 +1,6 @@
 {
   "name": "@chanzuckerberg/czedi-kit-components",
-  "version": "0.0.1-alpha.5",
+  "version": "0.0.1-alpha.6",
   "description": "React components for czedi-kit",
   "keywords": [
     "design system",
@@ -43,7 +43,7 @@
     "react": ">= 16.8.0"
   },
   "dependencies": {
-    "@chanzuckerberg/czedi-kit-tokens": "^0.0.1-alpha.5",
+    "@chanzuckerberg/czedi-kit-tokens": "^0.0.1-alpha.6",
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
