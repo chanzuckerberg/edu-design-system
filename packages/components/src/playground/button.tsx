@@ -17,7 +17,7 @@ const ButtonComponent = styled.button<BaseButtonProps>(({ variant }) => [
     : tw`bg-brand-600 hover:bg-brand-700`,
 ]);
 
-function Button(props: ButtonProps): JSX.Element {
+function Button(props: ButtonProps) {
   const { children, ...rest } = props;
 
   return (

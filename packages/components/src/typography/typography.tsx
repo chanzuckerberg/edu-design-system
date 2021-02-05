@@ -134,7 +134,7 @@ export type TypographyProps = {
   size: TypographySize;
 };
 
-function Typography(props: TypographyProps): JSX.Element {
+function Typography(props: TypographyProps) {
   const {
     as,
     bold = false,
