@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Text /> Body story renders snapshot 1`] = `
+<p>
+  Body paragraph 16/24
+</p>
+`;
+
+exports[`<Text /> BodyColorInfoBold story renders snapshot 1`] = `
+<p
+  color="info"
+>
+  Info color body text, bold
+</p>
+`;
+
+exports[`<Text /> BodySmall story renders snapshot 1`] = `
+<p>
+  Body small 14/20
+</p>
+`;
+
+exports[`<Text /> BodyXSmall story renders snapshot 1`] = `
+<p>
+  Body Xsmall 12/16
+</p>
+`;
+
+exports[`<Text /> Caption story renders snapshot 1`] = `
+<p>
+  Caption 12/20
+</p>
+`;
+
+exports[`<Text /> Overline story renders snapshot 1`] = `
+<p>
+  Overline 12/20
+</p>
+`;

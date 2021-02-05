@@ -1,14 +1,16 @@
 import * as React from "react";
 
-import Typography, { TypographyProps } from "./typography";
+import Heading from "./Heading";
 import { Story } from "@storybook/react/types-6-0";
 
 export default {
-  title: "Typography",
-  component: Typography,
+  title: "Heading",
+  component: Heading,
 };
 
-const Template: Story<TypographyProps> = (args) => <Typography {...args} />;
+type Args = React.ComponentProps<typeof Heading>;
+
+const Template: Story<Args> = (args) => <Heading {...args} />;
 
 export const Heading1 = Template.bind(null);
 Heading1.args = {
@@ -43,36 +45,6 @@ Heading5.args = {
   bold: true,
   size: "h5",
   children: "Heading 5 12/20",
-};
-
-export const Body = Template.bind(null);
-Body.args = {
-  size: "body",
-  children: "Body paragraph 16/24",
-};
-
-export const BodySmall = Template.bind(null);
-BodySmall.args = {
-  size: "sm",
-  children: "Body small 14/20",
-};
-
-export const BodyXSmall = Template.bind(null);
-BodyXSmall.args = {
-  size: "xs",
-  children: "Body Xsmall 12/16",
-};
-
-export const Caption = Template.bind(null);
-Caption.args = {
-  size: "caption",
-  children: "Caption 12/20",
-};
-
-export const Overline = Template.bind(null);
-Overline.args = {
-  size: "overline",
-  children: "Overline 12/20",
 };
 
 export const Heading1AsHeading4 = Template.bind(null);

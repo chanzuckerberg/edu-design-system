@@ -4,40 +4,24 @@ exports[`<Button /> emoji story renders snapshot 1`] = `
 <button
   aria-label="so cool"
 >
-  <p
-    color="white"
-  >
-    😀 😎 👍 💯
-  </p>
+  😀 😎 👍 💯
 </button>
 `;
 
 exports[`<Button /> primary story renders snapshot 1`] = `
 <button>
-  <p
-    color="white"
-  >
-    Primary Button
-  </p>
+  Primary Button
 </button>
 `;
 
 exports[`<Button /> secondary story renders snapshot 1`] = `
 <button>
-  <p
-    color="white"
-  >
-    Secondary Button
-  </p>
+  Secondary Button
 </button>
 `;
 
 exports[`<Button /> text story renders snapshot 1`] = `
 <button>
-  <p
-    color="white"
-  >
-    Hello Button
-  </p>
+  Hello Button
 </button>
 `;
