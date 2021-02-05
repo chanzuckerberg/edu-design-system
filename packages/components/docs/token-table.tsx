@@ -25,10 +25,7 @@ const StyledTable = styled.table`
   }
 `;
 
-const TokenTable = ({
-  tokens,
-  renderExample,
-}: TokenTableProps): JSX.Element => {
+const TokenTable = ({ tokens, renderExample }: TokenTableProps) => {
   return (
     <StyledTable>
       <thead>
