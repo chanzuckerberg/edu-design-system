@@ -57,10 +57,22 @@ const HeadingComponent = styled.span<BaseHeadingProps>(
 );
 
 function Heading(props: Props) {
-  const { as, bold = true, children, color, size } = props;
+  const {
+    as,
+    bold = true,
+    children,
+    size,
+    /**
+     * Components that wrap typography sometimes require props such as
+     * event handlers, tabIndex, ref, etc. to be passed down into the element.
+     * TODO: add better typing or documentation for optional props,
+     * e.g. React.HTMLAttributes<HTMLHeadingElement>
+     */
+    ...rest
+  } = props;
 
   return (
-    <HeadingComponent as={as || size} bold={bold} color={color} size={size}>
+    <HeadingComponent as={as || size} bold={bold} size={size} {...rest}>
       {children}
     </HeadingComponent>
   );
