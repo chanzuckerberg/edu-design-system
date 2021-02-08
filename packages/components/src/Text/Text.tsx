@@ -14,7 +14,6 @@ interface BaseTextProps {
 }
 
 const TextComponent = styled.p<BaseTextProps>(({ bold, color, size }) => [
-  tw`font-arimo`,
   bold ? tw`font-bold` : tw`font-normal`,
   styleFromColor(color),
   styleFromSize(size),

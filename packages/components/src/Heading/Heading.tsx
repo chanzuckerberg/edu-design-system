@@ -49,7 +49,6 @@ interface BaseHeadingProps {
 
 const HeadingComponent = styled.span<BaseHeadingProps>(
   ({ bold, color, size }) => [
-    tw`font-arimo`,
     bold ? tw`font-bold` : tw`font-normal`,
     styleFromColor(color),
     styleFromSize(size),

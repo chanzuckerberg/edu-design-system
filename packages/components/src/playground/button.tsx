@@ -12,7 +12,7 @@ const ButtonComponent = styled.button<BaseButtonProps>(({ variant }) => [
   // shape & spacing styles
   tw`py-2 px-4 rounded border-none`,
   // text styles
-  tw`font-arimo text-white font-bold text-sm leading-body`,
+  tw`text-white font-bold text-sm leading-body`,
   // background color
   variant === "secondary"
     ? tw`bg-neutral-500 hover:bg-neutral-600`
