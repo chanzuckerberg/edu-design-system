@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.1-alpha.7](https://github.com/chanzuckerberg/lp-design-system/compare/v0.0.1-alpha.6...v0.0.1-alpha.7) (2021-02-11)
+
+
+### Features
+
+* allow forwarded props to heading as well ([6fe0c3a](https://github.com/chanzuckerberg/lp-design-system/commit/6fe0c3a2efe2c59b9f7618576774af59248498b2))
+* **typography:** split into Heading and Text components ([899c202](https://github.com/chanzuckerberg/lp-design-system/commit/899c202a8d11405ace9feaed88fe6cc5777862ff))
+
+
+
+
+
 ## [0.0.1-alpha.6](https://github.com/chanzuckerberg/lp-design-system/compare/v0.0.1-alpha.5...v0.0.1-alpha.6) (2021-01-20)
 
 ### Features
