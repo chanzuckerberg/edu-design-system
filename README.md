@@ -69,7 +69,7 @@ npx lerna version --no-push --conventional-commits prerelease --message "chore(r
 
 `--no-push` ensures the commit is not auto-pushed to remote git
 
-`--conventional-commits` automatically updates the CHANGELOGs based on the commit log. _Warning_: this will include unpublished local commits
+`--conventional-commits` automatically updates the CHANGELOGs based on the commit log
 
 4. Run
 
