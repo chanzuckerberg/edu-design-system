@@ -64,12 +64,14 @@ npx lerna create '@chanzuckerberg/czedi-kit-<package-name>' \
 3. Increment `<version>` based on the latest alpha version:
 
 ```bash
-npx lerna version --no-push --conventional-commits --cd-version prerelease --message "chore(release): publish v0.0.1-alpha.<version>"
+npx lerna version --no-push --conventional-commits prerelease --message "chore(release): publish v0.0.1-alpha.<version>"
 ```
 
-`--no-push` ensures the commit is not auto-pushed to remote git.
+`--no-push` ensures the commit is not auto-pushed to remote git
 
-3. Run
+`--conventional-commits` automatically updates the CHANGELOGs based on the commit log. _Warning_: this will include unpublished local commits
+
+4. Run
 
 ```bash
 npx lerna publish from-git --no-push
@@ -77,7 +79,7 @@ npx lerna publish from-git --no-push
 
 and confirm that tags/commit/changelog etc. look correct
 
-4. Push commit and tags to remote:
+5. Push commit and tags to remote:
 
 ```bash
 git push origin --tags && git push origin master
