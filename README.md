@@ -60,7 +60,7 @@ npx lerna create '@chanzuckerberg/czedi-kit-<package-name>' \
 **We are only publishing alpha pre-releases at this time**
 
 1. Confirm that all checks are green on CI.
-2. Run `git checkout master`
+2. Run `git checkout main`
 3. Increment `<version>` based on the latest alpha version:
 
 ```bash
@@ -82,7 +82,7 @@ and confirm that tags/commit/changelog etc. look correct
 5. Push commit and tags to remote:
 
 ```bash
-git push origin --tags && git push origin master
+git push origin --tags && git push origin main
 ```
 
 In the future, we should have a `publish` script to handle all of this 🤓
