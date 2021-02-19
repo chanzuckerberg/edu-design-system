@@ -24,7 +24,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chanzuckerberg/lp-design-system.git"
+    "url": "git+https://github.com/chanzuckerberg/edu-design-system.git"
   },
   "keywords": [
     "CZI",
@@ -33,9 +33,9 @@
   "author": "CZI",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/chanzuckerberg/lp-design-system/issues"
+    "url": "https://github.com/chanzuckerberg/edu-design-system/issues"
   },
-  "homepage": "https://github.com/chanzuckerberg/lp-design-system#readme",
+  "homepage": "https://github.com/chanzuckerberg/edu-design-system#readme",
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
