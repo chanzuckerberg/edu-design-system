@@ -1,4 +1,4 @@
-# `@chanzuckerberg/czedi-kit-components`
+# `@chanzuckerberg/eds-components`
 
 `czedi-kit-components` contains reusable components of the Design System.
 
@@ -31,7 +31,7 @@ body {
 ## Usage
 
 ```
-const czediKitComponents = require('@chanzuckerberg/czedi-kit-components');
+const czediKitComponents = require('@chanzuckerberg/eds-components');
 
 // TODO: DEMONSTRATE API
 ```
