@@ -1,13 +1,13 @@
 {
-  "name": "@chanzuckerberg/czedi-kit-components",
+  "name": "@chanzuckerberg/eds-components",
   "version": "0.0.1-alpha.7",
-  "description": "React components for czedi-kit",
+  "description": "React components for the education design system",
   "keywords": [
     "design system",
     "components"
   ],
   "author": "Devin Witherspoon <dcwither@gmail.com>",
-  "homepage": "https://github.com/chanzuckerberg/edu-design-system/tree/main/packages/czedi-kit-components#readme",
+  "homepage": "https://github.com/chanzuckerberg/edu-design-system/tree/main/packages/components",
   "license": "MIT",
   "main": "dist/index.js",
   "publishConfig": {
