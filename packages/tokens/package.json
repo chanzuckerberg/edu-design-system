@@ -1,13 +1,13 @@
 {
-  "name": "@chanzuckerberg/czedi-kit-tokens",
+  "name": "@chanzuckerberg/eds-tokens",
   "version": "0.0.1-alpha.7",
-  "description": "Design tokens czedi-kit packages",
+  "description": "Design tokens for the education design system",
   "keywords": [
     "design",
     "system"
   ],
   "author": "Devin Witherspoon <dcwither@gmail.com>",
-  "homepage": "https://github.com/chanzuckerberg/edu-design-system/tree/main/packages/czedi-kit-tokens#readme",
+  "homepage": "https://github.com/chanzuckerberg/edu-design-system/tree/main/packages/tokens",
   "license": "MIT",
   "main": "src/index.js",
   "publishConfig": {
