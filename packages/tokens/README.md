@@ -1,5 +1,5 @@
-## @chanzuckerberg/czedi-kit-tokens
+## @chanzuckerberg/eds-tokens
 
 Built with https://github.com/amzn/style-dictionary
 
-`czedi-kit-tokens` contains all the design tokens to be used by czedi-kit packages.
+`eds-tokens` contains all the design tokens to be used by czedi-kit packages.
