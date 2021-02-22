@@ -45,6 +45,13 @@ To build all packages you can run
 npx lerna run build
 ```
 
+### Add a new component
+From the directory root, run
+```bash
+plop
+```
+and enter the component name.
+
 ### Adding a new package
 
 This isn't something we'll be doing every day

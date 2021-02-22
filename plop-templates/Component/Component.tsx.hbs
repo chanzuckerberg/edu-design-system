@@ -1,0 +1,23 @@
+import React, { ReactNode } from "react";
+import tw, { styled } from "twin.macro";
+
+type Props = {
+  /**
+  * Child node(s) that can be nested inside component
+  */
+  children: ReactNode;
+};
+
+interface Base{{pascalCase name}}Props {}
+
+const {{pascalCase name}}Component = styled.span<Base{{pascalCase name}}Props>``;
+
+function {{pascalCase name}}({ children, ...rest }: Props) {
+  return (
+    <{{pascalCase name}}Component {...rest}>
+      {children}
+    </{{pascalCase name}}Component>
+  );
+}
+
+export default {{pascalCase name}};

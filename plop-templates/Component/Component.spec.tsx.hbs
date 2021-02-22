@@ -1,0 +1,6 @@
+import * as {{pascalCase name}}StoryFile from "./{{pascalCase name}}.stories";
+import { generateSnapshots } from "@chanzuckerberg/story-utils";
+
+describe("<{{pascalCase name}} />", () => {
+  generateSnapshots({{pascalCase name}}StoryFile);
+});
