@@ -48,9 +48,9 @@ export function styleFromSize(size: TypographySize): TwStyle {
     case "h1":
       return tw`text-h1 leading-h1`;
     case "h2":
-      return tw`text-h2 leading-h2`;
+      return tw`text-h2 leading-body`;
     case "h3":
-      return tw`text-h3 leading-h3`;
+      return tw`text-body leading-body`;
     case "h4":
       return tw`text-sm leading-body`;
     case "h5":

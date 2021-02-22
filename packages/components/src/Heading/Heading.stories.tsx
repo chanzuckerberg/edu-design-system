@@ -27,7 +27,7 @@ Heading2.args = {
 export const Heading3 = Template.bind(null);
 Heading3.args = {
   size: "h3",
-  children: "Heading 3 18/24",
+  children: "Heading 3 16/24",
 };
 
 export const Heading4 = Template.bind(null);

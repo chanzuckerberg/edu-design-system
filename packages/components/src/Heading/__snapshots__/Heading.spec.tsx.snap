@@ -20,7 +20,7 @@ exports[`<Heading /> Heading2 story renders snapshot 1`] = `
 
 exports[`<Heading /> Heading3 story renders snapshot 1`] = `
 <h3>
-  Heading 3 18/24
+  Heading 3 16/24
 </h3>
 `;
 

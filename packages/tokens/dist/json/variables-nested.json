@@ -61,7 +61,6 @@
       "font": {
         "h1": "1.5rem",
         "h2": "1.125rem",
-        "h3": "1.125rem",
         "base": "16px",
         "body": "1rem",
         "sm": "0.875rem",
@@ -69,8 +68,6 @@
       },
       "line-height": {
         "h1": "2rem",
-        "h2": "1.5rem",
-        "h3": "1.5rem",
         "body": "1.5rem",
         "sm": "1.25rem",
         "xs": "1rem"
