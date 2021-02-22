@@ -41,20 +41,18 @@ type Props = {
   size: TypographySize;
 };
 
-function Text(props: Props) {
-  const {
-    bold = false,
-    children,
-    size,
-    /**
-     * Components that wrap typography sometimes requires props such as event handlers
-     * to be passed down into the element. One example is the tooltip component.  It
-     * attaches a onHover and onFocus event to the element to determine when to
-     * trigger the overlay.
-     */
-    ...rest
-  } = props;
-
+function Text({
+  bold = false,
+  children,
+  size,
+  /**
+   * Components that wrap typography sometimes requires props such as event handlers
+   * to be passed down into the element. One example is the tooltip component.  It
+   * attaches a onHover and onFocus event to the element to determine when to
+   * trigger the overlay.
+   */
+  ...rest
+}: Props) {
   return (
     <TextComponent bold={bold} size={size} {...rest}>
       {children}
