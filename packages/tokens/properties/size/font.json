@@ -10,10 +10,6 @@
           "value": "1.125rem",
           "comment": "Font size for Heading 2 sized text"
         },
-        "h3": {
-          "value": "1.125rem",
-          "comment": "Font size for Heading 3 sized text"
-        },
         "base": {
           "value": "16px",
           "comment": "Base font size for design system in px"
@@ -35,14 +31,6 @@
         "h1": {
           "value": "2rem",
           "comment": "Line height for Heading 1 sized text"
-        },
-        "h2": {
-          "value": "1.5rem",
-          "comment": "Line height for Heading 2 sized text"
-        },
-        "h3": {
-          "value": "1.5rem",
-          "comment": "Line height for Heading 3 sized text"
         },
         "body": {
           "value": "1.5rem",
