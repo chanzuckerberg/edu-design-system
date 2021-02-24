@@ -3,13 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.1-alpha.9](https://github.com/chanzuckerberg/edu-design-system/compare/v0.0.1-alpha.8...v0.0.1-alpha.9) (2021-02-24)
+
+### Features
+
+- change legacy H3 size ([6d6b437](https://github.com/chanzuckerberg/edu-design-system/commit/6d6b4374baac645da778cbc7bafcbb07e580ebf4))
+
 ## [0.0.1-alpha.8](https://github.com/chanzuckerberg/edu-design-system/compare/v0.0.1-alpha.6...v0.0.1-alpha.8) (2021-02-20)
 
 **Note:** Version bump only for package @chanzuckerberg/eds-tokens
-
-
-
-
 
 ## [0.0.1-alpha.7](https://github.com/chanzuckerberg/lp-design-system/compare/v0.0.1-alpha.6...v0.0.1-alpha.7) (2021-02-11)
 
