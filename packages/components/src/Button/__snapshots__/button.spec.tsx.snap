@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> emoji story renders snapshot 1`] = `
+<button
+  aria-label="so cool"
+  color="brand"
+  type="button"
+>
+  😀 😎 👍 💯
+</button>
+`;
+
+exports[`<Button /> flat story renders snapshot 1`] = `
+<button
+  color="success"
+  type="button"
+>
+  Flat Button
+</button>
+`;
+
+exports[`<Button /> outline story renders snapshot 1`] = `
+<button
+  color="brand"
+  type="button"
+>
+  Outline Button
+</button>
+`;
+
+exports[`<Button /> text story renders snapshot 1`] = `
+<button
+  color="brand"
+  type="button"
+>
+  Hello Button
+</button>
+`;

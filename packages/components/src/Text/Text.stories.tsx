@@ -6,6 +6,13 @@ import Text from "./Text";
 export default {
   title: "Text",
   component: Text,
+  argTypes: {
+    children: {
+      control: {
+        type: "text",
+      },
+    },
+  },
 };
 
 type Args = React.ComponentProps<typeof Text>;
