@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> flat story renders snapshot 1`] = `
+<button
+  color="success"
+  type="button"
+>
+  Flat Button
+</button>
+`;
+
+exports[`<Button /> minimal story renders snapshot 1`] = `
+<button
+  color="alert"
+  type="button"
+>
+  Minimal Button
+</button>
+`;
+
+exports[`<Button /> outline story renders snapshot 1`] = `
+<button
+  color="brand"
+  type="button"
+>
+  Outline Button
+</button>
+`;
