@@ -4,7 +4,7 @@ import Button from "./button";
 import { Story } from "@storybook/react/types-6-0";
 
 export default {
-  title: "ButtonPlayground",
+  title: "Button",
   component: Button,
   argTypes: {
     children: {
@@ -17,12 +17,6 @@ export default {
 
 type Args = React.ComponentProps<typeof Button>;
 const Template: Story<Args> = (args) => <Button {...args} />;
-
-export const text = Template.bind(null);
-text.args = {
-  children: "Hello Button",
-  disabled: false,
-};
 
 export const flat = Template.bind(null);
 flat.args = {
