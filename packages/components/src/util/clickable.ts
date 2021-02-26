@@ -4,13 +4,17 @@ import classNames from "classnames";
 
 export type ClickableProps = {
   /**
-   * The style of button.
+   * The style of the element.
    */
   variant: "flat" | "outline" | "minimal";
   /**
-   * The color of the button element. If no color provided, defaults to the brand color.
+   * The color of the element.
    */
   color: "alert" | "brand" | "neutral" | "success" | "warning";
+  /**
+   * The size of the element.
+   */
+  size: "small" | "medium" | "large";
   className: string;
 };
 
@@ -19,9 +23,9 @@ export type ClickableProps = {
  * other clickables like dropdowns.
  */
 const Clickable = styled.button.attrs<ClickableProps>(
-  ({ color, variant, className }) => {
+  ({ color, variant, size, className }) => {
     return {
-      className: classNames(color, variant, className),
+      className: classNames(color, variant, size, className),
     };
   }
 )(() => [
@@ -86,7 +90,7 @@ const Clickable = styled.button.attrs<ClickableProps>(
     }
 
     &.outline {
-      background-color: var(--button-secondary-color);
+      background-color: transparent;
       border-color: var(--button-primary-color);
       color: var(--button-primary-color);
 
@@ -121,11 +125,36 @@ const Clickable = styled.button.attrs<ClickableProps>(
         color: var(--button-disabled-color);
       }
     }
+
+    /* Component Sizes */
+    &.small {
+      font-size: var(--eds-size-font-sm);
+
+      /* subtract 2px due to border affecting height (1/16) * (24 - 2) = 1.375rem */
+      line-height: 1.375rem;
+      padding: 0.5rem 1.25rem;
+    }
+
+    &.medium {
+      font-size: var(--eds-size-font-sm);
+
+      /* subtract 2px due to border affecting height (1/16) * (24 - 2) = 1.375rem */
+      line-height: 1.375rem;
+      padding: 1rem 1.5rem;
+    }
+
+    &.large {
+      font-size: 1.25rem;
+
+      /* subtract 2px due to border affecting height (1/16) * (30 - 2) = 1.75rem */
+      line-height: 1.75rem;
+      padding: 1.25rem 2rem;
+    }
   `,
   // Base Styles:
-  tw`py-2 px-4 rounded border`,
+  tw`rounded border`,
   // Base Text Styles:
-  tw`font-bold text-sm leading-body`,
+  tw`font-bold`,
   // Focus Outline:
   tw`focus:outline-none focus:ring-2 focus:border-info-400 ring-info-400`,
 ]);
