@@ -1,5 +1,5 @@
+import Clickable, { ClickableProps } from "util/clickable";
 import React, { ReactNode } from "react";
-import StyledClickable, { ClickableProps } from "util/clickable";
 
 type ButtonHTMLElementProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
 
@@ -15,7 +15,7 @@ export type ButtonProps = {
 
 function Button(props: ButtonProps) {
   const { ...rest } = props;
-  return <StyledClickable {...rest} />;
+  return <Clickable {...rest} />;
 }
 
 const defaultProps: Partial<ButtonProps> = {
