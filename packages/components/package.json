@@ -23,7 +23,7 @@
     "build": "npm run build:clean && npm run build:types && npm run build:js && rm -rf dist/playground",
     "build:clean": "rm -rf dist/",
     "build:js": "babel src -d dist --extensions '.js,.jsx,.ts,.tsx' --ignore src/**/*.spec.ts,src/**/*.spec.tsx --ignore src/**/*.stories.ts,src/**/*.stories.tsx",
-    "build:types": "tsc --project . --declaration --emitDeclarationOnly",
+    "build:types": "tsc --project . --declaration --emitDeclarationOnly && ./generateFlowTypes.sh",
     "build:watch": "npm run build:js -- --watch",
     "build:storybook": "build-storybook -o storybook-static",
     "deploy:docs": "storybook-to-ghpages --ci",
@@ -44,6 +44,7 @@
   },
   "dependencies": {
     "@chanzuckerberg/eds-tokens": "^0.0.1-alpha.9",
+    "flowgen": "^1.13.0",
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
