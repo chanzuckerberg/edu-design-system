@@ -17,8 +17,9 @@
   },
   "size-limit": [
     {
-      "path": "packages/components/dist/**/*.js",
+      "path": "packages/components/dist/**/*([a-zA-Z-_]).js",
       "limit": "70KB",
+      "name": "components",
       "webpack": false
     }
   ],
