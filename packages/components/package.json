@@ -44,7 +44,6 @@
   },
   "dependencies": {
     "@chanzuckerberg/eds-tokens": "^0.0.1-alpha.9",
-    "flowgen": "^1.13.0",
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
@@ -76,6 +75,7 @@
     "babel-jest": "^26.6.3",
     "babel-loader": "^8.2.2",
     "babel-plugin-module-resolver": "^4.1.0",
+    "flowgen": "^1.13.0",
     "jest": "^24.9.0",
     "jest-styled-components": "^7.0.3",
     "postcss": "^8.2.6",
