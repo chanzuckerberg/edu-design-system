@@ -42,6 +42,12 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
+      - name: Upload artifact 🗿
+        uses: actions/upload-artifact@v2
+        with:
+          name: packages
+          path: packages/**
+
       - name: Install Dependencies ⬆️
         run: |
           npm ci --no-optional
