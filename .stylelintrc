@@ -16,7 +16,9 @@
           "screen"
         ]
       }
-    ]
+    ],
+    "custom-property-empty-line-before": "never",
+    "no-eol-whitespace": null
   },
   "ignoreFiles": [
     "packages/tokens/dist/**"
