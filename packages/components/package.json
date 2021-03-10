@@ -44,6 +44,8 @@
   },
   "dependencies": {
     "@chanzuckerberg/eds-tokens": "^0.0.1-alpha.9",
+    "@emotion/react": "^11.1.5",
+    "@emotion/styled": "^11.1.5",
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
@@ -58,6 +60,8 @@
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
     "@commitlint/prompt-cli": "^8.3.5",
+    "@emotion/babel-plugin-jsx-pragmatic": "^0.1.5",
+    "@emotion/jest": "^11.2.1",
     "@percy/storybook": "^3.3.1",
     "@storybook/addon-a11y": "^6.1.18",
     "@storybook/addon-essentials": "^6.1.18",
@@ -76,6 +80,7 @@
     "babel-loader": "^8.2.2",
     "babel-plugin-module-resolver": "^4.1.0",
     "babel-plugin-styled-components": "^1.12.0",
+    "core-js": "^3.9.1",
     "flowgen": "^1.13.0",
     "jest": "^24.9.0",
     "jest-styled-components": "^7.0.3",
@@ -85,7 +90,7 @@
     "react-dom": "^16.14.0",
     "sass-loader": "^8.0.2",
     "tailwindcss": "^2.0.3",
-    "twin.macro": "^2.2.3",
+    "twin.macro": "^2.3.0",
     "typescript": "^4.1.5"
   },
   "gitHead": "8680dac1fa3c685e2a35f80d9ceb157f5f5343bd"

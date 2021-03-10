@@ -3,7 +3,7 @@
 
 module.exports = {
   clearMocks: true,
-  setupFilesAfterEnv: ["./test/jest.setup.ts"],
+  snapshotSerializers: ["@emotion/jest/serializer"],
   coverageDirectory: "coverage",
   transform: {
     "^.+\\.tsx?$": "babel-jest",
