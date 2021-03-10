@@ -1,37 +1,90 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Heading /> Heading1 story renders snapshot 1`] = `
-<h1>
+.emotion-0 {
+  font-weight: 700;
+  color: var(--eds-color-font-base);
+  font-size: var(--legacy-size-font-h1);
+  line-height: var(--legacy-size-line-height-h1);
+}
+
+<h1
+  class="emotion-0"
+>
   Heading 1 24/32
 </h1>
 `;
 
 exports[`<Heading /> Heading1AsHeading4 story renders snapshot 1`] = `
-<h1>
+.emotion-0 {
+  font-weight: 700;
+  color: var(--eds-color-font-base);
+  font-size: var(--legacy-size-font-sm);
+  line-height: var(--legacy-size-line-height-body);
+}
+
+<h1
+  class="emotion-0"
+>
   Heading 1 styled as Heading 4
 </h1>
 `;
 
 exports[`<Heading /> Heading2 story renders snapshot 1`] = `
-<h2>
+.emotion-0 {
+  font-weight: 700;
+  color: var(--eds-color-font-base);
+  font-size: var(--legacy-size-font-h2);
+  line-height: var(--legacy-size-line-height-body);
+}
+
+<h2
+  class="emotion-0"
+>
   Heading 2 18/24
 </h2>
 `;
 
 exports[`<Heading /> Heading3 story renders snapshot 1`] = `
-<h3>
+.emotion-0 {
+  font-weight: 700;
+  color: var(--eds-color-font-base);
+  font-size: var(--legacy-size-font-body);
+  line-height: var(--legacy-size-line-height-body);
+}
+
+<h3
+  class="emotion-0"
+>
   Heading 3 16/24
 </h3>
 `;
 
 exports[`<Heading /> Heading4 story renders snapshot 1`] = `
-<h4>
+.emotion-0 {
+  font-weight: 700;
+  color: var(--eds-color-font-base);
+  font-size: var(--legacy-size-font-sm);
+  line-height: var(--legacy-size-line-height-body);
+}
+
+<h4
+  class="emotion-0"
+>
   Heading 4 14/24
 </h4>
 `;
 
 exports[`<Heading /> Heading4ColorNeutral story renders snapshot 1`] = `
+.emotion-0 {
+  font-weight: 700;
+  color: var(--eds-color-neutral-500);
+  font-size: var(--legacy-size-font-sm);
+  line-height: var(--legacy-size-line-height-body);
+}
+
 <h4
+  class="emotion-0"
   color="neutral"
 >
   Neutral color Heading 4
@@ -39,7 +92,16 @@ exports[`<Heading /> Heading4ColorNeutral story renders snapshot 1`] = `
 `;
 
 exports[`<Heading /> Heading5 story renders snapshot 1`] = `
-<h5>
+.emotion-0 {
+  font-weight: 700;
+  color: var(--eds-color-font-base);
+  font-size: var(--legacy-size-font-xs);
+  line-height: var(--legacy-size-line-height-sm);
+}
+
+<h5
+  class="emotion-0"
+>
   Heading 5 12/20
 </h5>
 `;

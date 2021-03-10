@@ -1,13 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Text /> Body story renders snapshot 1`] = `
-<p>
+.emotion-0 {
+  font-weight: 400;
+  color: var(--eds-color-font-base);
+  font-size: var(--legacy-size-font-body);
+  line-height: var(--legacy-size-line-height-body);
+}
+
+<p
+  class="emotion-0"
+>
   Body paragraph 16/24
 </p>
 `;
 
 exports[`<Text /> BodyColorInfoBold story renders snapshot 1`] = `
+.emotion-0 {
+  font-weight: 700;
+  color: var(--eds-color-info-700);
+  font-size: var(--legacy-size-font-body);
+  line-height: var(--legacy-size-line-height-body);
+}
+
 <p
+  class="emotion-0"
   color="info"
 >
   Info color body text, bold
@@ -15,25 +32,62 @@ exports[`<Text /> BodyColorInfoBold story renders snapshot 1`] = `
 `;
 
 exports[`<Text /> BodySmall story renders snapshot 1`] = `
-<p>
+.emotion-0 {
+  font-weight: 400;
+  color: var(--eds-color-font-base);
+  font-size: var(--legacy-size-font-sm);
+  line-height: var(--legacy-size-line-height-sm);
+}
+
+<p
+  class="emotion-0"
+>
   Body small 14/20
 </p>
 `;
 
 exports[`<Text /> BodyXSmall story renders snapshot 1`] = `
-<p>
+.emotion-0 {
+  font-weight: 400;
+  color: var(--eds-color-font-base);
+  font-size: var(--legacy-size-font-xs);
+  line-height: var(--legacy-size-line-height-xs);
+}
+
+<p
+  class="emotion-0"
+>
   Body Xsmall 12/16
 </p>
 `;
 
 exports[`<Text /> Caption story renders snapshot 1`] = `
-<p>
+.emotion-0 {
+  font-weight: 400;
+  color: var(--eds-color-font-base);
+  font-size: var(--legacy-size-font-xs);
+  line-height: var(--legacy-size-line-height-sm);
+}
+
+<p
+  class="emotion-0"
+>
   Caption 12/20
 </p>
 `;
 
 exports[`<Text /> Overline story renders snapshot 1`] = `
-<p>
+.emotion-0 {
+  font-weight: 400;
+  color: var(--eds-color-font-base);
+  font-size: var(--legacy-size-font-xs);
+  line-height: var(--legacy-size-line-height-sm);
+  text-transform: uppercase;
+}
+
+<p
+  class="emotion-0"
+>
   Overline 12/20
 </p>
 `;

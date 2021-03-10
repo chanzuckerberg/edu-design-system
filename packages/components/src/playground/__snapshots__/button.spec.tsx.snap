@@ -1,27 +1,106 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Button /> emoji story renders snapshot 1`] = `
+.emotion-0 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 0.25rem;
+  border-style: none;
+  color: var(--eds-color-white);
+  font-weight: 700;
+  font-size: var(--legacy-size-font-sm);
+  line-height: var(--legacy-size-line-height-body);
+  background-color: var(--eds-color-brand-600);
+}
+
+.emotion-0:hover {
+  background-color: var(--eds-color-brand-700);
+}
+
 <button
   aria-label="so cool"
+  class="emotion-0"
 >
   😀 😎 👍 💯
 </button>
 `;
 
 exports[`<Button /> primary story renders snapshot 1`] = `
-<button>
+.emotion-0 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 0.25rem;
+  border-style: none;
+  color: var(--eds-color-white);
+  font-weight: 700;
+  font-size: var(--legacy-size-font-sm);
+  line-height: var(--legacy-size-line-height-body);
+  background-color: var(--eds-color-brand-600);
+}
+
+.emotion-0:hover {
+  background-color: var(--eds-color-brand-700);
+}
+
+<button
+  class="emotion-0"
+>
   Primary Button
 </button>
 `;
 
 exports[`<Button /> secondary story renders snapshot 1`] = `
-<button>
+.emotion-0 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 0.25rem;
+  border-style: none;
+  color: var(--eds-color-white);
+  font-weight: 700;
+  font-size: var(--legacy-size-font-sm);
+  line-height: var(--legacy-size-line-height-body);
+  background-color: var(--eds-color-neutral-500);
+}
+
+.emotion-0:hover {
+  background-color: var(--eds-color-neutral-600);
+}
+
+<button
+  class="emotion-0"
+>
   Secondary Button
 </button>
 `;
 
 exports[`<Button /> text story renders snapshot 1`] = `
-<button>
+.emotion-0 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 0.25rem;
+  border-style: none;
+  color: var(--eds-color-white);
+  font-weight: 700;
+  font-size: var(--legacy-size-font-sm);
+  line-height: var(--legacy-size-line-height-body);
+  background-color: var(--eds-color-brand-600);
+}
+
+.emotion-0:hover {
+  background-color: var(--eds-color-brand-700);
+}
+
+<button
+  class="emotion-0"
+>
   Hello Button
 </button>
 `;

@@ -17,6 +17,21 @@
   "plugins": [
     "babel-plugin-styled-components",
     "babel-plugin-macros",
+    [
+      "@emotion/babel-plugin-jsx-pragmatic",
+      {
+        "export": "jsx",
+        "import": "__cssprop",
+        "module": "@emotion/react"
+      }
+    ],
+    [
+      "@babel/plugin-transform-react-jsx",
+      {
+        "pragma": "__cssprop",
+        "pragmaFrag": "React.Fragment"
+      }
+    ],
     "@babel/plugin-transform-modules-commonjs",
     [
       "module-resolver",
