@@ -1,14 +1,12 @@
 import "@chanzuckerberg/eds-tokens/css/variables.css";
 import "../src/styles/fonts.css";
+import "../src/styles/global.css";
 
 import * as React from "react";
-
-import EDSGlobalStyles from "../src/styles/global";
 
 export const decorators = [
   (Story) => (
     <div dir="ltr">
-      <EDSGlobalStyles />
       <Story />
     </div>
   ),
