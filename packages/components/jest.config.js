@@ -3,9 +3,11 @@
 
 module.exports = {
   clearMocks: true,
-  snapshotSerializers: ["@emotion/jest/serializer"],
   coverageDirectory: "coverage",
   transform: {
     "^.+\\.tsx?$": "babel-jest",
+  },
+  moduleNameMapper: {
+    "\\.css$": "identity-obj-proxy",
   },
 };

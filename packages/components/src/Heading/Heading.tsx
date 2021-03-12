@@ -1,11 +1,6 @@
-import React, { ReactNode } from "react";
-import {
-  TypographyColor,
-  TypographySize,
-  styleFromColor,
-  styleFromSize,
-} from "../util/typography";
-import tw, { styled } from "twin.macro";
+import Typography, { TypographyProps } from "../util/typography";
+
+import React from "react";
 
 type HeadingElement = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 
@@ -18,46 +13,14 @@ type Props = {
    * and the `size` will be used to determine the styling.
    */
   as?: HeadingElement;
-  /**
-   * Specifies font weight as either bold or normal (defaults to bold).
-   * TODO: Currently we will allow toggling any size, but in the future
-   * we will add stricter enforcement -- e.g. enforcing a boldness
-   * for each size or checking for mutually exclusive props.
-   */
-  bold?: boolean;
-  /**
-   * The text content to present.
-   */
-  children: ReactNode;
-  /**
-   * The color of the heading element. If no color provided, defaults to a base color.
-   */
-  color?: TypographyColor;
-  /**
-   * The size of the html element. If no `as` prop is provided, then
-   * the component uses this value to determine which html tag to render
-   * (e.g. 'h1', 'h2', etc.)
-   */
-  size: TypographySize;
+  children: TypographyProps<HeadingElement>["children"];
+  color?: TypographyProps<HeadingElement>["color"];
+  size: TypographyProps<HeadingElement>["size"];
+  weight?: TypographyProps<HeadingElement>["weight"];
 };
-
-interface BaseHeadingProps {
-  bold: boolean;
-  color?: TypographyColor;
-  size: TypographySize;
-}
-
-const HeadingComponent = styled.span<BaseHeadingProps>(
-  ({ bold, color, size }) => [
-    bold ? tw`font-bold` : tw`font-normal`,
-    styleFromColor(color),
-    styleFromSize(size),
-  ]
-);
 
 function Heading({
   as,
-  bold = true,
   children,
   size,
   /**
@@ -69,9 +32,9 @@ function Heading({
   ...rest
 }: Props) {
   return (
-    <HeadingComponent as={as || size} bold={bold} size={size} {...rest}>
+    <Typography as={as || size} size={size} {...rest}>
       {children}
-    </HeadingComponent>
+    </Typography>
   );
 }
 

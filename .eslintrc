@@ -47,11 +47,12 @@
       }
     },
     {
-      "files": ["config.js", "*.config.js"],
+      "files": ["config.js", "*.config.js", "main.js"],
       "env": {
         "browser": false,
         "node": true
       }
     }
-  ]
+  ],
+  "ignorePatterns": ["!.storybook"]
 }

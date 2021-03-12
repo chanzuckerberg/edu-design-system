@@ -44,8 +44,8 @@ Overline.args = {
 
 export const BodyColorInfoBold = Template.bind(null);
 BodyColorInfoBold.args = {
-  bold: true,
   children: "Info color body text, bold",
   color: "info",
   size: "body",
+  weight: "bold",
 };

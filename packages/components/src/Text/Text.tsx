@@ -1,50 +1,23 @@
-import React, { ReactNode } from "react";
-import {
-  TypographyColor,
-  TypographySize,
-  styleFromColor,
-  styleFromSize,
-} from "../util/typography";
-import tw, { styled } from "twin.macro";
+import Typography, { TypographyProps } from "../util/typography";
 
-interface BaseTextProps {
-  bold: boolean;
-  color?: TypographyColor;
-  size: TypographySize;
-}
+import React from "react";
 
-const TextComponent = styled.p<BaseTextProps>(({ bold, color, size }) => [
-  bold ? tw`font-bold` : tw`font-normal`,
-  styleFromColor(color),
-  styleFromSize(size),
-]);
+type TextElement = "p" | "span";
 
 type Props = {
   /**
-   * Specifies font weight as either bold or normal (defaults to normal).
-   * TODO: We may add stricter enforcement of mutually exclusive props.
+   * Controls whether to render text inline (defaults to "p");
    */
-  bold?: boolean;
-  /**
-   * The text content to present.
-   */
-  children: ReactNode;
-  /**
-   * The color of the text element. If no color provided, defaults to a base color.
-   */
-  color?: TypographyColor;
-  /**
-   * The size of the html element. If used as a Heading and no `as` prop is provided,
-   * then the component uses this value to determine which html tag to render
-   * (e.g. 'h1', 'h2', etc.)
-   */
-  size: TypographySize;
+  as?: TextElement;
+  children: TypographyProps<TextElement>["children"];
+  color?: TypographyProps<TextElement>["color"];
+  size: TypographyProps<TextElement>["size"];
+  weight?: TypographyProps<TextElement>["weight"];
 };
 
 function Text({
-  bold = false,
+  as,
   children,
-  size,
   /**
    * Components that wrap typography sometimes requires props such as event handlers
    * to be passed down into the element. One example is the tooltip component.  It
@@ -54,9 +27,9 @@ function Text({
   ...rest
 }: Props) {
   return (
-    <TextComponent bold={bold} size={size} {...rest}>
+    <Typography as={as || "p"} {...rest}>
       {children}
-    </TextComponent>
+    </Typography>
   );
 }
 

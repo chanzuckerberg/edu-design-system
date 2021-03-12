@@ -1,0 +1,94 @@
+/* sizes */
+
+.typography,
+.typography--size-body {
+  @apply text-body leading-body;
+}
+
+.typography--size-h1 {
+  @apply text-h1 leading-h1;
+  @apply font-bold;
+}
+
+.typography--size-h2 {
+  @apply text-h2 leading-body;
+  @apply font-bold;
+}
+
+.typography--size-h3 {
+  @apply text-body leading-body;
+  @apply font-bold;
+}
+
+.typography--size-h4 {
+  @apply text-sm leading-body;
+  @apply font-bold;
+}
+
+.typography--size-h5 {
+  @apply text-xs leading-sm;
+  @apply font-bold;
+}
+
+.typography--size-sm {
+  @apply text-sm leading-sm;
+}
+
+.typography--size-xs {
+  @apply text-xs leading-xs;
+}
+
+.typography--size-caption,
+.typography--size-overline {
+  @apply text-xs leading-sm;
+}
+
+.typography--size-overline {
+  @apply uppercase;
+}
+
+/* colors */
+.typography--color-alert {
+  @apply text-alert-700;
+}
+
+.typography--color-base {
+  @apply text-font-base;
+}
+
+.typography--color-brand {
+  @apply text-brand-700;
+}
+
+.typography--color-info {
+  @apply text-info-700;
+}
+
+.typography--color-neutral {
+  @apply text-neutral-500;
+}
+
+.typography--color-success {
+  @apply text-success-700;
+}
+
+.typography--color-warning {
+  @apply text-warning-700;
+}
+
+.typography--color-white {
+  @apply text-white;
+}
+
+/**
+ * font-weights
+ * allows override for text components, shouldn't be used by heading components
+ **/
+ 
+.typography--weight-normal {
+  @apply font-normal;
+}
+
+.typography--weight-bold {
+  @apply font-bold;
+}
