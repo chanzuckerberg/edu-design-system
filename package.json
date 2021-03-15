@@ -22,6 +22,12 @@
       "limit": "70KB",
       "name": "components",
       "webpack": false
+    },
+    {
+      "path": "packages/components/dist/**/*([a-zA-Z-_]).css",
+      "limit": "70KB",
+      "name": "styles",
+      "webpack": false
     }
   ],
   "repository": {
