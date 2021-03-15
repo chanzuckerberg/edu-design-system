@@ -8,9 +8,9 @@ This is the Learning Platform Design System or `@chanzuckerberg/czedi-kit` (work
 
 ### Node
 
-Install the version of node specified in the `.nvmrc` file.
+Install the version of node specified in the `.node-version` file.
 
-If using [nvm](https://github.com/nvm-sh/nvm), this can be done by running `nvm install`. If the correct version is already installed, `nvm use` will switch to it.
+If using [nodenv](https://github.com/nodenv/nodenv) and [node-build](https://github.com/nodenv/node-build), this can be done by running `nodenv install`.
 
 ### Installation
 
