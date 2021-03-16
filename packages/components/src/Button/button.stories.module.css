@@ -1,0 +1,7 @@
+.colors {
+  @apply flex;
+}
+
+.colors__color {
+  @apply pr-4 pb-4;
+}

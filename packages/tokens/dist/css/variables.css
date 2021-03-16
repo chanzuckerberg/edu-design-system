@@ -52,6 +52,7 @@
   --legacy-size-line-height-body: 1.5rem; /* Default line height for body text */
   --legacy-size-line-height-sm: 1.25rem; /* Line height for small body text */
   --legacy-size-line-height-xs: 1rem; /* Line height for xsmall body text */
+  --eds-color-transparent: transparent;
   --eds-color-neutral-100: #F3F3F3;
   --eds-color-neutral-200: #E8E8E9;
   --eds-color-neutral-300: #CAD1D8;

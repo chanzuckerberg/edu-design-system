@@ -76,6 +76,7 @@
   },
   "eds": {
     "color": {
+      "transparent": "var(--eds-color-transparent)",
       "neutral": {
         "100": "var(--eds-color-neutral-100)",
         "200": "var(--eds-color-neutral-200)",
