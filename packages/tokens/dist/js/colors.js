@@ -41,6 +41,7 @@ export const LegacyColorPurple200 = "#7686D3";
 export const LegacyColorPurple300 = "#5761BA";
 export const LegacyColorPurple350 = "#454E9D";
 export const LegacyColorPurple400 = "#32417C";
+export const EdsColorTransparent = "transparent";
 export const EdsColorNeutral100 = "#F3F3F3";
 export const EdsColorNeutral200 = "#E8E8E9";
 export const EdsColorNeutral300 = "#CAD1D8";

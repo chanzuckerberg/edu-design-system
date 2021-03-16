@@ -2,7 +2,7 @@
 
 exports[`<Button /> flat story renders snapshot 1`] = `
 <button
-  color="success"
+  class="button button--variant-flat button--size-small button--color-success"
   type="button"
 >
   Flat Button
@@ -11,7 +11,7 @@ exports[`<Button /> flat story renders snapshot 1`] = `
 
 exports[`<Button /> minimal story renders snapshot 1`] = `
 <button
-  color="alert"
+  class="button button--variant-minimal button--size-small button--color-alert"
   type="button"
 >
   Minimal Button
@@ -20,7 +20,7 @@ exports[`<Button /> minimal story renders snapshot 1`] = `
 
 exports[`<Button /> outline story renders snapshot 1`] = `
 <button
-  color="brand"
+  class="button button--variant-outline button--size-small button--color-brand"
   type="button"
 >
   Outline Button

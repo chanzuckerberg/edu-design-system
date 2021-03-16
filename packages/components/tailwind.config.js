@@ -6,8 +6,9 @@ module.exports = {
       arimo: "Arimo, sans-serif",
     },
     fontSize: tokens.legacy.size.font,
-    lineHeight: tokens.legacy.size["line-height"],
-    extend: {},
+    extend: {
+      lineHeight: tokens.legacy.size["line-height"],
+    },
   },
   variants: {},
   plugins: [],

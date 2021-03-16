@@ -1,14 +1,12 @@
 .button {
   /* Base Styles */
-  @apply py-2 px-4 rounded border;
+  @apply rounded border;
 
   /* Base Text Styles */
   @apply font-bold text-sm leading-body;
-
-  /* Focus Outline */
-  @apply focus:outline-none focus:ring-2 focus:border-info-400 ring-info-400;
 }
 
+.button,
 .button--color-brand {
   --button-primary-color: var(--eds-color-brand-600);
   --button-hocus-color: var(--eds-color-brand-700);
@@ -54,7 +52,8 @@
   }
 
   &:hover,
-  &:focus {
+  &:focus,
+  &.button--focus {
     background-color: var(--button-hocus-color);
   }
 
@@ -70,12 +69,10 @@
   border-color: var(--button-primary-color);
   color: var(--button-primary-color);
 
-  &:hover {
-    border-color: var(--button-hocus-color);
-  }
-
   &:hover,
-  &:focus {
+  &:focus,
+  &.button--focus {
+    border-color: var(--button-hocus-color);
     color: var(--button-hocus-color);
   }
 
@@ -92,7 +89,8 @@
   color: var(--button-primary-color);
 
   &:hover,
-  &:focus {
+  &:focus,
+  &.button--focus {
     color: var(--button-hocus-color);
   }
 
@@ -100,4 +98,28 @@
   &:disabled {
     color: var(--button-disabled-color);
   }
+}
+
+/* Component Sizes */
+.button,
+.button--size-small {
+  @apply px-5 py-2 text-sm leading-snug;
+}
+
+.button--size-medium {
+  @apply px-6 py-4 text-sm leading-snug;
+}
+
+.button--size-large {
+  @apply px-8 py-5 leading-7;
+
+  /* manual font size sinde there's no match in tokens */
+  font-size: 1.25rem;
+}
+
+/* comes after other styles to override hover behaviors */
+.button:focus,
+.button.button--focus {
+  /* Focus Outline */
+  @apply outline-none ring-info-400 ring border-transparent;
 }

@@ -1,4 +1,4 @@
-import Clickable, { ClickableProps } from "util/clickable";
+import Clickable, { ClickableProps } from "../util/clickable";
 import React, { ReactNode } from "react";
 
 type ButtonHTMLElementProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
@@ -11,7 +11,10 @@ export type ButtonProps = {
   type: ButtonHTMLElementProps["type"];
   disabled: ButtonHTMLElementProps["disabled"];
   as: "button" | React.ComponentType<any>;
-} & ClickableProps;
+  variant: ClickableProps<"button">["variant"];
+  color: ClickableProps<"button">["color"];
+  size: ClickableProps<"button">["size"];
+};
 
 function Button(props: ButtonProps) {
   const { ...rest } = props;

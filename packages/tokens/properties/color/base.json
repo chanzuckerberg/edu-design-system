@@ -60,6 +60,7 @@
   },
   "eds": {
     "color": {
+      "transparent": { "value": "transparent" },
       "neutral": {
         "100": { "value": "#F3F3F3" },
         "200": { "value": "#E8E8E9" },

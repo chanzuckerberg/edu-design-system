@@ -1,7 +1,9 @@
 import * as React from "react";
 
-import Button from "./button";
+import Button, { ButtonProps } from "./button";
+
 import { Story } from "@storybook/react/types-6-0";
+import styles from "./button.stories.module.css";
 
 export default {
   title: "Button",
@@ -36,4 +38,40 @@ minimal.args = {
   children: "Minimal Button",
   variant: "minimal",
   color: "alert",
+};
+
+const sizes: Array<ButtonProps["size"]> = ["small", "medium", "large"];
+const colors: Array<ButtonProps["color"]> = [
+  "alert",
+  "brand",
+  "neutral",
+  "success",
+  "warning",
+];
+const variants: Array<ButtonProps["variant"]> = ["flat", "outline", "minimal"];
+
+export const grid = () => {
+  return (
+    <ul>
+      {sizes.map((size) => (
+        <li key={size}>
+          <ul>
+            {variants.map((variant) => (
+              <li key={variant}>
+                <ul className={styles["colors"]}>
+                  {colors.map((color) => (
+                    <li key={color} className={styles["colors__color"]}>
+                      <Button size={size} color={color} variant={variant}>
+                        Button
+                      </Button>
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            ))}
+          </ul>
+        </li>
+      ))}
+    </ul>
+  );
 };

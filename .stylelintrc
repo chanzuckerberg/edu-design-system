@@ -18,7 +18,9 @@
       }
     ],
     "custom-property-empty-line-before": "never",
-    "no-eol-whitespace": null
+    "no-eol-whitespace": null,
+    "selector-nested-pattern": "^(&(:[\\w-]*|\\.[\\w-]*--focus),?\\s*)+$",
+    "max-nesting-depth": 1
   },
   "ignoreFiles": [
     "packages/tokens/dist/**"
