@@ -18,6 +18,10 @@ export type ClickableProps<IComponent extends React.ElementType> = {
    */
   size: "small" | "medium" | "large";
   className: string;
+  /**
+   * A hidden prop for visual testing
+   */
+  state?: "inactive" | "hover" | "focus" | "disabled";
 } & React.ComponentProps<IComponent>;
 
 function Clickable<IComponent extends React.ElementType>({
@@ -25,6 +29,7 @@ function Clickable<IComponent extends React.ElementType>({
   children,
   color,
   size,
+  state,
   variant,
   ...rest
 }: ClickableProps<IComponent>) {
@@ -35,10 +40,16 @@ function Clickable<IComponent extends React.ElementType>({
         `button`,
         `button--variant-${variant}`,
         `button--size-${size}`,
-        `button--color-${color}`
+        `button--color-${color}`,
+        {
+          // For testing in storybook and percy
+          [`button--state-${state}`]: state,
+        }
       )}
       {...rest}
     >
+      {/* No width space to ensure height of contents */}
+      {"\u200B"}
       {children}
     </Component>
   );

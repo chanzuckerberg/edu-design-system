@@ -1,8 +1,11 @@
 import * as React from "react";
 
 import Button, { ButtonProps } from "./button";
+import Clickable, { ClickableProps } from "../util/clickable";
 
+import Heading from "../Heading";
 import { Story } from "@storybook/react/types-6-0";
+import Text from "../Text";
 import styles from "./button.stories.module.css";
 
 export default {
@@ -49,29 +52,60 @@ const colors: Array<ButtonProps["color"]> = [
   "warning",
 ];
 const variants: Array<ButtonProps["variant"]> = ["flat", "outline", "minimal"];
+const states: Array<ClickableProps<"button">["state"]> = [
+  "inactive",
+  "hover",
+  "focus",
+  "disabled",
+];
 
-export const grid = () => {
+export const allVariants = () => {
   return (
     <ul>
       {sizes.map((size) => (
         <li key={size}>
-          <ul>
-            {variants.map((variant) => (
-              <li key={variant}>
-                <ul className={styles["colors"]}>
-                  {colors.map((color) => (
-                    <li key={color} className={styles["colors__color"]}>
-                      <Button size={size} color={color} variant={variant}>
-                        Button
-                      </Button>
-                    </li>
+          {variants.map((variant) => (
+            <React.Fragment key={variant}>
+              <Heading size="h2">
+                {variant} - {size}
+              </Heading>
+              <table className={styles["variant"]}>
+                <tbody>
+                  {states.map((state) => (
+                    <tr key={state}>
+                      <th scope="row">
+                        <Text size="body">{state}</Text>
+                      </th>
+                      {colors.map((color) => (
+                        <td key={color} className={styles["color"]}>
+                          <Clickable
+                            as="button"
+                            size={size}
+                            color={color}
+                            variant={variant}
+                            state={state}
+                          >
+                            Button
+                          </Clickable>
+                        </td>
+                      ))}
+                    </tr>
                   ))}
-                </ul>
-              </li>
-            ))}
-          </ul>
+                </tbody>
+              </table>
+            </React.Fragment>
+          ))}
         </li>
       ))}
     </ul>
   );
+};
+
+allVariants.parameters = {
+  snapshot: {
+    skip: true,
+  },
+  axe: {
+    skip: true,
+  },
 };

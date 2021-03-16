@@ -3,6 +3,7 @@
 .typography,
 .typography--size-body {
   @apply text-body leading-body;
+  @apply font-normal;
 }
 
 .typography--size-h1 {
@@ -32,19 +33,23 @@
 
 .typography--size-sm {
   @apply text-sm leading-sm;
+  @apply font-normal;
 }
 
 .typography--size-xs {
   @apply text-xs leading-xs;
+  @apply font-normal;
 }
 
 .typography--size-caption,
 .typography--size-overline {
   @apply text-xs leading-sm;
+  @apply font-normal;
 }
 
 .typography--size-overline {
   @apply uppercase;
+  @apply font-normal;
 }
 
 /* colors */
