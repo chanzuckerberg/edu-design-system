@@ -1,7 +1,7 @@
-.colors {
-  @apply flex;
+.color {
+  @apply p-2;
 }
 
-.colors__color {
-  @apply pr-4 pb-4;
+.variant {
+  @apply mb-5;
 }

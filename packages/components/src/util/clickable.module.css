@@ -52,13 +52,15 @@
   }
 
   &:hover,
+  &.button--state-hover,
   &:focus,
-  &.button--focus {
+  &.button--state-focus {
     background-color: var(--button-hocus-color);
   }
 
   /* override the hover/focus values */
-  &:disabled {
+  &:disabled,
+  &.button--state-disabled {
     background-color: var(--button-disabled-color);
     border-color: var(--button-disabled-color);
   }
@@ -70,14 +72,21 @@
   color: var(--button-primary-color);
 
   &:hover,
+  &.button--state-hover {
+    background-color: var(--button-primary-color);
+    color: var(--button-secondary-color);
+  }
+
   &:focus,
-  &.button--focus {
-    border-color: var(--button-hocus-color);
+  &.button--state-focus {
+    background-color: var(--button-secondary-color);
     color: var(--button-hocus-color);
   }
 
   /* override the hover/focus values */
-  &:disabled {
+  &:disabled,
+  &.button--state-disabled {
+    background-color: var(--button-secondary-color);
     border-color: var(--button-disabled-color);
     color: var(--button-disabled-color);
   }
@@ -89,13 +98,15 @@
   color: var(--button-primary-color);
 
   &:hover,
+  &.button--state-hover,
   &:focus,
-  &.button--focus {
+  &.button--state-focus {
     color: var(--button-hocus-color);
   }
 
   /* override the hover/focus values */
-  &:disabled {
+  &:disabled,
+  &.button--state-disabled {
     color: var(--button-disabled-color);
   }
 }
@@ -119,7 +130,7 @@
 
 /* comes after other styles to override hover behaviors */
 .button:focus,
-.button.button--focus {
+.button.button--state-focus {
   /* Focus Outline */
   @apply outline-none ring-info-400 ring border-transparent;
 }
