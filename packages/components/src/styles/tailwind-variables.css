@@ -1,9 +1,12 @@
 
 /* Copied from output of `@tailwind utilities` */
-:root {
+* {
   --tw-shadow: 0 0 #0000;
   --tw-ring-inset: var(--tw-empty,/*!*/ /*!*/);
-  --tw-ring-offset-width: 0;
+
+  /* Can't remove the px because it breaks tailwind rings */
+  /* stylelint-disable-next-line length-zero-no-unit */
+  --tw-ring-offset-width: 0px;
   --tw-ring-offset-color: #fff;
   --tw-ring-color: rgba(59, 130, 246, 0.5);
   --tw-ring-offset-shadow: 0 0 #0000;

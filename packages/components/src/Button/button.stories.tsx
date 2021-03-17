@@ -43,6 +43,25 @@ minimal.args = {
   color: "alert",
 };
 
+export const link = Template.bind(null);
+link.args = {
+  children: "Link Button",
+  variant: "link",
+  color: "alert",
+};
+
+export const linkInText = (args) => (
+  <Text size="body">
+    This text surrounds the <Button {...args} /> and shows that the link should
+    adhere to its appearance
+  </Text>
+);
+linkInText.args = {
+  children: "Link Button",
+  variant: "link",
+  color: "alert",
+};
+
 const sizes: Array<ButtonProps["size"]> = ["small", "medium", "large"];
 const colors: Array<ButtonProps["color"]> = [
   "alert",
@@ -51,7 +70,12 @@ const colors: Array<ButtonProps["color"]> = [
   "success",
   "warning",
 ];
-const variants: Array<ButtonProps["variant"]> = ["flat", "outline", "minimal"];
+const variants: Array<ButtonProps["variant"]> = [
+  "flat",
+  "outline",
+  "minimal",
+  "link",
+];
 const states: Array<ClickableProps<"button">["state"]> = [
   "inactive",
   "hover",
