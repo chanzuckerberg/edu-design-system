@@ -53,7 +53,6 @@ $legacy-size-line-height-h1: 2rem !default; // Line height for Heading 1 sized t
 $legacy-size-line-height-body: 1.5rem !default; // Default line height for body text
 $legacy-size-line-height-sm: 1.25rem !default; // Line height for small body text
 $legacy-size-line-height-xs: 1rem !default; // Line height for xsmall body text
-$eds-color-transparent: transparent !default;
 $eds-color-neutral-100: #F3F3F3 !default;
 $eds-color-neutral-200: #E8E8E9 !default;
 $eds-color-neutral-300: #CAD1D8 !default;
@@ -201,7 +200,6 @@ $tokens: (
   ),
   'eds': (
     'color': (
-      'transparent': $eds-color-transparent,
       'neutral': (
         '100': $eds-color-neutral-100,
         '200': $eds-color-neutral-200,
