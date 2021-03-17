@@ -20,13 +20,29 @@ exports[`<Button /> link story renders snapshot 1`] = `
 </button>
 `;
 
-exports[`<Button /> linkInText story renders snapshot 1`] = `
+exports[`<Button /> linkInBody story renders snapshot 1`] = `
 <p
   class="typography--size-body typography--color-base"
 >
   This text surrounds the 
   <button
-    class="button button--variant-link button--color-alert"
+    class="button button--variant-link button--color-brand"
+    type="button"
+  >
+    ​
+    Link Button
+  </button>
+   and shows that the link should adhere to its appearance
+</p>
+`;
+
+exports[`<Button /> linkInHeading story renders snapshot 1`] = `
+<p
+  class="typography--size-h1 typography--color-base"
+>
+  This text surrounds the 
+  <button
+    class="button button--variant-link button--color-brand"
     type="button"
   >
     ​
