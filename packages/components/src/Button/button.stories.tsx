@@ -50,16 +50,28 @@ link.args = {
   color: "alert",
 };
 
-export const linkInText = (args) => (
+export const linkInBody = (args) => (
   <Text size="body">
     This text surrounds the <Button {...args} /> and shows that the link should
     adhere to its appearance
   </Text>
 );
-linkInText.args = {
+linkInBody.args = {
   children: "Link Button",
   variant: "link",
-  color: "alert",
+  color: "brand",
+};
+
+export const linkInHeading = (args) => (
+  <Text size="h1">
+    This text surrounds the <Button {...args} /> and shows that the link should
+    adhere to its appearance
+  </Text>
+);
+linkInHeading.args = {
+  children: "Link Button",
+  variant: "link",
+  color: "brand",
 };
 
 const sizes: Array<ButtonProps["size"]> = ["small", "medium", "large"];
@@ -108,6 +120,7 @@ export const allVariants = () => {
                             color={color}
                             variant={variant}
                             state={state}
+                            disabled={state === "disabled"}
                           >
                             Button
                           </Clickable>

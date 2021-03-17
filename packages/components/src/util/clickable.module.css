@@ -116,9 +116,12 @@
   background-color: transparent;
   border-color: transparent;
   color: var(--button-primary-color);
+
+  /* button should defer to surrounding text for size/weight/line-height/case */
   font-size: inherit;
   font-weight: inherit;
   line-height: inherit;
+  text-transform: inherit;
 
   &:hover,
   &.button--state-hover,
