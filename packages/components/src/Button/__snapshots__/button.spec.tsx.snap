@@ -2,7 +2,7 @@
 
 exports[`<Button /> flat story renders snapshot 1`] = `
 <button
-  class="button button--variant-flat button--size-small button--color-success"
+  class="button button--variant-flat button--color-success button--size-small"
   type="button"
 >
   ​
@@ -10,9 +10,35 @@ exports[`<Button /> flat story renders snapshot 1`] = `
 </button>
 `;
 
+exports[`<Button /> link story renders snapshot 1`] = `
+<button
+  class="button button--variant-link button--color-alert"
+  type="button"
+>
+  ​
+  Link Button
+</button>
+`;
+
+exports[`<Button /> linkInText story renders snapshot 1`] = `
+<p
+  class="typography--size-body typography--color-base"
+>
+  This text surrounds the 
+  <button
+    class="button button--variant-link button--color-alert"
+    type="button"
+  >
+    ​
+    Link Button
+  </button>
+   and shows that the link should adhere to its appearance
+</p>
+`;
+
 exports[`<Button /> minimal story renders snapshot 1`] = `
 <button
-  class="button button--variant-minimal button--size-small button--color-alert"
+  class="button button--variant-minimal button--color-alert button--size-small"
   type="button"
 >
   ​
@@ -22,7 +48,7 @@ exports[`<Button /> minimal story renders snapshot 1`] = `
 
 exports[`<Button /> outline story renders snapshot 1`] = `
 <button
-  class="button button--variant-outline button--size-small button--color-brand"
+  class="button button--variant-outline button--color-brand button--size-small"
   type="button"
 >
   ​

@@ -8,7 +8,7 @@ export type ClickableProps<IComponent extends React.ElementType> = {
   /**
    * The style of the element.
    */
-  variant: "flat" | "outline" | "minimal";
+  variant: "flat" | "outline" | "minimal" | "link";
   /**
    * The color of the element.
    */
@@ -39,11 +39,11 @@ function Clickable<IComponent extends React.ElementType>({
       className={cx(
         `button`,
         `button--variant-${variant}`,
-        `button--size-${size}`,
         `button--color-${color}`,
         {
           // For testing in storybook and percy
           [`button--state-${state}`]: state,
+          [`button--size-${size}`]: variant !== "link",
         }
       )}
       {...rest}
