@@ -1,7 +1,10 @@
 const tokens = require("@chanzuckerberg/eds-tokens/json/css-variables-nested.json");
 module.exports = {
   theme: {
-    colors: tokens.eds.color,
+    colors: {
+      transparent: "transparent",
+      ...tokens.eds.color,
+    },
     fontFamily: {
       arimo: "Arimo, sans-serif",
     },
