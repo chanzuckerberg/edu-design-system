@@ -1,63 +1,64 @@
 .button {
   /* Base Styles */
-  @apply rounded border;
+  @apply rounded border-2 transition-colors;
 
   /* Base Text Styles */
-  @apply font-bold text-sm leading-body;
+  @apply font-bold;
 }
 
 /* Component Sizes */
-.button,
+
 .button--size-small {
-  @apply px-5 py-2 text-sm leading-snug;
+  @apply px-5 py-2 text-xs;
+
+  line-height: 0.75rem;
 }
 
 .button--size-medium {
-  @apply px-6 py-4 text-sm leading-snug;
+  @apply px-5 py-2 text-sm;
+
+  line-height: 1.25rem;
 }
 
 .button--size-large {
-  @apply px-8 py-5 leading-7;
+  @apply px-6 py-4 text-sm;
 
-  /* manual font size sinde there's no match in tokens */
-  font-size: 1.25rem;
+  line-height: 1.25rem;
 }
 
 /* Button Colors */
 
 .button--color-brand {
   --button-primary-color: var(--eds-color-brand-600);
-  --button-hocus-color: var(--eds-color-brand-700);
+  --button-primary-hocus-color: var(--eds-color-brand-700);
+  --button-primary-active-color: #312b9e;
   --button-disabled-color: var(--eds-color-brand-300);
   --button-secondary-color: var(--eds-color-white);
+  --button-secondary-hocus-color: var(--eds-color-brand-100);
 }
 
 .button--color-alert {
   --button-primary-color: var(--eds-color-alert-600);
-  --button-hocus-color: var(--eds-color-alert-700);
+  --button-primary-hocus-color: var(--eds-color-alert-700);
   --button-disabled-color: var(--eds-color-alert-300);
   --button-secondary-color: var(--eds-color-white);
+  --button-secondary-hocus-color: var(--eds-color-alert-100);
 }
   
 .button--color-neutral {
   --button-primary-color: var(--eds-color-neutral-600);
-  --button-hocus-color: var(--eds-color-neutral-700);
+  --button-primary-hocus-color: var(--eds-color-neutral-700);
   --button-disabled-color: var(--eds-color-neutral-300);
   --button-secondary-color: var(--eds-color-white);
+  --button-secondary-hocus-color: var(--eds-color-neutral-100);
 }
   
 .button--color-success {
   --button-primary-color: var(--eds-color-success-600);
-  --button-hocus-color: var(--eds-color-success-700);
+  --button-primary-hocus-color: var(--eds-color-success-700);
   --button-disabled-color: var(--eds-color-success-300);
   --button-secondary-color: var(--eds-color-white);
-}
-  
-.button--color-warning {
-  --button-primary-color: var(--eds-color-warning-600);
-  --button-hocus-color: var(--eds-color-warning-700);
-  --button-disabled-color: var(--eds-color-warning-300);
-  --button-secondary-color: var(--eds-color-white);
+  --button-secondary-hocus-color: var(--eds-color-success-100);
 }
 
 .button--variant-flat {
@@ -66,14 +67,21 @@
   color: var(--button-secondary-color);
 
   &:hover {
-    border-color: var(--button-hocus-color);
+    border-color: var(--button-primary-hocus-color);
   }
 
   &:hover,
   &.button--state-hover,
   &:focus,
   &.button--state-focus {
-    background-color: var(--button-hocus-color);
+    background-color: var(--button-primary-hocus-color);
+    border-color: var(--button-primary-hocus-color);
+  }
+
+  &:active,
+  &.button--state-active {
+    background-color: var(--button-primary-active-color);
+    border-color: var(--button-primary-active-color);
   }
 
   /* override the hover/focus values */
@@ -98,7 +106,7 @@
   &:focus,
   &.button--state-focus {
     background-color: var(--button-secondary-color);
-    color: var(--button-hocus-color);
+    color: var(--button-primary-hocus-color);
   }
 
   /* override the hover/focus values */
@@ -124,29 +132,16 @@
   text-transform: inherit;
 
   &:hover,
-  &.button--state-hover,
-  &:focus,
-  &.button--state-focus {
-    color: var(--button-hocus-color);
+  &.button--state-hover {
+    background-color: var(--button-secondary-hocus-color);
   }
-
-  /* override the hover/focus values */
-  &:disabled,
-  &.button--state-disabled {
-    color: var(--button-disabled-color);
-  }
-}
-
-.button--variant-minimal {
-  background-color: transparent;
-  border-color: transparent;
-  color: var(--button-primary-color);
-
+  
   &:hover,
   &.button--state-hover,
   &:focus,
   &.button--state-focus {
-    color: var(--button-hocus-color);
+    color: var(--button-primary-hocus-color);
+    text-decoration-thickness: 2px;
   }
 
   /* override the hover/focus values */
@@ -160,5 +155,5 @@
 .button:focus,
 .button.button--state-focus {
   /* Focus Outline */
-  @apply outline-none ring-info-400 ring border-transparent;
+  @apply outline-none ring-info-400 ring;
 }
