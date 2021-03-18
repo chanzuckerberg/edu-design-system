@@ -8,11 +8,11 @@ export type ClickableProps<IComponent extends React.ElementType> = {
   /**
    * The style of the element.
    */
-  variant: "flat" | "outline" | "minimal" | "link";
+  variant: "flat" | "outline" | "link";
   /**
    * The color of the element.
    */
-  color: "alert" | "brand" | "neutral" | "success" | "warning";
+  color: "alert" | "brand" | "neutral" | "success";
   /**
    * The size of the element.
    */
@@ -21,7 +21,7 @@ export type ClickableProps<IComponent extends React.ElementType> = {
   /**
    * A hidden prop for visual testing
    */
-  state?: "inactive" | "hover" | "focus" | "disabled";
+  state?: "inactive" | "hover" | "focus" | "active" | "disabled";
 } & React.ComponentProps<IComponent>;
 
 function Clickable<IComponent extends React.ElementType>({

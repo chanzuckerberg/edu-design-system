@@ -36,13 +36,6 @@ outline.args = {
   variant: "outline",
 };
 
-export const minimal = Template.bind(null);
-minimal.args = {
-  children: "Minimal Button",
-  variant: "minimal",
-  color: "alert",
-};
-
 export const link = Template.bind(null);
 link.args = {
   children: "Link Button",
@@ -80,18 +73,13 @@ const colors: Array<ButtonProps["color"]> = [
   "brand",
   "neutral",
   "success",
-  "warning",
 ];
-const variants: Array<ButtonProps["variant"]> = [
-  "flat",
-  "outline",
-  "minimal",
-  "link",
-];
+const variants: Array<ButtonProps["variant"]> = ["flat", "outline", "link"];
 const states: Array<ClickableProps<"button">["state"]> = [
   "inactive",
   "hover",
   "focus",
+  "active",
   "disabled",
 ];
 
