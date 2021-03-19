@@ -30,66 +30,108 @@
 
 .button--color-brand {
   --button-primary-color: var(--eds-color-brand-600);
-  --button-primary-hocus-color: var(--eds-color-brand-700);
-  --button-primary-active-color: #312b9e;
-  --button-disabled-color: var(--eds-color-brand-300);
   --button-secondary-color: var(--eds-color-white);
-  --button-secondary-hocus-color: var(--eds-color-brand-100);
+  --button-tertiary-color: var(--eds-color-brand-100);
+
+  &:hover,
+  &.button--state-hover,
+  &:focus,
+  &.button--state-focus {
+    --button-primary-color: var(--eds-color-brand-700);
+  }
+
+  &:active,
+  &.button--state-active {
+    /* TODO: Replace with brand active color */
+    --button-primary-color: #312b9e;
+  }
+
+  /* override the hover/focus values */
+  &:disabled,
+  &.button--state-disabled {
+    --button-primary-color: var(--eds-color-brand-300);
+  }
 }
 
 .button--color-alert {
   --button-primary-color: var(--eds-color-alert-600);
-  --button-primary-hocus-color: var(--eds-color-alert-700);
-  --button-disabled-color: var(--eds-color-alert-300);
   --button-secondary-color: var(--eds-color-white);
-  --button-secondary-hocus-color: var(--eds-color-alert-100);
+  --button-tertiary-color: var(--eds-color-alert-100);
+
+  &:hover,
+  &.button--state-hover,
+  &:focus,
+  &.button--state-focus {
+    --button-primary-color: var(--eds-color-alert-700);
+  }
+
+  &:active,
+  &.button--state-active {
+    /* TODO: Replace with alert active color */
+    --button-primary-color: #a4002c;
+  }
+
+  /* override the hover/focus values */
+  &:disabled,
+  &.button--state-disabled {
+    --button-primary-color: var(--eds-color-alert-300);
+  }
 }
   
 .button--color-neutral {
   --button-primary-color: var(--eds-color-neutral-600);
-  --button-primary-hocus-color: var(--eds-color-neutral-700);
-  --button-disabled-color: var(--eds-color-neutral-300);
   --button-secondary-color: var(--eds-color-white);
-  --button-secondary-hocus-color: var(--eds-color-neutral-100);
+  --button-tertiary-color: var(--eds-color-neutral-100);
+
+  &:hover,
+  &.button--state-hover,
+  &:focus,
+  &.button--state-focus {
+    --button-primary-color: var(--eds-color-neutral-700);
+  }
+
+  &:active,
+  &.button--state-active {
+    /* TODO: Replace with neutral active color */
+    --button-primary-color: var(--eds-color-neutral-700);
+  }
+
+  /* override the hover/focus values */
+  &:disabled,
+  &.button--state-disabled {
+    --button-primary-color: var(--eds-color-neutral-300);
+  }
 }
   
 .button--color-success {
   --button-primary-color: var(--eds-color-success-600);
-  --button-primary-hocus-color: var(--eds-color-success-700);
-  --button-disabled-color: var(--eds-color-success-300);
   --button-secondary-color: var(--eds-color-white);
-  --button-secondary-hocus-color: var(--eds-color-success-100);
+  --button-tertiary-color: var(--eds-color-success-100);
+
+  &:hover,
+  &.button--state-hover,
+  &:focus,
+  &.button--state-focus {
+    --button-primary-color: var(--eds-color-success-700);
+  }
+
+  &:active,
+  &.button--state-active {
+    /* TODO: Replace with success active color */
+    --button-primary-color: #005a30;
+  }
+
+  /* override the hover/focus values */
+  &:disabled,
+  &.button--state-disabled {
+    --button-primary-color: var(--eds-color-success-300);
+  }
 }
 
 .button--variant-flat {
   background-color: var(--button-primary-color);
   border-color: var(--button-primary-color);
   color: var(--button-secondary-color);
-
-  &:hover {
-    border-color: var(--button-primary-hocus-color);
-  }
-
-  &:hover,
-  &.button--state-hover,
-  &:focus,
-  &.button--state-focus {
-    background-color: var(--button-primary-hocus-color);
-    border-color: var(--button-primary-hocus-color);
-  }
-
-  &:active,
-  &.button--state-active {
-    background-color: var(--button-primary-active-color);
-    border-color: var(--button-primary-active-color);
-  }
-
-  /* override the hover/focus values */
-  &:disabled,
-  &.button--state-disabled {
-    background-color: var(--button-disabled-color);
-    border-color: var(--button-disabled-color);
-  }
 }
 
 .button--variant-outline {
@@ -97,32 +139,29 @@
   border-color: var(--button-primary-color);
   color: var(--button-primary-color);
 
+  
+  &:focus,
+  &.button--state-focus {
+    background-color: var(--button-secondary-color);
+    color: var(--button-primary-color);
+  }
+
   &:hover,
   &.button--state-hover {
     background-color: var(--button-primary-color);
     color: var(--button-secondary-color);
   }
-
-  &:focus,
-  &.button--state-focus {
-    background-color: var(--button-secondary-color);
-    color: var(--button-primary-hocus-color);
-  }
-
-  /* override the hover/focus values */
+  
   &:disabled,
   &.button--state-disabled {
     background-color: var(--button-secondary-color);
-    border-color: var(--button-disabled-color);
-    color: var(--button-disabled-color);
+    color: var(--button-primary-color);
   }
 }
 
 .button--variant-link {
   @apply px-0 py-0 underline border-none;
 
-  background-color: transparent;
-  border-color: transparent;
   color: var(--button-primary-color);
 
   /* button should defer to surrounding text for size/weight/line-height/case */
@@ -133,21 +172,21 @@
 
   &:hover,
   &.button--state-hover {
-    background-color: var(--button-secondary-hocus-color);
+    background-color: var(--button-tertiary-color);
   }
   
   &:hover,
   &.button--state-hover,
   &:focus,
   &.button--state-focus {
-    color: var(--button-primary-hocus-color);
     text-decoration-thickness: 2px;
   }
 
   /* override the hover/focus values */
   &:disabled,
   &.button--state-disabled {
-    color: var(--button-disabled-color);
+    background-color: initial;
+    text-decoration-thickness: auto;
   }
 }
 
@@ -156,4 +195,9 @@
 .button.button--state-focus {
   /* Focus Outline */
   @apply outline-none ring-info-400 ring;
+}
+
+.button:disabled,
+.button.button--state-disabled {
+  @apply cursor-not-allowed;
 }
