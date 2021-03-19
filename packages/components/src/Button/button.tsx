@@ -27,7 +27,7 @@ const defaultProps: Partial<ButtonProps> = {
   color: "brand",
   disabled: false,
   type: "button",
-  size: "small",
+  size: "medium",
 };
 
 Button.defaultProps = defaultProps;
