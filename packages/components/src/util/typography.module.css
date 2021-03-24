@@ -1,87 +1,87 @@
 /* sizes */
 
 .typography,
-.typography--size-body {
+.sizeBody {
   @apply text-body leading-body;
   @apply font-normal;
 }
 
-.typography--size-h1 {
+.sizeH1 {
   @apply text-h1 leading-h1;
   @apply font-bold;
 }
 
-.typography--size-h2 {
+.sizeH2 {
   @apply text-h2 leading-body;
   @apply font-bold;
 }
 
-.typography--size-h3 {
+.sizeH3 {
   @apply text-body leading-body;
   @apply font-bold;
 }
 
-.typography--size-h4 {
+.sizeH4 {
   @apply text-sm leading-body;
   @apply font-bold;
 }
 
-.typography--size-h5 {
+.sizeH5 {
   @apply text-xs leading-sm;
   @apply font-bold;
 }
 
-.typography--size-sm {
+.sizeSm {
   @apply text-sm leading-sm;
   @apply font-normal;
 }
 
-.typography--size-xs {
+.sizeXs {
   @apply text-xs leading-xs;
   @apply font-normal;
 }
 
-.typography--size-caption,
-.typography--size-overline {
+.sizeCaption,
+.sizeOverline {
   @apply text-xs leading-sm;
   @apply font-normal;
 }
 
-.typography--size-overline {
+.sizeOverline {
   @apply uppercase;
   @apply font-normal;
 }
 
 /* colors */
-.typography--color-alert {
+.colorAlert {
   @apply text-alert-700;
 }
 
-.typography--color-base {
+.colorBase {
   @apply text-font-base;
 }
 
-.typography--color-brand {
+.colorBrand {
   @apply text-brand-700;
 }
 
-.typography--color-info {
+.colorInfo {
   @apply text-info-700;
 }
 
-.typography--color-neutral {
+.colorNeutral {
   @apply text-neutral-500;
 }
 
-.typography--color-success {
+.colorSuccess {
   @apply text-success-700;
 }
 
-.typography--color-warning {
+.colorWarning {
   @apply text-warning-700;
 }
 
-.typography--color-white {
+.colorWhite {
   @apply text-white;
 }
 
@@ -90,10 +90,10 @@
  * allows override for text components, shouldn't be used by heading components
  **/
  
-.typography--weight-normal {
+.weightNormal {
   @apply font-normal;
 }
 
-.typography--weight-bold {
+.weightBold {
   @apply font-bold;
 }

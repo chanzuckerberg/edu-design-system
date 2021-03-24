@@ -108,7 +108,7 @@ EDSStyleDictionary.registerFormat({
     return JSON.stringify(
       minifyCSSVarDictionary(dictionary.properties),
       null,
-      2
+      2,
     );
   },
 });

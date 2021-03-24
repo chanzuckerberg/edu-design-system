@@ -2,7 +2,7 @@
 
 exports[`<Text /> Body story renders snapshot 1`] = `
 <p
-  class="typography--size-body typography--color-base"
+  class="typography sizeBody colorBase"
 >
   Body paragraph 16/24
 </p>
@@ -10,7 +10,7 @@ exports[`<Text /> Body story renders snapshot 1`] = `
 
 exports[`<Text /> BodyColorInfoBold story renders snapshot 1`] = `
 <p
-  class="typography--size-body typography--color-info typography--weight-bold"
+  class="typography sizeBody colorInfo weightBold"
 >
   Info color body text, bold
 </p>
@@ -18,7 +18,7 @@ exports[`<Text /> BodyColorInfoBold story renders snapshot 1`] = `
 
 exports[`<Text /> BodySmall story renders snapshot 1`] = `
 <p
-  class="typography--size-sm typography--color-base"
+  class="typography sizeSm colorBase"
 >
   Body small 14/20
 </p>
@@ -26,7 +26,7 @@ exports[`<Text /> BodySmall story renders snapshot 1`] = `
 
 exports[`<Text /> BodyXSmall story renders snapshot 1`] = `
 <p
-  class="typography--size-xs typography--color-base"
+  class="typography sizeXs colorBase"
 >
   Body Xsmall 12/16
 </p>
@@ -34,7 +34,7 @@ exports[`<Text /> BodyXSmall story renders snapshot 1`] = `
 
 exports[`<Text /> Caption story renders snapshot 1`] = `
 <p
-  class="typography--size-caption typography--color-base"
+  class="typography sizeCaption colorBase"
 >
   Caption 12/20
 </p>
@@ -42,7 +42,7 @@ exports[`<Text /> Caption story renders snapshot 1`] = `
 
 exports[`<Text /> Overline story renders snapshot 1`] = `
 <p
-  class="typography--size-overline typography--color-base"
+  class="typography sizeOverline colorBase"
 >
   Overline 12/20
 </p>

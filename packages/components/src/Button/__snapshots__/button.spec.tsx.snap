@@ -2,7 +2,7 @@
 
 exports[`<Button /> flat story renders snapshot 1`] = `
 <button
-  class="button button--variant-flat button--color-success button--size-medium"
+  class="button sizeMedium variantFlat colorSuccess"
   type="button"
 >
   ​
@@ -12,7 +12,7 @@ exports[`<Button /> flat story renders snapshot 1`] = `
 
 exports[`<Button /> link story renders snapshot 1`] = `
 <button
-  class="button button--variant-link button--color-alert"
+  class="button variantLink colorAlert"
   type="button"
 >
   ​
@@ -22,11 +22,11 @@ exports[`<Button /> link story renders snapshot 1`] = `
 
 exports[`<Button /> linkInBody story renders snapshot 1`] = `
 <p
-  class="typography--size-body typography--color-base"
+  class="typography sizeBody colorBase"
 >
   This text surrounds the 
   <button
-    class="button button--variant-link button--color-brand"
+    class="button variantLink colorBrand"
     type="button"
   >
     ​
@@ -38,11 +38,11 @@ exports[`<Button /> linkInBody story renders snapshot 1`] = `
 
 exports[`<Button /> linkInHeading story renders snapshot 1`] = `
 <p
-  class="typography--size-h1 typography--color-base"
+  class="typography sizeH1 colorBase"
 >
   This text surrounds the 
   <button
-    class="button button--variant-link button--color-brand"
+    class="button variantLink colorBrand"
     type="button"
   >
     ​
@@ -54,7 +54,7 @@ exports[`<Button /> linkInHeading story renders snapshot 1`] = `
 
 exports[`<Button /> outline story renders snapshot 1`] = `
 <button
-  class="button button--variant-outline button--color-brand button--size-medium"
+  class="button sizeMedium variantOutline colorBrand"
   type="button"
 >
   ​
