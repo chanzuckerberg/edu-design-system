@@ -1,8 +1,6 @@
 import React from "react";
-import classNames from "classnames/bind";
+import clsx from "clsx";
 import styles from "./clickable.module.css";
-
-const cx = classNames.bind(styles);
 
 export type ClickableProps<IComponent extends React.ElementType> = {
   /**
@@ -20,7 +18,7 @@ export type ClickableProps<IComponent extends React.ElementType> = {
   /**
    * A hidden prop for visual testing
    */
-  state?: "inactive" | "hover" | "focus" | "active" | "disabled";
+  state?: "inactive" | "hover" | "focus" | "active";
   /**
    * The style of the element.
    */
@@ -39,15 +37,28 @@ function Clickable<IComponent extends React.ElementType>({
   const Component = as;
   return (
     <Component
-      className={cx(
-        `button`,
-        `button--variant-${variant}`,
-        `button--color-${color}`,
-        {
-          // For testing in storybook and percy
-          [`button--state-${state}`]: state,
-          [`button--size-${size}`]: variant !== "link",
-        }
+      className={clsx(
+        styles.button,
+        // Sizes
+        variant !== "link" && [
+          size === "small" && styles.sizeSmall,
+          size === "medium" && styles.sizeMedium,
+          size === "large" && styles.sizeLarge,
+        ],
+        // Variants
+        variant === "flat" && styles.variantFlat,
+        variant === "outline" && styles.variantOutline,
+        variant === "link" && styles.variantLink,
+        // Colors
+        color === "alert" && styles.colorAlert,
+        color === "brand" && styles.colorBrand,
+        color === "neutral" && styles.colorNeutral,
+        color === "success" && styles.colorSuccess,
+        // Interactive States (for testing)
+        state === "inactive" && styles.stateInactive,
+        state === "hover" && styles.stateHover,
+        state === "focus" && styles.stateFocus,
+        state === "active" && styles.stateActive,
       )}
       {...rest}
     >

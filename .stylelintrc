@@ -19,7 +19,7 @@
     ],
     "custom-property-empty-line-before": "never",
     "no-eol-whitespace": null,
-    "selector-nested-pattern": "^(&(:|\\.[\\w-]*--state-)(hover|focus|focus-within|active|disabled),?\\s*)+$",
+    "selector-nested-pattern": "^(&(:[\\w-]+|\\.state(Hover|Focus|FocusWithin|Active)),?\\s*)+$",
     "max-nesting-depth": 1
   },
   "ignoreFiles": [

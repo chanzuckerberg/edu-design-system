@@ -8,152 +8,147 @@
 
 /* Component Sizes */
 
-.button--size-small {
+.sizeSmall {
   @apply px-5 py-2 text-xs leading-3;
 }
 
-.button--size-medium {
+.sizeMedium {
   @apply px-5 py-2 text-sm leading-5;
 }
 
-.button--size-large {
+.sizeLarge {
   @apply px-6 py-4 text-sm leading-5;
 }
 
 /* Button Colors */
 
-.button--color-brand {
+.colorBrand {
   --button-primary-color: var(--eds-color-brand-600);
   --button-secondary-color: var(--eds-color-white);
   --button-tertiary-color: var(--eds-color-brand-100);
 
   &:hover,
-  &.button--state-hover,
+  &.stateHover,
   &:focus,
-  &.button--state-focus {
+  &.stateFocus {
     --button-primary-color: var(--eds-color-brand-700);
   }
 
   &:active,
-  &.button--state-active {
+  &.stateActive {
     /* TODO: Replace with brand active color */
     --button-primary-color: #312b9e;
   }
 
   /* override the hover/focus values */
-  &:disabled,
-  &.button--state-disabled {
+  &:disabled {
     --button-primary-color: var(--eds-color-brand-300);
   }
 }
 
-.button--color-alert {
+.colorAlert {
   --button-primary-color: var(--eds-color-alert-600);
   --button-secondary-color: var(--eds-color-white);
   --button-tertiary-color: var(--eds-color-alert-100);
 
   &:hover,
-  &.button--state-hover,
+  &.stateHover,
   &:focus,
-  &.button--state-focus {
+  &.stateFocus {
     --button-primary-color: var(--eds-color-alert-700);
   }
 
   &:active,
-  &.button--state-active {
+  &.stateActive {
     /* TODO: Replace with alert active color */
     --button-primary-color: #a4002c;
   }
 
   /* override the hover/focus values */
-  &:disabled,
-  &.button--state-disabled {
+  &:disabled {
     --button-primary-color: var(--eds-color-alert-300);
   }
 }
   
-.button--color-neutral {
+.colorNeutral {
   --button-primary-color: var(--eds-color-neutral-600);
   --button-secondary-color: var(--eds-color-white);
   --button-tertiary-color: var(--eds-color-neutral-100);
 
   &:hover,
-  &.button--state-hover,
+  &.stateHover,
   &:focus,
-  &.button--state-focus {
+  &.stateFocus {
     --button-primary-color: var(--eds-color-neutral-700);
   }
 
   &:active,
-  &.button--state-active {
+  &.stateActive {
     /* TODO: Replace with neutral active color */
     --button-primary-color: var(--eds-color-neutral-700);
   }
 
   /* override the hover/focus values */
-  &:disabled,
-  &.button--state-disabled {
+  &:disabled {
     --button-primary-color: var(--eds-color-neutral-300);
   }
 }
   
-.button--color-success {
+.colorSuccess {
   --button-primary-color: var(--eds-color-success-600);
   --button-secondary-color: var(--eds-color-white);
   --button-tertiary-color: var(--eds-color-success-100);
 
   &:hover,
-  &.button--state-hover,
+  &.stateHover,
   &:focus,
-  &.button--state-focus {
+  &.stateFocus {
     --button-primary-color: var(--eds-color-success-700);
   }
 
   &:active,
-  &.button--state-active {
+  &.stateActive {
     /* TODO: Replace with success active color */
     --button-primary-color: #005a30;
   }
 
   /* override the hover/focus values */
-  &:disabled,
-  &.button--state-disabled {
+  &:disabled {
     --button-primary-color: var(--eds-color-success-300);
   }
 }
 
-.button--variant-flat {
+.variantFlat {
   background-color: var(--button-primary-color);
   border-color: var(--button-primary-color);
   color: var(--button-secondary-color);
 }
 
-.button--variant-outline {
+.variantOutline {
   background-color: var(--button-secondary-color);
   border-color: var(--button-primary-color);
   color: var(--button-primary-color);
 
   
   &:focus,
-  &.button--state-focus {
+  &.stateFocus {
     background-color: var(--button-secondary-color);
     color: var(--button-primary-color);
   }
 
   &:hover,
-  &.button--state-hover {
+  &.stateHover {
     background-color: var(--button-primary-color);
     color: var(--button-secondary-color);
   }
   
-  &:disabled,
-  &.button--state-disabled {
+  &:disabled {
     background-color: var(--button-secondary-color);
     color: var(--button-primary-color);
   }
 }
 
-.button--variant-link {
+.variantLink {
   @apply px-0 py-0 underline border-none;
 
   color: var(--button-primary-color);
@@ -165,20 +160,19 @@
   text-transform: inherit;
 
   &:hover,
-  &.button--state-hover {
+  &.stateHover {
     background-color: var(--button-tertiary-color);
   }
   
   &:hover,
-  &.button--state-hover,
+  &.stateHover,
   &:focus,
-  &.button--state-focus {
+  &.stateFocus {
     text-decoration-thickness: 2px;
   }
 
   /* override the hover/focus values */
-  &:disabled,
-  &.button--state-disabled {
+  &:disabled {
     background-color: initial;
     text-decoration-thickness: auto;
   }
@@ -186,12 +180,11 @@
 
 /* comes after other styles to override hover behaviors */
 .button:focus,
-.button.button--state-focus {
+.button.stateFocus {
   /* Focus Outline */
   @apply outline-none ring-info-400 ring;
 }
 
-.button:disabled,
-.button.button--state-disabled {
+.button:disabled {
   @apply cursor-not-allowed;
 }
