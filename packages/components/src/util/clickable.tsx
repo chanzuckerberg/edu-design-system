@@ -6,9 +6,9 @@ const cx = classNames.bind(styles);
 
 export type ClickableProps<IComponent extends React.ElementType> = {
   /**
-   * The style of the element.
+   * CSS class for custom styles.
    */
-  variant: "flat" | "outline" | "link";
+  className: string;
   /**
    * The color of the element.
    */
@@ -17,11 +17,14 @@ export type ClickableProps<IComponent extends React.ElementType> = {
    * The size of the element.
    */
   size: "small" | "medium" | "large";
-  className: string;
   /**
    * A hidden prop for visual testing
    */
   state?: "inactive" | "hover" | "focus" | "active" | "disabled";
+  /**
+   * The style of the element.
+   */
+  variant: "flat" | "outline" | "link";
 } & React.ComponentProps<IComponent>;
 
 function Clickable<IComponent extends React.ElementType>({
