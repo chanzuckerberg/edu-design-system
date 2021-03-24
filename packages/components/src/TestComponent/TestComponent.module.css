@@ -1,0 +1,13 @@
+.testComponent--container {
+  @apply text-body leading-body;
+  @apply text-brand-700;
+  @apply w-full;
+}
+
+.testComponent--align-left {
+  @apply text-left;
+}
+
+.testComponent--align-right {
+  @apply text-right;
+}

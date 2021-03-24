@@ -85,5 +85,8 @@
     "*.css": [
       "stylelint --fix"
     ]
+  },
+  "dependencies": {
+    "plop": "^2.7.4"
   }
 }

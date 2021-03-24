@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TestComponent /> Default story renders snapshot 1`] = `
+<div
+  class="testComponent--container testComponent--align-left"
+>
+  Hello world
+</div>
+`;
+
+exports[`<TestComponent /> RightAligned story renders snapshot 1`] = `
+<div
+  class="testComponent--container testComponent--align-right"
+>
+  Hello world
+</div>
+`;

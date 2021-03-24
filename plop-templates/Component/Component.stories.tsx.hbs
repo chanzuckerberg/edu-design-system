@@ -1,0 +1,24 @@
+import * as React from "react";
+import {{pascalCase name}} from "./{{pascalCase name}}";
+import { Story } from "@storybook/react/types-6-0";
+
+export default {
+  title: "{{pascalCase name}}",
+  component: {{pascalCase name}},
+};
+
+type Args = React.ComponentProps<typeof {{pascalCase name}}>;
+
+const Template: Story<Args> = (args) => <{{pascalCase name}} {...args} />;
+
+export const Default = Template.bind(null);
+Default.args = {
+  children: "Hello world",
+  align: "left",
+};
+
+export const RightAligned = Template.bind(null);
+RightAligned.args = {
+  children: "Hello world",
+  align: "right",
+};
