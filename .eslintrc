@@ -47,7 +47,7 @@
       }
     },
     {
-      "files": ["config.js", "*.config.js", "main.js"],
+      "files": ["config.js", "*.config.js", "main.js", "plopfile.js"],
       "env": {
         "browser": false,
         "node": true
