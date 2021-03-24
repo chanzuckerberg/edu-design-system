@@ -3,7 +3,7 @@ import { Meta, Preview } from "@storybook/addon-docs/blocks";
 import TokenTable from "../docs/token-table.tsx";
 import tokens from "@chanzuckerberg/eds-tokens/json/variables-nested.json";
 
-import "./tokens.stories.css";
+import styles from "./tokens.module.css";
 
 <Meta title="Tokens" />
 
@@ -39,7 +39,7 @@ export const mapEDSColorToTokenArray = (color) => {
   ]}
   renderExample={(name, value) => (
     <div
-      className="color-token-example-block"
+      className={styles["color-token-example-block"]}
       style={{ backgroundColor: value }}
     />
   )}
@@ -73,7 +73,7 @@ export const mapLegacyColorToTokenArray = (color) => {
   ]}
   renderExample={(name, value) => (
     <div
-      className="color-token-example-block"
+      className={styles["color-token-example-block"]}
       style={{ backgroundColor: value }}
     />
   )}

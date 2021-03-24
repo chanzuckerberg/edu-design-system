@@ -23,7 +23,7 @@
     "build": "npm run build:clean && npm run build:js && npm run build:styles && npm run build:types && rm -rf dist/playground",
     "build:clean": "rm -rf dist/",
     "build:js": "babel src -d dist --extensions '.js,.jsx,.ts,.tsx' --ignore src/**/*.spec.ts,src/**/*.spec.tsx --ignore src/**/*.stories.ts,src/**/*.stories.tsx",
-    "build:styles": "postcss \"src/**/*([a-zA-Z-_])?(.module).css\" --dir dist/ --base src/ --verbose",
+    "build:styles": "postcss \"src/**/*.css\" --dir dist/ --base src/ --verbose",
     "build:types": "tsc --project . --declaration --emitDeclarationOnly && ./generateFlowTypes.sh",
     "build:watch": "npm run build:js -- --watch",
     "build:storybook": "build-storybook -o storybook-static",
