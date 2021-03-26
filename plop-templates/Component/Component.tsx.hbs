@@ -1,9 +1,7 @@
 import React, { ReactNode } from "react";
 
-import classNames from "classnames/bind";
+import clsx from "clsx";
 import styles from "./{{pascalCase name}}.module.css";
-
-const cx = classNames.bind(styles);
 
 type Props = {
   /**
@@ -22,7 +20,12 @@ type Props = {
  */
 function {{pascalCase name}}({ children, align }: Props) {
   return (
-    <div className={cx("{{camelCase name}}--container", `{{camelCase name}}--align-${align}`)}>
+    <div
+      className={clsx(
+        styles.container,
+        align === "right" && styles.alignRight,
+      )}
+    >
       {children}
     </div>
   );

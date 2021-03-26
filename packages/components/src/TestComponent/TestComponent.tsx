@@ -1,9 +1,7 @@
 import React, { ReactNode } from "react";
 
-import classNames from "classnames/bind";
+import clsx from "clsx";
 import styles from "./TestComponent.module.css";
-
-const cx = classNames.bind(styles);
 
 type Props = {
   /**
@@ -17,16 +15,13 @@ type Props = {
 };
 
 /**
- * This component is a replica of the template created by plop found in plop-templates.
- * TODO: Find a way to keep these 2 files in sync.
+ * A super cool component that does a really awesome thing.
+ * TODO: Update to describe your component!
  */
 function TestComponent({ children, align }: Props) {
   return (
     <div
-      className={cx(
-        "testComponent--container",
-        `testComponent--align-${align}`
-      )}
+      className={clsx(styles.container, align === "right" && styles.alignRight)}
     >
       {children}
     </div>
