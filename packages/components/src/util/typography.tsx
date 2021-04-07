@@ -25,6 +25,8 @@ export type TypographyColor =
   | "warning"
   | "white";
 
+export type TypographyMargin = "none" | "half" | "1x" | "2x";
+
 export type TypographyProps<IComponent extends React.ElementType> = {
   /**
    * This prop can be used to specify which element should
@@ -41,7 +43,7 @@ export type TypographyProps<IComponent extends React.ElementType> = {
   /**
    * The color of the text element. If no color provided, defaults to a base color.
    */
-  color: TypographyColor;
+  color?: TypographyColor;
   /**
    * The size of the html element. If no `as` prop is provided, then
    * the component uses this value to determine which html tag to render
@@ -54,15 +56,20 @@ export type TypographyProps<IComponent extends React.ElementType> = {
    * we will add stricter enforcement -- e.g. enforcing a boldness
    * for each size or checking for mutually exclusive props.
    */
-  weight: "bold" | "normal" | null;
+  weight?: "bold" | "normal" | null;
+  /**
+   * Specifies the bottom-margin that should be applied to the typography element
+   */
+  spacing?: TypographyMargin;
 } & React.ComponentProps<IComponent>;
 
 function Typography<IComponent extends React.ElementType>({
   as,
   children,
-  color,
+  color = "base",
   size,
-  weight,
+  weight = null,
+  spacing,
   ...rest
 }: TypographyProps<IComponent>) {
   const Component = as;
@@ -93,6 +100,11 @@ function Typography<IComponent extends React.ElementType>({
         // Weights
         weight === "bold" && styles.weightBold,
         weight === "normal" && styles.weightNormal,
+        // Spacing
+        spacing === "none" && styles.spacingNone,
+        spacing === "half" && styles.spacingHalf,
+        spacing === "1x" && styles.spacing1,
+        spacing === "2x" && styles.spacing2,
       )}
       {...rest}
     >
@@ -100,10 +112,5 @@ function Typography<IComponent extends React.ElementType>({
     </Component>
   );
 }
-
-Typography.defaultProps = {
-  weight: null,
-  color: "base",
-};
 
 export default Typography;

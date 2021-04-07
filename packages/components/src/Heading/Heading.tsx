@@ -17,6 +17,7 @@ type Props = {
   color?: TypographyProps<HeadingElement>["color"];
   size: TypographyProps<HeadingElement>["size"];
   weight?: TypographyProps<HeadingElement>["weight"];
+  spacing?: TypographyProps<HeadingElement>["spacing"];
 };
 
 function Heading({

@@ -22,7 +22,7 @@ exports[`<Button /> link story renders snapshot 1`] = `
 
 exports[`<Button /> linkInBody story renders snapshot 1`] = `
 <p
-  class="typography sizeBody colorBase"
+  class="typography sizeBody colorBase spacingNone"
 >
   This text surrounds the 
   <button
@@ -38,7 +38,7 @@ exports[`<Button /> linkInBody story renders snapshot 1`] = `
 
 exports[`<Button /> linkInHeading story renders snapshot 1`] = `
 <p
-  class="typography sizeH1 colorBase"
+  class="typography sizeH1 colorBase spacingNone"
 >
   This text surrounds the 
   <button

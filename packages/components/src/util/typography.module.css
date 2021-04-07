@@ -3,7 +3,7 @@
 .typography,
 .sizeBody {
   @apply text-body leading-body;
-  @apply font-normal;
+  @apply font-normal mb-0;
 }
 
 .sizeH1 {
@@ -83,6 +83,23 @@
 
 .colorWhite {
   @apply text-white;
+}
+
+/* Spacing */
+.spacingNone {
+  @apply mb-0;
+}
+
+.spacingHalf {
+  @apply mb-1;
+}
+
+.spacing1 {
+  @apply mb-2;
+}
+
+.spacing2 {
+  @apply mb-4;
 }
 
 /**
