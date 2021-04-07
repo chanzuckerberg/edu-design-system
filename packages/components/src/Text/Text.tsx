@@ -13,6 +13,7 @@ type Props = {
   color?: TypographyProps<TextElement>["color"];
   size: TypographyProps<TextElement>["size"];
   weight?: TypographyProps<TextElement>["weight"];
+  spacing?: TypographyProps<TextElement>["spacing"];
 };
 
 function Text({
