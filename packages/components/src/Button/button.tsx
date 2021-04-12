@@ -1,4 +1,4 @@
-import Clickable, { ClickableProps } from "../util/clickable";
+import Clickable, { ClickableProps } from "../common/clickable";
 import React, { ReactNode } from "react";
 
 type ButtonHTMLElementProps = React.ButtonHTMLAttributes<HTMLButtonElement>;

@@ -1,4 +1,4 @@
-import Typography, { TypographyProps } from "../util/typography";
+import Typography, { TypographyProps } from "../common/typography";
 
 import React from "react";
 
