@@ -1,8 +1,7 @@
-
 /* Copied from output of `@tailwind utilities` */
 * {
   --tw-shadow: 0 0 #0000;
-  --tw-ring-inset: var(--tw-empty,/*!*/ /*!*/);
+  --tw-ring-inset: var(--tw-empty, /*!*/ /*!*/);
 
   /* Can't remove the px because it breaks tailwind rings */
   /* stylelint-disable-next-line length-zero-no-unit */
