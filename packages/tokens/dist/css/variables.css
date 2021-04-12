@@ -117,6 +117,7 @@
   --eds-size-line-height-h2: 3.5rem; /* Line height for Heading 2 sized text */
   --eds-size-line-height-h3: 2.5rem; /* Line height for Heading 3 sized text */
   --eds-size-line-height-h4: 2rem; /* Line height for Heading 4 sized text */
+  --eds-size-line-height-h5: 1.5rem; /* Font size for Heading 5 sized text */
   --eds-size-line-height-body: 1.5rem; /* Default line height for body text */
   --eds-size-line-height-sm: 1.25rem; /* Line height for small body text */
   --eds-size-line-height-xs: 1rem; /* Line height for xsmall body text */

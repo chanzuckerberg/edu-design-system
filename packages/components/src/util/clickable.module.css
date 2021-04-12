@@ -7,21 +7,19 @@
 }
 
 /* Component Sizes */
-
 .sizeSmall {
   @apply px-5 py-2 text-xs leading-3;
 }
 
 .sizeMedium {
-  @apply px-5 py-2 text-sm leading-5;
+  @apply px-5 py-2 text-sm;
 }
 
 .sizeLarge {
-  @apply px-6 py-4 text-sm leading-5;
+  @apply px-6 py-4 text-sm;
 }
 
 /* Button Colors */
-
 .colorBrand {
   --button-primary-color: var(--eds-color-brand-600);
   --button-secondary-color: var(--eds-color-white);

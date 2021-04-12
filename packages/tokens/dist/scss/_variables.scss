@@ -118,6 +118,7 @@ $eds-size-line-height-h1: 4rem !default; // Line height for Heading 1 sized text
 $eds-size-line-height-h2: 3.5rem !default; // Line height for Heading 2 sized text
 $eds-size-line-height-h3: 2.5rem !default; // Line height for Heading 3 sized text
 $eds-size-line-height-h4: 2rem !default; // Line height for Heading 4 sized text
+$eds-size-line-height-h5: 1.5rem !default; // Font size for Heading 5 sized text
 $eds-size-line-height-body: 1.5rem !default; // Default line height for body text
 $eds-size-line-height-sm: 1.25rem !default; // Line height for small body text
 $eds-size-line-height-xs: 1rem !default; // Line height for xsmall body text
@@ -286,6 +287,7 @@ $tokens: (
         'h2': $eds-size-line-height-h2,
         'h3': $eds-size-line-height-h3,
         'h4': $eds-size-line-height-h4,
+        'h5': $eds-size-line-height-h5,
         'body': $eds-size-line-height-body,
         'sm': $eds-size-line-height-sm,
         'xs': $eds-size-line-height-xs
