@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.1-alpha.11](https://github.com/chanzuckerberg/edu-design-system/compare/v0.0.1-alpha.10...v0.0.1-alpha.11) (2021-04-13)
+
+
+### Features
+
+* **typography:** added spacing to typography components ([7488624](https://github.com/chanzuckerberg/edu-design-system/commit/7488624b008e0955c3be1a1b16a1b5297e13712f))
+
+
+
+
+
 ## [0.0.1-alpha.10](https://github.com/chanzuckerberg/edu-design-system/compare/v0.0.1-alpha.9...v0.0.1-alpha.10) (2021-03-29)
 
 
