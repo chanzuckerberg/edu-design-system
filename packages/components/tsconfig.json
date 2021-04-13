@@ -15,7 +15,8 @@
     "skipLibCheck": true,
     "strict": true,
     "suppressImplicitAnyIndexErrors": true,
-    "target": "es5"
+    "target": "es5",
+    "plugins": [{ "name": "typescript-plugin-css-modules" }]
   },
   "include": ["src/**/*", "css-modules.d.ts"],
   "exclude": ["node_modules", "dist", "**/*.stories.*", "**/*.spec.*"]

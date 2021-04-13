@@ -12,6 +12,10 @@ Install the version of node specified in the `.node-version` file.
 
 If using [nodenv](https://github.com/nodenv/nodenv) and [node-build](https://github.com/nodenv/node-build), this can be done by running `nodenv install`.
 
+### CSS Modules
+
+We use `typescript-plugin-css-modules` to provide intellisense on css modules within the `.tsx` files. To enable this, follow the instructions in the [VSCode docs](https://code.visualstudio.com/docs/typescript/typescript-compiling#_using-the-workspace-version-of-typescript).
+
 ### Installation
 
 ```bash

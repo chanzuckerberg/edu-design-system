@@ -7,5 +7,6 @@
   ],
   "css.validate": false,
   "scss.validate": false,
-  "stylelint.enable": true
+  "stylelint.enable": true,
+  "typescript.tsdk": "./packages/components/node_modules/typescript/lib"
 }

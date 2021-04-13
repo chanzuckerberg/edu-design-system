@@ -35,7 +35,8 @@
     "storybook:axeOnly": "axe-storybook --build-dir storybook-static",
     "start": "npm run storybook",
     "test": "jest",
-    "test:ci": "npm run test -- --ci --coverage && cat ./coverage/lcov.info | codecov"
+    "test:ci": "npm run test -- --ci --coverage && cat ./coverage/lcov.info | codecov",
+    "test:types": "tsc --project . --declaration --noEmit"
   },
   "bugs": {
     "url": "https://github.com/chanzuckerberg/edu-design-system/issues"
@@ -93,7 +94,8 @@
     "react-dom": "^16.14.0",
     "storybook-css-modules-preset": "^1.0.6",
     "tailwindcss": "^2.0.3",
-    "typescript": "^4.1.5"
+    "typescript": "^4.1.5",
+    "typescript-plugin-css-modules": "^3.2.0"
   },
   "gitHead": "8680dac1fa3c685e2a35f80d9ceb157f5f5343bd"
 }
