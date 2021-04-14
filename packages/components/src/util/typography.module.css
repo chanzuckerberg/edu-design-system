@@ -2,54 +2,44 @@
 
 .typography,
 .sizeBody {
-  @apply text-body leading-body;
-  @apply font-normal;
+  @apply text-body font-normal mb-0;
 }
 
 .sizeH1 {
-  @apply text-h1 leading-h1;
-  @apply font-bold;
+  @apply text-h1 font-bold;
 }
 
 .sizeH2 {
-  @apply text-h2 leading-body;
-  @apply font-bold;
+  @apply text-h2 font-bold;
 }
 
 .sizeH3 {
-  @apply text-body leading-body;
-  @apply font-bold;
+  @apply text-h3 font-bold;
 }
 
 .sizeH4 {
-  @apply text-sm leading-body;
-  @apply font-bold;
+  @apply text-h4 font-bold;
 }
 
 .sizeH5 {
-  @apply text-xs leading-sm;
-  @apply font-bold;
+  @apply text-h5 font-bold;
 }
 
 .sizeSm {
-  @apply text-sm leading-sm;
-  @apply font-normal;
+  @apply text-sm font-normal;
 }
 
 .sizeXs {
-  @apply text-xs leading-xs;
-  @apply font-normal;
+  @apply text-xs font-normal;
 }
 
 .sizeCaption,
 .sizeOverline {
-  @apply text-xs leading-sm;
-  @apply font-normal;
+  @apply text-caption font-normal;
 }
 
 .sizeOverline {
   @apply uppercase;
-  @apply font-normal;
 }
 
 /* colors */
@@ -83,6 +73,19 @@
 
 .colorWhite {
   @apply text-white;
+}
+
+/* Spacing */
+.spacingHalf {
+  @apply mb-1;
+}
+
+.spacing1 {
+  @apply mb-2;
+}
+
+.spacing2 {
+  @apply mb-4;
 }
 
 /**

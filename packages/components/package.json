@@ -30,7 +30,7 @@
     "deploy:docs": "storybook-to-ghpages --ci",
     "prepack": "npm run build && cp ./package.json ./tailwind.config.js dist/",
     "snapshot": "percy-storybook --widths=320,1280",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -p 6008",
     "storybook:axe": "npm run build:storybook && npm run storybook:axeOnly",
     "storybook:axeOnly": "axe-storybook --build-dir storybook-static",
     "start": "npm run storybook",

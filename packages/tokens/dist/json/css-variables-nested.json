@@ -162,6 +162,7 @@
         "h2": "var(--eds-size-line-height-h2)",
         "h3": "var(--eds-size-line-height-h3)",
         "h4": "var(--eds-size-line-height-h4)",
+        "h5": "var(--eds-size-line-height-h5)",
         "body": "var(--eds-size-line-height-body)",
         "sm": "var(--eds-size-line-height-sm)",
         "xs": "var(--eds-size-line-height-xs)"

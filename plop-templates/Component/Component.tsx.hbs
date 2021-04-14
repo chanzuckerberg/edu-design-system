@@ -18,7 +18,10 @@ type Props = {
  * A super cool component that does a really awesome thing.
  * TODO: Update to describe your component!
  */
-function {{pascalCase name}}({ children, align }: Props) {
+function {{pascalCase name}}({ 
+  children: "Hello world =^_^=", 
+  align: "left", 
+}: Props) {
   return (
     <div
       className={clsx(
@@ -30,10 +33,6 @@ function {{pascalCase name}}({ children, align }: Props) {
     </div>
   );
 }
-
-{{pascalCase name}}.defaultProps = {
-  children: "Hello world =^_^=",
-  align: "left",
-};
-
+{{! Thanks to storybook's docgen we have to move the export default }}
+{{! to a separate line from the declaration }}
 export default {{pascalCase name}};

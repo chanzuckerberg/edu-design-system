@@ -104,6 +104,10 @@
           "value": "2rem",
           "comment": "Line height for Heading 4 sized text"
         },
+        "h5": {
+          "value": "1.5rem",
+          "comment": "Font size for Heading 5 sized text"
+        },
         "body": {
           "value": "1.5rem",
           "comment": "Default line height for body text"
