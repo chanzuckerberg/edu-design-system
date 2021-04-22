@@ -70,7 +70,7 @@
     "@storybook/storybook-deployer": "^2.8.7",
     "@testing-library/react": "^11.2.5",
     "@types/classnames": "^2.2.11",
-    "@types/jest": "^24.9.1",
+    "@types/jest": "^26.0.22",
     "@types/react": "^17.0.2",
     "autoprefixer": "^10.2.4",
     "axe-core": "^4.1.2",
