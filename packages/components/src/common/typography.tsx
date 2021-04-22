@@ -41,6 +41,10 @@ export type TypographyProps<IComponent extends React.ElementType> = {
    */
   children: ReactNode;
   /**
+   * CSS class for custom styles.
+   */
+  className?: string;
+  /**
    * The color of the text element. If no color provided, defaults to a base color.
    */
   color?: TypographyColor;
@@ -70,12 +74,14 @@ function Typography<IComponent extends React.ElementType>({
   size,
   weight = null,
   spacing,
+  className,
   ...rest
 }: TypographyProps<IComponent>) {
   const Component = as;
   return (
     <Component
       className={clsx(
+        className,
         styles.typography,
         // Sizes
         size === "h1" && styles.sizeH1,

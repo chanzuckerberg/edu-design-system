@@ -14,6 +14,7 @@ type Props = {
    */
   as?: HeadingElement;
   children: TypographyProps<HeadingElement>["children"];
+  className: TypographyProps<HeadingElement>["className"];
   color?: TypographyProps<HeadingElement>["color"];
   size: TypographyProps<HeadingElement>["size"];
   weight?: TypographyProps<HeadingElement>["weight"];
