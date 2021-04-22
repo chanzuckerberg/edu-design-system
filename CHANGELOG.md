@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.1-alpha.12](https://github.com/chanzuckerberg/edu-design-system/compare/v0.0.1-alpha.11...v0.0.1-alpha.12) (2021-04-22)
+
+
+### Features
+
+* **typography:** allow classname pass through on text components ([396d3ee](https://github.com/chanzuckerberg/edu-design-system/commit/396d3ee9cd980180c275cd2381366e3a5ddc37c1))
+
+
+
+
+
 ## [0.0.1-alpha.11](https://github.com/chanzuckerberg/edu-design-system/compare/v0.0.1-alpha.10...v0.0.1-alpha.11) (2021-04-13)
 
 
