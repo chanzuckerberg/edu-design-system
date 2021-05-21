@@ -57,7 +57,7 @@
     "@chanzuckerberg/axe-storybook-testing": "^3.0.0",
     "@chanzuckerberg/story-utils": "^2.0.0",
     "@commitlint/cli": "^8.3.5",
-    "@commitlint/config-conventional": "^8.3.4",
+    "@commitlint/config-conventional": "^12.1.4",
     "@commitlint/prompt-cli": "^8.3.5",
     "@percy/storybook": "^3.3.1",
     "@storybook/addon-a11y": "^6.1.18",
