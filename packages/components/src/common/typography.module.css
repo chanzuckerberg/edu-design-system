@@ -59,6 +59,10 @@
   @apply text-info-700;
 }
 
+.colorInherit {
+  color: inherit;
+}
+
 .colorNeutral {
   @apply text-neutral-500;
 }
@@ -92,7 +96,7 @@
  * font-weights
  * allows override for text components, shouldn't be used by heading components
  **/
- 
+
 .weightNormal {
   @apply font-normal;
 }

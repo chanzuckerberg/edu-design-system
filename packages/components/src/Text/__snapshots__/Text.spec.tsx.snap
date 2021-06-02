@@ -47,3 +47,17 @@ exports[`<Text /> Overline story renders snapshot 1`] = `
   Overline 12/20
 </p>
 `;
+
+exports[`<Text /> TextColorInherit story renders snapshot 1`] = `
+<p
+  class="typography sizeBody colorAlert"
+>
+  This text surrounds the 
+  <p
+    class="typography sizeBody colorInherit"
+  >
+    Child Text
+  </p>
+   and shows it should inherit color from the parent
+</p>
+`;
