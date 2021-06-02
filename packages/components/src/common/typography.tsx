@@ -20,6 +20,7 @@ export type TypographyColor =
   | "base"
   | "brand"
   | "info"
+  | "inherit"
   | "neutral"
   | "success"
   | "warning"
@@ -99,6 +100,7 @@ function Typography<IComponent extends React.ElementType>({
         color === "base" && styles.colorBase,
         color === "brand" && styles.colorBrand,
         color === "info" && styles.colorInfo,
+        color === "inherit" && styles.colorInherit,
         color === "neutral" && styles.colorNeutral,
         color === "success" && styles.colorSuccess,
         color === "warning" && styles.colorWarning,
