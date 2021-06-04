@@ -1,6 +1,6 @@
-import Typography, { TypographyProps } from "../common/typography";
+import React, { forwardRef } from "react";
 
-import React from "react";
+import Typography, { TypographyProps } from "../common/typography";
 
 type TextElement = "p" | "span";
 
@@ -17,22 +17,17 @@ type Props = {
   spacing?: TypographyProps<TextElement>["spacing"];
 };
 
-function Text({
-  as,
-  children,
-  /**
+const Text = forwardRef<HTMLElement, Props>(({ as, children, /**
    * Components that wrap typography sometimes requires props such as event handlers
    * to be passed down into the element. One example is the tooltip component.  It
    * attaches a onHover and onFocus event to the element to determine when to
    * trigger the overlay.
-   */
-  ...rest
-}: Props) {
-  return (
-    <Typography as={as || "p"} {...rest}>
-      {children}
-    </Typography>
-  );
-}
+   */ ...rest }: Props, ref) => (
+  <Typography as={as || "p"} ref={ref} {...rest}>
+    {children}
+  </Typography>
+));
+
+Text.displayName = "Text"; // Satisfy eslint.
 
 export default Text;
