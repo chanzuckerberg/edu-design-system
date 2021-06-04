@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { ForwardedRef, ReactNode, forwardRef } from "react";
 
 import clsx from "clsx";
 import styles from "./typography.module.css";
@@ -68,57 +68,65 @@ export type TypographyProps<IComponent extends React.ElementType> = {
   spacing?: TypographyMargin;
 } & React.ComponentProps<IComponent>;
 
-function Typography<IComponent extends React.ElementType>({
-  as,
-  children,
-  color = "base",
-  size,
-  weight = null,
-  spacing,
-  className,
-  ...rest
-}: TypographyProps<IComponent>) {
-  const Component = as;
-  return (
-    <Component
-      className={clsx(
-        className,
-        styles.typography,
-        // Sizes
-        size === "h1" && styles.sizeH1,
-        size === "h2" && styles.sizeH2,
-        size === "h3" && styles.sizeH3,
-        size === "h4" && styles.sizeH4,
-        size === "h5" && styles.sizeH5,
-        size === "body" && styles.sizeBody,
-        size === "sm" && styles.sizeSm,
-        size === "xs" && styles.sizeXs,
-        size === "caption" && styles.sizeCaption,
-        size === "overline" && styles.sizeOverline,
-        // Colors
-        color === "alert" && styles.colorAlert,
-        color === "base" && styles.colorBase,
-        color === "brand" && styles.colorBrand,
-        color === "info" && styles.colorInfo,
-        color === "inherit" && styles.colorInherit,
-        color === "neutral" && styles.colorNeutral,
-        color === "success" && styles.colorSuccess,
-        color === "warning" && styles.colorWarning,
-        color === "white" && styles.colorWhite,
-        // Weights
-        weight === "bold" && styles.weightBold,
-        weight === "normal" && styles.weightNormal,
-        // Spacing
-        spacing === "none" && styles.spacingNone,
-        spacing === "half" && styles.spacingHalf,
-        spacing === "1x" && styles.spacing1,
-        spacing === "2x" && styles.spacing2,
-      )}
-      {...rest}
-    >
-      {children}
-    </Component>
-  );
-}
+const Typography = forwardRef(
+  <IComponent extends React.ElementType>(
+    {
+      as,
+      children,
+      color = "base",
+      size,
+      weight = null,
+      spacing,
+      className,
+      ...rest
+    }: TypographyProps<IComponent>,
+    ref: ForwardedRef<HTMLElement>,
+  ) => {
+    const Component = as;
+    return (
+      <Component
+        ref={ref}
+        className={clsx(
+          className,
+          styles.typography,
+          // Sizes
+          size === "h1" && styles.sizeH1,
+          size === "h2" && styles.sizeH2,
+          size === "h3" && styles.sizeH3,
+          size === "h4" && styles.sizeH4,
+          size === "h5" && styles.sizeH5,
+          size === "body" && styles.sizeBody,
+          size === "sm" && styles.sizeSm,
+          size === "xs" && styles.sizeXs,
+          size === "caption" && styles.sizeCaption,
+          size === "overline" && styles.sizeOverline,
+          // Colors
+          color === "alert" && styles.colorAlert,
+          color === "base" && styles.colorBase,
+          color === "brand" && styles.colorBrand,
+          color === "info" && styles.colorInfo,
+          color === "inherit" && styles.colorInherit,
+          color === "neutral" && styles.colorNeutral,
+          color === "success" && styles.colorSuccess,
+          color === "warning" && styles.colorWarning,
+          color === "white" && styles.colorWhite,
+          // Weights
+          weight === "bold" && styles.weightBold,
+          weight === "normal" && styles.weightNormal,
+          // Spacing
+          spacing === "none" && styles.spacingNone,
+          spacing === "half" && styles.spacingHalf,
+          spacing === "1x" && styles.spacing1,
+          spacing === "2x" && styles.spacing2,
+        )}
+        {...rest}
+      >
+        {children}
+      </Component>
+    );
+  },
+);
+
+Typography.displayName = "Typography"; // Satisfy eslint.
 
 export default Typography;

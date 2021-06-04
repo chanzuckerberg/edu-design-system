@@ -1,8 +1,8 @@
 import * as TextStoryFile from "./Text.stories";
 
-import { render, screen } from "@testing-library/react";
+import React, { useEffect, useRef } from "react";
 
-import React from "react";
+import { render, screen } from "@testing-library/react";
 import Text from "./Text";
 import { generateSnapshots } from "@chanzuckerberg/story-utils";
 
@@ -22,5 +22,25 @@ describe("<Text />", () => {
         Some Text
       </p>
     `);
+  });
+
+  it("should pass the passthrough ref", async () => {
+    const TestComponent = () => {
+      const textRef = useRef<HTMLParagraphElement>(null);
+
+      useEffect(() => {
+        textRef.current && textRef.current.focus();
+      });
+
+      return (
+        <Text ref={textRef} size="body" className="passthrough" tabIndex={-1}>
+          Some Text
+        </Text>
+      );
+    };
+    render(<TestComponent />);
+    const textElement = await screen.getByText("Some Text");
+
+    expect(textElement).toEqual(document.activeElement);
   });
 });
