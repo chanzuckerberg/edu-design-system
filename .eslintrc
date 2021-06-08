@@ -4,10 +4,11 @@
     "browser": true
   },
   "parser": "@typescript-eslint/parser",
-  "plugins": ["react-hooks"],
+  "plugins": ["react-hooks", "testing-library"],
   "extends": [
     "plugin:react/recommended",
     "plugin:prettier/recommended",
+    "plugin:testing-library/react",
     "eslint:recommended"
   ],
   "parserOptions": {
