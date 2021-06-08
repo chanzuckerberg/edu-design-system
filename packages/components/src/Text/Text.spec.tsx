@@ -1,8 +1,7 @@
 import * as TextStoryFile from "./Text.stories";
 
-import React, { useEffect } from "react";
-
 import { render, screen } from "@testing-library/react";
+import React from "react";
 import Text from "./Text";
 import { generateSnapshots } from "@chanzuckerberg/story-utils";
 
