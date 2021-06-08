@@ -24,7 +24,7 @@ describe("<Text />", () => {
     `);
   });
 
-  it("should pass the passthrough ref", async () => {
+  it("should pass the passthrough ref", () => {
     const textRef = React.createRef();
     render(
       <Text ref={textRef} size="body" tabIndex={-1}>
@@ -34,7 +34,7 @@ describe("<Text />", () => {
 
     textRef.current.focus();
 
-    const textElement = await screen.getByText("Some Text");
+    const textElement = screen.getByText("Some Text");
     expect(textElement).toEqual(document.activeElement);
   });
 });
