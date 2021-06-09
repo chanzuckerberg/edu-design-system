@@ -34,7 +34,6 @@ describe("<Text />", () => {
     textRef.current.focus();
 
     const textElement = screen.getByText("Some Text");
-    // eslint-disable-next-line testing-library/no-node-access
-    expect(textElement).toEqual(document.activeElement);
+    expect(textElement).toHaveFocus();
   });
 });
