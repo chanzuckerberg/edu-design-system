@@ -32,7 +32,6 @@ const Heading = forwardRef<HTMLElement, Props>(({ as, children, size, /**
   </Typography>
 ));
 
-// TODO: make sure we need this
 Heading.displayName = "Heading"; // Satisfy eslint.
 
 export default Heading;
