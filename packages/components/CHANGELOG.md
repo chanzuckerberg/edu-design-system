@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.1-alpha.13](https://github.com/chanzuckerberg/edu-design-system/compare/v0.0.1-alpha.12...v0.0.1-alpha.13) (2021-06-09)
+
+
+### Features
+
+* **typography:** allow color passthrough on text components ([7f73304](https://github.com/chanzuckerberg/edu-design-system/commit/7f733048b7ae81f95114d1e2b57e6637b305c2ab))
+* **typography:** allow ref pass through on Text components ([b35c929](https://github.com/chanzuckerberg/edu-design-system/commit/b35c929cb49b95f53a741cd51bbae47e52295b14))
+* **typography:** allow ref to pass through Heading ([1be3a56](https://github.com/chanzuckerberg/edu-design-system/commit/1be3a56fb2049e2a38b3b1d5da2bebd4ea07de42))
+
+
+
+
+
 ## [0.0.1-alpha.12](https://github.com/chanzuckerberg/edu-design-system/compare/v0.0.1-alpha.11...v0.0.1-alpha.12) (2021-04-22)
 
 
