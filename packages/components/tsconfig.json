@@ -17,6 +17,10 @@
     "suppressImplicitAnyIndexErrors": true,
     "target": "es5"
   },
-  "include": ["src/**/*", "css-modules.d.ts"],
+  "include": [
+    "src/**/*",
+    "css-modules.d.ts",
+    "./jest.setup.ts"
+  ],
   "exclude": ["node_modules", "dist", "**/*.stories.*", "**/*.spec.*"]
 }
