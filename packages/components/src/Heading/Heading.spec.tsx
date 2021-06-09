@@ -8,7 +8,7 @@ import { generateSnapshots } from "@chanzuckerberg/story-utils";
 describe("<Heading />", () => {
   generateSnapshots(HeadingStoryFile);
 
-  it("should pass the passthrough ref", () => {
+  it("should pass through ref", () => {
     const headingRef = React.createRef();
     render(
       <Heading ref={headingRef} size="h1" tabIndex={-1}>
