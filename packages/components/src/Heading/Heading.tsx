@@ -2,6 +2,9 @@ import React, { forwardRef } from "react";
 
 import Typography, { TypographyProps } from "../common/typography";
 
+import clsx from "clsx";
+import styles from "./Heading.module.css";
+
 type HeadingElement = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 
 type Props = {
@@ -21,16 +24,33 @@ type Props = {
   spacing?: TypographyProps<HeadingElement>["spacing"];
 };
 
-const Heading = forwardRef<HTMLElement, Props>(({ as, children, size, /**
-   * Components that wrap typography sometimes require props such as
-   * event handlers, tabIndex, etc. to be passed down into the element.
-   * TODO: add better typing or documentation for optional props,
-   * e.g. React.HTMLAttributes<HTMLHeadingElement>
-   */ ...rest }: Props, ref) => (
-  <Typography as={as || size} size={size} ref={ref} {...rest}>
-    {children}
-  </Typography>
-));
+const Heading = forwardRef<HTMLElement, Props>(
+  (
+    {
+      as,
+      children,
+      size,
+      className,
+      /**
+       * Components that wrap typography sometimes require props such as
+       * event handlers, tabIndex, etc. to be passed down into the element.
+       * TODO: add better typing or documentation for optional props,
+       * e.g. React.HTMLAttributes<HTMLHeadingElement>
+       */ ...rest
+    }: Props,
+    ref,
+  ) => (
+    <Typography
+      as={as || size}
+      size={size}
+      ref={ref}
+      className={clsx(className, styles.heading)}
+      {...rest}
+    >
+      {children}
+    </Typography>
+  ),
+);
 
 Heading.displayName = "Heading"; // Satisfy eslint.
 

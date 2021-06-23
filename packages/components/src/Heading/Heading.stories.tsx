@@ -55,3 +55,13 @@ Heading4ColorNeutral.args = {
   color: "neutral",
   size: "h4",
 };
+
+export const HeadingWithMultipleDivs = Template.bind(null);
+HeadingWithMultipleDivs.args = {
+  size: "h3",
+  children: (
+    <>
+      <div>Heading in a Div</div>&nbsp;<div>Followed by Another Div</div>
+    </>
+  ),
+};
