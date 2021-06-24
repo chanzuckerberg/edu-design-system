@@ -12,11 +12,16 @@ import styles from "./tokens.module.css";
 ## EDS Colors
 
 export const mapEDSColorToTokenArray = (color) => {
-  return Object.keys(tokens.eds.color[color])
+  // Handle nested color names
+  const colorKeys = color.split("-");
+  const colorTokens = colorKeys.reduce((obj, key) => {
+    return obj[key];
+  }, tokens.eds.color);
+  return Object.keys(colorTokens)
     .sort((shade1, shade2) => shade1.localeCompare(shade2))
     .map((shade) => ({
-      name: `$eds-color-${color}-${shade}`,
-      value: tokens.eds.color[color][shade],
+      name: `eds-color-${color}-${shade}`,
+      value: colorTokens[shade],
     }));
 };
 
@@ -24,16 +29,24 @@ export const mapEDSColorToTokenArray = (color) => {
   tokens={[
     // Neutral Colors In Order
     {
-      name: "$eds-color-white",
+      name: "eds-color-white",
       value: tokens.eds.color.white,
     },
     ...mapEDSColorToTokenArray("neutral"),
     {
-      name: "$eds-color-black",
+      name: "eds-color-black (Note: alias for eds-color-neutral-700)",
       value: tokens.eds.color.black,
     },
     // Remaining Colors
-    ...["alert", "warning", "success", "info", "brand", "highlight"]
+    ...[
+      "alert",
+      "grading-yellow",
+      "warning",
+      "success",
+      "info",
+      "brand",
+      "highlight",
+    ]
       .map(mapEDSColorToTokenArray)
       .flat(),
   ]}
@@ -47,9 +60,11 @@ export const mapEDSColorToTokenArray = (color) => {
 
 ## Legacy (Claro) Colors
 
+### **_Note: For reference only. These are outdated and should not be used in future work_**
+
 export const mapLegacyColorToTokenArray = (color) => {
   return Object.keys(tokens.legacy.color[color]).map((shade) => ({
-    name: `$legacy-color-${color}-${shade}`,
+    name: `legacy-color-${color}-${shade}`,
     value: tokens.legacy.color[color][shade],
   }));
 };
@@ -58,12 +73,12 @@ export const mapLegacyColorToTokenArray = (color) => {
   tokens={[
     // Neutral Colors In Order
     {
-      name: "$legacy-color-white",
+      name: "legacy-color-white",
       value: tokens.legacy.color.white,
     },
     ...mapLegacyColorToTokenArray("gray"),
     {
-      name: "$legacy-color-black",
+      name: "legacy-color-black",
       value: tokens.legacy.color.black,
     },
     // Remaining Colors
