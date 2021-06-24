@@ -1,5 +1,76 @@
 
 
+$eds-color-neutral-100: #F3F3F3 !default;
+$eds-color-neutral-200: #E8E8E9 !default;
+$eds-color-neutral-300: #CAD1D8 !default;
+$eds-color-neutral-400: #838C95 !default;
+$eds-color-neutral-500: #58636F !default;
+$eds-color-neutral-600: #3C444C !default;
+$eds-color-neutral-700: #21272D !default;
+$eds-color-white: #FFFFFF !default;
+$eds-color-black: #21272D !default;
+$eds-color-alert-100: #FFEBF0 !default;
+$eds-color-alert-200: #FFCCD8 !default;
+$eds-color-alert-300: #FB90B0 !default;
+$eds-color-alert-400: #F76C96 !default;
+$eds-color-alert-500: #F1497C !default;
+$eds-color-alert-600: #D41E52 !default;
+$eds-color-alert-700: #BD0044 !default;
+$eds-color-success-100: #ECFFF5 !default;
+$eds-color-success-200: #B7E9CE !default;
+$eds-color-success-300: #8FDCB3 !default;
+$eds-color-success-400: #59C88C !default;
+$eds-color-success-500: #00A96C !default;
+$eds-color-success-600: #008756 !default;
+$eds-color-success-700: #007349 !default;
+$eds-color-info-100: #F1F9FF !default;
+$eds-color-info-200: #B0D5FF !default;
+$eds-color-info-300: #7FB9FD !default;
+$eds-color-info-400: #5CA7FF !default;
+$eds-color-info-500: #328EFB !default;
+$eds-color-info-600: #1977CD !default;
+$eds-color-info-700: #0563B8 !default;
+$eds-color-warning-100: #FFF1E9 !default;
+$eds-color-warning-200: #FFCBA6 !default;
+$eds-color-warning-300: #FFB077 !default;
+$eds-color-warning-400: #F6924A !default;
+$eds-color-warning-500: #ED7200 !default;
+$eds-color-warning-600: #C64600 !default;
+$eds-color-warning-700: #AC3400 !default;
+$eds-color-brand-100: #F7F1FF !default;
+$eds-color-brand-200: #C3C0FE !default;
+$eds-color-brand-300: #A7A2FE !default;
+$eds-color-brand-400: #928CFF !default;
+$eds-color-brand-500: #766FFD !default;
+$eds-color-brand-600: #574EFF !default;
+$eds-color-brand-700: #433BDE !default;
+$eds-color-grading-yellow-100: #FDF1D0 !default;
+$eds-color-grading-yellow-500: #FFC55B !default;
+$eds-color-highlight-100: #FF9FEC !default;
+$eds-color-highlight-200: #FFBEAA !default;
+$eds-color-highlight-300: #FCFF00 !default;
+$eds-color-highlight-400: #9DFFA4 !default;
+$eds-color-highlight-500: #00F1FF !default;
+$eds-color-highlight-600: #CFC9FF !default;
+$eds-color-font-base: #21272D !default; // Color for all standard typography in a light background
+$eds-color-font-link: #433BDE !default; // Color for all standard links
+$eds-size-font-h1: 3rem !default; // Font size for Heading 1 sized text
+$eds-size-font-h2: 2.5rem !default; // Font size for Heading 2 sized text
+$eds-size-font-h3: 2rem !default; // Font size for Heading 3 sized text
+$eds-size-font-h4: 1.5rem !default; // Font size for Heading 4 sized text
+$eds-size-font-h5: 1.125rem !default; // Font size for Heading 5 sized text
+$eds-size-font-base: 16px !default; // Base font size for design system in px
+$eds-size-font-body: 1rem !default; // Default font size for body text
+$eds-size-font-sm: 0.875rem !default; // Font size for small body text
+$eds-size-font-xs: 0.75rem !default; // Font size for xsmall body text
+$eds-size-line-height-h1: 4rem !default; // Line height for Heading 1 sized text
+$eds-size-line-height-h2: 3.5rem !default; // Line height for Heading 2 sized text
+$eds-size-line-height-h3: 2.5rem !default; // Line height for Heading 3 sized text
+$eds-size-line-height-h4: 2rem !default; // Line height for Heading 4 sized text
+$eds-size-line-height-h5: 1.5rem !default; // Font size for Heading 5 sized text
+$eds-size-line-height-body: 1.5rem !default; // Default line height for body text
+$eds-size-line-height-sm: 1.25rem !default; // Line height for small body text
+$eds-size-line-height-xs: 1rem !default; // Line height for xsmall body text
 $legacy-color-gray-50: #F8F9FC !default;
 $legacy-color-gray-100: #EBEBEC !default;
 $legacy-color-gray-200: #D8D8D9 !default;
@@ -53,77 +124,109 @@ $legacy-size-line-height-h1: 2rem !default; // Line height for Heading 1 sized t
 $legacy-size-line-height-body: 1.5rem !default; // Default line height for body text
 $legacy-size-line-height-sm: 1.25rem !default; // Line height for small body text
 $legacy-size-line-height-xs: 1rem !default; // Line height for xsmall body text
-$eds-color-neutral-100: #F3F3F3 !default;
-$eds-color-neutral-200: #E8E8E9 !default;
-$eds-color-neutral-300: #CAD1D8 !default;
-$eds-color-neutral-400: #838C95 !default;
-$eds-color-neutral-500: #58636F !default;
-$eds-color-neutral-600: #3C444C !default;
-$eds-color-neutral-700: #21272D !default;
-$eds-color-white: #FFFFFF !default;
-$eds-color-black: #21272D !default;
-$eds-color-alert-100: #FFEBF0 !default;
-$eds-color-alert-200: #FFCCD8 !default;
-$eds-color-alert-300: #FB90B0 !default;
-$eds-color-alert-400: #F76C96 !default;
-$eds-color-alert-500: #F1497C !default;
-$eds-color-alert-600: #D41E52 !default;
-$eds-color-alert-700: #BD0044 !default;
-$eds-color-success-100: #ECFFF5 !default;
-$eds-color-success-200: #B7E9CE !default;
-$eds-color-success-300: #8FDCB3 !default;
-$eds-color-success-400: #59C88C !default;
-$eds-color-success-500: #00A96C !default;
-$eds-color-success-600: #008756 !default;
-$eds-color-success-700: #007349 !default;
-$eds-color-info-100: #F1F9FF !default;
-$eds-color-info-200: #B0D5FF !default;
-$eds-color-info-300: #7FB9FD !default;
-$eds-color-info-400: #5CA7FF !default;
-$eds-color-info-500: #328EFB !default;
-$eds-color-info-600: #1977CD !default;
-$eds-color-info-700: #0563B8 !default;
-$eds-color-warning-100: #FFF1E9 !default;
-$eds-color-warning-200: #FFCBA6 !default;
-$eds-color-warning-300: #FFB077 !default;
-$eds-color-warning-400: #F6924A !default;
-$eds-color-warning-500: #ED7200 !default;
-$eds-color-warning-600: #C64600 !default;
-$eds-color-warning-700: #AC3400 !default;
-$eds-color-brand-100: #F7F1FF !default;
-$eds-color-brand-200: #C3C0FE !default;
-$eds-color-brand-300: #A7A2FE !default;
-$eds-color-brand-400: #928CFF !default;
-$eds-color-brand-500: #766FFD !default;
-$eds-color-brand-600: #574EFF !default;
-$eds-color-brand-700: #433BDE !default;
-$eds-color-highlight-100: #FF9FEC !default;
-$eds-color-highlight-200: #FFBEAA !default;
-$eds-color-highlight-300: #FCFF00 !default;
-$eds-color-highlight-400: #9DFFA4 !default;
-$eds-color-highlight-500: #00F1FF !default;
-$eds-color-highlight-600: #CFC9FF !default;
-$eds-color-font-base: #21272D !default; // Color for all standard typography in a light background
-$eds-color-font-link: #433BDE !default; // Color for all standard links
-$eds-size-font-h1: 3rem !default; // Font size for Heading 1 sized text
-$eds-size-font-h2: 2.5rem !default; // Font size for Heading 2 sized text
-$eds-size-font-h3: 2rem !default; // Font size for Heading 3 sized text
-$eds-size-font-h4: 1.5rem !default; // Font size for Heading 4 sized text
-$eds-size-font-h5: 1.125rem !default; // Font size for Heading 5 sized text
-$eds-size-font-base: 16px !default; // Base font size for design system in px
-$eds-size-font-body: 1rem !default; // Default font size for body text
-$eds-size-font-sm: 0.875rem !default; // Font size for small body text
-$eds-size-font-xs: 0.75rem !default; // Font size for xsmall body text
-$eds-size-line-height-h1: 4rem !default; // Line height for Heading 1 sized text
-$eds-size-line-height-h2: 3.5rem !default; // Line height for Heading 2 sized text
-$eds-size-line-height-h3: 2.5rem !default; // Line height for Heading 3 sized text
-$eds-size-line-height-h4: 2rem !default; // Line height for Heading 4 sized text
-$eds-size-line-height-h5: 1.5rem !default; // Font size for Heading 5 sized text
-$eds-size-line-height-body: 1.5rem !default; // Default line height for body text
-$eds-size-line-height-sm: 1.25rem !default; // Line height for small body text
-$eds-size-line-height-xs: 1rem !default; // Line height for xsmall body text
 
 $tokens: (
+  'eds': (
+    'color': (
+      'neutral': (
+        '100': $eds-color-neutral-100,
+        '200': $eds-color-neutral-200,
+        '300': $eds-color-neutral-300,
+        '400': $eds-color-neutral-400,
+        '500': $eds-color-neutral-500,
+        '600': $eds-color-neutral-600,
+        '700': $eds-color-neutral-700
+      ),
+      'white': $eds-color-white,
+      'black': $eds-color-black,
+      'alert': (
+        '100': $eds-color-alert-100,
+        '200': $eds-color-alert-200,
+        '300': $eds-color-alert-300,
+        '400': $eds-color-alert-400,
+        '500': $eds-color-alert-500,
+        '600': $eds-color-alert-600,
+        '700': $eds-color-alert-700
+      ),
+      'success': (
+        '100': $eds-color-success-100,
+        '200': $eds-color-success-200,
+        '300': $eds-color-success-300,
+        '400': $eds-color-success-400,
+        '500': $eds-color-success-500,
+        '600': $eds-color-success-600,
+        '700': $eds-color-success-700
+      ),
+      'info': (
+        '100': $eds-color-info-100,
+        '200': $eds-color-info-200,
+        '300': $eds-color-info-300,
+        '400': $eds-color-info-400,
+        '500': $eds-color-info-500,
+        '600': $eds-color-info-600,
+        '700': $eds-color-info-700
+      ),
+      'warning': (
+        '100': $eds-color-warning-100,
+        '200': $eds-color-warning-200,
+        '300': $eds-color-warning-300,
+        '400': $eds-color-warning-400,
+        '500': $eds-color-warning-500,
+        '600': $eds-color-warning-600,
+        '700': $eds-color-warning-700
+      ),
+      'brand': (
+        '100': $eds-color-brand-100,
+        '200': $eds-color-brand-200,
+        '300': $eds-color-brand-300,
+        '400': $eds-color-brand-400,
+        '500': $eds-color-brand-500,
+        '600': $eds-color-brand-600,
+        '700': $eds-color-brand-700
+      ),
+      'grading': (
+        'yellow': (
+          '100': $eds-color-grading-yellow-100,
+          '500': $eds-color-grading-yellow-500
+        )
+      ),
+      'highlight': (
+        '100': $eds-color-highlight-100,
+        '200': $eds-color-highlight-200,
+        '300': $eds-color-highlight-300,
+        '400': $eds-color-highlight-400,
+        '500': $eds-color-highlight-500,
+        '600': $eds-color-highlight-600
+      ),
+      'font': (
+        'base': $eds-color-font-base,
+        'link': $eds-color-font-link
+      )
+    ),
+    'size': (
+      'font': (
+        'h1': $eds-size-font-h1,
+        'h2': $eds-size-font-h2,
+        'h3': $eds-size-font-h3,
+        'h4': $eds-size-font-h4,
+        'h5': $eds-size-font-h5,
+        'base': $eds-size-font-base,
+        'body': $eds-size-font-body,
+        'sm': $eds-size-font-sm,
+        'xs': $eds-size-font-xs
+      ),
+      'line-height': (
+        'h1': $eds-size-line-height-h1,
+        'h2': $eds-size-line-height-h2,
+        'h3': $eds-size-line-height-h3,
+        'h4': $eds-size-line-height-h4,
+        'h5': $eds-size-line-height-h5,
+        'body': $eds-size-line-height-body,
+        'sm': $eds-size-line-height-sm,
+        'xs': $eds-size-line-height-xs
+      )
+    )
+  ),
   'legacy': (
     'color': (
       'gray': (
@@ -196,101 +299,6 @@ $tokens: (
         'body': $legacy-size-line-height-body,
         'sm': $legacy-size-line-height-sm,
         'xs': $legacy-size-line-height-xs
-      )
-    )
-  ),
-  'eds': (
-    'color': (
-      'neutral': (
-        '100': $eds-color-neutral-100,
-        '200': $eds-color-neutral-200,
-        '300': $eds-color-neutral-300,
-        '400': $eds-color-neutral-400,
-        '500': $eds-color-neutral-500,
-        '600': $eds-color-neutral-600,
-        '700': $eds-color-neutral-700
-      ),
-      'white': $eds-color-white,
-      'black': $eds-color-black,
-      'alert': (
-        '100': $eds-color-alert-100,
-        '200': $eds-color-alert-200,
-        '300': $eds-color-alert-300,
-        '400': $eds-color-alert-400,
-        '500': $eds-color-alert-500,
-        '600': $eds-color-alert-600,
-        '700': $eds-color-alert-700
-      ),
-      'success': (
-        '100': $eds-color-success-100,
-        '200': $eds-color-success-200,
-        '300': $eds-color-success-300,
-        '400': $eds-color-success-400,
-        '500': $eds-color-success-500,
-        '600': $eds-color-success-600,
-        '700': $eds-color-success-700
-      ),
-      'info': (
-        '100': $eds-color-info-100,
-        '200': $eds-color-info-200,
-        '300': $eds-color-info-300,
-        '400': $eds-color-info-400,
-        '500': $eds-color-info-500,
-        '600': $eds-color-info-600,
-        '700': $eds-color-info-700
-      ),
-      'warning': (
-        '100': $eds-color-warning-100,
-        '200': $eds-color-warning-200,
-        '300': $eds-color-warning-300,
-        '400': $eds-color-warning-400,
-        '500': $eds-color-warning-500,
-        '600': $eds-color-warning-600,
-        '700': $eds-color-warning-700
-      ),
-      'brand': (
-        '100': $eds-color-brand-100,
-        '200': $eds-color-brand-200,
-        '300': $eds-color-brand-300,
-        '400': $eds-color-brand-400,
-        '500': $eds-color-brand-500,
-        '600': $eds-color-brand-600,
-        '700': $eds-color-brand-700
-      ),
-      'highlight': (
-        '100': $eds-color-highlight-100,
-        '200': $eds-color-highlight-200,
-        '300': $eds-color-highlight-300,
-        '400': $eds-color-highlight-400,
-        '500': $eds-color-highlight-500,
-        '600': $eds-color-highlight-600
-      ),
-      'font': (
-        'base': $eds-color-font-base,
-        'link': $eds-color-font-link
-      )
-    ),
-    'size': (
-      'font': (
-        'h1': $eds-size-font-h1,
-        'h2': $eds-size-font-h2,
-        'h3': $eds-size-font-h3,
-        'h4': $eds-size-font-h4,
-        'h5': $eds-size-font-h5,
-        'base': $eds-size-font-base,
-        'body': $eds-size-font-body,
-        'sm': $eds-size-font-sm,
-        'xs': $eds-size-font-xs
-      ),
-      'line-height': (
-        'h1': $eds-size-line-height-h1,
-        'h2': $eds-size-line-height-h2,
-        'h3': $eds-size-line-height-h3,
-        'h4': $eds-size-line-height-h4,
-        'h5': $eds-size-line-height-h5,
-        'body': $eds-size-line-height-body,
-        'sm': $eds-size-line-height-sm,
-        'xs': $eds-size-line-height-xs
       )
     )
   )

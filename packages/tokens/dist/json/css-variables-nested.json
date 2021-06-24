@@ -1,4 +1,105 @@
 {
+  "eds": {
+    "color": {
+      "neutral": {
+        "100": "var(--eds-color-neutral-100)",
+        "200": "var(--eds-color-neutral-200)",
+        "300": "var(--eds-color-neutral-300)",
+        "400": "var(--eds-color-neutral-400)",
+        "500": "var(--eds-color-neutral-500)",
+        "600": "var(--eds-color-neutral-600)",
+        "700": "var(--eds-color-neutral-700)"
+      },
+      "white": "var(--eds-color-white)",
+      "black": "var(--eds-color-black)",
+      "alert": {
+        "100": "var(--eds-color-alert-100)",
+        "200": "var(--eds-color-alert-200)",
+        "300": "var(--eds-color-alert-300)",
+        "400": "var(--eds-color-alert-400)",
+        "500": "var(--eds-color-alert-500)",
+        "600": "var(--eds-color-alert-600)",
+        "700": "var(--eds-color-alert-700)"
+      },
+      "success": {
+        "100": "var(--eds-color-success-100)",
+        "200": "var(--eds-color-success-200)",
+        "300": "var(--eds-color-success-300)",
+        "400": "var(--eds-color-success-400)",
+        "500": "var(--eds-color-success-500)",
+        "600": "var(--eds-color-success-600)",
+        "700": "var(--eds-color-success-700)"
+      },
+      "info": {
+        "100": "var(--eds-color-info-100)",
+        "200": "var(--eds-color-info-200)",
+        "300": "var(--eds-color-info-300)",
+        "400": "var(--eds-color-info-400)",
+        "500": "var(--eds-color-info-500)",
+        "600": "var(--eds-color-info-600)",
+        "700": "var(--eds-color-info-700)"
+      },
+      "warning": {
+        "100": "var(--eds-color-warning-100)",
+        "200": "var(--eds-color-warning-200)",
+        "300": "var(--eds-color-warning-300)",
+        "400": "var(--eds-color-warning-400)",
+        "500": "var(--eds-color-warning-500)",
+        "600": "var(--eds-color-warning-600)",
+        "700": "var(--eds-color-warning-700)"
+      },
+      "brand": {
+        "100": "var(--eds-color-brand-100)",
+        "200": "var(--eds-color-brand-200)",
+        "300": "var(--eds-color-brand-300)",
+        "400": "var(--eds-color-brand-400)",
+        "500": "var(--eds-color-brand-500)",
+        "600": "var(--eds-color-brand-600)",
+        "700": "var(--eds-color-brand-700)"
+      },
+      "grading": {
+        "yellow": {
+          "100": "var(--eds-color-grading-yellow-100)",
+          "500": "var(--eds-color-grading-yellow-500)"
+        }
+      },
+      "highlight": {
+        "100": "var(--eds-color-highlight-100)",
+        "200": "var(--eds-color-highlight-200)",
+        "300": "var(--eds-color-highlight-300)",
+        "400": "var(--eds-color-highlight-400)",
+        "500": "var(--eds-color-highlight-500)",
+        "600": "var(--eds-color-highlight-600)"
+      },
+      "font": {
+        "base": "var(--eds-color-font-base)",
+        "link": "var(--eds-color-font-link)"
+      }
+    },
+    "size": {
+      "font": {
+        "h1": "var(--eds-size-font-h1)",
+        "h2": "var(--eds-size-font-h2)",
+        "h3": "var(--eds-size-font-h3)",
+        "h4": "var(--eds-size-font-h4)",
+        "h5": "var(--eds-size-font-h5)",
+        "base": "var(--eds-size-font-base)",
+        "body": "var(--eds-size-font-body)",
+        "sm": "var(--eds-size-font-sm)",
+        "xs": "var(--eds-size-font-xs)"
+      },
+      "line-height": {
+        "h1": "var(--eds-size-line-height-h1)",
+        "h2": "var(--eds-size-line-height-h2)",
+        "h3": "var(--eds-size-line-height-h3)",
+        "h4": "var(--eds-size-line-height-h4)",
+        "h5": "var(--eds-size-line-height-h5)",
+        "body": "var(--eds-size-line-height-body)",
+        "sm": "var(--eds-size-line-height-sm)",
+        "xs": "var(--eds-size-line-height-xs)"
+      }
+    }
+  },
   "legacy": {
     "color": {
       "gray": {
@@ -71,101 +172,6 @@
         "body": "var(--legacy-size-line-height-body)",
         "sm": "var(--legacy-size-line-height-sm)",
         "xs": "var(--legacy-size-line-height-xs)"
-      }
-    }
-  },
-  "eds": {
-    "color": {
-      "neutral": {
-        "100": "var(--eds-color-neutral-100)",
-        "200": "var(--eds-color-neutral-200)",
-        "300": "var(--eds-color-neutral-300)",
-        "400": "var(--eds-color-neutral-400)",
-        "500": "var(--eds-color-neutral-500)",
-        "600": "var(--eds-color-neutral-600)",
-        "700": "var(--eds-color-neutral-700)"
-      },
-      "white": "var(--eds-color-white)",
-      "black": "var(--eds-color-black)",
-      "alert": {
-        "100": "var(--eds-color-alert-100)",
-        "200": "var(--eds-color-alert-200)",
-        "300": "var(--eds-color-alert-300)",
-        "400": "var(--eds-color-alert-400)",
-        "500": "var(--eds-color-alert-500)",
-        "600": "var(--eds-color-alert-600)",
-        "700": "var(--eds-color-alert-700)"
-      },
-      "success": {
-        "100": "var(--eds-color-success-100)",
-        "200": "var(--eds-color-success-200)",
-        "300": "var(--eds-color-success-300)",
-        "400": "var(--eds-color-success-400)",
-        "500": "var(--eds-color-success-500)",
-        "600": "var(--eds-color-success-600)",
-        "700": "var(--eds-color-success-700)"
-      },
-      "info": {
-        "100": "var(--eds-color-info-100)",
-        "200": "var(--eds-color-info-200)",
-        "300": "var(--eds-color-info-300)",
-        "400": "var(--eds-color-info-400)",
-        "500": "var(--eds-color-info-500)",
-        "600": "var(--eds-color-info-600)",
-        "700": "var(--eds-color-info-700)"
-      },
-      "warning": {
-        "100": "var(--eds-color-warning-100)",
-        "200": "var(--eds-color-warning-200)",
-        "300": "var(--eds-color-warning-300)",
-        "400": "var(--eds-color-warning-400)",
-        "500": "var(--eds-color-warning-500)",
-        "600": "var(--eds-color-warning-600)",
-        "700": "var(--eds-color-warning-700)"
-      },
-      "brand": {
-        "100": "var(--eds-color-brand-100)",
-        "200": "var(--eds-color-brand-200)",
-        "300": "var(--eds-color-brand-300)",
-        "400": "var(--eds-color-brand-400)",
-        "500": "var(--eds-color-brand-500)",
-        "600": "var(--eds-color-brand-600)",
-        "700": "var(--eds-color-brand-700)"
-      },
-      "highlight": {
-        "100": "var(--eds-color-highlight-100)",
-        "200": "var(--eds-color-highlight-200)",
-        "300": "var(--eds-color-highlight-300)",
-        "400": "var(--eds-color-highlight-400)",
-        "500": "var(--eds-color-highlight-500)",
-        "600": "var(--eds-color-highlight-600)"
-      },
-      "font": {
-        "base": "var(--eds-color-font-base)",
-        "link": "var(--eds-color-font-link)"
-      }
-    },
-    "size": {
-      "font": {
-        "h1": "var(--eds-size-font-h1)",
-        "h2": "var(--eds-size-font-h2)",
-        "h3": "var(--eds-size-font-h3)",
-        "h4": "var(--eds-size-font-h4)",
-        "h5": "var(--eds-size-font-h5)",
-        "base": "var(--eds-size-font-base)",
-        "body": "var(--eds-size-font-body)",
-        "sm": "var(--eds-size-font-sm)",
-        "xs": "var(--eds-size-font-xs)"
-      },
-      "line-height": {
-        "h1": "var(--eds-size-line-height-h1)",
-        "h2": "var(--eds-size-line-height-h2)",
-        "h3": "var(--eds-size-line-height-h3)",
-        "h4": "var(--eds-size-line-height-h4)",
-        "h5": "var(--eds-size-line-height-h5)",
-        "body": "var(--eds-size-line-height-body)",
-        "sm": "var(--eds-size-line-height-sm)",
-        "xs": "var(--eds-size-line-height-xs)"
       }
     }
   }
