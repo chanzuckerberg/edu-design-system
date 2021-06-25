@@ -11,12 +11,24 @@ import styles from "./tokens.module.css";
 
 ## EDS Colors
 
-export const mapEDSColorToTokenArray = (color) => {
-  // Handle nested color names
-  const colorKeys = color.split("-");
-  const colorTokens = colorKeys.reduce((obj, key) => {
-    return obj[key];
+<!-- Returns an object mapping all shades for a given color to hex values -->
+
+export const getTokensForColor = (color) => {
+  const maybeNestedKeys = color.split("-");
+  // Each "-" separator corresponds to an extra level of nesting in variables-nested.json
+  // For example, the tokens for color "grading-yellow" are stored under
+  // "grading": {
+  //   "yellow": { ...tokens }
+  // }
+  // This will index in another level for each colorKey separated by "-"
+  // and return the innermost object with the color tokens
+  return maybeNestedKeys.reduce((tokenObject, nextColorKey) => {
+    return tokenObject[nextColorKey];
   }, tokens.eds.color);
+};
+
+export const mapEDSColorToTokenArray = (color) => {
+  const colorTokens = getTokensForColor(color);
   return Object.keys(colorTokens)
     .sort((shade1, shade2) => shade1.localeCompare(shade2))
     .map((shade) => ({
