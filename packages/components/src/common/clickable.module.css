@@ -1,6 +1,6 @@
 .button {
   /* Base Styles */
-  @apply rounded border-2 transition-colors;
+  @apply rounded border-2 transition-colors inline-flex items-center;
 
   /* Base Text Styles */
   @apply font-bold;
@@ -113,6 +113,30 @@
   /* override the hover/focus values */
   &:disabled {
     --button-primary-color: var(--eds-color-success-300);
+  }
+}
+
+.colorWarning {
+  --button-primary-color: var(--eds-color-warning-600);
+  --button-secondary-color: var(--eds-color-white);
+  --button-tertiary-color: var(--eds-color-warning-100);
+
+  &:hover,
+  &.stateHover,
+  &:focus,
+  &.stateFocus {
+    --button-primary-color: var(--eds-color-warning-700);
+  }
+
+  &:active,
+  &.stateActive {
+    /* TODO: Replace with warning active color */
+    --button-primary-color: #952d00;
+  }
+
+  /* override the hover/focus values */
+  &:disabled {
+    --button-primary-color: var(--eds-color-warning-300);
   }
 }
 
