@@ -103,10 +103,10 @@ exports[`<Button /> outlineWithIcon story renders snapshot 1`] = `
 exports[`<Button /> withDataTestId story renders snapshot 1`] = `
 <button
   class="button sizeMedium variantFlat colorAlert"
-  data-test-id="fake-test-id"
+  data-testid="fake-test-id"
   type="button"
 >
   ​
-  Button with data-test-id
+  Button with data-testid
 </button>
 `;
