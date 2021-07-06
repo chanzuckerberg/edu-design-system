@@ -71,10 +71,10 @@ linkInHeading.args = {
 
 export const withDataTestId = Template.bind(null);
 withDataTestId.args = {
-  children: "Button with data-test-id",
+  children: "Button with data-testid",
   color: "alert",
   variant: "flat",
-  "data-test-id": "fake-test-id",
+  "data-testid": "fake-test-id",
 };
 
 export const linkWithIcon = Template.bind(null);

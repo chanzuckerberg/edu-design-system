@@ -3,18 +3,18 @@ import React, { ReactNode } from "react";
 
 type ButtonHTMLElementProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-export type ButtonProps = {
+type ButtonPropsBase = ButtonHTMLElementProps & {
   as?: "button" | React.ComponentType<any>;
   /**
    * The button contents or label.
    */
   children: ReactNode;
   color?: ClickableProps<"button">["color"];
-  disabled?: ButtonHTMLElementProps["disabled"];
   size?: ClickableProps<"button">["size"];
-  type?: ButtonHTMLElementProps["type"];
   variant?: ClickableProps<"button">["variant"];
 };
+
+export type ButtonProps = Omit<ButtonPropsBase, "style">;
 
 function Button({
   as = "button",
