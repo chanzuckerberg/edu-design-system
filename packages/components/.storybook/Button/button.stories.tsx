@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import Clickable, { ClickableProps } from "../../src/common/clickable";
+import Clickable, { ClickableProps } from "../../src/Clickable";
 
 import { ButtonProps } from "../../src/Button";
 import Heading from "../../src/Heading";
