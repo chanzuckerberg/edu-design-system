@@ -10,7 +10,7 @@ export type ClickableProps<IComponent extends React.ElementType> = {
   /**
    * The color of the element.
    */
-  color: "alert" | "brand" | "neutral" | "success";
+  color: "alert" | "brand" | "neutral" | "success" | "warning";
   /**
    * The size of the element.
    */
@@ -54,8 +54,8 @@ function Clickable<IComponent extends React.ElementType>({
         color === "brand" && styles.colorBrand,
         color === "neutral" && styles.colorNeutral,
         color === "success" && styles.colorSuccess,
+        color === "warning" && styles.colorWarning,
         // Interactive States (for testing)
-        state === "inactive" && styles.stateInactive,
         state === "hover" && styles.stateHover,
         state === "focus" && styles.stateFocus,
         state === "active" && styles.stateActive,
