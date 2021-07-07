@@ -25,6 +25,11 @@ export type ClickableProps<IComponent extends React.ElementType> = {
   variant: "flat" | "outline" | "link";
 } & React.ComponentProps<IComponent>;
 
+/**
+ * A helper component that contains all the styling for buttons and links.
+ *
+ * See the Button stories for usage examples.
+ */
 function Clickable<IComponent extends React.ElementType>({
   as,
   children,
