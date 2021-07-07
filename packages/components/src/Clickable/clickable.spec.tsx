@@ -1,4 +1,4 @@
-import * as ClickableStoryFile from "./clickable.stories";
+import * as ClickableStoryFile from "./Clickable.stories";
 
 import { generateSnapshots } from "@chanzuckerberg/story-utils";
 
