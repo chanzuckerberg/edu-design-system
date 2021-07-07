@@ -36,7 +36,7 @@ const states: Array<ClickableProps<"button">["state"] | "disabled"> = [
 ];
 
 const renderSize = (
-  size: "small" | "medium" | "large",
+  size: ButtonProps["size"],
   textColor: "white" | "neutral",
   children,
 ) =>
