@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import Clickable from "./clickable";
+import Clickable from "./Clickable";
 import { Story } from "@storybook/react/types-6-0";
 
 export default {

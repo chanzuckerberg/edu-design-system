@@ -1,6 +1,6 @@
 import React from "react";
 import clsx from "clsx";
-import styles from "./clickable.module.css";
+import styles from "./Clickable.module.css";
 
 export type ClickableProps<IComponent extends React.ElementType> = {
   /**
