@@ -5,7 +5,7 @@ import { Story } from "@storybook/react/types-6-0";
 import Text from "../Text";
 
 export default {
-  title: "Button - WIP",
+  title: "Button",
   component: Button,
   argTypes: {
     children: {
