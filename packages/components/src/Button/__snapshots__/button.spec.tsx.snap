@@ -110,3 +110,13 @@ exports[`<Button /> withDataTestId story renders snapshot 1`] = `
   Button with data-testid
 </button>
 `;
+
+exports[`<Button /> withFakeClassName story renders snapshot 1`] = `
+<button
+  class="fake-className button sizeMedium variantOutline colorWarning"
+  type="button"
+>
+  ​
+  With fake className
+</button>
+`;
