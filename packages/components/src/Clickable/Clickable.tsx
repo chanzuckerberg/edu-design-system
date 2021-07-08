@@ -37,12 +37,14 @@ function Clickable<IComponent extends React.ElementType>({
   size,
   state,
   variant,
+  className,
   ...rest
 }: ClickableProps<IComponent>) {
   const Component = as;
   return (
     <Component
       className={clsx(
+        className,
         styles.button,
         // Sizes
         variant !== "link" && [

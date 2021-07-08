@@ -90,3 +90,11 @@ outlineWithIcon.args = {
   color: "warning",
   variant: "outline",
 };
+
+export const withFakeClassName = Template.bind(null);
+withFakeClassName.args = {
+  children: "With fake className",
+  color: "warning",
+  variant: "outline",
+  className: "fake-className",
+};
