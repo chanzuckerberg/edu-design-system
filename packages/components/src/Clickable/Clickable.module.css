@@ -147,14 +147,14 @@
 }
 
 .variantOutline {
-  background-color: var(--button-secondary-color);
+  background-color: transparent;
   border-color: var(--button-primary-color);
   color: var(--button-primary-color);
 
   
   &:focus,
   &.stateFocus {
-    background-color: var(--button-secondary-color);
+    background-color: transparent;
     color: var(--button-primary-color);
   }
 
@@ -165,7 +165,7 @@
   }
   
   &:disabled {
-    background-color: var(--button-secondary-color);
+    background-color: transparent;
     color: var(--button-primary-color);
   }
 }
