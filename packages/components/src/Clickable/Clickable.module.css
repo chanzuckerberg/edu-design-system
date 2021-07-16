@@ -1,6 +1,9 @@
 .button {
   /* Base Styles */
-  @apply rounded border-2 transition-colors inline-flex items-center;
+
+  /* Using motion-reduce:transition-none here because motion-safe:transition-colors doesn't seem to
+     be having an effect. :( */
+  @apply rounded border-2 transition-colors motion-reduce:transition-none inline-flex items-center;
 
   /* Base Text Styles */
   @apply font-bold;
