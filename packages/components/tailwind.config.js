@@ -52,6 +52,8 @@ module.exports = {
       lineHeight: staticTokens.legacy.size["line-height"],
     },
   },
-  variants: {},
+  variants: {
+    transitionProperty: ["motion-safe", "motion-reduce"],
+  },
   plugins: [],
 };
