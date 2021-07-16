@@ -70,6 +70,7 @@
     "@storybook/storybook-deployer": "^2.8.7",
     "@testing-library/jest-dom": "^5.13.0",
     "@testing-library/react": "^11.2.5",
+    "@testing-library/user-event": "^13.1.9",
     "@types/classnames": "^2.2.11",
     "@types/jest": "^24.9.1",
     "@types/react": "^17.0.2",
