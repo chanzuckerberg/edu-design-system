@@ -16,6 +16,7 @@ $eds-color-alert-400: #F76C96 !default;
 $eds-color-alert-500: #F1497C !default;
 $eds-color-alert-600: #D41E52 !default;
 $eds-color-alert-700: #BD0044 !default;
+$eds-color-alert-800: #8F0134 !default;
 $eds-color-success-100: #ECFFF5 !default;
 $eds-color-success-200: #B7E9CE !default;
 $eds-color-success-300: #8FDCB3 !default;
@@ -44,6 +45,7 @@ $eds-color-brand-400: #928CFF !default;
 $eds-color-brand-500: #766FFD !default;
 $eds-color-brand-600: #574EFF !default;
 $eds-color-brand-700: #433BDE !default;
+$eds-color-brand-800: #312B9E !default;
 $eds-color-grading-yellow-100: #FDF1D0 !default;
 $eds-color-grading-yellow-500: #FFC55B !default;
 $eds-color-highlight-100: #FF9FEC !default;
@@ -146,7 +148,8 @@ $tokens: (
         '400': $eds-color-alert-400,
         '500': $eds-color-alert-500,
         '600': $eds-color-alert-600,
-        '700': $eds-color-alert-700
+        '700': $eds-color-alert-700,
+        '800': $eds-color-alert-800
       ),
       'success': (
         '100': $eds-color-success-100,
@@ -182,7 +185,8 @@ $tokens: (
         '400': $eds-color-brand-400,
         '500': $eds-color-brand-500,
         '600': $eds-color-brand-600,
-        '700': $eds-color-brand-700
+        '700': $eds-color-brand-700,
+        '800': $eds-color-brand-800
       ),
       'grading': (
         'yellow': (
