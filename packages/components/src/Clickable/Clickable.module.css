@@ -37,8 +37,7 @@
 
   &:active,
   &.stateActive {
-    /* TODO: Replace with brand active color */
-    --button-primary-color: #312b9e;
+    --button-primary-color: var(--eds-color-brand-800);
   }
 
   /* override the hover/focus values */
@@ -61,8 +60,7 @@
 
   &:active,
   &.stateActive {
-    /* TODO: Replace with alert active color */
-    --button-primary-color: #a4002c;
+    --button-primary-color: var(--eds-color-alert-800);
   }
 
   /* override the hover/focus values */
