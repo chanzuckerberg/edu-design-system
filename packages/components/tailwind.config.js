@@ -50,6 +50,16 @@ module.exports = {
     },
     extend: {
       lineHeight: staticTokens.legacy.size["line-height"],
+      padding: {
+        18: "4.5rem",
+      },
+      // Adding custom shadows based on numbers rather than sm/md/lg
+      boxShadow: {
+        0: "0px 0px 0px 1px var(--eds-color-neutral-200)",
+        1: "0px 0px 0px 1px var(--eds-color-neutral-200), 0px 2px 3px rgba(0, 0, 0, 0.02), 0px 4px 8px rgba(0, 0, 0, 0.08)",
+        2: "0px 0px 0px 1px var(--eds-color-neutral-200), 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -2px rgba(0, 0, 0, 0.05)",
+        3: "0px 0px 0px 1px var(--eds-color-neutral-200), 0px 16px 20px -5px rgba(0, 0, 0, 0.1), 0px 10px 10px -5px rgba(0, 0, 0, 0.04)",
+      },
     },
   },
   variants: {

@@ -1,0 +1,169 @@
+.bannerDialog {
+  @apply w-full rounded border shadow-1;
+  @apply relative;
+  @apply grid gap-4;
+
+  border-color: var(--banner-border-light-color);
+
+  /* Mobile-only styles */
+  @apply text-center border-t-4;
+
+  border-top-color: var(--banner-border-dark-color);
+  --svg-icon-size-default: 2.5rem;
+}
+
+.icon {
+  @apply justify-self-center;
+}
+
+.textAndAction {
+  @apply flex flex-col justify-between gap-4;
+}
+
+.textContent {
+  @apply space-y-2;
+}
+
+.action {
+  @apply justify-self-center self-center;
+}
+
+.padding2x {
+  @apply p-8;
+}
+
+.padding3x {
+  @apply p-9;
+}
+
+.padding4x {
+  @apply p-10;
+}
+
+.dismiss {
+  /* TODO: motion-safe does not seem to be stopping the animation when
+     the user has the reduce motion accessibility setting on */
+  @apply absolute top-1 right-1 w-12 h-12 justify-center rounded-full;
+  @apply hover:text-white motion-safe:transition ease-out;
+}
+
+.dismiss:hover {
+  background-color: var(--banner-dismiss-hover-color);
+}
+
+/* This media query is the same as tailwind's `md:` prefix. We're using a standard CSS media query
+   instead of the tailwind prefix because we have to use standard CSS when working with custom variables. */
+@media screen and (min-width: 768px) {
+  .bannerDialog.horizontal {
+    grid-template-columns: min-content 1fr;
+
+    @apply text-left;
+
+    /* Left border is thicker and a darker color than the surrounding border on desktop */
+    @apply border border-l-4;
+
+    border-left-color: var(--banner-border-dark-color);
+    border-top-color: var(--banner-border-light-color);
+
+    /* This makes the icon the same size as the header line height, which helps it look centered */
+    --svg-icon-size-default: 1.5rem;
+  }
+
+  .textAndAction.horizontal {
+    @apply gap-2;
+  }
+
+  .textContent.horizontal {
+    @apply space-y-1;
+  }
+
+  .action.horizontal {
+    @apply self-start;
+  }
+
+  .padding2x.horizontal {
+    @apply p-4;
+  }
+
+  .padding3x.horizontal {
+    @apply p-6;
+  }
+
+  .padding4x.horizontal {
+    @apply p-8;
+  }
+
+  /* Must be below the padding variants */
+  .dismissable.horizontal {
+    @apply pr-18;
+  }
+}
+
+.colorBrand {
+  --banner-border-light-color: var(--eds-color-brand-200);
+  --banner-border-dark-color: var(--eds-color-brand-500);
+  --banner-dismiss-hover-color: var(--eds-color-brand-600);
+
+  @apply text-brand-700 bg-brand-100;
+}
+
+.colorNeutral {
+  --banner-border-light-color: var(--eds-color-neutral-200);
+  --banner-border-dark-color: var(--eds-color-neutral-500);
+  --banner-dismiss-hover-color: var(--eds-color-neutral-600);
+
+  @apply text-neutral-700 bg-neutral-100;
+}
+
+.colorSuccess {
+  --banner-border-light-color: var(--eds-color-success-200);
+  --banner-border-dark-color: var(--eds-color-success-500);
+  --banner-dismiss-hover-color: var(--eds-color-success-600);
+
+  @apply text-success-700 bg-success-100;
+}
+
+.colorWarning {
+  --banner-border-light-color: var(--eds-color-warning-200);
+  --banner-border-dark-color: var(--eds-color-warning-500);
+  --banner-dismiss-hover-color: var(--eds-color-warning-600);
+
+  @apply text-warning-700 bg-warning-100;
+}
+
+.colorAlert {
+  --banner-border-light-color: var(--eds-color-alert-200);
+  --banner-border-dark-color: var(--eds-color-alert-500);
+  --banner-dismiss-hover-color: var(--eds-color-alert-600);
+
+  @apply text-alert-700 bg-alert-100;
+}
+
+.iconBrand {
+  @apply text-brand-500;
+}
+
+.iconNeutral {
+  @apply text-neutral-500;
+}
+
+.iconSuccess {
+  @apply text-success-500;
+}
+
+.iconWarning {
+  @apply text-warning-500;
+}
+
+.iconAlert {
+  @apply text-alert-500;
+}
+
+.elevation0 {
+  /* Instead of removing the border, we replace it with a transparent one.
+     On windows high contrast mode, the background color will be removed,
+     but this border will become 100% opacity black to retain visual separation */
+  --banner-border-light-color: transparent;
+
+  @apply shadow-none;
+}

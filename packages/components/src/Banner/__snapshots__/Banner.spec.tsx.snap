@@ -1,0 +1,1116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Banner /> Alert story renders snapshot 1`] = `
+<article
+  class="bannerDialog horizontal colorAlert padding2x"
+>
+  <div
+    class="icon iconAlert"
+  >
+    <svg
+      class="svgIcon"
+      fill="currentColor"
+      style="color: currentColor;"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      alert
+      <circle
+        cx="15.5"
+        cy="9.5"
+        r="1.5"
+      />
+      <circle
+        cx="8.5"
+        cy="9.5"
+        r="1.5"
+      />
+      <path
+        d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm0-6c-2.33 0-4.32 1.45-5.12 3.5h1.67c.69-1.19 1.97-2 3.45-2s2.75.81 3.45 2h1.67c-.8-2.05-2.79-3.5-5.12-3.5z"
+      />
+    </svg>
+  </div>
+  <div
+    class="textAndAction horizontal"
+  >
+    <div
+      class="textContent horizontal"
+    >
+      <h1
+        class="typography sizeH3 colorInherit"
+      >
+        New curriculum updates are available for one or more of your courses.
+      </h1>
+      <p
+        class="typography sizeBody colorInherit"
+      >
+        Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates, click into the course.
+      </p>
+    </div>
+  </div>
+</article>
+`;
+
+exports[`<Banner /> AlertDismissable story renders snapshot 1`] = `
+<article
+  class="bannerDialog horizontal dismissable colorAlert padding2x"
+>
+  <button
+    class="dismiss button variantLink colorAlert"
+    type="button"
+  >
+    ​
+    <svg
+      class="svgIcon"
+      fill="currentColor"
+      height="28px"
+      style="color: currentColor;"
+      viewBox="0 0 24 24"
+      width="28px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      close
+      <path
+        d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+      />
+    </svg>
+  </button>
+  <div
+    class="icon iconAlert"
+  >
+    <svg
+      class="svgIcon"
+      fill="currentColor"
+      style="color: currentColor;"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      alert
+      <circle
+        cx="15.5"
+        cy="9.5"
+        r="1.5"
+      />
+      <circle
+        cx="8.5"
+        cy="9.5"
+        r="1.5"
+      />
+      <path
+        d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm0-6c-2.33 0-4.32 1.45-5.12 3.5h1.67c.69-1.19 1.97-2 3.45-2s2.75.81 3.45 2h1.67c-.8-2.05-2.79-3.5-5.12-3.5z"
+      />
+    </svg>
+  </div>
+  <div
+    class="textAndAction horizontal"
+  >
+    <div
+      class="textContent horizontal"
+    >
+      <h1
+        class="typography sizeH3 colorInherit"
+      >
+        New curriculum updates are available for one or more of your courses.
+      </h1>
+      <p
+        class="typography sizeBody colorInherit"
+      >
+        Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates, click into the course.
+      </p>
+    </div>
+  </div>
+</article>
+`;
+
+exports[`<Banner /> Brand story renders snapshot 1`] = `
+<article
+  class="bannerDialog horizontal colorBrand padding2x"
+>
+  <div
+    class="icon iconBrand"
+  >
+    <svg
+      class="svgIcon"
+      fill="currentColor"
+      style="color: currentColor;"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      attention
+      <path
+        d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"
+      />
+    </svg>
+  </div>
+  <div
+    class="textAndAction horizontal"
+  >
+    <div
+      class="textContent horizontal"
+    >
+      <h1
+        class="typography sizeH3 colorInherit"
+      >
+        New curriculum updates are available for one or more of your courses.
+      </h1>
+      <p
+        class="typography sizeBody colorInherit"
+      >
+        Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates, click into the course.
+      </p>
+    </div>
+  </div>
+</article>
+`;
+
+exports[`<Banner /> BrandDismissable story renders snapshot 1`] = `
+<article
+  class="bannerDialog horizontal dismissable colorBrand padding2x"
+>
+  <button
+    class="dismiss button variantLink colorBrand"
+    type="button"
+  >
+    ​
+    <svg
+      class="svgIcon"
+      fill="currentColor"
+      height="28px"
+      style="color: currentColor;"
+      viewBox="0 0 24 24"
+      width="28px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      close
+      <path
+        d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+      />
+    </svg>
+  </button>
+  <div
+    class="icon iconBrand"
+  >
+    <svg
+      class="svgIcon"
+      fill="currentColor"
+      style="color: currentColor;"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      attention
+      <path
+        d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"
+      />
+    </svg>
+  </div>
+  <div
+    class="textAndAction horizontal"
+  >
+    <div
+      class="textContent horizontal"
+    >
+      <h1
+        class="typography sizeH3 colorInherit"
+      >
+        New curriculum updates are available for one or more of your courses.
+      </h1>
+      <p
+        class="typography sizeBody colorInherit"
+      >
+        Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates, click into the course.
+      </p>
+    </div>
+  </div>
+</article>
+`;
+
+exports[`<Banner /> DismissableWithAction story renders snapshot 1`] = `
+<article
+  class="bannerDialog horizontal dismissable colorBrand padding2x"
+>
+  <button
+    class="dismiss button variantLink colorBrand"
+    type="button"
+  >
+    ​
+    <svg
+      class="svgIcon"
+      fill="currentColor"
+      height="28px"
+      style="color: currentColor;"
+      viewBox="0 0 24 24"
+      width="28px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      close
+      <path
+        d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+      />
+    </svg>
+  </button>
+  <div
+    class="icon iconBrand"
+  >
+    <svg
+      class="svgIcon"
+      fill="currentColor"
+      style="color: currentColor;"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      attention
+      <path
+        d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"
+      />
+    </svg>
+  </div>
+  <div
+    class="textAndAction horizontal"
+  >
+    <div
+      class="textContent horizontal"
+    >
+      <h1
+        class="typography sizeH3 colorInherit"
+      >
+        New curriculum updates are available for one or more of your courses.
+      </h1>
+      <p
+        class="typography sizeBody colorInherit"
+      >
+        Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates, click into the course.
+      </p>
+    </div>
+    <div
+      class="action horizontal"
+    >
+      <button
+        class="button sizeMedium variantOutline colorBrand"
+        style="white-space: nowrap;"
+        type="button"
+      >
+        ​
+        See updates
+      </button>
+    </div>
+  </div>
+</article>
+`;
+
+exports[`<Banner /> Elevation0 story renders snapshot 1`] = `
+<article
+  class="bannerDialog horizontal elevation0 colorBrand padding2x"
+>
+  <div
+    class="icon iconBrand"
+  >
+    <svg
+      class="svgIcon"
+      fill="currentColor"
+      style="color: currentColor;"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      attention
+      <path
+        d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"
+      />
+    </svg>
+  </div>
+  <div
+    class="textAndAction horizontal"
+  >
+    <div
+      class="textContent horizontal"
+    >
+      <h1
+        class="typography sizeH3 colorInherit"
+      >
+        New curriculum updates are available for one or more of your courses.
+      </h1>
+      <p
+        class="typography sizeBody colorInherit"
+      >
+        Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates, click into the course.
+      </p>
+    </div>
+  </div>
+</article>
+`;
+
+exports[`<Banner /> LongContent story renders snapshot 1`] = `
+<article
+  class="bannerDialog horizontal colorBrand padding4x"
+>
+  <div
+    class="icon iconBrand"
+  >
+    <svg
+      class="svgIcon"
+      fill="currentColor"
+      style="color: currentColor;"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      attention
+      <path
+        d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"
+      />
+    </svg>
+  </div>
+  <div
+    class="textAndAction horizontal"
+  >
+    <div
+      class="textContent horizontal"
+    >
+      <h1
+        class="typography sizeH3 colorInherit"
+      >
+        New curriculum updates are available for one or more of your courses.
+      </h1>
+      <p
+        class="typography sizeBody colorInherit"
+      >
+        Summit Learning is a research–based approach to education designed to drive student engagement, meaningful learning, and strong student–teacher relationships that prepare students for life beyond the classroom. Created by educators with experience in diverse classrooms, Summit Learning is grounded in decades of research about how children learn. With Summit Learning, students gain mastery of core subjects like math, history, English, and science, while also carefully developing the skills and habits of lifelong learners. The Summit Learning program offers schools customizable curriculum, a range of educational resources and technology tools, professional development for educators, and ongoing coaching and support for schools. The Summit Learning program supports over 80,000 students, 4,000 educators, and nearly 400 schools across the U.S.
+      </p>
+    </div>
+  </div>
+</article>
+`;
+
+exports[`<Banner /> Neutral story renders snapshot 1`] = `
+<article
+  class="bannerDialog horizontal colorNeutral padding2x"
+>
+  <div
+    class="icon iconNeutral"
+  >
+    <svg
+      class="svgIcon"
+      fill="currentColor"
+      style="color: currentColor;"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      notice
+      <path
+        d="M21 6h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1zm-4 6V3c0-.55-.45-1-1-1H3c-.55 0-1 .45-1 1v14l4-4h10c.55 0 1-.45 1-1z"
+      />
+    </svg>
+  </div>
+  <div
+    class="textAndAction horizontal"
+  >
+    <div
+      class="textContent horizontal"
+    >
+      <h1
+        class="typography sizeH3 colorInherit"
+      >
+        New curriculum updates are available for one or more of your courses.
+      </h1>
+      <p
+        class="typography sizeBody colorInherit"
+      >
+        Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates, click into the course.
+      </p>
+    </div>
+  </div>
+</article>
+`;
+
+exports[`<Banner /> NeutralDismissable story renders snapshot 1`] = `
+<article
+  class="bannerDialog horizontal dismissable colorNeutral padding2x"
+>
+  <button
+    class="dismiss button variantLink colorNeutral"
+    type="button"
+  >
+    ​
+    <svg
+      class="svgIcon"
+      fill="currentColor"
+      height="28px"
+      style="color: currentColor;"
+      viewBox="0 0 24 24"
+      width="28px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      close
+      <path
+        d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+      />
+    </svg>
+  </button>
+  <div
+    class="icon iconNeutral"
+  >
+    <svg
+      class="svgIcon"
+      fill="currentColor"
+      style="color: currentColor;"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      notice
+      <path
+        d="M21 6h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1zm-4 6V3c0-.55-.45-1-1-1H3c-.55 0-1 .45-1 1v14l4-4h10c.55 0 1-.45 1-1z"
+      />
+    </svg>
+  </div>
+  <div
+    class="textAndAction horizontal"
+  >
+    <div
+      class="textContent horizontal"
+    >
+      <h1
+        class="typography sizeH3 colorInherit"
+      >
+        New curriculum updates are available for one or more of your courses.
+      </h1>
+      <p
+        class="typography sizeBody colorInherit"
+      >
+        Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates, click into the course.
+      </p>
+    </div>
+  </div>
+</article>
+`;
+
+exports[`<Banner /> NoContent story renders snapshot 1`] = `
+<article
+  class="bannerDialog horizontal colorBrand padding2x"
+>
+  <div
+    class="icon iconBrand"
+  >
+    <svg
+      class="svgIcon"
+      fill="currentColor"
+      style="color: currentColor;"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      attention
+      <path
+        d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"
+      />
+    </svg>
+  </div>
+  <div
+    class="textAndAction horizontal"
+  >
+    <div
+      class="textContent horizontal"
+    >
+      <h1
+        class="typography sizeH3 colorInherit"
+      >
+        New curriculum updates are available for one or more of your courses.
+      </h1>
+    </div>
+  </div>
+</article>
+`;
+
+exports[`<Banner /> NoHeadingLong story renders snapshot 1`] = `
+<article
+  class="bannerDialog horizontal colorBrand padding3x"
+>
+  <div
+    class="icon iconBrand"
+  >
+    <svg
+      class="svgIcon"
+      fill="currentColor"
+      style="color: currentColor;"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      attention
+      <path
+        d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"
+      />
+    </svg>
+  </div>
+  <div
+    class="textAndAction horizontal"
+  >
+    <div
+      class="textContent horizontal"
+    >
+      <p
+        class="typography sizeBody colorInherit"
+      >
+        Summit Learning is a research–based approach to education designed to drive student engagement, meaningful learning, and strong student–teacher relationships that prepare students for life beyond the classroom. Created by educators with experience in diverse classrooms, Summit Learning is grounded in decades of research about how children learn. With Summit Learning, students gain mastery of core subjects like math, history, English, and science, while also carefully developing the skills and habits of lifelong learners. The Summit Learning program offers schools customizable curriculum, a range of educational resources and technology tools, professional development for educators, and ongoing coaching and support for schools. The Summit Learning program supports over 80,000 students, 4,000 educators, and nearly 400 schools across the U.S.
+      </p>
+    </div>
+  </div>
+</article>
+`;
+
+exports[`<Banner /> NoHeadingShort story renders snapshot 1`] = `
+<article
+  class="bannerDialog horizontal colorBrand padding2x"
+>
+  <div
+    class="icon iconBrand"
+  >
+    <svg
+      class="svgIcon"
+      fill="currentColor"
+      style="color: currentColor;"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      attention
+      <path
+        d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"
+      />
+    </svg>
+  </div>
+  <div
+    class="textAndAction horizontal"
+  >
+    <div
+      class="textContent horizontal"
+    >
+      <p
+        class="typography sizeBody colorInherit"
+      >
+        Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates, click into the course.
+      </p>
+    </div>
+  </div>
+</article>
+`;
+
+exports[`<Banner /> Success story renders snapshot 1`] = `
+<article
+  class="bannerDialog horizontal colorSuccess padding2x"
+>
+  <div
+    class="icon iconSuccess"
+  >
+    <svg
+      class="svgIcon"
+      fill="currentColor"
+      style="color: currentColor;"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      success
+      <path
+        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+      />
+    </svg>
+  </div>
+  <div
+    class="textAndAction horizontal"
+  >
+    <div
+      class="textContent horizontal"
+    >
+      <h1
+        class="typography sizeH3 colorInherit"
+      >
+        New curriculum updates are available for one or more of your courses.
+      </h1>
+      <p
+        class="typography sizeBody colorInherit"
+      >
+        Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates, click into the course.
+      </p>
+    </div>
+  </div>
+</article>
+`;
+
+exports[`<Banner /> SuccessDismissable story renders snapshot 1`] = `
+<article
+  class="bannerDialog horizontal dismissable colorSuccess padding2x"
+>
+  <button
+    class="dismiss button variantLink colorSuccess"
+    type="button"
+  >
+    ​
+    <svg
+      class="svgIcon"
+      fill="currentColor"
+      height="28px"
+      style="color: currentColor;"
+      viewBox="0 0 24 24"
+      width="28px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      close
+      <path
+        d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+      />
+    </svg>
+  </button>
+  <div
+    class="icon iconSuccess"
+  >
+    <svg
+      class="svgIcon"
+      fill="currentColor"
+      style="color: currentColor;"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      success
+      <path
+        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+      />
+    </svg>
+  </div>
+  <div
+    class="textAndAction horizontal"
+  >
+    <div
+      class="textContent horizontal"
+    >
+      <h1
+        class="typography sizeH3 colorInherit"
+      >
+        New curriculum updates are available for one or more of your courses.
+      </h1>
+      <p
+        class="typography sizeBody colorInherit"
+      >
+        Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates, click into the course.
+      </p>
+    </div>
+  </div>
+</article>
+`;
+
+exports[`<Banner /> Vertical story renders snapshot 1`] = `
+<article
+  class="bannerDialog colorBrand padding2x"
+>
+  <div
+    class="icon iconBrand"
+  >
+    <svg
+      class="svgIcon"
+      fill="currentColor"
+      style="color: currentColor;"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      attention
+      <path
+        d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"
+      />
+    </svg>
+  </div>
+  <div
+    class="textAndAction"
+  >
+    <div
+      class="textContent"
+    >
+      <h1
+        class="typography sizeH3 colorInherit"
+      >
+        New curriculum updates are available for one or more of your courses.
+      </h1>
+      <p
+        class="typography sizeBody colorInherit"
+      >
+        Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates, click into the course.
+      </p>
+    </div>
+  </div>
+</article>
+`;
+
+exports[`<Banner /> VerticalDismissable story renders snapshot 1`] = `
+<article
+  class="bannerDialog dismissable colorBrand padding2x"
+>
+  <button
+    class="dismiss button variantLink colorBrand"
+    type="button"
+  >
+    ​
+    <svg
+      class="svgIcon"
+      fill="currentColor"
+      height="28px"
+      style="color: currentColor;"
+      viewBox="0 0 24 24"
+      width="28px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      close
+      <path
+        d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+      />
+    </svg>
+  </button>
+  <div
+    class="icon iconBrand"
+  >
+    <svg
+      class="svgIcon"
+      fill="currentColor"
+      style="color: currentColor;"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      attention
+      <path
+        d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"
+      />
+    </svg>
+  </div>
+  <div
+    class="textAndAction"
+  >
+    <div
+      class="textContent"
+    >
+      <h1
+        class="typography sizeH3 colorInherit"
+      >
+        New curriculum updates are available for one or more of your courses.
+      </h1>
+      <p
+        class="typography sizeBody colorInherit"
+      >
+        Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates, click into the course.
+      </p>
+    </div>
+  </div>
+</article>
+`;
+
+exports[`<Banner /> VerticalDismissableWithAction story renders snapshot 1`] = `
+<article
+  class="bannerDialog dismissable colorBrand padding2x"
+>
+  <button
+    class="dismiss button variantLink colorBrand"
+    type="button"
+  >
+    ​
+    <svg
+      class="svgIcon"
+      fill="currentColor"
+      height="28px"
+      style="color: currentColor;"
+      viewBox="0 0 24 24"
+      width="28px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      close
+      <path
+        d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+      />
+    </svg>
+  </button>
+  <div
+    class="icon iconBrand"
+  >
+    <svg
+      class="svgIcon"
+      fill="currentColor"
+      style="color: currentColor;"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      attention
+      <path
+        d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"
+      />
+    </svg>
+  </div>
+  <div
+    class="textAndAction"
+  >
+    <div
+      class="textContent"
+    >
+      <h1
+        class="typography sizeH3 colorInherit"
+      >
+        New curriculum updates are available for one or more of your courses.
+      </h1>
+      <p
+        class="typography sizeBody colorInherit"
+      >
+        Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates, click into the course.
+      </p>
+    </div>
+    <div
+      class="action"
+    >
+      <button
+        class="button sizeMedium variantOutline colorBrand"
+        style="white-space: nowrap;"
+        type="button"
+      >
+        ​
+        See updates
+      </button>
+    </div>
+  </div>
+</article>
+`;
+
+exports[`<Banner /> VerticalElevation0 story renders snapshot 1`] = `
+<article
+  class="bannerDialog elevation0 colorBrand padding2x"
+>
+  <div
+    class="icon iconBrand"
+  >
+    <svg
+      class="svgIcon"
+      fill="currentColor"
+      style="color: currentColor;"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      attention
+      <path
+        d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"
+      />
+    </svg>
+  </div>
+  <div
+    class="textAndAction"
+  >
+    <div
+      class="textContent"
+    >
+      <h1
+        class="typography sizeH3 colorInherit"
+      >
+        New curriculum updates are available for one or more of your courses.
+      </h1>
+      <p
+        class="typography sizeBody colorInherit"
+      >
+        Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates, click into the course.
+      </p>
+    </div>
+  </div>
+</article>
+`;
+
+exports[`<Banner /> VerticalWithAction story renders snapshot 1`] = `
+<article
+  class="bannerDialog colorBrand padding2x"
+>
+  <div
+    class="icon iconBrand"
+  >
+    <svg
+      class="svgIcon"
+      fill="currentColor"
+      style="color: currentColor;"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      attention
+      <path
+        d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"
+      />
+    </svg>
+  </div>
+  <div
+    class="textAndAction"
+  >
+    <div
+      class="textContent"
+    >
+      <h1
+        class="typography sizeH3 colorInherit"
+      >
+        New curriculum updates are available for one or more of your courses.
+      </h1>
+      <p
+        class="typography sizeBody colorInherit"
+      >
+        Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates, click into the course.
+      </p>
+    </div>
+    <div
+      class="action"
+    >
+      <button
+        class="button sizeMedium variantOutline colorBrand"
+        style="white-space: nowrap;"
+        type="button"
+      >
+        ​
+        See updates
+      </button>
+    </div>
+  </div>
+</article>
+`;
+
+exports[`<Banner /> Warning story renders snapshot 1`] = `
+<article
+  class="bannerDialog horizontal colorWarning padding2x"
+>
+  <div
+    class="icon iconWarning"
+  >
+    <svg
+      class="svgIcon"
+      fill="currentColor"
+      style="color: currentColor;"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      warning
+      <path
+        d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"
+      />
+    </svg>
+  </div>
+  <div
+    class="textAndAction horizontal"
+  >
+    <div
+      class="textContent horizontal"
+    >
+      <h1
+        class="typography sizeH3 colorInherit"
+      >
+        New curriculum updates are available for one or more of your courses.
+      </h1>
+      <p
+        class="typography sizeBody colorInherit"
+      >
+        Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates, click into the course.
+      </p>
+    </div>
+  </div>
+</article>
+`;
+
+exports[`<Banner /> WarningDismissable story renders snapshot 1`] = `
+<article
+  class="bannerDialog horizontal dismissable colorWarning padding2x"
+>
+  <button
+    class="dismiss button variantLink colorWarning"
+    type="button"
+  >
+    ​
+    <svg
+      class="svgIcon"
+      fill="currentColor"
+      height="28px"
+      style="color: currentColor;"
+      viewBox="0 0 24 24"
+      width="28px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      close
+      <path
+        d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+      />
+    </svg>
+  </button>
+  <div
+    class="icon iconWarning"
+  >
+    <svg
+      class="svgIcon"
+      fill="currentColor"
+      style="color: currentColor;"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      warning
+      <path
+        d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"
+      />
+    </svg>
+  </div>
+  <div
+    class="textAndAction horizontal"
+  >
+    <div
+      class="textContent horizontal"
+    >
+      <h1
+        class="typography sizeH3 colorInherit"
+      >
+        New curriculum updates are available for one or more of your courses.
+      </h1>
+      <p
+        class="typography sizeBody colorInherit"
+      >
+        Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates, click into the course.
+      </p>
+    </div>
+  </div>
+</article>
+`;
+
+exports[`<Banner /> WithAction story renders snapshot 1`] = `
+<article
+  class="bannerDialog horizontal colorBrand padding2x"
+>
+  <div
+    class="icon iconBrand"
+  >
+    <svg
+      class="svgIcon"
+      fill="currentColor"
+      style="color: currentColor;"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      attention
+      <path
+        d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"
+      />
+    </svg>
+  </div>
+  <div
+    class="textAndAction horizontal"
+  >
+    <div
+      class="textContent horizontal"
+    >
+      <h1
+        class="typography sizeH3 colorInherit"
+      >
+        New curriculum updates are available for one or more of your courses.
+      </h1>
+      <p
+        class="typography sizeBody colorInherit"
+      >
+        Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates, click into the course.
+      </p>
+    </div>
+    <div
+      class="action horizontal"
+    >
+      <button
+        class="button sizeMedium variantOutline colorBrand"
+        style="white-space: nowrap;"
+        type="button"
+      >
+        ​
+        See updates
+      </button>
+    </div>
+  </div>
+</article>
+`;

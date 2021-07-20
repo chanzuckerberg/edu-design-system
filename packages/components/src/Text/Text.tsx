@@ -10,7 +10,7 @@ type Props = {
    */
   as?: TextElement;
   children: TypographyProps<TextElement>["children"];
-  className: TypographyProps<TextElement>["className"];
+  className?: TypographyProps<TextElement>["className"];
   color?: TypographyProps<TextElement>["color"];
   size: TypographyProps<TextElement>["size"];
   weight?: TypographyProps<TextElement>["weight"];
