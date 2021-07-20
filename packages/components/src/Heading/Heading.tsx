@@ -2,7 +2,7 @@ import React, { forwardRef } from "react";
 
 import Typography, { TypographyProps } from "../common/typography";
 
-type HeadingElement = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+export type HeadingElement = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 
 type Props = {
   /**
@@ -14,7 +14,7 @@ type Props = {
    */
   as?: HeadingElement;
   children: TypographyProps<HeadingElement>["children"];
-  className: TypographyProps<HeadingElement>["className"];
+  className?: TypographyProps<HeadingElement>["className"];
   color?: TypographyProps<HeadingElement>["color"];
   size: TypographyProps<HeadingElement>["size"];
   weight?: TypographyProps<HeadingElement>["weight"];
