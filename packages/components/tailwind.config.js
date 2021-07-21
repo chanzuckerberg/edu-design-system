@@ -50,6 +50,9 @@ module.exports = {
     },
     extend: {
       lineHeight: staticTokens.legacy.size["line-height"],
+      maxWidth: {
+        100: "25rem",
+      },
       padding: {
         18: "4.5rem",
       },
@@ -60,9 +63,16 @@ module.exports = {
         2: "0px 0px 0px 1px var(--eds-color-neutral-200), 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -2px rgba(0, 0, 0, 0.05)",
         3: "0px 0px 0px 1px var(--eds-color-neutral-200), 0px 16px 20px -5px rgba(0, 0, 0, 0.1), 0px 10px 10px -5px rgba(0, 0, 0, 0.04)",
       },
+      transitionTimingFunction: {
+        // Used for Toast animations, referenced from
+        //https://github.com/timolins/react-hot-toast/blob/main/src/components/toast-bar.tsx
+        "slide-in": "cubic-bezier(0.21, 1.02, 0.73, 1)",
+        "slide-out": "cubic-bezier(0.06, 0.71, 0.55, 1)",
+      },
     },
   },
   variants: {
+    animation: ["motion-safe", "motion-reduce"],
     transitionProperty: ["motion-safe", "motion-reduce"],
   },
   plugins: [],
