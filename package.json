@@ -86,5 +86,8 @@
     "*.css": [
       "stylelint --fix"
     ]
+  },
+  "dependencies": {
+    "utility-types": "^3.10.0"
   }
 }

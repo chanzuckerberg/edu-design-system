@@ -1,5 +1,5 @@
-import { $Diff } from "utility-types";
 import * as React from "react";
+import { $Diff } from "utility-types";
 import SvgIcon from "../SvgIcon";
 import type { SvgIconProps } from "../SvgIcon";
 
@@ -19,7 +19,6 @@ export default function createSvgIcon(
 ): React$AbstractComponent<IconProps, React.ReactElement<"svg">> {
   const Component = (props: IconProps, ref) => {
     return (
-      // $FlowFixMe the props for SvgIcon will reconcile to either img or presentation
       <SvgIcon ref={ref} {...props}>
         {path}
       </SvgIcon>
