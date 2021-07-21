@@ -1,0 +1,44 @@
+.toastDialog {
+  @apply w-full max-w-100 pl-4 pr-2 grid gap-2 items-center;
+  @apply border border-l-4 rounded shadow-1;
+
+  grid-template-columns: 1fr min-content;
+  --svg-icon-size-default: 1.25rem;
+}
+
+.content {
+  @apply py-4 grid gap-4;
+
+  grid-template-columns: min-content 1fr;
+}
+
+/* TODO: consolidate dismiss button styles with the Banner styles */
+.dismiss {
+  @apply w-12 h-12 justify-center rounded-full;
+
+  /* TODO: test motion-safe with new Clickable motion-reduce change */
+  @apply hover:text-white motion-safe:transition ease-out;
+}
+
+.dismiss:hover {
+  background-color: var(--dismiss-hover-color);
+}
+
+/* TODO: consolidate color styles with the Banner styles */
+.colorSuccess {
+  @apply text-success-700 bg-success-100;
+
+  /* Left border is thicker and a darker color than the surrounding border */
+  border-color: var(--eds-color-success-200);
+  border-left-color: var(--eds-color-success-500);
+  --dismiss-hover-color: var(--eds-color-success-600);
+}
+
+.colorAlert {
+  @apply text-alert-700 bg-alert-100;
+
+  /* Left border is thicker and a darker color than the surrounding border */
+  border-color: var(--eds-color-alert-200);
+  border-left-color: var(--eds-color-alert-500);
+  --dismiss-hover-color: var(--eds-color-alert-600);
+}

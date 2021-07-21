@@ -1,3 +1,3 @@
 // @flow
 
-export { default } from "./Banner";
+export { default, BannerIcon } from "./Banner";
