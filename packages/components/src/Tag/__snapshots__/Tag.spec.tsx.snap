@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tag /> ColorVariants story renders snapshot 1`] = `
+<div
+  class="tagList"
+>
+  <span
+    class="tag colorNeutral typography sizeSm colorNeutral weightBold spacingNone"
+  >
+    ​
+    <span
+      class="body"
+    >
+      Tag text
+    </span>
+  </span>
+  <span
+    class="tag colorWarning typography sizeSm colorWarning weightBold spacingNone"
+  >
+    ​
+    <span
+      class="body"
+    >
+      Tag text
+    </span>
+  </span>
+  <span
+    class="tag colorBrand typography sizeSm colorBrand weightBold spacingNone"
+  >
+    ​
+    <span
+      class="body"
+    >
+      Tag text
+    </span>
+  </span>
+  <span
+    class="tag colorAlert typography sizeSm colorAlert weightBold spacingNone"
+  >
+    ​
+    <span
+      class="body"
+    >
+      Tag text
+    </span>
+  </span>
+  <span
+    class="tag colorGradingYellow typography sizeSm weightBold spacingNone"
+  >
+    ​
+    <span
+      class="body"
+    >
+      Tag text
+    </span>
+  </span>
+  <span
+    class="tag colorSuccess typography sizeSm colorSuccess weightBold spacingNone"
+  >
+    ​
+    <span
+      class="body"
+    >
+      Tag text
+    </span>
+  </span>
+</div>
+`;
+
+exports[`<Tag /> Default story renders snapshot 1`] = `
+<span
+  class="tag colorWarning typography sizeSm colorWarning weightBold spacingNone"
+>
+  ​
+  <span
+    class="body"
+  >
+    Tag text
+  </span>
+</span>
+`;
+
+exports[`<Tag /> WithIcon story renders snapshot 1`] = `
+<span
+  class="tag colorWarning typography sizeSm colorWarning weightBold spacingNone"
+>
+  <svg
+    class="svgIcon"
+    fill="currentColor"
+    style="color: currentColor;"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    warning
+    <path
+      d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"
+    />
+  </svg>
+  ​
+  <span
+    class="body"
+  >
+    Tag text
+  </span>
+</span>
+`;
+
+exports[`<Tag /> WithLongTextAndIcon story renders snapshot 1`] = `
+<span
+  class="tag colorWarning typography sizeSm colorWarning weightBold spacingNone"
+>
+  <svg
+    class="svgIcon"
+    fill="currentColor"
+    style="color: currentColor;"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    warning
+    <path
+      d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"
+    />
+  </svg>
+  ​
+  <span
+    class="body"
+  >
+    This tag has a really long text message
+  </span>
+</span>
+`;

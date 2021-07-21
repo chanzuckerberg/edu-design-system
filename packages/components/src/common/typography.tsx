@@ -19,6 +19,7 @@ export type TypographyColor =
   | "alert"
   | "base"
   | "brand"
+  | "gradingYellow"
   | "info"
   | "inherit"
   | "neutral"
