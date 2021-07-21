@@ -1,5 +1,4 @@
 // @flow
-import * as CSS from "csstype";
 import * as React from "react";
 import cx from "classnames";
 import styles from "./SvgIcon.module.css";
@@ -53,14 +52,13 @@ type ImgProps = BaseProps & {
   title: string;
 };
 
-// Just for testing! The props being used should be SvgIconProps, but it's not passing
-// typescript right now.
-type TestProps = BaseProps & {
-  title?: string;
-};
-
 export type SvgIconProps = PresentationProps | ImgProps;
-const SvgIcon = React.forwardRef<SVGElement, TestProps>(
+
+interface SvgStyle extends React.CSSProperties {
+  "--svg-icon-size"?: string;
+}
+
+const SvgIcon = React.forwardRef<SVGElement, SvgIconProps>(
   (
     {
       block = false,
@@ -69,13 +67,11 @@ const SvgIcon = React.forwardRef<SVGElement, TestProps>(
       size,
       className,
       ...rest
-    }: TestProps,
+    }: SvgIconProps,
     ref: any,
   ) => {
-    // custom css variables are not in type CSSProperties, so we use this to
-    // convince typescript our variable is safe
-    const style: CSS.Properties = {
-      ["--svg-icon-size" as any]: size,
+    const style: SvgStyle = {
+      "--svg-icon-size": size,
     };
 
     return (
