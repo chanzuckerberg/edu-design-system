@@ -46,7 +46,7 @@ export default {
 };
 
 type Args = React.ElementProps<typeof SvgIcon> & {
-  icon: $Keys<typeof allIcons>;
+  icon: keyof typeof allIcons;
 };
 
 const Template: Story<Args> = ({ icon, color, ...rest }) => {
