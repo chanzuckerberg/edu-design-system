@@ -7,5 +7,7 @@
   ],
   "css.validate": false,
   "scss.validate": false,
-  "stylelint.enable": true
+  "stylelint.enable": true,
+  "typescript.validate.enable": true,
+  "javascript.validate.enable": true,
 }
