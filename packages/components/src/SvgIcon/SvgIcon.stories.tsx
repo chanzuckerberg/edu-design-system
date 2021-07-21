@@ -1,5 +1,3 @@
-// @flow
-
 import * as React from "react";
 import * as allIcons from "./allIcons";
 import type { Story } from "@storybook/react";
@@ -34,8 +32,7 @@ export default {
       control: {
         type: "select",
         options: [
-          "currentColor",
-          // TODO: replace with fixed exports of js colors from '@chanzuckerberg/eds-tokens'
+          "currentColor", // TODO: replace with fixed exports of js colors from '@chanzuckerberg/eds-tokens'
           ...Object.keys(Tokens).filter((key) => {
             return key.startsWith("LegacyColor") || key.startsWith("EdsColor");
           }),
@@ -62,29 +59,17 @@ const defaultArgs = {
 };
 
 export const Small = Template.bind(null);
-Small.args = {
-  ...defaultArgs,
-  size: "1em",
-};
 
+Small.args = { ...defaultArgs, size: "1em" };
 export const Medium = Template.bind(null);
-Medium.args = {
-  ...defaultArgs,
-  size: "2em",
-};
 
+Medium.args = { ...defaultArgs, size: "2em" };
 export const Large = Template.bind(null);
-Large.args = {
-  ...defaultArgs,
-  size: "4em",
-};
 
+Large.args = { ...defaultArgs, size: "4em" };
 export const FullScreen = Template.bind(null);
-FullScreen.args = {
-  ...defaultArgs,
-  size: "min(100%, 100vh)",
-};
 
+FullScreen.args = { ...defaultArgs, size: "min(100%, 100vh)" };
 FullScreen.parameters = {
   axe: {
     disabledRules: ["scrollable-region-focusable"],
@@ -112,10 +97,8 @@ export const InText = ({ icon, ...rest }: Args) => {
     </Text>
   );
 };
-InText.args = {
-  ...defaultArgs,
-};
 
+InText.args = { ...defaultArgs };
 export const AllIcons = () => {
   return (
     <ul className={styles.allIcons}>

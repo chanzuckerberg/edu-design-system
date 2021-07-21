@@ -1,0 +1,232 @@
+diff --git a/packages/components/src/SvgIcon/CheckCircle.tsx b/packages/components/src/SvgIcon/CheckCircle.tsx
+index 5946576..4379362 100644
+--- a/packages/components/src/SvgIcon/CheckCircle.tsx
++++ b/packages/components/src/SvgIcon/CheckCircle.tsx
+@@ -1,7 +1,5 @@
+-// @flow
+ import * as React from "react";
+ import createSvgIcon from "./utils/createSvgIcon";
+-
+ export default createSvgIcon(
+   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />,
+   "CheckCircle",
+diff --git a/packages/components/src/SvgIcon/Close.tsx b/packages/components/src/SvgIcon/Close.tsx
+index caf9be1..f4bd368 100644
+--- a/packages/components/src/SvgIcon/Close.tsx
++++ b/packages/components/src/SvgIcon/Close.tsx
+@@ -1,7 +1,5 @@
+-// @flow
+ import * as React from "react";
+ import createSvgIcon from "./utils/createSvgIcon";
+-
+ export default createSvgIcon(
+   <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />,
+   "Close",
+diff --git a/packages/components/src/SvgIcon/Forum.tsx b/packages/components/src/SvgIcon/Forum.tsx
+index c6f5e9e..c815092 100644
+--- a/packages/components/src/SvgIcon/Forum.tsx
++++ b/packages/components/src/SvgIcon/Forum.tsx
+@@ -1,7 +1,5 @@
+-// @flow
+ import * as React from "react";
+ import createSvgIcon from "./utils/createSvgIcon";
+-
+ export default createSvgIcon(
+   <path d="M21 6h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1zm-4 6V3c0-.55-.45-1-1-1H3c-.55 0-1 .45-1 1v14l4-4h10c.55 0 1-.45 1-1z" />,
+   "Forum",
+diff --git a/packages/components/src/SvgIcon/Notifications.tsx b/packages/components/src/SvgIcon/Notifications.tsx
+index f31e10f..8fb408b 100644
+--- a/packages/components/src/SvgIcon/Notifications.tsx
++++ b/packages/components/src/SvgIcon/Notifications.tsx
+@@ -1,7 +1,5 @@
+-// @flow
+ import * as React from "react";
+ import createSvgIcon from "./utils/createSvgIcon";
+-
+ export default createSvgIcon(
+   <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z" />,
+   "Notifications",
+diff --git a/packages/components/src/SvgIcon/SentimentVeryDissatisfied.tsx b/packages/components/src/SvgIcon/SentimentVeryDissatisfied.tsx
+index 56cc502..fdbb513 100644
+--- a/packages/components/src/SvgIcon/SentimentVeryDissatisfied.tsx
++++ b/packages/components/src/SvgIcon/SentimentVeryDissatisfied.tsx
+@@ -1,7 +1,5 @@
+-// @flow
+ import * as React from "react";
+ import createSvgIcon from "./utils/createSvgIcon";
+-
+ export default createSvgIcon(
+   <React.Fragment>
+     <circle cx="15.5" cy="9.5" r="1.5" />
+diff --git a/packages/components/src/SvgIcon/SvgIcon.spec.tsx b/packages/components/src/SvgIcon/SvgIcon.spec.tsx
+index 247a748..01e3921 100644
+--- a/packages/components/src/SvgIcon/SvgIcon.spec.tsx
++++ b/packages/components/src/SvgIcon/SvgIcon.spec.tsx
+@@ -1,8 +1,5 @@
+-// @flow
+-
+ import * as SvgIconStoryFile from "./SvgIcon.stories";
+ import { generateSnapshots } from "@chanzuckerberg/story-utils";
+-
+ describe("<SvgIcon />", () => {
+   generateSnapshots(SvgIconStoryFile);
+ });
+diff --git a/packages/components/src/SvgIcon/SvgIcon.stories.tsx b/packages/components/src/SvgIcon/SvgIcon.stories.tsx
+index af87652..b4e3390 100644
+--- a/packages/components/src/SvgIcon/SvgIcon.stories.tsx
++++ b/packages/components/src/SvgIcon/SvgIcon.stories.tsx
+@@ -1,5 +1,3 @@
+-// @flow
+-
+ import * as React from "react";
+ import * as allIcons from "./allIcons";
+ import type { Story } from "@storybook/react";
+@@ -7,11 +5,9 @@ import SvgIcon from "./SvgIcon";
+ import Text from "../Text";
+ import Tokens from "@chanzuckerberg/eds-tokens/json/variables.json";
+ import styles from "./SvgIcon.stories.module.css";
+-
+ export default {
+   title: "SvgIcon - WIP",
+   component: SvgIcon,
+-
+   argTypes: {
+     icon: {
+       control: {
+@@ -34,8 +30,7 @@ export default {
+       control: {
+         type: "select",
+         options: [
+-          "currentColor",
+-          // TODO: replace with fixed exports of js colors from '@chanzuckerberg/eds-tokens'
++          "currentColor", // TODO: replace with fixed exports of js colors from '@chanzuckerberg/eds-tokens'
+           ...Object.keys(Tokens).filter((key) => {
+             return key.startsWith("LegacyColor") || key.startsWith("EdsColor");
+           }),
+@@ -44,9 +39,8 @@ export default {
+     },
+   },
+ };
+-
+ type Args = React.ElementProps<typeof SvgIcon> & {
+-  icon: $Keys<typeof allIcons>;
++  icon: keyof typeof allIcons;
+ };
+ 
+ const Template: Story<Args> = ({ icon, color, ...rest }) => {
+@@ -60,40 +54,21 @@ const defaultArgs = {
+   color: "currentColor",
+   role: "img",
+ };
+-
+ export const Small = Template.bind(null);
+-Small.args = {
+-  ...defaultArgs,
+-  size: "1em",
+-};
+-
++Small.args = { ...defaultArgs, size: "1em" };
+ export const Medium = Template.bind(null);
+-Medium.args = {
+-  ...defaultArgs,
+-  size: "2em",
+-};
+-
++Medium.args = { ...defaultArgs, size: "2em" };
+ export const Large = Template.bind(null);
+-Large.args = {
+-  ...defaultArgs,
+-  size: "4em",
+-};
+-
++Large.args = { ...defaultArgs, size: "4em" };
+ export const FullScreen = Template.bind(null);
+-FullScreen.args = {
+-  ...defaultArgs,
+-  size: "min(100%, 100vh)",
+-};
+-
++FullScreen.args = { ...defaultArgs, size: "min(100%, 100vh)" };
+ FullScreen.parameters = {
+   axe: {
+     disabledRules: ["scrollable-region-focusable"],
+   },
+ };
+-
+ export const InText = ({ icon, ...rest }: Args) => {
+   const Icon = allIcons[icon];
+-
+   return (
+     <Text size="h1">
+       The svg icon defaults to the surrounding text size (
+@@ -112,10 +87,7 @@ export const InText = ({ icon, ...rest }: Args) => {
+     </Text>
+   );
+ };
+-InText.args = {
+-  ...defaultArgs,
+-};
+-
++InText.args = { ...defaultArgs };
+ export const AllIcons = () => {
+   return (
+     <ul className={styles.allIcons}>
+@@ -139,6 +111,7 @@ AllIcons.parameters = {
+   },
+   controls: {
+     hideNoControlsWarning: true,
++
+     /**
+      * TODO: should be able to hide controls using the `include` property in
+      * parameters, but it's not working.
+diff --git a/packages/components/src/SvgIcon/Warning.tsx b/packages/components/src/SvgIcon/Warning.tsx
+index 8e3fbad..e2cf210 100644
+--- a/packages/components/src/SvgIcon/Warning.tsx
++++ b/packages/components/src/SvgIcon/Warning.tsx
+@@ -1,7 +1,5 @@
+-// @flow
+ import * as React from "react";
+ import createSvgIcon from "./utils/createSvgIcon";
+-
+ export default createSvgIcon(
+   <path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z" />,
+   "Warning",
+diff --git a/packages/components/src/SvgIcon/allIcons.ts b/packages/components/src/SvgIcon/allIcons.ts
+index d2d2a94..9aef75a 100644
+--- a/packages/components/src/SvgIcon/allIcons.ts
++++ b/packages/components/src/SvgIcon/allIcons.ts
+@@ -1,4 +1,3 @@
+-// @flow
+ export { default as CheckCircleIcon } from "./CheckCircle";
+ export { default as CloseIcon } from "./Close";
+ export { default as ForumIcon } from "./Forum";
+diff --git a/packages/components/src/SvgIcon/utils/createSvgIcon.tsx b/packages/components/src/SvgIcon/utils/createSvgIcon.tsx
+index 83c9baa..8e93c5d 100644
+--- a/packages/components/src/SvgIcon/utils/createSvgIcon.tsx
++++ b/packages/components/src/SvgIcon/utils/createSvgIcon.tsx
+@@ -1,22 +1,21 @@
+-// @flow
++import { $Diff } from "utility-types";
+ import * as React from "react";
+ import SvgIcon from "../SvgIcon";
+ import type { SvgIconProps } from "../SvgIcon";
+-
+ type IconProps = $Diff<
+   SvgIconProps,
+   {
+     children: any;
+   }
+ >;
+-
+ /**
+  * Generates SVG Icons from paths and fragments.
+  */
++
+ export default function createSvgIcon(
+   path: React.ReactNode,
+   displayName: string,
+-): React$AbstractComponent<IconProps, React.Element<"svg">> {
++): React$AbstractComponent<IconProps, React.ReactElement<"svg">> {
+   const Component = (props: IconProps, ref) => {
+     return (
+       // $FlowFixMe the props for SvgIcon will reconcile to either img or presentation
