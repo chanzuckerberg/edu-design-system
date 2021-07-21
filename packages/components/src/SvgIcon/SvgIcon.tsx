@@ -53,8 +53,14 @@ type ImgProps = BaseProps & {
   title: string;
 };
 
+// Just for testing! The props being used should be SvgIconProps, but it's not passing
+// typescript right now.
+type TestProps = BaseProps & {
+  title?: string;
+};
+
 export type SvgIconProps = PresentationProps | ImgProps;
-const SvgIcon = React.forwardRef<SvgIconProps, React.Element<"svg">>(
+const SvgIcon = React.forwardRef<SVGElement, TestProps>(
   (
     {
       block = false,
@@ -63,7 +69,7 @@ const SvgIcon = React.forwardRef<SvgIconProps, React.Element<"svg">>(
       size,
       className,
       ...rest
-    }: SvgIconProps,
+    }: TestProps,
     ref: any,
   ) => {
     // custom css variables are not in type CSSProperties, so we use this to

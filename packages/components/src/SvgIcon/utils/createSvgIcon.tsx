@@ -16,8 +16,8 @@ type IconProps = $Diff<
 export default function createSvgIcon(
   path: React.ReactNode,
   displayName: string,
-): React$AbstractComponent<IconProps, React.ReactElement<"svg">> {
-  const Component = (props: IconProps, ref) => {
+): React.FC<IconProps> {
+  const Component = (props: IconProps, ref: any) => {
     return (
       <SvgIcon ref={ref} {...props}>
         {path}
