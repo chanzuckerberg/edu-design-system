@@ -71,7 +71,6 @@ function SVGIcon(props: SVGIconProps) {
     children,
     className,
     color = "currentColor",
-    fillRule = "inherit",
     role,
     size,
     viewBox = "0 0 24 24",
