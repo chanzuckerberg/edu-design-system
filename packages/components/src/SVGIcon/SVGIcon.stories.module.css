@@ -1,0 +1,9 @@
+.allIcons {
+  @apply grid grid-flow-row gap-4 justify-center;
+
+  grid-template-columns: repeat(auto-fill, 12rem);
+}
+
+.iconCell {
+  @apply flex flex-col items-center;
+}
