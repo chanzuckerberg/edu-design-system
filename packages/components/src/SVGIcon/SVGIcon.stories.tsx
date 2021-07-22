@@ -55,8 +55,7 @@ const Template: Story<Args> = ({ icon, color, ...rest }) => {
 
 const defaultArgs = {
   icon: Object.keys(allIcons)[0],
-  color: "currentColor",
-  role: "img",
+  role: "presentation",
 };
 
 export const Small = Template.bind(null);
