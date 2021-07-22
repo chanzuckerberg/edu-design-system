@@ -1,4 +1,4 @@
-// Icons re-exported from here will show up in the "Icons" story in Storybook.
+// Icons re-exported from here will show up in the "AllIcons" story in Storybook.
 
 export { default as Close } from "./Close";
 export { default as CheckCircle } from "./CheckCircle";
