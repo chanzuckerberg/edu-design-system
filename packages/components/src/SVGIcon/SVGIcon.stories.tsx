@@ -88,6 +88,12 @@ FullScreen.parameters = {
   },
 };
 
+export const CustomColor = Template.bind(null);
+CustomColor.args = {
+  ...defaultArgs,
+  color: "EdsColorBrand400",
+};
+
 export const InText = ({ icon, ...rest }: Args) => {
   const Icon = allIcons[icon];
 
