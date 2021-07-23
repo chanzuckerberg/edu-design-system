@@ -98,7 +98,7 @@ function SVGIcon(props: SVGIconProps) {
   if (role === "img") {
     return (
       <svg {...svgCommonProps}>
-        {props.title}
+        <title>{props.title}</title>
         {children}
       </svg>
     );
