@@ -2,16 +2,18 @@
 
 import * as React from "react";
 import Text from "../Text";
-import { TypographyColor } from "../common/typography";
 import cx from "classnames";
 import styles from "./Tag.module.css";
 
-export type Color = Omit<
-  TypographyColor,
-  "white" | "base" | "info" | "inherit"
->;
+export type Color =
+  | "neutral"
+  | "alert"
+  | "success"
+  | "warning"
+  | "gradingYellow"
+  | "brand";
 
-export const stylesByColor: { [K in Color]: string } = {
+export const stylesByColor = {
   neutral: styles.colorNeutral,
   warning: styles.colorWarning,
   brand: styles.colorBrand,
