@@ -80,6 +80,73 @@ exports[`<Tag /> Default story renders snapshot 1`] = `
 </span>
 `;
 
+exports[`<Tag /> OutlineVariants story renders snapshot 1`] = `
+<div
+  class="tagList"
+>
+  <span
+    class="tag colorNeutral outline typography sizeSm colorNeutral weightBold spacingNone"
+  >
+    ​
+    <span
+      class="body"
+    >
+      Tag text
+    </span>
+  </span>
+  <span
+    class="tag colorWarning outline typography sizeSm colorWarning weightBold spacingNone"
+  >
+    ​
+    <span
+      class="body"
+    >
+      Tag text
+    </span>
+  </span>
+  <span
+    class="tag colorBrand outline typography sizeSm colorBrand weightBold spacingNone"
+  >
+    ​
+    <span
+      class="body"
+    >
+      Tag text
+    </span>
+  </span>
+  <span
+    class="tag colorAlert outline typography sizeSm colorAlert weightBold spacingNone"
+  >
+    ​
+    <span
+      class="body"
+    >
+      Tag text
+    </span>
+  </span>
+  <span
+    class="tag colorGradingYellow outline typography sizeSm weightBold spacingNone"
+  >
+    ​
+    <span
+      class="body"
+    >
+      Tag text
+    </span>
+  </span>
+  <span
+    class="tag colorSuccess outline typography sizeSm colorSuccess weightBold spacingNone"
+  >
+    ​
+    <span
+      class="body"
+    >
+      Tag text
+    </span>
+  </span>
+</div>
+`;
+
 exports[`<Tag /> WithIcon story renders snapshot 1`] = `
 <span
   class="tag colorWarning typography sizeSm colorWarning weightBold spacingNone"
