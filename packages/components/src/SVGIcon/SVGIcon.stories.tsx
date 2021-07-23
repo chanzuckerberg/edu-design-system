@@ -58,6 +58,36 @@ const defaultArgs = {
   role: "presentation",
 };
 
+export const icon1 = Template.bind(null);
+icon1.args = {
+  ...defaultArgs,
+  icon: Object.keys(allIcons)[1],
+};
+
+export const icon2 = Template.bind(null);
+icon2.args = {
+  ...defaultArgs,
+  icon: Object.keys(allIcons)[2],
+};
+
+export const icon3 = Template.bind(null);
+icon3.args = {
+  ...defaultArgs,
+  icon: Object.keys(allIcons)[3],
+};
+
+export const icon4 = Template.bind(null);
+icon4.args = {
+  ...defaultArgs,
+  icon: Object.keys(allIcons)[4],
+};
+
+export const icon5 = Template.bind(null);
+icon5.args = {
+  ...defaultArgs,
+  icon: Object.keys(allIcons)[5],
+};
+
 export const Small = Template.bind(null);
 Small.args = {
   ...defaultArgs,
