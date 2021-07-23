@@ -68,27 +68,10 @@ Alert.args = {
   color: "alert",
 };
 
-export const LongContent = Template.bind(null);
-LongContent.args = {
-  ...dialogArgs,
-  content:
-    "Summit Learning is a research–based approach to education designed to drive student engagement, meaningful learning, and strong student–teacher relationships that prepare students for life beyond the classroom. Created by educators with experience in diverse classrooms, Summit Learning is grounded in decades of research about how children learn. With Summit Learning, students gain mastery of core subjects like math, history, English, and science, while also carefully developing the skills and habits of lifelong learners. The Summit Learning program offers schools customizable curriculum, a range of educational resources and technology tools, professional development for educators, and ongoing coaching and support for schools. The Summit Learning program supports over 80,000 students, 4,000 educators, and nearly 400 schools across the U.S.",
-  padding: "4x",
-};
-
 export const NoHeadingShort = Template.bind(null);
 NoHeadingShort.args = {
   ...dialogArgs,
   heading: null,
-};
-
-export const NoHeadingLong = Template.bind(null);
-NoHeadingLong.args = {
-  ...dialogArgs,
-  heading: null,
-  content:
-    "Summit Learning is a research–based approach to education designed to drive student engagement, meaningful learning, and strong student–teacher relationships that prepare students for life beyond the classroom. Created by educators with experience in diverse classrooms, Summit Learning is grounded in decades of research about how children learn. With Summit Learning, students gain mastery of core subjects like math, history, English, and science, while also carefully developing the skills and habits of lifelong learners. The Summit Learning program offers schools customizable curriculum, a range of educational resources and technology tools, professional development for educators, and ongoing coaching and support for schools. The Summit Learning program supports over 80,000 students, 4,000 educators, and nearly 400 schools across the U.S.",
-  padding: "3x",
 };
 
 export const NoContent = Template.bind(null);

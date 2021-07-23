@@ -1,5 +1,5 @@
 .bannerDialog {
-  @apply w-full rounded border shadow-1;
+  @apply w-full p-8 rounded border shadow-1;
   @apply relative;
   @apply grid gap-4;
 
@@ -28,18 +28,6 @@
   @apply justify-self-center self-center;
 }
 
-.padding2x {
-  @apply p-8;
-}
-
-.padding3x {
-  @apply p-9;
-}
-
-.padding4x {
-  @apply p-10;
-}
-
 .dismiss {
   /* TODO: motion-safe does not seem to be stopping the animation when
      the user has the reduce motion accessibility setting on */
@@ -57,7 +45,7 @@
   .bannerDialog.horizontal {
     grid-template-columns: min-content 1fr;
 
-    @apply text-left;
+    @apply text-left p-4;
 
     /* Left border is thicker and a darker color than the surrounding border on desktop */
     @apply border border-l-4;
@@ -81,19 +69,6 @@
     @apply self-start;
   }
 
-  .padding2x.horizontal {
-    @apply p-4;
-  }
-
-  .padding3x.horizontal {
-    @apply p-6;
-  }
-
-  .padding4x.horizontal {
-    @apply p-8;
-  }
-
-  /* Must be below the padding variants */
   .dismissable.horizontal {
     @apply pr-18;
   }

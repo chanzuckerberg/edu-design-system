@@ -2,7 +2,7 @@
 
 exports[`<Banner /> Alert story renders snapshot 1`] = `
 <article
-  class="bannerDialog horizontal colorAlert padding2x"
+  class="bannerDialog horizontal colorAlert"
 >
   <div
     class="icon iconAlert"
@@ -55,7 +55,7 @@ exports[`<Banner /> Alert story renders snapshot 1`] = `
 
 exports[`<Banner /> AlertDismissable story renders snapshot 1`] = `
 <article
-  class="bannerDialog horizontal dismissable colorAlert padding2x"
+  class="bannerDialog horizontal dismissable colorAlert"
 >
   <button
     class="dismiss button variantLink colorAlert"
@@ -130,7 +130,7 @@ exports[`<Banner /> AlertDismissable story renders snapshot 1`] = `
 
 exports[`<Banner /> Brand story renders snapshot 1`] = `
 <article
-  class="bannerDialog horizontal colorBrand padding2x"
+  class="bannerDialog horizontal colorBrand"
 >
   <div
     class="icon iconBrand"
@@ -173,7 +173,7 @@ exports[`<Banner /> Brand story renders snapshot 1`] = `
 
 exports[`<Banner /> BrandDismissable story renders snapshot 1`] = `
 <article
-  class="bannerDialog horizontal dismissable colorBrand padding2x"
+  class="bannerDialog horizontal dismissable colorBrand"
 >
   <button
     class="dismiss button variantLink colorBrand"
@@ -238,7 +238,7 @@ exports[`<Banner /> BrandDismissable story renders snapshot 1`] = `
 
 exports[`<Banner /> DismissableWithAction story renders snapshot 1`] = `
 <article
-  class="bannerDialog horizontal dismissable colorBrand padding2x"
+  class="bannerDialog horizontal dismissable colorBrand"
 >
   <button
     class="dismiss button variantLink colorBrand"
@@ -315,7 +315,7 @@ exports[`<Banner /> DismissableWithAction story renders snapshot 1`] = `
 
 exports[`<Banner /> Elevation0 story renders snapshot 1`] = `
 <article
-  class="bannerDialog horizontal elevation0 colorBrand padding2x"
+  class="bannerDialog horizontal elevation0 colorBrand"
 >
   <div
     class="icon iconBrand"
@@ -356,52 +356,9 @@ exports[`<Banner /> Elevation0 story renders snapshot 1`] = `
 </article>
 `;
 
-exports[`<Banner /> LongContent story renders snapshot 1`] = `
-<article
-  class="bannerDialog horizontal colorBrand padding4x"
->
-  <div
-    class="icon iconBrand"
-  >
-    <svg
-      class="svgIcon"
-      fill="currentColor"
-      role="img"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <title>
-        attention
-      </title>
-      <path
-        d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"
-      />
-    </svg>
-  </div>
-  <div
-    class="textAndAction horizontal"
-  >
-    <div
-      class="textContent horizontal"
-    >
-      <h1
-        class="typography sizeH3 colorInherit"
-      >
-        New curriculum updates are available for one or more of your courses.
-      </h1>
-      <p
-        class="typography sizeBody colorInherit"
-      >
-        Summit Learning is a research–based approach to education designed to drive student engagement, meaningful learning, and strong student–teacher relationships that prepare students for life beyond the classroom. Created by educators with experience in diverse classrooms, Summit Learning is grounded in decades of research about how children learn. With Summit Learning, students gain mastery of core subjects like math, history, English, and science, while also carefully developing the skills and habits of lifelong learners. The Summit Learning program offers schools customizable curriculum, a range of educational resources and technology tools, professional development for educators, and ongoing coaching and support for schools. The Summit Learning program supports over 80,000 students, 4,000 educators, and nearly 400 schools across the U.S.
-      </p>
-    </div>
-  </div>
-</article>
-`;
-
 exports[`<Banner /> Neutral story renders snapshot 1`] = `
 <article
-  class="bannerDialog horizontal colorNeutral padding2x"
+  class="bannerDialog horizontal colorNeutral"
 >
   <div
     class="icon iconNeutral"
@@ -444,7 +401,7 @@ exports[`<Banner /> Neutral story renders snapshot 1`] = `
 
 exports[`<Banner /> NeutralDismissable story renders snapshot 1`] = `
 <article
-  class="bannerDialog horizontal dismissable colorNeutral padding2x"
+  class="bannerDialog horizontal dismissable colorNeutral"
 >
   <button
     class="dismiss button variantLink colorNeutral"
@@ -509,7 +466,7 @@ exports[`<Banner /> NeutralDismissable story renders snapshot 1`] = `
 
 exports[`<Banner /> NoContent story renders snapshot 1`] = `
 <article
-  class="bannerDialog horizontal colorBrand padding2x"
+  class="bannerDialog horizontal colorBrand"
 >
   <div
     class="icon iconBrand"
@@ -545,47 +502,9 @@ exports[`<Banner /> NoContent story renders snapshot 1`] = `
 </article>
 `;
 
-exports[`<Banner /> NoHeadingLong story renders snapshot 1`] = `
-<article
-  class="bannerDialog horizontal colorBrand padding3x"
->
-  <div
-    class="icon iconBrand"
-  >
-    <svg
-      class="svgIcon"
-      fill="currentColor"
-      role="img"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <title>
-        attention
-      </title>
-      <path
-        d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"
-      />
-    </svg>
-  </div>
-  <div
-    class="textAndAction horizontal"
-  >
-    <div
-      class="textContent horizontal"
-    >
-      <p
-        class="typography sizeBody colorInherit"
-      >
-        Summit Learning is a research–based approach to education designed to drive student engagement, meaningful learning, and strong student–teacher relationships that prepare students for life beyond the classroom. Created by educators with experience in diverse classrooms, Summit Learning is grounded in decades of research about how children learn. With Summit Learning, students gain mastery of core subjects like math, history, English, and science, while also carefully developing the skills and habits of lifelong learners. The Summit Learning program offers schools customizable curriculum, a range of educational resources and technology tools, professional development for educators, and ongoing coaching and support for schools. The Summit Learning program supports over 80,000 students, 4,000 educators, and nearly 400 schools across the U.S.
-      </p>
-    </div>
-  </div>
-</article>
-`;
-
 exports[`<Banner /> NoHeadingShort story renders snapshot 1`] = `
 <article
-  class="bannerDialog horizontal colorBrand padding2x"
+  class="bannerDialog horizontal colorBrand"
 >
   <div
     class="icon iconBrand"
@@ -623,7 +542,7 @@ exports[`<Banner /> NoHeadingShort story renders snapshot 1`] = `
 
 exports[`<Banner /> Success story renders snapshot 1`] = `
 <article
-  class="bannerDialog horizontal colorSuccess padding2x"
+  class="bannerDialog horizontal colorSuccess"
 >
   <div
     class="icon iconSuccess"
@@ -666,7 +585,7 @@ exports[`<Banner /> Success story renders snapshot 1`] = `
 
 exports[`<Banner /> SuccessDismissable story renders snapshot 1`] = `
 <article
-  class="bannerDialog horizontal dismissable colorSuccess padding2x"
+  class="bannerDialog horizontal dismissable colorSuccess"
 >
   <button
     class="dismiss button variantLink colorSuccess"
@@ -731,7 +650,7 @@ exports[`<Banner /> SuccessDismissable story renders snapshot 1`] = `
 
 exports[`<Banner /> Vertical story renders snapshot 1`] = `
 <article
-  class="bannerDialog colorBrand padding2x"
+  class="bannerDialog colorBrand"
 >
   <div
     class="icon iconBrand"
@@ -774,7 +693,7 @@ exports[`<Banner /> Vertical story renders snapshot 1`] = `
 
 exports[`<Banner /> VerticalDismissable story renders snapshot 1`] = `
 <article
-  class="bannerDialog dismissable colorBrand padding2x"
+  class="bannerDialog dismissable colorBrand"
 >
   <button
     class="dismiss button variantLink colorBrand"
@@ -839,7 +758,7 @@ exports[`<Banner /> VerticalDismissable story renders snapshot 1`] = `
 
 exports[`<Banner /> VerticalDismissableWithAction story renders snapshot 1`] = `
 <article
-  class="bannerDialog dismissable colorBrand padding2x"
+  class="bannerDialog dismissable colorBrand"
 >
   <button
     class="dismiss button variantLink colorBrand"
@@ -916,7 +835,7 @@ exports[`<Banner /> VerticalDismissableWithAction story renders snapshot 1`] = `
 
 exports[`<Banner /> VerticalElevation0 story renders snapshot 1`] = `
 <article
-  class="bannerDialog elevation0 colorBrand padding2x"
+  class="bannerDialog elevation0 colorBrand"
 >
   <div
     class="icon iconBrand"
@@ -959,7 +878,7 @@ exports[`<Banner /> VerticalElevation0 story renders snapshot 1`] = `
 
 exports[`<Banner /> VerticalWithAction story renders snapshot 1`] = `
 <article
-  class="bannerDialog colorBrand padding2x"
+  class="bannerDialog colorBrand"
 >
   <div
     class="icon iconBrand"
@@ -1014,7 +933,7 @@ exports[`<Banner /> VerticalWithAction story renders snapshot 1`] = `
 
 exports[`<Banner /> Warning story renders snapshot 1`] = `
 <article
-  class="bannerDialog horizontal colorWarning padding2x"
+  class="bannerDialog horizontal colorWarning"
 >
   <div
     class="icon iconWarning"
@@ -1057,7 +976,7 @@ exports[`<Banner /> Warning story renders snapshot 1`] = `
 
 exports[`<Banner /> WarningDismissable story renders snapshot 1`] = `
 <article
-  class="bannerDialog horizontal dismissable colorWarning padding2x"
+  class="bannerDialog horizontal dismissable colorWarning"
 >
   <button
     class="dismiss button variantLink colorWarning"
@@ -1122,7 +1041,7 @@ exports[`<Banner /> WarningDismissable story renders snapshot 1`] = `
 
 exports[`<Banner /> WithAction story renders snapshot 1`] = `
 <article
-  class="bannerDialog horizontal colorBrand padding2x"
+  class="bannerDialog horizontal colorBrand"
 >
   <div
     class="icon iconBrand"
