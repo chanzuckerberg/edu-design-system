@@ -38,11 +38,6 @@ type Props = {
    */
   onDismiss?: () => void;
   /**
-   * The amount of outside padding around the border- the longer and more important the content is,
-   * the more padding there should be. Defaults to 2x.
-   */
-  padding?: "2x" | "3x" | "4x";
-  /**
    * Whether the card is laid out horizontally or stacked vertically.
    * The vertical orientation makes the banner look more like a card. It has the same styling as
    * the horizontal banner in mobile view. This format is intended to be used in sidebars or
@@ -147,7 +142,6 @@ export default function Banner({
   children,
   action,
   onDismiss,
-  padding = "2x",
   orientation = "horizontal",
   elevation = 1,
 }: Props) {
@@ -167,10 +161,6 @@ export default function Banner({
         color === "success" && styles.colorSuccess,
         color === "warning" && styles.colorWarning,
         color === "alert" && styles.colorAlert,
-        // Padding props
-        padding === "2x" && styles.padding2x,
-        padding === "3x" && styles.padding3x,
-        padding === "4x" && styles.padding4x,
       )}
     >
       {onDismiss && <DismissButton color={color} onDismiss={onDismiss} />}
