@@ -94,6 +94,12 @@ CustomColor.args = {
   color: "EdsColorBrand400",
 };
 
+export const CustomViewBox = Template.bind(null);
+CustomViewBox.args = {
+  ...defaultArgs,
+  viewBox: "4 4 16 16",
+};
+
 export const InText = ({ icon, ...rest }: Args) => {
   const Icon = allIcons[icon];
 

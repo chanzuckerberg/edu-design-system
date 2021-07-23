@@ -78,7 +78,6 @@ function SVGIcon(props: SVGIconProps) {
 
   const style: SvgStyle = {
     "--svg-icon-size": size,
-    color,
   };
 
   const svgCommonProps = {

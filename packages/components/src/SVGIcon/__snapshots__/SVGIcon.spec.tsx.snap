@@ -5,8 +5,21 @@ exports[`<SVGIcon /> CustomColor story renders snapshot 1`] = `
   class="svgIcon"
   fill="#928CFF"
   role="presentation"
-  style="color: rgb(146, 140, 255);"
   viewBox="0 0 24 24"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+  />
+</svg>
+`;
+
+exports[`<SVGIcon /> CustomViewBox story renders snapshot 1`] = `
+<svg
+  class="svgIcon"
+  fill="currentColor"
+  role="presentation"
+  viewBox="4 4 16 16"
   xmlns="http://www.w3.org/2000/svg"
 >
   <path
@@ -21,7 +34,6 @@ exports[`<SVGIcon /> FullScreen story renders snapshot 1`] = `
   fill="currentColor"
   height="min(100%, 100vh)"
   role="presentation"
-  style="color: currentColor;"
   viewBox="0 0 24 24"
   width="min(100%, 100vh)"
   xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +53,6 @@ exports[`<SVGIcon /> InText story renders snapshot 1`] = `
     class="svgIcon"
     fill="currentColor"
     role="img"
-    style="color: currentColor;"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
@@ -58,7 +69,6 @@ exports[`<SVGIcon /> InText story renders snapshot 1`] = `
     fill="currentColor"
     height="2rem"
     role="img"
-    style="color: currentColor;"
     viewBox="0 0 24 24"
     width="2rem"
     xmlns="http://www.w3.org/2000/svg"
@@ -89,7 +99,6 @@ exports[`<SVGIcon /> Large story renders snapshot 1`] = `
   fill="currentColor"
   height="4em"
   role="presentation"
-  style="color: currentColor;"
   viewBox="0 0 24 24"
   width="4em"
   xmlns="http://www.w3.org/2000/svg"
@@ -106,7 +115,6 @@ exports[`<SVGIcon /> Medium story renders snapshot 1`] = `
   fill="currentColor"
   height="2em"
   role="presentation"
-  style="color: currentColor;"
   viewBox="0 0 24 24"
   width="2em"
   xmlns="http://www.w3.org/2000/svg"
@@ -123,7 +131,6 @@ exports[`<SVGIcon /> Small story renders snapshot 1`] = `
   fill="currentColor"
   height="1em"
   role="presentation"
-  style="color: currentColor;"
   viewBox="0 0 24 24"
   width="1em"
   xmlns="http://www.w3.org/2000/svg"
