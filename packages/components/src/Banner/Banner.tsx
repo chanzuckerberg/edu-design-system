@@ -1,17 +1,13 @@
 import Heading, { HeadingElement } from "../Heading";
 import Button from "../Button";
-import CheckCircleIcon from "../Icons/CheckCircle";
 import CloseIcon from "../Icons/Close";
-import DangerousRoundedIcon from "../Icons/custom/DangerousRounded";
-import ForumIcon from "../Icons/Forum";
-import NotificationsIcon from "../Icons/Notifications";
+import NotificationIcon from "../NotificationIcon";
 import React from "react";
 import Text from "../Text";
-import WarningIcon from "../Icons/Warning";
 import clsx from "clsx";
 import styles from "./Banner.module.css";
 
-type Color = "brand" | "neutral" | "success" | "warning" | "alert";
+export type BannerColor = "brand" | "neutral" | "success" | "warning" | "alert";
 
 type Props = {
   /**
@@ -21,7 +17,7 @@ type Props = {
   /**
    * The color of the banner, based on EDS defined colors. Also determines the icon used.
    */
-  color?: Color;
+  color?: BannerColor;
   /**
    * The contents of the banner in addition to the icon
    */
@@ -49,47 +45,8 @@ type Props = {
   elevation?: 0 | 1;
 };
 
-export const BannerIcon = ({ color }: { color: Color }) => {
-  // TODO: get final titles
-  const colorToIconMap = {
-    brand: {
-      icon: NotificationsIcon,
-      style: styles.iconBrand,
-      title: "attention",
-    },
-    neutral: {
-      icon: ForumIcon,
-      style: styles.iconNeutral,
-      title: "notice",
-    },
-    success: {
-      icon: CheckCircleIcon,
-      style: styles.iconSuccess,
-      title: "success",
-    },
-    warning: {
-      icon: WarningIcon,
-      style: styles.iconWarning,
-      title: "warning",
-    },
-    alert: {
-      icon: DangerousRoundedIcon,
-      style: styles.iconAlert,
-      title: "alert",
-    },
-  };
-
-  const iconAssets = colorToIconMap[color];
-
-  return (
-    <div className={clsx(styles.icon, iconAssets.style)}>
-      <iconAssets.icon role="img" title={iconAssets.title} />
-    </div>
-  );
-};
-
 type DismissButtonProps = {
-  color: Color;
+  color: BannerColor;
   onDismiss: () => void;
 };
 
@@ -161,7 +118,7 @@ export default function Banner({
     >
       {onDismiss && <DismissButton color={color} onDismiss={onDismiss} />}
 
-      <BannerIcon color={color} />
+      <NotificationIcon variant={color} />
 
       <div
         className={clsx(
