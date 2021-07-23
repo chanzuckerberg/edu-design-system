@@ -48,6 +48,17 @@ ColorVariants.args = {
   ...defaultArgs,
 };
 
+export const OutlineVariants: Story<Args> = (args) => (
+  <div className={styles.tagList}>
+    {colorOptions.map((color) => {
+      return <Tag key={color} {...args} color={color} variant="outline" />;
+    })}
+  </div>
+);
+OutlineVariants.args = {
+  ...defaultArgs,
+};
+
 export const WithIcon = Template.bind(null);
 WithIcon.args = {
   ...defaultArgs,
