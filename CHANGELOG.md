@@ -3,74 +3,57 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [0.0.1-alpha.14](https://github.com/chanzuckerberg/edu-design-system/compare/v0.0.1-alpha.13...v0.0.1-alpha.14) (2021-07-08)
-
+## [0.0.1-alpha.15](https://github.com/chanzuckerberg/edu-design-system/compare/v0.0.1-alpha.14...v0.0.1-alpha.15) (2021-07-23)
 
 ### Features
 
-* add warning color and display flex ([ee12be6](https://github.com/chanzuckerberg/edu-design-system/commit/ee12be6b0f3145595f45b65b2025290225c038cf))
-* **tokens:** add grading-yellow-100 and grading-yellow-500 ([39ee6e4](https://github.com/chanzuckerberg/edu-design-system/commit/39ee6e490403f9f7b02d61d7d2c76c82eee107fb))
+- **clickable:** remove animation for reduce motion setting ([9b6c593](https://github.com/chanzuckerberg/edu-design-system/commit/9b6c593a558bc9cea40f16f464721c4b371a72ee))
+- **buttons:** make outline button background transparent ([2ab9428](https://github.com/chanzuckerberg/edu-design-system/commit/2ab9428262699a5f3de6d36dd16ae74f6d6abbb8))
+- **colors:** add level 800 for alert and brand hues ([8a91592](https://github.com/chanzuckerberg/edu-design-system/commit/8a915925668eb08e556c71e020aeccbc46f62e7c))
+- **colors:** update success and warning 500 tokens ([bbfdb63](https://github.com/chanzuckerberg/edu-design-system/commit/bbfdb635b45a5d48c65028a4749469305192d06e))
 
+## [0.0.1-alpha.14](https://github.com/chanzuckerberg/edu-design-system/compare/v0.0.1-alpha.13...v0.0.1-alpha.14) (2021-07-08)
 
+### Features
 
-
+- add warning color and display flex ([ee12be6](https://github.com/chanzuckerberg/edu-design-system/commit/ee12be6b0f3145595f45b65b2025290225c038cf))
+- **tokens:** add grading-yellow-100 and grading-yellow-500 ([39ee6e4](https://github.com/chanzuckerberg/edu-design-system/commit/39ee6e490403f9f7b02d61d7d2c76c82eee107fb))
 
 ## [0.0.1-alpha.13](https://github.com/chanzuckerberg/edu-design-system/compare/v0.0.1-alpha.12...v0.0.1-alpha.13) (2021-06-09)
 
-
 ### Features
 
-* **typography:** allow color passthrough on text components ([7f73304](https://github.com/chanzuckerberg/edu-design-system/commit/7f733048b7ae81f95114d1e2b57e6637b305c2ab))
-* **typography:** allow ref pass through on Text components ([b35c929](https://github.com/chanzuckerberg/edu-design-system/commit/b35c929cb49b95f53a741cd51bbae47e52295b14))
-* **typography:** allow ref to pass through Heading ([1be3a56](https://github.com/chanzuckerberg/edu-design-system/commit/1be3a56fb2049e2a38b3b1d5da2bebd4ea07de42))
-
-
-
-
+- **typography:** allow color passthrough on text components ([7f73304](https://github.com/chanzuckerberg/edu-design-system/commit/7f733048b7ae81f95114d1e2b57e6637b305c2ab))
+- **typography:** allow ref pass through on Text components ([b35c929](https://github.com/chanzuckerberg/edu-design-system/commit/b35c929cb49b95f53a741cd51bbae47e52295b14))
+- **typography:** allow ref to pass through Heading ([1be3a56](https://github.com/chanzuckerberg/edu-design-system/commit/1be3a56fb2049e2a38b3b1d5da2bebd4ea07de42))
 
 ## [0.0.1-alpha.12](https://github.com/chanzuckerberg/edu-design-system/compare/v0.0.1-alpha.11...v0.0.1-alpha.12) (2021-04-22)
 
-
 ### Features
 
-* **typography:** allow classname pass through on text components ([396d3ee](https://github.com/chanzuckerberg/edu-design-system/commit/396d3ee9cd980180c275cd2381366e3a5ddc37c1))
-
-
-
-
+- **typography:** allow classname pass through on text components ([396d3ee](https://github.com/chanzuckerberg/edu-design-system/commit/396d3ee9cd980180c275cd2381366e3a5ddc37c1))
 
 ## [0.0.1-alpha.11](https://github.com/chanzuckerberg/edu-design-system/compare/v0.0.1-alpha.10...v0.0.1-alpha.11) (2021-04-13)
 
-
 ### Features
 
-* **typography:** added spacing to typography components ([7488624](https://github.com/chanzuckerberg/edu-design-system/commit/7488624b008e0955c3be1a1b16a1b5297e13712f))
-
-
-
-
+- **typography:** added spacing to typography components ([7488624](https://github.com/chanzuckerberg/edu-design-system/commit/7488624b008e0955c3be1a1b16a1b5297e13712f))
 
 ## [0.0.1-alpha.10](https://github.com/chanzuckerberg/edu-design-system/compare/v0.0.1-alpha.9...v0.0.1-alpha.10) (2021-03-29)
 
-
 ### Bug Fixes
 
-* **build:** code review ([5cb6179](https://github.com/chanzuckerberg/edu-design-system/commit/5cb61796ab288bec323cefa04b5ff1bd1fac576f))
-* **button:** added all variants example and fixes that came with it ([1eb9715](https://github.com/chanzuckerberg/edu-design-system/commit/1eb97152d6160681fbab8cf8d274d58f3cc2e2a2))
-* **lint:** fix styleint/eslint/prettier integration ([0696cac](https://github.com/chanzuckerberg/edu-design-system/commit/0696cac8874999afedc6f9e0798ab5fadf381e18))
-
+- **build:** code review ([5cb6179](https://github.com/chanzuckerberg/edu-design-system/commit/5cb61796ab288bec323cefa04b5ff1bd1fac576f))
+- **button:** added all variants example and fixes that came with it ([1eb9715](https://github.com/chanzuckerberg/edu-design-system/commit/1eb97152d6160681fbab8cf8d274d58f3cc2e2a2))
+- **lint:** fix styleint/eslint/prettier integration ([0696cac](https://github.com/chanzuckerberg/edu-design-system/commit/0696cac8874999afedc6f9e0798ab5fadf381e18))
 
 ### Features
 
-* **build:** dd script to generate flow types ([3d7f929](https://github.com/chanzuckerberg/edu-design-system/commit/3d7f929081cc5a9b354b22b660f9b0583e3a8118))
-* **build:** ignore size limit for flow files ([c1caefe](https://github.com/chanzuckerberg/edu-design-system/commit/c1caefefdf8066ad4630fd2a65fd9550e710c3ef))
-* **button:** initial testing with button variants ([f2b6a00](https://github.com/chanzuckerberg/edu-design-system/commit/f2b6a00104b52312d1bfa51f1769af4f2e0575f3))
-* **button:** link button appearance ([fd87c01](https://github.com/chanzuckerberg/edu-design-system/commit/fd87c01fa39e10669445a72e56a848b2149d02eb))
-* **design-review:** incorporated easy design feedback ([6f581a0](https://github.com/chanzuckerberg/edu-design-system/commit/6f581a04e29b25b0968b9596afab8421c69393e4))
-
-
-
-
+- **build:** dd script to generate flow types ([3d7f929](https://github.com/chanzuckerberg/edu-design-system/commit/3d7f929081cc5a9b354b22b660f9b0583e3a8118))
+- **build:** ignore size limit for flow files ([c1caefe](https://github.com/chanzuckerberg/edu-design-system/commit/c1caefefdf8066ad4630fd2a65fd9550e710c3ef))
+- **button:** initial testing with button variants ([f2b6a00](https://github.com/chanzuckerberg/edu-design-system/commit/f2b6a00104b52312d1bfa51f1769af4f2e0575f3))
+- **button:** link button appearance ([fd87c01](https://github.com/chanzuckerberg/edu-design-system/commit/fd87c01fa39e10669445a72e56a848b2149d02eb))
+- **design-review:** incorporated easy design feedback ([6f581a0](https://github.com/chanzuckerberg/edu-design-system/commit/6f581a04e29b25b0968b9596afab8421c69393e4))
 
 ## [0.0.1-alpha.9](https://github.com/chanzuckerberg/edu-design-system/compare/v0.0.1-alpha.8...v0.0.1-alpha.9) (2021-02-24)
 
