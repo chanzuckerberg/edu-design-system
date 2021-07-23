@@ -1,0 +1,19 @@
+.iconBrand {
+  @apply text-brand-500;
+}
+
+.iconNeutral {
+  @apply text-neutral-500;
+}
+
+.iconSuccess {
+  @apply text-success-500;
+}
+
+.iconWarning {
+  @apply text-warning-500;
+}
+
+.iconAlert {
+  @apply text-alert-500;
+}

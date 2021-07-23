@@ -44,6 +44,25 @@ type Props = {
   elevation?: 0 | 1;
 };
 
+<<<<<<< HEAD
+=======
+type DismissButtonProps = {
+  color: BannerColor;
+  onDismiss: () => void;
+};
+
+const DismissButton = ({ color, onDismiss }: DismissButtonProps) => (
+  <Button
+    className={styles.dismiss}
+    color={color}
+    onClick={onDismiss}
+    variant="link"
+  >
+    <CloseIcon role="img" size="28px" title="close" />
+  </Button>
+);
+
+>>>>>>> a65fb35... chore(banner): split BannerIcon into separate file
 /**
  * This should import a Heading element type
  */
