@@ -1,11 +1,10 @@
 import Button from "../Button";
 import CloseIcon from "../Icons/Close";
-import { BannerIcon as Icon } from "../Banner";
+import NotificationIcon from "../NotificationIcon";
 import React from "react";
 import Text from "../Text";
 import clsx from "clsx";
 import styles from "./Toast.module.css";
-// TODO: extract into a shared utility for Toast and Banner
 
 export type Color = "success" | "alert";
 
@@ -70,7 +69,7 @@ export default function Toast({
       {...rest}
     >
       <div className={styles.content}>
-        <Icon color={color} />
+        <NotificationIcon variant={color} />
         <Text color="inherit" size="sm">
           {children}
         </Text>

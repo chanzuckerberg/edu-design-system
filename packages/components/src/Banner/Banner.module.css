@@ -114,26 +114,6 @@
   @apply text-alert-700 bg-alert-100;
 }
 
-.iconBrand {
-  @apply text-brand-500;
-}
-
-.iconNeutral {
-  @apply text-neutral-500;
-}
-
-.iconSuccess {
-  @apply text-success-500;
-}
-
-.iconWarning {
-  @apply text-warning-500;
-}
-
-.iconAlert {
-  @apply text-alert-500;
-}
-
 .elevation0 {
   /* Instead of removing the border, we replace it with a transparent one.
      On windows high contrast mode, the background color will be removed,
