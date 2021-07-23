@@ -50,9 +50,7 @@ type Args = React.ComponentProps<typeof SVGIcon> & {
 const Template: Story<Args> = ({ icon, color, ...rest }) => {
   const Icon = allIcons[icon];
   const computedColor = Tokens[color];
-  return (
-    <Icon {...rest} color={computedColor} role="img" title="wicked cool icon" />
-  );
+  return <Icon {...rest} color={computedColor} />;
 };
 
 const defaultArgs = {
@@ -102,10 +100,16 @@ export const InText = ({ icon, ...rest }: Args) => {
   return (
     <Text size="h1">
       The svg icon defaults to the surrounding text size (
-      <Icon {...rest} role="presentation" />, 1em), but often looks better with
-      the line height (
-      <Icon {...rest} role="presentation" size="2rem" />, 2rem) which is harder
-      to determine. Take a look at the icons available in{" "}
+      <Icon {...rest} role="img" title="icon with 1em line height" />, 1em), but
+      often looks better with the line height (
+      <Icon
+        {...rest}
+        role="img"
+        title="icon with 2em line height"
+        size="2rem"
+      />
+      , 2rem) which is harder to determine. Take a look at the icons available
+      in{" "}
       <a
         href="https://material-ui.com/components/material-icons/"
         target="_blank"
