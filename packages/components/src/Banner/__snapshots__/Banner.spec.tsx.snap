@@ -10,11 +10,14 @@ exports[`<Banner /> Alert story renders snapshot 1`] = `
     <svg
       class="svgIcon"
       fill="currentColor"
+      role="img"
       style="color: currentColor;"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >
-      alert
+      <title>
+        alert
+      </title>
       <circle
         cx="15.5"
         cy="9.5"
@@ -64,12 +67,15 @@ exports[`<Banner /> AlertDismissable story renders snapshot 1`] = `
       class="svgIcon"
       fill="currentColor"
       height="28px"
+      role="img"
       style="color: currentColor;"
       viewBox="0 0 24 24"
       width="28px"
       xmlns="http://www.w3.org/2000/svg"
     >
-      close
+      <title>
+        close
+      </title>
       <path
         d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
       />
@@ -81,11 +87,14 @@ exports[`<Banner /> AlertDismissable story renders snapshot 1`] = `
     <svg
       class="svgIcon"
       fill="currentColor"
+      role="img"
       style="color: currentColor;"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >
-      alert
+      <title>
+        alert
+      </title>
       <circle
         cx="15.5"
         cy="9.5"
@@ -132,11 +141,14 @@ exports[`<Banner /> Brand story renders snapshot 1`] = `
     <svg
       class="svgIcon"
       fill="currentColor"
+      role="img"
       style="color: currentColor;"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >
-      attention
+      <title>
+        attention
+      </title>
       <path
         d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"
       />
@@ -176,12 +188,15 @@ exports[`<Banner /> BrandDismissable story renders snapshot 1`] = `
       class="svgIcon"
       fill="currentColor"
       height="28px"
+      role="img"
       style="color: currentColor;"
       viewBox="0 0 24 24"
       width="28px"
       xmlns="http://www.w3.org/2000/svg"
     >
-      close
+      <title>
+        close
+      </title>
       <path
         d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
       />
@@ -193,11 +208,14 @@ exports[`<Banner /> BrandDismissable story renders snapshot 1`] = `
     <svg
       class="svgIcon"
       fill="currentColor"
+      role="img"
       style="color: currentColor;"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >
-      attention
+      <title>
+        attention
+      </title>
       <path
         d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"
       />
@@ -237,12 +255,15 @@ exports[`<Banner /> DismissableWithAction story renders snapshot 1`] = `
       class="svgIcon"
       fill="currentColor"
       height="28px"
+      role="img"
       style="color: currentColor;"
       viewBox="0 0 24 24"
       width="28px"
       xmlns="http://www.w3.org/2000/svg"
     >
-      close
+      <title>
+        close
+      </title>
       <path
         d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
       />
@@ -254,11 +275,14 @@ exports[`<Banner /> DismissableWithAction story renders snapshot 1`] = `
     <svg
       class="svgIcon"
       fill="currentColor"
+      role="img"
       style="color: currentColor;"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >
-      attention
+      <title>
+        attention
+      </title>
       <path
         d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"
       />
@@ -307,11 +331,14 @@ exports[`<Banner /> Elevation0 story renders snapshot 1`] = `
     <svg
       class="svgIcon"
       fill="currentColor"
+      role="img"
       style="color: currentColor;"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >
-      attention
+      <title>
+        attention
+      </title>
       <path
         d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"
       />
@@ -348,11 +375,14 @@ exports[`<Banner /> LongContent story renders snapshot 1`] = `
     <svg
       class="svgIcon"
       fill="currentColor"
+      role="img"
       style="color: currentColor;"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >
-      attention
+      <title>
+        attention
+      </title>
       <path
         d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"
       />
@@ -389,11 +419,14 @@ exports[`<Banner /> Neutral story renders snapshot 1`] = `
     <svg
       class="svgIcon"
       fill="currentColor"
+      role="img"
       style="color: currentColor;"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >
-      notice
+      <title>
+        notice
+      </title>
       <path
         d="M21 6h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1zm-4 6V3c0-.55-.45-1-1-1H3c-.55 0-1 .45-1 1v14l4-4h10c.55 0 1-.45 1-1z"
       />
@@ -433,12 +466,15 @@ exports[`<Banner /> NeutralDismissable story renders snapshot 1`] = `
       class="svgIcon"
       fill="currentColor"
       height="28px"
+      role="img"
       style="color: currentColor;"
       viewBox="0 0 24 24"
       width="28px"
       xmlns="http://www.w3.org/2000/svg"
     >
-      close
+      <title>
+        close
+      </title>
       <path
         d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
       />
@@ -450,11 +486,14 @@ exports[`<Banner /> NeutralDismissable story renders snapshot 1`] = `
     <svg
       class="svgIcon"
       fill="currentColor"
+      role="img"
       style="color: currentColor;"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >
-      notice
+      <title>
+        notice
+      </title>
       <path
         d="M21 6h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1zm-4 6V3c0-.55-.45-1-1-1H3c-.55 0-1 .45-1 1v14l4-4h10c.55 0 1-.45 1-1z"
       />
@@ -491,11 +530,14 @@ exports[`<Banner /> NoContent story renders snapshot 1`] = `
     <svg
       class="svgIcon"
       fill="currentColor"
+      role="img"
       style="color: currentColor;"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >
-      attention
+      <title>
+        attention
+      </title>
       <path
         d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"
       />
@@ -527,11 +569,14 @@ exports[`<Banner /> NoHeadingLong story renders snapshot 1`] = `
     <svg
       class="svgIcon"
       fill="currentColor"
+      role="img"
       style="color: currentColor;"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >
-      attention
+      <title>
+        attention
+      </title>
       <path
         d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"
       />
@@ -563,11 +608,14 @@ exports[`<Banner /> NoHeadingShort story renders snapshot 1`] = `
     <svg
       class="svgIcon"
       fill="currentColor"
+      role="img"
       style="color: currentColor;"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >
-      attention
+      <title>
+        attention
+      </title>
       <path
         d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"
       />
@@ -599,11 +647,14 @@ exports[`<Banner /> Success story renders snapshot 1`] = `
     <svg
       class="svgIcon"
       fill="currentColor"
+      role="img"
       style="color: currentColor;"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >
-      success
+      <title>
+        success
+      </title>
       <path
         d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
       />
@@ -643,12 +694,15 @@ exports[`<Banner /> SuccessDismissable story renders snapshot 1`] = `
       class="svgIcon"
       fill="currentColor"
       height="28px"
+      role="img"
       style="color: currentColor;"
       viewBox="0 0 24 24"
       width="28px"
       xmlns="http://www.w3.org/2000/svg"
     >
-      close
+      <title>
+        close
+      </title>
       <path
         d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
       />
@@ -660,11 +714,14 @@ exports[`<Banner /> SuccessDismissable story renders snapshot 1`] = `
     <svg
       class="svgIcon"
       fill="currentColor"
+      role="img"
       style="color: currentColor;"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >
-      success
+      <title>
+        success
+      </title>
       <path
         d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
       />
@@ -701,11 +758,14 @@ exports[`<Banner /> Vertical story renders snapshot 1`] = `
     <svg
       class="svgIcon"
       fill="currentColor"
+      role="img"
       style="color: currentColor;"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >
-      attention
+      <title>
+        attention
+      </title>
       <path
         d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"
       />
@@ -745,12 +805,15 @@ exports[`<Banner /> VerticalDismissable story renders snapshot 1`] = `
       class="svgIcon"
       fill="currentColor"
       height="28px"
+      role="img"
       style="color: currentColor;"
       viewBox="0 0 24 24"
       width="28px"
       xmlns="http://www.w3.org/2000/svg"
     >
-      close
+      <title>
+        close
+      </title>
       <path
         d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
       />
@@ -762,11 +825,14 @@ exports[`<Banner /> VerticalDismissable story renders snapshot 1`] = `
     <svg
       class="svgIcon"
       fill="currentColor"
+      role="img"
       style="color: currentColor;"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >
-      attention
+      <title>
+        attention
+      </title>
       <path
         d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"
       />
@@ -806,12 +872,15 @@ exports[`<Banner /> VerticalDismissableWithAction story renders snapshot 1`] = `
       class="svgIcon"
       fill="currentColor"
       height="28px"
+      role="img"
       style="color: currentColor;"
       viewBox="0 0 24 24"
       width="28px"
       xmlns="http://www.w3.org/2000/svg"
     >
-      close
+      <title>
+        close
+      </title>
       <path
         d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
       />
@@ -823,11 +892,14 @@ exports[`<Banner /> VerticalDismissableWithAction story renders snapshot 1`] = `
     <svg
       class="svgIcon"
       fill="currentColor"
+      role="img"
       style="color: currentColor;"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >
-      attention
+      <title>
+        attention
+      </title>
       <path
         d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"
       />
@@ -876,11 +948,14 @@ exports[`<Banner /> VerticalElevation0 story renders snapshot 1`] = `
     <svg
       class="svgIcon"
       fill="currentColor"
+      role="img"
       style="color: currentColor;"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >
-      attention
+      <title>
+        attention
+      </title>
       <path
         d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"
       />
@@ -917,11 +992,14 @@ exports[`<Banner /> VerticalWithAction story renders snapshot 1`] = `
     <svg
       class="svgIcon"
       fill="currentColor"
+      role="img"
       style="color: currentColor;"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >
-      attention
+      <title>
+        attention
+      </title>
       <path
         d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"
       />
@@ -970,11 +1048,14 @@ exports[`<Banner /> Warning story renders snapshot 1`] = `
     <svg
       class="svgIcon"
       fill="currentColor"
+      role="img"
       style="color: currentColor;"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >
-      warning
+      <title>
+        warning
+      </title>
       <path
         d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"
       />
@@ -1014,12 +1095,15 @@ exports[`<Banner /> WarningDismissable story renders snapshot 1`] = `
       class="svgIcon"
       fill="currentColor"
       height="28px"
+      role="img"
       style="color: currentColor;"
       viewBox="0 0 24 24"
       width="28px"
       xmlns="http://www.w3.org/2000/svg"
     >
-      close
+      <title>
+        close
+      </title>
       <path
         d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
       />
@@ -1031,11 +1115,14 @@ exports[`<Banner /> WarningDismissable story renders snapshot 1`] = `
     <svg
       class="svgIcon"
       fill="currentColor"
+      role="img"
       style="color: currentColor;"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >
-      warning
+      <title>
+        warning
+      </title>
       <path
         d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"
       />
@@ -1072,11 +1159,14 @@ exports[`<Banner /> WithAction story renders snapshot 1`] = `
     <svg
       class="svgIcon"
       fill="currentColor"
+      role="img"
       style="color: currentColor;"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >
-      attention
+      <title>
+        attention
+      </title>
       <path
         d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"
       />
