@@ -13,11 +13,13 @@ exports[`<Toast /> Alert story renders snapshot 1`] = `
       <svg
         class="svgIcon"
         fill="currentColor"
-        style="color: currentColor;"
+        role="img"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
       >
-        alert
+        <title>
+          alert
+        </title>
         <circle
           cx="15.5"
           cy="9.5"
@@ -55,11 +57,13 @@ exports[`<Toast /> Dismissable story renders snapshot 1`] = `
       <svg
         class="svgIcon"
         fill="currentColor"
-        style="color: currentColor;"
+        role="img"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
       >
-        success
+        <title>
+          success
+        </title>
         <path
           d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
         />
@@ -80,12 +84,14 @@ exports[`<Toast /> Dismissable story renders snapshot 1`] = `
       class="svgIcon"
       fill="currentColor"
       height="32px"
-      style="color: currentColor;"
+      role="img"
       viewBox="0 0 24 24"
       width="32px"
       xmlns="http://www.w3.org/2000/svg"
     >
-      close
+      <title>
+        close
+      </title>
       <path
         d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
       />
@@ -107,11 +113,13 @@ exports[`<Toast /> Success story renders snapshot 1`] = `
       <svg
         class="svgIcon"
         fill="currentColor"
-        style="color: currentColor;"
+        role="img"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
       >
-        success
+        <title>
+          success
+        </title>
         <path
           d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
         />
