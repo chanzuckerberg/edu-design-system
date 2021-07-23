@@ -88,7 +88,6 @@ exports[`<Tag /> WithIcon story renders snapshot 1`] = `
     class="svgIcon"
     fill="currentColor"
     role="img"
-    style="color: currentColor;"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
@@ -116,7 +115,6 @@ exports[`<Tag /> WithLongTextAndIcon story renders snapshot 1`] = `
     class="svgIcon"
     fill="currentColor"
     role="img"
-    style="color: currentColor;"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
