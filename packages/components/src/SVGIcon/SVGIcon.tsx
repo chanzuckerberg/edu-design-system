@@ -85,6 +85,7 @@ function SVGIcon(props: SVGIconProps) {
     className: cx(className, styles.svgIcon, block && styles.displayBlock),
     fill: color,
     height: size,
+    role,
     /**
      * height/width html properties are overriden by the defaults applied
      * to svg css class
