@@ -50,7 +50,9 @@ type Args = React.ComponentProps<typeof SVGIcon> & {
 const Template: Story<Args> = ({ icon, color, ...rest }) => {
   const Icon = allIcons[icon];
   const computedColor = Tokens[color];
-  return <Icon {...rest} color={computedColor} role="presentation" />;
+  return (
+    <Icon {...rest} color={computedColor} role="img" title="wicked cool icon" />
+  );
 };
 
 const defaultArgs = {
