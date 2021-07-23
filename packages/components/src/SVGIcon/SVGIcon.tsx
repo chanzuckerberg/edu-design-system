@@ -96,7 +96,7 @@ function SVGIcon(props: SVGIconProps) {
     xmlns: "http://www.w3.org/2000/svg",
   };
 
-  if (role === "img") {
+  if (props.role === "img") {
     return (
       <svg {...svgCommonProps}>
         <title>{props.title}</title>
