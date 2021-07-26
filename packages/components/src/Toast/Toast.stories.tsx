@@ -1,6 +1,4 @@
-// @flow
-
-import * as React from "react";
+import React from "react";
 import type { Story } from "@storybook/react";
 import Toast from "./Toast";
 
@@ -9,7 +7,7 @@ export default {
   component: Toast,
 };
 
-type Args = React.ElementProps<typeof Toast>;
+type Args = React.ComponentProps<typeof Toast>;
 
 const Template: Story<Args> = (args: Args) => <Toast {...args} />;
 

@@ -1,9 +1,7 @@
-// @flow
-
-import * as React from "react";
 import Button from "../Button";
 import CloseIcon from "../SVGIcon/Icons/Close";
 import { BannerIcon as Icon } from "../Banner";
+import React from "react";
 import Text from "../Text";
 import cx from "classnames";
 import styles from "./Toast.module.css";

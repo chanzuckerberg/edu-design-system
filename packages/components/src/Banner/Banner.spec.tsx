@@ -1,5 +1,3 @@
-// @flow
-
 import * as BannerStoryFile from "./Banner.stories";
 import { generateSnapshots } from "@chanzuckerberg/story-utils";
 

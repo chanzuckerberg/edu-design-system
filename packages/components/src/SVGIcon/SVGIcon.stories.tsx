@@ -1,5 +1,5 @@
-import * as React from "react";
 import * as allIcons from "./Icons";
+import React from "react";
 import SVGIcon from "./SVGIcon";
 import type { Story } from "@storybook/react";
 import Text from "../Text";

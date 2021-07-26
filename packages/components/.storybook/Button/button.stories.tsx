@@ -1,9 +1,7 @@
-import * as React from "react";
-
 import Clickable, { ClickableProps } from "../../src/Clickable";
-
 import { ButtonProps } from "../../src/Button";
 import Heading from "../../src/Heading";
+import React from "react";
 import Text from "../../src/Text";
 import styles from "./button.module.css";
 

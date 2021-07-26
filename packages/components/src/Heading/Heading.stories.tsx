@@ -1,6 +1,5 @@
-import * as React from "react";
-
 import Heading from "./Heading";
+import React from "react";
 import { Story } from "@storybook/react/types-6-0";
 
 export default {
