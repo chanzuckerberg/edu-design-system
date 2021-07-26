@@ -1,13 +1,10 @@
-// @flow
-
-import * as React from "react";
-
 import Heading, { HeadingElement } from "../Heading";
 import Button from "../Button";
 import CheckCircleIcon from "../SVGIcon/Icons/CheckCircle";
 import CloseIcon from "../SVGIcon/Icons/Close";
 import ForumIcon from "../SVGIcon/Icons/Forum";
 import NotificationsIcon from "../SVGIcon/Icons/Notifications";
+import React from "react";
 import SentimentVeryDissatisfiedIcon from "../SVGIcon/Icons/SentimentVeryDissatisfied";
 import Text from "../Text";
 import WarningIcon from "../SVGIcon/Icons/Warning";

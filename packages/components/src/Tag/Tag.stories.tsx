@@ -1,8 +1,6 @@
-// @flow
-
-import * as React from "react";
 import Tag, { stylesByColor } from "./Tag";
 import type { Color } from "./Tag";
+import React from "react";
 import type { Story } from "@storybook/react";
 import WarningIcon from "../SVGIcon/Icons/Warning";
 import styles from "./Tag.stories.module.css";
@@ -23,7 +21,7 @@ export default {
   },
 };
 
-type Args = React.ElementProps<typeof Tag>;
+type Args = React.ComponentProps<typeof Tag>;
 
 const Template: Story<Args> = (args) => <Tag {...args} />;
 

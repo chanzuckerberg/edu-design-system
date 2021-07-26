@@ -1,6 +1,4 @@
-// @flow
-
-import * as React from "react";
+import React from "react";
 import Text from "../Text";
 import cx from "classnames";
 import styles from "./Tag.module.css";

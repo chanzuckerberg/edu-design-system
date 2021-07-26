@@ -1,9 +1,7 @@
-// @flow
-
-import * as React from "react";
 import Banner from "./Banner";
 import Button from "../Button";
 import Heading from "../Heading";
+import React from "react";
 import type { Story } from "@storybook/react";
 
 export default {
@@ -11,7 +9,7 @@ export default {
   component: Banner,
 };
 
-type Args = React.ElementProps<typeof Banner> & {
+type Args = React.ComponentProps<typeof Banner> & {
   content: string;
   heading: string;
 };
