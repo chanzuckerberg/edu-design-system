@@ -49,13 +49,13 @@ type Args = React.ComponentProps<typeof SVGIcon> & {
 
 const Template: Story<Args> = ({ icon, color, ...rest }) => {
   const Icon = allIcons[icon];
-  const computedColor = Tokens[color];
+  const computedColor = color && Tokens[color];
   return <Icon {...rest} color={computedColor} />;
 };
 
 const defaultArgs = {
   icon: Object.keys(allIcons)[0],
-  role: "presentation",
+  role: "presentation" as const,
 };
 
 export const Small = Template.bind(null);

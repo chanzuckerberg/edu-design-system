@@ -15,7 +15,10 @@ export default {
   },
 };
 
-type Args = React.ComponentProps<typeof Button>;
+type Args = React.ComponentProps<typeof Button> & {
+  "data-testid"?: string;
+};
+
 const Template: Story<Args> = (args) => <Button {...args} />;
 
 const heartIcon = (
@@ -44,7 +47,7 @@ link.args = {
   variant: "link",
 };
 
-export const linkInBody = (args) => (
+export const linkInBody: Story<Args> = (args) => (
   <Text size="body">
     This text surrounds the <Button {...args} /> and shows that the link should
     adhere to its appearance
@@ -56,7 +59,7 @@ linkInBody.args = {
   variant: "link",
 };
 
-export const linkInHeading = (args) => (
+export const linkInHeading: Story<Args> = (args) => (
   <Text size="h1">
     This text surrounds the <Button {...args} /> and shows that the link should
     adhere to its appearance
