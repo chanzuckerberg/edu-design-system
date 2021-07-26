@@ -6,7 +6,7 @@
     "design",
     "system"
   ],
-  "author": "Devin Witherspoon <dcwither@gmail.com>",
+  "author": "CZI <edu-frontend-infra@chanzuckerberg.com>",
   "homepage": "https://github.com/chanzuckerberg/edu-design-system/tree/main/packages/tokens",
   "license": "MIT",
   "main": "src/index.js",
