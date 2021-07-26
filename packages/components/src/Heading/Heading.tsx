@@ -17,8 +17,9 @@ type Props = {
   className?: TypographyProps<HeadingElement>["className"];
   color?: TypographyProps<HeadingElement>["color"];
   size: TypographyProps<HeadingElement>["size"];
-  weight?: TypographyProps<HeadingElement>["weight"];
   spacing?: TypographyProps<HeadingElement>["spacing"];
+  tabIndex?: number;
+  weight?: TypographyProps<HeadingElement>["weight"];
 };
 
 const Heading = forwardRef<HTMLElement, Props>(({ as, children, size, /**

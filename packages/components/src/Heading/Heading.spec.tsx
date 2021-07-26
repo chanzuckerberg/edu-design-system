@@ -9,14 +9,15 @@ describe("<Heading />", () => {
   generateSnapshots(HeadingStoryFile);
 
   it("should pass through ref", () => {
-    const headingRef = React.createRef();
+    const headingRef = React.createRef<HTMLHeadingElement>();
     render(
       <Heading ref={headingRef} size="h1" tabIndex={-1}>
         Some Heading
       </Heading>,
     );
 
-    headingRef.current.focus();
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+    headingRef.current!.focus();
 
     const headingElement = screen.getByText("Some Heading");
 
