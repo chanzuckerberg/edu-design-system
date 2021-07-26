@@ -10,6 +10,7 @@ export type ButtonProps = ButtonHTMLElementProps & {
    */
   children: ReactNode;
   color?: ClickableProps<"button">["color"];
+  "data-testid"?: string;
   size?: ClickableProps<"button">["size"];
   variant?: ClickableProps<"button">["variant"];
 };
