@@ -22,6 +22,9 @@ jobs:
           npm ci --no-optional
           npx lerna bootstrap
 
+      - name: Type check 📋
+        run: npm run types
+
       - name: Run CI Tests ✅
         run: npx lerna run test:ci --stream
         env:
