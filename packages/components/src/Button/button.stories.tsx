@@ -15,9 +15,7 @@ export default {
   },
 };
 
-type Args = React.ComponentProps<typeof Button> & {
-  "data-testid"?: string;
-};
+type Args = React.ComponentProps<typeof Button>;
 
 const Template: Story<Args> = (args) => <Button {...args} />;
 
