@@ -59,24 +59,32 @@ const defaultArgs = {
 };
 
 export const Small = Template.bind(null);
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore todo: figure out SVGIcon types
 Small.args = {
   ...defaultArgs,
   size: "1em",
 };
 
 export const Medium = Template.bind(null);
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore todo: figure out SVGIcon types
 Medium.args = {
   ...defaultArgs,
   size: "2em",
 };
 
 export const Large = Template.bind(null);
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore todo: figure out SVGIcon types
 Large.args = {
   ...defaultArgs,
   size: "4em",
 };
 
 export const FullScreen = Template.bind(null);
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore todo: figure out SVGIcon types
 FullScreen.args = {
   ...defaultArgs,
   size: "min(100%, 100vh)",
@@ -89,12 +97,16 @@ FullScreen.parameters = {
 };
 
 export const CustomColor = Template.bind(null);
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore todo: figure out SVGIcon types
 CustomColor.args = {
   ...defaultArgs,
   color: "EdsColorBrand400",
 };
 
 export const CustomViewBox = Template.bind(null);
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore todo: figure out SVGIcon types
 CustomViewBox.args = {
   ...defaultArgs,
   viewBox: "4 4 16 16",
