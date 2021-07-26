@@ -13,8 +13,9 @@ type Props = {
   className?: TypographyProps<TextElement>["className"];
   color?: TypographyProps<TextElement>["color"];
   size: TypographyProps<TextElement>["size"];
-  weight?: TypographyProps<TextElement>["weight"];
   spacing?: TypographyProps<TextElement>["spacing"];
+  tabIndex?: number;
+  weight?: TypographyProps<TextElement>["weight"];
 };
 
 const Text = forwardRef<HTMLElement, Props>(({ as, children, /**

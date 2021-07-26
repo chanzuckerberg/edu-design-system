@@ -24,14 +24,15 @@ describe("<Text />", () => {
   });
 
   it("should pass the passthrough ref", () => {
-    const textRef = React.createRef();
+    const textRef = React.createRef<HTMLSpanElement>();
     render(
       <Text ref={textRef} size="body" tabIndex={-1}>
         Some Text
       </Text>,
     );
 
-    textRef.current.focus();
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+    textRef.current!.focus();
 
     const textElement = screen.getByText("Some Text");
     expect(textElement).toHaveFocus();
