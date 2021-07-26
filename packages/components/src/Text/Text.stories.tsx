@@ -57,7 +57,7 @@ BodyColorInfoBold.args = {
   weight: "bold",
 };
 
-export const TextColorInherit = (args) => (
+export const TextColorInherit: Story<Args> = (args) => (
   <Text color="alert" size="body">
     This text surrounds the <Text {...args} /> and shows it should inherit color
     from the parent

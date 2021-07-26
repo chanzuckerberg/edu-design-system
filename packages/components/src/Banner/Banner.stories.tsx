@@ -69,13 +69,13 @@ Alert.args = {
 export const NoHeadingShort = Template.bind(null);
 NoHeadingShort.args = {
   ...dialogArgs,
-  heading: null,
+  heading: undefined,
 };
 
 export const NoContent = Template.bind(null);
 NoContent.args = {
   ...dialogArgs,
-  content: null,
+  content: undefined,
 };
 
 export const WithAction = Template.bind(null);
