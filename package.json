@@ -14,7 +14,8 @@
     "postinstall": "lerna bootstrap",
     "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx}\"",
     "start": "lerna run build --ignore=@chanzuckerberg/eds-components && lerna run start --parallel",
-    "test": "lerna run test"
+    "test": "lerna run test",
+    "types": "lerna run types"
   },
   "size-limit": [
     {

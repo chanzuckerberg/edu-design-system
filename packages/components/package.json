@@ -35,7 +35,8 @@
     "storybook:axeOnly": "axe-storybook --build-dir storybook-static",
     "start": "npm run storybook",
     "test": "jest",
-    "test:ci": "npm run test -- --ci --coverage && cat ./coverage/lcov.info | codecov"
+    "test:ci": "npm run test -- --ci --coverage && cat ./coverage/lcov.info | codecov",
+    "types": "tsc --noEmit"
   },
   "bugs": {
     "url": "https://github.com/chanzuckerberg/edu-design-system/issues"
