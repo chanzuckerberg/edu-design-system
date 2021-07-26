@@ -5,7 +5,9 @@ import type { Story } from "@storybook/react";
 import WarningIcon from "../SVGIcon/Icons/Warning";
 import styles from "./Tag.stories.module.css";
 
-const colorOptions: Array<Color> = Object.keys(stylesByColor);
+// todo (Andrew): look into getting rid of the `as` cast. The `stylesByColor` object's keys are
+// members of Color. Can TypeScript understand that?
+const colorOptions = Object.keys(stylesByColor) as Color[];
 
 export default {
   title: "Tag",
@@ -27,7 +29,7 @@ const Template: Story<Args> = (args) => <Tag {...args} />;
 
 const defaultArgs = {
   children: "Tag text",
-  color: "warning",
+  color: "warning" as const,
 };
 
 export const Default = Template.bind(null);
