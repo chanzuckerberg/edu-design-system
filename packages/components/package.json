@@ -6,7 +6,7 @@
     "design system",
     "components"
   ],
-  "author": "Devin Witherspoon <dcwither@gmail.com>",
+  "author": "CZI <edu-frontend-infra@chanzuckerberg.com>",
   "homepage": "https://github.com/chanzuckerberg/edu-design-system/tree/main/packages/components",
   "license": "MIT",
   "main": "dist/index.js",
