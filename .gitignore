@@ -75,3 +75,13 @@ typings/
 # dist folders (allowing built tokens)
 packages/components/dist/
 storybook-static/
+
+# Yarn 2 files
+# https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*

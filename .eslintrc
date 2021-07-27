@@ -6,10 +6,10 @@
   "parser": "@typescript-eslint/parser",
   "plugins": ["react-hooks", "testing-library"],
   "extends": [
+    "eslint:recommended",
     "plugin:react/recommended",
-    "plugin:prettier/recommended",
     "plugin:testing-library/react",
-    "eslint:recommended"
+    "plugin:prettier/recommended"
   ],
   "parserOptions": {
     "ecmaVersion": 2018,

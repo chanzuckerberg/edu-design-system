@@ -1,5 +1,5 @@
-const variableTokens = require("@chanzuckerberg/eds-tokens/json/css-variables-nested.json");
-const staticTokens = require("@chanzuckerberg/eds-tokens/json/variables-nested.json");
+const variableTokens = require("@chanzuckerberg/eds-tokens/dist/json/css-variables-nested.json");
+const staticTokens = require("@chanzuckerberg/eds-tokens/dist/json/variables-nested.json");
 module.exports = {
   theme: {
     colors: {
