@@ -4,11 +4,11 @@
 module.exports = {
   clearMocks: true,
   coverageDirectory: "coverage",
-  transform: {
-    "^.+\\.tsx?$": "babel-jest",
-  },
   moduleNameMapper: {
     "\\.css$": "identity-obj-proxy",
+  },
+  transform: {
+    "^.+\\.tsx?$": "babel-jest",
   },
   setupFilesAfterEnv: ["./jest.setup.ts"],
 };
