@@ -1,6 +1,6 @@
 import React from "react";
 import Text from "../Text";
-import cx from "classnames";
+import clsx from "clsx";
 import styles from "./Tag.module.css";
 
 export type Color =
@@ -48,7 +48,7 @@ function Tag({ color, children, icon, variant = "flat" }: Props) {
   return (
     <Text
       as="span"
-      className={cx(
+      className={clsx(
         styles.tag,
         color && stylesByColor[color],
         variant === "outline" && styles.outline,
