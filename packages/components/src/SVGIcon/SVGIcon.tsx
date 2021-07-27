@@ -1,5 +1,5 @@
 import React from "react";
-import cx from "classnames";
+import clsx from "clsx";
 import styles from "./SVGIcon.module.css";
 
 interface IconPropsBase {
@@ -81,7 +81,7 @@ function SVGIcon(props: SVGIconProps) {
   };
 
   const svgCommonProps = {
-    className: cx(className, styles.svgIcon, block && styles.displayBlock),
+    className: clsx(className, styles.svgIcon, block && styles.displayBlock),
     fill: color,
     height: size,
     role,
