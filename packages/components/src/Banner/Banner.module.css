@@ -34,7 +34,8 @@
 
 .dismiss:hover {
   /* The hover transition is inherited from the Button component */
-  color: var(--eds-color-white);
+  @apply text-white;
+
   background-color: var(--banner-dismiss-hover-color);
 }
 
