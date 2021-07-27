@@ -63,7 +63,6 @@
     "@percy/storybook": "^3.3.1",
     "@storybook/addon-a11y": "^6.1.18",
     "@storybook/addon-essentials": "^6.1.18",
-    "@storybook/addon-links": "^6.1.18",
     "@storybook/addon-postcss": "^2.0.0",
     "@storybook/addons": "^6.1.18",
     "@storybook/preset-typescript": "^3.0.0",
