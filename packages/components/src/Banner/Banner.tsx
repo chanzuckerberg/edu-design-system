@@ -8,7 +8,7 @@ import React from "react";
 import SentimentVeryDissatisfiedIcon from "../SVGIcon/Icons/SentimentVeryDissatisfied";
 import Text from "../Text";
 import WarningIcon from "../SVGIcon/Icons/Warning";
-import cx from "classnames";
+import clsx from "clsx";
 import styles from "./Banner.module.css";
 
 type Color = "brand" | "neutral" | "success" | "warning" | "alert";
@@ -83,7 +83,7 @@ export const BannerIcon = ({ color }: { color: Color }) => {
   const iconAssets = colorToIconMap[color];
 
   return (
-    <div className={cx(styles.icon, iconAssets.style)}>
+    <div className={clsx(styles.icon, iconAssets.style)}>
       <iconAssets.icon role="img" title={iconAssets.title} />
     </div>
   );
@@ -146,7 +146,7 @@ export default function Banner({
 
   return (
     <article
-      className={cx(
+      className={clsx(
         className,
         styles.bannerDialog,
         isHorizontal && styles.horizontal,
@@ -165,15 +165,23 @@ export default function Banner({
       <BannerIcon color={color} />
 
       <div
-        className={cx(styles.textAndAction, isHorizontal && styles.horizontal)}
+        className={clsx(
+          styles.textAndAction,
+          isHorizontal && styles.horizontal,
+        )}
       >
         <div
-          className={cx(styles.textContent, isHorizontal && styles.horizontal)}
+          className={clsx(
+            styles.textContent,
+            isHorizontal && styles.horizontal,
+          )}
         >
           {children}
         </div>
         {action && (
-          <div className={cx(styles.action, isHorizontal && styles.horizontal)}>
+          <div
+            className={clsx(styles.action, isHorizontal && styles.horizontal)}
+          >
             {action}
           </div>
         )}

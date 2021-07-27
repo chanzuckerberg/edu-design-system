@@ -3,7 +3,7 @@ import CloseIcon from "../SVGIcon/Icons/Close";
 import { BannerIcon as Icon } from "../Banner";
 import React from "react";
 import Text from "../Text";
-import cx from "classnames";
+import clsx from "clsx";
 import styles from "./Toast.module.css";
 // TODO: extract into a shared utility for Toast and Banner
 
@@ -61,7 +61,7 @@ export default function Toast({
 }: Props) {
   return (
     <div
-      className={cx(
+      className={clsx(
         className,
         styles.toastDialog,
         color === "success" && styles.colorSuccess,
