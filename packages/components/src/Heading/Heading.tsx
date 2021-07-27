@@ -22,16 +22,26 @@ type Props = {
   weight?: TypographyProps<HeadingElement>["weight"];
 };
 
-const Heading = forwardRef<HTMLElement, Props>(({ as, children, size, /**
-   * Components that wrap typography sometimes require props such as
-   * event handlers, tabIndex, etc. to be passed down into the element.
-   * TODO: add better typing or documentation for optional props,
-   * e.g. React.HTMLAttributes<HTMLHeadingElement>
-   */ ...rest }: Props, ref) => (
-  <Typography as={as || size} size={size} ref={ref} {...rest}>
-    {children}
-  </Typography>
-));
+const Heading = forwardRef<HTMLElement, Props>(
+  (
+    {
+      as,
+      children,
+      size,
+      /**
+       * Components that wrap typography sometimes require props such as
+       * event handlers, tabIndex, etc. to be passed down into the element.
+       * TODO: add better typing or documentation for optional props,
+       * e.g. React.HTMLAttributes<HTMLHeadingElement>
+       */ ...rest
+    }: Props,
+    ref,
+  ) => (
+    <Typography as={as || size} size={size} ref={ref} {...rest}>
+      {children}
+    </Typography>
+  ),
+);
 
 Heading.displayName = "Heading"; // Satisfy eslint.
 

@@ -1,0 +1,8 @@
+# Ensure that all files have line feeds for line endings, so that they're consistent regardless of
+# which platform a change was developed on.
+* text=auto eol=lf
+
+# Identify Yarn 2 releases and plugins as binary content.
+# https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
+/.yarn/releases/** binary
+/.yarn/plugins/** binary

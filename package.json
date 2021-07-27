@@ -1,23 +1,26 @@
 {
-  "name": "@chanzuckerberg/czedi-kit",
-  "version": "0.0.0",
+  "name": "edu-design-system",
+  "private": true,
   "description": "Learning Platform Design System",
   "main": "index.js",
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "build": "NODE_ENV=production lerna run build",
+    "build": "NODE_ENV=production yarn workspaces foreach run build",
+    "create-component": "plop",
     "create-releases": "lerna version --no-push --conventional-commits --message 'chore(release): %s'",
-    "lint": "npm run lint:styles && npm run lint:scripts",
-    "lint:fix": "npm run lint:styles:fix && npm run lint:scripts:fix",
+    "lint": "yarn run lint:styles && yarn run lint:scripts",
+    "lint:fix": "yarn run lint:styles:fix && yarn run lint:scripts:fix",
     "lint:styles": "stylelint --ignore-path .gitignore packages/**/*.{css,js,jsx,ts,tsx}",
-    "lint:styles:fix": "npm run lint:styles -- --fix",
+    "lint:styles:fix": "yarn run lint:styles --fix",
     "lint:scripts": "eslint --ignore-path .gitignore --ext=js,jsx,ts,tsx .",
-    "lint:scripts:fix": "npm run lint:scripts -- --fix",
-    "postinstall": "lerna bootstrap",
+    "lint:scripts:fix": "yarn run lint:scripts --fix",
     "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx}\"",
     "publish-releases": "lerna publish from-git --no-push",
-    "start": "lerna run build --ignore=@chanzuckerberg/eds-components && lerna run start --parallel",
-    "test": "lerna run test",
-    "types": "lerna run types"
+    "start": "yarn workspaces foreach run start",
+    "test": "yarn workspaces foreach run test",
+    "types": "yarn workspaces foreach run types"
   },
   "size-limit": [
     {
@@ -33,20 +36,8 @@
       "webpack": false
     }
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/chanzuckerberg/edu-design-system.git"
-  },
-  "keywords": [
-    "CZI",
-    "Learning Platform"
-  ],
   "author": "CZI",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/chanzuckerberg/edu-design-system/issues"
-  },
-  "homepage": "https://github.com/chanzuckerberg/edu-design-system#readme",
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
@@ -55,7 +46,6 @@
     "@typescript-eslint/eslint-plugin": "^4.15.1",
     "@typescript-eslint/parser": "^4.15.1",
     "classnames": "^2.2.6",
-    "codecov": "^3.8.1",
     "eslint": "^7.20.0",
     "eslint-config-prettier": "^8.0.0",
     "eslint-plugin-jest": "^22.21.0",

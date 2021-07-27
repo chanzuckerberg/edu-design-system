@@ -18,16 +18,26 @@ type Props = {
   weight?: TypographyProps<TextElement>["weight"];
 };
 
-const Text = forwardRef<HTMLElement, Props>(({ as, children, size = "body", /**
-   * Components that wrap typography sometimes requires props such as event handlers
-   * to be passed down into the element. One example is the tooltip component.  It
-   * attaches a onHover and onFocus event to the element to determine when to
-   * trigger the overlay.
-   */ ...rest }: Props, ref) => (
-  <Typography as={as || "p"} ref={ref} size={size} {...rest}>
-    {children}
-  </Typography>
-));
+const Text = forwardRef<HTMLElement, Props>(
+  (
+    {
+      as,
+      children,
+      size = "body",
+      /**
+       * Components that wrap typography sometimes requires props such as event handlers
+       * to be passed down into the element. One example is the tooltip component.  It
+       * attaches a onHover and onFocus event to the element to determine when to
+       * trigger the overlay.
+       */ ...rest
+    }: Props,
+    ref,
+  ) => (
+    <Typography as={as || "p"} ref={ref} size={size} {...rest}>
+      {children}
+    </Typography>
+  ),
+);
 
 Text.displayName = "Text"; // Satisfy eslint.
 
