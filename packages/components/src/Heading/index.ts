@@ -1,1 +1,2 @@
-export { default, HeadingElement } from "./Heading";
+export { default } from "./Heading";
+export type { HeadingElement } from "./Heading";
