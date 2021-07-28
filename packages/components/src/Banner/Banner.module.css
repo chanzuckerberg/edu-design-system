@@ -25,14 +25,7 @@
 }
 
 .dismiss {
-  @apply absolute top-1 right-1 w-12 h-12 justify-center rounded-full;
-}
-
-.dismiss:hover {
-  /* The hover transition is inherited from the Button component */
-  @apply text-white;
-
-  background-color: var(--banner-dismiss-hover-color);
+  @apply absolute top-1 right-1;
 }
 
 /* This media query is the same as tailwind's `md:` prefix. We're using a standard CSS media query

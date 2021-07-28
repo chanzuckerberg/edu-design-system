@@ -52,7 +52,7 @@ exports[`<Banner /> AlertDismissable story renders snapshot 1`] = `
   class="bannerDialog horizontal dismissable colorAlert"
 >
   <button
-    class="dismiss button variantLink colorAlert"
+    class="dismiss dismiss button variantLink colorAlert"
     type="button"
   >
     ​
@@ -165,7 +165,7 @@ exports[`<Banner /> BrandDismissable story renders snapshot 1`] = `
   class="bannerDialog horizontal dismissable colorBrand"
 >
   <button
-    class="dismiss button variantLink colorBrand"
+    class="dismiss dismiss button variantLink colorBrand"
     type="button"
   >
     ​
@@ -231,7 +231,7 @@ exports[`<Banner /> DismissableWithAction story renders snapshot 1`] = `
   class="bannerDialog horizontal dismissable colorBrand"
 >
   <button
-    class="dismiss button variantLink colorBrand"
+    class="dismiss dismiss button variantLink colorBrand"
     type="button"
   >
     ​
@@ -395,7 +395,7 @@ exports[`<Banner /> NeutralDismissable story renders snapshot 1`] = `
   class="bannerDialog horizontal dismissable colorNeutral"
 >
   <button
-    class="dismiss button variantLink colorNeutral"
+    class="dismiss dismiss button variantLink colorNeutral"
     type="button"
   >
     ​
@@ -580,7 +580,7 @@ exports[`<Banner /> SuccessDismissable story renders snapshot 1`] = `
   class="bannerDialog horizontal dismissable colorSuccess"
 >
   <button
-    class="dismiss button variantLink colorSuccess"
+    class="dismiss dismiss button variantLink colorSuccess"
     type="button"
   >
     ​
@@ -689,7 +689,7 @@ exports[`<Banner /> VerticalDismissable story renders snapshot 1`] = `
   class="bannerDialog dismissable colorBrand"
 >
   <button
-    class="dismiss button variantLink colorBrand"
+    class="dismiss dismiss button variantLink colorBrand"
     type="button"
   >
     ​
@@ -755,7 +755,7 @@ exports[`<Banner /> VerticalDismissableWithAction story renders snapshot 1`] = `
   class="bannerDialog dismissable colorBrand"
 >
   <button
-    class="dismiss button variantLink colorBrand"
+    class="dismiss dismiss button variantLink colorBrand"
     type="button"
   >
     ​
@@ -974,7 +974,7 @@ exports[`<Banner /> WarningDismissable story renders snapshot 1`] = `
   class="bannerDialog horizontal dismissable colorWarning"
 >
   <button
-    class="dismiss button variantLink colorWarning"
+    class="dismiss dismiss button variantLink colorWarning"
     type="button"
   >
     ​

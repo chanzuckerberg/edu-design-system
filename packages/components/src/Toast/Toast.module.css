@@ -12,18 +12,6 @@
   grid-template-columns: min-content 1fr;
 }
 
-/* TODO: consolidate dismiss button styles with the Banner styles */
-.dismiss {
-  @apply w-12 h-12 justify-center rounded-full;
-
-  /* TODO: test motion-safe with new Clickable motion-reduce change */
-  @apply hover:text-white motion-safe:transition ease-out;
-}
-
-.dismiss:hover {
-  background-color: var(--dismiss-hover-color);
-}
-
 /* TODO: consolidate color styles with the Banner styles */
 .colorSuccess {
   @apply text-success-700 bg-success-100;
