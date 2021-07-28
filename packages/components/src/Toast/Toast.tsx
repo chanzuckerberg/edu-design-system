@@ -1,5 +1,4 @@
-import Button from "../Button";
-import CloseIcon from "../Icons/Close";
+import NotificationDismissButton from "../NotificationDismissButton";
 import NotificationIcon from "../common/Notifications/NotificationIcon";
 import React from "react";
 import Text from "../Text";
@@ -27,23 +26,6 @@ type Props = {
    */
   onDismiss?: () => void;
 };
-
-type DismissButtonProps = {
-  color: Color;
-  onDismiss: () => void;
-};
-
-// TODO: consolidate with Banner dismiss button
-const DismissButton = ({ color, onDismiss }: DismissButtonProps) => (
-  <Button
-    className={styles.dismiss}
-    color={color}
-    onClick={onDismiss}
-    variant="link"
-  >
-    <CloseIcon role="img" size="32px" title="close" />
-  </Button>
-);
 
 /**
  * A toast used to provide information on the state of the page, usually in response to a
@@ -74,7 +56,13 @@ export default function Toast({
           {children}
         </Text>
       </div>
-      {onDismiss && <DismissButton color={color} onDismiss={onDismiss} />}
+      {onDismiss && (
+        <NotificationDismissButton
+          color={color}
+          onDismiss={onDismiss}
+          size="32px"
+        />
+      )}
     </div>
   );
 }

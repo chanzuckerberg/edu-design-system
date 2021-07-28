@@ -1,6 +1,5 @@
 import Heading, { HeadingElement } from "../Heading";
-import Button from "../Button";
-import CloseIcon from "../Icons/Close";
+import NotificationDismissButton from "../NotificationDismissButton";
 import NotificationIcon from "../common/Notifications/NotificationIcon";
 import React from "react";
 import Text from "../Text";
@@ -44,22 +43,6 @@ type Props = {
    */
   elevation?: 0 | 1;
 };
-
-type DismissButtonProps = {
-  color: BannerColor;
-  onDismiss: () => void;
-};
-
-const DismissButton = ({ color, onDismiss }: DismissButtonProps) => (
-  <Button
-    className={styles.dismiss}
-    color={color}
-    onClick={onDismiss}
-    variant="link"
-  >
-    <CloseIcon role="img" size="28px" title="close" />
-  </Button>
-);
 
 /**
  * This should import a Heading element type
@@ -116,7 +99,14 @@ export default function Banner({
         color === "alert" && styles.colorAlert,
       )}
     >
-      {onDismiss && <DismissButton color={color} onDismiss={onDismiss} />}
+      {onDismiss && (
+        <NotificationDismissButton
+          className={styles.dismiss}
+          color={color}
+          onDismiss={onDismiss}
+          size="28px"
+        />
+      )}
 
       <NotificationIcon variant={color} />
 
