@@ -1,9 +1,9 @@
+import * as ColorTokens from "@chanzuckerberg/eds-tokens/ts/colors";
 import * as allIcons from "./Icons";
 import React from "react";
 import type { Story } from "@storybook/react";
 import SvgIcon from "./SvgIcon";
 import Text from "../Text";
-import Tokens from "@chanzuckerberg/eds-tokens/json/variables.json";
 import styles from "./SvgIcon.stories.module.css";
 
 export default {
@@ -31,13 +31,7 @@ export default {
     color: {
       control: {
         type: "select",
-        options: [
-          "currentColor",
-          // TODO: replace with fixed exports of js colors from '@chanzuckerberg/eds-tokens'
-          ...Object.keys(Tokens).filter((key) => {
-            return key.startsWith("LegacyColor") || key.startsWith("EdsColor");
-          }),
-        ],
+        options: ["currentColor", ...Object.keys(ColorTokens)],
       },
     },
   },
@@ -49,7 +43,7 @@ type Args = React.ComponentProps<typeof SvgIcon> & {
 
 const Template: Story<Args> = ({ icon, color, ...rest }) => {
   const Icon = allIcons[icon];
-  const computedColor = color && Tokens[color];
+  const computedColor = color && ColorTokens[color];
   return <Icon {...rest} color={computedColor} />;
 };
 
