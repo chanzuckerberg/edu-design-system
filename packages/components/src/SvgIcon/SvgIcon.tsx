@@ -24,12 +24,6 @@ interface IconPropsBase {
    */
   color?: string;
   /**
-   * The role of the icon.
-   * "img" requires a title prop also being passed in
-   * "presentation" should not have a title prop because it will be hidden from screenreaders
-   */
-  role: "img" | "presentation";
-  /**
    * Width/Height string (px, rem, em, vh, etc.)
    * Recommendation: use "EdsSizeLineHeight" tokens from
    * @chanzuckerberg/eds-tokens/json/variables.json
