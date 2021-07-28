@@ -29,13 +29,13 @@
 }
 
 .dismiss {
-  /* TODO: motion-safe does not seem to be stopping the animation when
-     the user has the reduce motion accessibility setting on */
   @apply absolute top-1 right-1 w-12 h-12 justify-center rounded-full;
-  @apply hover:text-white motion-safe:transition ease-out;
 }
 
 .dismiss:hover {
+  /* The hover transition is inherited from the Button component */
+  @apply text-white;
+
   background-color: var(--banner-dismiss-hover-color);
 }
 
