@@ -1,6 +1,6 @@
 import React from "react";
 import clsx from "clsx";
-import styles from "./SVGIcon.module.css";
+import styles from "./SvgIcon.module.css";
 
 interface IconPropsBase {
   /**
@@ -50,7 +50,7 @@ interface PresentationalIconProps extends IconPropsBase {
   role: "presentation";
 }
 
-export type SVGIconProps = PresentationalIconProps | FunctionalIconProps;
+export type SvgIconProps = PresentationalIconProps | FunctionalIconProps;
 
 export type IconProps =
   | Omit<PresentationalIconProps, "children">
@@ -65,7 +65,7 @@ interface SvgStyle extends React.CSSProperties {
  *
  * If you're looking for specific icon components, look in the `./Icons` directory.
  */
-function SVGIcon(props: SVGIconProps) {
+function SvgIcon(props: SvgIconProps) {
   const {
     block = false,
     children,
@@ -107,4 +107,4 @@ function SVGIcon(props: SVGIconProps) {
   }
 }
 
-export default SVGIcon;
+export default SvgIcon;

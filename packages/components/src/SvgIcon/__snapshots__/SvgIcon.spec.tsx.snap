@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<SVGIcon /> CustomColor story renders snapshot 1`] = `
+exports[`<SvgIcon /> CustomColor story renders snapshot 1`] = `
 <svg
   class="svgIcon"
   fill="#928CFF"
@@ -14,7 +14,7 @@ exports[`<SVGIcon /> CustomColor story renders snapshot 1`] = `
 </svg>
 `;
 
-exports[`<SVGIcon /> CustomViewBox story renders snapshot 1`] = `
+exports[`<SvgIcon /> CustomViewBox story renders snapshot 1`] = `
 <svg
   class="svgIcon"
   fill="currentColor"
@@ -28,7 +28,7 @@ exports[`<SVGIcon /> CustomViewBox story renders snapshot 1`] = `
 </svg>
 `;
 
-exports[`<SVGIcon /> FullScreen story renders snapshot 1`] = `
+exports[`<SvgIcon /> FullScreen story renders snapshot 1`] = `
 <svg
   class="svgIcon"
   fill="currentColor"
@@ -45,7 +45,7 @@ exports[`<SVGIcon /> FullScreen story renders snapshot 1`] = `
 </svg>
 `;
 
-exports[`<SVGIcon /> InText story renders snapshot 1`] = `
+exports[`<SvgIcon /> InText story renders snapshot 1`] = `
 <p
   class="typography sizeH1 colorBase"
 >
@@ -95,7 +95,7 @@ exports[`<SVGIcon /> InText story renders snapshot 1`] = `
 </p>
 `;
 
-exports[`<SVGIcon /> Large story renders snapshot 1`] = `
+exports[`<SvgIcon /> Large story renders snapshot 1`] = `
 <svg
   class="svgIcon"
   fill="currentColor"
@@ -112,7 +112,7 @@ exports[`<SVGIcon /> Large story renders snapshot 1`] = `
 </svg>
 `;
 
-exports[`<SVGIcon /> Medium story renders snapshot 1`] = `
+exports[`<SvgIcon /> Medium story renders snapshot 1`] = `
 <svg
   class="svgIcon"
   fill="currentColor"
@@ -129,7 +129,7 @@ exports[`<SVGIcon /> Medium story renders snapshot 1`] = `
 </svg>
 `;
 
-exports[`<SVGIcon /> Small story renders snapshot 1`] = `
+exports[`<SvgIcon /> Small story renders snapshot 1`] = `
 <svg
   class="svgIcon"
   fill="currentColor"
