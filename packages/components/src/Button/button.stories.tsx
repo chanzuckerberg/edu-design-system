@@ -83,12 +83,22 @@ linkWithIcon.args = {
   color: "success",
   variant: "link",
 };
+linkWithIcon.parameters = {
+  axe: {
+    disabledRules: ["aria-allowed-role"],
+  },
+};
 
 export const outlineWithIcon = Template.bind(null);
 outlineWithIcon.args = {
   children: <>Outline with icon {heartIcon}</>,
   color: "warning",
   variant: "outline",
+};
+outlineWithIcon.parameters = {
+  axe: {
+    disabledRules: ["aria-allowed-role"],
+  },
 };
 
 export const withFakeClassName = Template.bind(null);
