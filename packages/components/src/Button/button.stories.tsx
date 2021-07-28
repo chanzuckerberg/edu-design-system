@@ -1,5 +1,5 @@
 import Button from "./button";
-import { CheckCircle } from "../SvgIcon/Icons";
+import { CheckCircle } from "../Icons";
 import React from "react";
 import { Story } from "@storybook/react/types-6-0";
 import Text from "../Text";
@@ -76,7 +76,7 @@ export const linkWithIcon = Template.bind(null);
 linkWithIcon.args = {
   children: (
     <>
-      Link with icon <CheckCircle role="presentation" />
+      Link with icon <CheckCircle type="decorative" />
     </>
   ),
   color: "success",
@@ -87,7 +87,7 @@ export const outlineWithIcon = Template.bind(null);
 outlineWithIcon.args = {
   children: (
     <>
-      Outline with icon <CheckCircle role="presentation" />
+      Outline with icon <CheckCircle type="decorative" />
     </>
   ),
   color: "warning",
