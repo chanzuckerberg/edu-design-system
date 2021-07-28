@@ -1,14 +1,14 @@
 import * as allIcons from "./Icons";
 import React from "react";
-import SVGIcon from "./SVGIcon";
 import type { Story } from "@storybook/react";
+import SvgIcon from "./SvgIcon";
 import Text from "../Text";
 import Tokens from "@chanzuckerberg/eds-tokens/json/variables.json";
-import styles from "./SVGIcon.stories.module.css";
+import styles from "./SvgIcon.stories.module.css";
 
 export default {
-  title: "SVGIcon - WIP",
-  component: SVGIcon,
+  title: "SvgIcon - WIP",
+  component: SvgIcon,
 
   argTypes: {
     icon: {
@@ -43,7 +43,7 @@ export default {
   },
 };
 
-type Args = React.ComponentProps<typeof SVGIcon> & {
+type Args = React.ComponentProps<typeof SvgIcon> & {
   icon: keyof typeof allIcons;
 };
 
@@ -60,7 +60,7 @@ const defaultArgs = {
 
 export const Small = Template.bind(null);
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore todo: figure out SVGIcon types
+// @ts-ignore todo: figure out SvgIcon types
 Small.args = {
   ...defaultArgs,
   size: "1em",
@@ -68,7 +68,7 @@ Small.args = {
 
 export const Medium = Template.bind(null);
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore todo: figure out SVGIcon types
+// @ts-ignore todo: figure out SvgIcon types
 Medium.args = {
   ...defaultArgs,
   size: "2em",
@@ -76,7 +76,7 @@ Medium.args = {
 
 export const Large = Template.bind(null);
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore todo: figure out SVGIcon types
+// @ts-ignore todo: figure out SvgIcon types
 Large.args = {
   ...defaultArgs,
   size: "4em",
@@ -84,7 +84,7 @@ Large.args = {
 
 export const FullScreen = Template.bind(null);
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore todo: figure out SVGIcon types
+// @ts-ignore todo: figure out SvgIcon types
 FullScreen.args = {
   ...defaultArgs,
   size: "min(100%, 100vh)",
@@ -98,7 +98,7 @@ FullScreen.parameters = {
 
 export const CustomColor = Template.bind(null);
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore todo: figure out SVGIcon types
+// @ts-ignore todo: figure out SvgIcon types
 CustomColor.args = {
   ...defaultArgs,
   color: "EdsColorBrand400",
@@ -106,7 +106,7 @@ CustomColor.args = {
 
 export const CustomViewBox = Template.bind(null);
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore todo: figure out SVGIcon types
+// @ts-ignore todo: figure out SvgIcon types
 CustomViewBox.args = {
   ...defaultArgs,
   viewBox: "4 4 16 16",

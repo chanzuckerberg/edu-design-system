@@ -1,13 +1,13 @@
 import Heading, { HeadingElement } from "../Heading";
 import Button from "../Button";
-import CheckCircleIcon from "../SVGIcon/Icons/CheckCircle";
-import CloseIcon from "../SVGIcon/Icons/Close";
-import ForumIcon from "../SVGIcon/Icons/Forum";
-import NotificationsIcon from "../SVGIcon/Icons/Notifications";
+import CheckCircleIcon from "../SvgIcon/Icons/CheckCircle";
+import CloseIcon from "../SvgIcon/Icons/Close";
+import ForumIcon from "../SvgIcon/Icons/Forum";
+import NotificationsIcon from "../SvgIcon/Icons/Notifications";
 import React from "react";
-import SentimentVeryDissatisfiedIcon from "../SVGIcon/Icons/SentimentVeryDissatisfied";
+import SentimentVeryDissatisfiedIcon from "../SvgIcon/Icons/SentimentVeryDissatisfied";
 import Text from "../Text";
-import WarningIcon from "../SVGIcon/Icons/Warning";
+import WarningIcon from "../SvgIcon/Icons/Warning";
 import clsx from "clsx";
 import styles from "./Banner.module.css";
 
