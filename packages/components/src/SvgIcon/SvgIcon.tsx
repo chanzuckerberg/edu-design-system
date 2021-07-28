@@ -65,7 +65,6 @@ function SvgIcon(props: SvgIconProps) {
     children,
     className,
     color = "currentColor",
-    role,
     size,
     viewBox = "0 0 24 24",
   } = props;
@@ -78,7 +77,6 @@ function SvgIcon(props: SvgIconProps) {
     className: clsx(className, styles.svgIcon, block && styles.displayBlock),
     fill: color,
     height: size,
-    role,
     /**
      * height/width html properties are overriden by the defaults applied
      * to svg css class
@@ -91,13 +89,17 @@ function SvgIcon(props: SvgIconProps) {
 
   if (props.role === "img") {
     return (
-      <svg {...svgCommonProps}>
+      <svg {...svgCommonProps} role="img">
         <title>{props.title}</title>
         {children}
       </svg>
     );
   } else {
-    return <svg {...svgCommonProps}>{children}</svg>;
+    return (
+      <svg {...svgCommonProps} aria-hidden>
+        {children}
+      </svg>
+    );
   }
 }
 

@@ -35,12 +35,6 @@ export default {
       },
     },
   },
-
-  parameters: {
-    axe: {
-      disabledRules: ["aria-allowed-role"],
-    },
-  },
 };
 
 type Args = React.ComponentProps<typeof SvgIcon> & {
@@ -84,7 +78,7 @@ FullScreen.args = {
 
 FullScreen.parameters = {
   axe: {
-    disabledRules: ["aria-allowed-role", "scrollable-region-focusable"],
+    disabledRules: ["scrollable-region-focusable"],
   },
 };
 
@@ -150,7 +144,7 @@ AllIcons.parameters = {
     skip: true,
   },
   axe: {
-    disabledRules: ["aria-allowed-role", "scrollable-region-focusable"],
+    disabledRules: ["scrollable-region-focusable"],
   },
   controls: {
     hideNoControlsWarning: true,
