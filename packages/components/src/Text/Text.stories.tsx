@@ -21,7 +21,6 @@ const Template: Story<Args> = (args) => <Text {...args} />;
 
 export const Body = Template.bind(null);
 Body.args = {
-  size: "body",
   children: "Body paragraph 16/24",
 };
 
@@ -53,7 +52,6 @@ export const BodyColorInfoBold = Template.bind(null);
 BodyColorInfoBold.args = {
   children: "Info color body text, bold",
   color: "info",
-  size: "body",
   weight: "bold",
 };
 
@@ -66,5 +64,4 @@ export const TextColorInherit: Story<Args> = (args) => (
 TextColorInherit.args = {
   children: "Child Text",
   color: "inherit",
-  size: "body",
 };
