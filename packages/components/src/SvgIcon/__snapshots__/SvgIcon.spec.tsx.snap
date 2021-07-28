@@ -2,9 +2,9 @@
 
 exports[`<SvgIcon /> CustomColor story renders snapshot 1`] = `
 <svg
+  aria-hidden="true"
   class="svgIcon"
   fill="#928CFF"
-  role="presentation"
   viewBox="0 0 24 24"
   xmlns="http://www.w3.org/2000/svg"
 >
@@ -16,9 +16,9 @@ exports[`<SvgIcon /> CustomColor story renders snapshot 1`] = `
 
 exports[`<SvgIcon /> CustomViewBox story renders snapshot 1`] = `
 <svg
+  aria-hidden="true"
   class="svgIcon"
   fill="currentColor"
-  role="presentation"
   viewBox="4 4 16 16"
   xmlns="http://www.w3.org/2000/svg"
 >
@@ -30,10 +30,10 @@ exports[`<SvgIcon /> CustomViewBox story renders snapshot 1`] = `
 
 exports[`<SvgIcon /> FullScreen story renders snapshot 1`] = `
 <svg
+  aria-hidden="true"
   class="svgIcon"
   fill="currentColor"
   height="min(100%, 100vh)"
-  role="presentation"
   style="--svg-icon-size: min(100%, 100vh);"
   viewBox="0 0 24 24"
   width="min(100%, 100vh)"
@@ -97,10 +97,10 @@ exports[`<SvgIcon /> InText story renders snapshot 1`] = `
 
 exports[`<SvgIcon /> Large story renders snapshot 1`] = `
 <svg
+  aria-hidden="true"
   class="svgIcon"
   fill="currentColor"
   height="4em"
-  role="presentation"
   style="--svg-icon-size: 4em;"
   viewBox="0 0 24 24"
   width="4em"
@@ -114,10 +114,10 @@ exports[`<SvgIcon /> Large story renders snapshot 1`] = `
 
 exports[`<SvgIcon /> Medium story renders snapshot 1`] = `
 <svg
+  aria-hidden="true"
   class="svgIcon"
   fill="currentColor"
   height="2em"
-  role="presentation"
   style="--svg-icon-size: 2em;"
   viewBox="0 0 24 24"
   width="2em"
@@ -131,10 +131,10 @@ exports[`<SvgIcon /> Medium story renders snapshot 1`] = `
 
 exports[`<SvgIcon /> Small story renders snapshot 1`] = `
 <svg
+  aria-hidden="true"
   class="svgIcon"
   fill="currentColor"
   height="1em"
-  role="presentation"
   style="--svg-icon-size: 1em;"
   viewBox="0 0 24 24"
   width="1em"
