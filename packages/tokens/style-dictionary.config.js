@@ -51,6 +51,18 @@ const EDSStyleDictionary = StyleDictionary.extend({
             },
           },
         },
+        {
+          format: "javascript/es6",
+          destination: "ts/colors.ts",
+          options: {
+            showFileHeader: false,
+          },
+          filter: {
+            attributes: {
+              type: "color",
+            },
+          },
+        },
       ],
     },
     json: {
