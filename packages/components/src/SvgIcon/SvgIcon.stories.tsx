@@ -17,10 +17,10 @@ export default {
         options: Object.keys(allIcons),
       },
     },
-    role: {
+    type: {
       control: {
         type: "radio",
-        options: ["img", "presentation"],
+        options: ["informative", "decorative"],
       },
     },
     size: {
@@ -49,7 +49,7 @@ const Template: Story<Args> = ({ icon, color, ...rest }) => {
 
 const defaultArgs = {
   icon: Object.keys(allIcons)[0] as keyof typeof allIcons,
-  role: "presentation" as const,
+  role: "decorative" as const,
 };
 
 export const Small = Template.bind(null);
@@ -100,11 +100,11 @@ export const InText = ({ icon, ...rest }: Args) => {
   return (
     <Text size="h1">
       The svg icon defaults to the surrounding text size (
-      <Icon {...rest} role="img" title="icon with 1em line height" />, 1em), but
-      often looks better with the line height (
+      <Icon {...rest} type="informative" title="icon with 1em line height" />,
+      1em), but often looks better with the line height (
       <Icon
         {...rest}
-        role="img"
+        type="informative"
         title="icon with 2em line height"
         size="2rem"
       />
@@ -130,7 +130,7 @@ export const AllIcons = () => {
     <ul className={styles.allIcons}>
       {Object.entries(allIcons).map(([name, Icon]: [string, any]) => (
         <li className={styles.iconCell} key={name}>
-          <Icon block role="presentation" size="2rem" />
+          <Icon block type="decorative" size="2rem" />
           <Text as="span" size="sm">
             {name}
           </Text>

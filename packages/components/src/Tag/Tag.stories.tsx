@@ -62,12 +62,12 @@ OutlineVariants.args = {
 export const WithIcon = Template.bind(null);
 WithIcon.args = {
   ...defaultArgs,
-  icon: <WarningIcon key="icon" role="img" title="warning" />,
+  icon: <WarningIcon key="icon" type="informative" title="warning" />,
 };
 
 export const WithLongTextAndIcon = Template.bind(null);
 WithLongTextAndIcon.args = {
   ...defaultArgs,
   children: "This tag has a really long text message",
-  icon: <WarningIcon key="icon" role="img" title="warning" />,
+  icon: <WarningIcon key="icon" type="informative" title="warning" />,
 };

@@ -35,20 +35,33 @@ interface IconPropsBase {
   viewBox?: string;
 }
 
-interface FunctionalIconProps extends IconPropsBase {
-  role: "img";
+interface InformativeIconProps extends IconPropsBase {
+  /**
+   * The role of the icon.
+   *
+   * Use "informative" when the icon **_does_** provide additional meaning to other text on the
+   * page. You'll be required to pass in a title to label the icon.
+   */
+  type: "informative";
   title: string;
 }
 
-interface PresentationalIconProps extends IconPropsBase {
-  role: "presentation";
+interface DecorativeIconProps extends IconPropsBase {
+  /**
+   * The role of the icon.
+   *
+   * Use "decorative" when the icon **_does not_** provide any additional context or meaning to
+   * associated text. Basically the icon is for show and people don't need it to understand what's
+   * on the page.
+   */
+  type: "decorative";
 }
 
-export type SvgIconProps = PresentationalIconProps | FunctionalIconProps;
+export type SvgIconProps = DecorativeIconProps | InformativeIconProps;
 
 export type IconProps =
-  | Omit<PresentationalIconProps, "children">
-  | Omit<FunctionalIconProps, "children">;
+  | Omit<DecorativeIconProps, "children">
+  | Omit<InformativeIconProps, "children">;
 
 interface SvgStyle extends React.CSSProperties {
   "--svg-icon-size"?: string;
@@ -87,7 +100,7 @@ function SvgIcon(props: SvgIconProps) {
     xmlns: "http://www.w3.org/2000/svg",
   };
 
-  if (props.role === "img") {
+  if (props.type === "informative") {
     return (
       <svg {...svgCommonProps} role="img">
         <title>{props.title}</title>

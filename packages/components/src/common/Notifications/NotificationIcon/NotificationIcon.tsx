@@ -53,7 +53,7 @@ const NotificationIcon = ({ variant }: Props) => {
 
   return (
     <div className={iconAssets.style}>
-      <iconAssets.icon role="img" title={iconAssets.title} />
+      <iconAssets.icon type="informative" title={iconAssets.title} />
     </div>
   );
 };
