@@ -1,5 +1,5 @@
 import Button from "../Button";
-import CloseIcon from "../SvgIcon/Icons/Close";
+import CloseIcon from "../Icons/Close";
 import { BannerIcon as Icon } from "../Banner";
 import React from "react";
 import Text from "../Text";
