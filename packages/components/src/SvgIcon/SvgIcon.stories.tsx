@@ -1,5 +1,5 @@
 import * as ColorTokens from "@chanzuckerberg/eds-tokens/ts/colors";
-import * as allIcons from "./Icons";
+import * as allIcons from "../Icons";
 import React from "react";
 import type { Story } from "@storybook/react";
 import SvgIcon from "./SvgIcon";
