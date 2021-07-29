@@ -20,9 +20,10 @@
     "url": "git+https://github.com/chanzuckerberg/edu-design-system.git"
   },
   "scripts": {
-    "build": "npm run build:clean && npm run build:js && npm run build:styles && npm run build:types",
+    "build": "npm run build:clean && npm run build:js && npm run build:styles && npm run build:types && npm run build:finish",
     "build:clean": "rm -rf dist/",
-    "build:js": "babel src -d dist --extensions '.js,.jsx,.ts,.tsx' --ignore src/**/*.spec.ts,src/**/*.spec.tsx --ignore src/**/*.stories.ts,src/**/*.stories.tsx",
+    "build:finish": "rm dist/**/*.spec.* dist/**/*.stories.*",
+    "build:js": "babel src -d dist --extensions '.js,.jsx,.ts,.tsx'",
     "build:styles": "postcss \"src/**/*.css\" --dir dist/ --base src/ --verbose",
     "build:types": "tsc --project . --declaration --emitDeclarationOnly && ./generateFlowTypes.sh",
     "build:watch": "npm run build:js -- --watch",
