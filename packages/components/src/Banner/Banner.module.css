@@ -12,10 +12,6 @@
   --svg-icon-size-default: 2.5rem;
 }
 
-.icon {
-  @apply justify-self-center;
-}
-
 .textAndAction {
   @apply flex flex-col justify-between gap-4;
 }
