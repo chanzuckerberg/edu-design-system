@@ -1,2 +1,2 @@
 export { default } from "./Banner";
-export { BannerColor } from "./Banner";
+export type { BannerColor } from "./Banner";
