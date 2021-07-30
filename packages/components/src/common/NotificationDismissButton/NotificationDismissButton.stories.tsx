@@ -17,7 +17,7 @@ const Template: Story<Args> = (args) => (
 );
 
 const defaultArgs = {
-  size: "32px",
+  size: "2rem",
   color: "brand" as const,
 };
 

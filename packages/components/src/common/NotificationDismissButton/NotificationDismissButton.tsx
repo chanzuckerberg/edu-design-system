@@ -16,7 +16,7 @@ type DismissButtonProps = {
    * Size of the icon. Does not button size. The button is larger than the
    * icon to ensure the hit box is large enough (for accessibility).
    *
-   * The string should be some number + px, rem, em, vh, etc. Ex: 28px.
+   * The string should be some number + px, rem, em, vh, etc. Ex: 2rem.
    * Recommendation: use "EdsSizeLineHeight" tokens from
    * @chanzuckerberg/eds-tokens/json/variables.json
    */
