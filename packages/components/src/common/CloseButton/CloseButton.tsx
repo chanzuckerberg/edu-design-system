@@ -11,7 +11,7 @@ type CloseButtonProps = {
    * The default color of the icon. Does not effect hover state.
    */
   color: BannerColor;
-  onDismiss: () => void;
+  onClose: () => void;
   /**
    * Size of the icon. Does not button size. The button is larger than the
    * icon to ensure the hit box is large enough (for accessibility).
@@ -24,21 +24,16 @@ type CloseButtonProps = {
 };
 
 /**
- * Dismiss button for notification banners and toasts.
+ * Close button for notification banners and toasts.
  *
- * Consumers need to set the --dismiss-hover-color variable in their styles
+ * Consumers need to set the --close-hover-color variable in their styles
  * in order for the hover state to work correctly.
  */
-const CloseButton = ({
-  className,
-  color,
-  onDismiss,
-  size,
-}: CloseButtonProps) => (
+const CloseButton = ({ className, color, onClose, size }: CloseButtonProps) => (
   <Button
-    className={clsx(styles.dismiss, className)}
+    className={clsx(styles.close, className)}
     color={color}
-    onClick={onDismiss}
+    onClick={onClose}
     variant="link"
   >
     <CloseIcon role="img" size={size} title="close" />

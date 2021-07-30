@@ -103,7 +103,7 @@ export default function Banner({
         <CloseButton
           className={styles.dismiss}
           color={color}
-          onDismiss={onDismiss}
+          onClose={onDismiss}
           size="28px"
         />
       )}
