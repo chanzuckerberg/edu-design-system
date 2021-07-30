@@ -7,5 +7,5 @@
   @apply text-white;
 
   /* --dismiss-hover-color variable should be set in the consumer's styles */
-  background-color: var(--banner-dismiss-hover-color);
+  background-color: var(--dismiss-hover-color);
 }
