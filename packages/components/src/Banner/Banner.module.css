@@ -3,12 +3,12 @@
   @apply relative;
   @apply grid gap-4;
 
-  border-color: var(--banner-border-light-color);
+  border-color: var(--border-light-color);
 
   /* Mobile-only styles */
   @apply text-center border-t-4;
 
-  border-top-color: var(--banner-border-dark-color);
+  border-top-color: var(--border-dark-color);
   --svg-icon-size-default: 2.5rem;
 }
 
@@ -39,8 +39,8 @@
     /* Left border is thicker and a darker color than the surrounding border on desktop */
     @apply border border-l-4;
 
-    border-left-color: var(--banner-border-dark-color);
-    border-top-color: var(--banner-border-light-color);
+    border-left-color: var(--border-dark-color);
+    border-top-color: var(--border-light-color);
 
     /* This makes the icon the same size as the header line height, which helps it look centered */
     --svg-icon-size-default: 1.5rem;
@@ -63,51 +63,11 @@
   }
 }
 
-.colorBrand {
-  --banner-border-light-color: var(--eds-color-brand-200);
-  --banner-border-dark-color: var(--eds-color-brand-500);
-  --close-hover-color: var(--eds-color-brand-600);
-
-  @apply text-brand-700 bg-brand-100;
-}
-
-.colorNeutral {
-  --banner-border-light-color: var(--eds-color-neutral-200);
-  --banner-border-dark-color: var(--eds-color-neutral-500);
-  --close-hover-color: var(--eds-color-neutral-600);
-
-  @apply text-neutral-700 bg-neutral-100;
-}
-
-.colorSuccess {
-  --banner-border-light-color: var(--eds-color-success-200);
-  --banner-border-dark-color: var(--eds-color-success-500);
-  --close-hover-color: var(--eds-color-success-600);
-
-  @apply text-success-700 bg-success-100;
-}
-
-.colorWarning {
-  --banner-border-light-color: var(--eds-color-warning-200);
-  --banner-border-dark-color: var(--eds-color-warning-500);
-  --close-hover-color: var(--eds-color-warning-600);
-
-  @apply text-warning-700 bg-warning-100;
-}
-
-.colorAlert {
-  --banner-border-light-color: var(--eds-color-alert-200);
-  --banner-border-dark-color: var(--eds-color-alert-500);
-  --close-hover-color: var(--eds-color-alert-600);
-
-  @apply text-alert-700 bg-alert-100;
-}
-
 .elevation0 {
   /* Instead of removing the border, we replace it with a transparent one.
      On windows high contrast mode, the background color will be removed,
      but this border will become 100% opacity black to retain visual separation */
-  --banner-border-light-color: transparent;
+  --border-light-color: transparent;
 
   @apply shadow-none;
 }

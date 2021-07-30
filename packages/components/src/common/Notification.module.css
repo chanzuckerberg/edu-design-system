@@ -1,0 +1,34 @@
+.colorBrand {
+  @apply text-brand-700 bg-brand-100;
+  --border-light-color: var(--eds-color-brand-200);
+  --border-dark-color: var(--eds-color-brand-500);
+  --dismiss-hover-color: var(--eds-color-brand-600);
+}
+
+.colorNeutral {
+  @apply text-neutral-700 bg-neutral-100;
+  --border-light-color: var(--eds-color-neutral-200);
+  --border-dark-color: var(--eds-color-neutral-500);
+  --dismiss-hover-color: var(--eds-color-neutral-600);
+}
+
+.colorSuccess {
+  @apply text-success-700 bg-success-100;
+  --border-light-color: var(--eds-color-success-200);
+  --border-dark-color: var(--eds-color-success-500);
+  --dismiss-hover-color: var(--eds-color-success-600);
+}
+
+.colorWarning {
+  @apply text-warning-700 bg-warning-100;
+  --border-light-color: var(--eds-color-warning-200);
+  --border-dark-color: var(--eds-color-warning-500);
+  --dismiss-hover-color: var(--eds-color-warning-600);
+}
+
+.colorAlert {
+  @apply text-alert-700 bg-alert-100;
+  --border-light-color: var(--eds-color-alert-200);
+  --border-dark-color: var(--eds-color-alert-500);
+  --dismiss-hover-color: var(--eds-color-alert-600);
+}

@@ -2,6 +2,8 @@
   @apply w-full max-w-100 pl-4 pr-2 grid gap-2 items-center;
   @apply border border-l-4 rounded shadow-1;
 
+  border-color: var(--border-light-color);
+  border-left-color: var(--border-dark-color);
   grid-template-columns: 1fr min-content;
   --svg-icon-size-default: 1.25rem;
 }
@@ -10,23 +12,4 @@
   @apply py-4 grid gap-4 items-center;
 
   grid-template-columns: min-content 1fr;
-}
-
-/* TODO: consolidate color styles with the Banner styles */
-.colorSuccess {
-  @apply text-success-700 bg-success-100;
-
-  /* Left border is thicker and a darker color than the surrounding border */
-  border-color: var(--eds-color-success-200);
-  border-left-color: var(--eds-color-success-500);
-  --close-hover-color: var(--eds-color-success-600);
-}
-
-.colorAlert {
-  @apply text-alert-700 bg-alert-100;
-
-  /* Left border is thicker and a darker color than the surrounding border */
-  border-color: var(--eds-color-alert-200);
-  border-left-color: var(--eds-color-alert-500);
-  --close-hover-color: var(--eds-color-alert-600);
 }

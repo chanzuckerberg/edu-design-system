@@ -3,6 +3,7 @@ import NotificationIcon from "../common/Notifications/NotificationIcon";
 import React from "react";
 import Text from "../Text";
 import clsx from "clsx";
+import colorStyles from "../common/Notification.module.css";
 import styles from "./Toast.module.css";
 
 export type Color = "success" | "alert";
@@ -45,8 +46,8 @@ export default function Toast({
       className={clsx(
         className,
         styles.toastDialog,
-        color === "success" && styles.colorSuccess,
-        color === "alert" && styles.colorAlert,
+        color === "success" && colorStyles.colorSuccess,
+        color === "alert" && colorStyles.colorAlert,
       )}
       {...rest}
     >
