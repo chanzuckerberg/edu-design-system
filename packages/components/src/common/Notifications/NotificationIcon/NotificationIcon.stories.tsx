@@ -10,7 +10,7 @@ import styles from "./NotificationIcon.stories.module.css";
 const variants = Object.keys(variantToIconAssetsMap) as BannerColor[];
 
 export default {
-  title: "common/NotificationIcon",
+  title: "common/Notifications/NotificationIcon",
   component: NotificationIcon,
 };
 
