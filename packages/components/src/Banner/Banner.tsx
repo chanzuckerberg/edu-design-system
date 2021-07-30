@@ -6,6 +6,7 @@ import CloseButton from "../common/CloseButton";
 import React from "react";
 import Text from "../Text";
 import clsx from "clsx";
+import colorStyles from "../common/Notification.module.css";
 import styles from "./Banner.module.css";
 
 type Props = {
@@ -44,25 +45,6 @@ type Props = {
   elevation?: 0 | 1;
 };
 
-<<<<<<< HEAD
-=======
-type DismissButtonProps = {
-  color: BannerColor;
-  onDismiss: () => void;
-};
-
-const DismissButton = ({ color, onDismiss }: DismissButtonProps) => (
-  <Button
-    className={styles.dismiss}
-    color={color}
-    onClick={onDismiss}
-    variant="link"
-  >
-    <CloseIcon role="img" size="28px" title="close" />
-  </Button>
-);
-
->>>>>>> a65fb35... chore(banner): split BannerIcon into separate file
 /**
  * This should import a Heading element type
  */
@@ -111,11 +93,11 @@ export default function Banner({
         elevation === 0 && styles.elevation0,
         onDismiss && styles.dismissable,
         // Color props
-        color === "brand" && styles.colorBrand,
-        color === "neutral" && styles.colorNeutral,
-        color === "success" && styles.colorSuccess,
-        color === "warning" && styles.colorWarning,
-        color === "alert" && styles.colorAlert,
+        color === "brand" && colorStyles.colorBrand,
+        color === "neutral" && colorStyles.colorNeutral,
+        color === "success" && colorStyles.colorSuccess,
+        color === "warning" && colorStyles.colorWarning,
+        color === "alert" && colorStyles.colorAlert,
       )}
     >
       {onDismiss && (
