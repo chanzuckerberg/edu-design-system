@@ -7,7 +7,7 @@
 }
 
 .content {
-  @apply py-4 grid gap-4;
+  @apply py-4 grid gap-4 items-center;
 
   grid-template-columns: min-content 1fr;
 }
