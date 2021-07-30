@@ -3,7 +3,7 @@ import NotificationIcon from "../common/Notifications/NotificationIcon";
 import React from "react";
 import Text from "../Text";
 import clsx from "clsx";
-import colorStyles from "../common/Notification.module.css";
+import colorStyles from "../common/Notifications/Notification.module.css";
 import styles from "./Toast.module.css";
 
 export type Color = "success" | "alert";
