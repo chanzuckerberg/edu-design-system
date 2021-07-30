@@ -5,7 +5,7 @@ import React from "react";
 import clsx from "clsx";
 import styles from "./NotificationDismissButton.module.css";
 
-type DismissButtonProps = {
+type NotificationDismissButtonProps = {
   className?: string;
   /**
    * The default color of the icon. Does not effect hover state.
@@ -29,12 +29,12 @@ type DismissButtonProps = {
  * Consumers need to set the --dismiss-hover-color variable in their styles
  * in order for the hover state to work correctly.
  */
-const DismissButton = ({
+const NotificationDismissButton = ({
   className,
   color,
   onDismiss,
   size,
-}: DismissButtonProps) => (
+}: NotificationDismissButtonProps) => (
   <Button
     className={clsx(styles.dismiss, className)}
     color={color}
@@ -45,4 +45,4 @@ const DismissButton = ({
   </Button>
 );
 
-export default DismissButton;
+export default NotificationDismissButton;
