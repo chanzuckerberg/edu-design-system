@@ -1,11 +1,11 @@
-import { BannerColor } from "../../../Banner";
-import Button from "../../../Button";
-import CloseIcon from "../../../Icons/Close";
+import { BannerColor } from "../../Banner";
+import Button from "../../Button";
+import CloseIcon from "../../Icons/Close";
 import React from "react";
 import clsx from "clsx";
-import styles from "./NotificationDismissButton.module.css";
+import styles from "./CloseButton.module.css";
 
-type NotificationDismissButtonProps = {
+type CloseButtonProps = {
   className?: string;
   /**
    * The default color of the icon. Does not effect hover state.
@@ -29,12 +29,12 @@ type NotificationDismissButtonProps = {
  * Consumers need to set the --dismiss-hover-color variable in their styles
  * in order for the hover state to work correctly.
  */
-const NotificationDismissButton = ({
+const CloseButton = ({
   className,
   color,
   onDismiss,
   size,
-}: NotificationDismissButtonProps) => (
+}: CloseButtonProps) => (
   <Button
     className={clsx(styles.dismiss, className)}
     color={color}
@@ -45,4 +45,4 @@ const NotificationDismissButton = ({
   </Button>
 );
 
-export default NotificationDismissButton;
+export default CloseButton;

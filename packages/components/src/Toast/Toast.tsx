@@ -1,4 +1,4 @@
-import NotificationDismissButton from "../common/Notifications/NotificationDismissButton";
+import CloseButton from "../common/CloseButton";
 import NotificationIcon from "../common/Notifications/NotificationIcon";
 import React from "react";
 import Text from "../Text";
@@ -57,11 +57,7 @@ export default function Toast({
         </Text>
       </div>
       {onDismiss && (
-        <NotificationDismissButton
-          color={color}
-          onDismiss={onDismiss}
-          size="32px"
-        />
+        <CloseButton color={color} onDismiss={onDismiss} size="32px" />
       )}
     </div>
   );

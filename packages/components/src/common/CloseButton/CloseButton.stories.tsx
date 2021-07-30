@@ -1,18 +1,18 @@
-import NotificationDismissButton from "./NotificationDismissButton";
+import CloseButton from "./CloseButton";
 import React from "react";
 import { Story } from "@storybook/react/types-6-0";
-import styles from "./NotificationDismissButton.stories.module.css";
+import styles from "./CloseButton.stories.module.css";
 
 export default {
-  title: "common/Notifications/NotificationDismissButton",
-  component: NotificationDismissButton,
+  title: "common/CloseButton",
+  component: CloseButton,
 };
 
-type Args = React.ComponentProps<typeof NotificationDismissButton>;
+type Args = React.ComponentProps<typeof CloseButton>;
 
 const Template: Story<Args> = (args) => (
   <div className={styles.dismiss}>
-    <NotificationDismissButton {...args} className={styles.dismiss} />
+    <CloseButton {...args} className={styles.dismiss} />
   </div>
 );
 

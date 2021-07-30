@@ -1,5 +1,5 @@
 import Heading, { HeadingElement } from "../Heading";
-import NotificationDismissButton from "../common/Notifications/NotificationDismissButton";
+import CloseButton from "../common/CloseButton";
 import NotificationIcon from "../common/Notifications/NotificationIcon";
 import React from "react";
 import Text from "../Text";
@@ -100,7 +100,7 @@ export default function Banner({
       )}
     >
       {onDismiss && (
-        <NotificationDismissButton
+        <CloseButton
           className={styles.dismiss}
           color={color}
           onDismiss={onDismiss}
