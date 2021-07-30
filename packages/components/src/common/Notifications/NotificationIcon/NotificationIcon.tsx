@@ -45,7 +45,7 @@ export const variantToIconAssetsMap = {
 
 /**
  * An icon that appears in notifcation components (Banner and Toast).
- * This icon communicates the tone of the notification and is through its image,
+ * This icon communicates the tone of the notification through its image,
  * color, and title text.
  */
 const NotificationIcon = ({ variant }: Props) => {
