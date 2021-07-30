@@ -1,5 +1,5 @@
 import Heading, { HeadingElement } from "../Heading";
-import NotificationDismissButton from "../common/NotificationDismissButton";
+import NotificationDismissButton from "../common/Notifications/NotificationDismissButton";
 import NotificationIcon from "../common/Notifications/NotificationIcon";
 import React from "react";
 import Text from "../Text";

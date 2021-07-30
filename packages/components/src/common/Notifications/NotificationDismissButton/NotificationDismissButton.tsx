@@ -1,6 +1,6 @@
-import { BannerColor } from "../../Banner";
-import Button from "../../Button";
-import CloseIcon from "../../Icons/Close";
+import { BannerColor } from "../../../Banner";
+import Button from "../../../Button";
+import CloseIcon from "../../../Icons/Close";
 import React from "react";
 import clsx from "clsx";
 import styles from "./NotificationDismissButton.module.css";
