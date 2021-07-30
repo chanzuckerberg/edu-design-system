@@ -1,7 +1,7 @@
 import Heading, { HeadingElement } from "../Heading";
 import Button from "../Button";
 import CloseIcon from "../Icons/Close";
-import NotificationIcon from "../common/NotificationIcon";
+import NotificationIcon from "../common/Notifications/NotificationIcon";
 import React from "react";
 import Text from "../Text";
 import clsx from "clsx";

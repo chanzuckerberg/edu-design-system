@@ -1,11 +1,11 @@
 import * as React from "react";
 
-import { BannerColor } from "../../Banner";
-import CheckCircleIcon from "../../Icons/CheckCircle";
-import DangerousRoundedIcon from "../../Icons/DangerousRounded";
-import ForumIcon from "../../Icons/Forum";
-import NotificationsIcon from "../../Icons/Notifications";
-import WarningIcon from "../../Icons/Warning";
+import { BannerColor } from "../../../Banner";
+import CheckCircleIcon from "../../../Icons/CheckCircle";
+import DangerousRoundedIcon from "../../../Icons/DangerousRounded";
+import ForumIcon from "../../../Icons/Forum";
+import NotificationsIcon from "../../../Icons/Notifications";
+import WarningIcon from "../../../Icons/Warning";
 import styles from "./NotificationIcon.module.css";
 
 type Props = {
