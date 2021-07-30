@@ -70,7 +70,7 @@ exports[`<Toast /> Dismissable story renders snapshot 1`] = `
     </p>
   </div>
   <button
-    class="dismiss button variantLink colorSuccess"
+    class="close button variantLink colorSuccess"
     type="button"
   >
     ​
