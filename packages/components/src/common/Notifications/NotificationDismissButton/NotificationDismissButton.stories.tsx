@@ -4,7 +4,7 @@ import { Story } from "@storybook/react/types-6-0";
 import styles from "./NotificationDismissButton.stories.module.css";
 
 export default {
-  title: "common/NotificationDismissButton",
+  title: "common/Notifications/NotificationDismissButton",
   component: NotificationDismissButton,
 };
 
