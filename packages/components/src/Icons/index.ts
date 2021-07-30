@@ -8,5 +8,7 @@ export { default as CheckCircle } from "./CheckCircle";
 export { default as Close } from "./Close";
 export { default as Forum } from "./Forum";
 export { default as Notifications } from "./Notifications";
-export { default as SentimentVeryDissatisfied } from "./SentimentVeryDissatisfied";
 export { default as Warning } from "./Warning";
+
+// custom SVGs not found in https://material-ui.com/components/material-icons/
+export { default as DangerousRounded } from "./custom/DangerousRounded";

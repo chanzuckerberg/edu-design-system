@@ -2,10 +2,10 @@ import Heading, { HeadingElement } from "../Heading";
 import Button from "../Button";
 import CheckCircleIcon from "../Icons/CheckCircle";
 import CloseIcon from "../Icons/Close";
+import DangerousRoundedIcon from "../Icons/custom/DangerousRounded";
 import ForumIcon from "../Icons/Forum";
 import NotificationsIcon from "../Icons/Notifications";
 import React from "react";
-import SentimentVeryDissatisfiedIcon from "../Icons/SentimentVeryDissatisfied";
 import Text from "../Text";
 import WarningIcon from "../Icons/Warning";
 import clsx from "clsx";
@@ -73,8 +73,7 @@ export const BannerIcon = ({ color }: { color: Color }) => {
       title: "warning",
     },
     alert: {
-      // TODO: get final icon
-      icon: SentimentVeryDissatisfiedIcon,
+      icon: DangerousRoundedIcon,
       style: styles.iconAlert,
       title: "alert",
     },
