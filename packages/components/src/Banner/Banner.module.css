@@ -66,7 +66,7 @@
 .colorBrand {
   --banner-border-light-color: var(--eds-color-brand-200);
   --banner-border-dark-color: var(--eds-color-brand-500);
-  --banner-dismiss-hover-color: var(--eds-color-brand-600);
+  --dismiss-hover-color: var(--eds-color-brand-600);
 
   @apply text-brand-700 bg-brand-100;
 }
@@ -74,7 +74,7 @@
 .colorNeutral {
   --banner-border-light-color: var(--eds-color-neutral-200);
   --banner-border-dark-color: var(--eds-color-neutral-500);
-  --banner-dismiss-hover-color: var(--eds-color-neutral-600);
+  --dismiss-hover-color: var(--eds-color-neutral-600);
 
   @apply text-neutral-700 bg-neutral-100;
 }
@@ -82,7 +82,7 @@
 .colorSuccess {
   --banner-border-light-color: var(--eds-color-success-200);
   --banner-border-dark-color: var(--eds-color-success-500);
-  --banner-dismiss-hover-color: var(--eds-color-success-600);
+  --dismiss-hover-color: var(--eds-color-success-600);
 
   @apply text-success-700 bg-success-100;
 }
@@ -90,7 +90,7 @@
 .colorWarning {
   --banner-border-light-color: var(--eds-color-warning-200);
   --banner-border-dark-color: var(--eds-color-warning-500);
-  --banner-dismiss-hover-color: var(--eds-color-warning-600);
+  --dismiss-hover-color: var(--eds-color-warning-600);
 
   @apply text-warning-700 bg-warning-100;
 }
@@ -98,7 +98,7 @@
 .colorAlert {
   --banner-border-light-color: var(--eds-color-alert-200);
   --banner-border-dark-color: var(--eds-color-alert-500);
-  --banner-dismiss-hover-color: var(--eds-color-alert-600);
+  --dismiss-hover-color: var(--eds-color-alert-600);
 
   @apply text-alert-700 bg-alert-100;
 }

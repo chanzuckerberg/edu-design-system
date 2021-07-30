@@ -1,4 +1,4 @@
-import NotificationDismissButton from "../NotificationDismissButton";
+import NotificationDismissButton from "../common/NotificationDismissButton";
 import NotificationIcon from "../common/Notifications/NotificationIcon";
 import React from "react";
 import Text from "../Text";
