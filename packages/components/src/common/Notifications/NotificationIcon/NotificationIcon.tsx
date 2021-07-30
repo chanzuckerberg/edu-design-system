@@ -15,7 +15,6 @@ type Props = {
   variant: BannerColor;
 };
 
-// TODO: get final titles
 export const variantToIconAssetsMap = {
   brand: {
     icon: NotificationsIcon,
