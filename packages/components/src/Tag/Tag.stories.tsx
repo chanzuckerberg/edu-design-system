@@ -2,7 +2,7 @@ import Tag, { stylesByColor } from "./Tag";
 import type { Color } from "./Tag";
 import React from "react";
 import type { Story } from "@storybook/react";
-import WarningIcon from "../Icons/Warning";
+import WarningRoundedIcon from "../Icons/WarningRounded";
 import styles from "./Tag.stories.module.css";
 
 // todo (Andrew): look into getting rid of the `as` cast. The `stylesByColor` object's keys are
@@ -62,12 +62,12 @@ OutlineVariants.args = {
 export const WithIcon = Template.bind(null);
 WithIcon.args = {
   ...defaultArgs,
-  icon: <WarningIcon key="icon" purpose="informative" title="warning" />,
+  icon: <WarningRoundedIcon key="icon" purpose="informative" title="warning" />,
 };
 
 export const WithLongTextAndIcon = Template.bind(null);
 WithLongTextAndIcon.args = {
   ...defaultArgs,
   children: "This tag has a really long text message",
-  icon: <WarningIcon key="icon" purpose="informative" title="warning" />,
+  icon: <WarningRoundedIcon key="icon" purpose="informative" title="warning" />,
 };
