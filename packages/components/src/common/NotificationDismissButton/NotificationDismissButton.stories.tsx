@@ -4,7 +4,7 @@ import { Story } from "@storybook/react/types-6-0";
 import styles from "./NotificationDismissButton.stories.module.css";
 
 export default {
-  title: "NotificationDismissButton",
+  title: "common/NotificationDismissButton",
   component: NotificationDismissButton,
 };
 
@@ -12,7 +12,7 @@ type Args = React.ComponentProps<typeof NotificationDismissButton>;
 
 const Template: Story<Args> = (args) => (
   <div className={styles.dismiss}>
-    <NotificationDismissButton {...args} />
+    <NotificationDismissButton {...args} className={styles.dismiss} />
   </div>
 );
 
