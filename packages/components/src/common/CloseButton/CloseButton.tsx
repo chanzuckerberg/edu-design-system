@@ -1,6 +1,6 @@
-import { BannerColor } from "../../Banner";
 import Button from "../../Button";
-import CloseIcon from "../../Icons/Close";
+import CloseRoundedIcon from "../../Icons/CloseRounded";
+import { NotificationVariant } from "../Notifications/NotificationIcon";
 import React from "react";
 import clsx from "clsx";
 import styles from "./CloseButton.module.css";
@@ -10,7 +10,7 @@ type CloseButtonProps = {
   /**
    * The default color of the icon. Does not effect hover state.
    */
-  color: BannerColor;
+  color: NotificationVariant;
   onClose: () => void;
   /**
    * Size of the icon. Does not button size. The button is larger than the
@@ -36,7 +36,7 @@ const CloseButton = ({ className, color, onClose, size }: CloseButtonProps) => (
     onClick={onClose}
     variant="link"
   >
-    <CloseIcon purpose="informative" size={size} title="close" />
+    <CloseRoundedIcon purpose="informative" size={size} title="close" />
   </Button>
 );
 

@@ -1,38 +1,44 @@
 import * as React from "react";
 
-import { BannerColor } from "../../../Banner";
-import CheckCircleIcon from "../../../Icons/CheckCircle";
+import CheckCircleRoundedIcon from "../../../Icons/CheckCircleRounded";
 import DangerousRoundedIcon from "../../../Icons/custom/DangerousRounded";
-import ForumIcon from "../../../Icons/Forum";
-import NotificationsIcon from "../../../Icons/Notifications";
-import WarningIcon from "../../../Icons/Warning";
+import ForumRoundedIcon from "../../../Icons/ForumRounded";
+import NotificationsRoundedIcon from "../../../Icons/NotificationsRounded";
+import WarningRoundedIcon from "../../../Icons/WarningRounded";
 import styles from "./NotificationIcon.module.css";
+
+export type NotificationVariant =
+  | "brand"
+  | "neutral"
+  | "success"
+  | "warning"
+  | "alert";
 
 type Props = {
   /**
    * Which variant to use. Each variant has a unique icon and color.
    */
-  variant: BannerColor;
+  variant: NotificationVariant;
 };
 
 export const variantToIconAssetsMap = {
   brand: {
-    icon: NotificationsIcon,
+    icon: NotificationsRoundedIcon,
     style: styles.iconBrand,
     title: "attention",
   },
   neutral: {
-    icon: ForumIcon,
+    icon: ForumRoundedIcon,
     style: styles.iconNeutral,
     title: "notice",
   },
   success: {
-    icon: CheckCircleIcon,
+    icon: CheckCircleRoundedIcon,
     style: styles.iconSuccess,
     title: "success",
   },
   warning: {
-    icon: WarningIcon,
+    icon: WarningRoundedIcon,
     style: styles.iconWarning,
     title: "warning",
   },

@@ -1,12 +1,12 @@
 import Heading, { HeadingElement } from "../Heading";
+import NotificationIcon, {
+  NotificationVariant,
+} from "../common/Notifications/NotificationIcon";
 import CloseButton from "../common/CloseButton";
-import NotificationIcon from "../common/Notifications/NotificationIcon";
 import React from "react";
 import Text from "../Text";
 import clsx from "clsx";
 import styles from "./Banner.module.css";
-
-export type BannerColor = "brand" | "neutral" | "success" | "warning" | "alert";
 
 type Props = {
   /**
@@ -16,7 +16,7 @@ type Props = {
   /**
    * The color of the banner, based on EDS defined colors. Also determines the icon used.
    */
-  color?: BannerColor;
+  color?: NotificationVariant;
   /**
    * The contents of the banner in addition to the icon
    */

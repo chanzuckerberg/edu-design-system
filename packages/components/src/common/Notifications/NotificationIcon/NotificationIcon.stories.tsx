@@ -1,13 +1,15 @@
 import * as React from "react";
-import NotificationIcon, { variantToIconAssetsMap } from "./NotificationIcon";
-import { BannerColor } from "../../../Banner";
+import NotificationIcon, {
+  NotificationVariant,
+  variantToIconAssetsMap,
+} from "./NotificationIcon";
 import { Story } from "@storybook/react/types-6-0";
 import Text from "../../../Text";
 import styles from "./NotificationIcon.stories.module.css";
 
 // todo (Andrew): look into getting rid of the `as` cast. The `stylesByColor` object's keys are
 // members of Color. Can TypeScript understand that?
-const variants = Object.keys(variantToIconAssetsMap) as BannerColor[];
+const variants = Object.keys(variantToIconAssetsMap) as NotificationVariant[];
 
 export default {
   title: "common/Notifications/NotificationIcon",
