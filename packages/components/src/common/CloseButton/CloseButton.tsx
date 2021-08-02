@@ -36,7 +36,7 @@ const CloseButton = ({ className, color, onClose, size }: CloseButtonProps) => (
     onClick={onClose}
     variant="link"
   >
-    <CloseIcon type="informative" size={size} title="close" />
+    <CloseIcon purpose="informative" size={size} title="close" />
   </Button>
 );
 

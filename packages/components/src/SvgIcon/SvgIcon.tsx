@@ -42,7 +42,7 @@ interface InformativeIconProps extends IconPropsBase {
    * Use "informative" when the icon **_does_** provide additional meaning to other text on the
    * page. You'll be required to pass in a title to label the icon.
    */
-  type: "informative";
+  purpose: "informative";
   title: string;
 }
 
@@ -54,7 +54,7 @@ interface DecorativeIconProps extends IconPropsBase {
    * associated text. Basically the icon is for show and people don't need it to understand what's
    * on the page.
    */
-  type: "decorative";
+  purpose: "decorative";
 }
 
 export type SvgIconProps = DecorativeIconProps | InformativeIconProps;
@@ -100,7 +100,7 @@ function SvgIcon(props: SvgIconProps) {
     xmlns: "http://www.w3.org/2000/svg",
   };
 
-  if (props.type === "informative") {
+  if (props.purpose === "informative") {
     return (
       <svg {...svgCommonProps} role="img">
         <title>{props.title}</title>

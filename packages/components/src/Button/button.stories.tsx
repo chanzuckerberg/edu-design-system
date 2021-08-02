@@ -76,7 +76,7 @@ export const linkWithIcon = Template.bind(null);
 linkWithIcon.args = {
   children: (
     <>
-      Link with icon <CheckCircle type="decorative" />
+      Link with icon <CheckCircle purpose="decorative" />
     </>
   ),
   color: "success",
@@ -87,7 +87,7 @@ export const outlineWithIcon = Template.bind(null);
 outlineWithIcon.args = {
   children: (
     <>
-      Outline with icon <CheckCircle type="decorative" />
+      Outline with icon <CheckCircle purpose="decorative" />
     </>
   ),
   color: "warning",
