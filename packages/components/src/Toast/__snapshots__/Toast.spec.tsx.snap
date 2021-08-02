@@ -8,7 +8,7 @@ exports[`<Toast /> Alert story renders snapshot 1`] = `
     class="content"
   >
     <div
-      class="icon iconAlert"
+      class="iconAlert"
     >
       <svg
         class="svgIcon"
@@ -46,7 +46,7 @@ exports[`<Toast /> Dismissable story renders snapshot 1`] = `
     class="content"
   >
     <div
-      class="icon iconSuccess"
+      class="iconSuccess"
     >
       <svg
         class="svgIcon"
@@ -70,7 +70,7 @@ exports[`<Toast /> Dismissable story renders snapshot 1`] = `
     </p>
   </div>
   <button
-    class="dismiss button variantLink colorSuccess"
+    class="close button variantLink colorSuccess"
     type="button"
   >
     ​
@@ -103,7 +103,7 @@ exports[`<Toast /> Success story renders snapshot 1`] = `
     class="content"
   >
     <div
-      class="icon iconSuccess"
+      class="iconSuccess"
     >
       <svg
         class="svgIcon"

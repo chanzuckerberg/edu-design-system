@@ -1,11 +1,9 @@
-import Button from "../Button";
-import CloseIcon from "../Icons/Close";
-import { BannerIcon as Icon } from "../Banner";
+import CloseButton from "../common/CloseButton";
+import NotificationIcon from "../common/Notifications/NotificationIcon";
 import React from "react";
 import Text from "../Text";
 import clsx from "clsx";
 import styles from "./Toast.module.css";
-// TODO: extract into a shared utility for Toast and Banner
 
 export type Color = "success" | "alert";
 
@@ -28,23 +26,6 @@ type Props = {
    */
   onDismiss?: () => void;
 };
-
-type DismissButtonProps = {
-  color: Color;
-  onDismiss: () => void;
-};
-
-// TODO: consolidate with Banner dismiss button
-const DismissButton = ({ color, onDismiss }: DismissButtonProps) => (
-  <Button
-    className={styles.dismiss}
-    color={color}
-    onClick={onDismiss}
-    variant="link"
-  >
-    <CloseIcon role="img" size="32px" title="close" />
-  </Button>
-);
 
 /**
  * A toast used to provide information on the state of the page, usually in response to a
@@ -70,12 +51,14 @@ export default function Toast({
       {...rest}
     >
       <div className={styles.content}>
-        <Icon color={color} />
+        <NotificationIcon variant={color} />
         <Text color="inherit" size="sm">
           {children}
         </Text>
       </div>
-      {onDismiss && <DismissButton color={color} onDismiss={onDismiss} />}
+      {onDismiss && (
+        <CloseButton color={color} onClose={onDismiss} size="32px" />
+      )}
     </div>
   );
 }

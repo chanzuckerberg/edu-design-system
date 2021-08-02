@@ -12,10 +12,6 @@
   --svg-icon-size-default: 2.5rem;
 }
 
-.icon {
-  @apply justify-self-center;
-}
-
 .textAndAction {
   @apply flex flex-col justify-between gap-4;
 }
@@ -29,14 +25,7 @@
 }
 
 .dismiss {
-  @apply absolute top-1 right-1 w-12 h-12 justify-center rounded-full;
-}
-
-.dismiss:hover {
-  /* The hover transition is inherited from the Button component */
-  @apply text-white;
-
-  background-color: var(--banner-dismiss-hover-color);
+  @apply absolute top-1 right-1;
 }
 
 /* This media query is the same as tailwind's `md:` prefix. We're using a standard CSS media query
@@ -77,7 +66,7 @@
 .colorBrand {
   --banner-border-light-color: var(--eds-color-brand-200);
   --banner-border-dark-color: var(--eds-color-brand-500);
-  --banner-dismiss-hover-color: var(--eds-color-brand-600);
+  --close-hover-color: var(--eds-color-brand-600);
 
   @apply text-brand-700 bg-brand-100;
 }
@@ -85,7 +74,7 @@
 .colorNeutral {
   --banner-border-light-color: var(--eds-color-neutral-200);
   --banner-border-dark-color: var(--eds-color-neutral-500);
-  --banner-dismiss-hover-color: var(--eds-color-neutral-600);
+  --close-hover-color: var(--eds-color-neutral-600);
 
   @apply text-neutral-700 bg-neutral-100;
 }
@@ -93,7 +82,7 @@
 .colorSuccess {
   --banner-border-light-color: var(--eds-color-success-200);
   --banner-border-dark-color: var(--eds-color-success-500);
-  --banner-dismiss-hover-color: var(--eds-color-success-600);
+  --close-hover-color: var(--eds-color-success-600);
 
   @apply text-success-700 bg-success-100;
 }
@@ -101,7 +90,7 @@
 .colorWarning {
   --banner-border-light-color: var(--eds-color-warning-200);
   --banner-border-dark-color: var(--eds-color-warning-500);
-  --banner-dismiss-hover-color: var(--eds-color-warning-600);
+  --close-hover-color: var(--eds-color-warning-600);
 
   @apply text-warning-700 bg-warning-100;
 }
@@ -109,29 +98,9 @@
 .colorAlert {
   --banner-border-light-color: var(--eds-color-alert-200);
   --banner-border-dark-color: var(--eds-color-alert-500);
-  --banner-dismiss-hover-color: var(--eds-color-alert-600);
+  --close-hover-color: var(--eds-color-alert-600);
 
   @apply text-alert-700 bg-alert-100;
-}
-
-.iconBrand {
-  @apply text-brand-500;
-}
-
-.iconNeutral {
-  @apply text-neutral-500;
-}
-
-.iconSuccess {
-  @apply text-success-500;
-}
-
-.iconWarning {
-  @apply text-warning-500;
-}
-
-.iconAlert {
-  @apply text-alert-500;
 }
 
 .elevation0 {

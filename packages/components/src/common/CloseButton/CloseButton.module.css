@@ -1,0 +1,11 @@
+.close {
+  @apply w-12 h-12 justify-center rounded-full;
+}
+
+.close:hover {
+  /* The hover transition is inherited from the Button component */
+  @apply text-white;
+
+  /* --close-hover-color variable should be set in the consumer's styles */
+  background-color: var(--close-hover-color);
+}
