@@ -17,7 +17,7 @@ export default {
         options: Object.keys(allIcons),
       },
     },
-    type: {
+    purpose: {
       control: {
         type: "radio",
         options: ["informative", "decorative"],
@@ -100,11 +100,11 @@ export const InText = ({ icon, ...rest }: Args) => {
   return (
     <Text size="h1">
       The svg icon defaults to the surrounding text size (
-      <Icon {...rest} type="informative" title="icon with 1em line height" />,
-      1em), but often looks better with the line height (
+      <Icon {...rest} purpose="informative" title="icon with 1em line height" />
+      , 1em), but often looks better with the line height (
       <Icon
         {...rest}
-        type="informative"
+        purpose="informative"
         title="icon with 2em line height"
         size="2rem"
       />
