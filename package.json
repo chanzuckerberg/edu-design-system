@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "NODE_ENV=production lerna run build",
+    "create-releases": "lerna version --no-push --conventional-commits --message 'chore(release): %s'",
     "lint": "npm run lint:styles && npm run lint:scripts",
     "lint:fix": "npm run lint:styles:fix && npm run lint:scripts:fix",
     "lint:styles": "stylelint --ignore-path .gitignore packages/**/*.{css,js,jsx,ts,tsx}",
@@ -13,6 +14,7 @@
     "lint:scripts:fix": "npm run lint:scripts -- --fix",
     "postinstall": "lerna bootstrap",
     "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx}\"",
+    "publish-releases": "lerna publish from-git --no-push",
     "start": "lerna run build --ignore=@chanzuckerberg/eds-components && lerna run start --parallel",
     "test": "lerna run test",
     "types": "lerna run types"

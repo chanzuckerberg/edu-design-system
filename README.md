@@ -72,34 +72,11 @@ npx lerna create '@chanzuckerberg/czedi-kit-<package-name>' \
 
 ### Publishing
 
-**We are only publishing alpha pre-releases at this time**
-
 1. Confirm that all checks are green on CI.
 2. Run `git checkout main`
-3. Increment `<version>` based on the latest alpha version:
-
-```bash
-npx lerna version --no-push --conventional-commits prerelease --message "chore(release): publish v0.0.1-alpha.<version>"
-```
-
-`--no-push` ensures the commit is not auto-pushed to remote git
-
-`--conventional-commits` automatically updates the CHANGELOGs based on the commit log
-
-4. Run
-
-```bash
-npx lerna publish from-git --no-push
-```
-
-and confirm that tags/commit/changelog etc. look correct
-
-5. Push commit and tags to remote:
-
-```bash
-git push origin --tags && git push origin main
-```
-
-In the future, we should have a `publish` script to handle all of this 🤓
+3. Run `npm run create-releases` to bump the package versions, create new git tags, and create git commits. The packages are not published, yet.
+4. Confirm that the git tags, git commits, and changelog updates look correct.
+5. Run `npm run publish-releases` to publish the packages to the NPM registry.
+6. Push commits and tags to the git remote with `git push origin main --follow-tags`
 
 You could also try directly running `lerna publish --canary --preid alpha`, though this gives a commit message that doesn't follow our lint rule for conventional commits.
