@@ -1,12 +1,22 @@
-# `@chanzuckerberg/eds-components`
+# eds-components
 
-`czedi-kit-components` contains reusable components of the Design System.
+React component library of the design system.
 
 ## Setup
 
+Fist install the package.
+
+```bash
+# via npm
+npm install --save @chanzuckerberg/eds-components
+
+# or, if using Yarn
+yarn add @chanzuckerberg/eds-components
+```
+
 We currently use Arimo as our base font. This package does not export it, so you will need to import this separately. We recommend importing from Google Fonts into a top-level CSS file:
 
-```
+```css
 @import url("https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap");
 ```
 
@@ -30,8 +40,16 @@ body {
 
 ## Usage
 
-```
-const czediKitComponents = require('@chanzuckerberg/eds-components');
+Import any of the components from this package
 
-// TODO: DEMONSTRATE API
+```js
+import {Heading} from '@chanzuckerberg/eds-components';
+```
+
+and then use them in your React components
+
+```jsx
+<Heading color="neutral" size="h2">
+  Coffee!
+</Heading>
 ```
