@@ -2,73 +2,24 @@
 
 ![Test CI](https://github.com/chanzuckerberg/edu-design-system/workflows/Test%20CI/badge.svg)
 
-This is the Learning Platform Design System or `@chanzuckerberg/czedi-kit` (working title).
+The [Education Initiative](https://chanzuckerberg.com/education/)'s design system packages.
 
 ## Development
 
-### Node
+### Requirements
 
-Install the version of node specified in the `.node-version` file.
+- Node - if using [nodenv](https://github.com/nodenv/nodenv), you can install the right version with `nodenv install`
+- NPM - comes with Node
 
-If using [nodenv](https://github.com/nodenv/nodenv) and [node-build](https://github.com/nodenv/node-build), this can be done by running `nodenv install`.
+### Helpful commands
 
-### Installation
-
-```bash
-npm install
-npx lerna bootstrap
-```
-
-### Linting
-
-```bash
-npm run lint
-```
-
-or to fix any issues
-
-```bash
-npm run lint:fix
-```
-
-### Run Locally
-
-```bash
-npm start
-```
-
-### Build Packages
-
-To build all packages you can run
-
-```bash
-npx lerna run build
-```
-
-### Add a new component
-From the directory root, run
-```bash
-plop
-```
-and enter the component name.
-
-If you get an error message with `command not found: plop`, try
-```bash
-npx plop
-```
-and enter the component name.
-
-This will generated a few files for your new component to help you get started.
-
-### Adding a new package
-
-This isn't something we'll be doing every day
-
-```bash
-npx lerna create '@chanzuckerberg/czedi-kit-<package-name>' \
-  --access="restricted" \
-  --license="UNLICENSED"
-```
+Description | Command
+----------- | -------
+Install dependencies | `npm install && npx lerna bootstrap`
+Run linter | `npm run lint`
+Run linter and fix all fixable issues | `npm run lint:fix`
+Build packages | `npm run build`
+Run the component generator | `npx plop`
 
 ### Publishing
 
