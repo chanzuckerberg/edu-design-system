@@ -59,6 +59,19 @@ interface DecorativeIconProps extends IconPropsBase {
 
 export type SvgIconProps = DecorativeIconProps | InformativeIconProps;
 
+/**
+ * SvgIcon props, except `children`. Useful for creating specific icon components.
+ *
+ * @example
+ *
+ * function CircleIcon(props: IconProps) {
+ *   return (
+ *     <SvgIcon {...props}>
+ *       <circle cx="50" cy="50" r="50" />
+ *     </SvgIcon>
+ *   )
+ * }
+ */
 export type IconProps =
   | Omit<DecorativeIconProps, "children">
   | Omit<InformativeIconProps, "children">;
