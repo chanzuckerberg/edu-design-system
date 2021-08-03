@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.1.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.0.1-alpha.15...v0.1.0) (2021-08-02)
+
+
+### Bug Fixes
+
+* use aria-hidden to hide icons from screen readers ([b656013](https://github.com/chanzuckerberg/edu-design-system/commit/b656013bd9bc602d6cbc81f7da215d53cf893a8c)), closes [d7032b482f0988/lib/commons/aria/index.js#L1462-L1488](https://github.com/d7032b482f0988/lib/commons/aria/index.js/issues/L1462-L1488)
+
+
+### Features
+
+* use "informative" and "decorative" as the type of icons ([6148291](https://github.com/chanzuckerberg/edu-design-system/commit/614829143a3bbb15b443644b497f81aec7092fab))
+* **icons:** add DangerousRounded for notifications ([20dac4e](https://github.com/chanzuckerberg/edu-design-system/commit/20dac4e8471c0a7665d302f7b4690975bdbe12e9))
+* allow <Button> to take a data-testid prop ([2256f72](https://github.com/chanzuckerberg/edu-design-system/commit/2256f723bc90cb934389a4f75afa0d87edd47b3c))
+* **banner:** copy Banner component from traject ([abe0275](https://github.com/chanzuckerberg/edu-design-system/commit/abe0275003576b59d06512f8ae5736e10b22958e))
+* **svgicon:** copy over SvgIcon + 6 icons from traject ([b47b1c6](https://github.com/chanzuckerberg/edu-design-system/commit/b47b1c6a62685680bf0d323c227c8486fb4ad072))
+* **tag:** copy Tag over from traject ([de30e3e](https://github.com/chanzuckerberg/edu-design-system/commit/de30e3e9efc5b96628dd089434f928497d3d4704))
+* **toast:** copy Toast from traject ([d17448c](https://github.com/chanzuckerberg/edu-design-system/commit/d17448c36c5c25f2754e4ffa49d321365d51735c))
+
+
+
+
+
 ## [0.0.1-alpha.15](https://github.com/chanzuckerberg/edu-design-system/compare/v0.0.1-alpha.14...v0.0.1-alpha.15) (2021-07-23)
 
 ### Features
