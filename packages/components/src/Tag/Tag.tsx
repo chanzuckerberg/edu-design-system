@@ -31,6 +31,10 @@ type Props = {
    */
   children: React.ReactNode;
   /**
+   * Additional case-specific styling
+   */
+  className?: string;
+  /**
    * The tag icon (shouldn't provide color or size since those are determined
    * by the color prop).
    */
@@ -44,11 +48,12 @@ type Props = {
 /**
  * This component provides a tag (pill shaped badge) wrapper.
  */
-function Tag({ color, children, icon, variant = "flat" }: Props) {
+function Tag({ color, children, className, icon, variant = "flat" }: Props) {
   return (
     <Text
       as="span"
       className={clsx(
+        className,
         styles.tag,
         color && stylesByColor[color],
         variant === "outline" && styles.outline,
