@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.1](https://github.com/chanzuckerberg/edu-design-system/compare/v0.1.0...v0.1.1) (2021-08-05)
+
+
+### Features
+
+* **tag:** add optional ClassName attribute ([cdfa32a](https://github.com/chanzuckerberg/edu-design-system/commit/cdfa32a52f1ec50d796a11bc71041d4cb131ae1e))
+* export <SvgIcon> from @chanzuckerberg/eds-components ([fe3bd3c](https://github.com/chanzuckerberg/edu-design-system/commit/fe3bd3c59556e35f570dd6390b0fd28c5c7b2286))
+* tell Webpack that eds-components has no side effects ([64cc782](https://github.com/chanzuckerberg/edu-design-system/commit/64cc782a20afefb6d326bb15d80072b8b64d23eb))
+* **icons:** add custom Campaign icon ([46b8f32](https://github.com/chanzuckerberg/edu-design-system/commit/46b8f320b84c80528b7b24ecf68c03cd335e94ce))
+* **icons:** add material-ui rounded icons from ui kit-alpha ([b38274b](https://github.com/chanzuckerberg/edu-design-system/commit/b38274b67c26ceef0e849b42620cbae657d8e790))
+
+
+
+
+
 # [0.1.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.0.1-alpha.15...v0.1.0) (2021-08-02)
 
 
