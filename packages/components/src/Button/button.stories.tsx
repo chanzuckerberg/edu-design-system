@@ -7,6 +7,23 @@ import { Story } from "@storybook/react/types-6-0";
 import Text from "../Text";
 import styles from "./button.stories.module.css";
 
+const sizes: Array<ButtonProps["size"]> = ["small", "medium", "large"];
+const allColors: Array<ButtonProps["color"]> = [
+  "alert",
+  "brand",
+  "neutral",
+  "success",
+  "warning",
+];
+const variants: Array<ButtonProps["variant"]> = ["flat", "outline", "link"];
+const states: Array<ClickableProps<"button">["state"] | "disabled"> = [
+  "inactive",
+  "hover",
+  "focus",
+  "active",
+  "disabled",
+];
+
 export default {
   title: "Button",
   component: Button,
@@ -14,6 +31,12 @@ export default {
     children: {
       control: {
         type: "text",
+      },
+    },
+    color: {
+      control: {
+        type: "radio",
+        options: allColors,
       },
     },
   },
@@ -127,23 +150,6 @@ const gridParameters = {
     skip: true,
   },
 };
-
-const sizes: Array<ButtonProps["size"]> = ["small", "medium", "large"];
-const allColors: Array<ButtonProps["color"]> = [
-  "alert",
-  "brand",
-  "neutral",
-  "success",
-  "warning",
-];
-const variants: Array<ButtonProps["variant"]> = ["flat", "outline", "link"];
-const states: Array<ClickableProps<"button">["state"] | "disabled"> = [
-  "inactive",
-  "hover",
-  "focus",
-  "active",
-  "disabled",
-];
 
 const renderSize = (
   size: ButtonProps["size"],
