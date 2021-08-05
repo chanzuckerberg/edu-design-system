@@ -13,6 +13,7 @@ const Template: Story<Args> = (args: Args) => <Toast {...args} />;
 
 const defaultArgs = {
   children: "You've got toast!",
+  onDismiss: () => console.log("dismissed!"),
 };
 
 export const Success = Template.bind(null);
@@ -27,9 +28,9 @@ Alert.args = {
   color: "alert",
 };
 
-export const Dismissable = Template.bind(null);
-Dismissable.args = {
+export const NotDismissable = Template.bind(null);
+NotDismissable.args = {
   ...defaultArgs,
   color: "success",
-  onDismiss: () => console.log("dismissed!"),
+  onDismiss: undefined,
 };
