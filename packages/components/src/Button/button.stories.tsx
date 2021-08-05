@@ -20,23 +20,21 @@ type Args = React.ComponentProps<typeof Button>;
 
 const Template: Story<Args> = (args) => <Button {...args} />;
 
-export const flat = Template.bind(null);
-flat.args = {
+export const Flat = Template.bind(null);
+Flat.args = {
   children: "Flat Button",
-  color: "success",
   variant: "flat",
 };
 
-export const outline = Template.bind(null);
-outline.args = {
+export const Outline = Template.bind(null);
+Outline.args = {
   children: "Outline Button",
   variant: "outline",
 };
 
-export const link = Template.bind(null);
-link.args = {
+export const Link = Template.bind(null);
+Link.args = {
   children: "Link Button",
-  color: "alert",
   variant: "link",
 };
 
