@@ -1,8 +1,11 @@
-import Button from "./button";
+import Button, { ButtonProps } from "./button";
+import Clickable, { ClickableProps } from "../Clickable";
 import CheckCircleRoundedIcon from "../Icons/CheckCircleRounded";
+import Heading from "../Heading";
 import React from "react";
 import { Story } from "@storybook/react/types-6-0";
 import Text from "../Text";
+import styles from "./button.stories.module.css";
 
 export default {
   title: "Button",
@@ -98,4 +101,97 @@ withFakeClassName.args = {
   color: "warning",
   variant: "outline",
   className: "fake-className",
+};
+
+// Show grids with all variants
+
+const gridParameters = {
+  axe: {
+    skip: true,
+  },
+  snapshot: {
+    skip: true,
+  },
+};
+
+const sizes: Array<ButtonProps["size"]> = ["small", "medium", "large"];
+const allColors: Array<ButtonProps["color"]> = [
+  "alert",
+  "brand",
+  "neutral",
+  "success",
+  "warning",
+];
+const variants: Array<ButtonProps["variant"]> = ["flat", "outline", "link"];
+const states: Array<ClickableProps<"button">["state"] | "disabled"> = [
+  "inactive",
+  "hover",
+  "focus",
+  "active",
+  "disabled",
+];
+
+const renderSize = (
+  size: ButtonProps["size"],
+  textColor: "white" | "neutral",
+  children: React.ReactNode,
+) =>
+  variants.map((variant) => {
+    // For now, the UI kit only includes alert & brand "flat" buttons
+    const colors = variant === "flat" ? ["alert", "brand"] : allColors;
+
+    return (
+      <React.Fragment key={variant}>
+        <Heading size="h2" color={textColor}>
+          {variant} - {size}
+        </Heading>
+        <table className={styles["variant"]}>
+          <tbody>
+            {states.map((state) => (
+              <tr key={state}>
+                <th scope="row">
+                  <Text size="body" color={textColor}>
+                    {state}
+                  </Text>
+                </th>
+                {colors.map((color) => (
+                  <td key={color} className={styles["color"]}>
+                    <Clickable
+                      as="button"
+                      size={size}
+                      color={color}
+                      variant={variant}
+                      state={state}
+                      disabled={state === "disabled"}
+                    >
+                      {children}
+                    </Clickable>
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </React.Fragment>
+    );
+  });
+
+export const allVariants = () => (
+  <ul>
+    {sizes.map((size) => (
+      <li key={size}>{renderSize(size, "neutral", "Button")}</li>
+    ))}
+  </ul>
+);
+
+allVariants.parameters = gridParameters;
+
+export const mediumVariantsOnDarkBackground = () =>
+  renderSize("medium", "white", "Button");
+
+mediumVariantsOnDarkBackground.parameters = {
+  ...gridParameters,
+  backgrounds: {
+    default: "dark",
+  },
 };
