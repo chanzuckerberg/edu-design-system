@@ -7,6 +7,14 @@ import type { Story } from "@storybook/react";
 export default {
   title: "Banner",
   component: Banner,
+  argTypes: {
+    elevation: {
+      control: {
+        type: "radio",
+        options: [0, 1],
+      },
+    },
+  },
 };
 
 type Args = React.ComponentProps<typeof Banner> & {
