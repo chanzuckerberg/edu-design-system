@@ -10,6 +10,7 @@
     "build": "NODE_ENV=production yarn workspaces foreach run build",
     "create-component": "plop",
     "create-releases": "lerna version --no-push --conventional-commits --message 'chore(release): %s'",
+    "create-releases:alpha": "yarn create-releases --preid alpha prerelease",
     "lint": "yarn run lint:styles && yarn run lint:scripts",
     "lint:fix": "yarn run lint:styles:fix && yarn run lint:scripts:fix",
     "lint:styles": "stylelint --ignore-path .gitignore packages/**/*.{css,js,jsx,ts,tsx}",
@@ -18,6 +19,7 @@
     "lint:scripts:fix": "yarn run lint:scripts --fix",
     "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx}\"",
     "publish-releases": "lerna publish from-git --no-push",
+    "publish-releases:alpha": "yarn publish-releases --dist-tag alpha",
     "start": "yarn workspaces foreach run start",
     "test": "yarn workspaces foreach run test",
     "types": "yarn workspaces foreach run types"
