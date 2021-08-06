@@ -8,6 +8,7 @@
   ],
   "scripts": {
     "build": "NODE_ENV=production yarn workspaces foreach run build",
+    "build:clean": "yarn workspaces foreach --exclude eds-tokens run build:clean",
     "create-component": "plop",
     "create-releases": "lerna version --no-push --conventional-commits --message 'chore(release): %s'",
     "create-releases:alpha": "yarn create-releases --preid alpha prerelease",
