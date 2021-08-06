@@ -1,6 +1,6 @@
 #!/bin/sh
 
-for i in $(find dist/* -name "*.d.ts"); do
+for i in $(find lib/* -name "*.d.ts"); do
     if  [ ! -f "$i" ] || \
         [[ "$i" == *".stories."* ]] || \
         [[ "$i" == *".spec."* ]]

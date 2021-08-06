@@ -1,4 +1,4 @@
-import "@chanzuckerberg/eds-tokens/dist/css/variables.css";
+import "@chanzuckerberg/eds-tokens/lib/css/variables.css";
 import "../src/styles/fonts.css";
 import "../src/styles/global.css";
 

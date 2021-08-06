@@ -22,6 +22,6 @@
     "max-nesting-depth": 1
   },
   "ignoreFiles": [
-    "packages/tokens/dist/**"
+    "packages/tokens/lib/**"
   ]
 }
