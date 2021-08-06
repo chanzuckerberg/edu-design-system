@@ -49,7 +49,7 @@
     "react": ">= 16.8.0"
   },
   "dependencies": {
-    "@chanzuckerberg/eds-tokens": "workspace:*",
+    "@chanzuckerberg/eds-tokens": "^0.1.2",
     "clsx": "^1.1.1"
   },
   "devDependencies": {
