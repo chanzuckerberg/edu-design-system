@@ -30,6 +30,16 @@ exports[`<Button /> Primary story renders snapshot 1`] = `
 </button>
 `;
 
+exports[`<Button /> PrimarySmall story renders snapshot 1`] = `
+<button
+  class="button sizeSmall variantFlat colorBrand"
+  type="button"
+>
+  ​
+  Button
+</button>
+`;
+
 exports[`<Button /> Secondary story renders snapshot 1`] = `
 <button
   class="button sizeMedium variantOutline colorBrand"
@@ -40,9 +50,29 @@ exports[`<Button /> Secondary story renders snapshot 1`] = `
 </button>
 `;
 
+exports[`<Button /> SecondarySmall story renders snapshot 1`] = `
+<button
+  class="button sizeSmall variantOutline colorBrand"
+  type="button"
+>
+  ​
+  Button
+</button>
+`;
+
 exports[`<Button /> Tertiary story renders snapshot 1`] = `
 <button
   class="button sizeMedium variantOutline colorNeutral"
+  type="button"
+>
+  ​
+  Button
+</button>
+`;
+
+exports[`<Button /> TertiarySmall story renders snapshot 1`] = `
+<button
+  class="button sizeSmall variantOutline colorNeutral"
   type="button"
 >
   ​
