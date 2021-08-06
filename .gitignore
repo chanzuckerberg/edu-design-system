@@ -72,8 +72,9 @@ typings/
 # VS Code Live Share
 .vsls.json
 
-# dist folders (allowing built tokens)
-packages/components/dist/
+# lib folders (allowing built tokens)
+packages/*/lib/
+!packages/tokens/lib/
 storybook-static/
 
 # Yarn 2 files

@@ -9,7 +9,7 @@
   "author": "CZI <edu-frontend-infra@chanzuckerberg.com>",
   "homepage": "https://github.com/chanzuckerberg/edu-design-system/tree/main/packages/components",
   "license": "MIT",
-  "main": "dist/index.js",
+  "main": "lib/index.js",
   "sideEffects": false,
   "publishConfig": {
     "access": "public"
@@ -19,15 +19,15 @@
     "url": "git+https://github.com/chanzuckerberg/edu-design-system.git"
   },
   "files": [
-    "dist",
+    "lib",
     "tailwind.config.js"
   ],
   "scripts": {
     "build": "yarn run build:clean && yarn run build:js && yarn run build:styles && yarn run build:types && yarn run build:finish",
-    "build:clean": "rm -rf dist/",
-    "build:finish": "rm dist/**/*.spec.* dist/**/*.stories.*",
-    "build:js": "babel src -d dist --extensions '.js,.jsx,.ts,.tsx'",
-    "build:styles": "postcss \"src/**/*.css\" --dir dist/ --base src/ --verbose",
+    "build:clean": "rm -rf lib/",
+    "build:finish": "rm lib/**/*.spec.* lib/**/*.stories.*",
+    "build:js": "babel src -d lib --extensions '.js,.jsx,.ts,.tsx'",
+    "build:styles": "postcss \"src/**/*.css\" --dir lib/ --base src/ --verbose",
     "build:types": "tsc --project . --declaration --emitDeclarationOnly && ./generateFlowTypes.sh",
     "build:watch": "yarn run build:js --watch",
     "build:storybook": "build-storybook -o storybook-static",

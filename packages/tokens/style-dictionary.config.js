@@ -4,7 +4,7 @@ const EDSStyleDictionary = StyleDictionary.extend({
   platforms: {
     scss: {
       transforms: [...StyleDictionary.transformGroup.scss, "name/kebabCase"],
-      buildPath: "dist/",
+      buildPath: "lib/",
       files: [
         {
           format: "scss/map-deep",
@@ -17,7 +17,7 @@ const EDSStyleDictionary = StyleDictionary.extend({
     },
     css: {
       transforms: [...StyleDictionary.transformGroup.css, "name/kebabCase"],
-      buildPath: "dist/",
+      buildPath: "lib/",
       files: [
         {
           format: "css/variables",
@@ -37,7 +37,7 @@ const EDSStyleDictionary = StyleDictionary.extend({
     },
     js: {
       transformGroup: "js",
-      buildPath: "dist/",
+      buildPath: "lib/",
       files: [
         {
           format: "javascript/es6",
@@ -67,7 +67,7 @@ const EDSStyleDictionary = StyleDictionary.extend({
     },
     json: {
       transformGroup: "js",
-      buildPath: "dist/",
+      buildPath: "lib/",
       files: [
         {
           format: "json/flat",
