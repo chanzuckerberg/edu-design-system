@@ -28,6 +28,6 @@ jobs:
         run: yarn workspaces foreach run build
 
       - name: Deploy Storybook Docs 🚀
-        run: npx lerna run deploy:docs
+        run: yarn workspaces foreach run deploy:docs
         env:
           GH_TOKEN: "${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}"
