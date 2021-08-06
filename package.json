@@ -49,7 +49,6 @@
     "@size-limit/preset-small-lib": "^4.9.2",
     "@typescript-eslint/eslint-plugin": "^4.15.1",
     "@typescript-eslint/parser": "^4.15.1",
-    "classnames": "^2.2.6",
     "eslint": "^7.20.0",
     "eslint-config-prettier": "^8.0.0",
     "eslint-plugin-jest": "^22.21.0",
