@@ -23,7 +23,8 @@
     "publish-releases:alpha": "yarn publish-releases --dist-tag alpha",
     "start": "yarn workspaces foreach run start",
     "test": "yarn workspaces foreach run test",
-    "types": "yarn workspaces foreach run types"
+    "types": "yarn workspaces foreach run types",
+    "version": "./scripts/updateYarnLockForLerna.sh"
   },
   "size-limit": [
     {
