@@ -63,6 +63,28 @@ Destructive.args = {
   variant: "flat",
 };
 
+export const PrimarySmall = Template.bind(null);
+PrimarySmall.args = {
+  children: "Button",
+  size: "small",
+  variant: "flat",
+};
+
+export const SecondarySmall = Template.bind(null);
+SecondarySmall.args = {
+  children: "Button",
+  size: "small",
+  variant: "outline",
+};
+
+export const TertiarySmall = Template.bind(null);
+TertiarySmall.args = {
+  children: "Button",
+  color: "neutral",
+  size: "small",
+  variant: "outline",
+};
+
 export const Link = Template.bind(null);
 Link.args = {
   children: "Link Button",
