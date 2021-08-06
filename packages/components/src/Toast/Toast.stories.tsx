@@ -5,6 +5,7 @@ import Toast from "./Toast";
 export default {
   title: "Toast",
   component: Toast,
+  argTypes: { onDismiss: { action: "dismissed" } },
 };
 
 type Args = React.ComponentProps<typeof Toast>;
@@ -13,7 +14,6 @@ const Template: Story<Args> = (args: Args) => <Toast {...args} />;
 
 const defaultArgs = {
   children: "You've got toast!",
-  onDismiss: () => console.log("dismissed!"),
 };
 
 export const Success = Template.bind(null);
@@ -32,5 +32,8 @@ export const NotDismissable = Template.bind(null);
 NotDismissable.args = {
   ...defaultArgs,
   color: "success",
-  onDismiss: undefined,
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore onDismiss is not nullable, but this is needed to remove the arg from
+  // storybook's actions addon
+  onDismiss: null,
 };

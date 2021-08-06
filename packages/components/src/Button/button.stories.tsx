@@ -1,28 +1,19 @@
 import Button, { ButtonProps } from "./button";
-import Clickable, { ClickableProps } from "../Clickable";
 import CheckCircleRoundedIcon from "../Icons/CheckCircleRounded";
+import Clickable from "../Clickable";
 import Heading from "../Heading";
 import React from "react";
 import { Story } from "@storybook/react/types-6-0";
 import Text from "../Text";
 import styles from "./button.stories.module.css";
 
-const sizes: Array<ButtonProps["size"]> = ["small", "medium", "large"];
-const allColors: Array<ButtonProps["color"]> = [
-  "alert",
-  "brand",
-  "neutral",
-  "success",
-  "warning",
-];
-const variants: Array<ButtonProps["variant"]> = ["flat", "outline", "link"];
-const states: Array<ClickableProps<"button">["state"] | "disabled"> = [
-  "inactive",
-  "hover",
-  "focus",
-  "active",
-  "disabled",
-];
+const sizes = ["small", "medium", "large"] as const;
+const allColors = ["alert", "brand", "neutral", "success", "warning"] as const;
+const variants = ["flat", "outline", "link"] as const;
+const states = ["inactive", "hover", "focus", "active", "disabled"] as const;
+
+// For now, the UI kit only includes alert & brand "flat" buttons
+const flatColors = ["alert", "brand"] as const;
 
 export default {
   title: "Button",
@@ -157,15 +148,14 @@ const renderSize = (
   children: React.ReactNode,
 ) =>
   variants.map((variant) => {
-    // For now, the UI kit only includes alert & brand "flat" buttons
-    const colors = variant === "flat" ? ["alert", "brand"] : allColors;
+    const colors = variant === "flat" ? flatColors : allColors;
 
     return (
       <React.Fragment key={variant}>
         <Heading size="h2" color={textColor}>
           {variant} - {size}
         </Heading>
-        <table className={styles["variant"]}>
+        <table className={styles.variant}>
           <tbody>
             {states.map((state) => (
               <tr key={state}>
@@ -175,9 +165,11 @@ const renderSize = (
                   </Text>
                 </th>
                 {colors.map((color) => (
-                  <td key={color} className={styles["color"]}>
+                  <td key={color} className={styles.color}>
+                    {/* To pass the "state" prop (only used for demonstration in storybook),
+                    we must use Clickable instead of Button */}
                     <Clickable
-                      as="button"
+                      as={"button"}
                       size={size}
                       color={color}
                       variant={variant}
