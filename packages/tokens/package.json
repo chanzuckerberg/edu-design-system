@@ -19,6 +19,7 @@
   },
   "scripts": {
     "build": "style-dictionary build --config=./style-dictionary.config.js",
+    "build:clean": "rm -rf dist/",
     "prepack": "yarn run build",
     "start": "watch 'yarn run build' ./properties ./node_modules"
   },
