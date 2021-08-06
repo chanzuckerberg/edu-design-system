@@ -11,7 +11,8 @@
   "license": "MIT",
   "main": "src/index.js",
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "directory": "dist/"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,8 @@
   },
   "scripts": {
     "build": "style-dictionary build --config=./style-dictionary.config.js",
+    "prepublishOnly": "cp ./package.json dist/",
+    "postpublish": "rm dist/package.json",
     "prepack": "yarn run build",
     "start": "watch 'yarn run build' ./properties ./node_modules"
   },
