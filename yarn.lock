@@ -1610,7 +1610,7 @@ __metadata:
     "@babel/preset-react": ^7.12.13
     "@babel/preset-typescript": ^7.12.17
     "@chanzuckerberg/axe-storybook-testing": ^3.0.2
-    "@chanzuckerberg/eds-tokens": ^0.1.2
+    "@chanzuckerberg/eds-tokens": "workspace:*"
     "@chanzuckerberg/story-utils": ^2.0.0
     "@commitlint/cli": ^8.3.5
     "@commitlint/config-conventional": ^8.3.4
@@ -1654,7 +1654,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@chanzuckerberg/eds-tokens@^0.1.2, @chanzuckerberg/eds-tokens@workspace:packages/tokens":
+"@chanzuckerberg/eds-tokens@workspace:*, @chanzuckerberg/eds-tokens@workspace:packages/tokens":
   version: 0.0.0-use.local
   resolution: "@chanzuckerberg/eds-tokens@workspace:packages/tokens"
   dependencies:
