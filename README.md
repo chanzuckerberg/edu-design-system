@@ -13,13 +13,13 @@ The [Education Initiative](https://chanzuckerberg.com/education/)'s design syste
 
 ### Helpful commands
 
-| Description                           | Command                              |
-| ------------------------------------- | ------------------------------------ |
-| Install dependencies                  | `yarn install`                       |
-| Run linter                            | `yarn lint`                          |
-| Run linter and fix all fixable issues | `yarn lint:fix`                      |
-| Build packages                        | `yarn build`                         |
-| Run the component generator           | `yarn create-component`              |
+| Description                           | Command                 |
+| ------------------------------------- | ----------------------- |
+| Install dependencies                  | `yarn install`          |
+| Run linter                            | `yarn lint`             |
+| Run linter and fix all fixable issues | `yarn lint:fix`         |
+| Build packages                        | `yarn build`            |
+| Run the component generator           | `yarn create-component` |
 
 ### Publishing
 
@@ -32,7 +32,9 @@ The [Education Initiative](https://chanzuckerberg.com/education/)'s design syste
 
 ## Project Status
 
-This project is under **active development**. This project is governed under the [Contributor Covenant](https://www.contributor-covenant.org/) code of conduct.
+This project is under **active development**. If you would like to contribute, check out the [contribution guidelines](https://github.com/chanzuckerberg/edu-design-system/blob/main/CONTRIBUTING.md) or [open an issue](https://github.com/chanzuckerberg/edu-design-system/issues).
+
+This project is governed under the [Contributor Covenant](https://www.contributor-covenant.org/) code of conduct.
 
 ## Reporting Security Issues
 
