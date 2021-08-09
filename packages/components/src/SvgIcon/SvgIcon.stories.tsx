@@ -1,9 +1,9 @@
 import * as ColorTokens from "@chanzuckerberg/eds-tokens/lib/ts/colors";
-import * as allIcons from "../Icons";
-import React from "react";
 import type { Story } from "@storybook/react";
-import SvgIcon from "./SvgIcon";
+import React from "react";
+import * as allIcons from "../Icons";
 import Text from "../Text";
+import SvgIcon from "./SvgIcon";
 import styles from "./SvgIcon.stories.module.css";
 
 export default {

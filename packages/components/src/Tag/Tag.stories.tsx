@@ -1,8 +1,8 @@
+import type { Story } from "@storybook/react";
+import React from "react";
+import WarningRoundedIcon from "../Icons/WarningRounded";
 import Tag, { stylesByColor } from "./Tag";
 import type { Color } from "./Tag";
-import React from "react";
-import type { Story } from "@storybook/react";
-import WarningRoundedIcon from "../Icons/WarningRounded";
 import styles from "./Tag.stories.module.css";
 
 // todo (Andrew): look into getting rid of the `as` cast. The `stylesByColor` object's keys are

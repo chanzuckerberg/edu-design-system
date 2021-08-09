@@ -1,8 +1,8 @@
+import clsx from "clsx";
+import React from "react";
 import Button from "../../Button";
 import CloseRoundedIcon from "../../Icons/CloseRounded";
 import { NotificationVariant } from "../Notifications/NotificationIcon";
-import React from "react";
-import clsx from "clsx";
 import styles from "./CloseButton.module.css";
 
 type CloseButtonProps = {

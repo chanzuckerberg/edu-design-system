@@ -6182,7 +6182,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"array.prototype.flat@npm:^1.2.1":
+"array.prototype.flat@npm:^1.2.1, array.prototype.flat@npm:^1.2.4":
   version: 1.2.4
   resolution: "array.prototype.flat@npm:1.2.4"
   dependencies:
@@ -8960,7 +8960,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debug@npm:^3.0.0, debug@npm:^3.1.0":
+"debug@npm:^3.0.0, debug@npm:^3.1.0, debug@npm:^3.2.7":
   version: 3.2.7
   resolution: "debug@npm:3.2.7"
   dependencies:
@@ -9556,6 +9556,7 @@ __metadata:
     "@typescript-eslint/parser": ^4.15.1
     eslint: ^7.20.0
     eslint-config-prettier: ^8.0.0
+    eslint-plugin-import: ^2.24.0
     eslint-plugin-jest: ^22.21.0
     eslint-plugin-prettier: ^3.3.1
     eslint-plugin-react: ^7.22.0
@@ -9986,6 +9987,51 @@ __metadata:
   bin:
     eslint-config-prettier: bin/cli.js
   checksum: df4cea3032671995bb5ab07e016169072f7fa59f44a53251664d9ca60951b66cdc872683b5c6a3729c91497c11490ca44a79654b395dd6756beb0c3903a37196
+  languageName: node
+  linkType: hard
+
+"eslint-import-resolver-node@npm:^0.3.5":
+  version: 0.3.5
+  resolution: "eslint-import-resolver-node@npm:0.3.5"
+  dependencies:
+    debug: ^3.2.7
+    resolve: ^1.20.0
+  checksum: 93a8176205f18c40d2c11c444fab89aa3990c5a5eed226ef03a893b5779e7cd4d1f5f52b2bbbbbe4b13fb2a75ef629278be0b52099480cbe6e7024888d9982dd
+  languageName: node
+  linkType: hard
+
+"eslint-module-utils@npm:^2.6.2":
+  version: 2.6.2
+  resolution: "eslint-module-utils@npm:2.6.2"
+  dependencies:
+    debug: ^3.2.7
+    pkg-dir: ^2.0.0
+  checksum: 814591f494e4f4b04c1af0fde2a679e7a7664a5feb51175e02ba96d671e34ec60cb1835d174508eb81c07a6c92c243f84c6349f4169b3bec1a8dbdd36a0934f3
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-import@npm:^2.24.0":
+  version: 2.24.0
+  resolution: "eslint-plugin-import@npm:2.24.0"
+  dependencies:
+    array-includes: ^3.1.3
+    array.prototype.flat: ^1.2.4
+    debug: ^2.6.9
+    doctrine: ^2.1.0
+    eslint-import-resolver-node: ^0.3.5
+    eslint-module-utils: ^2.6.2
+    find-up: ^2.0.0
+    has: ^1.0.3
+    is-core-module: ^2.4.0
+    minimatch: ^3.0.4
+    object.values: ^1.1.3
+    pkg-up: ^2.0.0
+    read-pkg-up: ^3.0.0
+    resolve: ^1.20.0
+    tsconfig-paths: ^3.9.0
+  peerDependencies:
+    eslint: ^2 || ^3 || ^4 || ^5 || ^6 || ^7.2.0
+  checksum: 79fb1094197cd1dc720725bd29e5c5fe7d123fd9dd31eb182849993a81a8c18e2bfbc4d267a2caabe02bd4d21aafb1eca1da2f55aca7e5df99fd8ba908e7b869
   languageName: node
   linkType: hard
 
@@ -10822,7 +10868,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"find-up@npm:^2.0.0":
+"find-up@npm:^2.0.0, find-up@npm:^2.1.0":
   version: 2.1.0
   resolution: "find-up@npm:2.1.0"
   dependencies:
@@ -12929,7 +12975,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"is-core-module@npm:^2.2.0":
+"is-core-module@npm:^2.2.0, is-core-module@npm:^2.4.0":
   version: 2.5.0
   resolution: "is-core-module@npm:2.5.0"
   dependencies:
@@ -14315,7 +14361,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"json5@npm:^2.1.2, json5@npm:^2.1.3":
+"json5@npm:^2.1.2, json5@npm:^2.1.3, json5@npm:^2.2.0":
   version: 2.2.0
   resolution: "json5@npm:2.2.0"
   dependencies:
@@ -16481,7 +16527,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"object.values@npm:^1.1.0, object.values@npm:^1.1.4":
+"object.values@npm:^1.1.0, object.values@npm:^1.1.3, object.values@npm:^1.1.4":
   version: 1.1.4
   resolution: "object.values@npm:1.1.4"
   dependencies:
@@ -17335,6 +17381,15 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"pkg-dir@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "pkg-dir@npm:2.0.0"
+  dependencies:
+    find-up: ^2.1.0
+  checksum: 8c72b712305b51e1108f0ffda5ec1525a8307e54a5855db8fb1dcf77561a5ae98e2ba3b4814c9806a679f76b2f7e5dd98bde18d07e594ddd9fdd25e9cf242ea1
+  languageName: node
+  linkType: hard
+
 "pkg-dir@npm:^3.0.0":
   version: 3.0.0
   resolution: "pkg-dir@npm:3.0.0"
@@ -17368,6 +17423,15 @@ fsevents@^1.2.7:
   dependencies:
     find-up: ^3.0.0
   checksum: 5bac346b7c7c903613c057ae3ab722f320716199d753f4a7d053d38f2b5955460f3e6ab73b4762c62fd3e947f58e04f1343e92089e7bb6091c90877406fcd8c8
+  languageName: node
+  linkType: hard
+
+"pkg-up@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "pkg-up@npm:2.0.0"
+  dependencies:
+    find-up: ^2.1.0
+  checksum: de4b418175281a082e366ce1a919f032520ee53cf421578b35173f03816f6ec4c19e1552066840bb0988c3e1215859653948efd6ca3507a23f4f44229269500d
   languageName: node
   linkType: hard
 
@@ -22172,6 +22236,17 @@ resolve@^2.0.0-next.3:
     typescript:
       optional: true
   checksum: c2a698b85d521298fe6f2435fbf2d3dc5834b423ea25abd321805ead3f399dbeedce7ca09492d7eb005b9d2c009c6b9587055bc3ab273dc6b9e40eefd7edb5b2
+  languageName: node
+  linkType: hard
+
+"tsconfig-paths@npm:^3.9.0":
+  version: 3.10.1
+  resolution: "tsconfig-paths@npm:3.10.1"
+  dependencies:
+    json5: ^2.2.0
+    minimist: ^1.2.0
+    strip-bom: ^3.0.0
+  checksum: 014ec869276114031d3bd6d2d9ce07c32c96ca6912f32285f46eeb4ca5270bd4c5e4de1353b838c66282157f089dedc8c3377c4e72e2f3d910e706c7b9ac5e6d
   languageName: node
   linkType: hard
 

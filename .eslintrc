@@ -4,7 +4,7 @@
     "browser": true
   },
   "parser": "@typescript-eslint/parser",
-  "plugins": ["react-hooks", "testing-library"],
+  "plugins": ["import", "react-hooks", "testing-library"],
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
@@ -24,7 +24,11 @@
     }
   },
   "rules": {
-    "sort-imports": ["error"],
+    "import/order": ["error", {
+      "alphabetize": {
+        "order": "asc"
+      }
+    }],
     "react/prop-types": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "error"

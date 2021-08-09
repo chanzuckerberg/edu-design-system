@@ -1,10 +1,10 @@
-import Button, { ButtonProps } from "./button";
-import CheckCircleRoundedIcon from "../Icons/CheckCircleRounded";
+import { Story } from "@storybook/react/types-6-0";
+import React from "react";
 import Clickable from "../Clickable";
 import Heading from "../Heading";
-import React from "react";
-import { Story } from "@storybook/react/types-6-0";
+import CheckCircleRoundedIcon from "../Icons/CheckCircleRounded";
 import Text from "../Text";
+import Button, { ButtonProps } from "./button";
 import styles from "./button.stories.module.css";
 
 const sizes = ["small", "medium", "large"] as const;
