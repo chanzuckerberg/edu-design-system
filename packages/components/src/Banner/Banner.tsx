@@ -1,12 +1,12 @@
+import clsx from "clsx";
+import React from "react";
 import Heading, { HeadingElement } from "../Heading";
+import Text from "../Text";
+import CloseButton from "../common/CloseButton";
+import colorStyles from "../common/Notifications/Notification.module.css";
 import NotificationIcon, {
   NotificationVariant,
 } from "../common/Notifications/NotificationIcon";
-import CloseButton from "../common/CloseButton";
-import React from "react";
-import Text from "../Text";
-import clsx from "clsx";
-import colorStyles from "../common/Notifications/Notification.module.css";
 import styles from "./Banner.module.css";
 
 type Props = {

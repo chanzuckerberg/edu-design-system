@@ -1,10 +1,10 @@
+import { Story } from "@storybook/react/types-6-0";
 import * as React from "react";
+import Text from "../../../Text";
 import NotificationIcon, {
   NotificationVariant,
   variantToIconAssetsMap,
 } from "./NotificationIcon";
-import { Story } from "@storybook/react/types-6-0";
-import Text from "../../../Text";
 import styles from "./NotificationIcon.stories.module.css";
 
 // todo (Andrew): look into getting rid of the `as` cast. The `stylesByColor` object's keys are

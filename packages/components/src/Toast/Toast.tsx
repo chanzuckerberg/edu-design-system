@@ -1,9 +1,9 @@
-import CloseButton from "../common/CloseButton";
-import NotificationIcon from "../common/Notifications/NotificationIcon";
+import clsx from "clsx";
 import React from "react";
 import Text from "../Text";
-import clsx from "clsx";
+import CloseButton from "../common/CloseButton";
 import colorStyles from "../common/Notifications/Notification.module.css";
+import NotificationIcon from "../common/Notifications/NotificationIcon";
 import styles from "./Toast.module.css";
 
 export type Color = "success" | "alert";

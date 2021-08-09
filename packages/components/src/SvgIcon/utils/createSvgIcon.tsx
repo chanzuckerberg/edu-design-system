@@ -1,5 +1,5 @@
-import type { IconProps } from "../SvgIcon";
 import React from "react";
+import type { IconProps } from "../SvgIcon";
 import SvgIcon from "../SvgIcon";
 
 /**

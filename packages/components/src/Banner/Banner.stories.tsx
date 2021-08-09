@@ -1,8 +1,8 @@
-import Banner from "./Banner";
+import type { Story } from "@storybook/react";
+import React from "react";
 import Button from "../Button";
 import Heading from "../Heading";
-import React from "react";
-import type { Story } from "@storybook/react";
+import Banner from "./Banner";
 
 export default {
   title: "Banner",

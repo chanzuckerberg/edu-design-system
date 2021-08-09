@@ -1,6 +1,6 @@
-import CloseButton from "./CloseButton";
-import React from "react";
 import { Story } from "@storybook/react/types-6-0";
+import React from "react";
+import CloseButton from "./CloseButton";
 import styles from "./CloseButton.stories.module.css";
 
 export default {

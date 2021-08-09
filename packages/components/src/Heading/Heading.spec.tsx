@@ -1,9 +1,8 @@
-import * as HeadingStoryFile from "./Heading.stories";
-
-import { render, screen } from "@testing-library/react";
-import Heading from "./Heading";
-import React from "react";
 import { generateSnapshots } from "@chanzuckerberg/story-utils";
+import { render, screen } from "@testing-library/react";
+import React from "react";
+import Heading from "./Heading";
+import * as HeadingStoryFile from "./Heading.stories";
 
 describe("<Heading />", () => {
   generateSnapshots(HeadingStoryFile);

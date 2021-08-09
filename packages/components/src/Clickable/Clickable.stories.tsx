@@ -1,6 +1,6 @@
-import Clickable from "./Clickable";
-import React from "react";
 import { Story } from "@storybook/react/types-6-0";
+import React from "react";
+import Clickable from "./Clickable";
 
 export default {
   title: "Clickable",

@@ -1,6 +1,6 @@
+import clsx from "clsx";
 import React from "react";
 import Text from "../Text";
-import clsx from "clsx";
 import styles from "./Tag.module.css";
 
 export type Color =

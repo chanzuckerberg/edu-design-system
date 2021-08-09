@@ -1,10 +1,10 @@
 import * as React from "react";
 
 import CheckCircleRoundedIcon from "../../../Icons/CheckCircleRounded";
-import DangerousRoundedIcon from "../../../Icons/custom/DangerousRounded";
 import ForumRoundedIcon from "../../../Icons/ForumRounded";
 import NotificationsRoundedIcon from "../../../Icons/NotificationsRounded";
 import WarningRoundedIcon from "../../../Icons/WarningRounded";
+import DangerousRoundedIcon from "../../../Icons/custom/DangerousRounded";
 import styles from "./NotificationIcon.module.css";
 
 export type NotificationVariant =

@@ -1,9 +1,9 @@
-import * as TextStoryFile from "./Text.stories";
-
+import { generateSnapshots } from "@chanzuckerberg/story-utils";
 import { render, screen } from "@testing-library/react";
+
 import React from "react";
 import Text from "./Text";
-import { generateSnapshots } from "@chanzuckerberg/story-utils";
+import * as TextStoryFile from "./Text.stories";
 
 describe("<Text />", () => {
   generateSnapshots(TextStoryFile);

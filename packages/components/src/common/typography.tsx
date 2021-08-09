@@ -1,6 +1,6 @@
+import clsx from "clsx";
 import React, { ForwardedRef, ReactNode, forwardRef } from "react";
 
-import clsx from "clsx";
 import styles from "./typography.module.css";
 
 export type TypographySize =
