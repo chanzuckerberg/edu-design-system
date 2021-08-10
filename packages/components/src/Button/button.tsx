@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode, forwardRef } from "react";
 import Clickable, { ClickableProps } from "../Clickable";
 
 type ButtonHTMLElementProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
@@ -15,26 +15,34 @@ export type ButtonProps = ButtonHTMLElementProps & {
   variant?: ClickableProps<"button">["variant"];
 };
 
-function Button({
-  as = "button",
-  variant = "flat",
-  color = "brand",
-  disabled = false,
-  type = "button",
-  size = "medium",
-  ...rest
-}: ButtonProps) {
-  return (
-    <Clickable
-      {...rest}
-      as={as}
-      variant={variant}
-      color={color}
-      disabled={disabled}
-      type={type}
-      size={size}
-    />
-  );
-}
+const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+  (
+    {
+      as = "button",
+      variant = "flat",
+      color = "brand",
+      disabled = false,
+      type = "button",
+      size = "medium",
+      ...rest
+    },
+    ref,
+  ) => {
+    return (
+      <Clickable
+        {...rest}
+        as={as}
+        variant={variant}
+        color={color}
+        disabled={disabled}
+        type={type}
+        size={size}
+        ref={ref}
+      />
+    );
+  },
+);
+
+Button.displayName = "Button";
 
 export default Button;
