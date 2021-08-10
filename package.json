@@ -7,7 +7,7 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "NODE_ENV=production yarn workspaces foreach --parallel --topological run build",
+    "build": "NODE_ENV=production yarn workspaces foreach --interlaced --parallel --topological --verbose run build",
     "build:clean": "yarn workspaces foreach --exclude eds-tokens run build:clean",
     "create-component": "plop",
     "create-releases": "lerna version --no-push --conventional-commits --message 'chore(release): %s'",
@@ -21,7 +21,7 @@
     "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx}\"",
     "publish-releases": "lerna publish from-git --no-push",
     "publish-releases:alpha": "yarn publish-releases --dist-tag alpha",
-    "start": "yarn workspaces foreach run start",
+    "start": "yarn workspaces foreach --interlaced --parallel --verbose run start",
     "test": "yarn workspaces foreach run test",
     "types": "yarn workspaces foreach run types",
     "version": "./scripts/updateYarnLockForLerna.sh"
