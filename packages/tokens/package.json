@@ -21,7 +21,7 @@
     "build": "style-dictionary build --config=./style-dictionary.config.js",
     "build:clean": "rm -rf lib/",
     "prepack": "yarn run build",
-    "start": "watch 'yarn run build' ./properties ./node_modules"
+    "start": "watch 'yarn run build' ./properties"
   },
   "bugs": {
     "url": "https://github.com/chanzuckerberg/edu-design-system/issues"
