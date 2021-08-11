@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.3](https://github.com/chanzuckerberg/edu-design-system/compare/v0.1.2...v0.1.3) (2021-08-11)
+
+
+### Features
+
+* allow buttons to take a ref ([c606b89](https://github.com/chanzuckerberg/edu-design-system/commit/c606b89a71ca2ebdc5ed6dcba133e62be7285257))
+
+
+### Reverts
+
+* Revert "chore: use "workspace ranges" to specify dependencies between packages" ([464887f](https://github.com/chanzuckerberg/edu-design-system/commit/464887f035c66bf3a7580ec24b79f49417f7021b))
+
+
+
+
+
 ## [0.1.2](https://github.com/chanzuckerberg/edu-design-system/compare/v0.1.1...v0.1.2) (2021-08-06)
 
 **Note:** Version bump only for package edu-design-system

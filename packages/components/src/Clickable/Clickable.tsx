@@ -30,50 +30,57 @@ export type ClickableProps<IComponent extends React.ElementType> = {
  *
  * See the Button stories for usage examples.
  */
-function Clickable<IComponent extends React.ElementType>({
-  as,
-  children,
-  color,
-  size,
-  state,
-  variant,
-  className,
-  ...rest
-}: ClickableProps<IComponent>) {
-  const Component = as;
-  return (
-    <Component
-      className={clsx(
-        className,
-        styles.button,
-        // Sizes
-        variant !== "link" && [
-          size === "small" && styles.sizeSmall,
-          size === "medium" && styles.sizeMedium,
-          size === "large" && styles.sizeLarge,
-        ],
-        // Variants
-        variant === "flat" && styles.variantFlat,
-        variant === "outline" && styles.variantOutline,
-        variant === "link" && styles.variantLink,
-        // Colors
-        color === "alert" && styles.colorAlert,
-        color === "brand" && styles.colorBrand,
-        color === "neutral" && styles.colorNeutral,
-        color === "success" && styles.colorSuccess,
-        color === "warning" && styles.colorWarning,
-        // Interactive States (for testing)
-        state === "hover" && styles.stateHover,
-        state === "focus" && styles.stateFocus,
-        state === "active" && styles.stateActive,
-      )}
-      {...rest}
-    >
-      {/* No width space to ensure height of contents */}
-      {"\u200B"}
-      {children}
-    </Component>
-  );
-}
+const Clickable = React.forwardRef(
+  <IComponent extends React.ElementType>(
+    {
+      as: Component,
+      children,
+      color,
+      size,
+      state,
+      variant,
+      className,
+      ...rest
+    }: ClickableProps<IComponent>,
+    ref: React.ForwardedRef<HTMLElement>,
+  ) => {
+    return (
+      <Component
+        className={clsx(
+          className,
+          styles.button,
+          // Sizes
+          variant !== "link" && [
+            size === "small" && styles.sizeSmall,
+            size === "medium" && styles.sizeMedium,
+            size === "large" && styles.sizeLarge,
+          ],
+          // Variants
+          variant === "flat" && styles.variantFlat,
+          variant === "outline" && styles.variantOutline,
+          variant === "link" && styles.variantLink,
+          // Colors
+          color === "alert" && styles.colorAlert,
+          color === "brand" && styles.colorBrand,
+          color === "neutral" && styles.colorNeutral,
+          color === "success" && styles.colorSuccess,
+          color === "warning" && styles.colorWarning,
+          // Interactive States (for testing)
+          state === "hover" && styles.stateHover,
+          state === "focus" && styles.stateFocus,
+          state === "active" && styles.stateActive,
+        )}
+        ref={ref}
+        {...rest}
+      >
+        {/* No width space to ensure height of contents */}
+        {"\u200B"}
+        {children}
+      </Component>
+    );
+  },
+);
+
+Clickable.displayName = "Clickable";
 
 export default Clickable;
