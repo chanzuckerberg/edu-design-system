@@ -9,5 +9,7 @@ for i in $(find lib/* -name "*.d.ts"); do
     fi
     NAME=${i%%.*}
     echo "Generating flowtype for $NAME"
-    npx flowgen $i -o $NAME.flow.js
+    npx flowgen --add-flow-header $i -o $NAME.js.flow
+    # passing an empty string after -i tells OS X to skip creating a backup file
+    sed -i '' 's/^import React from "react"/import * as React from "react"/' $NAME.js.flow
 done
