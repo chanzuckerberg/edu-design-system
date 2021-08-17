@@ -28,7 +28,7 @@ The [Education Initiative](https://chanzuckerberg.com/education/)'s design syste
 3. Run `yarn create-releases` to bump the package versions, create new git tags, and create git commits. The packages are not published, yet.
 4. Confirm that the git tags, git commits, and changelog updates look correct.
 5. Run `yarn publish-releases` to publish the packages to the NPM registry.
-6. Push commits and tags to the git remote with `git push origin main --follow-tags`
+6. Push commits and tags to the git remote with `git push origin --tags && git push origin main`
 
 ## Project Status
 
