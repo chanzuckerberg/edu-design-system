@@ -24,6 +24,7 @@ $eds-color-success-400: #59C88C !default;
 $eds-color-success-500: #00A66A !default;
 $eds-color-success-600: #008756 !default;
 $eds-color-success-700: #007349 !default;
+$eds-color-success-800: #005939 !default;
 $eds-color-info-100: #F1F9FF !default;
 $eds-color-info-200: #B0D5FF !default;
 $eds-color-info-300: #7FB9FD !default;
@@ -38,6 +39,7 @@ $eds-color-warning-400: #F6924A !default;
 $eds-color-warning-500: #E06C00 !default;
 $eds-color-warning-600: #C64600 !default;
 $eds-color-warning-700: #AC3400 !default;
+$eds-color-warning-800: #852800 !default;
 $eds-color-brand-100: #F7F1FF !default;
 $eds-color-brand-200: #C3C0FE !default;
 $eds-color-brand-300: #A7A2FE !default;
@@ -158,7 +160,8 @@ $tokens: (
         '400': $eds-color-success-400,
         '500': $eds-color-success-500,
         '600': $eds-color-success-600,
-        '700': $eds-color-success-700
+        '700': $eds-color-success-700,
+        '800': $eds-color-success-800
       ),
       'info': (
         '100': $eds-color-info-100,
@@ -176,7 +179,8 @@ $tokens: (
         '400': $eds-color-warning-400,
         '500': $eds-color-warning-500,
         '600': $eds-color-warning-600,
-        '700': $eds-color-warning-700
+        '700': $eds-color-warning-700,
+        '800': $eds-color-warning-800
       ),
       'brand': (
         '100': $eds-color-brand-100,
