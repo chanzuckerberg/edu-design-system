@@ -68,9 +68,9 @@
     --button-primary-color: var(--eds-color-alert-300);
   }
 }
-  
+
 .colorNeutral {
-  --button-primary-color: var(--eds-color-neutral-600);
+  --button-primary-color: var(--eds-color-neutral-500);
   --button-secondary-color: var(--eds-color-white);
   --button-tertiary-color: var(--eds-color-neutral-100);
 
@@ -78,12 +78,11 @@
   &.stateHover,
   &:focus,
   &.stateFocus {
-    --button-primary-color: var(--eds-color-neutral-700);
+    --button-primary-color: var(--eds-color-neutral-600);
   }
 
   &:active,
   &.stateActive {
-    /* TODO: Replace with neutral active color */
     --button-primary-color: var(--eds-color-neutral-700);
   }
 
@@ -92,7 +91,7 @@
     --button-primary-color: var(--eds-color-neutral-300);
   }
 }
-  
+
 .colorSuccess {
   --button-primary-color: var(--eds-color-success-600);
   --button-secondary-color: var(--eds-color-white);
@@ -152,7 +151,6 @@
   border-color: var(--button-primary-color);
   color: var(--button-primary-color);
 
-  
   &:focus,
   &.stateFocus {
     background-color: transparent;
@@ -164,7 +162,7 @@
     background-color: var(--button-primary-color);
     color: var(--button-secondary-color);
   }
-  
+
   &:disabled {
     background-color: transparent;
     color: var(--button-primary-color);
@@ -186,7 +184,7 @@
   &.stateHover {
     background-color: var(--button-tertiary-color);
   }
-  
+
   &:hover,
   &.stateHover,
   &:focus,
