@@ -29,7 +29,8 @@
         "400": "var(--eds-color-success-400)",
         "500": "var(--eds-color-success-500)",
         "600": "var(--eds-color-success-600)",
-        "700": "var(--eds-color-success-700)"
+        "700": "var(--eds-color-success-700)",
+        "800": "var(--eds-color-success-800)"
       },
       "info": {
         "100": "var(--eds-color-info-100)",
@@ -47,7 +48,8 @@
         "400": "var(--eds-color-warning-400)",
         "500": "var(--eds-color-warning-500)",
         "600": "var(--eds-color-warning-600)",
-        "700": "var(--eds-color-warning-700)"
+        "700": "var(--eds-color-warning-700)",
+        "800": "var(--eds-color-warning-800)"
       },
       "brand": {
         "100": "var(--eds-color-brand-100)",
