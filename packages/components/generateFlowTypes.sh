@@ -9,7 +9,7 @@ for i in $(find lib/* -name "*.d.ts"); do
     fi
     NAME=${i%%.*}
     echo "Generating flowtype for $NAME"
-    npx flowgen --add-flow-header $i -o $NAME.js.flow
+    npx flowgen $i -o $NAME.js.flow
 
     # manually replace options that flowgen doesn't handle
     REACT_SUB_PATTERN='s/^import React from "react"/import * as React from "react"/'
