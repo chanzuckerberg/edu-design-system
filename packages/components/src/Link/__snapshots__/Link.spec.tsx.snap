@@ -1,0 +1,176 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Link /> Destructive story renders snapshot 1`] = `
+<a
+  class="button sizeMedium variantFlat colorAlert"
+  href=""
+>
+  ​
+  Link
+</a>
+`;
+
+exports[`<Link /> LinkButton story renders snapshot 1`] = `
+<a
+  class="button variantLink colorBrand"
+  href=""
+>
+  ​
+  Link Button
+</a>
+`;
+
+exports[`<Link /> Primary story renders snapshot 1`] = `
+<a
+  class="button sizeMedium variantFlat colorBrand"
+  href=""
+>
+  ​
+  Link
+</a>
+`;
+
+exports[`<Link /> PrimarySmall story renders snapshot 1`] = `
+<a
+  class="button sizeSmall variantFlat colorBrand"
+  href=""
+>
+  ​
+  Link
+</a>
+`;
+
+exports[`<Link /> Secondary story renders snapshot 1`] = `
+<a
+  class="button sizeMedium variantOutline colorBrand"
+  href=""
+>
+  ​
+  Link
+</a>
+`;
+
+exports[`<Link /> SecondarySmall story renders snapshot 1`] = `
+<a
+  class="button sizeSmall variantOutline colorBrand"
+  href=""
+>
+  ​
+  Link
+</a>
+`;
+
+exports[`<Link /> Tertiary story renders snapshot 1`] = `
+<a
+  class="button sizeMedium variantOutline colorNeutral"
+  href=""
+>
+  ​
+  Link
+</a>
+`;
+
+exports[`<Link /> TertiarySmall story renders snapshot 1`] = `
+<a
+  class="button sizeSmall variantOutline colorNeutral"
+  href=""
+>
+  ​
+  Link
+</a>
+`;
+
+exports[`<Link /> linkInBody story renders snapshot 1`] = `
+<p
+  class="typography sizeBody colorBase"
+>
+  This text surrounds the 
+  <a
+    class="button variantLink colorBrand"
+    href=""
+  >
+    ​
+    Link Button
+  </a>
+   and shows that the link should adhere to its appearance
+</p>
+`;
+
+exports[`<Link /> linkInHeading story renders snapshot 1`] = `
+<p
+  class="typography sizeH1 colorBase"
+>
+  This text surrounds the 
+  <a
+    class="button variantLink colorBrand"
+    href=""
+  >
+    ​
+    Link Button
+  </a>
+   and shows that the link should adhere to its appearance
+</p>
+`;
+
+exports[`<Link /> linkWithIcon story renders snapshot 1`] = `
+<a
+  class="button variantLink colorSuccess"
+  href=""
+>
+  ​
+  Link with icon 
+  <svg
+    aria-hidden="true"
+    class="svgIcon"
+    fill="currentColor"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM9.29 16.29L5.7 12.7a.9959.9959 0 010-1.41c.39-.39 1.02-.39 1.41 0L10 14.17l6.88-6.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-7.59 7.59c-.38.39-1.02.39-1.41 0z"
+    />
+  </svg>
+</a>
+`;
+
+exports[`<Link /> outlineWithIcon story renders snapshot 1`] = `
+<a
+  class="button sizeMedium variantOutline colorWarning"
+  href=""
+>
+  ​
+  Outline with icon 
+  <svg
+    aria-hidden="true"
+    class="svgIcon"
+    fill="currentColor"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM9.29 16.29L5.7 12.7a.9959.9959 0 010-1.41c.39-.39 1.02-.39 1.41 0L10 14.17l6.88-6.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-7.59 7.59c-.38.39-1.02.39-1.41 0z"
+    />
+  </svg>
+</a>
+`;
+
+exports[`<Link /> withDataTestId story renders snapshot 1`] = `
+<a
+  class="button sizeMedium variantFlat colorAlert"
+  data-testid="fake-test-id"
+  href=""
+>
+  ​
+  Link with data-testid
+</a>
+`;
+
+exports[`<Link /> withFakeClassName story renders snapshot 1`] = `
+<a
+  class="fake-className button sizeMedium variantOutline colorWarning"
+  href=""
+>
+  ​
+  With fake className
+</a>
+`;

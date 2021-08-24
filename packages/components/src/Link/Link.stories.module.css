@@ -1,0 +1,7 @@
+.color {
+  @apply p-2;
+}
+
+.variant {
+  @apply mb-5;
+}
