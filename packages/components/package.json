@@ -1,6 +1,6 @@
 {
   "name": "@chanzuckerberg/eds-components",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "React components for the education design system",
   "keywords": [
     "design system",
@@ -49,7 +49,7 @@
     "react": ">= 16.8.0"
   },
   "dependencies": {
-    "@chanzuckerberg/eds-tokens": "^0.1.3",
+    "@chanzuckerberg/eds-tokens": "^0.1.5",
     "clsx": "^1.1.1"
   },
   "devDependencies": {

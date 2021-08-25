@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.5](https://github.com/chanzuckerberg/edu-design-system/compare/v0.1.4...v0.1.5) (2021-08-25)
+
+
+### Features
+
+* **colors:** add level 800 success and warning colors, use in Clickable ([b314501](https://github.com/chanzuckerberg/edu-design-system/commit/b3145011769cd5c1a42edbbb2d13d0274521a676))
+
+
+
+
+
 ## [0.1.3](https://github.com/chanzuckerberg/edu-design-system/compare/v0.1.2...v0.1.3) (2021-08-11)
 
 **Note:** Version bump only for package @chanzuckerberg/eds-tokens

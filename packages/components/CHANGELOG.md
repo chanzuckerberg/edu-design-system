@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.5](https://github.com/chanzuckerberg/edu-design-system/compare/v0.1.4...v0.1.5) (2021-08-25)
+
+
+### Bug Fixes
+
+* turn off flow types for now ([6581118](https://github.com/chanzuckerberg/edu-design-system/commit/6581118e66181cc8a23d508503256ba68b00602d))
+
+
+### Features
+
+* **colors:** add level 800 success and warning colors, use in Clickable ([b314501](https://github.com/chanzuckerberg/edu-design-system/commit/b3145011769cd5c1a42edbbb2d13d0274521a676))
+
+
+
+
+
 ## [0.1.4](https://github.com/chanzuckerberg/edu-design-system/compare/v0.1.3...v0.1.4) (2021-08-19)
 
 
