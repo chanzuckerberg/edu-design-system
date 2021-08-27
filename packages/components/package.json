@@ -28,7 +28,7 @@
     "build:finish": "rm lib/**/*.spec.* lib/**/*.stories.*",
     "build:js": "babel src -d lib --extensions '.js,.jsx,.ts,.tsx'",
     "build:styles": "postcss \"src/**/*.css\" --dir lib/ --base src/ --verbose",
-    "build:types": "tsc --project . --declaration --emitDeclarationOnly && ./generateFlowTypes.sh",
+    "build:types": "tsc --project . --declaration --emitDeclarationOnly",
     "build:watch": "yarn run build:js --watch",
     "build:storybook": "build-storybook -o storybook-static",
     "deploy:docs": "storybook-to-ghpages --ci",
