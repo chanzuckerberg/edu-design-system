@@ -9,15 +9,21 @@ for i in $(find lib/* -name "*.d.ts"); do
     fi
     NAME=${i%%.*}
     echo "Generating flowtype for $NAME"
-    npx flowgen $i -o $NAME.js.flow
+    npx flowgen --interface-records --no-inexact $i -o $NAME.js.flow
 
     # manually replace options that flowgen doesn't handle
-    REACT_SUB_PATTERN='s/^import React from "react"/import * as React from "react"/'
+    REACT_SUB_PATTERNS=(
+        's/React.ReactNode/Node/g'
+        's/ReactNode/Node/g'
+    )
 
-    if [[ "$OSTYPE" == "darwin"* ]]; then
-        # passing an empty string after -i tells OS X to skip creating a backup file
-        sed -i '' -e "$REACT_SUB_PATTERN" $NAME.js.flow
-    else
-        sed -i -e "$REACT_SUB_PATTERN" $NAME.js.flow
-    fi
+    for sub in "${REACT_SUB_PATTERNS[@]}"
+    do
+        if [[ "$OSTYPE" == "darwin"* ]]; then
+            # passing an empty string after -i tells OS X to skip creating a backup file
+            sed -i '' -e "$sub" $NAME.js.flow
+        else
+            sed -i -e "$sub" $NAME.js.flow
+        fi
+    done
 done
