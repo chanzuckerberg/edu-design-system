@@ -24,158 +24,158 @@
 
 /* Button Colors */
 .colorBrand {
-  --button-primary-color: var(--eds-color-brand-600);
-  --button-secondary-color: var(--eds-color-white);
-  --button-link-color: var(--eds-color-brand-700);
+  --primary-color: var(--eds-color-brand-600);
+  --secondary-color: var(--eds-color-white);
+  --link-color: var(--eds-color-brand-700);
 
   &:hover,
   &.stateHover,
   &:focus,
   &.stateFocus {
-    --button-primary-color: var(--eds-color-brand-700);
-    --button-link-color: var(--eds-color-brand-800);
+    --primary-color: var(--eds-color-brand-700);
+    --link-color: var(--eds-color-brand-800);
   }
 
   &:active,
   &.stateActive {
-    --button-primary-color: var(--eds-color-brand-800);
+    --primary-color: var(--eds-color-brand-800);
   }
 
   /* override the hover/focus values */
   &:disabled {
-    --button-primary-color: var(--eds-color-brand-300);
+    --primary-color: var(--eds-color-brand-300);
   }
 }
 
 .colorAlert {
-  --button-primary-color: var(--eds-color-alert-600);
-  --button-secondary-color: var(--eds-color-white);
-  --button-link-color: var(--eds-color-alert-700);
+  --primary-color: var(--eds-color-alert-600);
+  --secondary-color: var(--eds-color-white);
+  --link-color: var(--eds-color-alert-700);
 
   &:hover,
   &.stateHover,
   &:focus,
   &.stateFocus {
-    --button-primary-color: var(--eds-color-alert-700);
-    --button-link-color: var(--eds-color-alert-800);
+    --primary-color: var(--eds-color-alert-700);
+    --link-color: var(--eds-color-alert-800);
   }
 
   &:active,
   &.stateActive {
-    --button-primary-color: var(--eds-color-alert-800);
+    --primary-color: var(--eds-color-alert-800);
   }
 
   /* override the hover/focus values */
   &:disabled {
-    --button-primary-color: var(--eds-color-alert-300);
+    --primary-color: var(--eds-color-alert-300);
   }
 }
 
 .colorNeutral {
-  --button-primary-color: var(--eds-color-neutral-500);
-  --button-secondary-color: var(--eds-color-white);
-  --button-link-color: var(--eds-color-neutral-600);
+  --primary-color: var(--eds-color-neutral-500);
+  --secondary-color: var(--eds-color-white);
+  --link-color: var(--eds-color-neutral-600);
 
   &:hover,
   &.stateHover,
   &:focus,
   &.stateFocus {
-    --button-primary-color: var(--eds-color-neutral-600);
-    --button-link-color: var(--eds-color-neutral-700);
+    --primary-color: var(--eds-color-neutral-600);
+    --link-color: var(--eds-color-neutral-700);
   }
 
   &:active,
   &.stateActive {
-    --button-primary-color: var(--eds-color-neutral-700);
+    --primary-color: var(--eds-color-neutral-700);
   }
 
   /* override the hover/focus values */
   &:disabled {
-    --button-primary-color: var(--eds-color-neutral-300);
+    --primary-color: var(--eds-color-neutral-300);
   }
 }
 
 .colorSuccess {
-  --button-primary-color: var(--eds-color-success-600);
-  --button-secondary-color: var(--eds-color-white);
-  --button-link-color: var(--eds-color-success-700);
+  --primary-color: var(--eds-color-success-600);
+  --secondary-color: var(--eds-color-white);
+  --link-color: var(--eds-color-success-700);
 
   &:hover,
   &.stateHover,
   &:focus,
   &.stateFocus {
-    --button-primary-color: var(--eds-color-success-700);
-    --button-link-color: var(--eds-color-success-800);
+    --primary-color: var(--eds-color-success-700);
+    --link-color: var(--eds-color-success-800);
   }
 
   &:active,
   &.stateActive {
-    --button-primary-color: var(--eds-color-success-800);
+    --primary-color: var(--eds-color-success-800);
   }
 
   /* override the hover/focus values */
   &:disabled {
-    --button-primary-color: var(--eds-color-success-300);
+    --primary-color: var(--eds-color-success-300);
   }
 }
 
 .colorWarning {
-  --button-primary-color: var(--eds-color-warning-600);
-  --button-secondary-color: var(--eds-color-white);
-  --button-link-color: var(--eds-color-warning-700);
+  --primary-color: var(--eds-color-warning-600);
+  --secondary-color: var(--eds-color-white);
+  --link-color: var(--eds-color-warning-700);
 
   &:hover,
   &.stateHover,
   &:focus,
   &.stateFocus {
-    --button-primary-color: var(--eds-color-warning-700);
-    --button-link-color: var(--eds-color-warning-800);
+    --primary-color: var(--eds-color-warning-700);
+    --link-color: var(--eds-color-warning-800);
   }
 
   &:active,
   &.stateActive {
-    --button-primary-color: var(--eds-color-warning-800);
+    --primary-color: var(--eds-color-warning-800);
   }
 
   /* override the hover/focus values */
   &:disabled {
-    --button-primary-color: var(--eds-color-warning-300);
+    --primary-color: var(--eds-color-warning-300);
   }
 }
 
 .variantFlat {
-  background-color: var(--button-primary-color);
-  border-color: var(--button-primary-color);
-  color: var(--button-secondary-color);
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 .variantOutline {
   background-color: transparent;
-  border-color: var(--button-primary-color);
-  color: var(--button-primary-color);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
 
   &:focus,
   &.stateFocus {
     background-color: transparent;
-    color: var(--button-primary-color);
+    color: var(--primary-color);
   }
 
   &:hover,
   &.stateHover {
-    background-color: var(--button-primary-color);
-    color: var(--button-secondary-color);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
   }
 
   &:disabled {
     background-color: transparent;
-    color: var(--button-primary-color);
+    color: var(--primary-color);
   }
 }
 
 .variantLink {
   @apply px-0 py-0 underline border-none font-bold;
 
-  color: var(--button-link-color);
+  color: var(--link-color);
 
   /* button should defer to surrounding text for size/line-height/case */
   font-size: inherit;
@@ -192,7 +192,7 @@
   &:active,
   &.stateActive,
   &:disabled {
-    color: var(--button-primary-color);
+    color: var(--primary-color);
   }
 
   /* override the hover/focus values */
