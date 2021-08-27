@@ -12,6 +12,7 @@
     "create-component": "plop",
     "create-releases": "lerna version --no-push --conventional-commits --message 'chore(release): %s'",
     "create-releases:alpha": "yarn create-releases --preid alpha prerelease",
+    "generateFlowTypes": "./packages/components/generateFlowTypes.sh",
     "lint": "yarn run lint:styles && yarn run lint:scripts",
     "lint:fix": "yarn run lint:styles:fix && yarn run lint:scripts:fix",
     "lint:styles": "stylelint --ignore-path .gitignore packages/**/*.{css,js,jsx,ts,tsx}",
