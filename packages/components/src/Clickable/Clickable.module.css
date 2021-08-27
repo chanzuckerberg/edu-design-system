@@ -26,7 +26,6 @@
 .colorBrand {
   --button-primary-color: var(--eds-color-brand-600);
   --button-secondary-color: var(--eds-color-white);
-  --button-tertiary-color: var(--eds-color-brand-100);
 
   &:hover,
   &.stateHover,
@@ -49,7 +48,6 @@
 .colorAlert {
   --button-primary-color: var(--eds-color-alert-600);
   --button-secondary-color: var(--eds-color-white);
-  --button-tertiary-color: var(--eds-color-alert-100);
 
   &:hover,
   &.stateHover,
@@ -72,7 +70,6 @@
 .colorNeutral {
   --button-primary-color: var(--eds-color-neutral-500);
   --button-secondary-color: var(--eds-color-white);
-  --button-tertiary-color: var(--eds-color-neutral-100);
 
   &:hover,
   &.stateHover,
@@ -95,7 +92,6 @@
 .colorSuccess {
   --button-primary-color: var(--eds-color-success-600);
   --button-secondary-color: var(--eds-color-white);
-  --button-tertiary-color: var(--eds-color-success-100);
 
   &:hover,
   &.stateHover,
@@ -118,7 +114,6 @@
 .colorWarning {
   --button-primary-color: var(--eds-color-warning-600);
   --button-secondary-color: var(--eds-color-white);
-  --button-tertiary-color: var(--eds-color-warning-100);
 
   &:hover,
   &.stateHover,
@@ -168,20 +163,14 @@
 }
 
 .variantLink {
-  @apply px-0 py-0 underline border-none;
+  @apply px-0 py-0 underline border-none font-bold;
 
   color: var(--button-primary-color);
 
-  /* button should defer to surrounding text for size/weight/line-height/case */
+  /* button should defer to surrounding text for size/line-height/case */
   font-size: inherit;
-  font-weight: inherit;
   line-height: inherit;
   text-transform: inherit;
-
-  &:hover,
-  &.stateHover {
-    background-color: var(--button-tertiary-color);
-  }
 
   &:hover,
   &.stateHover,
@@ -192,7 +181,6 @@
 
   /* override the hover/focus values */
   &:disabled {
-    background-color: initial;
     text-decoration-thickness: auto;
   }
 }
