@@ -26,12 +26,14 @@
 .colorBrand {
   --button-primary-color: var(--eds-color-brand-600);
   --button-secondary-color: var(--eds-color-white);
+  --button-link-color: var(--eds-color-brand-700);
 
   &:hover,
   &.stateHover,
   &:focus,
   &.stateFocus {
     --button-primary-color: var(--eds-color-brand-700);
+    --button-link-color: var(--eds-color-brand-800);
   }
 
   &:active,
@@ -48,12 +50,14 @@
 .colorAlert {
   --button-primary-color: var(--eds-color-alert-600);
   --button-secondary-color: var(--eds-color-white);
+  --button-link-color: var(--eds-color-alert-700);
 
   &:hover,
   &.stateHover,
   &:focus,
   &.stateFocus {
     --button-primary-color: var(--eds-color-alert-700);
+    --button-link-color: var(--eds-color-alert-800);
   }
 
   &:active,
@@ -70,12 +74,14 @@
 .colorNeutral {
   --button-primary-color: var(--eds-color-neutral-500);
   --button-secondary-color: var(--eds-color-white);
+  --button-link-color: var(--eds-color-neutral-600);
 
   &:hover,
   &.stateHover,
   &:focus,
   &.stateFocus {
     --button-primary-color: var(--eds-color-neutral-600);
+    --button-link-color: var(--eds-color-neutral-700);
   }
 
   &:active,
@@ -92,12 +98,14 @@
 .colorSuccess {
   --button-primary-color: var(--eds-color-success-600);
   --button-secondary-color: var(--eds-color-white);
+  --button-link-color: var(--eds-color-success-700);
 
   &:hover,
   &.stateHover,
   &:focus,
   &.stateFocus {
     --button-primary-color: var(--eds-color-success-700);
+    --button-link-color: var(--eds-color-success-800);
   }
 
   &:active,
@@ -114,12 +122,14 @@
 .colorWarning {
   --button-primary-color: var(--eds-color-warning-600);
   --button-secondary-color: var(--eds-color-white);
+  --button-link-color: var(--eds-color-warning-700);
 
   &:hover,
   &.stateHover,
   &:focus,
   &.stateFocus {
     --button-primary-color: var(--eds-color-warning-700);
+    --button-link-color: var(--eds-color-warning-800);
   }
 
   &:active,
@@ -165,7 +175,7 @@
 .variantLink {
   @apply px-0 py-0 underline border-none font-bold;
 
-  color: var(--button-primary-color);
+  color: var(--button-link-color);
 
   /* button should defer to surrounding text for size/line-height/case */
   font-size: inherit;
@@ -177,6 +187,12 @@
   &:focus,
   &.stateFocus {
     text-decoration-thickness: 2px;
+  }
+
+  &:active,
+  &.stateActive,
+  &:disabled {
+    color: var(--button-primary-color);
   }
 
   /* override the hover/focus values */
