@@ -19,17 +19,11 @@ type Props = {
    */
   color?: NotificationVariant;
   /**
-   * The heading of the banner.
+   * The text content of the banner.
    *
-   * You need at least a `title` or `message` prop, but you don't need both.
+   * Please note that this can contain text links, but block buttons should be passed in via the `action` prop.
    */
-  title?: React.ReactNode;
-  /**
-   * The body of text that appears below the title (if there is one).
-   *
-   * You need at least a `title` or `message` prop, but you don't need both.
-   */
-  message?: React.ReactNode;
+  textContent: React.ReactNode;
   /**
    * A button or link that's placed in the banner separately from the main content.
    */
@@ -84,19 +78,12 @@ Banner.Body = function BannerBody(props: { children?: React.ReactNode }) {
 export default function Banner({
   className,
   color = "brand",
-  title,
-  message,
+  textContent,
   action,
   onDismiss,
   orientation = "horizontal",
   elevation = 1,
 }: Props) {
-  if (!title && !message) {
-    throw new Error(
-      "You need to provide at least either a title or message prop in your Banner, but right now you don't have either.",
-    );
-  }
-
   const isHorizontal = orientation === "horizontal";
 
   return (
@@ -138,8 +125,7 @@ export default function Banner({
             isHorizontal && styles.horizontal,
           )}
         >
-          {title}
-          {message}
+          {textContent}
         </div>
         {action && (
           <div
