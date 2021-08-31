@@ -37,6 +37,7 @@ exports[`<Banner /> Alert story renders snapshot 1`] = `
       >
         New curriculum updates are available for one or more of your courses.
       </h1>
+       
       <p
         class="typography sizeBody colorInherit"
       >
@@ -107,6 +108,7 @@ exports[`<Banner /> AlertDismissable story renders snapshot 1`] = `
       >
         New curriculum updates are available for one or more of your courses.
       </h1>
+       
       <p
         class="typography sizeBody colorInherit"
       >
@@ -150,6 +152,7 @@ exports[`<Banner /> Brand story renders snapshot 1`] = `
       >
         New curriculum updates are available for one or more of your courses.
       </h1>
+       
       <p
         class="typography sizeBody colorInherit"
       >
@@ -216,6 +219,7 @@ exports[`<Banner /> BrandDismissable story renders snapshot 1`] = `
       >
         New curriculum updates are available for one or more of your courses.
       </h1>
+       
       <p
         class="typography sizeBody colorInherit"
       >
@@ -282,6 +286,7 @@ exports[`<Banner /> DismissableWithAction story renders snapshot 1`] = `
       >
         New curriculum updates are available for one or more of your courses.
       </h1>
+       
       <p
         class="typography sizeBody colorInherit"
       >
@@ -337,6 +342,7 @@ exports[`<Banner /> Elevation0 story renders snapshot 1`] = `
       >
         New curriculum updates are available for one or more of your courses.
       </h1>
+       
       <p
         class="typography sizeBody colorInherit"
       >
@@ -380,6 +386,7 @@ exports[`<Banner /> Neutral story renders snapshot 1`] = `
       >
         New curriculum updates are available for one or more of your courses.
       </h1>
+       
       <p
         class="typography sizeBody colorInherit"
       >
@@ -446,6 +453,7 @@ exports[`<Banner /> NeutralDismissable story renders snapshot 1`] = `
       >
         New curriculum updates are available for one or more of your courses.
       </h1>
+       
       <p
         class="typography sizeBody colorInherit"
       >
@@ -489,6 +497,7 @@ exports[`<Banner /> NoContent story renders snapshot 1`] = `
       >
         New curriculum updates are available for one or more of your courses.
       </h1>
+       
     </div>
   </div>
 </article>
@@ -522,6 +531,7 @@ exports[`<Banner /> NoHeadingShort story renders snapshot 1`] = `
     <div
       class="textContent horizontal"
     >
+       
       <p
         class="typography sizeBody colorInherit"
       >
@@ -565,6 +575,7 @@ exports[`<Banner /> Success story renders snapshot 1`] = `
       >
         New curriculum updates are available for one or more of your courses.
       </h1>
+       
       <p
         class="typography sizeBody colorInherit"
       >
@@ -631,6 +642,7 @@ exports[`<Banner /> SuccessDismissable story renders snapshot 1`] = `
       >
         New curriculum updates are available for one or more of your courses.
       </h1>
+       
       <p
         class="typography sizeBody colorInherit"
       >
@@ -674,6 +686,7 @@ exports[`<Banner /> Vertical story renders snapshot 1`] = `
       >
         New curriculum updates are available for one or more of your courses.
       </h1>
+       
       <p
         class="typography sizeBody colorInherit"
       >
@@ -740,6 +753,7 @@ exports[`<Banner /> VerticalDismissable story renders snapshot 1`] = `
       >
         New curriculum updates are available for one or more of your courses.
       </h1>
+       
       <p
         class="typography sizeBody colorInherit"
       >
@@ -806,6 +820,7 @@ exports[`<Banner /> VerticalDismissableWithAction story renders snapshot 1`] = `
       >
         New curriculum updates are available for one or more of your courses.
       </h1>
+       
       <p
         class="typography sizeBody colorInherit"
       >
@@ -861,6 +876,7 @@ exports[`<Banner /> VerticalElevation0 story renders snapshot 1`] = `
       >
         New curriculum updates are available for one or more of your courses.
       </h1>
+       
       <p
         class="typography sizeBody colorInherit"
       >
@@ -904,6 +920,7 @@ exports[`<Banner /> VerticalWithAction story renders snapshot 1`] = `
       >
         New curriculum updates are available for one or more of your courses.
       </h1>
+       
       <p
         class="typography sizeBody colorInherit"
       >
@@ -959,6 +976,7 @@ exports[`<Banner /> Warning story renders snapshot 1`] = `
       >
         New curriculum updates are available for one or more of your courses.
       </h1>
+       
       <p
         class="typography sizeBody colorInherit"
       >
@@ -1025,6 +1043,7 @@ exports[`<Banner /> WarningDismissable story renders snapshot 1`] = `
       >
         New curriculum updates are available for one or more of your courses.
       </h1>
+       
       <p
         class="typography sizeBody colorInherit"
       >
@@ -1068,6 +1087,7 @@ exports[`<Banner /> WithAction story renders snapshot 1`] = `
       >
         New curriculum updates are available for one or more of your courses.
       </h1>
+       
       <p
         class="typography sizeBody colorInherit"
       >

@@ -27,8 +27,12 @@ const Template: Story<Args> = (args) => {
   return (
     <Banner
       {...restArgs}
-      title={<Banner.Title as="h1">{heading}</Banner.Title>}
-      message={<Banner.Body>{content}</Banner.Body>}
+      textContent={
+        <>
+          <Banner.Title as="h1">{heading}</Banner.Title>{" "}
+          <Banner.Body>{content}</Banner.Body>
+        </>
+      }
     />
   );
 };
@@ -141,8 +145,12 @@ export const DismissableBelowContent = () => (
     </Heading>
     <Banner
       onDismiss={() => console.log("dismissed!")}
-      title={<Banner.Title as="h1">{dialogArgs.heading}</Banner.Title>}
-      message={<Banner.Body>{dialogArgs.content}</Banner.Body>}
+      textContent={
+        <>
+          <Banner.Title as="h1">{dialogArgs.heading}</Banner.Title>{" "}
+          <Banner.Body>{dialogArgs.content}</Banner.Body>
+        </>
+      }
     />
   </>
 );
