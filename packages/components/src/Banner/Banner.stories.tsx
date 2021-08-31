@@ -25,10 +25,11 @@ type Args = React.ComponentProps<typeof Banner> & {
 const Template: Story<Args> = (args) => {
   const { content, heading, ...restArgs } = args;
   return (
-    <Banner {...restArgs}>
-      <Banner.Title as="h1">{heading}</Banner.Title>
-      <Banner.Body>{content}</Banner.Body>
-    </Banner>
+    <Banner
+      {...restArgs}
+      title={<Banner.Title as="h1">{heading}</Banner.Title>}
+      message={<Banner.Body>{content}</Banner.Body>}
+    />
   );
 };
 
@@ -138,10 +139,11 @@ export const DismissableBelowContent = () => (
     <Heading size="h1" spacing="2x">
       Page Title
     </Heading>
-    <Banner onDismiss={() => console.log("dismissed!")}>
-      <Banner.Title as="h1">{dialogArgs.heading}</Banner.Title>
-      <Banner.Body>{dialogArgs.content}</Banner.Body>
-    </Banner>
+    <Banner
+      onDismiss={() => console.log("dismissed!")}
+      title={<Banner.Title as="h1">{dialogArgs.heading}</Banner.Title>}
+      message={<Banner.Body>{dialogArgs.content}</Banner.Body>}
+    />
   </>
 );
 DismissableBelowContent.parameters = {
