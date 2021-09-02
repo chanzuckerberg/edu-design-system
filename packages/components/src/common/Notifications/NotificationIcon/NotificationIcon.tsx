@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import * as React from "react";
 
 import CheckCircleRoundedIcon from "../../../Icons/CheckCircleRounded";
@@ -58,7 +59,7 @@ const NotificationIcon = ({ variant }: Props) => {
   const iconAssets = variantToIconAssetsMap[variant];
 
   return (
-    <div className={iconAssets.style}>
+    <div className={clsx(styles.iconContainer, iconAssets.style)}>
       <iconAssets.icon purpose="informative" title={iconAssets.title} />
     </div>
   );

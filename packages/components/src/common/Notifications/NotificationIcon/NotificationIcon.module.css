@@ -1,3 +1,8 @@
+.iconContainer {
+  /* override default `div` line height to ensure no extra height is added to the icon */
+  line-height: 0;
+}
+
 .iconBrand {
   @apply text-brand-500;
 }

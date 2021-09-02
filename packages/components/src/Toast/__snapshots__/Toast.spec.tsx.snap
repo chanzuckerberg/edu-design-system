@@ -8,7 +8,7 @@ exports[`<Toast /> Alert story renders snapshot 1`] = `
     class="content"
   >
     <div
-      class="iconAlert"
+      class="iconContainer iconAlert"
     >
       <svg
         class="svgIcon"
@@ -46,7 +46,7 @@ exports[`<Toast /> NotDismissable story renders snapshot 1`] = `
     class="content"
   >
     <div
-      class="iconSuccess"
+      class="iconContainer iconSuccess"
     >
       <svg
         class="svgIcon"
@@ -80,7 +80,7 @@ exports[`<Toast /> Success story renders snapshot 1`] = `
     class="content"
   >
     <div
-      class="iconSuccess"
+      class="iconContainer iconSuccess"
     >
       <svg
         class="svgIcon"
