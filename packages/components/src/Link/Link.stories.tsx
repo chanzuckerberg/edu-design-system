@@ -47,10 +47,10 @@ const defaultArgs = {
   href: "",
 };
 
-export const LinkButton = Template.bind(null);
-LinkButton.args = {
+export const StandardLink = Template.bind(null);
+StandardLink.args = {
   ...defaultArgs,
-  children: "Link Button",
+  children: "Link",
   variant: "link",
 };
 
@@ -62,7 +62,7 @@ export const linkInBody: Story<Args> = (args) => (
 );
 linkInBody.args = {
   ...defaultArgs,
-  children: "Link Button",
+  children: "Link",
   variant: "link",
 };
 
@@ -74,7 +74,7 @@ export const linkInHeading: Story<Args> = (args) => (
 );
 linkInHeading.args = {
   ...defaultArgs,
-  children: "Link Button",
+  children: "Link",
   variant: "link",
 };
 
