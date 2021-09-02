@@ -47,51 +47,6 @@ const defaultArgs = {
   href: "",
 };
 
-export const Primary = Template.bind(null);
-Primary.args = {
-  ...defaultArgs,
-};
-
-export const Secondary = Template.bind(null);
-Secondary.args = {
-  ...defaultArgs,
-  variant: "outline",
-};
-
-export const Tertiary = Template.bind(null);
-Tertiary.args = {
-  ...defaultArgs,
-  color: "neutral",
-  variant: "outline",
-};
-
-export const Destructive = Template.bind(null);
-Destructive.args = {
-  ...defaultArgs,
-  color: "alert",
-};
-
-export const PrimarySmall = Template.bind(null);
-PrimarySmall.args = {
-  ...defaultArgs,
-  size: "small",
-};
-
-export const SecondarySmall = Template.bind(null);
-SecondarySmall.args = {
-  ...defaultArgs,
-  size: "small",
-  variant: "outline",
-};
-
-export const TertiarySmall = Template.bind(null);
-TertiarySmall.args = {
-  ...defaultArgs,
-  color: "neutral",
-  size: "small",
-  variant: "outline",
-};
-
 export const LinkButton = Template.bind(null);
 LinkButton.args = {
   ...defaultArgs,
