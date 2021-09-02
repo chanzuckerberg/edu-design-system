@@ -12,10 +12,10 @@ export type LinkProps = LinkHTMLElementProps & {
    * The link contents or label.
    */
   children: ReactNode;
-  color?: ClickableProps<"button">["color"];
+  color?: ClickableProps<"a">["color"];
   "data-testid"?: string;
-  size?: ClickableProps<"button">["size"];
-  variant?: ClickableProps<"button">["variant"];
+  size?: ClickableProps<"a">["size"];
+  variant?: ClickableProps<"a">["variant"];
 };
 
 const Link = forwardRef<HTMLAnchorElement, LinkProps>(
