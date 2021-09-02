@@ -10,7 +10,7 @@ exports[`<NotificationIcon /> ColorVariants story renders snapshot 1`] = `
     brand
   </p>
   <div
-    class="iconBrand"
+    class="iconContainer iconBrand"
   >
     <svg
       class="svgIcon"

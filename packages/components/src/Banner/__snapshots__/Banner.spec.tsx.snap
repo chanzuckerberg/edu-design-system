@@ -5,7 +5,7 @@ exports[`<Banner /> Alert story renders snapshot 1`] = `
   class="bannerDialog horizontal colorAlert"
 >
   <div
-    class="iconAlert"
+    class="iconContainer iconAlert"
   >
     <svg
       class="svgIcon"
@@ -75,7 +75,7 @@ exports[`<Banner /> AlertDismissable story renders snapshot 1`] = `
     </svg>
   </button>
   <div
-    class="iconAlert"
+    class="iconContainer iconAlert"
   >
     <svg
       class="svgIcon"
@@ -122,7 +122,7 @@ exports[`<Banner /> Brand story renders snapshot 1`] = `
   class="bannerDialog horizontal colorBrand"
 >
   <div
-    class="iconBrand"
+    class="iconContainer iconBrand"
   >
     <svg
       class="svgIcon"
@@ -188,7 +188,7 @@ exports[`<Banner /> BrandDismissable story renders snapshot 1`] = `
     </svg>
   </button>
   <div
-    class="iconBrand"
+    class="iconContainer iconBrand"
   >
     <svg
       class="svgIcon"
@@ -254,7 +254,7 @@ exports[`<Banner /> DismissableWithAction story renders snapshot 1`] = `
     </svg>
   </button>
   <div
-    class="iconBrand"
+    class="iconContainer iconBrand"
   >
     <svg
       class="svgIcon"
@@ -309,7 +309,7 @@ exports[`<Banner /> Elevation0 story renders snapshot 1`] = `
   class="bannerDialog horizontal elevation0 colorBrand"
 >
   <div
-    class="iconBrand"
+    class="iconContainer iconBrand"
   >
     <svg
       class="svgIcon"
@@ -352,7 +352,7 @@ exports[`<Banner /> Neutral story renders snapshot 1`] = `
   class="bannerDialog horizontal colorNeutral"
 >
   <div
-    class="iconNeutral"
+    class="iconContainer iconNeutral"
   >
     <svg
       class="svgIcon"
@@ -418,7 +418,7 @@ exports[`<Banner /> NeutralDismissable story renders snapshot 1`] = `
     </svg>
   </button>
   <div
-    class="iconNeutral"
+    class="iconContainer iconNeutral"
   >
     <svg
       class="svgIcon"
@@ -461,7 +461,7 @@ exports[`<Banner /> NoContent story renders snapshot 1`] = `
   class="bannerDialog horizontal colorBrand"
 >
   <div
-    class="iconBrand"
+    class="iconContainer iconBrand"
   >
     <svg
       class="svgIcon"
@@ -499,7 +499,7 @@ exports[`<Banner /> NoHeadingShort story renders snapshot 1`] = `
   class="bannerDialog horizontal colorBrand"
 >
   <div
-    class="iconBrand"
+    class="iconContainer iconBrand"
   >
     <svg
       class="svgIcon"
@@ -537,7 +537,7 @@ exports[`<Banner /> Success story renders snapshot 1`] = `
   class="bannerDialog horizontal colorSuccess"
 >
   <div
-    class="iconSuccess"
+    class="iconContainer iconSuccess"
   >
     <svg
       class="svgIcon"
@@ -603,7 +603,7 @@ exports[`<Banner /> SuccessDismissable story renders snapshot 1`] = `
     </svg>
   </button>
   <div
-    class="iconSuccess"
+    class="iconContainer iconSuccess"
   >
     <svg
       class="svgIcon"
@@ -646,7 +646,7 @@ exports[`<Banner /> Vertical story renders snapshot 1`] = `
   class="bannerDialog colorBrand"
 >
   <div
-    class="iconBrand"
+    class="iconContainer iconBrand"
   >
     <svg
       class="svgIcon"
@@ -712,7 +712,7 @@ exports[`<Banner /> VerticalDismissable story renders snapshot 1`] = `
     </svg>
   </button>
   <div
-    class="iconBrand"
+    class="iconContainer iconBrand"
   >
     <svg
       class="svgIcon"
@@ -778,7 +778,7 @@ exports[`<Banner /> VerticalDismissableWithAction story renders snapshot 1`] = `
     </svg>
   </button>
   <div
-    class="iconBrand"
+    class="iconContainer iconBrand"
   >
     <svg
       class="svgIcon"
@@ -833,7 +833,7 @@ exports[`<Banner /> VerticalElevation0 story renders snapshot 1`] = `
   class="bannerDialog elevation0 colorBrand"
 >
   <div
-    class="iconBrand"
+    class="iconContainer iconBrand"
   >
     <svg
       class="svgIcon"
@@ -876,7 +876,7 @@ exports[`<Banner /> VerticalWithAction story renders snapshot 1`] = `
   class="bannerDialog colorBrand"
 >
   <div
-    class="iconBrand"
+    class="iconContainer iconBrand"
   >
     <svg
       class="svgIcon"
@@ -931,7 +931,7 @@ exports[`<Banner /> Warning story renders snapshot 1`] = `
   class="bannerDialog horizontal colorWarning"
 >
   <div
-    class="iconWarning"
+    class="iconContainer iconWarning"
   >
     <svg
       class="svgIcon"
@@ -997,7 +997,7 @@ exports[`<Banner /> WarningDismissable story renders snapshot 1`] = `
     </svg>
   </button>
   <div
-    class="iconWarning"
+    class="iconContainer iconWarning"
   >
     <svg
       class="svgIcon"
@@ -1040,7 +1040,7 @@ exports[`<Banner /> WithAction story renders snapshot 1`] = `
   class="bannerDialog horizontal colorBrand"
 >
   <div
-    class="iconBrand"
+    class="iconContainer iconBrand"
   >
     <svg
       class="svgIcon"
