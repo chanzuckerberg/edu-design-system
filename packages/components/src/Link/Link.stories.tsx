@@ -41,8 +41,7 @@ const Template: Story<Args> = (args) => <Link {...args} />;
 
 const defaultArgs = {
   children: "Link",
-  variant: "flat" as const,
-  size: "medium" as const,
+  variant: "link" as const,
   color: "brand" as const,
   href: "",
 };
@@ -50,8 +49,6 @@ const defaultArgs = {
 export const StandardLink = Template.bind(null);
 StandardLink.args = {
   ...defaultArgs,
-  children: "Link",
-  variant: "link",
 };
 
 export const linkInBody: Story<Args> = (args) => (
@@ -62,8 +59,6 @@ export const linkInBody: Story<Args> = (args) => (
 );
 linkInBody.args = {
   ...defaultArgs,
-  children: "Link",
-  variant: "link",
 };
 
 export const linkInHeading: Story<Args> = (args) => (
@@ -74,49 +69,6 @@ export const linkInHeading: Story<Args> = (args) => (
 );
 linkInHeading.args = {
   ...defaultArgs,
-  children: "Link",
-  variant: "link",
-};
-
-export const withDataTestId = Template.bind(null);
-withDataTestId.args = {
-  ...defaultArgs,
-  children: "Link with data-testid",
-  color: "alert",
-  "data-testid": "fake-test-id",
-};
-
-export const linkWithIcon = Template.bind(null);
-linkWithIcon.args = {
-  ...defaultArgs,
-  children: (
-    <>
-      Link with icon <CheckCircleRoundedIcon purpose="decorative" />
-    </>
-  ),
-  color: "success",
-  variant: "link",
-};
-
-export const outlineWithIcon = Template.bind(null);
-outlineWithIcon.args = {
-  ...defaultArgs,
-  children: (
-    <>
-      Outline with icon <CheckCircleRoundedIcon purpose="decorative" />
-    </>
-  ),
-  color: "warning",
-  variant: "outline",
-};
-
-export const withFakeClassName = Template.bind(null);
-withFakeClassName.args = {
-  ...defaultArgs,
-  children: "With fake className",
-  color: "warning",
-  variant: "outline",
-  className: "fake-className",
 };
 
 // Show grids with all variants
@@ -194,4 +146,39 @@ mediumVariantsOnDarkBackground.parameters = {
   backgrounds: {
     default: "dark",
   },
+};
+
+// These last few stories are more for testing purposes than for guidance/examples.
+
+export const linkWithIcon = Template.bind(null);
+linkWithIcon.args = {
+  ...defaultArgs,
+  children: (
+    <>
+      Link <CheckCircleRoundedIcon purpose="decorative" />
+    </>
+  ),
+};
+
+export const buttonVariantWithIcon = Template.bind(null);
+buttonVariantWithIcon.args = {
+  ...defaultArgs,
+  variant: "flat",
+  children: (
+    <>
+      Link <CheckCircleRoundedIcon purpose="decorative" />
+    </>
+  ),
+};
+
+export const withDataTestId = Template.bind(null);
+withDataTestId.args = {
+  ...defaultArgs,
+  "data-testid": "fake-test-id",
+};
+
+export const withClassName = Template.bind(null);
+withClassName.args = {
+  ...defaultArgs,
+  className: "example-className",
 };

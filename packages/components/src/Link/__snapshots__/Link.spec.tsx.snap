@@ -10,6 +10,27 @@ exports[`<Link /> StandardLink story renders snapshot 1`] = `
 </a>
 `;
 
+exports[`<Link /> buttonVariantWithIcon story renders snapshot 1`] = `
+<a
+  class="button variantFlat colorBrand"
+  href=""
+>
+  ​
+  Link 
+  <svg
+    aria-hidden="true"
+    class="svgIcon"
+    fill="currentColor"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM9.29 16.29L5.7 12.7a.9959.9959 0 010-1.41c.39-.39 1.02-.39 1.41 0L10 14.17l6.88-6.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-7.59 7.59c-.38.39-1.02.39-1.41 0z"
+    />
+  </svg>
+</a>
+`;
+
 exports[`<Link /> linkInBody story renders snapshot 1`] = `
 <p
   class="typography sizeBody colorBase"
@@ -44,11 +65,11 @@ exports[`<Link /> linkInHeading story renders snapshot 1`] = `
 
 exports[`<Link /> linkWithIcon story renders snapshot 1`] = `
 <a
-  class="button variantLink colorSuccess"
+  class="button variantLink colorBrand"
   href=""
 >
   ​
-  Link with icon 
+  Link 
   <svg
     aria-hidden="true"
     class="svgIcon"
@@ -63,44 +84,23 @@ exports[`<Link /> linkWithIcon story renders snapshot 1`] = `
 </a>
 `;
 
-exports[`<Link /> outlineWithIcon story renders snapshot 1`] = `
+exports[`<Link /> withClassName story renders snapshot 1`] = `
 <a
-  class="button sizeMedium variantOutline colorWarning"
+  class="example-className button variantLink colorBrand"
   href=""
 >
   ​
-  Outline with icon 
-  <svg
-    aria-hidden="true"
-    class="svgIcon"
-    fill="currentColor"
-    viewBox="0 0 24 24"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM9.29 16.29L5.7 12.7a.9959.9959 0 010-1.41c.39-.39 1.02-.39 1.41 0L10 14.17l6.88-6.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-7.59 7.59c-.38.39-1.02.39-1.41 0z"
-    />
-  </svg>
+  Link
 </a>
 `;
 
 exports[`<Link /> withDataTestId story renders snapshot 1`] = `
 <a
-  class="button sizeMedium variantFlat colorAlert"
+  class="button variantLink colorBrand"
   data-testid="fake-test-id"
   href=""
 >
   ​
-  Link with data-testid
-</a>
-`;
-
-exports[`<Link /> withFakeClassName story renders snapshot 1`] = `
-<a
-  class="fake-className button sizeMedium variantOutline colorWarning"
-  href=""
->
-  ​
-  With fake className
+  Link
 </a>
 `;
