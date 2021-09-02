@@ -18,6 +18,14 @@ export type LinkProps = LinkHTMLElementProps & {
   variant?: ClickableProps<"a">["variant"];
 };
 
+/**
+ * Component for making links that navigate to a different page that is outside of the
+ * product (ie help desk or external resource).
+ *
+ * This component is called Link because it should be used to making link elements;
+ * however, it can be styled to look like a button. In terms of the look and feel of the
+ * component in the UI, the Link and Button components are exactly the same.
+ */
 const Link = forwardRef<HTMLAnchorElement, LinkProps>(
   ({ as = "a", variant = "link", color = "brand", ...rest }, ref) => {
     return (
