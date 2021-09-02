@@ -1,78 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Link /> Destructive story renders snapshot 1`] = `
-<a
-  class="button sizeMedium variantFlat colorAlert"
-  href=""
->
-  ​
-  Link
-</a>
-`;
-
-exports[`<Link /> LinkButton story renders snapshot 1`] = `
+exports[`<Link /> StandardLink story renders snapshot 1`] = `
 <a
   class="button variantLink colorBrand"
-  href=""
->
-  ​
-  Link Button
-</a>
-`;
-
-exports[`<Link /> Primary story renders snapshot 1`] = `
-<a
-  class="button sizeMedium variantFlat colorBrand"
-  href=""
->
-  ​
-  Link
-</a>
-`;
-
-exports[`<Link /> PrimarySmall story renders snapshot 1`] = `
-<a
-  class="button sizeSmall variantFlat colorBrand"
-  href=""
->
-  ​
-  Link
-</a>
-`;
-
-exports[`<Link /> Secondary story renders snapshot 1`] = `
-<a
-  class="button sizeMedium variantOutline colorBrand"
-  href=""
->
-  ​
-  Link
-</a>
-`;
-
-exports[`<Link /> SecondarySmall story renders snapshot 1`] = `
-<a
-  class="button sizeSmall variantOutline colorBrand"
-  href=""
->
-  ​
-  Link
-</a>
-`;
-
-exports[`<Link /> Tertiary story renders snapshot 1`] = `
-<a
-  class="button sizeMedium variantOutline colorNeutral"
-  href=""
->
-  ​
-  Link
-</a>
-`;
-
-exports[`<Link /> TertiarySmall story renders snapshot 1`] = `
-<a
-  class="button sizeSmall variantOutline colorNeutral"
   href=""
 >
   ​
@@ -90,7 +20,7 @@ exports[`<Link /> linkInBody story renders snapshot 1`] = `
     href=""
   >
     ​
-    Link Button
+    Link
   </a>
    and shows that the link should adhere to its appearance
 </p>
@@ -106,7 +36,7 @@ exports[`<Link /> linkInHeading story renders snapshot 1`] = `
     href=""
   >
     ​
-    Link Button
+    Link
   </a>
    and shows that the link should adhere to its appearance
 </p>
