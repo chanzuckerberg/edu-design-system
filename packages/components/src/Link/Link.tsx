@@ -27,9 +27,19 @@ export type LinkProps = LinkHTMLElementProps & {
  * component in the UI, the Link and Button components are exactly the same.
  */
 const Link = forwardRef<HTMLAnchorElement, LinkProps>(
-  ({ as = "a", variant = "link", color = "brand", ...rest }, ref) => {
+  (
+    { as = "a", variant = "link", color = "brand", size = "medium", ...rest },
+    ref,
+  ) => {
     return (
-      <Clickable {...rest} as={as} variant={variant} color={color} ref={ref} />
+      <Clickable
+        {...rest}
+        as={as}
+        variant={variant}
+        color={color}
+        ref={ref}
+        size={size}
+      />
     );
   },
 );
