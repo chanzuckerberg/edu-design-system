@@ -1,6 +1,6 @@
 import { Story } from "@storybook/react/types-6-0";
 import React from "react";
-import Clickable from "../Clickable";
+import ClickableStyleWrapper from "../ClickableStyleWrapper";
 import Heading from "../Heading";
 import CheckCircleRoundedIcon from "../Icons/CheckCircleRounded";
 import Text from "../Text";
@@ -189,8 +189,8 @@ const renderSize = (
                 {colors.map((color) => (
                   <td key={color} className={styles.color}>
                     {/* To pass the "state" prop (only used for demonstration in storybook),
-                    we must use Clickable instead of Button */}
-                    <Clickable
+                    we must use ClickableStyleWrapper instead of Button */}
+                    <ClickableStyleWrapper
                       as={"button"}
                       size={size}
                       color={color}
@@ -199,7 +199,7 @@ const renderSize = (
                       disabled={state === "disabled"}
                     >
                       {children}
-                    </Clickable>
+                    </ClickableStyleWrapper>
                   </td>
                 ))}
               </tr>
