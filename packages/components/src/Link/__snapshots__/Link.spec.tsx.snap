@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Link /> StandardLink story renders snapshot 1`] = `
+<a
+  class="button variantLink colorBrand"
+  href=""
+>
+  ​
+  Link
+</a>
+`;
+
+exports[`<Link /> buttonVariantWithIcon story renders snapshot 1`] = `
+<a
+  class="button sizeMedium variantFlat colorBrand"
+  href=""
+>
+  ​
+  Link 
+  <svg
+    aria-hidden="true"
+    class="svgIcon"
+    fill="currentColor"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM9.29 16.29L5.7 12.7a.9959.9959 0 010-1.41c.39-.39 1.02-.39 1.41 0L10 14.17l6.88-6.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-7.59 7.59c-.38.39-1.02.39-1.41 0z"
+    />
+  </svg>
+</a>
+`;
+
+exports[`<Link /> linkInBody story renders snapshot 1`] = `
+<p
+  class="typography sizeBody colorBase"
+>
+  This text surrounds the 
+  <a
+    class="button variantLink colorBrand"
+    href=""
+  >
+    ​
+    Link
+  </a>
+   and shows that the link should adhere to its appearance
+</p>
+`;
+
+exports[`<Link /> linkInHeading story renders snapshot 1`] = `
+<p
+  class="typography sizeH1 colorBase"
+>
+  This text surrounds the 
+  <a
+    class="button variantLink colorBrand"
+    href=""
+  >
+    ​
+    Link
+  </a>
+   and shows that the link should adhere to its appearance
+</p>
+`;
+
+exports[`<Link /> linkWithIcon story renders snapshot 1`] = `
+<a
+  class="button variantLink colorBrand"
+  href=""
+>
+  ​
+  Link 
+  <svg
+    aria-hidden="true"
+    class="svgIcon"
+    fill="currentColor"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM9.29 16.29L5.7 12.7a.9959.9959 0 010-1.41c.39-.39 1.02-.39 1.41 0L10 14.17l6.88-6.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-7.59 7.59c-.38.39-1.02.39-1.41 0z"
+    />
+  </svg>
+</a>
+`;
+
+exports[`<Link /> withClassName story renders snapshot 1`] = `
+<a
+  class="example-className button variantLink colorBrand"
+  href=""
+>
+  ​
+  Link
+</a>
+`;
+
+exports[`<Link /> withDataTestId story renders snapshot 1`] = `
+<a
+  class="button variantLink colorBrand"
+  data-testid="fake-test-id"
+  href=""
+>
+  ​
+  Link
+</a>
+`;
