@@ -12,7 +12,7 @@ exports[`<Link /> StandardLink story renders snapshot 1`] = `
 
 exports[`<Link /> buttonVariantWithIcon story renders snapshot 1`] = `
 <a
-  class="button variantFlat colorBrand"
+  class="button sizeMedium variantFlat colorBrand"
   href=""
 >
   ​
