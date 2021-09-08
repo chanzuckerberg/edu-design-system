@@ -4,7 +4,6 @@ import Clickable, { ClickableProps } from "../Clickable";
 type ButtonHTMLElementProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 export type ButtonProps = ButtonHTMLElementProps & {
-  as?: "button" | React.ComponentType<any>;
   /**
    * The button contents or label.
    */
@@ -25,7 +24,6 @@ export type ButtonProps = ButtonHTMLElementProps & {
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
-      as = "button",
       variant = "flat",
       color = "brand",
       disabled = false,
@@ -38,7 +36,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     return (
       <Clickable
         {...rest}
-        as={as}
+        as="button"
         variant={variant}
         color={color}
         disabled={disabled}
