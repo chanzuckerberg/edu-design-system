@@ -37,8 +37,6 @@ type Args = React.ComponentProps<typeof Link>;
 
 const Template: Story<Args> = (args) => <Link {...args} />;
 
-// TODO: Consolidate with button stories.
-
 const defaultArgs = {
   children: "Link",
   variant: "link" as const,
