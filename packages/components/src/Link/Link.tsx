@@ -19,12 +19,14 @@ export type LinkProps = LinkHTMLElementProps & {
 };
 
 /**
- * Component for making links that navigate to a different page that is outside of the
- * product (ie help desk or external resource).
+ * Component for making anchor tags.
  *
  * This component is called Link because it should be used to making link elements;
  * however, it can be styled to look like a button. In terms of the look and feel of the
  * component in the UI, the Link and Button components are exactly the same.
+ *
+ * Note: when using a routing component like react-router, you'll probably want to pass
+ * in its Link component via the `as` prop.
  */
 const Link = forwardRef<HTMLAnchorElement, LinkProps>(
   (
