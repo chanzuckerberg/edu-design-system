@@ -1,7 +1,5 @@
 import React, { ReactNode, forwardRef } from "react";
-import ClickableStyleWrapper, {
-  ClickableStyleWrapperProps,
-} from "../ClickableStyleWrapper";
+import ClickableStyle, { ClickableStyleProps } from "../ClickableStyle";
 
 type LinkHTMLElementProps = Omit<
   React.AnchorHTMLAttributes<HTMLAnchorElement>,
@@ -13,10 +11,10 @@ export type LinkProps = LinkHTMLElementProps & {
    * The link contents or label.
    */
   children: ReactNode;
-  color?: ClickableStyleWrapperProps<"a">["color"];
+  color?: ClickableStyleProps<"a">["color"];
   "data-testid"?: string;
-  size?: ClickableStyleWrapperProps<"a">["size"];
-  variant?: ClickableStyleWrapperProps<"a">["variant"];
+  size?: ClickableStyleProps<"a">["size"];
+  variant?: ClickableStyleProps<"a">["variant"];
 };
 
 /**
@@ -32,7 +30,7 @@ export type LinkProps = LinkHTMLElementProps & {
 const Link = forwardRef<HTMLAnchorElement, LinkProps>(
   ({ variant = "link", color = "brand", size = "medium", ...rest }, ref) => {
     return (
-      <ClickableStyleWrapper
+      <ClickableStyle
         {...rest}
         as="a"
         variant={variant}

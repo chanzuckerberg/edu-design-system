@@ -1,6 +1,6 @@
 export { default as Banner } from "./Banner";
 export { default as Button } from "./Button";
-export { default as ClickableStyleWrapper } from "./ClickableStyleWrapper";
+export { default as ClickableStyle } from "./ClickableStyle";
 export { default as Heading } from "./Heading";
 export { default as SvgIcon } from "./SvgIcon";
 export type { IconProps } from "./SvgIcon";

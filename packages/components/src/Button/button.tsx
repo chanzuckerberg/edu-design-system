@@ -1,7 +1,5 @@
 import React, { ReactNode, forwardRef } from "react";
-import ClickableStyleWrapper, {
-  ClickableStyleWrapperProps,
-} from "../ClickableStyleWrapper";
+import ClickableStyle, { ClickableStyleProps } from "../ClickableStyle";
 
 type ButtonHTMLElementProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
 
@@ -10,10 +8,10 @@ export type ButtonProps = ButtonHTMLElementProps & {
    * The button contents or label.
    */
   children: ReactNode;
-  color?: ClickableStyleWrapperProps<"button">["color"];
+  color?: ClickableStyleProps<"button">["color"];
   "data-testid"?: string;
-  size?: ClickableStyleWrapperProps<"button">["size"];
-  variant?: ClickableStyleWrapperProps<"button">["variant"];
+  size?: ClickableStyleProps<"button">["size"];
+  variant?: ClickableStyleProps<"button">["variant"];
 };
 
 /**
@@ -36,7 +34,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     ref,
   ) => {
     return (
-      <ClickableStyleWrapper
+      <ClickableStyle
         {...rest}
         as="button"
         variant={variant}
