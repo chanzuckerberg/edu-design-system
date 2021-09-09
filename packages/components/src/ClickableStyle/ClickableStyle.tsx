@@ -1,8 +1,8 @@
 import clsx from "clsx";
 import React from "react";
-import styles from "./ClickableStyleWrapper.module.css";
+import styles from "./ClickableStyle.module.css";
 
-export type ClickableStyleWrapperProps<IComponent extends React.ElementType> = {
+export type ClickableStyleProps<IComponent extends React.ElementType> = {
   /**
    * CSS class for custom styles.
    */
@@ -30,7 +30,7 @@ export type ClickableStyleWrapperProps<IComponent extends React.ElementType> = {
  *
  * See the Button stories for usage examples.
  */
-const ClickableStyleWrapper = React.forwardRef(
+const ClickableStyle = React.forwardRef(
   <IComponent extends React.ElementType>(
     {
       as: Component,
@@ -41,7 +41,7 @@ const ClickableStyleWrapper = React.forwardRef(
       variant,
       className,
       ...rest
-    }: ClickableStyleWrapperProps<IComponent>,
+    }: ClickableStyleProps<IComponent>,
     ref: React.ForwardedRef<HTMLElement>,
   ) => {
     return (
@@ -81,6 +81,6 @@ const ClickableStyleWrapper = React.forwardRef(
   },
 );
 
-ClickableStyleWrapper.displayName = "ClickableStyleWrapper";
+ClickableStyle.displayName = "ClickableStyle";
 
-export default ClickableStyleWrapper;
+export default ClickableStyle;

@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ClickableStyle /> ClickableStyleAsAnATag story renders snapshot 1`] = `
+<a
+  class="button sizeMedium variantFlat colorBrand"
+>
+  ​
+  ClickableStyle As An A Tag
+</a>
+`;
