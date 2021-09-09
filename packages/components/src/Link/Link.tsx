@@ -25,7 +25,7 @@ export type LinkProps = LinkHTMLElementProps & {
  * component in the UI, the Link and Button components are exactly the same.
  *
  * Note: when using a routing component like react-router, you'll probably want to
- * use Clickable and pass in the routing component via the `as` prop.
+ * use ClickableStyle and pass in the routing component via the `as` prop.
  */
 const Link = forwardRef<HTMLAnchorElement, LinkProps>(
   ({ variant = "link", color = "brand", size = "medium", ...rest }, ref) => {
