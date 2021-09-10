@@ -64,7 +64,7 @@ Banner.Title = function BannerTitle(props: {
 /**
  * This should import a Text element type
  */
-Banner.Body = function BannerBody(props: { children?: React.ReactNode }) {
+Banner.Message = function BannerMessage(props: { children?: React.ReactNode }) {
   return props.children ? (
     <Text color={"inherit"} size="body">
       {props.children}

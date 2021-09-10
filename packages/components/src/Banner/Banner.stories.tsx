@@ -30,7 +30,7 @@ const Template: Story<Args> = (args) => {
       textContent={
         <>
           <Banner.Title as="h1">{heading}</Banner.Title>{" "}
-          <Banner.Body>{content}</Banner.Body>
+          <Banner.Message>{content}</Banner.Message>
         </>
       }
     />
@@ -148,7 +148,7 @@ export const DismissableBelowContent = () => (
       textContent={
         <>
           <Banner.Title as="h1">{dialogArgs.heading}</Banner.Title>{" "}
-          <Banner.Body>{dialogArgs.content}</Banner.Body>
+          <Banner.Message>{dialogArgs.content}</Banner.Message>
         </>
       }
     />
