@@ -30,6 +30,11 @@ The [Education Initiative](https://chanzuckerberg.com/education/)'s design syste
 5. Run `yarn publish-releases` to publish the packages to the NPM registry.
 6. Push commits and tags to the git remote with `git push origin --tags && git push origin main`
 
+
+**Before the first time you publish**, make sure to:
+- set up Two Factor Authentication for your npm account
+- run `npm login` in your terminal to generate an access token for publishing
+
 ## Project Status
 
 This project is under **active development**. If you would like to contribute, check out the [contribution guidelines](https://github.com/chanzuckerberg/edu-design-system/blob/main/CONTRIBUTING.md) or [open an issue](https://github.com/chanzuckerberg/edu-design-system/issues).
