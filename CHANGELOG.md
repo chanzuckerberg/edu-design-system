@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.1.5...v0.2.0) (2021-09-10)
+
+
+### Bug Fixes
+
+* set line-height for NotificationIcon ([03ca81e](https://github.com/chanzuckerberg/edu-design-system/commit/03ca81e43077724a71b35eb2bf3f72f64a727203))
+
+
+### Features
+
+* **link + button:** remove 'as' prop ([d9c8db7](https://github.com/chanzuckerberg/edu-design-system/commit/d9c8db752f896c2f52ab06589f9c8762a1367adb))
+* **link:** add Link component; change Button to always use button tag ([32b587a](https://github.com/chanzuckerberg/edu-design-system/commit/32b587a4b4bc03a239dbcb6b9d82ac7e06d7c99a))
+* rename Clickable component to ClickableStyle ([fa0f29a](https://github.com/chanzuckerberg/edu-design-system/commit/fa0f29aa414858c6a5c7e30c5d2552f5248026bc))
+* **banner:** update api to use textContent prop instead of children ([33f3249](https://github.com/chanzuckerberg/edu-design-system/commit/33f324985f01d43366997d604e9d3258f4439fd8))
+
+
+
+
+
 ## [0.1.5](https://github.com/chanzuckerberg/edu-design-system/compare/v0.1.4...v0.1.5) (2021-08-25)
 
 
