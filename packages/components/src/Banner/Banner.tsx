@@ -9,7 +9,7 @@ import NotificationIcon, {
 } from "../common/Notifications/NotificationIcon";
 import styles from "./Banner.module.css";
 
-type BannerProps = {
+export type BannerProps = {
   /**
    * Additional class names passed in for styling
    */
