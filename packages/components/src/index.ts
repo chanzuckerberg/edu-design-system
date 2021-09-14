@@ -4,6 +4,7 @@ export { default as ClickableStyle } from "./ClickableStyle";
 export { default as Heading } from "./Heading";
 export { default as SvgIcon } from "./SvgIcon";
 export type { IconProps } from "./SvgIcon";
+export { default as Link } from "./Link";
 export { default as Tag } from "./Tag";
 export { default as Text } from "./Text";
 export { default as Toast } from "./Toast";
