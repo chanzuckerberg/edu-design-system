@@ -1,4 +1,5 @@
 export { default as Banner } from "./Banner";
+export type { BannerProps } from "./Banner";
 export { default as Button } from "./Button";
 export { default as ClickableStyle } from "./ClickableStyle";
 export { default as Heading } from "./Heading";
