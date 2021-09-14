@@ -9,7 +9,7 @@ import NotificationIcon, {
 } from "../common/Notifications/NotificationIcon";
 import styles from "./Banner.module.css";
 
-type Props = {
+type BannerProps = {
   /**
    * Additional class names passed in for styling
    */
@@ -83,7 +83,7 @@ export default function Banner({
   onDismiss,
   orientation = "horizontal",
   elevation = 1,
-}: Props) {
+}: BannerProps) {
   const isHorizontal = orientation === "horizontal";
 
   return (
