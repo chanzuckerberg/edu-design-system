@@ -15,6 +15,13 @@ const defaultArgs = {
   label: "Hello world =^_^=",
 };
 
+export const Testing = () => (
+  <>
+    <Checkbox id="unchecked" label="Unchecked" />
+    <Checkbox checked id="checked" label="Checked" />
+  </>
+);
+
 export const Default = Template.bind(null);
 Default.args = {
   ...defaultArgs,

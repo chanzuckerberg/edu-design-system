@@ -3,30 +3,37 @@
 }
 
 .checkboxLabel {
-  @apply text-body;
+  @apply text-body m-0;
 }
 
 .checkboxInput {
-  -webkit-appearance: none;
+  @apply cursor-pointer;
 
-  @apply bg-white border-2 border-neutral-500 rounded;
-  @apply relative cursor-pointer;
+  /* remove the checkbox from the page flow, positioning it on top of the SVG */
+  position: absolute;
 
-  width: 18px;
-  height: 18px;
+  /* set same dimensions as the CheckboxSvg element */
+  @apply w-5 h-5;
+
+  /* hide the input element */
+  opacity: 0.00001;
 }
 
-.checkboxInput:checked {
-  @apply bg-brand-600 border-brand-600;
+.checkboxInput + svg {
+  @apply text-neutral-500;
 }
 
-/* TODO: replace this with CheckRounded icon or image */
-.checkboxInput:checked::before {
-  @apply absolute border-2 border-white left-1 w-1.5 h-2.5 border-t-0 border-l-0;
+.checkboxInput:checked + svg > .outline {
+  fill: var(--eds-color-brand-600);
+  stroke: var(--eds-color-brand-600);
+}
 
-  content: "";
-  transform: rotate(36deg);
-  top: 1px;
+.checkboxInput:checked + svg > .content {
+  fill: var(--eds-color-white);
+}
+
+.checkboxInput:focus + svg {
+  @apply outline-none rounded ring-2 ring-info-400;
 }
 
 .checkboxInput:disabled {
