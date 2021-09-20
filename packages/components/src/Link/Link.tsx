@@ -15,6 +15,7 @@ export type LinkProps = LinkHTMLElementProps & {
   "data-testid"?: string;
   size?: ClickableStyleProps<"a">["size"];
   variant?: ClickableStyleProps<"a">["variant"];
+  icon?: ClickableStyleProps<"a">["icon"];
 };
 
 /**

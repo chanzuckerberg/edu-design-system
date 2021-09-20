@@ -12,6 +12,7 @@ export type ButtonProps = ButtonHTMLElementProps & {
   "data-testid"?: string;
   size?: ClickableStyleProps<"button">["size"];
   variant?: ClickableStyleProps<"button">["variant"];
+  icon?: ClickableStyleProps<"button">["icon"];
 };
 
 /**
