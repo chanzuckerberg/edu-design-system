@@ -11,11 +11,11 @@
 
 /* Component Sizes */
 .sizeSmall {
-  @apply px-5 py-2 text-xs leading-3;
+  @apply px-4 py-2 text-xs leading-3;
 }
 
 .sizeMedium {
-  @apply px-5 py-2 text-sm;
+  @apply px-4 py-2 text-sm;
 }
 
 .sizeLarge {
