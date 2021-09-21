@@ -48,7 +48,7 @@ export type ClickableStyleProps<IComponent extends React.ElementType> = {
      * Icons typically have a little extra space between the path and the edge of the viewbox.
      * Negative left and right margin can be used to remove this extra space.
      */
-    iconHorizontalMargin?: any;
+    iconHorizontalMargin?: string | 0;
   };
 } & React.ComponentProps<IComponent>;
 
