@@ -56,7 +56,7 @@ ClickableStyleWithOnlyIcon.args = {
   variant: "flat",
   size: "medium",
   icon: {
-    iconElement: <ArrowForwardRoundedIcon purpose="decorative" />,
+    iconElement: <ArrowForwardRoundedIcon purpose="informative" title="next" />,
     iconHorizontalMargin: "-4px",
   },
 };
