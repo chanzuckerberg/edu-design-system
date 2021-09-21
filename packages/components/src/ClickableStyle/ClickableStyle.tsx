@@ -72,23 +72,8 @@ const ClickableStyle = React.forwardRef(
     }: ClickableStyleProps<IComponent>,
     ref: React.ForwardedRef<HTMLElement>,
   ) => {
-    const maybeRenderIcon = (side: "left" | "right") => {
-      if (!icon) {
-        return;
-      }
-
-      const {
-        iconElement,
-        iconPlacement = "left",
-        iconHorizontalMargin = 0,
-      } = icon;
-
-      if (
-        (side === "left" && iconPlacement !== "left") ||
-        (side === "right" && iconPlacement !== "right")
-      ) {
-        return null;
-      }
+    const renderIcon = (side: "left" | "right") => {
+      const { iconElement, iconHorizontalMargin = 0 } = icon;
 
       return (
         <div
@@ -103,6 +88,8 @@ const ClickableStyle = React.forwardRef(
         </div>
       );
     };
+
+    const iconPlacement = (icon ? icon.iconPlacement : null) || "left";
 
     return (
       <Component
@@ -136,11 +123,11 @@ const ClickableStyle = React.forwardRef(
         {/* No width space to ensure height of contents */}
         {"\u200B"}
 
-        {maybeRenderIcon("left")}
+        {icon && iconPlacement === "left" && renderIcon("left")}
 
         {children}
 
-        {maybeRenderIcon("right")}
+        {icon && iconPlacement === "right" && renderIcon("right")}
       </Component>
     );
   },
