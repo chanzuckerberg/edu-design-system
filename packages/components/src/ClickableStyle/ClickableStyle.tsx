@@ -2,6 +2,8 @@ import clsx from "clsx";
 import React, { ReactNode } from "react";
 import styles from "./ClickableStyle.module.css";
 
+type IconPlacement = "left" | "right";
+
 export type ClickableStyleProps<IComponent extends React.ElementType> = {
   /**
    * CSS class for custom styles.
@@ -40,7 +42,7 @@ export type ClickableStyleProps<IComponent extends React.ElementType> = {
      *
      * If the button has no other contents, this prop will be ignored.
      */
-    placement?: "left" | "right";
+    placement?: IconPlacement;
     /*
      * Margin to be added to icon's left and right sides.
      *
@@ -72,7 +74,7 @@ const ClickableStyle = React.forwardRef(
     }: ClickableStyleProps<IComponent>,
     ref: React.ForwardedRef<HTMLElement>,
   ) => {
-    const renderIcon = (placement: "left" | "right") => {
+    const renderIcon = (placement: IconPlacement) => {
       const horizontalMargin = (iconProps && iconProps.horizontalMargin) || 0;
 
       return (
