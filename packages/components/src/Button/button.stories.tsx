@@ -128,9 +128,7 @@ linkWithIcon.args = {
   children: "Link with icon",
   color: "success",
   variant: "link",
-  icon: {
-    iconElement: <CheckCircleRoundedIcon purpose="decorative" />,
-  },
+  icon: <CheckCircleRoundedIcon purpose="decorative" />,
 };
 
 export const outlineWithIcon = Template.bind(null);
@@ -138,9 +136,7 @@ outlineWithIcon.args = {
   children: "Outline with icon",
   color: "warning",
   variant: "outline",
-  icon: {
-    iconElement: <CheckCircleRoundedIcon purpose="decorative" />,
-  },
+  icon: <CheckCircleRoundedIcon purpose="decorative" />,
 };
 
 export const withFakeClassName = Template.bind(null);

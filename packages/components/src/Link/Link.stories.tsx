@@ -152,9 +152,7 @@ export const linkWithIcon = Template.bind(null);
 linkWithIcon.args = {
   ...defaultArgs,
   children: "Link",
-  icon: {
-    iconElement: <CheckCircleRoundedIcon purpose="decorative" />,
-  },
+  icon: <CheckCircleRoundedIcon purpose="decorative" />,
 };
 
 export const buttonVariantWithIcon = Template.bind(null);
@@ -162,9 +160,7 @@ buttonVariantWithIcon.args = {
   ...defaultArgs,
   variant: "flat",
   children: "Link",
-  icon: {
-    iconElement: <CheckCircleRoundedIcon purpose="decorative" />,
-  },
+  icon: <CheckCircleRoundedIcon purpose="decorative" />,
 };
 
 export const withDataTestId = Template.bind(null);
