@@ -26,14 +26,13 @@ export type ClickableStyleProps<IComponent extends React.ElementType> = {
   /**
    * Optional icon that can be positioned to the left or right of the other button contents.
    *
-   * Default position is 'left'. Use the iconPlacement prop to move it to the right side.
+   * Default position is 'left'. Use the iconProps.placement prop to move it to the right side.
+   *
+   * See the full list of available icons here:
+   * https://chanzuckerberg.github.io/edu-design-system/?path=/story/svgicon--all-icons
    */
-  icon?: {
-    /*
-     * The icon component. See the full list of available icons here:
-     * https://chanzuckerberg.github.io/edu-design-system/?path=/story/svgicon--all-icons
-     */
-    iconElement: ReactNode;
+  icon?: ReactNode;
+  iconProps?: {
     /*
      * Whether the icon should be on the left or right side of the button's other contents.
      *
@@ -41,14 +40,14 @@ export type ClickableStyleProps<IComponent extends React.ElementType> = {
      *
      * If the button has no other contents, this prop will be ignored.
      */
-    iconPlacement?: "left" | "right";
+    placement?: "left" | "right";
     /*
      * Margin to be added to icon's left and right sides.
      *
      * Icons typically have a little extra space between the path and the edge of the viewbox.
      * Negative left and right margin can be used to remove this extra space.
      */
-    iconHorizontalMargin?: string | 0;
+    horizontalMargin?: string;
   };
 } & React.ComponentProps<IComponent>;
 
@@ -68,28 +67,29 @@ const ClickableStyle = React.forwardRef(
       variant,
       className,
       icon,
+      iconProps,
       ...rest
     }: ClickableStyleProps<IComponent>,
     ref: React.ForwardedRef<HTMLElement>,
   ) => {
-    const renderIcon = (side: "left" | "right") => {
-      const { iconElement, iconHorizontalMargin = 0 } = icon;
+    const renderIcon = (placement: "left" | "right") => {
+      const horizontalMargin = (iconProps && iconProps.horizontalMargin) || 0;
 
       return (
         <div
           className={clsx(
             styles.icon,
-            !!children && side === "left" && styles.iconLeft,
-            !!children && side === "right" && styles.iconRight,
+            !!children && placement === "left" && styles.iconLeft,
+            !!children && placement === "right" && styles.iconRight,
           )}
-          style={{ margin: `0 ${iconHorizontalMargin}` }}
+          style={{ margin: `0 ${horizontalMargin}` }}
         >
-          {iconElement}
+          {icon}
         </div>
       );
     };
 
-    const iconPlacement = (icon ? icon.iconPlacement : null) || "left";
+    const iconSide = (iconProps && iconProps.placement) || "left";
 
     return (
       <Component
@@ -123,11 +123,11 @@ const ClickableStyle = React.forwardRef(
         {/* No width space to ensure height of contents */}
         {"\u200B"}
 
-        {icon && iconPlacement === "left" && renderIcon("left")}
+        {icon && iconSide === "left" && renderIcon("left")}
 
         {children}
 
-        {icon && iconPlacement === "right" && renderIcon("right")}
+        {icon && iconSide === "right" && renderIcon("right")}
       </Component>
     );
   },

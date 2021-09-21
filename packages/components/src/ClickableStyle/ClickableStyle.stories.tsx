@@ -29,9 +29,9 @@ ClickableStyleWithIconOnLeftSide.args = {
   variant: "flat",
   size: "medium",
   children: "ClickableStyle",
-  icon: {
-    iconElement: <ArrowBackRoundedIcon purpose="decorative" />,
-    iconHorizontalMargin: "-4px",
+  icon: <ArrowBackRoundedIcon purpose="decorative" />,
+  iconProps: {
+    horizontalMargin: "-4px",
   },
 };
 
@@ -42,10 +42,10 @@ ClickableStyleWithIconOnRightSide.args = {
   variant: "flat",
   size: "medium",
   children: "ClickableStyle",
-  icon: {
-    iconElement: <ArrowForwardRoundedIcon purpose="decorative" />,
-    iconPlacement: "right",
-    iconHorizontalMargin: "-4px",
+  icon: <ArrowForwardRoundedIcon purpose="decorative" />,
+  iconProps: {
+    placement: "right",
+    horizontalMargin: "-4px",
   },
 };
 
@@ -55,9 +55,9 @@ ClickableStyleWithOnlyIcon.args = {
   color: "brand",
   variant: "flat",
   size: "medium",
-  icon: {
-    iconElement: <ArrowForwardRoundedIcon purpose="informative" title="next" />,
-    iconHorizontalMargin: "-4px",
+  icon: <ArrowForwardRoundedIcon purpose="informative" title="next" />,
+  iconProps: {
+    horizontalMargin: "-4px",
   },
 };
 
@@ -68,10 +68,10 @@ ClickableStyleOutlineVariantWithIcon.args = {
   variant: "outline",
   size: "medium",
   children: "ClickableStyle",
-  icon: {
-    iconElement: <ArrowForwardRoundedIcon purpose="decorative" />,
-    iconPlacement: "right",
-    iconHorizontalMargin: "-4px",
+  icon: <ArrowForwardRoundedIcon purpose="decorative" />,
+  iconProps: {
+    placement: "right",
+    horizontalMargin: "-4px",
   },
 };
 
@@ -82,9 +82,9 @@ ClickableStyleLinkVariantWithIcon.args = {
   variant: "link",
   size: "medium",
   children: "ClickableStyle",
-  icon: {
-    iconElement: <ArrowForwardRoundedIcon purpose="decorative" />,
-    iconPlacement: "right",
-    iconHorizontalMargin: "-4px",
+  icon: <ArrowForwardRoundedIcon purpose="decorative" />,
+  iconProps: {
+    placement: "right",
+    horizontalMargin: "-4px",
   },
 };
