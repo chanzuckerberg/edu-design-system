@@ -19,7 +19,7 @@ exports[`<Link /> buttonVariantWithIcon story renders snapshot 1`] = `
   Link 
   <svg
     aria-hidden="true"
-    class="icon svgIcon"
+    class="iconButton svgIcon"
     fill="currentColor"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
@@ -94,7 +94,7 @@ exports[`<Link /> linkWithIcon story renders snapshot 1`] = `
   Link 
   <svg
     aria-hidden="true"
-    class="icon svgIcon"
+    class="iconLink svgIcon"
     fill="currentColor"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"

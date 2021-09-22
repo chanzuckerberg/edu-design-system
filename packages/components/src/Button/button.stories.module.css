@@ -6,6 +6,10 @@
   @apply mb-5;
 }
 
-.icon {
+.iconLink {
+  @apply ml-1;
+}
+
+.iconButton {
   @apply ml-2;
 }

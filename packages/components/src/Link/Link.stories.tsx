@@ -153,7 +153,7 @@ linkWithIcon.args = {
   ...defaultArgs,
   children: (
     <>
-      Link <AddRoundedIcon className={styles.icon} purpose="decorative" />
+      Link <AddRoundedIcon className={styles.iconLink} purpose="decorative" />
     </>
   ),
 };
@@ -164,7 +164,7 @@ buttonVariantWithIcon.args = {
   variant: "flat",
   children: (
     <>
-      Link <AddRoundedIcon className={styles.icon} purpose="decorative" />
+      Link <AddRoundedIcon className={styles.iconButton} purpose="decorative" />
     </>
   ),
 };
