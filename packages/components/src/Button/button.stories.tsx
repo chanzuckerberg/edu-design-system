@@ -2,7 +2,7 @@ import { Story } from "@storybook/react/types-6-0";
 import React from "react";
 import ClickableStyle from "../ClickableStyle";
 import Heading from "../Heading";
-import CheckCircleRoundedIcon from "../Icons/CheckCircleRounded";
+import AddRoundedIcon from "../Icons/AddRounded";
 import Text from "../Text";
 import Button, { ButtonProps } from "./button";
 import styles from "./button.stories.module.css";
@@ -128,7 +128,7 @@ linkWithIcon.args = {
   children: (
     <>
       Link with icon{" "}
-      <CheckCircleRoundedIcon className={styles.icon} purpose="decorative" />
+      <AddRoundedIcon className={styles.icon} purpose="decorative" />
     </>
   ),
   color: "success",
@@ -140,7 +140,7 @@ outlineWithIcon.args = {
   children: (
     <>
       Outline with icon{" "}
-      <CheckCircleRoundedIcon className={styles.icon} purpose="decorative" />
+      <AddRoundedIcon className={styles.icon} purpose="decorative" />
     </>
   ),
   color: "warning",
@@ -149,7 +149,7 @@ outlineWithIcon.args = {
 
 export const flatWithOnlyIcon = Template.bind(null);
 flatWithOnlyIcon.args = {
-  children: <CheckCircleRoundedIcon purpose="informative" title="finish" />,
+  children: <AddRoundedIcon purpose="informative" title="add" />,
   variant: "flat",
 };
 
