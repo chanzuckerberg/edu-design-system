@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.2.1...v0.3.0) (2021-09-22)
+
+
+### Features
+
+* **chromatic:** disable TurboSnap for Chromatic ([eb435e0](https://github.com/chanzuckerberg/edu-design-system/commit/eb435e0423d75ca75e4fd68e9c7252eb522d34d2))
+* **chromatic:** downgrade from chromatic canary build ([75db293](https://github.com/chanzuckerberg/edu-design-system/commit/75db29391c2aff3c8eeb48f46804fe9e8e5a680c))
+* **chromatic:** enable turbosnap ([42c64a0](https://github.com/chanzuckerberg/edu-design-system/commit/42c64a01438fd8590d73d729153dafde4ebe4d6e))
+* **chromatic:** init chromatic ([4facc01](https://github.com/chanzuckerberg/edu-design-system/commit/4facc01f314600193ec61713f4e73e82daee797c))
+* **chromatic:** temp change default prop to test chromatic turbosnap ([ad99d48](https://github.com/chanzuckerberg/edu-design-system/commit/ad99d48e868621ed814775aa4cdeec75fd817a65))
+* **clickable-style:** add plain variant ([772b13a](https://github.com/chanzuckerberg/edu-design-system/commit/772b13aa22ddd03a8916ba9c5473c2e6efed8b0f))
+* **clickable-style:** set height for icons in buttons and links ([e680ca6](https://github.com/chanzuckerberg/edu-design-system/commit/e680ca691e1ce7288bee0c2a99adac090f9ceca6))
+
+
+### Reverts
+
+* **chromatic:** revert change to default prop to test chromatic turbosnap ([a628f45](https://github.com/chanzuckerberg/edu-design-system/commit/a628f45c31dbf8e99bb2d2d24b92b0d2b68e74bc))
+
+
+
+
+
 ## [0.2.1](https://github.com/chanzuckerberg/edu-design-system/compare/v0.2.0...v0.2.1) (2021-09-15)
 
 **Note:** Version bump only for package @chanzuckerberg/eds-components
