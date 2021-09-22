@@ -128,7 +128,7 @@ linkWithIcon.args = {
   children: (
     <>
       Link with icon{" "}
-      <AddRoundedIcon className={styles.icon} purpose="decorative" />
+      <AddRoundedIcon className={styles.iconLink} purpose="decorative" />
     </>
   ),
   color: "success",
@@ -140,7 +140,7 @@ outlineWithIcon.args = {
   children: (
     <>
       Outline with icon{" "}
-      <AddRoundedIcon className={styles.icon} purpose="decorative" />
+      <AddRoundedIcon className={styles.iconButton} purpose="decorative" />
     </>
   ),
   color: "warning",
