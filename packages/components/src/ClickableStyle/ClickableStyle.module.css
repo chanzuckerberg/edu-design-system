@@ -9,17 +9,22 @@
   @apply font-bold;
 }
 
+/* Style icons that may be in the button children */
+.button svg {
+  --svg-icon-size: 2em;
+}
+
 /* Component Sizes */
 .sizeSmall {
-  @apply px-4 py-2 text-xs leading-3;
+  @apply px-4 h-8 text-xs leading-3;
 }
 
 .sizeMedium {
-  @apply px-4 py-2 text-sm;
+  @apply px-4 h-10 text-sm;
 }
 
 .sizeLarge {
-  @apply px-6 py-4 text-sm;
+  @apply px-6 h-14 text-sm;
 }
 
 /* Button Colors */
@@ -199,6 +204,11 @@
   &:disabled {
     text-decoration-thickness: auto;
   }
+}
+
+/* Link icons should be the same size as the text */
+.variantLink svg {
+  --svg-icon-size: 1em;
 }
 
 /* comes after other styles to override hover behaviors */
