@@ -75,14 +75,17 @@ jobs:
         with:
           fetch-depth: 0 # 👈 Required to retrieve git history
       - name: Install dependencies
-        run: pwd && yarn install --immutable
+        run: yarn install --immutable
+      # Build Storybook
+      - name: Build Storybook
+        run: yarn workspaces foreach run build:storybook
       - name: Publish to Chromatic
         uses: chromaui/action@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-          workingDir: ./packages/components
-          buildScriptName: build:storybook
+          workingDir: packages/components
+          storybookBuildDir: storybook-static
 
   # lint:
   #   runs-on: ubuntu-latest
