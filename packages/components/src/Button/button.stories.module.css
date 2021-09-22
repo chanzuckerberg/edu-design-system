@@ -5,3 +5,7 @@
 .variant {
   @apply mb-5;
 }
+
+.icon {
+  @apply ml-2;
+}

@@ -153,7 +153,8 @@ linkWithIcon.args = {
   ...defaultArgs,
   children: (
     <>
-      Link <CheckCircleRoundedIcon purpose="decorative" />
+      Link{" "}
+      <CheckCircleRoundedIcon className={styles.icon} purpose="decorative" />
     </>
   ),
 };
@@ -164,9 +165,16 @@ buttonVariantWithIcon.args = {
   variant: "flat",
   children: (
     <>
-      Link <CheckCircleRoundedIcon purpose="decorative" />
+      Link{" "}
+      <CheckCircleRoundedIcon className={styles.icon} purpose="decorative" />
     </>
   ),
+};
+
+export const buttonVariantWithOnlyIcon = Template.bind(null);
+buttonVariantWithOnlyIcon.args = {
+  children: <CheckCircleRoundedIcon purpose="informative" title="finish" />,
+  variant: "flat",
 };
 
 export const withDataTestId = Template.bind(null);
