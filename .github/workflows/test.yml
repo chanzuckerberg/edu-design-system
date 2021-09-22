@@ -57,13 +57,6 @@ jobs:
       - name: Run Accessibility Tests 💛
         run: yarn workspaces foreach run storybook:axeOnly
 
-      - name: Publish to Chromatic
-        uses: chromaui/action@v1
-        working-directory: packages/components
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-
       # - name: Percy Snapshots 📸
       #   run: yarn workspaces foreach run snapshot
       #   env:
