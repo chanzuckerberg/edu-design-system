@@ -160,10 +160,10 @@ outlineWithIcon.args = {
   variant: "outline",
 };
 
-export const flatWithOnlyIcon = Template.bind(null);
-flatWithOnlyIcon.args = {
+export const plainWithOnlyIcon = Template.bind(null);
+plainWithOnlyIcon.args = {
   children: <AddRoundedIcon purpose="informative" title="add" />,
-  variant: "flat",
+  variant: "plain",
 };
 
 export const withFakeClassName = Template.bind(null);
