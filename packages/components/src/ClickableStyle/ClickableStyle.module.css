@@ -7,6 +7,9 @@
 
   /* Base Text Styles */
   @apply font-bold;
+
+  /* Default variable values */
+  --plain-background-color: transparent;
 }
 
 /* Style icons that may be in the button children */
@@ -39,16 +42,19 @@
   &.stateFocus {
     --primary-color: var(--eds-color-brand-700);
     --link-color: var(--eds-color-brand-800);
+    --plain-background-color: var(--eds-color-brand-100);
   }
 
   &:active,
   &.stateActive {
     --primary-color: var(--eds-color-brand-800);
+    --plain-background-color: var(--eds-color-brand-600);
   }
 
   /* override the hover/focus values */
   &:disabled {
     --primary-color: var(--eds-color-brand-300);
+    --plain-background-color: transparent;
   }
 }
 
@@ -63,16 +69,19 @@
   &.stateFocus {
     --primary-color: var(--eds-color-alert-700);
     --link-color: var(--eds-color-alert-800);
+    --plain-background-color: var(--eds-color-alert-100);
   }
 
   &:active,
   &.stateActive {
     --primary-color: var(--eds-color-alert-800);
+    --plain-background-color: var(--eds-color-alert-600);
   }
 
   /* override the hover/focus values */
   &:disabled {
     --primary-color: var(--eds-color-alert-300);
+    --plain-background-color: transparent;
   }
 }
 
@@ -87,16 +96,19 @@
   &.stateFocus {
     --primary-color: var(--eds-color-neutral-600);
     --link-color: var(--eds-color-neutral-700);
+    --plain-background-color: var(--eds-color-neutral-100);
   }
 
   &:active,
   &.stateActive {
     --primary-color: var(--eds-color-neutral-700);
+    --plain-background-color: var(--eds-color-neutral-600);
   }
 
   /* override the hover/focus values */
   &:disabled {
     --primary-color: var(--eds-color-neutral-300);
+    --plain-background-color: transparent;
   }
 }
 
@@ -111,16 +123,19 @@
   &.stateFocus {
     --primary-color: var(--eds-color-success-700);
     --link-color: var(--eds-color-success-800);
+    --plain-background-color: var(--eds-color-success-100);
   }
 
   &:active,
   &.stateActive {
     --primary-color: var(--eds-color-success-800);
+    --plain-background-color: var(--eds-color-success-600);
   }
 
   /* override the hover/focus values */
   &:disabled {
     --primary-color: var(--eds-color-success-300);
+    --plain-background-color: transparent;
   }
 }
 
@@ -135,16 +150,19 @@
   &.stateFocus {
     --primary-color: var(--eds-color-warning-700);
     --link-color: var(--eds-color-warning-800);
+    --plain-background-color: var(--eds-color-warning-100);
   }
 
   &:active,
   &.stateActive {
     --primary-color: var(--eds-color-warning-800);
+    --plain-background-color: var(--eds-color-warning-600);
   }
 
   /* override the hover/focus values */
   &:disabled {
     --primary-color: var(--eds-color-warning-300);
+    --plain-background-color: transparent;
   }
 }
 
@@ -203,6 +221,31 @@
   /* override the hover/focus values */
   &:disabled {
     text-decoration-thickness: auto;
+  }
+}
+
+.variantPlain {
+  color: var(--link-color);
+  border: var(--plain-background-color);
+  background-color: var(--plain-background-color);
+
+  &:focus,
+  &.stateFocus {
+    color: var(--primary-color);
+  }
+
+  &:hover,
+  &.stateHover {
+    color: var(--primary-color);
+  }
+
+  &:active,
+  &.stateActive {
+    color: var(--secondary-color);
+  }
+
+  &:disabled {
+    color: var(--primary-color);
   }
 }
 

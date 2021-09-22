@@ -9,7 +9,7 @@ import styles from "./button.stories.module.css";
 
 const sizes = ["small", "medium", "large"] as const;
 const allColors = ["alert", "brand", "neutral", "success", "warning"] as const;
-const variants = ["flat", "outline", "link"] as const;
+const variants = ["flat", "outline", "link", "plain"] as const;
 const states = ["inactive", "hover", "focus", "active", "disabled"] as const;
 
 // For now, the UI kit only includes alert & brand "flat" buttons
@@ -115,6 +115,19 @@ linkInHeading.args = {
   color: "brand",
 };
 
+export const plainSmall = Template.bind(null);
+plainSmall.args = {
+  children: (
+    <>
+      Button{" "}
+      <AddRoundedIcon className={styles.iconButton} purpose="decorative" />
+    </>
+  ),
+  color: "brand",
+  size: "small",
+  variant: "plain",
+};
+
 export const withDataTestId = Template.bind(null);
 withDataTestId.args = {
   children: "Button with data-testid",
@@ -179,6 +192,10 @@ const renderSize = (
 ) =>
   variants.map((variant) => {
     const colors = variant === "flat" ? flatColors : allColors;
+    const icon =
+      variant === "plain" ? (
+        <AddRoundedIcon className={styles.iconButton} purpose="decorative" />
+      ) : null;
 
     return (
       <React.Fragment key={variant}>
@@ -207,6 +224,7 @@ const renderSize = (
                       disabled={state === "disabled"}
                     >
                       {children}
+                      {icon}
                     </ClickableStyle>
                   </td>
                 ))}

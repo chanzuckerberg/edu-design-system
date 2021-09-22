@@ -22,7 +22,7 @@ export type ClickableStyleProps<IComponent extends React.ElementType> = {
   /**
    * The style of the element.
    */
-  variant: "flat" | "outline" | "link";
+  variant: "flat" | "outline" | "link" | "plain";
 } & React.ComponentProps<IComponent>;
 
 /**
@@ -59,6 +59,7 @@ const ClickableStyle = React.forwardRef(
           variant === "flat" && styles.variantFlat,
           variant === "outline" && styles.variantOutline,
           variant === "link" && styles.variantLink,
+          variant === "plain" && styles.variantPlain,
           // Colors
           color === "alert" && styles.colorAlert,
           color === "brand" && styles.colorBrand,

@@ -9,7 +9,7 @@ import styles from "./Link.stories.module.css";
 
 const sizes = ["small", "medium", "large"] as const;
 const allColors = ["alert", "brand", "neutral", "success", "warning"] as const;
-const variants = ["flat", "outline", "link"] as const;
+const variants = ["flat", "outline", "link", "plain"] as const;
 const states = ["inactive", "hover", "focus", "active", "disabled"] as const;
 
 // For now, the UI kit only includes alert & brand "flat" buttons.
@@ -69,6 +69,18 @@ linkInHeading.args = {
   ...defaultArgs,
 };
 
+export const plainSmall = Template.bind(null);
+plainSmall.args = {
+  children: (
+    <>
+      Link <AddRoundedIcon className={styles.iconButton} purpose="decorative" />
+    </>
+  ),
+  color: "brand",
+  size: "small",
+  variant: "plain",
+};
+
 // Show grids with all variants
 
 const gridParameters = {
@@ -87,6 +99,10 @@ const renderSize = (
 ) =>
   variants.map((variant) => {
     const colors = variant === "flat" ? flatColors : allColors;
+    const icon =
+      variant === "plain" ? (
+        <AddRoundedIcon className={styles.iconButton} purpose="decorative" />
+      ) : null;
 
     return (
       <React.Fragment key={variant}>
@@ -115,6 +131,7 @@ const renderSize = (
                       href=""
                     >
                       {children}
+                      {icon}
                     </ClickableStyle>
                   </td>
                 ))}
