@@ -3,64 +3,64 @@ name: Build & Test CI
 on: push
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
+  # test:
+  #   runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [12.x, 14.x]
+  #   strategy:
+  #     matrix:
+  #       node-version: [12.x, 14.x]
 
-    steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'yarn'
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - name: Use Node.js ${{ matrix.node-version }}
+  #       uses: actions/setup-node@v2
+  #       with:
+  #         node-version: ${{ matrix.node-version }}
+  #         cache: 'yarn'
 
-      - name: Install Dependencies ⬆️
-        run: yarn install --immutable
+  #     - name: Install Dependencies ⬆️
+  #       run: yarn install --immutable
 
-      - name: Type check 📋
-        run: yarn run types
+  #     - name: Type check 📋
+  #       run: yarn run types
 
-      - name: Run CI Tests ✅
-        run: yarn workspaces foreach run test:ci
-        env:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
-          CI: true
+  #     - name: Run CI Tests ✅
+  #       run: yarn workspaces foreach run test:ci
+  #       env:
+  #         CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+  #         CI: true
 
-  build:
-    runs-on: ubuntu-latest
+  # build:
+  #   runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [14.x]
+  #   strategy:
+  #     matrix:
+  #       node-version: [14.x]
 
-    steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'yarn'
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - name: Use Node.js ${{ matrix.node-version }}
+  #       uses: actions/setup-node@v2
+  #       with:
+  #         node-version: ${{ matrix.node-version }}
+  #         cache: 'yarn'
 
-      - name: Install Dependencies ⬆️
-        run: yarn install --immutable
+  #     - name: Install Dependencies ⬆️
+  #       run: yarn install --immutable
 
-      - name: Build Dist 🔧
-        run: yarn run build
+  #     - name: Build Dist 🔧
+  #       run: yarn run build
 
-      - name: Build Storybook 📚
-        run: yarn workspaces foreach run build:storybook
+  #     - name: Build Storybook 📚
+  #       run: yarn workspaces foreach run build:storybook
 
-      - name: Run Accessibility Tests 💛
-        run: yarn workspaces foreach run storybook:axeOnly
+  #     - name: Run Accessibility Tests 💛
+  #       run: yarn workspaces foreach run storybook:axeOnly
 
-      # - name: Percy Snapshots 📸
-      #   run: yarn workspaces foreach run snapshot
-      #   env:
-      #     PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+  #     - name: Percy Snapshots 📸
+  #       run: yarn workspaces foreach run snapshot
+  #       env:
+  #         PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
 
   chromatic-deployment:
     runs-on: ubuntu-latest
@@ -68,7 +68,7 @@ jobs:
     strategy:
       matrix:
         node-version: [14.x]
-        
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -81,33 +81,34 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-          workingDir: packages/components
+          workingDir: ./packages/components
+          buildScriptName: build:storybook
 
-  lint:
-    runs-on: ubuntu-latest
+  # lint:
+  #   runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [14.x]
+  #   strategy:
+  #     matrix:
+  #       node-version: [14.x]
 
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #       with:
+  #         fetch-depth: 0
 
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'yarn'
+  #     - name: Use Node.js ${{ matrix.node-version }}
+  #       uses: actions/setup-node@v2
+  #       with:
+  #         node-version: ${{ matrix.node-version }}
+  #         cache: 'yarn'
 
-      - name: Install Dependencies ⬆️
-        run: yarn install --immutable
+  #     - name: Install Dependencies ⬆️
+  #       run: yarn install --immutable
 
-      - name: Lint Commit Messages 👕
-        uses: wagoid/commitlint-github-action@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #     - name: Lint Commit Messages 👕
+  #       uses: wagoid/commitlint-github-action@v1
+  #       env:
+  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Lint Javascript + SCSS 👕
-        run: yarn run lint
+  #     - name: Lint Javascript + SCSS 👕
+  #       run: yarn run lint
