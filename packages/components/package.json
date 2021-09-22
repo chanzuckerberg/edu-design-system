@@ -31,7 +31,7 @@
     "build:types": "tsc --project . --declaration --emitDeclarationOnly",
     "build:watch": "yarn run build:js --watch",
     "build:storybook": "build-storybook -o storybook-static",
-    "chromatic": "chromatic --project-token=CHROMATIC_PROJECT_TOKEN",
+    "chromatic": "chromatic --project-token=CHROMATIC_PROJECT_TOKEN --skip 'dependabot/**' --only-changed",
     "deploy:docs": "storybook-to-ghpages --ci",
     "prepack": "yarn run build",
     "snapshot": "percy-storybook --widths=320,1280",
