@@ -1617,9 +1617,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@chanzuckerberg/axe-storybook-testing@npm:^4.0.1":
-  version: 4.0.1
-  resolution: "@chanzuckerberg/axe-storybook-testing@npm:4.0.1"
+"@chanzuckerberg/axe-storybook-testing@npm:^4.1.1":
+  version: 4.1.1
+  resolution: "@chanzuckerberg/axe-storybook-testing@npm:4.1.1"
   dependencies:
     chalk: ^4.1.2
     indent-string: ^4.0.0
@@ -1628,11 +1628,12 @@ __metadata:
     playwright: ^1.14.1
     ts-dedent: ^2.2.0
     yargs: ^17.1.1
+    zod: ^3.8.2
   peerDependencies:
     axe-core: ^4.0.0
   bin:
     axe-storybook: bin/axe-storybook.js
-  checksum: 231a6338018be05e063f5edcac47ab033c09ab2e095d520499c4e4565a886b87cf7bd19a1e7b631f4b66c993eaf4e658603fd1812520e751f6e7d09f3ad0b20e
+  checksum: 7d94ab51c24e5b864622aff1c958fe062499e2aabd9fee4222603f295cf79409313ffc394fe47555b397cd01a53e850720f76a3f29afae159795b5468fba03ae
   languageName: node
   linkType: hard
 
@@ -1646,7 +1647,7 @@ __metadata:
     "@babel/preset-env": ^7.15.0
     "@babel/preset-react": ^7.14.5
     "@babel/preset-typescript": ^7.15.0
-    "@chanzuckerberg/axe-storybook-testing": ^4.0.1
+    "@chanzuckerberg/axe-storybook-testing": ^4.1.1
     "@chanzuckerberg/eds-tokens": ^0.3.0
     "@chanzuckerberg/story-utils": ^2.0.0
     "@percy/storybook": ^3.3.1
@@ -23863,6 +23864,13 @@ resolve@^2.0.0-next.3:
   version: 1.11.17
   resolution: "zod@npm:1.11.17"
   checksum: e07764a8a2fba195a4ec0ed9e66cee20e651ee1d9e533e5f48956de1ded6c6bcf80f63fed4a2bdb67de40a1300399edc9ee2095ee382c67d85745e3b0ccd14ca
+  languageName: node
+  linkType: hard
+
+"zod@npm:^3.8.2":
+  version: 3.9.3
+  resolution: "zod@npm:3.9.3"
+  checksum: 0c0b33842111824daf3b5b55c01ae398fb866a6dd54a7b42c4de9a6b16b975ab7d10558a75d0aecfa71eb4588e702fb054790129a1c2294f1146d0060d266991
   languageName: node
   linkType: hard
 
