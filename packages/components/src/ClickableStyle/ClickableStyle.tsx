@@ -14,7 +14,7 @@ export type ClickableStyleProps<IComponent extends React.ElementType> = {
   /**
    * The size of the element.
    */
-  size: "small" | "medium" | "large";
+  size: "extraSmall" | "small" | "medium" | "large";
   /**
    * A hidden prop for visual testing
    */
@@ -51,6 +51,7 @@ const ClickableStyle = React.forwardRef(
           styles.button,
           // Sizes
           variant !== "link" && [
+            size === "extraSmall" && styles.sizeExtraSmall,
             size === "small" && styles.sizeSmall,
             size === "medium" && styles.sizeMedium,
             size === "large" && styles.sizeLarge,
