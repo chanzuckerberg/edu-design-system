@@ -2,7 +2,7 @@
 
 exports[`<Button /> Destructive story renders snapshot 1`] = `
 <button
-  class="button sizeMedium variantFlat colorAlert"
+  class="button sizeLarge variantFlat colorAlert"
   type="button"
 >
   ​
@@ -22,7 +22,7 @@ exports[`<Button /> Link story renders snapshot 1`] = `
 
 exports[`<Button /> Primary story renders snapshot 1`] = `
 <button
-  class="button sizeMedium variantFlat colorBrand"
+  class="button sizeLarge variantFlat colorBrand"
   type="button"
 >
   ​
@@ -30,9 +30,9 @@ exports[`<Button /> Primary story renders snapshot 1`] = `
 </button>
 `;
 
-exports[`<Button /> PrimarySmall story renders snapshot 1`] = `
+exports[`<Button /> PrimaryMedium story renders snapshot 1`] = `
 <button
-  class="button sizeSmall variantFlat colorBrand"
+  class="button sizeMedium variantFlat colorBrand"
   type="button"
 >
   ​
@@ -42,7 +42,7 @@ exports[`<Button /> PrimarySmall story renders snapshot 1`] = `
 
 exports[`<Button /> Secondary story renders snapshot 1`] = `
 <button
-  class="button sizeMedium variantOutline colorBrand"
+  class="button sizeLarge variantOutline colorBrand"
   type="button"
 >
   ​
@@ -50,9 +50,9 @@ exports[`<Button /> Secondary story renders snapshot 1`] = `
 </button>
 `;
 
-exports[`<Button /> SecondarySmall story renders snapshot 1`] = `
+exports[`<Button /> SecondaryMedium story renders snapshot 1`] = `
 <button
-  class="button sizeSmall variantOutline colorBrand"
+  class="button sizeMedium variantOutline colorBrand"
   type="button"
 >
   ​
@@ -62,7 +62,7 @@ exports[`<Button /> SecondarySmall story renders snapshot 1`] = `
 
 exports[`<Button /> Tertiary story renders snapshot 1`] = `
 <button
-  class="button sizeMedium variantOutline colorNeutral"
+  class="button sizeLarge variantOutline colorNeutral"
   type="button"
 >
   ​
@@ -70,9 +70,9 @@ exports[`<Button /> Tertiary story renders snapshot 1`] = `
 </button>
 `;
 
-exports[`<Button /> TertiarySmall story renders snapshot 1`] = `
+exports[`<Button /> TertiaryMedium story renders snapshot 1`] = `
 <button
-  class="button sizeSmall variantOutline colorNeutral"
+  class="button sizeMedium variantOutline colorNeutral"
   type="button"
 >
   ​
@@ -136,7 +136,7 @@ exports[`<Button /> linkWithIcon story renders snapshot 1`] = `
 
 exports[`<Button /> outlineWithIcon story renders snapshot 1`] = `
 <button
-  class="button sizeMedium variantOutline colorWarning"
+  class="button sizeLarge variantOutline colorWarning"
   type="button"
 >
   ​
@@ -156,9 +156,9 @@ exports[`<Button /> outlineWithIcon story renders snapshot 1`] = `
 </button>
 `;
 
-exports[`<Button /> plainSmall story renders snapshot 1`] = `
+exports[`<Button /> plainMedium story renders snapshot 1`] = `
 <button
-  class="button sizeSmall variantPlain colorBrand"
+  class="button sizeMedium variantPlain colorBrand"
   type="button"
 >
   ​
@@ -180,7 +180,7 @@ exports[`<Button /> plainSmall story renders snapshot 1`] = `
 
 exports[`<Button /> plainWithOnlyIcon story renders snapshot 1`] = `
 <button
-  class="button sizeMedium variantPlain colorBrand"
+  class="button sizeLarge variantPlain colorBrand"
   type="button"
 >
   ​
@@ -203,7 +203,7 @@ exports[`<Button /> plainWithOnlyIcon story renders snapshot 1`] = `
 
 exports[`<Button /> withDataTestId story renders snapshot 1`] = `
 <button
-  class="button sizeMedium variantFlat colorAlert"
+  class="button sizeLarge variantFlat colorAlert"
   data-testid="fake-test-id"
   type="button"
 >
@@ -214,7 +214,7 @@ exports[`<Button /> withDataTestId story renders snapshot 1`] = `
 
 exports[`<Button /> withFakeClassName story renders snapshot 1`] = `
 <button
-  class="fake-className button sizeMedium variantOutline colorWarning"
+  class="fake-className button sizeLarge variantOutline colorWarning"
   type="button"
 >
   ​

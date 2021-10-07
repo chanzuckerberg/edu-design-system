@@ -2,7 +2,7 @@
 
 exports[`<ClickableStyle /> ClickableStyleAsAnATag story renders snapshot 1`] = `
 <a
-  class="button sizeMedium variantFlat colorBrand"
+  class="button sizeLarge variantFlat colorBrand"
 >
   ​
   ClickableStyle As An A Tag

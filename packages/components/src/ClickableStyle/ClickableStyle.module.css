@@ -18,20 +18,16 @@
 }
 
 /* Component Sizes */
-.sizeExtraSmall {
+.sizeSmall {
   @apply px-1 h-6 text-xs leading-3;
 }
 
-.sizeSmall {
+.sizeMedium {
   @apply px-4 h-8 text-xs leading-3;
 }
 
-.sizeMedium {
-  @apply px-4 h-10 text-sm;
-}
-
 .sizeLarge {
-  @apply px-6 h-14 text-sm;
+  @apply px-4 h-10 text-sm;
 }
 
 /* Button Colors */

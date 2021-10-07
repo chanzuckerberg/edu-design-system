@@ -7,7 +7,7 @@ import Text from "../Text";
 import Link, { LinkProps } from "./Link";
 import styles from "./Link.stories.module.css";
 
-const sizes = ["extraSmall", "small", "medium", "large"] as const;
+const sizes = ["small", "medium", "large"] as const;
 const allColors = ["alert", "brand", "neutral", "success", "warning"] as const;
 const variants = ["flat", "outline", "link", "plain"] as const;
 const states = ["inactive", "hover", "focus", "active", "disabled"] as const;
@@ -69,15 +69,15 @@ linkInHeading.args = {
   ...defaultArgs,
 };
 
-export const plainSmall = Template.bind(null);
-plainSmall.args = {
+export const plainMedium = Template.bind(null);
+plainMedium.args = {
   children: (
     <>
       Link <AddRoundedIcon className={styles.iconButton} purpose="decorative" />
     </>
   ),
   color: "brand",
-  size: "small",
+  size: "medium",
   variant: "plain",
 };
 
@@ -153,10 +153,10 @@ export const allVariants = () => (
 
 allVariants.parameters = gridParameters;
 
-export const mediumVariantsOnDarkBackground = () =>
-  renderSize("medium", "white", "Link");
+export const largeVariantsOnDarkBackground = () =>
+  renderSize("large", "white", "Link");
 
-mediumVariantsOnDarkBackground.parameters = {
+largeVariantsOnDarkBackground.parameters = {
   ...gridParameters,
   backgrounds: {
     default: "dark",

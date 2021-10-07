@@ -28,7 +28,7 @@ export type LinkProps = LinkHTMLElementProps & {
  * use ClickableStyle and pass in the routing component via the `as` prop.
  */
 const Link = forwardRef<HTMLAnchorElement, LinkProps>(
-  ({ variant = "link", color = "brand", size = "medium", ...rest }, ref) => {
+  ({ variant = "link", color = "brand", size = "large", ...rest }, ref) => {
     return (
       <ClickableStyle
         {...rest}

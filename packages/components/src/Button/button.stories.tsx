@@ -7,7 +7,7 @@ import Text from "../Text";
 import Button, { ButtonProps } from "./button";
 import styles from "./button.stories.module.css";
 
-const sizes = ["extraSmall", "small", "medium", "large"] as const;
+const sizes = ["small", "medium", "large"] as const;
 const allColors = ["alert", "brand", "neutral", "success", "warning"] as const;
 const variants = ["flat", "outline", "link", "plain"] as const;
 const states = ["inactive", "hover", "focus", "active", "disabled"] as const;
@@ -63,25 +63,25 @@ Destructive.args = {
   variant: "flat",
 };
 
-export const PrimarySmall = Template.bind(null);
-PrimarySmall.args = {
+export const PrimaryMedium = Template.bind(null);
+PrimaryMedium.args = {
   children: "Button",
-  size: "small",
+  size: "medium",
   variant: "flat",
 };
 
-export const SecondarySmall = Template.bind(null);
-SecondarySmall.args = {
+export const SecondaryMedium = Template.bind(null);
+SecondaryMedium.args = {
   children: "Button",
-  size: "small",
+  size: "medium",
   variant: "outline",
 };
 
-export const TertiarySmall = Template.bind(null);
-TertiarySmall.args = {
+export const TertiaryMedium = Template.bind(null);
+TertiaryMedium.args = {
   children: "Button",
   color: "neutral",
-  size: "small",
+  size: "medium",
   variant: "outline",
 };
 
@@ -115,8 +115,8 @@ linkInHeading.args = {
   color: "brand",
 };
 
-export const plainSmall = Template.bind(null);
-plainSmall.args = {
+export const plainMedium = Template.bind(null);
+plainMedium.args = {
   children: (
     <>
       Button{" "}
@@ -124,7 +124,7 @@ plainSmall.args = {
     </>
   ),
   color: "brand",
-  size: "small",
+  size: "medium",
   variant: "plain",
 };
 
@@ -246,10 +246,10 @@ export const allVariants = () => (
 
 allVariants.parameters = gridParameters;
 
-export const mediumVariantsOnDarkBackground = () =>
-  renderSize("medium", "white", "Button");
+export const largeVariantsOnDarkBackground = () =>
+  renderSize("large", "white", "Button");
 
-mediumVariantsOnDarkBackground.parameters = {
+largeVariantsOnDarkBackground.parameters = {
   ...gridParameters,
   backgrounds: {
     default: "dark",

@@ -28,7 +28,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       color = "brand",
       disabled = false,
       type = "button",
-      size = "medium",
+      size = "large",
       ...rest
     },
     ref,
