@@ -16,6 +16,6 @@ ClickableStyleAsAnATag.args = {
   as: "a",
   color: "brand",
   variant: "flat",
-  size: "medium",
+  size: "large",
   children: "ClickableStyle As An A Tag",
 };

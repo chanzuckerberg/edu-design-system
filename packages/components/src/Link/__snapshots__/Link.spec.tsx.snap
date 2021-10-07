@@ -12,7 +12,7 @@ exports[`<Link /> StandardLink story renders snapshot 1`] = `
 
 exports[`<Link /> buttonVariantWithIcon story renders snapshot 1`] = `
 <a
-  class="button sizeMedium variantFlat colorBrand"
+  class="button sizeLarge variantFlat colorBrand"
   href=""
 >
   ​
@@ -84,9 +84,9 @@ exports[`<Link /> linkWithIcon story renders snapshot 1`] = `
 </a>
 `;
 
-exports[`<Link /> plainSmall story renders snapshot 1`] = `
+exports[`<Link /> plainMedium story renders snapshot 1`] = `
 <a
-  class="button sizeSmall variantPlain colorBrand"
+  class="button sizeMedium variantPlain colorBrand"
 >
   ​
   Link 
@@ -106,7 +106,7 @@ exports[`<Link /> plainSmall story renders snapshot 1`] = `
 
 exports[`<Link /> plainWithOnlyIcon story renders snapshot 1`] = `
 <a
-  class="button sizeMedium variantPlain colorBrand"
+  class="button sizeLarge variantPlain colorBrand"
 >
   ​
   <svg
