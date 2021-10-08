@@ -7,7 +7,7 @@ import Text from "../Text";
 import Link, { LinkProps } from "./Link";
 import styles from "./Link.stories.module.css";
 
-const sizes = ["extraSmall", "small", "medium", "large"] as const;
+const sizes = ["small", "medium", "large"] as const;
 const allColors = ["alert", "brand", "neutral", "success", "warning"] as const;
 const variants = ["flat", "outline", "link", "plain"] as const;
 const states = ["inactive", "hover", "focus", "active", "disabled"] as const;
