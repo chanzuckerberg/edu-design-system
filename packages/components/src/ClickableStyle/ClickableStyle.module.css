@@ -18,6 +18,10 @@
 }
 
 /* Component Sizes */
+.sizeExtraSmall {
+  @apply px-1 h-6 text-xs leading-3;
+}
+
 .sizeSmall {
   @apply px-1 h-6 text-xs leading-3;
 }
