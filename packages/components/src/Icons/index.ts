@@ -94,5 +94,9 @@ export { default as ViewModuleRoundedIcon } from "./ViewModuleRounded";
 export { default as WarningRoundedIcon } from "./WarningRounded";
 
 // custom SVGs not found in https://material-ui.com/components/material-icons/
+export { default as ArrowDownwardRoundedIcon } from "./custom/ArrowDownwardRounded";
 export { default as CampaignRoundedIcon } from "./custom/CampaignRounded";
 export { default as DangerousRoundedIcon } from "./custom/DangerousRounded";
+export { default as ExpandMoreRoundedIcon } from "./custom/ExpandMoreRounded";
+export { default as RemoveRoundedIcon } from "./custom/RemoveRounded";
+export { default as StarCircleRoundedIcon } from "./custom/StarCircleRounded";
