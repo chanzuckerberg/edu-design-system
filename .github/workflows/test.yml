@@ -115,4 +115,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Lint Javascript + SCSS 👕
-        run: yarn run lint
+        run: yarn run lint --max-warnings=0
