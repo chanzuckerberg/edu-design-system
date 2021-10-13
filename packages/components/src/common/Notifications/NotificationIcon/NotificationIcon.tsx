@@ -1,6 +1,5 @@
 import clsx from "clsx";
 import * as React from "react";
-import { useEffect } from "react";
 
 import CheckCircleRoundedIcon from "../../../Icons/CheckCircleRounded";
 import ForumRoundedIcon from "../../../Icons/ForumRounded";
