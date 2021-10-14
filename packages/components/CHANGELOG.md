@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.1](https://github.com/chanzuckerberg/edu-design-system/compare/v0.4.0...v0.4.1) (2021-10-14)
+
+
+### Reverts
+
+* Revert "chore: add unused import for testing lint warnings" ([5738a44](https://github.com/chanzuckerberg/edu-design-system/commit/5738a4413b498a95a77ef877966bef2bb479fd49))
+
+
+
+
+
 # [0.4.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.3.0...v0.4.0) (2021-10-08)
 
 
