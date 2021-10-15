@@ -1,7 +1,6 @@
 const variableTokens = require("@chanzuckerberg/eds-tokens/lib/json/css-variables-nested.json");
 const staticTokens = require("@chanzuckerberg/eds-tokens/lib/json/variables-nested.json");
 module.exports = {
-  prefix: "tw-",
   theme: {
     colors: {
       transparent: "transparent",
