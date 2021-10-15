@@ -1,9 +1,9 @@
 .allIcons {
-  @apply grid grid-flow-row gap-8 justify-center;
+  @apply tw-grid tw-grid-flow-row tw-gap-8 tw-justify-center;
 
   grid-template-columns: repeat(auto-fill, 15rem);
 }
 
 .iconCell {
-  @apply flex flex-col items-center;
+  @apply tw-flex tw-flex-col tw-items-center;
 }

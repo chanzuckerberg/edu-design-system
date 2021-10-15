@@ -1,31 +1,31 @@
 .bannerDialog {
-  @apply w-full p-8 rounded border shadow-1;
-  @apply relative;
-  @apply grid gap-4;
+  @apply tw-w-full tw-p-8 tw-rounded tw-border tw-shadow-1;
+  @apply tw-relative;
+  @apply tw-grid tw-gap-4;
 
   border-color: var(--border-light-color);
 
   /* Mobile-only styles */
-  @apply text-center border-t-4;
+  @apply tw-text-center tw-border-t-4;
 
   border-top-color: var(--border-dark-color);
   --svg-icon-size-default: 2.5rem;
 }
 
 .textAndAction {
-  @apply flex flex-col justify-between gap-4;
+  @apply tw-flex tw-flex-col tw-justify-between tw-gap-4;
 }
 
 .textContent {
-  @apply space-y-2;
+  @apply tw-space-y-2;
 }
 
 .action {
-  @apply justify-self-center self-center;
+  @apply tw-justify-self-center tw-self-center;
 }
 
 .dismiss {
-  @apply absolute top-1 right-1;
+  @apply tw-absolute tw-top-1 tw-right-1;
 }
 
 /* This media query is the same as tailwind's `md:` prefix. We're using a standard CSS media query
@@ -34,10 +34,10 @@
   .bannerDialog.horizontal {
     grid-template-columns: min-content 1fr;
 
-    @apply text-left p-4;
+    @apply tw-text-left tw-p-4;
 
     /* Left border is thicker and a darker color than the surrounding border on desktop */
-    @apply border border-l-4;
+    @apply tw-border tw-border-l-4;
 
     border-left-color: var(--border-dark-color);
     border-top-color: var(--border-light-color);
@@ -47,19 +47,19 @@
   }
 
   .textAndAction.horizontal {
-    @apply gap-2;
+    @apply tw-gap-2;
   }
 
   .textContent.horizontal {
-    @apply space-y-1;
+    @apply tw-space-y-1;
   }
 
   .action.horizontal {
-    @apply self-start;
+    @apply tw-self-start;
   }
 
   .dismissable.horizontal {
-    @apply pr-18;
+    @apply tw-pr-18;
   }
 }
 
@@ -69,5 +69,5 @@
      but this border will become 100% opacity black to retain visual separation */
   --border-light-color: transparent;
 
-  @apply shadow-none;
+  @apply tw-shadow-none;
 }

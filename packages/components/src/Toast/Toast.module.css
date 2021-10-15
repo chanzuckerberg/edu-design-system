@@ -1,6 +1,6 @@
 .toastDialog {
-  @apply w-full max-w-100 pl-4 pr-2 grid gap-2 items-center;
-  @apply border border-l-4 rounded shadow-1;
+  @apply tw-w-full tw-max-w-100 tw-pl-4 tw-pr-2 tw-grid tw-gap-2 tw-items-center;
+  @apply tw-border tw-border-l-4 tw-rounded tw-shadow-1;
 
   border-color: var(--border-light-color);
   border-left-color: var(--border-dark-color);
@@ -9,7 +9,7 @@
 }
 
 .content {
-  @apply py-4 grid gap-4 items-center;
+  @apply tw-py-4 tw-grid tw-gap-4 tw-items-center;
 
   grid-template-columns: min-content 1fr;
 }

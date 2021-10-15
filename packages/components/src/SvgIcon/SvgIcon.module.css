@@ -1,5 +1,5 @@
 .svgIcon {
-  @apply inline;
+  @apply tw-inline;
 
   /**
    * Size Priority:
@@ -14,5 +14,5 @@
 }
 
 .displayBlock {
-  @apply block;
+  @apply tw-block;
 }

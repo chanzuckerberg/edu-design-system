@@ -3,10 +3,10 @@
 
   /* Using motion-reduce:transition-none here because motion-safe:transition-colors doesn't seem to
      be having an effect. :( */
-  @apply rounded border-2 transition-colors motion-reduce:transition-none inline-flex items-center;
+  @apply tw-rounded tw-border-2 tw-transition-colors motion-reduce:tw-transition-none tw-inline-flex tw-items-center;
 
   /* Base Text Styles */
-  @apply font-bold;
+  @apply tw-font-bold;
 
   /* Default variable values */
   --plain-background-color: transparent;
@@ -19,15 +19,15 @@
 
 /* Component Sizes */
 .sizeSmall {
-  @apply px-1 h-6 text-xs leading-3;
+  @apply tw-px-1 tw-h-6 tw-text-xs tw-leading-3;
 }
 
 .sizeMedium {
-  @apply px-4 h-8 text-xs leading-3;
+  @apply tw-px-4 tw-h-8 tw-text-xs tw-leading-3;
 }
 
 .sizeLarge {
-  @apply px-4 h-10 text-sm;
+  @apply tw-px-4 tw-h-10 tw-text-sm;
 }
 
 /* Button Colors */
@@ -196,7 +196,7 @@
 }
 
 .variantLink {
-  @apply px-0 py-0 underline border-none font-bold;
+  @apply tw-px-0 tw-py-0 tw-underline tw-border-none tw-font-bold;
 
   color: var(--link-color);
 
@@ -258,9 +258,9 @@
 .button:focus,
 .button.stateFocus {
   /* Focus Outline */
-  @apply outline-none ring-info-400 ring;
+  @apply tw-outline-none tw-ring-info-400 tw-ring;
 }
 
 .button:disabled {
-  @apply cursor-not-allowed;
+  @apply tw-cursor-not-allowed;
 }
