@@ -1,15 +1,15 @@
 .color {
-  @apply tw-p-2;
+  @apply p-2;
 }
 
 .variant {
-  @apply tw-mb-5;
+  @apply mb-5;
 }
 
 .iconLink {
-  @apply tw-ml-1;
+  @apply ml-1;
 }
 
 .iconButton {
-  @apply tw-ml-2;
+  @apply ml-2;
 }

@@ -4,21 +4,21 @@
 }
 
 .iconBrand {
-  @apply tw-text-brand-500;
+  @apply text-brand-500;
 }
 
 .iconNeutral {
-  @apply tw-text-neutral-500;
+  @apply text-neutral-500;
 }
 
 .iconSuccess {
-  @apply tw-text-success-500;
+  @apply text-success-500;
 }
 
 .iconWarning {
-  @apply tw-text-warning-500;
+  @apply text-warning-500;
 }
 
 .iconAlert {
-  @apply tw-text-alert-500;
+  @apply text-alert-500;
 }

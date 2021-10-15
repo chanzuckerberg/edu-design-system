@@ -1,17 +1,17 @@
 .table {
-  @apply tw-w-full tw-text-left;
-  @apply lg:tw-w-2/3;
+  @apply w-full text-left;
+  @apply lg:w-2/3;
 }
 
 .table thead {
-  @apply tw-border-b-2;
+  @apply border-b-2;
 }
 
 /* Override default border styling */
 .table tr,
 .table tr td,
 .table tr th {
-  @apply tw-border-none;
+  @apply border-none;
 }
 
 .table td:nth-child(2) {

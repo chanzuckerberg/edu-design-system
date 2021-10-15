@@ -2,61 +2,61 @@
 
 .typography,
 .sizeBody {
-  @apply tw-text-body tw-font-normal tw-mb-0;
+  @apply text-body font-normal mb-0;
 }
 
 .sizeH1 {
-  @apply tw-text-h1 tw-font-bold;
+  @apply text-h1 font-bold;
 }
 
 .sizeH2 {
-  @apply tw-text-h2 tw-font-bold;
+  @apply text-h2 font-bold;
 }
 
 .sizeH3 {
-  @apply tw-text-h3 tw-font-bold;
+  @apply text-h3 font-bold;
 }
 
 .sizeH4 {
-  @apply tw-text-h4 tw-font-bold;
+  @apply text-h4 font-bold;
 }
 
 .sizeH5 {
-  @apply tw-text-h5 tw-font-bold;
+  @apply text-h5 font-bold;
 }
 
 .sizeSm {
-  @apply tw-text-sm tw-font-normal;
+  @apply text-sm font-normal;
 }
 
 .sizeXs {
-  @apply tw-text-xs tw-font-normal;
+  @apply text-xs font-normal;
 }
 
 .sizeCaption,
 .sizeOverline {
-  @apply tw-text-caption tw-font-normal;
+  @apply text-caption font-normal;
 }
 
 .sizeOverline {
-  @apply tw-uppercase;
+  @apply uppercase;
 }
 
 /* colors */
 .colorAlert {
-  @apply tw-text-alert-700;
+  @apply text-alert-700;
 }
 
 .colorBase {
-  @apply tw-text-font-base;
+  @apply text-font-base;
 }
 
 .colorBrand {
-  @apply tw-text-brand-700;
+  @apply text-brand-700;
 }
 
 .colorInfo {
-  @apply tw-text-info-700;
+  @apply text-info-700;
 }
 
 .colorInherit {
@@ -64,32 +64,32 @@
 }
 
 .colorNeutral {
-  @apply tw-text-neutral-500;
+  @apply text-neutral-500;
 }
 
 .colorSuccess {
-  @apply tw-text-success-700;
+  @apply text-success-700;
 }
 
 .colorWarning {
-  @apply tw-text-warning-700;
+  @apply text-warning-700;
 }
 
 .colorWhite {
-  @apply tw-text-white;
+  @apply text-white;
 }
 
 /* Spacing */
 .spacingHalf {
-  @apply tw-mb-1;
+  @apply mb-1;
 }
 
 .spacing1 {
-  @apply tw-mb-2;
+  @apply mb-2;
 }
 
 .spacing2 {
-  @apply tw-mb-4;
+  @apply mb-4;
 }
 
 /**
@@ -98,9 +98,9 @@
  **/
 
 .weightNormal {
-  @apply tw-font-normal;
+  @apply font-normal;
 }
 
 .weightBold {
-  @apply tw-font-bold;
+  @apply font-bold;
 }

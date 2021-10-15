@@ -1,5 +1,5 @@
 .tag {
-  @apply tw-w-max tw-max-w-xs tw-py-1 tw-px-3 tw-inline-flex tw-items-center tw-rounded-full tw-border;
+  @apply w-max max-w-xs py-1 px-3 inline-flex items-center rounded-full border;
 
   /** 
    * TODO: (dcwither) when adding SvgIcon to EDS, include this in tailwind font 
@@ -13,11 +13,11 @@
 }
 
 .tag > :not(:last-child) {
-  @apply tw-mr-1;
+  @apply mr-1;
 }
 
 .body {
-  @apply tw-flex-auto tw-truncate;
+  @apply flex-auto truncate;
 }
 
 .colorNeutral {

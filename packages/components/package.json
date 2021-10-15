@@ -39,7 +39,6 @@
     "storybook:axe": "yarn run build:storybook && yarn run storybook:axeOnly",
     "storybook:axeOnly": "axe-storybook --build-dir storybook-static",
     "start": "yarn run storybook",
-    "tailwindPrefix": "node script/tailwindPrefixer",
     "test": "jest",
     "test:ci": "yarn run test --ci --coverage && cat ./coverage/lcov.info | codecov",
     "types": "tsc --noEmit"
