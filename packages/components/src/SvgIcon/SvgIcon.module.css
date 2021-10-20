@@ -1,5 +1,5 @@
 .svgIcon {
-  @apply inline;
+  @apply inline-block;
 
   /**
    * Size Priority:
