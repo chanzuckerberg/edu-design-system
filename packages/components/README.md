@@ -122,10 +122,9 @@ Use the [docs](https://tailwindcss.com/docs) to search for appropriate classes.
     <div class="hidden md:block lg:inline">
     ```
     - Where the expectation is `display: none ` for breakpoints smaller than 768px, `display: block `for 768px - 1023px, and `display: inline ` for >= 1024px. However since Bootstrap applies the `!important` property, all screen sizes show `display: none`.
-    - This can be circumvented with the `@apply` directive with `!important`, such as `@apply hidden md:block lg:inline !important` or using custom CSS with regular media queries.
+    - This can be circumvented with the `@apply` directive or using custom CSS with regular media queries to scope styling into a different class name.
   - `.invisible` and `.text-` alignment
     - These classes have the same styling in both Tailwind and Bootstrap, and therefore can be used without issues. Tailwind responsive states (such as breakpoints, hover, etc.) will have higher specificity so no issues will be caused there.
   - Other unfound conflicts
-    - Without Bootstrap using `!important`, should styling will likely be the same, so can likely be used without issues. If issues do arise even without `!important`, the options are similar as above, use `@apply` to scope styling into higher specificity, or use custom styling
-    - If the conflict is due to Bootstrap using `!important`, follow similar strategy above as `.hidden`
+    - If the conflict is due to Bootstrap using `!important`, follow similar strategy above as `.hidden`.
   - Bootstrap [styling](https://github.com/twbs/bootstrap-sass/tree/master/assets/stylesheets/bootstrap) and mentioned conflicts in [_utilities.scss](https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_utilities.scss#L46) and [_type.scss](https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_type.scss#L90) for reference
