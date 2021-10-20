@@ -99,3 +99,33 @@ declare var x: AbstractComponent<Props, HTMLElement>;
 ```
 
 - Preserve exact-typed objects when possible. If you must make them inexact, add an explicit `...` at the end of the object.
+
+## Tailwind Utility Classes
+Tailwind utility classes can be used with either `@apply` in CSS files such as 
+```css
+div {
+  @apply rounded border-2;
+  /* border-radius: 0.25 rem;
+     border-width: 2px; */
+}
+```
+or used directly as class names such as
+```jsx
+<div className="rounded border-2">
+```
+Use the [docs](https://tailwindcss.com/docs) to search for appropriate classes.
+
+**Conflicts may arise rarely with Bootstrap classes, some that we know of:**
+  - Most annoying, `.hidden`
+    - Both Tailwind and Bootstrap have the same styling for `.hidden` but Bootstrap applies the  `!important ` property, which can be annoying when trying to utilize Tailwind breakpoints, e.g.:
+    ```html
+    <div class="hidden md:block lg:inline">
+    ```
+    - Where the expectation is `display: none ` for breakpoints smaller than 768px, `display: block `for 768px - 1023px, and `display: inline ` for >= 1024px. However since Bootstrap applies the `!important` property, all screen sizes show `display: none`.
+    - This can be circumvented with the `@apply` directive with `!important`, such as `@apply hidden md:block lg:inline !important` or using custom CSS with regular media queries.
+  - `.invisible` and `.text-` alignment
+    - These classes have the same styling in both Tailwind and Bootstrap, and therefore can be used without issues. Tailwind responsive states (such as breakpoints, hover, etc.) will have higher specificity so no issues will be caused there.
+  - Other unfound conflicts
+    - Without Bootstrap using `!important`, should styling will likely be the same, so can likely be used without issues. If issues do arise even without `!important`, the options are similar as above, use `@apply` to scope styling into higher specificity, or use custom styling
+    - If the conflict is due to Bootstrap using `!important`, follow similar strategy above as `.hidden`
+  - Bootstrap [styling](https://github.com/twbs/bootstrap-sass/tree/master/assets/stylesheets/bootstrap) and mentioned conflicts in [_utilities.scss](https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_utilities.scss#L46) and [_type.scss](https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_type.scss#L90) for reference
