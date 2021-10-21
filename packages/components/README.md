@@ -115,7 +115,9 @@ or used directly as class names such as
 ```
 Use the [docs](https://tailwindcss.com/docs) to search for appropriate classes.
 
-**Conflicts may arise rarely with Bootstrap classes, some that we know of:**
+### Potential conflicts with other styling libraries (e.g. Bootstrap)
+
+If you're also using styles from a separate library, conflicts may arise rarely between utility class names. Here are some conflicts we're aware of for **Bootstrap** specifically:
   - Most annoying, `.hidden`
     - Both Tailwind and Bootstrap have the same styling for `.hidden` but Bootstrap applies the  `!important ` property, which can be annoying when trying to utilize Tailwind breakpoints, e.g.:
     ```html
