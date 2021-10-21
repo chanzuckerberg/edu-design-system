@@ -76,5 +76,6 @@ module.exports = {
     transitionProperty: ["motion-safe", "motion-reduce"],
   },
   plugins: [],
+  mode: "jit",
   purge: ["./src/**/*.tsx"],
 };
