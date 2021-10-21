@@ -124,13 +124,14 @@ If you're also using styles from a separate library, conflicts may arise rarely 
     <div class="hidden md:block lg:inline">
     ```
     - Where the expectation is `display: none ` for breakpoints smaller than 768px, `display: block `for 768px - 1023px, and `display: inline ` for >= 1024px. However since Bootstrap applies the `!important` property, all screen sizes show `display: none`.
-    - This can be circumvented with the `@apply` directive or using custom CSS with regular media queries to scope styling into a different class name, e.g.:.
+    - This can be circumvented with the `@apply` directive and/or using custom CSS with regular media queries to scope styling into a different class name, e.g.:.
     ```jsx
     <div className="responsive-display">
     ```
     ```css
     .responsive-display {
-      @apply hidden md:block lg:inline;
+      display: none;
+      @apply md:block lg:inline;
       /* or use traditional @media queries */
     }
     ```
