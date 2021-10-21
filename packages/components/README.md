@@ -122,7 +122,16 @@ Use the [docs](https://tailwindcss.com/docs) to search for appropriate classes.
     <div class="hidden md:block lg:inline">
     ```
     - Where the expectation is `display: none ` for breakpoints smaller than 768px, `display: block `for 768px - 1023px, and `display: inline ` for >= 1024px. However since Bootstrap applies the `!important` property, all screen sizes show `display: none`.
-    - This can be circumvented with the `@apply` directive or using custom CSS with regular media queries to scope styling into a different class name.
+    - This can be circumvented with the `@apply` directive or using custom CSS with regular media queries to scope styling into a different class name, e.g.:.
+    ```jsx
+    <div className="responsive-display">
+    ```
+    ```css
+    .responsive-display {
+      @apply hidden md:block lg:inline;
+      /* or use traditional @media queries */
+    }
+    ```
   - `.invisible` and `.text-` alignment
     - These classes have the same styling in both Tailwind and Bootstrap, and therefore can be used without issues. Tailwind responsive states (such as breakpoints, hover, etc.) will have higher specificity so no issues will be caused there.
   - Other unfound conflicts
