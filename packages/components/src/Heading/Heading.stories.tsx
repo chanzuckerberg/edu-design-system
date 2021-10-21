@@ -15,12 +15,14 @@ export const Heading1 = Template.bind(null);
 Heading1.args = {
   size: "h1",
   children: "Heading 1 24/32",
+  className: "text-right",
 };
 
 export const Heading2 = Template.bind(null);
 Heading2.args = {
   size: "h2",
   children: "Heading 2 18/24",
+  className: "bg-black hover:bg-white",
 };
 
 export const Heading3 = Template.bind(null);

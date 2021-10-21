@@ -52,6 +52,7 @@ const dialogArgs = {
 
 export const Brand = Template.bind(null);
 Brand.args = {
+  className: "visible md:invisible",
   ...dialogArgs,
 };
 
