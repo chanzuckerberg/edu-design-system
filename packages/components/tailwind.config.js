@@ -1,6 +1,8 @@
 const variableTokens = require("@chanzuckerberg/eds-tokens/lib/json/css-variables-nested.json");
 const staticTokens = require("@chanzuckerberg/eds-tokens/lib/json/variables-nested.json");
 module.exports = {
+  mode: "jit",
+  purge: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     colors: {
       transparent: "transparent",
@@ -76,6 +78,4 @@ module.exports = {
     transitionProperty: ["motion-safe", "motion-reduce"],
   },
   plugins: [],
-  mode: "jit",
-  purge: ["./src/**/*.{js,jsx,ts,tsx}"],
 };
