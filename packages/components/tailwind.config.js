@@ -77,5 +77,5 @@ module.exports = {
   },
   plugins: [],
   mode: "jit",
-  purge: ["./src/**/*.tsx"],
+  purge: ["./src/**/*.{js,jsx,ts,tsx}"],
 };
