@@ -1617,23 +1617,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@chanzuckerberg/axe-storybook-testing@npm:^4.1.1":
-  version: 4.1.1
-  resolution: "@chanzuckerberg/axe-storybook-testing@npm:4.1.1"
+"@chanzuckerberg/axe-storybook-testing@npm:^4.1.2":
+  version: 4.1.2
+  resolution: "@chanzuckerberg/axe-storybook-testing@npm:4.1.2"
   dependencies:
     chalk: ^4.1.2
     indent-string: ^4.0.0
     lodash: ^4.17.21
     p-timeout: ^4.1.0
-    playwright: ^1.14.1
+    playwright: ^1.15.2
     ts-dedent: ^2.2.0
-    yargs: ^17.1.1
-    zod: ^3.8.2
+    yargs: ^17.2.1
+    zod: ^3.9.8
   peerDependencies:
     axe-core: ^4.0.0
   bin:
     axe-storybook: bin/axe-storybook.js
-  checksum: 7d94ab51c24e5b864622aff1c958fe062499e2aabd9fee4222603f295cf79409313ffc394fe47555b397cd01a53e850720f76a3f29afae159795b5468fba03ae
+  checksum: bd735006f24bd332c0024c27dcf7f0abd5a8cd206d01d1a514dbca2cba6a7f45610b98a13584b49ebe6125c2fb1b1384e8d2089d66a81dd477ef674ffec7f875
   languageName: node
   linkType: hard
 
@@ -1647,7 +1647,7 @@ __metadata:
     "@babel/preset-env": ^7.15.0
     "@babel/preset-react": ^7.14.5
     "@babel/preset-typescript": ^7.15.0
-    "@chanzuckerberg/axe-storybook-testing": ^4.1.1
+    "@chanzuckerberg/axe-storybook-testing": ^4.1.2
     "@chanzuckerberg/eds-tokens": ^0.4.0
     "@chanzuckerberg/story-utils": ^2.1.0
     "@percy/storybook": ^3.3.1
@@ -17727,9 +17727,9 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"playwright@npm:^1.14.1":
-  version: 1.14.1
-  resolution: "playwright@npm:1.14.1"
+"playwright@npm:^1.15.2":
+  version: 1.15.2
+  resolution: "playwright@npm:1.15.2"
   dependencies:
     commander: ^6.1.0
     debug: ^4.1.1
@@ -17747,7 +17747,7 @@ fsevents@^1.2.7:
     yazl: ^2.5.1
   bin:
     playwright: lib/cli/cli.js
-  checksum: fbf0cd58f3d9eed01c2b5332bf388c89474494bff9027191baf27be2d0dba74af0c506b666ddab356e2f697c3df9ce158969d0b335be352a41710ce07db88b20
+  checksum: 12138a712c8c351c52413454714cb9dd99dd5924556744054d5908df799f23287d83cf8a89dfc51b329d53c570795ae658d6654c7d1b7a674a2e65e846232401
   languageName: node
   linkType: hard
 
@@ -23980,9 +23980,9 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"yargs@npm:^17.1.1":
-  version: 17.1.1
-  resolution: "yargs@npm:17.1.1"
+"yargs@npm:^17.2.1":
+  version: 17.2.1
+  resolution: "yargs@npm:17.2.1"
   dependencies:
     cliui: ^7.0.2
     escalade: ^3.1.1
@@ -23991,7 +23991,7 @@ resolve@^2.0.0-next.3:
     string-width: ^4.2.0
     y18n: ^5.0.5
     yargs-parser: ^20.2.2
-  checksum: b05a9467937172e01a4af7a7ad4361a22ee510cd12d1d5a3ad3b4c2e57eb8c35ca94ee22e4bdfbb40fe693fbf8000771e41824f77f6b224f1496c57f20f192b6
+  checksum: 451aac46f82da776f436018feed0244bc0e7b4355f7e397bcb53d34c691b177c0d71db3dda9653760e1bc240254d8b763a252ff918ef9e235a8d202e2909c4eb
   languageName: node
   linkType: hard
 
@@ -24062,10 +24062,10 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"zod@npm:^3.8.2":
-  version: 3.9.3
-  resolution: "zod@npm:3.9.3"
-  checksum: 0c0b33842111824daf3b5b55c01ae398fb866a6dd54a7b42c4de9a6b16b975ab7d10558a75d0aecfa71eb4588e702fb054790129a1c2294f1146d0060d266991
+"zod@npm:^3.9.8":
+  version: 3.10.3
+  resolution: "zod@npm:3.10.3"
+  checksum: 1ecab3385a6d6e6c74f946c05c5fd4739ab07b4c83cca19e139e2b046e970bf5e14c02f4ef44961f5e4cda441d4d91838507000f668cc0aae89496723dc38dd5
   languageName: node
   linkType: hard
 
