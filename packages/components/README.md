@@ -101,6 +101,8 @@ declare var x: AbstractComponent<Props, HTMLElement>;
 - Preserve exact-typed objects when possible. If you must make them inexact, add an explicit `...` at the end of the object.
 
 ## Tailwind Utility Classes
+EDS Components is configured for TW utility class use in Storybook only. Please configure downstream Tailwind config purge to include app files if necessary.
+
 Tailwind utility classes can be used with either `@apply` in CSS files such as 
 ```css
 div {
