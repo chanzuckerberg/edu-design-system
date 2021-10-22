@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.2](https://github.com/chanzuckerberg/edu-design-system/compare/v0.4.1...v0.4.2) (2021-10-22)
+
+
+### Bug Fixes
+
+* **svgicon:** set inline-block ([fe9f5fc](https://github.com/chanzuckerberg/edu-design-system/commit/fe9f5fc46bdc2e7d94fec94b0ac9acafd3da2072))
+
+
+### Features
+
+* **tailwind:** enable Tailwind utility and component classes ([#675](https://github.com/chanzuckerberg/edu-design-system/issues/675)) ([ecedecf](https://github.com/chanzuckerberg/edu-design-system/commit/ecedecfd9798a4391a0d33aad1e4b038195724d6))
+
+
+
+
+
 ## [0.4.1](https://github.com/chanzuckerberg/edu-design-system/compare/v0.4.0...v0.4.1) (2021-10-14)
 
 
