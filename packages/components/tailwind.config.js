@@ -1,6 +1,11 @@
 const variableTokens = require("@chanzuckerberg/eds-tokens/lib/json/css-variables-nested.json");
 const staticTokens = require("@chanzuckerberg/eds-tokens/lib/json/variables-nested.json");
 module.exports = {
+  mode: "jit",
+  /*The main value in TW utility classes is in Storybook stories.
+    We avoid using them in component styles to reduce chance of conflict with other libraries.
+    Please configure downstream Tailwind config purge to include app files if necessary*/
+  purge: ["./src/**/*.stories.{js,jsx,ts,tsx}"],
   theme: {
     colors: {
       transparent: "transparent",
