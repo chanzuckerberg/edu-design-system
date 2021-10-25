@@ -11,7 +11,7 @@ If you're adding an icon that does not come from Material UI, please place it in
 Then add the following line of code to the [Icons index file](https://github.com/chanzuckerberg/edu-design-system/blob/main/packages/components/src/Icons/index.ts) for documentation in Storybook in sorted order:
 
 ```tsx
-export {default as <IconName>Icon} from './<IconName>.jsx';
+export { default as <IconName>Icon } from "./<IconName>.jsx";
 ```
 
 ## Using one-off icons
