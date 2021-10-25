@@ -35,7 +35,7 @@
     "deploy:docs": "storybook-to-ghpages --ci",
     "prepack": "yarn run build",
     "snapshot": "percy-storybook --widths=320,1280",
-    "storybook": "start-storybook -p 6008",
+    "storybook": "TAILWIND_MODE=watch start-storybook -p 6008",
     "storybook:axe": "yarn run build:storybook && yarn run storybook:axeOnly",
     "storybook:axeOnly": "axe-storybook --build-dir storybook-static",
     "start": "yarn run storybook",
