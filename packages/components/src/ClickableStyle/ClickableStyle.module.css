@@ -33,7 +33,6 @@
 /* Button Colors */
 .colorBrand {
   --primary-color: var(--eds-color-brand-600);
-  --secondary-color: var(--eds-color-white);
   --link-color: var(--eds-color-brand-700);
 
   &:hover,
@@ -54,7 +53,6 @@
 
 .colorAlert {
   --primary-color: var(--eds-color-alert-600);
-  --secondary-color: var(--eds-color-white);
   --link-color: var(--eds-color-alert-700);
 
   &:hover,
@@ -75,7 +73,6 @@
 
 .colorNeutral {
   --primary-color: var(--eds-color-neutral-500);
-  --secondary-color: var(--eds-color-white);
   --link-color: var(--eds-color-neutral-600);
 
   &:hover,
@@ -96,7 +93,6 @@
 
 .colorSuccess {
   --primary-color: var(--eds-color-success-600);
-  --secondary-color: var(--eds-color-white);
   --link-color: var(--eds-color-success-700);
 
   &:hover,
@@ -117,7 +113,6 @@
 
 .colorWarning {
   --primary-color: var(--eds-color-warning-600);
-  --secondary-color: var(--eds-color-white);
   --link-color: var(--eds-color-warning-700);
 
   &:hover,
@@ -139,7 +134,8 @@
 .variantFlat {
   background-color: var(--primary-color);
   border-color: var(--primary-color);
-  color: var(--secondary-color);
+
+  @apply text-white;
 }
 
 .variantOutline {
@@ -156,7 +152,8 @@
   &:hover,
   &.stateHover {
     background-color: var(--primary-color);
-    color: var(--secondary-color);
+
+    @apply text-white;
   }
 
   &:disabled {
@@ -211,7 +208,7 @@
 
   &:active,
   &.stateActive {
-    color: var(--secondary-color);
+    @apply text-white;
   }
 
   &:disabled {
