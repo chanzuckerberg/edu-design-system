@@ -191,15 +191,3 @@ plainWithOnlyIcon.args = {
   children: <AddRoundedIcon purpose="informative" title="add" />,
   variant: "plain",
 };
-
-export const withDataTestId = Template.bind(null);
-withDataTestId.args = {
-  ...defaultArgs,
-  "data-testid": "fake-test-id",
-};
-
-export const withClassName = Template.bind(null);
-withClassName.args = {
-  ...defaultArgs,
-  className: "example-className",
-};
