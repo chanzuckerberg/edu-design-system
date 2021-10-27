@@ -5,8 +5,5 @@ module.exports = () => ({
     }),
     require("postcss-nested"),
     require("tailwindcss"),
-    require("postcss-preset-env")({
-      stage: 3,
-    }),
   ],
 });
