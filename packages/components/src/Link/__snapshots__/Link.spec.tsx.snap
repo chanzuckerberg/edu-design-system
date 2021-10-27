@@ -1,25 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[` 1`] = `
-<a
-  class="button variantLink colorBrand"
-  data-testid="example-test-id"
->
-  ​
-  Link with data-testid
-</a>
-`;
-
-exports[` 2`] = `
-<a
-  class="exampleClassName button variantLink colorBrand"
-  data-testid="example-class-name"
->
-  ​
-  Link with example className
-</a>
-`;
-
 exports[`<Link /> StandardLink story renders snapshot 1`] = `
 <a
   class="button variantLink colorBrand"
@@ -101,6 +81,26 @@ exports[`<Link /> linkWithIcon story renders snapshot 1`] = `
       d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1z"
     />
   </svg>
+</a>
+`;
+
+exports[`<Link /> passes class names down properly 1`] = `
+<a
+  class="exampleClassName button variantLink colorBrand"
+  data-testid="example-class-name"
+>
+  ​
+  Link with example className
+</a>
+`;
+
+exports[`<Link /> passes test ids down properly 1`] = `
+<a
+  class="button variantLink colorBrand"
+  data-testid="example-test-id"
+>
+  ​
+  Link with data-testid
 </a>
 `;
 

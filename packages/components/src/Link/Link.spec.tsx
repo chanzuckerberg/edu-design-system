@@ -7,15 +7,19 @@ import * as LinkStoryFile from "./Link.stories";
 describe("<Link />", () => {
   generateSnapshots(LinkStoryFile);
 
-  render(<Link data-testid="example-test-id">Link with data-testid</Link>);
-  expect(screen.getByTestId("example-test-id")).toMatchSnapshot(); // eslint-disable-line jest/no-standalone-expect
+  it("passes test ids down properly", () => {
+    render(<Link data-testid="example-test-id">Link with data-testid</Link>);
+    expect(screen.getByTestId("example-test-id")).toMatchSnapshot();
+  });
 
-  render(
-    <Link className="exampleClassName" data-testid="example-class-name">
-      Link with example className
-    </Link>,
-  );
-  expect(screen.getByTestId("example-class-name")).toMatchSnapshot(); // eslint-disable-line jest/no-standalone-expect
+  it("passes class names down properly", () => {
+    render(
+      <Link className="exampleClassName" data-testid="example-class-name">
+        Link with example className
+      </Link>,
+    );
+    expect(screen.getByTestId("example-class-name")).toMatchSnapshot();
+  });
 
   it("forwards refs", () => {
     const ref = React.createRef<HTMLAnchorElement>();
