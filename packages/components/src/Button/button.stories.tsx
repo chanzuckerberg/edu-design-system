@@ -9,7 +9,8 @@ import styles from "./button.stories.module.css";
 
 const sizes = ["small", "medium", "large"] as const;
 const allColors = ["alert", "brand", "neutral", "success", "warning"] as const;
-const variants = ["flat", "outline", "link", "plain"] as const;
+// "link" is ommitted here because it's rendered separately since it only has one size
+const variants = ["flat", "outline", "plain"] as const;
 const states = ["inactive", "hover", "focus", "active", "disabled"] as const;
 
 // For now, the UI kit only includes alert & brand "flat" buttons
@@ -169,70 +170,82 @@ const gridParameters = {
   },
 };
 
-const renderSize = (
-  size: ButtonProps["size"],
-  textColor: "white" | "neutral",
-  children: React.ReactNode,
-) =>
-  variants.map((variant) => {
-    const colors = variant === "flat" ? flatColors : allColors;
-    const icon =
-      variant === "plain" ? (
-        <AddRoundedIcon className={styles.iconButton} purpose="decorative" />
-      ) : null;
+const renderVariant = (
+  variant: ButtonProps["variant"],
+  headingColor: "white" | "neutral",
+  buttonChildren: React.ReactNode,
+  size?: ButtonProps["size"],
+) => {
+  const colors = variant === "flat" ? flatColors : allColors;
+  const icon =
+    variant === "plain" ? (
+      <AddRoundedIcon className={styles.iconButton} purpose="decorative" />
+    ) : null;
 
-    return (
-      <React.Fragment key={variant}>
-        <Heading size="h2" color={textColor}>
-          {variant} - {size}
-        </Heading>
-        <table className={styles.variant}>
-          <tbody>
-            {states.map((state) => (
-              <tr key={state}>
-                <th scope="row">
-                  <Text size="body" color={textColor}>
-                    {state}
-                  </Text>
-                </th>
-                {colors.map((color) => (
-                  <td key={color} className={styles.color}>
-                    {/* To pass the "state" prop (only used for demonstration in storybook),
-                    we must use ClickableStyle instead of Button */}
-                    <ClickableStyle
-                      as={"button"}
-                      size={size}
-                      color={color}
-                      variant={variant}
-                      state={state}
-                      disabled={state === "disabled"}
-                    >
-                      {children}
-                      {icon}
-                    </ClickableStyle>
-                  </td>
-                ))}
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </React.Fragment>
-    );
-  });
+  return (
+    <React.Fragment key={variant}>
+      <Heading size="h2" color={headingColor}>
+        {variant}
+        {size && ` - ${size}`}
+      </Heading>
+      <table className={styles.variant}>
+        <tbody>
+          {states.map((state) => (
+            <tr key={state}>
+              <th scope="row">
+                <Text size="body" color={headingColor}>
+                  {state}
+                </Text>
+              </th>
+              {colors.map((color) => (
+                <td key={color} className={styles.color}>
+                  {/* To pass the "state" prop (only used for demonstration in storybook),
+                  we must use ClickableStyle instead of Button */}
+                  <ClickableStyle
+                    as={"button"}
+                    size={size}
+                    color={color}
+                    variant={variant}
+                    state={state}
+                    disabled={state === "disabled"}
+                  >
+                    {buttonChildren}
+                    {icon}
+                  </ClickableStyle>
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </React.Fragment>
+  );
+};
 
 export const allVariants = () => (
   <ul>
     {sizes.map((size) => (
-      <li key={size}>{renderSize(size, "neutral", "Button")}</li>
+      <li key={size}>
+        {variants.map((variant) =>
+          renderVariant(variant, "neutral", "Button", size),
+        )}
+      </li>
     ))}
+    <li>{renderVariant("link", "neutral", "Button")}</li>
   </ul>
 );
-
 allVariants.parameters = gridParameters;
 
-export const largeVariantsOnDarkBackground = () =>
-  renderSize("large", "white", "Button");
-
+export const largeVariantsOnDarkBackground = () => (
+  <ul>
+    {variants.map((variant) => (
+      <li key={variant}>
+        {renderVariant(variant, "white", "Button", "large")}
+      </li>
+    ))}
+    <li key="link">{renderVariant("link", "white", "Button")}</li>
+  </ul>
+);
 largeVariantsOnDarkBackground.parameters = {
   ...gridParameters,
   backgrounds: {
