@@ -87,7 +87,7 @@
   &:active,
   &.stateActive {
     --primary-color: var(--eds-color-neutral-700);
-    --plain-background-color: var(--eds-color-neutral-600);
+    --plain-background-color: var(--eds-color-neutral-500);
   }
 }
 
@@ -139,25 +139,28 @@
 }
 
 .variantOutline {
-  background-color: transparent;
-  border-color: var(--primary-color);
-  color: var(--primary-color);
+  @apply bg-transparent;
 
-  &:focus,
-  &.stateFocus {
-    background-color: transparent;
-    color: var(--primary-color);
-  }
+  border-color: var(--link-color);
+  color: var(--link-color);
 
   &:hover,
-  &.stateHover {
-    background-color: var(--primary-color);
-
+  &.stateHover,
+  &:focus,
+  &.stateFocus,
+  &:active,
+  &.stateActive {
     @apply text-white;
+
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
   }
 
+  /* override the hover/focus/active values */
   &:disabled {
-    background-color: transparent;
+    @apply bg-transparent;
+
+    border-color: var(--primary-color);
     color: var(--primary-color);
   }
 }
@@ -196,13 +199,10 @@
   border: var(--plain-background-color);
   background-color: var(--plain-background-color);
 
+  &:hover,
+  &.stateHover,
   &:focus,
   &.stateFocus {
-    color: var(--primary-color);
-  }
-
-  &:hover,
-  &.stateHover {
     color: var(--primary-color);
   }
 
