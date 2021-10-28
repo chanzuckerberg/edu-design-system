@@ -223,6 +223,7 @@ const renderVariant = (
 
 export const allVariants = () => (
   <ul>
+    <li>{renderVariant("link", "neutral", "Button")}</li>
     {sizes.map((size) => (
       <li key={size}>
         {variants.map((variant) =>
@@ -230,19 +231,18 @@ export const allVariants = () => (
         )}
       </li>
     ))}
-    <li>{renderVariant("link", "neutral", "Button")}</li>
   </ul>
 );
 allVariants.parameters = gridParameters;
 
 export const largeVariantsOnDarkBackground = () => (
   <ul>
+    <li key="link">{renderVariant("link", "white", "Button")}</li>
     {variants.map((variant) => (
       <li key={variant}>
         {renderVariant(variant, "white", "Button", "large")}
       </li>
     ))}
-    <li key="link">{renderVariant("link", "white", "Button")}</li>
   </ul>
 );
 largeVariantsOnDarkBackground.parameters = {
