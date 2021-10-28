@@ -1,0 +1,28 @@
+.recommendedVariantSet,
+.recommendedVariantSet button,
+.recommendedVariantSet a,
+.recommendedHeading {
+  @apply mb-4;
+}
+
+.arrowBackIcon {
+  margin-left: -0.4em;
+  margin-right: 0.5em;
+}
+
+.arrowForwardIcon {
+  margin-left: 0.5em;
+  margin-right: -0.4em;
+}
+
+.openInNewIcon {
+  @apply ml-1;
+}
+
+.onlyArrowIcon {
+  margin: 0 -0.4em;
+}
+
+.onlyAddIcon {
+  margin: 0 -0.55em;
+}

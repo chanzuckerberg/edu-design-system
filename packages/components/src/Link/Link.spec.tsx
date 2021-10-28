@@ -23,7 +23,7 @@ describe("<Link />", () => {
 
   it("forwards refs", () => {
     const ref = React.createRef<HTMLAnchorElement>();
-    render(prepareStory(LinkStoryFile.StandardLink, { ref }));
+    render(prepareStory(LinkStoryFile.Default, { ref }));
 
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     ref.current!.focus();
