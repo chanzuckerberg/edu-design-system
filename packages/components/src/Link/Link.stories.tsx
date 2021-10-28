@@ -101,10 +101,9 @@ const renderVariant = (
   size?: LinkProps["size"],
 ) => {
   const colors = variant === "flat" ? flatColors : allColors;
-  const icon =
-    variant === "plain" ? (
-      <AddRoundedIcon className={styles.iconButton} purpose="decorative" />
-    ) : null;
+  const icon = variant === "plain" && (
+    <AddRoundedIcon className={styles.iconButton} purpose="decorative" />
+  );
 
   return (
     <React.Fragment key={variant}>
