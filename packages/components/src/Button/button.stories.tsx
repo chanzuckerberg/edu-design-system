@@ -128,14 +128,6 @@ plainMedium.args = {
   variant: "plain",
 };
 
-export const withDataTestId = Template.bind(null);
-withDataTestId.args = {
-  children: "Button with data-testid",
-  color: "alert",
-  variant: "flat",
-  "data-testid": "fake-test-id",
-};
-
 export const linkWithIcon = Template.bind(null);
 linkWithIcon.args = {
   children: (
@@ -164,14 +156,6 @@ export const plainWithOnlyIcon = Template.bind(null);
 plainWithOnlyIcon.args = {
   children: <AddRoundedIcon purpose="informative" title="add" />,
   variant: "plain",
-};
-
-export const withFakeClassName = Template.bind(null);
-withFakeClassName.args = {
-  children: "With fake className",
-  color: "warning",
-  variant: "outline",
-  className: "fake-className",
 };
 
 // Show grids with all variants
