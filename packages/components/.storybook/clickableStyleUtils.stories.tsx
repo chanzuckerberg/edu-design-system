@@ -1,12 +1,14 @@
 import React from "react";
 import Button from "../src/Button";
 import { ClickableStyleProps } from "../src/ClickableStyle";
+import ClickableStyle from "../src/ClickableStyle";
 import Heading from "../src/Heading";
 import AddRoundedIcon from "../src/Icons/AddRounded";
 import ArrowBackRoundedIcon from "../src/Icons/ArrowBackRounded";
 import ArrowForwardRoundedIcon from "../src/Icons/ArrowForwardRounded";
 import OpenInNewRoundedIcon from "../src/Icons/OpenInNewRounded";
 import Link from "../src/Link";
+import Text from "../src/Text";
 import styles from "./clickableStyleUtils.stories.module.css";
 
 export const getStandardSet = (
@@ -242,5 +244,95 @@ export const getAllRecommendedVariants = (
       </Heading>
       {getDestructiveRecommendedVariants(Component, componentName)}
     </li>
+  </ul>
+);
+
+const sizes = ["large", "medium", "small"] as const;
+// "link" is ommitted here because it's rendered separately since it only has one size
+const variants = ["flat", "outline", "plain"] as const;
+const colors = ["alert", "brand", "neutral", "success", "warning"] as const;
+const linkStates = ["inactive", "hover", "focus", "active"] as const;
+const buttonStates = [...linkStates, "disabled"] as const;
+
+const getVariantWithStates = (
+  tag: "button" | "a",
+  variant: ClickableStyleProps<"button">["variant"],
+  headingColor: "white" | "neutral",
+  buttonChildren: "Button" | "Link",
+  size?: ClickableStyleProps<"button">["size"],
+) => {
+  const states = tag === "button" ? buttonStates : linkStates;
+  const icon = variant === "plain" && (
+    <AddRoundedIcon className="ml-2" purpose="decorative" />
+  );
+
+  return (
+    <React.Fragment key={variant}>
+      <Heading size="h2" color={headingColor}>
+        {variant}
+        {size && ` - ${size}`}
+      </Heading>
+      <table className="mb-5">
+        <tbody>
+          {states.map((state) => (
+            <tr key={state}>
+              <th scope="row">
+                <Text size="body" color={headingColor}>
+                  {state}
+                </Text>
+              </th>
+              {colors.map((color) => (
+                <td key={color} className="p-2">
+                  {/* To pass the "state" prop (only used for demonstration in storybook),
+                  we must use ClickableStyle instead of Button or Link */}
+                  <ClickableStyle
+                    as={tag}
+                    size={size}
+                    color={color}
+                    variant={variant}
+                    state={state}
+                    disabled={state === "disabled"}
+                    href={tag === "a" ? "" : undefined}
+                  >
+                    {buttonChildren}
+                    {icon}
+                  </ClickableStyle>
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </React.Fragment>
+  );
+};
+
+export const getAllVariantsWithStates = (
+  tag: "button" | "a",
+  buttonChildren: "Button" | "Link",
+) => (
+  <ul>
+    <li>{getVariantWithStates(tag, "link", "neutral", buttonChildren)}</li>
+    {sizes.map((size) => (
+      <li key={size}>
+        {variants.map((variant) =>
+          getVariantWithStates(tag, variant, "neutral", buttonChildren, size),
+        )}
+      </li>
+    ))}
+  </ul>
+);
+
+export const getLargeVariantsOnDarkBackgroundWithStates = (
+  tag: "button" | "a",
+  buttonChildren: "Button" | "Link",
+) => (
+  <ul>
+    <li>{getVariantWithStates(tag, "link", "white", buttonChildren)}</li>
+    {variants.map((variant) => (
+      <li key={variant}>
+        {getVariantWithStates(tag, variant, "white", buttonChildren, "large")}
+      </li>
+    ))}
   </ul>
 );
