@@ -1,5 +1,6 @@
 import { Story } from "@storybook/react/types-6-0";
 import React from "react";
+import { getRecommendedVariants } from "../../.storybook/buttonUtils";
 import ClickableStyle from "../ClickableStyle";
 import Heading from "../Heading";
 import AddRoundedIcon from "../Icons/AddRounded";
@@ -41,123 +42,10 @@ const Template: Story<Args> = (args) => <Button {...args} />;
 export const Primary = Template.bind(null);
 Primary.args = {
   children: "Button",
-  variant: "flat",
 };
 
-export const Secondary = Template.bind(null);
-Secondary.args = {
-  children: "Button",
-  variant: "outline",
-};
-
-export const Tertiary = Template.bind(null);
-Tertiary.args = {
-  children: "Button",
-  color: "neutral",
-  variant: "outline",
-};
-
-export const Destructive = Template.bind(null);
-Destructive.args = {
-  children: "Button",
-  color: "alert",
-  variant: "flat",
-};
-
-export const PrimaryMedium = Template.bind(null);
-PrimaryMedium.args = {
-  children: "Button",
-  size: "medium",
-  variant: "flat",
-};
-
-export const SecondaryMedium = Template.bind(null);
-SecondaryMedium.args = {
-  children: "Button",
-  size: "medium",
-  variant: "outline",
-};
-
-export const TertiaryMedium = Template.bind(null);
-TertiaryMedium.args = {
-  children: "Button",
-  color: "neutral",
-  size: "medium",
-  variant: "outline",
-};
-
-export const Link = Template.bind(null);
-Link.args = {
-  children: "Link Button",
-  variant: "link",
-};
-
-export const linkInBody: Story<Args> = (args) => (
-  <Text size="body">
-    This text surrounds the <Button {...args} /> and shows that the link should
-    adhere to its appearance
-  </Text>
-);
-linkInBody.args = {
-  children: "Link Button",
-  color: "brand",
-  variant: "link",
-};
-
-export const linkInHeading: Story<Args> = (args) => (
-  <Text size="h1">
-    This text surrounds the <Button {...args} /> and shows that the link should
-    adhere to its appearance
-  </Text>
-);
-linkInHeading.args = {
-  children: "Link Button",
-  variant: "link",
-  color: "brand",
-};
-
-export const plainMedium = Template.bind(null);
-plainMedium.args = {
-  children: (
-    <>
-      Button{" "}
-      <AddRoundedIcon className={styles.iconButton} purpose="decorative" />
-    </>
-  ),
-  color: "brand",
-  size: "medium",
-  variant: "plain",
-};
-
-export const linkWithIcon = Template.bind(null);
-linkWithIcon.args = {
-  children: (
-    <>
-      Link with icon{" "}
-      <AddRoundedIcon className={styles.iconLink} purpose="decorative" />
-    </>
-  ),
-  color: "success",
-  variant: "link",
-};
-
-export const outlineWithIcon = Template.bind(null);
-outlineWithIcon.args = {
-  children: (
-    <>
-      Outline with icon{" "}
-      <AddRoundedIcon className={styles.iconButton} purpose="decorative" />
-    </>
-  ),
-  color: "warning",
-  variant: "outline",
-};
-
-export const plainWithOnlyIcon = Template.bind(null);
-plainWithOnlyIcon.args = {
-  children: <AddRoundedIcon purpose="informative" title="add" />,
-  variant: "plain",
-};
+export const RecommendedVariants = () =>
+  getRecommendedVariants(Button, "Button");
 
 // Show grids with all variants
 
@@ -221,7 +109,7 @@ const renderVariant = (
   );
 };
 
-export const allVariants = () => (
+export const AllVariants = () => (
   <ul>
     <li>{renderVariant("link", "neutral", "Button")}</li>
     {sizes.map((size) => (
@@ -233,9 +121,9 @@ export const allVariants = () => (
     ))}
   </ul>
 );
-allVariants.parameters = gridParameters;
+AllVariants.parameters = gridParameters;
 
-export const largeVariantsOnDarkBackground = () => (
+export const LargeVariantsOnDarkBackground = () => (
   <ul>
     <li key="link">{renderVariant("link", "white", "Button")}</li>
     {variants.map((variant) => (
@@ -245,7 +133,7 @@ export const largeVariantsOnDarkBackground = () => (
     ))}
   </ul>
 );
-largeVariantsOnDarkBackground.parameters = {
+LargeVariantsOnDarkBackground.parameters = {
   ...gridParameters,
   backgrounds: {
     default: "dark",

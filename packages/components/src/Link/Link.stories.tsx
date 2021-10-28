@@ -1,5 +1,6 @@
 import { Story } from "@storybook/react/types-6-0";
 import React from "react";
+import { getRecommendedVariants } from "../../.storybook/buttonUtils";
 import ClickableStyle from "../ClickableStyle";
 import Heading from "../Heading";
 import AddRoundedIcon from "../Icons/AddRounded";
@@ -46,10 +47,12 @@ const defaultArgs = {
   href: "",
 };
 
-export const StandardLink = Template.bind(null);
-StandardLink.args = {
+export const Default = Template.bind(null);
+Default.args = {
   ...defaultArgs,
 };
+
+export const RecommendedVariants = () => getRecommendedVariants(Link, "Link");
 
 export const linkInBody: Story<Args> = (args) => (
   <Text size="body">
@@ -69,18 +72,6 @@ export const linkInHeading: Story<Args> = (args) => (
 );
 linkInHeading.args = {
   ...defaultArgs,
-};
-
-export const plainMedium = Template.bind(null);
-plainMedium.args = {
-  children: (
-    <>
-      Link <AddRoundedIcon className={styles.iconButton} purpose="decorative" />
-    </>
-  ),
-  color: "brand",
-  size: "medium",
-  variant: "plain",
 };
 
 // Show grids with all variants
@@ -172,33 +163,4 @@ largeVariantsOnDarkBackground.parameters = {
   backgrounds: {
     default: "dark",
   },
-};
-
-// These last few stories are more for testing purposes than for guidance/examples.
-
-export const linkWithIcon = Template.bind(null);
-linkWithIcon.args = {
-  ...defaultArgs,
-  children: (
-    <>
-      Link <AddRoundedIcon className={styles.iconLink} purpose="decorative" />
-    </>
-  ),
-};
-
-export const buttonVariantWithIcon = Template.bind(null);
-buttonVariantWithIcon.args = {
-  ...defaultArgs,
-  variant: "flat",
-  children: (
-    <>
-      Link <AddRoundedIcon className={styles.iconButton} purpose="decorative" />
-    </>
-  ),
-};
-
-export const plainWithOnlyIcon = Template.bind(null);
-plainWithOnlyIcon.args = {
-  children: <AddRoundedIcon purpose="informative" title="add" />,
-  variant: "plain",
 };
