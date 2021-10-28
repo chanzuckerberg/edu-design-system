@@ -7,7 +7,7 @@ import Text from "../Text";
 import Button, { ButtonProps } from "./button";
 import styles from "./button.stories.module.css";
 
-const sizes = ["small", "medium", "large"] as const;
+const sizes = ["large", "medium", "small"] as const;
 const allColors = ["alert", "brand", "neutral", "success", "warning"] as const;
 // "link" is ommitted here because it's rendered separately since it only has one size
 const variants = ["flat", "outline", "plain"] as const;
