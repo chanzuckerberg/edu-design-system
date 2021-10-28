@@ -7,10 +7,12 @@ import Text from "../Text";
 import Link, { LinkProps } from "./Link";
 import styles from "./Link.stories.module.css";
 
-const sizes = ["small", "medium", "large"] as const;
+const sizes = ["large", "medium", "small"] as const;
 const allColors = ["alert", "brand", "neutral", "success", "warning"] as const;
-const variants = ["flat", "outline", "link", "plain"] as const;
-const states = ["inactive", "hover", "focus", "active", "disabled"] as const;
+// "link" is ommitted here because it's rendered separately since it only has one size
+const variants = ["flat", "outline", "plain"] as const;
+// "disabled" is ommitted here because <a> tags can't actually be disabled
+const states = ["inactive", "hover", "focus", "active"] as const;
 
 // For now, the UI kit only includes alert & brand "flat" buttons.
 const flatColors = ["alert", "brand"] as const;
@@ -92,70 +94,79 @@ const gridParameters = {
   },
 };
 
-const renderSize = (
-  size: LinkProps["size"],
-  textColor: "white" | "neutral",
-  children: React.ReactNode,
-) =>
-  variants.map((variant) => {
-    const colors = variant === "flat" ? flatColors : allColors;
-    const icon =
-      variant === "plain" ? (
-        <AddRoundedIcon className={styles.iconButton} purpose="decorative" />
-      ) : null;
+const renderVariant = (
+  variant: LinkProps["variant"],
+  headingColor: "white" | "neutral",
+  buttonChildren: React.ReactNode,
+  size?: LinkProps["size"],
+) => {
+  const colors = variant === "flat" ? flatColors : allColors;
+  const icon = variant === "plain" && (
+    <AddRoundedIcon className={styles.iconButton} purpose="decorative" />
+  );
 
-    return (
-      <React.Fragment key={variant}>
-        <Heading size="h2" color={textColor}>
-          {variant} - {size}
-        </Heading>
-        <table className={styles.variant}>
-          <tbody>
-            {states.map((state) => (
-              <tr key={state}>
-                <th scope="row">
-                  <Text size="body" color={textColor}>
-                    {state}
-                  </Text>
-                </th>
-                {colors.map((color) => (
-                  <td key={color} className={styles.color}>
-                    {/* To pass the "state" prop (only used for demonstration in storybook),
-                    we must use ClickableStyle instead of Link */}
-                    <ClickableStyle
-                      as={"a"}
-                      size={size}
-                      color={color}
-                      variant={variant}
-                      state={state}
-                      href=""
-                    >
-                      {children}
-                      {icon}
-                    </ClickableStyle>
-                  </td>
-                ))}
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </React.Fragment>
-    );
-  });
+  return (
+    <React.Fragment key={variant}>
+      <Heading size="h2" color={headingColor}>
+        {variant}
+        {size && ` - ${size}`}
+      </Heading>
+      <table className={styles.variant}>
+        <tbody>
+          {states.map((state) => (
+            <tr key={state}>
+              <th scope="row">
+                <Text size="body" color={headingColor}>
+                  {state}
+                </Text>
+              </th>
+              {colors.map((color) => (
+                <td key={color} className={styles.color}>
+                  {/* To pass the "state" prop (only used for demonstration in storybook),
+                  we must use ClickableStyle instead of Link */}
+                  <ClickableStyle
+                    as={"a"}
+                    size={size}
+                    color={color}
+                    variant={variant}
+                    state={state}
+                    href=""
+                  >
+                    {buttonChildren}
+                    {icon}
+                  </ClickableStyle>
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </React.Fragment>
+  );
+};
 
 export const allVariants = () => (
   <ul>
+    <li>{renderVariant("link", "neutral", "Link")}</li>
     {sizes.map((size) => (
-      <li key={size}>{renderSize(size, "neutral", "Link")}</li>
+      <li key={size}>
+        {variants.map((variant) =>
+          renderVariant(variant, "neutral", "Link", size),
+        )}
+      </li>
     ))}
   </ul>
 );
-
 allVariants.parameters = gridParameters;
 
-export const largeVariantsOnDarkBackground = () =>
-  renderSize("large", "white", "Link");
-
+export const largeVariantsOnDarkBackground = () => (
+  <ul>
+    <li key="link">{renderVariant("link", "white", "Link")}</li>
+    {variants.map((variant) => (
+      <li key={variant}>{renderVariant(variant, "white", "Link", "large")}</li>
+    ))}
+  </ul>
+);
 largeVariantsOnDarkBackground.parameters = {
   ...gridParameters,
   backgrounds: {
