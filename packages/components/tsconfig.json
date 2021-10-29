@@ -4,6 +4,7 @@
     "allowSyntheticDefaultImports": true,
     "baseUrl": "src",
     "declaration": true,
+    "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "jsx": "react",
     "lib": ["es5", "es6", "dom"],
@@ -16,7 +17,7 @@
     "skipLibCheck": true,
     "strict": true,
     "suppressImplicitAnyIndexErrors": true,
-    "target": "es5"
+    "target": "es6"
   },
   "include": ["src/**/*", "css-modules.d.ts"],
   "exclude": ["node_modules", "lib"]
