@@ -1,8 +1,5 @@
-import classNames from "classnames/bind";
 import React from "react";
 import styles from "./token-table.module.css";
-
-const cx = classNames.bind(styles);
 
 type Token = {
   name: string;
@@ -15,7 +12,7 @@ type TokenTableProps = {
 
 const TokenTable = ({ tokens, renderExample }: TokenTableProps) => {
   return (
-    <table className={cx("token-table")}>
+    <table className={styles["token-table"]}>
       <thead>
         <tr>
           <th scope="col">Name</th>
