@@ -1,3 +1,5 @@
+/* RecommendedVariants story */
+
 .recommendedVariantSet,
 .recommendedVariantSet button,
 .recommendedVariantSet a,
@@ -25,4 +27,22 @@
 
 .onlyAddIcon {
   margin: 0 -0.55em;
+}
+
+/* Variants with states stories story */
+
+.color {
+  @apply p-2;
+}
+
+.variant {
+  @apply mb-5;
+}
+
+.iconLink {
+  @apply ml-1;
+}
+
+.iconButton {
+  @apply ml-2;
 }
