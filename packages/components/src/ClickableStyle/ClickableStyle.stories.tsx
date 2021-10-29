@@ -11,11 +11,11 @@ type Args = React.ComponentProps<typeof ClickableStyle>;
 
 const Template: Story<Args> = (args) => <ClickableStyle {...args} />;
 
-export const ClickableStyleAsAnATag = Template.bind(null);
-ClickableStyleAsAnATag.args = {
-  as: "a",
+export const ClickableStyleAsALabelTag = Template.bind(null);
+ClickableStyleAsALabelTag.args = {
+  as: "label",
   color: "brand",
   variant: "flat",
   size: "large",
-  children: "ClickableStyle As An A Tag",
+  children: "Label",
 };
