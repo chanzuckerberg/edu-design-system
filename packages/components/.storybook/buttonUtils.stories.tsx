@@ -144,7 +144,7 @@ export const getRecommendedVariants = (
           <Component variant="link">
             {componentName}
             <OpenInNewRoundedIcon
-              className={styles.openInNewIcon}
+              className="ml-1"
               purpose="informative"
               title="opens in a new tab"
             />

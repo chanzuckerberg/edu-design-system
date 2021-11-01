@@ -15,10 +15,6 @@
   margin-right: -0.4em;
 }
 
-.openInNewIcon {
-  @apply ml-1;
-}
-
 .onlyArrowIcon {
   margin: 0 -0.4em;
 }

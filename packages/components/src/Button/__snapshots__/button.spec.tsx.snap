@@ -412,7 +412,7 @@ exports[`<Button /> RecommendedVariants story renders snapshot 1`] = `
           ​
           Button
           <svg
-            class="openInNewIcon svgIcon"
+            class="ml-1 svgIcon"
             fill="currentColor"
             role="img"
             viewBox="0 0 24 24"
