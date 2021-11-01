@@ -16,7 +16,7 @@ exports[`<Button /> RecommendedVariants story renders snapshot 1`] = `
     class="recommendedVariantSet"
   >
     <h2
-      class="recommendedHeading typography sizeH2 colorBase"
+      class="typography sizeH2 colorBase"
     >
       Primary
     </h2>
@@ -95,7 +95,7 @@ exports[`<Button /> RecommendedVariants story renders snapshot 1`] = `
     class="recommendedVariantSet"
   >
     <h2
-      class="recommendedHeading typography sizeH2 colorBase"
+      class="typography sizeH2 colorBase"
     >
       Secondary
     </h2>
@@ -174,7 +174,7 @@ exports[`<Button /> RecommendedVariants story renders snapshot 1`] = `
     class="recommendedVariantSet"
   >
     <h2
-      class="recommendedHeading typography sizeH2 colorBase"
+      class="typography sizeH2 colorBase"
     >
       Tertiary
     </h2>
@@ -253,7 +253,7 @@ exports[`<Button /> RecommendedVariants story renders snapshot 1`] = `
     class="recommendedVariantSet"
   >
     <h2
-      class="recommendedHeading typography sizeH2 colorBase"
+      class="typography sizeH2 colorBase"
     >
       Plain
     </h2>
@@ -390,7 +390,7 @@ exports[`<Button /> RecommendedVariants story renders snapshot 1`] = `
     class="recommendedVariantSet"
   >
     <h2
-      class="recommendedHeading typography sizeH2 colorBase"
+      class="typography sizeH2 colorBase"
     >
       Link
     </h2>
@@ -433,7 +433,7 @@ exports[`<Button /> RecommendedVariants story renders snapshot 1`] = `
     class="recommendedVariantSet"
   >
     <h2
-      class="recommendedHeading typography sizeH2 colorBase"
+      class="typography sizeH2 colorBase"
     >
       Destructive
     </h2>

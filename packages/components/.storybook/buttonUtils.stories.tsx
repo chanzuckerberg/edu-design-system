@@ -17,9 +17,7 @@ const getStandardSet = (
   color: ClickableStyleProps<"button">["color"] = "brand",
 ) => (
   <li className={styles.recommendedVariantSet}>
-    <Heading className={styles.recommendedHeading} size="h2">
-      {headingText}
-    </Heading>
+    <Heading size="h2">{headingText}</Heading>
     <ul>
       <li>
         <Component color={color} variant={variant}>
@@ -70,9 +68,7 @@ export const getRecommendedVariants = (
     {getStandardSet("Tertiary", Component, componentName, "outline", "neutral")}
 
     <li className={styles.recommendedVariantSet}>
-      <Heading className={styles.recommendedHeading} size="h2">
-        Plain
-      </Heading>
+      <Heading size="h2">Plain</Heading>
       <ul>
         <li>
           <Component variant="plain">
@@ -133,9 +129,7 @@ export const getRecommendedVariants = (
     </li>
 
     <li className={styles.recommendedVariantSet}>
-      <Heading className={styles.recommendedHeading} size="h2">
-        Link
-      </Heading>
+      <Heading size="h2">Link</Heading>
       <ul>
         <li>
           <Component variant="link">{componentName}</Component>
@@ -154,9 +148,7 @@ export const getRecommendedVariants = (
     </li>
 
     <li className={styles.recommendedVariantSet}>
-      <Heading className={styles.recommendedHeading} size="h2">
-        Destructive
-      </Heading>
+      <Heading size="h2">Destructive</Heading>
       <ul>
         <li>
           <Component variant="flat" color="alert">

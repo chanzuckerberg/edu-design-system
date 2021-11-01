@@ -1,7 +1,7 @@
 .recommendedVariantSet,
+.recommendedVariantSet h2,
 .recommendedVariantSet button,
-.recommendedVariantSet a,
-.recommendedHeading {
+.recommendedVariantSet a {
   @apply mb-4;
 }
 
