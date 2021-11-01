@@ -76,15 +76,17 @@ jobs:
           fetch-depth: 0 # 👈 Required to retrieve git history
       - name: Install dependencies
         run: yarn install --immutable
+      - name: Build Storybook 📚
+        run: yarn workspace @chanzuckerberg/eds-components run build:storybook
+      - name: Run Accessibility Tests 💛
+        run: yarn workspace @chanzuckerberg/eds-components run storybook:axeOnly
       - name: Publish to Chromatic
         uses: chromaui/action@v1
         with:
-          workingDir: packages/components
           token: ${{ secrets.GITHUB_TOKEN }}
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-          buildScriptName: build:storybook
-      - name: Run Accessibility Tests 💛
-        run: yarn workspace @chanzuckerberg/eds-components run storybook:axeOnly
+          workingDir: packages/components
+          storybookBuildDir: storybook-static
 
   lint:
     runs-on: ubuntu-latest
