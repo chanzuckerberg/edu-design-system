@@ -33,7 +33,6 @@
     "chromatic": "chromatic --project-token=CHROMATIC_PROJECT_TOKEN --skip 'dependabot/**'",
     "deploy:docs": "storybook-to-ghpages --ci",
     "prepack": "yarn run build",
-    "snapshot": "percy-storybook --widths=320,1280",
     "storybook": "start-storybook -p 6008",
     "storybook:axe": "yarn run build:storybook && yarn run storybook:axeOnly",
     "storybook:axeOnly": "axe-storybook --build-dir storybook-static",
@@ -55,7 +54,6 @@
   "devDependencies": {
     "@chanzuckerberg/axe-storybook-testing": "^4.1.3",
     "@chanzuckerberg/story-utils": "^2.1.0",
-    "@percy/storybook": "^3.3.1",
     "@storybook/addon-a11y": "^6.3.12",
     "@storybook/addon-essentials": "^6.3.12",
     "@storybook/addon-postcss": "^2.0.0",
