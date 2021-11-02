@@ -65,7 +65,7 @@ jobs:
           fetch-depth: 0 # 👈 Required to retrieve git history
       - name: Install dependencies
         run: yarn install --immutable
-      - name: Publish to Chromatic
+      - name: Buiold Storybook and Publish to Chromatic
         run: yarn workspace @chanzuckerberg/eds-components chromatic --project-token=${{ secrets.CHROMATIC_PROJECT_TOKEN }} --output-dir storybook-static --exit-zero-on-changes --skip 'dependabot/**'
       - name: Run Accessibility Tests 💛
         run: yarn workspace @chanzuckerberg/eds-components run storybook:axeOnly
