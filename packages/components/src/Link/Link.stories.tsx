@@ -1,6 +1,6 @@
 import { Story } from "@storybook/react/types-6-0";
 import React from "react";
-import { getRecommendedVariants } from "../../.storybook/buttonUtils.stories";
+import { getRecommendedVariants } from "../../.storybook/clickableStyleUtils.stories";
 import ClickableStyle from "../ClickableStyle";
 import Heading from "../Heading";
 import AddRoundedIcon from "../Icons/AddRounded";

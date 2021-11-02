@@ -7,7 +7,7 @@ import ArrowBackRoundedIcon from "../src/Icons/ArrowBackRounded";
 import ArrowForwardRoundedIcon from "../src/Icons/ArrowForwardRounded";
 import OpenInNewRoundedIcon from "../src/Icons/OpenInNewRounded";
 import Link from "../src/Link";
-import styles from "./buttonUtils.stories.module.css";
+import styles from "./clickableStyleUtils.stories.module.css";
 
 const getStandardSet = (
   headingText: "Primary" | "Secondary" | "Tertiary",
