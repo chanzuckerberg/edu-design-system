@@ -5,10 +5,7 @@ module.exports = {
   /*The main value in TW utility classes is in Storybook stories.
     We avoid using them in component styles to reduce chance of conflict with other libraries.
     Please configure downstream Tailwind config purge to include app files if necessary*/
-  purge: [
-    "./src/**/*.stories.{js,jsx,ts,tsx}",
-    "./.storybook/*.stories.{js,jsx,ts,tsx}",
-  ],
+  purge: ["./src/**/*.stories.{js,jsx,ts,tsx}", "./.storybook/*"],
   theme: {
     colors: {
       transparent: "transparent",
