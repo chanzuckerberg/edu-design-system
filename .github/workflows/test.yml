@@ -51,17 +51,6 @@ jobs:
       - name: Build Dist 🔧
         run: yarn run build
 
-      - name: Build Storybook 📚
-        run: yarn workspaces foreach run build:storybook
-
-      - name: Run Accessibility Tests 💛
-        run: yarn workspaces foreach run storybook:axeOnly
-
-      - name: Percy Snapshots 📸
-        run: yarn workspaces foreach run snapshot
-        env:
-          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
-
   chromatic-deployment:
     runs-on: ubuntu-latest
 
