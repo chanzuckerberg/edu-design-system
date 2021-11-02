@@ -280,7 +280,7 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
         >
           ​
           <svg
-            class="onlyArrowIcon svgIcon"
+            class="mx-[-0.4em] svgIcon"
             fill="currentColor"
             role="img"
             viewBox="0 0 24 24"
@@ -340,7 +340,7 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
         >
           ​
           <svg
-            class="onlyAddIcon svgIcon"
+            class="mx-[-0.55em] svgIcon"
             fill="currentColor"
             role="img"
             viewBox="0 0 24 24"
@@ -571,7 +571,7 @@ exports[`<Link /> PlainRecommendedVariants story renders snapshot 1`] = `
     >
       ​
       <svg
-        class="onlyArrowIcon svgIcon"
+        class="mx-[-0.4em] svgIcon"
         fill="currentColor"
         role="img"
         viewBox="0 0 24 24"
@@ -631,7 +631,7 @@ exports[`<Link /> PlainRecommendedVariants story renders snapshot 1`] = `
     >
       ​
       <svg
-        class="onlyAddIcon svgIcon"
+        class="mx-[-0.55em] svgIcon"
         fill="currentColor"
         role="img"
         viewBox="0 0 24 24"

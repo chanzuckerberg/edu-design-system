@@ -78,7 +78,7 @@ export const getPlainRecommendedVariants = (
     <li>
       <Component variant="plain">
         <ArrowForwardRoundedIcon
-          className={styles.onlyArrowIcon}
+          className="mx-[-0.4em]"
           purpose="informative"
           title="forward"
         />
@@ -108,7 +108,7 @@ export const getPlainRecommendedVariants = (
         <AddRoundedIcon
           purpose="informative"
           title="add"
-          className={styles.onlyAddIcon}
+          className="mx-[-0.55em]"
         />
       </Component>
     </li>

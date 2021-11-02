@@ -1,17 +1,7 @@
 .arrowBackIcon {
-  margin-left: -0.4em;
-  margin-right: 0.5em;
+  @apply ml-[-0.4em] mr-[0.5em];
 }
 
 .arrowForwardIcon {
-  margin-left: 0.5em;
-  margin-right: -0.4em;
-}
-
-.onlyArrowIcon {
-  margin: 0 -0.4em;
-}
-
-.onlyAddIcon {
-  margin: 0 -0.55em;
+  @apply ml-[0.5em] mr-[-0.4em];
 }
