@@ -39,8 +39,8 @@ type Args = React.ComponentProps<typeof Button>;
 
 const Template: Story<Args> = (args) => <Button {...args} />;
 
-export const Primary = Template.bind(null);
-Primary.args = {
+export const Default = Template.bind(null);
+Default.args = {
   children: "Button",
 };
 

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Button /> Primary story renders snapshot 1`] = `
+exports[`<Button /> Default story renders snapshot 1`] = `
 <button
   class="button sizeLarge variantFlat colorBrand"
   type="button"
