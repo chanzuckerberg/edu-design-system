@@ -1,6 +1,12 @@
 import { Story } from "@storybook/react/types-6-0";
 import React from "react";
-import { getRecommendedVariants } from "../../.storybook/clickableStyleUtils.stories";
+import {
+  getStandardSet,
+  getPlainRecommendedVariants,
+  getLinkRecommendedVariants,
+  getDestructiveRecommendedVariants,
+  getAllRecommendedVariants,
+} from "../../.storybook/clickableStyleUtils.stories";
 import ClickableStyle from "../ClickableStyle";
 import Heading from "../Heading";
 import AddRoundedIcon from "../Icons/AddRounded";
@@ -44,8 +50,23 @@ Default.args = {
   children: "Button",
 };
 
-export const RecommendedVariants = () =>
-  getRecommendedVariants(Button, "Button");
+export const PrimaryRecommendedVariants = () =>
+  getStandardSet(Button, "Button", "flat");
+
+export const SecondaryRecommendedVariants = () =>
+  getStandardSet(Button, "Button", "outline");
+
+export const TertiaryRecommendedVariants = () =>
+  getStandardSet(Button, "Button", "outline", "neutral");
+
+export const PlainRecommendedVariants = () =>
+  getPlainRecommendedVariants(Button, "Button");
+
+export const LinkRecommendedVariants = () =>
+  getLinkRecommendedVariants(Button, "Button");
+
+export const DestructiveRecommendedVariants = () =>
+  getDestructiveRecommendedVariants(Button, "Button");
 
 // Show grids with all variants
 
@@ -139,3 +160,6 @@ LargeVariantsOnDarkBackground.parameters = {
     default: "dark",
   },
 };
+
+export const AllRecommendedVariants = () =>
+  getAllRecommendedVariants(Button, "Button");

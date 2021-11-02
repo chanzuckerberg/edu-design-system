@@ -1,6 +1,12 @@
 import { Story } from "@storybook/react/types-6-0";
 import React from "react";
-import { getRecommendedVariants } from "../../.storybook/clickableStyleUtils.stories";
+import {
+  getStandardSet,
+  getPlainRecommendedVariants,
+  getLinkRecommendedVariants,
+  getDestructiveRecommendedVariants,
+  getAllRecommendedVariants,
+} from "../../.storybook/clickableStyleUtils.stories";
 import ClickableStyle from "../ClickableStyle";
 import Heading from "../Heading";
 import AddRoundedIcon from "../Icons/AddRounded";
@@ -52,7 +58,23 @@ Default.args = {
   ...defaultArgs,
 };
 
-export const RecommendedVariants = () => getRecommendedVariants(Link, "Link");
+export const PrimaryRecommendedVariants = () =>
+  getStandardSet(Link, "Link", "flat");
+
+export const SecondaryRecommendedVariants = () =>
+  getStandardSet(Link, "Link", "outline");
+
+export const TertiaryRecommendedVariants = () =>
+  getStandardSet(Link, "Link", "outline", "neutral");
+
+export const PlainRecommendedVariants = () =>
+  getPlainRecommendedVariants(Link, "Link");
+
+export const LinkRecommendedVariants = () =>
+  getLinkRecommendedVariants(Link, "Link");
+
+export const DestructiveRecommendedVariants = () =>
+  getDestructiveRecommendedVariants(Link, "Link");
 
 export const linkInBody: Story<Args> = (args) => (
   <Text size="body">
@@ -164,3 +186,6 @@ largeVariantsOnDarkBackground.parameters = {
     default: "dark",
   },
 };
+
+export const AllRecommendedVariants = () =>
+  getAllRecommendedVariants(Link, "Link");
