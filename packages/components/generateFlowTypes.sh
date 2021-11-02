@@ -7,7 +7,7 @@ fi
 
 NAME="packages/components/lib/${1}/${1}"
 if [ ! -f "$NAME.d.ts" ]; then
-  echo -e "\033[0;31mCould not find types in $NAME.d.ts. Please run 'yarn build:types' first.\033[0m"
+  echo -e "\033[0;31mCould not find types in $NAME.d.ts. Please run 'yarn build:js' first.\033[0m"
   exit 1
 fi
 
