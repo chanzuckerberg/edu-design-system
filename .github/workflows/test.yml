@@ -8,7 +8,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x, 14.x]
+        node-version: [14.x]
 
     steps:
       - uses: actions/checkout@v2
@@ -51,7 +51,7 @@ jobs:
       - name: Build Dist 🔧
         run: yarn run build
 
-  chromatic-deployment-axe-tests:
+  storybook:
     runs-on: ubuntu-latest
 
     strategy:
