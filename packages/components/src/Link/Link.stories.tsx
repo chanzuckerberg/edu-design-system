@@ -1,5 +1,12 @@
 import { Story } from "@storybook/react/types-6-0";
 import React from "react";
+import {
+  getStandardSet,
+  getPlainRecommendedVariants,
+  getLinkRecommendedVariants,
+  getDestructiveRecommendedVariants,
+  getAllRecommendedVariants,
+} from "../../.storybook/clickableStyleUtils.stories";
 import ClickableStyle from "../ClickableStyle";
 import Heading from "../Heading";
 import AddRoundedIcon from "../Icons/AddRounded";
@@ -46,8 +53,8 @@ const defaultArgs = {
   href: "",
 };
 
-export const StandardLink = Template.bind(null);
-StandardLink.args = {
+export const Default = Template.bind(null);
+Default.args = {
   ...defaultArgs,
 };
 
@@ -71,17 +78,23 @@ linkInHeading.args = {
   ...defaultArgs,
 };
 
-export const plainMedium = Template.bind(null);
-plainMedium.args = {
-  children: (
-    <>
-      Link <AddRoundedIcon className={styles.iconButton} purpose="decorative" />
-    </>
-  ),
-  color: "brand",
-  size: "medium",
-  variant: "plain",
-};
+export const PrimaryRecommendedVariants = () =>
+  getStandardSet(Link, "Link", "flat");
+
+export const SecondaryRecommendedVariants = () =>
+  getStandardSet(Link, "Link", "outline");
+
+export const TertiaryRecommendedVariants = () =>
+  getStandardSet(Link, "Link", "outline", "neutral");
+
+export const PlainRecommendedVariants = () =>
+  getPlainRecommendedVariants(Link, "Link");
+
+export const LinkRecommendedVariants = () =>
+  getLinkRecommendedVariants(Link, "Link");
+
+export const DestructiveRecommendedVariants = () =>
+  getDestructiveRecommendedVariants(Link, "Link");
 
 // Show grids with all variants
 
@@ -174,31 +187,5 @@ largeVariantsOnDarkBackground.parameters = {
   },
 };
 
-// These last few stories are more for testing purposes than for guidance/examples.
-
-export const linkWithIcon = Template.bind(null);
-linkWithIcon.args = {
-  ...defaultArgs,
-  children: (
-    <>
-      Link <AddRoundedIcon className={styles.iconLink} purpose="decorative" />
-    </>
-  ),
-};
-
-export const buttonVariantWithIcon = Template.bind(null);
-buttonVariantWithIcon.args = {
-  ...defaultArgs,
-  variant: "flat",
-  children: (
-    <>
-      Link <AddRoundedIcon className={styles.iconButton} purpose="decorative" />
-    </>
-  ),
-};
-
-export const plainWithOnlyIcon = Template.bind(null);
-plainWithOnlyIcon.args = {
-  children: <AddRoundedIcon purpose="informative" title="add" />,
-  variant: "plain",
-};
+export const AllRecommendedVariants = () =>
+  getAllRecommendedVariants(Link, "Link");

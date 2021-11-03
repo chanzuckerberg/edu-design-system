@@ -25,7 +25,7 @@ describe("<Button />", () => {
 
   it("forwards refs", () => {
     const ref = React.createRef<HTMLButtonElement>();
-    render(prepareStory(ButtonStoryFile.Primary, { ref }));
+    render(prepareStory(ButtonStoryFile.Default, { ref }));
 
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     ref.current!.focus();

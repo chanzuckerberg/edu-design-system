@@ -1,0 +1,7 @@
+.arrowBackIcon {
+  @apply ml-[-0.4em] mr-[0.5em];
+}
+
+.arrowForwardIcon {
+  @apply ml-[0.5em] mr-[-0.4em];
+}
