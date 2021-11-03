@@ -20,7 +20,7 @@ export type LinkProps = LinkHTMLElementProps & {
 /**
  * Component for making anchor tags.
  *
- * This component is called Link because it should be used to make link elements;
+ * This component is called Link because it should be used to make `<a>` elements;
  * however, it can be styled to look like a button.
  *
  * If you need to style a `<button>` element to look like a link, please use the `Button` component.
