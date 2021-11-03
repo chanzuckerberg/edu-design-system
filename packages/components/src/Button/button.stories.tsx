@@ -1,6 +1,7 @@
 import { Story } from "@storybook/react/types-6-0";
 import React from "react";
 import {
+  colors,
   getStandardSet,
   getPlainRecommendedVariants,
   getLinkRecommendedVariants,
@@ -10,8 +11,6 @@ import {
   getLargeVariantsOnDarkBackgroundWithStates,
 } from "../../.storybook/clickableStyleUtils.stories";
 import Button from "./button";
-
-const colors = ["alert", "brand", "neutral", "success", "warning"] as const;
 
 export default {
   title: "Button",

@@ -250,7 +250,13 @@ export const getAllRecommendedVariants = (
 const sizes = ["large", "medium", "small"] as const;
 // "link" is ommitted here because it's rendered separately since it only has one size
 const variants = ["flat", "outline", "plain"] as const;
-const colors = ["alert", "brand", "neutral", "success", "warning"] as const;
+export const colors = [
+  "alert",
+  "brand",
+  "neutral",
+  "success",
+  "warning",
+] as const;
 const linkStates = ["inactive", "hover", "focus", "active"] as const;
 const buttonStates = [...linkStates, "disabled"] as const;
 
