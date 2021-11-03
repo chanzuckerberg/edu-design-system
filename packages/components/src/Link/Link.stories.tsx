@@ -58,24 +58,6 @@ Default.args = {
   ...defaultArgs,
 };
 
-export const PrimaryRecommendedVariants = () =>
-  getStandardSet(Link, "Link", "flat");
-
-export const SecondaryRecommendedVariants = () =>
-  getStandardSet(Link, "Link", "outline");
-
-export const TertiaryRecommendedVariants = () =>
-  getStandardSet(Link, "Link", "outline", "neutral");
-
-export const PlainRecommendedVariants = () =>
-  getPlainRecommendedVariants(Link, "Link");
-
-export const LinkRecommendedVariants = () =>
-  getLinkRecommendedVariants(Link, "Link");
-
-export const DestructiveRecommendedVariants = () =>
-  getDestructiveRecommendedVariants(Link, "Link");
-
 export const linkInBody: Story<Args> = (args) => (
   <Text size="body">
     This text surrounds the <Link {...args} /> and shows that the link should
@@ -95,6 +77,24 @@ export const linkInHeading: Story<Args> = (args) => (
 linkInHeading.args = {
   ...defaultArgs,
 };
+
+export const PrimaryRecommendedVariants = () =>
+  getStandardSet(Link, "Link", "flat");
+
+export const SecondaryRecommendedVariants = () =>
+  getStandardSet(Link, "Link", "outline");
+
+export const TertiaryRecommendedVariants = () =>
+  getStandardSet(Link, "Link", "outline", "neutral");
+
+export const PlainRecommendedVariants = () =>
+  getPlainRecommendedVariants(Link, "Link");
+
+export const LinkRecommendedVariants = () =>
+  getLinkRecommendedVariants(Link, "Link");
+
+export const DestructiveRecommendedVariants = () =>
+  getDestructiveRecommendedVariants(Link, "Link");
 
 // Show grids with all variants
 
