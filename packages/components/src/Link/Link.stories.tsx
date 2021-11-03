@@ -3,7 +3,7 @@ import React from "react";
 import {
   colors,
   getStandardSet,
-  getPlainRecommendedVariants,
+  getTextRecommendedVariants,
   getLinkRecommendedVariants,
   getDestructiveRecommendedVariants,
   getAllRecommendedVariants,
@@ -76,8 +76,8 @@ export const SecondaryRecommendedVariants = () =>
 export const TertiaryRecommendedVariants = () =>
   getStandardSet(Link, "Link", "outline", "neutral");
 
-export const PlainRecommendedVariants = () =>
-  getPlainRecommendedVariants(Link, "Link");
+export const TextRecommendedVariants = () =>
+  getTextRecommendedVariants(Link, "Link");
 
 export const LinkRecommendedVariants = () =>
   getLinkRecommendedVariants(Link, "Link");

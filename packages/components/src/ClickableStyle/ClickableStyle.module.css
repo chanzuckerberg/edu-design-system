@@ -9,7 +9,7 @@
   @apply font-bold;
 
   /* Default variable values */
-  --plain-background-color: transparent;
+  --text-background-color: transparent;
 }
 
 /* Style icons that may be in the button children */
@@ -41,13 +41,13 @@
   &.stateFocus {
     --primary-color: var(--eds-color-brand-700);
     --link-color: var(--eds-color-brand-800);
-    --plain-background-color: var(--eds-color-brand-100);
+    --text-background-color: var(--eds-color-brand-100);
   }
 
   &:active,
   &.stateActive {
     --primary-color: var(--eds-color-brand-800);
-    --plain-background-color: var(--eds-color-brand-600);
+    --text-background-color: var(--eds-color-brand-600);
   }
 }
 
@@ -61,13 +61,13 @@
   &.stateFocus {
     --primary-color: var(--eds-color-alert-700);
     --link-color: var(--eds-color-alert-800);
-    --plain-background-color: var(--eds-color-alert-100);
+    --text-background-color: var(--eds-color-alert-100);
   }
 
   &:active,
   &.stateActive {
     --primary-color: var(--eds-color-alert-800);
-    --plain-background-color: var(--eds-color-alert-600);
+    --text-background-color: var(--eds-color-alert-600);
   }
 }
 
@@ -81,13 +81,13 @@
   &.stateFocus {
     --primary-color: var(--eds-color-neutral-600);
     --link-color: var(--eds-color-neutral-700);
-    --plain-background-color: var(--eds-color-neutral-100);
+    --text-background-color: var(--eds-color-neutral-100);
   }
 
   &:active,
   &.stateActive {
     --primary-color: var(--eds-color-neutral-700);
-    --plain-background-color: var(--eds-color-neutral-500);
+    --text-background-color: var(--eds-color-neutral-500);
   }
 }
 
@@ -101,13 +101,13 @@
   &.stateFocus {
     --primary-color: var(--eds-color-success-700);
     --link-color: var(--eds-color-success-800);
-    --plain-background-color: var(--eds-color-success-100);
+    --text-background-color: var(--eds-color-success-100);
   }
 
   &:active,
   &.stateActive {
     --primary-color: var(--eds-color-success-800);
-    --plain-background-color: var(--eds-color-success-600);
+    --text-background-color: var(--eds-color-success-600);
   }
 }
 
@@ -121,13 +121,13 @@
   &.stateFocus {
     --primary-color: var(--eds-color-warning-700);
     --link-color: var(--eds-color-warning-800);
-    --plain-background-color: var(--eds-color-warning-100);
+    --text-background-color: var(--eds-color-warning-100);
   }
 
   &:active,
   &.stateActive {
     --primary-color: var(--eds-color-warning-800);
-    --plain-background-color: var(--eds-color-warning-600);
+    --text-background-color: var(--eds-color-warning-600);
   }
 }
 
@@ -194,10 +194,10 @@
   }
 }
 
-.variantPlain {
+.variantText {
   color: var(--link-color);
-  border: var(--plain-background-color);
-  background-color: var(--plain-background-color);
+  border: var(--text-background-color);
+  background-color: var(--text-background-color);
 
   &:hover,
   &.stateHover,
@@ -233,5 +233,5 @@
 
   /* override the hover/focus values */
   --primary-color: var(--eds-color-neutral-300);
-  --plain-background-color: transparent;
+  --text-background-color: transparent;
 }

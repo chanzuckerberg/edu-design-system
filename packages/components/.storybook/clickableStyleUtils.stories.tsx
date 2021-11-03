@@ -73,7 +73,7 @@ export const getStandardSet = (
   </ul>
 );
 
-export const getPlainRecommendedVariants = (
+export const getTextRecommendedVariants = (
   Component: typeof Button | typeof Link,
   componentName: "Button" | "Link",
 ) => (
@@ -84,7 +84,7 @@ export const getPlainRecommendedVariants = (
       </Heading>
       <ul className="grid gap-y-4">
         <li>
-          <Component variant="plain">
+          <Component variant="text">
             <ArrowBackRoundedIcon
               className={styles.arrowBackIcon}
               purpose="decorative"
@@ -93,7 +93,7 @@ export const getPlainRecommendedVariants = (
           </Component>
         </li>
         <li>
-          <Component variant="plain">
+          <Component variant="text">
             {componentName}
             <ArrowForwardRoundedIcon
               className={styles.arrowForwardIcon}
@@ -102,7 +102,7 @@ export const getPlainRecommendedVariants = (
           </Component>
         </li>
         <li className="mb-4">
-          <Component variant="plain">
+          <Component variant="text">
             <ArrowForwardRoundedIcon
               className="mx-[-0.4em]"
               purpose="informative"
@@ -119,7 +119,7 @@ export const getPlainRecommendedVariants = (
       </Heading>
       <ul className="grid gap-y-4">
         <li>
-          <Component variant="plain" size="medium">
+          <Component variant="text" size="medium">
             <ArrowBackRoundedIcon
               className={styles.arrowBackIcon}
               purpose="decorative"
@@ -128,7 +128,7 @@ export const getPlainRecommendedVariants = (
           </Component>
         </li>
         <li>
-          <Component variant="plain" size="medium">
+          <Component variant="text" size="medium">
             {componentName}
             <ArrowForwardRoundedIcon
               className={styles.arrowForwardIcon}
@@ -137,7 +137,7 @@ export const getPlainRecommendedVariants = (
           </Component>
         </li>
         <li>
-          <Component variant="plain" size="medium">
+          <Component variant="text" size="medium">
             <AddRoundedIcon
               purpose="informative"
               title="add"
@@ -226,9 +226,9 @@ export const getAllRecommendedVariants = (
 
     <li>
       <Heading spacing="2x" size="h2">
-        Plain
+        Text
       </Heading>
-      {getPlainRecommendedVariants(Component, componentName)}
+      {getTextRecommendedVariants(Component, componentName)}
     </li>
 
     <li>
@@ -249,7 +249,7 @@ export const getAllRecommendedVariants = (
 
 const sizes = ["large", "medium", "small"] as const;
 // "link" is ommitted here because it's rendered separately since it only has one size
-const variants = ["flat", "outline", "plain"] as const;
+const variants = ["flat", "outline", "text"] as const;
 export const colors = [
   "alert",
   "brand",
@@ -268,7 +268,7 @@ const getVariantWithStates = (
   size?: ClickableStyleProps<"button">["size"],
 ) => {
   const states = tag === "button" ? buttonStates : linkStates;
-  const icon = variant === "plain" && (
+  const icon = variant === "text" && (
     <AddRoundedIcon className="ml-2" purpose="decorative" />
   );
 

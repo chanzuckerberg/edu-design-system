@@ -332,7 +332,7 @@ exports[`<Button /> AllRecommendedVariants story renders snapshot 1`] = `
     <h2
       class="typography sizeH2 colorBase spacing2"
     >
-      Plain
+      Text
     </h2>
     <ul>
       <li>
@@ -346,7 +346,7 @@ exports[`<Button /> AllRecommendedVariants story renders snapshot 1`] = `
         >
           <li>
             <button
-              class="button sizeLarge variantPlain colorBrand"
+              class="button sizeLarge variantText colorBrand"
               type="button"
             >
               ​
@@ -367,7 +367,7 @@ exports[`<Button /> AllRecommendedVariants story renders snapshot 1`] = `
           </li>
           <li>
             <button
-              class="button sizeLarge variantPlain colorBrand"
+              class="button sizeLarge variantText colorBrand"
               type="button"
             >
               ​
@@ -389,7 +389,7 @@ exports[`<Button /> AllRecommendedVariants story renders snapshot 1`] = `
             class="mb-4"
           >
             <button
-              class="button sizeLarge variantPlain colorBrand"
+              class="button sizeLarge variantText colorBrand"
               type="button"
             >
               ​
@@ -422,7 +422,7 @@ exports[`<Button /> AllRecommendedVariants story renders snapshot 1`] = `
         >
           <li>
             <button
-              class="button sizeMedium variantPlain colorBrand"
+              class="button sizeMedium variantText colorBrand"
               type="button"
             >
               ​
@@ -443,7 +443,7 @@ exports[`<Button /> AllRecommendedVariants story renders snapshot 1`] = `
           </li>
           <li>
             <button
-              class="button sizeMedium variantPlain colorBrand"
+              class="button sizeMedium variantText colorBrand"
               type="button"
             >
               ​
@@ -463,7 +463,7 @@ exports[`<Button /> AllRecommendedVariants story renders snapshot 1`] = `
           </li>
           <li>
             <button
-              class="button sizeMedium variantPlain colorBrand"
+              class="button sizeMedium variantText colorBrand"
               type="button"
             >
               ​
@@ -632,161 +632,6 @@ exports[`<Button /> LinkRecommendedVariants story renders snapshot 1`] = `
         />
       </svg>
     </button>
-  </li>
-</ul>
-`;
-
-exports[`<Button /> PlainRecommendedVariants story renders snapshot 1`] = `
-<ul>
-  <li>
-    <h3
-      class="typography sizeH3 colorBase spacing2"
-    >
-      Size Large
-    </h3>
-    <ul
-      class="grid gap-y-4"
-    >
-      <li>
-        <button
-          class="button sizeLarge variantPlain colorBrand"
-          type="button"
-        >
-          ​
-          <svg
-            aria-hidden="true"
-            class="arrowBackIcon svgIcon"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42a.9959.9959 0 00-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"
-            />
-          </svg>
-           
-          Button
-        </button>
-      </li>
-      <li>
-        <button
-          class="button sizeLarge variantPlain colorBrand"
-          type="button"
-        >
-          ​
-          Button
-          <svg
-            aria-hidden="true"
-            class="arrowForwardIcon svgIcon"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6a.9959.9959 0 00-1.41 0c-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"
-            />
-          </svg>
-        </button>
-      </li>
-      <li
-        class="mb-4"
-      >
-        <button
-          class="button sizeLarge variantPlain colorBrand"
-          type="button"
-        >
-          ​
-          <svg
-            class="mx-[-0.4em] svgIcon"
-            fill="currentColor"
-            role="img"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <title>
-              forward
-            </title>
-            <path
-              d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6a.9959.9959 0 00-1.41 0c-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"
-            />
-          </svg>
-        </button>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <h3
-      class="typography sizeH3 colorBase spacing2"
-    >
-      Size Medium
-    </h3>
-    <ul
-      class="grid gap-y-4"
-    >
-      <li>
-        <button
-          class="button sizeMedium variantPlain colorBrand"
-          type="button"
-        >
-          ​
-          <svg
-            aria-hidden="true"
-            class="arrowBackIcon svgIcon"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42a.9959.9959 0 00-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"
-            />
-          </svg>
-           
-          Button
-        </button>
-      </li>
-      <li>
-        <button
-          class="button sizeMedium variantPlain colorBrand"
-          type="button"
-        >
-          ​
-          Button
-          <svg
-            aria-hidden="true"
-            class="arrowForwardIcon svgIcon"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6a.9959.9959 0 00-1.41 0c-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"
-            />
-          </svg>
-        </button>
-      </li>
-      <li>
-        <button
-          class="button sizeMedium variantPlain colorBrand"
-          type="button"
-        >
-          ​
-          <svg
-            class="mx-[-0.55em] svgIcon"
-            fill="currentColor"
-            role="img"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <title>
-              add
-            </title>
-            <path
-              d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1z"
-            />
-          </svg>
-        </button>
-      </li>
-    </ul>
   </li>
 </ul>
 `;
@@ -1099,6 +944,161 @@ exports[`<Button /> TertiaryRecommendedVariants story renders snapshot 1`] = `
         Button
       </button>
     </div>
+  </li>
+</ul>
+`;
+
+exports[`<Button /> TextRecommendedVariants story renders snapshot 1`] = `
+<ul>
+  <li>
+    <h3
+      class="typography sizeH3 colorBase spacing2"
+    >
+      Size Large
+    </h3>
+    <ul
+      class="grid gap-y-4"
+    >
+      <li>
+        <button
+          class="button sizeLarge variantText colorBrand"
+          type="button"
+        >
+          ​
+          <svg
+            aria-hidden="true"
+            class="arrowBackIcon svgIcon"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42a.9959.9959 0 00-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"
+            />
+          </svg>
+           
+          Button
+        </button>
+      </li>
+      <li>
+        <button
+          class="button sizeLarge variantText colorBrand"
+          type="button"
+        >
+          ​
+          Button
+          <svg
+            aria-hidden="true"
+            class="arrowForwardIcon svgIcon"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6a.9959.9959 0 00-1.41 0c-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"
+            />
+          </svg>
+        </button>
+      </li>
+      <li
+        class="mb-4"
+      >
+        <button
+          class="button sizeLarge variantText colorBrand"
+          type="button"
+        >
+          ​
+          <svg
+            class="mx-[-0.4em] svgIcon"
+            fill="currentColor"
+            role="img"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>
+              forward
+            </title>
+            <path
+              d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6a.9959.9959 0 00-1.41 0c-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"
+            />
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <h3
+      class="typography sizeH3 colorBase spacing2"
+    >
+      Size Medium
+    </h3>
+    <ul
+      class="grid gap-y-4"
+    >
+      <li>
+        <button
+          class="button sizeMedium variantText colorBrand"
+          type="button"
+        >
+          ​
+          <svg
+            aria-hidden="true"
+            class="arrowBackIcon svgIcon"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42a.9959.9959 0 00-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"
+            />
+          </svg>
+           
+          Button
+        </button>
+      </li>
+      <li>
+        <button
+          class="button sizeMedium variantText colorBrand"
+          type="button"
+        >
+          ​
+          Button
+          <svg
+            aria-hidden="true"
+            class="arrowForwardIcon svgIcon"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6a.9959.9959 0 00-1.41 0c-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"
+            />
+          </svg>
+        </button>
+      </li>
+      <li>
+        <button
+          class="button sizeMedium variantText colorBrand"
+          type="button"
+        >
+          ​
+          <svg
+            class="mx-[-0.55em] svgIcon"
+            fill="currentColor"
+            role="img"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>
+              add
+            </title>
+            <path
+              d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1z"
+            />
+          </svg>
+        </button>
+      </li>
+    </ul>
   </li>
 </ul>
 `;

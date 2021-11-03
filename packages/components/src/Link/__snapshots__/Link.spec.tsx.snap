@@ -317,7 +317,7 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
     <h2
       class="typography sizeH2 colorBase spacing2"
     >
-      Plain
+      Text
     </h2>
     <ul>
       <li>
@@ -331,7 +331,7 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
         >
           <li>
             <a
-              class="button sizeLarge variantPlain colorBrand"
+              class="button sizeLarge variantText colorBrand"
             >
               ​
               <svg
@@ -351,7 +351,7 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
           </li>
           <li>
             <a
-              class="button sizeLarge variantPlain colorBrand"
+              class="button sizeLarge variantText colorBrand"
             >
               ​
               Link
@@ -372,7 +372,7 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
             class="mb-4"
           >
             <a
-              class="button sizeLarge variantPlain colorBrand"
+              class="button sizeLarge variantText colorBrand"
             >
               ​
               <svg
@@ -404,7 +404,7 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
         >
           <li>
             <a
-              class="button sizeMedium variantPlain colorBrand"
+              class="button sizeMedium variantText colorBrand"
             >
               ​
               <svg
@@ -424,7 +424,7 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
           </li>
           <li>
             <a
-              class="button sizeMedium variantPlain colorBrand"
+              class="button sizeMedium variantText colorBrand"
             >
               ​
               Link
@@ -443,7 +443,7 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
           </li>
           <li>
             <a
-              class="button sizeMedium variantPlain colorBrand"
+              class="button sizeMedium variantText colorBrand"
             >
               ​
               <svg
@@ -605,155 +605,6 @@ exports[`<Link /> LinkRecommendedVariants story renders snapshot 1`] = `
         />
       </svg>
     </a>
-  </li>
-</ul>
-`;
-
-exports[`<Link /> PlainRecommendedVariants story renders snapshot 1`] = `
-<ul>
-  <li>
-    <h3
-      class="typography sizeH3 colorBase spacing2"
-    >
-      Size Large
-    </h3>
-    <ul
-      class="grid gap-y-4"
-    >
-      <li>
-        <a
-          class="button sizeLarge variantPlain colorBrand"
-        >
-          ​
-          <svg
-            aria-hidden="true"
-            class="arrowBackIcon svgIcon"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42a.9959.9959 0 00-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"
-            />
-          </svg>
-           
-          Link
-        </a>
-      </li>
-      <li>
-        <a
-          class="button sizeLarge variantPlain colorBrand"
-        >
-          ​
-          Link
-          <svg
-            aria-hidden="true"
-            class="arrowForwardIcon svgIcon"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6a.9959.9959 0 00-1.41 0c-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"
-            />
-          </svg>
-        </a>
-      </li>
-      <li
-        class="mb-4"
-      >
-        <a
-          class="button sizeLarge variantPlain colorBrand"
-        >
-          ​
-          <svg
-            class="mx-[-0.4em] svgIcon"
-            fill="currentColor"
-            role="img"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <title>
-              forward
-            </title>
-            <path
-              d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6a.9959.9959 0 00-1.41 0c-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"
-            />
-          </svg>
-        </a>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <h3
-      class="typography sizeH3 colorBase spacing2"
-    >
-      Size Medium
-    </h3>
-    <ul
-      class="grid gap-y-4"
-    >
-      <li>
-        <a
-          class="button sizeMedium variantPlain colorBrand"
-        >
-          ​
-          <svg
-            aria-hidden="true"
-            class="arrowBackIcon svgIcon"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42a.9959.9959 0 00-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"
-            />
-          </svg>
-           
-          Link
-        </a>
-      </li>
-      <li>
-        <a
-          class="button sizeMedium variantPlain colorBrand"
-        >
-          ​
-          Link
-          <svg
-            aria-hidden="true"
-            class="arrowForwardIcon svgIcon"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6a.9959.9959 0 00-1.41 0c-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"
-            />
-          </svg>
-        </a>
-      </li>
-      <li>
-        <a
-          class="button sizeMedium variantPlain colorBrand"
-        >
-          ​
-          <svg
-            class="mx-[-0.55em] svgIcon"
-            fill="currentColor"
-            role="img"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <title>
-              add
-            </title>
-            <path
-              d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1z"
-            />
-          </svg>
-        </a>
-      </li>
-    </ul>
   </li>
 </ul>
 `;
@@ -1051,6 +902,155 @@ exports[`<Link /> TertiaryRecommendedVariants story renders snapshot 1`] = `
         Link
       </a>
     </div>
+  </li>
+</ul>
+`;
+
+exports[`<Link /> TextRecommendedVariants story renders snapshot 1`] = `
+<ul>
+  <li>
+    <h3
+      class="typography sizeH3 colorBase spacing2"
+    >
+      Size Large
+    </h3>
+    <ul
+      class="grid gap-y-4"
+    >
+      <li>
+        <a
+          class="button sizeLarge variantText colorBrand"
+        >
+          ​
+          <svg
+            aria-hidden="true"
+            class="arrowBackIcon svgIcon"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42a.9959.9959 0 00-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"
+            />
+          </svg>
+           
+          Link
+        </a>
+      </li>
+      <li>
+        <a
+          class="button sizeLarge variantText colorBrand"
+        >
+          ​
+          Link
+          <svg
+            aria-hidden="true"
+            class="arrowForwardIcon svgIcon"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6a.9959.9959 0 00-1.41 0c-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"
+            />
+          </svg>
+        </a>
+      </li>
+      <li
+        class="mb-4"
+      >
+        <a
+          class="button sizeLarge variantText colorBrand"
+        >
+          ​
+          <svg
+            class="mx-[-0.4em] svgIcon"
+            fill="currentColor"
+            role="img"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>
+              forward
+            </title>
+            <path
+              d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6a.9959.9959 0 00-1.41 0c-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"
+            />
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <h3
+      class="typography sizeH3 colorBase spacing2"
+    >
+      Size Medium
+    </h3>
+    <ul
+      class="grid gap-y-4"
+    >
+      <li>
+        <a
+          class="button sizeMedium variantText colorBrand"
+        >
+          ​
+          <svg
+            aria-hidden="true"
+            class="arrowBackIcon svgIcon"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42a.9959.9959 0 00-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"
+            />
+          </svg>
+           
+          Link
+        </a>
+      </li>
+      <li>
+        <a
+          class="button sizeMedium variantText colorBrand"
+        >
+          ​
+          Link
+          <svg
+            aria-hidden="true"
+            class="arrowForwardIcon svgIcon"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6a.9959.9959 0 00-1.41 0c-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"
+            />
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a
+          class="button sizeMedium variantText colorBrand"
+        >
+          ​
+          <svg
+            class="mx-[-0.55em] svgIcon"
+            fill="currentColor"
+            role="img"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>
+              add
+            </title>
+            <path
+              d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1z"
+            />
+          </svg>
+        </a>
+      </li>
+    </ul>
   </li>
 </ul>
 `;
