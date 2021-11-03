@@ -13,6 +13,11 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
     <ul
       class="grid gap-y-4"
     >
+      <h3
+        class="typography sizeH3 colorBase"
+      >
+        Size Large
+      </h3>
       <li>
         <a
           class="button sizeLarge variantFlat colorBrand"
@@ -41,7 +46,9 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
           Link
         </a>
       </li>
-      <li>
+      <li
+        class="mb-4"
+      >
         <a
           class="button sizeLarge variantFlat colorBrand"
         >
@@ -60,7 +67,14 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
           </svg>
         </a>
       </li>
-      <li>
+      <h3
+        class="typography sizeH3 colorBase"
+      >
+        Size Medium
+      </h3>
+      <li
+        class="mb-4"
+      >
         <a
           class="button sizeMedium variantFlat colorBrand"
         >
@@ -68,7 +82,14 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
           Link
         </a>
       </li>
-      <li>
+      <h3
+        class="typography sizeH3 colorBase"
+      >
+        Size Small
+      </h3>
+      <li
+        class="mb-4"
+      >
         <a
           class="button sizeSmall variantFlat colorBrand"
         >
@@ -87,6 +108,11 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
     <ul
       class="grid gap-y-4"
     >
+      <h3
+        class="typography sizeH3 colorBase"
+      >
+        Size Large
+      </h3>
       <li>
         <a
           class="button sizeLarge variantOutline colorBrand"
@@ -115,7 +141,9 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
           Link
         </a>
       </li>
-      <li>
+      <li
+        class="mb-4"
+      >
         <a
           class="button sizeLarge variantOutline colorBrand"
         >
@@ -134,7 +162,14 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
           </svg>
         </a>
       </li>
-      <li>
+      <h3
+        class="typography sizeH3 colorBase"
+      >
+        Size Medium
+      </h3>
+      <li
+        class="mb-4"
+      >
         <a
           class="button sizeMedium variantOutline colorBrand"
         >
@@ -142,7 +177,14 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
           Link
         </a>
       </li>
-      <li>
+      <h3
+        class="typography sizeH3 colorBase"
+      >
+        Size Small
+      </h3>
+      <li
+        class="mb-4"
+      >
         <a
           class="button sizeSmall variantOutline colorBrand"
         >
@@ -161,6 +203,11 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
     <ul
       class="grid gap-y-4"
     >
+      <h3
+        class="typography sizeH3 colorBase"
+      >
+        Size Large
+      </h3>
       <li>
         <a
           class="button sizeLarge variantOutline colorNeutral"
@@ -189,7 +236,9 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
           Link
         </a>
       </li>
-      <li>
+      <li
+        class="mb-4"
+      >
         <a
           class="button sizeLarge variantOutline colorNeutral"
         >
@@ -208,7 +257,14 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
           </svg>
         </a>
       </li>
-      <li>
+      <h3
+        class="typography sizeH3 colorBase"
+      >
+        Size Medium
+      </h3>
+      <li
+        class="mb-4"
+      >
         <a
           class="button sizeMedium variantOutline colorNeutral"
         >
@@ -216,7 +272,14 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
           Link
         </a>
       </li>
-      <li>
+      <h3
+        class="typography sizeH3 colorBase"
+      >
+        Size Small
+      </h3>
+      <li
+        class="mb-4"
+      >
         <a
           class="button sizeSmall variantOutline colorNeutral"
         >
@@ -235,6 +298,11 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
     <ul
       class="grid gap-y-4"
     >
+      <h3
+        class="typography sizeH3 colorBase"
+      >
+        Size Large
+      </h3>
       <li>
         <a
           class="button sizeLarge variantPlain colorBrand"
@@ -274,7 +342,9 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
           </svg>
         </a>
       </li>
-      <li>
+      <li
+        class="mb-4"
+      >
         <a
           class="button sizeLarge variantPlain colorBrand"
         >
@@ -295,6 +365,11 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
           </svg>
         </a>
       </li>
+      <h3
+        class="typography sizeH3 colorBase"
+      >
+        Size Medium
+      </h3>
       <li>
         <a
           class="button sizeMedium variantPlain colorBrand"
@@ -407,6 +482,11 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
     <ul
       class="grid gap-y-4"
     >
+      <h3
+        class="typography sizeH3 colorBase"
+      >
+        Size Large
+      </h3>
       <li>
         <a
           class="button sizeLarge variantFlat colorAlert"
@@ -454,6 +534,11 @@ exports[`<Link /> DestructiveRecommendedVariants story renders snapshot 1`] = `
 <ul
   class="grid gap-y-4"
 >
+  <h3
+    class="typography sizeH3 colorBase"
+  >
+    Size Large
+  </h3>
   <li>
     <a
       class="button sizeLarge variantFlat colorAlert"
@@ -526,6 +611,11 @@ exports[`<Link /> PlainRecommendedVariants story renders snapshot 1`] = `
 <ul
   class="grid gap-y-4"
 >
+  <h3
+    class="typography sizeH3 colorBase"
+  >
+    Size Large
+  </h3>
   <li>
     <a
       class="button sizeLarge variantPlain colorBrand"
@@ -565,7 +655,9 @@ exports[`<Link /> PlainRecommendedVariants story renders snapshot 1`] = `
       </svg>
     </a>
   </li>
-  <li>
+  <li
+    class="mb-4"
+  >
     <a
       class="button sizeLarge variantPlain colorBrand"
     >
@@ -586,6 +678,11 @@ exports[`<Link /> PlainRecommendedVariants story renders snapshot 1`] = `
       </svg>
     </a>
   </li>
+  <h3
+    class="typography sizeH3 colorBase"
+  >
+    Size Medium
+  </h3>
   <li>
     <a
       class="button sizeMedium variantPlain colorBrand"
@@ -653,6 +750,11 @@ exports[`<Link /> PrimaryRecommendedVariants story renders snapshot 1`] = `
 <ul
   class="grid gap-y-4"
 >
+  <h3
+    class="typography sizeH3 colorBase"
+  >
+    Size Large
+  </h3>
   <li>
     <a
       class="button sizeLarge variantFlat colorBrand"
@@ -681,7 +783,9 @@ exports[`<Link /> PrimaryRecommendedVariants story renders snapshot 1`] = `
       Link
     </a>
   </li>
-  <li>
+  <li
+    class="mb-4"
+  >
     <a
       class="button sizeLarge variantFlat colorBrand"
     >
@@ -700,7 +804,14 @@ exports[`<Link /> PrimaryRecommendedVariants story renders snapshot 1`] = `
       </svg>
     </a>
   </li>
-  <li>
+  <h3
+    class="typography sizeH3 colorBase"
+  >
+    Size Medium
+  </h3>
+  <li
+    class="mb-4"
+  >
     <a
       class="button sizeMedium variantFlat colorBrand"
     >
@@ -708,7 +819,14 @@ exports[`<Link /> PrimaryRecommendedVariants story renders snapshot 1`] = `
       Link
     </a>
   </li>
-  <li>
+  <h3
+    class="typography sizeH3 colorBase"
+  >
+    Size Small
+  </h3>
+  <li
+    class="mb-4"
+  >
     <a
       class="button sizeSmall variantFlat colorBrand"
     >
@@ -723,6 +841,11 @@ exports[`<Link /> SecondaryRecommendedVariants story renders snapshot 1`] = `
 <ul
   class="grid gap-y-4"
 >
+  <h3
+    class="typography sizeH3 colorBase"
+  >
+    Size Large
+  </h3>
   <li>
     <a
       class="button sizeLarge variantOutline colorBrand"
@@ -751,7 +874,9 @@ exports[`<Link /> SecondaryRecommendedVariants story renders snapshot 1`] = `
       Link
     </a>
   </li>
-  <li>
+  <li
+    class="mb-4"
+  >
     <a
       class="button sizeLarge variantOutline colorBrand"
     >
@@ -770,7 +895,14 @@ exports[`<Link /> SecondaryRecommendedVariants story renders snapshot 1`] = `
       </svg>
     </a>
   </li>
-  <li>
+  <h3
+    class="typography sizeH3 colorBase"
+  >
+    Size Medium
+  </h3>
+  <li
+    class="mb-4"
+  >
     <a
       class="button sizeMedium variantOutline colorBrand"
     >
@@ -778,7 +910,14 @@ exports[`<Link /> SecondaryRecommendedVariants story renders snapshot 1`] = `
       Link
     </a>
   </li>
-  <li>
+  <h3
+    class="typography sizeH3 colorBase"
+  >
+    Size Small
+  </h3>
+  <li
+    class="mb-4"
+  >
     <a
       class="button sizeSmall variantOutline colorBrand"
     >
@@ -793,6 +932,11 @@ exports[`<Link /> TertiaryRecommendedVariants story renders snapshot 1`] = `
 <ul
   class="grid gap-y-4"
 >
+  <h3
+    class="typography sizeH3 colorBase"
+  >
+    Size Large
+  </h3>
   <li>
     <a
       class="button sizeLarge variantOutline colorNeutral"
@@ -821,7 +965,9 @@ exports[`<Link /> TertiaryRecommendedVariants story renders snapshot 1`] = `
       Link
     </a>
   </li>
-  <li>
+  <li
+    class="mb-4"
+  >
     <a
       class="button sizeLarge variantOutline colorNeutral"
     >
@@ -840,7 +986,14 @@ exports[`<Link /> TertiaryRecommendedVariants story renders snapshot 1`] = `
       </svg>
     </a>
   </li>
-  <li>
+  <h3
+    class="typography sizeH3 colorBase"
+  >
+    Size Medium
+  </h3>
+  <li
+    class="mb-4"
+  >
     <a
       class="button sizeMedium variantOutline colorNeutral"
     >
@@ -848,7 +1001,14 @@ exports[`<Link /> TertiaryRecommendedVariants story renders snapshot 1`] = `
       Link
     </a>
   </li>
-  <li>
+  <h3
+    class="typography sizeH3 colorBase"
+  >
+    Size Small
+  </h3>
+  <li
+    class="mb-4"
+  >
     <a
       class="button sizeSmall variantOutline colorNeutral"
     >

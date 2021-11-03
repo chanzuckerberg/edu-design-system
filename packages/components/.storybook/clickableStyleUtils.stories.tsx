@@ -16,6 +16,7 @@ export const getStandardSet = (
   color: ClickableStyleProps<"button">["color"] = "brand",
 ) => (
   <ul className="grid gap-y-4">
+    <Heading size="h3">Size Large</Heading>
     <li>
       <Component color={color} variant={variant}>
         {componentName}
@@ -30,7 +31,7 @@ export const getStandardSet = (
         {componentName}
       </Component>
     </li>
-    <li>
+    <li className="mb-4">
       <Component color={color} variant={variant}>
         {componentName}
         <ArrowForwardRoundedIcon
@@ -39,12 +40,16 @@ export const getStandardSet = (
         />
       </Component>
     </li>
-    <li>
+
+    <Heading size="h3">Size Medium</Heading>
+    <li className="mb-4">
       <Component color={color} variant={variant} size="medium">
         {componentName}
       </Component>
     </li>
-    <li>
+
+    <Heading size="h3">Size Small</Heading>
+    <li className="mb-4">
       <Component color={color} variant={variant} size="small">
         {componentName}
       </Component>
@@ -57,6 +62,7 @@ export const getPlainRecommendedVariants = (
   componentName: "Button" | "Link",
 ) => (
   <ul className="grid gap-y-4">
+    <Heading size="h3">Size Large</Heading>
     <li>
       <Component variant="plain">
         <ArrowBackRoundedIcon
@@ -75,7 +81,7 @@ export const getPlainRecommendedVariants = (
         />
       </Component>
     </li>
-    <li>
+    <li className="mb-4">
       <Component variant="plain">
         <ArrowForwardRoundedIcon
           className="mx-[-0.4em]"
@@ -84,7 +90,7 @@ export const getPlainRecommendedVariants = (
         />
       </Component>
     </li>
-
+    <Heading size="h3">Size Medium</Heading>
     <li>
       <Component variant="plain" size="medium">
         <ArrowBackRoundedIcon
@@ -141,6 +147,7 @@ export const getDestructiveRecommendedVariants = (
   componentName: "Button" | "Link",
 ) => (
   <ul className="grid gap-y-4">
+    <Heading size="h3">Size Large</Heading>
     <li>
       <Component variant="flat" color="alert">
         {componentName}
