@@ -28,7 +28,12 @@ export type ClickableStyleProps<IComponent extends React.ElementType> = {
 /**
  * A helper component that contains all the styling for buttons and links.
  *
- * See the Button stories for usage examples.
+ * If you're styling a `<button>` or `<a>` element, you can use the `Button`
+ * and `Link` components (respectively). `ClickableStyle` should only be used
+ * directly when styling other elements or components (e.g. `Link` from `react-router`)
+ * to look like a button or link.
+ *
+ * See the `Button` and `Link` stories for usage examples.
  */
 const ClickableStyle = React.forwardRef(
   <IComponent extends React.ElementType>(
