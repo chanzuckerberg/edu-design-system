@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.3](https://github.com/chanzuckerberg/edu-design-system/compare/v0.4.2...v0.4.3) (2021-11-04)
+
+**Note:** Version bump only for package edu-design-system
+
+
+
+
+
 ## [0.4.3-alpha.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.4.2...v0.4.3-alpha.0) (2021-11-01)
 
 **Note:** Version bump only for package edu-design-system
