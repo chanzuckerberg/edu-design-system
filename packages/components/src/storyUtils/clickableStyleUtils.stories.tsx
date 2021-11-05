@@ -1,14 +1,14 @@
 import React from "react";
-import Button from "../src/Button";
-import { ClickableStyleProps } from "../src/ClickableStyle";
-import ClickableStyle from "../src/ClickableStyle";
-import Heading from "../src/Heading";
-import AddRoundedIcon from "../src/Icons/AddRounded";
-import ArrowBackRoundedIcon from "../src/Icons/ArrowBackRounded";
-import ArrowForwardRoundedIcon from "../src/Icons/ArrowForwardRounded";
-import OpenInNewRoundedIcon from "../src/Icons/OpenInNewRounded";
-import Link from "../src/Link";
-import Text from "../src/Text";
+import Button from "../Button";
+import { ClickableStyleProps } from "../ClickableStyle";
+import ClickableStyle from "../ClickableStyle";
+import Heading from "../Heading";
+import AddRoundedIcon from "../Icons/AddRounded";
+import ArrowBackRoundedIcon from "../Icons/ArrowBackRounded";
+import ArrowForwardRoundedIcon from "../Icons/ArrowForwardRounded";
+import OpenInNewRoundedIcon from "../Icons/OpenInNewRounded";
+import Link from "../Link";
+import Text from "../Text";
 import styles from "./clickableStyleUtils.stories.module.css";
 
 export const getStandardSet = (

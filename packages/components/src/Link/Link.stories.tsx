@@ -1,5 +1,6 @@
 import { Story } from "@storybook/react/types-6-0";
 import React from "react";
+import Text from "../Text";
 import {
   colors,
   getStandardSet,
@@ -9,8 +10,7 @@ import {
   getAllRecommendedVariants,
   getAllVariantsWithStates,
   getLargeVariantsOnDarkBackgroundWithStates,
-} from "../../.storybook/clickableStyleUtils.stories";
-import Text from "../Text";
+} from "../storyUtils/clickableStyleUtils.stories";
 import Link from "./Link";
 
 export default {

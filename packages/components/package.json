@@ -25,7 +25,7 @@
   "scripts": {
     "build": "yarn run build:clean && yarn run build:js && yarn run build:styles && yarn run build:finish",
     "build:clean": "rm -rf lib/",
-    "build:finish": "rm lib/**/*.spec.* lib/**/*.stories.*",
+    "build:finish": "rm -rf lib/storyUtils lib/**/*.spec.* lib/**/*.stories.*",
     "build:js": "tsc",
     "build:styles": "postcss \"src/**/*.css\" --dir lib/ --base src/ --verbose",
     "build:watch": "yarn run build:js --watch",
