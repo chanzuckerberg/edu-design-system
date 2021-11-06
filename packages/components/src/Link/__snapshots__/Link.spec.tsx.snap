@@ -1040,8 +1040,9 @@ exports[`<Link /> passes class names down properly 1`] = `
 <a
   class="exampleClassName button variantLink colorBrand"
   data-testid="example-class-name"
+  href=""
 >
-  Link with example className
+  Link
 </a>
 `;
 
@@ -1049,7 +1050,8 @@ exports[`<Link /> passes test ids down properly 1`] = `
 <a
   class="button variantLink colorBrand"
   data-testid="example-test-id"
+  href=""
 >
-  Link with data-testid
+  Link
 </a>
 `;
