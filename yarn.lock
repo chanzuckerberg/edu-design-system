@@ -1577,6 +1577,7 @@ __metadata:
     "@storybook/addon-postcss": ^2.0.0
     "@storybook/react": ^6.4.0
     "@storybook/storybook-deployer": ^2.8.10
+    "@storybook/testing-react": ^1.0.0
     "@testing-library/jest-dom": ^5.14.1
     "@testing-library/react": ^12.1.2
     "@types/jest": ^27.0.2

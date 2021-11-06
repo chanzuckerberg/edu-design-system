@@ -1060,7 +1060,7 @@ exports[`<Button /> passes class names down properly 1`] = `
   data-testid="example-class-name"
   type="button"
 >
-  Button with example className
+  Button
 </button>
 `;
 
@@ -1070,6 +1070,6 @@ exports[`<Button /> passes test ids down properly 1`] = `
   data-testid="example-test-id"
   type="button"
 >
-  Button with data-testid
+  Button
 </button>
 `;
