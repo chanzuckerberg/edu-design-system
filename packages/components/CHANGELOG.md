@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.5](https://github.com/chanzuckerberg/edu-design-system/compare/v0.4.4...v0.4.5) (2021-11-09)
+
+**Note:** Version bump only for package @chanzuckerberg/eds-components
+
+
+
+
+
 ## [0.4.4](https://github.com/chanzuckerberg/edu-design-system/compare/v0.4.3...v0.4.4) (2021-11-05)
 
 **Note:** Version bump only for package @chanzuckerberg/eds-components
