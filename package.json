@@ -46,7 +46,7 @@
   "author": "CZI",
   "license": "MIT",
   "devDependencies": {
-    "@commitlint/cli": "^11.0.0",
+    "@commitlint/cli": "^14.1.0",
     "@commitlint/config-conventional": "^11.0.0",
     "@commitlint/prompt-cli": "^11.0.0",
     "@size-limit/preset-small-lib": "^4.12.0",
