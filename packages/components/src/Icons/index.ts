@@ -41,6 +41,7 @@ export { default as EventAvailableRoundedIcon } from "./EventAvailableRounded";
 export { default as EventBusyRoundedIcon } from "./EventBusyRounded";
 export { default as EventNoteRoundedIcon } from "./EventNoteRounded";
 export { default as EventRoundedIcon } from "./EventRounded";
+export { default as ExpandLessRoundedIcon } from "./ExpandLessRounded";
 export { default as ExpandMoreRoundedIcon } from "./ExpandMoreRounded";
 export { default as FaceRoundedIcon } from "./FaceRounded";
 export { default as FavoriteRoundedIcon } from "./FavoriteRounded";
