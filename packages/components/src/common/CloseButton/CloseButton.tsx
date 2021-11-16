@@ -20,6 +20,9 @@ type CloseButtonProps = {
    * @chanzuckerberg/eds-tokens/json/variables.json
    */
   size?: string;
+  /**
+   * Custom aria-label. If undefined, "close" will be used.
+   */
   "aria-label"?: string;
   onClose: () => void;
   className?: string;

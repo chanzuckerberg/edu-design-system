@@ -2,7 +2,7 @@
   @apply w-12 h-12 justify-center rounded-full;
 }
 
-/* The hover transition is inherited from the Button component */
+/* The hover transition is inherited from the ClickableStyle component */
 .button:hover {
   @apply text-white;
 
