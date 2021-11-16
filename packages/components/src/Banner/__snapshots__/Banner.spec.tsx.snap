@@ -53,18 +53,18 @@ exports[`<Banner /> AlertDismissable story renders snapshot 1`] = `
   class="bannerDialog horizontal dismissable colorAlert"
 >
   <button
-    class="close dismiss button variantLink colorAlert"
+    class="button dismiss colorAlert button variantLink colorAlert"
     type="button"
   >
     ​
     <svg
       class="svgIcon"
       fill="currentColor"
-      height="28px"
+      height="1.75rem"
       role="img"
-      style="--svg-icon-size: 28px;"
+      style="--svg-icon-size: 1.75rem;"
       viewBox="0 0 24 24"
-      width="28px"
+      width="1.75rem"
       xmlns="http://www.w3.org/2000/svg"
     >
       <title>
@@ -168,18 +168,18 @@ exports[`<Banner /> BrandDismissable story renders snapshot 1`] = `
   class="bannerDialog horizontal dismissable colorBrand"
 >
   <button
-    class="close dismiss button variantLink colorBrand"
+    class="button dismiss colorBrand button variantLink colorBrand"
     type="button"
   >
     ​
     <svg
       class="svgIcon"
       fill="currentColor"
-      height="28px"
+      height="1.75rem"
       role="img"
-      style="--svg-icon-size: 28px;"
+      style="--svg-icon-size: 1.75rem;"
       viewBox="0 0 24 24"
-      width="28px"
+      width="1.75rem"
       xmlns="http://www.w3.org/2000/svg"
     >
       <title>
@@ -235,18 +235,18 @@ exports[`<Banner /> DismissableWithAction story renders snapshot 1`] = `
   class="bannerDialog horizontal dismissable colorBrand"
 >
   <button
-    class="close dismiss button variantLink colorBrand"
+    class="button dismiss colorBrand button variantLink colorBrand"
     type="button"
   >
     ​
     <svg
       class="svgIcon"
       fill="currentColor"
-      height="28px"
+      height="1.75rem"
       role="img"
-      style="--svg-icon-size: 28px;"
+      style="--svg-icon-size: 1.75rem;"
       viewBox="0 0 24 24"
-      width="28px"
+      width="1.75rem"
       xmlns="http://www.w3.org/2000/svg"
     >
       <title>
@@ -402,18 +402,18 @@ exports[`<Banner /> NeutralDismissable story renders snapshot 1`] = `
   class="bannerDialog horizontal dismissable colorNeutral"
 >
   <button
-    class="close dismiss button variantLink colorNeutral"
+    class="button dismiss colorNeutral button variantLink colorNeutral"
     type="button"
   >
     ​
     <svg
       class="svgIcon"
       fill="currentColor"
-      height="28px"
+      height="1.75rem"
       role="img"
-      style="--svg-icon-size: 28px;"
+      style="--svg-icon-size: 1.75rem;"
       viewBox="0 0 24 24"
-      width="28px"
+      width="1.75rem"
       xmlns="http://www.w3.org/2000/svg"
     >
       <title>
@@ -591,18 +591,18 @@ exports[`<Banner /> SuccessDismissable story renders snapshot 1`] = `
   class="bannerDialog horizontal dismissable colorSuccess"
 >
   <button
-    class="close dismiss button variantLink colorSuccess"
+    class="button dismiss colorSuccess button variantLink colorSuccess"
     type="button"
   >
     ​
     <svg
       class="svgIcon"
       fill="currentColor"
-      height="28px"
+      height="1.75rem"
       role="img"
-      style="--svg-icon-size: 28px;"
+      style="--svg-icon-size: 1.75rem;"
       viewBox="0 0 24 24"
-      width="28px"
+      width="1.75rem"
       xmlns="http://www.w3.org/2000/svg"
     >
       <title>
@@ -702,18 +702,18 @@ exports[`<Banner /> VerticalDismissable story renders snapshot 1`] = `
   class="bannerDialog dismissable colorBrand"
 >
   <button
-    class="close dismiss button variantLink colorBrand"
+    class="button dismiss colorBrand button variantLink colorBrand"
     type="button"
   >
     ​
     <svg
       class="svgIcon"
       fill="currentColor"
-      height="28px"
+      height="1.75rem"
       role="img"
-      style="--svg-icon-size: 28px;"
+      style="--svg-icon-size: 1.75rem;"
       viewBox="0 0 24 24"
-      width="28px"
+      width="1.75rem"
       xmlns="http://www.w3.org/2000/svg"
     >
       <title>
@@ -769,18 +769,18 @@ exports[`<Banner /> VerticalDismissableWithAction story renders snapshot 1`] = `
   class="bannerDialog dismissable colorBrand"
 >
   <button
-    class="close dismiss button variantLink colorBrand"
+    class="button dismiss colorBrand button variantLink colorBrand"
     type="button"
   >
     ​
     <svg
       class="svgIcon"
       fill="currentColor"
-      height="28px"
+      height="1.75rem"
       role="img"
-      style="--svg-icon-size: 28px;"
+      style="--svg-icon-size: 1.75rem;"
       viewBox="0 0 24 24"
-      width="28px"
+      width="1.75rem"
       xmlns="http://www.w3.org/2000/svg"
     >
       <title>
@@ -992,18 +992,18 @@ exports[`<Banner /> WarningDismissable story renders snapshot 1`] = `
   class="bannerDialog horizontal dismissable colorWarning"
 >
   <button
-    class="close dismiss button variantLink colorWarning"
+    class="button dismiss colorWarning button variantLink colorWarning"
     type="button"
   >
     ​
     <svg
       class="svgIcon"
       fill="currentColor"
-      height="28px"
+      height="1.75rem"
       role="img"
-      style="--svg-icon-size: 28px;"
+      style="--svg-icon-size: 1.75rem;"
       viewBox="0 0 24 24"
-      width="28px"
+      width="1.75rem"
       xmlns="http://www.w3.org/2000/svg"
     >
       <title>

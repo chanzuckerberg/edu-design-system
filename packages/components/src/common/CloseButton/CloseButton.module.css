@@ -1,11 +1,35 @@
-.close {
+.button {
   @apply w-12 h-12 justify-center rounded-full;
 }
 
-.close:hover {
-  /* The hover transition is inherited from the Button component */
+/* The hover transition is inherited from the Button component */
+.button:hover {
   @apply text-white;
 
-  /* --close-hover-color variable should be set in the consumer's styles */
   background-color: var(--close-hover-color);
+}
+
+.colorBrand {
+  @apply text-brand-700;
+  --close-hover-color: var(--eds-color-brand-600);
+}
+
+.colorNeutral {
+  @apply text-neutral-700;
+  --close-hover-color: var(--eds-color-neutral-600);
+}
+
+.colorSuccess {
+  @apply text-success-700;
+  --close-hover-color: var(--eds-color-success-600);
+}
+
+.colorWarning {
+  @apply text-warning-700;
+  --close-hover-color: var(--eds-color-warning-600);
+}
+
+.colorAlert {
+  @apply text-alert-700;
+  --close-hover-color: var(--eds-color-alert-600);
 }
