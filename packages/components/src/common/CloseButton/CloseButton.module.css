@@ -10,26 +10,21 @@
 }
 
 .colorBrand {
-  @apply text-brand-700;
   --close-hover-color: var(--eds-color-brand-600);
 }
 
 .colorNeutral {
-  @apply text-neutral-700;
   --close-hover-color: var(--eds-color-neutral-600);
 }
 
 .colorSuccess {
-  @apply text-success-700;
   --close-hover-color: var(--eds-color-success-600);
 }
 
 .colorWarning {
-  @apply text-warning-700;
   --close-hover-color: var(--eds-color-warning-600);
 }
 
 .colorAlert {
-  @apply text-alert-700;
   --close-hover-color: var(--eds-color-alert-600);
 }
