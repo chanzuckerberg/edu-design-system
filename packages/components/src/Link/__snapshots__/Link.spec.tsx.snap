@@ -24,7 +24,6 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
             <a
               class="button sizeLarge variantFlat colorBrand"
             >
-              ​
               Link
             </a>
           </li>
@@ -32,7 +31,6 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
             <a
               class="button sizeLarge variantFlat colorBrand"
             >
-              ​
               <svg
                 aria-hidden="true"
                 class="arrowBackIcon svgIcon"
@@ -54,7 +52,6 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
             <a
               class="button sizeLarge variantFlat colorBrand"
             >
-              ​
               Link
               <svg
                 aria-hidden="true"
@@ -83,7 +80,6 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
           <a
             class="button sizeMedium variantFlat colorBrand"
           >
-            ​
             Link
           </a>
         </div>
@@ -100,7 +96,6 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
           <a
             class="button sizeSmall variantFlat colorBrand"
           >
-            ​
             Link
           </a>
         </div>
@@ -127,7 +122,6 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
             <a
               class="button sizeLarge variantOutline colorBrand"
             >
-              ​
               Link
             </a>
           </li>
@@ -135,7 +129,6 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
             <a
               class="button sizeLarge variantOutline colorBrand"
             >
-              ​
               <svg
                 aria-hidden="true"
                 class="arrowBackIcon svgIcon"
@@ -157,7 +150,6 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
             <a
               class="button sizeLarge variantOutline colorBrand"
             >
-              ​
               Link
               <svg
                 aria-hidden="true"
@@ -186,7 +178,6 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
           <a
             class="button sizeMedium variantOutline colorBrand"
           >
-            ​
             Link
           </a>
         </div>
@@ -203,7 +194,6 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
           <a
             class="button sizeSmall variantOutline colorBrand"
           >
-            ​
             Link
           </a>
         </div>
@@ -230,7 +220,6 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
             <a
               class="button sizeLarge variantOutline colorNeutral"
             >
-              ​
               Link
             </a>
           </li>
@@ -238,7 +227,6 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
             <a
               class="button sizeLarge variantOutline colorNeutral"
             >
-              ​
               <svg
                 aria-hidden="true"
                 class="arrowBackIcon svgIcon"
@@ -260,7 +248,6 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
             <a
               class="button sizeLarge variantOutline colorNeutral"
             >
-              ​
               Link
               <svg
                 aria-hidden="true"
@@ -289,7 +276,6 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
           <a
             class="button sizeMedium variantOutline colorNeutral"
           >
-            ​
             Link
           </a>
         </div>
@@ -306,7 +292,6 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
           <a
             class="button sizeSmall variantOutline colorNeutral"
           >
-            ​
             Link
           </a>
         </div>
@@ -333,7 +318,6 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
             <a
               class="button sizeLarge variantPlain colorBrand"
             >
-              ​
               <svg
                 aria-hidden="true"
                 class="arrowBackIcon svgIcon"
@@ -353,7 +337,6 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
             <a
               class="button sizeLarge variantPlain colorBrand"
             >
-              ​
               Link
               <svg
                 aria-hidden="true"
@@ -374,7 +357,6 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
             <a
               class="button sizeLarge variantPlain colorBrand"
             >
-              ​
               <svg
                 class="mx-[-0.4em] svgIcon"
                 fill="currentColor"
@@ -406,7 +388,6 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
             <a
               class="button sizeMedium variantPlain colorBrand"
             >
-              ​
               <svg
                 aria-hidden="true"
                 class="arrowBackIcon svgIcon"
@@ -426,7 +407,6 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
             <a
               class="button sizeMedium variantPlain colorBrand"
             >
-              ​
               Link
               <svg
                 aria-hidden="true"
@@ -445,7 +425,6 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
             <a
               class="button sizeMedium variantPlain colorBrand"
             >
-              ​
               <svg
                 class="mx-[-0.55em] svgIcon"
                 fill="currentColor"
@@ -479,7 +458,6 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
         <a
           class="button variantLink colorBrand"
         >
-          ​
           Link
         </a>
       </li>
@@ -487,7 +465,6 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
         <a
           class="button variantLink colorBrand"
         >
-          ​
           Link
           <svg
             class="ml-1 svgIcon"
@@ -525,7 +502,6 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
         <a
           class="button sizeLarge variantFlat colorAlert"
         >
-          ​
           Link
         </a>
       </li>
@@ -533,7 +509,6 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
         <a
           class="button sizeLarge variantFlat colorAlert"
         >
-          ​
           <svg
             aria-hidden="true"
             class="arrowBackIcon svgIcon"
@@ -559,7 +534,6 @@ exports[`<Link /> Default story renders snapshot 1`] = `
   class="button variantLink colorBrand"
   href=""
 >
-  ​
   Link
 </a>
 `;
@@ -580,7 +554,6 @@ exports[`<Link /> LinkRecommendedVariants story renders snapshot 1`] = `
     <a
       class="button variantLink colorBrand"
     >
-      ​
       Link
     </a>
   </li>
@@ -588,7 +561,6 @@ exports[`<Link /> LinkRecommendedVariants story renders snapshot 1`] = `
     <a
       class="button variantLink colorBrand"
     >
-      ​
       Link
       <svg
         class="ml-1 svgIcon"
@@ -624,7 +596,6 @@ exports[`<Link /> PlainRecommendedVariants story renders snapshot 1`] = `
         <a
           class="button sizeLarge variantPlain colorBrand"
         >
-          ​
           <svg
             aria-hidden="true"
             class="arrowBackIcon svgIcon"
@@ -644,7 +615,6 @@ exports[`<Link /> PlainRecommendedVariants story renders snapshot 1`] = `
         <a
           class="button sizeLarge variantPlain colorBrand"
         >
-          ​
           Link
           <svg
             aria-hidden="true"
@@ -665,7 +635,6 @@ exports[`<Link /> PlainRecommendedVariants story renders snapshot 1`] = `
         <a
           class="button sizeLarge variantPlain colorBrand"
         >
-          ​
           <svg
             class="mx-[-0.4em] svgIcon"
             fill="currentColor"
@@ -697,7 +666,6 @@ exports[`<Link /> PlainRecommendedVariants story renders snapshot 1`] = `
         <a
           class="button sizeMedium variantPlain colorBrand"
         >
-          ​
           <svg
             aria-hidden="true"
             class="arrowBackIcon svgIcon"
@@ -717,7 +685,6 @@ exports[`<Link /> PlainRecommendedVariants story renders snapshot 1`] = `
         <a
           class="button sizeMedium variantPlain colorBrand"
         >
-          ​
           Link
           <svg
             aria-hidden="true"
@@ -736,7 +703,6 @@ exports[`<Link /> PlainRecommendedVariants story renders snapshot 1`] = `
         <a
           class="button sizeMedium variantPlain colorBrand"
         >
-          ​
           <svg
             class="mx-[-0.55em] svgIcon"
             fill="currentColor"
@@ -773,7 +739,6 @@ exports[`<Link /> PrimaryRecommendedVariants story renders snapshot 1`] = `
         <a
           class="button sizeLarge variantFlat colorBrand"
         >
-          ​
           Link
         </a>
       </li>
@@ -781,7 +746,6 @@ exports[`<Link /> PrimaryRecommendedVariants story renders snapshot 1`] = `
         <a
           class="button sizeLarge variantFlat colorBrand"
         >
-          ​
           <svg
             aria-hidden="true"
             class="arrowBackIcon svgIcon"
@@ -803,7 +767,6 @@ exports[`<Link /> PrimaryRecommendedVariants story renders snapshot 1`] = `
         <a
           class="button sizeLarge variantFlat colorBrand"
         >
-          ​
           Link
           <svg
             aria-hidden="true"
@@ -832,7 +795,6 @@ exports[`<Link /> PrimaryRecommendedVariants story renders snapshot 1`] = `
       <a
         class="button sizeMedium variantFlat colorBrand"
       >
-        ​
         Link
       </a>
     </div>
@@ -849,7 +811,6 @@ exports[`<Link /> PrimaryRecommendedVariants story renders snapshot 1`] = `
       <a
         class="button sizeSmall variantFlat colorBrand"
       >
-        ​
         Link
       </a>
     </div>
@@ -872,7 +833,6 @@ exports[`<Link /> SecondaryRecommendedVariants story renders snapshot 1`] = `
         <a
           class="button sizeLarge variantOutline colorBrand"
         >
-          ​
           Link
         </a>
       </li>
@@ -880,7 +840,6 @@ exports[`<Link /> SecondaryRecommendedVariants story renders snapshot 1`] = `
         <a
           class="button sizeLarge variantOutline colorBrand"
         >
-          ​
           <svg
             aria-hidden="true"
             class="arrowBackIcon svgIcon"
@@ -902,7 +861,6 @@ exports[`<Link /> SecondaryRecommendedVariants story renders snapshot 1`] = `
         <a
           class="button sizeLarge variantOutline colorBrand"
         >
-          ​
           Link
           <svg
             aria-hidden="true"
@@ -931,7 +889,6 @@ exports[`<Link /> SecondaryRecommendedVariants story renders snapshot 1`] = `
       <a
         class="button sizeMedium variantOutline colorBrand"
       >
-        ​
         Link
       </a>
     </div>
@@ -948,7 +905,6 @@ exports[`<Link /> SecondaryRecommendedVariants story renders snapshot 1`] = `
       <a
         class="button sizeSmall variantOutline colorBrand"
       >
-        ​
         Link
       </a>
     </div>
@@ -971,7 +927,6 @@ exports[`<Link /> TertiaryRecommendedVariants story renders snapshot 1`] = `
         <a
           class="button sizeLarge variantOutline colorNeutral"
         >
-          ​
           Link
         </a>
       </li>
@@ -979,7 +934,6 @@ exports[`<Link /> TertiaryRecommendedVariants story renders snapshot 1`] = `
         <a
           class="button sizeLarge variantOutline colorNeutral"
         >
-          ​
           <svg
             aria-hidden="true"
             class="arrowBackIcon svgIcon"
@@ -1001,7 +955,6 @@ exports[`<Link /> TertiaryRecommendedVariants story renders snapshot 1`] = `
         <a
           class="button sizeLarge variantOutline colorNeutral"
         >
-          ​
           Link
           <svg
             aria-hidden="true"
@@ -1030,7 +983,6 @@ exports[`<Link /> TertiaryRecommendedVariants story renders snapshot 1`] = `
       <a
         class="button sizeMedium variantOutline colorNeutral"
       >
-        ​
         Link
       </a>
     </div>
@@ -1047,7 +999,6 @@ exports[`<Link /> TertiaryRecommendedVariants story renders snapshot 1`] = `
       <a
         class="button sizeSmall variantOutline colorNeutral"
       >
-        ​
         Link
       </a>
     </div>
@@ -1064,7 +1015,6 @@ exports[`<Link /> linkInBody story renders snapshot 1`] = `
     class="button variantLink colorBrand"
     href=""
   >
-    ​
     Link
   </a>
    and shows that the link should adhere to its appearance
@@ -1080,7 +1030,6 @@ exports[`<Link /> linkInHeading story renders snapshot 1`] = `
     class="button variantLink colorBrand"
     href=""
   >
-    ​
     Link
   </a>
    and shows that the link should adhere to its appearance
@@ -1092,7 +1041,6 @@ exports[`<Link /> passes class names down properly 1`] = `
   class="exampleClassName button variantLink colorBrand"
   data-testid="example-class-name"
 >
-  ​
   Link with example className
 </a>
 `;
@@ -1102,7 +1050,6 @@ exports[`<Link /> passes test ids down properly 1`] = `
   class="button variantLink colorBrand"
   data-testid="example-test-id"
 >
-  ​
   Link with data-testid
 </a>
 `;

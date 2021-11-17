@@ -79,8 +79,6 @@ const ClickableStyle = React.forwardRef(
         ref={ref}
         {...rest}
       >
-        {/* No width space to ensure height of contents */}
-        {"\u200B"}
         {children}
       </Component>
     );
