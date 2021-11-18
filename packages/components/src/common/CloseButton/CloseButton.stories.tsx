@@ -1,7 +1,6 @@
 import { Story } from "@storybook/react/types-6-0";
 import React from "react";
 import CloseButton from "./CloseButton";
-import styles from "./CloseButton.stories.module.css";
 
 export default {
   title: "common/CloseButton",
@@ -10,14 +9,9 @@ export default {
 
 type Args = React.ComponentProps<typeof CloseButton>;
 
-const Template: Story<Args> = (args) => (
-  <div className={styles.dismiss}>
-    <CloseButton {...args} className={styles.dismiss} />
-  </div>
-);
+const Template: Story<Args> = (args) => <CloseButton {...args} />;
 
 const defaultArgs = {
-  size: "2rem",
   color: "brand" as const,
 };
 
@@ -29,11 +23,23 @@ Default.args = {
 export const SmallerSize = Template.bind(null);
 SmallerSize.args = {
   ...defaultArgs,
-  size: "28px",
+  size: "1rem",
 };
 
 export const DifferentColor = Template.bind(null);
 DifferentColor.args = {
   ...defaultArgs,
   color: "alert" as const,
+};
+
+export const CustomAriaLabel = Template.bind(null);
+CustomAriaLabel.args = {
+  ...defaultArgs,
+  "aria-label": "close modal",
+};
+CustomAriaLabel.parameters = {
+  chromatic: {
+    // This story is just for jest snapshot tests.
+    disableSnapshot: true,
+  },
 };

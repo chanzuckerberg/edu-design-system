@@ -57,9 +57,7 @@ export default function Toast({
           {children}
         </Text>
       </div>
-      {onDismiss && (
-        <CloseButton color={color} onClose={onDismiss} size="32px" />
-      )}
+      {onDismiss && <CloseButton color={color} onClose={onDismiss} />}
     </div>
   );
 }
