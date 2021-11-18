@@ -29,10 +29,7 @@ type CloseButtonProps = {
 };
 
 /**
- * Generic close button. Currently only used for notification banners and toasts.
- *
- * Consumers need to set the --close-hover-color variable in their styles
- * in order for the hover state to work correctly.
+ * Generic close button.
  */
 const CloseButton = ({
   className,
