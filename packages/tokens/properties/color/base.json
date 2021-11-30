@@ -64,7 +64,7 @@
       "grading": {
         "yellow": {
           "100": { "value": "#FDF1D0" },
-          "500": { "value": "#FFC55B" }
+          "500": { "value": "#F79D2D" }
         }
       },
       "highlight": {
