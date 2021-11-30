@@ -49,6 +49,22 @@ export type BannerProps = {
 
 /**
  * A banner used to provide and highlight information to a user or ask for a decision or action.
+ *
+ * ```tsx
+ * <Banner
+ *   onDismiss={handleDismiss}
+ *   textContent={
+ *     <>
+ *       <Banner.Title>{bannerTitle}</Banner.Title>
+ *       <Banner.Message>{bannerMessage}</Banner.Message>
+ *     </>
+ *   }
+ * />
+ * ```
+ *
+ * Please note the code snippets under each Banner story on storybook are misleading
+ * because they use <BannerTitle> and <BannerMessage> when they are actually called
+ * <Banner.Title> and <Banner.Message>.
  */
 export default function Banner({
   className,
