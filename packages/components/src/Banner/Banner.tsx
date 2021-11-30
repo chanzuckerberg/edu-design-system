@@ -48,31 +48,6 @@ export type BannerProps = {
 };
 
 /**
- * This should import a Heading element type
- */
-Banner.Title = function BannerTitle(props: {
-  children?: React.ReactNode;
-  as: HeadingElement;
-}) {
-  return props.children ? (
-    <Heading as={props.as} color={"inherit"} size="h3">
-      {props.children}
-    </Heading>
-  ) : null;
-};
-
-/**
- * This should import a Text element type
- */
-Banner.Message = function BannerMessage(props: { children?: React.ReactNode }) {
-  return props.children ? (
-    <Text color={"inherit"} size="body">
-      {props.children}
-    </Text>
-  ) : null;
-};
-
-/**
  * A banner used to provide and highlight information to a user or ask for a decision or action.
  */
 export default function Banner({
@@ -138,3 +113,27 @@ export default function Banner({
     </article>
   );
 }
+
+/**
+ * This should import a Heading element type
+ */
+Banner.Title = (props: { children?: React.ReactNode; as: HeadingElement }) => {
+  return props.children ? (
+    <Heading as={props.as} color={"inherit"} size="h3">
+      {props.children}
+    </Heading>
+  ) : null;
+};
+Banner.Title.displayName = "Banner.Title";
+
+/**
+ * This should import a Text element type
+ */
+Banner.Message = (props: { children?: React.ReactNode }) => {
+  return props.children ? (
+    <Text color={"inherit"} size="body">
+      {props.children}
+    </Text>
+  ) : null;
+};
+Banner.Message.displayName = "Banner.Message";
