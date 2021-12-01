@@ -1,4 +1,4 @@
-import type { Story } from "@storybook/react";
+import type { StoryObj } from "@storybook/react";
 import React from "react";
 import WarningRoundedIcon from "../Icons/WarningRounded";
 import Tag, { stylesByColor } from "./Tag";
@@ -21,53 +21,52 @@ export default {
       },
     },
   },
+
+  args: {
+    children: "Tag text",
+    color: "warning" as const,
+  },
 };
 
 type Args = React.ComponentProps<typeof Tag>;
 
-const Template: Story<Args> = (args) => <Tag {...args} />;
+export const Default: StoryObj<Args> = {};
 
-const defaultArgs = {
-  children: "Tag text",
-  color: "warning" as const,
+export const ColorVariants: StoryObj<Args> = {
+  render: (args) => (
+    <div className={styles.tagList}>
+      {colorOptions.map((color) => {
+        return <Tag key={color} {...args} color={color} />;
+      })}
+    </div>
+  ),
 };
 
-export const Default = Template.bind(null);
-Default.args = {
-  ...defaultArgs,
+export const OutlineVariants: StoryObj<Args> = {
+  render: (args) => (
+    <div className={styles.tagList}>
+      {colorOptions.map((color) => {
+        return <Tag key={color} {...args} color={color} variant="outline" />;
+      })}
+    </div>
+  ),
 };
 
-export const ColorVariants: Story<Args> = (args) => (
-  <div className={styles.tagList}>
-    {colorOptions.map((color) => {
-      return <Tag key={color} {...args} color={color} />;
-    })}
-  </div>
-);
-ColorVariants.args = {
-  ...defaultArgs,
+export const WithIcon: StoryObj<Args> = {
+  ...Default,
+  args: {
+    icon: (
+      <WarningRoundedIcon key="icon" purpose="informative" title="warning" />
+    ),
+  },
 };
 
-export const OutlineVariants: Story<Args> = (args) => (
-  <div className={styles.tagList}>
-    {colorOptions.map((color) => {
-      return <Tag key={color} {...args} color={color} variant="outline" />;
-    })}
-  </div>
-);
-OutlineVariants.args = {
-  ...defaultArgs,
-};
-
-export const WithIcon = Template.bind(null);
-WithIcon.args = {
-  ...defaultArgs,
-  icon: <WarningRoundedIcon key="icon" purpose="informative" title="warning" />,
-};
-
-export const WithLongTextAndIcon = Template.bind(null);
-WithLongTextAndIcon.args = {
-  ...defaultArgs,
-  children: "This tag has a really long text message",
-  icon: <WarningRoundedIcon key="icon" purpose="informative" title="warning" />,
+export const WithLongTextAndIcon: StoryObj<Args> = {
+  ...Default,
+  args: {
+    children: "This tag has a really long text message",
+    icon: (
+      <WarningRoundedIcon key="icon" purpose="informative" title="warning" />
+    ),
+  },
 };
