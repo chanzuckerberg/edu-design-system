@@ -1,4 +1,4 @@
-import { Story } from "@storybook/react/types-6-0";
+import { StoryObj } from "@storybook/react";
 import React from "react";
 import Text from "../Text";
 import {
@@ -29,42 +29,34 @@ export default {
       },
     },
   },
+  args: {
+    children: "Link",
+    variant: "link" as const,
+    color: "brand" as const,
+    href: "",
+  },
 };
 
 type Args = React.ComponentProps<typeof Link>;
 
-const Template: Story<Args> = (args) => <Link {...args} />;
+export const Default: StoryObj<Args> = {};
 
-const defaultArgs = {
-  children: "Link",
-  variant: "link" as const,
-  color: "brand" as const,
-  href: "",
+export const LinkInBody: StoryObj<Args> = {
+  render: (args) => (
+    <Text size="body">
+      This text surrounds the <Link {...args} /> and shows that the link should
+      adhere to its appearance
+    </Text>
+  ),
 };
 
-export const Default = Template.bind(null);
-Default.args = {
-  ...defaultArgs,
-};
-
-export const LinkInBody: Story<Args> = (args) => (
-  <Text size="body">
-    This text surrounds the <Link {...args} /> and shows that the link should
-    adhere to its appearance
-  </Text>
-);
-LinkInBody.args = {
-  ...defaultArgs,
-};
-
-export const LinkInHeading: Story<Args> = (args) => (
-  <Text size="h1">
-    This text surrounds the <Link {...args} /> and shows that the link should
-    adhere to its appearance
-  </Text>
-);
-LinkInHeading.args = {
-  ...defaultArgs,
+export const LinkInHeading: StoryObj<Args> = {
+  render: (args) => (
+    <Text size="h1">
+      This text surrounds the <Link {...args} /> and shows that the link should
+      adhere to its appearance
+    </Text>
+  ),
 };
 
 export const PrimaryRecommendedVariants = () =>
@@ -97,17 +89,21 @@ const gridParameters = {
   },
 };
 
-export const AllVariants = () => getAllVariantsWithStates("a", "Link");
-AllVariants.parameters = gridParameters;
+export const AllVariants = {
+  render: () => getAllVariantsWithStates("a", "Link"),
+  parameters: gridParameters,
+};
 
-export const LargeVariantsOnDarkBackground = () =>
-  getLargeVariantsOnDarkBackgroundWithStates("a", "Link");
-LargeVariantsOnDarkBackground.parameters = {
-  ...gridParameters,
-  backgrounds: {
-    default: "dark",
+export const LargeVariantsOnDarkBackground = {
+  render: () => getLargeVariantsOnDarkBackgroundWithStates("a", "Link"),
+  parameters: {
+    ...gridParameters,
+    backgrounds: {
+      default: "dark",
+    },
   },
 };
 
-export const AllRecommendedVariants = () =>
-  getAllRecommendedVariants(Link, "Link");
+export const AllRecommendedVariants = {
+  render: () => getAllRecommendedVariants(Link, "Link"),
+};

@@ -1,28 +1,26 @@
+import type { StoryObj } from "@storybook/react";
 import React from "react";
 import {{pascalCase name}} from "./{{pascalCase name}}";
-import { Story } from "@storybook/react/types-6-0";
 
 export default {
   title: "{{pascalCase name}}",
   component: {{pascalCase name}},
+  args: {
+    children: "Hello world =^_^=",
+  },
 };
 
 type Args = React.ComponentProps<typeof {{pascalCase name}}>;
 
-const Template: Story<Args> = (args) => <{{pascalCase name}} {...args} />;
-
-const defaultArgs = {
-  children: "Hello world =^_^=",
+export const Default: StoryObj<Args> = {
+  args: {
+    align: "left",
+  }
 };
 
-export const Default = Template.bind(null);
-Default.args = {
-  ...defaultArgs,
-  align: "left",
-};
-
-export const RightAligned = Template.bind(null);
-RightAligned.args = {
-  ...defaultArgs,
-  align: "right",
+export const RightAligned: StoryObj<Args> = {
+  ...Default,
+  args: {
+    align: "right",
+  },
 };
