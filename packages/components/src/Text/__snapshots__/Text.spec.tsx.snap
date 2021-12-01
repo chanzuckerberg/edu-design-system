@@ -53,11 +53,11 @@ exports[`<Text /> TextColorInherit story renders snapshot 1`] = `
   class="typography sizeBody colorAlert"
 >
   This text surrounds the 
-  <p
+  <span
     class="typography sizeBody colorInherit"
   >
     Child Text
-  </p>
+  </span>
    and shows it should inherit color from the parent
 </p>
 `;

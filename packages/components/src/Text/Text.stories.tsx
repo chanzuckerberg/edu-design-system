@@ -62,8 +62,8 @@ export const BodyColorInfoBold: StoryObj<Args> = {
 export const TextColorInherit: StoryObj<Args> = {
   render: (args) => (
     <Text color="alert" size="body">
-      This text surrounds the <Text {...args} /> and shows it should inherit
-      color from the parent
+      This text surrounds the <Text as="span" {...args} /> and shows it should
+      inherit color from the parent
     </Text>
   ),
   args: {
