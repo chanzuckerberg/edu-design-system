@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.7](https://github.com/chanzuckerberg/edu-design-system/compare/v0.4.6...v0.4.7) (2021-12-01)
+
+
+### Features
+
+* **icons:** add InfoRounded ([11c8100](https://github.com/chanzuckerberg/edu-design-system/commit/11c81005c194db91762a99954535dff2f0bbf7aa))
+
+
+
+
+
 ## [0.4.6](https://github.com/chanzuckerberg/edu-design-system/compare/v0.4.5...v0.4.6) (2021-11-18)
 
 **Note:** Version bump only for package edu-design-system
