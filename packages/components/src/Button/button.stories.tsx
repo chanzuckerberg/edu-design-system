@@ -1,4 +1,4 @@
-import { Story } from "@storybook/react/types-6-0";
+import { StoryObj } from "@storybook/react";
 import React from "react";
 import {
   colors,
@@ -9,7 +9,7 @@ import {
   getAllRecommendedVariants,
   getAllVariantsWithStates,
   getLargeVariantsOnDarkBackgroundWithStates,
-} from "../storyUtils/clickableStyleUtils.stories";
+} from "../storyUtils/clickableStyleUtils";
 import Button from "./button";
 
 export default {
@@ -32,11 +32,10 @@ export default {
 
 type Args = React.ComponentProps<typeof Button>;
 
-const Template: Story<Args> = (args) => <Button {...args} />;
-
-export const Default = Template.bind(null);
-Default.args = {
-  children: "Button",
+export const Default: StoryObj<Args> = {
+  args: {
+    children: "Button",
+  },
 };
 
 export const PrimaryRecommendedVariants = () =>
@@ -69,17 +68,21 @@ const gridParameters = {
   },
 };
 
-export const AllVariants = () => getAllVariantsWithStates("button", "Button");
-AllVariants.parameters = gridParameters;
+export const AllVariants = {
+  render: () => getAllVariantsWithStates("button", "Button"),
+  parameters: gridParameters,
+};
 
-export const LargeVariantsOnDarkBackground = () =>
-  getLargeVariantsOnDarkBackgroundWithStates("button", "Button");
-LargeVariantsOnDarkBackground.parameters = {
-  ...gridParameters,
-  backgrounds: {
-    default: "dark",
+export const LargeVariantsOnDarkBackground = {
+  render: () => getLargeVariantsOnDarkBackgroundWithStates("button", "Button"),
+  parameters: {
+    ...gridParameters,
+    backgrounds: {
+      default: "dark",
+    },
   },
 };
 
-export const AllRecommendedVariants = () =>
-  getAllRecommendedVariants(Button, "Button");
+export const AllRecommendedVariants = {
+  render: () => getAllRecommendedVariants(Button, "Button"),
+};

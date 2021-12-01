@@ -9,7 +9,7 @@ import ArrowForwardRoundedIcon from "../Icons/ArrowForwardRounded";
 import OpenInNewRoundedIcon from "../Icons/OpenInNewRounded";
 import Link from "../Link";
 import Text from "../Text";
-import styles from "./clickableStyleUtils.stories.module.css";
+import styles from "./clickableStyleUtils.module.css";
 
 export const getStandardSet = (
   Component: typeof Button | typeof Link,

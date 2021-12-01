@@ -1,4 +1,4 @@
-import type { Story } from "@storybook/react";
+import type { StoryObj } from "@storybook/react";
 import React from "react";
 import Button from "../Button";
 import Heading from "../Heading";
@@ -15,26 +15,17 @@ export default {
       },
     },
   },
+  args: {
+    content:
+      "Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates, click into the course.",
+    heading:
+      "New curriculum updates are available for one or more of your courses.",
+  },
 };
 
 type Args = React.ComponentProps<typeof Banner> & {
   content: string;
   heading: string;
-};
-
-const Template: Story<Args> = (args) => {
-  const { content, heading, ...restArgs } = args;
-  return (
-    <Banner
-      {...restArgs}
-      textContent={
-        <>
-          <Banner.Title as="h1">{heading}</Banner.Title>{" "}
-          <Banner.Message>{content}</Banner.Message>
-        </>
-      }
-    />
-  );
 };
 
 const action = (
@@ -43,158 +34,184 @@ const action = (
   </Button>
 );
 
-const dialogArgs = {
-  content:
-    "Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates, click into the course.",
-  heading:
-    "New curriculum updates are available for one or more of your courses.",
+export const Brand: StoryObj<Args> = {
+  render: (args) => {
+    const { content, heading, ...restArgs } = args;
+    return (
+      <Banner
+        {...restArgs}
+        textContent={
+          <>
+            <Banner.Title as="h1">{heading}</Banner.Title>{" "}
+            <Banner.Message>{content}</Banner.Message>
+          </>
+        }
+      />
+    );
+  },
 };
 
-export const Brand = Template.bind(null);
-Brand.args = {
-  ...dialogArgs,
+export const Neutral: StoryObj<Args> = {
+  ...Brand,
+  args: {
+    color: "neutral",
+  },
 };
 
-export const Neutral = Template.bind(null);
-Neutral.args = {
-  ...dialogArgs,
-  color: "neutral",
+export const Success: StoryObj<Args> = {
+  ...Brand,
+  args: {
+    color: "success",
+  },
 };
 
-export const Success = Template.bind(null);
-Success.args = {
-  ...dialogArgs,
-  color: "success",
+export const Warning: StoryObj<Args> = {
+  ...Brand,
+  args: {
+    color: "warning",
+  },
 };
 
-export const Warning = Template.bind(null);
-Warning.args = {
-  ...dialogArgs,
-  color: "warning",
+export const Alert: StoryObj<Args> = {
+  ...Brand,
+  args: {
+    color: "alert",
+  },
 };
 
-export const Alert = Template.bind(null);
-Alert.args = {
-  ...dialogArgs,
-  color: "alert",
+export const NoHeadingShort: StoryObj<Args> = {
+  ...Brand,
+  args: {
+    heading: undefined,
+  },
 };
 
-export const NoHeadingShort = Template.bind(null);
-NoHeadingShort.args = {
-  ...dialogArgs,
-  heading: undefined,
+export const NoContent: StoryObj<Args> = {
+  ...Brand,
+  args: {
+    content: undefined,
+  },
 };
 
-export const NoContent = Template.bind(null);
-NoContent.args = {
-  ...dialogArgs,
-  content: undefined,
+export const WithAction: StoryObj<Args> = {
+  ...Brand,
+  args: {
+    action: action,
+  },
 };
 
-export const WithAction = Template.bind(null);
-WithAction.args = {
-  ...dialogArgs,
-  action: action,
+export const BrandDismissable: StoryObj<Args> = {
+  ...Brand,
+  args: {
+    onDismiss: () => console.log("dismissed!"),
+  },
 };
 
-export const BrandDismissable = Template.bind(null);
-BrandDismissable.args = {
-  ...dialogArgs,
-  onDismiss: () => console.log("dismissed!"),
+export const NeutralDismissable: StoryObj<Args> = {
+  ...Brand,
+  args: {
+    color: "neutral",
+    onDismiss: () => console.log("dismissed!"),
+  },
 };
 
-export const NeutralDismissable = Template.bind(null);
-NeutralDismissable.args = {
-  ...dialogArgs,
-  color: "neutral",
-  onDismiss: () => console.log("dismissed!"),
+export const SuccessDismissable: StoryObj<Args> = {
+  ...Brand,
+  args: {
+    color: "success",
+    onDismiss: () => console.log("dismissed!"),
+  },
 };
 
-export const SuccessDismissable = Template.bind(null);
-SuccessDismissable.args = {
-  ...dialogArgs,
-  color: "success",
-  onDismiss: () => console.log("dismissed!"),
+export const WarningDismissable: StoryObj<Args> = {
+  ...Brand,
+  args: {
+    color: "warning",
+    onDismiss: () => console.log("dismissed!"),
+  },
 };
 
-export const WarningDismissable = Template.bind(null);
-WarningDismissable.args = {
-  ...dialogArgs,
-  color: "warning",
-  onDismiss: () => console.log("dismissed!"),
+export const AlertDismissable: StoryObj<Args> = {
+  ...Brand,
+  args: {
+    color: "alert",
+    onDismiss: () => console.log("dismissed!"),
+  },
 };
 
-export const AlertDismissable = Template.bind(null);
-AlertDismissable.args = {
-  ...dialogArgs,
-  color: "alert",
-  onDismiss: () => console.log("dismissed!"),
+export const DismissableWithAction: StoryObj<Args> = {
+  ...Brand,
+  args: {
+    action: action,
+    onDismiss: () => console.log("dismissed!"),
+  },
 };
 
-export const DismissableWithAction = Template.bind(null);
-DismissableWithAction.args = {
-  ...dialogArgs,
-  action: action,
-  onDismiss: () => console.log("dismissed!"),
+export const DismissableBelowContent: StoryObj<Args> = {
+  render: ({ heading, content }) => (
+    <>
+      <Heading size="h1" spacing="2x">
+        Page Title
+      </Heading>
+      <Banner
+        onDismiss={() => console.log("dismissed!")}
+        textContent={
+          <>
+            <Banner.Title as="h1">{heading}</Banner.Title>{" "}
+            <Banner.Message>{content}</Banner.Message>
+          </>
+        }
+      />
+    </>
+  ),
+  parameters: {
+    snapshot: { skip: true },
+  },
 };
 
-export const DismissableBelowContent = () => (
-  <>
-    <Heading size="h1" spacing="2x">
-      Page Title
-    </Heading>
-    <Banner
-      onDismiss={() => console.log("dismissed!")}
-      textContent={
-        <>
-          <Banner.Title as="h1">{dialogArgs.heading}</Banner.Title>{" "}
-          <Banner.Message>{dialogArgs.content}</Banner.Message>
-        </>
-      }
-    />
-  </>
-);
-DismissableBelowContent.parameters = {
-  snapshot: { skip: true },
+export const Vertical: StoryObj<Args> = {
+  ...Brand,
+  args: {
+    orientation: "vertical",
+  },
 };
 
-export const Vertical = Template.bind(null);
-Vertical.args = {
-  ...dialogArgs,
-  orientation: "vertical",
+export const VerticalDismissable: StoryObj<Args> = {
+  ...Brand,
+  args: {
+    orientation: "vertical",
+    onDismiss: () => console.log("dismissed!"),
+  },
 };
 
-export const VerticalDismissable = Template.bind(null);
-VerticalDismissable.args = {
-  ...dialogArgs,
-  orientation: "vertical",
-  onDismiss: () => console.log("dismissed!"),
+export const VerticalWithAction: StoryObj<Args> = {
+  ...Brand,
+  args: {
+    orientation: "vertical",
+    action: action,
+  },
 };
 
-export const VerticalWithAction = Template.bind(null);
-VerticalWithAction.args = {
-  ...dialogArgs,
-  orientation: "vertical",
-  action: action,
+export const VerticalDismissableWithAction: StoryObj<Args> = {
+  ...Brand,
+  args: {
+    orientation: "vertical",
+    action: action,
+    onDismiss: () => console.log("dismissed!"),
+  },
 };
 
-export const VerticalDismissableWithAction = Template.bind(null);
-VerticalDismissableWithAction.args = {
-  ...dialogArgs,
-  orientation: "vertical",
-  action: action,
-  onDismiss: () => console.log("dismissed!"),
+export const Elevation0: StoryObj<Args> = {
+  ...Brand,
+  args: {
+    elevation: 0,
+  },
 };
 
-export const Elevation0 = Template.bind(null);
-Elevation0.args = {
-  ...dialogArgs,
-  elevation: 0,
-};
-
-export const VerticalElevation0 = Template.bind(null);
-VerticalElevation0.args = {
-  ...dialogArgs,
-  orientation: "vertical",
-  elevation: 0,
+export const VerticalElevation0: StoryObj<Args> = {
+  ...Brand,
+  args: {
+    orientation: "vertical",
+    elevation: 0,
+  },
 };

@@ -1,4 +1,4 @@
-import { Story } from "@storybook/react/types-6-0";
+import { StoryObj } from "@storybook/react";
 import * as React from "react";
 import Text from "../../../Text";
 import NotificationIcon, {
@@ -18,13 +18,15 @@ export default {
 
 type Args = React.ComponentProps<typeof NotificationIcon>;
 
-export const ColorVariants: Story<Args> = (args) => (
-  <>
-    {variants.map((variant) => (
-      <div className={styles.variant} key={variant}>
-        <Text size="h3">{variant}</Text>
-        <NotificationIcon {...args} variant={variant} />
-      </div>
-    ))}
-  </>
-);
+export const ColorVariants: StoryObj<Args> = {
+  render: (args) => (
+    <>
+      {variants.map((variant) => (
+        <div className={styles.variant} key={variant}>
+          <Text size="h3">{variant}</Text>
+          <NotificationIcon {...args} variant={variant} />
+        </div>
+      ))}
+    </>
+  ),
+};
