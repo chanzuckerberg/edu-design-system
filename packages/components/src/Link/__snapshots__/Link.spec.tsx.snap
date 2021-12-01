@@ -546,6 +546,36 @@ exports[`<Link /> DestructiveRecommendedVariants story renders snapshot 1`] = `
 </h3>
 `;
 
+exports[`<Link /> LinkInBody story renders snapshot 1`] = `
+<p
+  class="typography sizeBody colorBase"
+>
+  This text surrounds the 
+  <a
+    class="button variantLink colorBrand"
+    href=""
+  >
+    Link
+  </a>
+   and shows that the link should adhere to its appearance
+</p>
+`;
+
+exports[`<Link /> LinkInHeading story renders snapshot 1`] = `
+<p
+  class="typography sizeH1 colorBase"
+>
+  This text surrounds the 
+  <a
+    class="button variantLink colorBrand"
+    href=""
+  >
+    Link
+  </a>
+   and shows that the link should adhere to its appearance
+</p>
+`;
+
 exports[`<Link /> LinkRecommendedVariants story renders snapshot 1`] = `
 <ul
   class="grid gap-y-4"
@@ -1004,36 +1034,6 @@ exports[`<Link /> TertiaryRecommendedVariants story renders snapshot 1`] = `
     </div>
   </li>
 </ul>
-`;
-
-exports[`<Link /> linkInBody story renders snapshot 1`] = `
-<p
-  class="typography sizeBody colorBase"
->
-  This text surrounds the 
-  <a
-    class="button variantLink colorBrand"
-    href=""
-  >
-    Link
-  </a>
-   and shows that the link should adhere to its appearance
-</p>
-`;
-
-exports[`<Link /> linkInHeading story renders snapshot 1`] = `
-<p
-  class="typography sizeH1 colorBase"
->
-  This text surrounds the 
-  <a
-    class="button variantLink colorBrand"
-    href=""
-  >
-    Link
-  </a>
-   and shows that the link should adhere to its appearance
-</p>
 `;
 
 exports[`<Link /> passes class names down properly 1`] = `

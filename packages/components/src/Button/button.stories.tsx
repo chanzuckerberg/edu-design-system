@@ -9,7 +9,7 @@ import {
   getAllRecommendedVariants,
   getAllVariantsWithStates,
   getLargeVariantsOnDarkBackgroundWithStates,
-} from "../storyUtils/clickableStyleUtils.stories";
+} from "../storyUtils/clickableStyleUtils";
 import Button from "./button";
 
 export default {

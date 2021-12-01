@@ -10,7 +10,7 @@ import {
   getAllRecommendedVariants,
   getAllVariantsWithStates,
   getLargeVariantsOnDarkBackgroundWithStates,
-} from "../storyUtils/clickableStyleUtils.stories";
+} from "../storyUtils/clickableStyleUtils";
 import Link from "./Link";
 
 export default {
@@ -47,23 +47,23 @@ Default.args = {
   ...defaultArgs,
 };
 
-export const linkInBody: Story<Args> = (args) => (
+export const LinkInBody: Story<Args> = (args) => (
   <Text size="body">
     This text surrounds the <Link {...args} /> and shows that the link should
     adhere to its appearance
   </Text>
 );
-linkInBody.args = {
+LinkInBody.args = {
   ...defaultArgs,
 };
 
-export const linkInHeading: Story<Args> = (args) => (
+export const LinkInHeading: Story<Args> = (args) => (
   <Text size="h1">
     This text surrounds the <Link {...args} /> and shows that the link should
     adhere to its appearance
   </Text>
 );
-linkInHeading.args = {
+LinkInHeading.args = {
   ...defaultArgs,
 };
 
