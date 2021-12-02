@@ -54,6 +54,7 @@ export { default as ForumRoundedIcon } from "./ForumRounded";
 export { default as GestureRoundedIcon } from "./GestureRounded";
 export { default as HelpRoundedIcon } from "./HelpRounded";
 export { default as HomeRoundedIcon } from "./HomeRounded";
+export { default as InfoRoundedIcon } from "./InfoRounded";
 export { default as LibraryBooksRoundedIcon } from "./LibraryBooksRounded";
 export { default as LinkRoundedIcon } from "./LinkRounded";
 export { default as LocalLibraryRoundedIcon } from "./LocalLibraryRounded";
