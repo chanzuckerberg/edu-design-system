@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.8](https://github.com/chanzuckerberg/edu-design-system/compare/v0.4.7...v0.4.8) (2021-12-03)
+
+
+### Features
+
+* **colors:** update grading-yellow-500 token ([e16fb5a](https://github.com/chanzuckerberg/edu-design-system/commit/e16fb5affa65f01b5695fc72a44a01d65342e840))
+
+
+
+
+
 # [0.4.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.3.0...v0.4.0) (2021-10-08)
 
 **Note:** Version bump only for package @chanzuckerberg/eds-tokens
