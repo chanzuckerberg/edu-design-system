@@ -38,23 +38,29 @@ export const Default: StoryObj<Args> = {
   },
 };
 
-export const PrimaryRecommendedVariants = () =>
-  getStandardSet(Button, "Button", "flat");
+export const PrimaryRecommendedVariants = {
+  render: () => getStandardSet(Button, "Button", "flat"),
+};
 
-export const SecondaryRecommendedVariants = () =>
-  getStandardSet(Button, "Button", "outline");
+export const SecondaryRecommendedVariants = {
+  render: () => getStandardSet(Button, "Button", "outline"),
+};
 
-export const TertiaryRecommendedVariants = () =>
-  getStandardSet(Button, "Button", "outline", "neutral");
+export const TertiaryRecommendedVariants = {
+  render: () => getStandardSet(Button, "Button", "outline", "neutral"),
+};
 
-export const PlainRecommendedVariants = () =>
-  getPlainRecommendedVariants(Button, "Button");
+export const PlainRecommendedVariants = {
+  render: () => getPlainRecommendedVariants(Button, "Button"),
+};
 
-export const LinkRecommendedVariants = () =>
-  getLinkRecommendedVariants(Button, "Button");
+export const LinkRecommendedVariants = {
+  render: () => getLinkRecommendedVariants(Button, "Button"),
+};
 
-export const DestructiveRecommendedVariants = () =>
-  getDestructiveRecommendedVariants(Button, "Button");
+export const DestructiveRecommendedVariants = {
+  render: () => getDestructiveRecommendedVariants(Button, "Button"),
+};
 
 const gridParameters = {
   axe: {
