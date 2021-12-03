@@ -50,13 +50,11 @@ module.exports = function (plop) {
         const indexFile = `${plop.getDestBasePath()}/packages/components/src/index.ts`;
 
         if (fs.existsSync(indexFile)) {
-          const nameRegex = /default as ([^\s]*)/;
-          const sorted = fs
-            .readFileSync(indexFile, "utf8")
-            .split(";\n")
+          const lines = fs.readFileSync(indexFile, "utf8").split(";\n");
+          const sorted = lines
             .sort((a, b) => {
-              const aName = a.match(nameRegex)[1];
-              const bName = b.match(nameRegex)[1];
+              const aName = getNameFromExport(a);
+              const bName = getNameFromExport(b);
               return aName.localeCompare(bName);
             })
             .join(";\n");
@@ -67,3 +65,37 @@ module.exports = function (plop) {
     ],
   });
 };
+
+/**
+ * Extract an exported name from an export statement.
+ *
+ * @example
+ * getNameFromExport('export { default as FooBear } from "./FooBear";');
+ * // => 'FooBear'
+ *
+ * @example
+ * getNameFromExport('export type { FooBat } from "./FooBat";');
+ * // => 'FooBat'
+ */
+function getNameFromExport(exportLine) {
+  // Get the exported name. We have to handle cases like `export { default as Foo }` and
+  // `export type { Foo }`. To match these cases, this is currently looking for:
+  //
+  // 1. Opening curly bracket, for either `export {` or `export type {`.
+  // 2. Any characters immediately after the opening bracket. Mostly to match `default as`.
+  // 3. Capture the name of the thing that's exported.
+  // 4. Closing curly bracket.
+  //
+  //                            1 2   3    4
+  //                            ┃ ┃ ┏━┻━┓  ┃
+  const exportedNamePattern = /\{ .*(\w+) \}/;
+  const matches = exportLine.match(exportedNamePattern);
+
+  if (!matches) {
+    throw new Error(
+      `Oh dear, I couldn't recognize an exported name in '${exportLine}' 😑`,
+    );
+  }
+
+  return matches[0];
+}
