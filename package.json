@@ -46,6 +46,7 @@
   "author": "CZI",
   "license": "MIT",
   "devDependencies": {
+    "@chanzuckerberg/eslint-plugin-stories": "^3.0.1",
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
     "@commitlint/prompt-cli": "^11.0.0",

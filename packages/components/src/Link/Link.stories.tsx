@@ -59,23 +59,29 @@ export const LinkInHeading: StoryObj<Args> = {
   ),
 };
 
-export const PrimaryRecommendedVariants = () =>
-  getStandardSet(Link, "Link", "flat");
+export const PrimaryRecommendedVariants = {
+  render: () => getStandardSet(Link, "Link", "flat"),
+};
 
-export const SecondaryRecommendedVariants = () =>
-  getStandardSet(Link, "Link", "outline");
+export const SecondaryRecommendedVariants = {
+  render: () => getStandardSet(Link, "Link", "outline"),
+};
 
-export const TertiaryRecommendedVariants = () =>
-  getStandardSet(Link, "Link", "outline", "neutral");
+export const TertiaryRecommendedVariants = {
+  render: () => getStandardSet(Link, "Link", "outline", "neutral"),
+};
 
-export const PlainRecommendedVariants = () =>
-  getPlainRecommendedVariants(Link, "Link");
+export const PlainRecommendedVariants = {
+  render: () => getPlainRecommendedVariants(Link, "Link"),
+};
 
-export const LinkRecommendedVariants = () =>
-  getLinkRecommendedVariants(Link, "Link");
+export const LinkRecommendedVariants = {
+  render: () => getLinkRecommendedVariants(Link, "Link"),
+};
 
-export const DestructiveRecommendedVariants = () =>
-  getDestructiveRecommendedVariants(Link, "Link");
+export const DestructiveRecommendedVariants = {
+  render: () => getDestructiveRecommendedVariants(Link, "Link"),
+};
 
 const gridParameters = {
   axe: {

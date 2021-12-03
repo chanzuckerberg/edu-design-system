@@ -1615,6 +1615,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@chanzuckerberg/eslint-plugin-stories@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "@chanzuckerberg/eslint-plugin-stories@npm:3.0.1"
+  checksum: 68e44e942c4cf8f779b6cacbaf94e886302c409df48cea14d5117fd4203586c67666937d923b103caee5bf5656b40fe7b86508a5e2243b3e98944925229663f8
+  languageName: node
+  linkType: hard
+
 "@chanzuckerberg/story-utils@npm:^3.0.1":
   version: 3.0.1
   resolution: "@chanzuckerberg/story-utils@npm:3.0.1"
@@ -9355,6 +9362,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "edu-design-system@workspace:."
   dependencies:
+    "@chanzuckerberg/eslint-plugin-stories": ^3.0.1
     "@commitlint/cli": ^11.0.0
     "@commitlint/config-conventional": ^11.0.0
     "@commitlint/prompt-cli": ^11.0.0

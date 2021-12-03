@@ -4,9 +4,10 @@
     "browser": true
   },
   "parser": "@typescript-eslint/parser",
-  "plugins": ["import", "react-hooks", "testing-library"],
+  "plugins": ["import", "react-hooks", "testing-library", "@chanzuckerberg/stories"],
   "extends": [
     "eslint:recommended",
+    "plugin:@chanzuckerberg/stories/strict",
     "plugin:react/recommended",
     "plugin:storybook/recommended",
     "plugin:testing-library/react",
