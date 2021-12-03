@@ -117,11 +117,7 @@ function minifyCSSVarDictionary(obj) {
 EDSStyleDictionary.registerFormat({
   name: "json/nested-css-variables",
   formatter: function (dictionary) {
-    return JSON.stringify(
-      minifyCSSVarDictionary(dictionary.properties),
-      null,
-      2,
-    );
+    return JSON.stringify(minifyCSSVarDictionary(dictionary.tokens), null, 2);
   },
 });
 
