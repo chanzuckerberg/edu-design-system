@@ -40,7 +40,7 @@ module.exports = function (plop) {
         separator: "",
         path: "packages/components/src/index.ts",
         template:
-          'export { default as {{pascalCase name}} } from "./{{pascalCase name}}"',
+          'export { default as {{pascalCase name}} } from "./{{pascalCase name}}";',
       },
       // From https://github.com/bradfrost/czi-vanilla-storybook
       function sortIndex() {
@@ -50,17 +50,15 @@ module.exports = function (plop) {
         const indexFile = `${plop.getDestBasePath()}/packages/components/src/index.ts`;
 
         if (fs.existsSync(indexFile)) {
-          const nameRegex = /default as ([^\s]*)/;
-          const sorted = fs
-            .readFileSync(indexFile, "utf8")
-            .split(";\n")
-            .sort((a, b) => {
-              const aName = a.match(nameRegex)[1];
-              const bName = b.match(nameRegex)[1];
-              return aName.localeCompare(bName);
-            })
-            .join(";\n");
-          fs.writeFileSync(indexFile, sorted + ";\n");
+          // Split the index file into lines.
+          const lines = fs.readFileSync(indexFile, "utf8").split("\n");
+
+          // Sort the lines.
+          const sorted = lines.sort((a, b) => a.localeCompare(b)).join("\n");
+
+          // Write the sorted lines back to the file.
+          fs.writeFileSync(indexFile, sorted + "\n");
+
           return `index.ts lines sorted`;
         }
       },
