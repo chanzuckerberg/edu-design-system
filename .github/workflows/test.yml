@@ -70,7 +70,7 @@ jobs:
       - name: Run Accessibility Tests 💛
         run: yarn workspace @chanzuckerberg/eds-components run storybook:axeOnly
       - name: Publish to Chromatic
-        run: yarn workspace @chanzuckerberg/eds-components chromatic --project-token=${{ secrets.CHROMATIC_PROJECT_TOKEN }} --output-dir storybook-static --exit-zero-on-changes --skip 'dependabot/**'
+        run: yarn workspace @chanzuckerberg/eds-components chromatic --project-token=${{ secrets.CHROMATIC_PROJECT_TOKEN }} --exit-zero-on-changes --skip 'dependabot/**'
 
   lint:
     runs-on: ubuntu-latest
