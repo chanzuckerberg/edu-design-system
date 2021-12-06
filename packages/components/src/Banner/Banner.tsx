@@ -63,8 +63,8 @@ export type BannerProps = {
  * ```
  *
  * Please note the code snippets under each Banner story on storybook are misleading
- * because they use <BannerTitle> and <BannerMessage> when they are actually called
- * <Banner.Title> and <Banner.Message>.
+ * because they use `<BannerTitle>` and `<BannerMessage>` when they are actually called
+ * `<Banner.Title>` and `<Banner.Message>`.
  */
 export default function Banner({
   className,
