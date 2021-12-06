@@ -31,7 +31,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
       variant = "flat",
-      color = "brand",
+      color = "alert",
       disabled = false,
       type = "button",
       size = "large",
