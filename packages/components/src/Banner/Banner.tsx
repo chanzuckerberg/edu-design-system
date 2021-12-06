@@ -48,31 +48,6 @@ export type BannerProps = {
 };
 
 /**
- * This should import a Heading element type
- */
-Banner.Title = function BannerTitle(props: {
-  children?: React.ReactNode;
-  as: HeadingElement;
-}) {
-  return props.children ? (
-    <Heading as={props.as} color={"inherit"} size="h3">
-      {props.children}
-    </Heading>
-  ) : null;
-};
-
-/**
- * This should import a Text element type
- */
-Banner.Message = function BannerMessage(props: { children?: React.ReactNode }) {
-  return props.children ? (
-    <Text color={"inherit"} size="body">
-      {props.children}
-    </Text>
-  ) : null;
-};
-
-/**
  * A banner used to provide and highlight information to a user or ask for a decision or action.
  */
 export default function Banner({
@@ -138,3 +113,37 @@ export default function Banner({
     </article>
   );
 }
+Banner.displayName = "Banner";
+
+type TitleProps = {
+  children?: React.ReactNode;
+  as: HeadingElement;
+};
+/**
+ * This should import a Heading element type
+ */
+const BannerTitle: React.FC<TitleProps> = (props: TitleProps) => {
+  return props.children ? (
+    <Heading as={props.as} color={"inherit"} size="h3">
+      {props.children}
+    </Heading>
+  ) : null;
+};
+Banner.Title = BannerTitle;
+Banner.Title.displayName = "Banner.Title";
+
+type MessageProps = {
+  children?: React.ReactNode;
+};
+/**
+ * This should import a Text element type
+ */
+const BannerMessage: React.FC<MessageProps> = (props: MessageProps) => {
+  return props.children ? (
+    <Text color={"inherit"} size="body">
+      {props.children}
+    </Text>
+  ) : null;
+};
+Banner.Message = BannerMessage;
+Banner.Message.displayName = "Banner.Message";
