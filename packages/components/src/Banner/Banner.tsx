@@ -50,6 +50,8 @@ export type BannerProps = {
 /**
  * A banner used to provide and highlight information to a user or ask for a decision or action.
  *
+ * Example usage:
+ *
  * ```tsx
  * <Banner
  *   onDismiss={handleDismiss}
