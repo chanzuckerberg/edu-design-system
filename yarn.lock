@@ -1584,7 +1584,7 @@ __metadata:
     "@types/react": ^17.0.16
     autoprefixer: ^10.4.0
     axe-core: ^4.3.5
-    chromatic: ^6.0.5
+    chromatic: ^6.1.0
     clsx: ^1.1.1
     codecov: ^3.8.3
     flowgen: ^1.14.1
@@ -7533,14 +7533,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chromatic@npm:^6.0.5":
-  version: 6.0.5
-  resolution: "chromatic@npm:6.0.5"
+"chromatic@npm:^6.1.0":
+  version: 6.1.0
+  resolution: "chromatic@npm:6.1.0"
   bin:
     chroma: bin/main.cjs
     chromatic: bin/main.cjs
     chromatic-cli: bin/main.cjs
-  checksum: eb9a40f75db3c8c83cbed1a322080d4b4aec09769aee6895ea525030ab398e21f85d48164db8c52b46eb426a8a9c0158a2027efab497b8c8fa81266dcb8389fd
+  checksum: 2de5227f5d5f9da973f47dfba2a4092eac83cef74ea78101eb81c80c8f50f6f43904c3b499838e60a178de02c3518c0bb80241f8df4266894919c87f7a2ed318
   languageName: node
   linkType: hard
 

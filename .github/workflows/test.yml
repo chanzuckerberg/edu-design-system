@@ -65,15 +65,12 @@ jobs:
           fetch-depth: 0 # 👈 Required to retrieve git history
       - name: Install dependencies
         run: yarn install --immutable
-        # We are relying on Chromatic to build the Storybook due to incompatibility between
-        # `--storybook-build-dir` which prevents Chromatic's Storybook build and uses a pre-built Storybook
-        # and `--only-changed` which enables Chromatic TurboSnap
-        # https://github.com/chromaui/chromatic-cli/issues/403
-        # Once fixed, Storybook build should be its own step for modularity
-      - name: Build Storybook and Publish to Chromatic
-        run: yarn workspace @chanzuckerberg/eds-components chromatic --project-token=${{ secrets.CHROMATIC_PROJECT_TOKEN }} --output-dir storybook-static --exit-zero-on-changes --skip 'dependabot/**'
+      - name: Build Storybook 📚
+        run: yarn workspace @chanzuckerberg/eds-components run build:storybook --webpack-stats-json
       - name: Run Accessibility Tests 💛
         run: yarn workspace @chanzuckerberg/eds-components run storybook:axeOnly
+      - name: Publish to Chromatic
+        run: yarn workspace @chanzuckerberg/eds-components chromatic --project-token=${{ secrets.CHROMATIC_PROJECT_TOKEN }} --output-dir storybook-static --exit-zero-on-changes --skip 'dependabot/**'
 
   lint:
     runs-on: ubuntu-latest
