@@ -30,7 +30,7 @@
     "build:styles": "postcss \"src/**/*.css\" --dir lib/ --base src/ --verbose",
     "build:watch": "yarn run build:js --watch",
     "build:storybook": "build-storybook -o storybook-static",
-    "chromatic": "chromatic --only-changed --storybook-build-dir storybook-static",
+    "chromatic": "chromatic --only-changed --storybook-build-dir ./storybook-static --storybook-base-dir ./packages/components/storybook-static",
     "deploy:docs": "storybook-to-ghpages --ci",
     "prepack": "yarn run build",
     "storybook": "start-storybook -p 6008",
