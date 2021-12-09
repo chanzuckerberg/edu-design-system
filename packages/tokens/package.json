@@ -27,7 +27,7 @@
     "url": "https://github.com/chanzuckerberg/edu-design-system/issues"
   },
   "devDependencies": {
-    "style-dictionary": "^2.10.3",
+    "style-dictionary": "^3.0.3",
     "watch": "^1.0.2"
   }
 }
