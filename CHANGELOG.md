@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.9](https://github.com/chanzuckerberg/edu-design-system/compare/v0.4.8...v0.4.9) (2021-12-09)
+
+
+### Features
+
+* **icon:** add InsertDriveFile ([b996a37](https://github.com/chanzuckerberg/edu-design-system/commit/b996a37400be86bf35c39bd11b2c230bd0e47acd))
+
+
+
+
+
 ## [0.4.8](https://github.com/chanzuckerberg/edu-design-system/compare/v0.4.7...v0.4.8) (2021-12-03)
 
 
