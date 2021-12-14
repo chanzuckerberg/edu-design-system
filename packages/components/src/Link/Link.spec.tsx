@@ -25,7 +25,7 @@ describe("<Link />", () => {
   it("forwards refs", () => {
     const ref = React.createRef<HTMLAnchorElement>();
     render(
-      <Link href="www.example.com" ref={ref}>
+      <Link href="https://go.czi.team/eds" ref={ref}>
         Hi
       </Link>,
     );
