@@ -298,7 +298,7 @@ const getVariantWithStates = (
                     variant={variant}
                     state={state}
                     disabled={state === "disabled"}
-                    href={tag === "a" ? "www.example.com" : undefined}
+                    href={tag === "a" ? "https://go.czi.team/eds" : undefined}
                     onClick={(event: React.MouseEvent<HTMLElement>) => {
                       // Allows the user to click the links for testing without being navigated away.
                       event.preventDefault();

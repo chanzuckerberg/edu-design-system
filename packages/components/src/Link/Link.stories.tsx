@@ -33,7 +33,7 @@ export default {
     children: "Link",
     variant: "link" as const,
     color: "brand" as const,
-    href: "www.example.com",
+    href: "https://go.czi.team/eds",
     onClick: (event: React.MouseEvent<HTMLElement>) => {
       // Allows the user to click the links for testing without being navigated away.
       event.preventDefault();
