@@ -8,7 +8,7 @@ import {
   getDestructiveRecommendedVariants,
   getAllRecommendedVariants,
   getAllVariantsWithStates,
-  getLargeVariantsOnDarkBackgroundWithStates,
+  getLargeVariantsWithStates,
 } from "../storyUtils/clickableStyleUtils";
 import Button from "./button";
 
@@ -79,12 +79,12 @@ export const AllVariants = {
   parameters: gridParameters,
 };
 
-export const LargeVariantsOnDarkBackground = {
-  render: () => getLargeVariantsOnDarkBackgroundWithStates("button", "Button"),
+export const LargeVariantsOnGrayBackground = {
+  render: () => getLargeVariantsWithStates("button", "Button"),
   parameters: {
     ...gridParameters,
     backgrounds: {
-      default: "dark",
+      default: "gray",
     },
   },
 };

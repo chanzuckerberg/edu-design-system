@@ -263,7 +263,6 @@ const buttonStates = [...linkStates, "disabled"] as const;
 const getVariantWithStates = (
   tag: "button" | "a",
   variant: ClickableStyleProps<"button">["variant"],
-  headingColor: "white" | "neutral",
   buttonChildren: "Button" | "Link",
   size?: ClickableStyleProps<"button">["size"],
 ) => {
@@ -274,7 +273,7 @@ const getVariantWithStates = (
 
   return (
     <React.Fragment key={variant}>
-      <Heading size="h2" color={headingColor}>
+      <Heading size="h2">
         {variant}
         {size && ` - ${size}`}
       </Heading>
@@ -283,9 +282,7 @@ const getVariantWithStates = (
           {states.map((state) => (
             <tr key={state}>
               <th scope="row">
-                <Text size="body" color={headingColor}>
-                  {state}
-                </Text>
+                <Text size="body">{state}</Text>
               </th>
               {colors.map((color) => (
                 <td key={color} className="p-2">
@@ -322,26 +319,26 @@ export const getAllVariantsWithStates = (
   buttonChildren: "Button" | "Link",
 ) => (
   <ul>
-    <li>{getVariantWithStates(tag, "link", "neutral", buttonChildren)}</li>
+    <li>{getVariantWithStates(tag, "link", buttonChildren)}</li>
     {sizes.map((size) => (
       <li key={size}>
         {variants.map((variant) =>
-          getVariantWithStates(tag, variant, "neutral", buttonChildren, size),
+          getVariantWithStates(tag, variant, buttonChildren, size),
         )}
       </li>
     ))}
   </ul>
 );
 
-export const getLargeVariantsOnDarkBackgroundWithStates = (
+export const getLargeVariantsWithStates = (
   tag: "button" | "a",
   buttonChildren: "Button" | "Link",
 ) => (
   <ul>
-    <li>{getVariantWithStates(tag, "link", "white", buttonChildren)}</li>
+    <li>{getVariantWithStates(tag, "link", buttonChildren)}</li>
     {variants.map((variant) => (
       <li key={variant}>
-        {getVariantWithStates(tag, variant, "white", buttonChildren, "large")}
+        {getVariantWithStates(tag, variant, buttonChildren, "large")}
       </li>
     ))}
   </ul>
