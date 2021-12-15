@@ -196,7 +196,7 @@
 
 .variantPlain {
   color: var(--link-color);
-  border: var(--plain-background-color);
+  border-color: var(--plain-background-color);
   background-color: var(--plain-background-color);
 
   &:hover,
@@ -204,14 +204,19 @@
   &:focus,
   &.stateFocus {
     color: var(--primary-color);
+    border-color: var(--primary-color);
   }
 
   &:active,
   &.stateActive {
     @apply text-white;
+
+    border-color: var(--plain-background-color);
   }
 
   &:disabled {
+    @apply border-transparent;
+
     color: var(--primary-color);
   }
 }
