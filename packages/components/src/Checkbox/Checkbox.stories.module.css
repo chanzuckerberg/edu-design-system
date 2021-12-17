@@ -1,0 +1,10 @@
+.longLabelContainer {
+  @apply w-80;
+  @apply grid grid-cols-2 gap-4;
+}
+
+.disabledTable {
+  @apply border-separate;
+
+  border-spacing: 2rem;
+}
