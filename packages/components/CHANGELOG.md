@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.10-alpha.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.4.9...v0.4.10-alpha.0) (2021-12-17)
+
+
+### Features
+
+* add Checkbox component ([d0ed147](https://github.com/chanzuckerberg/edu-design-system/commit/d0ed147b3a97f6f4523a26abe7ec75bc006d6d3d))
+
+
+
+
+
 ## [0.4.9](https://github.com/chanzuckerberg/edu-design-system/compare/v0.4.8...v0.4.9) (2021-12-09)
 
 
