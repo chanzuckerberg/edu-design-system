@@ -1,8 +1,8 @@
 import clsx from "clsx";
 import React from "react";
+import CloseButton from "../CloseButton";
 import Heading, { HeadingElement } from "../Heading";
 import Text from "../Text";
-import CloseButton from "../common/CloseButton";
 import colorStyles from "../common/Notifications/Notification.module.css";
 import NotificationIcon, {
   NotificationVariant,

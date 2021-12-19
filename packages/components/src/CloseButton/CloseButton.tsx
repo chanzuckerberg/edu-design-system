@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import React, { forwardRef } from "react";
-import Button from "../../Button";
-import CloseRoundedIcon from "../../Icons/CloseRounded";
+import Button from "../Button";
+import CloseRoundedIcon from "../Icons/CloseRounded";
 import styles from "./CloseButton.module.css";
 
 export type Variant = "brand" | "neutral" | "success" | "warning" | "alert";

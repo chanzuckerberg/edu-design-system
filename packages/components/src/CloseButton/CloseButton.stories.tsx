@@ -3,7 +3,7 @@ import React from "react";
 import CloseButton from "./CloseButton";
 
 export default {
-  title: "common/CloseButton",
+  title: "CloseButton",
   component: CloseButton,
   args: {
     color: "brand",
