@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import React from "react";
+import React, { forwardRef } from "react";
 import Button from "../../Button";
 import CloseRoundedIcon from "../../Icons/CloseRounded";
 import styles from "./CloseButton.module.css";
@@ -10,7 +10,7 @@ type CloseButtonProps = {
   /**
    * The color theme of the icon. Also affects the hover state.
    */
-  color: Variant;
+  color?: Variant;
   /**
    * Size of the icon. Does not affect actual button size. The button is larger than the
    * icon to ensure the hit box is large enough (for accessibility).
@@ -31,32 +31,39 @@ type CloseButtonProps = {
 /**
  * Generic close button.
  */
-const CloseButton = ({
-  className,
-  color = "neutral",
-  onClose,
-  size = "2rem",
-  "aria-label": ariaLabel = "close",
-  ...rest
-}: CloseButtonProps) => (
-  <Button
-    className={clsx(
-      styles.button,
+const CloseButton = forwardRef<HTMLButtonElement, CloseButtonProps>(
+  (
+    {
       className,
-      // Color props
-      color === "brand" && styles.colorBrand,
-      color === "neutral" && styles.colorNeutral,
-      color === "success" && styles.colorSuccess,
-      color === "warning" && styles.colorWarning,
-      color === "alert" && styles.colorAlert,
-    )}
-    color={color}
-    onClick={onClose}
-    variant="link"
-    {...rest}
-  >
-    <CloseRoundedIcon purpose="informative" size={size} title={ariaLabel} />
-  </Button>
+      color = "neutral",
+      onClose,
+      size = "2rem",
+      "aria-label": ariaLabel = "close",
+      ...rest
+    },
+    ref,
+  ) => (
+    <Button
+      className={clsx(
+        styles.button,
+        className,
+        // Color props
+        color === "brand" && styles.colorBrand,
+        color === "neutral" && styles.colorNeutral,
+        color === "success" && styles.colorSuccess,
+        color === "warning" && styles.colorWarning,
+        color === "alert" && styles.colorAlert,
+      )}
+      color={color}
+      onClick={onClose}
+      variant="link"
+      ref={ref}
+      {...rest}
+    >
+      <CloseRoundedIcon purpose="informative" size={size} title={ariaLabel} />
+    </Button>
+  ),
 );
+CloseButton.displayName = "CloseButton";
 
 export default CloseButton;
