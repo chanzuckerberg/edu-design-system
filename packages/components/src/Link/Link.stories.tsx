@@ -9,7 +9,7 @@ import {
   getDestructiveRecommendedVariants,
   getAllRecommendedVariants,
   getAllVariantsWithStates,
-  getLargeVariantsOnDarkBackgroundWithStates,
+  getLargeVariantsWithStates,
 } from "../storyUtils/clickableStyleUtils";
 import Link from "./Link";
 
@@ -104,12 +104,12 @@ export const AllVariants = {
   parameters: gridParameters,
 };
 
-export const LargeVariantsOnDarkBackground = {
-  render: () => getLargeVariantsOnDarkBackgroundWithStates("a", "Link"),
+export const LargeVariantsOnGrayBackground = {
+  render: () => getLargeVariantsWithStates("a", "Link"),
   parameters: {
     ...gridParameters,
     backgrounds: {
-      default: "dark",
+      default: "gray",
     },
   },
 };
