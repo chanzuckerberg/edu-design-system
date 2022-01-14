@@ -182,7 +182,9 @@ export const Label = ({
 };
 
 /**
- * Design system Checkbox.
+ * Checkbox control indicating if something is selected or unselected.
+ *
+ * Requires either a visible label or an accessible name.
  */
 const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
   (props, ref) => {

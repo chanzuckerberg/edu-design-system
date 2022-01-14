@@ -1,11 +1,24 @@
 import type { StoryObj } from "@storybook/react";
 import React from "react";
-import Checkbox, { CheckboxInput, Label } from "./Checkbox";
+import EDSCheckbox, { CheckboxInput, Label } from "./Checkbox";
 
 const defaultArgs = {
   disabled: false,
   label: "Checkbox",
 };
+
+/**
+ * Controlled example to make checked stories interactive.
+ * We name this "Checkbox" for Storybook's code documentation
+ */
+function Checkbox({ checked: defaultChecked = false, ...rest }: Args) {
+  const [checked, setChecked] = React.useState(defaultChecked);
+  const handleChange = () => {
+    setChecked(!checked);
+  };
+
+  return <EDSCheckbox checked={checked} onChange={handleChange} {...rest} />;
+}
 
 export default {
   title: "Checkbox",
@@ -23,31 +36,15 @@ export default {
   },
 };
 
-type Args = React.ComponentProps<typeof Checkbox>;
-
-/**
- * Controlled example to make checked stories interactive.
- */
-function CheckedExample(args: Args) {
-  const [checked, setChecked] = React.useState(true);
-  const handleChange = () => {
-    setChecked(!checked);
-  };
-
-  return (
-    <Checkbox
-      checked={checked}
-      onChange={handleChange}
-      {...defaultArgs}
-      {...args}
-    />
-  );
-}
+type Args = React.ComponentProps<typeof EDSCheckbox>;
 
 export const Default: StoryObj<Args> = {};
 
-export const Checked = {
-  render: () => <CheckedExample />,
+export const Checked: StoryObj<Args> = {
+  ...Default,
+  args: {
+    checked: true,
+  },
 };
 
 export const Small: StoryObj<Args> = {
@@ -57,8 +54,12 @@ export const Small: StoryObj<Args> = {
   },
 };
 
-export const SmallChecked = {
-  render: () => <CheckedExample size="small" />,
+export const SmallChecked: StoryObj<Args> = {
+  ...Default,
+  args: {
+    checked: true,
+    size: "small",
+  },
 };
 
 export const Indeterminate: StoryObj<Args> = {
