@@ -25,13 +25,20 @@ export default {
     label: "Checkbox",
   },
   argTypes: {
-    // for some reason TS does not infer this type correctly,
-    // so we explicitly provide a radio control instead
+    // For some reason Storybook does not infer all props correctly;
+    // we manually include the most relevant controls here.
     checked: {
-      control: {
-        type: "radio",
-      },
+      description: `Whether checkbox is checked. Defaults to false.
+        "indeterminate" can be used when a checkbox visually represents
+        a list of checkboxes that is "partially" checked.`,
+      control: "radio",
       options: [true, false, "indeterminate"],
+    },
+    size: {
+      description: "Size of the checkbox label.",
+      control: "radio",
+      options: ["small", "medium"],
+      table: { defaultValue: { summary: "medium" } },
     },
   },
 };
