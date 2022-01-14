@@ -44,7 +44,7 @@
 }
 
 .checkboxInput + svg {
-  @apply text-neutral-500 align-top;
+  @apply text-neutral-500 align-top inline-block;
   --checked-color: var(--eds-color-brand-600);
 }
 

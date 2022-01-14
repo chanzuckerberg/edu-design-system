@@ -3,13 +3,14 @@ import React from "react";
 import { useUID } from "react-uid";
 import styles from "./Checkbox.module.css";
 
-type InputProps = {
-  /**
-   * When possible, use a visible label through the `label` prop instead.
-   * In rare cases where there's no visible label, you must provide an
-   * `aria-label` for screen readers.
-   */
-  "aria-label"?: string;
+// Allow all native HTML input attributes,
+// except for ones where we override type or strictness
+type CheckboxHTMLElementProps = Omit<
+  React.InputHTMLAttributes<HTMLInputElement>,
+  "checked" | "id" | "size"
+>;
+
+type InputProps = CheckboxHTMLElementProps & {
   /**
    * Whether checkbox is checked. Defaults to false.
    * "indeterminate" can be used when a checkbox visually represents
@@ -21,17 +22,9 @@ type InputProps = {
    */
   className?: string;
   /**
-   * Whether checkbox is disabled.
-   */
-  disabled?: boolean;
-  /**
    * Checkbox ID. Used to connect the input with a label for accessibility purposes.
    */
   id: string;
-  /**
-   * Callback when checkbox state changes
-   */
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
 type LabelProps = {
@@ -65,10 +58,6 @@ export type CheckboxProps = Omit<InputProps, "id"> & {
    * Visible text label for the checkbox.
    */
   label?: React.ReactNode;
-  /**
-   * Makes the checkbox enabled, but not editable.
-   */
-  readOnly?: boolean;
   /**
    * Size of the checkbox label.
    */
@@ -191,6 +180,9 @@ const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
     // All remaining props are passed to the `input` element
     const { className, id, label, size, ...rest } = props;
 
+    // When possible, use a visible label through the `label` prop instead.
+    // In rare cases where there's no visible label, you must provide an
+    // `aria-label` for screen readers.
     if (
       process.env.NODE_ENV !== "production" &&
       !label &&

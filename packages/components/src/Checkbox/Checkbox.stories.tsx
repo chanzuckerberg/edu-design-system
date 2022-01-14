@@ -2,10 +2,7 @@ import type { StoryObj } from "@storybook/react";
 import React from "react";
 import EDSCheckbox, { CheckboxInput, Label } from "./Checkbox";
 
-const defaultArgs = {
-  disabled: false,
-  label: "Checkbox",
-};
+type Args = React.ComponentProps<typeof EDSCheckbox>;
 
 /**
  * Controlled example to make checked stories interactive.
@@ -23,9 +20,12 @@ function Checkbox({ checked: defaultChecked = false, ...rest }: Args) {
 export default {
   title: "Checkbox",
   component: Checkbox,
-  args: defaultArgs,
+  args: {
+    disabled: false,
+    label: "Checkbox",
+  },
   argTypes: {
-    // for some reason TS infers this as type "object",
+    // for some reason TS does not infer this type correctly,
     // so we explicitly provide a radio control instead
     checked: {
       control: {
@@ -35,8 +35,6 @@ export default {
     },
   },
 };
-
-type Args = React.ComponentProps<typeof EDSCheckbox>;
 
 export const Default: StoryObj<Args> = {};
 
@@ -63,11 +61,9 @@ export const SmallChecked: StoryObj<Args> = {
 };
 
 export const Indeterminate: StoryObj<Args> = {
-  ...Default,
-  args: {
-    checked: "indeterminate",
-    readOnly: true,
-  },
+  render: () => (
+    <EDSCheckbox checked="indeterminate" label="Checkbox" readOnly />
+  ),
 };
 
 export const Disabled = {
@@ -77,10 +73,10 @@ export const Disabled = {
         {[false, true, "indeterminate" as const].map((checked, i) => (
           <tr key={i}>
             <td>
-              <Checkbox checked={checked} disabled label="Disabled" />
+              <EDSCheckbox checked={checked} disabled label="Disabled" />
             </td>
             <td>
-              <Checkbox checked={checked} label="Default" readOnly />
+              <EDSCheckbox checked={checked} label="Default" readOnly />
             </td>
           </tr>
         ))}
