@@ -1,36 +1,20 @@
 import type { StoryObj } from "@storybook/react";
 import React from "react";
-import EDSCheckbox, { CheckboxInput, Label } from "./Checkbox";
+import Checkbox, { CheckboxInput, Label } from "./Checkbox";
 
-type Args = React.ComponentProps<typeof EDSCheckbox>;
-
-/**
- * Controlled example to make checked stories interactive.
- * We name this "Checkbox" for Storybook's code documentation
- */
-function Checkbox({ checked: defaultChecked = false, ...rest }: Args) {
-  const [checked, setChecked] = React.useState(defaultChecked);
-  const handleChange = () => {
-    setChecked(!checked);
-  };
-
-  return <EDSCheckbox checked={checked} onChange={handleChange} {...rest} />;
-}
+const defaultArgs = {
+  disabled: false,
+  label: "Checkbox",
+};
 
 export default {
   title: "Checkbox",
   component: Checkbox,
-  args: {
-    disabled: false,
-    label: "Checkbox",
-  },
+  args: defaultArgs,
   argTypes: {
     // For some reason Storybook does not infer all props correctly;
     // we manually include the most relevant controls here.
     checked: {
-      description: `Whether checkbox is checked. Defaults to false.
-        "indeterminate" can be used when a checkbox visually represents
-        a list of checkboxes that is "partially" checked.`,
       control: "radio",
       options: [true, false, "indeterminate"],
     },
@@ -43,13 +27,24 @@ export default {
   },
 };
 
+type Args = React.ComponentProps<typeof Checkbox>;
+
+/**
+ * Controlled example to make checked stories interactive.
+ */
+function CheckedExample(args: Args) {
+  const [checked, setChecked] = React.useState(true);
+  const handleChange = () => {
+    setChecked(!checked);
+  };
+
+  return <Checkbox checked={checked} onChange={handleChange} {...args} />;
+}
+
 export const Default: StoryObj<Args> = {};
 
 export const Checked: StoryObj<Args> = {
-  ...Default,
-  args: {
-    checked: true,
-  },
+  render: () => <CheckedExample {...defaultArgs} />,
 };
 
 export const Small: StoryObj<Args> = {
@@ -60,17 +55,15 @@ export const Small: StoryObj<Args> = {
 };
 
 export const SmallChecked: StoryObj<Args> = {
-  ...Default,
-  args: {
-    checked: true,
-    size: "small",
-  },
+  render: () => <CheckedExample size="small" {...defaultArgs} />,
 };
 
 export const Indeterminate: StoryObj<Args> = {
-  render: () => (
-    <EDSCheckbox checked="indeterminate" label="Checkbox" readOnly />
-  ),
+  ...Default,
+  args: {
+    checked: "indeterminate",
+    readOnly: true,
+  },
 };
 
 export const Disabled = {
@@ -80,10 +73,10 @@ export const Disabled = {
         {[false, true, "indeterminate" as const].map((checked, i) => (
           <tr key={i}>
             <td>
-              <EDSCheckbox checked={checked} disabled label="Disabled" />
+              <Checkbox checked={checked} disabled label="Disabled" />
             </td>
             <td>
-              <EDSCheckbox checked={checked} label="Default" readOnly />
+              <Checkbox checked={checked} label="Default" readOnly />
             </td>
           </tr>
         ))}
