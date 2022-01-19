@@ -44,10 +44,10 @@
   --tag-outline-color: var(--eds-color-warning-500);
 }
 
-.colorGradingYellow {
+.colorYellow {
   --tag-primary-color: var(--eds-color-neutral-700);
-  --tag-secondary-color: var(--eds-color-grading-yellow-100);
-  --tag-outline-color: var(--eds-color-grading-yellow-500);
+  --tag-secondary-color: var(--eds-color-yellow-100);
+  --tag-outline-color: var(--eds-color-yellow-500);
 }
 
 .colorBrand {
