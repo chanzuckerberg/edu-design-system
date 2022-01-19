@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.4.10...v0.5.0) (2022-01-19)
+
+
+### Features
+
+* **tokens:** rename grading-yellow to yellow ([e086161](https://github.com/chanzuckerberg/edu-design-system/commit/e0861612f0ebc218c25ebc65e964933e4fae1d6d))
+
+
+
+
+
 ## [0.4.8](https://github.com/chanzuckerberg/edu-design-system/compare/v0.4.7...v0.4.8) (2021-12-03)
 
 
