@@ -132,6 +132,7 @@ export const CheckboxInput = React.forwardRef<HTMLInputElement, InputProps>(
       <span className={clsx(styles.inputWrapper, disabled && styles.disabled)}>
         <input
           className={clsx(className, styles.checkboxInput)}
+          data-bootstrap-override="checkbox"
           disabled={disabled}
           ref={ref}
           style={svgStyle}
@@ -162,6 +163,7 @@ export const Label = ({
         size === "small" && styles.labelSmall,
         size === "medium" && styles.labelMedium,
       )}
+      data-bootstrap-override="label"
       htmlFor={htmlFor}
       style={svgStyle}
     >

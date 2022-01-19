@@ -10,6 +10,7 @@ exports[`<Checkbox /> Checked story renders snapshot 1`] = `
     <input
       checked=""
       class="checkboxInput"
+      data-bootstrap-override="checkbox"
       id="2"
       style="--checkbox-svg-size: 1.25rem;"
       type="checkbox"
@@ -40,6 +41,7 @@ exports[`<Checkbox /> Checked story renders snapshot 1`] = `
   </span>
   <label
     class="label labelMedium"
+    data-bootstrap-override="label"
     for="2"
     style="--checkbox-svg-size: 1.25rem;"
   >
@@ -57,6 +59,7 @@ exports[`<Checkbox /> Default story renders snapshot 1`] = `
   >
     <input
       class="checkboxInput"
+      data-bootstrap-override="checkbox"
       id="1"
       style="--checkbox-svg-size: 1.25rem;"
       type="checkbox"
@@ -87,6 +90,7 @@ exports[`<Checkbox /> Default story renders snapshot 1`] = `
   </span>
   <label
     class="label labelMedium"
+    data-bootstrap-override="label"
     for="1"
     style="--checkbox-svg-size: 1.25rem;"
   >
@@ -104,6 +108,7 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
   >
     <input
       class="checkboxInput"
+      data-bootstrap-override="checkbox"
       disabled=""
       id="9"
       style="--checkbox-svg-size: 1.25rem;"
@@ -135,6 +140,7 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
   </span>
   <label
     class="label labelMedium"
+    data-bootstrap-override="label"
     for="9"
     style="--checkbox-svg-size: 1.25rem;"
   >
@@ -154,6 +160,7 @@ exports[`<Checkbox /> Indeterminate story renders snapshot 1`] = `
       aria-checked="mixed"
       checked=""
       class="checkboxInput"
+      data-bootstrap-override="checkbox"
       id="5"
       readonly=""
       style="--checkbox-svg-size: 1.25rem;"
@@ -185,6 +192,7 @@ exports[`<Checkbox /> Indeterminate story renders snapshot 1`] = `
   </span>
   <label
     class="label labelMedium"
+    data-bootstrap-override="label"
     for="5"
     style="--checkbox-svg-size: 1.25rem;"
   >
@@ -205,6 +213,7 @@ exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
     >
       <input
         class="checkboxInput"
+        data-bootstrap-override="checkbox"
         id="7"
         style="--checkbox-svg-size: 1.25rem;"
         type="checkbox"
@@ -235,6 +244,7 @@ exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
     </span>
     <label
       class="label labelMedium"
+      data-bootstrap-override="label"
       for="7"
       style="--checkbox-svg-size: 1.25rem;"
     >
@@ -249,6 +259,7 @@ exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
     >
       <input
         class="checkboxInput"
+        data-bootstrap-override="checkbox"
         id="8"
         style="--checkbox-svg-size: 1.25rem;"
         type="checkbox"
@@ -279,6 +290,7 @@ exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
     </span>
     <label
       class="label labelSmall"
+      data-bootstrap-override="label"
       for="8"
       style="--checkbox-svg-size: 1.25rem;"
     >
@@ -297,6 +309,7 @@ exports[`<Checkbox /> Small story renders snapshot 1`] = `
   >
     <input
       class="checkboxInput"
+      data-bootstrap-override="checkbox"
       id="3"
       style="--checkbox-svg-size: 1.25rem;"
       type="checkbox"
@@ -327,6 +340,7 @@ exports[`<Checkbox /> Small story renders snapshot 1`] = `
   </span>
   <label
     class="label labelSmall"
+    data-bootstrap-override="label"
     for="3"
     style="--checkbox-svg-size: 1.25rem;"
   >
@@ -345,6 +359,7 @@ exports[`<Checkbox /> SmallChecked story renders snapshot 1`] = `
     <input
       checked=""
       class="checkboxInput"
+      data-bootstrap-override="checkbox"
       id="4"
       style="--checkbox-svg-size: 1.25rem;"
       type="checkbox"
@@ -375,6 +390,7 @@ exports[`<Checkbox /> SmallChecked story renders snapshot 1`] = `
   </span>
   <label
     class="label labelSmall"
+    data-bootstrap-override="label"
     for="4"
     style="--checkbox-svg-size: 1.25rem;"
   >
@@ -387,6 +403,7 @@ exports[`<Checkbox /> WithCustomPositioning story renders snapshot 1`] = `
 <span>
   <label
     class="label labelMedium"
+    data-bootstrap-override="label"
     for="test"
     style="--checkbox-svg-size: 1.25rem;"
   >
@@ -397,6 +414,7 @@ exports[`<Checkbox /> WithCustomPositioning story renders snapshot 1`] = `
   >
     <input
       class="checkboxInput"
+      data-bootstrap-override="checkbox"
       id="test"
       style="--checkbox-svg-size: 1.25rem;"
       type="checkbox"
@@ -438,6 +456,7 @@ exports[`<Checkbox /> WithoutVisibleLabel story renders snapshot 1`] = `
     <input
       aria-label="a checkbox has no name"
       class="checkboxInput"
+      data-bootstrap-override="checkbox"
       id="6"
       style="--checkbox-svg-size: 1.25rem;"
       type="checkbox"
