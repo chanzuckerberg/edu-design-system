@@ -16,7 +16,7 @@ import styles from "./tokens.module.css";
 export const getTokensForColor = (color) => {
   const maybeNestedKeys = color.split("-");
   // Each "-" separator corresponds to an extra level of nesting in variables-nested.json
-  // For example, the tokens for color "grading-yellow" are stored under
+  // For example, the tokens for color "grading-yellow" would be stored under
   // "grading": {
   //   "yellow": { ...tokens }
   // }
@@ -46,19 +46,11 @@ export const mapEDSColorToTokenArray = (color) => {
     },
     ...mapEDSColorToTokenArray("neutral"),
     {
-      name: "eds-color-black (Note: alias for eds-color-neutral-700)",
+      name: "eds-color-black (alias for eds-color-neutral-700)",
       value: tokens.eds.color.black,
     },
     // Remaining Colors
-    ...[
-      "alert",
-      "grading-yellow",
-      "warning",
-      "success",
-      "info",
-      "brand",
-      "highlight",
-    ]
+    ...["brand", "alert", "warning", "yellow", "success", "info", "highlight"]
       .map(mapEDSColorToTokenArray)
       .flat(),
   ]}
