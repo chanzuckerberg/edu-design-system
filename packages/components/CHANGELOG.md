@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.1-alpha.2](https://github.com/chanzuckerberg/edu-design-system/compare/v0.5.1-alpha.1...v0.5.1-alpha.2) (2022-01-21)
+
+
+### Features
+
+* **tooltip:** add Tooltip to exports ([67aafd3](https://github.com/chanzuckerberg/edu-design-system/commit/67aafd3f005ae4067d6a59abb069162db6770190))
+
+
+
+
+
 ## [0.5.1-alpha.1](https://github.com/chanzuckerberg/edu-design-system/compare/v0.5.1-alpha.0...v0.5.1-alpha.1) (2022-01-21)
 
 
