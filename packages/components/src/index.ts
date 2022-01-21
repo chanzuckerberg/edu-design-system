@@ -8,5 +8,6 @@ export { default as SvgIcon } from "./SvgIcon";
 export { default as Tag } from "./Tag";
 export { default as Text } from "./Text";
 export { default as Toast } from "./Toast";
+export { default as Tooltip } from "./Tooltip";
 export type { BannerProps } from "./Banner";
 export type { IconProps } from "./SvgIcon";
