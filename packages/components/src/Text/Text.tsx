@@ -16,7 +16,7 @@ type Props = {
   spacing?: TypographyProps<TextElement>["spacing"];
   tabIndex?: number;
   weight?: TypographyProps<TextElement>["weight"];
-};
+} & React.HTMLAttributes<HTMLElement>;
 
 const Text = forwardRef<HTMLElement, Props>(
   (
