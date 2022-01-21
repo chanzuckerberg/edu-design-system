@@ -18,7 +18,7 @@ type TooltipProps = {
    * stored in state or a ref. Most cases will use `children` and not
    * `reference`.
    */
-  reference?: React.RefObject<Element>;
+  reference?: React.RefObject<Element> | Element;
   /**
    * The content of the tooltip bubble.
    */
