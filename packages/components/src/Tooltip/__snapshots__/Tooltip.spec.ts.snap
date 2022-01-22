@@ -5,7 +5,7 @@ exports[`<Tooltip /> BottomPlacement story renders snapshot 1`] = `
   <div>
     <button
       aria-describedby="tippy-5"
-      class="button sizeLarge variantFlat colorBrand"
+      class="mb-32 ml-32 button sizeLarge variantFlat colorBrand"
       type="button"
     >
       Tooltip trigger
@@ -57,7 +57,7 @@ exports[`<Tooltip /> DarkVariant story renders snapshot 1`] = `
   <div>
     <button
       aria-describedby="tippy-2"
-      class="button sizeLarge variantFlat colorBrand"
+      class="mx-32 my-32 button sizeLarge variantFlat colorBrand"
       type="button"
     >
       Tooltip trigger
@@ -108,7 +108,7 @@ exports[`<Tooltip /> Interactive story renders snapshot 1`] = `
 <body>
   <div>
     <button
-      class="button sizeLarge variantFlat colorBrand"
+      class="mx-32 my-32 button sizeLarge variantFlat colorBrand"
       type="button"
     >
       Tooltip trigger
@@ -122,8 +122,7 @@ exports[`<Tooltip /> LeftPlacement story renders snapshot 1`] = `
   <div>
     <button
       aria-describedby="tippy-3"
-      class="button sizeLarge variantFlat colorBrand"
-      style="margin-left: 23rem;"
+      class="ml-96 my-32 button sizeLarge variantFlat colorBrand"
       type="button"
     >
       Tooltip trigger
@@ -175,7 +174,7 @@ exports[`<Tooltip /> LightVariant story renders snapshot 1`] = `
   <div>
     <button
       aria-describedby="tippy-1"
-      class="button sizeLarge variantFlat colorBrand"
+      class="mx-32 my-32 button sizeLarge variantFlat colorBrand"
       type="button"
     >
       Tooltip trigger
@@ -227,7 +226,7 @@ exports[`<Tooltip /> LongButtonText story renders snapshot 1`] = `
   <div>
     <button
       aria-describedby="tippy-7"
-      class="button sizeLarge variantFlat colorBrand"
+      class="my-20 button sizeLarge variantFlat colorBrand"
       type="button"
     >
       Tooltip trigger with longer text to test placement
@@ -279,7 +278,7 @@ exports[`<Tooltip /> LongText story renders snapshot 1`] = `
   <div>
     <button
       aria-describedby="tippy-6"
-      class="button sizeLarge variantFlat colorBrand"
+      class="mx-32 my-32 button sizeLarge variantFlat colorBrand"
       type="button"
     >
       Tooltip trigger
@@ -331,8 +330,7 @@ exports[`<Tooltip /> TopPlacement story renders snapshot 1`] = `
   <div>
     <button
       aria-describedby="tippy-4"
-      class="button sizeLarge variantFlat colorBrand"
-      style="margin-top: 4rem;"
+      class="mt-32 ml-32 button sizeLarge variantFlat colorBrand"
       type="button"
     >
       Tooltip trigger

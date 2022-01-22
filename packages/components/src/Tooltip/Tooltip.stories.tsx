@@ -1,4 +1,4 @@
-import type { StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react";
 import * as React from "react";
 import Button from "../Button";
 import Tooltip from "./Tooltip";
@@ -11,7 +11,7 @@ const defaultArgs = {
       efficitur mauris ac leo semper accumsan.
     </span>
   ),
-  children: <Button>Tooltip trigger</Button>,
+  children: <Button className="mx-32 my-32">Tooltip trigger</Button>,
   placement: "right",
   visible: true,
 };
@@ -34,7 +34,7 @@ export default {
       },
     },
   },
-};
+} as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Tooltip>;
 
@@ -51,7 +51,7 @@ export const LeftPlacement: StoryObj<Args> = {
   ...LightVariant,
   args: {
     placement: "left",
-    children: <Button style={{ marginLeft: "23rem" }}>Tooltip trigger</Button>,
+    children: <Button className="ml-96 my-32">Tooltip trigger</Button>,
   },
 };
 
@@ -59,7 +59,7 @@ export const TopPlacement: StoryObj<Args> = {
   ...LightVariant,
   args: {
     placement: "top",
-    children: <Button style={{ marginTop: "4rem" }}>Tooltip trigger</Button>,
+    children: <Button className="mt-32 ml-32">Tooltip trigger</Button>,
   },
 };
 
@@ -67,6 +67,7 @@ export const BottomPlacement: StoryObj<Args> = {
   ...LightVariant,
   args: {
     placement: "bottom",
+    children: <Button className="mb-32 ml-32">Tooltip trigger</Button>,
   },
 };
 
@@ -91,7 +92,9 @@ export const LongButtonText: StoryObj<Args> = {
   ...LightVariant,
   args: {
     children: (
-      <Button>Tooltip trigger with longer text to test placement</Button>
+      <Button className="my-20">
+        Tooltip trigger with longer text to test placement
+      </Button>
     ),
   },
 };
