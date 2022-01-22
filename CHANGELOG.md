@@ -3,47 +3,6 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [0.5.1-alpha.2](https://github.com/chanzuckerberg/edu-design-system/compare/v0.5.1-alpha.1...v0.5.1-alpha.2) (2022-01-21)
-
-
-### Features
-
-* **tooltip:** add Tooltip to exports ([67aafd3](https://github.com/chanzuckerberg/edu-design-system/commit/67aafd3f005ae4067d6a59abb069162db6770190))
-
-
-
-
-
-## [0.5.1-alpha.1](https://github.com/chanzuckerberg/edu-design-system/compare/v0.5.1-alpha.0...v0.5.1-alpha.1) (2022-01-21)
-
-
-### Features
-
-* **tooltip:** also allow element for reference ([38ec1f3](https://github.com/chanzuckerberg/edu-design-system/commit/38ec1f30a88a36d846858398fa5388131b49d0bd))
-
-
-
-
-
-## [0.5.1-alpha.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.4.2...v0.5.1-alpha.0) (2022-01-21)
-
-
-### Features
-
-* add Checkbox component ([22ae1a7](https://github.com/chanzuckerberg/edu-design-system/commit/22ae1a74f796acd755b146d15d4c61f0dd3df32a))
-* allow html input types, make svg inline-block ([1ff1988](https://github.com/chanzuckerberg/edu-design-system/commit/1ff19883f76d8883cf02c10bb09dda8d8b6e2876))
-* **checkbox:** add data-bootstrap-override attributes ([8198352](https://github.com/chanzuckerberg/edu-design-system/commit/8198352ddfbf59529bd78357f83578d1766f293b))
-* **colors:** update grading-yellow-500 token ([e16fb5a](https://github.com/chanzuckerberg/edu-design-system/commit/e16fb5affa65f01b5695fc72a44a01d65342e840))
-* **icon:** add InsertDriveFile ([b996a37](https://github.com/chanzuckerberg/edu-design-system/commit/b996a37400be86bf35c39bd11b2c230bd0e47acd))
-* **icons:** add InfoRounded ([11c8100](https://github.com/chanzuckerberg/edu-design-system/commit/11c81005c194db91762a99954535dff2f0bbf7aa))
-* migrate Tooltip component ([d4bb6a4](https://github.com/chanzuckerberg/edu-design-system/commit/d4bb6a4cd03e98032d57750593b8d5f3aa8df99e))
-* rename grading-yellow to yellow in components ([00d1892](https://github.com/chanzuckerberg/edu-design-system/commit/00d1892dcab3972de16b456dd55c16ea513adce2))
-* **tokens:** rename grading-yellow to yellow ([e086161](https://github.com/chanzuckerberg/edu-design-system/commit/e0861612f0ebc218c25ebc65e964933e4fae1d6d))
-
-
-
-
-
 # [0.5.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.4.10...v0.5.0) (2022-01-19)
 
 

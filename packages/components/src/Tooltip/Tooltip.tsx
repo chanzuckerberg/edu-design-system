@@ -1,5 +1,3 @@
-// @flow
-
 import Tippy from "@tippyjs/react";
 import clsx from "clsx";
 import * as React from "react";
