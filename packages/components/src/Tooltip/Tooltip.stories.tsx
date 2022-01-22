@@ -103,7 +103,7 @@ export const Interactive = {
   },
   parameters: {
     chromatic: {
-      disabledSnapshot: true,
+      disableSnapshot: true,
     },
   },
 };
