@@ -48,8 +48,8 @@ $eds-color-brand-500: #766FFD !default;
 $eds-color-brand-600: #574EFF !default;
 $eds-color-brand-700: #433BDE !default;
 $eds-color-brand-800: #312B9E !default;
-$eds-color-grading-yellow-100: #FDF1D0 !default;
-$eds-color-grading-yellow-500: #F79D2D !default;
+$eds-color-yellow-100: #FDF1D0 !default;
+$eds-color-yellow-500: #F79D2D !default;
 $eds-color-highlight-100: #FF9FEC !default;
 $eds-color-highlight-200: #FFBEAA !default;
 $eds-color-highlight-300: #FCFF00 !default;
@@ -192,11 +192,9 @@ $tokens: (
         '700': $eds-color-brand-700,
         '800': $eds-color-brand-800
       ),
-      'grading': (
-        'yellow': (
-          '100': $eds-color-grading-yellow-100,
-          '500': $eds-color-grading-yellow-500
-        )
+      'yellow': (
+        '100': $eds-color-yellow-100,
+        '500': $eds-color-yellow-500
       ),
       'highlight': (
         '100': $eds-color-highlight-100,

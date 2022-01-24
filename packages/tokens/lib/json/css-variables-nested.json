@@ -61,11 +61,9 @@
         "700": "var(--eds-color-brand-700)",
         "800": "var(--eds-color-brand-800)"
       },
-      "grading": {
-        "yellow": {
-          "100": "var(--eds-color-grading-yellow-100)",
-          "500": "var(--eds-color-grading-yellow-500)"
-        }
+      "yellow": {
+        "100": "var(--eds-color-yellow-100)",
+        "500": "var(--eds-color-yellow-500)"
       },
       "highlight": {
         "100": "var(--eds-color-highlight-100)",

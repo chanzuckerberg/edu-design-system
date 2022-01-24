@@ -1,6 +1,6 @@
 {
   "name": "@chanzuckerberg/eds-components",
-  "version": "0.4.10",
+  "version": "0.5.0",
   "description": "React components for the education design system",
   "keywords": [
     "design system",
@@ -48,18 +48,19 @@
     "react": ">= 16.8.0"
   },
   "dependencies": {
-    "@chanzuckerberg/eds-tokens": "^0.4.8",
-    "clsx": "^1.1.1"
+    "@chanzuckerberg/eds-tokens": "^0.5.0",
+    "clsx": "^1.1.1",
+    "react-uid": "^2.3.1"
   },
   "devDependencies": {
     "@chanzuckerberg/axe-storybook-testing": "^5.0.0",
     "@chanzuckerberg/story-utils": "^3.0.1",
-    "@storybook/addon-a11y": "^6.4.0",
-    "@storybook/addon-essentials": "^6.4.0",
+    "@storybook/addon-a11y": "^6.4.13",
+    "@storybook/addon-essentials": "^6.4.13",
     "@storybook/addon-postcss": "^2.0.0",
-    "@storybook/react": "^6.4.0",
+    "@storybook/react": "^6.4.13",
     "@storybook/storybook-deployer": "^2.8.10",
-    "@storybook/testing-react": "^1.0.0",
+    "@storybook/testing-react": "^1.2.3",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.1.2",
     "@types/jest": "^27.0.2",
@@ -81,6 +82,6 @@
     "storybook-css-modules-preset": "^1.1.1",
     "tailwindcss": "^2.2.7",
     "ts-jest": "^27.0.7",
-    "typescript": "^4.4.4"
+    "typescript": "^4.5.4"
   }
 }
