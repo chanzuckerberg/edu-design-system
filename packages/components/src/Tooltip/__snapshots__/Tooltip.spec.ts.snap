@@ -108,11 +108,52 @@ exports[`<Tooltip /> Interactive story renders snapshot 1`] = `
 <body>
   <div>
     <button
+      aria-describedby="tippy-8"
       class="mx-32 my-32 button sizeLarge variantFlat colorBrand"
       type="button"
     >
-      Tooltip trigger
+      Tooltip trigger with hover done by storybook. 
+      <br />
+      Click within canvas to make interactive.
     </button>
+  </div>
+  <div
+    data-tippy-root=""
+    id="tippy-8"
+    style="pointer-events: none; z-index: 9999; visibility: visible; position: absolute; left: 0px; top: 0px; margin: 0px; transform: translate(10px, 0px);"
+  >
+    <div
+      class="tippy-box tooltip variantLight"
+      data-animation="fade"
+      data-escaped=""
+      data-placement="right"
+      data-reference-hidden=""
+      data-state="visible"
+      role="tooltip"
+      style="max-width: 350px; transition-duration: 200ms;"
+      tabindex="-1"
+    >
+      <div
+        class="tippy-content"
+        data-state="visible"
+        style="transition-duration: 200ms;"
+      >
+        <div>
+          <span>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+             
+            <b>
+              Donec a erat eu augue consequat eleifend non vel sem.
+            </b>
+             Praesent efficitur mauris ac leo semper accumsan.
+          </span>
+        </div>
+      </div>
+      <div
+        class="tippy-arrow"
+        style="position: absolute; top: 0px; transform: translate(0px, 3px);"
+      />
+    </div>
   </div>
 </body>
 `;

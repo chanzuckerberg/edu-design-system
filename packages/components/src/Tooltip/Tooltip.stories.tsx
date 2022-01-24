@@ -1,5 +1,5 @@
-import type { Meta, StoryObj, StoryContext } from "@storybook/react";
-import { userEvent, within } from "@storybook/testing-library";
+import type { Meta, StoryObj } from "@storybook/react";
+import { screen, userEvent } from "@storybook/testing-library";
 import * as React from "react";
 import Button from "../Button";
 import Tooltip from "./Tooltip";
@@ -83,10 +83,20 @@ export const LongButtonText: StoryObj<Args> = {
 export const Interactive = {
   args: {
     visible: undefined,
+    children: (
+      <Button className="mx-32 my-32">
+        Tooltip trigger with hover done by storybook. <br />
+        Click within canvas to make interactive.
+      </Button>
+    ),
   },
   parameters: {
     chromatic: {
       disableSnapshot: true,
     },
+  },
+  play: async () => {
+    const trigger = await screen.findByRole("button");
+    await userEvent.hover(trigger);
   },
 };
