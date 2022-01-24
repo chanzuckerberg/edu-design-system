@@ -1,0 +1,4 @@
+.dropdownButton {
+  @apply w-full p-2 border rounded border-neutral-500;
+  @apply flex justify-between items-center;
+}
