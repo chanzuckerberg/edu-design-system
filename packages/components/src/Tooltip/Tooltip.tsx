@@ -13,7 +13,7 @@ type TooltipProps = {
    * The trigger element the tooltip appears next to.
    *
    * Use this instead of `children` if the trigger element is being
-   * stored in state or a ref. Most cases will use `children` and not
+   * stored in a ref. Most cases will use `children` and not
    * `reference`.
    */
   reference?: React.RefObject<Element> | Element;
