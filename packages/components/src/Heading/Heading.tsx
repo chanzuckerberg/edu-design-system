@@ -20,7 +20,7 @@ type Props = {
   spacing?: TypographyProps<HeadingElement>["spacing"];
   tabIndex?: number;
   weight?: TypographyProps<HeadingElement>["weight"];
-};
+} & React.HTMLAttributes<HTMLHeadingElement>;
 
 const Heading = forwardRef<HTMLElement, Props>(
   (
