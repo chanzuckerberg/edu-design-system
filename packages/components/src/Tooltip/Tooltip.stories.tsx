@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, Story, StoryObj } from "@storybook/react";
 import { screen, userEvent } from "@storybook/testing-library";
 import * as React from "react";
 import Button from "../Button";
@@ -85,17 +85,29 @@ export const Interactive = {
     visible: undefined,
     children: (
       <Button className="mx-32 my-32">
-        Tooltip trigger with hover done by storybook. <br />
-        Click within canvas to make interactive.
+        Hover here to see tooltip after clicking somewhere outside.
       </Button>
     ),
   },
+  decorators: [
+    (Story: Story) => (
+      <div>
+        <p>
+          Click somewhere in this area to dismiss the tooltip, then hover over
+          the button to make it reappear.
+        </p>
+        <Story />
+      </div>
+    ),
+  ],
   parameters: {
     chromatic: {
       disableSnapshot: true,
     },
   },
   play: async () => {
+    // Expected warning for 'screen', as 'screen' works with story-utils
+    // Usage of 'within(canvasElement)' will be implemented with '@chanzuckerberg/story-utils' update
     const trigger = await screen.findByRole("button");
     await userEvent.hover(trigger);
   },

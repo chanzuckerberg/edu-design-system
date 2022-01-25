@@ -107,15 +107,18 @@ exports[`<Tooltip /> DarkVariant story renders snapshot 1`] = `
 exports[`<Tooltip /> Interactive story renders snapshot 1`] = `
 <body>
   <div>
-    <button
-      aria-describedby="tippy-8"
-      class="mx-32 my-32 button sizeLarge variantFlat colorBrand"
-      type="button"
-    >
-      Tooltip trigger with hover done by storybook. 
-      <br />
-      Click within canvas to make interactive.
-    </button>
+    <div>
+      <p>
+        Click somewhere in this area to dismiss the tooltip, then hover over the button to make it reappear.
+      </p>
+      <button
+        aria-describedby="tippy-8"
+        class="mx-32 my-32 button sizeLarge variantFlat colorBrand"
+        type="button"
+      >
+        Hover here to see tooltip after clicking somewhere outside.
+      </button>
+    </div>
   </div>
   <div
     data-tippy-root=""
