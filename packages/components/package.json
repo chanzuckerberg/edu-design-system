@@ -55,7 +55,7 @@
   },
   "devDependencies": {
     "@chanzuckerberg/axe-storybook-testing": "^5.0.0",
-    "@chanzuckerberg/story-utils": "^3.0.1",
+    "@chanzuckerberg/story-utils": "^3.0.4",
     "@storybook/addon-a11y": "^6.4.13",
     "@storybook/addon-essentials": "^6.4.13",
     "@storybook/addon-interactions": "^6.4.14",
