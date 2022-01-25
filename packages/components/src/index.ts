@@ -2,7 +2,7 @@ export { default as Banner } from "./Banner";
 export { default as Button } from "./Button";
 export { default as Checkbox } from "./Checkbox";
 export { default as ClickableStyle } from "./ClickableStyle";
-export { default as DropdownButton } from "./ClickableStyle";
+export { default as DropdownButton } from "./DropdownButton";
 export { default as Heading } from "./Heading";
 export { default as Link } from "./Link";
 export { default as SvgIcon } from "./SvgIcon";
