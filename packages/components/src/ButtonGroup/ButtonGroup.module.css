@@ -5,8 +5,7 @@
 }
 
 .spacing1x {
-  column-gap: 0.5rem;
-  row-gap: 0.5rem;
+  @apply gap-2;
 }
 
 .spacingMax {
