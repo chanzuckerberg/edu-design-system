@@ -1,5 +1,5 @@
 import type { Meta, Story, StoryObj } from "@storybook/react";
-import { screen, userEvent } from "@storybook/testing-library";
+import { within, userEvent } from "@storybook/testing-library";
 import * as React from "react";
 import Button from "../Button";
 import Tooltip from "./Tooltip";
@@ -80,7 +80,7 @@ export const LongButtonText: StoryObj<Args> = {
   },
 };
 
-export const Interactive = {
+export const Interactive: StoryObj<Args> = {
   args: {
     visible: undefined,
     children: (
@@ -105,10 +105,9 @@ export const Interactive = {
       disableSnapshot: true,
     },
   },
-  play: async () => {
-    // Expected warning for 'screen', as 'screen' works with story-utils
-    // Usage of 'within(canvasElement)' will be implemented with '@chanzuckerberg/story-utils' update
-    const trigger = await screen.findByRole("button");
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const trigger = await canvas.findByRole("button");
     await userEvent.hover(trigger);
   },
 };

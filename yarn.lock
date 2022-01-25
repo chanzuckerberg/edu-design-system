@@ -1562,7 +1562,7 @@ __metadata:
   dependencies:
     "@chanzuckerberg/axe-storybook-testing": ^5.0.0
     "@chanzuckerberg/eds-tokens": ^0.5.0
-    "@chanzuckerberg/story-utils": ^3.0.1
+    "@chanzuckerberg/story-utils": ^3.0.4
     "@storybook/addon-a11y": ^6.4.13
     "@storybook/addon-essentials": ^6.4.13
     "@storybook/addon-interactions": ^6.4.14
@@ -1617,16 +1617,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@chanzuckerberg/story-utils@npm:^3.0.1":
-  version: 3.0.1
-  resolution: "@chanzuckerberg/story-utils@npm:3.0.1"
+"@chanzuckerberg/story-utils@npm:^3.0.4":
+  version: 3.0.4
+  resolution: "@chanzuckerberg/story-utils@npm:3.0.4"
   dependencies:
-    "@storybook/testing-react": ^1.0.0
+    "@storybook/testing-react": ^1.2.3
   peerDependencies:
     "@storybook/react": ">=6.4.0"
     "@testing-library/react": ">=11.0.0"
     react: "*"
-  checksum: 8c035a2a66d11cbf0ddc9afb0ffc0305d815b590f1d24d249b5ecf073603b24b8ca259b0f5e83f0f74b5fa3fe7e5e043f92038ab3444d6add0149008c33a3372
+  checksum: 970bc8a348e1e2a0b0e8e05dbf18a2ea6ef788ce6fc7917250505bafc8477c1a430f42897ea049e792c401b5b3ac34a7d51374acea597a45929bb5b0f3c7eb85
   languageName: node
   linkType: hard
 
@@ -4924,18 +4924,6 @@ __metadata:
     "@testing-library/user-event": ^13.2.1
     ts-dedent: ^2.2.0
   checksum: 8fcc5971f731b44775bebc86bc51f875540f9f81c5a5a2ce51b6cf089d0409fd25ad1e6044e85c9f29c2eb707cb78862a688dda2abaac12103a233d07ccc18e1
-  languageName: node
-  linkType: hard
-
-"@storybook/testing-react@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "@storybook/testing-react@npm:1.0.0"
-  peerDependencies:
-    "@storybook/addons": ">=6.4.0-0"
-    "@storybook/client-api": ">=6.4.0-0"
-    "@storybook/react": ">=6.4.0-0"
-    react: ^16.8.0 || ^17.0.0
-  checksum: f86c3b11e090783927f3ebad39747df4f3e1841482de80c9c8a69602610a2afceec09e2eeb06d5a28094e279ec8758aa292a3cf7df0f1e792e957b514ccc18b9
   languageName: node
   linkType: hard
 
