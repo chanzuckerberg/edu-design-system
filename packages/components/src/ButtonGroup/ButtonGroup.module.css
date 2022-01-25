@@ -1,0 +1,23 @@
+.buttonGroup {
+  @apply inline-grid;
+
+  grid-auto-flow: column;
+}
+
+.spacing1x {
+  column-gap: 0.5rem;
+  row-gap: 0.5rem;
+}
+
+.spacingMax {
+  @apply w-full justify-between;
+}
+
+.vertical {
+  grid-auto-flow: row;
+}
+
+/* Hopefully no one actually ever uses this... */
+.spacingMax.vertical {
+  @apply w-auto h-full content-between;
+}
