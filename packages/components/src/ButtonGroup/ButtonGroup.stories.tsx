@@ -4,7 +4,6 @@ import Button from "../Button";
 import ButtonGroup from "./ButtonGroup";
 
 export default {
-  title: "ButtonGroup",
   component: ButtonGroup,
   args: {
     spacing: "1x" as const,

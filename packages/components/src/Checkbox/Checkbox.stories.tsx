@@ -8,7 +8,6 @@ const defaultArgs = {
 };
 
 export default {
-  title: "Checkbox",
   component: Checkbox,
   args: defaultArgs,
   argTypes: {

@@ -18,7 +18,6 @@ const defaultArgs = {
 };
 
 export default {
-  title: "Tooltip",
   component: Tooltip,
   args: defaultArgs,
 } as Meta<Args>;

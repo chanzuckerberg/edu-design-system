@@ -12,7 +12,6 @@ import styles from "./NotificationIcon.stories.module.css";
 const variants = Object.keys(variantToIconAssetsMap) as NotificationVariant[];
 
 export default {
-  title: "common/Notifications/NotificationIcon",
   component: NotificationIcon,
 };
 

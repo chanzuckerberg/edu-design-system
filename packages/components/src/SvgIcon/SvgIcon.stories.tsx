@@ -7,7 +7,6 @@ import SvgIcon from "./SvgIcon";
 import styles from "./SvgIcon.stories.module.css";
 
 export default {
-  title: "SvgIcon",
   component: SvgIcon,
 
   argTypes: {

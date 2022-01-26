@@ -3,7 +3,6 @@ import React from "react";
 import Toast from "./Toast";
 
 export default {
-  title: "Toast",
   component: Toast,
   argTypes: { onDismiss: { action: "dismissed" } },
   args: {

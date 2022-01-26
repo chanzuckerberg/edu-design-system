@@ -5,7 +5,6 @@ import Heading from "../Heading";
 import Banner from "./Banner";
 
 export default {
-  title: "Banner",
   component: Banner,
   argTypes: {
     elevation: {

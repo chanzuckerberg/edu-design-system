@@ -4,7 +4,6 @@ import Checkbox from "../Checkbox";
 import FormGroup from "./FormGroup";
 
 export default {
-  title: "FormGroup",
   component: FormGroup,
 };
 

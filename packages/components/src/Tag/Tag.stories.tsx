@@ -10,7 +10,6 @@ import styles from "./Tag.stories.module.css";
 const colorOptions = Object.keys(stylesByColor) as Color[];
 
 export default {
-  title: "Tag",
   component: Tag,
 
   argTypes: {
