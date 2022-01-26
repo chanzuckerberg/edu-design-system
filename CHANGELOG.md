@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.5.0...v0.6.0) (2022-01-26)
+
+
+### Features
+
+* migrate Tooltip component ([#801](https://github.com/chanzuckerberg/edu-design-system/issues/801)) ([9b68ee3](https://github.com/chanzuckerberg/edu-design-system/commit/9b68ee3d94e351b049baf5ce7b6776b8b018774d))
+
+
+
+
+
 # [0.5.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.4.10...v0.5.0) (2022-01-19)
 
 
