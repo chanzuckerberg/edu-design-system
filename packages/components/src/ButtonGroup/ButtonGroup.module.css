@@ -11,7 +11,7 @@
 }
 
 .vertical {
-  grid-auto-flow: row;
+  @apply grid-flow-row;
 }
 
 /* Hopefully no one actually ever uses this... */
