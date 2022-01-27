@@ -59,7 +59,7 @@ and then use them in your React components
 For any component, run
 
 ```bash
-yarn generateFlowtypes <Component>
+yarn generateFlowTypes <Component>
 ```
 
 to get automatically generated flowtypes.
