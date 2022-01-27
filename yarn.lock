@@ -1561,7 +1561,7 @@ __metadata:
   resolution: "@chanzuckerberg/eds-components@workspace:packages/components"
   dependencies:
     "@chanzuckerberg/axe-storybook-testing": ^5.0.0
-    "@chanzuckerberg/eds-tokens": ^0.6.0
+    "@chanzuckerberg/eds-tokens": ^0.7.0
     "@chanzuckerberg/story-utils": ^3.0.4
     "@storybook/addon-a11y": ^6.4.13
     "@storybook/addon-essentials": ^6.4.13
@@ -1601,7 +1601,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@chanzuckerberg/eds-tokens@^0.6.0, @chanzuckerberg/eds-tokens@workspace:packages/tokens":
+"@chanzuckerberg/eds-tokens@^0.7.0, @chanzuckerberg/eds-tokens@workspace:packages/tokens":
   version: 0.0.0-use.local
   resolution: "@chanzuckerberg/eds-tokens@workspace:packages/tokens"
   dependencies:
