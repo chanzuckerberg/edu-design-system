@@ -32,7 +32,11 @@ export default function ButtonGroup({
   spacing = "1x",
   orientation = "horizontal",
 }: Props) {
-  if (spacing === "max" && orientation === "vertical") {
+  if (
+    spacing === "max" &&
+    orientation === "vertical" &&
+    process.env.NODE_ENV !== "production"
+  ) {
     console.warn(
       "*** Weird prop combo warning ***: Are you sure you want max spacing *and* vertical orientation? It's a valid combination, but it's extremely unlikely to ever be used intentionally.",
     );
