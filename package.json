@@ -32,13 +32,13 @@
   "size-limit": [
     {
       "path": "packages/components/lib/**/*([a-zA-Z-_]).js",
-      "limit": "70KB",
+      "limit": "140KB",
       "name": "components",
       "webpack": false
     },
     {
       "path": "packages/components/lib/**/*([a-zA-Z-_]).css",
-      "limit": "70KB",
+      "limit": "140KB",
       "name": "styles",
       "webpack": false
     }
