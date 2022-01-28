@@ -58,11 +58,11 @@ type ItemsProps = {
 /**
  * Helper sub-component for styling the title at the top of the component.
  */
-const Title = ({
+const Title: React.FC<TitleProps> = ({
   children,
   as: Component = "legend",
   className,
-}: TitleProps) => {
+}) => {
   return (
     <Component className={clsx(className, styles.title)}>
       <Text size="sm" weight="bold">
@@ -75,7 +75,11 @@ const Title = ({
 /**
  * Helper sub-component for styling the form elements in the component.
  */
-const Items = ({ children, as: Component = "div", className }: ItemsProps) => {
+const Items: React.FC<ItemsProps> = ({
+  children,
+  as: Component = "div",
+  className,
+}) => {
   return (
     <Component className={clsx(className, styles.items)}>{children}</Component>
   );
@@ -103,5 +107,9 @@ function FormGroup({
 
 FormGroup.Title = Title;
 FormGroup.Items = Items;
+
+FormGroup.displayName = "FormGroup";
+FormGroup.Title.displayName = "FormGroup.Title";
+FormGroup.Items.displayName = "FormGroup.Items";
 
 export default FormGroup;
