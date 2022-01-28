@@ -62,7 +62,7 @@ const Title: React.FC<TitleProps> = ({
   children,
   as: Component = "legend",
   className,
-}: TitleProps) => {
+}) => {
   return (
     <Component className={clsx(className, styles.title)}>
       <Text size="sm" weight="bold">
@@ -79,7 +79,7 @@ const Items: React.FC<ItemsProps> = ({
   children,
   as: Component = "div",
   className,
-}: ItemsProps) => {
+}) => {
   return (
     <Component className={clsx(className, styles.items)}>{children}</Component>
   );
