@@ -1619,7 +1619,7 @@ __metadata:
     react-dom: ^16.14.0
     react-uid: ^2.3.1
     storybook-css-modules-preset: ^1.1.1
-    tailwindcss: ^2.2.7
+    tailwindcss: ^2.2.19
     ts-jest: ^27.1.3
     typescript: ^4.5.5
   peerDependencies:
@@ -20462,7 +20462,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:^2.2.7":
+"tailwindcss@npm:^2.2.19":
   version: 2.2.19
   resolution: "tailwindcss@npm:2.2.19"
   dependencies:
