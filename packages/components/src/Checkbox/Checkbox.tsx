@@ -146,6 +146,8 @@ export const CheckboxInput = React.forwardRef<HTMLInputElement, InputProps>(
   },
 );
 
+CheckboxInput.displayName = "CheckboxInput";
+
 /**
  * Label element, exported for greater flexibility. Can be used with any form input.
  */
