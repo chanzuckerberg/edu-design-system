@@ -1604,7 +1604,7 @@ __metadata:
     "@types/react": ^17.0.16
     autoprefixer: ^10.4.2
     axe-core: ^4.3.5
-    chromatic: ^6.4.3
+    chromatic: ^6.0.5
     clsx: ^1.1.1
     codecov: ^3.8.3
     flowgen: ^1.14.1
@@ -7507,7 +7507,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chromatic@npm:^6.4.3":
+"chromatic@npm:^6.0.5":
   version: 6.4.3
   resolution: "chromatic@npm:6.4.3"
   bin:
