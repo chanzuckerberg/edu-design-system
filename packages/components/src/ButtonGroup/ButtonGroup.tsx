@@ -52,7 +52,7 @@ export default function ButtonGroup({
         orientation === "vertical" && styles.vertical,
       )}
     >
-      <>{children}</>
+      {children}
     </div>
   );
 }
