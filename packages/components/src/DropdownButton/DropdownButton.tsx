@@ -19,7 +19,7 @@ const DropdownButton = forwardRef<HTMLButtonElement, Props>(
         ref={ref}
         {...rest}
       >
-        {children}
+        <span>{children}</span>
         <ExpandMoreRoundedIcon purpose="decorative" size="1.25rem" />
       </button>
     );

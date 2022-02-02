@@ -4,7 +4,9 @@ exports[`<DropdownButton /> Default story renders snapshot 1`] = `
 <button
   class="dropdownButton"
 >
-  Dropdown button
+  <span>
+    Dropdown button
+  </span>
   <svg
     aria-hidden="true"
     class="svgIcon"
