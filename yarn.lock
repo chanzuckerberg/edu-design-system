@@ -1589,6 +1589,7 @@ __metadata:
     "@chanzuckerberg/axe-storybook-testing": ^5.0.0
     "@chanzuckerberg/eds-tokens": ^0.7.0
     "@chanzuckerberg/story-utils": ^3.0.4
+    "@headlessui/react": ^1.4.3
     "@storybook/addon-a11y": ^6.4.17
     "@storybook/addon-essentials": ^6.4.17
     "@storybook/addon-interactions": ^6.4.17
@@ -2065,6 +2066,16 @@ __metadata:
   version: 1.1.2
   resolution: "@gar/promisify@npm:1.1.2"
   checksum: d05081e0887a49c178b75ee3067bd6ee086f73c154d121b854fb2e044e8a89cb1cbb6de3a0dd93a519b80f0531fda68b099dd7256205f7fbb3490324342f2217
+  languageName: node
+  linkType: hard
+
+"@headlessui/react@npm:^1.4.3":
+  version: 1.4.3
+  resolution: "@headlessui/react@npm:1.4.3"
+  peerDependencies:
+    react: ^16 || ^17 || ^18
+    react-dom: ^16 || ^17 || ^18
+  checksum: 0c55bba6dc09a81576ec7d41320e3beb57b3f4576637ac4aad6048af851d5fe5434fd0d10dfb5c7b2db16eca6ded5eb3368822ddb87ff4dcb99fc3592ef63b0a
   languageName: node
   linkType: hard
 
