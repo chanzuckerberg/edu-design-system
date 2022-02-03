@@ -1,0 +1,47 @@
+.dropdown {
+  @apply relative bg-white;
+}
+
+.dropdownOptions {
+  @apply w-full absolute bg-white mt-2 py-2 rounded shadow-2 z-10;
+}
+
+.dropdownOption {
+  @apply cursor-pointer py-2 pr-6;
+
+  /* Allow the option text and the selected icon to be easily aligned. */
+  @apply flex;
+}
+
+.dropdownOptionActive {
+  @apply bg-neutral-200;
+}
+
+.dropdownOptionDisabled {
+  @apply cursor-not-allowed text-neutral-300;
+}
+
+.dropdownOptionSelected {
+  @apply font-bold;
+}
+
+.dropdownOptionUnselected {
+  @apply pl-12;
+}
+
+.selectedIconContainer {
+  @apply text-brand-500;
+
+  /* Take up the same amount of space as an unselected option's padding-left. */
+  @apply flex-shrink-0 w-12;
+
+  /* Position the contained icon. It's shifted slightly to the right from center so that the
+     checkmark's visual "center of mass" is centered. */
+  @apply pl-2 inline-flex items-center justify-center;
+}
+
+.dropdownOptionContent {
+  /* Wrap overflowing content onto multiple lines. We're doing this instead of truncating so that
+     users can still see all the content. */
+  @apply break-normal;
+}
