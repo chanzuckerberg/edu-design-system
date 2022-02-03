@@ -19,7 +19,9 @@ const DropdownButton = forwardRef<HTMLButtonElement, Props>(
         ref={ref}
         {...rest}
       >
-        {children}
+        {/* Wrapping span ensures that `children` and icon will be correctly pushed to
+            either side of the button even if `children` contains more than one element. */}
+        <span>{children}</span>
         <ExpandMoreRoundedIcon purpose="decorative" size="1.25rem" />
       </button>
     );
