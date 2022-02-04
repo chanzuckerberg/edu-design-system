@@ -54,9 +54,15 @@ jobs:
         # `--storybook-build-dir` which prevents Chromatic's Storybook build and uses a pre-built Storybook
         # and `--only-changed` which enables Chromatic TurboSnap
         # https://github.com/chromaui/chromatic-cli/issues/403
-        # Once fixed, Storybook build should be its own step for modularity
+        # Once fixed, Storybook build can be its own step for modularity
       - name: Build Storybook and Publish to Chromatic
-        run: yarn workspace @chanzuckerberg/eds-components chromatic --project-token=${{ secrets.CHROMATIC_PROJECT_TOKEN }} --output-dir storybook-static --exit-zero-on-changes --skip 'dependabot/**'
+        run: |
+          yarn workspace @chanzuckerberg/eds-components chromatic \
+            --project-token=${{ secrets.CHROMATIC_PROJECT_TOKEN }} \
+            --output-dir storybook-static \
+            --exit-zero-on-changes \
+            --exit-once-uploaded \
+            --skip 'dependabot/**'
       - name: Run Accessibility Tests 💛
         run: yarn workspace @chanzuckerberg/eds-components run storybook:axeOnly
 
