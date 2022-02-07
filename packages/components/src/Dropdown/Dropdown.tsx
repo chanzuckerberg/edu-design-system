@@ -191,8 +191,14 @@ const DropdownOption = function (props: DropdownOptionProps) {
   );
 };
 
+const DropdownLabel = (props: {
+  as?: React.ElementType;
+  className?: string;
+  children: React.ReactNode;
+}) => <Listbox.Label {...props} />;
+
 Dropdown.Button = DropdownTrigger;
-Dropdown.Label = Listbox.Label;
+Dropdown.Label = DropdownLabel;
 Dropdown.Option = DropdownOption;
 Dropdown.Options = DropdownOptions;
 
