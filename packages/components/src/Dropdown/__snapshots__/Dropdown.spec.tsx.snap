@@ -1,0 +1,436 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Dropdown /> Default story renders snapshot 1`] = `
+<div
+  class="dropdown w-60"
+  data-testid="dropdown"
+>
+  <label
+    id="headlessui-listbox-label-1"
+  >
+    Favorite Animal
+  </label>
+  <button
+    aria-controls="headlessui-listbox-options-3"
+    aria-expanded="true"
+    aria-haspopup="true"
+    aria-labelledby="headlessui-listbox-label-1 headlessui-listbox-button-2"
+    class="dropdownButton"
+    id="headlessui-listbox-button-2"
+    type="button"
+  >
+    <span>
+      Select
+    </span>
+    <svg
+      aria-hidden="true"
+      class="svgIcon"
+      fill="currentColor"
+      height="1.25rem"
+      style="--svg-icon-size: 1.25rem;"
+      viewBox="0 0 24 24"
+      width="1.25rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M15.88 9.29L12 13.17 8.12 9.29a.9959.9959 0 00-1.41 0c-.39.39-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41-.39-.38-1.03-.39-1.42 0z"
+      />
+    </svg>
+  </button>
+  <ul
+    aria-labelledby="headlessui-listbox-label-1"
+    aria-orientation="vertical"
+    class="dropdownOptions"
+    id="headlessui-listbox-options-3"
+    role="listbox"
+    tabindex="0"
+  >
+    <li
+      class="dropdownOption dropdownOptionUnselected"
+      id="headlessui-listbox-option-4"
+      role="option"
+      tabindex="-1"
+    >
+      <span
+        class="dropdownOptionContent"
+      >
+        Dogs
+      </span>
+    </li>
+    <li
+      class="dropdownOption dropdownOptionUnselected"
+      id="headlessui-listbox-option-5"
+      role="option"
+      tabindex="-1"
+    >
+      <span
+        class="dropdownOptionContent"
+      >
+        Cats
+      </span>
+    </li>
+    <li
+      class="dropdownOption dropdownOptionUnselected"
+      id="headlessui-listbox-option-6"
+      role="option"
+      tabindex="-1"
+    >
+      <span
+        class="dropdownOptionContent"
+      >
+        Birds
+      </span>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`<Dropdown /> DefaultWithoutVisibleLabel story renders snapshot 1`] = `
+<div
+  aria-label="Favorite Animal"
+  class="dropdown w-60"
+  data-testid="dropdown"
+>
+  <button
+    aria-controls="headlessui-listbox-options-8"
+    aria-expanded="true"
+    aria-haspopup="true"
+    class="dropdownButton"
+    id="headlessui-listbox-button-7"
+    type="button"
+  >
+    <span>
+      Select
+    </span>
+    <svg
+      aria-hidden="true"
+      class="svgIcon"
+      fill="currentColor"
+      height="1.25rem"
+      style="--svg-icon-size: 1.25rem;"
+      viewBox="0 0 24 24"
+      width="1.25rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M15.88 9.29L12 13.17 8.12 9.29a.9959.9959 0 00-1.41 0c-.39.39-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41-.39-.38-1.03-.39-1.42 0z"
+      />
+    </svg>
+  </button>
+  <ul
+    aria-labelledby="headlessui-listbox-button-7"
+    aria-orientation="vertical"
+    class="dropdownOptions"
+    id="headlessui-listbox-options-8"
+    role="listbox"
+    tabindex="0"
+  >
+    <li
+      class="dropdownOption dropdownOptionUnselected"
+      id="headlessui-listbox-option-9"
+      role="option"
+      tabindex="-1"
+    >
+      <span
+        class="dropdownOptionContent"
+      >
+        Dogs
+      </span>
+    </li>
+    <li
+      class="dropdownOption dropdownOptionUnselected"
+      id="headlessui-listbox-option-10"
+      role="option"
+      tabindex="-1"
+    >
+      <span
+        class="dropdownOptionContent"
+      >
+        Cats
+      </span>
+    </li>
+    <li
+      class="dropdownOption dropdownOptionUnselected"
+      id="headlessui-listbox-option-11"
+      role="option"
+      tabindex="-1"
+    >
+      <span
+        class="dropdownOptionContent"
+      >
+        Birds
+      </span>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`<Dropdown /> UsingChildrenProp story renders snapshot 1`] = `
+<div
+  class="dropdown w-60"
+  data-testid="dropdown"
+>
+  <label
+    id="headlessui-listbox-label-12"
+  >
+    Favorite Animal
+  </label>
+  <button
+    aria-controls="headlessui-listbox-options-14"
+    aria-expanded="true"
+    aria-haspopup="true"
+    aria-labelledby="headlessui-listbox-label-12 headlessui-listbox-button-13"
+    class="dropdownButton"
+    id="headlessui-listbox-button-13"
+    type="button"
+  >
+    <span>
+      Select
+    </span>
+    <svg
+      aria-hidden="true"
+      class="svgIcon"
+      fill="currentColor"
+      height="1.25rem"
+      style="--svg-icon-size: 1.25rem;"
+      viewBox="0 0 24 24"
+      width="1.25rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M15.88 9.29L12 13.17 8.12 9.29a.9959.9959 0 00-1.41 0c-.39.39-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41-.39-.38-1.03-.39-1.42 0z"
+      />
+    </svg>
+  </button>
+  <ul
+    aria-labelledby="headlessui-listbox-label-12"
+    aria-orientation="vertical"
+    class="dropdownOptions"
+    id="headlessui-listbox-options-14"
+    role="listbox"
+    tabindex="0"
+  >
+    <li
+      class="dropdownOption dropdownOptionUnselected"
+      id="headlessui-listbox-option-15"
+      role="option"
+      tabindex="-1"
+    >
+      <span
+        class="dropdownOptionContent"
+      >
+        Dogs
+      </span>
+    </li>
+    <li
+      class="dropdownOption dropdownOptionUnselected"
+      id="headlessui-listbox-option-16"
+      role="option"
+      tabindex="-1"
+    >
+      <span
+        class="dropdownOptionContent"
+      >
+        Cats
+      </span>
+    </li>
+    <li
+      class="dropdownOption dropdownOptionUnselected"
+      id="headlessui-listbox-option-17"
+      role="option"
+      tabindex="-1"
+    >
+      <span
+        class="dropdownOptionContent"
+      >
+        Birds
+      </span>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`<Dropdown /> UsingChildrenPropAndNoVisibleLabel story renders snapshot 1`] = `
+<div
+  aria-label="Favorite Animal"
+  class="dropdown w-60"
+  data-testid="dropdown"
+>
+  <button
+    aria-controls="headlessui-listbox-options-19"
+    aria-expanded="true"
+    aria-haspopup="true"
+    class="dropdownButton"
+    id="headlessui-listbox-button-18"
+    type="button"
+  >
+    <span>
+      Select
+    </span>
+    <svg
+      aria-hidden="true"
+      class="svgIcon"
+      fill="currentColor"
+      height="1.25rem"
+      style="--svg-icon-size: 1.25rem;"
+      viewBox="0 0 24 24"
+      width="1.25rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M15.88 9.29L12 13.17 8.12 9.29a.9959.9959 0 00-1.41 0c-.39.39-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41-.39-.38-1.03-.39-1.42 0z"
+      />
+    </svg>
+  </button>
+  <ul
+    aria-labelledby="headlessui-listbox-button-18"
+    aria-orientation="vertical"
+    class="dropdownOptions"
+    id="headlessui-listbox-options-19"
+    role="listbox"
+    tabindex="0"
+  >
+    <li
+      class="dropdownOption dropdownOptionUnselected"
+      id="headlessui-listbox-option-20"
+      role="option"
+      tabindex="-1"
+    >
+      <span
+        class="dropdownOptionContent"
+      >
+        Dogs
+      </span>
+    </li>
+    <li
+      class="dropdownOption dropdownOptionUnselected"
+      id="headlessui-listbox-option-21"
+      role="option"
+      tabindex="-1"
+    >
+      <span
+        class="dropdownOptionContent"
+      >
+        Cats
+      </span>
+    </li>
+    <li
+      class="dropdownOption dropdownOptionUnselected"
+      id="headlessui-listbox-option-22"
+      role="option"
+      tabindex="-1"
+    >
+      <span
+        class="dropdownOptionContent"
+      >
+        Birds
+      </span>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`<Dropdown /> renders the OpenByDefault story 1`] = `
+<div
+  class="dropdown w-60"
+  data-testid="dropdown"
+>
+  <label
+    id="headlessui-listbox-label-23"
+  >
+    Favorite Animal
+  </label>
+  <button
+    aria-controls="headlessui-listbox-options-25"
+    aria-expanded="true"
+    aria-haspopup="true"
+    aria-labelledby="headlessui-listbox-label-23 headlessui-listbox-button-24"
+    class="dropdownButton"
+    id="headlessui-listbox-button-24"
+    type="button"
+  >
+    <span>
+      Cats
+    </span>
+    <svg
+      aria-hidden="true"
+      class="svgIcon"
+      fill="currentColor"
+      height="1.25rem"
+      style="--svg-icon-size: 1.25rem;"
+      viewBox="0 0 24 24"
+      width="1.25rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M15.88 9.29L12 13.17 8.12 9.29a.9959.9959 0 00-1.41 0c-.39.39-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41-.39-.38-1.03-.39-1.42 0z"
+      />
+    </svg>
+  </button>
+  <ul
+    aria-activedescendant="headlessui-listbox-option-30"
+    aria-labelledby="headlessui-listbox-label-23"
+    aria-orientation="vertical"
+    class="dropdownOptions"
+    id="headlessui-listbox-options-25"
+    role="listbox"
+    tabindex="0"
+  >
+    <li
+      class="dropdownOption dropdownOptionUnselected"
+      id="headlessui-listbox-option-29"
+      role="option"
+      tabindex="-1"
+    >
+      <span
+        class="dropdownOptionContent"
+      >
+        Dogs
+      </span>
+    </li>
+    <li
+      aria-selected="true"
+      class="dropdownOption dropdownOptionActive dropdownOptionSelected"
+      id="headlessui-listbox-option-30"
+      role="option"
+      tabindex="-1"
+    >
+      <span
+        class="selectedIconContainer"
+      >
+        <svg
+          aria-hidden="true"
+          class="svgIcon"
+          fill="currentColor"
+          height="1.25rem"
+          style="--svg-icon-size: 1.25rem;"
+          viewBox="0 0 24 24"
+          width="1.25rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M9 16.17L5.53 12.7a.9959.9959 0 00-1.41 0c-.39.39-.39 1.02 0 1.41l4.18 4.18c.39.39 1.02.39 1.41 0L20.29 7.71c.39-.39.39-1.02 0-1.41a.9959.9959 0 00-1.41 0L9 16.17z"
+          />
+        </svg>
+      </span>
+      <span
+        class="dropdownOptionContent"
+      >
+        Cats
+      </span>
+    </li>
+    <li
+      class="dropdownOption dropdownOptionUnselected"
+      id="headlessui-listbox-option-31"
+      role="option"
+      tabindex="-1"
+    >
+      <span
+        class="dropdownOptionContent"
+      >
+        Birds
+      </span>
+    </li>
+  </ul>
+</div>
+`;
