@@ -107,4 +107,76 @@ describe("<Dropdown />", () => {
 
     expect(renderMethod).toThrow(Error);
   });
+
+  it("does not throw an error if dropdown uses labelText", () => {
+    const dropdownWithLabelText = (
+      <Dropdown
+        buttonText="Select"
+        labelText="Options:"
+        onChange={() => undefined}
+        options={exampleOptions}
+        value={exampleOptions[0]}
+      />
+    );
+    const renderMethod = () => {
+      render(dropdownWithLabelText);
+    };
+
+    expect(renderMethod).not.toThrow(Error);
+  });
+
+  it("does not throw an error if dropdown uses aria-label", () => {
+    const dropdownWithAriaLabel = (
+      <Dropdown
+        buttonText="Select"
+        labelText="Options:"
+        onChange={() => undefined}
+        options={exampleOptions}
+        value={exampleOptions[0]}
+      />
+    );
+    const renderMethod = () => {
+      render(dropdownWithAriaLabel);
+    };
+
+    expect(renderMethod).not.toThrow(Error);
+  });
+
+  it("does not throw an error if dropdown uses <Dropdown.Label>", () => {
+    const dropdownWithDropdownLabel = (
+      <Dropdown onChange={() => undefined} value={exampleOptions[0]}>
+        <Dropdown.Label>Options:</Dropdown.Label>
+        <Dropdown.Button>Select</Dropdown.Button>
+
+        <Dropdown.Options>
+          {exampleOptions.map((option) => (
+            <Dropdown.Option key={option.id} value={option}>
+              {option.label}
+            </Dropdown.Option>
+          ))}
+        </Dropdown.Options>
+      </Dropdown>
+    );
+    const renderMethod = () => {
+      render(dropdownWithDropdownLabel);
+    };
+
+    expect(renderMethod).not.toThrow(Error);
+  });
+
+  it("does throw an error if modal does not use <Modal.Title> or aria-label", () => {
+    const dropdownWithoutLabel = (
+      <Dropdown
+        buttonText="Select"
+        onChange={() => undefined}
+        options={exampleOptions}
+        value={exampleOptions[0]}
+      />
+    );
+    const renderMethod = () => {
+      render(dropdownWithoutLabel);
+    };
+
+    expect(renderMethod).toThrow(Error);
+  });
 });
