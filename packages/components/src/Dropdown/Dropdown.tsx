@@ -64,6 +64,25 @@ type DropdownOptionProps = {
     | RenderProp<{ active: boolean; disabled: boolean; selected: boolean }>;
 };
 
+function childrenHaveLabelComponent(children?: ReactNode): boolean {
+  const childrenArray = React.Children.toArray(children);
+  return childrenArray.some((child) => {
+    if (typeof child === "string" || typeof child === "number") {
+      return false;
+    } else if (
+      "props" in child &&
+      child.type &&
+      typeof child.type !== "string" &&
+      child.type?.name === "DropdownLabel"
+    ) {
+      return true;
+    } else if ("props" in child && child.props.children) {
+      return childrenHaveLabelComponent(child.props.children);
+    }
+    return false;
+  });
+}
+
 /**
  * EDS Dropdown. Used to select one option from a list of options.
  *
@@ -156,6 +175,11 @@ function Dropdown(props: DropdownProps) {
       throw new Error(
         "If you do not pass in `children`, you must pass in both `buttonText` and `options`.",
       );
+    }
+
+    const childrenHaveLabel = children && childrenHaveLabelComponent(children);
+    if (!labelText && !props["aria-label"] && !childrenHaveLabel) {
+      throw new Error("You must provide a visible label or `aria-label`.");
     }
   }
 
