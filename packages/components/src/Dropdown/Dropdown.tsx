@@ -3,6 +3,7 @@ import clsx from "clsx";
 import React, { ReactNode, ComponentProps } from "react";
 import DropdownButton from "../DropdownButton";
 import CheckRoundedIcon from "../Icons/CheckRounded";
+import Text from "../Text";
 import styles from "./Dropdown.module.css";
 
 type Option = { id: string; label: string };
@@ -158,7 +159,7 @@ function Dropdown(props: DropdownProps) {
     }
   }
 
-  const label = labelText && <Listbox.Label>{labelText}</Listbox.Label>;
+  const label = labelText && <DropdownLabel>{labelText}</DropdownLabel>;
 
   const trigger = buttonText && <DropdownTrigger>{buttonText}</DropdownTrigger>;
 
@@ -194,6 +195,22 @@ function Dropdown(props: DropdownProps) {
     </Listbox>
   );
 }
+
+const DropdownLabel = (props: {
+  as?: React.ElementType;
+  className?: string;
+  children: React.ReactNode;
+}) => {
+  const { children, className, as } = props;
+
+  return (
+    <Listbox.Label as={as}>
+      <Text size="sm" weight="bold" className={className} color="neutral">
+        {children}
+      </Text>
+    </Listbox.Label>
+  );
+};
 
 const DropdownTrigger = function (
   props: PropsWithRenderProp<{ disabled: boolean; open: boolean }>,
@@ -272,12 +289,6 @@ const DropdownOption = function (props: DropdownOptionProps) {
     </Listbox.Option>
   );
 };
-
-const DropdownLabel = (props: {
-  as?: React.ElementType;
-  className?: string;
-  children: React.ReactNode;
-}) => <Listbox.Label {...props} />;
 
 Dropdown.Button = DropdownTrigger;
 Dropdown.Label = DropdownLabel;

@@ -8,7 +8,11 @@ exports[`<Dropdown /> Default story renders snapshot 1`] = `
   <label
     id="headlessui-listbox-label-1"
   >
-    Favorite Animal
+    <p
+      class="typography sizeSm colorNeutral weightBold"
+    >
+      Favorite Animal
+    </p>
   </label>
   <button
     aria-controls="headlessui-listbox-options-3"
@@ -173,7 +177,11 @@ exports[`<Dropdown /> UsingChildrenProp story renders snapshot 1`] = `
   <label
     id="headlessui-listbox-label-12"
   >
-    Favorite Animal
+    <p
+      class="typography sizeSm colorNeutral weightBold"
+    >
+      Favorite Animal
+    </p>
   </label>
   <button
     aria-controls="headlessui-listbox-options-14"
@@ -338,7 +346,11 @@ exports[`<Dropdown /> renders the OpenByDefault story 1`] = `
   <label
     id="headlessui-listbox-label-23"
   >
-    Favorite Animal
+    <p
+      class="typography sizeSm colorNeutral weightBold"
+    >
+      Favorite Animal
+    </p>
   </label>
   <button
     aria-controls="headlessui-listbox-options-25"
