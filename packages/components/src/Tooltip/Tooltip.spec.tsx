@@ -7,14 +7,13 @@ import * as TooltipStoryFile from "./Tooltip.stories";
 
 const { Interactive } = composeStories(TooltipStoryFile);
 
-describe("<Tooltip /> snaps", () => {
+describe("<Tooltip />", () => {
   generateSnapshots(TooltipStoryFile, {
     getElement: (wrapper) => {
       return wrapper.baseElement;
     },
   });
-});
-describe("<Tooltip />", () => {
+
   it("should close tooltip via escape key", async () => {
     // @ts-expect-error Animation prop exists on Tippy but not exposed on Tooltip,
     // Test fails if animation is enabled https://github.com/atomiks/tippyjs-react/blob/master/test/Tippy.test.js#L65
