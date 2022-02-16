@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Tooltip /> BottomPlacement story renders snapshot 1`] = `
+exports[`<Tooltip /> snaps BottomPlacement story renders snapshot 1`] = `
 <body>
   <div>
     <button
@@ -33,7 +33,9 @@ exports[`<Tooltip /> BottomPlacement story renders snapshot 1`] = `
         style="transition-duration: 200ms;"
       >
         <div>
-          <span>
+          <span
+            data-testid="tooltip-content"
+          >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
              
             <b>
@@ -52,7 +54,7 @@ exports[`<Tooltip /> BottomPlacement story renders snapshot 1`] = `
 </body>
 `;
 
-exports[`<Tooltip /> DarkVariant story renders snapshot 1`] = `
+exports[`<Tooltip /> snaps DarkVariant story renders snapshot 1`] = `
 <body>
   <div>
     <button
@@ -85,7 +87,9 @@ exports[`<Tooltip /> DarkVariant story renders snapshot 1`] = `
         style="transition-duration: 200ms;"
       >
         <div>
-          <span>
+          <span
+            data-testid="tooltip-content"
+          >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
              
             <b>
@@ -104,7 +108,7 @@ exports[`<Tooltip /> DarkVariant story renders snapshot 1`] = `
 </body>
 `;
 
-exports[`<Tooltip /> Interactive story renders snapshot 1`] = `
+exports[`<Tooltip /> snaps Interactive story renders snapshot 1`] = `
 <body>
   <div>
     <div>
@@ -142,7 +146,9 @@ exports[`<Tooltip /> Interactive story renders snapshot 1`] = `
         style="transition-duration: 200ms;"
       >
         <div>
-          <span>
+          <span
+            data-testid="tooltip-content"
+          >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
              
             <b>
@@ -161,7 +167,7 @@ exports[`<Tooltip /> Interactive story renders snapshot 1`] = `
 </body>
 `;
 
-exports[`<Tooltip /> LeftPlacement story renders snapshot 1`] = `
+exports[`<Tooltip /> snaps LeftPlacement story renders snapshot 1`] = `
 <body>
   <div>
     <button
@@ -194,7 +200,9 @@ exports[`<Tooltip /> LeftPlacement story renders snapshot 1`] = `
         style="transition-duration: 200ms;"
       >
         <div>
-          <span>
+          <span
+            data-testid="tooltip-content"
+          >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
              
             <b>
@@ -213,7 +221,7 @@ exports[`<Tooltip /> LeftPlacement story renders snapshot 1`] = `
 </body>
 `;
 
-exports[`<Tooltip /> LightVariant story renders snapshot 1`] = `
+exports[`<Tooltip /> snaps LightVariant story renders snapshot 1`] = `
 <body>
   <div>
     <button
@@ -246,7 +254,9 @@ exports[`<Tooltip /> LightVariant story renders snapshot 1`] = `
         style="transition-duration: 200ms;"
       >
         <div>
-          <span>
+          <span
+            data-testid="tooltip-content"
+          >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
              
             <b>
@@ -265,7 +275,7 @@ exports[`<Tooltip /> LightVariant story renders snapshot 1`] = `
 </body>
 `;
 
-exports[`<Tooltip /> LongButtonText story renders snapshot 1`] = `
+exports[`<Tooltip /> snaps LongButtonText story renders snapshot 1`] = `
 <body>
   <div>
     <button
@@ -298,7 +308,9 @@ exports[`<Tooltip /> LongButtonText story renders snapshot 1`] = `
         style="transition-duration: 200ms;"
       >
         <div>
-          <span>
+          <span
+            data-testid="tooltip-content"
+          >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
              
             <b>
@@ -317,7 +329,7 @@ exports[`<Tooltip /> LongButtonText story renders snapshot 1`] = `
 </body>
 `;
 
-exports[`<Tooltip /> LongText story renders snapshot 1`] = `
+exports[`<Tooltip /> snaps LongText story renders snapshot 1`] = `
 <body>
   <div>
     <button
@@ -369,7 +381,7 @@ exports[`<Tooltip /> LongText story renders snapshot 1`] = `
 </body>
 `;
 
-exports[`<Tooltip /> TopPlacement story renders snapshot 1`] = `
+exports[`<Tooltip /> snaps TopPlacement story renders snapshot 1`] = `
 <body>
   <div>
     <button
@@ -402,7 +414,9 @@ exports[`<Tooltip /> TopPlacement story renders snapshot 1`] = `
         style="transition-duration: 200ms;"
       >
         <div>
-          <span>
+          <span
+            data-testid="tooltip-content"
+          >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
              
             <b>

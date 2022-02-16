@@ -56,6 +56,9 @@ type TooltipProps = {
   delay?: number | [number | null, number | null];
 };
 
+type Plugins = NonNullable<React.ComponentProps<typeof Tippy>["plugins"]>;
+type Plugin = Plugins[0];
+
 /**
  * A styled tooltip built on Tippy.js.
  *
@@ -68,6 +71,25 @@ export default function Tooltip({
   className,
   ...rest
 }: TooltipProps) {
+  const hideOnEsc: Plugin = {
+    name: "hideOnEsc",
+    defaultValue: true,
+    fn: ({ hide }) => {
+      function onKeyDown(event: KeyboardEvent) {
+        if (event.code === "Escape") {
+          hide();
+        }
+      }
+      return {
+        onShow() {
+          document.addEventListener("keydown", onKeyDown);
+        },
+        onHide() {
+          document.removeEventListener("keydown", onKeyDown);
+        },
+      };
+    },
+  };
   return (
     <Tippy
       {...rest}
@@ -79,6 +101,7 @@ export default function Tooltip({
       )}
       duration={200}
       placement={placement}
+      plugins={[hideOnEsc]}
     />
   );
 }
