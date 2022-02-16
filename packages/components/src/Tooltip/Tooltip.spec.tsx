@@ -9,6 +9,7 @@ const { Interactive } = composeStories(TooltipStoryFile);
 
 describe("<Tooltip />", () => {
   generateSnapshots(TooltipStoryFile, {
+    // Tippy renders tooltip as a child of <body> and hence is why baseElement needs to be targetted
     getElement: (wrapper) => {
       return wrapper.baseElement;
     },
