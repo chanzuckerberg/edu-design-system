@@ -54,6 +54,12 @@ type TooltipProps = {
    * https://atomiks.github.io/tippyjs/v6/all-props/#delay
    */
   delay?: number | [number | null, number | null];
+  /**
+   * Behavior of the tooltip transition, defaults to an opacity "fade".
+   * Animation guidelines are provided in https://atomiks.github.io/tippyjs/v5/animations/.
+   * A false value will disable animations.
+   */
+  animation?: string | boolean;
 };
 
 // @tippyjs/react does not expose tippy.js types, have to extract via props and grab element type from array type

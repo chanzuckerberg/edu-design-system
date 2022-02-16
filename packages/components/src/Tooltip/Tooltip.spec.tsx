@@ -15,7 +15,6 @@ describe("<Tooltip />", () => {
   });
 
   it("should close tooltip via escape key", async () => {
-    // @ts-expect-error Animation prop exists on Tippy but not exposed on Tooltip,
     // Test fails if animation is enabled https://github.com/atomiks/tippyjs-react/blob/master/test/Tippy.test.js#L65
     render(<Interactive animation={false} />);
     const trigger = await screen.findByRole("button");
