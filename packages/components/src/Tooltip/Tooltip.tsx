@@ -54,7 +54,17 @@ type TooltipProps = {
    * https://atomiks.github.io/tippyjs/v6/all-props/#delay
    */
   delay?: number | [number | null, number | null];
+  /**
+   * Behavior of the tooltip transition, defaults to an opacity "fade".
+   * Animation guidelines are provided in https://atomiks.github.io/tippyjs/v5/animations/.
+   * A false value will disable animations.
+   */
+  animation?: string | boolean;
 };
+
+// @tippyjs/react does not expose tippy.js types, have to extract via props and grab element type from array type
+type Plugins = NonNullable<React.ComponentProps<typeof Tippy>["plugins"]>;
+type Plugin = Plugins[number];
 
 /**
  * A styled tooltip built on Tippy.js.
@@ -68,6 +78,27 @@ export default function Tooltip({
   className,
   ...rest
 }: TooltipProps) {
+  // Hides tooltip when escape key is pressed, following:
+  // https://atomiks.github.io/tippyjs/v6/plugins/#hideonesc
+  const hideOnEsc: Plugin = {
+    name: "hideOnEsc",
+    defaultValue: true,
+    fn: ({ hide }) => {
+      function onKeyDown(event: KeyboardEvent) {
+        if (event.key === "Escape") {
+          hide();
+        }
+      }
+      return {
+        onShow() {
+          document.addEventListener("keydown", onKeyDown);
+        },
+        onHide() {
+          document.removeEventListener("keydown", onKeyDown);
+        },
+      };
+    },
+  };
   return (
     <Tippy
       {...rest}
@@ -79,6 +110,7 @@ export default function Tooltip({
       )}
       duration={200}
       placement={placement}
+      plugins={[hideOnEsc]}
     />
   );
 }

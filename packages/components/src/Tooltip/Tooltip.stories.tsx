@@ -6,7 +6,7 @@ import Tooltip from "./Tooltip";
 
 const defaultArgs = {
   content: (
-    <span>
+    <span data-testid="tooltip-content">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
       <b>Donec a erat eu augue consequat eleifend non vel sem.</b> Praesent
       efficitur mauris ac leo semper accumsan.
