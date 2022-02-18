@@ -2,6 +2,7 @@ export { default as Banner } from "./Banner";
 export { default as Button } from "./Button";
 export { default as ButtonGroup } from "./ButtonGroup";
 export { default as Checkbox } from "./Checkbox";
+export { default as CloseButton } from "./CloseButton";
 export { default as ClickableStyle } from "./ClickableStyle";
 export { default as DropdownButton } from "./DropdownButton";
 export { default as FormGroup } from "./FormGroup";
