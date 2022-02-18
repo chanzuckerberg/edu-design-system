@@ -109,54 +109,28 @@
         "100": "var(--legacy-color-gray-100)",
         "200": "var(--legacy-color-gray-200)",
         "300": "var(--legacy-color-gray-300)",
-        "400": "var(--legacy-color-gray-400)",
         "500": "var(--legacy-color-gray-500)",
-        "600": "var(--legacy-color-gray-600)",
         "700": "var(--legacy-color-gray-700)",
-        "800": "var(--legacy-color-gray-800)",
-        "900": "var(--legacy-color-gray-900)",
         "1000": "var(--legacy-color-gray-1000)"
       },
       "black": "var(--legacy-color-black)",
-      "white": "var(--legacy-color-white)",
       "red": {
         "100": "var(--legacy-color-red-100)",
-        "150": "var(--legacy-color-red-150)",
-        "200": "var(--legacy-color-red-200)",
-        "300": "var(--legacy-color-red-300)",
-        "350": "var(--legacy-color-red-350)",
-        "400": "var(--legacy-color-red-400)"
+        "200": "var(--legacy-color-red-200)"
       },
       "green": {
         "100": "var(--legacy-color-green-100)",
-        "150": "var(--legacy-color-green-150)",
         "200": "var(--legacy-color-green-200)",
-        "300": "var(--legacy-color-green-300)",
-        "350": "var(--legacy-color-green-350)",
-        "400": "var(--legacy-color-green-400)"
-      },
-      "blue": {
-        "100": "var(--legacy-color-blue-100)",
-        "150": "var(--legacy-color-blue-150)",
-        "200": "var(--legacy-color-blue-200)",
-        "300": "var(--legacy-color-blue-300)",
-        "350": "var(--legacy-color-blue-350)",
-        "400": "var(--legacy-color-blue-400)"
+        "300": "var(--legacy-color-green-300)"
       },
       "yellow": {
-        "100": "var(--legacy-color-yellow-100)",
-        "150": "var(--legacy-color-yellow-150)",
         "200": "var(--legacy-color-yellow-200)",
         "300": "var(--legacy-color-yellow-300)",
-        "350": "var(--legacy-color-yellow-350)",
         "400": "var(--legacy-color-yellow-400)"
       },
       "purple": {
-        "100": "var(--legacy-color-purple-100)",
-        "150": "var(--legacy-color-purple-150)",
         "200": "var(--legacy-color-purple-200)",
         "300": "var(--legacy-color-purple-300)",
-        "350": "var(--legacy-color-purple-350)",
         "400": "var(--legacy-color-purple-400)"
       }
     },

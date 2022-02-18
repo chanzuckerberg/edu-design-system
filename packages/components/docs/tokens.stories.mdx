@@ -86,7 +86,7 @@ export const mapLegacyColorToTokenArray = (color) => {
       value: tokens.legacy.color.black,
     },
     // Remaining Colors
-    ...["red", "green", "blue", "yellow", "purple"]
+    ...["red", "green", "yellow", "purple"]
       .map(mapLegacyColorToTokenArray)
       .flat(),
   ]}
