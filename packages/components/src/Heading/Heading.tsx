@@ -22,6 +22,12 @@ type Props = {
   weight?: TypographyProps<HeadingElement>["weight"];
 } & React.HTMLAttributes<HTMLHeadingElement>;
 
+/**
+ * ```ts
+ * import {Heading} from "@chanzuckerberg/eds-components";
+ * ```
+ */
+
 const Heading = forwardRef<HTMLElement, Props>(
   (
     {

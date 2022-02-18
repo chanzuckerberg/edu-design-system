@@ -15,6 +15,10 @@ export type ButtonProps = ButtonHTMLElementProps & {
 };
 
 /**
+ * ```ts
+ * import {Button} from "@chanzuckerberg/eds-components";
+ * ```
+ *
  * Component for making buttons that do not navigate the user to another page.
  *
  * This component is called `Button` because it should be used to make `<button>` elements;

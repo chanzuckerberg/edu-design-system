@@ -67,6 +67,10 @@ type Plugins = NonNullable<React.ComponentProps<typeof Tippy>["plugins"]>;
 type Plugin = Plugins[number];
 
 /**
+ * ```ts
+ * import {Tooltip} from "@chanzuckerberg/eds-components";
+ * ```
+ *
  * A styled tooltip built on Tippy.js.
  *
  * https://atomiks.github.io/tippyjs/

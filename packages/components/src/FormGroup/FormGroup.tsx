@@ -86,6 +86,10 @@ const Items: React.FC<ItemsProps> = ({
 };
 
 /**
+ * ```ts
+ * import {FormGroup} from "@chanzuckerberg/eds-components";
+ * ```
+ *
  * A container for a form section including a title and one or more form elements.
  *
  * Uses `fieldset` and `legend` elements by default but can be customized.

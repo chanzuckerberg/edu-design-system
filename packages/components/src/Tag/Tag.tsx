@@ -46,6 +46,10 @@ type Props = {
 };
 
 /**
+ * ```ts
+ * import {Tag} from "@chanzuckerberg/eds-components";
+ * ```
+ *
  * This component provides a tag (pill shaped badge) wrapper.
  */
 function Tag({ color, children, className, icon, variant = "flat" }: Props) {

@@ -48,6 +48,10 @@ export type BannerProps = {
 };
 
 /**
+ * ```ts
+ * import {Banner} from "@chanzuckerberg/eds-components";
+ * ```
+ *
  * A banner used to provide and highlight information to a user or ask for a decision or action.
  *
  * Example usage:

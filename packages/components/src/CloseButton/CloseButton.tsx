@@ -29,6 +29,10 @@ type CloseButtonProps = {
 };
 
 /**
+ * ```ts
+ * import {CloseButton} from "@chanzuckerberg/eds-components";
+ * ```
+ *
  * Generic close button.
  */
 const CloseButton = forwardRef<HTMLButtonElement, CloseButtonProps>(

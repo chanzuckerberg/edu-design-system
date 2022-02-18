@@ -175,6 +175,13 @@ export const Label = ({
 };
 
 /**
+ * ```ts
+ * import {Checkbox} from "@chanzuckerberg/eds-components";
+ * ```
+ * ```ts
+ * import Checkbox, {CheckboxInput, Label} from '@chanzuckerberg/eds-components/lib/Checkbox';
+ * ```
+ *
  * Checkbox control indicating if something is selected or unselected.
  *
  * Requires either a visible label or an accessible name.
