@@ -154,6 +154,7 @@ const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
 );
 
 Checkbox.displayName = "Checkbox";
+
 /**
  * Checkbox input element, exported for greater flexibility.
  * You must provide an `id` prop and connect it to a visible label.
