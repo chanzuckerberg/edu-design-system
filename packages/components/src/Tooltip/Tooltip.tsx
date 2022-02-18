@@ -118,4 +118,3 @@ export default function Tooltip({
     />
   );
 }
-Tooltip.displayName = "ToolTip";
