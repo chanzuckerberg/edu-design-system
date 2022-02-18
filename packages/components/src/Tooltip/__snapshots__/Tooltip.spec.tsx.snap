@@ -33,7 +33,9 @@ exports[`<Tooltip /> BottomPlacement story renders snapshot 1`] = `
         style="transition-duration: 200ms;"
       >
         <div>
-          <span>
+          <span
+            data-testid="tooltip-content"
+          >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
              
             <b>
@@ -85,7 +87,9 @@ exports[`<Tooltip /> DarkVariant story renders snapshot 1`] = `
         style="transition-duration: 200ms;"
       >
         <div>
-          <span>
+          <span
+            data-testid="tooltip-content"
+          >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
              
             <b>
@@ -142,7 +146,9 @@ exports[`<Tooltip /> Interactive story renders snapshot 1`] = `
         style="transition-duration: 200ms;"
       >
         <div>
-          <span>
+          <span
+            data-testid="tooltip-content"
+          >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
              
             <b>
@@ -194,7 +200,9 @@ exports[`<Tooltip /> LeftPlacement story renders snapshot 1`] = `
         style="transition-duration: 200ms;"
       >
         <div>
-          <span>
+          <span
+            data-testid="tooltip-content"
+          >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
              
             <b>
@@ -246,7 +254,9 @@ exports[`<Tooltip /> LightVariant story renders snapshot 1`] = `
         style="transition-duration: 200ms;"
       >
         <div>
-          <span>
+          <span
+            data-testid="tooltip-content"
+          >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
              
             <b>
@@ -298,7 +308,9 @@ exports[`<Tooltip /> LongButtonText story renders snapshot 1`] = `
         style="transition-duration: 200ms;"
       >
         <div>
-          <span>
+          <span
+            data-testid="tooltip-content"
+          >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
              
             <b>
@@ -402,7 +414,9 @@ exports[`<Tooltip /> TopPlacement story renders snapshot 1`] = `
         style="transition-duration: 200ms;"
       >
         <div>
-          <span>
+          <span
+            data-testid="tooltip-content"
+          >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
              
             <b>
