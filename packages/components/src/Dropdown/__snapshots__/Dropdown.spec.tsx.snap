@@ -6,13 +6,10 @@ exports[`<Dropdown /> Default story renders snapshot 1`] = `
   data-testid="dropdown"
 >
   <label
+    class="dropdownLabel"
     id="headlessui-listbox-label-1"
   >
-    <p
-      class="typography sizeSm colorNeutral weightBold"
-    >
-      Favorite Animal
-    </p>
+    Favorite Animal
   </label>
   <button
     aria-controls="headlessui-listbox-options-3"
@@ -91,16 +88,22 @@ exports[`<Dropdown /> Default story renders snapshot 1`] = `
 
 exports[`<Dropdown /> DefaultWithoutVisibleLabel story renders snapshot 1`] = `
 <div
-  aria-label="Favorite Animal"
   class="dropdown w-60"
   data-testid="dropdown"
 >
+  <label
+    class="dropdownLabel sr-only"
+    id="headlessui-listbox-label-7"
+  >
+    Favorite Animal
+  </label>
   <button
-    aria-controls="headlessui-listbox-options-8"
+    aria-controls="headlessui-listbox-options-9"
     aria-expanded="true"
     aria-haspopup="true"
+    aria-labelledby="headlessui-listbox-label-7 headlessui-listbox-button-8"
     class="dropdownButton"
-    id="headlessui-listbox-button-7"
+    id="headlessui-listbox-button-8"
     type="button"
   >
     <span>
@@ -122,16 +125,16 @@ exports[`<Dropdown /> DefaultWithoutVisibleLabel story renders snapshot 1`] = `
     </svg>
   </button>
   <ul
-    aria-labelledby="headlessui-listbox-button-7"
+    aria-labelledby="headlessui-listbox-label-7"
     aria-orientation="vertical"
     class="dropdownOptions"
-    id="headlessui-listbox-options-8"
+    id="headlessui-listbox-options-9"
     role="listbox"
     tabindex="0"
   >
     <li
       class="dropdownOption dropdownOptionUnselected"
-      id="headlessui-listbox-option-9"
+      id="headlessui-listbox-option-10"
       role="option"
       tabindex="-1"
     >
@@ -143,7 +146,7 @@ exports[`<Dropdown /> DefaultWithoutVisibleLabel story renders snapshot 1`] = `
     </li>
     <li
       class="dropdownOption dropdownOptionUnselected"
-      id="headlessui-listbox-option-10"
+      id="headlessui-listbox-option-11"
       role="option"
       tabindex="-1"
     >
@@ -155,7 +158,7 @@ exports[`<Dropdown /> DefaultWithoutVisibleLabel story renders snapshot 1`] = `
     </li>
     <li
       class="dropdownOption dropdownOptionUnselected"
-      id="headlessui-listbox-option-11"
+      id="headlessui-listbox-option-12"
       role="option"
       tabindex="-1"
     >
@@ -175,21 +178,18 @@ exports[`<Dropdown /> UsingChildrenProp story renders snapshot 1`] = `
   data-testid="dropdown"
 >
   <label
-    id="headlessui-listbox-label-12"
+    class="dropdownLabel"
+    id="headlessui-listbox-label-13"
   >
-    <p
-      class="typography sizeSm colorNeutral weightBold"
-    >
-      Favorite Animal
-    </p>
+    Favorite Animal
   </label>
   <button
-    aria-controls="headlessui-listbox-options-14"
+    aria-controls="headlessui-listbox-options-15"
     aria-expanded="true"
     aria-haspopup="true"
-    aria-labelledby="headlessui-listbox-label-12 headlessui-listbox-button-13"
+    aria-labelledby="headlessui-listbox-label-13 headlessui-listbox-button-14"
     class="dropdownButton"
-    id="headlessui-listbox-button-13"
+    id="headlessui-listbox-button-14"
     type="button"
   >
     <span>
@@ -211,16 +211,16 @@ exports[`<Dropdown /> UsingChildrenProp story renders snapshot 1`] = `
     </svg>
   </button>
   <ul
-    aria-labelledby="headlessui-listbox-label-12"
+    aria-labelledby="headlessui-listbox-label-13"
     aria-orientation="vertical"
     class="dropdownOptions"
-    id="headlessui-listbox-options-14"
+    id="headlessui-listbox-options-15"
     role="listbox"
     tabindex="0"
   >
     <li
       class="dropdownOption dropdownOptionUnselected"
-      id="headlessui-listbox-option-15"
+      id="headlessui-listbox-option-16"
       role="option"
       tabindex="-1"
     >
@@ -232,7 +232,7 @@ exports[`<Dropdown /> UsingChildrenProp story renders snapshot 1`] = `
     </li>
     <li
       class="dropdownOption dropdownOptionUnselected"
-      id="headlessui-listbox-option-16"
+      id="headlessui-listbox-option-17"
       role="option"
       tabindex="-1"
     >
@@ -244,7 +244,7 @@ exports[`<Dropdown /> UsingChildrenProp story renders snapshot 1`] = `
     </li>
     <li
       class="dropdownOption dropdownOptionUnselected"
-      id="headlessui-listbox-option-17"
+      id="headlessui-listbox-option-18"
       role="option"
       tabindex="-1"
     >
@@ -260,16 +260,22 @@ exports[`<Dropdown /> UsingChildrenProp story renders snapshot 1`] = `
 
 exports[`<Dropdown /> UsingChildrenPropAndNoVisibleLabel story renders snapshot 1`] = `
 <div
-  aria-label="Favorite Animal"
   class="dropdown w-60"
   data-testid="dropdown"
 >
+  <label
+    class="dropdownLabel sr-only"
+    id="headlessui-listbox-label-19"
+  >
+    Favorite Animal
+  </label>
   <button
-    aria-controls="headlessui-listbox-options-19"
+    aria-controls="headlessui-listbox-options-21"
     aria-expanded="true"
     aria-haspopup="true"
+    aria-labelledby="headlessui-listbox-label-19 headlessui-listbox-button-20"
     class="dropdownButton"
-    id="headlessui-listbox-button-18"
+    id="headlessui-listbox-button-20"
     type="button"
   >
     <span>
@@ -291,16 +297,16 @@ exports[`<Dropdown /> UsingChildrenPropAndNoVisibleLabel story renders snapshot 
     </svg>
   </button>
   <ul
-    aria-labelledby="headlessui-listbox-button-18"
+    aria-labelledby="headlessui-listbox-label-19"
     aria-orientation="vertical"
     class="dropdownOptions"
-    id="headlessui-listbox-options-19"
+    id="headlessui-listbox-options-21"
     role="listbox"
     tabindex="0"
   >
     <li
       class="dropdownOption dropdownOptionUnselected"
-      id="headlessui-listbox-option-20"
+      id="headlessui-listbox-option-22"
       role="option"
       tabindex="-1"
     >
@@ -312,7 +318,7 @@ exports[`<Dropdown /> UsingChildrenPropAndNoVisibleLabel story renders snapshot 
     </li>
     <li
       class="dropdownOption dropdownOptionUnselected"
-      id="headlessui-listbox-option-21"
+      id="headlessui-listbox-option-23"
       role="option"
       tabindex="-1"
     >
@@ -324,7 +330,7 @@ exports[`<Dropdown /> UsingChildrenPropAndNoVisibleLabel story renders snapshot 
     </li>
     <li
       class="dropdownOption dropdownOptionUnselected"
-      id="headlessui-listbox-option-22"
+      id="headlessui-listbox-option-24"
       role="option"
       tabindex="-1"
     >
@@ -344,21 +350,18 @@ exports[`<Dropdown /> renders the OpenByDefault story 1`] = `
   data-testid="dropdown"
 >
   <label
-    id="headlessui-listbox-label-23"
+    class="dropdownLabel"
+    id="headlessui-listbox-label-25"
   >
-    <p
-      class="typography sizeSm colorNeutral weightBold"
-    >
-      Favorite Animal
-    </p>
+    Favorite Animal
   </label>
   <button
-    aria-controls="headlessui-listbox-options-25"
+    aria-controls="headlessui-listbox-options-27"
     aria-expanded="true"
     aria-haspopup="true"
-    aria-labelledby="headlessui-listbox-label-23 headlessui-listbox-button-24"
+    aria-labelledby="headlessui-listbox-label-25 headlessui-listbox-button-26"
     class="dropdownButton"
-    id="headlessui-listbox-button-24"
+    id="headlessui-listbox-button-26"
     type="button"
   >
     <span>
@@ -380,17 +383,17 @@ exports[`<Dropdown /> renders the OpenByDefault story 1`] = `
     </svg>
   </button>
   <ul
-    aria-activedescendant="headlessui-listbox-option-30"
-    aria-labelledby="headlessui-listbox-label-23"
+    aria-activedescendant="headlessui-listbox-option-32"
+    aria-labelledby="headlessui-listbox-label-25"
     aria-orientation="vertical"
     class="dropdownOptions"
-    id="headlessui-listbox-options-25"
+    id="headlessui-listbox-options-27"
     role="listbox"
     tabindex="0"
   >
     <li
       class="dropdownOption dropdownOptionUnselected"
-      id="headlessui-listbox-option-29"
+      id="headlessui-listbox-option-31"
       role="option"
       tabindex="-1"
     >
@@ -403,7 +406,7 @@ exports[`<Dropdown /> renders the OpenByDefault story 1`] = `
     <li
       aria-selected="true"
       class="dropdownOption dropdownOptionActive dropdownOptionSelected"
-      id="headlessui-listbox-option-30"
+      id="headlessui-listbox-option-32"
       role="option"
       tabindex="-1"
     >
@@ -433,7 +436,7 @@ exports[`<Dropdown /> renders the OpenByDefault story 1`] = `
     </li>
     <li
       class="dropdownOption dropdownOptionUnselected"
-      id="headlessui-listbox-option-31"
+      id="headlessui-listbox-option-33"
       role="option"
       tabindex="-1"
     >
