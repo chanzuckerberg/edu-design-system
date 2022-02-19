@@ -277,6 +277,12 @@ const DropdownOptions = function (
 const DropdownOption = function (props: DropdownOptionProps) {
   const { children, className, ...rest } = props;
 
+  type RenderProps = {
+    active: boolean;
+    disabled: boolean;
+    selected: boolean;
+  };
+
   return (
     <Listbox.Option
       // Render as a fragment instead of the default <li>. We're rendering our own <li> in the
@@ -287,23 +293,13 @@ const DropdownOption = function (props: DropdownOptionProps) {
     >
       {typeof children === "function"
         ? children
-        : ({
-            active,
-            disabled,
-            selected,
-          }: {
-            active: boolean;
-            disabled: boolean;
-            selected: boolean;
-          }) => (
+        : ({ active, disabled, selected }: RenderProps) => (
             <li
               className={clsx(
                 styles.dropdownOption,
                 active && styles.dropdownOptionActive,
                 disabled && styles.dropdownOptionDisabled,
-                selected
-                  ? styles.dropdownOptionSelected
-                  : styles.dropdownOptionUnselected,
+                selected && styles.dropdownOptionSelected,
                 className,
               )}
             >
