@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.1-alpha.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.7.0...v0.7.1-alpha.0) (2022-02-19)
+
+
+### Features
+
+* add Dropdown component ([7a4178c](https://github.com/chanzuckerberg/edu-design-system/commit/7a4178c2c3068ce0d4434e9b08ac65565ab84eb5))
+
+
+
+
+
 # [0.7.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.6.0...v0.7.0) (2022-01-27)
 
 
