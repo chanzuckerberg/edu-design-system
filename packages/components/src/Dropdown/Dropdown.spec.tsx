@@ -164,7 +164,7 @@ describe("<Dropdown />", () => {
     expect(renderMethod).not.toThrow(Error);
   });
 
-  it("does throw an error if modal does not use <Modal.Title> or aria-label", () => {
+  it("does throw an error if dropdown does not use <Dropdown.Label>, labelText, or aria-label", () => {
     const dropdownWithoutLabel = (
       <Dropdown
         buttonText="Select"
