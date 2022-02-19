@@ -3,7 +3,6 @@ import clsx from "clsx";
 import React, { ReactNode, ComponentProps } from "react";
 import DropdownButton from "../DropdownButton";
 import CheckRoundedIcon from "../Icons/CheckRounded";
-import Text from "../Text";
 import styles from "./Dropdown.module.css";
 
 type Option = { id: string; label: string };
@@ -58,6 +57,7 @@ type PropsWithRenderProp<RenderPropArg> = {
 
 type DropdownOptionProps = {
   value: Option;
+  disabled?: boolean;
   className?: string;
   children?:
     | ReactNode
@@ -161,8 +161,15 @@ function childrenHaveLabelComponent(children?: ReactNode): boolean {
  * ```
  */
 function Dropdown(props: DropdownProps) {
-  const { className, labelText, buttonText, options, children, ...rest } =
-    props;
+  const {
+    className,
+    labelText,
+    buttonText,
+    options,
+    children,
+    "aria-label": ariaLabel,
+    ...rest
+  } = props;
 
   if (process.env.NODE_ENV !== "production") {
     if (children && [labelText, buttonText, options].some((prop) => !!prop)) {
@@ -183,7 +190,11 @@ function Dropdown(props: DropdownProps) {
     }
   }
 
-  const label = labelText && <DropdownLabel>{labelText}</DropdownLabel>;
+  const label = (labelText || ariaLabel) && (
+    <DropdownLabel className={ariaLabel && "sr-only"}>
+      {labelText || ariaLabel}
+    </DropdownLabel>
+  );
 
   const trigger = buttonText && <DropdownTrigger>{buttonText}</DropdownTrigger>;
 
@@ -220,18 +231,12 @@ function Dropdown(props: DropdownProps) {
   );
 }
 
-const DropdownLabel = (props: {
-  as?: React.ElementType;
-  className?: string;
-  children: React.ReactNode;
-}) => {
-  const { children, className, as } = props;
+const DropdownLabel = (props: { className?: string; children: ReactNode }) => {
+  const { children, className } = props;
 
   return (
-    <Listbox.Label as={as}>
-      <Text size="sm" weight="bold" className={className} color="neutral">
-        {children}
-      </Text>
+    <Listbox.Label className={clsx(styles.dropdownLabel, className)}>
+      {children}
     </Listbox.Label>
   );
 };
