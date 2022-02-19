@@ -2,6 +2,10 @@
   @apply relative bg-white;
 }
 
+.dropdownLabel {
+  @apply text-sm text-neutral-500 font-bold mb-1;
+}
+
 .dropdownOptions {
   @apply w-full absolute bg-white mt-2 py-2 rounded shadow-2 z-10;
 }
