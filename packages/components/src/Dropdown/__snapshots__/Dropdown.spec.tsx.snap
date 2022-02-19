@@ -47,7 +47,7 @@ exports[`<Dropdown /> Default story renders snapshot 1`] = `
     tabindex="0"
   >
     <li
-      class="dropdownOption dropdownOptionUnselected"
+      class="dropdownOption"
       id="headlessui-listbox-option-4"
       role="option"
       tabindex="-1"
@@ -59,7 +59,7 @@ exports[`<Dropdown /> Default story renders snapshot 1`] = `
       </span>
     </li>
     <li
-      class="dropdownOption dropdownOptionUnselected"
+      class="dropdownOption"
       id="headlessui-listbox-option-5"
       role="option"
       tabindex="-1"
@@ -71,7 +71,7 @@ exports[`<Dropdown /> Default story renders snapshot 1`] = `
       </span>
     </li>
     <li
-      class="dropdownOption dropdownOptionUnselected"
+      class="dropdownOption"
       id="headlessui-listbox-option-6"
       role="option"
       tabindex="-1"
@@ -133,7 +133,7 @@ exports[`<Dropdown /> DefaultWithoutVisibleLabel story renders snapshot 1`] = `
     tabindex="0"
   >
     <li
-      class="dropdownOption dropdownOptionUnselected"
+      class="dropdownOption"
       id="headlessui-listbox-option-10"
       role="option"
       tabindex="-1"
@@ -145,7 +145,7 @@ exports[`<Dropdown /> DefaultWithoutVisibleLabel story renders snapshot 1`] = `
       </span>
     </li>
     <li
-      class="dropdownOption dropdownOptionUnselected"
+      class="dropdownOption"
       id="headlessui-listbox-option-11"
       role="option"
       tabindex="-1"
@@ -157,7 +157,7 @@ exports[`<Dropdown /> DefaultWithoutVisibleLabel story renders snapshot 1`] = `
       </span>
     </li>
     <li
-      class="dropdownOption dropdownOptionUnselected"
+      class="dropdownOption"
       id="headlessui-listbox-option-12"
       role="option"
       tabindex="-1"
@@ -219,7 +219,7 @@ exports[`<Dropdown /> UsingChildrenProp story renders snapshot 1`] = `
     tabindex="0"
   >
     <li
-      class="dropdownOption dropdownOptionUnselected"
+      class="dropdownOption"
       id="headlessui-listbox-option-16"
       role="option"
       tabindex="-1"
@@ -231,7 +231,7 @@ exports[`<Dropdown /> UsingChildrenProp story renders snapshot 1`] = `
       </span>
     </li>
     <li
-      class="dropdownOption dropdownOptionUnselected"
+      class="dropdownOption"
       id="headlessui-listbox-option-17"
       role="option"
       tabindex="-1"
@@ -243,7 +243,7 @@ exports[`<Dropdown /> UsingChildrenProp story renders snapshot 1`] = `
       </span>
     </li>
     <li
-      class="dropdownOption dropdownOptionUnselected"
+      class="dropdownOption"
       id="headlessui-listbox-option-18"
       role="option"
       tabindex="-1"
@@ -305,7 +305,7 @@ exports[`<Dropdown /> UsingChildrenPropAndNoVisibleLabel story renders snapshot 
     tabindex="0"
   >
     <li
-      class="dropdownOption dropdownOptionUnselected"
+      class="dropdownOption"
       id="headlessui-listbox-option-22"
       role="option"
       tabindex="-1"
@@ -317,7 +317,7 @@ exports[`<Dropdown /> UsingChildrenPropAndNoVisibleLabel story renders snapshot 
       </span>
     </li>
     <li
-      class="dropdownOption dropdownOptionUnselected"
+      class="dropdownOption"
       id="headlessui-listbox-option-23"
       role="option"
       tabindex="-1"
@@ -329,7 +329,7 @@ exports[`<Dropdown /> UsingChildrenPropAndNoVisibleLabel story renders snapshot 
       </span>
     </li>
     <li
-      class="dropdownOption dropdownOptionUnselected"
+      class="dropdownOption"
       id="headlessui-listbox-option-24"
       role="option"
       tabindex="-1"
@@ -392,7 +392,7 @@ exports[`<Dropdown /> renders the OpenByDefault story 1`] = `
     tabindex="0"
   >
     <li
-      class="dropdownOption dropdownOptionUnselected"
+      class="dropdownOption"
       id="headlessui-listbox-option-31"
       role="option"
       tabindex="-1"
@@ -435,7 +435,7 @@ exports[`<Dropdown /> renders the OpenByDefault story 1`] = `
       </span>
     </li>
     <li
-      class="dropdownOption dropdownOptionUnselected"
+      class="dropdownOption"
       id="headlessui-listbox-option-33"
       role="option"
       tabindex="-1"
