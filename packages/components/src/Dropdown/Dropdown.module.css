@@ -2,7 +2,7 @@
   @apply relative bg-white;
 }
 
-.dropdownLabel {
+.label {
   @apply text-sm text-neutral-500 font-bold mb-1;
 }
 
@@ -10,26 +10,26 @@
   @apply sr-only;
 }
 
-.dropdownOptions {
+.options {
   @apply w-full absolute bg-white mt-2 py-2 rounded shadow-2 z-10;
 }
 
-.dropdownOption {
+.option {
   @apply cursor-pointer py-2 pr-6 pl-12;
 
   /* Allow the option text and the selected icon to be easily aligned. */
   @apply flex;
 }
 
-.dropdownOptionActive {
+.optionActive {
   @apply bg-neutral-200;
 }
 
-.dropdownOptionDisabled {
+.optionDisabled {
   @apply cursor-not-allowed text-neutral-300;
 }
 
-.dropdownOptionSelected {
+.optionSelected {
   @apply font-bold pl-0;
 }
 
@@ -44,7 +44,7 @@
   @apply pl-2 inline-flex items-center justify-center;
 }
 
-.dropdownOptionContent {
+.optionContent {
   /* Wrap overflowing content onto multiple lines. We're doing this instead of truncating so that
      users can still see all the content. */
   @apply break-normal;

@@ -235,7 +235,7 @@ const DropdownLabel = (props: { className?: string; children: ReactNode }) => {
   const { children, className } = props;
 
   return (
-    <Listbox.Label className={clsx(styles.dropdownLabel, className)}>
+    <Listbox.Label className={clsx(styles.label, className)}>
       {children}
     </Listbox.Label>
   );
@@ -267,10 +267,7 @@ const DropdownOptions = function (
 ) {
   const { className, ...rest } = props;
   return (
-    <Listbox.Options
-      className={clsx(styles.dropdownOptions, className)}
-      {...rest}
-    />
+    <Listbox.Options className={clsx(styles.options, className)} {...rest} />
   );
 };
 
@@ -296,10 +293,10 @@ const DropdownOption = function (props: DropdownOptionProps) {
         : ({ active, disabled, selected }: RenderProps) => (
             <li
               className={clsx(
-                styles.dropdownOption,
-                active && styles.dropdownOptionActive,
-                disabled && styles.dropdownOptionDisabled,
-                selected && styles.dropdownOptionSelected,
+                styles.option,
+                active && styles.optionActive,
+                disabled && styles.optionDisabled,
+                selected && styles.optionSelected,
                 className,
               )}
             >
@@ -308,7 +305,7 @@ const DropdownOption = function (props: DropdownOptionProps) {
                   <CheckRoundedIcon purpose="decorative" size="1.25rem" />
                 </span>
               )}
-              <span className={styles.dropdownOptionContent}>{children}</span>
+              <span className={styles.optionContent}>{children}</span>
             </li>
           )}
     </Listbox.Option>
