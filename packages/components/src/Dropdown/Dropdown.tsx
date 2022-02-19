@@ -191,7 +191,7 @@ function Dropdown(props: DropdownProps) {
   }
 
   const label = (labelText || ariaLabel) && (
-    <DropdownLabel className={ariaLabel && "sr-only"}>
+    <DropdownLabel className={ariaLabel && styles.srOnly}>
       {labelText || ariaLabel}
     </DropdownLabel>
   );

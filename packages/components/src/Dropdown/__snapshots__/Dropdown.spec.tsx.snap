@@ -92,7 +92,7 @@ exports[`<Dropdown /> DefaultWithoutVisibleLabel story renders snapshot 1`] = `
   data-testid="dropdown"
 >
   <label
-    class="dropdownLabel sr-only"
+    class="dropdownLabel srOnly"
     id="headlessui-listbox-label-7"
   >
     Favorite Animal
@@ -264,7 +264,7 @@ exports[`<Dropdown /> UsingChildrenPropAndNoVisibleLabel story renders snapshot 
   data-testid="dropdown"
 >
   <label
-    class="dropdownLabel sr-only"
+    class="dropdownLabel srOnly"
     id="headlessui-listbox-label-19"
   >
     Favorite Animal
