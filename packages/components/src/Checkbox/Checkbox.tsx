@@ -111,70 +111,13 @@ const CheckboxSvg = ({ indeterminate }: { indeterminate?: boolean }) => {
 };
 
 /**
- * Checkbox input element, exported for greater flexibility.
- * You must provide an `id` prop and connect it to a visible label.
- */
-export const CheckboxInput = React.forwardRef<HTMLInputElement, InputProps>(
-  ({ checked, className, disabled, ...rest }, ref) => {
-    // Make indeterminate checkbox visually match the colors of a
-    // checked state, but announce itself as "mixed" to screen readers
-    const checkedProps =
-      checked === "indeterminate"
-        ? {
-            "aria-checked": "mixed" as const,
-            checked: true,
-          }
-        : {
-            checked,
-          };
-
-    return (
-      <span className={clsx(styles.inputWrapper, disabled && styles.disabled)}>
-        <input
-          className={clsx(className, styles.checkboxInput)}
-          data-bootstrap-override="checkbox"
-          disabled={disabled}
-          ref={ref}
-          style={svgStyle}
-          type="checkbox"
-          {...checkedProps}
-          {...rest}
-        />
-        <CheckboxSvg indeterminate={checked === "indeterminate"} />
-      </span>
-    );
-  },
-);
-
-CheckboxInput.displayName = "CheckboxInput";
-
-/**
- * Label element, exported for greater flexibility. Can be used with any form input.
- */
-export const Label = ({
-  children,
-  className,
-  htmlFor,
-  size = "medium",
-}: LabelProps) => {
-  return (
-    <label
-      className={clsx(
-        className,
-        styles.label,
-        size === "small" && styles.labelSmall,
-        size === "medium" && styles.labelMedium,
-      )}
-      data-bootstrap-override="label"
-      htmlFor={htmlFor}
-      style={svgStyle}
-    >
-      {children}
-    </label>
-  );
-};
-
-/**
+ * ```ts
+ * import {Checkbox} from "@chanzuckerberg/eds-components";
+ * ```
+ * ```ts
+ * import Checkbox, {CheckboxInput, Label} from '@chanzuckerberg/eds-components/lib/Checkbox';
+ * ```
+ *
  * Checkbox control indicating if something is selected or unselected.
  *
  * Requires either a visible label or an accessible name.
@@ -212,4 +155,69 @@ const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
 
 Checkbox.displayName = "Checkbox";
 
+/**
+ * Checkbox input element, exported for greater flexibility.
+ * You must provide an `id` prop and connect it to a visible label.
+ */
+const CheckboxInput = React.forwardRef<HTMLInputElement, InputProps>(
+  ({ checked, className, disabled, ...rest }, ref) => {
+    // Make indeterminate checkbox visually match the colors of a
+    // checked state, but announce itself as "mixed" to screen readers
+    const checkedProps =
+      checked === "indeterminate"
+        ? {
+            "aria-checked": "mixed" as const,
+            checked: true,
+          }
+        : {
+            checked,
+          };
+
+    return (
+      <span className={clsx(styles.inputWrapper, disabled && styles.disabled)}>
+        <input
+          className={clsx(className, styles.checkboxInput)}
+          data-bootstrap-override="checkbox"
+          disabled={disabled}
+          ref={ref}
+          style={svgStyle}
+          type="checkbox"
+          {...checkedProps}
+          {...rest}
+        />
+        <CheckboxSvg indeterminate={checked === "indeterminate"} />
+      </span>
+    );
+  },
+);
+
+CheckboxInput.displayName = "CheckboxInput";
+
+/**
+ * Label element, exported for greater flexibility. Can be used with any form input.
+ */
+const Label = ({
+  children,
+  className,
+  htmlFor,
+  size = "medium",
+}: LabelProps) => {
+  return (
+    <label
+      className={clsx(
+        className,
+        styles.label,
+        size === "small" && styles.labelSmall,
+        size === "medium" && styles.labelMedium,
+      )}
+      data-bootstrap-override="label"
+      htmlFor={htmlFor}
+      style={svgStyle}
+    >
+      {children}
+    </label>
+  );
+};
+
 export default Checkbox;
+export { CheckboxInput, Label };

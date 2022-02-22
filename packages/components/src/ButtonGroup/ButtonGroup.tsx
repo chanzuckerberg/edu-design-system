@@ -24,6 +24,10 @@ type Props = {
 };
 
 /**
+ * ```ts
+ * import {ButtonGroup} from "@chanzuckerberg/eds-components";
+ * ```
+ *
  * A container for buttons grouped together horizontally or vertically.
  */
 export default function ButtonGroup({

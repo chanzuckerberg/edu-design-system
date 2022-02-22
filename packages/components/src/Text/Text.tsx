@@ -18,6 +18,11 @@ type Props = {
   weight?: TypographyProps<TextElement>["weight"];
 } & React.HTMLAttributes<HTMLElement>;
 
+/**
+ * ```ts
+ * import {Text} from "@chanzuckerberg/eds-components";
+ * ```
+ */
 const Text = forwardRef<HTMLElement, Props>(
   (
     {

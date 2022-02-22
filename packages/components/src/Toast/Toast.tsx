@@ -29,6 +29,10 @@ type Props = {
 };
 
 /**
+ * ```ts
+ * import {Toast} from "@chanzuckerberg/eds-components";
+ * ```
+ *
  * A toast used to provide information on the state of the page, usually in response to a
  * user action. Ex: The user updates their profile, and a toast pop-up informs them that the
  * data was successfully saved.
