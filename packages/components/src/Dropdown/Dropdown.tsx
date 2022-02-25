@@ -1,6 +1,6 @@
 import { Listbox } from "@headlessui/react";
 import clsx from "clsx";
-import React, { ReactNode, ComponentProps } from "react";
+import React, { ReactNode, ComponentProps, ElementType } from "react";
 import DropdownButton from "../DropdownButton";
 import CheckRoundedIcon from "../Icons/CheckRounded";
 import styles from "./Dropdown.module.css";
@@ -53,6 +53,7 @@ type RenderProp<Arg> = (arg: Arg) => ReactNode;
 type PropsWithRenderProp<RenderPropArg> = {
   children?: ReactNode | RenderProp<RenderPropArg>;
   className?: string;
+  as?: ElementType;
 };
 
 type DropdownOptionProps = {
@@ -190,6 +191,29 @@ function Dropdown(props: DropdownProps) {
     }
   }
 
+  const sharedProps = {
+    className: clsx(styles.dropdown, className),
+    // Provide a wrapping <div> element for the dropdown. This is needed so that any props
+    // passed directly to this component have a corresponding DOM element to receive them.
+    // Otherwise we get an error.
+    as: "div" as const,
+    ...rest,
+  };
+
+  if (typeof children === "function") {
+    return (
+      <Listbox
+        {...sharedProps}
+        // We prefer to pass the aria-label in via an invisible DropdownLabel, but we can't
+        // easily pass down function children with component children, so we'll settle for
+        // using a standard aria-label in this case.
+        aria-label={ariaLabel}
+      >
+        {children}
+      </Listbox>
+    );
+  }
+
   const label = (labelText || ariaLabel) && (
     <DropdownLabel className={ariaLabel && styles.srOnly}>
       {labelText || ariaLabel}
@@ -217,18 +241,7 @@ function Dropdown(props: DropdownProps) {
     </>
   );
 
-  return (
-    <Listbox
-      // Provide a wrapping <div> element for the dropdown. This is needed so that any props
-      // passed directly to this component have a corresponding DOM element to receive them.
-      // Otherwise we get an error.
-      as="div"
-      className={clsx(styles.dropdown, className)}
-      {...rest}
-    >
-      {childrenToUse}
-    </Listbox>
-  );
+  return <Listbox {...sharedProps}>{childrenToUse}</Listbox>;
 }
 
 const DropdownLabel = (props: { className?: string; children: ReactNode }) => {
