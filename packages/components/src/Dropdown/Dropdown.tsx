@@ -57,7 +57,7 @@ type PropsWithRenderProp<RenderPropArg> = {
 };
 
 type DropdownOptionProps = {
-  value: Option;
+  value: any;
   disabled?: boolean;
   className?: string;
   children?:
