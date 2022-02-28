@@ -85,6 +85,10 @@ function childrenHaveLabelComponent(children?: ReactNode): boolean {
 }
 
 /**
+ * ```ts
+ * import {DropdownButton} from "@chanzuckerberg/eds-components";
+ * ```
+ *
  * EDS Dropdown. Used to select one option from a list of options.
  *
  * Built on top of the Headless UI Listbox: https://headlessui.dev/react/listbox#basic-example
