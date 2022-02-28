@@ -4,7 +4,8 @@ updates:
     directory: "/"
     schedule:
       interval: daily
-    open-pull-requests-limit: 10
+    # dependabot does not work with yarn v2, disabling for now
+    open-pull-requests-limit: 0
     commit-message:
       prefix: chore
       include: scope
@@ -12,7 +13,8 @@ updates:
     directory: "/packages/tokens"
     schedule:
       interval: daily
-    open-pull-requests-limit: 10
+    # dependabot does not work with yarn v2, disabling for now
+    open-pull-requests-limit: 0
     commit-message:
       prefix: chore
       include: scope
@@ -20,7 +22,8 @@ updates:
     directory: "/packages/components"
     schedule:
       interval: daily
-    open-pull-requests-limit: 10
+    # dependabot does not work with yarn v2, disabling for now
+    open-pull-requests-limit: 0
     commit-message:
       prefix: chore
       include: scope
