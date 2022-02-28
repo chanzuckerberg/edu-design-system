@@ -4,6 +4,7 @@ export { default as ButtonGroup } from "./ButtonGroup";
 export { default as Checkbox } from "./Checkbox";
 export { default as CloseButton } from "./CloseButton";
 export { default as ClickableStyle } from "./ClickableStyle";
+export { default as Dropdown } from "./Dropdown";
 export { default as DropdownButton } from "./DropdownButton";
 export { default as FormGroup } from "./FormGroup";
 export { default as Heading } from "./Heading";
