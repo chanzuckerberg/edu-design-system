@@ -17,7 +17,7 @@
     "generateFlowTypes": "./packages/components/generateFlowTypes.sh",
     "lint": "yarn run lint:styles && yarn run lint:scripts",
     "lint:fix": "yarn run lint:styles:fix && yarn run lint:scripts:fix",
-    "lint:styles": "stylelint --ignore-path .gitignore packages/**/*.{css,js,jsx,ts,tsx}",
+    "lint:styles": "stylelint --ignore-path .gitignore packages/**/*.css",
     "lint:styles:fix": "yarn run lint:styles --fix",
     "lint:scripts": "eslint --ignore-path .gitignore --ext=js,jsx,ts,tsx .",
     "lint:scripts:fix": "yarn run lint:scripts --fix",
@@ -68,8 +68,8 @@
     "plop": "^2.7.4",
     "prettier": "^2.5.1",
     "size-limit": "^4.12.0",
-    "stylelint": "^13.13.1",
-    "stylelint-config-standard": "^20.0.0",
+    "stylelint": "^14.5.3",
+    "stylelint-config-standard": "^25.0.0",
     "typescript": "^4.5.5"
   },
   "husky": {
@@ -82,8 +82,7 @@
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "prettier --write",
-      "eslint --fix",
-      "stylelint --fix"
+      "eslint --fix"
     ],
     "*.css": [
       "stylelint --fix"
