@@ -18,7 +18,7 @@
     "url": "git+https://github.com/chanzuckerberg/edu-design-system.git"
   },
   "scripts": {
-    "build": "style-dictionary build --config=./style-dictionary.config.js",
+    "build": "node ./style-dictionary.config.js",
     "build:clean": "rm -rf lib/",
     "prepack": "yarn run build",
     "start": "watch 'yarn run build' ./properties"
@@ -27,7 +27,7 @@
     "url": "https://github.com/chanzuckerberg/edu-design-system/issues"
   },
   "devDependencies": {
-    "style-dictionary": "^2.10.3",
+    "style-dictionary": "^3.7.0",
     "watch": "^1.0.2"
   }
 }
