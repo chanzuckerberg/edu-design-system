@@ -1,4 +1,4 @@
-import * as ColorTokens from "@chanzuckerberg/eds-tokens/lib/ts/colors";
+import * as ColorTokens from "@chanzuckerberg/eds-tokens/lib/js/colors";
 import type { StoryObj } from "@storybook/react";
 import React from "react";
 import * as allIcons from "../Icons";
