@@ -3,7 +3,7 @@ const EDSStyleDictionary = StyleDictionary.extend({
   source: ["properties/**/*.json"],
   platforms: {
     scss: {
-      transforms: [...StyleDictionary.transformGroup.scss, "name/kebabCase"],
+      transforms: [...StyleDictionary.transformGroup.scss, "name/cti/kebab"],
       buildPath: "lib/",
       files: [
         {
@@ -16,7 +16,7 @@ const EDSStyleDictionary = StyleDictionary.extend({
       ],
     },
     css: {
-      transforms: [...StyleDictionary.transformGroup.css, "name/kebabCase"],
+      transforms: [...StyleDictionary.transformGroup.css, "name/cti/kebab"],
       buildPath: "lib/",
       files: [
         {
@@ -85,14 +85,6 @@ const EDSStyleDictionary = StyleDictionary.extend({
         },
       ],
     },
-  },
-});
-
-EDSStyleDictionary.registerTransform({
-  name: "name/kebabCase",
-  type: "name",
-  transformer: function ({ path }) {
-    return path.join("-").toLowerCase();
   },
 });
 
