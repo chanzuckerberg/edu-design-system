@@ -41,19 +41,7 @@ const EDSStyleDictionary = StyleDictionary.extend({
       files: [
         {
           format: "javascript/es6",
-          destination: "js/colors.js",
-          options: {
-            showFileHeader: false,
-          },
-          filter: {
-            attributes: {
-              type: "color",
-            },
-          },
-        },
-        {
-          format: "typescript/es6-declarations",
-          destination: "js/colors.d.ts",
+          destination: "ts/colors.ts",
           options: {
             showFileHeader: false,
           },
