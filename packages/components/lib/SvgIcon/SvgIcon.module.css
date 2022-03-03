@@ -1,0 +1,18 @@
+.svgIcon {
+  display: inline-block;
+
+  /**
+   * Size Priority:
+   * 1: --svg-icon-size, passed through props
+   * 2: --svg-icon-size-default, determined by context (text, button, pill)
+   * default: 1em, same size as surrounding text
+   *
+   * Inspired by https://www.youtube.com/watch?v=EDyiaDJJu-4
+   */
+  width: var(--svg-icon-size, var(--svg-icon-size-default, 1em));
+  height: var(--svg-icon-size, var(--svg-icon-size-default, 1em))
+}
+
+.displayBlock {
+  display: block
+}

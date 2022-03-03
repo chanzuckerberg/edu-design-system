@@ -1,37 +1,39 @@
-module.exports = function (plop) {
+module.exports = (plop) => {
+  plop.setHelper("upperCase", (txt) => txt.toUpperCase());
+
   plop.setGenerator("component", {
     description: "Create a reusable component",
     prompts: [
       {
         type: "input",
         name: "name",
-        message: "What is the component name?",
+        message: "What is your component name?",
       },
     ],
     actions: [
       {
         type: "add",
-        path: "packages/components/src/{{pascalCase name}}/{{pascalCase name}}.tsx",
+        path: "src/components/{{pascalCase name}}/{{pascalCase name}}.tsx",
         templateFile: "plop-templates/Component/Component.tsx.hbs",
       },
       {
         type: "add",
-        path: "packages/components/src/{{pascalCase name}}/{{pascalCase name}}.module.css",
-        templateFile: "plop-templates/Component/Component.module.css.hbs",
-      },
-      {
-        type: "add",
-        path: "packages/components/src/{{pascalCase name}}/{{pascalCase name}}.stories.tsx",
+        path: "src/components/{{pascalCase name}}/{{pascalCase name}}.stories.tsx",
         templateFile: "plop-templates/Component/Component.stories.tsx.hbs",
       },
       {
         type: "add",
-        path: "packages/components/src/{{pascalCase name}}/{{pascalCase name}}.spec.tsx",
+        path: "src/components/{{pascalCase name}}/{{pascalCase name}}.module.css",
+        templateFile: "plop-templates/Component/Component.module.css.hbs",
+      },
+      {
+        type: "add",
+        path: "src/components/{{pascalCase name}}/{{pascalCase name}}.spec.tsx",
         templateFile: "plop-templates/Component/Component.spec.tsx.hbs",
       },
       {
         type: "add",
-        path: "packages/components/src/{{pascalCase name}}/index.ts",
+        path: "src/components/{{pascalCase name}}/index.ts",
         templateFile: "plop-templates/Component/index.ts.hbs",
       },
       {
@@ -61,6 +63,55 @@ module.exports = function (plop) {
 
           return `index.ts lines sorted`;
         }
+      },
+    ],
+  });
+  plop.setGenerator("recipe", {
+    description: "Create a recipe",
+    prompts: [
+      {
+        type: "input",
+        name: "name",
+        message: "What is your recipe name (e.g. GlobalHeader)?",
+      },
+    ],
+    actions: [
+      {
+        type: "add",
+        path: ".storybook/recipes/{{pascalCase name}}/{{pascalCase name}}.tsx",
+        templateFile: "plop-templates/Recipe/Recipe.tsx.hbs",
+      },
+      {
+        type: "add",
+        path: ".storybook/recipes/{{pascalCase name}}/{{pascalCase name}}.stories.tsx",
+        templateFile: "plop-templates/Recipe/Recipe.stories.tsx.hbs",
+      },
+      {
+        type: "add",
+        path: ".storybook/recipes/{{pascalCase name}}/{{pascalCase name}}.module.css",
+        templateFile: "plop-templates/Recipe/Recipe.module.css.hbs",
+      },
+    ],
+  });
+  plop.setGenerator("page", {
+    description: "Create a page",
+    prompts: [
+      {
+        type: "input",
+        name: "name",
+        message: "What is your page name (e.g. Homepage)?",
+      },
+    ],
+    actions: [
+      {
+        type: "add",
+        path: ".storybook/pages/{{pascalCase name}}/{{pascalCase name}}.tsx",
+        templateFile: "plop-templates/Page/Page.tsx.hbs",
+      },
+      {
+        type: "add",
+        path: ".storybook/pages/{{pascalCase name}}/{{pascalCase name}}.stories.tsx",
+        templateFile: "plop-templates/Page/Page.stories.tsx.hbs",
       },
     ],
   });

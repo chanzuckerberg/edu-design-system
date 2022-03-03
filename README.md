@@ -1,8 +1,6 @@
-# edu-design-system
+# Education Design System
 
-![Test CI](https://github.com/chanzuckerberg/edu-design-system/workflows/Test%20CI/badge.svg)
-
-The [Education Initiative](https://chanzuckerberg.com/education/)'s design system packages.
+Education Design System (EDS) is a repository of [presentational](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0) components used to build React-based products for Chan Zuckerberg Initiative.
 
 ## Development
 
@@ -10,6 +8,14 @@ The [Education Initiative](https://chanzuckerberg.com/education/)'s design syste
 
 - Node - if using [nodenv](https://github.com/nodenv/nodenv), you can install the right version with `nodenv install`
 - Yarn - install through either [npm](https://docs.npmjs.com/) (`npm install -g yarn`) or [homebrew](https://brew.sh/) (`brew install yarn`)
+
+### Running the environment locally
+
+To get started, follow the following steps:
+
+1. Clone this repository
+2. Run `yarn install` in the terminal to install the project dependencies
+3. Run `yarn start` to start Storybook.
 
 ### Helpful commands
 
@@ -21,38 +27,25 @@ The [Education Initiative](https://chanzuckerberg.com/education/)'s design syste
 | Build packages                        | `yarn build`            |
 | Run the component generator           | `yarn create-component` |
 
-### Publishing
+## Working with the codebase
 
-1. Confirm that all checks are green on CI.
-2. Run `git checkout main`
-3. Run
+Please refer to the following documentation to learn how to work with this codebase:
 
-```sh
-yarn create-releases
+- [Code guidelines](./docs/CODE_GUIDELINES.md)
+- [Tokens](./docs/TOKENS.md)
+- [Components](./docs/COMPONENTS.md)
+- [Typography](./docs/TYPOGRAPHY.md)
+- [Layout](./docs/LAYOUT.md)
+- [Icons](./docs/ICONS.md)
 
-# or, if there are breaking changes
-yarn create-releases:breaking
-```
+## Workflow
 
-to bump the package versions, create new git tags, and create git commits. The packages are not published, yet.
+- [Contribution guidelines](./docs/CONTRIBUTING.md) - Please refer to these guidelines to learn how to contribute to the library.
+- [Release guidelines](.docs/PUBLISHING.md) - Please refer to these guidelines for instructions on how to publish a new version of the library.
 
-4. Confirm that the git tags, git commits, and changelog updates look correct.
-5. Run `yarn publish-releases` to publish the packages to the NPM registry.
-6. Push commits and tags to the git remote with `git push origin --tags && git push origin main`
+## Support
 
-**Before the first time you publish**, make sure to:
-
-- set up Two Factor Authentication for your npm account
-- run `npm login` in your terminal to generate an access token for publishing
-
-### Note on versioning
-
-We are currently using a _modified_ form of semver where:
-
-- Breaking changes update the _minor_ version
-- All other changes (new features, fixes, etc.) update the _patch_ version
-
-Once we publish major version 1, we will begin following conventional semver.
+For questions, feature requests, bugs, and more, please refer to the support guidelines and join the support channel [TODO: link to support channel and docs]
 
 ## Project Status
 

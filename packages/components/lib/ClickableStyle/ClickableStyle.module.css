@@ -1,0 +1,334 @@
+.button {
+  /* Base Styles */
+
+  /* Using motion-reduce:transition-none here because motion-safe:transition-colors doesn't seem to
+     be having an effect. :( */
+
+  display: inline-flex;
+
+  align-items: center;
+
+  border-radius: 0.25rem;
+
+  border-width: 2px;
+
+  transition-property: background-color, border-color, color, fill, stroke;
+
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  transition-duration: 150ms;
+}@media (prefers-reduced-motion: reduce) {.button {
+
+    transition-property: none;
+  }
+}.button {
+
+  /* Base Text Styles */
+
+  font-weight: 700;
+
+  /* Default variable values */
+  --plain-background-color: transparent;
+}
+
+/* Style icons that may be in the button children */
+
+.button svg {
+  --svg-icon-size: 2em;
+}
+
+/* Component Sizes */
+
+.sizeSmall {
+
+  height: 1.5rem;
+
+  padding-left: 0.25rem;
+
+  padding-right: 0.25rem;
+
+  font-size: 0.75rem;
+
+  line-height: 1rem;
+
+  line-height: .75rem;
+}
+
+.sizeMedium {
+
+  height: 2rem;
+
+  padding-left: 1rem;
+
+  padding-right: 1rem;
+
+  font-size: 0.75rem;
+
+  line-height: 1rem;
+
+  line-height: .75rem;
+}
+
+.sizeLarge {
+
+  height: 2.5rem;
+
+  padding-left: 1rem;
+
+  padding-right: 1rem;
+
+  font-size: 0.875rem;
+
+  line-height: 1.25rem;
+}
+
+/* Button Colors */
+
+.colorBrand {
+  --primary-color: var(--eds-color-brand-600);
+  --link-color: var(--eds-color-brand-700);
+}
+
+.colorBrand:hover,
+  .colorBrand.stateHover,
+  .colorBrand:focus,
+  .colorBrand.stateFocus {
+    --primary-color: var(--eds-color-brand-700);
+    --link-color: var(--eds-color-brand-800);
+    --plain-background-color: var(--eds-color-brand-100);
+  }
+
+.colorBrand:active,
+  .colorBrand.stateActive {
+    --primary-color: var(--eds-color-brand-800);
+    --plain-background-color: var(--eds-color-brand-600);
+  }
+
+.colorAlert {
+  --primary-color: var(--eds-color-alert-600);
+  --link-color: var(--eds-color-alert-700);
+}
+
+.colorAlert:hover,
+  .colorAlert.stateHover,
+  .colorAlert:focus,
+  .colorAlert.stateFocus {
+    --primary-color: var(--eds-color-alert-700);
+    --link-color: var(--eds-color-alert-800);
+    --plain-background-color: var(--eds-color-alert-100);
+  }
+
+.colorAlert:active,
+  .colorAlert.stateActive {
+    --primary-color: var(--eds-color-alert-800);
+    --plain-background-color: var(--eds-color-alert-600);
+  }
+
+.colorNeutral {
+  --primary-color: var(--eds-color-neutral-500);
+  --link-color: var(--eds-color-neutral-600);
+}
+
+.colorNeutral:hover,
+  .colorNeutral.stateHover,
+  .colorNeutral:focus,
+  .colorNeutral.stateFocus {
+    --primary-color: var(--eds-color-neutral-600);
+    --link-color: var(--eds-color-neutral-700);
+    --plain-background-color: var(--eds-color-neutral-100);
+  }
+
+.colorNeutral:active,
+  .colorNeutral.stateActive {
+    --primary-color: var(--eds-color-neutral-700);
+    --plain-background-color: var(--eds-color-neutral-500);
+  }
+
+.colorSuccess {
+  --primary-color: var(--eds-color-success-600);
+  --link-color: var(--eds-color-success-700);
+}
+
+.colorSuccess:hover,
+  .colorSuccess.stateHover,
+  .colorSuccess:focus,
+  .colorSuccess.stateFocus {
+    --primary-color: var(--eds-color-success-700);
+    --link-color: var(--eds-color-success-800);
+    --plain-background-color: var(--eds-color-success-100);
+  }
+
+.colorSuccess:active,
+  .colorSuccess.stateActive {
+    --primary-color: var(--eds-color-success-800);
+    --plain-background-color: var(--eds-color-success-600);
+  }
+
+.colorWarning {
+  --primary-color: var(--eds-color-warning-600);
+  --link-color: var(--eds-color-warning-700);
+}
+
+.colorWarning:hover,
+  .colorWarning.stateHover,
+  .colorWarning:focus,
+  .colorWarning.stateFocus {
+    --primary-color: var(--eds-color-warning-700);
+    --link-color: var(--eds-color-warning-800);
+    --plain-background-color: var(--eds-color-warning-100);
+  }
+
+.colorWarning:active,
+  .colorWarning.stateActive {
+    --primary-color: var(--eds-color-warning-800);
+    --plain-background-color: var(--eds-color-warning-600);
+  }
+
+.variantFlat {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--eds-color-white);
+}
+
+.variantOutline {
+
+  background-color: transparent;
+
+  border-color: var(--link-color);
+  color: var(--link-color);
+}
+
+.variantOutline:hover, .variantOutline.stateHover, .variantOutline:focus, .variantOutline.stateFocus, .variantOutline:active, .variantOutline.stateActive {
+
+  color: var(--eds-color-white);
+}
+
+.variantOutline:hover,
+  .variantOutline.stateHover,
+  .variantOutline:focus,
+  .variantOutline.stateFocus,
+  .variantOutline:active,
+  .variantOutline.stateActive {
+
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+  }
+
+/* override the hover/focus/active values */
+
+.variantOutline:disabled {
+
+  background-color: transparent;
+}
+
+.variantOutline:disabled {
+
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+  }
+
+.variantLink {
+
+  border-style: none;
+
+  padding-left: 0px;
+
+  padding-right: 0px;
+
+  padding-top: 0px;
+
+  padding-bottom: 0px;
+
+  font-weight: 700;
+
+  text-decoration: underline;
+
+  color: var(--link-color);
+
+  /* button should defer to surrounding text for size/line-height/case */
+  font-size: inherit;
+  line-height: inherit;
+  text-transform: inherit;
+}
+
+.variantLink:hover,
+  .variantLink.stateHover,
+  .variantLink:focus,
+  .variantLink.stateFocus {
+    text-decoration-thickness: 2px;
+  }
+
+.variantLink:active,
+  .variantLink.stateActive,
+  .variantLink:disabled {
+    color: var(--primary-color);
+  }
+
+/* override the hover/focus values */
+
+.variantLink:disabled {
+    text-decoration-thickness: auto;
+  }
+
+.variantPlain {
+  color: var(--link-color);
+  border-color: var(--plain-background-color);
+  background-color: var(--plain-background-color);
+}
+
+.variantPlain:hover,
+  .variantPlain.stateHover,
+  .variantPlain:focus,
+  .variantPlain.stateFocus {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+  }
+
+.variantPlain:active, .variantPlain.stateActive {
+
+  color: var(--eds-color-white);
+}
+
+.variantPlain:active,
+  .variantPlain.stateActive {
+
+    border-color: var(--plain-background-color);
+  }
+
+.variantPlain:disabled {
+
+  border-color: transparent;
+}
+
+.variantPlain:disabled {
+
+    color: var(--primary-color);
+  }
+
+/* Link icons should be the same size as the text */
+
+.variantLink svg {
+  --svg-icon-size: 1em;
+}
+
+/* comes after other styles to override hover behaviors */
+
+.button:focus,
+.button.stateFocus {
+  /* Focus Outline */
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+  --tw-ring-color: var(--eds-color-info-400);
+}
+
+.button:disabled {
+
+  cursor: not-allowed;
+
+  /* override the hover/focus values */
+  --primary-color: var(--eds-color-neutral-300);
+  --plain-background-color: transparent;
+}

@@ -1,0 +1,111 @@
+.bannerDialog {
+  width: 100%;
+  border-radius: 0.25rem;
+  border-width: 1px;
+  padding: 2rem;
+  --tw-shadow: 0 0 0 1px var(--eds-color-neutral-200), 0 2px 3px rgba(0, 0, 0, 0.02), 0 4px 8px rgba(0, 0, 0, 0.08);
+
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  position: relative;
+  display: grid;
+  gap: 1rem;
+  border-color: var(--border-light-color);
+
+  /* Mobile-only styles */
+
+  border-top-width: 4px;
+  text-align: center;
+  border-top-color: var(--border-dark-color);
+  --svg-icon-size-default: 2.5rem;
+}
+
+.textAndAction {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.textContent > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+
+.action {
+  align-self: center;
+  justify-self: center;
+}
+
+.dismiss {
+  position: absolute;
+  top: 0.25rem;
+  right: 0.25rem;
+}
+
+/* This media query is the same as tailwind's `md:` prefix. We're using a standard CSS media query
+   instead of the tailwind prefix because we have to use standard CSS when working with custom variables. */
+
+@media screen and (min-width: 768px) {
+  .bannerDialog.horizontal {
+    grid-template-columns: min-content 1fr;
+  }
+
+  .bannerDialog.horizontal {
+    padding: 1rem;
+  }
+
+  .bannerDialog.horizontal {
+    text-align: left;
+  }
+
+  .bannerDialog.horizontal {
+    /* Left border is thicker and a darker color than the surrounding border on desktop */
+  }
+
+  .bannerDialog.horizontal {
+    border-width: 1px;
+  }
+
+  .bannerDialog.horizontal {
+    border-left-width: 4px;
+  }
+
+  .bannerDialog.horizontal {
+    border-left-color: var(--border-dark-color);
+    border-top-color: var(--border-light-color);
+
+    /* This makes the icon the same size as the header line height, which helps it look centered */
+    --svg-icon-size-default: 1.5rem;
+  }
+
+  .textAndAction.horizontal {
+    gap: 0.5rem;
+  }
+
+  .textContent.horizontal > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+
+    margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
+  }
+
+  .action.horizontal {
+    align-self: flex-start;
+  }
+
+  .dismissable.horizontal {
+    padding-right: 4.5rem;
+  }
+}
+
+.elevation0 {
+  /* Instead of removing the border, we replace it with a transparent one.
+     On windows high contrast mode, the background color will be removed,
+     but this border will become 100% opacity black to retain visual separation */
+  --border-light-color: transparent;
+  --tw-shadow: 0 0 #0000;
+
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}

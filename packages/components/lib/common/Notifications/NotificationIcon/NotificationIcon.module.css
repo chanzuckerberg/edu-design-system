@@ -1,0 +1,24 @@
+.iconContainer {
+  /* override default `div` line height to ensure no extra height is added to the icon */
+  line-height: 0;
+}
+
+.iconBrand {
+  color: var(--eds-color-brand-500);
+}
+
+.iconNeutral {
+  color: var(--eds-color-neutral-500);
+}
+
+.iconSuccess {
+  color: var(--eds-color-success-500);
+}
+
+.iconWarning {
+  color: var(--eds-color-warning-500);
+}
+
+.iconAlert {
+  color: var(--eds-color-alert-500);
+}

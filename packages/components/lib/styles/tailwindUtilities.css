@@ -1,0 +1,58 @@
+/**
+* This injects Tailwind's component classes and any component classes
+* registered by plugins.
+*/
+/**
+* This injects Tailwind's utility classes and any utility classes registered
+* by plugins.
+*/
+.mx-\[-0\.4em\] {
+    margin-left: -0.4em;
+    margin-right: -0.4em
+}
+.mx-\[-0\.55em\] {
+    margin-left: -0.55em;
+    margin-right: -0.55em
+}
+.mb-4 {
+    margin-bottom: 1rem
+}
+.ml-1 {
+    margin-left: 0.25rem
+}
+.ml-2 {
+    margin-left: 0.5rem
+}
+.mb-5 {
+    margin-bottom: 1.25rem
+}
+.block {
+    display: block
+}
+.table {
+    display: table
+}
+.grid {
+    display: grid
+}
+.w-80 {
+    width: 20rem
+}
+.border-separate {
+    border-collapse: separate
+}
+.grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr))
+}
+.gap-4 {
+    gap: 1rem
+}
+.gap-y-4 {
+    row-gap: 1rem
+}
+.gap-y-8 {
+    row-gap: 2rem
+}
+.p-2 {
+    padding: 0.5rem
+}

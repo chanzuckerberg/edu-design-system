@@ -1,0 +1,46 @@
+.toastDialog {
+
+  display: grid;
+
+  width: 100%;
+
+  max-width: 25rem;
+
+  align-items: center;
+
+  gap: 0.5rem;
+
+  padding-left: 1rem;
+
+  padding-right: 0.5rem;
+
+  border-radius: 0.25rem;
+
+  border-width: 1px;
+
+  border-left-width: 4px;
+
+  --tw-shadow: 0px 0px 0px 1px var(--eds-color-neutral-200), 0px 2px 3px rgba(0, 0, 0, 0.02), 0px 4px 8px rgba(0, 0, 0, 0.08);
+
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+
+  border-color: var(--border-light-color);
+  border-left-color: var(--border-dark-color);
+  grid-template-columns: 1fr min-content;
+  --svg-icon-size-default: 1.25rem
+}
+
+.content {
+
+  display: grid;
+
+  align-items: center;
+
+  gap: 1rem;
+
+  padding-top: 1rem;
+
+  padding-bottom: 1rem;
+
+  grid-template-columns: min-content 1fr
+}

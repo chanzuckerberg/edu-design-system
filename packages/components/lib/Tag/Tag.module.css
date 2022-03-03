@@ -1,0 +1,73 @@
+.tag {
+  display: inline-flex;
+  width: max-content;
+  max-width: 20rem;
+  align-items: center;
+  border-radius: 9999px;
+  border-width: 1px;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+
+  /** 
+   * TODO: (dcwither) when adding SvgIcon to EDS, include this in tailwind font 
+   * size macro.
+   */
+  --svg-icon-size-default: 1.25rem;
+
+  background-color: var(--tag-secondary-color);
+  border-color: var(--tag-secondary-color);
+  color: var(--tag-primary-color);
+}
+
+.tag > :not(:last-child) {
+  margin-right: 0.25rem;
+}
+
+.body {
+  flex: 1 1 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.colorNeutral {
+  --tag-primary-color: var(--eds-color-neutral-700);
+  --tag-secondary-color: var(--eds-color-neutral-100);
+  --tag-outline-color: var(--eds-color-neutral-500);
+}
+
+.colorAlert {
+  --tag-primary-color: var(--eds-color-alert-700);
+  --tag-secondary-color: var(--eds-color-alert-100);
+  --tag-outline-color: var(--eds-color-alert-500);
+}
+
+.colorSuccess {
+  --tag-primary-color: var(--eds-color-success-700);
+  --tag-secondary-color: var(--eds-color-success-100);
+  --tag-outline-color: var(--eds-color-success-500);
+}
+
+.colorWarning {
+  --tag-primary-color: var(--eds-color-warning-700);
+  --tag-secondary-color: var(--eds-color-warning-100);
+  --tag-outline-color: var(--eds-color-warning-500);
+}
+
+.colorYellow {
+  --tag-primary-color: var(--eds-color-neutral-700);
+  --tag-secondary-color: var(--eds-color-yellow-100);
+  --tag-outline-color: var(--eds-color-yellow-500);
+}
+
+.colorBrand {
+  --tag-primary-color: var(--eds-color-brand-700);
+  --tag-secondary-color: var(--eds-color-brand-100);
+  --tag-outline-color: var(--eds-color-brand-500);
+}
+
+.outline {
+  border-color: var(--tag-outline-color);
+}

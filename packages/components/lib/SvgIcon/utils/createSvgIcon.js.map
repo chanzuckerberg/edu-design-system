@@ -1,0 +1,1 @@
+{"version":3,"file":"createSvgIcon.js","sourceRoot":"","sources":["../../../src/SvgIcon/utils/createSvgIcon.tsx"],"names":[],"mappings":";;;;;AAAA,kDAA0B;AAE1B,yDAAiC;AAEjC;;;;;;;GAOG;AACH,SAAwB,aAAa,CAAC,IAAqB;IACzD,MAAM,SAAS,GAAG,CAAC,KAAgB,EAAE,EAAE;QACrC,OAAO,8BAAC,iBAAO,oBAAK,KAAK,GAAG,IAAI,CAAW,CAAC;IAC9C,CAAC,CAAC;IAEF,OAAO,SAAS,CAAC;AACnB,CAAC;AAND,gCAMC"}
