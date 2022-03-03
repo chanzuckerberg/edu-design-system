@@ -1,0 +1,49 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #SkeletonBar
+\*------------------------------------*/
+
+/**
+ * 1) Skeleton bar used to indicate a loading state
+ *    Used within table cells and other loading components
+ */
+.skeleton-bar {
+  position: relative;
+  padding: var(--eds-size-2);
+  background: linear-gradient(
+    to right,
+    #eee 0%,
+    #ddd 25%,
+    #eee 50%,
+    #ddd 75%,
+    #eee 100%
+  );
+  background-size: 400% 100%;
+  animation: pulse 5s linear infinite;
+}
+
+.skeleton-bar--sm {
+  padding: var(--eds-size-1);
+}
+
+.skeleton-bar--lg {
+  padding: var(--eds-size-4) var(--eds-size-2);
+}
+
+.skeleton-bar--xl {
+  padding: var(--eds-size-12) var(--eds-size-2);
+}
+
+/**
+ * Continuous rotation animation
+ * 1) Used for loading spinner animation
+ */
+@keyframes pulse {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: -200% 0%;
+  }
+}

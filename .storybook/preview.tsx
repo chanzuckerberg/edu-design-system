@@ -1,9 +1,15 @@
-import "../src/tokens-dist/css/variables.css";
-import "../src/styles/fonts.css";
-import "../src/styles/global.css";
-import "../src/styles/tailwindUtilities.css";
+// Import base-level styles
+import '../src/design-tokens/css/base/reset.css';
+import '../src/design-tokens/css/base/body.css';
+import '../src/design-tokens/css/base/media.css';
 
-import React from "react";
+// Import theme tokens
+import '../src/tokens-dist/css/variables.css';
+
+// Import storybook-specific CSS
+import './css/styleguide-only.css';
+
+import React from 'react';
 
 export const decorators = [
   (Story) => (
@@ -17,12 +23,12 @@ export const parameters = {
   backgrounds: {
     values: [
       {
-        name: "gray",
-        value: "#f3f3f3",
+        name: 'gray',
+        value: '#f3f3f3',
       },
       {
-        name: "dark",
-        value: "#21272D", // eds-color-neutral-700
+        name: 'dark',
+        value: '#21272D', // eds-color-neutral-700
       },
     ],
   },

@@ -1,8 +1,8 @@
-# edu-design-system
+# Education Design System
 
 ![Test CI](https://github.com/chanzuckerberg/edu-design-system/workflows/Test%20CI/badge.svg)
 
-The [Education Initiative](https://chanzuckerberg.com/education/)'s design system.
+Education Design System (EDS) is a repository of [presentational](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0) components used to build React-based products for [Chan Zuckerberg Initiative](https://chanzuckerberg.com/education/).
 
 ## Setup
 
@@ -19,7 +19,7 @@ yarn add @chanzuckerberg/eds
 We currently use Arimo as our base font. This package does not export it, so you will need to import this separately. We recommend importing from Google Fonts into a top-level CSS file:
 
 ```css
-@import url("https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap');
 ```
 
 and setting up base font settings:
@@ -45,7 +45,7 @@ body {
 Import any of the components from this package
 
 ```js
-import { Heading } from "@chanzuckerberg/eds";
+import { Heading } from '@chanzuckerberg/eds';
 ```
 
 and then use them in your React components
@@ -96,60 +96,11 @@ declare var x: React.ForwardRefExoticComponent<{
 should become:
 
 ```js
-import type { AbstractComponent } from "react";
+import type { AbstractComponent } from 'react';
 declare var x: AbstractComponent<Props, HTMLElement>;
 ```
 
 - Preserve exact-typed objects when possible. If you must make them inexact, add an explicit `...` at the end of the object.
-
-## Tailwind Utility Classes
-
-EDS is configured for Tailwind utility class use in Storybook only. Please configure downstream Tailwind config purge to include app files if necessary.
-
-Tailwind utility classes can be used with either `@apply` in CSS files such as
-
-```css
-div {
-  @apply rounded border-2;
-  /* border-radius: 0.25 rem;
-     border-width: 2px; */
-}
-```
-
-or used directly as class names such as
-
-```jsx
-<div className="rounded border-2">
-```
-
-Use the [docs](https://tailwindcss.com/docs) to search for appropriate classes.
-
-### Potential conflicts with other styling libraries (e.g. Bootstrap)
-
-If you're also using styles from a separate library, conflicts may arise rarely between utility class names. Here are some conflicts we're aware of for **Bootstrap** specifically:
-
-- Most annoying, `.hidden`
-  - Both Tailwind and Bootstrap have the same styling for `.hidden` but Bootstrap applies the `!important ` property, which can be annoying when trying to utilize Tailwind breakpoints, e.g.:
-  ```html
-  <div class="hidden md:block lg:inline"></div>
-  ```
-  - Where the expectation is `display: none ` for breakpoints smaller than 768px, `display: block `for 768px - 1023px, and `display: inline ` for >= 1024px. However since Bootstrap applies the `!important` property, all screen sizes show `display: none`.
-  - This can be circumvented with the `@apply` directive and/or using custom CSS with regular media queries to scope styling into a different class name, e.g.:.
-  ```jsx
-  <div className="responsive-display">
-  ```
-  ```css
-  .responsive-display {
-    display: none;
-    @apply md:block lg:inline;
-    /* or use traditional @media queries */
-  }
-  ```
-- `.invisible` and `.text-` alignment
-  - These classes have the same styling in both Tailwind and Bootstrap, and therefore can be used without issues. Tailwind responsive states (such as breakpoints, hover, etc.) will have higher specificity so no issues will be caused there.
-- Other unfound conflicts
-  - If the conflict is due to Bootstrap using `!important`, follow similar strategy above as `.hidden`.
-- Bootstrap [styling](https://github.com/twbs/bootstrap-sass/tree/master/assets/stylesheets/bootstrap) and mentioned conflicts in [\_utilities.scss](https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_utilities.scss#L46) and [\_type.scss](https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_type.scss#L90) for reference
 
 ## Development
 
@@ -171,9 +122,29 @@ If you're also using styles from a separate library, conflicts may arise rarely 
 ### [Icons](./docs/ICONS.md)
 ### [Publishing](./docs/PUBLISHING.md)
 
+## Working with the codebase
+
+Please refer to the following documentation to learn how to work with this codebase:
+
+- [Code guidelines](./docs/CODE_GUIDELINES.md)
+- [Tokens](./docs/TOKENS.md)
+- [Components](./docs/COMPONENTS.md)
+- [Typography](./docs/TYPOGRAPHY.md)
+- [Layout](./docs/LAYOUT.md)
+- [Icons](./docs/ICONS.md)
+
+## Workflow
+
+- [Contribution guidelines](./docs/CONTRIBUTING.md) - Please refer to these guidelines to learn how to contribute to the library.
+- [Release guidelines](.docs/PUBLISHING.md) - Please refer to these guidelines for instructions on how to publish a new version of the library.
+
+## Support
+
+For questions, feature requests, bugs, and more, please refer to the support guidelines and join the support channel [TODO: link to support channel and docs]
+
 ## Project Status
 
-This project is under **active development**. If you would like to contribute, check out the [contribution guidelines](https://github.com/chanzuckerberg/edu-design-system/blob/main/CONTRIBUTING.md) or [open an issue](https://github.com/chanzuckerberg/edu-design-system/issues).
+This project is under **active development**. If you would like to contribute, check out the [contribution guidelines](./docs/CONTRIBUTING.md) or [open an issue](https://github.com/chanzuckerberg/edu-design-system/issues).
 
 This project is governed under the [Contributor Covenant](https://www.contributor-covenant.org/) code of conduct.
 

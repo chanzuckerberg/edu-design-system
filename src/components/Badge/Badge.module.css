@@ -1,0 +1,56 @@
+/* TODO: change to design-tokens/component.css once we convert everything in there to CSS */
+@import '../../design-tokens/tier-2-usage/typography-usage.css';
+
+/*------------------------------------*\
+    #BADGE
+\*------------------------------------*/
+
+/**
+ * 1) Small block of color with messaging for the user inside
+ */
+.badge {
+  @mixin eds-theme-typography-tag;
+  padding: var(--eds-size-2);
+  display: inline-block;
+  color: var(--eds-theme-color-body-foreground-inverted);
+  background-color: var(--eds-theme-color-utility-info-background);
+  border-radius: var(--eds-theme-border-radius);
+}
+
+/**
+ * Disabled badge
+ * 1) Badge that indicates a disabled state
+ * 2) Ghost back the badge color
+ */
+.badge--disabled {
+  opacity: 0.4; /* 2 */
+}
+
+/**
+ * Badge success
+ */
+.badge--success {
+  background-color: var(--eds-theme-color-utility-success-background);
+}
+
+/**
+ * Badge warning
+ */
+.badge--warning {
+  color: var(--eds-theme-color-body-foreground);
+  background-color: var(--eds-theme-color-utility-warning-background);
+}
+
+/**
+ * Badge error
+ */
+.badge--error {
+  background-color: var(--eds-theme-color-utility-error-background);
+}
+
+/**
+ * Badge info
+ */
+.badge--info {
+  background-color: var(--eds-theme-color-utility-info-background);
+}

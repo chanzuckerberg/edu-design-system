@@ -1,0 +1,28 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #PANEL
+\*------------------------------------*/
+
+/**
+ * 1) A container for content
+ */
+.panel {
+  background: var(--eds-color-neutral-white); /* TODO */
+  border-width: var(--eds-theme-border-width);
+  border-style: solid;
+  border-color: var(--eds-theme-color-neutral-subtle-border);
+  border-radius: var(--eds-theme-border-radius);
+  padding: var(--eds-size-2);
+}
+
+.panel--flush {
+  padding: 0;
+}
+
+.panel--align-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

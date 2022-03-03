@@ -1,0 +1,100 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #LINK LIST
+\*------------------------------------*/
+
+/**
+ * 1) List of links
+ */
+.link-list {
+  @mixin reset;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--eds-size-2);
+}
+
+/**
+ * Horizontal link list 
+ */
+.link-list--horizontal {
+  flex-direction: row;
+}
+
+/**
+ * Responsive link list 
+ */
+.link-list--responsive {
+  @media all and (min-width: $eds-bp-md) {
+    flex-direction: row;
+  }
+}
+
+/**
+ * Link list item
+ */
+/* stylelint-disable-next-line block-no-empty */
+.link-list__item {
+}
+
+/**
+ * Link list link
+ */
+.link-list__link {
+  display: flex;
+  @mixin textLink;
+
+  &:focus-visible {
+    @mixin focus;
+  }
+
+  /**
+   * within small link list
+   */
+  .link-list--sm & {
+    @mixin eds-theme-typography-body-text-sm;
+  }
+
+  .link-list--lined & {
+    padding-top: var(--eds-size-1-and-half);
+    padding-bottom: var(--eds-size-1-and-half);
+    border-bottom-width: var(--eds-theme-border-width);
+    border-bottom-style: solid;
+    border-bottom-color: var(--eds-theme-color-neutral-subtle-border);
+  }
+
+  /**
+   * link within an inverted link list
+   */
+  .link-list--inverted & {
+    color: var(--eds-theme-color-body-foreground-inverted);
+    text-decoration: none;
+
+    /* stylelint-disable-next-line max-nesting-depth */
+    &:focus-visible {
+      @mixin focusInverted;
+    }
+  }
+
+  .link-list--lined .link-list__item:last-child & {
+    border-bottom: none;
+  }
+}
+
+.link-list__icon {
+  position: relative;
+  top: 5px;
+  height: 14px;
+  width: 14px;
+  fill: currentColor;
+  transition: fill var(--eds-anim-fade-quick) var(--eds-anim-ease);
+}
+
+.link-list__text + .link-list__icon {
+  margin-left: var(--eds-size-1);
+}
+
+.link-list__icon + .link-list__text {
+  margin-left: var(--eds-size-1);
+}

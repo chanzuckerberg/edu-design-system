@@ -1,19 +1,164 @@
-/* ------------------------------------*\
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
     #CHECKBOX
-\*------------------------------------ */
+\*------------------------------------*/
 
 /**
  * A custom individual checkbox control
  * 1) Outer wrapper div for custom control
- * 2) Grid display aligns label and the checkbox
+ * 2) Determines width and height of the control
  * 3) Prevents control from being "squished" in 
  *    a flexbox parent
  */
 .checkbox {
-  /* 1 */
   position: relative;
-  display: grid; /* 2 */
-  align-items: flex-start;
-  grid-template-columns: min-content 1fr;
-  gap: 0.5rem;
+  display: block;
+  width: var(--eds-size-2-and-half); /* 2 */
+  height: var(--eds-size-2-and-half); /* 2 */
+  flex: none; /* 3 */
+}
+
+/**
+ * Checkbox control input
+ * 1) Make control dimensions same as outer container
+ * 2) Hide native form controls
+ */
+.checkbox__input {
+  position: absolute;
+  top: 0; /* 1 */
+  right: 0; /* 1 */
+  bottom: 0; /* 1 */
+  left: 0; /* 1 */
+  z-index: var(--eds-z-index-400);
+  display: block;
+  width: 100%; /* 1 */
+  height: 100%; /* 1 */
+  cursor: pointer;
+  opacity: 0; /* 2 */
+
+  /**
+   * Disabled checkbox input
+   */
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+/**
+ * Custom checkbox
+ * 1) Make control dimensions same as outer container
+ */
+.checkbox__custom-check {
+  position: absolute;
+  top: 0; /* 1 */
+  right: 0; /* 1 */
+  bottom: 0; /* 1 */
+  left: 0; /* 1 */
+  z-index: var(--eds-z-index-100);
+
+  /**
+   * Custom checkbox background 
+   * 1) Make control dimensions same as outer container
+   * 2) Stack background behind checkbox foreground
+   */
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0; /* 1 */
+    right: 0; /* 1 */
+    bottom: 0; /* 1 */
+    left: 0; /* 1 */
+    z-index: var(--eds-z-index-100); /* 2 */
+    display: block;
+    border-width: var(--eds-theme-form-input-border-width);
+    border-style: solid;
+    border-color: var(--eds-theme-color-form-input-border);
+    border-radius: var(--eds-theme-form-input-border-radius);
+    background: var(--eds-color-neutral-white);
+
+    /* stylelint-disable-next-line max-nesting-depth */
+    .checkbox--inverted & {
+      background-color: transparent;
+      border-color: var(--eds-theme-color-form-input-border-inverted);
+    }
+
+    /**
+     *  Custom checkbox background inside of focused control 
+     */
+    /* stylelint-disable-next-line max-nesting-depth */
+    .checkbox__input:focus-visible + & {
+      @mixin focus;
+    }
+    /**
+     *  Custom checkbox background inside of disabled control 
+     */
+    /* stylelint-disable-next-line max-nesting-depth */
+    .checkbox__input:disabled + & {
+      border-color: var(--eds-theme-color-disabled-border);
+      background-color: var(--eds-theme-color-disabled-background);
+      cursor: not-allowed;
+    }
+
+    /**
+     *  Custom checkbox background inside of checked control 
+     */
+    /* stylelint-disable-next-line max-nesting-depth */
+    .checkbox__input:checked + & {
+      background: var(--eds-theme-color-primary-background);
+      border-color: var(--eds-theme-color-primary-border);
+    }
+  }
+
+  /**
+   * Custom checkbox checkmark
+   * 1) Position checkmark in center of box
+   * 2) Draw custom checkmark
+   * 3) Hide checkmark based by default
+   */
+  &:after {
+    content: '';
+    position: absolute;
+    top: 6px; /* 1 */
+    left: 5px; /* 1 */
+    z-index: var(--eds-z-index-200);
+    display: block;
+    width: 10px;
+    height: 5px;
+    border: solid; /* 2 */
+    border-width: 0 0 2px 2px; /* 2 */
+    border-color: var(--eds-theme-color-body-foreground-inverted); /* 2 */
+    border-top-color: transparent; /* 2 */
+    transform: rotate(-50deg); /* 2 */
+    opacity: 0; /* 3 */
+
+    /**
+     * Actual checkbox of the checked input
+     * 1) Hide checkmark based on if input is checked
+     */
+    /* stylelint-disable-next-line max-nesting-depth */
+    .checkbox__input:checked + & {
+      opacity: 1; /* 1 */
+    }
+
+    /**
+     * Indeterminate checkbox state
+     * 1) This renders as a horizontal line to denote an indeterminate
+     *    (unclear whether checked or unchecked state)
+     * 2) Override the checked state property
+     * 3) Draw the bar shape
+     * 4) Position bar in the center of the custom checkbox
+     */
+    /* stylelint-disable-next-line max-nesting-depth */
+    .checkbox__input:indeterminate + & {
+      content: '';
+      opacity: 1;
+      transform: rotate(0deg); /* 2 */
+      border: 0; /* 2 */
+      width: 10px; /* 3 */
+      height: 2px; /* 3 */
+      background: var(--eds-theme-color-primary-foreground);
+      top: 9px; /* 4 */
+    }
+  }
 }

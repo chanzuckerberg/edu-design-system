@@ -7,19 +7,12 @@
       true,
       {
         "ignoreAtRules": [
-          "extends",
-          "apply",
-          "tailwind",
-          "components",
-          "utilities",
-          "screen",
           "define-mixin",
           "mixin"
         ]
       }
     ],
     "custom-property-empty-line-before": "never",
-    "selector-nested-pattern": "^(&(:[\\w-]+|\\.state(Hover|Focus|FocusWithin|Active)),?\\s*)+$",
     "max-nesting-depth": 1,
     "selector-class-pattern": null,
     "selector-pseudo-class-no-unknown": [

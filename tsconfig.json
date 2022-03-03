@@ -1,23 +1,30 @@
 {
+  "include": [
+    "src/index.ts",
+    "src/custom.d.ts",
+    "src/util/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "typings"
+  ],
+  "typeRoots": ["./types", "./node_modules/@types"],
   "compilerOptions": {
     "allowJs": false,
     "allowSyntheticDefaultImports": true,
+    "baseUrl": "src",
     "declaration": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "jsx": "react",
     "lib": ["es5", "es6", "dom"],
-    "module": "commonjs",
     "moduleResolution": "node",
     "noUnusedLocals": true,
-    "outDir": "lib/",
+    "outDir": "dist",
     "resolveJsonModule": true,
-    "sourceMap": true,
     "skipLibCheck": true,
-    "strict": true,
+    "sourceMap": true,
     "suppressImplicitAnyIndexErrors": true,
     "target": "es6"
-  },
-  "include": ["src"],
-  "exclude": ["node_modules", "lib"]
+  }
 }

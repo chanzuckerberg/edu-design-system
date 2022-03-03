@@ -1,0 +1,69 @@
+/*------------------------------------*\
+    #GLOBAL HEADER
+\*------------------------------------*/
+
+/**
+ * 1) 
+ */
+.c-global-header {
+  margin-bottom: var(--eds-size-4);
+
+  @media all and (min-width: $eds-bp-lg) {
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/**
+ * Header container 
+ * 1) Contains the 
+ */
+.c-global-header__header {
+  display: flex;
+  justify-content: space-between;
+
+  @media all and (min-width: $eds-bp-lg) {
+    margin-bottom: var(--eds-size-4);
+  }
+}
+
+/**
+ * Body container
+ * 1) Contains the primary navigation 
+ */
+.c-global-header__body {
+  @media all and (min-width: $eds-bp-lg) {
+    flex: 1;
+  }
+
+  @media all and (max-width: $eds-bp-lg) {
+    display: none;
+
+    .c-global-header.is-active & {
+      padding-top: var(--eds-size-4);
+      display: block;
+    }
+  }
+}
+
+.c-global-header__footer {
+  @media all and (max-width: $eds-bp-lg) {
+    display: none;
+
+    .c-global-header.is-active & {
+      display: block;
+    }
+  }
+}
+
+/**
+ * Menu Button 
+ * 1) Menu button triggers the navigation container on small screens,
+ *    but is hidden when the nav can be exposed
+ */
+.c-global-header__menu-button {
+  @media all and (min-width: $eds-bp-lg) {
+    display: none; /* 1 */
+  }
+}

@@ -1,0 +1,11 @@
+/*------------------------------------*\
+    #TEXTAREA
+\*------------------------------------*/
+
+/**
+ * Inherits base textarea styles 
+ */
+.textarea {
+  /* @mixin inputStyles; */
+  resize: none;
+}

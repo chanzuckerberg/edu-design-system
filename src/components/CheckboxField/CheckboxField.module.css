@@ -1,0 +1,114 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #CHECKBOX FIELD
+\*------------------------------------*/
+
+/**
+ * 1) Consists of a label, form control, and an optional note about the field.
+ */
+.checkbox-field {
+  @mixin fieldsetStyles;
+  position: relative;
+}
+
+/**
+ * Inverted Checkbox Field
+ */
+.checkbox-field--inverted {
+  color: var(--eds-theme-color-body-foreground-inverted);
+}
+
+/**
+ * Checkbox field body
+ * 1) Contains the list of checkbox options
+ */
+.checkbox-field__body {
+  position: relative;
+  margin-bottom: var(--eds-size-half);
+}
+
+/**
+ * Checkbox field list
+ */
+.checkbox-field__list {
+  @mixin reset;
+  list-style: none;
+  display: grid;
+  gap: var(--eds-size-2);
+
+  /**
+   * Checkbox field list inside inline variant
+   * 1) place items beside each other
+   */
+  .checkbox-field--inline & {
+    display: flex; /* 1 */
+    gap: var(--eds-size-4);
+  }
+
+  /**
+   * Checkbox field list inside inline-wrap variant
+   * 1) place items beside each other
+   */
+  .checkbox-field--inline-wrap & {
+    display: flex; /* 1 */
+    flex-wrap: wrap;
+  }
+}
+
+/**
+ * Checkbox field list item
+ * 1) Place control and label beside each other
+ * 2) Spacing between items
+ */
+.checkbox-field__item {
+  display: flex; /* 1 */
+  gap: var(--eds-size-1);
+}
+
+/**
+ * Checkbox field item label 
+ * 1) Aligns label to checkbox control
+ */
+.checkbox-field__item-label {
+  @mixin eds-theme-typography-body-text;
+  color: var(--eds-theme-color-form-label-foreground);
+  position: relative; /* 1 */
+  top: -2px; /* 1 */
+
+  /**
+   * Checkbox field item label within disabled checkbox field
+   */
+  .eds-is-disabled & {
+    color: var(--eds-theme-color-disabled-foreground);
+    cursor: not-allowed;
+  }
+
+  /**
+   * Inverted checkbox field
+   */
+  .checkbox-field__item--inverted & {
+    color: var(--eds-theme-color-body-foreground-inverted);
+  }
+}
+
+/**
+ * Checkbox field control
+ * 1) The actual checkbox form control
+ * 2) Align control to label
+ */
+.checkbox-field__item-control {
+  position: relative;
+}
+
+/**
+ * Checkbox field item after
+ * 1) Slot to place tooltip, icon, or other helpter text
+ * 2) adds margin left to visually separate from label
+ */
+.checkbox-field__item-after {
+  position: relative;
+  top: 2px;
+  display: inline;
+  margin-left: var(--eds-size-1); /* 2 */
+}

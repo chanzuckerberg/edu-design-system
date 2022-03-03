@@ -1,0 +1,44 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #INLINE CHECKBOX
+\*------------------------------------*/
+
+/**
+ * 1) Form control containing a checkbox. Outer element is a <label>
+ * 2) For a field of multiple checkboxes, use inline checkbox field variation
+ */
+.inline-checkbox {
+  @mixin eds-theme-typography-body-text;
+  color: var(--eds-theme-color-form-label-foreground);
+  display: flex;
+}
+
+/**
+ * Inline checkbox input
+ * 1) Actual checkbox control
+ */
+.inline-checkbox__control {
+  display: block;
+  margin-right: var(--eds-size-1);
+  flex: none;
+}
+
+/**
+ * Inline checkbox text
+ */
+.inline-checkbox__text {
+  position: relative;
+  top: -1px;
+}
+
+/**
+ * Inline checkbox label after
+ * 1) Slot for tooltip after inline checkbox text
+ */
+.inline-checkbox__label-after {
+  display: inline;
+  position: relative;
+  top: 3px;
+  margin-left: var(--eds-size-1);
+}

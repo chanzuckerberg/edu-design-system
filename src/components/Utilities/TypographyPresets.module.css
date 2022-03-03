@@ -1,0 +1,76 @@
+@import '../../design-tokens/mixins.css';
+/*------------------------------------*\
+    #TYPOGRAPHY PRESET UTILITY CLASSES
+\*------------------------------------*/
+
+/**
+ * Creates utility classes to apply typography preset mixins to elements
+ */
+
+.u-typography-preset-1 {
+  @mixin eds-typography-preset-1;
+}
+
+.u-typography-preset-2 {
+  @mixin eds-typography-preset-2;
+}
+
+.u-typography-preset-2-bold {
+  @mixin eds-typography-preset-2-bold;
+}
+
+.u-typography-preset-3 {
+  @mixin eds-typography-preset-3;
+}
+
+.u-typography-preset-3-bold {
+  @mixin eds-typography-preset-3-bold;
+}
+
+.u-typography-preset-4 {
+  @mixin eds-typography-preset-4;
+}
+
+.u-typography-preset-4-bold {
+  @mixin eds-typography-preset-4-bold;
+}
+
+.u-typography-preset-5 {
+  @mixin eds-typography-preset-5;
+}
+
+.u-typography-preset-5-bold {
+  @mixin eds-typography-preset-5-bold;
+}
+
+.u-typography-preset-6 {
+  @mixin eds-typography-preset-6;
+}
+
+.u-typography-preset-6-bold {
+  @mixin eds-typography-preset-6-bold;
+}
+
+.u-typography-preset-7 {
+  @mixin eds-typography-preset-7;
+}
+
+.u-typography-preset-7-bold {
+  @mixin eds-typography-preset-7-bold;
+}
+
+.u-typography-preset-8 {
+  @mixin eds-typography-preset-8;
+}
+
+.u-typography-preset-8-bold {
+  @mixin eds-typography-preset-8-bold;
+}
+
+.u-typography-preset-9 {
+  @mixin eds-typography-preset-9;
+}
+
+.u-typography-preset-9-bold {
+  @mixin eds-typography-preset-9-bold;
+}

@@ -25,4 +25,4 @@ jobs:
       - name: Deploy Storybook Docs 🚀
         run: yarn run deploy:docs
         env:
-          GH_TOKEN: "${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}"
+          GH_TOKEN: '${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}'

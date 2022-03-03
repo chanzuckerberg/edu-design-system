@@ -1,14 +1,22 @@
+@import '../../design-tokens/mixins.css';
+
 /*------------------------------------*\
     #FIELDSET
 \*------------------------------------*/
 
 /**
- * The fieldset groups a legend and several controls.
- * 1) Overrides default browser styling.
+ * 1) Grouping of form fields with a legend
  */
 .fieldset {
-  margin: 1rem;
-  display: block; /* 1 */
-  padding: 0; /* 1 */
-  border: none; /* 1 */
+  @mixin fieldsetStyles;
+}
+
+/**
+ * Fieldset legend
+ */
+.fieldset__legend {
+  @mixin legendReset;
+  @mixin eds-theme-typography-form-label;
+
+  margin-bottom: var(--eds-size-2);
 }

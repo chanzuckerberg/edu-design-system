@@ -1,0 +1,37 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #COLOR UTILITY CLASSES
+\*------------------------------------*/
+
+/**
+ * Success utility
+ * 1) Forces color of text to be the success variable
+ */
+.u-color-utility-success {
+  color: var(--eds-theme-color-utility-success-foreground) !important;
+}
+
+/**
+ * Error utility
+ * 1) Forces color of text to be the error variable
+ */
+.u-color-utility-error {
+  color: var(--eds-theme-color-utility-error-foreground) !important;
+}
+
+/**
+ * Warning utility
+ * 1) Forces color of text to be the Warning variable
+ */
+.u-color-utility-warning {
+  color: var(--eds-theme-color-utility-warning-foreground) !important;
+}
+
+/**
+ * Info utility
+ * 1) Forces color of text to be the Info variable
+ */
+.u-color-utility-info {
+  color: var(--eds-theme-color-utility-info-foreground) !important;
+}
