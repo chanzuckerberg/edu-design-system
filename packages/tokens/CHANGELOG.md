@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.1](https://github.com/chanzuckerberg/edu-design-system/compare/v0.6.0...v0.8.1) (2022-03-03)
+
+
+### Features
+
+* remove unused legacy color tokens ([a953e25](https://github.com/chanzuckerberg/edu-design-system/commit/a953e256906dfee2d66cf46a9211a9149f80f29d))
+
+
+
+
+
 # [0.8.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.7.0...v0.8.0) (2022-02-28)
 
 
