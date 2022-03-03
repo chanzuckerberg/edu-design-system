@@ -1,0 +1,132 @@
+@define-mixin eds-typography-preset-1 $important {
+  font-family: var(--eds-font-family-secondary) $important;
+  font-weight: var(--eds-font-weight-bold) $important;
+  font-size: var(--eds-font-size-xl) $important;
+  line-height: var(--eds-line-height-sm-2) $important;
+  letter-spacing: normal $important;
+  text-transform: none $important;
+
+  @media all and (max-width: $eds-bp-md) {
+    font-size: var(--eds-font-size-lg) $important;
+  }
+}
+
+@define-mixin eds-typography-preset-2 $important {
+  font-family: var(--eds-font-family-secondary) $important;
+  font-weight: var(--eds-font-weight-normal) $important;
+  font-size: var(--eds-font-size-xl) $important;
+  line-height: var(--eds-line-height-sm-2) $important;
+  letter-spacing: normal $important;
+  text-transform: none $important;
+
+  @media all and (max-width: $eds-bp-md) {
+    font-size: var(--eds-font-size-lg) $important;
+  }
+}
+
+@define-mixin eds-typography-preset-2-bold $important {
+  @mixin eds-typography-preset-2 $important;
+  font-weight: var(--eds-font-weight-bold) $important;
+}
+
+@define-mixin eds-typography-preset-3 $important {
+  font-family: var(--eds-font-family-secondary) $important;
+  font-weight: var(--eds-font-weight-light) $important;
+  font-size: var(--eds-font-size-lg) $important;
+  line-height: var(--eds-line-height-sm-2) $important;
+  letter-spacing: normal $important;
+  text-transform: none $important;
+
+  @media all and (max-width: $eds-bp-md) {
+    font-size: var(--eds-font-size-md-3) $important;
+  }
+}
+
+@define-mixin eds-typography-preset-3-bold $important {
+  @mixin eds-typography-preset-3 $important;
+  font-weight: var(--eds-font-weight-bold) $important;
+}
+
+
+@define-mixin eds-typography-preset-4 $important {
+  font-family: var(--eds-font-family-secondary) $important;
+  font-weight: var(--eds-font-weight-normal) $important;
+  font-size: var(--eds-font-size-md-2) $important;
+  line-height: var(--eds-line-height-sm-2) $important;
+}
+
+
+@define-mixin eds-typography-preset-4-bold $important {
+  @mixin eds-typography-preset-4 $important;
+  font-weight: var(--eds-font-weight-bold) $important;
+}
+
+@define-mixin eds-typography-preset-5 $important {
+  font-family: var(--eds-font-family-primary) $important;
+  font-weight: var(--eds-font-weight-regular) $important;
+  font-size: var(--eds-font-size-md) $important;
+  line-height: var(--eds-line-height-lg) $important;
+  letter-spacing: normal $important;
+  text-transform: none $important;
+}
+
+@define-mixin eds-typography-preset-5-bold $important {
+  @mixin eds-typography-preset-5 $important;
+  font-weight: var(--eds-font-weight-bold) $important;
+}
+
+@define-mixin eds-typography-preset-6 $important {
+  font-family: var(--eds-font-family-primary) $important;
+  font-weight: var(--eds-font-weight-regular) $important;
+  font-size: var(--eds-font-size-sm) $important;
+  line-height: var(--eds-line-height-lg) $important;
+  letter-spacing: normal $important;
+  text-transform: none $important;
+}
+
+@define-mixin eds-typography-preset-6-bold $important {
+  @mixin eds-typography-preset-6 $important;
+  font-weight: var(--eds-font-weight-bold) $important;
+}
+
+@define-mixin eds-typography-preset-7 $important {
+  font-family: var(--eds-font-family-tertiary) $important;
+  font-weight: var(--eds-font-weight-regular) $important;
+  font-size: var(--eds-font-size-xs) $important;
+  line-height: var(--eds-line-height-sm-2) $important;
+  letter-spacing: normal $important;
+  text-transform: none $important;
+}
+
+@define-mixin eds-typography-preset-7-bold $important {
+  @mixin eds-typography-preset-7 $important;
+  font-weight: var(--eds-font-weight-bold) $important;
+}
+
+@define-mixin eds-typography-preset-8 $important {
+  font-family: var(--eds-font-family-tertiary) $important;
+  font-weight: var(--eds-font-weight-regular) $important;
+  font-size: var(--eds-font-size-md) $important;
+  line-height: var(--eds-line-height-sm) $important;
+  letter-spacing: normal $important;
+  text-transform: uppercase $important;
+}
+
+@define-mixin eds-typography-preset-8-bold $important {
+  @mixin eds-typography-preset-8 $important;
+  font-weight: var(--eds-font-weight-bold) $important;
+}
+
+@define-mixin eds-typography-preset-9 $important {
+  font-family: var(--eds-font-family-tertiary) $important;
+  font-weight: var(--eds-font-weight-regular) $important;
+  font-size: var(--eds-font-size-md-2) $important;
+  line-height: var(--eds-line-height-sm) $important;
+  letter-spacing: 1.5px $important;
+  text-transform: uppercase $important;
+}
+
+@define-mixin eds-typography-preset-9-bold $important {
+  @mixin eds-typography-preset-9 $important;
+  font-weight: var(--eds-font-weight-bold) $important;
+}

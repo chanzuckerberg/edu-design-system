@@ -1,0 +1,85 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #HEADING
+\*------------------------------------*/
+
+/**
+ * 1) h1, h2, h3, h4, h5, h6
+ * 2) Styles are either controlled by as or size declaration
+ */
+.heading {
+  @mixin reset;
+
+  &.heading--size-1 {
+    @mixin eds-theme-typography-heading-1;
+  }
+
+  &.heading--size-2 {
+    @mixin eds-theme-typography-heading-2;
+  }
+
+  &.heading--size-3 {
+    @mixin eds-theme-typography-heading-3;
+  }
+
+  &.heading--size-4 {
+    @mixin eds-theme-typography-heading-4;
+  }
+
+  &.heading--size-5 {
+    @mixin eds-theme-typography-heading-5;
+  }
+
+  &.heading--size-6 {
+    @mixin eds-theme-typography-heading-6;
+  }
+}
+
+/**
+ * H1 Heading
+ * 1) Use this for the default heading if as = h1
+ */
+h1.heading {
+  @mixin eds-theme-typography-heading-1;
+}
+
+/**
+ * H2 Heading
+ * 1) Use this for the default heading if as = h2
+ */
+h2.heading {
+  @mixin eds-theme-typography-heading-2;
+}
+
+/**
+ * H3 Heading
+ * 1) Use this for the default heading if as = h3
+ */
+h3.heading {
+  @mixin eds-theme-typography-heading-3;
+}
+
+/**
+ * H4 Heading
+ * 1) Use this for the default heading if as = h4
+ */
+h4.heading {
+  @mixin eds-theme-typography-heading-4;
+}
+
+/**
+ * H5 Heading
+ * 1) Use this for the default heading if as = h5
+ */
+h5.heading {
+  @mixin eds-theme-typography-heading-5;
+}
+
+/**
+ * H6 Heading
+ * 1) Use this for the default heading if as = h6
+ */
+h6.heading {
+  @mixin eds-theme-typography-heading-6;
+}

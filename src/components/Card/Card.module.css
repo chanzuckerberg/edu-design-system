@@ -1,0 +1,59 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #CARD
+\*------------------------------------*/
+
+/**
+ * 1) A card is a block that typically contains a title, image,
+ *    text, and/or calls to action
+ */
+.card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: var(--eds-size-2);
+  box-shadow: var(--eds-theme-box-shadow);
+  border-radius: var(--eds-theme-border-radius);
+  border-width: var(--eds-theme-border-width);
+  border-style: solid;
+  border-color: var(--eds-theme-color-neutral-subtle-border);
+  background-color: var(--eds-color-neutral-white);
+}
+
+/**
+ * Centered card
+ * 1) Card where the content is centered
+ */
+.card--center {
+  text-align: center;
+}
+
+/**
+ * Card Inverted
+ * 1) Used on dark backgrounds to lighten the text color and remove a box shadow
+ */
+.card--inverted {
+  color: var(--eds-theme-color-body-foreground-inverted);
+  background: transparent;
+  border-color: var(--eds-theme-color-neutral-subtle-border-inverted);
+  box-shadow: none;
+}
+
+/**
+ * Card body
+ */
+.card__body {
+  flex: auto;
+}
+
+/**
+ * Card footer
+ * 1) Using margin-top since card__footer is
+ *    optional and may not always exist. Putting
+ *    margin-bottom on card__body would result in
+ *    a gap if card__footer does not exist
+ */
+.card__footer {
+  margin-top: var(--eds-size-2); /* 1 */
+}

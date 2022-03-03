@@ -1,0 +1,22 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #FIELDSET
+\*------------------------------------*/
+
+/**
+ * 1) Grouping of form fields with a legend
+ */
+.fieldset {
+  @mixin fieldsetStyles;
+}
+
+/**
+ * Fieldset legend
+ */
+.fieldset__legend {
+  @mixin legendReset;
+  @mixin eds-theme-typography-form-label;
+
+  margin-bottom: var(--eds-size-2);
+}

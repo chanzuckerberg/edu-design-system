@@ -1,0 +1,102 @@
+@import '../tier-1-definitions/typography-presets.css';
+
+@define-mixin eds-theme-typography-body-text  $important {
+   @mixin eds-typography-preset-5 $important;
+}
+
+@define-mixin eds-theme-typography-body-text-bold  $important {
+   @mixin eds-typography-preset-5-bold $important;
+}
+
+
+@define-mixin eds-theme-typography-body-text-lg $important {
+   @mixin eds-typography-preset-3 $important;
+}
+
+@define-mixin eds-theme-typography-body-text-lg-bold $important {
+   @mixin eds-typography-preset-3-bold $important;
+}
+
+@define-mixin eds-theme-typography-body-text-sm $important {
+   @mixin eds-typography-preset-6 $important;
+}
+
+@define-mixin eds-theme-typography-body-text-sm-bold $important {
+   @mixin eds-typography-preset-6-bold $important;
+}
+
+@define-mixin eds-theme-typography-body-text-xs $important {
+   @mixin eds-typography-preset-7 $important;
+}
+
+@define-mixin eds-theme-typography-body-text-xs-bold $important {
+   @mixin eds-typography-preset-7-bold $important;
+}
+
+@define-mixin eds-theme-typography-heading-1 $important {
+   @mixin eds-typography-preset-1 $important;
+}
+
+@define-mixin eds-theme-typography-heading-2 $important {
+   @mixin eds-typography-preset-2-bold $important;
+}
+
+@define-mixin eds-theme-typography-heading-3 $important {
+   @mixin eds-typography-preset-3-bold $important;
+}
+
+@define-mixin eds-theme-typography-heading-4 $important {
+   @mixin eds-typography-preset-4-bold $important;
+}
+
+@define-mixin eds-theme-typography-heading-5 $important {
+   @mixin eds-typography-preset-5-bold $important;
+}
+
+@define-mixin eds-theme-typography-heading-6 $important {
+   @mixin eds-typography-preset-6-bold $important;
+}
+
+@define-mixin eds-theme-typography-kicker $important {
+   @mixin eds-typography-preset-9 $important;
+}
+
+@define-mixin eds-theme-typography-data-heading $important {
+   @mixin eds-typography-preset-5-bold $important;
+}
+
+@define-mixin eds-theme-typography-data-heading-sm $important {
+   @mixin eds-typography-preset-6-bold $important;
+}
+
+@define-mixin eds-theme-typography-data-text $important {
+   @mixin eds-typography-preset-5 $important;
+}
+
+@define-mixin eds-theme-typography-data-text-sm $important {
+   @mixin eds-typography-preset-6 $important;
+}
+
+@define-mixin eds-theme-typography-form-label $important {
+   @mixin eds-typography-preset-5-bold $important;
+}
+
+@define-mixin eds-theme-typography-form-input $important {
+   @mixin eds-typography-preset-5 $important;
+}
+
+@define-mixin eds-theme-typography-button $important {
+   @mixin eds-typography-preset-8-bold $important;
+}
+
+@define-mixin eds-theme-typography-button-sm $important {
+   @mixin eds-typography-preset-8 $important;
+}
+
+@define-mixin eds-theme-typography-button-lg $important {
+   @mixin eds-typography-preset-9 $important;
+}
+
+@define-mixin eds-theme-typography-tag $important {
+   @mixin eds-typography-preset-6 $important;
+}

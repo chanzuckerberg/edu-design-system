@@ -1,26 +1,16 @@
-import type { StoryObj } from "@storybook/react";
-import React from "react";
-import {{pascalCase name}} from "./{{pascalCase name}}";
+
+import React from 'react';
+import { Story, Meta } from '@storybook/react';
+
+import { {{pascalCase name}}, Props } from './{{pascalCase name}}';
 
 export default {
-  title: "{{pascalCase name}}",
-  component: {{pascalCase name}},
-  args: {
-    children: "Hello world =^_^=",
-  },
-};
+	title: 'Example/{{pascalCase name}}',
+	component: {{pascalCase name}},
+} as Meta;
 
-type Args = React.ComponentProps<typeof {{pascalCase name}}>;
+const Template: Story<Props> = (args) => <{{pascalCase name}} {...args} />;
 
-export const Default: StoryObj<Args> = {
-  args: {
-    align: "left",
-  }
-};
-
-export const RightAligned: StoryObj<Args> = {
-  ...Default,
-  args: {
-    align: "right",
-  },
-};
+export const Default = Template.bind({});
+Default.args = {
+};;

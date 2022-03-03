@@ -1,120 +1,23 @@
-import type { StoryObj } from "@storybook/react";
-import React from "react";
-import Checkbox, { CheckboxInput, Label } from "./Checkbox";
+import { Story, Meta } from '@storybook/react';
+import React from 'react';
 
-const defaultArgs = {
-  disabled: false,
-  label: "Checkbox",
-};
+import { Checkbox, Props } from './Checkbox';
 
 export default {
-  title: "Checkbox",
+  title: 'Atoms/Forms/Checkbox',
   component: Checkbox,
-  args: defaultArgs,
-  argTypes: {
-    // For some reason Storybook does not infer all props correctly;
-    // we manually include the most relevant controls here.
-    checked: {
-      control: "radio",
-      options: [true, false, "indeterminate"],
-    },
-    size: {
-      description: "Size of the checkbox label.",
-      control: "radio",
-      options: ["small", "medium"],
-      table: { defaultValue: { summary: "medium" } },
-    },
-  },
-};
+} as Meta;
 
-type Args = React.ComponentProps<typeof Checkbox>;
+const Template: Story<Props> = (args) => <Checkbox {...args} />;
 
-/**
- * Controlled example to make checked stories interactive.
- */
-function CheckedExample(args: Args) {
-  const [checked, setChecked] = React.useState(true);
-  const handleChange = () => {
-    setChecked(!checked);
-  };
+export const Default = Template.bind({});
+Default.args = {};
 
-  return <Checkbox checked={checked} onChange={handleChange} {...args} />;
-}
+export const Checked = Template.bind({});
+Checked.args = { checked: true };
 
-export const Default: StoryObj<Args> = {};
+export const Indeterminate = Template.bind({});
+Indeterminate.args = { checked: true, indeterminate: true };
 
-export const Checked: StoryObj<Args> = {
-  render: () => <CheckedExample {...defaultArgs} />,
-};
-
-export const Small: StoryObj<Args> = {
-  ...Default,
-  args: {
-    size: "small",
-  },
-};
-
-export const SmallChecked: StoryObj<Args> = {
-  render: () => <CheckedExample size="small" {...defaultArgs} />,
-};
-
-export const Indeterminate: StoryObj<Args> = {
-  ...Default,
-  args: {
-    checked: "indeterminate",
-    readOnly: true,
-  },
-};
-
-export const Disabled = {
-  render: () => (
-    <table className="border-separate" style={{ borderSpacing: "2rem" }}>
-      <tbody>
-        {[false, true, "indeterminate" as const].map((checked, i) => (
-          <tr key={i}>
-            <td>
-              <Checkbox checked={checked} disabled label="Disabled" />
-            </td>
-            <td>
-              <Checkbox checked={checked} label="Default" readOnly />
-            </td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  ),
-  parameters: {
-    // mainly for demonstration purposes
-    snapshot: { skip: true },
-  },
-};
-
-export const WithoutVisibleLabel: StoryObj<Args> = {
-  ...Default,
-  args: {
-    "aria-label": "a checkbox has no name",
-    label: undefined,
-  },
-};
-
-export const LongLabels = {
-  render: () => {
-    const label = "Lorem ipsum dolor sit amet, consectetur adipiscing elit";
-
-    return (
-      <div className="w-80 grid grid-cols-2 gap-4">
-        <Checkbox label={label} />
-        <Checkbox label={label} size="small" />
-      </div>
-    );
-  },
-};
-
-export const WithCustomPositioning = {
-  render: () => (
-    <span>
-      <Label htmlFor="test">label on left</Label>
-      <CheckboxInput id="test" />
-    </span>
-  ),
-};
+export const Disabled = Template.bind({});
+Disabled.args = { disabled: true };

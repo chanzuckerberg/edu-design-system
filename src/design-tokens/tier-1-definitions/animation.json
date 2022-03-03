@@ -1,0 +1,25 @@
+{
+  "eds": {
+    "anim": {
+      "fade": {
+        "quick": {
+          "value": "0.15s"
+        },
+        "long": {
+          "value": "0.4s"
+        }
+      },
+      "move": {
+        "quick": {
+          "value": "0.15s"
+        },
+        "long": {
+          "value": "0.4s"
+        }
+      },
+      "ease": {
+        "value": "ease"
+      }
+    }
+  }
+}

@@ -1,49 +1,37 @@
-import React, { forwardRef } from "react";
+import clsx from 'clsx';
+import React, { ReactNode } from 'react';
+import styles from './Text.module.css';
 
-import Typography, { TypographyProps } from "../common/typography";
-
-type TextElement = "p" | "span";
-
-type Props = {
+export interface Props {
   /**
-   * Controls whether to render text inline (defaults to "p");
+   * The rendered tag name of the Heading. The tag name should always relate to the [document outline](http://html5doctor.com/outlines/) and a tag name should never be chosen for its default aesthetic qualities. If a specific style is desired, use the `size` prop to manipulate the Heading style.
    */
-  as?: TextElement;
-  children: TypographyProps<TextElement>["children"];
-  className?: TypographyProps<TextElement>["className"];
-  color?: TypographyProps<TextElement>["color"];
-  size?: TypographyProps<TextElement>["size"];
-  spacing?: TypographyProps<TextElement>["spacing"];
-  tabIndex?: number;
-  weight?: TypographyProps<TextElement>["weight"];
-} & React.HTMLAttributes<HTMLElement>;
+  as: 'p' | 'span';
+  /**
+   * The child node(s)
+   */
+  children?: ReactNode;
+  /**
+   * CSS class names that can be appended to the component.
+   */
+  className?: string;
+}
 
 /**
- * ```ts
- * import {Text} from "@chanzuckerberg/eds";
- * ```
+ * Primary UI component for user interaction
  */
-const Text = forwardRef<HTMLElement, Props>(
-  (
-    {
-      as,
-      children,
-      size = "body",
-      /**
-       * Components that wrap typography sometimes requires props such as event handlers
-       * to be passed down into the element. One example is the tooltip component.  It
-       * attaches a onHover and onFocus event to the element to determine when to
-       * trigger the overlay.
-       */ ...rest
-    }: Props,
-    ref,
-  ) => (
-    <Typography as={as || "p"} ref={ref} size={size} {...rest}>
+export const Text: React.FC<Props> = ({
+  as = 'p',
+  className,
+  children,
+  ...other
+}) => {
+  const componentClassName = clsx(styles['text'], className, {});
+  const TagName = as;
+
+  return (
+    <TagName className={componentClassName} {...other}>
       {children}
-    </Typography>
-  ),
-);
-
-Text.displayName = "Text"; // Satisfy eslint.
-
-export default Text;
+    </TagName>
+  );
+};

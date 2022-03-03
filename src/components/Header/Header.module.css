@@ -1,0 +1,40 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #HEADER
+\*------------------------------------*/
+
+/**
+ * 1) 
+ */
+.header {
+  background-color: var(--eds-theme-color-primary-background);
+  color: var(--eds-theme-color-body-foreground-inverted);
+  padding: var(--eds-size-2);
+  position: relative;
+
+  @media all and (min-width: $eds-bp-lg) {
+    padding: var(--eds-size-6) var(--eds-size-4) var(--eds-size-4)
+      var(--eds-size-4);
+    height: 100vh;
+  }
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  gap: var(--eds-size-2);
+
+  @media all and (min-width: $eds-bp-lg) {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+
+.header__menu-button {
+  @media all and (min-width: $eds-bp-md) {
+    display: none;
+  }
+}

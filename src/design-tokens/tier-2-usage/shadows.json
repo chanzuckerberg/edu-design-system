@@ -1,0 +1,9 @@
+{
+  "eds": {
+    "theme": {
+      "box-shadow": {
+        "value": "{eds.box-shadow.md}"
+      }
+    }
+  }
+}

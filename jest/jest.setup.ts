@@ -1,5 +1,5 @@
-import "@testing-library/jest-dom";
-import { format } from "util";
+import '@testing-library/jest-dom';
+import { format } from 'util';
 
 /**
  * Ensure `console.error` calls throw an error in tests

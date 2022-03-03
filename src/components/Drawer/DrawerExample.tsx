@@ -1,0 +1,95 @@
+import clsx from 'clsx';
+import React, { ReactNode, useState, useRef, MutableRefObject } from 'react';
+import { Drawer } from './Drawer';
+import { Button } from '../Button/Button';
+import { ButtonGroup } from '../ButtonGroup/ButtonGroup';
+import { DefinitionList } from '../DefinitionList/DefinitionList';
+import { DefinitionListItem } from '../DefinitionListItem/DefinitionListItem';
+import { DrawerBody } from '../DrawerBody/DrawerBody';
+import { DrawerFooter } from '../DrawerFooter/DrawerFooter';
+import { DrawerHeader } from '../DrawerHeader/DrawerHeader';
+import { Heading } from '../Heading/Heading';
+import { Hr } from '../Hr/Hr';
+import { RadioField } from '../RadioField/RadioField';
+import { RadioFieldItem } from '../RadioFieldItem/RadioFieldItem';
+import { SelectField } from '../SelectField/SelectField';
+import { Tab } from '../Tab/Tab';
+import { Tabs } from '../Tabs/Tabs';
+import { TextField } from '../TextField/TextField';
+import { TextLink } from '../TextLink/TextLink';
+import { TextPassage } from '../TextPassage/TextPassage';
+import { TextareaField } from '../TextareaField/TextareaField';
+
+export interface Props {
+  /**
+   * Child node(s) that can be nested inside component
+   */
+  children: ReactNode;
+  /**
+   * CSS class names that can be appended to the component.
+   */
+  className?: string;
+}
+
+/**
+ * Primary UI component for user interaction
+ */
+export const DrawerExample: React.FC<Props> = ({
+  children,
+  className,
+  ...other
+}) => {
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const drawerButton = useRef() as MutableRefObject<HTMLSpanElement>;
+
+  function openDrawerExample() {
+    setDrawerOpen(true);
+  }
+
+  function closeDrawerExample(event: any) {
+    setTimeout(() => {
+      drawerButton.current.focus();
+    }, 1);
+    if (event) {
+      event.preventDefault();
+    }
+    setDrawerOpen(false);
+  }
+  const componentClassName = clsx('tooltip-drawer', className, {});
+  return (
+    <div
+      style={{ padding: '1rem', minHeight: '500px' }}
+      className={componentClassName}
+      {...other}
+    >
+      <Button
+        text="Open Drawer"
+        onClick={openDrawerExample}
+        buttonRef={drawerButton}
+      />
+
+      <Drawer
+        dismissible={true}
+        isActive={drawerOpen}
+        onClose={closeDrawerExample}
+        ariaLabelledBy="drawer-heading-1"
+        ariaDescribedBy="drawer-description-1"
+      >
+        <DrawerHeader>
+          <Heading id="drawer-heading-1" as="h2">
+            Drawer title
+          </Heading>
+        </DrawerHeader>
+        <DrawerBody>
+          <div className="fpo">Drawer body</div>
+        </DrawerBody>
+        <DrawerFooter>
+          <ButtonGroup>
+            <Button variant="primary" text="Button" />
+            <Button text="Close Drawer" onClick={closeDrawerExample} />
+          </ButtonGroup>
+        </DrawerFooter>
+      </Drawer>
+    </div>
+  );
+};

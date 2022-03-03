@@ -1,62 +1,52 @@
-import clsx from "clsx";
-import React, { ReactNode } from "react";
-import styles from "./ButtonGroup.module.css";
+import clsx from 'clsx';
+import React, { ReactNode } from 'react';
+import styles from './ButtonGroup.module.css';
 
-type Props = {
+export interface Props {
   /**
-   * The buttons. Should not be wrapped in another element – we just want the buttons.
+   * Align variations for ButtonGroup
+   * - **right** aligns the button group along the right side of its container
    */
-  children: ReactNode;
+  align?: 'right';
   /**
-   * Additional classnames passed in for styling.
-   *
-   * This will be applied to the container we're placing around the buttons.
+   * Weather the buttons have spacing or if they're attached/segmented
+   * Defaults to false
+   */
+  attached?: boolean;
+  /**
+   * Behavioral variations for ButtonGroup.
+   * - **responsive** results in a ButtonGroup that stacks on small screens, but displays side by side on larger screens
+   * - **stacked** results in a ButtonGroup that stacks on all screen sizes
+   */
+  behavior?: 'responsive' | 'stacked';
+  /**
+   * Child node(s) that can be nested inside component
+   */
+  children?: ReactNode;
+  /**
+   * CSS class names that can be appended to the component.
    */
   className?: string;
-  /**
-   * How much space there should be between the buttons.
-   */
-  spacing?: "none" | "1x" | "max";
-  /**
-   * Whether the buttons should be laid out horizontally or stacked vertically.
-   */
-  orientation?: "horizontal" | "vertical";
-};
+}
 
 /**
- * ```ts
- * import {ButtonGroup} from "@chanzuckerberg/eds";
- * ```
- *
- * A container for buttons grouped together horizontally or vertically.
+ * Primary UI component for user interaction
  */
-export default function ButtonGroup({
+export const ButtonGroup: React.FC<Props> = ({
+  align,
   children,
   className,
-  spacing = "1x",
-  orientation = "horizontal",
-}: Props) {
-  if (
-    spacing === "max" &&
-    orientation === "vertical" &&
-    process.env.NODE_ENV !== "production"
-  ) {
-    console.warn(
-      "*** Weird prop combo warning ***: Are you sure you want max spacing *and* vertical orientation? It's a valid combination, but it's extremely unlikely to ever be used intentionally.",
-    );
-  }
-
+  behavior,
+  ...other
+}) => {
+  const componentClassName = clsx(styles['button-group'], className, {
+    [styles['button-group--responsive']]: behavior === 'responsive',
+    [styles['button-group--stacked']]: behavior === 'stacked',
+    [styles['button-group--align-right']]: align === 'right',
+  });
   return (
-    <div
-      className={clsx(
-        className,
-        styles.buttonGroup,
-        spacing === "1x" && styles.spacing1x,
-        spacing === "max" && styles.spacingMax,
-        orientation === "vertical" && styles.vertical,
-      )}
-    >
+    <div className={componentClassName} {...other}>
       {children}
     </div>
   );
-}
+};

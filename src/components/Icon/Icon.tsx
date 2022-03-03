@@ -1,9 +1,9 @@
-import clsx from "clsx";
-import React, { ReactNode, CSSProperties } from "react";
-import { useUID } from "react-uid";
-import icons from "../../icons/spritemap/spritemap.svg";
-import { ALL_ICONS } from "../../util/allIcons";
-import styles from "./Icon.module.css";
+import clsx from 'clsx';
+import React, { ReactNode, CSSProperties } from 'react';
+import { useUID } from 'react-uid';
+import styles from './Icon.module.css';
+import icons from '../../icons/spritemap/spritemap.svg';
+import { ALL_ICONS } from '../../util/allIcons';
 
 // generates a union type of all possible icon names
 export type IconName = typeof ALL_ICONS[number];
@@ -62,7 +62,7 @@ interface InformativeIconProps extends IconPropsBase {
    * Use "informative" when the icon **_does_** provide additional meaning to other text on the
    * page. You'll be required to pass in a title to label the icon.
    */
-  purpose: "informative";
+  purpose: 'informative';
   title: string;
 }
 
@@ -74,13 +74,13 @@ interface DecorativeIconProps extends IconPropsBase {
    * associated text. Basically the icon is for show and people don't need it to understand what's
    * on the page.
    */
-  purpose: "decorative";
+  purpose: 'decorative';
 }
 
 export type IconProps = DecorativeIconProps | InformativeIconProps;
 
 interface SvgStyle extends CSSProperties {
-  "--icon-size"?: string;
+  '--icon-size'?: string;
 }
 
 /**
@@ -92,7 +92,7 @@ export const Icon = (props: IconProps) => {
   const {
     children,
     className,
-    color = "currentColor",
+    color = 'currentColor',
     name,
     fullWidth = false,
     id,
@@ -103,12 +103,12 @@ export const Icon = (props: IconProps) => {
   const titleId = id || generatedId;
 
   const componentClassName = clsx(
-    styles["icon"],
+    styles['icon'],
     className,
-    fullWidth && styles["icon--full-width"],
+    fullWidth && styles['icon--full-width'],
   );
   const style: SvgStyle = {
-    "--icon-size": size,
+    '--icon-size': size,
   };
 
   const svgCommonProps = {
@@ -120,13 +120,13 @@ export const Icon = (props: IconProps) => {
      */
     style,
     width: size,
-    xmlns: "http://www.w3.org/2000/svg",
+    xmlns: 'http://www.w3.org/2000/svg',
   };
   // allow passing custom SVGs to render, otherwise
   // load from the spritemap of EDS icons
   const computedSvg = children || <use xlinkHref={`${icons}#${name}`} />;
 
-  if (purpose === "informative") {
+  if (purpose === 'informative') {
     return (
       <svg {...svgCommonProps} role="img">
         <title id={titleId}>{props.title}</title>

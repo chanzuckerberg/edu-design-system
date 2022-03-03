@@ -1,0 +1,68 @@
+{
+  "eds": {
+    "font-family": {
+      "primary": {
+        "value": "sans-serif"
+      },
+      "secondary": {
+        "value": "sans-serif"
+      }
+    },
+    "font-size": {
+      "xs": {
+        "value": "0.75rem"
+      },
+      "sm": {
+        "value": "0.875rem"
+      },
+      "md": {
+        "value": "1rem"
+      },
+      "md-2": {
+        "value": "1.125rem"
+      },
+      "md-3": {
+        "value": "1.25rem"
+      },
+      "lg": {
+        "value": "1.5rem"
+      },
+      "xl": {
+        "value": "1.5rem"
+      }
+    },
+    "font-weight": {
+      "light": {
+        "value": "300"
+      },
+      "regular": {
+        "value": "400"
+      },
+      "semibold": {
+        "value": "600"
+      },
+      "bold": {
+        "value": "700"
+      }
+    },
+    "line-height": {
+      "sm": {
+        "value": "1"
+      },
+      "sm-2": {
+        "value": "1.2"
+      },
+      "md": {
+        "value": "1.333"
+      },
+      "lg": {
+        "value": "1.5"
+      }
+    },
+    "letter-spacing": {
+      "sm": {
+        "value": "0.5px"
+      }
+    }
+  }
+}
