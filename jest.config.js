@@ -6,14 +6,14 @@ module.exports = {
   coverageDirectory: 'coverage',
   moduleNameMapper: {
     '\\.css$': 'identity-obj-proxy',
-    svg4everybody: '<rootDir>/jest/mocks/function-mock.js',
-    'react-portal': '<rootDir>/jest/mocks/portal-mock.js',
-    shortid: '<rootDir>/jest/mocks/shortid-mock.js',
+    svg4everybody: 'identity-obj-proxy',
+    'react-portal': 'identity-obj-proxy',
+    shortid: 'identity-obj-proxy',
     '.*\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
-      '<rootDir>/jest/mocks/file-mock.js',
+      'identity-obj-proxy',
   },
   preset: 'ts-jest',
   roots: ['<rootDir>/src'],
   testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
+  setupFilesAfterEnv: ['<rootDir>/jest/jest.setup.ts'],
 };

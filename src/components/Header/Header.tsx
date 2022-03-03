@@ -1,9 +1,7 @@
-import React, { ReactNode, useState } from 'react';
-
 import clsx from 'clsx';
+import React, { ReactNode } from 'react';
+
 import styles from './Header.module.css';
-import { Button } from '../Button/Button';
-import { LayoutContainer } from '../LayoutContainer/LayoutContainer';
 
 export interface HeaderProps {
   /**
@@ -27,12 +25,6 @@ export const Header: React.FC<HeaderProps> = ({
   children,
   ...other
 }) => {
-  const [isActive, setisActive] = useState(false);
-
-  const toggleMenu = () => {
-    setisActive(!isActive);
-  };
-
   const componentClassName = clsx(styles['header'], className, {});
 
   return (
