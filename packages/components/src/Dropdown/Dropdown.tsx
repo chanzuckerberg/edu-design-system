@@ -5,8 +5,6 @@ import DropdownButton from "../DropdownButton";
 import CheckRoundedIcon from "../Icons/CheckRounded";
 import styles from "./Dropdown.module.css";
 
-type Option = { id: string; label: string };
-
 type ListboxProps = ComponentProps<typeof Listbox>;
 type DropdownProps = ListboxProps & {
   /**
@@ -42,7 +40,10 @@ type DropdownProps = ListboxProps & {
    * If you pass in `options`, we expect `labelText` (or `aria-label`),
    * and `buttonText` props as well and no `children`.
    */
-  options?: Array<Option>;
+  options?: Array<{
+    key: string | number;
+    label: string;
+  }>;
   /**
    * Optional className for additional styling.
    */
@@ -137,15 +138,15 @@ function childrenHaveLabelComponent(children?: ReactNode): boolean {
  * ```
  * const options = [
  *   {
- *     id: 'option1',
+ *     key: 'option1',
  *     label: 'Option 1',
  *   },
  *   {
- *     id: 'option2',
+ *     key: 'option2',
  *     label: 'Option 2',
  *   },
  *   {
- *     id: 'option3',
+ *     key: 'option3',
  *     label: 'Option 3',
  *   },
  * ];
@@ -228,11 +229,14 @@ function Dropdown(props: DropdownProps) {
 
   const optionsList = options && (
     <DropdownOptions>
-      {options.map((option) => (
-        <DropdownOption key={option.id} value={option}>
-          {option.label}
-        </DropdownOption>
-      ))}
+      {options.map((option) => {
+        const { label, ...rest } = option;
+        return (
+          <DropdownOption value={option} {...rest} key={option.key}>
+            {label}
+          </DropdownOption>
+        );
+      })}
     </DropdownOptions>
   );
 
