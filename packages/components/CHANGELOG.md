@@ -3,16 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [0.8.1](https://github.com/chanzuckerberg/edu-design-system/compare/v0.6.0...v0.8.1) (2022-03-03)
+## [0.8.1](https://github.com/chanzuckerberg/edu-design-system/compare/v0.8.0...v0.8.1) (2022-03-03)
 
 
-### Features
+### Chores
 
-* add ButtonGroup component ([#808](https://github.com/chanzuckerberg/edu-design-system/issues/808)) ([c413ac6](https://github.com/chanzuckerberg/edu-design-system/commit/c413ac674479919c2931e7dd03b5d5f08d18b43a))
-* add Dropdown component ([#835](https://github.com/chanzuckerberg/edu-design-system/issues/835)) ([acf54dc](https://github.com/chanzuckerberg/edu-design-system/commit/acf54dca68b784ca6718cc16927b7a97d55db6b8))
-* add DropdownButton ([#804](https://github.com/chanzuckerberg/edu-design-system/issues/804)) ([8b2d49f](https://github.com/chanzuckerberg/edu-design-system/commit/8b2d49f442e825e2e14ff8ad403f5a873edd5b8b))
-* add FormGroup component ([#809](https://github.com/chanzuckerberg/edu-design-system/issues/809)) ([3d48a2e](https://github.com/chanzuckerberg/edu-design-system/commit/3d48a2e2ea6d08fa88297e09ebfe3d5ee10b48f6))
-* remove unused legacy color tokens ([a953e25](https://github.com/chanzuckerberg/edu-design-system/commit/a953e256906dfee2d66cf46a9211a9149f80f29d))
+* update deps and resolve ([#881](https://github.com/chanzuckerberg/edu-design-system/issues/881)) ([c48915f](https://github.com/chanzuckerberg/edu-design-system/commit/c48915f364fc375da8147ddbadf60839da6fec77))
+
+
+### Docs
+
+* add import example to docstring ([#880](https://github.com/chanzuckerberg/edu-design-system/issues/880)) ([78832db](https://github.com/chanzuckerberg/edu-design-system/commit/78832db2d16bf081fe104fb63d5054f1352038a1))
 
 
 
