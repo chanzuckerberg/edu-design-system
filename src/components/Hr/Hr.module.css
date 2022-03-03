@@ -1,0 +1,33 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    # HR (HORIZONTAL RULE)
+\*------------------------------------*/
+
+/**
+ * 1) Line that acts as a separator of content
+ * 
+ */
+.hr {
+  margin-top: var(--eds-size-4);
+  margin-bottom: var(--eds-size-4);
+  border-width: var(--eds-border-width-sm);
+  border-style: solid;
+  border-color: var(--eds-theme-color-neutral-subtle-border);
+}
+
+/**
+ * Hr Thick
+ * 1) Horizontal rule with a thick border
+ */
+.hr--lg {
+  border-width: var(--eds-border-width-lg);
+}
+
+/**
+ * Hr Brand
+ * 1) Branded horizontal rule
+ */
+.hr--brand {
+  border-color: var(--eds-theme-color-primary-border);
+}

@@ -1,104 +1,47 @@
-import { StoryObj } from "@storybook/react";
-import React from "react";
-import Heading, { VARIANTS } from "./Heading";
-import styles from "./Heading.stories.module.css";
+import { Story, Meta } from '@storybook/react';
+import React from 'react';
+
+import { Heading, Props } from './Heading';
 
 export default {
-  title: "Heading",
+  title: 'Atoms/Text/Heading',
   component: Heading,
-};
+} as Meta;
 
-type Args = React.ComponentProps<typeof Heading>;
+const Template: Story<Props> = (args) => <Heading {...args}>Heading</Heading>;
 
-export const Heading1: StoryObj<Args> = {
-  args: {
-    size: "h1",
-    children: "Heading 1 24/32",
-  },
-};
+export const Heading1 = Template.bind({});
+Heading1.args = { as: 'h1' };
 
-export const Heading2: StoryObj<Args> = {
-  args: {
-    size: "h2",
-    children: "Heading 2 18/24",
-  },
-};
+export const Heading2 = Template.bind({});
+Heading2.args = { as: 'h2' };
 
-export const Heading3: StoryObj<Args> = {
-  args: {
-    size: "h3",
-    children: "Heading 3 16/24",
-  },
-};
+export const Heading3 = Template.bind({});
+Heading3.args = { as: 'h3' };
 
-export const Heading4: StoryObj<Args> = {
-  args: {
-    size: "h4",
-    children: "Heading 4 14/24",
-  },
-};
+export const Heading4 = Template.bind({});
+Heading4.args = { as: 'h4' };
 
-export const Heading5: StoryObj<Args> = {
-  args: {
-    size: "h5",
-    children: "Heading 5 12/20",
-  },
-};
+export const Heading5 = Template.bind({});
+Heading5.args = { as: 'h5' };
 
-export const Heading1AsHeading4: StoryObj<Args> = {
-  args: {
-    as: "h1",
-    children: "Heading 1 styled as Heading 4",
-    size: "h4",
-  },
-};
+export const Heading6 = Template.bind({});
+Heading6.args = { as: 'h6' };
 
-/**
- * 1) Insufficient color contrast is expected since we are displaying all color variants on various color backgrounds.
- * 2) Mainly for visual use and other stories generate enough confidence for our needs.
- */
-export const Variants: StoryObj<Args> = {
-  ...Heading1,
-  render: (args) => {
-    const headings: React.ReactNode[] = [];
-    VARIANTS.forEach((variant) => {
-      if (variant !== "info")
-        headings.push(
-          <Heading {...args} key={`${variant}`} variant={variant}>
-            {variant}
-          </Heading>,
-        );
-    });
-    return (
-      <div className={styles["variant__table"]}>
-        <div className={styles["variant--white"]}>{headings}</div>
-        <div className={styles["variant--light"]}>{headings}</div>
-        <div className={styles["variant--dark"]}>{headings}</div>
-      </div>
-    );
-  },
-  parameters: {
-    /* 2 */
-    axe: {
-      skip: true,
-    },
-    snapshot: {
-      skip: true,
-    },
-  },
-};
+export const Heading2TypographyPreset1 = Template.bind({});
+Heading2TypographyPreset1.args = { as: 'h2', size: 1 };
 
-export const Sizes: StoryObj<Args> = {
-  render: () => {
-    const sizes = ["h1", "h2", "h3", "h4", "h5", "h6"] as const;
-    const combinations = sizes.map((as) => {
-      const headings = sizes.map((size) => (
-        <Heading as={as} key={`as${as}size${size}`} size={size}>
-          as: {as} size: {size}
-        </Heading>
-      ));
-      return <div key={as}>{headings}</div>;
-    });
-    return <div className={styles["variant__table"]}>{combinations}</div>;
-  },
-};
+export const Heading2TypographyPreset2 = Template.bind({});
+Heading2TypographyPreset2.args = { as: 'h2', size: 2 };
+
+export const Heading2TypographyPreset3 = Template.bind({});
+Heading2TypographyPreset3.args = { as: 'h2', size: 3 };
+
+export const Heading2TypographyPreset4 = Template.bind({});
+Heading2TypographyPreset4.args = { as: 'h2', size: 4 };
+
+export const Heading2TypographyPreset5 = Template.bind({});
+Heading2TypographyPreset5.args = { as: 'h2', size: 5 };
+
+export const Heading2TypographyPreset6 = Template.bind({});
+Heading2TypographyPreset6.args = { as: 'h2', size: 6 };

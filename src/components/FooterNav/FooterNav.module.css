@@ -1,0 +1,39 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #FOOTER NAV
+\*------------------------------------*/
+
+/**
+ * 1) Navigation within the footer that contains auxiliary links
+ */
+.footer-nav {
+  padding: var(--eds-size-1) 0;
+  width: 100%;
+}
+
+/**
+ * Footer nav listItems
+ * 1) Actual list of the footer nav
+ */
+.footer-nav__list {
+  @mixin reset;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/**
+ * Footer nav items
+ * 1) Nav item within the footer nav list
+ */
+.footer-nav__item {
+  margin: var(--eds-size-1) var(--eds-size-2);
+}
+
+/**
+ * Footer nav link
+ */
+.footer-nav__link {
+  @mixin textLink;
+}

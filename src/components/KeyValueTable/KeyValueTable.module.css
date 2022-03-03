@@ -1,0 +1,120 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+	#KEY VALUE TABLE
+\*------------------------------------*/
+
+/**
+ * 1) Data table that always consists of 2 columns (i.e. a list of items and prices with total)
+ */
+.key-value-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: var(--eds-size-2);
+}
+
+/**
+ * Full Width 
+ */
+.key-value-table--full-width {
+  width: 100%;
+}
+
+/**
+ * Lined key value table 
+ */
+.key-value-table--lined {
+  border-width: var(--eds-theme-border-width);
+  border-style: solid;
+  border-color: var(--eds-theme-color-neutral-subtle-border);
+}
+
+.key-value-table__row {
+  .key-value-table--lined & {
+    border-width: var(--eds-theme-border-width);
+    border-style: solid;
+    border-color: var(--eds-theme-color-neutral-subtle-border);
+  }
+}
+
+.key-value-table__cell {
+  padding-bottom: var(--eds-size-2);
+}
+
+/**
+ * Key value table key
+ */
+.key-value-table__key {
+  @mixin eds-theme-typography-body-text;
+  padding-top: var(--eds-size-1);
+  padding-bottom: var(--eds-size-1);
+  padding-right: var(--eds-size-2);
+  text-align: left;
+
+  .key-value-table--lined & {
+    padding: var(--eds-size-1);
+    border-top-width: var(--eds-theme-border-width);
+    border-top-style: solid;
+    border-top-color: var(--eds-theme-color-neutral-subtle-border);
+    border-right-width: var(--eds-theme-border-width);
+    border-right-style: solid;
+    border-right-color: var(--eds-theme-color-neutral-subtle-border);
+  }
+
+  .key-value-table--lg & {
+    padding-top: var(--eds-size-3);
+    padding-bottom: var(--eds-size-3);
+  }
+
+  .key-value-table--sm & {
+    @mixin eds-theme-typography-body-text-sm;
+  }
+
+  /**
+     * Key value table key within key value table footer
+     */
+  .key-value-table__footer & {
+    @mixin eds-theme-typography-body-text-bold;
+    padding-bottom: 0;
+  }
+}
+
+/**
+ * Key value table value
+ */
+.key-value-table__value {
+  padding-top: var(--eds-size-1);
+  padding-bottom: var(--eds-size-1);
+  padding-left: var(--eds-size-2);
+  text-align: right;
+
+  .key-value-table--lined & {
+    padding: var(--eds-size-1);
+    border-top-width: var(--eds-theme-border-width);
+    border-top-style: solid;
+    border-top-color: var(--eds-theme-color-neutral-subtle-border);
+    border-right-width: var(--eds-theme-border-width);
+    border-right-style: solid;
+    border-right-color: var(--eds-theme-color-neutral-subtle-border);
+  }
+
+  .key-value-table--lg & {
+    padding-top: var(--eds-size-3);
+    padding-bottom: var(--eds-size-3);
+  }
+
+  .key-value-table--sm & {
+    @mixin eds-theme-typography-body-text-sm;
+  }
+
+  /**
+   * Key value table value within key value table footer
+   */
+  .key-value-table__footer & {
+    @mixin eds-theme-typography-body-text-sm-bold;
+    padding-bottom: 0;
+    border-top-width: var(--eds-theme-border-width);
+    border-top-style: solid;
+    border-top-color: var(--eds-theme-color-neutral-subtle-border);
+  }
+}

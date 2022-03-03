@@ -1,63 +1,167 @@
-import React, { ReactNode, forwardRef } from "react";
-import ClickableStyle, { ClickableStyleProps } from "../ClickableStyle";
-
-type ButtonHTMLElementProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
-
-export type ButtonProps = ButtonHTMLElementProps & {
+import clsx from 'clsx';
+import React, { MouseEventHandler, ReactNode } from 'react';
+import styles from './Button.module.css';
+import { Icon } from '../Icon/Icon';
+export interface Props {
   /**
-   * The button contents or label.
+   * Button reference
    */
-  children: ReactNode;
-  status?: ClickableStyleProps<"button">["status"];
-  "data-testid"?: string;
-  size?: ClickableStyleProps<"button">["size"];
-  variant?: ClickableStyleProps<"button">["variant"];
-};
+  buttonRef?: any;
+  /**
+   * Toggle between full width button (true) and default button width
+   */
+  block?: boolean;
+  /**
+   * CSS class names that can be appended to the component.
+   */
+  className?: string;
+  /**
+   * Disables the field and prevents editing the contents
+   */
+  disabled?: boolean;
+  /**
+   * Toggles button that fills the full width of its container
+   */
+  fullWidth?: boolean;
+  /**
+   * Visually hide button text (but text is still accessible to assistive technology)
+   */
+  hideText?: boolean;
+  /**
+   * Link to URL. If href is present, the button will be rendered as an <a> element.
+   */
+  href?: string;
+  /**
+   * Name of SVG icon (i.e. caret-down, minus, warning)
+   */
+  iconName?: string;
+  /**
+   * Determines position of icon relative to button text.
+   * - **before** places icon before button text
+   * - **after** places icon after button text
+   */
+  iconPosition?: 'before' | 'after';
+  /**
+   * Button rendered on a dark backgorund
+   */
+  inverted?: boolean;
+  /**
+   * Loading state passed down from higher level used to trigger loader and text change
+   */
+  loading?: boolean;
+  /**
+   * On click handler for component
+   */
+  onClick?: MouseEventHandler;
+  /**
+   * Visually hidden additional instruction text to help provide screen reader users additional context. For instance, "View details" might be the visible button text, but screenReaderText might add additional instructions such as "for confirmation number C1234567"
+   */
+  screenReaderText?: string;
+  /**
+   * Available size variations for the button
+   */
+  size?: 'sm' | 'lg';
+  /**
+   * The visible button text
+   */
+  text?: string | ReactNode;
+  /**
+   * Determines type of button
+   * - **button** The button is a clickable button.
+   * - **submit** The button is a submit button (submits form data). This is the default `button` behavior
+   * - **reset** The button is a reset button (resets the form-data to its initial values)
+   */
+  type?: 'button' | 'reset' | 'submit';
+  /**
+   * Available _stylistic_ variations available for the Button component
+   */
+  variant?: 'primary' | 'bare' | 'table-header' | 'link';
+}
 
 /**
- * ```ts
- * import {Button} from "@chanzuckerberg/eds";
- * ```
- *
- * Component for making buttons that do not navigate the user to another page.
- *
- * This component is called `Button` because it should be used to make `<button>` elements;
- * however, it can be styled to look like a link.
- *
- * If you need to style an `<a>` element to look like a button, please use the `Link` component.
- * If you need to style a different element or component (e.g. `Link` from `react-router`) to
- * look like a button or link, you can use the `ClickableStyle` component.
- *
- * In terms of the look and feel of the component in the UI, the `Button`, and `Link`, and `ClickableStyle`
- * components are exactly the same.
+ * Primary UI component for user interaction
  */
-const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  (
-    {
-      variant = "secondary",
-      status = "brand",
-      disabled = false,
-      type = "button",
-      size = "lg",
-      ...rest
-    },
-    ref,
-  ) => {
-    return (
-      <ClickableStyle
-        {...rest}
-        as="button"
-        disabled={disabled}
-        ref={ref}
-        size={size}
-        status={status}
-        type={type}
-        variant={variant}
-      />
-    );
-  },
-);
+export const Button: React.FC<Props> = ({
+  buttonRef,
+  className,
+  variant,
+  size,
+  disabled,
+  fullWidth,
+  iconName,
+  iconPosition = 'before',
+  inverted,
+  loading,
+  onClick,
+  screenReaderText,
+  href,
+  text,
+  type,
+  hideText,
+  ...other
+}) => {
+  const componentClassName = clsx(styles['button'], className, {
+    [styles['button--primary']]: variant === 'primary',
+    [styles['button--bare']]: variant === 'bare',
+    [styles['button--link']]: variant === 'link',
+    [styles['button--sm']]: size === 'sm',
+    [styles['button--table-header']]: variant === 'table-header',
+    [styles['button--inverted']]: inverted === true,
+    [styles['button--full-width']]: fullWidth,
+    [styles['eds-is-loading']]: loading,
+  });
+  const TagName = href ? 'a' : 'button';
 
-Button.displayName = "Button";
+  const computedIcon = (
+    <>
+      {loading && (
+        <Icon
+          aria-hidden="true"
+          className={styles['button__icon']}
+          focusable={false}
+          name="spinner"
+        />
+      )}
+      {!loading && iconName && (
+        <Icon
+          aria-hidden="true"
+          className={styles['button__icon']}
+          focusable={false}
+          name={iconName}
+        />
+      )}
+    </>
+  );
 
-export default Button;
+  return (
+    <TagName
+      className={componentClassName}
+      disabled={disabled}
+      href={href}
+      onClick={onClick}
+      ref={buttonRef}
+      tabIndex={disabled ? -1 : undefined}
+      type={type}
+      {...other}
+    >
+      {iconPosition === 'before' && computedIcon}
+
+      {text && (
+        <span
+          className={
+            !hideText
+              ? styles['button__text']
+              : styles['button__text'] + 'u-is-vishidden'
+          }
+        >
+          {text}
+          {screenReaderText && (
+            <span className={styles['u-is-vishidden']}>{screenReaderText}</span>
+          )}
+        </span>
+      )}
+
+      {iconPosition === 'after' && computedIcon}
+    </TagName>
+  );
+};

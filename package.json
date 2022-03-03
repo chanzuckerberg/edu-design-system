@@ -13,16 +13,13 @@
     "type": "git",
     "url": "git+https://github.com/chanzuckerberg/edu-design-system.git"
   },
-  "files": [
-    "lib",
-    "tailwind.config.js"
-  ],
   "bugs": {
     "url": "https://github.com/chanzuckerberg/edu-design-system/issues"
   },
   "scripts": {
     "build": "yarn build:clean && yarn build:tokens && yarn build:js && yarn build:styles && yarn copy-to-lib",
     "build:clean": "rm -rf lib/",
+    "build:css": "postcss \"src/**/*.css\" --dir lib/ --base src/ --verbose",
     "build:icons": "svg-sprite-generate -d src/icons/ -o src/icons/spritemap/spritemap.svg && yarn generate-icon-types",
     "build:js": "tsc --project tsconfig.build.json",
     "build:storybook": "build-storybook -o storybook-static",
@@ -40,7 +37,7 @@
     "lint:fix": "yarn run lint:styles:fix && yarn run lint:scripts:fix",
     "lint:styles": "stylelint --ignore-path .gitignore src/**/*.css",
     "lint:styles:fix": "yarn run lint:styles --fix",
-    "lint:scripts": "eslint --ignore-path .gitignore --ext=js,jsx,ts,tsx .",
+    "lint:scripts": "eslint --quiet --ignore-path .gitignore --ext=js,jsx,ts,tsx .",
     "lint:scripts:fix": "yarn run lint:scripts --fix",
     "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx}\"",
     "release": "yarn build && yarn release:patch",
@@ -50,27 +47,16 @@
     "release:patch": "standard-version --release-as patch",
     "release:alpha": "standard-version --prerelease alpha",
     "start": "yarn build:tokens && yarn storybook",
-    "storybook": "start-storybook -p 6008",
+    "storybook": "start-storybook -p 9009 -s public",
     "storybook:axe": "yarn run build:storybook && yarn run storybook:axeOnly",
     "storybook:axeOnly": "axe-storybook --build-dir storybook-static",
+    "plop": "plop component",
+    "plop:page": "plop page",
+    "plop:recipe": "plop recipe",
     "test": "jest",
     "test:ci": "yarn run test --ci --coverage && cat ./coverage/lcov.info | codecov",
     "types": "tsc --noEmit"
   },
-  "size-limit": [
-    {
-      "path": "lib/**/*([a-zA-Z-_]).js",
-      "limit": "140KB",
-      "name": "components",
-      "webpack": false
-    },
-    {
-      "path": "lib/**/*([a-zA-Z-_]).css",
-      "limit": "140KB",
-      "name": "styles",
-      "webpack": false
-    }
-  ],
   "peerDependencies": {
     "react": ">= 16.8.0"
   },
@@ -78,8 +64,16 @@
     "@headlessui/react": "1.4.3",
     "@tippyjs/react": "^4.2.6",
     "clsx": "^1.1.1",
-    "react-uid": "^2.3.1"
+    "downshift": "^6.1.7",
+    "nanoid": "^3.3.1",
+    "react-children-by-type": "^1.1.0",
+    "react-focus-lock": "^2.8.1",
+    "react-portal": "^4.2.1",
+    "react-uid": "^2.3.1",
+    "svg4everybody": "^2.1.9"
   },
+  "entry": "lib/index.js",
+  "types": "lib/index.d.ts",
   "devDependencies": {
     "@chanzuckerberg/axe-storybook-testing": "^5.0.0",
     "@chanzuckerberg/eslint-plugin-stories": "^3.0.1",
@@ -88,11 +82,14 @@
     "@commitlint/config-conventional": "^16.2.1",
     "@commitlint/prompt-cli": "^16.2.1",
     "@geometricpanda/storybook-addon-badges": "^0.2.1",
-    "@size-limit/preset-small-lib": "^4.12.0",
+    "@size-limit/preset-small-lib": "^7.0.8",
     "@storybook/addon-a11y": "^6.4.22",
+    "@storybook/addon-docs": "^6.4.19",
     "@storybook/addon-essentials": "^6.4.22",
     "@storybook/addon-interactions": "^6.4.22",
+    "@storybook/addon-links": "^6.4.19",
     "@storybook/addon-postcss": "^2.0.0",
+    "@storybook/addon-storyshots": "^6.4.19",
     "@storybook/react": "^6.4.22",
     "@storybook/storybook-deployer": "^2.8.11",
     "@storybook/testing-library": "^0.0.9",
@@ -101,9 +98,14 @@
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.4.1",
+    "@types/node": "^17.0.21",
     "@types/react": "^17.0.40",
+    "@types/react-dom": "^17.0.13",
+    "@types/react-portal": "^4.0.4",
+    "@types/svg4everybody": "^2.1.2",
     "@typescript-eslint/eslint-plugin": "^5.15.0",
     "@typescript-eslint/parser": "^5.15.0",
+    "autoprefixer": "^10.4.2",
     "axe-core": "^4.3.5",
     "chromatic": "^6.5.3",
     "codecov": "^3.8.3",
@@ -122,13 +124,16 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.5.1",
     "lint-staged": "^10.5.4",
+    "make-dir-cli": "^3.0.0",
     "plop": "^3.0.5",
     "postcss": "^8.4.12",
     "postcss-cli": "^9.1.0",
     "postcss-import": "^14.0.2",
     "postcss-mixins": "^9.0.2",
     "postcss-nested": "^5.0.6",
+    "postcss-simple-vars": "^6.0.3",
     "prettier": "^2.5.1",
+    "prop-types": "^15.8.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "size-limit": "^4.12.0",
@@ -139,9 +144,9 @@
     "stylelint-config-recommended": "^7.0.0",
     "svg-sprite-generator": "^0.0.7",
     "svg-spritemap-webpack-plugin": "^3.9.1",
-    "tailwindcss": "^2.2.19",
     "ts-jest": "^27.1.3",
-    "typescript": "^4.6.2"
+    "typescript": "^4.6.2",
+    "web-vitals": "^2.1.4"
   },
   "husky": {
     "hooks": {

@@ -1,0 +1,9 @@
+storybook-static
+node_modules
+dist
+*.hbs
+.husky
+.prettierignore
+*.svg
+*.png
+prism.js

@@ -22,8 +22,8 @@ View the "Icon Grid" story in Storybook for a visualization of all available ico
 2. In a new feature branch, locate `src/icons` and add new icon to the directory.
 3. Run `yarn build:icons` in the terminal to build the new icon sprite.
 4. In Storybook, view the "Icon Grid" component to see the new component added to the available list of icons, which is now ready to use in EDS components.
-5. Submit PR and release in order to make icon available to consuming applications.
+5. Submit PR in accordance with [workflow guidelines](./WORKFLOW.md) and release in order to make icon available to consuming applications
 
 ### Modifiying icons
 
-Modiying icons involves the same steps as adding an icon, only overriding an existing SVG icon file with the new icon. However, releasing modified icons needs to be handled with care as certain icon changes aren't particularly noticeable while others may constitute a breaking change to the library.
+Modiying icons involves the same steps as adding an icon, only overriding an existing SVG icon file with the new icon. However, releasing modified icons needs to be handled with care as certain icon changes aren't particularly noticeable while others may constitute a breaking change to the library. Refer to the [EDS release guidelines](./WORKFLOW.md) to determine how best to roll out icon updates.

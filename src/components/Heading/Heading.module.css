@@ -1,101 +1,85 @@
-@import '../../design-tokens/tier-2-usage/typography-usage.css';
+@import '../../design-tokens/mixins.css';
 
 /*------------------------------------*\
     #HEADING
 \*------------------------------------*/
 
 /**
- * Remove top and bottom margins applied by browser for headings.
- * 1) Needs `:where` pseudoclass to reduce specificity so class overrides 
- *    for margin can happen where used.
+ * 1) h1, h2, h3, h4, h5, h6
+ * 2) Styles are either controlled by as or size declaration
  */
-:where(.heading) {
-  /* 1 */
-  margin-top: 0;
-  margin-bottom: 0;
-}
+.heading {
+  @mixin reset;
 
-/* New type ramp sizes */
-.heading--size-headline-lg {
-  @mixin eds-theme-typography-headline-lg;
-}
+  &.heading--size-1 {
+    @mixin eds-theme-typography-heading-1;
+  }
 
-.heading--size-headline-md {
-  @mixin eds-theme-typography-headline-md;
-}
+  &.heading--size-2 {
+    @mixin eds-theme-typography-heading-2;
+  }
 
-.heading--size-headline-sm {
-  @mixin eds-theme-typography-headline-sm;
-}
+  &.heading--size-3 {
+    @mixin eds-theme-typography-heading-3;
+  }
 
-.heading--size-title-md {
-  @mixin eds-theme-typography-title-md;
-}
+  &.heading--size-4 {
+    @mixin eds-theme-typography-heading-4;
+  }
 
-.heading--size-title-sm {
-  @mixin eds-theme-typography-title-sm;
+  &.heading--size-5 {
+    @mixin eds-theme-typography-heading-5;
+  }
+
+  &.heading--size-6 {
+    @mixin eds-theme-typography-heading-6;
+  }
 }
 
 /**
- * Heading sizes, correlate to similar numerically named typography token.
+ * H1 Heading
+ * 1) Use this for the default heading if as = h1
  */
-.heading--size-h1 {
+h1.heading {
   @mixin eds-theme-typography-heading-1;
 }
 
-.heading--size-h2 {
+/**
+ * H2 Heading
+ * 1) Use this for the default heading if as = h2
+ */
+h2.heading {
   @mixin eds-theme-typography-heading-2;
 }
 
-.heading--size-h3 {
+/**
+ * H3 Heading
+ * 1) Use this for the default heading if as = h3
+ */
+h3.heading {
   @mixin eds-theme-typography-heading-3;
 }
 
-.heading--size-h4 {
+/**
+ * H4 Heading
+ * 1) Use this for the default heading if as = h4
+ */
+h4.heading {
   @mixin eds-theme-typography-heading-4;
 }
 
-.heading--size-h5 {
+/**
+ * H5 Heading
+ * 1) Use this for the default heading if as = h5
+ */
+h5.heading {
   @mixin eds-theme-typography-heading-5;
 }
 
-.heading--size-h6 {
+/**
+ * H6 Heading
+ * 1) Use this for the default heading if as = h6
+ */
+h6.heading {
   @mixin eds-theme-typography-heading-6;
-}
-
-/* Color Variants */
-.heading--error {
-  @apply text-alert-700;
-}
-
-.heading--base {
-  @apply text-black;
-}
-
-.heading--brand {
-  @apply text-brand-700;
-}
-
-.heading--info {
-  @apply text-info-700;
-}
-
-.heading--inherit {
-  color: inherit;
-}
-
-.heading--neutral {
-  @apply text-neutral-500;
-}
-
-.heading--success {
-  @apply text-success-700;
-}
-
-.heading--warning {
-  @apply text-warning-700;
-}
-
-.heading--white {
-  @apply text-white;
 }

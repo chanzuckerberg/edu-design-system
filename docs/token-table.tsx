@@ -1,5 +1,5 @@
-import React from "react";
-import styles from "./token-table.module.css";
+import React from 'react';
+import styles from './token-table.module.css';
 
 type Token = {
   name: string;
@@ -12,7 +12,7 @@ type TokenTableProps = {
 
 const TokenTable = ({ tokens, renderExample }: TokenTableProps) => {
   return (
-    <table className={styles["token-table"]}>
+    <table className={styles['token-table']}>
       <thead>
         <tr>
           <th scope="col">Name</th>

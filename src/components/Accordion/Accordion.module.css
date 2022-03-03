@@ -1,0 +1,22 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #ACCORDION
+\*------------------------------------*/
+
+/**
+ * 1) A list of buttons that contain additional content that toggle open/close when link is selected
+ */
+.accordion {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-bottom-style: solid;
+  border-bottom-width: var(--eds-theme-border-width);
+  border-bottom-color: var(--eds-theme-color-neutral-subtle-border);
+}
+
+.accordion--inverted {
+  color: var(--eds-theme-color-inverted-text);
+  border-bottom-color: var(--eds-theme-color-neutral-subtle-border-inverted);
+}

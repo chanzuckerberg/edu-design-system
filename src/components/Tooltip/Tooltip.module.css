@@ -1,88 +1,72 @@
-/* stylelint-disable selector-pseudo-class-no-unknown */
+@import '../../design-tokens/mixins.css';
 
+/*------------------------------------*\
+    #TOOLTIP
+\*------------------------------------*/
+
+/**
+ * 1) An icon that appears 
+ */
 .tooltip {
-  @apply border border-solid shadow-2 rounded-lg;
-  @apply motion-reduce:transition-none;
+  display: inline-block;
+  position: relative;
+  overflow: visible;
 }
 
-/* Enables opacity fade animation */
-.tooltip[data-state="hidden"] {
-  @apply opacity-0;
+.tooltip__trigger {
+  display: inline-block;
+  cursor: pointer;
+
+  &:focus-visible {
+    @mixin focus;
+  }
 }
 
-.tooltip :global(.tippy-content) {
-  @apply px-4 py-2;
+.tooltip__content {
+  display: none;
+  position: absolute;
+  bottom: 130%;
+  left: 50%;
+  margin-left: -96px;
+  width: 12rem;
+  padding: var(--eds-size-1);
+  background: var(--eds-color-neutral-white);
+  color: var(--eds-theme-color-body-foreground);
+  border-width: var(--eds-theme-border-width);
+  border-style: solid;
+  border-color: var(--eds-theme-color-neutral-subtle-border);
+  border-radius: var(--eds-theme-border-radius);
+  box-shadow: var(--eds-theme-box-shadow);
+
+  &:focus-visible {
+    @mixin focus;
+  }
+
+  .tooltip--right & {
+    bottom: auto;
+    top: -50%;
+    left: 130%;
+    margin-left: 0;
+  }
+
+  .tooltip--below & {
+    bottom: inherit;
+  }
+
+  .tooltip--left & {
+    bottom: auto;
+    left: auto;
+    top: -50%;
+    right: calc(130% + 5px);
+  }
+
+  .tooltip.eds-is-active & {
+    display: flex;
+    justify-content: center;
+    z-index: var(--eds-z-index-100);
+  }
 }
 
-/* Color Variants */
-.variantLight {
-  @apply border-neutral-300 text-neutral-700 bg-neutral-100;
-  --arrow-color: var(--eds-color-neutral-300);
-}
-
-.variantDark {
-  @apply border-neutral-700 text-white bg-neutral-700;
-  --arrow-color: var(--eds-color-neutral-700);
-}
-
-/* Add Arrows */
-.tooltip :global(.tippy-arrow) {
-  @apply absolute w-4 h-4;
-}
-
-.tooltip :global(.tippy-arrow::before) {
-  @apply absolute border-solid border-transparent border-8;
-
-  content: "";
-}
-
-.tooltip[data-placement^="top"] :global(.tippy-arrow) {
-  @apply left-0;
-
-  transform: translate3d(73px, 0, 0);
-}
-
-.tooltip[data-placement^="bottom"] :global(.tippy-arrow) {
-  @apply top-0 left-0;
-
-  transform: translate3d(73px, 0, 0);
-}
-
-.tooltip[data-placement^="left"] :global(.tippy-arrow) {
-  @apply top-0 right-0;
-
-  transform: translate3d(0, 19px, 0);
-}
-
-.tooltip[data-placement^="right"] :global(.tippy-arrow) {
-  @apply top-0 left-0;
-
-  transform: translate3d(0, 25px, 0);
-}
-
-.tooltip[data-placement^="top"] :global(.tippy-arrow::before) {
-  @apply left-0;
-
-  border-top-color: var(--arrow-color);
-  border-bottom-width: 0;
-}
-
-.tooltip[data-placement^="bottom"] :global(.tippy-arrow::before) {
-  @apply left-0;
-
-  border-bottom-color: var(--arrow-color);
-  border-top-width: 0;
-  top: -7px;
-}
-
-.tooltip[data-placement^="left"] :global(.tippy-arrow::before) {
-  border-left-color: var(--arrow-color);
-  border-right-width: 0;
-  right: -7px;
-}
-
-.tooltip[data-placement^="right"] :global(.tippy-arrow::before) {
-  border-right-color: var(--arrow-color);
-  border-left-width: 0;
-  left: -7px;
+.tooltip__icon {
+  fill: var(--eds-theme-color-primary-foreground);
 }

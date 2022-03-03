@@ -1,0 +1,48 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #SECTION
+\*------------------------------------*/
+
+/**
+ * Section
+ * 1) A section is a discrete section of a web page
+ */
+.section {
+  padding-top: var(--eds-size-4);
+  padding-bottom: var(--eds-size-4);
+}
+
+/**
+ * Section header
+ * 1) contains the section title, description and other header content
+ */
+.section__header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--eds-size-4);
+
+  /**
+     * Section header within centered section
+     */
+  .section--center & {
+    align-items: center;
+  }
+}
+
+/**
+ * Section title
+ */
+.section__title {
+  margin: 0;
+  @mixin eds-theme-typography-heading-2;
+}
+
+/**
+ * Section description
+ */
+.section__description {
+  @mixin eds-theme-typography-body-text;
+  @mixin reset;
+  margin-top: var(--eds-size-1);
+}

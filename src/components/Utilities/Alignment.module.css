@@ -1,0 +1,29 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #ALIGNMENT UTILITY CLASSES
+\*------------------------------------*/
+
+/** 
+ * Left align text
+ * 1) Forces text-align to left
+ */
+.u-text-align-left {
+  text-align: left !important;
+}
+
+/** 
+ * center align text
+ * 1) Forces text-align to center
+ */
+.u-text-align-center {
+  text-align: center !important;
+}
+
+/** 
+ * Right align text
+ * 1) Forces text-align to right
+ */
+.u-text-align-right {
+  text-align: right !important;
+}

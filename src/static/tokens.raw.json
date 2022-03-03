@@ -1,0 +1,890 @@
+{
+  "aliases": {
+    "eds-color-utility-error-light": {
+      "value": "#F5D1CC",
+      "type": "web"
+    },
+    "eds-color-utility-error-dark": {
+      "value": "#88281B",
+      "type": "web"
+    },
+    "eds-color-neutral-80": {
+      "value": "#2F3747",
+      "type": "web"
+    },
+    "eds-color-neutral-70": {
+      "value": "#4C5566",
+      "type": "web"
+    },
+    "eds-color-brand-blue": {
+      "value": "#0000ff",
+      "type": "web"
+    },
+    "eds-color-neutral-60": {
+      "value": "#747F94",
+      "type": "web"
+    },
+    "eds-color-utility-success-dark": {
+      "value": "#336635",
+      "type": "web"
+    },
+    "eds-color-neutral-50": {
+      "value": "#A3AEBE",
+      "type": "web"
+    },
+    "eds-color-neutral-black": {
+      "value": "#1B202B",
+      "type": "web"
+    },
+    "eds-color-neutral-40": {
+      "value": "#949494",
+      "type": "web"
+    },
+    "eds-color-neutral-30": {
+      "value": "#E3E8EF",
+      "type": "web"
+    },
+    "eds-color-utility-warning": {
+      "value": "#E4AA52",
+      "type": "web"
+    },
+    "eds-color-neutral-20": {
+      "value": "#EEF2F6",
+      "type": "web"
+    },
+    "eds-color-neutral-10": {
+      "value": "#F8FAFC",
+      "type": "web"
+    },
+    "eds-color-utility-warning-dark": {
+      "value": "#785617",
+      "type": "web"
+    },
+    "eds-color-utility-success": {
+      "value": "#74BE76",
+      "type": "web"
+    },
+    "eds-color-neutral-white": {
+      "value": "#ffffff",
+      "type": "web"
+    },
+    "eds-color-utility-warning-light": {
+      "value": "#F6E5CA",
+      "type": "web"
+    },
+    "eds-color-utility-error": {
+      "value": "#D74B37",
+      "type": "web"
+    },
+    "eds-color-utility-success-light": {
+      "value": "#E3F2E4",
+      "type": "web"
+    },
+    "eds-font-weight-regular": {
+      "value": "400"
+    },
+    "eds-line-height-md": {
+      "value": "1.3"
+    },
+    "eds-font-size-xl": {
+      "value": "2.5rem"
+    },
+    "eds-font-size-md": {
+      "value": ".875rem"
+    },
+    "eds-font-family-secondary": {
+      "value": "\"HelveticaNeue\", \"Helvetica\", \"Arial\", sans-serif",
+      "category": "font-family"
+    },
+    "eds-line-height-sm": {
+      "value": "1"
+    },
+    "eds-font-size-sm": {
+      "value": ".75rem"
+    },
+    "eds-font-size-md-2": {
+      "value": "1rem"
+    },
+    "eds-font-size-lg": {
+      "value": "1.125rem"
+    },
+    "eds-font-weight-semibold": {
+      "value": "600"
+    },
+    "eds-line-height-lg": {
+      "value": "1.5"
+    },
+    "eds-font-weight-md": {
+      "value": "500"
+    },
+    "eds-font-size-lg-2": {
+      "value": "1.875rem"
+    },
+    "eds-font-family-primary": {
+      "value": "\"HelveticaNeue\", \"Helvetica\", \"Arial\", sans-serif",
+      "category": "font-family"
+    },
+    "eds-l-max-width": {
+      "value": "69.5rem"
+    },
+    "eds-l-linelength-width": {
+      "value": "36rem"
+    },
+    "eds-border-width": {
+      "value": "1px",
+      "category": "sizing"
+    },
+    "eds-border-width-med": {
+      "value": "2px",
+      "category": "sizing"
+    },
+    "eds-border-width-lg": {
+      "value": "4px",
+      "category": "sizing"
+    },
+    "eds-border-width-xl": {
+      "value": "8px",
+      "category": "sizing"
+    },
+    "eds-border-radius": {
+      "value": "2px",
+      "category": "border-radius"
+    },
+    "eds-border-radius-lg": {
+      "value": "8px",
+      "category": "border-radius"
+    },
+    "eds-border-radius-xl": {
+      "value": "20px",
+      "category": "border-radius"
+    },
+    "eds-box-shadow-sm": {
+      "value": "0px 1px 2px 1px rgba(0, 0, 0, 0.06), 0px 1px 3px 0px rgba(0, 0, 0, 0.1)"
+    },
+    "eds-box-shadow-md": {
+      "value": "0px 2px 4px 0px rgba(0, 0, 0, 0.06), 0px 4px 6px 0px rgba(0, 0, 0, 0.1)"
+    },
+    "eds-box-shadow-lg": {
+      "value": "0px 10px 15px 0px rgba(0, 0, 0, 0.1), 0px 4px 6px 0px rgba(0, 0, 0, 0.06)"
+    },
+    "eds-box-shadow-xl": {
+      "value": "0px 4px 4px rgba(0, 0, 0, 0.25), 0px 1px 2px rgba(0, 0, 0, 0.06), 0px 1px 0px #EEF2F6"
+    },
+    "eds-anim-fade-quick": {
+      "value": "0.15s",
+      "category": "time"
+    },
+    "eds-anim-fade-long": {
+      "value": "0.4s",
+      "category": "time"
+    },
+    "eds-anim-rotate-quick": {
+      "value": "0.1s",
+      "category": "time"
+    },
+    "eds-anim-ease": {
+      "value": "ease-out"
+    },
+    "eds-bp-sm": {
+      "value": "28em"
+    },
+    "eds-bp-sm-2": {
+      "value": "35em"
+    },
+    "eds-bp-md": {
+      "value": "47em"
+    },
+    "eds-bp-lg": {
+      "value": "60em"
+    },
+    "eds-bp-xl": {
+      "value": "70em"
+    },
+    "eds-z-index-top": {
+      "value": "99999"
+    },
+    "eds-z-index-500": {
+      "value": "500"
+    },
+    "eds-z-index-400": {
+      "value": "400"
+    },
+    "eds-z-index-300": {
+      "value": "300"
+    },
+    "eds-z-index-200": {
+      "value": "200"
+    },
+    "eds-z-index-100": {
+      "value": "100"
+    },
+    "eds-z-index-0": {
+      "value": "0"
+    },
+    "eds-z-index-bottom": {
+      "value": "-100"
+    },
+    "eds-theme-color-neutral-light": {
+      "value": "#F8FAFC"
+    },
+    "eds-theme-color-primary-hover": {
+      "value": "#4C5566"
+    },
+    "eds-theme-font-family-secondary": {
+      "value": "\"HelveticaNeue\", \"Helvetica\", \"Arial\", sans-serif"
+    },
+    "eds-theme-color-inverted": {
+      "value": "#ffffff"
+    },
+    "eds-theme-form-input-border-color": {
+      "value": "#A3AEBE"
+    },
+    "eds-theme-box-shadow": {
+      "value": "0px 1px 2px 1px rgba(0, 0, 0, 0.06), 0px 1px 3px 0px rgba(0, 0, 0, 0.1)"
+    },
+    "eds-theme-color-accent-hover": {
+      "value": "#A3AEBE"
+    },
+    "eds-theme-color-link": {
+      "value": "#0000ff"
+    },
+    "eds-theme-color-neutral-md": {
+      "value": "#A3AEBE"
+    },
+    "eds-theme-form-input-border-width": {
+      "value": "1px"
+    },
+    "eds-theme-color-neutral-dark": {
+      "value": "#1B202B"
+    },
+    "eds-theme-form-input-border-radius": {
+      "value": "2px"
+    },
+    "eds-theme-border-radius": {
+      "value": "2px"
+    },
+    "eds-theme-font-family-primary": {
+      "value": "\"HelveticaNeue\", \"Helvetica\", \"Arial\", sans-serif"
+    },
+    "eds-theme-color-primary": {
+      "value": "#0000ff"
+    },
+    "eds-theme-form-input-border-color-focus": {
+      "value": "#1B202B"
+    },
+    "eds-theme-form-input-border-color-hover": {
+      "value": "#1B202B"
+    },
+    "eds-theme-color-link-hover": {
+      "value": "#4C5566"
+    },
+    "eds-theme-color-accent": {
+      "value": "#0000ff"
+    },
+    "eds-theme-color-border": {
+      "value": "#EEF2F6"
+    }
+  },
+  "props": {
+    "eds-color-utility-error-light": {
+      "category": "web",
+      "type": "web",
+      "value": "#F5D1CC",
+      "originalValue": "{!eds-color-utility-error-light}",
+      "name": "eds-color-utility-error-light"
+    },
+    "eds-color-utility-error-dark": {
+      "category": "web",
+      "type": "web",
+      "value": "#88281B",
+      "originalValue": "{!eds-color-utility-error-dark}",
+      "name": "eds-color-utility-error-dark"
+    },
+    "eds-color-neutral-80": {
+      "category": "web",
+      "type": "web",
+      "value": "#2F3747",
+      "originalValue": "{!eds-color-neutral-80}",
+      "name": "eds-color-neutral-80"
+    },
+    "eds-color-neutral-70": {
+      "category": "web",
+      "type": "web",
+      "value": "#4C5566",
+      "originalValue": "{!eds-color-neutral-70}",
+      "name": "eds-color-neutral-70"
+    },
+    "eds-color-brand-blue": {
+      "category": "web",
+      "type": "web",
+      "value": "#0000ff",
+      "originalValue": "{!eds-color-brand-blue}",
+      "name": "eds-color-brand-blue"
+    },
+    "eds-color-neutral-60": {
+      "category": "web",
+      "type": "web",
+      "value": "#747F94",
+      "originalValue": "{!eds-color-neutral-60}",
+      "name": "eds-color-neutral-60"
+    },
+    "eds-color-utility-success-dark": {
+      "category": "web",
+      "type": "web",
+      "value": "#336635",
+      "originalValue": "{!eds-color-utility-success-dark}",
+      "name": "eds-color-utility-success-dark"
+    },
+    "eds-color-neutral-50": {
+      "category": "web",
+      "type": "web",
+      "value": "#A3AEBE",
+      "originalValue": "{!eds-color-neutral-50}",
+      "name": "eds-color-neutral-50"
+    },
+    "eds-color-neutral-black": {
+      "category": "web",
+      "type": "web",
+      "value": "#1B202B",
+      "originalValue": "{!eds-color-neutral-black}",
+      "name": "eds-color-neutral-black"
+    },
+    "eds-color-neutral-40": {
+      "category": "web",
+      "type": "web",
+      "value": "#949494",
+      "originalValue": "{!eds-color-neutral-40}",
+      "name": "eds-color-neutral-40"
+    },
+    "eds-color-neutral-30": {
+      "category": "web",
+      "type": "web",
+      "value": "#E3E8EF",
+      "originalValue": "{!eds-color-neutral-30}",
+      "name": "eds-color-neutral-30"
+    },
+    "eds-color-utility-warning": {
+      "category": "web",
+      "type": "web",
+      "value": "#E4AA52",
+      "originalValue": "{!eds-color-utility-warning}",
+      "name": "eds-color-utility-warning"
+    },
+    "eds-color-neutral-20": {
+      "category": "web",
+      "type": "web",
+      "value": "#EEF2F6",
+      "originalValue": "{!eds-color-neutral-20}",
+      "name": "eds-color-neutral-20"
+    },
+    "eds-color-neutral-10": {
+      "category": "web",
+      "type": "web",
+      "value": "#F8FAFC",
+      "originalValue": "{!eds-color-neutral-10}",
+      "name": "eds-color-neutral-10"
+    },
+    "eds-color-utility-warning-dark": {
+      "category": "web",
+      "type": "web",
+      "value": "#785617",
+      "originalValue": "{!eds-color-utility-warning-dark}",
+      "name": "eds-color-utility-warning-dark"
+    },
+    "eds-color-utility-success": {
+      "category": "web",
+      "type": "web",
+      "value": "#74BE76",
+      "originalValue": "{!eds-color-utility-success}",
+      "name": "eds-color-utility-success"
+    },
+    "eds-color-neutral-white": {
+      "category": "web",
+      "type": "web",
+      "value": "#ffffff",
+      "originalValue": "{!eds-color-neutral-white}",
+      "name": "eds-color-neutral-white"
+    },
+    "eds-color-utility-warning-light": {
+      "category": "web",
+      "type": "web",
+      "value": "#F6E5CA",
+      "originalValue": "{!eds-color-utility-warning-light}",
+      "name": "eds-color-utility-warning-light"
+    },
+    "eds-color-utility-error": {
+      "category": "web",
+      "type": "web",
+      "value": "#D74B37",
+      "originalValue": "{!eds-color-utility-error}",
+      "name": "eds-color-utility-error"
+    },
+    "eds-color-utility-success-light": {
+      "category": "web",
+      "type": "web",
+      "value": "#E3F2E4",
+      "originalValue": "{!eds-color-utility-success-light}",
+      "name": "eds-color-utility-success-light"
+    },
+    "eds-size-base-unit": {
+      "category": "web",
+      "type": "size",
+      "value": "0.5rem",
+      "comment": "The size value is used as a multiplier to determine typography and spacing sizes. For instance, font-size-lg = var(--eds-size-3), which results in a 24px font size.",
+      "originalValue": "0.5rem",
+      "name": "eds-size-base-unit"
+    },
+    "eds-font-weight-regular": {
+      "category": "web",
+      "type": "typography",
+      "value": "400",
+      "originalValue": "{!eds-font-weight-regular}",
+      "name": "eds-font-weight-regular"
+    },
+    "eds-line-height-md": {
+      "category": "web",
+      "type": "typography",
+      "value": "1.3",
+      "originalValue": "{!eds-line-height-md}",
+      "name": "eds-line-height-md"
+    },
+    "eds-font-size-xl": {
+      "category": "web",
+      "type": "typography",
+      "value": "2.5rem",
+      "originalValue": "{!eds-font-size-xl}",
+      "name": "eds-font-size-xl"
+    },
+    "eds-font-size-md": {
+      "category": "web",
+      "type": "typography",
+      "value": ".875rem",
+      "originalValue": "{!eds-font-size-md}",
+      "name": "eds-font-size-md"
+    },
+    "eds-font-family-secondary": {
+      "category": "font-family",
+      "type": "typography",
+      "value": "\"HelveticaNeue\", \"Helvetica\", \"Arial\", sans-serif",
+      "originalValue": "{!eds-font-family-secondary}",
+      "name": "eds-font-family-secondary"
+    },
+    "eds-line-height-sm": {
+      "category": "web",
+      "type": "typography",
+      "value": "1",
+      "originalValue": "{!eds-line-height-sm}",
+      "name": "eds-line-height-sm"
+    },
+    "eds-font-size-sm": {
+      "category": "web",
+      "type": "typography",
+      "value": ".75rem",
+      "originalValue": "{!eds-font-size-sm}",
+      "name": "eds-font-size-sm"
+    },
+    "eds-font-size-md-2": {
+      "category": "web",
+      "type": "typography",
+      "value": "1rem",
+      "originalValue": "{!eds-font-size-md-2}",
+      "name": "eds-font-size-md-2"
+    },
+    "eds-font-size-lg": {
+      "category": "web",
+      "type": "typography",
+      "value": "1.125rem",
+      "originalValue": "{!eds-font-size-lg}",
+      "name": "eds-font-size-lg"
+    },
+    "eds-font-weight-semibold": {
+      "category": "web",
+      "type": "typography",
+      "value": "600",
+      "originalValue": "{!eds-font-weight-semibold}",
+      "name": "eds-font-weight-semibold"
+    },
+    "eds-line-height-lg": {
+      "category": "web",
+      "type": "typography",
+      "value": "1.5",
+      "originalValue": "{!eds-line-height-lg}",
+      "name": "eds-line-height-lg"
+    },
+    "eds-font-weight-md": {
+      "category": "web",
+      "type": "typography",
+      "value": "500",
+      "originalValue": "{!eds-font-weight-md}",
+      "name": "eds-font-weight-md"
+    },
+    "eds-font-size-lg-2": {
+      "category": "web",
+      "type": "typography",
+      "value": "1.875rem",
+      "originalValue": "{!eds-font-size-lg-2}",
+      "name": "eds-font-size-lg-2"
+    },
+    "eds-font-family-primary": {
+      "category": "font-family",
+      "type": "typography",
+      "value": "\"HelveticaNeue\", \"Helvetica\", \"Arial\", sans-serif",
+      "originalValue": "{!eds-font-family-primary}",
+      "name": "eds-font-family-primary"
+    },
+    "eds-l-max-width": {
+      "category": "web",
+      "type": "layout",
+      "value": "69.5rem",
+      "comment": "Caps the width of the content to a maximum value so the page doesn't span the full width of the viewport on larger screens",
+      "originalValue": "{!eds-l-max-width}",
+      "name": "eds-l-max-width"
+    },
+    "eds-l-linelength-width": {
+      "category": "web",
+      "type": "layout",
+      "value": "36rem",
+      "comment": "Caps the width of text passages to an optimal reading length",
+      "originalValue": "{!eds-l-linelength-width}",
+      "name": "eds-l-linelength-width"
+    },
+    "eds-border-width": {
+      "category": "sizing",
+      "type": "borders",
+      "value": "1px",
+      "originalValue": "{!eds-border-width}",
+      "name": "eds-border-width"
+    },
+    "eds-border-width-med": {
+      "category": "sizing",
+      "type": "borders",
+      "value": "2px",
+      "originalValue": "{!eds-border-width-med}",
+      "name": "eds-border-width-med"
+    },
+    "eds-border-width-lg": {
+      "category": "sizing",
+      "type": "borders",
+      "value": "4px",
+      "originalValue": "{!eds-border-width-lg}",
+      "name": "eds-border-width-lg"
+    },
+    "eds-border-width-xl": {
+      "category": "sizing",
+      "type": "borders",
+      "value": "8px",
+      "originalValue": "{!eds-border-width-xl}",
+      "name": "eds-border-width-xl"
+    },
+    "eds-border-radius": {
+      "category": "border-radius",
+      "type": "borders",
+      "value": "2px",
+      "originalValue": "{!eds-border-radius}",
+      "name": "eds-border-radius"
+    },
+    "eds-border-radius-lg": {
+      "category": "border-radius",
+      "type": "borders",
+      "value": "8px",
+      "originalValue": "{!eds-border-radius-lg}",
+      "name": "eds-border-radius-lg"
+    },
+    "eds-border-radius-xl": {
+      "category": "border-radius",
+      "type": "borders",
+      "value": "20px",
+      "originalValue": "{!eds-border-radius-xl}",
+      "name": "eds-border-radius-xl"
+    },
+    "eds-box-shadow-sm": {
+      "value": "0px 1px 2px 1px rgba(0, 0, 0, 0.06), 0px 1px 3px 0px rgba(0, 0, 0, 0.1)",
+      "category": "web",
+      "type": "shadows",
+      "originalValue": "{!eds-box-shadow-sm}",
+      "name": "eds-box-shadow-sm"
+    },
+    "eds-box-shadow-md": {
+      "value": "0px 2px 4px 0px rgba(0, 0, 0, 0.06), 0px 4px 6px 0px rgba(0, 0, 0, 0.1)",
+      "category": "web",
+      "type": "shadows",
+      "originalValue": "{!eds-box-shadow-md}",
+      "name": "eds-box-shadow-md"
+    },
+    "eds-box-shadow-lg": {
+      "value": "0px 10px 15px 0px rgba(0, 0, 0, 0.1), 0px 4px 6px 0px rgba(0, 0, 0, 0.06)",
+      "category": "web",
+      "type": "shadows",
+      "originalValue": "{!eds-box-shadow-lg}",
+      "name": "eds-box-shadow-lg"
+    },
+    "eds-box-shadow-xl": {
+      "value": "0px 4px 4px rgba(0, 0, 0, 0.25), 0px 1px 2px rgba(0, 0, 0, 0.06), 0px 1px 0px #EEF2F6",
+      "category": "web",
+      "type": "shadows",
+      "originalValue": "{!eds-box-shadow-xl}",
+      "name": "eds-box-shadow-xl"
+    },
+    "eds-anim-fade-quick": {
+      "category": "time",
+      "type": "animation",
+      "value": "0.15s",
+      "originalValue": "{!eds-anim-fade-quick}",
+      "name": "eds-anim-fade-quick"
+    },
+    "eds-anim-fade-long": {
+      "category": "time",
+      "type": "animation",
+      "value": "0.4s",
+      "originalValue": "{!eds-anim-fade-long}",
+      "name": "eds-anim-fade-long"
+    },
+    "eds-anim-rotate-quick": {
+      "category": "web",
+      "type": "animation",
+      "value": "0.1s",
+      "originalValue": "{!eds-anim-rotate-quick}",
+      "name": "eds-anim-rotate-quick"
+    },
+    "eds-anim-ease": {
+      "category": "web",
+      "type": "animation",
+      "value": "ease-out",
+      "originalValue": "{!eds-anim-ease}",
+      "name": "eds-anim-ease"
+    },
+    "eds-bp-sm": {
+      "category": "web",
+      "type": "media-query",
+      "value": "28em",
+      "originalValue": "{!eds-bp-sm}",
+      "name": "eds-bp-sm"
+    },
+    "eds-bp-sm-2": {
+      "category": "web",
+      "type": "media-query",
+      "value": "35em",
+      "originalValue": "{!eds-bp-sm-2}",
+      "name": "eds-bp-sm-2"
+    },
+    "eds-bp-md": {
+      "category": "web",
+      "type": "media-query",
+      "value": "47em",
+      "originalValue": "{!eds-bp-md}",
+      "name": "eds-bp-md"
+    },
+    "eds-bp-lg": {
+      "category": "web",
+      "type": "media-query",
+      "value": "60em",
+      "originalValue": "{!eds-bp-lg}",
+      "name": "eds-bp-lg"
+    },
+    "eds-bp-xl": {
+      "category": "web",
+      "type": "media-query",
+      "value": "70em",
+      "originalValue": "{!eds-bp-xl}",
+      "name": "eds-bp-xl"
+    },
+    "eds-z-index-top": {
+      "value": "99999",
+      "category": "web",
+      "type": "z-index",
+      "originalValue": "{!eds-z-index-top}",
+      "name": "eds-z-index-top"
+    },
+    "eds-z-index-500": {
+      "value": "500",
+      "category": "web",
+      "type": "z-index",
+      "originalValue": "{!eds-z-index-500}",
+      "name": "eds-z-index-500"
+    },
+    "eds-z-index-400": {
+      "value": "400",
+      "category": "web",
+      "type": "z-index",
+      "originalValue": "{!eds-z-index-400}",
+      "name": "eds-z-index-400"
+    },
+    "eds-z-index-300": {
+      "value": "300",
+      "category": "web",
+      "type": "z-index",
+      "originalValue": "{!eds-z-index-300}",
+      "name": "eds-z-index-300"
+    },
+    "eds-z-index-200": {
+      "value": "200",
+      "category": "web",
+      "type": "z-index",
+      "originalValue": "{!eds-z-index-200}",
+      "name": "eds-z-index-200"
+    },
+    "eds-z-index-100": {
+      "value": "100",
+      "category": "web",
+      "type": "z-index",
+      "originalValue": "{!eds-z-index-100}",
+      "name": "eds-z-index-100"
+    },
+    "eds-z-index-0": {
+      "value": "0",
+      "category": "web",
+      "type": "z-index",
+      "originalValue": "{!eds-z-index-0}",
+      "name": "eds-z-index-0"
+    },
+    "eds-z-index-bottom": {
+      "value": "-100",
+      "category": "web",
+      "type": "z-index",
+      "originalValue": "{!eds-z-index-bottom}",
+      "name": "eds-z-index-bottom"
+    },
+    "eds-theme-color-neutral-light": {
+      "category": "theme",
+      "type": "theme",
+      "value": "#F8FAFC",
+      "comment": "Applied to disabled state background colors & components requiring subtle contrast like code background",
+      "originalValue": "{!eds-theme-color-neutral-light}",
+      "name": "eds-theme-color-neutral-light"
+    },
+    "eds-theme-color-primary-hover": {
+      "category": "theme",
+      "type": "theme",
+      "value": "#4C5566",
+      "comment": "Applied on hover to interactive components using primary theme color",
+      "originalValue": "{!eds-theme-color-primary-hover}",
+      "name": "eds-theme-color-primary-hover"
+    },
+    "eds-theme-color-inverted": {
+      "category": "theme",
+      "type": "theme",
+      "value": "#ffffff",
+      "originalValue": "{!eds-theme-color-inverted}",
+      "name": "eds-theme-color-inverted"
+    },
+    "eds-theme-form-input-border-color": {
+      "category": "theme",
+      "type": "theme",
+      "value": "#A3AEBE",
+      "comment": "Border color applied to all form fields; defaults to theme-color-neutral-md",
+      "originalValue": "{!eds-theme-form-input-border-color}",
+      "name": "eds-theme-form-input-border-color"
+    },
+    "eds-theme-box-shadow": {
+      "category": "theme",
+      "type": "theme",
+      "value": "0px 1px 2px 1px rgba(0, 0, 0, 0.06), 0px 1px 3px 0px rgba(0, 0, 0, 0.1)",
+      "comment": "Theme box shadow; applied to components that require elevation, such as alerts, cards, dropdowns, and tooltip bubbles",
+      "originalValue": "{!eds-theme-box-shadow}",
+      "name": "eds-theme-box-shadow"
+    },
+    "eds-theme-color-accent-hover": {
+      "category": "theme",
+      "type": "theme",
+      "value": "#A3AEBE",
+      "comment": "Applied on hover to interactive components using accent theme color",
+      "originalValue": "{!eds-theme-color-accent-hover}",
+      "name": "eds-theme-color-accent-hover"
+    },
+    "eds-theme-color-link": {
+      "category": "theme",
+      "type": "theme",
+      "value": "#0000ff",
+      "comment": "Color applied to hyperlinks; Defaults to theme-color-primary",
+      "originalValue": "{!eds-theme-color-link}",
+      "name": "eds-theme-color-link"
+    },
+    "eds-theme-color-neutral-md": {
+      "category": "theme",
+      "type": "theme",
+      "value": "#A3AEBE",
+      "comment": "Applied to many component border colors",
+      "originalValue": "{!eds-theme-color-neutral-md}",
+      "name": "eds-theme-color-neutral-md"
+    },
+    "eds-theme-form-input-border-width": {
+      "category": "theme",
+      "type": "theme",
+      "value": "1px",
+      "comment": "Border width applied to all form fields",
+      "originalValue": "{!eds-theme-form-input-border-width}",
+      "name": "eds-theme-form-input-border-width"
+    },
+    "eds-theme-color-neutral-dark": {
+      "category": "theme",
+      "type": "theme",
+      "value": "#1B202B",
+      "comment": "Applied to boddy text and other text against a light background",
+      "originalValue": "{!eds-theme-color-neutral-dark}",
+      "name": "eds-theme-color-neutral-dark"
+    },
+    "eds-theme-form-input-border-radius": {
+      "category": "theme",
+      "type": "theme",
+      "value": "2px",
+      "comment": "Border radis applied to all form fields; defaults to theme-border-radius",
+      "originalValue": "{!eds-theme-form-input-border-radius}",
+      "name": "eds-theme-form-input-border-radius"
+    },
+    "eds-theme-border-radius": {
+      "category": "theme",
+      "type": "theme",
+      "value": "2px",
+      "comment": "Theme border radius; applied to many components like badges, buttons, cards, and other bordered elements",
+      "originalValue": "{!eds-theme-border-radius}",
+      "name": "eds-theme-border-radius"
+    },
+    "eds-theme-color-primary": {
+      "category": "theme",
+      "type": "theme",
+      "value": "#0000ff",
+      "comment": "The most prominent color in the interface; applied to header, buttons, tooltips, and more",
+      "originalValue": "{!eds-theme-color-primary}",
+      "name": "eds-theme-color-primary"
+    },
+    "eds-theme-form-input-border-color-focus": {
+      "category": "theme",
+      "type": "theme",
+      "value": "#1B202B",
+      "comment": "Border color for focused form controls",
+      "originalValue": "{!eds-theme-form-input-border-color-focus}",
+      "name": "eds-theme-form-input-border-color-focus"
+    },
+    "eds-theme-form-input-border-color-hover": {
+      "category": "theme",
+      "type": "theme",
+      "value": "#1B202B",
+      "comment": "Border color for hovered form controls",
+      "originalValue": "{!eds-theme-form-input-border-color-hover}",
+      "name": "eds-theme-form-input-border-color-hover"
+    },
+    "eds-theme-color-link-hover": {
+      "category": "theme",
+      "type": "theme",
+      "value": "#4C5566",
+      "comment": "Color applied to hovered hyperlinks; Defaults to theme-color-primary-hover",
+      "originalValue": "{!eds-theme-color-link-hover}",
+      "name": "eds-theme-color-link-hover"
+    },
+    "eds-theme-color-accent": {
+      "category": "theme",
+      "type": "theme",
+      "value": "#0000ff",
+      "comment": "Branded accent color; applied to interactive elements such as links, active tabs, checkboxes, radio buttons, and tooltips",
+      "originalValue": "{!eds-theme-color-accent}",
+      "name": "eds-theme-color-accent"
+    },
+    "eds-theme-color-border": {
+      "category": "theme",
+      "type": "theme",
+      "value": "#EEF2F6",
+      "originalValue": "{!eds-theme-color-border}",
+      "name": "eds-theme-color-border"
+    }
+  }
+}

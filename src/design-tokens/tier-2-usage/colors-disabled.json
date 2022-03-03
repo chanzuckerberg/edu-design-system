@@ -1,0 +1,34 @@
+{
+  "eds": {
+    "theme": {
+      "color": {
+        "disabled": {
+          "foreground": {
+            "@": {
+              "value": "{eds.theme.color.neutral.md.foreground.@}"
+            },
+            "inverted": {
+              "value": "{eds.theme.color.neutral.md.foreground.inverted}"
+            }
+          },
+          "background": {
+            "@": {
+              "value": "{eds.theme.color.neutral.subtle.background.@}"
+            },
+            "inverted": {
+              "value": "{eds.theme.color.neutral.subtle.background.inverted}"
+            }
+          },
+          "border": {
+            "@": {
+              "value": "{eds.theme.color.neutral.md.border.@}"
+            },
+            "inverted": {
+              "value": "{eds.theme.color.neutral.md.border.inverted}"
+            }
+          }
+        }
+      }
+    }
+  }
+}

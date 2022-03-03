@@ -1,0 +1,28 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #DISPLAY UTILITY CLASSES
+\*------------------------------------*/
+/**
+ * Display block utility
+ * 1) Forces display property to block
+ */
+.u-display-block {
+  display: block !important;
+}
+
+/**
+ * Display inline block utility
+ * 1) Forces display property to inline-block
+ */
+.u-display-inline-block {
+  display: inline-block !important;
+}
+
+/**
+ * Display inline utility
+ * 1) Forces display property to inline
+ */
+.u-display-inline {
+  display: inline !important;
+}

@@ -1,73 +1,83 @@
-const StyleDictionary = require("style-dictionary");
+const StyleDictionary = require('style-dictionary');
 const EDSStyleDictionary = StyleDictionary.extend({
-  source: ["src/design-tokens/**/*.json"],
+  source: ['src/design-tokens/**/*.json'],
   platforms: {
-    scss: {
-      transforms: [...StyleDictionary.transformGroup.scss, "name/cti/kebab"],
-      buildPath: "src/tokens-dist/",
+    storybook: {
+      transformGroup: 'css',
+      buildPath: '',
       files: [
         {
-          format: "scss/map-deep",
-          destination: "scss/_variables.scss",
-          options: {
-            showFileHeader: false,
-          },
+          format: 'json/flat',
+          destination: '.storybook/data/tokens.json',
         },
       ],
     },
     css: {
-      transforms: [...StyleDictionary.transformGroup.css, "name/cti/kebab"],
-      buildPath: "src/tokens-dist/",
+      transforms: [...StyleDictionary.transformGroup.css, 'name/cti/kebab'],
+      buildPath: 'src/tokens-dist/',
       files: [
         {
-          format: "css/variables",
-          destination: "css/variables.css",
+          format: 'css/variables',
+          destination: 'css/variables.css',
           options: {
             showFileHeader: false,
           },
         },
         {
-          format: "json/nested-css-variables",
+          format: 'json/nested-css-variables',
           // useful for tailwind configs in consuming apps
-          destination: "json/css-variables-nested.json",
+          destination: 'json/css-variables-nested.json',
         },
       ],
     },
     js: {
-      transformGroup: "js",
-      buildPath: "src/tokens-dist/",
+      transformGroup: 'js',
+      buildPath: 'src/tokens-dist/',
       files: [
         {
-          format: "javascript/es6",
-          destination: "ts/colors.ts",
+          format: 'javascript/es6',
+          destination: 'ts/colors.ts',
           options: {
             showFileHeader: false,
           },
           filter: {
             attributes: {
-              type: "color",
+              type: 'color',
             },
           },
         },
       ],
     },
     json: {
-      transformGroup: "js",
-      buildPath: "src/tokens-dist/",
+      transformGroup: 'js',
+      buildPath: 'src/tokens-dist/',
       files: [
         {
-          format: "json/nested",
+          format: 'json/nested',
           // useful for tailwind configs in consuming apps
-          destination: "json/variables-nested.json",
+          destination: 'json/variables-nested.json',
+        },
+      ],
+    },
+    scss: {
+      transforms: [...StyleDictionary.transformGroup.scss, 'name/cti/kebab'],
+      buildPath: 'src/tokens-dist/',
+      files: [
+        {
+          format: 'scss/map-deep',
+          destination: 'scss/_variables.scss',
+          options: {
+            showFileHeader: false,
+          },
         },
       ],
     },
   },
 });
 
-// copied from https://github.com/amzn/style-dictionary/blob/v3.0.0-rc.1/lib/common/formats.js#L96
+// copied from https://github.com/amzn/style-dictionary/blob/v3.0.0-rc.1/src/common/formats.js#L96
 function minifyCSSVarDictionary(obj) {
-  if (typeof obj !== "object" || Array.isArray(obj)) {
+  if (typeof obj !== 'object' || Array.isArray(obj)) {
     return obj;
   }
 
@@ -84,7 +94,7 @@ function minifyCSSVarDictionary(obj) {
 }
 
 EDSStyleDictionary.registerFormat({
-  name: "json/nested-css-variables",
+  name: 'json/nested-css-variables',
   formatter: function (dictionary) {
     return JSON.stringify(
       minifyCSSVarDictionary(dictionary.properties),

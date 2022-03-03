@@ -1,0 +1,82 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #TABLE OBJECT
+\*------------------------------------*/
+
+/**
+  * 1) A table object is a container for a data table
+  *    and toolbars either above or below the table
+  * 2) Important for uses like filtering and pagination
+  */
+.table-object {
+  width: 100%;
+  overflow-x: hidden;
+  border-radius: var(--eds-theme-border-radius);
+}
+
+/**
+  * Table object body
+  */
+.table-object__body {
+  position: relative;
+
+  /**
+    * Table object body with content overflowed left
+    */
+  &.eds-is-overflow-left {
+    /**
+     * Right overflow gradient for the overflow list
+     */
+    /* stylelint-disable-next-line max-nesting-depth */
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      background: linear-gradient(
+        to left,
+        rgba(255, 255, 255, 0.001) 50%,
+        rgba(0, 0, 0, 0.1)
+      );
+      height: 100%;
+      top: 0;
+      left: 0;
+      width: var(--eds-size-4);
+      z-index: var(--eds-z-index-100);
+    }
+  }
+
+  /**
+    * Table object body with content overflowed right
+    */
+  &.eds-is-overflow-right {
+    /**
+     * Right overflow gradient for the overflow list
+     */
+    /* stylelint-disable-next-line max-nesting-depth */
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.001) 50%,
+        rgba(0, 0, 0, 0.1)
+      );
+      height: 100%;
+      top: 0;
+      right: 0;
+      width: var(--eds-size-4);
+      z-index: var(--eds-z-index-100);
+    }
+  }
+}
+
+/**
+  * Table object body inner
+  * 1) Overflow auto to allow scrolling when too much content
+  */
+.table-object__body-inner {
+  width: 100%;
+  overflow: auto; /* 1 */
+}

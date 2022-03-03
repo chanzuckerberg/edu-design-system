@@ -2,91 +2,66 @@
   "eds": {
     "font-family": {
       "primary": {
-        "value": "'Arimo', sans-serif"
+        "value": "sans-serif"
       },
       "secondary": {
-        "value": "'Open Sans', sans-serif"
+        "value": "sans-serif"
       }
     },
     "font-size": {
-      "base": {
-        "value": "16px",
-        "comment": "Base font size for design system in px"
-      },
-      "40": {
-        "value": "2.5rem"
-      },
-      "32": {
-        "value": "2rem"
-      },
-      "24": {
-        "value": "1.5rem"
-      },
-      "18": {
-        "value": "1.125rem"
-      },
-      "16": {
-        "value": "1rem"
-      },
-      "14": {
-        "value": "0.875rem"
-      },
-      "12": {
+      "xs": {
         "value": "0.75rem"
       },
-      "11": {
-        "value": "0.688rem"
+      "sm": {
+        "value": "0.875rem"
+      },
+      "md": {
+        "value": "1rem"
+      },
+      "md-2": {
+        "value": "1.125rem"
+      },
+      "md-3": {
+        "value": "1.25rem"
+      },
+      "lg": {
+        "value": "1.5rem"
+      },
+      "xl": {
+        "value": "1.5rem"
       }
     },
     "font-weight": {
       "light": {
+        "value": "300"
+      },
+      "regular": {
         "value": "400"
       },
-      "medium": {
-        "value": "500"
+      "semibold": {
+        "value": "600"
       },
       "bold": {
-        "value": "600"
+        "value": "700"
+      }
+    },
+    "line-height": {
+      "sm": {
+        "value": "1"
+      },
+      "sm-2": {
+        "value": "1.2"
+      },
+      "md": {
+        "value": "1.333"
+      },
+      "lg": {
+        "value": "1.5"
       }
     },
     "letter-spacing": {
       "sm": {
         "value": "0.5px"
-      }
-    }
-  },
-  "legacy": {
-    "size": {
-      "font": {
-        "h1": {
-          "value": "1.5rem"
-        },
-        "h2": {
-          "value": "1.125rem"
-        },
-        "body": {
-          "value": "1rem"
-        },
-        "sm": {
-          "value": "0.875rem"
-        },
-        "xs": {
-          "value": "0.75rem"
-        }
-      },
-      "line-height": {
-        "h1": {
-          "value": "2rem"
-        },
-        "body": {
-          "value": "1.5rem"
-        },
-        "sm": {
-          "value": "1.25rem"
-        },
-        "xs": {
-          "value": "1rem"
-        }
       }
     }
   }

@@ -1,0 +1,75 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #LAYOUT
+\*------------------------------------*/
+
+/**
+ * 1) Layout wrapper that houses layout section components to create a layouts like
+ * sidebar layouts that are 1 row across and not a grid
+ * 2) Left sidebar is the default
+ */
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+
+  @media all and (min-width: $eds-bp-lg) {
+    grid-template-columns: minmax(18.75rem, min-content) minmax(0, 1fr); /* 2 */ /* 2 */
+  }
+}
+
+.layout--fixed-sidebar {
+  display: block;
+}
+
+/**
+ * Right sidebar layout
+ * 1) Layout that is stacked on small screens and turns into a main column
+ *    sidebar on larger screens
+ * 2) The main column stretches the full width minus the sidebar width and gap.
+ *    The sidebar column has a minimum width value (enough to accommodate ad units
+ *    and other sidebar content) but stretches to fit the content placed inside it.
+ */
+.layout--right-sidebar {
+  @media all and (min-width: $eds-bp-lg) {
+    grid-template-columns: minmax(0, 1fr) minmax(18.75rem, min-content); /* 2 */
+  }
+}
+
+/**
+ * Main layout section region 
+ */
+.layout__section--main {
+  width: 100%;
+
+  .layout--fixed-sidebar & {
+    /* stylelint-disable-next-line max-nesting-depth */
+    @media all and (min-width: $eds-bp-lg) {
+      margin-left: 18.75rem;
+      width: calc(100% - 18.75rem);
+    }
+  }
+
+  @media all and (min-width: $eds-bp-lg) {
+    padding-top: var(--eds-size-6);
+  }
+}
+
+/**
+ * Sidebar layout section region 
+ */
+.layout__section--sidebar {
+  /**
+ * Sticky sidebar layout
+ */
+  .layout--fixed-sidebar & {
+    /* stylelint-disable-next-line max-nesting-depth */
+    @media all and (min-width: $eds-bp-lg) {
+      width: 18.75rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: var(--eds-z-index-500);
+    }
+  }
+}
