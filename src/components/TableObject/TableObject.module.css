@@ -26,8 +26,9 @@
     */
   &.eds-is-overflow-left {
     /**
-      * Right overflow gradient for the overflow list
-      */
+     * Right overflow gradient for the overflow list
+     */
+    /* stylelint-disable-next-line max-nesting-depth */
     &:before {
       content: '';
       display: block;
@@ -50,8 +51,9 @@
     */
   &.eds-is-overflow-right {
     /**
-      * Right overflow gradient for the overflow list
-      */
+     * Right overflow gradient for the overflow list
+     */
+    /* stylelint-disable-next-line max-nesting-depth */
     &:after {
       content: '';
       display: block;

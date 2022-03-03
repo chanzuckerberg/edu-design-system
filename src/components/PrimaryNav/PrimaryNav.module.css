@@ -10,7 +10,7 @@
  * 2) Normally margin-top should not be used to space elements, but
  *    the primary navigation is
  */
-
+/* stylelint-disable-next-line block-no-empty */
 .primary-nav {
 }
 

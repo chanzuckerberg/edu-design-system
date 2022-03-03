@@ -7,6 +7,7 @@
 /**
  * 1) List of of links where each link toggles open associated information
  */
+/* stylelint-disable-next-line block-no-empty */
 .tabs {
 }
 
@@ -87,23 +88,24 @@
     @mixin focus;
   }
 
+  .tabs--inverted & {
+    color: var(--eds-theme-color-link-foreground-inverted);
+  }
+
   /**
-     * Tabs link within active tabs item
-     */
+   * Tabs link within active tabs item
+   */
   .tabs__item.eds-is-active & {
     color: var(--eds-theme-color-primary-foreground);
     box-shadow: inset 0 calc(var(--eds-border-width-lg) * -1) 0 0
       var(--eds-theme-color-primary-border);
 
+    /* stylelint-disable-next-line max-nesting-depth */
     .tabs--inverted & {
       color: var(--eds-theme-color-primary-foreground-inverted);
       box-shadow: inset 0 calc(var(--eds-border-width-lg) * -1) 0 0
         var(--eds-theme-color-primary-border-inverted);
     }
-  }
-
-  .tabs--inverted & {
-    color: var(--eds-theme-color-link-foreground-inverted);
   }
 }
 

@@ -60,18 +60,18 @@
   transition: opacity var(--eds-anim-fade-quick) var(--eds-anim-ease);
   overscroll-behavior-y: contain;
 
+  &:focus-visible {
+    @mixin focus;
+  }
+
   /**
-     * Modal window inside active modal
-     * 1) Transform added for animation
-     */
+   * Modal window inside active modal
+   * 1) Transform added for animation
+   */
   .modal.eds-is-active & {
     opacity: 1;
     transform: translateY(0);
     transition: opacity var(--eds-anim-fade-quick) var(--eds-anim-ease);
-  }
-
-  &:focus-visible {
-    @mixin focus;
   }
 }
 

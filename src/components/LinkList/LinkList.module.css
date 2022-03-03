@@ -34,6 +34,7 @@
 /**
  * Link list item
  */
+/* stylelint-disable-next-line block-no-empty */
 .link-list__item {
 }
 
@@ -55,24 +56,25 @@
     @mixin eds-theme-typography-body-text-sm;
   }
 
-  /**
-     * link within an inverted link list
-     */
-  .link-list--inverted & {
-    color: var(--eds-theme-color-body-foreground-inverted);
-    text-decoration: none;
-
-    &:focus-visible {
-      @mixin focusInverted;
-    }
-  }
-
   .link-list--lined & {
     padding-top: var(--eds-size-1-and-half);
     padding-bottom: var(--eds-size-1-and-half);
     border-bottom-width: var(--eds-theme-border-width);
     border-bottom-style: solid;
     border-bottom-color: var(--eds-theme-color-neutral-subtle-border);
+  }
+
+  /**
+   * link within an inverted link list
+   */
+  .link-list--inverted & {
+    color: var(--eds-theme-color-body-foreground-inverted);
+    text-decoration: none;
+
+    /* stylelint-disable-next-line max-nesting-depth */
+    &:focus-visible {
+      @mixin focusInverted;
+    }
   }
 
   .link-list--lined .link-list__item:last-child & {

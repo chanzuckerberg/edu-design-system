@@ -114,19 +114,19 @@
 }
 
 /**
-   * Accordion body within active accordion panel
-   */
+ * Accordion body within active accordion panel
+ */
+.accordion--inverted .accordion-panel__body {
+  color: var(--eds-theme-color-body-foreground-inverted);
+}
+
+/**
+ * Accordion body within active accordion panel
+ */
 .accordion-panel.eds-is-active .accordion-panel__body {
   opacity: 1;
   visibility: visible;
   overflow: visible;
-}
-
-/**
-   * Accordion body within active accordion panel
-   */
-.accordion--inverted .accordion-panel__body {
-  color: var(--eds-theme-color-body-foreground-inverted);
 }
 
 /**
@@ -178,16 +178,16 @@
 }
 
 /**
+ * Accordion panel icon within inverted accordion
+ * 1) Change the icon fill color lighter
+ */
+ .accordion--inverted .accordion-panel__icon {
+  fill: var(--eds-theme-color-primary-foreground-inverted); /* 1 */
+}
+
+/**
  * Accordion icon within active accordion panel
  */
 .accordion-panel.eds-is-active .accordion-panel__icon {
   transform: rotate(-180deg);
-}
-
-/**
- * Accordion panel icon within inverted accordion
- * 1) Change the icon fill color lighter
- */
-.accordion--inverted .accordion-panel__icon {
-  fill: var(--eds-theme-color-primary-foreground-inverted); /* 1 */
 }

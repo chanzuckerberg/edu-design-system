@@ -8,6 +8,7 @@
  * 1) A media block features a block of media(i.e. image) and text
  * 2) Display flex is added to put contents within the media block side by side
  */
+/* stylelint-disable-next-line block-no-empty */
 .stacked-block {
 }
 
@@ -24,6 +25,7 @@
   margin-bottom: 0;
 
   .stacked-block--break & {
+    /* stylelint-disable-next-line max-nesting-depth */
     @media all and (min-width: $eds-bp-md) {
       margin-right: var(--eds-size-4);
     }

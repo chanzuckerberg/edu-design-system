@@ -17,6 +17,7 @@
   * 2) Set height to full height minus the height of the header
   */
   .header.eds-is-active & {
+    /* stylelint-disable-next-line max-nesting-depth */
     @media all and (max-width: $eds-bp-md) {
       display: flex;
       flex-direction: column;

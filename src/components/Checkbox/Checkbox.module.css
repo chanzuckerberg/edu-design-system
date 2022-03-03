@@ -77,15 +77,23 @@
     border-radius: var(--eds-theme-form-input-border-radius);
     background: var(--eds-color-neutral-white);
 
+    /* stylelint-disable-next-line max-nesting-depth */
+    .checkbox--inverted & {
+      background-color: transparent;
+      border-color: var(--eds-theme-color-form-input-border-inverted);
+    }
+
     /**
      *  Custom checkbox background inside of focused control 
      */
+    /* stylelint-disable-next-line max-nesting-depth */
     .checkbox__input:focus-visible + & {
       @mixin focus;
     }
     /**
      *  Custom checkbox background inside of disabled control 
      */
+    /* stylelint-disable-next-line max-nesting-depth */
     .checkbox__input:disabled + & {
       border-color: var(--eds-theme-color-disabled-border);
       background-color: var(--eds-theme-color-disabled-background);
@@ -95,14 +103,10 @@
     /**
      *  Custom checkbox background inside of checked control 
      */
+    /* stylelint-disable-next-line max-nesting-depth */
     .checkbox__input:checked + & {
       background: var(--eds-theme-color-primary-background);
       border-color: var(--eds-theme-color-primary-border);
-    }
-
-    .checkbox--inverted & {
-      background-color: transparent;
-      border-color: var(--eds-theme-color-form-input-border-inverted);
     }
   }
 
@@ -132,6 +136,7 @@
      * Actual checkbox of the checked input
      * 1) Hide checkmark based on if input is checked
      */
+    /* stylelint-disable-next-line max-nesting-depth */
     .checkbox__input:checked + & {
       opacity: 1; /* 1 */
     }
@@ -144,6 +149,7 @@
      * 3) Draw the bar shape
      * 4) Position bar in the center of the custom checkbox
      */
+    /* stylelint-disable-next-line max-nesting-depth */
     .checkbox__input:indeterminate + & {
       content: '';
       opacity: 1;

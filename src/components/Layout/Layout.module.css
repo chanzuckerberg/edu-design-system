@@ -43,6 +43,7 @@
   width: 100%;
 
   .layout--fixed-sidebar & {
+    /* stylelint-disable-next-line max-nesting-depth */
     @media all and (min-width: $eds-bp-lg) {
       margin-left: 18.75rem;
       width: calc(100% - 18.75rem);
@@ -62,6 +63,7 @@
  * Sticky sidebar layout
  */
   .layout--fixed-sidebar & {
+    /* stylelint-disable-next-line max-nesting-depth */
     @media all and (min-width: $eds-bp-lg) {
       width: 18.75rem;
       position: fixed;

@@ -5,10 +5,18 @@
 \*------------------------------------*/
 
 /**
+ * Textfield label
  * 1) Consists of a label, form control, and an optional note about the field.
  */
 .text-field {
   position: relative;
+
+  .text-field--inverted & {
+    color: var(--eds-theme-color-body-foreground-inverted);
+  }
+  .eds-is-disabled & {
+    color: var(--eds-theme-color-disabled-foreground);
+  }
 }
 
 /**
@@ -17,18 +25,6 @@
 .text-field__body {
   position: relative;
   margin-bottom: var(--eds-size-half);
-}
-
-/**
- * Textfield label 
- */
-.text-field {
-  .text-field--inverted & {
-    color: var(--eds-theme-color-body-foreground-inverted);
-  }
-  .eds-is-disabled & {
-    color: var(--eds-theme-color-disabled-foreground);
-  }
 }
 
 /**

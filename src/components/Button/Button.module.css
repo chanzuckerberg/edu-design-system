@@ -50,6 +50,7 @@
     color: var(--eds-theme-color-disabled-foreground);
     cursor: not-allowed;
 
+    /* stylelint-disable-next-line max-nesting-depth */
     &:hover,
     &:focus {
       background: transparent;
@@ -65,7 +66,7 @@
   &.button--inverted {
     border-color: var(--eds-theme-color-primary-border-inverted);
     color: var(--eds-theme-color-primary-foreground-inverted);
-
+    /* stylelint-disable-next-line max-nesting-depth */
     &:hover,
     &:focus {
       border-color: var(--eds-theme-color-primary-border-inverted-hover);
@@ -102,7 +103,7 @@
     background-color: var(--eds-theme-color-disabled-background);
     border-color: var(--eds-theme-color-disabled-border);
     color: var(--eds-theme-color-disabled-foreground);
-
+    /* stylelint-disable-next-line max-nesting-depth */
     &:hover {
       background-color: var(--eds-theme-color-disabled-background);
       border-color: var(--eds-theme-color-disabled-border);
@@ -116,7 +117,7 @@
   &.button--inverted {
     background-color: var(--eds-theme-color-primary-background);
     color: var(--eds-theme-color-body-foreground-inverted);
-
+    /* stylelint-disable-next-line max-nesting-depth */
     &:hover,
     &:focus {
       background-color: var(--eds-theme-color-primary-background-hover);
@@ -172,7 +173,7 @@
    */
   &.button--inverted {
     color: var(--eds-theme-color-primary-foreground-inverted);
-
+    /* stylelint-disable-next-line max-nesting-depth */
     &:hover,
     &:focus {
       color: var(--eds-theme-color-primary-foreground-inverted-hover);

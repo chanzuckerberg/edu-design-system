@@ -1,3 +1,5 @@
+/* stylelint-disable no-descending-specificity */
+
 @import '../../design-tokens/mixins.css';
 
 /*------------------------------------*\
@@ -41,6 +43,7 @@
   }
 
   .text-list--tiny.text-list--inline & {
+    /* stylelint-disable-next-line max-nesting-depth */
     &:before {
       top: var(--eds-size-1);
       height: var(--eds-size-half);

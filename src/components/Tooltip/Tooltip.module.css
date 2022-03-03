@@ -42,12 +42,6 @@
     @mixin focus;
   }
 
-  .tooltip.eds-is-active & {
-    display: flex;
-    justify-content: center;
-    z-index: var(--eds-z-index-100);
-  }
-
   .tooltip--right & {
     bottom: auto;
     top: -50%;
@@ -64,6 +58,12 @@
     left: auto;
     top: -50%;
     right: calc(130% + 5px);
+  }
+
+  .tooltip.eds-is-active & {
+    display: flex;
+    justify-content: center;
+    z-index: var(--eds-z-index-100);
   }
 }
 

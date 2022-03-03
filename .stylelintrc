@@ -1,6 +1,6 @@
 {
   "extends": [
-    "stylelint-config-standard"
+    "stylelint-config-recommended"
   ],
   "rules": {
     "at-rule-no-unknown": [
@@ -13,8 +13,6 @@
       }
     ],
     "custom-property-empty-line-before": "never",
-    "no-eol-whitespace": null,
-    "max-nesting-depth": 1,
-    "selector-class-pattern": null
+    "max-nesting-depth": 1
   }
 }

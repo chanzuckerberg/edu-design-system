@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Hr } from '../../../src';
-import styles from '../../../src/components/Utilities/Widths.module.css';
 import './Utilities.css';
 
 export class WidthUtilities extends Component {

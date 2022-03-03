@@ -1,3 +1,6 @@
+/* stylelint-disable no-descending-specificity */
+/* stylelint-disable max-nesting-depth */
+
 @import '../../design-tokens/mixins.css';
 
 /*------------------------------------*\
@@ -100,19 +103,6 @@
   }
 }
 
-.table__row {
-  /**
-  * Table row within zebra table
-  */
-  .table--zebra & {
-    /**
-    * Even table rows within zebra table
-    */
-    &:nth-child(even) {
-      background: var(--eds-theme-color-neutral-subtle-background);
-    }
-  }
-}
 /**
  * Bare table row
  * 1) Removes border
@@ -174,16 +164,6 @@
 
     &.table__cell--valign-center {
       vertical-align: middle;
-    }
-  }
-
-  /**
-     * Table header cells inside a stacked table
-     * 1) Space table cells
-     */
-  .table--stacked & {
-    @media all and (max-width: $eds-bp-md) {
-      padding: var(--eds-size-2); /* 1 */
     }
   }
 

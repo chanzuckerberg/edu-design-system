@@ -1637,7 +1637,7 @@ __metadata:
     storybook-css-modules-preset: ^1.1.1
     style-dictionary: ^3.7.0
     stylelint: ^14.5.3
-    stylelint-config-standard: ^25.0.0
+    stylelint-config-recommended: ^7.0.0
     svg-sprite-generator: ^0.0.7
     svg-spritemap-webpack-plugin: ^3.9.1
     svg4everybody: ^2.1.9
@@ -17504,17 +17504,6 @@ __metadata:
   peerDependencies:
     stylelint: ^14.4.0
   checksum: 9a60a59effb7565314d6001779a31228d5713b4d13e05e991e6da5f9d0784aacf55bc0fe217010e257a79136753a22ae61e309fb982367ebd4de3316f37eb821
-  languageName: node
-  linkType: hard
-
-"stylelint-config-standard@npm:^25.0.0":
-  version: 25.0.0
-  resolution: "stylelint-config-standard@npm:25.0.0"
-  dependencies:
-    stylelint-config-recommended: ^7.0.0
-  peerDependencies:
-    stylelint: ^14.4.0
-  checksum: bfd5773f47ea7fcddba972037d6dd32d1fb900c2ca592a313fe1a28df054ef465b11e6e53fe6e87bbf0c356ab33a7a4eecc447cf7a1bd39c9b50c7b4bfb48d81
   languageName: node
   linkType: hard
 

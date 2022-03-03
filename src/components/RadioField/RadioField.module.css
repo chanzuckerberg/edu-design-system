@@ -68,12 +68,13 @@
   gap: var(--eds-size-1);
 
   /**
-     * Radio field list item inside inline variant 
-     */
+   * Radio field list item inside inline variant 
+   */
   .radio-field--inline & {
     margin-bottom: 0;
     margin-right: var(--eds-size-2); /* 2 */
 
+    /* stylelint-disable-next-line max-nesting-depth */
     &:last-of-type {
       margin-right: 0;
     }
@@ -89,13 +90,13 @@
   position: relative; /* 1 */
   top: -3px; /* 1 */
 
+  .radio-field--inverted & {
+    color: var(--eds-theme-color-form-label-foreground-inverted);
+  }
+
   .radio-field.eds-is-disabled & {
     color: var(--eds-theme-color-disabled-foreground);
     cursor: not-allowed;
-  }
-
-  .radio-field--inverted & {
-    color: var(--eds-theme-color-form-label-foreground-inverted);
   }
 }
 

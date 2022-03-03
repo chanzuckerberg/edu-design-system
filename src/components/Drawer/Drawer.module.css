@@ -62,16 +62,16 @@
   box-shadow: var(--eds-theme-box-shadow);
   transition: transform var(--eds-anim-move-quick) var(--eds-anim-ease);
 
+  &:focus-visible {
+    @mixin focus;
+  }
+
   /**
   * Modal window inside active modal
   * 1) Transform added for animation
   */
   .drawer.eds-is-active & {
     transform: translateX(0); /* 1 */
-  }
-
-  &:focus-visible {
-    @mixin focus;
   }
 }
 

@@ -74,28 +74,32 @@
     border-radius: 50%;
     background: transparent;
 
+    /* stylelint-disable-next-line max-nesting-depth */
     &:hover {
       border-color: var(--eds-theme-color-form-input-border-hover);
     }
 
+    /* stylelint-disable-next-line max-nesting-depth */
+    .radio--inverted & {
+      border-color: var(--eds-theme-color-form-input-border-inverted);
+    }
+
     /**
-      *  Custom radio background inside of focused control 
-      */
+     *  Custom radio background inside of focused control 
+     */
+    /* stylelint-disable-next-line max-nesting-depth */
     .radio__input:focus-visible + & {
       @mixin focus;
     }
 
     /**
-      *  Custom radio background inside of disabled control 
-      */
+     *  Custom radio background inside of disabled control 
+     */
+    /* stylelint-disable-next-line max-nesting-depth */
     .radio__input:disabled + & {
       border-color: var(--eds-theme-color-disabled-border);
       background-color: var(--eds-theme-color-disabled-background);
       cursor: not-allowed;
-    }
-
-    .radio--inverted & {
-      border-color: var(--eds-theme-color-form-input-border-inverted);
     }
   }
 
@@ -113,18 +117,19 @@
     left: 6px; /* 1 */
     z-index: var(--eds-z-index-200);
     display: block;
-    opacity: 0;
     border: 4px solid var(--eds-theme-color-primary-border);
     border-radius: 50%;
     background: var(--eds-theme-color-primary-background);
     opacity: 0; /* 2 */
 
-    .radio__input:checked + & {
-      opacity: 1; /* 2 */
-    }
-
+    /* stylelint-disable-next-line max-nesting-depth */
     .radio--inverted & {
       border-color: var(--eds-theme-color-form-input-border-inverted);
+    }
+
+    /* stylelint-disable-next-line max-nesting-depth */
+    .radio__input:checked + & {
+      opacity: 1; /* 2 */
     }
   }
 }

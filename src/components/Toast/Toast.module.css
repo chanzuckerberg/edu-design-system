@@ -26,7 +26,7 @@
   border-left-color: var(--eds-theme-color-neutral-medium-foreground); /* 2 */
   border-radius: var(--eds-theme-border-radius);
   background-color: var(--eds-theme-color-neutral-subtle-background);
-  box-shadoqw: var(--eds-theme-box-shadow);
+  box-shadow: var(--eds-theme-box-shadow);
 }
 
 /**

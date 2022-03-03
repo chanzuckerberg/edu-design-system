@@ -108,7 +108,7 @@
     "storybook-css-modules-preset": "^1.1.1",
     "style-dictionary": "^3.7.0",
     "stylelint": "^14.5.3",
-    "stylelint-config-standard": "^25.0.0",
+    "stylelint-config-recommended": "^7.0.0",
     "svg-sprite-generator": "^0.0.7",
     "svg-spritemap-webpack-plugin": "^3.9.1",
     "ts-jest": "^27.1.3",
