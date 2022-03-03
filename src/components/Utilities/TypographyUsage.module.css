@@ -1,0 +1,185 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #TYPOGRAPHY USAGE UTILITY CLASSES
+\*------------------------------------*/
+
+/**
+ *  Utility classes to apply typography usage mixins to elements
+ */
+
+/**
+ * Body text 
+ */
+.u-theme-typography-body-text {
+  @mixin eds-theme-typography-body-text;
+}
+
+/**
+ * Body text bold 
+ */
+.u-theme-typography-body-text-bold {
+  @mixin eds-theme-typography-body-text-bold;
+}
+
+/**
+ * Body text sm
+ * 1) Used for small body copy such as footnotes and fine print
+ */
+.u-theme-typography-body-text-sm {
+  @mixin eds-theme-typography-body-text-sm;
+}
+
+/**
+ *  Body text sm bold
+ */
+.u-theme-typography-body-text-sm-bold {
+  @mixin eds-theme-typography-body-text-sm-bold;
+}
+
+/**
+ * Body text xs
+ */
+.u-theme-typography-body-text-xs {
+  @mixin eds-theme-typography-body-text-xs;
+}
+
+/**
+ *  Body text xs bold
+ */
+.u-theme-typography-body-text-xs-bold {
+  @mixin eds-theme-typography-body-text-xs-bold;
+}
+
+/**
+ *  Body text lg
+ */
+.u-theme-typography-body-text-lg {
+  @mixin eds-theme-typography-body-text-lg;
+}
+
+/**
+ *  Body text lg bold
+ */
+.u-theme-typography-body-text-lg-bold {
+  @mixin eds-theme-typography-body-text-lg-bold;
+}
+
+/**
+ * Heading 1
+ */
+.u-theme-typography-heading-1 {
+  @mixin eds-theme-typography-heading-1;
+}
+
+/**
+ * Heading 2
+ */
+.u-theme-typography-heading-2 {
+  @mixin eds-theme-typography-heading-2;
+}
+
+/**
+ * Heading 3
+ */
+.u-theme-typography-heading-3 {
+  @mixin eds-theme-typography-heading-3;
+}
+
+/**
+ * Heading 4
+ */
+.u-theme-typography-heading-4 {
+  @mixin eds-theme-typography-heading-4;
+}
+
+/**
+ * Heading 5
+ */
+.u-theme-typography-heading-5 {
+  @mixin eds-theme-typography-heading-5;
+}
+
+/**
+ * Heading 6
+ */
+.u-theme-typography-heading-6 {
+  @mixin eds-theme-typography-heading-6;
+}
+
+/**
+ * Kicker
+ */
+.u-theme-typography-kicker {
+  @mixin eds-theme-typography-kicker;
+}
+
+/**
+ * Data heading
+ */
+.u-theme-typography-data-heading {
+  @mixin eds-theme-typography-data-heading;
+}
+
+/**
+ * Data heading sm
+ */
+.u-theme-typography-data-heading-sm {
+  @mixin eds-theme-typography-data-heading-sm;
+}
+
+/**
+ * Data text
+ */
+.u-theme-typography-data-text {
+  @mixin eds-theme-typography-data-text;
+}
+
+/**
+ * Data text sm
+ */
+.u-theme-typography-data-text-sm {
+  @mixin eds-theme-typography-data-text-sm;
+}
+
+/**
+ * Form label
+ */
+.u-theme-typography-form-label {
+  @mixin eds-theme-typography-form-label;
+}
+
+/**
+ * Form input 
+ */
+.u-theme-typography-form-input {
+  @mixin eds-theme-typography-form-input;
+}
+
+/**
+ * Button
+ */
+.u-theme-typography-button {
+  @mixin eds-theme-typography-button;
+}
+
+/**
+ * Small Button
+ */
+.u-theme-typography-button-sm {
+  @mixin eds-theme-typography-button-sm;
+}
+
+/**
+ * Large Button
+ */
+.u-theme-typography-button-lg {
+  @mixin eds-theme-typography-button-lg;
+}
+
+/**
+ *  Tag
+ */
+.u-theme-typography-tag {
+  @mixin eds-theme-typography-tag;
+}

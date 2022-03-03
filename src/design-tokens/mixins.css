@@ -1,0 +1,167 @@
+@import '../design-tokens/tier-2-usage/typography-usage.css';
+
+@define-mixin reset {
+  margin: 0;
+  padding: 0;
+}
+
+@define-mixin textLink {
+  @mixin eds-theme-typography-body-text;
+  color: var(--eds-theme-color-link-foreground);
+  text-decoration: underline;
+
+  &:hover {
+    color: var(--eds-theme-color-link-foreground-hover);
+  }
+
+  &:focus-visible {
+    @mixin focus;
+  }
+}
+
+@define-mixin TextLinkInverted {
+  @mixin eds-theme-typography-body-text;
+  color: var(--eds-theme-color-link-foreground-inverted);
+
+  &:hover {
+    color: var(--eds-theme-color-link-foreground-inverted-hover);
+  }
+
+  &:focus-visible {
+    @mixin focusInverted;
+  }
+}
+
+@define-mixin focus {
+  outline: 2px solid var(--eds-theme-color-focus-ring);
+}
+
+@define-mixin focusInverted {
+  outline: 2px solid var(--eds-theme-color-focus-ring-inverted);
+}
+
+@define-mixin focusTransparent {
+  outline: 2px solid transparent;
+}
+
+@define-mixin inputStyles {
+  @mixin eds-theme-typography-form-input;
+  font-family: inherit;
+  -webkit-appearance: none;
+  width: 100%;
+  border-width: var(--eds-theme-form-input-border-width);
+  border-style: solid;
+  border-color: var(--eds-theme-color-form-input-border);
+  border-radius: var(--eds-theme-form-input-border-radius);
+  outline: none;
+  padding: var(--eds-size-1);
+  margin: 0;
+  color: var(--eds-theme-color-form-input-foreground);
+  background-color: var(--eds-color-neutral-white);
+  transition: box-shadow var(--eds-anim-fade-quick) var(--eds-anim-ease),
+    border-color var(--eds-anim-fade-quick) var(--eds-anim-ease);
+
+  &:hover {
+    border-color: var(--eds-theme-color-form-input-border-hover);
+  }
+
+  &:focus-visible {
+    @mixin focus;
+    border-color: var(--eds-theme-color-form-input-border-focus);
+  }
+
+  /**
+   * Input error state
+   */
+  .eds-is-error & {
+    border-color: var(--eds-theme-color-utility-error-border);
+  }
+
+  /**
+   * Disabled state
+   */
+  .eds-is-disabled & {
+    background-color: var(--eds-theme-color-disabled-background);
+    border-color: var(--eds-theme-color-disabled-border);
+    color: var(--eds-theme-color-disabled-foreground);
+    cursor: not-allowed;
+  }
+
+  &::-webkit-input-placeholder {
+    @mixin placeholderStyles;
+  }
+
+  &::-moz-placeholder {
+    @mixin placeholderStyles;
+  }
+
+  &:-ms-input-placeholder {
+    @mixin placeholderStyles;
+  }
+}
+
+@define-mixin inputStylesInverted {
+  border-color: var(--eds-theme-color-form-input-border-inverted);
+  color: var(--eds-theme-color-form-input-foreground-inverted);
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    border-color: var(--eds-theme-color-form-input-border-hover-inverted);
+  }
+
+  &:focus-visible {
+    border-color: var(--eds-theme-color-form-input-border-focus-inverted);
+  }
+
+  &::-webkit-input-placeholder {
+    @mixin placeholderStylesInverted;
+  }
+
+  &::-moz-placeholder {
+    @mixin placeholderStylesInverted;
+  }
+
+  &:-ms-input-placeholder {
+    @mixin placeholderStylesInverted;
+  }
+}
+
+@define-mixin labelStyles {
+  @mixin eds-theme-typography-form-label;
+  display: inline-block;
+  color: var(--eds-theme-color-form-label-foreground);
+}
+
+@define-mixin placeholderStyles {
+  font-style: italic;
+  color: var(--eds-theme-color-neutral-md-foreground);
+}
+
+@define-mixin placeholderStylesInverted {
+  font-style: italic;
+  color: var(--eds-theme-color-form-label-foreground-inverted);
+}
+
+@define-mixin fieldsetStyles {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+@define-mixin legendReset {
+  display: inline-block;
+  padding: 0;
+  border: none;
+}
+
+@define-mixin visuallyHide {
+  position: absolute !important;
+  overflow: hidden !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+}

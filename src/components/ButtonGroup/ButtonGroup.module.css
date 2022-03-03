@@ -1,0 +1,33 @@
+/*------------------------------------*\
+    #BUTTON GROUP
+\*------------------------------------*/
+
+/**
+ * 1) A group of buttons displayed in a horizontal fashion
+ */
+.button-group {
+  display: flex;
+  align-items: center;
+  gap: var(--eds-size-2);
+}
+
+/**
+ * Responsive button group
+ * 1) A button group that's stacked by default then moves side-by-side
+ *    when space becomes available 
+ */
+.button-group--responsive {
+  @media all and (max-width: $eds-bp-md) {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+/**
+ * Stacked button group
+ */
+.button-group--stacked {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}

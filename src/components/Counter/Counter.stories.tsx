@@ -1,0 +1,61 @@
+import React from 'react';
+import { Story, Meta } from '@storybook/react';
+import { Tooltip } from '../Tooltip/Tooltip';
+
+import { Counter, Props } from './Counter';
+
+export default {
+  title: 'Molecules/Forms/Counter',
+  component: Counter,
+} as Meta;
+
+const Template: Story<Props> = (args) => <Counter {...args} />;
+
+export const Default = Template.bind({});
+Default.args = {
+  value: 1,
+  min: 1,
+  max: 6,
+  label: 'Counter',
+  minusButtonText: 'Subtract by 1',
+  plusButtonText: 'Add by 1',
+};
+
+export const DefaultWithTooltip = Template.bind({});
+DefaultWithTooltip.args = {
+  value: 1,
+  min: 1,
+  max: 6,
+  label: 'Counter',
+  minusButtonText: 'Subtract by 1',
+  plusButtonText: 'Add by 1',
+  fieldNote: 'This is a counter field',
+  labelAfter: (
+    <Tooltip buttonText="Select this button to trigger the tooltip">
+      Some text to help with a form field
+    </Tooltip>
+  ),
+};
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  value: 1,
+  min: 1,
+  max: 6,
+  disabled: true,
+  label: 'Counter',
+  minusButtonText: 'Subtract by 1',
+  plusButtonText: 'Add by 1',
+};
+
+export const Error = Template.bind({});
+Error.args = {
+  value: 1,
+  min: 1,
+  max: 6,
+  isError: true,
+  label: 'Counter',
+  minusButtonText: 'Subtract by 1',
+  plusButtonText: 'Add by 1',
+  fieldNote: 'This field has an error',
+};

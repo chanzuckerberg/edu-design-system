@@ -1,0 +1,28 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #LOADING INDICATOR
+\*------------------------------------*/
+
+/**
+ * 1) 
+ */
+.loading-indicator {
+}
+
+.loading-indicator__icon {
+  height: 3rem;
+  width: 3rem;
+  fill: var(--eds-theme-color-primary-foreground);
+  animation: rotateIcon 2s linear infinite;
+}
+
+/* The animation code */
+@keyframes rotateIcon {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

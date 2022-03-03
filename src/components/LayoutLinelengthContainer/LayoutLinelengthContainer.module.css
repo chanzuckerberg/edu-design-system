@@ -1,0 +1,13 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #LINELENGTH CONTAINER
+\*------------------------------------*/
+
+/**
+ * Linelength Container
+ * 1) Caps the length of an excerpt of text to be easily readable
+ */
+.layout-linelength-container {
+  max-width: var(--eds-l-linelength-width); /* 1 */
+}

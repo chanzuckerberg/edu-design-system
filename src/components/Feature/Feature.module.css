@@ -1,0 +1,78 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #FEATURE
+\*------------------------------------*/
+
+/**
+ * 1) A Feature is a prominent marketing block that contains
+ *    Side by side information and an image
+ */
+.feature {
+  display: flex; /* 2 */
+  flex-direction: column;
+  align-items: stretch;
+  background: var(--eds-theme-color-primary-background);
+  color: var(--eds-theme-color-body-foreground-inverted);
+  border-radius: var(--eds-theme-border-radius);
+
+  @media all and (min-width: $eds-bp-md) {
+    flex-direction: row;
+  }
+}
+
+/**
+ * Feature body
+ * 1) Container within feature that usually contains an excerpt of text
+ * 2) Take up the remaining space on medr screens
+ */
+.feature__body {
+  margin-bottom: var(--eds-size-4);
+  padding: var(--eds-size-4);
+
+  @media all and (min-width: $eds-bp-md) {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-bottom: 0;
+  }
+}
+
+/**
+ * Feature title
+ * 1) Feature headline
+ */
+.feature__title {
+  @mixin reset;
+  @mixin eds-theme-typography-heading-2;
+}
+
+/**
+ * Feature description
+ */
+.feature__description {
+  margin-bottom: var(--eds-size-3);
+
+  @media all and (min-width: $eds-bp-md) {
+    margin-top: auto;
+  }
+}
+
+/**
+ * Feature media container
+ */
+.feature__media {
+  width: 100%;
+
+  @media all and (min-width: $eds-bp-md) {
+    width: 45%;
+  }
+}
+
+/**
+ * Feature image
+ */
+.feature__img {
+  display: block;
+  width: 100%;
+}

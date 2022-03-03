@@ -1,0 +1,226 @@
+import React, { useState, useEffect, useRef, ReactNode } from 'react';
+import FocusLock from 'react-focus-lock';
+import { Portal } from 'react-portal';
+import clsx from 'clsx';
+import styles from './Modal.module.css';
+import { oneByType } from 'react-children-by-type';
+import { ModalHeader } from '../ModalHeader/ModalHeader';
+import { ModalBody } from '../ModalBody/ModalBody';
+import { ModalFooter } from '../ModalFooter/ModalFooter';
+import { ESCAPE_KEYCODE } from '../../util/keycodes';
+
+export interface Props {
+  /**
+   * HTML id of the helper text used to describe the component after ariaLabelledBy
+   */
+  ariaDescribedBy?: string;
+  /**
+   * HTML id of the helper text used to label the modal component
+   */
+  ariaLabelledBy?: string;
+  /**
+   * Child node(s) that can be nested inside component. `ModalHeader`, `ModalBody`, and `ModelFooter` are the only permissible children of the Modal
+   */
+  children?: ReactNode;
+  /**
+   * CSS class names that can be appended to the component.
+   */
+  className?: string;
+  /**
+   * Button text for the modal close button. This is visibly hidden but announced to screen reader users.
+   */
+  closeButtonText?: string;
+  /**
+   * Toggles the ability to dismiss the Modal window
+   */
+  dismissible?: boolean;
+  /**
+   * Sets the modal to open or close by default
+   */
+  isActive?: boolean;
+  /**
+   * Handler to be called when the modal is being closed (by ESCAPE / clicking X / clicking outside)
+   */
+  onClose?: Function;
+  /**
+   * Size variations
+   * - **sm** results in a modal that is narrower than the default
+   * - **lg** results in a modal that is wider than the default
+   * - **xl** results in a modal that is wider than the default
+   */
+  size?: 'sm' | 'lg';
+}
+
+/**
+ * Primary UI component for user interaction
+ */
+export const Modal: React.FC<Props> = ({
+  ariaDescribedBy,
+  ariaLabelledBy,
+  className,
+  isActive,
+  children,
+  dismissible,
+  onClose,
+  closeButtonText,
+  size,
+  ...other
+}) => {
+  /**
+   * Initialize states, constants, and refs
+   */
+  const [isMounted, setIsMounted] = useState(false);
+  const BODY_DISABLED_CLASS = `eds-body-is-disabled`;
+  const [activeFocus, setActiveFocus] = useState(isActive || false);
+  const windowRef = useRef<HTMLElement | null>(null);
+  const ref = useRef<HTMLDivElement | null>(null);
+
+  /**
+   * Get previous prop
+   * 1) This is used to compare the previous prop to the current prop
+   */
+  function usePrevious(isActive: any) {
+    useEffect(() => {
+      ref.current = isActive;
+    });
+    return ref.current;
+  }
+
+  /**
+   * Use effect
+   * 1) Set prevIsActive to previous isActive prop
+   * 2) If prevIsActive is defined and previous isActive prop is not equal
+   * to current isActive prop, toggle state
+   */
+  const prevIsActive = usePrevious(isActive); /* 1 */
+  useEffect(() => {
+    if (prevIsActive !== undefined || null) {
+      if (isActive) {
+        activateDOM();
+      } else {
+        deactivateDOM();
+      }
+    }
+  });
+
+  /**
+   * Set a flag when this item has mounted
+   * Otherwise, portals will render which are not handled well
+   * between React and Next.js
+   */
+  useEffect(() => {
+    setIsMounted(true);
+  }, [setIsMounted]);
+
+  /**
+   * Activate DOM
+   * 1) Open the Modal
+   * 2) Set activeFocus state to true
+   * 3) This accommodates modal animation so that it auto receives focus
+   */
+  function activateDOM() {
+    document.body.classList.add(BODY_DISABLED_CLASS);
+
+    /* 3 */
+    setTimeout(() => {
+      setActiveFocus(true); /* 2 */
+    }, 300);
+  }
+
+  /**
+   * Deactivate DOM
+   * 1) Close the modal
+   * 2) Set activeFocus state to false
+   */
+  function deactivateDOM() {
+    document.body.classList.remove(BODY_DISABLED_CLASS);
+    setActiveFocus(false); /* 2 */
+  }
+
+  /**
+   * Handle onClose
+   * 1) Close the modal
+   * 2) Run the onClose prop (pass in function) if it exists
+   */
+  function handleOnClose() {
+    deactivateDOM(); /* 1 */
+
+    if (onClose) {
+      onClose(); /* 2 */
+    }
+  }
+
+  /**
+   * Handle "click outside"
+   * 1) onClick of the area around the modal window, close the modal
+   */
+  function handleOnClickOutside(e: any) {
+    if (
+      isActive &&
+      dismissible &&
+      windowRef.current &&
+      !windowRef.current.contains(e.target as HTMLElement)
+    ) {
+      handleOnClose(); /* 1 */
+    }
+  }
+
+  /**
+   * Handle onKeyDown
+   * 1) If escape button is struck, close the modal
+   */
+  function handleOnKeyDown(e: any) {
+    if (e.code === ESCAPE_KEYCODE) {
+      handleOnClose(); /* 1 */
+    }
+  }
+
+  const modalHeader = oneByType(children, ModalHeader);
+  const header = React.Children.map(modalHeader, (child) => {
+    return React.cloneElement(child, {
+      onClick: () => handleOnClose(),
+      dismissible: dismissible,
+    });
+  });
+  const body = oneByType(children, ModalBody);
+  const footer = oneByType(children, ModalFooter);
+
+  const componentClassName = clsx(styles['modal'], className, {
+    [styles['modal--sm']]: size === 'sm',
+    [styles['modal--lg']]: size === 'lg',
+    [styles['eds-is-active']]: isActive,
+  });
+
+  if (!isMounted) return null;
+
+  return (
+    <Portal>
+      <FocusLock disabled={!activeFocus}>
+        <div
+          className={componentClassName}
+          ref={ref}
+          aria-hidden={!isActive}
+          onKeyDown={(e) => handleOnKeyDown(e)}
+          onClick={(e) => handleOnClickOutside(e)}
+          {...other}
+        >
+          <article
+            className={styles['modal__window']}
+            aria-labelledby={ariaLabelledBy}
+            aria-describedby={ariaDescribedBy}
+            ref={windowRef}
+            role="dialog"
+            tabIndex={0}
+            aria-modal={isActive}
+          >
+            <div className={styles['modal__content']}>
+              {header}
+              {body}
+              {footer}
+            </div>
+          </article>
+        </div>
+      </FocusLock>
+    </Portal>
+  );
+};

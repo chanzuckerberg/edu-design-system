@@ -1,0 +1,268 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #BUTTON
+\*------------------------------------*/
+
+/**
+ * 1) Button or link that has functionality to it
+ * 2) Defaults to primary button
+ * 3) Margin 0 added becuase Safari has margin on the button
+ */
+.button {
+  @mixin eds-theme-typography-button;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: var(--eds-size-1-and-half);
+  padding-right: var(--eds-size-5);
+  padding-bottom: var(--eds-size-1-and-half);
+  padding-left: var(--eds-size-5);
+  margin: 0;
+  border-width: var(--eds-theme-border-width);
+  border-style: solid;
+  border-color: var(--eds-theme-color-primary-border);
+  border-radius: var(--eds-theme-border-radius);
+  color: var(--eds-theme-color-primary-foreground);
+  background-color: transparent;
+  cursor: pointer;
+  transition: all var(--eds-anim-fade-quick) var(--eds-anim-ease);
+
+  &:hover {
+    color: var(--eds-theme-color-primary-foreground-hover);
+    border-color: var(--eds-theme-color-primary-border-hover);
+  }
+
+  &:focus {
+    background-color: transparent;
+  }
+
+  &:focus-visible {
+    @mixin focus;
+  }
+
+  /**
+   * Disabled buttons
+   */
+  &:disabled {
+    background: transparent;
+    border-color: var(--eds-theme-color-disabled-border);
+    color: var(--eds-theme-color-disabled-foreground);
+    cursor: not-allowed;
+
+    &:hover,
+    &:focus {
+      background: transparent;
+      border-color: var(--eds-theme-color-disabled-border);
+      color: var(--eds-theme-color-disabled-foreground);
+      transform: none;
+    }
+  }
+
+  /**
+   * Inverted button 
+   */
+  &.button--inverted {
+    border-color: var(--eds-theme-color-primary-border-inverted);
+    color: var(--eds-theme-color-primary-foreground-inverted);
+
+    &:hover,
+    &:focus {
+      border-color: var(--eds-theme-color-primary-border-inverted-hover);
+      color: var(--eds-theme-color-primary-foreground-inverted-hover);
+    }
+  }
+}
+
+/**
+ * Primary button
+ * 1) Prominent button styles that should be applied to
+ *    the most important action of a page.
+ */
+.button--primary {
+  border-color: var(--eds-theme-color-primary-border);
+  background-color: var(--eds-theme-color-primary-background);
+  color: var(--eds-theme-color-body-foreground-inverted);
+
+  &:hover {
+    background-color: var(--eds-theme-color-primary-background-hover);
+    color: var(--eds-theme-color-body-foreground-inverted);
+  }
+
+  &:focus {
+    background-color: var(--eds-theme-color-primary-background-hover);
+    color: var(--eds-theme-color-body-foreground-inverted);
+  }
+
+  &:focus-visible {
+    @mixin focus;
+  }
+
+  &:disabled {
+    background-color: var(--eds-theme-color-disabled-background);
+    border-color: var(--eds-theme-color-disabled-border);
+    color: var(--eds-theme-color-disabled-foreground);
+
+    &:hover {
+      background-color: var(--eds-theme-color-disabled-background);
+      border-color: var(--eds-theme-color-disabled-border);
+      color: var(--eds-theme-color-disabled-foreground);
+    }
+  }
+
+  /**
+   * Inverted primary button 
+   */
+  &.button--inverted {
+    background-color: var(--eds-theme-color-primary-background);
+    color: var(--eds-theme-color-body-foreground-inverted);
+
+    &:hover,
+    &:focus {
+      background-color: var(--eds-theme-color-primary-background-hover);
+      color: var(--eds-theme-color-body-foreground-inverted);
+    }
+  }
+}
+
+/**
+ * Link Button
+ * 1) A button that is visually styled like a text link
+ */
+.button--link {
+  @mixin textLink;
+  align-items: flex-start;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  text-align: left;
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+  }
+
+  /**
+   * Inverted link button 
+   */
+  &.button--inverted {
+    @mixin TextLinkInverted;
+  }
+}
+
+/**
+ * Bare Button
+ * 1) A button that strips out borders, backgrounds, etc
+ * 2) Use for Close "X" buttons, tooltip icons, and other
+ */
+.button--bare {
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+
+  &:hover,
+  &:focus {
+    color: var(--eds-theme-color-primary-foreground-hover);
+    background-color: transparent;
+  }
+
+  /**
+   * Inverted bare button 
+   */
+  &.button--inverted {
+    color: var(--eds-theme-color-primary-foreground-inverted);
+
+    &:hover,
+    &:focus {
+      color: var(--eds-theme-color-primary-foreground-inverted-hover);
+      background-color: transparent;
+    }
+  }
+}
+
+/**
+ * Small button
+ */
+.button--sm {
+  @mixin eds-theme-typography-button-sm;
+  padding-top: var(--eds-size-half);
+  padding-right: var(--eds-size-1);
+  padding-bottom: var(--eds-size-half);
+  padding-left: var(--eds-size-1);
+}
+
+/**
+ * Large button
+ */
+.button--lg {
+  @mixin eds-theme-typography-button-lg;
+  padding-top: var(--eds-size-2);
+  padding-right: var(--eds-size-5);
+  padding-bottom: var(--eds-size-2);
+  padding-left: var(--eds-size-5);
+}
+
+/**
+ * Full-width button
+ * 1) A block button fills 100% of the width of its container
+ */
+.button--full-width {
+  width: 100%;
+}
+
+/**
+ * Button Icon
+ * 1) Set SVG icon fill to the current text color
+ * 2) Rotate loading icon
+ */
+.button__icon {
+  fill: currentColor; /* 1 */
+
+  .button.eds-is-loading & {
+    animation: rotateIcon 2s linear infinite; /* 2 */
+  }
+}
+
+/**
+ * Button text before icon spacing
+ * 1) Controls the spacing between the button text
+ *    and the icon that comes _before_ button text
+ */
+.button__icon + .button__text:not(.u-is-vishidden) {
+  margin-left: var(--eds-size-1); /* 1 */
+
+  .button--sm & {
+    margin-left: var(--eds-size-half);
+  }
+}
+
+/**
+ * Button after icon spacing
+ * 1) Controls the spacing between the button text
+ *    and the icon that comes _after_ button text
+ */
+.button__text:not(.u-is-vishidden) + .button__icon {
+  margin-left: var(--eds-size-1); /* 1 */
+
+  /**
+   * Button icon after button text that's not vishidden within a link variant button
+   */
+  .button--link & {
+    margin-left: var(--eds-size-half);
+  }
+
+  .button--sm & {
+    margin-left: var(--eds-size-half);
+  }
+}
+
+/* The animation code */
+@keyframes rotateIcon {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

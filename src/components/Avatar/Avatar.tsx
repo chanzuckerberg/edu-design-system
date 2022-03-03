@@ -1,0 +1,22 @@
+import React from 'react';
+import clsx from 'clsx';
+import styles from './Avatar.module.css';
+
+export interface Props {
+  /**
+   * CSS class names that can be appended to the component.
+   */
+  className?: string;
+}
+
+/**
+ * Primary UI component for user interaction
+ */
+export const Avatar: React.FC<Props> = ({ className, ...other }) => {
+  const componentClassName = clsx(styles['avatar'], className, {});
+  return (
+    <div className={componentClassName} {...other}>
+      Hello!
+    </div>
+  );
+};

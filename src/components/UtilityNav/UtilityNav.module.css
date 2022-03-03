@@ -1,0 +1,58 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #UTILITY NAVIGATION
+\*------------------------------------*/
+
+/**
+ * Define themable properties
+ */
+
+/**
+ * Utility navigation existing in the header and maybe the footer
+ * 1) The outer <nav> wrapper of the utility navigation
+ * 2) Normally margin-top should not be used to space elements, but
+ *    the utility navigation is
+ */
+
+.utility-nav {
+  @media all and (min-width: $eds-bp-md) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+/**
+ * Utility nav list
+ * 1) The actual list of nav items
+ */
+.utility-nav__list {
+  @mixin reset;
+  list-style: none;
+  z-index: var(--eds-z-index-200);
+
+  @media all and (min-width: $eds-bp-md) {
+    display: flex;
+    gap: var(--eds-size-4);
+  }
+}
+
+/**
+ * Utility nav item
+ * 1) Individual list item
+ */
+.utility-nav__item {
+  position: relative;
+}
+
+/**
+ * Utility nav link
+ */
+.utility-nav__link {
+  @mixin textLink;
+  appearance: none;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+}

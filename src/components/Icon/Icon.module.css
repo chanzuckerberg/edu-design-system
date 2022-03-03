@@ -1,0 +1,39 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #ICON
+\*------------------------------------*/
+
+/**
+ * 1) Small graphic that represents functionality
+ */
+.icon {
+  display: block;
+  height: var(--eds-size-2);
+  width: var(--eds-size-2);
+
+  /**
+   * Icon within text passage
+   * 1) Places icon inline with text around it
+   */
+  .text-passage & {
+    display: inline; /* 1 */
+  }
+
+  /**
+   * Icon within small text passage
+   * 1) Sets icon to smaller height and width to match font size
+   */
+  .text-passage--sm & {
+    height: 12px; /* 1 */
+    width: 12px; /* 1 */
+  }
+}
+
+/**
+   * Inverted icon
+   * 1) Sets icon to smaller height and width to match font size
+   */
+.icon--inverted {
+  fill: var(--eds-theme-color-body-foreground-inverted);
+}

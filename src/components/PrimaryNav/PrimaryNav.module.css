@@ -1,0 +1,38 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #PRIMARY NAVIGATION
+\*------------------------------------*/
+
+/**
+ * Primary navigation existing in the header and maybe the footer
+ * 1) The outer <nav> wrapper of the primary navigation
+ * 2) Normally margin-top should not be used to space elements, but
+ *    the primary navigation is
+ */
+
+.primary-nav {
+}
+
+/**
+ * Primary nav list
+ * 1) The actual list of nav items
+ */
+.primary-nav__list {
+  @mixin reset;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--eds-size-3);
+  z-index: var(--eds-z-index-200);
+}
+
+/**
+ * Primary nav link
+ * 1) Individual link within each primary nav item
+ */
+.primary-nav__link {
+  display: flex;
+  @mixin TextLinkInverted;
+  text-decoration: none;
+}

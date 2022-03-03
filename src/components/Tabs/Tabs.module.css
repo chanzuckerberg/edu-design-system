@@ -1,0 +1,115 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #TABS
+\*------------------------------------*/
+
+/**
+ * 1) List of of links where each link toggles open associated information
+ */
+.tabs {
+}
+
+.tabs--inverted {
+  color: var(--eds-theme-color-body-foreground-inverted);
+}
+
+/**
+ * Tabs header
+ * 1) Contains the tab list
+ * 2) Tab overflow behavior
+ */
+.tabs__header {
+  width: 100%;
+  overflow: hidden;
+  overflow-x: auto;
+  position: relative;
+  background: linear-gradient(to right, #fff 30%, rgba(255, 255, 255, 0)),
+    linear-gradient(to right, rgba(255, 255, 255, 0), #fff 70%) right,
+    linear-gradient(to right, rgba(0, 0, 0, 0.2) 0, transparent 70%),
+    linear-gradient(to left, rgba(0, 0, 0, 0.2) 0, transparent 70%) right; /* 2 */
+  background-repeat: no-repeat; /* 2 */
+  background-size: 40px 100%, 40px 100%, 14px 100%, 14px 100%; /* 2 */
+  background-attachment: local, local, scroll, scroll; /* 2 */
+
+  .tabs--inverted & {
+    background: none;
+  }
+}
+
+/**
+ * Tabs list
+ * 1) Actual unordered list of tabs
+ * 2) Set to display flex to place tabs side by side
+ */
+.tabs__list {
+  @mixin reset;
+  list-style: none;
+  display: flex; /* 2 */
+  @mixin eds-theme-typography-body-text;
+
+  .footer & {
+    overflow: auto;
+  }
+}
+
+/**
+ * Tabs item
+ * 1) Flex shrink 0 keeps tabs from expanding to fill up the space of the container
+ */
+.tabs__item {
+  flex-shrink: 0; /* 1 */
+
+  /**
+     * Tabs item within nested tabs inside tabs
+     * 1) Set to flex shrink 0 to keep tabs from expanding container
+     */
+  .tabs .tabs & {
+    flex: none;
+    flex-shrink: 0;
+    margin-top: var(--eds-size-2);
+  }
+}
+
+/**
+ * Tabs link
+ */
+.tabs__link {
+  display: block;
+  padding: var(--eds-size-1-and-half);
+  text-decoration: none;
+  color: var(--eds-theme-color-body-foreground);
+  transition: color var(--eds-anim-fade-quick) var(--eds-anim-ease),
+    box-shadow var(--eds-anim-fade-quick) var(--eds-anim-ease),
+    background-color var(--eds-anim-fade-quick) var(--eds-anim-ease);
+
+  &:focus-visible {
+    @mixin focus;
+  }
+
+  /**
+     * Tabs link within active tabs item
+     */
+  .tabs__item.eds-is-active & {
+    color: var(--eds-theme-color-primary-foreground);
+    box-shadow: inset 0 calc(var(--eds-border-width-lg) * -1) 0 0
+      var(--eds-theme-color-primary-border);
+
+    .tabs--inverted & {
+      color: var(--eds-theme-color-primary-foreground-inverted);
+      box-shadow: inset 0 calc(var(--eds-border-width-lg) * -1) 0 0
+        var(--eds-theme-color-primary-border-inverted);
+    }
+  }
+
+  .tabs--inverted & {
+    color: var(--eds-theme-color-link-foreground-inverted);
+  }
+}
+
+/**
+ * Tabs body
+ */
+.tabs__body {
+  padding-top: var(--eds-size-2);
+}

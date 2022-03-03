@@ -1,0 +1,72 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #TOOLTIP
+\*------------------------------------*/
+
+/**
+ * 1) An icon that appears 
+ */
+.tooltip {
+  display: inline-block;
+  position: relative;
+  overflow: visible;
+}
+
+.tooltip__trigger {
+  display: inline-block;
+  cursor: pointer;
+
+  &:focus-visible {
+    @mixin focus;
+  }
+}
+
+.tooltip__content {
+  display: none;
+  position: absolute;
+  bottom: 130%;
+  left: 50%;
+  margin-left: -96px;
+  width: 12rem;
+  padding: var(--eds-size-1);
+  background: var(--eds-color-neutral-white);
+  color: var(--eds-theme-color-body-foreground);
+  border-width: var(--eds-theme-border-width);
+  border-style: solid;
+  border-color: var(--eds-theme-color-neutral-subtle-border);
+  border-radius: var(--eds-theme-border-radius);
+  box-shadow: var(--eds-theme-box-shadow);
+
+  &:focus-visible {
+    @mixin focus;
+  }
+
+  .tooltip.eds-is-active & {
+    display: flex;
+    justify-content: center;
+    z-index: var(--eds-z-index-100);
+  }
+
+  .tooltip--right & {
+    bottom: auto;
+    top: -50%;
+    left: 130%;
+    margin-left: 0;
+  }
+
+  .tooltip--below & {
+    bottom: inherit;
+  }
+
+  .tooltip--left & {
+    bottom: auto;
+    left: auto;
+    top: -50%;
+    right: calc(130% + 5px);
+  }
+}
+
+.tooltip__icon {
+  fill: var(--eds-theme-color-primary-foreground);
+}

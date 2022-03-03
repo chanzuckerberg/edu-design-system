@@ -4,7 +4,12 @@
     "browser": true
   },
   "parser": "@typescript-eslint/parser",
-  "plugins": ["import", "react-hooks", "testing-library", "@chanzuckerberg/stories"],
+  "plugins": [
+    "import",
+    "react-hooks",
+    "testing-library",
+    "@chanzuckerberg/stories"
+  ],
   "extends": [
     "eslint:recommended",
     "plugin:@chanzuckerberg/stories/strict",
@@ -38,19 +43,27 @@
         ]
       }
     ],
-    "import/order": ["error", {
-      "alphabetize": {
-        "order": "asc"
+    "import/order": [
+      "error",
+      {
+        "alphabetize": {
+          "order": "asc"
+        }
       }
-    }],
+    ],
     "react/prop-types": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "error"
   },
   "overrides": [
     {
-      "files": ["*.ts", "*.tsx"],
-      "extends": ["plugin:@typescript-eslint/recommended"],
+      "files": [
+        "*.ts",
+        "*.tsx"
+      ],
+      "extends": [
+        "plugin:@typescript-eslint/recommended"
+      ],
       "rules": {
         "@typescript-eslint/no-explicit-any": "off",
         "@typescript-eslint/explicit-function-return-type": "off",
@@ -58,32 +71,52 @@
       }
     },
     {
-      "files": ["*.spec.ts", "*.spec.tsx", "**/test/**"],
-      "plugins": ["jest"],
-      "extends": ["plugin:jest/recommended"],
+      "files": [
+        "*.spec.ts",
+        "*.spec.tsx",
+        "**/test/**"
+      ],
+      "plugins": [
+        "jest"
+      ],
+      "extends": [
+        "plugin:jest/recommended"
+      ],
       "env": {
         "jest/globals": true
       }
     },
     {
-      "files": ["config.js", "*.config.js", "main.js", "plopfile.js"],
+      "files": [
+        "config.js",
+        "*.config.js",
+        "main.js",
+        "plopfile.js"
+      ],
       "env": {
         "browser": false,
         "node": true
       }
     },
     {
-      "files": ["packages/components/src/**/*.stories.{ts,tsx}"],
+      "files": [
+        "packages/components/src/**/*.stories.{ts,tsx}"
+      ],
       "rules": {
         "no-restricted-imports": [
-          "error", {
+          "error",
+          {
             "patterns": [
               {
-                "group": [".storybook"],
+                "group": [
+                  ".storybook"
+                ],
                 "message": "Do not import files from `.storybook/` into `src`. If needed, move files into `src/storyUtils` instead."
               },
               {
-                "group": ["**/docs/*"],
+                "group": [
+                  "**/docs/*"
+                ],
                 "message": "Do not import files from `docs/` into `src`. If needed, move files into `src/storyUtils` instead."
               }
             ]
@@ -92,5 +125,7 @@
       }
     }
   ],
-  "ignorePatterns": ["!.storybook"]
+  "ignorePatterns": [
+    "!.storybook"
+  ]
 }

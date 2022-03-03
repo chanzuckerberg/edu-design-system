@@ -1,0 +1,21 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #TEXT LINK
+\*------------------------------------*/
+
+/**
+ * 1) <a> tag styled like a text link
+ */
+.text-link {
+  @mixin textLink;
+  cursor: pointer;
+}
+
+/**
+ * Inverted text link
+ * 1) Text color is lighter for use on dark backgrounds
+ */
+.text-link--inverted {
+  @mixin TextLinkInverted;
+}

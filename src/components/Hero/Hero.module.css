@@ -1,0 +1,85 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #HERO
+\*------------------------------------*/
+
+/**
+ * 1) A hero is a pronounced block typically situated at the top of a page layout
+ */
+.hero {
+  position: relative;
+}
+
+/**
+ * Hero image
+ */
+.hero__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 80vh;
+
+  @media all and (max-width: $eds-bp-sm) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    z-index: var(--eds-z-index-0);
+  }
+}
+
+.hero__inner {
+  position: relative;
+  z-index: var(--eds-z-index-200);
+  padding-top: 2rem;
+
+  @media all and (min-width: $eds-bp-md) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+/**
+ * Hero layout container
+ * 1) Instance of LayoutContainer that sets left gutter 
+ */
+.hero__layout-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/**
+ * Hero body
+ * 1) Contains the hero text, call to action, and other things
+ */
+.hero__body {
+  @media all and (min-width: $eds-bp-sm) {
+    position: absolute;
+    bottom: var(--eds-size-4);
+  }
+}
+
+/**
+ * Hero title
+ * 1) Note: this typography needs to be addressed at a system level
+ */
+.hero__title {
+  @mixin reset;
+  @mixin eds-theme-typography-heading-1;
+  margin-bottom: var(--eds-size-2);
+}
+
+/**
+ * Hero description
+ * 1) Slot for additional hero items
+ */
+.hero__description {
+}
