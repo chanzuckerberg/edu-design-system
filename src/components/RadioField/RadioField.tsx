@@ -125,7 +125,7 @@ export const RadioField: React.FC<Props> = ({
    * Initialize radio field items active item
    */
   const [checkedIndex, setCheckedIndex] = useState(
-    radioItems().redsce(
+    radioItems().reduce(
       (acc, item, i) => (acc === null && item.checked ? i : acc),
       null,
     ),

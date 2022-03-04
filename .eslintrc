@@ -5,12 +5,7 @@
     "node": true
   },
   "parser": "@typescript-eslint/parser",
-  "plugins": [
-    "import",
-    "react-hooks",
-    "testing-library",
-    "@chanzuckerberg/stories"
-  ],
+  "plugins": ["import", "react-hooks", "testing-library", "@chanzuckerberg/stories"],
   "extends": [
     "eslint:recommended",
     "plugin:@chanzuckerberg/stories/recommended",
@@ -38,21 +33,18 @@
         "devDependencies": [
           "src/**/*.{spec,test}.{ts,tsx}",
           "src/**/*.stories.{ts,tsx}",
-          "**.config.{js,ts}",
+          "**/*.config.{js,ts}",
           "**/*.setup.{js,ts}",
           ".storybook/**"
         ]
       }
     ],
-    "import/order": [
-      "error",
-      {
-        "alphabetize": {
-          "order": "asc"
-        },
-        "groups": ["builtin", "external", "sibling", "parent", "index"]
-      }
-    ],
+    "import/order": ["error", {
+      "alphabetize": {
+        "order": "asc"
+      },
+      "groups": ["builtin", "external", "sibling", "parent", "index"]
+    }],
     "no-unused-vars": "warn",
     "react/prop-types": "off",
     "react-hooks/rules-of-hooks": "error",
@@ -60,13 +52,8 @@
   },
   "overrides": [
     {
-      "files": [
-        "*.ts",
-        "*.tsx"
-      ],
-      "extends": [
-        "plugin:@typescript-eslint/recommended"
-      ],
+      "files": ["*.ts", "*.tsx"],
+      "extends": ["plugin:@typescript-eslint/recommended"],
       "rules": {
         "@typescript-eslint/no-explicit-any": "off",
         "@typescript-eslint/explicit-function-return-type": "off",
@@ -74,54 +61,32 @@
       }
     },
     {
-      "files": [
-        "*.spec.ts",
-        "*.spec.tsx",
-        "*.test.ts",
-        "*.test.tsx",
-        "**/test/**"
-      ],
-      "plugins": [
-        "jest"
-      ],
-      "extends": [
-        "plugin:jest/recommended"
-      ],
+      "files": ["*.spec.ts", "*.spec.tsx", "*.test.ts", "*.test.tsx", "**/test/**"],
+      "plugins": ["jest"],
+      "extends": ["plugin:jest/recommended"],
       "env": {
         "jest/globals": true
       }
     },
     {
-      "files": [
-        "config.js",
-        "*.config.js",
-        "main.js",
-        "plopfile.js"
-      ],
+      "files": ["config.js", "*.config.js", "main.js", "plopfile.js"],
       "env": {
         "browser": false,
         "node": true
       }
     },
     {
-      "files": [
-        "packages/components/src/**/*.stories.{ts,tsx}"
-      ],
+      "files": ["packages/components/src/**/*.stories.{ts,tsx}"],
       "rules": {
         "no-restricted-imports": [
-          "error",
-          {
+          "error", {
             "patterns": [
               {
-                "group": [
-                  ".storybook"
-                ],
+                "group": [".storybook"],
                 "message": "Do not import files from `.storybook/` into `src`. If needed, move files into `src/storyUtils` instead."
               },
               {
-                "group": [
-                  "**/docs/*"
-                ],
+                "group": ["**/docs/*"],
                 "message": "Do not import files from `docs/` into `src`. If needed, move files into `src/storyUtils` instead."
               }
             ]

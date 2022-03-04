@@ -2,13 +2,11 @@
   "include": [
     "src/index.ts",
     "src/custom.d.ts",
-    "types",
     "src/util/*.ts"
   ],
   "exclude": [
     "node_modules",
-    "typings",
-    "src/components/**/*.stories.tsx"
+    "typings"
   ],
   "typeRoots": ["./types", "./node_modules/@types"],
   "compilerOptions": {
@@ -30,4 +28,3 @@
     "target": "es6"
   }
 }
-  

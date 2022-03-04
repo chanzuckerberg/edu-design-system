@@ -20,9 +20,9 @@ jobs:
         run: yarn install --immutable
 
       - name: Build Dist 🔧
-        run: yarn workspaces foreach run build
+        run: yarn run build
 
       - name: Deploy Storybook Docs 🚀
-        run: yarn workspaces foreach run deploy:docs
+        run: yarn run deploy:docs
         env:
-          GH_TOKEN: "${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}"
+          GH_TOKEN: '${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}'
