@@ -1,13 +1,13 @@
+import clsx from 'clsx';
+import { nanoid } from 'nanoid';
 import React, {
   ChangeEventHandler,
   ReactNode,
   useEffect,
   useState,
 } from 'react';
-import clsx from 'clsx';
-import styles from '../RadioField/RadioField.module.css';
-import { nanoid } from 'nanoid';
 import { Radio } from '../Radio/Radio';
+import styles from '../RadioField/RadioField.module.css';
 
 export interface Props {
   /**
@@ -81,7 +81,7 @@ export const RadioFieldItem: React.FC<Props> = ({
 
   useEffect(() => {
     setId(id || nanoid());
-  }, []);
+  }, [id]);
   const componentClassName = clsx(styles['radio-field__item'], className, {
     [styles['radio-field__item--inverted']]: inverted === true,
   });

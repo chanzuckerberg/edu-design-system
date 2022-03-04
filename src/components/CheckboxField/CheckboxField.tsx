@@ -1,9 +1,9 @@
-import React, { ReactNode, useEffect, useState } from 'react';
 import clsx from 'clsx';
+import { nanoid } from 'nanoid';
+import React, { ReactNode, useEffect, useState } from 'react';
 import styles from './CheckboxField.module.css';
 import { FieldNote } from '../FieldNote/FieldNote';
 import { Legend } from '../Legend/Legend';
-import { nanoid } from 'nanoid';
 
 export interface Props {
   /**
@@ -103,7 +103,7 @@ export const CheckboxField: React.FC<Props> = ({
     if (fieldNote) {
       setAriaDescribedBy(ariaDescribedBy || nanoid());
     }
-  }, []);
+  }, [ariaDescribedBy, fieldNote]);
 
   const componentClassName = clsx(styles['checkbox-field'], className, {
     [styles['checkbox-field--inline']]: variant === 'inline',

@@ -1,7 +1,7 @@
-import React, { ReactNode, useEffect, useRef, useState } from 'react';
 import clsx from 'clsx';
-import styles from './InlineCheckbox.module.css';
 import { nanoid } from 'nanoid';
+import React, { ReactNode, useEffect, useRef, useState } from 'react';
+import styles from './InlineCheckbox.module.css';
 import { Checkbox } from '../Checkbox/Checkbox';
 
 export interface Props {
@@ -40,7 +40,7 @@ export interface Props {
   /**
    * Function passed down from higher level component
    */
-  onChange?: Function;
+  onChange?: (e) => void;
   /**
    * HTML value attribute for the checkbox
    */
@@ -110,7 +110,7 @@ export const InlineCheckbox: React.FC<Props> = ({
       setIndeterminateState(indeterminate);
     }
     setId(id || nanoid());
-  }, [prevChecked, checked, checkedState, indeterminate]);
+  }, [prevChecked, checked, checkedState, indeterminate, id]);
 
   function handleOnChange(e: any) {
     if (onChange) {

@@ -1,5 +1,5 @@
-import React from 'react';
 import { Story, Meta } from '@storybook/react';
+import React from 'react';
 
 import { Tabs, Props } from './Tabs';
 import { Tab } from '../Tab/Tab';

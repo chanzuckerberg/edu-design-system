@@ -1,8 +1,14 @@
-import React, { ReactNode, useRef, useState, useEffect } from 'react';
 import clsx from 'clsx';
-import styles from './Tabs.module.css';
 import { nanoid } from 'nanoid';
+import React, {
+  ReactNode,
+  useRef,
+  useState,
+  useEffect,
+  useCallback,
+} from 'react';
 import { allByType } from 'react-children-by-type';
+import styles from './Tabs.module.css';
 import {
   L_ARROW_KEYCODE,
   U_ARROW_KEYCODE,
@@ -64,7 +70,7 @@ export interface Props {
   /**
    * Function passed down from higher level component into Tabs
    */
-  tabsOnClick?: Function;
+  tabsOnClick?: () => void;
   /**
    * Tabs rendered on a dark backgorund
    */
@@ -111,18 +117,18 @@ export const Tabs: React.FC<Props> = ({
   const [activeIndexState, setActiveIndexState] = useState(
     activeIndex ? activeIndex : 0,
   );
+  /**
+   * Set the only children components allowed within <Tabs> to be Tab
+   */
+  const tabs = useCallback(() => {
+    return allByType(children, Tab);
+  }, [children]);
+
   const tabRefs = tabs().map(() => React.createRef());
 
   // we can't use the hook in an iterator like this, so generate the base and increment if needed
   const [idVar, setId] = useState([]);
   const [ariaLabelledByVar, setAriaLabelledBy] = useState([]);
-
-  /**
-   * Set the only children components allowed within <Tabs> to be Tab
-   */
-  function tabs() {
-    return allByType(children, Tab);
-  }
 
   /**
    * Get previous prop
@@ -162,7 +168,7 @@ export const Tabs: React.FC<Props> = ({
         tab.props.ariaLabelledBy ? tab.props.ariaLabelledBy : nanoid(),
       ),
     );
-  }, []);
+  }, [tabs]);
 
   /**
    * On open

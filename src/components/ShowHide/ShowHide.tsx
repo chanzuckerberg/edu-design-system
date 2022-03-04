@@ -1,5 +1,5 @@
-import React, { useState, useRef, useEffect, ReactNode } from 'react';
 import clsx from 'clsx';
+import React, { useState, useRef, useEffect, ReactNode } from 'react';
 import styles from './ShowHide.module.css';
 import { ESCAPE_KEYCODE } from '../../util/keycodes';
 

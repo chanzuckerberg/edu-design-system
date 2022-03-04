@@ -1,5 +1,5 @@
-import React from 'react';
 import { Story, Meta } from '@storybook/react';
+import React from 'react';
 
 import { CheckboxField, Props } from './CheckboxField';
 import { CheckboxFieldItem } from '../CheckboxFieldItem/CheckboxFieldItem';

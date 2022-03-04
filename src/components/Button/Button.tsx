@@ -1,5 +1,5 @@
-import React, { MouseEventHandler, ReactNode } from 'react';
 import clsx from 'clsx';
+import React, { MouseEventHandler, ReactNode } from 'react';
 import styles from './Button.module.css';
 import { Icon } from '../Icon/Icon';
 export interface Props {

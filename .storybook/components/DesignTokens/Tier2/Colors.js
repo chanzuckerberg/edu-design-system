@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Section, Grid, GridItem, Heading } from '../../../../src';
+import tokens from '../../../data/tokens.json';
 import { ColorList } from '../../ColorList/ColorList';
 import { TokenSpecimen } from '../../TokenSpecimen/TokenSpecimen';
-import tokens from '../../../data/tokens.json';
 
 export class Tier2Colors extends Component {
   render() {

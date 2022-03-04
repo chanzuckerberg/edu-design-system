@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
 import clsx from 'clsx';
-import './TokenSpecimen.css';
 import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import './TokenSpecimen.css';
 
 export class TokenSpecimen extends Component {
   render() {

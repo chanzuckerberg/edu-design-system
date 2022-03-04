@@ -1,13 +1,14 @@
+import clsx from 'clsx';
+import { nanoid } from 'nanoid';
 import React, {
+  useCallback,
   useEffect,
   useState,
   useRef,
   MutableRefObject,
   ReactNode,
 } from 'react';
-import clsx from 'clsx';
 import styles from './AccordionPanel.module.css';
-import { nanoid } from 'nanoid';
 import { Icon } from '../Icon/Icon';
 
 export interface Props {
@@ -63,22 +64,12 @@ export const AccordionPanel: React.FC<Props> = ({
   const [ariaControlsVar, setAriaControls] = useState();
   const [ariaLabelledByVar, setAriaLabelledBy] = useState();
 
-  useEffect(() => {
-    setAriaControls(ariaControls || nanoid());
-    setAriaLabelledBy(ariaLabelledBy || nanoid());
-    setPanelHeight();
-    window.addEventListener('resize', setPanelHeight); /* 2 */
-    return () => {
-      window.removeEventListener('resize', setPanelHeight); /* 3 */
-    };
-  }, [isActiveVar, ariaLabelledBy]);
-
   /**
    * Set panel height
    * 1) If isActive is true, set the height to panel body inner height
    * 2) If isActive is false, set the height to 0
    */
-  function setPanelHeight() {
+  const setPanelHeight = useCallback(() => {
     if (isActiveVar === true) {
       setHeight(
         panelRef.current.querySelector('[data-accordion-panel]').scrollHeight +
@@ -87,7 +78,17 @@ export const AccordionPanel: React.FC<Props> = ({
     } else if (isActiveVar === false) {
       setHeight('0'); /* 2 */
     }
-  }
+  }, [isActiveVar]);
+
+  useEffect(() => {
+    setAriaControls(ariaControls || nanoid());
+    setAriaLabelledBy(ariaLabelledBy || nanoid());
+    setPanelHeight();
+    window.addEventListener('resize', setPanelHeight); /* 2 */
+    return () => {
+      window.removeEventListener('resize', setPanelHeight); /* 3 */
+    };
+  }, [isActiveVar, ariaLabelledBy, ariaControls, setPanelHeight]);
 
   /**
    * Toggle accordion panel

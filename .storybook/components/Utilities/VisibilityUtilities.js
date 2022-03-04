@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { TextPassage } from '../../../src';
-import styles from '../../../src/components/Utilities/Visibility.module.css';
 import './Utilities.css';
 import { Hr } from '../../../src';
+import styles from '../../../src/components/Utilities/Visibility.module.css';
 
 export class VisibilityUtilities extends Component {
   render() {

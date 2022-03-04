@@ -1,5 +1,5 @@
-import React, { useRef, useEffect, ChangeEventHandler } from 'react';
 import clsx from 'clsx';
+import React, { useRef, useEffect, ChangeEventHandler } from 'react';
 import styles from './Checkbox.module.css';
 import { ENTER_KEYCODE } from '../../util/keycodes';
 

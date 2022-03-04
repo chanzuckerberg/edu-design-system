@@ -1,14 +1,14 @@
-import React from 'react';
 import { Story, Meta } from '@storybook/react';
+import React from 'react';
 
-import { Announcements, Props } from './Announcements';
+import { Announcements } from './Announcements';
 
 export default {
   title: 'Pages/Announcements',
   component: Announcements,
 } as Meta;
 
-const Template: Story<Props> = (args) => <Announcements {...args} />;
+const Template = (args) => <Announcements {...args} />;
 
 export const StudentView = Template.bind({});
 StudentView.args = {};

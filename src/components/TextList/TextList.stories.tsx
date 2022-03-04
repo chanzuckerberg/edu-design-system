@@ -1,5 +1,5 @@
-import React from 'react';
 import { Story, Meta } from '@storybook/react';
+import React from 'react';
 
 import { TextList, Props } from './TextList';
 import { TextListItem } from '../TextListItem/TextListItem';

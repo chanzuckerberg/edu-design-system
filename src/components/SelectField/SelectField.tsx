@@ -1,3 +1,5 @@
+import clsx from 'clsx';
+import { nanoid } from 'nanoid';
 import React, {
   ChangeEventHandler,
   ReactNode,
@@ -5,9 +7,7 @@ import React, {
   useRef,
   useState,
 } from 'react';
-import clsx from 'clsx';
 import styles from './SelectField.module.css';
-import { nanoid } from 'nanoid';
 import { FieldNote } from '../FieldNote/FieldNote';
 import { Icon } from '../Icon/Icon';
 import { Label } from '../Label/Label';
@@ -137,7 +137,7 @@ export const SelectField: React.FC<Props> = ({
     if (fieldNote) {
       setAriaDescribedBy(ariaDescribedBy || nanoid());
     }
-  }, [prevValue, valueState]);
+  }, [ariaDescribedBy, fieldNote, id, prevValue, valueState]);
 
   /**
    * Handle onChange

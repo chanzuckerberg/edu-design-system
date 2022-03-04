@@ -1,7 +1,7 @@
-import React, { MouseEventHandler, ReactNode } from 'react';
 import clsx from 'clsx';
-import styles from '../Drawer/Drawer.module.css';
+import React, { MouseEventHandler, ReactNode } from 'react';
 import { Button } from '../Button/Button';
+import styles from '../Drawer/Drawer.module.css';
 
 export interface Props {
   /**

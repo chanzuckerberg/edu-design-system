@@ -1,13 +1,13 @@
 import { Meta } from '@storybook/react';
-
+import React from 'react';
 import { Card } from './Card';
-import { CardHeader } from '../CardHeader/CardHeader';
-import { CardBody } from '../CardBody/CardBody';
-import { CardFooter } from '../CardFooter/CardFooter';
-import { Heading } from '../Heading/Heading';
-import { TextPassage } from '../TextPassage/TextPassage';
 import { Button } from '../Button/Button';
 import { ButtonGroup } from '../ButtonGroup/ButtonGroup';
+import { CardBody } from '../CardBody/CardBody';
+import { CardFooter } from '../CardFooter/CardFooter';
+import { CardHeader } from '../CardHeader/CardHeader';
+import { Heading } from '../Heading/Heading';
+import { TextPassage } from '../TextPassage/TextPassage';
 
 export default {
   title: 'Molecules/Blocks/Card',

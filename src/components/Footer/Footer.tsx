@@ -1,5 +1,5 @@
-import React, { ReactNode } from 'react';
 import clsx from 'clsx';
+import React, { ReactNode } from 'react';
 import styles from './Footer.module.css';
 import { LayoutContainer } from '../LayoutContainer/LayoutContainer';
 

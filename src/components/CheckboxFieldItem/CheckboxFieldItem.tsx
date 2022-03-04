@@ -1,8 +1,8 @@
-import React, { ChangeEventHandler, useEffect, useRef, useState } from 'react';
 import clsx from 'clsx';
-import styles from '../CheckboxField/CheckboxField.module.css';
-import { Checkbox } from '../Checkbox/Checkbox';
 import { nanoid } from 'nanoid';
+import React, { ChangeEventHandler, useEffect, useRef, useState } from 'react';
+import { Checkbox } from '../Checkbox/Checkbox';
+import styles from '../CheckboxField/CheckboxField.module.css';
 
 export interface Props {
   /**
@@ -97,7 +97,7 @@ export const CheckboxFieldItem: React.FC<Props> = ({
       setCheckedState(checkboxChecked);
     }
     setId(id || nanoid());
-  }, [prevChecked, checkboxChecked]);
+  }, [prevChecked, checkboxChecked, id]);
 
   /**
    * On change handler

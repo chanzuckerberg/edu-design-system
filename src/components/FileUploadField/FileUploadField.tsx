@@ -1,15 +1,15 @@
-import React, { ReactNode, useState, useEffect } from 'react';
 import clsx from 'clsx';
-import styles from './FileUploadField.module.css';
 import { nanoid } from 'nanoid';
-import { Label } from '../Label/Label';
+import React, { ReactNode, useState, useEffect } from 'react';
+import styles from './FileUploadField.module.css';
 import { Button } from '../Button/Button';
-import { TextInput } from '../TextInput/TextInput';
-import { Icon } from '../Icon/Icon';
 import { FieldNote } from '../FieldNote/FieldNote';
+import { Icon } from '../Icon/Icon';
+import { Label } from '../Label/Label';
+import { LoadingIndicator } from '../LoadingIndicator/LoadingIndicator';
+import { TextInput } from '../TextInput/TextInput';
 import { TextList } from '../TextList/TextList';
 import { TextListItem } from '../TextListItem/TextListItem';
-import { LoadingIndicator } from '../LoadingIndicator/LoadingIndicator';
 
 export interface Props {
   /**
@@ -102,7 +102,7 @@ export interface Props {
   /**
    * Function that runs on change of the input
    */
-  onChange?: Function;
+  onChange?: (e) => void;
   /**
    * String for the optional label. By default it is '(optional)'
    */
@@ -232,7 +232,7 @@ export const FileUploadField: React.FC<Props> = ({
      */
 
     /* 1 */
-    let files = Array.apply(undefined, filesState);
+    let files = [...filesState];
     let isError;
 
     /* 2 */
@@ -296,7 +296,7 @@ export const FileUploadField: React.FC<Props> = ({
     [styles['eds-is-disabled']]: isDisabled,
   });
 
-  let hitAreaClassName = clsx(styles['file-upload-field__hit-area'], {
+  const hitAreaClassName = clsx(styles['file-upload-field__hit-area'], {
     'file-upload-field__hit-area--drag-over': isDragging,
   });
   return (

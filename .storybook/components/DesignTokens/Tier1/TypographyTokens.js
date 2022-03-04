@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Grid, GridItem, Section } from '../../../../src';
-import { TokenSpecimen } from '../../TokenSpecimen/TokenSpecimen';
 import tokens from '../../../data/tokens.json';
+import { TokenSpecimen } from '../../TokenSpecimen/TokenSpecimen';
 
 export class Tier1TypographyTokens extends Component {
   render() {

@@ -1,11 +1,11 @@
-import React from 'react';
 import { Story, Meta } from '@storybook/react';
+import React from 'react';
 
 import { Tile, Props } from './Tile';
-import { TileHeader } from '../TileHeader/TileHeader';
-import { TileBody } from '../TileBody/TileBody';
-import { TextPassage } from '../TextPassage/TextPassage';
 import { Heading } from '../Heading/Heading';
+import { TextPassage } from '../TextPassage/TextPassage';
+import { TileBody } from '../TileBody/TileBody';
+import { TileHeader } from '../TileHeader/TileHeader';
 
 export default {
   title: 'Molecules/Blocks/Tile',

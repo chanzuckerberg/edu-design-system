@@ -1,11 +1,11 @@
-import React, { ReactNode, useEffect, useState } from 'react';
 import clsx from 'clsx';
-import styles from './Counter.module.css';
 import { nanoid } from 'nanoid';
+import React, { ReactNode, useEffect, useState } from 'react';
+import styles from './Counter.module.css';
 import { Button } from '../Button/Button';
-import { TextInput } from '../TextInput/TextInput';
-import { Label } from '../Label/Label';
 import { FieldNote } from '../FieldNote/FieldNote';
+import { Label } from '../Label/Label';
+import { TextInput } from '../TextInput/TextInput';
 
 export interface Props {
   /**

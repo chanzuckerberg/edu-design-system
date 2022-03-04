@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
 import clsx from 'clsx';
-import styles from './Icon.module.css';
 import { nanoid } from 'nanoid';
+import React, { useEffect, useState } from 'react';
 import svg4everybody from 'svg4everybody';
+import styles from './Icon.module.css';
 import icons from '../../icons/spritemap/spritemap.svg';
 
 export interface Props {
@@ -49,7 +49,7 @@ export const Icon: React.FC<Props> = ({
   useEffect(() => {
     setId(id || nanoid());
     svg4everybody(); //Required to get IE to render icon sprites
-  }, []);
+  }, [id]);
 
   const componentClassName = clsx(styles['icon'], className, {
     [styles['icon--inverted']]: inverted === true,

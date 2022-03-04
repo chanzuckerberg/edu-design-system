@@ -1,13 +1,13 @@
+import clsx from 'clsx';
+import { nanoid } from 'nanoid';
 import React, {
   ChangeEventHandler,
   ReactNode,
   useState,
   useEffect,
 } from 'react';
-import clsx from 'clsx';
-import styles from './RadioField.module.css';
-import { nanoid } from 'nanoid';
 import { allByType } from 'react-children-by-type';
+import styles from './RadioField.module.css';
 import { FieldNote } from '../FieldNote/FieldNote';
 import { Legend } from '../Legend/Legend';
 import { RadioFieldItem } from '../RadioFieldItem/RadioFieldItem';
@@ -153,7 +153,7 @@ export const RadioField: React.FC<Props> = ({
     if (fieldNote) {
       setAriaDescribedBy(ariaDescribedBy || nanoid());
     }
-  }, []);
+  }, [ariaDescribedBy, fieldNote]);
 
   /**
    * Pass in props from RadioField to each RadioFieldItem

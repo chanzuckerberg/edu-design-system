@@ -1,14 +1,14 @@
-import React from 'react';
 import { Story, Meta } from '@storybook/react';
+import React from 'react';
 
 import { TableObject, Props } from './TableObject';
-import { TableObjectHeader } from '../TableObjectHeader/TableObjectHeader';
-import { TableObjectBody } from '../TableObjectBody/TableObjectBody';
 import { Table } from '../Table/Table';
-import { TableHeader } from '../TableHeader/TableHeader';
 import { TableBody } from '../TableBody/TableBody';
-import { TableRow } from '../TableRow/TableRow';
 import { TableCell } from '../TableCell/TableCell';
+import { TableHeader } from '../TableHeader/TableHeader';
+import { TableObjectBody } from '../TableObjectBody/TableObjectBody';
+import { TableObjectHeader } from '../TableObjectHeader/TableObjectHeader';
+import { TableRow } from '../TableRow/TableRow';
 import { Toolbar } from '../Toolbar/Toolbar';
 import { ToolbarItem } from '../ToolbarItem/ToolbarItem';
 

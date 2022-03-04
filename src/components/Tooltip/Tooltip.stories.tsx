@@ -1,5 +1,5 @@
-import React from 'react';
 import { Story, Meta } from '@storybook/react';
+import React from 'react';
 
 import { Tooltip, Props } from './Tooltip';
 import { TextPassage } from '../TextPassage/TextPassage';

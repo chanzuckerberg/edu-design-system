@@ -1,3 +1,5 @@
+import clsx from 'clsx';
+import { nanoid } from 'nanoid';
 import React, {
   ChangeEventHandler,
   MouseEventHandler,
@@ -5,8 +7,6 @@ import React, {
   useEffect,
   useState,
 } from 'react';
-import { nanoid } from 'nanoid';
-import clsx from 'clsx';
 import styles from './TextareaField.module.css';
 import { Button } from '../Button/Button';
 import { FieldNote } from '../FieldNote/FieldNote';
@@ -167,9 +167,9 @@ export const TextareaField = ({
     if (fieldNote) {
       setAriaDescribedBy(ariaDescribedBy || nanoid());
     }
-  }, []);
+  }, [ariaDescribedBy, fieldNote, id]);
 
-  let componentClassName = clsx(styles['textarea-field'], className, {
+  const componentClassName = clsx(styles['textarea-field'], className, {
     [styles['textarea-field--inverted']]: inverted === true,
     [styles['eds-is-error']]: isError,
     [styles['eds-is-disabled']]: disabled,

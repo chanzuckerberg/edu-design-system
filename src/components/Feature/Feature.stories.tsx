@@ -1,5 +1,5 @@
-import React from 'react';
 import { Story, Meta } from '@storybook/react';
+import React from 'react';
 
 import { Feature, Props } from './Feature';
 import { Heading } from '../Heading/Heading';
@@ -23,6 +23,7 @@ const Template: Story<Props> = (args) => (
 
 export const Default = Template.bind({});
 Default.args = {
+  // eslint-disable-next-line @chanzuckerberg/stories/no-ext-resources-in-stories
   imgSrc: 'https://via.placeholder.com/450x500.png',
   imgAlt: 'Placeholder Text',
   title: 'Feature Title',

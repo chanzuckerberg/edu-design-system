@@ -1,5 +1,5 @@
-import React, { ChangeEventHandler } from 'react';
 import clsx from 'clsx';
+import React, { ChangeEventHandler } from 'react';
 import styles from './Radio.module.css';
 
 export interface Props {

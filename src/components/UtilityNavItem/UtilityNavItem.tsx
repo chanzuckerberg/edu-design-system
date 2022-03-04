@@ -1,8 +1,8 @@
-import React, { ReactNode, useEffect, useState, useRef } from 'react';
 import clsx from 'clsx';
-import styles from '../UtilityNav/UtilityNav.module.css';
-import { Icon } from '../Icon/Icon';
+import React, { ReactNode, useEffect, useState, useRef } from 'react';
 import { useMergedRefs } from '../../hooks';
+import { Icon } from '../Icon/Icon';
+import styles from '../UtilityNav/UtilityNav.module.css';
 
 export interface Props {
   /**
@@ -29,8 +29,8 @@ export interface Props {
 export const UtilityNavItem = React.forwardRef<HTMLLIElement, Props>(
   function UtilityNavItem({ className, children, text, href, ...other }, ref) {
     const [isActive, setIsActive] = useState(false);
-    let ownRef = useRef<HTMLLIElement | null>(null);
-    let utilityNavItemRef = useMergedRefs(ref, ownRef);
+    const ownRef = useRef<HTMLLIElement | null>(null);
+    const utilityNavItemRef = useMergedRefs(ref, ownRef);
     const TagName = createTagName();
 
     const togglePanel = () => {
@@ -48,8 +48,10 @@ export const UtilityNavItem = React.forwardRef<HTMLLIElement, Props>(
 
     const handleOnClickOutside = (event: MouseEvent | TouchEvent) => {
       if (
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
         ownRef.current &&
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
         !ownRef.current.contains(event.target as HTMLElement)
       ) {

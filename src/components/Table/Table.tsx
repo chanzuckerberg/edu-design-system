@@ -1,5 +1,5 @@
-import React, { ReactNode } from 'react';
 import clsx from 'clsx';
+import React, { ReactNode } from 'react';
 import styles from './Table.module.css';
 
 export interface Props {

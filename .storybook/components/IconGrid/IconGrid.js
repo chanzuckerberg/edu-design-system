@@ -2,6 +2,7 @@ import React from 'react';
 import { Icon } from '../../../src/components/Icon/Icon';
 import './IconGrid.css';
 
+// eslint-disable-next-line no-undef
 const ALL_ICONS = require
   .context('../../../src/icons', false, /\.svg$/)
   .keys()

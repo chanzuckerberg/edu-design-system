@@ -1,13 +1,13 @@
+import clsx from 'clsx';
 import React, { useState, useEffect, useRef, ReactNode } from 'react';
+import { oneByType } from 'react-children-by-type';
 import FocusLock from 'react-focus-lock';
 import { Portal } from 'react-portal';
-import clsx from 'clsx';
 import styles from './Drawer.module.css';
-import { DrawerHeader } from '../DrawerHeader/DrawerHeader';
+import { ESCAPE_KEYCODE } from '../../util/keycodes';
 import { DrawerBody } from '../DrawerBody/DrawerBody';
 import { DrawerFooter } from '../DrawerFooter/DrawerFooter';
-import { oneByType } from 'react-children-by-type';
-import { ESCAPE_KEYCODE } from '../../util/keycodes';
+import { DrawerHeader } from '../DrawerHeader/DrawerHeader';
 
 export interface Props {
   /**

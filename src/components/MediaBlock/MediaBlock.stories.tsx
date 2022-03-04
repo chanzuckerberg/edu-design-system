@@ -1,9 +1,9 @@
-import React from 'react';
 import { Story, Meta } from '@storybook/react';
+import React from 'react';
 
 import { MediaBlock, Props } from './MediaBlock';
-import { TextPassage } from '../TextPassage/TextPassage';
 import { Heading } from '../Heading/Heading';
+import { TextPassage } from '../TextPassage/TextPassage';
 
 export default {
   title: 'Molecules/Blocks/MediaBlock',

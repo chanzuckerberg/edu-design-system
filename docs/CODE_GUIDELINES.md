@@ -291,23 +291,21 @@ The design system's component directory contains all of the design system's comp
 
 ### Imports
 
-There's a specific ordering/clustering the framework follows for importing modules into a component.
+The framework follows a specific ordering/clustering for importing modules into a component. This is enforced through the [`import/order` lint rule](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/order.md).
 
 Here's an example:
 
 ```js
 import React, { ReactNode } from 'react'; // 1
-import clsx from 'clsx'; // 2
-import styles from './Tags.module.css'; // 3
-import { Icon } from '../Icon/Icon'; // 4
-// 5
+import styles from './Tags.module.css'; // 2
+import { Icon } from '../Icon/Icon'; // 3
+// 4
 ```
 
-1. Import React first
-2. Import utility/library dependencies next
-3. Import component styles, always using the `styles` as the default export name
-4. Import other EDS components
-5. Import any other necessary assets
+1. Import utility/library dependencies first, in alphabetical order of the library name
+2. Import component styles, always using the `styles` as the default export name
+3. Import other EDS components
+4. Import any other necessary assets
 
 ### Prop definitions
 

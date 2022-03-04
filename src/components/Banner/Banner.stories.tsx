@@ -1,11 +1,11 @@
-import React from 'react';
 import { Story, Meta } from '@storybook/react';
+import React from 'react';
 
 import { Banner, Props } from './Banner';
-import { TextPassage } from '../TextPassage/TextPassage';
-import { LayoutLinelengthContainer } from '../LayoutLinelengthContainer/LayoutLinelengthContainer';
-import { Heading } from '../Heading/Heading';
 import { Button } from '../Button/Button';
+import { Heading } from '../Heading/Heading';
+import { LayoutLinelengthContainer } from '../LayoutLinelengthContainer/LayoutLinelengthContainer';
+import { TextPassage } from '../TextPassage/TextPassage';
 
 export default {
   title: 'Molecules/Messaging/Banner',

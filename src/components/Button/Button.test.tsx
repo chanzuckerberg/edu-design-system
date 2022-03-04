@@ -1,7 +1,7 @@
-import React from 'react';
-import { Button } from './Button';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import React from 'react';
+import { Button } from './Button';
 
 test('renders the text in the button', () => {
   render(<Button text="Click" />);

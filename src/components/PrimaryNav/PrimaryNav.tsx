@@ -1,7 +1,7 @@
-import React, { ReactNode, useEffect, useState } from 'react';
 import clsx from 'clsx';
-import styles from './PrimaryNav.module.css';
 import { nanoid } from 'nanoid';
+import React, { ReactNode, useEffect, useState } from 'react';
+import styles from './PrimaryNav.module.css';
 
 export interface Props {
   /**
@@ -36,7 +36,7 @@ export const PrimaryNav: React.FC<Props> = ({
 
   useEffect(() => {
     setId(id || nanoid());
-  }, []);
+  }, [id]);
 
   const componentClassName = clsx(styles['primary-nav'], className);
 

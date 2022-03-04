@@ -1,7 +1,8 @@
 {
   "env": {
     "es6": true,
-    "browser": true
+    "browser": true,
+    "node": true
   },
   "parser": "@typescript-eslint/parser",
   "plugins": [
@@ -12,7 +13,7 @@
   ],
   "extends": [
     "eslint:recommended",
-    "plugin:@chanzuckerberg/stories/strict",
+    "plugin:@chanzuckerberg/stories/recommended",
     "plugin:react/recommended",
     "plugin:storybook/recommended",
     "plugin:testing-library/react",
@@ -35,11 +36,11 @@
       "error",
       {
         "devDependencies": [
-          "**/*.spec.{ts,tsx}",
-          "**/*.stories.{ts,tsx}",
-          "**/*.config.{js,ts}",
+          "src/**/*.{spec,test}.{ts,tsx}",
+          "src/**/*.stories.{ts,tsx}",
+          "**.config.{js,ts}",
           "**/*.setup.{js,ts}",
-          "**/.storybook/*"
+          ".storybook/**"
         ]
       }
     ],
@@ -48,9 +49,11 @@
       {
         "alphabetize": {
           "order": "asc"
-        }
+        },
+        "groups": ["builtin", "external", "sibling", "parent", "index"]
       }
     ],
+    "no-unused-vars": "warn",
     "react/prop-types": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "error"
@@ -74,6 +77,8 @@
       "files": [
         "*.spec.ts",
         "*.spec.tsx",
+        "*.test.ts",
+        "*.test.tsx",
         "**/test/**"
       ],
       "plugins": [
@@ -126,6 +131,7 @@
     }
   ],
   "ignorePatterns": [
-    "!.storybook"
+    "!.storybook",
+    ".storybook/components/Docs/prism.js"
   ]
 }

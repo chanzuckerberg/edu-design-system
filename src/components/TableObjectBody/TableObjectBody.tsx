@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import React, {
   ReactNode,
   useEffect,
@@ -6,7 +7,6 @@ import React, {
   MutableRefObject,
   UIEvent,
 } from 'react';
-import clsx from 'clsx';
 import styles from '../TableObject/TableObject.module.css';
 
 export interface Props {

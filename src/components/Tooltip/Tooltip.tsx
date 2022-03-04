@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import React, {
   ReactNode,
   useState,
@@ -5,10 +6,9 @@ import React, {
   useEffect,
   MutableRefObject,
 } from 'react';
-import clsx from 'clsx';
 import styles from './Tooltip.module.css';
-import { Button } from '../Button/Button';
 import { ESCAPE_KEYCODE, TAB_KEYCODE } from '../../util/keycodes';
+import { Button } from '../Button/Button';
 
 export interface Props {
   /**

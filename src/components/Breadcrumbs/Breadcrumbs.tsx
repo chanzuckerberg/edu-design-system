@@ -1,7 +1,7 @@
-import React, { ReactNode, useEffect, useState } from 'react';
 import clsx from 'clsx';
-import styles from './Breadcrumbs.module.css';
 import { nanoid } from 'nanoid';
+import React, { ReactNode, useEffect, useState } from 'react';
+import styles from './Breadcrumbs.module.css';
 
 export interface Props {
   /**
@@ -37,7 +37,7 @@ export const Breadcrumbs: React.FC<Props> = ({
 
   useEffect(() => {
     setBreadcrumbsId(id || nanoid());
-  }, []);
+  }, [id]);
 
   const componentClassName = clsx(styles['breadcrumbs'], className, {});
 

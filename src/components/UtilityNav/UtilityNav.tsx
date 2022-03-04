@@ -1,7 +1,7 @@
-import React, { ReactNode, useEffect, useState } from 'react';
 import clsx from 'clsx';
-import styles from './UtilityNav.module.css';
 import { nanoid } from 'nanoid';
+import React, { ReactNode, useEffect, useState } from 'react';
+import styles from './UtilityNav.module.css';
 
 export interface Props {
   /**
@@ -40,7 +40,7 @@ export const UtilityNav: React.FC<Props> = ({
 
   useEffect(() => {
     setId(id || nanoid());
-  }, []);
+  }, [id]);
 
   const componentClassName = clsx(styles['utility-nav'], className);
 

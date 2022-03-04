@@ -11,8 +11,8 @@ import {
   Tab,
 } from '../../../src';
 
-import { GlobalHeader } from '../../recipes/GlobalHeader/GlobalHeader';
 import { GlobalFooter } from '../../recipes/GlobalFooter/GlobalFooter';
+import { GlobalHeader } from '../../recipes/GlobalHeader/GlobalHeader';
 
 export const ProjectOverview: React.FC = () => (
   <body>

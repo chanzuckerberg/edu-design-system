@@ -1,5 +1,5 @@
-import React from 'react';
 import { Story, Meta } from '@storybook/react';
+import React from 'react';
 
 import { KeyValueTable, Props } from './KeyValueTable';
 import { KeyValueTableRow } from '../KeyValueTableRow/KeyValueTableRow';

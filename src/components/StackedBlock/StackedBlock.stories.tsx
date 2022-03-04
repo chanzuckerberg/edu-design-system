@@ -1,14 +1,14 @@
-import React from 'react';
 import { Story, Meta } from '@storybook/react';
+import React from 'react';
 
 import { StackedBlock, Props } from './StackedBlock';
-import { StackedBlockHeader } from '../StackedBlockHeader/StackedBlockHeader';
+import { Button } from '../Button/Button';
+import { ButtonGroup } from '../ButtonGroup/ButtonGroup';
+import { Heading } from '../Heading/Heading';
 import { StackedBlockBody } from '../StackedBlockBody/StackedBlockBody';
 import { StackedBlockFooter } from '../StackedBlockFooter/StackedBlockFooter';
-import { Heading } from '../Heading/Heading';
+import { StackedBlockHeader } from '../StackedBlockHeader/StackedBlockHeader';
 import { TextPassage } from '../TextPassage/TextPassage';
-import { ButtonGroup } from '../ButtonGroup/ButtonGroup';
-import { Button } from '../Button/Button';
 
 export default {
   title: 'Molecules/Blocks/StackedBlock',

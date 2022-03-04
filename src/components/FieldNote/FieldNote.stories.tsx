@@ -1,9 +1,9 @@
-import React from 'react';
 import { Story, Meta } from '@storybook/react';
+import React from 'react';
 
 import { FieldNote, Props } from './FieldNote';
-import { TextPassage } from '../TextPassage/TextPassage';
 import { TextLink } from '../TextLink/TextLink';
+import { TextPassage } from '../TextPassage/TextPassage';
 
 export default {
   title: 'Atoms/Forms/FieldNote',

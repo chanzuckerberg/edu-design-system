@@ -1,5 +1,5 @@
-import React, { ReactNode } from 'react';
 import clsx from 'clsx';
+import React, { ReactNode } from 'react';
 import styles from './Hero.module.css';
 import { LayoutContainer } from '../LayoutContainer/LayoutContainer';
 

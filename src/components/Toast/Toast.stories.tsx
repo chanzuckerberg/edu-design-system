@@ -1,11 +1,11 @@
-import React from 'react';
 import { Story, Meta } from '@storybook/react';
+import React from 'react';
 
 import { Toast, Props } from './Toast';
-import { TextPassage } from '../TextPassage/TextPassage';
-import { LayoutLinelengthContainer } from '../LayoutLinelengthContainer/LayoutLinelengthContainer';
-import { Heading } from '../Heading/Heading';
 import { Button } from '../Button/Button';
+import { Heading } from '../Heading/Heading';
+import { LayoutLinelengthContainer } from '../LayoutLinelengthContainer/LayoutLinelengthContainer';
+import { TextPassage } from '../TextPassage/TextPassage';
 
 export default {
   title: 'Molecules/Messaging/Toast',
@@ -13,7 +13,7 @@ export default {
 } as Meta;
 
 const Template: Story<Props> = (args) => (
-  <Toast {...args}>You've got toast!</Toast>
+  <Toast {...args}>{`You've got toast!`}</Toast>
 );
 
 export const Default = Template.bind({});

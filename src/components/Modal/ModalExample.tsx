@@ -1,12 +1,12 @@
-import React, { ReactNode, useState, useRef, MutableRefObject } from 'react';
 import clsx from 'clsx';
+import React, { ReactNode, useState, useRef, MutableRefObject } from 'react';
+import { Modal } from './Modal';
 import { Button } from '../Button/Button';
 import { ButtonGroup } from '../ButtonGroup/ButtonGroup';
-import { Modal } from './Modal';
-import { ModalHeader } from '../ModalHeader/ModalHeader';
+import { Heading } from '../Heading/Heading';
 import { ModalBody } from '../ModalBody/ModalBody';
 import { ModalFooter } from '../ModalFooter/ModalFooter';
-import { Heading } from '../Heading/Heading';
+import { ModalHeader } from '../ModalHeader/ModalHeader';
 import { TextPassage } from '../TextPassage/TextPassage';
 
 export interface Props {

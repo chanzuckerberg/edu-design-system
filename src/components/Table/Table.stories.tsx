@@ -1,12 +1,12 @@
-import React from 'react';
 import { Story, Meta } from '@storybook/react';
+import React from 'react';
 
 import { Table, Props } from './Table';
-import { TableHeader } from '../TableHeader/TableHeader';
-import { TableBody } from '../TableBody/TableBody';
-import { TableRow } from '../TableRow/TableRow';
-import { TableCell } from '../TableCell/TableCell';
 import { SkeletonBar } from '../SkeletonBar/SkeletonBar';
+import { TableBody } from '../TableBody/TableBody';
+import { TableCell } from '../TableCell/TableCell';
+import { TableHeader } from '../TableHeader/TableHeader';
+import { TableRow } from '../TableRow/TableRow';
 
 export default {
   title: 'Organisms/Tables/Table',

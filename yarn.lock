@@ -1628,6 +1628,7 @@ __metadata:
     postcss-nested: ^5.0.6
     postcss-simple-vars: ^6.0.3
     prettier: ^2.5.1
+    prop-types: ^15.8.1
     react: ^16.14.0
     react-children-by-type: ^1.1.0
     react-dom: ^16.14.0
@@ -15236,7 +15237,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.0.0, prop-types@npm:^15.5.8, prop-types@npm:^15.6.0, prop-types@npm:^15.6.2, prop-types@npm:^15.7.2":
+"prop-types@npm:^15.0.0, prop-types@npm:^15.5.8, prop-types@npm:^15.6.0, prop-types@npm:^15.6.2, prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:

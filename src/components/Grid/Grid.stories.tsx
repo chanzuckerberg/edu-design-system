@@ -1,5 +1,5 @@
-import React from 'react';
 import { Story, Meta } from '@storybook/react';
+import React from 'react';
 
 import { Grid, Props } from './Grid';
 import { GridItem } from '../GridItem/GridItem';

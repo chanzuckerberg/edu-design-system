@@ -49,7 +49,7 @@ export function useMergedRefs<RefValueType = any>(
   ...refs: (AssignableRef<RefValueType> | null | undefined)[]
 ) {
   return useCallback((node: any) => {
-    for (let ref of refs) {
+    for (const ref of refs) {
       assignRef(ref, node);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps

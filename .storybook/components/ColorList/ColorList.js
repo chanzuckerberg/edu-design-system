@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { Grid, GridItem, Section } from '../../../src';
-import { TokenSpecimen } from '../TokenSpecimen/TokenSpecimen';
 import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import { Grid } from '../../../src';
+import { TokenSpecimen } from '../TokenSpecimen/TokenSpecimen';
 
 export class ColorList extends Component {
   render() {
@@ -11,6 +11,7 @@ export class ColorList extends Component {
           return (
             <TokenSpecimen
               name={listItem.name}
+              key={index}
               value={listItem.value}
               inlineStyles={{
                 backgroundColor: `var(${listItem.name})`,

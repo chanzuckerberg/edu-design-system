@@ -1,5 +1,5 @@
-import React from 'react';
 import { Story, Meta } from '@storybook/react';
+import React from 'react';
 
 import { ShowHide, Props } from './ShowHide';
 import { Button } from '../Button/Button';

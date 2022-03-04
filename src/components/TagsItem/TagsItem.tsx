@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
 import clsx from 'clsx';
-import styles from '../Tags/Tags.module.css';
+import React, { useState } from 'react';
 import { Icon } from '../Icon/Icon';
+import styles from '../Tags/Tags.module.css';
 
 export interface Props {
   /**
@@ -15,7 +15,7 @@ export interface Props {
   /**
    * Click handler function that a user can pass in when a tag is clicked
    */
-  onClick?: Function;
+  onClick?: (e) => void;
   /**
    * Text string of the tag
    */

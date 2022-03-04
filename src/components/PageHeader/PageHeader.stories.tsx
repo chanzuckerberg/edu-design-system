@@ -1,5 +1,5 @@
-import React from 'react';
 import { Story, Meta } from '@storybook/react';
+import React from 'react';
 
 import { PageHeader, Props } from './PageHeader';
 import { Badge } from '../Badge/Badge';

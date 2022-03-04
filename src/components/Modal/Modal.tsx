@@ -1,13 +1,13 @@
+import clsx from 'clsx';
 import React, { useState, useEffect, useRef, ReactNode } from 'react';
+import { oneByType } from 'react-children-by-type';
 import FocusLock from 'react-focus-lock';
 import { Portal } from 'react-portal';
-import clsx from 'clsx';
 import styles from './Modal.module.css';
-import { oneByType } from 'react-children-by-type';
-import { ModalHeader } from '../ModalHeader/ModalHeader';
+import { ESCAPE_KEYCODE } from '../../util/keycodes';
 import { ModalBody } from '../ModalBody/ModalBody';
 import { ModalFooter } from '../ModalFooter/ModalFooter';
-import { ESCAPE_KEYCODE } from '../../util/keycodes';
+import { ModalHeader } from '../ModalHeader/ModalHeader';
 
 export interface Props {
   /**
@@ -41,7 +41,7 @@ export interface Props {
   /**
    * Handler to be called when the modal is being closed (by ESCAPE / clicking X / clicking outside)
    */
-  onClose?: Function;
+  onClose?: () => void;
   /**
    * Size variations
    * - **sm** results in a modal that is narrower than the default
