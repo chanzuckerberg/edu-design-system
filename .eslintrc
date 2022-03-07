@@ -31,7 +31,7 @@
       "error",
       {
         "devDependencies": [
-          "src/**/*.{spec,test}.{ts,tsx}",
+          "src/**/*.test.{ts,tsx}",
           "src/**/*.stories.{ts,tsx}",
           "**/*.config.{js,ts}",
           "**/*.setup.{js,ts}",
@@ -60,7 +60,7 @@
       }
     },
     {
-      "files": ["*.spec.ts", "*.spec.tsx", "*.test.ts", "*.test.tsx", "**/test/**"],
+      "files": ["*.test.ts", "*.test.tsx", "**/test/**"],
       "plugins": ["jest"],
       "extends": ["plugin:jest/recommended"],
       "env": {
