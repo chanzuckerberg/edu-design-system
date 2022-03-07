@@ -1,0 +1,20 @@
+.trigger--spacing {
+  margin: 9rem;
+}
+
+.trigger--spacing-top {
+  margin-top: 9rem;
+}
+.trigger--spacing-bottom {
+  margin-bottom: 9rem;
+}
+.trigger--spacing-left {
+  margin-left: 9rem;
+}
+.trigger--spacing-right {
+  margin-right: 9rem;
+}
+
+.trigger--spacing-left-large {
+  margin-left: 24rem;
+}
