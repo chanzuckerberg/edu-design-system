@@ -28,8 +28,8 @@ module.exports = (plop) => {
       },
       {
         type: 'add',
-        path: 'src/components/{{pascalCase name}}/{{pascalCase name}}.spec.tsx',
-        templateFile: 'plop-templates/Component/Component.spec.tsx.hbs',
+        path: 'src/components/{{pascalCase name}}/{{pascalCase name}}.test.tsx',
+        templateFile: 'plop-templates/Component/Component.test.tsx.hbs',
       },
       {
         type: 'add',
