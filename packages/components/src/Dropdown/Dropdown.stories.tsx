@@ -17,15 +17,15 @@ type Props = {
 
 const exampleOptions = [
   {
-    id: "1",
+    key: "1",
     label: "Dogs",
   },
   {
-    id: "2",
+    key: "2",
     label: "Cats",
   },
   {
-    id: "3",
+    key: "3",
     label: "Birds",
   },
 ];
@@ -66,7 +66,7 @@ function InteractiveExampleUsingChildren(props: Props) {
         <Dropdown.Button>{selectedOption?.label || "Select"}</Dropdown.Button>
         <Dropdown.Options>
           {exampleOptions.map((option) => (
-            <Dropdown.Option key={option.id} value={option}>
+            <Dropdown.Option key={option.key} value={option}>
               {option.label}
             </Dropdown.Option>
           ))}
@@ -114,7 +114,7 @@ function InteractiveExampleUsingFunctionChildren() {
             </Dropdown.Button>
             <Dropdown.Options>
               {exampleOptions.map((option) => (
-                <Dropdown.Option key={option.id} value={option}>
+                <Dropdown.Option key={option.key} value={option}>
                   {option.label}
                 </Dropdown.Option>
               ))}

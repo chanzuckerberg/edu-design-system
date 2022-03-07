@@ -11,15 +11,15 @@ const OpenByDefaultComponent = composeStory(OpenByDefault, stories.default);
 
 const exampleOptions = [
   {
-    id: "option1",
+    key: "1",
     label: "Option 1",
   },
   {
-    id: "option2",
+    key: "2",
     label: "Option 2",
   },
   {
-    id: "option3",
+    key: "3",
     label: "Option 3",
   },
 ];
@@ -51,7 +51,7 @@ describe("<Dropdown />", () => {
 
         <Dropdown.Options>
           {exampleOptions.map((option) => (
-            <Dropdown.Option key={option.id} value={option}>
+            <Dropdown.Option key={option.key} value={option}>
               {option.label}
             </Dropdown.Option>
           ))}
@@ -76,7 +76,7 @@ describe("<Dropdown />", () => {
 
         <Dropdown.Options>
           {exampleOptions.map((option) => (
-            <Dropdown.Option key={option.id} value={option}>
+            <Dropdown.Option key={option.key} value={option}>
               {option.label}
             </Dropdown.Option>
           ))}
@@ -150,7 +150,7 @@ describe("<Dropdown />", () => {
 
         <Dropdown.Options>
           {exampleOptions.map((option) => (
-            <Dropdown.Option key={option.id} value={option}>
+            <Dropdown.Option key={option.key} value={option}>
               {option.label}
             </Dropdown.Option>
           ))}
