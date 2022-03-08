@@ -6,6 +6,7 @@ import Tooltip from './Tooltip';
 import styles from './Tooltip.stories.module.css';
 import { Button, Props } from '../Button/Button';
 
+/* TODO: replace ForwardRefButton with EDS button since it's already using forwardRef */
 const ForwardRefButton = React.forwardRef((props: Props, ref) => (
   <Button {...props} buttonRef={ref} />
 ));

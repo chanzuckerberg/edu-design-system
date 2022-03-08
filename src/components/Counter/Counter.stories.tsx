@@ -1,6 +1,7 @@
 import { Story, Meta } from '@storybook/react';
 import React from 'react';
 import { Counter, Props } from './Counter';
+import { Button } from '../Button/Button';
 import { Tooltip } from '../Tooltip/Tooltip';
 
 export default {
@@ -20,6 +21,19 @@ Default.args = {
   plusButtonText: 'Add by 1',
 };
 
+/* TODO: replace <button> with EDS button since it's already using forwardRef */
+const ForwardRefButton = React.forwardRef((props, ref) => (
+  <Button
+    variant="bare"
+    iconPosition="after"
+    iconName="question-mark-circle"
+    aria-label="Hover this button to trigger the tooltip"
+    text="Hover this button to trigger the tooltip"
+    buttonRef={ref}
+  />
+));
+ForwardRefButton.displayName = 'ForwardRefButton';
+
 export const DefaultWithTooltip = Template.bind({});
 DefaultWithTooltip.args = {
   value: 1,
@@ -30,8 +44,8 @@ DefaultWithTooltip.args = {
   plusButtonText: 'Add by 1',
   fieldNote: 'This is a counter field',
   labelAfter: (
-    <Tooltip buttonText="Select this button to trigger the tooltip">
-      Some text to help with a form field
+    <Tooltip content="Some text to help with a form field">
+      <ForwardRefButton />
     </Tooltip>
   ),
 };
