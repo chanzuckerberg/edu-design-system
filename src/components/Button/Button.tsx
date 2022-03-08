@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React, { MouseEventHandler, ReactNode } from 'react';
 import styles from './Button.module.css';
-import { Icon } from '../Icon/Icon';
+
 export interface Props {
   /**
    * Visually hidden button text (but text is still accessible to assistive technology).
@@ -28,24 +28,6 @@ export interface Props {
    * Link to URL. If href is present, the button will be rendered as an <a> element.
    */
   href?: string;
-  /**
-   * Name of SVG icon (i.e. caret-down, minus, warning)
-   */
-  iconName?: string;
-  /**
-   * Determines position of icon relative to button text.
-   * - **before** places icon before button text
-   * - **after** places icon after button text
-   */
-  iconPosition?: 'before' | 'after';
-  /**
-   * Button rendered on a dark backgorund
-   */
-  inverted?: boolean;
-  /**
-   * Loading state passed down from higher level used to trigger loader and text change
-   */
-  loading?: boolean;
   /**
    * On click handler for component
    */
