@@ -1,92 +1,71 @@
-import clsx from 'clsx';
-import React, { ReactNode, useState } from 'react';
-import styles from './Toast.module.css';
-import { Button } from '../Button/Button';
-import { Icon } from '../Icon/Icon';
+/* TODO: point to internal exports once fully migrated */
+import { Text, CloseButton } from '@chanzuckerberg/eds-components';
+import colorStyles from '@chanzuckerberg/eds-components/lib/common/Notifications/Notification.module.css';
+import NotificationIcon from '@chanzuckerberg/eds-components/lib/common/Notifications/NotificationIcon';
 
-export interface Props {
+import clsx from 'clsx';
+import React from 'react';
+import styles from './Toast.module.css';
+
+export type Variant = 'success' | 'alert';
+
+export type Props = {
   /**
-   * The child node(s) contains the toast message. Note: the toast message is displayed inside a TextPassage, so children can contain raw HTML
-   */
-  children?: ReactNode;
-  /**
-   * CSS class names that can be appended to the component.
+   * Additional class names passed in for styling.
    */
   className?: string;
   /**
-   * Close button text
-   * 1) Used to change the text of the icon button with various languages
+   * The contents of the toast.
    */
-  closeButtonText?: string;
+  text: React.ReactNode;
   /**
-   * Toggles the ability to dismiss the toast via an close button in the top right of the toast
+   * The color of the Toast, based on EDS defined colors. Also determines the icon used.
+   * Note that the Icon mapping matches the style of Banners.
    */
-  dismissible?: boolean;
+  variant: Variant;
   /**
-   * Name of toast SVG icon. Available options are: toast, error, warning-2, success
+   * Callback when Toast is dismissed.
    */
-  iconName?: string;
-  /**
-   * The title attribute for the SVG icon in the toast
-   */
-  iconTitle?: string;
-  /**
-   * Stylistic variations for the toast type.
-   * - **success** - results in a green toast
-   * - **warning** - results in a yellow toast
-   * - **error** - results in a red toast
-   * - **info** - results in a blue toast
-   */
-  variant?: 'success' | 'warning' | 'error' | 'info' | 'brand';
-}
+  onDismiss?: () => void;
+};
 
 /**
- * Primary UI component for user interaction
+ * ```ts
+ * import {Toast} from "@chanzuckerberg/eds-components";
+ * ```
+ *
+ * A toast used to provide information on the state of the page, usually in response to a
+ * user action. Ex: The user updates their profile, and a toast pop-up informs them that the
+ * data was successfully saved.
  */
-export const Toast: React.FC<Props> = ({
-  iconTitle,
+export const Toast = ({
+  text,
   className,
-  children,
-  iconName,
-  dismissible = true,
   variant,
-  closeButtonText = 'Close',
-  ...other
-}) => {
-  const componentClassName = clsx(styles['toast'], className, {
-    [styles['toast--success']]: variant === 'success',
-    [styles['toast--warning']]: variant === 'warning',
-    [styles['toast--error']]: variant === 'error',
-    [styles['toast--brand']]: variant === 'brand',
-  });
-  const [dismissed, setDismissed] = useState(false);
-
-  function onDismiss(e: any) {
-    e.preventDefault();
-    setDismissed(true);
-  }
-  return dismissed ? null : (
-    <div className={componentClassName} role="alert" {...other}>
-      {iconName && (
-        <Icon
-          name={iconName}
-          title={iconTitle}
-          className={styles['toast__icon']}
-        />
+  onDismiss,
+  // Allow for additional attributes such as aria roles
+  ...rest
+}: Props) => {
+  return (
+    <div
+      className={clsx(
+        className,
+        styles.toast,
+        /* TODO: point to corresponding style classes once Notifications is fully migrated */
+        variant === 'success' && colorStyles.colorSuccess,
+        variant === 'alert' && colorStyles.colorAlert,
       )}
-      <div className={styles['toast__body']}>{children}</div>
-
-      {dismissible && (
-        <Button
-          className={styles['toast__close-btn']}
-          variant="bare"
-          hideText={true}
-          text={closeButtonText}
-          iconName="x"
-          iconPosition="after"
-          onClick={(e: any) => onDismiss(e)}
-        />
-      )}
+      {...rest}
+    >
+      <div className={styles['toast--content']}>
+        <NotificationIcon variant={variant} />
+        <Text color="inherit" size="sm">
+          {text}
+        </Text>
+      </div>
+      {onDismiss && <CloseButton color={variant} onClose={onDismiss} />}
     </div>
   );
 };
+
+export default Toast;

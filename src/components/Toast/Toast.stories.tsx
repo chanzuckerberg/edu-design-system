@@ -1,55 +1,36 @@
-import { Story, Meta } from '@storybook/react';
+import type { StoryObj } from '@storybook/react';
 import React from 'react';
-
-import { Toast, Props } from './Toast';
-import { Button } from '../Button/Button';
-import { Heading } from '../Heading/Heading';
-import { LayoutLinelengthContainer } from '../LayoutLinelengthContainer/LayoutLinelengthContainer';
-import { TextPassage } from '../TextPassage/TextPassage';
+import Toast from './Toast';
 
 export default {
-  title: 'Molecules/Messaging/Toast',
+  title: 'Toast',
   component: Toast,
-} as Meta;
-
-const Template: Story<Props> = (args) => (
-  <Toast {...args}>{`You've got toast!`}</Toast>
-);
-
-export const Default = Template.bind({});
-Default.args = { iconName: 'information-circle' };
-
-export const Brand = Template.bind({});
-Brand.args = {
-  variant: 'brand',
-  iconName: 'check-circle',
-  title: 'This is a title',
+  argTypes: { onDismiss: { action: 'dismissed' } },
+  args: {
+    text: "You've got toast!",
+  },
 };
 
-export const Success = Template.bind({});
-Success.args = {
-  variant: 'success',
-  iconName: 'check-circle',
-  title: 'This is a title',
+type Args = React.ComponentProps<typeof Toast>;
+
+export const Success: StoryObj<Args> = {
+  args: {
+    variant: 'success',
+  },
 };
 
-export const Warning = Template.bind({});
-Warning.args = {
-  variant: 'warning',
-  iconName: 'exclamation-circle',
-  title: 'This is a title',
+export const Alert: StoryObj<Args> = {
+  args: {
+    variant: 'alert',
+  },
 };
 
-export const Error = Template.bind({});
-Error.args = {
-  variant: 'error',
-  iconName: 'x-circle',
-  title: 'This is a title',
-};
-
-export const NotDismissible = Template.bind({});
-NotDismissible.args = {
-  dismissible: false,
-  iconName: 'information-circle',
-  title: 'This is a title',
+export const NotDismissable: StoryObj<Args> = {
+  args: {
+    variant: 'success',
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore onDismiss is not nullable, but this is needed to remove the arg from
+    // storybook's actions addon
+    onDismiss: null,
+  },
 };

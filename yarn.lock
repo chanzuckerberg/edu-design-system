@@ -1592,11 +1592,34 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@chanzuckerberg/eds-components@npm:^0.8.1":
+  version: 0.8.1
+  resolution: "@chanzuckerberg/eds-components@npm:0.8.1"
+  dependencies:
+    "@chanzuckerberg/eds-tokens": ^0.8.1
+    "@headlessui/react": ^1.4.3
+    "@tippyjs/react": ^4.2.5
+    clsx: ^1.1.1
+    react-uid: ^2.3.1
+  peerDependencies:
+    react: ">= 16.8.0"
+  checksum: 2a7ae46ae9e936624d62ffd9d1b9aca8224c8d41e1a5c6addb55920bbb63df8667aac28a01dbbc1ebb164cf3e3ae00a7269f37bcdd3427a6ad91f4435433bd66
+  languageName: node
+  linkType: hard
+
+"@chanzuckerberg/eds-tokens@npm:^0.8.1":
+  version: 0.8.1
+  resolution: "@chanzuckerberg/eds-tokens@npm:0.8.1"
+  checksum: 7f7360ff083fc5804f4feca150e755ae3d7e58ecc6f29399a176060e39493eea14e12e60349331d3957225325659c3046d9a7e479f07db154b25314f97005f44
+  languageName: node
+  linkType: hard
+
 "@chanzuckerberg/eds@workspace:.":
   version: 0.0.0-use.local
   resolution: "@chanzuckerberg/eds@workspace:."
   dependencies:
     "@chanzuckerberg/axe-storybook-testing": ^5.0.0
+    "@chanzuckerberg/eds-components": ^0.8.1
     "@chanzuckerberg/eslint-plugin-stories": ^3.0.1
     "@chanzuckerberg/story-utils": ^3.0.4
     "@commitlint/cli": ^16.2.1
@@ -2159,6 +2182,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@headlessui/react@npm:^1.4.3":
+  version: 1.5.0
+  resolution: "@headlessui/react@npm:1.5.0"
+  peerDependencies:
+    react: ^16 || ^17 || ^18
+    react-dom: ^16 || ^17 || ^18
+  checksum: e3373dfb73936950d659a87718fb9fdedc599b344b30cb0d8b1ef0a2ec13d6f405c653fa51284236788658840ece82c6a8538a5a5931e595274e9590b2020079
+  languageName: node
+  linkType: hard
+
 "@humanwhocodes/config-array@npm:^0.9.2":
   version: 0.9.3
   resolution: "@humanwhocodes/config-array@npm:0.9.3"
@@ -2615,7 +2648,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@popperjs/core@npm:^2.5.4, @popperjs/core@npm:^2.6.0":
+"@popperjs/core@npm:^2.5.4, @popperjs/core@npm:^2.6.0, @popperjs/core@npm:^2.9.0":
   version: 2.11.2
   resolution: "@popperjs/core@npm:2.11.2"
   checksum: 5695bf020eda54636e16a62dc9b5fdd92beaf7b2d19f62fcef049d57c5cff92773562d80cbf760b217c3ec928da310eb24994ab6a00fd39dffa0af9b5dfc01a6
@@ -4019,6 +4052,18 @@ __metadata:
   peerDependencies:
     "@testing-library/dom": ">=7.21.4"
   checksum: 16319de685fbb7008f1ba667928f458b2d08196918002daca56996de80ef35e6d9de26e9e1ece7d00a004692b95a597cf9142fff0dc53f2f51606a776584f549
+  languageName: node
+  linkType: hard
+
+"@tippyjs/react@npm:^4.2.5":
+  version: 4.2.6
+  resolution: "@tippyjs/react@npm:4.2.6"
+  dependencies:
+    tippy.js: ^6.3.1
+  peerDependencies:
+    react: ">=16.8"
+    react-dom: ">=16.8"
+  checksum: 8f0fba591c9dae2e1af1ae632bbc775ba5c9dd4498e50e242be70302b4c27115c6740eec44e885e294b27cb28515777b52af5b34aac9d4bab627d948add938ae
   languageName: node
   linkType: hard
 
@@ -16015,6 +16060,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-uid@npm:^2.3.1":
+  version: 2.3.1
+  resolution: "react-uid@npm:2.3.1"
+  dependencies:
+    tslib: ^1.10.0
+  peerDependencies:
+    "@types/react": ^16.8.0 || ^17.0.0
+    react: ^16.8.0 || ^17.0.0
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: 271c244a99fa8de75042264e3060901c82941cf55cf9eece42acccbd55a1560cc244fd81183b1ed1ff5f9261425dfb6ba65b1c63cb1d603cb15720f494cf8712
+  languageName: node
+  linkType: hard
+
 "react@npm:^16.14.0":
   version: 16.14.0
   resolution: "react@npm:16.14.0"
@@ -18205,6 +18265,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tippy.js@npm:^6.3.1":
+  version: 6.3.7
+  resolution: "tippy.js@npm:6.3.7"
+  dependencies:
+    "@popperjs/core": ^2.9.0
+  checksum: cac955318a65288e8d2dca05059878b003c6e66f92c94f7810f5bc5448eb6646abdf7dacc9bd00020e2611592598d0aae3a28ec9a45349a159603c3fdddce5fb
+  languageName: node
+  linkType: hard
+
 "title-case@npm:^3.0.3":
   version: 3.0.3
   resolution: "title-case@npm:3.0.3"
@@ -18460,7 +18529,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^1.8.1, tslib@npm:^1.9.0, tslib@npm:^1.9.3":
+"tslib@npm:^1.10.0, tslib@npm:^1.8.1, tslib@npm:^1.9.0, tslib@npm:^1.9.3":
   version: 1.14.1
   resolution: "tslib@npm:1.14.1"
   checksum: dbe628ef87f66691d5d2959b3e41b9ca0045c3ee3c7c7b906cc1e328b39f199bb1ad9e671c39025bd56122ac57dfbf7385a94843b1cc07c60a4db74795829acd
