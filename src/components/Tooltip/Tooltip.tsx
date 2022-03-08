@@ -20,7 +20,7 @@ type TooltipProps = {
   /**
    * The content of the tooltip bubble.
    */
-  content?: React.ReactNode;
+  text?: React.ReactNode;
   /**
    * Where the tooltip should be placed in relation to the element it's attached to.
    *
@@ -80,6 +80,7 @@ export const Tooltip = ({
   variant = 'light',
   align = 'top',
   className,
+  text,
   ...rest
 }: TooltipProps) => {
   // Hides tooltip when escape key is pressed, following:
@@ -112,6 +113,7 @@ export const Tooltip = ({
         variant === 'light' && styles['tooltip--light'],
         variant === 'dark' && styles['tooltip--dark'],
       )}
+      content={text}
       duration={200}
       placement={align}
       plugins={[hideOnEsc]}

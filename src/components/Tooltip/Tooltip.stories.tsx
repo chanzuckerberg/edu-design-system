@@ -13,7 +13,7 @@ const ForwardRefButton = React.forwardRef((props: Props, ref) => (
 ForwardRefButton.displayName = 'ForwardRefButton';
 
 const defaultArgs = {
-  content: (
+  text: (
     <span data-testid="tooltip-content">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit.{' '}
       <b>Donec a erat eu augue consequat eleifend non vel sem.</b> Praesent
@@ -94,7 +94,7 @@ export const BottomPlacement: StoryObj<Args> = {
 
 export const LongText: StoryObj<Args> = {
   args: {
-    content: (
+    text: (
       <span>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.{' '}
         <b>Donec a erat eu augue consequat eleifend non vel sem.</b> Praesent

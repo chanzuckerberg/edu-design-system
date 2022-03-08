@@ -1,3 +1,12 @@
+/*------------------------------------*\
+    #TOOLTIP STORIES
+\*------------------------------------*/
+
+/**
+ * 1) Spacing is required for the Tooltip to be placed where alignment is indicated,
+ * otherwise Tippy will place somewhere else due to lack of space
+ */
+
 .trigger--spacing {
   margin: 9rem;
 }
