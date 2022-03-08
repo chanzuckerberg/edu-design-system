@@ -71,6 +71,7 @@ export { default as OndemandVideoRoundedIcon } from "./OndemandVideoRounded";
 export { default as OpenInNewRoundedIcon } from "./OpenInNewRounded";
 export { default as PeopleRoundedIcon } from "./PeopleRounded";
 export { default as PersonAddRoundedIcon } from "./PersonAddRounded";
+export { default as PlayArrowRoundedIcon } from "./PlayArrowRounded";
 export { default as PrintRoundedIcon } from "./PrintRounded";
 export { default as QuestionAnswerRoundedIcon } from "./QuestionAnswerRounded";
 export { default as RecordVoiceOverRoundedIcon } from "./RecordVoiceOverRounded";
