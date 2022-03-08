@@ -10,35 +10,11 @@ export default {
 
 const Template: Story<Props> = (args) => <Button {...args} />;
 
-const InvertedTemplate: Story<Props> = (args) => (
-  <div style={{ padding: '1rem', backgroundColor: '#000' }}>
-    {' '}
-    <Button {...args} />
-  </div>
-);
-
 export const Default = Template.bind({});
 Default.args = { text: 'Button' };
 
-export const DefaultWithIconBefore = Template.bind({});
-DefaultWithIconBefore.args = {
-  text: 'Button',
-  iconPosition: 'before',
-  iconName: 'chevron-left',
-};
-
-export const DefaultWithIconAfter = Template.bind({});
-DefaultWithIconAfter.args = {
-  text: 'Button',
-  iconPosition: 'after',
-  iconName: 'chevron-right',
-};
-
 export const DefaultDisabled = Template.bind({});
 DefaultDisabled.args = { text: 'Button', disabled: true };
-
-export const DefaultInverted = InvertedTemplate.bind({});
-DefaultInverted.args = { inverted: true, text: 'Button' };
 
 export const Primary = Template.bind({});
 Primary.args = { variant: 'primary', text: 'Primary Button' };
@@ -76,13 +52,6 @@ BareIconInverted.args = {
 
 export const TextLink = Template.bind({});
 TextLink.args = { variant: 'link', text: 'Text Link Button' };
-
-export const TextLinkInverted = InvertedTemplate.bind({});
-TextLinkInverted.args = {
-  variant: 'link',
-  inverted: true,
-  text: 'Text Link Button',
-};
 
 export const UtilityError = Template.bind({});
 UtilityError.args = { variant: 'error', text: 'Button' };
