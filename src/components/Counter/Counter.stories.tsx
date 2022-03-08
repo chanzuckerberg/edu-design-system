@@ -21,7 +21,7 @@ Default.args = {
   plusButtonText: 'Add by 1',
 };
 
-/* TODO: replace <button> with EDS button since it's already using forwardRef */
+/* TODO: replace <ForwardRefButton> with EDS button since it's already using forwardRef */
 const ForwardRefButton = React.forwardRef((props, ref) => (
   <Button
     variant="plain"
