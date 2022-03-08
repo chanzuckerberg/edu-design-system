@@ -1,5 +1,14 @@
 /* stylelint-disable selector-pseudo-class-no-unknown */
 
+/*------------------------------------*\
+    #TOOLTIP
+\*------------------------------------*/
+
+/**
+ * 1) Tippyjs provides .tippy-box, which has two child elements: .tippy-content and .tippy-arrow
+ * 2) Tippyjs also attaches data-attribute `data-placement` depending on how the tooltip is aligned
+ */
+
 .tooltip {
   border-style: solid;
   border-width: var(--eds-border-width-sm);
@@ -11,7 +20,9 @@
   }
 }
 
-/* Enables opacity fade animation */
+/**
+ * 1) Enables opacity fade animation 
+ */
 .tooltip[data-state="hidden"] {
   opacity: 0;
 }
@@ -23,7 +34,9 @@
   padding-top: var(--eds-size-1);
 }
 
-/* Color Variants */
+/**
+ * 1) Color Variants
+ */
 .tooltip--light {
   border-color: var(--eds-color-neutral-300);
   color: var(--eds-color-neutral-700);
@@ -38,7 +51,9 @@
   --arrow-color: var(--eds-color-neutral-700);
 }
 
-/* Add Arrows */
+/**
+ * 1) Add arrows
+ */
 .tooltip :global(.tippy-arrow) {
   position: absolute;
 
@@ -50,8 +65,8 @@
   position: absolute;
 
   border-style: solid;
-  border: transparent;
-  border-radius: var(--eds-size-4);
+  border-color: transparent;
+  border-width: var(--eds-size-1);
 
   content: "";
 }

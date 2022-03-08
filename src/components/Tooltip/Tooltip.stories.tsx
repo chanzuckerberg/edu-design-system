@@ -1,7 +1,7 @@
 import type { Meta, Story, StoryObj } from '@storybook/react';
 import { within, userEvent } from '@storybook/testing-library';
 import clsx from 'clsx';
-import * as React from 'react';
+import React from 'react';
 import Tooltip from './Tooltip';
 import styles from './Tooltip.stories.module.css';
 import { Button, Props } from '../Button/Button';
@@ -31,7 +31,7 @@ const defaultArgs = {
 };
 
 export default {
-  title: 'Tooltip',
+  title: 'Molecules/Messaging/Tooltip',
   component: Tooltip,
   args: defaultArgs,
 } as Meta<Args>;
