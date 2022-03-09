@@ -4,13 +4,7 @@ import clsx from 'clsx';
 import React from 'react';
 import Tooltip from './Tooltip';
 import styles from './Tooltip.stories.module.css';
-import { Button, Props } from '../Button/Button';
-
-/* TODO: replace ForwardRefButton with EDS button since it's already using forwardRef */
-const ForwardRefButton = React.forwardRef((props: Props, ref) => (
-  <Button {...props} buttonRef={ref} />
-));
-ForwardRefButton.displayName = 'ForwardRefButton';
+import { Button } from '../Button/Button';
 
 const defaultArgs = {
   text: (
@@ -21,7 +15,7 @@ const defaultArgs = {
     </span>
   ),
   children: (
-    <ForwardRefButton
+    <Button
       className={clsx(styles['trigger--spacing'])}
       text="Tooltip trigger"
     />
@@ -50,7 +44,7 @@ export const LeftPlacement: StoryObj<Args> = {
   args: {
     align: 'left',
     children: (
-      <ForwardRefButton
+      <Button
         className={clsx(
           styles['trigger--spacing-top'],
           styles['trigger--spacing-bottom'],
@@ -66,7 +60,7 @@ export const TopPlacement: StoryObj<Args> = {
   args: {
     align: 'top',
     children: (
-      <ForwardRefButton
+      <Button
         className={clsx(
           styles['trigger--spacing-top'],
           styles['trigger--spacing-left'],
@@ -81,7 +75,7 @@ export const BottomPlacement: StoryObj<Args> = {
   args: {
     align: 'bottom',
     children: (
-      <ForwardRefButton
+      <Button
         className={clsx(
           styles['trigger--spacing-bottom'],
           styles['trigger--spacing-left'],
@@ -111,7 +105,7 @@ export const LongText: StoryObj<Args> = {
 export const LongButtonText: StoryObj<Args> = {
   args: {
     children: (
-      <ForwardRefButton
+      <Button
         className={clsx(styles['trigger--spacing-top'])}
         text="Tooltip trigger with longer text to test placement"
       />
@@ -123,7 +117,7 @@ export const Interactive: StoryObj<Args> = {
   args: {
     visible: undefined,
     children: (
-      <ForwardRefButton
+      <Button
         className={clsx(styles['trigger--spacing'])}
         text="Hover here to see tooltip after clicking somewhere outside."
       />

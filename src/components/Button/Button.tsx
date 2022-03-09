@@ -81,87 +81,95 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const Button: React.FC<Props> = ({
-  buttonRef,
-  className,
-  variant,
-  size,
-  disabled,
-  fullWidth,
-  iconName,
-  iconPosition = 'before',
-  inverted,
-  loading,
-  onClick,
-  screenReaderText,
-  href,
-  text,
-  type,
-  hideText,
-  ...other
-}) => {
-  const componentClassName = clsx(styles['button'], className, {
-    [styles['button--primary']]: variant === 'primary',
-    [styles['button--bare']]: variant === 'bare',
-    [styles['button--link']]: variant === 'link',
-    [styles['button--sm']]: size === 'sm',
-    [styles['button--table-header']]: variant === 'table-header',
-    [styles['button--inverted']]: inverted === true,
-    [styles['button--full-width']]: fullWidth,
-    [styles['eds-is-loading']]: loading,
-  });
-  const TagName = href ? 'a' : 'button';
+export const Button = React.forwardRef(
+  (
+    {
+      buttonRef,
+      className,
+      variant,
+      size,
+      disabled,
+      fullWidth,
+      iconName,
+      iconPosition = 'before',
+      inverted,
+      loading,
+      onClick,
+      screenReaderText,
+      href,
+      text,
+      type,
+      hideText,
+      ...other
+    }: Props,
+    ref,
+  ) => {
+    const componentClassName = clsx(styles['button'], className, {
+      [styles['button--primary']]: variant === 'primary',
+      [styles['button--bare']]: variant === 'bare',
+      [styles['button--link']]: variant === 'link',
+      [styles['button--sm']]: size === 'sm',
+      [styles['button--table-header']]: variant === 'table-header',
+      [styles['button--inverted']]: inverted === true,
+      [styles['button--full-width']]: fullWidth,
+      [styles['eds-is-loading']]: loading,
+    });
+    const TagName = href ? 'a' : 'button';
 
-  const computedIcon = (
-    <>
-      {loading && (
-        <Icon
-          aria-hidden="true"
-          focusable={false}
-          name="spinner"
-          className={styles['button__icon']}
-        />
-      )}
-      {!loading && iconName && (
-        <Icon
-          aria-hidden="true"
-          focusable={false}
-          name={iconName}
-          className={styles['button__icon']}
-        />
-      )}
-    </>
-  );
+    const computedIcon = (
+      <>
+        {loading && (
+          <Icon
+            aria-hidden="true"
+            focusable={false}
+            name="spinner"
+            className={styles['button__icon']}
+          />
+        )}
+        {!loading && iconName && (
+          <Icon
+            aria-hidden="true"
+            focusable={false}
+            name={iconName}
+            className={styles['button__icon']}
+          />
+        )}
+      </>
+    );
 
-  return (
-    <TagName
-      className={componentClassName}
-      href={href}
-      disabled={disabled}
-      tabIndex={disabled ? -1 : undefined}
-      ref={buttonRef}
-      type={type}
-      onClick={onClick}
-      {...other}
-    >
-      {iconPosition === 'before' && computedIcon}
+    return (
+      <TagName
+        className={componentClassName}
+        href={href}
+        disabled={disabled}
+        tabIndex={disabled ? -1 : undefined}
+        ref={buttonRef || ref}
+        type={type}
+        onClick={onClick}
+        {...other}
+      >
+        {iconPosition === 'before' && computedIcon}
 
-      {text && (
-        <span
-          className={
-            !hideText
-              ? styles['button__text']
-              : styles['button__text'] + 'u-is-vishidden'
-          }
-        >
-          {text}
-          {screenReaderText && (
-            <span className={styles['u-is-vishidden']}>{screenReaderText}</span>
-          )}
-        </span>
-      )}
+        {text && (
+          <span
+            className={
+              !hideText
+                ? styles['button__text']
+                : styles['button__text'] + 'u-is-vishidden'
+            }
+          >
+            {text}
+            {screenReaderText && (
+              <span className={styles['u-is-vishidden']}>
+                {screenReaderText}
+              </span>
+            )}
+          </span>
+        )}
 
-      {iconPosition === 'after' && computedIcon}
-    </TagName>
-  );
-};
+        {iconPosition === 'after' && computedIcon}
+      </TagName>
+    );
+  },
+);
+Button.displayName = 'Button';
