@@ -6,13 +6,6 @@ export interface Props {
   /**
    * Visually hidden button text (but text is still accessible to assistive technology).
    * This overrides `text`
-<<<<<<< HEAD
-=======
-   */
-  'aria-label'?: string;
-  /**
-   * Button reference
->>>>>>> 1a68651 (chore(button): bring back fullWidth, inverted, loading, and icon props)
    */
   'aria-label'?: string;
   /**
@@ -24,13 +17,10 @@ export interface Props {
    */
   disabled?: boolean;
   /**
-<<<<<<< HEAD
    * Button reference
    */
   forwardRef?: any;
   /**
-=======
->>>>>>> 1a68651 (chore(button): bring back fullWidth, inverted, loading, and icon props)
    * Toggles button that fills the full width of its container
    */
   fullWidth?: boolean;
