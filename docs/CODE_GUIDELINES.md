@@ -403,14 +403,16 @@ EDS adhreres to the following API naming conventions:
 - `size` should be used for adjusting size attributes (e.g. `<Button variant="secondary" size="sm">` or `<Button size="lg"`>). Default to `sm` and `lg`, with "md" being the default.
 - `behavior` should be used for funcitonal variations of a pattern, such as `<Banner behavior="dismissable">`. Additional non-exclusive behaviors should be handled using boolean props prefixed with `is` (e.g. `isSticky` and `isDismissable`).
 - `orientation` should be used for controlling the layout or orientation of a component (e.g. `<ButtonGroup orientation="stacked">`)
+- `disabled` boolean should be used to control the interactivity of a component (e.g. `<Button disabled={true} />`)
 - `align` should be used for aligning content, and should include `left` (default), `center`, `right` if needed.
 - `verticalAlign` should be used for vertically aligning content, and should include `top`, `middle`, `bottom` if needed.
 
 ### Text, Labels, Titles
 
-- Default to `text` for strings of text, such as `<Button text="First Name">`.
+- Default to `text` for short strings of text, such as `<Button text="Click here">` or `<Badge text="Overdue" />`.
 - For headings, default to `title`, such as `<PageHeader title="My Page Title">`.
-- For form-related comnp, use the semantic `label` or `legend` (e.g. `<TextField label="first name" />`).
+- Default to `description` for text that serves as a descriptor, such as `<PageHeader title="Project name" description="Brief overview of the project..." />`
+- For form-related components, use the semantic `label` or `legend` (e.g. `<TextField label="first name" />` and `<RadioField legend="Grade level">`).
 
 ### Tag name
 
