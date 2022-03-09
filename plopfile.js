@@ -40,16 +40,16 @@ module.exports = (plop) => {
         type: 'append',
         pattern: /;\n$/,
         separator: '',
-        path: 'packages/components/src/index.ts',
+        path: 'src/index.ts',
         template:
-          'export { default as {{pascalCase name}} } from "./{{pascalCase name}}";',
+          'export { {{pascalCase name}} } from "./components/{{pascalCase name}}/{{pascalCase name}}";',
       },
       // From https://github.com/bradfrost/czi-vanilla-storybook
       function sortIndex() {
         process.chdir(plop.getPlopfilePath());
 
         const fs = require('fs');
-        const indexFile = `${plop.getDestBasePath()}/packages/components/src/index.ts`;
+        const indexFile = `${plop.getDestBasePath()}/src/index.ts`;
 
         if (fs.existsSync(indexFile)) {
           // Split the index file into lines.
