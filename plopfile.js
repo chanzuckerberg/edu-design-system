@@ -32,11 +32,6 @@ module.exports = (plop) => {
         templateFile: 'plop-templates/Component/Component.spec.tsx.hbs',
       },
       {
-        type: 'add',
-        path: 'src/components/{{pascalCase name}}/index.ts',
-        templateFile: 'plop-templates/Component/index.ts.hbs',
-      },
-      {
         type: 'append',
         pattern: /;\n$/,
         separator: '',
