@@ -7,15 +7,6 @@
  * 2) Tippyjs also attaches data-attribute `data-placement` depending on how the tooltip is aligned
  */
 
-/*------------------------------------*\
-    #TOOLTIP
-\*------------------------------------*/
-
-/**
- * 1) Tippyjs provides .tippy-box, which has two child elements: .tippy-content and .tippy-arrow
- * 2) Tippyjs also attaches data-attribute `data-placement` depending on how the tooltip is aligned
- */
-
 .tooltip {
   border-style: solid;
   border-width: var(--eds-border-width-sm);
