@@ -105,7 +105,6 @@ export const Button: React.FC<Props> = ({
     [styles['button--bare']]: variant === 'bare',
     [styles['button--link']]: variant === 'link',
     [styles['button--sm']]: size === 'sm',
-    [styles['button--table-header']]: variant === 'table-header',
     [styles['button--inverted']]: inverted === true,
     [styles['button--full-width']]: fullWidth,
     [styles['eds-is-loading']]: loading,
