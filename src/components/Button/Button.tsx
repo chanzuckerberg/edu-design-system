@@ -63,7 +63,7 @@ export interface Props {
   /**
    * Available size variations for the button
    */
-  size?: 'sm' | 'lg';
+  size?: 'sm' | 'md' | 'lg';
   /**
    * The visible button text
    */
@@ -78,7 +78,7 @@ export interface Props {
   /**
    * Available _stylistic_ variations available for the Button component
    */
-  variant?: 'primary' | 'bare' | 'link';
+  variant?: 'primary' | 'bare' | 'link' | 'table-header';
 }
 
 /**
@@ -106,13 +106,21 @@ export const Button = React.forwardRef(
     ref,
   ) => {
     const componentClassName = clsx(
+      // Base styles
       styles['button'],
       className,
+      // Sizes
+      variant !== 'link' && [
+        size === 'sm' && styles['button--sm'],
+        size === 'md' && styles['button--md'],
+        size === 'lg' && styles['button--lg'],
+      ],
+      // Variants
       variant === 'primary' && styles['button--primary'],
       variant === 'bare' && styles['button--bare'],
       variant === 'link' && styles['button--link'],
-      size === 'sm' && styles['button--sm'],
       variant === 'table-header' && styles['button--table-header'],
+      // Other options
       inverted === true && styles['button--inverted'],
       fullWidth && styles['button--full-width'],
       loading && styles['eds-is-loading'],

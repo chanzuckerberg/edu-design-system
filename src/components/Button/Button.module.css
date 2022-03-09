@@ -10,15 +10,10 @@
  * 3) Margin 0 added becuase Safari has margin on the button
  */
 .button {
-  @mixin eds-theme-typography-button;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding-top: var(--eds-size-1-and-half);
-  padding-right: var(--eds-size-5);
-  padding-bottom: var(--eds-size-1-and-half);
-  padding-left: var(--eds-size-5);
-  margin: 0;
+  margin: 0; /* 3 */
   border-width: var(--eds-theme-border-width);
   border-style: solid;
   border-color: var(--eds-theme-color-primary-border);
@@ -187,10 +182,19 @@
  */
 .button--sm {
   @mixin eds-theme-typography-button-sm;
-  padding-top: var(--eds-size-half);
-  padding-right: var(--eds-size-1);
-  padding-bottom: var(--eds-size-half);
-  padding-left: var(--eds-size-1);
+  height: var(--eds-size-3);
+  padding-left: var(--eds-size-half);
+  padding-right: var(--eds-size-half);
+}
+
+/**
+ * Medium button
+ */
+.button--md {
+  @mixin eds-theme-typography-button-md;
+  height: var(--eds-size-4);
+  padding-left: var(--eds-size-2);
+  padding-right: var(--eds-size-2);
 }
 
 /**
@@ -198,10 +202,9 @@
  */
 .button--lg {
   @mixin eds-theme-typography-button-lg;
-  padding-top: var(--eds-size-2);
-  padding-right: var(--eds-size-5);
-  padding-bottom: var(--eds-size-2);
-  padding-left: var(--eds-size-5);
+  height: var(--eds-size-5);
+  padding-left: var(--eds-size-2);
+  padding-right: var(--eds-size-2);
 }
 
 /**
