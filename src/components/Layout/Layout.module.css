@@ -12,34 +12,3 @@
 .layout {
   display: block;
 }
-
-/**
- * Main layout section region 
- */
-.layout__section--main {
-  width: 100%;
-
-  @media all and (min-width: $eds-bp-lg) {
-    margin-left: var(--eds-l-sidebar-width);
-    width: calc(100% - var(--eds-l-sidebar-width));
-    height: 100vh;
-  }
-
-  @media all and (min-width: $eds-bp-lg) {
-    padding-top: var(--eds-size-6);
-  }
-}
-
-/**
- * Sidebar layout section region 
- */
-.layout__section--sidebar {
-  @media all and (min-width: $eds-bp-lg) {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: var(--eds-l-sidebar-width);
-    height: 100vh;
-    z-index: var(--eds-z-index-500);
-  }
-}
