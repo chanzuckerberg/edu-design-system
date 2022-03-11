@@ -13,7 +13,7 @@ EDS follows these principles and conventions for HTML, CSS, and JavaScript/TypeS
 - [JavaScript/TypeScript](#js)
   - [JavaScript principles](#js-principles)
   - [JavaScript tools](#js-tools)
-  - [JavaScript/TypeScript/React conventions](#js-conventions)
+  - [TypeScript/React conventions](#ts-conventions)
   - [Component rules and considerations](#component-rules)
   - [Component API naming conventions](#api-naming)
   - [Assets](#assets)
@@ -165,7 +165,7 @@ For example:
 
 ```css
 /*------------------------------------*\
-    # BUTTON
+    # BUTTON
 \*------------------------------------*/
 
 /**
@@ -268,9 +268,9 @@ Please refer to the [design tokens documentation](./TOKENS.md) to learn how to u
 - [React](https://reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 
-## JavaScript Conventions <a name="js-conventions"></a>
+## TypeScript Conventions <a name="ts-conventions"></a>
 
-EDS is built using [React](https://reactjs.org/), but should be built in a way to promote portability with other frameworks, especially with regards to HTML and CSS.
+EDS is built using [TypeScript](https://www.typescriptlang.org/) and [React](https://reactjs.org/), but should be built in a way to promote portability with other frameworks, especially with regards to HTML and CSS.
 
 ### Component directory structure:
 
@@ -291,23 +291,25 @@ The design system's component directory contains all of the design system's comp
 
 ### Imports
 
-The framework follows a specific ordering/clustering for importing modules into a component. This is enforced through the [`import/order` lint rule](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/order.md).
+There's a specific ordering/clustering the framework follows for importing modules into a component.
 
 Here's an example:
 
 ```js
 import React, { ReactNode } from 'react'; // 1
-import styles from './Tags.module.css'; // 2
-import { Icon } from '../Icon/Icon'; // 3
-// 4
+import clsx from 'clsx'; // 2
+import styles from './Tags.module.css'; // 3
+import { Icon } from '../Icon/Icon'; // 4
+// 5
 ```
 
-1. Import utility/library dependencies first, in alphabetical order of the library name
-2. Import component styles, always using the `styles` as the default export name
-3. Import other EDS components
-4. Import any other necessary assets
+1. Import React first
+2. Import utility/library dependencies next
+3. Import component styles, always using the `styles` as the default export name
+4. Import other EDS components
+5. Import any other necessary assets
 
-### Prop definitions
+### Prop Type definitions
 
 ```tsx
 export interface Props {
@@ -319,26 +321,94 @@ export interface Props {
   ...
 }
 ```
-
-All component props must be defined with appropriate [TypeScript type](https://www.typescriptlang.org/docs/handbook/basic-types.html) applied. Each prop must contain a comment above the prop declaration to document the prop's function. These comments and prop declarations are automatically converted into prop documentation in Storybook. As a general guideline, try to organize component prop definitiones alphabetically.
+  All component props must be defined with appropriate [TypeScript type](https://www.typescriptlang.org/docs/handbook/basic-types.html) applied. Each type defined in props and state must contain a comment above the type declaration to document its function. These comments and declarations are automatically converted into prop documentation in Storybook. As a general guideline, try to organize types alphabetically.
 
 ### Export module
 
 ```tsx
-export const ComponentName: React.FC<Props> = ({
+export const ComponentName = ({
   list,
   of,
   props
   ...other
-}) => {
+}: Props) => {
+  ...
+}
 ```
-
 This defines the component name and passses in all the `Props`.
 
-### Variables, Methods, and Hooks (if applicable)
+### Children
+When a component uses `children` as a prop, use the type `React.ReactNode` unless context dictates otherwise, including `ReactNode` as a named import.
+
+```tsx
+import React, { ReactNode } from 'react';
+
+...
+
+export const ComponentName = ({ children }: { children: ReactNode }) => {
+  ...
+}
+```
+
+### Variables, Methods, and Hooks
 
 Interactive components likely require defining necessary [state and lifecycle](https://reactjs.org/docs/state-and-lifecycle.html) functions in addition to defining any other necessary variables and functions.
 
+#### useState()
+
+For simple state variables, define a `State` interface that holds the key/value pairs.
+
+```tsx
+interface State {
+  isActive?: boolean;
+}
+
+```
+
+For complex state objects, extract nested properties into their own interfaces. Use enums where needed.
+
+```tsx
+interface State {
+  userData: UserData | null;
+}
+
+interface UserData {
+  userId: number;
+  role: Roles;
+  userName: string;
+}
+
+enum Roles {
+  "Anonymous" = ANONYMOUS 
+  "Authenticated" = AUTHENTICATED,
+}
+
+```
+
+In either case, apply the `State` type via a generic:
+
+```tsx
+const [state, setState] = useState<State>('initial value');
+```
+
+#### useEffect()
+`useEffect()` hooks do not require any typing. TypeScript expects them to either return nothing or a Destructor-typed function (a function that cleans up any side effects and returns void.)
+
+#### useRef()
+`useRef()` hooks access underlying DOM elements to perform imperative actions. The resulting `ref` object can either be *mutable* or *not mutable*. (If the value store in its' `.current` property may be changed, the ref needs to be `mutable`.) Explictly convey the intended mutability status of each `ref` by using either `React.MutableObject` and `React.RefObject`, in a generic type definition. For mutable refs, use a union with `null` when initializing the ref; otherwise, TypeScript will complain when you change the value of `.current`. Similarly, *do not* create a union with `null` for non-mutable refs.
+
+For consistency, include `MutableRefObject` and `RefObject` with your import statements.
+
+
+```tsx
+import React, { useRef, MutableRefObject, RefObject } from 'react';
+
+...
+
+const mutableRef: MutableRefObject<HTMLDivElement | null> = useRef<HTMLDivElement | null>(null);
+
+const ref: RefObject<HTMLInputElement> = useRef<HTMLInputElement>(null); 
+```
 ### Define `componentClassName`
 
 The last thing that appears above the `return` statement is the `componentClassName`, which defines the CSS block for the component in addition to any modifier CSS class names using the [`clsx` library](https://www.npmjs.com/package/clsx). CSS Modules' bracket syntax (e.g. `styles['my-component']`) is used to enable BEM conventions (which uses dashes).
@@ -356,7 +426,7 @@ Finally, the `return` statement contains the JSX markup for the component and ap
 ```tsx
 return (
   <div className={componentClassName} {...other}>
-    {children}
+    
   </div>
 );
 ```
