@@ -50,6 +50,13 @@ OutlineDisabled.args = {
   disabled: true,
 };
 
+export const OutlineInverted = InvertedTemplate.bind({});
+OutlineInverted.args = {
+  variant: 'outline',
+  text: 'Outline Button',
+  inverted: true,
+};
+
 export const TextLink = Template.bind({});
 TextLink.args = { variant: 'link', text: 'Text Link Button' };
 
@@ -60,8 +67,22 @@ TextLinkDisabled.args = {
   disabled: true,
 };
 
+export const TextLinkInverted = InvertedTemplate.bind({});
+TextLinkInverted.args = {
+  variant: 'link',
+  inverted: true,
+  text: 'Text Link Button',
+};
+
 export const PlainButton = Template.bind({});
 PlainButton.args = { variant: 'plain', text: 'Plain Button' };
+
+export const PlainButtonInverted = InvertedTemplate.bind({});
+PlainButtonInverted.args = {
+  variant: 'plain',
+  text: 'Plain Button',
+  inverted: true,
+};
 
 export const PlainButtonDisabled = Template.bind({});
 PlainButtonDisabled.args = {
@@ -85,3 +106,15 @@ Loading.args = {
   disabled: true,
   text: 'Loading Button',
 };
+
+export const Neutral = Template.bind({});
+Neutral.args = { text: 'Neutral Button', color: 'neutral' };
+
+export const Alert = Template.bind({});
+Alert.args = { text: 'Alert Button', color: 'alert' };
+
+export const Success = Template.bind({});
+Success.args = { text: 'Success Button', color: 'success' };
+
+export const Warning = Template.bind({});
+Warning.args = { text: 'Warning Button', color: 'warning' };

@@ -20,23 +20,7 @@
   border-radius: var(--eds-theme-border-radius);
   cursor: pointer;
   transition: all var(--eds-anim-fade-quick) var(--eds-anim-ease);
-
-  /* Default variable values */
-  --primary-color: var(--eds-color-brand-blue-600);
-  --link-color: var(--eds-color-brand-blue-700);
   --plain-background-color: transparent;
-
-  &:hover,
-  &:focus {
-    --primary-color: var(--eds-color-brand-blue-700);
-    --link-color: var(--eds-color-brand-blue-800);
-    --plain-background-color: var(--eds-color-brand-blue-100);
-  }
-
-  &:active {
-    --primary-color: var(--eds-color-brand-blue-800);
-    --plain-background-color: var(--eds-color-brand-blue-600);
-  }
 
   &:focus-visible {
     @mixin focus;
@@ -73,6 +57,10 @@
   }
 }
 
+/*------------------------------------*\
+    #VARIANTS
+\*------------------------------------*/
+
 /**
  * Primary button
  * 1) Prominent button styles that should be applied to
@@ -95,11 +83,8 @@
   color: var(--link-color);
 
   &:hover,
-  &.stateHover,
   &:focus,
-  &.stateFocus,
-  &:active,
-  &.stateActive {
+  &:active {
     color: var(--eds-theme-color-body-foreground-inverted);
 
     background-color: var(--primary-color);
@@ -180,15 +165,12 @@
   background-color: var(--plain-background-color);
 
   &:hover,
-  &.stateHover,
-  &:focus,
-  &.stateFocus {
+  &:focus {
     color: var(--primary-color);
     border-color: var(--primary-color);
   }
 
-  &:active,
-  &.stateActive {
+  &:active {
     color: var(--eds-theme-color-body-foreground-inverted);
 
     border-color: var(--plain-background-color);
@@ -201,7 +183,7 @@
   }
 
   /**
-   * Inverted bare button 
+   * Inverted plain button 
    */
   &.button--inverted {
     color: var(--eds-theme-color-primary-foreground-inverted);
@@ -213,6 +195,114 @@
     }
   }
 }
+
+/*------------------------------------*\
+    #COLORS
+\*------------------------------------*/
+
+/**
+  * Brand button
+  */
+.button--color-brand {
+  --primary-color: var(--eds-color-brand-blue-600);
+  --link-color: var(--eds-color-brand-blue-700);
+
+  &:hover,
+  &:focus {
+    --primary-color: var(--eds-color-brand-blue-700);
+    --link-color: var(--eds-color-brand-blue-800);
+    --plain-background-color: var(--eds-color-brand-blue-100);
+  }
+
+  &:active {
+    --primary-color: var(--eds-color-brand-blue-800);
+    --plain-background-color: var(--eds-color-brand-blue-600);
+  }
+}
+
+/**
+  * Brand button
+  */
+.button--color-alert {
+  --primary-color: var(--eds-color-other-red-600);
+  --link-color: var(--eds-color-other-red-700);
+
+  &:hover,
+  &:focus {
+    --primary-color: var(--eds-color-other-red-700);
+    --link-color: var(--eds-color-other-red-800);
+    --plain-background-color: var(--eds-color-other-red-100);
+  }
+
+  &:active {
+    --primary-color: var(--eds-color-other-red-800);
+    --plain-background-color: var(--eds-color-other-red-600);
+  }
+}
+
+/**
+  * Neutral button
+  */
+.button--color-neutral {
+  --primary-color: var(--eds-color-neutral-500);
+  --link-color: var(--eds-color-neutral-600);
+
+  &:hover,
+  &:focus {
+    --primary-color: var(--eds-color-neutral-600);
+    --link-color: var(--eds-color-neutral-700);
+    --plain-background-color: var(--eds-color-neutral-100);
+  }
+
+  &:active {
+    --primary-color: var(--eds-color-neutral-700);
+    --plain-background-color: var(--eds-color-neutral-500);
+  }
+}
+
+/**
+  * Success button
+  */
+.button--color-success {
+  --primary-color: var(--eds-color-other-green-600);
+  --link-color: var(--eds-color-other-green-700);
+
+  &:hover,
+  &:focus {
+    --primary-color: var(--eds-color-other-green-700);
+    --link-color: var(--eds-color-other-green-800);
+    --plain-background-color: var(--eds-color-other-green-100);
+  }
+
+  &:active {
+    --primary-color: var(--eds-color-other-green-800);
+    --plain-background-color: var(--eds-color-other-green-600);
+  }
+}
+
+/**
+  * Warning button
+  */
+.button--color-warning {
+  --primary-color: var(--eds-color-other-orange-600);
+  --link-color: var(--eds-color-other-orange-700);
+
+  &:hover,
+  &:focus {
+    --primary-color: var(--eds-color-other-orange-700);
+    --link-color: var(--eds-color-other-orange-800);
+    --plain-background-color: var(--eds-color-other-orange-100);
+  }
+
+  &:active {
+    --primary-color: var(--eds-color-other-orange-800);
+    --plain-background-color: var(--eds-color-other-orange-600);
+  }
+}
+
+/*------------------------------------*\
+    #SIZES
+\*------------------------------------*/
 
 /**
  * Small button

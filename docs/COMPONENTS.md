@@ -24,7 +24,7 @@ From there, call EDS components in your React application and pass in the desire
 
 ```jsx
 <Button
-  variant="primary"
+  variant="flat"
   iconName="chevron-right"
   iconPosition="after"
   text="Submit"

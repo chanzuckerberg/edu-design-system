@@ -81,7 +81,7 @@ export const TableHeaderCell: React.FC<Props> = ({
       {...other}
     >
       <Button
-        variant="table-header"
+        variant="plain"
         text={children}
         iconPosition="after"
         iconName="arrow-narrow-down"

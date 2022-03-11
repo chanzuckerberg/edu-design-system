@@ -91,7 +91,7 @@ export const Banner: React.FC<Props> = ({
       {dismissible && (
         <Button
           className={styles['banner__close-btn']}
-          variant="bare"
+          variant="plain"
           aria-label={closeButtonText}
           iconName="x"
           iconPosition="after"

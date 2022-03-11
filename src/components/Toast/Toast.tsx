@@ -79,7 +79,7 @@ export const Toast: React.FC<Props> = ({
       {dismissible && (
         <Button
           className={styles['toast__close-btn']}
-          variant="bare"
+          variant="plain"
           aria-label={closeButtonText}
           iconName="x"
           iconPosition="after"

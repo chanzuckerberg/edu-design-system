@@ -33,7 +33,7 @@ const Template: Story<Props> = (args) => (
     </StackedBlockBody>
     <StackedBlockFooter>
       <ButtonGroup>
-        <Button variant="primary" text="Primary Button" />
+        <Button variant="flat" text="Primary Button" />
         <Button text="Secondary Button" />
       </ButtonGroup>
     </StackedBlockFooter>

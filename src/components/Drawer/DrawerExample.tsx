@@ -85,7 +85,7 @@ export const DrawerExample: React.FC<Props> = ({
         </DrawerBody>
         <DrawerFooter>
           <ButtonGroup>
-            <Button variant="primary" text="Button" />
+            <Button variant="flat" text="Button" />
             <Button text="Close Drawer" onClick={closeDrawerExample} />
           </ButtonGroup>
         </DrawerFooter>

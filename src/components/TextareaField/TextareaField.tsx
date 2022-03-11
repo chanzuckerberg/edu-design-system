@@ -214,7 +214,7 @@ export const TextareaField = ({
             type="button"
             text={fieldButtonText}
             aria-label={fieldButtonAriaLabel}
-            variant="bare"
+            variant="plain"
             size="sm"
             onClick={fieldButtonOnClick}
           />

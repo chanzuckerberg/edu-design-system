@@ -47,7 +47,7 @@ export const ModalHeader: React.FC<Props> = ({
           iconPosition="before"
           iconName="x"
           aria-label={closeButtonText}
-          variant="bare"
+          variant="plain"
           onClick={onClick}
         />
       )}

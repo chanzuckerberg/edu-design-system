@@ -81,7 +81,7 @@ export const InlineForm: React.FC<Props> = ({
         placeholder={placeholder}
       />
 
-      <Button variant="primary" text={buttonText} />
+      <Button variant="flat" text={buttonText} />
     </form>
   );
 };

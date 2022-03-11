@@ -279,7 +279,7 @@ export const FileUploadField: React.FC<Props> = ({
             iconName="x"
             iconPosition="before"
             aria-label={removeFileButtonText}
-            variant="bare"
+            variant="plain"
             onClick={() => {
               onFileRemove(file.id);
             }}

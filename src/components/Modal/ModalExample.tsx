@@ -87,11 +87,7 @@ export const ModalExample: React.FC<Props> = ({
         </ModalBody>
         <ModalFooter>
           <ButtonGroup align="right">
-            <Button
-              variant="primary"
-              text="Submit"
-              onClick={closeContinueModal}
-            />
+            <Button variant="flat" text="Submit" onClick={closeContinueModal} />
             <Button text="Close" onClick={closeContinueModal} />
           </ButtonGroup>
         </ModalFooter>

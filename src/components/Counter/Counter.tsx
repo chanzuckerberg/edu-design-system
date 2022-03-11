@@ -165,7 +165,7 @@ export const Counter: React.FC<Props> = ({
       <div className={styles['counter__body']}>
         <Button
           className={styles['counter__btn']}
-          variant="bare"
+          variant="plain"
           iconPosition="after"
           iconName="minus"
           aria-label={minusButtonText}
@@ -189,7 +189,7 @@ export const Counter: React.FC<Props> = ({
         />
         <Button
           className={styles['counter__btn']}
-          variant="bare"
+          variant="plain"
           iconPosition="after"
           iconName="plus"
           aria-label={plusButtonText}

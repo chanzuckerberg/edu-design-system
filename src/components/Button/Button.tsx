@@ -13,6 +13,10 @@ export interface Props {
    */
   className?: string;
   /**
+   * Available color variations for the button
+   */
+  color?: 'alert' | 'brand' | 'neutral' | 'success' | 'warning';
+  /**
    * Disables the field and prevents editing the contents
    */
   disabled?: boolean;
@@ -78,6 +82,7 @@ export const Button = React.forwardRef(
   (
     {
       className,
+      color = 'brand',
       disabled,
       forwardRef,
       fullWidth,
@@ -110,6 +115,12 @@ export const Button = React.forwardRef(
       variant === 'outline' && styles['button--outline'],
       variant === 'link' && styles['button--link'],
       variant === 'plain' && styles['button--plain'],
+      // Colors
+      color === 'alert' && styles['button--color-alert'],
+      color === 'brand' && styles['button--color-brand'],
+      color === 'neutral' && styles['button--color-neutral'],
+      color === 'success' && styles['button--color-success'],
+      color === 'warning' && styles['button--color-warning'],
       // Other options
       inverted === true && styles['button--inverted'],
       fullWidth && styles['button--full-width'],
