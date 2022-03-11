@@ -68,7 +68,7 @@ export interface Props {
   /**
    * Available _stylistic_ variations available for the Button component
    */
-  variant?: 'primary' | 'bare' | 'link' | 'table-header';
+  variant?: 'flat' | 'outline' | 'link' | 'plain';
 }
 
 /**
@@ -90,7 +90,7 @@ export const Button = React.forwardRef(
       size = 'lg',
       text,
       type,
-      variant,
+      variant = 'flat',
       ...other
     }: Props,
     ref,
@@ -106,10 +106,10 @@ export const Button = React.forwardRef(
         size === 'lg' && styles['button--lg'],
       ],
       // Variants
-      variant === 'primary' && styles['button--primary'],
-      variant === 'bare' && styles['button--bare'],
+      variant === 'flat' && styles['button--flat'],
+      variant === 'outline' && styles['button--outline'],
       variant === 'link' && styles['button--link'],
-      variant === 'table-header' && styles['button--table-header'],
+      variant === 'plain' && styles['button--plain'],
       // Other options
       inverted === true && styles['button--inverted'],
       fullWidth && styles['button--full-width'],

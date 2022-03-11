@@ -6,30 +6,36 @@
 
 /**
  * 1) Button or link that has functionality to it
- * 2) Defaults to primary button
+ * 2) Defaults to flat button
  * 3) Margin 0 added becuase Safari has margin on the button
  */
 .button {
+  background-color: transparent;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   margin: 0; /* 3 */
   border-width: var(--eds-theme-border-width);
   border-style: solid;
-  border-color: var(--eds-theme-color-primary-border);
   border-radius: var(--eds-theme-border-radius);
-  color: var(--eds-theme-color-primary-foreground);
-  background-color: transparent;
   cursor: pointer;
   transition: all var(--eds-anim-fade-quick) var(--eds-anim-ease);
 
-  &:hover {
-    color: var(--eds-theme-color-primary-foreground-hover);
-    border-color: var(--eds-theme-color-primary-border-hover);
+  /* Default variable values */
+  --primary-color: var(--eds-color-brand-blue-600);
+  --link-color: var(--eds-color-brand-blue-700);
+  --plain-background-color: transparent;
+
+  &:hover,
+  &:focus {
+    --primary-color: var(--eds-color-brand-blue-700);
+    --link-color: var(--eds-color-brand-blue-800);
+    --plain-background-color: var(--eds-color-brand-blue-100);
   }
 
-  &:focus {
-    background-color: transparent;
+  &:active {
+    --primary-color: var(--eds-color-brand-blue-800);
+    --plain-background-color: var(--eds-color-brand-blue-600);
   }
 
   &:focus-visible {
@@ -40,18 +46,15 @@
    * Disabled buttons
    */
   &:disabled {
-    background: transparent;
-    border-color: var(--eds-theme-color-disabled-border);
-    color: var(--eds-theme-color-disabled-foreground);
     cursor: not-allowed;
+    --primary-color: var(--eds-color-neutral-300);
+    --plain-background-color: transparent;
 
     /* stylelint-disable-next-line max-nesting-depth */
     &:hover,
     &:focus {
-      background: transparent;
-      border-color: var(--eds-theme-color-disabled-border);
-      color: var(--eds-theme-color-disabled-foreground);
-      transform: none;
+      --primary-color: var(--eds-color-neutral-300);
+      --plain-background-color: transparent;
     }
   }
 
@@ -75,35 +78,40 @@
  * 1) Prominent button styles that should be applied to
  *    the most important action of a page.
  */
-.button--primary {
-  border-color: var(--eds-theme-color-primary-border);
-  background-color: var(--eds-theme-color-primary-background);
+.button--flat {
+  border-color: var(--primary-color);
+  background-color: var(--primary-color);
   color: var(--eds-theme-color-body-foreground-inverted);
+}
 
-  &:hover {
-    background-color: var(--eds-theme-color-primary-background-hover);
+/**
+ * Outline Button
+ * 1) A button with less visual emphasis than flat
+ */
+ .button--outline {
+  background-color: transparent;
+
+  border-color: var(--link-color);
+  color: var(--link-color);
+
+  &:hover,
+  &.stateHover,
+  &:focus,
+  &.stateFocus,
+  &:active,
+  &.stateActive {
     color: var(--eds-theme-color-body-foreground-inverted);
+
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
   }
 
-  &:focus {
-    background-color: var(--eds-theme-color-primary-background-hover);
-    color: var(--eds-theme-color-body-foreground-inverted);
-  }
-
-  &:focus-visible {
-    @mixin focus;
-  }
-
+  /* override the hover/focus/active values */
   &:disabled {
-    background-color: var(--eds-theme-color-disabled-background);
-    border-color: var(--eds-theme-color-disabled-border);
-    color: var(--eds-theme-color-disabled-foreground);
-    /* stylelint-disable-next-line max-nesting-depth */
-    &:hover {
-      background-color: var(--eds-theme-color-disabled-background);
-      border-color: var(--eds-theme-color-disabled-border);
-      color: var(--eds-theme-color-disabled-foreground);
-    }
+    background-color: transparent;
+
+    border-color: var(--primary-color);
+    color: var(--primary-color);
   }
 
   /**
@@ -124,19 +132,33 @@
 /**
  * Link Button
  * 1) A button that is visually styled like a text link
+ * 2) Intended to be used inline with other text, it's size is dependent
+ *    on context, not on the size prop
  */
 .button--link {
-  @mixin textLink;
-  align-items: flex-start;
   padding: 0;
-  border: 0;
-  border-radius: 0;
-  text-align: left;
-  background-color: transparent;
+  border: none;
+  text-decoration: underline;
+  
+  font-size: inherit; /* 2 */
+  line-height: inherit; /* 2 */
+  text-transform: inherit; /* 2 */
+
+  color: var(--link-color);
 
   &:hover,
   &:focus {
-    background-color: transparent;
+    text-decoration-thickness: 2px;
+  }
+
+  &:active,
+  &:disabled {
+    color: var(--primary-color);
+  }
+
+  /* override the hover/focus values */
+  &:disabled {
+    text-decoration-thickness: auto;
   }
 
   /**
@@ -148,19 +170,34 @@
 }
 
 /**
- * Bare Button
- * 1) A button that strips out borders, backgrounds, etc
- * 2) Use for Close "X" buttons, tooltip icons, and other
+ * Plain Button
+ * 1) A button that strips out borders, backgrounds, underline, etc
+ * 2) Use for icons
  */
-.button--bare {
-  background-color: transparent;
-  border: 0;
-  padding: 0;
+.button--plain {
+  color: var(--link-color);
+  border-color: var(--plain-background-color);
+  background-color: var(--plain-background-color);
 
   &:hover,
-  &:focus {
-    color: var(--eds-theme-color-primary-foreground-hover);
-    background-color: transparent;
+  &.stateHover,
+  &:focus,
+  &.stateFocus {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+  }
+
+  &:active,
+  &.stateActive {
+    color: var(--eds-theme-color-body-foreground-inverted);
+
+    border-color: var(--plain-background-color);
+  }
+
+  &:disabled {
+    border-color: transparent;
+
+    color: var(--primary-color);
   }
 
   /**
