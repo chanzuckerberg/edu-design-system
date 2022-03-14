@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Toast /> Alert story renders snapshot 1`] = `
+<div
+  class="toast"
+>
+  <div
+    class="toast--content"
+  >
+    <p>
+      You've got toast!
+    </p>
+     
+  </div>
+</div>
+`;
+
+exports[`<Toast /> NotDismissable story renders snapshot 1`] = `
+<div
+  class="toast"
+>
+  <div
+    class="toast--content"
+  >
+    <p>
+      You've got toast!
+    </p>
+     
+  </div>
+</div>
+`;
+
+exports[`<Toast /> Success story renders snapshot 1`] = `
+<div
+  class="toast"
+>
+  <div
+    class="toast--content"
+  >
+    <p>
+      You've got toast!
+    </p>
+     
+  </div>
+</div>
+`;
