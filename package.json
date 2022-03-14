@@ -45,7 +45,6 @@
     "react": ">= 16.8.0"
   },
   "dependencies": {
-    "@chanzuckerberg/eds-components": "^0.8.1",
     "clsx": "^1.1.1",
     "downshift": "^6.1.7",
     "nanoid": "^3.3.1",

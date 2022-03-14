@@ -1,7 +1,7 @@
 /* TODO: point to internal exports once fully migrated */
-import { Text, CloseButton } from '@chanzuckerberg/eds-components';
-import colorStyles from '@chanzuckerberg/eds-components/lib/common/Notifications/Notification.module.css';
-import NotificationIcon from '@chanzuckerberg/eds-components/lib/common/Notifications/NotificationIcon';
+// import { Text, CloseButton } from '@chanzuckerberg/eds';
+// import colorStyles from '@chanzuckerberg/eds/lib/common/Notifications/Notification.module.css';
+// import NotificationIcon from '@chanzuckerberg/eds/lib/common/Notifications/NotificationIcon';
 
 import clsx from 'clsx';
 import React from 'react';
@@ -51,19 +51,23 @@ export const Toast = ({
       className={clsx(
         className,
         styles.toast,
-        /* TODO: point to corresponding style classes once Notifications is fully migrated */
-        variant === 'success' && colorStyles.colorSuccess,
-        variant === 'alert' && colorStyles.colorAlert,
+        /* TODO: uncomment and point to corresponding style classes once Notifications is fully migrated */
+        // variant === 'success' && colorStyles.colorSuccess,
+        // variant === 'alert' && colorStyles.colorAlert,
       )}
       {...rest}
     >
       <div className={styles['toast--content']}>
-        <NotificationIcon variant={variant} />
+        {/* TODO: point to internal Text and NotificaitonIcon once fully migrated */}
+        {/* <NotificationIcon variant={variant} />
         <Text color="inherit" size="sm">
           {text}
-        </Text>
+        </Text> */}
+        <p>{text}</p> {/* replace this */}
       </div>
-      {onDismiss && <CloseButton color={variant} onClose={onDismiss} />}
+      {/* TODO: point to internal CloseButton once fully migrated */}
+      {/* {onDismiss && <CloseButton color={variant} onClose={onDismiss} />} */}
+      {onDismiss && <button onClick={onDismiss}>temp close tooltip</button>}
     </div>
   );
 };
