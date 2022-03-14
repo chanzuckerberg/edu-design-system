@@ -36,7 +36,6 @@ DefaultWithTooltip.args = {
         variant="bare"
         iconPosition="after"
         iconName="question-mark-circle"
-        aria-label="Hover this button to trigger the tooltip"
         text="Hover this button to trigger the tooltip"
       />
     </Tooltip>
