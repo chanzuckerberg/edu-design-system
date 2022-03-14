@@ -9,10 +9,6 @@ export interface Props {
    */
   'aria-label'?: string;
   /**
-   * Button reference
-   */
-  buttonRef?: any;
-  /**
    * CSS class names that can be appended to the component.
    */
   className?: string;
@@ -20,6 +16,10 @@ export interface Props {
    * Disables the field and prevents editing the contents
    */
   disabled?: boolean;
+  /**
+   * Button reference
+   */
+  forwardRef?: any;
   /**
    * Toggles button that fills the full width of its container
    */
@@ -77,20 +77,20 @@ export interface Props {
 export const Button = React.forwardRef(
   (
     {
-      buttonRef,
       className,
-      variant,
-      size,
       disabled,
+      forwardRef,
       fullWidth,
+      href,
       iconName,
       iconPosition = 'before',
       inverted,
       loading,
       onClick,
-      href,
+      size,
       text,
       type,
+      variant,
       ...other
     }: Props,
     ref,
@@ -136,12 +136,16 @@ export const Button = React.forwardRef(
         href={href}
         disabled={disabled}
         tabIndex={disabled ? -1 : undefined}
-        ref={buttonRef || ref}
+        ref={forwardRef || ref}
         type={type}
         onClick={onClick}
         {...other}
       >
-        {text}
+        {iconPosition === 'before' && computedIcon}
+
+        {text && <span className={styles['button__text']}>{text}</span>}
+
+        {iconPosition === 'after' && computedIcon}
       </TagName>
     );
   },
