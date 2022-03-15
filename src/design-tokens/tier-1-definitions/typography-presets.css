@@ -121,6 +121,7 @@
   font-family: var(--eds-font-family-tertiary) $important;
   font-weight: var(--eds-font-weight-regular) $important;
   font-size: var(--eds-font-size-sm) $important;
+  /* TODO: add this to line height variables */
   line-height: var(--eds-size-2-and-half) $important;
   letter-spacing: normal $important;
 }
@@ -134,6 +135,7 @@
   font-family: var(--eds-font-family-tertiary) $important;
   font-weight: var(--eds-font-weight-regular) $important;
   font-size: var(--eds-font-size-xs) $important;
+  /* TODO: add this to line height variables */
   line-height: var(--eds-size-1-and-half) $important;
   letter-spacing: normal $important;
 }
