@@ -21,19 +21,6 @@ Default.args = {
   plusButtonText: 'Add by 1',
 };
 
-/* TODO: replace <ForwardRefButton> with EDS button since it's already using forwardRef */
-const ForwardRefButton = React.forwardRef((props, ref) => (
-  <Button
-    variant="plain"
-    iconPosition="after"
-    iconName="question-mark-circle"
-    aria-label="Hover this button to trigger the tooltip"
-    text="Hover this button to trigger the tooltip"
-    buttonRef={ref}
-  />
-));
-ForwardRefButton.displayName = 'ForwardRefButton';
-
 export const DefaultWithTooltip = Template.bind({});
 DefaultWithTooltip.args = {
   value: 1,
@@ -46,7 +33,7 @@ DefaultWithTooltip.args = {
   labelAfter: (
     <Tooltip text="Some text to help with a form field">
       <Button
-        variant="plain"
+        variant="bare"
         iconPosition="after"
         iconName="question-mark-circle"
         text="Hover this button to trigger the tooltip"
