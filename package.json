@@ -9,6 +9,7 @@
   "scripts": {
     "build": "NODE_ENV=production yarn workspaces foreach --interlaced --parallel --topological --verbose run build",
     "build:clean": "yarn workspaces foreach --exclude eds-tokens run build:clean",
+    "build:tokens": "node ./style-dictionary.config.js",
     "create-component": "plop",
     "create-releases": "yarn create-releases:conventional patch",
     "create-releases:alpha": "yarn create-releases:conventional --preid alpha prerelease",
@@ -68,6 +69,7 @@
     "plop": "^3.0.5",
     "prettier": "^2.5.1",
     "size-limit": "^4.12.0",
+    "style-dictionary": "^3.7.0",
     "stylelint": "^14.5.3",
     "stylelint-config-standard": "^25.0.0",
     "typescript": "^4.5.5"
