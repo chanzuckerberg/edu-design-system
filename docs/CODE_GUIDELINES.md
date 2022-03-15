@@ -425,9 +425,7 @@ Finally, the `return` statement contains the JSX markup for the component and ap
 
 ```tsx
 return (
-  <div className={componentClassName} {...other}>
-    
-  </div>
+  <div className={componentClassName} {...other} />
 );
 ```
 
