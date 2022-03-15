@@ -470,12 +470,13 @@ EDS adheres to the following API naming conventions:
 
 - `variant` should be used for primary _stylistic_ variations of a component, such as (e.g. `<Card variant="bordered">` or `<Button variant="secondary">`). `variant` should be used if there is primarily one variable used to manipulate the component style.
 - `inverted` should be used consistently for stylistic `variation`s that "invert" the color schemes (e.g. `inverted=true`) to work on a darker background.
-- `size` should be used for adjusting size attributes (e.g. `<Button variant="secondary" size="sm">` or `<Button size="lg"`>). Default to `sm` and `lg`, with "md" being the default.
-- `behavior` should be used for functional variations of a pattern, such as `<Banner behavior="dismissable">`. Additional non-exclusive behaviors should be handled using boolean props prefixed with `is` (e.g. `isSticky` and `isDismissable`).
+- `size` should be used for adjusting size attributes (e.g. `<Button variant="secondary" size="sm">` or `<Button size="md"`>). Use abbreviations for sizes (ex: `xs`, `sm`, `md`, `lg`).
+- `behavior` should be used for funcitonal variations of a pattern, such as `<Banner behavior="dismissable">`. Additional non-exclusive behaviors should be handled using boolean props prefixed with `is` (e.g. `isSticky` and `isDismissable`).
 - `orientation` should be used for controlling the layout or orientation of a component (e.g. `<ButtonGroup orientation="stacked">`)
 - `disabled` boolean should be used to control the interactivity of a component (e.g. `<Button disabled={true} />`)
 - `align` should be used for aligning content, and should include `left` (default), `center`, `right` if needed.
 - `verticalAlign` should be used for vertically aligning content, and should include `top`, `middle`, `bottom` if needed.
+- The default option should be the one most commonly used in order to reduce friction for developers using the components.
 
 ### Text, Labels, Titles
 
