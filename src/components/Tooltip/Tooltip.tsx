@@ -1,140 +1,123 @@
+import Tippy from '@tippyjs/react';
 import clsx from 'clsx';
-import React, {
-  ReactNode,
-  useState,
-  useRef,
-  useEffect,
-  MutableRefObject,
-} from 'react';
+import * as React from 'react';
 import styles from './Tooltip.module.css';
-import { ESCAPE_KEYCODE, TAB_KEYCODE } from '../../util/keycodes';
-import { Button } from '../Button/Button';
 
-export interface Props {
+// Full list of Tippy props: https://atomiks.github.io/tippyjs/v6/all-props/
+type TooltipProps = {
   /**
-   * Alignment variations
-   * - **right** yields a tooltip that appears to the right of the trigger
-   * - **below** yields a tooltip that appears below the trigger
-   * - **left** yields a tooltip that appears to the left of the trigger
+   * Where the tooltip should be placed in relation to the element it's attached to.
+   *
+   * Tippy also supports 'top-start', 'top-end', 'right-start', 'right-end', etc,
+   * but our CSS currently only supports the 4 main sides.
    */
-  align?: 'right' | 'below' | 'left';
+  align?: 'top' | 'right' | 'bottom' | 'left';
   /**
-   * The visually-hidden button text for the tooltip trigger button
+   * Behavior of the tooltip transition, defaults to an opacity "fade".
+   * Animation guidelines are provided in https://atomiks.github.io/tippyjs/v5/animations/.
+   * A false value will disable animations.
    */
-  buttonText?: string;
+  animation?: string | boolean;
   /**
-   * Child node(s) that can be nested inside component. This gets displayed inside a `TextPassage` inside the tooltip
+   * The trigger element the tooltip appears next to.
    */
-  children?: ReactNode;
+  children?: React.ReactElement;
   /**
-   * CSS class names that can be appended to the component.
+   * Custom classname for additional styles.
+   *
+   * These styles will only affect the tooltip bubble.
    */
   className?: string;
   /**
-   * HTML id for the component
+   * How long to delay the Tooltip showing and hiding, in milliseconds.
+   *
+   * If a single number is provided, it will be applied to showing and hiding.
+   * If an array with 2 numbers is provided, the first will apply to showing and
+   * the second will be applied to hiding.
+   * https://atomiks.github.io/tippyjs/v6/all-props/#delay
    */
-  id?: string;
-}
+  delay?: number | [number | null, number | null];
+  /**
+   * The trigger element the tooltip appears next to.
+   *
+   * Use this instead of `children` if the trigger element is being
+   * stored in a ref. Most cases will use `children` and not
+   * `reference`.
+   */
+  reference?: React.RefObject<Element> | Element;
+  /**
+   * The content of the tooltip bubble.
+   */
+  text?: React.ReactNode;
+  /**
+   * Whether the tooltip has a light or dark background.
+   */
+  variant?: 'light' | 'dark';
+  /**
+   * Whether the tooltip is always visible or always invisible.
+   *
+   * This is most often left undefined so the Tooltip component
+   * controls if/when the bubble appears (on hover, click, focus, etc).
+   */
+  visible?: boolean;
+};
+
+// @tippyjs/react does not expose tippy.js types, have to extract via props and grab element type from array type
+type Plugins = NonNullable<React.ComponentProps<typeof Tippy>['plugins']>;
+type Plugin = Plugins[number];
 
 /**
- * Primary UI component for user interaction
+ * ```ts
+ * import {Tooltip} from "@chanzuckerberg/eds-components";
+ * ```
+ *
+ * A styled tooltip built on Tippy.js.
+ *
+ * https://atomiks.github.io/tippyjs/
+ * https://github.com/atomiks/tippyjs-react
  */
-export const Tooltip: React.FC<Props> = ({
+export const Tooltip = ({
+  variant = 'light',
+  align = 'top',
   className,
-  children,
-  align,
-  buttonText,
-  ...other
-}) => {
-  /**
-   * Initialize variables and states
-   */
-  const ref = useRef() as MutableRefObject<HTMLDivElement>;
-  const buttonRef = useRef() as MutableRefObject<HTMLButtonElement>;
-
-  const [isActive, setIsActive] = useState(false);
-
-  /**
-   * Toggle isActive state on click
-   */
-  function onClick(e: any) {
-    e.preventDefault();
-    setIsActive(!isActive);
-  }
-
-  useEffect(() => {
-    if (isActive) {
-      ref.current.focus();
-    }
-    document.addEventListener('mousedown', handleOnClickOutside, false);
-    document.addEventListener('touchstart', handleOnClickOutside, false);
-    return () => {
-      document.removeEventListener('mousedown', handleOnClickOutside, false);
-      document.removeEventListener('touchstart', handleOnClickOutside, false);
-    };
-  });
-
-  const handleOnClickOutside = (event: MouseEvent | TouchEvent) => {
-    if (
-      ref.current &&
-      !ref.current.contains(event.target as HTMLElement) &&
-      buttonRef.current &&
-      !buttonRef.current.contains(event.target as HTMLElement)
-    ) {
-      setIsActive(false);
-      setTimeout(() => {
-        if (isActive) {
-          buttonRef.current.focus();
+  text,
+  ...rest
+}: TooltipProps) => {
+  // Hides tooltip when escape key is pressed, following:
+  // https://atomiks.github.io/tippyjs/v6/plugins/#hideonesc
+  const hideOnEsc: Plugin = {
+    name: 'hideOnEsc',
+    defaultValue: true,
+    fn: ({ hide }) => {
+      function onKeyDown(event: KeyboardEvent) {
+        if (event.key === 'Escape') {
+          hide();
         }
-      }, 1);
-    }
+      }
+      return {
+        onShow() {
+          document.addEventListener('keydown', onKeyDown);
+        },
+        onHide() {
+          document.removeEventListener('keydown', onKeyDown);
+        },
+      };
+    },
   };
-
-  /**
-   * Handle Keydown
-   * 1) Remove isActive state and focus on the tooltip button
-   */
-  function onKeyDown(e: any) {
-    if (e.code === ESCAPE_KEYCODE || e.code === TAB_KEYCODE) {
-      setIsActive(false);
-      setTimeout(() => {
-        if (isActive) {
-          buttonRef.current.focus();
-        }
-      }, 1);
-    }
-  }
-  const componentClassName = clsx(styles['tooltip'], className, {
-    [styles['eds-is-active']]: isActive,
-    [styles['tooltip--right']]: align === 'right',
-    [styles['tooltip--below']]: align === 'below',
-    [styles['tooltip--left']]: align === 'left',
-  });
-
   return (
-    <div className={componentClassName} {...other}>
-      <span className={styles['tooltip__trigger']}>
-        <Button
-          variant="bare"
-          hideText
-          iconPosition="after"
-          iconName="question-mark-circle"
-          aria-label={buttonText}
-          text={buttonText}
-          type="button"
-          onClick={onClick}
-          buttonRef={buttonRef}
-        />
-      </span>
-      <span
-        ref={ref}
-        className={styles['tooltip__content']}
-        aria-hidden={!isActive}
-        tabIndex={isActive ? 0 : -1}
-        onKeyDown={onKeyDown}
-      >
-        {children}
-      </span>
-    </div>
+    <Tippy
+      {...rest}
+      className={clsx(
+        styles['tooltip'],
+        className,
+        variant === 'light' && styles['tooltip--light'],
+        variant === 'dark' && styles['tooltip--dark'],
+      )}
+      content={text}
+      duration={200}
+      placement={align}
+      plugins={[hideOnEsc]}
+    />
   );
 };
+export default Tooltip;
