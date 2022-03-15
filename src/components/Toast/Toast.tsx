@@ -44,7 +44,7 @@ export const Toast = ({
   variant,
   onDismiss,
   // Allow for additional attributes such as aria roles
-  ...rest
+  ...other
 }: Props) => {
   return (
     <div
@@ -55,7 +55,7 @@ export const Toast = ({
         // variant === 'success' && colorStyles.colorSuccess,
         // variant === 'alert' && colorStyles.colorAlert,
       )}
-      {...rest}
+      {...other}
     >
       <div className={styles['toast--content']}>
         {/* TODO: point to internal Text and NotificaitonIcon once fully migrated */}
