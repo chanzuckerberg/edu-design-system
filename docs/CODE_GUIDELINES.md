@@ -379,8 +379,8 @@ interface UserData {
 }
 
 enum Roles {
-  "Anonymous" = ANONYMOUS 
-  "Authenticated" = AUTHENTICATED,
+  ANONYMOUS = "Anonymous",
+  AUTHENTICATED = "Authenticated",
 }
 
 ```
