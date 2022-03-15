@@ -1,12 +1,51 @@
 @import '../../design-tokens/mixins.css';
 
 /*------------------------------------*\
-    #TEXT
+    #Text
 \*------------------------------------*/
 
 /**
- * 1) 
+ * 1) h1, h2, h3, h4, h5, h6
+ * 2) Styles are either controlled by as or size declaration
  */
-/* stylelint-disable-next-line block-no-empty */
-.text {
+.text,
+.text--body {
+  @mixin reset;
+  
+  @mixin eds-theme-typography-body-text;
 }
+
+/**
+ * Sizes
+ */
+.text--h1 {
+  @mixin eds-theme-typography-heading-1;
+}
+.text--h2 {
+  @mixin eds-theme-typography-heading-2;
+}
+.text--h3 {
+  @mixin eds-theme-typography-heading-3;
+}
+.text--h4 {
+  @mixin eds-theme-typography-heading-4;
+}
+.text--h5 {
+  @mixin eds-theme-typography-heading-5;
+}
+.text--sm {
+  @mixin eds-theme-typography-body-text-sm;
+}
+.text--xs {
+  @mixin eds-theme-typography-body-text-xs;
+}
+.text--caption {
+  @mixin eds-theme-typography-caption;
+}
+.text--overline {
+  @mixin eds-theme-typography-overline;
+}
+
+/**
+ * Weights
+ */

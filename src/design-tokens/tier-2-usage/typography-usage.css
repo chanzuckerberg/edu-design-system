@@ -100,3 +100,12 @@
 @define-mixin eds-theme-typography-tag $important {
    @mixin eds-typography-preset-6 $important;
 }
+
+@define-mixin eds-theme-typography-caption $important {
+   @mixin eds-typography-preset-7 $important;
+}
+
+@define-mixin eds-theme-typography-overline $important {
+   @mixin eds-typography-preset-7 $important;
+   text-transform: uppercase $important;
+}

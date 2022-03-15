@@ -1,37 +1,65 @@
-import clsx from 'clsx';
-import React, { ReactNode } from 'react';
-import styles from './Text.module.css';
+import React from 'react';
 
-export interface Props {
+export type Size =
+  | 'h1'
+  | 'h2'
+  | 'h3'
+  | 'h4'
+  | 'h5'
+  | 'body'
+  | 'sm'
+  | 'xs'
+  | 'caption'
+  | 'overline';
+
+export type Color =
+  | 'alert'
+  | 'base'
+  | 'brand'
+  | 'yellow'
+  | 'info'
+  | 'inherit'
+  | 'neutral'
+  | 'success'
+  | 'warning'
+  | 'white';
+
+export type Props = {
   /**
-   * The rendered tag name of the Heading. The tag name should always relate to the [document outline](http://html5doctor.com/outlines/) and a tag name should never be chosen for its default aesthetic qualities. If a specific style is desired, use the `size` prop to manipulate the Heading style.
+   * Controls whether to render text inline (defaults to "p");
    */
-  as: 'p' | 'span';
-  /**
-   * The child node(s)
-   */
-  children?: ReactNode;
-  /**
-   * CSS class names that can be appended to the component.
-   */
+  as?: 'p' | 'span';
+  text: React.ReactNode;
   className?: string;
-}
+  color?: Color;
+  size?: Size;
+  spacing?: 'none' | 'half' | '1x' | '2x';
+  tabIndex?: number;
+  weight?: 'bold' | 'normal' | null;
+} & React.HTMLAttributes<HTMLElement>;
 
 /**
- * Primary UI component for user interaction
+ * ```ts
+ * import {Text} from "@chanzuckerberg/eds";
+ * ```
  */
-export const Text: React.FC<Props> = ({
+export const Text = ({
   as = 'p',
-  className,
-  children,
-  ...other
-}) => {
-  const componentClassName = clsx(styles['text'], className, {});
+  text,
+  size = 'body',
+  /**
+   * Components that wrap typography sometimes requires props such as event handlers
+   * to be passed down into the element. One example is the tooltip component.  It
+   * attaches a onHover and onFocus event to the element to determine when to
+   * trigger the overlay.
+   */ ...rest
+}: Props) => {
   const TagName = as;
-
   return (
-    <TagName className={componentClassName} {...other}>
-      {children}
+    <TagName size={size} {...rest}>
+      {text}
     </TagName>
   );
 };
+
+export default Text;
