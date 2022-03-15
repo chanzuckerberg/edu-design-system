@@ -88,7 +88,7 @@ Here's another example:
 
 ### CSS Nesting
 
-EDS uses [PostCSS Nested](https://github.com/postcss/postcss-nested) to provide some developer ergononics. As a general principle, nesting should be used sparingly and is only used in the following situations:
+EDS uses [PostCSS Nested](https://github.com/postcss/postcss-nested) to provide some developer ergonomics. As a general principle, nesting should be used sparingly and is only used in the following situations:
 
 - Media queries
 - States and pseudo-selectors
@@ -127,7 +127,7 @@ EDS uses [PostCSS Nested](https://github.com/postcss/postcss-nested) to provide 
 
 #### Parent selectors
 
-Use [parent selectors](https://sass-lang.com/documentation/style-rules/parent-selector) to target a selector when it appears inside a specific parent element. Use parent selectors instead of child selectors in order to co-locate all styles around a specific selector, which improves maintability and findability.
+Use [parent selectors](https://sass-lang.com/documentation/style-rules/parent-selector) to target a selector when it appears inside a specific parent element. Use parent selectors instead of child selectors in order to co-locate all styles around a specific selector, which improves maintainability and findability.
 
 Use the following conventions:
 
@@ -188,7 +188,7 @@ For example:
 }
 ```
 
-Not all CSS declarations warrant a comment, but non-obvious declarations (like context-specific styles, magic numbers, or styles dependant on other selector styles) should be accompanied by a comment.
+Not all CSS declarations warrant a comment, but non-obvious declarations (like context-specific styles, magic numbers, or styles dependent on other selector styles) should be accompanied by a comment.
 
 ### Other CSS Rules
 
@@ -261,7 +261,7 @@ Please refer to the [design tokens documentation](./TOKENS.md) to learn how to u
 
 - **Presentational Components Only** - EDS provides a library of reusable [presentational UI components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0) that are consumed by CZI applications. These presentational components are "dumb" and don't contain any application business logic and aren't hooked up to any data models.
 - **Predictable APIs** - EDS provides consistent, clear [component APIs](#component-naming) in order to provide a consistent and intuitive user developer experience.
-- **Composition over inheritence** EDS adheres to the [composition over inheritence](https://en.wikipedia.org/wiki/Composition_over_inheritance) principle in order to create clean, extensible components that aren't tied to specific contexts or content.
+- **Composition over inheritance** EDS adheres to the [composition over inheritance](https://en.wikipedia.org/wiki/Composition_over_inheritance) principle in order to create clean, extensible components that aren't tied to specific contexts or content.
 
 ## JavaScript Tools <a name="js-tools"></a>
 
@@ -321,7 +321,8 @@ export interface Props {
   ...
 }
 ```
-  All component props must be defined with appropriate [TypeScript type](https://www.typescriptlang.org/docs/handbook/basic-types.html) applied. Each type defined in props and state must contain a comment above the type declaration to document its function. These comments and declarations are automatically converted into prop documentation in Storybook. As a general guideline, try to organize types alphabetically.
+
+All component props must be defined with appropriate [TypeScript type](https://www.typescriptlang.org/docs/handbook/basic-types.html) applied. Each prop must contain a comment above the prop declaration to document the prop's function. These comments and prop declarations are automatically converted into prop documentation in Storybook. As a general guideline, try to organize component prop definitions alphabetically.
 
 ### Export module
 
@@ -335,7 +336,8 @@ export const ComponentName = ({
   ...
 }
 ```
-This defines the component name and passses in all the `Props`.
+
+This defines the component name and passes in all the `Props`.
 
 ### Children
 When a component uses `children` as a prop, use the type `React.ReactNode` unless context dictates otherwise, including `ReactNode` as a named import.
@@ -439,7 +441,7 @@ Components in this library exist in a flat structure so each component directory
 
 Certain components (such as `<Tabs />` and `<Table />`) require splitting up into smaller subcomponents.
 
-By default, we err towards more centralized control over the component architecture in order to prevent undesired results (for instance, we don't want users to put a `<Card />` inside of `<Breadcrumbs />`). However, certain components will require more flexibility and will therefore be architected to be composible and flexible (such as `<Card>`).
+By default, we err towards more centralized control over the component architecture in order to prevent undesired results (for instance, we don't want users to put a `<Card />` inside of `<Breadcrumbs />`). However, certain components will require more flexibility and will therefore be architected to be composable and flexible (such as `<Card>`).
 
 #### Conventions for compound components
 
@@ -459,17 +461,17 @@ By default, we err towards more centralized control over the component architect
 EDS follows specific front-end API naming conventions. Authoring a consistent API language provides many benefits:
 
 - **More efficient development** - Because the API language is consistent across components, user developers can spend more time coding rather than reading API documentation. Also, library contributors don't have to think as much about component API naming when creating new components/variants.
-- **Shared vocuabulary between designers and developers** - When the code library and design library use the same language, designers and developers can spend more time collaborating rather than futzing over what things are named. This improves team velocity and product quality. It also positions the team to benefit from future tooling that can bring design and code closer together (something many startups and plugins are trying to solve right now!)
+- **Shared vocabulary between designers and developers** - When the code library and design library use the same language, designers and developers can spend more time collaborating rather than futzing over what things are named. This improves team velocity and product quality. It also positions the team to benefit from future tooling that can bring design and code closer together (something many startups and plugins are trying to solve right now!)
 - **Future changes** - Utilizing a consistent language means that future changes and improvements are as easy as find-and-replace.
 
-EDS adhreres to the following API naming conventions:
+EDS adheres to the following API naming conventions:
 
 ### Variants
 
 - `variant` should be used for primary _stylistic_ variations of a component, such as (e.g. `<Card variant="bordered">` or `<Button variant="secondary">`). `variant` should be used if there is primarily one variable used to manipulate the component style.
 - `inverted` should be used consistently for stylistic `variation`s that "invert" the color schemes (e.g. `inverted=true`) to work on a darker background.
 - `size` should be used for adjusting size attributes (e.g. `<Button variant="secondary" size="sm">` or `<Button size="lg"`>). Default to `sm` and `lg`, with "md" being the default.
-- `behavior` should be used for funcitonal variations of a pattern, such as `<Banner behavior="dismissable">`. Additional non-exclusive behaviors should be handled using boolean props prefixed with `is` (e.g. `isSticky` and `isDismissable`).
+- `behavior` should be used for functional variations of a pattern, such as `<Banner behavior="dismissable">`. Additional non-exclusive behaviors should be handled using boolean props prefixed with `is` (e.g. `isSticky` and `isDismissable`).
 - `orientation` should be used for controlling the layout or orientation of a component (e.g. `<ButtonGroup orientation="stacked">`)
 - `align` should be used for aligning content, and should include `left` (default), `center`, `right` if needed.
 - `verticalAlign` should be used for vertically aligning content, and should include `top`, `middle`, `bottom` if needed.
@@ -478,7 +480,7 @@ EDS adhreres to the following API naming conventions:
 
 - Default to `text` for strings of text, such as `<Button text="First Name">`.
 - For headings, default to `title`, such as `<PageHeader title="My Page Title">`.
-- For form-related comnp, use the semantic `label` or `legend` (e.g. `<TextField label="first name" />`).
+- For form-related component, use the semantic `label` or `legend` (e.g. `<TextField label="first name" />`).
 
 ### Tag name
 
