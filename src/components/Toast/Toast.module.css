@@ -1,4 +1,15 @@
-.toast {
+/*------------------------------------*\
+    # TOAST
+\*------------------------------------*/
+
+/**
+ * 1) Message of information, success, caution, or warning to the user
+ * 2) Container for the toast content, to provide background styling
+ * 3) The thick left border operates as a foreground band of color, 
+ *    so foreground rather than border is used
+ */
+
+ .toast { /* 2 */
   width: 100%;
   max-width: 25rem;
 
@@ -11,7 +22,7 @@
   align-items: center;
   
   border: var(--eds-border-width-sm);
-  border-left-width: var(--eds-border-width-lg);
+  border-left-width: var(--eds-border-width-lg); /* 3 */
   border-radius: var(--eds-size-half);
 
   border-color: var(--border-light-color);
@@ -21,6 +32,13 @@
   --svg-icon-size-default: 1.25rem;
 }
 
+/**
+ * 1) Message of information, success, caution, or warning to the user
+ * 2) Container for the toast content, to provide background styling
+ * 3) The thick left border operates as a foreground band of color, 
+ *    so foreground rather than border is used
+ */
+ 
 .toast--content {
   padding-top: var(--eds-size-2);
   padding-bottom: var(--eds-size-2);
