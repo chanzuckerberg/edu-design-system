@@ -221,7 +221,7 @@
 }
 
 /**
-  * Brand button
+  * Alert button
   */
 .button--color-alert {
   --primary-color: var(--eds-color-other-red-600);
