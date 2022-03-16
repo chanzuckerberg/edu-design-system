@@ -4,11 +4,11 @@
 
 Note: We may have another icon that fits your need that is already supported. Please check with us first to verify we want to add the icon to our set.
 
-To add a new Material UI icon, make a new file in the icons folder (like [ArrowDownwardRounded.tsx](https://github.com/chanzuckerberg/edu-design-system/blob/main/packages/components/src/Icons/ArrowDownwardRounded.tsx)) and paste in the path for your icon. You can find the paths of all Material UI icons here: https://github.com/mui-org/material-ui/tree/53a1655143aa4ec36c29a6063ccdf89c48a74bfd/packages/material-ui-icons/src (be sure to get the rounded version).
+To add a new Material UI icon, make a new file in the icons folder (like [ArrowDownwardRounded.tsx](https://github.com/chanzuckerberg/edu-design-system/blob/main/src/components/Icons/ArrowDownwardRounded.tsx)) and paste in the path for your icon. You can find the paths of all Material UI icons here: https://github.com/mui-org/material-ui/tree/53a1655143aa4ec36c29a6063ccdf89c48a74bfd/packages/material-ui-icons/src (be sure to get the rounded version).
 
-If you're adding an icon that does not come from Material UI, please place it in the [custom folder](https://github.com/chanzuckerberg/edu-design-system/tree/main/packages/components/src/Icons/custom).
+If you're adding an icon that does not come from Material UI, please place it in the [custom folder](https://github.com/chanzuckerberg/edu-design-system/tree/main/src/components/Icons/custom).
 
-Then add the following line of code to the [Icons index file](https://github.com/chanzuckerberg/edu-design-system/blob/main/packages/components/src/Icons/index.ts) for documentation in Storybook in sorted order:
+Then add the following line of code to the [Icons index file](https://github.com/chanzuckerberg/edu-design-system/blob/main/src/components/Icons/index.ts) for documentation in Storybook in sorted order:
 
 ```tsx
 export { default as <IconName>Icon } from "./<IconName>.jsx";
@@ -21,7 +21,7 @@ You can add one-off icons directly into your components by importing the generic
 ```tsx
 import SvgIcon from '@chanzuckerberg/eds-components/lib/SvgIcon';
 ...
-<SvgIcon 
+<SvgIcon
   purpose="informative"
   title="a meaningful title, otherwise you can use purpose='decorative'"
 >

@@ -19,6 +19,6 @@
     "suppressImplicitAnyIndexErrors": true,
     "target": "es6"
   },
-  "include": ["src/index.ts", "src/css-modules.d.ts"],
+  "include": ["src", "css-modules.d.ts"],
   "exclude": ["node_modules", "lib"]
 }
