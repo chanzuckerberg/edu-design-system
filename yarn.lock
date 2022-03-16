@@ -1593,6 +1593,7 @@ __metadata:
     "@commitlint/cli": ^16.2.1
     "@commitlint/config-conventional": ^16.2.1
     "@commitlint/prompt-cli": ^16.2.1
+    "@geometricpanda/storybook-addon-badges": ^0.2.1
     "@size-limit/preset-small-lib": ^7.0.8
     "@storybook/addon-a11y": ^6.4.19
     "@storybook/addon-docs": ^6.4.19
@@ -2098,6 +2099,22 @@ __metadata:
   version: 1.1.3
   resolution: "@gar/promisify@npm:1.1.3"
   checksum: 4059f790e2d07bf3c3ff3e0fec0daa8144fe35c1f6e0111c9921bd32106adaa97a4ab096ad7dab1e28ee6a9060083c4d1a4ada42a7f5f3f7a96b8812e2b757c1
+  languageName: node
+  linkType: hard
+
+"@geometricpanda/storybook-addon-badges@npm:^0.2.1":
+  version: 0.2.1
+  resolution: "@geometricpanda/storybook-addon-badges@npm:0.2.1"
+  dependencies:
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    react-is: ^17.0.2
+  peerDependencies:
+    "@storybook/addons": ^6.2.9
+    "@storybook/api": ^6.2.9
+    "@storybook/components": ^6.2.9
+    "@storybook/theming": ^6.2.9
+  checksum: a063d91beb9d5a55b26c7db80f3b0806b4d37d8359a722487a6cb510493a20e8b8fd1d45a5314fd80b5f4aaf0bbf556ca284bfa19b709dd353da3ec7b4e82553
   languageName: node
   linkType: hard
 
@@ -15861,6 +15878,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-dom@npm:^17.0.2":
+  version: 17.0.2
+  resolution: "react-dom@npm:17.0.2"
+  dependencies:
+    loose-envify: ^1.1.0
+    object-assign: ^4.1.1
+    scheduler: ^0.20.2
+  peerDependencies:
+    react: 17.0.2
+  checksum: 1c1eaa3bca7c7228d24b70932e3d7c99e70d1d04e13bb0843bbf321582bc25d7961d6b8a6978a58a598af2af496d1cedcfb1bf65f6b0960a0a8161cb8dab743c
+  languageName: node
+  linkType: hard
+
 "react-draggable@npm:^4.4.3":
   version: 4.4.4
   resolution: "react-draggable@npm:4.4.4"
@@ -16097,6 +16127,16 @@ __metadata:
     object-assign: ^4.1.1
     prop-types: ^15.6.2
   checksum: 8484f3ecb13414526f2a7412190575fc134da785c02695eb92bb6028c930bfe1c238d7be2a125088fec663cc7cda0a3623373c46807cf2c281f49c34b79881ac
+  languageName: node
+  linkType: hard
+
+"react@npm:^17.0.2":
+  version: 17.0.2
+  resolution: "react@npm:17.0.2"
+  dependencies:
+    loose-envify: ^1.1.0
+    object-assign: ^4.1.1
+  checksum: b254cc17ce3011788330f7bbf383ab653c6848902d7936a87b09d835d091e3f295f7e9dd1597c6daac5dc80f90e778c8230218ba8ad599f74adcc11e33b9d61b
   languageName: node
   linkType: hard
 
