@@ -151,15 +151,15 @@ export class Tier2TypographyUsage extends Component {
         <Section title="Forms">
           <Grid>
             <TokenSpecimen
-              name="eds-theme-typography-button"
-              variant="typography-body"
-              specimenClassName="u-theme-typography-button"
-            />
-
-            <TokenSpecimen
               name="eds-theme-typography-button-sm"
               variant="typography-body"
               specimenClassName="u-theme-typography-button-sm"
+            />
+
+            <TokenSpecimen
+              name="eds-theme-typography-button-md"
+              variant="typography-body"
+              specimenClassName="u-theme-typography-button-md"
             />
 
             <TokenSpecimen
