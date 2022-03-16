@@ -68,7 +68,7 @@ type Plugin = Plugins[number];
 
 /**
  * ```ts
- * import {Tooltip} from "@chanzuckerberg/eds-components";
+ * import {Tooltip} from "@chanzuckerberg/eds";
  * ```
  *
  * A styled tooltip built on Tippy.js.

@@ -87,7 +87,7 @@ const Items: React.FC<ItemsProps> = ({
 
 /**
  * ```ts
- * import {FormGroup} from "@chanzuckerberg/eds-components";
+ * import {FormGroup} from "@chanzuckerberg/eds";
  * ```
  *
  * A container for a form section including a title and one or more form elements.

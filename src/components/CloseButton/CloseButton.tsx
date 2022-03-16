@@ -17,7 +17,7 @@ type CloseButtonProps = {
    *
    * The string should be some number + px, rem, em, vh, etc. Ex: 2rem.
    * Recommendation: use "EdsSizeLineHeight" tokens from
-   * @chanzuckerberg/eds-tokens/json/variables.json
+   * @chanzuckerberg/eds/lib/tokens/json/variables.json
    */
   size?: string;
   /**
@@ -30,7 +30,7 @@ type CloseButtonProps = {
 
 /**
  * ```ts
- * import {CloseButton} from "@chanzuckerberg/eds-components";
+ * import {CloseButton} from "@chanzuckerberg/eds";
  * ```
  *
  * Generic close button.

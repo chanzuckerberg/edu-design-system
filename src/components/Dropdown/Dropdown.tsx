@@ -87,7 +87,7 @@ function childrenHaveLabelComponent(children?: ReactNode): boolean {
 
 /**
  * ```ts
- * import {Dropdown} from "@chanzuckerberg/eds-components";
+ * import {Dropdown} from "@chanzuckerberg/eds";
  * ```
  *
  * EDS Dropdown. Used to select one option from a list of options.

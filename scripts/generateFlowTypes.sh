@@ -33,4 +33,4 @@ do
 done
 
 echo -e "\033[0;32mGenerated flowtypes in $NAME.js.flow\033[0m"
-echo -e "Further manual edits may be needed. See \033[4mhttps://github.com/chanzuckerberg/edu-design-system/blob/main/packages/components/README.md#flow-types\033[0m"
+echo -e "Further manual edits may be needed. See \033[4mhttps://github.com/chanzuckerberg/edu-design-system/blob/main/README.md#flow-types\033[0m"

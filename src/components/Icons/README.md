@@ -19,7 +19,7 @@ export { default as <IconName>Icon } from "./<IconName>.jsx";
 You can add one-off icons directly into your components by importing the generic `SvgIcon` and passing the paths/circles/etc. into the `SvgIcon`.
 
 ```tsx
-import SvgIcon from '@chanzuckerberg/eds-components/lib/SvgIcon';
+import SvgIcon from '@chanzuckerberg/eds/lib/SvgIcon';
 ...
 <SvgIcon
   purpose="informative"

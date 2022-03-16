@@ -30,7 +30,7 @@ type Props = {
 
 /**
  * ```ts
- * import {Toast} from "@chanzuckerberg/eds-components";
+ * import {Toast} from "@chanzuckerberg/eds";
  * ```
  *
  * A toast used to provide information on the state of the page, usually in response to a
