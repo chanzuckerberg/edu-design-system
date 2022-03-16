@@ -1,0 +1,32 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #LAYOUT SECTION
+\*------------------------------------*/
+/**
+ * Sidebar layout section region
+ * 1) Contains the global header and site navigation
+ */
+.layout__section--sidebar {
+  @media all and (min-width: $eds-bp-lg) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--eds-l-sidebar-width);
+    height: 100vh;
+    z-index: var(--eds-z-index-500);
+  }
+}
+
+/**
+ * Main layout section region 
+ * 1) Contains the main page content
+ */
+.layout__section--main {
+  @media all and (min-width: $eds-bp-lg) {
+    margin-left: var(--eds-l-sidebar-width);
+    width: calc(100% - var(--eds-l-sidebar-width));
+    height: 100vh;
+    padding-top: var(--eds-size-6);
+  }
+}
