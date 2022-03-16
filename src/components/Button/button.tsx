@@ -75,7 +75,7 @@ export interface Props {
   /**
    * Available _stylistic_ variations available for the Button component
    */
-  variant?: 'primary' | 'bare' | 'table-header' | 'link';
+  variant?: 'primary' | 'bare' | 'link';
 }
 
 /**
