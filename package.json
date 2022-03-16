@@ -18,7 +18,7 @@
     "generateFlowTypes": "./packages/components/generateFlowTypes.sh",
     "lint": "yarn run lint:styles && yarn run lint:scripts",
     "lint:fix": "yarn run lint:styles:fix && yarn run lint:scripts:fix",
-    "lint:styles": "stylelint --ignore-path .gitignore packages/**/*.css",
+    "lint:styles": "stylelint --ignore-path .gitignore src/**/*.css",
     "lint:styles:fix": "yarn run lint:styles --fix",
     "lint:scripts": "eslint --ignore-path .gitignore --ext=js,jsx,ts,tsx .",
     "lint:scripts:fix": "yarn run lint:scripts --fix",

@@ -1,10 +1,10 @@
 const StyleDictionary = require("style-dictionary");
 const EDSStyleDictionary = StyleDictionary.extend({
-  source: ["properties/**/*.json"],
+  source: ["src/tokens/**/*.json"],
   platforms: {
     scss: {
       transforms: [...StyleDictionary.transformGroup.scss, "name/cti/kebab"],
-      buildPath: "lib/",
+      buildPath: "lib/tokens/",
       files: [
         {
           format: "scss/map-deep",
@@ -17,7 +17,7 @@ const EDSStyleDictionary = StyleDictionary.extend({
     },
     css: {
       transforms: [...StyleDictionary.transformGroup.css, "name/cti/kebab"],
-      buildPath: "lib/",
+      buildPath: "lib/tokens/",
       files: [
         {
           format: "css/variables",
@@ -37,7 +37,7 @@ const EDSStyleDictionary = StyleDictionary.extend({
     },
     js: {
       transformGroup: "js",
-      buildPath: "lib/",
+      buildPath: "lib/tokens/",
       files: [
         {
           format: "javascript/es6",
@@ -55,7 +55,7 @@ const EDSStyleDictionary = StyleDictionary.extend({
     },
     json: {
       transformGroup: "js",
-      buildPath: "lib/",
+      buildPath: "lib/tokens/",
       files: [
         {
           format: "json/flat",
@@ -76,7 +76,7 @@ const EDSStyleDictionary = StyleDictionary.extend({
   },
 });
 
-// copied from https://github.com/amzn/style-dictionary/blob/v3.0.0-rc.1/lib/common/formats.js#L96
+// copied from https://github.com/amzn/style-dictionary/blob/v3.0.0-rc.1/lib/tokens/common/formats.js#L96
 function minifyCSSVarDictionary(obj) {
   if (typeof obj !== "object" || Array.isArray(obj)) {
     return obj;
