@@ -11,43 +11,43 @@ module.exports = function (plop) {
     actions: [
       {
         type: "add",
-        path: "packages/components/src/{{pascalCase name}}/{{pascalCase name}}.tsx",
+        path: "src/components/{{pascalCase name}}/{{pascalCase name}}.tsx",
         templateFile: "plop-templates/Component/Component.tsx.hbs",
       },
       {
         type: "add",
-        path: "packages/components/src/{{pascalCase name}}/{{pascalCase name}}.module.css",
+        path: "src/components/{{pascalCase name}}/{{pascalCase name}}.module.css",
         templateFile: "plop-templates/Component/Component.module.css.hbs",
       },
       {
         type: "add",
-        path: "packages/components/src/{{pascalCase name}}/{{pascalCase name}}.stories.tsx",
+        path: "src/components/{{pascalCase name}}/{{pascalCase name}}.stories.tsx",
         templateFile: "plop-templates/Component/Component.stories.tsx.hbs",
       },
       {
         type: "add",
-        path: "packages/components/src/{{pascalCase name}}/{{pascalCase name}}.spec.tsx",
+        path: "src/components/{{pascalCase name}}/{{pascalCase name}}.spec.tsx",
         templateFile: "plop-templates/Component/Component.spec.tsx.hbs",
       },
       {
         type: "add",
-        path: "packages/components/src/{{pascalCase name}}/index.ts",
+        path: "src/components/{{pascalCase name}}/index.ts",
         templateFile: "plop-templates/Component/index.ts.hbs",
       },
       {
         type: "append",
         pattern: /;\n$/,
         separator: "",
-        path: "packages/components/src/index.ts",
+        path: "src/index.ts",
         template:
-          'export { default as {{pascalCase name}} } from "./{{pascalCase name}}";',
+          'export { default as {{pascalCase name}} } from "./components/{{pascalCase name}}";',
       },
       // From https://github.com/bradfrost/czi-vanilla-storybook
       function sortIndex() {
         process.chdir(plop.getPlopfilePath());
 
         const fs = require("fs");
-        const indexFile = `${plop.getDestBasePath()}/packages/components/src/index.ts`;
+        const indexFile = `${plop.getDestBasePath()}/src/index.ts`;
 
         if (fs.existsSync(indexFile)) {
           // Split the index file into lines.

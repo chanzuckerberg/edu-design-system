@@ -15,7 +15,7 @@
     "create-releases:alpha": "yarn create-releases:conventional --preid alpha prerelease",
     "create-releases:breaking": "yarn create-releases:conventional minor",
     "create-releases:conventional": "lerna version --no-push --conventional-commits --message 'chore(release): %s'",
-    "generateFlowTypes": "./packages/components/generateFlowTypes.sh",
+    "generateFlowTypes": "./scripts/generateFlowTypes.sh",
     "lint": "yarn run lint:styles && yarn run lint:scripts",
     "lint:fix": "yarn run lint:styles:fix && yarn run lint:scripts:fix",
     "lint:styles": "stylelint --ignore-path .gitignore src/**/*.css",
@@ -30,20 +30,6 @@
     "types": "yarn workspaces foreach run types",
     "version": "./scripts/updateYarnLockForLerna.sh"
   },
-  "size-limit": [
-    {
-      "path": "packages/components/lib/**/*([a-zA-Z-_]).js",
-      "limit": "140KB",
-      "name": "components",
-      "webpack": false
-    },
-    {
-      "path": "packages/components/lib/**/*([a-zA-Z-_]).css",
-      "limit": "140KB",
-      "name": "styles",
-      "webpack": false
-    }
-  ],
   "author": "CZI",
   "license": "MIT",
   "devDependencies": {
