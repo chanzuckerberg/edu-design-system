@@ -1,20 +1,38 @@
 {
-  "name": "edu-design-system",
-  "private": true,
-  "description": "Learning Platform Design System",
-  "main": "index.js",
-  "workspaces": [
-    "packages/*"
+  "name": "@chanzuckerberg/eds",
+  "version": "0.9.0",
+  "description": "The React-powered design system library for Chan Zuckerberg Initiative education web applications",
+  "author": "CZI <edu-frontend-infra@chanzuckerberg.com>",
+  "homepage": "https://github.com/chanzuckerberg/edu-design-system",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chanzuckerberg/edu-design-system.git"
+  },
+  "files": [
+    "lib",
+    "tailwind.config.js"
   ],
+  "bugs": {
+    "url": "https://github.com/chanzuckerberg/edu-design-system/issues"
+  },
   "scripts": {
-    "build": "NODE_ENV=production yarn workspaces foreach --interlaced --parallel --topological --verbose run build",
-    "build:clean": "yarn workspaces foreach --exclude eds-tokens run build:clean",
+    "build": "yarn build:clean && yarn build:js && yarn build:styles",
+    "build:clean": "rm -rf lib/",
+    "build:storybook": "build-storybook -o storybook-static",
+    "build:styles": "postcss \"src/**/*.css\" --dir lib/ --base src/ --verbose",
     "build:tokens": "node ./style-dictionary.config.js",
+    "chromatic": "chromatic",
     "create-component": "plop",
     "create-releases": "yarn create-releases:conventional patch",
     "create-releases:alpha": "yarn create-releases:conventional --preid alpha prerelease",
     "create-releases:breaking": "yarn create-releases:conventional minor",
     "create-releases:conventional": "lerna version --no-push --conventional-commits --message 'chore(release): %s'",
+    "deploy:docs": "storybook-to-ghpages --ci",
     "generateFlowTypes": "./scripts/generateFlowTypes.sh",
     "lint": "yarn run lint:styles && yarn run lint:scripts",
     "lint:fix": "yarn run lint:styles:fix && yarn run lint:scripts:fix",
@@ -25,9 +43,13 @@
     "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx}\"",
     "publish-releases": "lerna publish from-git --no-push",
     "publish-releases:alpha": "yarn publish-releases --dist-tag alpha",
-    "start": "yarn workspaces foreach --interlaced --parallel --verbose run start",
-    "test": "yarn workspaces foreach run test",
-    "types": "yarn workspaces foreach run types",
+    "start": "yarn build:tokens && yarn storybook",
+    "storybook": "start-storybook -p 6008",
+    "storybook:axe": "yarn run build:storybook && yarn run storybook:axeOnly",
+    "storybook:axeOnly": "axe-storybook --build-dir storybook-static",
+    "test": "jest",
+    "test:ci": "yarn run test --ci --coverage && cat ./coverage/lcov.info | codecov",
+    "types": "tsc --noEmit",
     "version": "./scripts/updateYarnLockForLerna.sh"
   },
   "size-limit": [
@@ -44,16 +66,41 @@
       "webpack": false
     }
   ],
-  "author": "CZI",
-  "license": "MIT",
+  "peerDependencies": {
+    "react": ">= 16.8.0"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.4.3",
+    "@tippyjs/react": "^4.2.6",
+    "clsx": "^1.1.1",
+    "react-uid": "^2.3.1"
+  },
   "devDependencies": {
+    "@chanzuckerberg/axe-storybook-testing": "^5.0.0",
     "@chanzuckerberg/eslint-plugin-stories": "^3.0.1",
+    "@chanzuckerberg/story-utils": "^3.0.4",
     "@commitlint/cli": "^16.2.1",
     "@commitlint/config-conventional": "^16.2.1",
     "@commitlint/prompt-cli": "^16.2.1",
+    "@geometricpanda/storybook-addon-badges": "^0.2.1",
     "@size-limit/preset-small-lib": "^4.12.0",
+    "@storybook/addon-a11y": "^6.4.19",
+    "@storybook/addon-essentials": "^6.4.19",
+    "@storybook/addon-interactions": "^6.4.19",
+    "@storybook/addon-postcss": "^2.0.0",
+    "@storybook/react": "^6.4.19",
+    "@storybook/storybook-deployer": "^2.8.10",
+    "@storybook/testing-library": "^0.0.9",
+    "@storybook/testing-react": "^1.2.3",
+    "@testing-library/jest-dom": "^5.16.2",
+    "@testing-library/react": "^12.1.4",
+    "@types/jest": "^27.4.1",
+    "@types/react": "^17.0.40",
     "@typescript-eslint/eslint-plugin": "^5.10.2",
     "@typescript-eslint/parser": "^5.10.2",
+    "axe-core": "^4.3.5",
+    "chromatic": "^6.5.3",
+    "codecov": "^3.8.3",
     "eslint": "^8.8.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.25.4",
@@ -63,15 +110,27 @@
     "eslint-plugin-react-hooks": "^4.3.0",
     "eslint-plugin-storybook": "^0.5.6",
     "eslint-plugin-testing-library": "^5.0.5",
+    "flowgen": "^1.14.1",
     "husky": "^4.3.8",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.5.1",
     "lerna": "^4.0.0",
     "lint-staged": "^10.5.4",
     "plop": "^3.0.5",
+    "postcss": "^8.4.12",
+    "postcss-cli": "^9.1.0",
+    "postcss-import": "^14.0.2",
+    "postcss-nested": "^5.0.6",
     "prettier": "^2.5.1",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
     "size-limit": "^4.12.0",
+    "storybook-css-modules-preset": "^1.1.1",
     "style-dictionary": "^3.7.0",
     "stylelint": "^14.5.3",
     "stylelint-config-standard": "^25.0.0",
+    "tailwindcss": "^2.2.19",
+    "ts-jest": "^27.1.3",
     "typescript": "^4.5.5"
   },
   "husky": {
