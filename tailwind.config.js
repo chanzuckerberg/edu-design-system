@@ -1,5 +1,5 @@
-const variableTokens = require("@chanzuckerberg/eds-tokens/lib/json/css-variables-nested.json");
-const staticTokens = require("@chanzuckerberg/eds-tokens/lib/json/variables-nested.json");
+const variableTokens = require("lib/tokens/json/css-variables-nested.json");
+const staticTokens = require("lib/tokens/json/variables-nested.json");
 module.exports = {
   mode: "jit",
   /*The main value in TW utility classes is in Storybook stories.
@@ -8,7 +8,7 @@ module.exports = {
   purge: [
     "./src/**/*.stories.{js,jsx,ts,tsx}",
     "./.storybook/*",
-    "./src/storyUtils/**/*.{js,jsx,ts,tsx}",
+    "./src/components/storyUtils/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
     colors: {
