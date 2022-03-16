@@ -45,6 +45,7 @@
     "react": ">= 16.8.0"
   },
   "dependencies": {
+    "@chanzuckerberg/story-utils": "^3.0.4",
     "@tippyjs/react": "4.2.5",
     "clsx": "^1.1.1",
     "downshift": "^6.1.7",
@@ -59,7 +60,6 @@
   "devDependencies": {
     "@chanzuckerberg/axe-storybook-testing": "^5.0.0",
     "@chanzuckerberg/eslint-plugin-stories": "^3.0.1",
-    "@chanzuckerberg/story-utils": "^3.0.4",
     "@commitlint/cli": "^16.2.1",
     "@commitlint/config-conventional": "^16.2.1",
     "@commitlint/prompt-cli": "^16.2.1",
