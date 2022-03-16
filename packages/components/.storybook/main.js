@@ -5,6 +5,7 @@ module.exports = {
     "@storybook/addon-a11y",
     "storybook-css-modules-preset",
     "@storybook/addon-interactions",
+    "@geometricpanda/storybook-addon-badges",
     {
       name: "@storybook/addon-postcss",
       options: {
