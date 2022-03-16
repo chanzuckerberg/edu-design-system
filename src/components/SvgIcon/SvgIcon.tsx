@@ -20,13 +20,13 @@ interface IconPropsBase {
   /**
    * The SVG Color, expects a valid css color (hex, rgb, etc.). You can use
    * Recommendation: if `currentColor` isn't sufficient, use color tokens from
-   * @chanzuckerberg/eds-tokens/json/variables.json
+   * @chanzuckerberg/eds/lib/tokens/ts/colors
    */
   color?: string;
   /**
    * Width/Height string (px, rem, em, vh, etc.)
    * Recommendation: use "EdsSizeLineHeight" tokens from
-   * @chanzuckerberg/eds-tokens/json/variables.json
+   * @chanzuckerberg/eds/lib/tokens/ts/colors
    */
   size?: string;
   /**

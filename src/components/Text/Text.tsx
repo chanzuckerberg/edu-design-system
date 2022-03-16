@@ -20,7 +20,7 @@ type Props = {
 
 /**
  * ```ts
- * import {Text} from "@chanzuckerberg/eds-components";
+ * import {Text} from "@chanzuckerberg/eds";
  * ```
  */
 const Text = forwardRef<HTMLElement, Props>(

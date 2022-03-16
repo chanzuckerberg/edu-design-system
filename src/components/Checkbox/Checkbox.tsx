@@ -112,10 +112,10 @@ const CheckboxSvg = ({ indeterminate }: { indeterminate?: boolean }) => {
 
 /**
  * ```ts
- * import {Checkbox} from "@chanzuckerberg/eds-components";
+ * import {Checkbox} from "@chanzuckerberg/eds";
  * ```
  * ```ts
- * import Checkbox, {CheckboxInput, Label} from '@chanzuckerberg/eds-components/lib/Checkbox';
+ * import Checkbox, {CheckboxInput, Label} from '@chanzuckerberg/eds/lib/Checkbox';
  * ```
  *
  * Checkbox control indicating if something is selected or unselected.

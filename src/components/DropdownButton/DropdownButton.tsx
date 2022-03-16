@@ -10,7 +10,7 @@ type Props = {
 
 /**
  * ```ts
- * import {DropdownButton} from "@chanzuckerberg/eds-components";
+ * import {DropdownButton} from "@chanzuckerberg/eds";
  * ```
  *
  * A styled button with an expand icon to be used in triggering Popovers, Dropdowns, etc.

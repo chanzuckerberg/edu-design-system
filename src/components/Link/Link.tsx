@@ -19,7 +19,7 @@ export type LinkProps = LinkHTMLElementProps & {
 
 /**
  * ```ts
- * import {Link} from "@chanzuckerberg/eds-components";
+ * import {Link} from "@chanzuckerberg/eds";
  * ```
  *
  * Component for making anchor tags.
