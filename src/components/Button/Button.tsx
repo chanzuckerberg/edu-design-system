@@ -87,7 +87,7 @@ export const Button = React.forwardRef(
       inverted,
       loading,
       onClick,
-      size,
+      size = 'lg',
       text,
       type,
       variant,
