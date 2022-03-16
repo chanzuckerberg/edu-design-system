@@ -179,30 +179,36 @@
 
 /**
  * Small button
+ * 1) Height is used instead of vertical padding because the icon size we use would
+ *    cause the button height to expand
  */
 .button--sm {
   @mixin eds-theme-typography-button-sm;
-  height: var(--eds-size-3);
+  height: var(--eds-size-3); /* 1 */
   padding-left: var(--eds-size-half);
   padding-right: var(--eds-size-half);
 }
 
 /**
  * Medium button
+ * 1) Height is used instead of vertical padding because the icon size we use would
+ *    cause the button height to expand
  */
 .button--md {
   @mixin eds-theme-typography-button-md;
-  height: var(--eds-size-4);
+  height: var(--eds-size-4); /* 1 */
   padding-left: var(--eds-size-2);
   padding-right: var(--eds-size-2);
 }
 
 /**
  * Large button
+ * 1) Height is used instead of vertical padding because the icon size we use would
+ *    cause the button height to expand
  */
 .button--lg {
   @mixin eds-theme-typography-button-lg;
-  height: var(--eds-size-5);
+  height: var(--eds-size-5); /* 1 */
   padding-left: var(--eds-size-2);
   padding-right: var(--eds-size-2);
 }
