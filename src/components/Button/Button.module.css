@@ -340,6 +340,10 @@
   padding-right: var(--eds-size-2);
 }
 
+/*------------------------------------*\
+    #FULL-WIDTH
+\*------------------------------------*/
+
 /**
  * Full-width button
  * 1) A block button fills 100% of the width of its container
@@ -347,6 +351,10 @@
 .button--full-width {
   width: 100%;
 }
+
+/*------------------------------------*\
+    #ICONS
+\*------------------------------------*/
 
 /**
  * Button Icon
@@ -388,6 +396,10 @@
     margin-left: var(--eds-size-half);
   }
 }
+
+/*------------------------------------*\
+    #LOADING
+\*------------------------------------*/
 
 /**
  * Loading icon rotiation style
