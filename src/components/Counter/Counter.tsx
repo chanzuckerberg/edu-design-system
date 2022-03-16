@@ -168,8 +168,7 @@ export const Counter: React.FC<Props> = ({
           variant="bare"
           iconPosition="after"
           iconName="minus"
-          hideText={true}
-          text={minusButtonText}
+          aria-label={minusButtonText}
           disabled={disabled || (min !== undefined && count === min)}
           onClick={(e) => onDecrease(e)}
         />
@@ -193,8 +192,7 @@ export const Counter: React.FC<Props> = ({
           variant="bare"
           iconPosition="after"
           iconName="plus"
-          hideText={true}
-          text={plusButtonText}
+          aria-label={plusButtonText}
           disabled={disabled || (max !== undefined && count === max)}
           onClick={(e) => onIncrease(e)}
         />

@@ -46,8 +46,7 @@ export const DrawerHeader: React.FC<Props> = ({
           className={styles['drawer__close-button']}
           iconPosition="before"
           iconName="x"
-          text={closeButtonText}
-          hideText={true}
+          aria-label={closeButtonText}
           variant="bare"
           onClick={onClick}
         />

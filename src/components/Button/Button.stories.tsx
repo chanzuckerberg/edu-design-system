@@ -60,20 +60,18 @@ PrimaryInverted.args = {
 export const BareIcon = Template.bind({});
 BareIcon.args = {
   variant: 'bare',
-  text: 'Close',
+  'aria-label': 'Close',
   iconName: 'x',
   iconPosition: 'before',
-  hideText: true,
 };
 
 export const BareIconInverted = InvertedTemplate.bind({});
 BareIconInverted.args = {
   inverted: true,
   variant: 'bare',
-  text: 'Close',
+  'aria-label': 'Close',
   iconName: 'x',
   iconPosition: 'before',
-  hideText: true,
 };
 
 export const TextLink = Template.bind({});
@@ -99,15 +97,13 @@ export const Loading = Template.bind({});
 Loading.args = {
   loading: true,
   disabled: true,
-  text: 'Loading...',
+  text: 'Loading Button',
 };
 
 export const PrimaryLoading = Template.bind({});
 PrimaryLoading.args = {
   variant: 'primary',
-  iconPosition: 'before',
-  iconName: 'spinner',
   loading: true,
   disabled: true,
-  text: 'Loading...',
+  text: 'Primary Loading Button',
 };
