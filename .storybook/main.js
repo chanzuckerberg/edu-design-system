@@ -12,6 +12,7 @@ module.exports = {
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     'storybook-css-modules-preset',
+    '@geometricpanda/storybook-addon-badges',
     {
       name: '@storybook/addon-docs',
       options: {

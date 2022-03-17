@@ -10,15 +10,10 @@
  * 3) Margin 0 added becuase Safari has margin on the button
  */
 .button {
-  @mixin eds-theme-typography-button;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding-top: var(--eds-size-1-and-half);
-  padding-right: var(--eds-size-5);
-  padding-bottom: var(--eds-size-1-and-half);
-  padding-left: var(--eds-size-5);
-  margin: 0;
+  margin: 0; /* 3 */
   border-width: var(--eds-theme-border-width);
   border-style: solid;
   border-color: var(--eds-theme-color-primary-border);
@@ -61,8 +56,8 @@
   }
 
   /**
-   * Inverted button 
-   */
+   * Inverted button 
+   */
   &.button--inverted {
     border-color: var(--eds-theme-color-primary-border-inverted);
     color: var(--eds-theme-color-primary-foreground-inverted);
@@ -112,8 +107,8 @@
   }
 
   /**
-   * Inverted primary button 
-   */
+   * Inverted primary button 
+   */
   &.button--inverted {
     background-color: var(--eds-theme-color-primary-background);
     color: var(--eds-theme-color-body-foreground-inverted);
@@ -145,8 +140,8 @@
   }
 
   /**
-   * Inverted link button 
-   */
+   * Inverted link button 
+   */
   &.button--inverted {
     @mixin TextLinkInverted;
   }
@@ -169,8 +164,8 @@
   }
 
   /**
-   * Inverted bare button 
-   */
+   * Inverted bare button 
+   */
   &.button--inverted {
     color: var(--eds-theme-color-primary-foreground-inverted);
     /* stylelint-disable-next-line max-nesting-depth */
@@ -184,24 +179,38 @@
 
 /**
  * Small button
+ * 1) Height is used instead of vertical padding because the icon size we use would
+ *    cause the button height to expand
  */
 .button--sm {
   @mixin eds-theme-typography-button-sm;
-  padding-top: var(--eds-size-half);
-  padding-right: var(--eds-size-1);
-  padding-bottom: var(--eds-size-half);
-  padding-left: var(--eds-size-1);
+  height: var(--eds-size-3); /* 1 */
+  padding-left: var(--eds-size-half);
+  padding-right: var(--eds-size-half);
+}
+
+/**
+ * Medium button
+ * 1) Height is used instead of vertical padding because the icon size we use would
+ *    cause the button height to expand
+ */
+.button--md {
+  @mixin eds-theme-typography-button-md;
+  height: var(--eds-size-4); /* 1 */
+  padding-left: var(--eds-size-2);
+  padding-right: var(--eds-size-2);
 }
 
 /**
  * Large button
+ * 1) Height is used instead of vertical padding because the icon size we use would
+ *    cause the button height to expand
  */
 .button--lg {
   @mixin eds-theme-typography-button-lg;
-  padding-top: var(--eds-size-2);
-  padding-right: var(--eds-size-5);
-  padding-bottom: var(--eds-size-2);
-  padding-left: var(--eds-size-5);
+  height: var(--eds-size-5); /* 1 */
+  padding-left: var(--eds-size-2);
+  padding-right: var(--eds-size-2);
 }
 
 /**
@@ -215,14 +224,9 @@
 /**
  * Button Icon
  * 1) Set SVG icon fill to the current text color
- * 2) Rotate loading icon
  */
 .button__icon {
   fill: currentColor; /* 1 */
-
-  .button.eds-is-loading & {
-    animation: rotateIcon 2s linear infinite; /* 2 */
-  }
 }
 
 /**
@@ -230,7 +234,7 @@
  * 1) Controls the spacing between the button text
  *    and the icon that comes _before_ button text
  */
-.button__icon + .button__text:not(.u-is-vishidden) {
+.button__icon + .button__text {
   margin-left: var(--eds-size-1); /* 1 */
 
   .button--sm & {
@@ -243,11 +247,11 @@
  * 1) Controls the spacing between the button text
  *    and the icon that comes _after_ button text
  */
-.button__text:not(.u-is-vishidden) + .button__icon {
+.button__text + .button__icon {
   margin-left: var(--eds-size-1); /* 1 */
 
   /**
-   * Button icon after button text that's not vishidden within a link variant button
+   * Button icon after button text within a link variant button
    */
   .button--link & {
     margin-left: var(--eds-size-half);
@@ -258,7 +262,17 @@
   }
 }
 
-/* The animation code */
+/**
+ * Loading icon rotiation style
+ */
+.button.eds-is-loading > .button__icon {
+  animation: rotateIcon 2s linear infinite; /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Loading icon rotation animation
+ */
 @keyframes rotateIcon {
   0% {
     transform: rotate(0deg);

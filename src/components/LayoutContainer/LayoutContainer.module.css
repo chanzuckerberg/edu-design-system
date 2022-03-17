@@ -12,7 +12,7 @@
  *    to ensure content doesn't butt up against viewport edge
  */
 .layout-container {
-  max-width: calc(var(--eds-l-max-width) + #{var(--eds-size-6)}); /* 2 */
+  max-width: calc(var(--eds-l-max-width) + var(--eds-size-6)); /* 2 */
   margin-left: auto;
   margin-right: auto;
   padding-left: var(--eds-size-2);

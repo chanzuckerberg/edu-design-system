@@ -1,0 +1,29 @@
+@import '../../../src/design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #PAGESHELL
+\*------------------------------------*/
+
+/**
+ * 1) 
+ */
+.page-shell {
+  position: relative;
+}
+
+/**
+ * Skip link
+ * 1) The skip link 
+ */
+.page-shell__skip-link {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 9999;
+  transform: translateY(-100%);
+  transition: transform var(--eds-anim-fade-quick);
+
+  &:focus {
+    transform: translateY(0%);
+  }
+}

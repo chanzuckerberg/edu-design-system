@@ -1,6 +1,7 @@
 import { Story, Meta } from '@storybook/react';
 import React from 'react';
 import { Counter, Props } from './Counter';
+import { Button } from '../Button/Button';
 import { Tooltip } from '../Tooltip/Tooltip';
 
 export default {
@@ -30,8 +31,13 @@ DefaultWithTooltip.args = {
   plusButtonText: 'Add by 1',
   fieldNote: 'This is a counter field',
   labelAfter: (
-    <Tooltip buttonText="Select this button to trigger the tooltip">
-      Some text to help with a form field
+    <Tooltip text="Some text to help with a form field">
+      <Button
+        variant="bare"
+        iconPosition="after"
+        iconName="question-mark-circle"
+        text="Hover this button to trigger the tooltip"
+      />
     </Tooltip>
   ),
 };
