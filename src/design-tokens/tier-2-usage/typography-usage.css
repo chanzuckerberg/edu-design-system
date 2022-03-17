@@ -58,7 +58,7 @@
 }
 
 @define-mixin eds-theme-typography-kicker $important {
-   @mixin eds-typography-preset-9 $important;
+   @mixin eds-typography-preset-8 $important;
 }
 
 @define-mixin eds-theme-typography-data-heading $important {
@@ -85,16 +85,16 @@
    @mixin eds-typography-preset-5 $important;
 }
 
-@define-mixin eds-theme-typography-button $important {
-   @mixin eds-typography-preset-8-bold $important;
+@define-mixin eds-theme-typography-button-sm $important {
+   @mixin eds-typography-preset-10-bold $important;
 }
 
-@define-mixin eds-theme-typography-button-sm $important {
-   @mixin eds-typography-preset-8 $important;
+@define-mixin eds-theme-typography-button-md $important {
+   @mixin eds-typography-preset-10-bold $important;
 }
 
 @define-mixin eds-theme-typography-button-lg $important {
-   @mixin eds-typography-preset-9 $important;
+   @mixin eds-typography-preset-9-bold $important;
 }
 
 @define-mixin eds-theme-typography-tag $important {

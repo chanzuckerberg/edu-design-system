@@ -9,26 +9,13 @@ import {
   Panel,
 } from '../../../src';
 
-import { GlobalFooter } from '../../recipes/GlobalFooter/GlobalFooter';
-import { GlobalHeader } from '../../recipes/GlobalHeader/GlobalHeader';
+import { PageShell } from '../../recipes/PageShell/PageShell';
 
 export const Announcements: React.FC = () => (
-  <body>
-    <Layout behavior="fixed-sidebar">
-      <LayoutSection region="sidebar">
-        <GlobalHeader />
-      </LayoutSection>
-      <LayoutSection region="main">
-        <Main>
-          <LayoutContainer>
-            <PageHeader title="Announcements to students" />
-            <Panel>
-              <div className="fpo">Announcement list</div>
-            </Panel>
-          </LayoutContainer>
-        </Main>
-        <GlobalFooter />
-      </LayoutSection>
-    </Layout>
-  </body>
+  <PageShell>
+    <PageHeader title="Announcements to students" />
+    <Panel>
+      <div className="fpo">Announcement list</div>
+    </Panel>
+  </PageShell>
 );

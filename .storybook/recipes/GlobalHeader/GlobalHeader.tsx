@@ -8,6 +8,7 @@ import {
   PrimaryNav,
   PrimaryNavItem,
   Button,
+  Avatar,
 } from '../../../src';
 
 export interface Props {
@@ -27,16 +28,16 @@ export const GlobalHeader: React.FC<Props> = ({ className, ...other }) => {
     setisActive(!isActive);
   };
 
-  const componentClassName = clsx(styles['c-global-header'], className, {
+  const componentClassName = clsx(styles['global-header'], className, {
     [styles['is-active']]: isActive,
   });
   return (
     <Header behavior="sticky" className={componentClassName} {...other}>
-      <div className={styles['c-global-header__header']}>
+      <div className={styles['global-header__header']}>
         <Logo href="#" />
 
         <Button
-          className={styles['c-global-header__menu-button']}
+          className={styles['global-header__menu-button']}
           variant="bare"
           text={isActive ? 'Close' : 'Menu'}
           iconPosition="before"
@@ -46,7 +47,7 @@ export const GlobalHeader: React.FC<Props> = ({ className, ...other }) => {
         />
       </div>
 
-      <div className={styles['c-global-header__body']}>
+      <div className={styles['global-header__body']}>
         <PrimaryNav>
           <PrimaryNavItem href="#" text="Search Students" />
           <PrimaryNavItem href="#" text="Announcements" />
@@ -58,7 +59,9 @@ export const GlobalHeader: React.FC<Props> = ({ className, ...other }) => {
         </PrimaryNav>
       </div>
 
-      <div className={styles['c-global-header__footer']}>Avatar goes here</div>
+      <div className={styles['global-header__footer']}>
+        <Avatar />
+      </div>
     </Header>
   );
 };

@@ -9,6 +9,10 @@ export interface Props {
    */
   className?: string;
   /**
+   * Reference to a link list item (i.e. used to add focus to item after modal closes)
+   */
+  forwardRef?: string;
+  /**
    * URL or a URL fragment string that the hyperlink points to
    */
   href?: string;
@@ -20,10 +24,6 @@ export interface Props {
    * Position of the icon. "before" renders the icon before the link text, and "after" renders the icon after the link text
    */
   iconPosition?: 'before' | 'after';
-  /**
-   * Reference to a link list item (i.e. used to add focus to item after modal closes)
-   */
-  linkListRef?: string;
   /**
    * Click handler function for link
    */
@@ -51,9 +51,9 @@ export interface Props {
  */
 export const LinkListItem: React.FC<Props> = ({
   className,
+  forwardRef,
   href,
   onClick,
-  linkListRef,
   iconPosition,
   iconName,
   screenReaderText,
@@ -68,7 +68,7 @@ export const LinkListItem: React.FC<Props> = ({
         className={styles['link-list__link']}
         href={href}
         onClick={onClick}
-        ref={linkListRef}
+        ref={forwardRef}
         target={target}
       >
         {iconPosition === 'before' && (
