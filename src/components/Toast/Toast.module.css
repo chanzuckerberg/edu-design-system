@@ -8,7 +8,6 @@
  * 3) The thick left border operates as a foreground band of color, 
  *    so foreground rather than border is used
  */
-
  .toast { /* 2 */
   width: 100%;
   max-width: 25rem;
@@ -33,17 +32,14 @@
 }
 
 /**
- * 1) Message of information, success, caution, or warning to the user
- * 2) Container for the toast content, to provide background styling
- * 3) The thick left border operates as a foreground band of color, 
- *    so foreground rather than border is used
+ * 1) The toast content, usually an icon and text message. Does not include the optional close button
+ * 2) Grid aligns the centers and places the icon on the left and message on the right.
  */
- 
-.toast--content {
+.toast--content { /* 1 */
   padding-top: var(--eds-size-2);
   padding-bottom: var(--eds-size-2);
 
-  display: grid;
+  display: grid; /* 2 */
   gap: var(--eds-size-2);
   grid-template-columns: min-content 1fr;
   align-items: center;
