@@ -76,7 +76,7 @@ const EDSStyleDictionary = StyleDictionary.extend({
   },
 });
 
-// copied from https://github.com/amzn/style-dictionary/blob/v3.0.0-rc.1/lib/tokens/common/formats.js#L96
+// copied from https://github.com/amzn/style-dictionary/blob/v3.0.0-rc.1/lib/common/formats.js#L96
 function minifyCSSVarDictionary(obj) {
   if (typeof obj !== "object" || Array.isArray(obj)) {
     return obj;
