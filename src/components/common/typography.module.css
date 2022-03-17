@@ -48,7 +48,7 @@
 }
 
 .colorBase {
-  @apply text-font-base;
+  @apply text-black;
 }
 
 .colorBrand {
