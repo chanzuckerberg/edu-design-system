@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Text /> Body story renders snapshot 1`] = `
+<p
+  class="text text--body"
+>
+  Body paragraph 16/24
+</p>
+`;
+
+exports[`<Text /> BodyColorInfoBold story renders snapshot 1`] = `
+<p
+  class="text text--body text--info text--weight-bold"
+>
+  Info color body text, bold
+</p>
+`;
+
+exports[`<Text /> BodySmall story renders snapshot 1`] = `
+<p
+  class="text text--sm"
+>
+  Body small 14/20
+</p>
+`;
+
+exports[`<Text /> BodyXSmall story renders snapshot 1`] = `
+<p
+  class="text text--xs"
+>
+  Body Xsmall 12/16
+</p>
+`;
+
+exports[`<Text /> Caption story renders snapshot 1`] = `
+<p
+  class="text text--caption"
+>
+  Caption 12/20
+</p>
+`;
+
+exports[`<Text /> Overline story renders snapshot 1`] = `
+<p
+  class="text text--overline"
+>
+  Overline 12/20
+</p>
+`;
+
+exports[`<Text /> TextColorInherit story renders snapshot 1`] = `
+<p
+  class="text text--body text--alert"
+>
+  This text surrounds the 
+  <span
+    class="text text--body text--inherit"
+  >
+    Child Text
+  </span>
+   and shows it should inherit color from the parent
+</p>
+`;

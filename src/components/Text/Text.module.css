@@ -47,5 +47,55 @@
 }
 
 /**
+ * Color
+ */
+.text--alert {
+  color: var(--eds-color-other-red-800);
+}
+.text--base {
+  color: var(--eds-theme-color-body-foreground);
+}
+.text--brand {
+  color: var(--eds-color-brand-blue-700);
+}
+.text--info {
+  color: var(--eds-color-other-blue-700);
+}
+.text--inherit {
+  color: inherit;
+}
+.text--neutral {
+  color: var(--eds-color-neutral-500);
+}
+.text--success {
+  color: var(--eds-color-other-green-700);
+}
+.text--warning {
+  color: var(--eds-color-other-orange-700);
+}
+.text--white {
+  color: var(--eds-color-neutral-white);
+}
+
+/**
+ * Spacing
+ */
+.text--mb-half {
+  margin-bottom: var(--eds-size-half);
+}
+.text--mb-1x {
+  margin-bottom: var(--eds-size-1);
+}
+.text--mb-2x {
+  margin-bottom: var(--eds-size-2);
+}
+
+/**
  * Weights
  */
+.text--weight-normal {
+  font-weight: var(--eds-font-weight-regular);
+}
+.text--weight-bold {
+  font-weight: var(--eds-font-weight-bold);
+}
