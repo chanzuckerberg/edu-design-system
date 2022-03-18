@@ -5,10 +5,10 @@
         "primary": {
           "foreground": {
             "@": {
-              "value": "{eds.color.brand.blue.600}"
+              "value": "{eds.color.brand.grape.600}"
             },
             "hover": {
-              "value": "{eds.color.brand.blue.800}"
+              "value": "{eds.color.brand.grape.800}"
             },
             "inverted": {
               "@": {
@@ -21,33 +21,33 @@
           },
           "background": {
             "@": {
-              "value": "{eds.color.brand.blue.600}"
+              "value": "{eds.color.brand.grape.600}"
             },
             "hover": {
-              "value": "{eds.color.brand.blue.800}"
+              "value": "{eds.color.brand.grape.800}"
             },
             "inverted": {
               "@": {
-                "value": "{eds.color.brand.blue.300}"
+                "value": "{eds.color.brand.grape.300}"
               },
               "hover": {
-                "value": "{eds.color.brand.blue.600}"
+                "value": "{eds.color.brand.grape.600}"
               }
             }
           },
           "border": {
             "@": {
-              "value": "{eds.color.brand.blue.600}"
+              "value": "{eds.color.brand.grape.600}"
             },
             "hover": {
-              "value": "{eds.color.brand.blue.800}"
+              "value": "{eds.color.brand.grape.800}"
             },
             "inverted": {
               "@": {
-                "value": "{eds.color.brand.blue.300}"
+                "value": "{eds.color.brand.grape.300}"
               },
               "hover": {
-                "value": "{eds.color.brand.blue.600}"
+                "value": "{eds.color.brand.grape.600}"
               }
             }
           }

@@ -2,7 +2,7 @@
   "eds": {
     "color": {
       "brand": {
-        "purple": {
+        "grape": {
           "100": { "value": "#F0F0FC" },
           "200": { "value": "#E0E0F9" },
           "300": { "value": "#C4C1F3" },
@@ -50,8 +50,8 @@
           "100": { "value": "#FFF1E9" },
           "400": { "value": "#F7BE2D" }
         },
-        "bright-yellow": {
-          "100": { "value": "#F5FF8F" }
+        "lemon": {
+          "value": "#F5FF8F"
         },
         "orange": {
           "100": { "value": "#FFF1E9" },
