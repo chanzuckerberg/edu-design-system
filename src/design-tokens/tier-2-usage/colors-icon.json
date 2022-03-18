@@ -22,10 +22,10 @@
           "link": {
             "default": {
               "@": {
-                "value": ""
+                "value": "{eds.color.brand.grape.500}"
               },
               "hover": {
-                "value": ""
+                "value": "{eds.color.brand.grape.600}"
               }
             },
             "strong": {
