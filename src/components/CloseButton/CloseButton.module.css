@@ -1,0 +1,48 @@
+.close-button {
+  width: var(--eds-size-6);
+  height: var(--eds-size-6);
+  border-radius: 50%;
+
+  svg {
+    /* TODO(Icon): use size prop on Icon after that component is done */
+    height: var(--eds-size-4);
+    width: var(--eds-size-4);
+    /* TODO(Icon): use color prop on Icon after that component is done */
+    fill: var(--close-button-icon-color);
+  }
+
+  &:hover {
+    background-color: var(--close-button-icon-hover-color);
+  
+    /* TODO(Icon): fix after Icon component is done */
+    /* stylelint-disable-next-line max-nesting-depth */
+    svg {
+      fill: var(--eds-theme-color-neutral-bold-foreground-inverted);
+    }
+  }
+}
+
+.close-button--variant-brand {
+  --close-button-icon-color: var(--eds-color-brand-blue-700);
+  --close-button-icon-hover-color: var(--eds-theme-color-primary-foreground);
+}
+
+.close-button--variant-neutral {
+  --close-button-icon-color: var(--eds-theme-color-neutral-md-background-inverted);
+  --close-button-icon-hover-color: var(--eds-theme-color-neutral-md-foreground);
+}
+
+.close-button--variant-success {
+  --close-button-icon-color: var(--eds-theme-color-utility-success-foreground);
+  --close-button-icon-hover-color: var(--eds-color-other-green-600);
+}
+
+.close-button--variant-warning {
+  --close-button-icon-color: var(--eds-theme-color-utility-warning-foreground);
+  --close-button-icon-hover-color: var(--eds-color-other-orange-600);
+}
+
+.close-button--variant-alert {
+  --close-button-icon-color: var(--eds-theme-color-utility-error-foreground);
+  --close-button-icon-hover-color: var(--eds-color-other-red-600);
+}
