@@ -4,7 +4,7 @@ import '../src/design-tokens/css/base/body.css';
 import '../src/design-tokens/css/base/media.css';
 
 // Import theme tokens
-import '../src/design-tokens/tokens.css';
+import '../src/tokens-dist/variables.css';
 
 // Import storybook-specific CSS
 import './css/styleguide-only.css';
