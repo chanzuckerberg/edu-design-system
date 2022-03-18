@@ -1,0 +1,48 @@
+/*------------------------------------*\
+    # NOTIFICATION ICON
+\*------------------------------------*/
+
+/* TODO(Icon): update styles to use Icon component props after Icon component is done */
+
+/**
+ * Notification icon
+ */
+.notification-icon {
+  width: var(--eds-size-2-and-half);
+  height: var(--eds-size-2-and-half);
+}
+
+/**
+ * Brand notification icon
+ */
+.notification-icon--brand {
+  fill: var(--eds-color-brand-blue-500);
+}
+
+/**
+ * Neutral notification icon
+ */
+.notification-icon--neutral {
+  fill: var(--eds-color-neutral-500);
+}
+
+/**
+ * Success notification icon
+ */
+.notification-icon--success {
+  fill: var(--eds-color-other-green-500);
+}
+
+/**
+ * Warning notification icon
+ */
+.notification-icon--warning {
+  fill: var(--eds-color-other-orange-500);
+}
+
+/**
+ * Alert notification icon
+ */
+.notification-icon--alert {
+  fill: var(--eds-color-other-red-500);
+}
