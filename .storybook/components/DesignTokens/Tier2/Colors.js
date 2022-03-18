@@ -91,48 +91,22 @@ export class Tier2Colors extends Component {
         </Section>
 
         <Section title="Body Colors">
-          <Grid variant="2up">
-            <GridItem>
-              <h3>Foreground</h3>
-              {filterTokens(`eds-theme-color-body-foreground`).map(function (
-                listItem,
-                index,
-              ) {
-                return (
-                  <GridItem key={'body-foreground-' + index}>
-                    <TokenSpecimen
-                      behavior="stacked"
-                      name={listItem.name}
-                      value={listItem.value}
-                      variant="typography-body"
-                      inlineStyles={{
-                        color: `var(${listItem.name})`,
-                      }}
-                    />
-                  </GridItem>
-                );
-              })}
-            </GridItem>
-            <GridItem>
-              <h3>Background</h3>
-              {filterTokens(`eds-theme-color-body-background`).map(function (
-                listItem,
-                index,
-              ) {
-                return (
-                  <GridItem key={'body-background-' + index}>
-                    <TokenSpecimen
-                      behavior="stacked"
-                      name={listItem.name}
-                      value={listItem.value}
-                      inlineStyles={{
-                        color: `var(${listItem.name})`,
-                      }}
-                    />
-                  </GridItem>
-                );
-              })}
-            </GridItem>
+          <Grid>
+            {filterTokens(`eds-theme-color-body`).map(function (
+              listItem,
+              index,
+            ) {
+              return (
+                <TokenSpecimen
+                  name={listItem.name}
+                  key={index}
+                  value={listItem.value}
+                  inlineStyles={{
+                    backgroundColor: `var(${listItem.name})`,
+                  }}
+                />
+              );
+            })}
           </Grid>
         </Section>
 
@@ -204,7 +178,7 @@ export class Tier2Colors extends Component {
           </Grid>
         </Section>
 
-        <Section title="Focus ring colors">
+        <Section title="Focus ring">
           <h3>Focus ring colors</h3>
           <Grid>
             {filterTokens(`eds-theme-color-focus-ring`).map(function (
@@ -229,51 +203,24 @@ export class Tier2Colors extends Component {
           </Grid>
         </Section>
 
-        <Section title="Highlighted text">
-          <Grid variant="1-3up">
-            <GridItem>
-              <h3>Foreground</h3>
-              <Grid>
-                {filterTokens(`eds-theme-color-text-highlight-foreground`).map(
-                  function (listItem, index) {
-                    return (
-                      <GridItem key={'text-highlight-foreground-' + index}>
-                        <TokenSpecimen
-                          behavior="stacked"
-                          name={listItem.name}
-                          value={listItem.value}
-                          variant="typography-title"
-                          inlineStyles={{
-                            color: `var(${listItem.name})`,
-                          }}
-                        />
-                      </GridItem>
-                    );
-                  },
-                )}
-              </Grid>
-            </GridItem>
-            <GridItem>
-              <h3>Background</h3>
-              <Grid>
-                {filterTokens(`eds-theme-color-text-highlight-background`).map(
-                  function (listItem, index) {
-                    return (
-                      <GridItem key={'text-highlight-background-' + index}>
-                        <TokenSpecimen
-                          behavior="stacked"
-                          name={listItem.name}
-                          value={listItem.value}
-                          inlineStyles={{
-                            backgroundColor: `var(${listItem.name})`,
-                          }}
-                        />
-                      </GridItem>
-                    );
-                  },
-                )}
-              </Grid>
-            </GridItem>
+        <Section title="Text Highlight">
+          <Grid>
+            {filterTokens(`eds-theme-color-text-highlight`).map(function (
+              listItem,
+              index,
+            ) {
+              return (
+                <GridItem key={'text-highlight-' + index}>
+                  <TokenSpecimen
+                    name={listItem.name}
+                    value={listItem.value}
+                    inlineStyles={{
+                      backgroundColor: `var(${listItem.name})`,
+                    }}
+                  />
+                </GridItem>
+              );
+            })}
           </Grid>
         </Section>
       </div>
