@@ -2,6 +2,14 @@
   @apply relative bg-white;
 }
 
+.compact {
+  @apply w-min;
+}
+
+.compact > button {
+  @apply p-1;
+}
+
 .label {
   @apply text-sm text-neutral-500 font-bold mb-1;
 }
@@ -11,7 +19,15 @@
 }
 
 .options {
-  @apply w-full absolute bg-white mt-2 py-2 rounded shadow-2 z-10;
+  @apply absolute bg-white mt-2 py-2 rounded shadow-2 z-10;
+}
+
+.optionsFullWidth {
+  @apply w-full;
+}
+
+.optionsAlignRight {
+  @apply right-0;
 }
 
 .option {

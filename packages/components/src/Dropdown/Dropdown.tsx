@@ -1,9 +1,16 @@
 import { Listbox } from "@headlessui/react";
 import clsx from "clsx";
-import React, { ReactNode, ComponentProps, ElementType } from "react";
+import React, {
+  ReactNode,
+  ComponentProps,
+  ElementType,
+  useContext,
+} from "react";
 import DropdownButton from "../DropdownButton";
 import CheckRoundedIcon from "../Icons/CheckRounded";
 import styles from "./Dropdown.module.css";
+
+export type OptionsAlignType = "left" | "right";
 
 type ListboxProps = ComponentProps<typeof Listbox>;
 type DropdownProps = ListboxProps & {
@@ -48,6 +55,23 @@ type DropdownProps = ListboxProps & {
    * Optional className for additional styling.
    */
   className?: string;
+  /**
+   * Render dropdown button that is only as wide as the content.
+   *
+   * When defining compact dropdown need to provide optionsWidth to
+   * define width of options menu, and optionally provide optionsAlign
+   * if desired to right align to dropdow button.
+   */
+  compact?: boolean;
+  /**
+   * Align dropdown menu to the left (default) or right of dropdown button
+   */
+  optionsAlign?: OptionsAlignType;
+  /**
+   * Render dropdown menu with width (specify using tailwind utility string)
+   * independent of dropdown button width
+   */
+  optionsWidth?: string;
 };
 
 type RenderProp<Arg> = (arg: Arg) => ReactNode;
@@ -165,6 +189,68 @@ function childrenHaveLabelComponent(children?: ReactNode): boolean {
  *   <Dropdown aria-label="Options:" buttonText="Select" options={options} />
  * );
  * ```
+ *
+ * For compact dropdown button, add compact and optionsWidth props to
+ * <Dropdown>.
+ *
+ * Examples:
+ *
+ *
+ * ```
+ * return (
+ *   <Dropdown
+ *     aria-label="Options"
+ *     compact
+ *     optionsAlign="right"
+ *     optionsWidth="w-96"
+ *   >
+ *     <Dropdown.Options>
+ *       <Dropdown.Option>Option 1</Dropdown.Option>
+ *       <Dropdown.Option>Option 2</Dropdown.Option>
+ *       <Dropdown.Option>Option 3</Dropdown.Option>
+ *     </Dropdown.Options>
+ *   </Dropdown>
+ * );
+ * ```
+ *
+ * ```
+ * const options = [
+ *   ...
+ * ];
+ *
+ * return (
+ *   <Dropdown
+ *     aria-label="Options"
+ *     compact
+ *     options={options}
+ *     optionsAlign="right"
+ *     optionsWidth="w-96"
+ *   />
+ * );
+ * ```
+ *
+ * For dropdown that differs in button and options menu width, style <Dropdown>
+ * with className for the button with and provide optionsWidth for the options
+ * menu width.
+ *
+ * Example:
+ *
+ * ```
+ * const options = [
+ *   ...
+ * ];
+ *
+ * return (
+ *   <Dropdown
+ *     aria-label="Options"
+ *     className="w-60"
+ *     compact
+ *     options={options}
+ *     optionsAlign="right"
+ *     optionsWidth="w-96"
+ *   />
+ * );
+ * ```
  */
 function Dropdown(props: DropdownProps) {
   const {
@@ -174,6 +260,9 @@ function Dropdown(props: DropdownProps) {
     options,
     children,
     "aria-label": ariaLabel,
+    compact,
+    optionsAlign,
+    optionsWidth,
     ...rest
   } = props;
 
@@ -197,7 +286,7 @@ function Dropdown(props: DropdownProps) {
   }
 
   const sharedProps = {
-    className: clsx(styles.dropdown, className),
+    className: clsx(styles.dropdown, className, compact && styles.compact),
     // Provide a wrapping <div> element for the dropdown. This is needed so that any props
     // passed directly to this component have a corresponding DOM element to receive them.
     // Otherwise we get an error.
@@ -207,15 +296,17 @@ function Dropdown(props: DropdownProps) {
 
   if (typeof children === "function") {
     return (
-      <Listbox
-        {...sharedProps}
-        // We prefer to pass the aria-label in via an invisible DropdownLabel, but we can't
-        // easily pass down function children with component children, so we'll settle for
-        // using a standard aria-label in this case.
-        aria-label={ariaLabel}
-      >
-        {children}
-      </Listbox>
+      <DropdownContext.Provider value={{ optionsAlign, optionsWidth }}>
+        <Listbox
+          {...sharedProps}
+          // We prefer to pass the aria-label in via an invisible DropdownLabel, but we can't
+          // easily pass down function children with component children, so we'll settle for
+          // using a standard aria-label in this case.
+          aria-label={ariaLabel}
+        >
+          {children}
+        </Listbox>
+      </DropdownContext.Provider>
     );
   }
 
@@ -228,7 +319,10 @@ function Dropdown(props: DropdownProps) {
   const trigger = buttonText && <DropdownTrigger>{buttonText}</DropdownTrigger>;
 
   const optionsList = options && (
-    <DropdownOptions>
+    <DropdownOptions
+    // optionsAlign={optionsAlign}
+    // optionsWidth={optionsWidth}
+    >
       {options.map((option) => {
         const { label, ...rest } = option;
         return (
@@ -249,8 +343,23 @@ function Dropdown(props: DropdownProps) {
     </>
   );
 
-  return <Listbox {...sharedProps}>{childrenToUse}</Listbox>;
+  const contextValue = Object.assign(
+    {},
+    optionsAlign ? { optionsAlign } : null,
+    optionsWidth ? { optionsWidth } : null,
+  );
+
+  return (
+    <DropdownContext.Provider value={contextValue}>
+      <Listbox {...sharedProps}>{childrenToUse}</Listbox>
+    </DropdownContext.Provider>
+  );
 }
+
+const DropdownContext = React.createContext<{
+  optionsAlign?: OptionsAlignType;
+  optionsWidth?: string;
+}>({});
 
 const DropdownLabel = (props: { className?: string; children: ReactNode }) => {
   const { children, className } = props;
@@ -287,8 +396,18 @@ const DropdownOptions = function (
   props: PropsWithRenderProp<{ open: boolean }>,
 ) {
   const { className, ...rest } = props;
+  const { optionsAlign, optionsWidth } = useContext(DropdownContext);
+
   return (
-    <Listbox.Options className={clsx(styles.options, className)} {...rest} />
+    <Listbox.Options
+      className={clsx(
+        styles.options,
+        className,
+        optionsWidth || styles.optionsFullWidth,
+        optionsAlign === "right" && styles.optionsAlignRight,
+      )}
+      {...rest}
+    />
   );
 };
 

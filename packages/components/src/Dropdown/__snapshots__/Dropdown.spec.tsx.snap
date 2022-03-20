@@ -1,5 +1,263 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Dropdown /> Compact story renders snapshot 1`] = `
+<div
+  class="dropdown compact"
+  data-testid="dropdown"
+>
+  <label
+    class="label srOnly"
+    id="headlessui-listbox-label-13"
+  >
+    Favorite Animal
+  </label>
+  <button
+    aria-controls="headlessui-listbox-options-15"
+    aria-expanded="true"
+    aria-haspopup="true"
+    aria-labelledby="headlessui-listbox-label-13 headlessui-listbox-button-14"
+    class="dropdownButton"
+    id="headlessui-listbox-button-14"
+    type="button"
+  >
+    <span>
+      Select
+    </span>
+    <svg
+      aria-hidden="true"
+      class="svgIcon"
+      fill="currentColor"
+      height="1.25rem"
+      style="--svg-icon-size: 1.25rem;"
+      viewBox="0 0 24 24"
+      width="1.25rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M15.88 9.29L12 13.17 8.12 9.29a.9959.9959 0 00-1.41 0c-.39.39-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41-.39-.38-1.03-.39-1.42 0z"
+      />
+    </svg>
+  </button>
+  <ul
+    aria-labelledby="headlessui-listbox-label-13"
+    aria-orientation="vertical"
+    class="options w-96"
+    id="headlessui-listbox-options-15"
+    role="listbox"
+    tabindex="0"
+  >
+    <li
+      class="option"
+      id="headlessui-listbox-option-16"
+      role="option"
+      tabindex="-1"
+    >
+      <span
+        class="optionContent"
+      >
+        Dogs
+      </span>
+    </li>
+    <li
+      class="option"
+      id="headlessui-listbox-option-17"
+      role="option"
+      tabindex="-1"
+    >
+      <span
+        class="optionContent"
+      >
+        Cats
+      </span>
+    </li>
+    <li
+      class="option"
+      id="headlessui-listbox-option-18"
+      role="option"
+      tabindex="-1"
+    >
+      <span
+        class="optionContent"
+      >
+        Birds
+      </span>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`<Dropdown /> CompactUsingChildrenPropAndNoVisibleLabel story renders snapshot 1`] = `
+<div
+  class="dropdown compact"
+  data-testid="dropdown"
+>
+  <label
+    class="label srOnly"
+    id="headlessui-listbox-label-43"
+  >
+    Favorite Animal
+  </label>
+  <button
+    aria-controls="headlessui-listbox-options-45"
+    aria-expanded="true"
+    aria-haspopup="true"
+    aria-labelledby="headlessui-listbox-label-43 headlessui-listbox-button-44"
+    class="dropdownButton"
+    id="headlessui-listbox-button-44"
+    type="button"
+  >
+    <span>
+      Select
+    </span>
+    <svg
+      aria-hidden="true"
+      class="svgIcon"
+      fill="currentColor"
+      height="1.25rem"
+      style="--svg-icon-size: 1.25rem;"
+      viewBox="0 0 24 24"
+      width="1.25rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M15.88 9.29L12 13.17 8.12 9.29a.9959.9959 0 00-1.41 0c-.39.39-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41-.39-.38-1.03-.39-1.42 0z"
+      />
+    </svg>
+  </button>
+  <ul
+    aria-labelledby="headlessui-listbox-label-43"
+    aria-orientation="vertical"
+    class="options w-96"
+    id="headlessui-listbox-options-45"
+    role="listbox"
+    tabindex="0"
+  >
+    <li
+      class="option"
+      id="headlessui-listbox-option-46"
+      role="option"
+      tabindex="-1"
+    >
+      <span
+        class="optionContent"
+      >
+        Dogs
+      </span>
+    </li>
+    <li
+      class="option"
+      id="headlessui-listbox-option-47"
+      role="option"
+      tabindex="-1"
+    >
+      <span
+        class="optionContent"
+      >
+        Cats
+      </span>
+    </li>
+    <li
+      class="option"
+      id="headlessui-listbox-option-48"
+      role="option"
+      tabindex="-1"
+    >
+      <span
+        class="optionContent"
+      >
+        Birds
+      </span>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`<Dropdown /> CompactWithOptionsRightAligned story renders snapshot 1`] = `
+<div
+  class="dropdown compact"
+  data-testid="dropdown"
+>
+  <label
+    class="label srOnly"
+    id="headlessui-listbox-label-19"
+  >
+    Favorite Animal
+  </label>
+  <button
+    aria-controls="headlessui-listbox-options-21"
+    aria-expanded="true"
+    aria-haspopup="true"
+    aria-labelledby="headlessui-listbox-label-19 headlessui-listbox-button-20"
+    class="dropdownButton"
+    id="headlessui-listbox-button-20"
+    type="button"
+  >
+    <span>
+      Select
+    </span>
+    <svg
+      aria-hidden="true"
+      class="svgIcon"
+      fill="currentColor"
+      height="1.25rem"
+      style="--svg-icon-size: 1.25rem;"
+      viewBox="0 0 24 24"
+      width="1.25rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M15.88 9.29L12 13.17 8.12 9.29a.9959.9959 0 00-1.41 0c-.39.39-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41-.39-.38-1.03-.39-1.42 0z"
+      />
+    </svg>
+  </button>
+  <ul
+    aria-labelledby="headlessui-listbox-label-19"
+    aria-orientation="vertical"
+    class="options w-96 optionsAlignRight"
+    id="headlessui-listbox-options-21"
+    role="listbox"
+    tabindex="0"
+  >
+    <li
+      class="option"
+      id="headlessui-listbox-option-22"
+      role="option"
+      tabindex="-1"
+    >
+      <span
+        class="optionContent"
+      >
+        Dogs
+      </span>
+    </li>
+    <li
+      class="option"
+      id="headlessui-listbox-option-23"
+      role="option"
+      tabindex="-1"
+    >
+      <span
+        class="optionContent"
+      >
+        Cats
+      </span>
+    </li>
+    <li
+      class="option"
+      id="headlessui-listbox-option-24"
+      role="option"
+      tabindex="-1"
+    >
+      <span
+        class="optionContent"
+      >
+        Birds
+      </span>
+    </li>
+  </ul>
+</div>
+`;
+
 exports[`<Dropdown /> Default story renders snapshot 1`] = `
 <div
   class="dropdown w-60"
@@ -41,7 +299,7 @@ exports[`<Dropdown /> Default story renders snapshot 1`] = `
   <ul
     aria-labelledby="headlessui-listbox-label-1"
     aria-orientation="vertical"
-    class="options"
+    class="options optionsFullWidth"
     id="headlessui-listbox-options-3"
     role="listbox"
     tabindex="0"
@@ -127,7 +385,7 @@ exports[`<Dropdown /> DefaultWithoutVisibleLabel story renders snapshot 1`] = `
   <ul
     aria-labelledby="headlessui-listbox-label-7"
     aria-orientation="vertical"
-    class="options"
+    class="options optionsFullWidth"
     id="headlessui-listbox-options-9"
     role="listbox"
     tabindex="0"
@@ -172,24 +430,24 @@ exports[`<Dropdown /> DefaultWithoutVisibleLabel story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Dropdown /> UsingChildrenProp story renders snapshot 1`] = `
+exports[`<Dropdown /> SeparateButtonAndMenuWidth story renders snapshot 1`] = `
 <div
   class="dropdown w-60"
   data-testid="dropdown"
 >
   <label
-    class="label"
-    id="headlessui-listbox-label-13"
+    class="label srOnly"
+    id="headlessui-listbox-label-25"
   >
     Favorite Animal
   </label>
   <button
-    aria-controls="headlessui-listbox-options-15"
+    aria-controls="headlessui-listbox-options-27"
     aria-expanded="true"
     aria-haspopup="true"
-    aria-labelledby="headlessui-listbox-label-13 headlessui-listbox-button-14"
+    aria-labelledby="headlessui-listbox-label-25 headlessui-listbox-button-26"
     class="dropdownButton"
-    id="headlessui-listbox-button-14"
+    id="headlessui-listbox-button-26"
     type="button"
   >
     <span>
@@ -211,16 +469,16 @@ exports[`<Dropdown /> UsingChildrenProp story renders snapshot 1`] = `
     </svg>
   </button>
   <ul
-    aria-labelledby="headlessui-listbox-label-13"
+    aria-labelledby="headlessui-listbox-label-25"
     aria-orientation="vertical"
-    class="options"
-    id="headlessui-listbox-options-15"
+    class="options w-96"
+    id="headlessui-listbox-options-27"
     role="listbox"
     tabindex="0"
   >
     <li
       class="option"
-      id="headlessui-listbox-option-16"
+      id="headlessui-listbox-option-28"
       role="option"
       tabindex="-1"
     >
@@ -232,7 +490,7 @@ exports[`<Dropdown /> UsingChildrenProp story renders snapshot 1`] = `
     </li>
     <li
       class="option"
-      id="headlessui-listbox-option-17"
+      id="headlessui-listbox-option-29"
       role="option"
       tabindex="-1"
     >
@@ -244,7 +502,93 @@ exports[`<Dropdown /> UsingChildrenProp story renders snapshot 1`] = `
     </li>
     <li
       class="option"
-      id="headlessui-listbox-option-18"
+      id="headlessui-listbox-option-30"
+      role="option"
+      tabindex="-1"
+    >
+      <span
+        class="optionContent"
+      >
+        Birds
+      </span>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`<Dropdown /> UsingChildrenProp story renders snapshot 1`] = `
+<div
+  class="dropdown w-60"
+  data-testid="dropdown"
+>
+  <label
+    class="label"
+    id="headlessui-listbox-label-31"
+  >
+    Favorite Animal
+  </label>
+  <button
+    aria-controls="headlessui-listbox-options-33"
+    aria-expanded="true"
+    aria-haspopup="true"
+    aria-labelledby="headlessui-listbox-label-31 headlessui-listbox-button-32"
+    class="dropdownButton"
+    id="headlessui-listbox-button-32"
+    type="button"
+  >
+    <span>
+      Select
+    </span>
+    <svg
+      aria-hidden="true"
+      class="svgIcon"
+      fill="currentColor"
+      height="1.25rem"
+      style="--svg-icon-size: 1.25rem;"
+      viewBox="0 0 24 24"
+      width="1.25rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M15.88 9.29L12 13.17 8.12 9.29a.9959.9959 0 00-1.41 0c-.39.39-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41-.39-.38-1.03-.39-1.42 0z"
+      />
+    </svg>
+  </button>
+  <ul
+    aria-labelledby="headlessui-listbox-label-31"
+    aria-orientation="vertical"
+    class="options optionsFullWidth"
+    id="headlessui-listbox-options-33"
+    role="listbox"
+    tabindex="0"
+  >
+    <li
+      class="option"
+      id="headlessui-listbox-option-34"
+      role="option"
+      tabindex="-1"
+    >
+      <span
+        class="optionContent"
+      >
+        Dogs
+      </span>
+    </li>
+    <li
+      class="option"
+      id="headlessui-listbox-option-35"
+      role="option"
+      tabindex="-1"
+    >
+      <span
+        class="optionContent"
+      >
+        Cats
+      </span>
+    </li>
+    <li
+      class="option"
+      id="headlessui-listbox-option-36"
       role="option"
       tabindex="-1"
     >
@@ -265,17 +609,17 @@ exports[`<Dropdown /> UsingChildrenPropAndNoVisibleLabel story renders snapshot 
 >
   <label
     class="label srOnly"
-    id="headlessui-listbox-label-19"
+    id="headlessui-listbox-label-37"
   >
     Favorite Animal
   </label>
   <button
-    aria-controls="headlessui-listbox-options-21"
+    aria-controls="headlessui-listbox-options-39"
     aria-expanded="true"
     aria-haspopup="true"
-    aria-labelledby="headlessui-listbox-label-19 headlessui-listbox-button-20"
+    aria-labelledby="headlessui-listbox-label-37 headlessui-listbox-button-38"
     class="dropdownButton"
-    id="headlessui-listbox-button-20"
+    id="headlessui-listbox-button-38"
     type="button"
   >
     <span>
@@ -297,16 +641,16 @@ exports[`<Dropdown /> UsingChildrenPropAndNoVisibleLabel story renders snapshot 
     </svg>
   </button>
   <ul
-    aria-labelledby="headlessui-listbox-label-19"
+    aria-labelledby="headlessui-listbox-label-37"
     aria-orientation="vertical"
-    class="options"
-    id="headlessui-listbox-options-21"
+    class="options optionsFullWidth"
+    id="headlessui-listbox-options-39"
     role="listbox"
     tabindex="0"
   >
     <li
       class="option"
-      id="headlessui-listbox-option-22"
+      id="headlessui-listbox-option-40"
       role="option"
       tabindex="-1"
     >
@@ -318,7 +662,7 @@ exports[`<Dropdown /> UsingChildrenPropAndNoVisibleLabel story renders snapshot 
     </li>
     <li
       class="option"
-      id="headlessui-listbox-option-23"
+      id="headlessui-listbox-option-41"
       role="option"
       tabindex="-1"
     >
@@ -330,7 +674,7 @@ exports[`<Dropdown /> UsingChildrenPropAndNoVisibleLabel story renders snapshot 
     </li>
     <li
       class="option"
-      id="headlessui-listbox-option-24"
+      id="headlessui-listbox-option-42"
       role="option"
       tabindex="-1"
     >
@@ -351,11 +695,11 @@ exports[`<Dropdown /> UsingFunctionChildrenProp story renders snapshot 1`] = `
   data-testid="dropdown"
 >
   <button
-    aria-controls="headlessui-listbox-options-26"
+    aria-controls="headlessui-listbox-options-50"
     aria-expanded="true"
     aria-haspopup="true"
     class="p-4 rounded-md border border-neutral-300"
-    id="headlessui-listbox-button-25"
+    id="headlessui-listbox-button-49"
     type="button"
   >
     Select
@@ -372,16 +716,16 @@ exports[`<Dropdown /> UsingFunctionChildrenProp story renders snapshot 1`] = `
     </svg>
   </button>
   <ul
-    aria-labelledby="headlessui-listbox-button-25"
+    aria-labelledby="headlessui-listbox-button-49"
     aria-orientation="vertical"
-    class="options"
-    id="headlessui-listbox-options-26"
+    class="options optionsFullWidth"
+    id="headlessui-listbox-options-50"
     role="listbox"
     tabindex="0"
   >
     <li
       class="option"
-      id="headlessui-listbox-option-27"
+      id="headlessui-listbox-option-51"
       role="option"
       tabindex="-1"
     >
@@ -393,7 +737,7 @@ exports[`<Dropdown /> UsingFunctionChildrenProp story renders snapshot 1`] = `
     </li>
     <li
       class="option"
-      id="headlessui-listbox-option-28"
+      id="headlessui-listbox-option-52"
       role="option"
       tabindex="-1"
     >
@@ -405,7 +749,7 @@ exports[`<Dropdown /> UsingFunctionChildrenProp story renders snapshot 1`] = `
     </li>
     <li
       class="option"
-      id="headlessui-listbox-option-29"
+      id="headlessui-listbox-option-53"
       role="option"
       tabindex="-1"
     >
@@ -426,17 +770,17 @@ exports[`<Dropdown /> renders the OpenByDefault story 1`] = `
 >
   <label
     class="label"
-    id="headlessui-listbox-label-30"
+    id="headlessui-listbox-label-54"
   >
     Favorite Animal
   </label>
   <button
-    aria-controls="headlessui-listbox-options-32"
+    aria-controls="headlessui-listbox-options-56"
     aria-expanded="true"
     aria-haspopup="true"
-    aria-labelledby="headlessui-listbox-label-30 headlessui-listbox-button-31"
+    aria-labelledby="headlessui-listbox-label-54 headlessui-listbox-button-55"
     class="dropdownButton"
-    id="headlessui-listbox-button-31"
+    id="headlessui-listbox-button-55"
     type="button"
   >
     <span>
@@ -458,17 +802,17 @@ exports[`<Dropdown /> renders the OpenByDefault story 1`] = `
     </svg>
   </button>
   <ul
-    aria-activedescendant="headlessui-listbox-option-37"
-    aria-labelledby="headlessui-listbox-label-30"
+    aria-activedescendant="headlessui-listbox-option-61"
+    aria-labelledby="headlessui-listbox-label-54"
     aria-orientation="vertical"
-    class="options"
-    id="headlessui-listbox-options-32"
+    class="options optionsFullWidth"
+    id="headlessui-listbox-options-56"
     role="listbox"
     tabindex="0"
   >
     <li
       class="option"
-      id="headlessui-listbox-option-36"
+      id="headlessui-listbox-option-60"
       role="option"
       tabindex="-1"
     >
@@ -481,7 +825,7 @@ exports[`<Dropdown /> renders the OpenByDefault story 1`] = `
     <li
       aria-selected="true"
       class="option optionActive optionSelected"
-      id="headlessui-listbox-option-37"
+      id="headlessui-listbox-option-61"
       role="option"
       tabindex="-1"
     >
@@ -511,7 +855,7 @@ exports[`<Dropdown /> renders the OpenByDefault story 1`] = `
     </li>
     <li
       class="option"
-      id="headlessui-listbox-option-38"
+      id="headlessui-listbox-option-62"
       role="option"
       tabindex="-1"
     >

@@ -2,7 +2,7 @@ import { StoryObj } from "@storybook/react";
 import { within } from "@storybook/testing-library";
 import React from "react";
 import FilterListRoundedIcon from "../Icons/FilterListRounded";
-import Dropdown from "./Dropdown";
+import Dropdown, { OptionsAlignType } from "./Dropdown";
 
 export default {
   title: "Dropdown",
@@ -13,6 +13,9 @@ type Props = {
   labelText?: string;
   "aria-label"?: string;
   labelComponent?: React.ReactNode;
+  compact?: boolean;
+  optionsAlign?: OptionsAlignType;
+  optionsWidth?: string;
 };
 
 const exampleOptions = [
@@ -31,17 +34,22 @@ const exampleOptions = [
 ];
 
 function InteractiveExampleUsingSeparateProps(props: Props) {
+  const { compact, optionsAlign, optionsWidth } = props;
+
   const [selectedOption, setSelectedOption] =
     React.useState<typeof exampleOptions[0]>();
 
   return (
-    <div className="h-48">
+    <div className={`h-48${optionsAlign === "right" ? " pl-96" : ""}`}>
       <Dropdown
         buttonText={selectedOption?.label || "Select"}
-        className="w-60"
+        className={compact ? "" : "w-60"}
+        compact={compact}
         data-testid="dropdown"
         onChange={setSelectedOption}
         options={exampleOptions}
+        optionsAlign={optionsAlign}
+        optionsWidth={optionsWidth}
         value={selectedOption}
         {...props}
       />
@@ -50,6 +58,8 @@ function InteractiveExampleUsingSeparateProps(props: Props) {
 }
 
 function InteractiveExampleUsingChildren(props: Props) {
+  const { compact, optionsWidth } = props;
+
   const [selectedOption, setSelectedOption] =
     React.useState<typeof exampleOptions[0]>();
 
@@ -57,9 +67,11 @@ function InteractiveExampleUsingChildren(props: Props) {
     <div className="h-48">
       <Dropdown
         aria-label={props["aria-label"]}
-        className="w-60"
+        className={compact ? "" : "w-60"}
+        compact={compact}
         data-testid="dropdown"
         onChange={setSelectedOption}
+        optionsWidth={optionsWidth}
         value={selectedOption}
       >
         {props.labelComponent}
@@ -138,6 +150,36 @@ export const DefaultWithoutVisibleLabel: StoryObj = {
   ),
 };
 
+export const Compact: StoryObj = {
+  render: () => (
+    <InteractiveExampleUsingSeparateProps
+      aria-label="Favorite Animal"
+      compact
+      optionsWidth="w-96"
+    />
+  ),
+};
+
+export const CompactWithOptionsRightAligned: StoryObj = {
+  render: () => (
+    <InteractiveExampleUsingSeparateProps
+      aria-label="Favorite Animal"
+      compact
+      optionsAlign="right"
+      optionsWidth="w-96"
+    />
+  ),
+};
+
+export const SeparateButtonAndMenuWidth: StoryObj = {
+  render: () => (
+    <InteractiveExampleUsingSeparateProps
+      aria-label="Favorite Animal"
+      optionsWidth="w-96"
+    />
+  ),
+};
+
 export const UsingChildrenProp: StoryObj = {
   render: () => (
     <InteractiveExampleUsingChildren
@@ -149,6 +191,16 @@ export const UsingChildrenProp: StoryObj = {
 export const UsingChildrenPropAndNoVisibleLabel: StoryObj = {
   render: () => (
     <InteractiveExampleUsingChildren aria-label="Favorite Animal" />
+  ),
+};
+
+export const CompactUsingChildrenPropAndNoVisibleLabel: StoryObj = {
+  render: () => (
+    <InteractiveExampleUsingChildren
+      aria-label="Favorite Animal"
+      compact
+      optionsWidth="w-96"
+    />
   ),
 };
 
