@@ -1,0 +1,59 @@
+@import '../../design-tokens/mixins.css';
+/*------------------------------------*\
+    #NOTIFICATION LIST
+\*------------------------------------*/
+
+/**
+ * 1)  Notification list contains notification items, a count of unread notifications, and a button to mark all notifications as read
+ */
+.notification-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.notification-list__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: var(--eds-size-1);
+    background-color: var(--eds-color-brand-blue-100);
+    border: 1px solid var(--eds-color-neutral-200);
+}
+
+.notification-list__item a {
+   text-decoration: none;
+}
+
+
+.notification-list__item--title {
+    color: var(--eds-color-brand-blue-700);
+    font-size: var(--eds-font-size-sm)
+}
+
+.notification-list__item--content {
+    color: var(--eds-color-neutral-600);
+    font-size: var(--eds-font-size-xs)
+}
+
+.notification-list__item--button {
+    border-radius: 4px;
+    height: 8px;
+    width: 8px;
+    background-color: var(--eds-color-brand-blue-700);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.notification-list__item--read {
+    background-color: var(--eds-color-neutral-white);
+
+    .notification-list__item--title {
+        color: var(--eds-color-neutral-600);
+    }
+
+    .notification-list__item--button {
+        background-color: var(--eds-color-neutral-white);
+        border: 1px solid var(--eds-color-neutral-600);
+    }
+}
