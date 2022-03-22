@@ -56,6 +56,8 @@ export { Modal } from './components/Modal/Modal';
 export { ModalBody } from './components/ModalBody/ModalBody';
 export { ModalFooter } from './components/ModalFooter/ModalFooter';
 export { ModalHeader } from './components/ModalHeader/ModalHeader';
+export { NotificationListItem } from './components/NotificationListItem/NotificationListItem';
+export { NotificationList } from './components/NotificationList/NotificationList';
 export { NavContainer } from './components/NavContainer/NavContainer';
 export { PageHeader } from './components/PageHeader/PageHeader';
 export { Panel } from './components/Panel/Panel';

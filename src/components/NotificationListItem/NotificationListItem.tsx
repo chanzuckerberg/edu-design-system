@@ -23,7 +23,7 @@ interface State {
   isRead: boolean | null;
 }
 
-const NotificationListItem = ({
+export const NotificationListItem = ({
   sender,
   description,
   date,
@@ -76,5 +76,3 @@ const NotificationListItem = ({
 
 // TODO: each list item sets its own isRead state,
 // also the popover title also has the a link to set isRead on all items
-
-export default NotificationListItem;
