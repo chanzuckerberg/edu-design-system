@@ -8,6 +8,8 @@
  * 1) Container that consists of of a page header title and description
  */
 .page-header {
+  display: flex;
+  align-items: flex-start;
   margin-bottom: var(--eds-size-4);
 }
 
@@ -18,6 +20,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+/**
+ * Page header left
+ * 1) Flex 1 added so the right content doesn't wrap
+ */
+ .page-header__left {
+  flex: 1; /* 1 */
+}
+
+/**
+ * Page header right
+ * 1) Container that gets pushed all the way to the right
+ */
+.page-header__right {
+  margin-left: auto; /* 1 */
 }
 
 /**
