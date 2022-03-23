@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { PageHeader, Panel, Tabs, Tab, Breadcrumbs, BreadcrumbsItem, Button, Hr } from '../../../src';
+import { PageHeader, TextPassage, ListDetail, ListDetailPanel, Breadcrumbs, BreadcrumbsItem, Button, Hr } from '../../../src';
 
 import { PageShell } from '../../recipes/PageShell/PageShell';
 
@@ -16,9 +16,9 @@ export const ProjectOverview: React.FC = () => (
       <Button text="View plan" variant="bare" iconPosition="after" iconName="arrow-narrow-right" />
     }
      />
-    <Panel>
-      <div className="fpo">
-        <div>List Detail Component</div>
+     <ListDetail>
+	  <ListDetailPanel title="Overview">
+    <div>List Detail Component</div>
         <div className="fpo">Heading</div>
         <div className="fpo">Text Passage large</div>
         <div className="fpo">See more component (truncated text)</div>
@@ -45,7 +45,54 @@ export const ProjectOverview: React.FC = () => (
           <div>Cognitive skills (smaller section title than ones above)</div>
           <div className="fpo">Text passage with links?</div>
         </div>
-      </div>
-    </Panel>
+	  </ListDetailPanel>
+  
+	  <ListDetailPanel title="Expectations of Samuri in Feudal Japan and Wars of 5th Century">
+		<TextPassage>
+		  <h3>ListDetailPanel 2</h3>
+		  <p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+			eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+			minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+			aliquip ex{' '}
+		  </p>
+		</TextPassage>
+	  </ListDetailPanel>
+  
+	  <ListDetailPanel title="Expectations of Samuri in Feudal Japan">
+		<TextPassage>
+		  <h3>ListDetailPanel 3</h3>
+		  <p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+			eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+			minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+			aliquip ex{' '}
+		  </p>
+		</TextPassage>
+	  </ListDetailPanel>
+    <ListDetailPanel title="Expectations of Samuri in Feudal Japan">
+		<TextPassage>
+		  <h3>ListDetailPanel 4</h3>
+		  <p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+			eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+			minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+			aliquip ex{' '}
+		  </p>
+		</TextPassage>
+	  </ListDetailPanel>
+    <ListDetailPanel title="Expectations of Samuri in Feudal Japan">
+		<TextPassage>
+		  <h3>ListDetailPanel 5</h3>
+		  <p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+			eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+			minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+			aliquip ex{' '}
+		  </p>
+		</TextPassage>
+	  </ListDetailPanel>
+	</ListDetail>
+  
   </PageShell>
 );
