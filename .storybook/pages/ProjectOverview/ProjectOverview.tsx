@@ -17,7 +17,7 @@ export const ProjectOverview: React.FC = () => (
     }
      />
      <ListDetail>
-	  <ListDetailPanel title="Overview">
+	  <ListDetailPanel title="Overview" variant="success">
     <div>List Detail Component</div>
         <div className="fpo">Heading</div>
         <div className="fpo">Text Passage large</div>
