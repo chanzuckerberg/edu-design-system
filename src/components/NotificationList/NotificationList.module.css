@@ -32,7 +32,11 @@
 
 .notification-list__item--content {
     color: var(--eds-color-neutral-600);
-    font-size: var(--eds-font-size-xs)
+    font-size: var(--eds-font-size-xs);
+    padding-left: var(--eds-size-3);
+    padding-right: var(--eds-size-3);
+    padding-bottom: var(--eds-size-1);
+    padding-top: var(--eds-size-1);
 }
 
 .notification-list__item--button {

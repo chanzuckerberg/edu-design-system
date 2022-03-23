@@ -41,14 +41,10 @@ export interface Props {
   /**
    * Handler to be called when the popover is being closed (by ESCAPE / clicking X / clicking outside)
    */
-  onClose?: () => void;
+  onClose?: any;
   /**
-   * Size variations
-   * - **sm** results in a popover that is narrower than the default
-   * - **lg** results in a popover that is wider than the default
-   * - **xl** results in a popover that is wider than the default
+   * TODO: type this correctly
    */
-  size?: 'sm' | 'lg';
 }
 
 /**
@@ -63,7 +59,6 @@ export const Popover: React.FC<Props> = ({
   dismissible,
   onClose,
   closeButtonText,
-  size,
   ...other
 }) => {
   /**
@@ -186,8 +181,6 @@ export const Popover: React.FC<Props> = ({
   const footer = oneByType(children, PopoverFooter);
 
   const componentClassName = clsx(styles['popover'], className, {
-    [styles['popover--sm']]: size === 'sm',
-    [styles['popover--lg']]: size === 'lg',
     [styles['eds-is-active']]: isActive,
   });
 
@@ -218,6 +211,7 @@ export const Popover: React.FC<Props> = ({
               {body}
               {footer}
             </div>
+            <div className={styles['popover__arrow']}></div>
           </article>
         </div>
       </FocusLock>

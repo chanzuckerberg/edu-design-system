@@ -1,28 +1,158 @@
 @import '../../design-tokens/mixins.css';
 
-
 /*------------------------------------*\
-    #POPOVER
+    # POPOVER
 \*------------------------------------*/
 
 /**
- * 1) 
+ * 1) Box that contains content
  */
 .popover {
-	max-height: 520px;
-    max-width: 400px;
-    width: 400px;
-    position: fixed;
-    z-index: 1050;
-    box-shadow: 0 1px 4px rgb(0 0 0 / 30%);
-    bottom: 68px;
-    margin-left: 13px;
-    top: auto;
-    opacity: 0;
-    transition: opacity .1s ease-out .4s;
-    display: block;
-    left: 0px;
-    background-color: white;
-    border-radius: 3px;
-    background-clip: padding-box;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: var(--eds-z-index-200) 0;
+  background-color: transparent;
+  transition: all var(--eds-anim-fade-long) var(--eds-anim-ease);
+  transform: translateZ(0);
+
+  &.eds-is-active {
+    visibility: visible;
+  }
+
+  &:focus-visible {
+    @mixin focus;
+  }
+}
+.popover:not(.popover--full-screen) {
+  @media all and (min-width: $eds-bp-sm-2) {
+    height: 100vh;
+  }
+}
+
+/**
+ * Popover window
+ * 1) Actual box with content within
+ */
+.popover__window {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: auto;
+  left: 0;
+  bottom: 68px;
+  height: auto;
+  max-height: 450px;
+  width: 400px;
+  max-width: 400px;
+  margin-left: 13px;
+  opacity: 0;
+  background: var(--eds-color-neutral-white);
+  border-radius: var(--eds-theme-border-radius);
+  box-shadow: var(--eds-theme-box-shadow);
+  transition: opacity var(--eds-anim-fade-quick) var(--eds-anim-ease);
+  overscroll-behavior-y: contain;
+
+  &:focus-visible {
+    @mixin focus;
+  }
+
+  .popover__arrow {
+    position: relative;
+    bottom: 0;
+    left: 0;
+  }
+
+  .popover__arrow::after {
+      position: absolute;
+      left: 20px;
+      top: 0;
+      border-top-color: var(--eds-color-neutral-white);
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-style: solid;
+      content: '';
+      border-width: 10px;
+      border-bottom-width: 0;
+    }
+
+  /**
+   * Popover window inside active popover
+   * 1) Transform added for animation
+   */
+  .popover.eds-is-active & {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity var(--eds-anim-fade-quick) var(--eds-anim-ease);
+  }
+}
+
+.popover.popover--narrow .popover__window {
+  /**
+   * Popover window inside narrow popover
+   * 1) Popover window that is narrower than the default
+   */
+  width: 27rem;
+  @media all and (max-width: $eds-bp-sm-2) {
+    width: 100%;
+  }
+}
+.popover.popover--wide .popover__window {
+  /**
+   * Popover window inside wide popover
+   * 1) Popover window that is wider than the default
+   */
+  width: 60rem;
+}
+.popover.eds-is-active:not(.popover--full-screen) .popover__window {
+  @media all and (min-width: $eds-bp-sm-2) {
+    /**
+     * Popover window inside active popover
+     * 1) Transform added for animation
+     */
+    transform: translateY(0);
+    transition: opacity 0.3s var(--eds-anim-ease),
+      transform 0.3s var(--eds-anim-ease);
+  }
+}
+
+.popover__content {
+  padding-top: var(--eds-size-2);
+  padding-bottom: var(--eds-size-2);
+  height: auto;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+/**
+ * Popover header
+ */
+.popover__header {
+  margin-bottom: var(--eds-size-2);
+
+  h2 {
+    font-size: 12px;
+  }
+}
+
+.popover__header-content {
+  display: flex;
+  justify-content: space-between;
+  padding-left: var(--eds-size-4);
+  padding-right: var(--eds-size-4);
+}
+
+/**
+ * Popover footer
+ */
+.popover__footer {
+  padding-left: var(--eds-size-4);
+  padding-right: var(--eds-size-4);
+  margin-top: var(--eds-size-2);
 }

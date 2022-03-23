@@ -2,10 +2,10 @@ import clsx from 'clsx';
 import React, { ReactNode, useState, useRef, MutableRefObject } from 'react';
 import { Popover } from './Popover';
 import { Button } from '../Button/Button';
-import { ButtonGroup } from '../ButtonGroup/ButtonGroup';
 import { Heading } from '../Heading/Heading';
+import { NotificationList } from '../NotificationList/NotificationList';
+import { NotificationListItem } from '../NotificationListItem/NotificationListItem';
 import { PopoverBody } from '../PopoverBody/PopoverBody';
-import { PopoverFooter } from '../PopoverFooter/PopoverFooter';
 import { PopoverHeader } from '../PopoverHeader/PopoverHeader';
 import { TextPassage } from '../TextPassage/TextPassage';
 
@@ -52,15 +52,18 @@ export const PopoverExample: React.FC<Props> = ({
   const componentClassName = clsx('tooltip-popover', className, {});
   return (
     <div
-      style={{ padding: '1rem', minHeight: '500px' }}
+      style={{
+        padding: '1rem',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'flex-end',
+        height: '100vh',
+        width: '180px',
+      }}
       className={componentClassName}
       {...other}
     >
-      <Button
-        text="Open Popover"
-        onClick={openContinuePopover}
-        buttonRef={popoverButton}
-      />
+      <Button text="Open Popover" onClick={openContinuePopover} />
 
       <Popover
         dismissible={true}
@@ -68,36 +71,78 @@ export const PopoverExample: React.FC<Props> = ({
         onClose={closeContinuePopover}
         ariaLabelledBy="popover-heading-1"
         ariaDescribedBy="popover-description-1"
-        size={size}
       >
-        <PopoverHeader>
-          <Heading id="popover-heading-1" as="h2">
-            Popover Title
+        <PopoverHeader
+          titleAfter={<Button text="Mark All Seen" variant="link" />}
+        >
+          <Heading id="popover-heading-1" as="h6">
+            Notifications (4)
           </Heading>
         </PopoverHeader>
         <PopoverBody>
+          <NotificationList>
+            <NotificationListItem
+              link="#"
+              sender="EnglishTeacher"
+              description="gave you feedback"
+              date="now"
+              source="Outsiders on Trial: Self Awareness = Trial Brief Outline"
+            ></NotificationListItem>
+            <NotificationListItem
+              link="#"
+              sender="EnglishTeacher"
+              description="gave you feedback"
+              date="now"
+              source="Outsiders on Trial: Self Awareness = Trial Brief Outline"
+            ></NotificationListItem>
+            <NotificationListItem
+              link="#"
+              sender="EnglishTeacher"
+              description="gave you feedback"
+              date="now"
+              source="Outsiders on Trial: Self Awareness = Trial Brief Outline"
+            ></NotificationListItem>
+            <NotificationListItem
+              link="#"
+              sender="EnglishTeacher"
+              description="gave you feedback"
+              date="now"
+              source="Outsiders on Trial: Self Awareness = Trial Brief Outline"
+            ></NotificationListItem>
+          </NotificationList>
           <TextPassage
             className="u-margin-bottom-md"
             id="popover-description-1"
           >
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
+            <h6
+              style={{
+                marginLeft: '32px',
+                marginTop: '8px',
+                marginBottom: '8px',
+              }}
+            >
+              Already Seen
+            </h6>
           </TextPassage>
+          <NotificationList>
+            <NotificationListItem
+              link="#"
+              sender="EnglishTeacher"
+              description="gave you feedback"
+              date="now"
+              source="Outsiders on Trial: Self Awareness = Trial Brief Outline"
+              markedAsRead={true}
+            ></NotificationListItem>
+            <NotificationListItem
+              link="#"
+              sender="EnglishTeacher"
+              description="gave you feedback"
+              date="now"
+              source="Outsiders on Trial: Self Awareness = Trial Brief Outline"
+              markedAsRead={true}
+            ></NotificationListItem>
+          </NotificationList>
         </PopoverBody>
-        <PopoverFooter>
-          <ButtonGroup align="right">
-            <Button
-              variant="primary"
-              text="Submit"
-              onClick={closeContinuePopover}
-            />
-            <Button text="Close" onClick={closeContinuePopover} />
-          </ButtonGroup>
-        </PopoverFooter>
       </Popover>
     </div>
   );
