@@ -1,0 +1,28 @@
+@import '../../design-tokens/mixins.css';
+
+
+/*------------------------------------*\
+    #POPOVER
+\*------------------------------------*/
+
+/**
+ * 1) 
+ */
+.popover {
+	max-height: 520px;
+    max-width: 400px;
+    width: 400px;
+    position: fixed;
+    z-index: 1050;
+    box-shadow: 0 1px 4px rgb(0 0 0 / 30%);
+    bottom: 68px;
+    margin-left: 13px;
+    top: auto;
+    opacity: 0;
+    transition: opacity .1s ease-out .4s;
+    display: block;
+    left: 0px;
+    background-color: white;
+    border-radius: 3px;
+    background-clip: padding-box;
+}
