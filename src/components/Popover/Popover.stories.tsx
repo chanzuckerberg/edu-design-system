@@ -1,14 +1,20 @@
 import { Story, Meta } from '@storybook/react';
 import React from 'react';
 
-import { Popover, Props } from './Popover';
+import { PopoverExample, Props } from './PopoverExample';
 
 export default {
-  title: 'Molecules/Layout and Containers/Popover',
-  component: Popover,
+  title: 'Organisms/Interactive/Popover',
+  component: PopoverExample,
 } as Meta;
 
-const Template: Story<Props> = (args) => <Popover {...args} />;
+const Template: Story<Props> = (args) => <PopoverExample {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {};
+
+export const Small = Template.bind({});
+Small.args = { size: 'sm' };
+
+export const Large = Template.bind({});
+Large.args = { size: 'lg' };

@@ -62,6 +62,9 @@ export { NotificationListItem } from './components/NotificationListItem/Notifica
 export { PageHeader } from './components/PageHeader/PageHeader';
 export { Panel } from './components/Panel/Panel';
 export { Popover } from './components/Popover/Popover';
+export { PopoverBody } from './components/PopoverBody/PopoverBody';
+export { PopoverFooter } from './components/PopoverFooter/PopoverFooter';
+export { PopoverHeader } from './components/PopoverHeader/PopoverHeader';
 export { PrimaryNav } from './components/PrimaryNav/PrimaryNav';
 export { PrimaryNavItem } from './components/PrimaryNavItem/PrimaryNavItem';
 export { Radio } from './components/Radio/Radio';
