@@ -77,6 +77,10 @@
   flex-shrink: 0; /* 1 */
   padding-bottom: var(--eds-size-4);
 
+  /**
+  * List detail item after
+  * 1) Line between items that shouldn't link out unliike the bullet
+  */
   &:after {
     content: '';
     position: absolute;
@@ -88,9 +92,16 @@
     border-radius: 50%;
   }
 
+  /**
+  * Last list detail item
+  */
   &:last-child {
     padding-bottom: 0;
 
+    /**
+    * List list detail item after
+    * 1) Don't add a line between items
+    */
     &:after {
       content: none;
     }
@@ -141,9 +152,13 @@
     border-radius: 50%;
   }
 
+  /**
+  * Success list detail item
+  * 1) Remove the bullet since the icon will take its place
+  */
   .list-detail__item--success & {
     &:before {
-      content: none;
+      content: none; /* 1 */
     }
   }
 }
@@ -158,10 +173,13 @@
   height: var(--eds-size-2-and-half);
   width: var(--eds-size-2-and-half);
   margin-right: var(--eds-size-half);
+  background: var(--eds-color-neutral-white); /* 1*/
   z-index: var(--eds-z-index-100);
 
+  /**
+  * List detail icon within success list detail item
+  */
   .list-detail__item--success & {
-    background: var(--eds-color-neutral-white); /* 1*/
     fill: var(--eds-theme-color-utility-success-foreground);
   }
 }
