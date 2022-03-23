@@ -1,43 +1,113 @@
 import React from 'react';
 
 import {
-  Layout,
-  LayoutSection,
-  Main,
-  LayoutContainer,
   PageHeader,
-  Panel,
-  Tabs,
-  Tab,
+  TextPassage,
+  ListDetail,
+  ListDetailPanel,
+  Breadcrumbs,
+  BreadcrumbsItem,
+  Button,
+  Hr,
 } from '../../../src';
 
-import { GlobalFooter } from '../../recipes/GlobalFooter/GlobalFooter';
-import { GlobalHeader } from '../../recipes/GlobalHeader/GlobalHeader';
+import { PageShell } from '../../recipes/PageShell/PageShell';
 
 export const ProjectOverview: React.FC = () => (
-  <body>
-    <Layout behavior="fixed-sidebar">
-      <LayoutSection region="sidebar">
-        <GlobalHeader />
-      </LayoutSection>
-      <LayoutSection region="main">
-        <Main>
-          <LayoutContainer>
-            <PageHeader title="My Body Book" />
-            <Panel>
-              <Tabs>
-                <Tab title="Overview">
-                  <div className="fpo">Tab 1 Content</div>
-                </Tab>
-                <Tab title="Plans">
-                  <div className="fpo">Tab 2 Content</div>
-                </Tab>
-              </Tabs>
-            </Panel>
-          </LayoutContainer>
-        </Main>
-        <GlobalFooter />
-      </LayoutSection>
-    </Layout>
-  </body>
+  <PageShell>
+    <Breadcrumbs>
+      <BreadcrumbsItem text="My Courses" href="#" />
+      <BreadcrumbsItem text="Disciplinary Science 7" />
+    </Breadcrumbs>
+    <PageHeader
+      title="Feudal Honor Codes and Values"
+      right={
+        <Button
+          text="View plan"
+          variant="bare"
+          iconPosition="after"
+          iconName="arrow-narrow-right"
+        />
+      }
+    />
+    <ListDetail>
+      <ListDetailPanel title="Overview" variant="success">
+        <div>List Detail Component</div>
+        <div className="fpo">Heading</div>
+        <div className="fpo">Text Passage large</div>
+        <div className="fpo">See more component (truncated text)</div>
+        <div className="fpo">Heading</div>
+        <div className="fpo">
+          List component (Could include numbers/Q for question)
+        </div>
+        <Hr />
+        <div className="fpo">
+          <div>Section title with image in front (Power Focus Areas)</div>
+          <div className="fpo">Tooltip (up for discussion)</div>
+          <div className="fpo">Hoverable/Linkable Card Recipe (naming TBD)</div>
+        </div>
+        <div className="fpo">
+          <div>Section title with image in front (Additional Focus Areas)</div>
+          <div className="fpo">
+            <div>Hoverable/Linkable Card Recipe (naming TBD)</div>
+            <div className="fpo">Badge? Status badge?</div>
+          </div>
+          <div className="fpo">
+            <div>Hoverable/Linkable Card Recipe (naming TBD)</div>
+            <div className="fpo">Badge? Status badge?</div>
+          </div>
+        </div>
+        <div className="fpo">
+          <div>Cognitive skills (smaller section title than ones above)</div>
+          <div className="fpo">Text passage with links?</div>
+        </div>
+      </ListDetailPanel>
+
+      <ListDetailPanel title="Expectations of Samuri in Feudal Japan and Wars of 5th Century">
+        <TextPassage>
+          <h3>ListDetailPanel 2</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex{' '}
+          </p>
+        </TextPassage>
+      </ListDetailPanel>
+
+      <ListDetailPanel title="Expectations of Samuri in Feudal Japan">
+        <TextPassage>
+          <h3>ListDetailPanel 3</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex{' '}
+          </p>
+        </TextPassage>
+      </ListDetailPanel>
+      <ListDetailPanel title="Expectations of Samuri in Feudal Japan">
+        <TextPassage>
+          <h3>ListDetailPanel 4</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex{' '}
+          </p>
+        </TextPassage>
+      </ListDetailPanel>
+      <ListDetailPanel title="Expectations of Samuri in Feudal Japan">
+        <TextPassage>
+          <h3>ListDetailPanel 5</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex{' '}
+          </p>
+        </TextPassage>
+      </ListDetailPanel>
+    </ListDetail>
+  </PageShell>
 );

@@ -39,7 +39,7 @@ export interface Props {
   /**
    * Screen reader text used for the button alongside the input field (i.e. show/hide password button)
    */
-  fieldButtonScreenReaderText?: string;
+  fieldButtonAriaLabel?: string;
   /**
    * Text used for the button alongside the input field (i.e. show/hide password button)
    */
@@ -135,7 +135,7 @@ export const TextareaField = ({
   className,
   disabled,
   fieldButtonOnClick,
-  fieldButtonScreenReaderText,
+  fieldButtonAriaLabel,
   fieldButtonText,
   fieldNote,
   hideLabel,
@@ -213,7 +213,7 @@ export const TextareaField = ({
             className={styles['textarea-field__button']}
             type="button"
             text={fieldButtonText}
-            screenReaderText={fieldButtonScreenReaderText}
+            aria-label={fieldButtonAriaLabel}
             variant="bare"
             size="sm"
             onClick={fieldButtonOnClick}

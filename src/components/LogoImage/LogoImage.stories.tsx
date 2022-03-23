@@ -11,6 +11,4 @@ export default {
 const Template: Story<Props> = (args) => <LogoImage {...args} />;
 
 export const Default = Template.bind({});
-Default.args = {
-  src: 'https://via.placeholder.com/200x70',
-};
+Default.args = {};
