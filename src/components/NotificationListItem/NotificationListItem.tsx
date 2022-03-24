@@ -3,20 +3,35 @@ import React, { ReactNode, useState } from 'react';
 import styles from '../NotificationList/NotificationList.module.css';
 
 export interface Props {
-  sender?: string;
-  description?: string;
-  date?: string;
-  source?: string;
-  markedAsRead?: boolean;
-  /**
-   * Child node(s) that can be nested inside component
-   */
-  children?: ReactNode;
   /**
    * CSS class names that can be appended to the component.
    */
   className?: string;
-  link?: string;
+  /**
+   * Relative date when notification was created
+   */
+  date?: string;
+  /**
+   * URI for full content of notification
+   */
+  href?: string;
+  /**
+   * Marked as read
+   * 1) If notification is marked as read using 'Mark All Seen', this gets set to true
+   */
+  markedAsRead?: boolean;
+  /**
+   * Description of the class or subject where the notification originated
+   */
+  source?: string;
+  /**
+   * The title of the notification; includes name or description of sender, and description of notification
+   */
+  title?: string;
+  /**
+   * Child node(s) that can be nested inside component
+   */
+  children?: ReactNode;
 }
 
 interface State {
@@ -24,14 +39,13 @@ interface State {
 }
 
 export const NotificationListItem = ({
-  sender,
-  description,
-  date,
-  source,
   className,
-  children,
-  link,
+  date,
+  href,
   markedAsRead,
+  source,
+  title,
+  children,
   ...other
 }: Props) => {
   /**
@@ -52,27 +66,22 @@ export const NotificationListItem = ({
   const onClick = () => setIsRead(!isRead);
 
   return (
-    <div className={componentClassName}>
-      <a href={link}>
-        <div className={styles['notification-list__item--content']}>
-          <div className={styles['notification-list__item--title']}>
-            {sender} {description}
-          </div>
-          <div className="notification-item-subtitle text-muted">
-            {date}
-            {' · '}
-            {source}
-          </div>
+    <li className={componentClassName}>
+      <div className={styles['notification-list__item--content']}>
+        <div className={styles['notification-list__item--title']}>
+          <a className={styles['notification-list__item--link']} href={href}>
+            {title}
+          </a>
         </div>
-      </a>
+        {date}
+        {' · '}
+        {source}
+      </div>
       <button
         className={styles['notification-list__item--button']}
         aria-label={isRead === true ? 'Mark as unread' : 'Mark as read'}
         onClick={onClick}
       />
-    </div>
+    </li>
   );
 };
-
-// TODO: each list item sets its own isRead state,
-// also the popover title also has the a link to set isRead on all items

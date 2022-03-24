@@ -82,61 +82,46 @@ export const PopoverExample: React.FC<Props> = ({
         <PopoverBody>
           <NotificationList>
             <NotificationListItem
-              link="#"
-              sender="EnglishTeacher"
-              description="gave you feedback"
+              href="#"
+              title="English Teacher gave you feedback"
               date="now"
               source="Outsiders on Trial: Self Awareness = Trial Brief Outline"
             ></NotificationListItem>
             <NotificationListItem
-              link="#"
-              sender="EnglishTeacher"
-              description="gave you feedback"
+              href="#"
+              title="English Teacher gave you feedback"
               date="now"
               source="Outsiders on Trial: Self Awareness = Trial Brief Outline"
             ></NotificationListItem>
             <NotificationListItem
-              link="#"
-              sender="EnglishTeacher"
-              description="gave you feedback"
+              href="#"
+              title="English Teacher gave you feedback"
               date="now"
               source="Outsiders on Trial: Self Awareness = Trial Brief Outline"
             ></NotificationListItem>
             <NotificationListItem
-              link="#"
-              sender="EnglishTeacher"
-              description="gave you feedback"
+              href="#"
+              title="English Teacher gave you feedback"
               date="now"
               source="Outsiders on Trial: Self Awareness = Trial Brief Outline"
             ></NotificationListItem>
           </NotificationList>
-          <TextPassage
-            className="u-margin-bottom-md"
-            id="popover-description-1"
-          >
-            <h6
-              style={{
-                marginLeft: '32px',
-                marginTop: '8px',
-                marginBottom: '8px',
-              }}
-            >
+          <PopoverHeader>
+            <Heading id="popover-heading-2" as="h6">
               Already Seen
-            </h6>
-          </TextPassage>
+            </Heading>
+          </PopoverHeader>
           <NotificationList>
             <NotificationListItem
-              link="#"
-              sender="EnglishTeacher"
-              description="gave you feedback"
+              href="#"
+              title="English Teacher gave you feedback"
               date="now"
               source="Outsiders on Trial: Self Awareness = Trial Brief Outline"
               markedAsRead={true}
             ></NotificationListItem>
             <NotificationListItem
-              link="#"
-              sender="EnglishTeacher"
-              description="gave you feedback"
+              href="#"
+              title="English Teacher gave you feedback"
               date="now"
               source="Outsiders on Trial: Self Awareness = Trial Brief Outline"
               markedAsRead={true}

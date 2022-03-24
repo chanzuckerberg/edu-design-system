@@ -10,28 +10,24 @@
     display: flex;
     flex-direction: column;
 }
-
+/**
+* Individual notification list item
+*/
 .notification-list__item {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     padding: var(--eds-size-1);
-    background-color: var(--eds-color-brand-blue-100);
-    border: 1px solid var(--eds-color-neutral-200);
+    background-color: var(--eds-color-brand-blue-100);/* TODO */
+    border: 1px solid var(--eds-color-neutral-200);/* TODO */
 }
 
-.notification-list__item a {
-   text-decoration: none;
-}
-
-
-.notification-list__item--title {
-    color: var(--eds-color-brand-blue-700);
-    font-size: var(--eds-font-size-sm)
-}
-
+/* 
+* Notification list item content
+* 1) The wrapper for the text
+*/
 .notification-list__item--content {
-    color: var(--eds-color-neutral-600);
+    color: var(--eds-color-neutral-600);/* TODO */
     font-size: var(--eds-font-size-xs);
     padding-left: var(--eds-size-3);
     padding-right: var(--eds-size-3);
@@ -39,25 +35,58 @@
     padding-top: var(--eds-size-1);
 }
 
+/*
+* Notification list item title
+* 1) Main text title of the notification
+*/
+.notification-list__item--title {
+    color: var(--eds-color-brand-blue-700);/* TODO */
+    font-size: var(--eds-font-size-sm)
+}
+
+/**
+* Notification list item link
+*  1) Anchor that wraps the title; linked to source of notification.
+*/
+.notification-list__item--link {
+    text-decoration: none;
+}
+
+/*
+* Notification list item subtitle
+* 1) Contains the created date (relative) and the originating source of the notification
+
+* Notification list item button
+* 1) Indicator that displays the item's read/not read status in
+* a <button> element; when clicked, it toggles between read/not
+* read statuses
+*/
 .notification-list__item--button {
     border-radius: 4px;
     height: 8px;
     width: 8px;
-    background-color: var(--eds-color-brand-blue-700);
+    background-color: var(--eds-color-brand-blue-700);/* TODO */
     border: none;
     padding: 0;
     cursor: pointer;
 }
 
-.notification-list__item--read {
-    background-color: var(--eds-color-neutral-white);
+/* 
+* Notification list item (is read)
+* 1) Class that applies neutral background to an item that is marked as read
+* 2) Title color is changed to neutral
+* 3) Button has fill removed
+*/
 
-    .notification-list__item--title {
-        color: var(--eds-color-neutral-600);
+.notification-list--is-read {
+    background-color: var(--eds-color-neutral-white);/* TODO */
+
+    .notification-list__item--title { /* 2 */
+        color: var(--eds-color-neutral-600);/* TODO */
     }
 
-    .notification-list__item--button {
-        background-color: var(--eds-color-neutral-white);
-        border: 1px solid var(--eds-color-neutral-600);
+    .notification-list__item--button { /* 3 */
+        background-color: var(--eds-color-neutral-white);/* TODO */
+        border: 1px solid var(--eds-color-neutral-600);/* TODO */
     }
 }

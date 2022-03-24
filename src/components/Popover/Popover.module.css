@@ -13,7 +13,7 @@
   justify-content: flex-start;
   visibility: hidden;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   position: absolute;
   top: 0;
   left: 0;
@@ -28,11 +28,6 @@
 
   &:focus-visible {
     @mixin focus;
-  }
-}
-.popover:not(.popover--full-screen) {
-  @media all and (min-width: $eds-bp-sm-2) {
-    height: 100vh;
   }
 }
 
@@ -63,24 +58,29 @@
     @mixin focus;
   }
 
+  /**
+  * Popover arrow
+  * 1) A 0 height/0 width empty container positioned at the bottom of the popover; its purpose is to provide...
+  * 2) ...a psuedo element that adds a triangle added to the bottom edge of the popover pointing toward the button that opened the popover
+  */
   .popover__arrow {
     position: relative;
     bottom: 0;
     left: 0;
   }
-
-  .popover__arrow::after {
-      position: absolute;
-      left: 20px;
-      top: 0;
-      border-top-color: var(--eds-color-neutral-white);
-      border-left: 15px solid transparent;
-      border-right: 15px solid transparent;
-      border-style: solid;
-      content: '';
-      border-width: 10px;
-      border-bottom-width: 0;
-    }
+  &::after {
+    /* 2 */
+    position: absolute;
+    left: 20px;
+    top: 0;
+    border-top-color: var(--eds-color-neutral-white);
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-style: solid;
+    content: '';
+    border-width: 10px;
+    border-bottom-width: 0;
+  }
 
   /**
    * Popover window inside active popover
@@ -93,40 +93,15 @@
   }
 }
 
-.popover.popover--narrow .popover__window {
-  /**
-   * Popover window inside narrow popover
-   * 1) Popover window that is narrower than the default
-   */
-  width: 27rem;
-  @media all and (max-width: $eds-bp-sm-2) {
-    width: 100%;
-  }
-}
-.popover.popover--wide .popover__window {
-  /**
-   * Popover window inside wide popover
-   * 1) Popover window that is wider than the default
-   */
-  width: 60rem;
-}
-.popover.eds-is-active:not(.popover--full-screen) .popover__window {
-  @media all and (min-width: $eds-bp-sm-2) {
-    /**
-     * Popover window inside active popover
-     * 1) Transform added for animation
-     */
-    transform: translateY(0);
-    transition: opacity 0.3s var(--eds-anim-ease),
-      transform 0.3s var(--eds-anim-ease);
-  }
-}
-
+/**
+* Popover content
+* 1) Includes header, body and footer of popover
+*/
 .popover__content {
   padding-top: var(--eds-size-2);
   padding-bottom: var(--eds-size-2);
   height: auto;
-  max-height: 400px;
+  max-height: 25rem;
   overflow-y: auto;
 }
 
@@ -137,10 +112,14 @@
   margin-bottom: var(--eds-size-2);
 
   h2 {
+    /** TODO: match this to a heading variation */
     font-size: 12px;
   }
 }
-
+/**
+* Popover header content
+* 1) Can include title and titleAfter elements
+*/
 .popover__header-content {
   display: flex;
   justify-content: space-between;

@@ -12,20 +12,16 @@ export default {
 const Template: Story<Props> = (args) => (
   <NotificationList>
     <NotificationListItem
-      link="#"
-      sender="English Teacher"
-      description="gave you feedback"
+      href="#"
+      title="English Teacher gave you feedback"
       date="now"
       source="Outsiders on Trial: Self Awareness - Trial Brief Outline"
-      {...args}
     />
     <NotificationListItem
-      link="#"
-      sender="Math Teacher"
-      description="gave you feedback"
+      href="#"
+      title="Math Teacher gave you feedback"
       date="now"
       source="Unit 3: Measuring Circles - Identifying Circumference and Diameter"
-      {...args}
     />
   </NotificationList>
 );
