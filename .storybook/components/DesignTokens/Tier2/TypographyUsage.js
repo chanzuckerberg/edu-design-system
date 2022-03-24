@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Grid, GridItem, Section, Hr } from '../../../../src';
+import styles from '../../../../src/components/Utilities/TypographyUsage.module.css';
 import { TokenSpecimen } from '../../TokenSpecimen/TokenSpecimen';
 
 export class Tier2TypographyUsage extends Component {
@@ -11,49 +12,49 @@ export class Tier2TypographyUsage extends Component {
             <TokenSpecimen
               name="eds-theme-typography-body-text"
               variant="typography-body"
-              specimenClassName="u-theme-typography-body-text"
+              specimenClassName={styles['u-theme-typography-body-text']}
             />
 
             <TokenSpecimen
               name="eds-theme-typography-body-text-bold"
               variant="typography-body"
-              specimenClassName="u-theme-typography-body-text-bold"
+              specimenClassName={styles['u-theme-typography-body-text-bold']}
             />
 
             <TokenSpecimen
               name="eds-theme-typography-body-text-sm"
               variant="typography-body"
-              specimenClassName="u-theme-typography-body-text-sm"
+              specimenClassName={styles['u-theme-typography-body-text-sm']}
             />
 
             <TokenSpecimen
               name="eds-theme-typography-body-text-sm-bold"
               variant="typography-body"
-              specimenClassName="u-theme-typography-body-text-sm-bold"
+              specimenClassName={styles['u-theme-typography-body-text-sm-bold']}
             />
 
             <TokenSpecimen
               name="eds-theme-typography-body-text-xs"
               variant="typography-body"
-              specimenClassName="u-theme-typography-body-text-xs"
+              specimenClassName={styles['u-theme-typography-body-text-xs']}
             />
 
             <TokenSpecimen
               name="eds-theme-typography-body-text-xs-bold"
               variant="typography-body"
-              specimenClassName="u-theme-typography-body-text-xs-bold"
+              specimenClassName={styles['u-theme-typography-body-text-xs-bold']}
             />
 
             <TokenSpecimen
               name="eds-theme-typography-body-text-lg"
               variant="typography-body"
-              specimenClassName="u-theme-typography-body-text-lg"
+              specimenClassName={styles['u-theme-typography-body-text-lg']}
             />
 
             <TokenSpecimen
               name="eds-theme-typography-body-text-lg-bold"
               variant="typography-body"
-              specimenClassName="u-theme-typography-body-text-lg-bold"
+              specimenClassName={styles['u-theme-typography-body-text-lg-bold']}
             />
           </Grid>
         </Section>
@@ -63,43 +64,43 @@ export class Tier2TypographyUsage extends Component {
             <TokenSpecimen
               name="eds-theme-typography-heading-1"
               variant="typography-body"
-              specimenClassName="u-theme-typography-heading-1"
+              specimenClassName={styles['u-theme-typography-heading-1']}
             />
 
             <TokenSpecimen
               name="eds-theme-typography-heading-2"
               variant="typography-body"
-              specimenClassName="u-theme-typography-heading-2"
+              specimenClassName={styles['u-theme-typography-heading-2']}
             />
 
             <TokenSpecimen
               name="eds-theme-typography-heading-3"
               variant="typography-body"
-              specimenClassName="u-theme-typography-heading-3"
+              specimenClassName={styles['u-theme-typography-heading-3']}
             />
 
             <TokenSpecimen
               name="eds-theme-typography-heading-4"
               variant="typography-body"
-              specimenClassName="u-theme-typography-heading-4"
+              specimenClassName={styles['u-theme-typography-heading-4']}
             />
 
             <TokenSpecimen
               name="eds-theme-typography-heading-5"
               variant="typography-body"
-              specimenClassName="u-theme-typography-heading-5"
+              specimenClassName={styles['u-theme-typography-heading-5']}
             />
 
             <TokenSpecimen
               name="eds-theme-typography-heading-6"
               variant="typography-body"
-              specimenClassName="u-theme-typography-heading-6"
+              specimenClassName={styles['u-theme-typography-heading-6']}
             />
 
             <TokenSpecimen
               name="eds-theme-typography-kicker"
               variant="typography-body"
-              specimenClassName="u-theme-typography-kicker"
+              specimenClassName={styles['u-theme-typography-kicker']}
             />
           </Grid>
         </Section>
@@ -109,25 +110,25 @@ export class Tier2TypographyUsage extends Component {
             <TokenSpecimen
               name="eds-theme-typography-data-heading"
               variant="typography-body"
-              specimenClassName="u-theme-typography-data-heading"
+              specimenClassName={styles['u-theme-typography-data-heading']}
             />
 
             <TokenSpecimen
               name="eds-theme-typography-data-heading-sm"
               variant="typography-body"
-              specimenClassName="u-theme-typography-data-heading-sm"
+              specimenClassName={styles['u-theme-typography-data-heading-sm']}
             />
 
             <TokenSpecimen
               name="eds-theme-typography-data-text"
               variant="typography-body"
-              specimenClassName="u-theme-typography-data-text"
+              specimenClassName={styles['u-theme-typography-data-text']}
             />
 
             <TokenSpecimen
               name="eds-theme-typography-data-text-sm"
               variant="typography-body"
-              specimenClassName="u-theme-typography-data-text-sm"
+              specimenClassName={styles['u-theme-typography-data-text-sm']}
             />
           </Grid>
         </Section>
@@ -137,13 +138,13 @@ export class Tier2TypographyUsage extends Component {
             <TokenSpecimen
               name="eds-theme-typography-form-label"
               variant="typography-body"
-              specimenClassName="u-theme-typography-form-label"
+              specimenClassName={styles['u-theme-typography-form-label']}
             />
 
             <TokenSpecimen
               name="eds-theme-typography-form-input"
               variant="typography-body"
-              specimenClassName="u-theme-typography-form-input"
+              specimenClassName={styles['u-theme-typography-form-input']}
             />
           </Grid>
         </Section>
@@ -153,19 +154,19 @@ export class Tier2TypographyUsage extends Component {
             <TokenSpecimen
               name="eds-theme-typography-button-sm"
               variant="typography-body"
-              specimenClassName="u-theme-typography-button-sm"
+              specimenClassName={styles['u-theme-typography-button-sm']}
             />
 
             <TokenSpecimen
               name="eds-theme-typography-button-md"
               variant="typography-body"
-              specimenClassName="u-theme-typography-button-md"
+              specimenClassName={styles['u-theme-typography-button-md']}
             />
 
             <TokenSpecimen
               name="eds-theme-typography-button-lg"
               variant="typography-body"
-              specimenClassName="u-theme-typography-button-lg"
+              specimenClassName={styles['u-theme-typography-button-lg']}
             />
           </Grid>
         </Section>
@@ -175,7 +176,7 @@ export class Tier2TypographyUsage extends Component {
             <TokenSpecimen
               name="eds-theme-typography-tag"
               variant="typography-body"
-              specimenClassName="u-theme-typography-tag"
+              specimenClassName={styles['u-theme-typography-tag']}
             />
           </Grid>
         </Section>
