@@ -48,7 +48,7 @@
  *  Body text xs bold
  */
 .u-theme-typography-body-text-xs-bold {
-  @mixin eds-theme-typography-body-text-xs-bold;
+  @mixin eds-theme-typography-body-text-xs;
 }
 
 /**

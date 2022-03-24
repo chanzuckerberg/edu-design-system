@@ -116,7 +116,7 @@
  * Legacy presets. Preserving these for the moment as to
  * not cause any display or build errors.
  */
-@define-mixin eds-theme-typography-body-text $important {
+/* @define-mixin eds-theme-typography-body-text $important {
   @mixin eds-typography-preset-005 $important;
 }
 
@@ -214,4 +214,4 @@
 
 @define-mixin eds-theme-typography-tag $important {
   @mixin eds-typography-preset-006 $important;
-}
+} */
