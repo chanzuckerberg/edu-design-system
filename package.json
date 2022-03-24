@@ -16,6 +16,9 @@
   "bugs": {
     "url": "https://github.com/chanzuckerberg/edu-design-system/issues"
   },
+  "files": [
+    "/lib"
+  ],
   "scripts": {
     "build": "yarn build:clean && yarn build:tokens && yarn build:js && yarn build:styles && yarn copy-to-lib",
     "build:clean": "rm -rf lib/",
@@ -110,6 +113,7 @@
     "chromatic": "^6.5.3",
     "codecov": "^3.8.3",
     "copyfiles": "^2.4.1",
+    "cz-conventional-changelog": "3.3.0",
     "eslint": "^8.8.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.25.4",
@@ -164,5 +168,10 @@
       "stylelint --fix"
     ]
   },
-  "packageManager": "yarn@3.1.1"
+  "packageManager": "yarn@3.1.1",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }

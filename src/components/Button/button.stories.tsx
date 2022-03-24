@@ -87,6 +87,9 @@ TextLinkInverted.args = {
 export const UtilityError = Template.bind({});
 UtilityError.args = { variant: 'error', text: 'Button' };
 
+export const Medium = Template.bind({});
+Medium.args = { size: 'md', text: 'Medium Button' };
+
 export const Small = Template.bind({});
 Small.args = { size: 'sm', text: 'Small Button' };
 
