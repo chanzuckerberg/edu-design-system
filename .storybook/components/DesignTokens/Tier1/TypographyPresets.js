@@ -8,105 +8,105 @@ export class Tier1TypographyPresets extends Component {
     return (
       <Grid>
         <TokenSpecimen
-          name="eds-typography-preset-1"
+          name="eds-typography-preset-001"
           variant="typography-body"
-          specimenClassName="u-typography-preset-1"
+          specimenClassName="u-typography-preset-001"
         />
 
         <TokenSpecimen
-          name="eds-typography-preset-2"
+          name="eds-typography-preset-002"
           variant="typography-body"
-          specimenClassName="u-typography-preset-2"
+          specimenClassName="u-typography-preset-002"
         />
 
         <TokenSpecimen
-          name="eds-typography-preset-2-bold"
+          name="eds-typography-preset-002-bold"
           variant="typography-body"
-          specimenClassName="u-typography-preset-2-bold"
+          specimenClassName="u-typography-preset-002-bold"
         />
 
         <TokenSpecimen
-          name="eds-typography-preset-3"
+          name="eds-typography-preset-003"
           variant="typography-body"
-          specimenClassName="u-typography-preset-3"
+          specimenClassName="u-typography-preset-003"
         />
 
         <TokenSpecimen
-          name="eds-typography-preset-3-bold"
+          name="eds-typography-preset-003-bold"
           variant="typography-body"
-          specimenClassName="u-typography-preset-3-bold"
+          specimenClassName="u-typography-preset-003-bold"
         />
 
         <TokenSpecimen
-          name="eds-typography-preset-4"
+          name="eds-typography-preset-004"
           variant="typography-body"
-          specimenClassName="u-typography-preset-4"
+          specimenClassName="u-typography-preset-004"
         />
 
         <TokenSpecimen
-          name="eds-typography-preset-4-bold"
+          name="eds-typography-preset-004-bold"
           variant="typography-body"
-          specimenClassName="u-typography-preset-4-bold"
+          specimenClassName="u-typography-preset-004-bold"
         />
 
         <TokenSpecimen
-          name="eds-typography-preset-5"
+          name="eds-typography-preset-005"
           variant="typography-body"
-          specimenClassName="u-typography-preset-5"
+          specimenClassName="u-typography-preset-005"
         />
 
         <TokenSpecimen
-          name="eds-typography-preset-5-bold"
+          name="eds-typography-preset-005-bold"
           variant="typography-body"
-          specimenClassName="u-typography-preset-5-bold"
+          specimenClassName="u-typography-preset-005-bold"
         />
 
         <TokenSpecimen
-          name="eds-typography-preset-6"
+          name="eds-typography-preset-006"
           variant="typography-body"
-          specimenClassName="u-typography-preset-6"
+          specimenClassName="u-typography-preset-006"
         />
 
         <TokenSpecimen
-          name="eds-typography-preset-6-bold"
+          name="eds-typography-preset-006-bold"
           variant="typography-body"
-          specimenClassName="u-typography-preset-6-bold"
+          specimenClassName="u-typography-preset-006-bold"
         />
 
         <TokenSpecimen
-          name="eds-typography-preset-7"
+          name="eds-typography-preset-007"
           variant="typography-body"
-          specimenClassName="u-typography-preset-7"
+          specimenClassName="u-typography-preset-007"
         />
 
         <TokenSpecimen
-          name="eds-typography-preset-7-bold"
+          name="eds-typography-preset-007-bold"
           variant="typography-body"
-          specimenClassName="u-typography-preset-7-bold"
+          specimenClassName="u-typography-preset-007-bold"
         />
 
         <TokenSpecimen
-          name="eds-typography-preset-8"
+          name="eds-typography-preset-008"
           variant="typography-body"
-          specimenClassName="u-typography-preset-8"
+          specimenClassName="u-typography-preset-008"
         />
 
         <TokenSpecimen
-          name="eds-typography-preset-8-bold"
+          name="eds-typography-preset-008-bold"
           variant="typography-body"
-          specimenClassName="u-typography-preset-8-bold"
+          specimenClassName="u-typography-preset-008-bold"
         />
 
         <TokenSpecimen
-          name="eds-typography-preset-9"
+          name="eds-typography-preset-009"
           variant="typography-body"
-          specimenClassName="u-typography-preset-9"
+          specimenClassName="u-typography-preset-009"
         />
 
         <TokenSpecimen
-          name="eds-typography-preset-9-bold"
+          name="eds-typography-preset-009-bold"
           variant="typography-body"
-          specimenClassName="u-typography-preset-9-bold"
+          specimenClassName="u-typography-preset-009-bold"
         />
       </Grid>
     );

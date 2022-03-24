@@ -179,8 +179,8 @@
   text-transform: uppercase $important;
 }
 
-@define-mixin eds-typography-preset-0011-bold $important {
-  @mixin eds-typography-preset-0011 $important;
+@define-mixin eds-typography-preset-011-bold $important {
+  @mixin eds-typography-preset-011 $important;
   font-weight: var(--eds-font-weight-bold) $important;
 }
 

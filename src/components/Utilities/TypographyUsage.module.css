@@ -9,17 +9,17 @@
  */
 
 /**
- * Body text 
+ * Body text
  */
 .u-theme-typography-body-text {
-  @mixin eds-theme-typography-body-text;
+  @mixin eds-theme-typography-body-text-md;
 }
 
 /**
- * Body text bold 
+ * Body text bold
  */
 .u-theme-typography-body-text-bold {
-  @mixin eds-theme-typography-body-text-bold;
+  @mixin eds-theme-typography-body-text-md;
 }
 
 /**
@@ -34,7 +34,7 @@
  *  Body text sm bold
  */
 .u-theme-typography-body-text-sm-bold {
-  @mixin eds-theme-typography-body-text-sm-bold;
+  @mixin eds-theme-typography-body-text-sm;
 }
 
 /**
@@ -55,7 +55,7 @@
  *  Body text lg
  */
 .u-theme-typography-body-text-lg {
-  @mixin eds-theme-typography-body-text-lg;
+  @mixin eds-theme-typography-body-text-md;
 }
 
 /**
@@ -118,7 +118,7 @@
  * Data heading
  */
 .u-theme-typography-data-heading {
-  @mixin eds-theme-typography-data-heading;
+  @mixin eds-theme-typography-kicker-sm;
 }
 
 /**
@@ -132,7 +132,7 @@
  * Data text
  */
 .u-theme-typography-data-text {
-  @mixin eds-theme-typography-data-text;
+  @mixin eds-theme-typography-kicker-sm;
 }
 
 /**
@@ -150,7 +150,7 @@
 }
 
 /**
- * Form input 
+ * Form input
  */
 .u-theme-typography-form-input {
   @mixin eds-theme-typography-form-input;
@@ -160,21 +160,21 @@
  * Small Button
  */
 .u-theme-typography-button-sm {
-  @mixin eds-theme-typography-button-sm;
+  @mixin eds-theme-typography-button-label;
 }
 
 /**
  * Medium Button
  */
 .u-theme-typography-button-md {
-  @mixin eds-theme-typography-button-md;
+  @mixin eds-theme-typography-button-label;
 }
 
 /**
  * Large Button
  */
 .u-theme-typography-button-lg {
-  @mixin eds-theme-typography-button-lg;
+  @mixin eds-theme-typography-button-label;
 }
 
 /**

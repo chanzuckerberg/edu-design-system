@@ -36,27 +36,27 @@
   @mixin eds-typography-preset-009-bold $important;
 }
 
-@define-mixin eds-theme-typography-body-md $important {
+@define-mixin eds-theme-typography-body-text-md $important {
   @mixin eds-typography-preset-005-light $important;
 }
 
-@define-mixin eds-theme-typography-body-sm $important {
-  @mixin eds-typography-preset-006-light $important;
-}
-
-@define-mixin eds-theme-typography-body-xs $important {
-  @mixin eds-typography-preset-008 $important;
-}
-
-@define-mixin eds-theme-typography-caption-lg $important {
+@define-mixin eds-theme-typography-body-text-sm $important {
   @mixin eds-typography-preset-006 $important;
 }
 
-@define-mixin eds-theme-typography-caption-md $important {
+@define-mixin eds-theme-typography-body-text-xs $important {
   @mixin eds-typography-preset-008 $important;
 }
 
-@define-mixin eds-theme-typography-caption-sm $important {
+@define-mixin eds-theme-typography-caption-text-lg $important {
+  @mixin eds-typography-preset-006 $important;
+}
+
+@define-mixin eds-theme-typography-caption-text-md $important {
+  @mixin eds-typography-preset-008 $important;
+}
+
+@define-mixin eds-theme-typography-caption-text-sm $important {
   @mixin eds-typography-preset-010 $important;
 }
 
@@ -82,6 +82,33 @@
 
 @define-mixin eds-theme-typography-tag $important {
   @mixin eds-typography-preset-009-bold $important;
+}
+
+/**
+ * Heading Styles (not currently in styleguide).
+ */
+@define-mixin eds-theme-typography-heading-1 $important {
+  @mixin eds-theme-typography-headline-lg $important;
+}
+
+@define-mixin eds-theme-typography-heading-2 $important {
+  @mixin eds-theme-typography-headline-md $important;
+}
+
+@define-mixin eds-theme-typography-heading-3 $important {
+  @mixin eds-theme-typography-headline-sm $important;
+}
+
+@define-mixin eds-theme-typography-heading-4 $important {
+  @mixin eds-theme-typography-title-md $important;
+}
+
+@define-mixin eds-theme-typography-heading-5 $important {
+  @mixin eds-theme-typography-title-sm $important;
+}
+
+@define-mixin eds-theme-typography-heading-6 $important {
+  @mixin eds-typography-preset-006-bold $important;
 }
 
 

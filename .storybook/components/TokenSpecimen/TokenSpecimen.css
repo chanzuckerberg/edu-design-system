@@ -1,4 +1,6 @@
 @import '../../../src/design-tokens/mixins.css';
+@import '../../../src/design-tokens/tier-2-usage/typography-usage.css';
+
 
 .token-specimen {
   border: 1px solid var(--eds-theme-color-neutral-subtle-border);
@@ -20,7 +22,7 @@
 }
 
 .token-specimen__info {
-  @include eds-theme-typography-body-text-sm;
+  @mixin eds-theme-typography-body-text-sm;
 }
 
 .token-specimen__name {
@@ -29,6 +31,7 @@
   color: rgb(235, 87, 87);
   padding: 0.2rem;
   border-radius: 4px;
+  font-size: 12px;
 }
 
 .token-specimen__value {

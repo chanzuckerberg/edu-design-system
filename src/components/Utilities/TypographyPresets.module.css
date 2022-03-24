@@ -7,70 +7,94 @@
  * Creates utility classes to apply typography preset mixins to elements
  */
 
-.u-typography-preset-1 {
-  @mixin eds-typography-preset-1;
+.u-typography-preset-001 {
+  @mixin eds-typography-preset-001;
 }
 
-.u-typography-preset-2 {
-  @mixin eds-typography-preset-2;
+.u-typography-preset-002 {
+  @mixin eds-typography-preset-002;
 }
 
-.u-typography-preset-2-bold {
-  @mixin eds-typography-preset-2-bold;
+.u-typography-preset-002-bold {
+  @mixin eds-typography-preset-002-bold;
 }
 
-.u-typography-preset-3 {
-  @mixin eds-typography-preset-3;
+.u-typography-preset-003 {
+  @mixin eds-typography-preset-003;
 }
 
-.u-typography-preset-3-bold {
-  @mixin eds-typography-preset-3-bold;
+.u-typography-preset-003-bold {
+  @mixin eds-typography-preset-003-bold;
 }
 
-.u-typography-preset-4 {
-  @mixin eds-typography-preset-4;
+.u-typography-preset-004 {
+  @mixin eds-typography-preset-004;
 }
 
-.u-typography-preset-4-bold {
-  @mixin eds-typography-preset-4-bold;
+.u-typography-preset-004-bold {
+  @mixin eds-typography-preset-004-bold;
 }
 
-.u-typography-preset-5 {
-  @mixin eds-typography-preset-5;
+.u-typography-preset-005 {
+  @mixin eds-typography-preset-005;
 }
 
-.u-typography-preset-5-bold {
-  @mixin eds-typography-preset-5-bold;
+.u-typography-preset-005-bold {
+  @mixin eds-typography-preset-005-bold;
 }
 
-.u-typography-preset-6 {
-  @mixin eds-typography-preset-6;
+.u-typography-preset-006 {
+  @mixin eds-typography-preset-006;
 }
 
-.u-typography-preset-6-bold {
-  @mixin eds-typography-preset-6-bold;
+.u-typography-preset-006-bold {
+  @mixin eds-typography-preset-006-bold;
 }
 
-.u-typography-preset-7 {
-  @mixin eds-typography-preset-7;
+.u-typography-preset-007 {
+  @mixin eds-typography-preset-007;
 }
 
-.u-typography-preset-7-bold {
-  @mixin eds-typography-preset-7-bold;
+.u-typography-preset-007-bold {
+  @mixin eds-typography-preset-007-bold;
 }
 
-.u-typography-preset-8 {
-  @mixin eds-typography-preset-8;
+.u-typography-preset-008 {
+  @mixin eds-typography-preset-008;
 }
 
-.u-typography-preset-8-bold {
-  @mixin eds-typography-preset-8-bold;
+.u-typography-preset-008-bold {
+  @mixin eds-typography-preset-008-bold;
 }
 
-.u-typography-preset-9 {
-  @mixin eds-typography-preset-9;
+.u-typography-preset-009 {
+  @mixin eds-typography-preset-009;
 }
 
-.u-typography-preset-9-bold {
-  @mixin eds-typography-preset-9-bold;
+.u-typography-preset-009-bold {
+  @mixin eds-typography-preset-009-bold;
+}
+
+.u-typography-preset-010 {
+  @mixin eds-typography-preset-010;
+}
+
+.u-typography-preset-010-bold {
+  @mixin eds-typography-preset-010-bold;
+}
+
+.u-typography-preset-011 {
+  @mixin eds-typography-preset-011;
+}
+
+.u-typography-preset-011-bold {
+  @mixin eds-typography-preset-011-bold;
+}
+
+.u-typography-preset-012 {
+  @mixin eds-typography-preset-012;
+}
+
+.u-typography-preset-012-bold {
+  @mixin eds-typography-preset-012-bold;
 }

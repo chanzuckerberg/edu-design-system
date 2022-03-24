@@ -14,7 +14,7 @@
 }
 
 /**
- * Center-aligned page header 
+ * Center-aligned page header
  */
 .page-header--center {
   display: flex;
@@ -76,7 +76,7 @@
 .page-header__description {
   @mixin reset;
   margin-top: var(--eds-size-1);
-  @mixin eds-theme-typography-body-text-lg;
+  @mixin eds-theme-typography-body-text-md;
 
   .page-header--center & {
     text-align: center;

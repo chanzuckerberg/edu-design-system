@@ -47,28 +47,28 @@
     },
     "line-height": {
       "48": {
-        "value": "48"
+        "value": "48px"
       },
       "40": {
-        "value": "40"
+        "value": "40px"
       },
       "32": {
-        "value": "32"
+        "value": "32px"
       },
       "24": {
-        "value": "24"
+        "value": "24px"
       },
       "20": {
-        "value": "20"
+        "value": "20px"
       },
       "18": {
-        "value": "18"
+        "value": "18px"
       },
       "16": {
-        "value": "16"
+        "value": "16px"
       },
       "14": {
-        "value": "14"
+        "value": "14px"
       }
     },
     "letter-spacing": {

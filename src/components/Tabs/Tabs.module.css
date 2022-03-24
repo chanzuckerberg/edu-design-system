@@ -47,7 +47,7 @@
   @mixin reset;
   list-style: none;
   display: flex; /* 2 */
-  @mixin eds-theme-typography-body-text;
+  @mixin eds-theme-typography-body-text-md;
 
   .footer & {
     overflow: auto;

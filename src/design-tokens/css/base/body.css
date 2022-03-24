@@ -1,7 +1,7 @@
 @import '../../mixins.css';
 
 body {
-  @mixin eds-theme-typography-body-text;
+  @mixin eds-theme-typography-body-text-md;
   display: flex;
   flex-direction: column;
   color: var(--eds-theme-color-neutral-default);
