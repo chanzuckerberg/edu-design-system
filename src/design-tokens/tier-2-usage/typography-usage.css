@@ -1,13 +1,12 @@
 @import '../tier-1-definitions/typography-presets.css';
 
-@define-mixin eds-theme-typography-body-text  $important {
+@define-mixin eds-theme-typography-body-text $important {
    @mixin eds-typography-preset-5 $important;
 }
 
-@define-mixin eds-theme-typography-body-text-bold  $important {
+@define-mixin eds-theme-typography-body-text-bold $important {
    @mixin eds-typography-preset-5-bold $important;
 }
-
 
 @define-mixin eds-theme-typography-body-text-lg $important {
    @mixin eds-typography-preset-3 $important;
