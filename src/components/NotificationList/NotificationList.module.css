@@ -78,7 +78,7 @@
 * 3) Button has fill removed
 */
 
-.notification-list--is-read {
+.notification-list__item--is-read {
     background-color: var(--eds-color-neutral-white);/* TODO */
 
     .notification-list__item--title { /* 2 */

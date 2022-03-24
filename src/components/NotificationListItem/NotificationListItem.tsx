@@ -55,7 +55,7 @@ export const NotificationListItem = ({
 
   const componentClassName = clsx(
     styles['notification-list__item'],
-    isRead === true && styles['notification-list__item--read'],
+    isRead === true && styles['notification-list__item--is-read'],
     className,
     {},
   );
