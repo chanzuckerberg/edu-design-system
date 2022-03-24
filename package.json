@@ -90,6 +90,7 @@
     "chromatic": "^6.5.1",
     "codecov": "^3.8.3",
     "copyfiles": "^2.4.1",
+    "cz-conventional-changelog": "3.3.0",
     "del-cli": "^4.0.1",
     "eslint": "^8.8.0",
     "eslint-config-prettier": "^8.3.0",
@@ -132,7 +133,8 @@
     "hooks": {
       "pre-commit": "lint-staged",
       "pre-push": "yarn test",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
     }
   },
   "lint-staged": {
@@ -144,5 +146,10 @@
       "stylelint --fix"
     ]
   },
-  "packageManager": "yarn@3.1.1"
+  "packageManager": "yarn@3.1.1",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
