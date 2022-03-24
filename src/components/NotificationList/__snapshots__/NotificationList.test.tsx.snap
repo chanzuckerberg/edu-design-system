@@ -1,135 +1,115 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<NotificationList /> Default story renders snapshot 1`] = `
-<div
+<ul
   class="notification-list"
 >
-  <div
+  <li
     class="notification-list__item"
   >
-    <a
-      href="#"
+    <div
+      class="notification-list__item--content"
     >
       <div
-        class="notification-list__item--content"
+        class="notification-list__item--title"
       >
-        <div
-          class="notification-list__item--title"
+        <a
+          class="notification-list__item--link"
+          href="#"
         >
-          English Teacher
-           
-          gave you feedback
-        </div>
-        <div
-          class="notification-item-subtitle text-muted"
-        >
-          now
-           · 
-          Outsiders on Trial: Self Awareness - Trial Brief Outline
-        </div>
+          English Teacher gave you feedback
+        </a>
       </div>
-    </a>
+      now
+       · 
+      Outsiders on Trial: Self Awareness - Trial Brief Outline
+    </div>
     <button
       aria-label="Mark as read"
       class="notification-list__item--button"
     />
-  </div>
-  <div
+  </li>
+  <li
     class="notification-list__item"
   >
-    <a
-      href="#"
+    <div
+      class="notification-list__item--content"
     >
       <div
-        class="notification-list__item--content"
+        class="notification-list__item--title"
       >
-        <div
-          class="notification-list__item--title"
+        <a
+          class="notification-list__item--link"
+          href="#"
         >
-          Math Teacher
-           
-          gave you feedback
-        </div>
-        <div
-          class="notification-item-subtitle text-muted"
-        >
-          now
-           · 
-          Unit 3: Measuring Circles - Identifying Circumference and Diameter
-        </div>
+          Math Teacher gave you feedback
+        </a>
       </div>
-    </a>
+      now
+       · 
+      Unit 3: Measuring Circles - Identifying Circumference and Diameter
+    </div>
     <button
       aria-label="Mark as read"
       class="notification-list__item--button"
     />
-  </div>
-</div>
+  </li>
+</ul>
 `;
 
 exports[`<NotificationList /> MarkedAsRead story renders snapshot 1`] = `
-<div
+<ul
   class="notification-list"
 >
-  <div
-    class="notification-list__item notification-list__item--read"
+  <li
+    class="notification-list__item"
   >
-    <a
-      href="#"
+    <div
+      class="notification-list__item--content"
     >
       <div
-        class="notification-list__item--content"
+        class="notification-list__item--title"
       >
-        <div
-          class="notification-list__item--title"
+        <a
+          class="notification-list__item--link"
+          href="#"
         >
-          English Teacher
-           
-          gave you feedback
-        </div>
-        <div
-          class="notification-item-subtitle text-muted"
-        >
-          now
-           · 
-          Outsiders on Trial: Self Awareness - Trial Brief Outline
-        </div>
+          English Teacher gave you feedback
+        </a>
       </div>
-    </a>
+      now
+       · 
+      Outsiders on Trial: Self Awareness - Trial Brief Outline
+    </div>
     <button
-      aria-label="Mark as unread"
+      aria-label="Mark as read"
       class="notification-list__item--button"
     />
-  </div>
-  <div
-    class="notification-list__item notification-list__item--read"
+  </li>
+  <li
+    class="notification-list__item"
   >
-    <a
-      href="#"
+    <div
+      class="notification-list__item--content"
     >
       <div
-        class="notification-list__item--content"
+        class="notification-list__item--title"
       >
-        <div
-          class="notification-list__item--title"
+        <a
+          class="notification-list__item--link"
+          href="#"
         >
-          Math Teacher
-           
-          gave you feedback
-        </div>
-        <div
-          class="notification-item-subtitle text-muted"
-        >
-          now
-           · 
-          Unit 3: Measuring Circles - Identifying Circumference and Diameter
-        </div>
+          Math Teacher gave you feedback
+        </a>
       </div>
-    </a>
+      now
+       · 
+      Unit 3: Measuring Circles - Identifying Circumference and Diameter
+    </div>
     <button
-      aria-label="Mark as unread"
+      aria-label="Mark as read"
       class="notification-list__item--button"
     />
-  </div>
-</div>
+  </li>
+</ul>
 `;
