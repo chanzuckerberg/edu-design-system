@@ -18,10 +18,6 @@ export interface Props {
    * CSS class names that can be appended to the component.
    */
   className?: string;
-  /**
-   * Size prop to pass into Popover
-   */
-  size?: 'sm' | 'lg' | 'xl';
 }
 
 /**
@@ -30,7 +26,6 @@ export interface Props {
 export const PopoverExample: React.FC<Props> = ({
   children,
   className,
-  size,
   ...other
 }) => {
   const [popoverOpen, setPopoverOpen] = useState(false);
