@@ -9,10 +9,13 @@
 # production
 /build
 _site
-dist
 storybook-static
 storybook
 storybook-components
+
+# lib folders (allowing built tokens)
+lib/*
+!lib/tokens/
 
 # Component CSS
 
@@ -42,10 +45,6 @@ yarn-error.log*
 
 # VS Code Live Share
 .vsls.json
-
-# publish
-lib/
-storybook-static/
 
 # Yarn 2 files
 # https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
