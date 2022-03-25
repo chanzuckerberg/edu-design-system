@@ -1,7 +1,5 @@
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
-import '../Header/Header.module.css';
-import '../../../.storybook/recipes/GlobalHeader/GlobalHeader.module.css';
 import styles from './NavContainer.module.css';
 
 export interface Props {
@@ -13,6 +11,12 @@ export interface Props {
    * CSS class names that can be appended to the component.
    */
   className?: string;
+  /**
+   * is Active
+   * 1) Panel is open when set to true. Close when set to false
+   */
+   isActive?: boolean;
+
 }
 
 /**
@@ -21,9 +25,12 @@ export interface Props {
 export const NavContainer: React.FC<Props> = ({
   children,
   className,
+  isActive,
   ...other
 }) => {
-  const componentClassName = clsx(styles['nav-container'], className, {});
+  const componentClassName = clsx(styles['nav-container'], className, {
+    [styles['is-active']]: isActive,
+  });
   return (
     <div className={componentClassName} {...other}>
       {children}

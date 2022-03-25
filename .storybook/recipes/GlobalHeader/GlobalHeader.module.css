@@ -48,40 +48,6 @@
  * 1) Contains the primary navigation 
  */
 .global-header__nav-container {
-  position: absolute; /* 1 */
-  top: 100%; /* 1 */
-  left: 0; /* 1 */
-  visibility: hidden;
-  opacity: 0;
-  height: 0;
-  width: 100%; /* 1 */
-  overflow: hidden;
-  padding: var(--eds-size-4);
-  z-index: var(--eds-z-index-bottom);
-  transition: all var(--eds-anim-move-quick) var(--eds-anim-ease);
-
-  .is-active & {
-    display: block;
-
-    @media all and (max-width: $eds-bp-lg) {
-      opacity: 1;
-      visibility: visible;
-      display: flex;
-      flex-direction: column;
-      overflow: visible;
-      gap: var(--eds-size-8);
-      height: calc(100vh - 3rem); /* 2 */
-      background-color: var(--eds-theme-color-primary-background);
-      z-index: var(--eds-z-index-400);
-    }
-  }
-  @media all and (min-width: $eds-bp-lg) {
-    margin-bottom: var(--eds-size-6);
-    position: static;
-    opacity: 1;
-    visibility: visible;
-    padding: 0;
-  }
 }
 
 /**

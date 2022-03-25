@@ -46,7 +46,7 @@ export const GlobalHeader: React.FC<Props> = ({ className, ...other }) => {
           onClick={toggleMenu}
         />
 
-      <NavContainer className={styles['global-header__nav-container']}>
+      <NavContainer isActive={isActive} className={styles['global-header__nav-container']}>
         <PrimaryNav>
           <PrimaryNavItem href="#" text="Search Students" iconName="search" />
           <PrimaryNavItem href="#" text="Announcements" iconName="class-copy" />
