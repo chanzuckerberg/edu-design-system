@@ -18,7 +18,7 @@ export interface Props {
    * Variant
    * 1) Argument that gets passed to ListDetail Component for stylistic variant
    */
-  listVariant?: 'sequence';
+  listVariant?: 'ordered';
 }
 
 export const ProjectOverview: React.FC<Props> = ({...args}) => {

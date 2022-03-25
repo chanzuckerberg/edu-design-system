@@ -78,9 +78,9 @@
 
 /**
   * List detail item after
-  * 1) When list variant is 'sequence', add a line between items that shouldn't link out unliike the bullet
+  * 1) When list variant is 'ordered', add a line between items that shouldn't link out unliike the bullet
   */
-.list-detail__list--sequence .list-detail__item {
+.list-detail__list--ordered .list-detail__item {
   &:after {
     content: '';
     position: absolute;

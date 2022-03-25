@@ -62,9 +62,9 @@ export interface Props {
   overflow?: 'inverted';
   /**
    * Stylistic variations:
-   * - **sequence** bullets can be replaced with icons; vertical line connects each item to indicate sequence
+   * - **ordered** uses a ordered list <ul> instead of the default unordered list <ul>, and allows for icons, bullets, or numbers
    */
-  variant?: 'sequence' | null;
+  variant?: 'ordered';
   /**
    * List detail item tab name
    */
@@ -215,15 +215,15 @@ export const ListDetail = ({
       return child;
     },
   );
-
+  const TagName = variant === 'ordered' ? 'ol' : 'ul';
   const componentClassName = clsx(styles['list-detail'], className, {});
 
   return (
     <div className={componentClassName} {...other}>
       <div className={styles['list-detail__header']}>
-        <ul
+        <TagName
           className={clsx(styles['list-detail__list'], {
-            [styles['list-detail__list--sequence']]: variant === 'sequence',
+            [styles['list-detail__list--ordered']]: variant === 'ordered',
           })}
           role="tablist"
         >
@@ -289,7 +289,7 @@ export const ListDetail = ({
               </li>
             );
           })}
-        </ul>
+        </TagName>
       </div>
       <div className={styles['list-detail__body']}>
         {childrenWithProps[activeIndexState]}
