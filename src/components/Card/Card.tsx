@@ -11,6 +11,10 @@ export interface Props {
    * CSS class names that can be appended to the component.
    */
   className?: string;
+   /**
+   * Link to URL. If href is present, the button will be rendered as an <a> element.
+   */
+    href?: string;
   /**
    * Card rendered on a dark backgorund
    */
@@ -24,14 +28,18 @@ export const Card: React.FC<Props> = ({
   className,
   children,
   inverted,
+  href,
   ...other
 }) => {
   const componentClassName = clsx(styles['card'], className, {
     [styles['card--inverted']]: inverted,
   });
+
+  const TagName = href ? 'a' : 'div';
+
   return (
-    <div className={componentClassName} {...other}>
+    <TagName href={href} className={componentClassName} {...other}>
       {children}
-    </div>
+    </TagName>
   );
 };

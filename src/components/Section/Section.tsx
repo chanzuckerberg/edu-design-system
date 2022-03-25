@@ -24,6 +24,10 @@ export interface Props {
    * Section heading text string
    */
   title?: string;
+  /**
+   * Section tile before container to place items like images or avatars
+   */
+   titleBefore?: ReactNode;
 }
 
 /**
@@ -35,6 +39,7 @@ export const Section: React.FC<Props> = ({
   description,
   children,
   align,
+  titleBefore,
   ...other
 }) => {
   const componentClassName = clsx(styles['section'], className, {
@@ -45,7 +50,12 @@ export const Section: React.FC<Props> = ({
     <section className={componentClassName} {...other}>
       <div className={styles['section__inner']}>
         <header className={styles['section__header']}>
+          <div className={styles['section__header-inner']}>
+            {titleBefore &&
+            <div className={styles['section__title-before']}>{titleBefore}</div>
+            }
           <h2 className={styles['section__title']}>{title}</h2>
+          </div>
           {description && (
             <p className={styles['section__description']}>{description}</p>
           )}

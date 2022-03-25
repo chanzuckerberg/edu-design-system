@@ -29,6 +29,9 @@
       },
       "xl": {
         "value": "1.5rem"
+      },
+      "xxl": {
+        "value": "2.5rem"
       }
     },
     "font-weight": {

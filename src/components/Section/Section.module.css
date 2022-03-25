@@ -20,7 +20,7 @@
 .section__header {
   display: flex;
   flex-direction: column;
-  margin-bottom: var(--eds-size-4);
+  margin-bottom: var(--eds-size-3);
 
   /**
      * Section header within centered section
@@ -28,6 +28,16 @@
   .section--center & {
     align-items: center;
   }
+}
+
+/**
+ * Section header
+ * 1) contains the section title, description and other header content
+ */
+.section__header-inner {
+  display: flex;
+  align-items: center;
+  gap: var(--eds-size-2);
 }
 
 /**

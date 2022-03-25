@@ -26,7 +26,7 @@
  * Page header left
  * 1) Flex 1 added so the right content doesn't wrap
  */
- .page-header__left {
+.page-header__left {
   flex: 1; /* 1 */
 }
 
@@ -52,7 +52,7 @@
  */
 .page-header__title {
   @mixin reset;
-  @mixin eds-theme-typography-heading-1;
+  @mixin eds-theme-typography-heading-2;
 
   .page-header--center & {
     text-align: center;
