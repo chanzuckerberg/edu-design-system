@@ -132,16 +132,8 @@
   @mixin eds-typography-preset-003-bold $important;
 }
 
-@define-mixin eds-theme-typography-body-text-sm $important {
-  @mixin eds-typography-preset-006 $important;
-}
-
 @define-mixin eds-theme-typography-body-text-sm-bold $important {
   @mixin eds-typography-preset-006-bold $important;
-}
-
-@define-mixin eds-theme-typography-body-text-xs $important {
-  @mixin eds-typography-preset-007 $important;
 }
 
 @define-mixin eds-theme-typography-body-text-xs-bold $important {

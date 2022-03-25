@@ -7,18 +7,78 @@ export class Tier2TypographyUsage extends Component {
   render() {
     return (
       <div>
-        <Section title="Body text">
+        <Section title="Headline">
           <Grid>
             <TokenSpecimen
-              name="eds-theme-typography-body-text"
+              name="eds-theme-typography-headline-lg"
               variant="typography-body"
-              specimenClassName={styles['u-theme-typography-body-text']}
+              specimenClassName={styles['u-theme-typography-headline-lg']}
             />
 
             <TokenSpecimen
-              name="eds-theme-typography-body-text-bold"
+              name="eds-theme-typography-headline-md"
               variant="typography-body"
-              specimenClassName={styles['u-theme-typography-body-text-bold']}
+              specimenClassName={styles['u-theme-typography-headline-md']}
+            />
+
+            <TokenSpecimen
+              name="eds-theme-typography-headline-sm"
+              variant="typography-body"
+              specimenClassName={styles['u-theme-typography-headline-sm']}
+            />
+          </Grid>
+        </Section>
+
+        <Section title="Title">
+          <Grid>
+            <TokenSpecimen
+              name="eds-theme-typography-title-md"
+              variant="typography-body"
+              specimenClassName={styles['u-theme-typography-title-md']}
+            />
+
+            <TokenSpecimen
+              name="eds-theme-typography-title-sm"
+              variant="typography-body"
+              specimenClassName={styles['u-theme-typography-title-sm']}
+            />
+          </Grid>
+        </Section>
+
+        <Section title="Label">
+          <Grid>
+            <TokenSpecimen
+              name="eds-theme-typography-label-lg-subtle"
+              variant="typography-body"
+              specimenClassName={styles['u-theme-typography-label-lg-subtle']}
+            />
+
+            <TokenSpecimen
+              name="eds-theme-typography-label-md-subtle"
+              variant="typography-body"
+              specimenClassName={styles['u-theme-typography-label-md-subtle']}
+            />
+
+            <TokenSpecimen
+              name="eds-theme-typography-label-md"
+              variant="typography-body"
+              specimenClassName={styles['u-theme-typography-label-md']}
+            />
+
+            <TokenSpecimen
+              name="eds-theme-typography-label-sm"
+              variant="typography-body"
+              specimenClassName={styles['u-theme-typography-label-sm']}
+            />
+          </Grid>
+        </Section>
+
+        <Section title="Body Text">
+          <Grid>
+            <TokenSpecimen
+              name="eds-theme-typography-body-text-md"
+              variant="typography-body"
+              specimenClassName={styles['u-theme-typography-body-text-md']}
             />
 
             <TokenSpecimen
@@ -28,150 +88,62 @@ export class Tier2TypographyUsage extends Component {
             />
 
             <TokenSpecimen
-              name="eds-theme-typography-body-text-sm-bold"
-              variant="typography-body"
-              specimenClassName={styles['u-theme-typography-body-text-sm-bold']}
-            />
-
-            <TokenSpecimen
               name="eds-theme-typography-body-text-xs"
               variant="typography-body"
               specimenClassName={styles['u-theme-typography-body-text-xs']}
             />
+          </Grid>
+        </Section>
 
+        <Section title="Caption">
+          <Grid>
             <TokenSpecimen
-              name="eds-theme-typography-body-text-xs-bold"
+              name="eds-theme-typography-caption-text-lg"
               variant="typography-body"
-              specimenClassName={styles['u-theme-typography-body-text-xs-bold']}
+              specimenClassName={styles['u-theme-typography-caption-text-lg']}
             />
 
             <TokenSpecimen
-              name="eds-theme-typography-body-text-lg"
+              name="eds-theme-typography-caption-text-md"
               variant="typography-body"
-              specimenClassName={styles['u-theme-typography-body-text-lg']}
+              specimenClassName={styles['u-theme-typography-caption-text-md']}
             />
 
             <TokenSpecimen
-              name="eds-theme-typography-body-text-lg-bold"
+              name="eds-theme-typography-caption-text-sm"
               variant="typography-body"
-              specimenClassName={styles['u-theme-typography-body-text-lg-bold']}
+              specimenClassName={styles['u-theme-typography-caption-text-sm']}
             />
           </Grid>
         </Section>
 
-        <Section title="Headings">
+        <Section title="Button">
           <Grid>
             <TokenSpecimen
-              name="eds-theme-typography-heading-1"
+              name="eds-theme-typography-button-label"
               variant="typography-body"
-              specimenClassName={styles['u-theme-typography-heading-1']}
+              specimenClassName={styles['u-theme-typography-button-label']}
             />
+          </Grid>
+        </Section>
 
-            <TokenSpecimen
-              name="eds-theme-typography-heading-2"
-              variant="typography-body"
-              specimenClassName={styles['u-theme-typography-heading-2']}
-            />
-
-            <TokenSpecimen
-              name="eds-theme-typography-heading-3"
-              variant="typography-body"
-              specimenClassName={styles['u-theme-typography-heading-3']}
-            />
-
-            <TokenSpecimen
-              name="eds-theme-typography-heading-4"
-              variant="typography-body"
-              specimenClassName={styles['u-theme-typography-heading-4']}
-            />
-
-            <TokenSpecimen
-              name="eds-theme-typography-heading-5"
-              variant="typography-body"
-              specimenClassName={styles['u-theme-typography-heading-5']}
-            />
-
-            <TokenSpecimen
-              name="eds-theme-typography-heading-6"
-              variant="typography-body"
-              specimenClassName={styles['u-theme-typography-heading-6']}
-            />
-
+        <Section title="Kicker">
+          <Grid>
             <TokenSpecimen
               name="eds-theme-typography-kicker"
               variant="typography-body"
               specimenClassName={styles['u-theme-typography-kicker']}
             />
-          </Grid>
-        </Section>
-
-        <Section title="Data">
-          <Grid>
-            <TokenSpecimen
-              name="eds-theme-typography-data-heading"
-              variant="typography-body"
-              specimenClassName={styles['u-theme-typography-data-heading']}
-            />
 
             <TokenSpecimen
-              name="eds-theme-typography-data-heading-sm"
+              name="eds-theme-typography-kicker-sm"
               variant="typography-body"
-              specimenClassName={styles['u-theme-typography-data-heading-sm']}
-            />
-
-            <TokenSpecimen
-              name="eds-theme-typography-data-text"
-              variant="typography-body"
-              specimenClassName={styles['u-theme-typography-data-text']}
-            />
-
-            <TokenSpecimen
-              name="eds-theme-typography-data-text-sm"
-              variant="typography-body"
-              specimenClassName={styles['u-theme-typography-data-text-sm']}
+              specimenClassName={styles['u-theme-typography-kicker-sm']}
             />
           </Grid>
         </Section>
 
-        <Section title="Forms">
-          <Grid>
-            <TokenSpecimen
-              name="eds-theme-typography-form-label"
-              variant="typography-body"
-              specimenClassName={styles['u-theme-typography-form-label']}
-            />
-
-            <TokenSpecimen
-              name="eds-theme-typography-form-input"
-              variant="typography-body"
-              specimenClassName={styles['u-theme-typography-form-input']}
-            />
-          </Grid>
-        </Section>
-
-        <Section title="Forms">
-          <Grid>
-            <TokenSpecimen
-              name="eds-theme-typography-button-sm"
-              variant="typography-body"
-              specimenClassName={styles['u-theme-typography-button-sm']}
-            />
-
-            <TokenSpecimen
-              name="eds-theme-typography-button-md"
-              variant="typography-body"
-              specimenClassName={styles['u-theme-typography-button-md']}
-            />
-
-            <TokenSpecimen
-              name="eds-theme-typography-button-lg"
-              variant="typography-body"
-              specimenClassName={styles['u-theme-typography-button-lg']}
-            />
-          </Grid>
-        </Section>
-
-        <Section title="Tags">
+        <Section title="Tag">
           <Grid>
             <TokenSpecimen
               name="eds-theme-typography-tag"
