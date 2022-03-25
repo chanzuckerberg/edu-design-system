@@ -153,7 +153,6 @@
     border-radius: 50%;
   }
 
-
   /**
   * List detail item variants
   * 1) Remove the bullet since the icon will take its place
@@ -170,15 +169,17 @@
 * 1) Used on list items using number variant
 */
 .list-detail__number {
-  width: 8px;
-  height: 8px;
+  position: relative;
+  left: -4px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   border: 1px solid var(--eds-theme-color-neutral-subtle-border);
   margin-right: 9px;
-  padding: 3px 6px;
+  padding: 4px 8px;
   font-size: 12px;
   margin-left: -4px;
-
+  background: var(--eds-color-neutral-white); /* 1*/
 }
 
 /**
@@ -187,9 +188,9 @@
 */
 .list-detail__icon {
   position: relative;
-  left: -5px;
-  height: var(--eds-size-2-and-half);
-  width: var(--eds-size-2-and-half);
+  left: -7px;
+  height: var(--eds-size-3);
+  width: var(--eds-size-3);
   margin-right: var(--eds-size-half);
   background: var(--eds-color-neutral-white); /* 1*/
   z-index: var(--eds-z-index-100);
