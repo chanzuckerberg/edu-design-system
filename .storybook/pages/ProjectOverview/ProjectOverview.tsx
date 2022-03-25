@@ -47,7 +47,7 @@ export const ProjectOverview: React.FC = () => (
         </div>
 	  </ListDetailPanel>
   
-	  <ListDetailPanel title="Expectations of Samuri in Feudal Japan and Wars of 5th Century">
+	  <ListDetailPanel title="Expectations of Samuri in Feudal Japan and Wars of 5th Century" variant="warning">
 		<TextPassage>
 		  <h3>ListDetailPanel 2</h3>
 		  <p>
@@ -59,7 +59,7 @@ export const ProjectOverview: React.FC = () => (
 		</TextPassage>
 	  </ListDetailPanel>
   
-	  <ListDetailPanel title="Expectations of Samuri in Feudal Japan">
+	  <ListDetailPanel title="Expectations of Samuri in Feudal Japan" variant="error">
 		<TextPassage>
 		  <h3>ListDetailPanel 3</h3>
 		  <p>

@@ -85,8 +85,8 @@
     content: '';
     position: absolute;
     top: var(--eds-size-1-and-half);
-    left: 4px;
-    width: 1px;
+    left: .25rem;
+    width: 0.0625rem;
     height: 100%;
     background: var(--eds-theme-color-neutral-md-background);
     border-radius: 50%;
@@ -153,12 +153,12 @@
   }
 
   /**
-  * Success list detail item
+  * List detail item variants
   * 1) Remove the bullet since the icon will take its place
   */
-  .list-detail__item--success & {
+  li[class*="list-detail__item--"] & {
     &:before {
-      content: none; /* 1 */
+      content: none;
     }
   }
 }
@@ -181,5 +181,15 @@
   */
   .list-detail__item--success & {
     fill: var(--eds-theme-color-utility-success-foreground);
+  }/**
+  * List detail icon within warning list detail item
+  */
+  .list-detail__item--warning & {
+    fill: var(--eds-theme-color-utility-warning-foreground);
+  }/**
+  * List detail icon within error list detail item
+  */
+  .list-detail__item--error & {
+    fill: var(--eds-theme-color-utility-error-foreground);
   }
 }

@@ -219,7 +219,12 @@ export const ListDetail: React.FC<Props> = ({
               <li
                 className={clsx(styles['list-detail__item'], {
                   [styles['eds-is-active']]: isActive,
-				  [styles['list-detail__item--success']] : tab.props.variant === 'success'
+                  [styles['list-detail__item--success']]:
+                    tab.props.variant === 'success',
+                  [styles['list-detail__item--warning']]:
+                    tab.props.variant === 'warning',
+                  [styles['list-detail__item--error']]:
+                    tab.props.variant === 'error',
                 })}
                 key={'list-detail-item-' + i}
                 role="presentation"
@@ -241,11 +246,26 @@ export const ListDetail: React.FC<Props> = ({
                   ref={listDetailItemRefs[i]}
                   aria-label={tab.props.ariaLabel}
                 >
-					<div className={styles['list-detail__link-left']}>
-				  	{tab.props.variant === 'success' &&
-					<Icon className={styles['list-detail__icon']} name="check-circle" />
-					  }
-					</div>
+                  <div className={styles['list-detail__link-left']}>
+                    {tab.props.variant === 'success' ? (
+                      <Icon
+                        className={styles['list-detail__icon']}
+                        name="check-circle"
+                      />
+                    ) : tab.props.variant === 'warning' ? (
+                      <Icon
+                        className={styles['list-detail__icon']}
+                        name="exclamation-circle"
+                      />
+                    ) : tab.props.variant === 'error' ? (
+                      <Icon
+                        className={styles['list-detail__icon']}
+                        name="x-circle"
+                      />
+                    ) : (
+                      ''
+                    )}
+                  </div>
                   {tab.props.title}
                 </a>
               </li>
