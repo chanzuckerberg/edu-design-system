@@ -26,6 +26,12 @@ export const GlobalHeader: React.FC<Props> = ({ className, ...other }) => {
 
   const toggleMenu = () => {
     setisActive(!isActive);
+    if (isActive) {
+      document.body.classList.remove('eds-is-disabled');
+    }
+    else {
+      document.body.classList.add('eds-is-disabled');
+    }
   };
 
   const componentClassName = clsx(styles['global-header'], className, {

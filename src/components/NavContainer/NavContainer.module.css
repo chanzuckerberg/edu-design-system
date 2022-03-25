@@ -34,7 +34,7 @@
       visibility: visible;
       display: flex;
       flex-direction: column;
-      overflow: visible;
+      overflow: auto;
       gap: var(--eds-size-8);
       height: calc(100vh - 3rem); /* 2 */
       background-color: var(--eds-theme-color-primary-background);

@@ -8,4 +8,10 @@ body {
   background: var(--eds-theme-color-body-background);
   padding: 0;
   margin: 0;
+
+  &.eds-is-disabled {
+    overflow: hidden;
+    width: 100%;
+    min-height: 100%;
+  }
 }
