@@ -40,7 +40,7 @@ export const PageShell: React.FC<Props> = ({
         variant="primary"
         size="sm"
       />
-      <Layout>
+      <Layout variant="narrow-sidebar" expandable={true}>
         <LayoutSection region="sidebar">
           <GlobalHeader />
         </LayoutSection>

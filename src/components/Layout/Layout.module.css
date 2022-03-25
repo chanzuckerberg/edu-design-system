@@ -15,3 +15,54 @@
     grid-template-columns: auto 1fr;
   }
 }
+
+
+/**
+ * Sidebar layout section region
+ * 1) Contains the global header and site navigation
+ */
+.layout__section--sidebar {
+
+  /**
+   * Sidebar layout section in expandable layout
+   */
+  .layout--narrow-sidebar & {
+    @media all and (min-width: $eds-bp-lg) {
+      width: 3.625rem;
+    }
+  }
+
+/**
+ * Sidebar layout section in expandable layout
+ */
+  .layout--expandable & {
+    @media all and (min-width: $eds-bp-lg) {
+      transition: width var(--eds-anim-move-quick) var(--eds-anim-ease);  
+      &:hover, &:focus-within {
+        width: var(--eds-l-sidebar-width);
+      }
+    }
+  } 
+
+  @media all and (min-width: $eds-bp-lg) {
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: var(--eds-z-index-500);   
+  }
+}
+
+/**
+ * Main layout section region 
+ * 1) Contains the main page content
+ */
+.layout__section--main {
+
+  @media all and (min-width: $eds-bp-lg) {
+    width: calc(100% - 3.625rem));
+    height: 100vh;
+    padding-top: var(--eds-size-6);
+  }
+}
+
+

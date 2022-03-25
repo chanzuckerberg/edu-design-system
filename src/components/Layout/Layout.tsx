@@ -17,10 +17,16 @@ export interface Props {
    */
   className?: string;
   /**
-   * Stylistic variations:
-   * - **reversed** switches the order of the sidebar and main content
+   * Expandable layout sections
+   * 1) Used for hover/focus states showing/hiding extra content
    */
-  variant?: 'right-sidebar';
+   expandable?: boolean;
+
+   /**
+   * Sidebar property
+   * 1) Adjust the size of the sidebar
+   */
+   variant?: 'narrow-sidebar';
 }
 
 /**
@@ -31,11 +37,13 @@ export const Layout: React.FC<Props> = ({
   children,
   className,
   variant,
+  expandable,
   ...other
 }) => {
   const componentClassName = clsx(styles['layout'], className, {
-    [styles['layout--right-sidebar']]: variant === 'right-sidebar',
+    [styles['layout--narrow-sidebar']]: variant === 'narrow-sidebar',
     [styles['layout--fixed-sidebar']]: behavior === 'fixed-sidebar',
+    [styles['layout--expandable']]: expandable === true,
   });
   return (
     <div className={componentClassName} {...other}>

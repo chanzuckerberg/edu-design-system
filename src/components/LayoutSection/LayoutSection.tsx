@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
-import styles from './LayoutSection.module.css';
+import styles from '../Layout/Layout.module.css';
 
 export interface Props {
   /**
