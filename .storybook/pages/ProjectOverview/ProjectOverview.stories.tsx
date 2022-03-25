@@ -12,8 +12,3 @@ const Template: Story<Props> = (args) => <ProjectOverview {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {};
-
-export const Sequence = Template.bind({});
-Sequence.args = {
-  listVariant: 'sequence'
-}

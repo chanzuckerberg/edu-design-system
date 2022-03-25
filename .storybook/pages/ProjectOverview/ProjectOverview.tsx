@@ -21,7 +21,7 @@ export interface Props {
   listVariant?: 'ordered';
 }
 
-export const ProjectOverview: React.FC<Props> = ({...args}) => {
+export const ProjectOverview: React.FC<Props> = ({ ...args }) => {
   return (
     <PageShell>
       <Breadcrumbs>
@@ -39,7 +39,7 @@ export const ProjectOverview: React.FC<Props> = ({...args}) => {
           />
         }
       />
-      <ListDetail variant={args.listVariant}>
+      <ListDetail variant="ordered">
         <ListDetailPanel title="Overview" variant="success">
           <div>List Detail Component</div>
           <div className="fpo">Heading</div>
@@ -105,7 +105,10 @@ export const ProjectOverview: React.FC<Props> = ({...args}) => {
             </p>
           </TextPassage>
         </ListDetailPanel>
-        <ListDetailPanel title="Expectations of Samuri in Feudal Japan" variant="number">
+        <ListDetailPanel
+          title="Expectations of Samuri in Feudal Japan"
+          variant="number"
+        >
           <TextPassage>
             <h3>ListDetailPanel 4</h3>
             <p>
