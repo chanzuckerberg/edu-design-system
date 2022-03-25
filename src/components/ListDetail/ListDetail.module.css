@@ -1,7 +1,7 @@
 @import '../../design-tokens/mixins.css';
 
 /*------------------------------------*\
-    #TABS
+    #List Detail
 \*------------------------------------*/
 
 /**
@@ -88,7 +88,7 @@
     left: .25rem;
     width: 0.0625rem;
     height: 70%;
-    background: var(--eds-color-neutral-200);
+    background: var(--eds-theme-color-neutral-subtle-background);
     border-radius: 50%;
   }
 
@@ -148,7 +148,7 @@
     top: var(--eds-size-1);
     height: 9px; /* 1 */
     width: 9px; /* 1 */
-    background: var(--eds-theme-color-neutral-md-background);
+    background: var(--eds-theme-color-neutral-subtle-background);
     border-radius: 50%;
   }
 
