@@ -1,6 +1,6 @@
 @import '../../design-tokens/mixins.css';
 /*------------------------------------*\
-    #TYPOGRAPHY PRESET UTILITY CLASSES
+  #TYPOGRAPHY PRESET UTILITY CLASSES
 \*------------------------------------*/
 
 /**
@@ -9,6 +9,10 @@
 
 .u-typography-preset-001 {
   @mixin eds-typography-preset-001;
+}
+
+.u-typography-preset-001-bold {
+  @mixin eds-typography-preset-001-bold;
 }
 
 .u-typography-preset-002 {
@@ -37,6 +41,10 @@
 
 .u-typography-preset-005 {
   @mixin eds-typography-preset-005;
+}
+
+.u-typography-preset-005-light {
+  @mixin eds-typography-preset-005-light;
 }
 
 .u-typography-preset-005-bold {

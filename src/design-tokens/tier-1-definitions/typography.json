@@ -2,10 +2,10 @@
   "eds": {
     "font-family": {
       "primary": {
-        "value": "sans-serif"
+        "value": "'Open Sans', sans-serif"
       },
       "secondary": {
-        "value": "sans-serif"
+        "value": "'Open Sans', sans-serif"
       }
     },
     "font-size": {
@@ -36,13 +36,13 @@
     },
     "font-weight": {
       "light": {
-        "value": "regular"
+        "value": "400"
       },
       "medium": {
         "value": "500"
       },
       "bold": {
-        "value": "semibold"
+        "value": "600"
       }
     },
     "line-height": {

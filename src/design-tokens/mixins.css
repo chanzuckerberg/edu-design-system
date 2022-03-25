@@ -1,4 +1,5 @@
 @import '../design-tokens/tier-2-usage/typography-usage.css';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap');
 
 @define-mixin reset {
   margin: 0;

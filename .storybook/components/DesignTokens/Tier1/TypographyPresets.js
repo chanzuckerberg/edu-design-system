@@ -15,6 +15,12 @@ export class Tier1TypographyPresets extends Component {
         />
 
         <TokenSpecimen
+          name="eds-typography-preset-001-bold"
+          variant="typography-body"
+          specimenClassName={styles['u-typography-preset-001-bold']}
+        />
+
+        <TokenSpecimen
           name="eds-typography-preset-002"
           variant="typography-body"
           specimenClassName={styles['u-typography-preset-002']}
