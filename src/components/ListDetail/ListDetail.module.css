@@ -76,16 +76,18 @@
   position: relative;
   flex-shrink: 0; /* 1 */
   padding-bottom: var(--eds-size-4);
+}
 
-  /**
+/**
   * List detail item after
-  * 1) Line between items that shouldn't link out unliike the bullet
+  * 1) When list variant is 'sequence', add a line between items that shouldn't link out unliike the bullet
   */
+.list-detail__list--sequence .list-detail__item {
   &:after {
     content: '';
     position: absolute;
     top: 1.5rem;
-    left: .25rem;
+    left: 0.25rem;
     width: 0.0625rem;
     height: 70%;
     background: var(--eds-theme-color-neutral-subtle-background);
@@ -93,21 +95,20 @@
   }
 
   /**
-  * Last list detail item
-  */
+    * Last list detail item
+    */
   &:last-child {
     padding-bottom: 0;
 
     /**
-    * List list detail item after
-    * 1) Don't add a line between items
-    */
+      * List list detail item after
+      * 1) Don't add a line between items
+      */
     &:after {
       content: none;
     }
   }
 }
-
 /**
  * List detail link
  */
@@ -156,7 +157,7 @@
   * List detail item variants
   * 1) Remove the bullet since the icon will take its place
   */
-  li[class*="list-detail__item--"] & {
+  li[class*='list-detail__item--'] & {
     &:before {
       content: none;
     }
@@ -181,12 +182,12 @@
   */
   .list-detail__item--success & {
     fill: var(--eds-theme-color-utility-success-foreground);
-  }/**
+  } /**
   * List detail icon within warning list detail item
   */
   .list-detail__item--warning & {
     fill: var(--eds-theme-color-utility-warning-foreground);
-  }/**
+  } /**
   * List detail icon within error list detail item
   */
   .list-detail__item--error & {

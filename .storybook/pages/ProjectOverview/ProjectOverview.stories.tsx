@@ -10,5 +10,10 @@ export default {
 
 const Template: Story<Props> = (args) => <ProjectOverview {...args} />;
 
-export const StudentView = Template.bind({});
-StudentView.args = {};
+export const Default = Template.bind({});
+Default.args = {};
+
+export const Sequence = Template.bind({});
+Sequence.args = {
+  listVariant: 'sequence'
+}

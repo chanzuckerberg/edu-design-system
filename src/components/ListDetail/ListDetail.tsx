@@ -62,9 +62,9 @@ export interface Props {
   overflow?: 'inverted';
   /**
    * Stylistic variations:
-   * - **boxed** yields a chunkier, distinct boxed tabs used for primary content
+   * - **sequence** bullets can be replaced with icons; vertical line connects each item to indicate sequence
    */
-  variant?: 'boxed';
+  variant?: 'sequence' | null;
   /**
    * List detail item tab name
    */
@@ -74,7 +74,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const ListDetail: React.FC<Props> = ({
+export const ListDetail = ({
   className,
   children,
   variant,
@@ -86,7 +86,7 @@ export const ListDetail: React.FC<Props> = ({
   onChange,
   required,
   ...other
-}) => {
+}: Props) => {
   /**
    * Initialize states, constants, and refs
    */
@@ -139,10 +139,16 @@ export const ListDetail: React.FC<Props> = ({
    * Autogenerate ids on tabs if not defined
    */
   useEffect(() => {
-    setId(listDetailItems().map((listDetailItem) => (listDetailItem.props.id ? listDetailItem.props.id : nanoid())));
+    setId(
+      listDetailItems().map((listDetailItem) =>
+        listDetailItem.props.id ? listDetailItem.props.id : nanoid(),
+      ),
+    );
     setAriaLabelledBy(
       listDetailItems().map((listDetailItem) =>
-        listDetailItem.props.ariaLabelledBy ? listDetailItem.props.ariaLabelledBy : nanoid(),
+        listDetailItem.props.ariaLabelledBy
+          ? listDetailItem.props.ariaLabelledBy
+          : nanoid(),
       ),
     );
   }, [listDetailItems]);
@@ -181,8 +187,10 @@ export const ListDetail: React.FC<Props> = ({
     if (!activeListDetailPanel) return;
 
     const index = listDetailItemRefs.indexOf(activeListDetailPanel); /* 2 */
-    const next = index === listDetailItemRefs.length - 1 ? 0 : index + 1; /* 2 */
-    const prev = index === 0 ? listDetailItemRefs.length - 1 : index - 1; /* 2 */
+    const next =
+      index === listDetailItemRefs.length - 1 ? 0 : index + 1; /* 2 */
+    const prev =
+      index === 0 ? listDetailItemRefs.length - 1 : index - 1; /* 2 */
 
     if ([R_ARROW_KEYCODE, D_ARROW_KEYCODE].includes(e.code)) {
       /* 3 */
@@ -193,38 +201,44 @@ export const ListDetail: React.FC<Props> = ({
     }
   }
 
+  const childrenWithProps = React.Children.map(
+    listDetailItems(),
+    (child: any, i: any) => {
+      // Checking isValidElement is the safe way and avoids a typescript
+      // error too.
+      if (React.isValidElement(child)) {
+        return React.cloneElement<Props>(child, {
+          id: idVar[i],
+          ariaLabelledBy: ariaLabelledByVar[i],
+        });
+      }
+      return child;
+    },
+  );
 
-  const childrenWithProps = React.Children.map(listDetailItems(), (child: any, i: any) => {
-    // Checking isValidElement is the safe way and avoids a typescript
-    // error too.
-    if (React.isValidElement(child)) {
-      return React.cloneElement<Props>(child, {
-        id: idVar[i],
-        ariaLabelledBy: ariaLabelledByVar[i],
-      });
-    }
-    return child;
-  });
-
-  const componentClassName = clsx(styles['list-detail'], className, {
-  });
+  const componentClassName = clsx(styles['list-detail'], className, {});
 
   return (
     <div className={componentClassName} {...other}>
       <div className={styles['list-detail__header']}>
-        <ul className={styles['list-detail__list']} role="tablist">
+        <ul
+          className={clsx(styles['list-detail__list'], {
+            [styles['list-detail__list--sequence']]: variant === 'sequence',
+          })}
+          role="tablist"
+        >
           {listDetailItems().map((tab: any, i: any) => {
             const isActive = activeIndexState === i;
+            const itemVariant = variant && tab.props.variant;
             return (
               <li
                 className={clsx(styles['list-detail__item'], {
                   [styles['eds-is-active']]: isActive,
                   [styles['list-detail__item--success']]:
-                    tab.props.variant === 'success',
+                    itemVariant === 'success',
                   [styles['list-detail__item--warning']]:
-                    tab.props.variant === 'warning',
-                  [styles['list-detail__item--error']]:
-                    tab.props.variant === 'error',
+                    itemVariant === 'warning',
+                  [styles['list-detail__item--error']]: itemVariant === 'error',
                 })}
                 key={'list-detail-item-' + i}
                 role="presentation"
@@ -247,17 +261,17 @@ export const ListDetail: React.FC<Props> = ({
                   aria-label={tab.props.ariaLabel}
                 >
                   <div className={styles['list-detail__link-left']}>
-                    {tab.props.variant === 'success' ? (
+                    {itemVariant === 'success' ? (
                       <Icon
                         className={styles['list-detail__icon']}
                         name="check-circle"
                       />
-                    ) : tab.props.variant === 'warning' ? (
+                    ) : itemVariant === 'warning' ? (
                       <Icon
                         className={styles['list-detail__icon']}
                         name="exclamation-circle"
                       />
-                    ) : tab.props.variant === 'error' ? (
+                    ) : itemVariant === 'error' ? (
                       <Icon
                         className={styles['list-detail__icon']}
                         name="x-circle"
