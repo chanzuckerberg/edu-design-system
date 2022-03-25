@@ -62,32 +62,39 @@
 * a <button> element; when clicked, it toggles between read/not
 * read statuses
 */
-.notification-list__item--button {
-    border-radius: 4px;
-    height: 8px;
-    width: 8px;
+.notification-list__button {
+    border-radius: var(--eds-theme-border-radius);
+    height: 0.5rem;
+    width: 0.5rem;
     background-color: var(--eds-color-brand-blue-700);/* TODO */
     border: none;
     padding: 0;
     cursor: pointer;
-}
 
-/* 
-* Notification list item (is read)
-* 1) Class that applies neutral background to an item that is marked as read
-* 2) Title color is changed to neutral
-* 3) Button has fill removed
-*/
-
-.notification-list__item--is-read {
-    background-color: var(--eds-color-neutral-white);/* TODO */
-
-    .notification-list__item--title { /* 2 */
-        color: var(--eds-color-neutral-600);/* TODO */
-    }
-
-    .notification-list__item--button { /* 3 */
+    /*
+    * Notification List Item (is read)
+    * 1) When isRead === true, background and border are changed to neutral
+    */
+    .notification-list__item--is-read & { /* 3 */
         background-color: var(--eds-color-neutral-white);/* TODO */
         border: 1px solid var(--eds-color-neutral-600);/* TODO */
     }
 }
+
+
+/* 
+* Notification List Title
+* 1) The title of the list
+*/
+.notification-list__title {
+    color: var(--eds-color-brand-blue-700);/* TODO */
+    
+    /*
+    * Notification List Item (is read)
+    * 1) When isRead === true, color is changed to neutral
+    */
+    .notification-list__item--is-read & {
+        color: var(--eds-color-neutral-600);/* TODO */
+    }
+}
+

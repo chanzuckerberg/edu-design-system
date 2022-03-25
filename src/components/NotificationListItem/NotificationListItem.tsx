@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import React, { ReactNode, useState } from 'react';
+import { Heading } from '../Heading/Heading';
 import styles from '../NotificationList/NotificationList.module.css';
 
 export interface Props {
@@ -70,7 +71,7 @@ export const NotificationListItem = ({
       <div className={styles['notification-list__item--content']}>
         <div className={styles['notification-list__item--title']}>
           <a className={styles['notification-list__item--link']} href={href}>
-            {title}
+            <Heading as="h6">{title}</Heading>
           </a>
         </div>
         {date}

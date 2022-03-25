@@ -109,9 +109,8 @@
  * Popover header
  */
 .popover__header {
-  padding-top: var(--eds-size-1-and-half);
-  padding-bottom: var(--eds-size-1-and-half);
-  margin-bottom: var(--eds-size-2);
+  padding-top: var(--eds-size-1);
+  padding-bottom: var(--eds-size-1);
 }
 
 /**
