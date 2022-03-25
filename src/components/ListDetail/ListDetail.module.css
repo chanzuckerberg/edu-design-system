@@ -137,7 +137,7 @@
 
 .list-detail__link-left:not(.list-detail__link-hidden) {
   /**
-   * Before pseudoelement bullet
+   * Before pseudoelement bullet (for non-number variant items)
    * 1) Set to 9px to center the border
    */
   &:before {
@@ -165,27 +165,20 @@
   }
 }
 
-.list-detail__link-hidden {
-  &:before {
-    content: '';
-    margin-right: var(--eds-size-2);
-    display: inline-block;
-    top: var(--eds-size-1);
-    height: 0;
-    width: 9px;
-    visibility: hidden;
-  }
-}
+/**
+* List detail number
+* 1) Used on list items using number variant
+*/
 .list-detail__number {
-  position: absolute;
-  left: -4px;
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   border: 1px solid var(--eds-theme-color-neutral-subtle-border);
-  padding-left: 5px;
-  line-height: 1.5;
+  margin-right: 9px;
+  padding: 3px 6px;
   font-size: 12px;
+  margin-left: -4px;
+
 }
 
 /**
