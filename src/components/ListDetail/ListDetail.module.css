@@ -84,11 +84,11 @@
   &:after {
     content: '';
     position: absolute;
-    top: var(--eds-size-1-and-half);
+    top: 1.5rem;
     left: .25rem;
     width: 0.0625rem;
-    height: 100%;
-    background: var(--eds-theme-color-neutral-md-background);
+    height: 70%;
+    background: var(--eds-color-neutral-200);
     border-radius: 50%;
   }
 
