@@ -6,13 +6,26 @@
  * 1) 
  */
 .global-header {
+  position: relative;
   margin-bottom: var(--eds-size-4);
 
+  &:hover,
+  &:focus-within {
+    @media all and (min-width: $eds-bp-lg) {
+      width: var(--eds-l-sidebar-width);
+      overflow: visible;
+    }
+  }
+
   @media all and (min-width: $eds-bp-lg) {
-    margin-bottom: 0;
+    position: fixed;
     display: flex;
     flex-direction: column;
-    max-width: var(--eds-l-sidebar-width);
+    align-items: flex-start;
+    overflow: hidden;
+    margin-bottom: 0;
+    width: 3.75rem;
+    transition: width var(--eds-anim-move-quick) var(--eds-anim-ease);
   }
 }
 
@@ -20,12 +33,13 @@
  * Header container 
  * 1) Contains the 
  */
-.global-header__header {
-  display: flex;
-  justify-content: space-between;
-
+.global-header__logo {
+  display: none;
   @media all and (min-width: $eds-bp-lg) {
-    margin-bottom: var(--eds-size-4);
+    display: block;
+    position: relative;
+    left: -0.5rem;
+    margin-bottom: var(--eds-size-6);
   }
 }
 
@@ -33,30 +47,40 @@
  * Body container
  * 1) Contains the primary navigation 
  */
-.global-header__body {
+.global-header__nav-container {
+  position: absolute; /* 1 */
+  top: 100%; /* 1 */
+  left: 0; /* 1 */
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  width: 100%; /* 1 */
+  overflow: hidden;
+  padding: var(--eds-size-4);
+  z-index: var(--eds-z-index-bottom);
+  transition: all var(--eds-anim-move-quick) var(--eds-anim-ease);
+
+  .is-active & {
+    display: block;
+
+    @media all and (max-width: $eds-bp-lg) {
+      opacity: 1;
+      visibility: visible;
+      display: flex;
+      flex-direction: column;
+      overflow: visible;
+      gap: var(--eds-size-8);
+      height: calc(100vh - 3rem); /* 2 */
+      background-color: var(--eds-theme-color-primary-background);
+      z-index: var(--eds-z-index-400);
+    }
+  }
   @media all and (min-width: $eds-bp-lg) {
-    flex: 1;
-  }
-
-  @media all and (max-width: $eds-bp-lg) {
-    display: none;
-
-    /* stylelint-disable-next-line max-nesting-depth */
-    .global-header.is-active & {
-      padding-top: var(--eds-size-4);
-      display: block;
-    }
-  }
-}
-
-.global-header__footer {
-  @media all and (max-width: $eds-bp-lg) {
-    display: none;
-
-    /* stylelint-disable-next-line max-nesting-depth */
-    .global-header.is-active & {
-      display: block;
-    }
+    margin-bottom: var(--eds-size-6);
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    padding: 0;
   }
 }
 
@@ -69,5 +93,16 @@
 .global-header__menu-button {
   @media all and (min-width: $eds-bp-lg) {
     display: none; /* 1 */
+  }
+}
+
+.global-header__avatar-block {
+  position: relative;
+  left: -1rem;
+  margin-left: auto;
+
+  @media all and (min-width: $eds-bp-lg) {
+    margin-left: 0;
+    margin-top: auto;
   }
 }

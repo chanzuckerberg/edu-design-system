@@ -13,7 +13,7 @@
     "start": "yarn build:tokens && yarn storybook",
     "build": "yarn dist",
     "build:tokens": "node ./style-dictionary.config.js",
-    "build:icons": "make-dir dist/icons && svg-sprite-generate -d src/icons/ -o dist/icons/spritemap.svg",
+    "build:icons": "svg-sprite-generate -d src/icons/ -o src/icons/spritemap/spritemap.svg",
     "build:js": "babel src/design-tokens/components --out-dir dist --copy-files",
     "build:css": "postcss \"src/**/*.css\" --dir dist/ --base src/ --verbose",
     "build:storybook": "build-storybook -s public",

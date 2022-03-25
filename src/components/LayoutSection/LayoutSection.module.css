@@ -9,12 +9,16 @@
  */
 .layout__section--sidebar {
   @media all and (min-width: $eds-bp-lg) {
-    position: fixed;
     top: 0;
     left: 0;
-    width: var(--eds-l-sidebar-width);
+    width: 3.625rem;
     height: 100vh;
     z-index: var(--eds-z-index-500);
+    transition: width var(--eds-anim-move-quick) var(--eds-anim-ease);
+
+    &:hover, &:focus-within {
+      width: var(--eds-l-sidebar-width);
+    }
   }
 }
 
@@ -23,10 +27,11 @@
  * 1) Contains the main page content
  */
 .layout__section--main {
+
   @media all and (min-width: $eds-bp-lg) {
-    margin-left: var(--eds-l-sidebar-width);
-    width: calc(100% - var(--eds-l-sidebar-width));
+    width: calc(100% - 3.625rem));
     height: 100vh;
     padding-top: var(--eds-size-6);
   }
 }
+

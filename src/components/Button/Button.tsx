@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import React, { MouseEventHandler, ReactNode } from 'react';
 import styles from './Button.module.css';
+import utilityStyles from '../Utilities/Visibility.module.css';
 import { Icon } from '../Icon/Icon';
 export interface Props {
   /**
@@ -24,6 +25,10 @@ export interface Props {
    * Toggles button that fills the full width of its container
    */
   fullWidth?: boolean;
+  /**
+   * Visually hides button text for icon-only buttons for accessibility
+   */
+  hideText?: boolean;
   /**
    * Link to URL. If href is present, the button will be rendered as an <a> element.
    */
@@ -82,6 +87,7 @@ export const Button = React.forwardRef(
       forwardRef,
       fullWidth,
       href,
+      hideText,
       iconName,
       iconPosition = 'before',
       inverted,
@@ -151,7 +157,7 @@ export const Button = React.forwardRef(
       >
         {iconPosition === 'before' && computedIcon}
 
-        {text && <span className={styles['button__text']}>{text}</span>}
+        {text && <span className={hideText ? styles['button__text'] + " " + utilityStyles['u-is-vishidden'] : styles['button__text'] }>{text}</span>}
 
         {iconPosition === 'after' && computedIcon}
       </TagName>

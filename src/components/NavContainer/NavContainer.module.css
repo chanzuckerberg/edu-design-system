@@ -9,39 +9,14 @@
  * 2) Hide by default on small screens
  */
 .nav-container {
-  display: none; /* 2 */
-
-  /**
-  * Nav container within active header on small screens
-  * 1) Display as full-screen window that overlays other content
-  * 2) Set height to full height minus the height of the header
-  */
-  .header.eds-is-active & {
-    /* stylelint-disable-next-line max-nesting-depth */
-    @media all and (max-width: $eds-bp-md) {
-      display: flex;
-      flex-direction: column;
-      gap: var(--eds-size-8);
-      position: absolute; /* 1 */
-      top: 100%; /* 1 */
-      left: 0; /* 1 */
-      width: 100%; /* 1 */
-      height: calc(100vh - 3rem); /* 2 */
-      padding: var(--eds-size-3);
-      background-color: var(--eds-theme-color-body-background);
-      z-index: var(--eds-z-index-400);
-    }
-  }
-
   /**
    * Large screen styles
    * 1) Un-hide navcontainer to display nav by default on larger screens
    * 2) Display children as horizontal flex items
   */
-  @media all and (min-width: $eds-bp-md) {
+  @media all and (min-width: $eds-bp-lg) {
     display: flex; /* 1 */
     justify-content: space-between; /* 2 */
-    width: 100%;
     height: auto;
   }
 }

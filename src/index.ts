@@ -1,6 +1,7 @@
 export { Accordion } from './components/Accordion/Accordion';
 export { AccordionPanel } from './components/AccordionPanel/AccordionPanel';
 export { Avatar } from './components/Avatar/Avatar';
+export { AvatarBlock } from "./components/AvatarBlock/AvatarBlock";
 export { AvatarImage } from './components/AvatarImage/AvatarImage';
 export { Badge } from './components/Badge/Badge';
 export { Band } from './components/Band/Band';

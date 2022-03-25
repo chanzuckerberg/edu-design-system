@@ -10,5 +10,8 @@
  * 2) Left sidebar is the default
  */
 .layout {
-  display: block;
+  @media all and (min-width: $eds-bp-lg) {
+    display: grid;
+    grid-template-columns: auto 1fr;
+  }
 }

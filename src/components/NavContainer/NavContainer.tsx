@@ -1,5 +1,7 @@
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
+import '../Header/Header.module.css';
+import '../../../.storybook/recipes/GlobalHeader/GlobalHeader.module.css';
 import styles from './NavContainer.module.css';
 
 export interface Props {
