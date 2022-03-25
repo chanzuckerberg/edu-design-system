@@ -68,7 +68,7 @@ export const PopoverExample: React.FC<Props> = ({
         ariaDescribedBy="popover-description-1"
       >
         <PopoverHeader
-          titleAfter={<Button text="Mark All Seen" variant="link" />}
+          titleAfter={<Button text="Mark All Seen" size="sm" variant="bare" />}
         >
           <Heading id="popover-heading-1" as="h6">
             Notifications (4)

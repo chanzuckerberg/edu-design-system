@@ -41,12 +41,12 @@
   position: fixed;
   top: auto;
   left: 0;
-  bottom: 68px;
+  bottom: 4.25rem;
   height: auto;
-  max-height: 450px;
-  width: 400px;
-  max-width: 400px;
-  margin-left: 13px;
+  max-height: 28rem;
+  width: 25rem;
+  max-width: 25rem;
+  margin-left: 0.8125rem;
   opacity: 0;
   background: var(--eds-color-neutral-white);
   border-radius: var(--eds-theme-border-radius);
@@ -60,25 +60,27 @@
 
   /**
   * Popover arrow
-  * 1) A 0 height/0 width empty container positioned at the bottom of the popover; its purpose is to provide...
-  * 2) ...a psuedo element that adds a triangle added to the bottom edge of the popover pointing toward the button that opened the popover
+  * 1) A 0 height/0 width empty container positioned at the bottom of the popover with a ::after pseudo-element attached to it
+  * 2) Since the ::after pseudo element will use absolute positioning, it needs a parent that uses relative positioning; otherwise ::after will position itself relative to the page, not the popover
   */
   .popover__arrow {
-    position: relative;
+    position: relative; /* 2 */
     bottom: 0;
     left: 0;
   }
+  /** Psuedo-element ::after
+  * 1) Adds a cosmetic triangle to the bottom edge of the popover, pointing toward the button that opened the popover
+  */
   &::after {
-    /* 2 */
     position: absolute;
-    left: 20px;
-    top: 0;
+    left: 1.25rem;
+    top: 100%;
     border-top-color: var(--eds-color-neutral-white);
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
+    border-left: 0.9375rem solid transparent;
+    border-right: 0.9375rem solid transparent;
     border-style: solid;
     content: '';
-    border-width: 10px;
+    border-width: 0.625rem;
     border-bottom-width: 0;
   }
 
@@ -98,8 +100,7 @@
 * 1) Includes header, body and footer of popover
 */
 .popover__content {
-  padding-top: var(--eds-size-2);
-  padding-bottom: var(--eds-size-2);
+
   height: auto;
   max-height: 25rem;
   overflow-y: auto;
@@ -110,12 +111,8 @@
  */
 .popover__header {
   margin-bottom: var(--eds-size-2);
-
-  h2 {
-    /** TODO: match this to a heading variation */
-    font-size: 12px;
-  }
 }
+
 /**
 * Popover header content
 * 1) Can include title and titleAfter elements
@@ -123,8 +120,7 @@
 .popover__header-content {
   display: flex;
   justify-content: space-between;
-  padding-left: var(--eds-size-4);
-  padding-right: var(--eds-size-4);
+  padding: var(--eds-size-2) var(--eds-size-4) 0;
 }
 
 /**
