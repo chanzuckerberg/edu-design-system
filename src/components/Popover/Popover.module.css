@@ -100,7 +100,6 @@
 * 1) Includes header, body and footer of popover
 */
 .popover__content {
-
   height: auto;
   max-height: 25rem;
   overflow-y: auto;
@@ -110,17 +109,21 @@
  * Popover header
  */
 .popover__header {
+  padding-top: var(--eds-size-1-and-half);
+  padding-bottom: var(--eds-size-1-and-half);
   margin-bottom: var(--eds-size-2);
 }
 
 /**
 * Popover header content
 * 1) Can include title and titleAfter elements
+* 2) TODO: This will likely need to move into a recipe
 */
 .popover__header-content {
   display: flex;
+  align-items: center; /* TODO */
   justify-content: space-between;
-  padding: var(--eds-size-2) var(--eds-size-4) 0;
+  padding: 0 var(--eds-size-4);
 }
 
 /**
