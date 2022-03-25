@@ -28,8 +28,9 @@ export interface Props {
    * - **success** - results in a green list detail item and add icon
    * - **warning** - results in a yellow list detail item and add icon
    * - **error** - results in a red list detail item and adds icon
+   * - **number** - results in an indexed number in place of icon
    */
-   variant?: 'success' | 'warning' | 'error';
+   variant?: 'success' | 'warning' | 'error' | 'number';
 }
 
 /**

@@ -260,7 +260,9 @@ export const ListDetail = ({
                   ref={listDetailItemRefs[i]}
                   aria-label={tab.props.ariaLabel}
                 >
-                  <div className={styles['list-detail__link-left']}>
+                  <div className={clsx(styles['list-detail__link-left'], {
+                    [styles['list-detail__link-hidden']]: itemVariant === 'number'
+                  })}>
                     {itemVariant === 'success' ? (
                       <Icon
                         className={styles['list-detail__icon']}
@@ -276,6 +278,8 @@ export const ListDetail = ({
                         className={styles['list-detail__icon']}
                         name="x-circle"
                       />
+                    ) : itemVariant === 'number' ? (
+                      <span className={styles['list-detail__number']}>{i + 1}</span>
                     ) : (
                       ''
                     )}

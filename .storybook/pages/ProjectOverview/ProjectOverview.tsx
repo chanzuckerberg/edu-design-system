@@ -105,7 +105,7 @@ export const ProjectOverview: React.FC<Props> = ({...args}) => {
             </p>
           </TextPassage>
         </ListDetailPanel>
-        <ListDetailPanel title="Expectations of Samuri in Feudal Japan">
+        <ListDetailPanel title="Expectations of Samuri in Feudal Japan" variant="number">
           <TextPassage>
             <h3>ListDetailPanel 4</h3>
             <p>
