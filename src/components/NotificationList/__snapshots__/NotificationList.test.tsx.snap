@@ -17,7 +17,11 @@ exports[`<NotificationList /> Default story renders snapshot 1`] = `
           class="notification-list__item--link"
           href="#"
         >
-          English Teacher gave you feedback
+          <h6
+            class="heading"
+          >
+            English Teacher gave you feedback
+          </h6>
         </a>
       </div>
       now
@@ -42,7 +46,11 @@ exports[`<NotificationList /> Default story renders snapshot 1`] = `
           class="notification-list__item--link"
           href="#"
         >
-          Math Teacher gave you feedback
+          <h6
+            class="heading"
+          >
+            Math Teacher gave you feedback
+          </h6>
         </a>
       </div>
       now
@@ -74,7 +82,11 @@ exports[`<NotificationList /> MarkedAsRead story renders snapshot 1`] = `
           class="notification-list__item--link"
           href="#"
         >
-          English Teacher gave you feedback
+          <h6
+            class="heading"
+          >
+            English Teacher gave you feedback
+          </h6>
         </a>
       </div>
       now
@@ -99,7 +111,11 @@ exports[`<NotificationList /> MarkedAsRead story renders snapshot 1`] = `
           class="notification-list__item--link"
           href="#"
         >
-          Math Teacher gave you feedback
+          <h6
+            class="heading"
+          >
+            Math Teacher gave you feedback
+          </h6>
         </a>
       </div>
       now
