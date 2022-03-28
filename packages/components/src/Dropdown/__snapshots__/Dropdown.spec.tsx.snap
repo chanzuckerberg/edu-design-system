@@ -41,7 +41,7 @@ exports[`<Dropdown /> Compact story renders snapshot 1`] = `
   <ul
     aria-labelledby="headlessui-listbox-label-13"
     aria-orientation="vertical"
-    class="options w-96"
+    class="options"
     id="headlessui-listbox-options-15"
     role="listbox"
     tabindex="0"
@@ -127,7 +127,7 @@ exports[`<Dropdown /> CompactUsingChildrenPropAndNoVisibleLabel story renders sn
   <ul
     aria-labelledby="headlessui-listbox-label-43"
     aria-orientation="vertical"
-    class="options w-96"
+    class="options"
     id="headlessui-listbox-options-45"
     role="listbox"
     tabindex="0"
@@ -213,7 +213,7 @@ exports[`<Dropdown /> CompactWithOptionsRightAligned story renders snapshot 1`] 
   <ul
     aria-labelledby="headlessui-listbox-label-19"
     aria-orientation="vertical"
-    class="options optionsAlignRight w-96"
+    class="options optionsAlignRight"
     id="headlessui-listbox-options-21"
     role="listbox"
     tabindex="0"

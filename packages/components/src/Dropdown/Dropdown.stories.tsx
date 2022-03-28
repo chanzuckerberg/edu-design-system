@@ -41,7 +41,7 @@ function InteractiveExampleUsingSeparateProps(props: Props) {
     React.useState<typeof exampleOptions[0]>();
 
   return (
-    <div className={`h-48${optionsAlign === "right" ? " pl-96" : ""}`}>
+    <div className={`h-48${optionsAlign === "right" ? " pl-8" : ""}`}>
       <Dropdown
         buttonText={selectedOption?.label || "Select"}
         className={compact ? "" : "w-60"}
@@ -59,7 +59,7 @@ function InteractiveExampleUsingSeparateProps(props: Props) {
 }
 
 function InteractiveExampleUsingChildren(props: Props) {
-  const { optionsClassName, variant } = props;
+  const { variant } = props;
   const compact = variant === "compact";
 
   const [selectedOption, setSelectedOption] =
@@ -72,7 +72,6 @@ function InteractiveExampleUsingChildren(props: Props) {
         className={compact ? "" : "w-60"}
         data-testid="dropdown"
         onChange={setSelectedOption}
-        optionsClassName={optionsClassName}
         value={selectedOption}
         variant={variant}
       >
@@ -156,7 +155,6 @@ export const Compact: StoryObj = {
   render: () => (
     <InteractiveExampleUsingSeparateProps
       aria-label="Favorite Animal"
-      optionsClassName="w-96"
       variant="compact"
     />
   ),
@@ -167,7 +165,6 @@ export const CompactWithOptionsRightAligned: StoryObj = {
     <InteractiveExampleUsingSeparateProps
       aria-label="Favorite Animal"
       optionsAlign="right"
-      optionsClassName="w-96"
       variant="compact"
     />
   ),
@@ -200,7 +197,6 @@ export const CompactUsingChildrenPropAndNoVisibleLabel: StoryObj = {
   render: () => (
     <InteractiveExampleUsingChildren
       aria-label="Favorite Animal"
-      optionsClassName="w-96"
       variant="compact"
     />
   ),

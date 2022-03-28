@@ -188,8 +188,7 @@ function childrenHaveLabelComponent(children?: ReactNode): boolean {
  * );
  * ```
  *
- * For compact variant, add variant="compact" and optionsClassName to style
- * options menu width.
+ * For compact variant, add variant="compact" and optionally optionsAlign.
  *
  * Examples:
  *
@@ -199,7 +198,6 @@ function childrenHaveLabelComponent(children?: ReactNode): boolean {
  *   <Dropdown
  *     aria-label="Options"
  *     optionsAlign="right"
- *     optionsClassName="w-96"
  *     variant="compact"
  *   >
  *     <Dropdown.Options>
@@ -221,7 +219,6 @@ function childrenHaveLabelComponent(children?: ReactNode): boolean {
  *     aria-label="Options"
  *     options={options}
  *     optionsAlign="right"
- *     optionsClassName="w-96"
  *     variant="compact"
  *   />
  * );
@@ -251,16 +248,18 @@ function childrenHaveLabelComponent(children?: ReactNode): boolean {
 function Dropdown(props: DropdownProps) {
   const {
     className,
-    variant,
     labelText,
     buttonText,
     options,
     children,
     "aria-label": ariaLabel,
+    variant,
     optionsAlign,
     optionsClassName,
     ...rest
   } = props;
+
+  const compact = variant === "compact";
 
   if (process.env.NODE_ENV !== "production") {
     if (children && [labelText, buttonText, options].some((prop) => !!prop)) {
@@ -296,7 +295,9 @@ function Dropdown(props: DropdownProps) {
 
   if (typeof children === "function") {
     return (
-      <DropdownContext.Provider value={{ optionsAlign, optionsClassName }}>
+      <DropdownContext.Provider
+        value={{ compact, optionsAlign, optionsClassName }}
+      >
         <Listbox
           {...sharedProps}
           // We prefer to pass the aria-label in via an invisible DropdownLabel, but we can't
@@ -341,7 +342,7 @@ function Dropdown(props: DropdownProps) {
   );
 
   const contextValue = Object.assign(
-    {},
+    { compact },
     optionsAlign ? { optionsAlign } : null,
     optionsClassName ? { optionsClassName } : null,
   );
@@ -354,6 +355,7 @@ function Dropdown(props: DropdownProps) {
 }
 
 const DropdownContext = React.createContext<{
+  compact?: boolean;
   optionsAlign?: OptionsAlignType;
   optionsClassName?: string;
 }>({});
@@ -393,7 +395,8 @@ const DropdownOptions = function (
   props: PropsWithRenderProp<{ open: boolean }>,
 ) {
   const { className, ...rest } = props;
-  const { optionsAlign, optionsClassName } = useContext(DropdownContext);
+  const { compact, optionsAlign, optionsClassName } =
+    useContext(DropdownContext);
 
   return (
     <Listbox.Options
@@ -401,7 +404,7 @@ const DropdownOptions = function (
         styles.options,
         className,
         optionsAlign === "right" && styles.optionsAlignRight,
-        optionsClassName || styles.optionsFullWidth,
+        optionsClassName || (!compact && styles.optionsFullWidth),
       )}
       {...rest}
     />
