@@ -1,5 +1,13 @@
+import { relative } from 'path/posix';
 import clsx from 'clsx';
-import React, { ReactNode, useState, useRef, MutableRefObject } from 'react';
+import React, {
+  ReactNode,
+  useState,
+  useRef,
+  MutableRefObject,
+  MouseEvent,
+  KeyboardEvent,
+} from 'react';
 import { Popover } from './Popover';
 import { Button } from '../Button/Button';
 import { Heading } from '../Heading/Heading';
@@ -18,6 +26,10 @@ export interface Props {
    * CSS class names that can be appended to the component.
    */
   className?: string;
+  /**
+   * Available _stylistic_ variations available for the Button component
+   */
+  position?: 'top-left' | 'bottom-left' | 'bottom-right';
 }
 
 /**
@@ -26,16 +38,20 @@ export interface Props {
 export const PopoverExample: React.FC<Props> = ({
   children,
   className,
+  position,
   ...other
 }) => {
   const [popoverOpen, setPopoverOpen] = useState(false);
   const popoverButton = useRef() as MutableRefObject<HTMLSpanElement>;
 
-  function openContinuePopover() {
-    setPopoverOpen(true);
+  function openPopover() {
+    setPopoverOpen(!popoverOpen);
   }
 
-  function closeContinuePopover(event: any) {
+  /**
+   * Close the popover
+   */
+  function closePopover(event: MouseEvent | KeyboardEvent) {
     setTimeout(() => {
       popoverButton.current.focus();
     }, 1);
@@ -48,22 +64,20 @@ export const PopoverExample: React.FC<Props> = ({
   return (
     <div
       style={{
-        padding: '1rem',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'flex-end',
-        height: '100vh',
-        width: '180px',
+        position: 'relative',
+        display: 'inline-block',
+        marginTop: '12rem',
       }}
       className={componentClassName}
       {...other}
     >
-      <Button text="Open Popover" onClick={openContinuePopover} />
+      <Button text="Open Popover" onClick={openPopover} ref={popoverButton} />
 
       <Popover
+        position={position}
         dismissible={true}
         isActive={popoverOpen}
-        onClose={closeContinuePopover}
+        onClose={closePopover}
         ariaLabelledBy="popover-heading-1"
         ariaDescribedBy="popover-description-1"
       >

@@ -5,93 +5,120 @@
 \*------------------------------------*/
 
 /**
- * 1) Box that contains content
- */
-.popover {
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
-  visibility: hidden;
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: var(--eds-z-index-200) 0;
-  background-color: transparent;
-  transition: all var(--eds-anim-fade-long) var(--eds-anim-ease);
-  transform: translateZ(0);
-
-  &.eds-is-active {
-    visibility: visible;
-  }
-
-  &:focus-visible {
-    @mixin focus;
-  }
-}
-
-/**
  * Popover window
  * 1) Actual box with content within
  */
-.popover__window {
+.popover {
   display: flex;
   flex-direction: column;
-  position: fixed;
-  top: auto;
+  position: absolute;
+  visibility: hidden;
+  bottom: calc(100% + 1rem);
   left: 0;
-  bottom: 4.25rem;
   height: auto;
   max-height: 28rem;
   width: 25rem;
   max-width: 25rem;
-  margin-left: 0.8125rem;
   opacity: 0;
+  color: var(--eds-theme-color-body-foreground);
   background: var(--eds-color-neutral-white);
   border-radius: var(--eds-theme-border-radius);
   box-shadow: var(--eds-theme-box-shadow);
   transition: opacity var(--eds-anim-fade-quick) var(--eds-anim-ease);
   overscroll-behavior-y: contain;
+  z-index: var(--eds-z-index-bottom);
 
   &:focus-visible {
     @mixin focus;
   }
 
-  /**
-  * Popover arrow
-  * 1) A 0 height/0 width empty container positioned at the bottom of the popover with a ::after pseudo-element attached to it
-  * 2) Since the ::after pseudo element will use absolute positioning, it needs a parent that uses relative positioning; otherwise ::after will position itself relative to the page, not the popover
-  */
-  .popover__arrow {
-    position: relative; /* 2 */
-    bottom: 0;
-    left: 0;
-  }
   /** Psuedo-element ::after
   * 1) Adds a cosmetic triangle to the bottom edge of the popover, pointing toward the button that opened the popover
   */
   &::after {
+    content: '';
     position: absolute;
     left: 1.25rem;
     top: 100%;
-    border-top-color: var(--eds-color-neutral-white);
-    border-left: 0.9375rem solid transparent;
-    border-right: 0.9375rem solid transparent;
-    border-style: solid;
-    content: '';
-    border-width: 0.625rem;
-    border-bottom-width: 0;
+    border-top: 10px solid var(--eds-color-neutral-white);
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: none;
   }
 
   /**
    * Popover window inside active popover
    * 1) Transform added for animation
    */
-  .popover.eds-is-active & {
+  &.eds-is-active {
     opacity: 1;
+    visibility: visible;
     transform: translateY(0);
     transition: opacity var(--eds-anim-fade-quick) var(--eds-anim-ease);
+    z-index: var(--eds-z-index-top);
+  }
+}
+
+/**
+ * Popover top left
+ */
+.popover--top-left {
+  left: unset;
+  right: calc(50% - 2rem);
+  /**
+  * Popover top left caret
+  */
+  &::after {
+    left: unset;
+    right: 1.25rem;
+  }
+}
+
+/**
+* Popover bottom left
+* 1) Popover sits to the bottom left of the trigger
+*/
+.popover--bottom-left {
+  bottom: unset;
+  top: calc(100% + 1rem);
+  left: unset;
+  right: calc(50% - 2rem);
+
+  /**
+  * Popover bottom left caret
+  * 1) Place the caret at the top right of the popover window
+  */
+  &::after {
+    bottom: 100%;
+    top: unset;
+    right: 1.25rem;
+    left: unset;
+    border-top: none;
+    border-right: 8px solid transparent;
+    border-bottom: 10px solid var(--eds-color-neutral-white);
+    border-left: 8px solid transparent;
+  }
+}
+
+/**
+* Popover bottom right
+* 1) Popover sits to the bottom right of the trigger
+*/
+.popover--bottom-right {
+  bottom: unset;
+  top: calc(100% + 1rem);
+
+  /**
+  * Popover bottom right caret
+  * 1) Place the caret at the top left of the popover window
+  */
+  &::after {
+    bottom: 100%;
+    top: unset;
+    border-top: none;
+    border-right: 8px solid transparent;
+    border-bottom: 10px solid var(--eds-color-neutral-white);
+    border-left: 8px solid transparent;
   }
 }
 
@@ -100,7 +127,6 @@
 * 1) Includes header, body and footer of popover
 */
 .popover__content {
-
   height: auto;
   max-height: 25rem;
   overflow-y: auto;
@@ -110,24 +136,27 @@
  * Popover header
  */
 .popover__header {
-  padding-bottom: var(--eds-size-2);
+  padding-top: var(--eds-size-1);
+  padding-bottom: var(--eds-size-1);
 }
 
 /**
 * Popover header content
 * 1) Can include title and titleAfter elements
+* 2) TODO: This will likely need to move into a recipe
 */
 .popover__header-content {
   display: flex;
+  align-items: center; /* TODO */
   justify-content: space-between;
-  padding: var(--eds-size-2) var(--eds-size-4) 0;
+  padding: 0 var(--eds-size-2);
 }
 
 /**
  * Popover footer
  */
 .popover__footer {
-  padding-left: var(--eds-size-4);
-  padding-right: var(--eds-size-4);
+  padding-left: var(--eds-size-2);
+  padding-right: var(--eds-size-2);
   margin-top: var(--eds-size-2);
 }

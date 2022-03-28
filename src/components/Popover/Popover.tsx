@@ -1,8 +1,14 @@
 import clsx from 'clsx';
-import React, { useState, useEffect, useRef, ReactNode } from 'react';
+import React, {
+  useState,
+  useEffect,
+  useRef,
+  ReactNode,
+  MouseEvent,
+  KeyboardEvent,
+} from 'react';
 import { oneByType } from 'react-children-by-type';
 import FocusLock from 'react-focus-lock';
-import { Portal } from 'react-portal';
 import styles from './Popover.module.css';
 import { ESCAPE_KEYCODE } from '../../util/keycodes';
 import { PopoverBody } from '../PopoverBody/PopoverBody';
@@ -41,10 +47,11 @@ export interface Props {
   /**
    * Handler to be called when the popover is being closed (by ESCAPE / clicking X / clicking outside)
    */
-  onClose?: any;
+  onClose?: (e: MouseEvent | KeyboardEvent) => void;
   /**
-   * TODO: type this correctly
+   * Available _stylistic_ variations available for the Button component
    */
+  position?: 'top-left' | 'bottom-left' | 'bottom-right';
 }
 
 /**
@@ -59,17 +66,15 @@ export const Popover: React.FC<Props> = ({
   dismissible,
   onClose,
   closeButtonText,
+  position,
   ...other
 }) => {
   /**
    * Initialize states, constants, and refs
    */
   const [isMounted, setIsMounted] = useState(false);
-  const BODY_DISABLED_CLASS = `eds-body-is-disabled`;
   const [activeFocus, setActiveFocus] = useState(isActive || false);
-  const windowRef = useRef<HTMLElement | null>(null);
-  const ref = useRef<HTMLDivElement | null>(null);
-
+  const ref = useRef<HTMLElement | null>(null);
   /**
    * Get previous prop
    * 1) This is used to compare the previous prop to the current prop
@@ -114,8 +119,6 @@ export const Popover: React.FC<Props> = ({
    * 3) This accommodates popover animation so that it auto receives focus
    */
   function activateDOM() {
-    document.body.classList.add(BODY_DISABLED_CLASS);
-
     /* 3 */
     setTimeout(() => {
       setActiveFocus(true); /* 2 */
@@ -128,7 +131,6 @@ export const Popover: React.FC<Props> = ({
    * 2) Set activeFocus state to false
    */
   function deactivateDOM() {
-    document.body.classList.remove(BODY_DISABLED_CLASS);
     setActiveFocus(false); /* 2 */
   }
 
@@ -137,26 +139,11 @@ export const Popover: React.FC<Props> = ({
    * 1) Close the popover
    * 2) Run the onClose prop (pass in function) if it exists
    */
-  function handleOnClose() {
+  function handleOnClose(e: KeyboardEvent | MouseEvent) {
     deactivateDOM(); /* 1 */
 
     if (onClose) {
-      onClose(); /* 2 */
-    }
-  }
-
-  /**
-   * Handle "click outside"
-   * 1) onClick of the area around the popover window, close the popover
-   */
-  function handleOnClickOutside(e: any) {
-    if (
-      isActive &&
-      dismissible &&
-      windowRef.current &&
-      !windowRef.current.contains(e.target as HTMLElement)
-    ) {
-      handleOnClose(); /* 1 */
+      onClose(e); /* 2 */
     }
   }
 
@@ -164,57 +151,55 @@ export const Popover: React.FC<Props> = ({
    * Handle onKeyDown
    * 1) If escape button is struck, close the popover
    */
-  function handleOnKeyDown(e: any) {
+  const handleOnKeyDown = (e: KeyboardEvent) => {
+    console.log(e.code);
     if (e.code === ESCAPE_KEYCODE) {
-      handleOnClose(); /* 1 */
+      handleOnClose(e); /* 1 */
     }
-  }
+  };
 
   const popoverHeader = oneByType(children, PopoverHeader);
   const header = React.Children.map(popoverHeader, (child) => {
     return React.cloneElement(child, {
-      onClick: () => handleOnClose(),
+      onClick: (e) => handleOnClose(e),
       dismissible: dismissible,
     });
   });
   const body = oneByType(children, PopoverBody);
   const footer = oneByType(children, PopoverFooter);
 
-  const componentClassName = clsx(styles['popover'], className, {
-    [styles['eds-is-active']]: isActive,
-  });
+  const componentClassName = clsx(
+    styles['popover'],
+    className,
+    isActive && [styles['eds-is-active']],
+    position === 'top-left' && [styles['popover--top-left']],
+    position === 'bottom-left' && [styles['popover--bottom-left']],
+    position === 'bottom-right' && [styles['popover--bottom-right']],
+  );
 
   if (!isMounted) return null;
 
   return (
-    <Portal>
-      <FocusLock disabled={!activeFocus}>
-        <div
-          className={componentClassName}
-          ref={ref}
-          aria-hidden={!isActive}
-          onKeyDown={(e) => handleOnKeyDown(e)}
-          onClick={(e) => handleOnClickOutside(e)}
-          {...other}
-        >
-          <article
-            className={styles['popover__window']}
-            aria-labelledby={ariaLabelledBy}
-            aria-describedby={ariaDescribedBy}
-            ref={windowRef}
-            role="dialog"
-            tabIndex={0}
-            aria-popover={isActive}
-          >
-            <div className={styles['popover__content']}>
-              {header}
-              {body}
-              {footer}
-            </div>
-            <div className={styles['popover__arrow']}></div>
-          </article>
+    <FocusLock disabled={!activeFocus}>
+      <article
+        className={componentClassName}
+        onKeyDown={(e) => handleOnKeyDown(e)}
+        aria-hidden={!isActive}
+        aria-labelledby={ariaLabelledBy}
+        aria-describedby={ariaDescribedBy}
+        ref={ref}
+        role="dialog"
+        tabIndex={0}
+        aria-popover={isActive}
+        {...other}
+      >
+        <div className={styles['popover__content']}>
+          {header}
+          {body}
+          {footer}
         </div>
-      </FocusLock>
-    </Portal>
+        <div className={styles['popover__arrow']}></div>
+      </article>
+    </FocusLock>
   );
 };
