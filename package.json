@@ -22,7 +22,7 @@
     "dist.build": "run-p build:icons build:js",
     "dist.clean": "del-cli dist/**/*.stories.tsx dist/design-tokens dist/**/*.css.map dist/*.*",
     "copy-to-dist": "copyfiles -u 1 src/fonts/* src/static/* src/icons/**/* dist",
-    "commit": "git cz",
+    "commit": "./node_modules/.bin/cz",
     "chromatic": "chromatic",
     "create-component": "plop",
     "lint": "yarn run lint:styles && yarn run lint:scripts",
@@ -140,8 +140,7 @@
     "hooks": {
       "pre-commit": "lint-staged",
       "pre-push": "yarn test",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "lint-staged": {
