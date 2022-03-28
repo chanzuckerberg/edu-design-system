@@ -11,6 +11,7 @@ import CheckRoundedIcon from "../Icons/CheckRounded";
 import styles from "./Dropdown.module.css";
 
 export type OptionsAlignType = "left" | "right";
+export type VariantType = "compact" | "full";
 
 type ListboxProps = ComponentProps<typeof Listbox>;
 type DropdownProps = ListboxProps & {
@@ -56,15 +57,13 @@ type DropdownProps = ListboxProps & {
    */
   className?: string;
   /**
-   * Render dropdown button that is only as wide as the content.
+   * The style of the dropdown.
    *
-   * When defining compact dropdown need to provide optionsWidth to
-   * define width of options menu, and optionally provide optionsAlign
-   * if desired to right align to dropdow button.
+   * Compact renders dropdown button that is only as wide as the content.
    */
-  compact?: boolean;
+  variant?: VariantType;
   /**
-   * Align dropdown menu to the left (default) or right of dropdown button
+   * Align dropdown menu to the left (default) or right of dropdown button.
    */
   optionsAlign?: OptionsAlignType;
   /**
@@ -190,7 +189,7 @@ function childrenHaveLabelComponent(children?: ReactNode): boolean {
  * );
  * ```
  *
- * For compact dropdown button, add compact and optionsWidth props to
+ * For compact variant, add variant="compact" and optionsWidth props to
  * <Dropdown>.
  *
  * Examples:
@@ -200,9 +199,9 @@ function childrenHaveLabelComponent(children?: ReactNode): boolean {
  * return (
  *   <Dropdown
  *     aria-label="Options"
- *     compact
  *     optionsAlign="right"
  *     optionsWidth="w-96"
+ *     variant="compact"
  *   >
  *     <Dropdown.Options>
  *       <Dropdown.Option>Option 1</Dropdown.Option>
@@ -221,10 +220,10 @@ function childrenHaveLabelComponent(children?: ReactNode): boolean {
  * return (
  *   <Dropdown
  *     aria-label="Options"
- *     compact
  *     options={options}
  *     optionsAlign="right"
  *     optionsWidth="w-96"
+ *     variant="compact"
  *   />
  * );
  * ```
@@ -244,10 +243,10 @@ function childrenHaveLabelComponent(children?: ReactNode): boolean {
  *   <Dropdown
  *     aria-label="Options"
  *     className="w-60"
- *     compact
  *     options={options}
  *     optionsAlign="right"
  *     optionsWidth="w-96"
+ *     variant="compact"
  *   />
  * );
  * ```
@@ -255,12 +254,12 @@ function childrenHaveLabelComponent(children?: ReactNode): boolean {
 function Dropdown(props: DropdownProps) {
   const {
     className,
+    variant,
     labelText,
     buttonText,
     options,
     children,
     "aria-label": ariaLabel,
-    compact,
     optionsAlign,
     optionsWidth,
     ...rest
@@ -286,7 +285,11 @@ function Dropdown(props: DropdownProps) {
   }
 
   const sharedProps = {
-    className: clsx(styles.dropdown, className, compact && styles.compact),
+    className: clsx(
+      styles.dropdown,
+      className,
+      variant === "compact" && styles.compact,
+    ),
     // Provide a wrapping <div> element for the dropdown. This is needed so that any props
     // passed directly to this component have a corresponding DOM element to receive them.
     // Otherwise we get an error.
