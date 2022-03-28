@@ -28,8 +28,7 @@ export const GlobalHeader: React.FC<Props> = ({ className, ...other }) => {
     setisActive(!isActive);
     if (isActive) {
       document.body.classList.remove('eds-is-disabled');
-    }
-    else {
+    } else {
       document.body.classList.add('eds-is-disabled');
     }
   };
@@ -39,33 +38,44 @@ export const GlobalHeader: React.FC<Props> = ({ className, ...other }) => {
   });
   return (
     <Header behavior="sticky" className={componentClassName} {...other}>
-        <Logo className={styles['global-header__logo']} href="#" />
+      <Logo className={styles['global-header__logo']} href="#" />
 
-        <Button
-          className={styles['global-header__menu-button']}
-          variant="bare"
-          text={isActive ? 'Close' : 'Menu'}
-          iconPosition="before"
-          hideText={true}
-          iconName={isActive ? 'x' : 'menu'}
-          inverted={true}
-          onClick={toggleMenu}
-        />
+      <Button
+        className={styles['global-header__menu-button']}
+        variant="bare"
+        text={isActive ? 'Close' : 'Menu'}
+        iconPosition="before"
+        hideText={true}
+        iconName={isActive ? 'x' : 'menu'}
+        inverted={true}
+        onClick={toggleMenu}
+      />
 
-      <NavContainer isActive={isActive} className={styles['global-header__nav-container']}>
+      <NavContainer
+        isActive={isActive}
+        className={styles['global-header__nav-container']}
+      >
         <PrimaryNav>
           <PrimaryNavItem href="#" text="Search Students" iconName="search" />
           <PrimaryNavItem href="#" text="Announcements" iconName="class-copy" />
           <PrimaryNavItem href="#" text="Math 7 (IM)" iconName="mood" />
           <PrimaryNavItem href="#" text="Mentoring" iconName="account-circle" />
           <PrimaryNavItem href="#" text="Student Progress" iconName="school" />
-          <PrimaryNavItem href="#" text="Educator Tools" iconName="view-module" />
-          <PrimaryNavItem href="#" text="Curriculum" iconName="business-center" />
+          <PrimaryNavItem
+            href="#"
+            text="Educator Tools"
+            iconName="view-module"
+          />
+          <PrimaryNavItem
+            href="#"
+            text="Curriculum"
+            iconName="business-center"
+          />
         </PrimaryNav>
-        </NavContainer>
-        <AvatarBlock className={styles['global-header__avatar-block']}>
-          Ali S.
-        </AvatarBlock>
+      </NavContainer>
+      <AvatarBlock className={styles['global-header__avatar-block']}>
+        Ali S.
+      </AvatarBlock>
     </Header>
   );
 };

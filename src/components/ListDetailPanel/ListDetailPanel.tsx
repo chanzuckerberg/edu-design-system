@@ -29,7 +29,7 @@ export interface Props {
    * - **warning** - results in a yellow list detail item and add icon
    * - **error** - results in a red list detail item and adds icon
    */
-   variant?: 'success' | 'warning' | 'error';
+  variant?: 'success' | 'warning' | 'error';
 }
 
 /**
@@ -44,8 +44,7 @@ export const ListDetailPanel: React.FC<Props> = ({
   variant,
   ...other
 }) => {
-  const componentClassName = clsx(styles['list-detail__panel'], className, {
-  });
+  const componentClassName = clsx(styles['list-detail__panel'], className, {});
   return (
     <div
       role="tabpanel"

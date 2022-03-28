@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 import React, { MouseEventHandler, ReactNode } from 'react';
 import styles from './Button.module.css';
-import utilityStyles from '../Utilities/Visibility.module.css';
 import { Icon } from '../Icon/Icon';
+import utilityStyles from '../Utilities/Visibility.module.css';
 export interface Props {
   /**
    * Visually hidden button text (but text is still accessible to assistive technology).
@@ -157,7 +157,17 @@ export const Button = React.forwardRef(
       >
         {iconPosition === 'before' && computedIcon}
 
-        {text && <span className={hideText ? styles['button__text'] + " " + utilityStyles['u-is-vishidden'] : styles['button__text'] }>{text}</span>}
+        {text && (
+          <span
+            className={
+              hideText
+                ? styles['button__text'] + ' ' + utilityStyles['u-is-vishidden']
+                : styles['button__text']
+            }
+          >
+            {text}
+          </span>
+        )}
 
         {iconPosition === 'after' && computedIcon}
       </TagName>

@@ -15,8 +15,7 @@ export interface Props {
    * is Active
    * 1) Panel is open when set to true. Close when set to false
    */
-   isActive?: boolean;
-
+  isActive?: boolean;
 }
 
 /**
