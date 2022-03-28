@@ -58,8 +58,7 @@ type DropdownProps = ListboxProps & {
   /**
    * Render dropdown button that is only as wide as the content.
    *
-   * When defining compact dropdown need to provide optionsWidth to
-   * define width of options menu, and optionally provide optionsAlign
+   * When defining compact dropdown need to optionally provide optionsAlign
    * if desired to right align to dropdow button.
    */
   compact?: boolean;
@@ -67,11 +66,6 @@ type DropdownProps = ListboxProps & {
    * Align dropdown menu to the left (default) or right of dropdown button
    */
   optionsAlign?: OptionsAlignType;
-  /**
-   * Render dropdown menu with width (specify using tailwind utility string)
-   * independent of dropdown button width
-   */
-  optionsWidth?: string;
 };
 
 type RenderProp<Arg> = (arg: Arg) => ReactNode;
@@ -190,7 +184,7 @@ function childrenHaveLabelComponent(children?: ReactNode): boolean {
  * );
  * ```
  *
- * For compact dropdown button, add compact and optionsWidth props to
+ * For compact dropdown button, add compact prop to
  * <Dropdown>.
  *
  * Examples:
@@ -202,7 +196,6 @@ function childrenHaveLabelComponent(children?: ReactNode): boolean {
  *     aria-label="Options"
  *     compact
  *     optionsAlign="right"
- *     optionsWidth="w-96"
  *   >
  *     <Dropdown.Options>
  *       <Dropdown.Option>Option 1</Dropdown.Option>
@@ -224,14 +217,13 @@ function childrenHaveLabelComponent(children?: ReactNode): boolean {
  *     compact
  *     options={options}
  *     optionsAlign="right"
- *     optionsWidth="w-96"
  *   />
  * );
  * ```
  *
  * For dropdown that differs in button and options menu width, style <Dropdown>
- * with className for the button with and provide optionsWidth for the options
- * menu width.
+ * with className for the button with and provide optionsAlign for the options
+ * menu alignment.
  *
  * Example:
  *
@@ -247,7 +239,6 @@ function childrenHaveLabelComponent(children?: ReactNode): boolean {
  *     compact
  *     options={options}
  *     optionsAlign="right"
- *     optionsWidth="w-96"
  *   />
  * );
  * ```
@@ -262,7 +253,6 @@ function Dropdown(props: DropdownProps) {
     "aria-label": ariaLabel,
     compact,
     optionsAlign,
-    optionsWidth,
     ...rest
   } = props;
 
@@ -296,7 +286,7 @@ function Dropdown(props: DropdownProps) {
 
   if (typeof children === "function") {
     return (
-      <DropdownContext.Provider value={{ optionsAlign, optionsWidth }}>
+      <DropdownContext.Provider value={{ optionsAlign, compact }}>
         <Listbox
           {...sharedProps}
           // We prefer to pass the aria-label in via an invisible DropdownLabel, but we can't
@@ -319,10 +309,7 @@ function Dropdown(props: DropdownProps) {
   const trigger = buttonText && <DropdownTrigger>{buttonText}</DropdownTrigger>;
 
   const optionsList = options && (
-    <DropdownOptions
-    // optionsAlign={optionsAlign}
-    // optionsWidth={optionsWidth}
-    >
+    <DropdownOptions>
       {options.map((option) => {
         const { label, ...rest } = option;
         return (
@@ -346,7 +333,7 @@ function Dropdown(props: DropdownProps) {
   const contextValue = Object.assign(
     {},
     optionsAlign ? { optionsAlign } : null,
-    optionsWidth ? { optionsWidth } : null,
+    compact ? { compact } : null,
   );
 
   return (
@@ -358,7 +345,7 @@ function Dropdown(props: DropdownProps) {
 
 const DropdownContext = React.createContext<{
   optionsAlign?: OptionsAlignType;
-  optionsWidth?: string;
+  compact?: boolean;
 }>({});
 
 const DropdownLabel = (props: { className?: string; children: ReactNode }) => {
@@ -396,14 +383,14 @@ const DropdownOptions = function (
   props: PropsWithRenderProp<{ open: boolean }>,
 ) {
   const { className, ...rest } = props;
-  const { optionsAlign, optionsWidth } = useContext(DropdownContext);
+  const { optionsAlign, compact } = useContext(DropdownContext);
 
   return (
     <Listbox.Options
       className={clsx(
         styles.options,
         className,
-        optionsWidth || styles.optionsFullWidth,
+        !compact && styles.optionsFullWidth,
         optionsAlign === "right" && styles.optionsAlignRight,
       )}
       {...rest}

@@ -15,26 +15,25 @@ type Props = {
   labelComponent?: React.ReactNode;
   compact?: boolean;
   optionsAlign?: OptionsAlignType;
-  optionsWidth?: string;
 };
 
 const exampleOptions = [
   {
     key: "1",
-    label: "Dogs",
+    label: "a",
   },
   {
     key: "2",
-    label: "Cats",
+    label: "abcde",
   },
   {
     key: "3",
-    label: "Birds",
+    label: "abcdefghij",
   },
 ];
 
 function InteractiveExampleUsingSeparateProps(props: Props) {
-  const { compact, optionsAlign, optionsWidth } = props;
+  const { compact, optionsAlign } = props;
 
   const [selectedOption, setSelectedOption] =
     React.useState<typeof exampleOptions[0]>();
@@ -49,7 +48,6 @@ function InteractiveExampleUsingSeparateProps(props: Props) {
         onChange={setSelectedOption}
         options={exampleOptions}
         optionsAlign={optionsAlign}
-        optionsWidth={optionsWidth}
         value={selectedOption}
         {...props}
       />
@@ -58,7 +56,7 @@ function InteractiveExampleUsingSeparateProps(props: Props) {
 }
 
 function InteractiveExampleUsingChildren(props: Props) {
-  const { compact, optionsWidth } = props;
+  const { compact } = props;
 
   const [selectedOption, setSelectedOption] =
     React.useState<typeof exampleOptions[0]>();
@@ -71,7 +69,6 @@ function InteractiveExampleUsingChildren(props: Props) {
         compact={compact}
         data-testid="dropdown"
         onChange={setSelectedOption}
-        optionsWidth={optionsWidth}
         value={selectedOption}
       >
         {props.labelComponent}
@@ -155,7 +152,6 @@ export const Compact: StoryObj = {
     <InteractiveExampleUsingSeparateProps
       aria-label="Favorite Animal"
       compact
-      optionsWidth="w-96"
     />
   ),
 };
@@ -166,16 +162,6 @@ export const CompactWithOptionsRightAligned: StoryObj = {
       aria-label="Favorite Animal"
       compact
       optionsAlign="right"
-      optionsWidth="w-96"
-    />
-  ),
-};
-
-export const SeparateButtonAndMenuWidth: StoryObj = {
-  render: () => (
-    <InteractiveExampleUsingSeparateProps
-      aria-label="Favorite Animal"
-      optionsWidth="w-96"
     />
   ),
 };
@@ -196,11 +182,7 @@ export const UsingChildrenPropAndNoVisibleLabel: StoryObj = {
 
 export const CompactUsingChildrenPropAndNoVisibleLabel: StoryObj = {
   render: () => (
-    <InteractiveExampleUsingChildren
-      aria-label="Favorite Animal"
-      compact
-      optionsWidth="w-96"
-    />
+    <InteractiveExampleUsingChildren aria-label="Favorite Animal" compact />
   ),
 };
 
@@ -217,8 +199,7 @@ export const OpenByDefault: StoryObj = {
     // Open the dropdown.
     const dropdownButton = await canvas.findByRole("button");
     dropdownButton.click();
-    // Select the best option.
-    const bestOption = await canvas.findByText("Cats");
+    const bestOption = await canvas.findByText("a");
     bestOption.click();
     // Reopen the dropdown; selecting an option closed it.
     dropdownButton.click();
