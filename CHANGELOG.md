@@ -1,24 +1,14 @@
-# Change Log
+# Changelog
 
-All notable changes to this project will be documented in this file.
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+## [0.1.0-alpha.1](https://github.com/chanzuckerberg/edu-design-system/compare/v0.8.0...v0.1.0-alpha.1) (2022-03-28)
 
-## Next Release
 
-### Added
+### Bug Fixes
 
-- Added
-
-### Modified
-
-- Modified
-
-### Removed
-
-- Removed
+* **adding commit hook to force conventional commits:** adding commit hook ([908b1bc](https://github.com/chanzuckerberg/edu-design-system/commit/908b1bc32b48be4c83dcc9f62e015dbec40ca6b8))
+* adding standard version ([bc08a04](https://github.com/chanzuckerberg/edu-design-system/commit/bc08a04f6e49f179c94c7aba6da800c8efa56b46))
 
 # [0.8.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.7.0...v0.8.0) (2022-02-28)
 
