@@ -1,6 +1,6 @@
 storybook-static
 node_modules
-dist
+lib
 *.hbs
 .husky
 .prettierignore

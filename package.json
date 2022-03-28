@@ -16,6 +16,9 @@
   "bugs": {
     "url": "https://github.com/chanzuckerberg/edu-design-system/issues"
   },
+  "files": [
+    "/lib"
+  ],
   "scripts": {
     "build": "yarn build:clean && yarn build:tokens && yarn build:css && yarn build:js && yarn copy-icons-to-lib",
     "build:clean": "rm -rf lib/",
