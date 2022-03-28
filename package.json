@@ -9,6 +9,9 @@
   "publishConfig": {
     "access": "public"
   },
+  "files": [
+    "/dist"
+  ],
   "scripts": {
     "start": "yarn build:tokens && yarn storybook",
     "build": "yarn dist",
