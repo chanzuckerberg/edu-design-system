@@ -36,6 +36,7 @@
     "release:major": "standard-version --release-as major",
     "release:minor": "standard-version --release-as minor",
     "release:patch": "standard-version --release-as patch",
+    "release:alpha": "standard-version --prerelease alpha",
     "storybook": "start-storybook -p 9009 -s public",
     "storybook:axe": "yarn run build:storybook && yarn run storybook:axeOnly",
     "storybook:axeOnly": "axe-storybook --build-dir storybook-static",
