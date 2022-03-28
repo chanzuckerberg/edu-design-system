@@ -67,10 +67,9 @@ type DropdownProps = ListboxProps & {
    */
   optionsAlign?: OptionsAlignType;
   /**
-   * Render dropdown menu with width (specify using tailwind utility string)
-   * independent of dropdown button width
+   * Optional className for additional options menu styling.
    */
-  optionsWidth?: string;
+  optionsClassName?: string;
 };
 
 type RenderProp<Arg> = (arg: Arg) => ReactNode;
@@ -189,8 +188,8 @@ function childrenHaveLabelComponent(children?: ReactNode): boolean {
  * );
  * ```
  *
- * For compact variant, add variant="compact" and optionsWidth props to
- * <Dropdown>.
+ * For compact variant, add variant="compact" and optionsClassName to style
+ * options menu width.
  *
  * Examples:
  *
@@ -200,7 +199,7 @@ function childrenHaveLabelComponent(children?: ReactNode): boolean {
  *   <Dropdown
  *     aria-label="Options"
  *     optionsAlign="right"
- *     optionsWidth="w-96"
+ *     optionsClassName="w-96"
  *     variant="compact"
  *   >
  *     <Dropdown.Options>
@@ -222,15 +221,14 @@ function childrenHaveLabelComponent(children?: ReactNode): boolean {
  *     aria-label="Options"
  *     options={options}
  *     optionsAlign="right"
- *     optionsWidth="w-96"
+ *     optionsClassName="w-96"
  *     variant="compact"
  *   />
  * );
  * ```
  *
- * For dropdown that differs in button and options menu width, style <Dropdown>
- * with className for the button with and provide optionsWidth for the options
- * menu width.
+ * For dropdown that differs in button and options menu width, style button
+ * width with className and options menu width with optionsClassName.
  *
  * Example:
  *
@@ -245,8 +243,7 @@ function childrenHaveLabelComponent(children?: ReactNode): boolean {
  *     className="w-60"
  *     options={options}
  *     optionsAlign="right"
- *     optionsWidth="w-96"
- *     variant="compact"
+ *     optionsClassName="w-96"
  *   />
  * );
  * ```
@@ -261,7 +258,7 @@ function Dropdown(props: DropdownProps) {
     children,
     "aria-label": ariaLabel,
     optionsAlign,
-    optionsWidth,
+    optionsClassName,
     ...rest
   } = props;
 
@@ -299,7 +296,7 @@ function Dropdown(props: DropdownProps) {
 
   if (typeof children === "function") {
     return (
-      <DropdownContext.Provider value={{ optionsAlign, optionsWidth }}>
+      <DropdownContext.Provider value={{ optionsAlign, optionsClassName }}>
         <Listbox
           {...sharedProps}
           // We prefer to pass the aria-label in via an invisible DropdownLabel, but we can't
@@ -322,10 +319,7 @@ function Dropdown(props: DropdownProps) {
   const trigger = buttonText && <DropdownTrigger>{buttonText}</DropdownTrigger>;
 
   const optionsList = options && (
-    <DropdownOptions
-    // optionsAlign={optionsAlign}
-    // optionsWidth={optionsWidth}
-    >
+    <DropdownOptions>
       {options.map((option) => {
         const { label, ...rest } = option;
         return (
@@ -349,7 +343,7 @@ function Dropdown(props: DropdownProps) {
   const contextValue = Object.assign(
     {},
     optionsAlign ? { optionsAlign } : null,
-    optionsWidth ? { optionsWidth } : null,
+    optionsClassName ? { optionsClassName } : null,
   );
 
   return (
@@ -361,7 +355,7 @@ function Dropdown(props: DropdownProps) {
 
 const DropdownContext = React.createContext<{
   optionsAlign?: OptionsAlignType;
-  optionsWidth?: string;
+  optionsClassName?: string;
 }>({});
 
 const DropdownLabel = (props: { className?: string; children: ReactNode }) => {
@@ -399,15 +393,15 @@ const DropdownOptions = function (
   props: PropsWithRenderProp<{ open: boolean }>,
 ) {
   const { className, ...rest } = props;
-  const { optionsAlign, optionsWidth } = useContext(DropdownContext);
+  const { optionsAlign, optionsClassName } = useContext(DropdownContext);
 
   return (
     <Listbox.Options
       className={clsx(
         styles.options,
         className,
-        optionsWidth || styles.optionsFullWidth,
         optionsAlign === "right" && styles.optionsAlignRight,
+        optionsClassName || styles.optionsFullWidth,
       )}
       {...rest}
     />

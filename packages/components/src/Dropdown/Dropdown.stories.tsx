@@ -14,7 +14,7 @@ type Props = {
   "aria-label"?: string;
   labelComponent?: React.ReactNode;
   optionsAlign?: OptionsAlignType;
-  optionsWidth?: string;
+  optionsClassName?: string;
   variant?: VariantType;
 };
 
@@ -34,7 +34,7 @@ const exampleOptions = [
 ];
 
 function InteractiveExampleUsingSeparateProps(props: Props) {
-  const { optionsAlign, optionsWidth, variant } = props;
+  const { optionsAlign, optionsClassName, variant } = props;
   const compact = variant === "compact";
 
   const [selectedOption, setSelectedOption] =
@@ -49,7 +49,7 @@ function InteractiveExampleUsingSeparateProps(props: Props) {
         onChange={setSelectedOption}
         options={exampleOptions}
         optionsAlign={optionsAlign}
-        optionsWidth={optionsWidth}
+        optionsClassName={optionsClassName}
         value={selectedOption}
         variant={variant}
         {...props}
@@ -59,7 +59,7 @@ function InteractiveExampleUsingSeparateProps(props: Props) {
 }
 
 function InteractiveExampleUsingChildren(props: Props) {
-  const { optionsWidth, variant } = props;
+  const { optionsClassName, variant } = props;
   const compact = variant === "compact";
 
   const [selectedOption, setSelectedOption] =
@@ -72,7 +72,7 @@ function InteractiveExampleUsingChildren(props: Props) {
         className={compact ? "" : "w-60"}
         data-testid="dropdown"
         onChange={setSelectedOption}
-        optionsWidth={optionsWidth}
+        optionsClassName={optionsClassName}
         value={selectedOption}
         variant={variant}
       >
@@ -156,7 +156,7 @@ export const Compact: StoryObj = {
   render: () => (
     <InteractiveExampleUsingSeparateProps
       aria-label="Favorite Animal"
-      optionsWidth="w-96"
+      optionsClassName="w-96"
       variant="compact"
     />
   ),
@@ -167,7 +167,7 @@ export const CompactWithOptionsRightAligned: StoryObj = {
     <InteractiveExampleUsingSeparateProps
       aria-label="Favorite Animal"
       optionsAlign="right"
-      optionsWidth="w-96"
+      optionsClassName="w-96"
       variant="compact"
     />
   ),
@@ -177,7 +177,7 @@ export const SeparateButtonAndMenuWidth: StoryObj = {
   render: () => (
     <InteractiveExampleUsingSeparateProps
       aria-label="Favorite Animal"
-      optionsWidth="w-96"
+      optionsClassName="w-96"
     />
   ),
 };
@@ -200,7 +200,7 @@ export const CompactUsingChildrenPropAndNoVisibleLabel: StoryObj = {
   render: () => (
     <InteractiveExampleUsingChildren
       aria-label="Favorite Animal"
-      optionsWidth="w-96"
+      optionsClassName="w-96"
       variant="compact"
     />
   ),

@@ -213,7 +213,7 @@ exports[`<Dropdown /> CompactWithOptionsRightAligned story renders snapshot 1`] 
   <ul
     aria-labelledby="headlessui-listbox-label-19"
     aria-orientation="vertical"
-    class="options w-96 optionsAlignRight"
+    class="options optionsAlignRight w-96"
     id="headlessui-listbox-options-21"
     role="listbox"
     tabindex="0"
