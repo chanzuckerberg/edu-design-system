@@ -80,8 +80,7 @@ export const Toast: React.FC<Props> = ({
         <Button
           className={styles['toast__close-btn']}
           variant="bare"
-          hideText={true}
-          text={closeButtonText}
+          aria-label={closeButtonText}
           iconName="x"
           iconPosition="after"
           onClick={(e: any) => onDismiss(e)}

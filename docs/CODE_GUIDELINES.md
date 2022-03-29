@@ -13,7 +13,7 @@ EDS follows these principles and conventions for HTML, CSS, and JavaScript/TypeS
 - [JavaScript/TypeScript](#js)
   - [JavaScript principles](#js-principles)
   - [JavaScript tools](#js-tools)
-  - [JavaScript/TypeScript/React conventions](#js-conventions)
+  - [TypeScript/React conventions](#ts-conventions)
   - [Component rules and considerations](#component-rules)
   - [Component API naming conventions](#api-naming)
   - [Assets](#assets)
@@ -88,7 +88,7 @@ Here's another example:
 
 ### CSS Nesting
 
-EDS uses [PostCSS Nested](https://github.com/postcss/postcss-nested) to provide some developer ergononics. As a general principle, nesting should be used sparingly and is only used in the following situations:
+EDS uses [PostCSS Nested](https://github.com/postcss/postcss-nested) to provide some developer ergonomics. As a general principle, nesting should be used sparingly and is only used in the following situations:
 
 - Media queries
 - States and pseudo-selectors
@@ -127,7 +127,7 @@ EDS uses [PostCSS Nested](https://github.com/postcss/postcss-nested) to provide 
 
 #### Parent selectors
 
-Use [parent selectors](https://sass-lang.com/documentation/style-rules/parent-selector) to target a selector when it appears inside a specific parent element. Use parent selectors instead of child selectors in order to co-locate all styles around a specific selector, which improves maintability and findability.
+Use [parent selectors](https://sass-lang.com/documentation/style-rules/parent-selector) to target a selector when it appears inside a specific parent element. Use parent selectors instead of child selectors in order to co-locate all styles around a specific selector, which improves maintainability and findability.
 
 Use the following conventions:
 
@@ -165,7 +165,7 @@ For example:
 
 ```css
 /*------------------------------------*\
-    # BUTTON
+    # BUTTON
 \*------------------------------------*/
 
 /**
@@ -188,7 +188,7 @@ For example:
 }
 ```
 
-Not all CSS declarations warrant a comment, but non-obvious declarations (like context-specific styles, magic numbers, or styles dependant on other selector styles) should be accompanied by a comment.
+Not all CSS declarations warrant a comment, but non-obvious declarations (like context-specific styles, magic numbers, or styles dependent on other selector styles) should be accompanied by a comment.
 
 ### Other CSS Rules
 
@@ -261,16 +261,16 @@ Please refer to the [design tokens documentation](./TOKENS.md) to learn how to u
 
 - **Presentational Components Only** - EDS provides a library of reusable [presentational UI components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0) that are consumed by CZI applications. These presentational components are "dumb" and don't contain any application business logic and aren't hooked up to any data models.
 - **Predictable APIs** - EDS provides consistent, clear [component APIs](#component-naming) in order to provide a consistent and intuitive user developer experience.
-- **Composition over inheritence** EDS adheres to the [composition over inheritence](https://en.wikipedia.org/wiki/Composition_over_inheritance) principle in order to create clean, extensible components that aren't tied to specific contexts or content.
+- **Composition over inheritance** EDS adheres to the [composition over inheritance](https://en.wikipedia.org/wiki/Composition_over_inheritance) principle in order to create clean, extensible components that aren't tied to specific contexts or content.
 
 ## JavaScript Tools <a name="js-tools"></a>
 
 - [React](https://reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 
-## JavaScript Conventions <a name="js-conventions"></a>
+## TypeScript Conventions <a name="ts-conventions"></a>
 
-EDS is built using [React](https://reactjs.org/), but should be built in a way to promote portability with other frameworks, especially with regards to HTML and CSS.
+EDS is built using [TypeScript](https://www.typescriptlang.org/) and [React](https://reactjs.org/), but should be built in a way to promote portability with other frameworks, especially with regards to HTML and CSS.
 
 ### Component directory structure:
 
@@ -291,6 +291,8 @@ The design system's component directory contains all of the design system's comp
 
 ### Imports
 
+### Imports
+
 The framework follows a specific ordering/clustering for importing modules into a component. This is enforced through the [`import/order` lint rule](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/order.md).
 
 Here's an example:
@@ -307,7 +309,7 @@ import { Icon } from '../Icon/Icon'; // 3
 3. Import other EDS components
 4. Import any other necessary assets
 
-### Prop definitions
+### Prop Type definitions
 
 ```tsx
 export interface Props {
@@ -320,25 +322,95 @@ export interface Props {
 }
 ```
 
-All component props must be defined with appropriate [TypeScript type](https://www.typescriptlang.org/docs/handbook/basic-types.html) applied. Each prop must contain a comment above the prop declaration to document the prop's function. These comments and prop declarations are automatically converted into prop documentation in Storybook. As a general guideline, try to organize component prop definitiones alphabetically.
+All component props must be defined with appropriate [TypeScript type](https://www.typescriptlang.org/docs/handbook/basic-types.html) applied. Each prop must contain a comment above the prop declaration to document the prop's function. These comments and prop declarations are automatically converted into prop documentation in Storybook. As a general guideline, try to organize component prop definitions alphabetically.
 
 ### Export module
 
 ```tsx
-export const ComponentName: React.FC<Props> = ({
+export const ComponentName = ({
   list,
   of,
   props
   ...other
-}) => {
+}: Props) => {
+  ...
+}
 ```
 
-This defines the component name and passses in all the `Props`.
+This defines the component name and passes in all the `Props`.
 
-### Variables, Methods, and Hooks (if applicable)
+### Children
+When a component uses `children` as a prop, use the type `React.ReactNode` unless context dictates otherwise, including `ReactNode` as a named import.
+
+```tsx
+import React, { ReactNode } from 'react';
+
+...
+
+export const ComponentName = ({ children }: { children: ReactNode }) => {
+  ...
+}
+```
+
+### Variables, Methods, and Hooks
 
 Interactive components likely require defining necessary [state and lifecycle](https://reactjs.org/docs/state-and-lifecycle.html) functions in addition to defining any other necessary variables and functions.
 
+#### useState()
+
+For simple state variables, define a `State` interface that holds the key/value pairs.
+
+```tsx
+interface State {
+  isActive?: boolean;
+}
+
+```
+
+For complex state objects, extract nested properties into their own interfaces. Use enums where needed.
+
+```tsx
+interface State {
+  userData: UserData | null;
+}
+
+interface UserData {
+  userId: number;
+  role: Roles;
+  userName: string;
+}
+
+enum Roles {
+  ANONYMOUS = "Anonymous",
+  AUTHENTICATED = "Authenticated",
+}
+
+```
+
+In either case, apply the `State` type via a generic:
+
+```tsx
+const [state, setState] = useState<State>('initial value');
+```
+
+#### useEffect()
+`useEffect()` hooks do not require any typing. TypeScript expects them to either return nothing or a Destructor-typed function (a function that cleans up any side effects and returns void.)
+
+#### useRef()
+`useRef()` hooks access underlying DOM elements to perform imperative actions. The resulting `ref` object can either be *mutable* or *not mutable*. (If the value store in its' `.current` property may be changed, the ref needs to be `mutable`.) Explictly convey the intended mutability status of each `ref` by using either `React.MutableObject` and `React.RefObject`, in a generic type definition. For mutable refs, use a union with `null` when initializing the ref; otherwise, TypeScript will complain when you change the value of `.current`. Similarly, *do not* create a union with `null` for non-mutable refs.
+
+For consistency, include `MutableRefObject` and `RefObject` with your import statements.
+
+
+```tsx
+import React, { useRef, MutableRefObject, RefObject } from 'react';
+
+...
+
+const mutableRef: MutableRefObject<HTMLDivElement | null> = useRef<HTMLDivElement | null>(null);
+
+const ref: RefObject<HTMLInputElement> = useRef<HTMLInputElement>(null); 
+```
 ### Define `componentClassName`
 
 The last thing that appears above the `return` statement is the `componentClassName`, which defines the CSS block for the component in addition to any modifier CSS class names using the [`clsx` library](https://www.npmjs.com/package/clsx). CSS Modules' bracket syntax (e.g. `styles['my-component']`) is used to enable BEM conventions (which uses dashes).
@@ -355,9 +427,7 @@ Finally, the `return` statement contains the JSX markup for the component and ap
 
 ```tsx
 return (
-  <div className={componentClassName} {...other}>
-    {children}
-  </div>
+  <div className={componentClassName} {...other} />
 );
 ```
 
@@ -371,7 +441,7 @@ Components in this library exist in a flat structure so each component directory
 
 Certain components (such as `<Tabs />` and `<Table />`) require splitting up into smaller subcomponents.
 
-By default, we err towards more centralized control over the component architecture in order to prevent undesired results (for instance, we don't want users to put a `<Card />` inside of `<Breadcrumbs />`). However, certain components will require more flexibility and will therefore be architected to be composible and flexible (such as `<Card>`).
+By default, we err towards more centralized control over the component architecture in order to prevent undesired results (for instance, we don't want users to put a `<Card />` inside of `<Breadcrumbs />`). However, certain components will require more flexibility and will therefore be architected to be composable and flexible (such as `<Card>`).
 
 #### Conventions for compound components
 
@@ -391,26 +461,29 @@ By default, we err towards more centralized control over the component architect
 EDS follows specific front-end API naming conventions. Authoring a consistent API language provides many benefits:
 
 - **More efficient development** - Because the API language is consistent across components, user developers can spend more time coding rather than reading API documentation. Also, library contributors don't have to think as much about component API naming when creating new components/variants.
-- **Shared vocuabulary between designers and developers** - When the code library and design library use the same language, designers and developers can spend more time collaborating rather than futzing over what things are named. This improves team velocity and product quality. It also positions the team to benefit from future tooling that can bring design and code closer together (something many startups and plugins are trying to solve right now!)
+- **Shared vocabulary between designers and developers** - When the code library and design library use the same language, designers and developers can spend more time collaborating rather than futzing over what things are named. This improves team velocity and product quality. It also positions the team to benefit from future tooling that can bring design and code closer together (something many startups and plugins are trying to solve right now!)
 - **Future changes** - Utilizing a consistent language means that future changes and improvements are as easy as find-and-replace.
 
-EDS adhreres to the following API naming conventions:
+EDS adheres to the following API naming conventions:
 
 ### Variants
 
 - `variant` should be used for primary _stylistic_ variations of a component, such as (e.g. `<Card variant="bordered">` or `<Button variant="secondary">`). `variant` should be used if there is primarily one variable used to manipulate the component style.
 - `inverted` should be used consistently for stylistic `variation`s that "invert" the color schemes (e.g. `inverted=true`) to work on a darker background.
-- `size` should be used for adjusting size attributes (e.g. `<Button variant="secondary" size="sm">` or `<Button size="lg"`>). Default to `sm` and `lg`, with "md" being the default.
-- `behavior` should be used for funcitonal variations of a pattern, such as `<Banner behavior="dismissable">`. Additional non-exclusive behaviors should be handled using boolean props prefixed with `is` (e.g. `isSticky` and `isDismissable`).
+- `size` should be used for adjusting size attributes (e.g. `<Button variant="secondary" size="sm">` or `<Button size="md"`>). Use abbreviations for sizes (ex: `xs`, `sm`, `md`, `lg`).
+- `behavior` should be used for functional variations of a pattern, such as `<Banner behavior="dismissable">`. Additional non-exclusive behaviors should be handled using boolean props prefixed with `is` (e.g. `isSticky` and `isDismissable`).
 - `orientation` should be used for controlling the layout or orientation of a component (e.g. `<ButtonGroup orientation="stacked">`)
+- `disabled` boolean should be used to control the interactivity of a component (e.g. `<Button disabled={true} />`)
 - `align` should be used for aligning content, and should include `left` (default), `center`, `right` if needed.
 - `verticalAlign` should be used for vertically aligning content, and should include `top`, `middle`, `bottom` if needed.
+- The default option should be the one most commonly used in order to reduce friction for developers using the components.
 
 ### Text, Labels, Titles
 
-- Default to `text` for strings of text, such as `<Button text="First Name">`.
+- Default to `text` for short strings of text, such as `<Button text="Click here">` or `<Badge text="Overdue" />`.
 - For headings, default to `title`, such as `<PageHeader title="My Page Title">`.
-- For form-related comnp, use the semantic `label` or `legend` (e.g. `<TextField label="first name" />`).
+- Default to `description` for text that serves as a descriptor, such as `<PageHeader title="Project name" description="Brief overview of the project..." />`
+- For form-related components, use the semantic `label` or `legend` (e.g. `<TextField label="first name" />` and `<RadioField legend="Grade level">`).
 
 ### Tag name
 
