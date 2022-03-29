@@ -2,7 +2,7 @@
 
 exports[`<Dropdown /> Compact story renders snapshot 1`] = `
 <div
-  class="dropdown compact"
+  class="dropdown compactDropdown"
   data-testid="dropdown"
 >
   <label
@@ -16,7 +16,7 @@ exports[`<Dropdown /> Compact story renders snapshot 1`] = `
     aria-expanded="true"
     aria-haspopup="true"
     aria-labelledby="headlessui-listbox-label-13 headlessui-listbox-button-14"
-    class="dropdownButton"
+    class="dropdownButton compactDropdownButton"
     id="headlessui-listbox-button-14"
     type="button"
   >
@@ -88,7 +88,7 @@ exports[`<Dropdown /> Compact story renders snapshot 1`] = `
 
 exports[`<Dropdown /> CompactUsingChildrenPropAndNoVisibleLabel story renders snapshot 1`] = `
 <div
-  class="dropdown compact"
+  class="dropdown compactDropdown"
   data-testid="dropdown"
 >
   <label
@@ -102,7 +102,7 @@ exports[`<Dropdown /> CompactUsingChildrenPropAndNoVisibleLabel story renders sn
     aria-expanded="true"
     aria-haspopup="true"
     aria-labelledby="headlessui-listbox-label-43 headlessui-listbox-button-44"
-    class="dropdownButton"
+    class="dropdownButton compactDropdownButton"
     id="headlessui-listbox-button-44"
     type="button"
   >
@@ -174,7 +174,7 @@ exports[`<Dropdown /> CompactUsingChildrenPropAndNoVisibleLabel story renders sn
 
 exports[`<Dropdown /> CompactWithOptionsRightAligned story renders snapshot 1`] = `
 <div
-  class="dropdown compact"
+  class="dropdown compactDropdown"
   data-testid="dropdown"
 >
   <label
@@ -188,7 +188,7 @@ exports[`<Dropdown /> CompactWithOptionsRightAligned story renders snapshot 1`] 
     aria-expanded="true"
     aria-haspopup="true"
     aria-labelledby="headlessui-listbox-label-19 headlessui-listbox-button-20"
-    class="dropdownButton"
+    class="dropdownButton compactDropdownButton"
     id="headlessui-listbox-button-20"
     type="button"
   >

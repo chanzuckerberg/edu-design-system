@@ -284,7 +284,7 @@ function Dropdown(props: DropdownProps) {
     className: clsx(
       styles.dropdown,
       className,
-      variant === "compact" && styles.compact,
+      variant === "compact" && styles.compactDropdown,
     ),
     // Provide a wrapping <div> element for the dropdown. This is needed so that any props
     // passed directly to this component have a corresponding DOM element to receive them.
@@ -374,6 +374,8 @@ const DropdownTrigger = function (
   props: PropsWithRenderProp<{ disabled: boolean; open: boolean }>,
 ) {
   const { children, className, ...rest } = props;
+  const { compact } = useContext(DropdownContext);
+
   return (
     <Listbox.Button
       // Render as a fragment instead of the default element. We're rendering our own element in
@@ -385,7 +387,11 @@ const DropdownTrigger = function (
       {typeof children === "function" ? (
         children
       ) : (
-        <DropdownButton className={className}>{children}</DropdownButton>
+        <DropdownButton
+          className={clsx(className, compact && styles.compactDropdownButton)}
+        >
+          {children}
+        </DropdownButton>
       )}
     </Listbox.Button>
   );

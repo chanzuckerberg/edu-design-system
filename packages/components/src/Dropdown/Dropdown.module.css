@@ -2,11 +2,11 @@
   @apply relative bg-white;
 }
 
-.compact {
+.compactDropdown {
   @apply w-min;
 }
 
-.compact > button {
+.compactDropdownButton {
   @apply p-1;
 }
 
