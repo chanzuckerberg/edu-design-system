@@ -291,7 +291,6 @@ The design system's component directory contains all of the design system's comp
 
 ### Imports
 
-### Imports
 
 The framework follows a specific ordering/clustering for importing modules into a component. This is enforced through the [`import/order` lint rule](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/order.md).
 
@@ -407,9 +406,8 @@ import React, { useRef, MutableRefObject, RefObject } from 'react';
 
 ...
 
-const mutableRef: MutableRefObject<HTMLDivElement | null> = useRef<HTMLDivElement | null>(null);
+const ref = useRef() as MutableRefObject<HTMLInputElement>;;
 
-const ref: RefObject<HTMLInputElement> = useRef<HTMLInputElement>(null); 
 ```
 ### Define `componentClassName`
 
