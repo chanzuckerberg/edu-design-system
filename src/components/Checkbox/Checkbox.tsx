@@ -1,5 +1,10 @@
 import clsx from 'clsx';
-import React, { useRef, useEffect, ChangeEventHandler } from 'react';
+import React, {
+  useRef,
+  useEffect,
+  ChangeEventHandler,
+  MutableRefObject,
+} from 'react';
 import styles from './Checkbox.module.css';
 import { ENTER_KEYCODE } from '../../util/keycodes';
 
@@ -67,7 +72,7 @@ export const Checkbox = ({
   onChange,
   ...other
 }: Props) => {
-  const checkboxRef = useRef() as React.MutableRefObject<HTMLInputElement>;
+  const checkboxRef = useRef() as MutableRefObject<HTMLInputElement>;
   /**
    * On Keydown
    */
