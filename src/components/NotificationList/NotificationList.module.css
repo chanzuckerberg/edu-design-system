@@ -23,6 +23,9 @@
   border: 1px solid var(--eds-color-neutral-200); /* TODO */
 }
 
+.notification-list__is-read {
+  background-color: var(--eds-color-neutral-white); /* TODO */
+}
 /* 
 * Notification list item content
 * 1) The wrapper for the text
@@ -36,10 +39,14 @@
 * Notification list item title
 * 1) Main text title of the notification
 */
-.notification-list__title {
+.notification-list__title a {
   color: var(--eds-color-brand-blue-700); /* TODO */
   font-size: var(--eds-font-size-sm);
 
+  /**
+  *  Notification List Item (is read)
+  * 1) When isRead === true, the title link text changes to grey
+  */
   .notification-list__is-read & {
     color: var(--eds-color-neutral-600); /* TODO */
   }
@@ -77,10 +84,9 @@
 
   /*
     * Notification List Item (is read)
-    * 1) When isRead === true, background and border are changed to neutral
+    * 1) When isRead === true, button's background and border are changed to neutral
     */
   .notification-list__is-read & {
-    /* 3 */
     background-color: var(--eds-color-neutral-white); /* TODO */
     border: 1px solid var(--eds-color-neutral-600); /* TODO */
   }

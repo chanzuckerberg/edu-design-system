@@ -56,7 +56,7 @@ export const NotificationListItem = ({
 
   const componentClassName = clsx(
     styles['notification-list__item'],
-    isRead === true && styles['notification-list__item--is-read'],
+    isRead === true && styles['notification-list__is-read'],
     className,
     {},
   );
@@ -68,9 +68,9 @@ export const NotificationListItem = ({
 
   return (
     <li className={componentClassName}>
-      <div className={styles['notification-list__item--content']}>
-        <div className={styles['notification-list__item--title']}>
-          <a className={styles['notification-list__item--link']} href={href}>
+      <div className={styles['notification-list__content']}>
+        <div className={styles['notification-list__title']}>
+          <a className={styles['notification-list__link']} href={href}>
             <Heading as="h6">{title}</Heading>
           </a>
         </div>
@@ -79,7 +79,7 @@ export const NotificationListItem = ({
         {source}
       </div>
       <button
-        className={styles['notification-list__item--button']}
+        className={styles['notification-list__button']}
         aria-label={isRead === true ? 'Mark as unread' : 'Mark as read'}
         onClick={onClick}
       />
