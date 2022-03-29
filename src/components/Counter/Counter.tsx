@@ -94,7 +94,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const Counter: React.FC<Props> = ({
+export const Counter = ({
   className,
   disabled,
   min,
@@ -115,7 +115,7 @@ export const Counter: React.FC<Props> = ({
   labelAfter,
   value,
   ...other
-}) => {
+}: Props) => {
   const [count, setCountState] = useState(
     value !== undefined ? parseInt(value) : 1,
   );

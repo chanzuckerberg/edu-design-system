@@ -52,7 +52,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const Banner: React.FC<Props> = ({
+export const Banner = ({
   iconTitle,
   className,
   title,
@@ -63,7 +63,7 @@ export const Banner: React.FC<Props> = ({
   variant,
   closeButtonText = 'Close',
   ...other
-}) => {
+}: Props) => {
   const componentClassName = clsx(styles['banner'], className, {
     [styles['banner--success']]: variant === 'success',
     [styles['banner--warning']]: variant === 'warning',

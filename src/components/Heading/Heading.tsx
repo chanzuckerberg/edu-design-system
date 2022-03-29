@@ -28,14 +28,14 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const Heading: React.FC<Props> = ({
+export const Heading = ({
   className,
   children,
   as,
   size,
   id,
   ...other
-}) => {
+}: Props) => {
   const componentClassName = clsx(styles['heading'], className, {
     [styles['heading--size-1']]: size === 1,
     [styles['heading--size-2']]: size === 2,

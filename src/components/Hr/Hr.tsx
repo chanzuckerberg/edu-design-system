@@ -23,7 +23,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const Hr: React.FC<Props> = ({ className, size, variant, ...other }) => {
+export const Hr = ({ className, size, variant, ...other }: Props) => {
   const componentClassName = clsx(styles['hr'], className, {
     [styles['hr--lg']]: size === 'lg',
     [styles['hr--brand']]: variant === 'brand',

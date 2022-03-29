@@ -27,13 +27,13 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const Toolbar: React.FC<Props> = ({
+export const Toolbar = ({
   className,
   children,
   variant,
   verticalAlign,
   ...other
-}) => {
+}: Props) => {
   const componentClassName = clsx(styles['toolbar'], className, {
     [styles['toolbar--bare']]: variant === 'bare',
     [styles['toolbar--vertical-align-bottom']]: verticalAlign === 'bottom',

@@ -63,7 +63,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const RadioFieldItem: React.FC<Props> = ({
+export const RadioFieldItem = ({
   className,
   id,
   name,
@@ -76,7 +76,7 @@ export const RadioFieldItem: React.FC<Props> = ({
   tabIndex,
   inverted,
   ...other
-}) => {
+}: Props) => {
   const [idVar, setId] = useState();
 
   useEffect(() => {

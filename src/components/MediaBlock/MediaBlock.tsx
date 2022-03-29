@@ -28,14 +28,14 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const MediaBlock: React.FC<Props> = ({
+export const MediaBlock = ({
   children,
   className,
   imgSrc,
   imgAlt,
   variant,
   ...other
-}) => {
+}: Props) => {
   const componentClassName = clsx(styles['media-block'], className, {
     [styles['media-block--reversed']]: variant === 'reversed',
   });

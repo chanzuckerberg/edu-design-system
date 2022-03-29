@@ -44,7 +44,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const InlineForm: React.FC<Props> = ({
+export const InlineForm = ({
   action,
   buttonText,
   className,
@@ -54,7 +54,7 @@ export const InlineForm: React.FC<Props> = ({
   method,
   placeholder,
   ...other
-}) => {
+}: Props) => {
   const [idVar, setId] = useState();
 
   useEffect(() => {

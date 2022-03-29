@@ -111,7 +111,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const TextInput: React.FC<Props> = ({
+export const TextInput = ({
   accept,
   ariaDescribedBy,
   className,
@@ -133,7 +133,7 @@ export const TextInput: React.FC<Props> = ({
   value,
   defaultValue,
   ...other
-}) => {
+}: Props) => {
   const componentClassName = clsx(styles['text-input'], className, {
     [styles['eds-is-disabled']]: disabled,
   });

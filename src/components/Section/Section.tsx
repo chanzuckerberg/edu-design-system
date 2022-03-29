@@ -29,14 +29,14 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const Section: React.FC<Props> = ({
+export const Section = ({
   className,
   title,
   description,
   children,
   align,
   ...other
-}) => {
+}: Props) => {
   const componentClassName = clsx(styles['section'], className, {
     [styles['section--center']]: align === 'center',
   });

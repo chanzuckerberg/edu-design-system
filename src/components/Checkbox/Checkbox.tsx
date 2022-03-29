@@ -53,7 +53,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const Checkbox: React.FC<Props> = ({
+export const Checkbox = ({
   ariaDescribedBy,
   id,
   name,
@@ -66,7 +66,7 @@ export const Checkbox: React.FC<Props> = ({
   readOnly,
   onChange,
   ...other
-}) => {
+}: Props) => {
   const checkboxRef = useRef() as React.MutableRefObject<HTMLInputElement>;
   /**
    * On Keydown

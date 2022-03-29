@@ -29,14 +29,14 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const DrawerHeader: React.FC<Props> = ({
+export const DrawerHeader = ({
   className,
   onClick,
   closeButtonText = 'Close',
   dismissible,
   children,
   ...other
-}) => {
+}: Props) => {
   const componentClassName = clsx(styles['drawer__header'], className, {});
   return (
     <header className={componentClassName} {...other}>

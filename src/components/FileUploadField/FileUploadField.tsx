@@ -140,7 +140,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const FileUploadField: React.FC<Props> = ({
+export const FileUploadField = ({
   acceptedFileTypes,
   ariaDescribedBy,
   className,
@@ -169,7 +169,7 @@ export const FileUploadField: React.FC<Props> = ({
   removeFileButtonText = 'Remove file',
   statusLabel,
   ...other
-}) => {
+}: Props) => {
   const [filesState, setFilesState] = useState(files);
   const [isErrorState, setIsErrorState] = useState(isError);
   const [isDragging, setIsDragging] = useState(false);

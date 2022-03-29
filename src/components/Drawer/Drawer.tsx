@@ -51,7 +51,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const Drawer: React.FC<Props> = ({
+export const Drawer = ({
   ariaDescribedBy,
   ariaLabelledBy,
   className,
@@ -62,7 +62,7 @@ export const Drawer: React.FC<Props> = ({
   closeButtonText,
   showBackdrop = false,
   ...other
-}) => {
+}: Props) => {
   /**
    * Initialize states, constants, and refs
    */

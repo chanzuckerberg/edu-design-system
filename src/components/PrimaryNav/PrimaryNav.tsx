@@ -25,13 +25,13 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const PrimaryNav: React.FC<Props> = ({
+export const PrimaryNav = ({
   className,
   children,
   id,
   ariaLabel,
   ...other
-}) => {
+}: Props) => {
   const [idVar, setId] = useState();
 
   useEffect(() => {

@@ -16,7 +16,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const SkeletonBar: React.FC<Props> = ({ className, size, ...other }) => {
+export const SkeletonBar = ({ className, size, ...other }: Props) => {
   const componentClassName = clsx(styles['skeleton-bar'], className, {
     [styles['skeleton-bar--sm']]: size === 'sm',
     [styles['skeleton-bar--lg']]: size === 'lg',

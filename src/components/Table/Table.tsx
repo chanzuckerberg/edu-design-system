@@ -35,7 +35,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const Table: React.FC<Props> = ({
+export const Table = ({
   behavior,
   caption,
   children,
@@ -43,7 +43,7 @@ export const Table: React.FC<Props> = ({
   hideCaption = true,
   variant,
   ...other
-}) => {
+}: Props) => {
   const componentClassName = clsx(styles['table'], className, {
     [styles['table--zebra']]: variant === 'zebra',
     [styles['table--overflow']]: behavior === 'overflow',

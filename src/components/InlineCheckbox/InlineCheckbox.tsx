@@ -58,7 +58,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const InlineCheckbox: React.FC<Props> = ({
+export const InlineCheckbox = ({
   className,
   checked,
   id,
@@ -72,7 +72,7 @@ export const InlineCheckbox: React.FC<Props> = ({
   value = '',
   hideLabel,
   ...other
-}) => {
+}: Props) => {
   const ref = useRef<HTMLLabelElement | null>(null);
 
   const [checkedState, setCheckedState] = useState(checked ? checked : false);

@@ -40,7 +40,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const Legend: React.FC<Props> = ({
+export const Legend = ({
   className,
   id,
   optionalLabel = '(optional)',
@@ -50,7 +50,7 @@ export const Legend: React.FC<Props> = ({
   hideLegend,
   legendAfter,
   ...other
-}) => {
+}: Props) => {
   const componentClassName = clsx(styles['legend'], className, {
     [styles['u-is-vishidden']]: hideLegend,
   });

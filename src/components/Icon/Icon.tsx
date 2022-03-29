@@ -35,7 +35,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const Icon: React.FC<Props> = ({
+export const Icon = ({
   className,
   name,
   focusable = false,
@@ -43,7 +43,7 @@ export const Icon: React.FC<Props> = ({
   inverted,
   title,
   ...other
-}) => {
+}: Props) => {
   const [idVar, setId] = useState();
 
   useEffect(() => {

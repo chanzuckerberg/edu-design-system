@@ -20,12 +20,12 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const LayoutSection: React.FC<Props> = ({
+export const LayoutSection = ({
   children,
   className,
   region,
   ...other
-}) => {
+}: Props) => {
   const componentClassName = clsx(styles['layout__section'], className, {
     [styles['layout__section--main']]: region === 'main',
     [styles['layout__section--sidebar']]: region === 'sidebar',

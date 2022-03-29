@@ -32,13 +32,13 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const ButtonGroup: React.FC<Props> = ({
+export const ButtonGroup = ({
   align,
   children,
   className,
   behavior,
   ...other
-}) => {
+}: Props) => {
   const componentClassName = clsx(styles['button-group'], className, {
     [styles['button-group--responsive']]: behavior === 'responsive',
     [styles['button-group--stacked']]: behavior === 'stacked',

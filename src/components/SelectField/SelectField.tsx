@@ -84,7 +84,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const SelectField: React.FC<Props> = ({
+export const SelectField = ({
   className,
   id,
   label,
@@ -102,7 +102,7 @@ export const SelectField: React.FC<Props> = ({
   readOnly,
   value,
   ...other
-}) => {
+}: Props) => {
   /**
    * Initialize states, constants, and refs
    */

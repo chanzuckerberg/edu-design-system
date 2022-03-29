@@ -36,7 +36,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const LinkList: React.FC<Props> = ({
+export const LinkList = ({
   behavior,
   children,
   className,
@@ -44,7 +44,7 @@ export const LinkList: React.FC<Props> = ({
   size,
   variant,
   ...other
-}) => {
+}: Props) => {
   const componentClassName = clsx(styles['link-list'], className, {
     [styles['link-list--sm']]: size === 'sm',
     [styles['link-list--inverted']]: inverted === true,

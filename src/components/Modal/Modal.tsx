@@ -54,7 +54,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const Modal: React.FC<Props> = ({
+export const Modal = ({
   ariaDescribedBy,
   ariaLabelledBy,
   className,
@@ -65,7 +65,7 @@ export const Modal: React.FC<Props> = ({
   closeButtonText,
   size,
   ...other
-}) => {
+}: Props) => {
   /**
    * Initialize states, constants, and refs
    */

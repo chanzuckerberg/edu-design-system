@@ -25,13 +25,13 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const TagsItem: React.FC<Props> = ({
+export const TagsItem = ({
   className,
   dismissible,
   onClick,
   text,
   ...other
-}) => {
+}: Props) => {
   const [isDismissed, setIsDismissed] = useState(false);
 
   function handleOnClick(e) {

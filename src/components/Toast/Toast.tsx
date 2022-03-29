@@ -43,7 +43,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const Toast: React.FC<Props> = ({
+export const Toast = ({
   iconTitle,
   className,
   children,
@@ -52,7 +52,7 @@ export const Toast: React.FC<Props> = ({
   variant,
   closeButtonText = 'Close',
   ...other
-}) => {
+}: Props) => {
   const componentClassName = clsx(styles['toast'], className, {
     [styles['toast--success']]: variant === 'success',
     [styles['toast--warning']]: variant === 'warning',
