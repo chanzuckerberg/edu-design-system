@@ -68,6 +68,9 @@ type DropdownProps = ListboxProps & {
   optionsAlign?: OptionsAlignType;
   /**
    * Optional className for additional options menu styling.
+   *
+   * When not using the compact variant, if optionsClassName is provided please
+   * include the width property to define the options menu width.
    */
   optionsClassName?: string;
 };
