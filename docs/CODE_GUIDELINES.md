@@ -406,7 +406,7 @@ import React, { useRef, MutableRefObject, RefObject } from 'react';
 
 ...
 
-const ref = useRef() as MutableRefObject<HTMLInputElement>;;
+const ref = useRef() as MutableRefObject<HTMLInputElement>;
 
 ```
 ### Define `componentClassName`
