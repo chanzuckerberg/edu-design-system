@@ -8,11 +8,11 @@ import React, {
   useState,
 } from 'react';
 import styles from './TextareaField.module.css';
-import { Button } from '../Button/Button';
-import { FieldNote } from '../FieldNote/FieldNote';
-import { Icon } from '../Icon/Icon';
-import { Label } from '../Label/Label';
-import { Textarea } from '../Textarea/Textarea';
+import Button from '../Button';
+import FieldNote from '../FieldNote';
+import Icon from '../Icon';
+import Label from '../Label';
+import Textarea from '../Textarea';
 
 export interface Props {
   /**

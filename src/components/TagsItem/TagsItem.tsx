@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import React, { useState } from 'react';
-import { Icon } from '../Icon/Icon';
+import Icon from '../Icon';
 import styles from '../Tags/Tags.module.css';
 
 export interface Props {

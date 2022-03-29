@@ -8,7 +8,7 @@ export interface Props {
    * - **overflow-sm** Removes the min-width from the table for tables with few columns
    * - **overflow-lg** Used for tables with lots of table rows to overflow at a larger breakpoint
    */
-  behavior?: 'overflow';
+  behavior?: 'overflow' | 'overflow-lg' | 'overflow-sm';
   /**
    * HTML caption property for table
    */

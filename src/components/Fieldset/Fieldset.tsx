@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import styles from './Fieldset.module.css';
-import { Legend } from '../Legend/Legend';
+import Legend from '../Legend';
 
 export interface Props {
   /**

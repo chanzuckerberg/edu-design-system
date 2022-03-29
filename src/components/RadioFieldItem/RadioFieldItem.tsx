@@ -6,7 +6,7 @@ import React, {
   useEffect,
   useState,
 } from 'react';
-import { Radio } from '../Radio/Radio';
+import Radio from '../Radio';
 import styles from '../RadioField/RadioField.module.css';
 
 export interface Props {

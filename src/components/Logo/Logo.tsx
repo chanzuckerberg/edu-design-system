@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React from 'react';
 import styles from './Logo.module.css';
-import { LogoImage } from '../LogoImage/LogoImage';
+import LogoImage from '../LogoImage';
 
 export interface Props {
   /**

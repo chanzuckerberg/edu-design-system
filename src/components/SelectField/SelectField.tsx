@@ -8,10 +8,10 @@ import React, {
   useState,
 } from 'react';
 import styles from './SelectField.module.css';
-import { FieldNote } from '../FieldNote/FieldNote';
-import { Icon } from '../Icon/Icon';
-import { Label } from '../Label/Label';
-import { Select } from '../Select/Select';
+import FieldNote from '../FieldNote';
+import Icon from '../Icon';
+import Label from '../Label';
+import Select from '../Select';
 
 export interface Props {
   /**

@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React from 'react';
 import styles from '../Breadcrumbs/Breadcrumbs.module.css';
-import { Icon } from '../Icon/Icon';
+import Icon from '../Icon';
 
 export interface Props {
   /**

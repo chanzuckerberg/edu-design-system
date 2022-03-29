@@ -2,8 +2,8 @@ import { Story, Meta } from '@storybook/react';
 import React from 'react';
 
 import { Feature, Props } from './Feature';
-import { Heading } from '../Heading/Heading';
-import { TextPassage } from '../TextPassage/TextPassage';
+import Heading from '../Heading';
+import TextPassage from '../TextPassage';
 
 export default {
   title: 'Molecules/Blocks/Feature',

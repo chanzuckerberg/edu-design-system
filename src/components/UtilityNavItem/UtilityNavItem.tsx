@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React, { ReactNode, useEffect, useState, useRef } from 'react';
 import { useMergedRefs } from '../../hooks';
-import { Icon } from '../Icon/Icon';
+import Icon from '../Icon';
 import styles from '../UtilityNav/UtilityNav.module.css';
 
 export interface Props {

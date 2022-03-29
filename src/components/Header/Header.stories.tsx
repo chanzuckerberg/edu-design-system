@@ -2,12 +2,12 @@ import { Story, Meta } from '@storybook/react';
 import React from 'react';
 
 import { Header, HeaderProps } from './Header';
-import { Logo } from '../Logo/Logo';
-import { NavContainer } from '../NavContainer/NavContainer';
-import { PrimaryNav } from '../PrimaryNav/PrimaryNav';
-import { PrimaryNavItem } from '../PrimaryNavItem/PrimaryNavItem';
-import { UtilityNav } from '../UtilityNav/UtilityNav';
-import { UtilityNavItem } from '../UtilityNavItem/UtilityNavItem';
+import Logo from '../Logo';
+import NavContainer from '../NavContainer';
+import PrimaryNav from '../PrimaryNav';
+import PrimaryNavItem from '../PrimaryNavItem';
+import UtilityNav from '../UtilityNav';
+import UtilityNavItem from '../UtilityNavItem';
 
 export default {
   title: 'Organisms/Global/Header',

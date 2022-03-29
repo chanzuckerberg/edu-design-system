@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import styles from './TextPassage.module.css';
-import { LayoutLinelengthContainer } from '../LayoutLinelengthContainer/LayoutLinelengthContainer';
+import LayoutLinelengthContainer from '../LayoutLinelengthContainer';
 
 export interface Props {
   /**

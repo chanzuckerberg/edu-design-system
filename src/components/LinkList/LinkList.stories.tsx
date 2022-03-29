@@ -2,7 +2,7 @@ import { Story, Meta } from '@storybook/react';
 import React from 'react';
 
 import { LinkList, Props } from './LinkList';
-import { LinkListItem } from '../LinkListItem/LinkListItem';
+import LinkListItem from '../LinkListItem';
 
 export default {
   title: 'Molecules/Navigation/LinkList',

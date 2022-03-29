@@ -2,9 +2,9 @@ import clsx from 'clsx';
 import { nanoid } from 'nanoid';
 import React, { useEffect, useState, ReactNode } from 'react';
 import styles from './InlineForm.module.css';
-import { Button } from '../Button/Button';
-import { Label } from '../Label/Label';
-import { TextInput } from '../TextInput/TextInput';
+import Button from '../Button';
+import Label from '../Label';
+import TextInput from '../TextInput';
 
 export interface Props {
   /**

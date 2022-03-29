@@ -3,7 +3,7 @@ import { within, userEvent } from '@storybook/testing-library';
 import clsx from 'clsx';
 import React from 'react';
 import Tooltip from './Tooltip';
-import styles from './Tooltip.stories.module.css';
+import styles from './Tooltip';
 import { Button } from '../Button/Button';
 
 const defaultArgs = {
