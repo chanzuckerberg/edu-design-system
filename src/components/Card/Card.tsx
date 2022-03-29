@@ -11,10 +11,10 @@ export interface Props {
    * CSS class names that can be appended to the component.
    */
   className?: string;
-   /**
+  /**
    * Link to URL. If href is present, the button will be rendered as an <a> element.
    */
-    href?: string;
+  href?: string;
   /**
    * Card rendered on a dark backgorund
    */
