@@ -287,7 +287,7 @@ function Dropdown(props: DropdownProps) {
     className: clsx(
       styles.dropdown,
       className,
-      variant === "compact" && styles.compactDropdown,
+      compact && styles.compactDropdown,
     ),
     // Provide a wrapping <div> element for the dropdown. This is needed so that any props
     // passed directly to this component have a corresponding DOM element to receive them.
@@ -296,11 +296,15 @@ function Dropdown(props: DropdownProps) {
     ...rest,
   };
 
+  const contextValue = Object.assign(
+    { compact },
+    optionsAlign ? { optionsAlign } : null,
+    optionsClassName ? { optionsClassName } : null,
+  );
+
   if (typeof children === "function") {
     return (
-      <DropdownContext.Provider
-        value={{ compact, optionsAlign, optionsClassName }}
-      >
+      <DropdownContext.Provider value={contextValue}>
         <Listbox
           {...sharedProps}
           // We prefer to pass the aria-label in via an invisible DropdownLabel, but we can't
@@ -342,12 +346,6 @@ function Dropdown(props: DropdownProps) {
       {optionsList}
       {children}
     </>
-  );
-
-  const contextValue = Object.assign(
-    { compact },
-    optionsAlign ? { optionsAlign } : null,
-    optionsClassName ? { optionsClassName } : null,
   );
 
   return (
