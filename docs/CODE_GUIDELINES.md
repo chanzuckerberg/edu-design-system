@@ -357,41 +357,7 @@ export const ComponentName = ({ children }: { children: ReactNode }) => {
 Interactive components likely require defining necessary [state and lifecycle](https://reactjs.org/docs/state-and-lifecycle.html) functions in addition to defining any other necessary variables and functions.
 
 #### useState()
-
-For simple state variables, define a `State` interface that holds the key/value pairs.
-
-```tsx
-interface State {
-  isActive?: boolean;
-}
-
-```
-
-For complex state objects, extract nested properties into their own interfaces. Use enums where needed.
-
-```tsx
-interface State {
-  userData: UserData | null;
-}
-
-interface UserData {
-  userId: number;
-  role: Roles;
-  userName: string;
-}
-
-enum Roles {
-  ANONYMOUS = "Anonymous",
-  AUTHENTICATED = "Authenticated",
-}
-
-```
-
-In either case, apply the `State` type via a generic:
-
-```tsx
-const [state, setState] = useState<State>('initial value');
-```
+When using the `useState()` hook, TypeScript will infer the correct type from the initial value. If explicit typing of a variable in state is necessary and a hard-coded initial value is not set, you can use a prop as the initial value.
 
 #### useEffect()
 `useEffect()` hooks do not require any typing. TypeScript expects them to either return nothing or a Destructor-typed function (a function that cleans up any side effects and returns void.)
