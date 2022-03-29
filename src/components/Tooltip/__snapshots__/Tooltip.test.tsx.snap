@@ -5,7 +5,7 @@ exports[`<Tooltip /> BottomPlacement story renders snapshot 1`] = `
   <div>
     <button
       aria-describedby="tippy-5"
-      class="button trigger--spacing-bottom trigger--spacing-left button--lg"
+      class="button button--lg"
     >
       <span
         class="button__text"
@@ -62,7 +62,7 @@ exports[`<Tooltip /> DarkVariant story renders snapshot 1`] = `
   <div>
     <button
       aria-describedby="tippy-2"
-      class="button trigger--spacing button--lg"
+      class="button button--lg"
     >
       <span
         class="button__text"
@@ -123,7 +123,7 @@ exports[`<Tooltip /> Interactive story renders snapshot 1`] = `
       </p>
       <button
         aria-describedby="tippy-8"
-        class="button trigger--spacing button--lg"
+        class="button button--lg"
       >
         <span
           class="button__text"
@@ -181,7 +181,7 @@ exports[`<Tooltip /> LeftPlacement story renders snapshot 1`] = `
   <div>
     <button
       aria-describedby="tippy-3"
-      class="button trigger--spacing-top trigger--spacing-bottom trigger--spacing-left-large button--lg"
+      class="button button--lg"
     >
       <span
         class="button__text"
@@ -238,7 +238,7 @@ exports[`<Tooltip /> LightVariant story renders snapshot 1`] = `
   <div>
     <button
       aria-describedby="tippy-1"
-      class="button trigger--spacing button--lg"
+      class="button button--lg"
     >
       <span
         class="button__text"
@@ -295,7 +295,7 @@ exports[`<Tooltip /> LongButtonText story renders snapshot 1`] = `
   <div>
     <button
       aria-describedby="tippy-7"
-      class="button trigger--spacing-top button--lg"
+      class="button button--lg"
     >
       <span
         class="button__text"
@@ -352,7 +352,7 @@ exports[`<Tooltip /> LongText story renders snapshot 1`] = `
   <div>
     <button
       aria-describedby="tippy-6"
-      class="button trigger--spacing button--lg"
+      class="button button--lg"
     >
       <span
         class="button__text"
@@ -407,7 +407,7 @@ exports[`<Tooltip /> TopPlacement story renders snapshot 1`] = `
   <div>
     <button
       aria-describedby="tippy-4"
-      class="button trigger--spacing-top trigger--spacing-left button--lg"
+      class="button button--lg"
     >
       <span
         class="button__text"
