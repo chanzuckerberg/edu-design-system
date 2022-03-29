@@ -91,20 +91,20 @@
     background: var(--eds-theme-color-neutral-md-background);
     border-radius: 50%;
   }
+}
+
+/**
+ * Last List detail item
+ */
+.list-detail__item:last-child {
+  padding-bottom: 0;
 
   /**
-  * Last list detail item
+  * List list detail item after
+  * 1) Don't add a line between items
   */
-  &:last-child {
-    padding-bottom: 0;
-
-    /**
-    * List list detail item after
-    * 1) Don't add a line between items
-    */
-    &:after {
-      content: none;
-    }
+  &:after {
+    content: none;
   }
 }
 
@@ -151,15 +151,15 @@
     background: var(--eds-theme-color-neutral-md-background);
     border-radius: 50%;
   }
+}
 
-  /**
-  * Success list detail item
-  * 1) Remove the bullet since the icon will take its place
-  */
-  .list-detail__item--success & {
-    &:before {
-      content: none; /* 1 */
-    }
+/**
+* Success list detail item
+* 1) Remove the bullet since the icon will take its place
+*/
+.list-detail__item--success .list-detail__link-left {
+  &:before {
+    content: none; /* 1 */
   }
 }
 

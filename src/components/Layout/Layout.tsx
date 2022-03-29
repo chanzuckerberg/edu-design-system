@@ -20,13 +20,13 @@ export interface Props {
    * Expandable layout sections
    * 1) Used for hover/focus states showing/hiding extra content
    */
-   expandable?: boolean;
+  expandable?: boolean;
 
-   /**
+  /**
    * Sidebar property
    * 1) Adjust the size of the sidebar
    */
-   variant?: 'narrow-sidebar';
+  variant?: 'narrow-sidebar';
 }
 
 /**

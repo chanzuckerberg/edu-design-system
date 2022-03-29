@@ -23,26 +23,6 @@
   transition: all var(--eds-anim-move-quick) var(--eds-anim-ease);
 
   /**
-   * Active nav container
-   * 1) Open state on small screens
-  */
-  &.is-active {
-    display: block;
-
-    @media all and (max-width: $eds-bp-lg) {
-      opacity: 1;
-      visibility: visible;
-      display: flex;
-      flex-direction: column;
-      overflow: auto;
-      gap: var(--eds-size-8);
-      height: calc(100vh - 3rem); /* 2 */
-      background-color: var(--eds-theme-color-primary-background);
-      z-index: var(--eds-z-index-400);
-    }
-  }
-
-  /**
    * Large screen styles
    * 1) Un-hide navcontainer to display nav by default on larger screens
    * 2) Display children as horizontal flex items
@@ -56,5 +36,25 @@
     padding: 0;
     height: auto;
     margin-bottom: var(--eds-size-6);
+  }
+}
+
+/**
+* Active nav container
+* 1) Open state on small screens
+*/
+.nav-container.is-active {
+  display: block;
+
+  @media all and (max-width: $eds-bp-lg) {
+    opacity: 1;
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    gap: var(--eds-size-8);
+    height: calc(100vh - 3rem); /* 2 */
+    background-color: var(--eds-theme-color-primary-background);
+    z-index: var(--eds-z-index-400);
   }
 }

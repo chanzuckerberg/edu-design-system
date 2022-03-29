@@ -15,8 +15,8 @@ import {
   R_ARROW_KEYCODE,
   D_ARROW_KEYCODE,
 } from '../../util/keycodes';
-import { ListDetailPanel } from '../ListDetailPanel/ListDetailPanel';
 import { Icon } from '../Icon/Icon';
+import { ListDetailPanel } from '../ListDetailPanel/ListDetailPanel';
 
 export interface Props {
   /**
@@ -139,10 +139,16 @@ export const ListDetail: React.FC<Props> = ({
    * Autogenerate ids on tabs if not defined
    */
   useEffect(() => {
-    setId(listDetailItems().map((listDetailItem) => (listDetailItem.props.id ? listDetailItem.props.id : nanoid())));
+    setId(
+      listDetailItems().map((listDetailItem) =>
+        listDetailItem.props.id ? listDetailItem.props.id : nanoid(),
+      ),
+    );
     setAriaLabelledBy(
       listDetailItems().map((listDetailItem) =>
-        listDetailItem.props.ariaLabelledBy ? listDetailItem.props.ariaLabelledBy : nanoid(),
+        listDetailItem.props.ariaLabelledBy
+          ? listDetailItem.props.ariaLabelledBy
+          : nanoid(),
       ),
     );
   }, [listDetailItems]);
@@ -181,8 +187,10 @@ export const ListDetail: React.FC<Props> = ({
     if (!activeListDetailPanel) return;
 
     const index = listDetailItemRefs.indexOf(activeListDetailPanel); /* 2 */
-    const next = index === listDetailItemRefs.length - 1 ? 0 : index + 1; /* 2 */
-    const prev = index === 0 ? listDetailItemRefs.length - 1 : index - 1; /* 2 */
+    const next =
+      index === listDetailItemRefs.length - 1 ? 0 : index + 1; /* 2 */
+    const prev =
+      index === 0 ? listDetailItemRefs.length - 1 : index - 1; /* 2 */
 
     if ([R_ARROW_KEYCODE, D_ARROW_KEYCODE].includes(e.code)) {
       /* 3 */
@@ -193,21 +201,22 @@ export const ListDetail: React.FC<Props> = ({
     }
   }
 
+  const childrenWithProps = React.Children.map(
+    listDetailItems(),
+    (child: any, i: any) => {
+      // Checking isValidElement is the safe way and avoids a typescript
+      // error too.
+      if (React.isValidElement(child)) {
+        return React.cloneElement<Props>(child, {
+          id: idVar[i],
+          ariaLabelledBy: ariaLabelledByVar[i],
+        });
+      }
+      return child;
+    },
+  );
 
-  const childrenWithProps = React.Children.map(listDetailItems(), (child: any, i: any) => {
-    // Checking isValidElement is the safe way and avoids a typescript
-    // error too.
-    if (React.isValidElement(child)) {
-      return React.cloneElement<Props>(child, {
-        id: idVar[i],
-        ariaLabelledBy: ariaLabelledByVar[i],
-      });
-    }
-    return child;
-  });
-
-  const componentClassName = clsx(styles['list-detail'], className, {
-  });
+  const componentClassName = clsx(styles['list-detail'], className, {});
 
   return (
     <div className={componentClassName} {...other}>
@@ -219,7 +228,8 @@ export const ListDetail: React.FC<Props> = ({
               <li
                 className={clsx(styles['list-detail__item'], {
                   [styles['eds-is-active']]: isActive,
-				  [styles['list-detail__item--success']] : tab.props.variant === 'success'
+                  [styles['list-detail__item--success']]:
+                    tab.props.variant === 'success',
                 })}
                 key={'list-detail-item-' + i}
                 role="presentation"
@@ -241,11 +251,14 @@ export const ListDetail: React.FC<Props> = ({
                   ref={listDetailItemRefs[i]}
                   aria-label={tab.props.ariaLabel}
                 >
-					<div className={styles['list-detail__link-left']}>
-				  	{tab.props.variant === 'success' &&
-					<Icon className={styles['list-detail__icon']} name="check-circle" />
-					  }
-					</div>
+                  <div className={styles['list-detail__link-left']}>
+                    {tab.props.variant === 'success' && (
+                      <Icon
+                        className={styles['list-detail__icon']}
+                        name="check-circle"
+                      />
+                    )}
+                  </div>
                   {tab.props.title}
                 </a>
               </li>

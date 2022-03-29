@@ -1,20 +1,26 @@
 import clsx from 'clsx';
-import React, { MutableRefObject, ReactNode, useEffect, useRef, useState } from 'react';
+import React, {
+  MutableRefObject,
+  ReactNode,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 
 import styles from './Header.module.css';
 
 export interface HeaderProps {
-   /**
-    * Pinned stop property
-    * 1) Pixel value from the top of the page scrolled before the header goes away
-    * 2) Used only for `behavior="sticky"` header variant
-    */
+  /**
+   * Pinned stop property
+   * 1) Pixel value from the top of the page scrolled before the header goes away
+   * 2) Used only for `behavior="sticky"` header variant
+   */
   pinnedStop?: number;
   /**
-  * Unpinned property
-  * 1) Used to move the header offscreen but have it ready to move back in
-  * 2) Used only for `behavior="sticky"` header variant
-  */
+   * Unpinned property
+   * 1) Used to move the header offscreen but have it ready to move back in
+   * 2) Used only for `behavior="sticky"` header variant
+   */
   unpinned?: boolean;
   /**
    * Behavior variants
@@ -39,7 +45,6 @@ export const Header: React.FC<HeaderProps> = ({
   pinnedStop = 152,
   ...other
 }) => {
-
   const ref = useRef() as MutableRefObject<HTMLElement>;
   const stickyRef = useRef() as MutableRefObject<HTMLDivElement>;
 
@@ -48,7 +53,6 @@ export const Header: React.FC<HeaderProps> = ({
   const [scrollPos, setScrollPos] = useState(0);
   const [unpinned, setUnpinned] = useState(false);
 
-
   /**
    * Update the header wrapper height
    * 1) Set the height of the header wrapper so that the spacing stays consistent when
@@ -56,11 +60,9 @@ export const Header: React.FC<HeaderProps> = ({
    */
   const updateHeaderWrapperHeight = () => {
     if (behavior === 'sticky') {
-     stickyRef.current.style.height = ref.current.clientHeight + 'px'; /* 1 */
+      stickyRef.current.style.height = ref.current.clientHeight + 'px'; /* 1 */
     }
-  }
-
- 
+  };
 
   /**
    * Handle window scroll
@@ -71,26 +73,28 @@ export const Header: React.FC<HeaderProps> = ({
    */
   const handleWindowScroll = () => {
     if (behavior === 'sticky') {
-      if (document.body.getBoundingClientRect().top > scrollPos && stickyRef.current.getBoundingClientRect().bottom < 0) {
+      if (
+        document.body.getBoundingClientRect().top > scrollPos &&
+        stickyRef.current.getBoundingClientRect().bottom < 0
+      ) {
         /* 1 */
-        console.log('PIN HEADER TO TOP');
         setUnpinned(false);
         setPinned(true);
-      } else if (stickyRef.current.getBoundingClientRect().top < 0 && window.scrollY <= pinnedStop) {
+      } else if (
+        stickyRef.current.getBoundingClientRect().top < 0 &&
+        window.scrollY <= pinnedStop
+      ) {
         /* 2 */
-        console.log('PIN HEADER TO TOP ONCE YOU REACH HEADER');
         setUnpinned(false);
         setPinned(true);
       } else if (stickyRef.current.getBoundingClientRect().bottom < 0) {
         /* 3 */
-        console.log('REMOVE THE PIN')
         setUnpinned(true);
         setPinned(false);
         setTimeout(() => {
           setScrolled(true);
         }, 300);
       } else {
-        console.log('REMOVE PIN AND SCROLLED')
         /* 4 */
         setPinned(false);
         setUnpinned(false);
@@ -98,14 +102,14 @@ export const Header: React.FC<HeaderProps> = ({
       }
       setScrollPos(document.body.getBoundingClientRect().top);
     }
-  }
+  };
 
   /**
    * Update sticky wrapper height on mount
    */
   useEffect(() => {
     updateHeaderWrapperHeight();
-  }, []);
+  });
 
   /**
    * Use effect lifecycle hook
@@ -118,26 +122,32 @@ export const Header: React.FC<HeaderProps> = ({
     return () => {
       window.removeEventListener('scroll', handleWindowScroll, false);
       window.removeEventListener('resize', updateHeaderWrapperHeight, false);
-    }
+    };
   });
 
-  const componentClassName = clsx(styles['header'], className,
+  const componentClassName = clsx(
+    styles['header'],
+    className,
     behavior === 'sticky' && styles['header--sticky'],
     unpinned === true && styles['eds-is-unpinned'],
     pinned === true && styles['eds-is-pinned'],
-    scrolled === true && styles['eds-is-scrolled']
+    scrolled === true && styles['eds-is-scrolled'],
   );
 
   if (behavior === 'sticky') {
     return (
       <div className={styles['header-sticky-container']} ref={stickyRef}>
-        <header role="banner" className={componentClassName} ref={ref} {...other}>
+        <header
+          role="banner"
+          className={componentClassName}
+          ref={ref}
+          {...other}
+        >
           {children}
         </header>
       </div>
     );
-  }
-  else {
+  } else {
     return (
       <header role="banner" className={componentClassName} ref={ref} {...other}>
         {children}

@@ -1,7 +1,7 @@
 export { Accordion } from './components/Accordion/Accordion';
 export { AccordionPanel } from './components/AccordionPanel/AccordionPanel';
 export { Avatar } from './components/Avatar/Avatar';
-export { AvatarBlock } from "./components/AvatarBlock/AvatarBlock";
+export { AvatarBlock } from './components/AvatarBlock/AvatarBlock';
 export { AvatarImage } from './components/AvatarImage/AvatarImage';
 export { Badge } from './components/Badge/Badge';
 export { Band } from './components/Band/Band';
@@ -48,8 +48,8 @@ export { LayoutLinelengthContainer } from './components/LayoutLinelengthContaine
 export { LayoutSection } from './components/LayoutSection/LayoutSection';
 export { Legend } from './components/Legend/Legend';
 export { LinkList } from './components/LinkList/LinkList';
-export { ListDetail } from "./components/ListDetail/ListDetail";
-export { ListDetailPanel } from "./components/ListDetailPanel/ListDetailPanel";
+export { ListDetail } from './components/ListDetail/ListDetail';
+export { ListDetailPanel } from './components/ListDetailPanel/ListDetailPanel';
 export { LoadingIndicator } from './components/LoadingIndicator/LoadingIndicator';
 export { Logo } from './components/Logo/Logo';
 export { LogoImage } from './components/LogoImage/LogoImage';

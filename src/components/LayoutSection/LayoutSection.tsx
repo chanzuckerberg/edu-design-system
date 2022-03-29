@@ -18,7 +18,7 @@ export interface Props {
   /**
    * Layout section region
    */
-   region?: 'main' | 'sidebar';
+  region?: 'main' | 'sidebar';
 }
 
 /**
