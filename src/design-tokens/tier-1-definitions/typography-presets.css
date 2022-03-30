@@ -5,11 +5,11 @@
   font-family: var(--eds-font-family-primary) $important;
   font-weight: var(--eds-font-weight-medium) $important;
   font-size: var(--eds-font-size-40) $important;
-  line-height: var(--eds-line-height-48) $important;
+  line-height: 1.2 $important;
 
   @media all and (max-width: $eds-bp-md) {
     font-size: var(--eds-font-size-32) $important;
-    line-height: var(--eds-line-height-40) $important;
+    line-height: 1.25 $important;
   }
 }
 
@@ -25,11 +25,11 @@
   font-family: var(--eds-font-family-primary) $important;
   font-weight: var(--eds-font-weight-medium) $important;
   font-size: var(--eds-font-size-32) $important;
-  line-height: var(--eds-line-height-40) $important;
+  line-height: 1.25 $important;
 
   @media all and (max-width: $eds-bp-md) {
     font-size: var(--eds-font-size-28) $important;
-    line-height: var(--eds-line-height-36) $important;
+    line-height: 1.2857 $important;
   }
 }
 
@@ -45,11 +45,11 @@
   font-family: var(--eds-font-family-primary) $important;
   font-weight: var(--eds-font-weight-medium) $important;
   font-size: var(--eds-font-size-24) $important;
-  line-height: var(--eds-line-height-32) $important;
+  line-height: 1.333 $important;
 
   @media all and (max-width: $eds-bp-md) {
     font-size: var(--eds-font-size-20) $important;
-    line-height: var(--eds-line-height-28) $important;
+    line-height: 1.4 $important;
   }
 }
 
@@ -65,7 +65,7 @@
   font-family: var(--eds-font-family-primary) $important;
   font-weight: var(--eds-font-weight-medium) $important;
   font-size: var(--eds-font-size-18) $important;
-  line-height: var(--eds-line-height-24) $important;
+  line-height: 1.333 $important;
 }
 
 @define-mixin eds-typography-preset-004-bold $important {
@@ -80,7 +80,7 @@
   font-family: var(--eds-font-family-primary) $important;
   font-weight: var(--eds-font-weight-medium) $important;
   font-size: var(--eds-font-size-16) $important;
-  line-height: var(--eds-line-height-24) $important;
+  line-height: 1.5 $important;
 }
 
 @define-mixin eds-typography-preset-005-light $important {
@@ -100,7 +100,7 @@
   font-family: var(--eds-font-family-primary) $important;
   font-weight: var(--eds-font-weight-light) $important;
   font-size: var(--eds-font-size-14) $important;
-  line-height: var(--eds-line-height-22) $important;
+  line-height: 1.57 $important;
 }
 
 @define-mixin eds-typography-preset-006-bold $important {
@@ -115,7 +115,7 @@
   font-family: var(--eds-font-family-primary) $important;
   font-weight: var(--eds-font-weight-medium) $important;
   font-size: var(--eds-font-size-14) $important;
-  line-height: var(--eds-line-height-18) $important;
+  line-height: 1.28 $important;
 }
 
 @define-mixin eds-typography-preset-007-bold $important {
@@ -130,7 +130,7 @@
   font-family: var(--eds-font-family-primary) $important;
   font-weight: var(--eds-font-weight-light) $important;
   font-size: var(--eds-font-size-12) $important;
-  line-height: var(--eds-line-height-20) $important;
+  line-height: 1.666 $important;
 }
 
 @define-mixin eds-typography-preset-008-bold $important {
@@ -145,7 +145,7 @@
   font-family: var(--eds-font-family-primary) $important;
   font-weight: var(--eds-font-weight-medium) $important;
   font-size: var(--eds-font-size-12) $important;
-  line-height: var(--eds-line-height-16) $important;
+  line-height: 1.333 $important;
 }
 
 @define-mixin eds-typography-preset-009-bold $important {
@@ -160,7 +160,7 @@
   font-family: var(--eds-font-family-primary) $important;
   font-weight: var(--eds-font-weight-medium) $important;
   font-size: var(--eds-font-size-11) $important;
-  line-height: var(--eds-line-height-14) $important;
+  line-height: 1.27 $important;
 }
 
 @define-mixin eds-typography-preset-010-bold $important {
@@ -175,7 +175,7 @@
   font-family: var(--eds-font-family-primary) $important;
   font-weight: var(--eds-font-weight-medium) $important;
   font-size: var(--eds-font-size-12) $important;
-  line-height: var(--eds-line-height-16) $important;
+  line-height: 1.333 $important;
   text-transform: uppercase $important;
 }
 
@@ -191,7 +191,7 @@
   font-family: var(--eds-font-family-primary) $important;
   font-weight: var(--eds-font-weight-medium) $important;
   font-size: var(--eds-font-size-11) $important;
-  line-height: var(--eds-line-height-14) $important;
+  line-height: 1.27 $important;
   text-transform: uppercase $important;
 }
 
