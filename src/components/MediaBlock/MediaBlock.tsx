@@ -36,9 +36,11 @@ export const MediaBlock: React.FC<Props> = ({
   variant,
   ...other
 }) => {
-  const componentClassName = clsx(styles['media-block'], className, {
-    [styles['media-block--reversed']]: variant === 'reversed',
-  });
+  const componentClassName = clsx(
+    styles['media-block'],
+    className,
+    variant === 'reversed' && styles['media-block--reversed'],
+  );
   return (
     <div className={componentClassName} {...other}>
       <div className={styles['media-block__body']}>{children}</div>

@@ -107,9 +107,11 @@ export const CheckboxFieldItem: React.FC<Props> = ({
     setCheckedState(!checkboxChecked); /* 1 */
   }
 
-  const componentClassName = clsx('checkbox-field__item', className, {
-    [styles['checkbox-field__item--inverted']]: inverted === true,
-  });
+  const componentClassName = clsx(
+    'checkbox-field__item',
+    className,
+    inverted && styles['checkbox-field__item--inverted'],
+  );
   return (
     <li className={componentClassName}>
       <Checkbox

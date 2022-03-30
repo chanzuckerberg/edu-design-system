@@ -47,9 +47,11 @@ export const PageHeader: React.FC<Props> = ({
   right,
   ...other
 }) => {
-  const componentClassName = clsx(styles['page-header'], className, {
-    [styles['page-header--center']]: align === 'center',
-  });
+  const componentClassName = clsx(
+    styles['page-header'],
+    className,
+    align === 'center' && styles['page-header--center'],
+  );
 
   return (
     <div className={componentClassName} {...other}>
