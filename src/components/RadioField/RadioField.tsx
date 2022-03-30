@@ -167,13 +167,15 @@ export const RadioField: React.FC<Props> = ({
     });
   });
 
-  const componentClassName = clsx(styles['radio-field'], className, {
-    [styles['radio-field--inline']]: variant === 'inline',
-    [styles['radio-field--sm']]: size === 'sm',
-    [styles['radio-field--inverted']]: inverted === true,
-    [styles['eds-is-error']]: isError,
-    [styles['eds-is-disabled']]: disabled,
-  });
+  const componentClassName = clsx(
+    styles['radio-field'],
+    className,
+    variant === 'inline' && styles['radio-field--inline'],
+    size === 'sm' && styles['radio-field--sm'],
+    inverted && styles['radio-field--inverted'],
+    isError && styles['eds-is-error'],
+    disabled && styles['eds-is-disabled'],
+  );
   return (
     <fieldset className={componentClassName} id={id} {...other}>
       <Legend

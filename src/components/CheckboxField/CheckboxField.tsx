@@ -105,13 +105,15 @@ export const CheckboxField: React.FC<Props> = ({
     }
   }, [ariaDescribedBy, fieldNote]);
 
-  const componentClassName = clsx(styles['checkbox-field'], className, {
-    [styles['checkbox-field--inline']]: variant === 'inline',
-    [styles['checkbox-field--sm']]: size === 'sm',
-    [styles['checkbox-field--inverted']]: inverted === true,
-    [styles['eds-is-error']]: isError,
-    [styles['eds-is-disabled']]: disabled,
-  });
+  const componentClassName = clsx(
+    styles['checkbox-field'],
+    className,
+    variant === 'inline' && styles['checkbox-field--inline'],
+    size === 'sm' && styles['checkbox-field--sm'],
+    inverted && styles['checkbox-field--inverted'],
+    isError && styles['eds-is-error'],
+    disabled && styles['eds-is-disabled'],
+  );
   return (
     <fieldset className={componentClassName} id={id} {...other}>
       <Legend

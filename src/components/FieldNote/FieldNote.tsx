@@ -42,10 +42,12 @@ export const FieldNote: React.FC<Props> = ({
   children,
   ...other
 }) => {
-  const componentClassName = clsx(styles['field-note'], className, {
-    [styles['field-note--inverted']]: inverted === true,
-    [styles['eds-is-error']]: isError,
-  });
+  const componentClassName = clsx(
+    styles['field-note'],
+    className,
+    inverted && styles['field-note--inverted'],
+    isError && styles['eds-is-error'],
+  );
   return (
     <div
       className={componentClassName}
