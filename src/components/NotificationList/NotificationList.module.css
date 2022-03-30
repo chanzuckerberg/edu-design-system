@@ -23,6 +23,11 @@
   border: 1px solid var(--eds-color-neutral-200); /* TODO */
 }
 
+/**
+* Notification List- is read 
+* 1) When a list item is marked as read, this class is added to enable "is read" styles
+*/
+
 .notification-list__is-read {
   background-color: var(--eds-color-neutral-white); /* TODO */
 }
