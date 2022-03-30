@@ -82,9 +82,11 @@ export const RadioFieldItem: React.FC<Props> = ({
   useEffect(() => {
     setId(id || nanoid());
   }, [id]);
-  const componentClassName = clsx(styles['radio-field__item'], className, {
-    [styles['radio-field__item--inverted']]: inverted === true,
-  });
+  const componentClassName = clsx(
+    styles['radio-field__item'],
+    className,
+    inverted && styles['radio-field__item--inverted'],
+  );
   return (
     <li className={componentClassName} {...other}>
       <Radio

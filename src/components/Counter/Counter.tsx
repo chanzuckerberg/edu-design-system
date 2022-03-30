@@ -145,10 +145,12 @@ export const Counter: React.FC<Props> = ({
     setCountState(e.target.value.replace(/\D/, ''));
   }
 
-  const componentClassName = clsx(styles['counter'], className, {
-    [styles['eds-is-error']]: isError,
-    [styles['eds-is-disabled']]: disabled,
-  });
+  const componentClassName = clsx(
+    styles['counter'],
+    className,
+    isError && styles['eds-is-error'],
+    disabled && styles['eds-is-disabled'],
+  );
   return (
     <div className={componentClassName} {...other}>
       <Label

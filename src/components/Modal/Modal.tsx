@@ -48,7 +48,7 @@ export interface Props {
    * - **lg** results in a modal that is wider than the default
    * - **xl** results in a modal that is wider than the default
    */
-  size?: 'sm' | 'lg';
+  size?: 'sm' | 'lg' | 'xl';
 }
 
 /**
@@ -185,11 +185,13 @@ export const Modal: React.FC<Props> = ({
   const body = oneByType(children, ModalBody);
   const footer = oneByType(children, ModalFooter);
 
-  const componentClassName = clsx(styles['modal'], className, {
-    [styles['modal--sm']]: size === 'sm',
-    [styles['modal--lg']]: size === 'lg',
-    [styles['eds-is-active']]: isActive,
-  });
+  const componentClassName = clsx(
+    styles['modal'],
+    className,
+    size === 'sm' && styles['modal--sm'],
+    size === 'lg' && styles['modal--lg'],
+    isActive && styles['eds-is-active'],
+  );
 
   if (!isMounted) return null;
 
