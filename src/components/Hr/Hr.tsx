@@ -28,7 +28,7 @@ export const Hr: React.FC<Props> = ({ className, size, variant, ...other }) => {
     styles['hr'],
     className,
     size === 'lg' && styles['hr--lg'],
-    size === 'brand' && styles['hr--brand'],
+    variant === 'brand' && styles['hr--brand'],
   );
 
   return <hr className={componentClassName} {...other} />;
