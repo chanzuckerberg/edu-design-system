@@ -23,13 +23,15 @@ These token values are _never to be used_ directly by components; these token va
   font-family: var(--eds-font-family-secondary);
   font-weight: var(--eds-font-weight-bold);
   font-size: var(--eds-font-size-xxl);
-  line-height: var(--eds-line-height-sm-2);
+  line-height: 1.333;
   letter-spacing: normal;
   text-transform: none;
 }
 ```
 
 Just as with other Tier 1 tokens, typography presets shouldn't be used directly by components. Typography presets are mapped to specific semantic usage at the Tier 2 level.
+
+Note: line-height values are [unitless](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height#prefer_unitless_numbers_for_line-height_values) and are specific to each preset, which is why the decision was made to exclude line height values from  tokens. 
 
 ## Tier 2: Typography usage
 
