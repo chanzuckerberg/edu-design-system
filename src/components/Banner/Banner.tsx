@@ -92,8 +92,7 @@ export const Banner: React.FC<Props> = ({
         <Button
           className={styles['banner__close-btn']}
           variant="bare"
-          hideText={true}
-          text={closeButtonText}
+          aria-label={closeButtonText}
           iconName="x"
           iconPosition="after"
           onClick={(e: any) => onDismiss(e)}

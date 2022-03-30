@@ -12,6 +12,5 @@ const Template: Story<Props> = (args) => <Logo {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  src: 'https://via.placeholder.com/200x70',
   alt: 'Learning Platform',
 };

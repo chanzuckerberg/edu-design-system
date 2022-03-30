@@ -157,17 +157,17 @@
 }
 
 /**
- * Button
- */
-.u-theme-typography-button {
-  @mixin eds-theme-typography-button;
-}
-
-/**
  * Small Button
  */
 .u-theme-typography-button-sm {
   @mixin eds-theme-typography-button-sm;
+}
+
+/**
+ * Medium Button
+ */
+.u-theme-typography-button-md {
+  @mixin eds-theme-typography-button-md;
 }
 
 /**
