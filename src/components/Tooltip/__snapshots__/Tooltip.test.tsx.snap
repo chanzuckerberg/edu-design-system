@@ -8,7 +8,7 @@ exports[`<Tooltip /> BottomPlacement story renders snapshot 1`] = `
       class="button trigger--spacing-bottom trigger--spacing-left button--lg"
     >
       <span
-        class="button__text"
+        class="button__children"
       >
         Tooltip trigger
       </span>
@@ -65,7 +65,7 @@ exports[`<Tooltip /> DarkVariant story renders snapshot 1`] = `
       class="button trigger--spacing button--lg"
     >
       <span
-        class="button__text"
+        class="button__children"
       >
         Tooltip trigger
       </span>
@@ -126,7 +126,7 @@ exports[`<Tooltip /> Interactive story renders snapshot 1`] = `
         class="button trigger--spacing button--lg"
       >
         <span
-          class="button__text"
+          class="button__children"
         >
           Hover here to see tooltip after clicking somewhere outside.
         </span>
@@ -184,7 +184,7 @@ exports[`<Tooltip /> LeftPlacement story renders snapshot 1`] = `
       class="button trigger--spacing-top trigger--spacing-bottom trigger--spacing-left-large button--lg"
     >
       <span
-        class="button__text"
+        class="button__children"
       >
         Tooltip trigger
       </span>
@@ -241,7 +241,7 @@ exports[`<Tooltip /> LightVariant story renders snapshot 1`] = `
       class="button trigger--spacing button--lg"
     >
       <span
-        class="button__text"
+        class="button__children"
       >
         Tooltip trigger
       </span>
@@ -298,7 +298,7 @@ exports[`<Tooltip /> LongButtonText story renders snapshot 1`] = `
       class="button trigger--spacing-top button--lg"
     >
       <span
-        class="button__text"
+        class="button__children"
       >
         Tooltip trigger with longer text to test placement
       </span>
@@ -355,7 +355,7 @@ exports[`<Tooltip /> LongText story renders snapshot 1`] = `
       class="button trigger--spacing button--lg"
     >
       <span
-        class="button__text"
+        class="button__children"
       >
         Tooltip trigger
       </span>
@@ -410,7 +410,7 @@ exports[`<Tooltip /> TopPlacement story renders snapshot 1`] = `
       class="button trigger--spacing-top trigger--spacing-left button--lg"
     >
       <span
-        class="button__text"
+        class="button__children"
       >
         Tooltip trigger
       </span>

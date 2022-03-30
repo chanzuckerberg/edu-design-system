@@ -444,7 +444,7 @@ EDS adheres to the following API naming conventions:
 
 ### Text, Labels, Titles
 
-- Default to `text` for short strings of text, such as `<Button text="Click here">` or `<Badge text="Overdue" />`.
+- Default to `text` for short strings of text, such as `<BreadCrumbsItem text="My Courses">` or `<Badge text="Overdue" />`.
 - For headings, default to `title`, such as `<PageHeader title="My Page Title">`.
 - Default to `description` for text that serves as a descriptor, such as `<PageHeader title="Project name" description="Brief overview of the project..." />`
 - For form-related components, use the semantic `label` or `legend` (e.g. `<TextField label="first name" />` and `<RadioField legend="Grade level">`).

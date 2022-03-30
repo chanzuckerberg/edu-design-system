@@ -10,7 +10,7 @@ export const CoursesYear: React.FC = () => (
       <Heading as="h2" size={4}>
         Get ready for your next mentoring check-in with Science Teacher.
       </Heading>
-      <Button variant="primary" text="Begin Pre-Work" />
+      <Button variant="primary">Begin Pre-Work</Button>
     </Panel>
     <Panel>
       <div className="fpo">Year calendar table</div>
