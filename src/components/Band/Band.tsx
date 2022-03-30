@@ -27,9 +27,11 @@ export const Band: React.FC<Props> = ({
   variant,
   ...other
 }) => {
-  const componentClassName = clsx(styles['band'], className, {
-    [styles['band--brand']]: variant === 'brand',
-  });
+  const componentClassName = clsx(
+    styles['band'],
+    className,
+    variant === 'brand' && styles['band--brand'],
+  );
 
   return (
     <div className={componentClassName} {...other}>

@@ -84,9 +84,11 @@ export const Checkbox: React.FC<Props> = ({
     checkboxRef.current.indeterminate = indeterminate;
   });
 
-  const componentClassName = clsx(styles['checkbox'], className, {
-    [styles['checkbox--inverted']]: inverted === true,
-  });
+  const componentClassName = clsx(
+    styles['checkbox'],
+    className,
+    inverted && styles['checkbox--inverted'],
+  );
 
   return (
     <div className={componentClassName} {...other}>
