@@ -16,38 +16,41 @@
       "color": {
         "form": {
           "label": {
-            "foreground": {
+            "text": {
               "@": {
-                "value": "{eds.theme.color.body.foreground.@}"
+                "value": "{eds.theme.color.text.neutral.default.@}"
               },
               "inverted": {
-                "value": "{eds.theme.color.body.foreground.inverted}"
+                "value": "{eds.color.neutral.white}"
               }
             }
           },
           "input": {
             "border": {
               "@": {
-                "value": "{eds.theme.color.neutral.md.border.@}"
+                "value": "{eds.color.neutral.300}"
               },
               "hover": {
-                "value": "{eds.theme.color.neutral.bold.border.@}"
+                "value": "{eds.color.neutral.400}"
               },
               "inverted": {
+                "@": {
+                  "value": "{eds.color.neutral.white}"
+                },
                 "hover": {
-                  "value": "{eds.theme.color.neutral.bold.border.inverted}"
+                  "value": "{eds.color.neutral.white}"
                 }
               },
               "focus": {
                 "@": {
-                  "value": "{eds.theme.color.neutral.bold.border.@}"
+                  "value": "{eds.theme.color.border.neutral.strong.@}"
                 },
                 "inverted": {
-                  "value": "{eds.theme.color.neutral.bold.border.inverted}"
+                  "value": "{eds.color.neutral.white}"
                 }
               },
               "error": {
-                "value": "{eds.color.other.red.700}"
+                "value": "{eds.theme.color.border.utility.error.strong}"
               }
             }
           }
