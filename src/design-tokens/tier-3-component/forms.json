@@ -1,36 +1,58 @@
 {
   "eds": {
     "theme": {
-      "color": {
-        "form": {
+      "form": {
+        "input": {
           "border": {
-            "@": {
-              "value": "{eds.color.neutral.300}"
+            "width": {
+              "value": "{eds.theme.border.width}"
             },
-            "hover": {
-              "value": "{eds.color.neutral.400}"
+            "radius": {
+              "value": "{eds.theme.border.radius}"
             }
-          },
-          "background": {
-            "@": {
-              "value": "{eds.color.neutral.white}"
-            },
-            "hover": {
-              "value": "{eds.color.neutral.100}"
-            }
-          },
-          "label": {
-            "value": "{eds.color.neutral.700}"
           }
         }
       },
-      "form": {
-        "border": {
-          "width": {
-            "value": "{eds.border.width.sm}"
+      "color": {
+        "form": {
+          "label": {
+            "text": {
+              "@": {
+                "value": "{eds.theme.color.text.neutral.default.@}"
+              },
+              "inverted": {
+                "value": "{eds.color.neutral.white}"
+              }
+            }
           },
-          "radius": {
-            "value": "{eds.theme.border.radius}"
+          "input": {
+            "border": {
+              "@": {
+                "value": "{eds.color.neutral.300}"
+              },
+              "hover": {
+                "value": "{eds.color.neutral.400}"
+              },
+              "inverted": {
+                "@": {
+                  "value": "{eds.color.neutral.white}"
+                },
+                "hover": {
+                  "value": "{eds.color.neutral.white}"
+                }
+              },
+              "focus": {
+                "@": {
+                  "value": "{eds.theme.color.border.neutral.strong.@}"
+                },
+                "inverted": {
+                  "value": "{eds.color.neutral.white}"
+                }
+              },
+              "error": {
+                "value": "{eds.theme.color.border.utility.error.strong}"
+              }
+            }
           }
         }
       }

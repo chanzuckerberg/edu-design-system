@@ -12,20 +12,20 @@
                 "value": "{eds.color.neutral.100}"
               }
             },
-            "subtle": {
-              "@": {
-                "value": "{eds.color.neutral.100}"
-              },
-              "hover": {
-                "value": "{eds.color.neutral.200}"
-              }
-            },
             "medium": {
               "@": {
                 "value": "{eds.color.neutral.200}"
               },
               "hover": {
                 "value": "{eds.color.neutral.300}"
+              }
+            },
+            "subtle": {
+              "@": {
+                "value": "{eds.color.neutral.100}"
+              },
+              "hover": {
+                "value": "{eds.color.neutral.200}"
               }
             }
           },
@@ -35,12 +35,7 @@
                 "value": "{eds.color.brand.grape.100}"
               },
               "strong": {
-                "@": {
-                  "value": "{eds.color.brand.grape.600}"
-                },
-                "hover": {
-                  "value": "{eds.color.brand.grape.800}"
-                }
+                "value": "{eds.color.brand.grape.600}"
               }
             }
           },
