@@ -32,11 +32,13 @@ export const Badge: React.FC<Props> = ({
   variant,
   ...other
 }) => {
-  const componentClassName = clsx(styles['badge'], className, {
-    [styles['badge--success']]: variant === 'success',
-    [styles['badge--warning']]: variant === 'warning',
-    [styles['badge--success']]: variant === 'error',
-  });
+  const componentClassName = clsx(
+    styles['badge'],
+    className,
+    variant === 'success' && styles['badge--success'],
+    variant === 'warning' && styles['badge--warning'],
+    variant === 'error' && styles['badge--error'],
+  );
   return (
     <div className={componentClassName} {...other}>
       <span className={styles['badge__text']}>{text}</span>

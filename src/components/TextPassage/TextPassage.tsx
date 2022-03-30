@@ -44,11 +44,13 @@ export const TextPassage: React.FC<Props> = ({
   children,
   ...other
 }) => {
-  const componentClassName = clsx(styles['text-passage'], className, {
-    [styles['text-passage--sm']]: size === 'sm',
-    [styles['text-passage--lg']]: size === 'lg',
-    [styles['text-passage--inverted']]: inverted === true,
-  });
+  const componentClassName = clsx(
+    styles['text-passage'],
+    className,
+    size === 'sm' && styles['text-passage--sm'],
+    size === 'lg' && styles['text-passage--lg'],
+    inverted && styles['text-passage--inverted'],
+  );
 
   return (
     <div className={componentClassName} {...other}>

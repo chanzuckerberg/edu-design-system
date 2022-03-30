@@ -51,9 +51,11 @@ export const Legend: React.FC<Props> = ({
   legendAfter,
   ...other
 }) => {
-  const componentClassName = clsx(styles['legend'], className, {
-    [styles['u-is-vishidden']]: hideLegend,
-  });
+  const componentClassName = clsx(
+    styles['legend'],
+    className,
+    hideLegend && styles['u-is-vishidden'],
+  );
   return (
     <legend className={componentClassName} id={id} {...other}>
       {text}{' '}

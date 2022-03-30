@@ -27,9 +27,11 @@ export const Panel: React.FC<Props> = ({
   align,
   ...other
 }) => {
-  const componentClassName = clsx(styles['panel'], className, {
-    [styles['panel--align-center']]: align === 'center',
-  });
+  const componentClassName = clsx(
+    styles['panel'],
+    className,
+    align === 'center' && styles['panel--align-center'],
+  );
 
   return (
     <div className={componentClassName} {...other}>
