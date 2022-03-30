@@ -8,13 +8,13 @@ exports[`<NotificationList /> Default story renders snapshot 1`] = `
     class="notification-list__item"
   >
     <div
-      class="notification-list__item--content"
+      class="notification-list__content"
     >
       <div
-        class="notification-list__item--title"
+        class="notification-list__title"
       >
         <a
-          class="notification-list__item--link"
+          class="notification-list__link"
           href="#"
         >
           <h6
@@ -30,20 +30,20 @@ exports[`<NotificationList /> Default story renders snapshot 1`] = `
     </div>
     <button
       aria-label="Mark as read"
-      class="notification-list__item--button"
+      class="notification-list__button"
     />
   </li>
   <li
     class="notification-list__item"
   >
     <div
-      class="notification-list__item--content"
+      class="notification-list__content"
     >
       <div
-        class="notification-list__item--title"
+        class="notification-list__title"
       >
         <a
-          class="notification-list__item--link"
+          class="notification-list__link"
           href="#"
         >
           <h6
@@ -59,7 +59,7 @@ exports[`<NotificationList /> Default story renders snapshot 1`] = `
     </div>
     <button
       aria-label="Mark as read"
-      class="notification-list__item--button"
+      class="notification-list__button"
     />
   </li>
 </ul>
@@ -73,13 +73,13 @@ exports[`<NotificationList /> MarkedAsRead story renders snapshot 1`] = `
     class="notification-list__item"
   >
     <div
-      class="notification-list__item--content"
+      class="notification-list__content"
     >
       <div
-        class="notification-list__item--title"
+        class="notification-list__title"
       >
         <a
-          class="notification-list__item--link"
+          class="notification-list__link"
           href="#"
         >
           <h6
@@ -95,20 +95,20 @@ exports[`<NotificationList /> MarkedAsRead story renders snapshot 1`] = `
     </div>
     <button
       aria-label="Mark as read"
-      class="notification-list__item--button"
+      class="notification-list__button"
     />
   </li>
   <li
     class="notification-list__item"
   >
     <div
-      class="notification-list__item--content"
+      class="notification-list__content"
     >
       <div
-        class="notification-list__item--title"
+        class="notification-list__title"
       >
         <a
-          class="notification-list__item--link"
+          class="notification-list__link"
           href="#"
         >
           <h6
@@ -124,7 +124,7 @@ exports[`<NotificationList /> MarkedAsRead story renders snapshot 1`] = `
     </div>
     <button
       aria-label="Mark as read"
-      class="notification-list__item--button"
+      class="notification-list__button"
     />
   </li>
 </ul>
