@@ -61,3 +61,11 @@
   margin-left: var(--eds-size-1);
   margin-right: var(--eds-size-1);
 }
+
+/**
+ * Last breadcrumbs item icon
+ * 1) Don't display the last item icon
+ */
+.breadcrumbs__item:last-child .breadcrumbs__icon.breadcrumbs__icon {
+  display: none;
+}

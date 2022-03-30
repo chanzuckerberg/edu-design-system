@@ -1,0 +1,185 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #TABS
+\*------------------------------------*/
+
+/**
+ * 1) List of of links where each link toggles open associated information
+ */
+.list-detail {
+  background: var(--eds-color-neutral-white); /* TODO */
+  border-width: var(--eds-theme-border-width);
+  border-style: solid;
+  border-color: var(--eds-theme-color-neutral-subtle-border);
+  border-radius: var(--eds-theme-border-radius);
+
+  @media all and (min-width: $eds-bp-lg) {
+    display: flex;
+  }
+}
+
+/**
+ * List detail header
+ * 1) Contains the tab list
+ * 2) Tab overflow behavior
+ */
+.list-detail__header {
+  width: 100%;
+  position: relative;
+  padding: var(--eds-size-2);
+
+  @media all and (min-width: $eds-bp-lg) {
+    padding-right: var(--eds-size-4);
+    padding-left: var(--eds-size-6);
+    width: 20rem;
+  }
+}
+
+/**
+ * List detail body
+ * TODO: Tokenize the box shadow
+ * 1) Take up the rest of the space
+ */
+.list-detail__body {
+  padding: var(--eds-size-2);
+
+  @media all and (min-width: $eds-bp-lg) {
+    flex: 1; /* 1 */
+    padding-right: var(--eds-size-8);
+    padding-left: var(--eds-size-8);
+    box-shadow: -6px 0px 10px -2px var(--eds-theme-color-neutral-subtle-border); /* 1 */
+  }
+}
+
+/**
+ * List detail list
+ * 1) Actual unordered list of list-detail
+ * 2) Set to display flex to place list-detail side by side
+ */
+.list-detail__list {
+  @mixin reset;
+  list-style: none;
+  @mixin eds-theme-typography-body-text-md;
+
+  @media all and (min-width: $eds-bp-lg) {
+    position: sticky;
+    top: var(--eds-size-2);
+  }
+}
+
+/**
+ * List detail item
+ * 1) Flex shrink 0 keeps list-detail from expanding to fill up the space of the container
+ */
+.list-detail__item {
+  position: relative;
+  flex-shrink: 0; /* 1 */
+  padding-bottom: var(--eds-size-4);
+
+  /**
+  * List detail item after
+  * 1) Line between items that shouldn't link out unliike the bullet
+  */
+  &:after {
+    content: '';
+    position: absolute;
+    top: var(--eds-size-1-and-half);
+    left: 4px;
+    width: 1px;
+    height: 100%;
+    background: var(--eds-theme-color-neutral-md-background);
+    border-radius: 50%;
+  }
+
+  /**
+  * Last list detail item
+  */
+  &:last-child {
+    padding-bottom: 0;
+  }
+
+  /**
+  * List list detail item after
+  * 1) Don't add a line between items
+  */
+  &:last-child:after {
+    content: none;
+  }
+}
+
+/**
+ * List detail link
+ */
+.list-detail__link {
+  position: relative;
+  display: flex;
+  text-decoration: none;
+  color: var(--eds-theme-color-neutral-subtle-foreground);
+  cursor: pointer;
+  transition: color var(--eds-anim-fade-quick) var(--eds-anim-ease),
+    box-shadow var(--eds-anim-fade-quick) var(--eds-anim-ease),
+    background-color var(--eds-anim-fade-quick) var(--eds-anim-ease);
+
+  &:focus-visible {
+    @mixin focus;
+  }
+
+  /**
+   * List detail link within active list-detail item
+   */
+  .list-detail__item.eds-is-active & {
+    @mixin eds-theme-typography-body-text-md;
+    color: var(--eds-theme-color-body-foreground);
+  }
+}
+
+.list-detail__link-left {
+  /**
+   * Before pseudoelement bullet
+   * 1) Set to 9px to center the border
+   */
+  &:before {
+    content: '';
+    flex-shrink: 0;
+    margin-right: var(--eds-size-2);
+    display: block;
+    position: relative;
+    top: var(--eds-size-1);
+    height: 9px; /* 1 */
+    width: 9px; /* 1 */
+    background: var(--eds-theme-color-neutral-md-background);
+    border-radius: 50%;
+  }
+}
+
+/**
+* Success list detail item
+* 1) Remove the bullet since the icon will take its place
+*/
+.list-detail__item--success .list-detail__link-left {
+  &:before {
+    content: none; /* 1 */
+  }
+}
+
+/**
+* List detail icon
+* 1) Used so the transparent icon doesn't show the line behind. TODO: Map to tier 2
+*/
+.list-detail__icon {
+  position: relative;
+  left: -5px;
+  height: var(--eds-size-2-and-half);
+  width: var(--eds-size-2-and-half);
+  margin-right: var(--eds-size-half);
+  background: var(--eds-color-neutral-white); /* 1*/
+  z-index: var(--eds-z-index-100);
+
+  /**
+  * List detail icon within success list detail item
+  */
+  .list-detail__item--success & {
+    fill: var(--eds-theme-color-utility-success-foreground);
+  }
+}
