@@ -4,7 +4,6 @@ import styles from './GlobalHeader.module.css';
 import {
   Header,
   Logo,
-  NavContainer,
   PrimaryNav,
   PrimaryNavItem,
   Button,
