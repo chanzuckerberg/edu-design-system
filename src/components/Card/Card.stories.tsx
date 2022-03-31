@@ -1,6 +1,6 @@
 import { Meta } from '@storybook/react';
 import React from 'react';
-import { Card, Props } from './Card';
+import { Card } from './Card';
 import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';
 import CardBody from '../CardBody';
