@@ -26,9 +26,11 @@ export const Card: React.FC<Props> = ({
   inverted,
   ...other
 }) => {
-  const componentClassName = clsx(styles['card'], className, {
-    [styles['card--inverted']]: inverted,
-  });
+  const componentClassName = clsx(
+    styles['card'],
+    className,
+    inverted && styles['card--inverted'],
+  );
   return (
     <div className={componentClassName} {...other}>
       {children}

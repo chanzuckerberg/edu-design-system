@@ -35,10 +35,7 @@ export class TokenSpecimen extends Component {
           style={this.props.inlineStyles}
           contentEditable
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+          Almost before we knew it, we had left the ground.
         </div>
       );
     } else if (this.props.variant == 'animation-fade') {

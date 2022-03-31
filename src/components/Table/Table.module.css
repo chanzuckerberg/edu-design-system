@@ -128,7 +128,7 @@
  */
 .table__cell {
   padding: var(--eds-size-2) var(--eds-size-1);
-  @mixin eds-theme-typography-data-text;
+  @mixin eds-theme-typography-kicker-sm;
 
   /**
      * Condensed table
@@ -146,7 +146,7 @@
     position: relative;
     padding: var(--eds-size-2) var(--eds-size-1-and-half) var(--eds-size-2)
       var(--eds-size-1);
-    @mixin eds-theme-typography-data-heading;
+    @mixin eds-theme-typography-kicker-sm;
     border-bottom-width: var(--eds-theme-border-width);
     border-bottom-style: solid;
     border-bottom-color: var(--eds-theme-color-neutral-subtle-border);
@@ -194,7 +194,7 @@
     &:before {
       content: attr(data-heading); /* 1 */
       display: block;
-      @mixin eds-theme-typography-body-text-bold;
+      @mixin eds-theme-typography-body-text-md;
 
       @media all and (min-width: $eds-bp-md) {
         content: none; /* 2 */
@@ -327,13 +327,13 @@
   padding-top: 0;
   padding-bottom: 0;
   text-align: left;
-  @mixin eds-theme-typography-data-heading;
+  @mixin eds-theme-typography-kicker-sm;
 
   @media all and (min-width: $eds-bp-md) {
     width: 60%;
     padding-top: var(--eds-size-2);
     padding-bottom: var(--eds-size-2);
-    @mixin eds-theme-typography-data-text;
+    @mixin eds-theme-typography-kicker-sm;
   }
 }
 
