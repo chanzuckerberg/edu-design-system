@@ -396,7 +396,7 @@ const [state, setState] = useState<State>('initial value');
 `useEffect()` hooks do not require any typing. TypeScript expects them to either return nothing or a Destructor-typed function (a function that cleans up any side effects and returns void.)
 
 #### useRef()
-`useRef()` hooks access underlying DOM elements to perform imperative actions. The resulting `ref` object can either be *mutable* or *not mutable*. (If the value store in its' `.current` property may be changed, the ref needs to be `mutable`.) Explictly convey the intended mutability status of each `ref` by using either `React.MutableObject` and `React.RefObject`, in a generic type definition. For mutable refs, use a union with `null` when initializing the ref; otherwise, TypeScript will complain when you change the value of `.current`. Similarly, *do not* create a union with `null` for non-mutable refs.
+`useRef()` hooks access underlying DOM elements to perform imperative actions. The resulting `ref` object can either be *mutable* or *not mutable*. (If the value store in its' `.current` property may be changed, the ref needs to be `mutable`.) Explictly convey the intended mutability status of each `ref` by using either `React.MutableObject` and `React.RefObject`, in a generic type definition. 
 
 For consistency, include `MutableRefObject` and `RefObject` with your import statements.
 
