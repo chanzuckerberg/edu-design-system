@@ -19,7 +19,7 @@
     "build:tokens": "node ./style-dictionary.config.js",
     "build:icons": "make-dir dist/icons && svg-sprite-generate -d src/icons/ -o dist/icons/spritemap.svg",
     "build:css": "postcss \"src/components/**/*.css\" --dir dist/ --base src/ --verbose",
-    "build:js": "tsc",
+    "build:js": "tsc --project tsconfig.build.json",
     "build:storybook": "build-storybook -s public",
     "commit": "./node_modules/.bin/cz",
     "copy-to-dist": "copyfiles -u 1 src/fonts/* src/static/* src/icons/**/* dist && yarn copy-tokens-to-dist",
