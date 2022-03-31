@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 import React, { ReactNode, useState } from 'react';
 import styles from './Toast.module.css';
-import { Button } from '../Button/Button';
-import { Icon } from '../Icon/Icon';
+import Button from '../Button';
+import Icon from '../Icon';
 
 export interface Props {
   /**

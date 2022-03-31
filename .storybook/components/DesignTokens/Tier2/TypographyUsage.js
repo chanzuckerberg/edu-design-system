@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
-<<<<<<< HEAD
-import { Grid, Section } from '../../../../src';
-=======
 import { Grid, GridItem, Section, Hr } from '../../../../src';
 import styles from '../../../../src/components/Utilities/TypographyUsage.module.css';
->>>>>>> 7043947d (feat(typography): token updates and assignments (#908))
 import { TokenSpecimen } from '../../TokenSpecimen/TokenSpecimen';
 
 export class Tier2TypographyUsage extends Component {

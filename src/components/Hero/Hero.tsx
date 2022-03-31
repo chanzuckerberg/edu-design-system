@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import styles from './Hero.module.css';
-import { LayoutContainer } from '../LayoutContainer/LayoutContainer';
+import LayoutContainer from '../LayoutContainer';
 
 export interface Props {
   /**

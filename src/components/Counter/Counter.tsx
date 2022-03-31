@@ -2,10 +2,10 @@ import clsx from 'clsx';
 import { nanoid } from 'nanoid';
 import React, { ReactNode, useEffect, useState } from 'react';
 import styles from './Counter.module.css';
-import { Button } from '../Button/Button';
-import { FieldNote } from '../FieldNote/FieldNote';
-import { Label } from '../Label/Label';
-import { TextInput } from '../TextInput/TextInput';
+import Button from '../Button';
+import FieldNote from '../FieldNote';
+import Label from '../Label';
+import TextInput from '../TextInput';
 
 export interface Props {
   /**

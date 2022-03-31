@@ -5,9 +5,9 @@ import FocusLock from 'react-focus-lock';
 import { Portal } from 'react-portal';
 import styles from './Drawer.module.css';
 import { ESCAPE_KEYCODE } from '../../util/keycodes';
-import { DrawerBody } from '../DrawerBody/DrawerBody';
-import { DrawerFooter } from '../DrawerFooter/DrawerFooter';
-import { DrawerHeader } from '../DrawerHeader/DrawerHeader';
+import DrawerBody from '../DrawerBody';
+import DrawerFooter from '../DrawerFooter';
+import DrawerHeader from '../DrawerHeader';
 
 export interface Props {
   /**

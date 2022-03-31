@@ -2,7 +2,7 @@ import { Story, Meta } from '@storybook/react';
 import React from 'react';
 
 import { UtilityNav, Props } from './UtilityNav';
-import { UtilityNavItem } from '../UtilityNavItem/UtilityNavItem';
+import UtilityNavItem from '../UtilityNavItem';
 
 export default {
   title: 'Molecules/Navigation/UtilityNav',
