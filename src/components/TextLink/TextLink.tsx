@@ -55,9 +55,11 @@ export const TextLink = React.forwardRef<HTMLAnchorElement, Props>(
     },
     ref,
   ) {
-    const componentClassName = clsx(styles['text-link'], className, {
-      [styles['text-link--inverted']]: inverted === true,
-    });
+    const componentClassName = clsx(
+      styles['text-link'],
+      className,
+      inverted && styles['text-link--inverted'],
+    );
     return (
       <a
         className={componentClassName}

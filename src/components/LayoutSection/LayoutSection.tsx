@@ -31,11 +31,15 @@ export const LayoutSection: React.FC<Props> = ({
   region,
   ...other
 }) => {
-  const componentClassName = clsx(styles['layout__section'], className, {
-    [styles['layout__section--main']]: region === 'main',
-    [styles['layout__section--sidebar']]: region === 'sidebar',
-    [styles['layout-section--expandable']]: behavior === 'expandable',
-  });
+
+  const componentClassName = clsx(
+    styles['layout__section'],
+    className,
+    region === 'main' && styles['layout__section--main'],
+    region === 'sidebar' && styles['layout__section--sidebar'],
+    behavior === 'expandable' && [styles['layout-section--expandable']]
+  );
+
   return (
     <div className={componentClassName} {...other}>
       {children}

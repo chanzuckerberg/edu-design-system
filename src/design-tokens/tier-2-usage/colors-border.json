@@ -1,0 +1,86 @@
+{
+  "eds": {
+    "theme": {
+      "color": {
+        "border": {
+          "neutral": {
+            "default": {
+              "@": {
+                "value": "{eds.color.neutral.300}"
+              },
+              "hover": {
+                "value": "{eds.color.neutral.400}"
+              }
+            },
+            "strong": {
+              "@": {
+                "value": "{eds.color.neutral.500}"
+              },
+              "hover": {
+                "value": "{eds.color.neutral.600}"
+              }
+            },
+            "subtle": {
+              "@": {
+                "value": "{eds.color.neutral.200}"
+              },
+              "hover": {
+                "value": "{eds.color.neutral.300}"
+              }
+            }
+          },
+          "brand": {
+            "primary": {
+              "@": {
+                "value": "{eds.color.brand.grape.300}"
+              },
+              "hover": {
+                "value": "{eds.color.brand.grape.400}"
+              }
+            }
+          },
+          "utility": {
+            "success": {
+              "default": {
+                "value": "{eds.color.other.mint.300}"
+              },
+              "strong": {
+                "value": "{eds.color.other.mint.500}"
+              }
+            },
+            "warning": {
+              "default": {
+                "value": "{eds.color.other.orange.300}"
+              },
+              "strong": {
+                "value": "{eds.color.other.orange.500}"
+              }
+            },
+            "error": {
+              "default": {
+                "value": "{eds.color.other.ruby.300}"
+              },
+              "strong": {
+                "value": "{eds.color.other.ruby.500}"
+              }
+            }
+          },
+          "grade": {
+            "complete": {
+              "value": "{eds.color.other.mint.300}"
+            },
+            "revise": {
+              "value": "{eds.color.other.orange.100}"
+            },
+            "stop": {
+              "value": "{eds.color.other.ruby.300}"
+            }
+          },
+          "disabled": {
+            "value": "{eds.color.neutral.300}"
+          }
+        }
+      }
+    }
+  }
+}

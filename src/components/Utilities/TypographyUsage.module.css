@@ -1,61 +1,151 @@
 @import '../../design-tokens/mixins.css';
 
 /*------------------------------------*\
-    #TYPOGRAPHY USAGE UTILITY CLASSES
+  #TYPOGRAPHY USAGE UTILITY CLASSES
 \*------------------------------------*/
 
 /**
  *  Utility classes to apply typography usage mixins to elements
  */
 
+.u-theme-typography-headline-lg {
+  @mixin eds-typography-preset-001-bold;
+}
+
+.u-theme-typography-headline-md {
+  @mixin eds-typography-preset-002-bold;
+}
+
+.u-theme-typography-headline-sm {
+  @mixin eds-typography-preset-003-bold;
+}
+
+.u-theme-typography-title-md {
+  @mixin eds-typography-preset-004-bold;
+}
+
+.u-theme-typography-title-sm {
+  @mixin eds-typography-preset-005-bold;
+}
+
+.u-theme-typography-label-lg-subtle {
+  @mixin eds-typography-preset-005;
+}
+
+.u-theme-typography-label-md-subtle {
+  @mixin eds-typography-preset-007;
+}
+
+.u-theme-typography-label-md {
+  @mixin eds-typography-preset-007-bold;
+}
+
+.u-theme-typography-label-sm {
+  @mixin eds-typography-preset-009-bold;
+}
+
+.u-theme-typography-body-text-md {
+  @mixin eds-typography-preset-005-light;
+}
+
+.u-theme-typography-body-text-sm {
+  @mixin eds-typography-preset-006;
+}
+
+.u-theme-typography-body-text-xs {
+  @mixin eds-typography-preset-008;
+}
+
+.u-theme-typography-caption-text-lg {
+  @mixin eds-typography-preset-006;
+}
+
+.u-theme-typography-caption-text-md {
+  @mixin eds-typography-preset-008;
+}
+
+.u-theme-typography-caption-text-sm {
+  @mixin eds-typography-preset-010;
+}
+
+.u-theme-typography-button-label {
+  @mixin eds-typography-preset-006-bold;
+}
+
+.u-theme-typography-form-label {
+  @mixin eds-typography-preset-006-bold;
+}
+
+.u-theme-typography-form-input {
+  @mixin eds-typography-preset-005;
+}
+
+.u-theme-typography-kicker {
+  @mixin eds-typography-preset-011-bold;
+}
+
+.u-theme-typography-kicker-sm {
+  @mixin eds-typography-preset-012-bold;
+}
+
+.u-theme-typography-tag {
+  @mixin eds-typography-preset-009-bold;
+}
+
+
 /**
- * Body text 
+ * Legacy utility classes that aren't a part of the new
+ * design system.
+ */
+
+/**
+ * Body text
  */
 .u-theme-typography-body-text {
-  @mixin eds-theme-typography-body-text;
+  @mixin eds-theme-typography-body-text-md;
 }
 
 /**
- * Body text bold 
+ * Body text bold
  */
 .u-theme-typography-body-text-bold {
-  @mixin eds-theme-typography-body-text-bold;
+  @mixin eds-theme-typography-body-text-md;
 }
 
 /**
  * Body text sm
  * 1) Used for small body copy such as footnotes and fine print
  */
-.u-theme-typography-body-text-sm {
+/* .u-theme-typography-body-text-sm {
   @mixin eds-theme-typography-body-text-sm;
-}
+} */
 
 /**
  *  Body text sm bold
  */
 .u-theme-typography-body-text-sm-bold {
-  @mixin eds-theme-typography-body-text-sm-bold;
+  @mixin eds-theme-typography-body-text-sm;
 }
 
 /**
  * Body text xs
  */
-.u-theme-typography-body-text-xs {
+/* .u-theme-typography-body-text-xs {
   @mixin eds-theme-typography-body-text-xs;
-}
+} */
 
 /**
  *  Body text xs bold
  */
 .u-theme-typography-body-text-xs-bold {
-  @mixin eds-theme-typography-body-text-xs-bold;
+  @mixin eds-theme-typography-body-text-xs;
 }
 
 /**
  *  Body text lg
  */
 .u-theme-typography-body-text-lg {
-  @mixin eds-theme-typography-body-text-lg;
+  @mixin eds-theme-typography-body-text-md;
 }
 
 /**
@@ -110,15 +200,15 @@
 /**
  * Kicker
  */
-.u-theme-typography-kicker {
+/* .u-theme-typography-kicker {
   @mixin eds-theme-typography-kicker;
-}
+} */
 
 /**
  * Data heading
  */
 .u-theme-typography-data-heading {
-  @mixin eds-theme-typography-data-heading;
+  @mixin eds-theme-typography-kicker-sm;
 }
 
 /**
@@ -132,7 +222,7 @@
  * Data text
  */
 .u-theme-typography-data-text {
-  @mixin eds-theme-typography-data-text;
+  @mixin eds-theme-typography-kicker-sm;
 }
 
 /**
@@ -145,41 +235,41 @@
 /**
  * Form label
  */
-.u-theme-typography-form-label {
+/* .u-theme-typography-form-label {
   @mixin eds-theme-typography-form-label;
-}
+} */
 
 /**
- * Form input 
+ * Form input
  */
-.u-theme-typography-form-input {
+/* .u-theme-typography-form-input {
   @mixin eds-theme-typography-form-input;
-}
+} */
 
 /**
  * Small Button
  */
 .u-theme-typography-button-sm {
-  @mixin eds-theme-typography-button-sm;
+  @mixin eds-theme-typography-button-label;
 }
 
 /**
  * Medium Button
  */
 .u-theme-typography-button-md {
-  @mixin eds-theme-typography-button-md;
+  @mixin eds-theme-typography-button-label;
 }
 
 /**
  * Large Button
  */
 .u-theme-typography-button-lg {
-  @mixin eds-theme-typography-button-lg;
+  @mixin eds-theme-typography-button-label;
 }
 
 /**
  *  Tag
  */
-.u-theme-typography-tag {
+/* .u-theme-typography-tag {
   @mixin eds-theme-typography-tag;
-}
+} */

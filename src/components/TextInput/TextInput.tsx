@@ -134,9 +134,11 @@ export const TextInput: React.FC<Props> = ({
   defaultValue,
   ...other
 }) => {
-  const componentClassName = clsx(styles['text-input'], className, {
-    [styles['eds-is-disabled']]: disabled,
-  });
+  const componentClassName = clsx(
+    styles['text-input'],
+    className,
+    disabled && styles['eds-is-disabled'],
+  );
 
   return (
     <input

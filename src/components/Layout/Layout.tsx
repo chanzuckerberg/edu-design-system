@@ -40,11 +40,14 @@ export const Layout: React.FC<Props> = ({
   expandable,
   ...other
 }) => {
-  const componentClassName = clsx(styles['layout'], className, {
-    [styles['layout--narrow-sidebar']]: variant === 'narrow-sidebar',
-    [styles['layout--fixed-sidebar']]: behavior === 'fixed-sidebar',
-    [styles['layout--expandable']]: expandable === true,
-  });
+  const componentClassName = clsx(
+    styles['layout'],
+    className,
+    variant === 'right-sidebar' && styles['layout--right-sidebar'],
+    behavior === 'fixed-sidebar' && styles['layout--fixed-sidebar'],
+    expandable && [styles['layout--expandable']]
+  );
+
   return (
     <div className={componentClassName} {...other}>
       {children}

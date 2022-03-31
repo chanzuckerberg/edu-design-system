@@ -30,13 +30,13 @@ export interface Props {
  * Primary UI component for user interaction
  */
 export const PrimaryNavItem = React.forwardRef<HTMLLIElement, Props>(
-  function PrimaryNavItem(
-    { className, text, href, isActive, iconName, ...other },
-    ref,
-  ) {
-    const componentClassName = clsx(styles['primary-nav__item'], className, {
-      [styles['eds-is-active']]: isActive === true,
-    });
+
+  function PrimaryNavItem({ className, text, href, isActive, iconName, ...other }, ref) {
+    const componentClassName = clsx(
+      styles['primary-nav__item'],
+      className,
+      isActive && styles['eds-is-active'],
+    );
 
     const TagName = createTagName();
 

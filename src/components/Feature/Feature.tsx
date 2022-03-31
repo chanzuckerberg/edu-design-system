@@ -41,9 +41,11 @@ export const Feature: React.FC<Props> = ({
   inverted,
   ...other
 }) => {
-  const componentClassName = clsx(styles['feature'], className, {
-    [styles['feature--inverted']]: inverted === true,
-  });
+  const componentClassName = clsx(
+    styles['feature'],
+    className,
+    inverted && styles['feature--inverted'],
+  );
   return (
     <div className={componentClassName} {...other}>
       <div className={styles['feature__body']}>{children}</div>

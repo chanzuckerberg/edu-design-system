@@ -110,7 +110,7 @@
   }
 
   /**
-     * Horizontal rule 
+     * Horizontal rule
      */
   hr {
     border-width: var(--eds-theme-border-width);
@@ -132,7 +132,7 @@
 }
 
 .text-passage--lg {
-  @mixin eds-theme-typography-body-text-lg;
+  @mixin eds-theme-typography-body-text-md;
 
   ul {
     margin-left: var(--eds-size-3);
