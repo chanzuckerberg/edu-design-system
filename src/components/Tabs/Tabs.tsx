@@ -15,7 +15,7 @@ import {
   R_ARROW_KEYCODE,
   D_ARROW_KEYCODE,
 } from '../../util/keycodes';
-import { Tab } from '../Tab/Tab';
+import Tab from '../Tab';
 
 export interface Props {
   /**

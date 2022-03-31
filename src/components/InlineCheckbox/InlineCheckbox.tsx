@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import { nanoid } from 'nanoid';
 import React, { ReactNode, useEffect, useRef, useState } from 'react';
 import styles from './InlineCheckbox.module.css';
-import { Checkbox } from '../Checkbox/Checkbox';
+import Checkbox from '../Checkbox';
 
 export interface Props {
   /**

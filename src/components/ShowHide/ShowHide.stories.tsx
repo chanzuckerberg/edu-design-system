@@ -2,7 +2,7 @@ import { Story, Meta } from '@storybook/react';
 import React from 'react';
 
 import { ShowHide, Props } from './ShowHide';
-import { Button } from '../Button/Button';
+import Button from '../Button';
 
 export default {
   title: 'Molecules/Interactive/ShowHide',

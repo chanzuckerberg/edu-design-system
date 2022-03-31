@@ -2,9 +2,9 @@ import { Story, Meta } from '@storybook/react';
 import React from 'react';
 
 import { Accordion, Props } from './Accordion';
-import { AccordionPanel } from '../AccordionPanel/AccordionPanel';
-import { Heading } from '../Heading/Heading';
-import { TextPassage } from '../TextPassage/TextPassage';
+import AccordionPanel from '../AccordionPanel';
+import Heading from '../Heading';
+import TextPassage from '../TextPassage';
 
 export default {
   title: 'Organisms/Interactive/Accordion',

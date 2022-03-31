@@ -8,9 +8,9 @@ import React, {
 } from 'react';
 import { allByType } from 'react-children-by-type';
 import styles from './RadioField.module.css';
-import { FieldNote } from '../FieldNote/FieldNote';
-import { Legend } from '../Legend/Legend';
-import { RadioFieldItem } from '../RadioFieldItem/RadioFieldItem';
+import FieldNote from '../FieldNote';
+import Legend from '../Legend';
+import RadioFieldItem from '../RadioFieldItem';
 
 export interface Props {
   /**
