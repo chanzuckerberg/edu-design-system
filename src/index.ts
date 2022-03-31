@@ -47,6 +47,8 @@ export { default as LayoutLinelengthContainer } from './components/LayoutLinelen
 export { default as LayoutSection } from './components/LayoutSection';
 export { default as Legend } from './components/Legend';
 export { default as LinkList } from './components/LinkList';
+export { default as ListDetail } from './components/ListDetail';
+export { default as ListDetailPanel } from './components/ListDetailPanel';
 export { default as LoadingIndicator } from './components/LoadingIndicator';
 export { default as Logo } from './components/Logo';
 export { default as LogoImage } from './components/LogoImage';
