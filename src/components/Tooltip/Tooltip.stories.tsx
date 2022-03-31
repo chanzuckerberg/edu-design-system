@@ -2,7 +2,9 @@ import type { Meta, Story, StoryObj } from '@storybook/react';
 import { within, userEvent } from '@storybook/testing-library';
 import clsx from 'clsx';
 import React from 'react';
-import {Tooltip} from './Tooltip';
+import { Tooltip } from './Tooltip';
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore story files not type-checked
 import styles from './Tooltip.stories.module.css';
 import { Button } from '../Button/Button';
 
