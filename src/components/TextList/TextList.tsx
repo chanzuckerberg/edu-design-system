@@ -35,7 +35,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const TextList: React.FC<Props> = ({
+export const TextList = ({
   children,
   className,
   size,
@@ -43,7 +43,7 @@ export const TextList: React.FC<Props> = ({
   inverted,
   variant,
   ...other
-}) => {
+}: Props) => {
   const componentClassName = clsx(
     styles['text-list'],
     className,

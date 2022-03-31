@@ -15,11 +15,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const DrawerBody: React.FC<Props> = ({
-  children,
-  className,
-  ...other
-}) => {
+export const DrawerBody = ({ children, className, ...other }: Props) => {
   const componentClassName = clsx('drawer__body', className, {});
   return (
     <div className={componentClassName} {...other}>

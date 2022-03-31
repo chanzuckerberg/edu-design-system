@@ -14,7 +14,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const Avatar: React.FC<Props> = ({ className, ...other }) => {
+export const Avatar = ({ className, ...other }: Props) => {
   const componentClassName = clsx(styles['avatar'], className, {});
   return (
     <div className={componentClassName} {...other}>

@@ -55,7 +55,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const CheckboxFieldItem: React.FC<Props> = ({
+export const CheckboxFieldItem = ({
   className,
   id,
   name,
@@ -66,7 +66,7 @@ export const CheckboxFieldItem: React.FC<Props> = ({
   text,
   inverted,
   ...other
-}) => {
+}: Props) => {
   /**
    * Initialize state and setup automatic id generator if not provided by user
    */

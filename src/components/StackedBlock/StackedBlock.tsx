@@ -16,11 +16,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const StackedBlock: React.FC<Props> = ({
-  children,
-  className,
-  ...other
-}) => {
+export const StackedBlock = ({ children, className, ...other }: Props) => {
   const componentClassName = clsx(styles['stacked-block'], className, {});
   return (
     <div className={componentClassName} {...other}>

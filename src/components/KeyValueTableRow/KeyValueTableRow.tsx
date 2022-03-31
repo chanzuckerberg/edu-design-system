@@ -22,12 +22,12 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const KeyValueTableRow: React.FC<Props> = ({
+export const KeyValueTableRow = ({
   className,
   rowKey,
   rowValue,
   ...other
-}) => {
+}: Props) => {
   const componentClassName = clsx('key-value-table__row', className, {});
   return (
     <tr className={componentClassName} {...other}>

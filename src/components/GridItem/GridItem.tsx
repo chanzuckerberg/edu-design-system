@@ -16,11 +16,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const GridItem: React.FC<Props> = ({
-  children,
-  className,
-  ...other
-}) => {
+export const GridItem = ({ children, className, ...other }: Props) => {
   const componentClassName = clsx(styles['grid__item'], className, {});
 
   return (

@@ -16,11 +16,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const TileBody: React.FC<Props> = ({
-  children,
-  className,
-  ...other
-}) => {
+export const TileBody = ({ children, className, ...other }: Props) => {
   const componentClassName = clsx(styles['tile__body'], className, {});
   return (
     <div className={componentClassName} {...other}>
