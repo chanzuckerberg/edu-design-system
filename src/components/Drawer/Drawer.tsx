@@ -45,7 +45,7 @@ export interface Props {
   /**
    * Handler to be called when the drawer is being closed (by ESCAPE / clicking X / clicking outside)
    */
-  onClose?: () => void;
+  onClose?: (e?: any) => void;
 }
 
 /**

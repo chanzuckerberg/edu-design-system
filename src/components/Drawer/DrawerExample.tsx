@@ -3,22 +3,10 @@ import React, { ReactNode, useState, useRef, MutableRefObject } from 'react';
 import { Drawer } from './Drawer';
 import { Button } from '../Button/Button';
 import { ButtonGroup } from '../ButtonGroup/ButtonGroup';
-import { DefinitionList } from '../DefinitionList/DefinitionList';
-import { DefinitionListItem } from '../DefinitionListItem/DefinitionListItem';
 import { DrawerBody } from '../DrawerBody/DrawerBody';
 import { DrawerFooter } from '../DrawerFooter/DrawerFooter';
 import { DrawerHeader } from '../DrawerHeader/DrawerHeader';
 import { Heading } from '../Heading/Heading';
-import { Hr } from '../Hr/Hr';
-import { RadioField } from '../RadioField/RadioField';
-import { RadioFieldItem } from '../RadioFieldItem/RadioFieldItem';
-import { SelectField } from '../SelectField/SelectField';
-import { Tab } from '../Tab/Tab';
-import { Tabs } from '../Tabs/Tabs';
-import { TextField } from '../TextField/TextField';
-import { TextLink } from '../TextLink/TextLink';
-import { TextPassage } from '../TextPassage/TextPassage';
-import { TextareaField } from '../TextareaField/TextareaField';
 
 export interface Props {
   /**
@@ -34,7 +22,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const DrawerExample = ({ children, className, ...other }: Props) => {
+export const DrawerExample = ({ className, ...other }: Props) => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const drawerButton = useRef() as MutableRefObject<HTMLSpanElement>;
 
@@ -61,7 +49,7 @@ export const DrawerExample = ({ children, className, ...other }: Props) => {
       <Button
         text="Open Drawer"
         onClick={openDrawerExample}
-        buttonRef={drawerButton}
+        ref={drawerButton}
       />
 
       <Drawer
