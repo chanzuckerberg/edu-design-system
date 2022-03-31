@@ -16,7 +16,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const Tags: React.FC<Props> = ({ children, className, ...other }) => {
+export const Tags = ({ children, className, ...other }: Props) => {
   const componentClassName = clsx(styles['tags'], className, {});
   return (
     <ul className={componentClassName} {...other}>

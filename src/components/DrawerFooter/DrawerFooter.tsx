@@ -15,11 +15,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const DrawerFooter: React.FC<Props> = ({
-  children,
-  className,
-  ...other
-}) => {
+export const DrawerFooter = ({ children, className, ...other }: Props) => {
   const componentClassName = clsx('drawer__footer', className, {});
   return (
     <footer className={componentClassName} {...other}>

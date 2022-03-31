@@ -15,11 +15,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const CardBody: React.FC<Props> = ({
-  children,
-  className,
-  ...other
-}) => {
+export const CardBody = ({ children, className, ...other }: Props) => {
   const componentClassName = clsx('card__body', className, {});
   return (
     <div className={componentClassName} {...other}>

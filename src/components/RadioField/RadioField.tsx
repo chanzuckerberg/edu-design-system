@@ -93,7 +93,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const RadioField: React.FC<Props> = ({
+export const RadioField = ({
   className,
   children,
   variant,
@@ -113,7 +113,7 @@ export const RadioField: React.FC<Props> = ({
   requiredLabel,
   onChange,
   ...other
-}) => {
+}: Props) => {
   /**
    * Set children to only allow radio field items
    */

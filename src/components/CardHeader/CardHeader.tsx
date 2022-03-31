@@ -15,11 +15,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const CardHeader: React.FC<Props> = ({
-  children,
-  className,
-  ...other
-}) => {
+export const CardHeader = ({ children, className, ...other }: Props) => {
   const componentClassName = clsx('card__header', className, {});
   return (
     <header className={componentClassName} {...other}>

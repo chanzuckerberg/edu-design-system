@@ -52,7 +52,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const Banner: React.FC<Props> = ({
+export const Banner = ({
   iconTitle,
   className,
   title,
