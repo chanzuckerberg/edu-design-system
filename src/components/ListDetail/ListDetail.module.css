@@ -59,12 +59,8 @@
  */
 .list-detail__list {
   @mixin reset;
-  list-style: none;
-<<<<<<< HEAD
-  @mixin eds-theme-typography-body-text;
-=======
   @mixin eds-theme-typography-body-text-md;
->>>>>>> next
+  list-style: none;
 
   @media all and (min-width: $eds-bp-lg) {
     position: sticky;
@@ -95,7 +91,6 @@
     background: var(--eds-theme-color-neutral-md-background);
     border-radius: 50%;
   }
-<<<<<<< HEAD
 }
 
 /**
@@ -103,25 +98,14 @@
  */
 .list-detail__item:last-child {
   padding-bottom: 0;
-=======
 
-  /**
-  * Last list detail item
-  */
-  &:last-child {
-    padding-bottom: 0;
-  }
->>>>>>> next
 
   /**
   * List list detail item after
   * 1) Don't add a line between items
   */
-<<<<<<< HEAD
+
   &:after {
-=======
-  &:last-child:after {
->>>>>>> next
     content: none;
   }
 }
@@ -147,11 +131,7 @@
    * List detail link within active list-detail item
    */
   .list-detail__item.eds-is-active & {
-<<<<<<< HEAD
-    @mixin eds-theme-typography-body-text-bold;
-=======
     @mixin eds-theme-typography-body-text-md;
->>>>>>> next
     color: var(--eds-theme-color-body-foreground);
   }
 }
