@@ -7,7 +7,7 @@ import type { Color } from './Text';
 import styles from './Text.stories.module.css';
 
 export default {
-  title: 'Text',
+  title: 'Atoms/Text/Text',
   component: Text,
   argTypes: {
     children: {

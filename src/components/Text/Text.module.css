@@ -1,7 +1,7 @@
 @import '../../design-tokens/mixins.css';
 
 /*------------------------------------*\
-    #Text
+    #TEXT
 \*------------------------------------*/
 
 /**
@@ -9,7 +9,8 @@
  * 2) Styles are either controlled by as or size declaration
  */
 .text,
-.text--body {
+.text--body, 
+.text--md {
   @mixin reset;
   
   @mixin eds-theme-typography-body-text;
@@ -78,24 +79,11 @@
 }
 
 /**
- * Spacing
- */
-.text--mb-half {
-  margin-bottom: var(--eds-size-half);
-}
-.text--mb-1x {
-  margin-bottom: var(--eds-size-1);
-}
-.text--mb-2x {
-  margin-bottom: var(--eds-size-2);
-}
-
-/**
  * Weights
  */
-.text--weight-normal {
+.text--normal-weight {
   font-weight: var(--eds-font-weight-regular);
 }
-.text--weight-bold {
+.text--bold-weight {
   font-weight: var(--eds-font-weight-bold);
 }

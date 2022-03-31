@@ -16,4 +16,18 @@ describe('<Text />', () => {
     );
     expect(screen.getByText('Some Text').classList).toContain('passthrough');
   });
+  it('should handle refs', () => {
+    const HelperComponent = ({ as }: { as: 'p' | 'span' }) => {
+      const refContainerSpan = React.useRef(null);
+      return (
+        <Text as={as} ref={refContainerSpan}>
+          Ref container parent test {as}
+        </Text>
+      );
+    };
+    render(<HelperComponent as="p" />);
+    expect(screen.getByText('Ref container parent test p')).toBeTruthy();
+    render(<HelperComponent as="span" />);
+    expect(screen.getByText('Ref container parent test span')).toBeTruthy();
+  });
 });

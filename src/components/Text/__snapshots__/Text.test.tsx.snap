@@ -10,7 +10,7 @@ exports[`<Text /> Body story renders snapshot 1`] = `
 
 exports[`<Text /> BodyColorInfoBold story renders snapshot 1`] = `
 <p
-  class="text text--body text--info text--weight-bold"
+  class="text text--body text--info text--bold-weight"
 >
   Info color body text, bold
 </p>

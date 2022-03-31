@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React from 'react';
+import React, { forwardRef, ForwardedRef } from 'react';
 import styles from './Text.module.css';
 
 export type Size =
@@ -10,6 +10,7 @@ export type Size =
   | 'h5'
   | 'body'
   | 'sm'
+  | 'md'
   | 'xs'
   | 'caption'
   | 'overline';
@@ -34,7 +35,6 @@ export type Props = {
   className?: string;
   color?: Color;
   size?: Size;
-  spacing?: 'none' | 'half' | '1x' | '2x';
   tabIndex?: number;
   weight?: 'bold' | 'normal' | null;
 } & React.HTMLAttributes<HTMLElement>;
@@ -44,37 +44,39 @@ export type Props = {
  * import {Text} from "@chanzuckerberg/eds";
  * ```
  */
-export const Text = ({
-  as = 'p',
-  children,
-  className,
-  color,
-  size = 'body',
-  spacing,
-  weight,
-  /**
-   * Components that wrap typography sometimes requires props such as event handlers
-   * to be passed down into the element. One example is the tooltip component.  It
-   * attaches a onHover and onFocus event to the element to determine when to
-   * trigger the overlay.
-   */ ...other
-}: Props) => {
-  const TagName = as;
-  return (
-    <TagName
-      className={clsx(
-        className,
-        styles['text'],
-        styles[`text--${size}`],
-        color && styles[`text--${color}`],
-        spacing && styles[`text--mb-${spacing}`],
-        weight && styles[`text--weight-${weight}`],
-      )}
-      {...other}
-    >
-      {children}
-    </TagName>
-  );
-};
+export const Text = forwardRef(
+  (
+    {
+      as = 'p',
+      children,
+      className,
+      color,
+      size = 'body',
+      weight,
+      /**
+       * Components that wrap typography sometimes requires props such as event handlers
+       * to be passed down into the element. One example is the tooltip component.  It
+       * attaches a onHover and onFocus event to the element to determine when to
+       * trigger the overlay.
+       */ ...other
+    }: Props,
+    ref?: ForwardedRef<HTMLParagraphElement>, // Setting as HTMLParagraphElement to satisfy TS, but unit test covers both span and p cases for sanity
+  ) => {
+    const TagName = as;
+    const componentClassName = clsx(
+      className,
+      styles['text'],
+      styles[`text--${size}`],
+      color && styles[`text--${color}`],
+      weight && styles[`text--${weight}-weight`],
+    );
+    return (
+      <TagName className={componentClassName} ref={ref} {...other}>
+        {children}
+      </TagName>
+    );
+  },
+);
+Text.displayName = 'Text'; // Satisfy eslint
 
 export default Text;
