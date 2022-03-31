@@ -46,7 +46,7 @@ export interface Props {
    * - **error** - results in a red banner
    * - **info** - results in a blue banner
    */
-  variant?: 'success' | 'warning' | 'error' | 'info' | 'brand' | 'vertical';
+  variant?: 'success' | 'warning' | 'error' | 'info' | 'brand';
 }
 
 /**
@@ -63,14 +63,14 @@ export const Banner = ({
   variant,
   closeButtonText = 'Close',
   ...other
-}) => {
+}: Props) => {
   const componentClassName = clsx(
     styles['banner'],
     variant === 'success' && styles['banner--success'],
     variant === 'warning' && styles['banner--warning'],
     variant === 'error' && styles['banner--error'],
     variant === 'brand' && styles['banner--brand'],
-    variant === 'vertical' && styles['banner--vertical'],
+    orientation === 'vertical' && styles['banner--vertical'],
   );
   const [dismissed, setDismissed] = useState(false);
 

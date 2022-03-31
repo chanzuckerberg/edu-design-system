@@ -1,7 +1,7 @@
 import { Story, Meta } from '@storybook/react';
 import React from 'react';
 
-import { Header, HeaderProps } from './Header';
+import { Header, Props } from './Header';
 import Logo from '../Logo';
 import NavContainer from '../NavContainer';
 import PrimaryNav from '../PrimaryNav';
@@ -14,7 +14,7 @@ export default {
   component: Header,
 } as Meta;
 
-const Template: Story<HeaderProps> = (args) => (
+const Template: Story<Props> = (args) => (
   <Header {...args}>
     <Logo href="#" />
     <NavContainer>
