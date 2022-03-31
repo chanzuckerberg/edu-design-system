@@ -28,6 +28,9 @@
         "black": { "value": "#161B1F" }
       },
       "transparent": {
+        "0": {
+          "value": "rgba(0, 0, 0, 0)"
+        },
         "25": {
           "value": "rgba(0, 0, 0, .25)"
         },
