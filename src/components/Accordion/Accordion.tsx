@@ -27,9 +27,11 @@ export const Accordion = ({
   inverted,
   ...other
 }: Props) => {
-  const componentClassName = clsx(styles['accordion'], className, {
-    [styles['accordion--inverted']]: inverted === true,
-  });
+  const componentClassName = clsx(
+    styles['accordion'],
+    className,
+    inverted && styles['accordion--inverted'],
+  );
   return (
     <dl className={componentClassName} {...other}>
       {children}

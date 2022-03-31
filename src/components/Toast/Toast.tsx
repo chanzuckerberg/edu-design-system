@@ -53,12 +53,14 @@ export const Toast = ({
   closeButtonText = 'Close',
   ...other
 }: Props) => {
-  const componentClassName = clsx(styles['toast'], className, {
-    [styles['toast--success']]: variant === 'success',
-    [styles['toast--warning']]: variant === 'warning',
-    [styles['toast--error']]: variant === 'error',
-    [styles['toast--brand']]: variant === 'brand',
-  });
+  const componentClassName = clsx(
+    styles['toast'],
+    className,
+    variant === 'success' && styles['toast--success'],
+    variant === 'warning' && styles['toast--warning'],
+    variant === 'error' && styles['toast--error'],
+    variant === 'brand' && styles['toast--brand'],
+  );
   const [dismissed, setDismissed] = useState(false);
 
   function onDismiss(e: any) {

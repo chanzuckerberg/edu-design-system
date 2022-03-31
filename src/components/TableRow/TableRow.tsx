@@ -33,10 +33,12 @@ export const TableRow = ({
   behavior,
   ...other
 }: Props) => {
-  const componentClassName = clsx(styles['table__row'], className, {
-    [styles['table__row--bare']]: variant === 'bare',
-    [styles['table__row--clickable']]: behavior === 'clickable',
-  });
+  const componentClassName = clsx(
+    styles['table__row'],
+    className,
+    variant === 'bare' && styles['table__row--bare'],
+    behavior === 'clickable' && styles['table__row--clickable'],
+  );
 
   return (
     <tr className={componentClassName} {...other}>

@@ -51,9 +51,11 @@ export const Icon = ({
     svg4everybody(); //Required to get IE to render icon sprites
   }, [id]);
 
-  const componentClassName = clsx(styles['icon'], className, {
-    [styles['icon--inverted']]: inverted === true,
-  });
+  const componentClassName = clsx(
+    styles['icon'],
+    className,
+    inverted && styles['icon--inverted'],
+  );
   return (
     <svg
       aria-hidden={!title}

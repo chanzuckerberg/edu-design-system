@@ -100,10 +100,12 @@ export const TableObjectBody = ({ children, className, ...other }: Props) => {
     };
   });
 
-  const componentClassName = clsx(styles['table-object__body'], className, {
-    [styles['eds-is-overflow-left']]: isStart,
-    [styles['eds-is-overflow-right']]: isEnd,
-  });
+  const componentClassName = clsx(
+    styles['table-object__body'],
+    className,
+    isStart && styles['eds-is-overflow-left'],
+    isEnd && styles['eds-is-overflow-right'],
+  );
   return (
     <div className={componentClassName} ref={tableObjectBodyRef} {...other}>
       <div

@@ -31,10 +31,12 @@ export const DefinitionList = ({
   size,
   ...other
 }: Props) => {
-  const componentClassName = clsx(styles['definition-list'], className, {
-    [styles['definition-list--horizontal']]: behavior === 'horizontal',
-    [styles['definition-list--sm']]: size === 'sm',
-  });
+  const componentClassName = clsx(
+    styles['definition-list'],
+    className,
+    behavior === 'horizontal' && styles['definition-list--horizontal'],
+    size === 'sm' && styles['definition-list--sm'],
+  );
   return (
     <dl className={componentClassName} {...other}>
       {children}

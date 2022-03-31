@@ -27,10 +27,12 @@ export const ToolbarItem = ({
   children,
   ...other
 }: Props) => {
-  const componentClassName = clsx('toolbar__item', className, {
-    'toolbar__item--align-center': align === 'center',
-    'toolbar__item--align-right': align === 'right',
-  });
+  const componentClassName = clsx(
+    'toolbar__item',
+    className,
+    align === 'center' && 'toolbar__item--align-center',
+    align === 'right' && 'toolbar__item--align-right',
+  );
   return (
     <div className={componentClassName} {...other}>
       {children}

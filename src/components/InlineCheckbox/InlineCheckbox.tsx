@@ -124,9 +124,11 @@ export const InlineCheckbox = ({
     }
   }
 
-  const componentClassName = clsx(styles['inline-checkbox'], className, {
-    [styles['inline-checkbox--hide-label']]: hideLabel,
-  });
+  const componentClassName = clsx(
+    styles['inline-checkbox'],
+    className,
+    hideLabel && styles['inline-checkbox--hide-label'],
+  );
 
   return (
     <label className={componentClassName} htmlFor={idVar} ref={ref} {...other}>

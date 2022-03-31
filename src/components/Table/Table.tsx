@@ -44,14 +44,17 @@ export const Table = ({
   variant,
   ...other
 }: Props) => {
-  const componentClassName = clsx(styles['table'], className, {
-    [styles['table--zebra']]: variant === 'zebra',
-    [styles['table--overflow']]: behavior === 'overflow',
-  });
+  const componentClassName = clsx(
+    styles['table'],
+    className,
+    variant === 'zebra' && styles['table--zebra'],
+    behavior === 'overflow' && styles['table--overflow'],
+  );
 
-  const captionClassName = clsx('table__caption', {
-    [styles['u-is-vishidden']]: hideCaption,
-  });
+  const captionClassName = clsx(
+    'table__caption',
+    hideCaption && styles['u-is-vishidden'],
+  );
 
   return (
     <table className={componentClassName} {...other}>

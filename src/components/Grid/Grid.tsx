@@ -27,15 +27,22 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const Grid = ({ className, variant, children, ...other }: Props) => {
-  const componentClassName = clsx(styles['grid'], className, {
-    [styles['grid--2up']]: variant === '2up',
-    [styles['grid--side-by-side']]: variant === 'side-by-side',
-    [styles['grid--1-3up']]: variant === '1-3up',
-    [styles['grid--3up']]: variant === '3up',
-    [styles['grid--4up']]: variant === '4up',
-    [styles['grid--1-2-4up']]: variant === '1-2-4up',
-  });
+export const Grid: React.FC<Props> = ({
+  className,
+  variant,
+  children,
+  ...other
+}: Props) => {
+  const componentClassName = clsx(
+    styles['grid'],
+    className,
+    variant === '2up' && styles['grid--2up'],
+    variant === 'side-by-side' && styles['grid--side-by-side'],
+    variant === '1-3up' && styles['grid--1-3up'],
+    variant === '3up' && styles['grid--3up'],
+    variant === '4up' && styles['grid--4up'],
+    variant === '1-2-4up' && styles['grid--1-2-4up'],
+  );
 
   return (
     <div className={componentClassName} {...other}>

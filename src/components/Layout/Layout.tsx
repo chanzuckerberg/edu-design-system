@@ -33,10 +33,12 @@ export const Layout = ({
   variant,
   ...other
 }: Props) => {
-  const componentClassName = clsx(styles['layout'], className, {
-    [styles['layout--right-sidebar']]: variant === 'right-sidebar',
-    [styles['layout--fixed-sidebar']]: behavior === 'fixed-sidebar',
-  });
+  const componentClassName = clsx(
+    styles['layout'],
+    className,
+    variant === 'right-sidebar' && styles['layout--right-sidebar'],
+    behavior === 'fixed-sidebar' && styles['layout--fixed-sidebar'],
+  );
   return (
     <div className={componentClassName} {...other}>
       {children}

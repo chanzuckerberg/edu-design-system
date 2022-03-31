@@ -44,12 +44,14 @@ export const TextList = ({
   variant,
   ...other
 }: Props) => {
-  const componentClassName = clsx(styles['text-list'], className, {
-    [styles['text-list--sm']]: size === 'sm',
-    [styles['text-list--inline']]: variant === 'inline',
-    [styles['text-list--inverted']]: inverted === true,
-    [styles['text-list--ol']]: as === 'ol',
-  });
+  const componentClassName = clsx(
+    styles['text-list'],
+    className,
+    size === 'sm' && styles['text-list--sm'],
+    variant === 'inline' && styles['text-list--inline'],
+    inverted && styles['text-list--inverted'],
+    as === 'ol' && styles['text-list--ol'],
+  );
   if (as === 'ol') {
     return (
       <ol className={componentClassName} {...other}>

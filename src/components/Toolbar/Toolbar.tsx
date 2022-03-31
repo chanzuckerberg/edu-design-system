@@ -34,11 +34,13 @@ export const Toolbar = ({
   verticalAlign,
   ...other
 }: Props) => {
-  const componentClassName = clsx(styles['toolbar'], className, {
-    [styles['toolbar--bare']]: variant === 'bare',
-    [styles['toolbar--vertical-align-bottom']]: verticalAlign === 'bottom',
-    [styles['toolbar--vertical-align-top']]: verticalAlign === 'top',
-  });
+  const componentClassName = clsx(
+    styles['toolbar'],
+    className,
+    variant === 'bare' && styles['toolbar--bare'],
+    verticalAlign === 'bottom' && styles['toolbar--vertical-align-bottom'],
+    verticalAlign === 'top' && styles['toolbar--vertical-align-top'],
+  );
   return (
     <div className={componentClassName} {...other}>
       {children}

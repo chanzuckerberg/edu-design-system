@@ -152,11 +152,13 @@ export const SelectField = ({
     }
   }
 
-  const componentClassName = clsx(styles['select-field'], className, {
-    [styles['select-field--inverted']]: inverted === true,
-    [styles['eds-is-error']]: isError,
-    [styles['eds-is-disabled']]: disabled,
-  });
+  const componentClassName = clsx(
+    styles['select-field'],
+    className,
+    inverted && styles['select-field--inverted'],
+    isError && styles['eds-is-error'],
+    disabled && styles['eds-is-disabled'],
+  );
   return (
     <div className={componentClassName} ref={ref}>
       <Label

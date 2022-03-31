@@ -182,10 +182,12 @@ export const Drawer = ({
   const body = oneByType(children, DrawerBody);
   const footer = oneByType(children, DrawerFooter);
 
-  const componentClassName = clsx(styles['drawer'], className, {
-    [styles['drawer--show-backdrop']]: showBackdrop === true,
-    [styles['eds-is-active']]: isActive,
-  });
+  const componentClassName = clsx(
+    styles['drawer'],
+    className,
+    showBackdrop && styles['drawer--show-backdrop'],
+    isActive && styles['eds-is-active'],
+  );
 
   if (!isMounted) return null;
 

@@ -189,11 +189,13 @@ export const TextField = ({
     }
   }, [ariaDescribedBy, fieldNote, id]);
 
-  const componentClassName = clsx(styles['text-field'], className, {
-    [styles['text-field--inverted']]: inverted === true,
-    [styles['eds-is-error']]: isError,
-    [styles['eds-is-disabled']]: disabled,
-  });
+  const componentClassName = clsx(
+    styles['text-field'],
+    className,
+    inverted && styles['text-field--inverted'],
+    isError && styles['eds-is-error'],
+    disabled && styles['eds-is-disabled'],
+  );
 
   return (
     <div className={componentClassName}>
