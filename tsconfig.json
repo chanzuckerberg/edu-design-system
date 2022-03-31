@@ -1,8 +1,6 @@
 {
   "include": [
-    "src/index.ts",
-    "src/custom.d.ts",
-    "src/util/*.ts"
+    "src",
   ],
   "exclude": [
     "node_modules",
