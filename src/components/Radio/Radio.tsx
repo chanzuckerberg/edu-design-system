@@ -66,9 +66,11 @@ export const Radio: React.FC<Props> = ({
   tabIndex,
   ...other
 }) => {
-  const componentClassName = clsx(styles['radio'], className, {
-    [styles['radio--inverted']]: inverted === true,
-  });
+  const componentClassName = clsx(
+    styles['radio'],
+    className,
+    inverted && styles['radio--inverted'],
+  );
   return (
     <div className={componentClassName} {...other}>
       <input

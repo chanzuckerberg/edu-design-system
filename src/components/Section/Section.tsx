@@ -37,9 +37,11 @@ export const Section: React.FC<Props> = ({
   align,
   ...other
 }) => {
-  const componentClassName = clsx(styles['section'], className, {
-    [styles['section--center']]: align === 'center',
-  });
+  const componentClassName = clsx(
+    styles['section'],
+    className,
+    align === 'center' && styles['section--center'],
+  );
 
   return (
     <section className={componentClassName} {...other}>

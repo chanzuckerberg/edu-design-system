@@ -31,10 +31,12 @@ export const KeyValueTable: React.FC<Props> = ({
   fullWidth,
   ...other
 }) => {
-  const componentClassName = clsx(styles['key-value-table'], className, {
-    [styles['key-value-table--lined']]: variant === 'lined',
-    [styles['key-value-table--full-width']]: fullWidth === true,
-  });
+  const componentClassName = clsx(
+    styles['key-value-table'],
+    className,
+    variant === 'lined' && styles['key-value-table--lined'],
+    fullWidth && styles['key-value-table--full-width'],
+  );
   return (
     <table className={componentClassName} {...other}>
       <tbody className={styles['key-value-table__body']}>{children}</tbody>

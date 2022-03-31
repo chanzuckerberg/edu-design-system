@@ -1,6 +1,6 @@
 {
   "name": "@chanzuckerberg/eds",
-  "version": "0.1.0-alpha.0",
+  "version": "0.1.0-alpha.2",
   "description": "The React-powered design system library for Chan Zuckerberg Initiative education web applications",
   "author": "CZI <edu-frontend-infra@chanzuckerberg.com>",
   "homepage": "https://github.com/chanzuckerberg/edu-design-system",
@@ -9,9 +9,12 @@
   "publishConfig": {
     "access": "public"
   },
+  "files": [
+    "/dist"
+  ],
   "scripts": {
     "start": "yarn build:tokens && yarn storybook",
-    "build": "yarn dist",
+    "build": "yarn build:tokens && yarn dist",
     "build:tokens": "node ./style-dictionary.config.js",
     "build:icons": "make-dir dist/icons && svg-sprite-generate -d src/icons/ -o dist/icons/spritemap.svg",
     "build:js": "babel src/design-tokens/components --out-dir dist --copy-files",
@@ -22,6 +25,7 @@
     "dist.build": "run-p build:icons build:js",
     "dist.clean": "del-cli dist/**/*.stories.tsx dist/design-tokens dist/**/*.css.map dist/*.*",
     "copy-to-dist": "copyfiles -u 1 src/fonts/* src/static/* src/icons/**/* dist",
+    "commit": "./node_modules/.bin/cz",
     "chromatic": "chromatic",
     "create-component": "plop",
     "lint": "yarn run lint:styles && yarn run lint:scripts",
@@ -31,6 +35,12 @@
     "lint:scripts": "eslint --quiet --ignore-path .gitignore --ext=js,jsx,ts,tsx .",
     "lint:scripts:fix": "yarn run lint:scripts --fix",
     "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx}\"",
+    "release": "yarn release:patch",
+    "release:breaking": "yarn release:minor",
+    "release:major": "standard-version --release-as major",
+    "release:minor": "standard-version --release-as minor",
+    "release:patch": "standard-version --release-as patch",
+    "release:alpha": "standard-version --prerelease alpha",
     "storybook": "start-storybook -p 9009 -s public",
     "storybook:axe": "yarn run build:storybook && yarn run storybook:axeOnly",
     "storybook:axeOnly": "axe-storybook --build-dir storybook-static",
@@ -90,6 +100,7 @@
     "chromatic": "^6.5.1",
     "codecov": "^3.8.3",
     "copyfiles": "^2.4.1",
+    "cz-conventional-changelog": "3.3.0",
     "del-cli": "^4.0.1",
     "eslint": "^8.8.0",
     "eslint-config-prettier": "^8.3.0",
@@ -118,6 +129,7 @@
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "size-limit": "^4.12.0",
+    "standard-version": "^9.3.2",
     "storybook-css-modules-preset": "^1.1.1",
     "style-dictionary": "^3.7.0",
     "stylelint": "^14.5.3",
@@ -144,5 +156,10 @@
       "stylelint --fix"
     ]
   },
-  "packageManager": "yarn@3.1.1"
+  "packageManager": "yarn@3.1.1",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }

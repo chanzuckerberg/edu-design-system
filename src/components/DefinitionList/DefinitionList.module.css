@@ -51,13 +51,13 @@
  * Definition list term
  */
 .definition-list-item__term {
-  @mixin eds-theme-typography-body-text-bold;
+  @mixin eds-theme-typography-body-text-md;
 
   /**
    * Definition list term within small definition list
    */
   .definition-list--sm & {
-    @mixin eds-theme-typography-body-text-sm-bold;
+    @mixin eds-theme-typography-body-text-sm;
   }
 
   /**

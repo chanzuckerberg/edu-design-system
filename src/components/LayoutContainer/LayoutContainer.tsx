@@ -32,10 +32,12 @@ export const LayoutContainer: React.FC<Props> = ({
   variant,
   ...other
 }) => {
-  const componentClassName = clsx(styles['layout-container'], className, {
-    [styles['layout-container--narrow']]: variant === 'narrow',
-    [styles['layout-container--full-height']]: fullHeight === true,
-  });
+  const componentClassName = clsx(
+    styles['layout-container'],
+    className,
+    variant === 'narrow' && styles['layout-container--narrow'],
+    fullHeight && styles['layout-container--narrow'],
+  );
   return (
     <div className={componentClassName} {...other}>
       {children}
