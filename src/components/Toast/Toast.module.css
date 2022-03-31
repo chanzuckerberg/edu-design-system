@@ -6,7 +6,7 @@
 
 /**
  * 1) Message of information, success, caution, or warning to the user
- * 2) The thick left border operates as a foreground band of color, 
+ * 2) The thick left border operates as a foreground band of color,
  *    so foreground rather than border is used
  */
 .toast {
@@ -31,7 +31,7 @@
 
 /**
  * Toast success
- * 1) The thick left border operates as a foreground band of color, 
+ * 1) The thick left border operates as a foreground band of color,
  *    so foreground rather than border is used
  */
 .toast--success {
@@ -143,7 +143,7 @@
  * Toast description
  */
 .toast__description {
-  @mixin eds-theme-typography-body-text;
+  @mixin eds-theme-typography-body-text-md;
 }
 
 /**

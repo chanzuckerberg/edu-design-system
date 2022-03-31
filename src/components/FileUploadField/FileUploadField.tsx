@@ -140,7 +140,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const FileUploadField: React.FC<Props> = ({
+export const FileUploadField = ({
   acceptedFileTypes,
   ariaDescribedBy,
   className,
@@ -169,7 +169,7 @@ export const FileUploadField: React.FC<Props> = ({
   removeFileButtonText = 'Remove file',
   statusLabel,
   ...other
-}) => {
+}: Props) => {
   const [filesState, setFilesState] = useState(files);
   const [isErrorState, setIsErrorState] = useState(isError);
   const [isDragging, setIsDragging] = useState(false);
@@ -290,14 +290,17 @@ export const FileUploadField: React.FC<Props> = ({
 
   const isDisabled = disabled || (filesState && filesState >= maxFiles);
 
-  const componentClassName = clsx(styles['file-upload-field'], className, {
-    [styles['eds-is-error']]: isErrorState,
-    [styles['eds-is-disabled']]: isDisabled,
-  });
+  const componentClassName = clsx(
+    styles['file-upload-field'],
+    className,
+    isErrorState && styles['eds-is-error'],
+    isDisabled && styles['eds-is-disabled'],
+  );
 
-  const hitAreaClassName = clsx(styles['file-upload-field__hit-area'], {
-    'file-upload-field__hit-area--drag-over': isDragging,
-  });
+  const hitAreaClassName = clsx(
+    styles['file-upload-field__hit-area'],
+    isDragging && 'file-upload-field__hit-area--drag-over',
+  );
   return (
     <div className={componentClassName}>
       <Label

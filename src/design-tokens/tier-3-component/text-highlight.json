@@ -4,10 +4,10 @@
       "color": {
         "text-highlight": {
           "foreground": {
-            "value": "{eds.color.neutral.white}"
+            "value": "{eds.color.neutral.800}"
           },
           "background": {
-            "value": "{eds.color.brand.blue.300}"
+            "value": "{eds.color.other.lemon}"
           }
         }
       }

@@ -19,12 +19,12 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const LogoImage: React.FC<Props> = ({
+export const LogoImage = ({
   className,
   alt = 'logo placeholder',
   src = 'https://assets.codepen.io/598/summit-learning-logo.svg',
   ...other
-}) => {
+}: Props) => {
   const componentClassName = clsx('logo__img', className, {});
   return <img className={componentClassName} src={src} alt={alt} {...other} />;
 };

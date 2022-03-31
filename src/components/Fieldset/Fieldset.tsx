@@ -41,7 +41,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const Fieldset: React.FC<Props> = ({
+export const Fieldset = ({
   className,
   legend,
   legendAfter,
@@ -51,7 +51,7 @@ export const Fieldset: React.FC<Props> = ({
   optionalLabel,
   requiredLabel,
   ...other
-}) => {
+}: Props) => {
   const componentClassName = clsx(styles['fieldset'], className, {});
   return (
     <fieldset className={componentClassName} {...other}>

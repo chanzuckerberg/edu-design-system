@@ -48,7 +48,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const AccordionPanel: React.FC<Props> = ({
+export const AccordionPanel = ({
   children,
   className,
   header,
@@ -57,7 +57,7 @@ export const AccordionPanel: React.FC<Props> = ({
   height,
   ariaControls,
   ...other
-}) => {
+}: Props) => {
   const panelRef = useRef() as MutableRefObject<HTMLDivElement>;
   const [heightVar, setHeight] = useState('0');
   const [isActiveVar, setIsActive] = useState(isActive ? true : false);
@@ -103,9 +103,11 @@ export const AccordionPanel: React.FC<Props> = ({
     }
   }
 
-  const componentClassName = clsx(styles['accordion-panel'], className, {
-    [styles['eds-is-active']]: isActiveVar === true,
-  });
+  const componentClassName = clsx(
+    styles['accordion-panel'],
+    className,
+    isActiveVar && styles['eds-is-active'],
+  );
   return (
     <div className={componentClassName} {...other} ref={panelRef}>
       <dt className={styles['accordion-panel__header']}>

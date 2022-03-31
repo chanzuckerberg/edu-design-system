@@ -51,7 +51,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const Drawer: React.FC<Props> = ({
+export const Drawer = ({
   ariaDescribedBy,
   ariaLabelledBy,
   className,
@@ -62,7 +62,7 @@ export const Drawer: React.FC<Props> = ({
   closeButtonText,
   showBackdrop = false,
   ...other
-}) => {
+}: Props) => {
   /**
    * Initialize states, constants, and refs
    */
@@ -182,10 +182,12 @@ export const Drawer: React.FC<Props> = ({
   const body = oneByType(children, DrawerBody);
   const footer = oneByType(children, DrawerFooter);
 
-  const componentClassName = clsx(styles['drawer'], className, {
-    [styles['drawer--show-backdrop']]: showBackdrop === true,
-    [styles['eds-is-active']]: isActive,
-  });
+  const componentClassName = clsx(
+    styles['drawer'],
+    className,
+    showBackdrop && styles['drawer--show-backdrop'],
+    isActive && styles['eds-is-active'],
+  );
 
   if (!isMounted) return null;
 

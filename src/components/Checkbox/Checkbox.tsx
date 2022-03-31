@@ -1,5 +1,10 @@
 import clsx from 'clsx';
-import React, { useRef, useEffect, ChangeEventHandler } from 'react';
+import React, {
+  useRef,
+  useEffect,
+  ChangeEventHandler,
+  MutableRefObject,
+} from 'react';
 import styles from './Checkbox.module.css';
 import { ENTER_KEYCODE } from '../../util/keycodes';
 
@@ -53,7 +58,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const Checkbox: React.FC<Props> = ({
+export const Checkbox = ({
   ariaDescribedBy,
   id,
   name,
@@ -66,8 +71,8 @@ export const Checkbox: React.FC<Props> = ({
   readOnly,
   onChange,
   ...other
-}) => {
-  const checkboxRef = useRef() as React.MutableRefObject<HTMLInputElement>;
+}: Props) => {
+  const checkboxRef = useRef() as MutableRefObject<HTMLInputElement>;
   /**
    * On Keydown
    */
@@ -84,9 +89,11 @@ export const Checkbox: React.FC<Props> = ({
     checkboxRef.current.indeterminate = indeterminate;
   });
 
-  const componentClassName = clsx(styles['checkbox'], className, {
-    [styles['checkbox--inverted']]: inverted === true,
-  });
+  const componentClassName = clsx(
+    styles['checkbox'],
+    className,
+    inverted && styles['checkbox--inverted'],
+  );
 
   return (
     <div className={componentClassName} {...other}>

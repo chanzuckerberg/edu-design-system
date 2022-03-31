@@ -16,11 +16,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const TableObjectHeader: React.FC<Props> = ({
-  children,
-  className,
-  ...other
-}) => {
+export const TableObjectHeader = ({ children, className, ...other }: Props) => {
   const componentClassName = clsx(
     styles['table-object__header'],
     className,

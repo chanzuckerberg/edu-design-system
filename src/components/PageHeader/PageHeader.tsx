@@ -37,7 +37,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const PageHeader: React.FC<Props> = ({
+export const PageHeader = ({
   align,
   className,
   description,
@@ -46,10 +46,12 @@ export const PageHeader: React.FC<Props> = ({
   titleAfter,
   right,
   ...other
-}) => {
-  const componentClassName = clsx(styles['page-header'], className, {
-    [styles['page-header--center']]: align === 'center',
-  });
+}: Props) => {
+  const componentClassName = clsx(
+    styles['page-header'],
+    className,
+    align === 'center' && styles['page-header--center'],
+  );
 
   return (
     <div className={componentClassName} {...other}>

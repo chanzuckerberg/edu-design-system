@@ -169,11 +169,13 @@ export const TextareaField = ({
     }
   }, [ariaDescribedBy, fieldNote, id]);
 
-  const componentClassName = clsx(styles['textarea-field'], className, {
-    [styles['textarea-field--inverted']]: inverted === true,
-    [styles['eds-is-error']]: isError,
-    [styles['eds-is-disabled']]: disabled,
-  });
+  const componentClassName = clsx(
+    styles['textarea-field'],
+    className,
+    inverted && styles['textarea-field--inverted'],
+    isError && styles['eds-is-error'],
+    disabled && styles['eds-is-disabled'],
+  );
 
   return (
     <div className={componentClassName}>

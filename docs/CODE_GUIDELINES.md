@@ -291,7 +291,6 @@ The design system's component directory contains all of the design system's comp
 
 ### Imports
 
-### Imports
 
 The framework follows a specific ordering/clustering for importing modules into a component. This is enforced through the [`import/order` lint rule](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/order.md).
 
@@ -357,47 +356,13 @@ export const ComponentName = ({ children }: { children: ReactNode }) => {
 Interactive components likely require defining necessary [state and lifecycle](https://reactjs.org/docs/state-and-lifecycle.html) functions in addition to defining any other necessary variables and functions.
 
 #### useState()
-
-For simple state variables, define a `State` interface that holds the key/value pairs.
-
-```tsx
-interface State {
-  isActive?: boolean;
-}
-
-```
-
-For complex state objects, extract nested properties into their own interfaces. Use enums where needed.
-
-```tsx
-interface State {
-  userData: UserData | null;
-}
-
-interface UserData {
-  userId: number;
-  role: Roles;
-  userName: string;
-}
-
-enum Roles {
-  ANONYMOUS = "Anonymous",
-  AUTHENTICATED = "Authenticated",
-}
-
-```
-
-In either case, apply the `State` type via a generic:
-
-```tsx
-const [state, setState] = useState<State>('initial value');
-```
+When using the `useState()` hook, TypeScript will infer the correct type from the initial value. If explicit typing of a variable in state is necessary and a hard-coded initial value is not set, you can use a prop as the initial value.
 
 #### useEffect()
 `useEffect()` hooks do not require any typing. TypeScript expects them to either return nothing or a Destructor-typed function (a function that cleans up any side effects and returns void.)
 
 #### useRef()
-`useRef()` hooks access underlying DOM elements to perform imperative actions. The resulting `ref` object can either be *mutable* or *not mutable*. (If the value store in its' `.current` property may be changed, the ref needs to be `mutable`.) Explictly convey the intended mutability status of each `ref` by using either `React.MutableObject` and `React.RefObject`, in a generic type definition. For mutable refs, use a union with `null` when initializing the ref; otherwise, TypeScript will complain when you change the value of `.current`. Similarly, *do not* create a union with `null` for non-mutable refs.
+`useRef()` hooks access underlying DOM elements to perform imperative actions. The resulting `ref` object can either be *mutable* or *not mutable*. (If the value store in its' `.current` property may be changed, the ref needs to be `mutable`.) Explictly convey the intended mutability status of each `ref` by using either `React.MutableObject` and `React.RefObject`, in a generic type definition. 
 
 For consistency, include `MutableRefObject` and `RefObject` with your import statements.
 
@@ -407,9 +372,8 @@ import React, { useRef, MutableRefObject, RefObject } from 'react';
 
 ...
 
-const mutableRef: MutableRefObject<HTMLDivElement | null> = useRef<HTMLDivElement | null>(null);
+const ref = useRef() as MutableRefObject<HTMLInputElement>;
 
-const ref: RefObject<HTMLInputElement> = useRef<HTMLInputElement>(null); 
 ```
 ### Define `componentClassName`
 

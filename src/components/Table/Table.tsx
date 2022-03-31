@@ -35,7 +35,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const Table: React.FC<Props> = ({
+export const Table = ({
   behavior,
   caption,
   children,
@@ -43,15 +43,18 @@ export const Table: React.FC<Props> = ({
   hideCaption = true,
   variant,
   ...other
-}) => {
-  const componentClassName = clsx(styles['table'], className, {
-    [styles['table--zebra']]: variant === 'zebra',
-    [styles['table--overflow']]: behavior === 'overflow',
-  });
+}: Props) => {
+  const componentClassName = clsx(
+    styles['table'],
+    className,
+    variant === 'zebra' && styles['table--zebra'],
+    behavior === 'overflow' && styles['table--overflow'],
+  );
 
-  const captionClassName = clsx('table__caption', {
-    [styles['u-is-vishidden']]: hideCaption,
-  });
+  const captionClassName = clsx(
+    'table__caption',
+    hideCaption && styles['u-is-vishidden'],
+  );
 
   return (
     <table className={componentClassName} {...other}>
