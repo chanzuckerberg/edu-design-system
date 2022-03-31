@@ -12,10 +12,10 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const {{pascalCase name}}: React.FC<Props> = ({
+export const {{pascalCase name}} = ({
 	className,
 	...other
-}) => {
+}: Props) => {
 	const componentClassName = clsx(styles['{{dashCase name}}'], className, {
 	});
 	return (

@@ -8,10 +8,10 @@ import React, {
   useState,
 } from 'react';
 import styles from './TextField.module.css';
-import { FieldNote } from '../FieldNote/FieldNote';
-import { Icon } from '../Icon/Icon';
-import { Label } from '../Label/Label';
-import { TextInput } from '../TextInput/TextInput';
+import FieldNote from '../FieldNote';
+import Icon from '../Icon';
+import Label from '../Label';
+import TextInput from '../TextInput';
 
 export interface Props {
   /**

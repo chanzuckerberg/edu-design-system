@@ -2,14 +2,14 @@ import clsx from 'clsx';
 import { nanoid } from 'nanoid';
 import React, { ReactNode, useState, useEffect } from 'react';
 import styles from './FileUploadField.module.css';
-import { Button } from '../Button/Button';
-import { FieldNote } from '../FieldNote/FieldNote';
-import { Icon } from '../Icon/Icon';
-import { Label } from '../Label/Label';
-import { LoadingIndicator } from '../LoadingIndicator/LoadingIndicator';
-import { TextInput } from '../TextInput/TextInput';
-import { TextList } from '../TextList/TextList';
-import { TextListItem } from '../TextListItem/TextListItem';
+import Button from '../Button/';
+import FieldNote from '../FieldNote';
+import Icon from '../Icon';
+import Label from '../Label';
+import LoadingIndicator from '../LoadingIndicator';
+import TextInput from '../TextInput';
+import TextList from '../TextList';
+import TextListItem from '../TextListItem';
 
 export interface Props {
   /**
@@ -140,7 +140,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const FileUploadField: React.FC<Props> = ({
+export const FileUploadField = ({
   acceptedFileTypes,
   ariaDescribedBy,
   className,
@@ -169,7 +169,7 @@ export const FileUploadField: React.FC<Props> = ({
   removeFileButtonText = 'Remove file',
   statusLabel,
   ...other
-}) => {
+}: Props) => {
   const [filesState, setFilesState] = useState(files);
   const [isErrorState, setIsErrorState] = useState(isError);
   const [isDragging, setIsDragging] = useState(false);

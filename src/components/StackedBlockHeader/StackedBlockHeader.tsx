@@ -15,11 +15,11 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const StackedBlockHeader: React.FC<Props> = ({
+export const StackedBlockHeader = ({
   children,
   className,
   ...other
-}) => {
+}: Props) => {
   const componentClassName = clsx(
     styles['stacked-block__header'],
     className,
