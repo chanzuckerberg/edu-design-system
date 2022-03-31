@@ -1,7 +1,6 @@
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
-import Icon from '../Icon';
-import styles from '../Tile';
+import styles from '../Tile/Tile.module.css';
 
 export interface Props {
   /**
