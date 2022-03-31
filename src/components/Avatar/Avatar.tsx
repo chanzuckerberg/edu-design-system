@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import React from 'react';
 import styles from './Avatar.module.css';
 
-import { AvatarImage } from '../AvatarImage/AvatarImage';
+import AvatarImage from '../AvatarImage';
 
 export interface Props {
   /**

@@ -2,9 +2,9 @@ import { Story, Meta } from '@storybook/react';
 import React from 'react';
 
 import { PageHeader, Props } from './PageHeader';
-import { Badge } from '../Badge/Badge';
-import { Button } from '../Button/Button';
-import { ButtonGroup } from '../ButtonGroup/ButtonGroup';
+import Badge from '../Badge';
+import Button from '../Button';
+import ButtonGroup from '../ButtonGroup';
 
 export default {
   title: 'Molecules/Text/PageHeader',

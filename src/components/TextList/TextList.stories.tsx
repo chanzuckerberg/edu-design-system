@@ -2,7 +2,7 @@ import { Story, Meta } from '@storybook/react';
 import React from 'react';
 
 import { TextList, Props } from './TextList';
-import { TextListItem } from '../TextListItem/TextListItem';
+import TextListItem from '../TextListItem';
 
 export default {
   title: 'Molecules/Lists/TextList',

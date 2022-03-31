@@ -20,7 +20,7 @@ export interface Props {
    * - **teal** results in a badge with teal state
    * - **dark-gray** results in a sparkline text bubble with normal results
    */
-  variant: 'warning' | 'error' | 'success';
+  variant?: 'warning' | 'error' | 'success';
 }
 
 /**

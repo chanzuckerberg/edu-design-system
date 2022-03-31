@@ -2,15 +2,15 @@ import { Story, Meta } from '@storybook/react';
 import React from 'react';
 
 import { TableObject, Props } from './TableObject';
-import { Table } from '../Table/Table';
-import { TableBody } from '../TableBody/TableBody';
-import { TableCell } from '../TableCell/TableCell';
-import { TableHeader } from '../TableHeader/TableHeader';
-import { TableObjectBody } from '../TableObjectBody/TableObjectBody';
-import { TableObjectHeader } from '../TableObjectHeader/TableObjectHeader';
-import { TableRow } from '../TableRow/TableRow';
-import { Toolbar } from '../Toolbar/Toolbar';
-import { ToolbarItem } from '../ToolbarItem/ToolbarItem';
+import Table from '../Table';
+import TableBody from '../TableBody';
+import TableCell from '../TableCell';
+import TableHeader from '../TableHeader';
+import TableObjectBody from '../TableObjectBody';
+import TableObjectHeader from '../TableObjectHeader';
+import TableRow from '../TableRow';
+import Toolbar from '../Toolbar';
+import ToolbarItem from '../ToolbarItem';
 
 export default {
   title: 'Organisms/Tables/Table Object',
