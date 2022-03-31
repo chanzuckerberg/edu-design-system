@@ -26,12 +26,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const Badge: React.FC<Props> = ({
-  className,
-  text,
-  variant,
-  ...other
-}) => {
+export const Badge = ({ className, text, variant, ...other }: Props) => {
   const componentClassName = clsx(
     styles['badge'],
     className,

@@ -20,12 +20,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const Card: React.FC<Props> = ({
-  className,
-  children,
-  inverted,
-  ...other
-}) => {
+export const Card = ({ className, children, inverted, ...other }: Props) => {
   const componentClassName = clsx(
     styles['card'],
     className,

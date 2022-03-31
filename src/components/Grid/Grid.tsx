@@ -32,7 +32,7 @@ export const Grid: React.FC<Props> = ({
   variant,
   children,
   ...other
-}) => {
+}: Props) => {
   const componentClassName = clsx(
     styles['grid'],
     className,

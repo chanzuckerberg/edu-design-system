@@ -16,11 +16,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const TextListItem: React.FC<Props> = ({
-  children,
-  className,
-  ...other
-}) => {
+export const TextListItem = ({ children, className, ...other }: Props) => {
   const componentClassName = clsx(styles['text-list__item'], className, {});
   return (
     <li className={componentClassName} {...other}>

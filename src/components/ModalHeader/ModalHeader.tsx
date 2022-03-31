@@ -29,14 +29,14 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const ModalHeader: React.FC<Props> = ({
+export const ModalHeader = ({
   className,
   onClick,
   closeButtonText = 'Close',
   dismissible,
   children,
   ...other
-}) => {
+}: Props) => {
   const componentClassName = clsx('modal__header', className, {});
   return (
     <header className={componentClassName} {...other}>

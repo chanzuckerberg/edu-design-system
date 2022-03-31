@@ -21,12 +21,12 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const ToolbarItem: React.FC<Props> = ({
+export const ToolbarItem = ({
   align,
   className,
   children,
   ...other
-}) => {
+}: Props) => {
   const componentClassName = clsx(
     'toolbar__item',
     className,

@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import { nanoid } from 'nanoid';
 import React, {
   ChangeEventHandler,
+  MutableRefObject,
   ReactNode,
   useEffect,
   useRef,
@@ -84,7 +85,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const SelectField: React.FC<Props> = ({
+export const SelectField = ({
   className,
   id,
   label,
@@ -102,14 +103,14 @@ export const SelectField: React.FC<Props> = ({
   readOnly,
   value,
   ...other
-}) => {
+}: Props) => {
   /**
    * Initialize states, constants, and refs
    */
   const [valueState, setValue] = useState(value ? value : '');
   const [idVar, setId] = useState();
   const [ariaDescribedByVar, setAriaDescribedBy] = useState();
-  const ref = useRef() as React.MutableRefObject<HTMLInputElement>;
+  const ref = useRef() as MutableRefObject<HTMLInputElement>;
 
   /**
    * Get previous prop
