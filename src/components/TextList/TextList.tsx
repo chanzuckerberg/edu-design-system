@@ -35,7 +35,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const TextList: React.FC<Props> = ({
+export const TextList = ({
   children,
   className,
   size,
@@ -43,13 +43,15 @@ export const TextList: React.FC<Props> = ({
   inverted,
   variant,
   ...other
-}) => {
-  const componentClassName = clsx(styles['text-list'], className, {
-    [styles['text-list--sm']]: size === 'sm',
-    [styles['text-list--inline']]: variant === 'inline',
-    [styles['text-list--inverted']]: inverted === true,
-    [styles['text-list--ol']]: as === 'ol',
-  });
+}: Props) => {
+  const componentClassName = clsx(
+    styles['text-list'],
+    className,
+    size === 'sm' && styles['text-list--sm'],
+    variant === 'inline' && styles['text-list--inline'],
+    inverted && styles['text-list--inverted'],
+    as === 'ol' && styles['text-list--ol'],
+  );
   if (as === 'ol') {
     return (
       <ol className={componentClassName} {...other}>

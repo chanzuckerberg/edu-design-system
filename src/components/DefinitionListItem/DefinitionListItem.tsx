@@ -20,12 +20,12 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const DefinitionListItem: React.FC<Props> = ({
+export const DefinitionListItem = ({
   className,
   children,
   title,
   ...other
-}) => {
+}: Props) => {
   const componentClassName = clsx(
     styles['definition-list-item'],
     className,

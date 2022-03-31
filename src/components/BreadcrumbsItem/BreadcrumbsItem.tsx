@@ -21,12 +21,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const BreadcrumbsItem: React.FC<Props> = ({
-  className,
-  text,
-  href,
-  ...other
-}) => {
+export const BreadcrumbsItem = ({ className, text, href, ...other }: Props) => {
   const componentClassName = clsx(styles['breadcrumbs__item'], className, {});
   return (
     <li className={componentClassName} {...other}>

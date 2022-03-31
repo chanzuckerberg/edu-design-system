@@ -16,11 +16,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const ModalBody: React.FC<Props> = ({
-  children,
-  className,
-  ...other
-}) => {
+export const ModalBody = ({ children, className, ...other }: Props) => {
   const componentClassName = clsx(styles['modal__body'], className, {});
   return (
     <div className={componentClassName} {...other}>

@@ -3,7 +3,7 @@ import React, { ReactNode } from 'react';
 
 import styles from './Header.module.css';
 
-export interface HeaderProps {
+export interface Props {
   /**
    * Behavior variants
    * - **relative** (default) yields a Header whose position is styled "relative".
@@ -20,11 +20,7 @@ export interface HeaderProps {
   children?: ReactNode;
 }
 
-export const Header: React.FC<HeaderProps> = ({
-  className,
-  children,
-  ...other
-}) => {
+export const Header = ({ className, children, ...other }: Props) => {
   const componentClassName = clsx(styles['header'], className, {});
 
   return (

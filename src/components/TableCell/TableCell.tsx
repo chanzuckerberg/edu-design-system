@@ -56,7 +56,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const TableCell: React.FC<Props> = ({
+export const TableCell = ({
   behavior,
   children,
   className,
@@ -70,15 +70,17 @@ export const TableCell: React.FC<Props> = ({
   id,
   wrap,
   ...other
-}) => {
-  const componentClassName = clsx(styles['table__cell'], className, {
-    [styles['table__cell--align-left']]: align === 'left',
-    [styles['table__cell--align-inset-left']]: align === 'insetLeft',
-    [styles['table__cell--align-right']]: align === 'right',
-    [styles['table__cell--align-center']]: align === 'center',
-    [styles['table__cell--valign-center']]: verticalAlign === 'center',
-    [styles['table__cell--wrap']]: wrap === true,
-  });
+}: Props) => {
+  const componentClassName = clsx(
+    styles['table__cell'],
+    className,
+    align === 'left' && styles['table__cell--align-left'],
+    align === 'insetLeft' && styles['table__cell--align-inset-left'],
+    align === 'right' && styles['table__cell--align-right'],
+    align === 'center' && styles['table__cell--align-center'],
+    verticalAlign === 'center' && styles['table__cell--valign-center'],
+    wrap && styles['table__cell--wrap'],
+  );
 
   const TagName = as;
 

@@ -94,7 +94,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const Counter: React.FC<Props> = ({
+export const Counter = ({
   className,
   disabled,
   min,
@@ -115,7 +115,7 @@ export const Counter: React.FC<Props> = ({
   labelAfter,
   value,
   ...other
-}) => {
+}: Props) => {
   const [count, setCountState] = useState(
     value !== undefined ? parseInt(value) : 1,
   );
@@ -145,10 +145,12 @@ export const Counter: React.FC<Props> = ({
     setCountState(e.target.value.replace(/\D/, ''));
   }
 
-  const componentClassName = clsx(styles['counter'], className, {
-    [styles['eds-is-error']]: isError,
-    [styles['eds-is-disabled']]: disabled,
-  });
+  const componentClassName = clsx(
+    styles['counter'],
+    className,
+    isError && styles['eds-is-error'],
+    disabled && styles['eds-is-disabled'],
+  );
   return (
     <div className={componentClassName} {...other}>
       <Label

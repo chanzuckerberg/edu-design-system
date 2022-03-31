@@ -56,7 +56,7 @@
   }
 
   /**
-   * Inverted button 
+   * Inverted button
    */
   &.button--inverted {
     border-color: var(--eds-theme-color-primary-border-inverted);
@@ -107,7 +107,7 @@
   }
 
   /**
-   * Inverted primary button 
+   * Inverted primary button
    */
   &.button--inverted {
     background-color: var(--eds-theme-color-primary-background);
@@ -140,7 +140,7 @@
   }
 
   /**
-   * Inverted link button 
+   * Inverted link button
    */
   &.button--inverted {
     @mixin TextLinkInverted;
@@ -164,7 +164,7 @@
   }
 
   /**
-   * Inverted bare button 
+   * Inverted bare button
    */
   &.button--inverted {
     color: var(--eds-theme-color-primary-foreground-inverted);
@@ -183,7 +183,7 @@
  *    cause the button height to expand
  */
 .button--sm {
-  @mixin eds-theme-typography-button-sm;
+  @mixin eds-theme-typography-button-label;
   height: var(--eds-size-3); /* 1 */
   padding-left: var(--eds-size-half);
   padding-right: var(--eds-size-half);
@@ -195,7 +195,7 @@
  *    cause the button height to expand
  */
 .button--md {
-  @mixin eds-theme-typography-button-md;
+  @mixin eds-theme-typography-button-label;
   height: var(--eds-size-4); /* 1 */
   padding-left: var(--eds-size-2);
   padding-right: var(--eds-size-2);
@@ -207,7 +207,7 @@
  *    cause the button height to expand
  */
 .button--lg {
-  @mixin eds-theme-typography-button-lg;
+  @mixin eds-theme-typography-button-label;
   height: var(--eds-size-5); /* 1 */
   padding-left: var(--eds-size-2);
   padding-right: var(--eds-size-2);

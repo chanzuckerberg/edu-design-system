@@ -29,14 +29,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const Logo: React.FC<Props> = ({
-  alt,
-  className,
-  href,
-  src,
-  title,
-  ...other
-}) => {
+export const Logo = ({ alt, className, href, src, title, ...other }: Props) => {
   const componentClassName = clsx(styles['logo'], className, {});
   return (
     <div className={componentClassName} {...other}>

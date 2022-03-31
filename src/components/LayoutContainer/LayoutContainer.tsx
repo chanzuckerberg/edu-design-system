@@ -25,17 +25,19 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const LayoutContainer: React.FC<Props> = ({
+export const LayoutContainer = ({
   className,
   children,
   fullHeight,
   variant,
   ...other
-}) => {
-  const componentClassName = clsx(styles['layout-container'], className, {
-    [styles['layout-container--narrow']]: variant === 'narrow',
-    [styles['layout-container--full-height']]: fullHeight === true,
-  });
+}: Props) => {
+  const componentClassName = clsx(
+    styles['layout-container'],
+    className,
+    variant === 'narrow' && styles['layout-container--narrow'],
+    fullHeight && styles['layout-container--narrow'],
+  );
   return (
     <div className={componentClassName} {...other}>
       {children}

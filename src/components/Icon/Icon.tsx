@@ -35,7 +35,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const Icon: React.FC<Props> = ({
+export const Icon = ({
   className,
   name,
   focusable = false,
@@ -43,7 +43,7 @@ export const Icon: React.FC<Props> = ({
   inverted,
   title,
   ...other
-}) => {
+}: Props) => {
   const [idVar, setId] = useState();
 
   useEffect(() => {
@@ -51,9 +51,11 @@ export const Icon: React.FC<Props> = ({
     svg4everybody(); //Required to get IE to render icon sprites
   }, [id]);
 
-  const componentClassName = clsx(styles['icon'], className, {
-    [styles['icon--inverted']]: inverted === true,
-  });
+  const componentClassName = clsx(
+    styles['icon'],
+    className,
+    inverted && styles['icon--inverted'],
+  );
   return (
     <svg
       aria-hidden={!title}

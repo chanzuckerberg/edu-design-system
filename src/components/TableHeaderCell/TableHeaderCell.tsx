@@ -49,7 +49,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const TableHeaderCell: React.FC<Props> = ({
+export const TableHeaderCell = ({
   children,
   className,
   rowSpan,
@@ -61,13 +61,15 @@ export const TableHeaderCell: React.FC<Props> = ({
   onClick,
   text,
   ...other
-}) => {
-  const componentClassName = clsx(styles['table-header-cell'], className, {
-    [styles['table-header-cell--ascending']]: sortDirection === 'ascending',
-    [styles['table-header-cell--descending']]: sortDirection === 'descending',
-    [styles['table-header-cell--sort-none']]: !sortDirection,
-    [styles['eds-is-active']]: sortDirection,
-  });
+}: Props) => {
+  const componentClassName = clsx(
+    styles['table-header-cell'],
+    className,
+    sortDirection === 'ascending' && styles['table-header-cell--ascending'],
+    sortDirection === 'descending' && styles['table-header-cell--descending'],
+    !sortDirection && styles['table-header-cell--none'],
+    sortDirection && styles['table-header-cell--ascending'],
+  );
 
   return (
     <th

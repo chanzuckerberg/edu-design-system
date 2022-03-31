@@ -34,11 +34,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const DrawerExample: React.FC<Props> = ({
-  children,
-  className,
-  ...other
-}) => {
+export const DrawerExample = ({ children, className, ...other }: Props) => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const drawerButton = useRef() as MutableRefObject<HTMLSpanElement>;
 

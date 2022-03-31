@@ -46,13 +46,13 @@ export interface Props {
    * - **error** - results in a red banner
    * - **info** - results in a blue banner
    */
-  variant?: 'success' | 'warning' | 'error' | 'info' | 'brand';
+  variant?: 'success' | 'warning' | 'error' | 'info' | 'brand' | 'vertical';
 }
 
 /**
  * Primary UI component for user interaction
  */
-export const Banner: React.FC<Props> = ({
+export const Banner = ({
   iconTitle,
   className,
   title,
@@ -64,13 +64,14 @@ export const Banner: React.FC<Props> = ({
   closeButtonText = 'Close',
   ...other
 }) => {
-  const componentClassName = clsx(styles['banner'], className, {
-    [styles['banner--success']]: variant === 'success',
-    [styles['banner--warning']]: variant === 'warning',
-    [styles['banner--error']]: variant === 'error',
-    [styles['banner--brand']]: variant === 'brand',
-    [styles['banner--vertical']]: orientation === 'vertical',
-  });
+  const componentClassName = clsx(
+    styles['banner'],
+    variant === 'success' && styles['banner--success'],
+    variant === 'warning' && styles['banner--warning'],
+    variant === 'error' && styles['banner--error'],
+    variant === 'brand' && styles['banner--brand'],
+    variant === 'vertical' && styles['banner--vertical'],
+  );
   const [dismissed, setDismissed] = useState(false);
 
   function onDismiss(e: any) {
