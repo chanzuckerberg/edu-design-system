@@ -33,7 +33,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const FieldNote: React.FC<Props> = ({
+export const FieldNote = ({
   className,
   id,
   iconName,
@@ -41,7 +41,7 @@ export const FieldNote: React.FC<Props> = ({
   inverted,
   children,
   ...other
-}) => {
+}: Props) => {
   const componentClassName = clsx(
     styles['field-note'],
     className,

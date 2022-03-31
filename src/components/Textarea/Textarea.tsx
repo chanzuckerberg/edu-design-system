@@ -73,7 +73,7 @@ export interface Props {
   defaultValue?: string;
 }
 
-export const Textarea: React.FC<Props> = ({
+export const Textarea = ({
   ariaDescribedBy,
   className,
   disabled,
@@ -90,7 +90,7 @@ export const Textarea: React.FC<Props> = ({
   value,
   defaultValue,
   ...other
-}) => {
+}: Props) => {
   const componentClassName = clsx(styles['textarea'], className, {});
 
   return (

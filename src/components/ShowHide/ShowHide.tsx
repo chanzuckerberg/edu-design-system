@@ -37,7 +37,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const ShowHide: React.FC<Props> = ({
+export const ShowHide = ({
   align,
   className,
   text,
@@ -45,7 +45,7 @@ export const ShowHide: React.FC<Props> = ({
   trigger,
   children,
   ...other
-}) => {
+}: Props) => {
   const [isActive, setIsActive] = useState(false);
 
   const dropdownRef = useRef<HTMLDivElement | null>(null);

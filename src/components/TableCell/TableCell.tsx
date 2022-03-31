@@ -56,7 +56,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const TableCell: React.FC<Props> = ({
+export const TableCell = ({
   behavior,
   children,
   className,
@@ -70,7 +70,7 @@ export const TableCell: React.FC<Props> = ({
   id,
   wrap,
   ...other
-}) => {
+}: Props) => {
   const componentClassName = clsx(
     styles['table__cell'],
     className,

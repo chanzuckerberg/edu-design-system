@@ -49,7 +49,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const LinkListItem: React.FC<Props> = ({
+export const LinkListItem = ({
   className,
   forwardRef,
   href,
@@ -60,7 +60,7 @@ export const LinkListItem: React.FC<Props> = ({
   text,
   target,
   ...other
-}) => {
+}: Props) => {
   const componentClassName = clsx('link-list__item', className, {});
   return (
     <li className={componentClassName} {...other}>

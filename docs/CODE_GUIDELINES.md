@@ -291,7 +291,6 @@ The design system's component directory contains all of the design system's comp
 
 ### Imports
 
-### Imports
 
 The framework follows a specific ordering/clustering for importing modules into a component. This is enforced through the [`import/order` lint rule](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/order.md).
 
@@ -363,7 +362,7 @@ When using the `useState()` hook, TypeScript will infer the correct type from th
 `useEffect()` hooks do not require any typing. TypeScript expects them to either return nothing or a Destructor-typed function (a function that cleans up any side effects and returns void.)
 
 #### useRef()
-`useRef()` hooks access underlying DOM elements to perform imperative actions. The resulting `ref` object can either be *mutable* or *not mutable*. (If the value store in its' `.current` property may be changed, the ref needs to be `mutable`.) Explictly convey the intended mutability status of each `ref` by using either `React.MutableObject` and `React.RefObject`, in a generic type definition. For mutable refs, use a union with `null` when initializing the ref; otherwise, TypeScript will complain when you change the value of `.current`. Similarly, *do not* create a union with `null` for non-mutable refs.
+`useRef()` hooks access underlying DOM elements to perform imperative actions. The resulting `ref` object can either be *mutable* or *not mutable*. (If the value store in its' `.current` property may be changed, the ref needs to be `mutable`.) Explictly convey the intended mutability status of each `ref` by using either `React.MutableObject` and `React.RefObject`, in a generic type definition. 
 
 For consistency, include `MutableRefObject` and `RefObject` with your import statements.
 
@@ -373,9 +372,8 @@ import React, { useRef, MutableRefObject, RefObject } from 'react';
 
 ...
 
-const mutableRef: MutableRefObject<HTMLDivElement | null> = useRef<HTMLDivElement | null>(null);
+const ref = useRef() as MutableRefObject<HTMLInputElement>;
 
-const ref: RefObject<HTMLInputElement> = useRef<HTMLInputElement>(null); 
 ```
 ### Define `componentClassName`
 
