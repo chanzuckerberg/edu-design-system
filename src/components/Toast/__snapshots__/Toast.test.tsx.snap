@@ -3,14 +3,14 @@
 exports[`<Toast /> Alert story renders snapshot 1`] = `
 <div
   class="toast"
+  text="You've got toast!"
 >
   <div
     class="toast--content"
   >
-    <p>
-      You've got toast!
-    </p>
-     
+    <p
+      class="toast--text"
+    />
   </div>
 </div>
 `;
@@ -18,14 +18,14 @@ exports[`<Toast /> Alert story renders snapshot 1`] = `
 exports[`<Toast /> NotDismissable story renders snapshot 1`] = `
 <div
   class="toast"
+  text="You've got toast!"
 >
   <div
     class="toast--content"
   >
-    <p>
-      You've got toast!
-    </p>
-     
+    <p
+      class="toast--text"
+    />
   </div>
 </div>
 `;
@@ -33,14 +33,14 @@ exports[`<Toast /> NotDismissable story renders snapshot 1`] = `
 exports[`<Toast /> Success story renders snapshot 1`] = `
 <div
   class="toast"
+  text="You've got toast!"
 >
   <div
     class="toast--content"
   >
-    <p>
-      You've got toast!
-    </p>
-     
+    <p
+      class="toast--text"
+    />
   </div>
 </div>
 `;

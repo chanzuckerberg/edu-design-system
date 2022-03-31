@@ -1,3 +1,4 @@
+@import '../../design-tokens/mixins.css'
 /*------------------------------------*\
     # TOAST
 \*------------------------------------*/
@@ -43,4 +44,14 @@
   gap: var(--eds-size-2);
   grid-template-columns: min-content 1fr;
   align-items: center;
+}
+
+/**
+ * 1) The text in the toast. Styled via mixins over using Text component.
+ */
+.toast--text { /* 1 */
+  @apply reset;
+  @apply eds-typography-preset-007;
+
+  color: inherit;
 }

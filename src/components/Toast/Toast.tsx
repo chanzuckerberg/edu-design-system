@@ -11,13 +11,13 @@ export type Variant = 'success' | 'alert';
 
 export type Props = {
   /**
-   * Additional class names passed in for styling.
+   * Additional class names that can be appended to the component, passed in for styling.
    */
   className?: string;
   /**
-   * The contents of the toast.
+   * The child node(s) contains the toast message. Note: the toast message is displayed inside a TextPassage, so children can contain raw HTML
    */
-  text: React.ReactNode;
+  children: React.ReactNode;
   /**
    * The color of the Toast, based on EDS defined colors. Also determines the icon used.
    * Note that the Icon mapping matches the style of Banners.
@@ -39,31 +39,26 @@ export type Props = {
  * data was successfully saved.
  */
 export const Toast = ({
-  text,
+  children,
   className,
   variant,
   onDismiss,
   // Allow for additional attributes such as aria roles
   ...other
 }: Props) => {
+  const componentClassName = clsx(
+    className,
+    styles.toast,
+    /* TODO: uncomment and point to corresponding style classes once Notifications is fully migrated */
+    // variant === 'success' && colorStyles.colorSuccess,
+    // variant === 'alert' && colorStyles.colorAlert,
+  );
   return (
-    <div
-      className={clsx(
-        className,
-        styles.toast,
-        /* TODO: uncomment and point to corresponding style classes once Notifications is fully migrated */
-        // variant === 'success' && colorStyles.colorSuccess,
-        // variant === 'alert' && colorStyles.colorAlert,
-      )}
-      {...other}
-    >
+    <div className={componentClassName} {...other}>
       <div className={styles['toast--content']}>
-        {/* TODO: point to internal Text and NotificaitonIcon once fully migrated */}
-        {/* <NotificationIcon variant={variant} />
-        <Text color="inherit" size="sm">
-          {text}
-        </Text> */}
-        <p>{text}</p> {/* replace this */}
+        {/* TODO: point to internal NotificationIcon once fully migrated */}
+        {/* <NotificationIcon variant={variant} /> */}
+        <p className={styles['toast--text']}>{children}</p>
       </div>
       {/* TODO: point to internal CloseButton once fully migrated */}
       {/* {onDismiss && <CloseButton color={variant} onClose={onDismiss} />} */}
