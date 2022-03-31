@@ -56,11 +56,7 @@ export const ModalExample = ({
       className={componentClassName}
       {...other}
     >
-      <Button
-        text="Open Modal"
-        onClick={openContinueModal}
-        buttonRef={modalButton}
-      />
+      <Button text="Open Modal" onClick={openContinueModal} ref={modalButton} />
 
       <Modal
         dismissible={true}
