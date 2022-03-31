@@ -1,8 +1,7 @@
 {
   "include": [
-    "src/index.ts",
-    "src/custom.d.ts",
-    "src/util/*.ts"
+    "src",
+    ".storybook/**/*",
   ],
   "exclude": [
     "node_modules",

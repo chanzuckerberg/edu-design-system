@@ -1,13 +1,9 @@
 import { Meta } from '@storybook/react';
 import React from 'react';
 import { Card } from './Card';
-import Button from '../Button';
-import ButtonGroup from '../ButtonGroup';
 import CardBody from '../CardBody';
 import CardFooter from '../CardFooter';
 import CardHeader from '../CardHeader';
-import Heading from '../Heading';
-import TextPassage from '../TextPassage';
 
 export default {
   title: 'Molecules/Blocks/Card',

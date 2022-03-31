@@ -41,7 +41,7 @@ export interface Props {
   /**
    * Handler to be called when the modal is being closed (by ESCAPE / clicking X / clicking outside)
    */
-  onClose?: () => void;
+  onClose?: (e?: any) => void;
   /**
    * Size variations
    * - **sm** results in a modal that is narrower than the default

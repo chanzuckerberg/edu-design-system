@@ -3,8 +3,6 @@ import React from 'react';
 
 import { PageHeader, Props } from './PageHeader';
 import Badge from '../Badge';
-import Button from '../Button';
-import ButtonGroup from '../ButtonGroup';
 
 export default {
   title: 'Molecules/Text/PageHeader',
