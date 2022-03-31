@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { nanoid } from 'nanoid';
 import React, { ChangeEventHandler, useEffect, useRef, useState } from 'react';
-import { Checkbox } from '../Checkbox/Checkbox';
+import Checkbox from '../Checkbox';
 import styles from '../CheckboxField/CheckboxField.module.css';
 
 export interface Props {

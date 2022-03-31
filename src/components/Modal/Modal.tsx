@@ -5,9 +5,9 @@ import FocusLock from 'react-focus-lock';
 import { Portal } from 'react-portal';
 import styles from './Modal.module.css';
 import { ESCAPE_KEYCODE } from '../../util/keycodes';
-import { ModalBody } from '../ModalBody/ModalBody';
-import { ModalFooter } from '../ModalFooter/ModalFooter';
-import { ModalHeader } from '../ModalHeader/ModalHeader';
+import ModalBody from '../ModalBody';
+import ModalFooter from '../ModalFooter';
+import ModalHeader from '../ModalHeader';
 
 export interface Props {
   /**

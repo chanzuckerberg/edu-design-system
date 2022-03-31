@@ -9,7 +9,7 @@ import React, {
   ReactNode,
 } from 'react';
 import styles from './AccordionPanel.module.css';
-import { Icon } from '../Icon/Icon';
+import Icon from '../Icon';
 
 export interface Props {
   /**

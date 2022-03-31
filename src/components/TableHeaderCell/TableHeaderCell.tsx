@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import React, { MouseEventHandler, ReactNode } from 'react';
-import { Button } from '../Button/Button';
+import Button from '../Button';
 import styles from '../Table/Table.module.css';
 
 export interface Props {
