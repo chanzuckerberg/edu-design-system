@@ -110,7 +110,7 @@ export class TypographyUsageUtilities extends Component {
         <p className="u-theme-typography-heading-5">
           Me smallness is existence attending he enjoyment favourite affection.
           Delivered is to ye belonging enjoyment preferred. Astonished and
-          acceptance men two discretion. Law edscation recommend did objection
+          acceptance men two discretion. Law education recommend did objection
           how old.{' '}
         </p>
 

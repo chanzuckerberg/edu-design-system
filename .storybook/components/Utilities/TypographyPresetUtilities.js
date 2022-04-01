@@ -111,7 +111,7 @@ export class TypographyPresetUtilities extends Component {
         <p className="u-typography-preset-008">
           Typography Preset 008 Me smallness is existence attending he enjoyment
           favourite affection. Delivered is to ye belonging enjoyment preferred.
-          Astonished and acceptance men two discretion. Law edscation recommend
+          Astonished and acceptance men two discretion. Law education recommend
           did objection how old.{' '}
         </p>
 

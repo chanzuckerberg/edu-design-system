@@ -1,0 +1,25 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #AVATARBLOCK
+\*------------------------------------*/
+
+/**
+ * 1) 
+ */
+.avatar-block {
+  @mixin eds-theme-typography-body-text;
+  display: flex;
+  align-items: center;
+  gap: var(--eds-size-2-and-half);
+  background: none;
+  border: none;
+  appearance: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.avatar-block__body {
+  flex: 1;
+  white-space: nowrap;
+}
