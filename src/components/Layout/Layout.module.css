@@ -27,37 +27,10 @@
     top: 0;
     left: 0;
     height: 100vh;
+    width: var(--eds-l-sidebar-width);
     z-index: var(--eds-z-index-500);   
   }
 }
-
-
-/**
- * Sidebar layout section in expandable layout
- */
-.layout--narrow-sidebar .layout__section--sidebar {
-  @media all and (min-width: $eds-bp-lg) {
-    width: 3.625rem;
-  }
-}
-
-/**
- * Sidebar layout section in expandable layout
- */
-.layout--expandable .layout__section--sidebar {
-  @media all and (min-width: $eds-bp-lg) {
-    transition: width var(--eds-anim-move-quick) var(--eds-anim-ease);
-  }
-} 
-
-/**
- * Sidebar layout section focus-within/hover state in expandable layout
- */
-.layout--expandable .layout__section--sidebar:hover, .layout--expandable .layout__section--sidebar:focus-within {
-  @media all and (min-width: $eds-bp-lg) {
-      width: var(--eds-l-sidebar-width);
-  }
-} 
 
 
 /**
@@ -65,9 +38,8 @@
  * 1) Contains the main page content
  */
 .layout__section--main {
-
   @media all and (min-width: $eds-bp-lg) {
-    width: calc(100% - 3.625rem));
+    width: 100%;
     height: 100vh;
     padding-top: var(--eds-size-6);
   }
