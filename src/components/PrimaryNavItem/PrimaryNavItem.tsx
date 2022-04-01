@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import React from 'react';
+import { Icon } from '../Icon/Icon';
 import styles from '../PrimaryNav/PrimaryNav.module.css';
 
 export interface Props {
@@ -11,6 +12,10 @@ export interface Props {
    * URL or a URL fragment string that the hyperlink points to
    */
   href?: string;
+  /**
+   * Name of SVG icon (i.e. caret-down, minus, warning)
+   */
+  iconName?: string;
   /**
    * Set to true when the primary nav item is the active page
    */
@@ -25,7 +30,10 @@ export interface Props {
  * Primary UI component for user interaction
  */
 export const PrimaryNavItem = React.forwardRef<HTMLLIElement, Props>(
-  function PrimaryNavItem({ className, text, href, isActive, ...other }, ref) {
+  function PrimaryNavItem(
+    { className, text, href, isActive, iconName, ...other },
+    ref,
+  ) {
     const componentClassName = clsx(
       styles['primary-nav__item'],
       className,
@@ -44,6 +52,7 @@ export const PrimaryNavItem = React.forwardRef<HTMLLIElement, Props>(
     return (
       <li className={componentClassName} {...other} ref={ref}>
         <TagName className={styles['primary-nav__link']} href={href}>
+          <Icon className={styles['primary-nav__icon']} name={iconName} />
           <span className={styles['primary-nav__text']}>{text}</span>
         </TagName>
       </li>

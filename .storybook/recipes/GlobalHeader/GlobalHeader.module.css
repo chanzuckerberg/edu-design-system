@@ -6,57 +6,33 @@
  * 1) 
  */
 .global-header {
+  position: relative;
   margin-bottom: var(--eds-size-4);
 
   @media all and (min-width: $eds-bp-lg) {
-    margin-bottom: 0;
+    position: fixed;
     display: flex;
     flex-direction: column;
-    max-width: var(--eds-l-sidebar-width);
+    align-items: flex-start;
+    margin-bottom: 0;
+    transition: width var(--eds-anim-move-quick) var(--eds-anim-ease);
   }
 }
 
 /**
- * Header container 
- * 1) Contains the 
+ * Global header logo
+ * 1) The SVG logo
+ * 2) Nudges the logo to the left of the containing box
+ *    to achieve the desired alignment.
  */
-.global-header__header {
-  display: flex;
-  justify-content: space-between;
-
+.global-header__logo {
+  display: none;
+  
   @media all and (min-width: $eds-bp-lg) {
-    margin-bottom: var(--eds-size-4);
-  }
-}
-
-/**
- * Body container
- * 1) Contains the primary navigation 
- */
-.global-header__body {
-  @media all and (min-width: $eds-bp-lg) {
-    flex: 1;
-  }
-
-  @media all and (max-width: $eds-bp-lg) {
-    display: none;
-
-    /* stylelint-disable-next-line max-nesting-depth */
-    .global-header.is-active & {
-      padding-top: var(--eds-size-4);
-      display: block;
-    }
-  }
-}
-
-.global-header__footer {
-  @media all and (max-width: $eds-bp-lg) {
-    display: none;
-
-    /* stylelint-disable-next-line max-nesting-depth */
-    .global-header.is-active & {
-      display: block;
-    }
+    display: block;
+    position: relative;
+    left: -0.5rem; /* 2 */
+    margin-bottom: var(--eds-size-5);
   }
 }
 
@@ -69,5 +45,24 @@
 .global-header__menu-button {
   @media all and (min-width: $eds-bp-lg) {
     display: none; /* 1 */
+  }
+}
+
+
+/**
+ * Avatar block 
+ * 1) The bottom-aligned avatar block contains the clickable
+ *    avatar item that exposes the user's notifications when
+ *    selected
+ * 2) Nudge the alignment to achieve the desired layout
+ */
+.global-header__avatar-block {
+  position: relative;
+  left: -0.5rem; /* 2 */
+  margin-left: auto;
+
+  @media all and (min-width: $eds-bp-lg) {
+    margin-left: 0;
+    margin-top: auto;
   }
 }
