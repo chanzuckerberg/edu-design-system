@@ -33,10 +33,10 @@ export interface Props {
  * Primary UI component for user interaction
  */
 export const ListDetailPanel = ({
+  ariaLabelledBy,
   children,
   className,
   id,
-  ariaLabelledBy,
   variant,
   title,
   ...other
