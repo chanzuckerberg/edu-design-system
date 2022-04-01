@@ -2,7 +2,7 @@ import { Story, Meta } from '@storybook/react';
 import React from 'react';
 
 import { ListDetail, Props } from './ListDetail';
-import { ListDetailPanel } from '../ListDetailPanel/ListDetailPanel';
+import ListDetailPanel from '../ListDetailPanel';
 import { TextPassage } from '../TextPassage/TextPassage';
 
 export default {
