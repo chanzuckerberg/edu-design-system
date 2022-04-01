@@ -102,7 +102,6 @@ export default function Banner({
           color={color}
           onClick={onDismiss}
           variant="plain"
-          size="large"
         >
           <CloseRoundedIcon
             purpose="informative"
