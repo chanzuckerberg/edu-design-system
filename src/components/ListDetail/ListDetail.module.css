@@ -1,7 +1,7 @@
 @import '../../design-tokens/mixins.css';
 
 /*------------------------------------*\
-    #TABS
+    #List Detail
 \*------------------------------------*/
 
 /**
@@ -27,11 +27,10 @@
 .list-detail__header {
   width: 100%;
   position: relative;
-  padding: var(--eds-size-2);
+  padding: var(--eds-size-4) var(--eds-size-2);
 
   @media all and (min-width: $eds-bp-lg) {
-    padding-right: var(--eds-size-4);
-    padding-left: var(--eds-size-6);
+    padding: var(--eds-size-5);
     width: 20rem;
   }
 }
@@ -46,8 +45,7 @@
 
   @media all and (min-width: $eds-bp-lg) {
     flex: 1; /* 1 */
-    padding-right: var(--eds-size-8);
-    padding-left: var(--eds-size-8);
+    padding: var(--eds-size-5) var(--eds-size-8);
     box-shadow: -6px 0px 10px -2px var(--eds-theme-color-neutral-subtle-border); /* 1 */
   }
 }
@@ -60,11 +58,11 @@
 .list-detail__list {
   @mixin reset;
   list-style: none;
-  @mixin eds-theme-typography-body-text-md;
+  @mixin eds-theme-typography-body-text;
 
   @media all and (min-width: $eds-bp-lg) {
     position: sticky;
-    top: var(--eds-size-2);
+    top: var(--eds-size-5);
   }
 }
 
@@ -76,35 +74,38 @@
   position: relative;
   flex-shrink: 0; /* 1 */
   padding-bottom: var(--eds-size-4);
+}
 
-  /**
+/**
   * List detail item after
-  * 1) Line between items that shouldn't link out unliike the bullet
+  * 1) When list variant is 'ordered', add a line between items that shouldn't link out unliike the bullet
   */
+.list-detail__list--ordered .list-detail__item {
   &:after {
     content: '';
     position: absolute;
-    top: var(--eds-size-1-and-half);
-    left: 4px;
-    width: 1px;
-    height: 100%;
-    background: var(--eds-theme-color-neutral-md-background);
+    top: 1.5rem;
+    left: 0.25rem;
+    width: 0.0625rem;
+    height: 70%;
+    background: var(--eds-theme-color-neutral-subtle-background);
     border-radius: 50%;
   }
 
   /**
-  * Last list detail item
-  */
+    * Last list detail item
+    */
   &:last-child {
     padding-bottom: 0;
-  }
 
-  /**
-  * List list detail item after
-  * 1) Don't add a line between items
-  */
-  &:last-child:after {
-    content: none;
+    /**
+      * List list detail item after
+      * 1) Don't add a line between items
+      */
+    /* stylelint-disable-next-line max-nesting-depth */
+    &:after {
+      content: none;
+    }
   }
 }
 
@@ -129,14 +130,14 @@
    * List detail link within active list-detail item
    */
   .list-detail__item.eds-is-active & {
-    @mixin eds-theme-typography-body-text-md;
+    @mixin eds-theme-typography-body-text-bold;
     color: var(--eds-theme-color-body-foreground);
   }
 }
 
-.list-detail__link-left {
+.list-detail__link-left:not(.list-detail__link-hidden) {
   /**
-   * Before pseudoelement bullet
+   * Before pseudoelement bullet (for non-number variant items)
    * 1) Set to 9px to center the border
    */
   &:before {
@@ -148,19 +149,38 @@
     top: var(--eds-size-1);
     height: 9px; /* 1 */
     width: 9px; /* 1 */
-    background: var(--eds-theme-color-neutral-md-background);
+    background: var(--eds-theme-color-neutral-subtle-background);
     border-radius: 50%;
+  }
+
+  /**
+  * List detail item variants
+  * 1) Remove the bullet since the icon will take its place
+  */
+  li[class*='list-detail__item--'] & {
+    /* stylelint-disable-next-line max-nesting-depth */
+    &:before {
+      content: none;
+    }
   }
 }
 
 /**
-* Success list detail item
-* 1) Remove the bullet since the icon will take its place
+* List detail number
+* 1) Used on list items using number variant
 */
-.list-detail__item--success .list-detail__link-left {
-  &:before {
-    content: none; /* 1 */
-  }
+.list-detail__number {
+  position: relative;
+  left: -4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid var(--eds-theme-color-neutral-subtle-border);
+  margin-right: 9px;
+  padding: 4px 8px;
+  font-size: 12px;
+  margin-left: -4px;
+  background: var(--eds-color-neutral-white); /* 1*/
 }
 
 /**
@@ -169,9 +189,9 @@
 */
 .list-detail__icon {
   position: relative;
-  left: -5px;
-  height: var(--eds-size-2-and-half);
-  width: var(--eds-size-2-and-half);
+  left: -7px;
+  height: var(--eds-size-3);
+  width: var(--eds-size-3);
   margin-right: var(--eds-size-half);
   background: var(--eds-color-neutral-white); /* 1*/
   z-index: var(--eds-z-index-100);
@@ -181,5 +201,15 @@
   */
   .list-detail__item--success & {
     fill: var(--eds-theme-color-utility-success-foreground);
+  } /**
+  * List detail icon within warning list detail item
+  */
+  .list-detail__item--warning & {
+    fill: var(--eds-theme-color-utility-warning-foreground);
+  } /**
+  * List detail icon within error list detail item
+  */
+  .list-detail__item--error & {
+    fill: var(--eds-theme-color-utility-error-foreground);
   }
 }
