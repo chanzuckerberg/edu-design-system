@@ -9,7 +9,7 @@
  * 3) The thick left border operates as a foreground band of color, 
  *    so foreground rather than border is used
  */
- .toast { /* 2 */
+ .toast {
   width: 100%;
   max-width: 25rem;
 
@@ -36,7 +36,7 @@
  * 1) The toast content, usually an icon and text message. Does not include the optional close button
  * 2) Grid places the icon on the left and message on the right, with both vertically aligned to the center.
  */
-.toast--content { /* 1 */
+.toast--content {
   padding-top: var(--eds-size-2);
   padding-bottom: var(--eds-size-2);
 
@@ -47,9 +47,9 @@
 }
 
 /**
- * 1) The text in the toast. Styled via mixins over using Text component.
+ * The text in the toast. Styled via mixins over using Text component.
  */
-.toast--text { /* 1 */
+.toast--text {
   @apply reset;
   @apply eds-typography-preset-007;
 
