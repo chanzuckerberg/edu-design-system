@@ -22,31 +22,19 @@ export interface Props {
   /**
    * Number passed down from ListDetail to show the active index state of ListDetail
    */
-  title?: string;
-  /**
-   * Stylistic variations for the list detail item type.
-   * - **success** - results in a green list detail item and add icon
-   * - **warning** - results in a yellow list detail item and add icon
-   * - **error** - results in a red list detail item and adds icon
-   * - **number** - results in an indexed number in place of icon
-   */
-   variant?: 'success' | 'warning' | 'error' | 'number';
 }
 
 /**
  * Primary UI component for user interaction
  */
-export const ListDetailPanel: React.FC<Props> = ({
+export const ListDetailPanel = ({
   children,
   className,
   id,
   ariaLabelledBy,
-  title,
-  variant,
   ...other
-}) => {
-  const componentClassName = clsx(styles['list-detail__panel'], className, {
-  });
+}: Props) => {
+  const componentClassName = clsx(styles['list-detail__panel'], className, {});
   return (
     <div
       role="tabpanel"
