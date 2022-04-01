@@ -21,9 +21,16 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
- export const NavContainer = ({ children, className, isActive, ...other }: Props) => {
-  const componentClassName = clsx(styles['nav-container'], className, 
-    isActive && [styles['is-active']]
+export const NavContainer = ({
+  children,
+  className,
+  isActive,
+  ...other
+}: Props) => {
+  const componentClassName = clsx(
+    styles['nav-container'],
+    className,
+    isActive && [styles['is-active']],
   );
 
   return (

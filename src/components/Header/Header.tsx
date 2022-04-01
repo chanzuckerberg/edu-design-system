@@ -38,8 +38,13 @@ export interface Props {
   children?: ReactNode;
 }
 
-
-export const Header = ({ behavior, className, children, pinnedStop = 152, ...other }: Props) => {
+export const Header = ({
+  behavior,
+  className,
+  children,
+  pinnedStop = 150,
+  ...other
+}: Props) => {
   const ref = useRef() as MutableRefObject<HTMLElement>;
   const stickyRef = useRef() as MutableRefObject<HTMLDivElement>;
 

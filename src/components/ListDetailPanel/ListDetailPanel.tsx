@@ -26,7 +26,7 @@ export interface Props {
   /**
    * Available _stylistic_ variations available for the component
    */
-  variant?: 'error' | 'warning' | 'success' | 'number'
+  variant?: 'error' | 'warning' | 'success' | 'number';
 }
 
 /**

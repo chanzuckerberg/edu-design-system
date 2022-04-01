@@ -43,7 +43,7 @@ export const Layout = ({
     styles['layout'],
     className,
     variant === 'right-sidebar' && styles['layout--right-sidebar'],
-    behavior === 'fixed-sidebar' && styles['layout--fixed-sidebar']
+    behavior === 'fixed-sidebar' && styles['layout--fixed-sidebar'],
   );
 
   return (
