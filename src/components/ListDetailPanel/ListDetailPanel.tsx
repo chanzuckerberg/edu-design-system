@@ -19,16 +19,26 @@ export interface Props {
    * HTML id for the component
    */
   id?: any;
+  /**
+   * Heading
+   */
+  title?: string;
+  /**
+   * Available _stylistic_ variations available for the component
+   */
+  variant?: 'error' | 'warning' | 'success' | 'number'
 }
 
 /**
  * Primary UI component for user interaction
  */
 export const ListDetailPanel = ({
+  ariaLabelledBy,
   children,
   className,
   id,
-  ariaLabelledBy,
+  title,
+  variant,
   ...other
 }: Props) => {
   const componentClassName = clsx(styles['list-detail__panel'], className, {});
