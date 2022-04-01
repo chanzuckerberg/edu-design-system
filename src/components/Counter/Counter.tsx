@@ -169,7 +169,7 @@ export const Counter = ({
           className={styles['counter__btn']}
           variant="bare"
           iconPosition="after"
-          iconName="minus"
+          iconName="remove"
           aria-label={minusButtonText}
           disabled={disabled || (min !== undefined && count === min)}
           onClick={(e) => onDecrease(e)}
@@ -193,7 +193,7 @@ export const Counter = ({
           className={styles['counter__btn']}
           variant="bare"
           iconPosition="after"
-          iconName="plus"
+          iconName="add"
           aria-label={plusButtonText}
           disabled={disabled || (max !== undefined && count === max)}
           onClick={(e) => onIncrease(e)}
