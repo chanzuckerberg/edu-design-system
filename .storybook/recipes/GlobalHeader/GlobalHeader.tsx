@@ -45,7 +45,7 @@ export const GlobalHeader = ({ className, ...other }: Props) => {
         variant="bare"
         aria-label={isActive ? 'Close' : 'Menu'}
         iconPosition="before"
-        iconName={isActive ? 'x' : 'menu'}
+        iconName={isActive ? 'close' : 'menu'}
         inverted={true}
         onClick={toggleMenu}
       />

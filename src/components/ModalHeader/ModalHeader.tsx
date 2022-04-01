@@ -45,7 +45,7 @@ export const ModalHeader = ({
         <Button
           className={styles['modal__close-button']}
           iconPosition="before"
-          iconName="x"
+          iconName="close"
           aria-label={closeButtonText}
           variant="bare"
           onClick={onClick}
