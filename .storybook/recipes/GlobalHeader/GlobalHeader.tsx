@@ -6,7 +6,7 @@ import {
   Logo,
   PrimaryNav,
   PrimaryNavItem,
-  NavContainer, 
+  NavContainer,
   Button,
   AvatarBlock,
 } from '../../../src';

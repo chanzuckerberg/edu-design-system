@@ -152,13 +152,7 @@ export const Button = React.forwardRef(
       >
         {iconPosition === 'before' && computedIcon}
 
-        {text && (
-          <span
-            className={styles['button__text']}
-          >
-            {text}
-          </span>
-        )}
+        {text && <span className={styles['button__text']}>{text}</span>}
 
         {iconPosition === 'after' && computedIcon}
       </TagName>
