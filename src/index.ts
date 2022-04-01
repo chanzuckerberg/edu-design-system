@@ -1,6 +1,7 @@
 export { default as Accordion } from './components/Accordion';
 export { default as AccordionPanel } from './components/AccordionPanel';
 export { default as Avatar } from './components/Avatar';
+export { default as AvatarBlock } from './components/AvatarBlock';
 export { default as AvatarImage } from './components/AvatarImage';
 export { default as Badge } from './components/Badge';
 export { default as Band } from './components/Band';

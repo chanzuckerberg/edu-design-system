@@ -11,13 +11,28 @@ export interface Props {
    * CSS class names that can be appended to the component.
    */
   className?: string;
+  /**
+   * is Active
+   * 1) Panel is open when set to true. Close when set to false
+   */
+  isActive?: boolean;
 }
 
 /**
  * Primary UI component for user interaction
  */
-export const NavContainer = ({ children, className, ...other }: Props) => {
-  const componentClassName = clsx(styles['nav-container'], className, {});
+export const NavContainer = ({
+  children,
+  className,
+  isActive,
+  ...other
+}: Props) => {
+  const componentClassName = clsx(
+    styles['nav-container'],
+    className,
+    isActive && [styles['is-active']],
+  );
+
   return (
     <div className={componentClassName} {...other}>
       {children}
