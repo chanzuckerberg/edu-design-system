@@ -2,19 +2,7 @@ import clsx from 'clsx';
 import React, { forwardRef, ForwardedRef } from 'react';
 import styles from './Text.module.css';
 
-export type Size =
-  | 'h1'
-  | 'h2'
-  | 'h3'
-  | 'h4'
-  | 'h5'
-  | 'body'
-  | 'sm'
-  | 'md'
-  | 'lg'
-  | 'xs'
-  | 'caption'
-  | 'overline';
+export type Size = 'body' | 'sm' | 'md' | 'lg' | 'xs' | 'caption' | 'overline';
 
 export type Color =
   | 'alert'
