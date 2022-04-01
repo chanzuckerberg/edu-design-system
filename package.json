@@ -17,7 +17,7 @@
     "build": "yarn build:clear && yarn build:tokens && yarn build:css && yarn copy-to-dist && yarn build:js",
     "build:clear": "del-cli dist",
     "build:tokens": "node ./style-dictionary.config.js",
-    "build:icons": "make-dir dist/icons && svg-sprite-generate -d src/icons/ -o dist/icons/spritemap.svg",
+    "build:icons": "svg-sprite-generate -d src/icons/ -o src/icons/spritemap/spritemap.svg",
     "build:css": "postcss \"src/components/**/*.css\" --dir dist/ --base src/ --verbose",
     "build:js": "tsc --project tsconfig.build.json",
     "build:storybook": "build-storybook -s public",
