@@ -59,7 +59,7 @@ export const FieldNote = ({
         <Icon
           className={styles['field-note__icon']}
           title="error"
-          name={isError && 'x-circle'}
+          name={isError && 'cancel'}
         />
       )}
       {children}

@@ -55,7 +55,7 @@ export const TagsItem = ({
         >
           <span className={styles['tags__text']}>{text}</span>
           {dismissible && (
-            <Icon className={styles['tags__icon']} name="x" title="Close" />
+            <Icon className={styles['tags__icon']} name="close" title="Close" />
           )}
         </button>
       </li>
