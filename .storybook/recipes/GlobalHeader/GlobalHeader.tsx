@@ -43,9 +43,8 @@ export const GlobalHeader: React.FC<Props> = ({ className, ...other }) => {
       <Button
         className={styles['global-header__menu-button']}
         variant="bare"
-        text={isActive ? 'Close' : 'Menu'}
+        aria-label={isActive ? 'Close' : 'Menu'}
         iconPosition="before"
-        hideText={true}
         iconName={isActive ? 'x' : 'menu'}
         inverted={true}
         onClick={toggleMenu}
