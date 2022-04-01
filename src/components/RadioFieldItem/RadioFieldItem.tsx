@@ -6,7 +6,7 @@ import React, {
   useEffect,
   useState,
 } from 'react';
-import { Radio } from '../Radio/Radio';
+import Radio from '../Radio';
 import styles from '../RadioField/RadioField.module.css';
 
 export interface Props {
@@ -63,7 +63,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const RadioFieldItem: React.FC<Props> = ({
+export const RadioFieldItem = ({
   className,
   id,
   name,
@@ -76,15 +76,17 @@ export const RadioFieldItem: React.FC<Props> = ({
   tabIndex,
   inverted,
   ...other
-}) => {
+}: Props) => {
   const [idVar, setId] = useState();
 
   useEffect(() => {
     setId(id || nanoid());
   }, [id]);
-  const componentClassName = clsx(styles['radio-field__item'], className, {
-    [styles['radio-field__item--inverted']]: inverted === true,
-  });
+  const componentClassName = clsx(
+    styles['radio-field__item'],
+    className,
+    inverted && styles['radio-field__item--inverted'],
+  );
   return (
     <li className={componentClassName} {...other}>
       <Radio

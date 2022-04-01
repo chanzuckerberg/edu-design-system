@@ -10,6 +10,9 @@ import TypographyDocs from '../../../docs/TYPOGRAPHY.md';
 export default {
   title: 'Documentation/Guidelines',
   component: Documentation,
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
 };
 
 export const CodeGuidelines = () => (

@@ -21,15 +21,17 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const Accordion: React.FC<Props> = ({
+export const Accordion = ({
   children,
   className,
   inverted,
   ...other
-}) => {
-  const componentClassName = clsx(styles['accordion'], className, {
-    [styles['accordion--inverted']]: inverted === true,
-  });
+}: Props) => {
+  const componentClassName = clsx(
+    styles['accordion'],
+    className,
+    inverted && styles['accordion--inverted'],
+  );
   return (
     <dl className={componentClassName} {...other}>
       {children}

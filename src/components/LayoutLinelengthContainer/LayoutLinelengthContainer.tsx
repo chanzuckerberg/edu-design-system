@@ -16,11 +16,11 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const LayoutLinelengthContainer: React.FC<Props> = ({
+export const LayoutLinelengthContainer = ({
   className,
   children,
   ...other
-}) => {
+}: Props) => {
   const componentClassName = clsx(
     styles['layout-linelength-container'],
     className,

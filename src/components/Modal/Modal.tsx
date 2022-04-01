@@ -5,9 +5,9 @@ import FocusLock from 'react-focus-lock';
 import { Portal } from 'react-portal';
 import styles from './Modal.module.css';
 import { ESCAPE_KEYCODE } from '../../util/keycodes';
-import { ModalBody } from '../ModalBody/ModalBody';
-import { ModalFooter } from '../ModalFooter/ModalFooter';
-import { ModalHeader } from '../ModalHeader/ModalHeader';
+import ModalBody from '../ModalBody';
+import ModalFooter from '../ModalFooter';
+import ModalHeader from '../ModalHeader';
 
 export interface Props {
   /**
@@ -41,20 +41,20 @@ export interface Props {
   /**
    * Handler to be called when the modal is being closed (by ESCAPE / clicking X / clicking outside)
    */
-  onClose?: () => void;
+  onClose?: (e?: any) => void;
   /**
    * Size variations
    * - **sm** results in a modal that is narrower than the default
    * - **lg** results in a modal that is wider than the default
    * - **xl** results in a modal that is wider than the default
    */
-  size?: 'sm' | 'lg';
+  size?: 'sm' | 'lg' | 'xl';
 }
 
 /**
  * Primary UI component for user interaction
  */
-export const Modal: React.FC<Props> = ({
+export const Modal = ({
   ariaDescribedBy,
   ariaLabelledBy,
   className,
@@ -65,7 +65,7 @@ export const Modal: React.FC<Props> = ({
   closeButtonText,
   size,
   ...other
-}) => {
+}: Props) => {
   /**
    * Initialize states, constants, and refs
    */
@@ -185,11 +185,13 @@ export const Modal: React.FC<Props> = ({
   const body = oneByType(children, ModalBody);
   const footer = oneByType(children, ModalFooter);
 
-  const componentClassName = clsx(styles['modal'], className, {
-    [styles['modal--sm']]: size === 'sm',
-    [styles['modal--lg']]: size === 'lg',
-    [styles['eds-is-active']]: isActive,
-  });
+  const componentClassName = clsx(
+    styles['modal'],
+    className,
+    size === 'sm' && styles['modal--sm'],
+    size === 'lg' && styles['modal--lg'],
+    isActive && styles['eds-is-active'],
+  );
 
   if (!isMounted) return null;
 

@@ -2,7 +2,7 @@ import { Story, Meta } from '@storybook/react';
 import React from 'react';
 
 import { Breadcrumbs, Props } from './Breadcrumbs';
-import { BreadcrumbsItem } from '../BreadcrumbsItem/BreadcrumbsItem';
+import BreadcrumbsItem from '../BreadcrumbsItem';
 
 export default {
   title: 'Molecules/Navigation/Breadcrumbs',

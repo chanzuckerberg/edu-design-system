@@ -52,7 +52,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const Select: React.FC<Props> = ({
+export const Select = ({
   className,
   id,
   multiple,
@@ -64,7 +64,7 @@ export const Select: React.FC<Props> = ({
   readOnly,
   required,
   ...other
-}) => {
+}: Props) => {
   const componentClassName = clsx(styles['select'], className, {});
   return (
     <select

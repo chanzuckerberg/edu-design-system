@@ -26,13 +26,13 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const Breadcrumbs: React.FC<Props> = ({
+export const Breadcrumbs = ({
   className,
   children,
   id,
   ariaLabel = 'breadcrumbs links',
   ...other
-}) => {
+}: Props) => {
   const [breadcrumbsId, setBreadcrumbsId] = useState();
 
   useEffect(() => {

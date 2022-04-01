@@ -35,7 +35,6 @@ yarn-error.log*
 !DesignTokens.css
 !Utilities.css
 !IconGrid.css
-/src/design-tokens/tokens.css
 
 # VS Code workspace file
 *.code-workspace

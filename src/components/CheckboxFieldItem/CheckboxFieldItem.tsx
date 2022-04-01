@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { nanoid } from 'nanoid';
 import React, { ChangeEventHandler, useEffect, useRef, useState } from 'react';
-import { Checkbox } from '../Checkbox/Checkbox';
+import Checkbox from '../Checkbox';
 import styles from '../CheckboxField/CheckboxField.module.css';
 
 export interface Props {
@@ -55,7 +55,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const CheckboxFieldItem: React.FC<Props> = ({
+export const CheckboxFieldItem = ({
   className,
   id,
   name,
@@ -66,7 +66,7 @@ export const CheckboxFieldItem: React.FC<Props> = ({
   text,
   inverted,
   ...other
-}) => {
+}: Props) => {
   /**
    * Initialize state and setup automatic id generator if not provided by user
    */
@@ -107,9 +107,11 @@ export const CheckboxFieldItem: React.FC<Props> = ({
     setCheckedState(!checkboxChecked); /* 1 */
   }
 
-  const componentClassName = clsx('checkbox-field__item', className, {
-    [styles['checkbox-field__item--inverted']]: inverted === true,
-  });
+  const componentClassName = clsx(
+    'checkbox-field__item',
+    className,
+    inverted && styles['checkbox-field__item--inverted'],
+  );
   return (
     <li className={componentClassName}>
       <Checkbox

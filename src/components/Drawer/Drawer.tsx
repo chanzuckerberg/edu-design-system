@@ -5,9 +5,9 @@ import FocusLock from 'react-focus-lock';
 import { Portal } from 'react-portal';
 import styles from './Drawer.module.css';
 import { ESCAPE_KEYCODE } from '../../util/keycodes';
-import { DrawerBody } from '../DrawerBody/DrawerBody';
-import { DrawerFooter } from '../DrawerFooter/DrawerFooter';
-import { DrawerHeader } from '../DrawerHeader/DrawerHeader';
+import DrawerBody from '../DrawerBody';
+import DrawerFooter from '../DrawerFooter';
+import DrawerHeader from '../DrawerHeader';
 
 export interface Props {
   /**
@@ -45,13 +45,13 @@ export interface Props {
   /**
    * Handler to be called when the drawer is being closed (by ESCAPE / clicking X / clicking outside)
    */
-  onClose?: () => void;
+  onClose?: (e?: any) => void;
 }
 
 /**
  * Primary UI component for user interaction
  */
-export const Drawer: React.FC<Props> = ({
+export const Drawer = ({
   ariaDescribedBy,
   ariaLabelledBy,
   className,
@@ -62,7 +62,7 @@ export const Drawer: React.FC<Props> = ({
   closeButtonText,
   showBackdrop = false,
   ...other
-}) => {
+}: Props) => {
   /**
    * Initialize states, constants, and refs
    */
@@ -182,10 +182,12 @@ export const Drawer: React.FC<Props> = ({
   const body = oneByType(children, DrawerBody);
   const footer = oneByType(children, DrawerFooter);
 
-  const componentClassName = clsx(styles['drawer'], className, {
-    [styles['drawer--show-backdrop']]: showBackdrop === true,
-    [styles['eds-is-active']]: isActive,
-  });
+  const componentClassName = clsx(
+    styles['drawer'],
+    className,
+    showBackdrop && styles['drawer--show-backdrop'],
+    isActive && styles['eds-is-active'],
+  );
 
   if (!isMounted) return null;
 

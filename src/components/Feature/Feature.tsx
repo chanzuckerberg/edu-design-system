@@ -32,7 +32,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const Feature: React.FC<Props> = ({
+export const Feature = ({
   className,
   children,
   imgSrc,
@@ -40,10 +40,12 @@ export const Feature: React.FC<Props> = ({
   title,
   inverted,
   ...other
-}) => {
-  const componentClassName = clsx(styles['feature'], className, {
-    [styles['feature--inverted']]: inverted === true,
-  });
+}: Props) => {
+  const componentClassName = clsx(
+    styles['feature'],
+    className,
+    inverted && styles['feature--inverted'],
+  );
   return (
     <div className={componentClassName} {...other}>
       <div className={styles['feature__body']}>{children}</div>

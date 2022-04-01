@@ -21,15 +21,12 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const Band: React.FC<Props> = ({
-  children,
-  className,
-  variant,
-  ...other
-}) => {
-  const componentClassName = clsx(styles['band'], className, {
-    [styles['band--brand']]: variant === 'brand',
-  });
+export const Band = ({ children, className, variant, ...other }: Props) => {
+  const componentClassName = clsx(
+    styles['band'],
+    className,
+    variant === 'brand' && styles['band--brand'],
+  );
 
   return (
     <div className={componentClassName} {...other}>

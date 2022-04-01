@@ -2,7 +2,7 @@ import { Story, Meta } from '@storybook/react';
 import React from 'react';
 
 import { KeyValueTable, Props } from './KeyValueTable';
-import { KeyValueTableRow } from '../KeyValueTableRow/KeyValueTableRow';
+import KeyValueTableRow from '../KeyValueTableRow';
 
 export default {
   title: 'Organisms/Tables/KeyValueTable',

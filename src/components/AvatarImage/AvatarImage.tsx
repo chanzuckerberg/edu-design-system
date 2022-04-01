@@ -12,7 +12,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const AvatarImage: React.FC<Props> = ({ className, ...other }) => {
+export const AvatarImage = ({ className, ...other }: Props) => {
   const componentClassName = clsx(styles['avatar-image'], className, {});
   return (
     <div className={componentClassName} {...other}>

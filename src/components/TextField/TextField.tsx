@@ -8,10 +8,10 @@ import React, {
   useState,
 } from 'react';
 import styles from './TextField.module.css';
-import { FieldNote } from '../FieldNote/FieldNote';
-import { Icon } from '../Icon/Icon';
-import { Label } from '../Label/Label';
-import { TextInput } from '../TextInput/TextInput';
+import FieldNote from '../FieldNote';
+import Icon from '../Icon';
+import Label from '../Label';
+import TextInput from '../TextInput';
 
 export interface Props {
   /**
@@ -189,11 +189,13 @@ export const TextField = ({
     }
   }, [ariaDescribedBy, fieldNote, id]);
 
-  const componentClassName = clsx(styles['text-field'], className, {
-    [styles['text-field--inverted']]: inverted === true,
-    [styles['eds-is-error']]: isError,
-    [styles['eds-is-disabled']]: disabled,
-  });
+  const componentClassName = clsx(
+    styles['text-field'],
+    className,
+    inverted && styles['text-field--inverted'],
+    isError && styles['eds-is-error'],
+    disabled && styles['eds-is-disabled'],
+  );
 
   return (
     <div className={componentClassName}>

@@ -20,12 +20,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const Text: React.FC<Props> = ({
-  as = 'p',
-  className,
-  children,
-  ...other
-}) => {
+export const Text = ({ as = 'p', className, children, ...other }: Props) => {
   const componentClassName = clsx(styles['text'], className, {});
   const TagName = as;
 

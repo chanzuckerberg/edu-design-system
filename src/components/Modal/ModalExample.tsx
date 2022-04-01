@@ -27,12 +27,12 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const ModalExample: React.FC<Props> = ({
+export const ModalExample = ({
   children,
   className,
   size,
   ...other
-}) => {
+}: Props) => {
   const [modalOpen, setModalOpen] = useState(false);
   const modalButton = useRef() as MutableRefObject<HTMLSpanElement>;
 
@@ -56,11 +56,7 @@ export const ModalExample: React.FC<Props> = ({
       className={componentClassName}
       {...other}
     >
-      <Button
-        text="Open Modal"
-        onClick={openContinueModal}
-        buttonRef={modalButton}
-      />
+      <Button text="Open Modal" onClick={openContinueModal} ref={modalButton} />
 
       <Modal
         dismissible={true}

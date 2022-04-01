@@ -48,7 +48,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const Label: React.FC<Props> = ({
+export const Label = ({
   className,
   id,
   htmlFor,
@@ -60,11 +60,13 @@ export const Label: React.FC<Props> = ({
   requiredLabel,
   hideLabel,
   ...other
-}) => {
-  const componentClassName = clsx(styles['label'], className, {
-    [styles['label--inverted']]: inverted === true,
-    [styles['u-is-vishidden']]: hideLabel,
-  });
+}: Props) => {
+  const componentClassName = clsx(
+    styles['label'],
+    className,
+    inverted && styles['label--inverted'],
+    hideLabel && styles['u-is-vishidden'],
+  );
 
   return (
     <label className={componentClassName} htmlFor={htmlFor} id={id} {...other}>

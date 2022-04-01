@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 import React, { ReactNode, useState } from 'react';
 import styles from './Toast.module.css';
-import { Button } from '../Button/Button';
-import { Icon } from '../Icon/Icon';
+import Button from '../Button';
+import Icon from '../Icon';
 
 export interface Props {
   /**
@@ -43,7 +43,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const Toast: React.FC<Props> = ({
+export const Toast = ({
   iconTitle,
   className,
   children,
@@ -52,13 +52,15 @@ export const Toast: React.FC<Props> = ({
   variant,
   closeButtonText = 'Close',
   ...other
-}) => {
-  const componentClassName = clsx(styles['toast'], className, {
-    [styles['toast--success']]: variant === 'success',
-    [styles['toast--warning']]: variant === 'warning',
-    [styles['toast--error']]: variant === 'error',
-    [styles['toast--brand']]: variant === 'brand',
-  });
+}: Props) => {
+  const componentClassName = clsx(
+    styles['toast'],
+    className,
+    variant === 'success' && styles['toast--success'],
+    variant === 'warning' && styles['toast--warning'],
+    variant === 'error' && styles['toast--error'],
+    variant === 'brand' && styles['toast--brand'],
+  );
   const [dismissed, setDismissed] = useState(false);
 
   function onDismiss(e: any) {

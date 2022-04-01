@@ -26,17 +26,19 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const Layout: React.FC<Props> = ({
+export const Layout = ({
   behavior,
   children,
   className,
   variant,
   ...other
-}) => {
-  const componentClassName = clsx(styles['layout'], className, {
-    [styles['layout--right-sidebar']]: variant === 'right-sidebar',
-    [styles['layout--fixed-sidebar']]: behavior === 'fixed-sidebar',
-  });
+}: Props) => {
+  const componentClassName = clsx(
+    styles['layout'],
+    className,
+    variant === 'right-sidebar' && styles['layout--right-sidebar'],
+    behavior === 'fixed-sidebar' && styles['layout--fixed-sidebar'],
+  );
   return (
     <div className={componentClassName} {...other}>
       {children}

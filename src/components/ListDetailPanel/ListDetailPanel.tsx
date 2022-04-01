@@ -19,9 +19,6 @@ export interface Props {
    * HTML id for the component
    */
   id?: any;
-  /**
-   * Number passed down from ListDetail to show the active index state of ListDetail
-   */
 }
 
 /**

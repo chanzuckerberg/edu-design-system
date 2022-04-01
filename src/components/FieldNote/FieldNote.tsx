@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import styles from './FieldNote.module.css';
-import { Icon } from '../Icon/Icon';
+import Icon from '../Icon';
 
 export interface Props {
   /**
@@ -33,7 +33,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const FieldNote: React.FC<Props> = ({
+export const FieldNote = ({
   className,
   id,
   iconName,
@@ -41,11 +41,13 @@ export const FieldNote: React.FC<Props> = ({
   inverted,
   children,
   ...other
-}) => {
-  const componentClassName = clsx(styles['field-note'], className, {
-    [styles['field-note--inverted']]: inverted === true,
-    [styles['eds-is-error']]: isError,
-  });
+}: Props) => {
+  const componentClassName = clsx(
+    styles['field-note'],
+    className,
+    inverted && styles['field-note--inverted'],
+    isError && styles['eds-is-error'],
+  );
   return (
     <div
       className={componentClassName}
