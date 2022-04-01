@@ -4,7 +4,7 @@ exports[`<Text /> Body story renders snapshot 1`] = `
 <p
   class="text text--body"
 >
-  Body paragraph 16/24
+  Body paragraph
 </p>
 `;
 
@@ -16,11 +16,27 @@ exports[`<Text /> BodyColorInfoBold story renders snapshot 1`] = `
 </p>
 `;
 
+exports[`<Text /> BodyLarge story renders snapshot 1`] = `
+<p
+  class="text text--lg"
+>
+  Body large
+</p>
+`;
+
+exports[`<Text /> BodyMedium story renders snapshot 1`] = `
+<p
+  class="text text--md"
+>
+  Body medium
+</p>
+`;
+
 exports[`<Text /> BodySmall story renders snapshot 1`] = `
 <p
   class="text text--sm"
 >
-  Body small 14/20
+  Body small
 </p>
 `;
 
@@ -28,7 +44,7 @@ exports[`<Text /> BodyXSmall story renders snapshot 1`] = `
 <p
   class="text text--xs"
 >
-  Body Xsmall 12/16
+  Body Xsmall
 </p>
 `;
 
@@ -36,7 +52,7 @@ exports[`<Text /> Caption story renders snapshot 1`] = `
 <p
   class="text text--caption"
 >
-  Caption 12/20
+  Caption
 </p>
 `;
 
@@ -44,7 +60,7 @@ exports[`<Text /> Overline story renders snapshot 1`] = `
 <p
   class="text text--overline"
 >
-  Overline 12/20
+  Overline
 </p>
 `;
 

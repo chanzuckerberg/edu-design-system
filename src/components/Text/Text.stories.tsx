@@ -2,7 +2,7 @@ import type { StoryObj } from '@storybook/react';
 import clsx from 'clsx';
 import React from 'react';
 
-import Text from './Text';
+import { Text } from './Text';
 import type { Color } from './Text';
 import styles from './Text.stories.module.css';
 
@@ -34,35 +34,48 @@ type Args = React.ComponentProps<typeof Text>;
 
 export const Body: StoryObj<Args> = {
   args: {
-    children: 'Body paragraph 16/24',
+    children: 'Body paragraph',
   },
 };
 
+export const BodyLarge: StoryObj<Args> = {
+  args: {
+    size: 'lg',
+    children: 'Body large',
+  },
+};
+
+export const BodyMedium: StoryObj<Args> = {
+  args: {
+    size: 'md',
+    children: 'Body medium',
+  },
+};
 export const BodySmall: StoryObj<Args> = {
   args: {
     size: 'sm',
-    children: 'Body small 14/20',
+    children: 'Body small',
   },
 };
 
 export const BodyXSmall: StoryObj<Args> = {
   args: {
     size: 'xs',
-    children: 'Body Xsmall 12/16',
+    children: 'Body Xsmall',
   },
 };
 
 export const Caption: StoryObj<Args> = {
   args: {
     size: 'caption',
-    children: 'Caption 12/20',
+    children: 'Caption',
   },
 };
 
 export const Overline: StoryObj<Args> = {
   args: {
     size: 'overline',
-    children: 'Overline 12/20',
+    children: 'Overline',
   },
 };
 
@@ -89,17 +102,17 @@ export const Colors: StoryObj<Args> = {
               key={`${color}-white`}
               className={styles['color__item-white']}
             >
-              <Text size="h3" color={color as Color}>
+              <Text size="lg" color={color as Color}>
                 {color}
               </Text>
             </Item>
             <Item key={`${color}`} className={styles['color__item-light']}>
-              <Text size="h3" color={color as Color}>
+              <Text size="lg" color={color as Color}>
                 {color}
               </Text>
             </Item>
             <Item key={`${color}-dark`} className={styles['color__item-dark']}>
-              <Text size="h3" color={color as Color}>
+              <Text size="lg" color={color as Color}>
                 {color}
               </Text>
             </Item>

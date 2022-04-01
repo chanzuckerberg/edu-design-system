@@ -19,20 +19,8 @@
 /**
  * Sizes
  */
-.text--h1 {
-  @mixin eds-theme-typography-heading-1;
-}
-.text--h2 {
-  @mixin eds-theme-typography-heading-2;
-}
-.text--h3 {
-  @mixin eds-theme-typography-heading-3;
-}
-.text--h4 {
-  @mixin eds-theme-typography-heading-4;
-}
-.text--h5 {
-  @mixin eds-theme-typography-heading-5;
+.text--lg {
+  @mixin eds-theme-typography-body-text-lg;
 }
 .text--sm {
   @mixin eds-theme-typography-body-text-sm;
@@ -41,40 +29,43 @@
   @mixin eds-theme-typography-body-text-xs;
 }
 .text--caption {
-  @mixin eds-theme-typography-caption;
+  @mixin eds-theme-typography-caption-text-md;
 }
 .text--overline {
-  @mixin eds-theme-typography-overline;
+  @mixin eds-theme-typography-kicker;
 }
 
 /**
  * Color
  */
 .text--alert {
-  color: var(--eds-color-other-red-800);
+  color: var(--eds-theme-color-text-utility-error);
 }
 .text--base {
-  color: var(--eds-theme-color-body-foreground);
+  color: var(--eds-theme-color-text-neutral-default);
 }
 .text--brand {
-  color: var(--eds-color-brand-blue-700);
+  /* TODO: replace with tier 2 token */
+  color: var(--eds-color-brand-grape-700);
 }
 .text--info {
+  /* TODO: doesn't exist, replace with tier 2 token */
   color: var(--eds-color-other-blue-700);
 }
 .text--inherit {
   color: inherit;
 }
 .text--neutral {
-  color: var(--eds-color-neutral-500);
+  color: var(--eds-theme-color-text-neutral-default);
 }
 .text--success {
-  color: var(--eds-color-other-green-700);
+  color: var(--eds-theme-color-text-utility-success);
 }
 .text--warning {
-  color: var(--eds-color-other-orange-700);
+  color: var(--eds-theme-color-text-utility-warning);
 }
 .text--white {
+  /* TODO: replace with tier 2 token */
   color: var(--eds-color-neutral-white);
 }
 
@@ -82,8 +73,10 @@
  * Weights
  */
 .text--normal-weight {
-  font-weight: var(--eds-font-weight-regular);
+  /* TODO: replace with tier 2 token */
+  font-weight: var(--eds-font-weight-medium);
 }
 .text--bold-weight {
+  /* TODO: replace with tier 2 token */
   font-weight: var(--eds-font-weight-bold);
 }

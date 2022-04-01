@@ -11,6 +11,7 @@ export type Size =
   | 'body'
   | 'sm'
   | 'md'
+  | 'lg'
   | 'xs'
   | 'caption'
   | 'overline';
@@ -77,4 +78,4 @@ export const Text = forwardRef(
     );
   },
 );
-Text.displayName = 'Text'; // Satisfy eslin
+Text.displayName = 'Text'; // Satisfy eslint

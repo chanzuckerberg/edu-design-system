@@ -207,12 +207,3 @@
 @define-mixin eds-theme-typography-tag $important {
   @mixin eds-typography-preset-006 $important;
 }
-
-@define-mixin eds-theme-typography-caption $important {
-  @mixin eds-typography-preset-007 $important;
-}
-
-@define-mixin eds-theme-typography-overline $important {
-  @mixin eds-typography-preset-007 $important;
-  text-transform: uppercase $important;
-}
