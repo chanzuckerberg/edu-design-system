@@ -13,7 +13,7 @@ const Template: Story<Props> = (args) => (
   <div style={{ margin: '10rem' }}>
     <ShowHide
       trigger={
-        <Button type="button" iconName="chevron-down" iconPosition="after" />
+        <Button type="button" iconName="expand-more" iconPosition="after" />
       }
       {...args}
     >

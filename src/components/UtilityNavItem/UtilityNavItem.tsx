@@ -86,7 +86,7 @@ export const UtilityNavItem = React.forwardRef<HTMLLIElement, Props>(
             <Icon
               aria-hidden="true"
               focusable={false}
-              name="chevron-down"
+              name="expand-more"
               className={styles['utility-nav__icon']}
             />
           )}

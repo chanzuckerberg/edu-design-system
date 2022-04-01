@@ -276,7 +276,7 @@ export const FileUploadField = ({
       default:
         return (
           <Button
-            iconName="x"
+            iconName="close"
             iconPosition="before"
             aria-label={removeFileButtonText}
             variant="bare"
