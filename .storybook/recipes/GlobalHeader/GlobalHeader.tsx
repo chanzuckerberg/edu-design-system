@@ -6,7 +6,7 @@ import {
   Logo,
   PrimaryNav,
   PrimaryNavItem,
-  NavContainer,
+  NavContainer, 
   Button,
   AvatarBlock,
 } from '../../../src';
@@ -45,7 +45,6 @@ export const GlobalHeader: React.FC<Props> = ({ className, ...other }) => {
         variant="bare"
         text={isActive ? 'Close' : 'Menu'}
         iconPosition="before"
-        hideText={true}
         iconName={isActive ? 'x' : 'menu'}
         inverted={true}
         onClick={toggleMenu}

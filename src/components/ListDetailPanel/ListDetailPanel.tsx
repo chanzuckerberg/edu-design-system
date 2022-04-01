@@ -37,7 +37,6 @@ export const ListDetailPanel = ({
   children,
   className,
   id,
-  ariaLabelledBy,
   variant,
   title,
   ...other

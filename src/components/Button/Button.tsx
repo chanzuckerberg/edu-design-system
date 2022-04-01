@@ -26,10 +26,6 @@ export interface Props {
    */
   fullWidth?: boolean;
   /**
-   * Visually hides button text for icon-only buttons for accessibility
-   */
-  hideText?: boolean;
-  /**
    * Link to URL. If href is present, the button will be rendered as an <a> element.
    */
   href?: string;
@@ -87,7 +83,6 @@ export const Button = React.forwardRef(
       forwardRef,
       fullWidth,
       href,
-      hideText,
       iconName,
       iconPosition = 'before',
       inverted,
@@ -159,11 +154,7 @@ export const Button = React.forwardRef(
 
         {text && (
           <span
-            className={
-              hideText
-                ? styles['button__text'] + ' ' + utilityStyles['u-is-vishidden']
-                : styles['button__text']
-            }
+            className={styles['button__text']}
           >
             {text}
           </span>
