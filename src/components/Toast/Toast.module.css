@@ -34,7 +34,7 @@
 
 /**
  * 1) The toast content, usually an icon and text message. Does not include the optional close button
- * 2) Grid aligns the centers and places the icon on the left and message on the right.
+ * 2) Grid places the icon on the left and message on the right, with both vertically aligned to the center.
  */
 .toast--content { /* 1 */
   padding-top: var(--eds-size-2);
