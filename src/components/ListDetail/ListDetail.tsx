@@ -15,8 +15,8 @@ import {
   R_ARROW_KEYCODE,
   D_ARROW_KEYCODE,
 } from '../../util/keycodes';
-import { ListDetailPanel } from '../ListDetailPanel/ListDetailPanel';
 import { Icon } from '../Icon/Icon';
+import { ListDetailPanel } from '../ListDetailPanel/ListDetailPanel';
 
 export interface Props {
   /**
@@ -62,7 +62,7 @@ export interface Props {
   overflow?: 'inverted';
   /**
    * Stylistic variations:
-   * - **ordered** uses a ordered list <ul> instead of the default unordered list <ul>, and allows for icons, bullets, or numbers
+   * - **ordered** uses a ordered list <ol> instead of the default unordered list <ul>, and allows for icons, bullets, or numbers
    */
   variant?: 'ordered';
   /**
@@ -72,7 +72,8 @@ export interface Props {
 }
 
 /**
- * Primary UI component for user interaction
+ * List Detail Component
+ * 1) Provides a list-view pane for item labels/titles, and a details pane for each item's content. When an item in the list is selected, the details pane is updated.
  */
 export const ListDetail = ({
   className,
@@ -260,9 +261,12 @@ export const ListDetail = ({
                   ref={listDetailItemRefs[i]}
                   aria-label={tab.props.ariaLabel}
                 >
-                  <div className={clsx(styles['list-detail__link-left'], {
-                    [styles['list-detail__link-hidden']]: itemVariant === 'number'
-                  })}>
+                  <div
+                    className={clsx(styles['list-detail__link-left'], {
+                      [styles['list-detail__link-hidden']]:
+                        itemVariant === 'number',
+                    })}
+                  >
                     {itemVariant === 'success' ? (
                       <Icon
                         className={styles['list-detail__icon']}
@@ -279,7 +283,9 @@ export const ListDetail = ({
                         name="x-circle"
                       />
                     ) : itemVariant === 'number' ? (
-                      <span className={styles['list-detail__number']}>{i + 1}</span>
+                      <span className={styles['list-detail__number']}>
+                        {i + 1}
+                      </span>
                     ) : (
                       ''
                     )}
