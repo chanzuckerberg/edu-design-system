@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 import React, { MouseEventHandler, ReactNode } from 'react';
 import styles from './Button.module.css';
-import { Icon } from '../Icon/Icon';
 import utilityStyles from '../Utilities/Visibility.module.css';
+import Icon from '../Icon';
 export interface Props {
   /**
    * Visually hidden button text (but text is still accessible to assistive technology).

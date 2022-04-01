@@ -2,7 +2,7 @@ import { Story, Meta } from '@storybook/react';
 import React from 'react';
 
 import { RadioField, Props } from './RadioField';
-import { RadioFieldItem } from '../RadioFieldItem/RadioFieldItem';
+import RadioFieldItem from '../RadioFieldItem';
 
 export default {
   title: 'Molecules/Forms/RadioField',

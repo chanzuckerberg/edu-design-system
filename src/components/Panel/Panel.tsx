@@ -21,12 +21,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const Panel: React.FC<Props> = ({
-  className,
-  children,
-  align,
-  ...other
-}) => {
+export const Panel = ({ className, children, align, ...other }: Props) => {
   const componentClassName = clsx(
     styles['panel'],
     className,

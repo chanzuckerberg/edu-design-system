@@ -9,7 +9,7 @@ import React, {
   ReactNode,
 } from 'react';
 import styles from './AccordionPanel.module.css';
-import { Icon } from '../Icon/Icon';
+import Icon from '../Icon';
 
 export interface Props {
   /**
@@ -48,7 +48,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const AccordionPanel: React.FC<Props> = ({
+export const AccordionPanel = ({
   children,
   className,
   header,
@@ -57,7 +57,7 @@ export const AccordionPanel: React.FC<Props> = ({
   height,
   ariaControls,
   ...other
-}) => {
+}: Props) => {
   const panelRef = useRef() as MutableRefObject<HTMLDivElement>;
   const [heightVar, setHeight] = useState('0');
   const [isActiveVar, setIsActive] = useState(isActive ? true : false);

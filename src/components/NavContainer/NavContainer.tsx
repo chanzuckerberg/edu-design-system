@@ -21,15 +21,11 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const NavContainer: React.FC<Props> = ({
-  children,
-  className,
-  isActive,
-  ...other
-}) => {
-  const componentClassName = clsx(styles['nav-container'], className, {
-    [styles['is-active']]: isActive,
-  });
+ export const NavContainer = ({ children, className, isActive, ...other }: Props) => {
+  const componentClassName = clsx(styles['nav-container'], className, 
+    isActive && [styles['is-active']]
+  );
+
   return (
     <div className={componentClassName} {...other}>
       {children}

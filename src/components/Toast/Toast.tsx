@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 import React, { ReactNode, useState } from 'react';
 import styles from './Toast.module.css';
-import { Button } from '../Button/Button';
-import { Icon } from '../Icon/Icon';
+import Button from '../Button';
+import Icon from '../Icon';
 
 export interface Props {
   /**
@@ -43,7 +43,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const Toast: React.FC<Props> = ({
+export const Toast = ({
   iconTitle,
   className,
   children,
@@ -52,7 +52,7 @@ export const Toast: React.FC<Props> = ({
   variant,
   closeButtonText = 'Close',
   ...other
-}) => {
+}: Props) => {
   const componentClassName = clsx(
     styles['toast'],
     className,

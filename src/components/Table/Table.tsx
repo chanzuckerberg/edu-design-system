@@ -8,7 +8,7 @@ export interface Props {
    * - **overflow-sm** Removes the min-width from the table for tables with few columns
    * - **overflow-lg** Used for tables with lots of table rows to overflow at a larger breakpoint
    */
-  behavior?: 'overflow';
+  behavior?: 'overflow' | 'overflow-lg' | 'overflow-sm';
   /**
    * HTML caption property for table
    */
@@ -35,7 +35,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const Table: React.FC<Props> = ({
+export const Table = ({
   behavior,
   caption,
   children,
@@ -43,7 +43,7 @@ export const Table: React.FC<Props> = ({
   hideCaption = true,
   variant,
   ...other
-}) => {
+}: Props) => {
   const componentClassName = clsx(
     styles['table'],
     className,

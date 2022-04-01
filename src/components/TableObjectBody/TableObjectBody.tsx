@@ -23,11 +23,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const TableObjectBody: React.FC<Props> = ({
-  children,
-  className,
-  ...other
-}) => {
+export const TableObjectBody = ({ children, className, ...other }: Props) => {
   /**
    * Set states and refs
    * 1) Set isEnd state: set to true, right shadow gradient activates. Removed when false

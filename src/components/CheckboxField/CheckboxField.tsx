@@ -2,8 +2,8 @@ import clsx from 'clsx';
 import { nanoid } from 'nanoid';
 import React, { ReactNode, useEffect, useState } from 'react';
 import styles from './CheckboxField.module.css';
-import { FieldNote } from '../FieldNote/FieldNote';
-import { Legend } from '../Legend/Legend';
+import FieldNote from '../FieldNote';
+import Legend from '../Legend';
 
 export interface Props {
   /**
@@ -78,7 +78,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const CheckboxField: React.FC<Props> = ({
+export const CheckboxField = ({
   className,
   variant,
   size,
@@ -96,7 +96,7 @@ export const CheckboxField: React.FC<Props> = ({
   requiredLabel,
   inverted,
   ...other
-}) => {
+}: Props) => {
   const [ariaDescribedByVar, setAriaDescribedBy] = useState();
 
   useEffect(() => {

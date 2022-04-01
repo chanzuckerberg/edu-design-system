@@ -2,10 +2,6 @@ import { Story, Meta } from '@storybook/react';
 import React from 'react';
 
 import { Toast, Props } from './Toast';
-import { Button } from '../Button/Button';
-import { Heading } from '../Heading/Heading';
-import { LayoutLinelengthContainer } from '../LayoutLinelengthContainer/LayoutLinelengthContainer';
-import { TextPassage } from '../TextPassage/TextPassage';
 
 export default {
   title: 'Molecules/Messaging/Toast',

@@ -32,13 +32,13 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const Layout: React.FC<Props> = ({
+export const Layout = ({
   behavior,
   children,
   className,
   variant,
   ...other
-}) => {
+}: Props) => {
   const componentClassName = clsx(
     styles['layout'],
     className,

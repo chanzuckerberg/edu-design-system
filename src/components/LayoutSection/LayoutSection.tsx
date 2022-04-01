@@ -24,20 +24,17 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const LayoutSection: React.FC<Props> = ({
-  behavior,
+export const LayoutSection = ({
   children,
   className,
   region,
   ...other
-}) => {
-
+}: Props) => {
   const componentClassName = clsx(
     styles['layout__section'],
     className,
     region === 'main' && styles['layout__section--main'],
     region === 'sidebar' && styles['layout__section--sidebar'],
-    behavior === 'expandable' && [styles['layout-section--expandable']]
   );
 
   return (

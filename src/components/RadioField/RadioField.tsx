@@ -8,9 +8,9 @@ import React, {
 } from 'react';
 import { allByType } from 'react-children-by-type';
 import styles from './RadioField.module.css';
-import { FieldNote } from '../FieldNote/FieldNote';
-import { Legend } from '../Legend/Legend';
-import { RadioFieldItem } from '../RadioFieldItem/RadioFieldItem';
+import FieldNote from '../FieldNote';
+import Legend from '../Legend';
+import RadioFieldItem from '../RadioFieldItem';
 
 export interface Props {
   /**
@@ -93,7 +93,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const RadioField: React.FC<Props> = ({
+export const RadioField = ({
   className,
   children,
   variant,
@@ -113,7 +113,7 @@ export const RadioField: React.FC<Props> = ({
   requiredLabel,
   onChange,
   ...other
-}) => {
+}: Props) => {
   /**
    * Set children to only allow radio field items
    */

@@ -48,7 +48,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const Label: React.FC<Props> = ({
+export const Label = ({
   className,
   id,
   htmlFor,
@@ -60,7 +60,7 @@ export const Label: React.FC<Props> = ({
   requiredLabel,
   hideLabel,
   ...other
-}) => {
+}: Props) => {
   const componentClassName = clsx(
     styles['label'],
     className,
