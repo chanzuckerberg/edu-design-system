@@ -16,11 +16,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const ModalFooter: React.FC<Props> = ({
-  children,
-  className,
-  ...other
-}) => {
+export const ModalFooter = ({ children, className, ...other }: Props) => {
   const componentClassName = clsx(styles['modal__footer'], className, {});
   return (
     <footer className={componentClassName} {...other}>

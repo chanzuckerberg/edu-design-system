@@ -1,13 +1,6 @@
 import React from 'react';
 
-import {
-  Layout,
-  LayoutSection,
-  Main,
-  LayoutContainer,
-  PageHeader,
-  Panel,
-} from '../../../src';
+import { PageHeader, Panel } from '../../../src';
 
 import { PageShell } from '../../recipes/PageShell/PageShell';
 

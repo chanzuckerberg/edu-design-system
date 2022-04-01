@@ -20,12 +20,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const FooterNavItem: React.FC<Props> = ({
-  className,
-  href,
-  text,
-  ...other
-}) => {
+export const FooterNavItem = ({ className, href, text, ...other }: Props) => {
   const componentClassName = clsx(styles['footer-nav__item'], className, {});
   return (
     <li className={componentClassName} {...other}>

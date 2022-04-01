@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import styles from './Hero.module.css';
-import { LayoutContainer } from '../LayoutContainer/LayoutContainer';
+import LayoutContainer from '../LayoutContainer';
 
 export interface Props {
   /**
@@ -29,14 +29,14 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const Hero: React.FC<Props> = ({
+export const Hero = ({
   children,
   className,
   imgAlt,
   imgSrc,
   title,
   ...other
-}) => {
+}: Props) => {
   const componentClassName = clsx(styles['hero'], className, {});
   return (
     <div className={componentClassName} {...other}>

@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import React, { MouseEventHandler, ReactNode } from 'react';
-import { Button } from '../Button/Button';
+import Button from '../Button';
 import styles from '../Table/Table.module.css';
 
 export interface Props {
@@ -49,7 +49,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const TableHeaderCell: React.FC<Props> = ({
+export const TableHeaderCell = ({
   children,
   className,
   rowSpan,
@@ -61,7 +61,7 @@ export const TableHeaderCell: React.FC<Props> = ({
   onClick,
   text,
   ...other
-}) => {
+}: Props) => {
   const componentClassName = clsx(
     styles['table-header-cell'],
     className,

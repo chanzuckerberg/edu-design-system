@@ -15,11 +15,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const CardFooter: React.FC<Props> = ({
-  children,
-  className,
-  ...other
-}) => {
+export const CardFooter = ({ children, className, ...other }: Props) => {
   const componentClassName = clsx('card__footer', className, {});
   return (
     <footer className={componentClassName} {...other}>

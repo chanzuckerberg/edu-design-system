@@ -20,18 +20,13 @@ export interface Props {
    * - **teal** results in a badge with teal state
    * - **dark-gray** results in a sparkline text bubble with normal results
    */
-  variant: 'warning' | 'error' | 'success';
+  variant?: 'warning' | 'error' | 'success';
 }
 
 /**
  * Primary UI component for user interaction
  */
-export const Badge: React.FC<Props> = ({
-  className,
-  text,
-  variant,
-  ...other
-}) => {
+export const Badge = ({ className, text, variant, ...other }: Props) => {
   const componentClassName = clsx(
     styles['badge'],
     className,

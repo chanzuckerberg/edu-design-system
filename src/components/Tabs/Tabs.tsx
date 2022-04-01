@@ -15,7 +15,7 @@ import {
   R_ARROW_KEYCODE,
   D_ARROW_KEYCODE,
 } from '../../util/keycodes';
-import { Tab } from '../Tab/Tab';
+import Tab from '../Tab';
 
 export interface Props {
   /**
@@ -92,7 +92,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const Tabs: React.FC<Props> = ({
+export const Tabs = ({
   className,
   children,
   radioLegend,
@@ -109,7 +109,7 @@ export const Tabs: React.FC<Props> = ({
   onChange,
   required,
   ...other
-}) => {
+}: Props) => {
   /**
    * Initialize states, constants, and refs
    */
