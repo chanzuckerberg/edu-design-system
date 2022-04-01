@@ -86,6 +86,7 @@ export const ListDetail = ({
   overflow,
   onChange,
   required,
+  title,
   ...other
 }: Props) => {
   /**

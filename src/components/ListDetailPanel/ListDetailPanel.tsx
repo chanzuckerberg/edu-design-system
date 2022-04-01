@@ -19,6 +19,14 @@ export interface Props {
    * HTML id for the component
    */
   id?: any;
+  /**
+   * The tab variant
+   */
+  variant?: 'error' | 'number' | 'success' | 'warning';
+  /**
+   * The tab title
+   */
+  title?: string;
 }
 
 /**
@@ -29,6 +37,8 @@ export const ListDetailPanel = ({
   className,
   id,
   ariaLabelledBy,
+  variant,
+  title,
   ...other
 }: Props) => {
   const componentClassName = clsx(styles['list-detail__panel'], className, {});
