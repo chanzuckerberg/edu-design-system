@@ -20,13 +20,13 @@ export interface Props {
    */
   id?: any;
   /**
-   * Heading
+   * The tab variant
+   */
+  variant?: 'error' | 'number' | 'success' | 'warning';
+  /**
+   * The tab title
    */
   title?: string;
-  /**
-   * Available _stylistic_ variations available for the component
-   */
-  variant?: 'error' | 'warning' | 'success' | 'number';
 }
 
 /**
@@ -37,8 +37,9 @@ export const ListDetailPanel = ({
   children,
   className,
   id,
-  title,
+  ariaLabelledBy,
   variant,
+  title,
   ...other
 }: Props) => {
   const componentClassName = clsx(styles['list-detail__panel'], className, {});
