@@ -102,11 +102,13 @@
       * List list detail item after
       * 1) Don't add a line between items
       */
+    /* stylelint-disable-next-line max-nesting-depth */
     &:after {
       content: none;
     }
   }
 }
+
 /**
  * List detail link
  */
@@ -156,6 +158,7 @@
   * 1) Remove the bullet since the icon will take its place
   */
   li[class*='list-detail__item--'] & {
+    /* stylelint-disable-next-line max-nesting-depth */
     &:before {
       content: none;
     }
