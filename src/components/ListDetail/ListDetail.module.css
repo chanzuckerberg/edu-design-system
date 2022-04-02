@@ -88,7 +88,7 @@
     content: '';
     position: absolute;
     left: 0.25rem;
-    top: 50%; /* 2 */
+    top: 1.75rem; /* 2 */
     height: 45%; /* 3 */ 
     width: 0.0625rem;
     background:  var(--eds-theme-color-border-neutral-subtle); /* 4 */
