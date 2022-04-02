@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import styles from './TextPassage.module.css';
-import { LayoutLinelengthContainer } from '../LayoutLinelengthContainer/LayoutLinelengthContainer';
+import LayoutLinelengthContainer from '../LayoutLinelengthContainer';
 
 export interface Props {
   /**
@@ -35,7 +35,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const TextPassage: React.FC<Props> = ({
+export const TextPassage = ({
   capLinelength = true,
   className,
   id,
@@ -43,12 +43,14 @@ export const TextPassage: React.FC<Props> = ({
   size,
   children,
   ...other
-}) => {
-  const componentClassName = clsx(styles['text-passage'], className, {
-    [styles['text-passage--sm']]: size === 'sm',
-    [styles['text-passage--lg']]: size === 'lg',
-    [styles['text-passage--inverted']]: inverted === true,
-  });
+}: Props) => {
+  const componentClassName = clsx(
+    styles['text-passage'],
+    className,
+    size === 'sm' && styles['text-passage--sm'],
+    size === 'lg' && styles['text-passage--lg'],
+    inverted && styles['text-passage--inverted'],
+  );
 
   return (
     <div className={componentClassName} {...other}>

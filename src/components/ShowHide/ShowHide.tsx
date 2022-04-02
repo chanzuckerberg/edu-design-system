@@ -37,7 +37,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const ShowHide: React.FC<Props> = ({
+export const ShowHide = ({
   align,
   className,
   text,
@@ -45,7 +45,7 @@ export const ShowHide: React.FC<Props> = ({
   trigger,
   children,
   ...other
-}) => {
+}: Props) => {
   const [isActive, setIsActive] = useState(false);
 
   const dropdownRef = useRef<HTMLDivElement | null>(null);
@@ -90,12 +90,14 @@ export const ShowHide: React.FC<Props> = ({
     }
   }
 
-  const componentClassName = clsx(styles['show-hide'], className, {
-    [styles['eds-is-active']]: isActive,
-    [styles['show-hide--align-right']]: align === 'right',
-    [styles['show-hide--align-top-right']]: align === 'top-right',
-    [styles['show-hide--align-top-left']]: align === 'top-left',
-  });
+  const componentClassName = clsx(
+    styles['show-hide'],
+    className,
+    align === 'right' && styles['show-hide--align-right'],
+    align === 'top-right' && styles['show-hide--align-top-right'],
+    align === 'top-left' && styles['show-hide--align-top-left'],
+    isActive && styles['eds-is-active'],
+  );
 
   /**
    * Clone child in `trigger` slot and apply necessary functionality

@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 import React, { ReactNode, useState } from 'react';
 import styles from './Banner.module.css';
-import { Button } from '../Button/Button';
-import { Icon } from '../Icon/Icon';
+import Button from '../Button';
+import Icon from '../Icon';
 
 export interface Props {
   /**
@@ -52,7 +52,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const Banner: React.FC<Props> = ({
+export const Banner = ({
   iconTitle,
   className,
   title,
@@ -63,14 +63,15 @@ export const Banner: React.FC<Props> = ({
   variant,
   closeButtonText = 'Close',
   ...other
-}) => {
-  const componentClassName = clsx(styles['banner'], className, {
-    [styles['banner--success']]: variant === 'success',
-    [styles['banner--warning']]: variant === 'warning',
-    [styles['banner--error']]: variant === 'error',
-    [styles['banner--brand']]: variant === 'brand',
-    [styles['banner--vertical']]: orientation === 'vertical',
-  });
+}: Props) => {
+  const componentClassName = clsx(
+    styles['banner'],
+    variant === 'success' && styles['banner--success'],
+    variant === 'warning' && styles['banner--warning'],
+    variant === 'error' && styles['banner--error'],
+    variant === 'brand' && styles['banner--brand'],
+    orientation === 'vertical' && styles['banner--vertical'],
+  );
   const [dismissed, setDismissed] = useState(false);
 
   function onDismiss(e: any) {

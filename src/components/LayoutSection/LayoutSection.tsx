@@ -1,12 +1,12 @@
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
-import styles from './LayoutSection.module.css';
+import styles from '../Layout/Layout.module.css';
 
 export interface Props {
   /**
-   * Layout section region
+   * Behavioral variations
    */
-  region?: 'main' | 'sidebar';
+  behavior?: 'expandable';
   /**
    * Child node(s) that can be nested inside component
    */
@@ -15,21 +15,28 @@ export interface Props {
    * CSS class names that can be appended to the component.
    */
   className?: string;
+  /**
+   * Layout section region
+   */
+  region?: 'main' | 'sidebar';
 }
 
 /**
  * Primary UI component for user interaction
  */
-export const LayoutSection: React.FC<Props> = ({
+export const LayoutSection = ({
   children,
   className,
   region,
   ...other
-}) => {
-  const componentClassName = clsx(styles['layout__section'], className, {
-    [styles['layout__section--main']]: region === 'main',
-    [styles['layout__section--sidebar']]: region === 'sidebar',
-  });
+}: Props) => {
+  const componentClassName = clsx(
+    styles['layout__section'],
+    className,
+    region === 'main' && styles['layout__section--main'],
+    region === 'sidebar' && styles['layout__section--sidebar'],
+  );
+
   return (
     <div className={componentClassName} {...other}>
       {children}

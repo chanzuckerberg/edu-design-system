@@ -67,11 +67,11 @@
 }
 
 /**
- * Checkbox field item label 
+ * Checkbox field item label
  * 1) Aligns label to checkbox control
  */
 .checkbox-field__item-label {
-  @mixin eds-theme-typography-body-text;
+  @mixin eds-theme-typography-body-text-md;
   color: var(--eds-theme-color-form-label-foreground);
   position: relative; /* 1 */
   top: -2px; /* 1 */

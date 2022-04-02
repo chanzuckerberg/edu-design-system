@@ -1,11 +1,17 @@
 @import '../../mixins.css';
 
 body {
-  @mixin eds-theme-typography-body-text;
+  @mixin eds-theme-typography-body-text-md;
   display: flex;
   flex-direction: column;
-  color: var(--eds-theme-color-body-foreground);
-  background: var(--eds-theme-color-body-background);
   padding: 0;
   margin: 0;
+  color: var(--eds-theme-color-text-neutral-default);
+  background: var(--eds-theme-color-body-background);
+
+  &.eds-is-disabled {
+    overflow: hidden;
+    width: 100%;
+    min-height: 100%;
+  }
 }

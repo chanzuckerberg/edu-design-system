@@ -4,11 +4,11 @@ import styles from './GlobalHeader.module.css';
 import {
   Header,
   Logo,
-  NavContainer,
   PrimaryNav,
   PrimaryNavItem,
+  NavContainer,
   Button,
-  Avatar,
+  AvatarBlock,
 } from '../../../src';
 
 export interface Props {
@@ -26,6 +26,11 @@ export const GlobalHeader: React.FC<Props> = ({ className, ...other }) => {
 
   const toggleMenu = () => {
     setisActive(!isActive);
+    if (isActive) {
+      document.body.classList.remove('eds-is-disabled');
+    } else {
+      document.body.classList.add('eds-is-disabled');
+    }
   };
 
   const componentClassName = clsx(styles['global-header'], className, {
@@ -33,35 +38,43 @@ export const GlobalHeader: React.FC<Props> = ({ className, ...other }) => {
   });
   return (
     <Header behavior="sticky" className={componentClassName} {...other}>
-      <div className={styles['global-header__header']}>
-        <Logo href="#" />
+      <Logo className={styles['global-header__logo']} href="#" />
 
-        <Button
-          className={styles['global-header__menu-button']}
-          variant="bare"
-          text={isActive ? 'Close' : 'Menu'}
-          iconPosition="before"
-          iconName={isActive ? 'x' : 'menu'}
-          inverted={true}
-          onClick={toggleMenu}
-        />
-      </div>
+      <Button
+        className={styles['global-header__menu-button']}
+        variant="bare"
+        aria-label={isActive ? 'Close' : 'Menu'}
+        iconPosition="before"
+        iconName={isActive ? 'x' : 'menu'}
+        inverted={true}
+        onClick={toggleMenu}
+      />
 
-      <div className={styles['global-header__body']}>
+      <NavContainer
+        isActive={isActive}
+        className={styles['global-header__nav-container']}
+      >
         <PrimaryNav>
-          <PrimaryNavItem href="#" text="Search Students" />
-          <PrimaryNavItem href="#" text="Announcements" />
-          <PrimaryNavItem href="#" text="Math 7 (IM)" />
-          <PrimaryNavItem href="#" text="Mentoring" />
-          <PrimaryNavItem href="#" text="Student Progress" />
-          <PrimaryNavItem href="#" text="edscator Tools" />
-          <PrimaryNavItem href="#" text="Curriculum" />
+          <PrimaryNavItem href="#" text="Search Students" iconName="search" />
+          <PrimaryNavItem href="#" text="Announcements" iconName="class-copy" />
+          <PrimaryNavItem href="#" text="Math 7 (IM)" iconName="mood" />
+          <PrimaryNavItem href="#" text="Mentoring" iconName="account-circle" />
+          <PrimaryNavItem href="#" text="Student Progress" iconName="school" />
+          <PrimaryNavItem
+            href="#"
+            text="Educator Tools"
+            iconName="view-module"
+          />
+          <PrimaryNavItem
+            href="#"
+            text="Curriculum"
+            iconName="business-center"
+          />
         </PrimaryNav>
-      </div>
-
-      <div className={styles['global-header__footer']}>
-        <Avatar />
-      </div>
+      </NavContainer>
+      <AvatarBlock className={styles['global-header__avatar-block']}>
+        Ali S.
+      </AvatarBlock>
     </Header>
   );
 };

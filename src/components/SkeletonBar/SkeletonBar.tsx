@@ -16,12 +16,14 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const SkeletonBar: React.FC<Props> = ({ className, size, ...other }) => {
-  const componentClassName = clsx(styles['skeleton-bar'], className, {
-    [styles['skeleton-bar--sm']]: size === 'sm',
-    [styles['skeleton-bar--lg']]: size === 'lg',
-    [styles['skeleton-bar--xl']]: size === 'xl',
-  });
+export const SkeletonBar = ({ className, size, ...other }: Props) => {
+  const componentClassName = clsx(
+    styles['skeleton-bar'],
+    className,
+    size === 'sm' && styles['skeleton-bar--sm'],
+    size === 'lg' && styles['skeleton-bar--lg'],
+    size === 'xl' && styles['skeleton-bar--xl'],
+  );
 
   return <div className={componentClassName} {...other}></div>;
 };

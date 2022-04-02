@@ -1,8 +1,8 @@
 import { Story, Meta } from '@storybook/react';
 import React from 'react';
 import { Counter, Props } from './Counter';
-import { Button } from '../Button/Button';
-import { Tooltip } from '../Tooltip/Tooltip';
+import Button from '../Button';
+import Tooltip from '../Tooltip';
 
 export default {
   title: 'Molecules/Forms/Counter',

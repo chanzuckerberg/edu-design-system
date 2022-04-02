@@ -52,7 +52,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const Radio: React.FC<Props> = ({
+export const Radio = ({
   ariaDescribedBy,
   id,
   name,
@@ -65,10 +65,12 @@ export const Radio: React.FC<Props> = ({
   onChange,
   tabIndex,
   ...other
-}) => {
-  const componentClassName = clsx(styles['radio'], className, {
-    [styles['radio--inverted']]: inverted === true,
-  });
+}: Props) => {
+  const componentClassName = clsx(
+    styles['radio'],
+    className,
+    inverted && styles['radio--inverted'],
+  );
   return (
     <div className={componentClassName} {...other}>
       <input

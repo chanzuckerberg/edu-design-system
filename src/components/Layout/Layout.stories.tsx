@@ -2,7 +2,7 @@ import { Story, Meta } from '@storybook/react';
 import React from 'react';
 
 import { Layout, Props } from './Layout';
-import { LayoutSection } from '../LayoutSection/LayoutSection';
+import LayoutSection from '../LayoutSection';
 
 export default {
   title: 'Molecules/Layout and Containers/Layout',
