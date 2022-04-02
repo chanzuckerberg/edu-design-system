@@ -10,4 +10,5 @@
   "stylelint.enable": true,
   "typescript.validate.enable": true,
   "javascript.validate.enable": true,
+  "editor.formatOnSave": true,
 }
