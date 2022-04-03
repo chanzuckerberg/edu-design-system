@@ -10,8 +10,8 @@ export default {
 
 const Template: Story<Props> = (args) => (
   <ButtonGroup {...args}>
-    <Button text="Primary Button" variant="primary" />
-    <Button text="Secondary Button" />
+    <Button variant="primary">Primary Button</Button>
+    <Button>Secondary Button</Button>
   </ButtonGroup>
 );
 

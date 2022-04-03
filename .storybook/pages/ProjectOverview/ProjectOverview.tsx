@@ -32,11 +32,12 @@ export const ProjectOverview: React.FC<Props> = ({ ...args }) => {
         title="Feudal Honor Codes and Values"
         right={
           <Button
-            text="View plan"
             variant="bare"
             iconPosition="after"
             iconName="arrow-narrow-right"
-          />
+          >
+            View plan
+          </Button>
         }
       />
       <ListDetail variant="ordered">

@@ -84,11 +84,12 @@ export const TableHeaderCell = ({
     >
       <Button
         variant="table-header"
-        text={children}
         iconPosition="after"
         iconName="arrow-narrow-down"
         onClick={onClick}
-      />
+      >
+        {children}
+      </Button>
     </th>
   );
 };
