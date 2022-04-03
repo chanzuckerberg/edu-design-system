@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import React, { MouseEventHandler, ReactNode } from 'react';
 import Button from '../Button';
+import Icon from '../Icon';
 import styles from '../Table/Table.module.css';
 
 export interface Props {
@@ -82,13 +83,9 @@ export const TableHeaderCell = ({
       id={id}
       {...other}
     >
-      <Button
-        variant="table-header"
-        iconPosition="after"
-        iconName="arrow-narrow-down"
-        onClick={onClick}
-      >
+      <Button variant="table-header" onClick={onClick}>
         {children}
+        <Icon name="arrow-narrow-down" aria-hidden="true" focusable={false} />
       </Button>
     </th>
   );

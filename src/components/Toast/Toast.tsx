@@ -84,10 +84,10 @@ export const Toast = ({
           className={styles['toast__close-btn']}
           variant="bare"
           aria-label={closeButtonText}
-          iconName="close"
-          iconPosition="after"
           onClick={(e: any) => onDismiss(e)}
-        />
+        >
+          <Icon name="x" aria-hidden="true" focusable={false} />
+        </Button>
       )}
     </div>
   );

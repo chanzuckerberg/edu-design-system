@@ -13,6 +13,7 @@ import {
   Section,
   Card,
   CardBody,
+  Icon,
 } from '../../../src';
 import utilityStyles from '../../../src/components/Utilities/Spacing.module.css';
 
@@ -28,12 +29,13 @@ export const ProjectOverview = () => {
       <PageHeader
         title="Feudal Honor Codes and Values"
         right={
-          <Button
-            variant="bare"
-            iconPosition="after"
-            iconName="arrow-narrow-right"
-          >
+          <Button variant="bare">
             View plan
+            <Icon
+              aria-hidden="true"
+              focusable={false}
+              name="arrow-narrow-right"
+            />
           </Button>
         }
       />

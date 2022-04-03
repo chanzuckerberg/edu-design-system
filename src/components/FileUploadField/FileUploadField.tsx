@@ -276,14 +276,14 @@ export const FileUploadField = ({
       default:
         return (
           <Button
-            iconName="close"
-            iconPosition="before"
             aria-label={removeFileButtonText}
             variant="bare"
             onClick={() => {
               onFileRemove(file.id);
             }}
-          />
+          >
+            <Icon name="x" aria-hidden="true" focusable={false} />
+          </Button>
         );
     }
   }

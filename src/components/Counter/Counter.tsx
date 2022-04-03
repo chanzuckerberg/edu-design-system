@@ -4,6 +4,7 @@ import React, { ReactNode, useEffect, useState } from 'react';
 import styles from './Counter.module.css';
 import Button from '../Button';
 import FieldNote from '../FieldNote';
+import Icon from '../Icon';
 import Label from '../Label';
 import TextInput from '../TextInput';
 
@@ -168,12 +169,12 @@ export const Counter = ({
         <Button
           className={styles['counter__btn']}
           variant="bare"
-          iconPosition="after"
-          iconName="remove"
           aria-label={minusButtonText}
           disabled={disabled || (min !== undefined && count === min)}
           onClick={(e) => onDecrease(e)}
-        />
+        >
+          <Icon name="minus" aria-hidden="true" focusable={false} />
+        </Button>
         <TextInput
           className={styles['counter__input']}
           type="text"
@@ -192,12 +193,12 @@ export const Counter = ({
         <Button
           className={styles['counter__btn']}
           variant="bare"
-          iconPosition="after"
-          iconName="add"
           aria-label={plusButtonText}
           disabled={disabled || (max !== undefined && count === max)}
           onClick={(e) => onIncrease(e)}
-        />
+        >
+          <Icon name="plus" aria-hidden="true" focusable={false} />
+        </Button>
       </div>
       {fieldNote && (
         <FieldNote

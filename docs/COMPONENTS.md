@@ -5,6 +5,7 @@ This codebase contains all the components, [recipes](https://bradfrost.com/blog/
 ## Working with components
 
 ### Using components
+
 TODO: define this process
 
 Using EDS components in your React application involves first installing the EDS package as a dependency:
@@ -25,11 +26,10 @@ From there, call EDS components in your React application and pass in the desire
 ```jsx
 <Button
   variant="primary"
-  iconName="chevron-right"
-  iconPosition="after"
   onClick={...}
 >
   Submit
+  <Icon name="chevron-right" aria-hidden="true" focusable={false} />
 </Button>
 ```
 

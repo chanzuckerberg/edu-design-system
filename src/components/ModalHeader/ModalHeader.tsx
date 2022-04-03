@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import React, { MouseEventHandler, ReactNode } from 'react';
 import Button from '../Button';
+import Icon from '../Icon';
 import styles from '../Modal/Modal.module.css';
 
 export interface Props {
@@ -44,12 +45,12 @@ export const ModalHeader = ({
       {dismissible && (
         <Button
           className={styles['modal__close-button']}
-          iconPosition="before"
-          iconName="close"
           aria-label={closeButtonText}
           variant="bare"
           onClick={onClick}
-        />
+        >
+          <Icon name="x" aria-hidden="true" focusable={false} />
+        </Button>
       )}
     </header>
   );
