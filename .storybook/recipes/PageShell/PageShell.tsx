@@ -35,11 +35,12 @@ export const PageShell: React.FC<Props> = ({
     <body className={componentClassName}>
       <Button
         className={styles['page-shell__skip-link']}
-        text="Skip to content"
         href="#main-content"
         variant="primary"
         size="sm"
-      />
+      >
+        Skip to content
+      </Button>
       <Layout>
         <LayoutSection region="sidebar">
           <GlobalHeader />

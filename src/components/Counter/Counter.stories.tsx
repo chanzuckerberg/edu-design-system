@@ -36,8 +36,9 @@ DefaultWithTooltip.args = {
         variant="bare"
         iconPosition="after"
         iconName="question-mark-circle"
-        text="Hover this button to trigger the tooltip"
-      />
+      >
+        Hover this button to trigger the tooltip
+      </Button>
     </Tooltip>
   ),
 };
