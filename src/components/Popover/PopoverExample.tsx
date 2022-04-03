@@ -71,7 +71,9 @@ export const PopoverExample: React.FC<Props> = ({
       className={componentClassName}
       {...other}
     >
-      <Button text="Open Popover" onClick={openPopover} ref={popoverButton} />
+      <Button onClick={openPopover} ref={popoverButton}>
+        Open Popover
+      </Button>
 
       <Popover
         position={position}
@@ -82,7 +84,11 @@ export const PopoverExample: React.FC<Props> = ({
         ariaDescribedBy="popover-description-1"
       >
         <PopoverHeader
-          titleAfter={<Button text="Mark All Seen" size="sm" variant="bare" />}
+          titleAfter={
+            <Button size="sm" variant="bare">
+              Mark All Seen
+            </Button>
+          }
         >
           <Heading id="popover-heading-1" as="h6">
             Notifications (4)

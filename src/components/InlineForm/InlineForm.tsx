@@ -81,7 +81,7 @@ export const InlineForm = ({
         placeholder={placeholder}
       />
 
-      <Button variant="primary" text={buttonText} />
+      <Button variant="primary">{buttonText}</Button>
     </form>
   );
 };
