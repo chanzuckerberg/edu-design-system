@@ -25,7 +25,7 @@ export interface Props {
    */
   title?: string;
   /**
-   * Section tile before container to place items like images or avatars
+   * Section title before container to place items like images or avatars
    */
   titleBefore?: ReactNode;
 }
