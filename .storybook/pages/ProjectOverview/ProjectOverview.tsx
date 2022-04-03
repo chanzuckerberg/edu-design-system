@@ -83,7 +83,7 @@ export const ProjectOverview: React.FC = () => (
           <ol>
             <li>
               Groups of specialized cells make up organs and body systems, which
-              work together to support an organism’s survival.{' '}
+              work together to support an organism’s survival.
             </li>
             <li>
               How are structures in the body organized? More text blah blah
@@ -114,7 +114,7 @@ export const ProjectOverview: React.FC = () => (
               </Heading>
               <TextPassage>
                 In this Focus Area, you explore the main question: How does the
-                structures of organisms enable life's functions?
+                structures of organisms enable lifes functions?
               </TextPassage>
             </CardBody>
           </Card>
@@ -140,7 +140,7 @@ export const ProjectOverview: React.FC = () => (
               </Heading>
               <TextPassage>
                 In this Focus Area, you explore the main question: How does the
-                structures of organisms enable life's functions?
+                structures of organisms enable life’s functions?
               </TextPassage>
             </CardBody>
           </Card>
@@ -155,7 +155,7 @@ export const ProjectOverview: React.FC = () => (
               </Heading>
               <TextPassage>
                 In this Focus Area, you explore the main question: How does the
-                structures of organisms enable life's functions?
+                structures of organisms enable life’s functions?
               </TextPassage>
             </CardBody>
           </Card>
@@ -171,12 +171,12 @@ export const ProjectOverview: React.FC = () => (
           title="Cognitive Skills"
         >
           <TextPassage>
-            <a href="#">Selecting Relevant Sources</a>,{' '}
-            <a href="#">Identifying Patterns and Relationships</a>,{' '}
-            <a href="#">Argumentative Claim</a>,{' '}
-            <a href="#">Selection of Evidence</a>,{' '}
-            <a href="#">Explanation of Evidence</a>,{' '}
-            <a href="#">Multimedia in Communication</a>,{' '}
+            <a href="#">Selecting Relevant Sources</a>
+            <a href="#">Identifying Patterns and Relationships</a>
+            <a href="#">Argumentative Claim</a>
+            <a href="#">Selection of Evidence</a>
+            <a href="#">Explanation of Evidence</a>
+            <a href="#">Multimedia in Communication</a>
             <a href="#">Integration of Evidence</a>
           </TextPassage>
         </Section>
@@ -189,7 +189,7 @@ export const ProjectOverview: React.FC = () => (
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex{' '}
+            aliquip ex
           </p>
         </TextPassage>
       </ListDetailPanel>
@@ -201,7 +201,7 @@ export const ProjectOverview: React.FC = () => (
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex{' '}
+            aliquip ex
           </p>
         </TextPassage>
       </ListDetailPanel>
@@ -212,7 +212,7 @@ export const ProjectOverview: React.FC = () => (
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex{' '}
+            aliquip ex
           </p>
         </TextPassage>
       </ListDetailPanel>
@@ -223,7 +223,7 @@ export const ProjectOverview: React.FC = () => (
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex{' '}
+            aliquip ex
           </p>
         </TextPassage>
       </ListDetailPanel>
