@@ -230,11 +230,11 @@
 }
 
 /**
- * Button text before icon spacing
- * 1) Controls the spacing between the button text
- *    and the icon that comes _before_ button text
+ * Button children before icon spacing
+ * 1) Controls the spacing between the button children
+ *    and the icon that comes _before_ button children
  */
-.button__icon + .button__text {
+.button__icon + .button__children {
   margin-left: var(--eds-size-1); /* 1 */
 
   .button--sm & {
@@ -244,14 +244,14 @@
 
 /**
  * Button after icon spacing
- * 1) Controls the spacing between the button text
- *    and the icon that comes _after_ button text
+ * 1) Controls the spacing between the button children
+ *    and the icon that comes _after_ button children
  */
-.button__text + .button__icon {
+.button__children + .button__icon {
   margin-left: var(--eds-size-1); /* 1 */
 
   /**
-   * Button icon after button text within a link variant button
+   * Button icon after button children within a link variant button
    */
   .button--link & {
     margin-left: var(--eds-size-half);

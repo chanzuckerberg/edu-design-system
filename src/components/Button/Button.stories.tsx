@@ -18,35 +18,35 @@ const InvertedTemplate: Story<Props> = (args) => (
 );
 
 export const Default = Template.bind({});
-Default.args = { text: 'Button' };
+Default.args = { children: 'Button' };
 
 export const DefaultWithIconBefore = Template.bind({});
 DefaultWithIconBefore.args = {
-  text: 'Button',
+  children: 'Button',
   iconPosition: 'before',
   iconName: 'chevron-left',
 };
 
 export const DefaultWithIconAfter = Template.bind({});
 DefaultWithIconAfter.args = {
-  text: 'Button',
+  children: 'Button',
   iconPosition: 'after',
   iconName: 'chevron-right',
 };
 
 export const DefaultDisabled = Template.bind({});
-DefaultDisabled.args = { text: 'Button', disabled: true };
+DefaultDisabled.args = { children: 'Button', disabled: true };
 
 export const DefaultInverted = InvertedTemplate.bind({});
-DefaultInverted.args = { inverted: true, text: 'Button' };
+DefaultInverted.args = { inverted: true, children: 'Button' };
 
 export const Primary = Template.bind({});
-Primary.args = { variant: 'primary', text: 'Primary Button' };
+Primary.args = { variant: 'primary', children: 'Primary Button' };
 
 export const PrimaryDisabled = Template.bind({});
 PrimaryDisabled.args = {
   variant: 'primary',
-  text: 'Primary Button',
+  children: 'Primary Button',
   disabled: true,
 };
 
@@ -54,7 +54,7 @@ export const PrimaryInverted = InvertedTemplate.bind({});
 PrimaryInverted.args = {
   variant: 'primary',
   inverted: true,
-  text: 'Primary Button',
+  children: 'Primary Button',
 };
 
 export const BareIcon = Template.bind({});
@@ -75,32 +75,32 @@ BareIconInverted.args = {
 };
 
 export const TextLink = Template.bind({});
-TextLink.args = { variant: 'link', text: 'Text Link Button' };
+TextLink.args = { variant: 'link', children: 'Text Link Button' };
 
 export const TextLinkInverted = InvertedTemplate.bind({});
 TextLinkInverted.args = {
   variant: 'link',
   inverted: true,
-  text: 'Text Link Button',
+  children: 'Text Link Button',
 };
 
 export const UtilityError = Template.bind({});
-UtilityError.args = { variant: 'error', text: 'Button' };
+UtilityError.args = { variant: 'error', children: 'Button' };
 
 export const Medium = Template.bind({});
-Medium.args = { size: 'md', text: 'Medium Button' };
+Medium.args = { size: 'md', children: 'Medium Button' };
 
 export const Small = Template.bind({});
-Small.args = { size: 'sm', text: 'Small Button' };
+Small.args = { size: 'sm', children: 'Small Button' };
 
 export const FullWidth = Template.bind({});
-FullWidth.args = { fullWidth: true, text: 'Button' };
+FullWidth.args = { fullWidth: true, children: 'Button' };
 
 export const Loading = Template.bind({});
 Loading.args = {
   loading: true,
   disabled: true,
-  text: 'Loading Button',
+  children: 'Loading Button',
 };
 
 export const PrimaryLoading = Template.bind({});
@@ -108,5 +108,5 @@ PrimaryLoading.args = {
   variant: 'primary',
   loading: true,
   disabled: true,
-  text: 'Primary Loading Button',
+  children: 'Primary Loading Button',
 };

@@ -60,7 +60,7 @@ const WithActionTemplate: Story<Props> = (args) => (
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
       </p>
     </TextPassage>
-    <Button text="Banner action" />
+    <Button>Banner action</Button>
   </Banner>
 );
 

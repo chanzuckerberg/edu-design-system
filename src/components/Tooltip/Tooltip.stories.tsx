@@ -17,10 +17,9 @@ const defaultArgs = {
     </span>
   ),
   children: (
-    <Button
-      className={clsx(styles['trigger--spacing'])}
-      text="Tooltip trigger"
-    />
+    <Button className={clsx(styles['trigger--spacing'])}>
+      Tooltip trigger
+    </Button>
   ),
   align: 'right',
   visible: true,
@@ -52,8 +51,9 @@ export const LeftPlacement: StoryObj<Args> = {
           styles['trigger--spacing-bottom'],
           styles['trigger--spacing-left-large'],
         )}
-        text="Tooltip trigger"
-      />
+      >
+        Tooltip trigger
+      </Button>
     ),
   },
 };
@@ -67,8 +67,9 @@ export const TopPlacement: StoryObj<Args> = {
           styles['trigger--spacing-top'],
           styles['trigger--spacing-left'],
         )}
-        text="Tooltip trigger"
-      />
+      >
+        Tooltip trigger
+      </Button>
     ),
   },
 };
@@ -82,8 +83,9 @@ export const BottomPlacement: StoryObj<Args> = {
           styles['trigger--spacing-bottom'],
           styles['trigger--spacing-left'],
         )}
-        text="Tooltip trigger"
-      />
+      >
+        Tooltip trigger
+      </Button>
     ),
   },
 };
@@ -107,10 +109,9 @@ export const LongText: StoryObj<Args> = {
 export const LongButtonText: StoryObj<Args> = {
   args: {
     children: (
-      <Button
-        className={clsx(styles['trigger--spacing-top'])}
-        text="Tooltip trigger with longer text to test placement"
-      />
+      <Button className={clsx(styles['trigger--spacing-top'])}>
+        Tooltip trigger with longer text to test placement
+      </Button>
     ),
   },
 };
@@ -119,10 +120,9 @@ export const Interactive: StoryObj<Args> = {
   args: {
     visible: undefined,
     children: (
-      <Button
-        className={clsx(styles['trigger--spacing'])}
-        text="Hover here to see tooltip after clicking somewhere outside."
-      />
+      <Button className={clsx(styles['trigger--spacing'])}>
+        Hover here to see tooltip after clicking somewhere outside.
+      </Button>
     ),
   },
   decorators: [

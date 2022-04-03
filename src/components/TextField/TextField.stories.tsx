@@ -55,7 +55,11 @@ export const InputWithin = () => {
     <div>
       <TextField
         type="text"
-        inputWithin={<Button variant="bare" size="sm" text="Button" />}
+        inputWithin={
+          <Button variant="bare" size="sm">
+            Button
+          </Button>
+        }
       />
     </div>
   );
