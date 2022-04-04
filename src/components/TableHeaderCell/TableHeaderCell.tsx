@@ -51,7 +51,6 @@ export interface Props {
  * Primary UI component for user interaction
  */
 export const TableHeaderCell = ({
-  children,
   className,
   rowSpan,
   colSpan,
@@ -84,7 +83,7 @@ export const TableHeaderCell = ({
       {...other}
     >
       <Button variant="table-header" onClick={onClick}>
-        {children}
+        {text}
         <Icon name="arrow-narrow-down" aria-hidden="true" focusable={false} />
       </Button>
     </th>
