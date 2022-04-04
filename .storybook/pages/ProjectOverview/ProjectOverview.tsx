@@ -18,7 +18,7 @@ import utilityStyles from '../../../src/components/Utilities/Spacing.module.css'
 
 import { PageShell } from '../../recipes/PageShell/PageShell';
 
-export const ProjectOverview = () => {
+export const ProjectOverview = () => (
   <PageShell>
     <Breadcrumbs>
       <BreadcrumbsItem text="My Courses" href="#" />
@@ -227,5 +227,5 @@ export const ProjectOverview = () => {
         </TextPassage>
       </ListDetailPanel>
     </ListDetail>
-  </PageShell>;
-};
+  </PageShell>
+);
