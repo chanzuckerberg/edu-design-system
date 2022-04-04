@@ -185,7 +185,11 @@ export const SelectField = ({
           onChange={(e) => handleOnChange(e)}
           {...other}
         />
-        <Icon name="expand-more" className={styles['select-field__icon']} />
+        <Icon
+          name="expand-more"
+          className={styles['select-field__icon']}
+          purpose="decorative"
+        />
       </div>
       {fieldNote && (
         <FieldNote
