@@ -27,9 +27,10 @@ From there, call EDS components in your React application and pass in the desire
   variant="primary"
   iconName="chevron-right"
   iconPosition="after"
-  text="Submit"
   onClick={...}
-/>
+>
+  Submit
+</Button>
 ```
 
 Each EDS component is documented in Storybook, which surfaces each component's API and provides copy-and-paste code snippets. If you have questions or are experiencing any issues when working with EDS's components, please [reach out for support](#) (TODO: provide support link) and the team will be happy to help.

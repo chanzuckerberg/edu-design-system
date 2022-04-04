@@ -1,11 +1,10 @@
 /* TODO: point to internal exports once fully migrated */
-// import { Text, CloseButton } from '@chanzuckerberg/eds';
-// import colorStyles from '@chanzuckerberg/eds/lib/common/Notifications/Notification.module.css';
 // import NotificationIcon from '@chanzuckerberg/eds/lib/common/Notifications/NotificationIcon';
 
 import clsx from 'clsx';
 import React from 'react';
 import styles from './Toast.module.css';
+import { Button } from '../Button/Button';
 
 export type Variant = 'success' | 'alert';
 
@@ -62,7 +61,7 @@ export const Toast = ({
       </div>
       {/* TODO: point to internal CloseButton once fully migrated */}
       {/* {onDismiss && <CloseButton color={variant} onClose={onDismiss} />} */}
-      {onDismiss && <button onClick={onDismiss}>temp close tooltip</button>}
+      {onDismiss && <Button onClick={onDismiss}>close</Button>}
     </div>
   );
 };

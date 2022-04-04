@@ -11,10 +11,10 @@ export default {
 const Template: Story<Props> = (args) => <Icon {...args} />;
 
 export const Default = Template.bind({});
-Default.args = { name: 'x' };
+Default.args = { name: 'close' };
 
 export const Inverted = () => (
   <div className="u-padding-sm" style={{ background: '#000000' }}>
-    <Icon inverted={true} name="x" />
+    <Icon inverted={true} name="close" />
   </div>
 );

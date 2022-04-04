@@ -56,7 +56,9 @@ export const ModalExample = ({
       className={componentClassName}
       {...other}
     >
-      <Button text="Open Modal" onClick={openContinueModal} ref={modalButton} />
+      <Button onClick={openContinueModal} ref={modalButton}>
+        Open Modal
+      </Button>
 
       <Modal
         dismissible={true}
@@ -83,12 +85,10 @@ export const ModalExample = ({
         </ModalBody>
         <ModalFooter>
           <ButtonGroup align="right">
-            <Button
-              variant="primary"
-              text="Submit"
-              onClick={closeContinueModal}
-            />
-            <Button text="Close" onClick={closeContinueModal} />
+            <Button variant="primary" onClick={closeContinueModal}>
+              Submit
+            </Button>
+            <Button onClick={closeContinueModal}>Close</Button>
           </ButtonGroup>
         </ModalFooter>
       </Modal>
