@@ -236,7 +236,11 @@ export const TextField = ({
           </div>
         )}
         {iconName && (
-          <Icon className={styles['text-field__icon']} name={iconName} />
+          <Icon
+            className={styles['text-field__icon']}
+            name={iconName}
+            purpose="decorative"
+          />
         )}
       </div>
       {fieldNote && (

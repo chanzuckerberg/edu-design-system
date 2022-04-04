@@ -122,7 +122,8 @@ export const AccordionPanel = ({
           <Icon
             className={styles['accordion-panel__icon']}
             name="expand-more"
-          ></Icon>
+            purpose="decorative"
+          />
         </button>
       </dt>
       <dd
