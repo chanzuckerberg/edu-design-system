@@ -265,7 +265,7 @@ export const FileUploadField = ({
   function renderFileListIconOrRemoveButton(file) {
     switch (statusLabel) {
       case 'success':
-        return <Icon name="caret-down" />;
+        return <Icon name="caret-down" purpose="decorative" />;
       case 'uploading':
         return (
           <LoadingIndicator

@@ -223,7 +223,11 @@ export const TextareaField = ({
           </Button>
         )}
         {iconName && (
-          <Icon className={styles['textarea-field__icon']} name={iconName} />
+          <Icon
+            className={styles['textarea-field__icon']}
+            name={iconName}
+            purpose="decorative"
+          />
         )}
       </div>
       {fieldNote && (

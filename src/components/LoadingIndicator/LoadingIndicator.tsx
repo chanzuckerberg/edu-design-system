@@ -18,7 +18,7 @@ export const LoadingIndicator = ({ className, ...other }: Props) => {
   return (
     <div className={componentClassName} {...other}>
       <Icon
-        aria-hidden="true"
+        purpose="decorative"
         name="spinner"
         className={styles['loading-indicator__icon']}
       />

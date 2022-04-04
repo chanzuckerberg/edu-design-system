@@ -31,8 +31,7 @@ export const BreadcrumbsItem = ({ className, text, href, ...other }: Props) => {
       <Icon
         className={styles['breadcrumbs__icon']}
         name="chevron-right"
-        aria-hidden={true}
-        focusable={false}
+        purpose="decorative"
       />
     </li>
   );

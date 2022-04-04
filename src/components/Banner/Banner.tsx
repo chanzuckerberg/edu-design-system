@@ -85,6 +85,7 @@ export const Banner = ({
           name={iconName}
           title={iconTitle}
           className={styles['banner__icon']}
+          purpose="informative"
         />
       )}
       <div className={styles['banner__body']}>{children}</div>
