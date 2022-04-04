@@ -11,9 +11,12 @@
 .hr {
   margin-top: var(--eds-size-4);
   margin-bottom: var(--eds-size-4);
-  border-width: var(--eds-border-width-sm);
-  border-style: solid;
-  border-color: var(--eds-theme-color-neutral-subtle-border);
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom-width: var(--eds-border-width-sm);
+  border-bottom-style: solid;
+  border-bottom-color: var(--eds-theme-color-neutral-subtle-border);
 }
 
 /**
