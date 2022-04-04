@@ -10,23 +10,23 @@
  * 3) The thick left border operates as a foreground band of color, 
  *    so foreground rather than border is used
  */
- .toast {
+.toast {
   width: 100%;
   max-width: 25rem;
 
-  padding-left: var(--eds-size-4);
+  padding-left: var(--eds-size-2);
   padding-right: var(--eds-size-1);
-  
+
   display: grid;
   gap: var(--eds-size-1);
   grid-template-columns: 1fr min-content;
   align-items: center;
-  
+
   border-style: solid;
   border-width: var(--eds-border-width-sm);
-  border-left-width: var(--eds-border-width-lg);  /* 3 */
+  border-left-width: var(--eds-border-width-lg); /* 3 */
   border-radius: var(--eds-size-half);
-  
+
   box-shadow: var(--eds-box-shadow-sm);
   --svg-icon-size-default: 1.25rem;
 }

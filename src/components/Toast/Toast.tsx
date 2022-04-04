@@ -55,7 +55,9 @@ export const Toast = ({
     <div className={componentClassName} {...other}>
       <div className={styles['toast__content']}>
         {/* TODO: point to internal NotificationIcon once fully migrated */}
-        <p>icon</p>
+        <svg fill="currentColor" width="16px" height="16px">
+          <path d="M20 6h-1v8c0 .55-.45 1-1 1H6v1c0 1.1.9 2 2 2h10l4 4V8c0-1.1-.9-2-2-2zm-3 5V4c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v13l4-4h9c1.1 0 2-.9 2-2z" />
+        </svg>
         {/* <NotificationIcon variant={variant} /> */}
         <p className={styles['toast__text']}>{children}</p>
       </div>
