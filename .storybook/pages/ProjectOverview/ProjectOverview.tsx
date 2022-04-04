@@ -105,7 +105,7 @@ export const ProjectOverview = () => {
           }
           title="Power Focus Areas"
         >
-          <Card href="#">
+          <Card>
             <CardBody>
               <Heading
                 className={utilityStyles['u-margin-bottom-sm']}
@@ -131,7 +131,7 @@ export const ProjectOverview = () => {
           }
           title="Additional Focus Areas"
         >
-          <Card className={utilityStyles['u-margin-bottom-md']} href="#">
+          <Card className={utilityStyles['u-margin-bottom-md']}>
             <CardBody>
               <Heading
                 className={utilityStyles['u-margin-bottom-sm']}
@@ -146,7 +146,7 @@ export const ProjectOverview = () => {
               </TextPassage>
             </CardBody>
           </Card>
-          <Card href="#">
+          <Card>
             <CardBody>
               <Heading
                 className={utilityStyles['u-margin-bottom-sm']}
