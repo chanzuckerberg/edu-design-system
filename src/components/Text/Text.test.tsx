@@ -1,6 +1,7 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
 import { render, screen } from '@testing-library/react';
 
+import userEvent from '@testing-library/user-event';
 import React from 'react';
 import { Text } from './Text';
 import * as TextStoryFile from './Text.stories';
@@ -16,18 +17,29 @@ describe('<Text />', () => {
     );
     expect(screen.getByText('Some Text').classList).toContain('passthrough');
   });
-  it('should handle refs', () => {
+  it('should handle refs', async () => {
     const HelperComponent = ({ as }: { as: 'p' | 'span' }) => {
-      const refContainerSpan = React.useRef(null);
+      const refContainer = React.useRef(null);
+      const onButtonClick = () => {
+        expect(refContainer.current).toBe(
+          screen.getByText(`Ref container parent test ${as}`),
+        );
+      };
       return (
-        <Text as={as} ref={refContainerSpan}>
-          Ref container parent test {as}
-        </Text>
+        <>
+          <Text as={as} ref={refContainer}>
+            Ref container parent test {as}
+          </Text>
+          <button onClick={onButtonClick}>Test ref</button>
+        </>
       );
     };
-    render(<HelperComponent as="p" />);
+    const { rerender } = render(<HelperComponent as="p" />);
     expect(screen.getByText('Ref container parent test p')).toBeTruthy();
-    render(<HelperComponent as="span" />);
+    userEvent.click(screen.getByRole('button'));
+
+    rerender(<HelperComponent as="span" />);
     expect(screen.getByText('Ref container parent test span')).toBeTruthy();
+    userEvent.click(screen.getByRole('button'));
   });
 });

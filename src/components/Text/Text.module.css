@@ -5,20 +5,15 @@
 \*------------------------------------*/
 
 /**
- * 1) h1, h2, h3, h4, h5, h6
- * 2) Styles are either controlled by as or size declaration
+ * Sizes
  */
 .text,
 .text--body,
 .text--md {
-  @mixin reset;
+  @mixin margin-bottom: 0;
 
   @mixin eds-theme-typography-body-text;
 }
-
-/**
- * Sizes
- */
 .text--lg {
   @mixin eds-theme-typography-body-text-lg;
 }
