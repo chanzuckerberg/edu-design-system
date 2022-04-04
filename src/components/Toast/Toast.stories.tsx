@@ -7,7 +7,7 @@ export default {
   component: Toast,
   argTypes: { onDismiss: { action: 'dismissed' } },
   args: {
-    text: "You've got toast!",
+    children: "You've got toast!",
   },
 };
 

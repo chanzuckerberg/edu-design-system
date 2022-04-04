@@ -48,17 +48,17 @@ export const Toast = ({
 }: Props) => {
   const componentClassName = clsx(
     className,
-    styles.toast,
-    /* TODO: uncomment and point to corresponding style classes once Notifications is fully migrated */
-    // variant === 'success' && colorStyles.colorSuccess,
-    // variant === 'alert' && colorStyles.colorAlert,
+    styles['toast'],
+    variant === 'success' && styles['toast--success'],
+    variant === 'alert' && styles['toast--alert'],
   );
   return (
     <div className={componentClassName} {...other}>
-      <div className={styles['toast--content']}>
+      <div className={styles['toast__content']}>
         {/* TODO: point to internal NotificationIcon once fully migrated */}
+        <p>icon</p>
         {/* <NotificationIcon variant={variant} /> */}
-        <p className={styles['toast--text']}>{children}</p>
+        <p className={styles['toast__text']}>{children}</p>
       </div>
       {/* TODO: point to internal CloseButton once fully migrated */}
       {/* {onDismiss && <CloseButton color={variant} onClose={onDismiss} />} */}
