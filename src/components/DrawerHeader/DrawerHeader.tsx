@@ -45,7 +45,7 @@ export const DrawerHeader = ({
         <Button
           className={styles['drawer__close-button']}
           iconPosition="before"
-          iconName="x"
+          iconName="close"
           aria-label={closeButtonText}
           variant="bare"
           onClick={onClick}
