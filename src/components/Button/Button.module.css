@@ -229,17 +229,11 @@
 }
 
 /**
- * Button Icon
+ * Loading icon rotiation style
  * 1) Set SVG icon fill to the current text color
  */
-.button__icon {
+.button__icon-loading {
   fill: currentColor; /* 1 */
-}
-
-/**
- * Loading icon rotiation style
- */
-.button.eds-is-loading > .button__icon {
   animation: rotateIcon 2s linear infinite;
   overflow: visible;
 

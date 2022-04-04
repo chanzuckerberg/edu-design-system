@@ -121,7 +121,7 @@ export const Button = React.forwardRef(
             aria-hidden="true"
             focusable={false}
             name="spinner"
-            className={styles['button__icon']}
+            className={styles['button__icon-loading']}
           />
         )}
 
