@@ -25,11 +25,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const PageShell: React.FC<Props> = ({
-  className,
-  children,
-  ...other
-}) => {
+export const PageShell = ({ children, className, ...other }: Props) => {
   const componentClassName = clsx(styles['page-shell'], className, {});
   return (
     <body className={componentClassName}>

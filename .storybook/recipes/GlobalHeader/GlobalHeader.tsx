@@ -21,7 +21,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const GlobalHeader: React.FC<Props> = ({ className, ...other }) => {
+export const GlobalHeader = ({ className, ...other }: Props) => {
   const [isActive, setisActive] = useState(false);
 
   const toggleMenu = () => {
