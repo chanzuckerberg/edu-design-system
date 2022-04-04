@@ -1,32 +1,77 @@
 import clsx from 'clsx';
-import React, { ReactNode } from 'react';
+import React, { forwardRef, ForwardedRef } from 'react';
 import styles from './Text.module.css';
 
-export interface Props {
+export type Size = 'body' | 'sm' | 'md' | 'lg' | 'xs' | 'caption' | 'overline';
+
+export type Variant =
+  | 'alert'
+  | 'base'
+  | 'brand'
+  | 'inherit'
+  | 'neutral'
+  | 'success'
+  | 'warning'
+  | 'white'
   /**
-   * The rendered tag name of the Heading. The tag name should always relate to the [document outline](http://html5doctor.com/outlines/) and a tag name should never be chosen for its default aesthetic qualities. If a specific style is desired, use the `size` prop to manipulate the Heading style.
+   * @deprecated Info variant is deprecated.
    */
-  as: 'p' | 'span';
+  | 'info';
+
+export type Props = {
   /**
-   * The child node(s)
+   * Controls whether to render text inline (defaults to "p");
    */
-  children?: ReactNode;
-  /**
-   * CSS class names that can be appended to the component.
-   */
+  as?: 'p' | 'span';
+  children: React.ReactNode;
   className?: string;
-}
+  variant?: Variant;
+  size?: Size;
+  tabIndex?: number;
+  weight?: 'bold' | 'normal' | null;
+} & React.HTMLAttributes<HTMLElement>;
 
 /**
- * Primary UI component for user interaction
+ * ```ts
+ * import {Text} from "@chanzuckerberg/eds";
+ * ```
  */
-export const Text = ({ as = 'p', className, children, ...other }: Props) => {
-  const componentClassName = clsx(styles['text'], className, {});
-  const TagName = as;
-
-  return (
-    <TagName className={componentClassName} {...other}>
-      {children}
-    </TagName>
-  );
-};
+export const Text = forwardRef(
+  (
+    {
+      as = 'p',
+      children,
+      className,
+      variant,
+      size = 'body',
+      weight,
+      /**
+       * Components that wrap typography sometimes requires props such as event handlers
+       * to be passed down into the element. One example is the tooltip component.  It
+       * attaches a onHover and onFocus event to the element to determine when to
+       * trigger the overlay.
+       */ ...other
+    }: Props,
+    ref: ForwardedRef<HTMLParagraphElement>, // Setting as HTMLParagraphElement to satisfy TS, but unit test covers both span and p cases for sanity
+  ) => {
+    if (variant === 'info' && process.env.NODE_ENV !== 'production') {
+      console.warn(
+        'Info variant is deprecated, please consider another variant.',
+      );
+    }
+    const TagName = as;
+    const componentClassName = clsx(
+      className,
+      styles['text'],
+      styles[`text--${size}`],
+      variant && styles[`text--${variant}`],
+      weight && styles[`text--${weight}-weight`],
+    );
+    return (
+      <TagName className={componentClassName} ref={ref} {...other}>
+        {children}
+      </TagName>
+    );
+  },
+);
+Text.displayName = 'Text'; // Satisfy eslint
