@@ -291,7 +291,6 @@ The design system's component directory contains all of the design system's comp
 
 ### Imports
 
-
 The framework follows a specific ordering/clustering for importing modules into a component. This is enforced through the [`import/order` lint rule](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/order.md).
 
 Here's an example:
@@ -339,6 +338,7 @@ export const ComponentName = ({
 This defines the component name and passes in all the `Props`.
 
 ### Children
+
 When a component uses `children` as a prop, use the type `React.ReactNode` unless context dictates otherwise, including `ReactNode` as a named import.
 
 ```tsx
@@ -356,16 +356,18 @@ export const ComponentName = ({ children }: { children: ReactNode }) => {
 Interactive components likely require defining necessary [state and lifecycle](https://reactjs.org/docs/state-and-lifecycle.html) functions in addition to defining any other necessary variables and functions.
 
 #### useState()
+
 When using the `useState()` hook, TypeScript will infer the correct type from the initial value. If explicit typing of a variable in state is necessary and a hard-coded initial value is not set, you can use a prop as the initial value.
 
 #### useEffect()
+
 `useEffect()` hooks do not require any typing. TypeScript expects them to either return nothing or a Destructor-typed function (a function that cleans up any side effects and returns void.)
 
 #### useRef()
-`useRef()` hooks access underlying DOM elements to perform imperative actions. The resulting `ref` object can either be *mutable* or *not mutable*. (If the value store in its' `.current` property may be changed, the ref needs to be `mutable`.) Explictly convey the intended mutability status of each `ref` by using either `React.MutableObject` and `React.RefObject`, in a generic type definition. 
+
+`useRef()` hooks access underlying DOM elements to perform imperative actions. The resulting `ref` object can either be _mutable_ or _not mutable_. (If the value store in its' `.current` property may be changed, the ref needs to be `mutable`.) Explictly convey the intended mutability status of each `ref` by using either `React.MutableObject` and `React.RefObject`, in a generic type definition.
 
 For consistency, include `MutableRefObject` and `RefObject` with your import statements.
-
 
 ```tsx
 import React, { useRef, MutableRefObject, RefObject } from 'react';
@@ -375,6 +377,7 @@ import React, { useRef, MutableRefObject, RefObject } from 'react';
 const ref = useRef() as MutableRefObject<HTMLInputElement>;
 
 ```
+
 ### Define `componentClassName`
 
 The last thing that appears above the `return` statement is the `componentClassName`, which defines the CSS block for the component in addition to any modifier CSS class names using the [`clsx` library](https://www.npmjs.com/package/clsx). CSS Modules' bracket syntax (e.g. `styles['my-component']`) is used to enable BEM conventions (which uses dashes).
@@ -390,9 +393,7 @@ const componentClassName = clsx(styles['my-component'], className, {
 Finally, the `return` statement contains the JSX markup for the component and applies the `componentClassName` to the outermost element to be rendered in the DOM.
 
 ```tsx
-return (
-  <div className={componentClassName} {...other} />
-);
+return <div className={componentClassName} {...other} />;
 ```
 
 ## Component Rules and Considerations
@@ -442,12 +443,13 @@ EDS adheres to the following API naming conventions:
 - `verticalAlign` should be used for vertically aligning content, and should include `top`, `middle`, `bottom` if needed.
 - The default option should be the one most commonly used in order to reduce friction for developers using the components.
 
-### Text, Labels, Titles
+### Text, Labels, Titles, and Children
 
-- Default to `text` for short strings of text, such as `<Button text="Click here">` or `<Badge text="Overdue" />`.
+- Default to `text` for short strings of text, such as `<BreadCrumbsItem text="My Courses">` or `<Badge text="Overdue" />`.
 - For headings, default to `title`, such as `<PageHeader title="My Page Title">`.
 - Default to `description` for text that serves as a descriptor, such as `<PageHeader title="Project name" description="Brief overview of the project..." />`
 - For form-related components, use the semantic `label` or `legend` (e.g. `<TextField label="first name" />` and `<RadioField legend="Grade level">`).
+- `children` can be used for components that only have one main block of content being passed in (so there will be no confusion with other content props) and when it's safe for that content to be a `ReactNode`. (If it's important for the content to only come in the form of a string, use a different prop name, like `text`.)
 
 ### Tag name
 

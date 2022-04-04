@@ -46,11 +46,9 @@ export const DrawerExample = ({ className, ...other }: Props) => {
       className={componentClassName}
       {...other}
     >
-      <Button
-        text="Open Drawer"
-        onClick={openDrawerExample}
-        ref={drawerButton}
-      />
+      <Button onClick={openDrawerExample} ref={drawerButton}>
+        Open Drawer
+      </Button>
 
       <Drawer
         dismissible={true}
@@ -69,8 +67,8 @@ export const DrawerExample = ({ className, ...other }: Props) => {
         </DrawerBody>
         <DrawerFooter>
           <ButtonGroup>
-            <Button variant="primary" text="Button" />
-            <Button text="Close Drawer" onClick={closeDrawerExample} />
+            <Button variant="primary">Button</Button>
+            <Button onClick={closeDrawerExample}>Close Drawer</Button>
           </ButtonGroup>
         </DrawerFooter>
       </Drawer>

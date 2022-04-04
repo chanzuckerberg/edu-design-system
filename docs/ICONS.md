@@ -15,7 +15,7 @@ View the "Icon Grid" story in Storybook for a visualization of all available ico
 The second way involves components that bake the `Icon` component into the internals of a component, such as `Button`. For these components, use the `iconName` prop (and perhaps also the `iconPosition` prop) like so:
 
 ```jsx
-<Button text="Search" iconName="magnifying-glass" iconPosition="after">
+<Button iconName="magnifying-glass" iconPosition="after">Search</Button>
 ```
 
 ---

@@ -25,21 +25,18 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const PageShell: React.FC<Props> = ({
-  className,
-  children,
-  ...other
-}) => {
+export const PageShell = ({ children, className, ...other }: Props) => {
   const componentClassName = clsx(styles['page-shell'], className, {});
   return (
     <body className={componentClassName}>
       <Button
         className={styles['page-shell__skip-link']}
-        text="Skip to content"
         href="#main-content"
         variant="primary"
         size="sm"
-      />
+      >
+        Skip to content
+      </Button>
       <Layout>
         <LayoutSection region="sidebar">
           <GlobalHeader />

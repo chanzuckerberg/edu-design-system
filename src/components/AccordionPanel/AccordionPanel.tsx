@@ -121,7 +121,7 @@ export const AccordionPanel = ({
           {header}
           <Icon
             className={styles['accordion-panel__icon']}
-            name="chevron-down"
+            name="expand-more"
           ></Icon>
         </button>
       </dt>

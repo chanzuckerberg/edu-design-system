@@ -32,12 +32,9 @@ DefaultWithTooltip.args = {
   fieldNote: 'This is a counter field',
   labelAfter: (
     <Tooltip text="Some text to help with a form field">
-      <Button
-        variant="bare"
-        iconPosition="after"
-        iconName="question-mark-circle"
-        text="Hover this button to trigger the tooltip"
-      />
+      <Button variant="bare" iconPosition="after" iconName="help">
+        Hover this button to trigger the tooltip
+      </Button>
     </Tooltip>
   ),
 };

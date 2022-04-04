@@ -17,8 +17,14 @@ export interface Props {
    */
   className?: string;
   /**
-   * Stylistic variations:
-   * - **reversed** switches the order of the sidebar and main content
+   * Expandable layout sections
+   * 1) Used for hover/focus states showing/hiding extra content
+   */
+  expandable?: boolean;
+
+  /**
+   * Sidebar property
+   * 1) Adjust the size of the sidebar
    */
   variant?: 'right-sidebar';
 }
@@ -39,6 +45,7 @@ export const Layout = ({
     variant === 'right-sidebar' && styles['layout--right-sidebar'],
     behavior === 'fixed-sidebar' && styles['layout--fixed-sidebar'],
   );
+
   return (
     <div className={componentClassName} {...other}>
       {children}

@@ -214,12 +214,13 @@ export const TextareaField = ({
           <Button
             className={styles['textarea-field__button']}
             type="button"
-            text={fieldButtonText}
             aria-label={fieldButtonAriaLabel}
             variant="bare"
             size="sm"
             onClick={fieldButtonOnClick}
-          />
+          >
+            {fieldButtonText}
+          </Button>
         )}
         {iconName && (
           <Icon className={styles['textarea-field__icon']} name={iconName} />

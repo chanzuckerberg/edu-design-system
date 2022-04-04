@@ -60,12 +60,12 @@ const WithActionTemplate: Story<Props> = (args) => (
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
       </p>
     </TextPassage>
-    <Button text="Banner action" />
+    <Button>Banner action</Button>
   </Banner>
 );
 
 export const Default = Template.bind({});
-Default.args = { iconName: 'information-circle' };
+Default.args = { iconName: 'info' };
 
 export const Brand = Template.bind({});
 Brand.args = {
@@ -84,21 +84,21 @@ Success.args = {
 export const Warning = Template.bind({});
 Warning.args = {
   variant: 'warning',
-  iconName: 'exclamation-circle',
+  iconName: 'error',
   title: 'This is a title',
 };
 
 export const Error = Template.bind({});
 Error.args = {
   variant: 'error',
-  iconName: 'x-circle',
+  iconName: 'cancel',
   title: 'This is a title',
 };
 
 export const Dismissible = Template.bind({});
 Dismissible.args = {
   dismissible: true,
-  iconName: 'information-circle',
+  iconName: 'info',
   title: 'This is a title',
 };
 
@@ -122,7 +122,7 @@ export const WarningDismissible = Template.bind({});
 WarningDismissible.args = {
   dismissible: true,
   variant: 'warning',
-  iconName: 'exclamation-circle',
+  iconName: 'error',
   title: 'This is a title',
 };
 
@@ -130,27 +130,27 @@ export const ErrorDismissible = Template.bind({});
 ErrorDismissible.args = {
   dismissible: true,
   variant: 'error',
-  iconName: 'x-circle',
+  iconName: 'cancel',
   title: 'This is a title',
 };
 
 export const TitleOnly = TitleOnlyTemplate.bind({});
 TitleOnly.args = {
   dismissible: true,
-  iconName: 'information-circle',
+  iconName: 'info',
   title: 'This is a title',
 };
 
 export const DescriptionOnly = DescriptionOnlyTemplate.bind({});
 DescriptionOnly.args = {
   dismissible: true,
-  iconName: 'information-circle',
+  iconName: 'info',
   title: 'This is a title',
 };
 
 export const WithAction = WithActionTemplate.bind({});
 WithAction.args = {
   dismissible: true,
-  iconName: 'information-circle',
+  iconName: 'info',
   title: 'This is a title',
 };
