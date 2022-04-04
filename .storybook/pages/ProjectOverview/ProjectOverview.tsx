@@ -18,7 +18,7 @@ import utilityStyles from '../../../src/components/Utilities/Spacing.module.css'
 
 import { PageShell } from '../../recipes/PageShell/PageShell';
 
-export const ProjectOverview: React.FC = () => (
+export const ProjectOverview = () => {
   <PageShell>
     <Breadcrumbs>
       <BreadcrumbsItem text="My Courses" href="#" />
@@ -28,11 +28,10 @@ export const ProjectOverview: React.FC = () => (
       title="Feudal Honor Codes and Values"
       right={
         <Button
-          text="View plan"
           variant="bare"
           iconPosition="after"
           iconName="arrow-narrow-right"
-        />
+        >View plan</Button>
       }
     />
     <ListDetail>
@@ -229,4 +228,4 @@ export const ProjectOverview: React.FC = () => (
       </ListDetailPanel>
     </ListDetail>
   </PageShell>
-);
+};
