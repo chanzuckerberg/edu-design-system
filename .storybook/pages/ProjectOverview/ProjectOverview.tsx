@@ -53,9 +53,10 @@ export const ProjectOverview = () => {
         </TextPassage>
         <Button
           className={utilityStyles['u-margin-bottom-lg']}
-          text="See More"
           variant="link"
-        />
+        >
+          See More
+        </Button>
         <Heading
           className={utilityStyles['u-margin-bottom-sm']}
           as="h3"
