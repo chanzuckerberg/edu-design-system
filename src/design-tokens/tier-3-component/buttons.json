@@ -41,7 +41,7 @@
           "secondary": {
             "background": {
               "@": {
-                "value": "{eds.color.transparent.0}"
+                "value": "{eds.theme.color.transparent.black.0}"
               },
               "hover": {
                 "value": "{eds.color.brand.grape.700}"
@@ -76,7 +76,7 @@
           "tertiary": {
             "background": {
               "@": {
-                "value": "{eds.color.transparent.0}"
+                "value": "{eds.theme.color.transparent.black.0}"
               },
               "hover": {
                 "value": "{eds.color.neutral.600}"
@@ -111,7 +111,7 @@
           "icon": {
             "background": {
               "@": {
-                "value": "{eds.color.transparent.0}"
+                "value": "{eds.theme.color.transparent.black.0}"
               },
               "hover": {
                 "value": "{eds.color.brand.grape.200}"
@@ -122,13 +122,13 @@
             },
             "border": {
               "@": {
-                "value": "{eds.color.transparent.0}"
+                "value": "{eds.theme.color.transparent.black.0}"
               },
               "hover": {
-                "value": "{eds.color.transparent.0}"
+                "value": "{eds.theme.color.transparent.black.0}"
               },
               "active": {
-                "value": "{eds.color.transparent.0}"
+                "value": "{eds.theme.color.transparent.black.0}"
               }
             },
             "text": {
@@ -143,7 +143,7 @@
               }
             }
           },
-          "descructive": {
+          "destructive": {
             "background": {
               "@": {
                 "value": "{eds.color.other.ruby.600}"
