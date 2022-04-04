@@ -21,7 +21,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const GlobalHeader: React.FC<Props> = ({ className, ...other }) => {
+export const GlobalHeader = ({ className, ...other }: Props) => {
   const [isActive, setisActive] = useState(false);
 
   const toggleMenu = () => {
@@ -45,7 +45,7 @@ export const GlobalHeader: React.FC<Props> = ({ className, ...other }) => {
         variant="bare"
         aria-label={isActive ? 'Close' : 'Menu'}
         iconPosition="before"
-        iconName={isActive ? 'x' : 'menu'}
+        iconName={isActive ? 'close' : 'menu'}
         inverted={true}
         onClick={toggleMenu}
       />

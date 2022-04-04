@@ -276,12 +276,12 @@ export const ListDetail = ({
                     ) : itemVariant === 'warning' ? (
                       <Icon
                         className={styles['list-detail__icon']}
-                        name="exclamation-circle"
+                        name="error"
                       />
                     ) : itemVariant === 'error' ? (
                       <Icon
                         className={styles['list-detail__icon']}
-                        name="x-circle"
+                        name="cancel"
                       />
                     ) : itemVariant === 'number' ? (
                       <span className={styles['list-detail__number']}>

@@ -61,7 +61,7 @@ export const BareIcon = Template.bind({});
 BareIcon.args = {
   variant: 'bare',
   'aria-label': 'Close',
-  iconName: 'x',
+  iconName: 'close',
   iconPosition: 'before',
 };
 
@@ -70,7 +70,7 @@ BareIconInverted.args = {
   inverted: true,
   variant: 'bare',
   'aria-label': 'Close',
-  iconName: 'x',
+  iconName: 'close',
   iconPosition: 'before',
 };
 

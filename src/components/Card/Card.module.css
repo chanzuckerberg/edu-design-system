@@ -13,12 +13,22 @@
   flex-direction: column;
   overflow: hidden;
   padding: var(--eds-size-2);
-  box-shadow: var(--eds-theme-box-shadow);
   border-radius: var(--eds-theme-border-radius);
   border-width: var(--eds-theme-border-width);
   border-style: solid;
   border-color: var(--eds-theme-color-neutral-subtle-border);
   background-color: var(--eds-color-neutral-white);
+}
+
+a.card {
+  appearance: none;
+  text-decoration: none;
+  color: var(--eds-theme-color-body-foreground);
+  transition: box-shadow var(--eds-anim-fade-quick) var(--eds-anim-ease);
+
+  &:hover {
+    box-shadow: var(--eds-theme-box-shadow);
+  }
 }
 
 /**

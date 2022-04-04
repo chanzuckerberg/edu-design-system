@@ -34,7 +34,6 @@ export interface Props {
  * Primary UI component for user interaction
  */
 export const PopoverExample: React.FC<Props> = ({
-  children,
   className,
   position,
   ...other
