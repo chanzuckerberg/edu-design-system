@@ -5,8 +5,69 @@
 \*------------------------------------*/
 
 /**
- * 1) 
+ * Sizes
  */
-/* stylelint-disable-next-line block-no-empty */
-.text {
+.text,
+.text--body,
+.text--md {
+  @mixin eds-theme-typography-body-text;
+
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.text--lg {
+  @mixin eds-theme-typography-body-text-lg;
+}
+.text--sm {
+  @mixin eds-theme-typography-body-text-sm;
+}
+.text--xs {
+  @mixin eds-theme-typography-body-text-xs;
+}
+.text--caption {
+  @mixin eds-theme-typography-caption-text-md;
+}
+.text--overline {
+  @mixin eds-theme-typography-kicker;
+}
+
+/**
+ * Variant
+ */
+.text--alert {
+  color: var(--eds-theme-color-text-utility-error);
+}
+.text--base {
+  color: var(--eds-theme-color-text-neutral-default);
+}
+.text--brand {
+  /* TODO: replace with tier 2 token */
+  color: var(--eds-color-brand-grape-700);
+}
+.text--inherit {
+  color: inherit;
+}
+.text--neutral {
+  color: var(--eds-theme-color-text-neutral-default);
+}
+.text--success {
+  color: var(--eds-theme-color-text-utility-success);
+}
+.text--warning {
+  color: var(--eds-theme-color-text-utility-warning);
+}
+.text--white {
+  color: var(--eds-theme-color-text-neutral-default-knockout);
+}
+
+/**
+ * Weights
+ */
+.text--normal-weight {
+  /* TODO: replace with tier 2 token */
+  font-weight: var(--eds-font-weight-medium);
+}
+.text--bold-weight {
+  /* TODO: replace with tier 2 token */
+  font-weight: var(--eds-font-weight-bold);
 }
