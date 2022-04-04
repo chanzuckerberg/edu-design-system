@@ -9,129 +9,223 @@ import {
   BreadcrumbsItem,
   Button,
   Hr,
+  Heading,
+  Section,
+  Card,
+  CardBody,
 } from '../../../src';
+import utilityStyles from '../../../src/components/Utilities/Spacing.module.css';
 
 import { PageShell } from '../../recipes/PageShell/PageShell';
 
-export interface Props {
-  /*
-   * Variant
-   * 1) Argument that gets passed to ListDetail Component for stylistic variant
-   */
-  listVariant?: 'ordered';
-}
-
-export const ProjectOverview: React.FC<Props> = ({ ...args }) => {
-  return (
-    <PageShell>
-      <Breadcrumbs>
-        <BreadcrumbsItem text="My Courses" href="#" />
-        <BreadcrumbsItem text="Disciplinary Science 7" />
-      </Breadcrumbs>
-      <PageHeader
-        title="Feudal Honor Codes and Values"
-        right={
-          <Button
-            variant="bare"
-            iconPosition="after"
-            iconName="arrow-narrow-right"
-          >
-            View plan
-          </Button>
-        }
-      />
-      <ListDetail variant="ordered">
-        <ListDetailPanel title="Overview" variant="success">
-          <div>List Detail Component</div>
-          <div className="fpo">Heading</div>
-          <div className="fpo">Text Passage large</div>
-          <div className="fpo">See more component (truncated text)</div>
-          <div className="fpo">Heading</div>
-          <div className="fpo">
-            List component (Could include numbers/Q for question)
-          </div>
-          <Hr />
-          <div className="fpo">
-            <div>Section title with image in front (Power Focus Areas)</div>
-            <div className="fpo">Tooltip (up for discussion)</div>
-            <div className="fpo">
-              Hoverable/Linkable Card Recipe (naming TBD)
-            </div>
-          </div>
-          <div className="fpo">
-            <div>
-              Section title with image in front (Additional Focus Areas)
-            </div>
-            <div className="fpo">
-              <div>Hoverable/Linkable Card Recipe (naming TBD)</div>
-              <div className="fpo">Badge? Status badge?</div>
-            </div>
-            <div className="fpo">
-              <div>Hoverable/Linkable Card Recipe (naming TBD)</div>
-              <div className="fpo">Badge? Status badge?</div>
-            </div>
-          </div>
-          <div className="fpo">
-            <div>Cognitive skills (smaller section title than ones above)</div>
-            <div className="fpo">Text passage with links?</div>
-          </div>
-        </ListDetailPanel>
-
-        <ListDetailPanel
-          title="Expectations of Samuri in Feudal Japan and Wars of 5th Century"
-          variant="warning"
+export const ProjectOverview = () => {
+  <PageShell>
+    <Breadcrumbs>
+      <BreadcrumbsItem text="My Courses" href="#" />
+      <BreadcrumbsItem text="Disciplinary Science 7" />
+    </Breadcrumbs>
+    <PageHeader
+      title="Feudal Honor Codes and Values"
+      right={
+        <Button
+          variant="bare"
+          iconPosition="after"
+          iconName="arrow-narrow-right"
+        >
+          View plan
+        </Button>
+      }
+    />
+    <ListDetail>
+      <ListDetailPanel title="Overview" variant="success">
+        <Heading
+          className={utilityStyles['u-margin-bottom-lg']}
+          as="h2"
+          size={1}
+        >
+          What is this Project About?
+        </Heading>
+        <TextPassage size="lg">
+          Consectetur adipiscing elit. Ac id velit ut egestas arcu. At maecenas
+          urna, risus donec praesent eu consectetur. Nunc non eu mattis sem
+          turpis id dictum. Volutpat ornare turpis ultrices augue bibendum
+          pellentesque. Habitasse.
+        </TextPassage>
+        <Button className={utilityStyles['u-margin-bottom-lg']} variant="link">
+          See More
+        </Button>
+        <Heading
+          className={utilityStyles['u-margin-bottom-sm']}
+          as="h3"
+          size={4}
+        >
+          Essential Questions
+        </Heading>
+        <TextPassage className={utilityStyles['u-margin-bottom-lg']}>
+          <ul>
+            <li>How are structures in the body organized?</li>
+            <li>
+              How do these structures work together to support life? But really
+              need to see what it looks like if we have an extra long question.
+            </li>
+            <li>How are structures in the body organized?</li>
+          </ul>
+        </TextPassage>
+        <Heading
+          className={utilityStyles['u-margin-bottom-sm']}
+          as="h3"
+          size={4}
+        >
+          Key Take Aways
+        </Heading>
+        <TextPassage className={utilityStyles['u-margin-bottom-lg']}>
+          <ol>
+            <li>
+              Groups of specialized cells make up organs and body systems, which
+              work together to support an organism’s survival.
+            </li>
+            <li>
+              How are structures in the body organized? More text blah blah
+              blah.
+            </li>
+            <li>How are structures in the body organized?</li>
+          </ol>
+        </TextPassage>
+        <Hr className={utilityStyles['u-margin-bottom-none']} />
+        <Section
+          titleBefore={
+            <img
+              style={{ display: 'block', borderRadius: '50%' }}
+              src="https://via.placeholder.com/32x32"
+              alt="placeholder"
+            />
+          }
+          title="Power Focus Areas"
+        >
+          <Card>
+            <CardBody>
+              <Heading
+                className={utilityStyles['u-margin-bottom-sm']}
+                as="h3"
+                size={4}
+              >
+                What Was Medieval Japan Like?
+              </Heading>
+              <TextPassage>
+                In this Focus Area, you explore the main question: How does the
+                structures of organisms enable lifes functions?
+              </TextPassage>
+            </CardBody>
+          </Card>
+        </Section>
+        <Section
+          titleBefore={
+            <img
+              style={{ display: 'block', borderRadius: '50%' }}
+              src="https://via.placeholder.com/32x32"
+              alt="placeholder"
+            />
+          }
+          title="Additional Focus Areas"
+        >
+          <Card className={utilityStyles['u-margin-bottom-md']}>
+            <CardBody>
+              <Heading
+                className={utilityStyles['u-margin-bottom-sm']}
+                as="h3"
+                size={4}
+              >
+                What Was Medieval Japan Like?
+              </Heading>
+              <TextPassage>
+                In this Focus Area, you explore the main question: How does the
+                structures of organisms enable life’s functions?
+              </TextPassage>
+            </CardBody>
+          </Card>
+          <Card>
+            <CardBody>
+              <Heading
+                className={utilityStyles['u-margin-bottom-sm']}
+                as="h3"
+                size={4}
+              >
+                What Was Medieval Japan Like?
+              </Heading>
+              <TextPassage>
+                In this Focus Area, you explore the main question: How does the
+                structures of organisms enable life’s functions?
+              </TextPassage>
+            </CardBody>
+          </Card>
+        </Section>
+        <Section
+          titleBefore={
+            <img
+              style={{ display: 'block', borderRadius: '50%' }}
+              src="https://via.placeholder.com/32x32"
+              alt="placeholder"
+            />
+          }
+          title="Cognitive Skills"
         >
           <TextPassage>
-            <h3>ListDetailPanel 2</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex{' '}
-            </p>
+            <a href="#">Selecting Relevant Sources</a>
+            <a href="#">Identifying Patterns and Relationships</a>
+            <a href="#">Argumentative Claim</a>
+            <a href="#">Selection of Evidence</a>
+            <a href="#">Explanation of Evidence</a>
+            <a href="#">Multimedia in Communication</a>
+            <a href="#">Integration of Evidence</a>
           </TextPassage>
-        </ListDetailPanel>
+        </Section>
+      </ListDetailPanel>
 
-        <ListDetailPanel
-          title="Expectations of Samuri in Feudal Japan"
-          variant="error"
-        >
-          <TextPassage>
-            <h3>ListDetailPanel 3</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex{' '}
-            </p>
-          </TextPassage>
-        </ListDetailPanel>
-        <ListDetailPanel
-          title="Expectations of Samuri in Feudal Japan"
-          variant="number"
-        >
-          <TextPassage>
-            <h3>ListDetailPanel 4</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex{' '}
-            </p>
-          </TextPassage>
-        </ListDetailPanel>
-        <ListDetailPanel title="Expectations of Samuri in Feudal Japan">
-          <TextPassage>
-            <h3>ListDetailPanel 5</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex{' '}
-            </p>
-          </TextPassage>
-        </ListDetailPanel>
-      </ListDetail>
-    </PageShell>
-  );
+      <ListDetailPanel title="Expectations of Samuri in Feudal Japan and Wars of 5th Century">
+        <TextPassage>
+          <h3>ListDetailPanel 2</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex
+          </p>
+        </TextPassage>
+      </ListDetailPanel>
+
+      <ListDetailPanel title="Expectations of Samuri in Feudal Japan">
+        <TextPassage>
+          <h3>ListDetailPanel 3</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex
+          </p>
+        </TextPassage>
+      </ListDetailPanel>
+      <ListDetailPanel title="Expectations of Samuri in Feudal Japan">
+        <TextPassage>
+          <h3>ListDetailPanel 4</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex
+          </p>
+        </TextPassage>
+      </ListDetailPanel>
+      <ListDetailPanel title="Expectations of Samuri in Feudal Japan">
+        <TextPassage>
+          <h3>ListDetailPanel 5</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex
+          </p>
+        </TextPassage>
+      </ListDetailPanel>
+    </ListDetail>
+  </PageShell>;
 };
