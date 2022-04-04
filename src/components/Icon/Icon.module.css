@@ -7,7 +7,6 @@
  */
 .icon {
   display: inline-block;
-
   /**
    * Size Priority:
    * 1: --icon-size, passed through props

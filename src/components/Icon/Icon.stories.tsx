@@ -1,9 +1,8 @@
 import type { StoryObj } from '@storybook/react';
 import React from 'react';
-// TODO: point to new color-tokens
 import { Icon, IconProps } from './Icon';
 import styles from './Icon.stories.module.css';
-import * as ColorTokens from '../../../lib/tokens/ts/colors';
+import * as ColorTokens from '../../tokens-dist/colors';
 import { ALL_ICONS } from '../../util/allIcons';
 import Text from '../Text';
 

@@ -10,3 +10,10 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+/**
+ * Align SVG elements to be vertically centered by default
+ */
+svg {
+  vertical-align: middle;
+}
