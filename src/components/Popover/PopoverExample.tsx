@@ -1,4 +1,3 @@
-import { relative } from 'path/posix';
 import clsx from 'clsx';
 import React, {
   ReactNode,
@@ -15,7 +14,6 @@ import { NotificationList } from '../NotificationList/NotificationList';
 import { NotificationListItem } from '../NotificationListItem/NotificationListItem';
 import { PopoverBody } from '../PopoverBody/PopoverBody';
 import { PopoverHeader } from '../PopoverHeader/PopoverHeader';
-import { TextPassage } from '../TextPassage/TextPassage';
 
 export interface Props {
   /**
@@ -36,7 +34,6 @@ export interface Props {
  * Primary UI component for user interaction
  */
 export const PopoverExample: React.FC<Props> = ({
-  children,
   className,
   position,
   ...other
