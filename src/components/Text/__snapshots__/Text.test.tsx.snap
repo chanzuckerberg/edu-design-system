@@ -8,14 +8,6 @@ exports[`<Text /> Body story renders snapshot 1`] = `
 </p>
 `;
 
-exports[`<Text /> BodyColorInfoBold story renders snapshot 1`] = `
-<p
-  class="text text--body text--info text--bold-weight"
->
-  Info color body text, bold
-</p>
-`;
-
 exports[`<Text /> BodyLarge story renders snapshot 1`] = `
 <p
   class="text text--lg"
@@ -37,6 +29,14 @@ exports[`<Text /> BodySmall story renders snapshot 1`] = `
   class="text text--sm"
 >
   Body small
+</p>
+`;
+
+exports[`<Text /> BodyVariantSuccessBold story renders snapshot 1`] = `
+<p
+  class="text text--body text--success text--bold-weight"
+>
+  Success variant body text, bold
 </p>
 `;
 
@@ -64,7 +64,7 @@ exports[`<Text /> Overline story renders snapshot 1`] = `
 </p>
 `;
 
-exports[`<Text /> TextColorInherit story renders snapshot 1`] = `
+exports[`<Text /> TextVariantInherit story renders snapshot 1`] = `
 <p
   class="text text--body text--alert"
 >
@@ -74,6 +74,6 @@ exports[`<Text /> TextColorInherit story renders snapshot 1`] = `
   >
     Child Text
   </span>
-   and shows it should inherit color from the parent
+   and shows it should inherit variant from the parent
 </p>
 `;

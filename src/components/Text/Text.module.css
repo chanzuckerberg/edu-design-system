@@ -9,10 +9,10 @@
  * 2) Styles are either controlled by as or size declaration
  */
 .text,
-.text--body, 
+.text--body,
 .text--md {
   @mixin reset;
-  
+
   @mixin eds-theme-typography-body-text;
 }
 
@@ -36,7 +36,7 @@
 }
 
 /**
- * Color
+ * Variant
  */
 .text--alert {
   color: var(--eds-theme-color-text-utility-error);
@@ -47,10 +47,6 @@
 .text--brand {
   /* TODO: replace with tier 2 token */
   color: var(--eds-color-brand-grape-700);
-}
-.text--info {
-  /* TODO: doesn't exist, replace with tier 2 token */
-  color: var(--eds-color-other-blue-700);
 }
 .text--inherit {
   color: inherit;
@@ -65,8 +61,7 @@
   color: var(--eds-theme-color-text-utility-warning);
 }
 .text--white {
-  /* TODO: replace with tier 2 token */
-  color: var(--eds-color-neutral-white);
+  color: var(--eds-theme-color-text-neutral-default-knockout);
 }
 
 /**

@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import React from 'react';
 
 import { Text } from './Text';
-import type { Color } from './Text';
+import type { Variant } from './Text';
 import styles from './Text.stories.module.css';
 
 export default {
@@ -18,11 +18,10 @@ export default {
   },
 };
 
-const colors = [
+const variants = [
   'alert',
   'base',
   'brand',
-  'info',
   'inherit',
   'neutral',
   'success',
@@ -83,7 +82,7 @@ export const Overline: StoryObj<Args> = {
  * 1) Used mainly for visual regression testing and to show the different color options available.
  * 2) Has problems with snapshots since it has too many components and other stories generate enough confidence for our needs.
  */
-export const Colors: StoryObj<Args> = {
+export const Variants: StoryObj<Args> = {
   render: () => {
     const Item = ({
       className,
@@ -92,28 +91,31 @@ export const Colors: StoryObj<Args> = {
       className?: string;
       children: React.ReactElement;
     }) => (
-      <div className={clsx(styles['color__item'], className)}>{children}</div>
+      <div className={clsx(styles['variant__item'], className)}>{children}</div>
     );
     return (
-      <div className={styles['color__table']}>
-        {colors.map((color) => (
+      <div className={styles['variant__table']}>
+        {variants.map((variant) => (
           <>
             <Item
-              key={`${color}-white`}
-              className={styles['color__item-white']}
+              key={`${variant}-white`}
+              className={styles['variant__item-white']}
             >
-              <Text size="lg" color={color as Color}>
-                {color}
+              <Text size="lg" variant={variant as Variant}>
+                {variant}
               </Text>
             </Item>
-            <Item key={`${color}`} className={styles['color__item-light']}>
-              <Text size="lg" color={color as Color}>
-                {color}
+            <Item key={`${variant}`} className={styles['variant__item-light']}>
+              <Text size="lg" variant={variant as Variant}>
+                {variant}
               </Text>
             </Item>
-            <Item key={`${color}-dark`} className={styles['color__item-dark']}>
-              <Text size="lg" color={color as Color}>
-                {color}
+            <Item
+              key={`${variant}-dark`}
+              className={styles['variant__item-dark']}
+            >
+              <Text size="lg" variant={variant as Variant}>
+                {variant}
               </Text>
             </Item>
           </>
@@ -132,23 +134,23 @@ export const Colors: StoryObj<Args> = {
   },
 };
 
-export const BodyColorInfoBold: StoryObj<Args> = {
+export const BodyVariantSuccessBold: StoryObj<Args> = {
   args: {
-    children: 'Info color body text, bold',
-    color: 'info',
+    children: 'Success variant body text, bold',
+    variant: 'success',
     weight: 'bold',
   },
 };
 
-export const TextColorInherit: StoryObj<Args> = {
+export const TextVariantInherit: StoryObj<Args> = {
   render: (args) => (
-    <Text color="alert" size="body">
+    <Text variant="alert" size="body">
       This text surrounds the <Text as="span" {...args} /> and shows it should
-      inherit color from the parent
+      inherit variant from the parent
     </Text>
   ),
   args: {
     children: 'Child Text',
-    color: 'inherit',
+    variant: 'inherit',
   },
 };

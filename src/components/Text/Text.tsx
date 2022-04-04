@@ -4,16 +4,19 @@ import styles from './Text.module.css';
 
 export type Size = 'body' | 'sm' | 'md' | 'lg' | 'xs' | 'caption' | 'overline';
 
-export type Color =
+export type Variant =
   | 'alert'
   | 'base'
   | 'brand'
-  | 'info'
   | 'inherit'
   | 'neutral'
   | 'success'
   | 'warning'
-  | 'white';
+  | 'white'
+  /**
+   * @deprecated Info variant is deprecated.
+   */
+  | 'info';
 
 export type Props = {
   /**
@@ -22,7 +25,7 @@ export type Props = {
   as?: 'p' | 'span';
   children: React.ReactNode;
   className?: string;
-  color?: Color;
+  variant?: Variant;
   size?: Size;
   tabIndex?: number;
   weight?: 'bold' | 'normal' | null;
@@ -39,7 +42,7 @@ export const Text = forwardRef(
       as = 'p',
       children,
       className,
-      color,
+      variant,
       size = 'body',
       weight,
       /**
@@ -49,14 +52,19 @@ export const Text = forwardRef(
        * trigger the overlay.
        */ ...other
     }: Props,
-    ref?: ForwardedRef<HTMLParagraphElement>, // Setting as HTMLParagraphElement to satisfy TS, but unit test covers both span and p cases for sanity
+    ref: ForwardedRef<HTMLParagraphElement>, // Setting as HTMLParagraphElement to satisfy TS, but unit test covers both span and p cases for sanity
   ) => {
+    if (variant === 'info' && process.env.NODE_ENV !== 'production') {
+      console.warn(
+        'Info variant is deprecated, please consider another variant.',
+      );
+    }
     const TagName = as;
     const componentClassName = clsx(
       className,
       styles['text'],
       styles[`text--${size}`],
-      color && styles[`text--${color}`],
+      variant && styles[`text--${variant}`],
       weight && styles[`text--${weight}-weight`],
     );
     return (

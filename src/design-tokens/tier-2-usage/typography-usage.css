@@ -111,7 +111,6 @@
   @mixin eds-typography-preset-006-bold $important;
 }
 
-
 /**
  * Legacy presets. Preserving these for the moment as to
  * not cause any display or build errors.
@@ -162,10 +161,6 @@
 
 @define-mixin eds-theme-typography-heading-6 $important {
   @mixin eds-typography-preset-006-bold $important;
-}
-
-@define-mixin eds-theme-typography-kicker $important {
-  @mixin eds-typography-preset-008 $important;
 }
 
 @define-mixin eds-theme-typography-data-heading $important {
