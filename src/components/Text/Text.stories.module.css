@@ -10,11 +10,7 @@
   /* 1 */
   display: grid; /* 2 */
   grid-template-columns: 1fr 1fr 1fr;
-
-  /* TODO: uncomment and replace styling once tokens have moved over */
-
-  /* gap: var(--eds-size-half); */
-  gap: 0.25rem;
+  gap: var(--eds-size-half);
 }
 
 .variant__item {
@@ -25,32 +21,20 @@
 }
 
 /**
- * Variants are segmented into left, middle, and right columns.
- * Background variants were chosen to represent typical body backgrounds.
+ * 1) Variants are segmented into left, middle, and right columns.
+ * 2) Background variants were chosen to represent typical body backgrounds.
  */
 .variant__item-white {
   grid-column: 1; /* 1 */
-
-  /* TODO: uncomment and replace styling once tokens have moved over */
-
-  /* background-color: var(--eds-theme-color-background-neutral-default); */
-  @apply bg-white;
+  background-color: var(--eds-theme-color-background-neutral-default); /* 2 */
 }
 
 .variant__item-light {
   grid-column: 2; /* 1 */
-
-  /* TODO: uncomment and replace styling once tokens have moved over */
-
-  /* background-color: var(--eds-theme-color-body-background); */
-  @apply bg-neutral-200;
+  background-color: var(--eds-theme-color-body-background); /* 2 */
 }
 
 .variant__item-dark {
   grid-column: 3; /* 1 */
-
-  /* TODO: uncomment and replace styling once tokens have moved over */
-
-  /* background-color: var(--eds-theme-color-body-background-inverted); */
-  @apply bg-neutral-700;
+  background-color: var(--eds-theme-color-body-background-inverted); /* 2 */
 }
