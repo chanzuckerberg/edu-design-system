@@ -51,10 +51,7 @@ export const ProjectOverview = () => {
           turpis id dictum. Volutpat ornare turpis ultrices augue bibendum
           pellentesque. Habitasse.
         </TextPassage>
-        <Button
-          className={utilityStyles['u-margin-bottom-lg']}
-          variant="link"
-        >
+        <Button className={utilityStyles['u-margin-bottom-lg']} variant="link">
           See More
         </Button>
         <Heading
