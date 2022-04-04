@@ -31,7 +31,9 @@ export const ProjectOverview = () => {
           variant="bare"
           iconPosition="after"
           iconName="arrow-narrow-right"
-        >View plan</Button>
+        >
+          View plan
+        </Button>
       }
     />
     <ListDetail>
@@ -227,5 +229,5 @@ export const ProjectOverview = () => {
         </TextPassage>
       </ListDetailPanel>
     </ListDetail>
-  </PageShell>
+  </PageShell>;
 };
