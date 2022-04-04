@@ -59,6 +59,7 @@ export const FieldNote = ({
         <Icon
           className={styles['field-note__icon']}
           title="error"
+          purpose="informative"
           name={isError && 'cancel'}
         />
       )}

@@ -74,6 +74,7 @@ export const Toast = ({
           name={iconName}
           title={iconTitle}
           className={styles['toast__icon']}
+          purpose="informative"
         />
       )}
       <div className={styles['toast__body']}>{children}</div>

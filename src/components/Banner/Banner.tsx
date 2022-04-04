@@ -85,6 +85,7 @@ export const Banner = ({
           className={styles['banner__icon']}
           name={iconName}
           title={iconTitle}
+          purpose="informative"
         />
       )}
       <div className={styles['banner__body']}>{children}</div>
@@ -97,7 +98,6 @@ export const Banner = ({
           iconName="close"
           iconPosition="after"
           onClick={(e: any) => onDismiss(e)}
-          text={closeButtonText}
         />
       )}
     </div>

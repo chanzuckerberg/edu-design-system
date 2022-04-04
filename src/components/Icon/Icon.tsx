@@ -1,6 +1,7 @@
 import clsx from 'clsx';
-import React, { ReactNode, CSSProperties } from 'react';
-import { useUID } from 'react-uid';
+import { nanoid } from 'nanoid';
+import React, { useEffect, useState, ReactNode, CSSProperties } from 'react';
+import svg4everybody from 'svg4everybody';
 import styles from './Icon.module.css';
 import icons from '../../icons/spritemap/spritemap.svg';
 import { ALL_ICONS } from '../../util/allIcons';
@@ -46,6 +47,8 @@ interface IconPropsBase {
   id?: string;
   /**
    * Name of icon to reference in icon sprite
+   *
+   * TODO: add typing of possible icon names
    */
   name?: IconName;
   /**
@@ -99,8 +102,12 @@ export const Icon = (props: IconProps) => {
     purpose,
     size,
   } = props;
-  const generatedId = useUID();
-  const titleId = id || generatedId;
+  const [idVar, setId] = useState('');
+
+  useEffect(() => {
+    setId(id || nanoid());
+    svg4everybody(); // Required to get IE to render icon sprites
+  }, [id]);
 
   const componentClassName = clsx(
     styles['icon'],
@@ -129,7 +136,7 @@ export const Icon = (props: IconProps) => {
   if (purpose === 'informative') {
     return (
       <svg {...svgCommonProps} role="img">
-        <title id={titleId}>{props.title}</title>
+        <title id={idVar}>{props.title}</title>
         {computedSvg}
       </svg>
     );
