@@ -8,12 +8,12 @@ import React, {
   KeyboardEvent,
 } from 'react';
 import { Popover } from './Popover';
-import { Button } from '../Button/Button';
-import { Heading } from '../Heading/Heading';
+import Button from '../Button';
+import Heading from '../Heading';
 import { NotificationList } from '../NotificationList/NotificationList';
 import { NotificationListItem } from '../NotificationListItem/NotificationListItem';
-import { PopoverBody } from '../PopoverBody/PopoverBody';
-import { PopoverHeader } from '../PopoverHeader/PopoverHeader';
+import PopoverBody from '../PopoverBody';
+import PopoverHeader from '../PopoverHeader';
 
 export interface Props {
   /**
