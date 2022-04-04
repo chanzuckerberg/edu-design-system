@@ -10,8 +10,8 @@ import React, {
 import { Popover } from './Popover';
 import { Button } from '../Button/Button';
 import { Heading } from '../Heading/Heading';
-import { NotificationList } from '../NotificationList/NotificationList';
-import { NotificationListItem } from '../NotificationListItem/NotificationListItem';
+import NotificationList from '../NotificationList';
+import NotificationListItem from '../NotificationListItem';
 import { PopoverBody } from '../PopoverBody/PopoverBody';
 import { PopoverHeader } from '../PopoverHeader/PopoverHeader';
 
