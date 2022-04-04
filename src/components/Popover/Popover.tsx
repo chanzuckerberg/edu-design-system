@@ -11,9 +11,9 @@ import { oneByType } from 'react-children-by-type';
 import FocusLock from 'react-focus-lock';
 import styles from './Popover.module.css';
 import { ESCAPE_KEYCODE } from '../../util/keycodes';
-import { PopoverBody } from '../PopoverBody/PopoverBody';
-import { PopoverFooter } from '../PopoverFooter/PopoverFooter';
-import { PopoverHeader } from '../PopoverHeader/PopoverHeader';
+import PopoverBody from '../PopoverBody';
+import PopoverFooter from '../PopoverFooter';
+import PopoverHeader from '../PopoverHeader';
 
 export interface Props {
   /**
