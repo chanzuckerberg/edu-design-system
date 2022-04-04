@@ -12,10 +12,6 @@ export interface Props {
    */
   className?: string;
   /**
-   * Link to URL. If href is present, the button will be rendered as an <a> element.
-   */
-  href?: string;
-  /**
    * Card rendered on a dark backgorund
    */
   inverted?: boolean;
@@ -24,22 +20,15 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const Card: React.FC<Props> = ({
-  className,
-  children,
-  inverted,
-  href,
-  ...other
-}) => {
-  const componentClassName = clsx(styles['card'], className, {
-    [styles['card--inverted']]: inverted,
-  });
-
-  const TagName = href ? 'a' : 'div';
-
+export const Card = ({ className, children, inverted, ...other }: Props) => {
+  const componentClassName = clsx(
+    styles['card'],
+    className,
+    inverted && styles['card--inverted'],
+  );
   return (
-    <TagName href={href} className={componentClassName} {...other}>
+    <div className={componentClassName} {...other}>
       {children}
-    </TagName>
+    </div>
   );
 };

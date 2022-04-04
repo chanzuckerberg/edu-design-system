@@ -1,7 +1,7 @@
 import { Story, Meta } from '@storybook/react';
 import React from 'react';
 import { ButtonGroup, Props } from './ButtonGroup';
-import { Button } from '../Button/Button';
+import Button from '../Button';
 
 export default {
   title: 'Organisms/Buttons/ButtonGroup',
@@ -10,8 +10,8 @@ export default {
 
 const Template: Story<Props> = (args) => (
   <ButtonGroup {...args}>
-    <Button variant="primary" text="Primary Button" />
-    <Button text="Secondary Button" />
+    <Button variant="primary">Primary Button</Button>
+    <Button>Secondary Button</Button>
   </ButtonGroup>
 );
 

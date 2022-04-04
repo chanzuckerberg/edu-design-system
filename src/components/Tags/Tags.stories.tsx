@@ -2,7 +2,7 @@ import { Story, Meta } from '@storybook/react';
 import React from 'react';
 
 import { Tags, Props } from './Tags';
-import { TagsItem } from '../TagsItem/TagsItem';
+import TagsItem from '../TagsItem';
 
 export default {
   title: 'Molecules/Messaging/Tags',

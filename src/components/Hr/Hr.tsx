@@ -13,7 +13,7 @@ export interface Props {
    * Size variations:
    * - **lg** yields a thicker horizontal rule
    */
-  size?: 'lg';
+  size?: 'lg' | 'brand';
   /**
    * CSS class names that can be appended to the component.
    */
@@ -23,11 +23,13 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const Hr: React.FC<Props> = ({ className, size, variant, ...other }) => {
-  const componentClassName = clsx(styles['hr'], className, {
-    [styles['hr--lg']]: size === 'lg',
-    [styles['hr--brand']]: variant === 'brand',
-  });
+export const Hr = ({ className, size, variant, ...other }: Props) => {
+  const componentClassName = clsx(
+    styles['hr'],
+    className,
+    size === 'lg' && styles['hr--lg'],
+    variant === 'brand' && styles['hr--brand'],
+  );
 
   return <hr className={componentClassName} {...other} />;
 };

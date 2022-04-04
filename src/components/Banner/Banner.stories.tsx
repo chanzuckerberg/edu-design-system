@@ -2,10 +2,10 @@ import { Story, Meta } from '@storybook/react';
 import React from 'react';
 
 import { Banner, Props } from './Banner';
-import { Button } from '../Button/Button';
-import { Heading } from '../Heading/Heading';
-import { LayoutLinelengthContainer } from '../LayoutLinelengthContainer/LayoutLinelengthContainer';
-import { TextPassage } from '../TextPassage/TextPassage';
+import Button from '../Button';
+import Heading from '../Heading';
+import LayoutLinelengthContainer from '../LayoutLinelengthContainer';
+import TextPassage from '../TextPassage';
 
 export default {
   title: 'Molecules/Messaging/Banner',
@@ -60,7 +60,7 @@ const WithActionTemplate: Story<Props> = (args) => (
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
       </p>
     </TextPassage>
-    <Button text="Banner action" />
+    <Button>Banner action</Button>
   </Banner>
 );
 

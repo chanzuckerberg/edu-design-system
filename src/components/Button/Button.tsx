@@ -1,12 +1,11 @@
 import clsx from 'clsx';
 import React, { MouseEventHandler, ReactNode } from 'react';
 import styles from './Button.module.css';
-import { Icon } from '../Icon/Icon';
-import utilityStyles from '../Utilities/Visibility.module.css';
+import Icon from '../Icon';
 export interface Props {
   /**
    * Visually hidden button text (but text is still accessible to assistive technology).
-   * This overrides `text`
+   * This overrides `children` for screen readers
    */
   'aria-label'?: string;
   /**
@@ -26,10 +25,6 @@ export interface Props {
    */
   fullWidth?: boolean;
   /**
-   * Visually hides button text for icon-only buttons for accessibility
-   */
-  hideText?: boolean;
-  /**
    * Link to URL. If href is present, the button will be rendered as an <a> element.
    */
   href?: string;
@@ -38,9 +33,9 @@ export interface Props {
    */
   iconName?: string;
   /**
-   * Determines position of icon relative to button text.
-   * - **before** places icon before button text
-   * - **after** places icon after button text
+   * Determines position of icon relative to button children.
+   * - **before** places icon before button children
+   * - **after** places icon after button children
    */
   iconPosition?: 'before' | 'after';
   /**
@@ -60,9 +55,9 @@ export interface Props {
    */
   size?: 'sm' | 'md' | 'lg';
   /**
-   * The visible button text
+   * The visible button children
    */
-  text?: string | ReactNode;
+  children?: string | ReactNode;
   /**
    * Determines type of button
    * - **button** The button is a clickable button.
@@ -87,14 +82,13 @@ export const Button = React.forwardRef(
       forwardRef,
       fullWidth,
       href,
-      hideText,
       iconName,
       iconPosition = 'before',
       inverted,
       loading,
       onClick,
       size = 'lg',
-      text,
+      children,
       type,
       variant,
       ...other
@@ -157,16 +151,8 @@ export const Button = React.forwardRef(
       >
         {iconPosition === 'before' && computedIcon}
 
-        {text && (
-          <span
-            className={
-              hideText
-                ? styles['button__text'] + ' ' + utilityStyles['u-is-vishidden']
-                : styles['button__text']
-            }
-          >
-            {text}
-          </span>
+        {children && (
+          <span className={styles['button__children']}>{children}</span>
         )}
 
         {iconPosition === 'after' && computedIcon}

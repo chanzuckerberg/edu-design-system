@@ -9,45 +9,31 @@
   position: relative;
   margin-bottom: var(--eds-size-4);
 
-  &:hover,
-  &:focus-within {
-    @media all and (min-width: $eds-bp-lg) {
-      width: var(--eds-l-sidebar-width);
-      overflow: visible;
-    }
-  }
-
   @media all and (min-width: $eds-bp-lg) {
     position: fixed;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    overflow: hidden;
     margin-bottom: 0;
-    width: 3.75rem;
     transition: width var(--eds-anim-move-quick) var(--eds-anim-ease);
   }
 }
 
 /**
- * Header container 
- * 1) Contains the 
+ * Global header logo
+ * 1) The SVG logo
+ * 2) Nudges the logo to the left of the containing box
+ *    to achieve the desired alignment.
  */
 .global-header__logo {
   display: none;
+  
   @media all and (min-width: $eds-bp-lg) {
     display: block;
     position: relative;
-    left: -0.5rem;
-    margin-bottom: var(--eds-size-6);
+    left: -0.5rem; /* 2 */
+    margin-bottom: var(--eds-size-5);
   }
-}
-
-/**
- * Body container
- * 1) Contains the primary navigation 
- */
-.global-header__nav-container {
 }
 
 /**
@@ -62,9 +48,17 @@
   }
 }
 
+
+/**
+ * Avatar block 
+ * 1) The bottom-aligned avatar block contains the clickable
+ *    avatar item that exposes the user's notifications when
+ *    selected
+ * 2) Nudge the alignment to achieve the desired layout
+ */
 .global-header__avatar-block {
   position: relative;
-  left: -1rem;
+  left: -0.5rem; /* 2 */
   margin-left: auto;
 
   @media all and (min-width: $eds-bp-lg) {

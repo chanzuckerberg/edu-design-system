@@ -2,9 +2,9 @@ import clsx from 'clsx';
 import { nanoid } from 'nanoid';
 import React, { useEffect, useState, ReactNode } from 'react';
 import styles from './InlineForm.module.css';
-import { Button } from '../Button/Button';
-import { Label } from '../Label/Label';
-import { TextInput } from '../TextInput/TextInput';
+import Button from '../Button';
+import Label from '../Label';
+import TextInput from '../TextInput';
 
 export interface Props {
   /**
@@ -44,7 +44,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const InlineForm: React.FC<Props> = ({
+export const InlineForm = ({
   action,
   buttonText,
   className,
@@ -54,7 +54,7 @@ export const InlineForm: React.FC<Props> = ({
   method,
   placeholder,
   ...other
-}) => {
+}: Props) => {
   const [idVar, setId] = useState();
 
   useEffect(() => {
@@ -81,7 +81,7 @@ export const InlineForm: React.FC<Props> = ({
         placeholder={placeholder}
       />
 
-      <Button variant="primary" text={buttonText} />
+      <Button variant="primary">{buttonText}</Button>
     </form>
   );
 };

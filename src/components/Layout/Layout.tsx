@@ -26,25 +26,26 @@ export interface Props {
    * Sidebar property
    * 1) Adjust the size of the sidebar
    */
-  variant?: 'narrow-sidebar';
+  variant?: 'right-sidebar';
 }
 
 /**
  * Primary UI component for user interaction
  */
-export const Layout: React.FC<Props> = ({
+export const Layout = ({
   behavior,
   children,
   className,
   variant,
-  expandable,
   ...other
-}) => {
-  const componentClassName = clsx(styles['layout'], className, {
-    [styles['layout--narrow-sidebar']]: variant === 'narrow-sidebar',
-    [styles['layout--fixed-sidebar']]: behavior === 'fixed-sidebar',
-    [styles['layout--expandable']]: expandable === true,
-  });
+}: Props) => {
+  const componentClassName = clsx(
+    styles['layout'],
+    className,
+    variant === 'right-sidebar' && styles['layout--right-sidebar'],
+    behavior === 'fixed-sidebar' && styles['layout--fixed-sidebar'],
+  );
+
   return (
     <div className={componentClassName} {...other}>
       {children}

@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React from 'react';
 import styles from './LoadingIndicator.module.css';
-import { Icon } from '../Icon/Icon';
+import Icon from '../Icon';
 
 export interface Props {
   /**
@@ -13,7 +13,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const LoadingIndicator: React.FC<Props> = ({ className, ...other }) => {
+export const LoadingIndicator = ({ className, ...other }: Props) => {
   const componentClassName = clsx(styles['loading-indicator'], className, {});
   return (
     <div className={componentClassName} {...other}>

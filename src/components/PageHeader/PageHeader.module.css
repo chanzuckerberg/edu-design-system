@@ -14,7 +14,7 @@
 }
 
 /**
- * Center-aligned page header 
+ * Center-aligned page header
  */
 .page-header--center {
   display: flex;
@@ -26,7 +26,7 @@
  * Page header left
  * 1) Flex 1 added so the right content doesn't wrap
  */
-.page-header__left {
+ .page-header__left {
   flex: 1; /* 1 */
 }
 
@@ -52,7 +52,7 @@
  */
 .page-header__title {
   @mixin reset;
-  @mixin eds-theme-typography-heading-2;
+  @mixin eds-theme-typography-heading-1;
 
   .page-header--center & {
     text-align: center;
@@ -76,7 +76,7 @@
 .page-header__description {
   @mixin reset;
   margin-top: var(--eds-size-1);
-  @mixin eds-theme-typography-body-text-lg;
+  @mixin eds-theme-typography-body-text-md;
 
   .page-header--center & {
     text-align: center;

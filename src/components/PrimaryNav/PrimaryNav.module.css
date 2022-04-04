@@ -44,6 +44,6 @@
 .primary-nav__icon {
   height: var(--eds-size-2-and-half);
   width: var(--eds-size-2-and-half);
-  fill: var(--eds-theme-color-body-foreground-inverted);
+  fill: var(--eds-theme-color-icon-neutral-default-knockout);
   margin-right: var(--eds-size-2-and-half);
 }

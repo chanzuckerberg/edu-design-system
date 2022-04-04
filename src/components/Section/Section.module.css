@@ -52,7 +52,7 @@
  * Section description
  */
 .section__description {
-  @mixin eds-theme-typography-body-text;
+  @mixin eds-theme-typography-body-text-md;
   @mixin reset;
   margin-top: var(--eds-size-1);
 }

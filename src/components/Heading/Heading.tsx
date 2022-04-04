@@ -28,22 +28,24 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const Heading: React.FC<Props> = ({
+export const Heading = ({
   className,
   children,
   as,
   size,
   id,
   ...other
-}) => {
-  const componentClassName = clsx(styles['heading'], className, {
-    [styles['heading--size-1']]: size === 1,
-    [styles['heading--size-2']]: size === 2,
-    [styles['heading--size-3']]: size === 3,
-    [styles['heading--size-4']]: size === 4,
-    [styles['heading--size-5']]: size === 5,
-    [styles['heading--size-6']]: size === 6,
-  });
+}: Props) => {
+  const componentClassName = clsx(
+    styles['heading'],
+    className,
+    size === 1 && styles['heading--size-1'],
+    size === 2 && styles['heading--size-2'],
+    size === 3 && styles['heading--size-3'],
+    size === 4 && styles['heading--size-4'],
+    size === 5 && styles['heading--size-5'],
+    size === 6 && styles['heading--size-6'],
+  );
 
   const TagName = as;
   return (

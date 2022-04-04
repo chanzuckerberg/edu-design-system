@@ -2,64 +2,47 @@
   "eds": {
     "font-family": {
       "primary": {
-        "value": "sans-serif"
+        "value": "'Open Sans', sans-serif"
       },
       "secondary": {
-        "value": "sans-serif"
+        "value": "'Open Sans', sans-serif"
       }
     },
     "font-size": {
-      "xs": {
-        "value": "0.75rem"
+      "40": {
+        "value": "2.5rem"
       },
-      "sm": {
-        "value": "0.875rem"
+      "32": {
+        "value": "2rem"
       },
-      "md": {
-        "value": "1rem"
+      "24": {
+        "value": "1.5rem"
       },
-      "md-2": {
+      "18": {
         "value": "1.125rem"
       },
-      "md-3": {
-        "value": "1.25rem"
+      "16": {
+        "value": "1rem"
       },
-      "lg": {
-        "value": "1.5rem"
+      "14": {
+        "value": "0.875rem"
       },
-      "xl": {
-        "value": "1.5rem"
+      "12": {
+        "value": "0.75rem"
       },
-      "xxl": {
-        "value": "2.5rem"
+      "11": {
+        "value": "0.688rem"
       }
     },
     "font-weight": {
       "light": {
-        "value": "300"
-      },
-      "regular": {
         "value": "400"
       },
-      "semibold": {
-        "value": "600"
+      "medium": {
+        "value": "500"
       },
       "bold": {
-        "value": "700"
-      }
-    },
-    "line-height": {
-      "sm": {
-        "value": "1"
-      },
-      "sm-2": {
-        "value": "1.2"
-      },
-      "md": {
-        "value": "1.333"
-      },
-      "lg": {
-        "value": "1.5"
+        "value": "600"
       }
     },
     "letter-spacing": {

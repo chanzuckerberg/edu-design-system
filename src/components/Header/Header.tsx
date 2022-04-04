@@ -9,7 +9,7 @@ import React, {
 
 import styles from './Header.module.css';
 
-export interface HeaderProps {
+export interface Props {
   /**
    * Pinned stop property
    * 1) Pixel value from the top of the page scrolled before the header goes away
@@ -38,13 +38,13 @@ export interface HeaderProps {
   children?: ReactNode;
 }
 
-export const Header: React.FC<HeaderProps> = ({
+export const Header = ({
   behavior,
   className,
   children,
-  pinnedStop = 152,
+  pinnedStop = 150,
   ...other
-}) => {
+}: Props) => {
   const ref = useRef() as MutableRefObject<HTMLElement>;
   const stickyRef = useRef() as MutableRefObject<HTMLDivElement>;
 

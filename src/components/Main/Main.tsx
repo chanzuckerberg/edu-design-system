@@ -16,7 +16,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const Main: React.FC<Props> = ({ children, className, ...other }) => {
+export const Main = ({ children, className, ...other }: Props) => {
   const componentClassName = clsx(styles['main'], className, {});
   return (
     <main id="main-content" className={componentClassName} {...other}>

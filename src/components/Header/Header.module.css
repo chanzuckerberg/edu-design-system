@@ -9,18 +9,20 @@
  */
 .header {
   display: flex;
-  background-color: var(--eds-theme-color-primary-background);
-  color: var(--eds-theme-color-body-foreground-inverted);
   padding: var(--eds-size-1) var(--eds-size-2);
-  position: relative;
   width: 100%;
+  position: relative;
   z-index: var(--eds-z-index-500);
+  background-color: var(--eds-theme-color-background-brand-primary-strong);
+  color: var(--eds-theme-color-text-neutral-default-knockout);
 
   @media all and (min-width: $eds-bp-lg) {
     flex-direction: column;
     width: auto;
-    padding: var(--eds-size-6) var(--eds-size-2-and-half) var(--eds-size-6)
-      var(--eds-size-2-and-half);
+    padding-top: var(--eds-size-6);
+    padding-right: var(--eds-size-2-and-half);
+    padding-bottom: var(--eds-size-2-and-half); 
+    padding-left: var(--eds-size-2-and-half);
     height: 100vh;
   }
 }
@@ -32,11 +34,6 @@
 .header-sticky-container {
   height: 100vh;
   transition: all var(--eds-anim-move-quick) var(--eds-anim-ease);
-
-  &:hover,
-  &:focus-within {
-    width: 100%;
-  }
 
   @media all and (max-width: $eds-bp-lg) {
     height: auto;

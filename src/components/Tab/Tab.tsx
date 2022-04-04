@@ -32,14 +32,14 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const Tab: React.FC<Props> = ({
+export const Tab = ({
   children,
   className,
   id,
   ariaLabelledBy,
   title,
   ...other
-}) => {
+}: Props) => {
   const componentClassName = clsx(styles['tabs__panel'], className, {});
   return (
     <div

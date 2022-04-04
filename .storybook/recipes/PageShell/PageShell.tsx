@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React from 'react';
+import React, { ReactNode } from 'react';
 import styles from './PageShell.module.css';
 import {
   Button,
@@ -35,12 +35,13 @@ export const PageShell: React.FC<Props> = ({
     <body className={componentClassName}>
       <Button
         className={styles['page-shell__skip-link']}
-        text="Skip to content"
         href="#main-content"
         variant="primary"
         size="sm"
-      />
-      <Layout variant="narrow-sidebar" expandable={true}>
+      >
+        Skip to content
+      </Button>
+      <Layout>
         <LayoutSection region="sidebar">
           <GlobalHeader />
         </LayoutSection>

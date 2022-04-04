@@ -20,6 +20,7 @@ export interface Props {
    */
   id?: any;
   /**
+<<<<<<< HEAD
    * Number passed down from ListDetail to show the active index state of ListDetail
    */
   title?: string;
@@ -30,11 +31,21 @@ export interface Props {
    * - **error** - results in a red list detail item and adds icon
    */
   variant?: 'success' | 'warning' | 'error';
+=======
+   * The tab variant
+   */
+  variant?: 'error' | 'number' | 'success' | 'warning';
+  /**
+   * The tab title
+   */
+  title?: string;
+>>>>>>> next
 }
 
 /**
  * Primary UI component for user interaction
  */
+<<<<<<< HEAD
 export const ListDetailPanel: React.FC<Props> = ({
   children,
   className,
@@ -44,6 +55,17 @@ export const ListDetailPanel: React.FC<Props> = ({
   variant,
   ...other
 }) => {
+=======
+export const ListDetailPanel = ({
+  ariaLabelledBy,
+  children,
+  className,
+  id,
+  variant,
+  title,
+  ...other
+}: Props) => {
+>>>>>>> next
   const componentClassName = clsx(styles['list-detail__panel'], className, {});
   return (
     <div

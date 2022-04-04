@@ -15,7 +15,7 @@ import {
   R_ARROW_KEYCODE,
   D_ARROW_KEYCODE,
 } from '../../util/keycodes';
-import { Tab } from '../Tab/Tab';
+import Tab from '../Tab';
 
 export interface Props {
   /**
@@ -92,7 +92,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const Tabs: React.FC<Props> = ({
+export const Tabs = ({
   className,
   children,
   radioLegend,
@@ -109,7 +109,7 @@ export const Tabs: React.FC<Props> = ({
   onChange,
   required,
   ...other
-}) => {
+}: Props) => {
   /**
    * Initialize states, constants, and refs
    */
@@ -216,9 +216,11 @@ export const Tabs: React.FC<Props> = ({
     }
   }
 
-  const componentClassName = clsx(styles['tabs'], className, {
-    'tabs--inverted': inverted === true,
-  });
+  const componentClassName = clsx(
+    styles['tabs'],
+    className,
+    inverted && 'tabs--inverted',
+  );
 
   const childrenWithProps = React.Children.map(tabs(), (child: any, i: any) => {
     // Checking isValidElement is the safe way and avoids a typescript
@@ -240,9 +242,7 @@ export const Tabs: React.FC<Props> = ({
             const isActive = activeIndexState === i;
             return (
               <li
-                className={clsx('tabs__item', {
-                  'eds-is-active': isActive,
-                })}
+                className={clsx('tabs__item', isActive && 'eds-is-active')}
                 key={'tabs-item-' + i}
                 role="presentation"
               >

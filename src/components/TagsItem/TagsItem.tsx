@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import React, { useState } from 'react';
-import { Icon } from '../Icon/Icon';
+import Icon from '../Icon';
 import styles from '../Tags/Tags.module.css';
 
 export interface Props {
@@ -25,13 +25,13 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const TagsItem: React.FC<Props> = ({
+export const TagsItem = ({
   className,
   dismissible,
   onClick,
   text,
   ...other
-}) => {
+}: Props) => {
   const [isDismissed, setIsDismissed] = useState(false);
 
   function handleOnClick(e) {

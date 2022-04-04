@@ -62,9 +62,15 @@ export interface Props {
   overflow?: 'inverted';
   /**
    * Stylistic variations:
+<<<<<<< HEAD
    * - **boxed** yields a chunkier, distinct boxed tabs used for primary content
    */
   variant?: 'boxed';
+=======
+   * - **ordered** uses a ordered list <ol> instead of the default unordered list <ul>, and allows for icons, bullets, or numbers
+   */
+  variant?: 'ordered';
+>>>>>>> next
   /**
    * List detail item tab name
    */
@@ -72,9 +78,16 @@ export interface Props {
 }
 
 /**
+<<<<<<< HEAD
  * Primary UI component for user interaction
  */
 export const ListDetail: React.FC<Props> = ({
+=======
+ * List Detail Component
+ * 1) Provides a list-view pane for item labels/titles, and a details pane for each item's content. When an item in the list is selected, the details pane is updated.
+ */
+export const ListDetail = ({
+>>>>>>> next
   className,
   children,
   variant,
@@ -85,8 +98,14 @@ export const ListDetail: React.FC<Props> = ({
   overflow,
   onChange,
   required,
+<<<<<<< HEAD
   ...other
 }) => {
+=======
+  title,
+  ...other
+}: Props) => {
+>>>>>>> next
   /**
    * Initialize states, constants, and refs
    */
@@ -215,21 +234,44 @@ export const ListDetail: React.FC<Props> = ({
       return child;
     },
   );
+<<<<<<< HEAD
 
+=======
+  const TagName = variant === 'ordered' ? 'ol' : 'ul';
+>>>>>>> next
   const componentClassName = clsx(styles['list-detail'], className, {});
 
   return (
     <div className={componentClassName} {...other}>
       <div className={styles['list-detail__header']}>
+<<<<<<< HEAD
         <ul className={styles['list-detail__list']} role="tablist">
           {listDetailItems().map((tab: any, i: any) => {
             const isActive = activeIndexState === i;
+=======
+        <TagName
+          className={clsx(styles['list-detail__list'], {
+            [styles['list-detail__list--ordered']]: variant === 'ordered',
+          })}
+          role="tablist"
+        >
+          {listDetailItems().map((tab: any, i: any) => {
+            const isActive = activeIndexState === i;
+            const itemVariant = variant && tab.props.variant;
+>>>>>>> next
             return (
               <li
                 className={clsx(styles['list-detail__item'], {
                   [styles['eds-is-active']]: isActive,
                   [styles['list-detail__item--success']]:
+<<<<<<< HEAD
                     tab.props.variant === 'success',
+=======
+                    itemVariant === 'success',
+                  [styles['list-detail__item--warning']]:
+                    itemVariant === 'warning',
+                  [styles['list-detail__item--error']]: itemVariant === 'error',
+>>>>>>> next
                 })}
                 key={'list-detail-item-' + i}
                 role="presentation"
@@ -251,12 +293,41 @@ export const ListDetail: React.FC<Props> = ({
                   ref={listDetailItemRefs[i]}
                   aria-label={tab.props.ariaLabel}
                 >
+<<<<<<< HEAD
                   <div className={styles['list-detail__link-left']}>
                     {tab.props.variant === 'success' && (
+=======
+                  <div
+                    className={clsx(styles['list-detail__link-left'], {
+                      [styles['list-detail__link-hidden']]:
+                        itemVariant === 'number',
+                    })}
+                  >
+                    {itemVariant === 'success' ? (
+>>>>>>> next
                       <Icon
                         className={styles['list-detail__icon']}
                         name="check-circle"
                       />
+<<<<<<< HEAD
+=======
+                    ) : itemVariant === 'warning' ? (
+                      <Icon
+                        className={styles['list-detail__icon']}
+                        name="exclamation-circle"
+                      />
+                    ) : itemVariant === 'error' ? (
+                      <Icon
+                        className={styles['list-detail__icon']}
+                        name="x-circle"
+                      />
+                    ) : itemVariant === 'number' ? (
+                      <span className={styles['list-detail__number']}>
+                        {i + 1}
+                      </span>
+                    ) : (
+                      ''
+>>>>>>> next
                     )}
                   </div>
                   {tab.props.title}
@@ -264,7 +335,11 @@ export const ListDetail: React.FC<Props> = ({
               </li>
             );
           })}
+<<<<<<< HEAD
         </ul>
+=======
+        </TagName>
+>>>>>>> next
       </div>
       <div className={styles['list-detail__body']}>
         {childrenWithProps[activeIndexState]}

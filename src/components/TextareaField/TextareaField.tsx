@@ -8,11 +8,11 @@ import React, {
   useState,
 } from 'react';
 import styles from './TextareaField.module.css';
-import { Button } from '../Button/Button';
-import { FieldNote } from '../FieldNote/FieldNote';
-import { Icon } from '../Icon/Icon';
-import { Label } from '../Label/Label';
-import { Textarea } from '../Textarea/Textarea';
+import Button from '../Button';
+import FieldNote from '../FieldNote';
+import Icon from '../Icon';
+import Label from '../Label';
+import Textarea from '../Textarea';
 
 export interface Props {
   /**
@@ -169,11 +169,13 @@ export const TextareaField = ({
     }
   }, [ariaDescribedBy, fieldNote, id]);
 
-  const componentClassName = clsx(styles['textarea-field'], className, {
-    [styles['textarea-field--inverted']]: inverted === true,
-    [styles['eds-is-error']]: isError,
-    [styles['eds-is-disabled']]: disabled,
-  });
+  const componentClassName = clsx(
+    styles['textarea-field'],
+    className,
+    inverted && styles['textarea-field--inverted'],
+    isError && styles['eds-is-error'],
+    disabled && styles['eds-is-disabled'],
+  );
 
   return (
     <div className={componentClassName}>
@@ -212,12 +214,13 @@ export const TextareaField = ({
           <Button
             className={styles['textarea-field__button']}
             type="button"
-            text={fieldButtonText}
             aria-label={fieldButtonAriaLabel}
             variant="bare"
             size="sm"
             onClick={fieldButtonOnClick}
-          />
+          >
+            {fieldButtonText}
+          </Button>
         )}
         {iconName && (
           <Icon className={styles['textarea-field__icon']} name={iconName} />

@@ -24,17 +24,19 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const DefinitionList: React.FC<Props> = ({
+export const DefinitionList = ({
   behavior,
   className,
   children,
   size,
   ...other
-}) => {
-  const componentClassName = clsx(styles['definition-list'], className, {
-    [styles['definition-list--horizontal']]: behavior === 'horizontal',
-    [styles['definition-list--sm']]: size === 'sm',
-  });
+}: Props) => {
+  const componentClassName = clsx(
+    styles['definition-list'],
+    className,
+    behavior === 'horizontal' && styles['definition-list--horizontal'],
+    size === 'sm' && styles['definition-list--sm'],
+  );
   return (
     <dl className={componentClassName} {...other}>
       {children}

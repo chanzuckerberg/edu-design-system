@@ -9,7 +9,7 @@
  * 2) For a field of multiple checkboxes, use inline checkbox field variation
  */
 .inline-checkbox {
-  @mixin eds-theme-typography-body-text;
+  @mixin eds-theme-typography-body-text-md;
   color: var(--eds-theme-color-form-label-foreground);
   display: flex;
 }

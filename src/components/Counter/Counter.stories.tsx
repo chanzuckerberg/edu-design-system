@@ -1,8 +1,8 @@
 import { Story, Meta } from '@storybook/react';
 import React from 'react';
 import { Counter, Props } from './Counter';
-import { Button } from '../Button/Button';
-import { Tooltip } from '../Tooltip/Tooltip';
+import Button from '../Button';
+import Tooltip from '../Tooltip';
 
 export default {
   title: 'Molecules/Forms/Counter',
@@ -36,8 +36,9 @@ DefaultWithTooltip.args = {
         variant="bare"
         iconPosition="after"
         iconName="question-mark-circle"
-        text="Hover this button to trigger the tooltip"
-      />
+      >
+        Hover this button to trigger the tooltip
+      </Button>
     </Tooltip>
   ),
 };

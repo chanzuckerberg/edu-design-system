@@ -2,13 +2,13 @@ import { Story, Meta } from '@storybook/react';
 import React from 'react';
 
 import { StackedBlock, Props } from './StackedBlock';
-import { Button } from '../Button/Button';
-import { ButtonGroup } from '../ButtonGroup/ButtonGroup';
-import { Heading } from '../Heading/Heading';
-import { StackedBlockBody } from '../StackedBlockBody/StackedBlockBody';
-import { StackedBlockFooter } from '../StackedBlockFooter/StackedBlockFooter';
-import { StackedBlockHeader } from '../StackedBlockHeader/StackedBlockHeader';
-import { TextPassage } from '../TextPassage/TextPassage';
+import Button from '../Button';
+import ButtonGroup from '../ButtonGroup';
+import Heading from '../Heading';
+import StackedBlockBody from '../StackedBlockBody';
+import StackedBlockFooter from '../StackedBlockFooter';
+import StackedBlockHeader from '../StackedBlockHeader';
+import TextPassage from '../TextPassage';
 
 export default {
   title: 'Molecules/Blocks/StackedBlock',
@@ -33,8 +33,8 @@ const Template: Story<Props> = (args) => (
     </StackedBlockBody>
     <StackedBlockFooter>
       <ButtonGroup>
-        <Button variant="primary" text="Primary Button" />
-        <Button text="Secondary Button" />
+        <Button variant="primary">Primary Button</Button>
+        <Button>Secondary Button</Button>
       </ButtonGroup>
     </StackedBlockFooter>
   </StackedBlock>

@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React from 'react';
 import styles from '../Breadcrumbs/Breadcrumbs.module.css';
-import { Icon } from '../Icon/Icon';
+import Icon from '../Icon';
 
 export interface Props {
   /**
@@ -21,12 +21,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const BreadcrumbsItem: React.FC<Props> = ({
-  className,
-  text,
-  href,
-  ...other
-}) => {
+export const BreadcrumbsItem = ({ className, text, href, ...other }: Props) => {
   const componentClassName = clsx(styles['breadcrumbs__item'], className, {});
   return (
     <li className={componentClassName} {...other}>
