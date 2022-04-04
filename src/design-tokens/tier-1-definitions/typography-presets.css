@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-@define-mixin eds-typography-preset-1 $important {
-  font-family: var(--eds-font-family-secondary) $important;
-  font-weight: var(--eds-font-weight-bold) $important;
-  font-size: var(--eds-font-size-xxl) $important;
-  line-height: var(--eds-line-height-sm-2) $important;
-  letter-spacing: normal $important;
-  text-transform: none $important;
-=======
 /**
  * Typography Preset 001: Medium, Mobile, & Bold
  */
@@ -15,7 +6,6 @@
   font-weight: var(--eds-font-weight-medium) $important;
   font-size: var(--eds-font-size-40) $important;
   line-height: 1.2 $important;
->>>>>>> next
 
   @media all and (max-width: $eds-bp-md) {
     font-size: var(--eds-font-size-32) $important;

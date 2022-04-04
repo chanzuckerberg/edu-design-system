@@ -1,11 +1,7 @@
 @import '../../design-tokens/mixins.css';
 
 /*------------------------------------*\
-<<<<<<< HEAD
-    #TABS
-=======
     #List Detail
->>>>>>> next
 \*------------------------------------*/
 
 /**
@@ -31,18 +27,10 @@
 .list-detail__header {
   width: 100%;
   position: relative;
-<<<<<<< HEAD
-  padding: var(--eds-size-2);
-
-  @media all and (min-width: $eds-bp-lg) {
-    padding-right: var(--eds-size-4);
-    padding-left: var(--eds-size-6);
-=======
   padding: var(--eds-size-4) var(--eds-size-2);
 
   @media all and (min-width: $eds-bp-lg) {
     padding: var(--eds-size-5);
->>>>>>> next
     width: 20rem;
   }
 }
@@ -57,12 +45,7 @@
 
   @media all and (min-width: $eds-bp-lg) {
     flex: 1; /* 1 */
-<<<<<<< HEAD
-    padding-right: var(--eds-size-8);
-    padding-left: var(--eds-size-8);
-=======
     padding: var(--eds-size-5) var(--eds-size-8);
->>>>>>> next
     box-shadow: -6px 0px 10px -2px var(--eds-theme-color-neutral-subtle-border); /* 1 */
   }
 }
@@ -79,11 +62,7 @@
 
   @media all and (min-width: $eds-bp-lg) {
     position: sticky;
-<<<<<<< HEAD
-    top: var(--eds-size-2);
-=======
     top: var(--eds-size-5);
->>>>>>> next
   }
 }
 
@@ -95,37 +74,6 @@
   position: relative;
   flex-shrink: 0; /* 1 */
   padding-bottom: var(--eds-size-4);
-<<<<<<< HEAD
-
-  /**
-  * List detail item after
-  * 1) Line between items that shouldn't link out unliike the bullet
-  */
-  &:after {
-    content: '';
-    position: absolute;
-    top: var(--eds-size-1-and-half);
-    left: 4px;
-    width: 1px;
-    height: 100%;
-    background: var(--eds-theme-color-neutral-md-background);
-    border-radius: 50%;
-  }
-}
-
-/**
- * Last List detail item
- */
-.list-detail__item:last-child {
-  padding-bottom: 0;
-
-  /**
-  * List list detail item after
-  * 1) Don't add a line between items
-  */
-  &:after {
-    content: none;
-=======
 }
 
 /**
@@ -158,7 +106,6 @@
     &:after {
       content: none;
     }
->>>>>>> next
   }
 }
 
@@ -188,15 +135,9 @@
   }
 }
 
-<<<<<<< HEAD
-.list-detail__link-left {
-  /**
-   * Before pseudoelement bullet
-=======
 .list-detail__link-left:not(.list-detail__link-hidden) {
   /**
    * Before pseudoelement bullet (for non-number variant items)
->>>>>>> next
    * 1) Set to 9px to center the border
    */
   &:before {
@@ -208,21 +149,6 @@
     top: var(--eds-size-1);
     height: 9px; /* 1 */
     width: 9px; /* 1 */
-<<<<<<< HEAD
-    background: var(--eds-theme-color-neutral-md-background);
-    border-radius: 50%;
-  }
-}
-
-/**
-* Success list detail item
-* 1) Remove the bullet since the icon will take its place
-*/
-.list-detail__item--success .list-detail__link-left {
-  &:before {
-    content: none; /* 1 */
-  }
-=======
     background: var(--eds-theme-color-neutral-subtle-background);
     border-radius: 50%;
   }
@@ -255,7 +181,6 @@
   font-size: 12px;
   margin-left: -4px;
   background: var(--eds-color-neutral-white); /* 1*/
->>>>>>> next
 }
 
 /**
@@ -264,15 +189,9 @@
 */
 .list-detail__icon {
   position: relative;
-<<<<<<< HEAD
-  left: -5px;
-  height: var(--eds-size-2-and-half);
-  width: var(--eds-size-2-and-half);
-=======
   left: -7px;
   height: var(--eds-size-3);
   width: var(--eds-size-3);
->>>>>>> next
   margin-right: var(--eds-size-half);
   background: var(--eds-color-neutral-white); /* 1*/
   z-index: var(--eds-z-index-100);
@@ -282,8 +201,6 @@
   */
   .list-detail__item--success & {
     fill: var(--eds-theme-color-utility-success-foreground);
-<<<<<<< HEAD
-=======
   } /**
   * List detail icon within warning list detail item
   */
@@ -294,6 +211,5 @@
   */
   .list-detail__item--error & {
     fill: var(--eds-theme-color-utility-error-foreground);
->>>>>>> next
   }
 }
