@@ -46,20 +46,14 @@
   /**
    * Disabled buttons
    */
-  &:disabled {
+   &:disabled,
+   &:disabled:hover,
+   &:disabled:focus {
     background: transparent;
     border-color: var(--eds-theme-color-disabled-border);
     color: var(--eds-theme-color-disabled-foreground);
     cursor: not-allowed;
-
-    /* stylelint-disable-next-line max-nesting-depth */
-    &:hover,
-    &:focus {
-      background: transparent;
-      border-color: var(--eds-theme-color-disabled-border);
-      color: var(--eds-theme-color-disabled-foreground);
-      transform: none;
-    }
+    transform: none;
   }
 
   /**
@@ -87,11 +81,7 @@
   background-color: var(--eds-theme-color-primary-background);
   color: var(--eds-theme-color-body-foreground-inverted);
 
-  &:hover {
-    background-color: var(--eds-theme-color-primary-background-hover);
-    color: var(--eds-theme-color-body-foreground-inverted);
-  }
-
+  &:hover,
   &:focus {
     background-color: var(--eds-theme-color-primary-background-hover);
     color: var(--eds-theme-color-body-foreground-inverted);
@@ -101,16 +91,11 @@
     @mixin focus;
   }
 
-  &:disabled {
+  &:disabled,
+  &:disabled:hover {
     background-color: var(--eds-theme-color-disabled-background);
     border-color: var(--eds-theme-color-disabled-border);
     color: var(--eds-theme-color-disabled-foreground);
-    /* stylelint-disable-next-line max-nesting-depth */
-    &:hover {
-      background-color: var(--eds-theme-color-disabled-background);
-      border-color: var(--eds-theme-color-disabled-border);
-      color: var(--eds-theme-color-disabled-foreground);
-    }
   }
 
   /**
@@ -137,11 +122,7 @@
   background-color: var(--eds-theme-color-primary-background);
   color: var(--eds-theme-color-body-foreground-inverted);
 
-  &:hover {
-    background-color: var(--eds-theme-color-primary-background-hover);
-    color: var(--eds-theme-color-body-foreground-inverted);
-  }
-
+  &:hover,
   &:focus {
     background-color: var(--eds-theme-color-primary-background-hover);
     color: var(--eds-theme-color-body-foreground-inverted);
@@ -151,16 +132,11 @@
     @mixin focus;
   }
 
-  &:disabled {
+  &:disabled,
+  &:disabled:hover {
     background-color: var(--eds-theme-color-disabled-background);
     border-color: var(--eds-theme-color-disabled-border);
     color: var(--eds-theme-color-disabled-foreground);
-    /* stylelint-disable-next-line max-nesting-depth */
-    &:hover {
-      background-color: var(--eds-theme-color-disabled-background);
-      border-color: var(--eds-theme-color-disabled-border);
-      color: var(--eds-theme-color-disabled-foreground);
-    }
   }
 
   /**
@@ -187,11 +163,7 @@
   background-color: var(--eds-theme-color-primary-background);
   color: var(--eds-theme-color-body-foreground-inverted);
 
-  &:hover {
-    background-color: var(--eds-theme-color-primary-background-hover);
-    color: var(--eds-theme-color-body-foreground-inverted);
-  }
-
+  &:hover,
   &:focus {
     background-color: var(--eds-theme-color-primary-background-hover);
     color: var(--eds-theme-color-body-foreground-inverted);
@@ -201,16 +173,11 @@
     @mixin focus;
   }
 
-  &:disabled {
+  &:disabled,
+  &:disabled:hover {
     background-color: var(--eds-theme-color-disabled-background);
     border-color: var(--eds-theme-color-disabled-border);
     color: var(--eds-theme-color-disabled-foreground);
-    /* stylelint-disable-next-line max-nesting-depth */
-    &:hover {
-      background-color: var(--eds-theme-color-disabled-background);
-      border-color: var(--eds-theme-color-disabled-border);
-      color: var(--eds-theme-color-disabled-foreground);
-    }
   }
 
   /**
@@ -294,11 +261,7 @@
   background-color: var(--eds-theme-color-primary-background);
   color: var(--eds-theme-color-body-foreground-inverted);
 
-  &:hover {
-    background-color: var(--eds-theme-color-primary-background-hover);
-    color: var(--eds-theme-color-body-foreground-inverted);
-  }
-
+  &:hover,
   &:focus {
     background-color: var(--eds-theme-color-primary-background-hover);
     color: var(--eds-theme-color-body-foreground-inverted);
@@ -308,16 +271,11 @@
     @mixin focus;
   }
 
-  &:disabled {
+  &:disabled,
+  &:disabled:hover {
     background-color: var(--eds-theme-color-disabled-background);
     border-color: var(--eds-theme-color-disabled-border);
     color: var(--eds-theme-color-disabled-foreground);
-    /* stylelint-disable-next-line max-nesting-depth */
-    &:hover {
-      background-color: var(--eds-theme-color-disabled-background);
-      border-color: var(--eds-theme-color-disabled-border);
-      color: var(--eds-theme-color-disabled-foreground);
-    }
   }
 
   /**
