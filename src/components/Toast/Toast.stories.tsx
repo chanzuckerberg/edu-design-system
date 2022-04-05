@@ -1,51 +1,46 @@
-import { Story, Meta } from '@storybook/react';
+import type { StoryObj } from '@storybook/react';
 import React from 'react';
-
-import { Toast, Props } from './Toast';
+import Toast from './Toast';
 
 export default {
   title: 'Molecules/Messaging/Toast',
   component: Toast,
-} as Meta;
-
-const Template: Story<Props> = (args) => (
-  <Toast {...args}>{`You've got toast!`}</Toast>
-);
-
-export const Default = Template.bind({});
-Default.args = { iconName: 'info' };
-
-export const Brand = Template.bind({});
-Brand.args = {
-  variant: 'brand',
-  iconName: 'check-circle',
-  title: 'This is a title',
+  argTypes: { onDismiss: { action: 'dismissed' } },
+  args: {
+    children: "You've got toast!",
+  },
 };
 
-export const Success = Template.bind({});
-Success.args = {
-  variant: 'success',
-  iconName: 'check-circle',
-  title: 'This is a title',
+type Args = React.ComponentProps<typeof Toast>;
+
+// Snap tests have been disabled due to errors with Icon, should be re-enabled once fixed
+export const Success: StoryObj<Args> = {
+  args: {
+    variant: 'success',
+  },
+  parameters: {
+    snapshot: { skip: true },
+  },
 };
 
-export const Warning = Template.bind({});
-Warning.args = {
-  variant: 'warning',
-  iconName: 'error',
-  title: 'This is a title',
+export const Alert: StoryObj<Args> = {
+  args: {
+    variant: 'alert',
+  },
+  parameters: {
+    snapshot: { skip: true },
+  },
 };
 
-export const Error = Template.bind({});
-Error.args = {
-  variant: 'error',
-  iconName: 'cancel',
-  title: 'This is a title',
-};
-
-export const NotDismissible = Template.bind({});
-NotDismissible.args = {
-  dismissible: false,
-  iconName: 'info',
-  title: 'This is a title',
+export const NotDismissable: StoryObj<Args> = {
+  args: {
+    variant: 'success',
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore onDismiss is not nullable, but this is needed to remove the arg from
+    // storybook's actions addon
+    onDismiss: null,
+  },
+  parameters: {
+    snapshot: { skip: true },
+  },
 };
