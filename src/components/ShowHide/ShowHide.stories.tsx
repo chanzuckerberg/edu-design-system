@@ -3,6 +3,7 @@ import React from 'react';
 
 import { ShowHide, Props } from './ShowHide';
 import Button from '../Button';
+import Icon from '../Icon';
 
 export default {
   title: 'Molecules/Interactive/ShowHide',
@@ -13,7 +14,9 @@ const Template: Story<Props> = (args) => (
   <div style={{ margin: '10rem' }}>
     <ShowHide
       trigger={
-        <Button type="button" iconName="expand-more" iconPosition="after" />
+        <Button type="button">
+          <Icon name="expand-more" purpose="decorative" />
+        </Button>
       }
       {...args}
     >

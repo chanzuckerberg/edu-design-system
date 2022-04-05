@@ -9,6 +9,7 @@ import {
   NavContainer,
   Button,
   AvatarBlock,
+  Icon,
 } from '../../../src';
 
 export interface Props {
@@ -43,12 +44,15 @@ export const GlobalHeader = ({ className, ...other }: Props) => {
       <Button
         className={styles['global-header__menu-button']}
         variant="bare"
-        aria-label={isActive ? 'Close' : 'Menu'}
-        iconPosition="before"
-        iconName={isActive ? 'x' : 'menu'}
         inverted={true}
         onClick={toggleMenu}
-      />
+      >
+        <Icon
+          purpose="informative"
+          name={isActive ? 'close' : 'menu'}
+          title={isActive ? 'Close' : 'Menu'}
+        />
+      </Button>
 
       <NavContainer
         isActive={isActive}
