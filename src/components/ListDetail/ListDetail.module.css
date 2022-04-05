@@ -1,17 +1,17 @@
 @import '../../design-tokens/mixins.css';
 
 /*------------------------------------*\
-    #List Detail
+ #List Detail
 \*------------------------------------*/
 
 /**
  * 1) List of of links where each link toggles open associated information
  */
 .list-detail {
-  background: var(--eds-color-neutral-white); /* TODO */
+  background: var(--eds-theme-color-background-neutral-default);
   border-width: var(--eds-theme-border-width);
   border-style: solid;
-  border-color: var(--eds-theme-color-neutral-subtle-border);
+  border-color: var(--eds-theme-color-border-neutral-subtle);
   border-radius: var(--eds-theme-border-radius);
 
   @media all and (min-width: $eds-bp-lg) {
@@ -46,7 +46,7 @@
   @media all and (min-width: $eds-bp-lg) {
     flex: 1; /* 1 */
     padding: var(--eds-size-5) var(--eds-size-8);
-    box-shadow: -6px 0px 10px -2px var(--eds-theme-color-neutral-subtle-border); /* 1 */
+    box-shadow: -6px 0px 10px -2px var(--eds-theme-color-border-neutral-subtle); /* 1 */
   }
 }
 
@@ -79,17 +79,20 @@
 /**
   * List detail item after
   * 1) When list variant is 'ordered', add a line between items that shouldn't link out unliike the bullet
+  * 2) This sets the size of the gap above the vertical line by determining the top of the line relative to the top of the current list item; a value of 0 would position the line at the top of the current list item; 100% would position it at the bottom of the current list item. We want a small visual gap between the bullet/icon and the top of the line 
+  * 3) This sets the height of the vertical line relative to the height of the current list item. We want a small visual gap between the bottom of the line and the next bullet/icon
+  * 4) Using a border color here because this is a vertical line, similar to a border
   */
 .list-detail__list--ordered .list-detail__item {
   &:after {
     content: '';
     position: absolute;
-    top: 1.5rem;
     left: 0.25rem;
+    top: 1.75rem; /* 2 */
+    height: 45%; /* 3 */ 
     width: 0.0625rem;
-    height: 70%;
-    background: var(--eds-theme-color-neutral-subtle-background);
-    border-radius: 50%;
+    background:  var(--eds-theme-color-border-neutral-subtle); /* 4 */
+    border-radius: var(--eds-theme-border-radius);
   }
 
   /**
@@ -100,7 +103,7 @@
 
     /**
       * List list detail item after
-      * 1) Don't add a line between items
+      * 1) Don't add a line after the last list item
       */
     /* stylelint-disable-next-line max-nesting-depth */
     &:after {
@@ -111,12 +114,14 @@
 
 /**
  * List detail link
+ * 1) Base style for each link in the list
+ * 2) Using disabled text color here because all links are "inactive" until selected and this color is overridden
  */
 .list-detail__link {
   position: relative;
   display: flex;
   text-decoration: none;
-  color: var(--eds-theme-color-neutral-subtle-foreground);
+  color: var(--eds-theme-color-text-disabled); /* 2 */
   cursor: pointer;
   transition: color var(--eds-anim-fade-quick) var(--eds-anim-ease),
     box-shadow var(--eds-anim-fade-quick) var(--eds-anim-ease),
@@ -131,7 +136,7 @@
    */
   .list-detail__item.eds-is-active & {
     @mixin eds-theme-typography-body-text-bold;
-    color: var(--eds-theme-color-body-foreground);
+    color: var(--eds-theme-color-text-neutral-default);
   }
 }
 
@@ -139,6 +144,8 @@
   /**
    * Before pseudoelement bullet (for non-number variant items)
    * 1) Set to 9px to center the border
+   * 2) This is the same color used for the vertical line when list style is "ordered"
+   * 3) Using a percentage here instead of --eds-theme-border-radius because this is a cosmetic element (a cicular bullet), not a typical bordered object
    */
   &:before {
     content: '';
@@ -149,8 +156,8 @@
     top: var(--eds-size-1);
     height: 9px; /* 1 */
     width: 9px; /* 1 */
-    background: var(--eds-theme-color-neutral-subtle-background);
-    border-radius: 50%;
+    background: var(--eds-theme-color-border-neutral-subtle); /* 2 */
+    border-radius: 50%; /* 3 */
   }
 
   /**
@@ -167,25 +174,30 @@
 
 /**
 * List detail number
-* 1) Used on list items using number variant
+* 1) Used on list items using number variant; provides a cosmetic cicular border
+* 2) Using flex to keep the number centered
+* 3) Since this will display as a cirlce, keep height and width equal; should be wide enough to fit a two-digit number
+* 4) Using a percentage here instead of --eds-theme-border-radius because this is not a typical bordered object
 */
 .list-detail__number {
   position: relative;
+  display: flex; /* 2 */
+  justify-content: center;
+  align-items: center;
   left: -4px;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  border: 1px solid var(--eds-theme-color-neutral-subtle-border);
+  width: 1.5rem; /* 3 */ 
+  height: 1.5rem; /* 3 */
+  border-radius: 50%; /* 4 */
+  border: 1px solid var(--eds-theme-color-border-neutral-subtle);
   margin-right: 9px;
-  padding: 4px 8px;
-  font-size: 12px;
+  font-size: var(--eds-font-size-12);
   margin-left: -4px;
-  background: var(--eds-color-neutral-white); /* 1*/
+  background: var(--eds-theme-color-background-neutral-default); 
 }
 
 /**
 * List detail icon
-* 1) Used so the transparent icon doesn't show the line behind. TODO: Map to tier 2
+* 1) Used so the transparent icon doesn't show the line behind. 
 */
 .list-detail__icon {
   position: relative;
@@ -193,23 +205,27 @@
   height: var(--eds-size-3);
   width: var(--eds-size-3);
   margin-right: var(--eds-size-half);
-  background: var(--eds-color-neutral-white); /* 1*/
+  background: var(---eds-theme-color-background-neutral-default); /* 1*/
   z-index: var(--eds-z-index-100);
 
   /**
   * List detail icon within success list detail item
   */
   .list-detail__item--success & {
-    fill: var(--eds-theme-color-utility-success-foreground);
-  } /**
+    fill: var(--eds-theme-color-background-grade-complete-default);
+  } 
+  
+  /**
   * List detail icon within warning list detail item
   */
   .list-detail__item--warning & {
-    fill: var(--eds-theme-color-utility-warning-foreground);
-  } /**
+    fill: var(--eds-theme-color-background-grade-revise-default);
+  } 
+  
+  /**
   * List detail icon within error list detail item
   */
   .list-detail__item--error & {
-    fill: var(--eds-theme-color-utility-error-foreground);
+    fill: var(--eds-theme-color-background-grade-stop-default);
   }
 }
