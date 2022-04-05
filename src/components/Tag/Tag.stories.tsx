@@ -5,7 +5,7 @@ import type { Color } from './Tag';
 import styles from './Tag.stories.module.css';
 import Icon from '../Icon';
 
-// todo (Andrew): look into getting rid of the `as` cast. The `stylesByColor` object's keys are
+// TODO: (Andrew): look into getting rid of the `as` cast. The `stylesByColor` object's keys are
 // members of Color. Can TypeScript understand that?
 const colorOptions = Object.keys(stylesByColor) as Color[];
 

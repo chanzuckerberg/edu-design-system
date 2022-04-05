@@ -3,21 +3,15 @@ import React from 'react';
 import styles from './Tag.module.css';
 import Text from '../Text';
 
-export type Color =
-  | 'neutral'
-  | 'alert'
-  | 'success'
-  | 'warning'
-  | 'revise'
-  | 'brand';
+export type Color = 'default' | 'stop' | 'go' | 'warning' | 'yield' | 'brand';
 
 export const stylesByColor = {
-  neutral: styles[`tag--color-neutral`],
+  default: styles[`tag--color-default`],
   warning: styles[`tag--color-warning`],
   brand: styles[`tag--color-brand`],
-  alert: styles[`tag--color-alert`],
-  revise: styles[`tag--color-revise`],
-  success: styles[`tag--color-success`],
+  stop: styles[`tag--color-stop`],
+  yield: styles[`tag--color-yield`],
+  go: styles[`tag--color-go`],
 };
 
 type Props = {
@@ -53,7 +47,7 @@ type Props = {
  * This component provides a tag (pill shaped badge) wrapper.
  */
 export const Tag = ({
-  color,
+  color = 'default',
   children,
   className,
   icon,
@@ -65,7 +59,7 @@ export const Tag = ({
       className={clsx(
         className,
         styles['tag'],
-        color && styles[`tag--color-${color}`],
+        styles[`tag--color-${color}`],
         variant === 'outline' && styles['tag--outline'],
       )}
       color={color}

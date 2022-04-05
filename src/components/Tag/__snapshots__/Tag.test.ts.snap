@@ -5,14 +5,14 @@ exports[`<Tag /> ColorVariants story renders snapshot 1`] = `
   class="tagList"
 >
   <span
-    class="tag tag--color-neutral text text--sm text--bold-weight"
-    color="neutral"
+    class="tag tag--color-default text text--sm text--bold-weight"
+    color="default"
   >
     ​
     <span
       class="tag__body"
     >
-      neutral
+      default
     </span>
   </span>
   <span
@@ -38,36 +38,36 @@ exports[`<Tag /> ColorVariants story renders snapshot 1`] = `
     </span>
   </span>
   <span
-    class="tag tag--color-alert text text--sm text--bold-weight"
-    color="alert"
+    class="tag tag--color-stop text text--sm text--bold-weight"
+    color="stop"
   >
     ​
     <span
       class="tag__body"
     >
-      alert
+      stop
     </span>
   </span>
   <span
-    class="tag tag--color-revise text text--sm text--bold-weight"
-    color="revise"
+    class="tag tag--color-yield text text--sm text--bold-weight"
+    color="yield"
   >
     ​
     <span
       class="tag__body"
     >
-      revise
+      yield
     </span>
   </span>
   <span
-    class="tag tag--color-success text text--sm text--bold-weight"
-    color="success"
+    class="tag tag--color-go text text--sm text--bold-weight"
+    color="go"
   >
     ​
     <span
       class="tag__body"
     >
-      success
+      go
     </span>
   </span>
 </div>
@@ -92,14 +92,14 @@ exports[`<Tag /> OutlineVariants story renders snapshot 1`] = `
   class="tagList"
 >
   <span
-    class="tag tag--color-neutral tag--outline text text--sm text--bold-weight"
-    color="neutral"
+    class="tag tag--color-default tag--outline text text--sm text--bold-weight"
+    color="default"
   >
     ​
     <span
       class="tag__body"
     >
-      neutral
+      default
     </span>
   </span>
   <span
@@ -125,36 +125,36 @@ exports[`<Tag /> OutlineVariants story renders snapshot 1`] = `
     </span>
   </span>
   <span
-    class="tag tag--color-alert tag--outline text text--sm text--bold-weight"
-    color="alert"
+    class="tag tag--color-stop tag--outline text text--sm text--bold-weight"
+    color="stop"
   >
     ​
     <span
       class="tag__body"
     >
-      alert
+      stop
     </span>
   </span>
   <span
-    class="tag tag--color-revise tag--outline text text--sm text--bold-weight"
-    color="revise"
+    class="tag tag--color-yield tag--outline text text--sm text--bold-weight"
+    color="yield"
   >
     ​
     <span
       class="tag__body"
     >
-      revise
+      yield
     </span>
   </span>
   <span
-    class="tag tag--color-success tag--outline text text--sm text--bold-weight"
-    color="success"
+    class="tag tag--color-go tag--outline text text--sm text--bold-weight"
+    color="go"
   >
     ​
     <span
       class="tag__body"
     >
-      success
+      go
     </span>
   </span>
 </div>
