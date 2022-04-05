@@ -24,7 +24,7 @@ export default {
 
   args: {
     children: 'Tag text',
-    color: 'warning' as const,
+    color: 'default' as const,
   },
 };
 

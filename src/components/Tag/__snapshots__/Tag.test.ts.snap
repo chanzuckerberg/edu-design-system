@@ -75,8 +75,8 @@ exports[`<Tag /> ColorVariants story renders snapshot 1`] = `
 
 exports[`<Tag /> Default story renders snapshot 1`] = `
 <span
-  class="tag tag--color-warning text text--sm text--bold-weight"
-  color="warning"
+  class="tag tag--color-default text text--sm text--bold-weight"
+  color="default"
 >
   ​
   <span
