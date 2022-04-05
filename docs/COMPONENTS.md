@@ -29,7 +29,7 @@ From there, call EDS components in your React application and pass in the desire
   onClick={...}
 >
   Submit
-  <Icon name="chevron-right" aria-hidden="true" focusable={false} />
+  <Icon name="chevron-right" purpose="decorative" />
 </Button>
 ```
 

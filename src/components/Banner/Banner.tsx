@@ -101,6 +101,7 @@ export const Banner = ({
             name="x"
             title={closeButtonText}
             className={styles['banner__icon']}
+            purpose="informative"
           />
         </Button>
       )}

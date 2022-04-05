@@ -45,11 +45,10 @@ export const DrawerHeader = ({
       {dismissible && (
         <Button
           className={styles['drawer__close-button']}
-          aria-label={closeButtonText}
           variant="bare"
           onClick={onClick}
         >
-          <Icon name="x" aria-hidden="true" focusable={false} />
+          <Icon name="x" purpose="informative" title={closeButtonText} />
         </Button>
       )}
     </header>

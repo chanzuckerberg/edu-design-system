@@ -169,11 +169,10 @@ export const Counter = ({
         <Button
           className={styles['counter__btn']}
           variant="bare"
-          aria-label={minusButtonText}
           disabled={disabled || (min !== undefined && count === min)}
           onClick={(e) => onDecrease(e)}
         >
-          <Icon name="minus" aria-hidden="true" focusable={false} />
+          <Icon name="minus" purpose="informative" title={minusButtonText} />
         </Button>
         <TextInput
           className={styles['counter__input']}
@@ -193,11 +192,10 @@ export const Counter = ({
         <Button
           className={styles['counter__btn']}
           variant="bare"
-          aria-label={plusButtonText}
           disabled={disabled || (max !== undefined && count === max)}
           onClick={(e) => onIncrease(e)}
         >
-          <Icon name="plus" aria-hidden="true" focusable={false} />
+          <Icon name="plus" purpose="informative" title={plusButtonText} />
         </Button>
       </div>
       {fieldNote && (

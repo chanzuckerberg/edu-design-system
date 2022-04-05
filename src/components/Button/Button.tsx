@@ -118,8 +118,8 @@ export const Button = React.forwardRef(
       >
         {loading && (
           <Icon
-            aria-hidden="true"
-            focusable={false}
+            purpose="informative"
+            title="loading"
             name="spinner"
             className={styles['button__icon-loading']}
           />

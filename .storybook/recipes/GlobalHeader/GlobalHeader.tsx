@@ -48,11 +48,7 @@ export const GlobalHeader = ({ className, ...other }: Props) => {
         inverted={true}
         onClick={toggleMenu}
       >
-        <Icon
-          aria-hidden="true"
-          focusable={false}
-          name={isActive ? 'x' : 'menu'}
-        />
+        <Icon purpose="decorative" name={isActive ? 'x' : 'menu'} />
       </Button>
 
       <NavContainer

@@ -31,11 +31,7 @@ export const ProjectOverview = () => {
         right={
           <Button variant="bare">
             View plan
-            <Icon
-              aria-hidden="true"
-              focusable={false}
-              name="arrow-narrow-right"
-            />
+            <Icon purpose="decorative" name="arrow-narrow-right" />
           </Button>
         }
       />

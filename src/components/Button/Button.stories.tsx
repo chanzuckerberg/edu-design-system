@@ -25,7 +25,7 @@ export const DefaultWithIconBefore = Template.bind({});
 DefaultWithIconBefore.args = {
   children: (
     <>
-      <Icon aria-hidden="true" focusable={false} name="chevron-left" />
+      <Icon purpose="decorative" name="chevron-left" />
       Button
     </>
   ),
@@ -36,7 +36,7 @@ DefaultWithIconAfter.args = {
   children: (
     <>
       Button
-      <Icon aria-hidden="true" focusable={false} name="chevron-right" />
+      <Icon purpose="decorative" name="chevron-right" />
     </>
   ),
 };
@@ -67,16 +67,14 @@ PrimaryInverted.args = {
 export const BareIcon = Template.bind({});
 BareIcon.args = {
   variant: 'bare',
-  'aria-label': 'Close',
-  children: <Icon aria-hidden="true" focusable={false} name="x" />,
+  children: <Icon purpose="informative" title="Close" name="x" />,
 };
 
 export const BareIconInverted = InvertedTemplate.bind({});
 BareIconInverted.args = {
   inverted: true,
   variant: 'bare',
-  'aria-label': 'Close',
-  children: <Icon aria-hidden="true" focusable={false} name="x" />,
+  children: <Icon purpose="informative" title="Close" name="x" />,
 };
 
 export const TextLink = Template.bind({});

@@ -83,10 +83,9 @@ export const Toast = ({
         <Button
           className={styles['toast__close-btn']}
           variant="bare"
-          aria-label={closeButtonText}
           onClick={(e: any) => onDismiss(e)}
         >
-          <Icon name="x" aria-hidden="true" focusable={false} />
+          <Icon name="x" purpose="informative" title={closeButtonText} />
         </Button>
       )}
     </div>

@@ -84,7 +84,7 @@ export const TableHeaderCell = ({
     >
       <Button variant="table-header" onClick={onClick}>
         {text}
-        <Icon name="arrow-narrow-down" aria-hidden="true" focusable={false} />
+        <Icon name="arrow-narrow-down" purpose="decorative" />
       </Button>
     </th>
   );

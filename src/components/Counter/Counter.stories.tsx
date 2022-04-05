@@ -35,11 +35,7 @@ DefaultWithTooltip.args = {
     <Tooltip text="Some text to help with a form field">
       <Button variant="bare">
         Hover this button to trigger the tooltip
-        <Icon
-          name="question-mark-circle"
-          aria-hidden="true"
-          focusable={false}
-        />
+        <Icon name="question-mark-circle" purpose="decorative" />
       </Button>
     </Tooltip>
   ),
