@@ -48,6 +48,7 @@
         },
         "yellow": {
           "100": { "value": "#FFF1E9" },
+          "300": { "value": "#FFDD80" },
           "400": { "value": "#F7BE2D" }
         },
         "lemon": {

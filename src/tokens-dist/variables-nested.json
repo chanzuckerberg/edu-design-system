@@ -67,6 +67,7 @@
         },
         "yellow": {
           "100": "#FFF1E9",
+          "300": "#FFDD80",
           "400": "#F7BE2D"
         },
         "lemon": "#F5FF8F",
@@ -234,7 +235,10 @@
           },
           "grade": {
             "complete": "#8FDCB3",
-            "revise": "#FFF1E9",
+            "revise": {
+              "default": "#FFF1E9",
+              "subtle": "#FFDD80"
+            },
             "stop": "#FB90B0"
           },
           "disabled": "#C0C4C8"
@@ -323,7 +327,10 @@
             "revise": "#21272D",
             "stop": "#BD0044"
           },
-          "disabled": "#C0C4C8"
+          "disabled": "#C0C4C8",
+          "brand": {
+            "primary": "#5751D2"
+          }
         },
         "body": {
           "background": {

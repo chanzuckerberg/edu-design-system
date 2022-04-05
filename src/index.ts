@@ -90,7 +90,7 @@ export { default as TableObjectFooter } from './components/TableObjectFooter';
 export { default as TableObjectHeader } from './components/TableObjectHeader';
 export { default as TableRow } from './components/TableRow';
 export { default as Tabs } from './components/Tabs';
-export { default as Tags } from './components/Tags';
+export { default as Tag } from './components/Tag';
 export { default as Text } from './components/Text';
 export { default as Textarea } from './components/Textarea';
 export { default as TextareaField } from './components/TextareaField';

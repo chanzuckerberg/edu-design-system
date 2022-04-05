@@ -1,0 +1,83 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #TAGS
+\*------------------------------------*/
+
+.tag {
+  width: max-content;
+  max-width: 20rem;
+  padding-top: var(--eds-size-half);
+  padding-bottom: var(--eds-size-half);
+  padding-left: var(--eds-size-1-and-half);
+  padding-right: var(--eds-size-1-and-half);
+
+  display: inline-flex;
+  align-items: center;
+
+  border: var(--tag-secondary-color) solid var(--eds-theme-border-width);
+  border-radius: 9999px;
+
+  /** 
+   * TODO: (dcwither) when adding SvgIcon to EDS, include this in tailwind font 
+   * size macro.
+   */
+  --svg-icon-size-default: 1.25rem;
+
+  background-color: var(--tag-secondary-color);
+  color: var(--tag-primary-color);
+}
+
+.tag > :not(:last-child) {
+  margin-right: var(--eds-size-half);
+}
+
+.tag__body {
+  flex: 1 1 auto;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tag--color-neutral {
+  --tag-primary-color: var(--eds-theme-color-text-neutral-default);
+  --tag-secondary-color: var(--eds-theme-color-background-neutral-medium);
+  --tag-outline-color: var(--eds-theme-color-border-neutral-default);
+}
+
+.tag--color-alert {
+  --tag-primary-color: var(--eds-theme-color-text-utility-error);
+  --tag-secondary-color: var(--eds-theme-color-background-utility-error);
+  --tag-outline-color: var(--eds-theme-color-border-utility-error-default);
+}
+
+.tag--color-success {
+  --tag-primary-color: var(--eds-theme-color-text-utility-success);
+  --tag-secondary-color: var(--eds-theme-color-background-utility-success);
+  --tag-outline-color: var(--eds-theme-color-border-utility-success-default);
+}
+
+.tag--color-warning {
+  --tag-primary-color: var(--eds-theme-color-text-utility-warning);
+  --tag-secondary-color: var(--eds-theme-color-background-utility-warning);
+  --tag-outline-color: var(--eds-theme-color-border-utility-warning-default);
+}
+
+.tag--color-revise {
+  --tag-primary-color: var(--eds-theme-color-text-grade-revise);
+  --tag-secondary-color: var(--eds-theme-color-background-grade-revise-subtle);
+  --tag-outline-color: var(--eds-theme-color-border-grade-revise-subtle);
+}
+
+.tag--color-brand {
+  --tag-primary-color: var(--eds-theme-color-text-brand-primary);
+  --tag-secondary-color: var(
+    --eds-theme-color-background-brand-primary-default
+  );
+  --tag-outline-color: var(--eds-theme-color-border-brand-primary);
+}
+
+.tag--outline {
+  border-color: var(--tag-outline-color);
+}

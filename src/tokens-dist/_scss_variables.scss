@@ -41,6 +41,7 @@ $eds-color-other-mint-600: #008656 !default;
 $eds-color-other-mint-700: #007249 !default;
 $eds-color-other-mint-800: #005939 !default;
 $eds-color-other-yellow-100: #FFF1E9 !default;
+$eds-color-other-yellow-300: #FFDD80 !default;
 $eds-color-other-yellow-400: #F7BE2D !default;
 $eds-color-other-lemon: #F5FF8F !default;
 $eds-color-other-orange-100: #FFF1E9 !default;
@@ -135,7 +136,8 @@ $eds-theme-color-border-utility-warning-strong: #E06B00 !default;
 $eds-theme-color-border-utility-error-default: #FB90B0 !default;
 $eds-theme-color-border-utility-error-strong: #F1497B !default;
 $eds-theme-color-border-grade-complete: #8FDCB3 !default;
-$eds-theme-color-border-grade-revise: #FFF1E9 !default;
+$eds-theme-color-border-grade-revise-default: #FFF1E9 !default;
+$eds-theme-color-border-grade-revise-subtle: #FFDD80 !default;
 $eds-theme-color-border-grade-stop: #FB90B0 !default;
 $eds-theme-color-border-disabled: #C0C4C8 !default;
 $eds-theme-color-icon-neutral-default: #707070 !default;
@@ -176,6 +178,7 @@ $eds-theme-color-text-grade-complete: #007249 !default;
 $eds-theme-color-text-grade-revise: #21272D !default;
 $eds-theme-color-text-grade-stop: #BD0044 !default;
 $eds-theme-color-text-disabled: #C0C4C8 !default;
+$eds-theme-color-text-brand-primary: #5751D2 !default;
 $eds-theme-color-body-background: #F5F6F8 !default;
 $eds-theme-color-body-background-inverted: #505058 !default;
 $eds-theme-color-focus-ring: #6B65E2 !default;
@@ -264,6 +267,7 @@ $tokens: (
         ),
         'yellow': (
           '100': $eds-color-other-yellow-100,
+          '300': $eds-color-other-yellow-300,
           '400': $eds-color-other-yellow-400
         ),
         'lemon': $eds-color-other-lemon,
@@ -431,7 +435,10 @@ $tokens: (
           ),
           'grade': (
             'complete': $eds-theme-color-border-grade-complete,
-            'revise': $eds-theme-color-border-grade-revise,
+            'revise': (
+              'default': $eds-theme-color-border-grade-revise-default,
+              'subtle': $eds-theme-color-border-grade-revise-subtle
+            ),
             'stop': $eds-theme-color-border-grade-stop
           ),
           'disabled': $eds-theme-color-border-disabled
@@ -520,7 +527,10 @@ $tokens: (
             'revise': $eds-theme-color-text-grade-revise,
             'stop': $eds-theme-color-text-grade-stop
           ),
-          'disabled': $eds-theme-color-text-disabled
+          'disabled': $eds-theme-color-text-disabled,
+          'brand': (
+            'primary': $eds-theme-color-text-brand-primary
+          )
         ),
         'body': (
           'background': (
