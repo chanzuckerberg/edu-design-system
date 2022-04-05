@@ -18,7 +18,11 @@ export default {
 const Template: Story<Props> = (args) => (
   <StackedBlock>
     <StackedBlockHeader>
-      <img src="https://placehold.it/600x400" alt="placeholder" />
+      <img
+        // eslint-disable-next-line @chanzuckerberg/stories/no-ext-resources-in-stories
+        src="https://st1.latestly.com/wp-content/uploads/2021/08/31-6.jpg"
+        alt="placeholder"
+      />
     </StackedBlockHeader>
     <StackedBlockBody>
       <Heading className="u-margin-bottom-md" as="h3">
