@@ -29,16 +29,6 @@ export interface Props {
    */
   href?: string;
   /**
-   * Name of SVG icon (i.e. caret-down, minus, warning)
-   */
-  iconName?: string;
-  /**
-   * Determines position of icon relative to button children.
-   * - **before** places icon before button children
-   * - **after** places icon after button children
-   */
-  iconPosition?: 'before' | 'after';
-  /**
    * Button rendered on a dark backgorund
    */
   inverted?: boolean;
@@ -57,7 +47,7 @@ export interface Props {
   /**
    * The visible button children
    */
-  children?: string | ReactNode;
+  children: string | ReactNode;
   /**
    * Determines type of button
    * - **button** The button is a clickable button.
@@ -82,8 +72,6 @@ export const Button = React.forwardRef(
       forwardRef,
       fullWidth,
       href,
-      iconName,
-      iconPosition = 'before',
       inverted,
       loading,
       onClick,
@@ -117,25 +105,6 @@ export const Button = React.forwardRef(
     );
     const TagName = href ? 'a' : 'button';
 
-    const computedIcon = (
-      <>
-        {loading && (
-          <Icon
-            purpose="decorative"
-            name="spinner"
-            className={styles['button__icon']}
-          />
-        )}
-        {!loading && iconName && (
-          <Icon
-            purpose="decorative"
-            name={iconName}
-            className={styles['button__icon']}
-          />
-        )}
-      </>
-    );
-
     return (
       <TagName
         className={componentClassName}
@@ -147,13 +116,16 @@ export const Button = React.forwardRef(
         onClick={onClick}
         {...other}
       >
-        {iconPosition === 'before' && computedIcon}
-
-        {children && (
-          <span className={styles['button__children']}>{children}</span>
+        {loading && (
+          <Icon
+            purpose="informative"
+            title="loading"
+            name="spinner"
+            className={styles['button__icon-loading']}
+          />
         )}
 
-        {iconPosition === 'after' && computedIcon}
+        {children}
       </TagName>
     );
   },

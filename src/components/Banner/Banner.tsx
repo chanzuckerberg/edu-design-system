@@ -94,11 +94,15 @@ export const Banner = ({
         <Button
           className={styles['banner__close-btn']}
           variant="bare"
-          aria-label={closeButtonText}
-          iconName="close"
-          iconPosition="after"
           onClick={(e: any) => onDismiss(e)}
-        />
+        >
+          <Icon
+            name="close"
+            title={closeButtonText}
+            className={styles['banner__icon']}
+            purpose="informative"
+          />
+        </Button>
       )}
     </div>
   );
