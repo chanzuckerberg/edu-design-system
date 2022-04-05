@@ -93,7 +93,7 @@ export const Banner = ({
       {dismissible && (
         <Button
           className={styles['banner__close-btn']}
-          variant="bare"
+          variant="icon"
           onClick={(e: any) => onDismiss(e)}
         >
           <Icon

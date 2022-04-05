@@ -45,7 +45,7 @@ export const ModalHeader = ({
       {dismissible && (
         <Button
           className={styles['modal__close-button']}
-          variant="bare"
+          variant="icon"
           onClick={onClick}
         >
           <Icon name="close" title={closeButtonText} purpose="informative" />
