@@ -1,5 +1,3 @@
-/* TODO: point to internal exports once fully migrated */
-
 import clsx from 'clsx';
 import React from 'react';
 import styles from './Toast.module.css';
@@ -55,8 +53,9 @@ export const Toast = ({
     <div className={componentClassName} {...other}>
       <div className={styles['toast__content']}>
         <Icon
-          className={styles['toast__notification-icon']}
           name={variant === 'success' ? 'check-circle' : 'warning'}
+          purpose="informative"
+          size="1.5rem"
           title={variant}
         />
         <p className={styles['toast__text']}>{children}</p>
@@ -64,9 +63,10 @@ export const Toast = ({
       {onDismiss && (
         <Button variant="bare" onClick={onDismiss}>
           <Icon
-            className={styles['toast__close-icon']}
             name="close"
-            title={'dismiss message'}
+            purpose="informative"
+            size="2rem"
+            title="dismiss message"
           />
         </Button>
       )}

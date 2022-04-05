@@ -28,7 +28,6 @@
   border-radius: var(--eds-size-half);
 
   box-shadow: var(--eds-box-shadow-sm);
-  --svg-icon-size-default: 1.25rem;
 }
 
 .toast--success {
@@ -67,14 +66,4 @@
   @mixin eds-typography-preset-007;
 
   color: inherit;
-}
-
-.toast__notification-icon {
-  height: var(--eds-size-3);
-  width: var(--eds-size-3);
-}
-
-.toast__close-icon {
-  height: var(--eds-size-4);
-  width: var(--eds-size-4);
 }
