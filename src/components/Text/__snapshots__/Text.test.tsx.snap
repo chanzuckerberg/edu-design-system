@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Text /> Body story renders snapshot 1`] = `
+<p
+  class="text text--body"
+>
+  Body paragraph
+</p>
+`;
+
+exports[`<Text /> BodyLarge story renders snapshot 1`] = `
+<p
+  class="text text--lg"
+>
+  Body large
+</p>
+`;
+
+exports[`<Text /> BodyMedium story renders snapshot 1`] = `
+<p
+  class="text text--md"
+>
+  Body medium
+</p>
+`;
+
+exports[`<Text /> BodySmall story renders snapshot 1`] = `
+<p
+  class="text text--sm"
+>
+  Body small
+</p>
+`;
+
+exports[`<Text /> BodyVariantSuccessBold story renders snapshot 1`] = `
+<p
+  class="text text--body text--success text--bold-weight"
+>
+  Success variant body text, bold
+</p>
+`;
+
+exports[`<Text /> BodyXSmall story renders snapshot 1`] = `
+<p
+  class="text text--xs"
+>
+  Body Xsmall
+</p>
+`;
+
+exports[`<Text /> Caption story renders snapshot 1`] = `
+<p
+  class="text text--caption"
+>
+  Caption
+</p>
+`;
+
+exports[`<Text /> Overline story renders snapshot 1`] = `
+<p
+  class="text text--overline"
+>
+  Overline
+</p>
+`;
+
+exports[`<Text /> TextVariantInherit story renders snapshot 1`] = `
+<p
+  class="text text--body text--alert"
+>
+  This text surrounds the 
+  <span
+    class="text text--body text--inherit"
+  >
+    Child Text
+  </span>
+   and shows it should inherit variant from the parent
+</p>
+`;
