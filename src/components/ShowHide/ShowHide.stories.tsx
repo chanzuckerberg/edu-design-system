@@ -15,7 +15,7 @@ const Template: Story<Props> = (args) => (
     <ShowHide
       trigger={
         <Button type="button">
-          <Icon name="chevron-down" purpose="decorative" />
+          <Icon name="expamd-more" purpose="decorative" />
         </Button>
       }
       {...args}

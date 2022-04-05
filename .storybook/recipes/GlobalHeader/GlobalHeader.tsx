@@ -49,7 +49,7 @@ export const GlobalHeader = ({ className, ...other }: Props) => {
       >
         <Icon
           purpose="decorative"
-          name={isActive ? 'x' : 'menu'}
+          name={isActive ? 'close' : 'menu'}
           title={isActive ? 'Close' : 'Menu'}
         />
       </Button>
