@@ -68,16 +68,10 @@ export const CustomColor: StoryObj<IconProps> = {
   ...Default,
   args: {
     ...Default.args,
-    color: ColorTokens.EdsColorBrandGrape500,
+    color: 'EdsColorBrandGrape500',
     size: '2em',
   },
 };
-
-export const Inverted = () => (
-  <div className="u-padding-sm" style={{ background: '#000000' }}>
-    <Icon inverted={true} name="close" purpose="decorative" />
-  </div>
-);
 
 export const InText: StoryObj<IconProps> = {
   render: (args) => {

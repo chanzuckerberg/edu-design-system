@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import { nanoid } from 'nanoid';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, ReactNode, CSSProperties } from 'react';
 import svg4everybody from 'svg4everybody';
 import styles from './Icon.module.css';
 import icons from '../../icons/spritemap/spritemap.svg';
@@ -23,7 +23,7 @@ interface IconPropsBase {
    *   )
    * }
    */
-  children?: React.ReactNode;
+  children?: ReactNode;
   /**
    * The SVG Color, expects a valid css color (hex, rgb, etc.).
    * Recommendation: if `currentColor` isn't sufficient, use color tokens from
@@ -39,12 +39,6 @@ interface IconPropsBase {
    * ID used so the svg can read the title of the SVG icon to the user when accessibility is needed
    */
   id?: string;
-  /**
-   * Inverted variant for dark backgrounds
-   *
-   * TODO: investigate if needed
-   */
-  inverted?: boolean;
   /**
    * Name of icon to reference in icon sprite
    *
@@ -83,7 +77,7 @@ interface DecorativeIconProps extends IconPropsBase {
 
 export type IconProps = DecorativeIconProps | InformativeIconProps;
 
-interface SvgStyle extends React.CSSProperties {
+interface SvgStyle extends CSSProperties {
   '--icon-size'?: string;
 }
 
@@ -100,7 +94,6 @@ export const Icon = (props: IconProps) => {
     name,
     fullWidth = false,
     id,
-    inverted,
     purpose,
     size,
   } = props;
@@ -114,7 +107,6 @@ export const Icon = (props: IconProps) => {
   const componentClassName = clsx(
     styles['icon'],
     className,
-    inverted && styles['icon--inverted'],
     fullWidth && styles['icon--full-width'],
   );
   const style: SvgStyle = {
@@ -134,19 +126,19 @@ export const Icon = (props: IconProps) => {
   };
   // allow passing custom SVGs to render, otherwise
   // load from the spritemap of EDS icons
-  const svgToUse = children || <use xlinkHref={`${icons}#${name}`} />;
+  const computedSvg = children || <use xlinkHref={`${icons}#${name}`} />;
 
   if (purpose === 'informative') {
     return (
       <svg {...svgCommonProps} role="img">
         <title id={idVar}>{props.title}</title>
-        {svgToUse}
+        {computedSvg}
       </svg>
     );
   } else {
     return (
       <svg {...svgCommonProps} aria-hidden>
-        {svgToUse}
+        {computedSvg}
       </svg>
     );
   }

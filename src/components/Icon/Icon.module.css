@@ -30,13 +30,6 @@
 }
 
 /**
- * Inverted icon
- */
-.icon--inverted {
-  fill: var(--eds-theme-color-body-foreground-inverted);
-}
-
-/**
  * Full-width icon
  * 1) A block icon fills 100% of the width of its container
  */
