@@ -1,16 +1,16 @@
 import type { StoryObj } from '@storybook/react';
 import React from 'react';
-// import WarningRoundedIcon from '../Icons/WarningRounded';
 import Tag, { stylesByColor } from './Tag';
 import type { Color } from './Tag';
 import styles from './Tag.stories.module.css';
+import { Icon } from '../Icon/Icon';
 
 // todo (Andrew): look into getting rid of the `as` cast. The `stylesByColor` object's keys are
 // members of Color. Can TypeScript understand that?
 const colorOptions = Object.keys(stylesByColor) as Color[];
 
 export default {
-  title: 'Tag',
+  title: 'Molecules/Messaging/Tag',
   component: Tag,
 
   argTypes: {
@@ -60,21 +60,27 @@ export const OutlineVariants: StoryObj<Args> = {
   ),
 };
 
-// export const WithIcon: StoryObj<Args> = {
-//   ...Default,
-//   args: {
-//     icon: (
-//       <WarningRoundedIcon key="icon" purpose="informative" title="warning" />
-//     ),
-//   },
-// };
+/**
+ * TODO: ensure Icon rendered properly once migrated from v0 and add color
+ * Snap tests disabled due to TypeError in <Icon> but should be turned back on once Icon is migrated.
+ */
+export const WithIcon: StoryObj<Args> = {
+  ...Default,
+  args: {
+    icon: <Icon name="warning" />,
+  },
+  parameters: {
+    snapshot: { skip: true },
+  },
+};
 
-// export const WithLongTextAndIcon: StoryObj<Args> = {
-//   ...Default,
-//   args: {
-//     children: 'This tag has a really long text message',
-//     icon: (
-//       <WarningRoundedIcon key="icon" purpose="informative" title="warning" />
-//     ),
-//   },
-// };
+export const WithLongTextAndIcon: StoryObj<Args> = {
+  ...Default,
+  args: {
+    children: 'This tag has a really long text message',
+    icon: <Icon name="warning" />,
+  },
+  parameters: {
+    snapshot: { skip: true },
+  },
+};

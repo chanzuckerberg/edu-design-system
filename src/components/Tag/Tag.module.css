@@ -4,6 +4,11 @@
     #TAGS
 \*------------------------------------*/
 
+/**
+ * The rounded rectangle container that houses information.
+ * 1) Grabs colors from whichever variant is selected.
+ * 2) Rounds the corners of the tag.
+ */
 .tag {
   width: max-content;
   max-width: 20rem;
@@ -15,8 +20,8 @@
   display: inline-flex;
   align-items: center;
 
-  border: var(--tag-secondary-color) solid var(--eds-theme-border-width);
-  border-radius: 9999px;
+  border: var(--tag-secondary-color) solid var(--eds-theme-border-width); /* 1 */
+  border-radius: 9999px; /* 2 */
 
   /** 
    * TODO: (dcwither) when adding SvgIcon to EDS, include this in tailwind font 
@@ -24,14 +29,20 @@
    */
   --svg-icon-size-default: 1.25rem;
 
-  background-color: var(--tag-secondary-color);
+  background-color: var(--tag-secondary-color); /* 1 */
   color: var(--tag-primary-color);
 }
 
+/**
+ * If tags are used inline, ensures spacing between tags.
+ */
 .tag > :not(:last-child) {
   margin-right: var(--eds-size-half);
 }
 
+/**
+ * Keeps text centered and in one line.
+ */
 .tag__body {
   flex: 1 1 auto;
 
@@ -40,6 +51,9 @@
   white-space: nowrap;
 }
 
+/**
+ * Color variants.
+ */
 .tag--color-neutral {
   --tag-primary-color: var(--eds-theme-color-text-neutral-default);
   --tag-secondary-color: var(--eds-theme-color-background-neutral-medium);
@@ -77,7 +91,9 @@
   );
   --tag-outline-color: var(--eds-theme-color-border-brand-primary);
 }
-
+/**
+ * Adds outline to the tag.
+ */
 .tag--outline {
   border-color: var(--tag-outline-color);
 }

@@ -1,0 +1,161 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tag /> ColorVariants story renders snapshot 1`] = `
+<div
+  class="tagList"
+>
+  <span
+    class="tag tag--color-neutral text text--sm text--bold-weight"
+    color="neutral"
+  >
+    ​
+    <span
+      class="tag__body"
+    >
+      neutral
+    </span>
+  </span>
+  <span
+    class="tag tag--color-warning text text--sm text--bold-weight"
+    color="warning"
+  >
+    ​
+    <span
+      class="tag__body"
+    >
+      warning
+    </span>
+  </span>
+  <span
+    class="tag tag--color-brand text text--sm text--bold-weight"
+    color="brand"
+  >
+    ​
+    <span
+      class="tag__body"
+    >
+      brand
+    </span>
+  </span>
+  <span
+    class="tag tag--color-alert text text--sm text--bold-weight"
+    color="alert"
+  >
+    ​
+    <span
+      class="tag__body"
+    >
+      alert
+    </span>
+  </span>
+  <span
+    class="tag tag--color-revise text text--sm text--bold-weight"
+    color="revise"
+  >
+    ​
+    <span
+      class="tag__body"
+    >
+      revise
+    </span>
+  </span>
+  <span
+    class="tag tag--color-success text text--sm text--bold-weight"
+    color="success"
+  >
+    ​
+    <span
+      class="tag__body"
+    >
+      success
+    </span>
+  </span>
+</div>
+`;
+
+exports[`<Tag /> Default story renders snapshot 1`] = `
+<span
+  class="tag tag--color-warning text text--sm text--bold-weight"
+  color="warning"
+>
+  ​
+  <span
+    class="tag__body"
+  >
+    Tag text
+  </span>
+</span>
+`;
+
+exports[`<Tag /> OutlineVariants story renders snapshot 1`] = `
+<div
+  class="tagList"
+>
+  <span
+    class="tag tag--color-neutral tag--outline text text--sm text--bold-weight"
+    color="neutral"
+  >
+    ​
+    <span
+      class="tag__body"
+    >
+      neutral
+    </span>
+  </span>
+  <span
+    class="tag tag--color-warning tag--outline text text--sm text--bold-weight"
+    color="warning"
+  >
+    ​
+    <span
+      class="tag__body"
+    >
+      warning
+    </span>
+  </span>
+  <span
+    class="tag tag--color-brand tag--outline text text--sm text--bold-weight"
+    color="brand"
+  >
+    ​
+    <span
+      class="tag__body"
+    >
+      brand
+    </span>
+  </span>
+  <span
+    class="tag tag--color-alert tag--outline text text--sm text--bold-weight"
+    color="alert"
+  >
+    ​
+    <span
+      class="tag__body"
+    >
+      alert
+    </span>
+  </span>
+  <span
+    class="tag tag--color-revise tag--outline text text--sm text--bold-weight"
+    color="revise"
+  >
+    ​
+    <span
+      class="tag__body"
+    >
+      revise
+    </span>
+  </span>
+  <span
+    class="tag tag--color-success tag--outline text text--sm text--bold-weight"
+    color="success"
+  >
+    ​
+    <span
+      class="tag__body"
+    >
+      success
+    </span>
+  </span>
+</div>
+`;

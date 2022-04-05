@@ -52,7 +52,13 @@ type Props = {
  *
  * This component provides a tag (pill shaped badge) wrapper.
  */
-function Tag({ color, children, className, icon, variant = 'flat' }: Props) {
+export const Tag = ({
+  color,
+  children,
+  className,
+  icon,
+  variant = 'flat',
+}: Props) => {
   return (
     <Text
       as="span"
@@ -72,6 +78,6 @@ function Tag({ color, children, className, icon, variant = 'flat' }: Props) {
       {children && <span className={styles['tag__body']}>{children}</span>}
     </Text>
   );
-}
+};
 
 export default Tag;
