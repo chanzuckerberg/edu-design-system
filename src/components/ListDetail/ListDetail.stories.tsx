@@ -36,7 +36,7 @@ const Template: Story<Props> = (args) => (
       </TextPassage>
     </ListDetailPanel>
 
-    <ListDetailPanel title="ListDetailPanel 3" variant="success">
+    <ListDetailPanel title="ListDetailPanel 3" variant="warning">
       <TextPassage>
         <h3>ListDetailPanel 3</h3>
         <p>
@@ -48,9 +48,21 @@ const Template: Story<Props> = (args) => (
       </TextPassage>
     </ListDetailPanel>
 
-    <ListDetailPanel title="ListDetailPanel 4">
+    <ListDetailPanel title="ListDetailPanel 4" variant="success">
       <TextPassage>
-        <h3>ListDetailPanel 3</h3>
+        <h3>ListDetailPanel 4</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex{' '}
+        </p>
+      </TextPassage>
+    </ListDetailPanel>
+
+    <ListDetailPanel title="ListDetailPanel 5">
+      <TextPassage>
+        <h3>ListDetailPanel 5</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
