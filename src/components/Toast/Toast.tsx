@@ -1,10 +1,10 @@
 /* TODO: point to internal exports once fully migrated */
-// import NotificationIcon from '@chanzuckerberg/eds/lib/common/Notifications/NotificationIcon';
 
 import clsx from 'clsx';
 import React from 'react';
 import styles from './Toast.module.css';
-import { Button } from '../Button/Button';
+import Button from '../Button';
+import Icon from '../Icon';
 
 export type Variant = 'success' | 'alert';
 
@@ -54,16 +54,22 @@ export const Toast = ({
   return (
     <div className={componentClassName} {...other}>
       <div className={styles['toast__content']}>
-        {/* TODO: point to internal NotificationIcon once fully migrated */}
-        <svg fill="currentColor" width="16px" height="16px">
-          <path d="M20 6h-1v8c0 .55-.45 1-1 1H6v1c0 1.1.9 2 2 2h10l4 4V8c0-1.1-.9-2-2-2zm-3 5V4c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v13l4-4h9c1.1 0 2-.9 2-2z" />
-        </svg>
-        {/* <NotificationIcon variant={variant} /> */}
+        <Icon
+          className={styles['toast__notification-icon']}
+          name={variant === 'success' ? 'check-circle' : 'warning'}
+          title={variant}
+        />
         <p className={styles['toast__text']}>{children}</p>
       </div>
-      {/* TODO: point to internal CloseButton once fully migrated */}
-      {/* {onDismiss && <CloseButton color={variant} onClose={onDismiss} />} */}
-      {onDismiss && <Button onClick={onDismiss}>close</Button>}
+      {onDismiss && (
+        <Button variant="bare" onClick={onDismiss}>
+          <Icon
+            className={styles['toast__close-icon']}
+            name="close"
+            title={'dismiss message'}
+          />
+        </Button>
+      )}
     </div>
   );
 };
