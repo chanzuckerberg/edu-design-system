@@ -3,7 +3,7 @@ import React from 'react';
 import Tag, { stylesByColor } from './Tag';
 import type { Color } from './Tag';
 import styles from './Tag.stories.module.css';
-import { Icon } from '../Icon/Icon';
+import Icon from '../Icon';
 
 // todo (Andrew): look into getting rid of the `as` cast. The `stylesByColor` object's keys are
 // members of Color. Can TypeScript understand that?
