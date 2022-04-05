@@ -48,7 +48,7 @@ export const GlobalHeader = ({ className, ...other }: Props) => {
         onClick={toggleMenu}
       >
         <Icon
-          purpose="decorative"
+          purpose="informative"
           name={isActive ? 'close' : 'menu'}
           title={isActive ? 'Close' : 'Menu'}
         />
