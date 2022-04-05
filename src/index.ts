@@ -60,6 +60,8 @@ export { default as ModalBody } from './components/ModalBody';
 export { default as ModalFooter } from './components/ModalFooter';
 export { default as ModalHeader } from './components/ModalHeader';
 export { default as NavContainer } from './components/NavContainer';
+export { default as NotificationList } from './components/NotificationList';
+export { default as NotificationListItem } from './components/NotificationListItem';
 export { default as PageHeader } from './components/PageHeader';
 export { default as Panel } from './components/Panel';
 export { default as Popover } from './components/Popover';

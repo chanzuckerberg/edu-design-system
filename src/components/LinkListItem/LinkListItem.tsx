@@ -73,7 +73,7 @@ export const LinkListItem = ({
       >
         {iconPosition === 'before' && (
           <Icon
-            aria-hidden="true"
+            purpose="decorative"
             name={iconName}
             className={styles['link-list__icon']}
           />
@@ -91,7 +91,7 @@ export const LinkListItem = ({
 
         {iconPosition === 'after' && (
           <Icon
-            aria-hidden="true"
+            purpose="decorative"
             name={iconName}
             className={styles['link-list__icon']}
           />

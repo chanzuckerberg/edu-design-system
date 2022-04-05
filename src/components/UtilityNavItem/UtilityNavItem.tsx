@@ -84,8 +84,7 @@ export const UtilityNavItem = React.forwardRef<HTMLLIElement, Props>(
           <span className={styles['utility-nav__text']}>{text}</span>
           {children && (
             <Icon
-              aria-hidden="true"
-              focusable={false}
+              purpose="decorative"
               name="expand-more"
               className={styles['utility-nav__icon']}
             />

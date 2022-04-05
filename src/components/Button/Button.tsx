@@ -121,16 +121,14 @@ export const Button = React.forwardRef(
       <>
         {loading && (
           <Icon
-            aria-hidden="true"
-            focusable={false}
+            purpose="decorative"
             name="spinner"
             className={styles['button__icon']}
           />
         )}
         {!loading && iconName && (
           <Icon
-            aria-hidden="true"
-            focusable={false}
+            purpose="decorative"
             name={iconName}
             className={styles['button__icon']}
           />

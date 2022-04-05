@@ -8,9 +8,17 @@
  * 1) Small graphic that represents functionality
  */
 .icon {
-  display: block;
-  height: var(--eds-size-2);
-  width: var(--eds-size-2);
+  display: inline-block;
+  /**
+   * Size Priority:
+   * 1: --icon-size, passed through props
+   * 2: --icon-size-default, determined by context (text, button, pill)
+   * default: 1em, same size as surrounding text
+   *
+   * Inspired by https://www.youtube.com/watch?v=EDyiaDJJu-4
+   */
+   width: var(--icon-size, var(--icon-size-default, 1em));
+   height: var(--icon-size, var(--icon-size-default, 1em));
 
   /**
    * Icon within text passage
@@ -19,21 +27,12 @@
   .text-passage & {
     display: inline; /* 1 */
   }
-
-  /**
-   * Icon within small text passage
-   * 1) Sets icon to smaller height and width to match font size
-   */
-  .text-passage--sm & {
-    height: 12px; /* 1 */
-    width: 12px; /* 1 */
-  }
 }
 
 /**
-   * Inverted icon
-   * 1) Sets icon to smaller height and width to match font size
-   */
-.icon--inverted {
-  fill: var(--eds-theme-color-body-foreground-inverted);
+ * Full-width icon
+ * 1) A block icon fills 100% of the width of its container
+ */
+.icon--full-width {
+  display: block
 }

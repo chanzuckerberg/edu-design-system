@@ -1,3 +1,4 @@
+import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { Meta, Story, StoryObj } from '@storybook/react';
 import { within, userEvent } from '@storybook/testing-library';
 import clsx from 'clsx';
@@ -38,6 +39,9 @@ export const LightVariant: StoryObj<Args> = {};
 export const DarkVariant: StoryObj<Args> = {
   args: {
     variant: 'dark',
+  },
+  parameters: {
+    badges: [BADGE.DEPRECATED],
   },
 };
 
