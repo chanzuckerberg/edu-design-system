@@ -49,43 +49,44 @@
 /**
  * Color variants.
  */
-.tag--color-default {
+.tag--default {
   --tag-primary-color: var(--eds-theme-color-text-neutral-default);
   --tag-secondary-color: var(--eds-theme-color-background-neutral-medium);
   --tag-outline-color: var(--eds-theme-color-border-neutral-default);
 }
 
-.tag--color-stop {
+.tag--stop {
   --tag-primary-color: var(--eds-theme-color-text-utility-error);
   --tag-secondary-color: var(--eds-theme-color-background-utility-error);
   --tag-outline-color: var(--eds-theme-color-border-utility-error-default);
 }
 
-.tag--color-go {
+.tag--go {
   --tag-primary-color: var(--eds-theme-color-text-utility-success);
   --tag-secondary-color: var(--eds-theme-color-background-utility-success);
   --tag-outline-color: var(--eds-theme-color-border-utility-success-default);
 }
 
-.tag--color-warning {
+.tag--warning {
   --tag-primary-color: var(--eds-theme-color-text-utility-warning);
   --tag-secondary-color: var(--eds-theme-color-background-utility-warning);
   --tag-outline-color: var(--eds-theme-color-border-utility-warning-default);
 }
 
-.tag--color-yield {
+.tag--yield {
   --tag-primary-color: var(--eds-theme-color-text-grade-revise);
   --tag-secondary-color: var(--eds-theme-color-background-grade-revise-subtle);
   --tag-outline-color: var(--eds-theme-color-border-grade-revise-default);
 }
 
-.tag--color-brand {
+.tag--brand {
   --tag-primary-color: var(--eds-theme-color-text-brand-primary);
   --tag-secondary-color: var(
     --eds-theme-color-background-brand-primary-default
   );
   --tag-outline-color: var(--eds-theme-color-border-brand-primary);
 }
+
 /**
  * Adds outline to the tag.
  */

@@ -5,8 +5,7 @@ exports[`<Tag /> ColorVariants story renders snapshot 1`] = `
   class="tagList"
 >
   <span
-    class="tag tag--color-default text text--sm text--bold-weight"
-    color="default"
+    class="tag tag--default text text--sm text--bold-weight"
   >
     ​
     <span
@@ -16,8 +15,7 @@ exports[`<Tag /> ColorVariants story renders snapshot 1`] = `
     </span>
   </span>
   <span
-    class="tag tag--color-go text text--sm text--bold-weight"
-    color="go"
+    class="tag tag--go text text--sm text--bold-weight"
   >
     ​
     <span
@@ -27,8 +25,7 @@ exports[`<Tag /> ColorVariants story renders snapshot 1`] = `
     </span>
   </span>
   <span
-    class="tag tag--color-yield text text--sm text--bold-weight"
-    color="yield"
+    class="tag tag--yield text text--sm text--bold-weight"
   >
     ​
     <span
@@ -38,8 +35,7 @@ exports[`<Tag /> ColorVariants story renders snapshot 1`] = `
     </span>
   </span>
   <span
-    class="tag tag--color-stop text text--sm text--bold-weight"
-    color="stop"
+    class="tag tag--stop text text--sm text--bold-weight"
   >
     ​
     <span
@@ -49,8 +45,7 @@ exports[`<Tag /> ColorVariants story renders snapshot 1`] = `
     </span>
   </span>
   <span
-    class="tag tag--color-warning text text--sm text--bold-weight"
-    color="warning"
+    class="tag tag--warning text text--sm text--bold-weight"
   >
     ​
     <span
@@ -60,8 +55,7 @@ exports[`<Tag /> ColorVariants story renders snapshot 1`] = `
     </span>
   </span>
   <span
-    class="tag tag--color-brand text text--sm text--bold-weight"
-    color="brand"
+    class="tag tag--brand text text--sm text--bold-weight"
   >
     ​
     <span
@@ -75,8 +69,7 @@ exports[`<Tag /> ColorVariants story renders snapshot 1`] = `
 
 exports[`<Tag /> Default story renders snapshot 1`] = `
 <span
-  class="tag tag--color-default text text--sm text--bold-weight"
-  color="default"
+  class="tag tag--default text text--sm text--bold-weight"
 >
   ​
   <span
@@ -92,8 +85,7 @@ exports[`<Tag /> OutlineVariants story renders snapshot 1`] = `
   class="tagList"
 >
   <span
-    class="tag tag--color-default tag--outline text text--sm text--bold-weight"
-    color="default"
+    class="tag tag--default tag--outline text text--sm text--bold-weight"
   >
     ​
     <span
@@ -103,8 +95,7 @@ exports[`<Tag /> OutlineVariants story renders snapshot 1`] = `
     </span>
   </span>
   <span
-    class="tag tag--color-go tag--outline text text--sm text--bold-weight"
-    color="go"
+    class="tag tag--go tag--outline text text--sm text--bold-weight"
   >
     ​
     <span
@@ -114,8 +105,7 @@ exports[`<Tag /> OutlineVariants story renders snapshot 1`] = `
     </span>
   </span>
   <span
-    class="tag tag--color-yield tag--outline text text--sm text--bold-weight"
-    color="yield"
+    class="tag tag--yield tag--outline text text--sm text--bold-weight"
   >
     ​
     <span
@@ -125,8 +115,7 @@ exports[`<Tag /> OutlineVariants story renders snapshot 1`] = `
     </span>
   </span>
   <span
-    class="tag tag--color-stop tag--outline text text--sm text--bold-weight"
-    color="stop"
+    class="tag tag--stop tag--outline text text--sm text--bold-weight"
   >
     ​
     <span
@@ -136,8 +125,7 @@ exports[`<Tag /> OutlineVariants story renders snapshot 1`] = `
     </span>
   </span>
   <span
-    class="tag tag--color-warning tag--outline text text--sm text--bold-weight"
-    color="warning"
+    class="tag tag--warning tag--outline text text--sm text--bold-weight"
   >
     ​
     <span
@@ -147,8 +135,7 @@ exports[`<Tag /> OutlineVariants story renders snapshot 1`] = `
     </span>
   </span>
   <span
-    class="tag tag--color-brand tag--outline text text--sm text--bold-weight"
-    color="brand"
+    class="tag tag--brand tag--outline text text--sm text--bold-weight"
   >
     ​
     <span

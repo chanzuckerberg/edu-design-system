@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './Tag.module.css';
 import Text from '../Text';
 
-export const COLORS = [
+export const VARIANTS = [
   'default',
   'go',
   'yield',
@@ -12,14 +12,14 @@ export const COLORS = [
   'brand',
 ] as const;
 
-export type Color = typeof COLORS[number];
+export type Variant = typeof VARIANTS[number];
 
 type Props = {
   /**
-   * The color of the tag. New colors should be supported in the flow type,
-   * in the COLORS array, and by its separate style in CSS file.
+   * The color variant of the tag. New variants should be supported in the flow type,
+   * in the VARIANTS array, and by its separate style in CSS file.
    */
-  color?: Color;
+  variant?: Variant;
   /**
    * CSS class names that can be appended to the component for styling.
    */
@@ -34,9 +34,9 @@ type Props = {
    */
   text?: React.ReactNode;
   /**
-   * Style of the tag.
+   * Adds an outline for the tag. Defaulted to no outline.
    */
-  variant?: 'flat' | 'outline';
+  hasOutline?: boolean;
 };
 
 /**
@@ -47,11 +47,11 @@ type Props = {
  * This component provides a tag (pill shaped badge) wrapper.
  */
 export const Tag = ({
-  color = 'default',
+  variant = 'default',
   className,
   icon,
   text,
-  variant = 'flat',
+  hasOutline = false,
 }: Props) => {
   return (
     <Text
@@ -59,10 +59,9 @@ export const Tag = ({
       className={clsx(
         className,
         styles['tag'],
-        styles[`tag--color-${color}`],
-        variant === 'outline' && styles['tag--outline'],
+        styles[`tag--${variant}`],
+        hasOutline && styles['tag--outline'],
       )}
-      color={color}
       size="sm"
       weight="bold"
     >

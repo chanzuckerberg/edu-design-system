@@ -40,7 +40,7 @@ Centered.args = {
 export const TitleAfter = Template.bind({});
 TitleAfter.args = {
   title: 'Page header title',
-  titleAfter: <Tag>Title after content</Tag>,
+  titleAfter: <Tag text="Title after content" />,
   description:
     'This is a description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
 };

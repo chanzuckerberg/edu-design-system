@@ -1,6 +1,6 @@
 import type { StoryObj } from '@storybook/react';
 import React from 'react';
-import Tag, { COLORS } from './Tag';
+import Tag, { VARIANTS } from './Tag';
 import styles from './Tag.stories.module.css';
 import Icon from '../Icon';
 
@@ -9,17 +9,17 @@ export default {
   component: Tag,
 
   argTypes: {
-    color: {
+    variant: {
       control: {
         type: 'select',
-        options: COLORS,
+        options: VARIANTS,
       },
     },
   },
 
   args: {
     text: 'Tag text',
-    color: 'default' as const,
+    variant: 'default' as const,
   },
 };
 
@@ -30,8 +30,8 @@ export const Default: StoryObj<Args> = {};
 export const ColorVariants: StoryObj<Args> = {
   render: (args) => (
     <div className={styles.tagList}>
-      {COLORS.map((color) => {
-        return <Tag key={color} {...args} color={color} text={color} />;
+      {VARIANTS.map((variant) => {
+        return <Tag key={variant} {...args} variant={variant} text={variant} />;
       })}
     </div>
   ),
@@ -40,14 +40,14 @@ export const ColorVariants: StoryObj<Args> = {
 export const OutlineVariants: StoryObj<Args> = {
   render: (args) => (
     <div className={styles.tagList}>
-      {COLORS.map((color) => {
+      {VARIANTS.map((variant) => {
         return (
           <Tag
-            key={color}
+            key={variant}
             {...args}
-            color={color}
-            text={color}
-            variant="outline"
+            variant={variant}
+            text={variant}
+            hasOutline={true}
           />
         );
       })}
@@ -68,14 +68,14 @@ export const WithIcon: StoryObj<Args> = {
   },
   render: (args) => (
     <div className={styles.tagList}>
-      {COLORS.map((color) => {
+      {VARIANTS.map((variant) => {
         return (
           <Tag
-            key={color}
+            key={variant}
             {...args}
-            color={color}
-            text={color}
-            variant="outline"
+            variant={variant}
+            text={variant}
+            hasOutline={true}
           />
         );
       })}
@@ -94,8 +94,10 @@ export const WithLongTextAndIcon: StoryObj<Args> = {
   },
   render: (args) => (
     <div className={styles.tagList}>
-      {COLORS.map((color) => {
-        return <Tag key={color} {...args} color={color} variant="outline" />;
+      {VARIANTS.map((variant) => {
+        return (
+          <Tag key={variant} {...args} variant={variant} hasOutline={true} />
+        );
       })}
     </div>
   ),
