@@ -42,7 +42,7 @@ module.exports = (plop) => {
         separator: '',
         path: 'src/index.ts',
         template:
-          'export { {{default as pascalCase name}} } from "./components/{{pascalCase name}}";',
+          'export { default as {{pascalCase name}} } from "./components/{{pascalCase name}}";',
       },
       // From https://github.com/bradfrost/czi-vanilla-storybook
       function sortIndex() {
