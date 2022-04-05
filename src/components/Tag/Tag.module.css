@@ -25,7 +25,7 @@
 
   background-color: var(--tag-secondary-color); /* 1 */
   color: var(--tag-primary-color);
-  --icon-size: 1.25rem;
+  --icon-size-default: 1.25rem;
 }
 
 /**
@@ -76,7 +76,7 @@
 .tag--color-yield {
   --tag-primary-color: var(--eds-theme-color-text-grade-revise);
   --tag-secondary-color: var(--eds-theme-color-background-grade-revise-subtle);
-  --tag-outline-color: var(--eds-theme-color-border-grade-revise-subtle);
+  --tag-outline-color: var(--eds-theme-color-border-grade-revise-default);
 }
 
 .tag--color-brand {

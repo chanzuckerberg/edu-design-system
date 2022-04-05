@@ -236,8 +236,8 @@
           "grade": {
             "complete": "#8FDCB3",
             "revise": {
-              "default": "#FFF1E9",
-              "subtle": "#FFDD80"
+              "default": "#FFDD80",
+              "subtle": "#FFF1E9"
             },
             "stop": "#FB90B0"
           },

@@ -3,27 +3,23 @@ import React from 'react';
 import styles from './Tag.module.css';
 import Text from '../Text';
 
-export type Color = 'default' | 'stop' | 'go' | 'warning' | 'yield' | 'brand';
+export const COLORS = [
+  'default',
+  'go',
+  'yield',
+  'stop',
+  'warning',
+  'brand',
+] as const;
 
-export const stylesByColor = {
-  default: styles[`tag--color-default`],
-  warning: styles[`tag--color-warning`],
-  brand: styles[`tag--color-brand`],
-  stop: styles[`tag--color-stop`],
-  yield: styles[`tag--color-yield`],
-  go: styles[`tag--color-go`],
-};
+export type Color = typeof COLORS[number];
 
 type Props = {
   /**
    * The color of the tag. New colors should be supported in the flow type,
-   * in the stylesByColor object, and by its separate style in CSS file.
+   * in the COLORS array, and by its separate style in CSS file.
    */
-  color: Color;
-  /**
-   * The child node(s) contents of the tag, nested inside the component, in addition to the icon.
-   */
-  children: React.ReactNode;
+  color?: Color;
   /**
    * CSS class names that can be appended to the component for styling.
    */
@@ -33,6 +29,10 @@ type Props = {
    * by the color prop).
    */
   icon?: React.ReactNode;
+  /**
+   * The text contents of the tag, nested inside the component, in addition to the icon.
+   */
+  text?: React.ReactNode;
   /**
    * Style of the tag.
    */
@@ -48,9 +48,9 @@ type Props = {
  */
 export const Tag = ({
   color = 'default',
-  children,
   className,
   icon,
+  text,
   variant = 'flat',
 }: Props) => {
   return (
@@ -69,7 +69,7 @@ export const Tag = ({
       {icon}
       {/* No width space to ensure height of contents */}
       {'\u200B'}
-      {children && <span className={styles['tag__body']}>{children}</span>}
+      {text && <span className={styles['tag__body']}>{text}</span>}
     </Text>
   );
 };

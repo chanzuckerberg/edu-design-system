@@ -1,13 +1,8 @@
 import type { StoryObj } from '@storybook/react';
 import React from 'react';
-import Tag, { stylesByColor } from './Tag';
-import type { Color } from './Tag';
+import Tag, { COLORS } from './Tag';
 import styles from './Tag.stories.module.css';
 import Icon from '../Icon';
-
-// TODO: (Andrew): look into getting rid of the `as` cast. The `stylesByColor` object's keys are
-// members of Color. Can TypeScript understand that?
-const colorOptions = Object.keys(stylesByColor) as Color[];
 
 export default {
   title: 'Molecules/Messaging/Tag',
@@ -17,13 +12,13 @@ export default {
     color: {
       control: {
         type: 'select',
-        options: colorOptions,
+        options: COLORS,
       },
     },
   },
 
   args: {
-    children: 'Tag text',
+    text: 'Tag text',
     color: 'default' as const,
   },
 };
@@ -35,12 +30,8 @@ export const Default: StoryObj<Args> = {};
 export const ColorVariants: StoryObj<Args> = {
   render: (args) => (
     <div className={styles.tagList}>
-      {colorOptions.map((color) => {
-        return (
-          <Tag key={color} {...args} color={color}>
-            {color}
-          </Tag>
-        );
+      {COLORS.map((color) => {
+        return <Tag key={color} {...args} color={color} text={color} />;
       })}
     </div>
   ),
@@ -49,11 +40,15 @@ export const ColorVariants: StoryObj<Args> = {
 export const OutlineVariants: StoryObj<Args> = {
   render: (args) => (
     <div className={styles.tagList}>
-      {colorOptions.map((color) => {
+      {COLORS.map((color) => {
         return (
-          <Tag key={color} {...args} color={color} variant="outline">
-            {color}
-          </Tag>
+          <Tag
+            key={color}
+            {...args}
+            color={color}
+            text={color}
+            variant="outline"
+          />
         );
       })}
     </div>
@@ -61,26 +56,47 @@ export const OutlineVariants: StoryObj<Args> = {
 };
 
 /**
- * TODO: ensure Icon rendered properly once migrated from v0 and add color
- * Snap tests disabled due to TypeError in <Icon> but should be turned back on once Icon is migrated.
+ * Snap tests disabled due to TypeError in <Icon> but should be turned back on once fixed.
  */
 export const WithIcon: StoryObj<Args> = {
   ...Default,
   args: {
-    icon: <Icon name="warning" />,
+    icon: <Icon purpose="decorative" name="favorite" />,
   },
   parameters: {
     snapshot: { skip: true },
   },
+  render: (args) => (
+    <div className={styles.tagList}>
+      {COLORS.map((color) => {
+        return (
+          <Tag
+            key={color}
+            {...args}
+            color={color}
+            text={color}
+            variant="outline"
+          />
+        );
+      })}
+    </div>
+  ),
 };
 
 export const WithLongTextAndIcon: StoryObj<Args> = {
   ...Default,
   args: {
-    children: 'This tag has a really long text message',
-    icon: <Icon name="warning" />,
+    text: 'This tag has a really long text message',
+    icon: <Icon purpose="decorative" name="star" />,
   },
   parameters: {
     snapshot: { skip: true },
   },
+  render: (args) => (
+    <div className={styles.tagList}>
+      {COLORS.map((color) => {
+        return <Tag key={color} {...args} color={color} variant="outline" />;
+      })}
+    </div>
+  ),
 };

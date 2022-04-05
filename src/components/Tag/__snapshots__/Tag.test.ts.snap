@@ -16,6 +16,39 @@ exports[`<Tag /> ColorVariants story renders snapshot 1`] = `
     </span>
   </span>
   <span
+    class="tag tag--color-go text text--sm text--bold-weight"
+    color="go"
+  >
+    ​
+    <span
+      class="tag__body"
+    >
+      go
+    </span>
+  </span>
+  <span
+    class="tag tag--color-yield text text--sm text--bold-weight"
+    color="yield"
+  >
+    ​
+    <span
+      class="tag__body"
+    >
+      yield
+    </span>
+  </span>
+  <span
+    class="tag tag--color-stop text text--sm text--bold-weight"
+    color="stop"
+  >
+    ​
+    <span
+      class="tag__body"
+    >
+      stop
+    </span>
+  </span>
+  <span
     class="tag tag--color-warning text text--sm text--bold-weight"
     color="warning"
   >
@@ -35,39 +68,6 @@ exports[`<Tag /> ColorVariants story renders snapshot 1`] = `
       class="tag__body"
     >
       brand
-    </span>
-  </span>
-  <span
-    class="tag tag--color-stop text text--sm text--bold-weight"
-    color="stop"
-  >
-    ​
-    <span
-      class="tag__body"
-    >
-      stop
-    </span>
-  </span>
-  <span
-    class="tag tag--color-yield text text--sm text--bold-weight"
-    color="yield"
-  >
-    ​
-    <span
-      class="tag__body"
-    >
-      yield
-    </span>
-  </span>
-  <span
-    class="tag tag--color-go text text--sm text--bold-weight"
-    color="go"
-  >
-    ​
-    <span
-      class="tag__body"
-    >
-      go
     </span>
   </span>
 </div>
@@ -103,6 +103,39 @@ exports[`<Tag /> OutlineVariants story renders snapshot 1`] = `
     </span>
   </span>
   <span
+    class="tag tag--color-go tag--outline text text--sm text--bold-weight"
+    color="go"
+  >
+    ​
+    <span
+      class="tag__body"
+    >
+      go
+    </span>
+  </span>
+  <span
+    class="tag tag--color-yield tag--outline text text--sm text--bold-weight"
+    color="yield"
+  >
+    ​
+    <span
+      class="tag__body"
+    >
+      yield
+    </span>
+  </span>
+  <span
+    class="tag tag--color-stop tag--outline text text--sm text--bold-weight"
+    color="stop"
+  >
+    ​
+    <span
+      class="tag__body"
+    >
+      stop
+    </span>
+  </span>
+  <span
     class="tag tag--color-warning tag--outline text text--sm text--bold-weight"
     color="warning"
   >
@@ -122,39 +155,6 @@ exports[`<Tag /> OutlineVariants story renders snapshot 1`] = `
       class="tag__body"
     >
       brand
-    </span>
-  </span>
-  <span
-    class="tag tag--color-stop tag--outline text text--sm text--bold-weight"
-    color="stop"
-  >
-    ​
-    <span
-      class="tag__body"
-    >
-      stop
-    </span>
-  </span>
-  <span
-    class="tag tag--color-yield tag--outline text text--sm text--bold-weight"
-    color="yield"
-  >
-    ​
-    <span
-      class="tag__body"
-    >
-      yield
-    </span>
-  </span>
-  <span
-    class="tag tag--color-go tag--outline text text--sm text--bold-weight"
-    color="go"
-  >
-    ​
-    <span
-      class="tag__body"
-    >
-      go
     </span>
   </span>
 </div>

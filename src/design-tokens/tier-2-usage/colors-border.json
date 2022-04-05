@@ -71,10 +71,10 @@
             },
             "revise": {
               "default": {
-                "value": "{eds.color.other.orange.100}"
+                "value": "{eds.color.other.yellow.300}"
               },
               "subtle": {
-                "value": "{eds.color.other.yellow.300}"
+                "value": "{eds.color.other.orange.100}"
               }
             },
             "stop": {

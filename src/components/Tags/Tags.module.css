@@ -1,0 +1,58 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #TAGS
+\*------------------------------------*/
+
+/**
+ * 1) List of items used for sorting
+ */
+.tags {
+  @mixin reset;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--eds-size-1);
+  list-style: none;
+}
+
+/**
+ * Tag item
+ */
+/* stylelint-disable-next-line block-no-empty */
+.tags__item {
+}
+
+/**
+ * Tags tag
+ * 1) Actual button that represents tags
+ */
+.tags__tag {
+  display: flex;
+  align-items: center;
+  -webkit-appearance: none;
+  border: none;
+  border-radius: var(--eds-theme-border-radius);
+  background: var(--eds-theme-color-neutral-subtle-background);
+  padding: var(--eds-size-half) var(--eds-size-1);
+  @mixin eds-theme-typography-tag;
+  line-height: 1;
+  cursor: pointer;
+
+  &:focus-visible {
+    @mixin focus;
+  }
+}
+
+/**
+ * Tags icon
+ */
+.tags__icon {
+  position: relative;
+  top: 0;
+  padding: 2px;
+  height: 14px;
+  width: 14px;
+  margin-left: var(--eds-size-1);
+  pointer-events: none;
+  transition: var(--eds-anim-fade-quick) var(--eds-anim-ease);
+}
