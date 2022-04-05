@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import React, { MouseEventHandler, ReactNode } from 'react';
 import Button from '../Button';
 import styles from '../Drawer/Drawer.module.css';
+import Icon from '../Icon';
 
 export interface Props {
   /**
@@ -44,12 +45,11 @@ export const DrawerHeader = ({
       {dismissible && (
         <Button
           className={styles['drawer__close-button']}
-          iconPosition="before"
-          iconName="close"
-          aria-label={closeButtonText}
           variant="bare"
           onClick={onClick}
-        />
+        >
+          <Icon name="close" purpose="informative" title={closeButtonText} />
+        </Button>
       )}
     </header>
   );
