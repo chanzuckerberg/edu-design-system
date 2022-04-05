@@ -26,13 +26,15 @@ const Template: Story<Props> = (args) => (
 
 export const Default = Template.bind({});
 Default.args = {
-  imgSrc: 'https://placehold.it/600x400',
+  // eslint-disable-next-line @chanzuckerberg/stories/no-ext-resources-in-stories
+  imgSrc: 'https://st1.latestly.com/wp-content/uploads/2021/08/31-6.jpg',
   imgAlt: 'placeholder image',
 };
 
 export const Reversed = Template.bind({});
 Reversed.args = {
   variant: 'reversed',
-  imgSrc: 'https://placehold.it/600x400',
+  // eslint-disable-next-line @chanzuckerberg/stories/no-ext-resources-in-stories
+  imgSrc: 'https://st1.latestly.com/wp-content/uploads/2021/08/31-6.jpg',
   imgAlt: 'placeholder image',
 };
