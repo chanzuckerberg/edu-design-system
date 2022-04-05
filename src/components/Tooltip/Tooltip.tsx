@@ -52,7 +52,10 @@ type TooltipProps = {
   /**
    * Whether the tooltip has a light or dark background.
    */
-  variant?: 'light' | 'dark';
+  variant?:
+    | 'light'
+    /** @deprecated */
+    | 'dark';
   /**
    * Whether the tooltip is always visible or always invisible.
    *
@@ -83,6 +86,11 @@ export const Tooltip = ({
   text,
   ...rest
 }: TooltipProps) => {
+  if (variant === 'dark' && process.env.NODE_ENV !== 'production') {
+    console.warn(
+      'The dark variant is deprecated and will be removed in an upcoming release. Please use the default light variant instead.',
+    );
+  }
   // Hides tooltip when escape key is pressed, following:
   // https://atomiks.github.io/tippyjs/v6/plugins/#hideonesc
   const hideOnEsc: Plugin = {
