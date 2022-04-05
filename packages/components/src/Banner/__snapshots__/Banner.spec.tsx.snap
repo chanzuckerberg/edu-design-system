@@ -53,7 +53,7 @@ exports[`<Banner /> AlertDismissable story renders snapshot 1`] = `
   class="bannerDialog horizontal dismissable colorAlert"
 >
   <button
-    class="button dismiss colorAlert button variantLink colorAlert"
+    class="dismiss button sizeLarge variantPlain colorAlert"
     type="button"
   >
     <svg
@@ -67,7 +67,7 @@ exports[`<Banner /> AlertDismissable story renders snapshot 1`] = `
       xmlns="http://www.w3.org/2000/svg"
     >
       <title>
-        close
+        dismiss banner
       </title>
       <path
         d="M18.3 5.71a.9959.9959 0 00-1.41 0L12 10.59 7.11 5.7a.9959.9959 0 00-1.41 0c-.39.39-.39 1.02 0 1.41L10.59 12 5.7 16.89c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L12 13.41l4.89 4.89c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"
@@ -167,7 +167,7 @@ exports[`<Banner /> BrandDismissable story renders snapshot 1`] = `
   class="bannerDialog horizontal dismissable colorBrand"
 >
   <button
-    class="button dismiss colorBrand button variantLink colorBrand"
+    class="dismiss button sizeLarge variantPlain colorBrand"
     type="button"
   >
     <svg
@@ -181,7 +181,7 @@ exports[`<Banner /> BrandDismissable story renders snapshot 1`] = `
       xmlns="http://www.w3.org/2000/svg"
     >
       <title>
-        close
+        dismiss banner
       </title>
       <path
         d="M18.3 5.71a.9959.9959 0 00-1.41 0L12 10.59 7.11 5.7a.9959.9959 0 00-1.41 0c-.39.39-.39 1.02 0 1.41L10.59 12 5.7 16.89c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L12 13.41l4.89 4.89c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"
@@ -233,7 +233,7 @@ exports[`<Banner /> DismissableWithAction story renders snapshot 1`] = `
   class="bannerDialog horizontal dismissable colorBrand"
 >
   <button
-    class="button dismiss colorBrand button variantLink colorBrand"
+    class="dismiss button sizeLarge variantPlain colorBrand"
     type="button"
   >
     <svg
@@ -247,7 +247,7 @@ exports[`<Banner /> DismissableWithAction story renders snapshot 1`] = `
       xmlns="http://www.w3.org/2000/svg"
     >
       <title>
-        close
+        dismiss banner
       </title>
       <path
         d="M18.3 5.71a.9959.9959 0 00-1.41 0L12 10.59 7.11 5.7a.9959.9959 0 00-1.41 0c-.39.39-.39 1.02 0 1.41L10.59 12 5.7 16.89c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L12 13.41l4.89 4.89c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"
@@ -398,7 +398,7 @@ exports[`<Banner /> NeutralDismissable story renders snapshot 1`] = `
   class="bannerDialog horizontal dismissable colorNeutral"
 >
   <button
-    class="button dismiss colorNeutral button variantLink colorNeutral"
+    class="dismiss button sizeLarge variantPlain colorNeutral"
     type="button"
   >
     <svg
@@ -412,7 +412,7 @@ exports[`<Banner /> NeutralDismissable story renders snapshot 1`] = `
       xmlns="http://www.w3.org/2000/svg"
     >
       <title>
-        close
+        dismiss banner
       </title>
       <path
         d="M18.3 5.71a.9959.9959 0 00-1.41 0L12 10.59 7.11 5.7a.9959.9959 0 00-1.41 0c-.39.39-.39 1.02 0 1.41L10.59 12 5.7 16.89c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L12 13.41l4.89 4.89c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"
@@ -586,7 +586,7 @@ exports[`<Banner /> SuccessDismissable story renders snapshot 1`] = `
   class="bannerDialog horizontal dismissable colorSuccess"
 >
   <button
-    class="button dismiss colorSuccess button variantLink colorSuccess"
+    class="dismiss button sizeLarge variantPlain colorSuccess"
     type="button"
   >
     <svg
@@ -600,7 +600,7 @@ exports[`<Banner /> SuccessDismissable story renders snapshot 1`] = `
       xmlns="http://www.w3.org/2000/svg"
     >
       <title>
-        close
+        dismiss banner
       </title>
       <path
         d="M18.3 5.71a.9959.9959 0 00-1.41 0L12 10.59 7.11 5.7a.9959.9959 0 00-1.41 0c-.39.39-.39 1.02 0 1.41L10.59 12 5.7 16.89c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L12 13.41l4.89 4.89c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"
@@ -696,7 +696,7 @@ exports[`<Banner /> VerticalDismissable story renders snapshot 1`] = `
   class="bannerDialog dismissable colorBrand"
 >
   <button
-    class="button dismiss colorBrand button variantLink colorBrand"
+    class="dismiss button sizeLarge variantPlain colorBrand"
     type="button"
   >
     <svg
@@ -710,7 +710,7 @@ exports[`<Banner /> VerticalDismissable story renders snapshot 1`] = `
       xmlns="http://www.w3.org/2000/svg"
     >
       <title>
-        close
+        dismiss banner
       </title>
       <path
         d="M18.3 5.71a.9959.9959 0 00-1.41 0L12 10.59 7.11 5.7a.9959.9959 0 00-1.41 0c-.39.39-.39 1.02 0 1.41L10.59 12 5.7 16.89c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L12 13.41l4.89 4.89c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"
@@ -762,7 +762,7 @@ exports[`<Banner /> VerticalDismissableWithAction story renders snapshot 1`] = `
   class="bannerDialog dismissable colorBrand"
 >
   <button
-    class="button dismiss colorBrand button variantLink colorBrand"
+    class="dismiss button sizeLarge variantPlain colorBrand"
     type="button"
   >
     <svg
@@ -776,7 +776,7 @@ exports[`<Banner /> VerticalDismissableWithAction story renders snapshot 1`] = `
       xmlns="http://www.w3.org/2000/svg"
     >
       <title>
-        close
+        dismiss banner
       </title>
       <path
         d="M18.3 5.71a.9959.9959 0 00-1.41 0L12 10.59 7.11 5.7a.9959.9959 0 00-1.41 0c-.39.39-.39 1.02 0 1.41L10.59 12 5.7 16.89c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L12 13.41l4.89 4.89c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"
@@ -982,7 +982,7 @@ exports[`<Banner /> WarningDismissable story renders snapshot 1`] = `
   class="bannerDialog horizontal dismissable colorWarning"
 >
   <button
-    class="button dismiss colorWarning button variantLink colorWarning"
+    class="dismiss button sizeLarge variantPlain colorWarning"
     type="button"
   >
     <svg
@@ -996,7 +996,7 @@ exports[`<Banner /> WarningDismissable story renders snapshot 1`] = `
       xmlns="http://www.w3.org/2000/svg"
     >
       <title>
-        close
+        dismiss banner
       </title>
       <path
         d="M18.3 5.71a.9959.9959 0 00-1.41 0L12 10.59 7.11 5.7a.9959.9959 0 00-1.41 0c-.39.39-.39 1.02 0 1.41L10.59 12 5.7 16.89c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L12 13.41l4.89 4.89c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"
