@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import React from "react";
-import CloseButton from "../CloseButton";
+import Button from "../Button";
+import CloseRoundedIcon from "../Icons/CloseRounded";
 import Text from "../Text";
 import colorStyles from "../common/Notifications/Notification.module.css";
 import NotificationIcon from "../common/Notifications/NotificationIcon";
@@ -61,7 +62,15 @@ export default function Toast({
           {children}
         </Text>
       </div>
-      {onDismiss && <CloseButton color={color} onClose={onDismiss} />}
+      {onDismiss && (
+        <Button color={color} onClick={onDismiss} variant="plain">
+          <CloseRoundedIcon
+            purpose="informative"
+            size={"2rem"}
+            title={"dismiss message"}
+          />
+        </Button>
+      )}
     </div>
   );
 }
