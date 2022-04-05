@@ -12,10 +12,14 @@ There are several ways to use EDS icons in an application. The first and most di
 
 View the "Icon Grid" story in Storybook for a visualization of all available icons to pass into the `name` prop.
 
-The second way involves components that bake the `Icon` component into the internals of a component, such as `Button`. For these components, use the `iconName` prop (and perhaps also the `iconPosition` prop) like so:
+The second way involves components that bake the `Icon` component into the internals of a component, such as `LinkListItem`. For these components, use the `iconName` prop (and perhaps also the `iconPosition` prop) like so:
 
 ```jsx
-<Button iconName="magnifying-glass" iconPosition="after">Search</Button>
+<LinkListItem
+  iconName="magnifying-glass"
+  iconPosition="after"
+  text="Link List Item 1"
+/>
 ```
 
 ---

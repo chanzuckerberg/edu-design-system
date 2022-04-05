@@ -2,6 +2,7 @@ import { Story, Meta } from '@storybook/react';
 import React from 'react';
 
 import { Button, Props } from './Button';
+import Icon from '../Icon';
 
 export default {
   title: 'Molecules/Buttons/Button',
@@ -22,16 +23,22 @@ Default.args = { children: 'Button' };
 
 export const DefaultWithIconBefore = Template.bind({});
 DefaultWithIconBefore.args = {
-  children: 'Button',
-  iconPosition: 'before',
-  iconName: 'chevron-left',
+  children: (
+    <>
+      <Icon purpose="decorative" name="chevron-left" />
+      Button
+    </>
+  ),
 };
 
 export const DefaultWithIconAfter = Template.bind({});
 DefaultWithIconAfter.args = {
-  children: 'Button',
-  iconPosition: 'after',
-  iconName: 'chevron-right',
+  children: (
+    <>
+      Button
+      <Icon purpose="decorative" name="chevron-right" />
+    </>
+  ),
 };
 
 export const DefaultDisabled = Template.bind({});
@@ -60,18 +67,14 @@ PrimaryInverted.args = {
 export const BareIcon = Template.bind({});
 BareIcon.args = {
   variant: 'bare',
-  'aria-label': 'Close',
-  iconName: 'close',
-  iconPosition: 'before',
+  children: <Icon purpose="informative" title="Close" name="close" />,
 };
 
 export const BareIconInverted = InvertedTemplate.bind({});
 BareIconInverted.args = {
   inverted: true,
   variant: 'bare',
-  'aria-label': 'Close',
-  iconName: 'close',
-  iconPosition: 'before',
+  children: <Icon purpose="informative" title="Close" name="close" />,
 };
 
 export const TextLink = Template.bind({});
