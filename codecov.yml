@@ -3,5 +3,3 @@ coverage:
     project:
       default:
         informational: true
-ignore:
-  - '**/*.stories.*'
