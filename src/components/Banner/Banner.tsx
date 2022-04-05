@@ -94,7 +94,6 @@ export const Banner = ({
         <Button
           className={styles['banner__close-btn']}
           variant="bare"
-          aria-label={closeButtonText}
           onClick={(e: any) => onDismiss(e)}
         >
           <Icon

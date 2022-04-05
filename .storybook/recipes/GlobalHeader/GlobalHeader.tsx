@@ -44,11 +44,14 @@ export const GlobalHeader = ({ className, ...other }: Props) => {
       <Button
         className={styles['global-header__menu-button']}
         variant="bare"
-        aria-label={isActive ? 'Close' : 'Menu'}
         inverted={true}
         onClick={toggleMenu}
       >
-        <Icon purpose="decorative" name={isActive ? 'x' : 'menu'} />
+        <Icon
+          purpose="decorative"
+          name={isActive ? 'x' : 'menu'}
+          title={isActive ? 'Close' : 'Menu'}
+        />
       </Button>
 
       <NavContainer
