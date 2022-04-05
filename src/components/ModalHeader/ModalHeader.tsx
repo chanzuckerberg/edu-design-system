@@ -48,7 +48,7 @@ export const ModalHeader = ({
           variant="bare"
           onClick={onClick}
         >
-          <Icon name="x" title={closeButtonText} purpose="informative" />
+          <Icon name="close" title={closeButtonText} purpose="informative" />
         </Button>
       )}
     </header>

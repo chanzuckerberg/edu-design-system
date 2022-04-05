@@ -281,7 +281,11 @@ export const FileUploadField = ({
               onFileRemove(file.id);
             }}
           >
-            <Icon name="x" purpose="informative" title={removeFileButtonText} />
+            <Icon
+              name="close"
+              purpose="informative"
+              title={removeFileButtonText}
+            />
           </Button>
         );
     }

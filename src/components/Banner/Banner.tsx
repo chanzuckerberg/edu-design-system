@@ -97,7 +97,7 @@ export const Banner = ({
           onClick={(e: any) => onDismiss(e)}
         >
           <Icon
-            name="x"
+            name="close"
             title={closeButtonText}
             className={styles['banner__icon']}
             purpose="informative"

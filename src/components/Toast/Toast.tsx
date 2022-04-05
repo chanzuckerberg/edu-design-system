@@ -85,7 +85,7 @@ export const Toast = ({
           variant="bare"
           onClick={(e: any) => onDismiss(e)}
         >
-          <Icon name="x" purpose="informative" title={closeButtonText} />
+          <Icon name="close" purpose="informative" title={closeButtonText} />
         </Button>
       )}
     </div>

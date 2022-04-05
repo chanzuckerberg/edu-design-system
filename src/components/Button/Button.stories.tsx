@@ -67,14 +67,14 @@ PrimaryInverted.args = {
 export const BareIcon = Template.bind({});
 BareIcon.args = {
   variant: 'bare',
-  children: <Icon purpose="informative" title="Close" name="x" />,
+  children: <Icon purpose="informative" title="Close" name="close" />,
 };
 
 export const BareIconInverted = InvertedTemplate.bind({});
 BareIconInverted.args = {
   inverted: true,
   variant: 'bare',
-  children: <Icon purpose="informative" title="Close" name="x" />,
+  children: <Icon purpose="informative" title="Close" name="close" />,
 };
 
 export const TextLink = Template.bind({});

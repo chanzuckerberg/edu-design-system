@@ -48,7 +48,7 @@ export const DrawerHeader = ({
           variant="bare"
           onClick={onClick}
         >
-          <Icon name="x" purpose="informative" title={closeButtonText} />
+          <Icon name="close" purpose="informative" title={closeButtonText} />
         </Button>
       )}
     </header>
