@@ -1,1 +1,1 @@
-module.exports = "test-file-stub"; //eslint-disable-line no-undef
+module.exports = 'test-file-stub';
