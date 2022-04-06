@@ -133,3 +133,245 @@ exports[`<Tag /> OutlineVariants story renders snapshot 1`] = `
   </span>
 </div>
 `;
+
+exports[`<Tag /> WithIcon story renders snapshot 1`] = `
+<div
+  class="tagList"
+>
+  <span
+    class="tag tag--default tag--outline text text--sm text--bold-weight"
+  >
+    <svg
+      aria-hidden="true"
+      class="icon"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <use
+        xlink:href="test-file-stub#favorite"
+      />
+    </svg>
+    <span
+      class="tag__body"
+    >
+      default
+    </span>
+  </span>
+  <span
+    class="tag tag--go tag--outline text text--sm text--bold-weight"
+  >
+    <svg
+      aria-hidden="true"
+      class="icon"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <use
+        xlink:href="test-file-stub#favorite"
+      />
+    </svg>
+    <span
+      class="tag__body"
+    >
+      go
+    </span>
+  </span>
+  <span
+    class="tag tag--yield tag--outline text text--sm text--bold-weight"
+  >
+    <svg
+      aria-hidden="true"
+      class="icon"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <use
+        xlink:href="test-file-stub#favorite"
+      />
+    </svg>
+    <span
+      class="tag__body"
+    >
+      yield
+    </span>
+  </span>
+  <span
+    class="tag tag--stop tag--outline text text--sm text--bold-weight"
+  >
+    <svg
+      aria-hidden="true"
+      class="icon"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <use
+        xlink:href="test-file-stub#favorite"
+      />
+    </svg>
+    <span
+      class="tag__body"
+    >
+      stop
+    </span>
+  </span>
+  <span
+    class="tag tag--warning tag--outline text text--sm text--bold-weight"
+  >
+    <svg
+      aria-hidden="true"
+      class="icon"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <use
+        xlink:href="test-file-stub#favorite"
+      />
+    </svg>
+    <span
+      class="tag__body"
+    >
+      warning
+    </span>
+  </span>
+  <span
+    class="tag tag--brand tag--outline text text--sm text--bold-weight"
+  >
+    <svg
+      aria-hidden="true"
+      class="icon"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <use
+        xlink:href="test-file-stub#favorite"
+      />
+    </svg>
+    <span
+      class="tag__body"
+    >
+      brand
+    </span>
+  </span>
+</div>
+`;
+
+exports[`<Tag /> WithLongTextAndIcon story renders snapshot 1`] = `
+<div
+  class="tagList"
+>
+  <span
+    class="tag tag--default tag--outline text text--sm text--bold-weight"
+  >
+    <svg
+      aria-hidden="true"
+      class="icon"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <use
+        xlink:href="test-file-stub#star"
+      />
+    </svg>
+    <span
+      class="tag__body"
+    >
+      This tag has a really long text message
+    </span>
+  </span>
+  <span
+    class="tag tag--go tag--outline text text--sm text--bold-weight"
+  >
+    <svg
+      aria-hidden="true"
+      class="icon"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <use
+        xlink:href="test-file-stub#star"
+      />
+    </svg>
+    <span
+      class="tag__body"
+    >
+      This tag has a really long text message
+    </span>
+  </span>
+  <span
+    class="tag tag--yield tag--outline text text--sm text--bold-weight"
+  >
+    <svg
+      aria-hidden="true"
+      class="icon"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <use
+        xlink:href="test-file-stub#star"
+      />
+    </svg>
+    <span
+      class="tag__body"
+    >
+      This tag has a really long text message
+    </span>
+  </span>
+  <span
+    class="tag tag--stop tag--outline text text--sm text--bold-weight"
+  >
+    <svg
+      aria-hidden="true"
+      class="icon"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <use
+        xlink:href="test-file-stub#star"
+      />
+    </svg>
+    <span
+      class="tag__body"
+    >
+      This tag has a really long text message
+    </span>
+  </span>
+  <span
+    class="tag tag--warning tag--outline text text--sm text--bold-weight"
+  >
+    <svg
+      aria-hidden="true"
+      class="icon"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <use
+        xlink:href="test-file-stub#star"
+      />
+    </svg>
+    <span
+      class="tag__body"
+    >
+      This tag has a really long text message
+    </span>
+  </span>
+  <span
+    class="tag tag--brand tag--outline text text--sm text--bold-weight"
+  >
+    <svg
+      aria-hidden="true"
+      class="icon"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <use
+        xlink:href="test-file-stub#star"
+      />
+    </svg>
+    <span
+      class="tag__body"
+    >
+      This tag has a really long text message
+    </span>
+  </span>
+</div>
+`;
