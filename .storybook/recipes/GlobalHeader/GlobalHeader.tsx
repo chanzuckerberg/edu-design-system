@@ -44,7 +44,6 @@ export const GlobalHeader = ({ className, ...other }: Props) => {
       <Button
         className={styles['global-header__menu-button']}
         variant="icon"
-        inverted={true}
         onClick={toggleMenu}
       >
         <Icon
