@@ -10,25 +10,30 @@
               },
               "knockout": {
                 "value": "{eds.color.neutral.white}"
+              },
+              "hover": {
+                "value": "{eds.color.neutral.800}"
               }
             },
             "strong": {
-              "value": "{eds.color.neutral.700}"
+              "@": {
+                "value": "{eds.color.neutral.700}"
+              },
+              "hover": {
+                "value": "{eds.color.neutral.black}"
+              }
             },
             "subtle": {
-              "value": "{eds.color.neutral.500}"
+              "@": {
+                "value": "{eds.color.neutral.500}"
+              },
+              "hover": {
+                "value": "{eds.color.neutral.600}"
+              }
             }
           },
           "link": {
             "default": {
-              "@": {
-                "value": "{eds.color.brand.grape.500}"
-              },
-              "hover": {
-                "value": "{eds.color.brand.grape.600}"
-              }
-            },
-            "strong": {
               "@": {
                 "value": "{eds.color.brand.grape.500}"
               },

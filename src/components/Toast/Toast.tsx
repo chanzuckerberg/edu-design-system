@@ -1,94 +1,77 @@
 import clsx from 'clsx';
-import React, { ReactNode, useState } from 'react';
+import React from 'react';
 import styles from './Toast.module.css';
 import Button from '../Button';
 import Icon from '../Icon';
 
-export interface Props {
+export type Variant = 'success' | 'alert';
+
+export type Props = {
   /**
-   * The child node(s) contains the toast message. Note: the toast message is displayed inside a TextPassage, so children can contain raw HTML
-   */
-  children?: ReactNode;
-  /**
-   * CSS class names that can be appended to the component.
+   * Additional class names that can be appended to the component, passed in for styling.
    */
   className?: string;
   /**
-   * Close button text
-   * 1) Used to change the text of the icon button with various languages
+   * The child node(s) contains the toast message. Note: the toast message is displayed inside a TextPassage, so children can contain raw HTML
    */
-  closeButtonText?: string;
+  children: React.ReactNode;
   /**
-   * Toggles the ability to dismiss the toast via an close button in the top right of the toast
+   * The color of the Toast, based on EDS defined colors. Also determines the icon used.
+   * Note that the Icon mapping matches the style of Banners.
    */
-  dismissible?: boolean;
+  variant: Variant;
   /**
-   * Name of toast SVG icon. Available options are: toast, error, warning-2, success
+   * Callback when Toast is dismissed.
    */
-  iconName?: string;
-  /**
-   * The title attribute for the SVG icon in the toast
-   */
-  iconTitle?: string;
-  /**
-   * Stylistic variations for the toast type.
-   * - **success** - results in a green toast
-   * - **warning** - results in a yellow toast
-   * - **error** - results in a red toast
-   * - **info** - results in a blue toast
-   */
-  variant?: 'success' | 'warning' | 'error' | 'info' | 'brand';
-}
+  onDismiss?: () => void;
+};
 
 /**
- * Primary UI component for user interaction
+ * ```ts
+ * import {Toast} from "@chanzuckerberg/eds-components";
+ * ```
+ *
+ * A toast used to provide information on the state of the page, usually in response to a
+ * user action. Ex: The user updates their profile, and a toast pop-up informs them that the
+ * data was successfully saved.
  */
 export const Toast = ({
-  iconTitle,
-  className,
   children,
-  iconName,
-  dismissible = true,
+  className,
   variant,
-  closeButtonText = 'Close',
+  onDismiss,
+  // Allow for additional attributes such as aria roles
   ...other
 }: Props) => {
   const componentClassName = clsx(
-    styles['toast'],
     className,
+    styles['toast'],
     variant === 'success' && styles['toast--success'],
-    variant === 'warning' && styles['toast--warning'],
-    variant === 'error' && styles['toast--error'],
-    variant === 'brand' && styles['toast--brand'],
+    variant === 'alert' && styles['toast--alert'],
   );
-  const [dismissed, setDismissed] = useState(false);
-
-  function onDismiss(e: any) {
-    e.preventDefault();
-    setDismissed(true);
-  }
-  return dismissed ? null : (
-    <div className={componentClassName} role="alert" {...other}>
-      {iconName && (
+  return (
+    <div className={componentClassName} {...other}>
+      <div className={styles['toast__content']}>
         <Icon
-          name={iconName}
-          title={iconTitle}
-          className={styles['toast__icon']}
+          name={variant === 'success' ? 'check-circle' : 'warning'}
           purpose="informative"
+          size="1.5rem"
+          title={variant}
         />
-      )}
-      <div className={styles['toast__body']}>{children}</div>
-
-      {dismissible && (
-        <Button
-          className={styles['toast__close-btn']}
-          variant="bare"
-          aria-label={closeButtonText}
-          iconName="close"
-          iconPosition="after"
-          onClick={(e: any) => onDismiss(e)}
-        />
+        <p className={styles['toast__text']}>{children}</p>
+      </div>
+      {onDismiss && (
+        <Button variant="bare" onClick={onDismiss}>
+          <Icon
+            name="close"
+            purpose="informative"
+            size="2rem"
+            title="dismiss message"
+          />
+        </Button>
       )}
     </div>
   );
 };
+
+export default Toast;

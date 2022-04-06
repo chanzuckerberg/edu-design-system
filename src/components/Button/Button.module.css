@@ -8,12 +8,14 @@
  * 1) Button or link that has functionality to it
  * 2) Defaults to primary button
  * 3) Margin 0 added becuase Safari has margin on the button
+ * 4) Adds a gap between children to automatically handle spacing between icons and text
  */
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   margin: 0; /* 3 */
+  gap: 0.75rem; /* 4 */
   border-width: var(--eds-theme-border-width);
   border-style: solid;
   border-color: var(--eds-theme-color-primary-border);
@@ -22,6 +24,11 @@
   background-color: transparent;
   cursor: pointer;
   transition: all var(--eds-anim-fade-quick) var(--eds-anim-ease);
+
+  /* TODO: make default color prop in Icon inherit or something? */
+  svg {
+    fill: currentColor;
+  }
 
   &:hover {
     color: var(--eds-theme-color-primary-foreground-hover);
@@ -222,52 +229,17 @@
 }
 
 /**
- * Button Icon
+ * Loading icon rotiation style
  * 1) Set SVG icon fill to the current text color
  */
-.button__icon {
+.button__icon-loading {
   fill: currentColor; /* 1 */
-}
-
-/**
- * Button children before icon spacing
- * 1) Controls the spacing between the button children
- *    and the icon that comes _before_ button children
- */
-.button__icon + .button__children {
-  margin-left: var(--eds-size-1); /* 1 */
-
-  .button--sm & {
-    margin-left: var(--eds-size-half);
-  }
-}
-
-/**
- * Button after icon spacing
- * 1) Controls the spacing between the button children
- *    and the icon that comes _after_ button children
- */
-.button__children + .button__icon {
-  margin-left: var(--eds-size-1); /* 1 */
-
-  /**
-   * Button icon after button children within a link variant button
-   */
-  .button--link & {
-    margin-left: var(--eds-size-half);
-  }
-
-  .button--sm & {
-    margin-left: var(--eds-size-half);
-  }
-}
-
-/**
- * Loading icon rotiation style
- */
-.button.eds-is-loading > .button__icon {
-  animation: rotateIcon 2s linear infinite; /* 1 */
+  animation: rotateIcon 2s linear infinite;
   overflow: visible;
+
+  @media screen and (prefers-reduced-motion) {
+    animation: none;
+  }
 }
 
 /**

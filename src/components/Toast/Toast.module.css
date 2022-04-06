@@ -6,165 +6,64 @@
 
 /**
  * 1) Message of information, success, caution, or warning to the user
- * 2) The thick left border operates as a foreground band of color,
+ * 2) Container for the toast content, to provide background styling
+ * 3) The thick left border operates as a foreground band of color, 
  *    so foreground rather than border is used
  */
 .toast {
-  display: flex;
-  align-items: flex-start;
-  position: relative;
-  padding-top: var(--eds-size-2);
-  padding-right: var(--eds-size-2);
-  padding-bottom: var(--eds-size-2);
-  padding-left: var(--eds-size-2);
-  margin-bottom: var(--eds-size-2);
+  width: 100%;
   max-width: 25rem;
+
+  padding-left: var(--eds-size-2);
+  padding-right: var(--eds-size-1);
+
+  display: grid;
+  gap: var(--eds-size-1);
+  grid-template-columns: 1fr min-content;
+  align-items: center;
+
   border-style: solid;
-  border-width: var(--eds-theme-border-width);
-  border-color: var(--eds-theme-color-neutral-subtle-border);
-  border-left-width: var(--eds-border-width-lg);
-  border-left-color: var(--eds-theme-color-neutral-medium-foreground); /* 2 */
-  border-radius: var(--eds-theme-border-radius);
-  background-color: var(--eds-theme-color-neutral-subtle-background);
-  box-shadow: var(--eds-theme-box-shadow);
+  border-width: var(--eds-border-width-sm);
+  border-left-width: var(--eds-border-width-lg); /* 3 */
+  border-radius: var(--eds-size-half);
+
+  box-shadow: var(--eds-box-shadow-sm);
 }
 
-/**
- * Toast success
- * 1) The thick left border operates as a foreground band of color,
- *    so foreground rather than border is used
- */
 .toast--success {
-  background: var(--eds-theme-color-utility-success-background);
-  border-color: var(--eds-theme-color-utility-success-border);
-  border-left-color: var(--eds-theme-color-utility-success-foreground); /* 1 */
-  color: var(--eds-theme-color-utility-success-foreground);
+  color: var(--eds-theme-color-text-utility-success);
+  background-color: var(--eds-theme-color-background-utility-success);
+  border-color: var(--eds-theme-color-border-utility-success-default);
+  border-left-color: var(--eds-theme-color-border-utility-success-strong);
+}
+
+.toast--alert {
+  color: var(--eds-theme-color-text-utility-error);
+  background-color: var(--eds-theme-color-background-utility-error);
+  border-color: var(--eds-theme-color-utility-error-default);
+  border-left-color: var(--eds-theme-color-utility-error-strong);
 }
 
 /**
- * Toast warning
+ * 1) The toast content, usually an icon and text message. Does not include the optional close button
+ * 2) Grid places the icon on the left and message on the right, with both vertically aligned to the center.
  */
-.toast--warning {
-  background: var(--eds-theme-color-utility-warning-background);
-  border-color: var(--eds-theme-color-utility-warning-border);
-  border-left-color: var(--eds-theme-color-utility-warning-foreground); /* 1 */
-  color: var(--eds-theme-color-utility-warning-foreground);
+.toast__content {
+  padding-top: var(--eds-size-2);
+  padding-bottom: var(--eds-size-2);
+
+  display: grid; /* 2 */
+  gap: var(--eds-size-2);
+  grid-template-columns: min-content 1fr;
+  align-items: center;
 }
 
 /**
- * Toast error
+ * The text in the toast. Styled via mixins over using Text component.
  */
-.toast--error {
-  background: var(--eds-theme-color-utility-error-background);
-  border-color: var(--eds-theme-color-utility-error-border);
-  border-left-color: var(--eds-theme-color-utility-error-foreground); /* 1 */
-  color: var(--eds-theme-color-utility-error-foreground);
-}
+.toast__text {
+  @mixin reset;
+  @mixin eds-typography-preset-007;
 
-/**
- * Brand toast
- */
-.toast--brand {
-  background: var(--eds-color-brand-blue-100); /* TODO */
-  border-color: var(--eds-theme-color-primary-border);
-  border-left-color: var(--eds-theme-color-primary-foreground); /* 1 */
-  color: var(--eds-theme-color-primary-foreground);
-}
-
-/**
- * Toast informational icon
- * 1) Selector doubled up to bump specificity to not interact with .icon.
- *    See code guidelines for more info.
- */
-.toast__icon.toast__icon {
-  margin-right: var(--eds-size-2);
-  fill: var(--eds-theme-color-neutral-medium-foreground);
-  width: var(--eds-size-3);
-  height: var(--eds-size-3);
-
-  /**
-   * Icon within success toast
-   */
-  .toast--success & {
-    fill: var(--eds-theme-color-utility-success-foreground);
-  }
-
-  /**
-   * Icon within warning toast
-   */
-  .toast--warning & {
-    fill: var(--eds-theme-color-utility-warning-foreground);
-  }
-
-  /**
-   * Icon within error toast
-   */
-  .toast--error & {
-    fill: var(--eds-theme-color-utility-error-foreground);
-  }
-
-  /**
-   * * Icon within info toast
-   */
-  .toast--info & {
-    fill: var(--eds-theme-color-utility-info-foreground);
-  }
-
-  /**
-   * * Icon within info toast
-   */
-  .toast--brand & {
-    fill: var(--eds-theme-color-primary-foreground);
-  }
-}
-
-/**
- * Toast body
- * 1) Allows the body to take up the remaining space that the icon doesn't occupy
- */
-.toast__body {
-  flex: 1;
-}
-
-/**
- * Toast title
- */
-.toast__title {
-  @mixin eds-theme-typography-heading-3;
-  margin-bottom: var(--eds-size-1);
-  flex: 1 0 auto;
-
-  @media all and (min-width: $eds-bp-md) {
-    margin-right: var(--eds-size-6);
-  }
-}
-
-/**
- * Toast description
- */
-.toast__description {
-  @mixin eds-theme-typography-body-text-md;
-}
-
-/**
- * Toast close button
- * 1) Button used to dismiss dismissable toasts
- * 2) Selector doubled up to bump specificity to not interact with .icon.
- *    See code guidelines for more info.
- * 3) Match close button icon color to the toast text color
- */
-.toast__close-btn.toast__close-btn {
-  position: relative;
-  top: var(--eds-size-half);
-  margin-left: var(--eds-size-3);
-  color: inherit; /* 3 */
-}
-
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
+  color: inherit;
 }
