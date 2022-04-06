@@ -46,20 +46,14 @@
   /**
    * Disabled buttons
    */
-  &:disabled {
+   &:disabled,
+   &:disabled:hover,
+   &:disabled:focus {
     background: transparent;
     border-color: var(--eds-theme-color-disabled-border);
     color: var(--eds-theme-color-disabled-foreground);
     cursor: not-allowed;
-
-    /* stylelint-disable-next-line max-nesting-depth */
-    &:hover,
-    &:focus {
-      background: transparent;
-      border-color: var(--eds-theme-color-disabled-border);
-      color: var(--eds-theme-color-disabled-foreground);
-      transform: none;
-    }
+    transform: none;
   }
 
   /**
@@ -87,11 +81,7 @@
   background-color: var(--eds-theme-color-primary-background);
   color: var(--eds-theme-color-body-foreground-inverted);
 
-  &:hover {
-    background-color: var(--eds-theme-color-primary-background-hover);
-    color: var(--eds-theme-color-body-foreground-inverted);
-  }
-
+  &:hover,
   &:focus {
     background-color: var(--eds-theme-color-primary-background-hover);
     color: var(--eds-theme-color-body-foreground-inverted);
@@ -101,20 +91,97 @@
     @mixin focus;
   }
 
-  &:disabled {
+  &:disabled,
+  &:disabled:hover {
     background-color: var(--eds-theme-color-disabled-background);
     border-color: var(--eds-theme-color-disabled-border);
     color: var(--eds-theme-color-disabled-foreground);
-    /* stylelint-disable-next-line max-nesting-depth */
-    &:hover {
-      background-color: var(--eds-theme-color-disabled-background);
-      border-color: var(--eds-theme-color-disabled-border);
-      color: var(--eds-theme-color-disabled-foreground);
-    }
   }
 
   /**
    * Inverted primary button
+   */
+  &.button--inverted {
+    background-color: var(--eds-theme-color-primary-background);
+    color: var(--eds-theme-color-body-foreground-inverted);
+    /* stylelint-disable-next-line max-nesting-depth */
+    &:hover,
+    &:focus {
+      background-color: var(--eds-theme-color-primary-background-hover);
+      color: var(--eds-theme-color-body-foreground-inverted);
+    }
+  }
+}
+
+/**
+ * Secondary button
+ * 1) Medium prominence button used for less important actions
+ */
+.button--secondary {
+  border-color: var(--eds-theme-color-primary-border);
+  background-color: var(--eds-theme-color-primary-background);
+  color: var(--eds-theme-color-body-foreground-inverted);
+
+  &:hover,
+  &:focus {
+    background-color: var(--eds-theme-color-primary-background-hover);
+    color: var(--eds-theme-color-body-foreground-inverted);
+  }
+
+  &:focus-visible {
+    @mixin focus;
+  }
+
+  &:disabled,
+  &:disabled:hover {
+    background-color: var(--eds-theme-color-disabled-background);
+    border-color: var(--eds-theme-color-disabled-border);
+    color: var(--eds-theme-color-disabled-foreground);
+  }
+
+  /**
+   * Inverted secondary button
+   */
+  &.button--inverted {
+    background-color: var(--eds-theme-color-primary-background);
+    color: var(--eds-theme-color-body-foreground-inverted);
+    /* stylelint-disable-next-line max-nesting-depth */
+    &:hover,
+    &:focus {
+      background-color: var(--eds-theme-color-primary-background-hover);
+      color: var(--eds-theme-color-body-foreground-inverted);
+    }
+  }
+}
+
+/**
+ * Tertiary button
+ * 1) Least prominent button used for least important actions on the page
+ */
+.button--tertiary {
+  border-color: var(--eds-theme-color-primary-border);
+  background-color: var(--eds-theme-color-primary-background);
+  color: var(--eds-theme-color-body-foreground-inverted);
+
+  &:hover,
+  &:focus {
+    background-color: var(--eds-theme-color-primary-background-hover);
+    color: var(--eds-theme-color-body-foreground-inverted);
+  }
+
+  &:focus-visible {
+    @mixin focus;
+  }
+
+  &:disabled,
+  &:disabled:hover {
+    background-color: var(--eds-theme-color-disabled-background);
+    border-color: var(--eds-theme-color-disabled-border);
+    color: var(--eds-theme-color-disabled-foreground);
+  }
+
+  /**
+   * Inverted tertiary button
    */
   &.button--inverted {
     background-color: var(--eds-theme-color-primary-background);
@@ -155,11 +222,11 @@
 }
 
 /**
- * Bare Button
+ * Icon Button
  * 1) A button that strips out borders, backgrounds, etc
  * 2) Use for Close "X" buttons, tooltip icons, and other
  */
-.button--bare {
+.button--icon {
   background-color: transparent;
   border: 0;
   padding: 0;
@@ -171,7 +238,7 @@
   }
 
   /**
-   * Inverted bare button
+   * Inverted icon button
    */
   &.button--inverted {
     color: var(--eds-theme-color-primary-foreground-inverted);
@@ -180,6 +247,48 @@
     &:focus {
       color: var(--eds-theme-color-primary-foreground-inverted-hover);
       background-color: transparent;
+    }
+  }
+}
+
+/**
+ * Destructive Button
+ * 1) A bold red button
+ * 2) Use for destructive actions like deleting a user's account, deleting a course, etc
+ */
+.button--destructive {
+  border-color: var(--eds-theme-color-primary-border);
+  background-color: var(--eds-theme-color-primary-background);
+  color: var(--eds-theme-color-body-foreground-inverted);
+
+  &:hover,
+  &:focus {
+    background-color: var(--eds-theme-color-primary-background-hover);
+    color: var(--eds-theme-color-body-foreground-inverted);
+  }
+
+  &:focus-visible {
+    @mixin focus;
+  }
+
+  &:disabled,
+  &:disabled:hover {
+    background-color: var(--eds-theme-color-disabled-background);
+    border-color: var(--eds-theme-color-disabled-border);
+    color: var(--eds-theme-color-disabled-foreground);
+  }
+
+  /**
+   * Inverted primary button
+   */
+  &.button--inverted {
+    background-color: var(--eds-theme-color-primary-background);
+    color: var(--eds-theme-color-body-foreground-inverted);
+    /* stylelint-disable-next-line max-nesting-depth */
+    &:hover,
+    &:focus {
+      background-color: var(--eds-theme-color-primary-background-hover);
+      color: var(--eds-theme-color-body-foreground-inverted);
     }
   }
 }
