@@ -40,11 +40,7 @@ const EDSStyleDictionary = StyleDictionary.extend({
           options: {
             showFileHeader: false,
           },
-          filter: {
-            attributes: {
-              type: 'color',
-            },
-          },
+          filter: (token) => token.path.includes('color'),
         },
       ],
     },
