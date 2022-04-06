@@ -200,32 +200,11 @@
 * 1) Used so the transparent icon doesn't show the line behind. 
 */
 .list-detail__icon {
+  --icon-size: var(--eds-size-3);
   position: relative;
   left: -7px;
-  height: var(--eds-size-3);
-  width: var(--eds-size-3);
+  top: -2px;
   margin-right: var(--eds-size-half);
   background: var(---eds-theme-color-background-neutral-default); /* 1*/
   z-index: var(--eds-z-index-100);
-
-  /**
-  * List detail icon within success list detail item
-  */
-  .list-detail__item--success & {
-    fill: var(--eds-theme-color-background-grade-complete-default);
-  } 
-  
-  /**
-  * List detail icon within warning list detail item
-  */
-  .list-detail__item--warning & {
-    fill: var(--eds-theme-color-background-grade-revise-default);
-  } 
-  
-  /**
-  * List detail icon within error list detail item
-  */
-  .list-detail__item--error & {
-    fill: var(--eds-theme-color-background-grade-stop-default);
-  }
 }

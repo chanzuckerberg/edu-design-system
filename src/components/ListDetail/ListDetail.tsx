@@ -10,6 +10,11 @@ import React, {
 import { allByType } from 'react-children-by-type';
 import styles from './ListDetail.module.css';
 import {
+  EdsThemeColorBackgroundGradeCompleteDefault,
+  EdsThemeColorBackgroundGradeReviseDefault,
+  EdsThemeColorBackgroundGradeStopDefault,
+} from '../../tokens-dist/colors';
+import {
   L_ARROW_KEYCODE,
   U_ARROW_KEYCODE,
   R_ARROW_KEYCODE,
@@ -234,14 +239,10 @@ export const ListDetail = ({
             const itemVariant = variant && tab.props.variant;
             return (
               <li
-                className={clsx(styles['list-detail__item'], {
-                  [styles['eds-is-active']]: isActive,
-                  [styles['list-detail__item--success']]:
-                    itemVariant === 'success',
-                  [styles['list-detail__item--warning']]:
-                    itemVariant === 'warning',
-                  [styles['list-detail__item--error']]: itemVariant === 'error',
-                })}
+                className={clsx(
+                  styles['list-detail__item'],
+                  isActive && styles['eds-is-active'],
+                )}
                 key={'list-detail-item-' + i}
                 role="presentation"
               >
@@ -264,25 +265,32 @@ export const ListDetail = ({
                 >
                   <div
                     className={clsx(styles['list-detail__link-left'], {
-                      [styles['list-detail__link-hidden']]:
-                        itemVariant === 'number',
+                      [styles['list-detail__link-hidden']]: [
+                        'number',
+                        'success',
+                        'warning',
+                        'error',
+                      ].includes(itemVariant),
                     })}
                   >
                     {itemVariant === 'success' ? (
                       <Icon
                         className={styles['list-detail__icon']}
+                        color={EdsThemeColorBackgroundGradeCompleteDefault}
                         name="check-circle"
                         purpose="decorative"
                       />
                     ) : itemVariant === 'warning' ? (
                       <Icon
                         className={styles['list-detail__icon']}
+                        color={EdsThemeColorBackgroundGradeReviseDefault}
                         name="error"
                         purpose="decorative"
                       />
                     ) : itemVariant === 'error' ? (
                       <Icon
                         className={styles['list-detail__icon']}
+                        color={EdsThemeColorBackgroundGradeStopDefault}
                         name="cancel"
                         purpose="decorative"
                       />

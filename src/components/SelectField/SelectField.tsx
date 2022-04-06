@@ -9,6 +9,7 @@ import React, {
   useState,
 } from 'react';
 import styles from './SelectField.module.css';
+import { EdsThemeColorIconNeutralStrong } from '../../tokens-dist/colors';
 import FieldNote from '../FieldNote';
 import Icon from '../Icon';
 import Label from '../Label';
@@ -186,8 +187,9 @@ export const SelectField = ({
           {...other}
         />
         <Icon
-          name="expand-more"
           className={styles['select-field__icon']}
+          color={EdsThemeColorIconNeutralStrong}
+          name="expand-more"
           purpose="decorative"
         />
       </div>

@@ -12,9 +12,6 @@
 }
 
 .loading-indicator__icon {
-  height: 3rem;
-  width: 3rem;
-  fill: var(--eds-theme-color-primary-foreground);
   animation: rotateIcon 2s linear infinite;
 }
 
