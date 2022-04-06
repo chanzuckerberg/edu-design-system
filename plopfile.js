@@ -32,12 +32,17 @@ module.exports = (plop) => {
         templateFile: 'plop-templates/Component/Component.test.tsx.hbs',
       },
       {
+        type: 'add',
+        path: 'src/components/{{pascalCase name}}/index.ts',
+        templateFile: 'plop-templates/Component/index.ts.hbs',
+      },
+      {
         type: 'append',
         pattern: /;\n$/,
         separator: '',
         path: 'src/index.ts',
         template:
-          'export { {{pascalCase name}} } from "./components/{{pascalCase name}}/{{pascalCase name}}";',
+          'export { default as {{pascalCase name}} } from "./components/{{pascalCase name}}";',
       },
       // From https://github.com/bradfrost/czi-vanilla-storybook
       function sortIndex() {
@@ -86,6 +91,11 @@ module.exports = (plop) => {
         path: '.storybook/recipes/{{pascalCase name}}/{{pascalCase name}}.module.css',
         templateFile: 'plop-templates/Recipe/Recipe.module.css.hbs',
       },
+      {
+        type: 'add',
+        path: '.storybook/recipes/{{pascalCase name}}/index.ts',
+        templateFile: 'plop-templates/Recipe/index.ts.hbs',
+      },
     ],
   });
   plop.setGenerator('page', {
@@ -107,6 +117,11 @@ module.exports = (plop) => {
         type: 'add',
         path: '.storybook/pages/{{pascalCase name}}/{{pascalCase name}}.stories.tsx',
         templateFile: 'plop-templates/Page/Page.stories.tsx.hbs',
+      },
+      {
+        type: 'add',
+        path: '.storybook/pages/{{pascalCase name}}/index.ts',
+        templateFile: 'plop-templates/Page/index.ts.hbs',
       },
     ],
   });
