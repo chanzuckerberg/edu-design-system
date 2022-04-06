@@ -4,7 +4,7 @@ import React, { ReactNode, useState, useEffect } from 'react';
 import styles from './FileUploadField.module.css';
 import Button from '../Button/';
 import FieldNote from '../FieldNote';
-import Icon from '../Icon';
+import Icon, { IconName } from '../Icon';
 import Label from '../Label';
 import LoadingIndicator from '../LoadingIndicator';
 import TextInput from '../TextInput';
@@ -50,7 +50,7 @@ export interface Props {
   /**
    * Name of SVG icon (i.e. caret-down, minus, warning)
    */
-  iconName?: string;
+  iconName?: IconName;
   /**
    * HTML id for the component
    */
@@ -265,7 +265,7 @@ export const FileUploadField = ({
   function renderFileListIconOrRemoveButton(file) {
     switch (statusLabel) {
       case 'success':
-        return <Icon name="caret-down" purpose="decorative" />;
+        return <Icon name="expand-more" purpose="decorative" />;
       case 'uploading':
         return (
           <LoadingIndicator
