@@ -12,7 +12,7 @@ export default {
 
 const Template: Story<Props> = (args) => (
   <MediaBlock {...args}>
-    <Heading className="u-margin-bottom-md" as="h3">
+    <Heading className="u-margin-bottom-md" size="h3">
       Media block title
     </Heading>
     <TextPassage>

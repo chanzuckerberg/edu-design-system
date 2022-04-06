@@ -52,6 +52,10 @@ export const Heading6: StoryObj<Args> = {
   },
 };
 
+/**
+ * 1) Insufficient color contrast is expected.
+ * 2) Has problems with snapshots since it has too many components and visual regression testing generates enough confidence for our needs.
+ */
 export const Variants: StoryObj<Args> = {
   ...Heading1,
   render: (args) => {
@@ -59,7 +63,7 @@ export const Variants: StoryObj<Args> = {
     VARIANTS.forEach((variant) => {
       if (variant !== 'info')
         headings.push(
-          <Heading {...args} variant={variant}>
+          <Heading {...args} variant={variant} key={`${variant}`}>
             {variant}
           </Heading>,
         );
@@ -72,8 +76,19 @@ export const Variants: StoryObj<Args> = {
       </div>
     );
   },
+  parameters: {
+    axe: {
+      disabledRules: ['color-contrast'] /* 1 */,
+    },
+    snapshot: {
+      skip: true /* 2 */,
+    },
+  },
 };
 
+/**
+ * 1) Has problems with snapshots since it has too many components and visual regression testing generates enough confidence for our needs.
+ */
 export const Sizes: StoryObj<Args> = {
   render: () => {
     const sizes = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'] as const;
@@ -86,5 +101,10 @@ export const Sizes: StoryObj<Args> = {
       return <div key={as}>{headings}</div>;
     });
     return <div className={styles['variant__table']}>{combinations}</div>;
+  },
+  parameters: {
+    snapshot: {
+      skip: true /* 1 */,
+    },
   },
 };

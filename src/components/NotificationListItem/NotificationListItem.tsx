@@ -71,7 +71,7 @@ export const NotificationListItem = ({
       <div className={styles['notification-list__content']}>
         <div className={styles['notification-list__title']}>
           <a className={styles['notification-list__link']} href={href}>
-            <Heading as="h6">{title}</Heading>
+            <Heading size="h6">{title}</Heading>
           </a>
         </div>
         {date}
