@@ -74,6 +74,7 @@
   border: none;
   outline: none;
   padding: 0;
+  flex-shrink: 0;
   border-radius: var(--eds-theme-border-radius);
   height: 0.5rem;
   width: 0.5rem;
