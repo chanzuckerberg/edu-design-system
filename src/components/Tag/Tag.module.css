@@ -1,0 +1,92 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #TAGS
+\*------------------------------------*/
+
+/**
+ * The rounded rectangle container that houses information.
+ * 1) Grabs colors from whichever variant is selected.
+ * 2) Rounds the corners of the tag.
+ */
+.tag {
+  width: max-content;
+  max-width: 20rem;
+  padding: var(--eds-size-half) var(--eds-size-1-and-half);
+
+  display: inline-flex;
+  align-items: center;
+
+  border: var(--tag-secondary-color) solid var(--eds-theme-border-width); /* 1 */
+  border-radius: 9999px; /* 2 */
+
+  background-color: var(--tag-secondary-color); /* 1 */
+  color: var(--tag-primary-color);
+  --icon-size-default: 1.25rem;
+}
+
+/**
+ * If tags are used inline, ensures spacing between tags.
+ */
+.tag > :not(:last-child) {
+  margin-right: var(--eds-size-half);
+}
+
+/**
+ * Keeps text centered and in one line.
+ */
+.tag__body {
+  flex: 1 1 auto;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/**
+ * Color variants.
+ */
+.tag--default {
+  --tag-primary-color: var(--eds-theme-color-text-neutral-default);
+  --tag-secondary-color: var(--eds-theme-color-background-neutral-medium);
+  --tag-outline-color: var(--eds-theme-color-border-neutral-default);
+}
+
+.tag--stop {
+  --tag-primary-color: var(--eds-theme-color-text-utility-error);
+  --tag-secondary-color: var(--eds-theme-color-background-utility-error);
+  --tag-outline-color: var(--eds-theme-color-border-utility-error-default);
+}
+
+.tag--go {
+  --tag-primary-color: var(--eds-theme-color-text-utility-success);
+  --tag-secondary-color: var(--eds-theme-color-background-utility-success);
+  --tag-outline-color: var(--eds-theme-color-border-utility-success-default);
+}
+
+.tag--warning {
+  --tag-primary-color: var(--eds-theme-color-text-utility-warning);
+  --tag-secondary-color: var(--eds-theme-color-background-utility-warning);
+  --tag-outline-color: var(--eds-theme-color-border-utility-warning-default);
+}
+
+.tag--yield {
+  --tag-primary-color: var(--eds-theme-color-text-grade-revise);
+  --tag-secondary-color: var(--eds-theme-color-background-grade-revise-subtle);
+  --tag-outline-color: var(--eds-theme-color-border-grade-revise-default);
+}
+
+.tag--brand {
+  --tag-primary-color: var(--eds-theme-color-text-brand-primary);
+  --tag-secondary-color: var(
+    --eds-theme-color-background-brand-primary-default
+  );
+  --tag-outline-color: var(--eds-theme-color-border-brand-primary);
+}
+
+/**
+ * Adds outline to the tag.
+ */
+.tag--outline {
+  border-color: var(--tag-outline-color);
+}

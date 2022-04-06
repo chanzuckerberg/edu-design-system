@@ -41,6 +41,7 @@
   --eds-color-other-mint-700: #007249;
   --eds-color-other-mint-800: #005939;
   --eds-color-other-yellow-100: #FFF1E9;
+  --eds-color-other-yellow-300: #FFDD80;
   --eds-color-other-yellow-400: #F7BE2D;
   --eds-color-other-lemon: #F5FF8F;
   --eds-color-other-orange-100: #FFF1E9;
@@ -135,7 +136,8 @@
   --eds-theme-color-border-utility-error-default: #FB90B0;
   --eds-theme-color-border-utility-error-strong: #F1497B;
   --eds-theme-color-border-grade-complete: #8FDCB3;
-  --eds-theme-color-border-grade-revise: #FFF1E9;
+  --eds-theme-color-border-grade-revise-default: #FFF1E9;
+  --eds-theme-color-border-grade-revise-subtle: #FFDD80;
   --eds-theme-color-border-grade-stop: #FB90B0;
   --eds-theme-color-border-disabled: #C0C4C8;
   --eds-theme-color-icon-neutral-default: #707070;
@@ -176,6 +178,7 @@
   --eds-theme-color-text-grade-revise: #21272D;
   --eds-theme-color-text-grade-stop: #BD0044;
   --eds-theme-color-text-disabled: #C0C4C8;
+  --eds-theme-color-text-brand-primary: #5751D2;
   --eds-theme-color-body-background: #F5F6F8;
   --eds-theme-color-body-background-inverted: #505058;
   --eds-theme-color-focus-ring: #6B65E2;

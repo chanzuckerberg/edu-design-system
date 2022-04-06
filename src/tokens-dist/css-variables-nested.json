@@ -67,6 +67,7 @@
         },
         "yellow": {
           "100": "var(--eds-color-other-yellow-100)",
+          "300": "var(--eds-color-other-yellow-300)",
           "400": "var(--eds-color-other-yellow-400)"
         },
         "lemon": "var(--eds-color-other-lemon)",
@@ -234,7 +235,10 @@
           },
           "grade": {
             "complete": "var(--eds-theme-color-border-grade-complete)",
-            "revise": "var(--eds-theme-color-border-grade-revise)",
+            "revise": {
+              "default": "var(--eds-theme-color-border-grade-revise-default)",
+              "subtle": "var(--eds-theme-color-border-grade-revise-subtle)"
+            },
             "stop": "var(--eds-theme-color-border-grade-stop)"
           },
           "disabled": "var(--eds-theme-color-border-disabled)"
@@ -323,7 +327,10 @@
             "revise": "var(--eds-theme-color-text-grade-revise)",
             "stop": "var(--eds-theme-color-text-grade-stop)"
           },
-          "disabled": "var(--eds-theme-color-text-disabled)"
+          "disabled": "var(--eds-theme-color-text-disabled)",
+          "brand": {
+            "primary": "var(--eds-theme-color-text-brand-primary)"
+          }
         },
         "body": {
           "background": {
