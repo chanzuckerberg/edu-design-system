@@ -253,7 +253,6 @@
  * 1) Set SVG icon fill to the current text color
  */
 .button__icon-loading {
-  fill: currentColor; /* 1 */
   animation: rotateIcon 2s linear infinite;
   overflow: visible;
 

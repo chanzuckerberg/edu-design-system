@@ -91,9 +91,10 @@ export const LinkListItem = ({
 
         {iconPosition === 'after' && (
           <Icon
-            purpose="decorative"
-            name={iconName}
             className={styles['link-list__icon']}
+            name={iconName}
+            purpose="decorative"
+            size="0.875rem"
           />
         )}
       </a>
