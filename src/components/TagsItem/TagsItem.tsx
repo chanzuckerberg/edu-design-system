@@ -57,6 +57,7 @@ export const TagsItem = ({
             <Icon
               className={styles['tags__icon']}
               name="close"
+              size="0.875rem"
               title="Close"
               purpose="informative"
             />

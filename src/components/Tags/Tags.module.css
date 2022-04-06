@@ -50,8 +50,6 @@
   position: relative;
   top: 0;
   padding: 2px;
-  height: 14px;
-  width: 14px;
   margin-left: var(--eds-size-1);
   pointer-events: none;
   transition: var(--eds-anim-fade-quick) var(--eds-anim-ease);

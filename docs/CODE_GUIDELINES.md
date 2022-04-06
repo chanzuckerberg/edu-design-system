@@ -232,6 +232,20 @@ Use:
 }
 ```
 
+- Avoid using classes on one component to alter the styling of a different component. For example, instead of:
+
+```css
+.banner__icon {
+  fill: var(--eds-theme-color-utility-success-foreground);
+}
+```
+
+Use:
+
+```tsx
+<Icon color={EdsThemeColorUtilitySuccessForeground} />
+```
+
 ## Utility classes <a name="utility-classes"></a>
 
 EDS provides a number of utility classes (e.g. `u-margin-bottom-lg` and `u-padding-none`) that can be appended to components (e.g. `<TableCell className="u-padding-none">`) in order to achieve certain style results. Utility classes provide an additional layer to help "massage" components into place without having to overwhelm component styles with too many style variants.

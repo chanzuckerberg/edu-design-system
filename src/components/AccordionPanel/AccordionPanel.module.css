@@ -171,18 +171,7 @@
  */
 .accordion-panel__icon {
   margin-left: auto;
-  height: var(--eds-size-4);
-  width: var(--eds-size-4);
-  fill: var(--eds-theme-color-primary-foreground);
   transition: transform var(--eds-anim-fade-quick) var(--eds-anim-ease);
-}
-
-/**
- * Accordion panel icon within inverted accordion
- * 1) Change the icon fill color lighter
- */
- .accordion--inverted .accordion-panel__icon {
-  fill: var(--eds-theme-color-primary-foreground-inverted); /* 1 */
 }
 
 /**
