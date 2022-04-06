@@ -111,7 +111,7 @@ export class Tier2Colors extends Component {
 
         <Section title="Link Colors">
           <Grid>
-            {filterTokens(`eds-theme-color-link`).map(function (
+            {filterTokens(`eds-theme-color-text-link`).map(function (
               listItem,
               index,
             ) {
@@ -155,7 +155,7 @@ export class Tier2Colors extends Component {
 
           <h3>Form Input Borders</h3>
           <Grid>
-            {filterTokens(`eds-theme-color-form-input-border`).map(function (
+            {filterTokens(`eds-theme-color-form-border`).map(function (
               listItem,
               index,
             ) {
@@ -175,10 +175,31 @@ export class Tier2Colors extends Component {
               );
             })}
           </Grid>
+
+          <h3>Form Background</h3>
+          <Grid>
+            {filterTokens(`eds-theme-color-form-background`).map(function (
+              listItem,
+              index,
+            ) {
+              return (
+                <GridItem key={'form-input-border-' + index}>
+                  <TokenSpecimen
+                    name={listItem.name}
+                    key={index}
+                    value={listItem.value}
+                    inlineStyles={{
+                      backgroundColor: `var(${listItem.name})`,
+                    }}
+                  />
+                </GridItem>
+              );
+            })}
+          </Grid>
         </Section>
 
-        <Section title="Focus ring">
-          <h3>Focus ring colors</h3>
+        <Section title="Focus Ring">
+          <h3>Focus Ring</h3>
           <Grid>
             {filterTokens(`eds-theme-color-focus-ring`).map(function (
               listItem,
