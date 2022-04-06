@@ -58,7 +58,13 @@ export interface Props {
   /**
    * Available _stylistic_ variations available for the Button component
    */
-  variant?: 'primary' | 'bare' | 'link' | 'table-header';
+  variant?:
+    | 'primary'
+    | 'secondary'
+    | 'tertiary'
+    | 'icon'
+    | 'link'
+    | 'destructive';
 }
 
 /**
@@ -95,9 +101,11 @@ export const Button = React.forwardRef(
       ],
       // Variants
       variant === 'primary' && styles['button--primary'],
-      variant === 'bare' && styles['button--bare'],
+      variant === 'secondary' && styles['button--secondary'],
+      variant === 'tertiary' && styles['button--tertiary'],
+      variant === 'icon' && styles['button--icon'],
       variant === 'link' && styles['button--link'],
-      variant === 'table-header' && styles['button--table-header'],
+      variant === 'destructive' && styles['button--destructive'],
       // Other options
       inverted === true && styles['button--inverted'],
       fullWidth && styles['button--full-width'],
