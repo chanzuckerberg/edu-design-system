@@ -6,6 +6,7 @@ import styles from './Icon.module.css';
 import icons from '../../icons/spritemap/spritemap.svg';
 import { ALL_ICONS } from '../../util/allIcons';
 
+// generates a union type of all possible icon names
 export type IconName = typeof ALL_ICONS[number];
 
 interface IconPropsBase {
