@@ -51,15 +51,13 @@ export const GlobalHeader = ({ className, ...other }: Props) => {
     };
   }, []);
 
-
   const updateScreenSize = () => {
     if (window.innerWidth >= 1200) {
       setIsLarge(true);
-    }
-    else {
+    } else {
       setIsLarge(false);
     }
-  }
+  };
 
   const componentClassName = clsx(styles['global-header'], className, {
     [styles['is-active']]: isActive,
@@ -119,7 +117,9 @@ export const GlobalHeader = ({ className, ...other }: Props) => {
           >
             <PopoverHeader
               titleAfter={
-                <Button size="sm" variant="icon">Mark All Seen</Button>
+                <Button size="sm" variant="icon">
+                  Mark All Seen
+                </Button>
               }
             >
               <Heading id="popover-heading-1" as="h6">
