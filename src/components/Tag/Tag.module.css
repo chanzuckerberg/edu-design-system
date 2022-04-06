@@ -12,10 +12,7 @@
 .tag {
   width: max-content;
   max-width: 20rem;
-  padding-top: var(--eds-size-half);
-  padding-bottom: var(--eds-size-half);
-  padding-left: var(--eds-size-1-and-half);
-  padding-right: var(--eds-size-1-and-half);
+  padding: var(--eds-size-half) var(--eds-size-1-and-half);
 
   display: inline-flex;
   align-items: center;

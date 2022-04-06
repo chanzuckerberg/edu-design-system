@@ -66,8 +66,6 @@ export const Tag = ({
       weight="bold"
     >
       {icon}
-      {/* No width space to ensure height of contents */}
-      {'\u200B'}
       {text && <span className={styles['tag__body']}>{text}</span>}
     </Text>
   );
