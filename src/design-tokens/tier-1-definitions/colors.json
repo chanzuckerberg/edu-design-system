@@ -27,14 +27,6 @@
         "800": { "value": "#21272D" },
         "black": { "value": "#161B1F" }
       },
-      "transparent": {
-        "25": {
-          "value": "rgba(0, 0, 0, .25)"
-        },
-        "90": {
-          "value": "rgba(0, 0, 0, .9)"
-        }
-      },
       "other": {
         "mint": {
           "100": { "value": "#ECFFF5" },
