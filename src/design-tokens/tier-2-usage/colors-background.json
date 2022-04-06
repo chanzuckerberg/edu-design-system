@@ -12,20 +12,20 @@
                 "value": "{eds.color.neutral.100}"
               }
             },
-            "medium": {
-              "@": {
-                "value": "{eds.color.neutral.200}"
-              },
-              "hover": {
-                "value": "{eds.color.neutral.300}"
-              }
-            },
             "subtle": {
               "@": {
                 "value": "{eds.color.neutral.100}"
               },
               "hover": {
                 "value": "{eds.color.neutral.200}"
+              }
+            },
+            "medium": {
+              "@": {
+                "value": "{eds.color.neutral.200}"
+              },
+              "hover": {
+                "value": "{eds.color.neutral.300}"
               }
             }
           },
