@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Toast /> Alert story renders snapshot 1`] = `
+<div
+  class="toast toast--alert"
+>
+  <div
+    class="toast__content"
+  >
+    <svg
+      class="icon"
+      fill="currentColor"
+      height="1.5rem"
+      role="img"
+      style="--icon-size: 1.5rem;"
+      width="1.5rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="mock-id"
+      >
+        alert
+      </title>
+      <use
+        xlink:href="test-file-stub#warning"
+      />
+    </svg>
+    <p
+      class="toast__text"
+    >
+      You've got toast!
+    </p>
+  </div>
+</div>
+`;
+
+exports[`<Toast /> NotDismissable story renders snapshot 1`] = `
+<div
+  class="toast toast--success"
+>
+  <div
+    class="toast__content"
+  >
+    <svg
+      class="icon"
+      fill="currentColor"
+      height="1.5rem"
+      role="img"
+      style="--icon-size: 1.5rem;"
+      width="1.5rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="mock-id"
+      >
+        success
+      </title>
+      <use
+        xlink:href="test-file-stub#check-circle"
+      />
+    </svg>
+    <p
+      class="toast__text"
+    >
+      You've got toast!
+    </p>
+  </div>
+</div>
+`;
+
+exports[`<Toast /> Success story renders snapshot 1`] = `
+<div
+  class="toast toast--success"
+>
+  <div
+    class="toast__content"
+  >
+    <svg
+      class="icon"
+      fill="currentColor"
+      height="1.5rem"
+      role="img"
+      style="--icon-size: 1.5rem;"
+      width="1.5rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="mock-id"
+      >
+        success
+      </title>
+      <use
+        xlink:href="test-file-stub#check-circle"
+      />
+    </svg>
+    <p
+      class="toast__text"
+    >
+      You've got toast!
+    </p>
+  </div>
+</div>
+`;
