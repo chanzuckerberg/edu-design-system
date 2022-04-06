@@ -276,7 +276,7 @@ export const FileUploadField = ({
       default:
         return (
           <Button
-            variant="bare"
+            variant="icon"
             onClick={() => {
               onFileRemove(file.id);
             }}

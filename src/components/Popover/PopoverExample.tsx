@@ -82,7 +82,7 @@ export const PopoverExample: React.FC<Props> = ({
       >
         <PopoverHeader
           titleAfter={
-            <Button size="sm" variant="bare">
+            <Button size="sm" variant="icon">
               Mark All Seen
             </Button>
           }

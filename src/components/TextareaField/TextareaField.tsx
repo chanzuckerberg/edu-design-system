@@ -215,7 +215,7 @@ export const TextareaField = ({
             className={styles['textarea-field__button']}
             type="button"
             aria-label={fieldButtonAriaLabel}
-            variant="bare"
+            variant="icon"
             size="sm"
             onClick={fieldButtonOnClick}
           >

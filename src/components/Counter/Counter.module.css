@@ -50,7 +50,7 @@
 
 /**
  * Counter +/- button styles
- * 1) Instance of bare button variant, and then rebuilds
+ * 1) Instance of icon button variant, and then rebuilds
  *    styles to match text input styles
  * 2) Margin left and margin right 0 added to remove margin in Safari from these 
  */

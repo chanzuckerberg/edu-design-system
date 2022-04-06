@@ -168,7 +168,7 @@ export const Counter = ({
       <div className={styles['counter__body']}>
         <Button
           className={styles['counter__btn']}
-          variant="bare"
+          variant="icon"
           disabled={disabled || (min !== undefined && count === min)}
           onClick={(e) => onDecrease(e)}
         >
@@ -191,7 +191,7 @@ export const Counter = ({
         />
         <Button
           className={styles['counter__btn']}
-          variant="bare"
+          variant="icon"
           disabled={disabled || (max !== undefined && count === max)}
           onClick={(e) => onIncrease(e)}
         >
