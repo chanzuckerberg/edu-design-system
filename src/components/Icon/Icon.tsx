@@ -4,6 +4,9 @@ import React, { useEffect, useState, ReactNode, CSSProperties } from 'react';
 import svg4everybody from 'svg4everybody';
 import styles from './Icon.module.css';
 import icons from '../../icons/spritemap/spritemap.svg';
+import { ALL_ICONS } from '../../util/allIcons';
+
+export type IconName = typeof ALL_ICONS[number];
 
 interface IconPropsBase {
   /**
@@ -41,10 +44,8 @@ interface IconPropsBase {
   id?: string;
   /**
    * Name of icon to reference in icon sprite
-   *
-   * TODO: add typing of possible icon names
    */
-  name?: string;
+  name?: IconName;
   /**
    * Width/Height string (px, rem, em, vh, etc.)
    * Recommendation: use "EdsFontSize" tokens from

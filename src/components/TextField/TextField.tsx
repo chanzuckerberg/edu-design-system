@@ -9,7 +9,7 @@ import React, {
 } from 'react';
 import styles from './TextField.module.css';
 import FieldNote from '../FieldNote';
-import Icon from '../Icon';
+import Icon, { IconName } from '../Icon';
 import Label from '../Label';
 import TextInput from '../TextInput';
 
@@ -50,7 +50,7 @@ export interface Props {
   /**
    * Name of SVG icon (i.e. chevron-down, minus, warning)
    */
-  iconName?: string;
+  iconName?: IconName;
   /**
    * HTML id for the component
    */

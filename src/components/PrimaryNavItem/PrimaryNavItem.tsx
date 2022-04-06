@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import React from 'react';
-import { Icon } from '../Icon/Icon';
+import Icon, { IconName } from '../Icon';
 import styles from '../PrimaryNav/PrimaryNav.module.css';
 
 export interface Props {
@@ -15,7 +15,7 @@ export interface Props {
   /**
    * Name of SVG icon (i.e. caret-down, minus, warning)
    */
-  iconName?: string;
+  iconName?: IconName;
   /**
    * Set to true when the primary nav item is the active page
    */
