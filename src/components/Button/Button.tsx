@@ -79,7 +79,7 @@ export const Button = React.forwardRef(
       size = 'lg',
       children,
       type,
-      variant,
+      variant = 'primary',
       ...other
     }: Props,
     ref,

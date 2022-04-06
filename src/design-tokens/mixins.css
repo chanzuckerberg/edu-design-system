@@ -7,20 +7,24 @@
 }
 
 @define-mixin textLink {
+  /* TODO: inherit size */
   @mixin eds-theme-typography-body-text-md;
-  color: var(--eds-theme-color-link-foreground);
+  /* TODO: underline change on hover */
   text-decoration: underline;
+  color: var(--eds-theme-color-text-link-strong);
 
-  &:hover {
-    color: var(--eds-theme-color-link-foreground-hover);
+  &:hover,
+  &:focus {
+    color: var(--eds-theme-color-text-link-strong-hover);
   }
 
-  &:focus-visible {
+  &:focus {
     @mixin focus;
   }
 }
 
 @define-mixin TextLinkInverted {
+  
   @mixin eds-theme-typography-body-text-md;
   color: var(--eds-theme-color-link-foreground-inverted);
 
