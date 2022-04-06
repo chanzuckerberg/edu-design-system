@@ -1,0 +1,130 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Icon /> CustomColor story renders snapshot 1`] = `
+<svg
+  aria-hidden="true"
+  class="icon"
+  fill="#8984E8"
+  height="2em"
+  style="--icon-size: 2em;"
+  width="2em"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <use
+    xlink:href="test-file-stub#close"
+  />
+</svg>
+`;
+
+exports[`<Icon /> Default story renders snapshot 1`] = `
+<svg
+  aria-hidden="true"
+  class="icon"
+  fill="currentColor"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <use
+    xlink:href="test-file-stub#close"
+  />
+</svg>
+`;
+
+exports[`<Icon /> FullScreen story renders snapshot 1`] = `
+<svg
+  aria-hidden="true"
+  class="icon"
+  fill="currentColor"
+  height="100vh"
+  style="--icon-size: 100vh;"
+  width="100vh"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <use
+    xlink:href="test-file-stub#close"
+  />
+</svg>
+`;
+
+exports[`<Icon /> InText story renders snapshot 1`] = `
+<p
+  class="text text--body"
+>
+  The svg icon defaults to the surrounding text size (
+  <svg
+    class="icon"
+    fill="currentColor"
+    role="img"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title
+      id="mock-id"
+    >
+      icon with 1em line height
+    </title>
+    <use
+      xlink:href="test-file-stub#account-circle"
+    />
+  </svg>
+  , 1em), but often looks better with the line height (
+  <svg
+    class="icon"
+    fill="currentColor"
+    height="2em"
+    role="img"
+    style="--icon-size: 2em;"
+    width="2em"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title
+      id="mock-id"
+    >
+      icon with 2em line height
+    </title>
+    <use
+      xlink:href="test-file-stub#account-circle"
+    />
+  </svg>
+  , 2em) which is harder to determine. Take a look at the icons available in
+   
+  <a
+    href="https://material-ui.com/components/material-icons/"
+    rel="noreferrer"
+    target="_blank"
+  >
+    https://material-ui.com/components/material-icons/
+  </a>
+  , currently we only support the filled icons.
+</p>
+`;
+
+exports[`<Icon /> Large story renders snapshot 1`] = `
+<svg
+  aria-hidden="true"
+  class="icon"
+  fill="currentColor"
+  height="4em"
+  style="--icon-size: 4em;"
+  width="4em"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <use
+    xlink:href="test-file-stub#close"
+  />
+</svg>
+`;
+
+exports[`<Icon /> Medium story renders snapshot 1`] = `
+<svg
+  aria-hidden="true"
+  class="icon"
+  fill="currentColor"
+  height="2em"
+  style="--icon-size: 2em;"
+  width="2em"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <use
+    xlink:href="test-file-stub#close"
+  />
+</svg>
+`;

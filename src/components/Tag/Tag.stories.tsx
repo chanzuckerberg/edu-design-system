@@ -55,16 +55,10 @@ export const OutlineVariants: StoryObj<Args> = {
   ),
 };
 
-/**
- * Snap tests disabled due to TypeError in <Icon> but should be turned back on once fixed.
- */
 export const WithIcon: StoryObj<Args> = {
   ...Default,
   args: {
     icon: <Icon purpose="decorative" name="favorite" />,
-  },
-  parameters: {
-    snapshot: { skip: true },
   },
   render: (args) => (
     <div className={styles.tagList}>
@@ -88,9 +82,6 @@ export const WithLongTextAndIcon: StoryObj<Args> = {
   args: {
     text: 'This tag has a really long text message',
     icon: <Icon purpose="decorative" name="star" />,
-  },
-  parameters: {
-    snapshot: { skip: true },
   },
   render: (args) => (
     <div className={styles.tagList}>
