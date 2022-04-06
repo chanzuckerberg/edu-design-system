@@ -9,7 +9,7 @@
   position: relative;
   margin-bottom: var(--eds-size-4);
 
-  @media all and (min-width: $eds-bp-lg) {
+  @media all and (min-width: $eds-bp-xl) {
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -27,8 +27,8 @@
  */
 .global-header__logo {
   display: none;
-  
-  @media all and (min-width: $eds-bp-lg) {
+
+  @media all and (min-width: $eds-bp-xl) {
     display: block;
     position: relative;
     left: -0.5rem; /* 2 */
@@ -43,26 +43,33 @@
  *    can be exposed
  */
 .global-header__menu-button {
-  @media all and (min-width: $eds-bp-lg) {
+  @media all and (min-width: $eds-bp-xl) {
     display: none; /* 1 */
   }
 }
 
-
 /**
- * Avatar block 
- * 1) The bottom-aligned avatar block contains the clickable
- *    avatar item that exposes the user's notifications when
- *    selected
- * 2) Nudge the alignment to achieve the desired layout
+ * Global header utility nav
  */
-.global-header__avatar-block {
+.global-header__utility-nav {
   position: relative;
-  left: -0.5rem; /* 2 */
   margin-left: auto;
 
-  @media all and (min-width: $eds-bp-lg) {
+  @media all and (min-width: $eds-bp-xl) {
+    left: -0.5rem;
     margin-left: 0;
     margin-top: auto;
+  }
+}
+
+/**
+ * Utility nav popover
+ * 1) On small screens, create a max width so that the popover flexes to accommodate small screens
+ */
+.global-header__popover {
+  max-width: calc(100vw - 2rem); /* 1 */
+
+  @media all and (min-width: $eds-bp-xl) {
+    max-width: initial;
   }
 }

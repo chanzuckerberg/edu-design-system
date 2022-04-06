@@ -1,7 +1,17 @@
 import clsx from 'clsx';
 import React, { ReactNode, useEffect, useState, useRef } from 'react';
+import {
+  Popover,
+  PopoverBody,
+  PopoverHeader,
+  Button,
+  Heading,
+  NotificationList,
+  NotificationListItem,
+} from '../..';
 import { useMergedRefs } from '../../hooks';
-import Icon from '../Icon';
+import { Icon } from '../Icon/Icon';
+import utilityStyles from '../Utilities/Visibility.module.css';
 import styles from '../UtilityNav/UtilityNav.module.css';
 
 export interface Props {
@@ -18,6 +28,14 @@ export interface Props {
    */
   href?: string;
   /**
+   * Prop to visually hide text so that screen readers still read this out to the users
+   */
+  hideText?: boolean;
+  /**
+   * Slot before the item name to put items like avatars
+   */
+  itemBefore?: ReactNode;
+  /**
    * Link text string
    */
   text?: string;
@@ -27,13 +45,16 @@ export interface Props {
  * Primary UI component for user interaction
  */
 export const UtilityNavItem = React.forwardRef<HTMLLIElement, Props>(
-  function UtilityNavItem({ className, children, text, href, ...other }, ref) {
+  function UtilityNavItem(
+    { className, children, text, href, itemBefore, hideText, ...other },
+    ref,
+  ) {
     const [isActive, setIsActive] = useState(false);
     const ownRef = useRef<HTMLLIElement | null>(null);
     const utilityNavItemRef = useMergedRefs(ref, ownRef);
     const TagName = createTagName();
 
-    const togglePanel = () => {
+    const togglePopover = () => {
       setIsActive(!isActive);
     };
 
@@ -67,28 +88,32 @@ export const UtilityNavItem = React.forwardRef<HTMLLIElement, Props>(
       }
     }
 
-    const componentClassName = clsx(
-      'utility-nav__item',
-      className,
-      isActive && 'eds-is-active',
-    );
+    const componentClassName = clsx(styles['utility-nav__item'], className, {
+      [styles['eds-is-active']]: isActive === true,
+    });
 
     return (
       <li className={componentClassName} ref={utilityNavItemRef} {...other}>
         <TagName
           className={styles['utility-nav__link']}
           href={href}
-          onClick={togglePanel}
+          onClick={togglePopover}
           aria-expanded={!href && children ? isActive : undefined}
         >
-          <span className={styles['utility-nav__text']}>{text}</span>
-          {children && (
-            <Icon
-              purpose="decorative"
-              name="expand-more"
-              className={styles['utility-nav__icon']}
-            />
+          {itemBefore && (
+            <div className={styles['utility-nav__item-before']}>
+              {itemBefore}
+            </div>
           )}
+          <span
+            className={
+              hideText
+                ? `${styles['utility-nav__text']} ${utilityStyles['u-is-vishidden']}`
+                : styles['utility-nav__text']
+            }
+          >
+            {text}
+          </span>
         </TagName>
         {children && (
           <div className={styles['utility-nav__item-panel']} hidden={!isActive}>

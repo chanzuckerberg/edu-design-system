@@ -34,12 +34,6 @@ export const PrimaryNavItem = React.forwardRef<HTMLLIElement, Props>(
     { className, text, href, isActive, iconName, ...other },
     ref,
   ) {
-    const componentClassName = clsx(
-      styles['primary-nav__item'],
-      className,
-      isActive && styles['eds-is-active'],
-    );
-
     const TagName = createTagName();
 
     function createTagName() {
@@ -49,6 +43,12 @@ export const PrimaryNavItem = React.forwardRef<HTMLLIElement, Props>(
         return 'button';
       }
     }
+
+    const componentClassName = clsx(
+      styles['primary-nav__item'],
+      className,
+      isActive && styles['eds-is-active'],
+    );
     return (
       <li className={componentClassName} {...other} ref={ref}>
         <TagName className={styles['primary-nav__link']} href={href}>

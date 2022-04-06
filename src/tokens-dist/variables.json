@@ -229,6 +229,7 @@
   "EdsThemeColorButtonDestructiveTextHover": "#ffffff",
   "EdsThemeColorButtonDestructiveTextActive": "#ffffff",
   "EdsThemeColorFocusRing": "#8984E8",
+  "EdsThemeColorFocusRingInverted": "#ffffff",
   "EdsThemeColorFormBorder": "#C0C4C8",
   "EdsThemeColorFormBorderHover": "#A2A3A8",
   "EdsThemeColorFormBackground": "#ffffff",

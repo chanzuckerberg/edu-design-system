@@ -37,7 +37,7 @@
 */
 .notification-list__content {
   color: var(--eds-theme-color-text-neutral-default);
-  font-size: var(--eds-theme-typography-body-text-xs);
+  @mixin eds-theme-typography-body-text-xs;
 }
 
 /*
@@ -46,7 +46,7 @@
 */
 .notification-list__link {
   color: var(--eds-theme-color-text-link-strong);
-  font-size: var(--eds-theme-typography-body-text-sm);
+  @mixin eds-theme-typography-body-text-sm;
   text-decoration: none;
 
   /**

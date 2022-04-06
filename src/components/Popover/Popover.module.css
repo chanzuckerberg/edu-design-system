@@ -20,8 +20,8 @@
   width: 25rem;
   max-width: 25rem;
   opacity: 0;
-  color: var(--eds-theme-color-body-foreground);
-  background: var(--eds-color-neutral-white);
+  color: var(--eds-theme-color-text-neutral-default);
+  background: var(--eds-theme-color-background-neutral-default);
   border-radius: var(--eds-theme-border-radius);
   box-shadow: var(--eds-theme-box-shadow);
   transition: opacity var(--eds-anim-fade-quick) var(--eds-anim-ease);
@@ -38,7 +38,7 @@
   &::after {
     content: '';
     position: absolute;
-    left: 1.25rem;
+    left: 0.625rem;
     top: 100%;
     border-top: 10px solid var(--eds-color-neutral-white);
     border-left: 8px solid transparent;
@@ -64,13 +64,13 @@
  */
 .popover--top-left {
   left: unset;
-  right: calc(50% - 2rem);
+  right: 0;
   /**
   * Popover top left caret
   */
   &::after {
     left: unset;
-    right: 1.25rem;
+    right: 0.625rem;
   }
 }
 
@@ -82,7 +82,7 @@
   bottom: unset;
   top: calc(100% + 1rem);
   left: unset;
-  right: calc(50% - 2rem);
+  right: 0;
 
   /**
   * Popover bottom left caret
@@ -91,7 +91,7 @@
   &::after {
     bottom: 100%;
     top: unset;
-    right: 1.25rem;
+    right: 0.625rem;
     left: unset;
     border-top: none;
     border-right: 8px solid transparent;

@@ -17,7 +17,6 @@
   opacity: 0; /* 2 */
   height: 0;
   width: 100%; /* 1 */
-  overflow: hidden;
   padding: var(--eds-size-4);
   z-index: var(--eds-z-index-bottom); /* 2 */
   transition: all var(--eds-anim-move-quick) var(--eds-anim-ease);
@@ -27,7 +26,7 @@
    * 1) Un-hide navcontainer to display nav by default on larger screens
    * 2) Display children as horizontal flex items
   */
-  @media all and (min-width: $eds-bp-lg) {
+  @media all and (min-width: $eds-bp-xl) {
     display: flex; /* 1 */
     justify-content: space-between; /* 2 */
     position: static;
@@ -46,7 +45,7 @@
 .nav-container.is-active {
   display: block;
 
-  @media all and (max-width: $eds-bp-lg) {
+  @media all and (max-width: $eds-bp-xl) {
     opacity: 1;
     visibility: visible;
     display: flex;

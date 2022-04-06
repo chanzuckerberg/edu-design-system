@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './GlobalHeader.module.css';
 import {
   Header,
@@ -8,8 +8,16 @@ import {
   PrimaryNavItem,
   NavContainer,
   Button,
-  AvatarBlock,
+  Avatar,
+  UtilityNav,
+  UtilityNavItem,
   Icon,
+  Popover,
+  PopoverBody,
+  PopoverHeader,
+  Heading,
+  NotificationList,
+  NotificationListItem,
 } from '../../../src';
 
 export interface Props {
@@ -24,6 +32,7 @@ export interface Props {
  */
 export const GlobalHeader = ({ className, ...other }: Props) => {
   const [isActive, setisActive] = useState(false);
+  const [isLarge, setIsLarge] = useState(false);
 
   const toggleMenu = () => {
     setisActive(!isActive);
@@ -33,6 +42,24 @@ export const GlobalHeader = ({ className, ...other }: Props) => {
       document.body.classList.add('eds-is-disabled');
     }
   };
+
+  useEffect(() => {
+    updateScreenSize();
+    window.addEventListener('resize', updateScreenSize);
+    return () => {
+      window.addEventListener('resize', updateScreenSize, false);
+    };
+  }, []);
+
+
+  const updateScreenSize = () => {
+    if (window.innerWidth >= 1200) {
+      setIsLarge(true);
+    }
+    else {
+      setIsLarge(false);
+    }
+  }
 
   const componentClassName = clsx(styles['global-header'], className, {
     [styles['is-active']]: isActive,
@@ -76,9 +103,81 @@ export const GlobalHeader = ({ className, ...other }: Props) => {
           />
         </PrimaryNav>
       </NavContainer>
-      <AvatarBlock className={styles['global-header__avatar-block']}>
-        Ali S.
-      </AvatarBlock>
+      <UtilityNav className={styles['global-header__utility-nav']}>
+        <UtilityNavItem
+          hideText={true}
+          itemBefore={<Avatar />}
+          text="Notifications"
+        >
+          <Popover
+            className={styles['global-header__popover']}
+            position={isLarge === false ? 'bottom-left' : undefined}
+            dismissible={true}
+            isActive={true}
+            ariaLabelledBy="popover-heading-1"
+            ariaDescribedBy="popover-description-1"
+          >
+            <PopoverHeader
+              titleAfter={
+                <Button size="sm" variant="icon">Mark All Seen</Button>
+              }
+            >
+              <Heading id="popover-heading-1" as="h6">
+                Notifications (4)
+              </Heading>
+            </PopoverHeader>
+            <PopoverBody>
+              <NotificationList>
+                <NotificationListItem
+                  href="#"
+                  title="English Teacher gave you feedback"
+                  date="now"
+                  source="Outsiders on Trial: Self Awareness = Trial Brief Outline"
+                ></NotificationListItem>
+                <NotificationListItem
+                  href="#"
+                  title="English Teacher gave you feedback"
+                  date="now"
+                  source="Outsiders on Trial: Self Awareness = Trial Brief Outline"
+                ></NotificationListItem>
+                <NotificationListItem
+                  href="#"
+                  title="English Teacher gave you feedback"
+                  date="now"
+                  source="Outsiders on Trial: Self Awareness = Trial Brief Outline"
+                ></NotificationListItem>
+                <NotificationListItem
+                  href="#"
+                  title="English Teacher gave you feedback"
+                  date="now"
+                  source="Outsiders on Trial: Self Awareness = Trial Brief Outline"
+                ></NotificationListItem>
+              </NotificationList>
+              <PopoverHeader>
+                <Heading id="popover-heading-2" as="h6">
+                  Already Seen
+                </Heading>
+              </PopoverHeader>
+              <NotificationList>
+                <NotificationListItem
+                  href="#"
+                  title="English Teacher gave you feedback"
+                  date="now"
+                  source="Outsiders on Trial: Self Awareness = Trial Brief Outline"
+                  markedAsRead={true}
+                ></NotificationListItem>
+                <NotificationListItem
+                  href="#"
+                  title="English Teacher gave you feedback"
+                  date="now"
+                  source="Outsiders on Trial: Self Awareness = Trial Brief Outline"
+                  markedAsRead={true}
+                ></NotificationListItem>
+              </NotificationList>
+            </PopoverBody>
+          </Popover>
+        </UtilityNavItem>
+      </UtilityNav>
     </Header>
   );
 };
