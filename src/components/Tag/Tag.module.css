@@ -1,61 +1,92 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #TAGS
+\*------------------------------------*/
+
+/**
+ * The rounded rectangle container that houses information.
+ * 1) Grabs colors from whichever variant is selected.
+ * 2) Rounds the corners of the tag.
+ */
 .tag {
-  @apply w-max max-w-xs py-1 px-3 inline-flex items-center rounded-full border;
+  width: max-content;
+  max-width: 20rem;
+  padding: var(--eds-size-half) var(--eds-size-1-and-half);
 
-  /** 
-   * TODO: (dcwither) when adding SvgIcon to EDS, include this in tailwind font 
-   * size macro.
-   */
-  --icon-size-default: 1.25rem;
+  display: inline-flex;
+  align-items: center;
 
-  background-color: var(--tag-secondary-color);
-  border-color: var(--tag-secondary-color);
+  border: var(--tag-secondary-color) solid var(--eds-theme-border-width); /* 1 */
+  border-radius: 9999px; /* 2 */
+
+  background-color: var(--tag-secondary-color); /* 1 */
   color: var(--tag-primary-color);
+  --icon-size-default: 1.25rem;
 }
 
+/**
+ * If tags are used inline, ensures spacing between tags.
+ */
 .tag > :not(:last-child) {
-  @apply mr-1;
+  margin-right: var(--eds-size-half);
 }
 
-.body {
-  @apply flex-auto truncate;
+/**
+ * Keeps text centered and in one line.
+ */
+.tag__body {
+  flex: 1 1 auto;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-.colorNeutral {
-  --tag-primary-color: var(--eds-color-neutral-700);
-  --tag-secondary-color: var(--eds-color-neutral-100);
-  --tag-outline-color: var(--eds-color-neutral-500);
+/**
+ * Color variants.
+ */
+.tag--default {
+  --tag-primary-color: var(--eds-theme-color-text-neutral-default);
+  --tag-secondary-color: var(--eds-theme-color-background-neutral-medium);
+  --tag-outline-color: var(--eds-theme-color-border-neutral-default);
 }
 
-.colorError {
-  --tag-primary-color: var(--eds-color-alert-700);
-  --tag-secondary-color: var(--eds-color-alert-100);
-  --tag-outline-color: var(--eds-color-alert-500);
+.tag--stop {
+  --tag-primary-color: var(--eds-theme-color-text-utility-error);
+  --tag-secondary-color: var(--eds-theme-color-background-utility-error);
+  --tag-outline-color: var(--eds-theme-color-border-utility-error-default);
 }
 
-.colorSuccess {
-  --tag-primary-color: var(--eds-color-success-700);
-  --tag-secondary-color: var(--eds-color-success-100);
-  --tag-outline-color: var(--eds-color-success-500);
+.tag--go {
+  --tag-primary-color: var(--eds-theme-color-text-utility-success);
+  --tag-secondary-color: var(--eds-theme-color-background-utility-success);
+  --tag-outline-color: var(--eds-theme-color-border-utility-success-default);
 }
 
-.colorWarning {
-  --tag-primary-color: var(--eds-color-warning-700);
-  --tag-secondary-color: var(--eds-color-warning-100);
-  --tag-outline-color: var(--eds-color-warning-500);
+.tag--warning {
+  --tag-primary-color: var(--eds-theme-color-text-utility-warning);
+  --tag-secondary-color: var(--eds-theme-color-background-utility-warning);
+  --tag-outline-color: var(--eds-theme-color-border-utility-warning-default);
 }
 
-.colorYellow {
-  --tag-primary-color: var(--eds-color-neutral-700);
-  --tag-secondary-color: var(--eds-color-yellow-100);
-  --tag-outline-color: var(--eds-color-yellow-500);
+.tag--yield {
+  --tag-primary-color: var(--eds-theme-color-text-grade-revise);
+  --tag-secondary-color: var(--eds-theme-color-background-grade-revise-subtle);
+  --tag-outline-color: var(--eds-theme-color-border-grade-revise-default);
 }
 
-.colorBrand {
-  --tag-primary-color: var(--eds-color-brand-700);
-  --tag-secondary-color: var(--eds-color-brand-100);
-  --tag-outline-color: var(--eds-color-brand-500);
+.tag--brand {
+  --tag-primary-color: var(--eds-theme-color-text-brand-primary);
+  --tag-secondary-color: var(
+    --eds-theme-color-background-brand-primary-default
+  );
+  --tag-outline-color: var(--eds-theme-color-border-brand-primary);
 }
 
-.outline {
+/**
+ * Adds outline to the tag.
+ */
+.tag--outline {
   border-color: var(--tag-outline-color);
 }
