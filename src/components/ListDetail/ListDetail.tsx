@@ -15,8 +15,13 @@ import {
   R_ARROW_KEYCODE,
   D_ARROW_KEYCODE,
 } from '../../util/keycodes';
-import { Icon } from '../Icon/Icon';
-import { ListDetailPanel } from '../ListDetailPanel/ListDetailPanel';
+import Button from '../Button';
+import Drawer from '../Drawer';
+import DrawerBody from '../DrawerBody';
+import DrawerHeader from '../DrawerHeader';
+import Heading from '../Heading';
+import Icon from '../Icon';
+import ListDetailPanel from '../ListDetailPanel';
 
 export interface Props {
   /**
@@ -96,6 +101,7 @@ export const ListDetail = ({
   const [activeIndexState, setActiveIndexState] = useState(
     activeIndex ? activeIndex : 0,
   );
+  const [drawerOpen, setDrawerOpen] = useState(false);
   /**
    * Set the only children components allowed within <ListDetail> to be ListDetailPanel
    */
@@ -162,6 +168,7 @@ export const ListDetail = ({
    */
   function onOpen(index: any) {
     setActiveIndexState(index); /* 1 */
+    setDrawerOpen(true);
 
     if (onChange) {
       /* 2 */
@@ -219,6 +226,13 @@ export const ListDetail = ({
   );
   const TagName = variant === 'ordered' ? 'ol' : 'ul';
   const componentClassName = clsx(styles['list-detail'], className, {});
+
+  const onClose = () => {
+    setActiveIndexState(0);
+    setDrawerOpen(false);
+    setId([]);
+    setAriaLabelledBy([]);
+  };
 
   return (
     <div className={componentClassName} {...other}>
@@ -291,7 +305,15 @@ export const ListDetail = ({
                       ''
                     )}
                   </div>
-                  {tab.props.title}
+                  <div className={clsx(styles['list-detail__link-title'])}>
+                    {tab.props.title}
+                  </div>
+                  <Button
+                    variant="bare"
+                    className={styles['list-detail__link-right']}
+                  >
+                    <Icon name="arrow-forward" />
+                  </Button>
                 </a>
               </li>
             );
@@ -301,6 +323,25 @@ export const ListDetail = ({
       <div className={styles['list-detail__body']}>
         {childrenWithProps[activeIndexState]}
       </div>
+      <Drawer
+        dismissible={true}
+        isActive={drawerOpen}
+        onClose={onClose}
+        ariaLabelledBy="drawer-heading-1"
+        ariaDescribedBy="drawer-description-1"
+        className={styles['list-detail__drawer']}
+      >
+        <DrawerHeader>
+          <Heading as="h1">
+            {childrenWithProps[activeIndexState].props.title}
+          </Heading>
+        </DrawerHeader>
+        <DrawerBody>
+          <div className={styles['list-detail__drawer--body']}>
+            {childrenWithProps[activeIndexState]}
+          </div>
+        </DrawerBody>
+      </Drawer>
     </div>
   );
 };

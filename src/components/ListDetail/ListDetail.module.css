@@ -41,13 +41,26 @@
  * 1) Take up the rest of the space
  */
 .list-detail__body {
-  padding: var(--eds-size-2);
-
+  display: none;
+  
   @media all and (min-width: $eds-bp-lg) {
+    display: block;
     flex: 1; /* 1 */
     padding: var(--eds-size-5) var(--eds-size-8);
     box-shadow: -6px 0px 10px -2px var(--eds-theme-color-border-neutral-subtle); /* 1 */
   }
+}
+
+.list-detail__drawer {
+  display: none;
+
+  @media all and (max-width: $eds-bp-lg) {
+    display: flex;
+  }
+}
+
+.list-detail__drawer--body {
+  padding: var(--eds-size-2) var(--eds-size-2);
 }
 
 /**
@@ -124,11 +137,19 @@
   color: var(--eds-theme-color-text-disabled); /* 2 */
   cursor: pointer;
   transition: color var(--eds-anim-fade-quick) var(--eds-anim-ease),
-    box-shadow var(--eds-anim-fade-quick) var(--eds-anim-ease),
-    background-color var(--eds-anim-fade-quick) var(--eds-anim-ease);
+  box-shadow var(--eds-anim-fade-quick) var(--eds-anim-ease),
+  background-color var(--eds-anim-fade-quick) var(--eds-anim-ease);
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--eds-l-sidebar-width);
 
   &:focus-visible {
     @mixin focus;
+  }
+
+  @media all and (max-width: $eds-bp-lg) {
+    @mixin eds-theme-typography-body-text-bold;
+    color: var(--eds-theme-color-text-neutral-default);
   }
 
   /**
@@ -140,20 +161,19 @@
   }
 }
 
+/**
+ * Before pseudoelement bullet (for non-number variant items)
+ * 1) Set to 9px to center the border
+ * 2) This is the same color used for the vertical line when list style is "ordered"
+ * 3) Using a percentage here instead of --eds-theme-border-radius because this is a cosmetic element (a cicular bullet), not a typical bordered object
+ */
 .list-detail__link-left:not(.list-detail__link-hidden) {
-  /**
-   * Before pseudoelement bullet (for non-number variant items)
-   * 1) Set to 9px to center the border
-   * 2) This is the same color used for the vertical line when list style is "ordered"
-   * 3) Using a percentage here instead of --eds-theme-border-radius because this is a cosmetic element (a cicular bullet), not a typical bordered object
-   */
   &:before {
     content: '';
-    flex-shrink: 0;
+    flex-grow: 1;
     margin-right: var(--eds-size-2);
     display: block;
     position: relative;
-    top: var(--eds-size-1);
     height: 9px; /* 1 */
     width: 9px; /* 1 */
     background: var(--eds-theme-color-border-neutral-subtle); /* 2 */
@@ -169,6 +189,33 @@
     &:before {
       content: none;
     }
+  }
+}
+
+/** List detail link-title 
+* 1) The text of the list item
+* 2) On viewports < lg, the text, along with its pseudo-bullet (if visible) should remain aligned to the left side of the list item, with the arrow aligned to the right. Giving the title and the pseudo-bullet a flex-grow of 1, while giving the arrow a flex-grow of 3, allows this
+*/
+
+.list-detail__link-title {
+  flex-grow: 1; /* 2 */
+
+  margin-right: var(--eds-size-1);
+}
+
+/**
+* List detail link-right
+* 1) A button containing an arrow icon that is only displayed on viewports < lg
+* 2) The button component is styled with a height of --eds-size-5 (40px) which would cause each list item to have extra vertical space. Display:contents removes the button's principal box and renders its contents (the Icon component) as normal. However due to a bug in browsers, this currently removes this button from the accessibility tree, meaning screen readers will ignore the button's contents. See https://developer.mozilla.org/en-US/docs/Web/CSS/display-box
+* 3) On viewports < lg, the arrow should remain aligned to the right side of the list item. Giving the arrow a flex-grow of 3, while giving the title and the pseudo-bullet a flex-grow of 1, allows this
+*/
+
+.list-detail__link-right {
+  display: none;
+
+  @media all and (max-width: $eds-bp-lg) {
+    display: contents; /* 2 */
+    flex-grow: 3; /* 3 */
   }
 }
 

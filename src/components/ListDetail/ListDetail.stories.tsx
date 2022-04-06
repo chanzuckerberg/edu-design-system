@@ -24,7 +24,7 @@ const Template: Story<Props> = (args) => (
       </TextPassage>
     </ListDetailPanel>
 
-    <ListDetailPanel title="ListDetailPanel 2" variant="error">
+    <ListDetailPanel title="Another checkpoint name that wraps" variant="error">
       <TextPassage>
         <h3>ListDetailPanel 2</h3>
         <p>
