@@ -61,7 +61,7 @@ DefaultWithMultipleFiles.args = {
 export const Uploading = Template.bind({});
 Uploading.args = {
   files: files,
-  status: 'uploading',
+  statusLabel: 'uploading',
   name: 'fild-upload-field-1',
   multiple: true,
 };
@@ -69,7 +69,7 @@ Uploading.args = {
 export const Success = Template.bind({});
 Success.args = {
   files: files,
-  status: 'success',
+  statusLabel: 'success',
   name: 'fild-upload-field-1',
   multiple: true,
 };
@@ -77,7 +77,7 @@ Success.args = {
 export const Error = Template.bind({});
 Error.args = {
   files: files,
-  status: 'error',
+  statusLabel: 'error',
   isError: true,
   fieldNote: 'Sorry, something went wrong.',
   name: 'fild-upload-field-1',

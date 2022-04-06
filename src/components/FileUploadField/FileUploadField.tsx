@@ -270,6 +270,7 @@ export const FileUploadField = ({
         return (
           <LoadingIndicator
             className={styles['file-upload-field__loading-indicator']}
+            size="1rem"
           />
         );
 

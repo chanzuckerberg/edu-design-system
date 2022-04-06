@@ -9,6 +9,7 @@ import React, {
   ReactNode,
 } from 'react';
 import styles from './AccordionPanel.module.css';
+import { EdsThemeColorIconNeutralStrong } from '../../tokens-dist/colors';
 import Icon from '../Icon';
 
 export interface Props {
@@ -121,8 +122,10 @@ export const AccordionPanel = ({
           {header}
           <Icon
             className={styles['accordion-panel__icon']}
+            color={EdsThemeColorIconNeutralStrong}
             name="expand-more"
             purpose="decorative"
+            size="2rem"
           />
         </button>
       </dt>
