@@ -10,7 +10,7 @@ import React, {
 import styles from './TextareaField.module.css';
 import Button from '../Button';
 import FieldNote from '../FieldNote';
-import Icon from '../Icon';
+import Icon, { IconName } from '../Icon';
 import Label from '../Label';
 import Textarea from '../Textarea';
 
@@ -51,7 +51,7 @@ export interface Props {
   /**
    * Name of SVG icon (i.e. chevron-down, minus, warning)
    */
-  iconName?: string;
+  iconName?: IconName;
   /**
    * HTML id for the component
    */

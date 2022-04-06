@@ -47,8 +47,6 @@ interface IconPropsBase {
   id?: string;
   /**
    * Name of icon to reference in icon sprite
-   *
-   * TODO: add typing of possible icon names
    */
   name?: IconName;
   /**

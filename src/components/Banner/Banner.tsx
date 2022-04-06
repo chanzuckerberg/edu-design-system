@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import React, { ReactNode, useState } from 'react';
 import styles from './Banner.module.css';
 import Button from '../Button';
-import Icon from '../Icon';
+import Icon, { IconName } from '../Icon';
 
 export interface Props {
   /**
@@ -25,7 +25,7 @@ export interface Props {
   /**
    * Name of banner SVG icon. Available options are: banner, error, warning-2, success
    */
-  iconName?: string;
+  iconName?: IconName;
   /**
    * The title attribute for the SVG icon in the banner
    */

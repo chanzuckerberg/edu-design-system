@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import styles from './FieldNote.module.css';
-import Icon from '../Icon';
+import Icon, { IconName } from '../Icon';
 
 export interface Props {
   /**
@@ -15,7 +15,7 @@ export interface Props {
   /**
    * Name of the fieldnote icon
    */
-  iconName?: string;
+  iconName?: IconName;
   /**
    * HTML id for the component
    */
@@ -60,7 +60,7 @@ export const FieldNote = ({
           className={styles['field-note__icon']}
           title="error"
           purpose="informative"
-          name={isError && 'cancel'}
+          name={isError ? 'cancel' : undefined}
         />
       )}
       {children}

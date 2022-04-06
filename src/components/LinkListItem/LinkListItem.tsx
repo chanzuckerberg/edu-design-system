@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import React, { MouseEventHandler } from 'react';
-import { Icon } from '../Icon/Icon';
+import Icon, { IconName } from '../Icon';
 import styles from '../LinkList/LinkList.module.css';
 
 export interface Props {
@@ -19,7 +19,7 @@ export interface Props {
   /**
    * Name of SVG icon (i.e. caret-down, minus, warning)
    */
-  iconName?: string;
+  iconName?: IconName;
   /**
    * Position of the icon. "before" renders the icon before the link text, and "after" renders the icon after the link text
    */
