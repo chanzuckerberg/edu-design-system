@@ -18,7 +18,11 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const LoadingIndicator = ({ className, size, ...other }: Props) => {
+export const LoadingIndicator = ({
+  className,
+  size = '3rem',
+  ...other
+}: Props) => {
   const componentClassName = clsx(styles['loading-indicator'], className, {});
   return (
     <div className={componentClassName} {...other}>
@@ -27,7 +31,7 @@ export const LoadingIndicator = ({ className, size, ...other }: Props) => {
         color={EdsThemeColorTextNeutralDefault}
         name="spinner"
         purpose="decorative"
-        size={size || '3rem'}
+        size={size}
       />
     </div>
   );
