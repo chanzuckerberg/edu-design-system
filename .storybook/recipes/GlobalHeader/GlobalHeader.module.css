@@ -42,7 +42,7 @@
  *    on small screens, but is hidden when the nav
  *    can be exposed
  */
-.global-header__menu-button {
+.global-header__menu-button.global-header__menu-button {
   transition: background var(--eds-anim-fade-quick) var(--eds-anim-ease);
 
   &:hover,
