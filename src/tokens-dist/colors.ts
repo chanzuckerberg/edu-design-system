@@ -27,6 +27,7 @@ export const EdsColorOtherMint600 = '#008656';
 export const EdsColorOtherMint700 = '#007249';
 export const EdsColorOtherMint800 = '#005939';
 export const EdsColorOtherYellow100 = '#FFF1E9';
+export const EdsColorOtherYellow300 = '#FFDD80';
 export const EdsColorOtherYellow400 = '#F7BE2D';
 export const EdsColorOtherLemon = '#F5FF8F';
 export const EdsColorOtherOrange100 = '#FFF1E9';

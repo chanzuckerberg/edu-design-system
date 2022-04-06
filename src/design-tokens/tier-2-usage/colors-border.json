@@ -70,7 +70,12 @@
               "value": "{eds.color.other.mint.300}"
             },
             "revise": {
-              "value": "{eds.color.other.orange.100}"
+              "default": {
+                "value": "{eds.color.other.yellow.300}"
+              },
+              "subtle": {
+                "value": "{eds.color.other.orange.100}"
+              }
             },
             "stop": {
               "value": "{eds.color.other.ruby.300}"

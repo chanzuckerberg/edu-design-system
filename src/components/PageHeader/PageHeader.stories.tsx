@@ -2,7 +2,7 @@ import { Story, Meta } from '@storybook/react';
 import React from 'react';
 
 import { PageHeader, Props } from './PageHeader';
-import Badge from '../Badge';
+import Tag from '../Tag';
 
 export default {
   title: 'Molecules/Text/PageHeader',
@@ -40,7 +40,7 @@ Centered.args = {
 export const TitleAfter = Template.bind({});
 TitleAfter.args = {
   title: 'Page header title',
-  titleAfter: <Badge text="Title after content" />,
+  titleAfter: <Tag text="Title after content" />,
   description:
     'This is a description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
 };

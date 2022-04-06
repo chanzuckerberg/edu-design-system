@@ -1,30 +1,25 @@
-import type { StoryObj } from "@storybook/react";
-import React from "react";
-import Icon from "../Icon";
-import Tag, { stylesByColor } from "./Tag";
-import type { Color } from "./Tag";
-import styles from "./Tag.stories.module.css";
-
-// todo (Andrew): look into getting rid of the `as` cast. The `stylesByColor` object's keys are
-// members of Color. Can TypeScript understand that?
-const colorOptions = Object.keys(stylesByColor) as Color[];
+import type { StoryObj } from '@storybook/react';
+import React from 'react';
+import Tag, { VARIANTS } from './Tag';
+import styles from './Tag.stories.module.css';
+import Icon from '../Icon';
 
 export default {
-  title: "Tag",
+  title: 'Molecules/Messaging/Tag',
   component: Tag,
 
   argTypes: {
-    color: {
+    variant: {
       control: {
-        type: "select",
-        options: colorOptions,
+        type: 'select',
+        options: VARIANTS,
       },
     },
   },
 
   args: {
-    children: "Tag text",
-    color: "warning" as const,
+    text: 'Tag text',
+    variant: 'default' as const,
   },
 };
 
@@ -35,8 +30,8 @@ export const Default: StoryObj<Args> = {};
 export const ColorVariants: StoryObj<Args> = {
   render: (args) => (
     <div className={styles.tagList}>
-      {colorOptions.map((color) => {
-        return <Tag key={color} {...args} color={color} />;
+      {VARIANTS.map((variant) => {
+        return <Tag key={variant} {...args} variant={variant} text={variant} />;
       })}
     </div>
   ),
@@ -45,28 +40,65 @@ export const ColorVariants: StoryObj<Args> = {
 export const OutlineVariants: StoryObj<Args> = {
   render: (args) => (
     <div className={styles.tagList}>
-      {colorOptions.map((color) => {
-        return <Tag key={color} {...args} color={color} variant="outline" />;
+      {VARIANTS.map((variant) => {
+        return (
+          <Tag
+            key={variant}
+            {...args}
+            variant={variant}
+            text={variant}
+            hasOutline={true}
+          />
+        );
       })}
     </div>
   ),
 };
 
+/**
+ * Snap tests disabled due to TypeError in <Icon> but should be turned back on once fixed.
+ */
 export const WithIcon: StoryObj<Args> = {
   ...Default,
   args: {
-    icon: (
-      <Icon key="icon" name="warning" purpose="informative" title="warning" />
-    ),
+    icon: <Icon purpose="decorative" name="favorite" />,
   },
+  parameters: {
+    snapshot: { skip: true },
+  },
+  render: (args) => (
+    <div className={styles.tagList}>
+      {VARIANTS.map((variant) => {
+        return (
+          <Tag
+            key={variant}
+            {...args}
+            variant={variant}
+            text={variant}
+            hasOutline={true}
+          />
+        );
+      })}
+    </div>
+  ),
 };
 
 export const WithLongTextAndIcon: StoryObj<Args> = {
   ...Default,
   args: {
-    children: "This tag has a really long text message",
-    icon: (
-      <Icon key="icon" name="warning" purpose="informative" title="warning" />
-    ),
+    text: 'This tag has a really long text message',
+    icon: <Icon purpose="decorative" name="star" />,
   },
+  parameters: {
+    snapshot: { skip: true },
+  },
+  render: (args) => (
+    <div className={styles.tagList}>
+      {VARIANTS.map((variant) => {
+        return (
+          <Tag key={variant} {...args} variant={variant} hasOutline={true} />
+        );
+      })}
+    </div>
+  ),
 };
