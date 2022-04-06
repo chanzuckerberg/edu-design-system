@@ -50,10 +50,6 @@
         "white": "var(--eds-color-neutral-white)",
         "black": "var(--eds-color-neutral-black)"
       },
-      "transparent": {
-        "25": "var(--eds-color-transparent-25)",
-        "90": "var(--eds-color-transparent-90)"
-      },
       "other": {
         "mint": {
           "100": "var(--eds-color-other-mint-100)",
@@ -162,13 +158,13 @@
               "@": "var(--eds-theme-color-background-neutral-default)",
               "hover": "var(--eds-theme-color-background-neutral-default-hover)"
             },
-            "medium": {
-              "@": "var(--eds-theme-color-background-neutral-medium)",
-              "hover": "var(--eds-theme-color-background-neutral-medium-hover)"
-            },
             "subtle": {
               "@": "var(--eds-theme-color-background-neutral-subtle)",
               "hover": "var(--eds-theme-color-background-neutral-subtle-hover)"
+            },
+            "medium": {
+              "@": "var(--eds-theme-color-background-neutral-medium)",
+              "hover": "var(--eds-theme-color-background-neutral-medium-hover)"
             }
           },
           "brand": {
@@ -247,19 +243,22 @@
           "neutral": {
             "default": {
               "@": "var(--eds-theme-color-icon-neutral-default)",
-              "knockout": "var(--eds-theme-color-icon-neutral-default-knockout)"
+              "knockout": "var(--eds-theme-color-icon-neutral-default-knockout)",
+              "hover": "var(--eds-theme-color-icon-neutral-default-hover)"
             },
-            "strong": "var(--eds-theme-color-icon-neutral-strong)",
-            "subtle": "var(--eds-theme-color-icon-neutral-subtle)"
+            "strong": {
+              "@": "var(--eds-theme-color-icon-neutral-strong)",
+              "hover": "var(--eds-theme-color-icon-neutral-strong-hover)"
+            },
+            "subtle": {
+              "@": "var(--eds-theme-color-icon-neutral-subtle)",
+              "hover": "var(--eds-theme-color-icon-neutral-subtle-hover)"
+            }
           },
           "link": {
             "default": {
               "@": "var(--eds-theme-color-icon-link-default)",
               "hover": "var(--eds-theme-color-icon-link-default-hover)"
-            },
-            "strong": {
-              "@": "var(--eds-theme-color-icon-link-strong)",
-              "hover": "var(--eds-theme-color-icon-link-strong-hover)"
             }
           },
           "brand": {
@@ -332,54 +331,128 @@
             "primary": "var(--eds-theme-color-text-brand-primary)"
           }
         },
+        "transparent": {
+          "black": {
+            "0": "var(--eds-theme-color-transparent-black-0)",
+            "30": "var(--eds-theme-color-transparent-black-30)"
+          },
+          "white": {
+            "0": "var(--eds-theme-color-transparent-white-0)"
+          }
+        },
         "body": {
           "background": {
             "@": "var(--eds-theme-color-body-background)",
             "inverted": "var(--eds-theme-color-body-background-inverted)"
           }
         },
-        "focus-ring": {
-          "@": "var(--eds-theme-color-focus-ring)",
-          "inverted": "var(--eds-theme-color-focus-ring-inverted)"
-        },
-        "form": {
-          "label": {
+        "button": {
+          "primary": {
+            "background": {
+              "@": "var(--eds-theme-color-button-primary-background)",
+              "hover": "var(--eds-theme-color-button-primary-background-hover)",
+              "active": "var(--eds-theme-color-button-primary-background-active)"
+            },
+            "border": {
+              "@": "var(--eds-theme-color-button-primary-border)",
+              "hover": "var(--eds-theme-color-button-primary-border-hover)",
+              "active": "var(--eds-theme-color-button-primary-border-active)"
+            },
             "text": {
-              "@": "var(--eds-theme-color-form-label-text)",
-              "inverted": "var(--eds-theme-color-form-label-text-inverted)"
+              "@": "var(--eds-theme-color-button-primary-text)",
+              "hover": "var(--eds-theme-color-button-primary-text-hover)",
+              "active": "var(--eds-theme-color-button-primary-text-active)"
             }
           },
-          "input": {
+          "secondary": {
+            "background": {
+              "@": "var(--eds-theme-color-button-secondary-background)",
+              "hover": "var(--eds-theme-color-button-secondary-background-hover)",
+              "active": "var(--eds-theme-color-button-secondary-background-active)"
+            },
             "border": {
-              "@": "var(--eds-theme-color-form-input-border)",
-              "hover": "var(--eds-theme-color-form-input-border-hover)",
-              "inverted": {
-                "@": "var(--eds-theme-color-form-input-border-inverted)",
-                "hover": "var(--eds-theme-color-form-input-border-inverted-hover)"
-              },
-              "focus": {
-                "@": "var(--eds-theme-color-form-input-border-focus)",
-                "inverted": "var(--eds-theme-color-form-input-border-focus-inverted)"
-              },
-              "error": "var(--eds-theme-color-form-input-border-error)"
+              "@": "var(--eds-theme-color-button-secondary-border)",
+              "hover": "var(--eds-theme-color-button-secondary-border-hover)",
+              "active": "var(--eds-theme-color-button-secondary-border-active)"
+            },
+            "text": {
+              "@": "var(--eds-theme-color-button-secondary-text)",
+              "hover": "var(--eds-theme-color-button-secondary-text-hover)",
+              "active": "var(--eds-theme-color-button-secondary-text-active)"
+            }
+          },
+          "tertiary": {
+            "background": {
+              "@": "var(--eds-theme-color-button-tertiary-background)",
+              "hover": "var(--eds-theme-color-button-tertiary-background-hover)",
+              "active": "var(--eds-theme-color-button-tertiary-background-active)"
+            },
+            "border": {
+              "@": "var(--eds-theme-color-button-tertiary-border)",
+              "hover": "var(--eds-theme-color-button-tertiary-border-hover)",
+              "active": "var(--eds-theme-color-button-tertiary-border-active)"
+            },
+            "text": {
+              "@": "var(--eds-theme-color-button-tertiary-text)",
+              "hover": "var(--eds-theme-color-button-tertiary-text-hover)",
+              "active": "var(--eds-theme-color-button-tertiary-text-active)"
+            }
+          },
+          "icon": {
+            "background": {
+              "@": "var(--eds-theme-color-button-icon-background)",
+              "hover": "var(--eds-theme-color-button-icon-background-hover)",
+              "active": "var(--eds-theme-color-button-icon-background-active)"
+            },
+            "border": {
+              "@": "var(--eds-theme-color-button-icon-border)",
+              "hover": "var(--eds-theme-color-button-icon-border-hover)",
+              "active": "var(--eds-theme-color-button-icon-border-active)"
+            },
+            "text": {
+              "@": "var(--eds-theme-color-button-icon-text)",
+              "hover": "var(--eds-theme-color-button-icon-text-hover)",
+              "active": "var(--eds-theme-color-button-icon-text-active)"
+            }
+          },
+          "destructive": {
+            "background": {
+              "@": "var(--eds-theme-color-button-destructive-background)",
+              "hover": "var(--eds-theme-color-button-destructive-background-hover)",
+              "active": "var(--eds-theme-color-button-destructive-background-active)"
+            },
+            "border": {
+              "@": "var(--eds-theme-color-button-destructive-border)",
+              "hover": "var(--eds-theme-color-button-destructive-border-hover)",
+              "active": "var(--eds-theme-color-button-destructive-border-active)"
+            },
+            "text": {
+              "@": "var(--eds-theme-color-button-destructive-text)",
+              "hover": "var(--eds-theme-color-button-destructive-text-hover)",
+              "active": "var(--eds-theme-color-button-destructive-text-active)"
             }
           }
+        },
+        "focus-ring": {
+          "@": "var(--eds-theme-color-focus-ring)"
+        },
+        "form": {
+          "border": {
+            "@": "var(--eds-theme-color-form-border)",
+            "hover": "var(--eds-theme-color-form-border-hover)"
+          },
+          "background": {
+            "@": "var(--eds-theme-color-form-background)",
+            "hover": "var(--eds-theme-color-form-background-hover)"
+          },
+          "label": "var(--eds-theme-color-form-label)"
         },
         "text-highlight": {
           "foreground": "var(--eds-theme-color-text-highlight-foreground)",
           "background": "var(--eds-theme-color-text-highlight-background)"
         }
       },
-      "box-shadow": "var(--eds-theme-box-shadow)",
-      "button": {},
-      "form": {
-        "input": {
-          "border": {
-            "width": "var(--eds-theme-form-input-border-width)",
-            "radius": "var(--eds-theme-form-input-border-radius)"
-          }
-        }
-      }
+      "box-shadow": "var(--eds-theme-box-shadow)"
     }
   }
 }
