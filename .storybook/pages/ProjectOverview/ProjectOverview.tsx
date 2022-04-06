@@ -29,7 +29,7 @@ export const ProjectOverview = () => {
       <PageHeader
         title="Feudal Honor Codes and Values"
         right={
-          <Button variant="bare">
+          <Button variant="icon">
             View plan
             <Icon purpose="decorative" name="arrow-narrow-right" />
           </Button>

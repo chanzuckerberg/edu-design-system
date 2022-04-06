@@ -45,7 +45,7 @@ export const DrawerHeader = ({
       {dismissible && (
         <Button
           className={styles['drawer__close-button']}
-          variant="bare"
+          variant="icon"
           onClick={onClick}
         >
           <Icon name="close" purpose="informative" title={closeButtonText} />
