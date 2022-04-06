@@ -1,9 +1,9 @@
 /* eslint-env node */
-const { execSync } = require("child_process");
-const fs = require("fs");
+const { execSync } = require('child_process');
+const fs = require('fs');
 
-const ICON_FOLDER = "src/icons";
-const OUTPUT_FILE = "src/util/allIcons.ts";
+const ICON_FOLDER = 'src/icons';
+const OUTPUT_FILE = 'src/util/allIcons.ts';
 
 const iconFiles = fs
   .readdirSync(ICON_FOLDER, { withFileTypes: true })
