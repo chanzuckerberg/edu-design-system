@@ -118,6 +118,8 @@
 
 .list-detail__content-close {
   text-decoration: none;
+  justify-content: flex-start;
+  align-items: center;
 
   @media all and (min-width: $eds-bp-md) {
     display: none;
