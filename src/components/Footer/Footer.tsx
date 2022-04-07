@@ -20,7 +20,7 @@ export interface Props {
 export const Footer = ({ children, className, ...other }: Props) => {
   const componentClassName = clsx(styles['footer'], className, {});
   return (
-    <footer role="contentinfo" className={componentClassName} {...other}>
+    <footer className={componentClassName} role="contentinfo" {...other}>
       <LayoutContainer className={styles['footer__inner']}>
         {children}
       </LayoutContainer>

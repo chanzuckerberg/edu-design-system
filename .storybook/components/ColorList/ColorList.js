@@ -10,12 +10,12 @@ export class ColorList extends Component {
         {this.props.listItems.map(function (listItem, index) {
           return (
             <TokenSpecimen
-              name={listItem.name}
-              key={index}
-              value={listItem.value}
               inlineStyles={{
                 backgroundColor: `var(${listItem.name})`,
               }}
+              key={index}
+              name={listItem.name}
+              value={listItem.value}
             />
           );
         })}

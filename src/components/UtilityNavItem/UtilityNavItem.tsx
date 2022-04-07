@@ -85,11 +85,11 @@ export const UtilityNavItem = React.forwardRef<HTMLLIElement, Props>(
     return (
       <li className={componentClassName} ref={utilityNavItemRef} {...other}>
         <TagName
+          aria-expanded={!href && children ? isActive : undefined}
+          aria-label={!text && ariaLabel}
           className={styles['utility-nav__link']}
           href={href}
           onClick={togglePopover}
-          aria-label={!text && ariaLabel}
-          aria-expanded={!href && children ? isActive : undefined}
         >
           {itemBefore && (
             <div className={styles['utility-nav__item-before']}>

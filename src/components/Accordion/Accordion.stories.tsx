@@ -48,8 +48,8 @@ const Template: Story<Props> = (args) => (
       </TextPassage>
     </AccordionPanel>
     <AccordionPanel
-      isActive
       header={<Heading size="h3">Accordion title 2</Heading>}
+      isActive
     >
       <TextPassage>
         <p>
@@ -130,8 +130,8 @@ const InvertedTemplate: Story<Props> = (args) => (
         </TextPassage>
       </AccordionPanel>
       <AccordionPanel
-        isActive
         header={<Heading size="h3">Accordion title 2</Heading>}
+        isActive
       >
         <TextPassage>
           <p>

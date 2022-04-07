@@ -15,13 +15,13 @@ export class Tier2Colors extends Component {
             ) {
               return (
                 <TokenSpecimen
-                  name={listItem.name}
-                  key={index}
-                  variant="typography-title"
-                  value={listItem.value}
                   inlineStyles={{
                     color: `var(${listItem.name})`,
                   }}
+                  key={index}
+                  name={listItem.name}
+                  value={listItem.value}
+                  variant="typography-title"
                 />
               );
             })}
@@ -35,13 +35,13 @@ export class Tier2Colors extends Component {
             ) {
               return (
                 <TokenSpecimen
-                  name={listItem.name}
-                  key={index}
-                  variant="typography-title"
-                  value={listItem.value}
                   inlineStyles={{
                     color: `var(${listItem.name})`,
                   }}
+                  key={index}
+                  name={listItem.name}
+                  value={listItem.value}
+                  variant="typography-title"
                 />
               );
             })}
@@ -55,12 +55,12 @@ export class Tier2Colors extends Component {
             ) {
               return (
                 <TokenSpecimen
-                  name={listItem.name}
-                  key={index}
-                  value={listItem.value}
                   inlineStyles={{
                     backgroundColor: `var(${listItem.name})`,
                   }}
+                  key={index}
+                  name={listItem.name}
+                  value={listItem.value}
                 />
               );
             })}
@@ -74,15 +74,15 @@ export class Tier2Colors extends Component {
             ) {
               return (
                 <TokenSpecimen
-                  name={listItem.name}
-                  key={index}
-                  value={listItem.value}
                   inlineStyles={{
                     backgroundColor: 'transparent',
                     borderWidth: '2px',
                     borderStyle: 'solid',
                     borderColor: `var(${listItem.name})`,
                   }}
+                  key={index}
+                  name={listItem.name}
+                  value={listItem.value}
                 />
               );
             })}
@@ -97,12 +97,12 @@ export class Tier2Colors extends Component {
             ) {
               return (
                 <TokenSpecimen
-                  name={listItem.name}
-                  key={index}
-                  value={listItem.value}
                   inlineStyles={{
                     backgroundColor: `var(${listItem.name})`,
                   }}
+                  key={index}
+                  name={listItem.name}
+                  value={listItem.value}
                 />
               );
             })}
@@ -118,12 +118,12 @@ export class Tier2Colors extends Component {
               return (
                 <GridItem key={'form-input-border-' + index}>
                   <TokenSpecimen
-                    variant="typography-title"
-                    name={listItem.name}
-                    value={listItem.value}
                     inlineStyles={{
                       color: `var(${listItem.name})`,
                     }}
+                    name={listItem.name}
+                    value={listItem.value}
+                    variant="typography-title"
                   />
                 </GridItem>
               );
@@ -141,12 +141,12 @@ export class Tier2Colors extends Component {
               return (
                 <GridItem key={'form-input-border-' + index}>
                   <TokenSpecimen
-                    variant="typography-title"
-                    name={listItem.name}
-                    value={listItem.value}
                     inlineStyles={{
                       color: `var(${listItem.name})`,
                     }}
+                    name={listItem.name}
+                    value={listItem.value}
+                    variant="typography-title"
                   />
                 </GridItem>
               );
@@ -162,14 +162,14 @@ export class Tier2Colors extends Component {
               return (
                 <GridItem key={'form-input-border-' + index}>
                   <TokenSpecimen
-                    name={listItem.name}
-                    value={listItem.value}
                     inlineStyles={{
                       backgroundColor: 'transparent',
                       borderWidth: '2px',
                       borderStyle: 'solid',
                       borderColor: `var(${listItem.name})`,
                     }}
+                    name={listItem.name}
+                    value={listItem.value}
                   />
                 </GridItem>
               );
@@ -185,12 +185,12 @@ export class Tier2Colors extends Component {
               return (
                 <GridItem key={'form-input-border-' + index}>
                   <TokenSpecimen
-                    name={listItem.name}
-                    key={index}
-                    value={listItem.value}
                     inlineStyles={{
                       backgroundColor: `var(${listItem.name})`,
                     }}
+                    key={index}
+                    name={listItem.name}
+                    value={listItem.value}
                   />
                 </GridItem>
               );
@@ -208,14 +208,14 @@ export class Tier2Colors extends Component {
               return (
                 <GridItem key={'focus-ring-' + index}>
                   <TokenSpecimen
-                    name={listItem.name}
-                    value={listItem.value}
                     inlineStyles={{
                       backgroundColor: 'transparent',
                       borderWidth: '2px',
                       borderStyle: 'solid',
                       borderColor: `var(${listItem.name})`,
                     }}
+                    name={listItem.name}
+                    value={listItem.value}
                   />
                 </GridItem>
               );
@@ -232,11 +232,11 @@ export class Tier2Colors extends Component {
               return (
                 <GridItem key={'text-highlight-' + index}>
                   <TokenSpecimen
-                    name={listItem.name}
-                    value={listItem.value}
                     inlineStyles={{
                       backgroundColor: `var(${listItem.name})`,
                     }}
+                    name={listItem.name}
+                    value={listItem.value}
                   />
                 </GridItem>
               );

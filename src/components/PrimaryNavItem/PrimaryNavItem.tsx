@@ -55,10 +55,10 @@ export const PrimaryNavItem = React.forwardRef<HTMLLIElement, Props>(
         <TagName className={styles['primary-nav__link']} href={href}>
           <Icon
             className={styles['primary-nav__icon']}
+            color={EdsThemeColorIconNeutralDefaultInverse}
             name={iconName}
             purpose="decorative"
             size="1.25rem"
-            color={EdsThemeColorIconNeutralDefaultInverse}
           />
           <span className={styles['primary-nav__text']}>{text}</span>
         </TagName>

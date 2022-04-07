@@ -13,13 +13,13 @@ export class Tier1Sizes extends Component {
               return (
                 <GridItem key={'size-' + index}>
                   <TokenSpecimen
-                    name={listItem.name}
-                    value={listItem.value}
                     inlineStyles={{
                       width: `var(${listItem.name})`,
                       height: `var(${listItem.name})`,
                       minHeight: '0',
                     }}
+                    name={listItem.name}
+                    value={listItem.value}
                   />
                 </GridItem>
               );

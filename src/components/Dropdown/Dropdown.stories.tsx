@@ -137,8 +137,8 @@ function InteractiveExampleUsingFunctionChildren() {
                 >
                   {selectedOption?.label || 'Select'}
                   <Icon
-                    name="filter-list"
                     className={styles['function-children__icon']}
+                    name="filter-list"
                     purpose="decorative"
                   />
                 </button>

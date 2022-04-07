@@ -19,7 +19,7 @@ export interface Props {
 export const Main = ({ children, className, ...other }: Props) => {
   const componentClassName = clsx(styles['main'], className, {});
   return (
-    <main id="main-content" className={componentClassName} {...other}>
+    <main className={componentClassName} id="main-content" {...other}>
       {children}
     </main>
   );

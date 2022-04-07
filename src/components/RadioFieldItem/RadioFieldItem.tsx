@@ -90,16 +90,16 @@ export const RadioFieldItem = ({
   return (
     <li className={componentClassName} {...other}>
       <Radio
-        id={idVar}
-        name={name}
-        value={value}
-        className={styles['radio-field__item-control']}
         checked={checked}
-        onChange={onChange}
+        className={styles['radio-field__item-control']}
         disabled={disabled}
+        id={idVar}
+        inverted={inverted}
+        name={name}
+        onChange={onChange}
         readOnly={readOnly}
         tabIndex={tabIndex}
-        inverted={inverted}
+        value={value}
       />
 
       <label className={styles['radio-field__item-label']} htmlFor={idVar}>

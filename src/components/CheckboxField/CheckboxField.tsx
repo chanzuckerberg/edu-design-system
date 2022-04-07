@@ -117,14 +117,14 @@ export const CheckboxField = ({
   return (
     <fieldset className={componentClassName} id={id} {...other}>
       <Legend
+        aria-describedby={fieldNote && ariaDescribedByVar}
         className={styles['checkbox-field__label']}
         hideLegend={hideLegend}
-        text={label}
         legendAfter={legendAfter}
-        required={required}
         optionalLabel={optionalLabel}
+        required={required}
         requiredLabel={requiredLabel}
-        aria-describedby={fieldNote && ariaDescribedByVar}
+        text={label}
       />
 
       <div className={styles['checkbox-field__body']}>

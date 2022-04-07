@@ -42,11 +42,11 @@ export const PrimaryNav = ({
 
   return (
     <nav
-      role="navigation"
-      title="Primary navigation"
-      id={idVar}
       aria-label={ariaLabel}
       className={componentClassName}
+      id={idVar}
+      role="navigation"
+      title="Primary navigation"
       {...other}
     >
       <ul className={styles['primary-nav__list']}>{children}</ul>

@@ -33,8 +33,8 @@ export const Logo = ({ alt, className, href, src, title, ...other }: Props) => {
   const componentClassName = clsx(styles['logo'], className, {});
   return (
     <div className={componentClassName} {...other}>
-      <a href={href} title={title} className={styles['logo__link']} rel="home">
-        <LogoImage src={src} alt={alt} />
+      <a className={styles['logo__link']} href={href} rel="home" title={title}>
+        <LogoImage alt={alt} src={src} />
       </a>
     </div>
   );
