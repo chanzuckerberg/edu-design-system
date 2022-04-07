@@ -35,8 +35,8 @@
   /**
    * Disabled buttons
    */
-   &:disabled,
-   &:disabled:hover {
+  &:disabled,
+  &:disabled:hover {
     cursor: not-allowed;
   }
 
@@ -206,13 +206,17 @@
   &:hover,
   &:focus {
     border-color: var(--eds-theme-color-button-destructive-border-hover);
-    background-color: var(--eds-theme-color-button-destructive-background-hover);
+    background-color: var(
+      --eds-theme-color-button-destructive-background-hover
+    );
     color: var(--eds-theme-color-button-destructive-text-hover);
   }
 
   &:active {
     border-color: var(--eds-theme-color-button-destructive-border-active);
-    background-color: var(--eds-theme-color-button-destructive-background-active);
+    background-color: var(
+      --eds-theme-color-button-destructive-background-active
+    );
     color: var(--eds-theme-color-button-destructive-text-active);
   }
 
