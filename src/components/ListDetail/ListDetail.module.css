@@ -38,20 +38,6 @@
   }
 }
 
-.list-detail__unit-title {
-  margin-bottom: var(--eds-size-4);
-
-  @media all and (min-width: $eds-bp-md) {
-    display: none;
-  }
-}
-
-.list-detail__breadcrumbs {
-  @media all and (min-width: $eds-bp-md) {
-    display: none;
-  }
-}
-
 .list-detail__kicker {
   @mixin eds-theme-typography-kicker-sm;
   display: block;
