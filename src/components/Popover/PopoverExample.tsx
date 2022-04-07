@@ -74,7 +74,6 @@ export const PopoverExample: React.FC<Props> = ({
 
       <Popover
         position={position}
-        dismissible={true}
         isActive={popoverOpen}
         onClose={closePopover}
         ariaLabelledBy="popover-heading-1"
@@ -87,7 +86,7 @@ export const PopoverExample: React.FC<Props> = ({
             </Button>
           }
         >
-          <Heading id="popover-heading-1" size="h6">
+          <Heading id="popover-heading-1" as="h3" size="h6">
             Notifications (4)
           </Heading>
         </PopoverHeader>
@@ -119,7 +118,7 @@ export const PopoverExample: React.FC<Props> = ({
             ></NotificationListItem>
           </NotificationList>
           <PopoverHeader>
-            <Heading id="popover-heading-2" size="h6">
+            <Heading id="popover-heading-2" as="h3" size="h6">
               Already Seen
             </Heading>
           </PopoverHeader>

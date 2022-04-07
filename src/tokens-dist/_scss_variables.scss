@@ -229,6 +229,7 @@ $eds-theme-color-button-destructive-text: #ffffff !default;
 $eds-theme-color-button-destructive-text-hover: #ffffff !default;
 $eds-theme-color-button-destructive-text-active: #ffffff !default;
 $eds-theme-color-focus-ring: #8984E8 !default;
+$eds-theme-color-focus-ring-inverted: #ffffff !default;
 $eds-theme-color-form-border: #C0C4C8 !default;
 $eds-theme-color-form-border-hover: #A2A3A8 !default;
 $eds-theme-color-form-background: #ffffff !default;
@@ -674,7 +675,8 @@ $tokens: (
           )
         ),
         'focus-ring': (
-          '@': $eds-theme-color-focus-ring
+          '@': $eds-theme-color-focus-ring,
+          'inverted': $eds-theme-color-focus-ring-inverted
         ),
         'form': (
           'border': (

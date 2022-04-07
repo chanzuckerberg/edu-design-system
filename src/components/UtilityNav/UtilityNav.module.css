@@ -43,16 +43,23 @@
  */
 .utility-nav__item {
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 /**
  * Utility nav link
  */
 .utility-nav__link {
-  @mixin textLink;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--eds-size-2-and-half);
+  white-space: nowrap;
+  @mixin TextLinkInverted;
   appearance: none;
   border: none;
   background: none;
   padding: 0;
   margin: 0;
+  cursor: pointer;
 }
