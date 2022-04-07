@@ -1,17 +1,17 @@
 @import '../../design-tokens/mixins.css';
 
 /*------------------------------------*\
-    #BUTTON
+    #CLICKABLE STYLE
 \*------------------------------------*/
 
 /**
- * 1) Button or link that has functionality to it
- * 2) Defaults to primary button
- * 3) Margin 0 added becuase Safari has margin on the button
+ * 1) Styled clickable element that should look like a button or link
+ * 2) Defaults to primary variant
+ * 3) Margin 0 added becuase Safari has margin on buttons
  * 4) Adds a gap between children to automatically handle spacing between icons and text
  * 5) Adds default size for icons passed in for consistency
  */
-.button {
+.clickable-style {
   @mixin eds-theme-typography-button-label;
   display: inline-flex;
   align-items: center;
@@ -22,6 +22,7 @@
   border-style: solid;
   border-radius: var(--eds-theme-border-radius);
   cursor: pointer;
+  text-decoration: none;
   transition: all var(--eds-anim-fade-quick) var(--eds-anim-ease);
 
   svg {
@@ -33,7 +34,7 @@
   }
 
   /**
-   * Disabled buttons
+   * Disabled
    */
   &:disabled,
   &:disabled:hover {
@@ -46,11 +47,11 @@
 }
 
 /**
- * Primary button
- * 1) Prominent button styles that should be applied to
+ * Primary clickable style
+ * 1) Prominent clickable styles that should be applied to
  *    the most important action of a page.
  */
-.button--primary {
+.clickable-style--primary {
   border-color: var(--eds-theme-color-button-primary-border);
   background-color: var(--eds-theme-color-button-primary-background);
   color: var(--eds-theme-color-button-primary-text);
@@ -77,10 +78,10 @@
 }
 
 /**
- * Secondary button
- * 1) Medium prominence button used for less important actions
+ * Secondary clickable style
+ * 1) Medium prominence clickable style used for less important actions
  */
-.button--secondary {
+.clickable-style--secondary {
   border-color: var(--eds-theme-color-button-secondary-border);
   background-color: var(--eds-theme-color-button-secondary-background);
   color: var(--eds-theme-color-button-secondary-text);
@@ -107,10 +108,10 @@
 }
 
 /**
- * Tertiary button
- * 1) Least prominent button used for least important actions on the page
+ * Tertiary clickable style
+ * 1) Least prominent clickable style used for least important actions on the page
  */
-.button--tertiary {
+.clickable-style--tertiary {
   border-color: var(--eds-theme-color-button-tertiary-border);
   background-color: var(--eds-theme-color-button-tertiary-background);
   color: var(--eds-theme-color-button-tertiary-text);
@@ -137,12 +138,12 @@
 }
 
 /**
- * Link Button
- * 1) A button that is visually styled like a text link
- * 2) Spacing between text and icon scales with text size
- * 3) Inherits size from surrounding text
+ * Link clickable style
+ * 1) A clickable style that is visually styled like a text link
+ * 2) Inherits size from surrounding text
+ * 3) Spacing between text and icon scales with text size
  */
-.button--link {
+.clickable-style--link {
   @mixin textLink;
 
   padding: 0;
@@ -157,17 +158,17 @@
   }
 }
 
-/* Style icons that may be in the button children */
-.button--link svg {
+/* Style icons that may be in the clickable style children */
+.clickable-style--link svg {
   --icon-size-default: 1.25em;
 }
 
 /**
- * Icon Button
- * 1) A button that strips out borders, backgrounds, etc
+ * Icon clickable-style
+ * 1) A clickable-style that strips out borders, backgrounds, etc
  * 2) Use for Close "X" buttons, tooltip icons, and other
  */
-.button--icon {
+.clickable-style--icon {
   border-color: var(--eds-theme-color-button-icon-border);
   background-color: var(--eds-theme-color-button-icon-background);
   color: var(--eds-theme-color-button-icon-text);
@@ -194,11 +195,11 @@
 }
 
 /**
- * Destructive Button
- * 1) A bold red button
+ * Destructive clickable style
+ * 1) A bold red clickable style
  * 2) Use for destructive actions like deleting a user's account, deleting a course, etc
  */
-.button--destructive {
+.clickable-style--destructive {
   border-color: var(--eds-theme-color-button-destructive-border);
   background-color: var(--eds-theme-color-button-destructive-background);
   color: var(--eds-theme-color-button-destructive-text);
@@ -229,51 +230,50 @@
 }
 
 /**
- * Small button
+ * Small clickable style
  * 1) Height is used instead of vertical padding because the icon size we use would
- *    cause the button height to expand
+ *    cause the height to expand
  */
-.button--sm {
+.clickable-style--sm {
   height: var(--eds-size-3); /* 1 */
   padding-left: var(--eds-size-half);
   padding-right: var(--eds-size-half);
 }
 
 /**
- * Medium button
+ * Medium clickable style
  * 1) Height is used instead of vertical padding because the icon size we use would
- *    cause the button height to expand
+ *    cause the height to expand
  */
-.button--md {
+.clickable-style--md {
   height: var(--eds-size-4); /* 1 */
   padding-left: var(--eds-size-1);
   padding-right: var(--eds-size-1);
 }
 
 /**
- * Large button
+ * Large clickable style
  * 1) Height is used instead of vertical padding because the icon size we use would
- *    cause the button height to expand
+ *    cause the height to expand
  */
-.button--lg {
+.clickable-style--lg {
   height: var(--eds-size-5); /* 1 */
   padding-left: var(--eds-size-2);
   padding-right: var(--eds-size-2);
 }
 
 /**
- * Full-width button
- * 1) A block button fills 100% of the width of its container
+ * Full-width clickable style
+ * 1) A block clickable style that fills 100% of the width of its container
  */
-.button--full-width {
+.clickable-style--full-width {
   width: 100%;
 }
 
 /**
  * Loading icon rotiation style
- * 1) Set SVG icon fill to the current text color
  */
-.button__icon-loading {
+.eds-is-loading svg {
   animation: rotateIcon 2s linear infinite;
   overflow: visible;
 

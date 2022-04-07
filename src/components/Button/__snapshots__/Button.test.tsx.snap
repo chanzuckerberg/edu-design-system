@@ -2,7 +2,8 @@
 
 exports[`<Button /> Destructive story renders snapshot 1`] = `
 <button
-  class="button button--lg button--destructive"
+  class="clickable-style clickable-style--lg clickable-style--destructive"
+  type="button"
 >
   Button
 </button>
@@ -10,9 +11,10 @@ exports[`<Button /> Destructive story renders snapshot 1`] = `
 
 exports[`<Button /> DestructiveDisabled story renders snapshot 1`] = `
 <button
-  class="button button--lg button--destructive"
+  class="clickable-style clickable-style--lg clickable-style--destructive"
   disabled=""
   tabindex="-1"
+  type="button"
 >
   Button
 </button>
@@ -20,7 +22,8 @@ exports[`<Button /> DestructiveDisabled story renders snapshot 1`] = `
 
 exports[`<Button /> DestructiveLeftIcon story renders snapshot 1`] = `
 <button
-  class="button button--lg button--destructive"
+  class="clickable-style clickable-style--lg clickable-style--destructive"
+  type="button"
 >
   <svg
     aria-hidden="true"
@@ -38,7 +41,8 @@ exports[`<Button /> DestructiveLeftIcon story renders snapshot 1`] = `
 
 exports[`<Button /> FullWidth story renders snapshot 1`] = `
 <button
-  class="button button--lg button--primary button--full-width"
+  class="clickable-style clickable-style--lg clickable-style--primary clickable-style--full-width"
+  type="button"
 >
   Button
 </button>
@@ -46,9 +50,10 @@ exports[`<Button /> FullWidth story renders snapshot 1`] = `
 
 exports[`<Button /> IconButtonDisabled story renders snapshot 1`] = `
 <button
-  class="button button--lg button--icon"
+  class="clickable-style clickable-style--lg clickable-style--icon"
   disabled=""
   tabindex="-1"
+  type="button"
 >
   <svg
     aria-hidden="true"
@@ -66,7 +71,8 @@ exports[`<Button /> IconButtonDisabled story renders snapshot 1`] = `
 
 exports[`<Button /> IconButtonIconOnly story renders snapshot 1`] = `
 <button
-  class="button button--lg button--icon"
+  class="clickable-style clickable-style--lg clickable-style--icon"
+  type="button"
 >
   <svg
     class="icon"
@@ -88,7 +94,8 @@ exports[`<Button /> IconButtonIconOnly story renders snapshot 1`] = `
 
 exports[`<Button /> IconButtonIconOnlySmall story renders snapshot 1`] = `
 <button
-  class="button button--sm button--icon"
+  class="clickable-style clickable-style--sm clickable-style--icon"
+  type="button"
 >
   <svg
     class="icon"
@@ -110,7 +117,8 @@ exports[`<Button /> IconButtonIconOnlySmall story renders snapshot 1`] = `
 
 exports[`<Button /> IconButtonLeftIcon story renders snapshot 1`] = `
 <button
-  class="button button--lg button--icon"
+  class="clickable-style clickable-style--lg clickable-style--icon"
+  type="button"
 >
   <svg
     aria-hidden="true"
@@ -128,7 +136,8 @@ exports[`<Button /> IconButtonLeftIcon story renders snapshot 1`] = `
 
 exports[`<Button /> IconButtonLeftIconSmall story renders snapshot 1`] = `
 <button
-  class="button button--sm button--icon"
+  class="clickable-style clickable-style--sm clickable-style--icon"
+  type="button"
 >
   <svg
     aria-hidden="true"
@@ -146,7 +155,8 @@ exports[`<Button /> IconButtonLeftIconSmall story renders snapshot 1`] = `
 
 exports[`<Button /> IconButtonRightIcon story renders snapshot 1`] = `
 <button
-  class="button button--lg button--icon"
+  class="clickable-style clickable-style--lg clickable-style--icon"
+  type="button"
 >
   Button
   <svg
@@ -164,7 +174,8 @@ exports[`<Button /> IconButtonRightIcon story renders snapshot 1`] = `
 
 exports[`<Button /> IconButtonRightIconSmall story renders snapshot 1`] = `
 <button
-  class="button button--sm button--icon"
+  class="clickable-style clickable-style--sm clickable-style--icon"
+  type="button"
 >
   Button
   <svg
@@ -182,7 +193,8 @@ exports[`<Button /> IconButtonRightIconSmall story renders snapshot 1`] = `
 
 exports[`<Button /> Link story renders snapshot 1`] = `
 <button
-  class="button button--link"
+  class="clickable-style clickable-style--link"
+  type="button"
 >
   Button
 </button>
@@ -190,9 +202,10 @@ exports[`<Button /> Link story renders snapshot 1`] = `
 
 exports[`<Button /> LinkDisabled story renders snapshot 1`] = `
 <button
-  class="button button--link"
+  class="clickable-style clickable-style--link"
   disabled=""
   tabindex="-1"
+  type="button"
 >
   Button
 </button>
@@ -200,7 +213,8 @@ exports[`<Button /> LinkDisabled story renders snapshot 1`] = `
 
 exports[`<Button /> LinkRightIcon story renders snapshot 1`] = `
 <button
-  class="button button--link"
+  class="clickable-style clickable-style--link"
+  type="button"
 >
   Button
   <svg
@@ -223,14 +237,18 @@ exports[`<Button /> LinkRightIcon story renders snapshot 1`] = `
 
 exports[`<Button /> Loading story renders snapshot 1`] = `
 <button
-  class="button button--lg button--primary eds-is-loading"
+  class="clickable-style clickable-style--lg clickable-style--primary eds-is-loading"
   disabled=""
   tabindex="-1"
+  type="button"
 >
   <svg
-    class="icon button__icon-loading"
+    class="icon clickable__icon-loading"
     fill="currentColor"
+    height="1.5em"
     role="img"
+    style="--icon-size: 1.5em;"
+    width="1.5em"
     xmlns="http://www.w3.org/2000/svg"
   >
     <title
@@ -248,7 +266,8 @@ exports[`<Button /> Loading story renders snapshot 1`] = `
 
 exports[`<Button /> Primary story renders snapshot 1`] = `
 <button
-  class="button button--lg button--primary"
+  class="clickable-style clickable-style--lg clickable-style--primary"
+  type="button"
 >
   Button
 </button>
@@ -256,9 +275,10 @@ exports[`<Button /> Primary story renders snapshot 1`] = `
 
 exports[`<Button /> PrimaryDisabled story renders snapshot 1`] = `
 <button
-  class="button button--lg button--primary"
+  class="clickable-style clickable-style--lg clickable-style--primary"
   disabled=""
   tabindex="-1"
+  type="button"
 >
   Button
 </button>
@@ -266,7 +286,8 @@ exports[`<Button /> PrimaryDisabled story renders snapshot 1`] = `
 
 exports[`<Button /> PrimaryLeftIcon story renders snapshot 1`] = `
 <button
-  class="button button--lg button--primary"
+  class="clickable-style clickable-style--lg clickable-style--primary"
+  type="button"
 >
   <svg
     aria-hidden="true"
@@ -284,7 +305,8 @@ exports[`<Button /> PrimaryLeftIcon story renders snapshot 1`] = `
 
 exports[`<Button /> PrimaryMedium story renders snapshot 1`] = `
 <button
-  class="button button--md button--primary"
+  class="clickable-style clickable-style--md clickable-style--primary"
+  type="button"
 >
   Button
 </button>
@@ -292,7 +314,8 @@ exports[`<Button /> PrimaryMedium story renders snapshot 1`] = `
 
 exports[`<Button /> PrimaryRightIcon story renders snapshot 1`] = `
 <button
-  class="button button--lg button--primary"
+  class="clickable-style clickable-style--lg clickable-style--primary"
+  type="button"
 >
   Button
   <svg
@@ -310,7 +333,8 @@ exports[`<Button /> PrimaryRightIcon story renders snapshot 1`] = `
 
 exports[`<Button /> PrimarySmall story renders snapshot 1`] = `
 <button
-  class="button button--sm button--primary"
+  class="clickable-style clickable-style--sm clickable-style--primary"
+  type="button"
 >
   Button
 </button>
@@ -318,7 +342,8 @@ exports[`<Button /> PrimarySmall story renders snapshot 1`] = `
 
 exports[`<Button /> Secondary story renders snapshot 1`] = `
 <button
-  class="button button--lg button--secondary"
+  class="clickable-style clickable-style--lg clickable-style--secondary"
+  type="button"
 >
   Button
 </button>
@@ -326,9 +351,10 @@ exports[`<Button /> Secondary story renders snapshot 1`] = `
 
 exports[`<Button /> SecondaryDisabled story renders snapshot 1`] = `
 <button
-  class="button button--lg button--secondary"
+  class="clickable-style clickable-style--lg clickable-style--secondary"
   disabled=""
   tabindex="-1"
+  type="button"
 >
   Button
 </button>
@@ -336,7 +362,8 @@ exports[`<Button /> SecondaryDisabled story renders snapshot 1`] = `
 
 exports[`<Button /> SecondaryLeftIcon story renders snapshot 1`] = `
 <button
-  class="button button--lg button--secondary"
+  class="clickable-style clickable-style--lg clickable-style--secondary"
+  type="button"
 >
   <svg
     aria-hidden="true"
@@ -354,7 +381,8 @@ exports[`<Button /> SecondaryLeftIcon story renders snapshot 1`] = `
 
 exports[`<Button /> SecondaryMedium story renders snapshot 1`] = `
 <button
-  class="button button--md button--secondary"
+  class="clickable-style clickable-style--md clickable-style--secondary"
+  type="button"
 >
   Button
 </button>
@@ -362,7 +390,8 @@ exports[`<Button /> SecondaryMedium story renders snapshot 1`] = `
 
 exports[`<Button /> SecondaryRightIcon story renders snapshot 1`] = `
 <button
-  class="button button--lg button--secondary"
+  class="clickable-style clickable-style--lg clickable-style--secondary"
+  type="button"
 >
   Button
   <svg
@@ -380,7 +409,8 @@ exports[`<Button /> SecondaryRightIcon story renders snapshot 1`] = `
 
 exports[`<Button /> SecondarySmall story renders snapshot 1`] = `
 <button
-  class="button button--sm button--secondary"
+  class="clickable-style clickable-style--sm clickable-style--secondary"
+  type="button"
 >
   Button
 </button>
@@ -388,7 +418,8 @@ exports[`<Button /> SecondarySmall story renders snapshot 1`] = `
 
 exports[`<Button /> Tertiary story renders snapshot 1`] = `
 <button
-  class="button button--lg button--tertiary"
+  class="clickable-style clickable-style--lg clickable-style--tertiary"
+  type="button"
 >
   Button
 </button>
@@ -396,9 +427,10 @@ exports[`<Button /> Tertiary story renders snapshot 1`] = `
 
 exports[`<Button /> TertiaryDisabled story renders snapshot 1`] = `
 <button
-  class="button button--lg button--tertiary"
+  class="clickable-style clickable-style--lg clickable-style--tertiary"
   disabled=""
   tabindex="-1"
+  type="button"
 >
   Button
 </button>
@@ -406,7 +438,8 @@ exports[`<Button /> TertiaryDisabled story renders snapshot 1`] = `
 
 exports[`<Button /> TertiaryLeftIcon story renders snapshot 1`] = `
 <button
-  class="button button--lg button--tertiary"
+  class="clickable-style clickable-style--lg clickable-style--tertiary"
+  type="button"
 >
   <svg
     aria-hidden="true"
@@ -424,7 +457,8 @@ exports[`<Button /> TertiaryLeftIcon story renders snapshot 1`] = `
 
 exports[`<Button /> TertiaryMedium story renders snapshot 1`] = `
 <button
-  class="button button--md button--tertiary"
+  class="clickable-style clickable-style--md clickable-style--tertiary"
+  type="button"
 >
   Button
 </button>
@@ -432,7 +466,8 @@ exports[`<Button /> TertiaryMedium story renders snapshot 1`] = `
 
 exports[`<Button /> TertiaryRightIcon story renders snapshot 1`] = `
 <button
-  class="button button--lg button--tertiary"
+  class="clickable-style clickable-style--lg clickable-style--tertiary"
+  type="button"
 >
   Button
   <svg
@@ -450,7 +485,8 @@ exports[`<Button /> TertiaryRightIcon story renders snapshot 1`] = `
 
 exports[`<Button /> TertiarySmall story renders snapshot 1`] = `
 <button
-  class="button button--sm button--tertiary"
+  class="clickable-style clickable-style--sm clickable-style--tertiary"
+  type="button"
 >
   Button
 </button>
@@ -458,8 +494,9 @@ exports[`<Button /> TertiarySmall story renders snapshot 1`] = `
 
 exports[`<Button /> passes class names down properly 1`] = `
 <button
-  class="button exampleClassName button--lg button--primary"
+  class="clickable-style exampleClassName clickable-style--lg clickable-style--primary"
   data-testid="example-class-name"
+  type="button"
 >
   Click
 </button>
@@ -467,8 +504,9 @@ exports[`<Button /> passes class names down properly 1`] = `
 
 exports[`<Button /> passes test ids down properly 1`] = `
 <button
-  class="button button--lg button--primary"
+  class="clickable-style clickable-style--lg clickable-style--primary"
   data-testid="example-test-id"
+  type="button"
 >
   Click
 </button>

@@ -1,0 +1,399 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Link /> Default story renders snapshot 1`] = `
+<a
+  class="clickable-style clickable-style--link"
+  href="/"
+>
+  Link
+</a>
+`;
+
+exports[`<Link /> Destructive story renders snapshot 1`] = `
+<a
+  class="clickable-style clickable-style--lg clickable-style--destructive"
+  href="/"
+>
+  Link
+</a>
+`;
+
+exports[`<Link /> DestructiveLeftIcon story renders snapshot 1`] = `
+<a
+  class="clickable-style clickable-style--lg clickable-style--destructive"
+  href="/"
+>
+  <svg
+    aria-hidden="true"
+    class="icon"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <use
+      xlink:href="test-file-stub#arrow-back"
+    />
+  </svg>
+  Link
+</a>
+`;
+
+exports[`<Link /> IconLinkIconOnly story renders snapshot 1`] = `
+<a
+  class="clickable-style clickable-style--lg clickable-style--icon"
+  href="/"
+>
+  <svg
+    class="icon"
+    fill="currentColor"
+    role="img"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title
+      id="mock-id"
+    >
+      go back
+    </title>
+    <use
+      xlink:href="test-file-stub#arrow-back"
+    />
+  </svg>
+</a>
+`;
+
+exports[`<Link /> IconLinkIconOnlySmall story renders snapshot 1`] = `
+<a
+  class="clickable-style clickable-style--sm clickable-style--icon"
+  href="/"
+>
+  <svg
+    class="icon"
+    fill="currentColor"
+    role="img"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title
+      id="mock-id"
+    >
+      go back
+    </title>
+    <use
+      xlink:href="test-file-stub#arrow-back"
+    />
+  </svg>
+</a>
+`;
+
+exports[`<Link /> IconLinkLeftIcon story renders snapshot 1`] = `
+<a
+  class="clickable-style clickable-style--lg clickable-style--icon"
+  href="/"
+>
+  <svg
+    aria-hidden="true"
+    class="icon"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <use
+      xlink:href="test-file-stub#arrow-back"
+    />
+  </svg>
+  Link
+</a>
+`;
+
+exports[`<Link /> IconLinkLeftIconSmall story renders snapshot 1`] = `
+<a
+  class="clickable-style clickable-style--sm clickable-style--icon"
+  href="/"
+>
+  <svg
+    aria-hidden="true"
+    class="icon"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <use
+      xlink:href="test-file-stub#arrow-back"
+    />
+  </svg>
+  Link
+</a>
+`;
+
+exports[`<Link /> IconLinkRightIcon story renders snapshot 1`] = `
+<a
+  class="clickable-style clickable-style--lg clickable-style--icon"
+  href="/"
+>
+  Link
+  <svg
+    aria-hidden="true"
+    class="icon"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <use
+      xlink:href="test-file-stub#arrow-forward"
+    />
+  </svg>
+</a>
+`;
+
+exports[`<Link /> IconLinkRightIconSmall story renders snapshot 1`] = `
+<a
+  class="clickable-style clickable-style--sm clickable-style--icon"
+  href="/"
+>
+  Link
+  <svg
+    aria-hidden="true"
+    class="icon"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <use
+      xlink:href="test-file-stub#arrow-forward"
+    />
+  </svg>
+</a>
+`;
+
+exports[`<Link /> LinkRightIcon story renders snapshot 1`] = `
+<a
+  class="clickable-style clickable-style--link"
+  href="/"
+>
+  Link
+  <svg
+    class="icon"
+    fill="currentColor"
+    role="img"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title
+      id="mock-id"
+    >
+      opens in a new tab
+    </title>
+    <use
+      xlink:href="test-file-stub#open-in-new"
+    />
+  </svg>
+</a>
+`;
+
+exports[`<Link /> Primary story renders snapshot 1`] = `
+<a
+  class="clickable-style clickable-style--lg clickable-style--primary"
+  href="/"
+>
+  Link
+</a>
+`;
+
+exports[`<Link /> PrimaryLeftIcon story renders snapshot 1`] = `
+<a
+  class="clickable-style clickable-style--lg clickable-style--primary"
+  href="/"
+>
+  <svg
+    aria-hidden="true"
+    class="icon"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <use
+      xlink:href="test-file-stub#arrow-back"
+    />
+  </svg>
+  Link
+</a>
+`;
+
+exports[`<Link /> PrimaryMedium story renders snapshot 1`] = `
+<a
+  class="clickable-style clickable-style--md clickable-style--primary"
+  href="/"
+>
+  Link
+</a>
+`;
+
+exports[`<Link /> PrimaryRightIcon story renders snapshot 1`] = `
+<a
+  class="clickable-style clickable-style--lg clickable-style--primary"
+  href="/"
+>
+  Link
+  <svg
+    aria-hidden="true"
+    class="icon"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <use
+      xlink:href="test-file-stub#arrow-forward"
+    />
+  </svg>
+</a>
+`;
+
+exports[`<Link /> PrimarySmall story renders snapshot 1`] = `
+<a
+  class="clickable-style clickable-style--sm clickable-style--primary"
+  href="/"
+>
+  Link
+</a>
+`;
+
+exports[`<Link /> Secondary story renders snapshot 1`] = `
+<a
+  class="clickable-style clickable-style--lg clickable-style--secondary"
+  href="/"
+>
+  Link
+</a>
+`;
+
+exports[`<Link /> SecondaryLeftIcon story renders snapshot 1`] = `
+<a
+  class="clickable-style clickable-style--lg clickable-style--secondary"
+  href="/"
+>
+  <svg
+    aria-hidden="true"
+    class="icon"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <use
+      xlink:href="test-file-stub#arrow-back"
+    />
+  </svg>
+  Link
+</a>
+`;
+
+exports[`<Link /> SecondaryMedium story renders snapshot 1`] = `
+<a
+  class="clickable-style clickable-style--md clickable-style--secondary"
+  href="/"
+>
+  Link
+</a>
+`;
+
+exports[`<Link /> SecondaryRightIcon story renders snapshot 1`] = `
+<a
+  class="clickable-style clickable-style--lg clickable-style--secondary"
+  href="/"
+>
+  Link
+  <svg
+    aria-hidden="true"
+    class="icon"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <use
+      xlink:href="test-file-stub#arrow-forward"
+    />
+  </svg>
+</a>
+`;
+
+exports[`<Link /> SecondarySmall story renders snapshot 1`] = `
+<a
+  class="clickable-style clickable-style--sm clickable-style--secondary"
+  href="/"
+>
+  Link
+</a>
+`;
+
+exports[`<Link /> Teritary story renders snapshot 1`] = `
+<a
+  class="clickable-style clickable-style--lg clickable-style--tertiary"
+  href="/"
+>
+  Link
+</a>
+`;
+
+exports[`<Link /> TeritaryLeftIcon story renders snapshot 1`] = `
+<a
+  class="clickable-style clickable-style--lg clickable-style--tertiary"
+  href="/"
+>
+  <svg
+    aria-hidden="true"
+    class="icon"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <use
+      xlink:href="test-file-stub#arrow-back"
+    />
+  </svg>
+  Link
+</a>
+`;
+
+exports[`<Link /> TeritaryMedium story renders snapshot 1`] = `
+<a
+  class="clickable-style clickable-style--md clickable-style--tertiary"
+  href="/"
+>
+  Link
+</a>
+`;
+
+exports[`<Link /> TeritaryRightIcon story renders snapshot 1`] = `
+<a
+  class="clickable-style clickable-style--lg clickable-style--tertiary"
+  href="/"
+>
+  Link
+  <svg
+    aria-hidden="true"
+    class="icon"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <use
+      xlink:href="test-file-stub#arrow-forward"
+    />
+  </svg>
+</a>
+`;
+
+exports[`<Link /> TeritarySmall story renders snapshot 1`] = `
+<a
+  class="clickable-style clickable-style--sm clickable-style--tertiary"
+  href="/"
+>
+  Link
+</a>
+`;
+
+exports[`<Link /> passes class names down properly 1`] = `
+<a
+  class="clickable-style exampleClassName clickable-style--link"
+  data-testid="example-class-name"
+  href="/"
+>
+  Click
+</a>
+`;
+
+exports[`<Link /> passes test ids down properly 1`] = `
+<a
+  class="clickable-style clickable-style--link"
+  data-testid="example-test-id"
+  href="/"
+>
+  Click
+</a>
+`;
