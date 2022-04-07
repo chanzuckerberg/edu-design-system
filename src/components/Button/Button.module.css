@@ -55,20 +55,6 @@
     cursor: not-allowed;
     transform: none;
   }
-
-  /**
-   * Inverted button
-   */
-  &.button--inverted {
-    border-color: var(--eds-theme-color-primary-border-inverted);
-    color: var(--eds-theme-color-primary-foreground-inverted);
-    /* stylelint-disable-next-line max-nesting-depth */
-    &:hover,
-    &:focus {
-      border-color: var(--eds-theme-color-primary-border-inverted-hover);
-      color: var(--eds-theme-color-primary-foreground-inverted-hover);
-    }
-  }
 }
 
 /**
@@ -97,20 +83,6 @@
     border-color: var(--eds-theme-color-disabled-border);
     color: var(--eds-theme-color-disabled-foreground);
   }
-
-  /**
-   * Inverted primary button
-   */
-  &.button--inverted {
-    background-color: var(--eds-theme-color-primary-background);
-    color: var(--eds-theme-color-body-foreground-inverted);
-    /* stylelint-disable-next-line max-nesting-depth */
-    &:hover,
-    &:focus {
-      background-color: var(--eds-theme-color-primary-background-hover);
-      color: var(--eds-theme-color-body-foreground-inverted);
-    }
-  }
 }
 
 /**
@@ -137,20 +109,6 @@
     background-color: var(--eds-theme-color-disabled-background);
     border-color: var(--eds-theme-color-disabled-border);
     color: var(--eds-theme-color-disabled-foreground);
-  }
-
-  /**
-   * Inverted secondary button
-   */
-  &.button--inverted {
-    background-color: var(--eds-theme-color-primary-background);
-    color: var(--eds-theme-color-body-foreground-inverted);
-    /* stylelint-disable-next-line max-nesting-depth */
-    &:hover,
-    &:focus {
-      background-color: var(--eds-theme-color-primary-background-hover);
-      color: var(--eds-theme-color-body-foreground-inverted);
-    }
   }
 }
 
@@ -179,20 +137,6 @@
     border-color: var(--eds-theme-color-disabled-border);
     color: var(--eds-theme-color-disabled-foreground);
   }
-
-  /**
-   * Inverted tertiary button
-   */
-  &.button--inverted {
-    background-color: var(--eds-theme-color-primary-background);
-    color: var(--eds-theme-color-body-foreground-inverted);
-    /* stylelint-disable-next-line max-nesting-depth */
-    &:hover,
-    &:focus {
-      background-color: var(--eds-theme-color-primary-background-hover);
-      color: var(--eds-theme-color-body-foreground-inverted);
-    }
-  }
 }
 
 /**
@@ -212,13 +156,6 @@
   &:focus {
     background-color: transparent;
   }
-
-  /**
-   * Inverted link button
-   */
-  &.button--inverted {
-    @mixin TextLinkInverted;
-  }
 }
 
 /**
@@ -235,19 +172,6 @@
   &:focus {
     color: var(--eds-theme-color-primary-foreground-hover);
     background-color: transparent;
-  }
-
-  /**
-   * Inverted icon button
-   */
-  &.button--inverted {
-    color: var(--eds-theme-color-primary-foreground-inverted);
-    /* stylelint-disable-next-line max-nesting-depth */
-    &:hover,
-    &:focus {
-      color: var(--eds-theme-color-primary-foreground-inverted-hover);
-      background-color: transparent;
-    }
   }
 }
 
@@ -276,20 +200,6 @@
     background-color: var(--eds-theme-color-disabled-background);
     border-color: var(--eds-theme-color-disabled-border);
     color: var(--eds-theme-color-disabled-foreground);
-  }
-
-  /**
-   * Inverted primary button
-   */
-  &.button--inverted {
-    background-color: var(--eds-theme-color-primary-background);
-    color: var(--eds-theme-color-body-foreground-inverted);
-    /* stylelint-disable-next-line max-nesting-depth */
-    &:hover,
-    &:focus {
-      background-color: var(--eds-theme-color-primary-background-hover);
-      color: var(--eds-theme-color-body-foreground-inverted);
-    }
   }
 }
 
