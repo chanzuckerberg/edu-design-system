@@ -35,7 +35,6 @@ export const TagsItem = ({
   const [isDismissed, setIsDismissed] = useState(false);
 
   function handleOnClick(e) {
-    console.log('Hello');
     e.preventDefault();
     if (dismissible === true) {
       setIsDismissed(true);

@@ -10,39 +10,34 @@
  * 2) Left sidebar is the default
  */
 .layout {
-  @media all and (min-width: $eds-bp-lg) {
+  @media all and (min-width: $eds-bp-xl) {
     display: grid;
     grid-template-columns: auto 1fr;
   }
 }
-
 
 /**
  * Sidebar layout section region
  * 1) Contains the global header and site navigation
  */
 .layout__section--sidebar {
-
-  @media all and (min-width: $eds-bp-lg) {
+  @media all and (min-width: $eds-bp-xl) {
     top: 0;
     left: 0;
     height: 100vh;
     width: var(--eds-l-sidebar-width);
-    z-index: var(--eds-z-index-500);   
+    z-index: var(--eds-z-index-500);
   }
 }
-
 
 /**
  * Main layout section region 
  * 1) Contains the main page content
  */
 .layout__section--main {
-  @media all and (min-width: $eds-bp-lg) {
+  @media all and (min-width: $eds-bp-xl) {
     width: 100%;
     height: 100vh;
     padding-top: var(--eds-size-6);
   }
 }
-
-
