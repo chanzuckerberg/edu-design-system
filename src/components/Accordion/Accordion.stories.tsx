@@ -14,7 +14,7 @@ export default {
 const Template: Story<Props> = (args) => (
   <Accordion {...args}>
     <AccordionPanel
-      header={<Heading as="h3">Accordion title 1</Heading>}
+      header={<Heading size="h3">Accordion title 1</Heading>}
       isActive
     >
       <TextPassage>
@@ -49,7 +49,7 @@ const Template: Story<Props> = (args) => (
     </AccordionPanel>
     <AccordionPanel
       isActive
-      header={<Heading as="h3">Accordion title 2</Heading>}
+      header={<Heading size="h3">Accordion title 2</Heading>}
     >
       <TextPassage>
         <p>
@@ -63,7 +63,7 @@ const Template: Story<Props> = (args) => (
         </p>
       </TextPassage>
     </AccordionPanel>
-    <AccordionPanel header={<Heading as="h3">Accordion title 3</Heading>}>
+    <AccordionPanel header={<Heading size="h3">Accordion title 3</Heading>}>
       <TextPassage>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -76,7 +76,7 @@ const Template: Story<Props> = (args) => (
         </p>
       </TextPassage>
     </AccordionPanel>
-    <AccordionPanel header={<Heading as="h3">Accordion title 4</Heading>}>
+    <AccordionPanel header={<Heading size="h3">Accordion title 4</Heading>}>
       <TextPassage>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

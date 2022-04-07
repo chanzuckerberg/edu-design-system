@@ -12,7 +12,7 @@ export default {
 
 const Template: Story<Props> = (args) => (
   <Hero {...args}>
-    <Heading as="h1">Hero title</Heading>
+    <Heading size="h1">Hero title</Heading>
     <TextPassage className="u-margin-top-lg">
       This is the hero description
     </TextPassage>

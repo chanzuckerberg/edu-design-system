@@ -15,7 +15,7 @@ export default {
 const Template: Story<Props> = (args) => (
   <Tile {...args}>
     <TileHeader>
-      <Heading as="h2" size={4} className="u-margin-bottom-sm">
+      <Heading as="h2" size="h4" className="u-margin-bottom-sm">
         <a href="/">Lorem</a> ipsum dolor sit amet, consectetur adipiscing elit.
       </Heading>
     </TileHeader>
