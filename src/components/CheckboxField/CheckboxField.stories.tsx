@@ -60,19 +60,16 @@ const InvertedTemplate: Story<Props> = (args) => (
         name="checkbox-example"
         text="Checkbox 1"
         value="checkbox1"
-        inverted={true}
       />
       <CheckboxFieldItem
         name="checkbox-example"
         text="Checkbox 2"
         value="checkbox2"
-        inverted={true}
       />
       <CheckboxFieldItem
         name="checkbox-example"
         text="Checkbox 3"
         value="checkbox3"
-        inverted={true}
       />
     </CheckboxField>
   </div>

@@ -8,7 +8,7 @@ const defaultArgs = {
 };
 
 export default {
-  title: 'Checkbox',
+  title: 'Atoms/Forms/Checkbox',
   component: Checkbox,
   args: defaultArgs,
   argTypes: {
