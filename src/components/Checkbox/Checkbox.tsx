@@ -133,7 +133,7 @@ const CheckboxSvg = ({ indeterminate }: { indeterminate?: boolean }) => {
 const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
   (props, ref) => {
     // All remaining props are passed to the `input` element
-    const { className, id, label, size, ...rest } = props;
+    const { className, id, label, size, ...other } = props;
 
     // When possible, use a visible label through the `label` prop instead.
     // In rare cases where there's no visible label, you must provide an
@@ -150,7 +150,7 @@ const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
 
     return (
       <div className={clsx(className, styles['checkbox'])}>
-        <CheckboxInput id={checkboxId} ref={ref} {...rest} />
+        <CheckboxInput id={checkboxId} ref={ref} {...other} />
         {label && <Label htmlFor={checkboxId} size={size} text={label} />}
       </div>
     );
@@ -164,7 +164,7 @@ Checkbox.displayName = 'Checkbox';
  * You must provide an `id` prop and connect it to a visible label.
  */
 const CheckboxInput = React.forwardRef<HTMLInputElement, InputProps>(
-  ({ checked, className, disabled, ...rest }, ref) => {
+  ({ checked, className, disabled, ...other }, ref) => {
     // Make indeterminate checkbox visually match the colors of a
     // checked state, but announce itself as "mixed" to screen readers
     const checkedProps =
@@ -192,7 +192,7 @@ const CheckboxInput = React.forwardRef<HTMLInputElement, InputProps>(
           style={svgStyle}
           type="checkbox"
           {...checkedProps}
-          {...rest}
+          {...other}
         />
         <CheckboxSvg indeterminate={checked === 'indeterminate'} />
       </span>
