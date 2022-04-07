@@ -61,10 +61,6 @@
 
   .list-detail__title {
     @mixin eds-theme-typography-headline-md;
-    
-    @media all and (min-width: $eds-bp-md) {
-      display: none;
-    }
   }
 
 /**
