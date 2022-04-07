@@ -47,7 +47,9 @@
 
   &:hover,
   &:focus {
-    background: var(--eds-color-brand-grape-800);
+    background: var(
+      --eds-color-brand-grape-800
+    ); /*TODO: replace with tier 2 variable once established */
   }
 
   @media all and (min-width: $eds-bp-xl) {
