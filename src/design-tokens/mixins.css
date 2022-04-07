@@ -27,7 +27,6 @@
 }
 
 @define-mixin TextLinkInverted {
-  
   @mixin eds-theme-typography-body-text-md;
   color: var(--eds-theme-color-text-neutral-default-inverse);
 
