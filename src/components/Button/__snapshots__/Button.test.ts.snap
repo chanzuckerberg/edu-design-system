@@ -1,5 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Button /> Destructive story renders snapshot 1`] = `
+<button
+  class="button button--lg button--destructive"
+>
+  Button
+</button>
+`;
+
 exports[`<Button /> DestructiveDisabled story renders snapshot 1`] = `
 <button
   class="button button--lg button--destructive"
@@ -180,6 +188,14 @@ exports[`<Button /> IconButtonRightIconSmall story renders snapshot 1`] = `
 </button>
 `;
 
+exports[`<Button /> Link story renders snapshot 1`] = `
+<button
+  class="button button--link"
+>
+  Button
+</button>
+`;
+
 exports[`<Button /> LinkDisabled story renders snapshot 1`] = `
 <button
   class="button button--link"
@@ -242,6 +258,14 @@ exports[`<Button /> Loading story renders snapshot 1`] = `
       xlink:href="test-file-stub#spinner"
     />
   </svg>
+  Button
+</button>
+`;
+
+exports[`<Button /> Primary story renders snapshot 1`] = `
+<button
+  class="button button--lg button--primary"
+>
   Button
 </button>
 `;
@@ -316,6 +340,14 @@ exports[`<Button /> PrimarySmall story renders snapshot 1`] = `
 </button>
 `;
 
+exports[`<Button /> Secondary story renders snapshot 1`] = `
+<button
+  class="button button--lg button--secondary"
+>
+  Button
+</button>
+`;
+
 exports[`<Button /> SecondaryDisabled story renders snapshot 1`] = `
 <button
   class="button button--lg button--secondary"
@@ -381,6 +413,14 @@ exports[`<Button /> SecondaryRightIcon story renders snapshot 1`] = `
 exports[`<Button /> SecondarySmall story renders snapshot 1`] = `
 <button
   class="button button--sm button--secondary"
+>
+  Button
+</button>
+`;
+
+exports[`<Button /> Teritary story renders snapshot 1`] = `
+<button
+  class="button button--lg button--tertiary"
 >
   Button
 </button>
