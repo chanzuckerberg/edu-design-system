@@ -113,7 +113,7 @@
     left: 0;
     transform: translateX(100%);
     transition: transform var(--eds-anim-move-quick) var(--eds-anim-ease);
-    background: var(--eds-theme-color-body-background);
+    background: var(--eds-theme-color-background-neutral-default);
   }
 
   .list-detail__body-visible & {
