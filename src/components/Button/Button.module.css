@@ -9,6 +9,7 @@
  * 2) Defaults to primary button
  * 3) Margin 0 added becuase Safari has margin on the button
  * 4) Adds a gap between children to automatically handle spacing between icons and text
+ * 5) Adds default size for icons passed in for consistency
  */
 .button {
   @mixin eds-theme-typography-button-label;
@@ -23,6 +24,10 @@
   cursor: pointer;
   transition: all var(--eds-anim-fade-quick) var(--eds-anim-ease);
 
+  svg {
+    --icon-size-default: 2em; /* 5 */
+  }
+
   &:focus {
     @mixin focus;
   }
@@ -33,6 +38,10 @@
    &:disabled,
    &:disabled:hover {
     cursor: not-allowed;
+  }
+
+  @media screen and (prefers-reduced-motion) {
+    transition: none;
   }
 }
 
@@ -130,6 +139,8 @@
 /**
  * Link Button
  * 1) A button that is visually styled like a text link
+ * 2) Inherits size from surrounding text
+ * 3) Spacing between text and icon scales with text size
  */
 .button--link {
   @mixin textLink;
@@ -138,11 +149,20 @@
   border: 0;
   text-align: left;
   background-color: transparent;
+  font-size: inherit; /* 2 */
+  line-height: inherit; /* 2 */
+  text-transform: inherit; /* 2 */
+  gap: 0.25em; /* 3 */
 
   &:disabled,
   &:disabled:hover {
     color: var(--eds-theme-color-text-disabled);
   }
+}
+
+/* Style icons that may be in the button children */
+.button--link svg {
+  --icon-size-default: 1.25em;
 }
 
 /**

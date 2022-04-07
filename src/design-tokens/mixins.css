@@ -7,7 +7,6 @@
 }
 
 @define-mixin textLink {
-  /* TODO: inherit size */
   @mixin eds-theme-typography-body-text-md;
   color: var(--eds-theme-color-text-link-strong);
   /* TODO: underline change on hover */
@@ -16,6 +15,7 @@
   &:hover,
   &:focus {
     color: var(--eds-theme-color-text-link-strong-hover);
+    text-decoration-thickness: 2px;
   }
 
   &:focus {
@@ -24,7 +24,6 @@
 }
 
 @define-mixin TextLinkInverted {
-  
   @mixin eds-theme-typography-body-text-md;
   color: var(--eds-theme-color-text-neutral-default-inverse);
 
