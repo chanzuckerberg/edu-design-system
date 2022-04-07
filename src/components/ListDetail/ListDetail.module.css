@@ -37,6 +37,10 @@
 
 .list-detail__unit-title {
   margin-bottom: var(--eds-size-4);
+
+  @media all and (min-width: $eds-bp-md) {
+    display: none;
+  }
 }
 
 .list-detail__breadcrumbs {
@@ -147,6 +151,7 @@
   padding-top: var(--eds-size-3);
 
   @media all and (min-width: $eds-bp-md) {
+    border-top: none;
     position: sticky;
     top: var(--eds-size-5);
   }
