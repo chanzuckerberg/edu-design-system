@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import React, { useState, useEffect } from 'react';
 import styles from './GlobalHeader.module.css';
+import breakpoint from '../../../src/design-tokens/tier-1-definitions/breakpoints.js';
 import {
   Header,
   Logo,
@@ -29,10 +30,12 @@ export interface Props {
 
 /**
  * Primary UI component for user interaction
+ * 1) Use the xl breakpoint to match the CSS breakpoint for the popover position change
  */
 export const GlobalHeader = ({ className, ...other }: Props) => {
   const [isActive, setisActive] = useState(false);
   const [isLarge, setIsLarge] = useState(false);
+  const popoverBreakpoint = parseInt(breakpoint['eds-bp-xl']) * 16; /* 1 */
 
   const toggleMenu = () => {
     setisActive(!isActive);
@@ -51,8 +54,9 @@ export const GlobalHeader = ({ className, ...other }: Props) => {
     };
   }, []);
 
+
   const updateScreenSize = () => {
-    if (window.innerWidth >= 1200) {
+    if (window.innerWidth >= popoverBreakpoint) {
       setIsLarge(true);
     } else {
       setIsLarge(false);
