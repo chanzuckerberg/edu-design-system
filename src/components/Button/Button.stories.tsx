@@ -11,13 +11,6 @@ export default {
 
 const Template: Story<Props> = (args) => <Button {...args} />;
 
-const InvertedTemplate: Story<Props> = (args) => (
-  <div style={{ padding: '1rem', backgroundColor: '#000' }}>
-    {' '}
-    <Button {...args} />
-  </div>
-);
-
 export const Default = Template.bind({});
 Default.args = { children: 'Button' };
 
@@ -44,9 +37,6 @@ DefaultWithIconAfter.args = {
 export const DefaultDisabled = Template.bind({});
 DefaultDisabled.args = { children: 'Button', disabled: true };
 
-export const DefaultInverted = InvertedTemplate.bind({});
-DefaultInverted.args = { inverted: true, children: 'Button' };
-
 export const Primary = Template.bind({});
 Primary.args = { variant: 'primary', children: 'Primary Button' };
 
@@ -57,35 +47,14 @@ PrimaryDisabled.args = {
   disabled: true,
 };
 
-export const PrimaryInverted = InvertedTemplate.bind({});
-PrimaryInverted.args = {
-  variant: 'primary',
-  inverted: true,
-  children: 'Primary Button',
-};
-
 export const BareIcon = Template.bind({});
 BareIcon.args = {
   variant: 'icon',
   children: <Icon purpose="informative" title="Close" name="close" />,
 };
 
-export const IconButtonInverted = InvertedTemplate.bind({});
-IconButtonInverted.args = {
-  inverted: true,
-  variant: 'icon',
-  children: <Icon purpose="informative" title="Close" name="close" />,
-};
-
 export const TextLink = Template.bind({});
 TextLink.args = { variant: 'link', children: 'Text Link Button' };
-
-export const TextLinkInverted = InvertedTemplate.bind({});
-TextLinkInverted.args = {
-  variant: 'link',
-  inverted: true,
-  children: 'Text Link Button',
-};
 
 export const UtilityError = Template.bind({});
 UtilityError.args = { variant: 'error', children: 'Button' };
