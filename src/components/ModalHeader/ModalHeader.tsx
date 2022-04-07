@@ -45,10 +45,10 @@ export const ModalHeader = ({
       {dismissible && (
         <Button
           className={styles['modal__close-button']}
-          variant="icon"
           onClick={onClick}
+          variant="icon"
         >
-          <Icon name="close" title={closeButtonText} purpose="informative" />
+          <Icon name="close" purpose="informative" title={closeButtonText} />
         </Button>
       )}
     </header>

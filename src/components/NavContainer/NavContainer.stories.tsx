@@ -15,7 +15,7 @@ export const Default = () => (
   <NavContainer>
     <PrimaryNav>
       <PrimaryNavItem href="#" text="Nav Item" />
-      <PrimaryNavItem href="#" text="Nav Item" isActive={true} />
+      <PrimaryNavItem href="#" isActive={true} text="Nav Item" />
       <PrimaryNavItem href="#" text="Nav Item" />
     </PrimaryNav>
     <UtilityNav>

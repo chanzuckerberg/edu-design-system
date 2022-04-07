@@ -13,12 +13,12 @@ export class Tier1Animation extends Component {
               return (
                 <GridItem key={'animation-ease-' + index}>
                   <TokenSpecimen
-                    name={listItem.name}
-                    value={listItem.value}
-                    variant="animation-fade"
                     inlineStyles={{
                       transitionDuration: `var(${listItem.name})`,
                     }}
+                    name={listItem.name}
+                    value={listItem.value}
+                    variant="animation-fade"
                   />
                 </GridItem>
               );
@@ -32,12 +32,12 @@ export class Tier1Animation extends Component {
               return (
                 <GridItem key={'animation-ease-' + index}>
                   <TokenSpecimen
-                    name={listItem.name}
-                    value={listItem.value}
-                    variant="animation-move"
                     inlineStyles={{
                       transitionDuration: `var(${listItem.name})`,
                     }}
+                    name={listItem.name}
+                    value={listItem.value}
+                    variant="animation-move"
                   />
                 </GridItem>
               );
@@ -51,12 +51,12 @@ export class Tier1Animation extends Component {
               return (
                 <GridItem key={'animation-ease-' + index}>
                   <TokenSpecimen
-                    name={listItem.name}
-                    value={listItem.value}
-                    variant="animation-fade"
                     inlineStyles={{
                       transitionTimingFunction: `var(${listItem.name})`,
                     }}
+                    name={listItem.name}
+                    value={listItem.value}
+                    variant="animation-fade"
                   />
                 </GridItem>
               );

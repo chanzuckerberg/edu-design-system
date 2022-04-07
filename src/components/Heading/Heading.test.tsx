@@ -11,7 +11,7 @@ describe('<Heading />', () => {
 
   it('should add the passthrough className', () => {
     render(
-      <Heading size="h1" className="passthrough">
+      <Heading className="passthrough" size="h1">
         Some Heading
       </Heading>,
     );
@@ -27,7 +27,7 @@ describe('<Heading />', () => {
       };
       return (
         <>
-          <Heading size="h1" ref={refContainer}>
+          <Heading ref={refContainer} size="h1">
             Ref container parent test
           </Heading>
           <button onClick={onButtonClick}>Test ref</button>

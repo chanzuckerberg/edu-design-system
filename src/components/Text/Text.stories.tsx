@@ -98,21 +98,21 @@ export const Variants: StoryObj<Args> = {
         {variants.map((variant) => (
           <>
             <Item
-              key={`${variant}-white`}
               className={styles['variant__item-white']}
+              key={`${variant}-white`}
             >
               <Text size="lg" variant={variant as Variant}>
                 {variant}
               </Text>
             </Item>
-            <Item key={`${variant}`} className={styles['variant__item-light']}>
+            <Item className={styles['variant__item-light']} key={`${variant}`}>
               <Text size="lg" variant={variant as Variant}>
                 {variant}
               </Text>
             </Item>
             <Item
-              key={`${variant}-dark`}
               className={styles['variant__item-dark']}
+              key={`${variant}-dark`}
             >
               <Text size="lg" variant={variant as Variant}>
                 {variant}
@@ -144,7 +144,7 @@ export const BodyVariantSuccessBold: StoryObj<Args> = {
 
 export const TextVariantInherit: StoryObj<Args> = {
   render: (args) => (
-    <Text variant="alert" size="body">
+    <Text size="body" variant="alert">
       This text surrounds the <Text as="span" {...args} /> and shows it should
       inherit variant from the parent
     </Text>

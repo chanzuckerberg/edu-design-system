@@ -14,7 +14,7 @@ import { PageShell } from '../../recipes/PageShell/PageShell';
 export const CurriculumCourses: React.FC = () => (
   <PageShell>
     <Breadcrumbs>
-      <BreadcrumbsItem text="My Courses" href="#" />
+      <BreadcrumbsItem href="#" text="My Courses" />
     </Breadcrumbs>
     <PageHeader title="English 10" />
     <Panel>

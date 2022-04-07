@@ -11,10 +11,10 @@ export default {
 
 const Template: Story<Props> = (args) => (
   <FooterNav>
-    <FooterNavItem text="Footer Nav Item 1" href="#" />
-    <FooterNavItem text="Footer Nav Item 2" href="#" />
-    <FooterNavItem text="Footer Nav Item 3" href="#" />
-    <FooterNavItem text="Footer Nav Item 4" href="#" />
+    <FooterNavItem href="#" text="Footer Nav Item 1" />
+    <FooterNavItem href="#" text="Footer Nav Item 2" />
+    <FooterNavItem href="#" text="Footer Nav Item 3" />
+    <FooterNavItem href="#" text="Footer Nav Item 4" />
   </FooterNav>
 );
 

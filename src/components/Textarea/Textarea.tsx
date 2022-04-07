@@ -105,21 +105,21 @@ export const Textarea = ({
 
   return (
     <textarea
-      className={componentClassName}
-      id={id}
-      name={name}
-      rows={rows}
-      value={value}
-      defaultValue={defaultValue}
-      placeholder={placeholder}
-      maxLength={maxLength}
-      inputMode={inputMode}
-      disabled={disabled}
-      readOnly={readOnly}
-      onChange={onChange}
-      required={required}
-      title={title}
       aria-describedby={ariaDescribedBy}
+      className={componentClassName}
+      defaultValue={defaultValue}
+      disabled={disabled}
+      id={id}
+      inputMode={inputMode}
+      maxLength={maxLength}
+      name={name}
+      onChange={onChange}
+      placeholder={placeholder}
+      readOnly={readOnly}
+      required={required}
+      rows={rows}
+      title={title}
+      value={value}
       {...other}
     />
   );

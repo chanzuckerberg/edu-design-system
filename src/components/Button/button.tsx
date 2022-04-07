@@ -110,20 +110,20 @@ export const Button = React.forwardRef(
     return (
       <TagName
         className={componentClassName}
-        href={href}
         disabled={disabled}
-        tabIndex={disabled ? -1 : undefined}
-        ref={forwardRef || ref}
-        type={type}
+        href={href}
         onClick={onClick}
+        ref={forwardRef || ref}
+        tabIndex={disabled ? -1 : undefined}
+        type={type}
         {...other}
       >
         {loading && (
           <Icon
+            className={styles['button__icon-loading']}
+            name="spinner"
             purpose="informative"
             title="loading"
-            name="spinner"
-            className={styles['button__icon-loading']}
           />
         )}
 
