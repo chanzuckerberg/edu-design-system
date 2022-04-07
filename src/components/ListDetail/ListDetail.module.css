@@ -16,7 +16,7 @@
   border-color: var(--eds-theme-color-border-neutral-subtle);
   border-radius: var(--eds-theme-border-radius);
 
-  @media all and (min-width: $eds-bp-md) {
+  @media all and (min-width: $eds-bp-lg) {
     display: flex;
     overflow: visible;
   }
@@ -32,7 +32,7 @@
   padding: var(--eds-size-2);
   height: 100vh;
 
-  @media all and (min-width: $eds-bp-md) {
+  @media all and (min-width: $eds-bp-lg) {
     padding: var(--eds-size-5);
     width: 20rem;
   }
@@ -43,7 +43,7 @@
   display: block;
   padding: var(--eds-size-1) 0;
 
-  @media all and (min-width: $eds-bp-md) {
+  @media all and (min-width: $eds-bp-lg) {
     display: none;
   }
 }
@@ -64,11 +64,10 @@
   position: absolute;
   top: 0;
   width: 100%;
-  top: 0;
   right: 0;
   z-index: var(--eds-z-index-bottom);
 
-  @media all and (min-width: $eds-bp-md) {
+  @media all and (min-width: $eds-bp-lg) {
     flex: 1; /* 1 */
     padding: var(--eds-size-5) var(--eds-size-8);
     box-shadow: -6px 0px 10px -2px var(--eds-theme-color-border-neutral-subtle);
@@ -97,7 +96,7 @@
   height: 100vh;
   width: 100%;
 
-  @media all and (max-width: $eds-bp-md) {
+  @media all and (max-width: $eds-bp-lg) {
     padding: var(--eds-size-2);
     left: 0;
     transform: translateX(100%);
@@ -116,7 +115,7 @@
   justify-content: flex-start;
   align-items: center;
 
-  @media all and (min-width: $eds-bp-md) {
+  @media all and (min-width: $eds-bp-lg) {
     display: none;
   }
 }
@@ -132,7 +131,7 @@
   list-style: none;
   padding-top: var(--eds-size-3);
 
-  @media all and (min-width: $eds-bp-md) {
+  @media all and (min-width: $eds-bp-lg) {
     border-top: none;
     position: sticky;
     top: var(--eds-size-5);
@@ -208,7 +207,7 @@
     @mixin focus;
   }
 
-  @media all and (max-width: $eds-bp-md) {
+  @media all and (max-width: $eds-bp-lg) {
     @mixin eds-theme-typography-body-text-bold;
     color: var(--eds-theme-color-text-neutral-default);
   }
@@ -272,7 +271,7 @@
 .list-detail__link-right {
   display: none;
 
-  @media all and (max-width: $eds-bp-md) {
+  @media all and (max-width: $eds-bp-lg) {
     display: block;
     flex-shrink: 0;
   }
