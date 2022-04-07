@@ -29,7 +29,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const UtilityNav: React.FC<Props> = ({
+export const UtilityNav = ({
   className,
   children,
   id,
