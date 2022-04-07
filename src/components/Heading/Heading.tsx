@@ -50,9 +50,8 @@ export const Heading = forwardRef(
       size,
       /**
        * Components that wrap typography sometimes require props such as
-       * event handlers, tabIndex, etc. to be passed down into the element.
-       * TODO: add better typing or documentation for optional props,
-       * e.g. React.HTMLAttributes<HTMLHeadingElement>
+       * event handlers, tabIndex, etc. and/or other native heading element
+       * attributes to be passed down into the element.
        */ ...other
     }: Props,
     ref: React.ForwardedRef<HTMLHeadingElement>,
