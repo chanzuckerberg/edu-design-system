@@ -74,7 +74,6 @@ export const PopoverExample: React.FC<Props> = ({
 
       <Popover
         position={position}
-        dismissible={true}
         isActive={popoverOpen}
         onClose={closePopover}
         ariaLabelledBy="popover-heading-1"
