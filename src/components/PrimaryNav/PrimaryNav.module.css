@@ -41,7 +41,7 @@
   @mixin TextLinkInverted;
   text-decoration: none;
   white-space: nowrap;
-  padding: 0.5rem;
+  padding: var(--eds-size-1);
   border-radius: var(--eds-theme-border-radius);
   transition: background var(--eds-anim-fade-quick) var(--eds-anim-ease);
 
