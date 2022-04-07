@@ -10,6 +10,24 @@ exports[`<Button /> DestructiveDisabled story renders snapshot 1`] = `
 </button>
 `;
 
+exports[`<Button /> DestructiveLeftIcon story renders snapshot 1`] = `
+<button
+  class="button button--lg button--destructive"
+>
+  <svg
+    aria-hidden="true"
+    class="icon"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <use
+      xlink:href="test-file-stub#arrow-back"
+    />
+  </svg>
+  Button
+</button>
+`;
+
 exports[`<Button /> DestructiveNoIcon story renders snapshot 1`] = `
 <button
   class="button button--lg button--destructive"
@@ -23,6 +41,142 @@ exports[`<Button /> FullWidth story renders snapshot 1`] = `
   class="button button--lg button--primary button--full-width"
 >
   Button
+</button>
+`;
+
+exports[`<Button /> IconButtonDisabled story renders snapshot 1`] = `
+<button
+  class="button button--lg button--icon"
+  disabled=""
+  tabindex="-1"
+>
+  <svg
+    aria-hidden="true"
+    class="icon"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <use
+      xlink:href="test-file-stub#arrow-back"
+    />
+  </svg>
+  Button
+</button>
+`;
+
+exports[`<Button /> IconButtonIconOnly story renders snapshot 1`] = `
+<button
+  class="button button--lg button--icon"
+>
+  <svg
+    class="icon"
+    fill="currentColor"
+    role="img"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title
+      id="mock-id"
+    >
+      go back
+    </title>
+    <use
+      xlink:href="test-file-stub#arrow-back"
+    />
+  </svg>
+</button>
+`;
+
+exports[`<Button /> IconButtonIconOnlySmall story renders snapshot 1`] = `
+<button
+  class="button button--sm button--icon"
+>
+  <svg
+    class="icon"
+    fill="currentColor"
+    role="img"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title
+      id="mock-id"
+    >
+      go back
+    </title>
+    <use
+      xlink:href="test-file-stub#arrow-back"
+    />
+  </svg>
+</button>
+`;
+
+exports[`<Button /> IconButtonLeftIcon story renders snapshot 1`] = `
+<button
+  class="button button--lg button--icon"
+>
+  <svg
+    aria-hidden="true"
+    class="icon"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <use
+      xlink:href="test-file-stub#arrow-back"
+    />
+  </svg>
+  Button
+</button>
+`;
+
+exports[`<Button /> IconButtonLeftIconSmall story renders snapshot 1`] = `
+<button
+  class="button button--sm button--icon"
+>
+  <svg
+    aria-hidden="true"
+    class="icon"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <use
+      xlink:href="test-file-stub#arrow-back"
+    />
+  </svg>
+  Button
+</button>
+`;
+
+exports[`<Button /> IconButtonRightIcon story renders snapshot 1`] = `
+<button
+  class="button button--lg button--icon"
+>
+  Button
+  <svg
+    aria-hidden="true"
+    class="icon"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <use
+      xlink:href="test-file-stub#arrow-forward"
+    />
+  </svg>
+</button>
+`;
+
+exports[`<Button /> IconButtonRightIconSmall story renders snapshot 1`] = `
+<button
+  class="button button--sm button--icon"
+>
+  Button
+  <svg
+    aria-hidden="true"
+    class="icon"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <use
+      xlink:href="test-file-stub#arrow-forward"
+    />
+  </svg>
 </button>
 `;
 
@@ -44,12 +198,78 @@ exports[`<Button /> LinkNoIcon story renders snapshot 1`] = `
 </button>
 `;
 
+exports[`<Button /> LinkRightIcon story renders snapshot 1`] = `
+<button
+  class="button button--link"
+>
+  Button
+  <svg
+    class="icon"
+    fill="currentColor"
+    role="img"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title
+      id="mock-id"
+    >
+      opens in a new tab
+    </title>
+    <use
+      xlink:href="test-file-stub#open-in-new"
+    />
+  </svg>
+</button>
+`;
+
+exports[`<Button /> Loading story renders snapshot 1`] = `
+<button
+  class="button button--lg button--primary eds-is-loading"
+  disabled=""
+  tabindex="-1"
+>
+  <svg
+    class="icon button__icon-loading"
+    fill="currentColor"
+    role="img"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title
+      id="mock-id"
+    >
+      loading
+    </title>
+    <use
+      xlink:href="test-file-stub#spinner"
+    />
+  </svg>
+  Button
+</button>
+`;
+
 exports[`<Button /> PrimaryDisabled story renders snapshot 1`] = `
 <button
   class="button button--lg button--primary"
   disabled=""
   tabindex="-1"
 >
+  Button
+</button>
+`;
+
+exports[`<Button /> PrimaryLeftIcon story renders snapshot 1`] = `
+<button
+  class="button button--lg button--primary"
+>
+  <svg
+    aria-hidden="true"
+    class="icon"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <use
+      xlink:href="test-file-stub#arrow-back"
+    />
+  </svg>
   Button
 </button>
 `;
@@ -67,6 +287,24 @@ exports[`<Button /> PrimaryNoIcon story renders snapshot 1`] = `
   class="button button--lg button--primary"
 >
   Button
+</button>
+`;
+
+exports[`<Button /> PrimaryRightIcon story renders snapshot 1`] = `
+<button
+  class="button button--lg button--primary"
+>
+  Button
+  <svg
+    aria-hidden="true"
+    class="icon"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <use
+      xlink:href="test-file-stub#arrow-forward"
+    />
+  </svg>
 </button>
 `;
 
@@ -88,6 +326,24 @@ exports[`<Button /> SecondaryDisabled story renders snapshot 1`] = `
 </button>
 `;
 
+exports[`<Button /> SecondaryLeftIcon story renders snapshot 1`] = `
+<button
+  class="button button--lg button--secondary"
+>
+  <svg
+    aria-hidden="true"
+    class="icon"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <use
+      xlink:href="test-file-stub#arrow-back"
+    />
+  </svg>
+  Button
+</button>
+`;
+
 exports[`<Button /> SecondaryMedium story renders snapshot 1`] = `
 <button
   class="button button--md button--secondary"
@@ -101,6 +357,24 @@ exports[`<Button /> SecondaryNoIcon story renders snapshot 1`] = `
   class="button button--lg button--secondary"
 >
   Button
+</button>
+`;
+
+exports[`<Button /> SecondaryRightIcon story renders snapshot 1`] = `
+<button
+  class="button button--lg button--secondary"
+>
+  Button
+  <svg
+    aria-hidden="true"
+    class="icon"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <use
+      xlink:href="test-file-stub#arrow-forward"
+    />
+  </svg>
 </button>
 `;
 
@@ -122,6 +396,24 @@ exports[`<Button /> TeritaryDisabled story renders snapshot 1`] = `
 </button>
 `;
 
+exports[`<Button /> TeritaryLeftIcon story renders snapshot 1`] = `
+<button
+  class="button button--lg button--tertiary"
+>
+  <svg
+    aria-hidden="true"
+    class="icon"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <use
+      xlink:href="test-file-stub#arrow-back"
+    />
+  </svg>
+  Button
+</button>
+`;
+
 exports[`<Button /> TeritaryMedium story renders snapshot 1`] = `
 <button
   class="button button--md button--tertiary"
@@ -135,6 +427,24 @@ exports[`<Button /> TeritaryNoIcon story renders snapshot 1`] = `
   class="button button--lg button--tertiary"
 >
   Button
+</button>
+`;
+
+exports[`<Button /> TeritaryRightIcon story renders snapshot 1`] = `
+<button
+  class="button button--lg button--tertiary"
+>
+  Button
+  <svg
+    aria-hidden="true"
+    class="icon"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <use
+      xlink:href="test-file-stub#arrow-forward"
+    />
+  </svg>
 </button>
 `;
 
