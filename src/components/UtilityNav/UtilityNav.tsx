@@ -35,7 +35,7 @@ export const UtilityNav = ({
   id,
   ariaLabel,
   ...other
-}) => {
+}: Props) => {
   const [idVar, setId] = useState();
 
   useEffect(() => {
