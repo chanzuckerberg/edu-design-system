@@ -34,7 +34,7 @@ export const ModalExample = ({
   ...other
 }: Props) => {
   const [modalOpen, setModalOpen] = useState(false);
-  const modalButton = useRef() as MutableRefObject<HTMLSpanElement>;
+  const modalButton = useRef() as MutableRefObject<HTMLButtonElement>;
 
   function openContinueModal() {
     setModalOpen(true);

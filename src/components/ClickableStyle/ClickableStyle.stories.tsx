@@ -1,31 +1,30 @@
 import { Story, Meta } from '@storybook/react';
 import React from 'react';
 
-import { Button } from './Button';
-import type { ClickableStyleProps } from '../ClickableStyle';
+import { ClickableStyle, ClickableStyleProps } from './ClickableStyle';
 import Icon from '../Icon';
 
 export default {
-  title: 'Molecules/Buttons/Button',
-  component: Button,
+  title: 'Molecules/Buttons/ClickableStyle',
+  component: ClickableStyle,
 } as Meta;
 
 const Template: Story<ClickableStyleProps<React.ElementType>> = (args) => (
-  <Button {...args} />
+  <ClickableStyle {...args} as="button" />
 );
 
 export const Primary = Template.bind({});
-Primary.args = { children: 'Button' };
+Primary.args = { children: 'Clickable Style' };
 
 export const PrimaryDisabled = Template.bind({});
-PrimaryDisabled.args = { children: 'Button', disabled: true };
+PrimaryDisabled.args = { children: 'Clickable Style', disabled: true };
 
 export const PrimaryLeftIcon = Template.bind({});
 PrimaryLeftIcon.args = {
   children: (
     <>
       <Icon purpose="decorative" name="arrow-back" />
-      Button
+      Clickable Style
     </>
   ),
 };
@@ -34,24 +33,24 @@ export const PrimaryRightIcon = Template.bind({});
 PrimaryRightIcon.args = {
   children: (
     <>
-      Button
+      Clickable Style
       <Icon purpose="decorative" name="arrow-forward" />
     </>
   ),
 };
 
 export const PrimaryMedium = Template.bind({});
-PrimaryMedium.args = { children: 'Button', size: 'md' };
+PrimaryMedium.args = { children: 'Clickable Style', size: 'md' };
 
 export const PrimarySmall = Template.bind({});
-PrimarySmall.args = { children: 'Button', size: 'sm' };
+PrimarySmall.args = { children: 'Clickable Style', size: 'sm' };
 
 export const Secondary = Template.bind({});
-Secondary.args = { children: 'Button', variant: 'secondary' };
+Secondary.args = { children: 'Clickable Style', variant: 'secondary' };
 
 export const SecondaryDisabled = Template.bind({});
 SecondaryDisabled.args = {
-  children: 'Button',
+  children: 'Clickable Style',
   variant: 'secondary',
   disabled: true,
 };
@@ -61,7 +60,7 @@ SecondaryLeftIcon.args = {
   children: (
     <>
       <Icon purpose="decorative" name="arrow-back" />
-      Button
+      Clickable Style
     </>
   ),
   variant: 'secondary',
@@ -71,7 +70,7 @@ export const SecondaryRightIcon = Template.bind({});
 SecondaryRightIcon.args = {
   children: (
     <>
-      Button
+      Clickable Style
       <Icon purpose="decorative" name="arrow-forward" />
     </>
   ),
@@ -79,106 +78,122 @@ SecondaryRightIcon.args = {
 };
 
 export const SecondaryMedium = Template.bind({});
-SecondaryMedium.args = { children: 'Button', variant: 'secondary', size: 'md' };
+SecondaryMedium.args = {
+  children: 'Clickable Style',
+  variant: 'secondary',
+  size: 'md',
+};
 
 export const SecondarySmall = Template.bind({});
-SecondarySmall.args = { children: 'Button', variant: 'secondary', size: 'sm' };
+SecondarySmall.args = {
+  children: 'Clickable Style',
+  variant: 'secondary',
+  size: 'sm',
+};
 
-export const Tertiary = Template.bind({});
-Tertiary.args = { children: 'Button', variant: 'tertiary' };
+export const Teritary = Template.bind({});
+Teritary.args = { children: 'Clickable Style', variant: 'tertiary' };
 
-export const TertiaryDisabled = Template.bind({});
-TertiaryDisabled.args = {
-  children: 'Button',
+export const TeritaryDisabled = Template.bind({});
+TeritaryDisabled.args = {
+  children: 'Clickable Style',
   variant: 'tertiary',
   disabled: true,
 };
 
-export const TertiaryLeftIcon = Template.bind({});
-TertiaryLeftIcon.args = {
+export const TeritaryLeftIcon = Template.bind({});
+TeritaryLeftIcon.args = {
   children: (
     <>
       <Icon purpose="decorative" name="arrow-back" />
-      Button
+      Clickable Style
     </>
   ),
   variant: 'tertiary',
 };
 
-export const TertiaryRightIcon = Template.bind({});
-TertiaryRightIcon.args = {
+export const TeritaryRightIcon = Template.bind({});
+TeritaryRightIcon.args = {
   children: (
     <>
-      Button
+      Clickable Style
       <Icon purpose="decorative" name="arrow-forward" />
     </>
   ),
   variant: 'tertiary',
 };
 
-export const TertiaryMedium = Template.bind({});
-TertiaryMedium.args = { children: 'Button', variant: 'tertiary', size: 'md' };
+export const TeritaryMedium = Template.bind({});
+TeritaryMedium.args = {
+  children: 'Clickable Style',
+  variant: 'tertiary',
+  size: 'md',
+};
 
-export const TertiarySmall = Template.bind({});
-TertiarySmall.args = { children: 'Button', variant: 'tertiary', size: 'sm' };
+export const TeritarySmall = Template.bind({});
+TeritarySmall.args = {
+  children: 'Clickable Style',
+  variant: 'tertiary',
+  size: 'sm',
+};
 
-export const IconButtonLeftIcon = Template.bind({});
-IconButtonLeftIcon.args = {
+export const IconClickableStyleLeftIcon = Template.bind({});
+IconClickableStyleLeftIcon.args = {
   children: (
     <>
       <Icon purpose="decorative" name="arrow-back" />
-      Button
+      Clickable Style
     </>
   ),
   variant: 'icon',
 };
 
-export const IconButtonDisabled = Template.bind({});
-IconButtonDisabled.args = {
+export const IconClickableStyleDisabled = Template.bind({});
+IconClickableStyleDisabled.args = {
   children: (
     <>
       <Icon purpose="decorative" name="arrow-back" />
-      Button
+      Clickable Style
     </>
   ),
   variant: 'icon',
   disabled: true,
 };
 
-export const IconButtonRightIcon = Template.bind({});
-IconButtonRightIcon.args = {
+export const IconClickableStyleRightIcon = Template.bind({});
+IconClickableStyleRightIcon.args = {
   children: (
     <>
-      Button
+      Clickable Style
       <Icon purpose="decorative" name="arrow-forward" />
     </>
   ),
   variant: 'icon',
 };
 
-export const IconButtonIconOnly = Template.bind({});
-IconButtonIconOnly.args = {
+export const IconClickableStyleIconOnly = Template.bind({});
+IconClickableStyleIconOnly.args = {
   children: <Icon purpose="informative" title="go back" name="arrow-back" />,
   variant: 'icon',
 };
 
-export const IconButtonLeftIconSmall = Template.bind({});
-IconButtonLeftIconSmall.args = {
+export const IconClickableStyleLeftIconSmall = Template.bind({});
+IconClickableStyleLeftIconSmall.args = {
   children: (
     <>
       <Icon purpose="decorative" name="arrow-back" />
-      Button
+      Clickable Style
     </>
   ),
   variant: 'icon',
   size: 'sm',
 };
 
-export const IconButtonRightIconSmall = Template.bind({});
-IconButtonRightIconSmall.args = {
+export const IconClickableStyleRightIconSmall = Template.bind({});
+IconClickableStyleRightIconSmall.args = {
   children: (
     <>
-      Button
+      Clickable Style
       <Icon purpose="decorative" name="arrow-forward" />
     </>
   ),
@@ -186,24 +201,28 @@ IconButtonRightIconSmall.args = {
   size: 'sm',
 };
 
-export const IconButtonIconOnlySmall = Template.bind({});
-IconButtonIconOnlySmall.args = {
+export const IconClickableStyleIconOnlySmall = Template.bind({});
+IconClickableStyleIconOnlySmall.args = {
   children: <Icon purpose="informative" title="go back" name="arrow-back" />,
   variant: 'icon',
   size: 'sm',
 };
 
 export const Link = Template.bind({});
-Link.args = { children: 'Button', variant: 'link' };
+Link.args = { children: 'Clickable Style', variant: 'link' };
 
 export const LinkDisabled = Template.bind({});
-LinkDisabled.args = { children: 'Button', variant: 'link', disabled: true };
+LinkDisabled.args = {
+  children: 'Clickable Style',
+  variant: 'link',
+  disabled: true,
+};
 
 export const LinkRightIcon = Template.bind({});
 LinkRightIcon.args = {
   children: (
     <>
-      Button
+      Clickable Style
       <Icon
         purpose="informative"
         title="opens in a new tab"
@@ -215,11 +234,14 @@ LinkRightIcon.args = {
 };
 
 export const Destructive = Template.bind({});
-Destructive.args = { children: 'Button', variant: 'destructive' };
+Destructive.args = {
+  children: 'Clickable Style',
+  variant: 'destructive',
+};
 
 export const DestructiveDisabled = Template.bind({});
 DestructiveDisabled.args = {
-  children: 'Button',
+  children: 'Clickable Style',
   variant: 'destructive',
   disabled: true,
 };
@@ -229,18 +251,18 @@ DestructiveLeftIcon.args = {
   children: (
     <>
       <Icon purpose="decorative" name="arrow-back" />
-      Button
+      Clickable Style
     </>
   ),
   variant: 'destructive',
 };
 
 export const FullWidth = Template.bind({});
-FullWidth.args = { children: 'Button', fullWidth: true };
+FullWidth.args = { children: 'Clickable Style', fullWidth: true };
 
 export const Loading = Template.bind({});
 Loading.args = {
-  children: 'Button',
+  children: 'Clickable Style',
   loading: true,
   disabled: true,
 };

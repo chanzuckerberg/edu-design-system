@@ -39,7 +39,7 @@ export const PopoverExample: React.FC<Props> = ({
   ...other
 }) => {
   const [popoverOpen, setPopoverOpen] = useState(false);
-  const popoverButton = useRef() as MutableRefObject<HTMLSpanElement>;
+  const popoverButton = useRef() as MutableRefObject<HTMLButtonElement>;
 
   function openPopover() {
     setPopoverOpen(!popoverOpen);

@@ -24,7 +24,7 @@ export interface Props {
  */
 export const DrawerExample = ({ className, ...other }: Props) => {
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const drawerButton = useRef() as MutableRefObject<HTMLSpanElement>;
+  const drawerButton = useRef() as MutableRefObject<HTMLButtonElement>;
 
   function openDrawerExample() {
     setDrawerOpen(true);
