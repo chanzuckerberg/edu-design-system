@@ -56,7 +56,6 @@
   gap: var(--eds-size-2-and-half);
   white-space: nowrap;
   @mixin TextLinkInverted;
-  text-decoration: none;
   appearance: none;
   border: none;
   background: none;
