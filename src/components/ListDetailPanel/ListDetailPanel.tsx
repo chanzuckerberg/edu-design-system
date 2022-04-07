@@ -44,11 +44,11 @@ export const ListDetailPanel = ({
   const componentClassName = clsx(styles['list-detail__panel'], className, {});
   return (
     <div
-      role="tabpanel"
-      id={id}
       aria-hidden={false}
       aria-labelledby={ariaLabelledBy}
       className={componentClassName}
+      id={id}
+      role="tabpanel"
       {...other}
     >
       {children}

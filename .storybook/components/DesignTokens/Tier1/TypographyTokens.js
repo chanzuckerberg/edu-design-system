@@ -13,12 +13,12 @@ export class Tier1TypographyTokens extends Component {
               return (
                 <GridItem key={'font-family-' + index}>
                   <TokenSpecimen
-                    name={listItem.name}
-                    value={listItem.value}
-                    variant="typography-title"
                     inlineStyles={{
                       fontFamily: `var(${listItem.name})`,
                     }}
+                    name={listItem.name}
+                    value={listItem.value}
+                    variant="typography-title"
                   />
                 </GridItem>
               );
@@ -32,12 +32,12 @@ export class Tier1TypographyTokens extends Component {
               return (
                 <GridItem key={'font-size-' + index}>
                   <TokenSpecimen
-                    name={listItem.name}
-                    value={listItem.value}
-                    variant="typography-title"
                     inlineStyles={{
                       fontSize: `var(${listItem.name})`,
                     }}
+                    name={listItem.name}
+                    value={listItem.value}
+                    variant="typography-title"
                   />
                 </GridItem>
               );
@@ -51,12 +51,12 @@ export class Tier1TypographyTokens extends Component {
               return (
                 <GridItem key={'font-weight-' + index}>
                   <TokenSpecimen
-                    name={listItem.name}
-                    value={listItem.value}
-                    variant="typography-title"
                     inlineStyles={{
                       fontWeight: `var(${listItem.name})`,
                     }}
+                    name={listItem.name}
+                    value={listItem.value}
+                    variant="typography-title"
                   />
                 </GridItem>
               );
@@ -70,12 +70,12 @@ export class Tier1TypographyTokens extends Component {
               return (
                 <GridItem key={'line-height-' + index}>
                   <TokenSpecimen
-                    name={listItem.name}
-                    value={listItem.value}
-                    variant="typography-body"
                     inlineStyles={{
                       lineHeight: `var(${listItem.name})`,
                     }}
+                    name={listItem.name}
+                    value={listItem.value}
+                    variant="typography-body"
                   />
                 </GridItem>
               );

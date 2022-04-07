@@ -14,10 +14,10 @@ import { PageShell } from '../../recipes/PageShell/PageShell';
 export const FeedbackOverview: React.FC = () => (
   <PageShell>
     <Breadcrumbs>
-      <BreadcrumbsItem text="My Courses" href="#" />
+      <BreadcrumbsItem href="#" text="My Courses" />
       <BreadcrumbsItem
-        text="Disciplanary Science 7 (Life Science Focus)"
         href="#"
+        text="Disciplanary Science 7 (Life Science Focus)"
       />
     </Breadcrumbs>
     <PageHeader title="My Body Book" />

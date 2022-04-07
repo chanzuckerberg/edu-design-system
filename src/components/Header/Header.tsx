@@ -138,9 +138,9 @@ export const Header = ({
     return (
       <div className={styles['header-sticky-container']} ref={stickyRef}>
         <header
-          role="banner"
           className={componentClassName}
           ref={ref}
+          role="banner"
           {...other}
         >
           {children}
@@ -149,7 +149,7 @@ export const Header = ({
     );
   } else {
     return (
-      <header role="banner" className={componentClassName} ref={ref} {...other}>
+      <header className={componentClassName} ref={ref} role="banner" {...other}>
         {children}
       </header>
     );

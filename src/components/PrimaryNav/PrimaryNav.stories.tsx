@@ -12,7 +12,7 @@ export default {
 const Template: Story<Props> = (args) => (
   <PrimaryNav {...args}>
     <PrimaryNavItem href="#" text="Nav Item" />
-    <PrimaryNavItem href="#" text="Nav Item" isActive={true} />
+    <PrimaryNavItem href="#" isActive={true} text="Nav Item" />
     <PrimaryNavItem href="#" text="Nav Item" />
   </PrimaryNav>
 );

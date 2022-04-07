@@ -26,5 +26,5 @@ export const LogoImage = ({
   ...other
 }: Props) => {
   const componentClassName = clsx('logo__img', className, {});
-  return <img className={componentClassName} src={src} alt={alt} {...other} />;
+  return <img alt={alt} className={componentClassName} src={src} {...other} />;
 };

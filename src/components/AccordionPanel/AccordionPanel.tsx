@@ -113,10 +113,10 @@ export const AccordionPanel = ({
     <div className={componentClassName} {...other} ref={panelRef}>
       <dt className={styles['accordion__panel-header']}>
         <button
-          className={styles['accordion__panel-button']}
-          aria-expanded={isActive ? true : false}
-          id={ariaLabelledByVar}
           aria-controls={ariaControlsVar}
+          aria-expanded={isActive ? true : false}
+          className={styles['accordion__panel-button']}
+          id={ariaLabelledByVar}
           onClick={togglePanel}
         >
           {header}
@@ -130,8 +130,8 @@ export const AccordionPanel = ({
         </button>
       </dt>
       <dd
-        className={styles['accordion__panel-body']}
         aria-labelledby={ariaLabelledByVar}
+        className={styles['accordion__panel-body']}
         id={ariaControlsVar}
         style={{ height: heightVar }}
       >

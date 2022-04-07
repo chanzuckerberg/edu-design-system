@@ -156,45 +156,45 @@ export const Counter = ({
     <div className={componentClassName} {...other}>
       <Label
         className={styles['counter__label']}
-        htmlFor={idVar}
-        text={label}
         hideLabel={hideLabel}
+        htmlFor={idVar}
         labelAfter={labelAfter}
-        required={required}
         optionalLabel={optionalLabel}
+        required={required}
         requiredLabel={requiredLabel}
+        text={label}
       />
 
       <div className={styles['counter__body']}>
         <Button
           className={styles['counter__btn']}
-          variant="icon"
           disabled={disabled || (min !== undefined && count === min)}
           onClick={(e) => onDecrease(e)}
+          variant="icon"
         >
           <Icon name="remove" purpose="informative" title={minusButtonText} />
         </Button>
         <TextInput
-          className={styles['counter__input']}
-          type="text"
-          pattern="[0-9]*"
-          min={min}
-          max={max}
-          disabled={disabled}
-          isError={isError}
-          readOnly={readOnly}
-          aria-live="assertive"
-          id={idVar}
-          value={count}
-          onChange={(e) => onChange(e)}
           aria-labelledby={ariaLabelledByVar}
+          aria-live="assertive"
           ariaDescribedBy={ariaDescribedByVar}
+          className={styles['counter__input']}
+          disabled={disabled}
+          id={idVar}
+          isError={isError}
+          max={max}
+          min={min}
+          onChange={(e) => onChange(e)}
+          pattern="[0-9]*"
+          readOnly={readOnly}
+          type="text"
+          value={count}
         />
         <Button
           className={styles['counter__btn']}
-          variant="icon"
           disabled={disabled || (max !== undefined && count === max)}
           onClick={(e) => onIncrease(e)}
+          variant="icon"
         >
           <Icon name="add" purpose="informative" title={plusButtonText} />
         </Button>
@@ -208,7 +208,7 @@ export const Counter = ({
           {fieldNote}
         </FieldNote>
       )}
-      <div id={ariaLabelledByVar} className={styles['u-is-vishidden']}>
+      <div className={styles['u-is-vishidden']} id={ariaLabelledByVar}>
         {count + ' ' + label}
       </div>
     </div>

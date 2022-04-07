@@ -42,8 +42,8 @@ export const DrawerExample = ({ className, ...other }: Props) => {
   const componentClassName = clsx('tooltip-drawer', className, {});
   return (
     <div
-      style={{ padding: '1rem', minHeight: '500px' }}
       className={componentClassName}
+      style={{ padding: '1rem', minHeight: '500px' }}
       {...other}
     >
       <Button onClick={openDrawerExample} ref={drawerButton}>
@@ -51,11 +51,11 @@ export const DrawerExample = ({ className, ...other }: Props) => {
       </Button>
 
       <Drawer
+        ariaDescribedBy="drawer-description-1"
+        ariaLabelledBy="drawer-heading-1"
         dismissible={true}
         isActive={drawerOpen}
         onClose={closeDrawerExample}
-        ariaLabelledBy="drawer-heading-1"
-        ariaDescribedBy="drawer-description-1"
       >
         <DrawerHeader>
           <Heading id="drawer-heading-1" size="h2">

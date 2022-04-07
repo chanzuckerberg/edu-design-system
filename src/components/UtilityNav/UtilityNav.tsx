@@ -46,9 +46,9 @@ export const UtilityNav = ({
 
   return (
     <nav
-      id={idVar}
       aria-label={ariaLabel}
       className={componentClassName}
+      id={idVar}
       {...other}
     >
       <ul className={styles['utility-nav__list']}>{children}</ul>

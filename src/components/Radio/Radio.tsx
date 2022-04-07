@@ -74,17 +74,17 @@ export const Radio = ({
   return (
     <div className={componentClassName} {...other}>
       <input
-        id={id}
-        type="radio"
-        name={name}
-        value={value}
-        tabIndex={tabIndex}
-        className={styles['radio__input']}
-        checked={checked}
-        disabled={disabled}
-        readOnly={readOnly}
-        onChange={onChange}
         aria-describedby={ariaDescribedBy}
+        checked={checked}
+        className={styles['radio__input']}
+        disabled={disabled}
+        id={id}
+        name={name}
+        onChange={onChange}
+        readOnly={readOnly}
+        tabIndex={tabIndex}
+        type="radio"
+        value={value}
       />
       <span className={styles['radio__custom-radio']} />
     </div>

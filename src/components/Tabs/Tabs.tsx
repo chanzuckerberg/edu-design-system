@@ -250,21 +250,21 @@ export const Tabs = ({
                 role="presentation"
               >
                 <a
+                  aria-controls={idVar[i]}
+                  aria-label={tab.props.ariaLabel}
+                  aria-selected={isActive}
                   className={styles['tabs__link']}
-                  role="tab"
+                  href={`#${idVar[i]}`}
+                  id={ariaLabelledByVar[i]}
+                  key={'tab-' + i}
                   onClick={(e) => {
                     e.preventDefault();
                     onOpen(i);
                   }}
-                  key={'tab-' + i}
-                  id={ariaLabelledByVar[i]}
                   onKeyDown={onKeyDown}
-                  href={`#${idVar[i]}`}
-                  aria-selected={isActive}
-                  tabIndex={isActive ? 0 : -1}
-                  aria-controls={idVar[i]}
                   ref={tabRefs[i]}
-                  aria-label={tab.props.ariaLabel}
+                  role="tab"
+                  tabIndex={isActive ? 0 : -1}
                 >
                   {tab.props.title}
                 </a>

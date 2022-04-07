@@ -64,20 +64,20 @@ export const InlineForm = ({
   const componentClassName = clsx(styles['inline-form'], className, {});
   return (
     <form
+      action={action}
       className={componentClassName}
       method={method}
-      action={action}
       {...other}
     >
       <Label
+        className="inline-form__label u-is-vishidden"
         htmlFor={idVar}
         labelAfter={labelAfter}
-        className="inline-form__label u-is-vishidden"
         text={label}
       />
       <TextInput
-        id={idVar}
         className={styles['inline-form__input']}
+        id={idVar}
         placeholder={placeholder}
       />
 

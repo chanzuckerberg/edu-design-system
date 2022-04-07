@@ -57,12 +57,12 @@ export const Fieldset = ({
     <fieldset className={componentClassName} {...other}>
       <Legend
         className={styles['fieldset__legend']}
-        text={legend}
-        required={required}
-        optionalLabel={optionalLabel}
-        requiredLabel={requiredLabel}
         hideLegend={hideLegend}
         legendAfter={legendAfter}
+        optionalLabel={optionalLabel}
+        required={required}
+        requiredLabel={requiredLabel}
+        text={legend}
       />
       {children}
     </fieldset>

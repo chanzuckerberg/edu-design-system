@@ -115,15 +115,15 @@ export const CheckboxFieldItem = ({
   return (
     <li className={componentClassName}>
       <Checkbox
+        checked={checkboxChecked}
+        className={styles['checkbox-field__item-control']}
+        disabled={disabled}
         id={idVar}
         label={text}
         name={name}
-        value={value}
-        className={styles['checkbox-field__item-control']}
-        checked={checkboxChecked}
         onChange={onChange}
-        disabled={disabled}
         readOnly={readOnly}
+        value={value}
       />
     </li>
   );

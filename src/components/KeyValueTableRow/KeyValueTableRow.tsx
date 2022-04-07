@@ -31,7 +31,7 @@ export const KeyValueTableRow = ({
   const componentClassName = clsx('key-value-table__row', className, {});
   return (
     <tr className={componentClassName} {...other}>
-      <th scope="row" className={styles['key-value-table__key']}>
+      <th className={styles['key-value-table__key']} scope="row">
         {rowKey}
       </th>
       <td className={styles['key-value-table__value']}>{rowValue}</td>

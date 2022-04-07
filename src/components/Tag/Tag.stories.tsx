@@ -31,7 +31,7 @@ export const ColorVariants: StoryObj<Args> = {
   render: (args) => (
     <div className={styles.tagList}>
       {VARIANTS.map((variant) => {
-        return <Tag key={variant} {...args} variant={variant} text={variant} />;
+        return <Tag key={variant} {...args} text={variant} variant={variant} />;
       })}
     </div>
   ),
@@ -45,9 +45,9 @@ export const OutlineVariants: StoryObj<Args> = {
           <Tag
             key={variant}
             {...args}
-            variant={variant}
-            text={variant}
             hasOutline={true}
+            text={variant}
+            variant={variant}
           />
         );
       })}
@@ -58,7 +58,7 @@ export const OutlineVariants: StoryObj<Args> = {
 export const WithIcon: StoryObj<Args> = {
   ...Default,
   args: {
-    icon: <Icon purpose="decorative" name="favorite" />,
+    icon: <Icon name="favorite" purpose="decorative" />,
   },
   render: (args) => (
     <div className={styles.tagList}>
@@ -67,9 +67,9 @@ export const WithIcon: StoryObj<Args> = {
           <Tag
             key={variant}
             {...args}
-            variant={variant}
-            text={variant}
             hasOutline={true}
+            text={variant}
+            variant={variant}
           />
         );
       })}
@@ -81,13 +81,13 @@ export const WithLongTextAndIcon: StoryObj<Args> = {
   ...Default,
   args: {
     text: 'This tag has a really long text message',
-    icon: <Icon purpose="decorative" name="star" />,
+    icon: <Icon name="star" purpose="decorative" />,
   },
   render: (args) => (
     <div className={styles.tagList}>
       {VARIANTS.map((variant) => {
         return (
-          <Tag key={variant} {...args} variant={variant} hasOutline={true} />
+          <Tag key={variant} {...args} hasOutline={true} variant={variant} />
         );
       })}
     </div>
