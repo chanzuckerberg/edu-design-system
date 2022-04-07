@@ -58,7 +58,6 @@
   .list-detail__title {
     @mixin eds-theme-typography-headline-md;
     
-    /* stylelint-disable-next-line max-nesting-depth */
     @media all and (min-width: $eds-bp-md) {
       display: none;
     }
