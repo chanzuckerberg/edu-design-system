@@ -240,10 +240,7 @@ export const ListDetail = ({
           <BreadcrumbsItem text="My Courses" />
           <BreadcrumbsItem text="Disciplinary Sciences 7" />
         </Breadcrumbs>
-        <Text as="p" className={styles['list-detail__kicker']}>
-          Checkpoint 1
-        </Text>
-        <Heading as="h3" className={styles['list-detail__title']}>
+        <Heading as="h1" className={clsx(styles['list-detail__title'])}>
           Feudal Honor Codes and Values
         </Heading>
         <TagName
@@ -344,7 +341,10 @@ export const ListDetail = ({
           >
             <Icon purpose="decorative" name="chevron-left"></Icon>Back
           </Button>
-          <Heading as="h1">
+          <Text as="p" className={styles['list-detail__kicker']}>
+            Checkpoint {activeIndexState + 1}
+          </Text>
+          <Heading as="h1" size={1} className={styles['list-detail__title']}>
             {childrenWithProps[activeIndexState].props.title}
           </Heading>
           {childrenWithProps[activeIndexState]}
