@@ -434,7 +434,8 @@
           }
         },
         "focus-ring": {
-          "@": "#8984E8"
+          "@": "#8984E8",
+          "inverted": "#ffffff"
         },
         "form": {
           "border": {

@@ -434,7 +434,8 @@
           }
         },
         "focus-ring": {
-          "@": "var(--eds-theme-color-focus-ring)"
+          "@": "var(--eds-theme-color-focus-ring)",
+          "inverted": "var(--eds-theme-color-focus-ring-inverted)"
         },
         "form": {
           "border": {
