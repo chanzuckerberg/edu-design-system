@@ -98,7 +98,7 @@
             },
             "text": {
               "@": {
-                "value": "{eds.color.brand.grape.600}"
+                "value": "{eds.color.neutral.600}"
               },
               "hover": {
                 "value": "{eds.color.neutral.white}"
