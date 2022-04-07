@@ -47,7 +47,7 @@ export const GlobalHeader = ({ className, ...other }: Props) => {
     updateScreenSize();
     window.addEventListener('resize', updateScreenSize);
     return () => {
-      window.addEventListener('resize', updateScreenSize, false);
+      window.removeEventListener('resize', updateScreenSize);
     };
   }, []);
 
