@@ -36,15 +36,7 @@ export interface Props {
  */
 export const UtilityNavItem = React.forwardRef<HTMLLIElement, Props>(
   function UtilityNavItem(
-    {
-      ariaLabel,
-      className,
-      children,
-      text,
-      href,
-      itemBefore,
-      ...other
-    },
+    { ariaLabel, className, children, text, href, itemBefore, ...other },
     ref,
   ) {
     const [isActive, setIsActive] = useState(false);

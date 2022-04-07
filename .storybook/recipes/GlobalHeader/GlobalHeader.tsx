@@ -105,10 +105,7 @@ export const GlobalHeader = ({ className, ...other }: Props) => {
         </PrimaryNav>
       </NavContainer>
       <UtilityNav className={styles['global-header__utility-nav']}>
-        <UtilityNavItem
-          itemBefore={<Avatar />}
-          ariaLabel="Notifications"
-        >
+        <UtilityNavItem itemBefore={<Avatar />} ariaLabel="Notifications">
           <Popover
             className={styles['global-header__popover']}
             position={isLarge === false ? 'bottom-left' : undefined}
