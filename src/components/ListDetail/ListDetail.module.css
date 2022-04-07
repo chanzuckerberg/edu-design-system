@@ -35,6 +35,10 @@
   }
 }
 
+.list-detail__unit-title {
+  margin-bottom: var(--eds-size-4);
+}
+
 .list-detail__breadcrumbs {
   @media all and (min-width: $eds-bp-md) {
     display: none;
@@ -49,17 +53,16 @@
   @media all and (min-width: $eds-bp-md) {
     display: none;
   }
+}
 
   .list-detail__title {
     @mixin eds-theme-typography-headline-md;
-    border: 1px solid red;
     
     /* stylelint-disable-next-line max-nesting-depth */
     @media all and (min-width: $eds-bp-md) {
       display: none;
     }
   }
-}
 
 /**
  * List detail body

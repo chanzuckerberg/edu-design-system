@@ -240,7 +240,7 @@ export const ListDetail = ({
           <BreadcrumbsItem text="My Courses" />
           <BreadcrumbsItem text="Disciplinary Sciences 7" />
         </Breadcrumbs>
-        <Heading as="h1" className={clsx(styles['list-detail__title'])}>
+        <Heading as="h1" className={clsx(styles['list-detail__unit-title'])}>
           Feudal Honor Codes and Values
         </Heading>
         <TagName
