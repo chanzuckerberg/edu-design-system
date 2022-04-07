@@ -58,7 +58,7 @@ export const DrawerExample = ({ className, ...other }: Props) => {
         ariaDescribedBy="drawer-description-1"
       >
         <DrawerHeader>
-          <Heading id="drawer-heading-1" as="h2">
+          <Heading id="drawer-heading-1" size="h2">
             Drawer title
           </Heading>
         </DrawerHeader>
