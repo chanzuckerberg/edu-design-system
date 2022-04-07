@@ -15,8 +15,6 @@ import {
   R_ARROW_KEYCODE,
   D_ARROW_KEYCODE,
 } from '../../util/keycodes';
-import Breadcrumbs from '../Breadcrumbs';
-import BreadcrumbsItem from '../BreadcrumbsItem';
 import Button from '../Button';
 import Heading from '../Heading';
 import Icon from '../Icon';
@@ -310,7 +308,11 @@ export const ListDetail = ({
                   <div className={clsx(styles['list-detail__link-title'])}>
                     {tab.props.title}
                   </div>
-                  <Icon className={styles['list-detail__link-right']} purpose="decorative" name="arrow-forward" />
+                  <Icon
+                    className={styles['list-detail__link-right']}
+                    purpose="decorative"
+                    name="arrow-forward"
+                  />
                 </a>
               </li>
             );
