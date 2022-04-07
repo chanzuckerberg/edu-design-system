@@ -1,20 +1,14 @@
 import clsx from 'clsx';
 import React, { ReactNode, useEffect, useState, useRef } from 'react';
-import {
-  Popover,
-  PopoverBody,
-  PopoverHeader,
-  Button,
-  Heading,
-  NotificationList,
-  NotificationListItem,
-} from '../..';
 import { useMergedRefs } from '../../hooks';
-import { Icon } from '../Icon/Icon';
-import utilityStyles from '../Utilities/Visibility.module.css';
 import styles from '../UtilityNav/UtilityNav.module.css';
 
 export interface Props {
+  /**
+   * Aria label
+   * 1) Use aria label for icon-only utility nav item
+   */
+  ariaLabel?: string;
   /**
    * Child node(s) that can be nested inside component as a menu
    */
@@ -27,10 +21,6 @@ export interface Props {
    * Link to URL. If href is present, the button will be rendered as an <a> element.
    */
   href?: string;
-  /**
-   * Prop to visually hide text so that screen readers still read this out to the users
-   */
-  hideText?: boolean;
   /**
    * Slot before the item name to put items like avatars
    */
@@ -46,7 +36,15 @@ export interface Props {
  */
 export const UtilityNavItem = React.forwardRef<HTMLLIElement, Props>(
   function UtilityNavItem(
-    { className, children, text, href, itemBefore, hideText, ...other },
+    {
+      ariaLabel,
+      className,
+      children,
+      text,
+      href,
+      itemBefore,
+      ...other
+    },
     ref,
   ) {
     const [isActive, setIsActive] = useState(false);
@@ -98,6 +96,7 @@ export const UtilityNavItem = React.forwardRef<HTMLLIElement, Props>(
           className={styles['utility-nav__link']}
           href={href}
           onClick={togglePopover}
+          aria-label={!text && ariaLabel}
           aria-expanded={!href && children ? isActive : undefined}
         >
           {itemBefore && (
@@ -105,15 +104,7 @@ export const UtilityNavItem = React.forwardRef<HTMLLIElement, Props>(
               {itemBefore}
             </div>
           )}
-          <span
-            className={
-              hideText
-                ? `${styles['utility-nav__text']} ${utilityStyles['u-is-vishidden']}`
-                : styles['utility-nav__text']
-            }
-          >
-            {text}
-          </span>
+          {text && <span className={styles['utility-nav__text']}>{text}</span>}
         </TagName>
         {children && (
           <div className={styles['utility-nav__item-panel']} hidden={!isActive}>

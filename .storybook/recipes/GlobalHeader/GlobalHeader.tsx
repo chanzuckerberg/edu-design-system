@@ -1,7 +1,6 @@
 import clsx from 'clsx';
 import React, { useState, useEffect } from 'react';
 import styles from './GlobalHeader.module.css';
-import breakpoint from '../../../src/design-tokens/tier-1-definitions/breakpoints.js';
 import {
   Header,
   Logo,
@@ -20,6 +19,7 @@ import {
   NotificationList,
   NotificationListItem,
 } from '../../../src';
+import breakpoint from '../../../src/design-tokens/tier-1-definitions/breakpoints.js';
 
 export interface Props {
   /**
@@ -52,8 +52,7 @@ export const GlobalHeader = ({ className, ...other }: Props) => {
     return () => {
       window.removeEventListener('resize', updateScreenSize);
     };
-  }, []);
-
+  });
 
   const updateScreenSize = () => {
     if (window.innerWidth >= popoverBreakpoint) {
@@ -107,14 +106,12 @@ export const GlobalHeader = ({ className, ...other }: Props) => {
       </NavContainer>
       <UtilityNav className={styles['global-header__utility-nav']}>
         <UtilityNavItem
-          hideText={true}
           itemBefore={<Avatar />}
-          text="Notifications"
+          ariaLabel="Notifications"
         >
           <Popover
             className={styles['global-header__popover']}
             position={isLarge === false ? 'bottom-left' : undefined}
-            dismissible={true}
             isActive={true}
             ariaLabelledBy="popover-heading-1"
             ariaDescribedBy="popover-description-1"
