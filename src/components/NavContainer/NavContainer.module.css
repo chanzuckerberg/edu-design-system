@@ -17,7 +17,7 @@
   opacity: 0; /* 2 */
   height: 0;
   width: 100%; /* 1 */
-  padding: var(--eds-size-4);
+  padding: var(--eds-size-1);
   z-index: var(--eds-z-index-bottom); /* 2 */
   transition: all var(--eds-anim-move-quick) var(--eds-anim-ease);
 

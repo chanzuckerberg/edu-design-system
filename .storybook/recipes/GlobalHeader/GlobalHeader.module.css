@@ -22,16 +22,12 @@
 /**
  * Global header logo
  * 1) The SVG logo
- * 2) Nudges the logo to the left of the containing box
- *    to achieve the desired alignment.
  */
 .global-header__logo {
   display: none;
 
   @media all and (min-width: $eds-bp-xl) {
     display: block;
-    position: relative;
-    left: -0.5rem; /* 2 */
     margin-bottom: var(--eds-size-5);
   }
 }
@@ -43,14 +39,7 @@
  *    can be exposed
  */
 .global-header__menu-button.global-header__menu-button {
-  transition: background var(--eds-anim-fade-quick) var(--eds-anim-ease);
-
-  &:hover,
-  &:focus {
-    background: var(
-      --eds-color-brand-grape-800
-    ); /*TODO: replace with tier 2 variable once established */
-  }
+  padding: 0;
 
   @media all and (min-width: $eds-bp-xl) {
     display: none; /* 1 */
@@ -65,7 +54,6 @@
   margin-left: auto;
 
   @media all and (min-width: $eds-bp-xl) {
-    left: -0.5rem;
     margin-left: 0;
     margin-top: auto;
   }
