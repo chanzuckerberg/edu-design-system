@@ -141,8 +141,10 @@
  */
 .list-detail__list {
   @mixin reset;
-  list-style: none;
   @mixin eds-theme-typography-body-text;
+  list-style: none;
+  border-top: var(--eds-theme-color-border-neutral-subtle) var(--eds-border-width-sm) solid;
+  padding-top: var(--eds-size-3);
 
   @media all and (min-width: $eds-bp-md) {
     position: sticky;
