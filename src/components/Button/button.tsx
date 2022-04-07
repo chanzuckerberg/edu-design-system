@@ -29,10 +29,6 @@ export interface Props {
    */
   href?: string;
   /**
-   * Button rendered on a dark backgorund
-   */
-  inverted?: boolean;
-  /**
    * Loading state passed down from higher level used to trigger loader and text change
    */
   loading?: boolean;
@@ -78,7 +74,6 @@ export const Button = React.forwardRef(
       forwardRef,
       fullWidth,
       href,
-      inverted,
       loading,
       onClick,
       size = 'lg',
@@ -107,7 +102,6 @@ export const Button = React.forwardRef(
       variant === 'link' && styles['button--link'],
       variant === 'destructive' && styles['button--destructive'],
       // Other options
-      inverted === true && styles['button--inverted'],
       fullWidth && styles['button--full-width'],
       loading && styles['eds-is-loading'],
     );
