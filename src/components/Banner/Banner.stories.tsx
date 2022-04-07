@@ -15,7 +15,7 @@ export default {
 const Template: Story<Props> = (args) => (
   <Banner {...args}>
     <LayoutLinelengthContainer>
-      <Heading as="h2" className="u-margin-bottom-sm" size={4}>
+      <Heading as="h2" size="h4" className="u-margin-bottom-sm">
         This is a title
       </Heading>
     </LayoutLinelengthContainer>
@@ -32,7 +32,7 @@ const Template: Story<Props> = (args) => (
 const TitleOnlyTemplate: Story<Props> = (args) => (
   <Banner {...args}>
     <LayoutLinelengthContainer>
-      <Heading as="h2" size={4}>
+      <Heading as="h2" size="h4">
         This is a title
       </Heading>
     </LayoutLinelengthContainer>

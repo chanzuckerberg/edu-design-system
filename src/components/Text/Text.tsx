@@ -75,3 +75,5 @@ export const Text = forwardRef(
   },
 );
 Text.displayName = 'Text'; // Satisfy eslint
+
+export default Text;

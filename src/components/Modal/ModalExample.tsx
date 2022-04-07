@@ -69,7 +69,7 @@ export const ModalExample = ({
         size={size}
       >
         <ModalHeader>
-          <Heading id="modal-heading-1" as="h2">
+          <Heading id="modal-heading-1" size="h2">
             Modal Title
           </Heading>
         </ModalHeader>
