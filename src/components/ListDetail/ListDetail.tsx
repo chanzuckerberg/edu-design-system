@@ -339,7 +339,8 @@ export const ListDetail = ({
             size="sm"
             onClick={onClose}
           >
-            <Icon purpose="decorative" name="chevron-left"></Icon>Back
+            <Icon purpose="decorative" name="chevron-left" />
+            Back
           </Button>
           <Text as="p" className={styles['list-detail__kicker']}>
             Checkpoint {activeIndexState + 1}
