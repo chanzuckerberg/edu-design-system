@@ -15,8 +15,13 @@ import {
   R_ARROW_KEYCODE,
   D_ARROW_KEYCODE,
 } from '../../util/keycodes';
-import { Icon } from '../Icon/Icon';
-import { ListDetailPanel } from '../ListDetailPanel/ListDetailPanel';
+import Breadcrumbs from '../Breadcrumbs';
+import BreadcrumbsItem from '../BreadcrumbsItem';
+import Button from '../Button';
+import Heading from '../Heading';
+import Icon from '../Icon';
+import ListDetailPanel from '../ListDetailPanel';
+import Text from '../Text';
 
 export interface Props {
   /**
@@ -97,6 +102,11 @@ export const ListDetail = ({
     activeIndex ? activeIndex : 0,
   );
   /**
+   * isVisible
+   * 1) Once a list item has been selected, content should be visible on small viewports
+   */
+  const [isVisible, setIsVisible] = useState(false);
+  /**
    * Set the only children components allowed within <ListDetail> to be ListDetailPanel
    */
   const listDetailItems = useCallback(() => {
@@ -162,6 +172,7 @@ export const ListDetail = ({
    */
   function onOpen(index: any) {
     setActiveIndexState(index); /* 1 */
+    setIsVisible(true);
 
     if (onChange) {
       /* 2 */
@@ -220,9 +231,21 @@ export const ListDetail = ({
   const TagName = variant === 'ordered' ? 'ol' : 'ul';
   const componentClassName = clsx(styles['list-detail'], className, {});
 
+  const onClose = () => setIsVisible(false);
+
   return (
     <div className={componentClassName} {...other}>
-      <div className={styles['list-detail__header']}>
+      <section className={styles['list-detail__header']}>
+        <Breadcrumbs className={styles['list-detail__breadcrumbs']}>
+          <BreadcrumbsItem text="My Courses" />
+          <BreadcrumbsItem text="Disciplinary Sciences 7" />
+        </Breadcrumbs>
+        <Text as="p" className={styles['list-detail__kicker']}>
+          Checkpoint 1
+        </Text>
+        <Heading as="h3" className={styles['list-detail__title']}>
+          Feudal Honor Codes and Values
+        </Heading>
         <TagName
           className={clsx(styles['list-detail__list'], {
             [styles['list-detail__list--ordered']]: variant === 'ordered',
@@ -294,16 +317,39 @@ export const ListDetail = ({
                       ''
                     )}
                   </div>
-                  {tab.props.title}
+                  <div className={clsx(styles['list-detail__link-title'])}>
+                    {tab.props.title}
+                  </div>
+                  <Button className={styles['list-detail__link-right']}>
+                    <Icon purpose="decorative" name="arrow-forward" />
+                  </Button>
                 </a>
               </li>
             );
           })}
         </TagName>
-      </div>
-      <div className={styles['list-detail__body']}>
-        {childrenWithProps[activeIndexState]}
-      </div>
+      </section>
+      <section
+        className={clsx(
+          styles['list-detail__body'],
+          isVisible && styles['list-detail__body-visible'],
+        )}
+      >
+        <article className={styles['list-detail__content']} role="dialog">
+          <Button
+            className={styles['list-detail__content-close']}
+            variant="link"
+            size="sm"
+            onClick={onClose}
+          >
+            <Icon purpose="decorative" name="chevron-left"></Icon>Back
+          </Button>
+          <Heading as="h1">
+            {childrenWithProps[activeIndexState].props.title}
+          </Heading>
+          {childrenWithProps[activeIndexState]}
+        </article>
+      </section>
     </div>
   );
 };

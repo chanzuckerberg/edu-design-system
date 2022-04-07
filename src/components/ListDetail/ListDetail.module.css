@@ -14,7 +14,7 @@
   border-color: var(--eds-theme-color-border-neutral-subtle);
   border-radius: var(--eds-theme-border-radius);
 
-  @media all and (min-width: $eds-bp-lg) {
+  @media all and (min-width: $eds-bp-md) {
     display: flex;
   }
 }
@@ -22,16 +22,39 @@
 /**
  * List detail header
  * 1) Contains the tab list
- * 2) Tab overflow behavior
  */
 .list-detail__header {
-  width: 100%;
+  width: auto;
   position: relative;
-  padding: var(--eds-size-4) var(--eds-size-2);
+  padding: var(--eds-size-2);
+  height: 100vh;
 
-  @media all and (min-width: $eds-bp-lg) {
+  @media all and (min-width: $eds-bp-md) {
     padding: var(--eds-size-5);
     width: 20rem;
+  }
+}
+
+.list-detail__breadcrumbs {
+  @media all and (min-width: $eds-bp-md) {
+    display: none;
+  }
+}
+
+.list-detail__title {
+  @mixin eds-theme-typography-headline-md;
+
+  @media all and (min-width: $eds-bp-md) {
+    display: none;
+  }
+}
+
+.list-detail__kicker {
+  @mixin eds-theme-typography-kicker-sm;
+  display: block;
+
+  @media all and (min-width: $eds-bp-md) {
+    display: none;
   }
 }
 
@@ -42,11 +65,62 @@
  */
 .list-detail__body {
   padding: var(--eds-size-2);
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: var(--eds-z-index-bottom);
 
-  @media all and (min-width: $eds-bp-lg) {
+  @media all and (min-width: $eds-bp-md) {
     flex: 1; /* 1 */
     padding: var(--eds-size-5) var(--eds-size-8);
-    box-shadow: -6px 0px 10px -2px var(--eds-theme-color-border-neutral-subtle); /* 1 */
+    box-shadow: -6px 0px 10px -2px var(--eds-theme-color-border-neutral-subtle);
+    visibility: visible;
+    opacity: 1;
+    position: static;
+    top: auto;
+    right: auto;
+    z-index: var(--eds-z-index-400);
+  }
+}
+
+.list-detail__body-visible {
+  visibility: visible;
+  opacity: 1;
+  z-index: var(--eds-z-index-400);
+}
+
+.list-detail__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  top: 0;
+  left: right;
+  height: 100vh;
+  width: 100%;
+
+  @media all and (max-width: $eds-bp-md) {
+    padding: var(--eds-size-2);
+    position: fixed;
+    left: 0;
+    transform: translateX(100%);
+    transition: transform var(--eds-anim-move-quick) var(--eds-anim-ease);
+    background: var(--eds-theme-color-body-background);
+  }
+
+  .list-detail__body-visible & {
+    transform: translateX(0);
+  }
+}
+
+.list-detail__content-close {
+  text-decoration: none;
+
+  @media all and (min-width: $eds-bp-md) {
+    display: none;
   }
 }
 
@@ -60,7 +134,7 @@
   list-style: none;
   @mixin eds-theme-typography-body-text;
 
-  @media all and (min-width: $eds-bp-lg) {
+  @media all and (min-width: $eds-bp-md) {
     position: sticky;
     top: var(--eds-size-5);
   }
@@ -74,6 +148,8 @@
   position: relative;
   flex-shrink: 0; /* 1 */
   padding-bottom: var(--eds-size-4);
+  display: flex;
+  justify-content: space-between;
 }
 
 /**
@@ -89,9 +165,9 @@
     position: absolute;
     left: 0.25rem;
     top: 1.75rem; /* 2 */
-    height: 45%; /* 3 */ 
+    height: 45%; /* 3 */
     width: 0.0625rem;
-    background:  var(--eds-theme-color-border-neutral-subtle); /* 4 */
+    background: var(--eds-theme-color-border-neutral-subtle); /* 4 */
     border-radius: var(--eds-theme-border-radius);
   }
 
@@ -120,15 +196,22 @@
 .list-detail__link {
   position: relative;
   display: flex;
+  align-items: center;
   text-decoration: none;
   color: var(--eds-theme-color-text-disabled); /* 2 */
   cursor: pointer;
+  width: 100%;
   transition: color var(--eds-anim-fade-quick) var(--eds-anim-ease),
     box-shadow var(--eds-anim-fade-quick) var(--eds-anim-ease),
     background-color var(--eds-anim-fade-quick) var(--eds-anim-ease);
 
   &:focus-visible {
     @mixin focus;
+  }
+
+  @media all and (max-width: $eds-bp-md) {
+    @mixin eds-theme-typography-body-text-bold;
+    color: var(--eds-theme-color-text-neutral-default);
   }
 
   /**
@@ -149,11 +232,10 @@
    */
   &:before {
     content: '';
-    flex-shrink: 0;
+    flex-grow: 1;
     margin-right: var(--eds-size-2);
     display: block;
     position: relative;
-    top: var(--eds-size-1);
     height: 9px; /* 1 */
     width: 9px; /* 1 */
     background: var(--eds-theme-color-border-neutral-subtle); /* 2 */
@@ -172,6 +254,31 @@
   }
 }
 
+/** List detail link-title 
+* 1) The text of the list item
+* 2) On viewports < lg, the text, along with its pseudo-bullet (if visible) should remain aligned to the left side of the list item, with the arrow aligned to the right. Giving the title and the pseudo-bullet a flex-grow of 1, while giving the arrow a flex-grow of 3, allows this
+*/
+
+.list-detail__link-title {
+  flex-grow: 1; /* 2 */
+  margin-right: var(--eds-size-1);
+}
+
+/**
+* List detail link-right
+* 1) A button containing an arrow icon that is only displayed on viewports < lg
+* 2) The button component is styled with a height of --eds-size-5 (40px) which would cause each list item to have extra vertical space. Display:contents removes the button's principal box and renders its contents (the Icon component) as normal. However due to a bug in browsers, this currently removes this button from the accessibility tree, meaning screen readers will ignore the button's contents. See https://developer.mozilla.org/en-US/docs/Web/CSS/display-box
+* 3) On viewports < lg, the arrow should remain aligned to the right side of the list item. Giving the arrow a flex-grow of 3, while giving the title and the pseudo-bullet a flex-grow of 1, allows this
+*/
+.list-detail__link-right {
+  display: none;
+
+  @media all and (max-width: $eds-bp-md) {
+    display: contents; /* 2 */
+    flex-grow: 3; /* 3 */
+  }
+}
+
 /**
 * List detail number
 * 1) Used on list items using number variant; provides a cosmetic cicular border
@@ -185,14 +292,14 @@
   justify-content: center;
   align-items: center;
   left: -4px;
-  width: 1.5rem; /* 3 */ 
+  width: 1.5rem; /* 3 */
   height: 1.5rem; /* 3 */
   border-radius: 50%; /* 4 */
   border: 1px solid var(--eds-theme-color-border-neutral-subtle);
   margin-right: 9px;
   font-size: var(--eds-font-size-12);
   margin-left: -4px;
-  background: var(--eds-theme-color-background-neutral-default); 
+  background: var(--eds-theme-color-background-neutral-default);
 }
 
 /**
@@ -213,15 +320,15 @@
   */
   .list-detail__item--success & {
     fill: var(--eds-theme-color-background-grade-complete-default);
-  } 
-  
+  }
+
   /**
   * List detail icon within warning list detail item
   */
   .list-detail__item--warning & {
     fill: var(--eds-theme-color-background-grade-revise-default);
-  } 
-  
+  }
+
   /**
   * List detail icon within error list detail item
   */
