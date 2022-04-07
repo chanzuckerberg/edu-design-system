@@ -236,13 +236,6 @@ export const ListDetail = ({
   return (
     <div className={componentClassName} {...other}>
       <section className={styles['list-detail__header']}>
-        <Breadcrumbs className={styles['list-detail__breadcrumbs']}>
-          <BreadcrumbsItem text="My Courses" />
-          <BreadcrumbsItem text="Disciplinary Sciences 7" />
-        </Breadcrumbs>
-        <Heading as="h1" className={clsx(styles['list-detail__unit-title'])}>
-          Feudal Honor Codes and Values
-        </Heading>
         <TagName
           className={clsx(styles['list-detail__list'], {
             [styles['list-detail__list--ordered']]: variant === 'ordered',
@@ -317,9 +310,7 @@ export const ListDetail = ({
                   <div className={clsx(styles['list-detail__link-title'])}>
                     {tab.props.title}
                   </div>
-                  <Button className={styles['list-detail__link-right']}>
-                    <Icon purpose="decorative" name="arrow-forward" />
-                  </Button>
+                  <Icon className={styles['list-detail__link-right']} purpose="decorative" name="arrow-forward" />
                 </a>
               </li>
             );
