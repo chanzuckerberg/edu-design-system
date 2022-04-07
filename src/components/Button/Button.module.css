@@ -245,8 +245,8 @@
  */
 .button--md {
   height: var(--eds-size-4); /* 1 */
-  padding-left: var(--eds-size-2);
-  padding-right: var(--eds-size-2);
+  padding-left: var(--eds-size-1);
+  padding-right: var(--eds-size-1);
 }
 
 /**
