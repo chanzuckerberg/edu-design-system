@@ -41,8 +41,7 @@
   color: var(--eds-theme-color-text-neutral-default);
 }
 .text--brand {
-  /* TODO: replace with tier 2 token */
-  color: var(--eds-color-brand-grape-700);
+  color: var(--eds-theme-color-text-brand-primary);
 }
 .text--inherit {
   color: inherit;

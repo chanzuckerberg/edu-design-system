@@ -12,7 +12,7 @@ export default {
 
 const Template: Story<Props> = (args) => (
   <Feature {...args}>
-    <Heading as="h2">Feature title</Heading>
+    <Heading size="h2">Feature title</Heading>
     <TextPassage className="u-margin-top-md">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim

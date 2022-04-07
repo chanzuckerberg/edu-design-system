@@ -5,81 +5,64 @@
 \*------------------------------------*/
 
 /**
- * 1) h1, h2, h3, h4, h5, h6
- * 2) Styles are either controlled by as or size declaration
+ * Remove top and bottom margins applied by browser for headings.
  */
 .heading {
-  @mixin reset;
-
-  &.heading--size-1 {
-    @mixin eds-theme-typography-heading-1;
-  }
-
-  &.heading--size-2 {
-    @mixin eds-theme-typography-heading-2;
-  }
-
-  &.heading--size-3 {
-    @mixin eds-theme-typography-heading-3;
-  }
-
-  &.heading--size-4 {
-    @mixin eds-theme-typography-heading-4;
-  }
-
-  &.heading--size-5 {
-    @mixin eds-theme-typography-heading-5;
-  }
-
-  &.heading--size-6 {
-    @mixin eds-theme-typography-heading-6;
-  }
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 /**
- * H1 Heading
- * 1) Use this for the default heading if as = h1
+ * Heading sizes, correlate to similar numerically named typography token.
  */
-h1.heading {
+.heading--size-h1 {
   @mixin eds-theme-typography-heading-1;
 }
 
-/**
- * H2 Heading
- * 1) Use this for the default heading if as = h2
- */
-h2.heading {
+.heading--size-h2 {
   @mixin eds-theme-typography-heading-2;
 }
 
-/**
- * H3 Heading
- * 1) Use this for the default heading if as = h3
- */
-h3.heading {
+.heading--size-h3 {
   @mixin eds-theme-typography-heading-3;
 }
 
-/**
- * H4 Heading
- * 1) Use this for the default heading if as = h4
- */
-h4.heading {
+.heading--size-h4 {
   @mixin eds-theme-typography-heading-4;
 }
 
-/**
- * H5 Heading
- * 1) Use this for the default heading if as = h5
- */
-h5.heading {
+.heading--size-h5 {
   @mixin eds-theme-typography-heading-5;
 }
 
-/**
- * H6 Heading
- * 1) Use this for the default heading if as = h6
- */
-h6.heading {
+.heading--size-h6 {
   @mixin eds-theme-typography-heading-6;
+}
+
+/**
+ * Color variants
+ */
+.heading--alert {
+  color: var(--eds-theme-color-text-utility-error);
+}
+.heading--base {
+  color: var(--eds-theme-color-text-neutral-default);
+}
+.heading--brand {
+  color: var(--eds-theme-color-text-brand-primary);
+}
+.heading--inherit {
+  color: inherit;
+}
+.heading--neutral {
+  color: var(--eds-theme-color-text-neutral-default);
+}
+.heading--success {
+  color: var(--eds-theme-color-text-utility-success);
+}
+.heading--warning {
+  color: var(--eds-theme-color-text-utility-warning);
+}
+.heading--white {
+  color: var(--eds-theme-color-text-neutral-default-knockout);
 }
