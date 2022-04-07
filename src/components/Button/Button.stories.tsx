@@ -11,8 +11,8 @@ export default {
 
 const Template: Story<Props> = (args) => <Button {...args} />;
 
-export const PrimaryNoIcon = Template.bind({});
-PrimaryNoIcon.args = { children: 'Button' };
+export const Primary = Template.bind({});
+Primary.args = { children: 'Button' };
 
 export const PrimaryDisabled = Template.bind({});
 PrimaryDisabled.args = { children: 'Button', disabled: true };
@@ -43,8 +43,8 @@ PrimaryMedium.args = { children: 'Button', size: 'md' };
 export const PrimarySmall = Template.bind({});
 PrimarySmall.args = { children: 'Button', size: 'sm' };
 
-export const SecondaryNoIcon = Template.bind({});
-SecondaryNoIcon.args = { children: 'Button', variant: 'secondary' };
+export const Secondary = Template.bind({});
+Secondary.args = { children: 'Button', variant: 'secondary' };
 
 export const SecondaryDisabled = Template.bind({});
 SecondaryDisabled.args = {
@@ -81,8 +81,8 @@ SecondaryMedium.args = { children: 'Button', variant: 'secondary', size: 'md' };
 export const SecondarySmall = Template.bind({});
 SecondarySmall.args = { children: 'Button', variant: 'secondary', size: 'sm' };
 
-export const TeritaryNoIcon = Template.bind({});
-TeritaryNoIcon.args = { children: 'Button', variant: 'tertiary' };
+export const Teritary = Template.bind({});
+Teritary.args = { children: 'Button', variant: 'tertiary' };
 
 export const TeritaryDisabled = Template.bind({});
 TeritaryDisabled.args = {
@@ -190,8 +190,8 @@ IconButtonIconOnlySmall.args = {
   size: 'sm',
 };
 
-export const LinkNoIcon = Template.bind({});
-LinkNoIcon.args = { children: 'Button', variant: 'link' };
+export const Link = Template.bind({});
+Link.args = { children: 'Button', variant: 'link' };
 
 export const LinkDisabled = Template.bind({});
 LinkDisabled.args = { children: 'Button', variant: 'link', disabled: true };
@@ -211,8 +211,8 @@ LinkRightIcon.args = {
   variant: 'link',
 };
 
-export const DestructiveNoIcon = Template.bind({});
-DestructiveNoIcon.args = { children: 'Button', variant: 'destructive' };
+export const Destructive = Template.bind({});
+Destructive.args = { children: 'Button', variant: 'destructive' };
 
 export const DestructiveDisabled = Template.bind({});
 DestructiveDisabled.args = {
