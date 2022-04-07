@@ -25,7 +25,7 @@ const Template: Story<Props> = (args) => (
       />
     </StackedBlockHeader>
     <StackedBlockBody>
-      <Heading className="u-margin-bottom-md" as="h3">
+      <Heading className="u-margin-bottom-md" size="h3">
         Stacked block title
       </Heading>
       <TextPassage className="u-margin-bottom-md">

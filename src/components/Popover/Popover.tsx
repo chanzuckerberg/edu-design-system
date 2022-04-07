@@ -37,10 +37,6 @@ export interface Props {
    */
   closeButtonText?: string;
   /**
-   * Toggles the ability to dismiss the Popover window
-   */
-  dismissible?: boolean;
-  /**
    * Sets the popover to open or close by default
    */
   isActive?: boolean;
@@ -63,7 +59,6 @@ export const Popover: React.FC<Props> = ({
   className,
   isActive,
   children,
-  dismissible,
   onClose,
   closeButtonText,
   position,
@@ -152,7 +147,6 @@ export const Popover: React.FC<Props> = ({
    * 1) If escape button is struck, close the popover
    */
   const handleOnKeyDown = (e: KeyboardEvent) => {
-    console.log(e.code);
     if (e.code === ESCAPE_KEYCODE) {
       handleOnClose(e); /* 1 */
     }
@@ -162,7 +156,6 @@ export const Popover: React.FC<Props> = ({
   const header = React.Children.map(popoverHeader, (child) => {
     return React.cloneElement(child, {
       onClick: (e) => handleOnClose(e),
-      dismissible: dismissible,
     });
   });
   const body = oneByType(children, PopoverBody);
@@ -190,7 +183,6 @@ export const Popover: React.FC<Props> = ({
         ref={ref}
         role="dialog"
         tabIndex={0}
-        aria-popover={isActive}
         {...other}
       >
         <div className={styles['popover__content']}>

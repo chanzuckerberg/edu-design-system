@@ -5,6 +5,9 @@
         "focus-ring": {
           "@": {
             "value": "{eds.color.brand.grape.500}"
+          },
+          "inverted": {
+            "value": "{eds.color.neutral.white}"
           }
         }
       }
