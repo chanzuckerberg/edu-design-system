@@ -37,7 +37,6 @@ export { default as Heading } from './components/Heading';
 export { default as Hero } from './components/Hero';
 export { default as Hr } from './components/Hr';
 export { default as Icon } from './components/Icon';
-export { default as InlineCheckbox } from './components/InlineCheckbox';
 export { default as InlineForm } from './components/InlineForm';
 export { default as KeyValueTable } from './components/KeyValueTable';
 export { default as Label } from './components/Label';
