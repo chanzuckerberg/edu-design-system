@@ -86,7 +86,6 @@ const Typography = forwardRef(
     const Component = as;
     return (
       <Component
-        ref={ref}
         className={clsx(
           className,
           styles.typography,
@@ -120,6 +119,7 @@ const Typography = forwardRef(
           spacing === "1x" && styles.spacing1,
           spacing === "2x" && styles.spacing2,
         )}
+        ref={ref}
         {...rest}
       >
         {children}
