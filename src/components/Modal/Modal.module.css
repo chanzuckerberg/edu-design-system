@@ -131,7 +131,7 @@
   padding-bottom: var(--eds-size-2);
   padding-left: var(--eds-size-4);
   background: var(--eds-theme-color-body-background);
-  border-bottom: 1px solid var(--eds-theme-color-neutral-subtle-border);
+  border-bottom: 1px solid var(--eds-theme-color-border-neutral-subtle);
   z-index: var(--eds-z-index-100);
 }
 .modal:not(.modal--full-screen) .modal__btn-container {

@@ -243,7 +243,7 @@
           "neutral": {
             "default": {
               "@": "#707070",
-              "knockout": "#ffffff",
+              "inverse": "#ffffff",
               "hover": "#21272D"
             },
             "strong": {
@@ -301,7 +301,7 @@
           "neutral": {
             "default": {
               "@": "#505058",
-              "knockout": "#ffffff"
+              "inverse": "#ffffff"
             },
             "strong": "#21272D",
             "subtle": "#707070"

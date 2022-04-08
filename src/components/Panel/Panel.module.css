@@ -11,7 +11,7 @@
   background: var(--eds-color-neutral-white); /* TODO */
   border-width: var(--eds-theme-border-width);
   border-style: solid;
-  border-color: var(--eds-theme-color-neutral-subtle-border);
+  border-color: var(--eds-theme-color-border-neutral-subtle);
   border-radius: var(--eds-theme-border-radius);
   padding: var(--eds-size-2);
 }

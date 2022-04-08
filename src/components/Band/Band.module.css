@@ -21,5 +21,5 @@
  */
 .band--brand {
   background-color: var(--eds-theme-color-primary-background);
-  color: var(--eds-theme-color-body-foreground-inverted);
+  color: var(--eds-theme-color-text-neutral-default-inverse);
 }

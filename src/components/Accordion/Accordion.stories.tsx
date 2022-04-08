@@ -94,3 +94,8 @@ const Template: Story<Props> = (args) => (
 
 export const Default = Template.bind({});
 Default.args = {};
+
+export const Inverted = Template.bind({});
+Inverted.args = {
+ inverted: true
+};

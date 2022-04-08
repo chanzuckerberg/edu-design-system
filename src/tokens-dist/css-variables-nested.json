@@ -243,7 +243,7 @@
           "neutral": {
             "default": {
               "@": "var(--eds-theme-color-icon-neutral-default)",
-              "knockout": "var(--eds-theme-color-icon-neutral-default-knockout)",
+              "inverse": "var(--eds-theme-color-icon-neutral-default-inverse)",
               "hover": "var(--eds-theme-color-icon-neutral-default-hover)"
             },
             "strong": {
@@ -301,7 +301,7 @@
           "neutral": {
             "default": {
               "@": "var(--eds-theme-color-text-neutral-default)",
-              "knockout": "var(--eds-theme-color-text-neutral-default-knockout)"
+              "inverse": "var(--eds-theme-color-text-neutral-default-inverse)"
             },
             "strong": "var(--eds-theme-color-text-neutral-strong)",
             "subtle": "var(--eds-theme-color-text-neutral-subtle)"

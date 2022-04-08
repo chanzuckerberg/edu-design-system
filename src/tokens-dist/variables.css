@@ -139,7 +139,7 @@
   --eds-theme-color-border-grade-stop: #FB90B0;
   --eds-theme-color-border-disabled: #C0C4C8;
   --eds-theme-color-icon-neutral-default: #707070;
-  --eds-theme-color-icon-neutral-default-knockout: #ffffff;
+  --eds-theme-color-icon-neutral-default-inverse: #ffffff;
   --eds-theme-color-icon-neutral-default-hover: #21272D;
   --eds-theme-color-icon-neutral-strong: #505058;
   --eds-theme-color-icon-neutral-strong-hover: #161B1F;
@@ -163,7 +163,7 @@
   --eds-theme-color-icon-grade-stop-hover: #F1497B;
   --eds-theme-color-icon-disabled: #C0C4C8;
   --eds-theme-color-text-neutral-default: #505058;
-  --eds-theme-color-text-neutral-default-knockout: #ffffff;
+  --eds-theme-color-text-neutral-default-inverse: #ffffff;
   --eds-theme-color-text-neutral-strong: #21272D;
   --eds-theme-color-text-neutral-subtle: #707070;
   --eds-theme-color-text-link-default: #21272D;

@@ -13,7 +13,7 @@
   flex-direction: column;
   align-items: stretch;
   background: var(--eds-theme-color-primary-background);
-  color: var(--eds-theme-color-body-foreground-inverted);
+  color: var(--eds-theme-color-text-neutral-default-inverse);
   border-radius: var(--eds-theme-border-radius);
 
   @media all and (min-width: $eds-bp-md) {

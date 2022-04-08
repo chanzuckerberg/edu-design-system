@@ -104,7 +104,7 @@ The structure for Tier 2 color token values is as follows:
 This language can take some getting used to, so it may be best to break down an example:
 
 ```css
---eds-theme-color-body-foreground-inverted
+--eds-theme-color-text-neutral-default-inverse
 ```
 
 - `eds-` means the token value is coming from the design system
