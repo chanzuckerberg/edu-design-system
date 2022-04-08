@@ -119,7 +119,7 @@
     display: block;
     border: 4px solid var(--eds-theme-color-primary-border);
     border-radius: 50%;
-    background: var(--eds-theme-color-primary-background);
+    background: var(--eds-theme-color-background-brand-primary-strong);
     opacity: 0; /* 2 */
 
     /* stylelint-disable-next-line max-nesting-depth */

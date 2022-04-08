@@ -111,11 +111,11 @@ EDS uses [PostCSS Nested](https://github.com/postcss/postcss-nested) to provide 
 
 ```scss
 .button--primary {
-  background: var(--eds-theme-color-primary-background);
+  background: var(--eds-theme-color-background-brand-primary-strong);
 
   &:hover,
   &:focus {
-    background: var(--eds-theme-color-primary-background-hover);
+    background: var(--eds-theme-color-background-brand-primary-strong-hover);
   }
 
   &:after {

@@ -12,7 +12,7 @@
   display: flex; /* 2 */
   flex-direction: column;
   align-items: stretch;
-  background: var(--eds-theme-color-primary-background);
+  background: var(--eds-theme-color-background-brand-primary-strong);
   color: var(--eds-theme-color-text-neutral-default-inverse);
   border-radius: var(--eds-theme-border-radius);
 
