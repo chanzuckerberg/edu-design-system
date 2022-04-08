@@ -1,117 +1,77 @@
 import clsx from 'clsx';
-import React, {
-  useRef,
-  useEffect,
-  ChangeEventHandler,
-  MutableRefObject,
-} from 'react';
+import React from 'react';
+import { useUID } from 'react-uid';
 import styles from './Checkbox.module.css';
-import { ENTER_KEYCODE } from '../../util/keycodes';
+import CheckboxInput, { CheckboxInputProps } from '../CheckboxInput';
+import CheckboxLabel, { CheckboxLabelProps } from '../CheckboxLabel';
 
-export interface Props {
+// id is required in CheckboxInputProps but optional in CheckboxProps, so we
+// first remove `id` from CheckboxInputProps before intersecting.
+export type CheckboxProps = Omit<CheckboxInputProps, 'id'> & {
   /**
-   * HTML id of the helper text used to describe the component
-   */
-  ariaDescribedBy?: string;
-  /**
-   * Toggles whether or not the checkbox is checked or unchecked
-   */
-  checked?: boolean;
-  /**
-   * CSS class names that can be appended to the component.
-   */
-  className?: string;
-  /**
-   * Disables the field and prevents editing the contents
-   */
-  disabled?: boolean;
-  /**
-   * HTML id for the component
+   * HTML id attribute. If not passed, this component
+   * will generate an id to use for accessibility.
    */
   id?: string;
   /**
-   * Indeterminate prop that turns the checkbox indeterminate state on
+   * Visible text label for the checkbox.
    */
-  indeterminate?: boolean;
+  label?: React.ReactNode;
   /**
-   * Inverted variation for dark backgrounds
+   * Size of the checkbox label.
    */
-  inverted?: boolean;
-  /**
-   * HTML name attribute for the checkbox
-   */
-  name?: string;
-  /**
-   * Function that fires when field value has changed
-   */
-  onChange?: ChangeEventHandler;
-  /**
-   * Toggles the form control's interactivity. When `readOnly` is set to `true`, the form control is not interactive
-   */
-  readOnly?: boolean;
-  /**
-   * A string representing the value of the checkbox
-   */
-  value?: string;
-}
+  size?: CheckboxLabelProps['size'];
+};
 
 /**
- * Primary UI component for user interaction
+ * ```ts
+ * import {Checkbox} from "@chanzuckerberg/eds-components";
+ * ```
+ * ```ts
+ * import {CheckboxInput, CheckboxLabel} from '@chanzuckerberg/eds-components';
+ * ```
+ *
+ * Checkbox control indicating if something is selected or unselected.
+ *
+ * Requires either a visible label or an accessible name.
  */
-export const Checkbox = ({
-  ariaDescribedBy,
-  id,
-  name,
-  value,
-  className,
-  inverted,
-  indeterminate = false,
-  checked,
-  disabled,
-  readOnly,
-  onChange,
-  ...other
-}: Props) => {
-  const checkboxRef = useRef() as MutableRefObject<HTMLInputElement>;
-  /**
-   * On Keydown
-   */
-  function onKeyDown(e: any) {
-    /**
-     * If enter key is pressed, trigger on change event
-     */
-    if (onChange && e.code === ENTER_KEYCODE) {
-      onChange(e);
+export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
+  (props, ref) => {
+    // All remaining props are passed to the `input` element
+    const { className, id, label, size, disabled, ...other } = props;
+
+    // When possible, use a visible label through the `label` prop instead.
+    // In rare cases where there's no visible label, you must provide an
+    // `aria-label` for screen readers.
+    if (
+      process.env.NODE_ENV !== 'production' &&
+      !label &&
+      !props['aria-label']
+    ) {
+      throw new Error('You must provide a visible label or aria-label');
     }
-  }
+    const generatedId = useUID();
+    const checkboxId = id || generatedId;
 
-  useEffect(() => {
-    checkboxRef.current.indeterminate = indeterminate;
-  });
+    return (
+      <div className={clsx(className, styles['checkbox'])}>
+        <CheckboxInput
+          disabled={disabled}
+          id={checkboxId}
+          ref={ref}
+          {...other}
+        />
+        {label && (
+          <CheckboxLabel
+            htmlFor={checkboxId}
+            size={size}
+            text={label}
+            disabled={disabled}
+          />
+        )}
+      </div>
+    );
+  },
+);
 
-  const componentClassName = clsx(
-    styles['checkbox'],
-    className,
-    inverted && styles['checkbox--inverted'],
-  );
-
-  return (
-    <div className={componentClassName} {...other}>
-      <input
-        id={id}
-        ref={checkboxRef}
-        type="checkbox"
-        name={name}
-        value={value}
-        checked={checked}
-        className={styles['checkbox__input']}
-        disabled={disabled}
-        readOnly={readOnly}
-        onChange={onChange && onChange}
-        aria-describedby={ariaDescribedBy}
-        onKeyDown={(e) => onKeyDown(e)}
-      />
-      <span className={styles['checkbox__custom-check']} />
-    </div>
-  );
-};
+Checkbox.displayName = 'Checkbox';
