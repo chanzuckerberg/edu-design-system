@@ -84,32 +84,7 @@
  * Accordion Title
  * 1) The wrapper for the text
  */
-.accordion-panel__title {
-  flex: 1;
-  margin-right: var(--eds-size-2);
-}
-
-/**
- * Accordion panel title kicker
- * 1) Optional secondary text that sits above the title
- */
-.accordion-panel__title-kicker {
-  @mixin eds-theme-typography-kicker;
-  display: block;
-}
-
-/**
- * Accordion title text
- * 1) Main title text of the accordion panel trigger
- */
-.accordion-panel__title-text {
-  @mixin eds-theme-typography-heading-3;
-}
-
-/**
-* Accordion title text within inverted accordion
-*/
-.accordion--inverted .accordion-panel__title-text {
+.accordion--inverted .accordion-panel__button {
   color: var(--eds-theme-color-text-neutral-default-inverse);
 }
 
@@ -192,14 +167,6 @@
   width: var(--eds-size-4);
   fill: var(--eds-theme-color-icon-brand-primary);
   transition: transform var(--eds-anim-fade-quick) var(--eds-anim-ease);
-}
-
-/**
- * Accordion panel icon within inverted accordion
- * 1) Change the icon fill color lighter
- */
-.accordion--inverted .accordion-panel__icon {
-  fill: var(--eds-theme-color-primary-foreground-inverted); /* 1 */
 }
 
 /**
