@@ -63,8 +63,13 @@
         },
         "yellow": {
           "100": "#FFF1E9",
+          "200": "#FFEBB3",
           "300": "#FFDD80",
-          "400": "#F7BE2D"
+          "400": "#F7BE2D",
+          "500": "#D18400",
+          "600": "#BF7300",
+          "700": "#9E5B03",
+          "800": "#854C03"
         },
         "lemon": "#F5FF8F",
         "orange": {
@@ -170,7 +175,7 @@
           "brand": {
             "primary": {
               "default": "#F0F0FC",
-              "strong": "#5751D2"
+              "strong": "#6B65E2"
             }
           },
           "utility": {
@@ -196,59 +201,64 @@
         },
         "border": {
           "neutral": {
+            "subtle": {
+              "@": "#E7E8EA",
+              "hover": "#C0C4C8"
+            },
             "default": {
               "@": "#C0C4C8",
               "hover": "#A2A3A8"
             },
             "strong": {
-              "@": "#878C90",
-              "hover": "#707070"
-            },
-            "subtle": {
-              "@": "#E7E8EA",
-              "hover": "#C0C4C8"
+              "@": "#A2A3A8",
+              "hover": "#878C90"
             }
           },
           "brand": {
             "primary": {
+              "subtle": "#E0E0F9",
               "@": "#C4C1F3",
-              "hover": "#A6A3EE"
+              "strong": "#A6A3EE"
             }
           },
           "utility": {
             "success": {
+              "subtle": "#B7E9CE",
               "default": "#8FDCB3",
-              "strong": "#00A56A"
+              "strong": "#59C88C "
             },
             "warning": {
+              "subtle": "#FFCBA5",
               "default": "#FFAF76",
-              "strong": "#E06B00"
+              "strong": "#F6924A"
             },
             "error": {
+              "subtle": "#FFCBD7",
               "default": "#FB90B0",
-              "strong": "#F1497B"
+              "strong": "#F76C96"
             }
           },
           "grade": {
             "complete": "#8FDCB3",
             "revise": {
+              "subtle": "#FFEBB3",
               "default": "#FFDD80",
-              "subtle": "#FFF1E9"
+              "strong": "#F7BE2D"
             },
             "stop": "#FB90B0"
           },
-          "disabled": "#C0C4C8"
+          "disabled": "#F5F6F8"
         },
         "icon": {
           "neutral": {
             "default": {
               "@": "#707070",
               "inverse": "#ffffff",
-              "hover": "#21272D"
+              "hover": "#505058"
             },
             "strong": {
               "@": "#505058",
-              "hover": "#161B1F"
+              "hover": "#21272D"
             },
             "subtle": {
               "@": "#878C90",

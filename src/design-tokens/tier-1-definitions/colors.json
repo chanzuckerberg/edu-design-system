@@ -40,8 +40,13 @@
         },
         "yellow": {
           "100": { "value": "#FFF1E9" },
+          "200": { "value": "#FFEBB3" },
           "300": { "value": "#FFDD80" },
-          "400": { "value": "#F7BE2D" }
+          "400": { "value": "#F7BE2D" },
+          "500": { "value": "#D18400" },
+          "600": { "value": "#BF7300" },
+          "700": { "value": "#9E5B03" },
+          "800": { "value": "#854C03" }
         },
         "lemon": {
           "value": "#F5FF8F"

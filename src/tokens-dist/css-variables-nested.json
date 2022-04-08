@@ -63,8 +63,13 @@
         },
         "yellow": {
           "100": "var(--eds-color-other-yellow-100)",
+          "200": "var(--eds-color-other-yellow-200)",
           "300": "var(--eds-color-other-yellow-300)",
-          "400": "var(--eds-color-other-yellow-400)"
+          "400": "var(--eds-color-other-yellow-400)",
+          "500": "var(--eds-color-other-yellow-500)",
+          "600": "var(--eds-color-other-yellow-600)",
+          "700": "var(--eds-color-other-yellow-700)",
+          "800": "var(--eds-color-other-yellow-800)"
         },
         "lemon": "var(--eds-color-other-lemon)",
         "orange": {
@@ -196,6 +201,10 @@
         },
         "border": {
           "neutral": {
+            "subtle": {
+              "@": "var(--eds-theme-color-border-neutral-subtle)",
+              "hover": "var(--eds-theme-color-border-neutral-subtle-hover)"
+            },
             "default": {
               "@": "var(--eds-theme-color-border-neutral-default)",
               "hover": "var(--eds-theme-color-border-neutral-default-hover)"
@@ -203,28 +212,28 @@
             "strong": {
               "@": "var(--eds-theme-color-border-neutral-strong)",
               "hover": "var(--eds-theme-color-border-neutral-strong-hover)"
-            },
-            "subtle": {
-              "@": "var(--eds-theme-color-border-neutral-subtle)",
-              "hover": "var(--eds-theme-color-border-neutral-subtle-hover)"
             }
           },
           "brand": {
             "primary": {
+              "subtle": "var(--eds-theme-color-border-brand-primary-subtle)",
               "@": "var(--eds-theme-color-border-brand-primary)",
-              "hover": "var(--eds-theme-color-border-brand-primary-hover)"
+              "strong": "var(--eds-theme-color-border-brand-primary-strong)"
             }
           },
           "utility": {
             "success": {
+              "subtle": "var(--eds-theme-color-border-utility-success-subtle)",
               "default": "var(--eds-theme-color-border-utility-success-default)",
               "strong": "var(--eds-theme-color-border-utility-success-strong)"
             },
             "warning": {
+              "subtle": "var(--eds-theme-color-border-utility-warning-subtle)",
               "default": "var(--eds-theme-color-border-utility-warning-default)",
               "strong": "var(--eds-theme-color-border-utility-warning-strong)"
             },
             "error": {
+              "subtle": "var(--eds-theme-color-border-utility-error-subtle)",
               "default": "var(--eds-theme-color-border-utility-error-default)",
               "strong": "var(--eds-theme-color-border-utility-error-strong)"
             }
@@ -232,8 +241,9 @@
           "grade": {
             "complete": "var(--eds-theme-color-border-grade-complete)",
             "revise": {
+              "subtle": "var(--eds-theme-color-border-grade-revise-subtle)",
               "default": "var(--eds-theme-color-border-grade-revise-default)",
-              "subtle": "var(--eds-theme-color-border-grade-revise-subtle)"
+              "strong": "var(--eds-theme-color-border-grade-revise-strong)"
             },
             "stop": "var(--eds-theme-color-border-grade-stop)"
           },
