@@ -119,12 +119,19 @@ export const LongLabels = {
     const label = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit';
 
     return (
-      <>
+      <div
+        style={{
+          width: '20rem',
+          display: 'grid',
+          gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
+          gap: '1rem',
+        }}
+      >
         <Checkbox label={label} />
         <Checkbox label={label} size="small" />
         <Checkbox label={label} disabled />
         <Checkbox label={label} disabled size="small" />
-      </>
+      </div>
     );
   },
   parameters: {
