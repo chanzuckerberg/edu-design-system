@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> passes class names down properly 1`] = `
+<button
+  class="button exampleClassName button--lg button--primary"
+  data-testid="example-class-name"
+>
+  Click
+</button>
+`;
+
+exports[`<Button /> passes test ids down properly 1`] = `
+<button
+  class="button button--lg button--primary"
+  data-testid="example-test-id"
+>
+  Click
+</button>
+`;
