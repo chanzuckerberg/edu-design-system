@@ -1,12 +1,15 @@
-/* ------------------------------------*\
+@import '../../design-tokens/mixins.css';
+
+
+/*------------------------------------*\
     #CHECKBOX LABEL
-\*------------------------------------ */
+\*------------------------------------*/
 
 /**
  * Text labelling the checkbox.
  */
 .label {
-  color: var(--eds-color-neutral-700);
+  color: var(--eds-theme-color-form-label-text);
 }
 
 /**
@@ -14,12 +17,12 @@
  * 1) line-height is set to be same as checkbox size to center label text relative to the checkbox.
  */
 .label--sm {
-  font-size: 0.875rem;
+  @mixin eds-theme-typography-label-sm;
   line-height: var(--checkbox-svg-size); /* 1 */
 }
 
 .label--md {
-  font-size: 1rem;
+  @mixin eds-theme-typography-label-md;
   line-height: var(--checkbox-svg-size); /* 1 */
 }
 
@@ -27,5 +30,6 @@
  * Disabled state
  */
 .label--disabled {
-  color: var(--eds-color-neutral-500);
+  color: var(--eds-theme-color-text-disabled);
 }
+  
