@@ -1,6 +1,7 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 import { Checkbox } from './Checkbox';
+import styles from './Checkbox.stories.module.css';
 import CheckboxInput from '../CheckboxInput';
 import CheckboxLabel from '../CheckboxLabel';
 
@@ -119,12 +120,12 @@ export const LongLabels = {
     const label = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit';
 
     return (
-      <>
+      <div className={styles['longlabels--grid']}>
         <Checkbox label={label} />
         <Checkbox label={label} size="small" />
         <Checkbox label={label} disabled />
         <Checkbox label={label} disabled size="small" />
-      </>
+      </div>
     );
   },
   parameters: {
