@@ -8,11 +8,11 @@
 
 @define-mixin textLink {
   @mixin eds-theme-typography-body-text-md;
-  color: var(--eds-theme-color-link-foreground);
+  color: var(--eds-theme-color-text-link-default);
   text-decoration: underline;
 
   &:hover {
-    color: var(--eds-theme-color-link-foreground-hover);
+    color: var(--eds-theme-color-text-link-default-hover);
   }
 
   &:focus-visible {
@@ -22,10 +22,10 @@
 
 @define-mixin TextLinkInverted {
   @mixin eds-theme-typography-body-text-md;
-  color: var(--eds-theme-color-link-foreground-inverted);
+  color: var(--eds-theme-color-text-neutral-default-inverse);
 
   &:hover {
-    color: var(--eds-theme-color-link-foreground-inverted-hover);
+    color: var(--eds-theme-color-link-strong-hover);
   }
 
   &:focus-visible {
@@ -75,16 +75,16 @@
    * Input error state
    */
   .eds-is-error & {
-    border-color: var(--eds-theme-color-utility-error-border);
+    border-color: var(--eds-theme-color-border-utility-error-strong);
   }
 
   /**
    * Disabled state
    */
   .eds-is-disabled & {
-    background-color: var(--eds-theme-color-disabled-background);
-    border-color: var(--eds-theme-color-disabled-border);
-    color: var(--eds-theme-color-disabled-foreground);
+    background-color: var(--eds-theme-color-background-disabled);
+    border-color: var(--eds-theme-color-border-disabled);
+    color: var(--eds-theme-color-text-disabled);
     cursor: not-allowed;
   }
 
@@ -109,12 +109,7 @@
 
 @define-mixin placeholderStyles {
   font-style: italic;
-  color: var(--eds-theme-color-neutral-md-foreground);
-}
-
-@define-mixin placeholderStylesInverted {
-  font-style: italic;
-  color: var(--eds-theme-color-form-label-foreground-inverted);
+  color: var(--eds-theme-color-text-neutral-subtle);
 }
 
 @define-mixin fieldsetStyles {
