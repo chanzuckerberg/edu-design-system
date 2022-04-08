@@ -147,7 +147,7 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
     </svg>
   </span>
   <label
-    class="label label--md"
+    class="label label--md label--disabled"
     data-bootstrap-override="label"
     for="9"
     style="--checkbox-svg-size: 1.25rem;"

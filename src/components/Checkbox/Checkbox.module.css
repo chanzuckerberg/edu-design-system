@@ -1,5 +1,3 @@
-@import '../../design-tokens/mixins.css';
-
 /*------------------------------------*\
     #CHECKBOX
 \*------------------------------------*/
@@ -18,25 +16,4 @@
   align-items: flex-start;
   grid-template-columns: min-content 1fr;
   gap: var(--eds-size-1);
-}
-
-/**
- * Text labelling the checkbox.
- */
-.label {
-  color: var(--eds-theme-color-form-label-text);
-}
-
-/**
- * Size variants for the label.
- * 1) line-height is set to be same as checkbox size to center label text relative to the checkbox.
- */
-.label--sm {
-  @mixin eds-theme-typography-label-sm;
-  line-height: var(--checkbox-svg-size); /* 1 */
-}
-
-.label--md {
-  @mixin eds-theme-typography-label-md;
-  line-height: var(--checkbox-svg-size); /* 1 */
 }

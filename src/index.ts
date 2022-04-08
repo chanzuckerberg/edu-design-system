@@ -17,6 +17,7 @@ export { default as Checkbox } from './components/Checkbox';
 export { default as CheckboxField } from './components/CheckboxField';
 export { default as CheckboxFieldItem } from './components/CheckboxFieldItem';
 export { default as CheckboxInput } from './components/CheckboxInput';
+export { default as CheckboxLabel } from './components/CheckboxLabel';
 export { default as Counter } from './components/Counter';
 export { default as DefinitionList } from './components/DefinitionList';
 export { default as DefinitionListItem } from './components/DefinitionListItem';

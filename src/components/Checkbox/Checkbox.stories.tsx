@@ -1,7 +1,8 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
-import { Checkbox, Label } from './Checkbox';
+import { Checkbox } from './Checkbox';
 import CheckboxInput from '../CheckboxInput';
+import CheckboxLabel from '../CheckboxLabel';
 
 const defaultArgs = {
   disabled: false,
@@ -118,7 +119,7 @@ export const LongLabels = {
 export const WithCustomPositioning = {
   render: () => (
     <span>
-      <Label htmlFor="test" text="label on left" />
+      <CheckboxLabel htmlFor="test" text="label on left" />
       <CheckboxInput id="test" />
     </span>
   ),

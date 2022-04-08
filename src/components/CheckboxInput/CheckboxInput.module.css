@@ -73,7 +73,4 @@
     color: var(--eds-theme-color-icon-disabled);
     --checked-color: var(--eds-theme-color-icon-disabled);
   }
-  .input__wrapper--disabled ~ .label {
-    color: var(--eds-theme-color-text-disabled);
-  }
   
