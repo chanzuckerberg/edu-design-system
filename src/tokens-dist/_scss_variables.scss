@@ -248,6 +248,8 @@ $eds-theme-color-form-label: #505058 !default;
 $eds-theme-color-text-highlight-foreground: #21272D !default;
 $eds-theme-color-text-highlight-background: #F5FF8F !default;
 $eds-theme-box-shadow: 0px 0px 0px 1px var(--eds-color-neutral-200), 0px 2px 3px rgba(0, 0, 0, 0.02), 0px 4px 8px rgba(0, 0, 0, 0.08) !default;
+$eds-theme-form-border-width: 1px !default;
+$eds-theme-form-border-radius: 4px !default;
 
 $tokens: (
   'eds': (
@@ -714,7 +716,13 @@ $tokens: (
           'background': $eds-theme-color-text-highlight-background
         )
       ),
-      'box-shadow': $eds-theme-box-shadow
+      'box-shadow': $eds-theme-box-shadow,
+      'form': (
+        'border': (
+          'width': $eds-theme-form-border-width,
+          'radius': $eds-theme-form-border-radius
+        )
+      )
     )
   )
 );

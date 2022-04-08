@@ -50,25 +50,25 @@
   font-family: inherit;
   -webkit-appearance: none;
   width: 100%;
-  border-width: var(--eds-theme-form-input-border-width);
+  border-width: var(--eds-theme-form-border-width);
   border-style: solid;
-  border-color: var(--eds-theme-color-form-input-border);
-  border-radius: var(--eds-theme-form-input-border-radius);
+  border-color: var(--eds-theme-color-form-border);
+  border-radius: var(--eds-theme-form-border-radius);
   outline: none;
   padding: var(--eds-size-1);
   margin: 0;
-  color: var(--eds-theme-color-form-input-foreground);
-  background-color: var(--eds-theme-color-background-neutral-default);
+  color: var(--eds-theme-color-neutral-default);
+  background-color: var(--eds-theme-color-form-background);
   transition: box-shadow var(--eds-anim-fade-quick) var(--eds-anim-ease),
     border-color var(--eds-anim-fade-quick) var(--eds-anim-ease);
 
   &:hover {
-    border-color: var(--eds-theme-color-form-input-border-hover);
+    border-color: var(--eds-theme-color-form-border-hover);
   }
 
   &:focus-visible {
     @mixin focus;
-    border-color: var(--eds-theme-color-form-input-border-focus);
+    border-color: var(--eds-theme-color-border-brand-primary-strong);
   }
 
   /**
@@ -101,37 +101,10 @@
   }
 }
 
-@define-mixin inputStylesInverted {
-  border-color: var(--eds-theme-color-form-input-border-inverted);
-  color: var(--eds-theme-color-form-input-foreground-inverted);
-  background-color: transparent;
-
-  &:hover,
-  &:focus {
-    border-color: var(--eds-theme-color-form-input-border-hover-inverted);
-  }
-
-  &:focus-visible {
-    border-color: var(--eds-theme-color-form-input-border-focus-inverted);
-  }
-
-  &::-webkit-input-placeholder {
-    @mixin placeholderStylesInverted;
-  }
-
-  &::-moz-placeholder {
-    @mixin placeholderStylesInverted;
-  }
-
-  &:-ms-input-placeholder {
-    @mixin placeholderStylesInverted;
-  }
-}
-
 @define-mixin labelStyles {
   @mixin eds-theme-typography-form-label;
   display: inline-block;
-  color: var(--eds-theme-color-form-label-foreground);
+  color: var(--eds-theme-color-form-label);
 }
 
 @define-mixin placeholderStyles {

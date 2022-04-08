@@ -68,7 +68,7 @@
     left: 0; /* 1 */
     z-index: var(--eds-z-index-100); /* 2 */
     display: block;
-    border-width: var(--eds-theme-form-input-border-width);
+    border-width: var(--eds-theme-form-border-width);
     border-style: solid;
     border-color: var(--eds-theme-color-form-input-border);
     border-radius: 50%;

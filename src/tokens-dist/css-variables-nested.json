@@ -463,7 +463,13 @@
           "background": "var(--eds-theme-color-text-highlight-background)"
         }
       },
-      "box-shadow": "var(--eds-theme-box-shadow)"
+      "box-shadow": "var(--eds-theme-box-shadow)",
+      "form": {
+        "border": {
+          "width": "var(--eds-theme-form-border-width)",
+          "radius": "var(--eds-theme-form-border-radius)"
+        }
+      }
     }
   }
 }
