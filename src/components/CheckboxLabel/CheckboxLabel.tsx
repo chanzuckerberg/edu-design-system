@@ -1,7 +1,7 @@
-import clsx from "clsx";
-import React from "react";
-import { svgStyle } from "../CheckboxInput";
-import styles from "./CheckboxLabel.module.css";
+import clsx from 'clsx';
+import React from 'react';
+import styles from './CheckboxLabel.module.css';
+import { svgStyle } from '../CheckboxInput';
 
 export type CheckboxLabelProps = {
   /**
@@ -19,7 +19,7 @@ export type CheckboxLabelProps = {
   /**
    * Size of the checkbox label.
    */
-  size?: "sm" | "md";
+  size?: 'small' | 'medium';
   /**
    * Indicates disabled state of the checkbox.
    */
@@ -33,17 +33,17 @@ export const CheckboxLabel = ({
   text,
   className,
   htmlFor,
-  size = "md",
+  size = 'medium',
   disabled,
 }: CheckboxLabelProps) => {
   return (
     <label
       className={clsx(
         className,
-        styles["label"],
-        size === "sm" && styles["label--sm"],
-        size === "md" && styles["label--md"],
-        disabled && styles["label--disabled"],
+        styles['label'],
+        size === 'small' && styles['label--sm'],
+        size === 'medium' && styles['label--md'],
+        disabled && styles['label--disabled'],
       )}
       data-bootstrap-override="label"
       htmlFor={htmlFor}

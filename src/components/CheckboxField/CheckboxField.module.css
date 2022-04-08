@@ -67,32 +67,6 @@
 }
 
 /**
- * Checkbox field item label
- * 1) Aligns label to checkbox control
- */
-.checkbox-field__item-label {
-  @mixin eds-theme-typography-body-text-md;
-  color: var(--eds-theme-color-form-label-foreground);
-  position: relative; /* 1 */
-  top: -2px; /* 1 */
-
-  /**
-   * Checkbox field item label within disabled checkbox field
-   */
-  .eds-is-disabled & {
-    color: var(--eds-theme-color-disabled-foreground);
-    cursor: not-allowed;
-  }
-
-  /**
-   * Inverted checkbox field
-   */
-  .checkbox-field__item--inverted & {
-    color: var(--eds-theme-color-body-foreground-inverted);
-  }
-}
-
-/**
  * Checkbox field control
  * 1) The actual checkbox form control
  * 2) Align control to label
