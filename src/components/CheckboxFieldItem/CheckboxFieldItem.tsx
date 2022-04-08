@@ -116,6 +116,7 @@ export const CheckboxFieldItem = ({
     <li className={componentClassName}>
       <Checkbox
         id={idVar}
+        label={text}
         name={name}
         value={value}
         className={styles['checkbox-field__item-control']}
@@ -123,14 +124,6 @@ export const CheckboxFieldItem = ({
         onChange={onChange}
         disabled={disabled}
         readOnly={readOnly}
-        inverted={inverted}
-      />
-      <label
-        className={styles['checkbox-field__item-label']}
-        htmlFor={idVar}
-        dangerouslySetInnerHTML={{
-          __html: text,
-        }}
       />
     </li>
   );
