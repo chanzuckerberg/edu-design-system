@@ -86,16 +86,16 @@
  */
 .radio-field__item-label {
   @mixin eds-theme-typography-body-text-md;
-  color: var(--eds-theme-color-form-label-foreground);
+  color: var(--eds-theme-color-form-label);
   position: relative; /* 1 */
   top: -3px; /* 1 */
 
   .radio-field--inverted & {
-    color: var(--eds-theme-color-form-label-foreground-inverted);
+    color: var(--eds-theme-color-text-neutral-default-inverse);
   }
 
   .radio-field.eds-is-disabled & {
-    color: var(--eds-theme-color-disabled-foreground);
+    color: var(--eds-theme-color-text-disabled);
     cursor: not-allowed;
   }
 }

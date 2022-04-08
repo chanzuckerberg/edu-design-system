@@ -47,9 +47,11 @@
 
   &:hover,
   &:focus {
-    background: var(
-      --eds-color-brand-grape-800
-    ); /*TODO: replace with tier 2 variable once established */
+    background: var(--eds-theme-color-button-primary-background-hover);
+  }
+
+  &:active {
+    background: var(--eds-theme-color-button-primary-background-active);
   }
 
   &:focus-visible {
@@ -63,6 +65,6 @@
 .primary-nav__icon {
   height: var(--eds-size-2-and-half);
   width: var(--eds-size-2-and-half);
-  fill: var(--eds-theme-color-icon-neutral-default-knockout);
+  fill: var(--eds-theme-color-icon-neutral-default-inverse);
   margin-right: var(--eds-size-2-and-half);
 }

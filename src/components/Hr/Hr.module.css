@@ -32,5 +32,5 @@
  * 1) Branded horizontal rule
  */
 .hr--brand {
-  border-color: var(--eds-theme-color-primary-border);
+  border-color: var(--eds-theme-color-border-brand-primary-strong);
 }

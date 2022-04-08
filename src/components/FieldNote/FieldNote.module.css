@@ -11,7 +11,7 @@
   display: inline-block;
   @mixin eds-theme-typography-body-text-xs;
   margin-top: var(--eds-size-half);
-  color: var(--eds-theme-color-neutral-md-foreground);
+  color: var(--eds-theme-color-text-neutral-subtle);
 
   /**
      * Field note inside a field that has an error 

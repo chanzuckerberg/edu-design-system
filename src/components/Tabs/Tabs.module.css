@@ -25,13 +25,6 @@
   overflow: hidden;
   overflow-x: auto;
   position: relative;
-  background: linear-gradient(to right, #fff 30%, rgba(255, 255, 255, 0)),
-    linear-gradient(to right, rgba(255, 255, 255, 0), #fff 70%) right,
-    linear-gradient(to right, rgba(0, 0, 0, 0.2) 0, transparent 70%),
-    linear-gradient(to left, rgba(0, 0, 0, 0.2) 0, transparent 70%) right; /* 2 */
-  background-repeat: no-repeat; /* 2 */
-  background-size: 40px 100%, 40px 100%, 14px 100%, 14px 100%; /* 2 */
-  background-attachment: local, local, scroll, scroll; /* 2 */
 
   .tabs--inverted & {
     background: none;
@@ -48,10 +41,6 @@
   list-style: none;
   display: flex; /* 2 */
   @mixin eds-theme-typography-body-text-md;
-
-  .footer & {
-    overflow: auto;
-  }
 }
 
 /**
@@ -60,16 +49,6 @@
  */
 .tabs__item {
   flex-shrink: 0; /* 1 */
-
-  /**
-     * Tabs item within nested tabs inside tabs
-     * 1) Set to flex shrink 0 to keep tabs from expanding container
-     */
-  .tabs .tabs & {
-    flex: none;
-    flex-shrink: 0;
-    margin-top: var(--eds-size-2);
-  }
 }
 
 /**
@@ -79,7 +58,7 @@
   display: block;
   padding: var(--eds-size-1-and-half);
   text-decoration: none;
-  color: var(--eds-theme-color-body-foreground);
+  color: var(--eds-theme-color-text-neutral-default);
   transition: color var(--eds-anim-fade-quick) var(--eds-anim-ease),
     box-shadow var(--eds-anim-fade-quick) var(--eds-anim-ease),
     background-color var(--eds-anim-fade-quick) var(--eds-anim-ease);
@@ -89,22 +68,22 @@
   }
 
   .tabs--inverted & {
-    color: var(--eds-theme-color-link-foreground-inverted);
+    color: var(--eds-theme-color-text-neutral-default-inverse);
   }
 
   /**
    * Tabs link within active tabs item
    */
   .tabs__item.eds-is-active & {
-    color: var(--eds-theme-color-primary-foreground);
+    color: var(--eds-theme-color-text-link-strong);
     box-shadow: inset 0 calc(var(--eds-border-width-lg) * -1) 0 0
-      var(--eds-theme-color-primary-border);
+      var(--eds-theme-color-border-brand-primary-strong);
 
     /* stylelint-disable-next-line max-nesting-depth */
     .tabs--inverted & {
-      color: var(--eds-theme-color-primary-foreground-inverted);
+      color: var(--eds-theme-color-text-neutral-default-inverse);
       box-shadow: inset 0 calc(var(--eds-border-width-lg) * -1) 0 0
-        var(--eds-theme-color-primary-border-inverted);
+        var(--eds-theme-color-border-brand-primary-subtle);
     }
   }
 }

@@ -15,7 +15,7 @@
   position: relative;
   z-index: var(--eds-z-index-500);
   background-color: var(--eds-theme-color-background-brand-primary-strong);
-  color: var(--eds-theme-color-text-neutral-default-knockout);
+  color: var(--eds-theme-color-text-neutral-default-inverse);
 
   @media all and (min-width: $eds-bp-xl) {
     flex-direction: column;

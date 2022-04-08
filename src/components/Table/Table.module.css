@@ -98,7 +98,7 @@
     * Even table rows within zebra table
     */
     &:nth-child(even) {
-      background: var(--eds-theme-color-background-neutral-subtle);
+      background: var(--eds-theme-color-background-neutral-medium);
     }
   }
 }

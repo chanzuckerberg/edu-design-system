@@ -40,8 +40,8 @@
 .toast--alert {
   color: var(--eds-theme-color-text-utility-error);
   background-color: var(--eds-theme-color-background-utility-error);
-  border-color: var(--eds-theme-color-utility-error-default);
-  border-left-color: var(--eds-theme-color-utility-error-strong);
+  border-color: var(--eds-theme-color-border-utility-error-default);
+  border-left-color: var(--eds-theme-color-border-utility-error-strong);
 }
 
 /**

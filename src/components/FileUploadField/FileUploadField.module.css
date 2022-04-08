@@ -57,9 +57,9 @@
    * Hit area within disabled field
    */
   .eds-is-disabled & {
-    border-color: var(--eds-theme-color-border-disable);
+    border-color: var(--eds-theme-color-border-disabled);
     background: var(--eds-theme-color-background-disabled);
-    color: var(--eds-theme-color-disabled-foreground);
+    color: var(--eds-theme-color-text-disabled);
     cursor: not-allowed;
 
     /* stylelint-disable-next-line max-nesting-depth */
@@ -74,7 +74,7 @@
  */
 .file-upload-field__label {
   .eds-is-disabled & {
-    color: var(--eds-theme-color-disabled-foreground);
+    color: var(--eds-theme-color-text-disabled);
   }
 }
 

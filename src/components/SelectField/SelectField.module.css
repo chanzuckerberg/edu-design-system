@@ -54,8 +54,10 @@
 .select-field__icon {
   position: absolute;
   top: 50%;
+  height: var(--eds-size-3);
+  width: var(--eds-size-3);
   transform: translateY(-50%);
   right: var(--eds-size-1);
   pointer-events: none; /* 1 */
-  fill: var(--eds-theme-color-primary-foreground);
+  fill: var(--eds-theme-color-icon-brand-primary);
 }

@@ -23,10 +23,10 @@
 
 .variant--light {
   grid-column: 2;
-  background-color: var(--eds-theme-color-body-background);
+  background-color: var(--eds-theme-color-background-neutral-default);
 }
 
 .variant--dark {
   grid-column: 3;
-  background-color: var(--eds-theme-color-body-background-inverted);
+  background-color: var(--eds-theme-color-background-neutral-default-inverted);
 }
