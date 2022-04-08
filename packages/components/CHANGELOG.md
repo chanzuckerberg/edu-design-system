@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.9.2](https://github.com/chanzuckerberg/edu-design-system/compare/v0.9.1...v0.9.2) (2022-04-08)
+
+
+### Features
+
+* **close-button:** remove close button ([#931](https://github.com/chanzuckerberg/edu-design-system/issues/931)) ([c3c2151](https://github.com/chanzuckerberg/edu-design-system/commit/c3c215186e0c02d869573f99fb7f9f9a8bb177ad))
+
+
+
+
+
 ## [0.9.1](https://github.com/chanzuckerberg/edu-design-system/compare/v0.9.0...v0.9.1) (2022-03-30)
 
 
