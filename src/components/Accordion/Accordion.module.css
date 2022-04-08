@@ -16,16 +16,17 @@
   border-bottom-color: var(--eds-theme-color-border-neutral-subtle);
 }
 
+/**
+ * Inverted accordion
+ * 1) Make the text lighter to be accessible on darker backgrounds
+ */
 .accordion--inverted {
-  color: var(--eds-theme-color-inverted-text);
+  color: var(--eds-theme-color-text-neutral-default-inverse);
   border-bottom-color: var(--eds-theme-color-border-neutral-strong);
 }
 
 /**
- * 1) An individual accordion group containing a button-triggered header and an expanding body
- */
-/**
- * Individual accordion item
+ * Individual accordion panel
  */
 .accordion-panel {
   border-top-style: solid;
@@ -48,6 +49,9 @@
   border-bottom-color: var(--eds-theme-color-border-neutral-strong);
 }
 
+/**
+ * Accordion panel header
+ */
 .accordion-panel__header {
   padding: 0;
   margin: 0;
@@ -72,16 +76,16 @@
   cursor: pointer;
 }
 
+/**
+ * Accordion panel button focus visible
+ * 1) Show focus ring when focused only with keyboard
+ */
 .accordion-panel__button:focus-visible {
-  /* Include focus styles */
-}
-
-.accordion-panel--disabled .accordion-panel__button {
-  pointer-events: none;
+  @mixin focus;
 }
 
 /**
- * Accordion Title
+ * Accordion panel button within inverted accordion
  * 1) The wrapper for the text
  */
 .accordion--inverted .accordion-panel__button {
@@ -134,27 +138,6 @@
     display: flex;
     align-items: center;
   }
-}
-
-/**
- * Accordion panel title after
- * 1) Slot that comes after the title (e.g. to add icons)
- */
-.accordion-panel__title-after {
-  margin-top: 0.5rem;
-}
-
-@media all and (min-width: $eds-bp-md) {
-  .accordion-panel__title-after {
-    margin-top: 0;
-    margin-left: auto;
-    margin-right: 2rem;
-  }
-}
-
-.accordion-panel__meta {
-  @mixin eds-theme-typography-body-text-sm;
-  margin-right: var(--eds-size-2);
 }
 
 /**
