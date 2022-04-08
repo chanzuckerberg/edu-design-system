@@ -1,6 +1,7 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
-import { Checkbox, CheckboxInput, Label } from './Checkbox';
+import { Checkbox, Label } from './Checkbox';
+import CheckboxInput from '../CheckboxInput';
 
 const defaultArgs = {
   disabled: false,
@@ -8,7 +9,7 @@ const defaultArgs = {
 };
 
 export default {
-  title: 'Atoms/Forms/Checkbox',
+  title: 'Molecules/Forms/Checkbox',
   component: Checkbox,
   args: defaultArgs,
   argTypes: {
