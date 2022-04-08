@@ -21,10 +21,3 @@
 .textarea-field__body {
   position: relative;
 }
-
-/**
- * Textarea field input
- * 1) The actual form control
- */
-.textarea-field__input {
-}
