@@ -90,8 +90,9 @@ export const Disabled = {
     </table>
   ),
   parameters: {
-    // mainly for demonstration purposes
-    snapshot: { skip: true },
+    axe: {
+      disabledRules: ['color-contrast'],
+    },
   },
 };
 
@@ -101,6 +102,16 @@ export const WithoutVisibleLabel: StoryObj<Args> = {
     'aria-label': 'a checkbox has no name',
     label: undefined,
   },
+  render: (args) => (
+    <>
+      <Checkbox {...args} />
+      <Checkbox {...args} checked readOnly />
+      <Checkbox {...args} checked="indeterminate" readOnly />
+      <Checkbox {...args} disabled />
+      <Checkbox {...args} checked disabled />
+      <Checkbox {...args} checked="indeterminate" disabled />
+    </>
+  ),
 };
 
 export const LongLabels = {
@@ -108,11 +119,65 @@ export const LongLabels = {
     const label = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit';
 
     return (
-      <div>
+      <>
         <Checkbox label={label} />
         <Checkbox label={label} size="small" />
-      </div>
+        <Checkbox label={label} disabled />
+        <Checkbox label={label} disabled size="small" />
+      </>
     );
+  },
+  parameters: {
+    axe: {
+      disabledRules: ['color-contrast'],
+    },
+  },
+};
+
+// For visual regression testing
+export const LabelsOnly = {
+  args: {
+    htmlFor: 'id',
+  },
+  render: (args) => (
+    <>
+      <CheckboxLabel {...args} text="Medium label" />
+      <br />
+      <CheckboxLabel {...args} size="small" text="Small label" />
+      <br />
+      <CheckboxLabel
+        {...args}
+        text="Long medium label lorem ipsum dolor sit amet, consectetur adipiscing elit"
+      />
+      <br />
+      <CheckboxLabel
+        {...args}
+        size="small"
+        text="Long small label lorem ipsum dolor sit amet, consectetur adipiscing elit"
+      />
+      <br />
+      <CheckboxLabel {...args} disabled text="Medium disabled" />
+      <br />
+      <CheckboxLabel {...args} disabled size="small" text="Small disabled" />
+      <br />
+      <CheckboxLabel
+        {...args}
+        disabled
+        text="Long medium disabled label lorem ipsum dolor sit amet, consectetur adipiscing elit"
+      />
+      <br />
+      <CheckboxLabel
+        {...args}
+        disabled
+        size="small"
+        text="Long small disabled label lorem ipsum dolor sit amet, consectetur adipiscing elit"
+      />
+    </>
+  ),
+  parameters: {
+    axe: {
+      disabledRules: ['color-contrast'],
+    },
   },
 };
 

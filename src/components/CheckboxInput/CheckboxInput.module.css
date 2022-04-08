@@ -52,11 +52,11 @@
     color: var(--eds-theme-color-icon-neutral-default);
     --checked-color: var(--eds-theme-color-icon-brand-primary);
   }
-  .checkbox__input:checked + svg>.checkmark__outline {
+  .checkbox__input:checked + svg > .checkmark__outline {
     fill: var(--checked-color);
     stroke: var(--checked-color);
   }
-  .checkbox__input:checked + svg>.checkmark__content {
+  .checkbox__input:checked + svg >.checkmark__content {
     fill: var(--eds-theme-color-icon-neutral-default-knockout);
   }
   .checkbox__input:focus + svg {

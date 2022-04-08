@@ -2,10 +2,8 @@ import clsx from 'clsx';
 import React from 'react';
 import { useUID } from 'react-uid';
 import styles from './Checkbox.module.css';
-import CheckboxInput from '../CheckboxInput';
-import type { CheckboxInputProps } from '../CheckboxInput';
-import CheckboxLabel from '../CheckboxLabel';
-import type { CheckboxLabelProps } from '../CheckboxLabel';
+import CheckboxInput, { CheckboxInputProps } from '../CheckboxInput';
+import CheckboxLabel, { CheckboxLabelProps } from '../CheckboxLabel';
 
 // id is required in CheckboxInputProps but optional in CheckboxProps, so we
 // first remove `id` from CheckboxInputProps before intersecting.
@@ -30,7 +28,7 @@ export type CheckboxProps = Omit<CheckboxInputProps, 'id'> & {
  * import {Checkbox} from "@chanzuckerberg/eds-components";
  * ```
  * ```ts
- * import Checkbox, {CheckboxInput, Label} from '@chanzuckerberg/eds-components/lib/Checkbox';
+ * import {CheckboxInput, CheckboxLabel} from '@chanzuckerberg/eds-components';
  * ```
  *
  * Checkbox control indicating if something is selected or unselected.
