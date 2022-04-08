@@ -16,15 +16,6 @@
 }
 
 /**
- * Textarea field label 
- */
-.textarea-field__label {
-  .eds-is-disabled & {
-    color: var(--eds-theme-color-disabled-foreground);
-  }
-}
-
-/**
  * Textarea field body
  */
 .textarea-field__body {
@@ -36,13 +27,4 @@
  * 1) The actual form control
  */
 .textarea-field__input {
-  /**
-     * Textarea field input within disabled field
-     */
-  .eds-is-disabled & {
-    border-color: var(--eds-theme-color-disabled-border);
-    background: var(--eds-theme-color-disabled-background);
-    color: var(--eds-theme-color-disabled-foreground);
-    cursor: not-allowed;
-  }
 }

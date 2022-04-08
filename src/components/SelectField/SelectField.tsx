@@ -177,6 +177,7 @@ export const SelectField = ({
           className={styles['select-field__control']}
           items={items}
           id={idVar}
+          isError={isError}
           readOnly={readOnly}
           disabled={disabled}
           ariaDescribedBy={fieldNote && ariaDescribedByVar}

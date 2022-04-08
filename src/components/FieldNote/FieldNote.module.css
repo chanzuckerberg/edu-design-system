@@ -16,8 +16,8 @@
   /**
      * Field note inside a field that has an error 
      */
-  .eds-is-error & {
-    color: var(--eds-theme-color-utility-error-foreground);
+  &.eds-is-error {
+    color: var(--eds-theme-color-text-utility-error);
   }
 }
 
@@ -25,13 +25,16 @@
   * Fieldnote icon
   * 1) Change color to error utility
   */
-.field-note__icon {
+.field-note__icon.field-note__icon {
+  height: var(--eds-size-2);
+  width: var(--eds-size-2);
+  position: relative;
+  bottom: 1px;
+
   .eds-is-error & {
     display: inline-block;
     margin-right: var(--eds-size-1);
     fill: currentColor; /* 1 */
-    position: relative;
-    top: 3px;
   }
 }
 

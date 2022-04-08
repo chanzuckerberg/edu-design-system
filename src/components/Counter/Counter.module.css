@@ -19,14 +19,14 @@
 .counter__body {
   display: flex;
   position: relative;
-  max-width: 10rem;
+  max-width: 9rem;
   border-width: var(--eds-theme-form-border-width);
   border-style: solid;
-  border-color: var(--eds-theme-color-form-input-border);
+  border-color: var(--eds-theme-color-form-border);
   border-radius: var(--eds-theme-form-border-radius);
 
   .eds-is-error & {
-    border-color: var(--eds-theme-color-utility-error-border);
+    border-color: var(--eds-theme-color-border-utility-error-strong);
   }
 }
 
@@ -35,7 +35,7 @@
  * 1) Flex 1 added for IE to work with buttons
  * 2) Min width: 0 added to fix flexbox bug with inputs
  */
-.text-input.counter__input {
+.counter__input.counter__input {
   position: relative;
   flex: 1; /* 1 */
   z-index: var(--eds-z-index-100);

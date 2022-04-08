@@ -85,7 +85,7 @@
  * 1) Aligns label to checkbox control
  */
 .radio-field__item-label {
-  @mixin eds-theme-typography-form-label;
+  @mixin eds-theme-typography-body-text-md;
   color: var(--eds-theme-color-form-label-foreground);
   position: relative; /* 1 */
   top: -3px; /* 1 */

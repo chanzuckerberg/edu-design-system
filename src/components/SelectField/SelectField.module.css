@@ -45,24 +45,6 @@
  */
 .select-field__control {
   z-index: var(--eds-z-index-100);
-
-  /**
-     * Select field control
-     * 1) Includes select
-     */
-  .eds-is-error & {
-    border-color: var(--eds-theme-color-utility-error-background);
-  }
-
-  /**
-     * Select field control within disabled field
-     */
-  .select-field.eds-is-disabled & {
-    border-color: var(--eds-theme-color-disabled-border);
-    background: var(--eds-theme-color-disabled-background);
-    color: var(--eds-theme-color-disabled-foreground);
-    cursor: not-allowed;
-  }
 }
 
 /**

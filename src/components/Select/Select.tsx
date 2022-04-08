@@ -24,6 +24,10 @@ export interface Props {
    */
   items?: any;
   /**
+   * Error state of the form field
+   */
+  isError?: boolean;
+  /**
    * Toggle multiple select option
    */
   multiple?: boolean;
@@ -61,11 +65,17 @@ export const Select = ({
   onChange,
   ariaDescribedBy,
   items,
+  isError,
   readOnly,
   required,
   ...other
 }: Props) => {
-  const componentClassName = clsx(styles['select'], className, {});
+  const componentClassName = clsx(
+    styles['select'],
+    className,
+    isError && styles['eds-is-error'],
+    disabled && styles['eds-is-disabled'],
+  );
   return (
     <select
       className={componentClassName}

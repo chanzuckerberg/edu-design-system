@@ -17,7 +17,7 @@
  * 1) Forces color of text to be the error variable
  */
 .u-color-utility-error {
-  color: var(--eds-theme-color-utility-error-foreground) !important;
+  color: var(--eds-theme-color-text-utility-error) !important;
 }
 
 /**

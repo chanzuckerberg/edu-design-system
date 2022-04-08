@@ -74,14 +74,14 @@
   /**
    * Input error state
    */
-  .eds-is-error & {
+  &.eds-is-error {
     border-color: var(--eds-theme-color-border-utility-error-strong);
   }
 
   /**
    * Disabled state
    */
-  .eds-is-disabled & {
+  &.eds-is-disabled {
     background-color: var(--eds-theme-color-background-disabled);
     border-color: var(--eds-theme-color-border-disabled);
     color: var(--eds-theme-color-text-disabled);
