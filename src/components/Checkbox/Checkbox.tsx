@@ -130,7 +130,7 @@ const CheckboxSvg = ({ indeterminate }: { indeterminate?: boolean }) => {
  *
  * Requires either a visible label or an accessible name.
  */
-const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
+export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
   (props, ref) => {
     // All remaining props are passed to the `input` element
     const { className, id, label, size, ...other } = props;
@@ -163,7 +163,7 @@ Checkbox.displayName = 'Checkbox';
  * Checkbox input element, exported for greater flexibility.
  * You must provide an `id` prop and connect it to a visible label.
  */
-const CheckboxInput = React.forwardRef<HTMLInputElement, InputProps>(
+export const CheckboxInput = React.forwardRef<HTMLInputElement, InputProps>(
   ({ checked, className, disabled, ...other }, ref) => {
     // Make indeterminate checkbox visually match the colors of a
     // checked state, but announce itself as "mixed" to screen readers
@@ -205,7 +205,12 @@ CheckboxInput.displayName = 'CheckboxInput';
 /**
  * Label element, exported for greater flexibility. Can be used with any form input.
  */
-const Label = ({ text, className, htmlFor, size = 'medium' }: LabelProps) => {
+export const Label = ({
+  text,
+  className,
+  htmlFor,
+  size = 'medium',
+}: LabelProps) => {
   return (
     <label
       className={clsx(
@@ -222,6 +227,3 @@ const Label = ({ text, className, htmlFor, size = 'medium' }: LabelProps) => {
     </label>
   );
 };
-
-export default Checkbox;
-export { Checkbox, CheckboxInput, Label };

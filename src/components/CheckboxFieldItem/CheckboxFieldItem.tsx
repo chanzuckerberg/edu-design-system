@@ -3,7 +3,6 @@ import { nanoid } from 'nanoid';
 import React, { ChangeEventHandler, useEffect, useRef, useState } from 'react';
 import Checkbox from '../Checkbox';
 import styles from '../CheckboxField/CheckboxField.module.css';
-import Text from '../Text';
 
 export interface Props {
   /**
@@ -113,14 +112,11 @@ export const CheckboxFieldItem = ({
     className,
     inverted && styles['checkbox-field__item--inverted'],
   );
-  const label = (
-    <Text className={styles['checkbox-field__item-label']}>{text}</Text>
-  );
   return (
     <li className={componentClassName}>
       <Checkbox
         id={idVar}
-        label={label}
+        label={text}
         name={name}
         value={value}
         className={styles['checkbox-field__item-control']}

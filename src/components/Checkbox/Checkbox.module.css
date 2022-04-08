@@ -25,10 +25,6 @@
  */
 .label {
   color: var(--eds-theme-color-form-label-text);
-
-  /* Shift label so the checkbox always appears vertically centered
-  with the *first* line of text, in case label wraps. */
-  /* margin-top: calc((var(--checkbox-svg-size) - var(--label-line-height)) / 2); */
 }
 
 /**
@@ -47,11 +43,13 @@
 
 /**
  * Wrapper for the checkbox, including the visually hidden input element.
- * 1) line-height is set to be same as checkbox size to equal checkbox size and prevent browser styling.
+ * 1) Setting position is required to place the absolutely positioned input element in the same spot as the SVG 
+ *    when a (n^c)parent element in the tree is relatively positioned.
+ * 2) line-height is set to be same as checkbox size to equal checkbox size and prevent browser styling.
  */
 .input__wrapper {
-  /* position: relative; */
-  line-height: var(--checkbox-svg-size); /* 1 */
+  position: relative; /* 1 */
+  line-height: var(--checkbox-svg-size); /* 2 */
 }
 
 /**
@@ -81,7 +79,7 @@
  * The visible checkbox graphic.
  * 1) Provides a focus indicator outline around the checkbox.
  */
-.checkbox__input+svg {
+.checkbox__input + svg {
   vertical-align: top;
 
   display: inline-block;
@@ -89,14 +87,14 @@
   color: var(--eds-theme-color-icon-neutral-default);
   --checked-color: var(--eds-theme-color-icon-brand-primary);
 }
-.checkbox__input:checked+svg>.checkmark__outline {
+.checkbox__input:checked + svg>.checkmark__outline {
   fill: var(--checked-color);
   stroke: var(--checked-color);
 }
-.checkbox__input:checked+svg>.checkmark__content {
+.checkbox__input:checked + svg>.checkmark__content {
   fill: var(--eds-theme-color-icon-neutral-default-knockout);
 }
-.checkbox__input:focus+svg {
+.checkbox__input:focus + svg {
   @mixin focus; /* 1 */
 }
 
@@ -106,10 +104,10 @@
 .checkbox__input:disabled {
   cursor: not-allowed;
 }
-.checkbox__input:disabled+svg {
+.checkbox__input:disabled + svg {
   color: var(--eds-theme-color-icon-disabled);
   --checked-color: var(--eds-theme-color-icon-disabled);
 }
-.input__wrapper--disabled~.label {
+.input__wrapper--disabled ~ .label {
   color: var(--eds-theme-color-text-disabled);
 }

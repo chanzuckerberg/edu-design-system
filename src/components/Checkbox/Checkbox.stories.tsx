@@ -1,6 +1,6 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
-import Checkbox, { CheckboxInput, Label } from './Checkbox';
+import { Checkbox, CheckboxInput, Label } from './Checkbox';
 
 const defaultArgs = {
   disabled: false,
@@ -12,17 +12,10 @@ export default {
   component: Checkbox,
   args: defaultArgs,
   argTypes: {
-    // For some reason Storybook does not infer all props correctly;
-    // we manually include the most relevant controls here.
+    // For some reason Storybook does not infer all `checked` correctly;
     checked: {
       control: 'radio',
       options: [true, false, 'indeterminate'],
-    },
-    size: {
-      description: 'Size of the checkbox label.',
-      control: 'radio',
-      options: ['small', 'medium'],
-      table: { defaultValue: { summary: 'medium' } },
     },
   },
   decorators: [
@@ -79,7 +72,7 @@ export const Indeterminate: StoryObj<Args> = {
 
 export const Disabled = {
   render: () => (
-    <table className="border-separate" style={{ borderSpacing: '2rem' }}>
+    <table style={{ borderSpacing: '2rem' }}>
       <tbody>
         {[false, true, 'indeterminate' as const].map((checked, i) => (
           <tr key={i}>
@@ -113,7 +106,7 @@ export const LongLabels = {
     const label = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit';
 
     return (
-      <div className="w-80 grid grid-cols-2 gap-4">
+      <div>
         <Checkbox label={label} />
         <Checkbox label={label} size="small" />
       </div>

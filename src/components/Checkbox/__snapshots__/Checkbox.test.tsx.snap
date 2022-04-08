@@ -217,9 +217,7 @@ exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
 <div
   style="margin: 0.25rem;"
 >
-  <div
-    class="w-80 grid grid-cols-2 gap-4"
-  >
+  <div>
     <div
       class="checkbox"
     >
