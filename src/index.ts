@@ -25,6 +25,8 @@ export { default as Drawer } from './components/Drawer';
 export { default as DrawerBody } from './components/DrawerBody';
 export { default as DrawerFooter } from './components/DrawerFooter';
 export { default as DrawerHeader } from './components/DrawerHeader';
+export { default as Dropdown } from './components/Dropdown';
+export { default as DropdownButton } from './components/DropdownButton';
 export { default as Feature } from './components/Feature';
 export { default as FieldNote } from './components/FieldNote';
 export { default as Fieldset } from './components/Fieldset';
