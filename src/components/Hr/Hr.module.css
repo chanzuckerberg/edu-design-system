@@ -16,7 +16,7 @@
   border-left: none;
   border-bottom-width: var(--eds-border-width-sm);
   border-bottom-style: solid;
-  border-bottom-color: var(--eds-theme-color-neutral-subtle-border);
+  border-bottom-color: var(--eds-theme-color-border-neutral-subtle);
 }
 
 /**
@@ -32,5 +32,5 @@
  * 1) Branded horizontal rule
  */
 .hr--brand {
-  border-color: var(--eds-theme-color-primary-border);
+  border-color: var(--eds-theme-color-border-brand-primary-strong);
 }

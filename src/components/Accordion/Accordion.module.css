@@ -13,10 +13,14 @@
   list-style: none;
   border-bottom-style: solid;
   border-bottom-width: var(--eds-theme-border-width);
-  border-bottom-color: var(--eds-theme-color-neutral-subtle-border);
+  border-bottom-color: var(--eds-theme-color-border-neutral-subtle);
 }
 
+/**
+ * Inverted accordion
+ * 1) Make the text lighter to be accessible on darker backgrounds
+ */
 .accordion--inverted {
-  color: var(--eds-theme-color-inverted-text);
-  border-bottom-color: var(--eds-theme-color-neutral-subtle-border-inverted);
+  color: var(--eds-theme-color-text-neutral-default-inverse);
+  border-bottom-color: var(--eds-theme-color-border-neutral-strong);
 }

@@ -12,10 +12,7 @@
   position: relative;
 
   .text-field--inverted & {
-    color: var(--eds-theme-color-body-foreground-inverted);
-  }
-  .eds-is-disabled & {
-    color: var(--eds-theme-color-disabled-foreground);
+    color: var(--eds-theme-color-text-neutral-default-inverse);
   }
 }
 
@@ -34,22 +31,6 @@
 .text-field-after {
   display: inherit;
   margin-left: var(--eds-size-1);
-}
-
-/**
- * Text field input
- * 1) The actual form control
- */
-.text-field__input {
-  /**
-     * Text field input within disabled field
-     */
-  .eds-is-disabled & {
-    border-color: var(--eds-theme-color-disabled-border);
-    background: var(--eds-theme-color-disabled-background);
-    color: var(--eds-theme-color-disabled-foreground);
-    cursor: not-allowed;
-  }
 }
 
 /**

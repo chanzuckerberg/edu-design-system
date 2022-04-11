@@ -10,10 +10,3 @@
 .text-input {
   @mixin inputStyles;
 }
-
-/**
- * Inverted text input styles 
- */
-.text-input--inverted {
-  @mixin inputStylesInverted;
-}
