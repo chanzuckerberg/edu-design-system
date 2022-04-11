@@ -388,11 +388,15 @@ const DropdownTrigger = function (
       as={React.Fragment}
       {...other}
     >
-      {typeof children === 'function' ? (
-        children
-      ) : (
-        <DropdownButton className={componentClassName} text={children} />
-      )}
+      {typeof children === 'function'
+        ? children
+        : ({ open }) => (
+            <DropdownButton
+              className={componentClassName}
+              isOpen={open}
+              text={children}
+            />
+          )}
     </Listbox.Button>
   );
 };

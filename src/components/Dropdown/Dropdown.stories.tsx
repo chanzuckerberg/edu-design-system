@@ -243,7 +243,13 @@ export const OpenByDefault: StoryObj = {
 };
 
 export const DropdownButtonOnly = {
-  render: () => <DropdownButton text="Dropdown button" />,
+  render: () => (
+    <>
+      <DropdownButton isOpen={false} text="Dropdown button closed" />
+      <br />
+      <DropdownButton isOpen={true} text="Dropdown button open" />
+    </>
+  ),
   parameters: {
     snapshot: { skip: true }, // For visual regression purposes since button should be used in conjunction with the actual Dropdown.
   },

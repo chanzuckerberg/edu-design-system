@@ -26,3 +26,20 @@
 
   @mixin eds-theme-typography-body-text-md;
 }
+
+/**
+ * The caret icon to decorate the dropdown button, animated to rotate.
+ * 1) Turns off animation if user prefers reduced motion
+ */
+.dropdown-button__icon {
+  transform: rotate(0);
+
+  transition: transform var(--eds-anim-move-quick) ease-out;
+  @media (prefers-reduced-motion) {
+    transition-property: none; /* 1 */
+  }
+}
+
+.dropdown-button__icon--reversed {
+  transform: rotate(180deg);
+}
