@@ -19,7 +19,7 @@ const Template: Story<Props> = (args) => (
 );
 
 export const Default = Template.bind({});
-Default.args = { children: 'Link', variant: 'link' };
+Default.args = { children: 'Link', variant: 'linkDefault' };
 
 export const LinkRightIcon = Template.bind({});
 LinkRightIcon.args = {
@@ -33,7 +33,25 @@ LinkRightIcon.args = {
       />
     </>
   ),
-  variant: 'link',
+  variant: 'linkDefault',
+};
+
+export const StrongLink = Template.bind({});
+StrongLink.args = { children: 'Link', variant: 'linkStrong' };
+
+export const StrongLinkRightIcon = Template.bind({});
+StrongLinkRightIcon.args = {
+  children: (
+    <>
+      Link
+      <Icon
+        purpose="informative"
+        title="opens in a new tab"
+        name="open-in-new"
+      />
+    </>
+  ),
+  variant: 'linkStrong',
 };
 
 export const Primary = Template.bind({});

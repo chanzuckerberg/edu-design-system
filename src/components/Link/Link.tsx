@@ -26,7 +26,7 @@ export type Props = Omit<
  * components are exactly the same.
  */
 export const Link = React.forwardRef<HTMLAnchorElement, Props>(
-  ({ variant = 'link', ...other }, ref) => {
+  ({ variant = 'linkDefault', ...other }, ref) => {
     return <ClickableStyle {...other} as="a" variant={variant} ref={ref} />;
   },
 );

@@ -56,7 +56,8 @@ export type ClickableStyleProps<IComponent extends React.ElementType> = {
     | 'secondary'
     | 'tertiary'
     | 'icon'
-    | 'link'
+    | 'linkDefault'
+    | 'linkStrong'
     | 'destructive';
 } & React.ComponentProps<IComponent>;
 
@@ -101,7 +102,9 @@ export const ClickableStyle = React.forwardRef(
       variant === 'secondary' && styles['clickable-style--secondary'],
       variant === 'tertiary' && styles['clickable-style--tertiary'],
       variant === 'icon' && styles['clickable-style--icon'],
-      variant === 'link' && styles['clickable-style--link'],
+      (variant === 'linkDefault' || variant === 'linkStrong') &&
+        styles['clickable-style--link'],
+      variant === 'linkStrong' && styles['clickable-style--link-strong'],
       variant === 'destructive' && styles['clickable-style--destructive'],
       // Other options
       fullWidth && styles['clickable-style--full-width'],

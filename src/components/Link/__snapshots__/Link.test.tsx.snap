@@ -2,7 +2,7 @@
 
 exports[`<Link /> Default story renders snapshot 1`] = `
 <a
-  class="clickable-style clickable-style--link"
+  class="clickable-style clickable-style--lg clickable-style--link"
   href="/"
 >
   Link
@@ -161,7 +161,7 @@ exports[`<Link /> IconLinkRightIconSmall story renders snapshot 1`] = `
 
 exports[`<Link /> LinkRightIcon story renders snapshot 1`] = `
 <a
-  class="clickable-style clickable-style--link"
+  class="clickable-style clickable-style--lg clickable-style--link"
   href="/"
 >
   Link
@@ -313,6 +313,39 @@ exports[`<Link /> SecondarySmall story renders snapshot 1`] = `
 </a>
 `;
 
+exports[`<Link /> StrongLink story renders snapshot 1`] = `
+<a
+  class="clickable-style clickable-style--lg clickable-style--link clickable-style--link-strong"
+  href="/"
+>
+  Link
+</a>
+`;
+
+exports[`<Link /> StrongLinkRightIcon story renders snapshot 1`] = `
+<a
+  class="clickable-style clickable-style--lg clickable-style--link clickable-style--link-strong"
+  href="/"
+>
+  Link
+  <svg
+    class="icon"
+    fill="currentColor"
+    role="img"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title
+      id="mock-id"
+    >
+      opens in a new tab
+    </title>
+    <use
+      xlink:href="test-file-stub#open-in-new"
+    />
+  </svg>
+</a>
+`;
+
 exports[`<Link /> Tertiary story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--lg clickable-style--tertiary"
@@ -380,7 +413,7 @@ exports[`<Link /> TertiarySmall story renders snapshot 1`] = `
 
 exports[`<Link /> passes class names down properly 1`] = `
 <a
-  class="clickable-style exampleClassName clickable-style--link"
+  class="clickable-style exampleClassName clickable-style--lg clickable-style--link"
   data-testid="example-class-name"
   href="/"
 >
@@ -390,7 +423,7 @@ exports[`<Link /> passes class names down properly 1`] = `
 
 exports[`<Link /> passes test ids down properly 1`] = `
 <a
-  class="clickable-style clickable-style--link"
+  class="clickable-style clickable-style--lg clickable-style--link"
   data-testid="example-test-id"
   href="/"
 >

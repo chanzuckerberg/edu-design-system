@@ -209,12 +209,12 @@ IconClickableStyleIconOnlySmall.args = {
 };
 
 export const Link = Template.bind({});
-Link.args = { children: 'Clickable Style', variant: 'link' };
+Link.args = { children: 'Clickable Style', variant: 'linkDefault' };
 
 export const LinkDisabled = Template.bind({});
 LinkDisabled.args = {
   children: 'Clickable Style',
-  variant: 'link',
+  variant: 'linkDefault',
   disabled: true,
 };
 
@@ -230,7 +230,32 @@ LinkRightIcon.args = {
       />
     </>
   ),
-  variant: 'link',
+  variant: 'linkDefault',
+};
+
+export const StrongLink = Template.bind({});
+StrongLink.args = { children: 'Clickable Style', variant: 'linkStrong' };
+
+export const StrongLinkDisabled = Template.bind({});
+StrongLinkDisabled.args = {
+  children: 'Clickable Style',
+  variant: 'linkStrong',
+  disabled: true,
+};
+
+export const StrongLinkRightIcon = Template.bind({});
+StrongLinkRightIcon.args = {
+  children: (
+    <>
+      Clickable Style
+      <Icon
+        purpose="informative"
+        title="opens in a new tab"
+        name="open-in-new"
+      />
+    </>
+  ),
+  variant: 'linkStrong',
 };
 
 export const Destructive = Template.bind({});

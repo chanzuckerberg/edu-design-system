@@ -194,10 +194,14 @@ IconButtonIconOnlySmall.args = {
 };
 
 export const Link = Template.bind({});
-Link.args = { children: 'Button', variant: 'link' };
+Link.args = { children: 'Button', variant: 'linkDefault' };
 
 export const LinkDisabled = Template.bind({});
-LinkDisabled.args = { children: 'Button', variant: 'link', disabled: true };
+LinkDisabled.args = {
+  children: 'Button',
+  variant: 'linkDefault',
+  disabled: true,
+};
 
 export const LinkRightIcon = Template.bind({});
 LinkRightIcon.args = {
@@ -211,7 +215,32 @@ LinkRightIcon.args = {
       />
     </>
   ),
-  variant: 'link',
+  variant: 'linkDefault',
+};
+
+export const StrongLink = Template.bind({});
+StrongLink.args = { children: 'Button', variant: 'linkStrong' };
+
+export const StrongLinkDisabled = Template.bind({});
+StrongLinkDisabled.args = {
+  children: 'Button',
+  variant: 'linkStrong',
+  disabled: true,
+};
+
+export const StrongLinkRightIcon = Template.bind({});
+StrongLinkRightIcon.args = {
+  children: (
+    <>
+      Button
+      <Icon
+        purpose="informative"
+        title="opens in a new tab"
+        name="open-in-new"
+      />
+    </>
+  ),
+  variant: 'linkStrong',
 };
 
 export const Destructive = Template.bind({});
