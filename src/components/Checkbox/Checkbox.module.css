@@ -1,3 +1,4 @@
+@import '../../design-tokens/mixins.css';
 /*------------------------------------*\
     #CHECKBOX
 \*------------------------------------*/
@@ -9,7 +10,8 @@
  * 3) Prevents control from being "squished" in 
  *    a flexbox parent
  */
-.checkbox { /* 1 */
+.checkbox {
+  /* 1 */
   position: relative;
   display: grid; /* 2 */
   align-items: flex-start;
@@ -141,4 +143,5 @@
     .checkbox__input:checked + & {
       opacity: 1; /* 1 */
     }
+  }
 }
