@@ -239,10 +239,10 @@ function childrenHaveLabelComponent(children?: ReactNode): boolean {
  * return (
  *   <Dropdown
  *     aria-label="Options"
- *     className="w-60"
+ *     className="dropdown--width-15rem"
  *     options={options}
  *     optionsAlign="right"
- *     optionsClassName="w-96"
+ *     optionsClassName="dropdown__options--width-24rem"
  *   />
  * );
  * ```
