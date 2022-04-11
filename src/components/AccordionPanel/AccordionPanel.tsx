@@ -8,8 +8,8 @@ import React, {
   MutableRefObject,
   ReactNode,
 } from 'react';
-import { EdsThemeColorIconNeutralStrong } from '../../tokens-dist/colors';
 import styles from './AccordionPanel.module.css';
+import { EdsThemeColorIconNeutralStrong } from '../../tokens-dist/colors';
 import Icon from '../Icon';
 
 export interface Props {

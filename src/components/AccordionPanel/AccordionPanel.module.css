@@ -126,9 +126,6 @@
  */
 .accordion__panel-icon.accordion__panel-icon {
   margin-left: auto;
-  height: var(--eds-size-3);
-  width: var(--eds-size-3);
-  fill: var(--eds-theme-color-icon-brand-primary);
   transition: transform var(--eds-anim-fade-quick) var(--eds-anim-ease);
 }
 
