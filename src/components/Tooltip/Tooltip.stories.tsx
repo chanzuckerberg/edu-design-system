@@ -118,6 +118,10 @@ export const LongButtonText: StoryObj<Args> = {
       </Button>
     ),
   },
+  parameters: {
+    // Is flaky on chromatic, disabling for now
+    chromatic: { disableSnapshot: true },
+  },
 };
 
 export const Interactive: StoryObj<Args> = {
