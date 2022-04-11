@@ -193,7 +193,7 @@ exports[`<Button /> IconButtonRightIconSmall story renders snapshot 1`] = `
 
 exports[`<Button /> Link story renders snapshot 1`] = `
 <button
-  class="clickable-style clickable-style--lg clickable-style--link"
+  class="clickable-style clickable-style--link"
   type="button"
 >
   Button
@@ -202,7 +202,7 @@ exports[`<Button /> Link story renders snapshot 1`] = `
 
 exports[`<Button /> LinkDisabled story renders snapshot 1`] = `
 <button
-  class="clickable-style clickable-style--lg clickable-style--link"
+  class="clickable-style clickable-style--link"
   disabled=""
   tabindex="-1"
   type="button"
@@ -213,7 +213,7 @@ exports[`<Button /> LinkDisabled story renders snapshot 1`] = `
 
 exports[`<Button /> LinkRightIcon story renders snapshot 1`] = `
 <button
-  class="clickable-style clickable-style--lg clickable-style--link"
+  class="clickable-style clickable-style--link"
   type="button"
 >
   Button
@@ -418,7 +418,7 @@ exports[`<Button /> SecondarySmall story renders snapshot 1`] = `
 
 exports[`<Button /> StrongLink story renders snapshot 1`] = `
 <button
-  class="clickable-style clickable-style--lg clickable-style--link clickable-style--link-strong"
+  class="clickable-style clickable-style--link clickable-style--link-strong"
   type="button"
 >
   Button
@@ -427,7 +427,7 @@ exports[`<Button /> StrongLink story renders snapshot 1`] = `
 
 exports[`<Button /> StrongLinkDisabled story renders snapshot 1`] = `
 <button
-  class="clickable-style clickable-style--lg clickable-style--link clickable-style--link-strong"
+  class="clickable-style clickable-style--link clickable-style--link-strong"
   disabled=""
   tabindex="-1"
   type="button"
@@ -438,7 +438,7 @@ exports[`<Button /> StrongLinkDisabled story renders snapshot 1`] = `
 
 exports[`<Button /> StrongLinkRightIcon story renders snapshot 1`] = `
 <button
-  class="clickable-style clickable-style--lg clickable-style--link clickable-style--link-strong"
+  class="clickable-style clickable-style--link clickable-style--link-strong"
   type="button"
 >
   Button

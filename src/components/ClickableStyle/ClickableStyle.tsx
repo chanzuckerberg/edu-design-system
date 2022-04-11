@@ -87,12 +87,14 @@ export const ClickableStyle = React.forwardRef(
     }: ClickableStyleProps<IComponent>,
     ref: React.ForwardedRef<HTMLElement>,
   ) => {
+    const isLink = variant === 'linkDefault' || variant === 'linkStrong';
+
     const componentClassName = clsx(
       // Base styles
       styles['clickable-style'],
       className,
       // Sizes
-      variant !== 'link' && [
+      !isLink && [
         size === 'sm' && styles['clickable-style--sm'],
         size === 'md' && styles['clickable-style--md'],
         size === 'lg' && styles['clickable-style--lg'],
@@ -102,8 +104,7 @@ export const ClickableStyle = React.forwardRef(
       variant === 'secondary' && styles['clickable-style--secondary'],
       variant === 'tertiary' && styles['clickable-style--tertiary'],
       variant === 'icon' && styles['clickable-style--icon'],
-      (variant === 'linkDefault' || variant === 'linkStrong') &&
-        styles['clickable-style--link'],
+      isLink && styles['clickable-style--link'],
       variant === 'linkStrong' && styles['clickable-style--link-strong'],
       variant === 'destructive' && styles['clickable-style--destructive'],
       // Other options
