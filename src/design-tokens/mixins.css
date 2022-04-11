@@ -9,13 +9,13 @@
 @define-mixin textLink {
   /* TODO: inherit size */
   @mixin eds-theme-typography-body-text-md;
-  color: var(--eds-theme-color-text-link-default);
+  color: var(--eds-theme-color-text-link-strong);
   /* TODO: underline change on hover */
   text-decoration: underline;
 
   &:hover,
   &:focus {
-    color: var(--eds-theme-color-text-link-default-hover);
+    color: var(--eds-theme-color-text-link-strong-hover);
   }
 
   &:focus {
