@@ -18,7 +18,7 @@ export interface Props {
    * - **responsive** results in a ButtonGroup that stacks on small screens, but displays side by side on larger screens
    * - **stacked** results in a ButtonGroup that stacks on all screen sizes
    */
-  behavior?: 'responsive' | 'stacked' | 'right';
+  behavior?: 'responsive' | 'stacked';
   /**
    * Child node(s) that can be nested inside component
    */
@@ -44,7 +44,7 @@ export const ButtonGroup = ({
     className,
     behavior === 'responsive' && styles['button-group--responsive'],
     behavior === 'stacked' && styles['button-group--stacked'],
-    behavior === 'right' && styles['button-group--align-right'],
+    align === 'right' && styles['button-group--align-right'],
   );
   return (
     <div className={componentClassName} {...other}>
