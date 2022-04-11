@@ -181,6 +181,7 @@ export const Counter = ({
           min={min}
           max={max}
           disabled={disabled}
+          isError={isError}
           readOnly={readOnly}
           aria-live="assertive"
           id={idVar}
@@ -202,6 +203,7 @@ export const Counter = ({
         <FieldNote
           className={styles['counter-field__note']}
           id={ariaDescribedByVar}
+          isError={isError}
         >
           {fieldNote}
         </FieldNote>

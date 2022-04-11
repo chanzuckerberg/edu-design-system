@@ -7,7 +7,7 @@ export class TokenSpecimen extends Component {
   render() {
     const componentClassName = clsx('token-specimen', this.props.className, {
       'token-specimen--stacked': this.props.behavior == 'stacked',
-      'token-specimen--inverted': this.props.name.includes('inverted'),
+      'token-specimen--inverted': this.props.name.includes('inverse'),
     });
 
     let sample;

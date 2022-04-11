@@ -217,6 +217,7 @@ export const TextField = ({
           id={idVar}
           name={name}
           value={value}
+          isError={isError}
           defaultValue={defaultValue}
           placeholder={placeholder}
           onChange={onChange}
