@@ -52,7 +52,7 @@ export const ProjectOverview = () => {
           </TextPassage>
           <Button
             className={utilityStyles['u-margin-bottom-lg']}
-            variant="link"
+            variant="linkDefault"
           >
             See More
           </Button>
