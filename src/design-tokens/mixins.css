@@ -8,9 +8,12 @@
 
 @define-mixin textLink {
   @mixin eds-theme-typography-body-text-md;
-  color: var(--eds-theme-color-text-link-strong);
-  /* TODO: underline change on hover */
+  font-size: inherit;
+  line-height: inherit;
+  text-transform: inherit;
+
   text-decoration: underline;
+  color: var(--eds-theme-color-text-link-strong);
 
   &:hover,
   &:focus {

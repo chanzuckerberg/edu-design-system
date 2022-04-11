@@ -139,8 +139,8 @@
 /**
  * Link Button
  * 1) A button that is visually styled like a text link
- * 2) Inherits size from surrounding text
- * 3) Spacing between text and icon scales with text size
+ * 2) Spacing between text and icon scales with text size
+ * 3) Inherits size from surrounding text
  */
 .button--link {
   @mixin textLink;
@@ -149,10 +149,7 @@
   border: 0;
   text-align: left;
   background-color: transparent;
-  font-size: inherit; /* 2 */
-  line-height: inherit; /* 2 */
-  text-transform: inherit; /* 2 */
-  gap: 0.25em; /* 3 */
+  gap: 0.25em; /* 2 */
 
   &:disabled,
   &:disabled:hover {
