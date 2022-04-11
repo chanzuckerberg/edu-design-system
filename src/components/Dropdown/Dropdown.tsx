@@ -19,7 +19,7 @@ type DropdownProps = ListboxProps & {
    * Text for the dropdown label.
    *
    * This is an alternative to passing <Dropdown.Label> in via `children`.
-   * If you pass in `labelText`, we expect `buttonText`, and `options` props
+   * If you pass in `labelText`, we expect `buttonText` and `options` props
    * as well and no `children`.
    */
   labelText?: ReactNode | string;
@@ -36,7 +36,7 @@ type DropdownProps = ListboxProps & {
    * Text for the dropdown label.
    *
    * This is an alternative to passing <Dropdown.Button> in via children.
-   * If you pass in `buttonText`, we expect `labelText` (or `aria-label`),
+   * If you pass in `buttonText`, we expect `labelText` (or `aria-label`)
    * and `options` props as well and no `children`.
    */
   buttonText?: ReactNode | string;
@@ -45,7 +45,7 @@ type DropdownProps = ListboxProps & {
    * an array of objects.
    *
    * This is an alternative to passing in the options via children.
-   * If you pass in `options`, we expect `labelText` (or `aria-label`),
+   * If you pass in `options`, we expect `labelText` (or `aria-label`)
    * and `buttonText` props as well and no `children`.
    */
   options?: Array<{
@@ -195,7 +195,6 @@ function childrenHaveLabelComponent(children?: ReactNode): boolean {
  *
  * Examples:
  *
- *
  * ```
  * return (
  *   <Dropdown
@@ -259,7 +258,7 @@ export function Dropdown(props: DropdownProps) {
     variant,
     optionsAlign,
     optionsClassName,
-    ...rest
+    ...other
   } = props;
 
   const compact = variant === 'compact';
@@ -283,17 +282,18 @@ export function Dropdown(props: DropdownProps) {
     }
   }
 
+  const componentClassName = clsx(
+    styles['dropdown'],
+    className,
+    compact && styles['dropdown--compact'],
+  );
   const sharedProps = {
-    className: clsx(
-      styles['dropdown'],
-      className,
-      compact && styles['dropdown--compact'],
-    ),
+    className: componentClassName,
     // Provide a wrapping <div> element for the dropdown. This is needed so that any props
     // passed directly to this component have a corresponding DOM element to receive them.
     // Otherwise we get an error.
     as: 'div' as const,
-    ...rest,
+    ...other,
   };
 
   const contextValue = Object.assign(
@@ -329,9 +329,9 @@ export function Dropdown(props: DropdownProps) {
   const optionsList = options && (
     <DropdownOptions>
       {options.map((option) => {
-        const { label, ...rest } = option;
+        const { label, ...other } = option;
         return (
-          <DropdownOption value={option} {...rest} key={option.key}>
+          <DropdownOption value={option} {...other} key={option.key}>
             {label}
           </DropdownOption>
         );
@@ -364,37 +364,34 @@ const DropdownContext = React.createContext<{
 const DropdownLabel = (props: { className?: string; children: ReactNode }) => {
   const { children, className } = props;
 
+  const componentClassName = clsx(styles['label'], className);
   return (
-    <Listbox.Label className={clsx(styles['label'], className)}>
-      {children}
-    </Listbox.Label>
+    <Listbox.Label className={componentClassName}>{children}</Listbox.Label>
   );
 };
 
 const DropdownTrigger = function (
   props: PropsWithRenderProp<{ disabled: boolean; open: boolean }>,
 ) {
-  const { children, className, ...rest } = props;
+  const { children, className, ...other } = props;
   const { compact } = useContext(DropdownContext);
 
+  const componentClassName = clsx(
+    className,
+    compact && styles['dropdown-button--compact'],
+  );
   return (
     <Listbox.Button
       // Render as a fragment instead of the default element. We're rendering our own element in
       // the render prop to control styling and positiong, and we don't want to end up with
       // duplicate buttons.
       as={React.Fragment}
-      {...rest}
+      {...other}
     >
       {typeof children === 'function' ? (
         children
       ) : (
-        <DropdownButton
-          className={clsx(
-            className,
-            compact && styles['dropdown-button--compact'],
-          )}
-          text={children}
-        />
+        <DropdownButton className={componentClassName} text={children} />
       )}
     </Listbox.Button>
   );
@@ -403,21 +400,21 @@ const DropdownTrigger = function (
 const DropdownOptions = function (
   props: PropsWithRenderProp<{ open: boolean }>,
 ) {
-  const { className, ...rest } = props;
+  const { className, ...other } = props;
   const { compact, optionsAlign, optionsClassName } =
     useContext(DropdownContext);
 
-  const computedClassName = clsx(
+  const componentClassName = clsx(
     styles['dropdown__options'],
     className,
     optionsAlign === 'right' && styles['dropdown__options--align-right'],
     optionsClassName || (!compact && styles['dropdown__options--full-width']),
   );
-  return <Listbox.Options className={computedClassName} {...rest} />;
+  return <Listbox.Options className={componentClassName} {...other} />;
 };
 
 const DropdownOption = function (props: DropdownOptionProps) {
-  const { children, className, ...rest } = props;
+  const { children, className, ...other } = props;
 
   type RenderProps = {
     active: boolean;
@@ -431,12 +428,12 @@ const DropdownOption = function (props: DropdownOptionProps) {
       // render prop to control active/selected styling, and we don't want to end up with duplicate
       // <li>'s.
       as={React.Fragment}
-      {...rest}
+      {...other}
     >
       {typeof children === 'function'
         ? children
         : ({ active, disabled, selected }: RenderProps) => {
-            const computedClassName = clsx(
+            const componentClassName = clsx(
               styles['dropdown__option'],
               active && styles['dropdown__option--active'],
               disabled && styles['dropdown__option--disabled'],
@@ -444,7 +441,7 @@ const DropdownOption = function (props: DropdownOptionProps) {
               className,
             );
             return (
-              <li className={computedClassName}>
+              <li className={componentClassName}>
                 {selected && (
                   <span className={styles['selected-icon__container']}>
                     <Icon name="check" purpose="decorative" size="1.25rem" />

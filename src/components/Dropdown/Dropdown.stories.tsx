@@ -54,12 +54,12 @@ function InteractiveExampleUsingSeparateProps(props: Props) {
   const [selectedOption, setSelectedOption] =
     React.useState<typeof exampleOptions[0]>();
 
-  const computedClassName = clsx(
+  const componentClassName = clsx(
     styles['interactive-example'],
     optionsAlign === 'right' && styles['interactive-example--align-right'],
   );
   return (
-    <div className={computedClassName}>
+    <div className={componentClassName}>
       <Dropdown
         buttonText={selectedOption?.label || 'Select'}
         className={clsx(!compact && styles['dropdown--non-compact'])}
