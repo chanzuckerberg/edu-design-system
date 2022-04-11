@@ -7,15 +7,19 @@
 }
 
 @define-mixin textLink {
+  /* TODO: inherit size */
   @mixin eds-theme-typography-body-text-md;
   color: var(--eds-theme-color-text-link-default);
+  /* TODO: underline change on hover */
   text-decoration: underline;
+  color: var(--eds-theme-color-text-link-strong);
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: var(--eds-theme-color-text-link-default-hover);
   }
 
-  &:focus-visible {
+  &:focus {
     @mixin focus;
   }
 }

@@ -54,12 +54,10 @@
  * Breacrumbs Icon
  * 1) Icon after each breadcrumb link
  */
-.breadcrumbs__icon.breadcrumbs__icon {
-  height: 0.75rem;
-  width: 0.75rem;
-  fill: var(--eds-theme-color-icon-neutral-strong);
+.breadcrumbs__icon {
   margin-left: var(--eds-size-1);
   margin-right: var(--eds-size-1);
+  fill: var(--eds-theme-color-icon-neutral-strong);
 }
 
 /**

@@ -23,7 +23,6 @@
 
 /**
   * Fieldnote icon
-  * 1) Change color to error utility
   */
 .field-note__icon.field-note__icon {
   height: var(--eds-size-2);
@@ -33,6 +32,8 @@
 
   .eds-is-error & {
     display: inline-block;
+    position: relative;
+    top: 3px;
     margin-right: var(--eds-size-1);
     fill: currentColor; /* 1 */
   }

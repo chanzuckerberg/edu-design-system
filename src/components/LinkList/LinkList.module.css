@@ -85,9 +85,6 @@
 .link-list__icon {
   position: relative;
   top: 5px;
-  height: 14px;
-  width: 14px;
-  fill: currentColor;
   transition: fill var(--eds-anim-fade-quick) var(--eds-anim-ease);
 }
 

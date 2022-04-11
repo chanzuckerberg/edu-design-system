@@ -30,8 +30,10 @@ interface IconPropsBase {
   children?: ReactNode;
   /**
    * The SVG Color, expects a valid css color (hex, rgb, etc.).
-   * Recommendation: if `currentColor` isn't sufficient, use color tokens from
-   * @chanzuckerberg/eds/lib/tokens/colors.ts
+   *
+   * Recommendation: if `currentColor` isn't sufficient,
+   * use `EdsThemeColor` tokens from
+   * `@chanzuckerberg/eds/lib/tokens/colors.ts`
    */
   color?: string;
   /**
@@ -49,8 +51,7 @@ interface IconPropsBase {
   name?: IconName;
   /**
    * Width/Height string (px, rem, em, vh, etc.)
-   * Recommendation: use "EdsFontSize" tokens from
-   * @chanzuckerberg/eds/lib/tokens/variables.json
+   * Generally prefer using "em" as it sizes to its parent container.
    */
   size?: string;
 }

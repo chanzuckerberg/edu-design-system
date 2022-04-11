@@ -1,5 +1,3 @@
-@import '../../design-tokens/mixins.css';
-
 /*------------------------------------*\
     #CHECKBOX
 \*------------------------------------*/
@@ -7,13 +5,16 @@
 /**
  * A custom individual checkbox control
  * 1) Outer wrapper div for custom control
- * 2) Determines width and height of the control
+ * 2) Grid display aligns label and the checkbox
  * 3) Prevents control from being "squished" in 
  *    a flexbox parent
  */
-.checkbox {
+.checkbox { /* 1 */
   position: relative;
-  display: block;
+  display: grid; /* 2 */
+  align-items: flex-start;
+  grid-template-columns: min-content 1fr;
+  gap: var(--eds-size-1);
   width: var(--eds-size-2-and-half); /* 2 */
   height: var(--eds-size-2-and-half); /* 2 */
   flex: none; /* 3 */
@@ -140,25 +141,4 @@
     .checkbox__input:checked + & {
       opacity: 1; /* 1 */
     }
-
-    /**
-     * Indeterminate checkbox state
-     * 1) This renders as a horizontal line to denote an indeterminate
-     *    (unclear whether checked or unchecked state)
-     * 2) Override the checked state property
-     * 3) Draw the bar shape
-     * 4) Position bar in the center of the custom checkbox
-     */
-    /* stylelint-disable-next-line max-nesting-depth */
-    .checkbox__input:indeterminate + & {
-      content: '';
-      opacity: 1;
-      transform: rotate(0deg); /* 2 */
-      border: 0; /* 2 */
-      width: 10px; /* 3 */
-      height: 2px; /* 3 */
-      background: var(--eds-theme-color-primary-foreground);
-      top: 9px; /* 4 */
-    }
-  }
 }

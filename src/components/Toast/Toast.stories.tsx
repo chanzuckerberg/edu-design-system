@@ -13,22 +13,15 @@ export default {
 
 type Args = React.ComponentProps<typeof Toast>;
 
-// Snap tests have been disabled due to errors with Icon, should be re-enabled once fixed
 export const Success: StoryObj<Args> = {
   args: {
     variant: 'success',
-  },
-  parameters: {
-    snapshot: { skip: true },
   },
 };
 
 export const Alert: StoryObj<Args> = {
   args: {
     variant: 'alert',
-  },
-  parameters: {
-    snapshot: { skip: true },
   },
 };
 
@@ -39,8 +32,5 @@ export const NotDismissable: StoryObj<Args> = {
     // @ts-ignore onDismiss is not nullable, but this is needed to remove the arg from
     // storybook's actions addon
     onDismiss: null,
-  },
-  parameters: {
-    snapshot: { skip: true },
   },
 };

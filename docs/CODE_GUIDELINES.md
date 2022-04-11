@@ -62,10 +62,10 @@ BEM conventions result in an explicit (and yes, sometimes verbose) class string 
 
 Let's take a look at the following example:
 
-`.button--inverted`
+`.button--full-width`
 
 - `button` is the block name (“Block” being the “B” in BEM)
-- `--inverted` is a modifier, indicating a stylistic variation of the block (“Modifier” being the “M” in BEM)
+- `--full-width` is a modifier, indicating a stylistic variation of the block (“Modifier” being the “M” in BEM)
 
 Here's another example:
 
@@ -230,6 +230,20 @@ Use:
     flex-direction: row;
   }
 }
+```
+
+- Avoid using classes on one component to alter the styling of a different component. For example, instead of:
+
+```css
+.banner__icon {
+  fill: var(--eds-theme-color-utility-success-foreground);
+}
+```
+
+Use:
+
+```tsx
+<Icon color={EdsThemeColorUtilitySuccessForeground} />
 ```
 
 ## Utility classes <a name="utility-classes"></a>

@@ -153,11 +153,6 @@
   .file-upload-field__filelist-item-data {
     margin-right: var(--eds-size-1);
   }
-
-  .loading-indicator__icon {
-    width: var(--eds-size-2);
-    height: var(--eds-size-2);
-  }
 }
 
 .file-upload-field__filelist-item-name {
