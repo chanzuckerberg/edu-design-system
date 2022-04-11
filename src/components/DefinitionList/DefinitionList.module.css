@@ -51,7 +51,8 @@
  * Definition list term
  */
 .definition-list-item__term {
-  @mixin eds-theme-typography-body-text-md;
+  @mixin eds-theme-typography-body-text-bold;
+  color: var(--eds-theme-color-text-neutral-strong);
 
   /**
    * Definition list term within small definition list

@@ -56,7 +56,7 @@
   color: var(--eds-theme-color-text-utility-warning);
 }
 .text--white {
-  color: var(--eds-theme-color-text-neutral-default-knockout);
+  color: var(--eds-theme-color-text-neutral-default-inverse);
 }
 
 /**

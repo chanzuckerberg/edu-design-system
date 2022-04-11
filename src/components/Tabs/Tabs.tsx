@@ -219,7 +219,7 @@ export const Tabs = ({
   const componentClassName = clsx(
     styles['tabs'],
     className,
-    inverted && 'tabs--inverted',
+    inverted && styles['tabs--inverted'],
   );
 
   const childrenWithProps = React.Children.map(tabs(), (child: any, i: any) => {
@@ -242,7 +242,10 @@ export const Tabs = ({
             const isActive = activeIndexState === i;
             return (
               <li
-                className={clsx('tabs__item', isActive && 'eds-is-active')}
+                className={clsx(
+                  styles['tabs__item'],
+                  isActive && styles['eds-is-active'],
+                )}
                 key={'tabs-item-' + i}
                 role="presentation"
               >

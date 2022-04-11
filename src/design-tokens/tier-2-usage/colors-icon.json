@@ -8,11 +8,11 @@
               "@": {
                 "value": "{eds.color.neutral.600}"
               },
-              "knockout": {
+              "inverse": {
                 "value": "{eds.color.neutral.white}"
               },
               "hover": {
-                "value": "{eds.color.neutral.800}"
+                "value": "{eds.color.neutral.700}"
               }
             },
             "strong": {
@@ -20,7 +20,7 @@
                 "value": "{eds.color.neutral.700}"
               },
               "hover": {
-                "value": "{eds.color.neutral.black}"
+                "value": "{eds.color.neutral.800}"
               }
             },
             "subtle": {

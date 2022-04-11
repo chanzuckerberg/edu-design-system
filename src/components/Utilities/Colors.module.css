@@ -9,7 +9,7 @@
  * 1) Forces color of text to be the success variable
  */
 .u-color-utility-success {
-  color: var(--eds-theme-color-utility-success-foreground) !important;
+  color: var(--eds-theme-color-text-utility-success) !important;
 }
 
 /**
@@ -17,7 +17,7 @@
  * 1) Forces color of text to be the error variable
  */
 .u-color-utility-error {
-  color: var(--eds-theme-color-utility-error-foreground) !important;
+  color: var(--eds-theme-color-text-utility-error) !important;
 }
 
 /**
@@ -25,7 +25,7 @@
  * 1) Forces color of text to be the Warning variable
  */
 .u-color-utility-warning {
-  color: var(--eds-theme-color-utility-warning-foreground) !important;
+  color: var(--eds-theme-color-text-utility-warning) !important;
 }
 
 /**
@@ -33,5 +33,5 @@
  * 1) Forces color of text to be the Info variable
  */
 .u-color-utility-info {
-  color: var(--eds-theme-color-utility-info-foreground) !important;
+  color: var(--eds-theme-color-text-utility-info) !important;
 }

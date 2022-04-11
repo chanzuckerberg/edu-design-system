@@ -105,15 +105,15 @@ export const AccordionPanel = ({
   }
 
   const componentClassName = clsx(
-    styles['accordion-panel'],
+    styles['accordion__panel'],
     className,
     isActiveVar && styles['eds-is-active'],
   );
   return (
     <div className={componentClassName} {...other} ref={panelRef}>
-      <dt className={styles['accordion-panel__header']}>
+      <dt className={styles['accordion__panel-header']}>
         <button
-          className={styles['accordion-panel__button']}
+          className={styles['accordion__panel-button']}
           aria-expanded={isActive ? true : false}
           id={ariaLabelledByVar}
           aria-controls={ariaControlsVar}
@@ -121,7 +121,7 @@ export const AccordionPanel = ({
         >
           {header}
           <Icon
-            className={styles['accordion-panel__icon']}
+            className={styles['accordion__panel-icon']}
             color={EdsThemeColorIconNeutralStrong}
             name="expand-more"
             purpose="decorative"
@@ -130,13 +130,13 @@ export const AccordionPanel = ({
         </button>
       </dt>
       <dd
-        className={styles['accordion-panel__body']}
+        className={styles['accordion__panel-body']}
         aria-labelledby={ariaLabelledByVar}
         id={ariaControlsVar}
         style={{ height: heightVar }}
       >
         <div
-          className={styles['accordion-panel__body-inner']}
+          className={styles['accordion__panel-body-inner']}
           data-accordion-panel
         >
           {children}

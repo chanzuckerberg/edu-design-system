@@ -11,4 +11,5 @@
   "typescript.validate.enable": true,
   "javascript.validate.enable": true,
   "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }

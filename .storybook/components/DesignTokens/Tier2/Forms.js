@@ -9,7 +9,7 @@ export class Tier2Forms extends Component {
       <div>
         <Section title="Form Border">
           <Grid>
-            {filterTokens(`eds-theme-form-input-border-width`).map(function (
+            {filterTokens(`eds-theme-form-border-width`).map(function (
               listItem,
               index,
             ) {
@@ -29,7 +29,7 @@ export class Tier2Forms extends Component {
               );
             })}
 
-            {filterTokens(`eds-theme-form-input-border-radius`).map(function (
+            {filterTokens(`eds-theme-form-border-radius`).map(function (
               listItem,
               index,
             ) {

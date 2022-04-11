@@ -37,7 +37,7 @@
  * Breacrumbs link
  */
 .breadcrumbs__link {
-  color: var(--eds-theme-color-neutral-md-foreground);
+  color: var(--eds-theme-color-text-neutral-subtle);
   text-decoration: none;
 
   &:hover,

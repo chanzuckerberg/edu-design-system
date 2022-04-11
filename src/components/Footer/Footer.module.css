@@ -8,6 +8,6 @@
  * 1) 
  */
 .atm-c-footer {
-  background-color: var(--eds-theme-color-neutral-subtle-background);
+  background-color: var(--eds-theme-color-background-neutral-subtle);
   padding: var(--eds-size-4);
 }

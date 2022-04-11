@@ -26,14 +26,14 @@
 .key-value-table--lined {
   border-width: var(--eds-theme-border-width);
   border-style: solid;
-  border-color: var(--eds-theme-color-neutral-subtle-border);
+  border-color: var(--eds-theme-color-border-neutral-subtle);
 }
 
 .key-value-table__row {
   .key-value-table--lined & {
     border-width: var(--eds-theme-border-width);
     border-style: solid;
-    border-color: var(--eds-theme-color-neutral-subtle-border);
+    border-color: var(--eds-theme-color-border-neutral-subtle);
   }
 }
 
@@ -55,10 +55,10 @@
     padding: var(--eds-size-1);
     border-top-width: var(--eds-theme-border-width);
     border-top-style: solid;
-    border-top-color: var(--eds-theme-color-neutral-subtle-border);
+    border-top-color: var(--eds-theme-color-border-neutral-subtle);
     border-right-width: var(--eds-theme-border-width);
     border-right-style: solid;
-    border-right-color: var(--eds-theme-color-neutral-subtle-border);
+    border-right-color: var(--eds-theme-color-border-neutral-subtle);
   }
 
   .key-value-table--lg & {
@@ -92,10 +92,10 @@
     padding: var(--eds-size-1);
     border-top-width: var(--eds-theme-border-width);
     border-top-style: solid;
-    border-top-color: var(--eds-theme-color-neutral-subtle-border);
+    border-top-color: var(--eds-theme-color-border-neutral-subtle);
     border-right-width: var(--eds-theme-border-width);
     border-right-style: solid;
-    border-right-color: var(--eds-theme-color-neutral-subtle-border);
+    border-right-color: var(--eds-theme-color-border-neutral-subtle);
   }
 
   .key-value-table--lg & {
@@ -115,6 +115,6 @@
     padding-bottom: 0;
     border-top-width: var(--eds-theme-border-width);
     border-top-style: solid;
-    border-top-color: var(--eds-theme-color-neutral-subtle-border);
+    border-top-color: var(--eds-theme-color-border-neutral-subtle);
   }
 }

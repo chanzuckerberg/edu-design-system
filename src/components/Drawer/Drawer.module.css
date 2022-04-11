@@ -55,10 +55,10 @@
   width: 28rem;
   max-width: 100%;
   transform: translateX(28rem);
-  background: var(--eds-theme-color-body-background);
+  background: var(--eds-theme-color-background-neutral-default);
   border-left-width: var(--eds-theme-border-width);
   border-left-style: solid;
-  border-left-color: var(--eds-theme-color-neutral-subtle-border);
+  border-left-color: var(--eds-theme-color-border-neutral-subtle);
   box-shadow: var(--eds-theme-box-shadow);
   transition: transform var(--eds-anim-move-quick) var(--eds-anim-ease);
 

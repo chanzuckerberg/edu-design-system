@@ -37,6 +37,10 @@ export interface Props {
     | 'numeric'
     | 'decimal';
   /**
+   * Error state of the form field
+   */
+  isError?: boolean;
+  /**
    * Maximum number the input can take. When this number equals the input value, the plus button becomes disabled.
    */
   max?: number;
@@ -118,6 +122,7 @@ export const TextInput = ({
   disabled,
   id,
   inputMode,
+  isError,
   min,
   max,
   maxLength,
@@ -138,6 +143,7 @@ export const TextInput = ({
     styles['text-input'],
     className,
     disabled && styles['eds-is-disabled'],
+    isError && styles['eds-is-error'],
   );
 
   return (
