@@ -8,6 +8,9 @@
 
 @define-mixin textLink {
   @mixin eds-theme-typography-body-text-md;
+  font-size: inherit; /* 2 */
+  line-height: inherit; /* 2 */
+  text-transform: inherit; /* 2 */
   text-decoration: underline;
   color: var(--eds-theme-color-text-link-strong);
 
