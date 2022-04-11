@@ -122,7 +122,7 @@
 /**
  * Accordion Icon
  * 1) The icon that indicates the accordion
- * 2) Double up on the classname to override default `icon` height/width
+ * 2) Double up on the classname to override default `icon` height and width
  */
 .accordion__panel-icon.accordion__panel-icon {
   margin-left: auto;
