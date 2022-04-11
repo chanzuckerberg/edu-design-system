@@ -33,9 +33,7 @@
   .eds-is-error & {
     display: inline-block;
     position: relative;
-    top: 3px;
     margin-right: var(--eds-size-1);
-    fill: currentColor; /* 1 */
   }
 }
 
