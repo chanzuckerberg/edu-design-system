@@ -76,8 +76,6 @@ export { default as Radio } from './components/Radio';
 export { default as RadioField } from './components/RadioField';
 export { default as RadioFieldItem } from './components/RadioFieldItem';
 export { default as Section } from './components/Section';
-export { default as Select } from './components/Select';
-export { default as SelectField } from './components/SelectField';
 export { default as ShowHide } from './components/ShowHide';
 export { default as SkeletonBar } from './components/SkeletonBar';
 export { default as StackedBlock } from './components/StackedBlock';
