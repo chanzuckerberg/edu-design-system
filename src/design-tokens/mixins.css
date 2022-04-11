@@ -12,7 +12,6 @@
   color: var(--eds-theme-color-text-link-default);
   /* TODO: underline change on hover */
   text-decoration: underline;
-  color: var(--eds-theme-color-text-link-strong);
 
   &:hover,
   &:focus {
