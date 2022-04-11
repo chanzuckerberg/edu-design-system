@@ -42,7 +42,8 @@
   padding: 0;
   color: var(--eds-theme-color-text-neutral-default-inverse);
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: transparent; /* TODO */
     border-color: transparent; /* TODO */
   }

@@ -63,8 +63,5 @@
  * Primary nav icon
  */
 .primary-nav__icon {
-  height: var(--eds-size-2-and-half);
-  width: var(--eds-size-2-and-half);
-  fill: var(--eds-theme-color-icon-neutral-default-inverse);
   margin-right: var(--eds-size-2-and-half);
 }

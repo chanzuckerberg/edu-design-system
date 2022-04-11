@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import React from 'react';
+import { EdsThemeColorIconNeutralDefaultInverse } from '../../tokens-dist/colors';
 import Icon, { IconName } from '../Icon';
 import styles from '../PrimaryNav/PrimaryNav.module.css';
 
@@ -57,6 +58,7 @@ export const PrimaryNavItem = React.forwardRef<HTMLLIElement, Props>(
             name={iconName}
             purpose="decorative"
             size="1.25rem"
+            color={EdsThemeColorIconNeutralDefaultInverse}
           />
           <span className={styles['primary-nav__text']}>{text}</span>
         </TagName>
