@@ -22,7 +22,7 @@
     "build:js": "tsc --project tsconfig.build.json",
     "build:storybook": "build-storybook -s public",
     "commit": "./node_modules/.bin/cz",
-    "copy-to-dist": "copyfiles -u 1 src/fonts/* src/static/* src/icons/**/* dist && yarn copy-tokens-to-dist",
+    "copy-to-dist": "copyfiles -u 1 src/fonts/* src/icons/**/* dist && yarn copy-tokens-to-dist",
     "copy-tokens-to-dist": "copyfiles -u 2 src/tokens-dist/* dist/tokens",
     "chromatic": "chromatic",
     "create-component": "plop",
