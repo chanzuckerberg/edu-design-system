@@ -13,7 +13,7 @@ export interface Props {
    * Size variations:
    * - **lg** yields a thicker horizontal rule
    */
-  size?: 'lg' | 'brand';
+  size?: 'lg';
   /**
    * CSS class names that can be appended to the component.
    */
