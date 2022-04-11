@@ -57,7 +57,6 @@
 .breadcrumbs__icon {
   margin-left: var(--eds-size-1);
   margin-right: var(--eds-size-1);
-  fill: var(--eds-theme-color-icon-neutral-strong);
 }
 
 /**
