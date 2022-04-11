@@ -26,7 +26,7 @@
  */
 .file-upload-field__hit-area {
   border: var(--eds-theme-border-width) dashed
-    var(--eds-theme-color-form-input-border);
+    var(--eds-theme-color-form-border);
   padding: var(--eds-size-2);
   position: relative;
   display: flex;
@@ -50,16 +50,16 @@
    * Hit area within error state
    */
   .eds-is-error & {
-    border-color: var(--eds-theme-color-utility-error-border);
+    border-color: var(--eds-theme-color-border-utility-error-strong);
   }
 
   /**
    * Hit area within disabled field
    */
   .eds-is-disabled & {
-    border-color: var(--eds-theme-color-disabled-border);
-    background: var(--eds-theme-color-disabled-background);
-    color: var(--eds-theme-color-disabled-foreground);
+    border-color: var(--eds-theme-color-border-disabled);
+    background: var(--eds-theme-color-background-disabled);
+    color: var(--eds-theme-color-text-disabled);
     cursor: not-allowed;
 
     /* stylelint-disable-next-line max-nesting-depth */
@@ -74,7 +74,7 @@
  */
 .file-upload-field__label {
   .eds-is-disabled & {
-    color: var(--eds-theme-color-disabled-foreground);
+    color: var(--eds-theme-color-text-disabled);
   }
 }
 

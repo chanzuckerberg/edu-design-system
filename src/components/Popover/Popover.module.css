@@ -40,7 +40,7 @@
     position: absolute;
     left: 0.625rem;
     top: 100%;
-    border-top: 10px solid var(--eds-color-neutral-white);
+    border-top: 10px solid var(--eds-theme-color-background-neutral-default);
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
     border-bottom: none;
@@ -95,7 +95,7 @@
     left: unset;
     border-top: none;
     border-right: 8px solid transparent;
-    border-bottom: 10px solid var(--eds-color-neutral-white);
+    border-bottom: 10px solid var(--eds-theme-color-background-neutral-default);
     border-left: 8px solid transparent;
   }
 }
@@ -117,7 +117,7 @@
     top: unset;
     border-top: none;
     border-right: 8px solid transparent;
-    border-bottom: 10px solid var(--eds-color-neutral-white);
+    border-bottom: 10px solid var(--eds-theme-color-background-neutral-default);
     border-left: 8px solid transparent;
   }
 }

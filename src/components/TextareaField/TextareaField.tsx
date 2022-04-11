@@ -199,6 +199,7 @@ export const TextareaField = ({
           defaultValue={defaultValue}
           placeholder={placeholder}
           onChange={onChange}
+          isError={isError}
           inputMode={inputMode}
           maxLength={maxLength}
           disabled={disabled}

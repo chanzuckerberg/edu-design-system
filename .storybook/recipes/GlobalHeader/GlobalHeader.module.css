@@ -40,6 +40,13 @@
  */
 .global-header__menu-button.global-header__menu-button {
   padding: 0;
+  color: var(--eds-theme-color-text-neutral-default-inverse);
+
+  &:hover,
+  &:focus {
+    background-color: transparent; /* TODO */
+    border-color: transparent; /* TODO */
+  }
 
   @media all and (min-width: $eds-bp-xl) {
     display: none; /* 1 */

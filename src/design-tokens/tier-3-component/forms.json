@@ -19,7 +19,19 @@
               "value": "{eds.color.neutral.100}"
             }
           },
-          "label": { "value": "{eds.color.neutral.700}" }
+          "label": {
+            "value": "{eds.color.neutral.700}"
+          }
+        }
+      },
+      "form": {
+        "border": {
+          "width": {
+            "value": "{eds.border.width.sm}"
+          },
+          "radius": {
+            "value": "{eds.theme.border.radius}"
+          }
         }
       }
     }

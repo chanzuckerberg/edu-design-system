@@ -9,7 +9,8 @@
  * 3) Prevents control from being "squished" in 
  *    a flexbox parent
  */
-.checkbox { /* 1 */
+.checkbox {
+  /* 1 */
   position: relative;
 
   display: grid; /* 2 */

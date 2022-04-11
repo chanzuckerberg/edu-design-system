@@ -1,37 +1,37 @@
-@import '../../design-tokens/tier-2-usage/typography-usage.css';
+@import '../../design-tokens/mixins.css';
 
 /*------------------------------------*\
-    #ACCORDION PANEL
+    #ACCORDION
 \*------------------------------------*/
 
 /**
- * 1) An individual accordion group containing a button-triggered header and an expanding body
+ * Individual accordion panel
  */
-/**
- * Individual accordion item
- */
-.accordion-panel {
+.accordion__panel {
   border-top-style: solid;
   border-top-width: var(--eds-theme-border-width);
-  border-top-color: var(--eds-theme-color-neutral-subtle-border);
+  border-top-color: var(--eds-theme-color-border-neutral-subtle);
 }
 
 /**
  * Active accordion panel
  */
-.accordion-panel.eds-is-active {
+.accordion__panel.eds-is-active {
   padding-bottom: var(--eds-size-4);
 }
 
 /**
  * Accordion panel in an inverted accordion 
  */
-.accordion--inverted .accordion-panel {
-  border-top-color: var(--eds-theme-color-neutral-subtle-border-inverted);
-  border-bottom-color: var(--eds-theme-color-neutral-subtle-border-inverted);
+.accordion--inverted .accordion__panel {
+  border-top-color: var(--eds-theme-color-border-neutral-strong);
+  border-bottom-color: var(--eds-theme-color-border-neutral-strong);
 }
 
-.accordion-panel__header {
+/**
+ * Accordion panel header
+ */
+.accordion__panel-header {
   padding: 0;
   margin: 0;
 }
@@ -40,7 +40,7 @@
  * Accordion Button
  * 1) The accordion trigger marked up as a <button>
  */
-.accordion-panel__button {
+.accordion__panel-button {
   all: inherit;
   display: flex;
   align-items: center;
@@ -55,52 +55,27 @@
   cursor: pointer;
 }
 
-.accordion-panel__button:focus-visible {
-  /* Include focus styles */
-}
-
-.accordion-panel--disabled .accordion-panel__button {
-  pointer-events: none;
+/**
+ * Accordion panel button focus visible
+ * 1) Show focus ring when focused only with keyboard
+ */
+.accordion__panel-button:focus-visible {
+  @mixin focus;
 }
 
 /**
- * Accordion Title
+ * Accordion panel button within inverted accordion
  * 1) The wrapper for the text
  */
-.accordion-panel__title {
-  flex: 1;
-  margin-right: var(--eds-size-2);
-}
-
-/**
- * Accordion panel title kicker
- * 1) Optional secondary text that sits above the title
- */
-.accordion-panel__title-kicker {
-  @mixin eds-theme-typography-kicker;
-  display: block;
-}
-
-/**
- * Accordion title text
- * 1) Main title text of the accordion panel trigger
- */
-.accordion-panel__title-text {
-  @mixin eds-theme-typography-heading-3;
-}
-
-/**
-* Accordion title text within inverted accordion
-*/
-.accordion--inverted .accordion-panel__title-text {
-  color: var(--eds-theme-color-body-foreground-inverted);
+.accordion--inverted .accordion__panel-button {
+  color: var(--eds-theme-color-text-neutral-default-inverse);
 }
 
 /**
  * Accordion body
  * 1) Set max height to 0 and overflow to hidden to get smoother transition when activated
  */
-.accordion-panel__body {
+.accordion__panel-body {
   display: block;
   overflow: hidden;
   visibility: hidden;
@@ -116,14 +91,14 @@
 /**
  * Accordion body within active accordion panel
  */
-.accordion--inverted .accordion-panel__body {
-  color: var(--eds-theme-color-body-foreground-inverted);
+.accordion--inverted .accordion__panel-body {
+  color: var(--eds-theme-color-text-neutral-default-inverse);
 }
 
 /**
  * Accordion body within active accordion panel
  */
-.accordion-panel.eds-is-active .accordion-panel__body {
+.accordion__panel.eds-is-active .accordion__panel-body {
   opacity: 1;
   visibility: visible;
   overflow: visible;
@@ -133,43 +108,23 @@
  * Accordion panel left
  * 1) Section that contains the title and other text of the accordion
  */
-.accordion-panel__left {
+.accordion__panel-left {
   flex: 1;
 }
 
 @media all and (min-width: $eds-bp-md) {
-  .accordion-panel__left {
+  .accordion__panel-left {
     display: flex;
     align-items: center;
   }
 }
 
 /**
- * Accordion panel title after
- * 1) Slot that comes after the title (e.g. to add icons)
- */
-.accordion-panel__title-after {
-  margin-top: 0.5rem;
-}
-
-@media all and (min-width: $eds-bp-md) {
-  .accordion-panel__title-after {
-    margin-top: 0;
-    margin-left: auto;
-    margin-right: 2rem;
-  }
-}
-
-.accordion-panel__meta {
-  @mixin eds-theme-typography-body-text-sm;
-  margin-right: var(--eds-size-2);
-}
-
-/**
  * Accordion Icon
  * 1) The icon that indicates the accordion
+ * 2) Double up on the classname to override default `icon` height and width
  */
-.accordion-panel__icon {
+.accordion__panel-icon.accordion__panel-icon {
   margin-left: auto;
   transition: transform var(--eds-anim-fade-quick) var(--eds-anim-ease);
 }
@@ -177,6 +132,6 @@
 /**
  * Accordion icon within active accordion panel
  */
-.accordion-panel.eds-is-active .accordion-panel__icon {
+.accordion__panel.eds-is-active .accordion__panel-icon {
   transform: rotate(-180deg);
 }

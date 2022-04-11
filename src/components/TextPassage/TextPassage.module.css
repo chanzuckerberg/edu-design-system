@@ -103,7 +103,7 @@
     font-style: italic;
     border-left-width: var(--eds-theme-border-width);
     border-left-style: solid;
-    border-left-color: var(--eds-theme-color-primary-border);
+    border-left-color: var(--eds-theme-color-border-brand-primary-strong);
     padding-left: var(--eds-size-2);
     margin-left: 0;
     margin-bottom: var(--eds-size-3);
@@ -115,7 +115,7 @@
   hr {
     border-width: var(--eds-theme-border-width);
     border-style: solid;
-    border-color: var(--eds-theme-color-neutral-subtle-border);
+    border-color: var(--eds-theme-color-border-neutral-subtle);
     margin: var(--eds-size-3) 0;
   }
 }
@@ -165,7 +165,7 @@
 }
 
 .text-passage--inverted {
-  color: var(--eds-theme-color-body-foreground-inverted);
+  color: var(--eds-theme-color-text-neutral-default-inverse);
 
   a {
     @mixin TextLinkInverted;
