@@ -81,7 +81,7 @@
   vertical-align: top;
   border-bottom-width: var(--eds-theme-border-width);
   border-bottom-style: solid;
-  border-bottom-color: var(--eds-theme-color-neutral-subtle-border);
+  border-bottom-color: var(--eds-theme-color-border-neutral-subtle);
 
   /**
   * Last table row in the table
@@ -98,7 +98,7 @@
     * Even table rows within zebra table
     */
     &:nth-child(even) {
-      background: var(--eds-theme-color-neutral-subtle-background);
+      background: var(--eds-theme-color-background-neutral-medium);
     }
   }
 }
@@ -119,7 +119,7 @@
   cursor: pointer;
 
   &:hover {
-    background: var(--eds-theme-color-neutral-subtle-background);
+    background: var(--eds-theme-color-background-neutral-subtle);
   }
 }
 
@@ -149,7 +149,7 @@
     @mixin eds-theme-typography-kicker-sm;
     border-bottom-width: var(--eds-theme-border-width);
     border-bottom-style: solid;
-    border-bottom-color: var(--eds-theme-color-neutral-subtle-border);
+    border-bottom-color: var(--eds-theme-color-border-neutral-subtle);
     background-clip: padding-box;
 
     &.table__cell--align-left {
@@ -213,7 +213,7 @@
   .table--lined & {
     border-width: var(--eds-theme-border-width);
     border-style: solid;
-    border-color: var(--eds-theme-color-neutral-subtle-border);
+    border-color: var(--eds-theme-color-border-neutral-subtle);
   }
 
   /**

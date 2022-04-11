@@ -332,6 +332,7 @@ export const FileUploadField = ({
             id={idVar}
             name={name}
             value=""
+            isError={isError}
             placeholder={placeholder}
             onChange={(e) => onFileInputChange(e)}
             inputMode={inputMode}
@@ -354,6 +355,7 @@ export const FileUploadField = ({
         <FieldNote
           className={styles['file-upload-field__note']}
           id={ariaDescribedByVar}
+          isError={isError}
         >
           {fieldNoteState}
         </FieldNote>

@@ -1,10 +1,8 @@
 @import '../../design-tokens/mixins.css';
 
-
 /*------------------------------------*\
     #CHECKBOX INPUT
 \*------------------------------------*/
-
 
 /**
  * Wrapper for the checkbox, including the visually hidden input element.
@@ -12,12 +10,12 @@
  *    when a (n^c)parent element in the tree is relatively positioned.
  * 2) line-height is set to be same as checkbox size to equal checkbox size and prevent browser styling.
  */
- .input__wrapper {
-    position: relative; /* 1 */
-    line-height: var(--checkbox-svg-size); /* 2 */
-  }
-  
-  /**
+.input__wrapper {
+  position: relative; /* 1 */
+  line-height: var(--checkbox-svg-size); /* 2 */
+}
+
+/**
    * The visually hidden input element for the checkbox. The visual checkmark is provided by an svg element.
    * 1) Removes default margins placed by browser for checkboxes.
    * 2) Remove the checkbox from the page flow, positioning it on top of the SVG.
@@ -27,49 +25,49 @@
    *    especially on touch screen readers, still interact with the real checkbox element
    *    where it would naturally be present.
    */
-  .checkbox__input {
-    cursor: pointer;
-  
-    margin: 0; /* 1 */
-  
-    position: absolute; /* 2 */
-  
-    height: var(--checkbox-svg-size); /* 3 */
-    width: var(--checkbox-svg-size);
-  
-    opacity: 0; /* 4 */
-  }
-  
-  /**
+.checkbox__input {
+  cursor: pointer;
+
+  margin: 0; /* 1 */
+
+  position: absolute; /* 2 */
+
+  height: var(--checkbox-svg-size); /* 3 */
+  width: var(--checkbox-svg-size);
+
+  opacity: 0; /* 4 */
+}
+
+/**
    * The visible checkbox graphic.
    * 1) Provides a focus indicator outline around the checkbox.
    */
-  .checkbox__input + svg {
-    vertical-align: top;
-  
-    display: inline-block;
-  
-    color: var(--eds-theme-color-icon-neutral-default);
-    --checked-color: var(--eds-theme-color-icon-brand-primary);
-  }
-  .checkbox__input:checked + svg > .checkmark__outline {
-    fill: var(--checked-color);
-    stroke: var(--checked-color);
-  }
-  .checkbox__input:checked + svg >.checkmark__content {
-    fill: var(--eds-theme-color-icon-neutral-default-knockout);
-  }
-  .checkbox__input:focus + svg {
-    @mixin focus; /* 1 */
-  }
-  
-  /**
+.checkbox__input + svg {
+  vertical-align: top;
+
+  display: inline-block;
+
+  color: var(--eds-theme-color-icon-neutral-default);
+  --checked-color: var(--eds-theme-color-icon-brand-primary);
+}
+.checkbox__input:checked + svg > .checkmark__outline {
+  fill: var(--checked-color);
+  stroke: var(--checked-color);
+}
+.checkbox__input:checked + svg > .checkmark__content {
+  fill: var(--eds-theme-color-icon-neutral-default-inverse);
+}
+.checkbox__input:focus + svg {
+  @mixin focus; /* 1 */
+}
+
+/**
    * Disabled styles 
    */
-  .checkbox__input:disabled {
-    cursor: not-allowed;
-  }
-  .checkbox__input:disabled + svg {
-    color: var(--eds-theme-color-icon-disabled);
-    --checked-color: var(--eds-theme-color-icon-disabled);
-  }
+.checkbox__input:disabled {
+  cursor: not-allowed;
+}
+.checkbox__input:disabled + svg {
+  color: var(--eds-theme-color-icon-disabled);
+  --checked-color: var(--eds-theme-color-icon-disabled);
+}

@@ -39,8 +39,13 @@ $eds-color-other-mint-600: #008656 !default;
 $eds-color-other-mint-700: #007249 !default;
 $eds-color-other-mint-800: #005939 !default;
 $eds-color-other-yellow-100: #FFF1E9 !default;
+$eds-color-other-yellow-200: #FFEBB3 !default;
 $eds-color-other-yellow-300: #FFDD80 !default;
 $eds-color-other-yellow-400: #F7BE2D !default;
+$eds-color-other-yellow-500: #D18400 !default;
+$eds-color-other-yellow-600: #BF7300 !default;
+$eds-color-other-yellow-700: #9E5B03 !default;
+$eds-color-other-yellow-800: #854C03 !default;
 $eds-color-other-lemon: #F5FF8F !default;
 $eds-color-other-orange-100: #FFF1E9 !default;
 $eds-color-other-orange-200: #FFCBA5 !default;
@@ -108,7 +113,7 @@ $eds-theme-color-background-neutral-subtle-hover: #E7E8EA !default;
 $eds-theme-color-background-neutral-medium: #E7E8EA !default;
 $eds-theme-color-background-neutral-medium-hover: #C0C4C8 !default;
 $eds-theme-color-background-brand-primary-default: #F0F0FC !default;
-$eds-theme-color-background-brand-primary-strong: #5751D2 !default;
+$eds-theme-color-background-brand-primary-strong: #6B65E2 !default;
 $eds-theme-color-background-utility-success: #ECFFF5 !default;
 $eds-theme-color-background-utility-warning: #FFF1E9 !default;
 $eds-theme-color-background-utility-error: #FFF0F4 !default;
@@ -119,30 +124,35 @@ $eds-theme-color-background-grade-revise-subtle: #FFF1E9 !default;
 $eds-theme-color-background-grade-stop-default: #D41E52 !default;
 $eds-theme-color-background-grade-stop-subtle: #FFF0F4 !default;
 $eds-theme-color-background-disabled: #C0C4C8 !default;
-$eds-theme-color-border-neutral-default: #C0C4C8 !default;
-$eds-theme-color-border-neutral-default-hover: #A2A3A8 !default;
-$eds-theme-color-border-neutral-strong: #878C90 !default;
-$eds-theme-color-border-neutral-strong-hover: #707070 !default;
 $eds-theme-color-border-neutral-subtle: #E7E8EA !default;
 $eds-theme-color-border-neutral-subtle-hover: #C0C4C8 !default;
+$eds-theme-color-border-neutral-default: #C0C4C8 !default;
+$eds-theme-color-border-neutral-default-hover: #A2A3A8 !default;
+$eds-theme-color-border-neutral-strong: #A2A3A8 !default;
+$eds-theme-color-border-neutral-strong-hover: #878C90 !default;
+$eds-theme-color-border-brand-primary-subtle: #E0E0F9 !default;
 $eds-theme-color-border-brand-primary: #C4C1F3 !default;
-$eds-theme-color-border-brand-primary-hover: #A6A3EE !default;
+$eds-theme-color-border-brand-primary-strong: #A6A3EE !default;
+$eds-theme-color-border-utility-success-subtle: #B7E9CE !default;
 $eds-theme-color-border-utility-success-default: #8FDCB3 !default;
-$eds-theme-color-border-utility-success-strong: #00A56A !default;
+$eds-theme-color-border-utility-success-strong: #59C88C  !default;
+$eds-theme-color-border-utility-warning-subtle: #FFCBA5 !default;
 $eds-theme-color-border-utility-warning-default: #FFAF76 !default;
-$eds-theme-color-border-utility-warning-strong: #E06B00 !default;
+$eds-theme-color-border-utility-warning-strong: #F6924A !default;
+$eds-theme-color-border-utility-error-subtle: #FFCBD7 !default;
 $eds-theme-color-border-utility-error-default: #FB90B0 !default;
-$eds-theme-color-border-utility-error-strong: #F1497B !default;
+$eds-theme-color-border-utility-error-strong: #F76C96 !default;
 $eds-theme-color-border-grade-complete: #8FDCB3 !default;
+$eds-theme-color-border-grade-revise-subtle: #FFEBB3 !default;
 $eds-theme-color-border-grade-revise-default: #FFDD80 !default;
-$eds-theme-color-border-grade-revise-subtle: #FFF1E9 !default;
+$eds-theme-color-border-grade-revise-strong: #F7BE2D !default;
 $eds-theme-color-border-grade-stop: #FB90B0 !default;
-$eds-theme-color-border-disabled: #C0C4C8 !default;
+$eds-theme-color-border-disabled: #F5F6F8 !default;
 $eds-theme-color-icon-neutral-default: #707070 !default;
-$eds-theme-color-icon-neutral-default-knockout: #ffffff !default;
-$eds-theme-color-icon-neutral-default-hover: #21272D !default;
+$eds-theme-color-icon-neutral-default-inverse: #ffffff !default;
+$eds-theme-color-icon-neutral-default-hover: #505058 !default;
 $eds-theme-color-icon-neutral-strong: #505058 !default;
-$eds-theme-color-icon-neutral-strong-hover: #161B1F !default;
+$eds-theme-color-icon-neutral-strong-hover: #21272D !default;
 $eds-theme-color-icon-neutral-subtle: #878C90 !default;
 $eds-theme-color-icon-neutral-subtle-hover: #707070 !default;
 $eds-theme-color-icon-link-default: #8984E8 !default;
@@ -163,7 +173,7 @@ $eds-theme-color-icon-grade-stop: #F1497B !default;
 $eds-theme-color-icon-grade-stop-hover: #F1497B !default;
 $eds-theme-color-icon-disabled: #C0C4C8 !default;
 $eds-theme-color-text-neutral-default: #505058 !default;
-$eds-theme-color-text-neutral-default-knockout: #ffffff !default;
+$eds-theme-color-text-neutral-default-inverse: #ffffff !default;
 $eds-theme-color-text-neutral-strong: #21272D !default;
 $eds-theme-color-text-neutral-subtle: #707070 !default;
 $eds-theme-color-text-link-default: #21272D !default;
@@ -238,6 +248,8 @@ $eds-theme-color-form-label: #505058 !default;
 $eds-theme-color-text-highlight-foreground: #21272D !default;
 $eds-theme-color-text-highlight-background: #F5FF8F !default;
 $eds-theme-box-shadow: 0px 0px 0px 1px var(--eds-color-neutral-200), 0px 2px 3px rgba(0, 0, 0, 0.02), 0px 4px 8px rgba(0, 0, 0, 0.08) !default;
+$eds-theme-form-border-width: 1px !default;
+$eds-theme-form-border-radius: 4px !default;
 
 $tokens: (
   'eds': (
@@ -304,8 +316,13 @@ $tokens: (
         ),
         'yellow': (
           '100': $eds-color-other-yellow-100,
+          '200': $eds-color-other-yellow-200,
           '300': $eds-color-other-yellow-300,
-          '400': $eds-color-other-yellow-400
+          '400': $eds-color-other-yellow-400,
+          '500': $eds-color-other-yellow-500,
+          '600': $eds-color-other-yellow-600,
+          '700': $eds-color-other-yellow-700,
+          '800': $eds-color-other-yellow-800
         ),
         'lemon': $eds-color-other-lemon,
         'orange': (
@@ -437,6 +454,10 @@ $tokens: (
         ),
         'border': (
           'neutral': (
+            'subtle': (
+              '@': $eds-theme-color-border-neutral-subtle,
+              'hover': $eds-theme-color-border-neutral-subtle-hover
+            ),
             'default': (
               '@': $eds-theme-color-border-neutral-default,
               'hover': $eds-theme-color-border-neutral-default-hover
@@ -444,28 +465,28 @@ $tokens: (
             'strong': (
               '@': $eds-theme-color-border-neutral-strong,
               'hover': $eds-theme-color-border-neutral-strong-hover
-            ),
-            'subtle': (
-              '@': $eds-theme-color-border-neutral-subtle,
-              'hover': $eds-theme-color-border-neutral-subtle-hover
             )
           ),
           'brand': (
             'primary': (
+              'subtle': $eds-theme-color-border-brand-primary-subtle,
               '@': $eds-theme-color-border-brand-primary,
-              'hover': $eds-theme-color-border-brand-primary-hover
+              'strong': $eds-theme-color-border-brand-primary-strong
             )
           ),
           'utility': (
             'success': (
+              'subtle': $eds-theme-color-border-utility-success-subtle,
               'default': $eds-theme-color-border-utility-success-default,
               'strong': $eds-theme-color-border-utility-success-strong
             ),
             'warning': (
+              'subtle': $eds-theme-color-border-utility-warning-subtle,
               'default': $eds-theme-color-border-utility-warning-default,
               'strong': $eds-theme-color-border-utility-warning-strong
             ),
             'error': (
+              'subtle': $eds-theme-color-border-utility-error-subtle,
               'default': $eds-theme-color-border-utility-error-default,
               'strong': $eds-theme-color-border-utility-error-strong
             )
@@ -473,8 +494,9 @@ $tokens: (
           'grade': (
             'complete': $eds-theme-color-border-grade-complete,
             'revise': (
+              'subtle': $eds-theme-color-border-grade-revise-subtle,
               'default': $eds-theme-color-border-grade-revise-default,
-              'subtle': $eds-theme-color-border-grade-revise-subtle
+              'strong': $eds-theme-color-border-grade-revise-strong
             ),
             'stop': $eds-theme-color-border-grade-stop
           ),
@@ -484,7 +506,7 @@ $tokens: (
           'neutral': (
             'default': (
               '@': $eds-theme-color-icon-neutral-default,
-              'knockout': $eds-theme-color-icon-neutral-default-knockout,
+              'inverse': $eds-theme-color-icon-neutral-default-inverse,
               'hover': $eds-theme-color-icon-neutral-default-hover
             ),
             'strong': (
@@ -542,7 +564,7 @@ $tokens: (
           'neutral': (
             'default': (
               '@': $eds-theme-color-text-neutral-default,
-              'knockout': $eds-theme-color-text-neutral-default-knockout
+              'inverse': $eds-theme-color-text-neutral-default-inverse
             ),
             'strong': $eds-theme-color-text-neutral-strong,
             'subtle': $eds-theme-color-text-neutral-subtle
@@ -694,7 +716,13 @@ $tokens: (
           'background': $eds-theme-color-text-highlight-background
         )
       ),
-      'box-shadow': $eds-theme-box-shadow
+      'box-shadow': $eds-theme-box-shadow,
+      'form': (
+        'border': (
+          'width': $eds-theme-form-border-width,
+          'radius': $eds-theme-form-border-radius
+        )
+      )
     )
   )
 );

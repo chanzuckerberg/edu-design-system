@@ -9,6 +9,6 @@
  */
 .tile {
   padding: var(--eds-size-2);
-  background: var(--eds-theme-color-neutral-subtle-background);
+  background: var(--eds-theme-color-background-neutral-subtle);
   border-radius: var(--eds-theme-border-radius);
 }

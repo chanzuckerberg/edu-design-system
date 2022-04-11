@@ -64,5 +64,5 @@
   color: var(--eds-theme-color-text-utility-warning);
 }
 .heading--white {
-  color: var(--eds-theme-color-text-neutral-default-knockout);
+  color: var(--eds-theme-color-text-neutral-default-inverse);
 }

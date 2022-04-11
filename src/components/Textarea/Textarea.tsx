@@ -32,6 +32,10 @@ export interface Props {
     | 'numeric'
     | 'decimal';
   /**
+   * Error state of the form field
+   */
+  isError?: boolean;
+  /**
    * Max number of characters for the text input
    */
   maxLength?: number;
@@ -79,6 +83,7 @@ export const Textarea = ({
   disabled,
   id,
   inputMode,
+  isError,
   maxLength,
   name,
   onChange,
@@ -91,7 +96,12 @@ export const Textarea = ({
   defaultValue,
   ...other
 }: Props) => {
-  const componentClassName = clsx(styles['textarea'], className, {});
+  const componentClassName = clsx(
+    styles['textarea'],
+    className,
+    disabled && styles['eds-is-disabled'],
+    isError && styles['eds-is-error'],
+  );
 
   return (
     <textarea
