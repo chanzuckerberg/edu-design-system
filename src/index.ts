@@ -100,7 +100,6 @@ export { default as Textarea } from './components/Textarea';
 export { default as TextareaField } from './components/TextareaField';
 export { default as TextField } from './components/TextField';
 export { default as TextInput } from './components/TextInput';
-export { default as TextLink } from './components/TextLink';
 export { default as TextList } from './components/TextList';
 export { default as TextPassage } from './components/TextPassage';
 export { default as Tile } from './components/Tile';
