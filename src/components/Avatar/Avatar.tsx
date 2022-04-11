@@ -1,6 +1,5 @@
 import clsx from 'clsx';
 import React from 'react';
-import styles from './Avatar.module.css';
 
 import AvatarImage from '../AvatarImage';
 
@@ -15,7 +14,7 @@ export interface Props {
  * Primary UI component for user interaction
  */
 export const Avatar = ({ className, ...other }: Props) => {
-  const componentClassName = clsx(styles['avatar'], className, {});
+  const componentClassName = clsx('avatar', className, {});
   return (
     <div className={componentClassName} {...other}>
       <AvatarImage />
