@@ -386,7 +386,7 @@ exports[`<Button /> SecondarySmall story renders snapshot 1`] = `
 </button>
 `;
 
-exports[`<Button /> Teritary story renders snapshot 1`] = `
+exports[`<Button /> Tertiary story renders snapshot 1`] = `
 <button
   class="button button--lg button--tertiary"
 >
@@ -394,7 +394,7 @@ exports[`<Button /> Teritary story renders snapshot 1`] = `
 </button>
 `;
 
-exports[`<Button /> TeritaryDisabled story renders snapshot 1`] = `
+exports[`<Button /> TertiaryDisabled story renders snapshot 1`] = `
 <button
   class="button button--lg button--tertiary"
   disabled=""
@@ -404,7 +404,7 @@ exports[`<Button /> TeritaryDisabled story renders snapshot 1`] = `
 </button>
 `;
 
-exports[`<Button /> TeritaryLeftIcon story renders snapshot 1`] = `
+exports[`<Button /> TertiaryLeftIcon story renders snapshot 1`] = `
 <button
   class="button button--lg button--tertiary"
 >
@@ -422,7 +422,7 @@ exports[`<Button /> TeritaryLeftIcon story renders snapshot 1`] = `
 </button>
 `;
 
-exports[`<Button /> TeritaryMedium story renders snapshot 1`] = `
+exports[`<Button /> TertiaryMedium story renders snapshot 1`] = `
 <button
   class="button button--md button--tertiary"
 >
@@ -430,7 +430,7 @@ exports[`<Button /> TeritaryMedium story renders snapshot 1`] = `
 </button>
 `;
 
-exports[`<Button /> TeritaryRightIcon story renders snapshot 1`] = `
+exports[`<Button /> TertiaryRightIcon story renders snapshot 1`] = `
 <button
   class="button button--lg button--tertiary"
 >
@@ -448,7 +448,7 @@ exports[`<Button /> TeritaryRightIcon story renders snapshot 1`] = `
 </button>
 `;
 
-exports[`<Button /> TeritarySmall story renders snapshot 1`] = `
+exports[`<Button /> TertiarySmall story renders snapshot 1`] = `
 <button
   class="button button--sm button--tertiary"
 >
