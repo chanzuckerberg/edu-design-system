@@ -84,7 +84,7 @@ export const ModalExample = ({
           </TextPassage>
         </ModalBody>
         <ModalFooter>
-          <ButtonGroup align="right">
+          <ButtonGroup>
             <Button variant="primary" onClick={closeContinueModal}>
               Submit
             </Button>

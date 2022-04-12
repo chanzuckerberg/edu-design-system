@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ButtonGroup /> Default story renders snapshot 1`] = `
+<div
+  class="button-group button-group--spacing-1x"
+>
+  <button
+    class="button button--lg button--primary"
+  >
+    Button 1
+  </button>
+  <button
+    class="button button--lg button--secondary"
+  >
+    Button 2
+  </button>
+</div>
+`;
+
+exports[`<ButtonGroup /> SpacingMax story renders snapshot 1`] = `
+<div
+  class="button-group button-group--spacing-max"
+>
+  <button
+    class="button button--lg button--primary"
+  >
+    Button 1
+  </button>
+  <button
+    class="button button--lg button--secondary"
+  >
+    Button 2
+  </button>
+</div>
+`;
+
+exports[`<ButtonGroup /> SpacingNone story renders snapshot 1`] = `
+<div
+  class="button-group"
+>
+  <button
+    class="button button--lg button--primary"
+  >
+    Button 1
+  </button>
+  <button
+    class="button button--lg button--secondary"
+  >
+    Button 2
+  </button>
+</div>
+`;
+
+exports[`<ButtonGroup /> Vertical story renders snapshot 1`] = `
+<div
+  class="button-group button-group--spacing-1x button-group--vertical"
+>
+  <button
+    class="button button--lg button--primary"
+  >
+    Button 1
+  </button>
+  <button
+    class="button button--lg button--secondary"
+  >
+    Button 2
+  </button>
+</div>
+`;
+
+exports[`<ButtonGroup /> WithFiveButtons story renders snapshot 1`] = `
+<div
+  class="button-group button-group--spacing-1x"
+>
+  <button
+    class="button button--lg button--secondary"
+  >
+    Button 1
+  </button>
+  <button
+    class="button button--lg button--secondary"
+  >
+    Button 2
+  </button>
+  <button
+    class="button button--lg button--secondary"
+  >
+    Button 3
+  </button>
+  <button
+    class="button button--lg button--secondary"
+  >
+    Button 4
+  </button>
+  <button
+    class="button button--lg button--primary"
+  >
+    Button 5
+  </button>
+</div>
+`;

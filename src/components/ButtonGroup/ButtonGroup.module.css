@@ -3,31 +3,37 @@
 \*------------------------------------*/
 
 /**
- * 1) A group of buttons displayed in a horizontal fashion
+ * A group of buttons displayed in an organized fashion.
  */
 .button-group {
-  display: flex;
-  align-items: center;
-  gap: var(--eds-size-2);
+  display: inline-grid;
+  grid-auto-flow: column;
 }
 
 /**
- * Responsive button group
- * 1) A button group that's stacked by default then moves side-by-side
- *    when space becomes available 
+ * Spacing variants.
  */
-.button-group--responsive {
-  @media all and (max-width: $eds-bp-md) {
-    align-items: flex-start;
-    flex-direction: column;
-  }
+.button-group--spacing-1x {
+  gap: var(--eds-size-1);
+}
+.button-group--spacing-max {
+  width: 100%;
+  justify-content: space-between;
 }
 
 /**
- * Stacked button group
+ * Vertical orientation variant.
  */
-.button-group--stacked {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+.button-group--vertical {
+  grid-auto-flow: row;
+}
+
+/**
+ * Vertical spacing max variant.
+ * Hopefully no one actually ever uses this... 
+ */
+.button-group--spacing-max.button-group--vertical {
+  width: 100%;
+  height: 100%;
+  align-content: center;
 }
