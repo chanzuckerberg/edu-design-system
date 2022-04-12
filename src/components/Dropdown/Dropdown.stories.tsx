@@ -1,17 +1,31 @@
-import { StoryObj } from "@storybook/react";
-import { within } from "@storybook/testing-library";
-import React from "react";
-import Icon from "../Icon";
-import Dropdown, { OptionsAlignType, VariantType } from "./Dropdown";
+import { StoryObj, Meta } from '@storybook/react';
+import { within } from '@storybook/testing-library';
+import clsx from 'clsx';
+import React from 'react';
+import { Dropdown, OptionsAlignType, VariantType } from './Dropdown';
+import styles from './Dropdown.stories.module.css';
+import DropdownButton from '../DropdownButton';
+import Icon from '../Icon';
 
 export default {
-  title: "Dropdown",
+  title: 'Molecules/Forms/Dropdown',
   component: Dropdown,
-};
+  decorators: [
+    (Story) => (
+      <div
+        style={{
+          margin: '1rem', // Provides spacing to see activity around dropdown.
+        }}
+      >
+        <Story />
+      </div>
+    ),
+  ],
+} as Meta;
 
 type Props = {
   labelText?: string;
-  "aria-label"?: string;
+  'aria-label'?: string;
   labelComponent?: React.ReactNode;
   optionsAlign?: OptionsAlignType;
   optionsClassName?: string;
@@ -20,31 +34,35 @@ type Props = {
 
 const exampleOptions = [
   {
-    key: "1",
-    label: "Dogs",
+    key: '1',
+    label: 'Dogs',
   },
   {
-    key: "2",
-    label: "Cats",
+    key: '2',
+    label: 'Cats',
   },
   {
-    key: "3",
-    label: "Birds",
+    key: '3',
+    label: 'Birds',
   },
 ];
 
 function InteractiveExampleUsingSeparateProps(props: Props) {
   const { optionsAlign, optionsClassName, variant } = props;
-  const compact = variant === "compact";
+  const compact = variant === 'compact';
 
   const [selectedOption, setSelectedOption] =
     React.useState<typeof exampleOptions[0]>();
 
+  const componentClassName = clsx(
+    styles['interactive-example'],
+    optionsAlign === 'right' && styles['interactive-example--align-right'],
+  );
   return (
-    <div className={`h-48${optionsAlign === "right" ? " pl-8" : ""}`}>
+    <div className={componentClassName}>
       <Dropdown
-        buttonText={selectedOption?.label || "Select"}
-        className={compact ? "" : "w-60"}
+        buttonText={selectedOption?.label || 'Select'}
+        className={clsx(!compact && styles['dropdown--non-compact'])}
         data-testid="dropdown"
         onChange={setSelectedOption}
         options={exampleOptions}
@@ -60,23 +78,23 @@ function InteractiveExampleUsingSeparateProps(props: Props) {
 
 function InteractiveExampleUsingChildren(props: Props) {
   const { variant } = props;
-  const compact = variant === "compact";
+  const compact = variant === 'compact';
 
   const [selectedOption, setSelectedOption] =
     React.useState<typeof exampleOptions[0]>();
 
   return (
-    <div className="h-48">
+    <div className={styles['interactive-example']}>
       <Dropdown
-        aria-label={props["aria-label"]}
-        className={compact ? "" : "w-60"}
+        aria-label={props['aria-label']}
+        className={clsx(!compact && styles['dropdown--non-compact'])}
         data-testid="dropdown"
         onChange={setSelectedOption}
         value={selectedOption}
         variant={variant}
       >
         {props.labelComponent}
-        <Dropdown.Button>{selectedOption?.label || "Select"}</Dropdown.Button>
+        <Dropdown.Button>{selectedOption?.label || 'Select'}</Dropdown.Button>
         <Dropdown.Options>
           {exampleOptions.map((option) => (
             <Dropdown.Option key={option.key} value={option}>
@@ -95,11 +113,11 @@ function InteractiveExampleUsingFunctionChildren() {
     React.useState<typeof exampleOptions[0]>();
 
   return (
-    <div className="h-48">
+    <div className={styles['interactive-example']}>
       <Dropdown
         aria-label="Favorite Animal"
         as="div"
-        className="w-60"
+        className={styles['dropdown--non-compact']}
         data-testid="dropdown"
         onChange={setSelectedOption}
         value={selectedOption}
@@ -115,12 +133,12 @@ function InteractiveExampleUsingFunctionChildren() {
               {() => (
                 <button
                   aria-expanded={open}
-                  className="p-4 rounded-md border border-neutral-300"
+                  className={styles['function-children__button']}
                 >
-                  {selectedOption?.label || "Select"}
+                  {selectedOption?.label || 'Select'}
                   <Icon
-                    className="ml-2"
                     name="filter-list"
+                    className={styles['function-children__icon']}
                     purpose="decorative"
                   />
                 </button>
@@ -175,7 +193,7 @@ export const SeparateButtonAndMenuWidth: StoryObj = {
   render: () => (
     <InteractiveExampleUsingSeparateProps
       aria-label="Favorite Animal"
-      optionsClassName="w-96"
+      optionsClassName={styles['separate-button-and-menu-width']}
     />
   ),
 };
@@ -214,12 +232,25 @@ export const OpenByDefault: StoryObj = {
     const canvas = within(canvasElement);
 
     // Open the dropdown.
-    const dropdownButton = await canvas.findByRole("button");
+    const dropdownButton = await canvas.findByRole('button');
     dropdownButton.click();
     // Select the best option.
-    const bestOption = await canvas.findByText("Cats");
+    const bestOption = await canvas.findByText('Cats');
     bestOption.click();
     // Reopen the dropdown; selecting an option closed it.
     dropdownButton.click();
+  },
+};
+
+export const DropdownButtonOnly = {
+  render: () => (
+    <>
+      <DropdownButton isOpen={false} text="Dropdown button closed" />
+      <br />
+      <DropdownButton isOpen={true} text="Dropdown button open" />
+    </>
+  ),
+  parameters: {
+    snapshot: { skip: true }, // For visual regression purposes since button should be used in conjunction with the actual Dropdown.
   },
 };
