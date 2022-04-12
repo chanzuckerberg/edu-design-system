@@ -14,7 +14,7 @@
   box-shadow: var(--eds-theme-box-shadow);
   
   @media (prefers-reduced-motion) {
-    transition-property: none;
+    transition: none;
   }
 }
 

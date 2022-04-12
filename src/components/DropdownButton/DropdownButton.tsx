@@ -1,11 +1,21 @@
-import clsx from "clsx";
-import React, { ReactNode, forwardRef } from "react";
-import Icon from "../Icon";
-import styles from "./DropdownButton.module.css";
+import clsx from 'clsx';
+import React, { ReactNode, forwardRef } from 'react';
+import styles from './DropdownButton.module.css';
+import Icon from '../Icon';
 
 type Props = {
+  /**
+   * Optional className for additional styling.
+   */
   className?: string;
-  children?: ReactNode;
+  /**
+   * Text placed inside the button to describe the dropdown.
+   */
+  text?: ReactNode;
+  /**
+   * Indicates state of the dropdown, used to style the button.
+   */
+  isOpen?: boolean;
 };
 
 /**
@@ -15,23 +25,27 @@ type Props = {
  *
  * A styled button with an expand icon to be used in triggering Popovers, Dropdowns, etc.
  */
-const DropdownButton = forwardRef<HTMLButtonElement, Props>(
-  ({ children, className, ...rest }, ref) => {
+export const DropdownButton = forwardRef<HTMLButtonElement, Props>(
+  ({ className, text, isOpen, ...other }, ref) => {
+    const componentClassName = clsx(styles['dropdown-button'], className);
+    const iconClassName = clsx(
+      styles['dropdown-button__icon'],
+      isOpen && styles['dropdown-button__icon--reversed'],
+    );
     return (
-      <button
-        className={clsx(styles.dropdownButton, className)}
-        ref={ref}
-        {...rest}
-      >
+      <button className={componentClassName} ref={ref} {...other}>
         {/* Wrapping span ensures that `children` and icon will be correctly pushed to
             either side of the button even if `children` contains more than one element. */}
-        <span>{children}</span>
-        <Icon name="expand-more" purpose="decorative" size="1.25rem" />
+        <span>{text}</span>
+        <Icon
+          className={iconClassName}
+          name="expand-more"
+          purpose="decorative"
+          size="1.25rem"
+        />
       </button>
     );
   },
 );
 
-DropdownButton.displayName = "DropdownButton";
-
-export default DropdownButton;
+DropdownButton.displayName = 'DropdownButton';
