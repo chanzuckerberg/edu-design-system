@@ -81,18 +81,18 @@ SecondaryMedium.args = { children: 'Button', variant: 'secondary', size: 'md' };
 export const SecondarySmall = Template.bind({});
 SecondarySmall.args = { children: 'Button', variant: 'secondary', size: 'sm' };
 
-export const Teritary = Template.bind({});
-Teritary.args = { children: 'Button', variant: 'tertiary' };
+export const Tertiary = Template.bind({});
+Tertiary.args = { children: 'Button', variant: 'tertiary' };
 
-export const TeritaryDisabled = Template.bind({});
-TeritaryDisabled.args = {
+export const TertiaryDisabled = Template.bind({});
+TertiaryDisabled.args = {
   children: 'Button',
   variant: 'tertiary',
   disabled: true,
 };
 
-export const TeritaryLeftIcon = Template.bind({});
-TeritaryLeftIcon.args = {
+export const TertiaryLeftIcon = Template.bind({});
+TertiaryLeftIcon.args = {
   children: (
     <>
       <Icon purpose="decorative" name="arrow-back" />
@@ -102,8 +102,8 @@ TeritaryLeftIcon.args = {
   variant: 'tertiary',
 };
 
-export const TeritaryRightIcon = Template.bind({});
-TeritaryRightIcon.args = {
+export const TertiaryRightIcon = Template.bind({});
+TertiaryRightIcon.args = {
   children: (
     <>
       Button
@@ -113,11 +113,11 @@ TeritaryRightIcon.args = {
   variant: 'tertiary',
 };
 
-export const TeritaryMedium = Template.bind({});
-TeritaryMedium.args = { children: 'Button', variant: 'tertiary', size: 'md' };
+export const TertiaryMedium = Template.bind({});
+TertiaryMedium.args = { children: 'Button', variant: 'tertiary', size: 'md' };
 
-export const TeritarySmall = Template.bind({});
-TeritarySmall.args = { children: 'Button', variant: 'tertiary', size: 'sm' };
+export const TertiarySmall = Template.bind({});
+TertiarySmall.args = { children: 'Button', variant: 'tertiary', size: 'sm' };
 
 export const IconButtonLeftIcon = Template.bind({});
 IconButtonLeftIcon.args = {
