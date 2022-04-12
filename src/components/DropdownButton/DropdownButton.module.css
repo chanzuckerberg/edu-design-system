@@ -34,9 +34,9 @@
 .dropdown-button__icon {
   transform: rotate(0);
 
-  transition: transform var(--eds-anim-move-quick) ease-out;
+  transition: transform var(--eds-anim-move-medium) ease-out;
   @media (prefers-reduced-motion) {
-    transition-property: none; /* 1 */
+    transition: none; /* 1 */
   }
 }
 

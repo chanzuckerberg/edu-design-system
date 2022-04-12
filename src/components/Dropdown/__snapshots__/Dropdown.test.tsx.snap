@@ -6,7 +6,7 @@ exports[`<Dropdown /> Compact story renders snapshot 1`] = `
   data-testid="dropdown"
 >
   <label
-    class="label sr-only"
+    class="label u-is-vishidden"
     id="headlessui-listbox-label-13"
   >
     Favorite Animal
@@ -91,7 +91,7 @@ exports[`<Dropdown /> CompactUsingChildrenPropAndNoVisibleLabel story renders sn
   data-testid="dropdown"
 >
   <label
-    class="label sr-only"
+    class="label u-is-vishidden"
     id="headlessui-listbox-label-43"
   >
     Favorite Animal
@@ -176,7 +176,7 @@ exports[`<Dropdown /> CompactWithOptionsRightAligned story renders snapshot 1`] 
   data-testid="dropdown"
 >
   <label
-    class="label sr-only"
+    class="label u-is-vishidden"
     id="headlessui-listbox-label-19"
   >
     Favorite Animal
@@ -346,7 +346,7 @@ exports[`<Dropdown /> DefaultWithoutVisibleLabel story renders snapshot 1`] = `
   data-testid="dropdown"
 >
   <label
-    class="label sr-only"
+    class="label u-is-vishidden"
     id="headlessui-listbox-label-7"
   >
     Favorite Animal
@@ -431,7 +431,7 @@ exports[`<Dropdown /> SeparateButtonAndMenuWidth story renders snapshot 1`] = `
   data-testid="dropdown"
 >
   <label
-    class="label sr-only"
+    class="label u-is-vishidden"
     id="headlessui-listbox-label-25"
   >
     Favorite Animal
@@ -601,7 +601,7 @@ exports[`<Dropdown /> UsingChildrenPropAndNoVisibleLabel story renders snapshot 
   data-testid="dropdown"
 >
   <label
-    class="label sr-only"
+    class="label u-is-vishidden"
     id="headlessui-listbox-label-37"
   >
     Favorite Animal

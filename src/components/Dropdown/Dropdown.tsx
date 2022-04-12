@@ -319,7 +319,7 @@ export function Dropdown(props: DropdownProps) {
   }
 
   const label = (labelText || ariaLabel) && (
-    <DropdownLabel className={ariaLabel && styles['sr-only']}>
+    <DropdownLabel className={ariaLabel && styles['u-is-vishidden']}>
       {labelText || ariaLabel}
     </DropdownLabel>
   );
