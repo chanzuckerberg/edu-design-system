@@ -25,10 +25,7 @@ export const WithTextPassage = () => (
         <li>Multiple lines</li>
         <li>Arbitrary HTML text</li>
         <li>
-          Even{' '}
-          <Link variant="linkDefault" href="#">
-            text links
-          </Link>
+          Even <Link href="#">text links</Link>
         </li>
       </ul>
     </TextPassage>
