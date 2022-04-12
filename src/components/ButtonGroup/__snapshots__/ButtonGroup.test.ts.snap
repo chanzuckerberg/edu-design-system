@@ -2,7 +2,7 @@
 
 exports[`<ButtonGroup /> Default story renders snapshot 1`] = `
 <div
-  class="button-group button-group--spacing-1x"
+  class="button-group button-group--wrap button-group--spacing-1x"
 >
   <button
     class="button button--lg button--primary"
@@ -19,7 +19,7 @@ exports[`<ButtonGroup /> Default story renders snapshot 1`] = `
 
 exports[`<ButtonGroup /> SpacingMax story renders snapshot 1`] = `
 <div
-  class="button-group button-group--spacing-max"
+  class="button-group button-group--wrap button-group--spacing-max"
 >
   <button
     class="button button--lg button--primary"
@@ -36,7 +36,7 @@ exports[`<ButtonGroup /> SpacingMax story renders snapshot 1`] = `
 
 exports[`<ButtonGroup /> SpacingNone story renders snapshot 1`] = `
 <div
-  class="button-group"
+  class="button-group button-group--wrap"
 >
   <button
     class="button button--lg button--primary"
@@ -53,7 +53,7 @@ exports[`<ButtonGroup /> SpacingNone story renders snapshot 1`] = `
 
 exports[`<ButtonGroup /> Vertical story renders snapshot 1`] = `
 <div
-  class="button-group button-group--spacing-1x button-group--vertical"
+  class="button-group button-group--wrap button-group--spacing-1x button-group--vertical"
 >
   <button
     class="button button--lg button--primary"
@@ -70,7 +70,71 @@ exports[`<ButtonGroup /> Vertical story renders snapshot 1`] = `
 
 exports[`<ButtonGroup /> WithFiveButtons story renders snapshot 1`] = `
 <div
-  class="button-group button-group--spacing-1x"
+  class="button-group button-group--wrap button-group--spacing-1x"
+>
+  <button
+    class="button button--lg button--secondary"
+  >
+    Button 1
+  </button>
+  <button
+    class="button button--lg button--secondary"
+  >
+    Button 2
+  </button>
+  <button
+    class="button button--lg button--secondary"
+  >
+    Button 3
+  </button>
+  <button
+    class="button button--lg button--secondary"
+  >
+    Button 4
+  </button>
+  <button
+    class="button button--lg button--primary"
+  >
+    Button 5
+  </button>
+</div>
+`;
+
+exports[`<ButtonGroup /> WithFiveButtonsNowrap story renders snapshot 1`] = `
+<div
+  class="button-group button-group--nowrap button-group--spacing-1x"
+>
+  <button
+    class="button button--lg button--secondary"
+  >
+    Button 1
+  </button>
+  <button
+    class="button button--lg button--secondary"
+  >
+    Button 2
+  </button>
+  <button
+    class="button button--lg button--secondary"
+  >
+    Button 3
+  </button>
+  <button
+    class="button button--lg button--secondary"
+  >
+    Button 4
+  </button>
+  <button
+    class="button button--lg button--primary"
+  >
+    Button 5
+  </button>
+</div>
+`;
+
+exports[`<ButtonGroup /> WithFiveButtonsWrapReverse story renders snapshot 1`] = `
+<div
+  class="button-group button-group--wrap-reverse button-group--spacing-1x"
 >
   <button
     class="button button--lg button--secondary"

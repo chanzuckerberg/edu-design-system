@@ -53,3 +53,33 @@ export const WithFiveButtons: StoryObj<Args> = {
     ),
   },
 };
+
+export const WithFiveButtonsNowrap: StoryObj<Args> = {
+  args: {
+    children: (
+      <>
+        <Button variant="secondary">Button 1</Button>
+        <Button variant="secondary">Button 2</Button>
+        <Button variant="secondary">Button 3</Button>
+        <Button variant="secondary">Button 4</Button>
+        <Button>Button 5</Button>
+      </>
+    ),
+    wrap: 'nowrap',
+  },
+};
+
+export const WithFiveButtonsWrapReverse: StoryObj<Args> = {
+  args: {
+    children: (
+      <>
+        <Button variant="secondary">Button 1</Button>
+        <Button variant="secondary">Button 2</Button>
+        <Button variant="secondary">Button 3</Button>
+        <Button variant="secondary">Button 4</Button>
+        <Button>Button 5</Button>
+      </>
+    ),
+    wrap: 'wrap-reverse',
+  },
+};

@@ -21,6 +21,11 @@ type Props = {
    * Whether the buttons should be laid out horizontally or stacked vertically.
    */
   orientation?: 'horizontal' | 'vertical';
+  /**
+   * Whether buttons should wrap if there isn't enough horizontal space.
+   * Defaults to wrap.
+   */
+  wrap?: 'nowrap' | 'wrap' | 'wrap-reverse';
 };
 
 /**
@@ -35,6 +40,7 @@ export function ButtonGroup({
   className,
   spacing = '1x',
   orientation = 'horizontal',
+  wrap = 'wrap',
 }: Props) {
   if (
     spacing === 'max' &&
@@ -48,6 +54,7 @@ export function ButtonGroup({
   const componentClassName = clsx(
     className,
     styles['button-group'],
+    styles[`button-group--${wrap}`],
     spacing === '1x' && styles['button-group--spacing-1x'],
     spacing === 'max' && styles['button-group--spacing-max'],
     orientation === 'vertical' && styles['button-group--vertical'],
