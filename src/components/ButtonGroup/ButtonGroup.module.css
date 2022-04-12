@@ -4,9 +4,11 @@
 
 /**
  * A group of buttons displayed in an organized fashion.
+ * 1) Wrap buttons if overflow, usually for smaller screen sizes.
  */
 .button-group {
   display: inline-flex;
+  flex-wrap: wrap; /* 1 */
 }
 
 /**
@@ -26,19 +28,6 @@
  */
 .button-group--vertical {
   flex-direction: column;
-}
-
-/**
- * Wrap buttons to next line if not enough space.
- */
-.button-group--wrap {
-  flex-wrap: wrap;
-}
-.button-group--wrap-reverse {
-  flex-wrap: wrap-reverse;
-}
-.button-group--nowrap {
-  flex-wrap: nowrap;
 }
 
 /**
