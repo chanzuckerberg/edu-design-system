@@ -313,7 +313,7 @@ exports[`<Link /> SecondarySmall story renders snapshot 1`] = `
 </a>
 `;
 
-exports[`<Link /> Teritary story renders snapshot 1`] = `
+exports[`<Link /> Tertiary story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--lg clickable-style--tertiary"
   href="/"
@@ -322,7 +322,7 @@ exports[`<Link /> Teritary story renders snapshot 1`] = `
 </a>
 `;
 
-exports[`<Link /> TeritaryLeftIcon story renders snapshot 1`] = `
+exports[`<Link /> TertiaryLeftIcon story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--lg clickable-style--tertiary"
   href="/"
@@ -341,7 +341,7 @@ exports[`<Link /> TeritaryLeftIcon story renders snapshot 1`] = `
 </a>
 `;
 
-exports[`<Link /> TeritaryMedium story renders snapshot 1`] = `
+exports[`<Link /> TertiaryMedium story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--md clickable-style--tertiary"
   href="/"
@@ -350,7 +350,7 @@ exports[`<Link /> TeritaryMedium story renders snapshot 1`] = `
 </a>
 `;
 
-exports[`<Link /> TeritaryRightIcon story renders snapshot 1`] = `
+exports[`<Link /> TertiaryRightIcon story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--lg clickable-style--tertiary"
   href="/"
@@ -369,7 +369,7 @@ exports[`<Link /> TeritaryRightIcon story renders snapshot 1`] = `
 </a>
 `;
 
-exports[`<Link /> TeritarySmall story renders snapshot 1`] = `
+exports[`<Link /> TertiarySmall story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--sm clickable-style--tertiary"
   href="/"
