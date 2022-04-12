@@ -1,18 +1,28 @@
-import { Story, Meta } from '@storybook/react';
+import type { StoryObj } from '@storybook/react';
 import React from 'react';
-
-import { Fieldset, Props } from './Fieldset';
+import { Fieldset } from './Fieldset';
+import Checkbox from '../Checkbox';
 
 export default {
   title: 'Atoms/Forms/Fieldset',
   component: Fieldset,
-} as Meta;
+};
 
-const Template: Story<Props> = (args) => (
-  <Fieldset {...args}>
-    <div className="fpo">Children</div>
-  </Fieldset>
-);
+type Args = React.ComponentProps<typeof Fieldset>;
 
-export const Default = Template.bind({});
-Default.args = { legend: 'Fieldset Legend' };
+export const Default: StoryObj<Args> = {
+  args: {
+    children: (
+      <>
+        <Fieldset.Legend>Legend</Fieldset.Legend>
+        <Fieldset.Items>
+          <Checkbox label="Checkbox label 1" />
+          <Checkbox label="Checkbox label 2" />
+          <Checkbox label="Checkbox label 3" />
+          <Checkbox label="Checkbox label 4" />
+          <Checkbox label="Checkbox label 5" />
+        </Fieldset.Items>
+      </>
+    ),
+  },
+};

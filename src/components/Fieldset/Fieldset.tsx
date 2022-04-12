@@ -1,70 +1,89 @@
 import clsx from 'clsx';
-import React, { ReactNode } from 'react';
+import React, { ElementType, ReactNode } from 'react';
 import styles from './Fieldset.module.css';
-import Legend from '../Legend';
 
-export interface Props {
+type FieldsetProps = {
   /**
-   * Child node(s) that can be nested inside component
+   * The contents of the fieldset. We suggest a Fieldset.Title followed by
+   * interactive elements.
+   *
+   * Should be wrapped in a fragment to allow our styling to control the spacing
+   * between elements.
    */
-  children?: ReactNode;
+  children: ReactNode;
   /**
-   * CSS class names that can be appended to the component.
+   * Additional classnames passed in for styling.
    */
   className?: string;
+};
+
+type LegendProps = {
   /**
-   * Toggles the visibility of the form control legend
+   * The legend of the fieldset.
    */
-  hideLegend?: boolean;
+  children: ReactNode;
   /**
-   * HTML legend title text
+   * Additional classnames passed in for styling.
    */
-  legend?: string;
+  className?: string;
+};
+
+type ItemsProps = {
   /**
-   * Slot for node to appear directly after legend text. Typically used to include a Toolip
+   * The content of the control elements in the fieldset.
    */
-  legendAfter?: ReactNode;
+  children: ReactNode;
   /**
-   * String for the optional label. By default it is '(optional)'
+   * Type of element the immediate wrapper around the contents should be.
+   * @default 'div'
    */
-  optionalLabel?: string;
+  as?: ElementType;
   /**
-   * Required is passed down to the legend to display "optional" or not
+   * Additional classnames passed in for styling.
    */
-  required?: boolean;
-  /**
-   * String for the required label to add additional information if needed.
-   */
-  requiredLabel?: string;
-}
+  className?: string;
+};
 
 /**
- * Primary UI component for user interaction
+ * Helper sub-component for styling the title at the top of the component.
  */
-export const Fieldset = ({
-  className,
-  legend,
-  legendAfter,
-  hideLegend,
-  required,
-  children,
-  optionalLabel,
-  requiredLabel,
-  ...other
-}: Props) => {
-  const componentClassName = clsx(styles['fieldset'], className, {});
-  return (
-    <fieldset className={componentClassName} {...other}>
-      <Legend
-        className={styles['fieldset__legend']}
-        text={legend}
-        required={required}
-        optionalLabel={optionalLabel}
-        requiredLabel={requiredLabel}
-        hideLegend={hideLegend}
-        legendAfter={legendAfter}
-      />
-      {children}
-    </fieldset>
-  );
+const Legend: React.FC<LegendProps> = ({ children, className }) => {
+  const componentClassName = clsx(className, styles['legend']);
+  return <legend className={componentClassName}>{children}</legend>;
 };
+
+/**
+ * Helper sub-component for styling the control elements in the component.
+ */
+const Items: React.FC<ItemsProps> = ({
+  children,
+  as: Component = 'div',
+  className,
+}) => {
+  const componentClassName = clsx(className, styles['fieldset__items']);
+  return <Component className={componentClassName}>{children}</Component>;
+};
+
+/**
+ * ```ts
+ * import {Fieldset} from "@chanzuckerberg/eds-components";
+ * ```
+ *
+ * A container for a fieldset including a legend and one or more form inputs.
+ *
+ * Uses `fieldset` and `legend` elements by default but can be customized.
+ *
+ * If you're not using a `fieldset` element, please consider whether you should be
+ * using a `ul` instead.
+ */
+export function Fieldset({ children, className }: FieldsetProps) {
+  const componentClassName = clsx(className, styles['fieldset']);
+  return <fieldset className={componentClassName}>{children}</fieldset>;
+}
+
+Fieldset.Legend = Legend;
+Fieldset.Items = Items;
+
+Fieldset.displayName = 'Fieldset';
+Fieldset.Legend.displayName = 'Fieldset.Legend';
+Fieldset.Items.displayName = 'Fieldset.Items';
