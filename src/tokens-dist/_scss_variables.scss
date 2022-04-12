@@ -2,6 +2,7 @@
 $eds-anim-fade-quick: 0.15s !default;
 $eds-anim-fade-long: 0.4s !default;
 $eds-anim-move-quick: 0.15s !default;
+$eds-anim-move-medium: 0.3s !default;
 $eds-anim-move-long: 0.4s !default;
 $eds-anim-ease: ease !default;
 $eds-border-width-sm: 1px !default;
@@ -260,6 +261,7 @@ $tokens: (
       ),
       'move': (
         'quick': $eds-anim-move-quick,
+        'medium': $eds-anim-move-medium,
         'long': $eds-anim-move-long
       ),
       'ease': $eds-anim-ease

@@ -1,0 +1,139 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #DROPDOWN
+\*------------------------------------*/
+
+
+/**
+ * Dropdown used to select one option from a list of options.
+ */
+.dropdown {
+  position: relative;
+}
+
+/**
+ * Compact variant.
+ */
+.dropdown--compact {
+  width: min-content;
+}
+.dropdown-button--compact {
+  padding: var(--eds-size-half);
+}
+
+/**
+ * Label on top of the dropdown button to label the dropdown.
+ */
+.label {
+  @mixin eds-theme-typography-label-md;
+  color: var(--eds-theme-color-form-label-text);
+  margin-bottom: var(--eds-size-half);
+}
+
+/**
+ * Visually hides the label element if a aria-label is passed,
+ * but element is kept for screen reading accessibility.
+ */
+.u-is-vishidden {
+  @mixin visuallyHide;
+}
+
+/**
+ * The container for the individual dropdown options.
+ * 1) Ensures the options display over the underlying body elements.
+ */
+.dropdown__options {
+  position: absolute;
+
+  margin-top: var(--eds-size-1);
+  padding: var(--eds-size-1) 0 var(--eds-size-1);
+
+  background-color: var(--eds-theme-color-background-neutral-default);
+
+  border-radius: var(--eds-theme-border-radius);
+  box-shadow: var(--eds-theme-box-shadow);
+
+  z-index: var(--eds-z-index-100); /* 1 */
+
+  @mixin eds-theme-typography-body-text-md;
+}
+
+/**
+ * Full variant styling for the dropdown options
+ */
+.dropdown__options--full-width {
+  width: 100%;
+}
+
+/**
+ * Places the options on the right side of the container.
+ */
+.dropdown__options--align-right {
+  right: 0;
+}
+
+/**
+ * The individual dropdown option of a collection of options.
+ * 1) Allow the option text and the selected icon to be easily aligned.
+ */
+.dropdown__option {
+  cursor: pointer;
+  padding: var(--eds-size-1) var(--eds-size-3) var(--eds-size-1) var(--eds-size-6);
+
+  display: flex; /* 1 */
+}
+
+/**
+ * The active/hover state of the dropdown option.
+ */
+.dropdown__option--active {
+  background-color: var(--eds-theme-color-background-neutral-medium);
+}
+
+/**
+ * The disabled state of the dropdown option.
+ */
+.dropdown__option--disabled {
+  cursor: not-allowed;
+  color: var(--eds-theme-color-text-disabled);
+}
+
+/**
+ * The selected state of the dropdown option.
+ */
+.dropdown__option--selected {
+  padding-left: 0;
+
+  @mixin eds-theme-typography-body-text-bold
+}
+
+/**
+ * Wraps the check icon that indicates a selected option.
+ * Required even if option is unselected to prevent the option content from shifting in position.
+ * 1) Take up the same amount of space as an unselected option's padding-left.
+ * 2) Position the contained icon. It's shifted slightly to the right from center so that the 
+ *    checkmark's visual "center of mass" is centered.
+ */
+.selected-icon__container {
+  color: var(--eds-theme-color-icon-brand-primary);
+
+  flex-shrink: 0; /* 1 */
+  width: var(--eds-size-6);
+
+  padding-left: var(--eds-size-1); /* 2 */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/**
+ * The content of the dropdown option
+ * 1) Wrap overflowing content onto multiple lines. We're doing this instead of truncating so that
+ *    users can still see all the content.
+ */
+.option__content {
+  overflow-wrap: normal; /* 1 */
+  word-break: normal;
+}

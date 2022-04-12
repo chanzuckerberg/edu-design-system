@@ -1,0 +1,45 @@
+@import '../../design-tokens/mixins.css';
+
+
+/*------------------------------------*\
+    #DROPDOWN BUTTON
+\*------------------------------------*/
+
+/**
+ * The button to trigger the display of the dropdown.
+ * 1) Place button text on the left and the expand more icon on the right.
+ */
+.dropdown-button {
+  width: 100%;
+  padding: var(--eds-size-1);
+
+  border: var(--eds-theme-border-width) solid var(--eds-theme-color-border-neutral-default);
+  border-radius: var(--eds-theme-border-radius);
+
+  display: flex;
+  justify-content: space-between; /* 1 */
+  align-items: center;
+
+  cursor: pointer;
+
+  background-color: var(--eds-theme-color-background-neutral-default);
+
+  @mixin eds-theme-typography-body-text-md;
+}
+
+/**
+ * The caret icon to decorate the dropdown button, animated to rotate.
+ * 1) Turns off animation if user prefers reduced motion
+ */
+.dropdown-button__icon {
+  transform: rotate(0);
+
+  transition: transform var(--eds-anim-move-medium) ease-out;
+  @media (prefers-reduced-motion) {
+    transition: none; /* 1 */
+  }
+}
+
+.dropdown-button__icon--reversed {
+  transform: rotate(180deg);
+}
