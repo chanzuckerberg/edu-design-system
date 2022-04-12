@@ -98,11 +98,11 @@ SecondaryMedium.args = { children: 'Link', variant: 'secondary', size: 'md' };
 export const SecondarySmall = Template.bind({});
 SecondarySmall.args = { children: 'Link', variant: 'secondary', size: 'sm' };
 
-export const Teritary = Template.bind({});
-Teritary.args = { children: 'Link', variant: 'tertiary' };
+export const Tertiary = Template.bind({});
+Tertiary.args = { children: 'Link', variant: 'tertiary' };
 
-export const TeritaryLeftIcon = Template.bind({});
-TeritaryLeftIcon.args = {
+export const TertiaryLeftIcon = Template.bind({});
+TertiaryLeftIcon.args = {
   children: (
     <>
       <Icon purpose="decorative" name="arrow-back" />
@@ -112,8 +112,8 @@ TeritaryLeftIcon.args = {
   variant: 'tertiary',
 };
 
-export const TeritaryRightIcon = Template.bind({});
-TeritaryRightIcon.args = {
+export const TertiaryRightIcon = Template.bind({});
+TertiaryRightIcon.args = {
   children: (
     <>
       Link
@@ -123,11 +123,11 @@ TeritaryRightIcon.args = {
   variant: 'tertiary',
 };
 
-export const TeritaryMedium = Template.bind({});
-TeritaryMedium.args = { children: 'Link', variant: 'tertiary', size: 'md' };
+export const TertiaryMedium = Template.bind({});
+TertiaryMedium.args = { children: 'Link', variant: 'tertiary', size: 'md' };
 
-export const TeritarySmall = Template.bind({});
-TeritarySmall.args = { children: 'Link', variant: 'tertiary', size: 'sm' };
+export const TertiarySmall = Template.bind({});
+TertiarySmall.args = { children: 'Link', variant: 'tertiary', size: 'sm' };
 
 export const IconLinkLeftIcon = Template.bind({});
 IconLinkLeftIcon.args = {
