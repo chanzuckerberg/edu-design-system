@@ -200,6 +200,8 @@ export const Drawer = ({
           aria-hidden={!isActive}
           onKeyDown={(e) => handleOnKeyDown(e)}
           onClick={(e) => handleOnClickOutside(e)}
+          role="button"
+          tabIndex={0}
           {...other}
         >
           <article
@@ -208,6 +210,7 @@ export const Drawer = ({
             aria-describedby={ariaDescribedBy}
             ref={windowRef}
             role="dialog"
+            // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
             tabIndex={0}
             aria-modal={isActive}
           >
