@@ -43,11 +43,7 @@ type Args = React.ComponentProps<typeof Banner> & {
   action: any;
 };
 
-const action = (
-  <Button style={{ whiteSpace: 'nowrap' }} variant="secondary">
-    See updates
-  </Button>
-);
+const action = <Button variant="secondary">See updates</Button>;
 
 export const Brand: StoryObj<Args> = {
   render: (args) => {
@@ -57,8 +53,8 @@ export const Brand: StoryObj<Args> = {
         {...restArgs}
         text={
           <>
-            <BannerTitle as="h2">{heading}</BannerTitle>{' '}
-            <BannerDescription>{content}</BannerDescription>
+            {heading && <BannerTitle as="h2">{heading}</BannerTitle>}
+            {content && <BannerDescription>{content}</BannerDescription>}
           </>
         }
       />
@@ -202,16 +198,13 @@ export const DismissableBelowContent: StoryObj<Args> = {
         dismissable={true}
         text={
           <>
-            <BannerTitle as="h2">{heading}</BannerTitle>{' '}
-            <Banner.Description text={content} />
+            <BannerTitle as="h2">{heading}</BannerTitle>
+            <BannerDescription>{content}</BannerDescription>
           </>
         }
       />
     </>
   ),
-  parameters: {
-    snapshot: { skip: true },
-  },
 };
 
 export const Vertical: StoryObj<Args> = {

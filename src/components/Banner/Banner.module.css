@@ -6,35 +6,127 @@
 
 /**
  * 1) Message of information, success, caution, or warning to the user
- * 2) The thick border (left for horizontal and top for vertical orientation)
+ * 2) Has a bottom margin to accommodate drop shadow
+ * 3) The thick border (left for horizontal and top for vertical orientation)
  *    matches the icon color
- * 3) The default styles are for the vertical orientation; we override these
+ * 4) The default styles are for the vertical orientation; we override these
  *    styles for the horizontal orientation below
  */
 .banner {
-  display: flex;
-  align-items: flex-start;
+  display: grid;
+  gap: var(--eds-size-2);
   position: relative;
 
-  padding-top: var(--eds-size-2);
-  padding-right: var(--eds-size-2);
-  padding-bottom: var(--eds-size-2);
-  padding-left: var(--eds-size-2);
-  margin-bottom: var(--eds-size-2);
+  background-color: var(--eds-theme-color-neutral-subtle-background);
+  box-shadow: var(--eds-theme-box-shadow); /* 2 */
+  margin-bottom: var(--eds-size-2); /* 2 */
 
   border-style: solid;
   border-radius: var(--eds-theme-border-radius);
   border-width: var(--eds-theme-border-width);
-  border-left-width: var(--eds-border-width-lg);
   border-color: var(--border-light-color);
-  border-left-color: var(--border-dark-color); /* 2 */
 
-  background-color: var(--eds-theme-color-neutral-subtle-background);
+  /* Vertical-specific styles */
+  padding: var(--eds-size-4);
+  text-align: center;
+  justify-items: center;
+  border-top-width: var(--eds-border-width-lg);
+  border-top-color: var(--border-dark-color); /* 3 */
+}
 
-  .banner__icon {
-    color: var(--border-dark-color); /* 2 */
+/**
+ * Banner informational icon
+ * 1) Selector doubled up to bump specificity to not interact with .icon.
+ *    See code guidelines for more info.
+ */
+.banner__icon {
+  color: var(--border-dark-color); /* 3 */
+  --icon-size-default: var(--eds-size-5);
+}
+
+.banner__textAndAction,
+.banner__textContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.banner__textAndAction {
+  gap: var(--eds-size-2);
+}
+
+.banner__textContent {
+  gap: var(--eds-size-1);
+}
+
+.banner__action {
+  justify-self: center;
+  align-self: center;
+}
+
+/**
+ * Banner close button
+ * 1) Button used to dismiss dismissable banners
+ * 2) Match close button icon color to the banner text color
+ */
+.banner__close-btn.banner__close-btn {
+  position: absolute;
+  top: var(--eds-size-half);
+  right: var(--eds-size-half);
+  /* TODO: handle hover styles */
+  color: inherit; /* 2 */
+}
+
+/*------------------------------------*\
+    # HORIZONTAL ORIENTATION
+\*------------------------------------*/
+
+/* TODO is there a token for this? */
+@media screen and (min-width: 768px) {
+  /**
+   * Banner horizontal orientation
+   * 1) Everything is left-aligned
+   * 2) Padding is reduced
+   * 3) Left border is thick and dark instead of the top border
+   * 4) Icon is smaller to match the heading line height
+   * 5) Gap between text and action button is reduced
+   */
+  .banner--horizontal {
+    grid-template-columns: min-content 1fr;
+    text-align: left; /* 1 */
+    justify-items: flex-start; /* 1 */
+    padding: 1rem; /* 2 */
+
+    border-top-width: var(--eds-theme-border-width); /* 3 */
+    border-left-width: var(--eds-border-width-lg); /* 3 */
+    border-top-color: var(--border-light-color); /* 3 */
+    border-left-color: var(--border-dark-color); /* 3 */
+
+    .banner__icon {
+      --icon-size-default: var(--eds-size-3); /* 4 */
+    }
+
+    .banner__textAndAction {
+      gap: var(--eds-size-1); /* 5 */
+    }
+
+    .banner__action {
+      align-self: flex-start; /* 1 */
+    }
+  }
+
+  /**
+   * Dismissable banner horizontal orientation
+   * 1) Add extra right padding to account for close button
+   */
+  .banner--dismissable.banner--horizontal {
+    padding-right: var(--eds-size-4); /* 1 */
   }
 }
+
+/*------------------------------------*\
+    # VARIANTS
+\*------------------------------------*/
 
 /**
  * Banner neutral
@@ -96,28 +188,4 @@
 
   background: var(--eds-theme-color-background-brand-primary-default);
   color: var(--eds-theme-color-text-brand-primary);
-}
-
-/**
- * Banner informational icon
- * 1) Selector doubled up to bump specificity to not interact with .icon.
- *    See code guidelines for more info.
- */
-.banner__icon.banner__icon {
-  margin-right: var(--eds-size-2);
-  width: var(--eds-size-3);
-  height: var(--eds-size-3);
-}
-
-/**
- * Banner close button
- * 1) Button used to dismiss dismissable banners
- * 2) Match close button icon color to the banner text color
- */
-.banner__close-btn.banner__close-btn {
-  position: absolute;
-  top: var(--eds-size-half);
-  right: var(--eds-size-half);
-  /* TODO: handle hover styles */
-  color: inherit; /* 2 */
 }
