@@ -5,14 +5,20 @@
     "node": true
   },
   "parser": "@typescript-eslint/parser",
-  "plugins": ["import", "react-hooks", "testing-library", "@chanzuckerberg/stories"],
+  "plugins": [
+    "import",
+    "jsx-a11y",
+    "react-hooks",
+    "testing-library",
+    "@chanzuckerberg/stories"
+  ],
   "extends": [
-    "eslint:recommended",
-    "plugin:@chanzuckerberg/stories/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:prettier/recommended",
     "plugin:react/recommended",
     "plugin:storybook/recommended",
     "plugin:testing-library/react",
-    "plugin:prettier/recommended"
+    "plugin:@chanzuckerberg/stories/recommended"
   ],
   "parserOptions": {
     "ecmaVersion": 2018,
@@ -24,6 +30,70 @@
   "settings": {
     "react": {
       "version": "16.12"
+    },
+    "jsx-a11y": {
+      "components": {
+        "Accordion": "dl",
+        "Breadcrumbs": "nav",
+        "BreadcrumbsItem": "li",
+        "CardFooter": "footer",
+        "CardHeader": "header",
+        "CheckboxField": "fieldset",
+        "CheckboxFieldItem": "li",
+        "CheckboxLabel": "label",
+        "DefinitionList": "dl",
+        "DrawerFooter": "footer",
+        "DrawerHeader": "header",
+        "DropdownButton": "button",
+        "Fieldset": "fieldset",
+        "Footer": "footer",
+        "FooterNav": "nav",
+        "FooterNavItem": "li",
+        "Header": "header",
+        "Heading": ["h1", "h2", "h3", "h4", "h5", "h6"],
+        "Hr": "hr",
+        "Icon": "svg",
+        "InlineForm": "form",
+        "KeyValueTable": "table",
+        "KeyValueTableRow": "tr",
+        "Label": "label",
+        "Legend": "legend",
+        "LinkList": "ul",
+        "LinkListItem": "li",
+        "LogoImage": "img",
+        "Main": "main",
+        "ModalFooter": "footer",
+        "ModalHeader": "header",
+        "NotificationList": "ul",
+        "NotificationListItem": "li",
+        "PageHeader": "header",
+        "PopoverFooter": "footer",
+        "PopoverHeader": "header",
+        "PrimaryNav": "nav",
+        "RadioField": "fieldset",
+        "RadioFieldItem": "li",
+        "Section": "section",
+        "StackedBlockFooter": "footer",
+        "StackedBlockHeader": "header",
+        "Table": "table",
+        "TableBody": "tbody",
+        "TableCell": ["td", "th"],
+        "TableFooter": "tfoot",
+        "TableHeader": "thead",
+        "TableHeaderCell": "th",
+        "TableRow": "tr",
+        "Tags": "ul",
+        "TagsItem": "li",
+        "Text": ["p", "span"],
+        "TextArea": "textarea",
+        "TextInput": "input",
+        "TextLink": "a",
+        "TextList": "ul",
+        "TextListItem": "li",
+        "TileHeader": "header",
+        "UtilityNav": "nav",
+        "UtilityNavItem": "li"
+      }
     }
   },
   "rules": {
@@ -39,12 +109,15 @@
         ]
       }
     ],
-    "import/order": ["error", {
-      "alphabetize": {
-        "order": "asc"
-      },
-      "groups": ["builtin", "external", "sibling", "parent", "index"]
-    }],
+    "import/order": [
+      "error",
+      {
+        "alphabetize": {
+          "order": "asc"
+        },
+        "groups": ["builtin", "external", "sibling", "parent", "index"]
+      }
+    ],
     "no-unused-vars": "warn",
     "react/prop-types": "off",
     "react-hooks/rules-of-hooks": "error",
@@ -79,7 +152,8 @@
       "files": ["packages/components/src/**/*.stories.{ts,tsx}"],
       "rules": {
         "no-restricted-imports": [
-          "error", {
+          "error",
+          {
             "patterns": [
               {
                 "group": [".storybook"],
@@ -95,8 +169,5 @@
       }
     }
   ],
-  "ignorePatterns": [
-    "!.storybook",
-    ".storybook/components/Docs/prism.js"
-  ]
+  "ignorePatterns": ["!.storybook", ".storybook/components/Docs/prism.js"]
 }
