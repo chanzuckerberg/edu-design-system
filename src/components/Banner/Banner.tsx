@@ -17,8 +17,6 @@ export interface Props {
   className?: string;
   /**
    * Toggles the ability to dismiss the banner via an close button in the top right of the banner
-   *
-   * TODO: rename dismissable to dismissable?
    */
   dismissable?: boolean;
   /**
@@ -31,7 +29,7 @@ export interface Props {
    */
   orientation?: 'vertical';
   /**
-   * The child node(s) contains the banner message.
+   * The child node(s) contains the banner message
    */
   text?: ReactNode;
   /**
@@ -153,29 +151,10 @@ export const Banner = ({
         title={variantToIconAssetsMap[variant].title}
       />
 
-      <div
-        className={clsx(
-          styles['banner__textAndAction'],
-          isHorizontal && styles['banner--horizontal'],
-        )}
-      >
-        <div
-          className={clsx(
-            styles['banner__textContent'],
-            isHorizontal && styles['banner--horizontal'],
-          )}
-        >
-          {text}
-        </div>
+      <div className={clsx(styles['banner__textAndAction'])}>
+        <div className={clsx(styles['banner__textContent'])}>{text}</div>
         {action && (
-          <div
-            className={clsx(
-              styles['banner__action'],
-              isHorizontal && styles['banner--horizontal'],
-            )}
-          >
-            {action}
-          </div>
+          <div className={clsx(styles['banner__action'])}>{action}</div>
         )}
       </div>
     </article>
