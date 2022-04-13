@@ -2,108 +2,209 @@ import clsx from 'clsx';
 import React, { ReactNode, useState } from 'react';
 import styles from './Banner.module.css';
 import Button from '../Button';
-import Icon, { IconName } from '../Icon';
+import Heading, { HeadingElement } from '../Heading';
+import Icon from '../Icon';
+import Text from '../Text';
 
 export interface Props {
   /**
-   * The child node(s) contains the banner message. Note: the banner message is displayed inside a TextPassage, so children can contain raw HTML
+   * A button or link that's placed in the banner separately from the main content.
    */
-  children?: ReactNode;
+  action?: React.ReactNode;
   /**
    * CSS class names that can be appended to the component.
    */
   className?: string;
   /**
-   * Close button text
-   * 1) Used to change the text of the icon button with various languages
-   */
-  closeButtonText?: string;
-  /**
    * Toggles the ability to dismiss the banner via an close button in the top right of the banner
+   *
+   * TODO: rename dismissable to dismissable?
    */
-  dismissible?: boolean;
+  dismissable?: boolean;
   /**
-   * Name of banner SVG icon. Available options are: banner, error, warning-2, success
+   * Optional callback to be triggered when the banner is dismissed
    */
-  iconName?: IconName;
-  /**
-   * The title attribute for the SVG icon in the banner
-   */
-  iconTitle?: string;
+  onDismiss?: () => void;
   /**
    * Controls the layout of the banner
    * - **vertical** renders the banner content center aligned and stacked
    */
   orientation?: 'vertical';
   /**
-   * Optional heading text for the banner that appears above banner body message
+   * The child node(s) contains the banner message.
    */
-  title?: string;
+  text?: ReactNode;
   /**
    * Stylistic variations for the banner type.
+   * - **brand** - results in a purple banner
+   * - **neutral** - results in a gray banner
    * - **success** - results in a green banner
    * - **warning** - results in a yellow banner
-   * - **error** - results in a red banner
-   * - **info** - results in a blue banner
+   * - **alert** - results in a red banner
    */
-  variant?: 'success' | 'warning' | 'error' | 'info' | 'brand';
+  variant?: 'brand' | 'neutral' | 'success' | 'warning' | 'alert';
 }
 
+const variantToIconAssetsMap: {
+  [key: string]: {
+    name: 'notifications' | 'forum' | 'check-circle' | 'warning' | 'dangerous';
+    title: string;
+  };
+} = {
+  brand: {
+    name: 'notifications',
+    title: 'attention',
+  },
+  neutral: {
+    name: 'forum',
+    title: 'notice',
+  },
+  success: {
+    name: 'check-circle',
+    title: 'success',
+  },
+  warning: {
+    name: 'warning',
+    title: 'warning',
+  },
+  alert: {
+    name: 'dangerous',
+    title: 'alert',
+  },
+};
+
 /**
- * Primary UI component for user interaction
+ * ```ts
+ * import {Banner} from "@chanzuckerberg/eds-components";
+ * ```
+ *
+ * A banner used to provide and highlight information to a user or ask for a decision or action.
+ *
+ * Example usage:
+ *
+ * ```tsx
+ * <Banner
+ *   onDismiss={handleDismiss}
+ *   text={
+ *     <>
+ *       <Banner.Title>Some title</Banner.Title>
+ *       <Banner.Message>Some description</Banner.Message>
+ *     </>
+ *   }
+ * />
+ * ```
  */
 export const Banner = ({
-  iconTitle,
+  action,
   className,
-  title,
-  children,
-  iconName,
-  dismissible,
+  // TODO: verify brand is the default variant and not neutral
+  dismissable,
+  onDismiss,
   orientation,
-  variant,
-  closeButtonText = 'Close',
+  variant = 'brand',
+  text,
   ...other
 }: Props) => {
-  const componentClassName = clsx(
-    styles['banner'],
-    variant === 'success' && styles['banner--success'],
-    variant === 'warning' && styles['banner--warning'],
-    variant === 'error' && styles['banner--error'],
-    variant === 'brand' && styles['banner--brand'],
-    orientation === 'vertical' && styles['banner--vertical'],
-  );
   const [dismissed, setDismissed] = useState(false);
 
-  function onDismiss(e: any) {
+  function handleDismiss(e: any) {
     e.preventDefault();
+    onDismiss && onDismiss();
     setDismissed(true);
   }
-  return dismissed ? null : (
-    <div className={componentClassName} role="alert" {...other}>
-      {iconName && (
-        <Icon
-          name={iconName}
-          title={iconTitle}
-          className={styles['banner__icon']}
-          purpose="informative"
-        />
-      )}
-      <div className={styles['banner__body']}>{children}</div>
 
-      {dismissible && (
+  if (dismissed) {
+    return null;
+  }
+
+  const isHorizontal = !orientation;
+
+  const componentClassName = clsx(
+    // Base styles
+    styles['banner'],
+    className,
+    // Variants
+    variant === 'neutral' && styles['banner--neutral'],
+    variant === 'brand' && styles['banner--brand'],
+    variant === 'alert' && styles['banner--alert'],
+    variant === 'warning' && styles['banner--warning'],
+    variant === 'success' && styles['banner--success'],
+    // Other options
+    isHorizontal && styles['banner--horizontal'],
+    dismissable && styles['banner--dismissable'],
+  );
+
+  return (
+    <article className={componentClassName} {...other}>
+      {dismissable && (
         <Button
           className={styles['banner__close-btn']}
+          onClick={handleDismiss}
           variant="icon"
-          onClick={(e: any) => onDismiss(e)}
         >
-          <Icon
-            name="close"
-            title={closeButtonText}
-            className={styles['banner__icon']}
-            purpose="informative"
-          />
+          <Icon name={'close'} purpose="informative" title={'dismiss module'} />
         </Button>
       )}
-    </div>
+
+      <Icon
+        className={styles['banner__icon']}
+        name={variantToIconAssetsMap[variant].name}
+        purpose="informative"
+        title={variantToIconAssetsMap[variant].title}
+      />
+
+      <div
+        className={clsx(
+          styles['banner__textAndAction'],
+          isHorizontal && styles['banner--horizontal'],
+        )}
+      >
+        <div
+          className={clsx(
+            styles['banner__textContent'],
+            isHorizontal && styles['banner--horizontal'],
+          )}
+        >
+          {text}
+        </div>
+        {action && (
+          <div
+            className={clsx(
+              styles['banner__action'],
+              isHorizontal && styles['banner--horizontal'],
+            )}
+          >
+            {action}
+          </div>
+        )}
+      </div>
+    </article>
   );
+};
+Banner.displayName = 'Banner';
+
+type TitleProps = {
+  text: ReactNode;
+  as?: HeadingElement;
+};
+/**
+ * Used for the title text in the Banner.
+ */
+Banner.Title = function BannerTitle(props: TitleProps) {
+  return (
+    <Heading as={props.as || 'h3'} size="h5">
+      {props.text}
+    </Heading>
+  );
+};
+
+type DescriptionProps = {
+  text: ReactNode;
+};
+
+/**
+ * Used for the description text in the Banner.
+ */
+Banner.Description = function BannerDescription(props: DescriptionProps) {
+  return <Text>{props.text}</Text>;
 };

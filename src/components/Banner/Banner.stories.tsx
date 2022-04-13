@@ -1,156 +1,247 @@
-import { Story, Meta } from '@storybook/react';
+import type { StoryObj } from '@storybook/react';
 import React from 'react';
-
-import { Banner, Props } from './Banner';
+import { Banner } from './Banner';
+import BannerDescription from '../BannerDescription';
+import BannerTitle from '../BannerTitle';
 import Button from '../Button';
 import Heading from '../Heading';
-import LayoutLinelengthContainer from '../LayoutLinelengthContainer';
-import TextPassage from '../TextPassage';
 
 export default {
   title: 'Molecules/Messaging/Banner',
   component: Banner,
-} as Meta;
+  argTypes: {
+    elevation: {
+      control: {
+        type: 'radio',
+        options: [0, 1],
+      },
+    },
+  },
+  args: {
+    content: (
+      <>
+        Summit Learning has a full-time team dedicated to constantly improving
+        our curriculum. To see the updates,{' '}
+        <Button
+          variant="link"
+          href="/"
+          onClick={(event) => event.preventDefault()}
+        >
+          click into the course
+        </Button>
+        .
+      </>
+    ),
+    heading:
+      'New curriculum updates are available for one or more of your courses.',
+  },
+};
 
-const Template: Story<Props> = (args) => (
-  <Banner {...args}>
-    <LayoutLinelengthContainer>
-      <Heading as="h2" size="h4" className="u-margin-bottom-sm">
-        This is a title
-      </Heading>
-    </LayoutLinelengthContainer>
-    <TextPassage>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-      </p>
-    </TextPassage>
-  </Banner>
+type Args = React.ComponentProps<typeof Banner> & {
+  content: string;
+  heading: string;
+  action: any;
+};
+
+const action = (
+  <Button style={{ whiteSpace: 'nowrap' }} variant="secondary">
+    See updates
+  </Button>
 );
 
-const TitleOnlyTemplate: Story<Props> = (args) => (
-  <Banner {...args}>
-    <LayoutLinelengthContainer>
-      <Heading as="h2" size="h4">
-        This is a title
-      </Heading>
-    </LayoutLinelengthContainer>
-  </Banner>
-);
-
-const DescriptionOnlyTemplate: Story<Props> = (args) => (
-  <Banner {...args}>
-    <TextPassage>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-      </p>
-    </TextPassage>
-  </Banner>
-);
-
-const WithActionTemplate: Story<Props> = (args) => (
-  <Banner {...args}>
-    <TextPassage className="u-margin-bottom-md">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-      </p>
-    </TextPassage>
-    <Button>Banner action</Button>
-  </Banner>
-);
-
-export const Default = Template.bind({});
-Default.args = { iconName: 'info' };
-
-export const Brand = Template.bind({});
-Brand.args = {
-  variant: 'brand',
-  iconName: 'check-circle',
-  title: 'This is a title',
+export const Brand: StoryObj<Args> = {
+  render: (args) => {
+    const { content, heading, ...restArgs } = args;
+    return (
+      <Banner
+        {...restArgs}
+        text={
+          <>
+            <BannerTitle as="h2">{heading}</BannerTitle>{' '}
+            <BannerDescription>{content}</BannerDescription>
+          </>
+        }
+      />
+    );
+  },
 };
 
-export const Success = Template.bind({});
-Success.args = {
-  variant: 'success',
-  iconName: 'check-circle',
-  title: 'This is a title',
+export const Neutral: StoryObj<Args> = {
+  ...Brand,
+  args: {
+    variant: 'neutral',
+  },
 };
 
-export const Warning = Template.bind({});
-Warning.args = {
-  variant: 'warning',
-  iconName: 'error',
-  title: 'This is a title',
+export const Success: StoryObj<Args> = {
+  ...Brand,
+  args: {
+    variant: 'success',
+  },
 };
 
-export const Error = Template.bind({});
-Error.args = {
-  variant: 'error',
-  iconName: 'cancel',
-  title: 'This is a title',
+export const Warning: StoryObj<Args> = {
+  ...Brand,
+  args: {
+    variant: 'warning',
+  },
 };
 
-export const Dismissible = Template.bind({});
-Dismissible.args = {
-  dismissible: true,
-  iconName: 'info',
-  title: 'This is a title',
+export const Alert: StoryObj<Args> = {
+  ...Brand,
+  args: {
+    variant: 'alert',
+  },
 };
 
-export const BrandDismissible = Template.bind({});
-BrandDismissible.args = {
-  dismissible: true,
-  variant: 'brand',
-  iconName: 'check-circle',
-  title: 'This is a title',
+export const NoDescription: StoryObj<Args> = {
+  ...Brand,
+  args: {
+    content: undefined,
+  },
 };
 
-export const SuccessDismissible = Template.bind({});
-SuccessDismissible.args = {
-  dismissible: true,
-  variant: 'success',
-  iconName: 'check-circle',
-  title: 'This is a title',
+export const NoTitle: StoryObj<Args> = {
+  ...Brand,
+  args: {
+    heading: undefined,
+  },
 };
 
-export const WarningDismissible = Template.bind({});
-WarningDismissible.args = {
-  dismissible: true,
-  variant: 'warning',
-  iconName: 'error',
-  title: 'This is a title',
+export const BrandWithAction: StoryObj<Args> = {
+  ...Brand,
+  args: {
+    action: action,
+  },
 };
 
-export const ErrorDismissible = Template.bind({});
-ErrorDismissible.args = {
-  dismissible: true,
-  variant: 'error',
-  iconName: 'cancel',
-  title: 'This is a title',
+export const NeutralWithAction: StoryObj<Args> = {
+  ...Neutral,
+  args: {
+    action: action,
+    variant: 'neutral',
+  },
 };
 
-export const TitleOnly = TitleOnlyTemplate.bind({});
-TitleOnly.args = {
-  dismissible: true,
-  iconName: 'info',
-  title: 'This is a title',
+export const SuccessWithAction: StoryObj<Args> = {
+  ...Success,
+  args: {
+    action: action,
+    variant: 'success',
+  },
 };
 
-export const DescriptionOnly = DescriptionOnlyTemplate.bind({});
-DescriptionOnly.args = {
-  dismissible: true,
-  iconName: 'info',
-  title: 'This is a title',
+export const WarningWithAction: StoryObj<Args> = {
+  ...Warning,
+  args: {
+    action: action,
+    variant: 'warning',
+  },
 };
 
-export const WithAction = WithActionTemplate.bind({});
-WithAction.args = {
-  dismissible: true,
-  iconName: 'info',
-  title: 'This is a title',
+export const AlertWithAction: StoryObj<Args> = {
+  ...Alert,
+  args: {
+    action: action,
+    variant: 'alert',
+  },
+};
+
+export const BrandDismissable: StoryObj<Args> = {
+  ...Brand,
+  args: {
+    dismissable: true,
+  },
+};
+
+export const NeutralDismissable: StoryObj<Args> = {
+  ...Brand,
+  args: {
+    variant: 'neutral',
+    dismissable: true,
+  },
+};
+
+export const SuccessDismissable: StoryObj<Args> = {
+  ...Brand,
+  args: {
+    variant: 'success',
+    dismissable: true,
+  },
+};
+
+export const WarningDismissable: StoryObj<Args> = {
+  ...Brand,
+  args: {
+    variant: 'warning',
+    dismissable: true,
+  },
+};
+
+export const AlertDismissable: StoryObj<Args> = {
+  ...Brand,
+  args: {
+    variant: 'alert',
+    dismissable: true,
+  },
+};
+
+export const DismissableWithAction: StoryObj<Args> = {
+  ...Brand,
+  args: {
+    action: action,
+    dismissable: true,
+  },
+};
+
+export const DismissableBelowContent: StoryObj<Args> = {
+  render: ({ heading, content }) => (
+    <>
+      <Heading size="h1">Page Title</Heading>
+      <Banner
+        dismissable={true}
+        text={
+          <>
+            <BannerTitle as="h2">{heading}</BannerTitle>{' '}
+            <Banner.Description text={content} />
+          </>
+        }
+      />
+    </>
+  ),
+  parameters: {
+    snapshot: { skip: true },
+  },
+};
+
+export const Vertical: StoryObj<Args> = {
+  ...Brand,
+  args: {
+    orientation: 'vertical',
+  },
+};
+
+export const VerticalDismissable: StoryObj<Args> = {
+  ...Brand,
+  args: {
+    orientation: 'vertical',
+    dismissable: true,
+  },
+};
+
+export const VerticalWithAction: StoryObj<Args> = {
+  ...Brand,
+  args: {
+    orientation: 'vertical',
+    action: action,
+  },
+};
+
+export const VerticalDismissableWithAction: StoryObj<Args> = {
+  ...Brand,
+  args: {
+    orientation: 'vertical',
+    action: action,
+    dismissable: true,
+  },
 };

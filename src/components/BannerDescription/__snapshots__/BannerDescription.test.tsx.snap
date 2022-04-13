@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BannerDescription /> Default story renders snapshot 1`] = `
+<p
+  class="text text--body"
+>
+  Your courses have been successfully updated.
+</p>
+`;
