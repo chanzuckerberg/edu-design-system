@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import clsx from 'clsx';
 import React, { useState, useEffect, useRef, ReactNode } from 'react';
 import { oneByType } from 'react-children-by-type';
@@ -200,8 +201,6 @@ export const Drawer = ({
           aria-hidden={!isActive}
           onKeyDown={(e) => handleOnKeyDown(e)}
           onClick={(e) => handleOnClickOutside(e)}
-          role="button"
-          tabIndex={0}
           {...other}
         >
           <article
