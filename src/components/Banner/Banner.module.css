@@ -57,6 +57,10 @@
 
 .banner__textContent {
   gap: var(--eds-size-1);
+
+  a {
+    color: inherit;
+  }
 }
 
 .banner__action {
@@ -131,6 +135,7 @@
 /**
  * Banner neutral
  * 1) The thick left border matches the icon color
+ * 2) Links inside the Banner get their color from the banner variant styles
  */
 .banner--neutral {
   --border-light-color: var(--eds-theme-color-border-neutral-subtle);
@@ -138,11 +143,17 @@
 
   background: var(--eds-theme-color-background-neutral-subtle);
   color: var(--eds-theme-color-text-neutral-default);
+
+  a:hover,
+  a:focus {
+    color: var(--eds-theme-color-text-link-default-hover); /* 2 */
+  }
 }
 
 /**
  * Banner success
  * 1) The thick left border matches the icon color
+ * 2) Links inside the Banner get their color from the banner variant styles
  */
 .banner--success {
   /* TODO: move these styles to mixins or tokens so the Toast can reuse them */
@@ -151,11 +162,17 @@
 
   background: var(--eds-theme-color-background-utility-success);
   color: var(--eds-theme-color-text-utility-success);
+
+  a:hover,
+  a:focus {
+    color: var(--eds-color-other-mint-800); /* 2 */
+  }
 }
 
 /**
  * Banner warning
  * 1) The thick left border matches the icon color
+ * 2) Links inside the Banner get their color from the banner variant styles
  */
 .banner--warning {
   --border-light-color: var(--eds-theme-color-border-utility-warning-subtle);
@@ -163,11 +180,17 @@
 
   background: var(--eds-theme-color-background-utility-warning);
   color: var(--eds-theme-color-text-utility-warning);
+
+  a:hover,
+  a:focus {
+    color: var(--eds-color-other-orange-800); /* 2 */
+  }
 }
 
 /**
  * Banner alert
  * 1) The thick left border matches the icon color
+ * 2) Links inside the Banner get their color from the banner variant styles
  */
 .banner--alert {
   /* TODO: move these styles to mixins or tokens so the Toast can reuse them */
@@ -176,11 +199,17 @@
 
   background: var(--eds-theme-color-background-utility-error);
   color: var(--eds-theme-color-text-utility-error);
+
+  a:hover,
+  a:focus {
+    color: var(--eds-color-other-ruby-800); /* 2 */
+  }
 }
 
 /**
  * Banner brand
  * 1) The thick left border matches the icon color
+ * 2) Links inside the Banner get their color from the banner variant styles
  */
 .banner--brand {
   --border-light-color: var(--eds-theme-color-border-brand-primary-subtle);
@@ -188,4 +217,69 @@
 
   background: var(--eds-theme-color-background-brand-primary-default);
   color: var(--eds-theme-color-text-brand-primary);
+
+  a:hover,
+  a:focus {
+    color: var(--eds-color-brand-grape-800); /* 2 */
+  }
+}
+
+/*------------------------------------*\
+    # ACTION STYLES
+\*------------------------------------*/
+
+.banner__action > * {
+  /* TODO: move to mixin */
+  @mixin eds-theme-typography-button-label;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0; /* 3 */
+  gap: 0.75rem; /* 4 */
+  border-width: var(--eds-theme-border-width);
+  border-style: solid;
+  border-radius: var(--eds-theme-border-radius);
+  cursor: pointer;
+  transition: all var(--eds-anim-fade-quick) var(--eds-anim-ease);
+
+  &:focus {
+    @mixin focus;
+  }
+
+  &:disabled,
+  &:disabled:hover {
+    cursor: not-allowed;
+    border-color: var(--eds-theme-color-border-disabled);
+    background-color: transparent;
+    color: var(--eds-theme-color-text-disabled);
+  }
+
+  svg {
+    --icon-size-default: 2em; /* 5 */
+  }
+
+  @media screen and (prefers-reduced-motion) {
+    transition: none;
+  }
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.banner--success .banner__action > * {
+  /* TODO: move these colors to tokens */
+  border-color: var(--eds-color-other-mint-700);
+  background-color: transparent;
+  color: var(--eds-color-other-mint-700);
+
+  &:hover,
+  &:focus {
+    border-color: var(--eds-color-other-mint-700);
+    background-color: var(--eds-color-other-mint-700);
+    color: white;
+  }
+
+  &:active {
+    border-color: var(--eds-color-other-mint-800);
+    background-color: var(--eds-color-other-mint-800);
+    color: white;
+  }
 }
