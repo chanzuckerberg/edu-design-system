@@ -24,6 +24,8 @@ export interface Props {
   /**
    * Controls the layout of the banner
    * - **vertical** renders the banner content center aligned and stacked
+   *
+   * Vertical banners are used in narrow areas, like sidebars
    */
   orientation?: 'vertical';
   /**

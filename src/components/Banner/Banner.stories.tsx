@@ -9,14 +9,6 @@ import Heading from '../Heading';
 export default {
   title: 'Molecules/Messaging/Banner',
   component: Banner,
-  argTypes: {
-    elevation: {
-      control: {
-        type: 'radio',
-        options: [0, 1],
-      },
-    },
-  },
   args: {
     content: (
       <>
