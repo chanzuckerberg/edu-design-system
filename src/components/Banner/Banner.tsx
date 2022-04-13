@@ -2,9 +2,7 @@ import clsx from 'clsx';
 import React, { ReactNode, useState } from 'react';
 import styles from './Banner.module.css';
 import Button from '../Button';
-import Heading, { HeadingElement } from '../Heading';
 import Icon from '../Icon';
-import Text from '../Text';
 
 export interface Props {
   /**
@@ -85,8 +83,8 @@ const variantToIconAssetsMap: {
  *   onDismiss={handleDismiss}
  *   text={
  *     <>
- *       <Banner.Title>Some title</Banner.Title>
- *       <Banner.Message>Some description</Banner.Message>
+ *       <BannerTitle>Some title</Banner.Title>
+ *       <BannerDescription>Some description</Banner.Description>
  *     </>
  *   }
  * />
@@ -161,29 +159,3 @@ export const Banner = ({
   );
 };
 Banner.displayName = 'Banner';
-
-type TitleProps = {
-  text: ReactNode;
-  as?: HeadingElement;
-};
-/**
- * Used for the title text in the Banner.
- */
-Banner.Title = function BannerTitle(props: TitleProps) {
-  return (
-    <Heading as={props.as || 'h3'} size="h5">
-      {props.text}
-    </Heading>
-  );
-};
-
-type DescriptionProps = {
-  text: ReactNode;
-};
-
-/**
- * Used for the description text in the Banner.
- */
-Banner.Description = function BannerDescription(props: DescriptionProps) {
-  return <Text>{props.text}</Text>;
-};
