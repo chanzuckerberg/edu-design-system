@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BannerTitle /> Default story renders snapshot 1`] = `
+<h3
+  class="heading heading--size-h5"
+>
+  Banner Title
+</h3>
+`;
