@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import React, { ReactNode, forwardRef } from "react";
-import ExpandMoreRoundedIcon from "../Icons/ExpandMoreRounded";
+import ExpandMoreRoundedIcon from "../../icons/ExpandMoreRounded";
 import styles from "./DropdownButton.module.css";
 
 type Props = {

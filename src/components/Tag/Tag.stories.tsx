@@ -1,6 +1,6 @@
 import type { StoryObj } from "@storybook/react";
 import React from "react";
-import WarningRoundedIcon from "../Icons/WarningRounded";
+import WarningRoundedIcon from "../../icons/WarningRounded";
 import Tag, { stylesByColor } from "./Tag";
 import type { Color } from "./Tag";
 import styles from "./Tag.stories.module.css";

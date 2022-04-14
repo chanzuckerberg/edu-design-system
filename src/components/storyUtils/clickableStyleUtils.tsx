@@ -1,12 +1,12 @@
 import React from "react";
+import AddRoundedIcon from "../../icons/AddRounded";
+import ArrowBackRoundedIcon from "../../icons/ArrowBackRounded";
+import ArrowForwardRoundedIcon from "../../icons/ArrowForwardRounded";
+import OpenInNewRoundedIcon from "../../icons/OpenInNewRounded";
 import Button from "../Button";
 import { ClickableStyleProps } from "../ClickableStyle";
 import ClickableStyle from "../ClickableStyle";
 import Heading from "../Heading";
-import AddRoundedIcon from "../Icons/AddRounded";
-import ArrowBackRoundedIcon from "../Icons/ArrowBackRounded";
-import ArrowForwardRoundedIcon from "../Icons/ArrowForwardRounded";
-import OpenInNewRoundedIcon from "../Icons/OpenInNewRounded";
 import Link from "../Link";
 import Text from "../Text";
 import styles from "./clickableStyleUtils.module.css";
