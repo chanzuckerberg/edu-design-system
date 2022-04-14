@@ -1,3 +1,5 @@
+@import '../../design-tokens/mixins.css';
+
 /*------------------------------------*\
     #FIELDSET LEGEND
 \*------------------------------------*/
@@ -10,12 +12,9 @@
  * 2) Adjust margin between legend and option list
  */
 .fieldset-legend {
-  @apply text-sm font-bold;
-  /* 1 */
-  display: inline-block;
-  padding: 0;
-  border: none;
-  margin-bottom: 1rem; /* 2 */
+  @mixin legendReset; /* 1 */
+  @mixin eds-theme-typography-form-label;
+  margin-bottom: var(--eds-size-2); /* 2 */
 }
 
 /**
@@ -23,5 +22,5 @@
  * or optional. Currently a flag is only present for optional fields
  */
 .fieldset-legend__flag {
-  @apply text-sm font-normal;
+  @mixin eds-theme-typography-body-text-sm;
 }

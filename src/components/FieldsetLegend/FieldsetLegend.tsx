@@ -1,6 +1,6 @@
-import clsx from "clsx";
-import React from "react";
-import styles from "./FieldsetLegend.module.css";
+import clsx from 'clsx';
+import React from 'react';
+import styles from './FieldsetLegend.module.css';
 
 export interface FieldsetLegendProps {
   /**
@@ -10,7 +10,7 @@ export interface FieldsetLegendProps {
   /**
    * String to indicate required or optional state.
    */
-  optionalLabel?: "(required)" | "(optional)";
+  optionalLabel?: '(required)' | '(optional)';
   /**
    * Legend text string that names the fieldset.
    */
@@ -18,11 +18,7 @@ export interface FieldsetLegendProps {
 }
 
 /**
- * ```ts
- * import {FieldsetLegend} from "@chanzuckerberg/eds";
- * ```
- *
- * Helper sub-component for styling the legend in a fieldset.
+ * Primary UI component for user interaction
  */
 export const FieldsetLegend = ({
   className,
@@ -30,12 +26,12 @@ export const FieldsetLegend = ({
   text,
   ...other
 }: FieldsetLegendProps) => {
-  const componentClassName = clsx(styles["fieldset-legend"], className);
+  const componentClassName = clsx(styles['fieldset-legend'], className);
   return (
     <legend className={componentClassName} {...other}>
-      {text}{" "}
+      {text}{' '}
       {optionalLabel && (
-        <span className={styles["fieldset-legend__flag"]}>{optionalLabel}</span>
+        <span className={styles['fieldset-legend__flag']}>{optionalLabel}</span>
       )}
     </legend>
   );
