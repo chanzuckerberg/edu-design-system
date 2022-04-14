@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, GridItem, Section, Hr } from '../../../../src';
+import { Grid, Section } from '../../../../src';
 import styles from '../../../../src/components/Utilities/TypographyUsage.module.css';
 import { TokenSpecimen } from '../../TokenSpecimen/TokenSpecimen';
 
