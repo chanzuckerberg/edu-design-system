@@ -5,18 +5,10 @@
 \*------------------------------------*/
 
 /**
- * 1) Grouping of form fields with a legend
+ * The fieldset groups a legend and several controls.
+ * 1) Overrides default browser styling.
  */
 .fieldset {
-  @mixin fieldsetStyles;
-}
-
-/**
- * Fieldset legend
- */
-.fieldset__legend {
-  @mixin legendReset;
-  @mixin eds-theme-typography-form-label;
-
-  margin-bottom: var(--eds-size-2);
+  @mixin fieldsetStyles; /* 1 */
+  margin: var(--eds-size-2);
 }

@@ -1,0 +1,10 @@
+/*------------------------------------*\
+    #FIELDSET ITEMS
+\*------------------------------------*/
+
+/**
+ * The contents of the fieldset. Spaces them apart.
+ */
+ .fieldset-items > :not(:last-child) {
+  margin-bottom: var(--eds-size-1-and-half);
+}
