@@ -47,7 +47,7 @@ export { default as Layout } from './components/Layout';
 export { default as LayoutContainer } from './components/LayoutContainer';
 export { default as LayoutLinelengthContainer } from './components/LayoutLinelengthContainer';
 export { default as LayoutSection } from './components/LayoutSection';
-export { default as Legend } from './components/Legend';
+export { default as FieldsetLegend } from './components/FieldsetLegend';
 export { default as LinkList } from './components/LinkList';
 export { default as ListDetail } from './components/ListDetail';
 export { default as ListDetailPanel } from './components/ListDetailPanel';

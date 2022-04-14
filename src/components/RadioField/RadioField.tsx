@@ -9,7 +9,7 @@ import React, {
 import { allByType } from 'react-children-by-type';
 import styles from './RadioField.module.css';
 import FieldNote from '../FieldNote';
-import Legend from '../Legend';
+import FieldsetLegend from '../FieldsetLegend';
 import RadioFieldItem from '../RadioFieldItem';
 
 export interface Props {
@@ -39,10 +39,6 @@ export interface Props {
    */
   fieldNote?: string | ReactNode;
   /**
-   * Toggles the visibility of the legend
-   */
-  hideLegend?: boolean;
-  /**
    * HTML id for the component
    */
   id?: string;
@@ -59,10 +55,6 @@ export interface Props {
    */
   label?: string;
   /**
-   * Slot for ReactNode to appear directly after field legend. Typically used to include a Toolip
-   */
-  legendAfter?: ReactNode;
-  /**
    * Calls back with the active index
    */
   onChange?: ChangeEventHandler;
@@ -74,10 +66,6 @@ export interface Props {
    * Indicates that field is required for form to be successfully submitted
    */
   required?: boolean;
-  /**
-   * String for the required label to add additional information if needed.
-   */
-  requiredLabel?: string;
   /**
    * Size variations:
    * - **sm** yields a smaller radio button and text
@@ -105,12 +93,8 @@ export const RadioField = ({
   disabled,
   inverted,
   required,
-  checked,
   ariaDescribedBy,
-  hideLegend,
-  legendAfter,
   optionalLabel,
-  requiredLabel,
   onChange,
   ...other
 }: Props) => {
@@ -178,13 +162,11 @@ export const RadioField = ({
   );
   return (
     <fieldset className={componentClassName} id={id} {...other}>
-      <Legend
+      <FieldsetLegend
         className={styles['radio-field__label']}
-        hideLegend={hideLegend}
         text={label}
         required={required}
         optionalLabel={optionalLabel}
-        requiredLabel={requiredLabel}
         aria-describedby={fieldNote && ariaDescribedByVar}
       />
 

@@ -3,7 +3,7 @@ import { nanoid } from 'nanoid';
 import React, { ReactNode, useEffect, useState } from 'react';
 import styles from './CheckboxField.module.css';
 import FieldNote from '../FieldNote';
-import Legend from '../Legend';
+import FieldsetLegend from '../FieldsetLegend';
 
 export interface Props {
   /**
@@ -28,10 +28,6 @@ export interface Props {
    */
   fieldNote?: string | ReactNode;
   /**
-   * Toggles the visibility of the form control legend
-   */
-  hideLegend?: boolean;
-  /**
    * HTML id for the component
    */
   id?: string;
@@ -48,10 +44,6 @@ export interface Props {
    */
   label?: string;
   /**
-   * Slot for node to appear directly after field legend. Typically used to include a Toolip
-   */
-  legendAfter?: ReactNode;
-  /**
    * String for the optional label. By default it is '(optional)'
    */
   optionalLabel?: string;
@@ -59,10 +51,6 @@ export interface Props {
    * Indicates that field is required for form to be successfully submitted
    */
   required?: boolean;
-  /**
-   * String for the required label to add additional information if needed.
-   */
-  requiredLabel?: string;
   /**
    * Size variations for the CheckboxField
    * - **sm** results in a visually smaller CheckboxField
@@ -89,11 +77,8 @@ export const CheckboxField = ({
   disabled,
   required,
   ariaDescribedBy,
-  hideLegend,
-  legendAfter,
   children,
   optionalLabel,
-  requiredLabel,
   inverted,
   ...other
 }: Props) => {
@@ -116,14 +101,11 @@ export const CheckboxField = ({
   );
   return (
     <fieldset className={componentClassName} id={id} {...other}>
-      <Legend
+      <FieldsetLegend
         className={styles['checkbox-field__label']}
-        hideLegend={hideLegend}
         text={label}
-        legendAfter={legendAfter}
         required={required}
         optionalLabel={optionalLabel}
-        requiredLabel={requiredLabel}
         aria-describedby={fieldNote && ariaDescribedByVar}
       />
 

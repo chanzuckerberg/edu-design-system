@@ -2,6 +2,7 @@ import type { StoryObj } from '@storybook/react';
 import React from 'react';
 import { Fieldset } from './Fieldset';
 import Checkbox from '../Checkbox';
+import FieldsetLegend, { FieldsetLegendProps } from '../FieldsetLegend';
 
 export default {
   title: 'Atoms/Forms/Fieldset',
@@ -14,7 +15,7 @@ export const Default: StoryObj<Args> = {
   args: {
     children: (
       <>
-        <Fieldset.Legend>Legend</Fieldset.Legend>
+        <FieldsetLegend text="Legend" />
         <Fieldset.Items>
           <Checkbox label="Checkbox label 1" />
           <Checkbox label="Checkbox label 2" />
@@ -25,4 +26,16 @@ export const Default: StoryObj<Args> = {
       </>
     ),
   },
+};
+
+export const FieldsetLegends: StoryObj<FieldsetLegendProps> = {
+  args: {
+    text: 'Legend',
+  },
+  render: (args) => (
+    <>
+      <FieldsetLegend {...args} />
+      <FieldsetLegend {...args} required={false} />
+    </>
+  ),
 };

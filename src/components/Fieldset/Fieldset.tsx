@@ -17,17 +17,6 @@ type FieldsetProps = {
   className?: string;
 };
 
-type LegendProps = {
-  /**
-   * The legend of the fieldset.
-   */
-  children: ReactNode;
-  /**
-   * Additional classnames passed in for styling.
-   */
-  className?: string;
-};
-
 type ItemsProps = {
   /**
    * The content of the control elements in the fieldset.
@@ -45,21 +34,9 @@ type ItemsProps = {
 };
 
 /**
- * Helper sub-component for styling the title at the top of the component.
- */
-const Legend: React.FC<LegendProps> = ({ children, className }) => {
-  const componentClassName = clsx(className, styles['legend']);
-  return <legend className={componentClassName}>{children}</legend>;
-};
-
-/**
  * Helper sub-component for styling the control elements in the component.
  */
-const Items: React.FC<ItemsProps> = ({
-  children,
-  as: Component = 'div',
-  className,
-}) => {
+const Items = ({ children, as: Component = 'div', className }: ItemsProps) => {
   const componentClassName = clsx(className, styles['fieldset__items']);
   return <Component className={componentClassName}>{children}</Component>;
 };
@@ -81,9 +58,4 @@ export function Fieldset({ children, className }: FieldsetProps) {
   return <fieldset className={componentClassName}>{children}</fieldset>;
 }
 
-Fieldset.Legend = Legend;
 Fieldset.Items = Items;
-
-Fieldset.displayName = 'Fieldset';
-Fieldset.Legend.displayName = 'Fieldset.Legend';
-Fieldset.Items.displayName = 'Fieldset.Items';
