@@ -54,7 +54,7 @@ export const PageHeader = ({
   );
 
   return (
-    <div className={componentClassName} {...other}>
+    <header className={componentClassName} {...other}>
       <div className={styles['page-header__left']}>
         {kicker && <p className={styles['page-header__kicker']}>{kicker}</p>}
         <h1 className={styles['page-header__title']}>
@@ -74,6 +74,6 @@ export const PageHeader = ({
       </div>
 
       {right && <div className={styles['page-header__right']}>{right}</div>}
-    </div>
+    </header>
   );
 };
