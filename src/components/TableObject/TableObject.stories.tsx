@@ -82,8 +82,8 @@ const OverflowLargeTemplate: Story<Props> = (args) => (
     </TableObjectHeader>
     <TableObjectBody>
       <Table
-        caption="This is a table caption and it is required"
         behavior="overflow-lg"
+        caption="This is a table caption and it is required"
       >
         <TableHeader>
           <TableRow>
@@ -139,8 +139,8 @@ const OverflowSmallTemplate: Story<Props> = (args) => (
     </TableObjectHeader>
     <TableObjectBody>
       <Table
-        caption="This is a table caption and it is required"
         behavior="overflow-sm"
+        caption="This is a table caption and it is required"
       >
         <TableHeader>
           <TableRow>

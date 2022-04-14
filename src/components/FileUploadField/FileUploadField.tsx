@@ -277,10 +277,10 @@ export const FileUploadField = ({
       default:
         return (
           <Button
-            variant="icon"
             onClick={() => {
               onFileRemove(file.id);
             }}
+            variant="icon"
           >
             <Icon
               name="close"
@@ -309,40 +309,40 @@ export const FileUploadField = ({
     <div className={componentClassName}>
       <Label
         className={styles['file-upload-field__label']}
-        htmlFor={idVar}
-        text={label}
         hideLabel={hideLabel}
+        htmlFor={idVar}
         labelAfter={labelAfter}
-        required={required}
         optionalLabel={optionalLabel}
+        required={required}
         requiredLabel={requiredLabel}
+        text={label}
       />
 
       <div className={styles['file-upload-field__body']}>
         <div
           className={hitAreaClassName}
-          onDragOver={() => onDragOver()}
           onDragEnd={() => onDragEnd()}
           onDragLeave={() => onDragEnd()}
+          onDragOver={() => onDragOver()}
           onDrop={() => onDragEnd()}
         >
           <TextInput
+            accept={acceptedFileTypes}
+            aria-invalid={!!isError}
+            ariaDescribedBy={ariaDescribedByVar}
             className={styles['file-upload-field__input']}
-            type="file"
-            id={idVar}
-            name={name}
-            value=""
-            isError={isError}
-            placeholder={placeholder}
-            onChange={(e) => onFileInputChange(e)}
-            inputMode={inputMode}
             disabled={isDisabled}
+            id={idVar}
+            inputMode={inputMode}
+            isError={isError}
+            multiple={multiple}
+            name={name}
+            onChange={(e) => onFileInputChange(e)}
+            placeholder={placeholder}
             readOnly={readOnly}
             required={required}
-            ariaDescribedBy={ariaDescribedByVar}
-            aria-invalid={!!isError}
-            multiple={multiple}
-            accept={acceptedFileTypes}
+            type="file"
+            value=""
             {...other}
           />
           <div className={styles['file-upload-field__instructions']}>

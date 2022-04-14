@@ -51,7 +51,7 @@ export const Feature = ({
       <div className={styles['feature__body']}>{children}</div>
       {imgAlt && (
         <div className={styles['feature__media']}>
-          <img className={styles['feature__img']} src={imgSrc} alt={imgAlt} />
+          <img alt={imgAlt} className={styles['feature__img']} src={imgSrc} />
         </div>
       )}
     </div>

@@ -99,10 +99,10 @@ export const CheckboxField = ({
   return (
     <Fieldset className={componentClassName} id={id} {...other}>
       <FieldsetLegend
-        className={styles['checkbox-field__label']}
-        text={label}
-        optionalLabel={optionalLabel}
         aria-describedby={fieldNote && ariaDescribedByVar}
+        className={styles['checkbox-field__label']}
+        optionalLabel={optionalLabel}
+        text={label}
       />
 
       <FieldsetItems className={styles['checkbox-field__body']}>

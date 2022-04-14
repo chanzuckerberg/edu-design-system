@@ -17,7 +17,7 @@ Default.args = { href: '#' };
 
 export const Inverted = () => (
   <div className="u-padding-sm" style={{ background: '#000000' }}>
-    <TextLink inverted={true} href="#">
+    <TextLink href="#" inverted={true}>
       Text Link
     </TextLink>
   </div>

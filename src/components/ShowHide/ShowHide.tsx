@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import clsx from 'clsx';
 import React, { useState, useRef, useEffect, ReactNode } from 'react';
 import styles from './ShowHide.module.css';

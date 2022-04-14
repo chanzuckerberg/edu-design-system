@@ -160,10 +160,10 @@ export const RadioField = ({
   return (
     <Fieldset className={componentClassName} id={id} {...other}>
       <FieldsetLegend
-        className={styles['radio-field__label']}
-        text={label}
-        optionalLabel={optionalLabel}
         aria-describedby={fieldNote && ariaDescribedByVar}
+        className={styles['radio-field__label']}
+        optionalLabel={optionalLabel}
+        text={label}
       />
 
       <FieldsetItems className={styles['radio-field__body']}>

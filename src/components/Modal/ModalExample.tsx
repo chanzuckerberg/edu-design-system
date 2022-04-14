@@ -52,8 +52,8 @@ export const ModalExample = ({
   const componentClassName = clsx('tooltip-modal', className, {});
   return (
     <div
-      style={{ padding: '1rem', minHeight: '500px' }}
       className={componentClassName}
+      style={{ padding: '1rem', minHeight: '500px' }}
       {...other}
     >
       <Button onClick={openContinueModal} ref={modalButton}>
@@ -61,11 +61,11 @@ export const ModalExample = ({
       </Button>
 
       <Modal
+        ariaDescribedBy="modal-description-1"
+        ariaLabelledBy="modal-heading-1"
         dismissible={true}
         isActive={modalOpen}
         onClose={closeContinueModal}
-        ariaLabelledBy="modal-heading-1"
-        ariaDescribedBy="modal-description-1"
         size={size}
       >
         <ModalHeader>
@@ -85,7 +85,7 @@ export const ModalExample = ({
         </ModalBody>
         <ModalFooter>
           <ButtonGroup>
-            <Button variant="primary" onClick={closeContinueModal}>
+            <Button onClick={closeContinueModal} variant="primary">
               Submit
             </Button>
             <Button onClick={closeContinueModal}>Close</Button>

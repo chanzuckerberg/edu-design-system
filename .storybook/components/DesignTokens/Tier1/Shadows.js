@@ -13,12 +13,12 @@ export class Tier1Shadows extends Component {
               return (
                 <GridItem key={'box-shadow-' + index}>
                   <TokenSpecimen
-                    name={listItem.name}
-                    value={listItem.value}
                     inlineStyles={{
                       backgroundColor: '#fbfbfb',
                       boxShadow: `var(${listItem.name})`,
                     }}
+                    name={listItem.name}
+                    value={listItem.value}
                   />
                 </GridItem>
               );

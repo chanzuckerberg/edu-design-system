@@ -20,23 +20,23 @@ const Template: Story<Props> = (args) => (
 const DisabledTemplate: Story<Props> = (args) => (
   <RadioField {...args}>
     <RadioFieldItem
+      disabled={true}
       name="radio-example"
       text="Radio 1"
       value="radio1"
-      disabled={true}
     />
     <RadioFieldItem
+      disabled={true}
       name="radio-example"
       text="Radio 2"
       value="radio2"
-      disabled={true}
     />
     <RadioFieldItem
+      checked={true}
+      disabled={true}
       name="radio-example"
       text="Radio 3"
       value="radio3"
-      checked={true}
-      disabled={true}
     />
   </RadioField>
 );
@@ -45,22 +45,22 @@ const InvertedTemplate: Story<Props> = (args) => (
   <div style={{ padding: '1rem', background: '#000' }}>
     <RadioField {...args}>
       <RadioFieldItem
+        inverted={true}
         name="radio-example"
         text="Radio 1"
         value="radio1"
-        inverted={true}
       />
       <RadioFieldItem
+        inverted={true}
         name="radio-example"
         text="Radio 2"
         value="radio2"
-        inverted={true}
       />
       <RadioFieldItem
+        inverted={true}
         name="radio-example"
         text="Radio 3"
         value="radio3"
-        inverted={true}
       />
     </RadioField>
   </div>

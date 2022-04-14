@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import clsx from 'clsx';
 import React, { useState, useEffect, useRef, ReactNode } from 'react';
 import { oneByType } from 'react-children-by-type';
@@ -199,21 +200,21 @@ export const Modal = ({
     <Portal>
       <FocusLock disabled={!activeFocus}>
         <div
-          className={componentClassName}
-          ref={ref}
           aria-hidden={!isActive}
-          onKeyDown={(e) => handleOnKeyDown(e)}
+          className={componentClassName}
           onClick={(e) => handleOnClickOutside(e)}
+          onKeyDown={(e) => handleOnKeyDown(e)}
+          ref={ref}
           {...other}
         >
           <article
-            className={styles['modal__window']}
-            aria-labelledby={ariaLabelledBy}
             aria-describedby={ariaDescribedBy}
+            aria-labelledby={ariaLabelledBy}
+            aria-modal={isActive}
+            className={styles['modal__window']}
             ref={windowRef}
             role="dialog"
-            tabIndex={0}
-            aria-modal={isActive}
+            tabIndex={0} // eslint-disable-line jsx-a11y/no-noninteractive-tabindex
           >
             <div className={styles['modal__content']}>
               {header}

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 
 import {
@@ -23,23 +24,23 @@ export const ProjectOverview = () => {
   return (
     <PageShell>
       <Breadcrumbs>
-        <BreadcrumbsItem text="My Courses" href="#" />
+        <BreadcrumbsItem href="#" text="My Courses" />
         <BreadcrumbsItem text="Disciplinary Science 7" />
       </Breadcrumbs>
       <PageHeader
-        title="Feudal Honor Codes and Values"
         right={
           <Button variant="icon">
             View plan
-            <Icon purpose="decorative" name="arrow-narrow-right" />
+            <Icon name="arrow-narrow-right" purpose="decorative" />
           </Button>
         }
+        title="Feudal Honor Codes and Values"
       />
       <ListDetail>
         <ListDetailPanel title="Overview" variant="success">
           <Heading
-            className={utilityStyles['u-margin-bottom-lg']}
             as="h2"
+            className={utilityStyles['u-margin-bottom-lg']}
             size="h1"
           >
             What is this Project About?
@@ -57,8 +58,8 @@ export const ProjectOverview = () => {
             See More
           </Button>
           <Heading
-            className={utilityStyles['u-margin-bottom-sm']}
             as="h3"
+            className={utilityStyles['u-margin-bottom-sm']}
             size="h4"
           >
             Essential Questions
@@ -75,8 +76,8 @@ export const ProjectOverview = () => {
             </ul>
           </TextPassage>
           <Heading
-            className={utilityStyles['u-margin-bottom-sm']}
             as="h3"
+            className={utilityStyles['u-margin-bottom-sm']}
             size="h4"
           >
             Key Take Aways
@@ -96,20 +97,20 @@ export const ProjectOverview = () => {
           </TextPassage>
           <Hr className={utilityStyles['u-margin-bottom-none']} />
           <Section
+            title="Power Focus Areas"
             titleBefore={
               <img
-                style={{ display: 'block', borderRadius: '50%' }}
-                src="https://via.placeholder.com/32x32"
                 alt="placeholder"
+                src="https://via.placeholder.com/32x32"
+                style={{ display: 'block', borderRadius: '50%' }}
               />
             }
-            title="Power Focus Areas"
           >
             <Card>
               <CardBody>
                 <Heading
-                  className={utilityStyles['u-margin-bottom-sm']}
                   as="h3"
+                  className={utilityStyles['u-margin-bottom-sm']}
                   size="h4"
                 >
                   What Was Medieval Japan Like?
@@ -122,20 +123,20 @@ export const ProjectOverview = () => {
             </Card>
           </Section>
           <Section
+            title="Additional Focus Areas"
             titleBefore={
               <img
-                style={{ display: 'block', borderRadius: '50%' }}
-                src="https://via.placeholder.com/32x32"
                 alt="placeholder"
+                src="https://via.placeholder.com/32x32"
+                style={{ display: 'block', borderRadius: '50%' }}
               />
             }
-            title="Additional Focus Areas"
           >
             <Card className={utilityStyles['u-margin-bottom-md']}>
               <CardBody>
                 <Heading
-                  className={utilityStyles['u-margin-bottom-sm']}
                   as="h3"
+                  className={utilityStyles['u-margin-bottom-sm']}
                   size="h4"
                 >
                   What Was Medieval Japan Like?
@@ -149,8 +150,8 @@ export const ProjectOverview = () => {
             <Card>
               <CardBody>
                 <Heading
-                  className={utilityStyles['u-margin-bottom-sm']}
                   as="h3"
+                  className={utilityStyles['u-margin-bottom-sm']}
                   size="h4"
                 >
                   What Was Medieval Japan Like?
@@ -163,14 +164,14 @@ export const ProjectOverview = () => {
             </Card>
           </Section>
           <Section
+            title="Cognitive Skills"
             titleBefore={
               <img
-                style={{ display: 'block', borderRadius: '50%' }}
-                src="https://via.placeholder.com/32x32"
                 alt="placeholder"
+                src="https://via.placeholder.com/32x32"
+                style={{ display: 'block', borderRadius: '50%' }}
               />
             }
-            title="Cognitive Skills"
           >
             <TextPassage>
               <a href="#">Selecting Relevant Sources</a>

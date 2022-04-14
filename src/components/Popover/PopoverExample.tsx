@@ -60,12 +60,12 @@ export const PopoverExample: React.FC<Props> = ({
   const componentClassName = clsx('tooltip-popover', className, {});
   return (
     <div
+      className={componentClassName}
       style={{
         position: 'relative',
         display: 'inline-block',
         marginTop: '12rem',
       }}
-      className={componentClassName}
       {...other}
     >
       <Button onClick={openPopover} ref={popoverButton}>
@@ -73,11 +73,11 @@ export const PopoverExample: React.FC<Props> = ({
       </Button>
 
       <Popover
-        position={position}
+        ariaDescribedBy="popover-description-1"
+        ariaLabelledBy="popover-heading-1"
         isActive={popoverOpen}
         onClose={closePopover}
-        ariaLabelledBy="popover-heading-1"
-        ariaDescribedBy="popover-description-1"
+        position={position}
       >
         <PopoverHeader
           titleAfter={
@@ -86,56 +86,56 @@ export const PopoverExample: React.FC<Props> = ({
             </Button>
           }
         >
-          <Heading id="popover-heading-1" as="h3" size="h6">
+          <Heading as="h3" id="popover-heading-1" size="h6">
             Notifications (4)
           </Heading>
         </PopoverHeader>
         <PopoverBody>
           <NotificationList>
             <NotificationListItem
-              href="#"
-              title="English Teacher gave you feedback"
               date="now"
+              href="#"
               source="Outsiders on Trial: Self Awareness = Trial Brief Outline"
+              title="English Teacher gave you feedback"
             ></NotificationListItem>
             <NotificationListItem
-              href="#"
-              title="English Teacher gave you feedback"
               date="now"
+              href="#"
               source="Outsiders on Trial: Self Awareness = Trial Brief Outline"
+              title="English Teacher gave you feedback"
             ></NotificationListItem>
             <NotificationListItem
-              href="#"
-              title="English Teacher gave you feedback"
               date="now"
+              href="#"
               source="Outsiders on Trial: Self Awareness = Trial Brief Outline"
+              title="English Teacher gave you feedback"
             ></NotificationListItem>
             <NotificationListItem
-              href="#"
-              title="English Teacher gave you feedback"
               date="now"
+              href="#"
               source="Outsiders on Trial: Self Awareness = Trial Brief Outline"
+              title="English Teacher gave you feedback"
             ></NotificationListItem>
           </NotificationList>
           <PopoverHeader>
-            <Heading id="popover-heading-2" as="h3" size="h6">
+            <Heading as="h3" id="popover-heading-2" size="h6">
               Already Seen
             </Heading>
           </PopoverHeader>
           <NotificationList>
             <NotificationListItem
-              href="#"
-              title="English Teacher gave you feedback"
               date="now"
-              source="Outsiders on Trial: Self Awareness = Trial Brief Outline"
+              href="#"
               markedAsRead={true}
+              source="Outsiders on Trial: Self Awareness = Trial Brief Outline"
+              title="English Teacher gave you feedback"
             ></NotificationListItem>
             <NotificationListItem
-              href="#"
-              title="English Teacher gave you feedback"
               date="now"
-              source="Outsiders on Trial: Self Awareness = Trial Brief Outline"
+              href="#"
               markedAsRead={true}
+              source="Outsiders on Trial: Self Awareness = Trial Brief Outline"
+              title="English Teacher gave you feedback"
             ></NotificationListItem>
           </NotificationList>
         </PopoverBody>

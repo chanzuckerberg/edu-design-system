@@ -19,9 +19,9 @@ const Template: Story<Props> = (args) => (
   <StackedBlock>
     <StackedBlockHeader>
       <img
+        alt="placeholder"
         // eslint-disable-next-line @chanzuckerberg/stories/no-ext-resources-in-stories
         src="https://st1.latestly.com/wp-content/uploads/2021/08/31-6.jpg"
-        alt="placeholder"
       />
     </StackedBlockHeader>
     <StackedBlockBody>
