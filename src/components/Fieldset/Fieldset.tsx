@@ -23,11 +23,6 @@ type FieldsetProps = {
  * ```
  *
  * A container for a fieldset including a legend and one or more form inputs.
- *
- * Uses `fieldset` and `legend` elements by default but can be customized.
- *
- * If you're not using a `fieldset` element, please consider whether you should be
- * using a `ul` instead.
  */
 export function Fieldset({ children, className }: FieldsetProps) {
   const componentClassName = clsx(className, styles['fieldset']);

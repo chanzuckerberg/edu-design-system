@@ -1,27 +1,25 @@
 @import '../../design-tokens/mixins.css';
 
 /*------------------------------------*\
-    #LEGEND
+    #FIELDSET LEGEND
 \*------------------------------------*/
 
 /**
- * 1) A label that's rendered as a <legend> for checkbox/radio
- *    fieldsets. It contains the same characteristics as a 
- *    label (ability to add flag for optional field, etc), but
- *    semantically/stylistically a bit different
+ * A label that's rendered as a <legend> for fieldsets.
+ * It contains the same characteristics as a label (ability to add flag for optional field, etc),
+ * but semantically/stylistically a bit different
+ * 1) Removes some default browser styles.
  * 2) Adjust margin between legend and option list
  */
 .legend {
-  @mixin legendReset;
+  @mixin legendReset; /* 1 */
   @mixin eds-theme-typography-form-label;
   margin-bottom: var(--eds-size-2); /* 2 */
 }
 
 /**
- * Label flag
- * 1) A flag to mark whether or not a field is required
- *    or optional. Currently a flag is only present
- *    for optional fields
+ * Label flag to mark whether or not a field is required
+ * or optional. Currently a flag is only present for optional fields
  */
 .legend__flag {
   @mixin eds-theme-typography-body-text-sm;

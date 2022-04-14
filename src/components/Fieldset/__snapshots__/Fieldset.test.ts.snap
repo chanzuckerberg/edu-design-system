@@ -180,7 +180,7 @@ exports[`<Fieldset /> CheckboxField story renders snapshot 1`] = `
     class="field-note checkbox-field__note"
     id="mock-id"
   >
-    Checkbox fieldset usage. See CheckboxField Stories for more examples
+    Checkbox fieldset usage. See CheckboxField Stories for more examples.
   </div>
 </fieldset>
 `;
@@ -537,7 +537,7 @@ exports[`<Fieldset /> RadioField story renders snapshot 1`] = `
     class="field-note radio-field__note"
     id="mock-id"
   >
-    RadioField fieldset usage. See RadioField Stories for more examples
+    RadioField fieldset usage. See RadioField Stories for more examples.
   </div>
 </fieldset>
 `;
