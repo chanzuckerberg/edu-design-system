@@ -19,8 +19,8 @@ export interface Props {
 export const TileHeader = ({ children, className, ...other }: Props) => {
   const componentClassName = clsx(styles['tile__header'], className, {});
   return (
-    <div className={componentClassName} {...other}>
+    <header className={componentClassName} {...other}>
       {children}
-    </div>
+    </header>
   );
 };

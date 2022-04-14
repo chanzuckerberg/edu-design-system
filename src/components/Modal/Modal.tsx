@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import clsx from 'clsx';
 import React, { useState, useEffect, useRef, ReactNode } from 'react';
 import { oneByType } from 'react-children-by-type';
@@ -212,6 +213,7 @@ export const Modal = ({
             aria-describedby={ariaDescribedBy}
             ref={windowRef}
             role="dialog"
+            // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
             tabIndex={0}
             aria-modal={isActive}
           >
