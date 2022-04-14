@@ -1,8 +1,8 @@
 import { Listbox } from "@headlessui/react";
 import clsx from "clsx";
 import React, { ReactNode, ComponentProps, ElementType } from "react";
+import CheckRoundedIcon from "../../icons/CheckRounded";
 import DropdownButton from "../DropdownButton";
-import CheckRoundedIcon from "../Icons/CheckRounded";
 import styles from "./Dropdown.module.css";
 
 type ListboxProps = ComponentProps<typeof Listbox>;

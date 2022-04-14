@@ -1,7 +1,7 @@
 import { StoryObj } from "@storybook/react";
 import { within } from "@storybook/testing-library";
 import React from "react";
-import FilterListRoundedIcon from "../Icons/FilterListRounded";
+import FilterListRoundedIcon from "../../icons/FilterListRounded";
 import Dropdown from "./Dropdown";
 
 export default {

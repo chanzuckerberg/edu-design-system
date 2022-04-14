@@ -21,9 +21,8 @@
     "url": "https://github.com/chanzuckerberg/edu-design-system/issues"
   },
   "scripts": {
-    "build": "yarn build:clean && yarn build:tokens && yarn build:js && yarn build:styles && yarn build:finish",
+    "build": "yarn build:clean && yarn build:tokens && yarn build:js && yarn build:styles",
     "build:clean": "rm -rf lib/",
-    "build:finish": "mv lib/components/Icons lib/icons",
     "build:js": "tsc --project tsconfig.build.json",
     "build:storybook": "build-storybook -o storybook-static",
     "build:styles": "postcss \"src/**/*.css\" --dir lib/ --base src/ --verbose",

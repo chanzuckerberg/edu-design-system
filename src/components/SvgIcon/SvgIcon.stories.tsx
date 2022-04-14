@@ -1,7 +1,7 @@
 import type { StoryObj } from "@storybook/react";
 import React from "react";
 import * as ColorTokens from "../../../lib/tokens/ts/colors";
-import * as allIcons from "../Icons";
+import * as allIcons from "../../icons";
 import Text from "../Text";
 import SvgIcon from "./SvgIcon";
 import styles from "./SvgIcon.stories.module.css";

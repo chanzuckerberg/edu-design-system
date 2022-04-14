@@ -1,11 +1,11 @@
 import clsx from "clsx";
 import * as React from "react";
 
-import CheckCircleRoundedIcon from "../../../Icons/CheckCircleRounded";
-import ForumRoundedIcon from "../../../Icons/ForumRounded";
-import NotificationsRoundedIcon from "../../../Icons/NotificationsRounded";
-import WarningRoundedIcon from "../../../Icons/WarningRounded";
-import DangerousRoundedIcon from "../../../Icons/custom/DangerousRounded";
+import CheckCircleRoundedIcon from "../../../../icons/CheckCircleRounded";
+import ForumRoundedIcon from "../../../../icons/ForumRounded";
+import NotificationsRoundedIcon from "../../../../icons/NotificationsRounded";
+import WarningRoundedIcon from "../../../../icons/WarningRounded";
+import DangerousRoundedIcon from "../../../../icons/custom/DangerousRounded";
 import styles from "./NotificationIcon.module.css";
 
 export type NotificationVariant =

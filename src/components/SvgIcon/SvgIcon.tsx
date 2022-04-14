@@ -83,7 +83,7 @@ interface SvgStyle extends React.CSSProperties {
 /**
  * Render arbitrary SVG path data while enforcing good accessibility practices.
  *
- * If you're looking for specific icon components, look in the `../Icons` directory.
+ * If you're looking for specific icon components, look in the `../../icons` directory.
  */
 function SvgIcon(props: SvgIconProps) {
   const {
