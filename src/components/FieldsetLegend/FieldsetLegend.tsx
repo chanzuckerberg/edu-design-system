@@ -31,12 +31,12 @@ export const FieldsetLegend = ({
   required = true,
   ...other
 }: FieldsetLegendProps) => {
-  const componentClassName = clsx(styles['legend'], className);
+  const componentClassName = clsx(styles['fieldset-legend'], className);
   return (
     <legend className={componentClassName} {...other}>
       {text}{' '}
       {!required && (
-        <span className={styles['legend__flag']}>{optionalLabel}</span>
+        <span className={styles['fieldset-legend__flag']}>{optionalLabel}</span>
       )}
     </legend>
   );

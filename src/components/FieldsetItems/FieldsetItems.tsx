@@ -26,6 +26,6 @@ export const FieldsetItems = ({
   as: Component = 'div',
   className,
 }: FieldsetItemsProps) => {
-  const componentClassName = clsx(className, styles['items']);
+  const componentClassName = clsx(className, styles['fieldset-items']);
   return <Component className={componentClassName}>{children}</Component>;
 };
