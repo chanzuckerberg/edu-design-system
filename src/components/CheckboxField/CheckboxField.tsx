@@ -48,11 +48,7 @@ export interface Props {
   /**
    * String for the optional label. By default it is '(optional)'
    */
-  optionalLabel?: string;
-  /**
-   * Indicates that field is required for form to be successfully submitted
-   */
-  required?: boolean;
+  optionalLabel?: '(required)' | '*' | '(optional)';
   /**
    * Size variations for the CheckboxField
    * - **sm** results in a visually smaller CheckboxField
@@ -77,7 +73,6 @@ export const CheckboxField = ({
   isError,
   fieldNote,
   disabled,
-  required,
   ariaDescribedBy,
   children,
   optionalLabel,
@@ -106,7 +101,6 @@ export const CheckboxField = ({
       <FieldsetLegend
         className={styles['checkbox-field__label']}
         text={label}
-        required={required}
         optionalLabel={optionalLabel}
         aria-describedby={fieldNote && ariaDescribedByVar}
       />

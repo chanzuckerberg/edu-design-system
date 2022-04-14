@@ -82,7 +82,7 @@ Inline.args = {
 export const Optional = Template.bind({});
 Optional.args = {
   label: 'Radio field',
-  required: false,
+  optionalLabel: '(optional)',
   fieldNote: 'This is a radio field',
 };
 

@@ -38,7 +38,9 @@ export const FieldsetLegends: StoryObj<FieldsetLegendProps> = {
   render: (args) => (
     <>
       <FieldsetLegend {...args} />
-      <FieldsetLegend {...args} required={false} />
+      <FieldsetLegend {...args} optionalLabel="(optional)" />
+      <FieldsetLegend {...args} optionalLabel="(required)" />
+      <FieldsetLegend {...args} optionalLabel="*" />
     </>
   ),
 };

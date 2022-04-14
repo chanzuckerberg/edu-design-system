@@ -6,13 +6,13 @@ exports[`<Fieldset /> CheckboxField story renders snapshot 1`] = `
 >
   <legend
     aria-describedby="mock-id"
-    class="legend checkbox-field__label"
+    class="fieldset-legend checkbox-field__label"
   >
     Checkbox field
      
   </legend>
   <div
-    class="checkbox-field__body items"
+    class="checkbox-field__body fieldset-items"
   >
     <ul
       class="checkbox-field__list"
@@ -190,13 +190,13 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
   class="fieldset"
 >
   <legend
-    class="legend"
+    class="fieldset-legend"
   >
     Legend
      
   </legend>
   <div
-    class="items"
+    class="fieldset-items"
   >
     <div
       class="checkbox"
@@ -434,7 +434,7 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
 
 exports[`<Fieldset /> FieldsetLegends story renders snapshot 1`] = `
 <legend
-  class="legend"
+  class="fieldset-legend"
 >
   Legend
    
@@ -447,13 +447,13 @@ exports[`<Fieldset /> RadioField story renders snapshot 1`] = `
 >
   <legend
     aria-describedby="mock-id"
-    class="legend radio-field__label"
+    class="fieldset-legend radio-field__label"
   >
     Radio field
      
   </legend>
   <div
-    class="radio-field__body items"
+    class="radio-field__body fieldset-items"
   >
     <ul
       class="radio-field__list"

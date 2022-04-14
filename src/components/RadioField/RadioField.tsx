@@ -63,11 +63,7 @@ export interface Props {
   /**
    * String for the optional label. By default it is '(optional)'
    */
-  optionalLabel?: string;
-  /**
-   * Indicates that field is required for form to be successfully submitted
-   */
-  required?: boolean;
+  optionalLabel?: '(required)' | '*' | '(optional)';
   /**
    * Size variations:
    * - **sm** yields a smaller radio button and text
@@ -94,7 +90,6 @@ export const RadioField = ({
   fieldNote,
   disabled,
   inverted,
-  required,
   ariaDescribedBy,
   optionalLabel,
   onChange,
@@ -167,7 +162,6 @@ export const RadioField = ({
       <FieldsetLegend
         className={styles['radio-field__label']}
         text={label}
-        required={required}
         optionalLabel={optionalLabel}
         aria-describedby={fieldNote && ariaDescribedByVar}
       />

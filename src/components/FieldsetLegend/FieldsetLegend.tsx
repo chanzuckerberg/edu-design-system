@@ -8,13 +8,9 @@ export interface FieldsetLegendProps {
    */
   className?: string;
   /**
-   * String for the optional legend. By default it is '(optional)'.
+   * String to indicate required or optional state.
    */
-  optionalLabel?: string;
-  /**
-   * Indicates that field is required for form to be successfully submitted.
-   */
-  required?: boolean;
+  optionalLabel?: '(required)' | '*' | '(optional)';
   /**
    * Legend text string that names the fieldset.
    */
@@ -26,16 +22,15 @@ export interface FieldsetLegendProps {
  */
 export const FieldsetLegend = ({
   className,
-  optionalLabel = '(optional)',
+  optionalLabel,
   text,
-  required = true,
   ...other
 }: FieldsetLegendProps) => {
   const componentClassName = clsx(styles['fieldset-legend'], className);
   return (
     <legend className={componentClassName} {...other}>
       {text}{' '}
-      {!required && (
+      {optionalLabel && (
         <span className={styles['fieldset-legend__flag']}>{optionalLabel}</span>
       )}
     </legend>
