@@ -54,12 +54,12 @@ export const InputWithin = () => {
   return (
     <div>
       <TextField
-        type="text"
         inputWithin={
-          <Button variant="icon" size="sm">
+          <Button size="sm" variant="icon">
             Button
           </Button>
         }
+        type="text"
       />
     </div>
   );

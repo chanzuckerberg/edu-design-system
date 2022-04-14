@@ -149,25 +149,25 @@ export const TextInput = ({
   return (
     <input
       accept={accept}
+      aria-describedby={ariaDescribedBy}
       className={componentClassName}
+      defaultValue={defaultValue}
+      disabled={disabled}
       id={id}
-      name={name}
-      type={type}
-      value={value}
-      placeholder={placeholder}
-      min={min}
+      inputMode={inputMode}
       max={max}
       maxLength={maxLength}
-      inputMode={inputMode}
-      disabled={disabled}
-      readOnly={readOnly}
+      min={min}
+      multiple={multiple}
+      name={name}
       onChange={onChange}
       pattern={pattern}
+      placeholder={placeholder}
+      readOnly={readOnly}
       required={required}
       title={title}
-      multiple={multiple}
-      defaultValue={defaultValue}
-      aria-describedby={ariaDescribedBy}
+      type={type}
+      value={value}
       {...other}
     />
   );

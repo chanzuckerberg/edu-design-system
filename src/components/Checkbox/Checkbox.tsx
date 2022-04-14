@@ -63,10 +63,10 @@ export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
         />
         {label && (
           <CheckboxLabel
+            disabled={disabled}
             htmlFor={checkboxId}
             size={size}
             text={label}
-            disabled={disabled}
           />
         )}
       </div>

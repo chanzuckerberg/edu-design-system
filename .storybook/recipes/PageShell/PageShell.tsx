@@ -32,8 +32,8 @@ export const PageShell = ({ children, className, ...other }: Props) => {
       <Button
         className={styles['page-shell__skip-link']}
         href="#main-content"
-        variant="primary"
         size="sm"
+        variant="primary"
       >
         Skip to content
       </Button>

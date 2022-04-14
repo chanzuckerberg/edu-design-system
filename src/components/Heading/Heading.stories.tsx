@@ -62,7 +62,7 @@ export const Variants: StoryObj<Args> = {
     VARIANTS.forEach((variant) => {
       if (variant !== 'info')
         headings.push(
-          <Heading {...args} variant={variant} key={`${variant}`}>
+          <Heading {...args} key={`${variant}`} variant={variant}>
             {variant}
           </Heading>,
         );
@@ -87,7 +87,7 @@ export const Sizes: StoryObj<Args> = {
     const sizes = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'] as const;
     const combinations = sizes.map((as: typeof sizes[number]) => {
       const headings = sizes.map((size: typeof sizes[number]) => (
-        <Heading as={as} size={size} key={`as${as}size${size}`}>
+        <Heading as={as} key={`as${as}size${size}`} size={size}>
           as: {as} size: {size}
         </Heading>
       ));

@@ -43,11 +43,11 @@ export const Tab = ({
   const componentClassName = clsx(styles['tabs__panel'], className, {});
   return (
     <div
-      role="tabpanel"
-      id={id}
       aria-hidden={false}
       aria-labelledby={ariaLabelledBy}
       className={componentClassName}
+      id={id}
+      role="tabpanel"
       {...other}
     >
       {children}

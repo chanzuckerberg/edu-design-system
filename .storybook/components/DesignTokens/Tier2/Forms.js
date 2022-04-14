@@ -16,14 +16,14 @@ export class Tier2Forms extends Component {
               return (
                 <GridItem key={'form-input-border-width-' + index}>
                   <TokenSpecimen
-                    name={listItem.name}
-                    value={listItem.value}
                     inlineStyles={{
                       backgroundColor: 'transparent',
                       borderWidth: `var(${listItem.name})`,
                       borderStyle: 'solid',
                       borderColor: 'black',
                     }}
+                    name={listItem.name}
+                    value={listItem.value}
                   />
                 </GridItem>
               );
@@ -36,8 +36,6 @@ export class Tier2Forms extends Component {
               return (
                 <GridItem key={'form-input-border-radius-' + index}>
                   <TokenSpecimen
-                    name={listItem.name}
-                    value={listItem.value}
                     inlineStyles={{
                       backgroundColor: 'transparent',
                       borderWidth: '1px',
@@ -45,6 +43,8 @@ export class Tier2Forms extends Component {
                       borderColor: 'black',
                       borderRadius: `var(${listItem.name})`,
                     }}
+                    name={listItem.name}
+                    value={listItem.value}
                   />
                 </GridItem>
               );
@@ -59,12 +59,12 @@ export class Tier2Forms extends Component {
                 return (
                   <GridItem key={'form-label-foreground' + index}>
                     <TokenSpecimen
-                      name={listItem.name}
-                      value={listItem.value}
-                      variant="typography-title"
                       inlineStyles={{
                         color: `var(${listItem.name})`,
                       }}
+                      name={listItem.name}
+                      value={listItem.value}
+                      variant="typography-title"
                     />
                   </GridItem>
                 );
@@ -82,14 +82,14 @@ export class Tier2Forms extends Component {
               return (
                 <GridItem key={'form-input-border' + index}>
                   <TokenSpecimen
-                    name={listItem.name}
-                    value={listItem.value}
                     inlineStyles={{
                       backgroundColor: 'transparent',
                       borderWidth: '2px',
                       borderStyle: 'solid',
                       borderColor: `var(${listItem.name})`,
                     }}
+                    name={listItem.name}
+                    value={listItem.value}
                   />
                 </GridItem>
               );

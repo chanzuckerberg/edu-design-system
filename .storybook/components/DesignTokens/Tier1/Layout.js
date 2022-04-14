@@ -13,11 +13,11 @@ export class Tier1Layout extends Component {
               return (
                 <GridItem key={'l-' + index}>
                   <TokenSpecimen
-                    name={listItem.name}
-                    value={listItem.value}
                     inlineStyles={{
                       maxWidth: `var(${listItem.name})`,
                     }}
+                    name={listItem.name}
+                    value={listItem.value}
                   />
                 </GridItem>
               );

@@ -32,23 +32,23 @@ const Template: Story<Props> = (args) => (
 const DisabledTemplate: Story<Props> = (args) => (
   <CheckboxField {...args}>
     <CheckboxFieldItem
+      checked={true}
+      disabled={true}
       name="checkbox-example"
       text="Checkbox 1"
       value="checkbox1"
-      disabled={true}
-      checked={true}
     />
     <CheckboxFieldItem
+      disabled={true}
       name="checkbox-example"
       text="Checkbox 2"
       value="checkbox2"
-      disabled={true}
     />
     <CheckboxFieldItem
+      disabled={true}
       name="checkbox-example"
       text="Checkbox 3"
       value="checkbox3"
-      disabled={true}
     />
   </CheckboxField>
 );

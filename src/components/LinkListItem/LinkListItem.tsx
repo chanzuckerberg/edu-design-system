@@ -73,9 +73,9 @@ export const LinkListItem = ({
       >
         {iconPosition === 'before' && (
           <Icon
-            purpose="decorative"
-            name={iconName}
             className={styles['link-list__icon']}
+            name={iconName}
+            purpose="decorative"
           />
         )}
         <div className={styles['link-list__text']}>

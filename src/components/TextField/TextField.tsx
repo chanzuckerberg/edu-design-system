@@ -201,34 +201,34 @@ export const TextField = ({
     <div className={componentClassName}>
       <Label
         className={styles['text-field__label']}
-        htmlFor={idVar}
-        text={label}
-        inverted={inverted}
         hideLabel={hideLabel}
-        required={required}
+        htmlFor={idVar}
+        inverted={inverted}
         optionalLabel={optionalLabel}
+        required={required}
         requiredLabel={requiredLabel}
+        text={label}
       />
 
       <div className={styles['text-field__body']}>
         <TextInput
+          aria-invalid={!!isError}
+          ariaDescribedBy={fieldNote && ariaDescribedByVar}
           className={styles['text-field__input']}
-          type={type}
-          id={idVar}
-          name={name}
-          value={value}
-          isError={isError}
           defaultValue={defaultValue}
-          placeholder={placeholder}
-          onChange={onChange}
-          inputMode={inputMode}
-          maxLength={maxLength}
           disabled={disabled}
+          id={idVar}
+          inputMode={inputMode}
+          isError={isError}
+          maxLength={maxLength}
+          name={name}
+          onChange={onChange}
+          placeholder={placeholder}
           readOnly={readOnly}
           required={required}
-          ariaDescribedBy={fieldNote && ariaDescribedByVar}
-          aria-invalid={!!isError}
           title={title}
+          type={type}
+          value={value}
           {...other}
         />
         {inputWithin && (
@@ -248,8 +248,8 @@ export const TextField = ({
         <FieldNote
           className={styles['text-field__note']}
           id={ariaDescribedByVar}
-          isError={isError}
           inverted={inverted}
+          isError={isError}
         >
           {fieldNote}
         </FieldNote>

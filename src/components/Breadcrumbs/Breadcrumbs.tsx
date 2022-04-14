@@ -44,8 +44,8 @@ export const Breadcrumbs = ({
   return (
     <nav
       aria-label={ariaLabel}
-      id={breadcrumbsId}
       className={componentClassName}
+      id={breadcrumbsId}
       {...other}
     >
       <ul className={styles['breadcrumbs__list']}>{children}</ul>

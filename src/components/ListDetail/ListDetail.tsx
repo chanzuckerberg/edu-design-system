@@ -247,21 +247,21 @@ export const ListDetail = ({
                 role="presentation"
               >
                 <a
+                  aria-controls={idVar[i]}
+                  aria-label={tab.props.ariaLabel}
+                  aria-selected={isActive}
                   className={styles['list-detail__link']}
-                  role="tab"
+                  href={`#${idVar[i]}`}
+                  id={ariaLabelledByVar[i]}
+                  key={'list-detail-link' + i}
                   onClick={(e) => {
                     e.preventDefault();
                     onOpen(i);
                   }}
-                  key={'list-detail-link' + i}
-                  id={ariaLabelledByVar[i]}
                   onKeyDown={onKeyDown}
-                  href={`#${idVar[i]}`}
-                  aria-selected={isActive}
-                  tabIndex={isActive ? 0 : -1}
-                  aria-controls={idVar[i]}
                   ref={listDetailItemRefs[i]}
-                  aria-label={tab.props.ariaLabel}
+                  role="tab"
+                  tabIndex={isActive ? 0 : -1}
                 >
                   <div
                     className={clsx(styles['list-detail__link-left'], {

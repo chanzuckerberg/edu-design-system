@@ -16,14 +16,14 @@ export class Tier2Borders extends Component {
               return (
                 <GridItem key={'border-width-' + index}>
                   <TokenSpecimen
-                    name={listItem.name}
-                    value={listItem.value}
                     inlineStyles={{
                       backgroundColor: 'transparent',
                       borderWidth: `var(${listItem.name})`,
                       borderStyle: 'solid',
                       borderColor: 'black',
                     }}
+                    name={listItem.name}
+                    value={listItem.value}
                   />
                 </GridItem>
               );
@@ -40,8 +40,6 @@ export class Tier2Borders extends Component {
               return (
                 <GridItem key={'border-width-' + index}>
                   <TokenSpecimen
-                    name={listItem.name}
-                    value={listItem.value}
                     inlineStyles={{
                       backgroundColor: 'transparent',
                       borderWidth: '1px',
@@ -49,6 +47,8 @@ export class Tier2Borders extends Component {
                       borderStyle: 'solid',
                       borderColor: 'black',
                     }}
+                    name={listItem.name}
+                    value={listItem.value}
                   />
                 </GridItem>
               );

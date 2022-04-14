@@ -82,10 +82,10 @@ export const Banner = ({
     <div className={componentClassName} role="alert" {...other}>
       {iconName && (
         <Icon
-          name={iconName}
-          title={iconTitle}
           className={styles['banner__icon']}
+          name={iconName}
           purpose="informative"
+          title={iconTitle}
         />
       )}
       <div className={styles['banner__body']}>{children}</div>
@@ -93,14 +93,14 @@ export const Banner = ({
       {dismissible && (
         <Button
           className={styles['banner__close-btn']}
-          variant="icon"
           onClick={(e: any) => onDismiss(e)}
+          variant="icon"
         >
           <Icon
-            name="close"
-            title={closeButtonText}
             className={styles['banner__icon']}
+            name="close"
             purpose="informative"
+            title={closeButtonText}
           />
         </Button>
       )}

@@ -46,9 +46,9 @@ export const MediaBlock = ({
       <div className={styles['media-block__body']}>{children}</div>
       <div className={styles['media-block__media']}>
         <img
+          alt={imgAlt}
           className={styles['media-block__image']}
           src={imgSrc}
-          alt={imgAlt}
         />
       </div>
     </div>

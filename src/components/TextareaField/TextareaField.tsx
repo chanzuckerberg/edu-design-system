@@ -181,44 +181,44 @@ export const TextareaField = ({
     <div className={componentClassName}>
       <Label
         className={styles['textarea-field__label']}
-        htmlFor={idVar}
-        text={label}
         hideLabel={hideLabel}
+        htmlFor={idVar}
         inverted={inverted}
-        required={required}
         optionalLabel={optionalLabel}
+        required={required}
         requiredLabel={requiredLabel}
+        text={label}
       />
 
       <div className={styles['textarea-field__body']}>
         <Textarea
+          aria-invalid={!!isError}
+          ariaDescribedBy={fieldNote && ariaDescribedByVar}
           className={styles['textarea-field__textarea']}
-          id={idVar}
-          name={name}
-          value={value}
           defaultValue={defaultValue}
-          placeholder={placeholder}
-          onChange={onChange}
-          isError={isError}
-          inputMode={inputMode}
-          maxLength={maxLength}
           disabled={disabled}
+          id={idVar}
+          inputMode={inputMode}
+          isError={isError}
+          maxLength={maxLength}
+          name={name}
+          onChange={onChange}
+          placeholder={placeholder}
           readOnly={readOnly}
           required={required}
-          ariaDescribedBy={fieldNote && ariaDescribedByVar}
-          aria-invalid={!!isError}
           rows={rows}
           title={title}
+          value={value}
           {...other}
         />
         {fieldButtonText && (
           <Button
-            className={styles['textarea-field__button']}
-            type="button"
             aria-label={fieldButtonAriaLabel}
-            variant="icon"
-            size="sm"
+            className={styles['textarea-field__button']}
             onClick={fieldButtonOnClick}
+            size="sm"
+            type="button"
+            variant="icon"
           >
             {fieldButtonText}
           </Button>
@@ -234,9 +234,9 @@ export const TextareaField = ({
       {fieldNote && (
         <FieldNote
           className={styles['textarea-field__note']}
-          isError={isError}
-          inverted={inverted}
           id={ariaDescribedByVar}
+          inverted={inverted}
+          isError={isError}
         >
           {fieldNote}
         </FieldNote>
