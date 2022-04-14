@@ -40,7 +40,7 @@ export const Hero = ({
   const componentClassName = clsx(styles['hero'], className, {});
   return (
     <div className={componentClassName} {...other}>
-      <img className={styles['hero__img']} src={imgSrc} alt={imgAlt} />
+      <img alt={imgAlt} className={styles['hero__img']} src={imgSrc} />
       <div className={styles['hero__inner']}>
         <LayoutContainer className={styles['hero__layout-container']}>
           <div className={styles['hero__body']}>{children}</div>

@@ -11,20 +11,20 @@ export class Tier2TypographyUsage extends Component {
           <Grid>
             <TokenSpecimen
               name="eds-theme-typography-headline-lg"
-              variant="typography-body"
               specimenClassName={styles['u-theme-typography-headline-lg']}
+              variant="typography-body"
             />
 
             <TokenSpecimen
               name="eds-theme-typography-headline-md"
-              variant="typography-body"
               specimenClassName={styles['u-theme-typography-headline-md']}
+              variant="typography-body"
             />
 
             <TokenSpecimen
               name="eds-theme-typography-headline-sm"
-              variant="typography-body"
               specimenClassName={styles['u-theme-typography-headline-sm']}
+              variant="typography-body"
             />
           </Grid>
         </Section>
@@ -33,14 +33,14 @@ export class Tier2TypographyUsage extends Component {
           <Grid>
             <TokenSpecimen
               name="eds-theme-typography-title-md"
-              variant="typography-body"
               specimenClassName={styles['u-theme-typography-title-md']}
+              variant="typography-body"
             />
 
             <TokenSpecimen
               name="eds-theme-typography-title-sm"
-              variant="typography-body"
               specimenClassName={styles['u-theme-typography-title-sm']}
+              variant="typography-body"
             />
           </Grid>
         </Section>
@@ -49,26 +49,26 @@ export class Tier2TypographyUsage extends Component {
           <Grid>
             <TokenSpecimen
               name="eds-theme-typography-label-lg-subtle"
-              variant="typography-body"
               specimenClassName={styles['u-theme-typography-label-lg-subtle']}
+              variant="typography-body"
             />
 
             <TokenSpecimen
               name="eds-theme-typography-label-md-subtle"
-              variant="typography-body"
               specimenClassName={styles['u-theme-typography-label-md-subtle']}
+              variant="typography-body"
             />
 
             <TokenSpecimen
               name="eds-theme-typography-label-md"
-              variant="typography-body"
               specimenClassName={styles['u-theme-typography-label-md']}
+              variant="typography-body"
             />
 
             <TokenSpecimen
               name="eds-theme-typography-label-sm"
-              variant="typography-body"
               specimenClassName={styles['u-theme-typography-label-sm']}
+              variant="typography-body"
             />
           </Grid>
         </Section>
@@ -77,20 +77,20 @@ export class Tier2TypographyUsage extends Component {
           <Grid>
             <TokenSpecimen
               name="eds-theme-typography-body-text-md"
-              variant="typography-body"
               specimenClassName={styles['u-theme-typography-body-text-md']}
+              variant="typography-body"
             />
 
             <TokenSpecimen
               name="eds-theme-typography-body-text-sm"
-              variant="typography-body"
               specimenClassName={styles['u-theme-typography-body-text-sm']}
+              variant="typography-body"
             />
 
             <TokenSpecimen
               name="eds-theme-typography-body-text-xs"
-              variant="typography-body"
               specimenClassName={styles['u-theme-typography-body-text-xs']}
+              variant="typography-body"
             />
           </Grid>
         </Section>
@@ -99,20 +99,20 @@ export class Tier2TypographyUsage extends Component {
           <Grid>
             <TokenSpecimen
               name="eds-theme-typography-caption-text-lg"
-              variant="typography-body"
               specimenClassName={styles['u-theme-typography-caption-text-lg']}
+              variant="typography-body"
             />
 
             <TokenSpecimen
               name="eds-theme-typography-caption-text-md"
-              variant="typography-body"
               specimenClassName={styles['u-theme-typography-caption-text-md']}
+              variant="typography-body"
             />
 
             <TokenSpecimen
               name="eds-theme-typography-caption-text-sm"
-              variant="typography-body"
               specimenClassName={styles['u-theme-typography-caption-text-sm']}
+              variant="typography-body"
             />
           </Grid>
         </Section>
@@ -121,8 +121,8 @@ export class Tier2TypographyUsage extends Component {
           <Grid>
             <TokenSpecimen
               name="eds-theme-typography-button-label"
-              variant="typography-body"
               specimenClassName={styles['u-theme-typography-button-label']}
+              variant="typography-body"
             />
           </Grid>
         </Section>
@@ -131,14 +131,14 @@ export class Tier2TypographyUsage extends Component {
           <Grid>
             <TokenSpecimen
               name="eds-theme-typography-kicker"
-              variant="typography-body"
               specimenClassName={styles['u-theme-typography-kicker']}
+              variant="typography-body"
             />
 
             <TokenSpecimen
               name="eds-theme-typography-kicker-sm"
-              variant="typography-body"
               specimenClassName={styles['u-theme-typography-kicker-sm']}
+              variant="typography-body"
             />
           </Grid>
         </Section>
@@ -147,8 +147,8 @@ export class Tier2TypographyUsage extends Component {
           <Grid>
             <TokenSpecimen
               name="eds-theme-typography-tag"
-              variant="typography-body"
               specimenClassName={styles['u-theme-typography-tag']}
+              variant="typography-body"
             />
           </Grid>
         </Section>

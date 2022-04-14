@@ -50,17 +50,17 @@ export const FieldNote = ({
   );
   return (
     <div
-      className={componentClassName}
       aria-live="assertive"
+      className={componentClassName}
       id={id}
       {...other}
     >
       {isError && (
         <Icon
           className={styles['field-note__icon']}
-          title="error"
-          purpose="informative"
           name={isError ? 'cancel' : undefined}
+          purpose="informative"
+          title="error"
         />
       )}
       {children}

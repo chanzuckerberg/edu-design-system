@@ -79,8 +79,8 @@ export const NotificationListItem = ({
         {source}
       </div>
       <button
-        className={styles['notification-list__button']}
         aria-label={isRead === true ? 'Mark as unread' : 'Mark as read'}
+        className={styles['notification-list__button']}
         onClick={onClick}
       />
     </li>

@@ -11,9 +11,9 @@ export default {
 
 const Template: Story<Props> = (args) => (
   <LinkList {...args}>
-    <LinkListItem text="Link List Item 1" href="#" />
-    <LinkListItem text="Link List Item 2" href="#" />
-    <LinkListItem text="Link List Item 3" href="#" />
+    <LinkListItem href="#" text="Link List Item 1" />
+    <LinkListItem href="#" text="Link List Item 2" />
+    <LinkListItem href="#" text="Link List Item 3" />
   </LinkList>
 );
 
@@ -43,31 +43,31 @@ Responsive.args = {
 export const IconAfterText = () => (
   <LinkList>
     <LinkListItem
+      href="#"
+      iconName="chevron-right"
+      iconPosition="after"
       text="Link List Item 1"
-      href="#"
-      iconPosition="after"
-      iconName="chevron-right"
     />
     <LinkListItem
+      href="#"
+      iconName="chevron-right"
+      iconPosition="after"
       text="Link List Item 2"
-      href="#"
-      iconPosition="after"
-      iconName="chevron-right"
     />
     <LinkListItem
-      text="Link List Item 3"
       href="#"
-      iconPosition="after"
       iconName="chevron-right"
+      iconPosition="after"
+      text="Link List Item 3"
     />
   </LinkList>
 );
 export const Inverted = () => (
   <div style={{ backgroundColor: 'black' }}>
     <LinkList inverted={true}>
-      <LinkListItem text="Link List Item 1" href="#" />
-      <LinkListItem text="Link List Item 2" href="#" />
-      <LinkListItem text="Link List Item 3" href="#" />
+      <LinkListItem href="#" text="Link List Item 1" />
+      <LinkListItem href="#" text="Link List Item 2" />
+      <LinkListItem href="#" text="Link List Item 3" />
     </LinkList>
   </div>
 );

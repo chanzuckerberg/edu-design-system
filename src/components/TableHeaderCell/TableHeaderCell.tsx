@@ -75,14 +75,14 @@ export const TableHeaderCell = ({
     <th
       aria-sort={sortDirection ?? null}
       className={componentClassName}
-      rowSpan={rowSpan}
       colSpan={colSpan}
-      scope={scope}
       headers={headers}
       id={id}
+      rowSpan={rowSpan}
+      scope={scope}
       {...other}
     >
-      <Button variant="tertiary" onClick={onClick}>
+      <Button onClick={onClick} variant="tertiary">
         {text}
         <Icon name="arrow-narrow-down" purpose="decorative" />
       </Button>

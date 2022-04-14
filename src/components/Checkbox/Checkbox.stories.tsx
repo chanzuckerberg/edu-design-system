@@ -123,8 +123,8 @@ export const LongLabels = {
       <div className={styles['longlabels--grid']}>
         <Checkbox label={label} />
         <Checkbox label={label} size="small" />
-        <Checkbox label={label} disabled />
-        <Checkbox label={label} disabled size="small" />
+        <Checkbox disabled label={label} />
+        <Checkbox disabled label={label} size="small" />
       </div>
     );
   },

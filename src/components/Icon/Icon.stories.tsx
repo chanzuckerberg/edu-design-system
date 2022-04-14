@@ -27,7 +27,7 @@ export default {
 export const Default: StoryObj<IconProps> = {
   render: ({ name, color, ...rest }) => {
     const computedColor = color && ColorTokens[color];
-    return <Icon {...rest} name={name} color={computedColor} />;
+    return <Icon {...rest} color={computedColor} name={name} />;
   },
   args: {
     name: 'close',
@@ -89,15 +89,15 @@ export const InText: StoryObj<IconProps> = {
           {...args}
           name="account-circle"
           purpose="informative"
-          title="icon with 2em line height"
           size="2em"
+          title="icon with 2em line height"
         />
         , 2em) which is harder to determine. Take a look at the icons available
         in{' '}
         <a
           href="https://material-ui.com/components/material-icons/"
-          target="_blank"
           rel="noreferrer"
+          target="_blank"
         >
           https://material-ui.com/components/material-icons/
         </a>

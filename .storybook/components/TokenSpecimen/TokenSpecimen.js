@@ -19,8 +19,8 @@ export class TokenSpecimen extends Component {
             'token-specimen__sample token-specimen__sample--typography-title ' +
             this.props.specimenClassName
           }
-          style={this.props.inlineStyles}
           contentEditable
+          style={this.props.inlineStyles}
         >
           AaBbCcDdEeFfGg
         </div>
@@ -32,8 +32,8 @@ export class TokenSpecimen extends Component {
             'token-specimen__sample token-specimen__sample--typography-body ' +
             this.props.specimenClassName
           }
-          style={this.props.inlineStyles}
           contentEditable
+          style={this.props.inlineStyles}
         >
           Almost before we knew it, we had left the ground.
         </div>

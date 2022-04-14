@@ -71,46 +71,46 @@ export const GlobalHeader = ({ className, ...other }: Props) => {
 
       <Button
         className={styles['global-header__menu-button']}
-        variant="icon"
         onClick={toggleMenu}
+        variant="icon"
       >
         <Icon
-          purpose="informative"
           name={isActive ? 'close' : 'menu'}
+          purpose="informative"
           title={isActive ? 'Close' : 'Menu'}
         />
       </Button>
 
       <NavContainer
-        isActive={isActive}
         className={styles['global-header__nav-container']}
+        isActive={isActive}
       >
         <PrimaryNav>
-          <PrimaryNavItem href="#" text="Search Students" iconName="search" />
-          <PrimaryNavItem href="#" text="Announcements" iconName="class-copy" />
-          <PrimaryNavItem href="#" text="Math 7 (IM)" iconName="mood" />
-          <PrimaryNavItem href="#" text="Mentoring" iconName="account-circle" />
-          <PrimaryNavItem href="#" text="Student Progress" iconName="school" />
+          <PrimaryNavItem href="#" iconName="search" text="Search Students" />
+          <PrimaryNavItem href="#" iconName="class-copy" text="Announcements" />
+          <PrimaryNavItem href="#" iconName="mood" text="Math 7 (IM)" />
+          <PrimaryNavItem href="#" iconName="account-circle" text="Mentoring" />
+          <PrimaryNavItem href="#" iconName="school" text="Student Progress" />
           <PrimaryNavItem
             href="#"
-            text="Educator Tools"
             iconName="view-module"
+            text="Educator Tools"
           />
           <PrimaryNavItem
             href="#"
-            text="Curriculum"
             iconName="business-center"
+            text="Curriculum"
           />
         </PrimaryNav>
       </NavContainer>
       <UtilityNav className={styles['global-header__utility-nav']}>
-        <UtilityNavItem itemBefore={<Avatar />} ariaLabel="Notifications">
+        <UtilityNavItem ariaLabel="Notifications" itemBefore={<Avatar />}>
           <Popover
-            className={styles['global-header__popover']}
-            position={isLarge === false ? 'bottom-left' : undefined}
-            isActive={true}
-            ariaLabelledBy="popover-heading-1"
             ariaDescribedBy="popover-description-1"
+            ariaLabelledBy="popover-heading-1"
+            className={styles['global-header__popover']}
+            isActive={true}
+            position={isLarge === false ? 'bottom-left' : undefined}
           >
             <PopoverHeader
               titleAfter={
@@ -119,56 +119,56 @@ export const GlobalHeader = ({ className, ...other }: Props) => {
                 </Button>
               }
             >
-              <Heading id="popover-heading-1" as="h3" size="h6">
+              <Heading as="h3" id="popover-heading-1" size="h6">
                 Notifications (4)
               </Heading>
             </PopoverHeader>
             <PopoverBody>
               <NotificationList>
                 <NotificationListItem
-                  href="#"
-                  title="English Teacher gave you feedback"
                   date="now"
+                  href="#"
                   source="Outsiders on Trial: Self Awareness = Trial Brief Outline"
+                  title="English Teacher gave you feedback"
                 ></NotificationListItem>
                 <NotificationListItem
-                  href="#"
-                  title="English Teacher gave you feedback"
                   date="now"
+                  href="#"
                   source="Outsiders on Trial: Self Awareness = Trial Brief Outline"
+                  title="English Teacher gave you feedback"
                 ></NotificationListItem>
                 <NotificationListItem
-                  href="#"
-                  title="English Teacher gave you feedback"
                   date="now"
+                  href="#"
                   source="Outsiders on Trial: Self Awareness = Trial Brief Outline"
+                  title="English Teacher gave you feedback"
                 ></NotificationListItem>
                 <NotificationListItem
-                  href="#"
-                  title="English Teacher gave you feedback"
                   date="now"
+                  href="#"
                   source="Outsiders on Trial: Self Awareness = Trial Brief Outline"
+                  title="English Teacher gave you feedback"
                 ></NotificationListItem>
               </NotificationList>
               <PopoverHeader>
-                <Heading id="popover-heading-2" as="h3" size="h6">
+                <Heading as="h3" id="popover-heading-2" size="h6">
                   Already Seen
                 </Heading>
               </PopoverHeader>
               <NotificationList>
                 <NotificationListItem
-                  href="#"
-                  title="English Teacher gave you feedback"
                   date="now"
-                  source="Outsiders on Trial: Self Awareness = Trial Brief Outline"
+                  href="#"
                   markedAsRead={true}
+                  source="Outsiders on Trial: Self Awareness = Trial Brief Outline"
+                  title="English Teacher gave you feedback"
                 ></NotificationListItem>
                 <NotificationListItem
-                  href="#"
-                  title="English Teacher gave you feedback"
                   date="now"
-                  source="Outsiders on Trial: Self Awareness = Trial Brief Outline"
+                  href="#"
                   markedAsRead={true}
+                  source="Outsiders on Trial: Self Awareness = Trial Brief Outline"
+                  title="English Teacher gave you feedback"
                 ></NotificationListItem>
               </NotificationList>
             </PopoverBody>

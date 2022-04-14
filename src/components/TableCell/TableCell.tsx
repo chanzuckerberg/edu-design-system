@@ -87,11 +87,11 @@ export const TableCell = ({
   return (
     <TagName
       className={componentClassName}
-      rowSpan={rowSpan}
       colSpan={colSpan}
-      scope={scope}
       headers={headers}
       id={id}
+      rowSpan={rowSpan}
+      scope={scope}
       {...other}
     >
       {children}

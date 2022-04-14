@@ -179,13 +179,13 @@ export const RadioField = ({
   return (
     <fieldset className={componentClassName} id={id} {...other}>
       <Legend
+        aria-describedby={fieldNote && ariaDescribedByVar}
         className={styles['radio-field__label']}
         hideLegend={hideLegend}
-        text={label}
-        required={required}
         optionalLabel={optionalLabel}
+        required={required}
         requiredLabel={requiredLabel}
-        aria-describedby={fieldNote && ariaDescribedByVar}
+        text={label}
       />
 
       <div className={styles['radio-field__body']}>
