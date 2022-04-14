@@ -19,12 +19,14 @@ EDS follows these principles and conventions for HTML, CSS, and JavaScript/TypeS
   - [Assets](#assets)
   - [Tools](#tools)
   - [Workflow](#workflow)
+- [Accessibility](#accessibility)
+  - [Tools](#acc-tools)
 
 # HTML principles and conventions <a name="html"></a>
 
 - **Use semantic markup.** That means using the `<button>` tag rather than `<div onClick={toggle}>` when a button is required, an `<a>` tag when a link is required, and so on.
 - **Clarity over brevity** Developers should be able to understand what's going on with markup at a glance. Avoid cryptic abbreviations and nicknames, add proper indenting & spacing, and use clear comments.
-- **Accessibility.** Markup should be accessible and [follow best practices](https://www.a11yproject.com/checklist/). Use (but [don't abuse](https://www.deque.com/blog/top-5-rules-of-aria/)) <abbr title="Accessible Rich Internet Applications">ARIA</abbr> attributes.
+- **Accessibility.** Markup should be accessible and [follow best practices](https://www.a11yproject.com/checklist/). Use (but [don't abuse](https://www.deque.com/blog/top-5-rules-of-aria/)) <abbr title="Accessible Rich Internet Applications">ARIA</abbr> attributes. See [Accessibility](#accessibility).
 - Native HTML elements (e.g. `<input>`, `<select>`) should be preferred over custom elements whenever possible. Native elements provide a slew of functionality and accessibility best practices out of the box.
 
 ---
@@ -468,3 +470,10 @@ EDS adheres to the following API naming conventions:
 ### Tag name
 
 - Use `as` if a component can be rendered as different html elements (e.g. `h1`, `h2`, `h3`, etc). For example `<Heading as="h2">` will render a `Heading` component with an `h2` applied to it.
+
+# Accessibility <a name="accessibility"></a>
+
+## Tools
+- [eslint-plugin-jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y) evaluates static code for a11y issues. Currently this plugin is configured with the "recommended" settings, which generate linting errors for most rule violations. See [this chart](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y#rule-strictness-in-different-modes) for descriptions of each rule. 
+
+- The plugin is currently unable to map a custom component to the HTML tag that it renders (i.e. the `<Header>` component renders content wrapped in `<header>` tags, but the plugin does not automatically apply header rules to a `<Header>` component.) [Check the status](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/pull/844) on work is being done on addressing this issue.

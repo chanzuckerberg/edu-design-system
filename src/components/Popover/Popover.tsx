@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import clsx from 'clsx';
 import React, {
   useState,
@@ -182,6 +183,7 @@ export const Popover: React.FC<Props> = ({
         aria-describedby={ariaDescribedBy}
         ref={ref}
         role="dialog"
+        // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
         tabIndex={0}
         {...other}
       >
