@@ -48,7 +48,7 @@ export interface Props {
   /**
    * String for the optional label. By default it is '(optional)'
    */
-  optionalLabel?: '(required)' | '*' | '(optional)';
+  optionalLabel?: '(required)' | '(optional)';
   /**
    * Size variations for the CheckboxField
    * - **sm** results in a visually smaller CheckboxField

@@ -40,7 +40,6 @@ export const FieldsetLegends: StoryObj<FieldsetLegendProps> = {
       <FieldsetLegend {...args} />
       <FieldsetLegend {...args} optionalLabel="(optional)" />
       <FieldsetLegend {...args} optionalLabel="(required)" />
-      <FieldsetLegend {...args} optionalLabel="*" />
     </>
   ),
 };

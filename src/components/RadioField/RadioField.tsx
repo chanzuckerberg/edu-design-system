@@ -63,7 +63,7 @@ export interface Props {
   /**
    * String for the optional label. By default it is '(optional)'
    */
-  optionalLabel?: '(required)' | '*' | '(optional)';
+  optionalLabel?: '(required)' | '(optional)';
   /**
    * Size variations:
    * - **sm** yields a smaller radio button and text

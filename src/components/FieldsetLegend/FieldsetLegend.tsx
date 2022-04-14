@@ -10,7 +10,7 @@ export interface FieldsetLegendProps {
   /**
    * String to indicate required or optional state.
    */
-  optionalLabel?: '(required)' | '*' | '(optional)';
+  optionalLabel?: '(required)' | '(optional)';
   /**
    * Legend text string that names the fieldset.
    */
