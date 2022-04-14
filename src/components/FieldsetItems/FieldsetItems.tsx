@@ -1,6 +1,6 @@
-import clsx from "clsx";
-import React, { ElementType, ReactNode } from "react";
-import styles from "./FieldsetItems.module.css";
+import clsx from 'clsx';
+import React, { ElementType, ReactNode } from 'react';
+import styles from './FieldsetItems.module.css';
 
 export type FieldsetItemsProps = {
   /**
@@ -19,17 +19,13 @@ export type FieldsetItemsProps = {
 };
 
 /**
- * ```ts
- * import {FieldsetItems} from "@chanzuckerberg/eds";
- * ```
- *
  * Helper sub-component for styling the control elements in the component.
  */
 export const FieldsetItems = ({
   children,
-  as: Component = "div",
+  as: Component = 'div',
   className,
 }: FieldsetItemsProps) => {
-  const componentClassName = clsx(className, styles["fieldset-items"]);
+  const componentClassName = clsx(className, styles['fieldset-items']);
   return <Component className={componentClassName}>{children}</Component>;
 };

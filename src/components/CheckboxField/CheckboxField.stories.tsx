@@ -91,7 +91,7 @@ Inline.args = {
 export const Optional = Template.bind({});
 Optional.args = {
   label: 'Checkbox field',
-  required: false,
+  optionalLabel: '(optional)',
   fieldNote: 'This is a checkbox field',
 };
 
