@@ -9,6 +9,8 @@ import React, {
 import { allByType } from 'react-children-by-type';
 import styles from './RadioField.module.css';
 import FieldNote from '../FieldNote';
+import Fieldset from '../Fieldset';
+import FieldsetItems from '../FieldsetItems';
 import FieldsetLegend from '../FieldsetLegend';
 import RadioFieldItem from '../RadioFieldItem';
 
@@ -161,7 +163,7 @@ export const RadioField = ({
     disabled && styles['eds-is-disabled'],
   );
   return (
-    <fieldset className={componentClassName} id={id} {...other}>
+    <Fieldset className={componentClassName} id={id} {...other}>
       <FieldsetLegend
         className={styles['radio-field__label']}
         text={label}
@@ -170,9 +172,9 @@ export const RadioField = ({
         aria-describedby={fieldNote && ariaDescribedByVar}
       />
 
-      <div className={styles['radio-field__body']}>
+      <FieldsetItems className={styles['radio-field__body']}>
         <ul className={styles['radio-field__list']}>{children}</ul>
-      </div>
+      </FieldsetItems>
       {fieldNote && (
         <FieldNote
           className={styles['radio-field__note']}
@@ -183,6 +185,6 @@ export const RadioField = ({
           {fieldNote}
         </FieldNote>
       )}
-    </fieldset>
+    </Fieldset>
   );
 };

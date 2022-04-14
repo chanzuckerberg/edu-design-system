@@ -3,6 +3,8 @@ import { nanoid } from 'nanoid';
 import React, { ReactNode, useEffect, useState } from 'react';
 import styles from './CheckboxField.module.css';
 import FieldNote from '../FieldNote';
+import Fieldset from '../Fieldset';
+import FieldsetItems from '../FieldsetItems';
 import FieldsetLegend from '../FieldsetLegend';
 
 export interface Props {
@@ -100,7 +102,7 @@ export const CheckboxField = ({
     disabled && styles['eds-is-disabled'],
   );
   return (
-    <fieldset className={componentClassName} id={id} {...other}>
+    <Fieldset className={componentClassName} id={id} {...other}>
       <FieldsetLegend
         className={styles['checkbox-field__label']}
         text={label}
@@ -109,9 +111,9 @@ export const CheckboxField = ({
         aria-describedby={fieldNote && ariaDescribedByVar}
       />
 
-      <div className={styles['checkbox-field__body']}>
+      <FieldsetItems className={styles['checkbox-field__body']}>
         <ul className={styles['checkbox-field__list']}>{children}</ul>
-      </div>
+      </FieldsetItems>
       {fieldNote && (
         <FieldNote
           className={styles['checkbox-field__note']}
@@ -122,6 +124,6 @@ export const CheckboxField = ({
           {fieldNote}
         </FieldNote>
       )}
-    </fieldset>
+    </Fieldset>
   );
 };

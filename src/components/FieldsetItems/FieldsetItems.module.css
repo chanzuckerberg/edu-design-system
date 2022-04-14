@@ -1,0 +1,10 @@
+/*------------------------------------*\
+    #LEGEND
+\*------------------------------------*/
+
+/**
+ * The contents of the fieldset. Spaces them apart.
+ */
+ .items > :not(:last-child) {
+  margin-bottom: var(--eds-size-1-and-half);
+}
