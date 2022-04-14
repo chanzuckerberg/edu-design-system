@@ -9,7 +9,9 @@ import React, {
 import { allByType } from 'react-children-by-type';
 import styles from './RadioField.module.css';
 import FieldNote from '../FieldNote';
-import Legend from '../Legend';
+import Fieldset from '../Fieldset';
+import FieldsetItems from '../FieldsetItems';
+import FieldsetLegend from '../FieldsetLegend';
 import RadioFieldItem from '../RadioFieldItem';
 
 export interface Props {
@@ -39,10 +41,6 @@ export interface Props {
    */
   fieldNote?: string | ReactNode;
   /**
-   * Toggles the visibility of the legend
-   */
-  hideLegend?: boolean;
-  /**
    * HTML id for the component
    */
   id?: string;
@@ -59,25 +57,13 @@ export interface Props {
    */
   label?: string;
   /**
-   * Slot for ReactNode to appear directly after field legend. Typically used to include a Toolip
-   */
-  legendAfter?: ReactNode;
-  /**
    * Calls back with the active index
    */
   onChange?: ChangeEventHandler;
   /**
    * String for the optional label. By default it is '(optional)'
    */
-  optionalLabel?: string;
-  /**
-   * Indicates that field is required for form to be successfully submitted
-   */
-  required?: boolean;
-  /**
-   * String for the required label to add additional information if needed.
-   */
-  requiredLabel?: string;
+  optionalLabel?: '(required)' | '(optional)';
   /**
    * Size variations:
    * - **sm** yields a smaller radio button and text
@@ -104,13 +90,8 @@ export const RadioField = ({
   fieldNote,
   disabled,
   inverted,
-  required,
-  checked,
   ariaDescribedBy,
-  hideLegend,
-  legendAfter,
   optionalLabel,
-  requiredLabel,
   onChange,
   ...other
 }: Props) => {
@@ -177,20 +158,17 @@ export const RadioField = ({
     disabled && styles['eds-is-disabled'],
   );
   return (
-    <fieldset className={componentClassName} id={id} {...other}>
-      <Legend
+    <Fieldset className={componentClassName} id={id} {...other}>
+      <FieldsetLegend
         aria-describedby={fieldNote && ariaDescribedByVar}
         className={styles['radio-field__label']}
-        hideLegend={hideLegend}
         optionalLabel={optionalLabel}
-        required={required}
-        requiredLabel={requiredLabel}
         text={label}
       />
 
-      <div className={styles['radio-field__body']}>
+      <FieldsetItems className={styles['radio-field__body']}>
         <ul className={styles['radio-field__list']}>{children}</ul>
-      </div>
+      </FieldsetItems>
       {fieldNote && (
         <FieldNote
           className={styles['radio-field__note']}
@@ -201,6 +179,6 @@ export const RadioField = ({
           {fieldNote}
         </FieldNote>
       )}
-    </fieldset>
+    </Fieldset>
   );
 };

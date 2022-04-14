@@ -3,7 +3,9 @@ import { nanoid } from 'nanoid';
 import React, { ReactNode, useEffect, useState } from 'react';
 import styles from './CheckboxField.module.css';
 import FieldNote from '../FieldNote';
-import Legend from '../Legend';
+import Fieldset from '../Fieldset';
+import FieldsetItems from '../FieldsetItems';
+import FieldsetLegend from '../FieldsetLegend';
 
 export interface Props {
   /**
@@ -28,10 +30,6 @@ export interface Props {
    */
   fieldNote?: string | ReactNode;
   /**
-   * Toggles the visibility of the form control legend
-   */
-  hideLegend?: boolean;
-  /**
    * HTML id for the component
    */
   id?: string;
@@ -48,21 +46,9 @@ export interface Props {
    */
   label?: string;
   /**
-   * Slot for node to appear directly after field legend. Typically used to include a Toolip
-   */
-  legendAfter?: ReactNode;
-  /**
    * String for the optional label. By default it is '(optional)'
    */
-  optionalLabel?: string;
-  /**
-   * Indicates that field is required for form to be successfully submitted
-   */
-  required?: boolean;
-  /**
-   * String for the required label to add additional information if needed.
-   */
-  requiredLabel?: string;
+  optionalLabel?: '(required)' | '(optional)';
   /**
    * Size variations for the CheckboxField
    * - **sm** results in a visually smaller CheckboxField
@@ -87,13 +73,9 @@ export const CheckboxField = ({
   isError,
   fieldNote,
   disabled,
-  required,
   ariaDescribedBy,
-  hideLegend,
-  legendAfter,
   children,
   optionalLabel,
-  requiredLabel,
   inverted,
   ...other
 }: Props) => {
@@ -115,21 +97,17 @@ export const CheckboxField = ({
     disabled && styles['eds-is-disabled'],
   );
   return (
-    <fieldset className={componentClassName} id={id} {...other}>
-      <Legend
+    <Fieldset className={componentClassName} id={id} {...other}>
+      <FieldsetLegend
         aria-describedby={fieldNote && ariaDescribedByVar}
         className={styles['checkbox-field__label']}
-        hideLegend={hideLegend}
-        legendAfter={legendAfter}
         optionalLabel={optionalLabel}
-        required={required}
-        requiredLabel={requiredLabel}
         text={label}
       />
 
-      <div className={styles['checkbox-field__body']}>
+      <FieldsetItems className={styles['checkbox-field__body']}>
         <ul className={styles['checkbox-field__list']}>{children}</ul>
-      </div>
+      </FieldsetItems>
       {fieldNote && (
         <FieldNote
           className={styles['checkbox-field__note']}
@@ -140,6 +118,6 @@ export const CheckboxField = ({
           {fieldNote}
         </FieldNote>
       )}
-    </fieldset>
+    </Fieldset>
   );
 };
