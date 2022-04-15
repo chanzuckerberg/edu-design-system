@@ -43,7 +43,7 @@ const Heading = forwardRef<HTMLElement, Props>(
     }: Props,
     ref,
   ) => (
-    <Typography as={as || size} size={size} ref={ref} {...rest}>
+    <Typography as={as || size} ref={ref} size={size} {...rest}>
       {children}
     </Typography>
   ),

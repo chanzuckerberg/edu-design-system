@@ -54,7 +54,7 @@ export const getStandardSet = (
         Size Medium
       </Heading>
       <div className="mb-4">
-        <Component color={color} variant={variant} size="medium">
+        <Component color={color} size="medium" variant={variant}>
           {componentName}
         </Component>
       </div>
@@ -65,7 +65,7 @@ export const getStandardSet = (
         Size Small
       </Heading>
       <div className="mb-4">
-        <Component color={color} variant={variant} size="small">
+        <Component color={color} size="small" variant={variant}>
           {componentName}
         </Component>
       </div>
@@ -119,7 +119,7 @@ export const getPlainRecommendedVariants = (
       </Heading>
       <ul className="grid gap-y-4">
         <li>
-          <Component variant="plain" size="medium">
+          <Component size="medium" variant="plain">
             <ArrowBackRoundedIcon
               className={styles.arrowBackIcon}
               purpose="decorative"
@@ -128,7 +128,7 @@ export const getPlainRecommendedVariants = (
           </Component>
         </li>
         <li>
-          <Component variant="plain" size="medium">
+          <Component size="medium" variant="plain">
             {componentName}
             <ArrowForwardRoundedIcon
               className={styles.arrowForwardIcon}
@@ -137,11 +137,11 @@ export const getPlainRecommendedVariants = (
           </Component>
         </li>
         <li>
-          <Component variant="plain" size="medium">
+          <Component size="medium" variant="plain">
             <AddRoundedIcon
+              className="mx-[-0.55em]"
               purpose="informative"
               title="add"
-              className="mx-[-0.55em]"
             />
           </Component>
         </li>
@@ -181,12 +181,12 @@ export const getDestructiveRecommendedVariants = (
     </Heading>
     <ul className="grid gap-y-4">
       <li>
-        <Component variant="flat" color="alert">
+        <Component color="alert" variant="flat">
           {componentName}
         </Component>
       </li>
       <li>
-        <Component variant="flat" color="alert">
+        <Component color="alert" variant="flat">
           <ArrowBackRoundedIcon
             className={styles.arrowBackIcon}
             purpose="decorative"
@@ -204,42 +204,42 @@ export const getAllRecommendedVariants = (
 ) => (
   <ul className="grid gap-y-8">
     <li>
-      <Heading spacing="2x" size="h2">
+      <Heading size="h2" spacing="2x">
         Primary
       </Heading>
       {getStandardSet(Component, componentName, "flat")}
     </li>
 
     <li>
-      <Heading spacing="2x" size="h2">
+      <Heading size="h2" spacing="2x">
         Secondary
       </Heading>
       {getStandardSet(Component, componentName, "outline")}
     </li>
 
     <li>
-      <Heading spacing="2x" size="h2">
+      <Heading size="h2" spacing="2x">
         Tertiary
       </Heading>
       {getStandardSet(Component, componentName, "outline", "neutral")}
     </li>
 
     <li>
-      <Heading spacing="2x" size="h2">
+      <Heading size="h2" spacing="2x">
         Plain
       </Heading>
       {getPlainRecommendedVariants(Component, componentName)}
     </li>
 
     <li>
-      <Heading spacing="2x" size="h2">
+      <Heading size="h2" spacing="2x">
         Link
       </Heading>
       {getLinkRecommendedVariants(Component, componentName)}
     </li>
 
     <li>
-      <Heading spacing="2x" size="h2">
+      <Heading size="h2" spacing="2x">
         Destructive
       </Heading>
       {getDestructiveRecommendedVariants(Component, componentName)}
@@ -285,21 +285,21 @@ const getVariantWithStates = (
                 <Text size="body">{state}</Text>
               </th>
               {colors.map((color) => (
-                <td key={color} className="p-2">
+                <td className="p-2" key={color}>
                   {/* To pass the "state" prop (only used for demonstration in storybook),
                   we must use ClickableStyle instead of Button or Link */}
                   <ClickableStyle
                     as={tag}
-                    size={size}
                     color={color}
-                    variant={variant}
-                    state={state}
                     disabled={state === "disabled"}
                     href={tag === "a" ? "https://go.czi.team/eds" : undefined}
                     onClick={(event: React.MouseEvent<HTMLElement>) => {
                       // Allows the user to click the links for testing without being navigated away.
                       event.preventDefault();
                     }}
+                    size={size}
+                    state={state}
+                    variant={variant}
                   >
                     {buttonChildren}
                     {icon}

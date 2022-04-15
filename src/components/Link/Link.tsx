@@ -40,10 +40,10 @@ const Link = forwardRef<HTMLAnchorElement, LinkProps>(
       <ClickableStyle
         {...rest}
         as="a"
-        variant={variant}
         color={color}
         ref={ref}
         size={size}
+        variant={variant}
       />
     );
   },

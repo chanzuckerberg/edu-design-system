@@ -47,12 +47,12 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       <ClickableStyle
         {...rest}
         as="button"
-        variant={variant}
         color={color}
         disabled={disabled}
-        type={type}
-        size={size}
         ref={ref}
+        size={size}
+        type={type}
+        variant={variant}
       />
     );
   },

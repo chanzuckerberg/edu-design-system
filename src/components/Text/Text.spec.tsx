@@ -10,7 +10,7 @@ describe("<Text />", () => {
 
   it("should add the passthrough className", () => {
     render(
-      <Text size="body" className="passthrough">
+      <Text className="passthrough" size="body">
         Some Text
       </Text>,
     );

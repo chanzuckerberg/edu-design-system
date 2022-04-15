@@ -122,15 +122,15 @@ export const InText: StoryObj<Args> = {
         <Icon
           {...rest}
           purpose="informative"
-          title="icon with 2em line height"
           size="2rem"
+          title="icon with 2em line height"
         />
         , 2rem) which is harder to determine. Take a look at the icons available
         in{" "}
         <a
           href="https://material-ui.com/components/material-icons/"
-          target="_blank"
           rel="noreferrer"
+          target="_blank"
         >
           https://material-ui.com/components/material-icons/
         </a>
@@ -149,7 +149,7 @@ export const AllIcons: StoryObj<Args> = {
       <ul className={styles.allIcons}>
         {Object.entries(allIcons).map(([name, Icon]: [string, any]) => (
           <li className={styles.iconCell} key={name}>
-            <Icon block type="decorative" size="2rem" />
+            <Icon block size="2rem" type="decorative" />
             <Text as="span" size="sm">
               {name}
             </Text>

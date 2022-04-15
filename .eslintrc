@@ -43,6 +43,7 @@
         "order": "asc"
       }
     }],
+    "react/jsx-sort-props": "error",
     "react/prop-types": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "error"
