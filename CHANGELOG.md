@@ -2,6 +2,44 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.10.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.9.2...v0.10.0) (2022-04-15)
+
+
+### ⚠ BREAKING CHANGES
+
+* removes color-font tokens
+
+* remove typo
+
+Co-authored-by: Andrew Huth <ahuth@chanzuckerberg.com>
+
+* chore: move packages/components to src/components
+
+* chore: remove token package imports
+
+* chore: consolidate into one package.json
+
+* chore: cleanup docs, remove workspaces
+
+* feat: lock headlessui to 1.4.3
+
+* chore: clean up imports
+
+* build: use separate tsconfig for build
+
+* build: publish icons
+
+* feat: move components/Icons to src/icons
+
+### Features
+
+* add jsx-sort-props lint rule ([bff502f](https://github.com/chanzuckerberg/edu-design-system/commit/bff502f9a921841fe510d8691610ffb66fcb689f))
+
+
+### build
+
+* use standard-version, make one package, move folders ([#981](https://github.com/chanzuckerberg/edu-design-system/issues/981)) ([ccc0450](https://github.com/chanzuckerberg/edu-design-system/commit/ccc0450064a600f0a7586db20ef354c9fa442b2e)), closes [#979](https://github.com/chanzuckerberg/edu-design-system/issues/979)
+
 ## [0.10.0-alpha.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.9.0...v0.10.0-alpha.0) (2022-04-15)
 
 
