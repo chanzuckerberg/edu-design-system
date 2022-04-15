@@ -5,106 +5,206 @@
 \*------------------------------------*/
 
 /**
- * General disabled button styles
+ * 1) Styled clickable element that should look like a button or link
+ * 2) Defaults to primary variant
+ * 3) Margin 0 added becuase Safari has margin on buttons
+ * 4) Adds a gap between children to automatically handle spacing between icons and text
+ * 5) Removes the underline in the case that the rendered element is an <a> tag
+ * 6) Adds default size for icons passed in for consistency
  */
-.button {
-  &:disabled,
-  &:disabled:hover {
-    cursor: not-allowed;
+.clickable-style {
+  @mixin eds-theme-typography-button-label;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0; /* 3 */
+  gap: 0.75rem; /* 4 */
+  border-width: var(--eds-theme-border-width);
+  border-style: solid;
+  border-radius: var(--eds-theme-border-radius);
+  cursor: pointer;
+  text-decoration: none; /* 5 */
+  transition: all var(--eds-anim-fade-quick) var(--eds-anim-ease);
+
+  svg {
+    --icon-size-default: 2em; /* 6 */
+  }
+
+  &:focus {
+    @mixin focus;
+  }
+
+  @media screen and (prefers-reduced-motion) {
+    transition: none;
   }
 }
 
 /**
  * Primary disabled button styles
  */
-.button--primary {
-  &:disabled,
-  &:disabled:hover {
-    border-color: var(--eds-theme-color-border-disabled);
-    background-color: var(--eds-theme-color-background-disabled);
-    color: var(--eds-theme-color-button-primary-text);
+.clickable-style--primary {
+  border-color: var(--eds-theme-color-button-primary-border);
+  background-color: var(--eds-theme-color-button-primary-background);
+  color: var(--eds-theme-color-button-primary-text);
+
+  &:hover,
+  &:focus {
+    border-color: var(--eds-theme-color-button-primary-border-hover);
+    background-color: var(--eds-theme-color-button-primary-background-hover);
+    color: var(--eds-theme-color-button-primary-text-hover);
+  }
+
+  &:active {
+    border-color: var(--eds-theme-color-button-primary-border-active);
+    background-color: var(--eds-theme-color-button-primary-background-active);
+    color: var(--eds-theme-color-button-primary-text-active);
   }
 }
 
 /**
  * Secondary disabled button styles
  */
-.button--secondary {
-  &:disabled,
-  &:disabled:hover {
-    border-color: var(--eds-theme-color-border-disabled);
-    background-color: transparent;
-    color: var(--eds-theme-color-text-disabled);
+.clickable-style--secondary {
+  border-color: var(--eds-theme-color-button-secondary-border);
+  background-color: var(--eds-theme-color-button-secondary-background);
+  color: var(--eds-theme-color-button-secondary-text);
+
+  &:hover,
+  &:focus {
+    border-color: var(--eds-theme-color-button-secondary-border-hover);
+    background-color: var(--eds-theme-color-button-secondary-background-hover);
+    color: var(--eds-theme-color-button-secondary-text-hover);
+  }
+
+  &:active {
+    border-color: var(--eds-theme-color-button-secondary-border-active);
+    background-color: var(--eds-theme-color-button-secondary-background-active);
+    color: var(--eds-theme-color-button-secondary-text-active);
   }
 }
 
 /**
  * Tertiary disabled button styles
  */
-.button--tertiary {
-  &:disabled,
-  &:disabled:hover {
-    border-color: var(--eds-theme-color-border-disabled);
-    background-color: var(--eds-theme-color-button-tertiary-background);
-    color: var(--eds-theme-color-text-disabled);
+.clickable-style--tertiary {
+  border-color: var(--eds-theme-color-button-tertiary-border);
+  background-color: var(--eds-theme-color-button-tertiary-background);
+  color: var(--eds-theme-color-button-tertiary-text);
+
+  &:hover,
+  &:focus {
+    border-color: var(--eds-theme-color-button-tertiary-border-hover);
+    background-color: var(--eds-theme-color-button-tertiary-background-hover);
+    color: var(--eds-theme-color-button-tertiary-text-hover);
+  }
+
+  &:active {
+    border-color: var(--eds-theme-color-button-tertiary-border-active);
+    background-color: var(--eds-theme-color-button-tertiary-background-active);
+    color: var(--eds-theme-color-button-tertiary-text-active);
   }
 }
 
 /**
  * Link disabled button styles
  */
-.button--link {
-  &:disabled,
-  &:disabled:hover {
-    color: var(--eds-theme-color-text-disabled);
-    text-decoration-thickness: 1px;
-  }
+.clickable-style--link {
+  @mixin textLink;
+
+  padding: 0;
+  border: 0;
+  text-align: left;
+  background-color: transparent;
+  gap: 0.25em; /* 2 */
 }
 
 /**
- * Icon disabled button styles
+ * Icon clickable style
+ * 1) A clickable style that strips out borders, backgrounds, etc
+ * 2) Use for Close "X" buttons, tooltip icons, and other
  */
-.button--icon {
-  &:disabled,
-  &:disabled:hover {
-    border-color: var(--eds-theme-color-button-icon-border);
-    background-color: var(--eds-theme-color-button-icon-background);
-    color: var(--eds-theme-color-text-disabled);
+.clickable-style--icon {
+  border-color: var(--eds-theme-color-button-icon-border);
+  background-color: var(--eds-theme-color-button-icon-background);
+  color: var(--eds-theme-color-button-icon-text);
+
+  &:hover,
+  &:focus {
+    border-color: var(--eds-theme-color-button-icon-border-hover);
+    background-color: var(--eds-theme-color-button-icon-background-hover);
+    color: var(--eds-theme-color-button-icon-text-hover);
+  }
+
+  &:active {
+    border-color: var(--eds-theme-color-button-icon-border-active);
+    background-color: var(--eds-theme-color-button-icon-background-active);
+    color: var(--eds-theme-color-button-icon-text-active);
   }
 }
 
 /**
  * Destructive disabled button styles
  */
-.button--destructive {
-  &:disabled,
-  &:disabled:hover {
-    border-color: var(--eds-theme-color-border-disabled);
-    background-color: var(--eds-theme-color-background-disabled);
-    color: var(--eds-theme-color-button-destructive-text);
+.clickable-style--destructive {
+  border-color: var(--eds-theme-color-button-destructive-border);
+  background-color: var(--eds-theme-color-button-destructive-background);
+  color: var(--eds-theme-color-button-destructive-text);
+
+  &:hover,
+  &:focus {
+    border-color: var(--eds-theme-color-button-destructive-border-hover);
+    background-color: var(
+      --eds-theme-color-button-destructive-background-hover
+    );
+    color: var(--eds-theme-color-button-destructive-text-hover);
+  }
+
+  &:active {
+    border-color: var(--eds-theme-color-button-destructive-border-active);
+    background-color: var(
+      --eds-theme-color-button-destructive-background-active
+    );
+    color: var(--eds-theme-color-button-destructive-text-active);
   }
 }
 
 /**
- * Loading icon rotiation style
+ * Small clickable style
+ * 1) Height is used instead of vertical padding because the icon size we use would
+ *    cause the height to expand
  */
-.eds-is-loading svg {
-  animation: rotateIcon 2s linear infinite;
-  overflow: visible;
-
-  @media screen and (prefers-reduced-motion) {
-    animation: none;
-  }
+.clickable-style--sm {
+  height: var(--eds-size-3); /* 1 */
+  padding-left: var(--eds-size-half);
+  padding-right: var(--eds-size-half);
 }
 
 /**
- * Loading icon rotation animation
+ * Medium clickable style
+ * 1) Height is used instead of vertical padding because the icon size we use would
+ *    cause the height to expand
  */
-@keyframes rotateIcon {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+.clickable-style--md {
+  height: var(--eds-size-4); /* 1 */
+  padding-left: var(--eds-size-1);
+  padding-right: var(--eds-size-1);
+}
+
+/**
+ * Large clickable style
+ * 1) Height is used instead of vertical padding because the icon size we use would
+ *    cause the height to expand
+ */
+.clickable-style--lg {
+  height: var(--eds-size-5); /* 1 */
+  padding-left: var(--eds-size-2);
+  padding-right: var(--eds-size-2);
+}
+
+/**
+ * Full-width clickable style
+ * 1) A block clickable style that fills 100% of the width of its container
+ */
+.clickable-style--full-width {
+  width: 100%;
 }
