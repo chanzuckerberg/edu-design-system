@@ -74,7 +74,7 @@
       }
     },
     {
-      "files": ["packages/components/src/**/*.stories.{ts,tsx}"],
+      "files": ["src/**/*.stories.{ts,tsx}"],
       "rules": {
         "no-restricted-imports": [
           "error", {

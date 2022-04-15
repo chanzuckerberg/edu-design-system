@@ -11,7 +11,7 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 16.x
-          cache: 'yarn'
+          cache: "yarn"
 
       - name: Install Dependencies ⬆️
         run: yarn install --immutable
@@ -20,7 +20,7 @@ jobs:
         run: yarn run types
 
       - name: Run CI Tests ✅
-        run: yarn workspaces foreach run test:ci
+        run: yarn run test:ci
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
           CI: true
@@ -33,7 +33,7 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 16.x
-          cache: 'yarn'
+          cache: "yarn"
 
       - name: Install Dependencies ⬆️
         run: yarn install --immutable
@@ -57,14 +57,14 @@ jobs:
         # Once fixed, Storybook build can be its own step for modularity
       - name: Build Storybook and Publish to Chromatic
         run: |
-          yarn workspace @chanzuckerberg/eds-components chromatic \
+          yarn run chromatic \
             --project-token=${{ secrets.CHROMATIC_PROJECT_TOKEN }} \
             --output-dir storybook-static \
             --exit-zero-on-changes \
             --exit-once-uploaded \
             --skip 'dependabot/**'
       - name: Run Accessibility Tests 💛
-        run: yarn workspace @chanzuckerberg/eds-components run storybook:axeOnly
+        run: yarn run storybook:axeOnly
 
   lint:
     runs-on: ubuntu-latest
@@ -77,7 +77,7 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 16.x
-          cache: 'yarn'
+          cache: "yarn"
 
       - name: Install Dependencies ⬆️
         run: yarn install --immutable

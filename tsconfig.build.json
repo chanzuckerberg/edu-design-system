@@ -1,0 +1,4 @@
+{
+  "extends": "./tsconfig",
+  "include": ["src/index.ts", "src/icons/index.ts", "css-modules.d.ts"],
+}

@@ -27,7 +27,7 @@ yarn start
 1. Run `npx plop` or `yarn create-component`
 2. Enter your component name
 
-This will create a new folder for your component within `packages/components/src/`, along with template files for the component, styles, stories, and tests.
+This will create a new folder for your component within `src/components/`, along with template files for the component, styles, stories, and tests.
 
 3. Develop! Each component should:
 

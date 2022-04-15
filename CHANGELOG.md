@@ -1,7 +1,23 @@
-# Change Log
+# Changelog
 
-All notable changes to this project will be documented in this file.
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [0.10.0-alpha.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.9.0...v0.10.0-alpha.0) (2022-04-15)
+
+
+### ⚠ BREAKING CHANGES
+
+* removes color-font tokens
+
+### Features
+
+* add standard-version, remove lerna, update storybook ([ee6b2c8](https://github.com/chanzuckerberg/edu-design-system/commit/ee6b2c8c97ebb0a62ab8731adc9e21d714b64013))
+* introduce badges addon for storybook ([#895](https://github.com/chanzuckerberg/edu-design-system/issues/895)) ([156fa72](https://github.com/chanzuckerberg/edu-design-system/commit/156fa729acdb6d141d783426ff3c1d1dc848d49e))
+* lock headlessui to 1.4.3 ([3a27bf3](https://github.com/chanzuckerberg/edu-design-system/commit/3a27bf3a7e575a43a7413a8b9ddaa679ab4206f8))
+* move components/Icons to src/icons ([b0314fa](https://github.com/chanzuckerberg/edu-design-system/commit/b0314fa074ba589cd4046c71149f50568b0791f7))
+
+
+* publish to lib/tokens ([7aecb68](https://github.com/chanzuckerberg/edu-design-system/commit/7aecb689fd11aeba6fa5a90ebf02fa5a31478174))
 
 ## [0.9.2](https://github.com/chanzuckerberg/edu-design-system/compare/v0.9.1...v0.9.2) (2022-04-08)
 
