@@ -1,28 +1,43 @@
-import clsx from "clsx";
-import React from "react";
-import styles from "./ClickableStyle.module.css";
+import clsx from 'clsx';
+import React, { MouseEventHandler, ReactNode } from 'react';
+import styles from './ClickableStyle.module.css';
 
 export type ClickableStyleProps<IComponent extends React.ElementType> = {
   /**
-   * CSS class for custom styles.
+   * Visually hidden clickable text (but text is still accessible to assistive technology).
+   * This overrides `children` for screen readers
    */
-  className: string;
+  'aria-label'?: string;
   /**
-   * The color of the element.
+   * The visible clickable children
    */
-  status: "error" | "brand" | "neutral" | "success" | "warning";
+  children: string | ReactNode;
   /**
-   * The size of the element.
+   * CSS class names that can be appended to the component
    */
-  size: "sm" | "md" | "lg";
+  className?: string;
   /**
-   * A hidden prop for visual testing
+   * Toggles clickable that fills the full width of its container
    */
-  state?: "inactive" | "hover" | "focus" | "active";
+  fullWidth?: boolean;
   /**
-   * The style of the element.
+   * On click handler for component
    */
-  variant: "primary" | "secondary" | "link" | "icon";
+  onClick?: MouseEventHandler;
+  /**
+   * Available size variations for the clickable
+   */
+  size?: 'sm' | 'md' | 'lg';
+  /**
+   * Available _stylistic_ variations available for the ClickableStyle component
+   */
+  variant?:
+    | 'primary'
+    | 'secondary'
+    | 'tertiary'
+    | 'icon'
+    | 'link'
+    | 'destructive';
 } & React.ComponentProps<IComponent>;
 
 /**
@@ -35,56 +50,40 @@ export type ClickableStyleProps<IComponent extends React.ElementType> = {
  *
  * See the `Button` and `Link` stories for usage examples.
  */
-const ClickableStyle = React.forwardRef(
+export const ClickableStyle = React.forwardRef(
   <IComponent extends React.ElementType>(
     {
       as: Component,
-      children,
-      status,
-      size,
-      state,
-      variant,
       className,
-      ...rest
+      fullWidth,
+      size = 'lg',
+      variant = 'primary',
+      ...other
     }: ClickableStyleProps<IComponent>,
     ref: React.ForwardedRef<HTMLElement>,
   ) => {
-    return (
-      <Component
-        className={clsx(
-          className,
-          styles.button,
-          // Sizes
-          variant !== "link" && [
-            size === "sm" && styles.sizeSmall,
-            size === "md" && styles.sizeMedium,
-            size === "lg" && styles.sizeLarge,
-          ],
-          // Variants
-          variant === "primary" && styles.variantFlat,
-          variant === "secondary" && styles.variantOutline,
-          variant === "link" && styles.variantLink,
-          variant === "icon" && styles.variantPlain,
-          // Statuses
-          status === "error" && styles.colorAlert,
-          status === "brand" && styles.colorBrand,
-          status === "neutral" && styles.colorNeutral,
-          status === "success" && styles.colorSuccess,
-          status === "warning" && styles.colorWarning,
-          // Interactive States (for testing)
-          state === "hover" && styles.stateHover,
-          state === "focus" && styles.stateFocus,
-          state === "active" && styles.stateActive,
-        )}
-        ref={ref}
-        {...rest}
-      >
-        {children}
-      </Component>
+    const componentClassName = clsx(
+      // Base styles
+      styles['clickable-style'],
+      className,
+      // Sizes
+      variant !== 'link' && [
+        size === 'sm' && styles['clickable-style--sm'],
+        size === 'md' && styles['clickable-style--md'],
+        size === 'lg' && styles['clickable-style--lg'],
+      ],
+      // Variants
+      variant === 'primary' && styles['clickable-style--primary'],
+      variant === 'secondary' && styles['clickable-style--secondary'],
+      variant === 'tertiary' && styles['clickable-style--tertiary'],
+      variant === 'icon' && styles['clickable-style--icon'],
+      variant === 'link' && styles['clickable-style--link'],
+      variant === 'destructive' && styles['clickable-style--destructive'],
+      // Other options
+      fullWidth && styles['clickable-style--full-width'],
     );
+
+    return <Component className={componentClassName} ref={ref} {...other} />;
   },
 );
-
-ClickableStyle.displayName = "ClickableStyle";
-
-export default ClickableStyle;
+ClickableStyle.displayName = 'ClickableStyle';
