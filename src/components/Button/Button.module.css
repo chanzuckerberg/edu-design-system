@@ -39,18 +39,6 @@
 }
 
 /**
- * Tertiary disabled button styles
- */
-.button--tertiary {
-  &:disabled,
-  &:disabled:hover {
-    border-color: var(--eds-theme-color-border-disabled);
-    background-color: var(--eds-theme-color-button-tertiary-background);
-    color: var(--eds-theme-color-text-disabled);
-  }
-}
-
-/**
  * Link disabled button styles
  */
 .button--link {
@@ -70,18 +58,6 @@
     border-color: var(--eds-theme-color-button-icon-border);
     background-color: var(--eds-theme-color-button-icon-background);
     color: var(--eds-theme-color-text-disabled);
-  }
-}
-
-/**
- * Destructive disabled button styles
- */
-.button--destructive {
-  &:disabled,
-  &:disabled:hover {
-    border-color: var(--eds-theme-color-border-disabled);
-    background-color: var(--eds-theme-color-background-disabled);
-    color: var(--eds-theme-color-button-destructive-text);
   }
 }
 
