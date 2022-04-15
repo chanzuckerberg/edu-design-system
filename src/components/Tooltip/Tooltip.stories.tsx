@@ -120,7 +120,7 @@ export const LongButtonText: StoryObj<Args> = {
   },
   parameters: {
     // Is flaky on chromatic, disabling for now
-    chromatic: { delay: 300 },
+    chromatic: { disableSnapshot: true },
   },
 };
 
