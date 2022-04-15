@@ -27,9 +27,9 @@ LinkRightIcon.args = {
     <>
       Link
       <Icon
+        name="open-in-new"
         purpose="informative"
         title="opens in a new tab"
-        name="open-in-new"
       />
     </>
   ),
@@ -43,7 +43,7 @@ export const PrimaryLeftIcon = Template.bind({});
 PrimaryLeftIcon.args = {
   children: (
     <>
-      <Icon purpose="decorative" name="arrow-back" />
+      <Icon name="arrow-back" purpose="decorative" />
       Link
     </>
   ),
@@ -55,7 +55,7 @@ PrimaryRightIcon.args = {
   children: (
     <>
       Link
-      <Icon purpose="decorative" name="arrow-forward" />
+      <Icon name="arrow-forward" purpose="decorative" />
     </>
   ),
   variant: 'primary',
@@ -74,7 +74,7 @@ export const SecondaryLeftIcon = Template.bind({});
 SecondaryLeftIcon.args = {
   children: (
     <>
-      <Icon purpose="decorative" name="arrow-back" />
+      <Icon name="arrow-back" purpose="decorative" />
       Link
     </>
   ),
@@ -86,7 +86,7 @@ SecondaryRightIcon.args = {
   children: (
     <>
       Link
-      <Icon purpose="decorative" name="arrow-forward" />
+      <Icon name="arrow-forward" purpose="decorative" />
     </>
   ),
   variant: 'secondary',
@@ -105,7 +105,7 @@ export const TertiaryLeftIcon = Template.bind({});
 TertiaryLeftIcon.args = {
   children: (
     <>
-      <Icon purpose="decorative" name="arrow-back" />
+      <Icon name="arrow-back" purpose="decorative" />
       Link
     </>
   ),
@@ -117,7 +117,7 @@ TertiaryRightIcon.args = {
   children: (
     <>
       Link
-      <Icon purpose="decorative" name="arrow-forward" />
+      <Icon name="arrow-forward" purpose="decorative" />
     </>
   ),
   variant: 'tertiary',
@@ -133,7 +133,7 @@ export const IconLinkLeftIcon = Template.bind({});
 IconLinkLeftIcon.args = {
   children: (
     <>
-      <Icon purpose="decorative" name="arrow-back" />
+      <Icon name="arrow-back" purpose="decorative" />
       Link
     </>
   ),
@@ -145,7 +145,7 @@ IconLinkRightIcon.args = {
   children: (
     <>
       Link
-      <Icon purpose="decorative" name="arrow-forward" />
+      <Icon name="arrow-forward" purpose="decorative" />
     </>
   ),
   variant: 'icon',
@@ -153,7 +153,7 @@ IconLinkRightIcon.args = {
 
 export const IconLinkIconOnly = Template.bind({});
 IconLinkIconOnly.args = {
-  children: <Icon purpose="informative" title="go back" name="arrow-back" />,
+  children: <Icon name="arrow-back" purpose="informative" title="go back" />,
   variant: 'icon',
 };
 
@@ -161,7 +161,7 @@ export const IconLinkLeftIconSmall = Template.bind({});
 IconLinkLeftIconSmall.args = {
   children: (
     <>
-      <Icon purpose="decorative" name="arrow-back" />
+      <Icon name="arrow-back" purpose="decorative" />
       Link
     </>
   ),
@@ -174,7 +174,7 @@ IconLinkRightIconSmall.args = {
   children: (
     <>
       Link
-      <Icon purpose="decorative" name="arrow-forward" />
+      <Icon name="arrow-forward" purpose="decorative" />
     </>
   ),
   variant: 'icon',
@@ -183,7 +183,7 @@ IconLinkRightIconSmall.args = {
 
 export const IconLinkIconOnlySmall = Template.bind({});
 IconLinkIconOnlySmall.args = {
-  children: <Icon purpose="informative" title="go back" name="arrow-back" />,
+  children: <Icon name="arrow-back" purpose="informative" title="go back" />,
   variant: 'icon',
   size: 'sm',
 };
@@ -195,7 +195,7 @@ export const DestructiveLeftIcon = Template.bind({});
 DestructiveLeftIcon.args = {
   children: (
     <>
-      <Icon purpose="decorative" name="arrow-back" />
+      <Icon name="arrow-back" purpose="decorative" />
       Link
     </>
   ),

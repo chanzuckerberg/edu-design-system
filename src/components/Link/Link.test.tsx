@@ -28,7 +28,7 @@ describe('<Link />', () => {
 
   it('passes test ids down properly', () => {
     render(
-      <Link href="/" data-testid="example-test-id">
+      <Link data-testid="example-test-id" href="/">
         Click
       </Link>,
     );
@@ -38,9 +38,9 @@ describe('<Link />', () => {
   it('passes class names down properly', () => {
     render(
       <Link
-        href="/"
         className="exampleClassName"
         data-testid="example-class-name"
+        href="/"
       >
         Click
       </Link>,
