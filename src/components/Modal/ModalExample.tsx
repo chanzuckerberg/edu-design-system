@@ -56,7 +56,7 @@ export const ModalExample = ({
       style={{ padding: '1rem', minHeight: '500px' }}
       {...other}
     >
-      <Button onClick={openContinueModal} ref={modalButton}>
+      <Button onClick={openContinueModal} ref={modalButton} variant="primary">
         Open Modal
       </Button>
 

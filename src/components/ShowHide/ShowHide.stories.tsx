@@ -14,7 +14,7 @@ const Template: Story<Props> = (args) => (
   <div style={{ margin: '10rem' }}>
     <ShowHide
       trigger={
-        <Button type="button">
+        <Button type="button" variant="primary">
           <Icon name="expand-more" purpose="decorative" />
         </Button>
       }

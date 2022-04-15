@@ -48,7 +48,7 @@ export const Button = React.forwardRef<
       loading,
       size = 'lg',
       type = 'button',
-      variant = 'primary',
+      variant,
       ...other
     },
     ref,
