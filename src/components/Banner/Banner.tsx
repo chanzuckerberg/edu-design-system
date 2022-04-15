@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import React from "react";
-import CloseButton from "../CloseButton";
+import CloseRoundedIcon from "../../icons/CloseRounded";
+import Button from "../Button";
 import Heading, { HeadingElement } from "../Heading";
 import Text from "../Text";
 import colorStyles from "../common/Notifications/Notification.module.css";
@@ -96,12 +97,18 @@ export default function Banner({
       )}
     >
       {onDismiss && (
-        <CloseButton
+        <Button
           className={styles.dismiss}
           color={color}
-          onClose={onDismiss}
-          size="1.75rem"
-        />
+          onClick={onDismiss}
+          variant="plain"
+        >
+          <CloseRoundedIcon
+            purpose="informative"
+            size={"1.75rem"}
+            title={"dismiss banner"}
+          />
+        </Button>
       )}
 
       <NotificationIcon variant={color} />

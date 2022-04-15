@@ -2,7 +2,7 @@ import { StoryObj } from "@storybook/react";
 import { within } from "@storybook/testing-library";
 import React from "react";
 import FilterListRoundedIcon from "../../icons/FilterListRounded";
-import Dropdown from "./Dropdown";
+import Dropdown, { OptionsAlignType, VariantType } from "./Dropdown";
 
 export default {
   title: "Dropdown",
@@ -13,6 +13,9 @@ type Props = {
   labelText?: string;
   "aria-label"?: string;
   labelComponent?: React.ReactNode;
+  optionsAlign?: OptionsAlignType;
+  optionsClassName?: string;
+  variant?: VariantType;
 };
 
 const exampleOptions = [
@@ -31,18 +34,24 @@ const exampleOptions = [
 ];
 
 function InteractiveExampleUsingSeparateProps(props: Props) {
+  const { optionsAlign, optionsClassName, variant } = props;
+  const compact = variant === "compact";
+
   const [selectedOption, setSelectedOption] =
     React.useState<typeof exampleOptions[0]>();
 
   return (
-    <div className="h-48">
+    <div className={`h-48${optionsAlign === "right" ? " pl-8" : ""}`}>
       <Dropdown
         buttonText={selectedOption?.label || "Select"}
-        className="w-60"
+        className={compact ? "" : "w-60"}
         data-testid="dropdown"
         onChange={setSelectedOption}
         options={exampleOptions}
+        optionsAlign={optionsAlign}
+        optionsClassName={optionsClassName}
         value={selectedOption}
+        variant={variant}
         {...props}
       />
     </div>
@@ -50,6 +59,9 @@ function InteractiveExampleUsingSeparateProps(props: Props) {
 }
 
 function InteractiveExampleUsingChildren(props: Props) {
+  const { variant } = props;
+  const compact = variant === "compact";
+
   const [selectedOption, setSelectedOption] =
     React.useState<typeof exampleOptions[0]>();
 
@@ -57,10 +69,11 @@ function InteractiveExampleUsingChildren(props: Props) {
     <div className="h-48">
       <Dropdown
         aria-label={props["aria-label"]}
-        className="w-60"
+        className={compact ? "" : "w-60"}
         data-testid="dropdown"
         onChange={setSelectedOption}
         value={selectedOption}
+        variant={variant}
       >
         {props.labelComponent}
         <Dropdown.Button>{selectedOption?.label || "Select"}</Dropdown.Button>
@@ -138,6 +151,34 @@ export const DefaultWithoutVisibleLabel: StoryObj = {
   ),
 };
 
+export const Compact: StoryObj = {
+  render: () => (
+    <InteractiveExampleUsingSeparateProps
+      aria-label="Favorite Animal"
+      variant="compact"
+    />
+  ),
+};
+
+export const CompactWithOptionsRightAligned: StoryObj = {
+  render: () => (
+    <InteractiveExampleUsingSeparateProps
+      aria-label="Favorite Animal"
+      optionsAlign="right"
+      variant="compact"
+    />
+  ),
+};
+
+export const SeparateButtonAndMenuWidth: StoryObj = {
+  render: () => (
+    <InteractiveExampleUsingSeparateProps
+      aria-label="Favorite Animal"
+      optionsClassName="w-96"
+    />
+  ),
+};
+
 export const UsingChildrenProp: StoryObj = {
   render: () => (
     <InteractiveExampleUsingChildren
@@ -149,6 +190,15 @@ export const UsingChildrenProp: StoryObj = {
 export const UsingChildrenPropAndNoVisibleLabel: StoryObj = {
   render: () => (
     <InteractiveExampleUsingChildren aria-label="Favorite Animal" />
+  ),
+};
+
+export const CompactUsingChildrenPropAndNoVisibleLabel: StoryObj = {
+  render: () => (
+    <InteractiveExampleUsingChildren
+      aria-label="Favorite Animal"
+      variant="compact"
+    />
   ),
 };
 
