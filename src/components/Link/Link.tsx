@@ -2,10 +2,7 @@ import React from 'react';
 import ClickableStyle from '../ClickableStyle';
 import type { ClickableStyleProps } from '../ClickableStyle';
 
-export type Props = Omit<
-  ClickableStyleProps<React.ElementType>,
-  'disabled' | 'loading' | 'fullWidth'
-> & {
+export type Props = ClickableStyleProps<React.ElementType> & {
   /**
    * Link to URL.
    */
@@ -27,7 +24,7 @@ export type Props = Omit<
  */
 export const Link = React.forwardRef<HTMLAnchorElement, Props>(
   ({ variant = 'link', ...other }, ref) => {
-    return <ClickableStyle {...other} as="a" variant={variant} ref={ref} />;
+    return <ClickableStyle {...other} as="a" ref={ref} variant={variant} />;
   },
 );
 Link.displayName = 'Link';

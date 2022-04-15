@@ -1,7 +1,6 @@
 import clsx from 'clsx';
 import React, { MouseEventHandler, ReactNode } from 'react';
 import styles from './ClickableStyle.module.css';
-import Icon from '../Icon';
 
 export type ClickableStyleProps<IComponent extends React.ElementType> = {
   /**
@@ -10,25 +9,17 @@ export type ClickableStyleProps<IComponent extends React.ElementType> = {
    */
   'aria-label'?: string;
   /**
+   * The visible clickable children
+   */
+  children: string | ReactNode;
+  /**
    * CSS class names that can be appended to the component
    */
   className?: string;
   /**
-   * Disables the field and prevents editing the contents
-   */
-  disabled?: boolean;
-  /**
-   * ClickableStyle reference
-   */
-  forwardRef?: any;
-  /**
    * Toggles clickable that fills the full width of its container
    */
   fullWidth?: boolean;
-  /**
-   * Loading state passed down from higher level used to trigger loader and text change
-   */
-  loading?: boolean;
   /**
    * On click handler for component
    */
@@ -37,17 +28,6 @@ export type ClickableStyleProps<IComponent extends React.ElementType> = {
    * Available size variations for the clickable
    */
   size?: 'sm' | 'md' | 'lg';
-  /**
-   * The visible clickable children
-   */
-  children: string | ReactNode;
-  /**
-   * Determines type of clickable
-   * - **button** The clickable is a clickable button.
-   * - **submit** The clickable is a submit clickable (submits form data).
-   * - **reset** The clickable is a reset clickable (resets the form-data to its initial values)
-   */
-  type?: 'button' | 'reset' | 'submit';
   /**
    * Available _stylistic_ variations available for the ClickableStyle component
    */
@@ -75,12 +55,8 @@ export const ClickableStyle = React.forwardRef(
     {
       as: Component,
       className,
-      disabled,
-      forwardRef,
       fullWidth,
-      loading,
       size = 'lg',
-      children,
       variant = 'primary',
       ...other
     }: ClickableStyleProps<IComponent>,
@@ -105,30 +81,9 @@ export const ClickableStyle = React.forwardRef(
       variant === 'destructive' && styles['clickable-style--destructive'],
       // Other options
       fullWidth && styles['clickable-style--full-width'],
-      loading && styles['eds-is-loading'],
     );
 
-    return (
-      <Component
-        className={componentClassName}
-        disabled={disabled}
-        ref={forwardRef || ref}
-        tabIndex={disabled ? -1 : undefined}
-        {...other}
-      >
-        {loading && (
-          <Icon
-            className={styles['clickable__icon-loading']}
-            name="spinner"
-            purpose="informative"
-            title="loading"
-            size="1.5em"
-          />
-        )}
-
-        {children}
-      </Component>
-    );
+    return <Component className={componentClassName} ref={ref} {...other} />;
   },
 );
 ClickableStyle.displayName = 'ClickableStyle';

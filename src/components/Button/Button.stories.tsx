@@ -2,7 +2,6 @@ import { Story, Meta } from '@storybook/react';
 import React from 'react';
 
 import { Button } from './Button';
-import type { ClickableStyleProps } from '../ClickableStyle';
 import Icon from '../Icon';
 
 export default {
@@ -10,9 +9,9 @@ export default {
   component: Button,
 } as Meta;
 
-const Template: Story<ClickableStyleProps<React.ElementType>> = (args) => (
-  <Button {...args} />
-);
+type Args = React.ComponentProps<typeof Button>;
+
+const Template: Story<Args> = (args) => <Button {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = { children: 'Button' };

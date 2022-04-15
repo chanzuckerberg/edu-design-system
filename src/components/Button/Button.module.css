@@ -1,0 +1,110 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #BUTTON
+\*------------------------------------*/
+
+/**
+ * General disabled button styles
+ */
+.button {
+  &:disabled,
+  &:disabled:hover {
+    cursor: not-allowed;
+  }
+}
+
+/**
+ * Primary disabled button styles
+ */
+.button--primary {
+  &:disabled,
+  &:disabled:hover {
+    border-color: var(--eds-theme-color-border-disabled);
+    background-color: var(--eds-theme-color-background-disabled);
+    color: var(--eds-theme-color-button-primary-text);
+  }
+}
+
+/**
+ * Secondary disabled button styles
+ */
+.button--secondary {
+  &:disabled,
+  &:disabled:hover {
+    border-color: var(--eds-theme-color-border-disabled);
+    background-color: transparent;
+    color: var(--eds-theme-color-text-disabled);
+  }
+}
+
+/**
+ * Tertiary disabled button styles
+ */
+.button--tertiary {
+  &:disabled,
+  &:disabled:hover {
+    border-color: var(--eds-theme-color-border-disabled);
+    background-color: var(--eds-theme-color-button-tertiary-background);
+    color: var(--eds-theme-color-text-disabled);
+  }
+}
+
+/**
+ * Link disabled button styles
+ */
+.button--link {
+  &:disabled,
+  &:disabled:hover {
+    color: var(--eds-theme-color-text-disabled);
+    text-decoration-thickness: 1px;
+  }
+}
+
+/**
+ * Icon disabled button styles
+ */
+.button--icon {
+  &:disabled,
+  &:disabled:hover {
+    border-color: var(--eds-theme-color-button-icon-border);
+    background-color: var(--eds-theme-color-button-icon-background);
+    color: var(--eds-theme-color-text-disabled);
+  }
+}
+
+/**
+ * Destructive disabled button styles
+ */
+.button--destructive {
+  &:disabled,
+  &:disabled:hover {
+    border-color: var(--eds-theme-color-border-disabled);
+    background-color: var(--eds-theme-color-background-disabled);
+    color: var(--eds-theme-color-button-destructive-text);
+  }
+}
+
+/**
+ * Loading icon rotiation style
+ */
+.eds-is-loading svg {
+  animation: rotateIcon 2s linear infinite;
+  overflow: visible;
+
+  @media screen and (prefers-reduced-motion) {
+    animation: none;
+  }
+}
+
+/**
+ * Loading icon rotation animation
+ */
+@keyframes rotateIcon {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

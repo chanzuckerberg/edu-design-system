@@ -9,7 +9,8 @@
  * 2) Defaults to primary variant
  * 3) Margin 0 added becuase Safari has margin on buttons
  * 4) Adds a gap between children to automatically handle spacing between icons and text
- * 5) Adds default size for icons passed in for consistency
+ * 5) Removes the underline in the case that the rendered element is an <a> tag
+ * 6) Adds default size for icons passed in for consistency
  */
 .clickable-style {
   @mixin eds-theme-typography-button-label;
@@ -22,23 +23,15 @@
   border-style: solid;
   border-radius: var(--eds-theme-border-radius);
   cursor: pointer;
-  text-decoration: none;
+  text-decoration: none; /* 5 */
   transition: all var(--eds-anim-fade-quick) var(--eds-anim-ease);
 
   svg {
-    --icon-size-default: 2em; /* 5 */
+    --icon-size-default: 2em; /* 6 */
   }
 
   &:focus {
     @mixin focus;
-  }
-
-  /**
-   * Disabled
-   */
-  &:disabled,
-  &:disabled:hover {
-    cursor: not-allowed;
   }
 
   @media screen and (prefers-reduced-motion) {
@@ -68,13 +61,6 @@
     background-color: var(--eds-theme-color-button-primary-background-active);
     color: var(--eds-theme-color-button-primary-text-active);
   }
-
-  &:disabled,
-  &:disabled:hover {
-    border-color: var(--eds-theme-color-border-disabled);
-    background-color: var(--eds-theme-color-background-disabled);
-    color: var(--eds-theme-color-button-primary-text);
-  }
 }
 
 /**
@@ -97,13 +83,6 @@
     border-color: var(--eds-theme-color-button-secondary-border-active);
     background-color: var(--eds-theme-color-button-secondary-background-active);
     color: var(--eds-theme-color-button-secondary-text-active);
-  }
-
-  &:disabled,
-  &:disabled:hover {
-    border-color: var(--eds-theme-color-border-disabled);
-    background-color: transparent;
-    color: var(--eds-theme-color-text-disabled);
   }
 }
 
@@ -128,13 +107,6 @@
     background-color: var(--eds-theme-color-button-tertiary-background-active);
     color: var(--eds-theme-color-button-tertiary-text-active);
   }
-
-  &:disabled,
-  &:disabled:hover {
-    border-color: var(--eds-theme-color-border-disabled);
-    background-color: var(--eds-theme-color-button-tertiary-background);
-    color: var(--eds-theme-color-text-disabled);
-  }
 }
 
 /**
@@ -151,11 +123,6 @@
   text-align: left;
   background-color: transparent;
   gap: 0.25em; /* 2 */
-
-  &:disabled,
-  &:disabled:hover {
-    color: var(--eds-theme-color-text-disabled);
-  }
 }
 
 /* Style icons that may be in the clickable style children */
@@ -164,8 +131,8 @@
 }
 
 /**
- * Icon clickable-style
- * 1) A clickable-style that strips out borders, backgrounds, etc
+ * Icon clickable style
+ * 1) A clickable style that strips out borders, backgrounds, etc
  * 2) Use for Close "X" buttons, tooltip icons, and other
  */
 .clickable-style--icon {
@@ -184,13 +151,6 @@
     border-color: var(--eds-theme-color-button-icon-border-active);
     background-color: var(--eds-theme-color-button-icon-background-active);
     color: var(--eds-theme-color-button-icon-text-active);
-  }
-
-  &:disabled,
-  &:disabled:hover {
-    border-color: var(--eds-theme-color-button-icon-border);
-    background-color: var(--eds-theme-color-button-icon-background);
-    color: var(--eds-theme-color-text-disabled);
   }
 }
 
@@ -219,13 +179,6 @@
       --eds-theme-color-button-destructive-background-active
     );
     color: var(--eds-theme-color-button-destructive-text-active);
-  }
-
-  &:disabled,
-  &:disabled:hover {
-    border-color: var(--eds-theme-color-border-disabled);
-    background-color: var(--eds-theme-color-background-disabled);
-    color: var(--eds-theme-color-button-destructive-text);
   }
 }
 
@@ -268,28 +221,4 @@
  */
 .clickable-style--full-width {
   width: 100%;
-}
-
-/**
- * Loading icon rotiation style
- */
-.eds-is-loading svg {
-  animation: rotateIcon 2s linear infinite;
-  overflow: visible;
-
-  @media screen and (prefers-reduced-motion) {
-    animation: none;
-  }
-}
-
-/**
- * Loading icon rotation animation
- */
-@keyframes rotateIcon {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
