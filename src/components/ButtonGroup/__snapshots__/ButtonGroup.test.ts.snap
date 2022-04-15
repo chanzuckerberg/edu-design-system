@@ -5,12 +5,14 @@ exports[`<ButtonGroup /> Default story renders snapshot 1`] = `
   class="button-group button-group--spacing-1x"
 >
   <button
-    class="button button--lg button--primary"
+    class="clickable-style button button--primary clickable-style--lg clickable-style--primary"
+    type="button"
   >
     Button 1
   </button>
   <button
-    class="button button--lg button--secondary"
+    class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary"
+    type="button"
   >
     Button 2
   </button>
@@ -22,12 +24,14 @@ exports[`<ButtonGroup /> SpacingMax story renders snapshot 1`] = `
   class="button-group button-group--spacing-max"
 >
   <button
-    class="button button--lg button--primary"
+    class="clickable-style button button--primary clickable-style--lg clickable-style--primary"
+    type="button"
   >
     Button 1
   </button>
   <button
-    class="button button--lg button--secondary"
+    class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary"
+    type="button"
   >
     Button 2
   </button>
@@ -39,12 +43,14 @@ exports[`<ButtonGroup /> SpacingNone story renders snapshot 1`] = `
   class="button-group"
 >
   <button
-    class="button button--lg button--primary"
+    class="clickable-style button button--primary clickable-style--lg clickable-style--primary"
+    type="button"
   >
     Button 1
   </button>
   <button
-    class="button button--lg button--secondary"
+    class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary"
+    type="button"
   >
     Button 2
   </button>
@@ -56,12 +62,14 @@ exports[`<ButtonGroup /> Vertical story renders snapshot 1`] = `
   class="button-group button-group--spacing-1x button-group--vertical"
 >
   <button
-    class="button button--lg button--primary"
+    class="clickable-style button button--primary clickable-style--lg clickable-style--primary"
+    type="button"
   >
     Button 1
   </button>
   <button
-    class="button button--lg button--secondary"
+    class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary"
+    type="button"
   >
     Button 2
   </button>
@@ -73,27 +81,32 @@ exports[`<ButtonGroup /> WithFiveButtons story renders snapshot 1`] = `
   class="button-group button-group--spacing-1x"
 >
   <button
-    class="button button--lg button--secondary"
+    class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary"
+    type="button"
   >
     Button 1
   </button>
   <button
-    class="button button--lg button--secondary"
+    class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary"
+    type="button"
   >
     Button 2
   </button>
   <button
-    class="button button--lg button--secondary"
+    class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary"
+    type="button"
   >
     Button 3
   </button>
   <button
-    class="button button--lg button--secondary"
+    class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary"
+    type="button"
   >
     Button 4
   </button>
   <button
-    class="button button--lg button--primary"
+    class="clickable-style button button--primary clickable-style--lg clickable-style--primary"
+    type="button"
   >
     Button 5
   </button>

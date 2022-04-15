@@ -2,7 +2,7 @@ import { Story, Meta } from '@storybook/react';
 import React from 'react';
 
 import { FieldNote, Props } from './FieldNote';
-import TextLink from '../TextLink';
+import Link from '../Link';
 import TextPassage from '../TextPassage';
 
 export default {
@@ -25,7 +25,7 @@ export const WithTextPassage = () => (
         <li>Multiple lines</li>
         <li>Arbitrary HTML text</li>
         <li>
-          Even <TextLink href="#">text links</TextLink>
+          Even <Link href="#">text links</Link>
         </li>
       </ul>
     </TextPassage>
