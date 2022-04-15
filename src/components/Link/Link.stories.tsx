@@ -93,44 +93,68 @@ SecondaryRightIcon.args = {
 };
 
 export const SecondaryMedium = Template.bind({});
-SecondaryMedium.args = { children: 'Link', variant: 'secondary', size: 'md' };
+SecondaryMedium.args = {
+  children: 'Link',
+  variant: 'secondary',
+  size: 'md',
+};
 
 export const SecondarySmall = Template.bind({});
-SecondarySmall.args = { children: 'Link', variant: 'secondary', size: 'sm' };
+SecondarySmall.args = {
+  children: 'Link',
+  variant: 'secondary',
+  size: 'sm',
+};
 
-export const Tertiary = Template.bind({});
-Tertiary.args = { children: 'Link', variant: 'tertiary' };
+export const SecondaryNeutral = Template.bind({});
+SecondaryNeutral.args = {
+  children: 'Link',
+  variant: 'secondary',
+  status: 'neutral',
+};
 
-export const TertiaryLeftIcon = Template.bind({});
-TertiaryLeftIcon.args = {
+export const SecondaryNeutralLeftIcon = Template.bind({});
+SecondaryNeutralLeftIcon.args = {
   children: (
     <>
       <Icon name="arrow-back" purpose="decorative" />
       Link
     </>
   ),
-  variant: 'tertiary',
+  variant: 'secondary',
+  status: 'neutral',
 };
 
-export const TertiaryRightIcon = Template.bind({});
-TertiaryRightIcon.args = {
+export const SecondaryNeutralRightIcon = Template.bind({});
+SecondaryNeutralRightIcon.args = {
   children: (
     <>
       Link
       <Icon name="arrow-forward" purpose="decorative" />
     </>
   ),
-  variant: 'tertiary',
+  variant: 'secondary',
+  status: 'neutral',
 };
 
-export const TertiaryMedium = Template.bind({});
-TertiaryMedium.args = { children: 'Link', variant: 'tertiary', size: 'md' };
+export const SecondaryNeutralMedium = Template.bind({});
+SecondaryNeutralMedium.args = {
+  children: 'Link',
+  variant: 'secondary',
+  status: 'neutral',
+  size: 'md',
+};
 
-export const TertiarySmall = Template.bind({});
-TertiarySmall.args = { children: 'Link', variant: 'tertiary', size: 'sm' };
+export const SecondaryNeutralSmall = Template.bind({});
+SecondaryNeutralSmall.args = {
+  children: 'Link',
+  variant: 'secondary',
+  status: 'neutral',
+  size: 'sm',
+};
 
-export const IconLinkLeftIcon = Template.bind({});
-IconLinkLeftIcon.args = {
+export const IconClickableStyleLeftIcon = Template.bind({});
+IconClickableStyleLeftIcon.args = {
   children: (
     <>
       <Icon name="arrow-back" purpose="decorative" />
@@ -140,8 +164,8 @@ IconLinkLeftIcon.args = {
   variant: 'icon',
 };
 
-export const IconLinkRightIcon = Template.bind({});
-IconLinkRightIcon.args = {
+export const IconClickableStyleRightIcon = Template.bind({});
+IconClickableStyleRightIcon.args = {
   children: (
     <>
       Link
@@ -151,14 +175,14 @@ IconLinkRightIcon.args = {
   variant: 'icon',
 };
 
-export const IconLinkIconOnly = Template.bind({});
-IconLinkIconOnly.args = {
+export const IconClickableStyleIconOnly = Template.bind({});
+IconClickableStyleIconOnly.args = {
   children: <Icon name="arrow-back" purpose="informative" title="go back" />,
   variant: 'icon',
 };
 
-export const IconLinkLeftIconSmall = Template.bind({});
-IconLinkLeftIconSmall.args = {
+export const IconClickableStyleLeftIconSmall = Template.bind({});
+IconClickableStyleLeftIconSmall.args = {
   children: (
     <>
       <Icon name="arrow-back" purpose="decorative" />
@@ -169,8 +193,8 @@ IconLinkLeftIconSmall.args = {
   size: 'sm',
 };
 
-export const IconLinkRightIconSmall = Template.bind({});
-IconLinkRightIconSmall.args = {
+export const IconClickableStyleRightIconSmall = Template.bind({});
+IconClickableStyleRightIconSmall.args = {
   children: (
     <>
       Link
@@ -181,23 +205,128 @@ IconLinkRightIconSmall.args = {
   size: 'sm',
 };
 
-export const IconLinkIconOnlySmall = Template.bind({});
-IconLinkIconOnlySmall.args = {
+export const IconClickableStyleIconOnlySmall = Template.bind({});
+IconClickableStyleIconOnlySmall.args = {
   children: <Icon name="arrow-back" purpose="informative" title="go back" />,
   variant: 'icon',
   size: 'sm',
 };
 
-export const Destructive = Template.bind({});
-Destructive.args = { children: 'Link', variant: 'destructive' };
+export const PrimaryAlert = Template.bind({});
+PrimaryAlert.args = {
+  children: 'Link',
+  status: 'alert',
+  variant: 'primary',
+};
 
-export const DestructiveLeftIcon = Template.bind({});
-DestructiveLeftIcon.args = {
+export const PrimaryAlertLeftIcon = Template.bind({});
+PrimaryAlertLeftIcon.args = {
   children: (
     <>
       <Icon name="arrow-back" purpose="decorative" />
       Link
     </>
   ),
-  variant: 'destructive',
+  status: 'alert',
+  variant: 'primary',
+};
+
+export const FullWidth = Template.bind({});
+FullWidth.args = { children: 'Link', fullWidth: true, variant: 'primary' };
+
+export const SecondarySuccess = Template.bind({});
+SecondarySuccess.args = {
+  children: 'Link',
+  status: 'success',
+  variant: 'secondary',
+};
+
+export const SecondaryWarning = Template.bind({});
+SecondaryWarning.args = {
+  children: 'Link',
+  status: 'warning',
+  variant: 'secondary',
+};
+
+export const SecondaryAlert = Template.bind({});
+SecondaryAlert.args = {
+  children: 'Link',
+  status: 'alert',
+  variant: 'secondary',
+};
+
+export const IconNeutral = Template.bind({});
+IconNeutral.args = {
+  children: (
+    <>
+      Link
+      <Icon name="arrow-forward" purpose="decorative" />
+    </>
+  ),
+  status: 'neutral',
+  variant: 'icon',
+};
+
+export const IconSuccess = Template.bind({});
+IconSuccess.args = {
+  children: (
+    <>
+      Link
+      <Icon name="arrow-forward" purpose="decorative" />
+    </>
+  ),
+  status: 'success',
+  variant: 'icon',
+};
+
+export const IconWarning = Template.bind({});
+IconWarning.args = {
+  children: (
+    <>
+      Link
+      <Icon name="arrow-forward" purpose="decorative" />
+    </>
+  ),
+  status: 'warning',
+  variant: 'icon',
+};
+
+export const IconAlert = Template.bind({});
+IconAlert.args = {
+  children: (
+    <>
+      Link
+      <Icon name="arrow-forward" purpose="decorative" />
+    </>
+  ),
+  status: 'alert',
+  variant: 'icon',
+};
+
+export const LinkNeutral = Template.bind({});
+LinkNeutral.args = {
+  children: 'Link',
+  status: 'neutral',
+  variant: 'link',
+};
+
+export const LinkSuccess = Template.bind({});
+LinkSuccess.args = {
+  children: 'Link',
+  status: 'success',
+  variant: 'link',
+};
+
+export const LinkWarning = Template.bind({});
+LinkWarning.args = {
+  children: 'Link',
+  status: 'warning',
+  variant: 'link',
+};
+
+export const LinkAlert = Template.bind({});
+LinkAlert.args = {
+  children: 'Link',
+  status: 'alert',
+  variant: 'link',
 };

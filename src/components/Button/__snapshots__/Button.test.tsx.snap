@@ -1,30 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Button /> Destructive story renders snapshot 1`] = `
+exports[`<Button /> FullWidth story renders snapshot 1`] = `
 <button
-  class="clickable-style button button--destructive clickable-style--lg clickable-style--brand"
+  class="clickable-style button button--primary clickable-style--lg clickable-style--primary clickable-style--brand clickable-style--full-width"
   type="button"
 >
   Button
 </button>
 `;
 
-exports[`<Button /> DestructiveDisabled story renders snapshot 1`] = `
+exports[`<Button /> IconAlert story renders snapshot 1`] = `
 <button
-  class="clickable-style button button--destructive button--disabled clickable-style--lg clickable-style--brand"
-  disabled=""
-  tabindex="-1"
+  class="clickable-style button button--icon clickable-style--lg clickable-style--icon clickable-style--alert"
   type="button"
 >
   Button
-</button>
-`;
-
-exports[`<Button /> DestructiveLeftIcon story renders snapshot 1`] = `
-<button
-  class="clickable-style button button--destructive clickable-style--lg clickable-style--brand"
-  type="button"
->
   <svg
     aria-hidden="true"
     class="icon"
@@ -32,19 +22,9 @@ exports[`<Button /> DestructiveLeftIcon story renders snapshot 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <use
-      xlink:href="test-file-stub#arrow-back"
+      xlink:href="test-file-stub#arrow-forward"
     />
   </svg>
-  Button
-</button>
-`;
-
-exports[`<Button /> FullWidth story renders snapshot 1`] = `
-<button
-  class="clickable-style button button--primary clickable-style--lg clickable-style--primary clickable-style--brand clickable-style--full-width"
-  type="button"
->
-  Button
 </button>
 `;
 
@@ -191,9 +171,75 @@ exports[`<Button /> IconButtonRightIconSmall story renders snapshot 1`] = `
 </button>
 `;
 
+exports[`<Button /> IconNeutral story renders snapshot 1`] = `
+<button
+  class="clickable-style button button--icon clickable-style--lg clickable-style--icon clickable-style--neutral"
+  type="button"
+>
+  Button
+  <svg
+    aria-hidden="true"
+    class="icon"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <use
+      xlink:href="test-file-stub#arrow-forward"
+    />
+  </svg>
+</button>
+`;
+
+exports[`<Button /> IconSuccess story renders snapshot 1`] = `
+<button
+  class="clickable-style button button--icon clickable-style--lg clickable-style--icon clickable-style--success"
+  type="button"
+>
+  Button
+  <svg
+    aria-hidden="true"
+    class="icon"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <use
+      xlink:href="test-file-stub#arrow-forward"
+    />
+  </svg>
+</button>
+`;
+
+exports[`<Button /> IconWarning story renders snapshot 1`] = `
+<button
+  class="clickable-style button button--icon clickable-style--lg clickable-style--icon clickable-style--warning"
+  type="button"
+>
+  Button
+  <svg
+    aria-hidden="true"
+    class="icon"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <use
+      xlink:href="test-file-stub#arrow-forward"
+    />
+  </svg>
+</button>
+`;
+
 exports[`<Button /> Link story renders snapshot 1`] = `
 <button
   class="clickable-style button button--link clickable-style--link clickable-style--brand"
+  type="button"
+>
+  Button
+</button>
+`;
+
+exports[`<Button /> LinkAlert story renders snapshot 1`] = `
+<button
+  class="clickable-style button button--link clickable-style--link clickable-style--alert"
   type="button"
 >
   Button
@@ -205,6 +251,15 @@ exports[`<Button /> LinkDisabled story renders snapshot 1`] = `
   class="clickable-style button button--link button--disabled clickable-style--link clickable-style--brand"
   disabled=""
   tabindex="-1"
+  type="button"
+>
+  Button
+</button>
+`;
+
+exports[`<Button /> LinkNeutral story renders snapshot 1`] = `
+<button
+  class="clickable-style button button--link clickable-style--link clickable-style--neutral"
   type="button"
 >
   Button
@@ -232,6 +287,24 @@ exports[`<Button /> LinkRightIcon story renders snapshot 1`] = `
       xlink:href="test-file-stub#open-in-new"
     />
   </svg>
+</button>
+`;
+
+exports[`<Button /> LinkSuccess story renders snapshot 1`] = `
+<button
+  class="clickable-style button button--link clickable-style--link clickable-style--success"
+  type="button"
+>
+  Button
+</button>
+`;
+
+exports[`<Button /> LinkWarning story renders snapshot 1`] = `
+<button
+  class="clickable-style button button--link clickable-style--link clickable-style--warning"
+  type="button"
+>
+  Button
 </button>
 `;
 
@@ -269,6 +342,34 @@ exports[`<Button /> Primary story renders snapshot 1`] = `
   class="clickable-style button button--primary clickable-style--lg clickable-style--primary clickable-style--brand"
   type="button"
 >
+  Button
+</button>
+`;
+
+exports[`<Button /> PrimaryAlert story renders snapshot 1`] = `
+<button
+  class="clickable-style button button--primary clickable-style--lg clickable-style--primary clickable-style--alert"
+  type="button"
+>
+  Button
+</button>
+`;
+
+exports[`<Button /> PrimaryAlertLeftIcon story renders snapshot 1`] = `
+<button
+  class="clickable-style button button--primary clickable-style--lg clickable-style--primary clickable-style--alert"
+  type="button"
+>
+  <svg
+    aria-hidden="true"
+    class="icon"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <use
+      xlink:href="test-file-stub#arrow-back"
+    />
+  </svg>
   Button
 </button>
 `;
@@ -349,6 +450,15 @@ exports[`<Button /> Secondary story renders snapshot 1`] = `
 </button>
 `;
 
+exports[`<Button /> SecondaryAlert story renders snapshot 1`] = `
+<button
+  class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--alert"
+  type="button"
+>
+  Button
+</button>
+`;
+
 exports[`<Button /> SecondaryDisabled story renders snapshot 1`] = `
 <button
   class="clickable-style button button--secondary button--disabled clickable-style--lg clickable-style--secondary clickable-style--brand"
@@ -388,6 +498,82 @@ exports[`<Button /> SecondaryMedium story renders snapshot 1`] = `
 </button>
 `;
 
+exports[`<Button /> SecondaryNeutral story renders snapshot 1`] = `
+<button
+  class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--neutral"
+  type="button"
+>
+  Button
+</button>
+`;
+
+exports[`<Button /> SecondaryNeutralDisabled story renders snapshot 1`] = `
+<button
+  class="clickable-style button button--secondary button--disabled clickable-style--lg clickable-style--secondary clickable-style--neutral"
+  disabled=""
+  tabindex="-1"
+  type="button"
+>
+  Button
+</button>
+`;
+
+exports[`<Button /> SecondaryNeutralLeftIcon story renders snapshot 1`] = `
+<button
+  class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--neutral"
+  type="button"
+>
+  <svg
+    aria-hidden="true"
+    class="icon"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <use
+      xlink:href="test-file-stub#arrow-back"
+    />
+  </svg>
+  Button
+</button>
+`;
+
+exports[`<Button /> SecondaryNeutralMedium story renders snapshot 1`] = `
+<button
+  class="clickable-style button button--secondary clickable-style--md clickable-style--secondary clickable-style--neutral"
+  type="button"
+>
+  Button
+</button>
+`;
+
+exports[`<Button /> SecondaryNeutralRightIcon story renders snapshot 1`] = `
+<button
+  class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--neutral"
+  type="button"
+>
+  Button
+  <svg
+    aria-hidden="true"
+    class="icon"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <use
+      xlink:href="test-file-stub#arrow-forward"
+    />
+  </svg>
+</button>
+`;
+
+exports[`<Button /> SecondaryNeutralSmall story renders snapshot 1`] = `
+<button
+  class="clickable-style button button--secondary clickable-style--sm clickable-style--secondary clickable-style--neutral"
+  type="button"
+>
+  Button
+</button>
+`;
+
 exports[`<Button /> SecondaryRightIcon story renders snapshot 1`] = `
 <button
   class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--brand"
@@ -416,76 +602,18 @@ exports[`<Button /> SecondarySmall story renders snapshot 1`] = `
 </button>
 `;
 
-exports[`<Button /> Tertiary story renders snapshot 1`] = `
+exports[`<Button /> SecondarySuccess story renders snapshot 1`] = `
 <button
-  class="clickable-style button button--tertiary clickable-style--lg clickable-style--brand"
+  class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--success"
   type="button"
 >
   Button
 </button>
 `;
 
-exports[`<Button /> TertiaryDisabled story renders snapshot 1`] = `
+exports[`<Button /> SecondaryWarning story renders snapshot 1`] = `
 <button
-  class="clickable-style button button--tertiary button--disabled clickable-style--lg clickable-style--brand"
-  disabled=""
-  tabindex="-1"
-  type="button"
->
-  Button
-</button>
-`;
-
-exports[`<Button /> TertiaryLeftIcon story renders snapshot 1`] = `
-<button
-  class="clickable-style button button--tertiary clickable-style--lg clickable-style--brand"
-  type="button"
->
-  <svg
-    aria-hidden="true"
-    class="icon"
-    fill="currentColor"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <use
-      xlink:href="test-file-stub#arrow-back"
-    />
-  </svg>
-  Button
-</button>
-`;
-
-exports[`<Button /> TertiaryMedium story renders snapshot 1`] = `
-<button
-  class="clickable-style button button--tertiary clickable-style--md clickable-style--brand"
-  type="button"
->
-  Button
-</button>
-`;
-
-exports[`<Button /> TertiaryRightIcon story renders snapshot 1`] = `
-<button
-  class="clickable-style button button--tertiary clickable-style--lg clickable-style--brand"
-  type="button"
->
-  Button
-  <svg
-    aria-hidden="true"
-    class="icon"
-    fill="currentColor"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <use
-      xlink:href="test-file-stub#arrow-forward"
-    />
-  </svg>
-</button>
-`;
-
-exports[`<Button /> TertiarySmall story renders snapshot 1`] = `
-<button
-  class="clickable-style button button--tertiary clickable-style--sm clickable-style--brand"
+  class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--warning"
   type="button"
 >
   Button
