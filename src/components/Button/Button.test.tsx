@@ -22,12 +22,6 @@ describe('<Button />', () => {
     expect(onClick).toHaveBeenCalled();
   });
 
-  it('renders as a link when provided href', () => {
-    render(<Button href="/test-url">test link</Button>);
-
-    expect(screen.getByRole('link')).toBeDefined();
-  });
-
   it('passes test ids down properly', () => {
     render(<Button data-testid="example-test-id">Click</Button>);
     expect(screen.getByTestId('example-test-id')).toMatchSnapshot();
