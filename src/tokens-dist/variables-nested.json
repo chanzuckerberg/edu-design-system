@@ -376,7 +376,7 @@
                 "active": "#ffffff"
               }
             },
-            "alert": {
+            "error": {
               "background": {
                 "@": "#D41E52",
                 "hover": "#BD0044",
@@ -463,7 +463,7 @@
                 "active": "#ffffff"
               }
             },
-            "alert": {
+            "error": {
               "background": {
                 "@": "rgba(0, 0, 0, 0)",
                 "hover": "#BD0044",
@@ -550,7 +550,7 @@
                 "active": "#ffffff"
               }
             },
-            "alert": {
+            "error": {
               "background": {
                 "@": "rgba(0, 0, 0, 0)",
                 "hover": "#FFF0F4",
@@ -589,7 +589,7 @@
               "hover": "#842800",
               "active": "#842800"
             },
-            "alert": {
+            "error": {
               "@": "#BD0044",
               "hover": "#8F0134",
               "active": "#8F0134"

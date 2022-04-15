@@ -210,22 +210,22 @@ LinkRightIcon.args = {
   variant: 'link',
 };
 
-export const PrimaryAlert = Template.bind({});
-PrimaryAlert.args = {
+export const PrimaryError = Template.bind({});
+PrimaryError.args = {
   children: 'Clickable Style',
-  status: 'alert',
+  status: 'error',
   variant: 'primary',
 };
 
-export const PrimaryAlertLeftIcon = Template.bind({});
-PrimaryAlertLeftIcon.args = {
+export const PrimaryErrorLeftIcon = Template.bind({});
+PrimaryErrorLeftIcon.args = {
   children: (
     <>
       <Icon name="arrow-back" purpose="decorative" />
       Clickable Style
     </>
   ),
-  status: 'alert',
+  status: 'error',
   variant: 'primary',
 };
 
@@ -246,10 +246,10 @@ SecondaryWarning.args = {
   variant: 'secondary',
 };
 
-export const SecondaryAlert = Template.bind({});
-SecondaryAlert.args = {
+export const SecondaryError = Template.bind({});
+SecondaryError.args = {
   children: 'Clickable Style',
-  status: 'alert',
+  status: 'error',
   variant: 'secondary',
 };
 
@@ -289,15 +289,15 @@ IconWarning.args = {
   variant: 'icon',
 };
 
-export const IconAlert = Template.bind({});
-IconAlert.args = {
+export const IconError = Template.bind({});
+IconError.args = {
   children: (
     <>
       Clickable Style
       <Icon name="arrow-forward" purpose="decorative" />
     </>
   ),
-  status: 'alert',
+  status: 'error',
   variant: 'icon',
 };
 
@@ -322,9 +322,9 @@ LinkWarning.args = {
   variant: 'link',
 };
 
-export const LinkAlert = Template.bind({});
-LinkAlert.args = {
+export const LinkError = Template.bind({});
+LinkError.args = {
   children: 'Clickable Style',
-  status: 'alert',
+  status: 'error',
   variant: 'link',
 };

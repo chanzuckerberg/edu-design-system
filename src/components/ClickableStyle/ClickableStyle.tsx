@@ -31,7 +31,7 @@ export type ClickableStyleProps<IComponent extends React.ElementType> = {
   /**
    * Available _color_ variations available for the ClickableStyle component
    */
-  status?: 'brand' | 'neutral' | 'success' | 'warning' | 'alert';
+  status?: 'brand' | 'neutral' | 'success' | 'warning' | 'error';
   /**
    * Available _shape_ variations available for the ClickableStyle component
    */
@@ -70,7 +70,7 @@ export const ClickableStyle = React.forwardRef(
       console.warn(
         `*** Invalid prop combo warning ***:\n`,
         `This component does not support using the '${status}' status with a 'primary' variant.`,
-        `The 'primary' variant can only be used with the 'brand' and 'alert' statuses.`,
+        `The 'primary' variant can only be used with the 'brand' and 'error' statuses.`,
       );
     }
 
@@ -94,7 +94,7 @@ export const ClickableStyle = React.forwardRef(
       status === 'neutral' && styles['clickable-style--neutral'],
       status === 'success' && styles['clickable-style--success'],
       status === 'warning' && styles['clickable-style--warning'],
-      status === 'alert' && styles['clickable-style--alert'],
+      status === 'error' && styles['clickable-style--error'],
       // Other options
       fullWidth && styles['clickable-style--full-width'],
     );

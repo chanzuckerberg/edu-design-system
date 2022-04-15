@@ -376,21 +376,21 @@
                 "active": "var(--eds-theme-color-button-primary-brand-text-active)"
               }
             },
-            "alert": {
+            "error": {
               "background": {
-                "@": "var(--eds-theme-color-button-primary-alert-background)",
-                "hover": "var(--eds-theme-color-button-primary-alert-background-hover)",
-                "active": "var(--eds-theme-color-button-primary-alert-background-active)"
+                "@": "var(--eds-theme-color-button-primary-error-background)",
+                "hover": "var(--eds-theme-color-button-primary-error-background-hover)",
+                "active": "var(--eds-theme-color-button-primary-error-background-active)"
               },
               "border": {
-                "@": "var(--eds-theme-color-button-primary-alert-border)",
-                "hover": "var(--eds-theme-color-button-primary-alert-border-hover)",
-                "active": "var(--eds-theme-color-button-primary-alert-border-active)"
+                "@": "var(--eds-theme-color-button-primary-error-border)",
+                "hover": "var(--eds-theme-color-button-primary-error-border-hover)",
+                "active": "var(--eds-theme-color-button-primary-error-border-active)"
               },
               "text": {
-                "@": "var(--eds-theme-color-button-primary-alert-text)",
-                "hover": "var(--eds-theme-color-button-primary-alert-text-hover)",
-                "active": "var(--eds-theme-color-button-primary-alert-text-active)"
+                "@": "var(--eds-theme-color-button-primary-error-text)",
+                "hover": "var(--eds-theme-color-button-primary-error-text-hover)",
+                "active": "var(--eds-theme-color-button-primary-error-text-active)"
               }
             }
           },
@@ -463,21 +463,21 @@
                 "active": "var(--eds-theme-color-button-secondary-warning-text-active)"
               }
             },
-            "alert": {
+            "error": {
               "background": {
-                "@": "var(--eds-theme-color-button-secondary-alert-background)",
-                "hover": "var(--eds-theme-color-button-secondary-alert-background-hover)",
-                "active": "var(--eds-theme-color-button-secondary-alert-background-active)"
+                "@": "var(--eds-theme-color-button-secondary-error-background)",
+                "hover": "var(--eds-theme-color-button-secondary-error-background-hover)",
+                "active": "var(--eds-theme-color-button-secondary-error-background-active)"
               },
               "border": {
-                "@": "var(--eds-theme-color-button-secondary-alert-border)",
-                "hover": "var(--eds-theme-color-button-secondary-alert-border-hover)",
-                "active": "var(--eds-theme-color-button-secondary-alert-border-active)"
+                "@": "var(--eds-theme-color-button-secondary-error-border)",
+                "hover": "var(--eds-theme-color-button-secondary-error-border-hover)",
+                "active": "var(--eds-theme-color-button-secondary-error-border-active)"
               },
               "text": {
-                "@": "var(--eds-theme-color-button-secondary-alert-text)",
-                "hover": "var(--eds-theme-color-button-secondary-alert-text-hover)",
-                "active": "var(--eds-theme-color-button-secondary-alert-text-active)"
+                "@": "var(--eds-theme-color-button-secondary-error-text)",
+                "hover": "var(--eds-theme-color-button-secondary-error-text-hover)",
+                "active": "var(--eds-theme-color-button-secondary-error-text-active)"
               }
             }
           },
@@ -550,21 +550,21 @@
                 "active": "var(--eds-theme-color-button-icon-warning-text-active)"
               }
             },
-            "alert": {
+            "error": {
               "background": {
-                "@": "var(--eds-theme-color-button-icon-alert-background)",
-                "hover": "var(--eds-theme-color-button-icon-alert-background-hover)",
-                "active": "var(--eds-theme-color-button-icon-alert-background-active)"
+                "@": "var(--eds-theme-color-button-icon-error-background)",
+                "hover": "var(--eds-theme-color-button-icon-error-background-hover)",
+                "active": "var(--eds-theme-color-button-icon-error-background-active)"
               },
               "border": {
-                "@": "var(--eds-theme-color-button-icon-alert-border)",
-                "hover": "var(--eds-theme-color-button-icon-alert-border-hover)",
-                "active": "var(--eds-theme-color-button-icon-alert-border-active)"
+                "@": "var(--eds-theme-color-button-icon-error-border)",
+                "hover": "var(--eds-theme-color-button-icon-error-border-hover)",
+                "active": "var(--eds-theme-color-button-icon-error-border-active)"
               },
               "text": {
-                "@": "var(--eds-theme-color-button-icon-alert-text)",
-                "hover": "var(--eds-theme-color-button-icon-alert-text-hover)",
-                "active": "var(--eds-theme-color-button-icon-alert-text-active)"
+                "@": "var(--eds-theme-color-button-icon-error-text)",
+                "hover": "var(--eds-theme-color-button-icon-error-text-hover)",
+                "active": "var(--eds-theme-color-button-icon-error-text-active)"
               }
             }
           },
@@ -589,10 +589,10 @@
               "hover": "var(--eds-theme-color-button-link-warning-hover)",
               "active": "var(--eds-theme-color-button-link-warning-active)"
             },
-            "alert": {
-              "@": "var(--eds-theme-color-button-link-alert)",
-              "hover": "var(--eds-theme-color-button-link-alert-hover)",
-              "active": "var(--eds-theme-color-button-link-alert-active)"
+            "error": {
+              "@": "var(--eds-theme-color-button-link-error)",
+              "hover": "var(--eds-theme-color-button-link-error-hover)",
+              "active": "var(--eds-theme-color-button-link-error-active)"
             }
           }
         },

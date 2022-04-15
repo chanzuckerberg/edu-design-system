@@ -39,7 +39,7 @@
                 }
               }
             },
-            "alert": {
+            "error": {
               "background": {
                 "@": {
                   "value": "{eds.color.other.ruby.600}"
@@ -216,7 +216,7 @@
                 }
               }
             },
-            "alert": {
+            "error": {
               "background": {
                 "@": {
                   "value": "{eds.theme.color.transparent.black.0}"
@@ -393,7 +393,7 @@
                 }
               }
             },
-            "alert": {
+            "error": {
               "background": {
                 "@": {
                   "value": "{eds.theme.color.transparent.black.0}"
@@ -474,7 +474,7 @@
                 "value": "{eds.color.other.orange.800}"
               }
             },
-            "alert": {
+            "error": {
               "@": {
                 "value": "{eds.color.other.ruby.700}"
               },
