@@ -5,69 +5,19 @@
 \*------------------------------------*/
 
 /**
- * 1) Button or link that has functionality to it
- * 2) Defaults to primary button
- * 3) Margin 0 added becuase Safari has margin on the button
- * 4) Adds a gap between children to automatically handle spacing between icons and text
- * 5) Adds default size for icons passed in for consistency
+ * General disabled button styles
  */
 .button {
-  @mixin eds-theme-typography-button-label;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0; /* 3 */
-  gap: 0.75rem; /* 4 */
-  border-width: var(--eds-theme-border-width);
-  border-style: solid;
-  border-radius: var(--eds-theme-border-radius);
-  cursor: pointer;
-  transition: all var(--eds-anim-fade-quick) var(--eds-anim-ease);
-
-  svg {
-    --icon-size-default: 2em; /* 5 */
-  }
-
-  &:focus {
-    @mixin focus;
-  }
-
-  /**
-   * Disabled buttons
-   */
-   &:disabled,
-   &:disabled:hover {
+  &:disabled,
+  &:disabled:hover {
     cursor: not-allowed;
-  }
-
-  @media screen and (prefers-reduced-motion) {
-    transition: none;
   }
 }
 
 /**
- * Primary button
- * 1) Prominent button styles that should be applied to
- *    the most important action of a page.
+ * Primary disabled button styles
  */
 .button--primary {
-  border-color: var(--eds-theme-color-button-primary-border);
-  background-color: var(--eds-theme-color-button-primary-background);
-  color: var(--eds-theme-color-button-primary-text);
-
-  &:hover,
-  &:focus {
-    border-color: var(--eds-theme-color-button-primary-border-hover);
-    background-color: var(--eds-theme-color-button-primary-background-hover);
-    color: var(--eds-theme-color-button-primary-text-hover);
-  }
-
-  &:active {
-    border-color: var(--eds-theme-color-button-primary-border-active);
-    background-color: var(--eds-theme-color-button-primary-background-active);
-    color: var(--eds-theme-color-button-primary-text-active);
-  }
-
   &:disabled,
   &:disabled:hover {
     border-color: var(--eds-theme-color-border-disabled);
@@ -77,27 +27,9 @@
 }
 
 /**
- * Secondary button
- * 1) Medium prominence button used for less important actions
+ * Secondary disabled button styles
  */
 .button--secondary {
-  border-color: var(--eds-theme-color-button-secondary-border);
-  background-color: var(--eds-theme-color-button-secondary-background);
-  color: var(--eds-theme-color-button-secondary-text);
-
-  &:hover,
-  &:focus {
-    border-color: var(--eds-theme-color-button-secondary-border-hover);
-    background-color: var(--eds-theme-color-button-secondary-background-hover);
-    color: var(--eds-theme-color-button-secondary-text-hover);
-  }
-
-  &:active {
-    border-color: var(--eds-theme-color-button-secondary-border-active);
-    background-color: var(--eds-theme-color-button-secondary-background-active);
-    color: var(--eds-theme-color-button-secondary-text-active);
-  }
-
   &:disabled,
   &:disabled:hover {
     border-color: var(--eds-theme-color-border-disabled);
@@ -107,27 +39,9 @@
 }
 
 /**
- * Tertiary button
- * 1) Least prominent button used for least important actions on the page
+ * Tertiary disabled button styles
  */
 .button--tertiary {
-  border-color: var(--eds-theme-color-button-tertiary-border);
-  background-color: var(--eds-theme-color-button-tertiary-background);
-  color: var(--eds-theme-color-button-tertiary-text);
-
-  &:hover,
-  &:focus {
-    border-color: var(--eds-theme-color-button-tertiary-border-hover);
-    background-color: var(--eds-theme-color-button-tertiary-background-hover);
-    color: var(--eds-theme-color-button-tertiary-text-hover);
-  }
-
-  &:active {
-    border-color: var(--eds-theme-color-button-tertiary-border-active);
-    background-color: var(--eds-theme-color-button-tertiary-background-active);
-    color: var(--eds-theme-color-button-tertiary-text-active);
-  }
-
   &:disabled,
   &:disabled:hover {
     border-color: var(--eds-theme-color-border-disabled);
@@ -137,54 +51,20 @@
 }
 
 /**
- * Link Button
- * 1) A button that is visually styled like a text link
- * 2) Spacing between text and icon scales with text size
- * 3) Inherits size from surrounding text
+ * Link disabled button styles
  */
 .button--link {
-  @mixin textLink;
-
-  padding: 0;
-  border: 0;
-  text-align: left;
-  background-color: transparent;
-  gap: 0.25em; /* 2 */
-
   &:disabled,
   &:disabled:hover {
     color: var(--eds-theme-color-text-disabled);
+    text-decoration-thickness: 1px;
   }
-}
-
-/* Style icons that may be in the button children */
-.button--link svg {
-  --icon-size-default: 1.25em;
 }
 
 /**
- * Icon Button
- * 1) A button that strips out borders, backgrounds, etc
- * 2) Use for Close "X" buttons, tooltip icons, and other
+ * Icon disabled button styles
  */
 .button--icon {
-  border-color: var(--eds-theme-color-button-icon-border);
-  background-color: var(--eds-theme-color-button-icon-background);
-  color: var(--eds-theme-color-button-icon-text);
-
-  &:hover,
-  &:focus {
-    border-color: var(--eds-theme-color-button-icon-border-hover);
-    background-color: var(--eds-theme-color-button-icon-background-hover);
-    color: var(--eds-theme-color-button-icon-text-hover);
-  }
-
-  &:active {
-    border-color: var(--eds-theme-color-button-icon-border-active);
-    background-color: var(--eds-theme-color-button-icon-background-active);
-    color: var(--eds-theme-color-button-icon-text-active);
-  }
-
   &:disabled,
   &:disabled:hover {
     border-color: var(--eds-theme-color-button-icon-border);
@@ -194,28 +74,9 @@
 }
 
 /**
- * Destructive Button
- * 1) A bold red button
- * 2) Use for destructive actions like deleting a user's account, deleting a course, etc
+ * Destructive disabled button styles
  */
 .button--destructive {
-  border-color: var(--eds-theme-color-button-destructive-border);
-  background-color: var(--eds-theme-color-button-destructive-background);
-  color: var(--eds-theme-color-button-destructive-text);
-
-  &:hover,
-  &:focus {
-    border-color: var(--eds-theme-color-button-destructive-border-hover);
-    background-color: var(--eds-theme-color-button-destructive-background-hover);
-    color: var(--eds-theme-color-button-destructive-text-hover);
-  }
-
-  &:active {
-    border-color: var(--eds-theme-color-button-destructive-border-active);
-    background-color: var(--eds-theme-color-button-destructive-background-active);
-    color: var(--eds-theme-color-button-destructive-text-active);
-  }
-
   &:disabled,
   &:disabled:hover {
     border-color: var(--eds-theme-color-border-disabled);
@@ -225,51 +86,9 @@
 }
 
 /**
- * Small button
- * 1) Height is used instead of vertical padding because the icon size we use would
- *    cause the button height to expand
- */
-.button--sm {
-  height: var(--eds-size-3); /* 1 */
-  padding-left: var(--eds-size-half);
-  padding-right: var(--eds-size-half);
-}
-
-/**
- * Medium button
- * 1) Height is used instead of vertical padding because the icon size we use would
- *    cause the button height to expand
- */
-.button--md {
-  height: var(--eds-size-4); /* 1 */
-  padding-left: var(--eds-size-1);
-  padding-right: var(--eds-size-1);
-}
-
-/**
- * Large button
- * 1) Height is used instead of vertical padding because the icon size we use would
- *    cause the button height to expand
- */
-.button--lg {
-  height: var(--eds-size-5); /* 1 */
-  padding-left: var(--eds-size-2);
-  padding-right: var(--eds-size-2);
-}
-
-/**
- * Full-width button
- * 1) A block button fills 100% of the width of its container
- */
-.button--full-width {
-  width: 100%;
-}
-
-/**
  * Loading icon rotiation style
- * 1) Set SVG icon fill to the current text color
  */
-.button__icon-loading {
+.eds-is-loading svg {
   animation: rotateIcon 2s linear infinite;
   overflow: visible;
 

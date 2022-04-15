@@ -1,242 +1,224 @@
-.button {
-  /* Base Styles */
+@import '../../design-tokens/mixins.css';
 
-  /* Using motion-reduce:transition-none here because motion-safe:transition-colors doesn't seem to
-     be having an effect. :( */
-  @apply rounded border-2 transition-colors motion-reduce:transition-none inline-flex items-center;
+/*------------------------------------*\
+    #CLICKABLE STYLE
+\*------------------------------------*/
 
-  /* Base Text Styles */
-  @apply font-bold;
+/**
+ * 1) Styled clickable element that should look like a button or link
+ * 2) Defaults to primary variant
+ * 3) Margin 0 added becuase Safari has margin on buttons
+ * 4) Adds a gap between children to automatically handle spacing between icons and text
+ * 5) Removes the underline in the case that the rendered element is an <a> tag
+ * 6) Adds default size for icons passed in for consistency
+ */
+.clickable-style {
+  @mixin eds-theme-typography-button-label;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0; /* 3 */
+  gap: 0.75rem; /* 4 */
+  border-width: var(--eds-theme-border-width);
+  border-style: solid;
+  border-radius: var(--eds-theme-border-radius);
+  cursor: pointer;
+  text-decoration: none; /* 5 */
+  transition: all var(--eds-anim-fade-quick) var(--eds-anim-ease);
 
-  /* Default variable values */
-  --plain-background-color: transparent;
+  svg {
+    --icon-size-default: 2em; /* 6 */
+  }
+
+  &:focus {
+    @mixin focus;
+  }
+
+  @media screen and (prefers-reduced-motion) {
+    transition: none;
+  }
 }
 
-/* Style icons that may be in the button children */
-.button svg {
-  --icon-size: 2em;
-}
-
-/* Component Sizes */
-.sizeSmall {
-  @apply px-1 h-6 text-xs leading-3;
-}
-
-.sizeMedium {
-  @apply px-4 h-8 text-xs leading-3;
-}
-
-.sizeLarge {
-  @apply px-4 h-10 text-sm;
-}
-
-/* Button Colors */
-.colorBrand {
-  --primary-color: var(--eds-color-brand-600);
-  --link-color: var(--eds-color-brand-700);
+/**
+ * Primary clickable style
+ * 1) Prominent clickable styles that should be applied to
+ *    the most important action of a page.
+ */
+.clickable-style--primary {
+  border-color: var(--eds-theme-color-button-primary-border);
+  background-color: var(--eds-theme-color-button-primary-background);
+  color: var(--eds-theme-color-button-primary-text);
 
   &:hover,
-  &.stateHover,
-  &:focus,
-  &.stateFocus {
-    --primary-color: var(--eds-color-brand-700);
-    --link-color: var(--eds-color-brand-800);
-    --plain-background-color: var(--eds-color-brand-100);
+  &:focus {
+    border-color: var(--eds-theme-color-button-primary-border-hover);
+    background-color: var(--eds-theme-color-button-primary-background-hover);
+    color: var(--eds-theme-color-button-primary-text-hover);
   }
 
-  &:active,
-  &.stateActive {
-    --primary-color: var(--eds-color-brand-800);
-    --plain-background-color: var(--eds-color-brand-600);
+  &:active {
+    border-color: var(--eds-theme-color-button-primary-border-active);
+    background-color: var(--eds-theme-color-button-primary-background-active);
+    color: var(--eds-theme-color-button-primary-text-active);
   }
 }
 
-.colorAlert {
-  --primary-color: var(--eds-color-alert-600);
-  --link-color: var(--eds-color-alert-700);
+/**
+ * Secondary clickable style
+ * 1) Medium prominence clickable style used for less important actions
+ */
+.clickable-style--secondary {
+  border-color: var(--eds-theme-color-button-secondary-border);
+  background-color: var(--eds-theme-color-button-secondary-background);
+  color: var(--eds-theme-color-button-secondary-text);
 
   &:hover,
-  &.stateHover,
-  &:focus,
-  &.stateFocus {
-    --primary-color: var(--eds-color-alert-700);
-    --link-color: var(--eds-color-alert-800);
-    --plain-background-color: var(--eds-color-alert-100);
+  &:focus {
+    border-color: var(--eds-theme-color-button-secondary-border-hover);
+    background-color: var(--eds-theme-color-button-secondary-background-hover);
+    color: var(--eds-theme-color-button-secondary-text-hover);
   }
 
-  &:active,
-  &.stateActive {
-    --primary-color: var(--eds-color-alert-800);
-    --plain-background-color: var(--eds-color-alert-600);
+  &:active {
+    border-color: var(--eds-theme-color-button-secondary-border-active);
+    background-color: var(--eds-theme-color-button-secondary-background-active);
+    color: var(--eds-theme-color-button-secondary-text-active);
   }
 }
 
-.colorNeutral {
-  --primary-color: var(--eds-color-neutral-500);
-  --link-color: var(--eds-color-neutral-600);
+/**
+ * Tertiary clickable style
+ * 1) Least prominent clickable style used for least important actions on the page
+ */
+.clickable-style--tertiary {
+  border-color: var(--eds-theme-color-button-tertiary-border);
+  background-color: var(--eds-theme-color-button-tertiary-background);
+  color: var(--eds-theme-color-button-tertiary-text);
 
   &:hover,
-  &.stateHover,
-  &:focus,
-  &.stateFocus {
-    --primary-color: var(--eds-color-neutral-600);
-    --link-color: var(--eds-color-neutral-700);
-    --plain-background-color: var(--eds-color-neutral-100);
+  &:focus {
+    border-color: var(--eds-theme-color-button-tertiary-border-hover);
+    background-color: var(--eds-theme-color-button-tertiary-background-hover);
+    color: var(--eds-theme-color-button-tertiary-text-hover);
   }
 
-  &:active,
-  &.stateActive {
-    --primary-color: var(--eds-color-neutral-700);
-    --plain-background-color: var(--eds-color-neutral-500);
+  &:active {
+    border-color: var(--eds-theme-color-button-tertiary-border-active);
+    background-color: var(--eds-theme-color-button-tertiary-background-active);
+    color: var(--eds-theme-color-button-tertiary-text-active);
   }
 }
 
-.colorSuccess {
-  --primary-color: var(--eds-color-success-600);
-  --link-color: var(--eds-color-success-700);
+/**
+ * Link clickable style
+ * 1) A clickable style that is visually styled like a text link
+ * 2) Inherits size from surrounding text
+ * 3) Spacing between text and icon scales with text size
+ */
+.clickable-style--link {
+  @mixin textLink;
+
+  padding: 0;
+  border: 0;
+  text-align: left;
+  background-color: transparent;
+  gap: 0.25em; /* 2 */
+}
+
+/* Style icons that may be in the clickable style children */
+.clickable-style--link svg {
+  --icon-size-default: 1.25em;
+}
+
+/**
+ * Icon clickable style
+ * 1) A clickable style that strips out borders, backgrounds, etc
+ * 2) Use for Close "X" buttons, tooltip icons, and other
+ */
+.clickable-style--icon {
+  border-color: var(--eds-theme-color-button-icon-border);
+  background-color: var(--eds-theme-color-button-icon-background);
+  color: var(--eds-theme-color-button-icon-text);
 
   &:hover,
-  &.stateHover,
-  &:focus,
-  &.stateFocus {
-    --primary-color: var(--eds-color-success-700);
-    --link-color: var(--eds-color-success-800);
-    --plain-background-color: var(--eds-color-success-100);
+  &:focus {
+    border-color: var(--eds-theme-color-button-icon-border-hover);
+    background-color: var(--eds-theme-color-button-icon-background-hover);
+    color: var(--eds-theme-color-button-icon-text-hover);
   }
 
-  &:active,
-  &.stateActive {
-    --primary-color: var(--eds-color-success-800);
-    --plain-background-color: var(--eds-color-success-600);
+  &:active {
+    border-color: var(--eds-theme-color-button-icon-border-active);
+    background-color: var(--eds-theme-color-button-icon-background-active);
+    color: var(--eds-theme-color-button-icon-text-active);
   }
 }
 
-.colorWarning {
-  --primary-color: var(--eds-color-warning-600);
-  --link-color: var(--eds-color-warning-700);
+/**
+ * Destructive clickable style
+ * 1) A bold red clickable style
+ * 2) Use for destructive actions like deleting a user's account, deleting a course, etc
+ */
+.clickable-style--destructive {
+  border-color: var(--eds-theme-color-button-destructive-border);
+  background-color: var(--eds-theme-color-button-destructive-background);
+  color: var(--eds-theme-color-button-destructive-text);
 
   &:hover,
-  &.stateHover,
-  &:focus,
-  &.stateFocus {
-    --primary-color: var(--eds-color-warning-700);
-    --link-color: var(--eds-color-warning-800);
-    --plain-background-color: var(--eds-color-warning-100);
+  &:focus {
+    border-color: var(--eds-theme-color-button-destructive-border-hover);
+    background-color: var(
+      --eds-theme-color-button-destructive-background-hover
+    );
+    color: var(--eds-theme-color-button-destructive-text-hover);
   }
 
-  &:active,
-  &.stateActive {
-    --primary-color: var(--eds-color-warning-800);
-    --plain-background-color: var(--eds-color-warning-600);
-  }
-}
-
-.variantFlat {
-  background-color: var(--primary-color);
-  border-color: var(--primary-color);
-
-  @apply text-white;
-}
-
-.variantOutline {
-  @apply bg-transparent;
-
-  border-color: var(--link-color);
-  color: var(--link-color);
-
-  &:hover,
-  &.stateHover,
-  &:focus,
-  &.stateFocus,
-  &:active,
-  &.stateActive {
-    @apply text-white;
-
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
-  }
-
-  /* override the hover/focus/active values */
-  &:disabled {
-    @apply bg-transparent;
-
-    border-color: var(--primary-color);
-    color: var(--primary-color);
+  &:active {
+    border-color: var(--eds-theme-color-button-destructive-border-active);
+    background-color: var(
+      --eds-theme-color-button-destructive-background-active
+    );
+    color: var(--eds-theme-color-button-destructive-text-active);
   }
 }
 
-.variantLink {
-  @apply px-0 py-0 underline border-none font-bold;
-
-  color: var(--link-color);
-
-  /* button should defer to surrounding text for size/line-height/case */
-  font-size: inherit;
-  line-height: inherit;
-  text-transform: inherit;
-
-  &:hover,
-  &.stateHover,
-  &:focus,
-  &.stateFocus {
-    text-decoration-thickness: 2px;
-  }
-
-  &:active,
-  &.stateActive,
-  &:disabled {
-    color: var(--primary-color);
-  }
-
-  /* override the hover/focus values */
-  &:disabled {
-    text-decoration-thickness: auto;
-  }
+/**
+ * Small clickable style
+ * 1) Height is used instead of vertical padding because the icon size we use would
+ *    cause the height to expand
+ */
+.clickable-style--sm {
+  height: var(--eds-size-3); /* 1 */
+  padding-left: var(--eds-size-half);
+  padding-right: var(--eds-size-half);
 }
 
-.variantPlain {
-  color: var(--link-color);
-  border-color: var(--plain-background-color);
-  background-color: var(--plain-background-color);
-
-  &:hover,
-  &.stateHover,
-  &:focus,
-  &.stateFocus {
-    color: var(--primary-color);
-    border-color: var(--primary-color);
-  }
-
-  &:active,
-  &.stateActive {
-    @apply text-white;
-
-    border-color: var(--plain-background-color);
-  }
-
-  &:disabled {
-    @apply border-transparent;
-
-    color: var(--primary-color);
-  }
+/**
+ * Medium clickable style
+ * 1) Height is used instead of vertical padding because the icon size we use would
+ *    cause the height to expand
+ */
+.clickable-style--md {
+  height: var(--eds-size-4); /* 1 */
+  padding-left: var(--eds-size-1);
+  padding-right: var(--eds-size-1);
 }
 
-/* Link icons should be the same size as the text */
-.variantLink svg {
-  --icon-size: 1em;
+/**
+ * Large clickable style
+ * 1) Height is used instead of vertical padding because the icon size we use would
+ *    cause the height to expand
+ */
+.clickable-style--lg {
+  height: var(--eds-size-5); /* 1 */
+  padding-left: var(--eds-size-2);
+  padding-right: var(--eds-size-2);
 }
 
-/* comes after other styles to override hover behaviors */
-.button:focus,
-.button.stateFocus {
-  /* Focus Outline */
-  @apply outline-none ring-info-400 ring;
-}
-
-.button:disabled {
-  @apply cursor-not-allowed;
-
-  /* override the hover/focus values */
-  --primary-color: var(--eds-color-neutral-300);
-  --plain-background-color: transparent;
+/**
+ * Full-width clickable style
+ * 1) A block clickable style that fills 100% of the width of its container
+ */
+.clickable-style--full-width {
+  width: 100%;
 }
