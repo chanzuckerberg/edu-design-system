@@ -2,7 +2,7 @@
 
 exports[`<Link /> Default story renders snapshot 1`] = `
 <a
-  class="clickable-style clickable-style--link"
+  class="clickable-style clickable-style--link clickable-style--brand"
   href="/"
 >
   Link
@@ -11,7 +11,7 @@ exports[`<Link /> Default story renders snapshot 1`] = `
 
 exports[`<Link /> Destructive story renders snapshot 1`] = `
 <a
-  class="clickable-style clickable-style--lg clickable-style--destructive"
+  class="clickable-style clickable-style--lg clickable-style--brand"
   href="/"
 >
   Link
@@ -20,7 +20,7 @@ exports[`<Link /> Destructive story renders snapshot 1`] = `
 
 exports[`<Link /> DestructiveLeftIcon story renders snapshot 1`] = `
 <a
-  class="clickable-style clickable-style--lg clickable-style--destructive"
+  class="clickable-style clickable-style--lg clickable-style--brand"
   href="/"
 >
   <svg
@@ -39,7 +39,7 @@ exports[`<Link /> DestructiveLeftIcon story renders snapshot 1`] = `
 
 exports[`<Link /> IconLinkIconOnly story renders snapshot 1`] = `
 <a
-  class="clickable-style clickable-style--lg clickable-style--icon"
+  class="clickable-style clickable-style--lg clickable-style--icon clickable-style--brand"
   href="/"
 >
   <svg
@@ -62,7 +62,7 @@ exports[`<Link /> IconLinkIconOnly story renders snapshot 1`] = `
 
 exports[`<Link /> IconLinkIconOnlySmall story renders snapshot 1`] = `
 <a
-  class="clickable-style clickable-style--sm clickable-style--icon"
+  class="clickable-style clickable-style--sm clickable-style--icon clickable-style--brand"
   href="/"
 >
   <svg
@@ -85,7 +85,7 @@ exports[`<Link /> IconLinkIconOnlySmall story renders snapshot 1`] = `
 
 exports[`<Link /> IconLinkLeftIcon story renders snapshot 1`] = `
 <a
-  class="clickable-style clickable-style--lg clickable-style--icon"
+  class="clickable-style clickable-style--lg clickable-style--icon clickable-style--brand"
   href="/"
 >
   <svg
@@ -104,7 +104,7 @@ exports[`<Link /> IconLinkLeftIcon story renders snapshot 1`] = `
 
 exports[`<Link /> IconLinkLeftIconSmall story renders snapshot 1`] = `
 <a
-  class="clickable-style clickable-style--sm clickable-style--icon"
+  class="clickable-style clickable-style--sm clickable-style--icon clickable-style--brand"
   href="/"
 >
   <svg
@@ -123,7 +123,7 @@ exports[`<Link /> IconLinkLeftIconSmall story renders snapshot 1`] = `
 
 exports[`<Link /> IconLinkRightIcon story renders snapshot 1`] = `
 <a
-  class="clickable-style clickable-style--lg clickable-style--icon"
+  class="clickable-style clickable-style--lg clickable-style--icon clickable-style--brand"
   href="/"
 >
   Link
@@ -142,7 +142,7 @@ exports[`<Link /> IconLinkRightIcon story renders snapshot 1`] = `
 
 exports[`<Link /> IconLinkRightIconSmall story renders snapshot 1`] = `
 <a
-  class="clickable-style clickable-style--sm clickable-style--icon"
+  class="clickable-style clickable-style--sm clickable-style--icon clickable-style--brand"
   href="/"
 >
   Link
@@ -161,7 +161,7 @@ exports[`<Link /> IconLinkRightIconSmall story renders snapshot 1`] = `
 
 exports[`<Link /> LinkRightIcon story renders snapshot 1`] = `
 <a
-  class="clickable-style clickable-style--link"
+  class="clickable-style clickable-style--link clickable-style--brand"
   href="/"
 >
   Link
@@ -185,7 +185,7 @@ exports[`<Link /> LinkRightIcon story renders snapshot 1`] = `
 
 exports[`<Link /> Primary story renders snapshot 1`] = `
 <a
-  class="clickable-style clickable-style--lg clickable-style--primary"
+  class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand"
   href="/"
 >
   Link
@@ -194,7 +194,7 @@ exports[`<Link /> Primary story renders snapshot 1`] = `
 
 exports[`<Link /> PrimaryLeftIcon story renders snapshot 1`] = `
 <a
-  class="clickable-style clickable-style--lg clickable-style--primary"
+  class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand"
   href="/"
 >
   <svg
@@ -213,7 +213,7 @@ exports[`<Link /> PrimaryLeftIcon story renders snapshot 1`] = `
 
 exports[`<Link /> PrimaryMedium story renders snapshot 1`] = `
 <a
-  class="clickable-style clickable-style--md clickable-style--primary"
+  class="clickable-style clickable-style--md clickable-style--primary clickable-style--brand"
   href="/"
 >
   Link
@@ -222,7 +222,7 @@ exports[`<Link /> PrimaryMedium story renders snapshot 1`] = `
 
 exports[`<Link /> PrimaryRightIcon story renders snapshot 1`] = `
 <a
-  class="clickable-style clickable-style--lg clickable-style--primary"
+  class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand"
   href="/"
 >
   Link
@@ -241,7 +241,7 @@ exports[`<Link /> PrimaryRightIcon story renders snapshot 1`] = `
 
 exports[`<Link /> PrimarySmall story renders snapshot 1`] = `
 <a
-  class="clickable-style clickable-style--sm clickable-style--primary"
+  class="clickable-style clickable-style--sm clickable-style--primary clickable-style--brand"
   href="/"
 >
   Link
@@ -250,7 +250,7 @@ exports[`<Link /> PrimarySmall story renders snapshot 1`] = `
 
 exports[`<Link /> Secondary story renders snapshot 1`] = `
 <a
-  class="clickable-style clickable-style--lg clickable-style--secondary"
+  class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand"
   href="/"
 >
   Link
@@ -259,7 +259,7 @@ exports[`<Link /> Secondary story renders snapshot 1`] = `
 
 exports[`<Link /> SecondaryLeftIcon story renders snapshot 1`] = `
 <a
-  class="clickable-style clickable-style--lg clickable-style--secondary"
+  class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand"
   href="/"
 >
   <svg
@@ -278,7 +278,7 @@ exports[`<Link /> SecondaryLeftIcon story renders snapshot 1`] = `
 
 exports[`<Link /> SecondaryMedium story renders snapshot 1`] = `
 <a
-  class="clickable-style clickable-style--md clickable-style--secondary"
+  class="clickable-style clickable-style--md clickable-style--secondary clickable-style--brand"
   href="/"
 >
   Link
@@ -287,7 +287,7 @@ exports[`<Link /> SecondaryMedium story renders snapshot 1`] = `
 
 exports[`<Link /> SecondaryRightIcon story renders snapshot 1`] = `
 <a
-  class="clickable-style clickable-style--lg clickable-style--secondary"
+  class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand"
   href="/"
 >
   Link
@@ -306,7 +306,7 @@ exports[`<Link /> SecondaryRightIcon story renders snapshot 1`] = `
 
 exports[`<Link /> SecondarySmall story renders snapshot 1`] = `
 <a
-  class="clickable-style clickable-style--sm clickable-style--secondary"
+  class="clickable-style clickable-style--sm clickable-style--secondary clickable-style--brand"
   href="/"
 >
   Link
@@ -315,7 +315,7 @@ exports[`<Link /> SecondarySmall story renders snapshot 1`] = `
 
 exports[`<Link /> Tertiary story renders snapshot 1`] = `
 <a
-  class="clickable-style clickable-style--lg clickable-style--tertiary"
+  class="clickable-style clickable-style--lg clickable-style--brand"
   href="/"
 >
   Link
@@ -324,7 +324,7 @@ exports[`<Link /> Tertiary story renders snapshot 1`] = `
 
 exports[`<Link /> TertiaryLeftIcon story renders snapshot 1`] = `
 <a
-  class="clickable-style clickable-style--lg clickable-style--tertiary"
+  class="clickable-style clickable-style--lg clickable-style--brand"
   href="/"
 >
   <svg
@@ -343,7 +343,7 @@ exports[`<Link /> TertiaryLeftIcon story renders snapshot 1`] = `
 
 exports[`<Link /> TertiaryMedium story renders snapshot 1`] = `
 <a
-  class="clickable-style clickable-style--md clickable-style--tertiary"
+  class="clickable-style clickable-style--md clickable-style--brand"
   href="/"
 >
   Link
@@ -352,7 +352,7 @@ exports[`<Link /> TertiaryMedium story renders snapshot 1`] = `
 
 exports[`<Link /> TertiaryRightIcon story renders snapshot 1`] = `
 <a
-  class="clickable-style clickable-style--lg clickable-style--tertiary"
+  class="clickable-style clickable-style--lg clickable-style--brand"
   href="/"
 >
   Link
@@ -371,7 +371,7 @@ exports[`<Link /> TertiaryRightIcon story renders snapshot 1`] = `
 
 exports[`<Link /> TertiarySmall story renders snapshot 1`] = `
 <a
-  class="clickable-style clickable-style--sm clickable-style--tertiary"
+  class="clickable-style clickable-style--sm clickable-style--brand"
   href="/"
 >
   Link
@@ -380,7 +380,7 @@ exports[`<Link /> TertiarySmall story renders snapshot 1`] = `
 
 exports[`<Link /> passes class names down properly 1`] = `
 <a
-  class="clickable-style exampleClassName clickable-style--link"
+  class="clickable-style exampleClassName clickable-style--link clickable-style--brand"
   data-testid="example-class-name"
   href="/"
 >
@@ -390,7 +390,7 @@ exports[`<Link /> passes class names down properly 1`] = `
 
 exports[`<Link /> passes test ids down properly 1`] = `
 <a
-  class="clickable-style clickable-style--link"
+  class="clickable-style clickable-style--link clickable-style--brand"
   data-testid="example-test-id"
   href="/"
 >

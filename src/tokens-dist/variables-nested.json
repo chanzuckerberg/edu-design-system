@@ -359,88 +359,240 @@
         },
         "button": {
           "primary": {
-            "background": {
-              "@": "#6B65E2",
-              "hover": "#5751D2",
-              "active": "#3E42B1"
+            "brand": {
+              "background": {
+                "@": "#6B65E2",
+                "hover": "#5751D2",
+                "active": "#3E42B1"
+              },
+              "border": {
+                "@": "#6B65E2",
+                "hover": "#5751D2",
+                "active": "#3E42B1"
+              },
+              "text": {
+                "@": "#ffffff",
+                "hover": "#ffffff",
+                "active": "#ffffff"
+              }
             },
-            "border": {
-              "@": "#6B65E2",
-              "hover": "#5751D2",
-              "active": "#3E42B1"
-            },
-            "text": {
-              "@": "#ffffff",
-              "hover": "#ffffff",
-              "active": "#ffffff"
+            "alert": {
+              "background": {
+                "@": "#D41E52",
+                "hover": "#BD0044",
+                "active": "#8F0134"
+              },
+              "border": {
+                "@": "#D41E52",
+                "hover": "#BD0044",
+                "active": "#8F0134"
+              },
+              "text": {
+                "@": "#ffffff",
+                "hover": "#ffffff",
+                "active": "#ffffff"
+              }
             }
           },
           "secondary": {
-            "background": {
-              "@": "rgba(0, 0, 0, 0)",
-              "hover": "#5751D2",
-              "active": "#3E42B1"
+            "brand": {
+              "background": {
+                "@": "rgba(0, 0, 0, 0)",
+                "hover": "#5751D2",
+                "active": "#3E42B1"
+              },
+              "border": {
+                "@": "#6B65E2",
+                "hover": "#5751D2",
+                "active": "#3E42B1"
+              },
+              "text": {
+                "@": "#5751D2",
+                "hover": "#ffffff",
+                "active": "#ffffff"
+              }
             },
-            "border": {
-              "@": "#6B65E2",
-              "hover": "#5751D2",
-              "active": "#3E42B1"
+            "neutral": {
+              "background": {
+                "@": "rgba(0, 0, 0, 0)",
+                "hover": "#707070",
+                "active": "#21272D"
+              },
+              "border": {
+                "@": "#707070",
+                "hover": "#707070",
+                "active": "#21272D"
+              },
+              "text": {
+                "@": "#707070",
+                "hover": "#ffffff",
+                "active": "#ffffff"
+              }
             },
-            "text": {
-              "@": "#5751D2",
-              "hover": "#ffffff",
-              "active": "#ffffff"
-            }
-          },
-          "tertiary": {
-            "background": {
-              "@": "rgba(0, 0, 0, 0)",
-              "hover": "#707070",
-              "active": "#21272D"
+            "success": {
+              "background": {
+                "@": "rgba(0, 0, 0, 0)",
+                "hover": "#007249",
+                "active": "#005939"
+              },
+              "border": {
+                "@": "#008656",
+                "hover": "#007249",
+                "active": "#005939"
+              },
+              "text": {
+                "@": "#007249",
+                "hover": "#ffffff",
+                "active": "#ffffff"
+              }
             },
-            "border": {
-              "@": "#707070",
-              "hover": "#707070",
-              "active": "#21272D"
+            "warning": {
+              "background": {
+                "@": "rgba(0, 0, 0, 0)",
+                "hover": "#AC3400",
+                "active": "#842800"
+              },
+              "border": {
+                "@": "#C64600",
+                "hover": "#AC3400",
+                "active": "#842800"
+              },
+              "text": {
+                "@": "#AC3400",
+                "hover": "#ffffff",
+                "active": "#ffffff"
+              }
             },
-            "text": {
-              "@": "#707070",
-              "hover": "#ffffff",
-              "active": "#ffffff"
+            "alert": {
+              "background": {
+                "@": "rgba(0, 0, 0, 0)",
+                "hover": "#BD0044",
+                "active": "#8F0134"
+              },
+              "border": {
+                "@": "#D41E52",
+                "hover": "#BD0044",
+                "active": "#8F0134"
+              },
+              "text": {
+                "@": "#BD0044",
+                "hover": "#ffffff",
+                "active": "#ffffff"
+              }
             }
           },
           "icon": {
-            "background": {
-              "@": "rgba(0, 0, 0, 0)",
-              "hover": "#E0E0F9",
-              "active": "#5751D2"
+            "brand": {
+              "background": {
+                "@": "rgba(0, 0, 0, 0)",
+                "hover": "#E0E0F9",
+                "active": "#5751D2"
+              },
+              "border": {
+                "@": "rgba(0, 0, 0, 0)",
+                "hover": "rgba(0, 0, 0, 0)",
+                "active": "rgba(0, 0, 0, 0)"
+              },
+              "text": {
+                "@": "#3E42B1",
+                "hover": "#3E42B1",
+                "active": "#ffffff"
+              }
             },
-            "border": {
-              "@": "rgba(0, 0, 0, 0)",
-              "hover": "rgba(0, 0, 0, 0)",
-              "active": "rgba(0, 0, 0, 0)"
+            "neutral": {
+              "background": {
+                "@": "rgba(0, 0, 0, 0)",
+                "hover": "#E7E8EA",
+                "active": "#505058"
+              },
+              "border": {
+                "@": "rgba(0, 0, 0, 0)",
+                "hover": "rgba(0, 0, 0, 0)",
+                "active": "rgba(0, 0, 0, 0)"
+              },
+              "text": {
+                "@": "#21272D",
+                "hover": "#21272D",
+                "active": "#ffffff"
+              }
             },
-            "text": {
-              "@": "#3E42B1",
-              "hover": "#3E42B1",
-              "active": "#ffffff"
+            "success": {
+              "background": {
+                "@": "rgba(0, 0, 0, 0)",
+                "hover": "#B7E9CE",
+                "active": "#007249"
+              },
+              "border": {
+                "@": "rgba(0, 0, 0, 0)",
+                "hover": "rgba(0, 0, 0, 0)",
+                "active": "rgba(0, 0, 0, 0)"
+              },
+              "text": {
+                "@": "#005939",
+                "hover": "#005939",
+                "active": "#ffffff"
+              }
+            },
+            "warning": {
+              "background": {
+                "@": "rgba(0, 0, 0, 0)",
+                "hover": "#FFCBA5",
+                "active": "#AC3400"
+              },
+              "border": {
+                "@": "rgba(0, 0, 0, 0)",
+                "hover": "rgba(0, 0, 0, 0)",
+                "active": "rgba(0, 0, 0, 0)"
+              },
+              "text": {
+                "@": "#842800",
+                "hover": "#842800",
+                "active": "#ffffff"
+              }
+            },
+            "alert": {
+              "background": {
+                "@": "rgba(0, 0, 0, 0)",
+                "hover": "#FFCBD7",
+                "active": "#BD0044"
+              },
+              "border": {
+                "@": "rgba(0, 0, 0, 0)",
+                "hover": "rgba(0, 0, 0, 0)",
+                "active": "rgba(0, 0, 0, 0)"
+              },
+              "text": {
+                "@": "#8F0134",
+                "hover": "#8F0134",
+                "active": "#ffffff"
+              }
             }
           },
-          "destructive": {
-            "background": {
-              "@": "#D41E52",
-              "hover": "#BD0044",
-              "active": "#8F0134"
+          "link": {
+            "brand": {
+              "@": "#5751D2",
+              "hover": "#3E42B1",
+              "active": "#3E42B1"
             },
-            "border": {
-              "@": "#D41E52",
-              "hover": "#BD0044",
-              "active": "#8F0134"
+            "neutral": {
+              "@": "#505058",
+              "hover": "#21272D",
+              "active": "#21272D"
             },
-            "text": {
-              "@": "#ffffff",
-              "hover": "#ffffff",
-              "active": "#ffffff"
+            "success": {
+              "@": "#007249",
+              "hover": "#005939",
+              "active": "#005939"
+            },
+            "warning": {
+              "@": "#AC3400",
+              "hover": "#842800",
+              "active": "#842800"
+            },
+            "alert": {
+              "@": "#BD0044",
+              "hover": "#8F0134",
+              "active": "#8F0134"
             }
           }
         },

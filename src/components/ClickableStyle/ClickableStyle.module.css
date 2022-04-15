@@ -40,68 +40,320 @@
 }
 
 /**
- * Primary disabled button styles
+ * Primary brand clickable style
  */
-.clickable-style--primary {
-  border-color: var(--eds-theme-color-button-primary-border);
-  background-color: var(--eds-theme-color-button-primary-background);
-  color: var(--eds-theme-color-button-primary-text);
+.clickable-style--primary.clickable-style--brand {
+  border-color: var(--eds-theme-color-button-primary-brand-border);
+  background-color: var(--eds-theme-color-button-primary-brand-background);
+  color: var(--eds-theme-color-button-primary-brand-text);
 
   &:hover,
   &:focus {
-    border-color: var(--eds-theme-color-button-primary-border-hover);
-    background-color: var(--eds-theme-color-button-primary-background-hover);
-    color: var(--eds-theme-color-button-primary-text-hover);
+    border-color: var(--eds-theme-color-button-primary-brand-border-hover);
+    background-color: var(
+      --eds-theme-color-button-primary-brand-background-hover
+    );
+    color: var(--eds-theme-color-button-primary-brand-text-hover);
   }
 
   &:active {
-    border-color: var(--eds-theme-color-button-primary-border-active);
-    background-color: var(--eds-theme-color-button-primary-background-active);
-    color: var(--eds-theme-color-button-primary-text-active);
+    border-color: var(--eds-theme-color-button-primary-brand-border-active);
+    background-color: var(
+      --eds-theme-color-button-primary-brand-background-active
+    );
+    color: var(--eds-theme-color-button-primary-brand-text-active);
   }
 }
 
 /**
- * Secondary disabled button styles
+ * Primary alert clickable style
  */
-.clickable-style--secondary {
-  border-color: var(--eds-theme-color-button-secondary-border);
-  background-color: var(--eds-theme-color-button-secondary-background);
-  color: var(--eds-theme-color-button-secondary-text);
+.clickable-style--primary.clickable-style--alert {
+  border-color: var(--eds-theme-color-button-primary-alert-border);
+  background-color: var(--eds-theme-color-button-primary-alert-background);
+  color: var(--eds-theme-color-button-primary-alert-text);
 
   &:hover,
   &:focus {
-    border-color: var(--eds-theme-color-button-secondary-border-hover);
-    background-color: var(--eds-theme-color-button-secondary-background-hover);
-    color: var(--eds-theme-color-button-secondary-text-hover);
+    border-color: var(--eds-theme-color-button-primary-alert-border-hover);
+    background-color: var(
+      --eds-theme-color-button-primary-alert-background-hover
+    );
+    color: var(--eds-theme-color-button-primary-alert-text-hover);
   }
 
   &:active {
-    border-color: var(--eds-theme-color-button-secondary-border-active);
-    background-color: var(--eds-theme-color-button-secondary-background-active);
-    color: var(--eds-theme-color-button-secondary-text-active);
+    border-color: var(--eds-theme-color-button-primary-alert-border-active);
+    background-color: var(
+      --eds-theme-color-button-primary-alert-background-active
+    );
+    color: var(--eds-theme-color-button-primary-alert-text-active);
   }
 }
 
 /**
- * Tertiary disabled button styles
+ * Secondary brand clickable style
  */
-.clickable-style--tertiary {
-  border-color: var(--eds-theme-color-button-tertiary-border);
-  background-color: var(--eds-theme-color-button-tertiary-background);
-  color: var(--eds-theme-color-button-tertiary-text);
+.clickable-style--secondary.clickable-style--brand {
+  border-color: var(--eds-theme-color-button-secondary-brand-border);
+  background-color: var(--eds-theme-color-button-secondary-brand-background);
+  color: var(--eds-theme-color-button-secondary-brand-text);
 
   &:hover,
   &:focus {
-    border-color: var(--eds-theme-color-button-tertiary-border-hover);
-    background-color: var(--eds-theme-color-button-tertiary-background-hover);
-    color: var(--eds-theme-color-button-tertiary-text-hover);
+    border-color: var(--eds-theme-color-button-secondary-brand-border-hover);
+    background-color: var(
+      --eds-theme-color-button-secondary-brand-background-hover
+    );
+    color: var(--eds-theme-color-button-secondary-brand-text-hover);
   }
 
   &:active {
-    border-color: var(--eds-theme-color-button-tertiary-border-active);
-    background-color: var(--eds-theme-color-button-tertiary-background-active);
-    color: var(--eds-theme-color-button-tertiary-text-active);
+    border-color: var(--eds-theme-color-button-secondary-brand-border-active);
+    background-color: var(
+      --eds-theme-color-button-secondary-brand-background-active
+    );
+    color: var(--eds-theme-color-button-secondary-brand-text-active);
+  }
+}
+
+/**
+ * Secondary neutral clickable style
+ */
+.clickable-style--secondary.clickable-style--neutral {
+  border-color: var(--eds-theme-color-button-secondary-neutral-border);
+  background-color: var(--eds-theme-color-button-secondary-neutral-background);
+  color: var(--eds-theme-color-button-secondary-neutral-text);
+
+  &:hover,
+  &:focus {
+    border-color: var(--eds-theme-color-button-secondary-neutral-border-hover);
+    background-color: var(
+      --eds-theme-color-button-secondary-neutral-background-hover
+    );
+    color: var(--eds-theme-color-button-secondary-neutral-text-hover);
+  }
+
+  &:active {
+    border-color: var(--eds-theme-color-button-secondary-neutral-border-active);
+    background-color: var(
+      --eds-theme-color-button-secondary-neutral-background-active
+    );
+    color: var(--eds-theme-color-button-secondary-neutral-text-active);
+  }
+}
+
+/**
+ * Secondary success clickable style
+ */
+.clickable-style--secondary.clickable-style--success {
+  border-color: var(--eds-theme-color-button-secondary-success-border);
+  background-color: var(--eds-theme-color-button-secondary-success-background);
+  color: var(--eds-theme-color-button-secondary-success-text);
+
+  &:hover,
+  &:focus {
+    border-color: var(--eds-theme-color-button-secondary-success-border-hover);
+    background-color: var(
+      --eds-theme-color-button-secondary-success-background-hover
+    );
+    color: var(--eds-theme-color-button-secondary-success-text-hover);
+  }
+
+  &:active {
+    border-color: var(--eds-theme-color-button-secondary-success-border-active);
+    background-color: var(
+      --eds-theme-color-button-secondary-success-background-active
+    );
+    color: var(--eds-theme-color-button-secondary-success-text-active);
+  }
+}
+
+/**
+ * Secondary warning clickable style
+ */
+.clickable-style--secondary.clickable-style--warning {
+  border-color: var(--eds-theme-color-button-secondary-warning-border);
+  background-color: var(--eds-theme-color-button-secondary-warning-background);
+  color: var(--eds-theme-color-button-secondary-warning-text);
+
+  &:hover,
+  &:focus {
+    border-color: var(--eds-theme-color-button-secondary-warning-border-hover);
+    background-color: var(
+      --eds-theme-color-button-secondary-warning-background-hover
+    );
+    color: var(--eds-theme-color-button-secondary-warning-text-hover);
+  }
+
+  &:active {
+    border-color: var(--eds-theme-color-button-secondary-warning-border-active);
+    background-color: var(
+      --eds-theme-color-button-secondary-warning-background-active
+    );
+    color: var(--eds-theme-color-button-secondary-warning-text-active);
+  }
+}
+
+/**
+ * Secondary alert clickable style
+ */
+.clickable-style--secondary.clickable-style--alert {
+  border-color: var(--eds-theme-color-button-secondary-alert-border);
+  background-color: var(--eds-theme-color-button-secondary-alert-background);
+  color: var(--eds-theme-color-button-secondary-alert-text);
+
+  &:hover,
+  &:focus {
+    border-color: var(--eds-theme-color-button-secondary-alert-border-hover);
+    background-color: var(
+      --eds-theme-color-button-secondary-alert-background-hover
+    );
+    color: var(--eds-theme-color-button-secondary-alert-text-hover);
+  }
+
+  &:active {
+    border-color: var(--eds-theme-color-button-secondary-alert-border-active);
+    background-color: var(
+      --eds-theme-color-button-secondary-alert-background-active
+    );
+    color: var(--eds-theme-color-button-secondary-alert-text-active);
+  }
+}
+
+/**
+ * Icon brand clickable style
+ * 1) A clickable style that strips out borders, backgrounds, etc
+ * 2) Use for Close "X" buttons, tooltip icons, and other
+ */
+.clickable-style--icon.clickable-style--brand {
+  border-color: var(--eds-theme-color-button-icon-brand-border);
+  background-color: var(--eds-theme-color-button-icon-brand-background);
+  color: var(--eds-theme-color-button-icon-brand-text);
+
+  &:hover,
+  &:focus {
+    border-color: var(--eds-theme-color-button-icon-brand-border-hover);
+    background-color: var(--eds-theme-color-button-icon-brand-background-hover);
+    color: var(--eds-theme-color-button-icon-brand-text-hover);
+  }
+
+  &:active {
+    border-color: var(--eds-theme-color-button-icon-brand-border-active);
+    background-color: var(
+      --eds-theme-color-button-icon-brand-background-active
+    );
+    color: var(--eds-theme-color-button-icon-brand-text-active);
+  }
+}
+
+/**
+ * Icon neutral clickable style
+ * 1) A clickable style that strips out borders, backgrounds, etc
+ * 2) Use for Close "X" buttons, tooltip icons, and other
+ */
+.clickable-style--icon.clickable-style--neutral {
+  border-color: var(--eds-theme-color-button-icon-neutral-border);
+  background-color: var(--eds-theme-color-button-icon-neutral-background);
+  color: var(--eds-theme-color-button-icon-neutral-text);
+
+  &:hover,
+  &:focus {
+    border-color: var(--eds-theme-color-button-icon-neutral-border-hover);
+    background-color: var(
+      --eds-theme-color-button-icon-neutral-background-hover
+    );
+    color: var(--eds-theme-color-button-icon-neutral-text-hover);
+  }
+
+  &:active {
+    border-color: var(--eds-theme-color-button-icon-neutral-border-active);
+    background-color: var(
+      --eds-theme-color-button-icon-neutral-background-active
+    );
+    color: var(--eds-theme-color-button-icon-neutral-text-active);
+  }
+}
+
+/**
+ * Icon success clickable style
+ * 1) A clickable style that strips out borders, backgrounds, etc
+ * 2) Use for Close "X" buttons, tooltip icons, and other
+ */
+.clickable-style--icon.clickable-style--success {
+  border-color: var(--eds-theme-color-button-icon-success-border);
+  background-color: var(--eds-theme-color-button-icon-success-background);
+  color: var(--eds-theme-color-button-icon-success-text);
+
+  &:hover,
+  &:focus {
+    border-color: var(--eds-theme-color-button-icon-success-border-hover);
+    background-color: var(
+      --eds-theme-color-button-icon-success-background-hover
+    );
+    color: var(--eds-theme-color-button-icon-success-text-hover);
+  }
+
+  &:active {
+    border-color: var(--eds-theme-color-button-icon-success-border-active);
+    background-color: var(
+      --eds-theme-color-button-icon-success-background-active
+    );
+    color: var(--eds-theme-color-button-icon-success-text-active);
+  }
+}
+
+/**
+ * Icon warning clickable style
+ * 1) A clickable style that strips out borders, backgrounds, etc
+ * 2) Use for Close "X" buttons, tooltip icons, and other
+ */
+.clickable-style--icon.clickable-style--warning {
+  border-color: var(--eds-theme-color-button-icon-warning-border);
+  background-color: var(--eds-theme-color-button-icon-warning-background);
+  color: var(--eds-theme-color-button-icon-warning-text);
+
+  &:hover,
+  &:focus {
+    border-color: var(--eds-theme-color-button-icon-warning-border-hover);
+    background-color: var(
+      --eds-theme-color-button-icon-warning-background-hover
+    );
+    color: var(--eds-theme-color-button-icon-warning-text-hover);
+  }
+
+  &:active {
+    border-color: var(--eds-theme-color-button-icon-warning-border-active);
+    background-color: var(
+      --eds-theme-color-button-icon-warning-background-active
+    );
+    color: var(--eds-theme-color-button-icon-warning-text-active);
+  }
+}
+
+/**
+ * Icon alert clickable style
+ * 1) A clickable style that strips out borders, backgrounds, etc
+ * 2) Use for Close "X" buttons, tooltip icons, and other
+ */
+.clickable-style--icon.clickable-style--alert {
+  border-color: var(--eds-theme-color-button-icon-alert-border);
+  background-color: var(--eds-theme-color-button-icon-alert-background);
+  color: var(--eds-theme-color-button-icon-alert-text);
+
+  &:hover,
+  &:focus {
+    border-color: var(--eds-theme-color-button-icon-alert-border-hover);
+    background-color: var(--eds-theme-color-button-icon-alert-background-hover);
+    color: var(--eds-theme-color-button-icon-alert-text-hover);
+  }
+
+  &:active {
+    border-color: var(--eds-theme-color-button-icon-alert-border-active);
+    background-color: var(
+      --eds-theme-color-button-icon-alert-background-active
+    );
+    color: var(--eds-theme-color-button-icon-alert-text-active);
   }
 }
 
@@ -119,53 +371,88 @@
 }
 
 /**
- * Icon clickable style
- * 1) A clickable style that strips out borders, backgrounds, etc
- * 2) Use for Close "X" buttons, tooltip icons, and other
+ * Link brand clickable style
  */
-.clickable-style--icon {
-  border-color: var(--eds-theme-color-button-icon-border);
-  background-color: var(--eds-theme-color-button-icon-background);
-  color: var(--eds-theme-color-button-icon-text);
+.clickable-style--link.clickable-style--brand {
+  color: var(--eds-theme-color-button-link-brand);
 
   &:hover,
   &:focus {
-    border-color: var(--eds-theme-color-button-icon-border-hover);
-    background-color: var(--eds-theme-color-button-icon-background-hover);
-    color: var(--eds-theme-color-button-icon-text-hover);
+    color: var(--eds-theme-color-button-link-brand-hover);
   }
 
   &:active {
-    border-color: var(--eds-theme-color-button-icon-border-active);
-    background-color: var(--eds-theme-color-button-icon-background-active);
-    color: var(--eds-theme-color-button-icon-text-active);
+    color: var(--eds-theme-color-button-link-brand-active);
   }
 }
 
 /**
- * Destructive disabled button styles
+ * Link neutral clickable style
  */
-.clickable-style--destructive {
-  border-color: var(--eds-theme-color-button-destructive-border);
-  background-color: var(--eds-theme-color-button-destructive-background);
-  color: var(--eds-theme-color-button-destructive-text);
+.clickable-style--link.clickable-style--neutral {
+  color: var(--eds-theme-color-button-link-neutral);
 
   &:hover,
   &:focus {
-    border-color: var(--eds-theme-color-button-destructive-border-hover);
-    background-color: var(
-      --eds-theme-color-button-destructive-background-hover
-    );
-    color: var(--eds-theme-color-button-destructive-text-hover);
+    color: var(--eds-theme-color-button-link-neutral-hover);
   }
 
   &:active {
-    border-color: var(--eds-theme-color-button-destructive-border-active);
-    background-color: var(
-      --eds-theme-color-button-destructive-background-active
-    );
-    color: var(--eds-theme-color-button-destructive-text-active);
+    color: var(--eds-theme-color-button-link-neutral-active);
   }
+}
+
+/**
+ * Link success clickable style
+ */
+.clickable-style--link.clickable-style--success {
+  color: var(--eds-theme-color-button-link-success);
+
+  &:hover,
+  &:focus {
+    color: var(--eds-theme-color-button-link-success-hover);
+  }
+
+  &:active {
+    color: var(--eds-theme-color-button-link-success-active);
+  }
+}
+
+/**
+ * Link warning clickable style
+ */
+.clickable-style--link.clickable-style--warning {
+  color: var(--eds-theme-color-button-link-warning);
+
+  &:hover,
+  &:focus {
+    color: var(--eds-theme-color-button-link-warning-hover);
+  }
+
+  &:active {
+    color: var(--eds-theme-color-button-link-warning-active);
+  }
+}
+
+/**
+ * Link alert clickable style
+ */
+.clickable-style--link.clickable-style--alert {
+  color: var(--eds-theme-color-button-link-alert);
+
+  &:hover,
+  &:focus {
+    color: var(--eds-theme-color-button-link-alert-hover);
+  }
+
+  &:active {
+    color: var(--eds-theme-color-button-link-alert-active);
+  }
+}
+
+/* Style icons that may be in the clickable style children */
+.clickable-style--link svg {
+  --icon-size-default: 1.25em;
 }
 
 /**

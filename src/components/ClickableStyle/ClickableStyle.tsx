@@ -29,15 +29,13 @@ export type ClickableStyleProps<IComponent extends React.ElementType> = {
    */
   size?: 'sm' | 'md' | 'lg';
   /**
-   * Available _stylistic_ variations available for the ClickableStyle component
+   * Available _color_ variations available for the ClickableStyle component
    */
-  variant?:
-    | 'primary'
-    | 'secondary'
-    | 'tertiary'
-    | 'icon'
-    | 'link'
-    | 'destructive';
+  status?: 'brand' | 'neutral' | 'success' | 'warning' | 'alert';
+  /**
+   * Available _shape_ variations available for the ClickableStyle component
+   */
+  variant?: 'primary' | 'secondary' | 'icon' | 'link';
 } & React.ComponentProps<IComponent>;
 
 /**
@@ -57,6 +55,7 @@ export const ClickableStyle = React.forwardRef(
       className,
       fullWidth,
       size = 'lg',
+      status = 'brand',
       variant = 'primary',
       ...other
     }: ClickableStyleProps<IComponent>,
@@ -75,10 +74,14 @@ export const ClickableStyle = React.forwardRef(
       // Variants
       variant === 'primary' && styles['clickable-style--primary'],
       variant === 'secondary' && styles['clickable-style--secondary'],
-      variant === 'tertiary' && styles['clickable-style--tertiary'],
       variant === 'icon' && styles['clickable-style--icon'],
       variant === 'link' && styles['clickable-style--link'],
-      variant === 'destructive' && styles['clickable-style--destructive'],
+      // Colors
+      status === 'brand' && styles['clickable-style--brand'],
+      status === 'neutral' && styles['clickable-style--neutral'],
+      status === 'success' && styles['clickable-style--success'],
+      status === 'warning' && styles['clickable-style--warning'],
+      status === 'alert' && styles['clickable-style--alert'],
       // Other options
       fullWidth && styles['clickable-style--full-width'],
     );
