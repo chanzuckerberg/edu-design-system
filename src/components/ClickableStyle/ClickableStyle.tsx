@@ -61,6 +61,19 @@ export const ClickableStyle = React.forwardRef(
     }: ClickableStyleProps<IComponent>,
     ref: React.ForwardedRef<HTMLElement>,
   ) => {
+    const nonPrimaryStatuses = ['neutral', 'success', 'warning'];
+    if (
+      variant === 'primary' &&
+      nonPrimaryStatuses.includes(status) &&
+      process.env.NODE_ENV !== 'production'
+    ) {
+      console.warn(
+        `*** Invalid prop combo warning ***:\n`,
+        `This component does not support using the '${status}' status with a 'primary' variant.`,
+        `The 'primary' variant can only be used with the 'brand' and 'alert' statuses.`,
+      );
+    }
+
     const componentClassName = clsx(
       // Base styles
       styles['clickable-style'],
