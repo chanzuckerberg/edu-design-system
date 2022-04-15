@@ -29,8 +29,7 @@ _Before the first time you publish_, make sure to:
 1. Confirm that all checks are green on CI.
 2. Run `git checkout main`.
 3. Run `yarn` to ensure all dependencies are upto date.
-4. Run `yarn build` to build EDS.
-6. Run
+4. Run
 
 ```
 yarn release
@@ -41,8 +40,19 @@ yarn release:breaking
 
 We use [standard-version](https://github.com/conventional-changelog/standard-version) to increment the version number in `package.json`, create a git tag for the new release, and update `CHANGELOG.md` based on the commit log. The package is not published, yet.
 
-6. Run the last command output by `standard-version`. It will look something like:
+5. Run the last command output by `standard-version`. It will look something like:
 ```
 git push --follow-tags origin <branch> && npm publish
 ```
-7. Communicate the changes via all appropriate channels. <TODO: determine communication strategy for new release>
+6. Communicate the changes via all appropriate channels. <TODO: determine communication strategy for new release>
+
+#### Alpha release
+For testing a release to build confidence.
+
+1. Run `yarn` to ensure all dependencies are upto date.
+2. Run `yarn build` to build EDS.
+3. Run `yarn release:alpha` to use `standard-version` to create appropriate tags and updates.
+4. Run the last command output by `standard-version` as above. It will look something like:
+```
+git push --follow-tags origin <branch> && npm publish
+```
