@@ -6,7 +6,7 @@ The [Education Initiative](https://chanzuckerberg.com/education/)'s design syste
 
 ## Setup
 
-Fist install the package.
+First install the package.
 
 ```bash
 # via npm
@@ -168,38 +168,7 @@ If you're also using styles from a separate library, conflicts may arise rarely 
 | Build package                         | `yarn build`            |
 | Run the component generator           | `yarn create-component` |
 
-### Publishing
-
-1. Confirm that all checks are green on CI.
-2. Run `git checkout main`
-3. Run
-
-```sh
-yarn create-releases
-
-# or, if there are breaking changes
-yarn create-releases:breaking
-```
-
-to bump the package versions, create new git tags, and create git commits. The packages are not published, yet.
-
-4. Confirm that the git tags, git commits, and changelog updates look correct.
-5. Run `yarn publish-releases` to publish the packages to the NPM registry.
-6. Push commits and tags to the git remote with `git push origin --tags && git push origin main`
-
-**Before the first time you publish**, make sure to:
-
-- set up Two Factor Authentication for your npm account
-- run `npm login` in your terminal to generate an access token for publishing
-
-### Note on versioning
-
-We are currently using a _modified_ form of semver where:
-
-- Breaking changes update the _minor_ version
-- All other changes (new features, fixes, etc.) update the _patch_ version
-
-Once we publish major version 1, we will begin following conventional semver.
+### [Publishing](./docs/publishing.md)
 
 ## Project Status
 
