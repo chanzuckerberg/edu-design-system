@@ -27,21 +27,18 @@
   border-left-width: var(--eds-border-width-lg); /* 3 */
   border-radius: var(--eds-size-half);
 
+  border-color: var(--border-light-color);
+  border-left-color: var(--border-dark-color);
+
   box-shadow: var(--eds-box-shadow-sm);
 }
 
 .toast--success {
-  color: var(--eds-theme-color-text-utility-success);
-  background-color: var(--eds-theme-color-background-utility-success);
-  border-color: var(--eds-theme-color-border-utility-success-default);
-  border-left-color: var(--eds-theme-color-border-utility-success-strong);
+  @mixin messagingSuccess;
 }
 
 .toast--alert {
-  color: var(--eds-theme-color-text-utility-error);
-  background-color: var(--eds-theme-color-background-utility-error);
-  border-color: var(--eds-theme-color-border-utility-error-default);
-  border-left-color: var(--eds-theme-color-border-utility-error-strong);
+  @mixin messagingAlert;
 }
 
 /**
