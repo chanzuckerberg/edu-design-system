@@ -1,8 +1,6 @@
 import type { StoryObj } from '@storybook/react';
 import React from 'react';
 import { Banner } from './Banner';
-import BannerDescription from '../BannerDescription';
-import BannerTitle from '../BannerTitle';
 import Button from '../Button';
 import Heading from '../Heading';
 
@@ -15,9 +13,9 @@ export default {
         Summit Learning has a full-time team dedicated to constantly improving
         our curriculum. To see the updates,{' '}
         <Button
-          variant="link"
           href="/"
           onClick={(event) => event.preventDefault()}
+          variant="link"
         >
           click into the course
         </Button>
@@ -40,17 +38,7 @@ const action = <Button variant="secondary">See updates</Button>;
 export const Brand: StoryObj<Args> = {
   render: (args) => {
     const { content, heading, ...restArgs } = args;
-    return (
-      <Banner
-        {...restArgs}
-        text={
-          <>
-            {heading && <BannerTitle as="h2">{heading}</BannerTitle>}
-            {content && <BannerDescription>{content}</BannerDescription>}
-          </>
-        }
-      />
-    );
+    return <Banner description={content} title={heading} {...restArgs} />;
   },
 };
 
@@ -186,15 +174,7 @@ export const DismissableBelowContent: StoryObj<Args> = {
   render: ({ heading, content }) => (
     <>
       <Heading size="h1">Page Title</Heading>
-      <Banner
-        dismissable={true}
-        text={
-          <>
-            <BannerTitle as="h2">{heading}</BannerTitle>
-            <BannerDescription>{content}</BannerDescription>
-          </>
-        }
-      />
+      <Banner description={content} dismissable={true} title={heading} />
     </>
   ),
 };

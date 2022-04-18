@@ -2,7 +2,9 @@ import clsx from 'clsx';
 import React, { ReactNode, useState } from 'react';
 import styles from './Banner.module.css';
 import Button from '../Button';
+import Heading, { HeadingElement } from '../Heading';
 import Icon from '../Icon';
+import Text from '../Text';
 
 export interface Props {
   /**
@@ -13,6 +15,14 @@ export interface Props {
    * CSS class names that can be appended to the component.
    */
   className?: string;
+  /**
+   * The description/body text of the banner
+   */
+  description?: ReactNode;
+  /**
+   * The element the description renders as
+   */
+  descriptionAs?: string;
   /**
    * Toggles the ability to dismiss the banner via an close button in the top right of the banner
    */
@@ -29,9 +39,13 @@ export interface Props {
    */
   orientation?: 'vertical';
   /**
-   * The child node(s) contains the banner message
+   * The title/heading of the banner
    */
-  text?: ReactNode;
+  title?: ReactNode;
+  /**
+   * The element the title renders as
+   */
+  titleAs?: HeadingElement;
   /**
    * Stylistic variations for the banner type.
    * - **brand** - results in a purple banner
@@ -152,7 +166,15 @@ export const Banner = ({
       />
 
       <div className={clsx(styles['banner__textAndAction'])}>
-        <div className={clsx(styles['banner__textContent'])}>{text}</div>
+        <div className={clsx(styles['banner__textContent'])}>
+          {title && (
+            <Heading as={titleAs} size="h5">
+              {title}
+            </Heading>
+          )}
+          {description && <Text>{description}</Text>}
+        </div>
+
         {action && (
           <div className={clsx(styles['banner__action'])}>{action}</div>
         )}

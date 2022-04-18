@@ -4,8 +4,6 @@ export { default as Avatar } from './components/Avatar';
 export { default as AvatarImage } from './components/AvatarImage';
 export { default as Band } from './components/Band';
 export { default as Banner } from './components/Banner';
-export { default as BannerDescription } from './components/BannerDescription';
-export { default as BannerTitle } from './components/BannerTitle';
 export { default as Breadcrumbs } from './components/Breadcrumbs';
 export { default as BreadcrumbsItem } from './components/BreadcrumbsItem';
 export { default as Button } from './components/Button';
