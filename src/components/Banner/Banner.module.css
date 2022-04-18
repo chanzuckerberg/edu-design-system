@@ -36,11 +36,11 @@
 
 /**
  * Banner informational icon
- * 1) Selector doubled up to bump specificity to not interact with .icon.
- *    See code guidelines for more info.
+ * 1) Icon color matches the thick border (left for horizontal and top for
+ *    vertical orientation)
  */
 .banner__icon {
-  color: var(--border-dark-color); /* 3 */
+  color: var(--border-dark-color); /* 1 */
   --icon-size-default: var(--eds-size-5);
 }
 
