@@ -32,6 +32,16 @@ export interface Props {
    */
   onDismiss?: () => void;
   /**
+   * This is deprecated and will be removed in an upcoming release. Please use the default elevation 1
+   *
+   * The perceived elevation of the banner. An elevation of 0 appears flat against the surface while
+   * an elevation of 1 appears to hover slightly. The hover appearance is used to separate the element
+   * from the surrounding area. The flat version should only be used on white backgrounds.
+   *
+   * @deprecated
+   */
+  isFlat?: boolean;
+  /**
    * Controls the layout of the banner
    * - **vertical** renders the banner content center aligned and stacked
    *
@@ -109,15 +119,25 @@ const variantToIconAssetsMap: {
 export const Banner = ({
   action,
   className,
-  // TODO: verify brand is the default variant and not neutral
+  description,
+  descriptionAs = 'p',
   dismissable,
+  isFlat,
   onDismiss,
   orientation,
-  variant = 'brand',
-  text,
+  variant = 'brand', // TODO: verify brand is the default variant and not neutral
+  title,
+  titleAs = 'h3',
   ...other
 }: Props) => {
   const [dismissed, setDismissed] = useState(false);
+
+  if (isFlat && process.env.NODE_ENV !== 'production') {
+    console.warn(
+      'The isFlat style is deprecated and will be removed in an upcoming release.\n',
+      'Please remove this prop to use the default elevated style (with a border and drop shadow) instead.',
+    );
+  }
 
   function handleDismiss(e: any) {
     e.preventDefault();
@@ -144,6 +164,7 @@ export const Banner = ({
     // Other options
     isHorizontal && styles['banner--horizontal'],
     dismissable && styles['banner--dismissable'],
+    isFlat && styles['banner--flat'],
   );
 
   return (

@@ -188,3 +188,21 @@
   background: var(--eds-theme-color-background-brand-primary-default);
   color: var(--eds-theme-color-text-brand-primary);
 }
+
+/*------------------------------------*\
+    # FLAT
+\*------------------------------------*/
+
+/**
+ * Flat banner
+ * 1) Has no drop shadow or visible border so it sits flat on the page
+ * 2) Instead of removing the border, we replace it with a transparent one.
+ *    On windows high contrast mode, the background color will be removed,
+ *    but this border will become 100% opacity black to retain visual separation
+ * 3) Remove the bottom margin which is usually there to account for the drop shadow length
+ */
+.banner--flat {
+  box-shadow: none; /* 1 */
+  --border-light-color: transparent; /* 2 */
+  margin-bottom: 0; /* 3 */
+}

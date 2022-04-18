@@ -210,3 +210,10 @@ export const VerticalDismissableWithAction: StoryObj<Args> = {
     dismissable: true,
   },
 };
+
+export const Flat: StoryObj<Args> = {
+  ...Brand,
+  args: {
+    isFlat: true,
+  },
+};
