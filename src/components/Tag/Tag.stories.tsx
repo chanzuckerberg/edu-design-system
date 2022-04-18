@@ -1,6 +1,6 @@
 import type { StoryObj } from "@storybook/react";
 import React from "react";
-import WarningRoundedIcon from "../../icons/WarningRounded";
+import Icon from "../Icon";
 import Tag, { stylesByColor } from "./Tag";
 import type { Color } from "./Tag";
 import styles from "./Tag.stories.module.css";
@@ -56,7 +56,7 @@ export const WithIcon: StoryObj<Args> = {
   ...Default,
   args: {
     icon: (
-      <WarningRoundedIcon key="icon" purpose="informative" title="warning" />
+      <Icon key="icon" name="warning" purpose="informative" title="warning" />
     ),
   },
 };
@@ -66,7 +66,7 @@ export const WithLongTextAndIcon: StoryObj<Args> = {
   args: {
     children: "This tag has a really long text message",
     icon: (
-      <WarningRoundedIcon key="icon" purpose="informative" title="warning" />
+      <Icon key="icon" name="warning" purpose="informative" title="warning" />
     ),
   },
 };
