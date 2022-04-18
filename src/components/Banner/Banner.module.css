@@ -81,8 +81,7 @@
     # HORIZONTAL ORIENTATION
 \*------------------------------------*/
 
-/* TODO is there a token for this? */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: $eds-bp-md) {
   /**
    * Banner horizontal orientation
    * 1) Everything is left-aligned
