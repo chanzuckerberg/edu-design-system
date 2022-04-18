@@ -3,7 +3,7 @@ import React, { forwardRef } from 'react';
 import styles from './Heading.module.css';
 
 export const VARIANTS = [
-  'alert',
+  'error',
   'base',
   'brand',
   'inherit',

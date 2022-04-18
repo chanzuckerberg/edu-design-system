@@ -62,10 +62,10 @@ export const Warning: StoryObj<Args> = {
   },
 };
 
-export const Alert: StoryObj<Args> = {
+export const Error: StoryObj<Args> = {
   ...Brand,
   args: {
-    variant: 'alert',
+    variant: 'error',
   },
 };
 
@@ -114,11 +114,11 @@ export const WarningWithAction: StoryObj<Args> = {
   },
 };
 
-export const AlertWithAction: StoryObj<Args> = {
-  ...Alert,
+export const ErrorWithAction: StoryObj<Args> = {
+  ...Error,
   args: {
     action: action,
-    variant: 'alert',
+    variant: 'error',
   },
 };
 
@@ -153,10 +153,10 @@ export const WarningDismissable: StoryObj<Args> = {
   },
 };
 
-export const AlertDismissable: StoryObj<Args> = {
+export const ErrorDismissable: StoryObj<Args> = {
   ...Brand,
   args: {
-    variant: 'alert',
+    variant: 'error',
     dismissable: true,
   },
 };

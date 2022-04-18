@@ -19,9 +19,9 @@ export const Success: StoryObj<Args> = {
   },
 };
 
-export const Alert: StoryObj<Args> = {
+export const Error: StoryObj<Args> = {
   args: {
-    variant: 'alert',
+    variant: 'error',
   },
 };
 
