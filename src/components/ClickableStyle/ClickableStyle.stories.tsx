@@ -9,6 +9,33 @@ export default {
   component: ClickableStyle,
   args: {
     children: 'Clickable Style',
+    variant: 'primary',
+    status: 'brand',
+    fullWidth: false,
+    size: 'lg',
+  },
+  argTypes: {
+    variant: {
+      control: {
+        type: 'select',
+        options: ['primary', 'secondary', 'icon', 'link'],
+      },
+    },
+    status: {
+      control: {
+        type: 'select',
+        options: ['brand', 'neutral', 'success', 'warning', 'error'],
+      },
+    },
+    size: {
+      control: {
+        type: 'select',
+        options: ['sm', 'md', 'lg'],
+      },
+    },
+    fullWidth: {
+      control: 'boolean',
+    },
   },
 } as Meta;
 
@@ -19,7 +46,6 @@ const Template: Story<Args> = (args: Args) => (
 );
 
 export const Primary = Template.bind({});
-Primary.args = { children: 'Clickable Style' };
 
 export const PrimaryLeftIcon = Template.bind({});
 PrimaryLeftIcon.args = {
@@ -42,13 +68,13 @@ PrimaryRightIcon.args = {
 };
 
 export const PrimaryMedium = Template.bind({});
-PrimaryMedium.args = { children: 'Clickable Style', size: 'md' };
+PrimaryMedium.args = { size: 'md' };
 
 export const PrimarySmall = Template.bind({});
-PrimarySmall.args = { children: 'Clickable Style', size: 'sm' };
+PrimarySmall.args = { size: 'sm' };
 
 export const Secondary = Template.bind({});
-Secondary.args = { children: 'Clickable Style', variant: 'secondary' };
+Secondary.args = { variant: 'secondary' };
 
 export const SecondaryLeftIcon = Template.bind({});
 SecondaryLeftIcon.args = {
@@ -74,14 +100,12 @@ SecondaryRightIcon.args = {
 
 export const SecondaryMedium = Template.bind({});
 SecondaryMedium.args = {
-  children: 'Clickable Style',
   variant: 'secondary',
   size: 'md',
 };
 
 export const SecondarySmall = Template.bind({});
 SecondarySmall.args = {
-  children: 'Clickable Style',
   variant: 'secondary',
   size: 'sm',
 };
@@ -119,7 +143,6 @@ SecondaryNeutralRightIcon.args = {
 
 export const SecondaryNeutralMedium = Template.bind({});
 SecondaryNeutralMedium.args = {
-  children: 'Clickable Style',
   variant: 'secondary',
   status: 'neutral',
   size: 'md',
@@ -127,7 +150,6 @@ SecondaryNeutralMedium.args = {
 
 export const SecondaryNeutralSmall = Template.bind({});
 SecondaryNeutralSmall.args = {
-  children: 'Clickable Style',
   variant: 'secondary',
   status: 'neutral',
   size: 'sm',
@@ -193,7 +215,7 @@ IconClickableStyleIconOnlySmall.args = {
 };
 
 export const Link = Template.bind({});
-Link.args = { children: 'Clickable Style', variant: 'link' };
+Link.args = { variant: 'link' };
 
 export const LinkRightIcon = Template.bind({});
 LinkRightIcon.args = {
@@ -230,25 +252,22 @@ PrimaryErrorLeftIcon.args = {
 };
 
 export const FullWidth = Template.bind({});
-FullWidth.args = { children: 'Clickable Style', fullWidth: true };
+FullWidth.args = { fullWidth: true };
 
 export const SecondarySuccess = Template.bind({});
 SecondarySuccess.args = {
-  children: 'Clickable Style',
   status: 'success',
   variant: 'secondary',
 };
 
 export const SecondaryWarning = Template.bind({});
 SecondaryWarning.args = {
-  children: 'Clickable Style',
   status: 'warning',
   variant: 'secondary',
 };
 
 export const SecondaryError = Template.bind({});
 SecondaryError.args = {
-  children: 'Clickable Style',
   status: 'error',
   variant: 'secondary',
 };
@@ -303,28 +322,24 @@ IconError.args = {
 
 export const LinkNeutral = Template.bind({});
 LinkNeutral.args = {
-  children: 'Clickable Style',
   status: 'neutral',
   variant: 'link',
 };
 
 export const LinkSuccess = Template.bind({});
 LinkSuccess.args = {
-  children: 'Clickable Style',
   status: 'success',
   variant: 'link',
 };
 
 export const LinkWarning = Template.bind({});
 LinkWarning.args = {
-  children: 'Clickable Style',
   status: 'warning',
   variant: 'link',
 };
 
 export const LinkError = Template.bind({});
 LinkError.args = {
-  children: 'Clickable Style',
   status: 'error',
   variant: 'link',
 };

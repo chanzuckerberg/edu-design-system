@@ -7,6 +7,40 @@ import Icon from '../Icon';
 export default {
   title: 'Molecules/Buttons/Button',
   component: Button,
+  args: {
+    children: 'Button',
+    variant: 'primary',
+    status: 'brand',
+    fullWidth: false,
+    size: 'lg',
+    loading: false,
+  },
+  argTypes: {
+    variant: {
+      control: {
+        type: 'select',
+        options: ['primary', 'secondary', 'icon', 'link'],
+      },
+    },
+    status: {
+      control: {
+        type: 'select',
+        options: ['brand', 'neutral', 'success', 'warning', 'error'],
+      },
+    },
+    size: {
+      control: {
+        type: 'select',
+        options: ['sm', 'md', 'lg'],
+      },
+    },
+    fullWidth: {
+      control: 'boolean',
+    },
+    loading: {
+      control: 'boolean',
+    },
+  },
 } as Meta;
 
 type Args = React.ComponentProps<typeof Button>;
@@ -14,10 +48,9 @@ type Args = React.ComponentProps<typeof Button>;
 const Template: Story<Args> = (args) => <Button {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = { children: 'Button' };
 
 export const PrimaryDisabled = Template.bind({});
-PrimaryDisabled.args = { children: 'Button', disabled: true };
+PrimaryDisabled.args = { disabled: true };
 
 export const PrimaryLeftIcon = Template.bind({});
 PrimaryLeftIcon.args = {
@@ -40,17 +73,16 @@ PrimaryRightIcon.args = {
 };
 
 export const PrimaryMedium = Template.bind({});
-PrimaryMedium.args = { children: 'Button', size: 'md' };
+PrimaryMedium.args = { size: 'md' };
 
 export const PrimarySmall = Template.bind({});
-PrimarySmall.args = { children: 'Button', size: 'sm' };
+PrimarySmall.args = { size: 'sm' };
 
 export const Secondary = Template.bind({});
-Secondary.args = { children: 'Button', variant: 'secondary' };
+Secondary.args = { variant: 'secondary' };
 
 export const SecondaryDisabled = Template.bind({});
 SecondaryDisabled.args = {
-  children: 'Button',
   variant: 'secondary',
   disabled: true,
 };
@@ -78,10 +110,10 @@ SecondaryRightIcon.args = {
 };
 
 export const SecondaryMedium = Template.bind({});
-SecondaryMedium.args = { children: 'Button', variant: 'secondary', size: 'md' };
+SecondaryMedium.args = { variant: 'secondary', size: 'md' };
 
 export const SecondarySmall = Template.bind({});
-SecondarySmall.args = { children: 'Button', variant: 'secondary', size: 'sm' };
+SecondarySmall.args = { variant: 'secondary', size: 'sm' };
 
 export const Tertiary = Template.bind({});
 Tertiary.args = {
@@ -92,7 +124,6 @@ Tertiary.args = {
 
 export const SecondaryNeutralDisabled = Template.bind({});
 SecondaryNeutralDisabled.args = {
-  children: 'Button',
   variant: 'secondary',
   status: 'neutral',
   disabled: true,
@@ -124,7 +155,6 @@ SecondaryNeutralRightIcon.args = {
 
 export const SecondaryNeutralMedium = Template.bind({});
 SecondaryNeutralMedium.args = {
-  children: 'Button',
   variant: 'secondary',
   status: 'neutral',
   size: 'md',
@@ -132,7 +162,6 @@ SecondaryNeutralMedium.args = {
 
 export const SecondaryNeutralSmall = Template.bind({});
 SecondaryNeutralSmall.args = {
-  children: 'Button',
   variant: 'secondary',
   status: 'neutral',
   size: 'sm',
@@ -210,10 +239,10 @@ IconButtonIconOnlySmall.args = {
 };
 
 export const Link = Template.bind({});
-Link.args = { children: 'Button', variant: 'link' };
+Link.args = { variant: 'link' };
 
 export const LinkDisabled = Template.bind({});
-LinkDisabled.args = { children: 'Button', variant: 'link', disabled: true };
+LinkDisabled.args = { variant: 'link', disabled: true };
 
 export const LinkRightIcon = Template.bind({});
 LinkRightIcon.args = {
@@ -250,32 +279,28 @@ PrimaryErrorLeftIcon.args = {
 };
 
 export const FullWidth = Template.bind({});
-FullWidth.args = { children: 'Button', fullWidth: true };
+FullWidth.args = { fullWidth: true };
 
 export const Loading = Template.bind({});
 Loading.args = {
-  children: 'Button',
   loading: true,
   disabled: true,
 };
 
 export const SecondarySuccess = Template.bind({});
 SecondarySuccess.args = {
-  children: 'Button',
   status: 'success',
   variant: 'secondary',
 };
 
 export const SecondaryWarning = Template.bind({});
 SecondaryWarning.args = {
-  children: 'Button',
   status: 'warning',
   variant: 'secondary',
 };
 
 export const SecondaryError = Template.bind({});
 SecondaryError.args = {
-  children: 'Button',
   status: 'error',
   variant: 'secondary',
 };
@@ -330,28 +355,24 @@ IconError.args = {
 
 export const LinkNeutral = Template.bind({});
 LinkNeutral.args = {
-  children: 'Button',
   status: 'neutral',
   variant: 'link',
 };
 
 export const LinkSuccess = Template.bind({});
 LinkSuccess.args = {
-  children: 'Button',
   status: 'success',
   variant: 'link',
 };
 
 export const LinkWarning = Template.bind({});
 LinkWarning.args = {
-  children: 'Button',
   status: 'warning',
   variant: 'link',
 };
 
 export const LinkError = Template.bind({});
 LinkError.args = {
-  children: 'Button',
   status: 'error',
   variant: 'link',
 };
