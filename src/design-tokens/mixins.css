@@ -13,11 +13,11 @@
   text-transform: inherit;
 
   text-decoration: underline;
-  color: var(--eds-theme-color-text-link-strong);
+  color: var(--eds-theme-color-text-link);
 
   &:hover,
   &:focus {
-    color: var(--eds-theme-color-text-link-strong-hover);
+    color: var(--eds-theme-color-text-link-hover);
     text-decoration-thickness: 2px;
   }
 
