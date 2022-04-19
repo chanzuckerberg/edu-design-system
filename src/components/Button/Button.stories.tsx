@@ -83,8 +83,8 @@ SecondaryMedium.args = { children: 'Button', variant: 'secondary', size: 'md' };
 export const SecondarySmall = Template.bind({});
 SecondarySmall.args = { children: 'Button', variant: 'secondary', size: 'sm' };
 
-export const SecondaryNeutral = Template.bind({});
-SecondaryNeutral.args = {
+export const Tertiary = Template.bind({});
+Tertiary.args = {
   children: 'Button',
   variant: 'secondary',
   status: 'neutral',
@@ -230,8 +230,8 @@ LinkRightIcon.args = {
   variant: 'link',
 };
 
-export const PrimaryError = Template.bind({});
-PrimaryError.args = {
+export const Destructive = Template.bind({});
+Destructive.args = {
   children: 'Button',
   status: 'error',
   variant: 'primary',

@@ -285,7 +285,7 @@ exports[`<Link /> Primary story renders snapshot 1`] = `
 </a>
 `;
 
-exports[`<Link /> PrimaryError story renders snapshot 1`] = `
+exports[`<Link /> Destructive story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--lg clickable-style--primary clickable-style--error"
   href="/"
@@ -415,7 +415,7 @@ exports[`<Link /> SecondaryMedium story renders snapshot 1`] = `
 </a>
 `;
 
-exports[`<Link /> SecondaryNeutral story renders snapshot 1`] = `
+exports[`<Link /> Tertiary story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral"
   href="/"

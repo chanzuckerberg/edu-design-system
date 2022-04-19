@@ -357,7 +357,7 @@ exports[`<Button /> PrimaryDisabled story renders snapshot 1`] = `
 </button>
 `;
 
-exports[`<Button /> PrimaryError story renders snapshot 1`] = `
+exports[`<Button /> Destructive story renders snapshot 1`] = `
 <button
   class="clickable-style button button--primary clickable-style--lg clickable-style--primary clickable-style--error"
   type="button"
@@ -498,7 +498,7 @@ exports[`<Button /> SecondaryMedium story renders snapshot 1`] = `
 </button>
 `;
 
-exports[`<Button /> SecondaryNeutral story renders snapshot 1`] = `
+exports[`<Button /> Tertiary story renders snapshot 1`] = `
 <button
   class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--neutral"
   type="button"

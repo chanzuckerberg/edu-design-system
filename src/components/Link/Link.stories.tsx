@@ -106,8 +106,8 @@ SecondarySmall.args = {
   size: 'sm',
 };
 
-export const SecondaryNeutral = Template.bind({});
-SecondaryNeutral.args = {
+export const Tertiary = Template.bind({});
+Tertiary.args = {
   children: 'Link',
   variant: 'secondary',
   status: 'neutral',
@@ -212,8 +212,8 @@ IconClickableStyleIconOnlySmall.args = {
   size: 'sm',
 };
 
-export const PrimaryError = Template.bind({});
-PrimaryError.args = {
+export const Destructive = Template.bind({});
+Destructive.args = {
   children: 'Link',
   status: 'error',
   variant: 'primary',
