@@ -5,7 +5,7 @@ import styles from './Text.module.css';
 export type Size = 'body' | 'sm' | 'md' | 'lg' | 'xs' | 'caption' | 'overline';
 
 export type Variant =
-  | 'alert'
+  | 'error'
   | 'base'
   | 'brand'
   | 'inherit'

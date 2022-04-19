@@ -363,9 +363,9 @@ exports[`<Heading /> Variants story renders snapshot 1`] = `
     class="variant--white"
   >
     <h1
-      class="heading heading--size-h1 heading--alert"
+      class="heading heading--size-h1 heading--error"
     >
-      alert
+      error
     </h1>
     <h1
       class="heading heading--size-h1 heading--base"
@@ -407,9 +407,9 @@ exports[`<Heading /> Variants story renders snapshot 1`] = `
     class="variant--light"
   >
     <h1
-      class="heading heading--size-h1 heading--alert"
+      class="heading heading--size-h1 heading--error"
     >
-      alert
+      error
     </h1>
     <h1
       class="heading heading--size-h1 heading--base"
@@ -451,9 +451,9 @@ exports[`<Heading /> Variants story renders snapshot 1`] = `
     class="variant--dark"
   >
     <h1
-      class="heading heading--size-h1 heading--alert"
+      class="heading heading--size-h1 heading--error"
     >
-      alert
+      error
     </h1>
     <h1
       class="heading heading--size-h1 heading--base"

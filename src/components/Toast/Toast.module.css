@@ -38,8 +38,8 @@
   @mixin messagingSuccess;
 }
 
-.toast--alert {
-  @mixin messagingAlert;
+.toast--error {
+  @mixin messagingError;
 }
 
 /**

@@ -4,7 +4,7 @@ import styles from './Toast.module.css';
 import Button from '../Button';
 import Icon from '../Icon';
 
-export type Variant = 'success' | 'alert';
+export type Variant = 'success' | 'error';
 
 export type Props = {
   /**
@@ -47,7 +47,7 @@ export const Toast = ({
     className,
     styles['toast'],
     variant === 'success' && styles['toast--success'],
-    variant === 'alert' && styles['toast--alert'],
+    variant === 'error' && styles['toast--error'],
   );
   return (
     <div className={componentClassName} {...other}>
