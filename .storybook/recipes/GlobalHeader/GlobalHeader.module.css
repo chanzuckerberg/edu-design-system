@@ -1,3 +1,4 @@
+@import '../../../src/design-tokens/mixins.css';
 /*------------------------------------*\
     #GLOBAL HEADER
 \*------------------------------------*/
@@ -39,13 +40,18 @@
  *    can be exposed
  */
 .global-header__menu-button.global-header__menu-button {
-  padding: 0;
+  /*padding: 0;*/
+  padding: var(--eds-size-half);
   color: var(--eds-theme-color-text-neutral-default-inverse);
 
   &:hover,
   &:focus {
-    background-color: transparent; /* TODO */
-    border-color: transparent; /* TODO */
+    background: var(--eds-theme-color-button-primary-background-hover);
+    border-color: transparent;
+  }
+
+  &:focus {
+    @mixin focusInverted;
   }
 
   @media all and (min-width: $eds-bp-xl) {
