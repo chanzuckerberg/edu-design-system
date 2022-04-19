@@ -173,7 +173,7 @@
   color: var(--eds-theme-color-text-utility-warning);
 }
 
-@define-mixin messagingAlert {
+@define-mixin messagingError {
   --border-light-color: var(--eds-theme-color-border-utility-error-subtle);
   --border-dark-color: var(--eds-theme-color-icon-utility-error);
 

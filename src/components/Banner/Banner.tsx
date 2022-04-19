@@ -62,9 +62,9 @@ export interface Props {
    * - **neutral** - results in a gray banner
    * - **success** - results in a green banner
    * - **warning** - results in a yellow banner
-   * - **alert** - results in a red banner
+   * - **error** - results in a red banner
    */
-  variant?: 'brand' | 'neutral' | 'success' | 'warning' | 'alert';
+  variant?: 'brand' | 'neutral' | 'success' | 'warning' | 'error';
 }
 
 const variantToIconAssetsMap: {
@@ -89,9 +89,9 @@ const variantToIconAssetsMap: {
     name: 'warning',
     title: 'warning',
   },
-  alert: {
+  error: {
     name: 'dangerous',
-    title: 'alert',
+    title: 'error',
   },
 };
 
@@ -158,7 +158,7 @@ export const Banner = ({
     // Variants
     variant === 'neutral' && styles['banner--neutral'],
     variant === 'brand' && styles['banner--brand'],
-    variant === 'alert' && styles['banner--alert'],
+    variant === 'error' && styles['banner--error'],
     variant === 'warning' && styles['banner--warning'],
     variant === 'success' && styles['banner--success'],
     // Other options

@@ -42,7 +42,7 @@
 /**
  * Color variants
  */
-.heading--alert {
+.heading--error {
   color: var(--eds-theme-color-text-utility-error);
 }
 .heading--base {

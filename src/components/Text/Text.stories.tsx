@@ -19,7 +19,7 @@ export default {
 };
 
 const variants = [
-  'alert',
+  'error',
   'base',
   'brand',
   'inherit',
@@ -144,7 +144,7 @@ export const BodyVariantSuccessBold: StoryObj<Args> = {
 
 export const TextVariantInherit: StoryObj<Args> = {
   render: (args) => (
-    <Text size="body" variant="alert">
+    <Text size="body" variant="error">
       This text surrounds the <Text as="span" {...args} /> and shows it should
       inherit variant from the parent
     </Text>
