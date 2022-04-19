@@ -8,7 +8,7 @@ export default {
   title: 'Molecules/Messaging/Banner',
   component: Banner,
   args: {
-    content: (
+    description: (
       <>
         Summit Learning has a full-time team dedicated to constantly improving
         our curriculum. To see the updates,{' '}
@@ -22,14 +22,14 @@ export default {
         .
       </>
     ),
-    heading:
+    title:
       'New curriculum updates are available for one or more of your courses.',
   },
 };
 
 type Args = React.ComponentProps<typeof Banner> & {
-  content: string;
-  heading: string;
+  title: string;
+  description: string;
   action: any;
 };
 
@@ -37,8 +37,7 @@ const action = <Button variant="secondary">See updates</Button>;
 
 export const Brand: StoryObj<Args> = {
   render: (args) => {
-    const { content, heading, ...restArgs } = args;
-    return <Banner description={content} title={heading} {...restArgs} />;
+    return <Banner {...args} />;
   },
 };
 
@@ -73,14 +72,14 @@ export const Alert: StoryObj<Args> = {
 export const NoDescription: StoryObj<Args> = {
   ...Brand,
   args: {
-    content: undefined,
+    description: undefined,
   },
 };
 
 export const NoTitle: StoryObj<Args> = {
   ...Brand,
   args: {
-    heading: undefined,
+    title: undefined,
   },
 };
 
@@ -171,10 +170,10 @@ export const DismissableWithAction: StoryObj<Args> = {
 };
 
 export const DismissableBelowContent: StoryObj<Args> = {
-  render: ({ heading, content }) => (
+  render: (args) => (
     <>
       <Heading size="h1">Page Title</Heading>
-      <Banner description={content} dismissable={true} title={heading} />
+      <Banner dismissable={true} {...args} />
     </>
   ),
 };
