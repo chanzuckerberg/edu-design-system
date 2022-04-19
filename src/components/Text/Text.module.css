@@ -34,7 +34,7 @@
 /**
  * Variant
  */
-.text--alert {
+.text--error {
   color: var(--eds-theme-color-text-utility-error);
 }
 .text--base {
