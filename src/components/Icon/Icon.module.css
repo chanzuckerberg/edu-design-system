@@ -21,16 +21,6 @@
 }
 
 /**
- * Icon within text passage
- * 1) Places icon inline with text around it
- */
-.icon .text-passage & {
-  display: inline;
-
-  /* 1 */
-}
-
-/**
  * Full-width icon
  * 1) A block icon fills 100% of the width of its container
  */

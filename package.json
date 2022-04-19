@@ -21,7 +21,7 @@
     "url": "https://github.com/chanzuckerberg/edu-design-system/issues"
   },
   "scripts": {
-    "build": "yarn build:clean && yarn build:tokens && yarn build:js && yarn build:styles && yarn build:icons && yarn copy-icons-to-lib",
+    "build": "yarn build:clean && yarn build:tokens && yarn build:js && yarn build:styles && copy-icons-to-lib",
     "build:clean": "rm -rf lib/",
     "build:icons": "svg-sprite-generate -d src/icons/ -o src/icons/spritemap/spritemap.svg && yarn generate-icon-types",
     "build:js": "tsc --project tsconfig.build.json",
@@ -29,7 +29,7 @@
     "build:styles": "postcss \"src/**/*.css\" --dir lib/ --base src/ --verbose",
     "build:tokens": "node ./style-dictionary.config.js",
     "chromatic": "chromatic",
-    "copy-icons-to-lib": "copyfiles -u 1 src/icons/**/* lib",
+    "copy-icons-to-lib": "copyfiles -u 1 src/icons/spritemap/**/* lib",
     "create-component": "plop",
     "deploy:docs": "storybook-to-ghpages --ci",
     "generateFlowTypes": "./scripts/generateFlowTypes.sh",

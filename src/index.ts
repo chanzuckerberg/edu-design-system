@@ -14,3 +14,4 @@ export { default as Text } from "./components/Text";
 export { default as Toast } from "./components/Toast";
 export { default as Tooltip } from "./components/Tooltip";
 export type { BannerProps } from "./components/Banner";
+export type { IconName } from "./components/Icon";

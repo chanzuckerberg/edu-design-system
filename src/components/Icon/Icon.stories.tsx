@@ -86,7 +86,7 @@ export const InText: StoryObj<IconProps> = {
           purpose="informative"
           title="icon with 1em line height"
         />
-        , 1em), but often looks better with the line height (
+        ; 1em), but often looks better with the line height (
         <Icon
           {...args}
           name="account-circle"
@@ -94,7 +94,7 @@ export const InText: StoryObj<IconProps> = {
           size="2em"
           title="icon with 2em line height"
         />
-        , 2em) which is harder to determine. Take a look at the icons available
+        ; 2em) which is harder to determine. Take a look at the icons available
         in{" "}
         <a
           href="https://material-ui.com/components/material-icons/"

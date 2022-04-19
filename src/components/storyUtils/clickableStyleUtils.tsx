@@ -135,7 +135,7 @@ export const getPlainRecommendedVariants = (
             {componentName}
             <Icon
               className={styles.arrowForwardIcon}
-              name="arrow-back"
+              name="arrow-forward"
               purpose="decorative"
             />
           </Component>
