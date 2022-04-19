@@ -60,10 +60,8 @@ export const Button = React.forwardRef<
       // Variants
       variant === 'primary' && styles['button--primary'],
       variant === 'secondary' && styles['button--secondary'],
-      variant === 'tertiary' && styles['button--tertiary'],
       variant === 'icon' && styles['button--icon'],
       variant === 'link' && styles['button--link'],
-      variant === 'destructive' && styles['button--destructive'],
       // Other options
       disabled && styles['button--disabled'],
       loading && styles['eds-is-loading'],
