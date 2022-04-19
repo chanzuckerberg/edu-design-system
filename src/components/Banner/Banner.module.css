@@ -6,163 +6,203 @@
 
 /**
  * 1) Message of information, success, caution, or warning to the user
- * 2) The thick left border operates as a foreground band of color,
- *    so foreground rather than border is used
+ * 2) Has a bottom margin to accommodate drop shadow
+ * 3) The thick border (left for horizontal and top for vertical orientation)
+ *    matches the icon color
+ * 4) The default styles are for the vertical orientation; we override these
+ *    styles for the horizontal orientation below
  */
 .banner {
-  display: flex;
-  align-items: flex-start;
+  display: grid;
+  gap: var(--eds-size-2);
   position: relative;
-  padding-top: var(--eds-size-2);
-  padding-right: var(--eds-size-2);
-  padding-bottom: var(--eds-size-2);
-  padding-left: var(--eds-size-2);
-  margin-bottom: var(--eds-size-2);
-  border-style: solid;
-  border-width: var(--eds-theme-border-width);
-  border-color: var(--eds-theme-color-neutral-subtle-border);
-  border-left-width: var(--eds-border-width-lg);
-  border-left-color: var(--eds-theme-color-neutral-medium-foreground); /* 2 */
-  border-radius: var(--eds-theme-border-radius);
+
   background-color: var(--eds-theme-color-neutral-subtle-background);
-}
+  box-shadow: var(--eds-theme-box-shadow); /* 2 */
+  margin-bottom: var(--eds-size-2); /* 2 */
 
-/**
- * Banner success
- * 1) The thick left border operates as a foreground band of color,
- *    so foreground rather than border is used
- */
-.banner--success {
-  background: var(--eds-theme-color-utility-success-background);
-  border-color: var(--eds-theme-color-utility-success-border);
-  border-left-color: var(--eds-theme-color-utility-success-foreground); /* 1 */
-  color: var(--eds-theme-color-utility-success-foreground);
-}
+  border-style: solid;
+  border-radius: var(--eds-theme-border-radius);
+  border-width: var(--eds-theme-border-width);
+  border-color: var(--border-light-color);
 
-/**
- * Banner warning
- */
-.banner--warning {
-  background: var(--eds-theme-color-utility-warning-background);
-  border-color: var(--eds-theme-color-utility-warning-border);
-  border-left-color: var(--eds-theme-color-utility-warning-foreground); /* 1 */
-  color: var(--eds-theme-color-utility-warning-foreground);
-}
-
-/**
- * Banner error
- */
-.banner--error {
-  background: var(--eds-theme-color-utility-error-background);
-  border-color: var(--eds-theme-color-utility-error-border);
-  border-left-color: var(--eds-theme-color-utility-error-foreground); /* 1 */
-  color: var(--eds-theme-color-utility-error-foreground);
-}
-
-/**
- * Brand banner
- */
-.banner--brand {
-  background: var(--eds-color-brand-blue-100); /* TODO */
-  border-color: var(--eds-theme-color-primary-border);
-  border-left-color: var(--eds-theme-color-primary-foreground); /* 1 */
-  color: var(--eds-theme-color-primary-foreground);
+  /* Vertical-specific styles */
+  padding: var(--eds-size-4);
+  text-align: center;
+  justify-items: center;
+  border-top-width: var(--eds-border-width-lg);
+  border-top-color: var(--border-dark-color); /* 3 */
 }
 
 /**
  * Banner informational icon
- * 1) Selector doubled up to bump specificity to not interact with .icon.
- *    See code guidelines for more info.
+ * 1) Icon color matches the thick border (left for horizontal and top for
+ *    vertical orientation)
  */
-.banner__icon.banner__icon {
-  margin-right: var(--eds-size-2);
-  fill: var(--eds-theme-color-neutral-medium-foreground);
-  width: var(--eds-size-3);
-  height: var(--eds-size-3);
-
-  /**
-   * Icon within success banner
-   */
-  .banner--success & {
-    fill: var(--eds-theme-color-utility-success-foreground);
-  }
-
-  /**
-   * Icon within warning banner
-   */
-  .banner--warning & {
-    fill: var(--eds-theme-color-utility-warning-foreground);
-  }
-
-  /**
-   * Icon within error banner
-   */
-  .banner--error & {
-    fill: var(--eds-theme-color-utility-error-foreground);
-  }
-
-  /**
-   * * Icon within info banner
-   */
-  .banner--info & {
-    fill: var(--eds-theme-color-utility-info-foreground);
-  }
-
-  /**
-   * * Icon within info banner
-   */
-  .banner--brand & {
-    fill: var(--eds-theme-color-primary-foreground);
-  }
+.banner__icon {
+  color: var(--border-dark-color); /* 1 */
+  --icon-size-default: var(--eds-size-5);
 }
 
-/**
- * Banner body
- * 1) Allows the body to take up the remaining space that the icon doesn't occupy
- */
-.banner__body {
-  flex: 1;
+.banner__textAndAction,
+.banner__textContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-/**
- * Banner title
- */
-.banner__title {
-  @mixin eds-theme-typography-heading-3;
-  margin-bottom: var(--eds-size-1);
-  flex: 1 0 auto;
-
-  @media all and (min-width: $eds-bp-md) {
-    margin-right: var(--eds-size-6);
-  }
+.banner__textAndAction {
+  gap: var(--eds-size-2);
 }
 
-/**
- * Banner description
- */
-.banner__description {
-  @mixin eds-theme-typography-body-text-md;
+.banner__textContent {
+  gap: var(--eds-size-1);
+}
+
+.banner__action {
+  justify-self: center;
+  align-self: center;
 }
 
 /**
  * Banner close button
  * 1) Button used to dismiss dismissable banners
- * 2) Selector doubled up to bump specificity to not interact with .icon.
- *    See code guidelines for more info.
- * 3) Match close button icon color to the banner text color
+ * 2) Match close button icon color to the banner text color
  */
 .banner__close-btn.banner__close-btn {
-  position: relative;
+  position: absolute;
   top: var(--eds-size-half);
-  margin-left: var(--eds-size-3);
-  color: inherit; /* 3 */
+  right: var(--eds-size-half);
+  /* TODO: handle hover styles */
+  color: inherit; /* 2 */
 }
 
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
+/*------------------------------------*\
+    # HORIZONTAL ORIENTATION
+\*------------------------------------*/
+
+@media screen and (min-width: $eds-bp-md) {
+  /**
+   * Banner horizontal orientation
+   * 1) Everything is left-aligned
+   * 2) Padding is reduced
+   * 3) Left border is thick and dark instead of the top border
+   * 4) Icon is smaller to match the heading line height
+   * 5) Gap between text and action button is reduced
+   */
+  .banner--horizontal {
+    grid-template-columns: min-content 1fr;
+    text-align: left; /* 1 */
+    justify-items: flex-start; /* 1 */
+    padding: 1rem; /* 2 */
+
+    border-top-width: var(--eds-theme-border-width); /* 3 */
+    border-left-width: var(--eds-border-width-lg); /* 3 */
+    border-top-color: var(--border-light-color); /* 3 */
+    border-left-color: var(--border-dark-color); /* 3 */
+
+    .banner__icon {
+      --icon-size-default: var(--eds-size-3); /* 4 */
+    }
+
+    .banner__textAndAction {
+      gap: var(--eds-size-1); /* 5 */
+    }
+
+    .banner__action {
+      align-self: flex-start; /* 1 */
+    }
   }
-  to {
-    transform: rotate(359deg);
+
+  /**
+   * Dismissable banner horizontal orientation
+   * 1) Add extra right padding to account for close button
+   */
+  .banner--dismissable.banner--horizontal {
+    padding-right: var(--eds-size-4); /* 1 */
   }
+}
+
+/*------------------------------------*\
+    # VARIANTS
+\*------------------------------------*/
+
+/**
+ * Banner neutral
+ * 1) The thick left border matches the icon color
+ */
+.banner--neutral {
+  --border-light-color: var(--eds-theme-color-border-neutral-subtle);
+  --border-dark-color: var(--eds-theme-color-icon-neutral-subtle); /* 1 */
+
+  background: var(--eds-theme-color-background-neutral-subtle);
+  color: var(--eds-theme-color-text-neutral-default);
+}
+
+/**
+ * Banner success
+ * 1) The thick left border matches the icon color
+ */
+.banner--success {
+  /* TODO: move these styles to mixins or tokens so the Toast can reuse them */
+  --border-light-color: var(--eds-theme-color-border-utility-success-default);
+  --border-dark-color: var(--eds-theme-color-icon-utility-success); /* 1 */
+
+  background: var(--eds-theme-color-background-utility-success);
+  color: var(--eds-theme-color-text-utility-success);
+}
+
+/**
+ * Banner warning
+ * 1) The thick left border matches the icon color
+ */
+.banner--warning {
+  --border-light-color: var(--eds-theme-color-border-utility-warning-subtle);
+  --border-dark-color: var(--eds-theme-color-icon-utility-warning); /* 1 */
+
+  background: var(--eds-theme-color-background-utility-warning);
+  color: var(--eds-theme-color-text-utility-warning);
+}
+
+/**
+ * Banner alert
+ * 1) The thick left border matches the icon color
+ */
+.banner--alert {
+  /* TODO: move these styles to mixins or tokens so the Toast can reuse them */
+  --border-light-color: var(--eds-theme-color-border-utility-error-subtle);
+  --border-dark-color: var(--eds-theme-color-icon-utility-error); /* 1 */
+
+  background: var(--eds-theme-color-background-utility-error);
+  color: var(--eds-theme-color-text-utility-error);
+}
+
+/**
+ * Banner brand
+ * 1) The thick left border matches the icon color
+ */
+.banner--brand {
+  --border-light-color: var(--eds-theme-color-border-brand-primary-subtle);
+  --border-dark-color: var(--eds-theme-color-icon-brand-primary); /* 1 */
+
+  background: var(--eds-theme-color-background-brand-primary-default);
+  color: var(--eds-theme-color-text-brand-primary);
+}
+
+/*------------------------------------*\
+    # FLAT
+\*------------------------------------*/
+
+/**
+ * Flat banner
+ * 1) Has no drop shadow or visible border so it sits flat on the page
+ * 2) Instead of removing the border, we replace it with a transparent one.
+ *    On windows high contrast mode, the background color will be removed,
+ *    but this border will become 100% opacity black to retain visual separation
+ * 3) Remove the bottom margin which is usually there to account for the drop shadow length
+ */
+.banner--flat {
+  box-shadow: none; /* 1 */
+  --border-light-color: transparent; /* 2 */
+  margin-bottom: 0; /* 3 */
 }
