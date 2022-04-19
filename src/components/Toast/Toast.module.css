@@ -9,6 +9,7 @@
  * 2) Container for the toast content, to provide background styling
  * 3) The thick left border operates as a foreground band of color, 
  *    so foreground rather than border is used
+ * 4) The border CSS variables are defined in the messaging mixins
  */
 .toast {
   width: 100%;
@@ -27,8 +28,8 @@
   border-left-width: var(--eds-border-width-lg); /* 3 */
   border-radius: var(--eds-size-half);
 
-  border-color: var(--border-light-color);
-  border-left-color: var(--border-dark-color);
+  border-color: var(--border-light-color); /* 4 */
+  border-left-color: var(--border-dark-color); /* 4 */
 
   box-shadow: var(--eds-box-shadow-sm);
 }
