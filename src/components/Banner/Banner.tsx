@@ -2,108 +2,205 @@ import clsx from 'clsx';
 import React, { ReactNode, useState } from 'react';
 import styles from './Banner.module.css';
 import Button from '../Button';
-import Icon, { IconName } from '../Icon';
+import Heading, { HeadingElement } from '../Heading';
+import Icon from '../Icon';
+import Text from '../Text';
 
 export interface Props {
   /**
-   * The child node(s) contains the banner message. Note: the banner message is displayed inside a TextPassage, so children can contain raw HTML
+   * A button or link that's placed in the banner separately from the main content.
    */
-  children?: ReactNode;
+  action?: React.ReactNode;
   /**
    * CSS class names that can be appended to the component.
    */
   action?: React.ReactNode;
   /**
-   * Close button text
-   * 1) Used to change the text of the icon button with various languages
+   * The description/body text of the banner
    */
-  closeButtonText?: string;
+  description?: ReactNode;
+  /**
+   * The element the description renders as
+   */
+  descriptionAs?: 'p' | 'span';
   /**
    * Toggles the ability to dismiss the banner via an close button in the top right of the banner
    */
-  dismissible?: boolean;
+  dismissable?: boolean;
   /**
-   * Name of banner SVG icon. Available options are: banner, error, warning-2, success
+   * Optional callback to be triggered when the banner is dismissed
    */
-  iconName?: IconName;
+  onDismiss?: () => void;
   /**
-   * The title attribute for the SVG icon in the banner
+   * This is deprecated and will be removed in an upcoming release. Please use the default elevation 1
+   *
+   * The perceived elevation of the banner. An elevation of 0 appears flat against the surface while
+   * an elevation of 1 appears to hover slightly. The hover appearance is used to separate the element
+   * from the surrounding area. The flat version should only be used on white backgrounds.
+   *
+   * @deprecated
    */
-  iconTitle?: string;
+  isFlat?: boolean;
   /**
    * Controls the layout of the banner
    * - **vertical** renders the banner content center aligned and stacked
+   *
+   * Vertical banners are used in narrow areas, like sidebars
    */
   orientation?: 'vertical';
   /**
-   * Optional heading text for the banner that appears above banner body message
+   * The title/heading of the banner
    */
-  title?: string;
+  title?: ReactNode;
+  /**
+   * The element the title renders as
+   */
+  titleAs?: HeadingElement;
   /**
    * Stylistic variations for the banner type.
+   * - **brand** - results in a purple banner
+   * - **neutral** - results in a gray banner
    * - **success** - results in a green banner
    * - **warning** - results in a yellow banner
-   * - **error** - results in a red banner
-   * - **info** - results in a blue banner
+   * - **alert** - results in a red banner
    */
-  variant?: 'success' | 'warning' | 'error' | 'info' | 'brand';
+  variant?: 'brand' | 'neutral' | 'success' | 'warning' | 'alert';
 }
 
+const variantToIconAssetsMap: {
+  [key: string]: {
+    name: 'notifications' | 'forum' | 'check-circle' | 'warning' | 'dangerous';
+    title: string;
+  };
+} = {
+  brand: {
+    name: 'notifications',
+    title: 'attention',
+  },
+  neutral: {
+    name: 'forum',
+    title: 'notice',
+  },
+  success: {
+    name: 'check-circle',
+    title: 'success',
+  },
+  warning: {
+    name: 'warning',
+    title: 'warning',
+  },
+  alert: {
+    name: 'dangerous',
+    title: 'alert',
+  },
+};
+
 /**
- * Primary UI component for user interaction
+ * ```ts
+ * import {Banner} from "@chanzuckerberg/eds-components";
+ * ```
+ *
+ * A banner used to provide and highlight information to a user or ask for a decision or action.
+ *
+ * Example usage:
+ *
+ * ```tsx
+ * <Banner
+ *   onDismiss={handleDismiss}
+ *   text={
+ *     <>
+ *       <BannerTitle>Some title</Banner.Title>
+ *       <BannerDescription>Some description</Banner.Description>
+ *     </>
+ *   }
+ * />
+ * ```
  */
 export const Banner = ({
-  iconTitle,
+  action,
   className,
-  title,
-  children,
-  iconName,
-  dismissible,
+  description,
+  descriptionAs = 'p',
+  dismissable,
+  isFlat,
+  onDismiss,
   orientation,
-  variant,
-  closeButtonText = 'Close',
+  variant = 'brand', // TODO: verify brand is the default variant and not neutral
+  title,
+  titleAs = 'h3',
   ...other
 }: Props) => {
-  const componentClassName = clsx(
-    styles['banner'],
-    variant === 'success' && styles['banner--success'],
-    variant === 'warning' && styles['banner--warning'],
-    variant === 'error' && styles['banner--error'],
-    variant === 'brand' && styles['banner--brand'],
-    orientation === 'vertical' && styles['banner--vertical'],
-  );
   const [dismissed, setDismissed] = useState(false);
 
-  function onDismiss(e: any) {
+  if (isFlat && process.env.NODE_ENV !== 'production') {
+    console.warn(
+      'The isFlat style is deprecated and will be removed in an upcoming release.\n',
+      'Please remove this prop to use the default elevated style (with a border and drop shadow) instead.',
+    );
+  }
+
+  function handleDismiss(e: any) {
     e.preventDefault();
+    onDismiss && onDismiss();
     setDismissed(true);
   }
-  return dismissed ? null : (
-    <div className={componentClassName} role="alert" {...other}>
-      {iconName && (
-        <Icon
-          className={styles['banner__icon']}
-          name={iconName}
-          purpose="informative"
-          title={iconTitle}
-        />
-      )}
-      <div className={styles['banner__body']}>{children}</div>
 
-      {dismissible && (
+  if (dismissed) {
+    return null;
+  }
+
+  const isHorizontal = !orientation;
+
+  const componentClassName = clsx(
+    // Base styles
+    styles['banner'],
+    className,
+    // Variants
+    variant === 'neutral' && styles['banner--neutral'],
+    variant === 'brand' && styles['banner--brand'],
+    variant === 'alert' && styles['banner--alert'],
+    variant === 'warning' && styles['banner--warning'],
+    variant === 'success' && styles['banner--success'],
+    // Other options
+    isHorizontal && styles['banner--horizontal'],
+    dismissable && styles['banner--dismissable'],
+    isFlat && styles['banner--flat'],
+  );
+
+  return (
+    <article className={componentClassName} {...other}>
+      {dismissable && (
         <Button
           className={styles['banner__close-btn']}
-          onClick={(e: any) => onDismiss(e)}
+          onClick={handleDismiss}
           variant="icon"
         >
-          <Icon
-            className={styles['banner__icon']}
-            name="close"
-            purpose="informative"
-            title={closeButtonText}
-          />
+          <Icon name={'close'} purpose="informative" title={'dismiss module'} />
         </Button>
       )}
-    </div>
+
+      <Icon
+        className={styles['banner__icon']}
+        name={variantToIconAssetsMap[variant].name}
+        purpose="informative"
+        title={variantToIconAssetsMap[variant].title}
+      />
+
+      <div className={clsx(styles['banner__textAndAction'])}>
+        <div className={clsx(styles['banner__textContent'])}>
+          {title && (
+            <Heading as={titleAs} size="h5">
+              {title}
+            </Heading>
+          )}
+          {description && <Text as={descriptionAs}>{description}</Text>}
+        </div>
+
+        {action && (
+          <div className={clsx(styles['banner__action'])}>{action}</div>
+        )}
+      </div>
+    </article>
   );
 };
+Banner.displayName = 'Banner';
