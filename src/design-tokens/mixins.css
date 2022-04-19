@@ -140,3 +140,43 @@
   border: 0 !important;
   clip: rect(1px, 1px, 1px, 1px) !important;
 }
+
+@define-mixin messagingBrand {
+  --border-light-color: var(--eds-theme-color-border-brand-primary-subtle);
+  --border-dark-color: var(--eds-theme-color-icon-brand-primary);
+
+  background: var(--eds-theme-color-background-brand-primary-default);
+  color: var(--eds-theme-color-text-brand-primary);
+}
+
+@define-mixin messagingNeutral {
+  --border-light-color: var(--eds-theme-color-border-neutral-subtle);
+  --border-dark-color: var(--eds-theme-color-icon-neutral-subtle);
+
+  background: var(--eds-theme-color-background-neutral-subtle);
+  color: var(--eds-theme-color-text-neutral-default);
+}
+
+@define-mixin messagingSuccess {
+  --border-light-color: var(--eds-theme-color-border-utility-success-default);
+  --border-dark-color: var(--eds-theme-color-icon-utility-success);
+
+  background: var(--eds-theme-color-background-utility-success);
+  color: var(--eds-theme-color-text-utility-success);
+}
+
+@define-mixin messagingWarning {
+  --border-light-color: var(--eds-theme-color-border-utility-warning-subtle);
+  --border-dark-color: var(--eds-theme-color-icon-utility-warning);
+
+  background: var(--eds-theme-color-background-utility-warning);
+  color: var(--eds-theme-color-text-utility-warning);
+}
+
+@define-mixin messagingAlert {
+  --border-light-color: var(--eds-theme-color-border-utility-error-subtle);
+  --border-dark-color: var(--eds-theme-color-icon-utility-error);
+
+  background: var(--eds-theme-color-background-utility-error);
+  color: var(--eds-theme-color-text-utility-error);
+}
