@@ -29,15 +29,13 @@ export type ClickableStyleProps<IComponent extends React.ElementType> = {
    */
   size?: 'sm' | 'md' | 'lg';
   /**
-   * Available _stylistic_ variations available for the ClickableStyle component
+   * Available _color_ variations available for the ClickableStyle component
    */
-  variant?:
-    | 'primary'
-    | 'secondary'
-    | 'tertiary'
-    | 'icon'
-    | 'link'
-    | 'destructive';
+  status?: 'brand' | 'neutral' | 'success' | 'warning' | 'error';
+  /**
+   * Available _shape_ variations available for the ClickableStyle component
+   */
+  variant?: 'primary' | 'secondary' | 'icon' | 'link';
 } & React.ComponentProps<IComponent>;
 
 /**
@@ -57,11 +55,25 @@ export const ClickableStyle = React.forwardRef(
       className,
       fullWidth,
       size = 'lg',
+      status = 'brand',
       variant = 'primary',
       ...other
     }: ClickableStyleProps<IComponent>,
     ref: React.ForwardedRef<HTMLElement>,
   ) => {
+    const nonPrimaryStatuses = ['neutral', 'success', 'warning'];
+    if (
+      variant === 'primary' &&
+      nonPrimaryStatuses.includes(status) &&
+      process.env.NODE_ENV !== 'production'
+    ) {
+      console.warn(
+        `*** Invalid prop combo warning ***:\n`,
+        `This component does not support using the '${status}' status with a 'primary' variant.`,
+        `The 'primary' variant can only be used with the 'brand' and 'error' statuses.`,
+      );
+    }
+
     const componentClassName = clsx(
       // Base styles
       styles['clickable-style'],
@@ -75,10 +87,14 @@ export const ClickableStyle = React.forwardRef(
       // Variants
       variant === 'primary' && styles['clickable-style--primary'],
       variant === 'secondary' && styles['clickable-style--secondary'],
-      variant === 'tertiary' && styles['clickable-style--tertiary'],
       variant === 'icon' && styles['clickable-style--icon'],
       variant === 'link' && styles['clickable-style--link'],
-      variant === 'destructive' && styles['clickable-style--destructive'],
+      // Colors
+      status === 'brand' && styles['clickable-style--brand'],
+      status === 'neutral' && styles['clickable-style--neutral'],
+      status === 'success' && styles['clickable-style--success'],
+      status === 'warning' && styles['clickable-style--warning'],
+      status === 'error' && styles['clickable-style--error'],
       // Other options
       fullWidth && styles['clickable-style--full-width'],
     );
