@@ -149,10 +149,10 @@
 }
 
 /**
- * Banner alert
+ * Banner error
  */
-.banner--alert {
-  @mixin messagingAlert;
+.banner--error {
+  @mixin messagingError;
 }
 
 /**
