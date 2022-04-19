@@ -21,7 +21,7 @@
     "url": "https://github.com/chanzuckerberg/edu-design-system/issues"
   },
   "scripts": {
-    "build": "yarn build:clean && yarn build:tokens && yarn build:js && yarn build:styles && copy-icons-to-lib",
+    "build": "yarn build:clean && yarn build:tokens && yarn build:js && yarn build:styles && yarn copy-icons-to-lib",
     "build:clean": "rm -rf lib/",
     "build:icons": "svg-sprite-generate -d src/icons/ -o src/icons/spritemap/spritemap.svg && yarn generate-icon-types",
     "build:js": "tsc --project tsconfig.build.json",

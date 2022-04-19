@@ -19,10 +19,6 @@ module.exports = {
     },
   ],
   webpackFinal: async (config) => {
-    config.module.rules.push({
-      test: /\/Icon\.js$/,
-      use: path.resolve(__dirname, "./icon-component-loader.js"),
-    });
     const SVGSpritesPlugin = new SVGSpritemapPlugin(
       path.resolve(__dirname, "../src/icons/**/*.svg"),
       {
