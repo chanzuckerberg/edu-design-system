@@ -16,20 +16,22 @@
 
 /**
  * Primary disabled button styles
+ * 1) Class is doubled to increase specificity
  */
-.button--primary {
+.button--primary.button--primary {
   &:disabled,
   &:disabled:hover {
     border-color: var(--eds-theme-color-border-disabled);
     background-color: var(--eds-theme-color-background-disabled);
-    color: var(--eds-theme-color-button-primary-text);
+    color: var(--eds-theme-color-button-primary-brand-text);
   }
 }
 
 /**
  * Secondary disabled button styles
+ * 1) Class is doubled to increase specificity
  */
-.button--secondary {
+.button--secondary.button--secondary {
   &:disabled,
   &:disabled:hover {
     border-color: var(--eds-theme-color-border-disabled);
@@ -39,21 +41,10 @@
 }
 
 /**
- * Tertiary disabled button styles
- */
-.button--tertiary {
-  &:disabled,
-  &:disabled:hover {
-    border-color: var(--eds-theme-color-border-disabled);
-    background-color: var(--eds-theme-color-button-tertiary-background);
-    color: var(--eds-theme-color-text-disabled);
-  }
-}
-
-/**
  * Link disabled button styles
+ * 1) Class is doubled to increase specificity
  */
-.button--link {
+.button--link.button--link {
   &:disabled,
   &:disabled:hover {
     color: var(--eds-theme-color-text-disabled);
@@ -63,25 +54,14 @@
 
 /**
  * Icon disabled button styles
+ * 1) Class is doubled to increase specificity
  */
-.button--icon {
+.button--icon.button--icon {
   &:disabled,
   &:disabled:hover {
-    border-color: var(--eds-theme-color-button-icon-border);
+    border-color: var(--eds-theme-color-button-icon-brand-border);
     background-color: var(--eds-theme-color-button-icon-background);
     color: var(--eds-theme-color-text-disabled);
-  }
-}
-
-/**
- * Destructive disabled button styles
- */
-.button--destructive {
-  &:disabled,
-  &:disabled:hover {
-    border-color: var(--eds-theme-color-border-disabled);
-    background-color: var(--eds-theme-color-background-disabled);
-    color: var(--eds-theme-color-button-destructive-text);
   }
 }
 

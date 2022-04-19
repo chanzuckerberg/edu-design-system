@@ -40,80 +40,325 @@
 }
 
 /**
- * Primary clickable style
- * 1) Prominent clickable styles that should be applied to
- *    the most important action of a page.
+ * Primary brand clickable style
  */
-.clickable-style--primary {
-  border-color: var(--eds-theme-color-button-primary-border);
-  background-color: var(--eds-theme-color-button-primary-background);
-  color: var(--eds-theme-color-button-primary-text);
+.clickable-style--primary.clickable-style--brand {
+  border-color: var(--eds-theme-color-button-primary-brand-border);
+  background-color: var(--eds-theme-color-button-primary-brand-background);
+  color: var(--eds-theme-color-button-primary-brand-text);
 
   &:hover,
   &:focus {
-    border-color: var(--eds-theme-color-button-primary-border-hover);
-    background-color: var(--eds-theme-color-button-primary-background-hover);
-    color: var(--eds-theme-color-button-primary-text-hover);
+    border-color: var(--eds-theme-color-button-primary-brand-border-hover);
+    background-color: var(
+      --eds-theme-color-button-primary-brand-background-hover
+    );
+    color: var(--eds-theme-color-button-primary-brand-text-hover);
   }
 
   &:active {
-    border-color: var(--eds-theme-color-button-primary-border-active);
-    background-color: var(--eds-theme-color-button-primary-background-active);
-    color: var(--eds-theme-color-button-primary-text-active);
+    border-color: var(--eds-theme-color-button-primary-brand-border-active);
+    background-color: var(
+      --eds-theme-color-button-primary-brand-background-active
+    );
+    color: var(--eds-theme-color-button-primary-brand-text-active);
   }
 }
 
 /**
- * Secondary clickable style
- * 1) Medium prominence clickable style used for less important actions
+ * Primary error clickable style
  */
-.clickable-style--secondary {
-  border-color: var(--eds-theme-color-button-secondary-border);
-  background-color: var(--eds-theme-color-button-secondary-background);
-  color: var(--eds-theme-color-button-secondary-text);
+.clickable-style--primary.clickable-style--error {
+  border-color: var(--eds-theme-color-button-primary-error-border);
+  background-color: var(--eds-theme-color-button-primary-error-background);
+  color: var(--eds-theme-color-button-primary-error-text);
 
   &:hover,
   &:focus {
-    border-color: var(--eds-theme-color-button-secondary-border-hover);
-    background-color: var(--eds-theme-color-button-secondary-background-hover);
-    color: var(--eds-theme-color-button-secondary-text-hover);
+    border-color: var(--eds-theme-color-button-primary-error-border-hover);
+    background-color: var(
+      --eds-theme-color-button-primary-error-background-hover
+    );
+    color: var(--eds-theme-color-button-primary-error-text-hover);
   }
 
   &:active {
-    border-color: var(--eds-theme-color-button-secondary-border-active);
-    background-color: var(--eds-theme-color-button-secondary-background-active);
-    color: var(--eds-theme-color-button-secondary-text-active);
+    border-color: var(--eds-theme-color-button-primary-error-border-active);
+    background-color: var(
+      --eds-theme-color-button-primary-error-background-active
+    );
+    color: var(--eds-theme-color-button-primary-error-text-active);
   }
 }
 
 /**
- * Tertiary clickable style
- * 1) Least prominent clickable style used for least important actions on the page
+ * Secondary brand clickable style
  */
-.clickable-style--tertiary {
-  border-color: var(--eds-theme-color-button-tertiary-border);
-  background-color: var(--eds-theme-color-button-tertiary-background);
-  color: var(--eds-theme-color-button-tertiary-text);
+.clickable-style--secondary.clickable-style--brand {
+  border-color: var(--eds-theme-color-button-secondary-brand-border);
+  background-color: var(--eds-theme-color-button-secondary-brand-background);
+  color: var(--eds-theme-color-button-secondary-brand-text);
 
   &:hover,
   &:focus {
-    border-color: var(--eds-theme-color-button-tertiary-border-hover);
-    background-color: var(--eds-theme-color-button-tertiary-background-hover);
-    color: var(--eds-theme-color-button-tertiary-text-hover);
+    border-color: var(--eds-theme-color-button-secondary-brand-border-hover);
+    background-color: var(
+      --eds-theme-color-button-secondary-brand-background-hover
+    );
+    color: var(--eds-theme-color-button-secondary-brand-text-hover);
   }
 
   &:active {
-    border-color: var(--eds-theme-color-button-tertiary-border-active);
-    background-color: var(--eds-theme-color-button-tertiary-background-active);
-    color: var(--eds-theme-color-button-tertiary-text-active);
+    border-color: var(--eds-theme-color-button-secondary-brand-border-active);
+    background-color: var(
+      --eds-theme-color-button-secondary-brand-background-active
+    );
+    color: var(--eds-theme-color-button-secondary-brand-text-active);
   }
 }
 
 /**
- * Link clickable style
- * 1) A clickable style that is visually styled like a text link
- * 2) Inherits size from surrounding text
- * 3) Spacing between text and icon scales with text size
+ * Secondary neutral clickable style
+ */
+.clickable-style--secondary.clickable-style--neutral {
+  border-color: var(--eds-theme-color-button-secondary-neutral-border);
+  background-color: var(--eds-theme-color-button-secondary-neutral-background);
+  color: var(--eds-theme-color-button-secondary-neutral-text);
+
+  &:hover,
+  &:focus {
+    border-color: var(--eds-theme-color-button-secondary-neutral-border-hover);
+    background-color: var(
+      --eds-theme-color-button-secondary-neutral-background-hover
+    );
+    color: var(--eds-theme-color-button-secondary-neutral-text-hover);
+  }
+
+  &:active {
+    border-color: var(--eds-theme-color-button-secondary-neutral-border-active);
+    background-color: var(
+      --eds-theme-color-button-secondary-neutral-background-active
+    );
+    color: var(--eds-theme-color-button-secondary-neutral-text-active);
+  }
+}
+
+/**
+ * Secondary success clickable style
+ */
+.clickable-style--secondary.clickable-style--success {
+  border-color: var(--eds-theme-color-button-secondary-success-border);
+  background-color: var(--eds-theme-color-button-secondary-success-background);
+  color: var(--eds-theme-color-button-secondary-success-text);
+
+  &:hover,
+  &:focus {
+    border-color: var(--eds-theme-color-button-secondary-success-border-hover);
+    background-color: var(
+      --eds-theme-color-button-secondary-success-background-hover
+    );
+    color: var(--eds-theme-color-button-secondary-success-text-hover);
+  }
+
+  &:active {
+    border-color: var(--eds-theme-color-button-secondary-success-border-active);
+    background-color: var(
+      --eds-theme-color-button-secondary-success-background-active
+    );
+    color: var(--eds-theme-color-button-secondary-success-text-active);
+  }
+}
+
+/**
+ * Secondary warning clickable style
+ */
+.clickable-style--secondary.clickable-style--warning {
+  border-color: var(--eds-theme-color-button-secondary-warning-border);
+  background-color: var(--eds-theme-color-button-secondary-warning-background);
+  color: var(--eds-theme-color-button-secondary-warning-text);
+
+  &:hover,
+  &:focus {
+    border-color: var(--eds-theme-color-button-secondary-warning-border-hover);
+    background-color: var(
+      --eds-theme-color-button-secondary-warning-background-hover
+    );
+    color: var(--eds-theme-color-button-secondary-warning-text-hover);
+  }
+
+  &:active {
+    border-color: var(--eds-theme-color-button-secondary-warning-border-active);
+    background-color: var(
+      --eds-theme-color-button-secondary-warning-background-active
+    );
+    color: var(--eds-theme-color-button-secondary-warning-text-active);
+  }
+}
+
+/**
+ * Secondary error clickable style
+ */
+.clickable-style--secondary.clickable-style--error {
+  border-color: var(--eds-theme-color-button-secondary-error-border);
+  background-color: var(--eds-theme-color-button-secondary-error-background);
+  color: var(--eds-theme-color-button-secondary-error-text);
+
+  &:hover,
+  &:focus {
+    border-color: var(--eds-theme-color-button-secondary-error-border-hover);
+    background-color: var(
+      --eds-theme-color-button-secondary-error-background-hover
+    );
+    color: var(--eds-theme-color-button-secondary-error-text-hover);
+  }
+
+  &:active {
+    border-color: var(--eds-theme-color-button-secondary-error-border-active);
+    background-color: var(
+      --eds-theme-color-button-secondary-error-background-active
+    );
+    color: var(--eds-theme-color-button-secondary-error-text-active);
+  }
+}
+
+/**
+ * Icon brand clickable style
+ * 1) A clickable style that strips out borders, backgrounds, etc
+ * 2) Use for Close "X" buttons, tooltip icons, and other
+ */
+.clickable-style--icon.clickable-style--brand {
+  border-color: var(--eds-theme-color-button-icon-brand-border);
+  background-color: var(--eds-theme-color-button-icon-brand-background);
+  color: var(--eds-theme-color-button-icon-brand-text);
+
+  &:hover,
+  &:focus {
+    border-color: var(--eds-theme-color-button-icon-brand-border-hover);
+    background-color: var(--eds-theme-color-button-icon-brand-background-hover);
+    color: var(--eds-theme-color-button-icon-brand-text-hover);
+  }
+
+  &:active {
+    border-color: var(--eds-theme-color-button-icon-brand-border-active);
+    background-color: var(
+      --eds-theme-color-button-icon-brand-background-active
+    );
+    color: var(--eds-theme-color-button-icon-brand-text-active);
+  }
+}
+
+/**
+ * Icon neutral clickable style
+ * 1) A clickable style that strips out borders, backgrounds, etc
+ * 2) Use for Close "X" buttons, tooltip icons, and other
+ */
+.clickable-style--icon.clickable-style--neutral {
+  border-color: var(--eds-theme-color-button-icon-neutral-border);
+  background-color: var(--eds-theme-color-button-icon-neutral-background);
+  color: var(--eds-theme-color-button-icon-neutral-text);
+
+  &:hover,
+  &:focus {
+    border-color: var(--eds-theme-color-button-icon-neutral-border-hover);
+    background-color: var(
+      --eds-theme-color-button-icon-neutral-background-hover
+    );
+    color: var(--eds-theme-color-button-icon-neutral-text-hover);
+  }
+
+  &:active {
+    border-color: var(--eds-theme-color-button-icon-neutral-border-active);
+    background-color: var(
+      --eds-theme-color-button-icon-neutral-background-active
+    );
+    color: var(--eds-theme-color-button-icon-neutral-text-active);
+  }
+}
+
+/**
+ * Icon success clickable style
+ * 1) A clickable style that strips out borders, backgrounds, etc
+ * 2) Use for Close "X" buttons, tooltip icons, and other
+ */
+.clickable-style--icon.clickable-style--success {
+  border-color: var(--eds-theme-color-button-icon-success-border);
+  background-color: var(--eds-theme-color-button-icon-success-background);
+  color: var(--eds-theme-color-button-icon-success-text);
+
+  &:hover,
+  &:focus {
+    border-color: var(--eds-theme-color-button-icon-success-border-hover);
+    background-color: var(
+      --eds-theme-color-button-icon-success-background-hover
+    );
+    color: var(--eds-theme-color-button-icon-success-text-hover);
+  }
+
+  &:active {
+    border-color: var(--eds-theme-color-button-icon-success-border-active);
+    background-color: var(
+      --eds-theme-color-button-icon-success-background-active
+    );
+    color: var(--eds-theme-color-button-icon-success-text-active);
+  }
+}
+
+/**
+ * Icon warning clickable style
+ * 1) A clickable style that strips out borders, backgrounds, etc
+ * 2) Use for Close "X" buttons, tooltip icons, and other
+ */
+.clickable-style--icon.clickable-style--warning {
+  border-color: var(--eds-theme-color-button-icon-warning-border);
+  background-color: var(--eds-theme-color-button-icon-warning-background);
+  color: var(--eds-theme-color-button-icon-warning-text);
+
+  &:hover,
+  &:focus {
+    border-color: var(--eds-theme-color-button-icon-warning-border-hover);
+    background-color: var(
+      --eds-theme-color-button-icon-warning-background-hover
+    );
+    color: var(--eds-theme-color-button-icon-warning-text-hover);
+  }
+
+  &:active {
+    border-color: var(--eds-theme-color-button-icon-warning-border-active);
+    background-color: var(
+      --eds-theme-color-button-icon-warning-background-active
+    );
+    color: var(--eds-theme-color-button-icon-warning-text-active);
+  }
+}
+
+/**
+ * Icon error clickable style
+ * 1) A clickable style that strips out borders, backgrounds, etc
+ * 2) Use for Close "X" buttons, tooltip icons, and other
+ */
+.clickable-style--icon.clickable-style--error {
+  border-color: var(--eds-theme-color-button-icon-error-border);
+  background-color: var(--eds-theme-color-button-icon-error-background);
+  color: var(--eds-theme-color-button-icon-error-text);
+
+  &:hover,
+  &:focus {
+    border-color: var(--eds-theme-color-button-icon-error-border-hover);
+    background-color: var(--eds-theme-color-button-icon-error-background-hover);
+    color: var(--eds-theme-color-button-icon-error-text-hover);
+  }
+
+  &:active {
+    border-color: var(--eds-theme-color-button-icon-error-border-active);
+    background-color: var(
+      --eds-theme-color-button-icon-error-background-active
+    );
+    color: var(--eds-theme-color-button-icon-error-text-active);
+  }
+}
+
+/**
+ * Link disabled button styles
  */
 .clickable-style--link {
   @mixin textLink;
@@ -125,61 +370,89 @@
   gap: 0.25em; /* 2 */
 }
 
+/**
+ * Link brand clickable style
+ */
+.clickable-style--link.clickable-style--brand {
+  color: var(--eds-theme-color-button-link-brand);
+
+  &:hover,
+  &:focus {
+    color: var(--eds-theme-color-button-link-brand-hover);
+  }
+
+  &:active {
+    color: var(--eds-theme-color-button-link-brand-active);
+  }
+}
+
+/**
+ * Link neutral clickable style
+ */
+.clickable-style--link.clickable-style--neutral {
+  color: var(--eds-theme-color-button-link-neutral);
+
+  &:hover,
+  &:focus {
+    color: var(--eds-theme-color-button-link-neutral-hover);
+  }
+
+  &:active {
+    color: var(--eds-theme-color-button-link-neutral-active);
+  }
+}
+
+/**
+ * Link success clickable style
+ */
+.clickable-style--link.clickable-style--success {
+  color: var(--eds-theme-color-button-link-success);
+
+  &:hover,
+  &:focus {
+    color: var(--eds-theme-color-button-link-success-hover);
+  }
+
+  &:active {
+    color: var(--eds-theme-color-button-link-success-active);
+  }
+}
+
+/**
+ * Link warning clickable style
+ */
+.clickable-style--link.clickable-style--warning {
+  color: var(--eds-theme-color-button-link-warning);
+
+  &:hover,
+  &:focus {
+    color: var(--eds-theme-color-button-link-warning-hover);
+  }
+
+  &:active {
+    color: var(--eds-theme-color-button-link-warning-active);
+  }
+}
+
+/**
+ * Link error clickable style
+ */
+.clickable-style--link.clickable-style--error {
+  color: var(--eds-theme-color-button-link-error);
+
+  &:hover,
+  &:focus {
+    color: var(--eds-theme-color-button-link-error-hover);
+  }
+
+  &:active {
+    color: var(--eds-theme-color-button-link-error-active);
+  }
+}
+
 /* Style icons that may be in the clickable style children */
 .clickable-style--link svg {
   --icon-size-default: 1.25em;
-}
-
-/**
- * Icon clickable style
- * 1) A clickable style that strips out borders, backgrounds, etc
- * 2) Use for Close "X" buttons, tooltip icons, and other
- */
-.clickable-style--icon {
-  border-color: var(--eds-theme-color-button-icon-border);
-  background-color: var(--eds-theme-color-button-icon-background);
-  color: var(--eds-theme-color-button-icon-text);
-
-  &:hover,
-  &:focus {
-    border-color: var(--eds-theme-color-button-icon-border-hover);
-    background-color: var(--eds-theme-color-button-icon-background-hover);
-    color: var(--eds-theme-color-button-icon-text-hover);
-  }
-
-  &:active {
-    border-color: var(--eds-theme-color-button-icon-border-active);
-    background-color: var(--eds-theme-color-button-icon-background-active);
-    color: var(--eds-theme-color-button-icon-text-active);
-  }
-}
-
-/**
- * Destructive clickable style
- * 1) A bold red clickable style
- * 2) Use for destructive actions like deleting a user's account, deleting a course, etc
- */
-.clickable-style--destructive {
-  border-color: var(--eds-theme-color-button-destructive-border);
-  background-color: var(--eds-theme-color-button-destructive-background);
-  color: var(--eds-theme-color-button-destructive-text);
-
-  &:hover,
-  &:focus {
-    border-color: var(--eds-theme-color-button-destructive-border-hover);
-    background-color: var(
-      --eds-theme-color-button-destructive-background-hover
-    );
-    color: var(--eds-theme-color-button-destructive-text-hover);
-  }
-
-  &:active {
-    border-color: var(--eds-theme-color-button-destructive-border-active);
-    background-color: var(
-      --eds-theme-color-button-destructive-background-active
-    );
-    color: var(--eds-theme-color-button-destructive-text-active);
-  }
 }
 
 /**
