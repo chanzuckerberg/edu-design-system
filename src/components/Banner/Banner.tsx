@@ -22,7 +22,7 @@ export interface Props {
   /**
    * The element the description renders as
    */
-  descriptionAs?: string;
+  descriptionAs?: 'p' | 'span';
   /**
    * Toggles the ability to dismiss the banner via an close button in the top right of the banner
    */
@@ -193,7 +193,7 @@ export const Banner = ({
               {title}
             </Heading>
           )}
-          {description && <Text>{description}</Text>}
+          {description && <Text as={descriptionAs}>{description}</Text>}
         </div>
 
         {action && (
