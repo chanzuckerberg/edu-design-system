@@ -9,13 +9,10 @@
 # production
 /build
 _site
+lib
 storybook-static
 storybook
 storybook-components
-
-# lib folders (allowing built tokens)
-lib/*
-!lib/tokens/
 
 # Component CSS
 
