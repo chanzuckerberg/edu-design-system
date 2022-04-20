@@ -19,7 +19,7 @@
 
   &:hover,
   &:focus {
-    background: var(--eds-theme-color-button-primary-background-hover);
+    background: var(--eds-theme-color-button-primary-brand-background-hover);
   }
 
   &:active {
