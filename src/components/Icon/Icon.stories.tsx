@@ -1,13 +1,12 @@
 import type { StoryObj } from '@storybook/react';
 import React from 'react';
 import { Icon, IconProps } from './Icon';
-import styles from './Icon.stories.module.css';
 import * as ColorTokens from '../../tokens-dist/colors';
 import { ALL_ICONS } from '../../util/allIcons';
 import Text from '../Text';
 
 export default {
-  title: 'Icon',
+  title: 'Atoms/Icons/Icon',
   component: Icon,
   argTypes: {
     name: {
@@ -106,24 +105,4 @@ export const InText: StoryObj<IconProps> = {
       </Text>
     );
   },
-};
-
-export const IconGrid: StoryObj = {
-  render: () => (
-    <div>
-      <ul className={styles['icon-grid']}>
-        {ALL_ICONS.map((name, index) => {
-          return (
-            <li
-              className={styles['icon-grid__item']}
-              key={`icon-grid-item-${index}`}
-            >
-              <Icon name={name} purpose="decorative" />
-              <span className={styles['icon-grid__text']}>{name}</span>
-            </li>
-          );
-        })}
-      </ul>
-    </div>
-  ),
 };
