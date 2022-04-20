@@ -27,5 +27,6 @@ export const FieldsetItems = ({
   className,
 }: FieldsetItemsProps) => {
   const componentClassName = clsx(className, styles['fieldset-items']);
+  // @ts-expect-error TODO: investigate error
   return <Component className={componentClassName}>{children}</Component>;
 };
