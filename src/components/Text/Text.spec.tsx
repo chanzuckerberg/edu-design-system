@@ -1,8 +1,9 @@
 import { generateSnapshots } from "@chanzuckerberg/story-utils";
 import { render, screen } from "@testing-library/react";
 
+import userEvent from "@testing-library/user-event";
 import React from "react";
-import Text from "./Text";
+import { Text } from "./Text";
 import * as TextStoryFile from "./Text.stories";
 
 describe("<Text />", () => {
@@ -14,27 +15,31 @@ describe("<Text />", () => {
         Some Text
       </Text>,
     );
-    expect(screen.getByText("Some Text")).toMatchInlineSnapshot(`
-      <p
-        class="passthrough typography sizeBody colorBase"
-      >
-        Some Text
-      </p>
-    `);
+    expect(screen.getByText("Some Text").classList).toContain("passthrough");
   });
+  it("should handle refs", async () => {
+    const HelperComponent = ({ as }: { as: "p" | "span" }) => {
+      const refContainer = React.useRef(null);
+      const onButtonClick = () => {
+        expect(refContainer.current).toBe(
+          screen.getByText(`Ref container parent test ${as}`),
+        );
+      };
+      return (
+        <>
+          <Text as={as} ref={refContainer}>
+            Ref container parent test {as}
+          </Text>
+          <button onClick={onButtonClick}>Test ref</button>
+        </>
+      );
+    };
+    const { rerender } = render(<HelperComponent as="p" />);
+    expect(screen.getByText("Ref container parent test p")).toBeTruthy();
+    userEvent.click(screen.getByRole("button"));
 
-  it("should pass the passthrough ref", () => {
-    const textRef = React.createRef<HTMLSpanElement>();
-    render(
-      <Text ref={textRef} size="body" tabIndex={-1}>
-        Some Text
-      </Text>,
-    );
-
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-    textRef.current!.focus();
-
-    const textElement = screen.getByText("Some Text");
-    expect(textElement).toHaveFocus();
+    rerender(<HelperComponent as="span" />);
+    expect(screen.getByText("Ref container parent test span")).toBeTruthy();
+    userEvent.click(screen.getByRole("button"));
   });
 });

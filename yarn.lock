@@ -1698,6 +1698,7 @@ __metadata:
     "@storybook/testing-react": ^1.2.4
     "@testing-library/jest-dom": ^5.16.2
     "@testing-library/react": ^12.1.4
+    "@testing-library/user-event": ^13.5.0
     "@tippyjs/react": ^4.2.6
     "@types/jest": ^27.4.1
     "@types/react": ^17.0.40
@@ -4264,7 +4265,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/user-event@npm:^13.2.1":
+"@testing-library/user-event@npm:^13.2.1, @testing-library/user-event@npm:^13.5.0":
   version: 13.5.0
   resolution: "@testing-library/user-event@npm:13.5.0"
   dependencies:

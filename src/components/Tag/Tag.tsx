@@ -64,7 +64,6 @@ function Tag({ color, children, className, icon, variant = "flat" }: Props) {
       )}
       color={color}
       size="sm"
-      spacing="none"
       weight="bold"
     >
       {icon}

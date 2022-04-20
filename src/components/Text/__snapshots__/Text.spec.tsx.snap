@@ -2,7 +2,7 @@
 
 exports[`<Text /> Body story renders snapshot 1`] = `
 <p
-  class="typography sizeBody colorBase"
+  class="text text--body"
 >
   Body paragraph 16/24
 </p>
@@ -10,7 +10,8 @@ exports[`<Text /> Body story renders snapshot 1`] = `
 
 exports[`<Text /> BodyColorInfoBold story renders snapshot 1`] = `
 <p
-  class="typography sizeBody colorInfo weightBold"
+  class="text text--body text--bold-weight"
+  color="info"
 >
   Info color body text, bold
 </p>
@@ -18,7 +19,7 @@ exports[`<Text /> BodyColorInfoBold story renders snapshot 1`] = `
 
 exports[`<Text /> BodySmall story renders snapshot 1`] = `
 <p
-  class="typography sizeSm colorBase"
+  class="text text--sm"
 >
   Body small 14/20
 </p>
@@ -26,7 +27,7 @@ exports[`<Text /> BodySmall story renders snapshot 1`] = `
 
 exports[`<Text /> BodyXSmall story renders snapshot 1`] = `
 <p
-  class="typography sizeXs colorBase"
+  class="text text--xs"
 >
   Body Xsmall 12/16
 </p>
@@ -34,7 +35,7 @@ exports[`<Text /> BodyXSmall story renders snapshot 1`] = `
 
 exports[`<Text /> Caption story renders snapshot 1`] = `
 <p
-  class="typography sizeCaption colorBase"
+  class="text text--caption"
 >
   Caption 12/20
 </p>
@@ -42,7 +43,7 @@ exports[`<Text /> Caption story renders snapshot 1`] = `
 
 exports[`<Text /> Overline story renders snapshot 1`] = `
 <p
-  class="typography sizeOverline colorBase"
+  class="text text--overline"
 >
   Overline 12/20
 </p>
@@ -50,11 +51,13 @@ exports[`<Text /> Overline story renders snapshot 1`] = `
 
 exports[`<Text /> TextColorInherit story renders snapshot 1`] = `
 <p
-  class="typography sizeBody colorAlert"
+  class="text text--body"
+  color="alert"
 >
   This text surrounds the 
   <span
-    class="typography sizeBody colorInherit"
+    class="text text--body"
+    color="inherit"
   >
     Child Text
   </span>

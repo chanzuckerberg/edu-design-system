@@ -1,21 +1,34 @@
-import React, { forwardRef } from "react";
+import clsx from "clsx";
+import React, { forwardRef, ForwardedRef } from "react";
+import styles from "./Text.module.css";
 
-import Typography, { TypographyProps } from "../common/typography";
+export type Size = "body" | "sm" | "md" | "lg" | "xs" | "caption" | "overline";
 
-type TextElement = "p" | "span";
+export type Variant =
+  | "error"
+  | "base"
+  | "brand"
+  | "inherit"
+  | "neutral"
+  | "success"
+  | "warning"
+  | "white"
+  /**
+   * @deprecated Info variant is deprecated.
+   */
+  | "info";
 
-type Props = {
+export type Props = {
   /**
    * Controls whether to render text inline (defaults to "p");
    */
-  as?: TextElement;
-  children: TypographyProps<TextElement>["children"];
-  className?: TypographyProps<TextElement>["className"];
-  color?: TypographyProps<TextElement>["color"];
-  size?: TypographyProps<TextElement>["size"];
-  spacing?: TypographyProps<TextElement>["spacing"];
+  as?: "p" | "span";
+  children: React.ReactNode;
+  className?: string;
+  variant?: Variant;
+  size?: Size;
   tabIndex?: number;
-  weight?: TypographyProps<TextElement>["weight"];
+  weight?: "bold" | "normal" | null;
 } & React.HTMLAttributes<HTMLElement>;
 
 /**
@@ -23,27 +36,44 @@ type Props = {
  * import {Text} from "@chanzuckerberg/eds";
  * ```
  */
-const Text = forwardRef<HTMLElement, Props>(
+export const Text = forwardRef(
   (
     {
-      as,
+      as = "p",
       children,
+      className,
+      variant,
       size = "body",
+      weight,
       /**
        * Components that wrap typography sometimes requires props such as event handlers
        * to be passed down into the element. One example is the tooltip component.  It
        * attaches a onHover and onFocus event to the element to determine when to
        * trigger the overlay.
-       */ ...rest
+       */ ...other
     }: Props,
-    ref,
-  ) => (
-    <Typography as={as || "p"} ref={ref} size={size} {...rest}>
-      {children}
-    </Typography>
-  ),
+    ref: ForwardedRef<HTMLParagraphElement>, // Setting as HTMLParagraphElement to satisfy TS, but unit test covers both span and p cases for sanity
+  ) => {
+    if (variant === "info" && process.env.NODE_ENV !== "production") {
+      console.warn(
+        "Info variant is deprecated, please consider another variant.",
+      );
+    }
+    const TagName = as;
+    const componentClassName = clsx(
+      className,
+      styles["text"],
+      styles[`text--${size}`],
+      variant && styles[`text--${variant}`],
+      weight && styles[`text--${weight}-weight`],
+    );
+    return (
+      <TagName className={componentClassName} ref={ref} {...other}>
+        {children}
+      </TagName>
+    );
+  },
 );
-
-Text.displayName = "Text"; // Satisfy eslint.
+Text.displayName = "Text"; // Satisfy eslint
 
 export default Text;

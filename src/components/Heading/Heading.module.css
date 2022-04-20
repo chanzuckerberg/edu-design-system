@@ -1,0 +1,68 @@
+/* sizes */
+
+.heading,
+.heading--size-body {
+  @apply text-body font-normal mt-0 mb-0;
+}
+
+.heading--size-h1 {
+  @apply text-h1 font-bold;
+}
+
+.heading--size-h2 {
+  @apply text-h2 font-bold;
+}
+
+.heading--size-h3 {
+  @apply text-h3 font-bold;
+}
+
+.heading--size-h4 {
+  @apply text-h4 font-bold;
+}
+
+.heading--size-h5 {
+  @apply text-h5 font-bold;
+}
+
+/* TODO: Doesn't exist yet */
+.heading--size-h6 {
+  @apply text-h5 font-bold;
+}
+
+/* Color Variants */
+.heading--variant-error {
+  @apply text-alert-700;
+}
+
+.heading--variant-base {
+  @apply text-black;
+}
+
+.heading--variant-brand {
+  @apply text-brand-700;
+}
+
+.heading--variant-info {
+  @apply text-info-700;
+}
+
+.heading--variant-inherit {
+  color: inherit;
+}
+
+.heading--variant-neutral {
+  @apply text-neutral-500;
+}
+
+.heading--variant-success {
+  @apply text-success-700;
+}
+
+.heading--variant-warning {
+  @apply text-warning-700;
+}
+
+.heading--variant-white {
+  @apply text-white;
+}

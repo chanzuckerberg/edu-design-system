@@ -2,7 +2,7 @@
 
 exports[`<Heading /> Heading1 story renders snapshot 1`] = `
 <h1
-  class="typography sizeH1 colorBase"
+  class="heading heading--size-h1"
 >
   Heading 1 24/32
 </h1>
@@ -10,7 +10,7 @@ exports[`<Heading /> Heading1 story renders snapshot 1`] = `
 
 exports[`<Heading /> Heading1AsHeading4 story renders snapshot 1`] = `
 <h1
-  class="typography sizeH4 colorBase"
+  class="heading heading--size-h4"
 >
   Heading 1 styled as Heading 4
 </h1>
@@ -18,7 +18,7 @@ exports[`<Heading /> Heading1AsHeading4 story renders snapshot 1`] = `
 
 exports[`<Heading /> Heading2 story renders snapshot 1`] = `
 <h2
-  class="typography sizeH2 colorBase"
+  class="heading heading--size-h2"
 >
   Heading 2 18/24
 </h2>
@@ -26,7 +26,7 @@ exports[`<Heading /> Heading2 story renders snapshot 1`] = `
 
 exports[`<Heading /> Heading3 story renders snapshot 1`] = `
 <h3
-  class="typography sizeH3 colorBase"
+  class="heading heading--size-h3"
 >
   Heading 3 16/24
 </h3>
@@ -34,7 +34,7 @@ exports[`<Heading /> Heading3 story renders snapshot 1`] = `
 
 exports[`<Heading /> Heading4 story renders snapshot 1`] = `
 <h4
-  class="typography sizeH4 colorBase"
+  class="heading heading--size-h4"
 >
   Heading 4 14/24
 </h4>
@@ -42,7 +42,8 @@ exports[`<Heading /> Heading4 story renders snapshot 1`] = `
 
 exports[`<Heading /> Heading4ColorNeutral story renders snapshot 1`] = `
 <h4
-  class="typography sizeH4 colorNeutral"
+  class="heading heading--size-h4"
+  color="neutral"
 >
   Neutral color Heading 4
 </h4>
@@ -50,7 +51,7 @@ exports[`<Heading /> Heading4ColorNeutral story renders snapshot 1`] = `
 
 exports[`<Heading /> Heading5 story renders snapshot 1`] = `
 <h5
-  class="typography sizeH5 colorBase"
+  class="heading heading--size-h5"
 >
   Heading 5 12/20
 </h5>

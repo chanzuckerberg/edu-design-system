@@ -1,5 +1,6 @@
 import { StoryObj } from "@storybook/react";
 import React from "react";
+import Heading from "../Heading";
 import Text from "../Text";
 import {
   colors,
@@ -56,10 +57,10 @@ export const LinkInBody: StoryObj<Args> = {
 
 export const LinkInHeading: StoryObj<Args> = {
   render: (args) => (
-    <Text size="h1">
+    <Heading size="h1">
       This text surrounds the <Link {...args} /> and shows that the link should
       adhere to its appearance
-    </Text>
+    </Heading>
   ),
 };
 

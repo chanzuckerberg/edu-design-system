@@ -1,0 +1,79 @@
+/* ------------------------------------*\
+    #TEXT
+\*------------------------------------ */
+
+/* sizes */
+.text,
+.text--body,
+.text--md {
+  @apply text-body font-normal mb-0;
+}
+
+.text--lg {
+  @apply text-h2 font-bold;
+}
+
+.text--sm {
+  @apply text-sm font-normal;
+}
+
+.text--xs {
+  @apply text-xs font-normal;
+}
+
+.text--caption,
+.text--overline {
+  @apply text-caption font-normal;
+}
+
+.text--overline {
+  @apply uppercase;
+}
+
+/* Color Variants */
+.text--variant-error {
+  @apply text-alert-700;
+}
+
+.text--variant-base {
+  @apply text-black;
+}
+
+.text--variant-brand {
+  @apply text-brand-700;
+}
+
+.text--variant-info {
+  @apply text-info-700;
+}
+
+.text--variant-inherit {
+  color: inherit;
+}
+
+.text--variant-neutral {
+  @apply text-neutral-500;
+}
+
+.text--variant-success {
+  @apply text-success-700;
+}
+
+.text--variant-warning {
+  @apply text-warning-700;
+}
+
+.text--variant-white {
+  @apply text-white;
+}
+
+/**
+ * Font Weights
+ */
+.text--normal-weight {
+  @apply font-normal;
+}
+
+.text--bold-weight {
+  @apply font-bold;
+}
