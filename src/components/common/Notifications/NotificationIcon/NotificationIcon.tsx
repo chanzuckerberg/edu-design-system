@@ -1,11 +1,7 @@
 import clsx from "clsx";
 import * as React from "react";
 
-import CheckCircleRoundedIcon from "../../../../icons/CheckCircleRounded";
-import ForumRoundedIcon from "../../../../icons/ForumRounded";
-import NotificationsRoundedIcon from "../../../../icons/NotificationsRounded";
-import WarningRoundedIcon from "../../../../icons/WarningRounded";
-import DangerousRoundedIcon from "../../../../icons/custom/DangerousRounded";
+import Icon, { IconProps } from "../../../Icon";
 import styles from "./NotificationIcon.module.css";
 
 export type NotificationVariant =
@@ -24,27 +20,27 @@ type Props = {
 
 export const variantToIconAssetsMap = {
   brand: {
-    icon: NotificationsRoundedIcon,
+    icon: (args: IconProps) => <Icon name="notifications" {...args} />,
     style: styles.iconBrand,
     title: "attention",
   },
   neutral: {
-    icon: ForumRoundedIcon,
+    icon: (args: IconProps) => <Icon name="forum" {...args} />,
     style: styles.iconNeutral,
     title: "notice",
   },
   success: {
-    icon: CheckCircleRoundedIcon,
+    icon: (args: IconProps) => <Icon name="check-circle" {...args} />,
     style: styles.iconSuccess,
     title: "success",
   },
   warning: {
-    icon: WarningRoundedIcon,
+    icon: (args: IconProps) => <Icon name="warning" {...args} />,
     style: styles.iconWarning,
     title: "warning",
   },
   alert: {
-    icon: DangerousRoundedIcon,
+    icon: (args: IconProps) => <Icon name="dangerous" {...args} />,
     style: styles.iconAlert,
     title: "alert",
   },

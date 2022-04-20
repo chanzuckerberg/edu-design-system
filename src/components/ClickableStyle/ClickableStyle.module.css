@@ -14,7 +14,7 @@
 
 /* Style icons that may be in the button children */
 .button svg {
-  --svg-icon-size: 2em;
+  --icon-size: 2em;
 }
 
 /* Component Sizes */
@@ -223,7 +223,7 @@
 
 /* Link icons should be the same size as the text */
 .variantLink svg {
-  --svg-icon-size: 1em;
+  --icon-size: 1em;
 }
 
 /* comes after other styles to override hover behaviors */
