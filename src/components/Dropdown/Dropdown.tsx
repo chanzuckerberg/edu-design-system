@@ -6,8 +6,8 @@ import React, {
   ElementType,
   useContext,
 } from "react";
-import CheckRoundedIcon from "../../icons/CheckRounded";
 import DropdownButton from "../DropdownButton";
+import Icon from "../Icon";
 import styles from "./Dropdown.module.css";
 
 export type OptionsAlignType = "left" | "right";
@@ -449,7 +449,7 @@ const DropdownOption = function (props: DropdownOptionProps) {
             >
               {selected && (
                 <span className={styles.selectedIconContainer}>
-                  <CheckRoundedIcon purpose="decorative" size="1.25rem" />
+                  <Icon name="check" purpose="decorative" size="1.25rem" />
                 </span>
               )}
               <span className={styles.optionContent}>{children}</span>

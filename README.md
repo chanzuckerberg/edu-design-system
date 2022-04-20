@@ -168,7 +168,8 @@ If you're also using styles from a separate library, conflicts may arise rarely 
 | Build package                         | `yarn build`            |
 | Run the component generator           | `yarn create-component` |
 
-### [Publishing](./docs/publishing.md)
+### [Icons](./docs/ICONS.md)
+### [Publishing](./docs/PUBLISHING.md)
 
 ## Project Status
 
