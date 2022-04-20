@@ -5,21 +5,21 @@ exports[`<Tag /> ColorVariants story renders snapshot 1`] = `
   class="tagList"
 >
   <span
-    class="tag tag--default text text--sm text--bold-weight"
+    class="tag tag--neutral text text--sm text--bold-weight"
   >
     <span
       class="tag__body"
     >
-      default
+      neutral
     </span>
   </span>
   <span
-    class="tag tag--go text text--sm text--bold-weight"
+    class="tag tag--success text text--sm text--bold-weight"
   >
     <span
       class="tag__body"
     >
-      go
+      success
     </span>
   </span>
   <span
@@ -32,12 +32,12 @@ exports[`<Tag /> ColorVariants story renders snapshot 1`] = `
     </span>
   </span>
   <span
-    class="tag tag--stop text text--sm text--bold-weight"
+    class="tag tag--error text text--sm text--bold-weight"
   >
     <span
       class="tag__body"
     >
-      stop
+      error
     </span>
   </span>
   <span
@@ -63,7 +63,7 @@ exports[`<Tag /> ColorVariants story renders snapshot 1`] = `
 
 exports[`<Tag /> Default story renders snapshot 1`] = `
 <span
-  class="tag tag--default text text--sm text--bold-weight"
+  class="tag tag--neutral text text--sm text--bold-weight"
 >
   <span
     class="tag__body"
@@ -78,21 +78,21 @@ exports[`<Tag /> OutlineVariants story renders snapshot 1`] = `
   class="tagList"
 >
   <span
-    class="tag tag--default tag--outline text text--sm text--bold-weight"
+    class="tag tag--neutral tag--outline text text--sm text--bold-weight"
   >
     <span
       class="tag__body"
     >
-      default
+      neutral
     </span>
   </span>
   <span
-    class="tag tag--go tag--outline text text--sm text--bold-weight"
+    class="tag tag--success tag--outline text text--sm text--bold-weight"
   >
     <span
       class="tag__body"
     >
-      go
+      success
     </span>
   </span>
   <span
@@ -105,12 +105,12 @@ exports[`<Tag /> OutlineVariants story renders snapshot 1`] = `
     </span>
   </span>
   <span
-    class="tag tag--stop tag--outline text text--sm text--bold-weight"
+    class="tag tag--error tag--outline text text--sm text--bold-weight"
   >
     <span
       class="tag__body"
     >
-      stop
+      error
     </span>
   </span>
   <span
@@ -139,7 +139,7 @@ exports[`<Tag /> WithIcon story renders snapshot 1`] = `
   class="tagList"
 >
   <span
-    class="tag tag--default tag--outline text text--sm text--bold-weight"
+    class="tag tag--neutral tag--outline text text--sm text--bold-weight"
   >
     <svg
       aria-hidden="true"
@@ -154,11 +154,11 @@ exports[`<Tag /> WithIcon story renders snapshot 1`] = `
     <span
       class="tag__body"
     >
-      default
+      neutral
     </span>
   </span>
   <span
-    class="tag tag--go tag--outline text text--sm text--bold-weight"
+    class="tag tag--success tag--outline text text--sm text--bold-weight"
   >
     <svg
       aria-hidden="true"
@@ -173,7 +173,7 @@ exports[`<Tag /> WithIcon story renders snapshot 1`] = `
     <span
       class="tag__body"
     >
-      go
+      success
     </span>
   </span>
   <span
@@ -196,7 +196,7 @@ exports[`<Tag /> WithIcon story renders snapshot 1`] = `
     </span>
   </span>
   <span
-    class="tag tag--stop tag--outline text text--sm text--bold-weight"
+    class="tag tag--error tag--outline text text--sm text--bold-weight"
   >
     <svg
       aria-hidden="true"
@@ -211,7 +211,7 @@ exports[`<Tag /> WithIcon story renders snapshot 1`] = `
     <span
       class="tag__body"
     >
-      stop
+      error
     </span>
   </span>
   <span
@@ -260,7 +260,7 @@ exports[`<Tag /> WithLongTextAndIcon story renders snapshot 1`] = `
   class="tagList"
 >
   <span
-    class="tag tag--default tag--outline text text--sm text--bold-weight"
+    class="tag tag--neutral tag--outline text text--sm text--bold-weight"
   >
     <svg
       aria-hidden="true"
@@ -279,7 +279,7 @@ exports[`<Tag /> WithLongTextAndIcon story renders snapshot 1`] = `
     </span>
   </span>
   <span
-    class="tag tag--go tag--outline text text--sm text--bold-weight"
+    class="tag tag--success tag--outline text text--sm text--bold-weight"
   >
     <svg
       aria-hidden="true"
@@ -317,7 +317,7 @@ exports[`<Tag /> WithLongTextAndIcon story renders snapshot 1`] = `
     </span>
   </span>
   <span
-    class="tag tag--stop tag--outline text text--sm text--bold-weight"
+    class="tag tag--error tag--outline text text--sm text--bold-weight"
   >
     <svg
       aria-hidden="true"

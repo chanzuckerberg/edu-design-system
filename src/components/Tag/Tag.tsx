@@ -4,10 +4,10 @@ import styles from './Tag.module.css';
 import Text from '../Text';
 
 export const VARIANTS = [
-  'default',
-  'go',
+  'neutral',
+  'success',
   'yield',
-  'stop',
+  'error',
   'warning',
   'brand',
 ] as const;
@@ -47,24 +47,21 @@ type Props = {
  * This component provides a tag (pill shaped badge) wrapper.
  */
 export const Tag = ({
-  variant = 'default',
+  variant = 'neutral',
   className,
   icon,
   text,
   hasOutline = false,
 }: Props) => {
+  const componentClassName = clsx(
+    className,
+    styles['tag'],
+    styles[`tag--${variant}`],
+    hasOutline && styles['tag--outline'],
+  );
+
   return (
-    <Text
-      as="span"
-      className={clsx(
-        className,
-        styles['tag'],
-        styles[`tag--${variant}`],
-        hasOutline && styles['tag--outline'],
-      )}
-      size="sm"
-      weight="bold"
-    >
+    <Text as="span" className={componentClassName} size="sm" weight="bold">
       {icon}
       {text && <span className={styles['tag__body']}>{text}</span>}
     </Text>
