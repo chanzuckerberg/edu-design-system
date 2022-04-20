@@ -6,14 +6,14 @@ exports[`<Button /> AllRecommendedVariants story renders snapshot 1`] = `
 >
   <li>
     <h2
-      class="mb-4 heading heading--size-h2"
+      class="headingBottomSpacing heading heading--size-h2"
     >
       Primary
     </h2>
     <ul>
       <li>
         <h3
-          class="mb-4 heading heading--size-h3"
+          class="headingBottomSpacing heading heading--size-h3"
         >
           Size Large
         </h3>
@@ -48,7 +48,7 @@ exports[`<Button /> AllRecommendedVariants story renders snapshot 1`] = `
             </button>
           </li>
           <li
-            class="mb-4"
+            class="headingBottomSpacing"
           >
             <button
               class="button sizeLarge variantFlat colorBrand"
@@ -71,12 +71,12 @@ exports[`<Button /> AllRecommendedVariants story renders snapshot 1`] = `
       </li>
       <li>
         <h3
-          class="mb-4 heading heading--size-h3"
+          class="headingBottomSpacing heading heading--size-h3"
         >
           Size Medium
         </h3>
         <div
-          class="mb-4"
+          class="headingBottomSpacing"
         >
           <button
             class="button sizeMedium variantFlat colorBrand"
@@ -88,12 +88,12 @@ exports[`<Button /> AllRecommendedVariants story renders snapshot 1`] = `
       </li>
       <li>
         <h3
-          class="mb-4 heading heading--size-h3"
+          class="headingBottomSpacing heading heading--size-h3"
         >
           Size Small
         </h3>
         <div
-          class="mb-4"
+          class="headingBottomSpacing"
         >
           <button
             class="button sizeSmall variantFlat colorBrand"
@@ -107,14 +107,14 @@ exports[`<Button /> AllRecommendedVariants story renders snapshot 1`] = `
   </li>
   <li>
     <h2
-      class="mb-4 heading heading--size-h2"
+      class="headingBottomSpacing heading heading--size-h2"
     >
       Secondary
     </h2>
     <ul>
       <li>
         <h3
-          class="mb-4 heading heading--size-h3"
+          class="headingBottomSpacing heading heading--size-h3"
         >
           Size Large
         </h3>
@@ -149,7 +149,7 @@ exports[`<Button /> AllRecommendedVariants story renders snapshot 1`] = `
             </button>
           </li>
           <li
-            class="mb-4"
+            class="headingBottomSpacing"
           >
             <button
               class="button sizeLarge variantOutline colorBrand"
@@ -172,12 +172,12 @@ exports[`<Button /> AllRecommendedVariants story renders snapshot 1`] = `
       </li>
       <li>
         <h3
-          class="mb-4 heading heading--size-h3"
+          class="headingBottomSpacing heading heading--size-h3"
         >
           Size Medium
         </h3>
         <div
-          class="mb-4"
+          class="headingBottomSpacing"
         >
           <button
             class="button sizeMedium variantOutline colorBrand"
@@ -189,12 +189,12 @@ exports[`<Button /> AllRecommendedVariants story renders snapshot 1`] = `
       </li>
       <li>
         <h3
-          class="mb-4 heading heading--size-h3"
+          class="headingBottomSpacing heading heading--size-h3"
         >
           Size Small
         </h3>
         <div
-          class="mb-4"
+          class="headingBottomSpacing"
         >
           <button
             class="button sizeSmall variantOutline colorBrand"
@@ -208,14 +208,14 @@ exports[`<Button /> AllRecommendedVariants story renders snapshot 1`] = `
   </li>
   <li>
     <h2
-      class="mb-4 heading heading--size-h2"
+      class="headingBottomSpacing heading heading--size-h2"
     >
       Tertiary
     </h2>
     <ul>
       <li>
         <h3
-          class="mb-4 heading heading--size-h3"
+          class="headingBottomSpacing heading heading--size-h3"
         >
           Size Large
         </h3>
@@ -250,7 +250,7 @@ exports[`<Button /> AllRecommendedVariants story renders snapshot 1`] = `
             </button>
           </li>
           <li
-            class="mb-4"
+            class="headingBottomSpacing"
           >
             <button
               class="button sizeLarge variantOutline colorNeutral"
@@ -273,12 +273,12 @@ exports[`<Button /> AllRecommendedVariants story renders snapshot 1`] = `
       </li>
       <li>
         <h3
-          class="mb-4 heading heading--size-h3"
+          class="headingBottomSpacing heading heading--size-h3"
         >
           Size Medium
         </h3>
         <div
-          class="mb-4"
+          class="headingBottomSpacing"
         >
           <button
             class="button sizeMedium variantOutline colorNeutral"
@@ -290,12 +290,12 @@ exports[`<Button /> AllRecommendedVariants story renders snapshot 1`] = `
       </li>
       <li>
         <h3
-          class="mb-4 heading heading--size-h3"
+          class="headingBottomSpacing heading heading--size-h3"
         >
           Size Small
         </h3>
         <div
-          class="mb-4"
+          class="headingBottomSpacing"
         >
           <button
             class="button sizeSmall variantOutline colorNeutral"
@@ -309,14 +309,14 @@ exports[`<Button /> AllRecommendedVariants story renders snapshot 1`] = `
   </li>
   <li>
     <h2
-      class="mb-4 heading heading--size-h2"
+      class="headingBottomSpacing heading heading--size-h2"
     >
       Plain
     </h2>
     <ul>
       <li>
         <h3
-          class="mb-4 heading heading--size-h3"
+          class="headingBottomSpacing heading heading--size-h3"
         >
           Size Large
         </h3>
@@ -361,7 +361,7 @@ exports[`<Button /> AllRecommendedVariants story renders snapshot 1`] = `
             </button>
           </li>
           <li
-            class="mb-4"
+            class="headingBottomSpacing"
           >
             <button
               class="button sizeLarge variantPlain colorBrand"
@@ -388,7 +388,7 @@ exports[`<Button /> AllRecommendedVariants story renders snapshot 1`] = `
       </li>
       <li>
         <h3
-          class="mb-4 heading heading--size-h3"
+          class="headingBottomSpacing heading heading--size-h3"
         >
           Size Medium
         </h3>
@@ -460,7 +460,7 @@ exports[`<Button /> AllRecommendedVariants story renders snapshot 1`] = `
   </li>
   <li>
     <h2
-      class="mb-4 heading heading--size-h2"
+      class="headingBottomSpacing heading heading--size-h2"
     >
       Link
     </h2>
@@ -502,12 +502,12 @@ exports[`<Button /> AllRecommendedVariants story renders snapshot 1`] = `
   </li>
   <li>
     <h2
-      class="mb-4 heading heading--size-h2"
+      class="headingBottomSpacing heading heading--size-h2"
     >
       Destructive
     </h2>
     <h3
-      class="mb-4 heading heading--size-h3"
+      class="headingBottomSpacing heading heading--size-h3"
     >
       Size Large
     </h3>
@@ -557,7 +557,7 @@ exports[`<Button /> Default story renders snapshot 1`] = `
 
 exports[`<Button /> DestructiveRecommendedVariants story renders snapshot 1`] = `
 <h3
-  class="mb-4 heading heading--size-h3"
+  class="headingBottomSpacing heading heading--size-h3"
 >
   Size Large
 </h3>
@@ -605,7 +605,7 @@ exports[`<Button /> PlainRecommendedVariants story renders snapshot 1`] = `
 <ul>
   <li>
     <h3
-      class="mb-4 heading heading--size-h3"
+      class="headingBottomSpacing heading heading--size-h3"
     >
       Size Large
     </h3>
@@ -650,7 +650,7 @@ exports[`<Button /> PlainRecommendedVariants story renders snapshot 1`] = `
         </button>
       </li>
       <li
-        class="mb-4"
+        class="headingBottomSpacing"
       >
         <button
           class="button sizeLarge variantPlain colorBrand"
@@ -677,7 +677,7 @@ exports[`<Button /> PlainRecommendedVariants story renders snapshot 1`] = `
   </li>
   <li>
     <h3
-      class="mb-4 heading heading--size-h3"
+      class="headingBottomSpacing heading heading--size-h3"
     >
       Size Medium
     </h3>
@@ -752,7 +752,7 @@ exports[`<Button /> PrimaryRecommendedVariants story renders snapshot 1`] = `
 <ul>
   <li>
     <h3
-      class="mb-4 heading heading--size-h3"
+      class="headingBottomSpacing heading heading--size-h3"
     >
       Size Large
     </h3>
@@ -787,7 +787,7 @@ exports[`<Button /> PrimaryRecommendedVariants story renders snapshot 1`] = `
         </button>
       </li>
       <li
-        class="mb-4"
+        class="headingBottomSpacing"
       >
         <button
           class="button sizeLarge variantFlat colorBrand"
@@ -810,12 +810,12 @@ exports[`<Button /> PrimaryRecommendedVariants story renders snapshot 1`] = `
   </li>
   <li>
     <h3
-      class="mb-4 heading heading--size-h3"
+      class="headingBottomSpacing heading heading--size-h3"
     >
       Size Medium
     </h3>
     <div
-      class="mb-4"
+      class="headingBottomSpacing"
     >
       <button
         class="button sizeMedium variantFlat colorBrand"
@@ -827,12 +827,12 @@ exports[`<Button /> PrimaryRecommendedVariants story renders snapshot 1`] = `
   </li>
   <li>
     <h3
-      class="mb-4 heading heading--size-h3"
+      class="headingBottomSpacing heading heading--size-h3"
     >
       Size Small
     </h3>
     <div
-      class="mb-4"
+      class="headingBottomSpacing"
     >
       <button
         class="button sizeSmall variantFlat colorBrand"
@@ -849,7 +849,7 @@ exports[`<Button /> SecondaryRecommendedVariants story renders snapshot 1`] = `
 <ul>
   <li>
     <h3
-      class="mb-4 heading heading--size-h3"
+      class="headingBottomSpacing heading heading--size-h3"
     >
       Size Large
     </h3>
@@ -884,7 +884,7 @@ exports[`<Button /> SecondaryRecommendedVariants story renders snapshot 1`] = `
         </button>
       </li>
       <li
-        class="mb-4"
+        class="headingBottomSpacing"
       >
         <button
           class="button sizeLarge variantOutline colorBrand"
@@ -907,12 +907,12 @@ exports[`<Button /> SecondaryRecommendedVariants story renders snapshot 1`] = `
   </li>
   <li>
     <h3
-      class="mb-4 heading heading--size-h3"
+      class="headingBottomSpacing heading heading--size-h3"
     >
       Size Medium
     </h3>
     <div
-      class="mb-4"
+      class="headingBottomSpacing"
     >
       <button
         class="button sizeMedium variantOutline colorBrand"
@@ -924,12 +924,12 @@ exports[`<Button /> SecondaryRecommendedVariants story renders snapshot 1`] = `
   </li>
   <li>
     <h3
-      class="mb-4 heading heading--size-h3"
+      class="headingBottomSpacing heading heading--size-h3"
     >
       Size Small
     </h3>
     <div
-      class="mb-4"
+      class="headingBottomSpacing"
     >
       <button
         class="button sizeSmall variantOutline colorBrand"
@@ -946,7 +946,7 @@ exports[`<Button /> TertiaryRecommendedVariants story renders snapshot 1`] = `
 <ul>
   <li>
     <h3
-      class="mb-4 heading heading--size-h3"
+      class="headingBottomSpacing heading heading--size-h3"
     >
       Size Large
     </h3>
@@ -981,7 +981,7 @@ exports[`<Button /> TertiaryRecommendedVariants story renders snapshot 1`] = `
         </button>
       </li>
       <li
-        class="mb-4"
+        class="headingBottomSpacing"
       >
         <button
           class="button sizeLarge variantOutline colorNeutral"
@@ -1004,12 +1004,12 @@ exports[`<Button /> TertiaryRecommendedVariants story renders snapshot 1`] = `
   </li>
   <li>
     <h3
-      class="mb-4 heading heading--size-h3"
+      class="headingBottomSpacing heading heading--size-h3"
     >
       Size Medium
     </h3>
     <div
-      class="mb-4"
+      class="headingBottomSpacing"
     >
       <button
         class="button sizeMedium variantOutline colorNeutral"
@@ -1021,12 +1021,12 @@ exports[`<Button /> TertiaryRecommendedVariants story renders snapshot 1`] = `
   </li>
   <li>
     <h3
-      class="mb-4 heading heading--size-h3"
+      class="headingBottomSpacing heading heading--size-h3"
     >
       Size Small
     </h3>
     <div
-      class="mb-4"
+      class="headingBottomSpacing"
     >
       <button
         class="button sizeSmall variantOutline colorNeutral"

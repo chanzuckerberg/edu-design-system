@@ -16,7 +16,7 @@ export const getStandardSet = (
 ) => (
   <ul>
     <li>
-      <Heading className="mb-4" size="h3">
+      <Heading className={styles.headingBottomSpacing} size="h3">
         Size Large
       </Heading>
       <ul className="grid gap-y-4">
@@ -35,7 +35,7 @@ export const getStandardSet = (
             {componentName}
           </Component>
         </li>
-        <li className="mb-4">
+        <li className={styles.headingBottomSpacing}>
           <Component color={color} variant={variant}>
             {componentName}
             <Icon
@@ -49,10 +49,10 @@ export const getStandardSet = (
     </li>
 
     <li>
-      <Heading className="mb-4" size="h3">
+      <Heading className={styles.headingBottomSpacing} size="h3">
         Size Medium
       </Heading>
-      <div className="mb-4">
+      <div className={styles.headingBottomSpacing}>
         <Component color={color} size="medium" variant={variant}>
           {componentName}
         </Component>
@@ -60,10 +60,10 @@ export const getStandardSet = (
     </li>
 
     <li>
-      <Heading className="mb-4" size="h3">
+      <Heading className={styles.headingBottomSpacing} size="h3">
         Size Small
       </Heading>
-      <div className="mb-4">
+      <div className={styles.headingBottomSpacing}>
         <Component color={color} size="small" variant={variant}>
           {componentName}
         </Component>
@@ -78,7 +78,7 @@ export const getPlainRecommendedVariants = (
 ) => (
   <ul>
     <li>
-      <Heading className="mb-4" size="h3">
+      <Heading className={styles.headingBottomSpacing} size="h3">
         Size Large
       </Heading>
       <ul className="grid gap-y-4">
@@ -102,7 +102,7 @@ export const getPlainRecommendedVariants = (
             />
           </Component>
         </li>
-        <li className="mb-4">
+        <li className={styles.headingBottomSpacing}>
           <Component variant="plain">
             <Icon
               className="mx-[-0.4em]"
@@ -116,7 +116,7 @@ export const getPlainRecommendedVariants = (
     </li>
 
     <li>
-      <Heading className="mb-4" size="h3">
+      <Heading className={styles.headingBottomSpacing} size="h3">
         Size Medium
       </Heading>
       <ul className="grid gap-y-4">
@@ -182,7 +182,7 @@ export const getDestructiveRecommendedVariants = (
   componentName: "Button" | "Link",
 ) => (
   <>
-    <Heading className="mb-4" size="h3">
+    <Heading className={styles.headingBottomSpacing} size="h3">
       Size Large
     </Heading>
     <ul className="grid gap-y-4">
@@ -211,42 +211,42 @@ export const getAllRecommendedVariants = (
 ) => (
   <ul className="grid gap-y-8">
     <li>
-      <Heading className="mb-4" size="h2">
+      <Heading className={styles.headingBottomSpacing} size="h2">
         Primary
       </Heading>
       {getStandardSet(Component, componentName, "flat")}
     </li>
 
     <li>
-      <Heading className="mb-4" size="h2">
+      <Heading className={styles.headingBottomSpacing} size="h2">
         Secondary
       </Heading>
       {getStandardSet(Component, componentName, "outline")}
     </li>
 
     <li>
-      <Heading className="mb-4" size="h2">
+      <Heading className={styles.headingBottomSpacing} size="h2">
         Tertiary
       </Heading>
       {getStandardSet(Component, componentName, "outline", "neutral")}
     </li>
 
     <li>
-      <Heading className="mb-4" size="h2">
+      <Heading className={styles.headingBottomSpacing} size="h2">
         Plain
       </Heading>
       {getPlainRecommendedVariants(Component, componentName)}
     </li>
 
     <li>
-      <Heading className="mb-4" size="h2">
+      <Heading className={styles.headingBottomSpacing} size="h2">
         Link
       </Heading>
       {getLinkRecommendedVariants(Component, componentName)}
     </li>
 
     <li>
-      <Heading className="mb-4" size="h2">
+      <Heading className={styles.headingBottomSpacing} size="h2">
         Destructive
       </Heading>
       {getDestructiveRecommendedVariants(Component, componentName)}
