@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Tooltip /> BottomPlacement story renders snapshot 1`] = `
+exports[`<Tooltip /> stories BottomPlacement story renders snapshot 1`] = `
 <body>
   <div>
     <button
@@ -54,7 +54,7 @@ exports[`<Tooltip /> BottomPlacement story renders snapshot 1`] = `
 </body>
 `;
 
-exports[`<Tooltip /> DarkVariant story renders snapshot 1`] = `
+exports[`<Tooltip /> stories DarkVariant story renders snapshot 1`] = `
 <body>
   <div>
     <button
@@ -108,7 +108,7 @@ exports[`<Tooltip /> DarkVariant story renders snapshot 1`] = `
 </body>
 `;
 
-exports[`<Tooltip /> Interactive story renders snapshot 1`] = `
+exports[`<Tooltip /> stories Interactive story renders snapshot 1`] = `
 <body>
   <div>
     <div>
@@ -167,7 +167,7 @@ exports[`<Tooltip /> Interactive story renders snapshot 1`] = `
 </body>
 `;
 
-exports[`<Tooltip /> LeftPlacement story renders snapshot 1`] = `
+exports[`<Tooltip /> stories LeftPlacement story renders snapshot 1`] = `
 <body>
   <div>
     <button
@@ -221,7 +221,7 @@ exports[`<Tooltip /> LeftPlacement story renders snapshot 1`] = `
 </body>
 `;
 
-exports[`<Tooltip /> LightVariant story renders snapshot 1`] = `
+exports[`<Tooltip /> stories LightVariant story renders snapshot 1`] = `
 <body>
   <div>
     <button
@@ -275,7 +275,7 @@ exports[`<Tooltip /> LightVariant story renders snapshot 1`] = `
 </body>
 `;
 
-exports[`<Tooltip /> LongButtonText story renders snapshot 1`] = `
+exports[`<Tooltip /> stories LongButtonText story renders snapshot 1`] = `
 <body>
   <div>
     <button
@@ -329,7 +329,7 @@ exports[`<Tooltip /> LongButtonText story renders snapshot 1`] = `
 </body>
 `;
 
-exports[`<Tooltip /> LongText story renders snapshot 1`] = `
+exports[`<Tooltip /> stories LongText story renders snapshot 1`] = `
 <body>
   <div>
     <button
@@ -381,7 +381,7 @@ exports[`<Tooltip /> LongText story renders snapshot 1`] = `
 </body>
 `;
 
-exports[`<Tooltip /> TopPlacement story renders snapshot 1`] = `
+exports[`<Tooltip /> stories TopPlacement story renders snapshot 1`] = `
 <body>
   <div>
     <button
