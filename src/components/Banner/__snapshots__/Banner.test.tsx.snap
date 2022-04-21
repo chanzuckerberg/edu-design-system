@@ -300,7 +300,7 @@ exports[`<Banner /> Error story renders snapshot 1`] = `
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
         <button
-          class="clickable-style button button--link clickable-style--link clickable-style--brand"
+          class="clickable-style button button--link clickable-style--link clickable-style--error"
           href="/"
           type="button"
         >
@@ -318,7 +318,7 @@ exports[`<Banner /> ErrorDismissable story renders snapshot 1`] = `
   class="banner banner--error banner--horizontal banner--dismissable"
 >
   <button
-    class="clickable-style button banner__close-btn button--icon clickable-style--lg clickable-style--icon clickable-style--brand"
+    class="clickable-style button banner__close-btn button--icon clickable-style--lg clickable-style--icon clickable-style--error"
     type="button"
   >
     <svg
@@ -369,7 +369,7 @@ exports[`<Banner /> ErrorDismissable story renders snapshot 1`] = `
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
         <button
-          class="clickable-style button button--link clickable-style--link clickable-style--brand"
+          class="clickable-style button button--link clickable-style--link clickable-style--error"
           href="/"
           type="button"
         >
@@ -418,7 +418,7 @@ exports[`<Banner /> ErrorWithAction story renders snapshot 1`] = `
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
         <button
-          class="clickable-style button button--link clickable-style--link clickable-style--brand"
+          class="clickable-style button button--link clickable-style--link clickable-style--error"
           href="/"
           type="button"
         >
@@ -431,7 +431,7 @@ exports[`<Banner /> ErrorWithAction story renders snapshot 1`] = `
       class="banner__action"
     >
       <button
-        class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--brand"
+        class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--error"
         type="button"
       >
         See updates
@@ -526,7 +526,7 @@ exports[`<Banner /> Neutral story renders snapshot 1`] = `
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
         <button
-          class="clickable-style button button--link clickable-style--link clickable-style--brand"
+          class="clickable-style button button--link clickable-style--link clickable-style--neutral"
           href="/"
           type="button"
         >
@@ -544,7 +544,7 @@ exports[`<Banner /> NeutralDismissable story renders snapshot 1`] = `
   class="banner banner--neutral banner--horizontal banner--dismissable"
 >
   <button
-    class="clickable-style button banner__close-btn button--icon clickable-style--lg clickable-style--icon clickable-style--brand"
+    class="clickable-style button banner__close-btn button--icon clickable-style--lg clickable-style--icon clickable-style--neutral"
     type="button"
   >
     <svg
@@ -595,7 +595,7 @@ exports[`<Banner /> NeutralDismissable story renders snapshot 1`] = `
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
         <button
-          class="clickable-style button button--link clickable-style--link clickable-style--brand"
+          class="clickable-style button button--link clickable-style--link clickable-style--neutral"
           href="/"
           type="button"
         >
@@ -644,7 +644,7 @@ exports[`<Banner /> NeutralWithAction story renders snapshot 1`] = `
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
         <button
-          class="clickable-style button button--link clickable-style--link clickable-style--brand"
+          class="clickable-style button button--link clickable-style--link clickable-style--neutral"
           href="/"
           type="button"
         >
@@ -657,7 +657,7 @@ exports[`<Banner /> NeutralWithAction story renders snapshot 1`] = `
       class="banner__action"
     >
       <button
-        class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--brand"
+        class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--neutral"
         type="button"
       >
         See updates
@@ -782,7 +782,7 @@ exports[`<Banner /> Success story renders snapshot 1`] = `
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
         <button
-          class="clickable-style button button--link clickable-style--link clickable-style--brand"
+          class="clickable-style button button--link clickable-style--link clickable-style--success"
           href="/"
           type="button"
         >
@@ -800,7 +800,7 @@ exports[`<Banner /> SuccessDismissable story renders snapshot 1`] = `
   class="banner banner--success banner--horizontal banner--dismissable"
 >
   <button
-    class="clickable-style button banner__close-btn button--icon clickable-style--lg clickable-style--icon clickable-style--brand"
+    class="clickable-style button banner__close-btn button--icon clickable-style--lg clickable-style--icon clickable-style--success"
     type="button"
   >
     <svg
@@ -851,7 +851,7 @@ exports[`<Banner /> SuccessDismissable story renders snapshot 1`] = `
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
         <button
-          class="clickable-style button button--link clickable-style--link clickable-style--brand"
+          class="clickable-style button button--link clickable-style--link clickable-style--success"
           href="/"
           type="button"
         >
@@ -900,7 +900,7 @@ exports[`<Banner /> SuccessWithAction story renders snapshot 1`] = `
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
         <button
-          class="clickable-style button button--link clickable-style--link clickable-style--brand"
+          class="clickable-style button button--link clickable-style--link clickable-style--success"
           href="/"
           type="button"
         >
@@ -913,7 +913,7 @@ exports[`<Banner /> SuccessWithAction story renders snapshot 1`] = `
       class="banner__action"
     >
       <button
-        class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--brand"
+        class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--success"
         type="button"
       >
         See updates
@@ -1215,7 +1215,7 @@ exports[`<Banner /> Warning story renders snapshot 1`] = `
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
         <button
-          class="clickable-style button button--link clickable-style--link clickable-style--brand"
+          class="clickable-style button button--link clickable-style--link clickable-style--warning"
           href="/"
           type="button"
         >
@@ -1233,7 +1233,7 @@ exports[`<Banner /> WarningDismissable story renders snapshot 1`] = `
   class="banner banner--warning banner--horizontal banner--dismissable"
 >
   <button
-    class="clickable-style button banner__close-btn button--icon clickable-style--lg clickable-style--icon clickable-style--brand"
+    class="clickable-style button banner__close-btn button--icon clickable-style--lg clickable-style--icon clickable-style--warning"
     type="button"
   >
     <svg
@@ -1284,7 +1284,7 @@ exports[`<Banner /> WarningDismissable story renders snapshot 1`] = `
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
         <button
-          class="clickable-style button button--link clickable-style--link clickable-style--brand"
+          class="clickable-style button button--link clickable-style--link clickable-style--warning"
           href="/"
           type="button"
         >
@@ -1333,7 +1333,7 @@ exports[`<Banner /> WarningWithAction story renders snapshot 1`] = `
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
         <button
-          class="clickable-style button button--link clickable-style--link clickable-style--brand"
+          class="clickable-style button button--link clickable-style--link clickable-style--warning"
           href="/"
           type="button"
         >
@@ -1346,7 +1346,7 @@ exports[`<Banner /> WarningWithAction story renders snapshot 1`] = `
       class="banner__action"
     >
       <button
-        class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--brand"
+        class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--warning"
         type="button"
       >
         See updates

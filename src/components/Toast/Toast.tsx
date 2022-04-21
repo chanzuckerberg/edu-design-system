@@ -61,7 +61,7 @@ export const Toast = ({
         <p className={styles['toast__text']}>{children}</p>
       </div>
       {onDismiss && (
-        <Button onClick={onDismiss} variant="icon">
+        <Button onClick={onDismiss} status={variant} variant="icon">
           <Icon
             name="close"
             purpose="informative"
