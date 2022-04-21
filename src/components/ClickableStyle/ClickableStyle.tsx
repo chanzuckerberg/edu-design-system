@@ -56,7 +56,7 @@ export const ClickableStyle = React.forwardRef(
       fullWidth,
       size = 'lg',
       status = 'brand',
-      variant = 'primary',
+      variant = 'secondary',
       ...other
     }: ClickableStyleProps<IComponent>,
     ref: React.ForwardedRef<HTMLElement>,

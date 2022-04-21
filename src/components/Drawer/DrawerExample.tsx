@@ -46,7 +46,7 @@ export const DrawerExample = ({ className, ...other }: Props) => {
       style={{ padding: '1rem', minHeight: '500px' }}
       {...other}
     >
-      <Button onClick={openDrawerExample} ref={drawerButton}>
+      <Button onClick={openDrawerExample} ref={drawerButton} variant="primary">
         Open Drawer
       </Button>
 
