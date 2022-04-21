@@ -1,9 +1,9 @@
 import { StoryObj } from "@storybook/react";
 import React from "react";
 import {
-  colors,
+  statuses,
   getStandardSet,
-  getPlainRecommendedVariants,
+  geIconRecommendedVariants,
   getLinkRecommendedVariants,
   getDestructiveRecommendedVariants,
   getAllRecommendedVariants,
@@ -21,10 +21,10 @@ export default {
         type: "text",
       },
     },
-    color: {
+    status: {
       control: {
         type: "radio",
-        options: colors,
+        options: statuses,
       },
     },
   },
@@ -39,19 +39,19 @@ export const Default: StoryObj<Args> = {
 };
 
 export const PrimaryRecommendedVariants = {
-  render: () => getStandardSet(Button, "Button", "flat"),
+  render: () => getStandardSet(Button, "Button", "primary"),
 };
 
 export const SecondaryRecommendedVariants = {
-  render: () => getStandardSet(Button, "Button", "outline"),
+  render: () => getStandardSet(Button, "Button", "secondary"),
 };
 
 export const TertiaryRecommendedVariants = {
-  render: () => getStandardSet(Button, "Button", "outline", "neutral"),
+  render: () => getStandardSet(Button, "Button", "secondary", "neutral"),
 };
 
 export const PlainRecommendedVariants = {
-  render: () => getPlainRecommendedVariants(Button, "Button"),
+  render: () => geIconRecommendedVariants(Button, "Button"),
 };
 
 export const LinkRecommendedVariants = {

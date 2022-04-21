@@ -8,7 +8,7 @@ export type ButtonProps = ButtonHTMLElementProps & {
    * The button contents or label.
    */
   children: ReactNode;
-  color?: ClickableStyleProps<"button">["color"];
+  status?: ClickableStyleProps<"button">["status"];
   "data-testid"?: string;
   size?: ClickableStyleProps<"button">["size"];
   variant?: ClickableStyleProps<"button">["variant"];
@@ -34,11 +34,11 @@ export type ButtonProps = ButtonHTMLElementProps & {
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
-      variant = "flat",
-      color = "brand",
+      variant = "secondary",
+      status = "brand",
       disabled = false,
       type = "button",
-      size = "large",
+      size = "lg",
       ...rest
     },
     ref,
@@ -47,10 +47,10 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       <ClickableStyle
         {...rest}
         as="button"
-        color={color}
         disabled={disabled}
         ref={ref}
         size={size}
+        status={status}
         type={type}
         variant={variant}
       />

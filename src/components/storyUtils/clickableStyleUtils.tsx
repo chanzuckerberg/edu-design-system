@@ -12,7 +12,7 @@ export const getStandardSet = (
   Component: typeof Button | typeof Link,
   componentName: "Button" | "Link",
   variant: ClickableStyleProps<"button">["variant"],
-  color: ClickableStyleProps<"button">["color"] = "brand",
+  status: ClickableStyleProps<"button">["status"] = "brand",
 ) => (
   <ul>
     <li>
@@ -21,12 +21,12 @@ export const getStandardSet = (
       </Heading>
       <ul className="grid gap-y-4">
         <li>
-          <Component color={color} variant={variant}>
+          <Component status={status} variant={variant}>
             {componentName}
           </Component>
         </li>
         <li>
-          <Component color={color} variant={variant}>
+          <Component status={status} variant={variant}>
             <Icon
               className={styles.arrowBackIcon}
               name="arrow-back"
@@ -36,7 +36,7 @@ export const getStandardSet = (
           </Component>
         </li>
         <li className={styles.headingBottomSpacing}>
-          <Component color={color} variant={variant}>
+          <Component status={status} variant={variant}>
             {componentName}
             <Icon
               className={styles.arrowForwardIcon}
@@ -53,7 +53,7 @@ export const getStandardSet = (
         Size Medium
       </Heading>
       <div className={styles.headingBottomSpacing}>
-        <Component color={color} size="medium" variant={variant}>
+        <Component size="md" status={status} variant={variant}>
           {componentName}
         </Component>
       </div>
@@ -64,7 +64,7 @@ export const getStandardSet = (
         Size Small
       </Heading>
       <div className={styles.headingBottomSpacing}>
-        <Component color={color} size="small" variant={variant}>
+        <Component size="sm" status={status} variant={variant}>
           {componentName}
         </Component>
       </div>
@@ -72,7 +72,7 @@ export const getStandardSet = (
   </ul>
 );
 
-export const getPlainRecommendedVariants = (
+export const geIconRecommendedVariants = (
   Component: typeof Button | typeof Link,
   componentName: "Button" | "Link",
 ) => (
@@ -83,7 +83,7 @@ export const getPlainRecommendedVariants = (
       </Heading>
       <ul className="grid gap-y-4">
         <li>
-          <Component variant="plain">
+          <Component variant="icon">
             <Icon
               className={styles.arrowBackIcon}
               name="arrow-back"
@@ -93,7 +93,7 @@ export const getPlainRecommendedVariants = (
           </Component>
         </li>
         <li>
-          <Component variant="plain">
+          <Component variant="icon">
             {componentName}
             <Icon
               className={styles.arrowForwardIcon}
@@ -103,7 +103,7 @@ export const getPlainRecommendedVariants = (
           </Component>
         </li>
         <li className={styles.headingBottomSpacing}>
-          <Component variant="plain">
+          <Component variant="icon">
             <Icon
               className="mx-[-0.4em]"
               name="arrow-forward"
@@ -121,7 +121,7 @@ export const getPlainRecommendedVariants = (
       </Heading>
       <ul className="grid gap-y-4">
         <li>
-          <Component size="medium" variant="plain">
+          <Component size="md" variant="icon">
             <Icon
               className={styles.arrowBackIcon}
               name="arrow-back"
@@ -131,7 +131,7 @@ export const getPlainRecommendedVariants = (
           </Component>
         </li>
         <li>
-          <Component size="medium" variant="plain">
+          <Component size="md" variant="icon">
             {componentName}
             <Icon
               className={styles.arrowForwardIcon}
@@ -141,7 +141,7 @@ export const getPlainRecommendedVariants = (
           </Component>
         </li>
         <li>
-          <Component size="medium" variant="plain">
+          <Component size="md" variant="icon">
             <Icon
               className="mx-[-0.55em]"
               name="add"
@@ -187,12 +187,12 @@ export const getDestructiveRecommendedVariants = (
     </Heading>
     <ul className="grid gap-y-4">
       <li>
-        <Component color="alert" variant="flat">
+        <Component status="error" variant="primary">
           {componentName}
         </Component>
       </li>
       <li>
-        <Component color="alert" variant="flat">
+        <Component status="error" variant="primary">
           <Icon
             className={styles.arrowBackIcon}
             name="arrow-back"
@@ -214,28 +214,28 @@ export const getAllRecommendedVariants = (
       <Heading className={styles.headingBottomSpacing} size="h2">
         Primary
       </Heading>
-      {getStandardSet(Component, componentName, "flat")}
+      {getStandardSet(Component, componentName, "primary")}
     </li>
 
     <li>
       <Heading className={styles.headingBottomSpacing} size="h2">
         Secondary
       </Heading>
-      {getStandardSet(Component, componentName, "outline")}
+      {getStandardSet(Component, componentName, "secondary")}
     </li>
 
     <li>
       <Heading className={styles.headingBottomSpacing} size="h2">
         Tertiary
       </Heading>
-      {getStandardSet(Component, componentName, "outline", "neutral")}
+      {getStandardSet(Component, componentName, "secondary", "neutral")}
     </li>
 
     <li>
       <Heading className={styles.headingBottomSpacing} size="h2">
         Plain
       </Heading>
-      {getPlainRecommendedVariants(Component, componentName)}
+      {geIconRecommendedVariants(Component, componentName)}
     </li>
 
     <li>
@@ -254,11 +254,11 @@ export const getAllRecommendedVariants = (
   </ul>
 );
 
-const sizes = ["large", "medium", "small"] as const;
+const sizes = ["lg", "md", "sm"] as const;
 // "link" is ommitted here because it's rendered separately since it only has one size
-const variants = ["flat", "outline", "plain"] as const;
-export const colors = [
-  "alert",
+const variants = ["primary", "secondary", "icon"] as const;
+export const statuses = [
+  "error",
   "brand",
   "neutral",
   "success",
@@ -274,7 +274,7 @@ const getVariantWithStates = (
   size?: ClickableStyleProps<"button">["size"],
 ) => {
   const states = tag === "button" ? buttonStates : linkStates;
-  const icon = variant === "plain" && (
+  const icon = variant === "icon" && (
     <Icon className="ml-2" name="add" purpose="decorative" />
   );
 
@@ -291,13 +291,12 @@ const getVariantWithStates = (
               <th scope="row">
                 <Text size="body">{state}</Text>
               </th>
-              {colors.map((color) => (
-                <td className="p-2" key={color}>
+              {statuses.map((status) => (
+                <td className="p-2" key={status}>
                   {/* To pass the "state" prop (only used for demonstration in storybook),
                   we must use ClickableStyle instead of Button or Link */}
                   <ClickableStyle
                     as={tag}
-                    color={color}
                     disabled={state === "disabled"}
                     href={tag === "a" ? "https://go.czi.team/eds" : undefined}
                     onClick={(event: React.MouseEvent<HTMLElement>) => {
@@ -306,6 +305,7 @@ const getVariantWithStates = (
                     }}
                     size={size}
                     state={state}
+                    status={status}
                     variant={variant}
                   >
                     {buttonChildren}
@@ -345,7 +345,7 @@ export const getLargeVariantsWithStates = (
     <li>{getVariantWithStates(tag, "link", buttonChildren)}</li>
     {variants.map((variant) => (
       <li key={variant}>
-        {getVariantWithStates(tag, variant, buttonChildren, "large")}
+        {getVariantWithStates(tag, variant, buttonChildren, "lg")}
       </li>
     ))}
   </ul>

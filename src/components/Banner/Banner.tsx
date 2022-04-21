@@ -80,6 +80,10 @@ export default function Banner({
 }: BannerProps) {
   const isHorizontal = orientation === "horizontal";
 
+  // While the v0 to v1 migration is happening, the Button and Banner will briefly
+  // be out of sync regarding the name of the red component style.
+  const buttonStatus = color === "alert" ? "error" : color;
+
   return (
     <article
       className={clsx(
@@ -99,9 +103,9 @@ export default function Banner({
       {onDismiss && (
         <Button
           className={styles.dismiss}
-          color={color}
           onClick={onDismiss}
-          variant="plain"
+          status={buttonStatus}
+          variant="icon"
         >
           <Icon
             name="close"
