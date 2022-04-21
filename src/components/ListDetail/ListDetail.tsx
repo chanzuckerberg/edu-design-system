@@ -222,13 +222,12 @@ export const ListDetail = ({
       return child;
     },
   );
-  const TagName = variant === 'ordered' ? 'ol' : 'ul';
   const componentClassName = clsx(styles['list-detail'], className, {});
 
   return (
     <div className={componentClassName} {...other}>
       <div className={styles['list-detail__header']}>
-        <TagName
+        <ol
           className={clsx(styles['list-detail__list'], {
             [styles['list-detail__list--ordered']]: variant === 'ordered',
           })}
@@ -241,6 +240,7 @@ export const ListDetail = ({
               <li
                 className={clsx(
                   styles['list-detail__item'],
+
                   isActive && styles['eds-is-active'],
                 )}
                 key={'list-detail-item-' + i}
@@ -266,6 +266,8 @@ export const ListDetail = ({
                   <div
                     className={clsx(styles['list-detail__link-left'], {
                       [styles['list-detail__link-hidden']]: [
+                        'bullet',
+                        'complete',
                         'number',
                         'success',
                         'warning',
@@ -295,9 +297,7 @@ export const ListDetail = ({
                         purpose="decorative"
                       />
                     ) : itemVariant === 'number' ? (
-                      <span className={styles['list-detail__number']}>
-                        {i + 1}
-                      </span>
+                      <span className={styles['list-detail__number']}>{i}</span>
                     ) : (
                       ''
                     )}
@@ -307,7 +307,7 @@ export const ListDetail = ({
               </li>
             );
           })}
-        </TagName>
+        </ol>
       </div>
       <div className={styles['list-detail__body']}>
         {childrenWithProps[activeIndexState]}

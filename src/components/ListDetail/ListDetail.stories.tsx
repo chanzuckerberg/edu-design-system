@@ -12,6 +12,17 @@ export default {
 
 const Template: Story<Props> = (args) => (
   <ListDetail {...args}>
+    <ListDetailPanel title="Overview" variant="bullet">
+      <TextPassage>
+        <h3>Overview</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex{' '}
+        </p>
+      </TextPassage>
+    </ListDetailPanel>
     <ListDetailPanel title="ListDetailPanel 1" variant="number">
       <TextPassage>
         <h3>ListDetailPanel 1</h3>
@@ -51,6 +62,30 @@ const Template: Story<Props> = (args) => (
     <ListDetailPanel title="ListDetailPanel 4" variant="success">
       <TextPassage>
         <h3>ListDetailPanel 4</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex{' '}
+        </p>
+      </TextPassage>
+    </ListDetailPanel>
+
+    <ListDetailPanel title="ListDetailPanel 5">
+      <TextPassage>
+        <h3>ListDetailPanel 5</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex{' '}
+        </p>
+      </TextPassage>
+    </ListDetailPanel>
+
+    <ListDetailPanel title="ListDetailPanel 6" variant="number">
+      <TextPassage>
+        <h3>ListDetailPanel 5</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad

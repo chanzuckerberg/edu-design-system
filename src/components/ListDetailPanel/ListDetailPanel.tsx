@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { ReactNode } from 'react';
+import React, { ReactNode, useState } from 'react';
 import styles from '../ListDetail/ListDetail.module.css';
 
 export interface Props {
@@ -16,13 +16,17 @@ export interface Props {
    */
   className?: string;
   /**
+   * Mark list as completed
+   */
+  completed?: boolean;
+  /**
    * HTML id for the component
    */
   id?: any;
   /**
    * The tab variant
    */
-  variant?: 'error' | 'number' | 'success' | 'warning';
+  variant?: 'bullet' | 'complete' | 'error' | 'number' | 'success' | 'warning';
   /**
    * The tab title
    */
@@ -36,14 +40,16 @@ export const ListDetailPanel = ({
   ariaLabelledBy,
   children,
   className,
+  completed,
   id,
   variant,
   title,
   ...other
 }: Props) => {
+  const [isComplete, setIsComplete] = useState(completed || false);
   const componentClassName = clsx(styles['list-detail__panel'], className, {});
   return (
-    <div
+    <nav
       aria-hidden={false}
       aria-labelledby={ariaLabelledBy}
       className={componentClassName}
@@ -52,6 +58,6 @@ export const ListDetailPanel = ({
       {...other}
     >
       {children}
-    </div>
+    </nav>
   );
 };
