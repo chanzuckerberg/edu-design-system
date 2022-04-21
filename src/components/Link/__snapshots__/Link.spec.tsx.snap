@@ -524,6 +524,7 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
 exports[`<Link /> Default story renders snapshot 1`] = `
 <a
   class="button variantLink colorBrand"
+  color="brand"
   href="https://go.czi.team/eds"
 >
   Link
@@ -545,6 +546,7 @@ exports[`<Link /> LinkInBody story renders snapshot 1`] = `
   This text surrounds the 
   <a
     class="button variantLink colorBrand"
+    color="brand"
     href="https://go.czi.team/eds"
   >
     Link
@@ -560,6 +562,7 @@ exports[`<Link /> LinkInHeading story renders snapshot 1`] = `
   This text surrounds the 
   <a
     class="button variantLink colorBrand"
+    color="brand"
     href="https://go.czi.team/eds"
   >
     Link
@@ -1024,6 +1027,7 @@ exports[`<Link /> TertiaryRecommendedVariants story renders snapshot 1`] = `
 exports[`<Link /> passes class names down properly 1`] = `
 <a
   class="exampleClassName button variantLink colorBrand"
+  color="brand"
   data-testid="example-class-name"
   href="https://go.czi.team/eds"
 >
@@ -1034,6 +1038,7 @@ exports[`<Link /> passes class names down properly 1`] = `
 exports[`<Link /> passes test ids down properly 1`] = `
 <a
   class="button variantLink colorBrand"
+  color="brand"
   data-testid="example-test-id"
   href="https://go.czi.team/eds"
 >
