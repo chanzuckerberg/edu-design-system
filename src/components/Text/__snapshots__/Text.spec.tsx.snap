@@ -4,16 +4,23 @@ exports[`<Text /> Body story renders snapshot 1`] = `
 <p
   class="text text--body"
 >
-  Body paragraph 16/24
+  Body paragraph
 </p>
 `;
 
-exports[`<Text /> BodyColorInfoBold story renders snapshot 1`] = `
+exports[`<Text /> BodyLarge story renders snapshot 1`] = `
 <p
-  class="text text--body text--bold-weight"
-  color="info"
+  class="text text--lg"
 >
-  Info color body text, bold
+  Body large
+</p>
+`;
+
+exports[`<Text /> BodyMedium story renders snapshot 1`] = `
+<p
+  class="text text--md"
+>
+  Body medium
 </p>
 `;
 
@@ -21,7 +28,15 @@ exports[`<Text /> BodySmall story renders snapshot 1`] = `
 <p
   class="text text--sm"
 >
-  Body small 14/20
+  Body small
+</p>
+`;
+
+exports[`<Text /> BodyVariantSuccessBold story renders snapshot 1`] = `
+<p
+  class="text text--body text--success text--bold-weight"
+>
+  Success variant body text, bold
 </p>
 `;
 
@@ -29,7 +44,7 @@ exports[`<Text /> BodyXSmall story renders snapshot 1`] = `
 <p
   class="text text--xs"
 >
-  Body Xsmall 12/16
+  Body Xsmall
 </p>
 `;
 
@@ -37,7 +52,7 @@ exports[`<Text /> Caption story renders snapshot 1`] = `
 <p
   class="text text--caption"
 >
-  Caption 12/20
+  Caption
 </p>
 `;
 
@@ -45,22 +60,20 @@ exports[`<Text /> Overline story renders snapshot 1`] = `
 <p
   class="text text--overline"
 >
-  Overline 12/20
+  Overline
 </p>
 `;
 
-exports[`<Text /> TextColorInherit story renders snapshot 1`] = `
+exports[`<Text /> TextVariantInherit story renders snapshot 1`] = `
 <p
-  class="text text--body"
-  color="alert"
+  class="text text--body text--error"
 >
   This text surrounds the 
   <span
-    class="text text--body"
-    color="inherit"
+    class="text text--body text--inherit"
   >
     Child Text
   </span>
-   and shows it should inherit color from the parent
+   and shows it should inherit variant from the parent
 </p>
 `;
