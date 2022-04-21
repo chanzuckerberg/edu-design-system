@@ -12,7 +12,7 @@ export default {
 
 const Template: Story<Props> = (args) => (
   <ListDetail {...args}>
-    <ListDetailPanel title="Overview" variant="bullet">
+    <ListDetailPanel title="Overview">
       <TextPassage>
         <h3>Overview</h3>
         <p>
