@@ -63,7 +63,6 @@ function Tag({ color, children, className, icon, variant = "flat" }: Props) {
         variant === "outline" && styles.outline,
       )}
       size="sm"
-      variant={color === "yellow" ? undefined : color}
       weight="bold"
     >
       {icon}

@@ -55,6 +55,7 @@ export const Heading1AsHeading4: StoryObj<Args> = {
 
 /**
  * 1) Insufficient color contrast is expected since we are displaying all color variants on various color backgrounds.
+ * 2) Mainly for visual use and other stories generate enough confidence for our needs.
  */
 export const Variants: StoryObj<Args> = {
   ...Heading1,
@@ -77,8 +78,12 @@ export const Variants: StoryObj<Args> = {
     );
   },
   parameters: {
+    /* 2 */
     axe: {
-      disabledRules: ["color-contrast"] /* 1 */,
+      skip: true,
+    },
+    snapshot: {
+      skip: true,
     },
   },
 };
@@ -86,8 +91,8 @@ export const Variants: StoryObj<Args> = {
 export const Sizes: StoryObj<Args> = {
   render: () => {
     const sizes = ["h1", "h2", "h3", "h4", "h5", "h6"] as const;
-    const combinations = sizes.map((as: typeof sizes[number]) => {
-      const headings = sizes.map((size: typeof sizes[number]) => (
+    const combinations = sizes.map((as) => {
+      const headings = sizes.map((size) => (
         <Heading as={as} key={`as${as}size${size}`} size={size}>
           as: {as} size: {size}
         </Heading>

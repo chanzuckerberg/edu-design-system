@@ -36,7 +36,7 @@ type Props = {
 
 /**
  * ```ts
- * import {Heading} from "@chanzuckerberg/eds-components";
+ * import {Heading} from "@chanzuckerberg/eds";
  * ```
  */
 
