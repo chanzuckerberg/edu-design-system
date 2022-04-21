@@ -68,7 +68,7 @@ export const PopoverExample: React.FC<Props> = ({
       }}
       {...other}
     >
-      <Button onClick={openPopover} ref={popoverButton}>
+      <Button onClick={openPopover} ref={popoverButton} variant="primary">
         Open Popover
       </Button>
 
