@@ -4,7 +4,7 @@ import styles from './Fieldset.module.css';
 
 type FieldsetProps = {
   /**
-   * The contents of the fieldset. We suggest a Fieldset.Title followed by
+   * The contents of the fieldset. We suggest a FieldsetLegend followed by
    * interactive elements.
    *
    * Should be wrapped in a fragment to allow our styling to control the spacing
@@ -19,10 +19,10 @@ type FieldsetProps = {
 
 /**
  * ```ts
- * import {Fieldset} from "@chanzuckerberg/eds-components";
+ * import {Fieldset} from "@chanzuckerberg/eds";
  * ```
  *
- * A container for a fieldset including a legend and one or more form inputs.
+ * A container for a fieldset that includes a legend and one or more form inputs.
  */
 export function Fieldset({ children, className }: FieldsetProps) {
   const componentClassName = clsx(className, styles['fieldset']);
