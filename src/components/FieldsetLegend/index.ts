@@ -1,4 +1,2 @@
-export {
-  FieldsetLegend as default,
-  FieldsetLegendProps,
-} from './FieldsetLegend';
+export { FieldsetLegend as default } from './FieldsetLegend';
+export type { FieldsetLegendProps } from './FieldsetLegend';
