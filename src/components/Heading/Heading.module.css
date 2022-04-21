@@ -31,38 +31,38 @@
 }
 
 /* Color Variants */
-.heading--variant-error {
+.heading--error {
   @apply text-alert-700;
 }
 
-.heading--variant-base {
+.heading--base {
   @apply text-black;
 }
 
-.heading--variant-brand {
+.heading--brand {
   @apply text-brand-700;
 }
 
-.heading--variant-info {
+.heading--info {
   @apply text-info-700;
 }
 
-.heading--variant-inherit {
+.heading--inherit {
   color: inherit;
 }
 
-.heading--variant-neutral {
+.heading--neutral {
   @apply text-neutral-500;
 }
 
-.heading--variant-success {
+.heading--success {
   @apply text-success-700;
 }
 
-.heading--variant-warning {
+.heading--warning {
   @apply text-warning-700;
 }
 
-.heading--variant-white {
+.heading--white {
   @apply text-white;
 }
