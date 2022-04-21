@@ -150,7 +150,7 @@ type TitleProps = {
  */
 const BannerTitle: React.FC<TitleProps> = (props: TitleProps) => {
   return props.children ? (
-    <Heading as={props.as} color="inherit" size="h3">
+    <Heading as={props.as} size="h3" variant="inherit">
       {props.children}
     </Heading>
   ) : null;

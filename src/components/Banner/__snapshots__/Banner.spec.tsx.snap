@@ -30,8 +30,7 @@ exports[`<Banner /> Alert story renders snapshot 1`] = `
       class="textContent horizontal"
     >
       <h1
-        class="heading heading--size-h3"
-        color="inherit"
+        class="heading heading--size-h3 heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
       </h1>
@@ -100,8 +99,7 @@ exports[`<Banner /> AlertDismissable story renders snapshot 1`] = `
       class="textContent horizontal"
     >
       <h1
-        class="heading heading--size-h3"
-        color="inherit"
+        class="heading heading--size-h3 heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
       </h1>
@@ -147,8 +145,7 @@ exports[`<Banner /> Brand story renders snapshot 1`] = `
       class="textContent horizontal"
     >
       <h1
-        class="heading heading--size-h3"
-        color="inherit"
+        class="heading heading--size-h3 heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
       </h1>
@@ -217,8 +214,7 @@ exports[`<Banner /> BrandDismissable story renders snapshot 1`] = `
       class="textContent horizontal"
     >
       <h1
-        class="heading heading--size-h3"
-        color="inherit"
+        class="heading heading--size-h3 heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
       </h1>
@@ -287,8 +283,7 @@ exports[`<Banner /> DismissableWithAction story renders snapshot 1`] = `
       class="textContent horizontal"
     >
       <h1
-        class="heading heading--size-h3"
-        color="inherit"
+        class="heading heading--size-h3 heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
       </h1>
@@ -345,8 +340,7 @@ exports[`<Banner /> Elevation0 story renders snapshot 1`] = `
       class="textContent horizontal"
     >
       <h1
-        class="heading heading--size-h3"
-        color="inherit"
+        class="heading heading--size-h3 heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
       </h1>
@@ -392,8 +386,7 @@ exports[`<Banner /> Neutral story renders snapshot 1`] = `
       class="textContent horizontal"
     >
       <h1
-        class="heading heading--size-h3"
-        color="inherit"
+        class="heading heading--size-h3 heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
       </h1>
@@ -462,8 +455,7 @@ exports[`<Banner /> NeutralDismissable story renders snapshot 1`] = `
       class="textContent horizontal"
     >
       <h1
-        class="heading heading--size-h3"
-        color="inherit"
+        class="heading heading--size-h3 heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
       </h1>
@@ -509,8 +501,7 @@ exports[`<Banner /> NoContent story renders snapshot 1`] = `
       class="textContent horizontal"
     >
       <h1
-        class="heading heading--size-h3"
-        color="inherit"
+        class="heading heading--size-h3 heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
       </h1>
@@ -591,8 +582,7 @@ exports[`<Banner /> Success story renders snapshot 1`] = `
       class="textContent horizontal"
     >
       <h1
-        class="heading heading--size-h3"
-        color="inherit"
+        class="heading heading--size-h3 heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
       </h1>
@@ -661,8 +651,7 @@ exports[`<Banner /> SuccessDismissable story renders snapshot 1`] = `
       class="textContent horizontal"
     >
       <h1
-        class="heading heading--size-h3"
-        color="inherit"
+        class="heading heading--size-h3 heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
       </h1>
@@ -708,8 +697,7 @@ exports[`<Banner /> Vertical story renders snapshot 1`] = `
       class="textContent"
     >
       <h1
-        class="heading heading--size-h3"
-        color="inherit"
+        class="heading heading--size-h3 heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
       </h1>
@@ -778,8 +766,7 @@ exports[`<Banner /> VerticalDismissable story renders snapshot 1`] = `
       class="textContent"
     >
       <h1
-        class="heading heading--size-h3"
-        color="inherit"
+        class="heading heading--size-h3 heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
       </h1>
@@ -848,8 +835,7 @@ exports[`<Banner /> VerticalDismissableWithAction story renders snapshot 1`] = `
       class="textContent"
     >
       <h1
-        class="heading heading--size-h3"
-        color="inherit"
+        class="heading heading--size-h3 heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
       </h1>
@@ -906,8 +892,7 @@ exports[`<Banner /> VerticalElevation0 story renders snapshot 1`] = `
       class="textContent"
     >
       <h1
-        class="heading heading--size-h3"
-        color="inherit"
+        class="heading heading--size-h3 heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
       </h1>
@@ -953,8 +938,7 @@ exports[`<Banner /> VerticalWithAction story renders snapshot 1`] = `
       class="textContent"
     >
       <h1
-        class="heading heading--size-h3"
-        color="inherit"
+        class="heading heading--size-h3 heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
       </h1>
@@ -1011,8 +995,7 @@ exports[`<Banner /> Warning story renders snapshot 1`] = `
       class="textContent horizontal"
     >
       <h1
-        class="heading heading--size-h3"
-        color="inherit"
+        class="heading heading--size-h3 heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
       </h1>
@@ -1081,8 +1064,7 @@ exports[`<Banner /> WarningDismissable story renders snapshot 1`] = `
       class="textContent horizontal"
     >
       <h1
-        class="heading heading--size-h3"
-        color="inherit"
+        class="heading heading--size-h3 heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
       </h1>
@@ -1128,8 +1110,7 @@ exports[`<Banner /> WithAction story renders snapshot 1`] = `
       class="textContent horizontal"
     >
       <h1
-        class="heading heading--size-h3"
-        color="inherit"
+        class="heading heading--size-h3 heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
       </h1>
