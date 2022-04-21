@@ -166,7 +166,7 @@ type MessageProps = {
  */
 const BannerMessage: React.FC<MessageProps> = (props: MessageProps) => {
   return props.children ? (
-    <Text color="inherit" size="body">
+    <Text size="body" variant="inherit">
       {props.children}
     </Text>
   ) : null;

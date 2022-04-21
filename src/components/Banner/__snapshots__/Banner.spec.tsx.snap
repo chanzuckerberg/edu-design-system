@@ -36,8 +36,7 @@ exports[`<Banner /> Alert story renders snapshot 1`] = `
       </h1>
        
       <p
-        class="text text--body"
-        color="inherit"
+        class="text text--body text--inherit"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates, click into the course.
       </p>
@@ -105,8 +104,7 @@ exports[`<Banner /> AlertDismissable story renders snapshot 1`] = `
       </h1>
        
       <p
-        class="text text--body"
-        color="inherit"
+        class="text text--body text--inherit"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates, click into the course.
       </p>
@@ -151,8 +149,7 @@ exports[`<Banner /> Brand story renders snapshot 1`] = `
       </h1>
        
       <p
-        class="text text--body"
-        color="inherit"
+        class="text text--body text--inherit"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates, click into the course.
       </p>
@@ -220,8 +217,7 @@ exports[`<Banner /> BrandDismissable story renders snapshot 1`] = `
       </h1>
        
       <p
-        class="text text--body"
-        color="inherit"
+        class="text text--body text--inherit"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates, click into the course.
       </p>
@@ -289,8 +285,7 @@ exports[`<Banner /> DismissableWithAction story renders snapshot 1`] = `
       </h1>
        
       <p
-        class="text text--body"
-        color="inherit"
+        class="text text--body text--inherit"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates, click into the course.
       </p>
@@ -346,8 +341,7 @@ exports[`<Banner /> Elevation0 story renders snapshot 1`] = `
       </h1>
        
       <p
-        class="text text--body"
-        color="inherit"
+        class="text text--body text--inherit"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates, click into the course.
       </p>
@@ -392,8 +386,7 @@ exports[`<Banner /> Neutral story renders snapshot 1`] = `
       </h1>
        
       <p
-        class="text text--body"
-        color="inherit"
+        class="text text--body text--inherit"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates, click into the course.
       </p>
@@ -461,8 +454,7 @@ exports[`<Banner /> NeutralDismissable story renders snapshot 1`] = `
       </h1>
        
       <p
-        class="text text--body"
-        color="inherit"
+        class="text text--body text--inherit"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates, click into the course.
       </p>
@@ -542,8 +534,7 @@ exports[`<Banner /> NoHeadingShort story renders snapshot 1`] = `
     >
        
       <p
-        class="text text--body"
-        color="inherit"
+        class="text text--body text--inherit"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates, click into the course.
       </p>
@@ -588,8 +579,7 @@ exports[`<Banner /> Success story renders snapshot 1`] = `
       </h1>
        
       <p
-        class="text text--body"
-        color="inherit"
+        class="text text--body text--inherit"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates, click into the course.
       </p>
@@ -657,8 +647,7 @@ exports[`<Banner /> SuccessDismissable story renders snapshot 1`] = `
       </h1>
        
       <p
-        class="text text--body"
-        color="inherit"
+        class="text text--body text--inherit"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates, click into the course.
       </p>
@@ -703,8 +692,7 @@ exports[`<Banner /> Vertical story renders snapshot 1`] = `
       </h1>
        
       <p
-        class="text text--body"
-        color="inherit"
+        class="text text--body text--inherit"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates, click into the course.
       </p>
@@ -772,8 +760,7 @@ exports[`<Banner /> VerticalDismissable story renders snapshot 1`] = `
       </h1>
        
       <p
-        class="text text--body"
-        color="inherit"
+        class="text text--body text--inherit"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates, click into the course.
       </p>
@@ -841,8 +828,7 @@ exports[`<Banner /> VerticalDismissableWithAction story renders snapshot 1`] = `
       </h1>
        
       <p
-        class="text text--body"
-        color="inherit"
+        class="text text--body text--inherit"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates, click into the course.
       </p>
@@ -898,8 +884,7 @@ exports[`<Banner /> VerticalElevation0 story renders snapshot 1`] = `
       </h1>
        
       <p
-        class="text text--body"
-        color="inherit"
+        class="text text--body text--inherit"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates, click into the course.
       </p>
@@ -944,8 +929,7 @@ exports[`<Banner /> VerticalWithAction story renders snapshot 1`] = `
       </h1>
        
       <p
-        class="text text--body"
-        color="inherit"
+        class="text text--body text--inherit"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates, click into the course.
       </p>
@@ -1001,8 +985,7 @@ exports[`<Banner /> Warning story renders snapshot 1`] = `
       </h1>
        
       <p
-        class="text text--body"
-        color="inherit"
+        class="text text--body text--inherit"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates, click into the course.
       </p>
@@ -1070,8 +1053,7 @@ exports[`<Banner /> WarningDismissable story renders snapshot 1`] = `
       </h1>
        
       <p
-        class="text text--body"
-        color="inherit"
+        class="text text--body text--inherit"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates, click into the course.
       </p>
@@ -1116,8 +1098,7 @@ exports[`<Banner /> WithAction story renders snapshot 1`] = `
       </h1>
        
       <p
-        class="text text--body"
-        color="inherit"
+        class="text text--body text--inherit"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates, click into the course.
       </p>
