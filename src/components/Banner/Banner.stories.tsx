@@ -19,20 +19,20 @@ type Args = React.ComponentProps<typeof Banner> & {
   action: ReactNode;
 };
 
-const getAction = (variant?: Variant) => (
-  <Button status={variant} variant="secondary">
+const getAction = (status?: Variant) => (
+  <Button status={status} variant="secondary">
     See updates
   </Button>
 );
 
-const getDescription = (variant?: Variant) => (
+const getDescription = (status?: Variant) => (
   <>
     Summit Learning has a full-time team dedicated to constantly improving our
     curriculum. To see the updates,{' '}
     <Button
       href="/"
       onClick={(event) => event.preventDefault()}
-      status={variant}
+      status={status}
       variant="link"
     >
       click into the course
