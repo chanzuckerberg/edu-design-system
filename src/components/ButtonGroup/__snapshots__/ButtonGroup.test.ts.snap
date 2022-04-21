@@ -11,7 +11,7 @@ exports[`<ButtonGroup /> Default story renders snapshot 1`] = `
     Button 1
   </button>
   <button
-    class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--brand"
+    class="clickable-style button clickable-style--lg clickable-style--secondary clickable-style--brand"
     type="button"
   >
     Button 2
@@ -30,7 +30,7 @@ exports[`<ButtonGroup /> SpacingMax story renders snapshot 1`] = `
     Button 1
   </button>
   <button
-    class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--brand"
+    class="clickable-style button clickable-style--lg clickable-style--secondary clickable-style--brand"
     type="button"
   >
     Button 2
@@ -49,7 +49,7 @@ exports[`<ButtonGroup /> SpacingNone story renders snapshot 1`] = `
     Button 1
   </button>
   <button
-    class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--brand"
+    class="clickable-style button clickable-style--lg clickable-style--secondary clickable-style--brand"
     type="button"
   >
     Button 2
@@ -68,7 +68,7 @@ exports[`<ButtonGroup /> Vertical story renders snapshot 1`] = `
     Button 1
   </button>
   <button
-    class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--brand"
+    class="clickable-style button clickable-style--lg clickable-style--secondary clickable-style--brand"
     type="button"
   >
     Button 2
@@ -81,25 +81,25 @@ exports[`<ButtonGroup /> WithFiveButtons story renders snapshot 1`] = `
   class="button-group button-group--spacing-1x"
 >
   <button
-    class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--brand"
+    class="clickable-style button clickable-style--lg clickable-style--secondary clickable-style--brand"
     type="button"
   >
     Button 1
   </button>
   <button
-    class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--brand"
+    class="clickable-style button clickable-style--lg clickable-style--secondary clickable-style--brand"
     type="button"
   >
     Button 2
   </button>
   <button
-    class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--brand"
+    class="clickable-style button clickable-style--lg clickable-style--secondary clickable-style--brand"
     type="button"
   >
     Button 3
   </button>
   <button
-    class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--brand"
+    class="clickable-style button clickable-style--lg clickable-style--secondary clickable-style--brand"
     type="button"
   >
     Button 4

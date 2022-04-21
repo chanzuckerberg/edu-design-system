@@ -9,7 +9,7 @@ export default {
   component: Button,
   args: {
     children: 'Button',
-    variant: 'primary',
+    variant: 'secondary',
     status: 'brand',
     fullWidth: false,
     size: 'lg',
@@ -47,10 +47,17 @@ type Args = React.ComponentProps<typeof Button>;
 
 const Template: Story<Args> = (args) => <Button {...args} />;
 
+export const Default = Template.bind({});
+Default.args = { variant: 'secondary' };
+
 export const Primary = Template.bind({});
+Primary.args = { variant: 'primary' };
 
 export const PrimaryDisabled = Template.bind({});
-PrimaryDisabled.args = { disabled: true };
+PrimaryDisabled.args = {
+  disabled: true,
+  variant: 'primary',
+};
 
 export const PrimaryLeftIcon = Template.bind({});
 PrimaryLeftIcon.args = {
@@ -60,6 +67,7 @@ PrimaryLeftIcon.args = {
       Button
     </>
   ),
+  variant: 'primary',
 };
 
 export const PrimaryRightIcon = Template.bind({});
@@ -70,20 +78,17 @@ PrimaryRightIcon.args = {
       <Icon name="arrow-forward" purpose="decorative" />
     </>
   ),
+  variant: 'primary',
 };
 
 export const PrimaryMedium = Template.bind({});
-PrimaryMedium.args = { size: 'md' };
+PrimaryMedium.args = { size: 'md', variant: 'primary' };
 
 export const PrimarySmall = Template.bind({});
-PrimarySmall.args = { size: 'sm' };
-
-export const Secondary = Template.bind({});
-Secondary.args = { variant: 'secondary' };
+PrimarySmall.args = { size: 'sm', variant: 'primary' };
 
 export const SecondaryDisabled = Template.bind({});
 SecondaryDisabled.args = {
-  variant: 'secondary',
   disabled: true,
 };
 
@@ -95,7 +100,6 @@ SecondaryLeftIcon.args = {
       Button
     </>
   ),
-  variant: 'secondary',
 };
 
 export const SecondaryRightIcon = Template.bind({});
@@ -106,7 +110,6 @@ SecondaryRightIcon.args = {
       <Icon name="arrow-forward" purpose="decorative" />
     </>
   ),
-  variant: 'secondary',
 };
 
 export const SecondaryMedium = Template.bind({});
@@ -117,52 +120,45 @@ SecondarySmall.args = { variant: 'secondary', size: 'sm' };
 
 export const Tertiary = Template.bind({});
 Tertiary.args = {
-  children: 'Button',
-  variant: 'secondary',
   status: 'neutral',
 };
 
-export const SecondaryNeutralDisabled = Template.bind({});
-SecondaryNeutralDisabled.args = {
-  variant: 'secondary',
+export const TertiaryDisabled = Template.bind({});
+TertiaryDisabled.args = {
   status: 'neutral',
   disabled: true,
 };
 
-export const SecondaryNeutralLeftIcon = Template.bind({});
-SecondaryNeutralLeftIcon.args = {
+export const TertiaryLeftIcon = Template.bind({});
+TertiaryLeftIcon.args = {
   children: (
     <>
       <Icon name="arrow-back" purpose="decorative" />
       Button
     </>
   ),
-  variant: 'secondary',
   status: 'neutral',
 };
 
-export const SecondaryNeutralRightIcon = Template.bind({});
-SecondaryNeutralRightIcon.args = {
+export const TertiaryRightIcon = Template.bind({});
+TertiaryRightIcon.args = {
   children: (
     <>
       Button
       <Icon name="arrow-forward" purpose="decorative" />
     </>
   ),
-  variant: 'secondary',
   status: 'neutral',
 };
 
-export const SecondaryNeutralMedium = Template.bind({});
-SecondaryNeutralMedium.args = {
-  variant: 'secondary',
+export const TertiaryMedium = Template.bind({});
+TertiaryMedium.args = {
   status: 'neutral',
   size: 'md',
 };
 
-export const SecondaryNeutralSmall = Template.bind({});
-SecondaryNeutralSmall.args = {
-  variant: 'secondary',
+export const TertiarySmall = Template.bind({});
+TertiarySmall.args = {
   status: 'neutral',
   size: 'sm',
 };
@@ -261,13 +257,12 @@ LinkRightIcon.args = {
 
 export const Destructive = Template.bind({});
 Destructive.args = {
-  children: 'Button',
   status: 'error',
   variant: 'primary',
 };
 
-export const PrimaryErrorLeftIcon = Template.bind({});
-PrimaryErrorLeftIcon.args = {
+export const DestructiveLeftIcon = Template.bind({});
+DestructiveLeftIcon.args = {
   children: (
     <>
       <Icon name="arrow-back" purpose="decorative" />
@@ -290,19 +285,16 @@ Loading.args = {
 export const SecondarySuccess = Template.bind({});
 SecondarySuccess.args = {
   status: 'success',
-  variant: 'secondary',
 };
 
 export const SecondaryWarning = Template.bind({});
 SecondaryWarning.args = {
   status: 'warning',
-  variant: 'secondary',
 };
 
 export const SecondaryError = Template.bind({});
 SecondaryError.args = {
   status: 'error',
-  variant: 'secondary',
 };
 
 export const IconNeutral = Template.bind({});

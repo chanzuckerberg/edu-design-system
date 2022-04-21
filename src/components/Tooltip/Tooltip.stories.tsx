@@ -18,7 +18,7 @@ const defaultArgs = {
     </span>
   ),
   children: (
-    <Button className={clsx(styles['trigger--spacing'])}>
+    <Button className={clsx(styles['trigger--spacing'])} variant="primary">
       Tooltip trigger
     </Button>
   ),
@@ -55,6 +55,7 @@ export const LeftPlacement: StoryObj<Args> = {
           styles['trigger--spacing-bottom'],
           styles['trigger--spacing-left-large'],
         )}
+        variant="primary"
       >
         Tooltip trigger
       </Button>
@@ -71,6 +72,7 @@ export const TopPlacement: StoryObj<Args> = {
           styles['trigger--spacing-top'],
           styles['trigger--spacing-left'],
         )}
+        variant="primary"
       >
         Tooltip trigger
       </Button>
@@ -87,6 +89,7 @@ export const BottomPlacement: StoryObj<Args> = {
           styles['trigger--spacing-bottom'],
           styles['trigger--spacing-left'],
         )}
+        variant="primary"
       >
         Tooltip trigger
       </Button>
@@ -113,7 +116,10 @@ export const LongText: StoryObj<Args> = {
 export const LongButtonText: StoryObj<Args> = {
   args: {
     children: (
-      <Button className={clsx(styles['trigger--spacing-top'])}>
+      <Button
+        className={clsx(styles['trigger--spacing-top'])}
+        variant="primary"
+      >
         Tooltip trigger with longer text to test placement
       </Button>
     ),
@@ -128,7 +134,7 @@ export const Interactive: StoryObj<Args> = {
   args: {
     visible: undefined,
     children: (
-      <Button className={clsx(styles['trigger--spacing'])}>
+      <Button className={clsx(styles['trigger--spacing'])} variant="primary">
         Hover here to see tooltip after clicking somewhere outside.
       </Button>
     ),

@@ -9,9 +9,37 @@ exports[`<Link /> Default story renders snapshot 1`] = `
 </a>
 `;
 
+exports[`<Link /> Destructive story renders snapshot 1`] = `
+<a
+  class="clickable-style clickable-style--lg clickable-style--primary clickable-style--error"
+  href="/"
+>
+  Link
+</a>
+`;
+
+exports[`<Link /> DestructiveLeftIcon story renders snapshot 1`] = `
+<a
+  class="clickable-style clickable-style--lg clickable-style--primary clickable-style--error"
+  href="/"
+>
+  <svg
+    aria-hidden="true"
+    class="icon"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <use
+      xlink:href="test-file-stub#arrow-back"
+    />
+  </svg>
+  Link
+</a>
+`;
+
 exports[`<Link /> FullWidth story renders snapshot 1`] = `
 <a
-  class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand clickable-style--full-width"
+  class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand clickable-style--full-width"
   href="/"
 >
   Link
@@ -285,34 +313,6 @@ exports[`<Link /> Primary story renders snapshot 1`] = `
 </a>
 `;
 
-exports[`<Link /> Destructive story renders snapshot 1`] = `
-<a
-  class="clickable-style clickable-style--lg clickable-style--primary clickable-style--error"
-  href="/"
->
-  Link
-</a>
-`;
-
-exports[`<Link /> PrimaryErrorLeftIcon story renders snapshot 1`] = `
-<a
-  class="clickable-style clickable-style--lg clickable-style--primary clickable-style--error"
-  href="/"
->
-  <svg
-    aria-hidden="true"
-    class="icon"
-    fill="currentColor"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <use
-      xlink:href="test-file-stub#arrow-back"
-    />
-  </svg>
-  Link
-</a>
-`;
-
 exports[`<Link /> PrimaryLeftIcon story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand"
@@ -415,71 +415,6 @@ exports[`<Link /> SecondaryMedium story renders snapshot 1`] = `
 </a>
 `;
 
-exports[`<Link /> Tertiary story renders snapshot 1`] = `
-<a
-  class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral"
-  href="/"
->
-  Link
-</a>
-`;
-
-exports[`<Link /> SecondaryNeutralLeftIcon story renders snapshot 1`] = `
-<a
-  class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral"
-  href="/"
->
-  <svg
-    aria-hidden="true"
-    class="icon"
-    fill="currentColor"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <use
-      xlink:href="test-file-stub#arrow-back"
-    />
-  </svg>
-  Link
-</a>
-`;
-
-exports[`<Link /> SecondaryNeutralMedium story renders snapshot 1`] = `
-<a
-  class="clickable-style clickable-style--md clickable-style--secondary clickable-style--neutral"
-  href="/"
->
-  Link
-</a>
-`;
-
-exports[`<Link /> SecondaryNeutralRightIcon story renders snapshot 1`] = `
-<a
-  class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral"
-  href="/"
->
-  Link
-  <svg
-    aria-hidden="true"
-    class="icon"
-    fill="currentColor"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <use
-      xlink:href="test-file-stub#arrow-forward"
-    />
-  </svg>
-</a>
-`;
-
-exports[`<Link /> SecondaryNeutralSmall story renders snapshot 1`] = `
-<a
-  class="clickable-style clickable-style--sm clickable-style--secondary clickable-style--neutral"
-  href="/"
->
-  Link
-</a>
-`;
-
 exports[`<Link /> SecondaryRightIcon story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand"
@@ -520,6 +455,71 @@ exports[`<Link /> SecondarySuccess story renders snapshot 1`] = `
 exports[`<Link /> SecondaryWarning story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--warning"
+  href="/"
+>
+  Link
+</a>
+`;
+
+exports[`<Link /> Tertiary story renders snapshot 1`] = `
+<a
+  class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral"
+  href="/"
+>
+  Link
+</a>
+`;
+
+exports[`<Link /> TertiaryLeftIcon story renders snapshot 1`] = `
+<a
+  class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral"
+  href="/"
+>
+  <svg
+    aria-hidden="true"
+    class="icon"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <use
+      xlink:href="test-file-stub#arrow-back"
+    />
+  </svg>
+  Link
+</a>
+`;
+
+exports[`<Link /> TertiaryMedium story renders snapshot 1`] = `
+<a
+  class="clickable-style clickable-style--md clickable-style--secondary clickable-style--neutral"
+  href="/"
+>
+  Link
+</a>
+`;
+
+exports[`<Link /> TertiaryRightIcon story renders snapshot 1`] = `
+<a
+  class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral"
+  href="/"
+>
+  Link
+  <svg
+    aria-hidden="true"
+    class="icon"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <use
+      xlink:href="test-file-stub#arrow-forward"
+    />
+  </svg>
+</a>
+`;
+
+exports[`<Link /> TertiarySmall story renders snapshot 1`] = `
+<a
+  class="clickable-style clickable-style--sm clickable-style--secondary clickable-style--neutral"
   href="/"
 >
   Link
