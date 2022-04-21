@@ -4,10 +4,13 @@ import { composeStories } from '@storybook/testing-react';
 import { render, screen } from '@testing-library/react';
 import React from 'react';
 import * as TooltipStoryFile from './Tooltip.stories';
+import consoleWarnMockHelper from '../../../jest/helpers/consoleWarnMock';
 
 const { Interactive } = composeStories(TooltipStoryFile);
 
 describe('<Tooltip />', () => {
+  const warnMock = consoleWarnMockHelper();
+
   generateSnapshots(TooltipStoryFile, {
     // Tippy renders tooltip as a child of <body> and hence is why baseElement needs to be targetted
     getElement: (wrapper) => {
@@ -24,5 +27,13 @@ describe('<Tooltip />', () => {
     expect(screen.getByTestId('tooltip-content')).toBeInTheDocument();
     await userEvent.keyboard('{esc}');
     expect(screen.queryByTestId('tooltip-content')).not.toBeInTheDocument();
+  });
+
+  it('should display warning message when attempting to use dark variant', () => {
+    render(<Interactive variant="dark" />);
+    expect(warnMock).toHaveBeenCalledTimes(1);
+    expect(warnMock).toBeCalledWith(
+      'The dark variant is deprecated and will be removed in an upcoming release. Please use the default light variant instead.',
+    );
   });
 });
