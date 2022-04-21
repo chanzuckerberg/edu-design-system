@@ -5,19 +5,13 @@ import userEvent from '@testing-library/user-event';
 import React from 'react';
 import { Banner } from './Banner';
 import * as BannerStoryFile from './Banner.stories';
-
-describe('<Banner /> stories', () => {
-  beforeEach(() => {
-    // prevents expected console warns about deprecation during testing
-    jest.spyOn(console, 'warn').mockImplementation();
-  });
-  afterEach(() => {
-    jest.restoreAllMocks();
-  });
-  generateSnapshots(BannerStoryFile);
-});
+import consoleWarnMockHelper from '../../../jest/helpers/consoleWarnMock';
 
 describe('<Banner />', () => {
+  const consoleWarnMock = consoleWarnMockHelper();
+
+  generateSnapshots(BannerStoryFile);
+
   it('dismisses when dismissed if dismissable', () => {
     render(
       <Banner
@@ -34,9 +28,6 @@ describe('<Banner />', () => {
   });
   it('should display warning message when attempting to use isFlat', () => {
     const { Flat } = composeStories(BannerStoryFile);
-    const consoleWarnMock = jest
-      .spyOn(global.console, 'warn')
-      .mockImplementation();
     render(<Flat />);
     expect(consoleWarnMock).toHaveBeenCalledTimes(1);
     expect(consoleWarnMock).toBeCalledWith(

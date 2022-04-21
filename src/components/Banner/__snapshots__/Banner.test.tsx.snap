@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Banner /> stories Brand story renders snapshot 1`] = `
+exports[`<Banner /> Brand story renders snapshot 1`] = `
 <article
   class="banner banner--brand banner--horizontal"
 >
@@ -49,7 +49,7 @@ exports[`<Banner /> stories Brand story renders snapshot 1`] = `
 </article>
 `;
 
-exports[`<Banner /> stories BrandDismissable story renders snapshot 1`] = `
+exports[`<Banner /> BrandDismissable story renders snapshot 1`] = `
 <article
   class="banner banner--brand banner--horizontal banner--dismissable"
 >
@@ -118,7 +118,7 @@ exports[`<Banner /> stories BrandDismissable story renders snapshot 1`] = `
 </article>
 `;
 
-exports[`<Banner /> stories BrandWithAction story renders snapshot 1`] = `
+exports[`<Banner /> BrandWithAction story renders snapshot 1`] = `
 <article
   class="banner banner--brand banner--horizontal"
 >
@@ -177,7 +177,7 @@ exports[`<Banner /> stories BrandWithAction story renders snapshot 1`] = `
 </article>
 `;
 
-exports[`<Banner /> stories DismissableBelowContent story renders snapshot 1`] = `
+exports[`<Banner /> DismissableBelowContent story renders snapshot 1`] = `
 <h1
   class="heading heading--size-h1"
 >
@@ -185,7 +185,7 @@ exports[`<Banner /> stories DismissableBelowContent story renders snapshot 1`] =
 </h1>
 `;
 
-exports[`<Banner /> stories DismissableWithAction story renders snapshot 1`] = `
+exports[`<Banner /> DismissableWithAction story renders snapshot 1`] = `
 <article
   class="banner banner--brand banner--horizontal banner--dismissable"
 >
@@ -264,7 +264,7 @@ exports[`<Banner /> stories DismissableWithAction story renders snapshot 1`] = `
 </article>
 `;
 
-exports[`<Banner /> stories Error story renders snapshot 1`] = `
+exports[`<Banner /> Error story renders snapshot 1`] = `
 <article
   class="banner banner--error banner--horizontal"
 >
@@ -313,7 +313,7 @@ exports[`<Banner /> stories Error story renders snapshot 1`] = `
 </article>
 `;
 
-exports[`<Banner /> stories ErrorDismissable story renders snapshot 1`] = `
+exports[`<Banner /> ErrorDismissable story renders snapshot 1`] = `
 <article
   class="banner banner--error banner--horizontal banner--dismissable"
 >
@@ -382,7 +382,7 @@ exports[`<Banner /> stories ErrorDismissable story renders snapshot 1`] = `
 </article>
 `;
 
-exports[`<Banner /> stories ErrorWithAction story renders snapshot 1`] = `
+exports[`<Banner /> ErrorWithAction story renders snapshot 1`] = `
 <article
   class="banner banner--error banner--horizontal"
 >
@@ -441,7 +441,7 @@ exports[`<Banner /> stories ErrorWithAction story renders snapshot 1`] = `
 </article>
 `;
 
-exports[`<Banner /> stories Flat story renders snapshot 1`] = `
+exports[`<Banner /> Flat story renders snapshot 1`] = `
 <article
   class="banner banner--brand banner--horizontal banner--flat"
 >
@@ -490,7 +490,7 @@ exports[`<Banner /> stories Flat story renders snapshot 1`] = `
 </article>
 `;
 
-exports[`<Banner /> stories Neutral story renders snapshot 1`] = `
+exports[`<Banner /> Neutral story renders snapshot 1`] = `
 <article
   class="banner banner--neutral banner--horizontal"
 >
@@ -539,7 +539,7 @@ exports[`<Banner /> stories Neutral story renders snapshot 1`] = `
 </article>
 `;
 
-exports[`<Banner /> stories NeutralDismissable story renders snapshot 1`] = `
+exports[`<Banner /> NeutralDismissable story renders snapshot 1`] = `
 <article
   class="banner banner--neutral banner--horizontal banner--dismissable"
 >
@@ -608,7 +608,7 @@ exports[`<Banner /> stories NeutralDismissable story renders snapshot 1`] = `
 </article>
 `;
 
-exports[`<Banner /> stories NeutralWithAction story renders snapshot 1`] = `
+exports[`<Banner /> NeutralWithAction story renders snapshot 1`] = `
 <article
   class="banner banner--neutral banner--horizontal"
 >
@@ -667,7 +667,7 @@ exports[`<Banner /> stories NeutralWithAction story renders snapshot 1`] = `
 </article>
 `;
 
-exports[`<Banner /> stories NoDescription story renders snapshot 1`] = `
+exports[`<Banner /> NoDescription story renders snapshot 1`] = `
 <article
   class="banner banner--brand banner--horizontal"
 >
@@ -702,7 +702,7 @@ exports[`<Banner /> stories NoDescription story renders snapshot 1`] = `
 </article>
 `;
 
-exports[`<Banner /> stories NoTitle story renders snapshot 1`] = `
+exports[`<Banner /> NoTitle story renders snapshot 1`] = `
 <article
   class="banner banner--brand banner--horizontal"
 >
@@ -746,7 +746,7 @@ exports[`<Banner /> stories NoTitle story renders snapshot 1`] = `
 </article>
 `;
 
-exports[`<Banner /> stories Success story renders snapshot 1`] = `
+exports[`<Banner /> Success story renders snapshot 1`] = `
 <article
   class="banner banner--success banner--horizontal"
 >
@@ -795,7 +795,7 @@ exports[`<Banner /> stories Success story renders snapshot 1`] = `
 </article>
 `;
 
-exports[`<Banner /> stories SuccessDismissable story renders snapshot 1`] = `
+exports[`<Banner /> SuccessDismissable story renders snapshot 1`] = `
 <article
   class="banner banner--success banner--horizontal banner--dismissable"
 >
@@ -864,7 +864,7 @@ exports[`<Banner /> stories SuccessDismissable story renders snapshot 1`] = `
 </article>
 `;
 
-exports[`<Banner /> stories SuccessWithAction story renders snapshot 1`] = `
+exports[`<Banner /> SuccessWithAction story renders snapshot 1`] = `
 <article
   class="banner banner--success banner--horizontal"
 >
@@ -923,7 +923,7 @@ exports[`<Banner /> stories SuccessWithAction story renders snapshot 1`] = `
 </article>
 `;
 
-exports[`<Banner /> stories Vertical story renders snapshot 1`] = `
+exports[`<Banner /> Vertical story renders snapshot 1`] = `
 <article
   class="banner banner--brand"
 >
@@ -972,7 +972,7 @@ exports[`<Banner /> stories Vertical story renders snapshot 1`] = `
 </article>
 `;
 
-exports[`<Banner /> stories VerticalDismissable story renders snapshot 1`] = `
+exports[`<Banner /> VerticalDismissable story renders snapshot 1`] = `
 <article
   class="banner banner--brand banner--dismissable"
 >
@@ -1041,7 +1041,7 @@ exports[`<Banner /> stories VerticalDismissable story renders snapshot 1`] = `
 </article>
 `;
 
-exports[`<Banner /> stories VerticalDismissableWithAction story renders snapshot 1`] = `
+exports[`<Banner /> VerticalDismissableWithAction story renders snapshot 1`] = `
 <article
   class="banner banner--brand banner--dismissable"
 >
@@ -1120,7 +1120,7 @@ exports[`<Banner /> stories VerticalDismissableWithAction story renders snapshot
 </article>
 `;
 
-exports[`<Banner /> stories VerticalWithAction story renders snapshot 1`] = `
+exports[`<Banner /> VerticalWithAction story renders snapshot 1`] = `
 <article
   class="banner banner--brand"
 >
@@ -1179,7 +1179,7 @@ exports[`<Banner /> stories VerticalWithAction story renders snapshot 1`] = `
 </article>
 `;
 
-exports[`<Banner /> stories Warning story renders snapshot 1`] = `
+exports[`<Banner /> Warning story renders snapshot 1`] = `
 <article
   class="banner banner--warning banner--horizontal"
 >
@@ -1228,7 +1228,7 @@ exports[`<Banner /> stories Warning story renders snapshot 1`] = `
 </article>
 `;
 
-exports[`<Banner /> stories WarningDismissable story renders snapshot 1`] = `
+exports[`<Banner /> WarningDismissable story renders snapshot 1`] = `
 <article
   class="banner banner--warning banner--horizontal banner--dismissable"
 >
@@ -1297,7 +1297,7 @@ exports[`<Banner /> stories WarningDismissable story renders snapshot 1`] = `
 </article>
 `;
 
-exports[`<Banner /> stories WarningWithAction story renders snapshot 1`] = `
+exports[`<Banner /> WarningWithAction story renders snapshot 1`] = `
 <article
   class="banner banner--warning banner--horizontal"
 >
