@@ -85,9 +85,19 @@ interface SvgStyle extends CSSProperties {
 }
 
 /**
+ * ```ts
+ * import {Icon} from "@chanzuckerberg/eds";
+ * ```
+ *
  * Render arbitrary SVG path data while enforcing good accessibility practices.
  *
  * If you're looking for specific icon files, look in the `src/icons` directory.
+ *
+ * Example usage:
+ *
+ * ```
+ * <Icon name="arrow-foward" purpose="informative" title="go forward" />
+ * ```
  */
 export const Icon = (props: IconProps) => {
   const {
