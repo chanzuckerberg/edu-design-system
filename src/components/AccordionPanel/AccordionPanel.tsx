@@ -9,7 +9,7 @@ import React, {
   ReactNode,
 } from 'react';
 import styles from './AccordionPanel.module.css';
-import { EdsThemeColorIconNeutralStrong } from '../../tokens-dist/colors';
+import { EdsThemeColorIconNeutralStrong } from '../../tokens-dist/ts/colors';
 import Icon from '../Icon';
 
 export interface Props {
