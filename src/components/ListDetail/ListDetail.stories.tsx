@@ -11,7 +11,7 @@ export default {
 } as Meta;
 
 const Template: Story<Props> = (args) => (
-  <ListDetail {...args}>
+  <ListDetail variant="ordered">
     <ListDetailPanel title="Overview">
       <TextPassage>
         <h3>Overview</h3>
@@ -111,8 +111,3 @@ const Template: Story<Props> = (args) => (
 
 export const Default = Template.bind({});
 Default.args = {};
-
-export const Ordered = Template.bind({});
-Ordered.args = {
-  variant: 'ordered',
-};

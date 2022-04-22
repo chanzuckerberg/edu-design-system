@@ -13,6 +13,7 @@ import {
   EdsThemeColorBackgroundGradeCompleteDefault,
   EdsThemeColorBackgroundGradeReviseDefault,
   EdsThemeColorBackgroundGradeStopDefault,
+  EdsThemeColorBorderNeutralSubtle,
 } from '../../tokens-dist/colors';
 import {
   L_ARROW_KEYCODE,
@@ -301,7 +302,7 @@ export const ListDetail = ({
                     ) : itemVariant === 'incomplete' ? (
                       <Icon
                         className={styles['list-detail__icon']}
-                        color={EdsThemeColorBackgroundGradeCompleteDefault}
+                        color={EdsThemeColorBorderNeutralSubtle}
                         name="star" /* TODO: need to add star-outline variant to Icon */
                         purpose="decorative"
                       />
