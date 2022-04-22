@@ -20,8 +20,8 @@ import {
   R_ARROW_KEYCODE,
   D_ARROW_KEYCODE,
 } from '../../util/keycodes';
-import { Icon } from '../Icon/Icon';
-import { ListDetailPanel } from '../ListDetailPanel/ListDetailPanel';
+import Icon from '../Icon';
+import ListDetailPanel from '../ListDetailPanel';
 
 export interface Props {
   /**
@@ -317,3 +317,5 @@ export const ListDetail = ({
     </div>
   );
 };
+
+ListDetail.Panel = ListDetailPanel;

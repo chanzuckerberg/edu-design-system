@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import styles from './Accordion.module.css';
+import AccordionPanel from '../AccordionPanel';
 
 export interface Props {
   /**
@@ -38,3 +39,5 @@ export const Accordion = ({
     </dl>
   );
 };
+
+Accordion.Panel = AccordionPanel;

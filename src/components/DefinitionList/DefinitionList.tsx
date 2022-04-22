@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import styles from './DefinitionList.module.css';
+import DefinitionListItem from '../DefinitionListItem';
 
 export interface Props {
   /**
@@ -43,3 +44,5 @@ export const DefinitionList = ({
     </dl>
   );
 };
+
+DefinitionList.Item = DefinitionListItem;

@@ -54,7 +54,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const Popover: React.FC<Props> = ({
+export const Popover = ({
   ariaDescribedBy,
   ariaLabelledBy,
   className,
@@ -64,7 +64,7 @@ export const Popover: React.FC<Props> = ({
   closeButtonText,
   position,
   ...other
-}) => {
+}: Props) => {
   /**
    * Initialize states, constants, and refs
    */
@@ -197,3 +197,7 @@ export const Popover: React.FC<Props> = ({
     </FocusLock>
   );
 };
+
+Popover.Body = PopoverBody;
+Popover.Footer = PopoverFooter;
+Popover.Header = PopoverHeader;

@@ -1,12 +1,9 @@
 import clsx from 'clsx';
 import React, { ReactNode, useState, useRef, MutableRefObject } from 'react';
 import { Drawer } from './Drawer';
-import { Button } from '../Button/Button';
-import { ButtonGroup } from '../ButtonGroup/ButtonGroup';
-import { DrawerBody } from '../DrawerBody/DrawerBody';
-import { DrawerFooter } from '../DrawerFooter/DrawerFooter';
-import { DrawerHeader } from '../DrawerHeader/DrawerHeader';
-import { Heading } from '../Heading/Heading';
+import Button from '../Button';
+import ButtonGroup from '../ButtonGroup';
+import Heading from '../Heading';
 
 export interface Props {
   /**
@@ -57,20 +54,20 @@ export const DrawerExample = ({ className, ...other }: Props) => {
         isActive={drawerOpen}
         onClose={closeDrawerExample}
       >
-        <DrawerHeader>
+        <Drawer.Header>
           <Heading id="drawer-heading-1" size="h2">
             Drawer title
           </Heading>
-        </DrawerHeader>
-        <DrawerBody>
+        </Drawer.Header>
+        <Drawer.Body>
           <div className="fpo">Drawer body</div>
-        </DrawerBody>
-        <DrawerFooter>
+        </Drawer.Body>
+        <Drawer.Footer>
           <ButtonGroup>
             <Button variant="primary">Button</Button>
             <Button onClick={closeDrawerExample}>Close Drawer</Button>
           </ButtonGroup>
-        </DrawerFooter>
+        </Drawer.Footer>
       </Drawer>
     </div>
   );

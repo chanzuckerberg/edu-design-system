@@ -6,8 +6,6 @@ import Table from '../Table';
 import TableBody from '../TableBody';
 import TableCell from '../TableCell';
 import TableHeader from '../TableHeader';
-import TableObjectBody from '../TableObjectBody';
-import TableObjectHeader from '../TableObjectHeader';
 import TableRow from '../TableRow';
 import Toolbar from '../Toolbar';
 import ToolbarItem from '../ToolbarItem';
@@ -19,14 +17,14 @@ export default {
 
 const Template: Story<Props> = (args) => (
   <TableObject>
-    <TableObjectHeader>
+    <TableObject.Header>
       <Toolbar>
         <ToolbarItem>
           <div className="fpo">Toolbar Item</div>
         </ToolbarItem>
       </Toolbar>{' '}
-    </TableObjectHeader>
-    <TableObjectBody>
+    </TableObject.Header>
+    <TableObject.Body>
       <Table caption="This is a table caption and it is required">
         <TableHeader>
           <TableRow>
@@ -67,20 +65,20 @@ const Template: Story<Props> = (args) => (
           </TableRow>
         </TableBody>
       </Table>
-    </TableObjectBody>
+    </TableObject.Body>
   </TableObject>
 );
 
 const OverflowLargeTemplate: Story<Props> = (args) => (
   <TableObject>
-    <TableObjectHeader>
+    <TableObject.Header>
       <Toolbar>
         <ToolbarItem>
           <div className="fpo">Toolbar Item</div>
         </ToolbarItem>
       </Toolbar>{' '}
-    </TableObjectHeader>
-    <TableObjectBody>
+    </TableObject.Header>
+    <TableObject.Body>
       <Table
         behavior="overflow-lg"
         caption="This is a table caption and it is required"
@@ -124,20 +122,20 @@ const OverflowLargeTemplate: Story<Props> = (args) => (
           </TableRow>
         </TableBody>
       </Table>
-    </TableObjectBody>
+    </TableObject.Body>
   </TableObject>
 );
 
 const OverflowSmallTemplate: Story<Props> = (args) => (
   <TableObject>
-    <TableObjectHeader>
+    <TableObject.Header>
       <Toolbar>
         <ToolbarItem>
           <div className="fpo">Toolbar Item</div>
         </ToolbarItem>
       </Toolbar>{' '}
-    </TableObjectHeader>
-    <TableObjectBody>
+    </TableObject.Header>
+    <TableObject.Body>
       <Table
         behavior="overflow-sm"
         caption="This is a table caption and it is required"
@@ -181,7 +179,7 @@ const OverflowSmallTemplate: Story<Props> = (args) => (
           </TableRow>
         </TableBody>
       </Table>
-    </TableObjectBody>
+    </TableObject.Body>
   </TableObject>
 );
 

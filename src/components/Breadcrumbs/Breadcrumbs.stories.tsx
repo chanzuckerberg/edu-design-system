@@ -12,9 +12,9 @@ export default {
 
 const Template: Story<Props> = (args) => (
   <Breadcrumbs {...args}>
-    <BreadcrumbsItem href="#" text="Home" />
-    <BreadcrumbsItem href="#" text="Child" />
-    <BreadcrumbsItem href="#" text="Grandchild" />
+    <Breadcrumbs.Item href="#" text="Home" />
+    <Breadcrumbs.Item href="#" text="Child" />
+    <Breadcrumbs.Item href="#" text="Grandchild" />
   </Breadcrumbs>
 );
 
