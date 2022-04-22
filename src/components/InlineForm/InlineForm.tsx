@@ -1,6 +1,6 @@
 import clsx from 'clsx';
-import { nanoid } from 'nanoid';
-import React, { useEffect, useState, ReactNode } from 'react';
+import React, { ReactNode } from 'react';
+import { useUID } from 'react-uid';
 import styles from './InlineForm.module.css';
 import Button from '../Button';
 import Label from '../Label';
@@ -55,11 +55,8 @@ export const InlineForm = ({
   placeholder,
   ...other
 }: Props) => {
-  const [idVar, setId] = useState();
-
-  useEffect(() => {
-    setId(id || nanoid());
-  }, [id]);
+  const generatedId = useUID();
+  const idVar = id || generatedId;
 
   const componentClassName = clsx(styles['inline-form'], className, {});
   return (

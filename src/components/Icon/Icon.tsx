@@ -1,6 +1,6 @@
 import clsx from 'clsx';
-import { nanoid } from 'nanoid';
-import React, { useEffect, useState, ReactNode, CSSProperties } from 'react';
+import React, { useEffect, ReactNode, CSSProperties } from 'react';
+import { useUID } from 'react-uid';
 import svg4everybody from 'svg4everybody';
 import styles from './Icon.module.css';
 import icons from '../../icons/spritemap/spritemap.svg';
@@ -110,12 +110,12 @@ export const Icon = (props: IconProps) => {
     purpose,
     size,
   } = props;
-  const [idVar, setId] = useState('');
+  const generatedId = useUID();
+  const idVar = id || generatedId;
 
   useEffect(() => {
-    setId(id || nanoid());
     svg4everybody(); // Required to get IE to render icon sprites
-  }, [id]);
+  }, []);
 
   const componentClassName = clsx(
     styles['icon'],

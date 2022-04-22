@@ -1,6 +1,6 @@
 import clsx from 'clsx';
-import { nanoid } from 'nanoid';
-import React, { ReactNode, useEffect, useState } from 'react';
+import React, { ReactNode } from 'react';
+import { useUID } from 'react-uid';
 import styles from './CheckboxField.module.css';
 import FieldNote from '../FieldNote';
 import Fieldset from '../Fieldset';
@@ -79,13 +79,10 @@ export const CheckboxField = ({
   inverted,
   ...other
 }: Props) => {
-  const [ariaDescribedByVar, setAriaDescribedBy] = useState();
-
-  useEffect(() => {
-    if (fieldNote) {
-      setAriaDescribedBy(ariaDescribedBy || nanoid());
-    }
-  }, [ariaDescribedBy, fieldNote]);
+  const generatedId = useUID();
+  const ariaDescribedByVar = fieldNote
+    ? ariaDescribedBy || generatedId
+    : undefined;
 
   const componentClassName = clsx(
     styles['checkbox-field'],
