@@ -39,6 +39,10 @@ export type ClickableStyleProps<IComponent extends React.ElementType> = {
 } & React.ComponentProps<IComponent>;
 
 /**
+ * ```ts
+ * import {ClickableStyle} from "@chanzuckerberg/eds";
+ * ```
+ *
  * A helper component that contains all the styling for buttons and links.
  *
  * If you're styling a `<button>` or `<a>` element, you can use the `Button`
