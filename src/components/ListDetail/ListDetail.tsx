@@ -226,7 +226,7 @@ export const ListDetail = ({
 
   return (
     <div className={componentClassName} {...other}>
-      <div className={styles['list-detail__header']}>
+      <nav className={styles['list-detail__nav']}>
         <ol
           className={clsx(styles['list-detail__list'], {
             [styles['list-detail__list--ordered']]: variant === 'ordered',
@@ -298,6 +298,20 @@ export const ListDetail = ({
                       />
                     ) : itemVariant === 'number' ? (
                       <span className={styles['list-detail__number']}>{i}</span>
+                    ) : itemVariant === 'incomplete' ? (
+                      <Icon
+                        className={styles['list-detail__icon']}
+                        color={EdsThemeColorBackgroundGradeCompleteDefault}
+                        name="star" /* TODO: need to add star-outline variant to Icon */
+                        purpose="decorative"
+                      />
+                    ) : itemVariant === 'complete' ? (
+                      <Icon
+                        className={styles['list-detail__icon']}
+                        color={EdsThemeColorBackgroundGradeCompleteDefault}
+                        name="star"
+                        purpose="decorative"
+                      />
                     ) : (
                       ''
                     )}
@@ -308,7 +322,7 @@ export const ListDetail = ({
             );
           })}
         </ol>
-      </div>
+      </nav>
       <div className={styles['list-detail__body']}>
         {childrenWithProps[activeIndexState]}
       </div>

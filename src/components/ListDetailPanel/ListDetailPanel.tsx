@@ -26,7 +26,14 @@ export interface Props {
   /**
    * The tab variant
    */
-  variant?: 'bullet' | 'complete' | 'error' | 'number' | 'success' | 'warning';
+  variant?:
+    | 'bullet'
+    | 'complete'
+    | 'error'
+    | 'incomplete'
+    | 'number'
+    | 'success'
+    | 'warning';
   /**
    * The tab title
    */
@@ -46,7 +53,6 @@ export const ListDetailPanel = ({
   title,
   ...other
 }: Props) => {
-  const [isComplete, setIsComplete] = useState(completed || false);
   const componentClassName = clsx(styles['list-detail__panel'], className, {});
   return (
     <nav
