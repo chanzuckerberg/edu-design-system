@@ -13,7 +13,7 @@ import {
   EdsThemeColorBackgroundGradeCompleteDefault,
   EdsThemeColorBackgroundGradeReviseDefault,
   EdsThemeColorBackgroundGradeStopDefault,
-} from '../../tokens-dist/colors';
+} from '../../tokens-dist/ts/colors';
 import {
   L_ARROW_KEYCODE,
   U_ARROW_KEYCODE,
