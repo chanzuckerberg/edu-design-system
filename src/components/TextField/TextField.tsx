@@ -1,12 +1,6 @@
 import clsx from 'clsx';
-import { nanoid } from 'nanoid';
-import React, {
-  ChangeEventHandler,
-  MouseEventHandler,
-  ReactNode,
-  useEffect,
-  useState,
-} from 'react';
+import React, { ChangeEventHandler, MouseEventHandler, ReactNode } from 'react';
+import { useUID } from 'react-uid';
 import styles from './TextField.module.css';
 import FieldNote from '../FieldNote';
 import Icon, { IconName } from '../Icon';
@@ -179,15 +173,13 @@ export const TextField = ({
   title,
   ...other
 }: Props) => {
-  const [idVar, setId] = useState();
-  const [ariaDescribedByVar, setAriaDescribedBy] = useState();
+  const generatedId = useUID();
+  const idVar = id || generatedId;
 
-  useEffect(() => {
-    setId(id || nanoid());
-    if (fieldNote) {
-      setAriaDescribedBy(ariaDescribedBy || nanoid());
-    }
-  }, [ariaDescribedBy, fieldNote, id]);
+  const generatedAriaDescribedById = useUID();
+  const ariaDescribedByVar = fieldNote
+    ? ariaDescribedBy || generatedAriaDescribedById
+    : undefined;
 
   const componentClassName = clsx(
     styles['text-field'],
