@@ -10,6 +10,10 @@ export type Props = ClickableStyleProps<React.ElementType> & {
 };
 
 /**
+ * ```ts
+ * import {Link} from "@chanzuckerberg/eds";
+ * ```
+ *
  * Component for making styled anchor tags.
  *
  * This component is called Link because it should be used to make `<a>` elements;

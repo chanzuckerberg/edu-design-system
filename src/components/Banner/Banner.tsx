@@ -99,7 +99,7 @@ const variantToIconAssetsMap: {
 
 /**
  * ```ts
- * import {Banner} from "@chanzuckerberg/eds-components";
+ * import {Banner} from "@chanzuckerberg/eds";
  * ```
  *
  * A banner used to provide and highlight information to a user or ask for a decision or action.
