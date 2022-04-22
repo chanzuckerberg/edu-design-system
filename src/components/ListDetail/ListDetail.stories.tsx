@@ -95,9 +95,9 @@ const Template: Story<Props> = (args) => (
       </TextPassage>
     </ListDetailPanel>
 
-    <ListDetailPanel title="ListDetailPanel 5" variant="complete">
+    <ListDetailPanel title="Final Item - complete" variant="complete">
       <TextPassage>
-        <h3>ListDetailPanel 5</h3>
+        <h3>Final Item - complete</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
