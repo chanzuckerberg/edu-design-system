@@ -5,7 +5,7 @@ exports[`<Fieldset /> CheckboxField story renders snapshot 1`] = `
   class="checkbox-field fieldset"
 >
   <legend
-    aria-describedby="mock-id"
+    aria-describedby="6"
     class="fieldset-legend checkbox-field__label"
   >
     Checkbox field
@@ -29,7 +29,7 @@ exports[`<Fieldset /> CheckboxField story renders snapshot 1`] = `
             <input
               class="checkbox__input"
               data-bootstrap-override="checkbox"
-              id="mock-id"
+              id="7"
               name="checkbox-example"
               style="--checkbox-svg-size: 1.25rem;"
               type="checkbox"
@@ -62,7 +62,7 @@ exports[`<Fieldset /> CheckboxField story renders snapshot 1`] = `
           <label
             class="label label--md"
             data-bootstrap-override="label"
-            for="mock-id"
+            for="7"
             style="--checkbox-svg-size: 1.25rem;"
           >
             Checkbox 1
@@ -81,7 +81,7 @@ exports[`<Fieldset /> CheckboxField story renders snapshot 1`] = `
             <input
               class="checkbox__input"
               data-bootstrap-override="checkbox"
-              id="mock-id"
+              id="9"
               name="checkbox-example"
               style="--checkbox-svg-size: 1.25rem;"
               type="checkbox"
@@ -114,7 +114,7 @@ exports[`<Fieldset /> CheckboxField story renders snapshot 1`] = `
           <label
             class="label label--md"
             data-bootstrap-override="label"
-            for="mock-id"
+            for="9"
             style="--checkbox-svg-size: 1.25rem;"
           >
             Checkbox 2
@@ -133,7 +133,7 @@ exports[`<Fieldset /> CheckboxField story renders snapshot 1`] = `
             <input
               class="checkbox__input"
               data-bootstrap-override="checkbox"
-              id="mock-id"
+              id="11"
               name="checkbox-example"
               style="--checkbox-svg-size: 1.25rem;"
               type="checkbox"
@@ -166,7 +166,7 @@ exports[`<Fieldset /> CheckboxField story renders snapshot 1`] = `
           <label
             class="label label--md"
             data-bootstrap-override="label"
-            for="mock-id"
+            for="11"
             style="--checkbox-svg-size: 1.25rem;"
           >
             Checkbox 3
@@ -178,7 +178,7 @@ exports[`<Fieldset /> CheckboxField story renders snapshot 1`] = `
   <div
     aria-live="assertive"
     class="field-note checkbox-field__note"
-    id="mock-id"
+    id="6"
   >
     Checkbox fieldset usage. See CheckboxField Stories for more examples.
   </div>
@@ -446,7 +446,7 @@ exports[`<Fieldset /> RadioField story renders snapshot 1`] = `
   class="radio-field fieldset"
 >
   <legend
-    aria-describedby="mock-id"
+    aria-describedby="13"
     class="fieldset-legend radio-field__label"
   >
     Radio field
@@ -466,7 +466,7 @@ exports[`<Fieldset /> RadioField story renders snapshot 1`] = `
         >
           <input
             class="radio__input"
-            id="mock-id"
+            id="14"
             name="radio-example"
             type="radio"
             value="radio1"
@@ -477,7 +477,7 @@ exports[`<Fieldset /> RadioField story renders snapshot 1`] = `
         </div>
         <label
           class="radio-field__item-label"
-          for="mock-id"
+          for="14"
         >
           Radio 1
         </label>
@@ -490,7 +490,7 @@ exports[`<Fieldset /> RadioField story renders snapshot 1`] = `
         >
           <input
             class="radio__input"
-            id="mock-id"
+            id="15"
             name="radio-example"
             type="radio"
             value="radio2"
@@ -501,7 +501,7 @@ exports[`<Fieldset /> RadioField story renders snapshot 1`] = `
         </div>
         <label
           class="radio-field__item-label"
-          for="mock-id"
+          for="15"
         >
           Radio 2
         </label>
@@ -514,7 +514,7 @@ exports[`<Fieldset /> RadioField story renders snapshot 1`] = `
         >
           <input
             class="radio__input"
-            id="mock-id"
+            id="16"
             name="radio-example"
             type="radio"
             value="radio3"
@@ -525,7 +525,7 @@ exports[`<Fieldset /> RadioField story renders snapshot 1`] = `
         </div>
         <label
           class="radio-field__item-label"
-          for="mock-id"
+          for="16"
         >
           Radio 3
         </label>
@@ -535,7 +535,7 @@ exports[`<Fieldset /> RadioField story renders snapshot 1`] = `
   <div
     aria-live="assertive"
     class="field-note radio-field__note"
-    id="mock-id"
+    id="13"
   >
     RadioField fieldset usage. See RadioField Stories for more examples.
   </div>

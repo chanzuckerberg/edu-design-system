@@ -11,7 +11,7 @@ exports[`<Banner /> Brand story renders snapshot 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <title
-      id="mock-id"
+      id="1"
     >
       attention
     </title>
@@ -64,7 +64,7 @@ exports[`<Banner /> BrandDismissable story renders snapshot 1`] = `
       xmlns="http://www.w3.org/2000/svg"
     >
       <title
-        id="mock-id"
+        id="13"
       >
         dismiss module
       </title>
@@ -80,7 +80,7 @@ exports[`<Banner /> BrandDismissable story renders snapshot 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <title
-      id="mock-id"
+      id="14"
     >
       attention
     </title>
@@ -129,7 +129,7 @@ exports[`<Banner /> BrandWithAction story renders snapshot 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <title
-      id="mock-id"
+      id="8"
     >
       attention
     </title>
@@ -200,7 +200,7 @@ exports[`<Banner /> DismissableWithAction story renders snapshot 1`] = `
       xmlns="http://www.w3.org/2000/svg"
     >
       <title
-        id="mock-id"
+        id="23"
       >
         dismiss module
       </title>
@@ -216,7 +216,7 @@ exports[`<Banner /> DismissableWithAction story renders snapshot 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <title
-      id="mock-id"
+      id="24"
     >
       attention
     </title>
@@ -275,7 +275,7 @@ exports[`<Banner /> Error story renders snapshot 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <title
-      id="mock-id"
+      id="5"
     >
       error
     </title>
@@ -328,7 +328,7 @@ exports[`<Banner /> ErrorDismissable story renders snapshot 1`] = `
       xmlns="http://www.w3.org/2000/svg"
     >
       <title
-        id="mock-id"
+        id="21"
       >
         dismiss module
       </title>
@@ -344,7 +344,7 @@ exports[`<Banner /> ErrorDismissable story renders snapshot 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <title
-      id="mock-id"
+      id="22"
     >
       error
     </title>
@@ -393,7 +393,7 @@ exports[`<Banner /> ErrorWithAction story renders snapshot 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <title
-      id="mock-id"
+      id="12"
     >
       error
     </title>
@@ -452,7 +452,7 @@ exports[`<Banner /> Flat story renders snapshot 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <title
-      id="mock-id"
+      id="33"
     >
       attention
     </title>
@@ -501,7 +501,7 @@ exports[`<Banner /> Neutral story renders snapshot 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <title
-      id="mock-id"
+      id="2"
     >
       notice
     </title>
@@ -554,7 +554,7 @@ exports[`<Banner /> NeutralDismissable story renders snapshot 1`] = `
       xmlns="http://www.w3.org/2000/svg"
     >
       <title
-        id="mock-id"
+        id="15"
       >
         dismiss module
       </title>
@@ -570,7 +570,7 @@ exports[`<Banner /> NeutralDismissable story renders snapshot 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <title
-      id="mock-id"
+      id="16"
     >
       notice
     </title>
@@ -619,7 +619,7 @@ exports[`<Banner /> NeutralWithAction story renders snapshot 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <title
-      id="mock-id"
+      id="9"
     >
       notice
     </title>
@@ -678,7 +678,7 @@ exports[`<Banner /> NoDescription story renders snapshot 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <title
-      id="mock-id"
+      id="6"
     >
       attention
     </title>
@@ -713,7 +713,7 @@ exports[`<Banner /> NoTitle story renders snapshot 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <title
-      id="mock-id"
+      id="7"
     >
       attention
     </title>
@@ -757,7 +757,7 @@ exports[`<Banner /> Success story renders snapshot 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <title
-      id="mock-id"
+      id="3"
     >
       success
     </title>
@@ -810,7 +810,7 @@ exports[`<Banner /> SuccessDismissable story renders snapshot 1`] = `
       xmlns="http://www.w3.org/2000/svg"
     >
       <title
-        id="mock-id"
+        id="17"
       >
         dismiss module
       </title>
@@ -826,7 +826,7 @@ exports[`<Banner /> SuccessDismissable story renders snapshot 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <title
-      id="mock-id"
+      id="18"
     >
       success
     </title>
@@ -875,7 +875,7 @@ exports[`<Banner /> SuccessWithAction story renders snapshot 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <title
-      id="mock-id"
+      id="10"
     >
       success
     </title>
@@ -934,7 +934,7 @@ exports[`<Banner /> Vertical story renders snapshot 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <title
-      id="mock-id"
+      id="27"
     >
       attention
     </title>
@@ -987,7 +987,7 @@ exports[`<Banner /> VerticalDismissable story renders snapshot 1`] = `
       xmlns="http://www.w3.org/2000/svg"
     >
       <title
-        id="mock-id"
+        id="28"
       >
         dismiss module
       </title>
@@ -1003,7 +1003,7 @@ exports[`<Banner /> VerticalDismissable story renders snapshot 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <title
-      id="mock-id"
+      id="29"
     >
       attention
     </title>
@@ -1056,7 +1056,7 @@ exports[`<Banner /> VerticalDismissableWithAction story renders snapshot 1`] = `
       xmlns="http://www.w3.org/2000/svg"
     >
       <title
-        id="mock-id"
+        id="31"
       >
         dismiss module
       </title>
@@ -1072,7 +1072,7 @@ exports[`<Banner /> VerticalDismissableWithAction story renders snapshot 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <title
-      id="mock-id"
+      id="32"
     >
       attention
     </title>
@@ -1131,7 +1131,7 @@ exports[`<Banner /> VerticalWithAction story renders snapshot 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <title
-      id="mock-id"
+      id="30"
     >
       attention
     </title>
@@ -1190,7 +1190,7 @@ exports[`<Banner /> Warning story renders snapshot 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <title
-      id="mock-id"
+      id="4"
     >
       warning
     </title>
@@ -1243,7 +1243,7 @@ exports[`<Banner /> WarningDismissable story renders snapshot 1`] = `
       xmlns="http://www.w3.org/2000/svg"
     >
       <title
-        id="mock-id"
+        id="19"
       >
         dismiss module
       </title>
@@ -1259,7 +1259,7 @@ exports[`<Banner /> WarningDismissable story renders snapshot 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <title
-      id="mock-id"
+      id="20"
     >
       warning
     </title>
@@ -1308,7 +1308,7 @@ exports[`<Banner /> WarningWithAction story renders snapshot 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <title
-      id="mock-id"
+      id="11"
     >
       warning
     </title>

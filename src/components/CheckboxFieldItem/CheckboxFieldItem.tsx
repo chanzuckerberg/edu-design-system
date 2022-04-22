@@ -1,6 +1,6 @@
 import clsx from 'clsx';
-import { nanoid } from 'nanoid';
 import React, { ChangeEventHandler, useEffect, useRef, useState } from 'react';
+import { useUID } from 'react-uid';
 import Checkbox from '../Checkbox';
 import styles from '../CheckboxField/CheckboxField.module.css';
 
@@ -73,7 +73,8 @@ export const CheckboxFieldItem = ({
   const [checkboxChecked, setCheckedState] = useState(
     checked ? checked : false,
   );
-  const [idVar, setId] = useState();
+  const generatedId = useUID();
+  const idVar = id || generatedId;
 
   /**
    * Check for previous props/states
@@ -96,8 +97,7 @@ export const CheckboxFieldItem = ({
       /* 1 */
       setCheckedState(checkboxChecked);
     }
-    setId(id || nanoid());
-  }, [prevChecked, checkboxChecked, id]);
+  }, [prevChecked, checkboxChecked]);
 
   /**
    * On change handler

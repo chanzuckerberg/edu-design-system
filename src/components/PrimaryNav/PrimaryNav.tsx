@@ -1,6 +1,6 @@
 import clsx from 'clsx';
-import { nanoid } from 'nanoid';
-import React, { ReactNode, useEffect, useState } from 'react';
+import React, { ReactNode } from 'react';
+import { useUID } from 'react-uid';
 import styles from './PrimaryNav.module.css';
 
 export interface Props {
@@ -32,11 +32,8 @@ export const PrimaryNav = ({
   ariaLabel,
   ...other
 }: Props) => {
-  const [idVar, setId] = useState();
-
-  useEffect(() => {
-    setId(id || nanoid());
-  }, [id]);
+  const generatedId = useUID();
+  const idVar = id || generatedId;
 
   const componentClassName = clsx(styles['primary-nav'], className);
 

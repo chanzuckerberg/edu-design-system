@@ -1,6 +1,6 @@
 import clsx from 'clsx';
-import { nanoid } from 'nanoid';
-import React, { ReactNode, useEffect, useState } from 'react';
+import React, { ReactNode } from 'react';
+import { useUID } from 'react-uid';
 import styles from './Breadcrumbs.module.css';
 
 export interface Props {
@@ -33,11 +33,8 @@ export const Breadcrumbs = ({
   ariaLabel = 'breadcrumbs links',
   ...other
 }: Props) => {
-  const [breadcrumbsId, setBreadcrumbsId] = useState();
-
-  useEffect(() => {
-    setBreadcrumbsId(id || nanoid());
-  }, [id]);
+  const generatedId = useUID();
+  const breadcrumbsId = id || generatedId;
 
   const componentClassName = clsx(styles['breadcrumbs'], className, {});
 

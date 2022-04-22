@@ -58,7 +58,7 @@ exports[`<Link /> IconClickableStyleIconOnly story renders snapshot 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <title
-      id="mock-id"
+      id="10"
     >
       go back
     </title>
@@ -81,7 +81,7 @@ exports[`<Link /> IconClickableStyleIconOnlySmall story renders snapshot 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <title
-      id="mock-id"
+      id="13"
     >
       go back
     </title>
@@ -275,7 +275,7 @@ exports[`<Link /> LinkRightIcon story renders snapshot 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <title
-      id="mock-id"
+      id="1"
     >
       opens in a new tab
     </title>
