@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import { useUID } from 'react-uid';
 import styles from './Breadcrumbs.module.css';
+import BreadcrumbsItem from '../BreadcrumbsItem';
 
 export interface Props {
   /**
@@ -49,3 +50,5 @@ export const Breadcrumbs = ({
     </nav>
   );
 };
+
+Breadcrumbs.Item = BreadcrumbsItem;

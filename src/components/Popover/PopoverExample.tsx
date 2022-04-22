@@ -12,8 +12,6 @@ import Button from '../Button';
 import Heading from '../Heading';
 import NotificationList from '../NotificationList';
 import NotificationListItem from '../NotificationListItem';
-import PopoverBody from '../PopoverBody';
-import PopoverHeader from '../PopoverHeader';
 
 export interface Props {
   /**
@@ -79,7 +77,7 @@ export const PopoverExample: React.FC<Props> = ({
         onClose={closePopover}
         position={position}
       >
-        <PopoverHeader
+        <Popover.Header
           titleAfter={
             <Button size="sm" variant="icon">
               Mark All Seen
@@ -89,8 +87,8 @@ export const PopoverExample: React.FC<Props> = ({
           <Heading as="h3" id="popover-heading-1" size="h6">
             Notifications (4)
           </Heading>
-        </PopoverHeader>
-        <PopoverBody>
+        </Popover.Header>
+        <Popover.Body>
           <NotificationList>
             <NotificationListItem
               date="now"
@@ -117,11 +115,11 @@ export const PopoverExample: React.FC<Props> = ({
               title="English Teacher gave you feedback"
             ></NotificationListItem>
           </NotificationList>
-          <PopoverHeader>
+          <Popover.Header>
             <Heading as="h3" id="popover-heading-2" size="h6">
               Already Seen
             </Heading>
-          </PopoverHeader>
+          </Popover.Header>
           <NotificationList>
             <NotificationListItem
               date="now"
@@ -138,7 +136,7 @@ export const PopoverExample: React.FC<Props> = ({
               title="English Teacher gave you feedback"
             ></NotificationListItem>
           </NotificationList>
-        </PopoverBody>
+        </Popover.Body>
       </Popover>
     </div>
   );
