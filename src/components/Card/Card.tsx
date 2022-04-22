@@ -1,6 +1,9 @@
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import styles from './Card.module.css';
+import CardBody from '../CardBody';
+import CardFooter from '../CardFooter';
+import CardHeader from '../CardHeader';
 
 export interface Props {
   /**
@@ -32,3 +35,7 @@ export const Card = ({ className, children, inverted, ...other }: Props) => {
     </div>
   );
 };
+
+Card.Body = CardBody;
+Card.Footer = CardFooter;
+Card.Header = CardHeader;

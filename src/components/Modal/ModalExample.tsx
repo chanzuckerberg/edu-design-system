@@ -1,13 +1,10 @@
 import clsx from 'clsx';
 import React, { ReactNode, useState, useRef, MutableRefObject } from 'react';
 import { Modal } from './Modal';
-import { Button } from '../Button/Button';
-import { ButtonGroup } from '../ButtonGroup/ButtonGroup';
-import { Heading } from '../Heading/Heading';
-import { ModalBody } from '../ModalBody/ModalBody';
-import { ModalFooter } from '../ModalFooter/ModalFooter';
-import { ModalHeader } from '../ModalHeader/ModalHeader';
-import { TextPassage } from '../TextPassage/TextPassage';
+import Button from '../Button';
+import ButtonGroup from '../ButtonGroup';
+import Heading from '../Heading';
+import TextPassage from '../TextPassage';
 
 export interface Props {
   /**
@@ -68,12 +65,12 @@ export const ModalExample = ({
         onClose={closeContinueModal}
         size={size}
       >
-        <ModalHeader>
+        <Modal.Header>
           <Heading id="modal-heading-1" size="h2">
             Modal Title
           </Heading>
-        </ModalHeader>
-        <ModalBody>
+        </Modal.Header>
+        <Modal.Body>
           <TextPassage className="u-margin-bottom-md" id="modal-description-1">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -82,15 +79,15 @@ export const ModalExample = ({
               nisi ut aliquip ex ea commodo consequat.
             </p>
           </TextPassage>
-        </ModalBody>
-        <ModalFooter>
+        </Modal.Body>
+        <Modal.Footer>
           <ButtonGroup>
             <Button onClick={closeContinueModal} variant="primary">
               Submit
             </Button>
             <Button onClick={closeContinueModal}>Close</Button>
           </ButtonGroup>
-        </ModalFooter>
+        </Modal.Footer>
       </Modal>
     </div>
   );

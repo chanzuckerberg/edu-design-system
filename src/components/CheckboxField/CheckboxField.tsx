@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import { useUID } from 'react-uid';
 import styles from './CheckboxField.module.css';
+import CheckboxFieldItem from '../CheckboxFieldItem';
 import FieldNote from '../FieldNote';
 import Fieldset from '../Fieldset';
 import FieldsetItems from '../FieldsetItems';
@@ -118,3 +119,5 @@ export const CheckboxField = ({
     </Fieldset>
   );
 };
+
+CheckboxField.Item = CheckboxFieldItem;

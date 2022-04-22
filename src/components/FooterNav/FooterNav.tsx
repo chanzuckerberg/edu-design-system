@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import styles from './FooterNav.module.css';
+import FooterNavItem from '../FooterNavItem';
 
 export interface Props {
   /**
@@ -28,3 +29,5 @@ export const FooterNav = ({ children, className, items, ...other }: Props) => {
     </nav>
   );
 };
+
+FooterNav.Item = FooterNavItem;

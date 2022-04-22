@@ -2,7 +2,6 @@ import { Story, Meta } from '@storybook/react';
 import React from 'react';
 
 import { Toolbar, Props } from './Toolbar';
-import ToolbarItem from '../ToolbarItem';
 
 export default {
   title: 'Organisms/Toolbars/Toolbar',
@@ -11,18 +10,18 @@ export default {
 
 const Template: Story<Props> = (args) => (
   <Toolbar {...args}>
-    <ToolbarItem>
+    <Toolbar.Item>
       <div className="fpo u-margin-none">Left</div>
-    </ToolbarItem>
-    <ToolbarItem>
+    </Toolbar.Item>
+    <Toolbar.Item>
       <div className="fpo u-margin-none">Left</div>
-    </ToolbarItem>
-    <ToolbarItem>
+    </Toolbar.Item>
+    <Toolbar.Item>
       <div className="fpo u-margin-none">Left</div>
-    </ToolbarItem>
-    <ToolbarItem align="right">
+    </Toolbar.Item>
+    <Toolbar.Item align="right">
       <div className="fpo u-margin-none">Right</div>
-    </ToolbarItem>
+    </Toolbar.Item>
   </Toolbar>
 );
 

@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import { useUID } from 'react-uid';
 import styles from './UtilityNav.module.css';
+import UtilityNavItem from '../UtilityNavItem';
 
 export interface Props {
   /**
@@ -52,3 +53,5 @@ export const UtilityNav = ({
     </nav>
   );
 };
+
+UtilityNav.Item = UtilityNavItem;

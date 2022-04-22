@@ -221,3 +221,7 @@ export const Drawer = ({
     </Portal>
   );
 };
+
+Drawer.Body = DrawerBody;
+Drawer.Footer = DrawerFooter;
+Drawer.Header = DrawerHeader;

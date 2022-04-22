@@ -174,3 +174,5 @@ export const RadioField = ({
     </Fieldset>
   );
 };
+
+RadioField.Item = RadioFieldItem;

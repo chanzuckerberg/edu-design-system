@@ -1,6 +1,8 @@
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import styles from './Fieldset.module.css';
+import FieldsetItems from '../FieldsetItems';
+import FieldsetLegend from '../FieldsetLegend';
 
 type FieldsetProps = {
   /**
@@ -28,3 +30,6 @@ export function Fieldset({ children, className }: FieldsetProps) {
   const componentClassName = clsx(className, styles['fieldset']);
   return <fieldset className={componentClassName}>{children}</fieldset>;
 }
+
+Fieldset.Items = FieldsetItems;
+Fieldset.Legend = FieldsetLegend;
