@@ -1,6 +1,6 @@
 import clsx from 'clsx';
-import { nanoid } from 'nanoid';
-import React, { ReactNode, useEffect, useState } from 'react';
+import React, { ReactNode } from 'react';
+import { useUID } from 'react-uid';
 import styles from './UtilityNav.module.css';
 
 export interface Props {
@@ -36,11 +36,8 @@ export const UtilityNav = ({
   ariaLabel,
   ...other
 }: Props) => {
-  const [idVar, setId] = useState();
-
-  useEffect(() => {
-    setId(id || nanoid());
-  }, [id]);
+  const generatedId = useUID();
+  const idVar = id || generatedId;
 
   const componentClassName = clsx(styles['utility-nav'], className);
 

@@ -57,7 +57,7 @@ exports[`<Icon /> InText story renders snapshot 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <title
-      id="mock-id"
+      id="6"
     >
       icon with 1em line height
     </title>
@@ -76,7 +76,7 @@ exports[`<Icon /> InText story renders snapshot 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <title
-      id="mock-id"
+      id="7"
     >
       icon with 2em line height
     </title>
