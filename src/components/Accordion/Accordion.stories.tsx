@@ -2,7 +2,6 @@ import { Story, Meta } from '@storybook/react';
 import React from 'react';
 
 import { Accordion, Props } from './Accordion';
-import AccordionPanel from '../AccordionPanel';
 import Heading from '../Heading';
 import TextPassage from '../TextPassage';
 
@@ -13,7 +12,7 @@ export default {
 
 const Template: Story<Props> = (args) => (
   <Accordion {...args}>
-    <AccordionPanel
+    <Accordion.Panel
       header={<Heading size="h3">Accordion title 1</Heading>}
       isActive
     >
@@ -46,8 +45,8 @@ const Template: Story<Props> = (args) => (
           culpa qui officia deserunt mollit anim id est laborum.
         </p>
       </TextPassage>
-    </AccordionPanel>
-    <AccordionPanel
+    </Accordion.Panel>
+    <Accordion.Panel
       header={<Heading size="h3">Accordion title 2</Heading>}
       isActive
     >
@@ -62,8 +61,8 @@ const Template: Story<Props> = (args) => (
           culpa qui officia deserunt mollit anim id est laborum.
         </p>
       </TextPassage>
-    </AccordionPanel>
-    <AccordionPanel header={<Heading size="h3">Accordion title 3</Heading>}>
+    </Accordion.Panel>
+    <Accordion.Panel header={<Heading size="h3">Accordion title 3</Heading>}>
       <TextPassage>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -75,8 +74,8 @@ const Template: Story<Props> = (args) => (
           culpa qui officia deserunt mollit anim id est laborum.
         </p>
       </TextPassage>
-    </AccordionPanel>
-    <AccordionPanel header={<Heading size="h3">Accordion title 4</Heading>}>
+    </Accordion.Panel>
+    <Accordion.Panel header={<Heading size="h3">Accordion title 4</Heading>}>
       <TextPassage>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -88,14 +87,14 @@ const Template: Story<Props> = (args) => (
           culpa qui officia deserunt mollit anim id est laborum.
         </p>
       </TextPassage>
-    </AccordionPanel>
+    </Accordion.Panel>
   </Accordion>
 );
 
 const InvertedTemplate: Story<Props> = (args) => (
   <div style={{ background: '#000', padding: '1rem' }}>
     <Accordion {...args}>
-      <AccordionPanel
+      <Accordion.Panel
         header={<Heading size="h3">Accordion title 1</Heading>}
         isActive
       >
@@ -128,8 +127,8 @@ const InvertedTemplate: Story<Props> = (args) => (
             culpa qui officia deserunt mollit anim id est laborum.
           </p>
         </TextPassage>
-      </AccordionPanel>
-      <AccordionPanel
+      </Accordion.Panel>
+      <Accordion.Panel
         header={<Heading size="h3">Accordion title 2</Heading>}
         isActive
       >
@@ -144,8 +143,8 @@ const InvertedTemplate: Story<Props> = (args) => (
             culpa qui officia deserunt mollit anim id est laborum.
           </p>
         </TextPassage>
-      </AccordionPanel>
-      <AccordionPanel header={<Heading size="h3">Accordion title 3</Heading>}>
+      </Accordion.Panel>
+      <Accordion.Panel header={<Heading size="h3">Accordion title 3</Heading>}>
         <TextPassage>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -157,8 +156,8 @@ const InvertedTemplate: Story<Props> = (args) => (
             culpa qui officia deserunt mollit anim id est laborum.
           </p>
         </TextPassage>
-      </AccordionPanel>
-      <AccordionPanel header={<Heading size="h3">Accordion title 4</Heading>}>
+      </Accordion.Panel>
+      <Accordion.Panel header={<Heading size="h3">Accordion title 4</Heading>}>
         <TextPassage>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -170,7 +169,7 @@ const InvertedTemplate: Story<Props> = (args) => (
             culpa qui officia deserunt mollit anim id est laborum.
           </p>
         </TextPassage>
-      </AccordionPanel>
+      </Accordion.Panel>
     </Accordion>
   </div>
 );

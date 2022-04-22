@@ -2,7 +2,6 @@ import { Story, Meta } from '@storybook/react';
 import React from 'react';
 
 import { Grid, Props } from './Grid';
-import GridItem from '../GridItem';
 
 export default {
   title: 'Molecules/Layout and Containers/Grid',
@@ -11,36 +10,36 @@ export default {
 
 const Template: Story<Props> = (args) => (
   <Grid {...args}>
-    <GridItem>
+    <Grid.Item>
       <div className="fpo u-margin-top-none u-margin-bottom-none">
         Grid Item
       </div>
-    </GridItem>
-    <GridItem>
+    </Grid.Item>
+    <Grid.Item>
       <div className="fpo u-margin-top-none u-margin-bottom-none">
         Grid Item
       </div>
-    </GridItem>
-    <GridItem>
+    </Grid.Item>
+    <Grid.Item>
       <div className="fpo u-margin-top-none u-margin-bottom-none">
         Grid Item
       </div>
-    </GridItem>
-    <GridItem>
+    </Grid.Item>
+    <Grid.Item>
       <div className="fpo u-margin-top-none u-margin-bottom-none">
         Grid Item
       </div>
-    </GridItem>
-    <GridItem>
+    </Grid.Item>
+    <Grid.Item>
       <div className="fpo u-margin-top-none u-margin-bottom-none">
         Grid Item
       </div>
-    </GridItem>
-    <GridItem>
+    </Grid.Item>
+    <Grid.Item>
       <div className="fpo u-margin-top-none u-margin-bottom-none">
         Grid Item
       </div>
-    </GridItem>
+    </Grid.Item>
   </Grid>
 );
 

@@ -2,7 +2,6 @@ import { Story, Meta } from '@storybook/react';
 import React from 'react';
 
 import { RadioField, Props } from './RadioField';
-import RadioFieldItem from '../RadioFieldItem';
 
 export default {
   title: 'Molecules/Forms/RadioField',
@@ -11,27 +10,27 @@ export default {
 
 const Template: Story<Props> = (args) => (
   <RadioField {...args}>
-    <RadioFieldItem name="radio-example" text="Radio 1" value="radio1" />
-    <RadioFieldItem name="radio-example" text="Radio 2" value="radio2" />
-    <RadioFieldItem name="radio-example" text="Radio 3" value="radio3" />
+    <RadioField.Item name="radio-example" text="Radio 1" value="radio1" />
+    <RadioField.Item name="radio-example" text="Radio 2" value="radio2" />
+    <RadioField.Item name="radio-example" text="Radio 3" value="radio3" />
   </RadioField>
 );
 
 const DisabledTemplate: Story<Props> = (args) => (
   <RadioField {...args}>
-    <RadioFieldItem
+    <RadioField.Item
       disabled={true}
       name="radio-example"
       text="Radio 1"
       value="radio1"
     />
-    <RadioFieldItem
+    <RadioField.Item
       disabled={true}
       name="radio-example"
       text="Radio 2"
       value="radio2"
     />
-    <RadioFieldItem
+    <RadioField.Item
       checked={true}
       disabled={true}
       name="radio-example"
@@ -44,19 +43,19 @@ const DisabledTemplate: Story<Props> = (args) => (
 const InvertedTemplate: Story<Props> = (args) => (
   <div style={{ padding: '1rem', background: '#000' }}>
     <RadioField {...args}>
-      <RadioFieldItem
+      <RadioField.Item
         inverted={true}
         name="radio-example"
         text="Radio 1"
         value="radio1"
       />
-      <RadioFieldItem
+      <RadioField.Item
         inverted={true}
         name="radio-example"
         text="Radio 2"
         value="radio2"
       />
-      <RadioFieldItem
+      <RadioField.Item
         inverted={true}
         name="radio-example"
         text="Radio 3"

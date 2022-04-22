@@ -431,7 +431,13 @@ By default, we err towards more centralized control over the component architect
 - Compound components are composed of a parent component (e.g. `<Card>`) and children component (e.g. `<CardHeader>` and `<CardFooter>`).
 - Compound component children names must always begin with the parent name. A parent component `Table` means that all child components related to it must begin with `Table` (such as `TableBody`, `TableRow` and `TableCell`).
 - Compound component children have an associated `.module.css` file, and child component styles will contain styles relevant to the subcomponent element (e.g. `AccordionPanel.module.css` would begin with `.accordion__panel { ... }`).
-- Compound components never have an associated `.stories.js` file as they rely on the parent component's stories to render properly.
+- Compound components never have an associated `.stories.tsx` file as they rely on the parent component's stories to render properly.
+- Compound components should be re-exported from their parent component file for easier usage. For example, at the bottom of `Card.tsx`, add the lines:
+
+```tsx
+Card.Header = CardHeader;
+Card.Footer = CardFooter;
+```
 
 ### Prop Naming conventions
 
