@@ -245,7 +245,9 @@ Use:
 Use:
 
 ```tsx
-<Icon color={EdsThemeColorUtilitySuccessForeground} />
+import { EdsThemeColorUtilitySuccessForeground } from 'src/tokens-dist/ts/colors';
+
+<Icon color={EdsThemeColorUtilitySuccessForeground} />;
 ```
 
 ## Utility classes <a name="utility-classes"></a>
@@ -474,6 +476,7 @@ EDS adheres to the following API naming conventions:
 # Accessibility <a name="accessibility"></a>
 
 ## Tools
-- [eslint-plugin-jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y) evaluates static code for a11y issues. Currently this plugin is configured with the "recommended" settings, which generate linting errors for most rule violations. See [this chart](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y#rule-strictness-in-different-modes) for descriptions of each rule. 
+
+- [eslint-plugin-jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y) evaluates static code for a11y issues. Currently this plugin is configured with the "recommended" settings, which generate linting errors for most rule violations. See [this chart](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y#rule-strictness-in-different-modes) for descriptions of each rule.
 
 - The plugin is currently unable to map a custom component to the HTML tag that it renders (i.e. the `<Header>` component renders content wrapped in `<header>` tags, but the plugin does not automatically apply header rules to a `<Header>` component.) [Check the status](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/pull/844) on work is being done on addressing this issue.
