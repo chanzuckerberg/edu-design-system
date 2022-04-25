@@ -1,8 +1,7 @@
 /* sizes */
 
-.heading,
-.heading--size-body {
-  @apply text-body font-normal mt-0 mb-0;
+:where(.heading) {
+  @apply mt-0 mb-0;
 }
 
 .heading--size-h1 {
