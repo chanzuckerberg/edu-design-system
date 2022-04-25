@@ -1,0 +1,48 @@
+/* ------------------------------------*\
+    #HEADING STORIES
+\*------------------------------------ */
+
+/**
+ * For the "variant" story to display the different text variant options.
+ * 1) Uses grid to neatly align the variant variations.
+ */
+.variant__table {
+  display: grid; /* 1 */
+  grid-template-columns: 1fr 1fr 1fr;
+
+  /* TODO: uncomment and replace styling once tokens have moved over */
+
+  /* gap: var(--eds-size-half); */
+  gap: 0.25rem;
+}
+
+/**
+ * Color variants are segmented into left, middle, and right columns.
+ * Backgrounds were chosen to represent typical body backgrounds.
+ */
+.variant--white {
+  grid-column: 1;
+
+  /* TODO: uncomment and replace styling once tokens have moved over */
+
+  /* background-color: var(--eds-theme-color-background-neutral-default); */
+  @apply bg-white;
+}
+
+.variant--light {
+  grid-column: 2;
+
+  /* TODO: uncomment and replace styling once tokens have moved over */
+
+  /* background-color: var(--eds-theme-color-background-neutral-default); */
+  @apply bg-neutral-200;
+}
+
+.variant--dark {
+  grid-column: 3;
+
+  /* TODO: uncomment and replace styling once tokens have moved over */
+
+  /* background-color: var(--eds-theme-color-background-neutral-default-inverted); */
+  @apply bg-neutral-700;
+}

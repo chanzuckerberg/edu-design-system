@@ -5,7 +5,7 @@ import styles from "./Tag.module.css";
 
 export type Color =
   | "neutral"
-  | "alert"
+  | "error"
   | "success"
   | "warning"
   | "yellow"
@@ -15,7 +15,7 @@ export const stylesByColor = {
   neutral: styles.colorNeutral,
   warning: styles.colorWarning,
   brand: styles.colorBrand,
-  alert: styles.colorAlert,
+  error: styles.colorError,
   yellow: styles.colorYellow,
   success: styles.colorSuccess,
 };
@@ -62,9 +62,7 @@ function Tag({ color, children, className, icon, variant = "flat" }: Props) {
         color && stylesByColor[color],
         variant === "outline" && styles.outline,
       )}
-      color={color}
       size="sm"
-      spacing="none"
       weight="bold"
     >
       {icon}

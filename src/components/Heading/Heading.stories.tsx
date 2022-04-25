@@ -1,6 +1,7 @@
 import { StoryObj } from "@storybook/react";
 import React from "react";
-import Heading from "./Heading";
+import Heading, { VARIANTS } from "./Heading";
+import styles from "./Heading.stories.module.css";
 
 export default {
   title: "Heading",
@@ -52,10 +53,52 @@ export const Heading1AsHeading4: StoryObj<Args> = {
   },
 };
 
-export const Heading4ColorNeutral: StoryObj<Args> = {
-  args: {
-    children: "Neutral color Heading 4",
-    color: "neutral",
-    size: "h4",
+/**
+ * 1) Insufficient color contrast is expected since we are displaying all color variants on various color backgrounds.
+ * 2) Mainly for visual use and other stories generate enough confidence for our needs.
+ */
+export const Variants: StoryObj<Args> = {
+  ...Heading1,
+  render: (args) => {
+    const headings: React.ReactNode[] = [];
+    VARIANTS.forEach((variant) => {
+      if (variant !== "info")
+        headings.push(
+          <Heading {...args} key={`${variant}`} variant={variant}>
+            {variant}
+          </Heading>,
+        );
+    });
+    return (
+      <div className={styles["variant__table"]}>
+        <div className={styles["variant--white"]}>{headings}</div>
+        <div className={styles["variant--light"]}>{headings}</div>
+        <div className={styles["variant--dark"]}>{headings}</div>
+      </div>
+    );
+  },
+  parameters: {
+    /* 2 */
+    axe: {
+      skip: true,
+    },
+    snapshot: {
+      skip: true,
+    },
+  },
+};
+
+export const Sizes: StoryObj<Args> = {
+  render: () => {
+    const sizes = ["h1", "h2", "h3", "h4", "h5", "h6"] as const;
+    const combinations = sizes.map((as) => {
+      const headings = sizes.map((size) => (
+        <Heading as={as} key={`as${as}size${size}`} size={size}>
+          as: {as} size: {size}
+        </Heading>
+      ));
+      return <div key={as}>{headings}</div>;
+    });
+    return <div className={styles["variant__table"]}>{combinations}</div>;
   },
 };

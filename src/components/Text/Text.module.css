@@ -1,0 +1,86 @@
+/* ------------------------------------*\
+    #TEXT
+\*------------------------------------ */
+
+/**
+ * 1) Needs `:where` pseudoclass to reduce specificity so Tailwind and other class overrides 
+ *    for margin can happen where used.
+ */
+:where(.text) { /* 1 */
+  @apply mb-0;
+}
+
+/* sizes */
+.text--body,
+.text--md {
+  @apply text-body font-normal;
+}
+
+.text--lg {
+  @apply text-h2 font-bold;
+}
+
+.text--sm {
+  @apply text-sm font-normal;
+}
+
+.text--xs {
+  @apply text-xs font-normal;
+}
+
+.text--caption,
+.text--overline {
+  @apply text-caption font-normal;
+}
+
+.text--overline {
+  @apply uppercase;
+}
+
+/* Color Variants */
+.text--error {
+  @apply text-alert-700;
+}
+
+.text--base {
+  @apply text-black;
+}
+
+.text--brand {
+  @apply text-brand-700;
+}
+
+.text--info {
+  @apply text-info-700;
+}
+
+.text--inherit {
+  color: inherit;
+}
+
+.text--neutral {
+  @apply text-neutral-500;
+}
+
+.text--success {
+  @apply text-success-700;
+}
+
+.text--warning {
+  @apply text-warning-700;
+}
+
+.text--white {
+  @apply text-white;
+}
+
+/**
+ * Font Weights
+ */
+.text--normal-weight {
+  @apply font-normal;
+}
+
+.text--bold-weight {
+  @apply font-bold;
+}

@@ -26,7 +26,7 @@
   --tag-outline-color: var(--eds-color-neutral-500);
 }
 
-.colorAlert {
+.colorError {
   --tag-primary-color: var(--eds-color-alert-700);
   --tag-secondary-color: var(--eds-color-alert-100);
   --tag-outline-color: var(--eds-color-alert-500);

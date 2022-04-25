@@ -27,7 +27,7 @@ exports[`<Toast /> Alert story renders snapshot 1`] = `
       </svg>
     </div>
     <p
-      class="typography sizeSm colorInherit"
+      class="text text--sm text--inherit"
     >
       You've got toast!
     </p>
@@ -62,7 +62,7 @@ exports[`<Toast /> NotDismissable story renders snapshot 1`] = `
       </svg>
     </div>
     <p
-      class="typography sizeSm colorInherit"
+      class="text text--sm text--inherit"
     >
       You've got toast!
     </p>
@@ -97,7 +97,7 @@ exports[`<Toast /> Success story renders snapshot 1`] = `
       </svg>
     </div>
     <p
-      class="typography sizeSm colorInherit"
+      class="text text--sm text--inherit"
     >
       You've got toast!
     </p>

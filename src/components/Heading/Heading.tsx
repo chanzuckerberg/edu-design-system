@@ -1,7 +1,21 @@
+import clsx from "clsx";
 import React, { forwardRef } from "react";
+import styles from "./Heading.module.css";
 
-import Typography, { TypographyProps } from "../common/typography";
-
+export const VARIANTS = [
+  "error",
+  "base",
+  "brand",
+  "inherit",
+  "neutral",
+  "success",
+  "warning",
+  "white",
+  /**
+   * @deprecated Info variant is deprecated.
+   */ "info",
+] as const;
+export type Variant = typeof VARIANTS[number];
 export type HeadingElement = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 
 type Props = {
@@ -13,13 +27,11 @@ type Props = {
    * and the `size` will be used to determine the styling.
    */
   as?: HeadingElement;
-  children: TypographyProps<HeadingElement>["children"];
-  className?: TypographyProps<HeadingElement>["className"];
-  color?: TypographyProps<HeadingElement>["color"];
-  size: TypographyProps<HeadingElement>["size"];
-  spacing?: TypographyProps<HeadingElement>["spacing"];
+  children: React.ReactNode;
+  className?: string;
+  size: HeadingElement;
   tabIndex?: number;
-  weight?: TypographyProps<HeadingElement>["weight"];
+  variant?: Variant;
 } & React.HTMLAttributes<HTMLHeadingElement>;
 
 /**
@@ -28,25 +40,40 @@ type Props = {
  * ```
  */
 
-const Heading = forwardRef<HTMLElement, Props>(
+export const Heading = forwardRef(
   (
     {
       as,
       children,
+      className,
+      variant,
       size,
       /**
        * Components that wrap typography sometimes require props such as
-       * event handlers, tabIndex, etc. to be passed down into the element.
-       * TODO: add better typing or documentation for optional props,
-       * e.g. React.HTMLAttributes<HTMLHeadingElement>
-       */ ...rest
+       * event handlers, tabIndex, etc. and/or other native heading element
+       * attributes to be passed down into the element.
+       */ ...other
     }: Props,
-    ref,
-  ) => (
-    <Typography as={as || size} ref={ref} size={size} {...rest}>
-      {children}
-    </Typography>
-  ),
+    ref: React.ForwardedRef<HTMLHeadingElement>,
+  ) => {
+    if (variant === "info" && process.env.NODE_ENV !== "production") {
+      console.warn(
+        "Info variant is deprecated and will be removed in an upcoming release. Please use the consider another variant instead.",
+      );
+    }
+    const TagName = as || size;
+    const componentClassName = clsx(
+      className,
+      styles["heading"],
+      styles[`heading--size-${size}`],
+      variant && styles[`heading--${variant}`],
+    );
+    return (
+      <TagName className={componentClassName} ref={ref} {...other}>
+        {children}
+      </TagName>
+    );
+  },
 );
 
 Heading.displayName = "Heading"; // Satisfy eslint.

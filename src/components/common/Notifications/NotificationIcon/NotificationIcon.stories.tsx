@@ -23,7 +23,9 @@ export const ColorVariants: StoryObj<Args> = {
     <>
       {variants.map((variant) => (
         <div className={styles.variant} key={variant}>
-          <Text size="h3">{variant}</Text>
+          <Text size="md" weight="bold">
+            {variant}
+          </Text>
           <NotificationIcon {...args} variant={variant} />
         </div>
       ))}

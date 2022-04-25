@@ -6,14 +6,14 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
 >
   <li>
     <h2
-      class="typography sizeH2 colorBase spacing2"
+      class="headingBottomSpacing heading heading--size-h2"
     >
       Primary
     </h2>
     <ul>
       <li>
         <h3
-          class="typography sizeH3 colorBase spacing2"
+          class="headingBottomSpacing heading heading--size-h3"
         >
           Size Large
         </h3>
@@ -46,7 +46,7 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
             </a>
           </li>
           <li
-            class="mb-4"
+            class="headingBottomSpacing"
           >
             <a
               class="button sizeLarge variantFlat colorBrand"
@@ -68,12 +68,12 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
       </li>
       <li>
         <h3
-          class="typography sizeH3 colorBase spacing2"
+          class="headingBottomSpacing heading heading--size-h3"
         >
           Size Medium
         </h3>
         <div
-          class="mb-4"
+          class="headingBottomSpacing"
         >
           <a
             class="button sizeMedium variantFlat colorBrand"
@@ -84,12 +84,12 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
       </li>
       <li>
         <h3
-          class="typography sizeH3 colorBase spacing2"
+          class="headingBottomSpacing heading heading--size-h3"
         >
           Size Small
         </h3>
         <div
-          class="mb-4"
+          class="headingBottomSpacing"
         >
           <a
             class="button sizeSmall variantFlat colorBrand"
@@ -102,14 +102,14 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
   </li>
   <li>
     <h2
-      class="typography sizeH2 colorBase spacing2"
+      class="headingBottomSpacing heading heading--size-h2"
     >
       Secondary
     </h2>
     <ul>
       <li>
         <h3
-          class="typography sizeH3 colorBase spacing2"
+          class="headingBottomSpacing heading heading--size-h3"
         >
           Size Large
         </h3>
@@ -142,7 +142,7 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
             </a>
           </li>
           <li
-            class="mb-4"
+            class="headingBottomSpacing"
           >
             <a
               class="button sizeLarge variantOutline colorBrand"
@@ -164,12 +164,12 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
       </li>
       <li>
         <h3
-          class="typography sizeH3 colorBase spacing2"
+          class="headingBottomSpacing heading heading--size-h3"
         >
           Size Medium
         </h3>
         <div
-          class="mb-4"
+          class="headingBottomSpacing"
         >
           <a
             class="button sizeMedium variantOutline colorBrand"
@@ -180,12 +180,12 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
       </li>
       <li>
         <h3
-          class="typography sizeH3 colorBase spacing2"
+          class="headingBottomSpacing heading heading--size-h3"
         >
           Size Small
         </h3>
         <div
-          class="mb-4"
+          class="headingBottomSpacing"
         >
           <a
             class="button sizeSmall variantOutline colorBrand"
@@ -198,14 +198,14 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
   </li>
   <li>
     <h2
-      class="typography sizeH2 colorBase spacing2"
+      class="headingBottomSpacing heading heading--size-h2"
     >
       Tertiary
     </h2>
     <ul>
       <li>
         <h3
-          class="typography sizeH3 colorBase spacing2"
+          class="headingBottomSpacing heading heading--size-h3"
         >
           Size Large
         </h3>
@@ -238,7 +238,7 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
             </a>
           </li>
           <li
-            class="mb-4"
+            class="headingBottomSpacing"
           >
             <a
               class="button sizeLarge variantOutline colorNeutral"
@@ -260,12 +260,12 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
       </li>
       <li>
         <h3
-          class="typography sizeH3 colorBase spacing2"
+          class="headingBottomSpacing heading heading--size-h3"
         >
           Size Medium
         </h3>
         <div
-          class="mb-4"
+          class="headingBottomSpacing"
         >
           <a
             class="button sizeMedium variantOutline colorNeutral"
@@ -276,12 +276,12 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
       </li>
       <li>
         <h3
-          class="typography sizeH3 colorBase spacing2"
+          class="headingBottomSpacing heading heading--size-h3"
         >
           Size Small
         </h3>
         <div
-          class="mb-4"
+          class="headingBottomSpacing"
         >
           <a
             class="button sizeSmall variantOutline colorNeutral"
@@ -294,14 +294,14 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
   </li>
   <li>
     <h2
-      class="typography sizeH2 colorBase spacing2"
+      class="headingBottomSpacing heading heading--size-h2"
     >
       Plain
     </h2>
     <ul>
       <li>
         <h3
-          class="typography sizeH3 colorBase spacing2"
+          class="headingBottomSpacing heading heading--size-h3"
         >
           Size Large
         </h3>
@@ -344,7 +344,7 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
             </a>
           </li>
           <li
-            class="mb-4"
+            class="headingBottomSpacing"
           >
             <a
               class="button sizeLarge variantPlain colorBrand"
@@ -370,7 +370,7 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
       </li>
       <li>
         <h3
-          class="typography sizeH3 colorBase spacing2"
+          class="headingBottomSpacing heading heading--size-h3"
         >
           Size Medium
         </h3>
@@ -439,7 +439,7 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
   </li>
   <li>
     <h2
-      class="typography sizeH2 colorBase spacing2"
+      class="headingBottomSpacing heading heading--size-h2"
     >
       Link
     </h2>
@@ -479,12 +479,12 @@ exports[`<Link /> AllRecommendedVariants story renders snapshot 1`] = `
   </li>
   <li>
     <h2
-      class="typography sizeH2 colorBase spacing2"
+      class="headingBottomSpacing heading heading--size-h2"
     >
       Destructive
     </h2>
     <h3
-      class="typography sizeH3 colorBase spacing2"
+      class="headingBottomSpacing heading heading--size-h3"
     >
       Size Large
     </h3>
@@ -532,7 +532,7 @@ exports[`<Link /> Default story renders snapshot 1`] = `
 
 exports[`<Link /> DestructiveRecommendedVariants story renders snapshot 1`] = `
 <h3
-  class="typography sizeH3 colorBase spacing2"
+  class="headingBottomSpacing heading heading--size-h3"
 >
   Size Large
 </h3>
@@ -540,7 +540,7 @@ exports[`<Link /> DestructiveRecommendedVariants story renders snapshot 1`] = `
 
 exports[`<Link /> LinkInBody story renders snapshot 1`] = `
 <p
-  class="typography sizeBody colorBase"
+  class="text text--body"
 >
   This text surrounds the 
   <a
@@ -554,8 +554,8 @@ exports[`<Link /> LinkInBody story renders snapshot 1`] = `
 `;
 
 exports[`<Link /> LinkInHeading story renders snapshot 1`] = `
-<p
-  class="typography sizeH1 colorBase"
+<h1
+  class="heading heading--size-h1"
 >
   This text surrounds the 
   <a
@@ -565,7 +565,7 @@ exports[`<Link /> LinkInHeading story renders snapshot 1`] = `
     Link
   </a>
    and shows that the link should adhere to its appearance
-</p>
+</h1>
 `;
 
 exports[`<Link /> LinkRecommendedVariants story renders snapshot 1`] = `
@@ -608,7 +608,7 @@ exports[`<Link /> PlainRecommendedVariants story renders snapshot 1`] = `
 <ul>
   <li>
     <h3
-      class="typography sizeH3 colorBase spacing2"
+      class="headingBottomSpacing heading heading--size-h3"
     >
       Size Large
     </h3>
@@ -651,7 +651,7 @@ exports[`<Link /> PlainRecommendedVariants story renders snapshot 1`] = `
         </a>
       </li>
       <li
-        class="mb-4"
+        class="headingBottomSpacing"
       >
         <a
           class="button sizeLarge variantPlain colorBrand"
@@ -677,7 +677,7 @@ exports[`<Link /> PlainRecommendedVariants story renders snapshot 1`] = `
   </li>
   <li>
     <h3
-      class="typography sizeH3 colorBase spacing2"
+      class="headingBottomSpacing heading heading--size-h3"
     >
       Size Medium
     </h3>
@@ -749,7 +749,7 @@ exports[`<Link /> PrimaryRecommendedVariants story renders snapshot 1`] = `
 <ul>
   <li>
     <h3
-      class="typography sizeH3 colorBase spacing2"
+      class="headingBottomSpacing heading heading--size-h3"
     >
       Size Large
     </h3>
@@ -782,7 +782,7 @@ exports[`<Link /> PrimaryRecommendedVariants story renders snapshot 1`] = `
         </a>
       </li>
       <li
-        class="mb-4"
+        class="headingBottomSpacing"
       >
         <a
           class="button sizeLarge variantFlat colorBrand"
@@ -804,12 +804,12 @@ exports[`<Link /> PrimaryRecommendedVariants story renders snapshot 1`] = `
   </li>
   <li>
     <h3
-      class="typography sizeH3 colorBase spacing2"
+      class="headingBottomSpacing heading heading--size-h3"
     >
       Size Medium
     </h3>
     <div
-      class="mb-4"
+      class="headingBottomSpacing"
     >
       <a
         class="button sizeMedium variantFlat colorBrand"
@@ -820,12 +820,12 @@ exports[`<Link /> PrimaryRecommendedVariants story renders snapshot 1`] = `
   </li>
   <li>
     <h3
-      class="typography sizeH3 colorBase spacing2"
+      class="headingBottomSpacing heading heading--size-h3"
     >
       Size Small
     </h3>
     <div
-      class="mb-4"
+      class="headingBottomSpacing"
     >
       <a
         class="button sizeSmall variantFlat colorBrand"
@@ -841,7 +841,7 @@ exports[`<Link /> SecondaryRecommendedVariants story renders snapshot 1`] = `
 <ul>
   <li>
     <h3
-      class="typography sizeH3 colorBase spacing2"
+      class="headingBottomSpacing heading heading--size-h3"
     >
       Size Large
     </h3>
@@ -874,7 +874,7 @@ exports[`<Link /> SecondaryRecommendedVariants story renders snapshot 1`] = `
         </a>
       </li>
       <li
-        class="mb-4"
+        class="headingBottomSpacing"
       >
         <a
           class="button sizeLarge variantOutline colorBrand"
@@ -896,12 +896,12 @@ exports[`<Link /> SecondaryRecommendedVariants story renders snapshot 1`] = `
   </li>
   <li>
     <h3
-      class="typography sizeH3 colorBase spacing2"
+      class="headingBottomSpacing heading heading--size-h3"
     >
       Size Medium
     </h3>
     <div
-      class="mb-4"
+      class="headingBottomSpacing"
     >
       <a
         class="button sizeMedium variantOutline colorBrand"
@@ -912,12 +912,12 @@ exports[`<Link /> SecondaryRecommendedVariants story renders snapshot 1`] = `
   </li>
   <li>
     <h3
-      class="typography sizeH3 colorBase spacing2"
+      class="headingBottomSpacing heading heading--size-h3"
     >
       Size Small
     </h3>
     <div
-      class="mb-4"
+      class="headingBottomSpacing"
     >
       <a
         class="button sizeSmall variantOutline colorBrand"
@@ -933,7 +933,7 @@ exports[`<Link /> TertiaryRecommendedVariants story renders snapshot 1`] = `
 <ul>
   <li>
     <h3
-      class="typography sizeH3 colorBase spacing2"
+      class="headingBottomSpacing heading heading--size-h3"
     >
       Size Large
     </h3>
@@ -966,7 +966,7 @@ exports[`<Link /> TertiaryRecommendedVariants story renders snapshot 1`] = `
         </a>
       </li>
       <li
-        class="mb-4"
+        class="headingBottomSpacing"
       >
         <a
           class="button sizeLarge variantOutline colorNeutral"
@@ -988,12 +988,12 @@ exports[`<Link /> TertiaryRecommendedVariants story renders snapshot 1`] = `
   </li>
   <li>
     <h3
-      class="typography sizeH3 colorBase spacing2"
+      class="headingBottomSpacing heading heading--size-h3"
     >
       Size Medium
     </h3>
     <div
-      class="mb-4"
+      class="headingBottomSpacing"
     >
       <a
         class="button sizeMedium variantOutline colorNeutral"
@@ -1004,12 +1004,12 @@ exports[`<Link /> TertiaryRecommendedVariants story renders snapshot 1`] = `
   </li>
   <li>
     <h3
-      class="typography sizeH3 colorBase spacing2"
+      class="headingBottomSpacing heading heading--size-h3"
     >
       Size Small
     </h3>
     <div
-      class="mb-4"
+      class="headingBottomSpacing"
     >
       <a
         class="button sizeSmall variantOutline colorNeutral"

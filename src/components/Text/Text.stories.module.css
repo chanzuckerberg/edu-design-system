@@ -1,0 +1,56 @@
+/* ------------------------------------*\
+    #TEXT STORIES
+\*------------------------------------ */
+
+/**
+ * 1) For the "variant" story to display the different text variant options.
+ * 2) Uses grid to neatly align the variant variations.
+ */
+.variant__table {
+  /* 1 */
+  display: grid; /* 2 */
+  grid-template-columns: 1fr 1fr 1fr;
+
+  /* TODO: uncomment and replace styling once tokens have moved over */
+
+  /* gap: var(--eds-size-half); */
+  gap: 0.25rem;
+}
+
+.variant__item {
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/**
+ * Variants are segmented into left, middle, and right columns.
+ * Background variants were chosen to represent typical body backgrounds.
+ */
+.variant__item-white {
+  grid-column: 1; /* 1 */
+
+  /* TODO: uncomment and replace styling once tokens have moved over */
+
+  /* background-color: var(--eds-theme-color-background-neutral-default); */
+  @apply bg-white;
+}
+
+.variant__item-light {
+  grid-column: 2; /* 1 */
+
+  /* TODO: uncomment and replace styling once tokens have moved over */
+
+  /* background-color: var(--eds-theme-color-body-background); */
+  @apply bg-neutral-200;
+}
+
+.variant__item-dark {
+  grid-column: 3; /* 1 */
+
+  /* TODO: uncomment and replace styling once tokens have moved over */
+
+  /* background-color: var(--eds-theme-color-body-background-inverted); */
+  @apply bg-neutral-700;
+}

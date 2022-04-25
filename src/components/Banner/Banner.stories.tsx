@@ -3,6 +3,7 @@ import React from "react";
 import Button from "../Button";
 import Heading from "../Heading";
 import Banner from "./Banner";
+import styles from "./Banner.stories.module.css";
 
 export default {
   title: "Banner",
@@ -150,7 +151,7 @@ export const DismissableWithAction: StoryObj<Args> = {
 export const DismissableBelowContent: StoryObj<Args> = {
   render: ({ heading, content }) => (
     <>
-      <Heading size="h1" spacing="2x">
+      <Heading className={styles.headingBottomSpacing} size="h1">
         Page Title
       </Heading>
       <Banner

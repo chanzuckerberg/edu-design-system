@@ -58,7 +58,7 @@ export default function Toast({
     >
       <div className={styles.content}>
         <NotificationIcon variant={color} />
-        <Text color="inherit" size="sm">
+        <Text size="sm" variant="inherit">
           {children}
         </Text>
       </div>

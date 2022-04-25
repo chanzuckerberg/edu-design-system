@@ -5,7 +5,7 @@ exports[`<Tag /> ColorVariants story renders snapshot 1`] = `
   class="tagList"
 >
   <span
-    class="tag colorNeutral typography sizeSm colorNeutral weightBold spacingNone"
+    class="tag colorNeutral text text--sm text--bold-weight"
   >
     ​
     <span
@@ -15,7 +15,7 @@ exports[`<Tag /> ColorVariants story renders snapshot 1`] = `
     </span>
   </span>
   <span
-    class="tag colorWarning typography sizeSm colorWarning weightBold spacingNone"
+    class="tag colorWarning text text--sm text--bold-weight"
   >
     ​
     <span
@@ -25,7 +25,7 @@ exports[`<Tag /> ColorVariants story renders snapshot 1`] = `
     </span>
   </span>
   <span
-    class="tag colorBrand typography sizeSm colorBrand weightBold spacingNone"
+    class="tag colorBrand text text--sm text--bold-weight"
   >
     ​
     <span
@@ -35,7 +35,7 @@ exports[`<Tag /> ColorVariants story renders snapshot 1`] = `
     </span>
   </span>
   <span
-    class="tag colorAlert typography sizeSm colorAlert weightBold spacingNone"
+    class="tag colorError text text--sm text--bold-weight"
   >
     ​
     <span
@@ -45,7 +45,7 @@ exports[`<Tag /> ColorVariants story renders snapshot 1`] = `
     </span>
   </span>
   <span
-    class="tag colorYellow typography sizeSm weightBold spacingNone"
+    class="tag colorYellow text text--sm text--bold-weight"
   >
     ​
     <span
@@ -55,7 +55,7 @@ exports[`<Tag /> ColorVariants story renders snapshot 1`] = `
     </span>
   </span>
   <span
-    class="tag colorSuccess typography sizeSm colorSuccess weightBold spacingNone"
+    class="tag colorSuccess text text--sm text--bold-weight"
   >
     ​
     <span
@@ -69,7 +69,7 @@ exports[`<Tag /> ColorVariants story renders snapshot 1`] = `
 
 exports[`<Tag /> Default story renders snapshot 1`] = `
 <span
-  class="tag colorWarning typography sizeSm colorWarning weightBold spacingNone"
+  class="tag colorWarning text text--sm text--bold-weight"
 >
   ​
   <span
@@ -85,7 +85,7 @@ exports[`<Tag /> OutlineVariants story renders snapshot 1`] = `
   class="tagList"
 >
   <span
-    class="tag colorNeutral outline typography sizeSm colorNeutral weightBold spacingNone"
+    class="tag colorNeutral outline text text--sm text--bold-weight"
   >
     ​
     <span
@@ -95,7 +95,7 @@ exports[`<Tag /> OutlineVariants story renders snapshot 1`] = `
     </span>
   </span>
   <span
-    class="tag colorWarning outline typography sizeSm colorWarning weightBold spacingNone"
+    class="tag colorWarning outline text text--sm text--bold-weight"
   >
     ​
     <span
@@ -105,7 +105,7 @@ exports[`<Tag /> OutlineVariants story renders snapshot 1`] = `
     </span>
   </span>
   <span
-    class="tag colorBrand outline typography sizeSm colorBrand weightBold spacingNone"
+    class="tag colorBrand outline text text--sm text--bold-weight"
   >
     ​
     <span
@@ -115,7 +115,7 @@ exports[`<Tag /> OutlineVariants story renders snapshot 1`] = `
     </span>
   </span>
   <span
-    class="tag colorAlert outline typography sizeSm colorAlert weightBold spacingNone"
+    class="tag colorError outline text text--sm text--bold-weight"
   >
     ​
     <span
@@ -125,7 +125,7 @@ exports[`<Tag /> OutlineVariants story renders snapshot 1`] = `
     </span>
   </span>
   <span
-    class="tag colorYellow outline typography sizeSm weightBold spacingNone"
+    class="tag colorYellow outline text text--sm text--bold-weight"
   >
     ​
     <span
@@ -135,7 +135,7 @@ exports[`<Tag /> OutlineVariants story renders snapshot 1`] = `
     </span>
   </span>
   <span
-    class="tag colorSuccess outline typography sizeSm colorSuccess weightBold spacingNone"
+    class="tag colorSuccess outline text text--sm text--bold-weight"
   >
     ​
     <span
@@ -149,7 +149,7 @@ exports[`<Tag /> OutlineVariants story renders snapshot 1`] = `
 
 exports[`<Tag /> WithIcon story renders snapshot 1`] = `
 <span
-  class="tag colorWarning typography sizeSm colorWarning weightBold spacingNone"
+  class="tag colorWarning text text--sm text--bold-weight"
 >
   <svg
     class="icon"
@@ -177,7 +177,7 @@ exports[`<Tag /> WithIcon story renders snapshot 1`] = `
 
 exports[`<Tag /> WithLongTextAndIcon story renders snapshot 1`] = `
 <span
-  class="tag colorWarning typography sizeSm colorWarning weightBold spacingNone"
+  class="tag colorWarning text text--sm text--bold-weight"
 >
   <svg
     class="icon"

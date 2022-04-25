@@ -150,7 +150,7 @@ type TitleProps = {
  */
 const BannerTitle: React.FC<TitleProps> = (props: TitleProps) => {
   return props.children ? (
-    <Heading as={props.as} color={"inherit"} size="h3">
+    <Heading as={props.as} size="h3" variant="inherit">
       {props.children}
     </Heading>
   ) : null;
@@ -166,7 +166,7 @@ type MessageProps = {
  */
 const BannerMessage: React.FC<MessageProps> = (props: MessageProps) => {
   return props.children ? (
-    <Text color={"inherit"} size="body">
+    <Text size="body" variant="inherit">
       {props.children}
     </Text>
   ) : null;

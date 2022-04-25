@@ -8,7 +8,7 @@ exports[`<FormGroup /> Default story renders snapshot 1`] = `
     class="title"
   >
     <p
-      class="typography sizeSm colorBase weightBold"
+      class="text text--sm text--bold-weight"
     >
       Title
     </p>
