@@ -225,6 +225,60 @@ export const ListDetail = ({
   );
   const componentClassName = clsx(styles['list-detail'], className, {});
 
+  const iconVariant = (itemVariant, i) => {
+    switch (itemVariant) {
+      case 'success':
+        return (
+          <Icon
+            className={styles['list-detail__icon']}
+            color={EdsThemeColorBackgroundGradeCompleteDefault}
+            name="check-circle"
+            purpose="decorative"
+          />
+        );
+      case 'warning':
+        return (
+          <Icon
+            className={styles['list-detail__icon']}
+            color={EdsThemeColorBackgroundGradeReviseDefault}
+            name="error"
+            purpose="decorative"
+          />
+        );
+      case 'error':
+        return (
+          <Icon
+            className={styles['list-detail__icon']}
+            color={EdsThemeColorBackgroundGradeStopDefault}
+            name="cancel"
+            purpose="decorative"
+          />
+        );
+      case 'number':
+        return <span className={styles['list-detail__number']}>{i}</span>;
+      case 'incomplete':
+        return (
+          <Icon
+            className={styles['list-detail__icon']}
+            color={EdsThemeColorBorderNeutralSubtle}
+            name="star" /* TODO: need to add star-outline variant to Icon */
+            purpose="decorative"
+          />
+        );
+      case 'complete':
+        return (
+          <Icon
+            className={styles['list-detail__icon']}
+            color={EdsThemeColorBackgroundGradeCompleteDefault}
+            name="star"
+            purpose="decorative"
+          />
+        );
+      default:
+        return '';
+    }
+  };
+
   return (
     <div className={componentClassName} {...other}>
       <nav className={styles['list-detail__nav']}>
@@ -276,46 +330,7 @@ export const ListDetail = ({
                       ].includes(itemVariant),
                     })}
                   >
-                    {itemVariant === 'success' ? (
-                      <Icon
-                        className={styles['list-detail__icon']}
-                        color={EdsThemeColorBackgroundGradeCompleteDefault}
-                        name="check-circle"
-                        purpose="decorative"
-                      />
-                    ) : itemVariant === 'warning' ? (
-                      <Icon
-                        className={styles['list-detail__icon']}
-                        color={EdsThemeColorBackgroundGradeReviseDefault}
-                        name="error"
-                        purpose="decorative"
-                      />
-                    ) : itemVariant === 'error' ? (
-                      <Icon
-                        className={styles['list-detail__icon']}
-                        color={EdsThemeColorBackgroundGradeStopDefault}
-                        name="cancel"
-                        purpose="decorative"
-                      />
-                    ) : itemVariant === 'number' ? (
-                      <span className={styles['list-detail__number']}>{i}</span>
-                    ) : itemVariant === 'incomplete' ? (
-                      <Icon
-                        className={styles['list-detail__icon']}
-                        color={EdsThemeColorBorderNeutralSubtle}
-                        name="star" /* TODO: need to add star-outline variant to Icon */
-                        purpose="decorative"
-                      />
-                    ) : itemVariant === 'complete' ? (
-                      <Icon
-                        className={styles['list-detail__icon']}
-                        color={EdsThemeColorBackgroundGradeCompleteDefault}
-                        name="star"
-                        purpose="decorative"
-                      />
-                    ) : (
-                      ''
-                    )}
+                    {iconVariant(itemVariant, i)}
                   </div>
                   {tab.props.title}
                 </a>
