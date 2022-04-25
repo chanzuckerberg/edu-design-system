@@ -1,9 +1,16 @@
-/* sizes */
+/**
+ * HEADING
+ */
 
-:where(.heading) {
+/**
+ * 1) Needs `:where` pseudoclass to reduce specificity so Tailwind and other class overrides 
+ *    for margin can happen where used.
+ */
+:where(.heading) { /* 1 */
   @apply mt-0 mb-0;
 }
 
+/* sizes */
 .heading--size-h1 {
   @apply text-h1 font-bold;
 }
