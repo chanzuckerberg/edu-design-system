@@ -281,7 +281,7 @@ export const ListDetail = ({
 
   return (
     <div className={componentClassName} {...other}>
-      <nav className={styles['list-detail__nav']}>
+      <div className={styles['list-detail__nav']}>
         <ol
           className={clsx(styles['list-detail__list'], {
             [styles['list-detail__list--ordered']]: variant === 'ordered',
@@ -338,7 +338,7 @@ export const ListDetail = ({
             );
           })}
         </ol>
-      </nav>
+      </div>
       <div className={styles['list-detail__body']}>
         {childrenWithProps[activeIndexState]}
       </div>
