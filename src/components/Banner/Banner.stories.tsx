@@ -1,48 +1,55 @@
 import type { StoryObj } from "@storybook/react";
-import React from "react";
+import React, { ReactNode } from "react";
 import Button from "../Button";
 import Heading from "../Heading";
-import Banner from "./Banner";
+import Link from "../Link";
+import { Banner, Variant } from "./Banner";
 import styles from "./Banner.stories.module.css";
 
 export default {
   title: "Banner",
   component: Banner,
-  argTypes: {
-    elevation: {
-      control: {
-        type: "radio",
-        options: [0, 1],
-      },
-    },
-  },
   args: {
-    content:
-      "Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates, click into the course.",
-    heading:
+    title:
       "New curriculum updates are available for one or more of your courses.",
   },
 };
 
 type Args = React.ComponentProps<typeof Banner> & {
-  content: string;
-  heading: string;
+  title: string;
+  description: string;
+  action: ReactNode;
 };
 
-const action = <Button style={{ whiteSpace: "nowrap" }}>See updates</Button>;
+const getAction = (status?: Variant) => (
+  <Button status={status} variant="secondary">
+    See updates
+  </Button>
+);
+
+const getDescription = (status?: Variant) => (
+  <>
+    Summit Learning has a full-time team dedicated to constantly improving our
+    curriculum. To see the updates,{" "}
+    <Link
+      href="/"
+      onClick={(event) => event.preventDefault()}
+      status={status}
+      variant="link"
+    >
+      click into the course
+    </Link>
+    .
+  </>
+);
 
 export const Brand: StoryObj<Args> = {
-  render: (args) => {
-    const { content, heading, ...restArgs } = args;
+  render: ({ variant, ...other }) => {
     return (
       <Banner
-        {...restArgs}
-        textContent={
-          <>
-            <Banner.Title as="h1">{heading}</Banner.Title>{" "}
-            <Banner.Message>{content}</Banner.Message>
-          </>
-        }
+        {...other}
+        description={getDescription(variant)}
+        variant={variant}
       />
     );
   },
@@ -51,119 +58,140 @@ export const Brand: StoryObj<Args> = {
 export const Neutral: StoryObj<Args> = {
   ...Brand,
   args: {
-    color: "neutral",
+    variant: "neutral",
   },
 };
 
 export const Success: StoryObj<Args> = {
   ...Brand,
   args: {
-    color: "success",
+    variant: "success",
   },
 };
 
 export const Warning: StoryObj<Args> = {
   ...Brand,
   args: {
-    color: "warning",
+    variant: "warning",
   },
 };
 
-export const Alert: StoryObj<Args> = {
+export const Error: StoryObj<Args> = {
   ...Brand,
   args: {
-    color: "alert",
+    variant: "error",
   },
 };
 
-export const NoHeadingShort: StoryObj<Args> = {
+export const NoDescription: StoryObj<Args> = {
   ...Brand,
   args: {
-    heading: undefined,
+    description: undefined,
   },
 };
 
-export const NoContent: StoryObj<Args> = {
+export const NoTitle: StoryObj<Args> = {
   ...Brand,
   args: {
-    content: undefined,
+    title: undefined,
   },
 };
 
-export const WithAction: StoryObj<Args> = {
+export const BrandWithAction: StoryObj<Args> = {
   ...Brand,
   args: {
-    action: action,
+    action: getAction(),
+  },
+};
+
+export const NeutralWithAction: StoryObj<Args> = {
+  ...Neutral,
+  args: {
+    action: getAction("neutral"),
+    variant: "neutral",
+  },
+};
+
+export const SuccessWithAction: StoryObj<Args> = {
+  ...Success,
+  args: {
+    action: getAction("success"),
+    variant: "success",
+  },
+};
+
+export const WarningWithAction: StoryObj<Args> = {
+  ...Warning,
+  args: {
+    action: getAction("warning"),
+    variant: "warning",
+  },
+};
+
+export const ErrorWithAction: StoryObj<Args> = {
+  ...Error,
+  args: {
+    action: getAction("error"),
+    variant: "error",
   },
 };
 
 export const BrandDismissable: StoryObj<Args> = {
   ...Brand,
   args: {
-    onDismiss: () => console.log("dismissed!"),
+    dismissable: true,
   },
 };
 
 export const NeutralDismissable: StoryObj<Args> = {
   ...Brand,
   args: {
-    color: "neutral",
-    onDismiss: () => console.log("dismissed!"),
+    variant: "neutral",
+    dismissable: true,
   },
 };
 
 export const SuccessDismissable: StoryObj<Args> = {
   ...Brand,
   args: {
-    color: "success",
-    onDismiss: () => console.log("dismissed!"),
+    variant: "success",
+    dismissable: true,
   },
 };
 
 export const WarningDismissable: StoryObj<Args> = {
   ...Brand,
   args: {
-    color: "warning",
-    onDismiss: () => console.log("dismissed!"),
+    variant: "warning",
+    dismissable: true,
   },
 };
 
-export const AlertDismissable: StoryObj<Args> = {
+export const ErrorDismissable: StoryObj<Args> = {
   ...Brand,
   args: {
-    color: "alert",
-    onDismiss: () => console.log("dismissed!"),
+    variant: "error",
+    dismissable: true,
   },
 };
 
 export const DismissableWithAction: StoryObj<Args> = {
   ...Brand,
   args: {
-    action: action,
-    onDismiss: () => console.log("dismissed!"),
+    action: getAction(),
+    dismissable: true,
   },
 };
 
 export const DismissableBelowContent: StoryObj<Args> = {
-  render: ({ heading, content }) => (
+  render: (args) => (
     <>
       <Heading className={styles.headingBottomSpacing} size="h1">
         Page Title
       </Heading>
-      <Banner
-        onDismiss={() => console.log("dismissed!")}
-        textContent={
-          <>
-            <Banner.Title as="h1">{heading}</Banner.Title>{" "}
-            <Banner.Message>{content}</Banner.Message>
-          </>
-        }
-      />
+      <Banner {...args} description={getDescription()} dismissable={true} />
     </>
   ),
-  parameters: {
-    snapshot: { skip: true },
-  },
 };
 
 export const Vertical: StoryObj<Args> = {
@@ -177,7 +205,7 @@ export const VerticalDismissable: StoryObj<Args> = {
   ...Brand,
   args: {
     orientation: "vertical",
-    onDismiss: () => console.log("dismissed!"),
+    dismissable: true,
   },
 };
 
@@ -185,7 +213,7 @@ export const VerticalWithAction: StoryObj<Args> = {
   ...Brand,
   args: {
     orientation: "vertical",
-    action: action,
+    action: getAction(),
   },
 };
 
@@ -193,22 +221,14 @@ export const VerticalDismissableWithAction: StoryObj<Args> = {
   ...Brand,
   args: {
     orientation: "vertical",
-    action: action,
-    onDismiss: () => console.log("dismissed!"),
+    action: getAction(),
+    dismissable: true,
   },
 };
 
-export const Elevation0: StoryObj<Args> = {
+export const Flat: StoryObj<Args> = {
   ...Brand,
   args: {
-    elevation: 0,
-  },
-};
-
-export const VerticalElevation0: StoryObj<Args> = {
-  ...Brand,
-  args: {
-    orientation: "vertical",
-    elevation: 0,
+    isFlat: true,
   },
 };

@@ -1,51 +1,101 @@
 import clsx from "clsx";
-import React from "react";
+import React, { ReactNode, useState } from "react";
 import Button from "../Button";
 import Heading, { HeadingElement } from "../Heading";
 import Icon from "../Icon";
 import Text from "../Text";
 import colorStyles from "../common/Notifications/Notification.module.css";
-import NotificationIcon, {
-  NotificationVariant,
-} from "../common/Notifications/NotificationIcon";
 import styles from "./Banner.module.css";
 
-export type BannerProps = {
-  /**
-   * Additional class names passed in for styling
-   */
-  className?: string;
-  /**
-   * The color of the banner, based on EDS defined colors. Also determines the icon used.
-   */
-  color?: NotificationVariant;
-  /**
-   * The text content of the banner.
-   *
-   * Please note that this can contain text links, but block buttons should be passed in via the `action` prop.
-   */
-  textContent: React.ReactNode;
+export type Variant = "brand" | "neutral" | "success" | "warning" | "error";
+
+export interface Props {
   /**
    * A button or link that's placed in the banner separately from the main content.
    */
   action?: React.ReactNode;
   /**
-   * Callback when banner is dismissed. When passed in, renders banner with a close icon in the top right.
+   * CSS class names that can be appended to the component.
+   */
+  className?: string;
+  /**
+   * The description/body text of the banner
+   */
+  description?: ReactNode;
+  /**
+   * The element the description renders as
+   */
+  descriptionAs?: "p" | "span";
+  /**
+   * Toggles the ability to dismiss the banner via an close button in the top right of the banner
+   */
+  dismissable?: boolean;
+  /**
+   * Optional callback to be triggered when the banner is dismissed
    */
   onDismiss?: () => void;
   /**
-   * Whether the card is laid out horizontally or stacked vertically.
-   * The vertical orientation makes the banner look more like a card. It has the same styling as
-   * the horizontal banner in mobile view. This format is intended to be used in sidebars or
-   * other horizontally limited spaces.
-   */
-  orientation?: "horizontal" | "vertical";
-  /**
+   * This is deprecated and will be removed in an upcoming release. Please use the default elevation 1
+   *
    * The perceived elevation of the banner. An elevation of 0 appears flat against the surface while
    * an elevation of 1 appears to hover slightly. The hover appearance is used to separate the element
    * from the surrounding area. The flat version should only be used on white backgrounds.
+   *
+   * @deprecated
    */
-  elevation?: 0 | 1;
+  isFlat?: boolean;
+  /**
+   * Controls the layout of the banner
+   * - **vertical** renders the banner content center aligned and stacked
+   *
+   * Vertical banners are used in narrow areas, like sidebars
+   */
+  orientation?: "vertical";
+  /**
+   * The title/heading of the banner
+   */
+  title?: ReactNode;
+  /**
+   * The element the title renders as
+   */
+  titleAs?: HeadingElement;
+  /**
+   * Stylistic variations for the banner type.
+   * - **brand** - results in a purple banner
+   * - **neutral** - results in a gray banner
+   * - **success** - results in a green banner
+   * - **warning** - results in a yellow banner
+   * - **error** - results in a red banner
+   */
+  variant?: Variant;
+}
+
+const variantToIconAssetsMap: {
+  [key: string]: {
+    name: "notifications" | "forum" | "check-circle" | "warning" | "dangerous";
+    title: string;
+  };
+} = {
+  brand: {
+    name: "notifications",
+    title: "attention",
+  },
+  neutral: {
+    name: "forum",
+    title: "notice",
+  },
+  success: {
+    name: "check-circle",
+    title: "success",
+  },
+  warning: {
+    name: "warning",
+    title: "warning",
+  },
+  error: {
+    name: "dangerous",
+    title: "error",
+  },
 };
 
 /**
@@ -60,120 +110,105 @@ export type BannerProps = {
  * ```tsx
  * <Banner
  *   onDismiss={handleDismiss}
- *   textContent={
+ *   text={
  *     <>
- *       <Banner.Title>{bannerTitle}</Banner.Title>
- *       <Banner.Message>{bannerMessage}</Banner.Message>
+ *       <BannerTitle>Some title</Banner.Title>
+ *       <BannerDescription>Some description</Banner.Description>
  *     </>
  *   }
  * />
  * ```
  */
-export default function Banner({
-  className,
-  color = "brand",
-  textContent,
+export const Banner = ({
   action,
+  className,
+  description,
+  descriptionAs = "p",
+  dismissable,
+  isFlat,
   onDismiss,
-  orientation = "horizontal",
-  elevation = 1,
-}: BannerProps) {
-  const isHorizontal = orientation === "horizontal";
+  orientation,
+  variant = "brand", // TODO: verify brand is the default variant and not neutral
+  title,
+  titleAs = "h3",
+  ...other
+}: Props) => {
+  const [dismissed, setDismissed] = useState(false);
 
-  // While the v0 to v1 migration is happening, the Button and Banner will briefly
-  // be out of sync regarding the name of the red component style.
-  const buttonStatus = color === "alert" ? "error" : color;
+  if (isFlat && process.env.NODE_ENV !== "production") {
+    console.warn(
+      "The isFlat style is deprecated and will be removed in an upcoming release.\n",
+      "Please remove this prop to use the default elevated style (with a border and drop shadow) instead.",
+    );
+  }
+
+  function handleDismiss(e: any) {
+    e.preventDefault();
+    onDismiss && onDismiss();
+    setDismissed(true);
+  }
+
+  if (dismissed) {
+    return null;
+  }
+
+  const isHorizontal = !orientation;
+
+  const componentClassName = clsx(
+    // Base styles
+    styles["banner"],
+    className,
+    // Variants
+    variant === "brand" && colorStyles.colorBrand,
+    variant === "neutral" && colorStyles.colorNeutral,
+    variant === "success" && colorStyles.colorSuccess,
+    variant === "warning" && colorStyles.colorWarning,
+    variant === "error" && colorStyles.colorAlert,
+    // Other options
+    isHorizontal && styles["banner--horizontal"],
+    dismissable && styles["banner--dismissable"],
+    isFlat && styles["banner--flat"],
+  );
 
   return (
-    <article
-      className={clsx(
-        className,
-        styles.bannerDialog,
-        isHorizontal && styles.horizontal,
-        elevation === 0 && styles.elevation0,
-        onDismiss && styles.dismissable,
-        // Color props
-        color === "brand" && colorStyles.colorBrand,
-        color === "neutral" && colorStyles.colorNeutral,
-        color === "success" && colorStyles.colorSuccess,
-        color === "warning" && colorStyles.colorWarning,
-        color === "alert" && colorStyles.colorAlert,
-      )}
-    >
-      {onDismiss && (
+    <article className={componentClassName} {...other}>
+      {dismissable && (
         <Button
-          className={styles.dismiss}
-          onClick={onDismiss}
-          status={buttonStatus}
+          className={styles["banner__close-btn"]}
+          onClick={handleDismiss}
+          status={variant}
           variant="icon"
         >
-          <Icon
-            name="close"
-            purpose="informative"
-            size={"1.75rem"}
-            title={"dismiss banner"}
-          />
+          <Icon name={"close"} purpose="informative" title={"dismiss module"} />
         </Button>
       )}
 
-      <NotificationIcon variant={color} />
+      <Icon
+        className={styles["banner__icon"]}
+        name={variantToIconAssetsMap[variant].name}
+        purpose="informative"
+        title={variantToIconAssetsMap[variant].title}
+      />
 
-      <div
-        className={clsx(
-          styles.textAndAction,
-          isHorizontal && styles.horizontal,
-        )}
-      >
-        <div
-          className={clsx(
-            styles.textContent,
-            isHorizontal && styles.horizontal,
+      <div className={clsx(styles["banner__textAndAction"])}>
+        <div className={clsx(styles["banner__textContent"])}>
+          {title && (
+            <Heading as={titleAs} size="h3" variant="inherit">
+              {title}
+            </Heading>
           )}
-        >
-          {textContent}
+          {description && (
+            <Text as={descriptionAs} variant="inherit">
+              {description}
+            </Text>
+          )}
         </div>
+
         {action && (
-          <div
-            className={clsx(styles.action, isHorizontal && styles.horizontal)}
-          >
-            {action}
-          </div>
+          <div className={clsx(styles["banner__action"])}>{action}</div>
         )}
       </div>
     </article>
   );
-}
+};
 Banner.displayName = "Banner";
-
-type TitleProps = {
-  children?: React.ReactNode;
-  as: HeadingElement;
-};
-/**
- * This should import a Heading element type
- */
-const BannerTitle: React.FC<TitleProps> = (props: TitleProps) => {
-  return props.children ? (
-    <Heading as={props.as} size="h3" variant="inherit">
-      {props.children}
-    </Heading>
-  ) : null;
-};
-Banner.Title = BannerTitle;
-Banner.Title.displayName = "Banner.Title";
-
-type MessageProps = {
-  children?: React.ReactNode;
-};
-/**
- * This should import a Text element type
- */
-const BannerMessage: React.FC<MessageProps> = (props: MessageProps) => {
-  return props.children ? (
-    <Text size="body" variant="inherit">
-      {props.children}
-    </Text>
-  ) : null;
-};
-Banner.Message = BannerMessage;
-Banner.Message.displayName = "Banner.Message";
