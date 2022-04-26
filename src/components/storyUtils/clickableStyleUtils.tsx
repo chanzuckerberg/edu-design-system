@@ -1,9 +1,12 @@
 import React from "react";
+import AddRoundedIcon from "../../icons/AddRounded";
+import ArrowBackRoundedIcon from "../../icons/ArrowBackRounded";
+import ArrowForwardRoundedIcon from "../../icons/ArrowForwardRounded";
+import OpenInNewRoundedIcon from "../../icons/OpenInNewRounded";
 import Button from "../Button";
 import { ClickableStyleProps } from "../ClickableStyle";
 import ClickableStyle from "../ClickableStyle";
 import Heading from "../Heading";
-import Icon from "../Icon";
 import Link from "../Link";
 import Text from "../Text";
 import styles from "./clickableStyleUtils.module.css";
@@ -27,9 +30,8 @@ export const getStandardSet = (
         </li>
         <li>
           <Component color={color} variant={variant}>
-            <Icon
+            <ArrowBackRoundedIcon
               className={styles.arrowBackIcon}
-              name="arrow-back"
               purpose="decorative"
             />{" "}
             {componentName}
@@ -38,9 +40,8 @@ export const getStandardSet = (
         <li className={styles.headingBottomSpacing}>
           <Component color={color} variant={variant}>
             {componentName}
-            <Icon
+            <ArrowForwardRoundedIcon
               className={styles.arrowForwardIcon}
-              name="arrow-forward"
               purpose="decorative"
             />
           </Component>
@@ -84,9 +85,8 @@ export const getPlainRecommendedVariants = (
       <ul className="grid gap-y-4">
         <li>
           <Component variant="plain">
-            <Icon
+            <ArrowBackRoundedIcon
               className={styles.arrowBackIcon}
-              name="arrow-back"
               purpose="decorative"
             />{" "}
             {componentName}
@@ -95,18 +95,16 @@ export const getPlainRecommendedVariants = (
         <li>
           <Component variant="plain">
             {componentName}
-            <Icon
+            <ArrowForwardRoundedIcon
               className={styles.arrowForwardIcon}
-              name="arrow-forward"
               purpose="decorative"
             />
           </Component>
         </li>
         <li className={styles.headingBottomSpacing}>
           <Component variant="plain">
-            <Icon
+            <ArrowForwardRoundedIcon
               className="mx-[-0.4em]"
-              name="arrow-forward"
               purpose="informative"
               title="forward"
             />
@@ -122,9 +120,8 @@ export const getPlainRecommendedVariants = (
       <ul className="grid gap-y-4">
         <li>
           <Component size="medium" variant="plain">
-            <Icon
+            <ArrowBackRoundedIcon
               className={styles.arrowBackIcon}
-              name="arrow-back"
               purpose="decorative"
             />{" "}
             {componentName}
@@ -133,18 +130,16 @@ export const getPlainRecommendedVariants = (
         <li>
           <Component size="medium" variant="plain">
             {componentName}
-            <Icon
+            <ArrowForwardRoundedIcon
               className={styles.arrowForwardIcon}
-              name="arrow-forward"
               purpose="decorative"
             />
           </Component>
         </li>
         <li>
           <Component size="medium" variant="plain">
-            <Icon
+            <AddRoundedIcon
               className="mx-[-0.55em]"
-              name="add"
               purpose="informative"
               title="add"
             />
@@ -166,9 +161,8 @@ export const getLinkRecommendedVariants = (
     <li>
       <Component variant="link">
         {componentName}
-        <Icon
+        <OpenInNewRoundedIcon
           className="ml-1"
-          name="open-in-new"
           purpose="informative"
           title="opens in a new tab"
         />
@@ -193,9 +187,8 @@ export const getDestructiveRecommendedVariants = (
       </li>
       <li>
         <Component color="alert" variant="flat">
-          <Icon
+          <ArrowBackRoundedIcon
             className={styles.arrowBackIcon}
-            name="arrow-back"
             purpose="decorative"
           />{" "}
           {componentName}
@@ -275,7 +268,7 @@ const getVariantWithStates = (
 ) => {
   const states = tag === "button" ? buttonStates : linkStates;
   const icon = variant === "plain" && (
-    <Icon className="ml-2" name="add" purpose="decorative" />
+    <AddRoundedIcon className="ml-2" purpose="decorative" />
   );
 
   return (

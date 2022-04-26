@@ -1,7 +1,7 @@
 import { StoryObj } from "@storybook/react";
 import { within } from "@storybook/testing-library";
 import React from "react";
-import Icon from "../Icon";
+import FilterListRoundedIcon from "../../icons/FilterListRounded";
 import Dropdown, { OptionsAlignType, VariantType } from "./Dropdown";
 
 export default {
@@ -118,9 +118,8 @@ function InteractiveExampleUsingFunctionChildren() {
                   className="p-4 rounded-md border border-neutral-300"
                 >
                   {selectedOption?.label || "Select"}
-                  <Icon
+                  <FilterListRoundedIcon
                     className="ml-2"
-                    name="filter-list"
                     purpose="decorative"
                   />
                 </button>

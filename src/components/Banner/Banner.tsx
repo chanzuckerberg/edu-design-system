@@ -1,8 +1,8 @@
 import clsx from "clsx";
 import React from "react";
+import CloseRoundedIcon from "../../icons/CloseRounded";
 import Button from "../Button";
 import Heading, { HeadingElement } from "../Heading";
-import Icon from "../Icon";
 import Text from "../Text";
 import colorStyles from "../common/Notifications/Notification.module.css";
 import NotificationIcon, {
@@ -103,8 +103,7 @@ export default function Banner({
           onClick={onDismiss}
           variant="plain"
         >
-          <Icon
-            name="close"
+          <CloseRoundedIcon
             purpose="informative"
             size={"1.75rem"}
             title={"dismiss banner"}

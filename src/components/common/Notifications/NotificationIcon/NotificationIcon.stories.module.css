@@ -1,5 +1,5 @@
 .variant {
-  --icon-size-default: 2rem;
+  --svg-icon-size-default: 2rem;
 
   @apply mb-4;
 }

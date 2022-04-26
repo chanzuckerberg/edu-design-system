@@ -5,7 +5,7 @@
   border-color: var(--border-light-color);
   border-left-color: var(--border-dark-color);
   grid-template-columns: 1fr min-content;
-  --icon-size-default: 1.25rem;
+  --svg-icon-size-default: 1.25rem;
 }
 
 .content {

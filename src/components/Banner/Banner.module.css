@@ -9,7 +9,7 @@
   @apply text-center border-t-4;
 
   border-top-color: var(--border-dark-color);
-  --icon-size-default: 2.5rem;
+  --svg-icon-size-default: 2.5rem;
 }
 
 .textAndAction {
@@ -43,7 +43,7 @@
     border-top-color: var(--border-light-color);
 
     /* This makes the icon the same size as the header line height, which helps it look centered */
-    --icon-size-default: 1.5rem;
+    --svg-icon-size-default: 1.5rem;
   }
 
   .textAndAction.horizontal {
