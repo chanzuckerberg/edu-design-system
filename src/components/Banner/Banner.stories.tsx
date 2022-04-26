@@ -12,6 +12,7 @@ export default {
   args: {
     title:
       "New curriculum updates are available for one or more of your courses.",
+    titleAs: "h1",
   },
 };
 

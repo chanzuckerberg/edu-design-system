@@ -25,11 +25,11 @@ exports[`<Banner /> Brand story renders snapshot 1`] = `
     <div
       class="banner__textContent"
     >
-      <h3
+      <h1
         class="heading heading--size-h3 heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
-      </h3>
+      </h1>
       <p
         class="text text--body text--inherit"
       >
@@ -93,11 +93,11 @@ exports[`<Banner /> BrandDismissable story renders snapshot 1`] = `
     <div
       class="banner__textContent"
     >
-      <h3
+      <h1
         class="heading heading--size-h3 heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
-      </h3>
+      </h1>
       <p
         class="text text--body text--inherit"
       >
@@ -141,11 +141,11 @@ exports[`<Banner /> BrandWithAction story renders snapshot 1`] = `
     <div
       class="banner__textContent"
     >
-      <h3
+      <h1
         class="heading heading--size-h3 heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
-      </h3>
+      </h1>
       <p
         class="text text--body text--inherit"
       >
@@ -227,11 +227,11 @@ exports[`<Banner /> DismissableWithAction story renders snapshot 1`] = `
     <div
       class="banner__textContent"
     >
-      <h3
+      <h1
         class="heading heading--size-h3 heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
-      </h3>
+      </h1>
       <p
         class="text text--body text--inherit"
       >
@@ -285,11 +285,11 @@ exports[`<Banner /> Error story renders snapshot 1`] = `
     <div
       class="banner__textContent"
     >
-      <h3
+      <h1
         class="heading heading--size-h3 heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
-      </h3>
+      </h1>
       <p
         class="text text--body text--inherit"
       >
@@ -353,11 +353,11 @@ exports[`<Banner /> ErrorDismissable story renders snapshot 1`] = `
     <div
       class="banner__textContent"
     >
-      <h3
+      <h1
         class="heading heading--size-h3 heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
-      </h3>
+      </h1>
       <p
         class="text text--body text--inherit"
       >
@@ -401,11 +401,11 @@ exports[`<Banner /> ErrorWithAction story renders snapshot 1`] = `
     <div
       class="banner__textContent"
     >
-      <h3
+      <h1
         class="heading heading--size-h3 heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
-      </h3>
+      </h1>
       <p
         class="text text--body text--inherit"
       >
@@ -459,11 +459,11 @@ exports[`<Banner /> Flat story renders snapshot 1`] = `
     <div
       class="banner__textContent"
     >
-      <h3
+      <h1
         class="heading heading--size-h3 heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
-      </h3>
+      </h1>
       <p
         class="text text--body text--inherit"
       >
@@ -507,11 +507,11 @@ exports[`<Banner /> Neutral story renders snapshot 1`] = `
     <div
       class="banner__textContent"
     >
-      <h3
+      <h1
         class="heading heading--size-h3 heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
-      </h3>
+      </h1>
       <p
         class="text text--body text--inherit"
       >
@@ -575,11 +575,11 @@ exports[`<Banner /> NeutralDismissable story renders snapshot 1`] = `
     <div
       class="banner__textContent"
     >
-      <h3
+      <h1
         class="heading heading--size-h3 heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
-      </h3>
+      </h1>
       <p
         class="text text--body text--inherit"
       >
@@ -623,11 +623,11 @@ exports[`<Banner /> NeutralWithAction story renders snapshot 1`] = `
     <div
       class="banner__textContent"
     >
-      <h3
+      <h1
         class="heading heading--size-h3 heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
-      </h3>
+      </h1>
       <p
         class="text text--body text--inherit"
       >
@@ -681,11 +681,11 @@ exports[`<Banner /> NoDescription story renders snapshot 1`] = `
     <div
       class="banner__textContent"
     >
-      <h3
+      <h1
         class="heading heading--size-h3 heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
-      </h3>
+      </h1>
       <p
         class="text text--body text--inherit"
       >
@@ -772,11 +772,11 @@ exports[`<Banner /> Success story renders snapshot 1`] = `
     <div
       class="banner__textContent"
     >
-      <h3
+      <h1
         class="heading heading--size-h3 heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
-      </h3>
+      </h1>
       <p
         class="text text--body text--inherit"
       >
@@ -840,11 +840,11 @@ exports[`<Banner /> SuccessDismissable story renders snapshot 1`] = `
     <div
       class="banner__textContent"
     >
-      <h3
+      <h1
         class="heading heading--size-h3 heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
-      </h3>
+      </h1>
       <p
         class="text text--body text--inherit"
       >
@@ -888,11 +888,11 @@ exports[`<Banner /> SuccessWithAction story renders snapshot 1`] = `
     <div
       class="banner__textContent"
     >
-      <h3
+      <h1
         class="heading heading--size-h3 heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
-      </h3>
+      </h1>
       <p
         class="text text--body text--inherit"
       >
@@ -946,11 +946,11 @@ exports[`<Banner /> Vertical story renders snapshot 1`] = `
     <div
       class="banner__textContent"
     >
-      <h3
+      <h1
         class="heading heading--size-h3 heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
-      </h3>
+      </h1>
       <p
         class="text text--body text--inherit"
       >
@@ -1014,11 +1014,11 @@ exports[`<Banner /> VerticalDismissable story renders snapshot 1`] = `
     <div
       class="banner__textContent"
     >
-      <h3
+      <h1
         class="heading heading--size-h3 heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
-      </h3>
+      </h1>
       <p
         class="text text--body text--inherit"
       >
@@ -1082,11 +1082,11 @@ exports[`<Banner /> VerticalDismissableWithAction story renders snapshot 1`] = `
     <div
       class="banner__textContent"
     >
-      <h3
+      <h1
         class="heading heading--size-h3 heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
-      </h3>
+      </h1>
       <p
         class="text text--body text--inherit"
       >
@@ -1140,11 +1140,11 @@ exports[`<Banner /> VerticalWithAction story renders snapshot 1`] = `
     <div
       class="banner__textContent"
     >
-      <h3
+      <h1
         class="heading heading--size-h3 heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
-      </h3>
+      </h1>
       <p
         class="text text--body text--inherit"
       >
@@ -1198,11 +1198,11 @@ exports[`<Banner /> Warning story renders snapshot 1`] = `
     <div
       class="banner__textContent"
     >
-      <h3
+      <h1
         class="heading heading--size-h3 heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
-      </h3>
+      </h1>
       <p
         class="text text--body text--inherit"
       >
@@ -1266,11 +1266,11 @@ exports[`<Banner /> WarningDismissable story renders snapshot 1`] = `
     <div
       class="banner__textContent"
     >
-      <h3
+      <h1
         class="heading heading--size-h3 heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
-      </h3>
+      </h1>
       <p
         class="text text--body text--inherit"
       >
@@ -1314,11 +1314,11 @@ exports[`<Banner /> WarningWithAction story renders snapshot 1`] = `
     <div
       class="banner__textContent"
     >
-      <h3
+      <h1
         class="heading heading--size-h3 heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
-      </h3>
+      </h1>
       <p
         class="text text--body text--inherit"
       >
