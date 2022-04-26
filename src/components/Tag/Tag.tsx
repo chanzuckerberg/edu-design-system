@@ -22,16 +22,12 @@ export const stylesByColor = {
 
 type Props = {
   /**
-   * The color of the tag. New colors should be supported in the flow type,
-   * in the stylesByColor object, and by its separate style in CSS file.
+   * The color variant of the tag. New variants should be supported in the flow type,
+   * in the VARIANTS array, and by its separate style in CSS file.
    */
-  color: Color;
+  variant?: Color;
   /**
-   * The contents of the tag in addition to the icon
-   */
-  children: React.ReactNode;
-  /**
-   * Additional case-specific styling
+   * CSS class names that can be appended to the component for styling.
    */
   className?: string;
   /**
@@ -40,9 +36,13 @@ type Props = {
    */
   icon?: React.ReactNode;
   /**
-   * Style of the tag.
+   * The text contents of the tag, nested inside the component, in addition to the icon.
    */
-  variant?: "flat" | "outline";
+  text?: React.ReactNode;
+  /**
+   * Adds an outline for the tag. Defaulted to no outline.
+   */
+  hasOutline?: boolean;
 };
 
 /**
@@ -52,15 +52,15 @@ type Props = {
  *
  * This component provides a tag (pill shaped badge) wrapper.
  */
-function Tag({ color, children, className, icon, variant = "flat" }: Props) {
+function Tag({ variant, text, className, icon, hasOutline }: Props) {
   return (
     <Text
       as="span"
       className={clsx(
         className,
         styles.tag,
-        color && stylesByColor[color],
-        variant === "outline" && styles.outline,
+        variant && stylesByColor[variant],
+        hasOutline && styles.outline,
       )}
       size="sm"
       weight="bold"
@@ -68,7 +68,7 @@ function Tag({ color, children, className, icon, variant = "flat" }: Props) {
       {icon}
       {/* No width space to ensure height of contents */}
       {"\u200B"}
-      {children && <span className={styles.body}>{children}</span>}
+      {text && <span className={styles.body}>{text}</span>}
     </Text>
   );
 }
