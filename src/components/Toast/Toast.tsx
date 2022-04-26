@@ -2,27 +2,24 @@ import clsx from "clsx";
 import React from "react";
 import Button from "../Button";
 import Icon from "../Icon";
-import Text from "../Text";
-import colorStyles from "../common/Notifications/Notification.module.css";
-import NotificationIcon from "../common/Notifications/NotificationIcon";
 import styles from "./Toast.module.css";
 
-export type Color = "success" | "alert";
+export type Variant = "success" | "error";
 
-type Props = {
+export type Props = {
   /**
-   * Additional class names passed in for styling.
+   * Additional class names that can be appended to the component, passed in for styling.
    */
   className?: string;
   /**
-   * The contents of the toast.
+   * The child node(s) contains the toast message. Note: the toast message is displayed inside a TextPassage, so children can contain raw HTML
    */
   children: React.ReactNode;
   /**
    * The color of the Toast, based on EDS defined colors. Also determines the icon used.
    * Note that the Icon mapping matches the style of Banners.
    */
-  color: Color;
+  variant: Variant;
   /**
    * Callback when Toast is dismissed.
    */
@@ -38,44 +35,43 @@ type Props = {
  * user action. Ex: The user updates their profile, and a toast pop-up informs them that the
  * data was successfully saved.
  */
-export default function Toast({
+export const Toast = ({
   children,
   className,
-  color,
+  variant,
   onDismiss,
   // Allow for additional attributes such as aria roles
-  ...rest
-}: Props) {
-  // While the v0 to v1 migration is happening, the Button and Toast will briefly
-  // be out of sync regarding the name of the red component style.
-  const buttonStatus = color === "alert" ? "error" : color;
-
+  ...other
+}: Props) => {
+  const componentClassName = clsx(
+    className,
+    styles["toast"],
+    variant === "success" && styles["toast--success"],
+    variant === "error" && styles["toast--error"],
+  );
   return (
-    <div
-      className={clsx(
-        className,
-        styles.toastDialog,
-        color === "success" && colorStyles.colorSuccess,
-        color === "alert" && colorStyles.colorAlert,
-      )}
-      {...rest}
-    >
-      <div className={styles.content}>
-        <NotificationIcon variant={color} />
-        <Text size="sm" variant="inherit">
-          {children}
-        </Text>
+    <div className={componentClassName} {...other}>
+      <div className={styles["toast__content"]}>
+        <Icon
+          name={variant === "success" ? "check-circle" : "warning"}
+          purpose="informative"
+          size="1.5rem"
+          title={variant}
+        />
+        <p className={styles["toast__text"]}>{children}</p>
       </div>
       {onDismiss && (
-        <Button onClick={onDismiss} status={buttonStatus} variant="icon">
+        <Button onClick={onDismiss} status={variant} variant="icon">
           <Icon
             name="close"
             purpose="informative"
-            size={"2rem"}
-            title={"dismiss message"}
+            size="2rem"
+            title="dismiss message"
           />
         </Button>
       )}
     </div>
   );
-}
+};
+
+export default Toast;
