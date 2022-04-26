@@ -128,7 +128,7 @@ export const Banner = ({
   isFlat,
   onDismiss,
   orientation,
-  variant = "brand", // TODO: verify brand is the default variant and not neutral
+  variant = "brand",
   title,
   titleAs = "h3",
   ...other
