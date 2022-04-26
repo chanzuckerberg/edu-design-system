@@ -1,76 +1,23 @@
+/* ------------------------------------*\
+    #CHECKBOX
+\*------------------------------------ */
+
+/**
+ * A custom individual checkbox control
+ * 1) Outer wrapper div for custom control
+ * 2) Grid display aligns label and the checkbox
+ * 3) Prevents control from being "squished" in 
+ *    a flexbox parent
+ */
 .checkbox {
-  @apply relative grid items-start gap-2;
-
+  /* 1 */
+  position: relative;
+  display: grid; /* 2 */
+  align-items: flex-start;
   grid-template-columns: min-content 1fr;
-}
 
-.labelSmall {
-  @apply text-sm;
-  --label-line-height: var(--eds-size-line-height-sm);
-}
+  /* TODO: replace with token once migrated */
 
-.labelMedium {
-  @apply text-body;
-  --label-line-height: var(--eds-size-line-height-body);
-}
-
-.label {
-  @apply text-neutral-700;
-
-  /* Shift label so the checkbox always appears vertically centered
-  with the *first* line of text, in case label wraps. */
-  margin-top: calc((var(--checkbox-svg-size) - var(--label-line-height)) / 2);
-}
-
-.inputWrapper {
-  @apply relative;
-}
-
-.checkboxInput {
-  @apply cursor-pointer;
-
-  /* Remove the checkbox from the page flow, positioning it on top of the SVG */
-  position: absolute;
-
-  /* Set same dimensions as the CheckboxSvg element.  */
-  height: var(--checkbox-svg-size);
-  width: var(--checkbox-svg-size);
-
-  /* Hide the input element visually.
-  This ensures the checkbox is still "physically" present so that all users,
-  especially on touch screen readers, still interact with the real checkbox element
-  where it would naturally be present. */
-  opacity: 0;
-}
-
-.checkboxInput + svg {
-  @apply text-neutral-500 align-top inline-block;
-  --checked-color: var(--eds-color-brand-600);
-}
-
-.checkboxInput:checked + svg > .outline {
-  fill: var(--checked-color);
-  stroke: var(--checked-color);
-}
-
-.checkboxInput:checked + svg > .content {
-  fill: var(--eds-color-white);
-}
-
-.checkboxInput:focus + svg {
-  @apply outline-none rounded ring-2 ring-info-400;
-}
-
-/* Disabled styles */
-.checkboxInput:disabled {
-  @apply cursor-not-allowed;
-}
-
-.checkboxInput:disabled + svg {
-  @apply text-neutral-300;
-  --checked-color: var(--eds-color-neutral-300);
-}
-
-.disabled ~ .label {
-  @apply text-neutral-500;
+  /* gap: var(--eds-size-1); */
+  gap: 0.5rem;
 }
