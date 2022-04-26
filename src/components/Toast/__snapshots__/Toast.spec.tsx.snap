@@ -9,11 +9,11 @@ exports[`<Toast /> Error story renders snapshot 1`] = `
   >
     <svg
       class="icon"
-      fill="currentColor"
-      height="1.5rem"
+      fill="var(--icon-color)"
+      height="1.25rem"
       role="img"
-      style="--icon-size: 1.5rem;"
-      width="1.5rem"
+      style="--icon-size: 1.25rem;"
+      width="1.25rem"
       xmlns="http://www.w3.org/2000/svg"
     >
       <title
@@ -22,7 +22,7 @@ exports[`<Toast /> Error story renders snapshot 1`] = `
         error
       </title>
       <use
-        xlink:href="test-file-stub#warning"
+        xlink:href="test-file-stub#cancel"
       />
     </svg>
     <p
@@ -43,11 +43,11 @@ exports[`<Toast /> NotDismissable story renders snapshot 1`] = `
   >
     <svg
       class="icon"
-      fill="currentColor"
-      height="1.5rem"
+      fill="var(--icon-color)"
+      height="1.25rem"
       role="img"
-      style="--icon-size: 1.5rem;"
-      width="1.5rem"
+      style="--icon-size: 1.25rem;"
+      width="1.25rem"
       xmlns="http://www.w3.org/2000/svg"
     >
       <title
@@ -77,11 +77,11 @@ exports[`<Toast /> Success story renders snapshot 1`] = `
   >
     <svg
       class="icon"
-      fill="currentColor"
-      height="1.5rem"
+      fill="var(--icon-color)"
+      height="1.25rem"
       role="img"
-      style="--icon-size: 1.5rem;"
-      width="1.5rem"
+      style="--icon-size: 1.25rem;"
+      width="1.25rem"
       xmlns="http://www.w3.org/2000/svg"
     >
       <title

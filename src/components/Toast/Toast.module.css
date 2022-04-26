@@ -24,12 +24,14 @@
   border-radius: 0.25rem;
   border-color: var(--border-light-color); /* 4 */
   border-left-color: var(--border-dark-color); /* 4 */
-  box-shadow: 0 1px 2px 1px rgb(0 0 0 / 20%);
+
+  @apply shadow-1;
 }
 
 .toast--success {
   --border-light-color: var(--eds-color-success-200);
   --border-dark-color: var(--eds-color-success-500);
+  --icon-color: var(--eds-color-success-500);
 
   background: var(--eds-color-success-100);
   color: var(--eds-color-success-700);
@@ -38,6 +40,7 @@
 .toast--error {
   --border-light-color: var(--eds-color-alert-200);
   --border-dark-color: var(--eds-color-alert-500);
+  --icon-color: var(--eds-color-alert-500);
 
   background: var(--eds-color-alert-100);
   color: var(--eds-color-alert-700);

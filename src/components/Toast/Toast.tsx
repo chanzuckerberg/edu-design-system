@@ -53,9 +53,10 @@ export const Toast = ({
     <div className={componentClassName} {...other}>
       <div className={styles["toast__content"]}>
         <Icon
-          name={variant === "success" ? "check-circle" : "warning"}
+          color="var(--icon-color)"
+          name={variant === "success" ? "check-circle" : "cancel"}
           purpose="informative"
-          size="1.5rem"
+          size="1.25rem"
           title={variant}
         />
         <p className={styles["toast__text"]}>{children}</p>
