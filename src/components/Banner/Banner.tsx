@@ -9,7 +9,7 @@ import styles from "./Banner.module.css";
 
 export type Variant = "brand" | "neutral" | "success" | "warning" | "error";
 
-export interface Props {
+export type BannerProps = {
   /**
    * A button or link that's placed in the banner separately from the main content.
    */
@@ -68,7 +68,7 @@ export interface Props {
    * - **error** - results in a red banner
    */
   variant?: Variant;
-}
+};
 
 const variantToIconAssetsMap: {
   [key: string]: {
@@ -132,7 +132,7 @@ export const Banner = ({
   title,
   titleAs = "h3",
   ...other
-}: Props) => {
+}: BannerProps) => {
   const [dismissed, setDismissed] = useState(false);
 
   if (isFlat && process.env.NODE_ENV !== "production") {
