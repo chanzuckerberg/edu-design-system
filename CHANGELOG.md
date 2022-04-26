@@ -2,424 +2,285 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-## [0.10.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.9.2...v0.10.0) (2022-04-15)
-
+## [0.11.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.10.0...v0.11.0) (2022-04-26)
 
 ### ⚠ BREAKING CHANGES
 
-* removes color-font tokens
+#### **Heading** ([#996](https://github.com/chanzuckerberg/edu-design-system/issues/996))
 
-* remove typo
+- renamed `color` prop to `variant`
+- deprecated `weight` and `spacing` props
+- deprecated `"info"` and `"yellow"` color variants
+- renamed `"alert"` color variant to `"error"`
+- removed default color variant (previously set to `"base"`)
 
-Co-authored-by: Andrew Huth <ahuth@chanzuckerberg.com>
+#### **Text** ([#996](https://github.com/chanzuckerberg/edu-design-system/issues/996))
 
-* chore: move packages/components to src/components
+- renamed `color` prop to `variant`
+- deprecated `spacing` prop
+- deprecated heading-level `size` options
+- deprecated `"info"` and `"yellow"` color variants
+- renamed `"alert"` color variant to `"error"`
+- removed default color variant (previously set to `"base"`)
 
-* chore: remove token package imports
+#### **Icon** ([#986](https://github.com/chanzuckerberg/edu-design-system/issues/986))
 
-* chore: consolidate into one package.json
+- renamed `block` prop to `fullWidth`
+- use `import {Icon} from '@chanzuckerberg/eds'` instead of individual icon components
+  - ex: `<Icon name="warning" />` instead of `<WarningRoundedIcon />`
 
-* chore: cleanup docs, remove workspaces
+## [0.10.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.9.2...v0.10.0) (2022-04-15)
 
-* feat: lock headlessui to 1.4.3
+### ⚠ BREAKING CHANGES
 
-* chore: clean up imports
-
-* build: use separate tsconfig for build
-
-* build: publish icons
-
-* feat: move components/Icons to src/icons
+- removes color-font tokens
 
 ### Features
 
-* add jsx-sort-props lint rule ([bff502f](https://github.com/chanzuckerberg/edu-design-system/commit/bff502f9a921841fe510d8691610ffb66fcb689f))
-
+- add jsx-sort-props lint rule ([bff502f](https://github.com/chanzuckerberg/edu-design-system/commit/bff502f9a921841fe510d8691610ffb66fcb689f))
 
 ### build
 
-* use standard-version, make one package, move folders ([#981](https://github.com/chanzuckerberg/edu-design-system/issues/981)) ([ccc0450](https://github.com/chanzuckerberg/edu-design-system/commit/ccc0450064a600f0a7586db20ef354c9fa442b2e)), closes [#979](https://github.com/chanzuckerberg/edu-design-system/issues/979)
+- use standard-version, make one package, move folders ([#981](https://github.com/chanzuckerberg/edu-design-system/issues/981)) ([ccc0450](https://github.com/chanzuckerberg/edu-design-system/commit/ccc0450064a600f0a7586db20ef354c9fa442b2e)), closes [#979](https://github.com/chanzuckerberg/edu-design-system/issues/979)
 
 ## [0.10.0-alpha.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.9.0...v0.10.0-alpha.0) (2022-04-15)
 
-
 ### ⚠ BREAKING CHANGES
 
-* removes color-font tokens
+- removes color-font tokens
 
 ### Features
 
-* add standard-version, remove lerna, update storybook ([ee6b2c8](https://github.com/chanzuckerberg/edu-design-system/commit/ee6b2c8c97ebb0a62ab8731adc9e21d714b64013))
-* introduce badges addon for storybook ([#895](https://github.com/chanzuckerberg/edu-design-system/issues/895)) ([156fa72](https://github.com/chanzuckerberg/edu-design-system/commit/156fa729acdb6d141d783426ff3c1d1dc848d49e))
-* lock headlessui to 1.4.3 ([3a27bf3](https://github.com/chanzuckerberg/edu-design-system/commit/3a27bf3a7e575a43a7413a8b9ddaa679ab4206f8))
-* move components/Icons to src/icons ([b0314fa](https://github.com/chanzuckerberg/edu-design-system/commit/b0314fa074ba589cd4046c71149f50568b0791f7))
+- add standard-version, remove lerna, update storybook ([ee6b2c8](https://github.com/chanzuckerberg/edu-design-system/commit/ee6b2c8c97ebb0a62ab8731adc9e21d714b64013))
+- introduce badges addon for storybook ([#895](https://github.com/chanzuckerberg/edu-design-system/issues/895)) ([156fa72](https://github.com/chanzuckerberg/edu-design-system/commit/156fa729acdb6d141d783426ff3c1d1dc848d49e))
+- lock headlessui to 1.4.3 ([3a27bf3](https://github.com/chanzuckerberg/edu-design-system/commit/3a27bf3a7e575a43a7413a8b9ddaa679ab4206f8))
+- move components/Icons to src/icons ([b0314fa](https://github.com/chanzuckerberg/edu-design-system/commit/b0314fa074ba589cd4046c71149f50568b0791f7))
 
-
-* publish to lib/tokens ([7aecb68](https://github.com/chanzuckerberg/edu-design-system/commit/7aecb689fd11aeba6fa5a90ebf02fa5a31478174))
+- publish to lib/tokens ([7aecb68](https://github.com/chanzuckerberg/edu-design-system/commit/7aecb689fd11aeba6fa5a90ebf02fa5a31478174))
 
 ## [0.9.2](https://github.com/chanzuckerberg/edu-design-system/compare/v0.9.1...v0.9.2) (2022-04-08)
 
-
 ### Features
 
-* **close-button:** remove close button ([#931](https://github.com/chanzuckerberg/edu-design-system/issues/931)) ([c3c2151](https://github.com/chanzuckerberg/edu-design-system/commit/c3c215186e0c02d869573f99fb7f9f9a8bb177ad))
-
-
-
-
+- **close-button:** remove close button ([#931](https://github.com/chanzuckerberg/edu-design-system/issues/931)) ([c3c2151](https://github.com/chanzuckerberg/edu-design-system/commit/c3c215186e0c02d869573f99fb7f9f9a8bb177ad))
 
 ## [0.9.1](https://github.com/chanzuckerberg/edu-design-system/compare/v0.9.0...v0.9.1) (2022-03-30)
 
-
 ### Features
 
-* **dropdown:** add compact button as option ([#905](https://github.com/chanzuckerberg/edu-design-system/issues/905)) ([34af1bc](https://github.com/chanzuckerberg/edu-design-system/commit/34af1bc77125cafb4c776d9e94179ea43c51d628))
-* introduce badges addon for storybook ([#895](https://github.com/chanzuckerberg/edu-design-system/issues/895)) ([156fa72](https://github.com/chanzuckerberg/edu-design-system/commit/156fa729acdb6d141d783426ff3c1d1dc848d49e))
-
-
-
-
+- **dropdown:** add compact button as option ([#905](https://github.com/chanzuckerberg/edu-design-system/issues/905)) ([34af1bc](https://github.com/chanzuckerberg/edu-design-system/commit/34af1bc77125cafb4c776d9e94179ea43c51d628))
+- introduce badges addon for storybook ([#895](https://github.com/chanzuckerberg/edu-design-system/issues/895)) ([156fa72](https://github.com/chanzuckerberg/edu-design-system/commit/156fa729acdb6d141d783426ff3c1d1dc848d49e))
 
 # [0.9.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.8.0...v0.9.0) (2022-03-08)
 
 **Note:** Version bump only for package edu-design-system
 
-
-
-
-
 ## [0.8.1](https://github.com/chanzuckerberg/edu-design-system/compare/v0.8.0...v0.8.1) (2022-03-03)
-
 
 ### Chores
 
-* disable dependabot version updates ([#873](https://github.com/chanzuckerberg/edu-design-system/issues/873)) ([90db10a](https://github.com/chanzuckerberg/edu-design-system/commit/90db10a6de924faec092efd84adcfe55f7f4d993))
-* upgrade style-dictionary ([#882](https://github.com/chanzuckerberg/edu-design-system/issues/882)) ([dba4d21](https://github.com/chanzuckerberg/edu-design-system/commit/dba4d21f3fe00e5385227905a3bfbb23c4751f96))
-* update deps and resolve ([#881](https://github.com/chanzuckerberg/edu-design-system/issues/881)) ([c48915f](https://github.com/chanzuckerberg/edu-design-system/commit/c48915f364fc375da8147ddbadf60839da6fec77))
-
+- disable dependabot version updates ([#873](https://github.com/chanzuckerberg/edu-design-system/issues/873)) ([90db10a](https://github.com/chanzuckerberg/edu-design-system/commit/90db10a6de924faec092efd84adcfe55f7f4d993))
+- upgrade style-dictionary ([#882](https://github.com/chanzuckerberg/edu-design-system/issues/882)) ([dba4d21](https://github.com/chanzuckerberg/edu-design-system/commit/dba4d21f3fe00e5385227905a3bfbb23c4751f96))
+- update deps and resolve ([#881](https://github.com/chanzuckerberg/edu-design-system/issues/881)) ([c48915f](https://github.com/chanzuckerberg/edu-design-system/commit/c48915f364fc375da8147ddbadf60839da6fec77))
 
 ### Docs
 
-* add import example to docstring ([#880](https://github.com/chanzuckerberg/edu-design-system/issues/880)) ([78832db](https://github.com/chanzuckerberg/edu-design-system/commit/78832db2d16bf081fe104fb63d5054f1352038a1))
-
+- add import example to docstring ([#880](https://github.com/chanzuckerberg/edu-design-system/issues/880)) ([78832db](https://github.com/chanzuckerberg/edu-design-system/commit/78832db2d16bf081fe104fb63d5054f1352038a1))
 
 # [0.8.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.7.0...v0.8.0) (2022-02-28)
 
-
 ### Features
 
-* add Dropdown component ([#835](https://github.com/chanzuckerberg/edu-design-system/issues/835)) ([acf54dc](https://github.com/chanzuckerberg/edu-design-system/commit/acf54dca68b784ca6718cc16927b7a97d55db6b8))
-* remove unused legacy color tokens ([a953e25](https://github.com/chanzuckerberg/edu-design-system/commit/a953e256906dfee2d66cf46a9211a9149f80f29d))
-
-
-
-
+- add Dropdown component ([#835](https://github.com/chanzuckerberg/edu-design-system/issues/835)) ([acf54dc](https://github.com/chanzuckerberg/edu-design-system/commit/acf54dca68b784ca6718cc16927b7a97d55db6b8))
+- remove unused legacy color tokens ([a953e25](https://github.com/chanzuckerberg/edu-design-system/commit/a953e256906dfee2d66cf46a9211a9149f80f29d))
 
 # [0.7.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.6.0...v0.7.0) (2022-01-27)
 
-
 ### Features
 
-* add ButtonGroup component ([#808](https://github.com/chanzuckerberg/edu-design-system/issues/808)) ([c413ac6](https://github.com/chanzuckerberg/edu-design-system/commit/c413ac674479919c2931e7dd03b5d5f08d18b43a))
-* add DropdownButton ([#804](https://github.com/chanzuckerberg/edu-design-system/issues/804)) ([8b2d49f](https://github.com/chanzuckerberg/edu-design-system/commit/8b2d49f442e825e2e14ff8ad403f5a873edd5b8b))
-* add FormGroup component ([#809](https://github.com/chanzuckerberg/edu-design-system/issues/809)) ([3d48a2e](https://github.com/chanzuckerberg/edu-design-system/commit/3d48a2e2ea6d08fa88297e09ebfe3d5ee10b48f6))
-
-
-
-
+- add ButtonGroup component ([#808](https://github.com/chanzuckerberg/edu-design-system/issues/808)) ([c413ac6](https://github.com/chanzuckerberg/edu-design-system/commit/c413ac674479919c2931e7dd03b5d5f08d18b43a))
+- add DropdownButton ([#804](https://github.com/chanzuckerberg/edu-design-system/issues/804)) ([8b2d49f](https://github.com/chanzuckerberg/edu-design-system/commit/8b2d49f442e825e2e14ff8ad403f5a873edd5b8b))
+- add FormGroup component ([#809](https://github.com/chanzuckerberg/edu-design-system/issues/809)) ([3d48a2e](https://github.com/chanzuckerberg/edu-design-system/commit/3d48a2e2ea6d08fa88297e09ebfe3d5ee10b48f6))
 
 # [0.6.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.5.0...v0.6.0) (2022-01-26)
 
-
 ### Features
 
-* migrate Tooltip component ([#801](https://github.com/chanzuckerberg/edu-design-system/issues/801)) ([9b68ee3](https://github.com/chanzuckerberg/edu-design-system/commit/9b68ee3d94e351b049baf5ce7b6776b8b018774d))
-
-
-
-
+- migrate Tooltip component ([#801](https://github.com/chanzuckerberg/edu-design-system/issues/801)) ([9b68ee3](https://github.com/chanzuckerberg/edu-design-system/commit/9b68ee3d94e351b049baf5ce7b6776b8b018774d))
 
 # [0.5.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.4.10...v0.5.0) (2022-01-19)
 
-
 ### Features
 
-* add Checkbox component ([22ae1a7](https://github.com/chanzuckerberg/edu-design-system/commit/22ae1a74f796acd755b146d15d4c61f0dd3df32a))
-* allow html input types, make svg inline-block ([1ff1988](https://github.com/chanzuckerberg/edu-design-system/commit/1ff19883f76d8883cf02c10bb09dda8d8b6e2876))
-* **checkbox:** add data-bootstrap-override attributes ([8198352](https://github.com/chanzuckerberg/edu-design-system/commit/8198352ddfbf59529bd78357f83578d1766f293b))
-* rename grading-yellow to yellow in components ([00d1892](https://github.com/chanzuckerberg/edu-design-system/commit/00d1892dcab3972de16b456dd55c16ea513adce2))
-* **tokens:** rename grading-yellow to yellow ([e086161](https://github.com/chanzuckerberg/edu-design-system/commit/e0861612f0ebc218c25ebc65e964933e4fae1d6d))
-
-
-
-
+- add Checkbox component ([22ae1a7](https://github.com/chanzuckerberg/edu-design-system/commit/22ae1a74f796acd755b146d15d4c61f0dd3df32a))
+- allow html input types, make svg inline-block ([1ff1988](https://github.com/chanzuckerberg/edu-design-system/commit/1ff19883f76d8883cf02c10bb09dda8d8b6e2876))
+- **checkbox:** add data-bootstrap-override attributes ([8198352](https://github.com/chanzuckerberg/edu-design-system/commit/8198352ddfbf59529bd78357f83578d1766f293b))
+- rename grading-yellow to yellow in components ([00d1892](https://github.com/chanzuckerberg/edu-design-system/commit/00d1892dcab3972de16b456dd55c16ea513adce2))
+- **tokens:** rename grading-yellow to yellow ([e086161](https://github.com/chanzuckerberg/edu-design-system/commit/e0861612f0ebc218c25ebc65e964933e4fae1d6d))
 
 ## [0.4.10](https://github.com/chanzuckerberg/edu-design-system/compare/v0.4.9...v0.4.10) (2022-01-10)
 
 **Note:** Version bump only for package edu-design-system
 
-
-
-
-
 ## [0.4.9](https://github.com/chanzuckerberg/edu-design-system/compare/v0.4.8...v0.4.9) (2021-12-09)
-
 
 ### Features
 
-* **icon:** add InsertDriveFile ([b996a37](https://github.com/chanzuckerberg/edu-design-system/commit/b996a37400be86bf35c39bd11b2c230bd0e47acd))
-
-
-
-
+- **icon:** add InsertDriveFile ([b996a37](https://github.com/chanzuckerberg/edu-design-system/commit/b996a37400be86bf35c39bd11b2c230bd0e47acd))
 
 ## [0.4.8](https://github.com/chanzuckerberg/edu-design-system/compare/v0.4.7...v0.4.8) (2021-12-03)
 
-
 ### Features
 
-* **colors:** update grading-yellow-500 token ([e16fb5a](https://github.com/chanzuckerberg/edu-design-system/commit/e16fb5affa65f01b5695fc72a44a01d65342e840))
-
-
-
-
+- **colors:** update grading-yellow-500 token ([e16fb5a](https://github.com/chanzuckerberg/edu-design-system/commit/e16fb5affa65f01b5695fc72a44a01d65342e840))
 
 ## [0.4.7](https://github.com/chanzuckerberg/edu-design-system/compare/v0.4.6...v0.4.7) (2021-12-01)
 
-
 ### Features
 
-* **icons:** add InfoRounded ([11c8100](https://github.com/chanzuckerberg/edu-design-system/commit/11c81005c194db91762a99954535dff2f0bbf7aa))
-
-
-
-
+- **icons:** add InfoRounded ([11c8100](https://github.com/chanzuckerberg/edu-design-system/commit/11c81005c194db91762a99954535dff2f0bbf7aa))
 
 ## [0.4.6](https://github.com/chanzuckerberg/edu-design-system/compare/v0.4.5...v0.4.6) (2021-11-18)
 
 **Note:** Version bump only for package edu-design-system
 
-
-
-
-
 ## [0.4.5](https://github.com/chanzuckerberg/edu-design-system/compare/v0.4.4...v0.4.5) (2021-11-09)
 
 **Note:** Version bump only for package edu-design-system
-
-
-
-
 
 ## [0.4.4](https://github.com/chanzuckerberg/edu-design-system/compare/v0.4.3...v0.4.4) (2021-11-05)
 
 **Note:** Version bump only for package edu-design-system
 
-
-
-
-
 ## [0.4.3](https://github.com/chanzuckerberg/edu-design-system/compare/v0.4.2...v0.4.3) (2021-11-04)
 
 **Note:** Version bump only for package edu-design-system
-
-
-
-
 
 ## [0.4.3-alpha.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.4.2...v0.4.3-alpha.0) (2021-11-01)
 
 **Note:** Version bump only for package edu-design-system
 
-
-
-
-
 ## [0.4.2](https://github.com/chanzuckerberg/edu-design-system/compare/v0.4.1...v0.4.2) (2021-10-22)
-
 
 ### Bug Fixes
 
-* **svgicon:** set inline-block ([fe9f5fc](https://github.com/chanzuckerberg/edu-design-system/commit/fe9f5fc46bdc2e7d94fec94b0ac9acafd3da2072))
-
+- **svgicon:** set inline-block ([fe9f5fc](https://github.com/chanzuckerberg/edu-design-system/commit/fe9f5fc46bdc2e7d94fec94b0ac9acafd3da2072))
 
 ### Features
 
-* **tailwind:** enable Tailwind utility and component classes ([#675](https://github.com/chanzuckerberg/edu-design-system/issues/675)) ([ecedecf](https://github.com/chanzuckerberg/edu-design-system/commit/ecedecfd9798a4391a0d33aad1e4b038195724d6))
-
-
-
-
+- **tailwind:** enable Tailwind utility and component classes ([#675](https://github.com/chanzuckerberg/edu-design-system/issues/675)) ([ecedecf](https://github.com/chanzuckerberg/edu-design-system/commit/ecedecfd9798a4391a0d33aad1e4b038195724d6))
 
 ## [0.4.1](https://github.com/chanzuckerberg/edu-design-system/compare/v0.4.0...v0.4.1) (2021-10-14)
 
-
 ### Reverts
 
-* Revert "chore: add unused import for testing lint warnings" ([5738a44](https://github.com/chanzuckerberg/edu-design-system/commit/5738a4413b498a95a77ef877966bef2bb479fd49))
-
-
-
-
+- Revert "chore: add unused import for testing lint warnings" ([5738a44](https://github.com/chanzuckerberg/edu-design-system/commit/5738a4413b498a95a77ef877966bef2bb479fd49))
 
 # [0.4.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.3.0...v0.4.0) (2021-10-08)
 
-
 ### Features
 
-* **clickable-style, button, link:** add extraSmall size ([8926882](https://github.com/chanzuckerberg/edu-design-system/commit/89268821c0b9e272bc78d17d90c344f1056c1f1d))
-* **clickable-style:** remove large, bump remaining sizes up one level ([8664fbd](https://github.com/chanzuckerberg/edu-design-system/commit/8664fbd14f6ce72bc740e37c3498efafa2c350eb))
-
-
-
-
+- **clickable-style, button, link:** add extraSmall size ([8926882](https://github.com/chanzuckerberg/edu-design-system/commit/89268821c0b9e272bc78d17d90c344f1056c1f1d))
+- **clickable-style:** remove large, bump remaining sizes up one level ([8664fbd](https://github.com/chanzuckerberg/edu-design-system/commit/8664fbd14f6ce72bc740e37c3498efafa2c350eb))
 
 # [0.3.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.2.1...v0.3.0) (2021-09-22)
 
-
 ### Features
 
-* **chromatic:** add accessibility testing step to chromatic job ([53f13eb](https://github.com/chanzuckerberg/edu-design-system/commit/53f13ebf86aa5d3db963ee139225d769eefe19ab))
-* **chromatic:** add build script name and specify relative path for chromatic job ([ebedfce](https://github.com/chanzuckerberg/edu-design-system/commit/ebedfce0ce177a473ea18fa889c6cf6ebc04124b))
-* **chromatic:** add missing runs-on ([df4cd04](https://github.com/chanzuckerberg/edu-design-system/commit/df4cd04f4ff765f501f33d5da4f3689c7d8fe7b6))
-* **chromatic:** add working directory to chromatic action ([6f97ba2](https://github.com/chanzuckerberg/edu-design-system/commit/6f97ba2c407ed0ebaab4550d13070dd0de9582f0))
-* **chromatic:** build storybook explicitly instead of relying on chromatic ([377d96b](https://github.com/chanzuckerberg/edu-design-system/commit/377d96b88baf9bd1bba5950a0cec5dd0a3339af2))
-* **chromatic:** disable TurboSnap for Chromatic ([eb435e0](https://github.com/chanzuckerberg/edu-design-system/commit/eb435e0423d75ca75e4fd68e9c7252eb522d34d2))
-* **chromatic:** downgrade from chromatic canary build ([75db293](https://github.com/chanzuckerberg/edu-design-system/commit/75db29391c2aff3c8eeb48f46804fe9e8e5a680c))
-* **chromatic:** enable turbosnap ([42c64a0](https://github.com/chanzuckerberg/edu-design-system/commit/42c64a01438fd8590d73d729153dafde4ebe4d6e))
-* **chromatic:** init chromatic ([4facc01](https://github.com/chanzuckerberg/edu-design-system/commit/4facc01f314600193ec61713f4e73e82daee797c))
-* **chromatic:** place chromatic job in test.yml and temporarily comment out other jobs ([0267540](https://github.com/chanzuckerberg/edu-design-system/commit/026754011730093d13819dc887ad8717a6e2af4f))
-* **chromatic:** separate chromatic run to another workflow ([4cc5289](https://github.com/chanzuckerberg/edu-design-system/commit/4cc5289b7981ec3f7bf3424304d35b00be260b62))
-* **chromatic:** temp change default prop to test chromatic turbosnap ([ad99d48](https://github.com/chanzuckerberg/edu-design-system/commit/ad99d48e868621ed814775aa4cdeec75fd817a65))
-* **chromatic:** temporarily add pwd to check working directory ([770c075](https://github.com/chanzuckerberg/edu-design-system/commit/770c0755dd600843c84680bc1e61419ceb46479c))
-* **chromatic:** uncomment github action jobs except percy ([17455c8](https://github.com/chanzuckerberg/edu-design-system/commit/17455c8894422a371da04f75346727aac1be0a03))
-* **chromatic:** uncomment percy job ([9ab82af](https://github.com/chanzuckerberg/edu-design-system/commit/9ab82afaf53f912602e8da2267577e3522c0e4e7))
-* **clickable-style:** add plain variant ([772b13a](https://github.com/chanzuckerberg/edu-design-system/commit/772b13aa22ddd03a8916ba9c5473c2e6efed8b0f))
-* **clickable-style:** set height for icons in buttons and links ([e680ca6](https://github.com/chanzuckerberg/edu-design-system/commit/e680ca691e1ce7288bee0c2a99adac090f9ceca6))
-
+- **chromatic:** add accessibility testing step to chromatic job ([53f13eb](https://github.com/chanzuckerberg/edu-design-system/commit/53f13ebf86aa5d3db963ee139225d769eefe19ab))
+- **chromatic:** add build script name and specify relative path for chromatic job ([ebedfce](https://github.com/chanzuckerberg/edu-design-system/commit/ebedfce0ce177a473ea18fa889c6cf6ebc04124b))
+- **chromatic:** add missing runs-on ([df4cd04](https://github.com/chanzuckerberg/edu-design-system/commit/df4cd04f4ff765f501f33d5da4f3689c7d8fe7b6))
+- **chromatic:** add working directory to chromatic action ([6f97ba2](https://github.com/chanzuckerberg/edu-design-system/commit/6f97ba2c407ed0ebaab4550d13070dd0de9582f0))
+- **chromatic:** build storybook explicitly instead of relying on chromatic ([377d96b](https://github.com/chanzuckerberg/edu-design-system/commit/377d96b88baf9bd1bba5950a0cec5dd0a3339af2))
+- **chromatic:** disable TurboSnap for Chromatic ([eb435e0](https://github.com/chanzuckerberg/edu-design-system/commit/eb435e0423d75ca75e4fd68e9c7252eb522d34d2))
+- **chromatic:** downgrade from chromatic canary build ([75db293](https://github.com/chanzuckerberg/edu-design-system/commit/75db29391c2aff3c8eeb48f46804fe9e8e5a680c))
+- **chromatic:** enable turbosnap ([42c64a0](https://github.com/chanzuckerberg/edu-design-system/commit/42c64a01438fd8590d73d729153dafde4ebe4d6e))
+- **chromatic:** init chromatic ([4facc01](https://github.com/chanzuckerberg/edu-design-system/commit/4facc01f314600193ec61713f4e73e82daee797c))
+- **chromatic:** place chromatic job in test.yml and temporarily comment out other jobs ([0267540](https://github.com/chanzuckerberg/edu-design-system/commit/026754011730093d13819dc887ad8717a6e2af4f))
+- **chromatic:** separate chromatic run to another workflow ([4cc5289](https://github.com/chanzuckerberg/edu-design-system/commit/4cc5289b7981ec3f7bf3424304d35b00be260b62))
+- **chromatic:** temp change default prop to test chromatic turbosnap ([ad99d48](https://github.com/chanzuckerberg/edu-design-system/commit/ad99d48e868621ed814775aa4cdeec75fd817a65))
+- **chromatic:** temporarily add pwd to check working directory ([770c075](https://github.com/chanzuckerberg/edu-design-system/commit/770c0755dd600843c84680bc1e61419ceb46479c))
+- **chromatic:** uncomment github action jobs except percy ([17455c8](https://github.com/chanzuckerberg/edu-design-system/commit/17455c8894422a371da04f75346727aac1be0a03))
+- **chromatic:** uncomment percy job ([9ab82af](https://github.com/chanzuckerberg/edu-design-system/commit/9ab82afaf53f912602e8da2267577e3522c0e4e7))
+- **clickable-style:** add plain variant ([772b13a](https://github.com/chanzuckerberg/edu-design-system/commit/772b13aa22ddd03a8916ba9c5473c2e6efed8b0f))
+- **clickable-style:** set height for icons in buttons and links ([e680ca6](https://github.com/chanzuckerberg/edu-design-system/commit/e680ca691e1ce7288bee0c2a99adac090f9ceca6))
 
 ### Reverts
 
-* **chromatic:** revert change to default prop to test chromatic turbosnap ([a628f45](https://github.com/chanzuckerberg/edu-design-system/commit/a628f45c31dbf8e99bb2d2d24b92b0d2b68e74bc))
-
-
-
-
+- **chromatic:** revert change to default prop to test chromatic turbosnap ([a628f45](https://github.com/chanzuckerberg/edu-design-system/commit/a628f45c31dbf8e99bb2d2d24b92b0d2b68e74bc))
 
 ## [0.2.1](https://github.com/chanzuckerberg/edu-design-system/compare/v0.2.0...v0.2.1) (2021-09-15)
 
 **Note:** Version bump only for package edu-design-system
 
-
-
-
-
 # [0.2.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.1.5...v0.2.0) (2021-09-10)
-
 
 ### Bug Fixes
 
-* set line-height for NotificationIcon ([03ca81e](https://github.com/chanzuckerberg/edu-design-system/commit/03ca81e43077724a71b35eb2bf3f72f64a727203))
-
+- set line-height for NotificationIcon ([03ca81e](https://github.com/chanzuckerberg/edu-design-system/commit/03ca81e43077724a71b35eb2bf3f72f64a727203))
 
 ### Features
 
-* **link + button:** remove 'as' prop ([d9c8db7](https://github.com/chanzuckerberg/edu-design-system/commit/d9c8db752f896c2f52ab06589f9c8762a1367adb))
-* **link:** add Link component; change Button to always use button tag ([32b587a](https://github.com/chanzuckerberg/edu-design-system/commit/32b587a4b4bc03a239dbcb6b9d82ac7e06d7c99a))
-* rename Clickable component to ClickableStyle ([fa0f29a](https://github.com/chanzuckerberg/edu-design-system/commit/fa0f29aa414858c6a5c7e30c5d2552f5248026bc))
-* **banner:** update api to use textContent prop instead of children ([33f3249](https://github.com/chanzuckerberg/edu-design-system/commit/33f324985f01d43366997d604e9d3258f4439fd8))
-
-
-
-
+- **link + button:** remove 'as' prop ([d9c8db7](https://github.com/chanzuckerberg/edu-design-system/commit/d9c8db752f896c2f52ab06589f9c8762a1367adb))
+- **link:** add Link component; change Button to always use button tag ([32b587a](https://github.com/chanzuckerberg/edu-design-system/commit/32b587a4b4bc03a239dbcb6b9d82ac7e06d7c99a))
+- rename Clickable component to ClickableStyle ([fa0f29a](https://github.com/chanzuckerberg/edu-design-system/commit/fa0f29aa414858c6a5c7e30c5d2552f5248026bc))
+- **banner:** update api to use textContent prop instead of children ([33f3249](https://github.com/chanzuckerberg/edu-design-system/commit/33f324985f01d43366997d604e9d3258f4439fd8))
 
 ## [0.1.5](https://github.com/chanzuckerberg/edu-design-system/compare/v0.1.4...v0.1.5) (2021-08-25)
 
-
 ### Bug Fixes
 
-* turn off flow types for now ([6581118](https://github.com/chanzuckerberg/edu-design-system/commit/6581118e66181cc8a23d508503256ba68b00602d))
-
+- turn off flow types for now ([6581118](https://github.com/chanzuckerberg/edu-design-system/commit/6581118e66181cc8a23d508503256ba68b00602d))
 
 ### Features
 
-* **colors:** add level 800 success and warning colors, use in Clickable ([b314501](https://github.com/chanzuckerberg/edu-design-system/commit/b3145011769cd5c1a42edbbb2d13d0274521a676))
-
-
-
-
+- **colors:** add level 800 success and warning colors, use in Clickable ([b314501](https://github.com/chanzuckerberg/edu-design-system/commit/b3145011769cd5c1a42edbbb2d13d0274521a676))
 
 ## [0.1.4](https://github.com/chanzuckerberg/edu-design-system/compare/v0.1.3...v0.1.4) (2021-08-19)
 
-
 ### Features
 
-* update neutral button colors ([2ba82c4](https://github.com/chanzuckerberg/edu-design-system/commit/2ba82c4aa8a0514c8a213a8b936a52d3ffaf09fd))
-
-
-
-
+- update neutral button colors ([2ba82c4](https://github.com/chanzuckerberg/edu-design-system/commit/2ba82c4aa8a0514c8a213a8b936a52d3ffaf09fd))
 
 ## [0.1.3](https://github.com/chanzuckerberg/edu-design-system/compare/v0.1.2...v0.1.3) (2021-08-11)
 
-
 ### Features
 
-* allow buttons to take a ref ([c606b89](https://github.com/chanzuckerberg/edu-design-system/commit/c606b89a71ca2ebdc5ed6dcba133e62be7285257))
-
+- allow buttons to take a ref ([c606b89](https://github.com/chanzuckerberg/edu-design-system/commit/c606b89a71ca2ebdc5ed6dcba133e62be7285257))
 
 ### Reverts
 
-* Revert "chore: use "workspace ranges" to specify dependencies between packages" ([464887f](https://github.com/chanzuckerberg/edu-design-system/commit/464887f035c66bf3a7580ec24b79f49417f7021b))
-
-
-
-
+- Revert "chore: use "workspace ranges" to specify dependencies between packages" ([464887f](https://github.com/chanzuckerberg/edu-design-system/commit/464887f035c66bf3a7580ec24b79f49417f7021b))
 
 ## [0.1.2](https://github.com/chanzuckerberg/edu-design-system/compare/v0.1.1...v0.1.2) (2021-08-06)
 
 **Note:** Version bump only for package edu-design-system
 
-
-
-
-
 ## [0.1.1](https://github.com/chanzuckerberg/edu-design-system/compare/v0.1.0...v0.1.1) (2021-08-05)
-
 
 ### Features
 
-* **tag:** add optional ClassName attribute ([cdfa32a](https://github.com/chanzuckerberg/edu-design-system/commit/cdfa32a52f1ec50d796a11bc71041d4cb131ae1e))
-* export <SvgIcon> from @chanzuckerberg/eds-components ([fe3bd3c](https://github.com/chanzuckerberg/edu-design-system/commit/fe3bd3c59556e35f570dd6390b0fd28c5c7b2286))
-* tell Webpack that eds-components has no side effects ([64cc782](https://github.com/chanzuckerberg/edu-design-system/commit/64cc782a20afefb6d326bb15d80072b8b64d23eb))
-* **icons:** add custom Campaign icon ([46b8f32](https://github.com/chanzuckerberg/edu-design-system/commit/46b8f320b84c80528b7b24ecf68c03cd335e94ce))
-* **icons:** add material-ui rounded icons from ui kit-alpha ([b38274b](https://github.com/chanzuckerberg/edu-design-system/commit/b38274b67c26ceef0e849b42620cbae657d8e790))
-
-
-
-
+- **tag:** add optional ClassName attribute ([cdfa32a](https://github.com/chanzuckerberg/edu-design-system/commit/cdfa32a52f1ec50d796a11bc71041d4cb131ae1e))
+- export <SvgIcon> from @chanzuckerberg/eds-components ([fe3bd3c](https://github.com/chanzuckerberg/edu-design-system/commit/fe3bd3c59556e35f570dd6390b0fd28c5c7b2286))
+- tell Webpack that eds-components has no side effects ([64cc782](https://github.com/chanzuckerberg/edu-design-system/commit/64cc782a20afefb6d326bb15d80072b8b64d23eb))
+- **icons:** add custom Campaign icon ([46b8f32](https://github.com/chanzuckerberg/edu-design-system/commit/46b8f320b84c80528b7b24ecf68c03cd335e94ce))
+- **icons:** add material-ui rounded icons from ui kit-alpha ([b38274b](https://github.com/chanzuckerberg/edu-design-system/commit/b38274b67c26ceef0e849b42620cbae657d8e790))
 
 # [0.1.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.0.1-alpha.15...v0.1.0) (2021-08-02)
 
-
 ### Bug Fixes
 
-* use aria-hidden to hide icons from screen readers ([b656013](https://github.com/chanzuckerberg/edu-design-system/commit/b656013bd9bc602d6cbc81f7da215d53cf893a8c)), closes [d7032b482f0988/lib/commons/aria/index.js#L1462-L1488](https://github.com/d7032b482f0988/lib/commons/aria/index.js/issues/L1462-L1488)
-
+- use aria-hidden to hide icons from screen readers ([b656013](https://github.com/chanzuckerberg/edu-design-system/commit/b656013bd9bc602d6cbc81f7da215d53cf893a8c)), closes [d7032b482f0988/lib/commons/aria/index.js#L1462-L1488](https://github.com/d7032b482f0988/lib/commons/aria/index.js/issues/L1462-L1488)
 
 ### Features
 
-* use "informative" and "decorative" as the type of icons ([6148291](https://github.com/chanzuckerberg/edu-design-system/commit/614829143a3bbb15b443644b497f81aec7092fab))
-* **icons:** add DangerousRounded for notifications ([20dac4e](https://github.com/chanzuckerberg/edu-design-system/commit/20dac4e8471c0a7665d302f7b4690975bdbe12e9))
-* allow <Button> to take a data-testid prop ([2256f72](https://github.com/chanzuckerberg/edu-design-system/commit/2256f723bc90cb934389a4f75afa0d87edd47b3c))
-* **banner:** copy Banner component from traject ([abe0275](https://github.com/chanzuckerberg/edu-design-system/commit/abe0275003576b59d06512f8ae5736e10b22958e))
-* **svgicon:** copy over SvgIcon + 6 icons from traject ([b47b1c6](https://github.com/chanzuckerberg/edu-design-system/commit/b47b1c6a62685680bf0d323c227c8486fb4ad072))
-* **tag:** copy Tag over from traject ([de30e3e](https://github.com/chanzuckerberg/edu-design-system/commit/de30e3e9efc5b96628dd089434f928497d3d4704))
-* **toast:** copy Toast from traject ([d17448c](https://github.com/chanzuckerberg/edu-design-system/commit/d17448c36c5c25f2754e4ffa49d321365d51735c))
-
-
-
-
+- use "informative" and "decorative" as the type of icons ([6148291](https://github.com/chanzuckerberg/edu-design-system/commit/614829143a3bbb15b443644b497f81aec7092fab))
+- **icons:** add DangerousRounded for notifications ([20dac4e](https://github.com/chanzuckerberg/edu-design-system/commit/20dac4e8471c0a7665d302f7b4690975bdbe12e9))
+- allow <Button> to take a data-testid prop ([2256f72](https://github.com/chanzuckerberg/edu-design-system/commit/2256f723bc90cb934389a4f75afa0d87edd47b3c))
+- **banner:** copy Banner component from traject ([abe0275](https://github.com/chanzuckerberg/edu-design-system/commit/abe0275003576b59d06512f8ae5736e10b22958e))
+- **svgicon:** copy over SvgIcon + 6 icons from traject ([b47b1c6](https://github.com/chanzuckerberg/edu-design-system/commit/b47b1c6a62685680bf0d323c227c8486fb4ad072))
+- **tag:** copy Tag over from traject ([de30e3e](https://github.com/chanzuckerberg/edu-design-system/commit/de30e3e9efc5b96628dd089434f928497d3d4704))
+- **toast:** copy Toast from traject ([d17448c](https://github.com/chanzuckerberg/edu-design-system/commit/d17448c36c5c25f2754e4ffa49d321365d51735c))
 
 ## [0.0.1-alpha.15](https://github.com/chanzuckerberg/edu-design-system/compare/v0.0.1-alpha.14...v0.0.1-alpha.15) (2021-07-23)
 
