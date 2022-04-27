@@ -1,0 +1,50 @@
+/*------------------------------------*\
+    #HORIZONTALSTEP
+\*------------------------------------*/
+
+/**
+ * Horizontal Step displays the step text and associated decorative icon.
+ */
+.horizontal-step {
+  display: flex;
+  align-items: center;
+  gap: var(--eds-size-1);
+}
+
+/**
+ * Horizontal step variants
+ */
+.horizontal-step--complete {
+  color: var(--eds-theme-color-text-neutral-subtle);
+}
+.horizontal-step--active {
+  color: var(--eds-theme-color-text-neutral-strong);
+}
+.horizontal-step--incomplete {
+  color: var(--eds-theme-color-text-neutral-subtle);
+}
+
+/**
+ * Horizontal Step check circle icon
+ */
+.horizontal-step__complete-icon {
+  fill: var(--eds-theme-color-icon-utility-success);
+}
+
+/**
+* Horizontal Step number icon
+* 1) Centers the number text in the circle.
+* 2) The circle part of the icon, made with borders and equal height and width.
+*/
+.horizontal-step__number {
+  /* 1 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* 2 */
+  border: 0.125rem solid var(--eds-theme-color-icon-neutral-default-hover);
+  border-radius: var(--eds-border-radius-round);
+  height: var(--eds-size-2-and-half);
+  width: var(--eds-size-2-and-half);
+}
