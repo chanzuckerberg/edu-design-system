@@ -6,6 +6,7 @@ import HorizontalStep from '../HorizontalStep';
 export interface Props {
   /**
    * Zero-based index that identifies which index is the active step.
+   * If all steps are completed, the activeIndex should match the length of steps. (e.g. activeIndex === steps.length)
    */
   activeIndex: number;
   /**
@@ -32,9 +33,13 @@ export interface Props {
  * ```
  */
 export const HorizontalStepper = ({ activeIndex, className, steps }: Props) => {
+  /**
+   * Warns dev if the activeIndex is invalid
+   * 1) Negative conditional to account for 'NaN' values which pass the number type check since "typeof NaN === 'number'"
+   */
   if (
     process.env.NODE_ENV !== 'production' &&
-    !(activeIndex >= 0 && activeIndex <= steps.length)
+    !(activeIndex >= 0 && activeIndex <= steps.length) /* 1 */
   ) {
     console.warn(
       'The active index is an invalid index relative to the number of steps.',

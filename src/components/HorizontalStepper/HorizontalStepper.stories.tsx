@@ -88,9 +88,17 @@ export const Interactive: StoryObj<Args> = {
 export const HorizontalSteps: StoryObj<Args> = {
   render: () => (
     <>
-      <HorizontalStep text="Horizontal step" variant="incomplete" />
+      <HorizontalStep
+        stepNumber={1}
+        text="Horizontal step"
+        variant="incomplete"
+      />
       <HorizontalStep stepNumber={1} text="Horizontal step" variant="active" />
-      <HorizontalStep text="Horizontal step" variant="complete" />
+      <HorizontalStep
+        stepNumber={1}
+        text="Horizontal step"
+        variant="complete"
+      />
     </>
   ),
 };

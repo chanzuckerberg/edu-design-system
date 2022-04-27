@@ -12,7 +12,7 @@ export interface Props {
   /**
    * Indicates which number the step is.
    */
-  stepNumber?: number;
+  stepNumber: number;
   /**
    * Text that describes the step.
    */
@@ -43,19 +43,6 @@ export const HorizontalStep = ({
   text,
   variant,
 }: Props) => {
-  /**
-   * Warns developer if there is no valid number for the active step. This would mean there is no number in the circle.
-   */
-  if (
-    variant === 'active' &&
-    !(stepNumber > 0) &&
-    process.env.NODE_ENV !== 'production'
-  ) {
-    console.warn(
-      "Are you sure you don't want a step number for the active step?",
-    );
-  }
-
   /**
    * Determines which icon to display.
    */
