@@ -4,62 +4,37 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [0.13.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.12.0...v0.13.0) (2022-04-27)
 
-## [0.12.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.10.0...v0.12.0) (2022-04-27)
-
-
 ### ⚠ BREAKING CHANGES
-
-* **text, heading:** "color" prop renamed to "variant" and "alert" color renamed to "error"
-"info" color variant is deprecated, "yellow" color variant unused and removed
-"weight" and "spacing" props removed
-removed some "size" options
-
-* chore(text, heading): apply tw class in css module
-
-* fix: stylesheet classname spell fixes
-
-* chore(text, heading): update stories to match next
-
-* chore(text, heading): more prop updates
-
-* chore(text, heading): respond to comments
-
-* chore(text, heading): respond to comments
-
-* chore(heading): remove styling for size body and wrap where pseudoselector
-
-* chore(heading): add comment explaining where selector
-
-* chore(text): reduce specificity for text margin
-
-* **text, heading:** match text and heading apis to next ([#996](https://github.com/chanzuckerberg/edu-design-system/issues/996)) ([9313836](https://github.com/chanzuckerberg/edu-design-system/commit/9313836c1b5813024e86212cb186729c3f54c895))
-
-## [0.11.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.10.0...v0.11.0) (2022-04-26)
-
-### ⚠ BREAKING CHANGES
-
-#### **Heading** ([#996](https://github.com/chanzuckerberg/edu-design-system/issues/996))
-
-- renamed `color` prop to `variant`
-- deprecated `weight` and `spacing` props
-- deprecated `"info"` and `"yellow"` color variants
-- renamed `"alert"` color variant to `"error"`
-- removed default color variant (previously set to `"base"`)
-
-#### **Text** ([#996](https://github.com/chanzuckerberg/edu-design-system/issues/996))
-
-- renamed `color` prop to `variant`
-- deprecated `spacing` prop
-- deprecated heading-level `size` options
-- deprecated `"info"` and `"yellow"` color variants
-- renamed `"alert"` color variant to `"error"`
-- removed default color variant (previously set to `"base"`)
 
 #### **Icon** ([#986](https://github.com/chanzuckerberg/edu-design-system/issues/986))
 
 - renamed `block` prop to `fullWidth`
 - use `import {Icon} from '@chanzuckerberg/eds'` instead of individual icon components
   - ex: `<Icon name="warning" />` instead of `<WarningRoundedIcon />`
+
+## [0.12.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.10.0...v0.12.0) (2022-04-27)
+
+### ⚠ BREAKING CHANGES
+
+#### **Heading** ([#996](https://github.com/chanzuckerberg/edu-design-system/issues/996))
+
+- renamed `color` prop to `variant`
+- removed `weight` and `spacing` props (Headings should always be bold; style bottom margin through classnames instead)
+- removed non-heading level `size` options
+- deprecated `"info"` and `"yellow"` color variants (use "brand" or "neutral" instead)
+- renamed `"alert"` color variant to `"error"`
+- removed default color variant (previously set to `"base"`)
+
+#### **Text** ([#996](https://github.com/chanzuckerberg/edu-design-system/issues/996))
+
+- renamed `color` prop to `variant`
+- removed `spacing` prop (style bottom margin through classnames instead)
+- removed heading level `size` options; added `"lg"` size
+- deprecated `"info"` and `"yellow"` color variants (use "brand" or "neutral" instead)
+- renamed `"alert"` color variant to `"error"`
+- removed default color variant (previously set to `"base"`)
+
+## [0.11.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.10.0...v0.11.0) (2022-04-26)
 
 ## [0.10.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.9.2...v0.10.0) (2022-04-15)
 
