@@ -32,8 +32,6 @@ export interface Props {
  * ```
  */
 export const HorizontalStepper = ({ activeIndex, className, steps }: Props) => {
-  const line = <hr className={styles['horizontal-stepper__line']} />;
-
   /**
    * Creates a list of <HorizontalStep> components with lines in between.
    * 1) If it is not the first step, add a line to stepComponents.
@@ -43,7 +41,13 @@ export const HorizontalStepper = ({ activeIndex, className, steps }: Props) => {
   const stepComponents: React.ReactNode[] = [];
   steps.forEach((step, index) => {
     /* 1 */
-    if (index > 0) stepComponents.push(line);
+    if (index > 0)
+      stepComponents.push(
+        <hr
+          className={styles['horizontal-stepper__line']}
+          key={`horziontal-stepper__line-${index}`}
+        />,
+      );
 
     /* 2 */
     const stepVariant =
@@ -56,6 +60,7 @@ export const HorizontalStepper = ({ activeIndex, className, steps }: Props) => {
     /* 3 */
     stepComponents.push(
       <HorizontalStep
+        key={`horizontal-stepper__step-${index}`}
         stepNumber={index === activeIndex ? index + 1 : undefined}
         text={step}
         variant={stepVariant}
