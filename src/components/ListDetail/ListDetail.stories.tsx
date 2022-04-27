@@ -13,9 +13,9 @@ export default {
 
 const Template: Story<Props> = (args) => (
   <ListDetail {...args}>
-    <ListDetail.Panel title="ListDetail.Panel 1" variant="number">
+    <ListDetail.Panel title="ListDetailPanel 1" variant="number">
       <TextPassage>
-        <h3>ListDetail.Panel 1</h3>
+        <h3>ListDetailPanel 1</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -25,9 +25,9 @@ const Template: Story<Props> = (args) => (
       </TextPassage>
     </ListDetail.Panel>
 
-    <ListDetail.Panel title="ListDetail.Panel 2" variant="error">
+    <ListDetail.Panel title="ListDetailPanel 2" variant="error">
       <TextPassage>
-        <h3>ListDetail.Panel 2</h3>
+        <h3>ListDetailPanel 2</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -37,9 +37,9 @@ const Template: Story<Props> = (args) => (
       </TextPassage>
     </ListDetail.Panel>
 
-    <ListDetail.Panel title="ListDetail.Panel 3" variant="warning">
+    <ListDetail.Panel title="ListDetailPanel 3" variant="warning">
       <TextPassage>
-        <h3>ListDetail.Panel 3</h3>
+        <h3>ListDetailPanel 3</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -49,9 +49,9 @@ const Template: Story<Props> = (args) => (
       </TextPassage>
     </ListDetail.Panel>
 
-    <ListDetail.Panel title="ListDetail.Panel 4" variant="success">
+    <ListDetail.Panel title="ListDetailPanel 4" variant="success">
       <TextPassage>
-        <h3>ListDetail.Panel 4</h3>
+        <h3>ListDetailPanel 4</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -61,9 +61,9 @@ const Template: Story<Props> = (args) => (
       </TextPassage>
     </ListDetail.Panel>
 
-    <ListDetail.Panel title="ListDetail.Panel 5">
+    <ListDetail.Panel title="ListDetailPanel 5">
       <TextPassage>
-        <h3>ListDetail.Panel 5</h3>
+        <h3>ListDetailPanel 5</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
