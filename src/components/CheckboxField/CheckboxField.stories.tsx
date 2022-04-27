@@ -2,10 +2,12 @@ import { Story, Meta } from '@storybook/react';
 import React from 'react';
 
 import { CheckboxField, Props } from './CheckboxField';
+import CheckboxFieldItem from '../CheckboxFieldItem';
 
 export default {
   title: 'Molecules/Forms/CheckboxField',
   component: CheckboxField,
+  subcomponents: { CheckboxFieldItem },
 } as Meta;
 
 const Template: Story<Props> = (args) => (

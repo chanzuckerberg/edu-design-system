@@ -1,10 +1,14 @@
 import { Meta } from '@storybook/react';
 import React from 'react';
 import { Card } from './Card';
+import CardBody from '../CardBody';
+import CardFooter from '../CardFooter';
+import CardHeader from '../CardHeader';
 
 export default {
   title: 'Molecules/Blocks/Card',
   component: Card,
+  subcomponents: { CardHeader, CardBody, CardFooter },
 } as Meta;
 
 export const Default = () => (

@@ -2,10 +2,12 @@ import { Story, Meta } from '@storybook/react';
 import React from 'react';
 
 import { NotificationList, Props } from './NotificationList';
+import NotificationListItem from '../NotificationListItem';
 
 export default {
   title: 'Molecules/Lists/NotificationList',
   component: NotificationList,
+  subcomponents: { NotificationListItem },
 } as Meta;
 
 const Template: Story<Props> = (args) => (
