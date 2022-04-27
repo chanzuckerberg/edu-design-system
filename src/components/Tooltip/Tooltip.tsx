@@ -15,9 +15,9 @@ type TooltipProps = {
   /**
    * Behavior of the tooltip transition, defaults to an opacity "fade".
    * Animation guidelines are provided in https://atomiks.github.io/tippyjs/v5/animations/.
-   * A false value will disable animations.
+   * To disable animations, pass `duration={0}`.
    */
-  animation?: string | boolean;
+  animation?: string;
   /**
    * The trigger element the tooltip appears next to.
    */
@@ -37,6 +37,10 @@ type TooltipProps = {
    * https://atomiks.github.io/tippyjs/v6/all-props/#delay
    */
   delay?: number | [number | null, number | null];
+  /**
+   * Duration of Tooltip animation, in milliseconds. Default is 200.
+   */
+  duration?: number;
   /**
    * The trigger element the tooltip appears next to.
    *
@@ -83,6 +87,7 @@ export const Tooltip = ({
   variant = 'light',
   align = 'top',
   className,
+  duration = 200,
   text,
   ...rest
 }: TooltipProps) => {
@@ -122,7 +127,7 @@ export const Tooltip = ({
         variant === 'dark' && styles['tooltip--dark'],
       )}
       content={text}
-      duration={200}
+      duration={duration}
       placement={align}
       plugins={[hideOnEsc]}
     />
