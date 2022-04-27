@@ -2,6 +2,36 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.12.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.10.0...v0.12.0) (2022-04-27)
+
+
+### ⚠ BREAKING CHANGES
+
+* **text, heading:** "color" prop renamed to "variant" and "alert" color renamed to "error"
+"info" color variant is deprecated, "yellow" color variant unused and removed
+"weight" and "spacing" props removed
+removed some "size" options
+
+* chore(text, heading): apply tw class in css module
+
+* fix: stylesheet classname spell fixes
+
+* chore(text, heading): update stories to match next
+
+* chore(text, heading): more prop updates
+
+* chore(text, heading): respond to comments
+
+* chore(text, heading): respond to comments
+
+* chore(heading): remove styling for size body and wrap where pseudoselector
+
+* chore(heading): add comment explaining where selector
+
+* chore(text): reduce specificity for text margin
+
+* **text, heading:** match text and heading apis to next ([#996](https://github.com/chanzuckerberg/edu-design-system/issues/996)) ([9313836](https://github.com/chanzuckerberg/edu-design-system/commit/9313836c1b5813024e86212cb186729c3f54c895))
+
 ## [0.11.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.10.0...v0.11.0) (2022-04-26)
 
 ### ⚠ BREAKING CHANGES
