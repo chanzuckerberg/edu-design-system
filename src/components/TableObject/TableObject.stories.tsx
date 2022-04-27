@@ -6,6 +6,8 @@ import Table from '../Table';
 import TableBody from '../TableBody';
 import TableCell from '../TableCell';
 import TableHeader from '../TableHeader';
+import TableObjectBody from '../TableObjectBody';
+import TableObjectHeader from '../TableObjectHeader';
 import TableRow from '../TableRow';
 import Toolbar from '../Toolbar';
 import ToolbarItem from '../ToolbarItem';
@@ -13,6 +15,7 @@ import ToolbarItem from '../ToolbarItem';
 export default {
   title: 'Organisms/Tables/Table Object',
   component: TableObject,
+  subcomponents: { TableObjectBody, TableObjectHeader },
 } as Meta;
 
 const Template: Story<Props> = (args) => (

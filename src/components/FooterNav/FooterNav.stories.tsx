@@ -2,10 +2,12 @@ import { Story, Meta } from '@storybook/react';
 import React from 'react';
 
 import { FooterNav, Props } from './FooterNav';
+import FooterNavItem from '../FooterNavItem';
 
 export default {
   title: 'Molecules/Navigation/FooterNav',
   component: FooterNav,
+  subcomponents: { FooterNavItem },
 } as Meta;
 
 const Template: Story<Props> = (args) => (
