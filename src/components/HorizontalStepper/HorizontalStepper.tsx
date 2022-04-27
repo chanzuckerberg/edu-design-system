@@ -5,7 +5,7 @@ import HorizontalStep from '../HorizontalStep';
 
 export interface Props {
   /**
-   * Identifies which index is the active step.
+   * Zero-based index that identifies which index is the active step.
    */
   activeIndex: number;
   /**
@@ -32,6 +32,15 @@ export interface Props {
  * ```
  */
 export const HorizontalStepper = ({ activeIndex, className, steps }: Props) => {
+  if (
+    process.env.NODE_ENV !== 'production' &&
+    !(activeIndex >= 0 && activeIndex <= steps.length)
+  ) {
+    console.warn(
+      'The active index is an invalid index relative to the number of steps.',
+    );
+  }
+
   /**
    * Creates a list of <HorizontalStep> components with lines in between.
    * 1) If it is not the first step, add a line to stepComponents.
@@ -61,7 +70,7 @@ export const HorizontalStepper = ({ activeIndex, className, steps }: Props) => {
     stepComponents.push(
       <HorizontalStep
         key={`horizontal-stepper__step-${index}`}
-        stepNumber={index === activeIndex ? index + 1 : undefined}
+        stepNumber={index + 1}
         text={step}
         variant={stepVariant}
       />,
