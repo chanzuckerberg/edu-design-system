@@ -1,5 +1,5 @@
 /*------------------------------------*\
-    #HORIZONTAL STEP
+    # HORIZONTAL STEP
 \*------------------------------------*/
 
 /**
@@ -25,14 +25,14 @@
 }
 
 /**
- * Horizontal Step check circle icon
+ * Horizontal Step Complete
  */
 .horizontal-step__complete-icon {
   fill: var(--eds-theme-color-icon-utility-success);
 }
 
 /**
- * Horizontal Step dot icon
+ * Horizontal Step Incomplete
  */
 .horizontal-step__incomplete-icon {
   margin-left: var(--eds-size-1);
@@ -41,7 +41,7 @@
 }
 
 /**
-* Horizontal Step number icon
+* Horizontal Step Number
 * 1) Centers the number text in the circle.
 * 2) The circle part of the icon, made with borders and equal height and width.
 */

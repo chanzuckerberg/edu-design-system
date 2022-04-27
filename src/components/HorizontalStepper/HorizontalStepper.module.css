@@ -3,7 +3,7 @@
 \*------------------------------------*/
 
 /**
- * Horizontal Stepper wraps the stepper and adds lines between steps.
+ * Horizontal Stepper wraps multiple HorizontalStep instances and adds lines between steps.
  */
 .horizontal-stepper {
   display: flex;
