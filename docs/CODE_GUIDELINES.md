@@ -481,6 +481,38 @@ EDS adheres to the following API naming conventions:
 
 # Accessibility <a name="accessibility"></a>
 
+## Generating IDs
+
+ID attributes used for accessibility (e.g. associating `<label>` and `<input>` elements) should be unique and stable.
+
+We currently use [react-uid](https://www.npmjs.com/package/react-uid) hooks for ID generation. To ensure stable results, they cannot be invoked within conditionals or callbacks.
+
+- `useUID()` is the most common usage.
+
+```tsx
+const generatedId = useUID();
+```
+
+- `useUIDSeed()` generates a stable seed generator for use in iterators.
+
+```tsx
+const getUID = useUIDSeed();
+// you should either pass an object to getUID:
+items.forEach((item) => {
+  const generatedId = getUID(item);
+});
+
+// or pass a constructed string:
+items.forEach((item, index) => {
+  const generatedId = getUID(`item-${index}-aria-labelledby`);
+});
+
+// interpolating an object into a string will NOT work:
+// items.forEach((item) => {
+//   const generatedId = getUID(`${item}-id`);
+// });
+```
+
 ## Tools
 
 - [eslint-plugin-jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y) evaluates static code for a11y issues. Currently this plugin is configured with the "recommended" settings, which generate linting errors for most rule violations. See [this chart](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y#rule-strictness-in-different-modes) for descriptions of each rule.

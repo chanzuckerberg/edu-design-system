@@ -217,9 +217,10 @@ export const FileUploadField = ({
     }
   }
 
-  function onFileInputChange(e, uidSeed) {
+  function onFileInputChange(e, getUID) {
     const fileObjects = e.target.files;
     if (!fileObjects) return;
+    const fileArray = Array.from(fileObjects);
 
     /*
      * 1. Copy existing files from state to a new variable
@@ -234,14 +235,14 @@ export const FileUploadField = ({
     let isError;
 
     /* 2 */
-    fileObjects.forEach((file) => {
+    fileArray.forEach((file: File) => {
       if (maxFileSize && file.size >= maxFileSize) {
         setFieldNoteState(maxFileSizeErrorText);
         setIsErrorState(true);
       } else {
         files.push({
           fileObject: file,
-          id: uidSeed(file),
+          id: getUID(file),
         });
         setIsErrorState(isError);
       }
@@ -291,8 +292,7 @@ export const FileUploadField = ({
   }
 
   const isDisabled = disabled || (filesState && filesState >= maxFiles);
-  // useUIDSeed() generates a stable seed generator for use in iterators.
-  const uidSeed = useUIDSeed();
+  const getUID = useUIDSeed();
 
   const componentClassName = clsx(
     styles['file-upload-field'],
@@ -337,7 +337,7 @@ export const FileUploadField = ({
             isError={isError}
             multiple={multiple}
             name={name}
-            onChange={(e) => onFileInputChange(e, uidSeed)}
+            onChange={(e) => onFileInputChange(e, getUID)}
             placeholder={placeholder}
             readOnly={readOnly}
             required={required}
