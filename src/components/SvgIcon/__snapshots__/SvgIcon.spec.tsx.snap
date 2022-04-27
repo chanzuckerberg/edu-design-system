@@ -1,0 +1,147 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SvgIcon /> CustomColor story renders snapshot 1`] = `
+<svg
+  aria-hidden="true"
+  class="svgIcon"
+  fill="#928CFF"
+  viewBox="0 0 24 24"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"
+  />
+</svg>
+`;
+
+exports[`<SvgIcon /> CustomViewBox story renders snapshot 1`] = `
+<svg
+  aria-hidden="true"
+  class="svgIcon"
+  fill="currentColor"
+  viewBox="4 4 16 16"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"
+  />
+</svg>
+`;
+
+exports[`<SvgIcon /> FullScreen story renders snapshot 1`] = `
+<svg
+  aria-hidden="true"
+  class="svgIcon"
+  fill="currentColor"
+  height="min(100%, 100vh)"
+  style="--svg-icon-size: min(100%, 100vh);"
+  viewBox="0 0 24 24"
+  width="min(100%, 100vh)"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"
+  />
+</svg>
+`;
+
+exports[`<SvgIcon /> InText story renders snapshot 1`] = `
+<h1
+  class="heading heading--size-h1"
+>
+  The svg icon defaults to the surrounding text size (
+  <svg
+    class="svgIcon"
+    fill="currentColor"
+    role="img"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      icon with 1em line height
+    </title>
+    <path
+      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"
+    />
+  </svg>
+  , 1em), but often looks better with the line height (
+  <svg
+    class="svgIcon"
+    fill="currentColor"
+    height="2rem"
+    role="img"
+    style="--svg-icon-size: 2rem;"
+    viewBox="0 0 24 24"
+    width="2rem"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      icon with 2em line height
+    </title>
+    <path
+      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"
+    />
+  </svg>
+  , 2rem) which is harder to determine. Take a look at the icons available in
+   
+  <a
+    href="https://material-ui.com/components/material-icons/"
+    rel="noreferrer"
+    target="_blank"
+  >
+    https://material-ui.com/components/material-icons/
+  </a>
+  , currently we only support the filled icons.
+</h1>
+`;
+
+exports[`<SvgIcon /> Large story renders snapshot 1`] = `
+<svg
+  aria-hidden="true"
+  class="svgIcon"
+  fill="currentColor"
+  height="4em"
+  style="--svg-icon-size: 4em;"
+  viewBox="0 0 24 24"
+  width="4em"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"
+  />
+</svg>
+`;
+
+exports[`<SvgIcon /> Medium story renders snapshot 1`] = `
+<svg
+  aria-hidden="true"
+  class="svgIcon"
+  fill="currentColor"
+  height="2em"
+  style="--svg-icon-size: 2em;"
+  viewBox="0 0 24 24"
+  width="2em"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"
+  />
+</svg>
+`;
+
+exports[`<SvgIcon /> Small story renders snapshot 1`] = `
+<svg
+  aria-hidden="true"
+  class="svgIcon"
+  fill="currentColor"
+  height="1em"
+  style="--svg-icon-size: 1em;"
+  viewBox="0 0 24 24"
+  width="1em"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"
+  />
+</svg>
+`;

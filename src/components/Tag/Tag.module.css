@@ -5,7 +5,7 @@
    * TODO: (dcwither) when adding SvgIcon to EDS, include this in tailwind font 
    * size macro.
    */
-  --icon-size-default: 1.25rem;
+  --svg-icon-size-default: 1.25rem;
 
   background-color: var(--tag-secondary-color);
   border-color: var(--tag-secondary-color);
