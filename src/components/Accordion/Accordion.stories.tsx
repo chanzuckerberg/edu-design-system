@@ -2,12 +2,14 @@ import { Story, Meta } from '@storybook/react';
 import React from 'react';
 
 import { Accordion, Props } from './Accordion';
+import AccordionPanel from '../AccordionPanel';
 import Heading from '../Heading';
 import TextPassage from '../TextPassage';
 
 export default {
   title: 'Organisms/Interactive/Accordion',
   component: Accordion,
+  subcomponents: { AccordionPanel },
 } as Meta;
 
 const Template: Story<Props> = (args) => (

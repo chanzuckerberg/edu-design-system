@@ -2,10 +2,12 @@ import { Story, Meta } from '@storybook/react';
 import React from 'react';
 
 import { Toolbar, Props } from './Toolbar';
+import ToolbarItem from '../ToolbarItem';
 
 export default {
   title: 'Organisms/Toolbars/Toolbar',
   component: Toolbar,
+  subcomponents: { ToolbarItem },
 } as Meta;
 
 const Template: Story<Props> = (args) => (

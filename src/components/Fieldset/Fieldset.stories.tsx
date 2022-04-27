@@ -3,12 +3,14 @@ import React from 'react';
 import { Fieldset } from './Fieldset';
 import Checkbox from '../Checkbox';
 import { Default as CheckboxFieldStory } from '../CheckboxField/CheckboxField.stories';
-import type { FieldsetLegendProps } from '../FieldsetLegend';
+import FieldsetItems from '../FieldsetItems';
+import FieldsetLegend, { FieldsetLegendProps } from '../FieldsetLegend';
 import { Default as RadioFieldStory } from '../RadioField/RadioField.stories';
 
 export default {
   title: 'Atoms/Forms/Fieldset',
   component: Fieldset,
+  subcomponents: { FieldsetLegend, FieldsetItems },
 };
 
 type Args = React.ComponentProps<typeof Fieldset>;

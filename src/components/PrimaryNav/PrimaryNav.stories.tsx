@@ -2,10 +2,12 @@ import { Story, Meta } from '@storybook/react';
 import React from 'react';
 
 import { PrimaryNav, Props } from './PrimaryNav';
+import PrimaryNavItem from '../PrimaryNavItem';
 
 export default {
   title: 'Molecules/Navigation/PrimaryNav',
   component: PrimaryNav,
+  subcomponents: { PrimaryNavItem },
 } as Meta;
 
 const Template: Story<Props> = (args) => (
