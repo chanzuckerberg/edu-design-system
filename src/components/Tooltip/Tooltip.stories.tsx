@@ -4,8 +4,6 @@ import { within, userEvent } from '@storybook/testing-library';
 import clsx from 'clsx';
 import React from 'react';
 import { Tooltip } from './Tooltip';
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore story files not type-checked
 import styles from './Tooltip.stories.module.css';
 import { Button } from '../Button/Button';
 
@@ -23,6 +21,9 @@ const defaultArgs = {
     </Button>
   ),
   align: 'right',
+  // most stories show a visible, non-interactive tooltip.
+  // this turns animation off to ensure stable visual snapshots
+  duration: 0,
   visible: true,
 };
 
@@ -124,14 +125,12 @@ export const LongButtonText: StoryObj<Args> = {
       </Button>
     ),
   },
-  parameters: {
-    // Is flaky on chromatic, disabling for now
-    chromatic: { disableSnapshot: true },
-  },
 };
 
 export const Interactive: StoryObj<Args> = {
   args: {
+    // reset prop values defined in defaultArgs
+    duration: undefined,
     visible: undefined,
     children: (
       <Button className={clsx(styles['trigger--spacing'])} variant="primary">

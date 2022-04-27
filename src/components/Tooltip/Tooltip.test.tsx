@@ -19,8 +19,8 @@ describe('<Tooltip />', () => {
   });
 
   it('should close tooltip via escape key', async () => {
-    // Test fails if animation is enabled https://github.com/atomiks/tippyjs-react/blob/master/test/Tippy.test.js#L65
-    render(<Interactive animation={false} />);
+    // disable animation for test
+    render(<Interactive duration={0} />);
     const trigger = await screen.findByRole('button');
     expect(screen.queryByTestId('tooltip-content')).not.toBeInTheDocument();
     await userEvent.hover(trigger);
