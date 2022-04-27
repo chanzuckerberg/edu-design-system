@@ -54,7 +54,7 @@ export const HorizontalStepper = ({ activeIndex, className, steps }: Props) => {
       stepComponents.push(
         <hr
           className={styles['horizontal-stepper__line']}
-          key={`horziontal-stepper__line-${index}`}
+          key={`horizontal-stepper__line-${index}`}
         />,
       );
 
