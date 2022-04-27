@@ -59,7 +59,12 @@ export const HorizontalStep = ({
         {stepNumber}
       </Text>
     ) : (
-      <Icon color="#C4C4C4" name="circle" purpose="decorative" size="0.5rem" />
+      <Icon
+        className={styles['horizontal-step__incomplete-icon']}
+        name="circle"
+        purpose="decorative"
+        size="0.5rem"
+      />
     );
 
   const componentClassName = clsx(

@@ -2,16 +2,81 @@ import { StoryObj } from '@storybook/react';
 import React from 'react';
 
 import { HorizontalStepper } from './HorizontalStepper';
+import Button from '../Button';
+import ButtonGroup from '../ButtonGroup';
 import HorizontalStep from '../HorizontalStep';
+import Icon from '../Icon';
 
 export default {
   title: 'Molecules/Lists/HorizontalStepper',
   component: HorizontalStepper,
-};
+  args: {
+    steps: ['Step 1', 'Step 2', 'Step 3', 'Step 4', 'Step 5'],
+    activeIndex: 0,
+  },
+  decorators: [
+    (Story) => (
+      <div
+        style={{
+          margin: '1rem', // Pushes contents away from storybook borders.
+        }}
+      >
+        <Story />
+      </div>
+    ),
+  ],
+} as Meta<Args>;
 
 type Args = React.ComponentProps<typeof HorizontalStepper>;
 
-// export const Default: StoryObj<Args> = {};
+export const OnFirstStep: StoryObj<Args> = {};
+
+export const SomeCompletedSteps: StoryObj<Args> = {
+  args: {
+    activeIndex: 2,
+  },
+};
+
+export const OnLastStep: StoryObj<Args> = {
+  args: {
+    activeIndex: 5,
+  },
+};
+
+const InteractiveHorizontalStepper = () => {
+  const [activeIndex, setActiveIndex] = React.useState(0);
+  const steps = ['Add classroom details', 'Add projects', 'Create course plan'];
+  const onClickBack = () => {
+    if (activeIndex > 0) setActiveIndex(activeIndex - 1);
+  };
+  const onClickNext = () => {
+    if (activeIndex < steps.length) setActiveIndex(activeIndex + 1);
+  };
+  return (
+    <>
+      <HorizontalStepper activeIndex={activeIndex} steps={steps} />
+      <br />
+      <ButtonGroup>
+        <Button onClick={onClickBack} variant="secondary">
+          Back
+        </Button>
+        <Button onClick={onClickNext} variant="primary">
+          Next
+          <Icon name="arrow-forward" purpose="decorative" size="1.5rem" />
+        </Button>
+      </ButtonGroup>
+    </>
+  );
+};
+export const Interactive: StoryObj<Args> = {
+  render: () => <InteractiveHorizontalStepper />,
+  parameters: {
+    // For interactive use, low value in snap testing again since already covered in other stories.
+    chromatic: { disableSnapshot: true },
+    snapshot: { skip: true },
+  },
+};
+
 export const HorizontalSteps: StoryObj<Args> = {
   render: () => (
     <>

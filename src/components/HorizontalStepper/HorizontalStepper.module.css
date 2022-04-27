@@ -1,5 +1,3 @@
-@import '../../design-tokens/mixins.css';
-
 /*------------------------------------*\
     # HORIZONTAL STEPPER
 \*------------------------------------*/
@@ -9,4 +7,15 @@
  */
 .horizontal-stepper {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.horizontal-stepper__line {
+  border: var(--eds-theme-border-width) solid
+    var(--eds-theme-color-border-neutral-default);
+  flex-grow: 1;
+  margin-left: var(--eds-size-1);
+  margin-right: var(--eds-size-1);
 }
