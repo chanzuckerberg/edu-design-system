@@ -111,10 +111,9 @@ export const ListDetail = ({
   const listDetailItemRefs = listDetailItems().map(() => React.createRef());
 
   // we can't use the hook in an iterator like this, so generate the base and increment if needed
-  const [idVar, setId] = useState([]);
-  const [ariaLabelledByVar, setAriaLabelledBy] = useState([]);
-  // useUIDSeed() generates a stable seed generator for use in iterators.
-  const uidSeed = useUIDSeed();
+  const [idVar, setId] = useState<string[]>([]);
+  const [ariaLabelledByVar, setAriaLabelledBy] = useState<string[]>([]);
+  const getUID = useUIDSeed();
 
   /**
    * Get previous prop
@@ -150,17 +149,15 @@ export const ListDetail = ({
   useEffect(() => {
     setId(
       listDetailItems().map((item) =>
-        item.props.id ? item.props.id : uidSeed(`${item}-id`),
+        item.props.id ? item.props.id : getUID(item),
       ),
     );
     setAriaLabelledBy(
       listDetailItems().map((item) =>
-        item.props.ariaLabelledBy
-          ? item.props.ariaLabelledBy
-          : uidSeed(`${item}-aria-labelledby`),
+        item.props.ariaLabelledBy ? item.props.ariaLabelledBy : getUID(item),
       ),
     );
-  }, [listDetailItems, uidSeed]);
+  }, [listDetailItems, getUID]);
 
   /**
    * On open
