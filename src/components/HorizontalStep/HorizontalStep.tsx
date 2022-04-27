@@ -31,7 +31,6 @@ export const HorizontalStep = ({
   stepNumber,
   text,
   variant,
-  ...other
 }: Props) => {
   if (
     variant === 'active' &&
@@ -73,7 +72,7 @@ export const HorizontalStep = ({
     className,
   );
   return (
-    <div className={componentClassName} {...other}>
+    <div className={componentClassName}>
       {icon}
       <Text as="span" size="sm" variant="inherit" weight="bold">
         {text}

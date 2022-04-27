@@ -3,7 +3,7 @@
 \*------------------------------------*/
 
 /**
- * 1) 
+ * Horizontal Stepper wraps the stepper and adds lines between steps.
  */
 .horizontal-stepper {
   display: flex;
@@ -12,10 +12,15 @@
   width: 100%;
 }
 
+/**
+ * The decorative line between steps.
+ * 1) Used to grow and shrink lines before wrapping step text.
+ */
 .horizontal-stepper__line {
   border: var(--eds-theme-border-width) solid
     var(--eds-theme-color-border-neutral-default);
-  flex-grow: 1;
   margin-left: var(--eds-size-1);
   margin-right: var(--eds-size-1);
+
+  flex-grow: 1; /* 1 */
 }

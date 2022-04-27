@@ -11,8 +11,8 @@ export default {
   title: 'Molecules/Lists/HorizontalStepper',
   component: HorizontalStepper,
   args: {
-    steps: ['Step 1', 'Step 2', 'Step 3', 'Step 4', 'Step 5'],
     activeIndex: 0,
+    steps: ['Step 1', 'Step 2', 'Step 3', 'Step 4', 'Step 5'],
   },
   decorators: [
     (Story) => (
@@ -39,13 +39,18 @@ export const SomeCompletedSteps: StoryObj<Args> = {
 
 export const OnLastStep: StoryObj<Args> = {
   args: {
+    activeIndex: 4,
+  },
+};
+
+export const CompletedAllSteps: StoryObj<Args> = {
+  args: {
     activeIndex: 5,
   },
 };
 
-const InteractiveHorizontalStepper = () => {
+const InteractiveHorizontalStepper = ({ steps }) => {
   const [activeIndex, setActiveIndex] = React.useState(0);
-  const steps = ['Add classroom details', 'Add projects', 'Create course plan'];
   const onClickBack = () => {
     if (activeIndex > 0) setActiveIndex(activeIndex - 1);
   };
@@ -69,7 +74,10 @@ const InteractiveHorizontalStepper = () => {
   );
 };
 export const Interactive: StoryObj<Args> = {
-  render: () => <InteractiveHorizontalStepper />,
+  args: {
+    steps: ['Add classroom details', 'Add projects', 'Create course plan'],
+  },
+  render: (args) => <InteractiveHorizontalStepper {...args} />,
   parameters: {
     // For interactive use, low value in snap testing again since already covered in other stories.
     chromatic: { disableSnapshot: true },

@@ -5,6 +5,10 @@ import HorizontalStep from '../HorizontalStep';
 
 export interface Props {
   /**
+   * Identifies which index is the active step.
+   */
+  activeIndex: number;
+  /**
    * CSS class names that can be appended to the component.
    */
   className?: string;
@@ -12,43 +16,53 @@ export interface Props {
    * Ordered list of step texts.
    */
   steps: string[];
-  /**
-   * Identifies which step is the active step.
-   */
-  activeIndex: number;
 }
 
 /**
- * Primary UI component for user interaction
+ * ```ts
+ * import {HorizontalStepper} from "@chanzuckerberg/eds";
+ * ```
+ *
+ * A stepper component used to display which steps have been completed, the current active step, and possible remaining steps.
+ *
+ * Example usage:
+ *
+ * ```tsx
+ * <HorizontalStepper activeIndex={0} steps={['Step 1', 'Step 2', 'Step 3']} />
+ * ```
  */
-export const HorizontalStepper = ({
-  activeIndex,
-  className,
-  steps,
-  ...other
-}: Props) => {
+export const HorizontalStepper = ({ activeIndex, className, steps }: Props) => {
   const line = <hr className={styles['horizontal-stepper__line']} />;
-  const stepComponents = steps.reduce((previousValue, step, index) => {
-    if (index > 0 && index < steps.length) previousValue.push(line);
+
+  /**
+   * Creates a list of <HorizontalStep> components with lines in between.
+   * 1) If it is not the first step, add a line to stepComponents.
+   * 2) Figure out what variant of step according to the activeIndex.
+   * 3) Add step to stepComponents.
+   */
+  const stepComponents: React.ReactNode[] = [];
+  steps.forEach((step, index) => {
+    /* 1 */
+    if (index > 0) stepComponents.push(line);
+
+    /* 2 */
     const stepVariant =
       index < activeIndex
         ? 'complete'
         : index === activeIndex
         ? 'active'
         : 'incomplete';
-    previousValue.push(
+
+    /* 3 */
+    stepComponents.push(
       <HorizontalStep
         stepNumber={index === activeIndex ? index + 1 : undefined}
         text={step}
         variant={stepVariant}
       />,
     );
-    return previousValue;
-  }, []);
+  });
   const componentClassName = clsx(styles['horizontal-stepper'], className);
-  return (
-    <div className={componentClassName} {...other}>
-      {stepComponents}
-    </div>
-  );
+
+  return <div className={componentClassName}>{stepComponents}</div>;
 };
