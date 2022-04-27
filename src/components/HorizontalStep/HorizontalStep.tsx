@@ -24,7 +24,18 @@ export interface Props {
 }
 
 /**
- * Primary UI component for user interaction
+ * ```ts
+ * import {HorizontalStep} from "@chanzuckerberg/eds";
+ * ```
+ *
+ * A step sub component for the <HorizontalStepper>.
+ * Determines which icon to use and places the text next to it.
+ *
+ * Example usage:
+ *
+ * ```tsx
+ * <HorizontalStep stepNumber={1} text="Step 1"  variant="incomplete" />
+ * ```
  */
 export const HorizontalStep = ({
   className,
@@ -32,6 +43,9 @@ export const HorizontalStep = ({
   text,
   variant,
 }: Props) => {
+  /**
+   * Warns developer if there is no valid number for the active step. This would mean there is no number in the circle.
+   */
   if (
     variant === 'active' &&
     !(stepNumber > 0) &&
@@ -41,6 +55,10 @@ export const HorizontalStep = ({
       "Are you sure you don't want a step number for the active step?",
     );
   }
+
+  /**
+   * Determines which icon to display.
+   */
   const icon =
     variant === 'complete' ? (
       <Icon
