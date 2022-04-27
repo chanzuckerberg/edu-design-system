@@ -11,6 +11,6 @@ type Args = React.ComponentProps<typeof DropdownButton>;
 
 export const Default: StoryObj<Args> = {
   args: {
-    children: "Dropdown button",
+    text: "Dropdown button",
   },
 };

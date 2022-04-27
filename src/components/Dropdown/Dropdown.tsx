@@ -390,9 +390,8 @@ const DropdownTrigger = function (
       ) : (
         <DropdownButton
           className={clsx(className, compact && styles.compactDropdownButton)}
-        >
-          {children}
-        </DropdownButton>
+          text={children}
+        />
       )}
     </Listbox.Button>
   );
