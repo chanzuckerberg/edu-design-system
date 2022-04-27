@@ -2,11 +2,13 @@ import { Story, Meta } from '@storybook/react';
 import React from 'react';
 
 import { ListDetail, Props } from './ListDetail';
+import ListDetailPanel from '../ListDetailPanel';
 import TextPassage from '../TextPassage';
 
 export default {
   title: 'Example/ListDetail',
   component: ListDetail,
+  subcomponents: { ListDetailPanel },
 } as Meta;
 
 const Template: Story<Props> = (args) => (
