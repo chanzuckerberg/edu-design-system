@@ -1,3 +1,6 @@
+const path = require("path");
+const SVGSpritemapPlugin = require("svg-spritemap-webpack-plugin");
+
 module.exports = {
   stories: ["../docs", "../src"],
   addons: [
@@ -15,4 +18,19 @@ module.exports = {
       },
     },
   ],
+  webpackFinal: async (config) => {
+    const SVGSpritesPlugin = new SVGSpritemapPlugin(
+      path.resolve(__dirname, "../src/icons/**/*.svg"),
+      {
+        sprite: {
+          prefix: false,
+          generate: {
+            symbol: true,
+          },
+        },
+      },
+    );
+    config.plugins.push(SVGSpritesPlugin);
+    return config;
+  },
 };
