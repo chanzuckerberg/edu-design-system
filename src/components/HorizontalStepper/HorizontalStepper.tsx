@@ -83,5 +83,5 @@ export const HorizontalStepper = ({ activeIndex, className, steps }: Props) => {
   });
   const componentClassName = clsx(styles['horizontal-stepper'], className);
 
-  return <div className={componentClassName}>{stepComponents}</div>;
+  return <ol className={componentClassName}>{stepComponents}</ol>;
 };
