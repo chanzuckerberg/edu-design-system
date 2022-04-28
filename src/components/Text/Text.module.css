@@ -3,10 +3,9 @@
 \*------------------------------------ */
 
 /**
- * 1) Needs `:where` pseudoclass to reduce specificity so Tailwind and other class overrides 
- *    for margin can happen where used.
+ * 1) Removes default browser spacing.
  */
-:where(.text) { /* 1 */
+.text { /* 1 */
   @apply mb-0;
 }
 
@@ -83,4 +82,19 @@
 
 .text--bold-weight {
   @apply font-bold;
+}
+
+/**
+ * Spacing
+ */
+.text--half-spacing {
+  @apply mb-1;
+}
+
+.text--1x-spacing {
+  @apply mb-2;
+}
+
+.text--2x-spacing {
+  @apply mb-4;
 }

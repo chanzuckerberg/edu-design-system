@@ -12,6 +12,11 @@ All notable changes to this project will be documented in this file. See [standa
 - use `import {Icon} from '@chanzuckerberg/eds'` instead of individual icon components
   - ex: `<Icon name="warning" />` instead of `<WarningRoundedIcon />`
 
+### [0.12.1](https://github.com/chanzuckerberg/edu-design-system/compare/v0.12.0...v0.12.1) (2022-04-28)
+
+
+* chore(text): reintroduce spacing variant in Text
+
 ## [0.12.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.10.0...v0.12.0) (2022-04-27)
 
 ### ⚠ BREAKING CHANGES
