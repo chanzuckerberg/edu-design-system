@@ -64,6 +64,14 @@ exports[`<Text /> Overline story renders snapshot 1`] = `
 </p>
 `;
 
+exports[`<Text /> Spacing story renders snapshot 1`] = `
+<p
+  class="border text text--body text--half-spacing"
+>
+  Spacing Half
+</p>
+`;
+
 exports[`<Text /> TextVariantInherit story renders snapshot 1`] = `
 <p
   class="text text--body text--error"

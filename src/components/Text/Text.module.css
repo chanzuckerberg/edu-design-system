@@ -3,8 +3,7 @@
 \*------------------------------------ */
 
 /**
- * 1) Needs `:where` pseudoclass to reduce specificity so Tailwind and other class overrides 
- *    for margin can happen where used.
+ * 1) Removes default browser spacing.
  */
 .text { /* 1 */
   @apply mb-0;
