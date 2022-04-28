@@ -110,12 +110,9 @@ const variantToIconAssetsMap: {
  * ```tsx
  * <Banner
  *   onDismiss={handleDismiss}
- *   text={
- *     <>
- *       <BannerTitle>Some title</Banner.Title>
- *       <BannerDescription>Some description</Banner.Description>
- *     </>
- *   }
+ *   title="Some title"
+ *   description="Some description"
+ *   action={<Button>Some action</Button>}
  * />
  * ```
  */
