@@ -79,6 +79,23 @@ export const Overline: StoryObj<Args> = {
   },
 };
 
+export const Spacing: StoryObj<Args> = {
+  render: () => (
+    <div>
+      <Text className="border" spacing="half">
+        Spacing Half
+      </Text>
+      <Text className="border" spacing="1x">
+        Spacing 1x
+      </Text>
+      <Text className="border" spacing="2x">
+        Spacing 2x
+      </Text>
+      <Text className="border">Bottom text to show spacing for spacing 2x</Text>
+    </div>
+  ),
+};
+
 /**
  * 1) Used mainly for visual regression testing and to show the different color options available.
  * 2) Has problems with snapshots since it has too many components and other stories generate enough confidence for our needs.
