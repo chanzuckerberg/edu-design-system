@@ -81,7 +81,7 @@ export const Overline: StoryObj<Args> = {
 
 export const Spacing: StoryObj<Args> = {
   render: () => (
-    <>
+    <div>
       <Text className="border" spacing="half">
         Spacing Half
       </Text>
@@ -92,7 +92,7 @@ export const Spacing: StoryObj<Args> = {
         Spacing 2x
       </Text>
       <Text className="border">Bottom text to show spacing for spacing 2x</Text>
-    </>
+    </div>
   ),
 };
 
