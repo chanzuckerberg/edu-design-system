@@ -3,9 +3,9 @@ import React from "react";
 import Heading from "../Heading";
 import Text from "../Text";
 import {
-  colors,
+  statuses,
   getStandardSet,
-  getPlainRecommendedVariants,
+  geIconRecommendedVariants,
   getLinkRecommendedVariants,
   getDestructiveRecommendedVariants,
   getAllRecommendedVariants,
@@ -23,17 +23,17 @@ export default {
         type: "text",
       },
     },
-    color: {
+    status: {
       control: {
         type: "radio",
-        options: colors,
+        options: statuses,
       },
     },
   },
   args: {
     children: "Link",
     variant: "link" as const,
-    color: "brand" as const,
+    status: "brand" as const,
     href: "https://go.czi.team/eds",
     onClick: (event: React.MouseEvent<HTMLElement>) => {
       // Allows the user to click the links for testing without being navigated away.
@@ -65,19 +65,19 @@ export const LinkInHeading: StoryObj<Args> = {
 };
 
 export const PrimaryRecommendedVariants = {
-  render: () => getStandardSet(Link, "Link", "flat"),
+  render: () => getStandardSet(Link, "Link", "primary"),
 };
 
 export const SecondaryRecommendedVariants = {
-  render: () => getStandardSet(Link, "Link", "outline"),
+  render: () => getStandardSet(Link, "Link", "secondary"),
 };
 
 export const TertiaryRecommendedVariants = {
-  render: () => getStandardSet(Link, "Link", "outline", "neutral"),
+  render: () => getStandardSet(Link, "Link", "secondary", "neutral"),
 };
 
 export const PlainRecommendedVariants = {
-  render: () => getPlainRecommendedVariants(Link, "Link"),
+  render: () => geIconRecommendedVariants(Link, "Link"),
 };
 
 export const LinkRecommendedVariants = {

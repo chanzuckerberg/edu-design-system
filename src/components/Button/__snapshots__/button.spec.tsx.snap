@@ -548,7 +548,7 @@ exports[`<Button /> AllRecommendedVariants story renders snapshot 1`] = `
 
 exports[`<Button /> Default story renders snapshot 1`] = `
 <button
-  class="button sizeLarge variantFlat colorBrand"
+  class="button sizeLarge variantOutline colorBrand"
   type="button"
 >
   Button
@@ -1041,7 +1041,7 @@ exports[`<Button /> TertiaryRecommendedVariants story renders snapshot 1`] = `
 
 exports[`<Button /> passes class names down properly 1`] = `
 <button
-  class="exampleClassName button sizeLarge variantFlat colorBrand"
+  class="exampleClassName button sizeLarge variantOutline colorBrand"
   data-testid="example-class-name"
   type="button"
 >
@@ -1051,7 +1051,7 @@ exports[`<Button /> passes class names down properly 1`] = `
 
 exports[`<Button /> passes test ids down properly 1`] = `
 <button
-  class="button sizeLarge variantFlat colorBrand"
+  class="button sizeLarge variantOutline colorBrand"
   data-testid="example-test-id"
   type="button"
 >

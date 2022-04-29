@@ -29,11 +29,7 @@ type Args = React.ComponentProps<typeof Banner> & {
   heading: string;
 };
 
-const action = (
-  <Button style={{ whiteSpace: "nowrap" }} variant="outline">
-    See updates
-  </Button>
-);
+const action = <Button style={{ whiteSpace: "nowrap" }}>See updates</Button>;
 
 export const Brand: StoryObj<Args> = {
   render: (args) => {

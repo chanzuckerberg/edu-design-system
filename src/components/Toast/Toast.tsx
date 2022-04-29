@@ -46,6 +46,10 @@ export default function Toast({
   // Allow for additional attributes such as aria roles
   ...rest
 }: Props) {
+  // While the v0 to v1 migration is happening, the Button and Toast will briefly
+  // be out of sync regarding the name of the red component style.
+  const buttonStatus = color === "alert" ? "error" : color;
+
   return (
     <div
       className={clsx(
@@ -63,7 +67,7 @@ export default function Toast({
         </Text>
       </div>
       {onDismiss && (
-        <Button color={color} onClick={onDismiss} variant="plain">
+        <Button onClick={onDismiss} status={buttonStatus} variant="icon">
           <Icon
             name="close"
             purpose="informative"

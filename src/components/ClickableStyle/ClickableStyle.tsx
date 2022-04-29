@@ -10,11 +10,11 @@ export type ClickableStyleProps<IComponent extends React.ElementType> = {
   /**
    * The color of the element.
    */
-  color: "alert" | "brand" | "neutral" | "success" | "warning";
+  status: "error" | "brand" | "neutral" | "success" | "warning";
   /**
    * The size of the element.
    */
-  size: "small" | "medium" | "large";
+  size: "sm" | "md" | "lg";
   /**
    * A hidden prop for visual testing
    */
@@ -22,7 +22,7 @@ export type ClickableStyleProps<IComponent extends React.ElementType> = {
   /**
    * The style of the element.
    */
-  variant: "flat" | "outline" | "link" | "plain";
+  variant: "primary" | "secondary" | "link" | "icon";
 } & React.ComponentProps<IComponent>;
 
 /**
@@ -40,7 +40,7 @@ const ClickableStyle = React.forwardRef(
     {
       as: Component,
       children,
-      color,
+      status,
       size,
       state,
       variant,
@@ -56,21 +56,21 @@ const ClickableStyle = React.forwardRef(
           styles.button,
           // Sizes
           variant !== "link" && [
-            size === "small" && styles.sizeSmall,
-            size === "medium" && styles.sizeMedium,
-            size === "large" && styles.sizeLarge,
+            size === "sm" && styles.sizeSmall,
+            size === "md" && styles.sizeMedium,
+            size === "lg" && styles.sizeLarge,
           ],
           // Variants
-          variant === "flat" && styles.variantFlat,
-          variant === "outline" && styles.variantOutline,
+          variant === "primary" && styles.variantFlat,
+          variant === "secondary" && styles.variantOutline,
           variant === "link" && styles.variantLink,
-          variant === "plain" && styles.variantPlain,
-          // Colors
-          color === "alert" && styles.colorAlert,
-          color === "brand" && styles.colorBrand,
-          color === "neutral" && styles.colorNeutral,
-          color === "success" && styles.colorSuccess,
-          color === "warning" && styles.colorWarning,
+          variant === "icon" && styles.variantPlain,
+          // Statuses
+          status === "error" && styles.colorAlert,
+          status === "brand" && styles.colorBrand,
+          status === "neutral" && styles.colorNeutral,
+          status === "success" && styles.colorSuccess,
+          status === "warning" && styles.colorWarning,
           // Interactive States (for testing)
           state === "hover" && styles.stateHover,
           state === "focus" && styles.stateFocus,

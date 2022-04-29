@@ -11,7 +11,7 @@ export type LinkProps = LinkHTMLElementProps & {
    * The link contents or label.
    */
   children: ReactNode;
-  color?: ClickableStyleProps<"a">["color"];
+  status?: ClickableStyleProps<"a">["status"];
   "data-testid"?: string;
   size?: ClickableStyleProps<"a">["size"];
   variant?: ClickableStyleProps<"a">["variant"];
@@ -35,14 +35,14 @@ export type LinkProps = LinkHTMLElementProps & {
  * components are exactly the same.
  */
 const Link = forwardRef<HTMLAnchorElement, LinkProps>(
-  ({ variant = "link", color = "brand", size = "large", ...rest }, ref) => {
+  ({ variant = "link", status = "brand", size = "lg", ...rest }, ref) => {
     return (
       <ClickableStyle
         {...rest}
         as="a"
-        color={color}
         ref={ref}
         size={size}
+        status={status}
         variant={variant}
       />
     );
