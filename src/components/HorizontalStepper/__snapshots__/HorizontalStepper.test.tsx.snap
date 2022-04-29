@@ -11,14 +11,19 @@ exports[`<HorizontalStepper /> CompletedAllSteps story renders snapshot 1`] = `
       class="horizontal-step horizontal-step--complete"
     >
       <svg
-        aria-hidden="true"
         class="icon horizontal-step__complete-icon"
         fill="currentColor"
         height="1.5rem"
+        role="img"
         style="--icon-size: 1.5rem;"
         width="1.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
+        <title
+          id="13"
+        >
+          completed step Step 1
+        </title>
         <use
           xlink:href="test-file-stub#check-circle"
         />
@@ -36,14 +41,19 @@ exports[`<HorizontalStepper /> CompletedAllSteps story renders snapshot 1`] = `
       class="horizontal-step horizontal-step--complete"
     >
       <svg
-        aria-hidden="true"
         class="icon horizontal-step__complete-icon"
         fill="currentColor"
         height="1.5rem"
+        role="img"
         style="--icon-size: 1.5rem;"
         width="1.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
+        <title
+          id="14"
+        >
+          completed step Step 2
+        </title>
         <use
           xlink:href="test-file-stub#check-circle"
         />
@@ -61,14 +71,19 @@ exports[`<HorizontalStepper /> CompletedAllSteps story renders snapshot 1`] = `
       class="horizontal-step horizontal-step--complete"
     >
       <svg
-        aria-hidden="true"
         class="icon horizontal-step__complete-icon"
         fill="currentColor"
         height="1.5rem"
+        role="img"
         style="--icon-size: 1.5rem;"
         width="1.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
+        <title
+          id="15"
+        >
+          completed step Step 3
+        </title>
         <use
           xlink:href="test-file-stub#check-circle"
         />
@@ -86,14 +101,19 @@ exports[`<HorizontalStepper /> CompletedAllSteps story renders snapshot 1`] = `
       class="horizontal-step horizontal-step--complete"
     >
       <svg
-        aria-hidden="true"
         class="icon horizontal-step__complete-icon"
         fill="currentColor"
         height="1.5rem"
+        role="img"
         style="--icon-size: 1.5rem;"
         width="1.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
+        <title
+          id="16"
+        >
+          completed step Step 4
+        </title>
         <use
           xlink:href="test-file-stub#check-circle"
         />
@@ -111,14 +131,19 @@ exports[`<HorizontalStepper /> CompletedAllSteps story renders snapshot 1`] = `
       class="horizontal-step horizontal-step--complete"
     >
       <svg
-        aria-hidden="true"
         class="icon horizontal-step__complete-icon"
         fill="currentColor"
         height="1.5rem"
+        role="img"
         style="--icon-size: 1.5rem;"
         width="1.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
+        <title
+          id="17"
+        >
+          completed step Step 5
+        </title>
         <use
           xlink:href="test-file-stub#check-circle"
         />
@@ -141,14 +166,19 @@ exports[`<HorizontalStepper /> HorizontalSteps story renders snapshot 1`] = `
     class="horizontal-step horizontal-step--incomplete"
   >
     <svg
-      aria-hidden="true"
       class="icon horizontal-step__incomplete-icon"
       fill="currentColor"
       height="0.5rem"
+      role="img"
       style="--icon-size: 0.5rem;"
       width="0.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
+      <title
+        id="18"
+      >
+        incomplete step Horizontal step
+      </title>
       <use
         xlink:href="test-file-stub#circle"
       />
@@ -162,11 +192,13 @@ exports[`<HorizontalStepper /> HorizontalSteps story renders snapshot 1`] = `
   <li
     class="horizontal-step horizontal-step--active"
   >
-    <p
+    <span
+      aria-label="current step 1 Horizontal step"
       class="horizontal-step__number text text--sm text--inherit"
+      role="img"
     >
       1
-    </p>
+    </span>
     <span
       class="text text--sm text--inherit text--bold-weight"
     >
@@ -177,14 +209,19 @@ exports[`<HorizontalStepper /> HorizontalSteps story renders snapshot 1`] = `
     class="horizontal-step horizontal-step--complete"
   >
     <svg
-      aria-hidden="true"
       class="icon horizontal-step__complete-icon"
       fill="currentColor"
       height="1.5rem"
+      role="img"
       style="--icon-size: 1.5rem;"
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
+      <title
+        id="19"
+      >
+        completed step Horizontal step
+      </title>
       <use
         xlink:href="test-file-stub#check-circle"
       />
@@ -205,11 +242,13 @@ exports[`<HorizontalStepper /> HorizontalStepsDifferentNumbers story renders sna
   <li
     class="horizontal-step horizontal-step--active"
   >
-    <p
+    <span
+      aria-label="current step 1 Horizontal step"
       class="horizontal-step__number text text--sm text--inherit"
+      role="img"
     >
       1
-    </p>
+    </span>
     <span
       class="text text--sm text--inherit text--bold-weight"
     >
@@ -219,11 +258,13 @@ exports[`<HorizontalStepper /> HorizontalStepsDifferentNumbers story renders sna
   <li
     class="horizontal-step horizontal-step--active"
   >
-    <p
+    <span
+      aria-label="current step 2 Horizontal step"
       class="horizontal-step__number text text--sm text--inherit"
+      role="img"
     >
       2
-    </p>
+    </span>
     <span
       class="text text--sm text--inherit text--bold-weight"
     >
@@ -233,11 +274,13 @@ exports[`<HorizontalStepper /> HorizontalStepsDifferentNumbers story renders sna
   <li
     class="horizontal-step horizontal-step--active"
   >
-    <p
+    <span
+      aria-label="current step 3 Horizontal step"
       class="horizontal-step__number text text--sm text--inherit"
+      role="img"
     >
       3
-    </p>
+    </span>
     <span
       class="text text--sm text--inherit text--bold-weight"
     >
@@ -247,11 +290,13 @@ exports[`<HorizontalStepper /> HorizontalStepsDifferentNumbers story renders sna
   <li
     class="horizontal-step horizontal-step--active"
   >
-    <p
+    <span
+      aria-label="current step 4 Horizontal step"
       class="horizontal-step__number text text--sm text--inherit"
+      role="img"
     >
       4
-    </p>
+    </span>
     <span
       class="text text--sm text--inherit text--bold-weight"
     >
@@ -261,11 +306,13 @@ exports[`<HorizontalStepper /> HorizontalStepsDifferentNumbers story renders sna
   <li
     class="horizontal-step horizontal-step--active"
   >
-    <p
+    <span
+      aria-label="current step 5 Horizontal step"
       class="horizontal-step__number text text--sm text--inherit"
+      role="img"
     >
       5
-    </p>
+    </span>
     <span
       class="text text--sm text--inherit text--bold-weight"
     >
@@ -275,11 +322,13 @@ exports[`<HorizontalStepper /> HorizontalStepsDifferentNumbers story renders sna
   <li
     class="horizontal-step horizontal-step--active"
   >
-    <p
+    <span
+      aria-label="current step 6 Horizontal step"
       class="horizontal-step__number text text--sm text--inherit"
+      role="img"
     >
       6
-    </p>
+    </span>
     <span
       class="text text--sm text--inherit text--bold-weight"
     >
@@ -289,11 +338,13 @@ exports[`<HorizontalStepper /> HorizontalStepsDifferentNumbers story renders sna
   <li
     class="horizontal-step horizontal-step--active"
   >
-    <p
+    <span
+      aria-label="current step 7 Horizontal step"
       class="horizontal-step__number text text--sm text--inherit"
+      role="img"
     >
       7
-    </p>
+    </span>
     <span
       class="text text--sm text--inherit text--bold-weight"
     >
@@ -303,11 +354,13 @@ exports[`<HorizontalStepper /> HorizontalStepsDifferentNumbers story renders sna
   <li
     class="horizontal-step horizontal-step--active"
   >
-    <p
+    <span
+      aria-label="current step 8 Horizontal step"
       class="horizontal-step__number text text--sm text--inherit"
+      role="img"
     >
       8
-    </p>
+    </span>
     <span
       class="text text--sm text--inherit text--bold-weight"
     >
@@ -317,11 +370,13 @@ exports[`<HorizontalStepper /> HorizontalStepsDifferentNumbers story renders sna
   <li
     class="horizontal-step horizontal-step--active"
   >
-    <p
+    <span
+      aria-label="current step 9 Horizontal step"
       class="horizontal-step__number text text--sm text--inherit"
+      role="img"
     >
       9
-    </p>
+    </span>
     <span
       class="text text--sm text--inherit text--bold-weight"
     >
@@ -331,11 +386,13 @@ exports[`<HorizontalStepper /> HorizontalStepsDifferentNumbers story renders sna
   <li
     class="horizontal-step horizontal-step--active"
   >
-    <p
+    <span
+      aria-label="current step 10 Horizontal step"
       class="horizontal-step__number text text--sm text--inherit"
+      role="img"
     >
       10
-    </p>
+    </span>
     <span
       class="text text--sm text--inherit text--bold-weight"
     >
@@ -345,11 +402,13 @@ exports[`<HorizontalStepper /> HorizontalStepsDifferentNumbers story renders sna
   <li
     class="horizontal-step horizontal-step--active"
   >
-    <p
+    <span
+      aria-label="current step 21 Horizontal step"
       class="horizontal-step__number text text--sm text--inherit"
+      role="img"
     >
       21
-    </p>
+    </span>
     <span
       class="text text--sm text--inherit text--bold-weight"
     >
@@ -359,11 +418,13 @@ exports[`<HorizontalStepper /> HorizontalStepsDifferentNumbers story renders sna
   <li
     class="horizontal-step horizontal-step--active"
   >
-    <p
+    <span
+      aria-label="current step 32 Horizontal step"
       class="horizontal-step__number text text--sm text--inherit"
+      role="img"
     >
       32
-    </p>
+    </span>
     <span
       class="text text--sm text--inherit text--bold-weight"
     >
@@ -373,11 +434,13 @@ exports[`<HorizontalStepper /> HorizontalStepsDifferentNumbers story renders sna
   <li
     class="horizontal-step horizontal-step--active"
   >
-    <p
+    <span
+      aria-label="current step 43 Horizontal step"
       class="horizontal-step__number text text--sm text--inherit"
+      role="img"
     >
       43
-    </p>
+    </span>
     <span
       class="text text--sm text--inherit text--bold-weight"
     >
@@ -387,11 +450,13 @@ exports[`<HorizontalStepper /> HorizontalStepsDifferentNumbers story renders sna
   <li
     class="horizontal-step horizontal-step--active"
   >
-    <p
+    <span
+      aria-label="current step 54 Horizontal step"
       class="horizontal-step__number text text--sm text--inherit"
+      role="img"
     >
       54
-    </p>
+    </span>
     <span
       class="text text--sm text--inherit text--bold-weight"
     >
@@ -401,11 +466,13 @@ exports[`<HorizontalStepper /> HorizontalStepsDifferentNumbers story renders sna
   <li
     class="horizontal-step horizontal-step--active"
   >
-    <p
+    <span
+      aria-label="current step 65 Horizontal step"
       class="horizontal-step__number text text--sm text--inherit"
+      role="img"
     >
       65
-    </p>
+    </span>
     <span
       class="text text--sm text--inherit text--bold-weight"
     >
@@ -425,11 +492,13 @@ exports[`<HorizontalStepper /> OnFirstStep story renders snapshot 1`] = `
     <li
       class="horizontal-step horizontal-step--active"
     >
-      <p
+      <span
+        aria-label="current step 1 Step 1"
         class="horizontal-step__number text text--sm text--inherit"
+        role="img"
       >
         1
-      </p>
+      </span>
       <span
         class="text text--sm text--inherit text--bold-weight"
       >
@@ -443,14 +512,19 @@ exports[`<HorizontalStepper /> OnFirstStep story renders snapshot 1`] = `
       class="horizontal-step horizontal-step--incomplete"
     >
       <svg
-        aria-hidden="true"
         class="icon horizontal-step__incomplete-icon"
         fill="currentColor"
         height="0.5rem"
+        role="img"
         style="--icon-size: 0.5rem;"
         width="0.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
+        <title
+          id="1"
+        >
+          incomplete step Step 2
+        </title>
         <use
           xlink:href="test-file-stub#circle"
         />
@@ -468,14 +542,19 @@ exports[`<HorizontalStepper /> OnFirstStep story renders snapshot 1`] = `
       class="horizontal-step horizontal-step--incomplete"
     >
       <svg
-        aria-hidden="true"
         class="icon horizontal-step__incomplete-icon"
         fill="currentColor"
         height="0.5rem"
+        role="img"
         style="--icon-size: 0.5rem;"
         width="0.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
+        <title
+          id="2"
+        >
+          incomplete step Step 3
+        </title>
         <use
           xlink:href="test-file-stub#circle"
         />
@@ -493,14 +572,19 @@ exports[`<HorizontalStepper /> OnFirstStep story renders snapshot 1`] = `
       class="horizontal-step horizontal-step--incomplete"
     >
       <svg
-        aria-hidden="true"
         class="icon horizontal-step__incomplete-icon"
         fill="currentColor"
         height="0.5rem"
+        role="img"
         style="--icon-size: 0.5rem;"
         width="0.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
+        <title
+          id="3"
+        >
+          incomplete step Step 4
+        </title>
         <use
           xlink:href="test-file-stub#circle"
         />
@@ -518,14 +602,19 @@ exports[`<HorizontalStepper /> OnFirstStep story renders snapshot 1`] = `
       class="horizontal-step horizontal-step--incomplete"
     >
       <svg
-        aria-hidden="true"
         class="icon horizontal-step__incomplete-icon"
         fill="currentColor"
         height="0.5rem"
+        role="img"
         style="--icon-size: 0.5rem;"
         width="0.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
+        <title
+          id="4"
+        >
+          incomplete step Step 5
+        </title>
         <use
           xlink:href="test-file-stub#circle"
         />
@@ -551,14 +640,19 @@ exports[`<HorizontalStepper /> OnLastStep story renders snapshot 1`] = `
       class="horizontal-step horizontal-step--complete"
     >
       <svg
-        aria-hidden="true"
         class="icon horizontal-step__complete-icon"
         fill="currentColor"
         height="1.5rem"
+        role="img"
         style="--icon-size: 1.5rem;"
         width="1.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
+        <title
+          id="9"
+        >
+          completed step Step 1
+        </title>
         <use
           xlink:href="test-file-stub#check-circle"
         />
@@ -576,14 +670,19 @@ exports[`<HorizontalStepper /> OnLastStep story renders snapshot 1`] = `
       class="horizontal-step horizontal-step--complete"
     >
       <svg
-        aria-hidden="true"
         class="icon horizontal-step__complete-icon"
         fill="currentColor"
         height="1.5rem"
+        role="img"
         style="--icon-size: 1.5rem;"
         width="1.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
+        <title
+          id="10"
+        >
+          completed step Step 2
+        </title>
         <use
           xlink:href="test-file-stub#check-circle"
         />
@@ -601,14 +700,19 @@ exports[`<HorizontalStepper /> OnLastStep story renders snapshot 1`] = `
       class="horizontal-step horizontal-step--complete"
     >
       <svg
-        aria-hidden="true"
         class="icon horizontal-step__complete-icon"
         fill="currentColor"
         height="1.5rem"
+        role="img"
         style="--icon-size: 1.5rem;"
         width="1.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
+        <title
+          id="11"
+        >
+          completed step Step 3
+        </title>
         <use
           xlink:href="test-file-stub#check-circle"
         />
@@ -626,14 +730,19 @@ exports[`<HorizontalStepper /> OnLastStep story renders snapshot 1`] = `
       class="horizontal-step horizontal-step--complete"
     >
       <svg
-        aria-hidden="true"
         class="icon horizontal-step__complete-icon"
         fill="currentColor"
         height="1.5rem"
+        role="img"
         style="--icon-size: 1.5rem;"
         width="1.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
+        <title
+          id="12"
+        >
+          completed step Step 4
+        </title>
         <use
           xlink:href="test-file-stub#check-circle"
         />
@@ -650,11 +759,13 @@ exports[`<HorizontalStepper /> OnLastStep story renders snapshot 1`] = `
     <li
       class="horizontal-step horizontal-step--active"
     >
-      <p
+      <span
+        aria-label="current step 5 Step 5"
         class="horizontal-step__number text text--sm text--inherit"
+        role="img"
       >
         5
-      </p>
+      </span>
       <span
         class="text text--sm text--inherit text--bold-weight"
       >
@@ -676,14 +787,19 @@ exports[`<HorizontalStepper /> SomeCompletedSteps story renders snapshot 1`] = `
       class="horizontal-step horizontal-step--complete"
     >
       <svg
-        aria-hidden="true"
         class="icon horizontal-step__complete-icon"
         fill="currentColor"
         height="1.5rem"
+        role="img"
         style="--icon-size: 1.5rem;"
         width="1.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
+        <title
+          id="5"
+        >
+          completed step Step 1
+        </title>
         <use
           xlink:href="test-file-stub#check-circle"
         />
@@ -701,14 +817,19 @@ exports[`<HorizontalStepper /> SomeCompletedSteps story renders snapshot 1`] = `
       class="horizontal-step horizontal-step--complete"
     >
       <svg
-        aria-hidden="true"
         class="icon horizontal-step__complete-icon"
         fill="currentColor"
         height="1.5rem"
+        role="img"
         style="--icon-size: 1.5rem;"
         width="1.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
+        <title
+          id="6"
+        >
+          completed step Step 2
+        </title>
         <use
           xlink:href="test-file-stub#check-circle"
         />
@@ -725,11 +846,13 @@ exports[`<HorizontalStepper /> SomeCompletedSteps story renders snapshot 1`] = `
     <li
       class="horizontal-step horizontal-step--active"
     >
-      <p
+      <span
+        aria-label="current step 3 Step 3"
         class="horizontal-step__number text text--sm text--inherit"
+        role="img"
       >
         3
-      </p>
+      </span>
       <span
         class="text text--sm text--inherit text--bold-weight"
       >
@@ -743,14 +866,19 @@ exports[`<HorizontalStepper /> SomeCompletedSteps story renders snapshot 1`] = `
       class="horizontal-step horizontal-step--incomplete"
     >
       <svg
-        aria-hidden="true"
         class="icon horizontal-step__incomplete-icon"
         fill="currentColor"
         height="0.5rem"
+        role="img"
         style="--icon-size: 0.5rem;"
         width="0.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
+        <title
+          id="7"
+        >
+          incomplete step Step 4
+        </title>
         <use
           xlink:href="test-file-stub#circle"
         />
@@ -768,14 +896,19 @@ exports[`<HorizontalStepper /> SomeCompletedSteps story renders snapshot 1`] = `
       class="horizontal-step horizontal-step--incomplete"
     >
       <svg
-        aria-hidden="true"
         class="icon horizontal-step__incomplete-icon"
         fill="currentColor"
         height="0.5rem"
+        role="img"
         style="--icon-size: 0.5rem;"
         width="0.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
+        <title
+          id="8"
+        >
+          incomplete step Step 5
+        </title>
         <use
           xlink:href="test-file-stub#circle"
         />

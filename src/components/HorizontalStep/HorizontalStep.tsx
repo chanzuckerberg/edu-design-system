@@ -51,12 +51,16 @@ export const HorizontalStep = ({
       <Icon
         className={styles['horizontal-step__complete-icon']}
         name="check-circle"
-        purpose="decorative"
+        purpose="informative"
         size="1.5rem"
+        title={`completed step ${text}`}
       />
     ) : variant === 'active' ? (
       <Text
+        aria-label={`current step ${stepNumber} ${text}`}
+        as="span"
         className={styles['horizontal-step__number']}
+        role="img"
         size="sm"
         variant="inherit"
       >
@@ -66,8 +70,9 @@ export const HorizontalStep = ({
       <Icon
         className={styles['horizontal-step__incomplete-icon']}
         name="circle"
-        purpose="decorative"
+        purpose="informative"
         size="0.5rem"
+        title={`incomplete step ${text}`}
       />
     );
 
