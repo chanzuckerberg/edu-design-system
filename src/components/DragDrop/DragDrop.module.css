@@ -1,0 +1,32 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #DRAGDROP
+\*------------------------------------*/
+
+/**
+ * 1) 
+ */
+.drag-drop {
+  display: flex;
+  justify-content: space-between;
+}
+
+.drag-container {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  border: 1px solid black;
+}
+
+.drag-card {
+  border: '1px dashed gray';
+  padding: '0.5rem 1rem';
+  margin-bottom: '.5rem';
+  background-color: 'white';
+  cursor: 'move';
+}
+
+.drag-layer {
+  display: none;
+}
