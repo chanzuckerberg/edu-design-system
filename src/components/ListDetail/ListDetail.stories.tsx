@@ -12,8 +12,19 @@ export default {
 } as Meta;
 
 const Template: Story<Props> = (args) => (
-  <ListDetail {...args}>
-    <ListDetail.Panel title="ListDetailPanel 1" variant="number">
+  <ListDetail variant="ordered">
+    <ListDetailPanel title="Overview">
+      <TextPassage>
+        <h3>Overview</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex{' '}
+        </p>
+      </TextPassage>
+    </ListDetailPanel>
+    <ListDetailPanel title="ListDetailPanel 1" variant="number">
       <TextPassage>
         <h3>ListDetailPanel 1</h3>
         <p>
@@ -23,9 +34,9 @@ const Template: Story<Props> = (args) => (
           aliquip ex{' '}
         </p>
       </TextPassage>
-    </ListDetail.Panel>
+    </ListDetailPanel>
 
-    <ListDetail.Panel title="ListDetailPanel 2" variant="error">
+    <ListDetailPanel title="ListDetailPanel 2" variant="error">
       <TextPassage>
         <h3>ListDetailPanel 2</h3>
         <p>
@@ -35,9 +46,9 @@ const Template: Story<Props> = (args) => (
           aliquip ex{' '}
         </p>
       </TextPassage>
-    </ListDetail.Panel>
+    </ListDetailPanel>
 
-    <ListDetail.Panel title="ListDetailPanel 3" variant="warning">
+    <ListDetailPanel title="ListDetailPanel 3" variant="warning">
       <TextPassage>
         <h3>ListDetailPanel 3</h3>
         <p>
@@ -47,9 +58,9 @@ const Template: Story<Props> = (args) => (
           aliquip ex{' '}
         </p>
       </TextPassage>
-    </ListDetail.Panel>
+    </ListDetailPanel>
 
-    <ListDetail.Panel title="ListDetailPanel 4" variant="success">
+    <ListDetailPanel title="ListDetailPanel 4" variant="success">
       <TextPassage>
         <h3>ListDetailPanel 4</h3>
         <p>
@@ -59,9 +70,9 @@ const Template: Story<Props> = (args) => (
           aliquip ex{' '}
         </p>
       </TextPassage>
-    </ListDetail.Panel>
+    </ListDetailPanel>
 
-    <ListDetail.Panel title="ListDetailPanel 5">
+    <ListDetailPanel title="ListDetailPanel 5">
       <TextPassage>
         <h3>ListDetailPanel 5</h3>
         <p>
@@ -71,14 +82,33 @@ const Template: Story<Props> = (args) => (
           aliquip ex{' '}
         </p>
       </TextPassage>
-    </ListDetail.Panel>
+    </ListDetailPanel>
+
+    <ListDetailPanel title="ListDetailPanel 6" variant="number">
+      <TextPassage>
+        <h3>ListDetailPanel 5</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex{' '}
+        </p>
+      </TextPassage>
+    </ListDetailPanel>
+
+    <ListDetailPanel title="Final Item - complete" variant="complete">
+      <TextPassage>
+        <h3>Final Item - complete</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex{' '}
+        </p>
+      </TextPassage>
+    </ListDetailPanel>
   </ListDetail>
 );
 
 export const Default = Template.bind({});
 Default.args = {};
-
-export const Ordered = Template.bind({});
-Ordered.args = {
-  variant: 'ordered',
-};
