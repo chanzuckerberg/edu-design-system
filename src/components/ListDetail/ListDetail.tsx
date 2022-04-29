@@ -13,6 +13,7 @@ import {
   EdsThemeColorBackgroundGradeCompleteDefault,
   EdsThemeColorBackgroundGradeReviseDefault,
   EdsThemeColorBackgroundGradeStopDefault,
+  EdsThemeColorBorderNeutralSubtle,
 } from '../../tokens-dist/ts/colors';
 import {
   L_ARROW_KEYCODE,
@@ -221,13 +222,66 @@ export const ListDetail = ({
       return child;
     },
   );
-  const TagName = variant === 'ordered' ? 'ol' : 'ul';
   const componentClassName = clsx(styles['list-detail'], className, {});
+
+  const iconVariant = (itemVariant, i) => {
+    switch (itemVariant) {
+      case 'success':
+        return (
+          <Icon
+            className={styles['list-detail__icon']}
+            color={EdsThemeColorBackgroundGradeCompleteDefault}
+            name="check-circle"
+            purpose="decorative"
+          />
+        );
+      case 'warning':
+        return (
+          <Icon
+            className={styles['list-detail__icon']}
+            color={EdsThemeColorBackgroundGradeReviseDefault}
+            name="error"
+            purpose="decorative"
+          />
+        );
+      case 'error':
+        return (
+          <Icon
+            className={styles['list-detail__icon']}
+            color={EdsThemeColorBackgroundGradeStopDefault}
+            name="cancel"
+            purpose="decorative"
+          />
+        );
+      case 'number':
+        return <span className={styles['list-detail__number']}>{i}</span>;
+      case 'incomplete':
+        return (
+          <Icon
+            className={styles['list-detail__icon']}
+            color={EdsThemeColorBorderNeutralSubtle}
+            name="star" /* TODO: need to add star-outline variant to Icon */
+            purpose="decorative"
+          />
+        );
+      case 'complete':
+        return (
+          <Icon
+            className={styles['list-detail__icon']}
+            color={EdsThemeColorBackgroundGradeCompleteDefault}
+            name="star"
+            purpose="decorative"
+          />
+        );
+      default:
+        return '';
+    }
+  };
 
   return (
     <div className={componentClassName} {...other}>
-      <div className={styles['list-detail__header']}>
-        <TagName
+      <div className={styles['list-detail__nav']}>
+        <ol
           className={clsx(styles['list-detail__list'], {
             [styles['list-detail__list--ordered']]: variant === 'ordered',
           })}
@@ -240,6 +294,7 @@ export const ListDetail = ({
               <li
                 className={clsx(
                   styles['list-detail__item'],
+
                   isActive && styles['eds-is-active'],
                 )}
                 key={'list-detail-item-' + i}
@@ -265,6 +320,8 @@ export const ListDetail = ({
                   <div
                     className={clsx(styles['list-detail__link-left'], {
                       [styles['list-detail__link-hidden']]: [
+                        'bullet',
+                        'complete',
                         'number',
                         'success',
                         'warning',
@@ -272,41 +329,14 @@ export const ListDetail = ({
                       ].includes(itemVariant),
                     })}
                   >
-                    {itemVariant === 'success' ? (
-                      <Icon
-                        className={styles['list-detail__icon']}
-                        color={EdsThemeColorBackgroundGradeCompleteDefault}
-                        name="check-circle"
-                        purpose="decorative"
-                      />
-                    ) : itemVariant === 'warning' ? (
-                      <Icon
-                        className={styles['list-detail__icon']}
-                        color={EdsThemeColorBackgroundGradeReviseDefault}
-                        name="error"
-                        purpose="decorative"
-                      />
-                    ) : itemVariant === 'error' ? (
-                      <Icon
-                        className={styles['list-detail__icon']}
-                        color={EdsThemeColorBackgroundGradeStopDefault}
-                        name="cancel"
-                        purpose="decorative"
-                      />
-                    ) : itemVariant === 'number' ? (
-                      <span className={styles['list-detail__number']}>
-                        {i + 1}
-                      </span>
-                    ) : (
-                      ''
-                    )}
+                    {iconVariant(itemVariant, i)}
                   </div>
                   {tab.props.title}
                 </a>
               </li>
             );
           })}
-        </TagName>
+        </ol>
       </div>
       <div className={styles['list-detail__body']}>
         {childrenWithProps[activeIndexState]}
