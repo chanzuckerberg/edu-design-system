@@ -37,7 +37,7 @@
 .horizontal-step__incomplete-icon {
   margin-left: var(--eds-size-1);
   margin-right: var(--eds-size-1);
-  fill: '#C4C4C4';
+  fill: var(--eds-theme-color-icon-disabled);
 }
 
 /**
