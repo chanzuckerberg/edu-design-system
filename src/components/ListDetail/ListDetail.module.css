@@ -20,11 +20,11 @@
 }
 
 /**
- * List detail header
+ * List detail nav
  * 1) Contains the tab list
  * 2) Tab overflow behavior
  */
-.list-detail__header {
+.list-detail__nav {
   width: 100%;
   position: relative;
   padding: var(--eds-size-4) var(--eds-size-2);
@@ -89,9 +89,9 @@
     position: absolute;
     left: 0.25rem;
     top: 1.75rem; /* 2 */
-    height: 45%; /* 3 */ 
+    height: 45%; /* 3 */
     width: 0.0625rem;
-    background:  var(--eds-theme-color-border-neutral-subtle); /* 4 */
+    background: var(--eds-theme-color-border-neutral-subtle); /* 4 */
     border-radius: var(--eds-theme-border-radius);
   }
 
@@ -146,6 +146,7 @@
    * 1) Set to 9px to center the border
    * 2) This is the same color used for the vertical line when list style is "ordered"
    * 3) Using a percentage here instead of --eds-theme-border-radius because this is a cosmetic element (a cicular bullet), not a typical bordered object
+   * 4) Make the pseudoelement bullet dark when li is active
    */
   &:before {
     content: '';
@@ -158,6 +159,11 @@
     width: 9px; /* 1 */
     background: var(--eds-theme-color-border-neutral-subtle); /* 2 */
     border-radius: 50%; /* 3 */
+
+    /* stylelint-disable-next-line max-nesting-depth */
+    .list-detail__item.eds-is-active & {
+      background: var(--eds-theme-color-text-neutral-default); /* 4 */
+    }
   }
 
   /**
@@ -165,7 +171,7 @@
   * 1) Remove the bullet since the icon will take its place
   */
   li[class*='list-detail__item--'] & {
-    /* stylelint-disable-next-line max-nesting-depth */
+    /* stylelint-disable-next-line */
     &:before {
       content: none;
     }
@@ -177,7 +183,8 @@
 * 1) Used on list items using number variant; provides a cosmetic cicular border
 * 2) Using flex to keep the number centered
 * 3) Since this will display as a cirlce, keep height and width equal; should be wide enough to fit a two-digit number
-* 4) Using a percentage here instead of --eds-theme-border-radius because this is not a typical bordered object
+* 4) Using a percentage here instead of --eds-theme-border-radius because this must always render as a circle
+* 5) Make the border dark when li is active
 */
 .list-detail__number {
   position: relative;
@@ -185,14 +192,18 @@
   justify-content: center;
   align-items: center;
   left: -4px;
-  width: 1.5rem; /* 3 */ 
+  width: 1.5rem; /* 3 */
   height: 1.5rem; /* 3 */
   border-radius: 50%; /* 4 */
   border: 1px solid var(--eds-theme-color-border-neutral-subtle);
   margin-right: 9px;
   font-size: var(--eds-font-size-12);
   margin-left: -4px;
-  background: var(--eds-theme-color-background-neutral-default); 
+  background: var(--eds-theme-color-background-neutral-default);
+
+  .list-detail__item.eds-is-active & {
+    border: 1px solid var(--eds-theme-color-text-neutral-default); /* 5 */
+  }
 }
 
 /**

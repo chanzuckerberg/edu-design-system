@@ -16,13 +16,24 @@ export interface Props {
    */
   className?: string;
   /**
+   * Mark list as completed
+   */
+  completed?: boolean;
+  /**
    * HTML id for the component
    */
   id?: any;
   /**
    * The tab variant
    */
-  variant?: 'error' | 'number' | 'success' | 'warning';
+  variant?:
+    | 'bullet'
+    | 'complete'
+    | 'error'
+    | 'incomplete'
+    | 'number'
+    | 'success'
+    | 'warning';
   /**
    * The tab title
    */
@@ -36,6 +47,7 @@ export const ListDetailPanel = ({
   ariaLabelledBy,
   children,
   className,
+  completed,
   id,
   variant,
   title,
@@ -43,7 +55,7 @@ export const ListDetailPanel = ({
 }: Props) => {
   const componentClassName = clsx(styles['list-detail__panel'], className, {});
   return (
-    <div
+    <nav
       aria-hidden={false}
       aria-labelledby={ariaLabelledBy}
       className={componentClassName}
@@ -52,6 +64,6 @@ export const ListDetailPanel = ({
       {...other}
     >
       {children}
-    </div>
+    </nav>
   );
 };
