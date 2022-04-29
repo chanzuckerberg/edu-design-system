@@ -25,20 +25,13 @@
 
   display: flex;
   gap: var(--eds-size-half);
+
+  /* Required to make last segment overlap containing bar right border */
+  width: calc(100% + 2 * var(--eds-theme-border-width));
 }
+/* better naming here */
 .data-bar__segment-space--95 {
-  width: 95%;
+  width: calc(
+    100% + 2 * var(--eds-theme-border-width) - 0.5 * var(--eds-size-2)
+  );
 }
-
-/* .data-bar__segment-space div {
-  width: 20px;
-  height: var(--eds-size-2);
-
-  cursor: pointer;
-
-  background-color: red;
-}
-.data-bar__segment-space div:first-child {
-  border-top-left-radius: 9999px;
-  border-bottom-left-radius: 9999px;
-} */

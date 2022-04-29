@@ -11,6 +11,15 @@ export type Props = {
    */
   className?: string;
   /**
+   * Indicates whether segments should be hoverable.
+   */
+  isHoverable?: boolean;
+  /**
+   * Indicates if this segment should be rounded on the right side.
+   * Used for data bars that are 100% complete.
+   */
+  isRoundRight?: boolean;
+  /**
    * Percent relative to the data bar to be represented by the segment.
    */
   percentage: number;
@@ -25,6 +34,8 @@ export type Props = {
  */
 export const DataBarSegment = ({
   className,
+  isHoverable = true,
+  isRoundRight,
   percentage,
   variant = 'brand',
   ...other
@@ -32,6 +43,8 @@ export const DataBarSegment = ({
   const componentClassName = clsx(
     styles['data-bar-segment'],
     styles[`data-bar-segment--${variant}`],
+    isHoverable && styles['data-bar-segment--hoverable'],
+    isRoundRight && styles['data-bar-segment--round-right'],
     className,
     {},
   );

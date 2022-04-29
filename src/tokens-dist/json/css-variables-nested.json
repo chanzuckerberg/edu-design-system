@@ -176,7 +176,10 @@
           "brand": {
             "primary": {
               "default": "var(--eds-theme-color-background-brand-primary-default)",
-              "strong": "var(--eds-theme-color-background-brand-primary-strong)"
+              "strong": {
+                "@": "var(--eds-theme-color-background-brand-primary-strong)",
+                "hover": "var(--eds-theme-color-background-brand-primary-strong-hover)"
+              }
             }
           },
           "utility": {

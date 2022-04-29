@@ -115,6 +115,7 @@ $eds-theme-color-background-neutral-medium: #E7E8EA !default;
 $eds-theme-color-background-neutral-medium-hover: #C0C4C8 !default;
 $eds-theme-color-background-brand-primary-default: #F0F0FC !default;
 $eds-theme-color-background-brand-primary-strong: #6B65E2 !default;
+$eds-theme-color-background-brand-primary-strong-hover: #3E42B1 !default;
 $eds-theme-color-background-utility-success: #ECFFF5 !default;
 $eds-theme-color-background-utility-warning: #FFF1E9 !default;
 $eds-theme-color-background-utility-error: #FFF0F4 !default;
@@ -508,7 +509,10 @@ $tokens: (
           'brand': (
             'primary': (
               'default': $eds-theme-color-background-brand-primary-default,
-              'strong': $eds-theme-color-background-brand-primary-strong
+              'strong': (
+                '@': $eds-theme-color-background-brand-primary-strong,
+                'hover': $eds-theme-color-background-brand-primary-strong-hover
+              )
             )
           ),
           'utility': (
