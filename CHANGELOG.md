@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.13.2](https://github.com/chanzuckerberg/edu-design-system/compare/v0.13.1...v0.13.2) (2022-04-29)
+
+#### **Icon** ([#1024](https://github.com/chanzuckerberg/edu-design-system/issues/1024))
+
+- added `viewBox` prop
+
 ### [0.13.1](https://github.com/chanzuckerberg/edu-design-system/compare/v0.13.0...v0.13.1) (2022-04-28)
 
 ## [0.13.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.12.0...v0.13.0) (2022-04-27)
