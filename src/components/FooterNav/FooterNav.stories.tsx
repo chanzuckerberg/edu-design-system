@@ -7,14 +7,15 @@ import FooterNavItem from '../FooterNavItem';
 export default {
   title: 'Molecules/Navigation/FooterNav',
   component: FooterNav,
+  subcomponents: { FooterNavItem },
 } as Meta;
 
 const Template: Story<Props> = (args) => (
   <FooterNav>
-    <FooterNavItem href="#" text="Footer Nav Item 1" />
-    <FooterNavItem href="#" text="Footer Nav Item 2" />
-    <FooterNavItem href="#" text="Footer Nav Item 3" />
-    <FooterNavItem href="#" text="Footer Nav Item 4" />
+    <FooterNav.Item href="#" text="Footer Nav Item 1" />
+    <FooterNav.Item href="#" text="Footer Nav Item 2" />
+    <FooterNav.Item href="#" text="Footer Nav Item 3" />
+    <FooterNav.Item href="#" text="Footer Nav Item 4" />
   </FooterNav>
 );
 

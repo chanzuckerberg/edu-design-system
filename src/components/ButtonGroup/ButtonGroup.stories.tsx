@@ -11,8 +11,8 @@ export default {
     orientation: 'horizontal' as const,
     children: (
       <>
-        <Button>Button 1</Button>
-        <Button variant="secondary">Button 2</Button>
+        <Button variant="primary">Button 1</Button>
+        <Button>Button 2</Button>
       </>
     ),
   },
@@ -44,11 +44,11 @@ export const WithFiveButtons: StoryObj<Args> = {
   args: {
     children: (
       <>
-        <Button variant="secondary">Button 1</Button>
-        <Button variant="secondary">Button 2</Button>
-        <Button variant="secondary">Button 3</Button>
-        <Button variant="secondary">Button 4</Button>
-        <Button>Button 5</Button>
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+        <Button>Button 4</Button>
+        <Button variant="primary">Button 5</Button>
       </>
     ),
   },

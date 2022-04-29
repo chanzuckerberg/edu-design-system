@@ -46,19 +46,19 @@
 /**
  * Color variants.
  */
-.tag--default {
+.tag--neutral {
   --tag-primary-color: var(--eds-theme-color-text-neutral-default);
   --tag-secondary-color: var(--eds-theme-color-background-neutral-medium);
   --tag-outline-color: var(--eds-theme-color-border-neutral-default);
 }
 
-.tag--stop {
+.tag--error {
   --tag-primary-color: var(--eds-theme-color-text-utility-error);
   --tag-secondary-color: var(--eds-theme-color-background-utility-error);
   --tag-outline-color: var(--eds-theme-color-border-utility-error-default);
 }
 
-.tag--go {
+.tag--success {
   --tag-primary-color: var(--eds-theme-color-text-utility-success);
   --tag-secondary-color: var(--eds-theme-color-background-utility-success);
   --tag-outline-color: var(--eds-theme-color-border-utility-success-default);

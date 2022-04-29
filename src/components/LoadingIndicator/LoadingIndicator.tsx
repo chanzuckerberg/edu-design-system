@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React from 'react';
 import styles from './LoadingIndicator.module.css';
-import { EdsThemeColorTextNeutralDefault } from '../../tokens-dist/colors';
+import { EdsThemeColorTextNeutralDefault } from '../../tokens-dist/ts/colors';
 import Icon from '../Icon';
 
 export interface Props {

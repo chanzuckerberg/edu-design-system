@@ -7,14 +7,15 @@ import DefinitionListItem from '../DefinitionListItem';
 export default {
   title: 'Molecules/Lists/DefinitionList',
   component: DefinitionList,
+  subcomponents: { DefinitionListItem },
 } as Meta;
 
 const Template: Story<Props> = (args) => (
   <DefinitionList {...args}>
-    <DefinitionListItem title="Term 1:">Term 1 definition</DefinitionListItem>
-    <DefinitionListItem title="This is term 2:">
+    <DefinitionList.Item title="Term 1:">Term 1 definition</DefinitionList.Item>
+    <DefinitionList.Item title="This is term 2:">
       This is term 2 definition
-    </DefinitionListItem>
+    </DefinitionList.Item>
   </DefinitionList>
 );
 

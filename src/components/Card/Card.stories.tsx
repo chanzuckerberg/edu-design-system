@@ -8,34 +8,35 @@ import CardHeader from '../CardHeader';
 export default {
   title: 'Molecules/Blocks/Card',
   component: Card,
+  subcomponents: { CardHeader, CardBody, CardFooter },
 } as Meta;
 
 export const Default = () => (
   <Card>
-    <CardHeader>
+    <Card.Header>
       <div className="fpo">Card Header</div>
-    </CardHeader>
-    <CardBody>
+    </Card.Header>
+    <Card.Body>
       <div className="fpo">Card Body</div>
-    </CardBody>
-    <CardFooter>
+    </Card.Body>
+    <Card.Footer>
       <div className="fpo">Card Footer</div>
-    </CardFooter>
+    </Card.Footer>
   </Card>
 );
 
 export const Inverted = () => (
   <div style={{ backgroundColor: 'black', padding: '1rem' }}>
     <Card inverted={true}>
-      <CardHeader>
+      <Card.Header>
         <div className="fpo">Card Header</div>
-      </CardHeader>
-      <CardBody>
+      </Card.Header>
+      <Card.Body>
         <div className="fpo">Card Body</div>
-      </CardBody>
-      <CardFooter>
+      </Card.Body>
+      <Card.Footer>
         <div className="fpo">Card Footer</div>
-      </CardFooter>
+      </Card.Footer>
     </Card>
   </div>
 );

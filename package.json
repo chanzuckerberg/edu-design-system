@@ -22,7 +22,7 @@
   "scripts": {
     "build": "yarn build:clean && yarn build:tokens && yarn build:css && yarn build:js && yarn copy-to-lib",
     "build:clean": "rm -rf lib/",
-    "build:tokens": "node ./style-dictionary.config.js",
+    "build:tokens": "rm -rf src/tokens-dist/ && node ./style-dictionary.config.js",
     "build:css": "postcss \"src/components/**/*.css\" --dir lib/ --base src/ --verbose",
     "build:icons": "svg-sprite-generate -d src/icons/ -o src/icons/spritemap/spritemap.svg && yarn generate-icon-types",
     "build:js": "tsc --project tsconfig.build.json",
@@ -65,10 +65,9 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.5.0",
-    "@tippyjs/react": "4.2.5",
+    "@tippyjs/react": "^4.2.6",
     "clsx": "^1.1.1",
     "downshift": "^6.1.7",
-    "nanoid": "^3.3.1",
     "react-children-by-type": "^1.1.0",
     "react-focus-lock": "^2.8.1",
     "react-portal": "^4.2.1",

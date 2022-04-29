@@ -7,17 +7,18 @@ import NotificationListItem from '../NotificationListItem';
 export default {
   title: 'Molecules/Lists/NotificationList',
   component: NotificationList,
+  subcomponents: { NotificationListItem },
 } as Meta;
 
 const Template: Story<Props> = (args) => (
   <NotificationList>
-    <NotificationListItem
+    <NotificationList.Item
       date="now"
       href="#"
       source="Outsiders on Trial: Self Awareness - Trial Brief Outline"
       title="English Teacher gave you feedback"
     />
-    <NotificationListItem
+    <NotificationList.Item
       date="now"
       href="#"
       source="Unit 3: Measuring Circles - Identifying Circumference and Diameter"

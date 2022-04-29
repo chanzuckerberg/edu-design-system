@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import styles from './Toolbar.module.css';
+import ToolbarItem from '../ToolbarItem';
 
 export interface Props {
   /**
@@ -47,3 +48,5 @@ export const Toolbar = ({
     </div>
   );
 };
+
+Toolbar.Item = ToolbarItem;

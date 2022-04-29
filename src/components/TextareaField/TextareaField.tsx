@@ -1,12 +1,6 @@
 import clsx from 'clsx';
-import { nanoid } from 'nanoid';
-import React, {
-  ChangeEventHandler,
-  MouseEventHandler,
-  ReactNode,
-  useEffect,
-  useState,
-} from 'react';
+import React, { ChangeEventHandler, MouseEventHandler, ReactNode } from 'react';
+import { useUID } from 'react-uid';
 import styles from './TextareaField.module.css';
 import Button from '../Button';
 import FieldNote from '../FieldNote';
@@ -159,15 +153,13 @@ export const TextareaField = ({
   defaultValue,
   ...other
 }: Props) => {
-  const [idVar, setId] = useState();
-  const [ariaDescribedByVar, setAriaDescribedBy] = useState();
+  const generatedId = useUID();
+  const idVar = id || generatedId;
 
-  useEffect(() => {
-    setId(id || nanoid());
-    if (fieldNote) {
-      setAriaDescribedBy(ariaDescribedBy || nanoid());
-    }
-  }, [ariaDescribedBy, fieldNote, id]);
+  const generatedAriaDescribedById = useUID();
+  const ariaDescribedByVar = fieldNote
+    ? ariaDescribedBy || generatedAriaDescribedById
+    : undefined;
 
   const componentClassName = clsx(
     styles['textarea-field'],

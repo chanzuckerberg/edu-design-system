@@ -1,5 +1,4 @@
 import clsx from 'clsx';
-import { nanoid } from 'nanoid';
 import React, {
   ReactNode,
   useRef,
@@ -8,6 +7,7 @@ import React, {
   useCallback,
 } from 'react';
 import { allByType } from 'react-children-by-type';
+import { useUIDSeed } from 'react-uid';
 import styles from './Tabs.module.css';
 import {
   L_ARROW_KEYCODE,
@@ -127,8 +127,9 @@ export const Tabs = ({
   const tabRefs = tabs().map(() => React.createRef());
 
   // we can't use the hook in an iterator like this, so generate the base and increment if needed
-  const [idVar, setId] = useState([]);
-  const [ariaLabelledByVar, setAriaLabelledBy] = useState([]);
+  const [idVar, setId] = useState<string[]>([]);
+  const [ariaLabelledByVar, setAriaLabelledBy] = useState<string[]>([]);
+  const getUID = useUIDSeed();
 
   /**
    * Get previous prop
@@ -159,16 +160,16 @@ export const Tabs = ({
   }, [prevActiveIndex, activeIndex, tabRefs]);
 
   /**
-   * Autogenerate ids on tabs if not defined
+   * Autogenerate ids on tabs if not defined.
    */
   useEffect(() => {
-    setId(tabs().map((tab) => (tab.props.id ? tab.props.id : nanoid())));
+    setId(tabs().map((tab) => (tab.props.id ? tab.props.id : getUID(tab))));
     setAriaLabelledBy(
       tabs().map((tab) =>
-        tab.props.ariaLabelledBy ? tab.props.ariaLabelledBy : nanoid(),
+        tab.props.ariaLabelledBy ? tab.props.ariaLabelledBy : getUID(tab),
       ),
     );
-  }, [tabs]);
+  }, [tabs, getUID]);
 
   /**
    * On open

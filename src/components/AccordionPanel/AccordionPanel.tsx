@@ -1,5 +1,4 @@
 import clsx from 'clsx';
-import { nanoid } from 'nanoid';
 import React, {
   useCallback,
   useEffect,
@@ -8,8 +7,9 @@ import React, {
   MutableRefObject,
   ReactNode,
 } from 'react';
+import { useUID } from 'react-uid';
 import styles from './AccordionPanel.module.css';
-import { EdsThemeColorIconNeutralStrong } from '../../tokens-dist/colors';
+import { EdsThemeColorIconNeutralStrong } from '../../tokens-dist/ts/colors';
 import Icon from '../Icon';
 
 export interface Props {
@@ -62,8 +62,12 @@ export const AccordionPanel = ({
   const panelRef = useRef() as MutableRefObject<HTMLDivElement>;
   const [heightVar, setHeight] = useState('0');
   const [isActiveVar, setIsActive] = useState(isActive ? true : false);
-  const [ariaControlsVar, setAriaControls] = useState();
-  const [ariaLabelledByVar, setAriaLabelledBy] = useState();
+
+  const generatedAriaControlsId = useUID();
+  const ariaControlsVar = ariaControls || generatedAriaControlsId;
+
+  const generatedAriaLabelledById = useUID();
+  const ariaLabelledByVar = ariaLabelledBy || generatedAriaLabelledById;
 
   /**
    * Set panel height
@@ -82,14 +86,12 @@ export const AccordionPanel = ({
   }, [isActiveVar]);
 
   useEffect(() => {
-    setAriaControls(ariaControls || nanoid());
-    setAriaLabelledBy(ariaLabelledBy || nanoid());
     setPanelHeight();
     window.addEventListener('resize', setPanelHeight); /* 2 */
     return () => {
       window.removeEventListener('resize', setPanelHeight); /* 3 */
     };
-  }, [isActiveVar, ariaLabelledBy, ariaControls, setPanelHeight]);
+  }, [setPanelHeight]);
 
   /**
    * Toggle accordion panel

@@ -1,12 +1,7 @@
 import clsx from 'clsx';
-import { nanoid } from 'nanoid';
-import React, {
-  ChangeEventHandler,
-  ReactNode,
-  useState,
-  useEffect,
-} from 'react';
+import React, { ChangeEventHandler, ReactNode, useState } from 'react';
 import { allByType } from 'react-children-by-type';
+import { useUID } from 'react-uid';
 import styles from './RadioField.module.css';
 import FieldNote from '../FieldNote';
 import Fieldset from '../Fieldset';
@@ -115,7 +110,10 @@ export const RadioField = ({
   /**
    * If the fieldNote is defined, add aria described by for accessibility
    */
-  const [ariaDescribedByVar, setAriaDescribedBy] = useState();
+  const generatedAriaDescribedById = useUID();
+  const ariaDescribedByVar = fieldNote
+    ? ariaDescribedBy || generatedAriaDescribedById
+    : undefined;
 
   /**
    * Checked function for radio field items
@@ -129,12 +127,6 @@ export const RadioField = ({
     }
     setCheckedIndex(index); /* 2 */
   }
-
-  useEffect(() => {
-    if (fieldNote) {
-      setAriaDescribedBy(ariaDescribedBy || nanoid());
-    }
-  }, [ariaDescribedBy, fieldNote]);
 
   /**
    * Pass in props from RadioField to each RadioFieldItem
@@ -182,3 +174,5 @@ export const RadioField = ({
     </Fieldset>
   );
 };
+
+RadioField.Item = RadioFieldItem;

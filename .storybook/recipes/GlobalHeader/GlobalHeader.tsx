@@ -20,6 +20,7 @@ import {
   NotificationListItem,
 } from '../../../src';
 import breakpoint from '../../../src/design-tokens/tier-1-definitions/breakpoints.js';
+import { EdsThemeColorIconNeutralDefaultInverse } from '../../../src/tokens-dist/ts/colors';
 
 export interface Props {
   /**
@@ -75,6 +76,7 @@ export const GlobalHeader = ({ className, ...other }: Props) => {
         variant="icon"
       >
         <Icon
+          color={EdsThemeColorIconNeutralDefaultInverse}
           name={isActive ? 'close' : 'menu'}
           purpose="informative"
           title={isActive ? 'Close' : 'Menu'}

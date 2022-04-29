@@ -10,6 +10,7 @@ import { Default as RadioFieldStory } from '../RadioField/RadioField.stories';
 export default {
   title: 'Atoms/Forms/Fieldset',
   component: Fieldset,
+  subcomponents: { FieldsetLegend, FieldsetItems },
 };
 
 type Args = React.ComponentProps<typeof Fieldset>;
@@ -18,14 +19,14 @@ export const Default: StoryObj<Args> = {
   args: {
     children: (
       <>
-        <FieldsetLegend text="Legend" />
-        <FieldsetItems>
+        <Fieldset.Legend text="Legend" />
+        <Fieldset.Items>
           <Checkbox label="Checkbox label 1" />
           <Checkbox label="Checkbox label 2" />
           <Checkbox label="Checkbox label 3" />
           <Checkbox label="Checkbox label 4" />
           <Checkbox label="Checkbox label 5" />
-        </FieldsetItems>
+        </Fieldset.Items>
       </>
     ),
   },
@@ -37,9 +38,9 @@ export const FieldsetLegends: StoryObj<FieldsetLegendProps> = {
   },
   render: (args) => (
     <>
-      <FieldsetLegend {...args} />
-      <FieldsetLegend {...args} optionalLabel="(optional)" />
-      <FieldsetLegend {...args} optionalLabel="(required)" />
+      <Fieldset.Legend {...args} />
+      <Fieldset.Legend {...args} optionalLabel="(optional)" />
+      <Fieldset.Legend {...args} optionalLabel="(required)" />
     </>
   ),
 };

@@ -1,5 +1,4 @@
 import clsx from 'clsx';
-import { nanoid } from 'nanoid';
 import React, {
   ReactNode,
   useRef,
@@ -8,21 +7,22 @@ import React, {
   useCallback,
 } from 'react';
 import { allByType } from 'react-children-by-type';
+import { useUIDSeed } from 'react-uid';
 import styles from './ListDetail.module.css';
 import {
   EdsThemeColorBackgroundGradeCompleteDefault,
   EdsThemeColorBackgroundGradeReviseDefault,
   EdsThemeColorBackgroundGradeStopDefault,
   EdsThemeColorBorderNeutralSubtle,
-} from '../../tokens-dist/colors';
+} from '../../tokens-dist/ts/colors';
 import {
   L_ARROW_KEYCODE,
   U_ARROW_KEYCODE,
   R_ARROW_KEYCODE,
   D_ARROW_KEYCODE,
 } from '../../util/keycodes';
-import { Icon } from '../Icon/Icon';
-import { ListDetailPanel } from '../ListDetailPanel/ListDetailPanel';
+import Icon from '../Icon';
+import ListDetailPanel from '../ListDetailPanel';
 
 export interface Props {
   /**
@@ -112,8 +112,9 @@ export const ListDetail = ({
   const listDetailItemRefs = listDetailItems().map(() => React.createRef());
 
   // we can't use the hook in an iterator like this, so generate the base and increment if needed
-  const [idVar, setId] = useState([]);
-  const [ariaLabelledByVar, setAriaLabelledBy] = useState([]);
+  const [idVar, setId] = useState<string[]>([]);
+  const [ariaLabelledByVar, setAriaLabelledBy] = useState<string[]>([]);
+  const getUID = useUIDSeed();
 
   /**
    * Get previous prop
@@ -144,22 +145,20 @@ export const ListDetail = ({
   }, [prevActiveIndex, activeIndex, listDetailItemRefs]);
 
   /**
-   * Autogenerate ids on tabs if not defined
+   * Autogenerate ids on tabs if not defined.
    */
   useEffect(() => {
     setId(
-      listDetailItems().map((listDetailItem) =>
-        listDetailItem.props.id ? listDetailItem.props.id : nanoid(),
+      listDetailItems().map((item) =>
+        item.props.id ? item.props.id : getUID(item),
       ),
     );
     setAriaLabelledBy(
-      listDetailItems().map((listDetailItem) =>
-        listDetailItem.props.ariaLabelledBy
-          ? listDetailItem.props.ariaLabelledBy
-          : nanoid(),
+      listDetailItems().map((item) =>
+        item.props.ariaLabelledBy ? item.props.ariaLabelledBy : getUID(item),
       ),
     );
-  }, [listDetailItems]);
+  }, [listDetailItems, getUID]);
 
   /**
    * On open
@@ -345,3 +344,5 @@ export const ListDetail = ({
     </div>
   );
 };
+
+ListDetail.Panel = ListDetailPanel;

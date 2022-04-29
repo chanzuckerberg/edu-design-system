@@ -1,6 +1,6 @@
 import clsx from 'clsx';
-import { nanoid } from 'nanoid';
-import React, { ReactNode, useEffect, useState } from 'react';
+import React, { ReactNode, useState } from 'react';
+import { useUID } from 'react-uid';
 import styles from './Counter.module.css';
 import Button from '../Button';
 import FieldNote from '../FieldNote';
@@ -120,17 +120,16 @@ export const Counter = ({
   const [count, setCountState] = useState(
     value !== undefined ? parseInt(value) : 1,
   );
-  const [idVar, setId] = useState();
-  const [ariaLabelledByVar, setAriaLabelledBy] = useState();
-  const [ariaDescribedByVar, setAriaDescribedBy] = useState();
+  const generatedId = useUID();
+  const idVar = id || generatedId;
 
-  useEffect(() => {
-    setId(id || nanoid());
-    setAriaLabelledBy(ariaLabelledBy || nanoid());
-    if (fieldNote) {
-      setAriaDescribedBy(ariaDescribedBy || nanoid());
-    }
-  }, [ariaDescribedBy, ariaLabelledBy, fieldNote, id]);
+  const generatedAriaLabelledById = useUID();
+  const ariaLabelledByVar = ariaLabelledBy || generatedAriaLabelledById;
+
+  const generatedAriaDescribedById = useUID();
+  const ariaDescribedByVar = fieldNote
+    ? ariaDescribedBy || generatedAriaDescribedById
+    : undefined;
 
   function onIncrease(e) {
     e.preventDefault();

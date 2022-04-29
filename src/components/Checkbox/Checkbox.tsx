@@ -25,15 +25,21 @@ export type CheckboxProps = Omit<CheckboxInputProps, 'id'> & {
 
 /**
  * ```ts
- * import {Checkbox} from "@chanzuckerberg/eds-components";
+ * import {Checkbox} from "@chanzuckerberg/eds";
  * ```
  * ```ts
- * import {CheckboxInput, CheckboxLabel} from '@chanzuckerberg/eds-components';
+ * import {CheckboxInput, CheckboxLabel} from '@chanzuckerberg/eds';
  * ```
  *
  * Checkbox control indicating if something is selected or unselected.
  *
  * Requires either a visible label or an accessible name.
+ *
+ * NOTE: usually, we would re-export subcomponents with
+ *   Checkbox.Input = CheckboxInput;
+ *   Checkbox.Label = CheckboxLabel;
+ * but this does not compile with Typescript since Checkbox itself is a
+ * forwarded ref component. Thus Input and Label must be imported separately.
  */
 export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
   (props, ref) => {

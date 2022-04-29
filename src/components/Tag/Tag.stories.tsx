@@ -19,7 +19,7 @@ export default {
 
   args: {
     text: 'Tag text',
-    variant: 'default' as const,
+    variant: 'neutral' as const,
   },
 };
 

@@ -1,0 +1,1357 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Banner /> Brand story renders snapshot 1`] = `
+<article
+  class="banner banner--brand banner--horizontal"
+>
+  <svg
+    class="icon banner__icon"
+    fill="currentColor"
+    role="img"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title
+      id="1"
+    >
+      attention
+    </title>
+    <use
+      xlink:href="test-file-stub#notifications"
+    />
+  </svg>
+  <div
+    class="banner__textAndAction"
+  >
+    <div
+      class="banner__textContent"
+    >
+      <h3
+        class="heading heading--size-h5"
+      >
+        New curriculum updates are available for one or more of your courses.
+      </h3>
+      <p
+        class="text text--body"
+      >
+        Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
+         
+        <button
+          class="clickable-style button button--link clickable-style--link clickable-style--brand"
+          href="/"
+          type="button"
+        >
+          click into the course
+        </button>
+        .
+      </p>
+    </div>
+  </div>
+</article>
+`;
+
+exports[`<Banner /> BrandDismissable story renders snapshot 1`] = `
+<article
+  class="banner banner--brand banner--horizontal banner--dismissable"
+>
+  <button
+    class="clickable-style button banner__close-btn button--icon clickable-style--lg clickable-style--icon clickable-style--brand"
+    type="button"
+  >
+    <svg
+      class="icon"
+      fill="currentColor"
+      role="img"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="13"
+      >
+        dismiss module
+      </title>
+      <use
+        xlink:href="test-file-stub#close"
+      />
+    </svg>
+  </button>
+  <svg
+    class="icon banner__icon"
+    fill="currentColor"
+    role="img"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title
+      id="14"
+    >
+      attention
+    </title>
+    <use
+      xlink:href="test-file-stub#notifications"
+    />
+  </svg>
+  <div
+    class="banner__textAndAction"
+  >
+    <div
+      class="banner__textContent"
+    >
+      <h3
+        class="heading heading--size-h5"
+      >
+        New curriculum updates are available for one or more of your courses.
+      </h3>
+      <p
+        class="text text--body"
+      >
+        Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
+         
+        <button
+          class="clickable-style button button--link clickable-style--link clickable-style--brand"
+          href="/"
+          type="button"
+        >
+          click into the course
+        </button>
+        .
+      </p>
+    </div>
+  </div>
+</article>
+`;
+
+exports[`<Banner /> BrandWithAction story renders snapshot 1`] = `
+<article
+  class="banner banner--brand banner--horizontal"
+>
+  <svg
+    class="icon banner__icon"
+    fill="currentColor"
+    role="img"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title
+      id="8"
+    >
+      attention
+    </title>
+    <use
+      xlink:href="test-file-stub#notifications"
+    />
+  </svg>
+  <div
+    class="banner__textAndAction"
+  >
+    <div
+      class="banner__textContent"
+    >
+      <h3
+        class="heading heading--size-h5"
+      >
+        New curriculum updates are available for one or more of your courses.
+      </h3>
+      <p
+        class="text text--body"
+      >
+        Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
+         
+        <button
+          class="clickable-style button button--link clickable-style--link clickable-style--brand"
+          href="/"
+          type="button"
+        >
+          click into the course
+        </button>
+        .
+      </p>
+    </div>
+    <div
+      class="banner__action"
+    >
+      <button
+        class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--brand"
+        type="button"
+      >
+        See updates
+      </button>
+    </div>
+  </div>
+</article>
+`;
+
+exports[`<Banner /> DismissableBelowContent story renders snapshot 1`] = `
+<h1
+  class="heading heading--size-h1"
+>
+  Page Title
+</h1>
+`;
+
+exports[`<Banner /> DismissableWithAction story renders snapshot 1`] = `
+<article
+  class="banner banner--brand banner--horizontal banner--dismissable"
+>
+  <button
+    class="clickable-style button banner__close-btn button--icon clickable-style--lg clickable-style--icon clickable-style--brand"
+    type="button"
+  >
+    <svg
+      class="icon"
+      fill="currentColor"
+      role="img"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="23"
+      >
+        dismiss module
+      </title>
+      <use
+        xlink:href="test-file-stub#close"
+      />
+    </svg>
+  </button>
+  <svg
+    class="icon banner__icon"
+    fill="currentColor"
+    role="img"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title
+      id="24"
+    >
+      attention
+    </title>
+    <use
+      xlink:href="test-file-stub#notifications"
+    />
+  </svg>
+  <div
+    class="banner__textAndAction"
+  >
+    <div
+      class="banner__textContent"
+    >
+      <h3
+        class="heading heading--size-h5"
+      >
+        New curriculum updates are available for one or more of your courses.
+      </h3>
+      <p
+        class="text text--body"
+      >
+        Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
+         
+        <button
+          class="clickable-style button button--link clickable-style--link clickable-style--brand"
+          href="/"
+          type="button"
+        >
+          click into the course
+        </button>
+        .
+      </p>
+    </div>
+    <div
+      class="banner__action"
+    >
+      <button
+        class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--brand"
+        type="button"
+      >
+        See updates
+      </button>
+    </div>
+  </div>
+</article>
+`;
+
+exports[`<Banner /> Error story renders snapshot 1`] = `
+<article
+  class="banner banner--error banner--horizontal"
+>
+  <svg
+    class="icon banner__icon"
+    fill="currentColor"
+    role="img"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title
+      id="5"
+    >
+      error
+    </title>
+    <use
+      xlink:href="test-file-stub#dangerous"
+    />
+  </svg>
+  <div
+    class="banner__textAndAction"
+  >
+    <div
+      class="banner__textContent"
+    >
+      <h3
+        class="heading heading--size-h5"
+      >
+        New curriculum updates are available for one or more of your courses.
+      </h3>
+      <p
+        class="text text--body"
+      >
+        Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
+         
+        <button
+          class="clickable-style button button--link clickable-style--link clickable-style--error"
+          href="/"
+          type="button"
+        >
+          click into the course
+        </button>
+        .
+      </p>
+    </div>
+  </div>
+</article>
+`;
+
+exports[`<Banner /> ErrorDismissable story renders snapshot 1`] = `
+<article
+  class="banner banner--error banner--horizontal banner--dismissable"
+>
+  <button
+    class="clickable-style button banner__close-btn button--icon clickable-style--lg clickable-style--icon clickable-style--error"
+    type="button"
+  >
+    <svg
+      class="icon"
+      fill="currentColor"
+      role="img"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="21"
+      >
+        dismiss module
+      </title>
+      <use
+        xlink:href="test-file-stub#close"
+      />
+    </svg>
+  </button>
+  <svg
+    class="icon banner__icon"
+    fill="currentColor"
+    role="img"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title
+      id="22"
+    >
+      error
+    </title>
+    <use
+      xlink:href="test-file-stub#dangerous"
+    />
+  </svg>
+  <div
+    class="banner__textAndAction"
+  >
+    <div
+      class="banner__textContent"
+    >
+      <h3
+        class="heading heading--size-h5"
+      >
+        New curriculum updates are available for one or more of your courses.
+      </h3>
+      <p
+        class="text text--body"
+      >
+        Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
+         
+        <button
+          class="clickable-style button button--link clickable-style--link clickable-style--error"
+          href="/"
+          type="button"
+        >
+          click into the course
+        </button>
+        .
+      </p>
+    </div>
+  </div>
+</article>
+`;
+
+exports[`<Banner /> ErrorWithAction story renders snapshot 1`] = `
+<article
+  class="banner banner--error banner--horizontal"
+>
+  <svg
+    class="icon banner__icon"
+    fill="currentColor"
+    role="img"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title
+      id="12"
+    >
+      error
+    </title>
+    <use
+      xlink:href="test-file-stub#dangerous"
+    />
+  </svg>
+  <div
+    class="banner__textAndAction"
+  >
+    <div
+      class="banner__textContent"
+    >
+      <h3
+        class="heading heading--size-h5"
+      >
+        New curriculum updates are available for one or more of your courses.
+      </h3>
+      <p
+        class="text text--body"
+      >
+        Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
+         
+        <button
+          class="clickable-style button button--link clickable-style--link clickable-style--error"
+          href="/"
+          type="button"
+        >
+          click into the course
+        </button>
+        .
+      </p>
+    </div>
+    <div
+      class="banner__action"
+    >
+      <button
+        class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--error"
+        type="button"
+      >
+        See updates
+      </button>
+    </div>
+  </div>
+</article>
+`;
+
+exports[`<Banner /> Flat story renders snapshot 1`] = `
+<article
+  class="banner banner--brand banner--horizontal banner--flat"
+>
+  <svg
+    class="icon banner__icon"
+    fill="currentColor"
+    role="img"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title
+      id="33"
+    >
+      attention
+    </title>
+    <use
+      xlink:href="test-file-stub#notifications"
+    />
+  </svg>
+  <div
+    class="banner__textAndAction"
+  >
+    <div
+      class="banner__textContent"
+    >
+      <h3
+        class="heading heading--size-h5"
+      >
+        New curriculum updates are available for one or more of your courses.
+      </h3>
+      <p
+        class="text text--body"
+      >
+        Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
+         
+        <button
+          class="clickable-style button button--link clickable-style--link clickable-style--brand"
+          href="/"
+          type="button"
+        >
+          click into the course
+        </button>
+        .
+      </p>
+    </div>
+  </div>
+</article>
+`;
+
+exports[`<Banner /> Neutral story renders snapshot 1`] = `
+<article
+  class="banner banner--neutral banner--horizontal"
+>
+  <svg
+    class="icon banner__icon"
+    fill="currentColor"
+    role="img"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title
+      id="2"
+    >
+      notice
+    </title>
+    <use
+      xlink:href="test-file-stub#forum"
+    />
+  </svg>
+  <div
+    class="banner__textAndAction"
+  >
+    <div
+      class="banner__textContent"
+    >
+      <h3
+        class="heading heading--size-h5"
+      >
+        New curriculum updates are available for one or more of your courses.
+      </h3>
+      <p
+        class="text text--body"
+      >
+        Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
+         
+        <button
+          class="clickable-style button button--link clickable-style--link clickable-style--neutral"
+          href="/"
+          type="button"
+        >
+          click into the course
+        </button>
+        .
+      </p>
+    </div>
+  </div>
+</article>
+`;
+
+exports[`<Banner /> NeutralDismissable story renders snapshot 1`] = `
+<article
+  class="banner banner--neutral banner--horizontal banner--dismissable"
+>
+  <button
+    class="clickable-style button banner__close-btn button--icon clickable-style--lg clickable-style--icon clickable-style--neutral"
+    type="button"
+  >
+    <svg
+      class="icon"
+      fill="currentColor"
+      role="img"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="15"
+      >
+        dismiss module
+      </title>
+      <use
+        xlink:href="test-file-stub#close"
+      />
+    </svg>
+  </button>
+  <svg
+    class="icon banner__icon"
+    fill="currentColor"
+    role="img"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title
+      id="16"
+    >
+      notice
+    </title>
+    <use
+      xlink:href="test-file-stub#forum"
+    />
+  </svg>
+  <div
+    class="banner__textAndAction"
+  >
+    <div
+      class="banner__textContent"
+    >
+      <h3
+        class="heading heading--size-h5"
+      >
+        New curriculum updates are available for one or more of your courses.
+      </h3>
+      <p
+        class="text text--body"
+      >
+        Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
+         
+        <button
+          class="clickable-style button button--link clickable-style--link clickable-style--neutral"
+          href="/"
+          type="button"
+        >
+          click into the course
+        </button>
+        .
+      </p>
+    </div>
+  </div>
+</article>
+`;
+
+exports[`<Banner /> NeutralWithAction story renders snapshot 1`] = `
+<article
+  class="banner banner--neutral banner--horizontal"
+>
+  <svg
+    class="icon banner__icon"
+    fill="currentColor"
+    role="img"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title
+      id="9"
+    >
+      notice
+    </title>
+    <use
+      xlink:href="test-file-stub#forum"
+    />
+  </svg>
+  <div
+    class="banner__textAndAction"
+  >
+    <div
+      class="banner__textContent"
+    >
+      <h3
+        class="heading heading--size-h5"
+      >
+        New curriculum updates are available for one or more of your courses.
+      </h3>
+      <p
+        class="text text--body"
+      >
+        Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
+         
+        <button
+          class="clickable-style button button--link clickable-style--link clickable-style--neutral"
+          href="/"
+          type="button"
+        >
+          click into the course
+        </button>
+        .
+      </p>
+    </div>
+    <div
+      class="banner__action"
+    >
+      <button
+        class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--neutral"
+        type="button"
+      >
+        See updates
+      </button>
+    </div>
+  </div>
+</article>
+`;
+
+exports[`<Banner /> NoDescription story renders snapshot 1`] = `
+<article
+  class="banner banner--brand banner--horizontal"
+>
+  <svg
+    class="icon banner__icon"
+    fill="currentColor"
+    role="img"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title
+      id="6"
+    >
+      attention
+    </title>
+    <use
+      xlink:href="test-file-stub#notifications"
+    />
+  </svg>
+  <div
+    class="banner__textAndAction"
+  >
+    <div
+      class="banner__textContent"
+    >
+      <h3
+        class="heading heading--size-h5"
+      >
+        New curriculum updates are available for one or more of your courses.
+      </h3>
+    </div>
+  </div>
+</article>
+`;
+
+exports[`<Banner /> NoTitle story renders snapshot 1`] = `
+<article
+  class="banner banner--brand banner--horizontal"
+>
+  <svg
+    class="icon banner__icon"
+    fill="currentColor"
+    role="img"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title
+      id="7"
+    >
+      attention
+    </title>
+    <use
+      xlink:href="test-file-stub#notifications"
+    />
+  </svg>
+  <div
+    class="banner__textAndAction"
+  >
+    <div
+      class="banner__textContent"
+    >
+      <p
+        class="text text--body"
+      >
+        Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
+         
+        <button
+          class="clickable-style button button--link clickable-style--link clickable-style--brand"
+          href="/"
+          type="button"
+        >
+          click into the course
+        </button>
+        .
+      </p>
+    </div>
+  </div>
+</article>
+`;
+
+exports[`<Banner /> Success story renders snapshot 1`] = `
+<article
+  class="banner banner--success banner--horizontal"
+>
+  <svg
+    class="icon banner__icon"
+    fill="currentColor"
+    role="img"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title
+      id="3"
+    >
+      success
+    </title>
+    <use
+      xlink:href="test-file-stub#check-circle"
+    />
+  </svg>
+  <div
+    class="banner__textAndAction"
+  >
+    <div
+      class="banner__textContent"
+    >
+      <h3
+        class="heading heading--size-h5"
+      >
+        New curriculum updates are available for one or more of your courses.
+      </h3>
+      <p
+        class="text text--body"
+      >
+        Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
+         
+        <button
+          class="clickable-style button button--link clickable-style--link clickable-style--success"
+          href="/"
+          type="button"
+        >
+          click into the course
+        </button>
+        .
+      </p>
+    </div>
+  </div>
+</article>
+`;
+
+exports[`<Banner /> SuccessDismissable story renders snapshot 1`] = `
+<article
+  class="banner banner--success banner--horizontal banner--dismissable"
+>
+  <button
+    class="clickable-style button banner__close-btn button--icon clickable-style--lg clickable-style--icon clickable-style--success"
+    type="button"
+  >
+    <svg
+      class="icon"
+      fill="currentColor"
+      role="img"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="17"
+      >
+        dismiss module
+      </title>
+      <use
+        xlink:href="test-file-stub#close"
+      />
+    </svg>
+  </button>
+  <svg
+    class="icon banner__icon"
+    fill="currentColor"
+    role="img"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title
+      id="18"
+    >
+      success
+    </title>
+    <use
+      xlink:href="test-file-stub#check-circle"
+    />
+  </svg>
+  <div
+    class="banner__textAndAction"
+  >
+    <div
+      class="banner__textContent"
+    >
+      <h3
+        class="heading heading--size-h5"
+      >
+        New curriculum updates are available for one or more of your courses.
+      </h3>
+      <p
+        class="text text--body"
+      >
+        Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
+         
+        <button
+          class="clickable-style button button--link clickable-style--link clickable-style--success"
+          href="/"
+          type="button"
+        >
+          click into the course
+        </button>
+        .
+      </p>
+    </div>
+  </div>
+</article>
+`;
+
+exports[`<Banner /> SuccessWithAction story renders snapshot 1`] = `
+<article
+  class="banner banner--success banner--horizontal"
+>
+  <svg
+    class="icon banner__icon"
+    fill="currentColor"
+    role="img"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title
+      id="10"
+    >
+      success
+    </title>
+    <use
+      xlink:href="test-file-stub#check-circle"
+    />
+  </svg>
+  <div
+    class="banner__textAndAction"
+  >
+    <div
+      class="banner__textContent"
+    >
+      <h3
+        class="heading heading--size-h5"
+      >
+        New curriculum updates are available for one or more of your courses.
+      </h3>
+      <p
+        class="text text--body"
+      >
+        Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
+         
+        <button
+          class="clickable-style button button--link clickable-style--link clickable-style--success"
+          href="/"
+          type="button"
+        >
+          click into the course
+        </button>
+        .
+      </p>
+    </div>
+    <div
+      class="banner__action"
+    >
+      <button
+        class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--success"
+        type="button"
+      >
+        See updates
+      </button>
+    </div>
+  </div>
+</article>
+`;
+
+exports[`<Banner /> Vertical story renders snapshot 1`] = `
+<article
+  class="banner banner--brand"
+>
+  <svg
+    class="icon banner__icon"
+    fill="currentColor"
+    role="img"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title
+      id="27"
+    >
+      attention
+    </title>
+    <use
+      xlink:href="test-file-stub#notifications"
+    />
+  </svg>
+  <div
+    class="banner__textAndAction"
+  >
+    <div
+      class="banner__textContent"
+    >
+      <h3
+        class="heading heading--size-h5"
+      >
+        New curriculum updates are available for one or more of your courses.
+      </h3>
+      <p
+        class="text text--body"
+      >
+        Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
+         
+        <button
+          class="clickable-style button button--link clickable-style--link clickable-style--brand"
+          href="/"
+          type="button"
+        >
+          click into the course
+        </button>
+        .
+      </p>
+    </div>
+  </div>
+</article>
+`;
+
+exports[`<Banner /> VerticalDismissable story renders snapshot 1`] = `
+<article
+  class="banner banner--brand banner--dismissable"
+>
+  <button
+    class="clickable-style button banner__close-btn button--icon clickable-style--lg clickable-style--icon clickable-style--brand"
+    type="button"
+  >
+    <svg
+      class="icon"
+      fill="currentColor"
+      role="img"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="28"
+      >
+        dismiss module
+      </title>
+      <use
+        xlink:href="test-file-stub#close"
+      />
+    </svg>
+  </button>
+  <svg
+    class="icon banner__icon"
+    fill="currentColor"
+    role="img"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title
+      id="29"
+    >
+      attention
+    </title>
+    <use
+      xlink:href="test-file-stub#notifications"
+    />
+  </svg>
+  <div
+    class="banner__textAndAction"
+  >
+    <div
+      class="banner__textContent"
+    >
+      <h3
+        class="heading heading--size-h5"
+      >
+        New curriculum updates are available for one or more of your courses.
+      </h3>
+      <p
+        class="text text--body"
+      >
+        Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
+         
+        <button
+          class="clickable-style button button--link clickable-style--link clickable-style--brand"
+          href="/"
+          type="button"
+        >
+          click into the course
+        </button>
+        .
+      </p>
+    </div>
+  </div>
+</article>
+`;
+
+exports[`<Banner /> VerticalDismissableWithAction story renders snapshot 1`] = `
+<article
+  class="banner banner--brand banner--dismissable"
+>
+  <button
+    class="clickable-style button banner__close-btn button--icon clickable-style--lg clickable-style--icon clickable-style--brand"
+    type="button"
+  >
+    <svg
+      class="icon"
+      fill="currentColor"
+      role="img"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="31"
+      >
+        dismiss module
+      </title>
+      <use
+        xlink:href="test-file-stub#close"
+      />
+    </svg>
+  </button>
+  <svg
+    class="icon banner__icon"
+    fill="currentColor"
+    role="img"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title
+      id="32"
+    >
+      attention
+    </title>
+    <use
+      xlink:href="test-file-stub#notifications"
+    />
+  </svg>
+  <div
+    class="banner__textAndAction"
+  >
+    <div
+      class="banner__textContent"
+    >
+      <h3
+        class="heading heading--size-h5"
+      >
+        New curriculum updates are available for one or more of your courses.
+      </h3>
+      <p
+        class="text text--body"
+      >
+        Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
+         
+        <button
+          class="clickable-style button button--link clickable-style--link clickable-style--brand"
+          href="/"
+          type="button"
+        >
+          click into the course
+        </button>
+        .
+      </p>
+    </div>
+    <div
+      class="banner__action"
+    >
+      <button
+        class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--brand"
+        type="button"
+      >
+        See updates
+      </button>
+    </div>
+  </div>
+</article>
+`;
+
+exports[`<Banner /> VerticalWithAction story renders snapshot 1`] = `
+<article
+  class="banner banner--brand"
+>
+  <svg
+    class="icon banner__icon"
+    fill="currentColor"
+    role="img"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title
+      id="30"
+    >
+      attention
+    </title>
+    <use
+      xlink:href="test-file-stub#notifications"
+    />
+  </svg>
+  <div
+    class="banner__textAndAction"
+  >
+    <div
+      class="banner__textContent"
+    >
+      <h3
+        class="heading heading--size-h5"
+      >
+        New curriculum updates are available for one or more of your courses.
+      </h3>
+      <p
+        class="text text--body"
+      >
+        Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
+         
+        <button
+          class="clickable-style button button--link clickable-style--link clickable-style--brand"
+          href="/"
+          type="button"
+        >
+          click into the course
+        </button>
+        .
+      </p>
+    </div>
+    <div
+      class="banner__action"
+    >
+      <button
+        class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--brand"
+        type="button"
+      >
+        See updates
+      </button>
+    </div>
+  </div>
+</article>
+`;
+
+exports[`<Banner /> Warning story renders snapshot 1`] = `
+<article
+  class="banner banner--warning banner--horizontal"
+>
+  <svg
+    class="icon banner__icon"
+    fill="currentColor"
+    role="img"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title
+      id="4"
+    >
+      warning
+    </title>
+    <use
+      xlink:href="test-file-stub#warning"
+    />
+  </svg>
+  <div
+    class="banner__textAndAction"
+  >
+    <div
+      class="banner__textContent"
+    >
+      <h3
+        class="heading heading--size-h5"
+      >
+        New curriculum updates are available for one or more of your courses.
+      </h3>
+      <p
+        class="text text--body"
+      >
+        Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
+         
+        <button
+          class="clickable-style button button--link clickable-style--link clickable-style--warning"
+          href="/"
+          type="button"
+        >
+          click into the course
+        </button>
+        .
+      </p>
+    </div>
+  </div>
+</article>
+`;
+
+exports[`<Banner /> WarningDismissable story renders snapshot 1`] = `
+<article
+  class="banner banner--warning banner--horizontal banner--dismissable"
+>
+  <button
+    class="clickable-style button banner__close-btn button--icon clickable-style--lg clickable-style--icon clickable-style--warning"
+    type="button"
+  >
+    <svg
+      class="icon"
+      fill="currentColor"
+      role="img"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="19"
+      >
+        dismiss module
+      </title>
+      <use
+        xlink:href="test-file-stub#close"
+      />
+    </svg>
+  </button>
+  <svg
+    class="icon banner__icon"
+    fill="currentColor"
+    role="img"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title
+      id="20"
+    >
+      warning
+    </title>
+    <use
+      xlink:href="test-file-stub#warning"
+    />
+  </svg>
+  <div
+    class="banner__textAndAction"
+  >
+    <div
+      class="banner__textContent"
+    >
+      <h3
+        class="heading heading--size-h5"
+      >
+        New curriculum updates are available for one or more of your courses.
+      </h3>
+      <p
+        class="text text--body"
+      >
+        Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
+         
+        <button
+          class="clickable-style button button--link clickable-style--link clickable-style--warning"
+          href="/"
+          type="button"
+        >
+          click into the course
+        </button>
+        .
+      </p>
+    </div>
+  </div>
+</article>
+`;
+
+exports[`<Banner /> WarningWithAction story renders snapshot 1`] = `
+<article
+  class="banner banner--warning banner--horizontal"
+>
+  <svg
+    class="icon banner__icon"
+    fill="currentColor"
+    role="img"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title
+      id="11"
+    >
+      warning
+    </title>
+    <use
+      xlink:href="test-file-stub#warning"
+    />
+  </svg>
+  <div
+    class="banner__textAndAction"
+  >
+    <div
+      class="banner__textContent"
+    >
+      <h3
+        class="heading heading--size-h5"
+      >
+        New curriculum updates are available for one or more of your courses.
+      </h3>
+      <p
+        class="text text--body"
+      >
+        Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
+         
+        <button
+          class="clickable-style button button--link clickable-style--link clickable-style--warning"
+          href="/"
+          type="button"
+        >
+          click into the course
+        </button>
+        .
+      </p>
+    </div>
+    <div
+      class="banner__action"
+    >
+      <button
+        class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--warning"
+        type="button"
+      >
+        See updates
+      </button>
+    </div>
+  </div>
+</article>
+`;

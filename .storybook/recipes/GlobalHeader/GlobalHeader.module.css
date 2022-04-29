@@ -1,13 +1,15 @@
+@import '../../../src/design-tokens/mixins.css';
+
 /*------------------------------------*\
     #GLOBAL HEADER
 \*------------------------------------*/
-
 /**
- * 1) 
+ * 1) Global navigation bar of site
  */
 .global-header {
   position: relative;
   margin-bottom: var(--eds-size-4);
+  padding-left: var(--eds-size-1);
 
   @media all and (min-width: $eds-bp-xl) {
     position: fixed;
@@ -15,6 +17,7 @@
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 0;
+    padding-left: var(--eds-size-2-and-half);
     transition: width var(--eds-anim-move-quick) var(--eds-anim-ease);
   }
 }
@@ -39,13 +42,19 @@
  *    can be exposed
  */
 .global-header__menu-button.global-header__menu-button {
-  padding: 0;
+  padding: var(--eds-size-half);
   color: var(--eds-theme-color-text-neutral-default-inverse);
 
   &:hover,
   &:focus {
-    background-color: transparent; /* TODO */
+    background: var(
+      --eds-theme-color-button-primary-brand-background-hover
+    ); /* TODO */
     border-color: transparent; /* TODO */
+  }
+
+  &:focus-visible {
+    @mixin focusInverted;
   }
 
   @media all and (min-width: $eds-bp-xl) {

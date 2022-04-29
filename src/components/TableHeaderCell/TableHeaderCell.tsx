@@ -82,7 +82,7 @@ export const TableHeaderCell = ({
       scope={scope}
       {...other}
     >
-      <Button onClick={onClick} status="neutral" variant="secondary">
+      <Button onClick={onClick} status="neutral">
         {text}
         <Icon name="arrow-narrow-down" purpose="decorative" />
       </Button>

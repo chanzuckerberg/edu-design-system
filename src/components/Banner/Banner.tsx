@@ -6,6 +6,8 @@ import Heading, { HeadingElement } from '../Heading';
 import Icon from '../Icon';
 import Text from '../Text';
 
+export type Variant = 'brand' | 'neutral' | 'success' | 'warning' | 'error';
+
 export interface Props {
   /**
    * A button or link that's placed in the banner separately from the main content.
@@ -64,7 +66,7 @@ export interface Props {
    * - **warning** - results in a yellow banner
    * - **error** - results in a red banner
    */
-  variant?: 'brand' | 'neutral' | 'success' | 'warning' | 'error';
+  variant?: Variant;
 }
 
 const variantToIconAssetsMap: {
@@ -97,7 +99,7 @@ const variantToIconAssetsMap: {
 
 /**
  * ```ts
- * import {Banner} from "@chanzuckerberg/eds-components";
+ * import {Banner} from "@chanzuckerberg/eds";
  * ```
  *
  * A banner used to provide and highlight information to a user or ask for a decision or action.
@@ -173,6 +175,7 @@ export const Banner = ({
         <Button
           className={styles['banner__close-btn']}
           onClick={handleDismiss}
+          status={variant}
           variant="icon"
         >
           <Icon name={'close'} purpose="informative" title={'dismiss module'} />

@@ -19,6 +19,10 @@ export type FieldsetItemsProps = {
 };
 
 /**
+ * ```ts
+ * import {FieldsetItems} from "@chanzuckerberg/eds";
+ * ```
+ *
  * Helper sub-component for styling the control elements in the component.
  */
 export const FieldsetItems = ({

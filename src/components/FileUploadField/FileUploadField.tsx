@@ -1,6 +1,6 @@
 import clsx from 'clsx';
-import { nanoid } from 'nanoid';
-import React, { ReactNode, useState, useEffect } from 'react';
+import React, { ReactNode, useState } from 'react';
+import { useUID, useUIDSeed } from 'react-uid';
 import styles from './FileUploadField.module.css';
 import Button from '../Button/';
 import FieldNote from '../FieldNote';
@@ -175,15 +175,13 @@ export const FileUploadField = ({
   const [isDragging, setIsDragging] = useState(false);
   const [fieldNoteState, setFieldNoteState] = useState(fieldNote);
 
-  const [idVar, setId] = useState();
-  const [ariaDescribedByVar, setAriaDescribedBy] = useState();
+  const generatedId = useUID();
+  const idVar = id || generatedId;
 
-  useEffect(() => {
-    setId(id || nanoid());
-    if (fieldNote) {
-      setAriaDescribedBy(ariaDescribedBy || nanoid());
-    }
-  }, [ariaDescribedBy, fieldNote, id]);
+  const generatedAriaDescribedById = useUID();
+  const ariaDescribedByVar = fieldNote
+    ? ariaDescribedBy || generatedAriaDescribedById
+    : undefined;
 
   function formatBytes(bytes, decimals) {
     if (bytes === 0) return '0 Bytes';
@@ -219,9 +217,10 @@ export const FileUploadField = ({
     }
   }
 
-  function onFileInputChange(e) {
+  function onFileInputChange(e, getUID) {
     const fileObjects = e.target.files;
     if (!fileObjects) return;
+    const fileArray = Array.from(fileObjects);
 
     /*
      * 1. Copy existing files from state to a new variable
@@ -236,14 +235,14 @@ export const FileUploadField = ({
     let isError;
 
     /* 2 */
-    fileObjects.forEach((file) => {
+    fileArray.forEach((file: File) => {
       if (maxFileSize && file.size >= maxFileSize) {
         setFieldNoteState(maxFileSizeErrorText);
         setIsErrorState(true);
       } else {
         files.push({
           fileObject: file,
-          id: nanoid(),
+          id: getUID(file),
         });
         setIsErrorState(isError);
       }
@@ -293,6 +292,7 @@ export const FileUploadField = ({
   }
 
   const isDisabled = disabled || (filesState && filesState >= maxFiles);
+  const getUID = useUIDSeed();
 
   const componentClassName = clsx(
     styles['file-upload-field'],
@@ -337,7 +337,7 @@ export const FileUploadField = ({
             isError={isError}
             multiple={multiple}
             name={name}
-            onChange={(e) => onFileInputChange(e)}
+            onChange={(e) => onFileInputChange(e, getUID)}
             placeholder={placeholder}
             readOnly={readOnly}
             required={required}

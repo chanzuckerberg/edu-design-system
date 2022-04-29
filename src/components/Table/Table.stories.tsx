@@ -10,6 +10,7 @@ import TableRow from '../TableRow';
 export default {
   title: 'Organisms/Tables/Table',
   component: Table,
+  subcomponents: { TableBody, TableCell, TableHeader, TableRow },
 } as Meta;
 
 // const headerTableCellWrapColumns = [
@@ -81,31 +82,31 @@ const tableRows = [
 
 const Template: Story<Props> = (args) => (
   <Table {...args}>
-    <TableHeader>
-      <TableRow>
+    <Table.Header>
+      <Table.Row>
         {tableColumns.map((item, index) => {
           return (
-            <TableCell as="th" key={'table-header-row-' + index}>
+            <Table.Cell as="th" key={'table-header-row-' + index}>
               {item.title}
-            </TableCell>
+            </Table.Cell>
           );
         })}
-      </TableRow>
-    </TableHeader>
+      </Table.Row>
+    </Table.Header>
 
-    <TableBody>
+    <Table.Body>
       {tableRows.map((item, index) => {
         return (
-          <TableRow key={'table-row-' + index}>
-            <TableCell>{item.value1}</TableCell>
-            <TableCell>{item.value2}</TableCell>
-            <TableCell>{item.value3}</TableCell>
-            <TableCell>{item.value4}</TableCell>
-            <TableCell>{item.value5}</TableCell>
-          </TableRow>
+          <Table.Row key={'table-row-' + index}>
+            <Table.Cell>{item.value1}</Table.Cell>
+            <Table.Cell>{item.value2}</Table.Cell>
+            <Table.Cell>{item.value3}</Table.Cell>
+            <Table.Cell>{item.value4}</Table.Cell>
+            <Table.Cell>{item.value5}</Table.Cell>
+          </Table.Row>
         );
       })}
-    </TableBody>
+    </Table.Body>
   </Table>
 );
 
@@ -124,80 +125,80 @@ Overflow.args = {
 
 export const AlignTableCellContentCenter = () => (
   <Table caption="This is a table caption and it is required">
-    <TableHeader>
-      <TableRow>
+    <Table.Header>
+      <Table.Row>
         {tableColumns.map(function (item, index) {
           return (
-            <TableCell align="center" as="th" key={'table-cell-' + index}>
+            <Table.Cell align="center" as="th" key={'table-cell-' + index}>
               {item.title}
-            </TableCell>
+            </Table.Cell>
           );
         })}
-      </TableRow>
-    </TableHeader>
+      </Table.Row>
+    </Table.Header>
 
-    <TableBody>
+    <Table.Body>
       {tableRows.map(function (item, index) {
         return (
-          <TableRow key={'table-row-' + index}>
-            <TableCell align="center" data-label={tableColumns[0].title}>
+          <Table.Row key={'table-row-' + index}>
+            <Table.Cell align="center" data-label={tableColumns[0].title}>
               {item.value1}
-            </TableCell>
-            <TableCell align="center" data-label={tableColumns[1].title}>
+            </Table.Cell>
+            <Table.Cell align="center" data-label={tableColumns[1].title}>
               {item.value2}
-            </TableCell>
-            <TableCell align="center" data-label={tableColumns[2].title}>
+            </Table.Cell>
+            <Table.Cell align="center" data-label={tableColumns[2].title}>
               {item.value3}
-            </TableCell>
-            <TableCell align="center" data-label={tableColumns[3].title}>
+            </Table.Cell>
+            <Table.Cell align="center" data-label={tableColumns[3].title}>
               {item.value4}
-            </TableCell>
-            <TableCell align="center" data-label={tableColumns[4].title}>
+            </Table.Cell>
+            <Table.Cell align="center" data-label={tableColumns[4].title}>
               {item.value5}
-            </TableCell>
-          </TableRow>
+            </Table.Cell>
+          </Table.Row>
         );
       })}
-    </TableBody>
+    </Table.Body>
   </Table>
 );
 
 export const AlignTableCellContentRight = () => (
   <Table caption="This is a table caption and it is required">
-    <TableHeader>
-      <TableRow>
+    <Table.Header>
+      <Table.Row>
         {tableColumns.map(function (item, index) {
           return (
-            <TableCell align="right" as="th" key={'table-cell-' + index}>
+            <Table.Cell align="right" as="th" key={'table-cell-' + index}>
               {item.title}
-            </TableCell>
+            </Table.Cell>
           );
         })}
-      </TableRow>
-    </TableHeader>
+      </Table.Row>
+    </Table.Header>
 
-    <TableBody>
+    <Table.Body>
       {tableRows.map(function (item, index) {
         return (
-          <TableRow key={'table-row-' + index}>
-            <TableCell align="right" data-label={tableColumns[0].title}>
+          <Table.Row key={'table-row-' + index}>
+            <Table.Cell align="right" data-label={tableColumns[0].title}>
               {item.value1}
-            </TableCell>
-            <TableCell align="right" data-label={tableColumns[1].title}>
+            </Table.Cell>
+            <Table.Cell align="right" data-label={tableColumns[1].title}>
               {item.value2}
-            </TableCell>
-            <TableCell align="right" data-label={tableColumns[2].title}>
+            </Table.Cell>
+            <Table.Cell align="right" data-label={tableColumns[2].title}>
               {item.value3}
-            </TableCell>
-            <TableCell align="right" data-label={tableColumns[3].title}>
+            </Table.Cell>
+            <Table.Cell align="right" data-label={tableColumns[3].title}>
               {item.value4}
-            </TableCell>
-            <TableCell align="right" data-label={tableColumns[4].title}>
+            </Table.Cell>
+            <Table.Cell align="right" data-label={tableColumns[4].title}>
               {item.value5}
-            </TableCell>
-          </TableRow>
+            </Table.Cell>
+          </Table.Row>
         );
       })}
-    </TableBody>
+    </Table.Body>
   </Table>
 );

@@ -245,7 +245,9 @@ Use:
 Use:
 
 ```tsx
-<Icon color={EdsThemeColorUtilitySuccessForeground} />
+import { EdsThemeColorUtilitySuccessForeground } from 'src/tokens-dist/ts/colors';
+
+<Icon color={EdsThemeColorUtilitySuccessForeground} />;
 ```
 
 ## Utility classes <a name="utility-classes"></a>
@@ -429,7 +431,13 @@ By default, we err towards more centralized control over the component architect
 - Compound components are composed of a parent component (e.g. `<Card>`) and children component (e.g. `<CardHeader>` and `<CardFooter>`).
 - Compound component children names must always begin with the parent name. A parent component `Table` means that all child components related to it must begin with `Table` (such as `TableBody`, `TableRow` and `TableCell`).
 - Compound component children have an associated `.module.css` file, and child component styles will contain styles relevant to the subcomponent element (e.g. `AccordionPanel.module.css` would begin with `.accordion__panel { ... }`).
-- Compound components never have an associated `.stories.js` file as they rely on the parent component's stories to render properly.
+- Compound components never have an associated `.stories.tsx` file as they rely on the parent component's stories to render properly.
+- Compound components should be re-exported from their parent component file for easier usage. For example, at the bottom of `Card.tsx`, add the lines:
+
+```tsx
+Card.Header = CardHeader;
+Card.Footer = CardFooter;
+```
 
 ### Prop Naming conventions
 
@@ -473,7 +481,40 @@ EDS adheres to the following API naming conventions:
 
 # Accessibility <a name="accessibility"></a>
 
+## Generating IDs
+
+ID attributes used for accessibility (e.g. associating `<label>` and `<input>` elements) should be unique and stable.
+
+We currently use [react-uid](https://www.npmjs.com/package/react-uid) hooks for ID generation. To ensure stable results, they cannot be invoked within conditionals or callbacks.
+
+- `useUID()` is the most common usage.
+
+```tsx
+const generatedId = useUID();
+```
+
+- `useUIDSeed()` generates a stable seed generator for use in iterators.
+
+```tsx
+const getUID = useUIDSeed();
+// you should either pass an object to getUID:
+items.forEach((item) => {
+  const generatedId = getUID(item);
+});
+
+// or pass a constructed string:
+items.forEach((item, index) => {
+  const generatedId = getUID(`item-${index}-aria-labelledby`);
+});
+
+// interpolating an object into a string will NOT work:
+// items.forEach((item) => {
+//   const generatedId = getUID(`${item}-id`);
+// });
+```
+
 ## Tools
-- [eslint-plugin-jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y) evaluates static code for a11y issues. Currently this plugin is configured with the "recommended" settings, which generate linting errors for most rule violations. See [this chart](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y#rule-strictness-in-different-modes) for descriptions of each rule. 
+
+- [eslint-plugin-jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y) evaluates static code for a11y issues. Currently this plugin is configured with the "recommended" settings, which generate linting errors for most rule violations. See [this chart](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y#rule-strictness-in-different-modes) for descriptions of each rule.
 
 - The plugin is currently unable to map a custom component to the HTML tag that it renders (i.e. the `<Header>` component renders content wrapped in `<header>` tags, but the plugin does not automatically apply header rules to a `<Header>` component.) [Check the status](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/pull/844) on work is being done on addressing this issue.

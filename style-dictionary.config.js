@@ -18,7 +18,7 @@ const EDSStyleDictionary = StyleDictionary.extend({
       files: [
         {
           format: 'css/variables',
-          destination: 'tokens-dist/variables.css',
+          destination: 'tokens-dist/css/variables.css',
           options: {
             showFileHeader: false,
           },
@@ -26,7 +26,7 @@ const EDSStyleDictionary = StyleDictionary.extend({
         {
           format: 'json/nested-css-variables',
           // useful for tailwind configs in consuming apps
-          destination: 'tokens-dist/css-variables-nested.json',
+          destination: 'tokens-dist/json/css-variables-nested.json',
         },
       ],
     },
@@ -36,7 +36,7 @@ const EDSStyleDictionary = StyleDictionary.extend({
       files: [
         {
           format: 'javascript/es6',
-          destination: 'tokens-dist/colors.ts',
+          destination: 'tokens-dist/ts/colors.ts',
           options: {
             showFileHeader: false,
           },
@@ -51,7 +51,7 @@ const EDSStyleDictionary = StyleDictionary.extend({
         {
           format: 'json/nested',
           // useful for tailwind configs in consuming apps
-          destination: 'tokens-dist/variables-nested.json',
+          destination: 'tokens-dist/json/variables-nested.json',
         },
       ],
     },
@@ -61,7 +61,7 @@ const EDSStyleDictionary = StyleDictionary.extend({
       files: [
         {
           format: 'scss/map-deep',
-          destination: 'tokens-dist/_scss_variables.scss',
+          destination: 'tokens-dist/scss/_variables.scss',
           options: {
             showFileHeader: false,
           },

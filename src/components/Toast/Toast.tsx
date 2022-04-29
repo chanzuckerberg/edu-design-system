@@ -28,7 +28,7 @@ export type Props = {
 
 /**
  * ```ts
- * import {Toast} from "@chanzuckerberg/eds-components";
+ * import {Toast} from "@chanzuckerberg/eds";
  * ```
  *
  * A toast used to provide information on the state of the page, usually in response to a
@@ -61,7 +61,7 @@ export const Toast = ({
         <p className={styles['toast__text']}>{children}</p>
       </div>
       {onDismiss && (
-        <Button onClick={onDismiss} variant="icon">
+        <Button onClick={onDismiss} status={variant} variant="icon">
           <Icon
             name="close"
             purpose="informative"

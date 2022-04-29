@@ -3,11 +3,12 @@ import React from 'react';
 
 import { ListDetail, Props } from './ListDetail';
 import ListDetailPanel from '../ListDetailPanel';
-import { TextPassage } from '../TextPassage/TextPassage';
+import TextPassage from '../TextPassage';
 
 export default {
   title: 'Example/ListDetail',
   component: ListDetail,
+  subcomponents: { ListDetailPanel },
 } as Meta;
 
 const Template: Story<Props> = (args) => (
@@ -33,9 +34,9 @@ const Template: Story<Props> = (args) => (
           aliquip ex{' '}
         </p>
       </TextPassage>
-    </ListDetailPanel>
+    </ListDetail.Panel>
 
-    <ListDetailPanel title="ListDetailPanel 2" variant="error">
+    <ListDetail.Panel title="ListDetailPanel 2" variant="error">
       <TextPassage>
         <h3>ListDetailPanel 2</h3>
         <p>
@@ -45,9 +46,9 @@ const Template: Story<Props> = (args) => (
           aliquip ex{' '}
         </p>
       </TextPassage>
-    </ListDetailPanel>
+    </ListDetail.Panel>
 
-    <ListDetailPanel title="ListDetailPanel 3" variant="warning">
+    <ListDetail.Panel title="ListDetailPanel 3" variant="warning">
       <TextPassage>
         <h3>ListDetailPanel 3</h3>
         <p>
@@ -57,9 +58,9 @@ const Template: Story<Props> = (args) => (
           aliquip ex{' '}
         </p>
       </TextPassage>
-    </ListDetailPanel>
+    </ListDetail.Panel>
 
-    <ListDetailPanel title="ListDetailPanel 4" variant="success">
+    <ListDetail.Panel title="ListDetailPanel 4" variant="success">
       <TextPassage>
         <h3>ListDetailPanel 4</h3>
         <p>
@@ -69,9 +70,9 @@ const Template: Story<Props> = (args) => (
           aliquip ex{' '}
         </p>
       </TextPassage>
-    </ListDetailPanel>
+    </ListDetail.Panel>
 
-    <ListDetailPanel title="ListDetailPanel 5">
+    <ListDetail.Panel title="ListDetailPanel 5">
       <TextPassage>
         <h3>ListDetailPanel 5</h3>
         <p>
