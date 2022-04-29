@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.14.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.13.2...v0.14.0) (2022-04-29)
+
+#### **Button/Link/ClickableStyle** ([#1000](https://github.com/chanzuckerberg/edu-design-system/issues/1000))
+
+- renamed the following `variant` options:
+  - "flat" => "primary"
+  - "outline" => "secondary"
+  - "plain" => "icon"
+- changed the default variant in `Button` to "secondary" (previously was "flat"/"primary"; `Link`'s default variant is still "link")
+- renamed `color` prop to `status`
+- renamed "alert" color/status to "error"
+- renamed `size` options:
+  - "large" => "lg"
+  - "medium" => "md"
+  - "small" => "sm"
+
 ### [0.13.2](https://github.com/chanzuckerberg/edu-design-system/compare/v0.13.1...v0.13.2) (2022-04-29)
 
 #### **Icon** ([#1024](https://github.com/chanzuckerberg/edu-design-system/issues/1024))
