@@ -1,0 +1,24 @@
+/*------------------------------------*\
+    # DATABAR SEGMENT
+\*------------------------------------*/
+
+/**
+ * 1) 
+ */
+.data-bar-segment {
+  height: var(--eds-size-2);
+  cursor: pointer;
+}
+
+.data-bar-segment:first-child {
+  border-top-left-radius: 9999px;
+  border-bottom-left-radius: 9999px;
+}
+
+.data-bar-segment--brand {
+  background-color: var(--eds-theme-color-background-brand-primary-strong);
+}
+
+.data-bar-segment--success {
+  background-color: var(--eds-theme-color-icon-utility-success);
+}

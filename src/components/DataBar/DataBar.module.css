@@ -1,0 +1,44 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #DATA BAR
+\*------------------------------------*/
+
+/**
+ * 1) 
+ */
+.data-bar {
+  height: var(--eds-size-2);
+
+  background-color: var(--eds-theme-color-background-neutral-subtle);
+
+  border: var(--eds-theme-color-border-neutral-default) solid
+    var(--eds-theme-border-width);
+  border-radius: 9999px;
+}
+
+.data-bar__segment-space {
+  /* This overlays the segments over the grey borders of the containing bar */
+  position: relative;
+  bottom: var(--eds-theme-border-width);
+  right: var(--eds-theme-border-width);
+
+  display: flex;
+  gap: var(--eds-size-half);
+}
+.data-bar__segment-space--95 {
+  width: 95%;
+}
+
+/* .data-bar__segment-space div {
+  width: 20px;
+  height: var(--eds-size-2);
+
+  cursor: pointer;
+
+  background-color: red;
+}
+.data-bar__segment-space div:first-child {
+  border-top-left-radius: 9999px;
+  border-bottom-left-radius: 9999px;
+} */
