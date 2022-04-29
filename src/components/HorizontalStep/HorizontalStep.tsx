@@ -4,7 +4,7 @@ import styles from './HorizontalStep.module.css';
 import Icon from '../Icon';
 import Text from '../Text';
 
-export interface Props {
+export type Props = {
   /**
    * CSS class names that can be appended to the component.
    */
@@ -21,7 +21,7 @@ export interface Props {
    * Indicates the state of the step.
    */
   variant: 'complete' | 'active' | 'incomplete';
-}
+};
 
 /**
  * ```ts

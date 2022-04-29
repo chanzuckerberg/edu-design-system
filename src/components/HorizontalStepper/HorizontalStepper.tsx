@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './HorizontalStepper.module.css';
 import HorizontalStep from '../HorizontalStep';
 
-export interface Props {
+export type Props = {
   /**
    * Zero-based index that identifies which index is the active step.
    * If all steps are completed, the activeIndex should match the length of steps. (e.g. activeIndex === steps.length)
@@ -17,7 +17,7 @@ export interface Props {
    * Ordered list of step texts.
    */
   steps: string[];
-}
+};
 
 /**
  * ```ts
