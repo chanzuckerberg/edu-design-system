@@ -44,7 +44,13 @@ We use [standard-version](https://github.com/conventional-changelog/standard-ver
 ```
 git push --follow-tags origin <branch> && npm publish
 ```
-6. Communicate the changes via all appropriate channels. <TODO: determine communication strategy for new release>
+6. Communicate the changes via all appropriate channels (if this is a breaking package update that the broader team needs to know about):
+- Slack channels
+  - #eng-announcements in the Summit Learning workspace
+  - #eng-n00bs in the Summit Learning workspace
+  - #proj-edu-design-system in the CZI Education workspace
+- next EDS newsletter
+- next "What's New" update in Zeroheight
 
 #### Alpha release
 For testing a release to build confidence.
