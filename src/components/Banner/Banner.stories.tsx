@@ -192,6 +192,7 @@ export const DismissableBelowContent: StoryObj<Args> = {
       <Banner
         description={getDescription()}
         onDismiss={dismissMethod}
+        titleAs="h2"
         {...args}
       />
     </>

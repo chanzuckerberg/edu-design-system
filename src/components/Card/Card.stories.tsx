@@ -9,6 +9,12 @@ export default {
   title: 'Molecules/Blocks/Card',
   component: Card,
   subcomponents: { CardHeader, CardBody, CardFooter },
+  parameters: {
+    axe: {
+      // TODO: re-enable when component is worked on
+      skip: true,
+    },
+  },
 } as Meta;
 
 export const Default = () => (

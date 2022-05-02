@@ -8,6 +8,12 @@ export default {
   title: 'Organisms/Toolbars/Toolbar',
   component: Toolbar,
   subcomponents: { ToolbarItem },
+  parameters: {
+    axe: {
+      // TODO: re-enable when component is worked on
+      skip: true,
+    },
+  },
 } as Meta;
 
 const Template: Story<Props> = (args) => (

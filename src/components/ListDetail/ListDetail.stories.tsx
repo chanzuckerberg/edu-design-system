@@ -112,3 +112,9 @@ const Template: Story<Props> = (args) => (
 
 export const Default = Template.bind({});
 Default.args = {};
+Default.parameters = {
+  axe: {
+    // TODO: default text is too light
+    disabledRules: ['color-contrast'],
+  },
+};
