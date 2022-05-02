@@ -1,33 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Toast /> Alert story renders snapshot 1`] = `
+exports[`<Toast /> Error story renders snapshot 1`] = `
 <div
-  class="toastDialog colorAlert"
+  class="toast toast--error"
 >
   <div
-    class="content"
+    class="toast__content"
   >
-    <div
-      class="iconContainer iconAlert"
+    <svg
+      class="icon"
+      fill="var(--icon-color)"
+      height="1.25rem"
+      role="img"
+      style="--icon-size: 1.25rem;"
+      width="1.25rem"
+      xmlns="http://www.w3.org/2000/svg"
     >
-      <svg
-        class="icon"
-        fill="currentColor"
-        role="img"
-        xmlns="http://www.w3.org/2000/svg"
+      <title
+        id="2"
       >
-        <title
-          id="2"
-        >
-          alert
-        </title>
-        <use
-          xlink:href="test-file-stub#dangerous"
-        />
-      </svg>
-    </div>
+        error
+      </title>
+      <use
+        xlink:href="test-file-stub#cancel"
+      />
+    </svg>
     <p
-      class="text text--sm text--inherit"
+      class="toast__text"
     >
       You've got toast!
     </p>
@@ -37,32 +36,31 @@ exports[`<Toast /> Alert story renders snapshot 1`] = `
 
 exports[`<Toast /> NotDismissable story renders snapshot 1`] = `
 <div
-  class="toastDialog colorSuccess"
+  class="toast toast--success"
 >
   <div
-    class="content"
+    class="toast__content"
   >
-    <div
-      class="iconContainer iconSuccess"
+    <svg
+      class="icon"
+      fill="var(--icon-color)"
+      height="1.25rem"
+      role="img"
+      style="--icon-size: 1.25rem;"
+      width="1.25rem"
+      xmlns="http://www.w3.org/2000/svg"
     >
-      <svg
-        class="icon"
-        fill="currentColor"
-        role="img"
-        xmlns="http://www.w3.org/2000/svg"
+      <title
+        id="3"
       >
-        <title
-          id="3"
-        >
-          success
-        </title>
-        <use
-          xlink:href="test-file-stub#check-circle"
-        />
-      </svg>
-    </div>
+        success
+      </title>
+      <use
+        xlink:href="test-file-stub#check-circle"
+      />
+    </svg>
     <p
-      class="text text--sm text--inherit"
+      class="toast__text"
     >
       You've got toast!
     </p>
@@ -72,32 +70,31 @@ exports[`<Toast /> NotDismissable story renders snapshot 1`] = `
 
 exports[`<Toast /> Success story renders snapshot 1`] = `
 <div
-  class="toastDialog colorSuccess"
+  class="toast toast--success"
 >
   <div
-    class="content"
+    class="toast__content"
   >
-    <div
-      class="iconContainer iconSuccess"
+    <svg
+      class="icon"
+      fill="var(--icon-color)"
+      height="1.25rem"
+      role="img"
+      style="--icon-size: 1.25rem;"
+      width="1.25rem"
+      xmlns="http://www.w3.org/2000/svg"
     >
-      <svg
-        class="icon"
-        fill="currentColor"
-        role="img"
-        xmlns="http://www.w3.org/2000/svg"
+      <title
+        id="1"
       >
-        <title
-          id="1"
-        >
-          success
-        </title>
-        <use
-          xlink:href="test-file-stub#check-circle"
-        />
-      </svg>
-    </div>
+        success
+      </title>
+      <use
+        xlink:href="test-file-stub#check-circle"
+      />
+    </svg>
     <p
-      class="text text--sm text--inherit"
+      class="toast__text"
     >
       You've got toast!
     </p>

@@ -15,19 +15,19 @@ type Args = React.ComponentProps<typeof Toast>;
 
 export const Success: StoryObj<Args> = {
   args: {
-    color: "success",
+    variant: "success",
   },
 };
 
-export const Alert: StoryObj<Args> = {
+export const Error: StoryObj<Args> = {
   args: {
-    color: "alert",
+    variant: "error",
   },
 };
 
 export const NotDismissable: StoryObj<Args> = {
   args: {
-    color: "success",
+    variant: "success",
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore onDismiss is not nullable, but this is needed to remove the arg from
     // storybook's actions addon
