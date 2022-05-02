@@ -25,7 +25,6 @@ FontSizes.propTypes = {
     PropTypes.shape({
       name: PropTypes.string.isRequired,
       value: PropTypes.any.isRequired,
-      comment: PropTypes.string,
     }),
   ).isRequired,
 };
