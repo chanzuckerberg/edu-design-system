@@ -8,6 +8,12 @@ import Icon from '../Icon';
 export default {
   title: 'Molecules/Interactive/ShowHide',
   component: ShowHide,
+  parameters: {
+    axe: {
+      // TODO: re-enable when component is worked on
+      skip: true,
+    },
+  },
 } as Meta;
 
 const Template: Story<Props> = (args) => (

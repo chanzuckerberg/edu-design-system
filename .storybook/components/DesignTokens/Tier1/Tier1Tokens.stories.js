@@ -17,6 +17,10 @@ export default {
         story: 'Individual story description, may contain `markdown` markup',
       },
     },
+    axe: {
+      // For documentation purposes only
+      skip: true,
+    },
   },
 };
 

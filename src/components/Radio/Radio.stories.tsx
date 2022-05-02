@@ -6,6 +6,12 @@ import { Radio, Props } from './Radio';
 export default {
   title: 'Atoms/Forms/Radio',
   component: Radio,
+  parameters: {
+    axe: {
+      // TODO: re-enable when component is worked on
+      skip: true,
+    },
+  },
 } as Meta;
 
 const Template: Story<Props> = (args) => <Radio {...args} />;

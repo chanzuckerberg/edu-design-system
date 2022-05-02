@@ -6,6 +6,12 @@ import { Textarea, Props } from './Textarea';
 export default {
   title: 'Atoms/Forms/Textarea',
   component: Textarea,
+  parameters: {
+    axe: {
+      // TODO: re-enable when component is worked on
+      skip: true,
+    },
+  },
 } as Meta;
 
 const Template: Story<Props> = (args) => <Textarea {...args} />;

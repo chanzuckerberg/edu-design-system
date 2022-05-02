@@ -6,6 +6,12 @@ import { Main, Props } from './Main';
 export default {
   title: 'Molecules/Layout and Containers/Main',
   component: Main,
+  parameters: {
+    axe: {
+      // TODO: re-enable when component is worked on
+      skip: true,
+    },
+  },
 } as Meta;
 
 const Template: Story<Props> = (args) => (

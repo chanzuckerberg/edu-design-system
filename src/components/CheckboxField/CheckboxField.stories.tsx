@@ -109,9 +109,16 @@ Error.args = {
   isError: true,
   fieldNote: 'This is a field with an error',
 };
+
 export const Inverted = InvertedTemplate.bind({});
 Inverted.args = {
   label: 'Checkbox field',
   inverted: true,
   fieldNote: 'This is an inverted field',
+};
+Inverted.parameters = {
+  axe: {
+    // TODO: re-enable when component is worked on
+    disabledRules: ['color-contrast'],
+  },
 };
