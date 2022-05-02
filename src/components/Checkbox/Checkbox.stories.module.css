@@ -10,10 +10,6 @@
   width: 20rem;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-
-  /* TODO: replace with token once migrated */
-
-  /* gap: var(--eds-size-2); */
   gap: 1rem;
 }
 

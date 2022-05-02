@@ -1,7 +1,3 @@
-/* TODO: uncomment once tokens migrated */
-
-/* @import '../../design-tokens/mixins.css'; */
-
 /* ------------------------------------*\
     #CHECKBOX INPUT
 \*------------------------------------ */
@@ -43,11 +39,6 @@
 .checkbox__input + svg {
   vertical-align: top;
   display: inline-block;
-
-  /* TODO: replace with token once migrated */
-
-  /* color: var(--eds-theme-color-icon-neutral-default);
-  --checked-color: var(--eds-theme-color-icon-brand-primary); */
   color: var(--eds-color-neutral-500);
   --checked-color: var(--eds-color-brand-600);
 }
@@ -58,19 +49,11 @@
 }
 
 .checkbox__input:checked + svg > .checkmark__content {
-  /* TODO: replace with token once migrated */
-
-  /* fill: var(--eds-theme-color-icon-neutral-default-inverse); */
   fill: var(--eds-color-white);
 }
 
 .checkbox__input:focus + svg {
-  /* 1 */
-
-  /* TODO: replace with token once migrated */
-
-  /* @mixin focus; */
-  @apply outline-none rounded ring-2 ring-info-400;
+  @apply outline-none rounded ring-2 ring-info-400; /* 1 */
 }
 
 /**
@@ -81,10 +64,6 @@
 }
 
 .checkbox__input:disabled + svg {
-  /* TODO: replace with token once migrated */
-
-  /* color: var(--eds-theme-color-icon-disabled);
-  --checked-color: var(--eds-theme-color-icon-disabled); */
   color: var(--eds-color-neutral-300);
   --checked-color: var(--eds-color-neutral-300);
 }

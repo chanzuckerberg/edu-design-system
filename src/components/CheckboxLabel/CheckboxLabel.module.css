@@ -1,7 +1,3 @@
-/* TODO: uncomment once tokens migrated */
-
-/* @import '../../design-tokens/mixins.css'; */
-
 /* ------------------------------------*\
     #CHECKBOX LABEL
 \*------------------------------------ */
@@ -10,9 +6,6 @@
  * Text labelling the checkbox.
  */
 .label {
-  /* TODO: replace with token once migrated */
-
-  /* color: var(--eds-theme-color-form-label-text); */
   color: var(--eds-color-neutral-700);
 }
 
@@ -21,17 +14,11 @@
  * 1) line-height is set to be same as checkbox size to center label text relative to the checkbox.
  */
 .label--sm {
-  /* TODO: replace with token once migrated */
-
-  /* @mixin eds-theme-typography-label-sm; */
   font-size: 0.875rem;
   line-height: var(--checkbox-svg-size); /* 1 */
 }
 
 .label--md {
-  /* TODO: replace with token once migrated */
-
-  /* @mixin eds-theme-typography-label-sm; */
   font-size: 1rem;
   line-height: var(--checkbox-svg-size); /* 1 */
 }
@@ -40,8 +27,5 @@
  * Disabled state
  */
 .label--disabled {
-  /* TODO: replace with token once migrated */
-
-  /* color: var(--eds-theme-color-text-disabled); */
   color: var(--eds-color-neutral-500);
 }

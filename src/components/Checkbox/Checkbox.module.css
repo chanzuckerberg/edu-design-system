@@ -15,9 +15,5 @@
   display: grid; /* 2 */
   align-items: flex-start;
   grid-template-columns: min-content 1fr;
-
-  /* TODO: replace with token once migrated */
-
-  /* gap: var(--eds-size-1); */
   gap: 0.5rem;
 }
