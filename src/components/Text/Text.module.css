@@ -16,7 +16,7 @@
 }
 
 .text--lg {
-  @apply text-h2 font-bold;
+  @apply text-h2 font-normal;
 }
 
 .text--sm {
