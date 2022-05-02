@@ -8,6 +8,12 @@ import { Tier2TypographyUsage } from './TypographyUsage';
 export default {
   title: 'Design Tokens/Tier 2: Usage',
   component: Tier2Colors,
+  parameters: {
+    axe: {
+      // For documentation purposes only
+      skip: true,
+    },
+  },
 };
 
 export const Borders = () => <Tier2Borders />;
