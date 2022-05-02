@@ -1,9 +1,7 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
 import { composeStories } from '@storybook/testing-react';
-import { render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+import { render } from '@testing-library/react';
 import React from 'react';
-import { Banner } from './Banner';
 import * as BannerStoryFile from './Banner.stories';
 import consoleWarnMockHelper from '../../../jest/helpers/consoleWarnMock';
 
@@ -12,20 +10,6 @@ describe('<Banner />', () => {
 
   generateSnapshots(BannerStoryFile);
 
-  it('dismisses when dismissed if dismissable', () => {
-    render(
-      <Banner
-        data-testid="banner-test"
-        description="suuuuup"
-        dismissable={true}
-        title="Helloooooo"
-      />,
-    );
-
-    expect(screen.getByTestId('banner-test')).toBeInTheDocument();
-    userEvent.click(screen.getByRole('button'));
-    expect(screen.queryByTestId('banner-test')).not.toBeInTheDocument();
-  });
   it('should display warning message when attempting to use isFlat', () => {
     const { Flat } = composeStories(BannerStoryFile);
     render(<Flat />);
