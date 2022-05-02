@@ -16,6 +16,12 @@ export default {
   title: 'Organisms/Tables/Table Object',
   component: TableObject,
   subcomponents: { TableObjectBody, TableObjectHeader },
+  parameters: {
+    axe: {
+      // TODO: re-enable when component is worked on
+      skip: true,
+    },
+  },
 } as Meta;
 
 const Template: Story<Props> = (args) => (

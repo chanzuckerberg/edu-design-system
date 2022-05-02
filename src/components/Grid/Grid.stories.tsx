@@ -8,6 +8,12 @@ export default {
   title: 'Molecules/Layout and Containers/Grid',
   component: Grid,
   subcomponents: { GridItem },
+  parameters: {
+    axe: {
+      // TODO: re-enable when component is worked on
+      skip: true,
+    },
+  },
 } as Meta;
 
 const Template: Story<Props> = (args) => (

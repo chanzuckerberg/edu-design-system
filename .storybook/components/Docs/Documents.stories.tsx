@@ -12,6 +12,9 @@ export default {
   component: Documentation,
   parameters: {
     chromatic: { disableSnapshot: true },
+    axe: {
+      skip: true,
+    },
   },
 };
 
