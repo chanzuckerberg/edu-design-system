@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.15.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.14.0...v0.15.0) (2022-05-02)
+
+### **Toast:** ([#1013](https://github.com/chanzuckerberg/edu-design-system/issues/1130))
+
+- renamed `color` prop to `variant`
+- renamed "alert" color/variant to "error"
+
+### **Text:** ([#1025](https://github.com/chanzuckerberg/edu-design-system/issues/1250))
+
+- make `size` "lg" normal weight
+
 ## [0.14.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.13.2...v0.14.0) (2022-04-29)
 
 #### **Button/Link/ClickableStyle** ([#1000](https://github.com/chanzuckerberg/edu-design-system/issues/1000))
