@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import React, { ReactNode, useState } from "react";
+import React, { ReactNode } from "react";
 import Button from "../Button";
 import Heading, { HeadingElement } from "../Heading";
 import Icon from "../Icon";
@@ -27,11 +27,7 @@ export type BannerProps = {
    */
   descriptionAs?: "p" | "span";
   /**
-   * Toggles the ability to dismiss the banner via an close button in the top right of the banner
-   */
-  dismissable?: boolean;
-  /**
-   * Optional callback to be triggered when the banner is dismissed
+   * Callback when banner is dismissed. When passed in, renders banner with a close icon in the top right.
    */
   onDismiss?: () => void;
   /**
@@ -110,9 +106,9 @@ const variantToIconAssetsMap: {
  * ```tsx
  * <Banner
  *   onDismiss={handleDismiss}
- *   title="Some title"
- *   description="Some description"
- *   action={<Button>Some action</Button>}
+ *   title="Some Title"
+ *   description={<>Some description, possibly with a <Link href="www.some-other-resource.com">link to some other resource</Link>.</>}
+ *   action={<Button onClick={handleAction}>Action</Button>}
  * />
  * ```
  */
@@ -121,7 +117,6 @@ export const Banner = ({
   className,
   description,
   descriptionAs = "p",
-  dismissable,
   isFlat,
   onDismiss,
   orientation,
@@ -130,23 +125,11 @@ export const Banner = ({
   titleAs = "h3",
   ...other
 }: BannerProps) => {
-  const [dismissed, setDismissed] = useState(false);
-
   if (isFlat && process.env.NODE_ENV !== "production") {
     console.warn(
       "The isFlat style is deprecated and will be removed in an upcoming release.\n",
       "Please remove this prop to use the default elevated style (with a border and drop shadow) instead.",
     );
-  }
-
-  function handleDismiss(e: any) {
-    e.preventDefault();
-    onDismiss && onDismiss();
-    setDismissed(true);
-  }
-
-  if (dismissed) {
-    return null;
   }
 
   const isHorizontal = !orientation;
@@ -163,16 +146,16 @@ export const Banner = ({
     variant === "error" && colorStyles.colorAlert,
     // Other options
     isHorizontal && styles["banner--horizontal"],
-    dismissable && styles["banner--dismissable"],
+    onDismiss && styles["banner--dismissable"],
     isFlat && styles["banner--flat"],
   );
 
   return (
     <article className={componentClassName} {...other}>
-      {dismissable && (
+      {onDismiss && (
         <Button
           className={styles["banner__close-btn"]}
-          onClick={handleDismiss}
+          onClick={onDismiss}
           status={variant}
           variant="icon"
         >
