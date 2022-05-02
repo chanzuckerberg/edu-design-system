@@ -520,7 +520,7 @@ exports[`<Checkbox /> LabelsOnly story renders snapshot 1`] = `
 <label
   class="label label--md"
   data-bootstrap-override="label"
-  for="medium-label"
+  for="md-label"
   style="--checkbox-svg-size: 1.25rem;"
 >
   Medium label
