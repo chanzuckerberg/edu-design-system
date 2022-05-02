@@ -16,8 +16,8 @@ export type Variant = typeof VARIANTS[number];
 
 type Props = {
   /**
-   * The color variant of the tag. New variants should be supported in the flow type,
-   * in the VARIANTS array, and by its separate style in CSS file.
+   * The color variant of the tag. New variants should be supported
+   * in the VARIANTS array and by its separate style in CSS file.
    */
   variant?: Variant;
   /**
