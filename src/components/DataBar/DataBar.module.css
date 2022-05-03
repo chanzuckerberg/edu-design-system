@@ -30,7 +30,7 @@
   width: calc(100% + 2 * var(--eds-theme-border-width));
 }
 /* better naming here */
-.data-bar__segment-space--95 {
+.data-bar__segment-space--incomplete {
   width: calc(
     100% + 2 * var(--eds-theme-border-width) - 0.5 * var(--eds-size-2)
   );

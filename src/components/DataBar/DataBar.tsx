@@ -6,6 +6,7 @@ import DataBarSegment from '../DataBarSegment';
 import type { Variants } from '../DataBarSegment';
 
 type DataBarSegmentProps = {
+  text: React.ReactNode;
   value: number;
   variant?: Variants;
 };
@@ -70,6 +71,33 @@ export const DataBar = ({
     return previousValue + value;
   }, 0);
 
+  const isFull = totalSegmentValue >= max;
+
+  // const segmentComponents: React.ReactNode[] = [];
+  // for (
+  //   let index = 0, accumulator = 0;
+  //   index < segments.length && accumulator < max;
+  //   index++
+  // ) {
+  //   const segment = segments[index];
+  //   // Calculates width as a percentage, ensuring a minimumum width for the segment.
+  //   const percentage = Math.max(
+  //     5,
+  //     (segment.value / Math.max(max, totalSegmentWidth)) * 100,
+  //   );
+  //   accumulator += segment.value;
+  //   // The last segmented should be rounded if the sum of the values equals or exceeds the max.
+  //   const isRoundRight = accumulator >= max;
+  //   segmentComponents.push(
+  //     <DataBarSegment
+  //       isRoundRight={isRoundRight}
+  //       key={`segment-${index}`}
+  //       variant={segment.variant || variant}
+  //       /**** case: variant passed for both bar and segments *****/
+  //       width={`${percentage}%`}
+  //     />,
+  //   );
+  // }
   const segmentComponents = segments.map((segment, index) => {
     // Calculates width as a percentage, ensuring a minimumum width for the segment.
     const percentage = Math.max(
@@ -83,25 +111,30 @@ export const DataBar = ({
       <DataBarSegment
         isRoundRight={isRoundRight}
         key={`segment-${index}`}
-        percentage={percentage}
-        /**** case: variant passed for both bar and segments *****/
+        text={segment.text}
         variant={segment.variant || variant}
+        /**** case: variant passed for both bar and segments *****/
+        width={`${percentage}%`}
       />
     );
   });
+
+  // Adds small segment in the empty state
   if (!segmentComponents.length) {
     segmentComponents.push(
-      <DataBarSegment isHoverable={false} percentage={2} variant={variant} />,
+      <DataBarSegment
+        isHoverable={false}
+        variant={variant}
+        width={'var(--eds-size-1)'}
+      />,
     );
   }
 
-  // Leaves space if values do not total to max to visibly show space remaining.
-  const shouldLeaveSpace = totalSegmentValue < max;
-
   const componentClassName = clsx(styles['data-bar'], className);
+  /* 1) Leaves space if values do not total to max to visibly show space remaining. */
   const segmentSpaceClassName = clsx(
     styles['data-bar__segment-space'],
-    shouldLeaveSpace && styles[`data-bar__segment-space--95`],
+    !isFull && styles[`data-bar__segment-space--incomplete`] /* 1 */,
   );
   return (
     <div>

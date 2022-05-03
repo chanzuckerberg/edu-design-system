@@ -1,0 +1,256 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DataBar /> InteractiveExample story renders snapshot 1`] = `
+<div
+  style="margin: 0.25rem;"
+>
+  <div>
+    <div>
+      <progress
+        aria-label="interactive-data-bar-example"
+        max="100"
+        value="92"
+      />
+      <div
+        class="data-bar"
+      >
+        <div
+          class="data-bar__segment-space data-bar__segment-space--incomplete"
+        >
+          <div
+            class="data-bar-segment data-bar-segment--brand data-bar-segment--hoverable"
+            style="width: 90%;"
+          />
+          <div
+            class="data-bar-segment data-bar-segment--brand data-bar-segment--hoverable"
+            style="width: 5%;"
+          />
+          <div
+            class="data-bar-segment data-bar-segment--brand data-bar-segment--hoverable"
+            style="width: 5%;"
+          />
+        </div>
+      </div>
+    </div>
+    <br />
+    <span>
+      Value add: 
+    </span>
+    <input
+      value="1"
+    />
+    <br />
+    <div
+      class="button-group button-group--spacing-1x"
+    >
+      <button
+        class="clickable-style button button--primary clickable-style--lg clickable-style--primary clickable-style--brand"
+        type="button"
+      >
+        Push segment
+      </button>
+      <button
+        class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--brand"
+        type="button"
+      >
+        Pop segment
+      </button>
+    </div>
+    <br />
+    <span>
+      Max: 
+    </span>
+    <input
+      value="100"
+    />
+  </div>
+</div>
+`;
+
+exports[`<DataBar /> LargeValue story renders snapshot 1`] = `
+<div
+  style="margin: 0.25rem;"
+>
+  <div>
+    <progress
+      aria-label="data-bar"
+      max="100"
+      value="96"
+    />
+    <div
+      class="data-bar"
+    >
+      <div
+        class="data-bar__segment-space data-bar__segment-space--incomplete"
+      >
+        <div
+          class="data-bar-segment data-bar-segment--brand data-bar-segment--hoverable"
+          style="width: 96%;"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<DataBar /> SmallValue story renders snapshot 1`] = `
+<div
+  style="margin: 0.25rem;"
+>
+  <div>
+    <progress
+      aria-label="data-bar"
+      max="100"
+      value="1"
+    />
+    <div
+      class="data-bar"
+    >
+      <div
+        class="data-bar__segment-space data-bar__segment-space--incomplete"
+      >
+        <div
+          class="data-bar-segment data-bar-segment--brand data-bar-segment--hoverable"
+          style="width: 5%;"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<DataBar /> TotalsLessThanMax story renders snapshot 1`] = `
+<div
+  style="margin: 0.25rem;"
+>
+  <div>
+    <progress
+      aria-label="data-bar"
+      max="100"
+      value="50"
+    />
+    <div
+      class="data-bar"
+    >
+      <div
+        class="data-bar__segment-space data-bar__segment-space--incomplete"
+      >
+        <div
+          class="data-bar-segment data-bar-segment--brand data-bar-segment--hoverable"
+          style="width: 25%;"
+        />
+        <div
+          class="data-bar-segment data-bar-segment--brand data-bar-segment--hoverable"
+          style="width: 10%;"
+        />
+        <div
+          class="data-bar-segment data-bar-segment--brand data-bar-segment--hoverable"
+          style="width: 15%;"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<DataBar /> TotalsMax story renders snapshot 1`] = `
+<div
+  style="margin: 0.25rem;"
+>
+  <div>
+    <progress
+      aria-label="data-bar"
+      max="50"
+      value="50"
+    />
+    <div
+      class="data-bar"
+    >
+      <div
+        class="data-bar__segment-space"
+      >
+        <div
+          class="data-bar-segment data-bar-segment--brand data-bar-segment--hoverable"
+          style="width: 50%;"
+        />
+        <div
+          class="data-bar-segment data-bar-segment--brand data-bar-segment--hoverable"
+          style="width: 20%;"
+        />
+        <div
+          class="data-bar-segment data-bar-segment--brand data-bar-segment--hoverable data-bar-segment--round-right"
+          style="width: 30%;"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<DataBar /> TotalsMoreThanMax story renders snapshot 1`] = `
+<div
+  style="margin: 0.25rem;"
+>
+  <div>
+    <progress
+      aria-label="data-bar"
+      max="25"
+      value="50"
+    />
+    <div
+      class="data-bar"
+    >
+      <div
+        class="data-bar__segment-space"
+      >
+        <div
+          class="data-bar-segment data-bar-segment--brand data-bar-segment--hoverable"
+          style="width: 50%;"
+        />
+        <div
+          class="data-bar-segment data-bar-segment--brand data-bar-segment--hoverable"
+          style="width: 20%;"
+        />
+        <div
+          class="data-bar-segment data-bar-segment--brand data-bar-segment--hoverable data-bar-segment--round-right"
+          style="width: 30%;"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<DataBar /> TotalsRightUnderMax story renders snapshot 1`] = `
+<div
+  style="margin: 0.25rem;"
+>
+  <div>
+    <progress
+      aria-label="data-bar"
+      max="51"
+      value="50"
+    />
+    <div
+      class="data-bar"
+    >
+      <div
+        class="data-bar__segment-space data-bar__segment-space--incomplete"
+      >
+        <div
+          class="data-bar-segment data-bar-segment--brand data-bar-segment--hoverable"
+          style="width: 49.01960784313725%;"
+        />
+        <div
+          class="data-bar-segment data-bar-segment--brand data-bar-segment--hoverable"
+          style="width: 19.607843137254903%;"
+        />
+        <div
+          class="data-bar-segment data-bar-segment--brand data-bar-segment--hoverable"
+          style="width: 29.411764705882355%;"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

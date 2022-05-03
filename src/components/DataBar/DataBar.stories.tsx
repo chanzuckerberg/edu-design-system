@@ -11,7 +11,11 @@ export default {
   args: {
     'aria-label': 'data-bar',
     max: 100,
-    segments: [{ value: 25 }, { value: 10 }, { value: 15 }],
+    segments: [
+      { value: 25, text: 'Segment 1' },
+      { value: 10, text: 'Segment 2' },
+      { value: 15, text: 'Segment 3' },
+    ],
   },
   decorators: [
     (Story) => (
@@ -45,14 +49,14 @@ export const TotalsRightUnderMax: StoryObj<Args> = {
 export const LargeValue: StoryObj<Args> = {
   args: {
     max: 100,
-    segments: [{ value: 96 }],
+    segments: [{ value: 96, text: 'Segment 1' }],
   },
 };
 
 export const SmallValue: StoryObj<Args> = {
   args: {
     max: 100,
-    segments: [{ value: 1 }],
+    segments: [{ value: 1, text: 'Segment 1' }],
   },
 };
 
@@ -63,13 +67,17 @@ export const NoSegments: StoryObj<Args> = {
 };
 
 const Interactive = () => {
+  const [max, setMax] = React.useState(100);
+  const handleChange = (e) => {
+    setMax(Number(e?.target?.value) || 100);
+  };
   const [segments, setSegments] = React.useState([
-    { value: 90 },
-    { value: 1 },
-    { value: 1 },
+    { value: 90, text: 'Segment 1' },
+    { value: 1, text: 'Segment 2' },
+    { value: 1, text: 'Segment 3' },
   ]);
   const onPush = () => {
-    segments.push({ value: 1 });
+    segments.push({ value: 1, text: `Segment ${segments.length + 1}` });
     setSegments([...segments]);
   };
   const onPop = () => {
@@ -82,9 +90,12 @@ const Interactive = () => {
     <div>
       <DataBar
         aria-label="interactive-data-bar-example"
-        max={100}
+        max={max}
         segments={segments}
       />
+      <br />
+      <span>Value add: </span>
+      <input defaultValue={1}></input>
       <br />
       <ButtonGroup>
         <Button onClick={onPush} variant="primary">
@@ -94,6 +105,9 @@ const Interactive = () => {
           Pop segment
         </Button>
       </ButtonGroup>
+      <br />
+      <span>Max: </span>
+      <input onChange={handleChange} value={max}></input>
     </div>
   );
 };

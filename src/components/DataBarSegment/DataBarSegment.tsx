@@ -13,16 +13,20 @@ export type Props = {
   /**
    * Indicates whether segments should be hoverable.
    */
-  isHoverable?: boolean;
+  isHoverable?: boolean; // There may be no case for this and may be able to use text presence as hoverable
   /**
    * Indicates if this segment should be rounded on the right side.
    * Used for data bars that are 100% complete.
    */
   isRoundRight?: boolean;
   /**
-   * Percent relative to the data bar to be represented by the segment.
+   * Tooltip text to be displayed when the segment is hovered.
    */
-  percentage: number;
+  text?: React.ReactNode;
+  /**
+   * Width that the segment should consume.
+   */
+  width: string;
   /**
    * Color variant of the individual segment.
    */
@@ -36,7 +40,8 @@ export const DataBarSegment = ({
   className,
   isHoverable = true,
   isRoundRight,
-  percentage,
+  text,
+  width,
   variant = 'brand',
   ...other
 }: Props) => {
@@ -46,14 +51,20 @@ export const DataBarSegment = ({
     isHoverable && styles['data-bar-segment--hoverable'],
     isRoundRight && styles['data-bar-segment--round-right'],
     className,
-    {},
   );
   // Is there a better way to pass width?
-  return (
+  const segmentComponent = (
     <div
       className={componentClassName}
-      style={{ width: `${percentage}%` }}
+      style={{ width: `${width}` }}
       {...other}
     ></div>
+  );
+  return text ? (
+    <Tooltip align="bottom" text={text}>
+      {segmentComponent}
+    </Tooltip>
+  ) : (
+    segmentComponent
   );
 };
