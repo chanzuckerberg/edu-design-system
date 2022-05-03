@@ -72,12 +72,21 @@ const Interactive = () => {
     setMax(Number(e?.target?.value) || 100);
   };
   const [segments, setSegments] = React.useState([
-    { value: 90, text: 'Segment 1' },
-    { value: 1, text: 'Segment 2' },
-    { value: 1, text: 'Segment 3' },
+    { value: 90, text: 'Segment value 90' },
+    { value: 1, text: 'Segment value 1' },
+    { value: 1, text: 'Segment value 1' },
   ]);
+
+  const [segmentValue, setSegmentValue] = React.useState(1);
+  const handleSegmentValueChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSegmentValue(Number(e?.target?.value));
+  };
+
   const onPush = () => {
-    segments.push({ value: 1, text: `Segment ${segments.length + 1}` });
+    segments.push({
+      value: segmentValue || 1,
+      text: `Segment value ${segmentValue}`,
+    });
     setSegments([...segments]);
   };
   const onPop = () => {
@@ -95,7 +104,7 @@ const Interactive = () => {
       />
       <br />
       <span>Value add: </span>
-      <input defaultValue={1}></input>
+      <input onChange={handleSegmentValueChange} value={segmentValue}></input>
       <br />
       <ButtonGroup>
         <Button onClick={onPush} variant="primary">

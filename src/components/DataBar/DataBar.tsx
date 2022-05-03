@@ -27,24 +27,11 @@ export type Props = {
   variant?: Variants;
 } & React.HTMLAttributes<HTMLElement>;
 
-// need max days = max
-
-// calculate total days = totalledDays
-
-// Max segmentWidth = segmentValue / Math.max(max, totalledDays) as a percentage
-
-// Min segmentWidth = 5% or something
-
-/**** case: no segments *****/
-
 /**
  * Primary UI component for user interaction
  */
 export const DataBar = ({
-  'aria-label': ariaLabel,
-  'aria-labelledby': ariaLabelledBy,
   className,
-  id,
   max = 100,
   segments,
   variant = 'brand',
@@ -66,48 +53,35 @@ export const DataBar = ({
   );
 
   // This calculates the total space as a percentage that the segments will take up.
-  const totalSegmentWidth = segments.reduce((previousValue, segment) => {
+  let totalSegmentWidth = 0;
+  for (
+    let index = 0;
+    index < segments.length && totalSegmentWidth < max;
+    index++
+  ) {
+    const segment = segments[index];
     const value = segment.value < max / 20 ? max / 20 : segment.value;
-    return previousValue + value;
-  }, 0);
+    totalSegmentWidth += value;
+  }
 
   const isFull = totalSegmentValue >= max;
 
-  // const segmentComponents: React.ReactNode[] = [];
-  // for (
-  //   let index = 0, accumulator = 0;
-  //   index < segments.length && accumulator < max;
-  //   index++
-  // ) {
-  //   const segment = segments[index];
-  //   // Calculates width as a percentage, ensuring a minimumum width for the segment.
-  //   const percentage = Math.max(
-  //     5,
-  //     (segment.value / Math.max(max, totalSegmentWidth)) * 100,
-  //   );
-  //   accumulator += segment.value;
-  //   // The last segmented should be rounded if the sum of the values equals or exceeds the max.
-  //   const isRoundRight = accumulator >= max;
-  //   segmentComponents.push(
-  //     <DataBarSegment
-  //       isRoundRight={isRoundRight}
-  //       key={`segment-${index}`}
-  //       variant={segment.variant || variant}
-  //       /**** case: variant passed for both bar and segments *****/
-  //       width={`${percentage}%`}
-  //     />,
-  //   );
-  // }
-  const segmentComponents = segments.map((segment, index) => {
+  const segmentComponents: React.ReactElement<typeof DataBarSegment>[] = [];
+  for (
+    let index = 0, accumulator = 0;
+    index < segments.length && accumulator < max;
+    index++
+  ) {
+    const segment = segments[index];
+    accumulator += segment.value;
     // Calculates width as a percentage, ensuring a minimumum width for the segment.
     const percentage = Math.max(
       5,
       (segment.value / Math.max(max, totalSegmentWidth)) * 100,
     );
     // The last segmented should be rounded if the sum of the values equals or exceeds the max.
-    const isRoundRight =
-      index === segments.length - 1 && totalSegmentValue >= max;
-    return (
+    const isRoundRight = accumulator >= max;
+    segmentComponents.push(
       <DataBarSegment
         isRoundRight={isRoundRight}
         key={`segment-${index}`}
@@ -115,15 +89,16 @@ export const DataBar = ({
         variant={segment.variant || variant}
         /**** case: variant passed for both bar and segments *****/
         width={`${percentage}%`}
-      />
+      />,
     );
-  });
+  }
 
   // Adds small segment in the empty state
   if (!segmentComponents.length) {
     segmentComponents.push(
       <DataBarSegment
         isHoverable={false}
+        key="segment-empty"
         variant={variant}
         width={'var(--eds-size-1)'}
       />,
@@ -136,15 +111,16 @@ export const DataBar = ({
     styles['data-bar__segment-space'],
     !isFull && styles[`data-bar__segment-space--incomplete`] /* 1 */,
   );
+
   return (
     <div>
-      <progress
+      {/* <progress
         aria-label={ariaLabel}
         aria-labelledby={ariaLabelledBy}
         id={id}
         max={max}
         value={totalSegmentValue}
-      ></progress>
+      ></progress> */}
       {/* total bar */}
       <div className={componentClassName} {...other}>
         {/* bar amount segments take up */}
