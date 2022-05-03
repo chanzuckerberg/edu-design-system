@@ -1,73 +1,137 @@
-.bannerDialog {
-  @apply w-full p-8 rounded border shadow-1;
-  @apply relative;
-  @apply grid gap-4;
+/* stylelint-disable comment-whitespace-inside, selector-nested-pattern, declaration-empty-line-before */
 
+/*------------------------------------*\
+    # BANNER
+\*------------------------------------*/
+
+/**
+ * 1) Message of information, success, caution, or warning to the user
+ * 2) Has a bottom margin to accommodate drop shadow
+ * 3) The thick border (left for horizontal and top for vertical orientation)
+ *    matches the icon color
+ * 4) The default styles are for the vertical orientation; we override these
+ *    styles for the horizontal orientation below
+ */
+.banner {
+  @apply shadow-1 rounded border;
+
+  display: grid;
+  gap: 1rem;
+  position: relative;
+  margin-bottom: 2rem; /* 2 */
+  border-style: solid;
   border-color: var(--border-light-color);
 
-  /* Mobile-only styles */
-  @apply text-center border-t-4;
+  /* Vertical-specific styles */
+  padding: 2rem;
+  text-align: center;
+  justify-items: center;
+  border-top-width: 4px;
+  border-top-color: var(--border-dark-color); /* 3 */
+}
 
-  border-top-color: var(--border-dark-color);
+/**
+ * Banner informational icon
+ * 1) Icon color matches the thick border (left for horizontal and top for
+ *    vertical orientation)
+ */
+.banner__icon {
+  color: var(--border-dark-color); /* 1 */
   --icon-size-default: 2.5rem;
 }
 
-.textAndAction {
-  @apply flex flex-col justify-between gap-4;
+.banner__textAndAction,
+.banner__textContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.textContent {
-  @apply space-y-2;
+.banner__textAndAction {
+  gap: 2rem;
 }
 
-.action {
-  @apply justify-self-center self-center;
+.banner__textContent {
+  gap: 0.5rem;
 }
 
-.dismiss {
-  @apply absolute top-1 right-1;
+.banner__action {
+  justify-self: center;
+  align-self: center;
 }
 
-/* This media query is the same as tailwind's `md:` prefix. We're using a standard CSS media query
-   instead of the tailwind prefix because we have to use standard CSS when working with custom variables. */
-@media screen and (min-width: 768px) {
-  .bannerDialog.horizontal {
+/**
+ * Banner close button
+ * 1) Button used to dismiss dismissable banners
+ * 2) Match close button icon color to the banner text color
+ */
+.banner__close-btn.banner__close-btn {
+  position: absolute;
+  top: 0.25rem;
+  right: 0.25rem;
+  color: inherit; /* 2 */
+}
+
+/*------------------------------------*\
+    # HORIZONTAL ORIENTATION
+\*------------------------------------*/
+
+@media screen and (min-width: 48rem) {
+  /**
+   * Banner horizontal orientation
+   * 1) Everything is left-aligned
+   * 2) Padding is reduced
+   * 3) Left border is thick and dark instead of the top border
+   * 4) Icon is smaller to match the heading line height
+   * 5) Gap between text and action button is reduced
+   */
+  .banner--horizontal {
     grid-template-columns: min-content 1fr;
+    text-align: left; /* 1 */
+    justify-items: flex-start; /* 1 */
+    padding: 1rem; /* 2 */
 
-    @apply text-left p-4;
+    border-top-width: 1px; /* 3 */
+    border-left-width: 4px; /* 3 */
+    border-top-color: var(--border-light-color); /* 3 */
+    border-left-color: var(--border-dark-color); /* 3 */
 
-    /* Left border is thicker and a darker color than the surrounding border on desktop */
-    @apply border border-l-4;
+    .banner__icon {
+      --icon-size-default: 1.5rem; /* 4 */
+    }
 
-    border-left-color: var(--border-dark-color);
-    border-top-color: var(--border-light-color);
+    .banner__textAndAction {
+      gap: 0.5rem; /* 5 */
+    }
 
-    /* This makes the icon the same size as the header line height, which helps it look centered */
-    --icon-size-default: 1.5rem;
+    .banner__action {
+      align-self: flex-start; /* 1 */
+    }
   }
 
-  .textAndAction.horizontal {
-    @apply gap-2;
-  }
-
-  .textContent.horizontal {
-    @apply space-y-1;
-  }
-
-  .action.horizontal {
-    @apply self-start;
-  }
-
-  .dismissable.horizontal {
-    @apply pr-18;
+  /**
+   * Dismissable banner horizontal orientation
+   * 1) Add extra right padding to account for close button
+   */
+  .banner--dismissable.banner--horizontal {
+    padding-right: 2rem; /* 1 */
   }
 }
 
-.elevation0 {
-  /* Instead of removing the border, we replace it with a transparent one.
-     On windows high contrast mode, the background color will be removed,
-     but this border will become 100% opacity black to retain visual separation */
-  --border-light-color: transparent;
+/*------------------------------------*\
+    # FLAT
+\*------------------------------------*/
 
-  @apply shadow-none;
+/**
+ * Flat banner
+ * 1) Has no drop shadow or visible border so it sits flat on the page
+ * 2) Instead of removing the border, we replace it with a transparent one.
+ *    On windows high contrast mode, the background color will be removed,
+ *    but this border will become 100% opacity black to retain visual separation
+ * 3) Remove the bottom margin which is usually there to account for the drop shadow length
+ */
+.banner--flat {
+  box-shadow: none; /* 1 */
+  --border-light-color: transparent; /* 2 */
+  margin-bottom: 0; /* 3 */
 }
