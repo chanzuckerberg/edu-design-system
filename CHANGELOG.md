@@ -2,9 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.18.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.17.0...v0.18.0) (2022-05-03)
+
+### **Tag:** ([#1011](https://github.com/chanzuckerberg/edu-design-system/issues/1011))
+
+- renamed `variant` prop to `hasOutline`
+- renamed `color` prop to `variant`
+- renamed `variant` "alert" option to "error"
+- renamed `children` prop to `text`
+
 ## [0.17.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.16.0...v0.17.0) (2022-05-03)
 
-### **banner:** ([#1010](https://github.com/chanzuckerberg/edu-design-system/issues/1010))
+### **Banner:** ([#1010](https://github.com/chanzuckerberg/edu-design-system/issues/1010))
 
 - renamed `color` prop to `variant`
 - renamed `variant` "alert" to "error"
