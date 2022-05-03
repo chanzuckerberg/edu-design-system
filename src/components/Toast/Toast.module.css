@@ -1,15 +1,72 @@
-.toastDialog {
-  @apply w-full max-w-100 pl-4 pr-2 grid gap-2 items-center;
-  @apply border border-l-4 rounded shadow-1;
+/* ------------------------------------*\
+    # TOAST
+\*------------------------------------ */
 
-  border-color: var(--border-light-color);
-  border-left-color: var(--border-dark-color);
+/**
+ * 1) Message of information, success, caution, or warning to the user
+ * 2) Container for the toast content, to provide background styling
+ * 3) The thick left border operates as a foreground band of color, 
+ *    so foreground rather than border is used
+ * 4) The border CSS variables are defined in the messaging mixins
+ */
+.toast {
+  width: 100%;
+  max-width: 25rem;
+  padding-left: 1rem;
+  padding-right: 0.5rem;
+  display: grid;
+  gap: 0.5rem;
   grid-template-columns: 1fr min-content;
-  --icon-size-default: 1.25rem;
+  align-items: center;
+  border-style: solid;
+  border-width: 1px;
+  border-left-width: 4px; /* 3 */
+  border-radius: 0.25rem;
+  border-color: var(--border-light-color); /* 4 */
+  border-left-color: var(--border-dark-color); /* 4 */
+
+  @apply shadow-1;
 }
 
-.content {
-  @apply py-4 grid gap-4 items-center;
+.toast--success {
+  --border-light-color: var(--eds-color-success-200);
+  --border-dark-color: var(--eds-color-success-500);
+  --icon-color: var(--eds-color-success-500);
 
+  background: var(--eds-color-success-100);
+  color: var(--eds-color-success-700);
+}
+
+.toast--error {
+  --border-light-color: var(--eds-color-alert-200);
+  --border-dark-color: var(--eds-color-alert-500);
+  --icon-color: var(--eds-color-alert-500);
+
+  background: var(--eds-color-alert-100);
+  color: var(--eds-color-alert-700);
+}
+
+/**
+ * 1) The toast content, usually an icon and text message. Does not include the optional close button
+ * 2) Grid places the icon on the left and message on the right, with both vertically aligned to the center.
+ */
+.toast__content {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: grid; /* 2 */
+  gap: 1rem;
   grid-template-columns: min-content 1fr;
+  align-items: center;
+}
+
+/**
+ * The text in the toast. Styled via mixins over using Text component.
+ */
+.toast__text {
+  margin: 0;
+  padding: 0;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  color: inherit;
 }

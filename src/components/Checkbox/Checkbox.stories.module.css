@@ -1,0 +1,22 @@
+/* ------------------------------------*\
+    #CHECKBOX STORIES
+\*------------------------------------ */
+
+/**
+ * Display grid to constrain widths of long labels.
+ * Used to show that the CheckboxInput centers with the first line of the label text.
+ */
+.longlabels--grid {
+  width: 20rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+/**
+ * Table to display disabled states of checkboxes.
+ */
+.disabled--table {
+  border-collapse: separate;
+  border-spacing: 2rem;
+}
