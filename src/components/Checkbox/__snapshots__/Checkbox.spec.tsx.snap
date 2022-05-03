@@ -5,11 +5,11 @@ exports[`<Checkbox /> Checked story renders snapshot 1`] = `
   class="checkbox"
 >
   <span
-    class="inputWrapper"
+    class="input__wrapper"
   >
     <input
       checked=""
-      class="checkboxInput"
+      class="checkbox__input"
       data-bootstrap-override="checkbox"
       id="2"
       style="--checkbox-svg-size: 1.25rem;"
@@ -22,7 +22,7 @@ exports[`<Checkbox /> Checked story renders snapshot 1`] = `
       width="1.25rem"
     >
       <rect
-        class="outline"
+        class="checkmark__outline"
         fill="none"
         height="18"
         rx="3"
@@ -33,14 +33,14 @@ exports[`<Checkbox /> Checked story renders snapshot 1`] = `
         y="1"
       />
       <path
-        class="content"
+        class="checkmark__content"
         d="M15.5605 5.2094C15.447 5.12571 15.3181 5.06522 15.1811 5.03137C15.0442 4.99752 14.902 4.99099 14.7625 5.01214C14.6231 5.0333 14.4892 5.08172 14.3684 5.15465C14.2477 5.22758 14.1425 5.32359 14.0589 5.43718L8.96703 12.3478L5.72917 9.7572C5.50592 9.58618 5.22455 9.50943 4.94539 9.54341C4.66622 9.57738 4.41148 9.71937 4.23576 9.93893C4.06004 10.1585 3.97733 10.4382 4.00536 10.718C4.03339 10.9978 4.16993 11.2555 4.38572 11.4359L8.49687 14.7244C8.61048 14.8133 8.74065 14.8786 8.87979 14.9166C9.01893 14.9546 9.16424 14.9645 9.30724 14.9457C9.45024 14.9269 9.58805 14.8798 9.71264 14.8071C9.83723 14.7344 9.94609 14.6377 10.0329 14.5225L15.7917 6.71187C15.8753 6.59806 15.9356 6.4689 15.9691 6.33178C16.0027 6.19465 16.009 6.05225 15.9875 5.91272C15.966 5.77318 15.9173 5.63925 15.844 5.51857C15.7707 5.39789 15.6744 5.29283 15.5605 5.2094Z"
         fill="none"
       />
     </svg>
   </span>
   <label
-    class="label labelMedium"
+    class="label label--md"
     data-bootstrap-override="label"
     for="2"
     style="--checkbox-svg-size: 1.25rem;"
@@ -55,10 +55,10 @@ exports[`<Checkbox /> Default story renders snapshot 1`] = `
   class="checkbox"
 >
   <span
-    class="inputWrapper"
+    class="input__wrapper"
   >
     <input
-      class="checkboxInput"
+      class="checkbox__input"
       data-bootstrap-override="checkbox"
       id="1"
       style="--checkbox-svg-size: 1.25rem;"
@@ -71,7 +71,7 @@ exports[`<Checkbox /> Default story renders snapshot 1`] = `
       width="1.25rem"
     >
       <rect
-        class="outline"
+        class="checkmark__outline"
         fill="none"
         height="18"
         rx="3"
@@ -82,14 +82,14 @@ exports[`<Checkbox /> Default story renders snapshot 1`] = `
         y="1"
       />
       <path
-        class="content"
+        class="checkmark__content"
         d="M15.5605 5.2094C15.447 5.12571 15.3181 5.06522 15.1811 5.03137C15.0442 4.99752 14.902 4.99099 14.7625 5.01214C14.6231 5.0333 14.4892 5.08172 14.3684 5.15465C14.2477 5.22758 14.1425 5.32359 14.0589 5.43718L8.96703 12.3478L5.72917 9.7572C5.50592 9.58618 5.22455 9.50943 4.94539 9.54341C4.66622 9.57738 4.41148 9.71937 4.23576 9.93893C4.06004 10.1585 3.97733 10.4382 4.00536 10.718C4.03339 10.9978 4.16993 11.2555 4.38572 11.4359L8.49687 14.7244C8.61048 14.8133 8.74065 14.8786 8.87979 14.9166C9.01893 14.9546 9.16424 14.9645 9.30724 14.9457C9.45024 14.9269 9.58805 14.8798 9.71264 14.8071C9.83723 14.7344 9.94609 14.6377 10.0329 14.5225L15.7917 6.71187C15.8753 6.59806 15.9356 6.4689 15.9691 6.33178C16.0027 6.19465 16.009 6.05225 15.9875 5.91272C15.966 5.77318 15.9173 5.63925 15.844 5.51857C15.7707 5.39789 15.6744 5.29283 15.5605 5.2094Z"
         fill="none"
       />
     </svg>
   </span>
   <label
-    class="label labelMedium"
+    class="label label--md"
     data-bootstrap-override="label"
     for="1"
     style="--checkbox-svg-size: 1.25rem;"
@@ -100,17 +100,332 @@ exports[`<Checkbox /> Default story renders snapshot 1`] = `
 `;
 
 exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
+<table
+  class="disabled--table"
+>
+  <tbody>
+    <tr>
+      <td>
+        <div
+          class="checkbox"
+        >
+          <span
+            class="input__wrapper input__wrapper--disabled"
+          >
+            <input
+              class="checkbox__input"
+              data-bootstrap-override="checkbox"
+              disabled=""
+              id="6"
+              style="--checkbox-svg-size: 1.25rem;"
+              type="checkbox"
+            />
+            <svg
+              aria-hidden="true"
+              height="1.25rem"
+              viewBox="0 0 20 20"
+              width="1.25rem"
+            >
+              <rect
+                class="checkmark__outline"
+                fill="none"
+                height="18"
+                rx="3"
+                stroke="currentColor"
+                stroke-width="2"
+                width="18"
+                x="1"
+                y="1"
+              />
+              <path
+                class="checkmark__content"
+                d="M15.5605 5.2094C15.447 5.12571 15.3181 5.06522 15.1811 5.03137C15.0442 4.99752 14.902 4.99099 14.7625 5.01214C14.6231 5.0333 14.4892 5.08172 14.3684 5.15465C14.2477 5.22758 14.1425 5.32359 14.0589 5.43718L8.96703 12.3478L5.72917 9.7572C5.50592 9.58618 5.22455 9.50943 4.94539 9.54341C4.66622 9.57738 4.41148 9.71937 4.23576 9.93893C4.06004 10.1585 3.97733 10.4382 4.00536 10.718C4.03339 10.9978 4.16993 11.2555 4.38572 11.4359L8.49687 14.7244C8.61048 14.8133 8.74065 14.8786 8.87979 14.9166C9.01893 14.9546 9.16424 14.9645 9.30724 14.9457C9.45024 14.9269 9.58805 14.8798 9.71264 14.8071C9.83723 14.7344 9.94609 14.6377 10.0329 14.5225L15.7917 6.71187C15.8753 6.59806 15.9356 6.4689 15.9691 6.33178C16.0027 6.19465 16.009 6.05225 15.9875 5.91272C15.966 5.77318 15.9173 5.63925 15.844 5.51857C15.7707 5.39789 15.6744 5.29283 15.5605 5.2094Z"
+                fill="none"
+              />
+            </svg>
+          </span>
+          <label
+            class="label label--md label--disabled"
+            data-bootstrap-override="label"
+            for="6"
+            style="--checkbox-svg-size: 1.25rem;"
+          >
+            Disabled
+          </label>
+        </div>
+      </td>
+      <td>
+        <div
+          class="checkbox"
+        >
+          <span
+            class="input__wrapper"
+          >
+            <input
+              class="checkbox__input"
+              data-bootstrap-override="checkbox"
+              id="7"
+              readonly=""
+              style="--checkbox-svg-size: 1.25rem;"
+              type="checkbox"
+            />
+            <svg
+              aria-hidden="true"
+              height="1.25rem"
+              viewBox="0 0 20 20"
+              width="1.25rem"
+            >
+              <rect
+                class="checkmark__outline"
+                fill="none"
+                height="18"
+                rx="3"
+                stroke="currentColor"
+                stroke-width="2"
+                width="18"
+                x="1"
+                y="1"
+              />
+              <path
+                class="checkmark__content"
+                d="M15.5605 5.2094C15.447 5.12571 15.3181 5.06522 15.1811 5.03137C15.0442 4.99752 14.902 4.99099 14.7625 5.01214C14.6231 5.0333 14.4892 5.08172 14.3684 5.15465C14.2477 5.22758 14.1425 5.32359 14.0589 5.43718L8.96703 12.3478L5.72917 9.7572C5.50592 9.58618 5.22455 9.50943 4.94539 9.54341C4.66622 9.57738 4.41148 9.71937 4.23576 9.93893C4.06004 10.1585 3.97733 10.4382 4.00536 10.718C4.03339 10.9978 4.16993 11.2555 4.38572 11.4359L8.49687 14.7244C8.61048 14.8133 8.74065 14.8786 8.87979 14.9166C9.01893 14.9546 9.16424 14.9645 9.30724 14.9457C9.45024 14.9269 9.58805 14.8798 9.71264 14.8071C9.83723 14.7344 9.94609 14.6377 10.0329 14.5225L15.7917 6.71187C15.8753 6.59806 15.9356 6.4689 15.9691 6.33178C16.0027 6.19465 16.009 6.05225 15.9875 5.91272C15.966 5.77318 15.9173 5.63925 15.844 5.51857C15.7707 5.39789 15.6744 5.29283 15.5605 5.2094Z"
+                fill="none"
+              />
+            </svg>
+          </span>
+          <label
+            class="label label--md"
+            data-bootstrap-override="label"
+            for="7"
+            style="--checkbox-svg-size: 1.25rem;"
+          >
+            Default
+          </label>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div
+          class="checkbox"
+        >
+          <span
+            class="input__wrapper input__wrapper--disabled"
+          >
+            <input
+              checked=""
+              class="checkbox__input"
+              data-bootstrap-override="checkbox"
+              disabled=""
+              id="8"
+              style="--checkbox-svg-size: 1.25rem;"
+              type="checkbox"
+            />
+            <svg
+              aria-hidden="true"
+              height="1.25rem"
+              viewBox="0 0 20 20"
+              width="1.25rem"
+            >
+              <rect
+                class="checkmark__outline"
+                fill="none"
+                height="18"
+                rx="3"
+                stroke="currentColor"
+                stroke-width="2"
+                width="18"
+                x="1"
+                y="1"
+              />
+              <path
+                class="checkmark__content"
+                d="M15.5605 5.2094C15.447 5.12571 15.3181 5.06522 15.1811 5.03137C15.0442 4.99752 14.902 4.99099 14.7625 5.01214C14.6231 5.0333 14.4892 5.08172 14.3684 5.15465C14.2477 5.22758 14.1425 5.32359 14.0589 5.43718L8.96703 12.3478L5.72917 9.7572C5.50592 9.58618 5.22455 9.50943 4.94539 9.54341C4.66622 9.57738 4.41148 9.71937 4.23576 9.93893C4.06004 10.1585 3.97733 10.4382 4.00536 10.718C4.03339 10.9978 4.16993 11.2555 4.38572 11.4359L8.49687 14.7244C8.61048 14.8133 8.74065 14.8786 8.87979 14.9166C9.01893 14.9546 9.16424 14.9645 9.30724 14.9457C9.45024 14.9269 9.58805 14.8798 9.71264 14.8071C9.83723 14.7344 9.94609 14.6377 10.0329 14.5225L15.7917 6.71187C15.8753 6.59806 15.9356 6.4689 15.9691 6.33178C16.0027 6.19465 16.009 6.05225 15.9875 5.91272C15.966 5.77318 15.9173 5.63925 15.844 5.51857C15.7707 5.39789 15.6744 5.29283 15.5605 5.2094Z"
+                fill="none"
+              />
+            </svg>
+          </span>
+          <label
+            class="label label--md label--disabled"
+            data-bootstrap-override="label"
+            for="8"
+            style="--checkbox-svg-size: 1.25rem;"
+          >
+            Disabled
+          </label>
+        </div>
+      </td>
+      <td>
+        <div
+          class="checkbox"
+        >
+          <span
+            class="input__wrapper"
+          >
+            <input
+              checked=""
+              class="checkbox__input"
+              data-bootstrap-override="checkbox"
+              id="9"
+              readonly=""
+              style="--checkbox-svg-size: 1.25rem;"
+              type="checkbox"
+            />
+            <svg
+              aria-hidden="true"
+              height="1.25rem"
+              viewBox="0 0 20 20"
+              width="1.25rem"
+            >
+              <rect
+                class="checkmark__outline"
+                fill="none"
+                height="18"
+                rx="3"
+                stroke="currentColor"
+                stroke-width="2"
+                width="18"
+                x="1"
+                y="1"
+              />
+              <path
+                class="checkmark__content"
+                d="M15.5605 5.2094C15.447 5.12571 15.3181 5.06522 15.1811 5.03137C15.0442 4.99752 14.902 4.99099 14.7625 5.01214C14.6231 5.0333 14.4892 5.08172 14.3684 5.15465C14.2477 5.22758 14.1425 5.32359 14.0589 5.43718L8.96703 12.3478L5.72917 9.7572C5.50592 9.58618 5.22455 9.50943 4.94539 9.54341C4.66622 9.57738 4.41148 9.71937 4.23576 9.93893C4.06004 10.1585 3.97733 10.4382 4.00536 10.718C4.03339 10.9978 4.16993 11.2555 4.38572 11.4359L8.49687 14.7244C8.61048 14.8133 8.74065 14.8786 8.87979 14.9166C9.01893 14.9546 9.16424 14.9645 9.30724 14.9457C9.45024 14.9269 9.58805 14.8798 9.71264 14.8071C9.83723 14.7344 9.94609 14.6377 10.0329 14.5225L15.7917 6.71187C15.8753 6.59806 15.9356 6.4689 15.9691 6.33178C16.0027 6.19465 16.009 6.05225 15.9875 5.91272C15.966 5.77318 15.9173 5.63925 15.844 5.51857C15.7707 5.39789 15.6744 5.29283 15.5605 5.2094Z"
+                fill="none"
+              />
+            </svg>
+          </span>
+          <label
+            class="label label--md"
+            data-bootstrap-override="label"
+            for="9"
+            style="--checkbox-svg-size: 1.25rem;"
+          >
+            Default
+          </label>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div
+          class="checkbox"
+        >
+          <span
+            class="input__wrapper input__wrapper--disabled"
+          >
+            <input
+              aria-checked="mixed"
+              checked=""
+              class="checkbox__input"
+              data-bootstrap-override="checkbox"
+              disabled=""
+              id="10"
+              style="--checkbox-svg-size: 1.25rem;"
+              type="checkbox"
+            />
+            <svg
+              aria-hidden="true"
+              height="1.25rem"
+              viewBox="0 0 20 20"
+              width="1.25rem"
+            >
+              <rect
+                class="checkmark__outline"
+                fill="none"
+                height="18"
+                rx="3"
+                stroke="currentColor"
+                stroke-width="2"
+                width="18"
+                x="1"
+                y="1"
+              />
+              <path
+                class="checkmark__content"
+                d="M 14.00,9.00 C 14.55,9.00 15.00,9.45 15.00,10.00 15.00,10.00 15.00,10.00 15.00,10.00 15.00,10.55 14.55,11.00 14.00,11.00 14.00,11.00 6.00,11.00 6.00,11.00 5.45,11.00 5.00,10.55 5.00,10.00 5.00,10.00 5.00,10.00 5.00,10.00 5.00,9.45 5.45,9.00 6.00,9.00 6.00,9.00 14.00,9.00 14.00,9.00 Z"
+                fill="none"
+              />
+            </svg>
+          </span>
+          <label
+            class="label label--md label--disabled"
+            data-bootstrap-override="label"
+            for="10"
+            style="--checkbox-svg-size: 1.25rem;"
+          >
+            Disabled
+          </label>
+        </div>
+      </td>
+      <td>
+        <div
+          class="checkbox"
+        >
+          <span
+            class="input__wrapper"
+          >
+            <input
+              aria-checked="mixed"
+              checked=""
+              class="checkbox__input"
+              data-bootstrap-override="checkbox"
+              id="11"
+              readonly=""
+              style="--checkbox-svg-size: 1.25rem;"
+              type="checkbox"
+            />
+            <svg
+              aria-hidden="true"
+              height="1.25rem"
+              viewBox="0 0 20 20"
+              width="1.25rem"
+            >
+              <rect
+                class="checkmark__outline"
+                fill="none"
+                height="18"
+                rx="3"
+                stroke="currentColor"
+                stroke-width="2"
+                width="18"
+                x="1"
+                y="1"
+              />
+              <path
+                class="checkmark__content"
+                d="M 14.00,9.00 C 14.55,9.00 15.00,9.45 15.00,10.00 15.00,10.00 15.00,10.00 15.00,10.00 15.00,10.55 14.55,11.00 14.00,11.00 14.00,11.00 6.00,11.00 6.00,11.00 5.45,11.00 5.00,10.55 5.00,10.00 5.00,10.00 5.00,10.00 5.00,10.00 5.00,9.45 5.45,9.00 6.00,9.00 6.00,9.00 14.00,9.00 14.00,9.00 Z"
+                fill="none"
+              />
+            </svg>
+          </span>
+          <label
+            class="label label--md"
+            data-bootstrap-override="label"
+            for="11"
+            style="--checkbox-svg-size: 1.25rem;"
+          >
+            Default
+          </label>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`<Checkbox /> Disabled story renders snapshot 2`] = `
 <div
   class="checkbox"
 >
   <span
-    class="inputWrapper disabled"
+    class="input__wrapper input__wrapper--disabled"
   >
     <input
-      class="checkboxInput"
+      class="checkbox__input"
       data-bootstrap-override="checkbox"
       disabled=""
-      id="9"
+      id="22"
       style="--checkbox-svg-size: 1.25rem;"
       type="checkbox"
     />
@@ -121,7 +436,7 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
       width="1.25rem"
     >
       <rect
-        class="outline"
+        class="checkmark__outline"
         fill="none"
         height="18"
         rx="3"
@@ -132,16 +447,16 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
         y="1"
       />
       <path
-        class="content"
+        class="checkmark__content"
         d="M15.5605 5.2094C15.447 5.12571 15.3181 5.06522 15.1811 5.03137C15.0442 4.99752 14.902 4.99099 14.7625 5.01214C14.6231 5.0333 14.4892 5.08172 14.3684 5.15465C14.2477 5.22758 14.1425 5.32359 14.0589 5.43718L8.96703 12.3478L5.72917 9.7572C5.50592 9.58618 5.22455 9.50943 4.94539 9.54341C4.66622 9.57738 4.41148 9.71937 4.23576 9.93893C4.06004 10.1585 3.97733 10.4382 4.00536 10.718C4.03339 10.9978 4.16993 11.2555 4.38572 11.4359L8.49687 14.7244C8.61048 14.8133 8.74065 14.8786 8.87979 14.9166C9.01893 14.9546 9.16424 14.9645 9.30724 14.9457C9.45024 14.9269 9.58805 14.8798 9.71264 14.8071C9.83723 14.7344 9.94609 14.6377 10.0329 14.5225L15.7917 6.71187C15.8753 6.59806 15.9356 6.4689 15.9691 6.33178C16.0027 6.19465 16.009 6.05225 15.9875 5.91272C15.966 5.77318 15.9173 5.63925 15.844 5.51857C15.7707 5.39789 15.6744 5.29283 15.5605 5.2094Z"
         fill="none"
       />
     </svg>
   </span>
   <label
-    class="label labelMedium"
+    class="label label--md label--disabled"
     data-bootstrap-override="label"
-    for="9"
+    for="22"
     style="--checkbox-svg-size: 1.25rem;"
   >
     Disabled
@@ -154,12 +469,12 @@ exports[`<Checkbox /> Indeterminate story renders snapshot 1`] = `
   class="checkbox"
 >
   <span
-    class="inputWrapper"
+    class="input__wrapper"
   >
     <input
       aria-checked="mixed"
       checked=""
-      class="checkboxInput"
+      class="checkbox__input"
       data-bootstrap-override="checkbox"
       id="5"
       readonly=""
@@ -173,7 +488,7 @@ exports[`<Checkbox /> Indeterminate story renders snapshot 1`] = `
       width="1.25rem"
     >
       <rect
-        class="outline"
+        class="checkmark__outline"
         fill="none"
         height="18"
         rx="3"
@@ -184,14 +499,14 @@ exports[`<Checkbox /> Indeterminate story renders snapshot 1`] = `
         y="1"
       />
       <path
-        class="content"
+        class="checkmark__content"
         d="M 14.00,9.00 C 14.55,9.00 15.00,9.45 15.00,10.00 15.00,10.00 15.00,10.00 15.00,10.00 15.00,10.55 14.55,11.00 14.00,11.00 14.00,11.00 6.00,11.00 6.00,11.00 5.45,11.00 5.00,10.55 5.00,10.00 5.00,10.00 5.00,10.00 5.00,10.00 5.00,9.45 5.45,9.00 6.00,9.00 6.00,9.00 14.00,9.00 14.00,9.00 Z"
         fill="none"
       />
     </svg>
   </span>
   <label
-    class="label labelMedium"
+    class="label label--md"
     data-bootstrap-override="label"
     for="5"
     style="--checkbox-svg-size: 1.25rem;"
@@ -201,20 +516,31 @@ exports[`<Checkbox /> Indeterminate story renders snapshot 1`] = `
 </div>
 `;
 
+exports[`<Checkbox /> LabelsOnly story renders snapshot 1`] = `
+<label
+  class="label label--md"
+  data-bootstrap-override="label"
+  for="md-label"
+  style="--checkbox-svg-size: 1.25rem;"
+>
+  Medium label
+</label>
+`;
+
 exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
 <div
-  class="w-80 grid grid-cols-2 gap-4"
+  class="longlabels--grid"
 >
   <div
     class="checkbox"
   >
     <span
-      class="inputWrapper"
+      class="input__wrapper"
     >
       <input
-        class="checkboxInput"
+        class="checkbox__input"
         data-bootstrap-override="checkbox"
-        id="7"
+        id="18"
         style="--checkbox-svg-size: 1.25rem;"
         type="checkbox"
       />
@@ -225,7 +551,7 @@ exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
         width="1.25rem"
       >
         <rect
-          class="outline"
+          class="checkmark__outline"
           fill="none"
           height="18"
           rx="3"
@@ -236,16 +562,16 @@ exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
           y="1"
         />
         <path
-          class="content"
+          class="checkmark__content"
           d="M15.5605 5.2094C15.447 5.12571 15.3181 5.06522 15.1811 5.03137C15.0442 4.99752 14.902 4.99099 14.7625 5.01214C14.6231 5.0333 14.4892 5.08172 14.3684 5.15465C14.2477 5.22758 14.1425 5.32359 14.0589 5.43718L8.96703 12.3478L5.72917 9.7572C5.50592 9.58618 5.22455 9.50943 4.94539 9.54341C4.66622 9.57738 4.41148 9.71937 4.23576 9.93893C4.06004 10.1585 3.97733 10.4382 4.00536 10.718C4.03339 10.9978 4.16993 11.2555 4.38572 11.4359L8.49687 14.7244C8.61048 14.8133 8.74065 14.8786 8.87979 14.9166C9.01893 14.9546 9.16424 14.9645 9.30724 14.9457C9.45024 14.9269 9.58805 14.8798 9.71264 14.8071C9.83723 14.7344 9.94609 14.6377 10.0329 14.5225L15.7917 6.71187C15.8753 6.59806 15.9356 6.4689 15.9691 6.33178C16.0027 6.19465 16.009 6.05225 15.9875 5.91272C15.966 5.77318 15.9173 5.63925 15.844 5.51857C15.7707 5.39789 15.6744 5.29283 15.5605 5.2094Z"
           fill="none"
         />
       </svg>
     </span>
     <label
-      class="label labelMedium"
+      class="label label--md"
       data-bootstrap-override="label"
-      for="7"
+      for="18"
       style="--checkbox-svg-size: 1.25rem;"
     >
       Lorem ipsum dolor sit amet, consectetur adipiscing elit
@@ -255,12 +581,12 @@ exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
     class="checkbox"
   >
     <span
-      class="inputWrapper"
+      class="input__wrapper"
     >
       <input
-        class="checkboxInput"
+        class="checkbox__input"
         data-bootstrap-override="checkbox"
-        id="8"
+        id="19"
         style="--checkbox-svg-size: 1.25rem;"
         type="checkbox"
       />
@@ -271,7 +597,7 @@ exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
         width="1.25rem"
       >
         <rect
-          class="outline"
+          class="checkmark__outline"
           fill="none"
           height="18"
           rx="3"
@@ -282,16 +608,110 @@ exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
           y="1"
         />
         <path
-          class="content"
+          class="checkmark__content"
           d="M15.5605 5.2094C15.447 5.12571 15.3181 5.06522 15.1811 5.03137C15.0442 4.99752 14.902 4.99099 14.7625 5.01214C14.6231 5.0333 14.4892 5.08172 14.3684 5.15465C14.2477 5.22758 14.1425 5.32359 14.0589 5.43718L8.96703 12.3478L5.72917 9.7572C5.50592 9.58618 5.22455 9.50943 4.94539 9.54341C4.66622 9.57738 4.41148 9.71937 4.23576 9.93893C4.06004 10.1585 3.97733 10.4382 4.00536 10.718C4.03339 10.9978 4.16993 11.2555 4.38572 11.4359L8.49687 14.7244C8.61048 14.8133 8.74065 14.8786 8.87979 14.9166C9.01893 14.9546 9.16424 14.9645 9.30724 14.9457C9.45024 14.9269 9.58805 14.8798 9.71264 14.8071C9.83723 14.7344 9.94609 14.6377 10.0329 14.5225L15.7917 6.71187C15.8753 6.59806 15.9356 6.4689 15.9691 6.33178C16.0027 6.19465 16.009 6.05225 15.9875 5.91272C15.966 5.77318 15.9173 5.63925 15.844 5.51857C15.7707 5.39789 15.6744 5.29283 15.5605 5.2094Z"
           fill="none"
         />
       </svg>
     </span>
     <label
-      class="label labelSmall"
+      class="label label--sm"
       data-bootstrap-override="label"
-      for="8"
+      for="19"
+      style="--checkbox-svg-size: 1.25rem;"
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    </label>
+  </div>
+  <div
+    class="checkbox"
+  >
+    <span
+      class="input__wrapper input__wrapper--disabled"
+    >
+      <input
+        class="checkbox__input"
+        data-bootstrap-override="checkbox"
+        disabled=""
+        id="20"
+        style="--checkbox-svg-size: 1.25rem;"
+        type="checkbox"
+      />
+      <svg
+        aria-hidden="true"
+        height="1.25rem"
+        viewBox="0 0 20 20"
+        width="1.25rem"
+      >
+        <rect
+          class="checkmark__outline"
+          fill="none"
+          height="18"
+          rx="3"
+          stroke="currentColor"
+          stroke-width="2"
+          width="18"
+          x="1"
+          y="1"
+        />
+        <path
+          class="checkmark__content"
+          d="M15.5605 5.2094C15.447 5.12571 15.3181 5.06522 15.1811 5.03137C15.0442 4.99752 14.902 4.99099 14.7625 5.01214C14.6231 5.0333 14.4892 5.08172 14.3684 5.15465C14.2477 5.22758 14.1425 5.32359 14.0589 5.43718L8.96703 12.3478L5.72917 9.7572C5.50592 9.58618 5.22455 9.50943 4.94539 9.54341C4.66622 9.57738 4.41148 9.71937 4.23576 9.93893C4.06004 10.1585 3.97733 10.4382 4.00536 10.718C4.03339 10.9978 4.16993 11.2555 4.38572 11.4359L8.49687 14.7244C8.61048 14.8133 8.74065 14.8786 8.87979 14.9166C9.01893 14.9546 9.16424 14.9645 9.30724 14.9457C9.45024 14.9269 9.58805 14.8798 9.71264 14.8071C9.83723 14.7344 9.94609 14.6377 10.0329 14.5225L15.7917 6.71187C15.8753 6.59806 15.9356 6.4689 15.9691 6.33178C16.0027 6.19465 16.009 6.05225 15.9875 5.91272C15.966 5.77318 15.9173 5.63925 15.844 5.51857C15.7707 5.39789 15.6744 5.29283 15.5605 5.2094Z"
+          fill="none"
+        />
+      </svg>
+    </span>
+    <label
+      class="label label--md label--disabled"
+      data-bootstrap-override="label"
+      for="20"
+      style="--checkbox-svg-size: 1.25rem;"
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    </label>
+  </div>
+  <div
+    class="checkbox"
+  >
+    <span
+      class="input__wrapper input__wrapper--disabled"
+    >
+      <input
+        class="checkbox__input"
+        data-bootstrap-override="checkbox"
+        disabled=""
+        id="21"
+        style="--checkbox-svg-size: 1.25rem;"
+        type="checkbox"
+      />
+      <svg
+        aria-hidden="true"
+        height="1.25rem"
+        viewBox="0 0 20 20"
+        width="1.25rem"
+      >
+        <rect
+          class="checkmark__outline"
+          fill="none"
+          height="18"
+          rx="3"
+          stroke="currentColor"
+          stroke-width="2"
+          width="18"
+          x="1"
+          y="1"
+        />
+        <path
+          class="checkmark__content"
+          d="M15.5605 5.2094C15.447 5.12571 15.3181 5.06522 15.1811 5.03137C15.0442 4.99752 14.902 4.99099 14.7625 5.01214C14.6231 5.0333 14.4892 5.08172 14.3684 5.15465C14.2477 5.22758 14.1425 5.32359 14.0589 5.43718L8.96703 12.3478L5.72917 9.7572C5.50592 9.58618 5.22455 9.50943 4.94539 9.54341C4.66622 9.57738 4.41148 9.71937 4.23576 9.93893C4.06004 10.1585 3.97733 10.4382 4.00536 10.718C4.03339 10.9978 4.16993 11.2555 4.38572 11.4359L8.49687 14.7244C8.61048 14.8133 8.74065 14.8786 8.87979 14.9166C9.01893 14.9546 9.16424 14.9645 9.30724 14.9457C9.45024 14.9269 9.58805 14.8798 9.71264 14.8071C9.83723 14.7344 9.94609 14.6377 10.0329 14.5225L15.7917 6.71187C15.8753 6.59806 15.9356 6.4689 15.9691 6.33178C16.0027 6.19465 16.009 6.05225 15.9875 5.91272C15.966 5.77318 15.9173 5.63925 15.844 5.51857C15.7707 5.39789 15.6744 5.29283 15.5605 5.2094Z"
+          fill="none"
+        />
+      </svg>
+    </span>
+    <label
+      class="label label--sm label--disabled"
+      data-bootstrap-override="label"
+      for="21"
       style="--checkbox-svg-size: 1.25rem;"
     >
       Lorem ipsum dolor sit amet, consectetur adipiscing elit
@@ -305,10 +725,10 @@ exports[`<Checkbox /> Small story renders snapshot 1`] = `
   class="checkbox"
 >
   <span
-    class="inputWrapper"
+    class="input__wrapper"
   >
     <input
-      class="checkboxInput"
+      class="checkbox__input"
       data-bootstrap-override="checkbox"
       id="3"
       style="--checkbox-svg-size: 1.25rem;"
@@ -321,7 +741,7 @@ exports[`<Checkbox /> Small story renders snapshot 1`] = `
       width="1.25rem"
     >
       <rect
-        class="outline"
+        class="checkmark__outline"
         fill="none"
         height="18"
         rx="3"
@@ -332,14 +752,14 @@ exports[`<Checkbox /> Small story renders snapshot 1`] = `
         y="1"
       />
       <path
-        class="content"
+        class="checkmark__content"
         d="M15.5605 5.2094C15.447 5.12571 15.3181 5.06522 15.1811 5.03137C15.0442 4.99752 14.902 4.99099 14.7625 5.01214C14.6231 5.0333 14.4892 5.08172 14.3684 5.15465C14.2477 5.22758 14.1425 5.32359 14.0589 5.43718L8.96703 12.3478L5.72917 9.7572C5.50592 9.58618 5.22455 9.50943 4.94539 9.54341C4.66622 9.57738 4.41148 9.71937 4.23576 9.93893C4.06004 10.1585 3.97733 10.4382 4.00536 10.718C4.03339 10.9978 4.16993 11.2555 4.38572 11.4359L8.49687 14.7244C8.61048 14.8133 8.74065 14.8786 8.87979 14.9166C9.01893 14.9546 9.16424 14.9645 9.30724 14.9457C9.45024 14.9269 9.58805 14.8798 9.71264 14.8071C9.83723 14.7344 9.94609 14.6377 10.0329 14.5225L15.7917 6.71187C15.8753 6.59806 15.9356 6.4689 15.9691 6.33178C16.0027 6.19465 16.009 6.05225 15.9875 5.91272C15.966 5.77318 15.9173 5.63925 15.844 5.51857C15.7707 5.39789 15.6744 5.29283 15.5605 5.2094Z"
         fill="none"
       />
     </svg>
   </span>
   <label
-    class="label labelSmall"
+    class="label label--sm"
     data-bootstrap-override="label"
     for="3"
     style="--checkbox-svg-size: 1.25rem;"
@@ -354,11 +774,11 @@ exports[`<Checkbox /> SmallChecked story renders snapshot 1`] = `
   class="checkbox"
 >
   <span
-    class="inputWrapper"
+    class="input__wrapper"
   >
     <input
       checked=""
-      class="checkboxInput"
+      class="checkbox__input"
       data-bootstrap-override="checkbox"
       id="4"
       style="--checkbox-svg-size: 1.25rem;"
@@ -371,7 +791,7 @@ exports[`<Checkbox /> SmallChecked story renders snapshot 1`] = `
       width="1.25rem"
     >
       <rect
-        class="outline"
+        class="checkmark__outline"
         fill="none"
         height="18"
         rx="3"
@@ -382,14 +802,14 @@ exports[`<Checkbox /> SmallChecked story renders snapshot 1`] = `
         y="1"
       />
       <path
-        class="content"
+        class="checkmark__content"
         d="M15.5605 5.2094C15.447 5.12571 15.3181 5.06522 15.1811 5.03137C15.0442 4.99752 14.902 4.99099 14.7625 5.01214C14.6231 5.0333 14.4892 5.08172 14.3684 5.15465C14.2477 5.22758 14.1425 5.32359 14.0589 5.43718L8.96703 12.3478L5.72917 9.7572C5.50592 9.58618 5.22455 9.50943 4.94539 9.54341C4.66622 9.57738 4.41148 9.71937 4.23576 9.93893C4.06004 10.1585 3.97733 10.4382 4.00536 10.718C4.03339 10.9978 4.16993 11.2555 4.38572 11.4359L8.49687 14.7244C8.61048 14.8133 8.74065 14.8786 8.87979 14.9166C9.01893 14.9546 9.16424 14.9645 9.30724 14.9457C9.45024 14.9269 9.58805 14.8798 9.71264 14.8071C9.83723 14.7344 9.94609 14.6377 10.0329 14.5225L15.7917 6.71187C15.8753 6.59806 15.9356 6.4689 15.9691 6.33178C16.0027 6.19465 16.009 6.05225 15.9875 5.91272C15.966 5.77318 15.9173 5.63925 15.844 5.51857C15.7707 5.39789 15.6744 5.29283 15.5605 5.2094Z"
         fill="none"
       />
     </svg>
   </span>
   <label
-    class="label labelSmall"
+    class="label label--sm"
     data-bootstrap-override="label"
     for="4"
     style="--checkbox-svg-size: 1.25rem;"
@@ -402,7 +822,7 @@ exports[`<Checkbox /> SmallChecked story renders snapshot 1`] = `
 exports[`<Checkbox /> WithCustomPositioning story renders snapshot 1`] = `
 <span>
   <label
-    class="label labelMedium"
+    class="label label--md"
     data-bootstrap-override="label"
     for="test"
     style="--checkbox-svg-size: 1.25rem;"
@@ -410,10 +830,10 @@ exports[`<Checkbox /> WithCustomPositioning story renders snapshot 1`] = `
     label on left
   </label>
   <span
-    class="inputWrapper"
+    class="input__wrapper"
   >
     <input
-      class="checkboxInput"
+      class="checkbox__input"
       data-bootstrap-override="checkbox"
       id="test"
       style="--checkbox-svg-size: 1.25rem;"
@@ -426,7 +846,7 @@ exports[`<Checkbox /> WithCustomPositioning story renders snapshot 1`] = `
       width="1.25rem"
     >
       <rect
-        class="outline"
+        class="checkmark__outline"
         fill="none"
         height="18"
         rx="3"
@@ -437,7 +857,7 @@ exports[`<Checkbox /> WithCustomPositioning story renders snapshot 1`] = `
         y="1"
       />
       <path
-        class="content"
+        class="checkmark__content"
         d="M15.5605 5.2094C15.447 5.12571 15.3181 5.06522 15.1811 5.03137C15.0442 4.99752 14.902 4.99099 14.7625 5.01214C14.6231 5.0333 14.4892 5.08172 14.3684 5.15465C14.2477 5.22758 14.1425 5.32359 14.0589 5.43718L8.96703 12.3478L5.72917 9.7572C5.50592 9.58618 5.22455 9.50943 4.94539 9.54341C4.66622 9.57738 4.41148 9.71937 4.23576 9.93893C4.06004 10.1585 3.97733 10.4382 4.00536 10.718C4.03339 10.9978 4.16993 11.2555 4.38572 11.4359L8.49687 14.7244C8.61048 14.8133 8.74065 14.8786 8.87979 14.9166C9.01893 14.9546 9.16424 14.9645 9.30724 14.9457C9.45024 14.9269 9.58805 14.8798 9.71264 14.8071C9.83723 14.7344 9.94609 14.6377 10.0329 14.5225L15.7917 6.71187C15.8753 6.59806 15.9356 6.4689 15.9691 6.33178C16.0027 6.19465 16.009 6.05225 15.9875 5.91272C15.966 5.77318 15.9173 5.63925 15.844 5.51857C15.7707 5.39789 15.6744 5.29283 15.5605 5.2094Z"
         fill="none"
       />
@@ -451,13 +871,13 @@ exports[`<Checkbox /> WithoutVisibleLabel story renders snapshot 1`] = `
   class="checkbox"
 >
   <span
-    class="inputWrapper"
+    class="input__wrapper"
   >
     <input
       aria-label="a checkbox has no name"
-      class="checkboxInput"
+      class="checkbox__input"
       data-bootstrap-override="checkbox"
-      id="6"
+      id="12"
       style="--checkbox-svg-size: 1.25rem;"
       type="checkbox"
     />
@@ -468,7 +888,7 @@ exports[`<Checkbox /> WithoutVisibleLabel story renders snapshot 1`] = `
       width="1.25rem"
     >
       <rect
-        class="outline"
+        class="checkmark__outline"
         fill="none"
         height="18"
         rx="3"
@@ -479,7 +899,7 @@ exports[`<Checkbox /> WithoutVisibleLabel story renders snapshot 1`] = `
         y="1"
       />
       <path
-        class="content"
+        class="checkmark__content"
         d="M15.5605 5.2094C15.447 5.12571 15.3181 5.06522 15.1811 5.03137C15.0442 4.99752 14.902 4.99099 14.7625 5.01214C14.6231 5.0333 14.4892 5.08172 14.3684 5.15465C14.2477 5.22758 14.1425 5.32359 14.0589 5.43718L8.96703 12.3478L5.72917 9.7572C5.50592 9.58618 5.22455 9.50943 4.94539 9.54341C4.66622 9.57738 4.41148 9.71937 4.23576 9.93893C4.06004 10.1585 3.97733 10.4382 4.00536 10.718C4.03339 10.9978 4.16993 11.2555 4.38572 11.4359L8.49687 14.7244C8.61048 14.8133 8.74065 14.8786 8.87979 14.9166C9.01893 14.9546 9.16424 14.9645 9.30724 14.9457C9.45024 14.9269 9.58805 14.8798 9.71264 14.8071C9.83723 14.7344 9.94609 14.6377 10.0329 14.5225L15.7917 6.71187C15.8753 6.59806 15.9356 6.4689 15.9691 6.33178C16.0027 6.19465 16.009 6.05225 15.9875 5.91272C15.966 5.77318 15.9173 5.63925 15.844 5.51857C15.7707 5.39789 15.6744 5.29283 15.5605 5.2094Z"
         fill="none"
       />
