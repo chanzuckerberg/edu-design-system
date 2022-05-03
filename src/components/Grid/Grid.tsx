@@ -13,6 +13,11 @@ export interface Props {
    */
   className?: string;
   /**
+   * Gap style variants
+   * - **sm** renders a smaller gap between items than the default
+   */
+  gap?: 'sm';
+  /**
    * Stylistic variations of the GridL
    * - **1up** yields a Grid whose GridItems span the entire width of the container
    * - **1-3up** yields a Grid whose GridItems are stacked on small screens and expand to fit 3 across when enough screen real estate becomes available to display them comfortably side-by-side
@@ -28,7 +33,13 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const Grid = ({ className, variant, children, ...other }: Props) => {
+export const Grid = ({
+  className,
+  variant,
+  children,
+  gap,
+  ...other
+}: Props) => {
   const componentClassName = clsx(
     styles['grid'],
     className,
@@ -38,6 +49,7 @@ export const Grid = ({ className, variant, children, ...other }: Props) => {
     variant === '3up' && styles['grid--3up'],
     variant === '4up' && styles['grid--4up'],
     variant === '1-2-4up' && styles['grid--1-2-4up'],
+    gap === 'sm' && styles['grid--gap-sm'],
   );
 
   return (
