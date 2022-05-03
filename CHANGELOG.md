@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.17.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.16.0...v0.17.0) (2022-05-03)
+
+### **banner:** ([#1010](https://github.com/chanzuckerberg/edu-design-system/issues/1010))
+
+- renamed `color` prop to `variant`
+- renamed `variant` "alert" to "error"
+- replaced `elevation` prop with `isFlat`
+- split `textContent` prop into `title` and `description`
+- removed `BannerTitle` and `BannerMessage` subcomponents
+- added `titleAs` and `descriptionAs` props to specify the elements `title` and `description` should render as
+- 1 rem bottom margin added to banner if `isFlat` is falesy to account for the drop shadow
+
 ## [0.16.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.15.0...v0.16.0) (2022-05-03)
 
 ### **Checkbox:** ([#1008](https://github.com/chanzuckerberg/edu-design-system/issues/1008))
