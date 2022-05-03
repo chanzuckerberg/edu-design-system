@@ -14,7 +14,7 @@ export default {
   component: Tag,
 
   argTypes: {
-    color: {
+    variant: {
       control: {
         type: "select",
         options: colorOptions,
@@ -23,8 +23,8 @@ export default {
   },
 
   args: {
-    children: "Tag text",
-    color: "warning" as const,
+    text: "Tag text",
+    variant: "warning" as const,
   },
 };
 
@@ -36,7 +36,7 @@ export const ColorVariants: StoryObj<Args> = {
   render: (args) => (
     <div className={styles.tagList}>
       {colorOptions.map((color) => {
-        return <Tag key={color} {...args} color={color} />;
+        return <Tag key={color} {...args} variant={color} />;
       })}
     </div>
   ),
@@ -46,25 +46,40 @@ export const OutlineVariants: StoryObj<Args> = {
   render: (args) => (
     <div className={styles.tagList}>
       {colorOptions.map((color) => {
-        return <Tag key={color} {...args} color={color} variant="outline" />;
+        return <Tag key={color} {...args} hasOutline={true} variant={color} />;
       })}
     </div>
   ),
 };
 
 export const WithIcon: StoryObj<Args> = {
-  ...Default,
-  args: {
-    icon: (
-      <Icon key="icon" name="warning" purpose="informative" title="warning" />
-    ),
-  },
+  render: (args) => (
+    <div className={styles.tagList}>
+      {colorOptions.map((color) => {
+        return (
+          <Tag
+            key={color}
+            {...args}
+            icon={
+              <Icon
+                key="icon"
+                name="warning"
+                purpose="informative"
+                title="warning"
+              />
+            }
+            variant={color}
+          />
+        );
+      })}
+    </div>
+  ),
 };
 
 export const WithLongTextAndIcon: StoryObj<Args> = {
   ...Default,
   args: {
-    children: "This tag has a really long text message",
+    text: "This tag has a really long text message",
     icon: (
       <Icon key="icon" name="warning" purpose="informative" title="warning" />
     ),

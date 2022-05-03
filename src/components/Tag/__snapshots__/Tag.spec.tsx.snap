@@ -148,31 +148,160 @@ exports[`<Tag /> OutlineVariants story renders snapshot 1`] = `
 `;
 
 exports[`<Tag /> WithIcon story renders snapshot 1`] = `
-<span
-  class="tag colorWarning text text--sm text--bold-weight"
+<div
+  class="tagList"
 >
-  <svg
-    class="icon"
-    fill="currentColor"
-    role="img"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <title
-      id="1"
-    >
-      warning
-    </title>
-    <use
-      xlink:href="test-file-stub#warning"
-    />
-  </svg>
-  ​
   <span
-    class="body"
+    class="tag colorNeutral text text--sm text--bold-weight"
   >
-    Tag text
+    <svg
+      class="icon"
+      fill="currentColor"
+      role="img"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="1"
+      >
+        warning
+      </title>
+      <use
+        xlink:href="test-file-stub#warning"
+      />
+    </svg>
+    ​
+    <span
+      class="body"
+    >
+      Tag text
+    </span>
   </span>
-</span>
+  <span
+    class="tag colorWarning text text--sm text--bold-weight"
+  >
+    <svg
+      class="icon"
+      fill="currentColor"
+      role="img"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="2"
+      >
+        warning
+      </title>
+      <use
+        xlink:href="test-file-stub#warning"
+      />
+    </svg>
+    ​
+    <span
+      class="body"
+    >
+      Tag text
+    </span>
+  </span>
+  <span
+    class="tag colorBrand text text--sm text--bold-weight"
+  >
+    <svg
+      class="icon"
+      fill="currentColor"
+      role="img"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="3"
+      >
+        warning
+      </title>
+      <use
+        xlink:href="test-file-stub#warning"
+      />
+    </svg>
+    ​
+    <span
+      class="body"
+    >
+      Tag text
+    </span>
+  </span>
+  <span
+    class="tag colorError text text--sm text--bold-weight"
+  >
+    <svg
+      class="icon"
+      fill="currentColor"
+      role="img"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="4"
+      >
+        warning
+      </title>
+      <use
+        xlink:href="test-file-stub#warning"
+      />
+    </svg>
+    ​
+    <span
+      class="body"
+    >
+      Tag text
+    </span>
+  </span>
+  <span
+    class="tag colorYellow text text--sm text--bold-weight"
+  >
+    <svg
+      class="icon"
+      fill="currentColor"
+      role="img"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="5"
+      >
+        warning
+      </title>
+      <use
+        xlink:href="test-file-stub#warning"
+      />
+    </svg>
+    ​
+    <span
+      class="body"
+    >
+      Tag text
+    </span>
+  </span>
+  <span
+    class="tag colorSuccess text text--sm text--bold-weight"
+  >
+    <svg
+      class="icon"
+      fill="currentColor"
+      role="img"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="6"
+      >
+        warning
+      </title>
+      <use
+        xlink:href="test-file-stub#warning"
+      />
+    </svg>
+    ​
+    <span
+      class="body"
+    >
+      Tag text
+    </span>
+  </span>
+</div>
 `;
 
 exports[`<Tag /> WithLongTextAndIcon story renders snapshot 1`] = `
@@ -186,7 +315,7 @@ exports[`<Tag /> WithLongTextAndIcon story renders snapshot 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <title
-      id="2"
+      id="7"
     >
       warning
     </title>
