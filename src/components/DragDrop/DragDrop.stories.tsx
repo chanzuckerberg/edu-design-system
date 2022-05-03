@@ -9,7 +9,7 @@ export default {
   args: {
     sourceItems: [
       {
-        title: 'Longer project name truncation after a long name',
+        title: 'Project #0',
         id: 0,
       },
       {
@@ -24,22 +24,33 @@ export default {
         title: 'Project #3',
         id: 3,
       },
+    ],
+    destItems: [
       {
         title: 'Project #4',
         id: 4,
+      },
+      {
+        title: 'Project #5',
+        id: 5,
       },
       {
         title: 'Project #6',
         id: 6,
       },
     ],
-    destItems: [
-      {
-        title: 'Project #5',
-        id: 5,
-      },
-    ],
   },
+  decorators: [
+    (Story) => (
+      <div
+        style={{
+          margin: '1rem', // Push content away from Storybook borders
+        }}
+      >
+        <Story />
+      </div>
+    ),
+  ],
 } as Meta;
 
 const Template: Story<Props> = (args) => <DragDrop {...args} />;
