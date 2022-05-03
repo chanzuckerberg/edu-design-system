@@ -1,8 +1,8 @@
-import clsx from 'clsx';
-import React, { ReactNode } from 'react';
-import styles from './Fieldset.module.css';
-import FieldsetItems from '../FieldsetItems';
-import FieldsetLegend from '../FieldsetLegend';
+import clsx from "clsx";
+import React, { ReactNode } from "react";
+import FieldsetItems from "../FieldsetItems";
+import FieldsetLegend from "../FieldsetLegend";
+import styles from "./Fieldset.module.css";
 
 type FieldsetProps = {
   /**
@@ -27,7 +27,7 @@ type FieldsetProps = {
  * A container for a fieldset that includes a legend and one or more form inputs.
  */
 export function Fieldset({ children, className }: FieldsetProps) {
-  const componentClassName = clsx(className, styles['fieldset']);
+  const componentClassName = clsx(className, styles["fieldset"]);
   return <fieldset className={componentClassName}>{children}</fieldset>;
 }
 

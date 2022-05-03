@@ -6,7 +6,7 @@ import FieldsetLegend, { FieldsetLegendProps } from "../FieldsetLegend";
 import { Fieldset } from "./Fieldset";
 
 export default {
-  title: "Atoms/Forms/Fieldset",
+  title: "Fieldset",
   component: Fieldset,
   subcomponents: { FieldsetLegend, FieldsetItems },
 };
