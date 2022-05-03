@@ -1,6 +1,8 @@
 import clsx from 'clsx';
 import update from 'immutability-helper';
 import React, { useCallback, useState } from 'react';
+import { useDrop } from 'react-dnd';
+import { DragItemTypes } from '../../util/dragItemTypes';
 import DragCard from '../DragCard';
 import styles from '../DragDrop/DragDrop.module.css';
 
@@ -26,6 +28,27 @@ export interface Item {
 export const DragContainer = ({ className, list }: Props) => {
   const componentClassName = clsx(styles['drag-container'], className, {});
   const [cards, setCards] = useState(list);
+  const [hasDropped, setHasDropped] = useState(false);
+  const [hasDroppedOnChild, setHasDroppedOnChild] = useState(false);
+
+  const [{ isOverCurrent }, drop] = useDrop(
+    () => ({
+      accept: DragItemTypes.CARD,
+      drop(_item: unknown, monitor) {
+        const didDrop = monitor.didDrop();
+        if (didDrop) {
+          return;
+        }
+        setHasDropped(true);
+        setHasDroppedOnChild(didDrop);
+      },
+      collect: (monitor) => ({
+        isOver: monitor.isOver(),
+        isOverCurrent: monitor.isOver({ shallow: true }),
+      }),
+    }),
+    [setHasDropped, setHasDroppedOnChild],
+  );
 
   const moveCard = useCallback(
     (dragIndex: number, hoverIndex: number) => {
@@ -56,9 +79,19 @@ export const DragContainer = ({ className, list }: Props) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [],
   );
+  /**
+   * TODO: rm this and add class for isOverCurrent on card and list
+   */
+  let backgroundColor = 'white';
+  if (isOverCurrent) {
+    backgroundColor = 'darkgreen';
+  }
 
   return (
-    <div className={componentClassName}>
+    <div
+      className={componentClassName}
+      style={{ backgroundColor: backgroundColor }}
+    >
       {cards.map((card, index) => renderCard(card, index))}
     </div>
   );

@@ -111,7 +111,7 @@ export const DragCard = ({
     }),
   });
 
-  const opacity = isDragging ? 0 : 1;
+  const opacity = isDragging ? '0.25' : 1;
   drag(drop(ref));
   return (
     <div
