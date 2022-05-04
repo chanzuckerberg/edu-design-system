@@ -77,3 +77,18 @@
   /* TODO: replace with tier 2 token */
   font-weight: var(--eds-font-weight-bold);
 }
+
+/**
+ * Spacing
+ */
+.text--half-spacing {
+  margin-bottom: var(--eds-size-half);
+}
+
+.text--1x-spacing {
+  margin-bottom: var(--eds-size-1);
+}
+
+.text--2x-spacing {
+  margin-bottom: var(--eds-size-2);
+}

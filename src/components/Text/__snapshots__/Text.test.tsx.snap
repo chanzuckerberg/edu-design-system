@@ -64,6 +64,31 @@ exports[`<Text /> Overline story renders snapshot 1`] = `
 </p>
 `;
 
+exports[`<Text /> Spacing story renders snapshot 1`] = `
+<div>
+  <p
+    class="spacing text text--body text--half-spacing"
+  >
+    Spacing Half
+  </p>
+  <p
+    class="spacing text text--body text--1x-spacing"
+  >
+    Spacing 1x
+  </p>
+  <p
+    class="spacing text text--body text--2x-spacing"
+  >
+    Spacing 2x
+  </p>
+  <p
+    class="spacing text text--body"
+  >
+    Bottom text to show spacing for spacing 2x
+  </p>
+</div>
+`;
+
 exports[`<Text /> TextVariantInherit story renders snapshot 1`] = `
 <p
   class="text text--body text--error"
