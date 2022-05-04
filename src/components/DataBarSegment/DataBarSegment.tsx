@@ -72,7 +72,7 @@ export const DataBarSegment = React.forwardRef(
         ref={ref}
         style={{ width: `${width}` }}
         {...other}
-      ></div>
+      />
     );
     return text ? (
       <Tooltip align="bottom" text={text}>

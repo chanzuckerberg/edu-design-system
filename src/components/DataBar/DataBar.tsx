@@ -7,7 +7,7 @@ import DataBarSegment from '../DataBarSegment';
 import type { Variants } from '../DataBarSegment';
 import Text from '../Text';
 
-type DataBarSegmentProps = {
+type Segment = {
   /**
    * Tooltip text to be displayed when the segment is hovered.
    */
@@ -16,10 +16,6 @@ type DataBarSegmentProps = {
    * The value of the individual segment that accumulates towards the task goal.
    */
   value: number;
-  /**
-   * Color variant of the individual segment.
-   */
-  variant?: Variants;
 };
 
 export type Props = {
@@ -33,12 +29,13 @@ export type Props = {
   label: string;
   /**
    * Max value to be represented by the data bar.
+   * Defaults to 100 to act as a percentage bar.
    */
   max: number;
   /**
    * A list of segments to be represented by the data bar.
    */
-  segments: DataBarSegmentProps[];
+  segments: Segment[];
   /**
    * Color variant of the data bar. Decorates the segments.
    */
@@ -83,20 +80,6 @@ export const DataBar = ({
 
   const isFull = totalSegmentValue >= max;
 
-  /**
-   * Calculates the total width the segments will take up where the width is at least 5% of the max value.
-   */
-  let totalSegmentWidth = 0;
-  for (
-    let index = 0;
-    index < segments.length && totalSegmentWidth < max;
-    index++
-  ) {
-    const segment = segments[index];
-    const value = Math.max(segment.value, max / 20);
-    totalSegmentWidth += value;
-  }
-
   const segmentComponents: React.ReactElement<typeof DataBarSegment>[] = [];
 
   /**
@@ -128,7 +111,6 @@ export const DataBar = ({
    * 1) Keeps a running accumulator to prevent adding any more segments if the accumulated value has already met max.
    * 2) Ensures a minimumum width of 5% for the segment.
    * 3) Rounds the right side of the segment if it completes the data bar.
-   * 4) If both the DataBar container and segments specify variants, prioritizes the segment variant.
    */
   for (
     let index = 0, accumulator = 0 /* 1 */;
@@ -150,14 +132,14 @@ export const DataBar = ({
         ref={(el) => (segmentsRef.current[index] = el)}
         tabIndex={focusableElementIndex === index ? 0 : -1}
         text={segment.text}
-        variant={segment.variant || variant} /* 4 */
+        variant={variant}
         width={`${percentage}%`}
       />,
     );
   }
 
   /**
-   * Adds a miniscule amount of segment as a visual indicator that the component is a data/progress bar and not a pill.
+   * If bar is empty, adds a miniscule amount of segment as a visual indicator that the component is a data/progress bar and not a pill.
    */
   if (!segmentComponents.length) {
     segmentComponents.push(
