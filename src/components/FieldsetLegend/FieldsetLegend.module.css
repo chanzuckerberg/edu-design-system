@@ -1,0 +1,27 @@
+/*------------------------------------*\
+    #FIELDSET LEGEND
+\*------------------------------------*/
+
+/**
+ * A label that's rendered as a <legend> for fieldsets.
+ * It contains the same characteristics as a label (ability to add flag for optional field, etc),
+ * but semantically/stylistically a bit different
+ * 1) Removes some default browser styles.
+ * 2) Adjust margin between legend and option list
+ */
+.fieldset-legend {
+  @apply text-sm font-bold;
+  /* 1 */
+  display: inline-block;
+  padding: 0;
+  border: none;
+  margin-bottom: 1rem; /* 2 */
+}
+
+/**
+ * Label flag to mark whether or not a field is required
+ * or optional. Currently a flag is only present for optional fields
+ */
+.fieldset-legend__flag {
+  @apply text-sm font-normal;
+}

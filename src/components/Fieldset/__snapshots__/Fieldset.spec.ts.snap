@@ -1,20 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<FormGroup /> Default story renders snapshot 1`] = `
+exports[`<Fieldset /> Default story renders snapshot 1`] = `
 <fieldset
-  class="formGroup"
+  class="fieldset"
 >
   <legend
-    class="title"
+    class="fieldset-legend"
   >
-    <p
-      class="text text--sm text--bold-weight"
-    >
-      Title
-    </p>
+    Legend
+     
   </legend>
   <div
-    class="items"
+    class="fieldset-items"
   >
     <div
       class="checkbox"
@@ -248,4 +245,13 @@ exports[`<FormGroup /> Default story renders snapshot 1`] = `
     </div>
   </div>
 </fieldset>
+`;
+
+exports[`<Fieldset /> FieldsetLegends story renders snapshot 1`] = `
+<legend
+  class="fieldset-legend"
+>
+  Legend
+   
+</legend>
 `;

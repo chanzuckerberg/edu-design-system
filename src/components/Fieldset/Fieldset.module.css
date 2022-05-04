@@ -1,0 +1,14 @@
+/*------------------------------------*\
+    #FIELDSET
+\*------------------------------------*/
+
+/**
+ * The fieldset groups a legend and several controls.
+ * 1) Overrides default browser styling.
+ */
+.fieldset {
+  margin: 1rem;
+  display: block; /* 1 */
+  padding: 0; /* 1 */
+  border: none; /* 1 */
+}
