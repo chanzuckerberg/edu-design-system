@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
-import { Draggable, Droppable } from 'react-beautiful-dnd';
+import { Droppable } from 'react-beautiful-dnd';
 import { ColumnType, CardType } from '../DragDrop/DragDrop';
 import styles from '../DragDrop/DragDrop.module.css';
 import DragDropItem from '../DragDropItem';

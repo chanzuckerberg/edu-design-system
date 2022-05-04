@@ -28,7 +28,6 @@ export type Columns = {
 
 export type ColumnType = {
   id: string;
-  title: string;
   cardIds: string[];
 };
 
@@ -117,7 +116,7 @@ export const DragDrop = ({ className, cards, columns, columnOrder }: Props) => {
               {...provided.droppableProps}
               ref={provided.innerRef}
             >
-              {state.columnOrder.map((columnId, index) => {
+              {state.columnOrder.map((columnId) => {
                 const column = state.columns[columnId];
                 const cards = column.cardIds.map(
                   (cardId) => state.cards[cardId],
@@ -127,7 +126,6 @@ export const DragDrop = ({ className, cards, columns, columnOrder }: Props) => {
                   <DragDropContainer
                     cards={cards}
                     column={column}
-                    index={index}
                     key={column.id}
                   />
                 );
