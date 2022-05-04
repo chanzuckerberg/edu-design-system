@@ -88,6 +88,30 @@ export const DataBar = ({
   const segmentComponents: React.ReactElement<typeof DataBarSegment>[] = [];
 
   /**
+   * Manages focus of the progress bar elements and implements left and right arrow key interaction.
+   * 1) Used to set tabIndex of the segment components.
+   * 2) Collects a list of element refs to set focus.
+   * 3) Manage tabIndex to allow focus before setting focus.
+   * 4) Set focus on the next or previous element respective to the arrow key interaction.
+   */
+  /* 1 */
+  const [focusableElementIndex, setFocusableElementIndex] = React.useState(0);
+  const segmentsRef = React.useRef([]); /* 2 */
+  const handleOnKeyDown = (
+    e: React.KeyboardEvent<HTMLElement>,
+    index: number,
+  ) => {
+    if (e.key === 'ArrowLeft' && index > 0) {
+      setFocusableElementIndex(focusableElementIndex - 1); /* 3 */
+      segmentsRef.current[index - 1].focus(); /* 4 */
+    }
+    if (e.key === 'ArrowRight' && index < segmentComponents.length - 1) {
+      setFocusableElementIndex(focusableElementIndex + 1); /* 3 */
+      segmentsRef.current[index + 1].focus(); /* 4 */
+    }
+  };
+
+  /**
    * Adds a segment component to the segmentComponents array
    * 1) Keeps a running accumulator to prevent adding any more segments if the accumulated value has already met max.
    * 2) Ensures a minimumum width of 5% for the segment.
@@ -109,6 +133,9 @@ export const DataBar = ({
       <DataBarSegment
         isRoundRight={isRoundRight}
         key={`segment-${index}`}
+        onKeyDown={(e) => handleOnKeyDown(e, index)}
+        ref={(el) => (segmentsRef.current[index] = el)}
+        tabIndex={focusableElementIndex === index ? 0 : -1}
         text={segment.text}
         variant={segment.variant || variant} /* 4 */
         width={`${percentage}%`}

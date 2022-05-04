@@ -31,40 +31,47 @@ export type Props = {
    * Color variant of the individual segment.
    */
   variant: Variants;
-};
+} & React.HTMLAttributes<HTMLElement>;
 
 /**
  * Primary UI component for user interaction
  */
-export const DataBarSegment = ({
-  className,
-  isHoverable = true,
-  isRoundRight,
-  text,
-  width,
-  variant = 'brand',
-  ...other
-}: Props) => {
-  const componentClassName = clsx(
-    styles['data-bar-segment'],
-    styles[`data-bar-segment--${variant}`],
-    isHoverable && styles['data-bar-segment--hoverable'],
-    isRoundRight && styles['data-bar-segment--round-right'],
-    className,
-  );
-  // Is there a better way to pass width?
-  const segmentComponent = (
-    <div
-      className={componentClassName}
-      style={{ width: `${width}` }}
-      {...other}
-    ></div>
-  );
-  return text ? (
-    <Tooltip align="bottom" text={text}>
-      {segmentComponent}
-    </Tooltip>
-  ) : (
-    segmentComponent
-  );
-};
+export const DataBarSegment = React.forwardRef(
+  (
+    {
+      className,
+      isHoverable = true,
+      isRoundRight,
+      text,
+      width,
+      variant = 'brand',
+      ...other
+    }: Props,
+    ref: React.ForwardedRef<HTMLDivElement>,
+  ) => {
+    const componentClassName = clsx(
+      styles['data-bar-segment'],
+      styles[`data-bar-segment--${variant}`],
+      isHoverable && styles['data-bar-segment--hoverable'],
+      isRoundRight && styles['data-bar-segment--round-right'],
+      className,
+    );
+    const segmentComponent = (
+      <div
+        className={componentClassName}
+        ref={ref}
+        style={{ width: `${width}` }}
+        {...other}
+      ></div>
+    );
+    return text ? (
+      <Tooltip align="bottom" text={text}>
+        {segmentComponent}
+      </Tooltip>
+    ) : (
+      segmentComponent
+    );
+  },
+);
+
+DataBarSegment.displayName = 'DataBarSegment'; // Satisfy eslint
