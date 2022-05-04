@@ -22,7 +22,7 @@ export type Props = {
   /**
    * Tooltip text to be displayed when the segment is hovered.
    */
-  text?: React.ReactNode;
+  text?: string;
   /**
    * Width that the segment should consume.
    */
@@ -30,11 +30,21 @@ export type Props = {
   /**
    * Color variant of the individual segment.
    */
-  variant: Variants;
+  variant?: Variants;
 } & React.HTMLAttributes<HTMLElement>;
 
 /**
- * Primary UI component for user interaction
+ * ```ts
+ * import {DataBarSegment} from "@chanzuckerberg/eds";
+ * ```
+ *
+ * A segment sub component for the <DataBar>.
+ *
+ * Example usage:
+ *
+ * ```tsx
+ * <DataBarSegment text="Segment 1" width="40%" />
+ * ```
  */
 export const DataBarSegment = React.forwardRef(
   (

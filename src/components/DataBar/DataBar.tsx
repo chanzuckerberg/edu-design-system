@@ -9,7 +9,7 @@ type DataBarSegmentProps = {
   /**
    * Tooltip text to be displayed when the segment is hovered.
    */
-  text: React.ReactNode;
+  text: string;
   /**
    * The value of the individual segment that accumulates towards the task goal.
    */
@@ -40,7 +40,24 @@ export type Props = {
 } & React.HTMLAttributes<HTMLElement>;
 
 /**
- * Primary UI component for user interaction
+ * ```ts
+ * import {DataBar} from "@chanzuckerberg/eds";
+ * ```
+ *
+ * A data bar component that represents the relative completion of a task represented by one or more segments.
+ *
+ * Example usage:
+ *
+ * ```tsx
+ * <DataBar
+ *  id="data-bar"
+ *  max={100}
+ *  segments={[
+ *    { value: 25, text: 'Segment 1' },
+ *    { value: 10, text: 'Segment 2' },
+ *    { value: 15, text: 'Segment 3' },
+ *  ]} />
+ * ```
  */
 export const DataBar = ({
   className,
@@ -131,6 +148,7 @@ export const DataBar = ({
     const isRoundRight = accumulator >= max; /* 3 */
     segmentComponents.push(
       <DataBarSegment
+        aria-label={segment.text}
         isRoundRight={isRoundRight}
         key={`segment-${index}`}
         onKeyDown={(e) => handleOnKeyDown(e, index)}
