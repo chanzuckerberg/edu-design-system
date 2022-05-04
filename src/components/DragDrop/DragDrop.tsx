@@ -9,34 +9,39 @@ export interface Props {
    * CSS class names that can be appended to the component.
    */
   className?: string;
-  cards?: Cards;
-  columns?: Columns;
-  columnOrder?: string[];
+  items?: Items;
+  containers?: Containers;
+  containerOrder?: string[];
 }
-export type Cards = {
-  [any: string]: CardType;
+export type Items = {
+  [any: string]: ItemType;
 };
 
-export type CardType = {
+export type ItemType = {
   id: string;
   content: string;
 };
 
-export type Columns = {
-  [any: string]: ColumnType;
+export type Containers = {
+  [any: string]: ContainerType;
 };
 
-export type ColumnType = {
+export type ContainerType = {
   id: string;
-  cardIds: string[];
+  itemIds: string[];
 };
 
 /**
  * Primary UI component for user interaction
  */
-export const DragDrop = ({ className, cards, columns, columnOrder }: Props) => {
+export const DragDrop = ({
+  className,
+  items,
+  containers,
+  containerOrder,
+}: Props) => {
   const componentClassName = clsx(styles['drag-drop'], className, {});
-  const initialData = { cards, columns, columnOrder };
+  const initialData = { items, containers, containerOrder };
   const [state, setState] = useState(initialData);
 
   const onDragEnd = (result: DropResult) => {
@@ -55,24 +60,24 @@ export const DragDrop = ({ className, cards, columns, columnOrder }: Props) => {
       return;
     }
 
-    const start = state.columns[source.droppableId];
-    const finish = state.columns[destination.droppableId];
+    const start = state.containers[source.droppableId];
+    const finish = state.containers[destination.droppableId];
 
     if (start === finish) {
-      const newCardIds = [...start.cardIds]; // create new array to avoid mutations
-      newCardIds.splice(source.index, 1);
-      newCardIds.splice(destination.index, 0, draggableId);
+      const newItemIds = [...start.itemIds]; // create new array to avoid mutations
+      newItemIds.splice(source.index, 1);
+      newItemIds.splice(destination.index, 0, draggableId);
 
-      const newColumn = {
+      const newContainer = {
         ...start,
-        cardIds: newCardIds,
+        itemIds: newItemIds,
       };
 
       const newState = {
         ...state,
-        columns: {
-          ...state.columns,
-          [newColumn.id]: newColumn,
+        containers: {
+          ...state.containers,
+          [newContainer.id]: newContainer,
         },
       };
 
@@ -81,24 +86,24 @@ export const DragDrop = ({ className, cards, columns, columnOrder }: Props) => {
     }
 
     // Moving from one list to another
-    const startCardIds = [...start.cardIds];
-    startCardIds.splice(source.index, 1);
+    const startItemIds = [...start.itemIds];
+    startItemIds.splice(source.index, 1);
     const newStart = {
       ...start,
-      cardIds: startCardIds,
+      itemIds: startItemIds,
     };
 
-    const finishCardIds = [...finish.cardIds];
-    finishCardIds.splice(destination.index, 0, draggableId);
+    const finishItemIds = [...finish.itemIds];
+    finishItemIds.splice(destination.index, 0, draggableId);
     const newFinish = {
       ...finish,
-      cardIds: finishCardIds,
+      itemIds: finishItemIds,
     };
 
     const newState = {
       ...state,
-      columns: {
-        ...state.columns,
+      containers: {
+        ...state.containers,
         [newStart.id]: newStart,
         [newFinish.id]: newFinish,
       },
@@ -108,7 +113,11 @@ export const DragDrop = ({ className, cards, columns, columnOrder }: Props) => {
   };
   return (
     <DragDropContext onDragEnd={onDragEnd}>
-      <Droppable direction="horizontal" droppableId="all-columns" type="column">
+      <Droppable
+        direction="horizontal"
+        droppableId="all-containers"
+        type="container"
+      >
         {(provided) => {
           return (
             <div
@@ -116,17 +125,17 @@ export const DragDrop = ({ className, cards, columns, columnOrder }: Props) => {
               {...provided.droppableProps}
               ref={provided.innerRef}
             >
-              {state.columnOrder.map((columnId) => {
-                const column = state.columns[columnId];
-                const cards = column.cardIds.map(
-                  (cardId) => state.cards[cardId],
+              {state.containerOrder.map((containerId) => {
+                const container = state.containers[containerId];
+                const items = container.itemIds.map(
+                  (itemId) => state.items[itemId],
                 );
 
                 return (
                   <DragDropContainer
-                    cards={cards}
-                    column={column}
-                    key={column.id}
+                    container={container}
+                    items={items}
+                    key={container.id}
                   />
                 );
               })}

@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import { Draggable } from 'react-beautiful-dnd';
-import { CardType } from '../DragDrop/DragDrop';
+import { ItemType } from '../DragDrop/DragDrop';
 import styles from '../DragDrop/DragDrop.module.css';
 
 export interface Props {
@@ -9,7 +9,7 @@ export interface Props {
    * CSS class names that can be appended to the component.
    */
   className?: string;
-  card: CardType;
+  item: ItemType;
   index: number;
   children?: ReactNode;
 }
@@ -17,10 +17,10 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const DragDropItem = ({ className, card, index, children }: Props) => {
+export const DragDropItem = ({ className, item, index, children }: Props) => {
   const componentClassName = clsx(styles['drag-drop-item'], className, {});
   return (
-    <Draggable draggableId={card.id} index={index}>
+    <Draggable draggableId={item.id} index={index}>
       {(provided) => {
         return (
           <div
@@ -30,7 +30,7 @@ export const DragDropItem = ({ className, card, index, children }: Props) => {
             {...provided.dragHandleProps}
           >
             <div className={clsx(styles['drag-drop-item--title'])}>
-              {card.content}
+              {item.content}
             </div>
             {children}
           </div>

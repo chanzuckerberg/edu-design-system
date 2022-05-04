@@ -7,7 +7,7 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
   <div
     class="drag-drop"
     data-rbd-droppable-context-id="0"
-    data-rbd-droppable-id="all-columns"
+    data-rbd-droppable-id="all-containers"
   >
     <div
       class="drag-drop-container"
@@ -15,15 +15,15 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
       <div
         class="drag-drop-container--list"
         data-rbd-droppable-context-id="0"
-        data-rbd-droppable-id="column-1"
+        data-rbd-droppable-id="container-1"
       >
         <div
           aria-describedby="rbd-hidden-text-0-hidden-text-0"
           class="drag-drop-item"
           data-rbd-drag-handle-context-id="0"
-          data-rbd-drag-handle-draggable-id="card-1"
+          data-rbd-drag-handle-draggable-id="item-1"
           data-rbd-draggable-context-id="0"
-          data-rbd-draggable-id="card-1"
+          data-rbd-draggable-id="item-1"
           draggable="false"
           role="button"
           tabindex="0"
@@ -38,9 +38,9 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
           aria-describedby="rbd-hidden-text-0-hidden-text-0"
           class="drag-drop-item"
           data-rbd-drag-handle-context-id="0"
-          data-rbd-drag-handle-draggable-id="card-2"
+          data-rbd-drag-handle-draggable-id="item-2"
           data-rbd-draggable-context-id="0"
-          data-rbd-draggable-id="card-2"
+          data-rbd-draggable-id="item-2"
           draggable="false"
           role="button"
           tabindex="0"
@@ -55,9 +55,9 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
           aria-describedby="rbd-hidden-text-0-hidden-text-0"
           class="drag-drop-item"
           data-rbd-drag-handle-context-id="0"
-          data-rbd-drag-handle-draggable-id="card-3"
+          data-rbd-drag-handle-draggable-id="item-3"
           data-rbd-draggable-context-id="0"
-          data-rbd-draggable-id="card-3"
+          data-rbd-draggable-id="item-3"
           draggable="false"
           role="button"
           tabindex="0"
@@ -72,9 +72,9 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
           aria-describedby="rbd-hidden-text-0-hidden-text-0"
           class="drag-drop-item"
           data-rbd-drag-handle-context-id="0"
-          data-rbd-drag-handle-draggable-id="card-4"
+          data-rbd-drag-handle-draggable-id="item-4"
           data-rbd-draggable-context-id="0"
-          data-rbd-draggable-id="card-4"
+          data-rbd-draggable-id="item-4"
           draggable="false"
           role="button"
           tabindex="0"
@@ -89,9 +89,9 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
           aria-describedby="rbd-hidden-text-0-hidden-text-0"
           class="drag-drop-item"
           data-rbd-drag-handle-context-id="0"
-          data-rbd-drag-handle-draggable-id="card-5"
+          data-rbd-drag-handle-draggable-id="item-5"
           data-rbd-draggable-context-id="0"
-          data-rbd-draggable-id="card-5"
+          data-rbd-draggable-id="item-5"
           draggable="false"
           role="button"
           tabindex="0"
@@ -110,7 +110,7 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
       <div
         class="drag-drop-container--list"
         data-rbd-droppable-context-id="0"
-        data-rbd-droppable-id="column-2"
+        data-rbd-droppable-id="container-2"
       />
     </div>
   </div>

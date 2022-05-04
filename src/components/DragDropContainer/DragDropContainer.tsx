@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import { Droppable } from 'react-beautiful-dnd';
-import { ColumnType, CardType } from '../DragDrop/DragDrop';
+import { ContainerType, ItemType } from '../DragDrop/DragDrop';
 import styles from '../DragDrop/DragDrop.module.css';
 import DragDropItem from '../DragDropItem';
 
@@ -10,8 +10,8 @@ export interface Props {
    * CSS class names that can be appended to the component.
    */
   className?: string;
-  column: ColumnType;
-  cards: CardType[];
+  container: ContainerType;
+  items: ItemType[];
   children?: ReactNode;
 }
 
@@ -20,22 +20,22 @@ export interface Props {
  */
 export const DragDropContainer = ({
   className,
-  column,
-  cards,
+  container,
+  items,
   children,
 }: Props) => {
   const componentClassName = clsx(styles['drag-drop-container'], className, {});
   return (
     <div className={componentClassName}>
-      <Droppable droppableId={column.id} type="card">
+      <Droppable droppableId={container.id} type="item">
         {(provided) => (
           <div
             className={clsx(styles['drag-drop-container--list'])}
             ref={provided.innerRef}
             {...provided.droppableProps}
           >
-            {cards.map((card, index) => (
-              <DragDropItem card={card} index={index} key={card.id}>
+            {items.map((item, index) => (
+              <DragDropItem index={index} item={item} key={item.id}>
                 {children}
               </DragDropItem>
             ))}

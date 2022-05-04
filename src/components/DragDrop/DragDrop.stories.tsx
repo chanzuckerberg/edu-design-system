@@ -7,27 +7,25 @@ export default {
   title: 'Organisms/Interactive/Drag and Drop',
   component: DragDrop,
   args: {
-    cards: {
-      'card-1': { id: 'card-1', content: 'Project #1' },
-      'card-2': { id: 'card-2', content: 'Project #2' },
-      'card-3': { id: 'card-3', content: 'Project #3' },
-      'card-4': { id: 'card-4', content: 'Project #4' },
-      'card-5': { id: 'card-5', content: 'Project #5' },
+    items: {
+      'item-1': { id: 'item-1', content: 'Project #1' },
+      'item-2': { id: 'item-2', content: 'Project #2' },
+      'item-3': { id: 'item-3', content: 'Project #3' },
+      'item-4': { id: 'item-4', content: 'Project #4' },
+      'item-5': { id: 'item-5', content: 'Project #5' },
     },
-    columns: {
-      'column-1': {
-        id: 'column-1',
-        title: 'Available projects',
-        cardIds: ['card-1', 'card-2', 'card-3', 'card-4', 'card-5'],
+    containers: {
+      'container-1': {
+        id: 'container-1',
+        itemIds: ['item-1', 'item-2', 'item-3', 'item-4', 'item-5'],
       },
-      'column-2': {
-        id: 'column-2',
-        title: 'Planned projects',
-        cardIds: [],
+      'container-2': {
+        id: 'container-2',
+        itemIds: [],
       },
     },
-    // Facilitate reordering of columns
-    columnOrder: ['column-1', 'column-2'],
+    // Facilitate reordering of containers
+    containerOrder: ['container-1', 'container-2'],
   },
   decorators: [
     (Story) => (
