@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { Draggable, Droppable } from 'react-beautiful-dnd';
 import { ColumnType, CardType } from '../DragDrop/DragDrop';
 import styles from '../DragDrop/DragDrop.module.css';
@@ -13,12 +13,19 @@ export interface Props {
   column: ColumnType;
   cards: CardType[];
   index: number;
+  children?: ReactNode;
 }
 
 /**
  * Primary UI component for user interaction
  */
-export const DragDropColumn = ({ className, column, cards, index }: Props) => {
+export const DragDropColumn = ({
+  className,
+  column,
+  cards,
+  children,
+  index,
+}: Props) => {
   const componentClassName = clsx(styles['drag-drop-column'], className, {});
   return (
     <Draggable draggableId={column.id} index={index}>
@@ -44,7 +51,7 @@ export const DragDropColumn = ({ className, column, cards, index }: Props) => {
                 >
                   {cards.map((card, index) => (
                     <DragDropCard card={card} index={index} key={card.id}>
-                      <div className="fpo">Project info</div>
+                      {children}
                     </DragDropCard>
                   ))}
                   {provided.placeholder}
