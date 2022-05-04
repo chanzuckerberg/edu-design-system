@@ -6,8 +6,25 @@ exports[`<DataBar /> LargeValue story renders snapshot 1`] = `
 >
   <div>
     <div
-      aria-label="data-bar"
+      class="data-bar__label-wrapper"
+    >
+      <label
+        class="data-bar__label"
+        for="9"
+      >
+        Data bar
+      </label>
+      <span
+        class="text text--caption"
+        id="10"
+      >
+        96/100
+      </span>
+    </div>
+    <div
+      aria-describedby="10"
       class="data-bar"
+      id="9"
     >
       <div
         class="data-bar__segment-space data-bar__segment-space--incomplete"
@@ -30,8 +47,25 @@ exports[`<DataBar /> NoSegments story renders snapshot 1`] = `
 >
   <div>
     <div
-      aria-label="data-bar"
+      class="data-bar__label-wrapper"
+    >
+      <label
+        class="data-bar__label"
+        for="13"
+      >
+        Data bar
+      </label>
+      <span
+        class="text text--caption"
+        id="14"
+      >
+        0/100
+      </span>
+    </div>
+    <div
+      aria-describedby="14"
       class="data-bar"
+      id="13"
     >
       <div
         class="data-bar__segment-space data-bar__segment-space--incomplete"
@@ -51,8 +85,25 @@ exports[`<DataBar /> SmallValue story renders snapshot 1`] = `
 >
   <div>
     <div
-      aria-label="data-bar"
+      class="data-bar__label-wrapper"
+    >
+      <label
+        class="data-bar__label"
+        for="11"
+      >
+        Data bar
+      </label>
+      <span
+        class="text text--caption"
+        id="12"
+      >
+        1/100
+      </span>
+    </div>
+    <div
+      aria-describedby="12"
       class="data-bar"
+      id="11"
     >
       <div
         class="data-bar__segment-space data-bar__segment-space--incomplete"
@@ -75,8 +126,25 @@ exports[`<DataBar /> TotalsLessThanMax story renders snapshot 1`] = `
 >
   <div>
     <div
-      aria-label="data-bar"
+      class="data-bar__label-wrapper"
+    >
+      <label
+        class="data-bar__label"
+        for="1"
+      >
+        Data bar
+      </label>
+      <span
+        class="text text--caption"
+        id="2"
+      >
+        50/100
+      </span>
+    </div>
+    <div
+      aria-describedby="2"
       class="data-bar"
+      id="1"
     >
       <div
         class="data-bar__segment-space data-bar__segment-space--incomplete"
@@ -111,8 +179,25 @@ exports[`<DataBar /> TotalsMax story renders snapshot 1`] = `
 >
   <div>
     <div
-      aria-label="data-bar"
+      class="data-bar__label-wrapper"
+    >
+      <label
+        class="data-bar__label"
+        for="3"
+      >
+        Data bar
+      </label>
+      <span
+        class="text text--caption"
+        id="4"
+      >
+        50/50
+      </span>
+    </div>
+    <div
+      aria-describedby="4"
       class="data-bar"
+      id="3"
     >
       <div
         class="data-bar__segment-space"
@@ -147,8 +232,25 @@ exports[`<DataBar /> TotalsMoreThanMax story renders snapshot 1`] = `
 >
   <div>
     <div
-      aria-label="data-bar"
+      class="data-bar__label-wrapper"
+    >
+      <label
+        class="data-bar__label"
+        for="5"
+      >
+        Data bar
+      </label>
+      <span
+        class="text text--caption"
+        id="6"
+      >
+        50/25
+      </span>
+    </div>
+    <div
+      aria-describedby="6"
       class="data-bar"
+      id="5"
     >
       <div
         class="data-bar__segment-space"
@@ -171,8 +273,25 @@ exports[`<DataBar /> TotalsRightUnderMax story renders snapshot 1`] = `
 >
   <div>
     <div
-      aria-label="data-bar"
+      class="data-bar__label-wrapper"
+    >
+      <label
+        class="data-bar__label"
+        for="7"
+      >
+        Data bar
+      </label>
+      <span
+        class="text text--caption"
+        id="8"
+      >
+        50/51
+      </span>
+    </div>
+    <div
+      aria-describedby="8"
       class="data-bar"
+      id="7"
     >
       <div
         class="data-bar__segment-space data-bar__segment-space--incomplete"

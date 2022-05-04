@@ -9,7 +9,7 @@ export default {
   title: 'Example/DataBar',
   component: DataBar,
   args: {
-    'aria-label': 'data-bar',
+    label: 'Data bar',
     max: 100,
     segments: [
       { value: 25, text: 'Segment 1' },
@@ -97,11 +97,7 @@ const Interactive = () => {
   };
   return (
     <div>
-      <DataBar
-        aria-label="interactive-data-bar-example"
-        max={max}
-        segments={segments}
-      />
+      <DataBar label="Interactive data bar" max={max} segments={segments} />
       <br />
       <span>Value add: </span>
       <input onChange={handleSegmentValueChange} value={segmentValue}></input>

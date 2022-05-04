@@ -1,9 +1,11 @@
 import clsx from 'clsx';
 import React from 'react';
+import { useUID } from 'react-uid';
 import styles from './DataBar.module.css';
 
 import DataBarSegment from '../DataBarSegment';
 import type { Variants } from '../DataBarSegment';
+import Text from '../Text';
 
 type DataBarSegmentProps = {
   /**
@@ -25,6 +27,10 @@ export type Props = {
    * CSS class names that can be appended to the component.
    */
   className?: string;
+  /**
+   * Label associated with naming the data bar.
+   */
+  label: string;
   /**
    * Max value to be represented by the data bar.
    */
@@ -61,23 +67,12 @@ export type Props = {
  */
 export const DataBar = ({
   className,
+  label,
   max = 100,
   segments,
   variant = 'brand',
   ...other
 }: Props) => {
-  /**
-   * Warns the developer if the data bar has no accessible name.
-   */
-  if (
-    process.env.NODE_ENV !== 'production' &&
-    !other['id'] &&
-    !other['aria-label'] &&
-    !other['aria-labelledby']
-  ) {
-    console.warn('You must provide an accessible name for the data bar');
-  }
-
   /**
    * Calculates the total of the segment values.
    */
@@ -185,10 +180,26 @@ export const DataBar = ({
     !isFull && styles[`data-bar__segment-space--incomplete`],
   );
 
+  const id = useUID();
+  const captionId = useUID();
+  const caption = totalSegmentValue + '/' + max;
   return (
     <div>
+      <div className={styles['data-bar__label-wrapper']}>
+        <label className={styles['data-bar__label']} htmlFor={id}>
+          {label}
+        </label>
+        <Text as="span" id={captionId} size="caption">
+          {caption}
+        </Text>
+      </div>
       {/* the grey data bar */}
-      <div className={componentClassName} {...other}>
+      <div
+        aria-describedby={captionId}
+        className={componentClassName}
+        id={id}
+        {...other}
+      >
         {/* the amount of space the segments take up */}
         <div className={segmentSpaceClassName}>{segmentComponents}</div>
       </div>

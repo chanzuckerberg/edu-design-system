@@ -19,6 +19,22 @@
 }
 
 /**
+ * The label title above the data bar that provides an accessible name.
+ */
+.data-bar__label {
+  @mixin eds-theme-typography-title-sm;
+}
+
+/**
+ * Wraps the label and the caption description.
+ */
+.data-bar__label-wrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+/**
  * The amount of space the segments can consume. Is overlayed on top of the containing bar.
  * 1) Shifts a border width amount to completely overlay instead of being offset from the containing borders.
  * 2) Makes the last segment overlap the containing bar right border.
