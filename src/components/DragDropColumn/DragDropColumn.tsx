@@ -29,11 +29,10 @@ export const DragDropColumn = ({ className, column, tasks, index }: Props) => {
             {...provided.draggableProps}
             ref={provided.innerRef}
           >
-            <div {...provided.dragHandleProps}>{column.title}</div>
             <Droppable droppableId={column.id} type="task">
               {(provided) => (
                 <div
-                  className={clsx('drag-drop-column--list')}
+                  className={clsx(styles['drag-drop-column--list'])}
                   ref={provided.innerRef}
                   {...provided.droppableProps}
                 >

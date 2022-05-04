@@ -9,22 +9,39 @@
  */
 .drag-drop {
   display: flex;
+  justify-content: space-around;
 }
 
 .drag-drop-column {
-  margin: 8px 4px;
-  background-color: #ebecf0;
-  border-radius: 3px;
-  width: 272px;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+  gap: var(--eds-size-3);
+  margin: 8px 4px;
+  border-radius: 3px;
+  width: 437px;
+  min-height: 680px;
+
+  &:last-of-type {
+    background-color: var(--eds-color-neutral-200);
+  }
 }
 
 .drag-drop-column--list {
   padding: 8px;
-  transition: background-color 0.2s ease;
+  transition: background-color 3.2s ease;
   flex-grow: 1;
-  min-height: 100px;
+
+  &:empty {
+    background-image: url('https://fakeimg.pl/240x120/?text=Drag%20in%20available%20projects');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.drag-drop-column--title {
+  color: red;
 }
 
 .drag-drop-card {
@@ -34,8 +51,10 @@
   margin-bottom: 8px;
   background-color: white;
   box-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
+  /* max-width: 400px; */
 }
 
 .drag-drop-card--title {
   @mixin eds-typography-preset-007-bold;
+  margin-bottom: var(--eds-size-2);
 }

@@ -36,20 +36,21 @@ export type InitialData = {
 };
 export const initialData: InitialData = {
   tasks: {
-    'task-1': { id: 'task-1', content: 'Take out the garbage' },
-    'task-2': { id: 'task-2', content: 'Watch my favorite show' },
-    'task-3': { id: 'task-3', content: 'Charge my phone' },
-    'task-4': { id: 'task-4', content: 'Cook dinner' },
+    'task-1': { id: 'task-1', content: 'Project name #1' },
+    'task-2': { id: 'task-2', content: 'Project name #2' },
+    'task-3': { id: 'task-3', content: 'Project name #3' },
+    'task-4': { id: 'task-4', content: 'Project name #4' },
+    'task-5': { id: 'task-5', content: 'Project name #5' },
   },
   columns: {
     'column-1': {
       id: 'column-1',
-      title: 'Available projects',
-      taskIds: ['task-1', 'task-2', 'task-3', 'task-4'],
+      title: '',
+      taskIds: ['task-1', 'task-2', 'task-3', 'task-4', 'task-5'],
     },
     'column-2': {
       id: 'column-2',
-      title: 'Planned projects',
+      title: '',
       taskIds: [],
     },
   },
@@ -59,7 +60,7 @@ export const initialData: InitialData = {
 /**
  * Primary UI component for user interaction
  */
-export const DragDrop = ({ className, ...other }: Props) => {
+export const DragDrop = ({ className }: Props) => {
   const componentClassName = clsx(styles['drag-drop'], className, {});
   const [state, setState] = useState(initialData);
 
