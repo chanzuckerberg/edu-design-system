@@ -1,0 +1,41 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #DRAGDROP
+\*------------------------------------*/
+
+/**
+ * 1) 
+ */
+.drag-drop {
+  display: flex;
+}
+
+.drag-drop-column {
+  margin: 8px 4px;
+  background-color: #ebecf0;
+  border-radius: 3px;
+  width: 272px;
+  display: flex;
+  flex-direction: column;
+}
+
+.drag-drop-column--list {
+  padding: 8px;
+  transition: background-color 0.2s ease;
+  flex-grow: 1;
+  min-height: 100px;
+}
+
+.drag-drop-card {
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  padding: 8px;
+  margin-bottom: 8px;
+  background-color: white;
+  box-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
+}
+
+.drag-drop-card--title {
+  @mixin eds-typography-preset-007-bold;
+}
