@@ -8,7 +8,7 @@ export type Color =
   | "error"
   | "success"
   | "warning"
-  | "yellow"
+  | "yield"
   | "brand";
 
 export const stylesByColor = {
@@ -16,7 +16,7 @@ export const stylesByColor = {
   warning: styles.colorWarning,
   brand: styles.colorBrand,
   error: styles.colorError,
-  yellow: styles.colorYellow,
+  yield: styles.colorYellow,
   success: styles.colorSuccess,
 };
 
