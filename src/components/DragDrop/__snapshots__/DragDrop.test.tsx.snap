@@ -11,20 +11,7 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
   >
     <div
       class="drag-drop-container"
-      data-rbd-draggable-context-id="0"
-      data-rbd-draggable-id="column-1"
     >
-      <div
-        aria-describedby="rbd-hidden-text-0-hidden-text-0"
-        class="drag-drop-container--title"
-        data-rbd-drag-handle-context-id="0"
-        data-rbd-drag-handle-draggable-id="column-1"
-        draggable="false"
-        role="button"
-        tabindex="0"
-      >
-        Available projects
-      </div>
       <div
         class="drag-drop-container--list"
         data-rbd-droppable-context-id="0"
@@ -119,20 +106,7 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
     </div>
     <div
       class="drag-drop-container"
-      data-rbd-draggable-context-id="0"
-      data-rbd-draggable-id="column-2"
     >
-      <div
-        aria-describedby="rbd-hidden-text-0-hidden-text-0"
-        class="drag-drop-container--title"
-        data-rbd-drag-handle-context-id="0"
-        data-rbd-drag-handle-draggable-id="column-2"
-        draggable="false"
-        role="button"
-        tabindex="0"
-      >
-        Planned projects
-      </div>
       <div
         class="drag-drop-container--list"
         data-rbd-droppable-context-id="0"
