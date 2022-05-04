@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import { Draggable } from 'react-beautiful-dnd';
-import { TaskType } from '../DragDrop/DragDrop';
+import { CardType } from '../DragDrop/DragDrop';
 import styles from '../DragDrop/DragDrop.module.css';
 
 export interface Props {
@@ -9,7 +9,7 @@ export interface Props {
    * CSS class names that can be appended to the component.
    */
   className?: string;
-  task: TaskType;
+  task: CardType;
   index: number;
   children?: ReactNode;
 }

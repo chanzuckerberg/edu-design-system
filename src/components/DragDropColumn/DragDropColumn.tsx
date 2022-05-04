@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React from 'react';
 import { Draggable, Droppable } from 'react-beautiful-dnd';
-import { ColumnType, TaskType } from '../DragDrop/DragDrop';
+import { ColumnType, CardType } from '../DragDrop/DragDrop';
 import styles from '../DragDrop/DragDrop.module.css';
 import DragDropCard from '../DragDropCard';
 
@@ -11,14 +11,14 @@ export interface Props {
    */
   className?: string;
   column: ColumnType;
-  tasks: TaskType[];
+  cards: CardType[];
   index: number;
 }
 
 /**
  * Primary UI component for user interaction
  */
-export const DragDropColumn = ({ className, column, tasks, index }: Props) => {
+export const DragDropColumn = ({ className, column, cards, index }: Props) => {
   const componentClassName = clsx(styles['drag-drop-column'], className, {});
   return (
     <Draggable draggableId={column.id} index={index}>
@@ -29,6 +29,12 @@ export const DragDropColumn = ({ className, column, tasks, index }: Props) => {
             {...provided.draggableProps}
             ref={provided.innerRef}
           >
+            <div
+              className={clsx(styles['drag-drop-column--title'])}
+              {...provided.dragHandleProps}
+            >
+              {column.title}
+            </div>
             <Droppable droppableId={column.id} type="task">
               {(provided) => (
                 <div
@@ -36,7 +42,7 @@ export const DragDropColumn = ({ className, column, tasks, index }: Props) => {
                   ref={provided.innerRef}
                   {...provided.droppableProps}
                 >
-                  {tasks.map((task, index) => (
+                  {cards.map((task, index) => (
                     <DragDropCard index={index} key={task.id} task={task}>
                       <div className="fpo">Project info</div>
                     </DragDropCard>

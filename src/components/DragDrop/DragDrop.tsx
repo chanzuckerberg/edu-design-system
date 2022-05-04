@@ -9,14 +9,21 @@ export interface Props {
    * CSS class names that can be appended to the component.
    */
   className?: string;
+  cards?: Cards;
+  columns?: Columns;
+  columnOrder?: string[];
 }
-export type TaskType = {
+export type Cards = {
+  [any: string]: CardType;
+};
+
+export type CardType = {
   id: string;
   content: string;
 };
 
-export type Tasks = {
-  [any: string]: TaskType;
+export type Columns = {
+  [any: string]: ColumnType;
 };
 
 export type ColumnType = {
@@ -25,43 +32,12 @@ export type ColumnType = {
   taskIds: string[];
 };
 
-export type Columns = {
-  [any: string]: ColumnType;
-};
-
-export type InitialData = {
-  tasks: Tasks;
-  columns: Columns;
-  columnOrder: string[];
-};
-export const initialData: InitialData = {
-  tasks: {
-    'task-1': { id: 'task-1', content: 'Project name #1' },
-    'task-2': { id: 'task-2', content: 'Project name #2' },
-    'task-3': { id: 'task-3', content: 'Project name #3' },
-    'task-4': { id: 'task-4', content: 'Project name #4' },
-    'task-5': { id: 'task-5', content: 'Project name #5' },
-  },
-  columns: {
-    'column-1': {
-      id: 'column-1',
-      title: '',
-      taskIds: ['task-1', 'task-2', 'task-3', 'task-4', 'task-5'],
-    },
-    'column-2': {
-      id: 'column-2',
-      title: '',
-      taskIds: [],
-    },
-  },
-  // Facilitate reordering of columns
-  columnOrder: ['column-1', 'column-2'],
-};
 /**
  * Primary UI component for user interaction
  */
-export const DragDrop = ({ className }: Props) => {
+export const DragDrop = ({ className, cards, columns, columnOrder }: Props) => {
   const componentClassName = clsx(styles['drag-drop'], className, {});
+  const initialData = { cards, columns, columnOrder };
   const [state, setState] = useState(initialData);
 
   const onDragEnd = (result: DropResult) => {
@@ -77,19 +53,6 @@ export const DragDrop = ({ className }: Props) => {
       destination.index === source.index
     ) {
       // same location
-      return;
-    }
-
-    if (type === 'column') {
-      const newColumnOrder = [...state.columnOrder];
-      newColumnOrder.splice(source.index, 1);
-      newColumnOrder.splice(destination.index, 0, draggableId);
-
-      const newState = {
-        ...state,
-        columnOrder: newColumnOrder,
-      };
-      setState(newState);
       return;
     }
 
@@ -156,16 +119,16 @@ export const DragDrop = ({ className }: Props) => {
             >
               {state.columnOrder.map((columnId, index) => {
                 const column = state.columns[columnId];
-                const tasks = column.taskIds.map(
-                  (taskId) => state.tasks[taskId],
+                const cards = column.taskIds.map(
+                  (taskId) => state.cards[taskId],
                 );
 
                 return (
                   <DragDropColumn
+                    cards={cards}
                     column={column}
                     index={index}
                     key={column.id}
-                    tasks={tasks}
                   />
                 );
               })}
