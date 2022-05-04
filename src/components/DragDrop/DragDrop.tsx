@@ -41,7 +41,7 @@ export const DragDrop = ({ className, cards, columns, columnOrder }: Props) => {
   const [state, setState] = useState(initialData);
 
   const onDragEnd = (result: DropResult) => {
-    const { destination, source, draggableId, type } = result;
+    const { destination, source, draggableId } = result;
 
     if (!destination) {
       // dragged outside
