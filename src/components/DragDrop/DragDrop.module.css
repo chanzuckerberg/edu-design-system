@@ -41,7 +41,7 @@
 }
 
 .drag-drop-column--title {
-  color: red;
+  margin: var(--eds-size-1);
 }
 
 .drag-drop-card {
