@@ -121,6 +121,18 @@ const Interactive = () => {
   );
 };
 
+/**
+ * 1) For interactive purposes only, low value in snapping or checking for visual regression since they should be covered in the other stories.
+ */
 export const InteractiveExample: StoryObj<Args> = {
   render: () => <Interactive />,
+  parameters: {
+    /* 1 */
+    chromatic: {
+      skip: true,
+    },
+    snapshot: {
+      skip: true,
+    },
+  },
 };

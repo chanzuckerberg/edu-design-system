@@ -5,7 +5,8 @@
 \*------------------------------------*/
 
 /**
- * 1) 
+ * The data bar represents the relative completion of a task.
+ * 1) Rounds the sides rather than making the bar elliptical.
  */
 .data-bar {
   height: var(--eds-size-2);
@@ -14,22 +15,29 @@
 
   border: var(--eds-theme-color-border-neutral-default) solid
     var(--eds-theme-border-width);
-  border-radius: 9999px;
+  border-radius: 9999px; /* 1 */
 }
 
+/**
+ * The amount of space the segments can consume. Is overlayed on top of the containing bar.
+ * 1) Shifts a border width amount to completely overlay instead of being offset from the containing borders.
+ * 2) Makes the last segment overlap the containing bar right border.
+ */
 .data-bar__segment-space {
-  /* This overlays the segments over the grey borders of the containing bar */
   position: relative;
-  bottom: var(--eds-theme-border-width);
+  bottom: var(--eds-theme-border-width); /* 1 */
   right: var(--eds-theme-border-width);
 
   display: flex;
   gap: var(--eds-size-half);
 
-  /* Required to make last segment overlap containing bar right border */
-  width: calc(100% + 2 * var(--eds-theme-border-width));
+  width: calc(100% + 2 * var(--eds-theme-border-width)); /* 2 */
 }
-/* better naming here */
+/**
+ * Shortens the amount of space the segments consume by an amount equal to the radius of the semicircle end of the containing bar.
+ * Results in an empty space that visually indicates incompleteness of the relevant task.
+ * Required due to disproportionately larger spacing given to small segments to make them visible.
+ */
 .data-bar__segment-space--incomplete {
   width: calc(
     100% + 2 * var(--eds-theme-border-width) - 0.5 * var(--eds-size-2)

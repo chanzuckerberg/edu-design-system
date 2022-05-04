@@ -3,25 +3,39 @@
 \*------------------------------------*/
 
 /**
- * 1) 
+ * A block that represents its progress in a data bar.
  */
 .data-bar-segment {
   height: var(--eds-size-2);
 }
 
+/**
+ * Rounds the left side of the first databar segment.
+ */
 .data-bar-segment:first-child {
   border-top-left-radius: 9999px;
   border-bottom-left-radius: 9999px;
 }
+
+/**
+ * Rounds the right side of the last databar segment if progress is complete.
+ */
 .data-bar-segment--round-right {
   border-top-right-radius: 9999px;
   border-bottom-right-radius: 9999px;
 }
 
+/**
+ * The pointer cursor indicates that the element is hoverable.
+ * The non hoverable case is the default cursor, used for the empty state indicator.
+ */
 .data-bar-segment--hoverable:hover {
   cursor: pointer;
 }
 
+/**
+ * The color variants of the data bar segments.
+ */
 .data-bar-segment--brand {
   background-color: var(--eds-theme-color-background-brand-primary-strong);
 }
