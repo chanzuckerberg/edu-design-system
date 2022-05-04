@@ -12,7 +12,7 @@
   justify-content: space-around;
 }
 
-.drag-drop-column {
+.drag-drop-container {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -28,7 +28,7 @@
   }
 }
 
-.drag-drop-column--list {
+.drag-drop-container--list {
   padding: 8px;
   transition: background-color 3.2s ease;
   flex-grow: 1;
@@ -40,11 +40,7 @@
   }
 }
 
-.drag-drop-column--title {
-  margin: var(--eds-size-1);
-}
-
-.drag-drop-card {
+.drag-drop-item {
   border: 1px solid lightgrey;
   border-radius: 3px;
   padding: 8px;
@@ -54,7 +50,7 @@
   /* max-width: 400px; */
 }
 
-.drag-drop-card--title {
+.drag-drop-item--title {
   @mixin eds-typography-preset-007-bold;
   margin-bottom: var(--eds-size-2);
 }

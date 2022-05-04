@@ -10,13 +10,13 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
     data-rbd-droppable-id="all-columns"
   >
     <div
-      class="drag-drop-column"
+      class="drag-drop-container"
       data-rbd-draggable-context-id="0"
       data-rbd-draggable-id="column-1"
     >
       <div
         aria-describedby="rbd-hidden-text-0-hidden-text-0"
-        class="drag-drop-column--title"
+        class="drag-drop-container--title"
         data-rbd-drag-handle-context-id="0"
         data-rbd-drag-handle-draggable-id="column-1"
         draggable="false"
@@ -26,13 +26,13 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
         Available projects
       </div>
       <div
-        class="drag-drop-column--list"
+        class="drag-drop-container--list"
         data-rbd-droppable-context-id="0"
         data-rbd-droppable-id="column-1"
       >
         <div
           aria-describedby="rbd-hidden-text-0-hidden-text-0"
-          class="drag-drop-card"
+          class="drag-drop-item"
           data-rbd-drag-handle-context-id="0"
           data-rbd-drag-handle-draggable-id="card-1"
           data-rbd-draggable-context-id="0"
@@ -42,14 +42,14 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
           tabindex="0"
         >
           <div
-            class="drag-drop-card--title"
+            class="drag-drop-item--title"
           >
             Project #1
           </div>
         </div>
         <div
           aria-describedby="rbd-hidden-text-0-hidden-text-0"
-          class="drag-drop-card"
+          class="drag-drop-item"
           data-rbd-drag-handle-context-id="0"
           data-rbd-drag-handle-draggable-id="card-2"
           data-rbd-draggable-context-id="0"
@@ -59,14 +59,14 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
           tabindex="0"
         >
           <div
-            class="drag-drop-card--title"
+            class="drag-drop-item--title"
           >
             Project #2
           </div>
         </div>
         <div
           aria-describedby="rbd-hidden-text-0-hidden-text-0"
-          class="drag-drop-card"
+          class="drag-drop-item"
           data-rbd-drag-handle-context-id="0"
           data-rbd-drag-handle-draggable-id="card-3"
           data-rbd-draggable-context-id="0"
@@ -76,14 +76,14 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
           tabindex="0"
         >
           <div
-            class="drag-drop-card--title"
+            class="drag-drop-item--title"
           >
             Project #3
           </div>
         </div>
         <div
           aria-describedby="rbd-hidden-text-0-hidden-text-0"
-          class="drag-drop-card"
+          class="drag-drop-item"
           data-rbd-drag-handle-context-id="0"
           data-rbd-drag-handle-draggable-id="card-4"
           data-rbd-draggable-context-id="0"
@@ -93,14 +93,14 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
           tabindex="0"
         >
           <div
-            class="drag-drop-card--title"
+            class="drag-drop-item--title"
           >
             Project #4
           </div>
         </div>
         <div
           aria-describedby="rbd-hidden-text-0-hidden-text-0"
-          class="drag-drop-card"
+          class="drag-drop-item"
           data-rbd-drag-handle-context-id="0"
           data-rbd-drag-handle-draggable-id="card-5"
           data-rbd-draggable-context-id="0"
@@ -110,7 +110,7 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
           tabindex="0"
         >
           <div
-            class="drag-drop-card--title"
+            class="drag-drop-item--title"
           >
             Project #5
           </div>
@@ -118,13 +118,13 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="drag-drop-column"
+      class="drag-drop-container"
       data-rbd-draggable-context-id="0"
       data-rbd-draggable-id="column-2"
     >
       <div
         aria-describedby="rbd-hidden-text-0-hidden-text-0"
-        class="drag-drop-column--title"
+        class="drag-drop-container--title"
         data-rbd-drag-handle-context-id="0"
         data-rbd-drag-handle-draggable-id="column-2"
         draggable="false"
@@ -134,7 +134,7 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
         Planned projects
       </div>
       <div
-        class="drag-drop-column--list"
+        class="drag-drop-container--list"
         data-rbd-droppable-context-id="0"
         data-rbd-droppable-id="column-2"
       />

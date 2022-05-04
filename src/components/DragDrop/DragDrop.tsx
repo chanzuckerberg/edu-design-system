@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import React, { useState } from 'react';
 import { DragDropContext, DropResult, Droppable } from 'react-beautiful-dnd';
 import styles from './DragDrop.module.css';
-import DragDropColumn from '../DragDropColumn';
+import DragDropContainer from '../DragDropContainer';
 
 export interface Props {
   /**
@@ -124,7 +124,7 @@ export const DragDrop = ({ className, cards, columns, columnOrder }: Props) => {
                 );
 
                 return (
-                  <DragDropColumn
+                  <DragDropContainer
                     cards={cards}
                     column={column}
                     index={index}

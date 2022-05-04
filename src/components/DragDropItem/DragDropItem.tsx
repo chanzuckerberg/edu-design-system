@@ -17,8 +17,8 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const DragDropCard = ({ className, card, index, children }: Props) => {
-  const componentClassName = clsx(styles['drag-drop-card'], className, {});
+export const DragDropItem = ({ className, card, index, children }: Props) => {
+  const componentClassName = clsx(styles['drag-drop-item'], className, {});
   return (
     <Draggable draggableId={card.id} index={index}>
       {(provided) => {
@@ -29,7 +29,7 @@ export const DragDropCard = ({ className, card, index, children }: Props) => {
             {...provided.draggableProps}
             {...provided.dragHandleProps}
           >
-            <div className={clsx(styles['drag-drop-card--title'])}>
+            <div className={clsx(styles['drag-drop-item--title'])}>
               {card.content}
             </div>
             {children}
