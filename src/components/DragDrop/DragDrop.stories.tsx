@@ -8,22 +8,22 @@ export default {
   component: DragDrop,
   args: {
     cards: {
-      'task-1': { id: 'task-1', content: 'Project #1' },
-      'task-2': { id: 'task-2', content: 'Project #2' },
-      'task-3': { id: 'task-3', content: 'Project #3' },
-      'task-4': { id: 'task-4', content: 'Project #4' },
-      'task-5': { id: 'task-5', content: 'Project #5' },
+      'card-1': { id: 'card-1', content: 'Project #1' },
+      'card-2': { id: 'card-2', content: 'Project #2' },
+      'card-3': { id: 'card-3', content: 'Project #3' },
+      'card-4': { id: 'card-4', content: 'Project #4' },
+      'card-5': { id: 'card-5', content: 'Project #5' },
     },
     columns: {
       'column-1': {
         id: 'column-1',
         title: 'Available projects',
-        taskIds: ['task-1', 'task-2', 'task-3', 'task-4', 'task-5'],
+        cardIds: ['card-1', 'card-2', 'card-3', 'card-4', 'card-5'],
       },
       'column-2': {
         id: 'column-2',
         title: 'Planned projects',
-        taskIds: [],
+        cardIds: [],
       },
     },
     // Facilitate reordering of columns

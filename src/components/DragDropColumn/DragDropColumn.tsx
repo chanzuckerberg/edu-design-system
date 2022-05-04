@@ -35,15 +35,15 @@ export const DragDropColumn = ({ className, column, cards, index }: Props) => {
             >
               {column.title}
             </div>
-            <Droppable droppableId={column.id} type="task">
+            <Droppable droppableId={column.id} type="card">
               {(provided) => (
                 <div
                   className={clsx(styles['drag-drop-column--list'])}
                   ref={provided.innerRef}
                   {...provided.droppableProps}
                 >
-                  {cards.map((task, index) => (
-                    <DragDropCard index={index} key={task.id} task={task}>
+                  {cards.map((card, index) => (
+                    <DragDropCard card={card} index={index} key={card.id}>
                       <div className="fpo">Project info</div>
                     </DragDropCard>
                   ))}

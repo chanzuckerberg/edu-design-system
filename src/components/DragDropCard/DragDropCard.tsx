@@ -9,7 +9,7 @@ export interface Props {
    * CSS class names that can be appended to the component.
    */
   className?: string;
-  task: CardType;
+  card: CardType;
   index: number;
   children?: ReactNode;
 }
@@ -17,10 +17,10 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const DragDropCard = ({ className, task, index, children }: Props) => {
+export const DragDropCard = ({ className, card, index, children }: Props) => {
   const componentClassName = clsx(styles['drag-drop-card'], className, {});
   return (
-    <Draggable draggableId={task.id} index={index}>
+    <Draggable draggableId={card.id} index={index}>
       {(provided) => {
         return (
           <div
@@ -30,7 +30,7 @@ export const DragDropCard = ({ className, task, index, children }: Props) => {
             {...provided.dragHandleProps}
           >
             <div className={clsx(styles['drag-drop-card--title'])}>
-              {task.content}
+              {card.content}
             </div>
             {children}
           </div>

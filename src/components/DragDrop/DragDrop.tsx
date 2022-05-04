@@ -29,7 +29,7 @@ export type Columns = {
 export type ColumnType = {
   id: string;
   title: string;
-  taskIds: string[];
+  cardIds: string[];
 };
 
 /**
@@ -60,13 +60,13 @@ export const DragDrop = ({ className, cards, columns, columnOrder }: Props) => {
     const finish = state.columns[destination.droppableId];
 
     if (start === finish) {
-      const newTaskIds = [...start.taskIds]; // create new array to avoid mutations
-      newTaskIds.splice(source.index, 1);
-      newTaskIds.splice(destination.index, 0, draggableId);
+      const newCardIds = [...start.cardIds]; // create new array to avoid mutations
+      newCardIds.splice(source.index, 1);
+      newCardIds.splice(destination.index, 0, draggableId);
 
       const newColumn = {
         ...start,
-        taskIds: newTaskIds,
+        cardIds: newCardIds,
       };
 
       const newState = {
@@ -82,18 +82,18 @@ export const DragDrop = ({ className, cards, columns, columnOrder }: Props) => {
     }
 
     // Moving from one list to another
-    const startTaskIds = [...start.taskIds];
-    startTaskIds.splice(source.index, 1);
+    const startCardIds = [...start.cardIds];
+    startCardIds.splice(source.index, 1);
     const newStart = {
       ...start,
-      taskIds: startTaskIds,
+      cardIds: startCardIds,
     };
 
-    const finishTaskIds = [...finish.taskIds];
-    finishTaskIds.splice(destination.index, 0, draggableId);
+    const finishCardIds = [...finish.cardIds];
+    finishCardIds.splice(destination.index, 0, draggableId);
     const newFinish = {
       ...finish,
-      taskIds: finishTaskIds,
+      cardIds: finishCardIds,
     };
 
     const newState = {
@@ -119,8 +119,8 @@ export const DragDrop = ({ className, cards, columns, columnOrder }: Props) => {
             >
               {state.columnOrder.map((columnId, index) => {
                 const column = state.columns[columnId];
-                const cards = column.taskIds.map(
-                  (taskId) => state.cards[taskId],
+                const cards = column.cardIds.map(
+                  (cardId) => state.cards[cardId],
                 );
 
                 return (
