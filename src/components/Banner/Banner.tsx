@@ -123,7 +123,6 @@ export const Banner = ({
   variant = "brand",
   title,
   titleAs = "h3",
-  ...other
 }: BannerProps) => {
   if (isFlat && process.env.NODE_ENV !== "production") {
     console.warn(
@@ -151,7 +150,7 @@ export const Banner = ({
   );
 
   return (
-    <article className={componentClassName} {...other}>
+    <article className={componentClassName}>
       {onDismiss && (
         <Button
           className={styles["banner__close-btn"]}
