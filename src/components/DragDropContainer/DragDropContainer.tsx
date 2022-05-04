@@ -12,7 +12,6 @@ export interface Props {
   className?: string;
   column: ColumnType;
   cards: CardType[];
-  index: number;
   children?: ReactNode;
 }
 
@@ -24,37 +23,26 @@ export const DragDropContainer = ({
   column,
   cards,
   children,
-  index,
 }: Props) => {
   const componentClassName = clsx(styles['drag-drop-container'], className, {});
   return (
-    <Draggable draggableId={column.id} index={index}>
-      {(provided) => {
-        return (
+    <div className={componentClassName}>
+      <Droppable droppableId={column.id} type="card">
+        {(provided) => (
           <div
-            className={componentClassName}
-            {...provided.draggableProps}
+            className={clsx(styles['drag-drop-container--list'])}
             ref={provided.innerRef}
+            {...provided.droppableProps}
           >
-            <Droppable droppableId={column.id} type="card">
-              {(provided) => (
-                <div
-                  className={clsx(styles['drag-drop-container--list'])}
-                  ref={provided.innerRef}
-                  {...provided.droppableProps}
-                >
-                  {cards.map((card, index) => (
-                    <DragDropItem card={card} index={index} key={card.id}>
-                      {children}
-                    </DragDropItem>
-                  ))}
-                  {provided.placeholder}
-                </div>
-              )}
-            </Droppable>
+            {cards.map((card, index) => (
+              <DragDropItem card={card} index={index} key={card.id}>
+                {children}
+              </DragDropItem>
+            ))}
+            {provided.placeholder}
           </div>
-        );
-      }}
-    </Draggable>
+        )}
+      </Droppable>
+    </div>
   );
 };
