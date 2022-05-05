@@ -49,8 +49,9 @@ export const HorizontalStepper = ({ activeIndex, className, steps }: Props) => {
   /**
    * Creates a list of <HorizontalStep> components with lines in between.
    * 1) If it is not the first step, add a line to stepComponents.
-   * 2) Figure out what variant of step according to the activeIndex.
-   * 3) Add step to stepComponents.
+   * 2) Hides the decorative line to prevent accessibility issue with it not being <li> in an <ol>.
+   * 3) Figure out what variant of step according to the activeIndex.
+   * 4) Add step to stepComponents.
    */
   const stepComponents: React.ReactNode[] = [];
   steps.forEach((step, index) => {
@@ -58,12 +59,13 @@ export const HorizontalStepper = ({ activeIndex, className, steps }: Props) => {
     if (index > 0)
       stepComponents.push(
         <hr
+          aria-hidden /* 2 */
           className={styles['horizontal-stepper__line']}
           key={`horizontal-stepper__line-${index}`}
         />,
       );
 
-    /* 2 */
+    /* 3 */
     const stepVariant =
       index < activeIndex
         ? 'complete'
@@ -71,7 +73,7 @@ export const HorizontalStepper = ({ activeIndex, className, steps }: Props) => {
         ? 'active'
         : 'incomplete';
 
-    /* 3 */
+    /* 4 */
     stepComponents.push(
       <HorizontalStep
         key={`horizontal-stepper__step-${index}`}

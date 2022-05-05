@@ -22,7 +22,7 @@ exports[`<HorizontalStepper /> CompletedAllSteps story renders snapshot 1`] = `
         <title
           id="13"
         >
-          completed step Step 1
+          completed step 1 Step 1
         </title>
         <use
           xlink:href="test-file-stub#check-circle"
@@ -35,6 +35,7 @@ exports[`<HorizontalStepper /> CompletedAllSteps story renders snapshot 1`] = `
       </span>
     </li>
     <hr
+      aria-hidden="true"
       class="horizontal-stepper__line"
     />
     <li
@@ -52,7 +53,7 @@ exports[`<HorizontalStepper /> CompletedAllSteps story renders snapshot 1`] = `
         <title
           id="14"
         >
-          completed step Step 2
+          completed step 2 Step 2
         </title>
         <use
           xlink:href="test-file-stub#check-circle"
@@ -65,6 +66,7 @@ exports[`<HorizontalStepper /> CompletedAllSteps story renders snapshot 1`] = `
       </span>
     </li>
     <hr
+      aria-hidden="true"
       class="horizontal-stepper__line"
     />
     <li
@@ -82,7 +84,7 @@ exports[`<HorizontalStepper /> CompletedAllSteps story renders snapshot 1`] = `
         <title
           id="15"
         >
-          completed step Step 3
+          completed step 3 Step 3
         </title>
         <use
           xlink:href="test-file-stub#check-circle"
@@ -95,6 +97,7 @@ exports[`<HorizontalStepper /> CompletedAllSteps story renders snapshot 1`] = `
       </span>
     </li>
     <hr
+      aria-hidden="true"
       class="horizontal-stepper__line"
     />
     <li
@@ -112,7 +115,7 @@ exports[`<HorizontalStepper /> CompletedAllSteps story renders snapshot 1`] = `
         <title
           id="16"
         >
-          completed step Step 4
+          completed step 4 Step 4
         </title>
         <use
           xlink:href="test-file-stub#check-circle"
@@ -125,6 +128,7 @@ exports[`<HorizontalStepper /> CompletedAllSteps story renders snapshot 1`] = `
       </span>
     </li>
     <hr
+      aria-hidden="true"
       class="horizontal-stepper__line"
     />
     <li
@@ -142,7 +146,7 @@ exports[`<HorizontalStepper /> CompletedAllSteps story renders snapshot 1`] = `
         <title
           id="17"
         >
-          completed step Step 5
+          completed step 5 Step 5
         </title>
         <use
           xlink:href="test-file-stub#check-circle"
@@ -162,76 +166,80 @@ exports[`<HorizontalStepper /> HorizontalSteps story renders snapshot 1`] = `
 <div
   style="margin: 1rem;"
 >
-  <li
-    class="horizontal-step horizontal-step--incomplete"
+  <ol
+    style="padding: 0px;"
   >
-    <svg
-      class="icon horizontal-step__incomplete-icon"
-      fill="currentColor"
-      height="0.5rem"
-      role="img"
-      style="--icon-size: 0.5rem;"
-      width="0.5rem"
-      xmlns="http://www.w3.org/2000/svg"
+    <li
+      class="horizontal-step horizontal-step--incomplete"
     >
-      <title
-        id="18"
+      <svg
+        class="icon horizontal-step__incomplete-icon"
+        fill="currentColor"
+        height="0.5rem"
+        role="img"
+        style="--icon-size: 0.5rem;"
+        width="0.5rem"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        incomplete step Horizontal step
-      </title>
-      <use
-        xlink:href="test-file-stub#circle"
-      />
-    </svg>
-    <span
-      class="text text--sm text--inherit text--bold-weight"
-    >
-      Horizontal step
-    </span>
-  </li>
-  <li
-    class="horizontal-step horizontal-step--active"
-  >
-    <span
-      aria-label="current step 1 Horizontal step"
-      class="horizontal-step__number text text--sm text--inherit"
-      role="img"
-    >
-      1
-    </span>
-    <span
-      class="text text--sm text--inherit text--bold-weight"
-    >
-      Horizontal step
-    </span>
-  </li>
-  <li
-    class="horizontal-step horizontal-step--complete"
-  >
-    <svg
-      class="icon horizontal-step__complete-icon"
-      fill="currentColor"
-      height="1.5rem"
-      role="img"
-      style="--icon-size: 1.5rem;"
-      width="1.5rem"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <title
-        id="19"
+        <title
+          id="18"
+        >
+          incomplete step 1 Horizontal step
+        </title>
+        <use
+          xlink:href="test-file-stub#circle"
+        />
+      </svg>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
       >
-        completed step Horizontal step
-      </title>
-      <use
-        xlink:href="test-file-stub#check-circle"
-      />
-    </svg>
-    <span
-      class="text text--sm text--inherit text--bold-weight"
+        Horizontal step
+      </span>
+    </li>
+    <li
+      class="horizontal-step horizontal-step--active"
     >
-      Horizontal step
-    </span>
-  </li>
+      <span
+        aria-label="current step 1 Horizontal step"
+        class="horizontal-step__number text text--sm text--inherit"
+        role="img"
+      >
+        1
+      </span>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Horizontal step
+      </span>
+    </li>
+    <li
+      class="horizontal-step horizontal-step--complete"
+    >
+      <svg
+        class="icon horizontal-step__complete-icon"
+        fill="currentColor"
+        height="1.5rem"
+        role="img"
+        style="--icon-size: 1.5rem;"
+        width="1.5rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title
+          id="19"
+        >
+          completed step 1 Horizontal step
+        </title>
+        <use
+          xlink:href="test-file-stub#check-circle"
+        />
+      </svg>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Horizontal step
+      </span>
+    </li>
+  </ol>
 </div>
 `;
 
@@ -239,246 +247,250 @@ exports[`<HorizontalStepper /> HorizontalStepsDifferentNumbers story renders sna
 <div
   style="margin: 1rem;"
 >
-  <li
-    class="horizontal-step horizontal-step--active"
+  <ol
+    style="padding: 0px;"
   >
-    <span
-      aria-label="current step 1 Horizontal step"
-      class="horizontal-step__number text text--sm text--inherit"
-      role="img"
+    <li
+      class="horizontal-step horizontal-step--active"
     >
-      1
-    </span>
-    <span
-      class="text text--sm text--inherit text--bold-weight"
+      <span
+        aria-label="current step 1 Horizontal step"
+        class="horizontal-step__number text text--sm text--inherit"
+        role="img"
+      >
+        1
+      </span>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Horizontal step
+      </span>
+    </li>
+    <li
+      class="horizontal-step horizontal-step--active"
     >
-      Horizontal step
-    </span>
-  </li>
-  <li
-    class="horizontal-step horizontal-step--active"
-  >
-    <span
-      aria-label="current step 2 Horizontal step"
-      class="horizontal-step__number text text--sm text--inherit"
-      role="img"
+      <span
+        aria-label="current step 2 Horizontal step"
+        class="horizontal-step__number text text--sm text--inherit"
+        role="img"
+      >
+        2
+      </span>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Horizontal step
+      </span>
+    </li>
+    <li
+      class="horizontal-step horizontal-step--active"
     >
-      2
-    </span>
-    <span
-      class="text text--sm text--inherit text--bold-weight"
+      <span
+        aria-label="current step 3 Horizontal step"
+        class="horizontal-step__number text text--sm text--inherit"
+        role="img"
+      >
+        3
+      </span>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Horizontal step
+      </span>
+    </li>
+    <li
+      class="horizontal-step horizontal-step--active"
     >
-      Horizontal step
-    </span>
-  </li>
-  <li
-    class="horizontal-step horizontal-step--active"
-  >
-    <span
-      aria-label="current step 3 Horizontal step"
-      class="horizontal-step__number text text--sm text--inherit"
-      role="img"
+      <span
+        aria-label="current step 4 Horizontal step"
+        class="horizontal-step__number text text--sm text--inherit"
+        role="img"
+      >
+        4
+      </span>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Horizontal step
+      </span>
+    </li>
+    <li
+      class="horizontal-step horizontal-step--active"
     >
-      3
-    </span>
-    <span
-      class="text text--sm text--inherit text--bold-weight"
+      <span
+        aria-label="current step 5 Horizontal step"
+        class="horizontal-step__number text text--sm text--inherit"
+        role="img"
+      >
+        5
+      </span>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Horizontal step
+      </span>
+    </li>
+    <li
+      class="horizontal-step horizontal-step--active"
     >
-      Horizontal step
-    </span>
-  </li>
-  <li
-    class="horizontal-step horizontal-step--active"
-  >
-    <span
-      aria-label="current step 4 Horizontal step"
-      class="horizontal-step__number text text--sm text--inherit"
-      role="img"
+      <span
+        aria-label="current step 6 Horizontal step"
+        class="horizontal-step__number text text--sm text--inherit"
+        role="img"
+      >
+        6
+      </span>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Horizontal step
+      </span>
+    </li>
+    <li
+      class="horizontal-step horizontal-step--active"
     >
-      4
-    </span>
-    <span
-      class="text text--sm text--inherit text--bold-weight"
+      <span
+        aria-label="current step 7 Horizontal step"
+        class="horizontal-step__number text text--sm text--inherit"
+        role="img"
+      >
+        7
+      </span>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Horizontal step
+      </span>
+    </li>
+    <li
+      class="horizontal-step horizontal-step--active"
     >
-      Horizontal step
-    </span>
-  </li>
-  <li
-    class="horizontal-step horizontal-step--active"
-  >
-    <span
-      aria-label="current step 5 Horizontal step"
-      class="horizontal-step__number text text--sm text--inherit"
-      role="img"
+      <span
+        aria-label="current step 8 Horizontal step"
+        class="horizontal-step__number text text--sm text--inherit"
+        role="img"
+      >
+        8
+      </span>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Horizontal step
+      </span>
+    </li>
+    <li
+      class="horizontal-step horizontal-step--active"
     >
-      5
-    </span>
-    <span
-      class="text text--sm text--inherit text--bold-weight"
+      <span
+        aria-label="current step 9 Horizontal step"
+        class="horizontal-step__number text text--sm text--inherit"
+        role="img"
+      >
+        9
+      </span>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Horizontal step
+      </span>
+    </li>
+    <li
+      class="horizontal-step horizontal-step--active"
     >
-      Horizontal step
-    </span>
-  </li>
-  <li
-    class="horizontal-step horizontal-step--active"
-  >
-    <span
-      aria-label="current step 6 Horizontal step"
-      class="horizontal-step__number text text--sm text--inherit"
-      role="img"
+      <span
+        aria-label="current step 10 Horizontal step"
+        class="horizontal-step__number text text--sm text--inherit"
+        role="img"
+      >
+        10
+      </span>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Horizontal step
+      </span>
+    </li>
+    <li
+      class="horizontal-step horizontal-step--active"
     >
-      6
-    </span>
-    <span
-      class="text text--sm text--inherit text--bold-weight"
+      <span
+        aria-label="current step 21 Horizontal step"
+        class="horizontal-step__number text text--sm text--inherit"
+        role="img"
+      >
+        21
+      </span>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Horizontal step
+      </span>
+    </li>
+    <li
+      class="horizontal-step horizontal-step--active"
     >
-      Horizontal step
-    </span>
-  </li>
-  <li
-    class="horizontal-step horizontal-step--active"
-  >
-    <span
-      aria-label="current step 7 Horizontal step"
-      class="horizontal-step__number text text--sm text--inherit"
-      role="img"
+      <span
+        aria-label="current step 32 Horizontal step"
+        class="horizontal-step__number text text--sm text--inherit"
+        role="img"
+      >
+        32
+      </span>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Horizontal step
+      </span>
+    </li>
+    <li
+      class="horizontal-step horizontal-step--active"
     >
-      7
-    </span>
-    <span
-      class="text text--sm text--inherit text--bold-weight"
+      <span
+        aria-label="current step 43 Horizontal step"
+        class="horizontal-step__number text text--sm text--inherit"
+        role="img"
+      >
+        43
+      </span>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Horizontal step
+      </span>
+    </li>
+    <li
+      class="horizontal-step horizontal-step--active"
     >
-      Horizontal step
-    </span>
-  </li>
-  <li
-    class="horizontal-step horizontal-step--active"
-  >
-    <span
-      aria-label="current step 8 Horizontal step"
-      class="horizontal-step__number text text--sm text--inherit"
-      role="img"
+      <span
+        aria-label="current step 54 Horizontal step"
+        class="horizontal-step__number text text--sm text--inherit"
+        role="img"
+      >
+        54
+      </span>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Horizontal step
+      </span>
+    </li>
+    <li
+      class="horizontal-step horizontal-step--active"
     >
-      8
-    </span>
-    <span
-      class="text text--sm text--inherit text--bold-weight"
-    >
-      Horizontal step
-    </span>
-  </li>
-  <li
-    class="horizontal-step horizontal-step--active"
-  >
-    <span
-      aria-label="current step 9 Horizontal step"
-      class="horizontal-step__number text text--sm text--inherit"
-      role="img"
-    >
-      9
-    </span>
-    <span
-      class="text text--sm text--inherit text--bold-weight"
-    >
-      Horizontal step
-    </span>
-  </li>
-  <li
-    class="horizontal-step horizontal-step--active"
-  >
-    <span
-      aria-label="current step 10 Horizontal step"
-      class="horizontal-step__number text text--sm text--inherit"
-      role="img"
-    >
-      10
-    </span>
-    <span
-      class="text text--sm text--inherit text--bold-weight"
-    >
-      Horizontal step
-    </span>
-  </li>
-  <li
-    class="horizontal-step horizontal-step--active"
-  >
-    <span
-      aria-label="current step 21 Horizontal step"
-      class="horizontal-step__number text text--sm text--inherit"
-      role="img"
-    >
-      21
-    </span>
-    <span
-      class="text text--sm text--inherit text--bold-weight"
-    >
-      Horizontal step
-    </span>
-  </li>
-  <li
-    class="horizontal-step horizontal-step--active"
-  >
-    <span
-      aria-label="current step 32 Horizontal step"
-      class="horizontal-step__number text text--sm text--inherit"
-      role="img"
-    >
-      32
-    </span>
-    <span
-      class="text text--sm text--inherit text--bold-weight"
-    >
-      Horizontal step
-    </span>
-  </li>
-  <li
-    class="horizontal-step horizontal-step--active"
-  >
-    <span
-      aria-label="current step 43 Horizontal step"
-      class="horizontal-step__number text text--sm text--inherit"
-      role="img"
-    >
-      43
-    </span>
-    <span
-      class="text text--sm text--inherit text--bold-weight"
-    >
-      Horizontal step
-    </span>
-  </li>
-  <li
-    class="horizontal-step horizontal-step--active"
-  >
-    <span
-      aria-label="current step 54 Horizontal step"
-      class="horizontal-step__number text text--sm text--inherit"
-      role="img"
-    >
-      54
-    </span>
-    <span
-      class="text text--sm text--inherit text--bold-weight"
-    >
-      Horizontal step
-    </span>
-  </li>
-  <li
-    class="horizontal-step horizontal-step--active"
-  >
-    <span
-      aria-label="current step 65 Horizontal step"
-      class="horizontal-step__number text text--sm text--inherit"
-      role="img"
-    >
-      65
-    </span>
-    <span
-      class="text text--sm text--inherit text--bold-weight"
-    >
-      Horizontal step
-    </span>
-  </li>
+      <span
+        aria-label="current step 65 Horizontal step"
+        class="horizontal-step__number text text--sm text--inherit"
+        role="img"
+      >
+        65
+      </span>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Horizontal step
+      </span>
+    </li>
+  </ol>
 </div>
 `;
 
@@ -506,6 +518,7 @@ exports[`<HorizontalStepper /> OnFirstStep story renders snapshot 1`] = `
       </span>
     </li>
     <hr
+      aria-hidden="true"
       class="horizontal-stepper__line"
     />
     <li
@@ -523,7 +536,7 @@ exports[`<HorizontalStepper /> OnFirstStep story renders snapshot 1`] = `
         <title
           id="1"
         >
-          incomplete step Step 2
+          incomplete step 2 Step 2
         </title>
         <use
           xlink:href="test-file-stub#circle"
@@ -536,6 +549,7 @@ exports[`<HorizontalStepper /> OnFirstStep story renders snapshot 1`] = `
       </span>
     </li>
     <hr
+      aria-hidden="true"
       class="horizontal-stepper__line"
     />
     <li
@@ -553,7 +567,7 @@ exports[`<HorizontalStepper /> OnFirstStep story renders snapshot 1`] = `
         <title
           id="2"
         >
-          incomplete step Step 3
+          incomplete step 3 Step 3
         </title>
         <use
           xlink:href="test-file-stub#circle"
@@ -566,6 +580,7 @@ exports[`<HorizontalStepper /> OnFirstStep story renders snapshot 1`] = `
       </span>
     </li>
     <hr
+      aria-hidden="true"
       class="horizontal-stepper__line"
     />
     <li
@@ -583,7 +598,7 @@ exports[`<HorizontalStepper /> OnFirstStep story renders snapshot 1`] = `
         <title
           id="3"
         >
-          incomplete step Step 4
+          incomplete step 4 Step 4
         </title>
         <use
           xlink:href="test-file-stub#circle"
@@ -596,6 +611,7 @@ exports[`<HorizontalStepper /> OnFirstStep story renders snapshot 1`] = `
       </span>
     </li>
     <hr
+      aria-hidden="true"
       class="horizontal-stepper__line"
     />
     <li
@@ -613,7 +629,7 @@ exports[`<HorizontalStepper /> OnFirstStep story renders snapshot 1`] = `
         <title
           id="4"
         >
-          incomplete step Step 5
+          incomplete step 5 Step 5
         </title>
         <use
           xlink:href="test-file-stub#circle"
@@ -651,7 +667,7 @@ exports[`<HorizontalStepper /> OnLastStep story renders snapshot 1`] = `
         <title
           id="9"
         >
-          completed step Step 1
+          completed step 1 Step 1
         </title>
         <use
           xlink:href="test-file-stub#check-circle"
@@ -664,6 +680,7 @@ exports[`<HorizontalStepper /> OnLastStep story renders snapshot 1`] = `
       </span>
     </li>
     <hr
+      aria-hidden="true"
       class="horizontal-stepper__line"
     />
     <li
@@ -681,7 +698,7 @@ exports[`<HorizontalStepper /> OnLastStep story renders snapshot 1`] = `
         <title
           id="10"
         >
-          completed step Step 2
+          completed step 2 Step 2
         </title>
         <use
           xlink:href="test-file-stub#check-circle"
@@ -694,6 +711,7 @@ exports[`<HorizontalStepper /> OnLastStep story renders snapshot 1`] = `
       </span>
     </li>
     <hr
+      aria-hidden="true"
       class="horizontal-stepper__line"
     />
     <li
@@ -711,7 +729,7 @@ exports[`<HorizontalStepper /> OnLastStep story renders snapshot 1`] = `
         <title
           id="11"
         >
-          completed step Step 3
+          completed step 3 Step 3
         </title>
         <use
           xlink:href="test-file-stub#check-circle"
@@ -724,6 +742,7 @@ exports[`<HorizontalStepper /> OnLastStep story renders snapshot 1`] = `
       </span>
     </li>
     <hr
+      aria-hidden="true"
       class="horizontal-stepper__line"
     />
     <li
@@ -741,7 +760,7 @@ exports[`<HorizontalStepper /> OnLastStep story renders snapshot 1`] = `
         <title
           id="12"
         >
-          completed step Step 4
+          completed step 4 Step 4
         </title>
         <use
           xlink:href="test-file-stub#check-circle"
@@ -754,6 +773,7 @@ exports[`<HorizontalStepper /> OnLastStep story renders snapshot 1`] = `
       </span>
     </li>
     <hr
+      aria-hidden="true"
       class="horizontal-stepper__line"
     />
     <li
@@ -798,7 +818,7 @@ exports[`<HorizontalStepper /> SomeCompletedSteps story renders snapshot 1`] = `
         <title
           id="5"
         >
-          completed step Step 1
+          completed step 1 Step 1
         </title>
         <use
           xlink:href="test-file-stub#check-circle"
@@ -811,6 +831,7 @@ exports[`<HorizontalStepper /> SomeCompletedSteps story renders snapshot 1`] = `
       </span>
     </li>
     <hr
+      aria-hidden="true"
       class="horizontal-stepper__line"
     />
     <li
@@ -828,7 +849,7 @@ exports[`<HorizontalStepper /> SomeCompletedSteps story renders snapshot 1`] = `
         <title
           id="6"
         >
-          completed step Step 2
+          completed step 2 Step 2
         </title>
         <use
           xlink:href="test-file-stub#check-circle"
@@ -841,6 +862,7 @@ exports[`<HorizontalStepper /> SomeCompletedSteps story renders snapshot 1`] = `
       </span>
     </li>
     <hr
+      aria-hidden="true"
       class="horizontal-stepper__line"
     />
     <li
@@ -860,6 +882,7 @@ exports[`<HorizontalStepper /> SomeCompletedSteps story renders snapshot 1`] = `
       </span>
     </li>
     <hr
+      aria-hidden="true"
       class="horizontal-stepper__line"
     />
     <li
@@ -877,7 +900,7 @@ exports[`<HorizontalStepper /> SomeCompletedSteps story renders snapshot 1`] = `
         <title
           id="7"
         >
-          incomplete step Step 4
+          incomplete step 4 Step 4
         </title>
         <use
           xlink:href="test-file-stub#circle"
@@ -890,6 +913,7 @@ exports[`<HorizontalStepper /> SomeCompletedSteps story renders snapshot 1`] = `
       </span>
     </li>
     <hr
+      aria-hidden="true"
       class="horizontal-stepper__line"
     />
     <li
@@ -907,7 +931,7 @@ exports[`<HorizontalStepper /> SomeCompletedSteps story renders snapshot 1`] = `
         <title
           id="8"
         >
-          incomplete step Step 5
+          incomplete step 5 Step 5
         </title>
         <use
           xlink:href="test-file-stub#circle"

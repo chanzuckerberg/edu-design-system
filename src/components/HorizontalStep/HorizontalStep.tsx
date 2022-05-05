@@ -53,7 +53,7 @@ export const HorizontalStep = ({
         name="check-circle"
         purpose="informative"
         size="1.5rem"
-        title={`completed step ${text}`}
+        title={`completed step ${stepNumber} ${text}`}
       />
     ) : variant === 'active' ? (
       <Text
@@ -72,7 +72,7 @@ export const HorizontalStep = ({
         name="circle"
         purpose="informative"
         size="0.5rem"
-        title={`incomplete step ${text}`}
+        title={`incomplete step ${stepNumber} ${text}`}
       />
     );
 

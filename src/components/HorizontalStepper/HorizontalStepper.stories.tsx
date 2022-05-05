@@ -87,7 +87,7 @@ export const Interactive: StoryObj<Args> = {
 
 export const HorizontalSteps: StoryObj<Args> = {
   render: () => (
-    <>
+    <ol style={{ padding: 0 }}>
       <HorizontalStep
         stepNumber={1}
         text="Horizontal step"
@@ -99,13 +99,13 @@ export const HorizontalSteps: StoryObj<Args> = {
         text="Horizontal step"
         variant="complete"
       />
-    </>
+    </ol>
   ),
 };
 
 export const HorizontalStepsDifferentNumbers: StoryObj<Args> = {
   render: () => (
-    <>
+    <ol style={{ padding: 0 }}>
       <HorizontalStep stepNumber={1} text="Horizontal step" variant="active" />
       <HorizontalStep stepNumber={2} text="Horizontal step" variant="active" />
       <HorizontalStep stepNumber={3} text="Horizontal step" variant="active" />
@@ -121,6 +121,6 @@ export const HorizontalStepsDifferentNumbers: StoryObj<Args> = {
       <HorizontalStep stepNumber={43} text="Horizontal step" variant="active" />
       <HorizontalStep stepNumber={54} text="Horizontal step" variant="active" />
       <HorizontalStep stepNumber={65} text="Horizontal step" variant="active" />
-    </>
+    </ol>
   ),
 };
