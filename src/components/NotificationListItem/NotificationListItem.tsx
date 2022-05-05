@@ -3,7 +3,7 @@ import React, { ReactNode, useState } from 'react';
 import { Heading } from '../Heading/Heading';
 import styles from '../NotificationList/NotificationList.module.css';
 
-export interface Props {
+export interface NotificationListItemProps {
   /**
    * CSS class names that can be appended to the component.
    */
@@ -48,7 +48,7 @@ export const NotificationListItem = ({
   title,
   children,
   ...other
-}: Props) => {
+}: NotificationListItemProps) => {
   /**
    * Initialize state
    */

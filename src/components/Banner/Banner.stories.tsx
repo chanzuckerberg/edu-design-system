@@ -1,5 +1,5 @@
 import type { StoryObj } from '@storybook/react';
-import React, { ReactNode } from 'react';
+import React from 'react';
 import { Banner, Variant } from './Banner';
 import Button from '../Button';
 import Heading from '../Heading';
@@ -13,11 +13,7 @@ export default {
   },
 };
 
-type Args = React.ComponentProps<typeof Banner> & {
-  title: string;
-  description: string;
-  action: ReactNode;
-};
+type Args = React.ComponentProps<typeof Banner>;
 
 const getAction = (status?: Variant) => (
   <Button status={status} variant="secondary">
@@ -31,7 +27,7 @@ const getDescription = (status?: Variant) => (
     curriculum. To see the updates,{' '}
     <Button
       href="/"
-      onClick={(event) => event.preventDefault()}
+      onClick={(event: any) => event.preventDefault()}
       status={status}
       variant="link"
     >
@@ -190,10 +186,10 @@ export const DismissableBelowContent: StoryObj<Args> = {
     <>
       <Heading size="h1">Page Title</Heading>
       <Banner
+        {...args}
         description={getDescription()}
         onDismiss={dismissMethod}
         titleAs="h2"
-        {...args}
       />
     </>
   ),

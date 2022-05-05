@@ -1,6 +1,12 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import clsx from 'clsx';
-import React, { useState, useRef, useEffect, ReactNode } from 'react';
+import React, {
+  useState,
+  useRef,
+  useEffect,
+  ReactNode,
+  KeyboardEvent,
+} from 'react';
 import styles from './ShowHide.module.css';
 import { ESCAPE_KEYCODE } from '../../util/keycodes';
 
@@ -31,6 +37,8 @@ export interface Props {
   /**
    * Slot for the trigger component. This must always be a `button` element
    * (whether the formal `Button` React component or another `button` element)
+   *
+   * TODO: improve `any` type
    */
   trigger?: any;
 }
@@ -85,7 +93,7 @@ export const ShowHide = ({
    * Handle onKeyDown
    * 1) If escape button is struck, close the show hide contents
    */
-  function handleOnKeyDown(e: any) {
+  function handleOnKeyDown(e: KeyboardEvent<HTMLElement>) {
     if (e.code === ESCAPE_KEYCODE) {
       setIsActive(false); /* 1 */
     }

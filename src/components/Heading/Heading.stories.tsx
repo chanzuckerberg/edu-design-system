@@ -58,7 +58,7 @@ export const Heading6: StoryObj<Args> = {
 export const Variants: StoryObj<Args> = {
   ...Heading1,
   render: (args) => {
-    const headings = [];
+    const headings: Array<JSX.Element> = [];
     VARIANTS.forEach((variant) => {
       if (variant !== 'info')
         headings.push(

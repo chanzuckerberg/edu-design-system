@@ -12,7 +12,7 @@ export interface Props {
   /**
    * Aria-describedby id string
    */
-  ariaDescribedBy?: any;
+  ariaDescribedBy?: string;
   /**
    * CSS class names that can be appended to the component.
    */
@@ -49,7 +49,7 @@ export interface Props {
   /**
    * HTML id for the component
    */
-  id?: any;
+  id?: string;
   /**
    * Gives a hint as to the type of data needed for textarea
    */
@@ -185,7 +185,7 @@ export const TextareaField = ({
       <div className={styles['textarea-field__body']}>
         <Textarea
           aria-invalid={!!isError}
-          ariaDescribedBy={fieldNote && ariaDescribedByVar}
+          ariaDescribedBy={ariaDescribedByVar}
           className={styles['textarea-field__textarea']}
           defaultValue={defaultValue}
           disabled={disabled}
