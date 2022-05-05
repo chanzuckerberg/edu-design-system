@@ -11,6 +11,13 @@ import TextInput from '../TextInput';
 import TextList from '../TextList';
 import TextListItem from '../TextListItem';
 
+// Remove native properties from TS interface (https://github.com/microsoft/TypeScript/blob/c388222b29228a572b4e3c9ca907863d0b1945c6/lib/lib.dom.d.ts#L2537)
+// that don't need to be passed or saved
+type FileInfo = Omit<
+  File,
+  'arrayBuffer' | 'slice' | 'stream' | 'text' | 'webkitRelativePath'
+>;
+type FileWithId = { id: string; fileObject: FileInfo };
 export interface Props {
   /**
    * String that describes a type of file that may be selected by the user
@@ -20,7 +27,7 @@ export interface Props {
   /**
    * Aria-describedby id string
    */
-  ariaDescribedBy?: any;
+  ariaDescribedBy?: string;
   /**
    * CSS class names that can be appended to the component.
    */
@@ -42,7 +49,7 @@ export interface Props {
    * FieldNote
    * Used as helper text or error message
    */
-  files?: any;
+  files?: Array<FileWithId>;
   /**
    * Toggles the visibility of the label. If hidden, the label text will still be accessible to assistive technologies
    */
@@ -54,7 +61,7 @@ export interface Props {
   /**
    * HTML id for the component
    */
-  id?: any;
+  id?: string;
   /**
    * Gives a hint as to the type of data needed for text input
    */
@@ -101,8 +108,9 @@ export interface Props {
   name?: string;
   /**
    * Function that runs on change of the input
+   * TODO: improve `any` type
    */
-  onChange?: (e) => void;
+  onChange?: (e: any) => void;
   /**
    * String for the optional label. By default it is '(optional)'
    */
@@ -170,7 +178,7 @@ export const FileUploadField = ({
   statusLabel,
   ...other
 }: Props) => {
-  const [filesState, setFilesState] = useState(files);
+  const [filesState, setFilesState] = useState<Array<FileWithId>>(files || []);
   const [isErrorState, setIsErrorState] = useState(isError);
   const [isDragging, setIsDragging] = useState(false);
   const [fieldNoteState, setFieldNoteState] = useState(fieldNote);
@@ -183,7 +191,7 @@ export const FileUploadField = ({
     ? ariaDescribedBy || generatedAriaDescribedById
     : undefined;
 
-  function formatBytes(bytes, decimals) {
+  function formatBytes(bytes: number, decimals: number) {
     if (bytes === 0) return '0 Bytes';
 
     const k = 1024;
@@ -205,7 +213,7 @@ export const FileUploadField = ({
     }
   }
 
-  function onFileRemove(id) {
+  function onFileRemove(id: string) {
     const files = filesState;
     const filesToUpdate = files.filter((file) => file.id !== id);
     if (isErrorState === true) {
@@ -217,10 +225,11 @@ export const FileUploadField = ({
     }
   }
 
-  function onFileInputChange(e, getUID) {
+  // TODO: improve `any` type
+  function onFileInputChange(e: any, getUID: (file: File) => string) {
     const fileObjects = e.target.files;
     if (!fileObjects) return;
-    const fileArray = Array.from(fileObjects);
+    const fileArray: Array<File> = Array.from(fileObjects);
 
     /*
      * 1. Copy existing files from state to a new variable
@@ -232,7 +241,6 @@ export const FileUploadField = ({
 
     /* 1 */
     let files = [...filesState];
-    let isError;
 
     /* 2 */
     fileArray.forEach((file: File) => {
@@ -244,12 +252,12 @@ export const FileUploadField = ({
           fileObject: file,
           id: getUID(file),
         });
-        setIsErrorState(isError);
+        setIsErrorState(false);
       }
     });
 
     /* 3 */
-    if (files.length >= maxFiles) {
+    if (maxFiles && files.length >= maxFiles) {
       files = files.splice(0, maxFiles);
     }
 
@@ -261,7 +269,7 @@ export const FileUploadField = ({
     }
   }
 
-  function renderFileListIconOrRemoveButton(file) {
+  function renderFileListIconOrRemoveButton(file: FileWithId) {
     switch (statusLabel) {
       case 'success':
         return <Icon name="expand-more" purpose="decorative" />;
@@ -291,7 +299,8 @@ export const FileUploadField = ({
     }
   }
 
-  const isDisabled = disabled || (filesState && filesState >= maxFiles);
+  const isDisabled =
+    disabled || !!(filesState && maxFiles && filesState.length >= maxFiles);
   const getUID = useUIDSeed();
 
   const componentClassName = clsx(

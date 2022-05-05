@@ -6,7 +6,7 @@ export interface Props {
   /**
    * aria-labelledby attribute that associates a tab panel with its accompanying tab title text
    */
-  ariaLabelledBy?: any;
+  ariaLabelledBy?: string;
   /**
    * Child node(s) that can be nested inside component
    */
@@ -18,7 +18,7 @@ export interface Props {
   /**
    * HTML id for the component
    */
-  id?: any;
+  id?: string;
   /**
    * Number passed down from Tabs to show the active index state of Tabs
    */

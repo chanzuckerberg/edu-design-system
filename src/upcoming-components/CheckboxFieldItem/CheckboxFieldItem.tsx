@@ -1,5 +1,11 @@
 import clsx from 'clsx';
-import React, { ChangeEventHandler, useEffect, useRef, useState } from 'react';
+import React, {
+  ChangeEventHandler,
+  MutableRefObject,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 import { useUID } from 'react-uid';
 import Checkbox from '../../components/Checkbox';
 import styles from '../CheckboxField/CheckboxField.module.css';
@@ -20,7 +26,7 @@ export interface Props {
   /**
    * HTML id for the component
    */
-  id?: any;
+  id?: string;
   /**
    * Inverted variant for dark backgrounds
    */
@@ -79,8 +85,8 @@ export const CheckboxFieldItem = ({
   /**
    * Check for previous props/states
    */
-  function usePrevious(checkboxChecked: any) {
-    const ref = useRef();
+  function usePrevious(checkboxChecked: boolean) {
+    const ref = useRef() as MutableRefObject<boolean>;
     useEffect(() => {
       ref.current = checkboxChecked;
     });
@@ -103,7 +109,7 @@ export const CheckboxFieldItem = ({
    * On change handler
    * 1) Toggle the checked state of item on change
    */
-  function onChange(e: any) {
+  function onChange() {
     setCheckedState(!checkboxChecked); /* 1 */
   }
 

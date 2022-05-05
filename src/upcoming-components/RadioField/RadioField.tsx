@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { ChangeEventHandler, ReactNode, useState } from 'react';
+import React, { ReactNode, useState, FormEvent } from 'react';
 import { allByType } from 'react-children-by-type';
 import { useUID } from 'react-uid';
 import styles from './RadioField.module.css';
@@ -13,7 +13,7 @@ export interface Props {
   /**
    * HTML id of the helper text used to describe the component
    */
-  ariaDescribedBy?: any;
+  ariaDescribedBy?: string;
   /**
    * Property that checks the radio when true and unchecks it when false
    */
@@ -50,11 +50,11 @@ export interface Props {
   /**
    * HTML label text
    */
-  label?: string;
+  label: string;
   /**
    * Calls back with the active index
    */
-  onChange?: ChangeEventHandler;
+  onChange?: (e?: FormEvent<HTMLElement>) => void;
   /**
    * String for the optional label. By default it is '(optional)'
    */
@@ -101,10 +101,8 @@ export const RadioField = ({
    * Initialize radio field items active item
    */
   const [checkedIndex, setCheckedIndex] = useState(
-    radioItems().reduce(
-      (acc, item, i) => (acc === null && item.checked ? i : acc),
-      null,
-    ),
+    // TODO: improve `any` type
+    radioItems().find((item: any) => item.checked),
   );
 
   /**
@@ -120,18 +118,19 @@ export const RadioField = ({
    * 1) If onChange function passed from outside, run this when radio field item is checked
    * 2) Set the checked index value to the index of the radio field item selected
    */
-  function onChecked(index, e) {
+  function onChecked(index: number, e: FormEvent<HTMLElement>) {
     if (onChange) {
       /* 1 */
-      onChange(index);
+      onChange(e);
     }
     setCheckedIndex(index); /* 2 */
   }
 
   /**
    * Pass in props from RadioField to each RadioFieldItem
+   * TODO: improve `any` type
    */
-  radioItems().map((item, index) => {
+  radioItems().map((item: any, index: number) => {
     return React.cloneElement(item, {
       checked: checkedIndex === index,
       onChange: (e) => {

@@ -7,6 +7,7 @@ import * as stories from './DataBar.stories';
 
 describe('<DataBar />', () => {
   generateSnapshots(stories);
+
   it('should focus with the tab key and the left and right arrow keys', () => {
     render(
       <DataBar

@@ -1,4 +1,4 @@
-import { Story, Meta } from '@storybook/react';
+import { StoryObj } from '@storybook/react';
 import React from 'react';
 
 import { CheckboxField, Props } from './CheckboxField';
@@ -8,55 +8,14 @@ export default {
   title: 'Molecules/Forms/CheckboxField',
   component: CheckboxField,
   subcomponents: { CheckboxFieldItem },
-} as Meta;
+  args: {
+    label: 'Checkbox field',
+  },
+};
 
-const Template: Story<Props> = (args) => (
-  <CheckboxField {...args}>
-    <CheckboxField.Item
-      name="checkbox-example"
-      text="Checkbox 1"
-      value="checkbox1"
-    />
-    <CheckboxField.Item
-      name="checkbox-example"
-      text="Checkbox 2"
-      value="checkbox2"
-    />
-    <CheckboxField.Item
-      name="checkbox-example"
-      text="Checkbox 3"
-      value="checkbox3"
-    />
-  </CheckboxField>
-);
-
-const DisabledTemplate: Story<Props> = (args) => (
-  <CheckboxField {...args}>
-    <CheckboxField.Item
-      checked={true}
-      disabled={true}
-      name="checkbox-example"
-      text="Checkbox 1"
-      value="checkbox1"
-    />
-    <CheckboxField.Item
-      disabled={true}
-      name="checkbox-example"
-      text="Checkbox 2"
-      value="checkbox2"
-    />
-    <CheckboxField.Item
-      disabled={true}
-      name="checkbox-example"
-      text="Checkbox 3"
-      value="checkbox3"
-    />
-  </CheckboxField>
-);
-
-const InvertedTemplate: Story<Props> = (args) => (
-  <div style={{ padding: '1rem', background: '#000' }}>
-    <CheckboxField {...args}>
+export const Default: StoryObj<Props> = {
+  render: ({ fieldNote = 'This is a checkbox field', ...args }) => (
+    <CheckboxField fieldNote={fieldNote} {...args}>
       <CheckboxField.Item
         name="checkbox-example"
         text="Checkbox 1"
@@ -73,52 +32,91 @@ const InvertedTemplate: Story<Props> = (args) => (
         value="checkbox3"
       />
     </CheckboxField>
-  </div>
-);
-
-export const Default = Template.bind({});
-Default.args = {
-  label: 'Checkbox field',
-  fieldNote: 'This is a checkbox field',
+  ),
 };
 
-export const Inline = Template.bind({});
-Inline.args = {
-  label: 'Checkbox field',
-  variant: 'inline',
-  fieldNote: 'This is a checkbox field',
+export const Inline = {
+  ...Default,
+  args: {
+    variant: 'inline',
+  },
 };
 
-export const Optional = Template.bind({});
-Optional.args = {
-  label: 'Checkbox field',
-  optionalLabel: '(optional)',
-  fieldNote: 'This is a checkbox field',
+export const Optional = {
+  ...Default,
+  args: {
+    optionalLabel: '(optional)',
+  },
 };
 
-export const Disabled = DisabledTemplate.bind({});
-Disabled.args = {
-  label: 'Checkbox field',
-  disabled: true,
-  fieldNote: 'This is a disabled checkbox field',
+export const Disabled: StoryObj<Props> = {
+  render: (args) => (
+    <CheckboxField
+      disabled={true}
+      fieldNote="This is a disabled checkbox field"
+      {...args}
+    >
+      <CheckboxField.Item
+        checked={true}
+        disabled={true}
+        name="checkbox-example"
+        text="Checkbox 1"
+        value="checkbox1"
+      />
+      <CheckboxField.Item
+        disabled={true}
+        name="checkbox-example"
+        text="Checkbox 2"
+        value="checkbox2"
+      />
+      <CheckboxField.Item
+        disabled={true}
+        name="checkbox-example"
+        text="Checkbox 3"
+        value="checkbox3"
+      />
+    </CheckboxField>
+  ),
 };
 
-export const Error = Template.bind({});
-Error.args = {
-  label: 'Checkbox field',
-  isError: true,
-  fieldNote: 'This is a field with an error',
+export const Error = {
+  ...Default,
+  args: {
+    isError: true,
+    fieldNote: 'This is a field with an error',
+  },
 };
 
-export const Inverted = InvertedTemplate.bind({});
-Inverted.args = {
-  label: 'Checkbox field',
-  inverted: true,
-  fieldNote: 'This is an inverted field',
-};
-Inverted.parameters = {
-  axe: {
-    // TODO: re-enable when component is worked on
-    disabledRules: ['color-contrast'],
+export const Inverted: StoryObj<Props> = {
+  render: (args) => (
+    <div style={{ padding: '1rem', background: '#000' }}>
+      <CheckboxField
+        fieldNote="This is an inverted field"
+        inverted={true}
+        {...args}
+      >
+        <CheckboxField.Item
+          name="checkbox-example"
+          text="Checkbox 1"
+          value="checkbox1"
+        />
+        <CheckboxField.Item
+          name="checkbox-example"
+          text="Checkbox 2"
+          value="checkbox2"
+        />
+        <CheckboxField.Item
+          name="checkbox-example"
+          text="Checkbox 3"
+          value="checkbox3"
+        />
+      </CheckboxField>
+    </div>
+  ),
+  parameters: {
+    axe: {
+      // TODO: re-enable when component is worked on
+      disabledRules: ['color-contrast'],
+    },
   },
 };

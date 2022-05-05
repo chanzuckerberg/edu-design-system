@@ -1,9 +1,9 @@
 import clsx from 'clsx';
-import React, { useState } from 'react';
+import React, { useState, MouseEvent } from 'react';
 import Icon from '../../components/Icon';
 import styles from '../Tags/Tags.module.css';
 
-export interface Props {
+export interface TagsItemProps {
   /**
    * CSS class names that can be appended to the component.
    */
@@ -15,7 +15,7 @@ export interface Props {
   /**
    * Click handler function that a user can pass in when a tag is clicked
    */
-  onClick?: (e) => void;
+  onClick?: (e?: MouseEvent<HTMLElement>) => void;
   /**
    * Text string of the tag
    */
@@ -31,10 +31,10 @@ export const TagsItem = ({
   onClick,
   text,
   ...other
-}: Props) => {
+}: TagsItemProps) => {
   const [isDismissed, setIsDismissed] = useState(false);
 
-  function handleOnClick(e) {
+  function handleOnClick(e: MouseEvent<HTMLElement>) {
     e.preventDefault();
     if (dismissible === true) {
       setIsDismissed(true);
@@ -43,27 +43,26 @@ export const TagsItem = ({
       onClick(e);
     }
   }
+  if (isDismissed) {
+    return null;
+  }
 
   const componentClassName = clsx('tags__item', className, {});
+
   return (
-    isDismissed !== true && (
-      <li className={componentClassName} {...other}>
-        <button
-          className={styles['tags__tag']}
-          onClick={(e) => handleOnClick(e)}
-        >
-          <span className={styles['tags__text']}>{text}</span>
-          {dismissible && (
-            <Icon
-              className={styles['tags__icon']}
-              name="close"
-              purpose="informative"
-              size="0.875rem"
-              title="Close"
-            />
-          )}
-        </button>
-      </li>
-    )
+    <li className={componentClassName} {...other}>
+      <button className={styles['tags__tag']} onClick={handleOnClick}>
+        <span className={styles['tags__text']}>{text}</span>
+        {dismissible && (
+          <Icon
+            className={styles['tags__icon']}
+            name="close"
+            purpose="informative"
+            size="0.875rem"
+            title="Close"
+          />
+        )}
+      </button>
+    </li>
   );
 };

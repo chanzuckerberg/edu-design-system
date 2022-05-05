@@ -11,7 +11,7 @@ export interface Props {
   /**
    * Aria-describedby id string
    */
-  ariaDescribedBy?: any;
+  ariaDescribedBy?: string;
   /**
    * CSS class names that can be appended to the component.
    */
@@ -48,7 +48,7 @@ export interface Props {
   /**
    * HTML id for the component
    */
-  id?: any;
+  id?: string;
   /**
    * Gives a hint as to the type of data needed for text input
    */
@@ -205,7 +205,7 @@ export const TextField = ({
       <div className={styles['text-field__body']}>
         <TextInput
           aria-invalid={!!isError}
-          ariaDescribedBy={fieldNote && ariaDescribedByVar}
+          ariaDescribedBy={ariaDescribedByVar}
           className={styles['text-field__input']}
           defaultValue={defaultValue}
           disabled={disabled}

@@ -70,7 +70,7 @@ exports[`<NotificationList /> MarkedAsRead story renders snapshot 1`] = `
   class="notification-list"
 >
   <li
-    class="notification-list__item"
+    class="notification-list__item notification-list__is-read"
   >
     <div
       class="notification-list__content"
@@ -94,12 +94,12 @@ exports[`<NotificationList /> MarkedAsRead story renders snapshot 1`] = `
       Outsiders on Trial: Self Awareness - Trial Brief Outline
     </div>
     <button
-      aria-label="Mark as read"
+      aria-label="Mark as unread"
       class="notification-list__button"
     />
   </li>
   <li
-    class="notification-list__item"
+    class="notification-list__item notification-list__is-read"
   >
     <div
       class="notification-list__content"
@@ -123,7 +123,7 @@ exports[`<NotificationList /> MarkedAsRead story renders snapshot 1`] = `
       Unit 3: Measuring Circles - Identifying Circumference and Diameter
     </div>
     <button
-      aria-label="Mark as read"
+      aria-label="Mark as unread"
       class="notification-list__button"
     />
   </li>

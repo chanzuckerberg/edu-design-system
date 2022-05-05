@@ -1,6 +1,13 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import clsx from 'clsx';
-import React, { useState, useEffect, useRef, ReactNode } from 'react';
+import React, {
+  useState,
+  useEffect,
+  useRef,
+  ReactNode,
+  KeyboardEvent,
+  MouseEvent,
+} from 'react';
 import { oneByType } from 'react-children-by-type';
 import FocusLock from 'react-focus-lock';
 import { Portal } from 'react-portal';
@@ -76,6 +83,8 @@ export const Drawer = ({
   /**
    * Get previous prop
    * 1) This is used to compare the previous prop to the current prop
+   *
+   * TODO: improve `any` type
    */
   function usePrevious(isActive: any) {
     useEffect(() => {
@@ -152,7 +161,7 @@ export const Drawer = ({
    * Handle "click outside"
    * 1) onClick of the area around the drawer window, close the drawer
    */
-  function handleOnClickOutside(e: any) {
+  function handleOnClickOutside(e: MouseEvent<HTMLElement>) {
     if (
       isActive &&
       dismissible &&
@@ -167,7 +176,7 @@ export const Drawer = ({
    * Handle onKeyDown
    * 1) If escape button is struck, close the drawer
    */
-  function handleOnKeyDown(e: any) {
+  function handleOnKeyDown(e: KeyboardEvent<HTMLElement>) {
     if (e.code === ESCAPE_KEYCODE) {
       handleOnClose(); /* 1 */
     }
@@ -198,8 +207,8 @@ export const Drawer = ({
         <div
           aria-hidden={!isActive}
           className={componentClassName}
-          onClick={(e) => handleOnClickOutside(e)}
-          onKeyDown={(e) => handleOnKeyDown(e)}
+          onClick={handleOnClickOutside}
+          onKeyDown={handleOnKeyDown}
           ref={ref}
           {...other}
         >
