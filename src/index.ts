@@ -1,5 +1,3 @@
-export { default as Accordion } from './components/Accordion';
-export { default as AccordionPanel } from './components/AccordionPanel';
 export { default as Avatar } from './components/Avatar';
 export { default as AvatarImage } from './components/AvatarImage';
 export { default as Band } from './components/Band';
