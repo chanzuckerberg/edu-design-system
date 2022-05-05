@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { useState } from 'react';
+import React, { ReactNode, useState } from 'react';
 import { DragDropContext, DropResult, Droppable } from 'react-beautiful-dnd';
 import styles from './DragDrop.module.css';
 import DragDropContainer from '../DragDropContainer';
@@ -9,27 +9,43 @@ export interface Props {
    * CSS class names that can be appended to the component.
    */
   className?: string;
+  /**
+   * Draggable items that can be held by a container.
+   */
   items?: Items;
+  /**
+   * Containers can hold items and can accept dropped items from another container in the same context. An array of itemIds may be initially passed into a container.
+   */
   containers?: Containers;
+  /**
+   * Containers can optionally be draggable just like items, in which case their initial order needs to be established here.
+   */
   containerOrder?: string[];
+  /**
+   * By default, two containers are used; the second one gets a different background style. If multipleContainers is set to true, an unlimited number of containers can be used; each one will be styled identically.
+   */
+  multipleContainers?: boolean;
+  unstyledItems?: boolean;
 }
-export type Items = {
+
+export interface Items {
   [any: string]: ItemType;
-};
+}
 
-export type ItemType = {
+export interface ItemType {
   id: string;
-  content: string;
-};
+  title?: string;
+  children?: ReactNode;
+}
 
-export type Containers = {
+export interface Containers {
   [any: string]: ContainerType;
-};
+}
 
-export type ContainerType = {
+export interface ContainerType {
   id: string;
   itemIds: string[];
-};
+}
 
 /**
  * Primary UI component for user interaction
@@ -39,8 +55,15 @@ export const DragDrop = ({
   items,
   containers,
   containerOrder,
+  multipleContainers = false,
+  unstyledItems = false,
 }: Props) => {
-  const componentClassName = clsx(styles['drag-drop'], className, {});
+  const componentClassName = clsx(
+    styles['drag-drop'],
+    className,
+    multipleContainers && styles['drag-drop--multiple'],
+    unstyledItems && styles['drag-drop--unstyled'],
+  );
   const initialData = { items, containers, containerOrder };
   const [state, setState] = useState(initialData);
 

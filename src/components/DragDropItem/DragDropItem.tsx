@@ -29,9 +29,11 @@ export const DragDropItem = ({ className, item, index, children }: Props) => {
             {...provided.draggableProps}
             {...provided.dragHandleProps}
           >
-            <div className={clsx(styles['drag-drop-item--title'])}>
-              {item.content}
-            </div>
+            {item.title && (
+              <div className={clsx(styles['drag-drop-item--title'])}>
+                {item.title}
+              </div>
+            )}
             {children}
           </div>
         );

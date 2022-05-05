@@ -1,32 +1,15 @@
-import { Story, Meta } from '@storybook/react';
-import React from 'react';
-
+import { Story, StoryObj, Meta } from '@storybook/react';
+import React, { ComponentProps } from 'react';
 import { DragDrop, Props } from './DragDrop';
+import { Default as Card } from '../Card/Card.stories';
+import Heading from '../Heading';
+import MediaBlock from '../MediaBlock';
+import { Default as Table } from '../Table/Table.stories';
+import TextPassage from '../TextPassage';
 
 export default {
   title: 'Organisms/Interactive/Drag and Drop',
   component: DragDrop,
-  args: {
-    items: {
-      'item-1': { id: 'item-1', content: 'Project #1' },
-      'item-2': { id: 'item-2', content: 'Project #2' },
-      'item-3': { id: 'item-3', content: 'Project #3' },
-      'item-4': { id: 'item-4', content: 'Project #4' },
-      'item-5': { id: 'item-5', content: 'Project #5' },
-    },
-    containers: {
-      'container-1': {
-        id: 'container-1',
-        itemIds: ['item-1', 'item-2', 'item-3', 'item-4', 'item-5'],
-      },
-      'container-2': {
-        id: 'container-2',
-        itemIds: [],
-      },
-    },
-    // Facilitate reordering of containers
-    containerOrder: ['container-1', 'container-2'],
-  },
   decorators: [
     (Story) => (
       <div
@@ -38,9 +21,243 @@ export default {
       </div>
     ),
   ],
-} as Meta;
+} as Meta<Args>;
+
+type Args = ComponentProps<typeof DragDrop>;
 
 const Template: Story<Props> = (args) => <DragDrop {...args} />;
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {
+  items: {
+    'item-1': {
+      id: 'item-1',
+      title: 'Project #1',
+      children: <div className="fpo">Content here</div>,
+    },
+    'item-2': {
+      id: 'item-2',
+      title: 'Project #2',
+      children: <div className="fpo">Content here</div>,
+    },
+    'item-3': {
+      id: 'item-3',
+      title: 'Project #3',
+      children: <div className="fpo">Content here</div>,
+    },
+    'item-4': {
+      id: 'item-4',
+      title: 'Project #4',
+      children: <div className="fpo">Content here</div>,
+    },
+    'item-5': {
+      id: 'item-5',
+      title: 'Project #5',
+      children: <div className="fpo">Content here</div>,
+    },
+  },
+  containers: {
+    'container-1': {
+      id: 'container-1',
+      itemIds: ['item-1', 'item-2', 'item-3', 'item-4', 'item-5'],
+    },
+    'container-2': {
+      id: 'container-2',
+      itemIds: [],
+    },
+  },
+  containerOrder: ['container-1', 'container-2'],
+};
+
+export const MultipleContainers: StoryObj<Args> = {
+  args: {
+    items: {
+      'item-1': {
+        id: 'item-1',
+        title: 'Project #1',
+        children: <div className="fpo">Content here</div>,
+      },
+      'item-2': {
+        id: 'item-2',
+        title: 'Project #2',
+        children: <div className="fpo">Content here</div>,
+      },
+      'item-3': {
+        id: 'item-3',
+        title: 'Project #3',
+        children: <div className="fpo">Content here</div>,
+      },
+      'item-4': {
+        id: 'item-4',
+        title: 'Project #4',
+        children: <div className="fpo">Content here</div>,
+      },
+      'item-5': {
+        id: 'item-5',
+        title: 'Project #5',
+        children: <div className="fpo">Content here</div>,
+      },
+    },
+    containers: {
+      'container-1': {
+        id: 'container-1',
+        itemIds: ['item-1', 'item-2', 'item-3'],
+      },
+      'container-2': {
+        id: 'container-2',
+        itemIds: ['item-4'],
+      },
+      'container-3': {
+        id: 'container-3',
+        itemIds: ['item-5'],
+      },
+    },
+    containerOrder: ['container-1', 'container-2', 'container-3'],
+    multipleContainers: true,
+  },
+};
+
+export const VariousSizedItems: StoryObj<Args> = {
+  args: {
+    items: {
+      'item-1': {
+        id: 'item-1',
+        title: 'Project #1',
+        children: <div className="fpo">Content here</div>,
+      },
+      'item-2': {
+        id: 'item-2',
+        title: 'Project #2',
+        children: (
+          <div className="fpo">
+            This container
+            <br />
+            has a lot of content
+            <br />
+            and will be taller than
+            <br />
+            other containers
+          </div>
+        ),
+      },
+      'item-3': {
+        id: 'item-3',
+        children: (
+          <div
+            className="fpo"
+            style={{
+              fontSize: '12px',
+              padding: '0',
+              textAlign: 'center',
+            }}
+          >
+            Small container
+          </div>
+        ),
+      },
+      'item-4': {
+        id: 'item-4',
+        children: (
+          <div
+            className="fpo"
+            style={{
+              fontSize: '12px',
+              padding: '0',
+              textAlign: 'center',
+            }}
+          >
+            Another small container
+          </div>
+        ),
+      },
+      'item-5': {
+        id: 'item-5',
+        title: 'Project #5',
+        children: (
+          <div className="fpo">
+            Another
+            <br />
+            larger
+            <br />
+            container
+          </div>
+        ),
+      },
+    },
+    containers: {
+      'container-1': {
+        id: 'container-1',
+        itemIds: ['item-1', 'item-2', 'item-3', 'item-4', 'item-5'],
+      },
+      'container-2': {
+        id: 'container-2',
+        itemIds: [],
+      },
+    },
+    containerOrder: ['container-1', 'container-2'],
+  },
+};
+
+export const OtherComponents: StoryObj<Args> = {
+  args: {
+    items: {
+      'item-1': {
+        id: 'item-1',
+        title: 'Card component',
+        children: <Card />,
+      },
+      'item-2': {
+        id: 'item-2',
+        title: 'Table component',
+        children: <Table />,
+      },
+      'item-3': {
+        id: 'item-3',
+        title: 'Media Block component',
+        children: (
+          <MediaBlock
+            imgAlt="placeholder image"
+            // eslint-disable-next-line @chanzuckerberg/stories/no-ext-resources-in-stories
+            imgSrc="https://placekitten.com/500/500"
+          >
+            <Heading className="u-margin-bottom-md" size="h3">
+              I can haz kitteh
+            </Heading>
+            <TextPassage>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </TextPassage>
+          </MediaBlock>
+        ),
+      },
+      'item-4': {
+        id: 'item-4',
+        title: 'Text Passage component',
+        children: (
+          <TextPassage>
+            <p>
+              TextPassage component. Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua.
+            </p>
+          </TextPassage>
+        ),
+      },
+    },
+    containers: {
+      'container-1': {
+        id: 'container-1',
+        itemIds: ['item-1', 'item-2', 'item-3', 'item-4'],
+      },
+      'container-2': {
+        id: 'container-2',
+        itemIds: [],
+      },
+    },
+    containerOrder: ['container-1', 'container-2'],
+    unstyledItems: true,
+    multipleContainers: true,
+  },
+};
