@@ -12,7 +12,7 @@ export interface Props {
   /**
    * HTML id of the helper text used to describe the component
    */
-  ariaDescribedBy?: any;
+  ariaDescribedBy?: string;
   /**
    * Child node(s) that can be nested inside component
    */
@@ -45,7 +45,7 @@ export interface Props {
   /**
    * HTML label text
    */
-  label?: string;
+  label: string;
   /**
    * String for the optional label. By default it is '(optional)'
    */

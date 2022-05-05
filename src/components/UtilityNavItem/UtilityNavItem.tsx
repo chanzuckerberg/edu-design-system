@@ -59,11 +59,7 @@ export const UtilityNavItem = React.forwardRef<HTMLLIElement, Props>(
 
     const handleOnClickOutside = (event: MouseEvent | TouchEvent) => {
       if (
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-ignore
         ownRef.current &&
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-ignore
         !ownRef.current.contains(event.target as HTMLElement)
       ) {
         setIsActive(false);
@@ -86,7 +82,7 @@ export const UtilityNavItem = React.forwardRef<HTMLLIElement, Props>(
       <li className={componentClassName} ref={utilityNavItemRef} {...other}>
         <TagName
           aria-expanded={!href && children ? isActive : undefined}
-          aria-label={!text && ariaLabel}
+          aria-label={!text ? ariaLabel : undefined}
           className={styles['utility-nav__link']}
           href={href}
           onClick={togglePopover}

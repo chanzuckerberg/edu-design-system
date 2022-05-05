@@ -1,4 +1,4 @@
-import { StoryObj, Meta } from '@storybook/react';
+import { StoryObj, Story } from '@storybook/react';
 import React from 'react';
 
 import { DataBar } from './DataBar';
@@ -18,7 +18,7 @@ export default {
     ],
   },
   decorators: [
-    (Story) => (
+    (Story: Story) => (
       <div
         style={{
           margin: '0.25rem',
@@ -28,7 +28,7 @@ export default {
       </div>
     ),
   ],
-} as Meta<Args>;
+};
 
 type Args = React.ComponentProps<typeof DataBar>;
 
@@ -68,9 +68,6 @@ export const NoSegments: StoryObj<Args> = {
 
 const Interactive = () => {
   const [max, setMax] = React.useState(100);
-  const handleChange = (e) => {
-    setMax(Number(e?.target?.value) || 100);
-  };
   const [segments, setSegments] = React.useState([
     { value: 90, text: 'Segment value 90' },
     { value: 1, text: 'Segment value 1' },
@@ -78,9 +75,6 @@ const Interactive = () => {
   ]);
 
   const [segmentValue, setSegmentValue] = React.useState(1);
-  const handleSegmentValueChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSegmentValue(Number(e?.target?.value));
-  };
 
   const onPush = () => {
     segments.push({
@@ -102,7 +96,9 @@ const Interactive = () => {
       <label htmlFor="segment-value-input">Value add: </label>
       <input
         id="segment-value-input"
-        onChange={handleSegmentValueChange}
+        onChange={(e) => {
+          setSegmentValue(Number(e?.target?.value));
+        }}
         value={segmentValue}
       ></input>
       <br />
@@ -116,7 +112,13 @@ const Interactive = () => {
       </ButtonGroup>
       <br />
       <label htmlFor="max-value-input">Max: </label>
-      <input id="max-value-input" onChange={handleChange} value={max}></input>
+      <input
+        id="max-value-input"
+        onChange={(e) => {
+          setMax(Number(e?.target?.value) || 100);
+        }}
+        value={max}
+      ></input>
     </div>
   );
 };

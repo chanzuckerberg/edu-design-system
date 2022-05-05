@@ -9,10 +9,11 @@ import '../src/tokens-dist/css/variables.css';
 // Import storybook-specific CSS
 import './css/styleguide-only.css';
 
+import type { Story } from '@storybook/react';
 import React from 'react';
 
 export const decorators = [
-  (Story) => (
+  (Story: Story) => (
     <div dir="ltr">
       <Story />
     </div>

@@ -73,7 +73,7 @@ export const TableHeaderCell = ({
 
   return (
     <th
-      aria-sort={sortDirection ?? null}
+      aria-sort={sortDirection ?? undefined}
       className={componentClassName}
       colSpan={colSpan}
       headers={headers}
