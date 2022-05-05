@@ -23,7 +23,8 @@
         "md": "4px",
         "lg": "8px",
         "xl": "20px",
-        "round": "50%"
+        "round": "50%",
+        "full": "9999px"
       }
     },
     "color": {

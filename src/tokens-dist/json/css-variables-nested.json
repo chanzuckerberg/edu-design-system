@@ -23,7 +23,8 @@
         "md": "var(--eds-border-radius-md)",
         "lg": "var(--eds-border-radius-lg)",
         "xl": "var(--eds-border-radius-xl)",
-        "round": "var(--eds-border-radius-round)"
+        "round": "var(--eds-border-radius-round)",
+        "full": "var(--eds-border-radius-full)"
       }
     },
     "color": {

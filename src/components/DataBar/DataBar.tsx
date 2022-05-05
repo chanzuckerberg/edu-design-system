@@ -97,11 +97,11 @@ export const DataBar = ({
     index: number,
   ) => {
     if (e.key === 'ArrowLeft' && index > 0) {
-      setFocusableElementIndex(focusableElementIndex - 1); /* 3 */
+      setFocusableElementIndex(index - 1); /* 3 */
       segmentsRef.current[index - 1].focus(); /* 4 */
     }
     if (e.key === 'ArrowRight' && index < segmentComponents.length - 1) {
-      setFocusableElementIndex(focusableElementIndex + 1); /* 3 */
+      setFocusableElementIndex(index + 1); /* 3 */
       segmentsRef.current[index + 1].focus(); /* 4 */
     }
   };
@@ -144,7 +144,6 @@ export const DataBar = ({
   if (!segmentComponents.length) {
     segmentComponents.push(
       <DataBarSegment
-        isHoverable={false}
         key="segment-empty"
         variant={variant}
         width={'var(--eds-size-1)'}
