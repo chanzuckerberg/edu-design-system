@@ -130,5 +130,8 @@ export const InteractiveExample: StoryObj<Args> = {
     snapshot: {
       skip: true,
     },
+    axe: {
+      disabledRules: ['label'],
+    },
   },
 };
