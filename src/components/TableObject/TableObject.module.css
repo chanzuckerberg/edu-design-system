@@ -28,7 +28,6 @@
     /**
      * Right overflow gradient for the overflow list
      */
-    /* stylelint-disable-next-line max-nesting-depth */
     &:before {
       content: '';
       display: block;
@@ -53,7 +52,6 @@
     /**
      * Right overflow gradient for the overflow list
      */
-    /* stylelint-disable-next-line max-nesting-depth */
     &:after {
       content: '';
       display: block;
