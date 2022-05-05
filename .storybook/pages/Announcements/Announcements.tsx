@@ -4,7 +4,7 @@ import { PageHeader, Panel } from '../../../src';
 
 import { PageShell } from '../../recipes/PageShell/PageShell';
 
-export const Announcements: React.FC = () => (
+export const Announcements = () => (
   <PageShell>
     <PageHeader title="Announcements to students" />
     <Panel>

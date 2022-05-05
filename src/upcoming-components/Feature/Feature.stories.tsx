@@ -27,5 +27,4 @@ Default.args = {
   imgSrc: 'https://via.placeholder.com/450x500.png',
   imgAlt: 'Placeholder Text',
   title: 'Feature Title',
-  text: 'This is a button',
 };

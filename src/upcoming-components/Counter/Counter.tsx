@@ -12,11 +12,11 @@ export interface Props {
   /**
    * HTML id of the helper text used to describe the component
    */
-  ariaDescribedBy?: any;
+  ariaDescribedBy?: string;
   /**
    * HTML id of the helper text to connect label to input
    */
-  ariaLabelledBy?: any;
+  ariaLabelledBy?: string;
   /**
    * Child node(s) that can be nested inside component
    */
@@ -41,7 +41,7 @@ export interface Props {
   /**
    * HTML id for the component
    */
-  id?: any;
+  id?: string;
   /**
    * Error state of the form field
    */
@@ -89,7 +89,7 @@ export interface Props {
   /**
    * The number value of the Counter input
    */
-  value?: string;
+  value?: number;
 }
 
 /**
@@ -114,12 +114,10 @@ export const Counter = ({
   required = true,
   requiredLabel,
   labelAfter,
-  value,
+  value = 1,
   ...other
 }: Props) => {
-  const [count, setCountState] = useState(
-    value !== undefined ? parseInt(value) : 1,
-  );
+  const [count, setCountState] = useState(value);
   const generatedId = useUID();
   const idVar = id || generatedId;
 
@@ -131,17 +129,20 @@ export const Counter = ({
     ? ariaDescribedBy || generatedAriaDescribedById
     : undefined;
 
-  function onIncrease(e) {
+  // TODO: improve `any` type
+  function onIncrease(e: any) {
     e.preventDefault();
     setCountState(count + 1);
   }
 
-  function onDecrease(e) {
+  // TODO: improve `any` type
+  function onDecrease(e: any) {
     e.preventDefault();
     setCountState(count - 1);
   }
 
-  function onChange(e) {
+  // TODO: improve `any` type
+  function onChange(e: any) {
     setCountState(e.target.value.replace(/\D/, ''));
   }
 
@@ -168,7 +169,7 @@ export const Counter = ({
         <Button
           className={styles['counter__btn']}
           disabled={disabled || (min !== undefined && count === min)}
-          onClick={(e) => onDecrease(e)}
+          onClick={onDecrease}
           variant="icon"
         >
           <Icon name="remove" purpose="informative" title={minusButtonText} />
@@ -183,7 +184,7 @@ export const Counter = ({
           isError={isError}
           max={max}
           min={min}
-          onChange={(e) => onChange(e)}
+          onChange={onChange}
           pattern="[0-9]*"
           readOnly={readOnly}
           type="text"
@@ -192,7 +193,7 @@ export const Counter = ({
         <Button
           className={styles['counter__btn']}
           disabled={disabled || (max !== undefined && count === max)}
-          onClick={(e) => onIncrease(e)}
+          onClick={onIncrease}
           variant="icon"
         >
           <Icon name="add" purpose="informative" title={plusButtonText} />

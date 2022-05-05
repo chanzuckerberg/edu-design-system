@@ -28,8 +28,7 @@ export const Error: StoryObj<Args> = {
 export const NotDismissable: StoryObj<Args> = {
   args: {
     variant: 'success',
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore onDismiss is not nullable, but this is needed to remove the arg from
+    // @ts-expect-error onDismiss is not nullable, but this is needed to remove the arg from
     // storybook's actions addon
     onDismiss: null,
   },

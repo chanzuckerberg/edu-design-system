@@ -16,7 +16,7 @@ export interface Props {
   /**
    * Thinks the aria-control attribute in the accordion panel header to the id in the accordion panel body
    */
-  ariaControls?: any;
+  ariaControls?: string;
   /**
    * Child node(s) that can be nested inside component
    */
@@ -28,7 +28,7 @@ export interface Props {
   /**
    * HTML id for aria-labelledby, which associates panel contents with the accordion title
    */
-  ariaLabelledBy?: any;
+  ariaLabelledBy?: string;
   /**
    * CSS class names that can be appended to the component.
    */
@@ -77,7 +77,7 @@ export const AccordionPanel = ({
   const setPanelHeight = useCallback(() => {
     if (isActiveVar === true) {
       setHeight(
-        panelRef.current.querySelector('[data-accordion-panel]').scrollHeight +
+        panelRef.current.querySelector('[data-accordion-panel]')?.scrollHeight +
           'px',
       ); /* 1 */
     } else if (isActiveVar === false) {

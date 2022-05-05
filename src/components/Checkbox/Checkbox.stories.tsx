@@ -135,12 +135,14 @@ export const LongLabels = {
   },
 };
 
+type LabelArgs = React.ComponentProps<typeof CheckboxLabel>;
+
 // For visual regression testing
 export const LabelsOnly = {
   args: {
     htmlFor: 'id',
   },
-  render: (args) => (
+  render: (args: LabelArgs) => (
     <>
       <CheckboxLabel {...args} text="Medium label" />
       <br />
