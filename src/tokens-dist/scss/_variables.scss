@@ -13,6 +13,7 @@ $eds-border-radius-md: 4px !default;
 $eds-border-radius-lg: 8px !default;
 $eds-border-radius-xl: 20px !default;
 $eds-border-radius-round: 50% !default;
+$eds-border-radius-full: 9999px !default;
 $eds-color-brand-grape-100: #F0F0FC !default;
 $eds-color-brand-grape-200: #E0E0F9 !default;
 $eds-color-brand-grape-300: #C4C1F3 !default;
@@ -115,6 +116,7 @@ $eds-theme-color-background-neutral-medium: #E7E8EA !default;
 $eds-theme-color-background-neutral-medium-hover: #C0C4C8 !default;
 $eds-theme-color-background-brand-primary-default: #F0F0FC !default;
 $eds-theme-color-background-brand-primary-strong: #6B65E2 !default;
+$eds-theme-color-background-brand-primary-strong-hover: #3E42B1 !default;
 $eds-theme-color-background-utility-success: #ECFFF5 !default;
 $eds-theme-color-background-utility-warning: #FFF1E9 !default;
 $eds-theme-color-background-utility-error: #FFF0F4 !default;
@@ -355,7 +357,8 @@ $tokens: (
         'md': $eds-border-radius-md,
         'lg': $eds-border-radius-lg,
         'xl': $eds-border-radius-xl,
-        'round': $eds-border-radius-round
+        'round': $eds-border-radius-round,
+        'full': $eds-border-radius-full
       )
     ),
     'color': (
@@ -508,7 +511,10 @@ $tokens: (
           'brand': (
             'primary': (
               'default': $eds-theme-color-background-brand-primary-default,
-              'strong': $eds-theme-color-background-brand-primary-strong
+              'strong': (
+                '@': $eds-theme-color-background-brand-primary-strong,
+                'hover': $eds-theme-color-background-brand-primary-strong-hover
+              )
             )
           ),
           'utility': (
