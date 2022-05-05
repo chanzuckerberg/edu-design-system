@@ -11,108 +11,729 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
   >
     <div
       class="drag-drop-container"
+      data-rbd-droppable-context-id="0"
+      data-rbd-droppable-id="container-1"
     >
       <div
-        class="drag-drop-container--list"
-        data-rbd-droppable-context-id="0"
-        data-rbd-droppable-id="container-1"
+        aria-describedby="rbd-hidden-text-0-hidden-text-0"
+        class="drag-drop-item"
+        data-rbd-drag-handle-context-id="0"
+        data-rbd-drag-handle-draggable-id="item-1"
+        data-rbd-draggable-context-id="0"
+        data-rbd-draggable-id="item-1"
+        draggable="false"
+        role="button"
+        tabindex="0"
       >
         <div
-          aria-describedby="rbd-hidden-text-0-hidden-text-0"
-          class="drag-drop-item"
-          data-rbd-drag-handle-context-id="0"
-          data-rbd-drag-handle-draggable-id="item-1"
-          data-rbd-draggable-context-id="0"
-          data-rbd-draggable-id="item-1"
-          draggable="false"
-          role="button"
-          tabindex="0"
+          class="drag-drop-item--title"
         >
-          <div
-            class="drag-drop-item--title"
-          >
-            Project #1
-          </div>
+          Project #1
         </div>
         <div
-          aria-describedby="rbd-hidden-text-0-hidden-text-0"
-          class="drag-drop-item"
-          data-rbd-drag-handle-context-id="0"
-          data-rbd-drag-handle-draggable-id="item-2"
-          data-rbd-draggable-context-id="0"
-          data-rbd-draggable-id="item-2"
-          draggable="false"
-          role="button"
-          tabindex="0"
+          class="fpo"
         >
-          <div
-            class="drag-drop-item--title"
-          >
-            Project #2
-          </div>
+          Content here
+        </div>
+      </div>
+      <div
+        aria-describedby="rbd-hidden-text-0-hidden-text-0"
+        class="drag-drop-item"
+        data-rbd-drag-handle-context-id="0"
+        data-rbd-drag-handle-draggable-id="item-2"
+        data-rbd-draggable-context-id="0"
+        data-rbd-draggable-id="item-2"
+        draggable="false"
+        role="button"
+        tabindex="0"
+      >
+        <div
+          class="drag-drop-item--title"
+        >
+          Project #2
         </div>
         <div
-          aria-describedby="rbd-hidden-text-0-hidden-text-0"
-          class="drag-drop-item"
-          data-rbd-drag-handle-context-id="0"
-          data-rbd-drag-handle-draggable-id="item-3"
-          data-rbd-draggable-context-id="0"
-          data-rbd-draggable-id="item-3"
-          draggable="false"
-          role="button"
-          tabindex="0"
+          class="fpo"
         >
-          <div
-            class="drag-drop-item--title"
-          >
-            Project #3
-          </div>
+          Content here
+        </div>
+      </div>
+      <div
+        aria-describedby="rbd-hidden-text-0-hidden-text-0"
+        class="drag-drop-item"
+        data-rbd-drag-handle-context-id="0"
+        data-rbd-drag-handle-draggable-id="item-3"
+        data-rbd-draggable-context-id="0"
+        data-rbd-draggable-id="item-3"
+        draggable="false"
+        role="button"
+        tabindex="0"
+      >
+        <div
+          class="drag-drop-item--title"
+        >
+          Project #3
         </div>
         <div
-          aria-describedby="rbd-hidden-text-0-hidden-text-0"
-          class="drag-drop-item"
-          data-rbd-drag-handle-context-id="0"
-          data-rbd-drag-handle-draggable-id="item-4"
-          data-rbd-draggable-context-id="0"
-          data-rbd-draggable-id="item-4"
-          draggable="false"
-          role="button"
-          tabindex="0"
+          class="fpo"
         >
-          <div
-            class="drag-drop-item--title"
-          >
-            Project #4
-          </div>
+          Content here
+        </div>
+      </div>
+      <div
+        aria-describedby="rbd-hidden-text-0-hidden-text-0"
+        class="drag-drop-item"
+        data-rbd-drag-handle-context-id="0"
+        data-rbd-drag-handle-draggable-id="item-4"
+        data-rbd-draggable-context-id="0"
+        data-rbd-draggable-id="item-4"
+        draggable="false"
+        role="button"
+        tabindex="0"
+      >
+        <div
+          class="drag-drop-item--title"
+        >
+          Project #4
         </div>
         <div
-          aria-describedby="rbd-hidden-text-0-hidden-text-0"
-          class="drag-drop-item"
-          data-rbd-drag-handle-context-id="0"
-          data-rbd-drag-handle-draggable-id="item-5"
-          data-rbd-draggable-context-id="0"
-          data-rbd-draggable-id="item-5"
-          draggable="false"
-          role="button"
-          tabindex="0"
+          class="fpo"
+        >
+          Content here
+        </div>
+      </div>
+      <div
+        aria-describedby="rbd-hidden-text-0-hidden-text-0"
+        class="drag-drop-item"
+        data-rbd-drag-handle-context-id="0"
+        data-rbd-drag-handle-draggable-id="item-5"
+        data-rbd-draggable-context-id="0"
+        data-rbd-draggable-id="item-5"
+        draggable="false"
+        role="button"
+        tabindex="0"
+      >
+        <div
+          class="drag-drop-item--title"
+        >
+          Project #5
+        </div>
+        <div
+          class="fpo"
+        >
+          Content here
+        </div>
+      </div>
+    </div>
+    <div
+      class="drag-drop-container"
+      data-rbd-droppable-context-id="0"
+      data-rbd-droppable-id="container-2"
+    />
+  </div>
+</div>
+`;
+
+exports[`<DragDrop /> MultipleContainers story renders snapshot 1`] = `
+<div
+  style="margin: 1rem;"
+>
+  <div
+    class="drag-drop drag-drop--multiple"
+    data-rbd-droppable-context-id="1"
+    data-rbd-droppable-id="all-containers"
+  >
+    <div
+      class="drag-drop-container"
+      data-rbd-droppable-context-id="1"
+      data-rbd-droppable-id="container-1"
+    >
+      <div
+        aria-describedby="rbd-hidden-text-1-hidden-text-9"
+        class="drag-drop-item"
+        data-rbd-drag-handle-context-id="1"
+        data-rbd-drag-handle-draggable-id="item-1"
+        data-rbd-draggable-context-id="1"
+        data-rbd-draggable-id="item-1"
+        draggable="false"
+        role="button"
+        tabindex="0"
+      >
+        <div
+          class="drag-drop-item--title"
+        >
+          Project #1
+        </div>
+        <div
+          class="fpo"
+        >
+          Content here
+        </div>
+      </div>
+      <div
+        aria-describedby="rbd-hidden-text-1-hidden-text-9"
+        class="drag-drop-item"
+        data-rbd-drag-handle-context-id="1"
+        data-rbd-drag-handle-draggable-id="item-2"
+        data-rbd-draggable-context-id="1"
+        data-rbd-draggable-id="item-2"
+        draggable="false"
+        role="button"
+        tabindex="0"
+      >
+        <div
+          class="drag-drop-item--title"
+        >
+          Project #2
+        </div>
+        <div
+          class="fpo"
+        >
+          Content here
+        </div>
+      </div>
+      <div
+        aria-describedby="rbd-hidden-text-1-hidden-text-9"
+        class="drag-drop-item"
+        data-rbd-drag-handle-context-id="1"
+        data-rbd-drag-handle-draggable-id="item-3"
+        data-rbd-draggable-context-id="1"
+        data-rbd-draggable-id="item-3"
+        draggable="false"
+        role="button"
+        tabindex="0"
+      >
+        <div
+          class="drag-drop-item--title"
+        >
+          Project #3
+        </div>
+        <div
+          class="fpo"
+        >
+          Content here
+        </div>
+      </div>
+    </div>
+    <div
+      class="drag-drop-container"
+      data-rbd-droppable-context-id="1"
+      data-rbd-droppable-id="container-2"
+    >
+      <div
+        aria-describedby="rbd-hidden-text-1-hidden-text-9"
+        class="drag-drop-item"
+        data-rbd-drag-handle-context-id="1"
+        data-rbd-drag-handle-draggable-id="item-4"
+        data-rbd-draggable-context-id="1"
+        data-rbd-draggable-id="item-4"
+        draggable="false"
+        role="button"
+        tabindex="0"
+      >
+        <div
+          class="drag-drop-item--title"
+        >
+          Project #4
+        </div>
+        <div
+          class="fpo"
+        >
+          Content here
+        </div>
+      </div>
+    </div>
+    <div
+      class="drag-drop-container"
+      data-rbd-droppable-context-id="1"
+      data-rbd-droppable-id="container-3"
+    >
+      <div
+        aria-describedby="rbd-hidden-text-1-hidden-text-9"
+        class="drag-drop-item"
+        data-rbd-drag-handle-context-id="1"
+        data-rbd-drag-handle-draggable-id="item-5"
+        data-rbd-draggable-context-id="1"
+        data-rbd-draggable-id="item-5"
+        draggable="false"
+        role="button"
+        tabindex="0"
+      >
+        <div
+          class="drag-drop-item--title"
+        >
+          Project #5
+        </div>
+        <div
+          class="fpo"
+        >
+          Content here
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<DragDrop /> OtherComponents story renders snapshot 1`] = `
+<div
+  style="margin: 1rem;"
+>
+  <div
+    class="drag-drop drag-drop--multiple drag-drop--unstyled"
+    data-rbd-droppable-context-id="3"
+    data-rbd-droppable-id="all-containers"
+  >
+    <div
+      class="drag-drop-container"
+      data-rbd-droppable-context-id="3"
+      data-rbd-droppable-id="container-1"
+    >
+      <div
+        aria-describedby="rbd-hidden-text-3-hidden-text-28"
+        class="drag-drop-item"
+        data-rbd-drag-handle-context-id="3"
+        data-rbd-drag-handle-draggable-id="item-1"
+        data-rbd-draggable-context-id="3"
+        data-rbd-draggable-id="item-1"
+        draggable="false"
+        role="button"
+        tabindex="0"
+      >
+        <div
+          class="drag-drop-item--title"
+        >
+          Card component
+        </div>
+        <div
+          class="card"
+        >
+          <header
+            class="card__header"
+          >
+            <div
+              class="fpo"
+            >
+              Card Header
+            </div>
+          </header>
+          <div
+            class="card__body"
+          >
+            <div
+              class="fpo"
+            >
+              Card Body
+            </div>
+          </div>
+          <footer
+            class="card__footer"
+          >
+            <div
+              class="fpo"
+            >
+              Card Footer
+            </div>
+          </footer>
+        </div>
+      </div>
+      <div
+        aria-describedby="rbd-hidden-text-3-hidden-text-28"
+        class="drag-drop-item"
+        data-rbd-drag-handle-context-id="3"
+        data-rbd-drag-handle-draggable-id="item-2"
+        data-rbd-draggable-context-id="3"
+        data-rbd-draggable-id="item-2"
+        draggable="false"
+        role="button"
+        tabindex="0"
+      >
+        <div
+          class="drag-drop-item--title"
+        >
+          Table component
+        </div>
+        <table
+          class="table"
+        >
+          <caption
+            class="table__caption u-is-vishidden"
+          />
+          <thead
+            class="eds-c-table__header"
+          >
+            <tr
+              class="table__row"
+            >
+              <th
+                class="table__cell"
+              >
+                Name
+              </th>
+              <th
+                class="table__cell"
+              >
+                Status
+              </th>
+              <th
+                class="table__cell"
+              >
+                Chart
+              </th>
+              <th
+                class="table__cell"
+              >
+                Window
+              </th>
+              <th
+                class="table__cell"
+              >
+                Last Update
+              </th>
+            </tr>
+          </thead>
+          <tbody
+            class="table__body"
+          >
+            <tr
+              class="table__row"
+            >
+              <td
+                class="table__cell"
+              >
+                Table Row 1, Table Cell 1
+              </td>
+              <td
+                class="table__cell"
+              >
+                Table Row 1, Table Cell 2
+              </td>
+              <td
+                class="table__cell"
+              >
+                Table Row 1, Table Cell 3
+              </td>
+              <td
+                class="table__cell"
+              >
+                Table Row 1, Table Cell 4
+              </td>
+              <td
+                class="table__cell"
+              >
+                Table Row 1, Table Cell 5
+              </td>
+            </tr>
+            <tr
+              class="table__row"
+            >
+              <td
+                class="table__cell"
+              >
+                Table Row 2, Table Cell 1
+              </td>
+              <td
+                class="table__cell"
+              >
+                Table Row 2, Table Cell 2
+              </td>
+              <td
+                class="table__cell"
+              >
+                Table Row 2, Table Cell 3
+              </td>
+              <td
+                class="table__cell"
+              >
+                Table Row 2, Table Cell 4
+              </td>
+              <td
+                class="table__cell"
+              >
+                Table Row 2, Table Cell 5
+              </td>
+            </tr>
+            <tr
+              class="table__row"
+            >
+              <td
+                class="table__cell"
+              >
+                Table Row 3, Table Cell 1
+              </td>
+              <td
+                class="table__cell"
+              >
+                Table Row 3, Table Cell 2
+              </td>
+              <td
+                class="table__cell"
+              >
+                Table Row 3, Table Cell 3
+              </td>
+              <td
+                class="table__cell"
+              >
+                Table Row 3, Table Cell 4
+              </td>
+              <td
+                class="table__cell"
+              >
+                Table Row 3, Table Cell 5
+              </td>
+            </tr>
+            <tr
+              class="table__row"
+            >
+              <td
+                class="table__cell"
+              >
+                Table Row 4, Table Cell 1
+              </td>
+              <td
+                class="table__cell"
+              >
+                Table Row 4, Table Cell 2
+              </td>
+              <td
+                class="table__cell"
+              >
+                Table Row 4, Table Cell 3
+              </td>
+              <td
+                class="table__cell"
+              >
+                Table Row 4, Table Cell 4
+              </td>
+              <td
+                class="table__cell"
+              >
+                Table Row 4, Table Cell 5
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div
+        aria-describedby="rbd-hidden-text-3-hidden-text-28"
+        class="drag-drop-item"
+        data-rbd-drag-handle-context-id="3"
+        data-rbd-drag-handle-draggable-id="item-3"
+        data-rbd-draggable-context-id="3"
+        data-rbd-draggable-id="item-3"
+        draggable="false"
+        role="button"
+        tabindex="0"
+      >
+        <div
+          class="drag-drop-item--title"
+        >
+          Media Block component
+        </div>
+        <div
+          class="media-block"
         >
           <div
-            class="drag-drop-item--title"
+            class="media-block__body"
           >
-            Project #5
+            <h3
+              class="u-margin-bottom-md heading heading--size-h3"
+            >
+              I can haz kitteh
+            </h3>
+            <div
+              class="text-passage"
+            >
+              <div
+                class="layout-linelength-container text-passage__inner"
+              >
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="media-block__media"
+          >
+            <img
+              alt="placeholder image"
+              class="media-block__image"
+              src="https://placekitten.com/500/500"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        aria-describedby="rbd-hidden-text-3-hidden-text-28"
+        class="drag-drop-item"
+        data-rbd-drag-handle-context-id="3"
+        data-rbd-drag-handle-draggable-id="item-4"
+        data-rbd-draggable-context-id="3"
+        data-rbd-draggable-id="item-4"
+        draggable="false"
+        role="button"
+        tabindex="0"
+      >
+        <div
+          class="drag-drop-item--title"
+        >
+          Text Passage component
+        </div>
+        <div
+          class="text-passage"
+        >
+          <div
+            class="layout-linelength-container text-passage__inner"
+          >
+            <p>
+              TextPassage component. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
           </div>
         </div>
       </div>
     </div>
     <div
       class="drag-drop-container"
+      data-rbd-droppable-context-id="3"
+      data-rbd-droppable-id="container-2"
+    />
+  </div>
+</div>
+`;
+
+exports[`<DragDrop /> VariousSizedItems story renders snapshot 1`] = `
+<div
+  style="margin: 1rem;"
+>
+  <div
+    class="drag-drop"
+    data-rbd-droppable-context-id="2"
+    data-rbd-droppable-id="all-containers"
+  >
+    <div
+      class="drag-drop-container"
+      data-rbd-droppable-context-id="2"
+      data-rbd-droppable-id="container-1"
     >
       <div
-        class="drag-drop-container--list"
-        data-rbd-droppable-context-id="0"
-        data-rbd-droppable-id="container-2"
-      />
+        aria-describedby="rbd-hidden-text-2-hidden-text-19"
+        class="drag-drop-item"
+        data-rbd-drag-handle-context-id="2"
+        data-rbd-drag-handle-draggable-id="item-1"
+        data-rbd-draggable-context-id="2"
+        data-rbd-draggable-id="item-1"
+        draggable="false"
+        role="button"
+        tabindex="0"
+      >
+        <div
+          class="drag-drop-item--title"
+        >
+          Project #1
+        </div>
+        <div
+          class="fpo"
+        >
+          Content here
+        </div>
+      </div>
+      <div
+        aria-describedby="rbd-hidden-text-2-hidden-text-19"
+        class="drag-drop-item"
+        data-rbd-drag-handle-context-id="2"
+        data-rbd-drag-handle-draggable-id="item-2"
+        data-rbd-draggable-context-id="2"
+        data-rbd-draggable-id="item-2"
+        draggable="false"
+        role="button"
+        tabindex="0"
+      >
+        <div
+          class="drag-drop-item--title"
+        >
+          Project #2
+        </div>
+        <div
+          class="fpo"
+        >
+          This container
+          <br />
+          has a lot of content
+          <br />
+          and will be taller than
+          <br />
+          other containers
+        </div>
+      </div>
+      <div
+        aria-describedby="rbd-hidden-text-2-hidden-text-19"
+        class="drag-drop-item"
+        data-rbd-drag-handle-context-id="2"
+        data-rbd-drag-handle-draggable-id="item-3"
+        data-rbd-draggable-context-id="2"
+        data-rbd-draggable-id="item-3"
+        draggable="false"
+        role="button"
+        tabindex="0"
+      >
+        <div
+          class="fpo"
+          style="font-size: 12px; padding: 0px; text-align: center;"
+        >
+          Small container
+        </div>
+      </div>
+      <div
+        aria-describedby="rbd-hidden-text-2-hidden-text-19"
+        class="drag-drop-item"
+        data-rbd-drag-handle-context-id="2"
+        data-rbd-drag-handle-draggable-id="item-4"
+        data-rbd-draggable-context-id="2"
+        data-rbd-draggable-id="item-4"
+        draggable="false"
+        role="button"
+        tabindex="0"
+      >
+        <div
+          class="fpo"
+          style="font-size: 12px; padding: 0px; text-align: center;"
+        >
+          Another small container
+        </div>
+      </div>
+      <div
+        aria-describedby="rbd-hidden-text-2-hidden-text-19"
+        class="drag-drop-item"
+        data-rbd-drag-handle-context-id="2"
+        data-rbd-drag-handle-draggable-id="item-5"
+        data-rbd-draggable-context-id="2"
+        data-rbd-draggable-id="item-5"
+        draggable="false"
+        role="button"
+        tabindex="0"
+      >
+        <div
+          class="drag-drop-item--title"
+        >
+          Project #5
+        </div>
+        <div
+          class="fpo"
+        >
+          Another
+          <br />
+          larger
+          <br />
+          container
+        </div>
+      </div>
     </div>
+    <div
+      class="drag-drop-container"
+      data-rbd-droppable-context-id="2"
+      data-rbd-droppable-id="container-2"
+    />
   </div>
 </div>
 `;
