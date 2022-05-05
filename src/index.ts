@@ -85,8 +85,6 @@ export { default as TextList } from './components/TextList';
 export { default as TextPassage } from './components/TextPassage';
 export { default as Tile } from './components/Tile';
 export { default as Toast } from './components/Toast';
-export { default as Toolbar } from './components/Toolbar';
-export { default as ToolbarItem } from './components/ToolbarItem';
 export { default as Tooltip } from './components/Tooltip';
 export { default as UtilityNav } from './components/UtilityNav';
 export { default as UtilityNavItem } from './components/UtilityNavItem';
