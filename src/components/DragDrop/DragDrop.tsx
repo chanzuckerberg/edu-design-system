@@ -143,7 +143,7 @@ export const DragDrop = ({
       >
         {(provided) => {
           return (
-            <div
+            <section
               className={componentClassName}
               {...provided.droppableProps}
               ref={provided.innerRef}
@@ -163,7 +163,7 @@ export const DragDrop = ({
                 );
               })}
               {provided.placeholder}
-            </div>
+            </section>
           );
         }}
       </Droppable>

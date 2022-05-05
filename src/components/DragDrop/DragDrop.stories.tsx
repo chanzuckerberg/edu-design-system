@@ -198,22 +198,85 @@ export const VariousSizedItems: StoryObj<Args> = {
   },
 };
 
+export const Accessibility: StoryObj<Args> = {
+  args: {
+    items: {
+      'item-0': {
+        id: 'item-0',
+        children: (
+          <div className="fpo">Each drag item has role=&quot;button&quot;</div>
+        ),
+      },
+      'item-1': {
+        id: 'item-1',
+        children: (
+          <div className="fpo">
+            (Open this canvas in its own tab for best results)
+          </div>
+        ),
+      },
+      'item-2': {
+        id: 'item-2',
+        children: <div className="fpo">Use Tab key to select an item</div>,
+      },
+      'item-3': {
+        id: 'item-3',
+        children: (
+          <div className="fpo">Press Spacebar to pick up the selected item</div>
+        ),
+      },
+      'item-4': {
+        id: 'item-4',
+        children: (
+          <div className="fpo">
+            Arrow keys move the item within a container (up/down) or to another
+            container (left/right)
+          </div>
+        ),
+      },
+      'item-5': {
+        id: 'item-5',
+        children: (
+          <div className="fpo">Press Spacebar again to drop the item</div>
+        ),
+      },
+      'item-6': {
+        id: 'item-6',
+        children: (
+          <div className="fpo">
+            All actions (using mouse/touch or keyboard controls) are announced
+            to screen readers
+          </div>
+        ),
+      },
+    },
+    containers: {
+      'container-1': {
+        id: 'container-1',
+        itemIds: [
+          'item-0',
+          'item-1',
+          'item-2',
+          'item-3',
+          'item-4',
+          'item-5',
+          'item-6',
+        ],
+      },
+      'container-2': {
+        id: 'container-2',
+        itemIds: [],
+      },
+    },
+    containerOrder: ['container-1', 'container-2'],
+  },
+};
+
 export const OtherComponents: StoryObj<Args> = {
   args: {
     items: {
       'item-1': {
         id: 'item-1',
-        title: 'Card component',
-        children: <Card />,
-      },
-      'item-2': {
-        id: 'item-2',
-        title: 'Table component',
-        children: <Table />,
-      },
-      'item-3': {
-        id: 'item-3',
-        title: 'Media Block component',
         children: (
           <MediaBlock
             imgAlt="placeholder image"
@@ -221,26 +284,34 @@ export const OtherComponents: StoryObj<Args> = {
             imgSrc="https://placekitten.com/500/500"
           >
             <Heading className="u-margin-bottom-md" size="h3">
-              I can haz kitteh
+              Drag any component
             </Heading>
             <TextPassage>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                The Drag and Drop component can hold any component, or
+                combination of components, without adding any additional
+                styling. This story demonstrates dragging a Media Block, a Card,
+                a Table, and a Text Passage.
               </p>
             </TextPassage>
           </MediaBlock>
         ),
       },
+      'item-2': {
+        id: 'item-2',
+        children: <Card />,
+      },
+      'item-3': {
+        id: 'item-3',
+        children: <Table />,
+      },
       'item-4': {
         id: 'item-4',
-        title: 'Text Passage component',
         children: (
           <TextPassage>
             <p>
-              TextPassage component. Lorem ipsum dolor sit amet, consectetur
-              adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
           </TextPassage>
         ),
