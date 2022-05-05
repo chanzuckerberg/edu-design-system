@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.20.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.19.0...v0.20.0) (2022-05-05)
+
+
+### Features
+
+* **tag:** rename yellow variant to yield ([#1036](https://github.com/chanzuckerberg/edu-design-system/issues/1036)) ([6eb8fe4](https://github.com/chanzuckerberg/edu-design-system/commit/6eb8fe4bc0f8935c60c87b28dcfde8b67a56604f))
+
 ## [0.19.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.18.1...v0.19.0) (2022-05-04)
 
 ### **Fieldset:** ([#1030](https://github.com/chanzuckerberg/edu-design-system/issues/1030))
