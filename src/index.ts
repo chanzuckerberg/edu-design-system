@@ -28,7 +28,6 @@ export { default as FieldNote } from './components/FieldNote';
 export { default as Fieldset } from './components/Fieldset';
 export { default as FieldsetItems } from './components/FieldsetItems';
 export { default as FieldsetLegend } from './components/FieldsetLegend';
-export { default as FileUploadField } from './components/FileUploadField';
 export { default as Footer } from './components/Footer';
 export { default as FooterNav } from './components/FooterNav';
 export { default as FooterNavItem } from './components/FooterNavItem';
