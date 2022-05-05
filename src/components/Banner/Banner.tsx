@@ -106,7 +106,7 @@ const variantToIconAssetsMap: {
  * <Banner
  *   onDismiss={handleDismiss}
  *   title="Some Title"
- *   description={<>Some description, possibly with a <Link href="www.some-other-resource.com">link to some other resource</Link>.</>}
+ *   description={<>Some description, possibly with a <Link href="https://go.czi.team/eds">link to some other resource</Link>.</>}
  *   action={<Button onClick={handleAction}>Action</Button>}
  * />
  * ```
@@ -119,10 +119,9 @@ export const Banner = ({
   isFlat,
   onDismiss,
   orientation,
-  variant = 'brand', // TODO: verify brand is the default variant and not neutral
+  variant = 'brand',
   title,
   titleAs = 'h3',
-  ...other
 }: Props) => {
   if (isFlat && process.env.NODE_ENV !== 'production') {
     console.warn(
@@ -150,7 +149,7 @@ export const Banner = ({
   );
 
   return (
-    <article className={componentClassName} {...other}>
+    <article className={componentClassName}>
       {onDismiss && (
         <Button
           className={styles['banner__close-btn']}
