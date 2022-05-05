@@ -62,7 +62,6 @@
     color: var(--eds-theme-color-text-disabled);
     cursor: not-allowed;
 
-    /* stylelint-disable-next-line max-nesting-depth */
     &.file-upload-field__hit-area--drag-over {
       border-color: var(--eds-theme-color-disabled-border);
     }
