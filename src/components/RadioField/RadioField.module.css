@@ -74,7 +74,6 @@
     margin-bottom: 0;
     margin-right: var(--eds-size-2); /* 2 */
 
-    /* stylelint-disable-next-line max-nesting-depth */
     &:last-of-type {
       margin-right: 0;
     }
