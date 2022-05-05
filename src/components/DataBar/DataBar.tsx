@@ -130,6 +130,7 @@ export const DataBar = ({
         key={`segment-${index}`}
         onKeyDown={(e) => handleOnKeyDown(e, index)}
         ref={(el) => (segmentsRef.current[index] = el)}
+        role="gridcell"
         tabIndex={focusableElementIndex === index ? 0 : -1}
         text={segment.text}
         variant={variant}
@@ -145,6 +146,7 @@ export const DataBar = ({
     segmentComponents.push(
       <DataBarSegment
         key="segment-empty"
+        role="gridcell"
         variant={variant}
         width={'var(--eds-size-1)'}
       />,
@@ -177,10 +179,13 @@ export const DataBar = ({
         aria-describedby={captionId}
         className={styles['data-bar']}
         id={id}
+        role="grid"
         {...other}
       >
         {/* the amount of space the segments take up */}
-        <div className={segmentSpaceClassName}>{segmentComponents}</div>
+        <div className={segmentSpaceClassName} role="row">
+          {segmentComponents}
+        </div>
       </div>
     </div>
   );
