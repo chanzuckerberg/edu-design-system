@@ -99,8 +99,12 @@ const Interactive = () => {
     <div>
       <DataBar label="Interactive data bar" max={max} segments={segments} />
       <br />
-      <span>Value add: </span>
-      <input onChange={handleSegmentValueChange} value={segmentValue}></input>
+      <label htmlFor="segment-value-input">Value add: </label>
+      <input
+        id="segment-value-input"
+        onChange={handleSegmentValueChange}
+        value={segmentValue}
+      ></input>
       <br />
       <ButtonGroup>
         <Button onClick={onPush} variant="primary">
@@ -111,8 +115,8 @@ const Interactive = () => {
         </Button>
       </ButtonGroup>
       <br />
-      <span>Max: </span>
-      <input onChange={handleChange} value={max}></input>
+      <label htmlFor="max-value-input">Max: </label>
+      <input id="max-value-input" onChange={handleChange} value={max}></input>
     </div>
   );
 };
