@@ -20,6 +20,11 @@
   align-items: center;
 }
 
+.spacing {
+  border: var(--eds-theme-border-width) solid
+    var(--eds-theme-color-border-neutral-default);
+}
+
 /**
  * 1) Variants are segmented into left, middle, and right columns.
  * 2) Background variants were chosen to represent typical body backgrounds.
