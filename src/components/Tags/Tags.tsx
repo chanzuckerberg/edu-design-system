@@ -1,12 +1,13 @@
 import clsx from 'clsx';
-import React, { ReactNode } from 'react';
+import React from 'react';
 import styles from './Tags.module.css';
+import Tag from '../Tag';
 
 export interface Props {
   /**
-   * Child node(s) that can be nested inside component
+   * Tags to be nested inside component
    */
-  children?: ReactNode;
+  tags: Array<typeof Tag>;
   /**
    * CSS class names that can be appended to the component.
    */
@@ -14,13 +15,15 @@ export interface Props {
 }
 
 /**
- * Primary UI component for user interaction
+ * List of Tag components
  */
-export const Tags = ({ children, className, ...other }: Props) => {
+export const Tags = ({ tags, className, ...other }: Props) => {
   const componentClassName = clsx(styles['tags'], className, {});
   return (
     <ul className={componentClassName} {...other}>
-      {children}
+      {tags.map((tag, index) => {
+        return <li key={`tag-${index}`}>{tag}</li>;
+      })}
     </ul>
   );
 };
