@@ -74,7 +74,6 @@
     border-radius: 50%;
     background: transparent;
 
-    /* stylelint-disable-next-line max-nesting-depth */
     &:hover {
       border-color: var(--eds-theme-color-form-input-border-hover);
     }
@@ -82,7 +81,6 @@
     /**
      *  Custom radio background inside of focused control 
      */
-    /* stylelint-disable-next-line max-nesting-depth */
     .radio__input:focus-visible + & {
       @mixin focus;
     }
@@ -90,7 +88,6 @@
     /**
      *  Custom radio background inside of disabled control 
      */
-    /* stylelint-disable-next-line max-nesting-depth */
     .radio__input:disabled + & {
       border-color: var(--eds-theme-color-disabled-border);
       background-color: var(--eds-theme-color-background-disabled);
@@ -117,12 +114,10 @@
     background: var(--eds-theme-color-background-brand-primary-strong);
     opacity: 0; /* 2 */
 
-    /* stylelint-disable-next-line max-nesting-depth */
     .radio--inverted & {
       border-color: var(--eds-theme-color-border-brand-primary-subtle);
     }
 
-    /* stylelint-disable-next-line max-nesting-depth */
     .radio__input:checked + & {
       opacity: 1; /* 2 */
     }

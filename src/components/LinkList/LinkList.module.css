@@ -71,7 +71,6 @@
     color: var(--eds-theme-color-text-neutral-default-inverse);
     text-decoration: none;
 
-    /* stylelint-disable-next-line max-nesting-depth */
     &:focus-visible {
       @mixin focusInverted;
     }
