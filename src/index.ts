@@ -40,7 +40,6 @@ export { default as HorizontalStep } from './components/HorizontalStep';
 export { default as HorizontalStepper } from './components/HorizontalStepper';
 export { default as Hr } from './components/Hr';
 export { default as Icon } from './components/Icon';
-export { default as InlineForm } from './components/InlineForm';
 export { default as KeyValueTable } from './components/KeyValueTable';
 export { default as Label } from './components/Label';
 export { default as Layout } from './components/Layout';
