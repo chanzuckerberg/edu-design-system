@@ -52,7 +52,8 @@
   align-items: center;
 
   /* 2 */
-  border: 0.125rem solid var(--eds-theme-color-icon-neutral-default-hover);
+  border: var(--eds-border-width-sm) solid
+    var(--eds-theme-color-icon-neutral-default-hover);
   border-radius: var(--eds-border-radius-round);
   height: var(--eds-size-3);
   width: var(--eds-size-3);
