@@ -221,35 +221,7 @@ export const Cad = () => (
                     style={{
                       flexShrink: '0',
                     }}
-                  >
-                    <div
-                      style={{
-                        display: 'flex',
-                        flexDirection: 'column',
-                        height: '100%',
-                      }}
-                    >
-                      <Toolbar
-                        className={utilityStyles['u-margin-bottom-md']}
-                        variant="bare"
-                      >
-                        <ToolbarItem>
-                          <Heading as="h2" size="h5">
-                            Planned projects
-                          </Heading>
-                        </ToolbarItem>
-                        <ToolbarItem align="right">
-                          <Button variant="icon">
-                            <Icon name="add" purpose="decorative" />
-                            Add project
-                          </Button>
-                        </ToolbarItem>
-                      </Toolbar>
-                      <div className="fpo" style={{ flex: '1' }}>
-                        Empty state
-                      </div>
-                    </div>
-                  </div>
+                  ></div>
                 </OverflowList>
               </Tab>
 
