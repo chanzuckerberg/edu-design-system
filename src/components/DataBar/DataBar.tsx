@@ -151,8 +151,6 @@ export const DataBar = ({
     );
   }
 
-  const componentClassName = clsx(styles['data-bar'], className);
-
   /**
    * Leaves space if values do not total to max to visibly show space remaining.
    */
@@ -165,7 +163,7 @@ export const DataBar = ({
   const captionId = useUID();
   const caption = totalSegmentValue + '/' + max;
   return (
-    <div>
+    <div className={className}>
       <div className={styles['data-bar__label-wrapper']}>
         <label className={styles['data-bar__label']} htmlFor={id}>
           {label}
@@ -177,7 +175,7 @@ export const DataBar = ({
       {/* the grey data bar */}
       <div
         aria-describedby={captionId}
-        className={componentClassName}
+        className={styles['data-bar']}
         id={id}
         {...other}
       >
