@@ -43,6 +43,8 @@ export { default as GridItem } from './components/GridItem';
 export { default as Header } from './components/Header';
 export { default as Heading } from './components/Heading';
 export { default as Hero } from './components/Hero';
+export { default as HorizontalStep } from './components/HorizontalStep';
+export { default as HorizontalStepper } from './components/HorizontalStepper';
 export { default as Hr } from './components/Hr';
 export { default as Icon } from './components/Icon';
 export { default as InlineForm } from './components/InlineForm';

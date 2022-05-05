@@ -1,0 +1,948 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HorizontalStepper /> CompletedAllSteps story renders snapshot 1`] = `
+<div
+  style="margin: 1rem;"
+>
+  <ol
+    class="horizontal-stepper"
+  >
+    <li
+      class="horizontal-step horizontal-step--complete"
+    >
+      <svg
+        class="icon horizontal-step__complete-icon"
+        fill="currentColor"
+        height="1.5rem"
+        role="img"
+        style="--icon-size: 1.5rem;"
+        width="1.5rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title
+          id="13"
+        >
+          completed step 1 Step 1
+        </title>
+        <use
+          xlink:href="test-file-stub#check-circle"
+        />
+      </svg>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Step 1
+      </span>
+    </li>
+    <hr
+      aria-hidden="true"
+      class="horizontal-stepper__line"
+    />
+    <li
+      class="horizontal-step horizontal-step--complete"
+    >
+      <svg
+        class="icon horizontal-step__complete-icon"
+        fill="currentColor"
+        height="1.5rem"
+        role="img"
+        style="--icon-size: 1.5rem;"
+        width="1.5rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title
+          id="14"
+        >
+          completed step 2 Step 2
+        </title>
+        <use
+          xlink:href="test-file-stub#check-circle"
+        />
+      </svg>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Step 2
+      </span>
+    </li>
+    <hr
+      aria-hidden="true"
+      class="horizontal-stepper__line"
+    />
+    <li
+      class="horizontal-step horizontal-step--complete"
+    >
+      <svg
+        class="icon horizontal-step__complete-icon"
+        fill="currentColor"
+        height="1.5rem"
+        role="img"
+        style="--icon-size: 1.5rem;"
+        width="1.5rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title
+          id="15"
+        >
+          completed step 3 Step 3
+        </title>
+        <use
+          xlink:href="test-file-stub#check-circle"
+        />
+      </svg>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Step 3
+      </span>
+    </li>
+    <hr
+      aria-hidden="true"
+      class="horizontal-stepper__line"
+    />
+    <li
+      class="horizontal-step horizontal-step--complete"
+    >
+      <svg
+        class="icon horizontal-step__complete-icon"
+        fill="currentColor"
+        height="1.5rem"
+        role="img"
+        style="--icon-size: 1.5rem;"
+        width="1.5rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title
+          id="16"
+        >
+          completed step 4 Step 4
+        </title>
+        <use
+          xlink:href="test-file-stub#check-circle"
+        />
+      </svg>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Step 4
+      </span>
+    </li>
+    <hr
+      aria-hidden="true"
+      class="horizontal-stepper__line"
+    />
+    <li
+      class="horizontal-step horizontal-step--complete"
+    >
+      <svg
+        class="icon horizontal-step__complete-icon"
+        fill="currentColor"
+        height="1.5rem"
+        role="img"
+        style="--icon-size: 1.5rem;"
+        width="1.5rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title
+          id="17"
+        >
+          completed step 5 Step 5
+        </title>
+        <use
+          xlink:href="test-file-stub#check-circle"
+        />
+      </svg>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Step 5
+      </span>
+    </li>
+  </ol>
+</div>
+`;
+
+exports[`<HorizontalStepper /> HorizontalSteps story renders snapshot 1`] = `
+<div
+  style="margin: 1rem;"
+>
+  <ol
+    style="padding: 0px;"
+  >
+    <li
+      class="horizontal-step horizontal-step--incomplete"
+    >
+      <svg
+        class="icon horizontal-step__incomplete-icon"
+        fill="currentColor"
+        height="0.5rem"
+        role="img"
+        style="--icon-size: 0.5rem;"
+        width="0.5rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title
+          id="18"
+        >
+          incomplete step 1 Horizontal step
+        </title>
+        <use
+          xlink:href="test-file-stub#circle"
+        />
+      </svg>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Horizontal step
+      </span>
+    </li>
+    <li
+      class="horizontal-step horizontal-step--active"
+    >
+      <span
+        aria-label="current step 1 Horizontal step"
+        class="horizontal-step__number text text--sm text--inherit"
+        role="img"
+      >
+        1
+      </span>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Horizontal step
+      </span>
+    </li>
+    <li
+      class="horizontal-step horizontal-step--complete"
+    >
+      <svg
+        class="icon horizontal-step__complete-icon"
+        fill="currentColor"
+        height="1.5rem"
+        role="img"
+        style="--icon-size: 1.5rem;"
+        width="1.5rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title
+          id="19"
+        >
+          completed step 1 Horizontal step
+        </title>
+        <use
+          xlink:href="test-file-stub#check-circle"
+        />
+      </svg>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Horizontal step
+      </span>
+    </li>
+  </ol>
+</div>
+`;
+
+exports[`<HorizontalStepper /> HorizontalStepsDifferentNumbers story renders snapshot 1`] = `
+<div
+  style="margin: 1rem;"
+>
+  <ol
+    style="padding: 0px;"
+  >
+    <li
+      class="horizontal-step horizontal-step--active"
+    >
+      <span
+        aria-label="current step 1 Horizontal step"
+        class="horizontal-step__number text text--sm text--inherit"
+        role="img"
+      >
+        1
+      </span>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Horizontal step
+      </span>
+    </li>
+    <li
+      class="horizontal-step horizontal-step--active"
+    >
+      <span
+        aria-label="current step 2 Horizontal step"
+        class="horizontal-step__number text text--sm text--inherit"
+        role="img"
+      >
+        2
+      </span>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Horizontal step
+      </span>
+    </li>
+    <li
+      class="horizontal-step horizontal-step--active"
+    >
+      <span
+        aria-label="current step 3 Horizontal step"
+        class="horizontal-step__number text text--sm text--inherit"
+        role="img"
+      >
+        3
+      </span>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Horizontal step
+      </span>
+    </li>
+    <li
+      class="horizontal-step horizontal-step--active"
+    >
+      <span
+        aria-label="current step 4 Horizontal step"
+        class="horizontal-step__number text text--sm text--inherit"
+        role="img"
+      >
+        4
+      </span>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Horizontal step
+      </span>
+    </li>
+    <li
+      class="horizontal-step horizontal-step--active"
+    >
+      <span
+        aria-label="current step 5 Horizontal step"
+        class="horizontal-step__number text text--sm text--inherit"
+        role="img"
+      >
+        5
+      </span>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Horizontal step
+      </span>
+    </li>
+    <li
+      class="horizontal-step horizontal-step--active"
+    >
+      <span
+        aria-label="current step 6 Horizontal step"
+        class="horizontal-step__number text text--sm text--inherit"
+        role="img"
+      >
+        6
+      </span>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Horizontal step
+      </span>
+    </li>
+    <li
+      class="horizontal-step horizontal-step--active"
+    >
+      <span
+        aria-label="current step 7 Horizontal step"
+        class="horizontal-step__number text text--sm text--inherit"
+        role="img"
+      >
+        7
+      </span>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Horizontal step
+      </span>
+    </li>
+    <li
+      class="horizontal-step horizontal-step--active"
+    >
+      <span
+        aria-label="current step 8 Horizontal step"
+        class="horizontal-step__number text text--sm text--inherit"
+        role="img"
+      >
+        8
+      </span>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Horizontal step
+      </span>
+    </li>
+    <li
+      class="horizontal-step horizontal-step--active"
+    >
+      <span
+        aria-label="current step 9 Horizontal step"
+        class="horizontal-step__number text text--sm text--inherit"
+        role="img"
+      >
+        9
+      </span>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Horizontal step
+      </span>
+    </li>
+    <li
+      class="horizontal-step horizontal-step--active"
+    >
+      <span
+        aria-label="current step 10 Horizontal step"
+        class="horizontal-step__number text text--sm text--inherit"
+        role="img"
+      >
+        10
+      </span>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Horizontal step
+      </span>
+    </li>
+    <li
+      class="horizontal-step horizontal-step--active"
+    >
+      <span
+        aria-label="current step 21 Horizontal step"
+        class="horizontal-step__number text text--sm text--inherit"
+        role="img"
+      >
+        21
+      </span>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Horizontal step
+      </span>
+    </li>
+    <li
+      class="horizontal-step horizontal-step--active"
+    >
+      <span
+        aria-label="current step 32 Horizontal step"
+        class="horizontal-step__number text text--sm text--inherit"
+        role="img"
+      >
+        32
+      </span>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Horizontal step
+      </span>
+    </li>
+    <li
+      class="horizontal-step horizontal-step--active"
+    >
+      <span
+        aria-label="current step 43 Horizontal step"
+        class="horizontal-step__number text text--sm text--inherit"
+        role="img"
+      >
+        43
+      </span>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Horizontal step
+      </span>
+    </li>
+    <li
+      class="horizontal-step horizontal-step--active"
+    >
+      <span
+        aria-label="current step 54 Horizontal step"
+        class="horizontal-step__number text text--sm text--inherit"
+        role="img"
+      >
+        54
+      </span>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Horizontal step
+      </span>
+    </li>
+    <li
+      class="horizontal-step horizontal-step--active"
+    >
+      <span
+        aria-label="current step 65 Horizontal step"
+        class="horizontal-step__number text text--sm text--inherit"
+        role="img"
+      >
+        65
+      </span>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Horizontal step
+      </span>
+    </li>
+  </ol>
+</div>
+`;
+
+exports[`<HorizontalStepper /> OnFirstStep story renders snapshot 1`] = `
+<div
+  style="margin: 1rem;"
+>
+  <ol
+    class="horizontal-stepper"
+  >
+    <li
+      class="horizontal-step horizontal-step--active"
+    >
+      <span
+        aria-label="current step 1 Step 1"
+        class="horizontal-step__number text text--sm text--inherit"
+        role="img"
+      >
+        1
+      </span>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Step 1
+      </span>
+    </li>
+    <hr
+      aria-hidden="true"
+      class="horizontal-stepper__line"
+    />
+    <li
+      class="horizontal-step horizontal-step--incomplete"
+    >
+      <svg
+        class="icon horizontal-step__incomplete-icon"
+        fill="currentColor"
+        height="0.5rem"
+        role="img"
+        style="--icon-size: 0.5rem;"
+        width="0.5rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title
+          id="1"
+        >
+          incomplete step 2 Step 2
+        </title>
+        <use
+          xlink:href="test-file-stub#circle"
+        />
+      </svg>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Step 2
+      </span>
+    </li>
+    <hr
+      aria-hidden="true"
+      class="horizontal-stepper__line"
+    />
+    <li
+      class="horizontal-step horizontal-step--incomplete"
+    >
+      <svg
+        class="icon horizontal-step__incomplete-icon"
+        fill="currentColor"
+        height="0.5rem"
+        role="img"
+        style="--icon-size: 0.5rem;"
+        width="0.5rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title
+          id="2"
+        >
+          incomplete step 3 Step 3
+        </title>
+        <use
+          xlink:href="test-file-stub#circle"
+        />
+      </svg>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Step 3
+      </span>
+    </li>
+    <hr
+      aria-hidden="true"
+      class="horizontal-stepper__line"
+    />
+    <li
+      class="horizontal-step horizontal-step--incomplete"
+    >
+      <svg
+        class="icon horizontal-step__incomplete-icon"
+        fill="currentColor"
+        height="0.5rem"
+        role="img"
+        style="--icon-size: 0.5rem;"
+        width="0.5rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title
+          id="3"
+        >
+          incomplete step 4 Step 4
+        </title>
+        <use
+          xlink:href="test-file-stub#circle"
+        />
+      </svg>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Step 4
+      </span>
+    </li>
+    <hr
+      aria-hidden="true"
+      class="horizontal-stepper__line"
+    />
+    <li
+      class="horizontal-step horizontal-step--incomplete"
+    >
+      <svg
+        class="icon horizontal-step__incomplete-icon"
+        fill="currentColor"
+        height="0.5rem"
+        role="img"
+        style="--icon-size: 0.5rem;"
+        width="0.5rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title
+          id="4"
+        >
+          incomplete step 5 Step 5
+        </title>
+        <use
+          xlink:href="test-file-stub#circle"
+        />
+      </svg>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Step 5
+      </span>
+    </li>
+  </ol>
+</div>
+`;
+
+exports[`<HorizontalStepper /> OnLastStep story renders snapshot 1`] = `
+<div
+  style="margin: 1rem;"
+>
+  <ol
+    class="horizontal-stepper"
+  >
+    <li
+      class="horizontal-step horizontal-step--complete"
+    >
+      <svg
+        class="icon horizontal-step__complete-icon"
+        fill="currentColor"
+        height="1.5rem"
+        role="img"
+        style="--icon-size: 1.5rem;"
+        width="1.5rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title
+          id="9"
+        >
+          completed step 1 Step 1
+        </title>
+        <use
+          xlink:href="test-file-stub#check-circle"
+        />
+      </svg>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Step 1
+      </span>
+    </li>
+    <hr
+      aria-hidden="true"
+      class="horizontal-stepper__line"
+    />
+    <li
+      class="horizontal-step horizontal-step--complete"
+    >
+      <svg
+        class="icon horizontal-step__complete-icon"
+        fill="currentColor"
+        height="1.5rem"
+        role="img"
+        style="--icon-size: 1.5rem;"
+        width="1.5rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title
+          id="10"
+        >
+          completed step 2 Step 2
+        </title>
+        <use
+          xlink:href="test-file-stub#check-circle"
+        />
+      </svg>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Step 2
+      </span>
+    </li>
+    <hr
+      aria-hidden="true"
+      class="horizontal-stepper__line"
+    />
+    <li
+      class="horizontal-step horizontal-step--complete"
+    >
+      <svg
+        class="icon horizontal-step__complete-icon"
+        fill="currentColor"
+        height="1.5rem"
+        role="img"
+        style="--icon-size: 1.5rem;"
+        width="1.5rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title
+          id="11"
+        >
+          completed step 3 Step 3
+        </title>
+        <use
+          xlink:href="test-file-stub#check-circle"
+        />
+      </svg>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Step 3
+      </span>
+    </li>
+    <hr
+      aria-hidden="true"
+      class="horizontal-stepper__line"
+    />
+    <li
+      class="horizontal-step horizontal-step--complete"
+    >
+      <svg
+        class="icon horizontal-step__complete-icon"
+        fill="currentColor"
+        height="1.5rem"
+        role="img"
+        style="--icon-size: 1.5rem;"
+        width="1.5rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title
+          id="12"
+        >
+          completed step 4 Step 4
+        </title>
+        <use
+          xlink:href="test-file-stub#check-circle"
+        />
+      </svg>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Step 4
+      </span>
+    </li>
+    <hr
+      aria-hidden="true"
+      class="horizontal-stepper__line"
+    />
+    <li
+      class="horizontal-step horizontal-step--active"
+    >
+      <span
+        aria-label="current step 5 Step 5"
+        class="horizontal-step__number text text--sm text--inherit"
+        role="img"
+      >
+        5
+      </span>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Step 5
+      </span>
+    </li>
+  </ol>
+</div>
+`;
+
+exports[`<HorizontalStepper /> SomeCompletedSteps story renders snapshot 1`] = `
+<div
+  style="margin: 1rem;"
+>
+  <ol
+    class="horizontal-stepper"
+  >
+    <li
+      class="horizontal-step horizontal-step--complete"
+    >
+      <svg
+        class="icon horizontal-step__complete-icon"
+        fill="currentColor"
+        height="1.5rem"
+        role="img"
+        style="--icon-size: 1.5rem;"
+        width="1.5rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title
+          id="5"
+        >
+          completed step 1 Step 1
+        </title>
+        <use
+          xlink:href="test-file-stub#check-circle"
+        />
+      </svg>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Step 1
+      </span>
+    </li>
+    <hr
+      aria-hidden="true"
+      class="horizontal-stepper__line"
+    />
+    <li
+      class="horizontal-step horizontal-step--complete"
+    >
+      <svg
+        class="icon horizontal-step__complete-icon"
+        fill="currentColor"
+        height="1.5rem"
+        role="img"
+        style="--icon-size: 1.5rem;"
+        width="1.5rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title
+          id="6"
+        >
+          completed step 2 Step 2
+        </title>
+        <use
+          xlink:href="test-file-stub#check-circle"
+        />
+      </svg>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Step 2
+      </span>
+    </li>
+    <hr
+      aria-hidden="true"
+      class="horizontal-stepper__line"
+    />
+    <li
+      class="horizontal-step horizontal-step--active"
+    >
+      <span
+        aria-label="current step 3 Step 3"
+        class="horizontal-step__number text text--sm text--inherit"
+        role="img"
+      >
+        3
+      </span>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Step 3
+      </span>
+    </li>
+    <hr
+      aria-hidden="true"
+      class="horizontal-stepper__line"
+    />
+    <li
+      class="horizontal-step horizontal-step--incomplete"
+    >
+      <svg
+        class="icon horizontal-step__incomplete-icon"
+        fill="currentColor"
+        height="0.5rem"
+        role="img"
+        style="--icon-size: 0.5rem;"
+        width="0.5rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title
+          id="7"
+        >
+          incomplete step 4 Step 4
+        </title>
+        <use
+          xlink:href="test-file-stub#circle"
+        />
+      </svg>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Step 4
+      </span>
+    </li>
+    <hr
+      aria-hidden="true"
+      class="horizontal-stepper__line"
+    />
+    <li
+      class="horizontal-step horizontal-step--incomplete"
+    >
+      <svg
+        class="icon horizontal-step__incomplete-icon"
+        fill="currentColor"
+        height="0.5rem"
+        role="img"
+        style="--icon-size: 0.5rem;"
+        width="0.5rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title
+          id="8"
+        >
+          incomplete step 5 Step 5
+        </title>
+        <use
+          xlink:href="test-file-stub#circle"
+        />
+      </svg>
+      <span
+        class="text text--sm text--inherit text--bold-weight"
+      >
+        Step 5
+      </span>
+    </li>
+  </ol>
+</div>
+`;
