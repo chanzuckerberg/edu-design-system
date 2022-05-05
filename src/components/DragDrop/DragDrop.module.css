@@ -32,7 +32,8 @@
 
   /**
   * 1) Distinguish last container from first container (not used when more than two containers)
-  * 2) When the container is empty, a background image may be displayed. This may be helpful when the app starts with all items in the first container (not used when more than two containers)
+  * 2) When the container is empty, a background image may be displayed. This may be helpful when the app starts with all items in the first container
+  * 3) When there are more than two containers, disable the empty background
   */
   &:last-of-type {
     background-color: var(--eds-color-neutral-200);
@@ -53,7 +54,7 @@
     }
   }
   /**
-  * 1) When there are more than two containers, they get a border
+  * 1) When there are more than two containers, apply a border
   */
   .drag-drop--multiple & {
     border: var(--eds-theme-border-width) solid

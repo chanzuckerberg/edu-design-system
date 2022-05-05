@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { ReactNode } from 'react';
+import React from 'react';
 import { Draggable } from 'react-beautiful-dnd';
 import { ItemType } from '../DragDrop/DragDrop';
 import styles from '../DragDrop/DragDrop.module.css';
@@ -9,15 +9,18 @@ export interface Props {
    * CSS class names that can be appended to the component.
    */
   className?: string;
+  /**
+   * The contents of an item; includes id, title (optional) and children (optional)
+   */
   item: ItemType;
+  /** Item's original indexed position */
   index: number;
-  children?: ReactNode;
 }
 
 /**
  * Primary UI component for user interaction
  */
-export const DragDropItem = ({ className, item, index, children }: Props) => {
+export const DragDropItem = ({ className, item, index }: Props) => {
   const componentClassName = clsx(styles['drag-drop-item'], className, {});
   return (
     <Draggable draggableId={item.id} index={index}>
@@ -34,7 +37,7 @@ export const DragDropItem = ({ className, item, index, children }: Props) => {
                 {item.title}
               </div>
             )}
-            {children}
+            {item.children}
           </div>
         );
       }}

@@ -22,9 +22,12 @@ export interface Props {
    */
   containerOrder?: string[];
   /**
-   * By default, two containers are used; the second one gets a different background style. If multipleContainers is set to true, an unlimited number of containers can be used; each one will be styled identically.
+   * By default, the last container in a context gets unique styling. If more than two containers will be used, setting this prop to true will remove this unique styling and give all containers a simple border.
    */
   multipleContainers?: boolean;
+  /**
+   * Unstyled Items variant removes all styling from content within items
+   */
   unstyledItems?: boolean;
 }
 
@@ -48,7 +51,7 @@ export interface ContainerType {
 }
 
 /**
- * Primary UI component for user interaction
+ * A flexible Drag and Drop component that allows items to be dragged and dropped in containers
  */
 export const DragDrop = ({
   className,
@@ -58,6 +61,9 @@ export const DragDrop = ({
   multipleContainers = false,
   unstyledItems = false,
 }: Props) => {
+  /**
+   * If either multipleContainers or unstyledItems is set, apply the corresponding class
+   */
   const componentClassName = clsx(
     styles['drag-drop'],
     className,
@@ -67,22 +73,32 @@ export const DragDrop = ({
   const initialData = { items, containers, containerOrder };
   const [state, setState] = useState(initialData);
 
+  /**
+   * A drag has 5 life cycle events that can be monitored: onBeforeCapture, onBeforeDragStart, onDragStart, onDragUpdate, and onDragEnd. We perform our reordering functions and update state when onDragEnd is fired
+   */
   const onDragEnd = (result: DropResult) => {
     const { destination, source, draggableId } = result;
 
+    /**
+     * If the drag ends over a page element that is not a destination within this context, no further action is required
+     */
     if (!destination) {
-      // dragged outside
       return;
     }
 
+    /**
+     * If the drag ends over the original item's position, no further action is required
+     */
     if (
       destination.droppableId === source.droppableId &&
       destination.index === source.index
     ) {
-      // same location
       return;
     }
 
+    /**
+     * If a drag starts and ends over the same container, re-sort the contents of that container
+     */
     const start = state.containers[source.droppableId];
     const finish = state.containers[destination.droppableId];
 
@@ -96,6 +112,9 @@ export const DragDrop = ({
         itemIds: newItemIds,
       };
 
+      /**
+       * Reducer for creating a new state object for this container
+       */
       const newState = {
         ...state,
         containers: {
@@ -104,11 +123,16 @@ export const DragDrop = ({
         },
       };
 
+      /**
+       * Update state with new container's contents
+       */
       setState(newState);
       return;
     }
 
-    // Moving from one list to another
+    /**
+     * The drag has ended over a container that is not the source container, so both containers contents need to be updated
+     */
     const startItemIds = [...start.itemIds];
     startItemIds.splice(source.index, 1);
     const newStart = {
@@ -123,6 +147,9 @@ export const DragDrop = ({
       itemIds: finishItemIds,
     };
 
+    /**
+     * Reducer for updating both source and destination containers
+     */
     const newState = {
       ...state,
       containers: {
@@ -132,6 +159,9 @@ export const DragDrop = ({
       },
     };
 
+    /**
+     * Update state with both source and destination containers
+     */
     setState(newState);
   };
   return (

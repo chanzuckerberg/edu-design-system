@@ -10,7 +10,13 @@ export interface Props {
    * CSS class names that can be appended to the component.
    */
   className?: string;
+  /**
+   * Prop that will contain an id for each container and an array of itemIds that will be used on initial render
+   */
   container: ContainerType;
+  /**
+   * Prop that will be an array of items
+   */
   items: ItemType[];
 }
 
@@ -28,9 +34,7 @@ export const DragDropContainer = ({ className, container, items }: Props) => {
           {...provided.droppableProps}
         >
           {items.map((item, index) => (
-            <DragDropItem index={index} item={item} key={item.id}>
-              {item.children}
-            </DragDropItem>
+            <DragDropItem index={index} item={item} key={item.id} />
           ))}
           {provided.placeholder}
         </div>
