@@ -30,11 +30,10 @@ export interface Props {
    */
   onDismiss?: () => void;
   /**
-   * This is deprecated and will be removed in an upcoming release. Please use the default elevation 1
+   * This prop is deprecated and will be removed in an upcoming release. Please use the default false value for isFlat.
    *
-   * The perceived elevation of the banner. An elevation of 0 appears flat against the surface while
-   * an elevation of 1 appears to hover slightly. The hover appearance is used to separate the element
-   * from the surrounding area. The flat version should only be used on white backgrounds.
+   * The perceived elevation of the banner. A banner with isFlat appears flat against the surface while
+   * a banner with isFlat as false has a border and drop shadow.
    *
    * @deprecated
    */
