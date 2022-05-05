@@ -127,10 +127,9 @@ export const Tabs = ({
   const tabRefs = tabs().map(() => React.createRef());
 
   // we can't use the hook in an iterator like this, so generate the base and increment if needed
-  const [idVar, setId] = useState([]);
-  const [ariaLabelledByVar, setAriaLabelledBy] = useState([]);
-  // useUIDSeed() generates a stable seed generator for use in iterators.
-  const uidSeed = useUIDSeed();
+  const [idVar, setId] = useState<string[]>([]);
+  const [ariaLabelledByVar, setAriaLabelledBy] = useState<string[]>([]);
+  const getUID = useUIDSeed();
 
   /**
    * Get previous prop
@@ -164,17 +163,13 @@ export const Tabs = ({
    * Autogenerate ids on tabs if not defined.
    */
   useEffect(() => {
-    setId(
-      tabs().map((tab) => (tab.props.id ? tab.props.id : uidSeed(`${tab}-id`))),
-    );
+    setId(tabs().map((tab) => (tab.props.id ? tab.props.id : getUID(tab))));
     setAriaLabelledBy(
       tabs().map((tab) =>
-        tab.props.ariaLabelledBy
-          ? tab.props.ariaLabelledBy
-          : uidSeed(`${tab}-aria-labelledby`),
+        tab.props.ariaLabelledBy ? tab.props.ariaLabelledBy : getUID(tab),
       ),
     );
-  }, [tabs, uidSeed]);
+  }, [tabs, getUID]);
 
   /**
    * On open

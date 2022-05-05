@@ -7,22 +7,29 @@ import ToolbarItem from '../ToolbarItem';
 export default {
   title: 'Organisms/Toolbars/Toolbar',
   component: Toolbar,
+  subcomponents: { ToolbarItem },
+  parameters: {
+    axe: {
+      // TODO: re-enable when component is worked on
+      skip: true,
+    },
+  },
 } as Meta;
 
 const Template: Story<Props> = (args) => (
   <Toolbar {...args}>
-    <ToolbarItem>
+    <Toolbar.Item>
       <div className="fpo u-margin-none">Left</div>
-    </ToolbarItem>
-    <ToolbarItem>
+    </Toolbar.Item>
+    <Toolbar.Item>
       <div className="fpo u-margin-none">Left</div>
-    </ToolbarItem>
-    <ToolbarItem>
+    </Toolbar.Item>
+    <Toolbar.Item>
       <div className="fpo u-margin-none">Left</div>
-    </ToolbarItem>
-    <ToolbarItem align="right">
+    </Toolbar.Item>
+    <Toolbar.Item align="right">
       <div className="fpo u-margin-none">Right</div>
-    </ToolbarItem>
+    </Toolbar.Item>
   </Toolbar>
 );
 

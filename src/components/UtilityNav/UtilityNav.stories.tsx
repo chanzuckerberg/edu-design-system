@@ -7,13 +7,14 @@ import { UtilityNavItem } from '../UtilityNavItem/UtilityNavItem';
 export default {
   title: 'Molecules/Navigation/UtilityNav',
   component: UtilityNav,
+  subcomponents: { UtilityNavItem },
 } as Meta;
 
 const Template: Story<Props> = (args) => (
   <UtilityNav {...args}>
-    <UtilityNavItem href="#" text="Utility nav"></UtilityNavItem>
-    <UtilityNavItem href="#" text="Utility nav"></UtilityNavItem>
-    <UtilityNavItem href="#" text="Utility nav"></UtilityNavItem>
+    <UtilityNav.Item href="#" text="Utility nav"></UtilityNav.Item>
+    <UtilityNav.Item href="#" text="Utility nav"></UtilityNav.Item>
+    <UtilityNav.Item href="#" text="Utility nav"></UtilityNav.Item>
   </UtilityNav>
 );
 

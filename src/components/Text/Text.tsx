@@ -27,6 +27,7 @@ export type Props = {
   className?: string;
   variant?: Variant;
   size?: Size;
+  spacing?: 'half' | '1x' | '2x';
   tabIndex?: number;
   weight?: 'bold' | 'normal' | null;
 } & React.HTMLAttributes<HTMLElement>;
@@ -44,6 +45,7 @@ export const Text = forwardRef(
       className,
       variant,
       size = 'body',
+      spacing,
       weight,
       /**
        * Components that wrap typography sometimes requires props such as event handlers
@@ -66,6 +68,7 @@ export const Text = forwardRef(
       styles[`text--${size}`],
       variant && styles[`text--${variant}`],
       weight && styles[`text--${weight}-weight`],
+      spacing && styles[`text--${spacing}-spacing`],
     );
     return (
       <TagName className={componentClassName} ref={ref} {...other}>

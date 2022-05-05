@@ -41,6 +41,10 @@ const getDescription = (status?: Variant) => (
   </>
 );
 
+const dismissMethod = () => {
+  console.log('dismissing~');
+};
+
 export const Brand: StoryObj<Args> = {
   render: ({ variant, ...other }) => {
     return (
@@ -137,7 +141,7 @@ export const ErrorWithAction: StoryObj<Args> = {
 export const BrandDismissable: StoryObj<Args> = {
   ...Brand,
   args: {
-    dismissable: true,
+    onDismiss: dismissMethod,
   },
 };
 
@@ -145,7 +149,7 @@ export const NeutralDismissable: StoryObj<Args> = {
   ...Brand,
   args: {
     variant: 'neutral',
-    dismissable: true,
+    onDismiss: dismissMethod,
   },
 };
 
@@ -153,7 +157,7 @@ export const SuccessDismissable: StoryObj<Args> = {
   ...Brand,
   args: {
     variant: 'success',
-    dismissable: true,
+    onDismiss: dismissMethod,
   },
 };
 
@@ -161,7 +165,7 @@ export const WarningDismissable: StoryObj<Args> = {
   ...Brand,
   args: {
     variant: 'warning',
-    dismissable: true,
+    onDismiss: dismissMethod,
   },
 };
 
@@ -169,7 +173,7 @@ export const ErrorDismissable: StoryObj<Args> = {
   ...Brand,
   args: {
     variant: 'error',
-    dismissable: true,
+    onDismiss: dismissMethod,
   },
 };
 
@@ -177,7 +181,7 @@ export const DismissableWithAction: StoryObj<Args> = {
   ...Brand,
   args: {
     action: getAction(),
-    dismissable: true,
+    onDismiss: dismissMethod,
   },
 };
 
@@ -185,7 +189,12 @@ export const DismissableBelowContent: StoryObj<Args> = {
   render: (args) => (
     <>
       <Heading size="h1">Page Title</Heading>
-      <Banner description={getDescription()} dismissable={true} {...args} />
+      <Banner
+        description={getDescription()}
+        onDismiss={dismissMethod}
+        titleAs="h2"
+        {...args}
+      />
     </>
   ),
 };
@@ -201,7 +210,7 @@ export const VerticalDismissable: StoryObj<Args> = {
   ...Brand,
   args: {
     orientation: 'vertical',
-    dismissable: true,
+    onDismiss: dismissMethod,
   },
 };
 
@@ -218,7 +227,7 @@ export const VerticalDismissableWithAction: StoryObj<Args> = {
   args: {
     orientation: 'vertical',
     action: getAction(),
-    dismissable: true,
+    onDismiss: dismissMethod,
   },
 };
 

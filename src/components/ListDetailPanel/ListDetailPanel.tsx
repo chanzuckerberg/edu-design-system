@@ -16,13 +16,24 @@ export interface Props {
    */
   className?: string;
   /**
+   * Mark list as completed
+   */
+  completed?: boolean;
+  /**
    * HTML id for the component
    */
   id?: any;
   /**
    * The tab variant
    */
-  variant?: 'error' | 'number' | 'success' | 'warning';
+  variant?:
+    | 'bullet'
+    | 'complete'
+    | 'error'
+    | 'incomplete'
+    | 'number'
+    | 'success'
+    | 'warning';
   /**
    * The tab title
    */
@@ -36,6 +47,7 @@ export const ListDetailPanel = ({
   ariaLabelledBy,
   children,
   className,
+  completed,
   id,
   variant,
   title,

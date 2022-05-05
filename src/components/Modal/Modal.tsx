@@ -227,3 +227,7 @@ export const Modal = ({
     </Portal>
   );
 };
+
+Modal.Body = ModalBody;
+Modal.Footer = ModalFooter;
+Modal.Header = ModalHeader;

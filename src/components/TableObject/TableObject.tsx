@@ -1,6 +1,8 @@
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import styles from './TableObject.module.css';
+import TableObjectBody from '../TableObjectBody';
+import TableObjectHeader from '../TableObjectHeader';
 
 export interface Props {
   /**
@@ -24,3 +26,6 @@ export const TableObject = ({ children, className, ...other }: Props) => {
     </div>
   );
 };
+
+TableObject.Body = TableObjectBody;
+TableObject.Header = TableObjectHeader;

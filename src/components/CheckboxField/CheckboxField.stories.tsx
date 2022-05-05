@@ -7,21 +7,22 @@ import CheckboxFieldItem from '../CheckboxFieldItem';
 export default {
   title: 'Molecules/Forms/CheckboxField',
   component: CheckboxField,
+  subcomponents: { CheckboxFieldItem },
 } as Meta;
 
 const Template: Story<Props> = (args) => (
   <CheckboxField {...args}>
-    <CheckboxFieldItem
+    <CheckboxField.Item
       name="checkbox-example"
       text="Checkbox 1"
       value="checkbox1"
     />
-    <CheckboxFieldItem
+    <CheckboxField.Item
       name="checkbox-example"
       text="Checkbox 2"
       value="checkbox2"
     />
-    <CheckboxFieldItem
+    <CheckboxField.Item
       name="checkbox-example"
       text="Checkbox 3"
       value="checkbox3"
@@ -31,20 +32,20 @@ const Template: Story<Props> = (args) => (
 
 const DisabledTemplate: Story<Props> = (args) => (
   <CheckboxField {...args}>
-    <CheckboxFieldItem
+    <CheckboxField.Item
       checked={true}
       disabled={true}
       name="checkbox-example"
       text="Checkbox 1"
       value="checkbox1"
     />
-    <CheckboxFieldItem
+    <CheckboxField.Item
       disabled={true}
       name="checkbox-example"
       text="Checkbox 2"
       value="checkbox2"
     />
-    <CheckboxFieldItem
+    <CheckboxField.Item
       disabled={true}
       name="checkbox-example"
       text="Checkbox 3"
@@ -56,17 +57,17 @@ const DisabledTemplate: Story<Props> = (args) => (
 const InvertedTemplate: Story<Props> = (args) => (
   <div style={{ padding: '1rem', background: '#000' }}>
     <CheckboxField {...args}>
-      <CheckboxFieldItem
+      <CheckboxField.Item
         name="checkbox-example"
         text="Checkbox 1"
         value="checkbox1"
       />
-      <CheckboxFieldItem
+      <CheckboxField.Item
         name="checkbox-example"
         text="Checkbox 2"
         value="checkbox2"
       />
-      <CheckboxFieldItem
+      <CheckboxField.Item
         name="checkbox-example"
         text="Checkbox 3"
         value="checkbox3"
@@ -108,9 +109,16 @@ Error.args = {
   isError: true,
   fieldNote: 'This is a field with an error',
 };
+
 export const Inverted = InvertedTemplate.bind({});
 Inverted.args = {
   label: 'Checkbox field',
   inverted: true,
   fieldNote: 'This is an inverted field',
+};
+Inverted.parameters = {
+  axe: {
+    // TODO: re-enable when component is worked on
+    disabledRules: ['color-contrast'],
+  },
 };

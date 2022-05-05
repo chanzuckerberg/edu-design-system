@@ -7,40 +7,47 @@ import GridItem from '../GridItem';
 export default {
   title: 'Molecules/Layout and Containers/Grid',
   component: Grid,
+  subcomponents: { GridItem },
+  parameters: {
+    axe: {
+      // TODO: re-enable when component is worked on
+      skip: true,
+    },
+  },
 } as Meta;
 
 const Template: Story<Props> = (args) => (
   <Grid {...args}>
-    <GridItem>
+    <Grid.Item>
       <div className="fpo u-margin-top-none u-margin-bottom-none">
         Grid Item
       </div>
-    </GridItem>
-    <GridItem>
+    </Grid.Item>
+    <Grid.Item>
       <div className="fpo u-margin-top-none u-margin-bottom-none">
         Grid Item
       </div>
-    </GridItem>
-    <GridItem>
+    </Grid.Item>
+    <Grid.Item>
       <div className="fpo u-margin-top-none u-margin-bottom-none">
         Grid Item
       </div>
-    </GridItem>
-    <GridItem>
+    </Grid.Item>
+    <Grid.Item>
       <div className="fpo u-margin-top-none u-margin-bottom-none">
         Grid Item
       </div>
-    </GridItem>
-    <GridItem>
+    </Grid.Item>
+    <Grid.Item>
       <div className="fpo u-margin-top-none u-margin-bottom-none">
         Grid Item
       </div>
-    </GridItem>
-    <GridItem>
+    </Grid.Item>
+    <Grid.Item>
       <div className="fpo u-margin-top-none u-margin-bottom-none">
         Grid Item
       </div>
-    </GridItem>
+    </Grid.Item>
   </Grid>
 );
 

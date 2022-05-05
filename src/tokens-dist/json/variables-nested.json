@@ -23,7 +23,8 @@
         "md": "4px",
         "lg": "8px",
         "xl": "20px",
-        "round": "50%"
+        "round": "50%",
+        "full": "9999px"
       }
     },
     "color": {
@@ -176,7 +177,10 @@
           "brand": {
             "primary": {
               "default": "#F0F0FC",
-              "strong": "#6B65E2"
+              "strong": {
+                "@": "#6B65E2",
+                "hover": "#3E42B1"
+              }
             }
           },
           "utility": {

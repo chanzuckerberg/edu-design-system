@@ -1611,7 +1611,7 @@ __metadata:
     "@testing-library/jest-dom": ^5.16.2
     "@testing-library/react": ^12.1.4
     "@testing-library/user-event": ^13.5.0
-    "@tippyjs/react": 4.2.5
+    "@tippyjs/react": ^4.2.6
     "@types/estree": ^0.0.51
     "@types/jest": ^27.4.1
     "@types/node": ^17.0.21
@@ -4284,15 +4284,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tippyjs/react@npm:4.2.5":
-  version: 4.2.5
-  resolution: "@tippyjs/react@npm:4.2.5"
+"@tippyjs/react@npm:^4.2.6":
+  version: 4.2.6
+  resolution: "@tippyjs/react@npm:4.2.6"
   dependencies:
     tippy.js: ^6.3.1
   peerDependencies:
     react: ">=16.8"
     react-dom: ">=16.8"
-  checksum: 68a6bb8922597df105f601953f14c593a8179328026dc425db0cd5d8521cdd8ad8c6ec7b6d0707708c8ed25e5ad01c488e95a6b3de0b2f404bd71137e2b8fce9
+  checksum: 8f0fba591c9dae2e1af1ae632bbc775ba5c9dd4498e50e242be70302b4c27115c6740eec44e885e294b27cb28515777b52af5b34aac9d4bab627d948add938ae
   languageName: node
   linkType: hard
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../DesignTokens.css';
 import { Section } from '../../../../src';
-import tokens from '../../../data/tokens.json';
+import filterTokens from '../../../util/filterTokens';
 import { ColorList } from '../../ColorList/ColorList';
 
 export class Tier1Colors extends Component {
@@ -26,14 +26,4 @@ export class Tier1Colors extends Component {
       </div>
     );
   }
-}
-
-function filterTokens(prefix) {
-  return Object.entries(tokens)
-    .filter(([name]) => name.startsWith(prefix))
-    .map(([name, { value, comment }]) => ({
-      name: `--${name}`,
-      value,
-      comment,
-    }));
 }
