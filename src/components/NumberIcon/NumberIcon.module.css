@@ -1,0 +1,42 @@
+/*------------------------------------*\
+    # NUMBER ICON
+\*------------------------------------*/
+
+/**
+ * 1) 
+ */
+.number-icon {
+  /* 1 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* 2 */
+  border: var(--eds-border-width-sm) solid
+    var(--eds-theme-color-icon-neutral-strong);
+  border-radius: var(--eds-border-radius-round);
+}
+
+/**
+ * Size Variants
+ */
+.number-icon--sm {
+  height: var(--eds-size-2-and-half);
+  width: var(--eds-size-2-and-half);
+}
+
+.number-icon--lg {
+  height: var(--eds-size-3);
+  width: var(--eds-size-3);
+}
+
+/**
+ * Color Variants
+ */
+.number-icon--base {
+  background-color: transparent;
+}
+.number-icon--success {
+  background-color: var(--eds-theme-color-icon-utility-success);
+  border-color: var(--eds-theme-color-icon-utility-success);
+}
