@@ -1,0 +1,25 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #DRAGDROPITEM
+\*------------------------------------*/
+
+/**
+* 1) Container that holds droppable content. We only want these styles to be applied when the "unstyled" variant is not used.
+* 2) For best experience, use a margin on a single side of an item to add a gap between items. Using a margin on both top and bottom, or using flex or grid gap spacing in the drag-drop-container, cause jumpy behavior.
+*/
+.drag-drop:not(.drag-drop--unstyled) .drag-drop-item {
+  padding: var(--eds-size-1);
+  margin-bottom: var(--eds-size-1); /* 2 */
+  background-color: var(--eds-color-neutral-100);
+  border-radius: var(--eds-border-radius-md);
+  box-shadow: var(--eds-box-shadow-sm);
+}
+
+/** 
+* 1) Optional title div at the top of an item.
+*/
+.drag-drop-item--title {
+  @mixin eds-typography-preset-007-bold;
+  margin-bottom: var(--eds-size-2);
+}

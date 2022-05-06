@@ -1,0 +1,51 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #DRAGDROPCONTAINER
+\*------------------------------------*/
+
+/**
+* 1) An area that can be dropped into.
+* 2) Explicitly giving container display type of 'block'. Avoid using flex; doing so may cause jumpy behavior when items are dropped.
+* 3) If a minimum height is not set, all containers in the same context will have their height determined by the longest "list" of items, and will resize as items are moved, which may or may not be desirable. 
+* 4) Setting a fixed width for containers avoids jumpy behavior caused by using flex grow or other non-fixed width methods.
+*/
+.drag-drop-container {
+  display: block; /* 2 */
+  margin: var(--eds-size-2);
+  border-radius: var(--eds-border-radius-md);
+  min-height: 630px; /* 3 */
+  width: 437px; /* 4 */
+  padding: var(--eds-size-1);
+
+  /**
+  * 1) Distinguish last container from first container (not used when more than two containers)
+  * 2) When the container is empty, a background image may be displayed. This may be helpful when the app starts with all items in the first container
+  * 3) When there are more than two containers, disable the empty background
+  */
+  &:last-of-type {
+    background-color: var(--eds-color-neutral-200);
+
+    .drag-drop--multiple & {
+      background-color: unset;
+    }
+
+    /* 2 */
+    &:empty {
+      background-image: url('https://fakeimg.pl/240x120/?text=Drag%20in%20available%20projects');
+      background-repeat: no-repeat;
+      background-position: center;
+
+      .drag-drop--multiple & {
+        background-image: unset;
+      }
+    }
+  }
+  /**
+  * 1) When there are more than two containers, apply a border
+  */
+  .drag-drop--multiple & {
+    border: var(--eds-theme-border-width) solid
+      var(--eds-theme-color-border-neutral-default);
+  }
+}

@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 import React from 'react';
 import { Droppable } from 'react-beautiful-dnd';
+import styles from './DragDropContainer.module.css';
 import { ContainerType, ItemType } from '../DragDrop/DragDrop';
-import styles from '../DragDrop/DragDrop.module.css';
 import DragDropItem from '../DragDropItem';
 
 export interface Props {
