@@ -1,13 +1,6 @@
 {
-  "include": [
-    "src",
-    ".storybook/**/*",
-  ],
-  "exclude": [
-    "node_modules",
-    "typings"
-  ],
-  "typeRoots": ["./types", "./node_modules/@types"],
+  "include": ["src", ".storybook/**/*"],
+  "exclude": ["node_modules", "lib"],
   "compilerOptions": {
     "allowJs": false,
     "allowSyntheticDefaultImports": true,
