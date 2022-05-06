@@ -3,7 +3,9 @@
 \*------------------------------------*/
 
 /**
- * 1) 
+ * Number Icon displays a number enclosed in a circle.
+* 1) Centers the number text in the circle.
+* 2) The circle part of the icon, made with borders.
  */
 .number-icon {
   /* 1 */
@@ -12,21 +14,21 @@
   align-items: center;
 
   /* 2 */
-  border: var(--eds-border-width-sm) solid
-    var(--eds-theme-color-icon-neutral-strong);
+  border: var(--eds-border-width-sm) solid;
   border-radius: var(--eds-border-radius-round);
 }
 
 /**
  * Size Variants
+ * 1) Height and width should be the same to make the icon a circle and not oblong.
  */
 .number-icon--sm {
-  height: var(--eds-size-2-and-half);
+  height: var(--eds-size-2-and-half); /* 1 */
   width: var(--eds-size-2-and-half);
 }
 
 .number-icon--lg {
-  height: var(--eds-size-3);
+  height: var(--eds-size-3); /* 1 */
   width: var(--eds-size-3);
 }
 
@@ -35,6 +37,7 @@
  */
 .number-icon--base {
   background-color: transparent;
+  border-color: var(--eds-theme-color-icon-neutral-strong);
 }
 .number-icon--success {
   background-color: var(--eds-theme-color-icon-utility-success);

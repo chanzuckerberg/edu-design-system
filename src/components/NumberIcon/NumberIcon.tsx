@@ -31,7 +31,17 @@ export interface Props {
 }
 
 /**
- * Primary UI component for user interaction
+ * ```ts
+ * import {NumberIcon} from "@chanzuckerberg/eds";
+ * ```
+ *
+ * Encloses a number in a circle to be used as an icon.
+ *
+ * Example usage:
+ *
+ * ```tsx
+ * <NumberIcon aria-label="1" number={1} />
+ * ```
  */
 export const NumberIcon = ({
   className,
@@ -53,9 +63,13 @@ export const NumberIcon = ({
     styles[`number-icon--${size}`],
     className,
   );
+
+  /**
+   * 1) Set as 'span' since icon use is more inline than block, but no effect since display is 'flex'.
+   */
   return (
     <Text
-      as="span"
+      as="span" /* 1 */
       className={componentClassName}
       role="img"
       size="sm"
