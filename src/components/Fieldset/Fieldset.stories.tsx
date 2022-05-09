@@ -4,7 +4,6 @@ import { Fieldset } from './Fieldset';
 import Checkbox from '../Checkbox';
 import FieldsetItems from '../FieldsetItems';
 import FieldsetLegend, { FieldsetLegendProps } from '../FieldsetLegend';
-import { Default as RadioFieldStory } from '../RadioField/RadioField.stories';
 
 export default {
   title: 'Atoms/Forms/Fieldset',
@@ -43,8 +42,3 @@ export const FieldsetLegends: StoryObj<FieldsetLegendProps> = {
     </>
   ),
 };
-
-export const RadioField = RadioFieldStory;
-RadioField.args.fieldNote =
-  'RadioField fieldset usage. See RadioField Stories for more examples.';
-RadioField.parameters = { chromatic: { disableSnapshot: true } }; // Disabled since already being snapped in original story.
