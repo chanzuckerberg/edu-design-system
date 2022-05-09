@@ -3,7 +3,6 @@ import React, {
   ReactNode,
   useState,
   useRef,
-  MutableRefObject,
   MouseEvent,
   KeyboardEvent,
 } from 'react';
@@ -37,7 +36,7 @@ export const PopoverExample: React.FC<Props> = ({
   ...other
 }) => {
   const [popoverOpen, setPopoverOpen] = useState(false);
-  const popoverButton = useRef() as MutableRefObject<HTMLButtonElement>;
+  const popoverButton = useRef<HTMLButtonElement>(null);
 
   function openPopover() {
     setPopoverOpen(!popoverOpen);
@@ -48,7 +47,7 @@ export const PopoverExample: React.FC<Props> = ({
    */
   function closePopover(event: MouseEvent | KeyboardEvent) {
     setTimeout(() => {
-      popoverButton.current.focus();
+      popoverButton?.current?.focus();
     }, 1);
     if (event) {
       event.preventDefault();

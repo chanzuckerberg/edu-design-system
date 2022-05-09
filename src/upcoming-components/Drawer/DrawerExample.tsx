@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { ReactNode, useState, useRef, MutableRefObject } from 'react';
+import React, { ReactNode, useState, useRef } from 'react';
 import { Drawer } from './Drawer';
 import Button from '../../components/Button';
 import ButtonGroup from '../../components/ButtonGroup';
@@ -21,7 +21,7 @@ export interface Props {
  */
 export const DrawerExample = ({ className, ...other }: Props) => {
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const drawerButton = useRef() as MutableRefObject<HTMLButtonElement>;
+  const drawerButton = useRef<HTMLButtonElement>(null);
 
   function openDrawerExample() {
     setDrawerOpen(true);
@@ -29,7 +29,7 @@ export const DrawerExample = ({ className, ...other }: Props) => {
 
   function closeDrawerExample(event: any) {
     setTimeout(() => {
-      drawerButton.current.focus();
+      drawerButton?.current?.focus();
     }, 1);
     if (event) {
       event.preventDefault();

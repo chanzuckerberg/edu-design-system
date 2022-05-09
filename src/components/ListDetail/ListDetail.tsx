@@ -1,6 +1,5 @@
 import clsx from 'clsx';
 import React, {
-  MutableRefObject,
   ReactNode,
   useRef,
   useState,
@@ -100,7 +99,7 @@ export const ListDetail = ({
   /**
    * Initialize states, constants, and refs
    */
-  const ref = useRef() as MutableRefObject<number>;
+  const ref = useRef<number | undefined>();
   const [activeIndexState, setActiveIndexState] = useState(
     activeIndex ? activeIndex : 0,
   );

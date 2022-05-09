@@ -4,7 +4,6 @@ import React, {
   useEffect,
   useState,
   useRef,
-  MutableRefObject,
   ReactNode,
 } from 'react';
 import { useUID } from 'react-uid';
@@ -59,7 +58,7 @@ export const AccordionPanel = ({
   ariaControls,
   ...other
 }: Props) => {
-  const panelRef = useRef() as MutableRefObject<HTMLDivElement>;
+  const panelRef = useRef<HTMLDivElement>(null);
   const [heightVar, setHeight] = useState('0');
   const [isActiveVar, setIsActive] = useState(isActive ? true : false);
 
@@ -77,8 +76,8 @@ export const AccordionPanel = ({
   const setPanelHeight = useCallback(() => {
     if (isActiveVar === true) {
       setHeight(
-        panelRef.current.querySelector('[data-accordion-panel]')?.scrollHeight +
-          'px',
+        panelRef?.current?.querySelector('[data-accordion-panel]')
+          ?.scrollHeight + 'px',
       ); /* 1 */
     } else if (isActiveVar === false) {
       setHeight('0'); /* 2 */

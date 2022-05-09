@@ -1,12 +1,5 @@
 import clsx from 'clsx';
-import React, {
-  ReactNode,
-  useEffect,
-  useState,
-  useRef,
-  MutableRefObject,
-  UIEvent,
-} from 'react';
+import React, { ReactNode, useEffect, useState, useRef, UIEvent } from 'react';
 import styles from '../TableObject/TableObject.module.css';
 
 export interface Props {
@@ -32,10 +25,8 @@ export const TableObjectBody = ({ children, className, ...other }: Props) => {
    */
   const [isEnd, setIsEnd] = useState(true); /* 1 */
   const [isStart, setIsStart] = useState(false); /* 2 */
-  const tableObjectBodyRef =
-    useRef() as MutableRefObject<HTMLDivElement>; /* 3 */
-  const tableObjectBodyInnerRef =
-    useRef() as MutableRefObject<HTMLDivElement>; /* 3 */
+  const tableObjectBodyRef = useRef<HTMLDivElement>(null); /* 3 */
+  const tableObjectBodyInnerRef = useRef<HTMLDivElement>(null); /* 3 */
 
   /**
    * Set right and left gradients on tables
@@ -47,26 +38,32 @@ export const TableObjectBody = ({ children, className, ...other }: Props) => {
    * 6) Else, set the right shadow to true and the left shadow to false
    */
   const setShadows = () => {
-    const table = tableObjectBodyRef.current.querySelector('.table'); /* 1 */
+    const table =
+      tableObjectBodyRef.current &&
+      tableObjectBodyRef.current.querySelector('.table'); /* 1 */
     if (table) {
       const tableObjectBodyWidth =
         tableObjectBodyRef.current.clientWidth; /* 2 */
       const tableWidth = table.clientWidth; /* 2 */
       const tableOffScreen =
-        table.clientWidth - tableObjectBodyRef.current.clientWidth; /* 2 */
+        table.clientWidth - tableObjectBodyRef?.current?.clientWidth; /* 2 */
 
       if (tableWidth <= tableObjectBodyWidth) {
         /* 3 */
         setIsEnd(false);
         setIsStart(false);
       } else if (
+        tableObjectBodyInnerRef.current &&
         tableObjectBodyInnerRef.current.scrollLeft > 0 &&
         tableObjectBodyInnerRef.current.scrollLeft < tableOffScreen
       ) {
         /* 4 */
         setIsEnd(true);
         setIsStart(true);
-      } else if (tableObjectBodyInnerRef.current.scrollLeft >= tableOffScreen) {
+      } else if (
+        tableObjectBodyInnerRef.current &&
+        tableObjectBodyInnerRef.current.scrollLeft >= tableOffScreen
+      ) {
         /* 5 */
         setIsEnd(false);
         setIsStart(true);
