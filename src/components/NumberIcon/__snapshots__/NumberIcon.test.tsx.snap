@@ -2,7 +2,7 @@
 
 exports[`<NumberIcon /> Default story renders snapshot 1`] = `
 <span
-  aria-label="1"
+  aria-label="Step 1"
   class="number-icon number-icon--base number-icon--lg text text--sm text--base"
   role="img"
 >
@@ -13,133 +13,133 @@ exports[`<NumberIcon /> Default story renders snapshot 1`] = `
 exports[`<NumberIcon /> DifferentNumbers story renders snapshot 1`] = `
 <div>
   <span
-    aria-label="0"
+    aria-label="Step 0"
     class="number-icon number-icon--base number-icon--lg text text--sm text--base"
     role="img"
   >
     0
   </span>
   <span
-    aria-label="1"
+    aria-label="Step 1"
     class="number-icon number-icon--base number-icon--lg text text--sm text--base"
     role="img"
   >
     1
   </span>
   <span
-    aria-label="2"
+    aria-label="Step 2"
     class="number-icon number-icon--base number-icon--lg text text--sm text--base"
     role="img"
   >
     2
   </span>
   <span
-    aria-label="3"
+    aria-label="Step 3"
     class="number-icon number-icon--base number-icon--lg text text--sm text--base"
     role="img"
   >
     3
   </span>
   <span
-    aria-label="4"
+    aria-label="Step 4"
     class="number-icon number-icon--base number-icon--lg text text--sm text--base"
     role="img"
   >
     4
   </span>
   <span
-    aria-label="5"
+    aria-label="Step 5"
     class="number-icon number-icon--base number-icon--lg text text--sm text--base"
     role="img"
   >
     5
   </span>
   <span
-    aria-label="6"
+    aria-label="Step 6"
     class="number-icon number-icon--base number-icon--lg text text--sm text--base"
     role="img"
   >
     6
   </span>
   <span
-    aria-label="7"
+    aria-label="Step 7"
     class="number-icon number-icon--base number-icon--lg text text--sm text--base"
     role="img"
   >
     7
   </span>
   <span
-    aria-label="8"
+    aria-label="Step 8"
     class="number-icon number-icon--base number-icon--lg text text--sm text--base"
     role="img"
   >
     8
   </span>
   <span
-    aria-label="9"
+    aria-label="Step 9"
     class="number-icon number-icon--base number-icon--lg text text--sm text--base"
     role="img"
   >
     9
   </span>
   <span
-    aria-label="10"
+    aria-label="Step 10"
     class="number-icon number-icon--base number-icon--lg text text--sm text--base"
     role="img"
   >
     10
   </span>
   <span
-    aria-label="21"
+    aria-label="Step 21"
     class="number-icon number-icon--base number-icon--lg text text--sm text--base"
     role="img"
   >
     21
   </span>
   <span
-    aria-label="32"
+    aria-label="Step 32"
     class="number-icon number-icon--base number-icon--lg text text--sm text--base"
     role="img"
   >
     32
   </span>
   <span
-    aria-label="43"
+    aria-label="Step 43"
     class="number-icon number-icon--base number-icon--lg text text--sm text--base"
     role="img"
   >
     43
   </span>
   <span
-    aria-label="54"
+    aria-label="Step 54"
     class="number-icon number-icon--base number-icon--lg text text--sm text--base"
     role="img"
   >
     54
   </span>
   <span
-    aria-label="65"
+    aria-label="Step 65"
     class="number-icon number-icon--base number-icon--lg text text--sm text--base"
     role="img"
   >
     65
   </span>
   <span
-    aria-label="76"
+    aria-label="Step 76"
     class="number-icon number-icon--base number-icon--lg text text--sm text--base"
     role="img"
   >
     76
   </span>
   <span
-    aria-label="87"
+    aria-label="Step 87"
     class="number-icon number-icon--base number-icon--lg text text--sm text--base"
     role="img"
   >
     87
   </span>
   <span
-    aria-label="98"
+    aria-label="Step 98"
     class="number-icon number-icon--base number-icon--lg text text--sm text--base"
     role="img"
   >
@@ -150,7 +150,7 @@ exports[`<NumberIcon /> DifferentNumbers story renders snapshot 1`] = `
 
 exports[`<NumberIcon /> Small story renders snapshot 1`] = `
 <span
-  aria-label="1"
+  aria-label="Step 1"
   class="number-icon number-icon--base number-icon--sm text text--sm text--base"
   role="img"
 >
@@ -160,7 +160,7 @@ exports[`<NumberIcon /> Small story renders snapshot 1`] = `
 
 exports[`<NumberIcon /> SuccessLarge story renders snapshot 1`] = `
 <span
-  aria-label="1"
+  aria-label="Step 1"
   class="number-icon number-icon--success number-icon--lg text text--sm text--white"
   role="img"
 >
@@ -170,7 +170,7 @@ exports[`<NumberIcon /> SuccessLarge story renders snapshot 1`] = `
 
 exports[`<NumberIcon /> SuccessSmall story renders snapshot 1`] = `
 <span
-  aria-label="1"
+  aria-label="Step 1"
   class="number-icon number-icon--success number-icon--sm text text--sm text--white"
   role="img"
 >

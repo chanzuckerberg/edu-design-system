@@ -7,7 +7,7 @@ export default {
   title: 'Atoms/Icons/NumberIcon',
   component: NumberIcon,
   args: {
-    'aria-label': '1',
+    'aria-label': 'Step 1',
     number: '1',
   },
 };
@@ -60,25 +60,25 @@ export const DifferentNumbers: StoryObj<Args> = {
   },
   render: (args) => (
     <div>
-      <NumberIcon {...args} aria-label="0" number={0} />
-      <NumberIcon {...args} aria-label="1" number={1} />
-      <NumberIcon {...args} aria-label="2" number={2} />
-      <NumberIcon {...args} aria-label="3" number={3} />
-      <NumberIcon {...args} aria-label="4" number={4} />
-      <NumberIcon {...args} aria-label="5" number={5} />
-      <NumberIcon {...args} aria-label="6" number={6} />
-      <NumberIcon {...args} aria-label="7" number={7} />
-      <NumberIcon {...args} aria-label="8" number={8} />
-      <NumberIcon {...args} aria-label="9" number={9} />
-      <NumberIcon {...args} aria-label="10" number={10} />
-      <NumberIcon {...args} aria-label="21" number={21} />
-      <NumberIcon {...args} aria-label="32" number={32} />
-      <NumberIcon {...args} aria-label="43" number={43} />
-      <NumberIcon {...args} aria-label="54" number={54} />
-      <NumberIcon {...args} aria-label="65" number={65} />
-      <NumberIcon {...args} aria-label="76" number={76} />
-      <NumberIcon {...args} aria-label="87" number={87} />
-      <NumberIcon {...args} aria-label="98" number={98} />
+      <NumberIcon {...args} aria-label="Step 0" number={0} />
+      <NumberIcon {...args} aria-label="Step 1" number={1} />
+      <NumberIcon {...args} aria-label="Step 2" number={2} />
+      <NumberIcon {...args} aria-label="Step 3" number={3} />
+      <NumberIcon {...args} aria-label="Step 4" number={4} />
+      <NumberIcon {...args} aria-label="Step 5" number={5} />
+      <NumberIcon {...args} aria-label="Step 6" number={6} />
+      <NumberIcon {...args} aria-label="Step 7" number={7} />
+      <NumberIcon {...args} aria-label="Step 8" number={8} />
+      <NumberIcon {...args} aria-label="Step 9" number={9} />
+      <NumberIcon {...args} aria-label="Step 10" number={10} />
+      <NumberIcon {...args} aria-label="Step 21" number={21} />
+      <NumberIcon {...args} aria-label="Step 32" number={32} />
+      <NumberIcon {...args} aria-label="Step 43" number={43} />
+      <NumberIcon {...args} aria-label="Step 54" number={54} />
+      <NumberIcon {...args} aria-label="Step 65" number={65} />
+      <NumberIcon {...args} aria-label="Step 76" number={76} />
+      <NumberIcon {...args} aria-label="Step 87" number={87} />
+      <NumberIcon {...args} aria-label="Step 98" number={98} />
     </div>
   ),
 };
