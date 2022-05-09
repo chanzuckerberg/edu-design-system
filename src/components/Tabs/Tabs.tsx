@@ -5,7 +5,6 @@ import React, {
   useState,
   useEffect,
   useCallback,
-  MutableRefObject,
   KeyboardEvent,
 } from 'react';
 import { allByType } from 'react-children-by-type';
@@ -116,7 +115,7 @@ export const Tabs = ({
   /**
    * Initialize states, constants, and refs
    */
-  const ref = useRef() as MutableRefObject<number>;
+  const ref = useRef<number | undefined>();
   const [activeIndexState, setActiveIndexState] = useState(activeIndex);
   /**
    * Set the only children components allowed within <Tabs> to be Tab

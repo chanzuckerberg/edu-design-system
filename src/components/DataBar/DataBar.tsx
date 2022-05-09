@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { MutableRefObject } from 'react';
+import React from 'react';
 import { useUID } from 'react-uid';
 import styles from './DataBar.module.css';
 
@@ -91,9 +91,7 @@ export const DataBar = ({
    */
   /* 1 */
   const [focusableElementIndex, setFocusableElementIndex] = React.useState(0);
-  const segmentsRef = React.useRef([]) as MutableRefObject<
-    Array<HTMLDivElement | null>
-  >; /* 2 */
+  const segmentsRef = React.useRef<Array<HTMLDivElement | null>>([]); /* 2 */
   const handleOnKeyDown = (
     e: React.KeyboardEvent<HTMLElement>,
     index: number,

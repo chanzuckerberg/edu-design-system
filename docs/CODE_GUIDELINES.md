@@ -383,17 +383,17 @@ When using the `useState()` hook, TypeScript will infer the correct type from th
 
 #### useRef()
 
-`useRef()` hooks access underlying DOM elements to perform imperative actions. The resulting `ref` object can either be _mutable_ or _not mutable_. (If the value store in its' `.current` property may be changed, the ref needs to be `mutable`.) Explictly convey the intended mutability status of each `ref` by using either `React.MutableObject` and `React.RefObject`, in a generic type definition.
-
-For consistency, include `MutableRefObject` and `RefObject` with your import statements.
+`useRef()` hooks access underlying DOM elements to perform imperative actions. The resulting `ref` object can either be _mutable_ or _not mutable_. (If the value store in its' `.current` property may be changed, the ref needs to be `mutable`.) When possible, use a type param or declare an initial value for the ref.
 
 ```tsx
-import React, { useRef, MutableRefObject, RefObject } from 'react';
+import React, { useRef } from 'react';
 
-...
-
-const ref = useRef() as MutableRefObject<HTMLInputElement>;
-
+// when typing an HTML element ref, set the initial value to `null`
+const ref = useRef<HTMLInputElement>(null);
+// otherwise, use a type param
+const ref = useRef<number | undefined>();
+// or TS can infer the type from an initial value
+const ref = useRef(false);
 ```
 
 ### Define `componentClassName`
