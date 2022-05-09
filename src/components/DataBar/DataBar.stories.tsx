@@ -1,4 +1,4 @@
-import { StoryObj, Story } from '@storybook/react';
+import { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
 import { DataBar } from './DataBar';
@@ -18,7 +18,7 @@ export default {
     ],
   },
   decorators: [
-    (Story: Story) => (
+    (Story) => (
       <div
         style={{
           margin: '0.25rem',
@@ -28,7 +28,7 @@ export default {
       </div>
     ),
   ],
-};
+} as Meta<Args>;
 
 type Args = React.ComponentProps<typeof DataBar>;
 
