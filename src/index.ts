@@ -17,7 +17,6 @@ export { default as DataBar } from './components/DataBar';
 export { default as DataBarSegment } from './components/DataBarSegment';
 export { default as Dropdown } from './components/Dropdown';
 export { default as DropdownButton } from './components/DropdownButton';
-export { default as Feature } from './components/Feature';
 export { default as FieldNote } from './components/FieldNote';
 export { default as Fieldset } from './components/Fieldset';
 export { default as FieldsetItems } from './components/FieldsetItems';
