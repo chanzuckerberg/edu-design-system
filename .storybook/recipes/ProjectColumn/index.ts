@@ -1,1 +1,1 @@
-export { ProjectColumn as default } from './ProjectColumn'
+export { ProjectColumn as default } from './ProjectColumn';

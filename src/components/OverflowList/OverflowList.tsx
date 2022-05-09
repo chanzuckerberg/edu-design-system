@@ -129,8 +129,8 @@ export const OverflowList = ({ className, children, ...other }: Props) => {
     <div className={componentClassName} ref={overflowListRef} {...other}>
       <ul
         className={styles['overflow-list__inner']}
-        ref={overflowListInnerRef}
         onScroll={handleOnScroll}
+        ref={overflowListInnerRef}
       >
         {children}
       </ul>
