@@ -10,8 +10,6 @@ export { default as CardBody } from './components/CardBody';
 export { default as CardFooter } from './components/CardFooter';
 export { default as CardHeader } from './components/CardHeader';
 export { default as Checkbox } from './components/Checkbox';
-export { default as CheckboxField } from './components/CheckboxField';
-export { default as CheckboxFieldItem } from './components/CheckboxFieldItem';
 export { default as CheckboxInput } from './components/CheckboxInput';
 export { default as CheckboxLabel } from './components/CheckboxLabel';
 export { default as ClickableStyle } from './components/ClickableStyle';

@@ -2,7 +2,6 @@ import type { StoryObj } from '@storybook/react';
 import React from 'react';
 import { Fieldset } from './Fieldset';
 import Checkbox from '../Checkbox';
-import { Default as CheckboxFieldStory } from '../CheckboxField/CheckboxField.stories';
 import FieldsetItems from '../FieldsetItems';
 import FieldsetLegend, { FieldsetLegendProps } from '../FieldsetLegend';
 import { Default as RadioFieldStory } from '../RadioField/RadioField.stories';
@@ -44,11 +43,6 @@ export const FieldsetLegends: StoryObj<FieldsetLegendProps> = {
     </>
   ),
 };
-
-export const CheckboxField = CheckboxFieldStory;
-CheckboxField.args.fieldNote =
-  'Checkbox fieldset usage. See CheckboxField Stories for more examples.';
-CheckboxField.parameters = { chromatic: { disableSnapshot: true } }; // Disabled since already being snapped in original story.
 
 export const RadioField = RadioFieldStory;
 RadioField.args.fieldNote =
