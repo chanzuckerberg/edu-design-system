@@ -1,3 +1,7 @@
+/* stylelint-disable max-nesting-depth */
+/* stylelint-disable no-descending-specificity */
+/* TODO: rm these ^ once rules are changed */
+
 @import '../../design-tokens/mixins.css';
 
 /*------------------------------------*\
