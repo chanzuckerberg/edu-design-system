@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import React from 'react';
 import styles from './CheckboxInput.module.css';
+import icons from '../../icons/spritemap/spritemap.svg';
 
 type CheckboxHTMLElementProps = Omit<
   React.InputHTMLAttributes<HTMLInputElement>,
@@ -45,10 +46,14 @@ export const svgStyle: SvgStyle = {
  * SVG overlaid on top of the input element.
  */
 const CheckboxSvg = ({ indeterminate }: { indeterminate?: boolean }) => {
-  const checkmarkPath = indeterminate
-    ? 'M 14.00,9.00 C 14.55,9.00 15.00,9.45 15.00,10.00 15.00,10.00 15.00,10.00 15.00,10.00 15.00,10.55 14.55,11.00 14.00,11.00 14.00,11.00 6.00,11.00 6.00,11.00 5.45,11.00 5.00,10.55 5.00,10.00 5.00,10.00 5.00,10.00 5.00,10.00 5.00,9.45 5.45,9.00 6.00,9.00 6.00,9.00 14.00,9.00 14.00,9.00 Z'
-    : 'M15.5605 5.2094C15.447 5.12571 15.3181 5.06522 15.1811 5.03137C15.0442 4.99752 14.902 4.99099 14.7625 5.01214C14.6231 5.0333 14.4892 5.08172 14.3684 5.15465C14.2477 5.22758 14.1425 5.32359 14.0589 5.43718L8.96703 12.3478L5.72917 9.7572C5.50592 9.58618 5.22455 9.50943 4.94539 9.54341C4.66622 9.57738 4.41148 9.71937 4.23576 9.93893C4.06004 10.1585 3.97733 10.4382 4.00536 10.718C4.03339 10.9978 4.16993 11.2555 4.38572 11.4359L8.49687 14.7244C8.61048 14.8133 8.74065 14.8786 8.87979 14.9166C9.01893 14.9546 9.16424 14.9645 9.30724 14.9457C9.45024 14.9269 9.58805 14.8798 9.71264 14.8071C9.83723 14.7344 9.94609 14.6377 10.0329 14.5225L15.7917 6.71187C15.8753 6.59806 15.9356 6.4689 15.9691 6.33178C16.0027 6.19465 16.009 6.05225 15.9875 5.91272C15.966 5.77318 15.9173 5.63925 15.844 5.51857C15.7707 5.39789 15.6744 5.29283 15.5605 5.2094Z';
-
+  const name = indeterminate ? 'remove' : 'check';
+  const computedSvg = (
+    <use
+      className={styles['checkmark__content']}
+      fill="none"
+      xlinkHref={`${icons}#${name}`}
+    />
+  );
   return (
     <svg
       aria-hidden="true"
@@ -67,11 +72,7 @@ const CheckboxSvg = ({ indeterminate }: { indeterminate?: boolean }) => {
         x="1"
         y="1"
       />
-      <path
-        className={styles['checkmark__content']}
-        d={checkmarkPath}
-        fill="none"
-      />
+      {computedSvg}
     </svg>
   );
 };
