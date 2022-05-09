@@ -19,12 +19,14 @@ import {
   CardBody,
   Banner,
   OverflowList,
+  OverflowListItem,
   Tabs,
   Tab,
   Toast,
 } from '../../../src';
 
 import utilityStyles from '../../../src/components/Utilities/Spacing.module.css';
+import ProjectColumn from '../../recipes/ProjectColumn';
 
 export const Cad = () => (
   <>
@@ -74,128 +76,116 @@ export const Cad = () => (
             <Tabs>
               <Tab title="Planning overview">
                 <OverflowList>
-                  <div
-                    style={{
-                      flexShrink: '0',
-                    }}
-                  >
-                    <Toolbar
-                      className={utilityStyles['u-margin-bottom-md']}
-                      variant="bare"
-                    >
-                      <ToolbarItem>
-                        <Heading as="h2" size="h5">
-                          Available projects
-                        </Heading>
-                      </ToolbarItem>
-                      <ToolbarItem align="right">
-                        <Button variant="icon">
-                          <Icon name="add" purpose="decorative" />
-                          Add project
-                        </Button>
-                      </ToolbarItem>
-                    </Toolbar>
-                    <Grid gap="sm">
-                      <GridItem>
-                        <Card>
-                          <CardBody>
-                            <Heading
-                              as="h3"
-                              className={utilityStyles['u-margin-bottom-sm']}
-                              size="h6"
-                            >
-                              Longer project name truncation after a long...
-                            </Heading>
-                            <div className="fpo u-margin-none">
-                              Calendar Icon text
-                            </div>
-                          </CardBody>
-                        </Card>
-                      </GridItem>
-                      <GridItem>
-                        <Card>
-                          <CardBody>
-                            <Heading
-                              as="h3"
-                              className={utilityStyles['u-margin-bottom-sm']}
-                              size="h6"
-                            >
-                              Project name
-                            </Heading>
-                            <div className="fpo u-margin-none">12 days</div>
-                          </CardBody>
-                        </Card>
-                      </GridItem>
-                      <GridItem>
-                        <Card>
-                          <CardBody>
-                            <Heading
-                              as="h3"
-                              className={utilityStyles['u-margin-bottom-sm']}
-                              size="h6"
-                            >
-                              Project name
-                            </Heading>
-                            <div className="fpo u-margin-none">12 days</div>
-                          </CardBody>
-                        </Card>
-                      </GridItem>
-                      <GridItem>
-                        <Card>
-                          <CardBody>
-                            <Heading
-                              as="h3"
-                              className={utilityStyles['u-margin-bottom-sm']}
-                              size="h6"
-                            >
-                              Project name
-                            </Heading>
-                            <div className="fpo u-margin-none">12 days</div>
-                          </CardBody>
-                        </Card>
-                      </GridItem>
-                      <GridItem>
-                        <Card>
-                          <CardBody>
-                            <Heading
-                              as="h3"
-                              className={utilityStyles['u-margin-bottom-sm']}
-                              size="h6"
-                            >
-                              Project name
-                            </Heading>
-                            <div className="fpo u-margin-none">12 days</div>
-                          </CardBody>
-                        </Card>
-                      </GridItem>
-                      <GridItem>
-                        <Card>
-                          <CardBody>
-                            <Heading
-                              as="h3"
-                              className={utilityStyles['u-margin-bottom-sm']}
-                              size="h6"
-                            >
-                              Project name
-                            </Heading>
-                            <div className="fpo u-margin-none">12 days</div>
-                          </CardBody>
-                        </Card>
-                      </GridItem>
-                    </Grid>
-                  </div>
-                  <div
-                    style={{
-                      flexShrink: '0',
-                    }}
-                  >
-                    <div
-                      style={{
-                        display: 'flex',
-                        flexDirection: 'column',
-                        height: '100%',
-                      }}
-                    >
+                  <OverflowListItem>
+                    <ProjectColumn>
+                      <Toolbar
+                        className={utilityStyles['u-margin-bottom-md']}
+                        variant="bare"
+                      >
+                        <ToolbarItem>
+                          <Heading as="h2" size="h5">
+                            Available projects
+                          </Heading>
+                        </ToolbarItem>
+                        <ToolbarItem align="right">
+                          <Button variant="icon">
+                            <Icon name="add" purpose="decorative" />
+                            Add project
+                          </Button>
+                        </ToolbarItem>
+                      </Toolbar>
+                      <Grid gap="sm">
+                        <GridItem>
+                          <Card>
+                            <CardBody>
+                              <Heading
+                                as="h3"
+                                className={utilityStyles['u-margin-bottom-sm']}
+                                size="h6"
+                              >
+                                Longer project name truncation after a long...
+                              </Heading>
+                              <div className="fpo u-margin-none">
+                                Calendar Icon text
+                              </div>
+                            </CardBody>
+                          </Card>
+                        </GridItem>
+                        <GridItem>
+                          <Card>
+                            <CardBody>
+                              <Heading
+                                as="h3"
+                                className={utilityStyles['u-margin-bottom-sm']}
+                                size="h6"
+                              >
+                                Project name
+                              </Heading>
+                              <div className="fpo u-margin-none">12 days</div>
+                            </CardBody>
+                          </Card>
+                        </GridItem>
+                        <GridItem>
+                          <Card>
+                            <CardBody>
+                              <Heading
+                                as="h3"
+                                className={utilityStyles['u-margin-bottom-sm']}
+                                size="h6"
+                              >
+                                Project name
+                              </Heading>
+                              <div className="fpo u-margin-none">12 days</div>
+                            </CardBody>
+                          </Card>
+                        </GridItem>
+                        <GridItem>
+                          <Card>
+                            <CardBody>
+                              <Heading
+                                as="h3"
+                                className={utilityStyles['u-margin-bottom-sm']}
+                                size="h6"
+                              >
+                                Project name
+                              </Heading>
+                              <div className="fpo u-margin-none">12 days</div>
+                            </CardBody>
+                          </Card>
+                        </GridItem>
+                        <GridItem>
+                          <Card>
+                            <CardBody>
+                              <Heading
+                                as="h3"
+                                className={utilityStyles['u-margin-bottom-sm']}
+                                size="h6"
+                              >
+                                Project name
+                              </Heading>
+                              <div className="fpo u-margin-none">12 days</div>
+                            </CardBody>
+                          </Card>
+                        </GridItem>
+                        <GridItem>
+                          <Card>
+                            <CardBody>
+                              <Heading
+                                as="h3"
+                                className={utilityStyles['u-margin-bottom-sm']}
+                                size="h6"
+                              >
+                                Project name
+                              </Heading>
+                              <div className="fpo u-margin-none">12 days</div>
+                            </CardBody>
+                          </Card>
+                        </GridItem>
+                      </Grid>
+                    </ProjectColumn>
+                  </OverflowListItem>
+                  <OverflowListItem>
+                    <ProjectColumn>
                       <Toolbar
                         className={utilityStyles['u-margin-bottom-md']}
                         variant="bare"
@@ -215,13 +205,8 @@ export const Cad = () => (
                       <div className="fpo" style={{ flex: '1' }}>
                         Empty state
                       </div>
-                    </div>
-                  </div>
-                  <div
-                    style={{
-                      flexShrink: '0',
-                    }}
-                  ></div>
+                    </ProjectColumn>
+                  </OverflowListItem>
                 </OverflowList>
               </Tab>
 
