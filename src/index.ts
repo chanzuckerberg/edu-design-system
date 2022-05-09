@@ -55,7 +55,6 @@ export { default as Tab } from './components/Tab';
 export { default as Tabs } from './components/Tabs';
 export { default as Tag } from './components/Tag';
 export { default as Text } from './components/Text';
-export { default as TextList } from './components/TextList';
 export { default as TextPassage } from './components/TextPassage';
 export { default as Toast } from './components/Toast';
 export { default as Tooltip } from './components/Tooltip';
