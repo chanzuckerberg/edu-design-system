@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import React, { ReactNode, useState } from 'react';
 import { DragDropContext, DropResult, Droppable } from 'react-beautiful-dnd';
 import styles from './DragDrop.module.css';
+import { Items, Containers } from './DragDropTypes';
 import DragDropContainer from '../DragDropContainer';
 
 export interface Props {
@@ -29,25 +30,6 @@ export interface Props {
    * Unstyled Items variant removes all styling from content within items
    */
   unstyledItems?: boolean;
-}
-
-export interface Items {
-  [any: string]: ItemType;
-}
-
-export interface ItemType {
-  id: string;
-  title?: string;
-  children?: ReactNode;
-}
-
-export interface Containers {
-  [any: string]: ContainerType;
-}
-
-export interface ContainerType {
-  id: string;
-  itemIds: string[];
 }
 
 /**
