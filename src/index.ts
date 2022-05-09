@@ -15,8 +15,6 @@ export { default as CheckboxLabel } from './components/CheckboxLabel';
 export { default as ClickableStyle } from './components/ClickableStyle';
 export { default as DataBar } from './components/DataBar';
 export { default as DataBarSegment } from './components/DataBarSegment';
-export { default as DefinitionList } from './components/DefinitionList';
-export { default as DefinitionListItem } from './components/DefinitionListItem';
 export { default as Dropdown } from './components/Dropdown';
 export { default as DropdownButton } from './components/DropdownButton';
 export { default as Feature } from './components/Feature';
