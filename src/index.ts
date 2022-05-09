@@ -62,7 +62,6 @@ export { default as StackedBlock } from './components/StackedBlock';
 export { default as Tab } from './components/Tab';
 export { default as Tabs } from './components/Tabs';
 export { default as Tag } from './components/Tag';
-export { default as Tags } from './components/Tags';
 export { default as Text } from './components/Text';
 export { default as TextField } from './components/TextField';
 export { default as TextInput } from './components/TextInput';
