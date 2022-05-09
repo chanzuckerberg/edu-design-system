@@ -1,4 +1,4 @@
-import { StoryObj, Story } from '@storybook/react';
+import { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
 import { HorizontalStepper } from './HorizontalStepper';
@@ -15,7 +15,7 @@ export default {
     steps: ['Step 1', 'Step 2', 'Step 3', 'Step 4', 'Step 5'],
   },
   decorators: [
-    (Story: Story) => (
+    (Story) => (
       <div
         style={{
           margin: '1rem', // Pushes contents away from storybook borders.
@@ -25,7 +25,7 @@ export default {
       </div>
     ),
   ],
-};
+} as Meta<Args>;
 
 type Args = React.ComponentProps<typeof HorizontalStepper>;
 
