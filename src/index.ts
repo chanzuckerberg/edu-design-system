@@ -63,7 +63,6 @@ export { default as Text } from './components/Text';
 export { default as TextInput } from './components/TextInput';
 export { default as TextList } from './components/TextList';
 export { default as TextPassage } from './components/TextPassage';
-export { default as Tile } from './components/Tile';
 export { default as Toast } from './components/Toast';
 export { default as Tooltip } from './components/Tooltip';
 export { default as UtilityNav } from './components/UtilityNav';
