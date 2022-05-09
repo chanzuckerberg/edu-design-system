@@ -51,7 +51,6 @@ export { default as PopoverHeader } from './components/PopoverHeader';
 export { default as PrimaryNav } from './components/PrimaryNav';
 export { default as PrimaryNavItem } from './components/PrimaryNavItem';
 export { default as Section } from './components/Section';
-export { default as ShowHide } from './components/ShowHide';
 export { default as SkeletonBar } from './components/SkeletonBar';
 export { default as StackedBlock } from './components/StackedBlock';
 export { default as Tab } from './components/Tab';
