@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { ReactNode, useState, useRef, MutableRefObject } from 'react';
+import React, { ReactNode, useState, useRef } from 'react';
 import { Modal } from './Modal';
 import Button from '../../components/Button';
 import ButtonGroup from '../../components/ButtonGroup';
@@ -31,7 +31,7 @@ export const ModalExample = ({
   ...other
 }: Props) => {
   const [modalOpen, setModalOpen] = useState(false);
-  const modalButton = useRef() as MutableRefObject<HTMLButtonElement>;
+  const modalButton = useRef<HTMLButtonElement>(null);
 
   function openContinueModal() {
     setModalOpen(true);
@@ -39,7 +39,7 @@ export const ModalExample = ({
 
   function closeContinueModal(event: any) {
     setTimeout(() => {
-      modalButton.current.focus();
+      modalButton?.current?.focus();
     }, 1);
     if (event) {
       event.preventDefault();

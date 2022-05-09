@@ -1,11 +1,5 @@
 import clsx from 'clsx';
-import React, {
-  ChangeEventHandler,
-  MutableRefObject,
-  useEffect,
-  useRef,
-  useState,
-} from 'react';
+import React, { ChangeEventHandler, useEffect, useRef, useState } from 'react';
 import { useUID } from 'react-uid';
 import Checkbox from '../../components/Checkbox';
 import styles from '../CheckboxField/CheckboxField.module.css';
@@ -86,7 +80,7 @@ export const CheckboxFieldItem = ({
    * Check for previous props/states
    */
   function usePrevious(checkboxChecked: boolean) {
-    const ref = useRef() as MutableRefObject<boolean>;
+    const ref = useRef(false);
     useEffect(() => {
       ref.current = checkboxChecked;
     });
