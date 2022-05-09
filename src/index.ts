@@ -43,7 +43,6 @@ export { default as LoadingIndicator } from './components/LoadingIndicator';
 export { default as Logo } from './components/Logo';
 export { default as LogoImage } from './components/LogoImage';
 export { default as Main } from './components/Main';
-export { default as MediaBlock } from './components/MediaBlock';
 export { default as NavContainer } from './components/NavContainer';
 export { default as NotificationList } from './components/NotificationList';
 export { default as NotificationListItem } from './components/NotificationListItem';
