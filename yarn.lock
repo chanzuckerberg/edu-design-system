@@ -1590,7 +1590,7 @@ __metadata:
   dependencies:
     "@chanzuckerberg/axe-storybook-testing": ^5.0.0
     "@chanzuckerberg/eslint-plugin-stories": ^3.0.1
-    "@chanzuckerberg/story-utils": ^3.0.4
+    "@chanzuckerberg/story-utils": ^3.0.5
     "@commitlint/cli": ^16.2.1
     "@commitlint/config-conventional": ^16.2.1
     "@commitlint/prompt-cli": ^16.2.1
@@ -1685,16 +1685,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@chanzuckerberg/story-utils@npm:^3.0.4":
-  version: 3.0.4
-  resolution: "@chanzuckerberg/story-utils@npm:3.0.4"
+"@chanzuckerberg/story-utils@npm:^3.0.5":
+  version: 3.0.5
+  resolution: "@chanzuckerberg/story-utils@npm:3.0.5"
   dependencies:
-    "@storybook/testing-react": ^1.2.3
+    "@storybook/testing-react": ^1.2.4
   peerDependencies:
-    "@storybook/react": ">=6.4.0"
     "@testing-library/react": ">=11.0.0"
     react: "*"
-  checksum: 970bc8a348e1e2a0b0e8e05dbf18a2ea6ef788ce6fc7917250505bafc8477c1a430f42897ea049e792c401b5b3ac34a7d51374acea597a45929bb5b0f3c7eb85
+  checksum: d97ec37308611f7002557f7aaf1ad69f70e2b4c0ab77bc00cfabbaa2b86daa375e89865e4af055e949b7b07503db517e9b55ff0f699b049cfea20e65132f91b3
   languageName: node
   linkType: hard
 
@@ -4135,7 +4134,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/testing-react@npm:^1.2.3, @storybook/testing-react@npm:^1.2.4":
+"@storybook/testing-react@npm:^1.2.4":
   version: 1.2.4
   resolution: "@storybook/testing-react@npm:1.2.4"
   dependencies:
