@@ -13,7 +13,6 @@ export { default as Checkbox } from './components/Checkbox';
 export { default as CheckboxInput } from './components/CheckboxInput';
 export { default as CheckboxLabel } from './components/CheckboxLabel';
 export { default as ClickableStyle } from './components/ClickableStyle';
-export { default as Counter } from './components/Counter';
 export { default as DataBar } from './components/DataBar';
 export { default as DataBarSegment } from './components/DataBarSegment';
 export { default as DefinitionList } from './components/DefinitionList';
