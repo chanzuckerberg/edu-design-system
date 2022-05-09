@@ -29,7 +29,7 @@ export const OverflowList = ({ className, children, ...other }: Props) => {
    * Set states and refs
    * 1) Set isEnd state: set to true, right shadow gradient activates. Removed when false
    * 2) Set isState state: set to true, left shadow gradient activates. Removed when false
-   * 3) Target table body and table body inner DOM elements
+   * 3) Target overflow list and overflow list inner DOM elements
    */
   const [isEnd, setIsEnd] = useState(true); /* 1 */
   const [isStart, setIsStart] = useState(false); /* 2 */
@@ -38,11 +38,11 @@ export const OverflowList = ({ className, children, ...other }: Props) => {
     useRef() as MutableRefObject<HTMLUListElement>; /* 3 */
   /**
    * Set right and left gradients on tables
-   * 1) Target the actual table inside table object body
-   * 2) Get the width of the table offscreen when table overflows
-   * 3) If table width is less than or equal to table object body width, remove all shadows
-   * 4) If table object body inner scroll isn't all the way to the left or to the right, turn all shadows on
-   * 5) If table body inner scroll is >= to width of table offscreen, turn off right shadow and turn left shadow on
+   * 1) Target the actual overflow list inside overflow list
+   * 2) Get the width of the overflow list offscreen when overflow list overflows
+   * 3) If overflow list width is less than or equal to overflow list width, remove all shadows
+   * 4) If overflow list inner scroll isn't all the way to the left or to the right, turn all shadows on
+   * 5) If overflow list inner scroll is >= to width of overflow list offscreen, turn off right shadow and turn left shadow on
    * 6) Else, set the right shadow to true and the left shadow to false
    */
   const setShadows = () => {
@@ -63,16 +63,10 @@ export const OverflowList = ({ className, children, ...other }: Props) => {
       const overflowListOffscreen =
         totalItemsWidth - overflowListRef.current.clientWidth; /* 2 */
 
-      console.log('Total Items Width ' + totalItemsWidth);
-      console.log('Overflow List Width ' + overflowListWidth);
-      console.log(
-        'Overflow List scroll left ' + overflowListInnerRef.current.scrollLeft,
-      );
       if (totalItemsWidth <= overflowListWidth) {
         /* 3 */
         setIsEnd(false);
         setIsStart(false);
-        console.log('REMOVE BOTH SHADOWS');
       } else if (
         overflowListInnerRef.current.scrollLeft > 0 &&
         overflowListInnerRef.current.scrollLeft < overflowListOffscreen
@@ -80,26 +74,23 @@ export const OverflowList = ({ className, children, ...other }: Props) => {
         /* 4 */
         setIsEnd(true);
         setIsStart(true);
-        console.log('SHOW BOTH SHADOWS');
       } else if (
         overflowListInnerRef.current.scrollLeft >= overflowListOffscreen
       ) {
         /* 5 */
         setIsEnd(false);
         setIsStart(true);
-        console.log('SHOW ONLY RIGHT SHADOW');
       } else {
         /* 6 */
         setIsEnd(true);
         setIsStart(false);
-        console.log('SHOW ONLY LEFT SHADOW');
       }
     }
   };
 
   /**
-   * Table body inner onscroll
-   * 1) Set shadows when user scrolls the table right and left
+   * Overflow list inner onscroll
+   * 1) Set shadows when user scrolls the overflow list right and left
    */
   const handleOnScroll = (e: UIEvent<HTMLElement>): void => {
     setShadows(); /* 1 */

@@ -17,12 +17,10 @@ import {
   Icon,
   Card,
   CardBody,
-  Banner,
   OverflowList,
   OverflowListItem,
   Tabs,
   Tab,
-  Toast,
 } from '../../../src';
 
 import utilityStyles from '../../../src/components/Utilities/Spacing.module.css';
