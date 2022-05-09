@@ -272,7 +272,7 @@ export const Accessibility: StoryObj<Args> = {
   },
 };
 
-export const OtherComponents: StoryObj<Args> = {
+export const UnstyledItems: StoryObj<Args> = {
   args: {
     items: {
       'item-1': {
