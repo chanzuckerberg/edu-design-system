@@ -10,8 +10,6 @@ import {
   LayoutContainer,
   Layout,
   LayoutSection,
-  Toolbar,
-  ToolbarItem,
   Grid,
   GridItem,
   Icon,
@@ -22,6 +20,9 @@ import {
   Tabs,
   Tab,
 } from '../../../src';
+
+import { Toolbar } from '../../../src/upcoming-components/Toolbar/Toolbar';
+import { ToolbarItem } from '../../../src/upcoming-components/ToolbarItem/ToolbarItem';
 
 import utilityStyles from '../../../src/components/Utilities/Spacing.module.css';
 import ProjectColumn from '../../recipes/ProjectColumn';
