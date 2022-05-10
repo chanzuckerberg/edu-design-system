@@ -83,7 +83,7 @@ export const PopoverExample: React.FC<Props> = ({
             </Button>
           }
         >
-          <Heading as="h3" id="popover-heading-1" size="h6">
+          <Heading as="h3" id="popover-heading-1" size="body-sm">
             Notifications (4)
           </Heading>
         </Popover.Header>
@@ -115,7 +115,7 @@ export const PopoverExample: React.FC<Props> = ({
             ></NotificationListItem>
           </NotificationList>
           <Popover.Header>
-            <Heading as="h3" id="popover-heading-2" size="h6">
+            <Heading as="h3" id="popover-heading-2" size="body-sm">
               Already Seen
             </Heading>
           </Popover.Header>

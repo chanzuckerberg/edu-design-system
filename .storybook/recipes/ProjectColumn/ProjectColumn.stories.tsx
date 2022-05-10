@@ -24,7 +24,7 @@ const Template: Story<Props> = (args) => (
   <ProjectColumn {...args}>
     <Toolbar variant="bare">
       <ToolbarItem>
-        <Heading as="h2" size="h5">
+        <Heading as="h2" size="title-sm">
           Available projects
         </Heading>
       </ToolbarItem>
@@ -39,7 +39,7 @@ const Template: Story<Props> = (args) => (
       <GridItem>
         <Card>
           <CardBody>
-            <Heading as="h3" className="u-margin-bottom-sm" size="h6">
+            <Heading as="h3" className="u-margin-bottom-sm" size="body-sm">
               Longer project name truncation after a long...
             </Heading>
             <div className="fpo u-margin-none">Calendar Icon text</div>
@@ -49,7 +49,7 @@ const Template: Story<Props> = (args) => (
       <GridItem>
         <Card>
           <CardBody>
-            <Heading as="h3" className="u-margin-bottom-sm" size="h6">
+            <Heading as="h3" className="u-margin-bottom-sm" size="body-sm">
               Project name
             </Heading>
             <div className="fpo u-margin-none">12 days</div>
@@ -59,7 +59,7 @@ const Template: Story<Props> = (args) => (
       <GridItem>
         <Card>
           <CardBody>
-            <Heading as="h3" className="u-margin-bottom-sm" size="h6">
+            <Heading as="h3" className="u-margin-bottom-sm" size="body-sm">
               Project name
             </Heading>
             <div className="fpo u-margin-none">12 days</div>
@@ -69,7 +69,7 @@ const Template: Story<Props> = (args) => (
       <GridItem>
         <Card>
           <CardBody>
-            <Heading as="h3" className="u-margin-bottom-sm" size="h6">
+            <Heading as="h3" className="u-margin-bottom-sm" size="body-sm">
               Project name
             </Heading>
             <div className="fpo u-margin-none">12 days</div>
@@ -79,7 +79,7 @@ const Template: Story<Props> = (args) => (
       <GridItem>
         <Card>
           <CardBody>
-            <Heading as="h3" className="u-margin-bottom-sm" size="h6">
+            <Heading as="h3" className="u-margin-bottom-sm" size="body-sm">
               Project name
             </Heading>
             <div className="fpo u-margin-none">12 days</div>
@@ -89,7 +89,7 @@ const Template: Story<Props> = (args) => (
       <GridItem>
         <Card>
           <CardBody>
-            <Heading as="h3" className="u-margin-bottom-sm" size="h6">
+            <Heading as="h3" className="u-margin-bottom-sm" size="body-sm">
               Project name
             </Heading>
             <div className="fpo u-margin-none">12 days</div>

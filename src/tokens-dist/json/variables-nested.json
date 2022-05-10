@@ -183,7 +183,7 @@
       "2-and-half": "1.25rem"
     },
     "font-family": {
-      "primary": "'Open Sans', sans-serif",
+      "primary": "'Arimo', sans-serif",
       "secondary": "'Open Sans', sans-serif"
     },
     "font-size": {
@@ -194,7 +194,8 @@
       "18": "1.125rem",
       "24": "1.5rem",
       "32": "2rem",
-      "40": "2.5rem"
+      "40": "2.5rem",
+      "base": "16px"
     },
     "font-weight": {
       "light": "400",
@@ -720,6 +721,21 @@
         "200": "#7686D3",
         "300": "#5761BA",
         "400": "#32417C"
+      }
+    },
+    "size": {
+      "font": {
+        "h1": "1.5rem",
+        "h2": "1.125rem",
+        "body": "1rem",
+        "sm": "0.875rem",
+        "xs": "0.75rem"
+      },
+      "line-height": {
+        "h1": "2rem",
+        "body": "1.5rem",
+        "sm": "1.25rem",
+        "xs": "1rem"
       }
     }
   }
