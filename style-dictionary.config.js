@@ -4,7 +4,7 @@ const EDSStyleDictionary = StyleDictionary.extend({
   platforms: {
     scss: {
       transforms: [...StyleDictionary.transformGroup.scss, "name/cti/kebab"],
-      buildPath: "lib/tokens/",
+      buildPath: "src/tokens-dist/",
       files: [
         {
           format: "scss/map-deep",
@@ -17,7 +17,7 @@ const EDSStyleDictionary = StyleDictionary.extend({
     },
     css: {
       transforms: [...StyleDictionary.transformGroup.css, "name/cti/kebab"],
-      buildPath: "lib/tokens/",
+      buildPath: "src/tokens-dist/",
       files: [
         {
           format: "css/variables",
@@ -28,16 +28,14 @@ const EDSStyleDictionary = StyleDictionary.extend({
         },
         {
           format: "json/nested-css-variables",
+          // useful for tailwind configs in consuming apps
           destination: "json/css-variables-nested.json",
-          options: {
-            showFileHeader: false,
-          },
         },
       ],
     },
     js: {
       transformGroup: "js",
-      buildPath: "lib/tokens/",
+      buildPath: "src/tokens-dist/",
       files: [
         {
           format: "javascript/es6",
@@ -55,21 +53,12 @@ const EDSStyleDictionary = StyleDictionary.extend({
     },
     json: {
       transformGroup: "js",
-      buildPath: "lib/tokens/",
+      buildPath: "src/tokens-dist/",
       files: [
         {
-          format: "json/flat",
-          destination: "json/variables.json",
-          options: {
-            showFileHeader: false,
-          },
-        },
-        {
           format: "json/nested",
+          // useful for tailwind configs in consuming apps
           destination: "json/variables-nested.json",
-          options: {
-            showFileHeader: false,
-          },
         },
       ],
     },
