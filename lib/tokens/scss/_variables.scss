@@ -99,23 +99,21 @@ $eds-color-highlight-300: #FCFF00 !default;
 $eds-color-highlight-400: #9DFFA4 !default;
 $eds-color-highlight-500: #00F1FF !default;
 $eds-color-highlight-600: #CFC9FF !default;
-$eds-size-font-h1: 3rem !default; // Font size for Heading 1 sized text
-$eds-size-font-h2: 2.5rem !default; // Font size for Heading 2 sized text
-$eds-size-font-h3: 2rem !default; // Font size for Heading 3 sized text
-$eds-size-font-h4: 1.5rem !default; // Font size for Heading 4 sized text
-$eds-size-font-h5: 1.125rem !default; // Font size for Heading 5 sized text
-$eds-size-font-base: 16px !default; // Base font size for design system in px
-$eds-size-font-body: 1rem !default; // Default font size for body text
-$eds-size-font-sm: 0.875rem !default; // Font size for small body text
-$eds-size-font-xs: 0.75rem !default; // Font size for xsmall body text
-$eds-size-line-height-h1: 4rem !default; // Line height for Heading 1 sized text
-$eds-size-line-height-h2: 3.5rem !default; // Line height for Heading 2 sized text
-$eds-size-line-height-h3: 2.5rem !default; // Line height for Heading 3 sized text
-$eds-size-line-height-h4: 2rem !default; // Line height for Heading 4 sized text
-$eds-size-line-height-h5: 1.5rem !default; // Font size for Heading 5 sized text
-$eds-size-line-height-body: 1.5rem !default; // Default line height for body text
-$eds-size-line-height-sm: 1.25rem !default; // Line height for small body text
-$eds-size-line-height-xs: 1rem !default; // Line height for xsmall body text
+$eds-font-family-primary: 'Arimo', sans-serif !default;
+$eds-font-family-secondary: 'Open Sans', sans-serif !default;
+$eds-font-size-11: 0.688rem !default;
+$eds-font-size-12: 0.75rem !default;
+$eds-font-size-14: 0.875rem !default;
+$eds-font-size-16: 1rem !default;
+$eds-font-size-18: 1.125rem !default;
+$eds-font-size-24: 1.5rem !default;
+$eds-font-size-32: 2rem !default;
+$eds-font-size-40: 2.5rem !default;
+$eds-font-size-base: 16px !default; // Base font size for design system in px
+$eds-font-weight-light: 400 !default;
+$eds-font-weight-medium: 500 !default;
+$eds-font-weight-bold: 600 !default;
+$eds-letter-spacing-sm: 0.5px !default;
 $legacy-color-gray-50: #F8F9FC !default;
 $legacy-color-gray-100: #EBEBEC !default;
 $legacy-color-gray-200: #D8D8D9 !default;
@@ -135,16 +133,15 @@ $legacy-color-yellow-400: #644C1F !default;
 $legacy-color-purple-200: #7686D3 !default;
 $legacy-color-purple-300: #5761BA !default;
 $legacy-color-purple-400: #32417C !default;
-$legacy-size-font-h1: 1.5rem !default; // Font size for Heading 1 sized text
-$legacy-size-font-h2: 1.125rem !default; // Font size for Heading 2 sized text
-$legacy-size-font-base: 16px !default; // Base font size for design system in px
-$legacy-size-font-body: 1rem !default; // Default font size for body text
-$legacy-size-font-sm: 0.875rem !default; // Font size for small body text
-$legacy-size-font-xs: 0.75rem !default; // Font size for xsmall body text
-$legacy-size-line-height-h1: 2rem !default; // Line height for Heading 1 sized text
-$legacy-size-line-height-body: 1.5rem !default; // Default line height for body text
-$legacy-size-line-height-sm: 1.25rem !default; // Line height for small body text
-$legacy-size-line-height-xs: 1rem !default; // Line height for xsmall body text
+$legacy-size-font-h1: 1.5rem !default;
+$legacy-size-font-h2: 1.125rem !default;
+$legacy-size-font-body: 1rem !default;
+$legacy-size-font-sm: 0.875rem !default;
+$legacy-size-font-xs: 0.75rem !default;
+$legacy-size-line-height-h1: 2rem !default;
+$legacy-size-line-height-body: 1.5rem !default;
+$legacy-size-line-height-sm: 1.25rem !default;
+$legacy-size-line-height-xs: 1rem !default;
 
 $tokens: (
   'eds': (
@@ -278,28 +275,28 @@ $tokens: (
         '600': $eds-color-highlight-600
       )
     ),
-    'size': (
-      'font': (
-        'h1': $eds-size-font-h1,
-        'h2': $eds-size-font-h2,
-        'h3': $eds-size-font-h3,
-        'h4': $eds-size-font-h4,
-        'h5': $eds-size-font-h5,
-        'base': $eds-size-font-base,
-        'body': $eds-size-font-body,
-        'sm': $eds-size-font-sm,
-        'xs': $eds-size-font-xs
-      ),
-      'line-height': (
-        'h1': $eds-size-line-height-h1,
-        'h2': $eds-size-line-height-h2,
-        'h3': $eds-size-line-height-h3,
-        'h4': $eds-size-line-height-h4,
-        'h5': $eds-size-line-height-h5,
-        'body': $eds-size-line-height-body,
-        'sm': $eds-size-line-height-sm,
-        'xs': $eds-size-line-height-xs
-      )
+    'font-family': (
+      'primary': $eds-font-family-primary,
+      'secondary': $eds-font-family-secondary
+    ),
+    'font-size': (
+      '11': $eds-font-size-11,
+      '12': $eds-font-size-12,
+      '14': $eds-font-size-14,
+      '16': $eds-font-size-16,
+      '18': $eds-font-size-18,
+      '24': $eds-font-size-24,
+      '32': $eds-font-size-32,
+      '40': $eds-font-size-40,
+      'base': $eds-font-size-base
+    ),
+    'font-weight': (
+      'light': $eds-font-weight-light,
+      'medium': $eds-font-weight-medium,
+      'bold': $eds-font-weight-bold
+    ),
+    'letter-spacing': (
+      'sm': $eds-letter-spacing-sm
     )
   ),
   'legacy': (
@@ -338,7 +335,6 @@ $tokens: (
       'font': (
         'h1': $legacy-size-font-h1,
         'h2': $legacy-size-font-h2,
-        'base': $legacy-size-font-base,
         'body': $legacy-size-font-body,
         'sm': $legacy-size-font-sm,
         'xs': $legacy-size-font-xs

@@ -1727,6 +1727,7 @@ __metadata:
     postcss: ^8.4.12
     postcss-cli: ^9.1.0
     postcss-import: ^14.0.2
+    postcss-mixins: ^9.0.2
     postcss-nested: ^5.0.6
     prettier: ^2.5.1
     react: ^16.14.0
@@ -15930,6 +15931,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"postcss-js@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "postcss-js@npm:4.0.0"
+  dependencies:
+    camelcase-css: ^2.0.1
+  peerDependencies:
+    postcss: ^8.3.3
+  checksum: 14be8a58670b4c5d037d40f179240a4f736d53530db727e2635638fa296bc4bff18149ca860928398aace422e55d07c9f5729eeccd395340944985199cdc82a5
+  languageName: node
+  linkType: hard
+
 "postcss-load-config@npm:^3.0.0, postcss-load-config@npm:^3.1.0":
   version: 3.1.3
   resolution: "postcss-load-config@npm:3.1.3"
@@ -16039,6 +16051,20 @@ __metadata:
   peerDependencies:
     postcss: ^8.2.15
   checksum: 2b074bb0a8e60a28b1e441d47619357910ce8cad9719b6c46cfe3b370e1e7cf3713d35fb2b7a1a7a73a5f37a94786d406731578020354ff0c16f2809c4cc0dbb
+  languageName: node
+  linkType: hard
+
+"postcss-mixins@npm:^9.0.2":
+  version: 9.0.2
+  resolution: "postcss-mixins@npm:9.0.2"
+  dependencies:
+    fast-glob: ^3.2.11
+    postcss-js: ^4.0.0
+    postcss-simple-vars: ^6.0.3
+    sugarss: ^4.0.1
+  peerDependencies:
+    postcss: ^8.2.14
+  checksum: f654ed4d936120fed605f2d60861f7e1b1100b78e8e04949f1815d2efc3faffe5e0b99474103c51d1e188b087e3f9f6bcdfcbcf0b35bcee5ac5ceb4532989991
   languageName: node
   linkType: hard
 
@@ -16317,6 +16343,15 @@ __metadata:
     cssesc: ^3.0.0
     util-deprecate: ^1.0.2
   checksum: f8161ab4d3e5c76b8467189c6d164ba0f6b6e74677435f29e34caa1df01e052b582b4ae4f7468b2243c4befdd8bdcdb7685542d1b2fca8deae21b3e849c78802
+  languageName: node
+  linkType: hard
+
+"postcss-simple-vars@npm:^6.0.3":
+  version: 6.0.3
+  resolution: "postcss-simple-vars@npm:6.0.3"
+  peerDependencies:
+    postcss: ^8.2.1
+  checksum: 66fd71dc8fc76fc994595132d3476ab37e8c691b69730b117bbd89e0a4c92ee195328f02f1fe3ca7019f413c4b53a1ef30108c802190f6b572e78c55cb9ee349
   languageName: node
   linkType: hard
 
@@ -19047,6 +19082,15 @@ __metadata:
   bin:
     stylelint: bin/stylelint.js
   checksum: 5fadb61263e003fe791d6c8a31c48825e015a5fee909b0a484baad8d4a46622425409f18d2734a01e91405c825a5b3ccad943ed2298cd4f7df4a0a605c4d0292
+  languageName: node
+  linkType: hard
+
+"sugarss@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "sugarss@npm:4.0.1"
+  peerDependencies:
+    postcss: ^8.3.3
+  checksum: 9dd4c89fd00d885e415f74759e02f477b2cc5ab833935124e23ed26e07adbb9319afa3cb15d050aa65f4c8d78a0ca87b03efbf96eb12ba333469cbdb6ddb0f7d
   languageName: node
   linkType: hard
 
