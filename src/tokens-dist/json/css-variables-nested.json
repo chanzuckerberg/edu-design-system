@@ -194,7 +194,8 @@
       "18": "var(--eds-font-size-18)",
       "24": "var(--eds-font-size-24)",
       "32": "var(--eds-font-size-32)",
-      "40": "var(--eds-font-size-40)"
+      "40": "var(--eds-font-size-40)",
+      "base": "var(--eds-font-size-base)"
     },
     "font-weight": {
       "light": "var(--eds-font-weight-light)",
@@ -720,6 +721,21 @@
         "200": "var(--legacy-color-purple-200)",
         "300": "var(--legacy-color-purple-300)",
         "400": "var(--legacy-color-purple-400)"
+      }
+    },
+    "size": {
+      "font": {
+        "h1": "var(--legacy-size-font-h1)",
+        "h2": "var(--legacy-size-font-h2)",
+        "body": "var(--legacy-size-font-body)",
+        "sm": "var(--legacy-size-font-sm)",
+        "xs": "var(--legacy-size-font-xs)"
+      },
+      "line-height": {
+        "h1": "var(--legacy-size-line-height-h1)",
+        "body": "var(--legacy-size-line-height-body)",
+        "sm": "var(--legacy-size-line-height-sm)",
+        "xs": "var(--legacy-size-line-height-xs)"
       }
     }
   }

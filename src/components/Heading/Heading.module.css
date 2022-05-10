@@ -15,6 +15,32 @@
   margin-bottom: 0;
 }
 
+/* New type ramp sizes */
+.heading--size-headline-lg {
+  @mixin eds-theme-typography-headline-lg;
+}
+
+.heading--size-headline-md {
+  @mixin eds-theme-typography-headline-md;
+}
+
+.heading--size-headline-sm {
+  @mixin eds-theme-typography-headline-sm;
+}
+
+.heading--size-title-md {
+  @mixin eds-theme-typography-title-md;
+}
+
+.heading--size-title-sm {
+  @mixin eds-theme-typography-title-sm;
+}
+
+/* Not in Figma yet */
+.heading--size-body-sm {
+  @mixin eds-theme-typography-body-text-sm-bold;
+}
+
 /**
  * Heading sizes, correlate to similar numerically named typography token.
  */

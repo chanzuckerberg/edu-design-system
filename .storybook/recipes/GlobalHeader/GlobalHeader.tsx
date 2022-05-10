@@ -122,7 +122,7 @@ export const GlobalHeader = ({ className, ...other }: Props) => {
                 </Button>
               }
             >
-              <Heading as="h3" id="popover-heading-1" size="h6">
+              <Heading as="h3" id="popover-heading-1" size="body-sm">
                 Notifications (4)
               </Heading>
             </PopoverHeader>
@@ -154,7 +154,7 @@ export const GlobalHeader = ({ className, ...other }: Props) => {
                 ></NotificationListItem>
               </NotificationList>
               <PopoverHeader>
-                <Heading as="h3" id="popover-heading-2" size="h6">
+                <Heading as="h3" id="popover-heading-2" size="body-sm">
                   Already Seen
                 </Heading>
               </PopoverHeader>
