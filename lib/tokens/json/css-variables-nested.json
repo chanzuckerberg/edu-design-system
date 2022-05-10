@@ -1,6 +1,26 @@
 {
   "eds": {
     "color": {
+      "brand": {
+        "100": "var(--eds-color-brand-100)",
+        "200": "var(--eds-color-brand-200)",
+        "300": "var(--eds-color-brand-300)",
+        "400": "var(--eds-color-brand-400)",
+        "500": "var(--eds-color-brand-500)",
+        "600": "var(--eds-color-brand-600)",
+        "700": "var(--eds-color-brand-700)",
+        "800": "var(--eds-color-brand-800)",
+        "grape": {
+          "100": "var(--eds-color-brand-grape-100)",
+          "200": "var(--eds-color-brand-grape-200)",
+          "300": "var(--eds-color-brand-grape-300)",
+          "400": "var(--eds-color-brand-grape-400)",
+          "500": "var(--eds-color-brand-grape-500)",
+          "600": "var(--eds-color-brand-grape-600)",
+          "700": "var(--eds-color-brand-grape-700)",
+          "800": "var(--eds-color-brand-grape-800)"
+        }
+      },
       "neutral": {
         "100": "var(--eds-color-neutral-100)",
         "200": "var(--eds-color-neutral-200)",
@@ -8,7 +28,53 @@
         "400": "var(--eds-color-neutral-400)",
         "500": "var(--eds-color-neutral-500)",
         "600": "var(--eds-color-neutral-600)",
-        "700": "var(--eds-color-neutral-700)"
+        "700": "var(--eds-color-neutral-700)",
+        "800": "var(--eds-color-neutral-800)",
+        "white": "var(--eds-color-neutral-white)",
+        "black": "var(--eds-color-neutral-black)"
+      },
+      "other": {
+        "mint": {
+          "100": "var(--eds-color-other-mint-100)",
+          "200": "var(--eds-color-other-mint-200)",
+          "300": "var(--eds-color-other-mint-300)",
+          "400": "var(--eds-color-other-mint-400)",
+          "500": "var(--eds-color-other-mint-500)",
+          "600": "var(--eds-color-other-mint-600)",
+          "700": "var(--eds-color-other-mint-700)",
+          "800": "var(--eds-color-other-mint-800)"
+        },
+        "yellow": {
+          "100": "var(--eds-color-other-yellow-100)",
+          "200": "var(--eds-color-other-yellow-200)",
+          "300": "var(--eds-color-other-yellow-300)",
+          "400": "var(--eds-color-other-yellow-400)",
+          "500": "var(--eds-color-other-yellow-500)",
+          "600": "var(--eds-color-other-yellow-600)",
+          "700": "var(--eds-color-other-yellow-700)",
+          "800": "var(--eds-color-other-yellow-800)"
+        },
+        "lemon": "var(--eds-color-other-lemon)",
+        "orange": {
+          "100": "var(--eds-color-other-orange-100)",
+          "200": "var(--eds-color-other-orange-200)",
+          "300": "var(--eds-color-other-orange-300)",
+          "400": "var(--eds-color-other-orange-400)",
+          "500": "var(--eds-color-other-orange-500)",
+          "600": "var(--eds-color-other-orange-600)",
+          "700": "var(--eds-color-other-orange-700)",
+          "800": "var(--eds-color-other-orange-800)"
+        },
+        "ruby": {
+          "100": "var(--eds-color-other-ruby-100)",
+          "200": "var(--eds-color-other-ruby-200)",
+          "300": "var(--eds-color-other-ruby-300)",
+          "400": "var(--eds-color-other-ruby-400)",
+          "500": "var(--eds-color-other-ruby-500)",
+          "600": "var(--eds-color-other-ruby-600)",
+          "700": "var(--eds-color-other-ruby-700)",
+          "800": "var(--eds-color-other-ruby-800)"
+        }
       },
       "white": "var(--eds-color-white)",
       "black": "var(--eds-color-black)",
@@ -50,16 +116,6 @@
         "600": "var(--eds-color-warning-600)",
         "700": "var(--eds-color-warning-700)",
         "800": "var(--eds-color-warning-800)"
-      },
-      "brand": {
-        "100": "var(--eds-color-brand-100)",
-        "200": "var(--eds-color-brand-200)",
-        "300": "var(--eds-color-brand-300)",
-        "400": "var(--eds-color-brand-400)",
-        "500": "var(--eds-color-brand-500)",
-        "600": "var(--eds-color-brand-600)",
-        "700": "var(--eds-color-brand-700)",
-        "800": "var(--eds-color-brand-800)"
       },
       "yellow": {
         "100": "var(--eds-color-yellow-100)",

@@ -13,28 +13,20 @@ import styles from "./tokens.module.css";
 
 <!-- Returns an object mapping all shades for a given color to hex values -->
 
-export const getTokensForColor = (color) => {
-  const maybeNestedKeys = color.split("-");
-  // Each "-" separator corresponds to an extra level of nesting in variables-nested.json
-  // For example, the tokens for color "grading-yellow" would be stored under
-  // "grading": {
-  //   "yellow": { ...tokens }
-  // }
-  // This will index in another level for each colorKey separated by "-"
-  // and return the innermost object with the color tokens
-  return maybeNestedKeys.reduce((tokenObject, nextColorKey) => {
-    return tokenObject[nextColorKey];
-  }, tokens.eds.color);
-};
-
 export const mapEDSColorToTokenArray = (color) => {
-  const colorTokens = getTokensForColor(color);
-  return Object.keys(colorTokens)
-    .sort((shade1, shade2) => shade1.localeCompare(shade2))
-    .map((shade) => ({
-      name: `eds-color-${color}-${shade}`,
-      value: colorTokens[shade],
-    }));
+  const colorTokens = tokens.eds.color[color];
+  return (
+    Object.keys(colorTokens)
+      // Don't display new color tokens or neutral-800 shade for now
+      .filter(
+        (shade) => !isNaN(shade) && !(color === "neutral" && shade === "800"),
+      )
+      .sort((shade1, shade2) => shade1.localeCompare(shade2))
+      .map((shade) => ({
+        name: `eds-color-${color}-${shade}`,
+        value: colorTokens[shade],
+      }))
+  );
 };
 
 <TokenTable
