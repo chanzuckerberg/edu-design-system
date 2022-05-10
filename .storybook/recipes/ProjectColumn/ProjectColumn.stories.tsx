@@ -11,7 +11,7 @@ import {
   Card,
   CardBody,
 } from '../../../src';
-import utilityStyles from '../../../src/components/Utilities/Spacing.module.css';
+import '../../../src/components/Utilities/Spacing.css';
 import { Toolbar } from '../../../src/upcoming-components/Toolbar/Toolbar';
 import { ToolbarItem } from '../../../src/upcoming-components/ToolbarItem/ToolbarItem';
 
@@ -39,11 +39,7 @@ const Template: Story<Props> = (args) => (
       <GridItem>
         <Card>
           <CardBody>
-            <Heading
-              as="h3"
-              className={utilityStyles['u-margin-bottom-sm']}
-              size="h6"
-            >
+            <Heading as="h3" className="u-margin-bottom-sm" size="h6">
               Longer project name truncation after a long...
             </Heading>
             <div className="fpo u-margin-none">Calendar Icon text</div>
@@ -53,11 +49,7 @@ const Template: Story<Props> = (args) => (
       <GridItem>
         <Card>
           <CardBody>
-            <Heading
-              as="h3"
-              className={utilityStyles['u-margin-bottom-sm']}
-              size="h6"
-            >
+            <Heading as="h3" className="u-margin-bottom-sm" size="h6">
               Project name
             </Heading>
             <div className="fpo u-margin-none">12 days</div>
@@ -67,11 +59,7 @@ const Template: Story<Props> = (args) => (
       <GridItem>
         <Card>
           <CardBody>
-            <Heading
-              as="h3"
-              className={utilityStyles['u-margin-bottom-sm']}
-              size="h6"
-            >
+            <Heading as="h3" className="u-margin-bottom-sm" size="h6">
               Project name
             </Heading>
             <div className="fpo u-margin-none">12 days</div>
@@ -81,11 +69,7 @@ const Template: Story<Props> = (args) => (
       <GridItem>
         <Card>
           <CardBody>
-            <Heading
-              as="h3"
-              className={utilityStyles['u-margin-bottom-sm']}
-              size="h6"
-            >
+            <Heading as="h3" className="u-margin-bottom-sm" size="h6">
               Project name
             </Heading>
             <div className="fpo u-margin-none">12 days</div>
@@ -95,11 +79,7 @@ const Template: Story<Props> = (args) => (
       <GridItem>
         <Card>
           <CardBody>
-            <Heading
-              as="h3"
-              className={utilityStyles['u-margin-bottom-sm']}
-              size="h6"
-            >
+            <Heading as="h3" className="u-margin-bottom-sm" size="h6">
               Project name
             </Heading>
             <div className="fpo u-margin-none">12 days</div>
@@ -109,11 +89,7 @@ const Template: Story<Props> = (args) => (
       <GridItem>
         <Card>
           <CardBody>
-            <Heading
-              as="h3"
-              className={utilityStyles['u-margin-bottom-sm']}
-              size="h6"
-            >
+            <Heading as="h3" className="u-margin-bottom-sm" size="h6">
               Project name
             </Heading>
             <div className="fpo u-margin-none">12 days</div>
