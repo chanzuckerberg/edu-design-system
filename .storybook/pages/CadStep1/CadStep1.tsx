@@ -15,7 +15,7 @@ import {
   Text,
 } from '../../../src';
 
-import utilityStyles from '../../../src/components/Utilities/Spacing.module.css';
+import '../../../src/components/Utilities/Spacing.css';
 import '../../../src/components/Utilities/TypographyUsage.css';
 
 export const CadStep1 = () => (
@@ -23,7 +23,7 @@ export const CadStep1 = () => (
     <Panel variant="squared">
       <LayoutContainer>
         <PageHeader
-          className={utilityStyles['u-margin-bottom-none']}
+          className="u-margin-bottom-none"
           description={
             <HorizontalStepper
               activeIndex={0}
@@ -79,7 +79,7 @@ export const CadStep1 = () => (
             If you teach multiple sections of this course, you can enter the
             average amounts for each question below.
           </Text>
-          <div className={utilityStyles['u-margin-bottom-lg']}>
+          <div className="u-margin-bottom-lg">
             <label
               className="u-theme-typography-body-text-lg"
               htmlFor="class-per-week-input"
