@@ -1,6 +1,6 @@
 const StyleDictionary = require("style-dictionary");
 const EDSStyleDictionary = StyleDictionary.extend({
-  source: ["src/design-tokens/**/*.json", "src/tokens/**/*.json"],
+  source: ["src/design-tokens/**/*.json"],
   platforms: {
     scss: {
       transforms: [...StyleDictionary.transformGroup.scss, "name/cti/kebab"],

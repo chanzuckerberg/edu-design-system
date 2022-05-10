@@ -12,7 +12,9 @@
           "tailwind",
           "components",
           "utilities",
-          "screen"
+          "screen",
+          "define-mixin",
+          "mixin"
         ]
       }
     ],

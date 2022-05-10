@@ -1,39 +1,66 @@
-/**
- * HEADING
- */
+@import '../../design-tokens/tier-2-usage/typography-usage.css';
+
+/*------------------------------------*\
+    #HEADING
+\*------------------------------------*/
 
 /**
- * 1) Needs `:where` pseudoclass to reduce specificity so Tailwind and other class overrides 
+ * Remove top and bottom margins applied by browser for headings.
+ * 1) Needs `:where` pseudoclass to reduce specificity so class overrides 
  *    for margin can happen where used.
  */
-:where(.heading) { /* 1 */
-  @apply mt-0 mb-0;
+:where(.heading) {
+  /* 1 */
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-/* sizes */
+/* New type ramp sizes */
+.heading--size-headline-lg {
+  @mixin eds-theme-typography-headline-lg;
+}
+
+.heading--size-headline-md {
+  @mixin eds-theme-typography-headline-md;
+}
+
+.heading--size-headline-sm {
+  @mixin eds-theme-typography-headline-sm;
+}
+
+.heading--size-title-md {
+  @mixin eds-theme-typography-title-md;
+}
+
+.heading--size-title-sm {
+  @mixin eds-theme-typography-title-sm;
+}
+
+/**
+ * Heading sizes, correlate to similar numerically named typography token.
+ */
 .heading--size-h1 {
-  @apply text-h1 font-bold;
+  @mixin eds-theme-typography-heading-1;
 }
 
 .heading--size-h2 {
-  @apply text-h2 font-bold;
+  @mixin eds-theme-typography-heading-2;
 }
 
 .heading--size-h3 {
-  @apply text-h3 font-bold;
+  @mixin eds-theme-typography-heading-3;
 }
 
 .heading--size-h4 {
-  @apply text-h4 font-bold;
+  @mixin eds-theme-typography-heading-4;
 }
 
 .heading--size-h5 {
-  @apply text-h5 font-bold;
+  @mixin eds-theme-typography-heading-5;
 }
 
-/* TODO: Doesn't exist yet */
 .heading--size-h6 {
-  @apply text-h5 font-bold;
+  @mixin eds-theme-typography-heading-6;
 }
 
 /* Color Variants */

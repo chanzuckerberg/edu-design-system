@@ -130,28 +130,28 @@
         "600": "var(--eds-color-highlight-600)"
       }
     },
-    "size": {
-      "font": {
-        "h1": "var(--eds-size-font-h1)",
-        "h2": "var(--eds-size-font-h2)",
-        "h3": "var(--eds-size-font-h3)",
-        "h4": "var(--eds-size-font-h4)",
-        "h5": "var(--eds-size-font-h5)",
-        "base": "var(--eds-size-font-base)",
-        "body": "var(--eds-size-font-body)",
-        "sm": "var(--eds-size-font-sm)",
-        "xs": "var(--eds-size-font-xs)"
-      },
-      "line-height": {
-        "h1": "var(--eds-size-line-height-h1)",
-        "h2": "var(--eds-size-line-height-h2)",
-        "h3": "var(--eds-size-line-height-h3)",
-        "h4": "var(--eds-size-line-height-h4)",
-        "h5": "var(--eds-size-line-height-h5)",
-        "body": "var(--eds-size-line-height-body)",
-        "sm": "var(--eds-size-line-height-sm)",
-        "xs": "var(--eds-size-line-height-xs)"
-      }
+    "font-family": {
+      "primary": "var(--eds-font-family-primary)",
+      "secondary": "var(--eds-font-family-secondary)"
+    },
+    "font-size": {
+      "11": "var(--eds-font-size-11)",
+      "12": "var(--eds-font-size-12)",
+      "14": "var(--eds-font-size-14)",
+      "16": "var(--eds-font-size-16)",
+      "18": "var(--eds-font-size-18)",
+      "24": "var(--eds-font-size-24)",
+      "32": "var(--eds-font-size-32)",
+      "40": "var(--eds-font-size-40)",
+      "base": "var(--eds-font-size-base)"
+    },
+    "font-weight": {
+      "light": "var(--eds-font-weight-light)",
+      "medium": "var(--eds-font-weight-medium)",
+      "bold": "var(--eds-font-weight-bold)"
+    },
+    "letter-spacing": {
+      "sm": "var(--eds-letter-spacing-sm)"
     }
   },
   "legacy": {
@@ -190,7 +190,6 @@
       "font": {
         "h1": "var(--legacy-size-font-h1)",
         "h2": "var(--legacy-size-font-h2)",
-        "base": "var(--legacy-size-font-base)",
         "body": "var(--legacy-size-font-body)",
         "sm": "var(--legacy-size-font-sm)",
         "xs": "var(--legacy-size-font-xs)"
