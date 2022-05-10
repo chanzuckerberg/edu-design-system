@@ -133,7 +133,7 @@ $eds-size-base-unit: 0.5rem !default;
 $eds-size-half: 0.25rem !default;
 $eds-size-1-and-half: 0.75rem !default;
 $eds-size-2-and-half: 1.25rem !default;
-$eds-font-family-primary: 'Open Sans', sans-serif !default;
+$eds-font-family-primary: 'Arimo', sans-serif !default;
 $eds-font-family-secondary: 'Open Sans', sans-serif !default;
 $eds-font-size-11: 0.688rem !default;
 $eds-font-size-12: 0.75rem !default;
@@ -143,6 +143,7 @@ $eds-font-size-18: 1.125rem !default;
 $eds-font-size-24: 1.5rem !default;
 $eds-font-size-32: 2rem !default;
 $eds-font-size-40: 2.5rem !default;
+$eds-font-size-base: 16px !default; // Base font size for design system in px
 $eds-font-weight-light: 400 !default;
 $eds-font-weight-medium: 500 !default;
 $eds-font-weight-bold: 600 !default;
@@ -399,6 +400,15 @@ $legacy-color-yellow-400: #644C1F !default;
 $legacy-color-purple-200: #7686D3 !default;
 $legacy-color-purple-300: #5761BA !default;
 $legacy-color-purple-400: #32417C !default;
+$legacy-size-font-h1: 1.5rem !default;
+$legacy-size-font-h2: 1.125rem !default;
+$legacy-size-font-body: 1rem !default;
+$legacy-size-font-sm: 0.875rem !default;
+$legacy-size-font-xs: 0.75rem !default;
+$legacy-size-line-height-h1: 2rem !default;
+$legacy-size-line-height-body: 1.5rem !default;
+$legacy-size-line-height-sm: 1.25rem !default;
+$legacy-size-line-height-xs: 1rem !default;
 
 $tokens: (
   'eds': (
@@ -596,7 +606,8 @@ $tokens: (
       '18': $eds-font-size-18,
       '24': $eds-font-size-24,
       '32': $eds-font-size-32,
-      '40': $eds-font-size-40
+      '40': $eds-font-size-40,
+      'base': $eds-font-size-base
     ),
     'font-weight': (
       'light': $eds-font-weight-light,
@@ -1122,6 +1133,21 @@ $tokens: (
         '200': $legacy-color-purple-200,
         '300': $legacy-color-purple-300,
         '400': $legacy-color-purple-400
+      )
+    ),
+    'size': (
+      'font': (
+        'h1': $legacy-size-font-h1,
+        'h2': $legacy-size-font-h2,
+        'body': $legacy-size-font-body,
+        'sm': $legacy-size-font-sm,
+        'xs': $legacy-size-font-xs
+      ),
+      'line-height': (
+        'h1': $legacy-size-line-height-h1,
+        'body': $legacy-size-line-height-body,
+        'sm': $legacy-size-line-height-sm,
+        'xs': $legacy-size-line-height-xs
       )
     )
   )

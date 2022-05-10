@@ -171,7 +171,7 @@ export const Banner = ({
       <div className={clsx(styles['banner__textAndAction'])}>
         <div className={clsx(styles['banner__textContent'])}>
           {title && (
-            <Heading as={titleAs} size="h5">
+            <Heading as={titleAs} size="title-sm">
               {title}
             </Heading>
           )}

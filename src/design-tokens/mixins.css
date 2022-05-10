@@ -7,17 +7,17 @@
 }
 
 @define-mixin textLink {
-  @mixin eds-theme-typography-body-text-md;
   font-size: inherit;
+  font-weight: var(--eds-font-weight-medium);
   line-height: inherit;
   text-transform: inherit;
 
   text-decoration: underline;
-  color: var(--eds-theme-color-text-link);
+  color: var(--eds-theme-color-text-link-default);
 
   &:hover,
   &:focus {
-    color: var(--eds-theme-color-text-link-hover);
+    color: var(--eds-theme-color-text-link-default-hover);
     text-decoration-thickness: 2px;
   }
 
@@ -27,7 +27,7 @@
 }
 
 @define-mixin TextLinkInverted {
-  @mixin eds-theme-typography-body-text-md;
+  @mixin textLink;
   color: var(--eds-theme-color-text-neutral-default-inverse);
 
   &:hover {

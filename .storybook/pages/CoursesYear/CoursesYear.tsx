@@ -7,7 +7,7 @@ export const CoursesYear: React.FC = () => (
   <PageShell>
     <PageHeader title="Year" />
     <Panel className="u-margin-bottom-md">
-      <Heading as="h2" size="h4">
+      <Heading as="h2" size="title-md">
         Get ready for your next mentoring check-in with Science Teacher.
       </Heading>
       <Button variant="primary">Begin Pre-Work</Button>

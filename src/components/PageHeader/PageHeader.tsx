@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import styles from './PageHeader.module.css';
-import Heading from '../Heading';
+import Heading, { HeadingSize } from '../Heading';
 
 export interface Props {
   /**
@@ -28,7 +28,7 @@ export interface Props {
   /**
    * Size property
    */
-  headingSize?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+  headingSize?: HeadingSize;
   /**
    * Page heading title text
    */

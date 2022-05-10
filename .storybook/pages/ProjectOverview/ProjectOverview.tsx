@@ -38,7 +38,7 @@ export const ProjectOverview = () => {
       />
       <ListDetail>
         <ListDetailPanel title="Overview" variant="success">
-          <Heading as="h2" className="u-margin-bottom-lg" size="h1">
+          <Heading as="h2" className="u-margin-bottom-lg" size="headline-lg">
             What is this Project About?
           </Heading>
           <TextPassage size="lg">
@@ -50,7 +50,7 @@ export const ProjectOverview = () => {
           <Button className="u-margin-bottom-lg" variant="link">
             See More
           </Button>
-          <Heading as="h3" className="u-margin-bottom-sm" size="h4">
+          <Heading as="h3" className="u-margin-bottom-sm" size="title-md">
             Essential Questions
           </Heading>
           <TextPassage className="u-margin-bottom-lg">
@@ -64,7 +64,7 @@ export const ProjectOverview = () => {
               <li>How are structures in the body organized?</li>
             </ul>
           </TextPassage>
-          <Heading as="h3" className="u-margin-bottom-sm" size="h4">
+          <Heading as="h3" className="u-margin-bottom-sm" size="title-md">
             Key Take Aways
           </Heading>
           <TextPassage className="u-margin-bottom-lg">
@@ -93,7 +93,7 @@ export const ProjectOverview = () => {
           >
             <Card>
               <CardBody>
-                <Heading as="h3" className="u-margin-bottom-sm" size="h4">
+                <Heading as="h3" className="u-margin-bottom-sm" size="title-md">
                   What Was Medieval Japan Like?
                 </Heading>
                 <TextPassage>
@@ -115,7 +115,7 @@ export const ProjectOverview = () => {
           >
             <Card className="u-margin-bottom-md">
               <CardBody>
-                <Heading as="h3" className="u-margin-bottom-sm" size="h4">
+                <Heading as="h3" className="u-margin-bottom-sm" size="title-md">
                   What Was Medieval Japan Like?
                 </Heading>
                 <TextPassage>
@@ -126,7 +126,7 @@ export const ProjectOverview = () => {
             </Card>
             <Card>
               <CardBody>
-                <Heading as="h3" className="u-margin-bottom-sm" size="h4">
+                <Heading as="h3" className="u-margin-bottom-sm" size="title-md">
                   What Was Medieval Japan Like?
                 </Heading>
                 <TextPassage>
