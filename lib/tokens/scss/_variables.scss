@@ -1,4 +1,20 @@
 
+$eds-color-brand-100: #F7F1FF !default;
+$eds-color-brand-200: #C3C0FE !default;
+$eds-color-brand-300: #A7A2FE !default;
+$eds-color-brand-400: #928CFF !default;
+$eds-color-brand-500: #766FFD !default;
+$eds-color-brand-600: #574EFF !default;
+$eds-color-brand-700: #433BDE !default;
+$eds-color-brand-800: #312B9E !default;
+$eds-color-brand-grape-100: #F7F1FF !default; // upcoming token, same as eds-color-brand-100
+$eds-color-brand-grape-200: #C3C0FE !default; // upcoming token, same as eds-color-brand-200
+$eds-color-brand-grape-300: #A7A2FE !default; // upcoming token, same as eds-color-brand-300
+$eds-color-brand-grape-400: #928CFF !default; // upcoming token, same as eds-color-brand-400
+$eds-color-brand-grape-500: #766FFD !default; // upcoming token, same as eds-color-brand-500
+$eds-color-brand-grape-600: #574EFF !default; // upcoming token, same as eds-color-brand-600
+$eds-color-brand-grape-700: #433BDE !default; // upcoming token, same as eds-color-brand-700
+$eds-color-brand-grape-800: #312B9E !default; // upcoming token, same as eds-color-brand-800
 $eds-color-neutral-100: #F3F3F3 !default;
 $eds-color-neutral-200: #E8E8E9 !default;
 $eds-color-neutral-300: #CAD1D8 !default;
@@ -6,6 +22,42 @@ $eds-color-neutral-400: #838C95 !default;
 $eds-color-neutral-500: #58636F !default;
 $eds-color-neutral-600: #3C444C !default;
 $eds-color-neutral-700: #21272D !default;
+$eds-color-neutral-800: #21272D !default;
+$eds-color-neutral-white: #FFFFFF !default; // upcoming token, same as eds-color-white
+$eds-color-neutral-black: #21272D !default; // upcoming token, same as eds-color-black
+$eds-color-other-mint-100: #ECFFF5 !default; // upcoming token, same as eds-color-success-100
+$eds-color-other-mint-200: #B7E9CE !default; // upcoming token, same as eds-color-success-200
+$eds-color-other-mint-300: #8FDCB3 !default; // upcoming token, same as eds-color-success-300
+$eds-color-other-mint-400: #59C88C !default; // upcoming token, same as eds-color-success-400
+$eds-color-other-mint-500: #00A66A !default; // upcoming token, same as eds-color-success-500
+$eds-color-other-mint-600: #008756 !default; // upcoming token, same as eds-color-success-600
+$eds-color-other-mint-700: #007349 !default; // upcoming token, same as eds-color-success-700
+$eds-color-other-mint-800: #005939 !default; // upcoming token, same as eds-color-success-800
+$eds-color-other-yellow-100: #FDF1D0 !default; // upcoming token, same as eds-color-yellow-100
+$eds-color-other-yellow-200: #FFEBB3 !default; // upcoming token
+$eds-color-other-yellow-300: #FFDD80 !default; // upcoming token
+$eds-color-other-yellow-400: #F7BE2D !default; // upcoming token
+$eds-color-other-yellow-500: #F79D2D !default; // upcoming token, same as eds-color-yellow-500
+$eds-color-other-yellow-600: #BF7300 !default; // upcoming token
+$eds-color-other-yellow-700: #9E5B03 !default; // upcoming token
+$eds-color-other-yellow-800: #854C03 !default; // upcoming token
+$eds-color-other-lemon: #FCFF00 !default; // upcoming token, same as eds-color-highlight-300
+$eds-color-other-orange-100: #FFF1E9 !default; // upcoming token, same as eds-color-warning-100
+$eds-color-other-orange-200: #FFCBA6 !default; // upcoming token, same as eds-color-warning-200
+$eds-color-other-orange-300: #FFB077 !default; // upcoming token, same as eds-color-warning-300
+$eds-color-other-orange-400: #F6924A !default; // upcoming token, same as eds-color-warning-400
+$eds-color-other-orange-500: #E06C00 !default; // upcoming token, same as eds-color-warning-500
+$eds-color-other-orange-600: #C64600 !default; // upcoming token, same as eds-color-warning-600
+$eds-color-other-orange-700: #AC3400 !default; // upcoming token, same as eds-color-warning-700
+$eds-color-other-orange-800: #852800 !default; // upcoming token, same as eds-color-warning-800
+$eds-color-other-ruby-100: #FFEBF0 !default; // upcoming token, same as eds-color-alert-100
+$eds-color-other-ruby-200: #FFCCD8 !default; // upcoming token, same as eds-color-alert-200
+$eds-color-other-ruby-300: #FB90B0 !default; // upcoming token, same as eds-color-alert-300
+$eds-color-other-ruby-400: #F76C96 !default; // upcoming token, same as eds-color-alert-400
+$eds-color-other-ruby-500: #F1497C !default; // upcoming token, same as eds-color-alert-500
+$eds-color-other-ruby-600: #D41E52 !default; // upcoming token, same as eds-color-alert-600
+$eds-color-other-ruby-700: #BD0044 !default; // upcoming token, same as eds-color-alert-700
+$eds-color-other-ruby-800: #8F0134 !default; // upcoming token, same as eds-color-alert-800
 $eds-color-white: #FFFFFF !default;
 $eds-color-black: #21272D !default;
 $eds-color-alert-100: #FFEBF0 !default;
@@ -39,14 +91,6 @@ $eds-color-warning-500: #E06C00 !default;
 $eds-color-warning-600: #C64600 !default;
 $eds-color-warning-700: #AC3400 !default;
 $eds-color-warning-800: #852800 !default;
-$eds-color-brand-100: #F7F1FF !default;
-$eds-color-brand-200: #C3C0FE !default;
-$eds-color-brand-300: #A7A2FE !default;
-$eds-color-brand-400: #928CFF !default;
-$eds-color-brand-500: #766FFD !default;
-$eds-color-brand-600: #574EFF !default;
-$eds-color-brand-700: #433BDE !default;
-$eds-color-brand-800: #312B9E !default;
 $eds-color-yellow-100: #FDF1D0 !default;
 $eds-color-yellow-500: #F79D2D !default;
 $eds-color-highlight-100: #FF9FEC !default;
@@ -105,6 +149,26 @@ $legacy-size-line-height-xs: 1rem !default; // Line height for xsmall body text
 $tokens: (
   'eds': (
     'color': (
+      'brand': (
+        '100': $eds-color-brand-100,
+        '200': $eds-color-brand-200,
+        '300': $eds-color-brand-300,
+        '400': $eds-color-brand-400,
+        '500': $eds-color-brand-500,
+        '600': $eds-color-brand-600,
+        '700': $eds-color-brand-700,
+        '800': $eds-color-brand-800,
+        'grape': (
+          '100': $eds-color-brand-grape-100,
+          '200': $eds-color-brand-grape-200,
+          '300': $eds-color-brand-grape-300,
+          '400': $eds-color-brand-grape-400,
+          '500': $eds-color-brand-grape-500,
+          '600': $eds-color-brand-grape-600,
+          '700': $eds-color-brand-grape-700,
+          '800': $eds-color-brand-grape-800
+        )
+      ),
       'neutral': (
         '100': $eds-color-neutral-100,
         '200': $eds-color-neutral-200,
@@ -112,7 +176,53 @@ $tokens: (
         '400': $eds-color-neutral-400,
         '500': $eds-color-neutral-500,
         '600': $eds-color-neutral-600,
-        '700': $eds-color-neutral-700
+        '700': $eds-color-neutral-700,
+        '800': $eds-color-neutral-800,
+        'white': $eds-color-neutral-white,
+        'black': $eds-color-neutral-black
+      ),
+      'other': (
+        'mint': (
+          '100': $eds-color-other-mint-100,
+          '200': $eds-color-other-mint-200,
+          '300': $eds-color-other-mint-300,
+          '400': $eds-color-other-mint-400,
+          '500': $eds-color-other-mint-500,
+          '600': $eds-color-other-mint-600,
+          '700': $eds-color-other-mint-700,
+          '800': $eds-color-other-mint-800
+        ),
+        'yellow': (
+          '100': $eds-color-other-yellow-100,
+          '200': $eds-color-other-yellow-200,
+          '300': $eds-color-other-yellow-300,
+          '400': $eds-color-other-yellow-400,
+          '500': $eds-color-other-yellow-500,
+          '600': $eds-color-other-yellow-600,
+          '700': $eds-color-other-yellow-700,
+          '800': $eds-color-other-yellow-800
+        ),
+        'lemon': $eds-color-other-lemon,
+        'orange': (
+          '100': $eds-color-other-orange-100,
+          '200': $eds-color-other-orange-200,
+          '300': $eds-color-other-orange-300,
+          '400': $eds-color-other-orange-400,
+          '500': $eds-color-other-orange-500,
+          '600': $eds-color-other-orange-600,
+          '700': $eds-color-other-orange-700,
+          '800': $eds-color-other-orange-800
+        ),
+        'ruby': (
+          '100': $eds-color-other-ruby-100,
+          '200': $eds-color-other-ruby-200,
+          '300': $eds-color-other-ruby-300,
+          '400': $eds-color-other-ruby-400,
+          '500': $eds-color-other-ruby-500,
+          '600': $eds-color-other-ruby-600,
+          '700': $eds-color-other-ruby-700,
+          '800': $eds-color-other-ruby-800
+        )
       ),
       'white': $eds-color-white,
       'black': $eds-color-black,
@@ -154,16 +264,6 @@ $tokens: (
         '600': $eds-color-warning-600,
         '700': $eds-color-warning-700,
         '800': $eds-color-warning-800
-      ),
-      'brand': (
-        '100': $eds-color-brand-100,
-        '200': $eds-color-brand-200,
-        '300': $eds-color-brand-300,
-        '400': $eds-color-brand-400,
-        '500': $eds-color-brand-500,
-        '600': $eds-color-brand-600,
-        '700': $eds-color-brand-700,
-        '800': $eds-color-brand-800
       ),
       'yellow': (
         '100': $eds-color-yellow-100,

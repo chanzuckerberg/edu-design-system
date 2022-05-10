@@ -1,4 +1,20 @@
 :root {
+  --eds-color-brand-100: #F7F1FF;
+  --eds-color-brand-200: #C3C0FE;
+  --eds-color-brand-300: #A7A2FE;
+  --eds-color-brand-400: #928CFF;
+  --eds-color-brand-500: #766FFD;
+  --eds-color-brand-600: #574EFF;
+  --eds-color-brand-700: #433BDE;
+  --eds-color-brand-800: #312B9E;
+  --eds-color-brand-grape-100: #F7F1FF; /* upcoming token, same as eds-color-brand-100 */
+  --eds-color-brand-grape-200: #C3C0FE; /* upcoming token, same as eds-color-brand-200 */
+  --eds-color-brand-grape-300: #A7A2FE; /* upcoming token, same as eds-color-brand-300 */
+  --eds-color-brand-grape-400: #928CFF; /* upcoming token, same as eds-color-brand-400 */
+  --eds-color-brand-grape-500: #766FFD; /* upcoming token, same as eds-color-brand-500 */
+  --eds-color-brand-grape-600: #574EFF; /* upcoming token, same as eds-color-brand-600 */
+  --eds-color-brand-grape-700: #433BDE; /* upcoming token, same as eds-color-brand-700 */
+  --eds-color-brand-grape-800: #312B9E; /* upcoming token, same as eds-color-brand-800 */
   --eds-color-neutral-100: #F3F3F3;
   --eds-color-neutral-200: #E8E8E9;
   --eds-color-neutral-300: #CAD1D8;
@@ -6,6 +22,42 @@
   --eds-color-neutral-500: #58636F;
   --eds-color-neutral-600: #3C444C;
   --eds-color-neutral-700: #21272D;
+  --eds-color-neutral-800: #21272D;
+  --eds-color-neutral-white: #FFFFFF; /* upcoming token, same as eds-color-white */
+  --eds-color-neutral-black: #21272D; /* upcoming token, same as eds-color-black */
+  --eds-color-other-mint-100: #ECFFF5; /* upcoming token, same as eds-color-success-100 */
+  --eds-color-other-mint-200: #B7E9CE; /* upcoming token, same as eds-color-success-200 */
+  --eds-color-other-mint-300: #8FDCB3; /* upcoming token, same as eds-color-success-300 */
+  --eds-color-other-mint-400: #59C88C; /* upcoming token, same as eds-color-success-400 */
+  --eds-color-other-mint-500: #00A66A; /* upcoming token, same as eds-color-success-500 */
+  --eds-color-other-mint-600: #008756; /* upcoming token, same as eds-color-success-600 */
+  --eds-color-other-mint-700: #007349; /* upcoming token, same as eds-color-success-700 */
+  --eds-color-other-mint-800: #005939; /* upcoming token, same as eds-color-success-800 */
+  --eds-color-other-yellow-100: #FDF1D0; /* upcoming token, same as eds-color-yellow-100 */
+  --eds-color-other-yellow-200: #FFEBB3; /* upcoming token */
+  --eds-color-other-yellow-300: #FFDD80; /* upcoming token */
+  --eds-color-other-yellow-400: #F7BE2D; /* upcoming token */
+  --eds-color-other-yellow-500: #F79D2D; /* upcoming token, same as eds-color-yellow-500 */
+  --eds-color-other-yellow-600: #BF7300; /* upcoming token */
+  --eds-color-other-yellow-700: #9E5B03; /* upcoming token */
+  --eds-color-other-yellow-800: #854C03; /* upcoming token */
+  --eds-color-other-lemon: #FCFF00; /* upcoming token, same as eds-color-highlight-300 */
+  --eds-color-other-orange-100: #FFF1E9; /* upcoming token, same as eds-color-warning-100 */
+  --eds-color-other-orange-200: #FFCBA6; /* upcoming token, same as eds-color-warning-200 */
+  --eds-color-other-orange-300: #FFB077; /* upcoming token, same as eds-color-warning-300 */
+  --eds-color-other-orange-400: #F6924A; /* upcoming token, same as eds-color-warning-400 */
+  --eds-color-other-orange-500: #E06C00; /* upcoming token, same as eds-color-warning-500 */
+  --eds-color-other-orange-600: #C64600; /* upcoming token, same as eds-color-warning-600 */
+  --eds-color-other-orange-700: #AC3400; /* upcoming token, same as eds-color-warning-700 */
+  --eds-color-other-orange-800: #852800; /* upcoming token, same as eds-color-warning-800 */
+  --eds-color-other-ruby-100: #FFEBF0; /* upcoming token, same as eds-color-alert-100 */
+  --eds-color-other-ruby-200: #FFCCD8; /* upcoming token, same as eds-color-alert-200 */
+  --eds-color-other-ruby-300: #FB90B0; /* upcoming token, same as eds-color-alert-300 */
+  --eds-color-other-ruby-400: #F76C96; /* upcoming token, same as eds-color-alert-400 */
+  --eds-color-other-ruby-500: #F1497C; /* upcoming token, same as eds-color-alert-500 */
+  --eds-color-other-ruby-600: #D41E52; /* upcoming token, same as eds-color-alert-600 */
+  --eds-color-other-ruby-700: #BD0044; /* upcoming token, same as eds-color-alert-700 */
+  --eds-color-other-ruby-800: #8F0134; /* upcoming token, same as eds-color-alert-800 */
   --eds-color-white: #FFFFFF;
   --eds-color-black: #21272D;
   --eds-color-alert-100: #FFEBF0;
@@ -39,14 +91,6 @@
   --eds-color-warning-600: #C64600;
   --eds-color-warning-700: #AC3400;
   --eds-color-warning-800: #852800;
-  --eds-color-brand-100: #F7F1FF;
-  --eds-color-brand-200: #C3C0FE;
-  --eds-color-brand-300: #A7A2FE;
-  --eds-color-brand-400: #928CFF;
-  --eds-color-brand-500: #766FFD;
-  --eds-color-brand-600: #574EFF;
-  --eds-color-brand-700: #433BDE;
-  --eds-color-brand-800: #312B9E;
   --eds-color-yellow-100: #FDF1D0;
   --eds-color-yellow-500: #F79D2D;
   --eds-color-highlight-100: #FF9FEC;
