@@ -1,5 +1,32 @@
 {
   "eds": {
+    "anim": {
+      "fade": {
+        "quick": "0.15s",
+        "long": "0.4s"
+      },
+      "move": {
+        "quick": "0.15s",
+        "medium": "0.3s",
+        "long": "0.4s"
+      },
+      "ease": "ease"
+    },
+    "border": {
+      "width": {
+        "sm": "1px",
+        "md": "2px",
+        "lg": "4px",
+        "xl": "8px"
+      },
+      "radius": {
+        "md": "4px",
+        "lg": "8px",
+        "xl": "20px",
+        "round": "50%",
+        "full": "9999px"
+      }
+    },
     "color": {
       "brand": {
         "100": "#F7F1FF",
@@ -130,6 +157,31 @@
         "600": "#CFC9FF"
       }
     },
+    "l": {
+      "max-width": "71.25rem",
+      "sidebar-width": "13.5rem",
+      "linelength-width": "36rem"
+    },
+    "box-shadow": {
+      "sm": "0px 1px 2px 1px rgba(0, 0, 0, 0.2)",
+      "md": "0px 0px 0px 1px var(--eds-color-neutral-200), 0px 2px 3px rgba(0, 0, 0, 0.02), 0px 4px 8px rgba(0, 0, 0, 0.08)"
+    },
+    "size": {
+      "1": "0.5rem",
+      "2": "1rem",
+      "3": "1.5rem",
+      "4": "2rem",
+      "5": "2.5rem",
+      "6": "3rem",
+      "7": "3.5rem",
+      "8": "4rem",
+      "9": "4.5rem",
+      "10": "5rem",
+      "base-unit": "0.5rem",
+      "half": "0.25rem",
+      "1-and-half": "0.75rem",
+      "2-and-half": "1.25rem"
+    },
     "font-family": {
       "primary": "'Arimo', sans-serif",
       "secondary": "'Open Sans', sans-serif"
@@ -152,6 +204,16 @@
     },
     "letter-spacing": {
       "sm": "0.5px"
+    },
+    "z-index": {
+      "0": "0",
+      "100": "100",
+      "200": "200",
+      "300": "300",
+      "400": "400",
+      "500": "500",
+      "top": "99999",
+      "bottom": "-100"
     }
   },
   "legacy": {
