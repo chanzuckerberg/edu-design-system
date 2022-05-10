@@ -39,22 +39,3 @@
   margin-right: var(--eds-size-1);
   fill: var(--eds-theme-color-icon-disabled);
 }
-
-/**
-* Horizontal Step Number
-* 1) Centers the number text in the circle.
-* 2) The circle part of the icon, made with borders and equal height and width.
-*/
-.horizontal-step__number {
-  /* 1 */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  /* 2 */
-  border: var(--eds-border-width-sm) solid
-    var(--eds-theme-color-icon-neutral-default-hover);
-  border-radius: var(--eds-border-radius-round);
-  height: var(--eds-size-3);
-  width: var(--eds-size-3);
-}
