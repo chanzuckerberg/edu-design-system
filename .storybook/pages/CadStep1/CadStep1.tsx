@@ -63,7 +63,11 @@ export const CadStep1 = () => (
           <div className="fpo">image</div>
         </LayoutSection>
         <LayoutSection region="main">
-          <Heading className={styles['right-section__heading']} size="h3">
+          <Heading
+            as="h2"
+            className={styles['right-section__heading']}
+            size="h3"
+          >
             Tell us how often your course meets.
           </Heading>
           <Text className={styles['right-section__text']} size="md">
