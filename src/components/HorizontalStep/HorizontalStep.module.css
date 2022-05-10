@@ -43,11 +43,16 @@
   fill: var(--eds-theme-color-icon-disabled);
 }
 
+/**
+ * Horizontal Step Text
+ * 1) Hides text for smaller screen sizes.
+ * 2) Hides overflow text with ellipsis.
+ */
 .horizontal-step__text {
-  display: none;
+  display: none; /* 1 */
   @media all and (min-width: $eds-bp-md) {
     display: inline;
-    white-space: nowrap;
+    white-space: nowrap; /* 2 */
     overflow: hidden;
     text-overflow: ellipsis;
   }

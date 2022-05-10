@@ -1,6 +1,10 @@
 /*------------------------------------*\
-    #SPACING UTILITY CLASSES
+    # CAD Step 1
 \*------------------------------------*/
+
+/**
+ * Page Layout
+ */
 .cad-step-1__layout {
   padding: var(--eds-size-2);
   @media all and (min-width: $eds-bp-md) {
@@ -8,35 +12,58 @@
   }
 }
 
+/**
+ * Page Layout Left Section
+ */
 .cad-step-1__left-section {
   @media all and (min-width: $eds-bp-md) {
     padding-right: var(--eds-size-10);
   }
 }
 
+/**
+ * Page Layout Left Section Heading
+ */
 .left-section__heading {
   margin-bottom: var(--eds-size-6);
 }
 
+/**
+ * Page Layout Left Section Texts
+ */
 .left-section__text {
   font-weight: var(--eds-font-weight-light);
   margin-bottom: var(--eds-size-6);
 }
 
+/**
+ * Page Layout Right Section Heading
+ */
 .right-section__heading {
   margin-bottom: var(--eds-size-6);
 }
 
+/**
+ * Page Layout Right Section Texts
+ */
 .right-section__text {
   font-weight: var(--eds-font-weight-light);
   margin-bottom: var(--eds-size-6);
 }
+
+/**
+ * Page Layout Right Section Input Container
+ */
 .right-section__input-container {
   height: var(--eds-size-5);
   display: flex;
   align-items: center;
   gap: var(--eds-size-3);
 }
+
+/**
+ * Page Layout Right Section Input
+ */
 .right-section__input-container > input {
   height: 100%;
   width: 9rem;
