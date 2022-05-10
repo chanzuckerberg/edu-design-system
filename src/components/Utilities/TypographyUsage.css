@@ -102,13 +102,6 @@
  */
 
 /**
- * Body text
- */
-.u-theme-typography-body-text {
-  @mixin eds-theme-typography-body-text-md;
-}
-
-/**
  * Body text bold
  */
 .u-theme-typography-body-text-bold {
@@ -116,26 +109,11 @@
 }
 
 /**
- * Body text sm
- * 1) Used for small body copy such as footnotes and fine print
- */
-/* .u-theme-typography-body-text-sm {
-  @mixin eds-theme-typography-body-text-sm;
-} */
-
-/**
  *  Body text sm bold
  */
 .u-theme-typography-body-text-sm-bold {
   @mixin eds-theme-typography-body-text-sm;
 }
-
-/**
- * Body text xs
- */
-/* .u-theme-typography-body-text-xs {
-  @mixin eds-theme-typography-body-text-xs;
-} */
 
 /**
  *  Body text xs bold
@@ -192,80 +170,3 @@
 .u-theme-typography-heading-6 {
   @mixin eds-theme-typography-heading-6;
 }
-
-/**
- * Kicker
- */
-/* .u-theme-typography-kicker {
-  @mixin eds-theme-typography-kicker;
-} */
-
-/**
- * Data heading
- */
-.u-theme-typography-data-heading {
-  @mixin eds-theme-typography-kicker-sm;
-}
-
-/**
- * Data heading sm
- */
-.u-theme-typography-data-heading-sm {
-  @mixin eds-theme-typography-data-heading-sm;
-}
-
-/**
- * Data text
- */
-.u-theme-typography-data-text {
-  @mixin eds-theme-typography-kicker-sm;
-}
-
-/**
- * Data text sm
- */
-.u-theme-typography-data-text-sm {
-  @mixin eds-theme-typography-data-text-sm;
-}
-
-/**
- * Form label
- */
-/* .u-theme-typography-form-label {
-  @mixin eds-theme-typography-form-label;
-} */
-
-/**
- * Form input
- */
-/* .u-theme-typography-form-input {
-  @mixin eds-theme-typography-form-input;
-} */
-
-/**
- * Small Button
- */
-.u-theme-typography-button-sm {
-  @mixin eds-theme-typography-button-label;
-}
-
-/**
- * Medium Button
- */
-.u-theme-typography-button-md {
-  @mixin eds-theme-typography-button-label;
-}
-
-/**
- * Large Button
- */
-.u-theme-typography-button-lg {
-  @mixin eds-theme-typography-button-label;
-}
-
-/**
- *  Tag
- */
-/* .u-theme-typography-tag {
-  @mixin eds-theme-typography-tag;
-} */

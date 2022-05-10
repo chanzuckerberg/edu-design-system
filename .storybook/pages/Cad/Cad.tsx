@@ -57,7 +57,7 @@ export const Cad = () => (
             <Heading
               as="h2"
               className={utilityStyles['u-margin-bottom-lg']}
-              size="h3"
+              size="headline-sm"
             >
               Select projects for your History 6 plan
             </Heading>
@@ -82,7 +82,7 @@ export const Cad = () => (
                         variant="bare"
                       >
                         <ToolbarItem>
-                          <Heading as="h2" size="h5">
+                          <Heading as="h2" size="title-sm">
                             Available projects
                           </Heading>
                         </ToolbarItem>
@@ -100,7 +100,7 @@ export const Cad = () => (
                               <Heading
                                 as="h3"
                                 className={utilityStyles['u-margin-bottom-sm']}
-                                size="h6"
+                                size="body-sm"
                               >
                                 Longer project name truncation after a long...
                               </Heading>
@@ -116,7 +116,7 @@ export const Cad = () => (
                               <Heading
                                 as="h3"
                                 className={utilityStyles['u-margin-bottom-sm']}
-                                size="h6"
+                                size="body-sm"
                               >
                                 Project name
                               </Heading>
@@ -130,7 +130,7 @@ export const Cad = () => (
                               <Heading
                                 as="h3"
                                 className={utilityStyles['u-margin-bottom-sm']}
-                                size="h6"
+                                size="body-sm"
                               >
                                 Project name
                               </Heading>
@@ -144,7 +144,7 @@ export const Cad = () => (
                               <Heading
                                 as="h3"
                                 className={utilityStyles['u-margin-bottom-sm']}
-                                size="h6"
+                                size="body-sm"
                               >
                                 Project name
                               </Heading>
@@ -158,7 +158,7 @@ export const Cad = () => (
                               <Heading
                                 as="h3"
                                 className={utilityStyles['u-margin-bottom-sm']}
-                                size="h6"
+                                size="body-sm"
                               >
                                 Project name
                               </Heading>
@@ -172,7 +172,7 @@ export const Cad = () => (
                               <Heading
                                 as="h3"
                                 className={utilityStyles['u-margin-bottom-sm']}
-                                size="h6"
+                                size="body-sm"
                               >
                                 Project name
                               </Heading>
@@ -190,7 +190,7 @@ export const Cad = () => (
                         variant="bare"
                       >
                         <ToolbarItem>
-                          <Heading as="h2" size="h5">
+                          <Heading as="h2" size="title-sm">
                             Planned projects
                           </Heading>
                         </ToolbarItem>
@@ -231,7 +231,7 @@ export const Cad = () => (
                 variant="bare"
               >
                 <ToolbarItem>
-                  <Heading as="h2" size="h5">
+                  <Heading as="h2" size="title-sm">
                     Total Instructional days
                   </Heading>
                 </ToolbarItem>
@@ -249,7 +249,7 @@ export const Cad = () => (
               variant="bare"
             >
               <ToolbarItem>
-                <Heading as="h2" size="h5">
+                <Heading as="h2" size="title-sm">
                   Standards coverage
                 </Heading>
               </ToolbarItem>

@@ -24,7 +24,7 @@ const Template: Story<Props> = (args) => (
   <ProjectColumn {...args}>
     <Toolbar variant="bare">
       <ToolbarItem>
-        <Heading as="h2" size="h5">
+        <Heading as="h2" size="title-sm">
           Available projects
         </Heading>
       </ToolbarItem>
@@ -42,7 +42,7 @@ const Template: Story<Props> = (args) => (
             <Heading
               as="h3"
               className={utilityStyles['u-margin-bottom-sm']}
-              size="h6"
+              size="body-sm"
             >
               Longer project name truncation after a long...
             </Heading>
@@ -56,7 +56,7 @@ const Template: Story<Props> = (args) => (
             <Heading
               as="h3"
               className={utilityStyles['u-margin-bottom-sm']}
-              size="h6"
+              size="body-sm"
             >
               Project name
             </Heading>
@@ -70,7 +70,7 @@ const Template: Story<Props> = (args) => (
             <Heading
               as="h3"
               className={utilityStyles['u-margin-bottom-sm']}
-              size="h6"
+              size="body-sm"
             >
               Project name
             </Heading>
@@ -84,7 +84,7 @@ const Template: Story<Props> = (args) => (
             <Heading
               as="h3"
               className={utilityStyles['u-margin-bottom-sm']}
-              size="h6"
+              size="body-sm"
             >
               Project name
             </Heading>
@@ -98,7 +98,7 @@ const Template: Story<Props> = (args) => (
             <Heading
               as="h3"
               className={utilityStyles['u-margin-bottom-sm']}
-              size="h6"
+              size="body-sm"
             >
               Project name
             </Heading>
@@ -112,7 +112,7 @@ const Template: Story<Props> = (args) => (
             <Heading
               as="h3"
               className={utilityStyles['u-margin-bottom-sm']}
-              size="h6"
+              size="body-sm"
             >
               Project name
             </Heading>

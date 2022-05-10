@@ -133,42 +133,6 @@ export class TypographyUsageUtilities extends Component {
         </p>
 
         <Hr />
-        <code>u-theme-typography-data-heading</code>
-        <p className="u-theme-typography-data-heading">
-          Door neat week do find past he. Be no surprise he honoured indulged.
-          Unpacked endeavor six steepest had husbands her. Painted no or affixed
-          it so civilly. Exposed neither pressed so cottage as proceed at
-          offices.
-        </p>
-
-        <Hr />
-        <code>u-theme-typography-data-heading-sm</code>
-        <p className="u-theme-typography-data-heading-sm">
-          Door neat week do find past he. Be no surprise he honoured indulged.
-          Unpacked endeavor six steepest had husbands her. Painted no or affixed
-          it so civilly. Exposed neither pressed so cottage as proceed at
-          offices.
-        </p>
-
-        <Hr />
-        <code>u-theme-typography-data-text</code>
-        <p className="u-theme-typography-data-text">
-          Door neat week do find past he. Be no surprise he honoured indulged.
-          Unpacked endeavor six steepest had husbands her. Painted no or affixed
-          it so civilly. Exposed neither pressed so cottage as proceed at
-          offices.
-        </p>
-
-        <Hr />
-        <code>u-theme-typography-data-text-sm</code>
-        <p className="u-theme-typography-data-text-sm">
-          Door neat week do find past he. Be no surprise he honoured indulged.
-          Unpacked endeavor six steepest had husbands her. Painted no or affixed
-          it so civilly. Exposed neither pressed so cottage as proceed at
-          offices.
-        </p>
-
-        <Hr />
         <code>u-theme-typography-form-label</code>
         <p className="u-theme-typography-form-label">
           Door neat week do find past he. Be no surprise he honoured indulged.
@@ -189,24 +153,6 @@ export class TypographyUsageUtilities extends Component {
         <Hr />
         <code>u-theme-typography-button</code>
         <p className="u-theme-typography-button">
-          Door neat week do find past he. Be no surprise he honoured indulged.
-          Unpacked endeavor six steepest had husbands her. Painted no or affixed
-          it so civilly. Exposed neither pressed so cottage as proceed at
-          offices.
-        </p>
-
-        <Hr />
-        <code>u-theme-typography-button-sm</code>
-        <p className="u-theme-typography-button-sm">
-          Door neat week do find past he. Be no surprise he honoured indulged.
-          Unpacked endeavor six steepest had husbands her. Painted no or affixed
-          it so civilly. Exposed neither pressed so cottage as proceed at
-          offices.
-        </p>
-
-        <Hr />
-        <code>u-theme-typography-button-lg</code>
-        <p className="u-theme-typography-button-lg">
           Door neat week do find past he. Be no surprise he honoured indulged.
           Unpacked endeavor six steepest had husbands her. Painted no or affixed
           it so civilly. Exposed neither pressed so cottage as proceed at

@@ -2,13 +2,17 @@
   "eds": {
     "font-family": {
       "primary": {
-        "value": "'Open Sans', sans-serif"
+        "value": "'Arimo', sans-serif"
       },
       "secondary": {
         "value": "'Open Sans', sans-serif"
       }
     },
     "font-size": {
+      "base": {
+        "value": "16px",
+        "comment": "Base font size for design system in px"
+      },
       "40": {
         "value": "2.5rem"
       },

@@ -41,7 +41,7 @@ export const ProjectOverview = () => {
           <Heading
             as="h2"
             className={utilityStyles['u-margin-bottom-lg']}
-            size="h1"
+            size="headline-lg"
           >
             What is this Project About?
           </Heading>
@@ -60,7 +60,7 @@ export const ProjectOverview = () => {
           <Heading
             as="h3"
             className={utilityStyles['u-margin-bottom-sm']}
-            size="h4"
+            size="title-md"
           >
             Essential Questions
           </Heading>
@@ -78,7 +78,7 @@ export const ProjectOverview = () => {
           <Heading
             as="h3"
             className={utilityStyles['u-margin-bottom-sm']}
-            size="h4"
+            size="title-md"
           >
             Key Take Aways
           </Heading>
@@ -111,7 +111,7 @@ export const ProjectOverview = () => {
                 <Heading
                   as="h3"
                   className={utilityStyles['u-margin-bottom-sm']}
-                  size="h4"
+                  size="title-md"
                 >
                   What Was Medieval Japan Like?
                 </Heading>
@@ -137,7 +137,7 @@ export const ProjectOverview = () => {
                 <Heading
                   as="h3"
                   className={utilityStyles['u-margin-bottom-sm']}
-                  size="h4"
+                  size="title-md"
                 >
                   What Was Medieval Japan Like?
                 </Heading>
@@ -152,7 +152,7 @@ export const ProjectOverview = () => {
                 <Heading
                   as="h3"
                   className={utilityStyles['u-margin-bottom-sm']}
-                  size="h4"
+                  size="title-md"
                 >
                   What Was Medieval Japan Like?
                 </Heading>
