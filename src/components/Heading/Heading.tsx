@@ -17,6 +17,18 @@ export const VARIANTS = [
 ] as const;
 export type Variant = typeof VARIANTS[number];
 export type HeadingElement = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+// For now, "h1"-"h6" sizes point to the old type ramp, while
+// design token sizes point to the new type ramp.
+// These will be brought in sync with the next major release.
+const TOKEN_TO_SIZE = {
+  'headline-lg': 'h1',
+  'headline-md': 'h2',
+  'headline-sm': 'h3',
+  'title-md': 'h4',
+  'title-sm': 'h5',
+  'body-sm': 'h6',
+};
+export type HeadingSize = HeadingElement | keyof typeof TOKEN_TO_SIZE;
 
 type Props = {
   /**
@@ -29,7 +41,7 @@ type Props = {
   as?: HeadingElement;
   children: React.ReactNode;
   className?: string;
-  size: HeadingElement;
+  size: HeadingSize;
   tabIndex?: number;
   variant?: Variant;
 } & React.HTMLAttributes<HTMLHeadingElement>;
@@ -61,7 +73,8 @@ export const Heading = forwardRef(
         'Info variant is deprecated and will be removed in an upcoming release. Please use the consider another variant instead.',
       );
     }
-    const TagName = as || size;
+    const computedSize = size in TOKEN_TO_SIZE ? TOKEN_TO_SIZE[size] : size;
+    const TagName = as || computedSize;
     const componentClassName = clsx(
       className,
       styles['heading'],

@@ -2,13 +2,17 @@
   "eds": {
     "font-family": {
       "primary": {
-        "value": "'Open Sans', sans-serif"
+        "value": "'Arimo', sans-serif"
       },
       "secondary": {
         "value": "'Open Sans', sans-serif"
       }
     },
     "font-size": {
+      "base": {
+        "value": "16px",
+        "comment": "Base font size for design system in px"
+      },
       "40": {
         "value": "2.5rem"
       },
@@ -48,6 +52,41 @@
     "letter-spacing": {
       "sm": {
         "value": "0.5px"
+      }
+    }
+  },
+  "legacy": {
+    "size": {
+      "font": {
+        "h1": {
+          "value": "1.5rem"
+        },
+        "h2": {
+          "value": "1.125rem"
+        },
+        "body": {
+          "value": "1rem"
+        },
+        "sm": {
+          "value": "0.875rem"
+        },
+        "xs": {
+          "value": "0.75rem"
+        }
+      },
+      "line-height": {
+        "h1": {
+          "value": "2rem"
+        },
+        "body": {
+          "value": "1.5rem"
+        },
+        "sm": {
+          "value": "1.25rem"
+        },
+        "xs": {
+          "value": "1rem"
+        }
       }
     }
   }
