@@ -22,13 +22,13 @@ import {
   D_ARROW_KEYCODE,
 } from '../../util/keycodes';
 import Icon from '../Icon';
-import ListDetailPanel from '../ListDetailPanel';
+import ListDetailPanel, { ListDetailPanelVariant } from '../ListDetailPanel';
 
 export interface Props {
   /**
    * The aria-labelledby attribute creates a relationship between the tab list and the tab panels
    */
-  ariaLabelledBy?: any;
+  ariaLabelledBy?: string;
   /**
    * Calls back with the active index
    */
@@ -44,15 +44,16 @@ export interface Props {
   /**
    * HTML id for the component
    */
-  id?: any;
+  id?: string;
   /**
    * Passed down to initially set the activeIndex state
    */
   activeIndex?: number;
   /**
    * The array of items to be passed into the component. The array must take on the specified shape
+   * TODO: improve `any` type
    */
-  items?: any;
+  items?: Array<any>;
   /**
    * Indicates that field is required for form to be successfully submitted
    */
@@ -85,7 +86,7 @@ export const ListDetail = ({
   className,
   children,
   variant,
-  activeIndex,
+  activeIndex = 0,
   listDetailOnClick,
   ariaLabelledBy,
   id,
@@ -98,7 +99,7 @@ export const ListDetail = ({
   /**
    * Initialize states, constants, and refs
    */
-  const ref = useRef();
+  const ref = useRef<number | undefined>();
   const [activeIndexState, setActiveIndexState] = useState(
     activeIndex ? activeIndex : 0,
   );
@@ -120,7 +121,7 @@ export const ListDetail = ({
    * Get previous prop
    * 1) This is used to compare the previous prop to the current prop
    */
-  function usePrevious(activeIndex: any) {
+  function usePrevious(activeIndex: number) {
     useEffect(() => {
       ref.current = activeIndex;
     });
@@ -149,12 +150,14 @@ export const ListDetail = ({
    */
   useEffect(() => {
     setId(
-      listDetailItems().map((item) =>
+      // TODO: improve `any` type
+      listDetailItems().map((item: any) =>
         item.props.id ? item.props.id : getUID(item),
       ),
     );
     setAriaLabelledBy(
-      listDetailItems().map((item) =>
+      // TODO: improve `any` type
+      listDetailItems().map((item: any) =>
         item.props.ariaLabelledBy ? item.props.ariaLabelledBy : getUID(item),
       ),
     );
@@ -165,7 +168,7 @@ export const ListDetail = ({
    * 1) On click of a tab, set activeIndexState to index of tab being clicked\
    * 2) If function is passed into onChange prop, run that on click
    */
-  function onOpen(index: any) {
+  function onOpen(index: number) {
     setActiveIndexState(index); /* 1 */
 
     if (onChange) {
@@ -180,10 +183,12 @@ export const ListDetail = ({
    * 2) Set active tab, next tab, and previous tab.
    * 3) If right or down arrow key keyed, focus on next tab.
    * 4) If left or up arrow key keyed, focus on the previous tab.
+   *
+   * TODO: improve `any` type
    */
   function onKeyDown(e: any) {
     let activeListDetailPanel = null;
-
+    // TODO: improve `any` type
     listDetailItemRefs.map((item: any) => {
       if (item.current === document.activeElement) {
         activeListDetailPanel = item;
@@ -210,10 +215,13 @@ export const ListDetail = ({
 
   const childrenWithProps = React.Children.map(
     listDetailItems(),
-    (child: any, i: any) => {
+    // TODO: improve `any` type
+    (child: any, i: number) => {
       // Checking isValidElement is the safe way and avoids a typescript
       // error too.
       if (React.isValidElement(child)) {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-expect-error TODO: fix "No overload matches this call" error
         return React.cloneElement<Props>(child, {
           id: idVar[i],
           ariaLabelledBy: ariaLabelledByVar[i],
@@ -224,7 +232,7 @@ export const ListDetail = ({
   );
   const componentClassName = clsx(styles['list-detail'], className, {});
 
-  const iconVariant = (itemVariant, i) => {
+  const iconVariant = (itemVariant: ListDetailPanelVariant, i: number) => {
     switch (itemVariant) {
       case 'success':
         return (
@@ -287,7 +295,8 @@ export const ListDetail = ({
           })}
           role="tablist"
         >
-          {listDetailItems().map((tab: any, i: any) => {
+          {/* TODO: improve `any` type */}
+          {listDetailItems().map((tab: any, i: number) => {
             const isActive = activeIndexState === i;
             const itemVariant = variant && tab.props.variant;
             return (

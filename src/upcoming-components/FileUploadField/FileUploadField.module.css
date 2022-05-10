@@ -1,0 +1,167 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #FILE UPLOAD FIELD
+\*------------------------------------*/
+
+/**
+ * 1) Consists of a label, form control, and an optional note about the field.
+ */
+.file-upload-field {
+  position: relative;
+}
+
+/**
+ * Text field body
+ */
+.file-upload-field__body {
+  position: relative;
+  margin-bottom: var(--eds-size-half);
+}
+
+/**
+ * Hit area
+ * 1) the area where users can drag files onto or click
+ *    to bring up the file explorer
+ */
+.file-upload-field__hit-area {
+  border: var(--eds-theme-border-width) dashed
+    var(--eds-theme-color-form-border);
+  padding: var(--eds-size-2);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    border-color: var(--eds-theme-color-form-input-border-hover);
+  }
+
+  &:focus,
+  &:focus-within {
+    border-color: var(--eds-theme-color-form-input-border-focus);
+  }
+
+  &.file-upload-field__hit-area--drag-over {
+    border-color: var(--eds-theme-color-form-input-border-focus);
+  }
+
+  /**
+   * Hit area within error state
+   */
+  .eds-is-error & {
+    border-color: var(--eds-theme-color-border-utility-error-strong);
+  }
+
+  /**
+   * Hit area within disabled field
+   */
+  .eds-is-disabled & {
+    border-color: var(--eds-theme-color-border-disabled);
+    background: var(--eds-theme-color-background-disabled);
+    color: var(--eds-theme-color-text-disabled);
+    cursor: not-allowed;
+
+    &.file-upload-field__hit-area--drag-over {
+      border-color: var(--eds-theme-color-disabled-border);
+    }
+  }
+}
+
+/**
+ * Label 
+ */
+.file-upload-field__label {
+  .eds-is-disabled & {
+    color: var(--eds-theme-color-text-disabled);
+  }
+}
+
+/**
+ * Label after
+ * 1) Slot after the label that can be used to place components like a tooltip
+ */
+.file-upload-field__label-after {
+  display: inherit;
+  margin-left: var(--eds-size-1);
+}
+
+/**
+ * Text field input
+ * 1) The actual form control
+ */
+.file-upload-field__input {
+  position: absolute;
+  z-index: var(--eds-z-index-200);
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  opacity: 0;
+  cursor: pointer;
+
+  .eds-is-disabled & {
+    cursor: not-allowed;
+  }
+}
+
+/**
+ * file-upload-field note
+ */
+.file-upload-field__note {
+  /**
+     * file-upload-field note within error state
+     * 1) Set to display flex to place icon next to the fieldnote
+     */
+  .eds-is-error & {
+    display: inline-flex;
+  }
+}
+
+/**
+ * file-upload-field button
+ */
+.file-upload-field__btn {
+  position: absolute;
+  top: 11px;
+  right: var(--eds-size-2);
+}
+
+/**
+ * file-upload-field icon
+ * 1) Icon that can be placed at the end of the text input
+ */
+.file-upload-field__icon {
+  position: absolute;
+  top: var(--eds-size-1-and-half);
+  right: var(--eds-size-2);
+}
+
+.file-upload-field__filelist {
+  margin-top: var(--eds-size-4);
+}
+
+.file-upload-field__filelist-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: var(--eds-size-1);
+  max-width: var(--l-max-width);
+
+  .file-upload-field__filelist-item-data {
+    margin-right: var(--eds-size-1);
+  }
+}
+
+.file-upload-field__filelist-item-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.file-upload-field__filelist-item-timestamp {
+  @media all and (max-width: $eds-bp-md) {
+    display: none;
+  }
+}

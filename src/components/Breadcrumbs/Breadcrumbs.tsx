@@ -21,7 +21,7 @@ export interface Props {
   /**
    * HTML id for the component
    */
-  id?: any;
+  id?: string;
 }
 
 /**

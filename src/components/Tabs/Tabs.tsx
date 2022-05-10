@@ -5,6 +5,7 @@ import React, {
   useState,
   useEffect,
   useCallback,
+  KeyboardEvent,
 } from 'react';
 import { allByType } from 'react-children-by-type';
 import { useUIDSeed } from 'react-uid';
@@ -21,7 +22,7 @@ export interface Props {
   /**
    * The aria-labelledby attribute creates a relationship between the tab list and the tab panels
    */
-  ariaLabelledBy?: any;
+  ariaLabelledBy?: string;
   /**
    * Calls back with the active index
    */
@@ -41,15 +42,16 @@ export interface Props {
   /**
    * HTML id for the component
    */
-  id?: any;
+  id?: string;
   /**
    * Passed down to initially set the activeIndex state
    */
   activeIndex?: number;
   /**
    * The array of items to be passed into the component. The array must take on the specified shape
+   * TODO: improve `any` type
    */
-  items?: any;
+  items?: Array<any>;
   /**
    * HTML radio tabs label text
    */
@@ -93,30 +95,28 @@ export interface Props {
  * Primary UI component for user interaction
  */
 export const Tabs = ({
-  className,
-  children,
-  radioLegend,
-  hideLegend,
-  size,
-  variant,
-  activeIndex,
-  tabsOnClick,
+  activeIndex = 0,
   ariaLabelledBy,
-  inverted,
-  radioLegendPosition,
+  children,
+  className,
+  hideLegend,
   id,
-  overflow,
+  inverted,
   onChange,
+  overflow,
+  radioLegend,
+  radioLegendPosition,
   required,
+  size,
+  tabsOnClick,
+  variant,
   ...other
 }: Props) => {
   /**
    * Initialize states, constants, and refs
    */
-  const ref = useRef();
-  const [activeIndexState, setActiveIndexState] = useState(
-    activeIndex ? activeIndex : 0,
-  );
+  const ref = useRef<number | undefined>();
+  const [activeIndexState, setActiveIndexState] = useState(activeIndex);
   /**
    * Set the only children components allowed within <Tabs> to be Tab
    */
@@ -135,7 +135,7 @@ export const Tabs = ({
    * Get previous prop
    * 1) This is used to compare the previous prop to the current prop
    */
-  function usePrevious(activeIndex: any) {
+  function usePrevious(activeIndex: number) {
     useEffect(() => {
       ref.current = activeIndex;
     });
@@ -163,9 +163,13 @@ export const Tabs = ({
    * Autogenerate ids on tabs if not defined.
    */
   useEffect(() => {
-    setId(tabs().map((tab) => (tab.props.id ? tab.props.id : getUID(tab))));
+    // TODO: improve `any` type
+    setId(
+      tabs().map((tab: any) => (tab.props.id ? tab.props.id : getUID(tab))),
+    );
+    // TODO: improve `any` type
     setAriaLabelledBy(
-      tabs().map((tab) =>
+      tabs().map((tab: any) =>
         tab.props.ariaLabelledBy ? tab.props.ariaLabelledBy : getUID(tab),
       ),
     );
@@ -176,7 +180,7 @@ export const Tabs = ({
    * 1) On click of a tab, set activeIndexState to index of tab being clicked\
    * 2) If function is passed into onChange prop, run that on click
    */
-  function onOpen(index: any) {
+  function onOpen(index: number) {
     setActiveIndexState(index); /* 1 */
 
     if (onChange) {
@@ -192,9 +196,10 @@ export const Tabs = ({
    * 3) If right or down arrow key keyed, focus on next tab.
    * 4) If left or up arrow key keyed, focus on the previous tab.
    */
-  function onKeyDown(e: any) {
+  function onKeyDown(e: KeyboardEvent<HTMLAnchorElement>) {
     let activeTab = null;
 
+    // TODO: improve `any` type
     tabRefs.map((item: any) => {
       if (item.current === document.activeElement) {
         activeTab = item;
@@ -223,23 +228,30 @@ export const Tabs = ({
     inverted && styles['tabs--inverted'],
   );
 
-  const childrenWithProps = React.Children.map(tabs(), (child: any, i: any) => {
-    // Checking isValidElement is the safe way and avoids a typescript
-    // error too.
-    if (React.isValidElement(child)) {
-      return React.cloneElement<Props>(child, {
-        id: idVar[i],
-        ariaLabelledBy: ariaLabelledByVar[i],
-      });
-    }
-    return child;
-  });
+  const childrenWithProps = React.Children.map(
+    tabs(),
+    // TODO: improve `any` type
+    (child: any, i: number) => {
+      // Checking isValidElement is the safe way and avoids a typescript
+      // error too.
+      if (React.isValidElement(child)) {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-expect-error TODO: fix "No overload matches this call" error
+        return React.cloneElement<Props>(child, {
+          id: idVar[i],
+          ariaLabelledBy: ariaLabelledByVar[i],
+        });
+      }
+      return child;
+    },
+  );
 
   return (
     <div className={componentClassName} {...other}>
       <div className={styles['tabs__header']}>
         <ul className={styles['tabs__list']} role="tablist">
-          {tabs().map((tab: any, i: any) => {
+          {/* TODO: improve `any` type */}
+          {tabs().map((tab: any, i: number) => {
             const isActive = activeIndexState === i;
             return (
               <li

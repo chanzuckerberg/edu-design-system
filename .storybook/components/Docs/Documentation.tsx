@@ -1,4 +1,5 @@
 import React, { ReactNode, useEffect } from 'react';
+// @ts-expect-error prism.js must be in JS
 import Prism from './prism.js';
 import { LayoutContainer } from '../../../src/components/LayoutContainer/LayoutContainer';
 import { LayoutLinelengthContainer } from '../../../src/components/LayoutLinelengthContainer/LayoutLinelengthContainer';

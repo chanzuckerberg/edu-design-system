@@ -57,6 +57,7 @@ export const EdsThemeColorBackgroundNeutralMedium = '#E7E8EA';
 export const EdsThemeColorBackgroundNeutralMediumHover = '#C0C4C8';
 export const EdsThemeColorBackgroundBrandPrimaryDefault = '#F0F0FC';
 export const EdsThemeColorBackgroundBrandPrimaryStrong = '#6B65E2';
+export const EdsThemeColorBackgroundBrandPrimaryStrongHover = '#3E42B1';
 export const EdsThemeColorBackgroundUtilitySuccess = '#ECFFF5';
 export const EdsThemeColorBackgroundUtilityWarning = '#FFF1E9';
 export const EdsThemeColorBackgroundUtilityError = '#FFF0F4';

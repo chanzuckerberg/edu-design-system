@@ -74,6 +74,7 @@ export const Popover = ({
   /**
    * Get previous prop
    * 1) This is used to compare the previous prop to the current prop
+   * TODO: improve `any` type
    */
   function usePrevious(isActive: any) {
     useEffect(() => {

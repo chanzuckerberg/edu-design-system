@@ -43,7 +43,7 @@ const Template: Story<Props> = (args) => (
   <Link
     href="/"
     // stop link from navigating to another page so we can click the link for testing
-    onClick={(event) => event.preventDefault()}
+    onClick={(event: any) => event.preventDefault()}
     {...args}
   />
 );

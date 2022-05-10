@@ -1,0 +1,349 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+	#TABLE
+\*------------------------------------*/
+
+/**
+ * 1) Data Table
+ */
+.table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  margin-bottom: var(--eds-size-2);
+  position: relative;
+}
+
+/**
+ * Table that overflows at a small breakpoint
+ */
+.table--overflow-sm {
+  min-width: auto;
+}
+
+/**
+ * Table that overflows at a large breakpoint
+ */
+.table--overflow-lg {
+  min-width: 1200px;
+}
+
+/**
+ * Table Caption
+ */
+.table__caption {
+  @mixin eds-theme-typography-body-text-sm;
+  text-align: left;
+  margin-bottom: var(--eds-size-1);
+}
+
+/**
+ * Table Header
+ * 1) First row of a table that contains the table header cells
+ */
+.table__header {
+  /**
+     * Table header inside a stacked table
+     * 1) Hide on small screens
+     */
+  .table--stacked & {
+    display: none;
+
+    @media all and (min-width: $eds-bp-md) {
+      display: table-header-group; /* 1 */
+    }
+  }
+}
+
+/**
+ * Table body
+ * 1) <tbody> tag, contains the table rows in the body of the table
+ */
+.table__body {
+  .table--stacked > & {
+    display: block;
+    width: 100%;
+
+    @media all and (min-width: $eds-bp-md) {
+      display: table-row-group;
+    }
+  }
+}
+
+/**
+ * Table Row
+ */
+.table__row {
+  vertical-align: top;
+  border-bottom-width: var(--eds-theme-border-width);
+  border-bottom-style: solid;
+  border-bottom-color: var(--eds-theme-color-border-neutral-subtle);
+
+  /**
+  * Last table row in the table
+  */
+  &:last-child {
+    border-bottom: 0;
+  }
+
+  /**
+  * Table row within zebra table
+  */
+  .table--zebra & {
+    /**
+    * Even table rows within zebra table
+    */
+    &:nth-child(even) {
+      background: var(--eds-theme-color-background-neutral-medium);
+    }
+  }
+}
+
+/**
+ * Bare table row
+ * 1) Removes border
+ */
+.table__row--bare {
+  border-bottom: none; /* 1 */
+}
+
+/**
+ * Clickable table row
+ * 1) Indicates a clickable table row
+ */
+.table__row--clickable {
+  cursor: pointer;
+
+  &:hover {
+    background: var(--eds-theme-color-background-neutral-subtle);
+  }
+}
+
+/**
+ * Table Cell
+ */
+.table__cell {
+  padding: var(--eds-size-2) var(--eds-size-1);
+  @mixin eds-theme-typography-kicker-sm;
+
+  /**
+     * Condensed table
+     * 1) shrinks padding between table rows
+     */
+  .table--condensed & {
+    padding: var(--eds-size-1) var(--eds-size-1); /* 1 */
+  }
+
+  /**
+   * Table header cells
+   */
+  .table__header & {
+    text-align: left;
+    position: relative;
+    padding: var(--eds-size-2) var(--eds-size-1-and-half) var(--eds-size-2)
+      var(--eds-size-1);
+    @mixin eds-theme-typography-kicker-sm;
+    border-bottom-width: var(--eds-theme-border-width);
+    border-bottom-style: solid;
+    border-bottom-color: var(--eds-theme-color-border-neutral-subtle);
+    background-clip: padding-box;
+
+    &.table__cell--align-left {
+      text-align: left;
+    }
+    &.table__cell--align-right {
+      text-align: right;
+    }
+    &.table__cell--align-center {
+      text-align: center;
+    }
+
+    &.table__cell--valign-center {
+      vertical-align: middle;
+    }
+  }
+
+  /**
+     * Header table cells in a stacked table
+     */
+  .table--stacked .table__header & {
+    @media all and (max-width: $eds-bp-md) {
+      /* stylelint-disable-next-line max-nesting-depth */
+      &:after {
+        content: none;
+      }
+    }
+  }
+
+  /**
+     * Table cell inside a stacked table
+     * 1) Take data-heading attribute and display
+     *    that value as a block-level title above
+     *    each table cell
+     * 2) Hide data-heading on large screens since
+     *    table header cells become visible
+     */
+  .table--stacked & {
+    display: block;
+    padding-left: var(--eds-size-2);
+    padding-right: var(--eds-size-2);
+
+    &:before {
+      content: attr(data-heading); /* 1 */
+      display: block;
+      @mixin eds-theme-typography-body-text-md;
+
+      /* stylelint-disable-next-line max-nesting-depth */
+      @media all and (min-width: $eds-bp-md) {
+        content: none; /* 2 */
+      }
+    }
+
+    @media all and (min-width: $eds-bp-md) {
+      display: table-cell;
+      padding: var(--eds-size-2) var(--eds-size-1);
+    }
+  }
+
+  /**
+     * Table cell inside a lined table
+     */
+  .table--lined & {
+    border-width: var(--eds-theme-border-width);
+    border-style: solid;
+    border-color: var(--eds-theme-color-border-neutral-subtle);
+  }
+
+  /**
+     * First table cell inside a lined table
+     */
+  .table--lined &:first-child {
+    border-left: none;
+  }
+
+  /**
+     * Last table cell inside a lined table
+     */
+  .table--lined &:last-child {
+    border-right: none;
+  }
+
+  /**
+     * Table cell inside a lined table's header
+     */
+  .table--lined .table__header & {
+    border-bottom-width: var(--eds-theme-border-width);
+
+    &:after {
+      content: none;
+    }
+  }
+
+  /**
+   * Table cell inside a lined table with stacked behavior
+   * 1) Remove table cell borders on small screens since
+   *    cells stack on top of each other and are displayed
+   *    as a single cluster with headings
+   */
+  .table--stacked.table--lined & {
+    @media all and (max-width: $eds-bp-md) {
+      border: 0; /* 1 */
+    }
+  }
+
+  /**
+   * First table cell within each row directly within table body of stacked table
+   */
+  .table--stacked.table--stacked-first-cell-heading
+    > .table__body
+    > .table__row
+    > & {
+    &:first-child {
+      /* stylelint-disable-next-line max-nesting-depth */
+      @media all and (max-width: $eds-bp-md) {
+        @mixin eds-theme-typography-heading-3;
+      }
+    }
+  }
+
+  /**
+   * Table cell inside a clickable table row
+   * 1) Mimic clickable link styles
+   */
+  .table__row--clickable & {
+    @mixin textLink; /* 1 */
+  }
+
+  /**
+   * Lists inside table
+   * 1) If text wraps onto a new line, it gets indented
+   */
+  > ul,
+  > ol {
+    @mixin reset;
+    list-style: none;
+
+    > li {
+      margin-left: 1rem; /* 1 */
+      text-indent: -1rem; /* 1 */
+    }
+  }
+}
+
+/**
+ * Table Footer Cell
+ */
+.table__footer-cell {
+  padding: var(--eds-size-2);
+}
+
+.table__cell-icon {
+  display: none;
+}
+
+/**
+ * Nested table
+ */
+.table .table {
+  margin-bottom: 0;
+}
+
+/**
+ * Table cell within a nested table that isn't a table header cell
+ */
+.table--stacked .table .table__cell:not(th) {
+  padding-top: 0;
+
+  @media all and (min-width: $eds-bp-md) {
+    padding-top: var(--eds-size-2);
+  }
+}
+
+/**
+ * Table header cell within a nested table
+ */
+.table .table th.table__cell {
+  padding-top: 0;
+  padding-bottom: 0;
+  text-align: left;
+  @mixin eds-theme-typography-kicker-sm;
+
+  @media all and (min-width: $eds-bp-md) {
+    width: 60%;
+    padding-top: var(--eds-size-2);
+    padding-bottom: var(--eds-size-2);
+    @mixin eds-theme-typography-kicker-sm;
+  }
+}
+
+/**
+ * Table header cell within a nested table
+ */
+.table .table .table__row:first-child th.table__cell {
+  padding-top: 0;
+
+  @media all and (min-width: $eds-bp-md) {
+    padding-top: var(--eds-size-2);
+  }
+}
