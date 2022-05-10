@@ -1616,6 +1616,7 @@ __metadata:
     "@types/jest": ^27.4.1
     "@types/node": ^17.0.21
     "@types/react": ^17.0.40
+    "@types/react-beautiful-dnd": ^13.1.2
     "@types/react-dom": ^17.0.13
     "@types/react-portal": ^4.0.4
     "@types/svg4everybody": ^2.1.2
@@ -4670,6 +4671,15 @@ __metadata:
   version: 6.9.7
   resolution: "@types/qs@npm:6.9.7"
   checksum: 7fd6f9c25053e9b5bb6bc9f9f76c1d89e6c04f7707a7ba0e44cc01f17ef5284adb82f230f542c2d5557d69407c9a40f0f3515e8319afd14e1e16b5543ac6cdba
+  languageName: node
+  linkType: hard
+
+"@types/react-beautiful-dnd@npm:^13.1.2":
+  version: 13.1.2
+  resolution: "@types/react-beautiful-dnd@npm:13.1.2"
+  dependencies:
+    "@types/react": "*"
+  checksum: 28372854fcd4b7546aabe55ee6569da59fad10f117929cff8a9c6f928448e4dd08ed1139facca33232833b9de100edf017aab9a0ee34065f8fc0e2a7a1262b2c
   languageName: node
   linkType: hard
 
