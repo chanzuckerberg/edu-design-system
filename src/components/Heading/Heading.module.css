@@ -58,7 +58,8 @@
   color: inherit;
 }
 .heading--neutral {
-  color: var(--eds-theme-color-text-neutral-default);
+  /* TODO: update to text-neutral-default when new colors land */
+  color: var(--eds-theme-color-text-neutral-subtle);
 }
 .heading--success {
   color: var(--eds-theme-color-text-utility-success);
