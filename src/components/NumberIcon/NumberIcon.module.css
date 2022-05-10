@@ -25,11 +25,13 @@
 .number-icon--sm {
   height: var(--eds-size-2-and-half); /* 1 */
   width: var(--eds-size-2-and-half);
+  min-width: var(--eds-size-2-and-half);
 }
 
 .number-icon--lg {
   height: var(--eds-size-3); /* 1 */
   width: var(--eds-size-3);
+  min-width: var(--eds-size-3);
 }
 
 /**
