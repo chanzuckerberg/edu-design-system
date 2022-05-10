@@ -6,7 +6,7 @@ module.exports = {
     './components/**/*.stories.@(js|jsx|ts|tsx)',
     './components/**/*.stories.mdx)',
     '../docs',
-    '../src',
+    '../src/components',
     './**/*.stories.@(js|jsx|ts|tsx)',
     './**/*.stories.mdx',
   ],
