@@ -54,7 +54,7 @@ export const Cad = () => (
       <Layout sidebar="wide" variant="right-sidebar">
         <LayoutSection region="main">
           <Panel>
-            <Heading as="h2" className="u-margin-bottom-lg" size="h3">
+            <Heading as="h2" className="u-margin-bottom-lg" size="headline-sm">
               Select projects for your History 6 plan
             </Heading>
             <TextPassage className="u-margin-bottom-lg">
@@ -75,7 +75,7 @@ export const Cad = () => (
                     <ProjectColumn>
                       <Toolbar className="u-margin-bottom-md" variant="bare">
                         <ToolbarItem>
-                          <Heading as="h2" size="h5">
+                          <Heading as="h2" size="title-sm">
                             Available projects
                           </Heading>
                         </ToolbarItem>
@@ -93,7 +93,7 @@ export const Cad = () => (
                               <Heading
                                 as="h3"
                                 className="u-margin-bottom-sm"
-                                size="h6"
+                                size="body-sm"
                               >
                                 Longer project name truncation after a long...
                               </Heading>
@@ -109,7 +109,7 @@ export const Cad = () => (
                               <Heading
                                 as="h3"
                                 className="u-margin-bottom-sm"
-                                size="h6"
+                                size="body-sm"
                               >
                                 Project name
                               </Heading>
@@ -123,7 +123,7 @@ export const Cad = () => (
                               <Heading
                                 as="h3"
                                 className="u-margin-bottom-sm"
-                                size="h6"
+                                size="body-sm"
                               >
                                 Project name
                               </Heading>
@@ -137,7 +137,7 @@ export const Cad = () => (
                               <Heading
                                 as="h3"
                                 className="u-margin-bottom-sm"
-                                size="h6"
+                                size="body-sm"
                               >
                                 Project name
                               </Heading>
@@ -151,7 +151,7 @@ export const Cad = () => (
                               <Heading
                                 as="h3"
                                 className="u-margin-bottom-sm"
-                                size="h6"
+                                size="body-sm"
                               >
                                 Project name
                               </Heading>
@@ -165,7 +165,7 @@ export const Cad = () => (
                               <Heading
                                 as="h3"
                                 className="u-margin-bottom-sm"
-                                size="h6"
+                                size="body-sm"
                               >
                                 Project name
                               </Heading>
@@ -180,7 +180,7 @@ export const Cad = () => (
                     <ProjectColumn>
                       <Toolbar className="u-margin-bottom-md" variant="bare">
                         <ToolbarItem>
-                          <Heading as="h2" size="h5">
+                          <Heading as="h2" size="title-sm">
                             Planned projects
                           </Heading>
                         </ToolbarItem>
@@ -218,7 +218,7 @@ export const Cad = () => (
             <div className="u-padding-md">
               <Toolbar className="u-margin-bottom-md" variant="bare">
                 <ToolbarItem>
-                  <Heading as="h2" size="h5">
+                  <Heading as="h2" size="title-sm">
                     Total Instructional days
                   </Heading>
                 </ToolbarItem>
@@ -233,7 +233,7 @@ export const Cad = () => (
           <Panel>
             <Toolbar className="u-margin-bottom-md" variant="bare">
               <ToolbarItem>
-                <Heading as="h2" size="h5">
+                <Heading as="h2" size="title-sm">
                   Standards coverage
                 </Heading>
               </ToolbarItem>

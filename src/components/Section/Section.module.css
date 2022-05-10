@@ -45,7 +45,7 @@
  */
 .section__title {
   margin: 0;
-  @mixin eds-theme-typography-heading-2;
+  @mixin eds-theme-typography-headline-md;
 }
 
 /**
