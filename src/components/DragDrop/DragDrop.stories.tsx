@@ -2,8 +2,8 @@ import { Story, StoryObj, Meta } from '@storybook/react';
 import React, { ComponentProps } from 'react';
 import { DragDrop, Props } from './DragDrop';
 import MediaBlock from '../../upcoming-components/MediaBlock';
-import { Default as Table } from '../../upcoming-components/Table/Table.stories';
-import { Default as Card } from '../Card/Card.stories';
+import Table from '../../upcoming-components/Table';
+import Card from '../Card';
 import Heading from '../Heading';
 import TextPassage from '../TextPassage';
 
@@ -265,7 +265,7 @@ export const UnstyledItems: StoryObj<Args> = {
         children: <Card />,
       },
       'item-3': {
-        children: <Table />,
+        children: <Table caption="Drag and drop demonstration" />,
       },
       'item-4': {
         children: (
