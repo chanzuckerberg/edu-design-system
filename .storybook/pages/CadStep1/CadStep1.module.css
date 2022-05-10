@@ -1,0 +1,43 @@
+/*------------------------------------*\
+    #SPACING UTILITY CLASSES
+\*------------------------------------*/
+.cad-step-1__layout {
+  padding: var(--eds-size-2);
+  @media all and (min-width: $eds-bp-md) {
+    padding: var(--eds-size-10);
+  }
+}
+
+.cad-step-1__left-section {
+  @media all and (min-width: $eds-bp-md) {
+    padding-right: var(--eds-size-10);
+  }
+}
+
+.left-section__heading {
+  margin-bottom: var(--eds-size-6);
+}
+
+.left-section__text {
+  font-weight: var(--eds-font-weight-light);
+  margin-bottom: var(--eds-size-6);
+}
+
+.right-section__heading {
+  margin-bottom: var(--eds-size-6);
+}
+
+.right-section__text {
+  font-weight: var(--eds-font-weight-light);
+  margin-bottom: var(--eds-size-6);
+}
+.right-section__input-container {
+  height: var(--eds-size-5);
+  display: flex;
+  align-items: center;
+  gap: var(--eds-size-3);
+}
+.right-section__input-container > input {
+  height: 100%;
+  width: 9rem;
+}
