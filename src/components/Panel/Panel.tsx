@@ -4,6 +4,11 @@ import styles from './Panel.module.css';
 
 export interface Props {
   /**
+   * Alignment variations for the panel
+   * - **center** horizontally and vertically aligns the content
+   */
+  align?: 'center';
+  /**
    * Child node(s) that can be nested inside component
    */
   children?: ReactNode;
@@ -12,20 +17,34 @@ export interface Props {
    */
   className?: string;
   /**
-   * Alignment variations for the panel
-   * - **center** horizontally and vertically aligns the content
+   * Style variants
+   * - **flush** removes padding from the panel
    */
-  align?: 'center';
+  flush?: boolean;
+  /**
+   * Style variants
+   * - **squared** squares corners, removes borders, and adds box shadow for headlines
+   */
+  variant?: 'squared';
 }
 
 /**
  * Primary UI component for user interaction
  */
-export const Panel = ({ className, children, align, ...other }: Props) => {
+export const Panel = ({
+  className,
+  children,
+  align,
+  variant,
+  flush,
+  ...other
+}: Props) => {
   const componentClassName = clsx(
     styles['panel'],
     className,
     align === 'center' && styles['panel--align-center'],
+    variant === 'squared' && styles['panel--squared'],
+    flush && styles['panel--flush'],
   );
 
   return (

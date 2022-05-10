@@ -32,80 +32,8 @@
   }
 }
 
-.grid--spacing-none {
-  @supports (display: grid) {
-    grid-row-gap: 0;
-    grid-column-gap: 0;
-  }
-}
-
-.grid--spacing-sm {
-  @supports (display: grid) {
-    grid-row-gap: var(--eds-size-1-and-half);
-    grid-column-gap: var(--eds-size-1-and-half);
-  }
-}
-
-.grid--spacing-lg {
-  @supports (display: grid) {
-    grid-row-gap: var(--eds-size-4);
-    grid-column-gap: var(--eds-size-4);
-  }
-}
-
-.grid--spacing-xl {
-  @supports (display: grid) {
-    grid-row-gap: var(--eds-size-6);
-    grid-column-gap: var(--eds-size-6);
-  }
-}
-
-.grid--row-spacing-none {
-  @supports (display: grid) {
-    grid-row-gap: 0;
-  }
-}
-
-.grid--row-spacing-sm {
-  @supports (display: grid) {
-    grid-row-gap: var(--eds-size-1-and-half);
-  }
-}
-
-.grid--row-spacing-lg {
-  @supports (display: grid) {
-    grid-row-gap: var(--eds-size-4);
-  }
-}
-
-.grid--row-spacing-xl {
-  @supports (display: grid) {
-    grid-row-gap: var(--eds-size-6);
-  }
-}
-
-.grid--column-spacing-none {
-  @supports (display: grid) {
-    grid-column-gap: 0;
-  }
-}
-
-.grid--column-spacing-sm {
-  @supports (display: grid) {
-    grid-column-gap: var(--eds-size-1-and-half);
-  }
-}
-
-.grid--column-spacing-lg {
-  @supports (display: grid) {
-    grid-column-gap: var(--eds-size-4);
-  }
-}
-
-.grid--column-spacing-xl {
-  @supports (display: grid) {
-    grid-column-gap: var(--eds-size-6);
-  }
+.grid--gap-sm {
+  gap: var(--eds-size-1);
 }
 
 /**
