@@ -1,17 +1,8 @@
 {
-  "include": [
-    "src",
-    ".storybook/**/*",
-  ],
-  "exclude": [
-    "node_modules",
-    "typings"
-  ],
-  "typeRoots": ["./types", "./node_modules/@types"],
+  "include": ["src", ".storybook/**/*"],
   "compilerOptions": {
     "allowJs": false,
     "allowSyntheticDefaultImports": true,
-    "baseUrl": "src",
     "declaration": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
@@ -23,6 +14,7 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "sourceMap": true,
+    "strict": true,
     "suppressImplicitAnyIndexErrors": true,
     "target": "es6"
   }

@@ -2,11 +2,19 @@ import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import styles from '../ListDetail/ListDetail.module.css';
 
+export type ListDetailPanelVariant =
+  | 'bullet'
+  | 'complete'
+  | 'error'
+  | 'incomplete'
+  | 'number'
+  | 'success'
+  | 'warning';
 export interface Props {
   /**
    * aria-labelledby attribute that associates a tab panel with its accompanying tab title text
    */
-  ariaLabelledBy?: any;
+  ariaLabelledBy?: string;
   /**
    * Child node(s) that can be nested inside component
    */
@@ -22,18 +30,11 @@ export interface Props {
   /**
    * HTML id for the component
    */
-  id?: any;
+  id?: string;
   /**
    * The tab variant
    */
-  variant?:
-    | 'bullet'
-    | 'complete'
-    | 'error'
-    | 'incomplete'
-    | 'number'
-    | 'success'
-    | 'warning';
+  variant?: ListDetailPanelVariant;
   /**
    * The tab title
    */

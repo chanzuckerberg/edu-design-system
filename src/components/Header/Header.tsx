@@ -1,11 +1,5 @@
 import clsx from 'clsx';
-import React, {
-  MutableRefObject,
-  ReactNode,
-  useEffect,
-  useRef,
-  useState,
-} from 'react';
+import React, { ReactNode, useEffect, useRef, useState } from 'react';
 
 import styles from './Header.module.css';
 
@@ -45,8 +39,8 @@ export const Header = ({
   pinnedStop = 150,
   ...other
 }: Props) => {
-  const ref = useRef() as MutableRefObject<HTMLElement>;
-  const stickyRef = useRef() as MutableRefObject<HTMLDivElement>;
+  const ref = useRef<HTMLElement>(null);
+  const stickyRef = useRef<HTMLDivElement>(null);
 
   const [pinned, setPinned] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -59,8 +53,9 @@ export const Header = ({
    * the header gets pinned to the top of the page.
    */
   const updateHeaderWrapperHeight = () => {
-    if (behavior === 'sticky') {
-      stickyRef.current.style.height = ref.current.clientHeight + 'px'; /* 1 */
+    if (behavior === 'sticky' && stickyRef.current) {
+      stickyRef.current.style.height =
+        ref?.current?.clientHeight + 'px'; /* 1 */
     }
   };
 
@@ -75,19 +70,24 @@ export const Header = ({
     if (behavior === 'sticky') {
       if (
         document.body.getBoundingClientRect().top > scrollPos &&
+        stickyRef.current &&
         stickyRef.current.getBoundingClientRect().bottom < 0
       ) {
         /* 1 */
         setUnpinned(false);
         setPinned(true);
       } else if (
+        stickyRef.current &&
         stickyRef.current.getBoundingClientRect().top < 0 &&
         window.scrollY <= pinnedStop
       ) {
         /* 2 */
         setUnpinned(false);
         setPinned(true);
-      } else if (stickyRef.current.getBoundingClientRect().bottom < 0) {
+      } else if (
+        stickyRef.current &&
+        stickyRef.current.getBoundingClientRect().bottom < 0
+      ) {
         /* 3 */
         setUnpinned(true);
         setPinned(false);

@@ -19,7 +19,8 @@ import {
   NotificationList,
   NotificationListItem,
 } from '../../../src';
-import breakpoint from '../../../src/design-tokens/tier-1-definitions/breakpoints.js';
+// @ts-expect-error breakpoints file must be in JS to work with postcss config
+import breakpoint from '../../../src/design-tokens/tier-1-definitions/breakpoints';
 import { EdsThemeColorIconNeutralDefaultInverse } from '../../../src/tokens-dist/ts/colors';
 
 export interface Props {

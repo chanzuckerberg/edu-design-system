@@ -1,8 +1,10 @@
-import { Story, Meta } from '@storybook/react';
+import { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
 import { NotificationList, Props } from './NotificationList';
-import NotificationListItem from '../NotificationListItem';
+import NotificationListItem, {
+  NotificationListItemProps,
+} from '../NotificationListItem';
 
 export default {
   title: 'Molecules/Lists/NotificationList',
@@ -10,27 +12,30 @@ export default {
   subcomponents: { NotificationListItem },
 } as Meta;
 
-const Template: Story<Props> = (args) => (
-  <NotificationList>
-    <NotificationList.Item
-      date="now"
-      href="#"
-      source="Outsiders on Trial: Self Awareness - Trial Brief Outline"
-      title="English Teacher gave you feedback"
-    />
-    <NotificationList.Item
-      date="now"
-      href="#"
-      source="Unit 3: Measuring Circles - Identifying Circumference and Diameter"
-      title="Math Teacher gave you feedback"
-    />
-  </NotificationList>
-);
+export const Default: StoryObj<Props & NotificationListItemProps> = {
+  render: (args) => (
+    <NotificationList>
+      <NotificationList.Item
+        date="now"
+        href="#"
+        markedAsRead={args.markedAsRead}
+        source="Outsiders on Trial: Self Awareness - Trial Brief Outline"
+        title="English Teacher gave you feedback"
+      />
+      <NotificationList.Item
+        date="now"
+        href="#"
+        markedAsRead={args.markedAsRead}
+        source="Unit 3: Measuring Circles - Identifying Circumference and Diameter"
+        title="Math Teacher gave you feedback"
+      />
+    </NotificationList>
+  ),
+};
 
-export const Default = Template.bind({});
-Default.args = {};
-
-export const MarkedAsRead = Template.bind({});
-MarkedAsRead.args = {
-  markedAsRead: true,
+export const MarkedAsRead = {
+  ...Default,
+  args: {
+    markedAsRead: true,
+  },
 };

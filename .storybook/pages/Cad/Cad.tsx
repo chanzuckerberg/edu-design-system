@@ -10,8 +10,6 @@ import {
   LayoutContainer,
   Layout,
   LayoutSection,
-  Toolbar,
-  ToolbarItem,
   Grid,
   GridItem,
   Icon,
@@ -24,6 +22,9 @@ import {
 } from '../../../src';
 
 import utilityStyles from '../../../src/components/Utilities/Spacing.module.css';
+import { Toolbar } from '../../../src/upcoming-components/Toolbar/Toolbar';
+import { ToolbarItem } from '../../../src/upcoming-components/ToolbarItem/ToolbarItem';
+
 import ProjectColumn from '../../recipes/ProjectColumn';
 
 export const Cad = () => (

@@ -49,7 +49,7 @@ export const CompletedAllSteps: StoryObj<Args> = {
   },
 };
 
-const InteractiveHorizontalStepper = ({ steps }) => {
+const InteractiveHorizontalStepper = ({ steps }: Args) => {
   const [activeIndex, setActiveIndex] = React.useState(0);
   const onClickBack = () => {
     if (activeIndex > 0) setActiveIndex(activeIndex - 1);

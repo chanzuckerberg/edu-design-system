@@ -26,7 +26,7 @@ export function assignRef<RefValueType = any>(
   ref: AssignableRef<RefValueType> | null | undefined,
   value: any,
 ) {
-  if (ref === null) return;
+  if (ref == null) return;
   if (typeof ref === 'function') {
     ref(value);
   } else {

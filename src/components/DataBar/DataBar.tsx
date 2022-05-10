@@ -91,18 +91,18 @@ export const DataBar = ({
    */
   /* 1 */
   const [focusableElementIndex, setFocusableElementIndex] = React.useState(0);
-  const segmentsRef = React.useRef([]); /* 2 */
+  const segmentsRef = React.useRef<Array<HTMLDivElement | null>>([]); /* 2 */
   const handleOnKeyDown = (
     e: React.KeyboardEvent<HTMLElement>,
     index: number,
   ) => {
     if (e.key === 'ArrowLeft' && index > 0) {
       setFocusableElementIndex(index - 1); /* 3 */
-      segmentsRef.current[index - 1].focus(); /* 4 */
+      segmentsRef.current[index - 1]?.focus(); /* 4 */
     }
     if (e.key === 'ArrowRight' && index < segmentComponents.length - 1) {
       setFocusableElementIndex(index + 1); /* 3 */
-      segmentsRef.current[index + 1].focus(); /* 4 */
+      segmentsRef.current[index + 1]?.focus(); /* 4 */
     }
   };
 

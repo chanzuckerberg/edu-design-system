@@ -33,17 +33,17 @@
 /**
  * Layout right sidebar variant
  */
+.layout--gap-none {
+  gap: 0;
+}
+
+/**
+ * Layout 50-50 variant with two main columns of equal width
+ */
 .layout--50-50 {
   @media all and (min-width: $eds-bp-xl) {
     grid-template-columns: 1fr 1fr;
   }
-}
-
-/**
- * Layout right sidebar variant
- */
-.layout--gap-none {
-  gap: 0;
 }
 
 /**
