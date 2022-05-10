@@ -1,5 +1,5 @@
 export interface Items {
-  [any: string]: ItemType;
+  [key: string]: ItemType;
 }
 
 export interface ItemType {
@@ -9,7 +9,7 @@ export interface ItemType {
 }
 
 export interface Containers {
-  [any: string]: ContainerType;
+  [key: string]: ContainerType;
 }
 
 export interface ContainerType {

@@ -19,10 +19,6 @@ export interface Props {
    */
   containers?: Containers;
   /**
-   * Containers can optionally be draggable just like items, in which case their initial order needs to be established here.
-   */
-  containerOrder?: string[];
-  /**
    * By default, the last container in a context gets unique styling. If more than two containers will be used, setting this prop to true will remove this unique styling and give all containers a simple border.
    */
   multipleContainers?: boolean;
