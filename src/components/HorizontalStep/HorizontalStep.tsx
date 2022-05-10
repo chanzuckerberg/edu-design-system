@@ -79,7 +79,13 @@ export const HorizontalStep = ({
   return (
     <li className={componentClassName}>
       {icon}
-      <Text as="span" size="sm" variant="inherit" weight="bold">
+      <Text
+        as="span"
+        className={styles['horizontal-step__text']}
+        size="sm"
+        variant="inherit"
+        weight="bold"
+      >
         {text}
       </Text>
     </li>
