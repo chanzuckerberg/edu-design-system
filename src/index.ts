@@ -70,6 +70,7 @@ export { default as ModalHeader } from './components/ModalHeader';
 export { default as NavContainer } from './components/NavContainer';
 export { default as NotificationList } from './components/NotificationList';
 export { default as NotificationListItem } from './components/NotificationListItem';
+export { default as NumberIcon } from './components/NumberIcon';
 export { default as OverflowList } from './components/OverflowList';
 export { default as OverflowListItem } from './components/OverflowListItem';
 export { default as PageHeader } from './components/PageHeader';

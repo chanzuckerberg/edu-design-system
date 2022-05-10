@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import React from 'react';
 import styles from './HorizontalStep.module.css';
 import Icon from '../Icon';
+import NumberIcon from '../NumberIcon';
 import Text from '../Text';
 
 export type Props = {
@@ -56,16 +57,10 @@ export const HorizontalStep = ({
         title={`completed step ${stepNumber} ${text}`}
       />
     ) : variant === 'active' ? (
-      <Text
+      <NumberIcon
         aria-label={`current step ${stepNumber} ${text}`}
-        as="span"
-        className={styles['horizontal-step__number']}
-        role="img"
-        size="sm"
-        variant="inherit"
-      >
-        {stepNumber}
-      </Text>
+        number={stepNumber}
+      />
     ) : (
       <Icon
         className={styles['horizontal-step__incomplete-icon']}
