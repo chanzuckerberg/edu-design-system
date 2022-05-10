@@ -68,7 +68,7 @@ export const CustomColor: StoryObj<IconProps> = {
   ...Default,
   args: {
     ...Default.args,
-    color: 'EdsColorBrand400',
+    color: 'EdsColorBrandGrape400',
     size: '2em',
   },
 };
