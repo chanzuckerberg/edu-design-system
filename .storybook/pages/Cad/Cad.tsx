@@ -21,10 +21,10 @@ import {
   Tab,
 } from '../../../src';
 
+import utilityStyles from '../../../src/components/Utilities/Spacing.module.css';
 import { Toolbar } from '../../../src/upcoming-components/Toolbar/Toolbar';
 import { ToolbarItem } from '../../../src/upcoming-components/ToolbarItem/ToolbarItem';
 
-import utilityStyles from '../../../src/components/Utilities/Spacing.module.css';
 import ProjectColumn from '../../recipes/ProjectColumn';
 
 export const Cad = () => (
