@@ -3,74 +3,279 @@
     "color": {
       "brand": {
         "grape": {
-          "100": { "value": "#F0F0FC" },
-          "200": { "value": "#E0E0F9" },
-          "300": { "value": "#C4C1F3" },
-          "400": { "value": "#A6A3EE" },
-          "500": { "value": "#8984E8" },
-          "600": { "value": "#6B65E2" },
-          "700": { "value": "#5751D2" },
-          "800": { "value": "#3E42B1" }
+          "100": { "value": "#F7F1FF" },
+          "200": { "value": "#C3C0FE" },
+          "300": { "value": "#A7A2FE" },
+          "400": { "value": "#928CFF" },
+          "500": { "value": "#766FFD" },
+          "600": { "value": "#574EFF" },
+          "700": { "value": "#433BDE" },
+          "800": { "value": "#312B9E" }
+        },
+        "100": {
+          "value": "{eds.color.brand.grape.100.value}",
+          "comment": "old token alias, remove with next major release"
+        },
+        "200": {
+          "value": "{eds.color.brand.grape.200.value}",
+          "comment": "old token alias, remove with next major release"
+        },
+        "300": {
+          "value": "{eds.color.brand.grape.300.value}",
+          "comment": "old token alias, remove with next major release"
+        },
+        "400": {
+          "value": "{eds.color.brand.grape.400.value}",
+          "comment": "old token alias, remove with next major release"
+        },
+        "500": {
+          "value": "{eds.color.brand.grape.500.value}",
+          "comment": "old token alias, remove with next major release"
+        },
+        "600": {
+          "value": "{eds.color.brand.grape.600.value}",
+          "comment": "old token alias, remove with next major release"
+        },
+        "700": {
+          "value": "{eds.color.brand.grape.700.value}",
+          "comment": "old token alias, remove with next major release"
+        },
+        "800": {
+          "value": "{eds.color.brand.grape.800.value}",
+          "comment": "old token alias, remove with next major release"
         }
       },
       "neutral": {
         "white": {
-          "value": "#ffffff"
+          "value": "#FFFFFF"
         },
-        "100": { "value": "#F5F6F8" },
-        "200": { "value": "#E7E8EA" },
-        "300": { "value": "#C0C4C8" },
-        "400": { "value": "#A2A3A8" },
-        "500": { "value": "#878C90" },
-        "600": { "value": "#707070" },
-        "700": { "value": "#505058" },
+        "100": { "value": "#F3F3F3" },
+        "200": { "value": "#E8E8E9" },
+        "300": { "value": "#CAD1D8" },
+        "400": { "value": "#838C95" },
+        "500": { "value": "#58636F" },
+        "600": { "value": "#3C444C" },
+        "700": { "value": "#21272D" },
         "800": { "value": "#21272D" },
-        "black": { "value": "#161B1F" }
+        "black": { "value": "#21272D" }
       },
       "other": {
         "mint": {
           "100": { "value": "#ECFFF5" },
           "200": { "value": "#B7E9CE" },
           "300": { "value": "#8FDCB3" },
-          "400": { "value": "#59C88C " },
-          "500": { "value": "#00A56A" },
-          "600": { "value": "#008656" },
-          "700": { "value": "#007249" },
+          "400": { "value": "#59C88C" },
+          "500": { "value": "#00A66A" },
+          "600": { "value": "#008756" },
+          "700": { "value": "#007349" },
           "800": { "value": "#005939" }
         },
         "yellow": {
-          "100": { "value": "#FFF1E9" },
+          "100": { "value": "#FDF1D0" },
           "200": { "value": "#FFEBB3" },
           "300": { "value": "#FFDD80" },
           "400": { "value": "#F7BE2D" },
-          "500": { "value": "#D18400" },
+          "500": { "value": "#F79D2D" },
           "600": { "value": "#BF7300" },
           "700": { "value": "#9E5B03" },
           "800": { "value": "#854C03" }
         },
         "lemon": {
-          "value": "#F5FF8F"
+          "value": "#FCFF00"
         },
         "orange": {
           "100": { "value": "#FFF1E9" },
-          "200": { "value": "#FFCBA5" },
-          "300": { "value": "#FFAF76" },
+          "200": { "value": "#FFCBA6" },
+          "300": { "value": "#FFB077" },
           "400": { "value": "#F6924A" },
-          "500": { "value": "#E06B00" },
+          "500": { "value": "#E06C00" },
           "600": { "value": "#C64600" },
           "700": { "value": "#AC3400" },
-          "800": { "value": "#842800" }
+          "800": { "value": "#852800" }
         },
         "ruby": {
-          "100": { "value": "#FFF0F4" },
-          "200": { "value": "#FFCBD7" },
+          "100": { "value": "#FFEBF0" },
+          "200": { "value": "#FFCCD8" },
           "300": { "value": "#FB90B0" },
           "400": { "value": "#F76C96" },
-          "500": { "value": "#F1497B" },
+          "500": { "value": "#F1497C" },
           "600": { "value": "#D41E52" },
           "700": { "value": "#BD0044" },
           "800": { "value": "#8F0134" }
         }
+      },
+      "white": {
+        "value": "#FFFFFF",
+        "comment": "old token alias, remove with next major release"
+      },
+      "black": {
+        "value": "{eds.color.neutral.700.value}",
+        "comment": "old token alias, remove with next major release"
+      },
+      "alert": {
+        "100": {
+          "value": "{eds.color.other.ruby.100.value}",
+          "comment": "old token alias, remove with next major release"
+        },
+        "200": {
+          "value": "{eds.color.other.ruby.200.value}",
+          "comment": "old token alias, remove with next major release"
+        },
+        "300": {
+          "value": "{eds.color.other.ruby.300.value}",
+          "comment": "old token alias, remove with next major release"
+        },
+        "400": {
+          "value": "{eds.color.other.ruby.400.value}",
+          "comment": "old token alias, remove with next major release"
+        },
+        "500": {
+          "value": "{eds.color.other.ruby.500.value}",
+          "comment": "old token alias, remove with next major release"
+        },
+        "600": {
+          "value": "{eds.color.other.ruby.600.value}",
+          "comment": "old token alias, remove with next major release"
+        },
+        "700": {
+          "value": "{eds.color.other.ruby.700.value}",
+          "comment": "old token alias, remove with next major release"
+        },
+        "800": {
+          "value": "{eds.color.other.ruby.800.value}",
+          "comment": "old token alias, remove with next major release"
+        }
+      },
+      "success": {
+        "100": {
+          "value": "{eds.color.other.mint.100.value}",
+          "comment": "old token alias, remove with next major release"
+        },
+        "200": {
+          "value": "{eds.color.other.mint.200.value}",
+          "comment": "old token alias, remove with next major release"
+        },
+        "300": {
+          "value": "{eds.color.other.mint.300.value}",
+          "comment": "old token alias, remove with next major release"
+        },
+        "400": {
+          "value": "{eds.color.other.mint.400.value}",
+          "comment": "old token alias, remove with next major release"
+        },
+        "500": {
+          "value": "{eds.color.other.mint.500.value}",
+          "comment": "old token alias, remove with next major release"
+        },
+        "600": {
+          "value": "{eds.color.other.mint.600.value}",
+          "comment": "old token alias, remove with next major release"
+        },
+        "700": {
+          "value": "{eds.color.other.mint.700.value}",
+          "comment": "old token alias, remove with next major release"
+        },
+        "800": {
+          "value": "{eds.color.other.mint.800.value}",
+          "comment": "old token alias, remove with next major release"
+        }
+      },
+      "info": {
+        "100": { "value": "#F1F9FF" },
+        "200": { "value": "#B0D5FF" },
+        "300": { "value": "#7FB9FD" },
+        "400": { "value": "#5CA7FF" },
+        "500": { "value": "#328EFB" },
+        "600": { "value": "#1977CD" },
+        "700": { "value": "#0563B8" }
+      },
+      "warning": {
+        "100": {
+          "value": "{eds.color.other.orange.100.value}",
+          "comment": "old token alias, remove with next major release"
+        },
+        "200": {
+          "value": "{eds.color.other.orange.200.value}",
+          "comment": "old token alias, remove with next major release"
+        },
+        "300": {
+          "value": "{eds.color.other.orange.300.value}",
+          "comment": "old token alias, remove with next major release"
+        },
+        "400": {
+          "value": "{eds.color.other.orange.400.value}",
+          "comment": "old token alias, remove with next major release"
+        },
+        "500": {
+          "value": "{eds.color.other.orange.500.value}",
+          "comment": "old token alias, remove with next major release"
+        },
+        "600": {
+          "value": "{eds.color.other.orange.600.value}",
+          "comment": "old token alias, remove with next major release"
+        },
+        "700": {
+          "value": "{eds.color.other.orange.700.value}",
+          "comment": "old token alias, remove with next major release"
+        },
+        "800": {
+          "value": "{eds.color.other.orange.800.value}",
+          "comment": "old token alias, remove with next major release"
+        }
+      },
+      "yellow": {
+        "100": {
+          "value": "{eds.color.other.yellow.100.value}",
+          "comment": "old token alias, remove with next major release"
+        },
+        "500": {
+          "value": "{eds.color.other.yellow.500.value}",
+          "comment": "old token alias, remove with next major release"
+        }
+      },
+      "highlight": {
+        "100": { "value": "#FF9FEC" },
+        "200": { "value": "#FFBEAA" },
+        "300": {
+          "value": "{eds.color.other.lemon.value}",
+          "comment": "old token alias, remove with next major release"
+        },
+        "400": { "value": "#9DFFA4" },
+        "500": { "value": "#00F1FF" },
+        "600": { "value": "#CFC9FF" }
+      }
+    }
+  },
+  "legacy": {
+    "color": {
+      "gray": {
+        "50": { "value": "#F8F9FC" },
+        "100": { "value": "#EBEBEC" },
+        "200": { "value": "#D8D8D9" },
+        "300": { "value": "#C5C5C6" },
+        "500": { "value": "#9F9FA0" },
+        "700": { "value": "#78797A" },
+        "1000": { "value": "#3F4041" }
+      },
+      "black": { "value": "#2C2D2E" },
+      "red": {
+        "100": { "value": "#F7DDDD" },
+        "200": { "value": "#F25252" }
+      },
+      "green": {
+        "100": { "value": "#E1F0E7" },
+        "200": { "value": "#6CC188" },
+        "300": { "value": "#457B57" }
+      },
+      "yellow": {
+        "200": { "value": "#FFC55B" },
+        "300": { "value": "#A46900" },
+        "400": { "value": "#644C1F" }
+      },
+      "purple": {
+        "200": { "value": "#7686D3" },
+        "300": { "value": "#5761BA" },
+        "400": { "value": "#32417C" }
       }
     }
   }
