@@ -27,9 +27,9 @@ type DropdownProps = ListboxProps & {
    * Screen-reader text for the dropdown label.
    *
    * When possible, use a visible label through the `labelText` prop or
-   * by passing a <Label> into `chidren`. In rare cases where there's no
+   * by passing a <Dropdown.Label> into `chidren`. In rare cases where there's no
    * visible label, you must provide an `aria-label` for screen readers.
-   * If you pass in an `aria-label`, you don't need `labelText` or <Label>.
+   * If you pass in an `aria-label`, you don't need `labelText` or <Dropdown.Label>.
    */
   'aria-label'?: string;
   /**
