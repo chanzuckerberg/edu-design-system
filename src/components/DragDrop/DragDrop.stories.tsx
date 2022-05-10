@@ -31,88 +31,71 @@ export const Default = Template.bind({});
 Default.args = {
   items: {
     'item-1': {
-      id: 'item-1',
       title: 'Project #1',
       children: <div className="fpo">Content here</div>,
     },
     'item-2': {
-      id: 'item-2',
       title: 'Project #2',
       children: <div className="fpo">Content here</div>,
     },
     'item-3': {
-      id: 'item-3',
       title: 'Project #3',
       children: <div className="fpo">Content here</div>,
     },
     'item-4': {
-      id: 'item-4',
       title: 'Project #4',
       children: <div className="fpo">Content here</div>,
     },
     'item-5': {
-      id: 'item-5',
       title: 'Project #5',
       children: <div className="fpo">Content here</div>,
     },
   },
   containers: {
     'container-1': {
-      id: 'container-1',
       itemIds: ['item-1', 'item-2', 'item-3', 'item-4', 'item-5'],
     },
     'container-2': {
-      id: 'container-2',
       itemIds: [],
     },
   },
-  containerOrder: ['container-1', 'container-2'],
 };
 
 export const MultipleContainers: StoryObj<Args> = {
   args: {
     items: {
       'item-1': {
-        id: 'item-1',
         title: 'Project #1',
         children: <div className="fpo">Content here</div>,
       },
       'item-2': {
-        id: 'item-2',
         title: 'Project #2',
         children: <div className="fpo">Content here</div>,
       },
       'item-3': {
-        id: 'item-3',
         title: 'Project #3',
         children: <div className="fpo">Content here</div>,
       },
       'item-4': {
-        id: 'item-4',
         title: 'Project #4',
         children: <div className="fpo">Content here</div>,
       },
       'item-5': {
-        id: 'item-5',
         title: 'Project #5',
         children: <div className="fpo">Content here</div>,
       },
     },
     containers: {
       'container-1': {
-        id: 'container-1',
         itemIds: ['item-1', 'item-2', 'item-3'],
       },
       'container-2': {
-        id: 'container-2',
         itemIds: ['item-4'],
       },
       'container-3': {
-        id: 'container-3',
         itemIds: ['item-5'],
       },
     },
-    containerOrder: ['container-1', 'container-2', 'container-3'],
     multipleContainers: true,
   },
 };
@@ -121,12 +104,10 @@ export const VariousSizedItems: StoryObj<Args> = {
   args: {
     items: {
       'item-1': {
-        id: 'item-1',
         title: 'Project #1',
         children: <div className="fpo">Content here</div>,
       },
       'item-2': {
-        id: 'item-2',
         title: 'Project #2',
         children: (
           <div className="fpo">
@@ -141,7 +122,6 @@ export const VariousSizedItems: StoryObj<Args> = {
         ),
       },
       'item-3': {
-        id: 'item-3',
         children: (
           <div
             className="fpo"
@@ -156,7 +136,6 @@ export const VariousSizedItems: StoryObj<Args> = {
         ),
       },
       'item-4': {
-        id: 'item-4',
         children: (
           <div
             className="fpo"
@@ -171,7 +150,6 @@ export const VariousSizedItems: StoryObj<Args> = {
         ),
       },
       'item-5': {
-        id: 'item-5',
         title: 'Project #5',
         children: (
           <div className="fpo">
@@ -186,15 +164,12 @@ export const VariousSizedItems: StoryObj<Args> = {
     },
     containers: {
       'container-1': {
-        id: 'container-1',
         itemIds: ['item-1', 'item-2', 'item-3', 'item-4', 'item-5'],
       },
       'container-2': {
-        id: 'container-2',
         itemIds: [],
       },
     },
-    containerOrder: ['container-1', 'container-2'],
   },
 };
 
@@ -202,13 +177,11 @@ export const Accessibility: StoryObj<Args> = {
   args: {
     items: {
       'item-0': {
-        id: 'item-0',
         children: (
           <div className="fpo">Each drag item has role=&quot;button&quot;</div>
         ),
       },
       'item-1': {
-        id: 'item-1',
         children: (
           <div className="fpo">
             (Open this canvas in its own tab for best results)
@@ -216,17 +189,14 @@ export const Accessibility: StoryObj<Args> = {
         ),
       },
       'item-2': {
-        id: 'item-2',
         children: <div className="fpo">Use Tab key to select an item</div>,
       },
       'item-3': {
-        id: 'item-3',
         children: (
           <div className="fpo">Press Spacebar to pick up the selected item</div>
         ),
       },
       'item-4': {
-        id: 'item-4',
         children: (
           <div className="fpo">
             Arrow keys move the item within a container (up/down) or to another
@@ -235,13 +205,11 @@ export const Accessibility: StoryObj<Args> = {
         ),
       },
       'item-5': {
-        id: 'item-5',
         children: (
           <div className="fpo">Press Spacebar again to drop the item</div>
         ),
       },
       'item-6': {
-        id: 'item-6',
         children: (
           <div className="fpo">
             All actions (using mouse/touch or keyboard controls) are announced
@@ -252,7 +220,6 @@ export const Accessibility: StoryObj<Args> = {
     },
     containers: {
       'container-1': {
-        id: 'container-1',
         itemIds: [
           'item-0',
           'item-1',
@@ -264,11 +231,9 @@ export const Accessibility: StoryObj<Args> = {
         ],
       },
       'container-2': {
-        id: 'container-2',
         itemIds: [],
       },
     },
-    containerOrder: ['container-1', 'container-2'],
   },
 };
 
@@ -276,7 +241,6 @@ export const UnstyledItems: StoryObj<Args> = {
   args: {
     items: {
       'item-1': {
-        id: 'item-1',
         children: (
           <MediaBlock
             imgAlt="placeholder image"
@@ -298,15 +262,12 @@ export const UnstyledItems: StoryObj<Args> = {
         ),
       },
       'item-2': {
-        id: 'item-2',
         children: <Card />,
       },
       'item-3': {
-        id: 'item-3',
         children: <Table />,
       },
       'item-4': {
-        id: 'item-4',
         children: (
           <TextPassage>
             <p>
@@ -319,15 +280,12 @@ export const UnstyledItems: StoryObj<Args> = {
     },
     containers: {
       'container-1': {
-        id: 'container-1',
         itemIds: ['item-1', 'item-2', 'item-3', 'item-4'],
       },
       'container-2': {
-        id: 'container-2',
         itemIds: [],
       },
     },
-    containerOrder: ['container-1', 'container-2'],
     unstyledItems: true,
     multipleContainers: true,
   },

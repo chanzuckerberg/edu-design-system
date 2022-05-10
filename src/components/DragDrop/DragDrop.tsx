@@ -39,7 +39,6 @@ export const DragDrop = ({
   className,
   items,
   containers,
-  containerOrder,
   multipleContainers = false,
   unstyledItems = false,
 }: Props) => {
@@ -52,6 +51,15 @@ export const DragDrop = ({
     multipleContainers && styles['drag-drop--multiple'],
     unstyledItems && styles['drag-drop--unstyled'],
   );
+
+  const containerOrder = [];
+  for (const [key] of Object.entries(items)) {
+    items[key].id = key;
+  }
+  for (const [key] of Object.entries(containers)) {
+    containers[key].id = key;
+    containerOrder.push(key);
+  }
   const initialData = { items, containers, containerOrder };
   const [state, setState] = useState(initialData);
 
