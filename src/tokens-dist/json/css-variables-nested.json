@@ -29,6 +29,14 @@
     },
     "color": {
       "brand": {
+        "100": "var(--eds-color-brand-100)",
+        "200": "var(--eds-color-brand-200)",
+        "300": "var(--eds-color-brand-300)",
+        "400": "var(--eds-color-brand-400)",
+        "500": "var(--eds-color-brand-500)",
+        "600": "var(--eds-color-brand-600)",
+        "700": "var(--eds-color-brand-700)",
+        "800": "var(--eds-color-brand-800)",
         "grape": {
           "100": "var(--eds-color-brand-grape-100)",
           "200": "var(--eds-color-brand-grape-200)",
@@ -94,6 +102,59 @@
           "700": "var(--eds-color-other-ruby-700)",
           "800": "var(--eds-color-other-ruby-800)"
         }
+      },
+      "white": "var(--eds-color-white)",
+      "black": "var(--eds-color-black)",
+      "alert": {
+        "100": "var(--eds-color-alert-100)",
+        "200": "var(--eds-color-alert-200)",
+        "300": "var(--eds-color-alert-300)",
+        "400": "var(--eds-color-alert-400)",
+        "500": "var(--eds-color-alert-500)",
+        "600": "var(--eds-color-alert-600)",
+        "700": "var(--eds-color-alert-700)",
+        "800": "var(--eds-color-alert-800)"
+      },
+      "success": {
+        "100": "var(--eds-color-success-100)",
+        "200": "var(--eds-color-success-200)",
+        "300": "var(--eds-color-success-300)",
+        "400": "var(--eds-color-success-400)",
+        "500": "var(--eds-color-success-500)",
+        "600": "var(--eds-color-success-600)",
+        "700": "var(--eds-color-success-700)",
+        "800": "var(--eds-color-success-800)"
+      },
+      "info": {
+        "100": "var(--eds-color-info-100)",
+        "200": "var(--eds-color-info-200)",
+        "300": "var(--eds-color-info-300)",
+        "400": "var(--eds-color-info-400)",
+        "500": "var(--eds-color-info-500)",
+        "600": "var(--eds-color-info-600)",
+        "700": "var(--eds-color-info-700)"
+      },
+      "warning": {
+        "100": "var(--eds-color-warning-100)",
+        "200": "var(--eds-color-warning-200)",
+        "300": "var(--eds-color-warning-300)",
+        "400": "var(--eds-color-warning-400)",
+        "500": "var(--eds-color-warning-500)",
+        "600": "var(--eds-color-warning-600)",
+        "700": "var(--eds-color-warning-700)",
+        "800": "var(--eds-color-warning-800)"
+      },
+      "yellow": {
+        "100": "var(--eds-color-yellow-100)",
+        "500": "var(--eds-color-yellow-500)"
+      },
+      "highlight": {
+        "100": "var(--eds-color-highlight-100)",
+        "200": "var(--eds-color-highlight-200)",
+        "300": "var(--eds-color-highlight-300)",
+        "400": "var(--eds-color-highlight-400)",
+        "500": "var(--eds-color-highlight-500)",
+        "600": "var(--eds-color-highlight-600)"
       }
     },
     "l": {
@@ -626,6 +687,39 @@
           "width": "var(--eds-theme-form-border-width)",
           "radius": "var(--eds-theme-form-border-radius)"
         }
+      }
+    }
+  },
+  "legacy": {
+    "color": {
+      "gray": {
+        "50": "var(--legacy-color-gray-50)",
+        "100": "var(--legacy-color-gray-100)",
+        "200": "var(--legacy-color-gray-200)",
+        "300": "var(--legacy-color-gray-300)",
+        "500": "var(--legacy-color-gray-500)",
+        "700": "var(--legacy-color-gray-700)",
+        "1000": "var(--legacy-color-gray-1000)"
+      },
+      "black": "var(--legacy-color-black)",
+      "red": {
+        "100": "var(--legacy-color-red-100)",
+        "200": "var(--legacy-color-red-200)"
+      },
+      "green": {
+        "100": "var(--legacy-color-green-100)",
+        "200": "var(--legacy-color-green-200)",
+        "300": "var(--legacy-color-green-300)"
+      },
+      "yellow": {
+        "200": "var(--legacy-color-yellow-200)",
+        "300": "var(--legacy-color-yellow-300)",
+        "400": "var(--legacy-color-yellow-400)"
+      },
+      "purple": {
+        "200": "var(--legacy-color-purple-200)",
+        "300": "var(--legacy-color-purple-300)",
+        "400": "var(--legacy-color-purple-400)"
       }
     }
   }
