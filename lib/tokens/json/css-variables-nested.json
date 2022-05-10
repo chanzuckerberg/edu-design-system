@@ -1,5 +1,32 @@
 {
   "eds": {
+    "anim": {
+      "fade": {
+        "quick": "var(--eds-anim-fade-quick)",
+        "long": "var(--eds-anim-fade-long)"
+      },
+      "move": {
+        "quick": "var(--eds-anim-move-quick)",
+        "medium": "var(--eds-anim-move-medium)",
+        "long": "var(--eds-anim-move-long)"
+      },
+      "ease": "var(--eds-anim-ease)"
+    },
+    "border": {
+      "width": {
+        "sm": "var(--eds-border-width-sm)",
+        "md": "var(--eds-border-width-md)",
+        "lg": "var(--eds-border-width-lg)",
+        "xl": "var(--eds-border-width-xl)"
+      },
+      "radius": {
+        "md": "var(--eds-border-radius-md)",
+        "lg": "var(--eds-border-radius-lg)",
+        "xl": "var(--eds-border-radius-xl)",
+        "round": "var(--eds-border-radius-round)",
+        "full": "var(--eds-border-radius-full)"
+      }
+    },
     "color": {
       "brand": {
         "100": "var(--eds-color-brand-100)",
@@ -130,6 +157,31 @@
         "600": "var(--eds-color-highlight-600)"
       }
     },
+    "l": {
+      "max-width": "var(--eds-l-max-width)",
+      "sidebar-width": "var(--eds-l-sidebar-width)",
+      "linelength-width": "var(--eds-l-linelength-width)"
+    },
+    "box-shadow": {
+      "sm": "var(--eds-box-shadow-sm)",
+      "md": "var(--eds-box-shadow-md)"
+    },
+    "size": {
+      "1": "var(--eds-size-1)",
+      "2": "var(--eds-size-2)",
+      "3": "var(--eds-size-3)",
+      "4": "var(--eds-size-4)",
+      "5": "var(--eds-size-5)",
+      "6": "var(--eds-size-6)",
+      "7": "var(--eds-size-7)",
+      "8": "var(--eds-size-8)",
+      "9": "var(--eds-size-9)",
+      "10": "var(--eds-size-10)",
+      "base-unit": "var(--eds-size-base-unit)",
+      "half": "var(--eds-size-half)",
+      "1-and-half": "var(--eds-size-1-and-half)",
+      "2-and-half": "var(--eds-size-2-and-half)"
+    },
     "font-family": {
       "primary": "var(--eds-font-family-primary)",
       "secondary": "var(--eds-font-family-secondary)"
@@ -152,6 +204,16 @@
     },
     "letter-spacing": {
       "sm": "var(--eds-letter-spacing-sm)"
+    },
+    "z-index": {
+      "0": "var(--eds-z-index-0)",
+      "100": "var(--eds-z-index-100)",
+      "200": "var(--eds-z-index-200)",
+      "300": "var(--eds-z-index-300)",
+      "400": "var(--eds-z-index-400)",
+      "500": "var(--eds-z-index-500)",
+      "top": "var(--eds-z-index-top)",
+      "bottom": "var(--eds-z-index-bottom)"
     }
   },
   "legacy": {

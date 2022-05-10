@@ -1,4 +1,19 @@
 
+$eds-anim-fade-quick: 0.15s !default;
+$eds-anim-fade-long: 0.4s !default;
+$eds-anim-move-quick: 0.15s !default;
+$eds-anim-move-medium: 0.3s !default;
+$eds-anim-move-long: 0.4s !default;
+$eds-anim-ease: ease !default;
+$eds-border-width-sm: 1px !default;
+$eds-border-width-md: 2px !default;
+$eds-border-width-lg: 4px !default;
+$eds-border-width-xl: 8px !default;
+$eds-border-radius-md: 4px !default;
+$eds-border-radius-lg: 8px !default;
+$eds-border-radius-xl: 20px !default;
+$eds-border-radius-round: 50% !default;
+$eds-border-radius-full: 9999px !default;
 $eds-color-brand-100: #F7F1FF !default;
 $eds-color-brand-200: #C3C0FE !default;
 $eds-color-brand-300: #A7A2FE !default;
@@ -99,6 +114,25 @@ $eds-color-highlight-300: #FCFF00 !default;
 $eds-color-highlight-400: #9DFFA4 !default;
 $eds-color-highlight-500: #00F1FF !default;
 $eds-color-highlight-600: #CFC9FF !default;
+$eds-l-max-width: 71.25rem !default;
+$eds-l-sidebar-width: 13.5rem !default;
+$eds-l-linelength-width: 36rem !default;
+$eds-box-shadow-sm: 0px 1px 2px 1px rgba(0, 0, 0, 0.2) !default;
+$eds-box-shadow-md: 0px 0px 0px 1px var(--eds-color-neutral-200), 0px 2px 3px rgba(0, 0, 0, 0.02), 0px 4px 8px rgba(0, 0, 0, 0.08) !default;
+$eds-size-1: 0.5rem !default;
+$eds-size-2: 1rem !default;
+$eds-size-3: 1.5rem !default;
+$eds-size-4: 2rem !default;
+$eds-size-5: 2.5rem !default;
+$eds-size-6: 3rem !default;
+$eds-size-7: 3.5rem !default;
+$eds-size-8: 4rem !default;
+$eds-size-9: 4.5rem !default;
+$eds-size-10: 5rem !default;
+$eds-size-base-unit: 0.5rem !default;
+$eds-size-half: 0.25rem !default;
+$eds-size-1-and-half: 0.75rem !default;
+$eds-size-2-and-half: 1.25rem !default;
 $eds-font-family-primary: 'Arimo', sans-serif !default;
 $eds-font-family-secondary: 'Open Sans', sans-serif !default;
 $eds-font-size-11: 0.688rem !default;
@@ -114,6 +148,14 @@ $eds-font-weight-light: 400 !default;
 $eds-font-weight-medium: 500 !default;
 $eds-font-weight-bold: 600 !default;
 $eds-letter-spacing-sm: 0.5px !default;
+$eds-z-index-0: 0 !default;
+$eds-z-index-100: 100 !default;
+$eds-z-index-200: 200 !default;
+$eds-z-index-300: 300 !default;
+$eds-z-index-400: 400 !default;
+$eds-z-index-500: 500 !default;
+$eds-z-index-top: 99999 !default;
+$eds-z-index-bottom: -100 !default;
 $legacy-color-gray-50: #F8F9FC !default;
 $legacy-color-gray-100: #EBEBEC !default;
 $legacy-color-gray-200: #D8D8D9 !default;
@@ -145,6 +187,33 @@ $legacy-size-line-height-xs: 1rem !default;
 
 $tokens: (
   'eds': (
+    'anim': (
+      'fade': (
+        'quick': $eds-anim-fade-quick,
+        'long': $eds-anim-fade-long
+      ),
+      'move': (
+        'quick': $eds-anim-move-quick,
+        'medium': $eds-anim-move-medium,
+        'long': $eds-anim-move-long
+      ),
+      'ease': $eds-anim-ease
+    ),
+    'border': (
+      'width': (
+        'sm': $eds-border-width-sm,
+        'md': $eds-border-width-md,
+        'lg': $eds-border-width-lg,
+        'xl': $eds-border-width-xl
+      ),
+      'radius': (
+        'md': $eds-border-radius-md,
+        'lg': $eds-border-radius-lg,
+        'xl': $eds-border-radius-xl,
+        'round': $eds-border-radius-round,
+        'full': $eds-border-radius-full
+      )
+    ),
     'color': (
       'brand': (
         '100': $eds-color-brand-100,
@@ -275,6 +344,31 @@ $tokens: (
         '600': $eds-color-highlight-600
       )
     ),
+    'l': (
+      'max-width': $eds-l-max-width,
+      'sidebar-width': $eds-l-sidebar-width,
+      'linelength-width': $eds-l-linelength-width
+    ),
+    'box-shadow': (
+      'sm': $eds-box-shadow-sm,
+      'md': $eds-box-shadow-md
+    ),
+    'size': (
+      '1': $eds-size-1,
+      '2': $eds-size-2,
+      '3': $eds-size-3,
+      '4': $eds-size-4,
+      '5': $eds-size-5,
+      '6': $eds-size-6,
+      '7': $eds-size-7,
+      '8': $eds-size-8,
+      '9': $eds-size-9,
+      '10': $eds-size-10,
+      'base-unit': $eds-size-base-unit,
+      'half': $eds-size-half,
+      '1-and-half': $eds-size-1-and-half,
+      '2-and-half': $eds-size-2-and-half
+    ),
     'font-family': (
       'primary': $eds-font-family-primary,
       'secondary': $eds-font-family-secondary
@@ -297,6 +391,16 @@ $tokens: (
     ),
     'letter-spacing': (
       'sm': $eds-letter-spacing-sm
+    ),
+    'z-index': (
+      '0': $eds-z-index-0,
+      '100': $eds-z-index-100,
+      '200': $eds-z-index-200,
+      '300': $eds-z-index-300,
+      '400': $eds-z-index-400,
+      '500': $eds-z-index-500,
+      'top': $eds-z-index-top,
+      'bottom': $eds-z-index-bottom
     )
   ),
   'legacy': (
