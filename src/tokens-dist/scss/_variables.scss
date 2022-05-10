@@ -14,106 +14,70 @@ $eds-border-radius-lg: 8px !default;
 $eds-border-radius-xl: 20px !default;
 $eds-border-radius-round: 50% !default;
 $eds-border-radius-full: 9999px !default;
-$eds-color-brand-100: #F7F1FF !default; // old token alias, remove with next major release
-$eds-color-brand-200: #C3C0FE !default; // old token alias, remove with next major release
-$eds-color-brand-300: #A7A2FE !default; // old token alias, remove with next major release
-$eds-color-brand-400: #928CFF !default; // old token alias, remove with next major release
-$eds-color-brand-500: #766FFD !default; // old token alias, remove with next major release
-$eds-color-brand-600: #574EFF !default; // old token alias, remove with next major release
-$eds-color-brand-700: #433BDE !default; // old token alias, remove with next major release
-$eds-color-brand-800: #312B9E !default; // old token alias, remove with next major release
-$eds-color-brand-grape-100: #F7F1FF !default;
-$eds-color-brand-grape-200: #C3C0FE !default;
-$eds-color-brand-grape-300: #A7A2FE !default;
-$eds-color-brand-grape-400: #928CFF !default;
-$eds-color-brand-grape-500: #766FFD !default;
-$eds-color-brand-grape-600: #574EFF !default;
-$eds-color-brand-grape-700: #433BDE !default;
-$eds-color-brand-grape-800: #312B9E !default;
-$eds-color-neutral-100: #F3F3F3 !default;
-$eds-color-neutral-200: #E8E8E9 !default;
-$eds-color-neutral-300: #CAD1D8 !default;
-$eds-color-neutral-400: #838C95 !default;
-$eds-color-neutral-500: #58636F !default;
-$eds-color-neutral-600: #3C444C !default;
-$eds-color-neutral-700: #21272D !default;
+$eds-color-brand-grape-100: #F0F0FC !default;
+$eds-color-brand-grape-200: #E0E0F9 !default;
+$eds-color-brand-grape-300: #C4C1F3 !default;
+$eds-color-brand-grape-400: #A6A3EE !default;
+$eds-color-brand-grape-500: #8984E8 !default;
+$eds-color-brand-grape-600: #6B65E2 !default;
+$eds-color-brand-grape-700: #5751D2 !default;
+$eds-color-brand-grape-800: #3E42B1 !default;
+$eds-color-neutral-100: #F4F6F8 !default;
+$eds-color-neutral-200: #E7E8EA !default;
+$eds-color-neutral-300: #C0C4C8 !default;
+$eds-color-neutral-400: #999EA3 !default;
+$eds-color-neutral-500: #878C90 !default;
+$eds-color-neutral-600: #5D6369 !default;
+$eds-color-neutral-700: #383C43 !default;
 $eds-color-neutral-800: #21272D !default;
 $eds-color-neutral-white: #FFFFFF !default;
-$eds-color-neutral-black: #21272D !default;
+$eds-color-neutral-black: #161B1F !default;
 $eds-color-other-mint-100: #ECFFF5 !default;
 $eds-color-other-mint-200: #B7E9CE !default;
 $eds-color-other-mint-300: #8FDCB3 !default;
 $eds-color-other-mint-400: #59C88C !default;
-$eds-color-other-mint-500: #00A66A !default;
-$eds-color-other-mint-600: #008756 !default;
-$eds-color-other-mint-700: #007349 !default;
+$eds-color-other-mint-500: #00A56A !default;
+$eds-color-other-mint-600: #008656 !default;
+$eds-color-other-mint-700: #007249 !default;
 $eds-color-other-mint-800: #005939 !default;
 $eds-color-other-yellow-100: #FDF1D0 !default;
 $eds-color-other-yellow-200: #FFEBB3 !default;
 $eds-color-other-yellow-300: #FFDD80 !default;
 $eds-color-other-yellow-400: #F7BE2D !default;
-$eds-color-other-yellow-500: #F79D2D !default;
+$eds-color-other-yellow-500: #D18400 !default;
 $eds-color-other-yellow-600: #BF7300 !default;
 $eds-color-other-yellow-700: #9E5B03 !default;
 $eds-color-other-yellow-800: #854C03 !default;
-$eds-color-other-lemon: #FCFF00 !default;
+$eds-color-other-lemon: #F5FF8F !default;
 $eds-color-other-orange-100: #FFF1E9 !default;
-$eds-color-other-orange-200: #FFCBA6 !default;
-$eds-color-other-orange-300: #FFB077 !default;
+$eds-color-other-orange-200: #FFCBA5 !default;
+$eds-color-other-orange-300: #FFAF76 !default;
 $eds-color-other-orange-400: #F6924A !default;
-$eds-color-other-orange-500: #E06C00 !default;
+$eds-color-other-orange-500: #E06B00 !default;
 $eds-color-other-orange-600: #C64600 !default;
 $eds-color-other-orange-700: #AC3400 !default;
-$eds-color-other-orange-800: #852800 !default;
-$eds-color-other-ruby-100: #FFEBF0 !default;
-$eds-color-other-ruby-200: #FFCCD8 !default;
+$eds-color-other-orange-800: #842800 !default;
+$eds-color-other-ruby-100: #FFF0F4 !default;
+$eds-color-other-ruby-200: #FFCBD7 !default;
 $eds-color-other-ruby-300: #FB90B0 !default;
 $eds-color-other-ruby-400: #F76C96 !default;
-$eds-color-other-ruby-500: #F1497C !default;
+$eds-color-other-ruby-500: #F1497B !default;
 $eds-color-other-ruby-600: #D41E52 !default;
 $eds-color-other-ruby-700: #BD0044 !default;
 $eds-color-other-ruby-800: #8F0134 !default;
-$eds-color-white: #FFFFFF !default; // old token alias, remove with next major release
-$eds-color-black: #21272D !default; // old token alias, remove with next major release
-$eds-color-alert-100: #FFEBF0 !default; // old token alias, remove with next major release
-$eds-color-alert-200: #FFCCD8 !default; // old token alias, remove with next major release
-$eds-color-alert-300: #FB90B0 !default; // old token alias, remove with next major release
-$eds-color-alert-400: #F76C96 !default; // old token alias, remove with next major release
-$eds-color-alert-500: #F1497C !default; // old token alias, remove with next major release
-$eds-color-alert-600: #D41E52 !default; // old token alias, remove with next major release
-$eds-color-alert-700: #BD0044 !default; // old token alias, remove with next major release
-$eds-color-alert-800: #8F0134 !default; // old token alias, remove with next major release
-$eds-color-success-100: #ECFFF5 !default; // old token alias, remove with next major release
-$eds-color-success-200: #B7E9CE !default; // old token alias, remove with next major release
-$eds-color-success-300: #8FDCB3 !default; // old token alias, remove with next major release
-$eds-color-success-400: #59C88C !default; // old token alias, remove with next major release
-$eds-color-success-500: #00A66A !default; // old token alias, remove with next major release
-$eds-color-success-600: #008756 !default; // old token alias, remove with next major release
-$eds-color-success-700: #007349 !default; // old token alias, remove with next major release
-$eds-color-success-800: #005939 !default; // old token alias, remove with next major release
-$eds-color-info-100: #F1F9FF !default;
-$eds-color-info-200: #B0D5FF !default;
-$eds-color-info-300: #7FB9FD !default;
-$eds-color-info-400: #5CA7FF !default;
-$eds-color-info-500: #328EFB !default;
-$eds-color-info-600: #1977CD !default;
-$eds-color-info-700: #0563B8 !default;
-$eds-color-warning-100: #FFF1E9 !default; // old token alias, remove with next major release
-$eds-color-warning-200: #FFCBA6 !default; // old token alias, remove with next major release
-$eds-color-warning-300: #FFB077 !default; // old token alias, remove with next major release
-$eds-color-warning-400: #F6924A !default; // old token alias, remove with next major release
-$eds-color-warning-500: #E06C00 !default; // old token alias, remove with next major release
-$eds-color-warning-600: #C64600 !default; // old token alias, remove with next major release
-$eds-color-warning-700: #AC3400 !default; // old token alias, remove with next major release
-$eds-color-warning-800: #852800 !default; // old token alias, remove with next major release
-$eds-color-yellow-100: #FDF1D0 !default; // old token alias, remove with next major release
-$eds-color-yellow-500: #F79D2D !default; // old token alias, remove with next major release
-$eds-color-highlight-100: #FF9FEC !default;
-$eds-color-highlight-200: #FFBEAA !default;
-$eds-color-highlight-300: #FCFF00 !default; // old token alias, remove with next major release
-$eds-color-highlight-400: #9DFFA4 !default;
-$eds-color-highlight-500: #00F1FF !default;
-$eds-color-highlight-600: #CFC9FF !default;
+$eds-color-info-100: #F1F9FF !default; // legacy token, will be removed
+$eds-color-info-200: #B0D5FF !default; // legacy token, will be removed
+$eds-color-info-300: #7FB9FD !default; // legacy token, will be removed
+$eds-color-info-400: #5CA7FF !default; // legacy token, will be removed
+$eds-color-info-500: #328EFB !default; // legacy token, will be removed
+$eds-color-info-600: #1977CD !default; // legacy token, will be removed
+$eds-color-info-700: #0563B8 !default; // legacy token, will be removed
+$eds-color-highlight-100: #FF9FEC !default; // legacy token, will be removed
+$eds-color-highlight-200: #FFBEAA !default; // legacy token, will be removed
+$eds-color-highlight-300: #FCFF00 !default; // legacy token, will be removed
+$eds-color-highlight-400: #9DFFA4 !default; // legacy token, will be removed
+$eds-color-highlight-500: #00F1FF !default; // legacy token, will be removed
+$eds-color-highlight-600: #CFC9FF !default; // legacy token, will be removed
 $eds-l-max-width: 71.25rem !default;
 $eds-l-sidebar-width: 13.5rem !default;
 $eds-l-linelength-width: 36rem !default;
@@ -159,40 +123,40 @@ $eds-z-index-bottom: -100 !default;
 $eds-theme-border-radius: 4px !default;
 $eds-theme-border-width: 1px !default;
 $eds-theme-color-background-neutral-default: #FFFFFF !default;
-$eds-theme-color-background-neutral-default-hover: #F3F3F3 !default;
-$eds-theme-color-background-neutral-subtle: #F3F3F3 !default;
-$eds-theme-color-background-neutral-subtle-hover: #E8E8E9 !default;
-$eds-theme-color-background-neutral-medium: #E8E8E9 !default;
-$eds-theme-color-background-neutral-medium-hover: #CAD1D8 !default;
-$eds-theme-color-background-brand-primary-default: #F7F1FF !default;
-$eds-theme-color-background-brand-primary-strong: #574EFF !default;
-$eds-theme-color-background-brand-primary-strong-hover: #312B9E !default;
+$eds-theme-color-background-neutral-default-hover: #F4F6F8 !default;
+$eds-theme-color-background-neutral-subtle: #F4F6F8 !default;
+$eds-theme-color-background-neutral-subtle-hover: #E7E8EA !default;
+$eds-theme-color-background-neutral-medium: #E7E8EA !default;
+$eds-theme-color-background-neutral-medium-hover: #C0C4C8 !default;
+$eds-theme-color-background-brand-primary-default: #F0F0FC !default;
+$eds-theme-color-background-brand-primary-strong: #6B65E2 !default;
+$eds-theme-color-background-brand-primary-strong-hover: #3E42B1 !default;
 $eds-theme-color-background-utility-success: #ECFFF5 !default;
 $eds-theme-color-background-utility-warning: #FFF1E9 !default;
-$eds-theme-color-background-utility-error: #FFEBF0 !default;
-$eds-theme-color-background-grade-complete-default: #008756 !default;
+$eds-theme-color-background-utility-error: #FFF0F4 !default;
+$eds-theme-color-background-grade-complete-default: #008656 !default;
 $eds-theme-color-background-grade-complete-subtle: #ECFFF5 !default;
 $eds-theme-color-background-grade-revise-default: #F7BE2D !default;
 $eds-theme-color-background-grade-revise-subtle: #FDF1D0 !default;
 $eds-theme-color-background-grade-stop-default: #D41E52 !default;
-$eds-theme-color-background-grade-stop-subtle: #FFEBF0 !default;
-$eds-theme-color-background-disabled: #CAD1D8 !default;
-$eds-theme-color-border-neutral-subtle: #E8E8E9 !default;
-$eds-theme-color-border-neutral-subtle-hover: #CAD1D8 !default;
-$eds-theme-color-border-neutral-default: #CAD1D8 !default;
-$eds-theme-color-border-neutral-default-hover: #838C95 !default;
-$eds-theme-color-border-neutral-strong: #838C95 !default;
-$eds-theme-color-border-neutral-strong-hover: #58636F !default;
-$eds-theme-color-border-brand-primary-subtle: #C3C0FE !default;
-$eds-theme-color-border-brand-primary: #A7A2FE !default;
-$eds-theme-color-border-brand-primary-strong: #928CFF !default;
+$eds-theme-color-background-grade-stop-subtle: #FFF0F4 !default;
+$eds-theme-color-background-disabled: #C0C4C8 !default;
+$eds-theme-color-border-neutral-subtle: #E7E8EA !default;
+$eds-theme-color-border-neutral-subtle-hover: #C0C4C8 !default;
+$eds-theme-color-border-neutral-default: #C0C4C8 !default;
+$eds-theme-color-border-neutral-default-hover: #999EA3 !default;
+$eds-theme-color-border-neutral-strong: #999EA3 !default;
+$eds-theme-color-border-neutral-strong-hover: #878C90 !default;
+$eds-theme-color-border-brand-primary-subtle: #E0E0F9 !default;
+$eds-theme-color-border-brand-primary: #C4C1F3 !default;
+$eds-theme-color-border-brand-primary-strong: #A6A3EE !default;
 $eds-theme-color-border-utility-success-subtle: #B7E9CE !default;
 $eds-theme-color-border-utility-success-default: #8FDCB3 !default;
 $eds-theme-color-border-utility-success-strong: #59C88C !default;
-$eds-theme-color-border-utility-warning-subtle: #FFCBA6 !default;
-$eds-theme-color-border-utility-warning-default: #FFB077 !default;
+$eds-theme-color-border-utility-warning-subtle: #FFCBA5 !default;
+$eds-theme-color-border-utility-warning-default: #FFAF76 !default;
 $eds-theme-color-border-utility-warning-strong: #F6924A !default;
-$eds-theme-color-border-utility-error-subtle: #FFCCD8 !default;
+$eds-theme-color-border-utility-error-subtle: #FFCBD7 !default;
 $eds-theme-color-border-utility-error-default: #FB90B0 !default;
 $eds-theme-color-border-utility-error-strong: #F76C96 !default;
 $eds-theme-color-border-grade-complete: #8FDCB3 !default;
@@ -200,58 +164,58 @@ $eds-theme-color-border-grade-revise-subtle: #FFEBB3 !default;
 $eds-theme-color-border-grade-revise-default: #FFDD80 !default;
 $eds-theme-color-border-grade-revise-strong: #F7BE2D !default;
 $eds-theme-color-border-grade-stop: #FB90B0 !default;
-$eds-theme-color-border-disabled: #F3F3F3 !default;
-$eds-theme-color-icon-neutral-default: #3C444C !default;
+$eds-theme-color-border-disabled: #F4F6F8 !default;
+$eds-theme-color-icon-neutral-default: #5D6369 !default;
 $eds-theme-color-icon-neutral-default-inverse: #FFFFFF !default;
-$eds-theme-color-icon-neutral-default-hover: #21272D !default;
-$eds-theme-color-icon-neutral-strong: #21272D !default;
+$eds-theme-color-icon-neutral-default-hover: #383C43 !default;
+$eds-theme-color-icon-neutral-strong: #383C43 !default;
 $eds-theme-color-icon-neutral-strong-hover: #21272D !default;
-$eds-theme-color-icon-neutral-subtle: #58636F !default;
-$eds-theme-color-icon-neutral-subtle-hover: #3C444C !default;
-$eds-theme-color-icon-link-default: #766FFD !default;
-$eds-theme-color-icon-link-default-hover: #574EFF !default;
-$eds-theme-color-icon-brand-primary: #766FFD !default;
-$eds-theme-color-icon-brand-primary-hover: #574EFF !default;
-$eds-theme-color-icon-utility-success: #00A66A !default;
-$eds-theme-color-icon-utility-success-hover: #008756 !default;
-$eds-theme-color-icon-utility-warning: #E06C00 !default;
+$eds-theme-color-icon-neutral-subtle: #878C90 !default;
+$eds-theme-color-icon-neutral-subtle-hover: #5D6369 !default;
+$eds-theme-color-icon-link-default: #8984E8 !default;
+$eds-theme-color-icon-link-default-hover: #6B65E2 !default;
+$eds-theme-color-icon-brand-primary: #8984E8 !default;
+$eds-theme-color-icon-brand-primary-hover: #6B65E2 !default;
+$eds-theme-color-icon-utility-success: #00A56A !default;
+$eds-theme-color-icon-utility-success-hover: #008656 !default;
+$eds-theme-color-icon-utility-warning: #E06B00 !default;
 $eds-theme-color-icon-utility-warning-hover: #C64600 !default;
-$eds-theme-color-icon-utility-error: #F1497C !default;
+$eds-theme-color-icon-utility-error: #F1497B !default;
 $eds-theme-color-icon-utility-error-hover: #D41E52 !default;
-$eds-theme-color-icon-grade-complete: #00A66A !default;
-$eds-theme-color-icon-grade-complete-hover: #00A66A !default;
+$eds-theme-color-icon-grade-complete: #00A56A !default;
+$eds-theme-color-icon-grade-complete-hover: #00A56A !default;
 $eds-theme-color-icon-grade-revise: #21272D !default;
-$eds-theme-color-icon-grade-revise-hover: #21272D !default;
-$eds-theme-color-icon-grade-stop: #F1497C !default;
-$eds-theme-color-icon-grade-stop-hover: #F1497C !default;
-$eds-theme-color-icon-disabled: #CAD1D8 !default;
-$eds-theme-color-text-neutral-default: #21272D !default;
+$eds-theme-color-icon-grade-revise-hover: #161B1F !default;
+$eds-theme-color-icon-grade-stop: #F1497B !default;
+$eds-theme-color-icon-grade-stop-hover: #D41E52 !default;
+$eds-theme-color-icon-disabled: #C0C4C8 !default;
+$eds-theme-color-text-neutral-default: #383C43 !default;
 $eds-theme-color-text-neutral-default-inverse: #FFFFFF !default;
 $eds-theme-color-text-neutral-strong: #21272D !default;
-$eds-theme-color-text-neutral-subtle: #3C444C !default;
+$eds-theme-color-text-neutral-subtle: #5D6369 !default;
 $eds-theme-color-text-link-default: #21272D !default;
-$eds-theme-color-text-link-default-hover: #21272D !default;
-$eds-theme-color-text-link-strong: #433BDE !default;
-$eds-theme-color-text-link-strong-hover: #312B9E !default;
-$eds-theme-color-text-utility-success: #007349 !default;
+$eds-theme-color-text-link-default-hover: #161B1F !default;
+$eds-theme-color-text-link-strong: #5751D2 !default;
+$eds-theme-color-text-link-strong-hover: #3E42B1 !default;
+$eds-theme-color-text-utility-success: #007249 !default;
 $eds-theme-color-text-utility-warning: #AC3400 !default;
 $eds-theme-color-text-utility-error: #BD0044 !default;
-$eds-theme-color-text-grade-complete: #007349 !default;
+$eds-theme-color-text-grade-complete: #007249 !default;
 $eds-theme-color-text-grade-revise: #21272D !default;
 $eds-theme-color-text-grade-stop: #BD0044 !default;
-$eds-theme-color-text-disabled: #CAD1D8 !default;
-$eds-theme-color-text-brand-primary: #433BDE !default;
+$eds-theme-color-text-disabled: #C0C4C8 !default;
+$eds-theme-color-text-brand-primary: #5751D2 !default;
 $eds-theme-color-transparent-black-0: rgba(0, 0, 0, 0) !default;
 $eds-theme-color-transparent-black-30: rgba(0, 0, 0, .3) !default;
 $eds-theme-color-transparent-white-0: rgba(255, 255, 255, 0) !default;
-$eds-theme-color-body-background: #F3F3F3 !default;
-$eds-theme-color-body-background-inverted: #21272D !default;
-$eds-theme-color-button-primary-brand-background: #574EFF !default;
-$eds-theme-color-button-primary-brand-background-hover: #433BDE !default;
-$eds-theme-color-button-primary-brand-background-active: #312B9E !default;
-$eds-theme-color-button-primary-brand-border: #574EFF !default;
-$eds-theme-color-button-primary-brand-border-hover: #433BDE !default;
-$eds-theme-color-button-primary-brand-border-active: #312B9E !default;
+$eds-theme-color-body-background: #F4F6F8 !default;
+$eds-theme-color-body-background-inverted: #383C43 !default;
+$eds-theme-color-button-primary-brand-background: #6B65E2 !default;
+$eds-theme-color-button-primary-brand-background-hover: #5751D2 !default;
+$eds-theme-color-button-primary-brand-background-active: #3E42B1 !default;
+$eds-theme-color-button-primary-brand-border: #6B65E2 !default;
+$eds-theme-color-button-primary-brand-border-hover: #5751D2 !default;
+$eds-theme-color-button-primary-brand-border-active: #3E42B1 !default;
 $eds-theme-color-button-primary-brand-text: #FFFFFF !default;
 $eds-theme-color-button-primary-brand-text-hover: #FFFFFF !default;
 $eds-theme-color-button-primary-brand-text-active: #FFFFFF !default;
@@ -265,47 +229,47 @@ $eds-theme-color-button-primary-error-text: #FFFFFF !default;
 $eds-theme-color-button-primary-error-text-hover: #FFFFFF !default;
 $eds-theme-color-button-primary-error-text-active: #FFFFFF !default;
 $eds-theme-color-button-secondary-brand-background: rgba(0, 0, 0, 0) !default;
-$eds-theme-color-button-secondary-brand-background-hover: #433BDE !default;
-$eds-theme-color-button-secondary-brand-background-active: #312B9E !default;
-$eds-theme-color-button-secondary-brand-border: #574EFF !default;
-$eds-theme-color-button-secondary-brand-border-hover: #433BDE !default;
-$eds-theme-color-button-secondary-brand-border-active: #312B9E !default;
-$eds-theme-color-button-secondary-brand-text: #433BDE !default;
+$eds-theme-color-button-secondary-brand-background-hover: #5751D2 !default;
+$eds-theme-color-button-secondary-brand-background-active: #3E42B1 !default;
+$eds-theme-color-button-secondary-brand-border: #6B65E2 !default;
+$eds-theme-color-button-secondary-brand-border-hover: #5751D2 !default;
+$eds-theme-color-button-secondary-brand-border-active: #3E42B1 !default;
+$eds-theme-color-button-secondary-brand-text: #5751D2 !default;
 $eds-theme-color-button-secondary-brand-text-hover: #FFFFFF !default;
 $eds-theme-color-button-secondary-brand-text-active: #FFFFFF !default;
-$eds-theme-color-button-secondary-brand-icon: #574EFF !default;
+$eds-theme-color-button-secondary-brand-icon: #6B65E2 !default;
 $eds-theme-color-button-secondary-brand-icon-hover: #FFFFFF !default;
 $eds-theme-color-button-secondary-brand-icon-active: #FFFFFF !default;
 $eds-theme-color-button-secondary-neutral-background: rgba(0, 0, 0, 0) !default;
-$eds-theme-color-button-secondary-neutral-background-hover: #3C444C !default;
-$eds-theme-color-button-secondary-neutral-background-active: #21272D !default;
-$eds-theme-color-button-secondary-neutral-border: #3C444C !default;
-$eds-theme-color-button-secondary-neutral-border-hover: #3C444C !default;
-$eds-theme-color-button-secondary-neutral-border-active: #21272D !default;
-$eds-theme-color-button-secondary-neutral-text: #3C444C !default;
+$eds-theme-color-button-secondary-neutral-background-hover: #5D6369 !default;
+$eds-theme-color-button-secondary-neutral-background-active: #383C43 !default;
+$eds-theme-color-button-secondary-neutral-border: #5D6369 !default;
+$eds-theme-color-button-secondary-neutral-border-hover: #5D6369 !default;
+$eds-theme-color-button-secondary-neutral-border-active: #383C43 !default;
+$eds-theme-color-button-secondary-neutral-text: #5D6369 !default;
 $eds-theme-color-button-secondary-neutral-text-hover: #FFFFFF !default;
 $eds-theme-color-button-secondary-neutral-text-active: #FFFFFF !default;
-$eds-theme-color-button-secondary-neutral-icon: #838C95 !default;
+$eds-theme-color-button-secondary-neutral-icon: #999EA3 !default;
 $eds-theme-color-button-secondary-neutral-icon-hover: #FFFFFF !default;
 $eds-theme-color-button-secondary-neutral-icon-active: #FFFFFF !default;
 $eds-theme-color-button-secondary-success-background: rgba(0, 0, 0, 0) !default;
-$eds-theme-color-button-secondary-success-background-hover: #007349 !default;
+$eds-theme-color-button-secondary-success-background-hover: #007249 !default;
 $eds-theme-color-button-secondary-success-background-active: #005939 !default;
-$eds-theme-color-button-secondary-success-border: #008756 !default;
-$eds-theme-color-button-secondary-success-border-hover: #007349 !default;
+$eds-theme-color-button-secondary-success-border: #008656 !default;
+$eds-theme-color-button-secondary-success-border-hover: #007249 !default;
 $eds-theme-color-button-secondary-success-border-active: #005939 !default;
-$eds-theme-color-button-secondary-success-text: #007349 !default;
+$eds-theme-color-button-secondary-success-text: #007249 !default;
 $eds-theme-color-button-secondary-success-text-hover: #FFFFFF !default;
 $eds-theme-color-button-secondary-success-text-active: #FFFFFF !default;
-$eds-theme-color-button-secondary-success-icon: #008756 !default;
+$eds-theme-color-button-secondary-success-icon: #008656 !default;
 $eds-theme-color-button-secondary-success-icon-hover: #FFFFFF !default;
 $eds-theme-color-button-secondary-success-icon-active: #FFFFFF !default;
 $eds-theme-color-button-secondary-warning-background: rgba(0, 0, 0, 0) !default;
 $eds-theme-color-button-secondary-warning-background-hover: #AC3400 !default;
-$eds-theme-color-button-secondary-warning-background-active: #852800 !default;
+$eds-theme-color-button-secondary-warning-background-active: #842800 !default;
 $eds-theme-color-button-secondary-warning-border: #C64600 !default;
 $eds-theme-color-button-secondary-warning-border-hover: #AC3400 !default;
-$eds-theme-color-button-secondary-warning-border-active: #852800 !default;
+$eds-theme-color-button-secondary-warning-border-active: #842800 !default;
 $eds-theme-color-button-secondary-warning-text: #AC3400 !default;
 $eds-theme-color-button-secondary-warning-text-hover: #FFFFFF !default;
 $eds-theme-color-button-secondary-warning-text-active: #FFFFFF !default;
@@ -324,41 +288,41 @@ $eds-theme-color-button-secondary-error-text-active: #FFFFFF !default;
 $eds-theme-color-button-secondary-error-icon: #D41E52 !default;
 $eds-theme-color-button-secondary-error-icon-hover: #FFFFFF !default;
 $eds-theme-color-button-secondary-error-icon-active: #FFFFFF !default;
-$eds-theme-color-button-icon-brand: #574EFF !default;
-$eds-theme-color-button-icon-brand-hover: #574EFF !default;
+$eds-theme-color-button-icon-brand: #6B65E2 !default;
+$eds-theme-color-button-icon-brand-hover: #6B65E2 !default;
 $eds-theme-color-button-icon-brand-active: #FFFFFF !default;
 $eds-theme-color-button-icon-brand-background: rgba(0, 0, 0, 0) !default;
-$eds-theme-color-button-icon-brand-background-hover: #C3C0FE !default;
-$eds-theme-color-button-icon-brand-background-active: #433BDE !default;
+$eds-theme-color-button-icon-brand-background-hover: #E0E0F9 !default;
+$eds-theme-color-button-icon-brand-background-active: #5751D2 !default;
 $eds-theme-color-button-icon-brand-border: rgba(0, 0, 0, 0) !default;
-$eds-theme-color-button-icon-brand-border-hover: #C3C0FE !default;
-$eds-theme-color-button-icon-brand-border-active: #433BDE !default;
-$eds-theme-color-button-icon-brand-text: #433BDE !default;
-$eds-theme-color-button-icon-brand-text-hover: #433BDE !default;
+$eds-theme-color-button-icon-brand-border-hover: #E0E0F9 !default;
+$eds-theme-color-button-icon-brand-border-active: #5751D2 !default;
+$eds-theme-color-button-icon-brand-text: #5751D2 !default;
+$eds-theme-color-button-icon-brand-text-hover: #5751D2 !default;
 $eds-theme-color-button-icon-brand-text-active: #FFFFFF !default;
-$eds-theme-color-button-icon-neutral: #3C444C !default;
-$eds-theme-color-button-icon-neutral-hover: #3C444C !default;
+$eds-theme-color-button-icon-neutral: #5D6369 !default;
+$eds-theme-color-button-icon-neutral-hover: #5D6369 !default;
 $eds-theme-color-button-icon-neutral-active: #FFFFFF !default;
 $eds-theme-color-button-icon-neutral-background: rgba(0, 0, 0, 0) !default;
-$eds-theme-color-button-icon-neutral-background-hover: #E8E8E9 !default;
-$eds-theme-color-button-icon-neutral-background-active: #3C444C !default;
+$eds-theme-color-button-icon-neutral-background-hover: #E7E8EA !default;
+$eds-theme-color-button-icon-neutral-background-active: #5D6369 !default;
 $eds-theme-color-button-icon-neutral-border: rgba(0, 0, 0, 0) !default;
-$eds-theme-color-button-icon-neutral-border-hover: #E8E8E9 !default;
-$eds-theme-color-button-icon-neutral-border-active: #3C444C !default;
-$eds-theme-color-button-icon-neutral-text: #3C444C !default;
-$eds-theme-color-button-icon-neutral-text-hover: #3C444C !default;
+$eds-theme-color-button-icon-neutral-border-hover: #E7E8EA !default;
+$eds-theme-color-button-icon-neutral-border-active: #5D6369 !default;
+$eds-theme-color-button-icon-neutral-text: #5D6369 !default;
+$eds-theme-color-button-icon-neutral-text-hover: #5D6369 !default;
 $eds-theme-color-button-icon-neutral-text-active: #FFFFFF !default;
-$eds-theme-color-button-icon-success: #008756 !default;
-$eds-theme-color-button-icon-success-hover: #008756 !default;
+$eds-theme-color-button-icon-success: #008656 !default;
+$eds-theme-color-button-icon-success-hover: #008656 !default;
 $eds-theme-color-button-icon-success-active: #FFFFFF !default;
 $eds-theme-color-button-icon-success-background: rgba(0, 0, 0, 0) !default;
 $eds-theme-color-button-icon-success-background-hover: #B7E9CE !default;
-$eds-theme-color-button-icon-success-background-active: #007349 !default;
+$eds-theme-color-button-icon-success-background-active: #007249 !default;
 $eds-theme-color-button-icon-success-border: rgba(0, 0, 0, 0) !default;
 $eds-theme-color-button-icon-success-border-hover: #B7E9CE !default;
-$eds-theme-color-button-icon-success-border-active: #007349 !default;
-$eds-theme-color-button-icon-success-text: #007349 !default;
-$eds-theme-color-button-icon-success-text-hover: #007349 !default;
+$eds-theme-color-button-icon-success-border-active: #007249 !default;
+$eds-theme-color-button-icon-success-text: #007249 !default;
+$eds-theme-color-button-icon-success-text-hover: #007249 !default;
 $eds-theme-color-button-icon-success-text-active: #FFFFFF !default;
 $eds-theme-color-button-icon-warning: #C64600 !default;
 $eds-theme-color-button-icon-warning-hover: #C64600 !default;
@@ -376,38 +340,38 @@ $eds-theme-color-button-icon-error: #D41E52 !default;
 $eds-theme-color-button-icon-error-hover: #D41E52 !default;
 $eds-theme-color-button-icon-error-active: #FFFFFF !default;
 $eds-theme-color-button-icon-error-background: rgba(0, 0, 0, 0) !default;
-$eds-theme-color-button-icon-error-background-hover: #FFCCD8 !default;
+$eds-theme-color-button-icon-error-background-hover: #FFCBD7 !default;
 $eds-theme-color-button-icon-error-background-active: #BD0044 !default;
 $eds-theme-color-button-icon-error-border: rgba(0, 0, 0, 0) !default;
-$eds-theme-color-button-icon-error-border-hover: #FFCCD8 !default;
+$eds-theme-color-button-icon-error-border-hover: #FFCBD7 !default;
 $eds-theme-color-button-icon-error-border-active: #BD0044 !default;
 $eds-theme-color-button-icon-error-text: #BD0044 !default;
 $eds-theme-color-button-icon-error-text-hover: #BD0044 !default;
 $eds-theme-color-button-icon-error-text-active: #FFFFFF !default;
-$eds-theme-color-button-link-brand: #433BDE !default;
-$eds-theme-color-button-link-brand-hover: #312B9E !default;
-$eds-theme-color-button-link-brand-active: #312B9E !default;
-$eds-theme-color-button-link-neutral: #3C444C !default;
-$eds-theme-color-button-link-neutral-hover: #21272D !default;
-$eds-theme-color-button-link-neutral-active: #21272D !default;
-$eds-theme-color-button-link-success: #007349 !default;
+$eds-theme-color-button-link-brand: #5751D2 !default;
+$eds-theme-color-button-link-brand-hover: #3E42B1 !default;
+$eds-theme-color-button-link-brand-active: #3E42B1 !default;
+$eds-theme-color-button-link-neutral: #5D6369 !default;
+$eds-theme-color-button-link-neutral-hover: #383C43 !default;
+$eds-theme-color-button-link-neutral-active: #383C43 !default;
+$eds-theme-color-button-link-success: #007249 !default;
 $eds-theme-color-button-link-success-hover: #005939 !default;
 $eds-theme-color-button-link-success-active: #005939 !default;
 $eds-theme-color-button-link-warning: #AC3400 !default;
-$eds-theme-color-button-link-warning-hover: #852800 !default;
-$eds-theme-color-button-link-warning-active: #852800 !default;
+$eds-theme-color-button-link-warning-hover: #842800 !default;
+$eds-theme-color-button-link-warning-active: #842800 !default;
 $eds-theme-color-button-link-error: #BD0044 !default;
 $eds-theme-color-button-link-error-hover: #8F0134 !default;
 $eds-theme-color-button-link-error-active: #8F0134 !default;
-$eds-theme-color-focus-ring: #574EFF !default;
+$eds-theme-color-focus-ring: #6B65E2 !default;
 $eds-theme-color-focus-ring-inverted: #FFFFFF !default;
-$eds-theme-color-form-border: #CAD1D8 !default;
-$eds-theme-color-form-border-hover: #838C95 !default;
+$eds-theme-color-form-border: #C0C4C8 !default;
+$eds-theme-color-form-border-hover: #999EA3 !default;
 $eds-theme-color-form-background: #FFFFFF !default;
-$eds-theme-color-form-background-hover: #F3F3F3 !default;
-$eds-theme-color-form-label: #21272D !default;
+$eds-theme-color-form-background-hover: #F4F6F8 !default;
+$eds-theme-color-form-label: #383C43 !default;
 $eds-theme-color-text-highlight-foreground: #21272D !default;
-$eds-theme-color-text-highlight-background: #FCFF00 !default;
+$eds-theme-color-text-highlight-background: #F5FF8F !default;
 $eds-theme-box-shadow: 0px 0px 0px 1px var(--eds-color-neutral-200), 0px 2px 3px rgba(0, 0, 0, 0.02), 0px 4px 8px rgba(0, 0, 0, 0.08) !default;
 $eds-theme-form-border-width: 1px !default;
 $eds-theme-form-border-radius: 4px !default;
@@ -471,14 +435,6 @@ $tokens: (
     ),
     'color': (
       'brand': (
-        '100': $eds-color-brand-100,
-        '200': $eds-color-brand-200,
-        '300': $eds-color-brand-300,
-        '400': $eds-color-brand-400,
-        '500': $eds-color-brand-500,
-        '600': $eds-color-brand-600,
-        '700': $eds-color-brand-700,
-        '800': $eds-color-brand-800,
         'grape': (
           '100': $eds-color-brand-grape-100,
           '200': $eds-color-brand-grape-200,
@@ -545,28 +501,6 @@ $tokens: (
           '800': $eds-color-other-ruby-800
         )
       ),
-      'white': $eds-color-white,
-      'black': $eds-color-black,
-      'alert': (
-        '100': $eds-color-alert-100,
-        '200': $eds-color-alert-200,
-        '300': $eds-color-alert-300,
-        '400': $eds-color-alert-400,
-        '500': $eds-color-alert-500,
-        '600': $eds-color-alert-600,
-        '700': $eds-color-alert-700,
-        '800': $eds-color-alert-800
-      ),
-      'success': (
-        '100': $eds-color-success-100,
-        '200': $eds-color-success-200,
-        '300': $eds-color-success-300,
-        '400': $eds-color-success-400,
-        '500': $eds-color-success-500,
-        '600': $eds-color-success-600,
-        '700': $eds-color-success-700,
-        '800': $eds-color-success-800
-      ),
       'info': (
         '100': $eds-color-info-100,
         '200': $eds-color-info-200,
@@ -575,20 +509,6 @@ $tokens: (
         '500': $eds-color-info-500,
         '600': $eds-color-info-600,
         '700': $eds-color-info-700
-      ),
-      'warning': (
-        '100': $eds-color-warning-100,
-        '200': $eds-color-warning-200,
-        '300': $eds-color-warning-300,
-        '400': $eds-color-warning-400,
-        '500': $eds-color-warning-500,
-        '600': $eds-color-warning-600,
-        '700': $eds-color-warning-700,
-        '800': $eds-color-warning-800
-      ),
-      'yellow': (
-        '100': $eds-color-yellow-100,
-        '500': $eds-color-yellow-500
       ),
       'highlight': (
         '100': $eds-color-highlight-100,
