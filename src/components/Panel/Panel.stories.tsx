@@ -15,5 +15,11 @@ const Template: Story<Props> = (args) => (
 export const Default = Template.bind({});
 Default.args = {};
 
+export const Flush = Template.bind({});
+Flush.args = { flush: true };
+
+export const Squared = Template.bind({});
+Squared.args = { variant: 'squared' };
+
 export const Centered = Template.bind({});
 Centered.args = { align: 'center' };

@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import styles from './PageHeader.module.css';
+import Heading from '../Heading';
 
 export interface Props {
   /**
@@ -25,6 +26,10 @@ export interface Props {
    */
   right?: ReactNode;
   /**
+   * Size property
+   */
+  headingSize?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+  /**
    * Page heading title text
    */
   title?: string;
@@ -45,6 +50,7 @@ export const PageHeader = ({
   title,
   titleAfter,
   right,
+  headingSize = 'h1',
   ...other
 }: Props) => {
   const componentClassName = clsx(
@@ -57,14 +63,18 @@ export const PageHeader = ({
     <header className={componentClassName} {...other}>
       <div className={styles['page-header__left']}>
         {kicker && <p className={styles['page-header__kicker']}>{kicker}</p>}
-        <h1 className={styles['page-header__title']}>
+        <Heading
+          as="h1"
+          className={styles['page-header__title']}
+          size={headingSize}
+        >
           {title}
           {titleAfter && (
             <div className={styles['page-header__title-after']}>
               {titleAfter}
             </div>
           )}
-        </h1>
+        </Heading>
 
         {description && (
           <div className={styles['page-header__description']}>

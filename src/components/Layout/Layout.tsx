@@ -21,7 +21,16 @@ export interface Props {
    * 1) Used for hover/focus states showing/hiding extra content
    */
   expandable?: boolean;
-
+  /**
+   * Sidebar property
+   * 1) Adjust the size of the sidebar
+   */
+  gap?: 'none';
+  /**
+   * Sidebar property
+   * 1) Adjust the size of the sidebar
+   */
+  sidebar?: 'wide';
   /**
    * Sidebar property
    * 1) Adjust the size of the sidebar
@@ -37,6 +46,8 @@ export const Layout = ({
   children,
   className,
   variant,
+  gap,
+  sidebar,
   ...other
 }: Props) => {
   const componentClassName = clsx(
@@ -44,6 +55,8 @@ export const Layout = ({
     className,
     variant === 'right-sidebar' && styles['layout--right-sidebar'],
     behavior === 'fixed-sidebar' && styles['layout--fixed-sidebar'],
+    gap === 'none' && styles['layout--gap-none'],
+    sidebar === 'wide' && styles['layout--sidebar-wide'],
   );
 
   return (
