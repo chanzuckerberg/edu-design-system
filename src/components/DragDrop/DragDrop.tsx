@@ -49,13 +49,13 @@ export const DragDrop = ({
   );
 
   const containerOrder = [];
-  for (const [key] of Object.entries(items)) {
-    items[key].id = key;
-  }
-  for (const [key] of Object.entries(containers)) {
-    containers[key].id = key;
+  Object.entries(items).forEach(([key, item]) => {
+    items[key] = { ...item, id: key };
+  });
+  Object.entries(containers).forEach(([key, item]) => {
+    containers[key] = { ...item, id: key };
     containerOrder.push(key);
-  }
+  });
   const initialData = { items, containers, containerOrder };
   const [state, setState] = useState(initialData);
 
