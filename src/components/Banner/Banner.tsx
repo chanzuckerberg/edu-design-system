@@ -30,11 +30,10 @@ export interface Props {
    */
   onDismiss?: () => void;
   /**
-   * This is deprecated and will be removed in an upcoming release. Please use the default elevation 1
+   * This prop is deprecated and will be removed in an upcoming release. Please use the default false value for isFlat.
    *
-   * The perceived elevation of the banner. An elevation of 0 appears flat against the surface while
-   * an elevation of 1 appears to hover slightly. The hover appearance is used to separate the element
-   * from the surrounding area. The flat version should only be used on white backgrounds.
+   * The perceived elevation of the banner. A banner with isFlat appears flat against the surface while
+   * a banner with isFlat as false has a border and drop shadow.
    *
    * @deprecated
    */
@@ -106,7 +105,7 @@ const variantToIconAssetsMap: {
  * <Banner
  *   onDismiss={handleDismiss}
  *   title="Some Title"
- *   description={<>Some description, possibly with a <Link href="www.some-other-resource.com">link to some other resource</Link>.</>}
+ *   description={<>Some description, possibly with a <Link href="https://go.czi.team/eds">link to some other resource</Link>.</>}
  *   action={<Button onClick={handleAction}>Action</Button>}
  * />
  * ```
@@ -119,10 +118,9 @@ export const Banner = ({
   isFlat,
   onDismiss,
   orientation,
-  variant = 'brand', // TODO: verify brand is the default variant and not neutral
+  variant = 'brand',
   title,
   titleAs = 'h3',
-  ...other
 }: Props) => {
   if (isFlat && process.env.NODE_ENV !== 'production') {
     console.warn(
@@ -150,7 +148,7 @@ export const Banner = ({
   );
 
   return (
-    <article className={componentClassName} {...other}>
+    <article className={componentClassName}>
       {onDismiss && (
         <Button
           className={styles['banner__close-btn']}

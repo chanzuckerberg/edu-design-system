@@ -105,7 +105,6 @@
       * List list detail item after
       * 1) Don't add a line after the last list item
       */
-    /* stylelint-disable-next-line max-nesting-depth */
     &:after {
       content: none;
     }
@@ -160,7 +159,6 @@
     background: var(--eds-theme-color-border-neutral-subtle); /* 2 */
     border-radius: 50%; /* 3 */
 
-    /* stylelint-disable-next-line max-nesting-depth */
     .list-detail__item.eds-is-active & {
       background: var(--eds-theme-color-text-neutral-default); /* 4 */
     }

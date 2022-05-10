@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Section, Grid, GridItem } from '../../../../src';
-import tokens from '../../../data/tokens.json';
+import filterTokens from '../../../util/filterTokens';
 import { TokenSpecimen } from '../../TokenSpecimen/TokenSpecimen';
 
 export class Tier2Colors extends Component {
@@ -246,14 +246,4 @@ export class Tier2Colors extends Component {
       </div>
     );
   }
-}
-
-function filterTokens(prefix) {
-  return Object.entries(tokens)
-    .filter(([name]) => name.startsWith(prefix))
-    .map(([name, { value, comment }]) => ({
-      name: `--${name}`,
-      value,
-      comment,
-    }));
 }

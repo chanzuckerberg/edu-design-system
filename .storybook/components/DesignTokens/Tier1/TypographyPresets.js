@@ -1,161 +1,105 @@
 import React, { Component } from 'react';
 import { Grid } from '../../../../src';
-import styles from '../../../../src/components/Utilities/TypographyPresets.module.css';
+import '../../../../src/components/Utilities/TypographyPresets.css';
 import { TokenSpecimen } from '../../TokenSpecimen/TokenSpecimen';
+
+export const PRESET_SIZE_MAP = {
+  '001': {
+    fontSize: 40,
+    lineHeight: 48,
+  },
+  '002': {
+    fontSize: 32,
+    lineHeight: 40,
+  },
+  '003': {
+    fontSize: 24,
+    lineHeight: 32,
+  },
+  '004': {
+    fontSize: 18,
+    lineHeight: 24,
+  },
+  '005': {
+    fontSize: 16,
+    lineHeight: 24,
+  },
+  '006': {
+    fontSize: 14,
+    lineHeight: 24,
+  },
+  '007': {
+    fontSize: 14,
+    lineHeight: 18,
+  },
+  '008': {
+    fontSize: 12,
+    lineHeight: 20,
+  },
+  '009': {
+    fontSize: 12,
+    lineHeight: 16,
+  },
+  '010': {
+    fontSize: 11,
+    lineHeight: 14,
+  },
+  '011': {
+    fontSize: 12,
+    lineHeight: 16,
+  },
+  '012': {
+    fontSize: 11,
+    lineHeight: 14,
+  },
+};
 
 export class Tier1TypographyPresets extends Component {
   render() {
+    const renderTypeToken = (
+      preset,
+      { boldVariant = true, lightVariant = false } = {},
+    ) => {
+      const { fontSize, lineHeight } = PRESET_SIZE_MAP[preset];
+      const commonProps = {
+        comment: 'font size / line height (px)',
+        value: `${fontSize} / ${lineHeight}`,
+        variant: 'typography-body',
+      };
+
+      return (
+        <>
+          <TokenSpecimen
+            name={`eds-typography-preset-${preset}`}
+            specimenClassName={`u-typography-preset-${preset}`}
+            {...commonProps}
+          />
+          {lightVariant && (
+            <TokenSpecimen
+              name={`eds-typography-preset-${preset}-light`}
+              specimenClassName={`u-typography-preset-${preset}-light`}
+              {...commonProps}
+            />
+          )}
+          {boldVariant && (
+            <TokenSpecimen
+              name={`eds-typography-preset-${preset}-bold`}
+              specimenClassName={`u-typography-preset-${preset}-bold`}
+              {...commonProps}
+            />
+          )}
+        </>
+      );
+    };
+
     return (
       <Grid>
-        <TokenSpecimen
-          name="eds-typography-preset-001"
-          specimenClassName={styles['u-typography-preset-001']}
-          variant="typography-body"
-        />
-
-        <TokenSpecimen
-          name="eds-typography-preset-001-bold"
-          specimenClassName={styles['u-typography-preset-001-bold']}
-          variant="typography-body"
-        />
-
-        <TokenSpecimen
-          name="eds-typography-preset-002"
-          specimenClassName={styles['u-typography-preset-002']}
-          variant="typography-body"
-        />
-
-        <TokenSpecimen
-          name="eds-typography-preset-002-bold"
-          specimenClassName={styles['u-typography-preset-002-bold']}
-          variant="typography-body"
-        />
-
-        <TokenSpecimen
-          name="eds-typography-preset-003"
-          specimenClassName={styles['u-typography-preset-003']}
-          variant="typography-body"
-        />
-
-        <TokenSpecimen
-          name="eds-typography-preset-003-bold"
-          specimenClassName={styles['u-typography-preset-003-bold']}
-          variant="typography-body"
-        />
-
-        <TokenSpecimen
-          name="eds-typography-preset-004"
-          specimenClassName={styles['u-typography-preset-004']}
-          variant="typography-body"
-        />
-
-        <TokenSpecimen
-          name="eds-typography-preset-004-bold"
-          specimenClassName={styles['u-typography-preset-004-bold']}
-          variant="typography-body"
-        />
-
-        <TokenSpecimen
-          name="eds-typography-preset-005"
-          specimenClassName={styles['u-typography-preset-005']}
-          variant="typography-body"
-        />
-
-        <TokenSpecimen
-          name="eds-typography-preset-005-light"
-          specimenClassName={styles['u-typography-preset-005-light']}
-          variant="typography-body"
-        />
-
-        <TokenSpecimen
-          name="eds-typography-preset-005-bold"
-          specimenClassName={styles['u-typography-preset-005-bold']}
-          variant="typography-body"
-        />
-
-        <TokenSpecimen
-          name="eds-typography-preset-006"
-          specimenClassName={styles['u-typography-preset-006']}
-          variant="typography-body"
-        />
-
-        <TokenSpecimen
-          name="eds-typography-preset-006-bold"
-          specimenClassName={styles['u-typography-preset-006-bold']}
-          variant="typography-body"
-        />
-
-        <TokenSpecimen
-          name="eds-typography-preset-007"
-          specimenClassName={styles['u-typography-preset-007']}
-          variant="typography-body"
-        />
-
-        <TokenSpecimen
-          name="eds-typography-preset-007-bold"
-          specimenClassName={styles['u-typography-preset-007-bold']}
-          variant="typography-body"
-        />
-
-        <TokenSpecimen
-          name="eds-typography-preset-008"
-          specimenClassName={styles['u-typography-preset-008']}
-          variant="typography-body"
-        />
-
-        <TokenSpecimen
-          name="eds-typography-preset-008-bold"
-          specimenClassName={styles['u-typography-preset-008-bold']}
-          variant="typography-body"
-        />
-
-        <TokenSpecimen
-          name="eds-typography-preset-009"
-          specimenClassName={styles['u-typography-preset-009']}
-          variant="typography-body"
-        />
-
-        <TokenSpecimen
-          name="eds-typography-preset-009-bold"
-          specimenClassName={styles['u-typography-preset-009-bold']}
-          variant="typography-body"
-        />
-
-        <TokenSpecimen
-          name="eds-typography-preset-010"
-          specimenClassName={styles['u-typography-preset-010']}
-          variant="typography-body"
-        />
-
-        <TokenSpecimen
-          name="eds-typography-preset-010-bold"
-          specimenClassName={styles['u-typography-preset-010-bold']}
-          variant="typography-body"
-        />
-
-        <TokenSpecimen
-          name="eds-typography-preset-011"
-          specimenClassName={styles['u-typography-preset-011']}
-          variant="typography-body"
-        />
-
-        <TokenSpecimen
-          name="eds-typography-preset-011-bold"
-          specimenClassName={styles['u-typography-preset-011-bold']}
-          variant="typography-body"
-        />
-
-        <TokenSpecimen
-          name="eds-typography-preset-012"
-          specimenClassName={styles['u-typography-preset-012']}
-          variant="typography-body"
-        />
-
-        <TokenSpecimen
-          name="eds-typography-preset-012-bold"
-          specimenClassName={styles['u-typography-preset-012-bold']}
-          variant="typography-body"
-        />
+        {Object.keys(PRESET_SIZE_MAP).map((preset) => {
+          if (preset === '005') {
+            return renderTypeToken(preset, { lightVariant: true });
+          }
+          return renderTypeToken(preset);
+        })}
       </Grid>
     );
   }
