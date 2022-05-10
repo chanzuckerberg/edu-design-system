@@ -10,7 +10,13 @@
 .page-header {
   display: flex;
   align-items: flex-start;
-  margin-bottom: var(--eds-size-4);
+  flex-direction: column;
+  margin-bottom: var(--eds-size-3);
+
+  @media all and (min-width: $eds-bp-md) {
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
 /**
@@ -25,17 +31,26 @@
 /**
  * Page header left
  * 1) Flex 1 added so the right content doesn't wrap
+ * 2) Push page header right all the way to the right
  */
- .page-header__left {
+.page-header__left {
   flex: 1; /* 1 */
+
+  @media all and (min-width: $eds-bp-md) {
+    margin-right: auto;
+  }
 }
 
 /**
  * Page header right
- * 1) Container that gets pushed all the way to the right
  */
 .page-header__right {
-  margin-left: auto; /* 1 */
+  margin-top: var(--eds-size-4); /* 1 */
+
+  @media all and (min-width: $eds-bp-md) {
+    margin-top: 0;
+    margin-left: var(--eds-size-4); /* 1 */
+  }
 }
 
 /**
@@ -52,7 +67,6 @@
  */
 .page-header__title {
   @mixin reset;
-  @mixin eds-theme-typography-heading-1;
 
   .page-header--center & {
     text-align: center;

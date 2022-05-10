@@ -17,11 +17,22 @@ export default {
 
 const Template: Story<Props> = (args) => (
   <Layout {...args}>
-    <LayoutSection>
-      <div className="fpo">Layout Section</div>
+    <LayoutSection region="sidebar">
+      <div className="fpo">Sidebar Layout Section</div>
     </LayoutSection>
-    <LayoutSection>
-      <div className="fpo">Layout Section</div>
+    <LayoutSection region="main">
+      <div className="fpo">Main Layout Section</div>
+    </LayoutSection>
+  </Layout>
+);
+
+const RightSidebarTemplate: Story<Props> = (args) => (
+  <Layout {...args}>
+    <LayoutSection region="main">
+      <div className="fpo">Main Layout Section</div>
+    </LayoutSection>
+    <LayoutSection region="sidebar">
+      <div className="fpo">Sidebar Layout Section</div>
     </LayoutSection>
   </Layout>
 );
@@ -29,7 +40,17 @@ const Template: Story<Props> = (args) => (
 export const Default = Template.bind({});
 Default.args = {};
 
-export const RideSidebar = Template.bind({});
-RideSidebar.args = {
+export const GapNone = Template.bind({});
+GapNone.args = {
+  gap: 'none',
+};
+
+export const SidebarWide = Template.bind({});
+SidebarWide.args = {
+  sidebar: 'wide',
+};
+
+export const RightSidebar = RightSidebarTemplate.bind({});
+RightSidebar.args = {
   variant: 'right-sidebar',
 };

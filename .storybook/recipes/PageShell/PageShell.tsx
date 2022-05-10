@@ -37,7 +37,7 @@ export const PageShell = ({ children, className, ...other }: Props) => {
       >
         Skip to content
       </Button>
-      <Layout>
+      <Layout gap="none">
         <LayoutSection region="sidebar">
           <GlobalHeader />
         </LayoutSection>
