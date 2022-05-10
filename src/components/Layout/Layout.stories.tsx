@@ -7,12 +7,6 @@ import LayoutSection from '../LayoutSection';
 export default {
   title: 'Molecules/Layout and Containers/Layout',
   component: Layout,
-  parameters: {
-    axe: {
-      // TODO: re-enable when component is worked on
-      skip: true,
-    },
-  },
 } as Meta;
 
 const Template: Story<Props> = (args) => (
@@ -37,6 +31,17 @@ const RightSidebarTemplate: Story<Props> = (args) => (
   </Layout>
 );
 
+const FiftyFiftyTemplate: Story<Props> = (args) => (
+  <Layout {...args}>
+    <LayoutSection region="main">
+      <div className="fpo">Main Layout Section 1</div>
+    </LayoutSection>
+    <LayoutSection region="main">
+      <div className="fpo">Main Layout Section 2</div>
+    </LayoutSection>
+  </Layout>
+);
+
 export const Default = Template.bind({});
 Default.args = {};
 
@@ -53,4 +58,9 @@ SidebarWide.args = {
 export const RightSidebar = RightSidebarTemplate.bind({});
 RightSidebar.args = {
   variant: 'right-sidebar',
+};
+
+export const FiftyFifty = FiftyFiftyTemplate.bind({});
+FiftyFifty.args = {
+  variant: '50-50',
 };

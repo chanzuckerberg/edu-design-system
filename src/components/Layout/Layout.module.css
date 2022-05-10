@@ -33,6 +33,15 @@
 /**
  * Layout right sidebar variant
  */
+.layout--50-50 {
+  @media all and (min-width: $eds-bp-xl) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/**
+ * Layout right sidebar variant
+ */
 .layout--gap-none {
   gap: 0;
 }
