@@ -1,0 +1,64 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #DATA BAR
+\*------------------------------------*/
+
+/**
+ * The data bar represents the relative completion of a task.
+ * 1) Rounds the sides rather than making the bar elliptical.
+ */
+.data-bar {
+  --data-bar-height: var(--eds-size-2);
+  height: var(--data-bar-height);
+
+  background-color: var(--eds-theme-color-background-neutral-subtle);
+
+  border: var(--eds-theme-color-border-neutral-default) solid
+    var(--eds-theme-border-width);
+  border-radius: var(--eds-border-radius-full); /* 1 */
+}
+
+/**
+ * The label title above the data bar that provides an accessible name.
+ */
+.data-bar__label {
+  @mixin eds-theme-typography-title-sm;
+}
+
+/**
+ * Wraps the label and the caption description.
+ */
+.data-bar__label-wrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  margin-bottom: var(--eds-size-2);
+}
+
+/**
+ * The amount of space the segments can consume. Is overlayed on top of the containing bar.
+ * 1) Shifts a border width amount to completely overlay instead of being offset from the containing borders.
+ * 2) Makes the last segment overlap the containing bar right border.
+ */
+.data-bar__segment-space {
+  position: relative;
+  bottom: var(--eds-theme-border-width); /* 1 */
+  right: var(--eds-theme-border-width);
+
+  display: flex;
+  gap: var(--eds-size-half);
+
+  width: calc(100% + 2 * var(--eds-theme-border-width)); /* 2 */
+}
+/**
+ * Shortens the amount of space the segments consume by an amount equal to the radius of the semicircle end of the containing bar (half the height of the bar).
+ * Results in an empty space that visually indicates incompleteness of the relevant task.
+ * Required due to disproportionately larger spacing given to small segments to make them visible.
+ */
+.data-bar__segment-space--incomplete {
+  width: calc(
+    100% + 2 * var(--eds-theme-border-width) - 0.5 * var(--data-bar-height)
+  );
+}

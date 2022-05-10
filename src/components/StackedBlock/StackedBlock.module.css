@@ -25,7 +25,6 @@
   margin-bottom: 0;
 
   .stacked-block--break & {
-    /* stylelint-disable-next-line max-nesting-depth */
     @media all and (min-width: $eds-bp-md) {
       margin-right: var(--eds-size-4);
     }
