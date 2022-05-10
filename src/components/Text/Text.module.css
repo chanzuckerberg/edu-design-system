@@ -20,7 +20,7 @@
  */
 .text--body,
 .text--md {
-  @mixin eds-theme-typography-body-text;
+  @mixin eds-theme-typography-body-text-md;
 }
 .text--lg {
   @mixin eds-theme-typography-body-text-lg;
@@ -71,7 +71,7 @@
  */
 .text--normal-weight {
   /* TODO: replace with tier 2 token */
-  font-weight: var(--eds-font-weight-medium);
+  font-weight: var(--eds-font-weight-light);
 }
 .text--bold-weight {
   /* TODO: replace with tier 2 token */

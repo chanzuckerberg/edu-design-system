@@ -183,7 +183,7 @@
       "2-and-half": "1.25rem"
     },
     "font-family": {
-      "primary": "'Open Sans', sans-serif",
+      "primary": "'Arimo', sans-serif",
       "secondary": "'Open Sans', sans-serif"
     },
     "font-size": {
@@ -194,7 +194,8 @@
       "18": "1.125rem",
       "24": "1.5rem",
       "32": "2rem",
-      "40": "2.5rem"
+      "40": "2.5rem",
+      "base": "16px"
     },
     "font-weight": {
       "light": "400",
