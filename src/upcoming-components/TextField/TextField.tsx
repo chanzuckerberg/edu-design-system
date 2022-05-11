@@ -194,6 +194,55 @@ export const TextField = ({
     disabled && styles['eds-is-disabled'],
   );
 
+  const body = (
+    <>
+      <div className={styles['text-field__body']}>
+        <TextInput
+          aria-invalid={!!isError}
+          ariaDescribedBy={ariaDescribedByVar}
+          className={styles['text-field__input']}
+          defaultValue={defaultValue}
+          disabled={disabled}
+          id={idVar}
+          inputMode={inputMode}
+          isError={isError}
+          maxLength={maxLength}
+          name={name}
+          onChange={onChange}
+          placeholder={placeholder}
+          readOnly={readOnly}
+          required={required}
+          title={title}
+          type={type}
+          value={value}
+          {...other}
+        />
+        {inputWithin && (
+          <div className={styles['text-field__input-within']}>
+            {inputWithin}
+          </div>
+        )}
+        {iconName && (
+          <Icon
+            className={styles['text-field__icon']}
+            name={iconName}
+            purpose="decorative"
+          />
+        )}
+      </div>
+      {fieldNote && (
+        <FieldNote
+          className={styles['text-field__note']}
+          id={ariaDescribedByVar}
+          inverted={inverted}
+          isError={isError}
+        >
+          {fieldNote}
+        </FieldNote>
+      )}
+    </>
+  );
+
   return (
     <div className={componentClassName}>
       <Label
@@ -206,58 +255,11 @@ export const TextField = ({
         requiredLabel={requiredLabel}
         text={label}
       />
-      <div
-        className={clsx(
-          fieldNote &&
-            fieldNotePlacement &&
-            styles[`text-field--${fieldNotePlacement}`],
-        )}
-      >
-        <div className={styles['text-field__body']}>
-          <TextInput
-            aria-invalid={!!isError}
-            ariaDescribedBy={ariaDescribedByVar}
-            className={styles['text-field__input']}
-            defaultValue={defaultValue}
-            disabled={disabled}
-            id={idVar}
-            inputMode={inputMode}
-            isError={isError}
-            maxLength={maxLength}
-            name={name}
-            onChange={onChange}
-            placeholder={placeholder}
-            readOnly={readOnly}
-            required={required}
-            title={title}
-            type={type}
-            value={value}
-            {...other}
-          />
-          {inputWithin && (
-            <div className={styles['text-field__input-within']}>
-              {inputWithin}
-            </div>
-          )}
-          {iconName && (
-            <Icon
-              className={styles['text-field__icon']}
-              name={iconName}
-              purpose="decorative"
-            />
-          )}
-        </div>
-        {fieldNote && (
-          <FieldNote
-            className={styles['text-field__note']}
-            id={ariaDescribedByVar}
-            inverted={inverted}
-            isError={isError}
-          >
-            {fieldNote}
-          </FieldNote>
-        )}
-      </div>
+      {fieldNote && fieldNotePlacement ? (
+        <div className={styles['text-field--inline']}>{body}</div>
+      ) : (
+        body
+      )}
     </div>
   );
 };
