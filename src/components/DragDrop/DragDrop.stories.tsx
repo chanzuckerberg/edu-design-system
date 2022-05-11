@@ -33,30 +33,37 @@ Default.args = {
     'item-1': {
       title: 'Project #1',
       children: <div className="fpo">Content here</div>,
+      id: '',
     },
     'item-2': {
       title: 'Project #2',
       children: <div className="fpo">Content here</div>,
+      id: '',
     },
     'item-3': {
       title: 'Project #3',
       children: <div className="fpo">Content here</div>,
+      id: '',
     },
     'item-4': {
       title: 'Project #4',
       children: <div className="fpo">Content here</div>,
+      id: '',
     },
     'item-5': {
       title: 'Project #5',
       children: <div className="fpo">Content here</div>,
+      id: '',
     },
   },
   containers: {
     'container-1': {
       itemIds: ['item-1', 'item-2', 'item-3', 'item-4', 'item-5'],
+      id: '',
     },
     'container-2': {
       itemIds: [],
+      id: '',
     },
   },
 };
@@ -67,33 +74,41 @@ export const MultipleContainers: StoryObj<Args> = {
       'item-1': {
         title: 'Project #1',
         children: <div className="fpo">Content here</div>,
+        id: '',
       },
       'item-2': {
         title: 'Project #2',
         children: <div className="fpo">Content here</div>,
+        id: '',
       },
       'item-3': {
         title: 'Project #3',
         children: <div className="fpo">Content here</div>,
+        id: '',
       },
       'item-4': {
         title: 'Project #4',
         children: <div className="fpo">Content here</div>,
+        id: '',
       },
       'item-5': {
         title: 'Project #5',
         children: <div className="fpo">Content here</div>,
+        id: '',
       },
     },
     containers: {
       'container-1': {
         itemIds: ['item-1', 'item-2', 'item-3'],
+        id: '',
       },
       'container-2': {
         itemIds: ['item-4'],
+        id: '',
       },
       'container-3': {
         itemIds: ['item-5'],
+        id: '',
       },
     },
     multipleContainers: true,
@@ -106,6 +121,7 @@ export const VariousSizedItems: StoryObj<Args> = {
       'item-1': {
         title: 'Project #1',
         children: <div className="fpo">Content here</div>,
+        id: '',
       },
       'item-2': {
         title: 'Project #2',
@@ -120,6 +136,7 @@ export const VariousSizedItems: StoryObj<Args> = {
             other containers
           </div>
         ),
+        id: '',
       },
       'item-3': {
         children: (
@@ -134,6 +151,7 @@ export const VariousSizedItems: StoryObj<Args> = {
             Small container
           </div>
         ),
+        id: '',
       },
       'item-4': {
         children: (
@@ -148,6 +166,7 @@ export const VariousSizedItems: StoryObj<Args> = {
             Another small container
           </div>
         ),
+        id: '',
       },
       'item-5': {
         title: 'Project #5',
@@ -160,14 +179,17 @@ export const VariousSizedItems: StoryObj<Args> = {
             container
           </div>
         ),
+        id: '',
       },
     },
     containers: {
       'container-1': {
         itemIds: ['item-1', 'item-2', 'item-3', 'item-4', 'item-5'],
+        id: '',
       },
       'container-2': {
         itemIds: [],
+        id: '',
       },
     },
   },
@@ -180,6 +202,7 @@ export const Accessibility: StoryObj<Args> = {
         children: (
           <div className="fpo">Each drag item has role=&quot;button&quot;</div>
         ),
+        id: '',
       },
       'item-1': {
         children: (
@@ -187,14 +210,17 @@ export const Accessibility: StoryObj<Args> = {
             (Open this canvas in its own tab for best results)
           </div>
         ),
+        id: '',
       },
       'item-2': {
         children: <div className="fpo">Use Tab key to select an item</div>,
+        id: '',
       },
       'item-3': {
         children: (
           <div className="fpo">Press Spacebar to pick up the selected item</div>
         ),
+        id: '',
       },
       'item-4': {
         children: (
@@ -203,11 +229,13 @@ export const Accessibility: StoryObj<Args> = {
             container (left/right)
           </div>
         ),
+        id: '',
       },
       'item-5': {
         children: (
           <div className="fpo">Press Spacebar again to drop the item</div>
         ),
+        id: '',
       },
       'item-6': {
         children: (
@@ -216,6 +244,7 @@ export const Accessibility: StoryObj<Args> = {
             to screen readers
           </div>
         ),
+        id: '',
       },
     },
     containers: {
@@ -229,9 +258,11 @@ export const Accessibility: StoryObj<Args> = {
           'item-5',
           'item-6',
         ],
+        id: '',
       },
       'container-2': {
         itemIds: [],
+        id: '',
       },
     },
   },
@@ -260,12 +291,15 @@ export const UnstyledItems: StoryObj<Args> = {
             </TextPassage>
           </MediaBlock>
         ),
+        id: '',
       },
       'item-2': {
         children: <Card />,
+        id: '',
       },
       'item-3': {
         children: <Table caption="Drag and drop demonstration" />,
+        id: '',
       },
       'item-4': {
         children: (
@@ -276,14 +310,17 @@ export const UnstyledItems: StoryObj<Args> = {
             </p>
           </TextPassage>
         ),
+        id: '',
       },
     },
     containers: {
       'container-1': {
         itemIds: ['item-1', 'item-2', 'item-3', 'item-4'],
+        id: '',
       },
       'container-2': {
         itemIds: [],
+        id: '',
       },
     },
     unstyledItems: true,

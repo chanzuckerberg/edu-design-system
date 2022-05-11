@@ -13,11 +13,11 @@ export interface Props {
   /**
    * Draggable items that can be held by a container.
    */
-  items?: Items;
+  items: Items;
   /**
    * Containers can hold items and can accept dropped items from another container in the same context. An array of itemIds may be initially passed into a container.
    */
-  containers?: Containers;
+  containers: Containers;
   /**
    * By default, the last container in a context gets unique styling. If more than two containers will be used, setting this prop to true will remove this unique styling and give all containers a simple border.
    */
@@ -48,7 +48,7 @@ export const DragDrop = ({
     unstyledItems && styles['drag-drop--unstyled'],
   );
 
-  const containerOrder = [];
+  const containerOrder: string[] = [];
   Object.entries(items).forEach(([key, item]) => {
     items[key] = { ...item, id: key };
   });
@@ -101,13 +101,15 @@ export const DragDrop = ({
       /**
        * Reducer for creating a new state object for this container
        */
-      const newState = {
-        ...state,
-        containers: {
-          ...state.containers,
-          [newContainer.id]: newContainer,
-        },
-      };
+      const newState = newContainer.id
+        ? {
+            ...state,
+            containers: {
+              ...state.containers,
+              [newContainer.id]: newContainer,
+            },
+          }
+        : state;
 
       /**
        * Update state with new container's contents
@@ -136,14 +138,17 @@ export const DragDrop = ({
     /**
      * Reducer for updating both source and destination containers
      */
-    const newState = {
-      ...state,
-      containers: {
-        ...state.containers,
-        [newStart.id]: newStart,
-        [newFinish.id]: newFinish,
-      },
-    };
+    const newState =
+      newStart.id && newFinish.id
+        ? {
+            ...state,
+            containers: {
+              ...state.containers,
+              [newStart.id]: newStart,
+              [newFinish.id]: newFinish,
+            },
+          }
+        : state;
 
     /**
      * Update state with both source and destination containers
