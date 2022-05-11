@@ -13,9 +13,9 @@ import {
   Panel,
   Text,
 } from '../../../src';
-import utilityStyles from '../../../src/components/Utilities/Spacing.module.css';
 import TextField from '../../../src/upcoming-components/TextField';
 
+import '../../../src/components/Utilities/Spacing.css';
 import '../../../src/components/Utilities/TypographyUsage.css';
 
 export const CadStep1 = () => (
@@ -23,7 +23,7 @@ export const CadStep1 = () => (
     <Panel variant="squared">
       <LayoutContainer>
         <PageHeader
-          className={utilityStyles['u-margin-bottom-none']}
+          className="u-margin-bottom-none"
           description={
             <HorizontalStepper
               activeIndex={0}
@@ -77,7 +77,7 @@ export const CadStep1 = () => (
             average amounts for each question below.
           </Text>
           <TextField
-            className={utilityStyles['u-margin-bottom-lg']}
+            className="u-margin-bottom-lg"
             fieldNote="times per week"
             fieldNotePlacement="inline"
             label="How many times per week do you have class?"
