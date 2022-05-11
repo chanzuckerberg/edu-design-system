@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Hr } from '../../../src';
 import './Utilities.css';
+import '../../../src/components/Utilities/Spacing.css';
 
 export class SpacingMarginUtilities extends Component {
   render() {
