@@ -22,7 +22,8 @@ export interface Props {
  */
 export const DragDropItem = ({ className, item, index }: Props) => {
   const componentClassName = clsx(styles['drag-drop-item'], className, {});
-  return (
+  // `id` is injected in <DragDrop />
+  return item.id ? (
     <Draggable draggableId={item.id} index={index}>
       {(provided) => {
         return (
@@ -42,5 +43,5 @@ export const DragDropItem = ({ className, item, index }: Props) => {
         );
       }}
     </Draggable>
-  );
+  ) : null;
 };

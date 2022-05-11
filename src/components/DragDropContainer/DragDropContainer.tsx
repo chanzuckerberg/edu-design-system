@@ -25,7 +25,7 @@ export interface Props {
  */
 export const DragDropContainer = ({ className, container, items }: Props) => {
   const componentClassName = clsx(styles['drag-drop-container'], className, {});
-  return (
+  return container.id ? (
     <Droppable droppableId={container.id} type="item">
       {(provided) => (
         <div
@@ -40,5 +40,5 @@ export const DragDropContainer = ({ className, container, items }: Props) => {
         </div>
       )}
     </Droppable>
-  );
+  ) : null;
 };

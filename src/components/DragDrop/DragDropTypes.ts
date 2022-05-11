@@ -3,7 +3,7 @@ export interface Items {
 }
 
 export interface ItemType {
-  id: string;
+  id?: string;
   title?: string;
   children?: React.ReactNode;
 }
@@ -13,6 +13,6 @@ export interface Containers {
 }
 
 export interface ContainerType {
-  id: string;
+  id?: string;
   itemIds: string[];
 }
