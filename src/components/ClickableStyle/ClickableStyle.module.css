@@ -16,7 +16,6 @@
   @mixin eds-theme-typography-button-label;
   display: inline-flex;
   align-items: center;
-  justify-content: center;
   margin: 0; /* 3 */
   gap: 0.75rem; /* 4 */
   border-width: var(--eds-theme-border-width);
