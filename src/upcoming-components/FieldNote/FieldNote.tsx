@@ -1,7 +1,8 @@
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import styles from './FieldNote.module.css';
-import Icon, { IconName } from '../../components/Icon';
+import { Text, Icon } from '../../../src';
+import { IconName } from '../../components/Icon';
 
 export interface Props {
   /**
@@ -44,12 +45,12 @@ export const FieldNote = ({
 }: Props) => {
   const componentClassName = clsx(
     styles['field-note'],
-    className,
     inverted && styles['field-note--inverted'],
     isError && styles['eds-is-error'],
+    className,
   );
   return (
-    <div
+    <Text
       aria-live="assertive"
       className={componentClassName}
       id={id}
@@ -64,6 +65,6 @@ export const FieldNote = ({
         />
       )}
       {children}
-    </div>
+    </Text>
   );
 };

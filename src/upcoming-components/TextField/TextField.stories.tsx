@@ -22,6 +22,12 @@ Default.args = {
   fieldNote: 'This is a fieldnote.',
 };
 
+export const FieldNoteInline = Template.bind({});
+FieldNoteInline.args = {
+  fieldNote: 'This is an inline fieldnote.',
+  fieldNotePlacement: 'inline',
+};
+
 export const Inverted = InvertedTemplate.bind({});
 Inverted.args = {
   inverted: true,

@@ -13,6 +13,7 @@ import {
   Panel,
   Text,
 } from '../../../src';
+import TextField from '../../../src/upcoming-components/TextField';
 
 import '../../../src/components/Utilities/Spacing.css';
 import '../../../src/components/Utilities/TypographyUsage.css';
@@ -71,8 +72,21 @@ export const CadStep1 = () => (
             If you teach multiple sections of this course, you can enter the
             average amounts for each question below.
           </Text>
-          <div className="fpo">TextField</div>
-          <div className="fpo">TextField</div>
+          <TextField
+            className="u-margin-bottom-lg"
+            fieldNote="times per week"
+            fieldNotePlacement="inline"
+            label="How many times per week do you have class?"
+            placeholder="Enter"
+            type="number"
+          />
+          <TextField
+            fieldNote="minutes"
+            fieldNotePlacement="inline"
+            label="How many minutes is each class?"
+            placeholder="Enter"
+            type="number"
+          />
         </LayoutSection>
       </Layout>
     </LayoutContainer>

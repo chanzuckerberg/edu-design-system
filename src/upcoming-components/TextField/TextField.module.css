@@ -16,6 +16,20 @@
   }
 }
 
+.text-field--inline {
+  display: flex;
+  align-items: center;
+  gap: var(--eds-size-3);
+
+  .text-field__body {
+    flex-shrink: 0;
+  }
+  .text-field__note {
+    margin-top: 0;
+    margin-bottom: var(--eds-size-half);
+  }
+}
+
 /**
  * Text field body
  */
