@@ -26,14 +26,14 @@
 	  * First-level heading within text passage
 	  */
   h1 {
-    @mixin eds-theme-typography-heading-1;
+    @mixin eds-theme-typography-headline-lg;
   }
 
   /**
 	 * Second-level heading within text passage
 	 */
   h2 {
-    @mixin eds-theme-typography-heading-2;
+    @mixin eds-theme-typography-headline-md;
     margin-top: var(--eds-size-5);
   }
 
@@ -41,7 +41,7 @@
 	 * Third-level heading within text passage
 	 */
   h3 {
-    @mixin eds-theme-typography-heading-3;
+    @mixin eds-theme-typography-headline-sm;
     margin-top: var(--eds-size-5);
   }
 
@@ -49,7 +49,7 @@
 	 * Fourth-level heading within text passage
 	 */
   h4 {
-    @mixin eds-theme-typography-heading-4;
+    @mixin eds-theme-typography-title-md;
     margin-top: var(--eds-size-5);
   }
 
@@ -57,7 +57,7 @@
 	 * Fifth-level heading within text passage
 	 */
   h5 {
-    @mixin eds-theme-typography-heading-5;
+    @mixin eds-theme-typography-title-sm;
     margin-top: var(--eds-size-5);
   }
 
@@ -65,7 +65,7 @@
 	 * Sixth-level heading within text passage
 	 */
   h6 {
-    @mixin eds-theme-typography-heading-6;
+    @mixin eds-theme-typography-body-text-sm-bold;
     margin-top: var(--eds-size-5);
   }
 
