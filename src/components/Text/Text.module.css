@@ -6,11 +6,8 @@
 
 /**
  * Remove top and bottom margins applied by browser for text.
- * 1) Needs `:where` pseudoclass to reduce specificity so class overrides 
- *    for margin can happen where used.
  */
-:where(.text) {
-  /* 1 */
+.text {
   margin-bottom: 0;
   margin-top: 0;
 }
@@ -54,7 +51,7 @@
   color: inherit;
 }
 .text--neutral {
-  /* TODO: update to text-neutral-default when new colors land */
+  /* TODO(brand-tokens): update to text-neutral-default when new colors land */
   color: var(--eds-theme-color-text-neutral-subtle);
 }
 .text--success {

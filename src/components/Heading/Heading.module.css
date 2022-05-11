@@ -84,7 +84,7 @@
   color: inherit;
 }
 .heading--neutral {
-  /* TODO: update to text-neutral-default when new colors land */
+  /* TODO(brand-tokens): update to text-neutral-default when new colors land */
   color: var(--eds-theme-color-text-neutral-subtle);
 }
 .heading--success {

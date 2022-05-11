@@ -171,11 +171,15 @@ export const Banner = ({
       <div className={clsx(styles['banner__textAndAction'])}>
         <div className={clsx(styles['banner__textContent'])}>
           {title && (
-            <Heading as={titleAs} size="title-sm">
+            <Heading as={titleAs} size="title-sm" variant="inherit">
               {title}
             </Heading>
           )}
-          {description && <Text as={descriptionAs}>{description}</Text>}
+          {description && (
+            <Text as={descriptionAs} variant="inherit">
+              {description}
+            </Text>
+          )}
         </div>
 
         {action && (
