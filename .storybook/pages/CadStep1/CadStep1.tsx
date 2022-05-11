@@ -20,7 +20,7 @@ import '../../../src/components/Utilities/TypographyUsage.css';
 
 export const CadStep1 = () => (
   <>
-    <Panel variant="squared">
+    <Panel className="u-margin-bottom-xl" variant="squared">
       <LayoutContainer>
         <PageHeader
           className="u-margin-bottom-none"
@@ -48,7 +48,7 @@ export const CadStep1 = () => (
       </LayoutContainer>
     </Panel>
     <LayoutContainer>
-      <Layout className="u-padding-xl" variant="50-50">
+      <Layout variant="50-50">
         <LayoutSection className="u-margin-bottom-xl" region="main">
           <Heading className="u-margin-bottom-xl" size="h1">
             Welcome, Amy. Chart your course for the year here.
@@ -85,6 +85,7 @@ export const CadStep1 = () => (
             type="number"
           />
           <TextField
+            className="u-margin-bottom-lg"
             fieldNote="minutes"
             fieldNotePlacement="inline"
             label="How many minutes is each class?"
