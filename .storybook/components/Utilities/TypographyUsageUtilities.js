@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Hr } from '../../../src';
 import './Utilities.css';
-import '../../../src/components/Utilities/TypographyUsage.css';
 
 export class TypographyUsageUtilities extends Component {
   render() {

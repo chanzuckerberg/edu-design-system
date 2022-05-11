@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Hr } from '../../../src';
 import './Utilities.css';
-import '../../../src/components/Utilities/Colors.css';
 
 export class ColorUtilities extends Component {
   render() {
