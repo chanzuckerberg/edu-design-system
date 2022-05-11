@@ -116,6 +116,7 @@
       "8": "var(--eds-size-8)",
       "9": "var(--eds-size-9)",
       "10": "var(--eds-size-10)",
+      "12": "var(--eds-size-12)",
       "base-unit": "var(--eds-size-base-unit)",
       "half": "var(--eds-size-half)",
       "1-and-half": "var(--eds-size-1-and-half)",
