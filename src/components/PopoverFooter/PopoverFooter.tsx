@@ -16,6 +16,10 @@ export interface Props {
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
+ * ```ts
+ * import {PopoverFooter} from "@chanzuckerberg/eds";
+ * ```
+ *
  * Footer for the Popover component.
  */
 export const PopoverFooter: React.FC<Props> = ({

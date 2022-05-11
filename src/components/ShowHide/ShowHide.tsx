@@ -46,6 +46,10 @@ export interface Props {
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
+ * ```ts
+ * import {ShowHide} from "@chanzuckerberg/eds";
+ * ```
+ *
  * Component that shows and hides child content at the press of a button.
  */
 export const ShowHide = ({

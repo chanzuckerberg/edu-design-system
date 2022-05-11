@@ -31,6 +31,10 @@ export interface Props {
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
+ * ```ts
+ * import {Panel} from "@chanzuckerberg/eds";
+ * ```
+ *
  * TODO: update this comment with a description of the component.
  */
 export const Panel = ({

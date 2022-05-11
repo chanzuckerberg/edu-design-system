@@ -22,6 +22,10 @@ export interface Props {
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
+ * ```ts
+ * import {BreadcrumbsItem} from "@chanzuckerberg/eds";
+ * ```
+ *
  * A single breadcrumb, to be used in the Breadcrumbs component.
  */
 export const BreadcrumbsItem = ({ className, text, href, ...other }: Props) => {

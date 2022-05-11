@@ -22,6 +22,10 @@ export interface Props {
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
+ * ```ts
+ * import {Hr} from "@chanzuckerberg/eds";
+ * ```
+ *
  * Horizontal rule component to present a horizontal line separating content.
  */
 export const Hr = ({ className, size, variant, ...other }: Props) => {

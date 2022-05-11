@@ -35,6 +35,10 @@ export interface Props {
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
+ * ```ts
+ * import {TextPassage} from "@chanzuckerberg/eds";
+ * ```
+ *
  * A passage of text, including various components (i.e. article, blog post).
  */
 export const TextPassage = ({

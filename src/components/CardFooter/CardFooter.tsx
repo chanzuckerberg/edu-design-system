@@ -15,6 +15,10 @@ export interface Props {
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
+ * ```ts
+ * import {CardFooter} from "@chanzuckerberg/eds";
+ * ```
+ *
  * Footer of the Card component.
  */
 export const CardFooter = ({ children, className, ...other }: Props) => {

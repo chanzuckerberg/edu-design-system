@@ -23,6 +23,10 @@ export interface Props {
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
+ * ```ts
+ * import {Card} from "@chanzuckerberg/eds";
+ * ```
+ *
  * Card component used to visually group information. Yypically contains a title, image,
  * text, and/or calls to action.
  */

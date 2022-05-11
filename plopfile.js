@@ -1,5 +1,9 @@
+const pascalCase = require('pascal-case');
+
 module.exports = (plop) => {
   plop.setHelper('upperCase', (txt) => txt.toUpperCase());
+
+  plop.setHelper('inBraces', (txt) => `{${pascalCase.pascalCase(txt)}}`);
 
   plop.setGenerator('component', {
     description: 'Create a reusable component',

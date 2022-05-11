@@ -12,6 +12,10 @@ export interface Props {
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
+ * ```ts
+ * import {AvatarImage} from "@chanzuckerberg/eds";
+ * ```
+ *
  * Component that presents the user's avatar SVG.
  */
 export const AvatarImage = ({ className, ...other }: Props) => {
