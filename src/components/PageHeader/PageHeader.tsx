@@ -50,7 +50,7 @@ export const PageHeader = ({
   title,
   titleAfter,
   right,
-  headingSize = 'h1',
+  headingSize = 'headline-lg',
   ...other
 }: Props) => {
   const componentClassName = clsx(
