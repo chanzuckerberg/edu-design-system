@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Hr } from '../../../src';
 import './Utilities.css';
+import '../../../src/components/Utilities/Shadows.css';
 
 export class ShadowUtilities extends Component {
   render() {

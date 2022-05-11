@@ -16,7 +16,7 @@ import {
   CardBody,
   Icon,
 } from '../../../src';
-import utilityStyles from '../../../src/components/Utilities/Spacing.module.css';
+import '../../../src/components/Utilities/Spacing.css';
 
 import { PageShell } from '../../recipes/PageShell/PageShell';
 
@@ -38,11 +38,7 @@ export const ProjectOverview = () => {
       />
       <ListDetail>
         <ListDetailPanel title="Overview" variant="success">
-          <Heading
-            as="h2"
-            className={utilityStyles['u-margin-bottom-lg']}
-            size="h1"
-          >
+          <Heading as="h2" className="u-margin-bottom-lg" size="h1">
             What is this Project About?
           </Heading>
           <TextPassage size="lg">
@@ -51,20 +47,13 @@ export const ProjectOverview = () => {
             mattis sem turpis id dictum. Volutpat ornare turpis ultrices augue
             bibendum pellentesque. Habitasse.
           </TextPassage>
-          <Button
-            className={utilityStyles['u-margin-bottom-lg']}
-            variant="link"
-          >
+          <Button className="u-margin-bottom-lg" variant="link">
             See More
           </Button>
-          <Heading
-            as="h3"
-            className={utilityStyles['u-margin-bottom-sm']}
-            size="h4"
-          >
+          <Heading as="h3" className="u-margin-bottom-sm" size="h4">
             Essential Questions
           </Heading>
-          <TextPassage className={utilityStyles['u-margin-bottom-lg']}>
+          <TextPassage className="u-margin-bottom-lg">
             <ul>
               <li>How are structures in the body organized?</li>
               <li>
@@ -75,14 +64,10 @@ export const ProjectOverview = () => {
               <li>How are structures in the body organized?</li>
             </ul>
           </TextPassage>
-          <Heading
-            as="h3"
-            className={utilityStyles['u-margin-bottom-sm']}
-            size="h4"
-          >
+          <Heading as="h3" className="u-margin-bottom-sm" size="h4">
             Key Take Aways
           </Heading>
-          <TextPassage className={utilityStyles['u-margin-bottom-lg']}>
+          <TextPassage className="u-margin-bottom-lg">
             <ol>
               <li>
                 Groups of specialized cells make up organs and body systems,
@@ -95,7 +80,7 @@ export const ProjectOverview = () => {
               <li>How are structures in the body organized?</li>
             </ol>
           </TextPassage>
-          <Hr className={utilityStyles['u-margin-bottom-none']} />
+          <Hr className="u-margin-bottom-none" />
           <Section
             title="Power Focus Areas"
             titleBefore={
@@ -108,11 +93,7 @@ export const ProjectOverview = () => {
           >
             <Card>
               <CardBody>
-                <Heading
-                  as="h3"
-                  className={utilityStyles['u-margin-bottom-sm']}
-                  size="h4"
-                >
+                <Heading as="h3" className="u-margin-bottom-sm" size="h4">
                   What Was Medieval Japan Like?
                 </Heading>
                 <TextPassage>
@@ -132,13 +113,9 @@ export const ProjectOverview = () => {
               />
             }
           >
-            <Card className={utilityStyles['u-margin-bottom-md']}>
+            <Card className="u-margin-bottom-md">
               <CardBody>
-                <Heading
-                  as="h3"
-                  className={utilityStyles['u-margin-bottom-sm']}
-                  size="h4"
-                >
+                <Heading as="h3" className="u-margin-bottom-sm" size="h4">
                   What Was Medieval Japan Like?
                 </Heading>
                 <TextPassage>
@@ -149,11 +126,7 @@ export const ProjectOverview = () => {
             </Card>
             <Card>
               <CardBody>
-                <Heading
-                  as="h3"
-                  className={utilityStyles['u-margin-bottom-sm']}
-                  size="h4"
-                >
+                <Heading as="h3" className="u-margin-bottom-sm" size="h4">
                   What Was Medieval Japan Like?
                 </Heading>
                 <TextPassage>
