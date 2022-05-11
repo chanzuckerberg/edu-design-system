@@ -32,6 +32,11 @@ export interface Props {
   children?: ReactNode;
 }
 
+/**
+ * BETA: This component is still a work in progress and is subject to change.
+ *
+ * Global container for the header component. This helps set the stage for header recipes across applications.
+ */
 export const Header = ({
   behavior,
   className,

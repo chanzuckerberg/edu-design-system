@@ -21,7 +21,10 @@ export interface Props {
 }
 
 /**
- * Primary UI component for user interaction
+ * BETA: This component is still a work in progress and is subject to change.
+ *
+ * Card component used to visually group information. Yypically contains a title, image,
+ * text, and/or calls to action.
  */
 export const Card = ({ className, children, inverted, ...other }: Props) => {
   const componentClassName = clsx(

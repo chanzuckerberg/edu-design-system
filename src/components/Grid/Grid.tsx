@@ -31,7 +31,10 @@ export interface Props {
 }
 
 /**
- * Primary UI component for user interaction
+ * BETA: This component is still a work in progress and is subject to change.
+ *
+ * Grid component used to layout GridItem components into a grid pattern. This is flexible component
+ * allowing for a variety of responsive layout components.
  */
 export const Grid = ({
   className,
