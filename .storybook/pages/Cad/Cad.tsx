@@ -21,7 +21,7 @@ import {
   Tab,
 } from '../../../src';
 
-import '../../../src/components/Utilities/Spacing.css';
+import utilityStyles from '../../../src/components/Utilities/Spacing.module.css';
 import { Toolbar } from '../../../src/upcoming-components/Toolbar/Toolbar';
 import { ToolbarItem } from '../../../src/upcoming-components/ToolbarItem/ToolbarItem';
 
@@ -29,10 +29,10 @@ import ProjectColumn from '../../recipes/ProjectColumn';
 
 export const Cad = () => (
   <>
-    <Panel className="u-margin-bottom-lg" variant="squared">
+    <Panel className={utilityStyles['u-margin-bottom-lg']} variant="squared">
       <LayoutContainer>
         <PageHeader
-          className="u-margin-bottom-none"
+          className={utilityStyles['u-margin-bottom-none']}
           description={<div className="fpo">Stepper</div>}
           headingSize="h5"
           right={
@@ -54,10 +54,14 @@ export const Cad = () => (
       <Layout sidebar="wide" variant="right-sidebar">
         <LayoutSection region="main">
           <Panel>
-            <Heading as="h2" className="u-margin-bottom-lg" size="h3">
+            <Heading
+              as="h2"
+              className={utilityStyles['u-margin-bottom-lg']}
+              size="h3"
+            >
               Select projects for your History 6 plan
             </Heading>
-            <TextPassage className="u-margin-bottom-lg">
+            <TextPassage className={utilityStyles['u-margin-bottom-lg']}>
               <p>
                 Make a plan so that you can stay connected to learning
                 objectives even as changes occur throughout the year.
@@ -73,7 +77,10 @@ export const Cad = () => (
                 <OverflowList>
                   <OverflowListItem>
                     <ProjectColumn>
-                      <Toolbar className="u-margin-bottom-md" variant="bare">
+                      <Toolbar
+                        className={utilityStyles['u-margin-bottom-md']}
+                        variant="bare"
+                      >
                         <ToolbarItem>
                           <Heading as="h2" size="h5">
                             Available projects
@@ -92,7 +99,7 @@ export const Cad = () => (
                             <CardBody>
                               <Heading
                                 as="h3"
-                                className="u-margin-bottom-sm"
+                                className={utilityStyles['u-margin-bottom-sm']}
                                 size="h6"
                               >
                                 Longer project name truncation after a long...
@@ -108,7 +115,7 @@ export const Cad = () => (
                             <CardBody>
                               <Heading
                                 as="h3"
-                                className="u-margin-bottom-sm"
+                                className={utilityStyles['u-margin-bottom-sm']}
                                 size="h6"
                               >
                                 Project name
@@ -122,7 +129,7 @@ export const Cad = () => (
                             <CardBody>
                               <Heading
                                 as="h3"
-                                className="u-margin-bottom-sm"
+                                className={utilityStyles['u-margin-bottom-sm']}
                                 size="h6"
                               >
                                 Project name
@@ -136,7 +143,7 @@ export const Cad = () => (
                             <CardBody>
                               <Heading
                                 as="h3"
-                                className="u-margin-bottom-sm"
+                                className={utilityStyles['u-margin-bottom-sm']}
                                 size="h6"
                               >
                                 Project name
@@ -150,7 +157,7 @@ export const Cad = () => (
                             <CardBody>
                               <Heading
                                 as="h3"
-                                className="u-margin-bottom-sm"
+                                className={utilityStyles['u-margin-bottom-sm']}
                                 size="h6"
                               >
                                 Project name
@@ -164,7 +171,7 @@ export const Cad = () => (
                             <CardBody>
                               <Heading
                                 as="h3"
-                                className="u-margin-bottom-sm"
+                                className={utilityStyles['u-margin-bottom-sm']}
                                 size="h6"
                               >
                                 Project name
@@ -178,7 +185,10 @@ export const Cad = () => (
                   </OverflowListItem>
                   <OverflowListItem>
                     <ProjectColumn>
-                      <Toolbar className="u-margin-bottom-md" variant="bare">
+                      <Toolbar
+                        className={utilityStyles['u-margin-bottom-md']}
+                        variant="bare"
+                      >
                         <ToolbarItem>
                           <Heading as="h2" size="h5">
                             Planned projects
@@ -214,9 +224,12 @@ export const Cad = () => (
           </Panel>
         </LayoutSection>
         <LayoutSection region="sidebar">
-          <Panel className="u-margin-bottom-lg" flush>
-            <div className="u-padding-md">
-              <Toolbar className="u-margin-bottom-md" variant="bare">
+          <Panel className={utilityStyles['u-margin-bottom-lg']} flush>
+            <div className={utilityStyles['u-padding-md']}>
+              <Toolbar
+                className={utilityStyles['u-margin-bottom-md']}
+                variant="bare"
+              >
                 <ToolbarItem>
                   <Heading as="h2" size="h5">
                     Total Instructional days
@@ -231,7 +244,10 @@ export const Cad = () => (
             <div className="fpo">Inline Notification</div>
           </Panel>
           <Panel>
-            <Toolbar className="u-margin-bottom-md" variant="bare">
+            <Toolbar
+              className={utilityStyles['u-margin-bottom-md']}
+              variant="bare"
+            >
               <ToolbarItem>
                 <Heading as="h2" size="h5">
                   Standards coverage
