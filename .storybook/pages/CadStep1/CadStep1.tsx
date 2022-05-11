@@ -57,7 +57,11 @@ export const CadStep1 = () => (
             The course planner can help you set off on the right track, and
             navigate whatever comes your way.
           </Text>
-          <div className="fpo">image</div>
+          <img
+            alt="placeholder"
+            src="https://via.placeholder.com/480x320"
+            style={{ display: 'block' }}
+          />
         </LayoutSection>
         <LayoutSection region="main">
           <Heading as="h2" className="u-margin-bottom-xl" size="h3">
