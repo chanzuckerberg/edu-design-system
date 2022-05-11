@@ -1,6 +1,11 @@
 import clsx from 'clsx';
 import React, { useState } from 'react';
-import { DragDropContext, DropResult, Droppable } from 'react-beautiful-dnd';
+import {
+  DragDropContext,
+  DropResult,
+  Droppable,
+  DroppableProvided,
+} from 'react-beautiful-dnd';
 import styles from './DragDrop.module.css';
 import { Items, Containers } from './DragDropTypes';
 import DragDropContainer from '../DragDropContainer';
@@ -162,14 +167,14 @@ export const DragDrop = ({
         droppableId="all-containers"
         type="container"
       >
-        {(provided) => {
+        {(provided: DroppableProvided) => {
           return (
             <section
               className={componentClassName}
               {...provided.droppableProps}
               ref={provided.innerRef}
             >
-              {state.containerOrder.map((containerId) => {
+              {state.containerOrder.map((containerId: string) => {
                 const container = state.containers[containerId];
                 const items = container.itemIds.map(
                   (itemId) => state.items[itemId],

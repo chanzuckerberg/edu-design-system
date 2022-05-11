@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import React from 'react';
-import { Draggable } from 'react-beautiful-dnd';
+import { Draggable, DraggableProvided } from 'react-beautiful-dnd';
 import styles from '../DragDrop/DragDrop.module.css';
 import { ItemType } from '../DragDrop/DragDropTypes';
 
@@ -25,7 +25,7 @@ export const DragDropItem = ({ className, item, index }: Props) => {
   // `id` is injected in <DragDrop />
   return item.id ? (
     <Draggable draggableId={item.id} index={index}>
-      {(provided) => {
+      {(provided: DraggableProvided) => {
         return (
           <div
             className={componentClassName}
