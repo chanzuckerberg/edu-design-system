@@ -17,6 +17,7 @@ describe('<Text />', () => {
     );
     expect(screen.getByText('Some Text').classList).toContain('passthrough');
   });
+
   it('should handle refs', async () => {
     const HelperComponent = ({ as }: { as: 'p' | 'span' }) => {
       const refContainer = React.useRef(null);
@@ -41,5 +42,17 @@ describe('<Text />', () => {
     rerender(<HelperComponent as="span" />);
     expect(screen.getByText('Ref container parent test span')).toBeTruthy();
     userEvent.click(screen.getByRole('button'));
+  });
+
+  it('should console warn if attempting to use "info" variant', () => {
+    const consoleWarnMock = jest
+      .spyOn(global.console, 'warn')
+      .mockImplementation();
+    render(<Text variant="info">Some Text 2</Text>);
+    expect(consoleWarnMock).toHaveBeenCalledTimes(1);
+    expect(consoleWarnMock).toBeCalledWith(
+      'Info variant is deprecated, please consider another variant.',
+    );
+    consoleWarnMock.mockRestore();
   });
 });

@@ -1596,7 +1596,7 @@ __metadata:
     "@commitlint/config-conventional": ^16.2.1
     "@commitlint/prompt-cli": ^16.2.1
     "@geometricpanda/storybook-addon-badges": ^0.2.1
-    "@headlessui/react": ^1.5.0
+    "@headlessui/react": 1.5.0
     "@size-limit/preset-small-lib": ^7.0.8
     "@storybook/addon-a11y": ^6.4.22
     "@storybook/addon-docs": ^6.4.19
@@ -2185,13 +2185,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@headlessui/react@npm:^1.5.0":
-  version: 1.6.1
-  resolution: "@headlessui/react@npm:1.6.1"
+"@headlessui/react@npm:1.5.0":
+  version: 1.5.0
+  resolution: "@headlessui/react@npm:1.5.0"
   peerDependencies:
     react: ^16 || ^17 || ^18
     react-dom: ^16 || ^17 || ^18
-  checksum: e69ac75b71dae4960790ca985a4b1eff4ba0e4a7c9b9d31791a0a0ae618dc125b7decd8801d530b017de02b90150884eb17c1c3dedcf42afc2b42f137e17c870
+  checksum: e3373dfb73936950d659a87718fb9fdedc599b344b30cb0d8b1ef0a2ec13d6f405c653fa51284236788658840ece82c6a8538a5a5931e595274e9590b2020079
   languageName: node
   linkType: hard
 

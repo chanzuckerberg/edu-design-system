@@ -1,4 +1,4 @@
-@import '../../design-tokens/mixins.css';
+@import '../../design-tokens/tier-2-usage/typography-usage.css';
 
 /*------------------------------------*\
     #TEXT
@@ -47,6 +47,10 @@
 .text--brand {
   color: var(--eds-theme-color-text-brand-primary);
 }
+.text--info {
+  /* TODO(brand-tokens): remove */
+  color: var(--eds-color-info-700);
+}
 .text--inherit {
   color: inherit;
 }
@@ -68,11 +72,9 @@
  * Weights
  */
 .text--normal-weight {
-  /* TODO: replace with tier 2 token */
   font-weight: var(--eds-font-weight-light);
 }
 .text--bold-weight {
-  /* TODO: replace with tier 2 token */
   font-weight: var(--eds-font-weight-bold);
 }
 

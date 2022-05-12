@@ -11,7 +11,7 @@ type Props = {
   /**
    * Text placed inside the button to describe the dropdown.
    */
-  text?: ReactNode;
+  children?: ReactNode;
   /**
    * Indicates state of the dropdown, used to style the button.
    */
@@ -26,7 +26,7 @@ type Props = {
  * A styled button with an expand icon to be used in triggering Popovers, Dropdowns, etc.
  */
 export const DropdownButton = forwardRef<HTMLButtonElement, Props>(
-  ({ className, text, isOpen, ...other }, ref) => {
+  ({ children, className, isOpen, ...other }, ref) => {
     const componentClassName = clsx(styles['dropdown-button'], className);
     const iconClassName = clsx(
       styles['dropdown-button__icon'],
@@ -36,7 +36,7 @@ export const DropdownButton = forwardRef<HTMLButtonElement, Props>(
       <button className={componentClassName} ref={ref} {...other}>
         {/* Wrapping span ensures that `children` and icon will be correctly pushed to
             either side of the button even if `children` contains more than one element. */}
-        <span>{text}</span>
+        <span>{children}</span>
         <Icon
           className={iconClassName}
           name="expand-more"

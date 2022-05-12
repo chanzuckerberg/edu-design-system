@@ -16,11 +16,8 @@ EDS follows these principles and conventions for HTML, CSS, and JavaScript/TypeS
   - [TypeScript/React conventions](#ts-conventions)
   - [Component rules and considerations](#component-rules)
   - [Component API naming conventions](#api-naming)
-  - [Assets](#assets)
-  - [Tools](#tools)
-  - [Workflow](#workflow)
 - [Accessibility](#accessibility)
-  - [Tools](#acc-tools)
+  - [Tools](#accessibility-tools)
 
 # HTML principles and conventions <a name="html"></a>
 
@@ -414,7 +411,7 @@ Finally, the `return` statement contains the JSX markup for the component and ap
 return <div className={componentClassName} {...other} />;
 ```
 
-## Component Rules and Considerations
+## Component Rules and Considerations <a name="component-rules"></a>
 
 ### Exactly one component per directory and per folder
 
@@ -513,7 +510,7 @@ items.forEach((item, index) => {
 // });
 ```
 
-## Tools
+## Tools <a name="accessibility-tools"></a>
 
 - [eslint-plugin-jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y) evaluates static code for a11y issues. Currently this plugin is configured with the "recommended" settings, which generate linting errors for most rule violations. See [this chart](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y#rule-strictness-in-different-modes) for descriptions of each rule.
 

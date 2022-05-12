@@ -1,7 +1,7 @@
 import { Story, Meta } from '@storybook/react';
 import React from 'react';
 
-import { Link, Props } from './Link';
+import { Link, LinkProps } from './Link';
 import Icon from '../Icon';
 
 export default {
@@ -39,7 +39,7 @@ export default {
   },
 } as Meta;
 
-const Template: Story<Props> = (args) => (
+const Template: Story<LinkProps> = (args) => (
   <Link
     href="/"
     // stop link from navigating to another page so we can click the link for testing

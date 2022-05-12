@@ -1,4 +1,4 @@
-@import '../../design-tokens/mixins.css';
+@import '../../design-tokens/tier-2-usage/typography-usage.css';
 
 /*------------------------------------*\
     #HEADING
@@ -79,6 +79,10 @@
 }
 .heading--brand {
   color: var(--eds-theme-color-text-brand-primary);
+}
+.heading--info {
+  /* TODO(brand-tokens): remove */
+  color: var(--eds-color-info-700);
 }
 .heading--inherit {
   color: inherit;

@@ -5,10 +5,10 @@ import Text from '../Text';
 
 export const VARIANTS = [
   'neutral',
-  'success',
-  'yield',
   'error',
+  'success',
   'warning',
+  'yield',
   'brand',
 ] as const;
 

@@ -11,8 +11,8 @@ export default {
     orientation: 'horizontal' as const,
     children: (
       <>
-        <Button variant="primary">Button 1</Button>
-        <Button>Button 2</Button>
+        <Button status="neutral">Button 1</Button>
+        <Button variant="primary">Button 2</Button>
       </>
     ),
   },

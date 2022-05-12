@@ -1,91 +1,91 @@
-import { Meta, Preview } from "@storybook/addon-docs/blocks";
+// import { Meta, Preview } from '@storybook/addon-docs/blocks';
 
-import TokenTable from "../docs/token-table.tsx";
-import tokens from "../src/tokens-dist/json/variables-nested.json";
+// import TokenTable from '../docs/token-table.tsx';
+// import tokens from '../src/tokens-dist/json/variables-nested.json';
 
-import styles from "./tokens.module.css";
+// // import styles from "./tokens.module.css";
 
-<Meta title="Tokens" />
+// <Meta title="Tokens" />
 
-# Design Tokens
+// # Design Tokens
 
-## EDS Colors
+// ## EDS Colors
 
-<!-- Returns an object mapping all shades for a given color to hex values -->
+// <!-- Returns an object mapping all shades for a given color to hex values -->
 
-export const mapEDSColorToTokenArray = (color) => {
-  const colorTokens = tokens.eds.color[color];
-  return (
-    Object.keys(colorTokens)
-      // Don't display new color tokens or neutral-800 shade for now
-      .filter(
-        (shade) => !isNaN(shade) && !(color === "neutral" && shade === "800"),
-      )
-      .sort((shade1, shade2) => shade1.localeCompare(shade2))
-      .map((shade) => ({
-        name: `eds-color-${color}-${shade}`,
-        value: colorTokens[shade],
-      }))
-  );
-};
+// export const mapEDSColorToTokenArray = (color) => {
+// const colorTokens = tokens.eds.color[color];
+// return (
+// Object.keys(colorTokens)
+// // Don't display new color tokens or neutral-800 shade for now
+// .filter(
+// (shade) => !isNaN(shade) && !(color === 'neutral' && shade === '800'),
+// )
+// .sort((shade1, shade2) => shade1.localeCompare(shade2))
+// .map((shade) => ({
+// name: `eds-color-${color}-${shade}`,
+// value: colorTokens[shade],
+// }))
+// );
+// };
 
-<TokenTable
-  tokens={[
-    // Neutral Colors In Order
-    {
-      name: "eds-color-white",
-      value: tokens.eds.color.white,
-    },
-    ...mapEDSColorToTokenArray("neutral"),
-    {
-      name: "eds-color-black (alias for eds-color-neutral-700)",
-      value: tokens.eds.color.black,
-    },
-    // Remaining Colors
-    ...["brand", "alert", "warning", "yellow", "success", "info", "highlight"]
-      .map(mapEDSColorToTokenArray)
-      .flat(),
-  ]}
-  renderExample={(name, value) => (
-    <div
-      className={styles["color-token-example-block"]}
-      style={{ backgroundColor: value }}
-    />
-  )}
-/>
+// <TokenTable
+// tokens={[
+// // Neutral Colors In Order
+// {
+// name: 'eds-color-white',
+// value: tokens.eds.color.white,
+// },
+// ...mapEDSColorToTokenArray('neutral'),
+// {
+// name: 'eds-color-black (alias for eds-color-neutral-700)',
+// value: tokens.eds.color.black,
+// },
+// // Remaining Colors
+// ...['brand', 'alert', 'warning', 'yellow', 'success', 'info', 'highlight']
+// .map(mapEDSColorToTokenArray)
+// .flat(),
+// ]}
+// renderExample={(name, value) => (
+// <div
+// className={styles['color-token-example-block']}
+// style={{ backgroundColor: value }}
+// />
+// )}
+// />
 
-## Legacy (Claro) Colors
+// ## Legacy (Claro) Colors
 
-### **_Note: For reference only. These are outdated and should not be used in future work_**
+// ### **_Note: For reference only. These are outdated and should not be used in future work_**
 
-export const mapLegacyColorToTokenArray = (color) => {
-  return Object.keys(tokens.legacy.color[color]).map((shade) => ({
-    name: `legacy-color-${color}-${shade}`,
-    value: tokens.legacy.color[color][shade],
-  }));
-};
+// export const mapLegacyColorToTokenArray = (color) => {
+// return Object.keys(tokens.legacy.color[color]).map((shade) => ({
+// name: `legacy-color-${color}-${shade}`,
+// value: tokens.legacy.color[color][shade],
+// }));
+// };
 
-<TokenTable
-  tokens={[
-    // Neutral Colors In Order
-    {
-      name: "legacy-color-white",
-      value: tokens.legacy.color.white,
-    },
-    ...mapLegacyColorToTokenArray("gray"),
-    {
-      name: "legacy-color-black",
-      value: tokens.legacy.color.black,
-    },
-    // Remaining Colors
-    ...["red", "green", "yellow", "purple"]
-      .map(mapLegacyColorToTokenArray)
-      .flat(),
-  ]}
-  renderExample={(name, value) => (
-    <div
-      className={styles["color-token-example-block"]}
-      style={{ backgroundColor: value }}
-    />
-  )}
-/>
+// <TokenTable
+// tokens={[
+// // Neutral Colors In Order
+// {
+// name: 'legacy-color-white',
+// value: tokens.legacy.color.white,
+// },
+// ...mapLegacyColorToTokenArray('gray'),
+// {
+// name: 'legacy-color-black',
+// value: tokens.legacy.color.black,
+// },
+// // Remaining Colors
+// ...['red', 'green', 'yellow', 'purple']
+// .map(mapLegacyColorToTokenArray)
+// .flat(),
+// ]}
+// renderExample={(name, value) => (
+// <div
+// className={styles['color-token-example-block']}
+// style={{ backgroundColor: value }}
+// />
+// )}
+// />
