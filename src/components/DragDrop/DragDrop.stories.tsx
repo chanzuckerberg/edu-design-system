@@ -270,3 +270,39 @@ export const UnstyledItems: StoryObj<Args> = {
     multipleContainers: true,
   },
 };
+
+export const DragUsingHandles: StoryObj<Args> = {
+  args: {
+    items: {
+      'item-1': {
+        title: 'Project #1',
+        children: <div className="fpo">Content here</div>,
+      },
+      'item-2': {
+        title: 'Project #2',
+        children: <div className="fpo">Content here</div>,
+      },
+      'item-3': {
+        title: 'Project #3',
+        children: <div className="fpo">Content here</div>,
+      },
+      'item-4': {
+        title: 'Project #4',
+        children: <div className="fpo">Content here</div>,
+      },
+      'item-5': {
+        title: 'Project #5',
+        children: <div className="fpo">Content here</div>,
+      },
+    },
+    containers: {
+      'container-1': {
+        itemIds: ['item-1', 'item-2', 'item-3', 'item-4', 'item-5'],
+      },
+      'container-2': {
+        itemIds: [],
+      },
+    },
+    useHandles: true,
+  },
+};

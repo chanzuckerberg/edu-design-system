@@ -26,11 +26,15 @@ export interface Props {
   /**
    * By default, the last container in a context gets unique styling. If more than two containers will be used, setting this prop to true will remove this unique styling and give all containers a simple border.
    */
-  multipleContainers?: boolean;
+  multipleContainers: boolean;
   /**
    * Unstyled Items variant removes all styling from content within items
    */
-  unstyledItems?: boolean;
+  unstyledItems: boolean;
+  /**
+   * DragDrop items can be dragged by grabbing a handle, or dragged by grabbing anywhere on the item (default)
+   */
+  useHandles: boolean;
 }
 
 /**
@@ -42,15 +46,17 @@ export const DragDrop = ({
   containers,
   multipleContainers = false,
   unstyledItems = false,
+  useHandles = false,
 }: Props) => {
   /**
-   * If either multipleContainers or unstyledItems is set, apply the corresponding class
+   * If either multipleContainers, unstyledItems or useHandles is set, apply the corresponding class
    */
   const componentClassName = clsx(
     styles['drag-drop'],
     className,
     multipleContainers && styles['drag-drop--multiple'],
     unstyledItems && styles['drag-drop--unstyled'],
+    useHandles && styles['drag-drop--handles'],
   );
 
   const containerOrder: string[] = [];
@@ -185,6 +191,7 @@ export const DragDrop = ({
                     container={container}
                     items={items}
                     key={container.id}
+                    useHandles={useHandles}
                   />
                 );
               })}
