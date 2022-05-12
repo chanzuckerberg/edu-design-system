@@ -49,6 +49,10 @@ export interface Props {
    */
   maxLength?: number;
   /**
+   * Minimum number the input can take. When this number equals the input value, the minus button becomes disabled.
+   */
+  min?: number;
+  /**
    * Multiple is a boolean to allow multiple files to be uploaded
    */
   multiple?: boolean;
