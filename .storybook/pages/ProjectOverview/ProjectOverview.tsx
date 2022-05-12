@@ -4,18 +4,19 @@ import React from 'react';
 import {
   PageHeader,
   TextPassage,
-  ListDetail,
-  ListDetailPanel,
   Breadcrumbs,
   BreadcrumbsItem,
   Button,
-  Hr,
   Heading,
-  Section,
   Card,
   CardBody,
   Icon,
 } from '../../../src';
+// Project Overview pilot components -- not yet exported from src/index.ts
+import Hr from '../../../src/components/Hr';
+import ListDetail from '../../../src/components/ListDetail';
+import ListDetailPanel from '../../../src/components/ListDetailPanel';
+import Section from '../../../src/components/Section';
 import '../../../src/components/Utilities/Spacing.css';
 
 import { PageShell } from '../../recipes/PageShell/PageShell';
