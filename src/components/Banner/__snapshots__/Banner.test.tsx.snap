@@ -26,12 +26,12 @@ exports[`<Banner /> Brand story renders snapshot 1`] = `
       class="banner__textContent"
     >
       <h3
-        class="heading heading--size-h5"
+        class="heading heading--size-title-sm heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--body"
+        class="text text--body text--inherit"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -95,12 +95,12 @@ exports[`<Banner /> BrandDismissable story renders snapshot 1`] = `
       class="banner__textContent"
     >
       <h3
-        class="heading heading--size-h5"
+        class="heading heading--size-title-sm heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--body"
+        class="text text--body text--inherit"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -144,12 +144,12 @@ exports[`<Banner /> BrandWithAction story renders snapshot 1`] = `
       class="banner__textContent"
     >
       <h3
-        class="heading heading--size-h5"
+        class="heading heading--size-title-sm heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--body"
+        class="text text--body text--inherit"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -231,12 +231,12 @@ exports[`<Banner /> DismissableWithAction story renders snapshot 1`] = `
       class="banner__textContent"
     >
       <h3
-        class="heading heading--size-h5"
+        class="heading heading--size-title-sm heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--body"
+        class="text text--body text--inherit"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -290,12 +290,12 @@ exports[`<Banner /> Error story renders snapshot 1`] = `
       class="banner__textContent"
     >
       <h3
-        class="heading heading--size-h5"
+        class="heading heading--size-title-sm heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--body"
+        class="text text--body text--inherit"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -359,12 +359,12 @@ exports[`<Banner /> ErrorDismissable story renders snapshot 1`] = `
       class="banner__textContent"
     >
       <h3
-        class="heading heading--size-h5"
+        class="heading heading--size-title-sm heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--body"
+        class="text text--body text--inherit"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -408,12 +408,12 @@ exports[`<Banner /> ErrorWithAction story renders snapshot 1`] = `
       class="banner__textContent"
     >
       <h3
-        class="heading heading--size-h5"
+        class="heading heading--size-title-sm heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--body"
+        class="text text--body text--inherit"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -467,12 +467,12 @@ exports[`<Banner /> Flat story renders snapshot 1`] = `
       class="banner__textContent"
     >
       <h3
-        class="heading heading--size-h5"
+        class="heading heading--size-title-sm heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--body"
+        class="text text--body text--inherit"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -516,12 +516,12 @@ exports[`<Banner /> Neutral story renders snapshot 1`] = `
       class="banner__textContent"
     >
       <h3
-        class="heading heading--size-h5"
+        class="heading heading--size-title-sm heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--body"
+        class="text text--body text--inherit"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -585,12 +585,12 @@ exports[`<Banner /> NeutralDismissable story renders snapshot 1`] = `
       class="banner__textContent"
     >
       <h3
-        class="heading heading--size-h5"
+        class="heading heading--size-title-sm heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--body"
+        class="text text--body text--inherit"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -634,12 +634,12 @@ exports[`<Banner /> NeutralWithAction story renders snapshot 1`] = `
       class="banner__textContent"
     >
       <h3
-        class="heading heading--size-h5"
+        class="heading heading--size-title-sm heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--body"
+        class="text text--body text--inherit"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -693,7 +693,7 @@ exports[`<Banner /> NoDescription story renders snapshot 1`] = `
       class="banner__textContent"
     >
       <h3
-        class="heading heading--size-h5"
+        class="heading heading--size-title-sm heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
       </h3>
@@ -728,7 +728,7 @@ exports[`<Banner /> NoTitle story renders snapshot 1`] = `
       class="banner__textContent"
     >
       <p
-        class="text text--body"
+        class="text text--body text--inherit"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -772,12 +772,12 @@ exports[`<Banner /> Success story renders snapshot 1`] = `
       class="banner__textContent"
     >
       <h3
-        class="heading heading--size-h5"
+        class="heading heading--size-title-sm heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--body"
+        class="text text--body text--inherit"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -841,12 +841,12 @@ exports[`<Banner /> SuccessDismissable story renders snapshot 1`] = `
       class="banner__textContent"
     >
       <h3
-        class="heading heading--size-h5"
+        class="heading heading--size-title-sm heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--body"
+        class="text text--body text--inherit"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -890,12 +890,12 @@ exports[`<Banner /> SuccessWithAction story renders snapshot 1`] = `
       class="banner__textContent"
     >
       <h3
-        class="heading heading--size-h5"
+        class="heading heading--size-title-sm heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--body"
+        class="text text--body text--inherit"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -949,12 +949,12 @@ exports[`<Banner /> Vertical story renders snapshot 1`] = `
       class="banner__textContent"
     >
       <h3
-        class="heading heading--size-h5"
+        class="heading heading--size-title-sm heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--body"
+        class="text text--body text--inherit"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -1018,12 +1018,12 @@ exports[`<Banner /> VerticalDismissable story renders snapshot 1`] = `
       class="banner__textContent"
     >
       <h3
-        class="heading heading--size-h5"
+        class="heading heading--size-title-sm heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--body"
+        class="text text--body text--inherit"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -1087,12 +1087,12 @@ exports[`<Banner /> VerticalDismissableWithAction story renders snapshot 1`] = `
       class="banner__textContent"
     >
       <h3
-        class="heading heading--size-h5"
+        class="heading heading--size-title-sm heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--body"
+        class="text text--body text--inherit"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -1146,12 +1146,12 @@ exports[`<Banner /> VerticalWithAction story renders snapshot 1`] = `
       class="banner__textContent"
     >
       <h3
-        class="heading heading--size-h5"
+        class="heading heading--size-title-sm heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--body"
+        class="text text--body text--inherit"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -1205,12 +1205,12 @@ exports[`<Banner /> Warning story renders snapshot 1`] = `
       class="banner__textContent"
     >
       <h3
-        class="heading heading--size-h5"
+        class="heading heading--size-title-sm heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--body"
+        class="text text--body text--inherit"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -1274,12 +1274,12 @@ exports[`<Banner /> WarningDismissable story renders snapshot 1`] = `
       class="banner__textContent"
     >
       <h3
-        class="heading heading--size-h5"
+        class="heading heading--size-title-sm heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--body"
+        class="text text--body text--inherit"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -1323,12 +1323,12 @@ exports[`<Banner /> WarningWithAction story renders snapshot 1`] = `
       class="banner__textContent"
     >
       <h3
-        class="heading heading--size-h5"
+        class="heading heading--size-title-sm heading--inherit"
       >
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--body"
+        class="text text--body text--inherit"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          

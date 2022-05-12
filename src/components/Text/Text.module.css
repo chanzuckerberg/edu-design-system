@@ -6,11 +6,8 @@
 
 /**
  * Remove top and bottom margins applied by browser for text.
- * 1) Needs `:where` pseudoclass to reduce specificity so class overrides 
- *    for margin can happen where used.
  */
-:where(.text) {
-  /* 1 */
+.text {
   margin-bottom: 0;
   margin-top: 0;
 }
@@ -20,7 +17,7 @@
  */
 .text--body,
 .text--md {
-  @mixin eds-theme-typography-body-text;
+  @mixin eds-theme-typography-body-text-md;
 }
 .text--lg {
   @mixin eds-theme-typography-body-text-lg;
@@ -54,7 +51,8 @@
   color: inherit;
 }
 .text--neutral {
-  color: var(--eds-theme-color-text-neutral-default);
+  /* TODO(brand-tokens): update to text-neutral-default when new colors land */
+  color: var(--eds-theme-color-text-neutral-subtle);
 }
 .text--success {
   color: var(--eds-theme-color-text-utility-success);
@@ -71,7 +69,7 @@
  */
 .text--normal-weight {
   /* TODO: replace with tier 2 token */
-  font-weight: var(--eds-font-weight-medium);
+  font-weight: var(--eds-font-weight-light);
 }
 .text--bold-weight {
   /* TODO: replace with tier 2 token */

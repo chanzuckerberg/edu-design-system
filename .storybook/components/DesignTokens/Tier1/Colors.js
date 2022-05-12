@@ -9,7 +9,8 @@ export class Tier1Colors extends Component {
     return (
       <div>
         <Section title="Brand Colors">
-          <ColorList listItems={filterTokens(`eds-color-brand`)} />
+          {/* TODO(brand-tokens): change back to `eds-color-brand` after old aliases are gone */}
+          <ColorList listItems={filterTokens(`eds-color-brand-grape`)} />
         </Section>
 
         <Section title="Neutral Colors">
