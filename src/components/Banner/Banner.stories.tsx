@@ -26,7 +26,6 @@ const getDescription = (status?: Variant) => (
     Summit Learning has a full-time team dedicated to constantly improving our
     curriculum. To see the updates,{' '}
     <Button
-      href="/"
       onClick={(event: any) => event.preventDefault()}
       status={status}
       variant="link"

@@ -23,7 +23,6 @@
     "build": "yarn build:clean && yarn build:tokens && yarn build:js && yarn build:styles && yarn copy-to-lib",
     "build:clean": "rm -rf lib/",
     "build:tokens": "rm -rf src/tokens-dist/ && node ./style-dictionary.config.js",
-    "build:css": "postcss \"src/components/**/*.css\" --dir lib/ --base src/ --verbose",
     "build:icons": "svg-sprite-generate -d src/icons/ -o src/icons/spritemap/spritemap.svg && yarn generate-icon-types",
     "build:js": "tsc --project tsconfig.build.json",
     "build:storybook": "build-storybook -o storybook-static",
@@ -61,11 +60,25 @@
     "test:ci": "yarn run test --ci --coverage && cat ./coverage/lcov.info | codecov",
     "types": "tsc --noEmit"
   },
+  "size-limit": [
+    {
+      "path": "lib/**/*([a-zA-Z-_]).js",
+      "limit": "280KB",
+      "name": "components",
+      "webpack": false
+    },
+    {
+      "path": "lib/**/*([a-zA-Z-_]).css",
+      "limit": "280KB",
+      "name": "styles",
+      "webpack": false
+    }
+  ],
   "peerDependencies": {
     "react": ">= 16.8.0"
   },
   "dependencies": {
-    "@headlessui/react": "^1.5.0",
+    "@headlessui/react": "1.5.0",
     "@tippyjs/react": "^4.2.6",
     "clsx": "^1.1.1",
     "downshift": "^6.1.7",

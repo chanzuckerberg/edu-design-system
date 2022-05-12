@@ -57,12 +57,12 @@ export const Checked: StoryObj<Args> = {
 export const Small: StoryObj<Args> = {
   ...Default,
   args: {
-    size: 'small',
+    size: 'sm',
   },
 };
 
 export const SmallChecked: StoryObj<Args> = {
-  render: () => <CheckedExample size="small" {...defaultArgs} />,
+  render: () => <CheckedExample size="sm" {...defaultArgs} />,
 };
 
 export const Indeterminate: StoryObj<Args> = {
@@ -122,9 +122,9 @@ export const LongLabels = {
     return (
       <div className={styles['longlabels--grid']}>
         <Checkbox label={label} />
-        <Checkbox label={label} size="small" />
+        <Checkbox label={label} size="sm" />
         <Checkbox disabled label={label} />
-        <Checkbox disabled label={label} size="small" />
+        <Checkbox disabled label={label} size="sm" />
       </div>
     );
   },
@@ -135,44 +135,59 @@ export const LongLabels = {
   },
 };
 
-type LabelArgs = React.ComponentProps<typeof CheckboxLabel>;
-
 // For visual regression testing
-export const LabelsOnly = {
-  args: {
-    htmlFor: 'id',
-  },
-  render: (args: LabelArgs) => (
+export const LabelsOnly: StoryObj = {
+  render: (args) => (
     <>
-      <CheckboxLabel {...args} text="Medium label" />
+      <CheckboxLabel htmlFor="md-label" {...args} text="Medium label" />
       <br />
-      <CheckboxLabel {...args} size="small" text="Small label" />
+      <CheckboxLabel
+        htmlFor="sm-label"
+        {...args}
+        size="sm"
+        text="Small label"
+      />
       <br />
       <CheckboxLabel
         {...args}
+        htmlFor="long-md-label"
         text="Long medium label lorem ipsum dolor sit amet, consectetur adipiscing elit"
       />
       <br />
       <CheckboxLabel
         {...args}
-        size="small"
+        htmlFor="long-sm-label"
+        size="sm"
         text="Long small label lorem ipsum dolor sit amet, consectetur adipiscing elit"
       />
-      <br />
-      <CheckboxLabel {...args} disabled text="Medium disabled" />
-      <br />
-      <CheckboxLabel {...args} disabled size="small" text="Small disabled" />
       <br />
       <CheckboxLabel
         {...args}
         disabled
+        htmlFor="md-disabled-label"
+        text="Medium disabled"
+      />
+      <br />
+      <CheckboxLabel
+        {...args}
+        disabled
+        htmlFor="sm-disabled-label"
+        size="sm"
+        text="Small disabled"
+      />
+      <br />
+      <CheckboxLabel
+        {...args}
+        disabled
+        htmlFor="long-md-disabled-label"
         text="Long medium disabled label lorem ipsum dolor sit amet, consectetur adipiscing elit"
       />
       <br />
       <CheckboxLabel
         {...args}
         disabled
-        size="small"
+        htmlFor="long-sm-disabled-label"
+        size="sm"
         text="Long small disabled label lorem ipsum dolor sit amet, consectetur adipiscing elit"
       />
     </>
