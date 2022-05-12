@@ -17,6 +17,9 @@ export interface Props {
   item: ItemType;
   /** Item's original indexed position */
   index: number;
+  /**
+   * DragDrop items can be dragged by grabbing a handle, or dragged by grabbing anywhere on the item (default)
+   */
   useHandles: boolean;
 }
 
