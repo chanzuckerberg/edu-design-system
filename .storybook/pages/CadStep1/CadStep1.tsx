@@ -79,16 +79,16 @@ export const CadStep1 = () => (
           <TextField
             className="u-margin-bottom-lg"
             fieldNote="times per week"
-            fieldNotePlacement="inline"
             label="How many times per week do you have class?"
+            min={0}
             placeholder="Enter"
             type="number"
           />
           <TextField
             className="u-margin-bottom-lg"
             fieldNote="minutes"
-            fieldNotePlacement="inline"
             label="How many minutes is each class?"
+            min={0}
             placeholder="Enter"
             type="number"
           />

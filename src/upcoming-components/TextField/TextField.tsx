@@ -26,10 +26,6 @@ export interface Props {
    */
   fieldNote?: string | ReactNode;
   /**
-   * Whether to place fieldNote inline with the input element.
-   */
-  fieldNotePlacement?: 'inline';
-  /**
    * Toggles the visibility of the label. If hidden, the label text will still be accessible to assistive technologies
    */
   hideLabel?: boolean;
@@ -85,6 +81,10 @@ export interface Props {
    * Max number of characters for the text input
    */
   maxLength?: number;
+  /**
+   * Minimum number the input can take. When this number equals the input value, the minus button becomes disabled.
+   */
+  min?: number;
   /**
    * HTML name attribute for the input
    */
@@ -155,7 +155,6 @@ export const TextField = ({
   label,
   disabled,
   fieldNote,
-  fieldNotePlacement,
   fieldButtonText,
   fieldButtonScreenReaderText,
   fieldButtonOnClick,
@@ -194,8 +193,19 @@ export const TextField = ({
     disabled && styles['eds-is-disabled'],
   );
 
-  const body = (
-    <>
+  return (
+    <div className={componentClassName}>
+      <Label
+        className={styles['text-field__label']}
+        hideLabel={hideLabel}
+        htmlFor={idVar}
+        inverted={inverted}
+        optionalLabel={optionalLabel}
+        required={required}
+        requiredLabel={requiredLabel}
+        text={label}
+      />
+
       <div className={styles['text-field__body']}>
         <TextInput
           aria-invalid={!!isError}
@@ -239,26 +249,6 @@ export const TextField = ({
         >
           {fieldNote}
         </FieldNote>
-      )}
-    </>
-  );
-
-  return (
-    <div className={componentClassName}>
-      <Label
-        className={styles['text-field__label']}
-        hideLabel={hideLabel}
-        htmlFor={idVar}
-        inverted={inverted}
-        optionalLabel={optionalLabel}
-        required={required}
-        requiredLabel={requiredLabel}
-        text={label}
-      />
-      {fieldNote && fieldNotePlacement ? (
-        <div className={styles['text-field--inline']}>{body}</div>
-      ) : (
-        body
       )}
     </div>
   );
