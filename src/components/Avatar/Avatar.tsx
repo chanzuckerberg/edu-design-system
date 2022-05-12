@@ -11,7 +11,9 @@ export interface Props {
 }
 
 /**
- * Primary UI component for user interaction
+ * BETA: This component is still a work in progress and is subject to change.
+ *
+ * Component that presents the user's avatar image with additional styling passed in.
  */
 export const Avatar = ({ className, ...other }: Props) => {
   const componentClassName = clsx('avatar', className, {});

@@ -33,7 +33,9 @@ export interface Props {
 }
 
 /**
- * Primary UI component for user interaction
+ * BETA: This component is still a work in progress and is subject to change.
+ *
+ * A passage of text, including various components (i.e. article, blog post).
  */
 export const TextPassage = ({
   capLinelength = true,

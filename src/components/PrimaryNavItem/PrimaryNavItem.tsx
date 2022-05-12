@@ -28,7 +28,9 @@ export interface Props {
 }
 
 /**
- * Primary UI component for user interaction
+ * BETA: This component is still a work in progress and is subject to change.
+ *
+ * Individual item within the PrimaryNav.
  */
 export const PrimaryNavItem = React.forwardRef<HTMLLIElement, Props>(
   function PrimaryNavItem(

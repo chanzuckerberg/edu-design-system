@@ -39,7 +39,10 @@ export interface Props {
 }
 
 /**
- * Primary UI component for user interaction
+ * BETA: This component is still a work in progress and is subject to change.
+ *
+ * Component that controls an overarching page layout. By default, the layout renders
+ * a fixed-position left sidebar on larger screens.
  */
 export const Layout = ({
   behavior,

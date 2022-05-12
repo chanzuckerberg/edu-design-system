@@ -47,7 +47,9 @@ export interface Props {
 }
 
 /**
- * Primary UI component for user interaction
+ * BETA: This component is still a work in progress and is subject to change.
+ *
+ * Link list item to be used inside the LinkList component.
  */
 export const LinkListItem = ({
   className,
