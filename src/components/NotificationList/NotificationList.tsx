@@ -14,6 +14,11 @@ export interface Props {
   children?: ReactNode;
 }
 
+/**
+ * BETA: This component is still a work in progress and is subject to change.
+ *
+ * List of NotificationListItem components.
+ */
 export const NotificationList = ({ className, children, ...other }: Props) => {
   const componentClassName = clsx(styles['notification-list'], className, {});
   return <ul className={componentClassName}>{children}</ul>;

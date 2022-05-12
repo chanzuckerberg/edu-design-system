@@ -28,7 +28,9 @@ export interface Props {
 }
 
 /**
- * Primary UI component for user interaction
+ * BETA: This component is still a work in progress and is subject to change.
+ *
+ * Utility navigation existing in the header and maybe the footer.
  */
 export const UtilityNav = ({
   className,

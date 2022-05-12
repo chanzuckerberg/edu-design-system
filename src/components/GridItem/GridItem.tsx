@@ -14,7 +14,9 @@ export interface Props {
 }
 
 /**
- * Primary UI component for user interaction
+ * BETA: This component is still a work in progress and is subject to change.
+ *
+ * Single grid item to be used in the Grid component.
  */
 export const GridItem = ({ children, className, ...other }: Props) => {
   const componentClassName = clsx(styles['grid__item'], className, {});

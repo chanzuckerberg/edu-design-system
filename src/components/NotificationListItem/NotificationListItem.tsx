@@ -39,6 +39,11 @@ interface State {
   isRead: boolean | null;
 }
 
+/**
+ * BETA: This component is still a work in progress and is subject to change.
+ *
+ * Single notification item to be used in NotificationList.
+ */
 export const NotificationListItem = ({
   className,
   date,

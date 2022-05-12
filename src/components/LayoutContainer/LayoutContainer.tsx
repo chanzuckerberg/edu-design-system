@@ -23,7 +23,9 @@ export interface Props {
 }
 
 /**
- * Primary UI component for user interaction
+ * BETA: This component is still a work in progress and is subject to change.
+ *
+ * Layout container. Caps the width of the content to the maximum width and centers the container.
  */
 export const LayoutContainer = ({
   className,

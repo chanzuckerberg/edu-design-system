@@ -25,7 +25,10 @@ export interface Props {
 }
 
 /**
- * Primary UI component for user interaction
+ * BETA: This component is still a work in progress and is subject to change.
+ *
+ * List of Breadcrumb components showing the user where they are in the system and allow them
+ * to navigate to parent pages.
  */
 export const Breadcrumbs = ({
   className,

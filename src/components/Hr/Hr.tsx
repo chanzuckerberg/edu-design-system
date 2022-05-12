@@ -8,7 +8,6 @@ export interface Props {
    * - **brand** yields a branded horizontal rule
    */
   variant?: 'brand';
-
   /**
    * Size variations:
    * - **lg** yields a thicker horizontal rule
@@ -21,7 +20,9 @@ export interface Props {
 }
 
 /**
- * Primary UI component for user interaction
+ * BETA: This component is still a work in progress and is subject to change.
+ *
+ * Horizontal rule component to present a horizontal line separating content.
  */
 export const Hr = ({ className, size, variant, ...other }: Props) => {
   const componentClassName = clsx(
