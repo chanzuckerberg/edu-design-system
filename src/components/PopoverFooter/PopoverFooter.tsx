@@ -14,7 +14,9 @@ export interface Props {
 }
 
 /**
- * Primary UI component for user interaction
+ * BETA: This component is still a work in progress and is subject to change.
+ *
+ * Footer for the Popover component.
  */
 export const PopoverFooter: React.FC<Props> = ({
   children,

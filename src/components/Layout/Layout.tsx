@@ -35,11 +35,14 @@ export interface Props {
    * Sidebar property
    * 1) Adjust the size of the sidebar
    */
-  variant?: 'right-sidebar' | '50-50';
+  variant?: 'right-sidebar';
 }
 
 /**
- * Primary UI component for user interaction
+ * BETA: This component is still a work in progress and is subject to change.
+ *
+ * Component that controls an overarching page layout. By default, the layout renders
+ * a fixed-position left sidebar on larger screens.
  */
 export const Layout = ({
   behavior,
@@ -53,7 +56,7 @@ export const Layout = ({
   const componentClassName = clsx(
     styles['layout'],
     className,
-    variant && styles[`layout--${variant}`],
+    variant === 'right-sidebar' && styles['layout--right-sidebar'],
     behavior === 'fixed-sidebar' && styles['layout--fixed-sidebar'],
     gap === 'none' && styles['layout--gap-none'],
     sidebar === 'wide' && styles['layout--sidebar-wide'],

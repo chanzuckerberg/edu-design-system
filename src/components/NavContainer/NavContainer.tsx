@@ -19,7 +19,9 @@ export interface Props {
 }
 
 /**
- * Primary UI component for user interaction
+ * BETA: This component is still a work in progress and is subject to change.
+ *
+ * Container that houses navigation to be toggled on and off on small screens.
  */
 export const NavContainer = ({
   children,

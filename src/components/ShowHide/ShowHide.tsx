@@ -44,7 +44,9 @@ export interface Props {
 }
 
 /**
- * Primary UI component for user interaction
+ * BETA: This component is still a work in progress and is subject to change.
+ *
+ * Component that shows and hides child content at the press of a button.
  */
 export const ShowHide = ({
   align,

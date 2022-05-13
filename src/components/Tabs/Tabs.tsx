@@ -92,7 +92,9 @@ export interface Props {
 }
 
 /**
- * Primary UI component for user interaction
+ * BETA: This component is still a work in progress and is subject to change.
+ *
+ * List of of links where each link toggles open associated information in a tab panel.
  */
 export const Tabs = ({
   activeIndex = 0,

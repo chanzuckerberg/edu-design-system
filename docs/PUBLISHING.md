@@ -38,7 +38,7 @@ yarn release
 yarn release:breaking
 ```
 
-We use [standard-version](https://github.com/conventional-changelog/standard-version) to increment the version number in `package.json`, create a git tag for the new release, and update `CHANGELOG.md` based on the commit log. The package is not published, yet.
+We use [standard-version](https://github.com/conventional-changelog/standard-version) to increment the version number in `package.json`, create a git tag for the new release, and update `CHANGELOG.md` based on the commit log. The package is not published, yet. If needed, you can [make changes to the CHANGELOG now](#editing-the-changelog).
 
 5. Run the last command output by `standard-version`. It will look something like:
 
@@ -46,7 +46,14 @@ We use [standard-version](https://github.com/conventional-changelog/standard-ver
 git push --follow-tags origin <branch> && npm publish
 ```
 
-6. Communicate the changes via all appropriate channels. <TODO: determine communication strategy for new release>
+6. Communicate the changes via all appropriate channels (if this is a breaking package update that the broader team needs to know about):
+
+- Slack channels
+  - #eng-announcements in the Summit Learning workspace
+  - #eng-n00bs in the Summit Learning workspace
+  - #proj-edu-design-system in the CZI Education workspace
+- next EDS newsletter
+- next "What's New" update in Zeroheight
 
 #### Alpha release
 
@@ -60,3 +67,11 @@ For testing a release to build confidence.
 ```
 git push --follow-tags origin <branch> && npm publish
 ```
+
+#### Editing the CHANGELOG
+
+1. Run `git log` and note the version tag on the latest (release) commit
+2. Make any edits you want to `CHANGELOG.md`
+3. Run `git add . && git commit --amend` to update the release commit
+4. Remove the tag from the old commit: `git tag -d <version>`
+5. Re-tag the release commit: `git tag <version>`

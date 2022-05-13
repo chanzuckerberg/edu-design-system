@@ -14,7 +14,9 @@ export interface Props {
 }
 
 /**
- * Primary UI component for user interaction
+ * BETA: This component is still a work in progress and is subject to change.
+ *
+ * Component that caps the length of an excerpt of text to be easily readable.
  */
 export const LayoutLinelengthContainer = ({
   className,

@@ -2,125 +2,185 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-## [0.10.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.9.2...v0.10.0) (2022-04-15)
-
-
-### ⚠ BREAKING CHANGES
-
-* removes color-font tokens
-
-* remove typo
-
-Co-authored-by: Andrew Huth <ahuth@chanzuckerberg.com>
-
-* chore: move packages/components to src/components
-
-* chore: remove token package imports
-
-* chore: consolidate into one package.json
-
-* chore: cleanup docs, remove workspaces
-
-* feat: lock headlessui to 1.4.3
-
-* chore: clean up imports
-
-* build: use separate tsconfig for build
-
-* build: publish icons
-
-* feat: move components/Icons to src/icons
+## [0.20.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.19.0...v0.20.0) (2022-05-05)
 
 ### Features
 
-* add jsx-sort-props lint rule ([bff502f](https://github.com/chanzuckerberg/edu-design-system/commit/bff502f9a921841fe510d8691610ffb66fcb689f))
+- **tag:** rename yellow variant to yield ([#1036](https://github.com/chanzuckerberg/edu-design-system/issues/1036)) ([6eb8fe4](https://github.com/chanzuckerberg/edu-design-system/commit/6eb8fe4bc0f8935c60c87b28dcfde8b67a56604f))
 
+## [0.19.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.18.1...v0.19.0) (2022-05-04)
+
+### **Fieldset:** ([#1030](https://github.com/chanzuckerberg/edu-design-system/issues/1030))
+
+- renamed `FormGroup` prop to `Fieldset`
+- renamed `FormGroup.Title` prop to `Fieldset.Legend`
+- renamed `FormGroup.Items` prop to `Fieldset.Items`
+- removed `as` prop from `Fieldset`
+
+### [0.18.1](https://github.com/chanzuckerberg/edu-design-system/compare/v0.18.0...v0.18.1) (2022-05-04)
+
+## [0.18.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.17.0...v0.18.0) (2022-05-03)
+
+### **Tag:** ([#1011](https://github.com/chanzuckerberg/edu-design-system/issues/1011))
+
+- renamed `variant` prop to `hasOutline`
+- renamed `color` prop to `variant`
+- renamed `variant` "alert" option to "error"
+- renamed `children` prop to `text`
+
+## [0.17.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.16.0...v0.17.0) (2022-05-03)
+
+### **Banner:** ([#1010](https://github.com/chanzuckerberg/edu-design-system/issues/1010))
+
+- renamed `color` prop to `variant`
+- renamed `variant` "alert" to "error"
+- replaced `elevation` prop with `isFlat`
+- split `textContent` prop into `title` and `description`
+- removed `BannerTitle` and `BannerMessage` subcomponents
+- added `titleAs` and `descriptionAs` props to specify the elements `title` and `description` should render as
+- 1 rem bottom margin added to banner if `isFlat` is falesy to account for the drop shadow
+
+## [0.16.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.15.0...v0.16.0) (2022-05-03)
+
+### **Checkbox:** ([#1008](https://github.com/chanzuckerberg/edu-design-system/issues/1008))
+
+- `CheckboxInput` and `CheckboxLabel` have been moved to separate component folders
+- renamed `CheckboxLabel`'s `children` prop to `text`
+- renamed `size` options from "small" and "medium" to "sm" and "md" (respectively)
+
+## [0.15.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.14.0...v0.15.0) (2022-05-02)
+
+### **Toast:** ([#1013](https://github.com/chanzuckerberg/edu-design-system/issues/1013))
+
+- renamed `color` prop to `variant`
+- renamed "alert" color/variant to "error"
+
+### **Text:** ([#1025](https://github.com/chanzuckerberg/edu-design-system/issues/1025))
+
+- make `size` "lg" normal weight
+
+## [0.14.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.13.2...v0.14.0) (2022-04-29)
+
+#### **Button/Link/ClickableStyle** ([#1000](https://github.com/chanzuckerberg/edu-design-system/issues/1000))
+
+- renamed the following `variant` options:
+  - "flat" => "primary"
+  - "outline" => "secondary"
+  - "plain" => "icon"
+- changed the default variant in `Button` to "secondary" (previously was "flat"/"primary"; `Link`'s default variant is still "link")
+- renamed `color` prop to `status`
+- renamed "alert" color/status to "error"
+- renamed `size` options:
+  - "large" => "lg"
+  - "medium" => "md"
+  - "small" => "sm"
+
+### [0.13.2](https://github.com/chanzuckerberg/edu-design-system/compare/v0.13.1...v0.13.2) (2022-04-29)
+
+#### **Icon** ([#1024](https://github.com/chanzuckerberg/edu-design-system/issues/1024))
+
+- added `viewBox` prop
+
+### [0.13.1](https://github.com/chanzuckerberg/edu-design-system/compare/v0.13.0...v0.13.1) (2022-04-28)
+
+## [0.13.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.12.0...v0.13.0) (2022-04-27)
+
+### ⚠ BREAKING CHANGES
+
+#### **Icon** ([#986](https://github.com/chanzuckerberg/edu-design-system/issues/986))
+
+- renamed `block` prop to `fullWidth`
+- use `import {Icon} from '@chanzuckerberg/eds'` instead of individual icon components
+  - ex: `<Icon name="warning" />` instead of `<WarningRoundedIcon />`
+
+### [0.12.1](https://github.com/chanzuckerberg/edu-design-system/compare/v0.12.0...v0.12.1) (2022-04-28)
+
+- chore(text): reintroduce spacing variant in Text
+
+## [0.12.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.10.0...v0.12.0) (2022-04-27)
+
+### ⚠ BREAKING CHANGES
+
+#### **Heading** ([#996](https://github.com/chanzuckerberg/edu-design-system/issues/996))
+
+- renamed `color` prop to `variant`
+- removed `weight` and `spacing` props (Headings should always be bold; style bottom margin through classnames instead)
+- removed non-heading level `size` options
+- deprecated `"info"` and `"yellow"` color variants (use "brand" or "neutral" instead)
+- renamed `"alert"` color variant to `"error"`
+- removed default color variant (previously set to `"base"`)
+
+#### **Text** ([#996](https://github.com/chanzuckerberg/edu-design-system/issues/996))
+
+- renamed `color` prop to `variant`
+- removed `spacing` prop (style bottom margin through classnames instead)
+- removed heading level `size` options; added `"lg"` size
+- deprecated `"info"` and `"yellow"` color variants (use "brand" or "neutral" instead)
+- renamed `"alert"` color variant to `"error"`
+- removed default color variant (previously set to `"base"`)
+
+## [0.11.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.10.0...v0.11.0) (2022-04-26)
+
+## [0.10.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.9.2...v0.10.0) (2022-04-15)
+
+### ⚠ BREAKING CHANGES
+
+- removes color-font tokens
+
+### Features
+
+- add jsx-sort-props lint rule ([bff502f](https://github.com/chanzuckerberg/edu-design-system/commit/bff502f9a921841fe510d8691610ffb66fcb689f))
 
 ### build
 
-* use standard-version, make one package, move folders ([#981](https://github.com/chanzuckerberg/edu-design-system/issues/981)) ([ccc0450](https://github.com/chanzuckerberg/edu-design-system/commit/ccc0450064a600f0a7586db20ef354c9fa442b2e)), closes [#979](https://github.com/chanzuckerberg/edu-design-system/issues/979)
+- use standard-version, make one package, move folders ([#981](https://github.com/chanzuckerberg/edu-design-system/issues/981)) ([ccc0450](https://github.com/chanzuckerberg/edu-design-system/commit/ccc0450064a600f0a7586db20ef354c9fa442b2e)), closes [#979](https://github.com/chanzuckerberg/edu-design-system/issues/979)
 
 ## [0.10.0-alpha.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.9.0...v0.10.0-alpha.0) (2022-04-15)
 
-
 ### ⚠ BREAKING CHANGES
 
-* removes color-font tokens
+- removes color-font tokens
 
 ### Features
 
-* add standard-version, remove lerna, update storybook ([ee6b2c8](https://github.com/chanzuckerberg/edu-design-system/commit/ee6b2c8c97ebb0a62ab8731adc9e21d714b64013))
-* introduce badges addon for storybook ([#895](https://github.com/chanzuckerberg/edu-design-system/issues/895)) ([156fa72](https://github.com/chanzuckerberg/edu-design-system/commit/156fa729acdb6d141d783426ff3c1d1dc848d49e))
-* lock headlessui to 1.4.3 ([3a27bf3](https://github.com/chanzuckerberg/edu-design-system/commit/3a27bf3a7e575a43a7413a8b9ddaa679ab4206f8))
-* move components/Icons to src/icons ([b0314fa](https://github.com/chanzuckerberg/edu-design-system/commit/b0314fa074ba589cd4046c71149f50568b0791f7))
+- add standard-version, remove lerna, update storybook ([ee6b2c8](https://github.com/chanzuckerberg/edu-design-system/commit/ee6b2c8c97ebb0a62ab8731adc9e21d714b64013))
+- introduce badges addon for storybook ([#895](https://github.com/chanzuckerberg/edu-design-system/issues/895)) ([156fa72](https://github.com/chanzuckerberg/edu-design-system/commit/156fa729acdb6d141d783426ff3c1d1dc848d49e))
+- lock headlessui to 1.4.3 ([3a27bf3](https://github.com/chanzuckerberg/edu-design-system/commit/3a27bf3a7e575a43a7413a8b9ddaa679ab4206f8))
+- move components/Icons to src/icons ([b0314fa](https://github.com/chanzuckerberg/edu-design-system/commit/b0314fa074ba589cd4046c71149f50568b0791f7))
 
-
-* publish to lib/tokens ([7aecb68](https://github.com/chanzuckerberg/edu-design-system/commit/7aecb689fd11aeba6fa5a90ebf02fa5a31478174))
+- publish to lib/tokens ([7aecb68](https://github.com/chanzuckerberg/edu-design-system/commit/7aecb689fd11aeba6fa5a90ebf02fa5a31478174))
 
 ## [0.9.2](https://github.com/chanzuckerberg/edu-design-system/compare/v0.9.1...v0.9.2) (2022-04-08)
 
-
 ### Features
 
-* **close-button:** remove close button ([#931](https://github.com/chanzuckerberg/edu-design-system/issues/931)) ([c3c2151](https://github.com/chanzuckerberg/edu-design-system/commit/c3c215186e0c02d869573f99fb7f9f9a8bb177ad))
-
-
-
-
+- **close-button:** remove close button ([#931](https://github.com/chanzuckerberg/edu-design-system/issues/931)) ([c3c2151](https://github.com/chanzuckerberg/edu-design-system/commit/c3c215186e0c02d869573f99fb7f9f9a8bb177ad))
 
 ## [0.9.1](https://github.com/chanzuckerberg/edu-design-system/compare/v0.9.0...v0.9.1) (2022-03-30)
 
-
 ### Features
 
-* **dropdown:** add compact button as option ([#905](https://github.com/chanzuckerberg/edu-design-system/issues/905)) ([34af1bc](https://github.com/chanzuckerberg/edu-design-system/commit/34af1bc77125cafb4c776d9e94179ea43c51d628))
-* introduce badges addon for storybook ([#895](https://github.com/chanzuckerberg/edu-design-system/issues/895)) ([156fa72](https://github.com/chanzuckerberg/edu-design-system/commit/156fa729acdb6d141d783426ff3c1d1dc848d49e))
-
-
-
-
+- **dropdown:** add compact button as option ([#905](https://github.com/chanzuckerberg/edu-design-system/issues/905)) ([34af1bc](https://github.com/chanzuckerberg/edu-design-system/commit/34af1bc77125cafb4c776d9e94179ea43c51d628))
+- introduce badges addon for storybook ([#895](https://github.com/chanzuckerberg/edu-design-system/issues/895)) ([156fa72](https://github.com/chanzuckerberg/edu-design-system/commit/156fa729acdb6d141d783426ff3c1d1dc848d49e))
 
 # [0.9.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.8.0...v0.9.0) (2022-03-08)
 
 **Note:** Version bump only for package edu-design-system
 
-
-
-
-
 ## [0.8.1](https://github.com/chanzuckerberg/edu-design-system/compare/v0.8.0...v0.8.1) (2022-03-03)
-
 
 ### Chores
 
-* disable dependabot version updates ([#873](https://github.com/chanzuckerberg/edu-design-system/issues/873)) ([90db10a](https://github.com/chanzuckerberg/edu-design-system/commit/90db10a6de924faec092efd84adcfe55f7f4d993))
-* upgrade style-dictionary ([#882](https://github.com/chanzuckerberg/edu-design-system/issues/882)) ([dba4d21](https://github.com/chanzuckerberg/edu-design-system/commit/dba4d21f3fe00e5385227905a3bfbb23c4751f96))
-* update deps and resolve ([#881](https://github.com/chanzuckerberg/edu-design-system/issues/881)) ([c48915f](https://github.com/chanzuckerberg/edu-design-system/commit/c48915f364fc375da8147ddbadf60839da6fec77))
-
+- disable dependabot version updates ([#873](https://github.com/chanzuckerberg/edu-design-system/issues/873)) ([90db10a](https://github.com/chanzuckerberg/edu-design-system/commit/90db10a6de924faec092efd84adcfe55f7f4d993))
+- upgrade style-dictionary ([#882](https://github.com/chanzuckerberg/edu-design-system/issues/882)) ([dba4d21](https://github.com/chanzuckerberg/edu-design-system/commit/dba4d21f3fe00e5385227905a3bfbb23c4751f96))
+- update deps and resolve ([#881](https://github.com/chanzuckerberg/edu-design-system/issues/881)) ([c48915f](https://github.com/chanzuckerberg/edu-design-system/commit/c48915f364fc375da8147ddbadf60839da6fec77))
 
 ### Docs
 
-* add import example to docstring ([#880](https://github.com/chanzuckerberg/edu-design-system/issues/880)) ([78832db](https://github.com/chanzuckerberg/edu-design-system/commit/78832db2d16bf081fe104fb63d5054f1352038a1))
-
+- add import example to docstring ([#880](https://github.com/chanzuckerberg/edu-design-system/issues/880)) ([78832db](https://github.com/chanzuckerberg/edu-design-system/commit/78832db2d16bf081fe104fb63d5054f1352038a1))
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
-
-## Next Release
-
-### Added
-
-- Added
-
-### Modified
-
-- Modified
-
-### Removed
-
-- Removed
-
-# [0.8.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.7.0...v0.8.0) (2022-02-28)
 
 ### Features
 

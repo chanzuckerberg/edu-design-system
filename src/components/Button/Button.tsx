@@ -1,11 +1,25 @@
 import clsx from 'clsx';
-import React from 'react';
+import React, { ReactNode, forwardRef } from 'react';
 import styles from './Button.module.css';
 import ClickableStyle from '../ClickableStyle';
 import type { ClickableStyleProps } from '../ClickableStyle';
 import Icon from '../Icon';
 
-export type Props = ClickableStyleProps<React.ElementType> & {
+type ButtonHTMLElementProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
+
+export type ButtonProps = ButtonHTMLElementProps & {
+  /**
+   * The button contents or label.
+   */
+  children: ReactNode;
+  /**
+   * Toggles clickable that fills the full width of its container
+   */
+  fullWidth?: boolean;
+  status?: ClickableStyleProps<'button'>['status'];
+  'data-testid'?: string;
+  size?: ClickableStyleProps<'button'>['size'];
+  variant?: ClickableStyleProps<'button'>['variant'];
   /**
    * Disables the field and prevents editing the contents
    */
@@ -40,19 +54,17 @@ export type Props = ClickableStyleProps<React.ElementType> & {
  * In terms of the look and feel of the component in the UI, the `Button`, and `Link`, and `ClickableStyle`
  * components are exactly the same.
  */
-export const Button = React.forwardRef<
-  HTMLButtonElement,
-  ClickableStyleProps<React.ElementType>
->(
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
       children,
       className,
-      disabled,
       loading,
-      size = 'lg',
+      variant = 'secondary',
+      status = 'brand',
+      disabled = false,
       type = 'button',
-      variant,
+      size = 'lg',
       ...other
     },
     ref,
@@ -78,6 +90,7 @@ export const Button = React.forwardRef<
         disabled={disabled}
         ref={ref}
         size={size}
+        status={status}
         tabIndex={disabled ? -1 : undefined}
         type={type}
         variant={variant}

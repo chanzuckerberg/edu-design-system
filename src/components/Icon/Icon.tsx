@@ -54,6 +54,10 @@ interface IconPropsBase {
    * Generally prefer using "em" as it sizes to its parent container.
    */
   size?: string;
+  /**
+   * viewBox for the svg, used when the svg information is passed via children.
+   */
+  viewBox?: string;
 }
 
 interface InformativeIconProps extends IconPropsBase {
@@ -109,6 +113,7 @@ export const Icon = (props: IconProps) => {
     id,
     purpose,
     size,
+    viewBox,
   } = props;
   const generatedId = useUID();
   const idVar = id || generatedId;
@@ -136,6 +141,7 @@ export const Icon = (props: IconProps) => {
     style,
     width: size,
     xmlns: 'http://www.w3.org/2000/svg',
+    viewBox,
   };
   // allow passing custom SVGs to render, otherwise
   // load from the spritemap of EDS icons

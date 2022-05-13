@@ -622,7 +622,7 @@ exports[`<Button /> TertiarySmall story renders snapshot 1`] = `
 
 exports[`<Button /> passes class names down properly 1`] = `
 <button
-  class="clickable-style button exampleClassName clickable-style--lg clickable-style--secondary clickable-style--brand"
+  class="clickable-style button exampleClassName button--secondary clickable-style--lg clickable-style--secondary clickable-style--brand"
   data-testid="example-class-name"
   type="button"
 >
@@ -632,7 +632,7 @@ exports[`<Button /> passes class names down properly 1`] = `
 
 exports[`<Button /> passes test ids down properly 1`] = `
 <button
-  class="clickable-style button clickable-style--lg clickable-style--secondary clickable-style--brand"
+  class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--brand"
   data-testid="example-test-id"
   type="button"
 >

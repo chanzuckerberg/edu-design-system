@@ -1,6 +1,6 @@
-/*------------------------------------*\
+/* ------------------------------------*\
     #TEXT STORIES
-\*------------------------------------*/
+\*------------------------------------ */
 
 /**
  * 1) For the "variant" story to display the different text variant options.
@@ -15,7 +15,6 @@
 
 .variant__item {
   height: 4rem;
-
   display: flex;
   justify-content: center;
   align-items: center;

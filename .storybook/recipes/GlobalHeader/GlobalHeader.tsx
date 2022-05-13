@@ -1,24 +1,19 @@
 import clsx from 'clsx';
 import React, { useState, useEffect } from 'react';
 import styles from './GlobalHeader.module.css';
-import {
-  Header,
-  Logo,
-  PrimaryNav,
-  PrimaryNavItem,
-  NavContainer,
-  Button,
-  Avatar,
-  UtilityNav,
-  UtilityNavItem,
-  Icon,
-  Popover,
-  PopoverBody,
-  PopoverHeader,
-  Heading,
-  NotificationList,
-  NotificationListItem,
-} from '../../../src';
+import { Button, Icon, Heading } from '../../../src';
+// Project Overview pilot components -- not yet exported from src/index.ts
+import Avatar from '../../../src/components/Avatar';
+import Header from '../../../src/components/Header';
+import Logo from '../../../src/components/Logo';
+import NavContainer from '../../../src/components/NavContainer';
+import NotificationList from '../../../src/components/NotificationList';
+import Popover from '../../../src/components/Popover';
+import PrimaryNav from '../../../src/components/PrimaryNav';
+import PrimaryNavItem from '../../../src/components/PrimaryNavItem';
+import UtilityNav from '../../../src/components/UtilityNav';
+import UtilityNavItem from '../../../src/components/UtilityNavItem';
+
 // @ts-expect-error breakpoints file must be in JS to work with postcss config
 import breakpoint from '../../../src/design-tokens/tier-1-definitions/breakpoints';
 import { EdsThemeColorIconNeutralDefaultInverse } from '../../../src/tokens-dist/ts/colors';
@@ -115,7 +110,7 @@ export const GlobalHeader = ({ className, ...other }: Props) => {
             isActive={true}
             position={isLarge === false ? 'bottom-left' : undefined}
           >
-            <PopoverHeader
+            <Popover.Header
               titleAfter={
                 <Button size="sm" variant="icon">
                   Mark All Seen
@@ -125,56 +120,56 @@ export const GlobalHeader = ({ className, ...other }: Props) => {
               <Heading as="h3" id="popover-heading-1" size="body-sm">
                 Notifications (4)
               </Heading>
-            </PopoverHeader>
-            <PopoverBody>
+            </Popover.Header>
+            <Popover.Body>
               <NotificationList>
-                <NotificationListItem
+                <NotificationList.Item
                   date="now"
                   href="#"
                   source="Outsiders on Trial: Self Awareness = Trial Brief Outline"
                   title="English Teacher gave you feedback"
-                ></NotificationListItem>
-                <NotificationListItem
+                ></NotificationList.Item>
+                <NotificationList.Item
                   date="now"
                   href="#"
                   source="Outsiders on Trial: Self Awareness = Trial Brief Outline"
                   title="English Teacher gave you feedback"
-                ></NotificationListItem>
-                <NotificationListItem
+                ></NotificationList.Item>
+                <NotificationList.Item
                   date="now"
                   href="#"
                   source="Outsiders on Trial: Self Awareness = Trial Brief Outline"
                   title="English Teacher gave you feedback"
-                ></NotificationListItem>
-                <NotificationListItem
+                ></NotificationList.Item>
+                <NotificationList.Item
                   date="now"
                   href="#"
                   source="Outsiders on Trial: Self Awareness = Trial Brief Outline"
                   title="English Teacher gave you feedback"
-                ></NotificationListItem>
+                ></NotificationList.Item>
               </NotificationList>
-              <PopoverHeader>
+              <Popover.Header>
                 <Heading as="h3" id="popover-heading-2" size="body-sm">
                   Already Seen
                 </Heading>
-              </PopoverHeader>
+              </Popover.Header>
               <NotificationList>
-                <NotificationListItem
+                <NotificationList.Item
                   date="now"
                   href="#"
                   markedAsRead={true}
                   source="Outsiders on Trial: Self Awareness = Trial Brief Outline"
                   title="English Teacher gave you feedback"
-                ></NotificationListItem>
-                <NotificationListItem
+                ></NotificationList.Item>
+                <NotificationList.Item
                   date="now"
                   href="#"
                   markedAsRead={true}
                   source="Outsiders on Trial: Self Awareness = Trial Brief Outline"
                   title="English Teacher gave you feedback"
-                ></NotificationListItem>
+                ></NotificationList.Item>
               </NotificationList>
-            </PopoverBody>
+            </Popover.Body>
           </Popover>
         </UtilityNavItem>
       </UtilityNav>

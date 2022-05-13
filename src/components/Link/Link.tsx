@@ -1,12 +1,25 @@
-import React from 'react';
+import React, { ReactNode, forwardRef } from 'react';
 import ClickableStyle from '../ClickableStyle';
 import type { ClickableStyleProps } from '../ClickableStyle';
 
-export type Props = ClickableStyleProps<React.ElementType> & {
+type LinkHTMLElementProps = Omit<
+  React.AnchorHTMLAttributes<HTMLAnchorElement>,
+  'disabled'
+>;
+
+export type LinkProps = LinkHTMLElementProps & {
   /**
    * Link to URL.
    */
-  href: string;
+  children: ReactNode;
+  /**
+   * Toggles clickable that fills the full width of its container
+   */
+  fullWidth?: boolean;
+  status?: ClickableStyleProps<'a'>['status'];
+  'data-testid'?: string;
+  size?: ClickableStyleProps<'a'>['size'];
+  variant?: ClickableStyleProps<'a'>['variant'];
 };
 
 /**
@@ -26,9 +39,18 @@ export type Props = ClickableStyleProps<React.ElementType> & {
  * In terms of the look and feel of the component in the UI, the `Button`, and `Link`, and `ClickableStyle`
  * components are exactly the same.
  */
-export const Link = React.forwardRef<HTMLAnchorElement, Props>(
-  ({ variant = 'link', ...other }, ref) => {
-    return <ClickableStyle {...other} as="a" ref={ref} variant={variant} />;
+export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
+  ({ variant = 'link', status = 'brand', size = 'lg', ...rest }, ref) => {
+    return (
+      <ClickableStyle
+        {...rest}
+        as="a"
+        ref={ref}
+        size={size}
+        status={status}
+        variant={variant}
+      />
+    );
   },
 );
 Link.displayName = 'Link';

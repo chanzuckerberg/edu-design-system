@@ -43,6 +43,8 @@ export type Props = {
 } & React.HTMLAttributes<HTMLElement>;
 
 /**
+ * BETA: This component is still a work in progress and is subject to change.
+ *
  * ```ts
  * import {DataBar} from "@chanzuckerberg/eds";
  * ```

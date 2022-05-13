@@ -19,7 +19,7 @@ export type CheckboxLabelProps = {
   /**
    * Size of the checkbox label.
    */
-  size?: 'small' | 'medium';
+  size?: 'sm' | 'md';
   /**
    * Indicates disabled state of the checkbox.
    */
@@ -33,7 +33,7 @@ export const CheckboxLabel = ({
   text,
   className,
   htmlFor,
-  size = 'medium',
+  size = 'md',
   disabled,
 }: CheckboxLabelProps) => {
   return (
@@ -41,8 +41,8 @@ export const CheckboxLabel = ({
       className={clsx(
         className,
         styles['label'],
-        size === 'small' && styles['label--sm'],
-        size === 'medium' && styles['label--md'],
+        size === 'sm' && styles['label--sm'],
+        size === 'md' && styles['label--md'],
         disabled && styles['label--disabled'],
       )}
       data-bootstrap-override="label"

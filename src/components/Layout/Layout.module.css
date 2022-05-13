@@ -38,15 +38,6 @@
 }
 
 /**
- * Layout 50-50 variant with two main columns of equal width
- */
-.layout--50-50 {
-  @media all and (min-width: $eds-bp-xl) {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-/**
  * Sidebar layout section region
  * 1) Contains the global header and site navigation
  */

@@ -53,12 +53,12 @@ export const Heading6: StoryObj<Args> = {
 };
 
 /**
- * 1) Insufficient color contrast is expected since we are displaying all color variants on various color backgrounds.
+ * 1) Mainly for visual use and other stories generate enough confidence for our needs.
  */
 export const Variants: StoryObj<Args> = {
   ...Heading1,
   render: (args) => {
-    const headings: Array<JSX.Element> = [];
+    const headings: React.ReactNode[] = [];
     VARIANTS.forEach((variant) => {
       if (variant !== 'info')
         headings.push(
@@ -76,8 +76,12 @@ export const Variants: StoryObj<Args> = {
     );
   },
   parameters: {
+    /* 1 */
     axe: {
-      disabledRules: ['color-contrast'] /* 1 */,
+      skip: true,
+    },
+    snapshot: {
+      skip: true,
     },
   },
 };

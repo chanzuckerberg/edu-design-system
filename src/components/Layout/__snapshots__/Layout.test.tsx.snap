@@ -25,31 +25,6 @@ exports[`<Layout /> Default story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Layout /> FiftyFifty story renders snapshot 1`] = `
-<div
-  class="layout layout--50-50"
->
-  <div
-    class="layout__section layout__section--main"
-  >
-    <div
-      class="fpo"
-    >
-      Main Layout Section 1
-    </div>
-  </div>
-  <div
-    class="layout__section layout__section--main"
-  >
-    <div
-      class="fpo"
-    >
-      Main Layout Section 2
-    </div>
-  </div>
-</div>
-`;
-
 exports[`<Layout /> GapNone story renders snapshot 1`] = `
 <div
   class="layout layout--gap-none"

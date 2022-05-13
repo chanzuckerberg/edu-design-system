@@ -8,15 +8,15 @@ import Text from '../Text';
 
 export type Variant = 'brand' | 'neutral' | 'success' | 'warning' | 'error';
 
-export interface Props {
+export type BannerProps = {
   /**
    * A button or link that's placed in the banner separately from the main content.
    */
-  action?: React.ReactNode;
+  action?: ReactNode;
   /**
    * CSS class names that can be appended to the component.
    */
-  className?: string;
+  className?: ReactNode;
   /**
    * The description/body text of the banner
    */
@@ -62,7 +62,7 @@ export interface Props {
    * - **error** - results in a red banner
    */
   variant?: Variant;
-}
+};
 
 const variantToIconAssetsMap: {
   [key: string]: {
@@ -121,7 +121,7 @@ export const Banner = ({
   variant = 'brand',
   title,
   titleAs = 'h3',
-}: Props) => {
+}: BannerProps) => {
   if (isFlat && process.env.NODE_ENV !== 'production') {
     console.warn(
       'The isFlat style is deprecated and will be removed in an upcoming release.\n',

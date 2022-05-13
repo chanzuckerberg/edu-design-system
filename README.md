@@ -19,7 +19,7 @@ yarn add @chanzuckerberg/eds
 We currently use Arimo as our base font. This package does not export it, so you will need to import this separately. We recommend importing from Google Fonts into a top-level CSS file:
 
 ```css
-@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600&display=swap');
 ```
 
 and setting up base font settings:
@@ -51,7 +51,7 @@ import { Heading } from '@chanzuckerberg/eds';
 and then use them in your React components
 
 ```jsx
-<Heading color="neutral" size="h2">
+<Heading variant="neutral" size="h2">
   Coffee!
 </Heading>
 ```
@@ -120,6 +120,7 @@ declare var x: AbstractComponent<Props, HTMLElement>;
 | Run the component generator           | `yarn create-component` |
 
 ### [Icons](./docs/ICONS.md)
+
 ### [Publishing](./docs/PUBLISHING.md)
 
 ## Working with the codebase

@@ -245,9 +245,9 @@ export const OpenByDefault: StoryObj = {
 export const DropdownButtonOnly = {
   render: () => (
     <>
-      <DropdownButton isOpen={false} text="Dropdown button closed" />
+      <DropdownButton isOpen={false}>Dropdown button closed</DropdownButton>
       <br />
-      <DropdownButton isOpen={true} text="Dropdown button open" />
+      <DropdownButton isOpen={true}>Dropdown button open</DropdownButton>
     </>
   ),
   parameters: {

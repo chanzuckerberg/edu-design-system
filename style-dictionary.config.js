@@ -14,11 +14,11 @@ const EDSStyleDictionary = StyleDictionary.extend({
     },
     css: {
       transforms: [...StyleDictionary.transformGroup.css, 'name/cti/kebab'],
-      buildPath: 'src/',
+      buildPath: 'src/tokens-dist/',
       files: [
         {
           format: 'css/variables',
-          destination: 'tokens-dist/css/variables.css',
+          destination: 'css/variables.css',
           options: {
             showFileHeader: false,
           },
@@ -26,17 +26,17 @@ const EDSStyleDictionary = StyleDictionary.extend({
         {
           format: 'json/nested-css-variables',
           // useful for tailwind configs in consuming apps
-          destination: 'tokens-dist/json/css-variables-nested.json',
+          destination: 'json/css-variables-nested.json',
         },
       ],
     },
     js: {
       transformGroup: 'js',
-      buildPath: 'src/',
+      buildPath: 'src/tokens-dist/',
       files: [
         {
           format: 'javascript/es6',
-          destination: 'tokens-dist/ts/colors.ts',
+          destination: 'ts/colors.ts',
           options: {
             showFileHeader: false,
           },
@@ -46,22 +46,22 @@ const EDSStyleDictionary = StyleDictionary.extend({
     },
     json: {
       transformGroup: 'js',
-      buildPath: 'src/',
+      buildPath: 'src/tokens-dist/',
       files: [
         {
           format: 'json/nested',
           // useful for tailwind configs in consuming apps
-          destination: 'tokens-dist/json/variables-nested.json',
+          destination: 'json/variables-nested.json',
         },
       ],
     },
     scss: {
       transforms: [...StyleDictionary.transformGroup.scss, 'name/cti/kebab'],
-      buildPath: 'src/',
+      buildPath: 'src/tokens-dist/',
       files: [
         {
           format: 'scss/map-deep',
-          destination: 'tokens-dist/scss/_variables.scss',
+          destination: 'scss/_variables.scss',
           options: {
             showFileHeader: false,
           },

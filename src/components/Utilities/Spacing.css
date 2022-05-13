@@ -241,14 +241,6 @@
 }
 
 /**
- * Padding large
- * 1) Forces padding to 4rem
- */
-.u-padding-xl {
-  padding: var(--eds-size-8) !important;
-}
-
-/**
  * Padding top none
  * 1) Forces padding top to 0rem
  */
