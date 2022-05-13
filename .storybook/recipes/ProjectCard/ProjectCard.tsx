@@ -12,6 +12,8 @@ import {
   Button,
   Dropdown,
   NumberIcon,
+  ButtonDropdown,
+  DropdownMenuItem,
 } from '../../../src';
 
 export interface Props {
@@ -36,21 +38,27 @@ export const ProjectCard = ({ className, title, meta, ...other }: Props) => {
   const componentClassName = clsx(styles['project-card'], className, {});
   return (
     <Card className={componentClassName} orientation="horizontal" {...other}>
-      <CardHeader>
-        <NumberIcon
-          className={styles['project-card__number']}
-          number={1}
-          size="sm"
-        />
+      <div className={styles['project-card__drag-handle']}>
         <Icon
           className={styles['project-card__drag-icon']}
           name="drag-indicator"
           purpose="decorative"
           size="2rem"
         />
+      </div>
+      <CardHeader>
+        <NumberIcon
+          className={styles['project-card__number']}
+          number={1}
+          size="sm"
+        />
       </CardHeader>
       <CardBody className={styles['project-card__body']}>
-        <Heading as="h3" className={styles['project-card__title']} size="h6">
+        <Heading
+          as="h3"
+          className={styles['project-card__title']}
+          size="body-sm"
+        >
           {title}
         </Heading>
         <div className={styles['project-card__meta']}>
@@ -63,43 +71,20 @@ export const ProjectCard = ({ className, title, meta, ...other }: Props) => {
           {meta}
         </div>
       </CardBody>
-      <CardFooter>
-        <Dropdown
-          aria-label="Favorite Animal"
-          as="div"
-          className="w-60"
-          data-testid="dropdown"
-          onChange={undefined}
-          optionsAlign="right"
-          optionsClassName={styles['project-card__dropdown']}
-          value="Option 1"
+      <CardFooter className={styles['project-card__footer']}>
+        <ButtonDropdown
+          buttonAriaLabel="Open project dropdown"
+          buttonChildren={<Icon name="dots-vertical" purpose="decorative" />}
+          buttonSize="sm"
+          buttonStatus="neutral"
+          buttonVariant="icon"
+          className={styles['project-card__button-dropdown']}
         >
-          {({ open }) => (
-            <>
-              <Dropdown.Button
-                // Because we're using a render prop to completely control the styling and icon of the
-                // button, we need to configure this component to render as a Fragment. Otherwise we'd
-                // render two, nested buttons.
-                as={React.Fragment}
-              >
-                {() => (
-                  <Button
-                    ariaLabel="Open project dropdown"
-                    status="neutral"
-                    variant="icon"
-                  >
-                    <Icon name="dots-vertical" purpose="decorative" />
-                  </Button>
-                )}
-              </Dropdown.Button>
-              <Dropdown.Options>
-                <Dropdown.Option value="option 1">Option 1</Dropdown.Option>
-                <Dropdown.Option value="option 1">Option 2</Dropdown.Option>
-                <Dropdown.Option value="option 1">Option 3</Dropdown.Option>
-              </Dropdown.Options>
-            </>
-          )}
-        </Dropdown>
+          <DropdownMenuItem iconName="schedule" text="Move to other section" />
+          <DropdownMenuItem iconName="schedule" text="Move up" />
+          <DropdownMenuItem iconName="schedule" text="Move down" />
+          <DropdownMenuItem iconName="schedule" text="Move view details" />
+        </ButtonDropdown>
       </CardFooter>
     </Card>
   );

@@ -1,0 +1,107 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #DROPDOWN
+\*------------------------------------*/
+
+/**
+ * Define themable properties
+ */
+
+/**
+ * 1) Dropdown
+ * 2) Set a minimum width for the dropdown
+ */
+.eds-c-dropdown {
+  width: 16rem; /* 2 */
+  background: var(--eds-theme-color-background-neutral-default);
+  border: 1px solid var(--eds-theme-color-border-neutral-subtle);
+  box-shadow: var(--eds-theme-box-shadow);
+
+  /**
+  * Dropdown within active dropdown item
+  */
+  .eds-c-dropdown__item.eds-is-active & {
+    visibility: visible;
+    transition-delay: 0s;
+  }
+
+  /**
+  * Dropdown within dropdown item align top left
+  * 1) Position nested dropdown to the left and aligned at the bottom of dropdown item
+  */
+  .eds-c-dropdown__item--align-top-left > & {
+    top: auto;
+    bottom: 0;
+  }
+}
+
+/**
+ * Dropdown list
+ */
+.eds-c-dropdown__list {
+  @mixin reset;
+  list-style: none;
+}
+
+/**
+ * Dropdown item
+ */
+.eds-c-dropdown__item {
+  position: relative;
+  width: 100%;
+}
+
+/**
+ * Dropdown link
+ */
+.eds-c-dropdown__link {
+  @mixin eds-theme-typography-body-text-sm;
+  display: flex;
+  appearance: none;
+  background: none;
+  text-decoration: none;
+  border: none;
+  width: 100%;
+  padding: var(--eds-size-1-and-half) var(--eds-size-2);
+  text-align: left;
+  cursor: pointer;
+  color: var(--eds-theme-color-text-neutral-default);
+
+  &:hover,
+  &:focus {
+    background: var(--eds-theme-color-background-brand-primary-strong);
+    color: var(--eds-theme-color-text-neutral-default-inverse);
+  }
+
+  /**
+  * Dropdown link within a lined dropdown item
+  * 1) Add bottom border to the item
+  */
+  .eds-c-dropdown__item--lined & {
+    border-bottom: 1px solid var(--eds-theme-color-border-neutral-subtle);
+  }
+
+  /**
+  * Dropdown link within active dropdown item
+  */
+  .eds-c-dropdown__item.eds-is-active > & {
+    background: var(--eds-theme-color-background-neutral-subtle);
+
+    /**
+    * Hover/focus states for active dropdown item links
+    */
+    &:hover,
+    &:focus {
+      background: var(--eds-theme-color-background-brand-primary-strong);
+      color: var(--eds-theme-color-text-neutral-default-inverse);
+    }
+  }
+}
+
+/**
+* Dropdown item icon
+*/
+.eds-c-dropdown__icon {
+  margin-right: var(--eds-size-1);
+}

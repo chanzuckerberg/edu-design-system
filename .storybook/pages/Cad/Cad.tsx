@@ -19,11 +19,13 @@ import {
   OverflowListItem,
   Tabs,
   Tab,
+  HorizontalStepper,
 } from '../../../src';
 
 import '../../../src/components/Utilities/Spacing.css';
 import { Toolbar } from '../../../src/upcoming-components/Toolbar/Toolbar';
 import { ToolbarItem } from '../../../src/upcoming-components/ToolbarItem/ToolbarItem';
+import ProjectCard from '../../recipes/ProjectCard';
 
 import ProjectColumn from '../../recipes/ProjectColumn';
 
@@ -33,7 +35,16 @@ export const Cad = () => (
       <LayoutContainer>
         <PageHeader
           className="u-margin-bottom-none"
-          description={<div className="fpo">Stepper</div>}
+          description={
+            <HorizontalStepper
+              activeIndex={1}
+              steps={[
+                'Add classroom details',
+                'Add projects',
+                'Create course plan',
+              ]}
+            ></HorizontalStepper>
+          }
           headingSize="title-sm"
           right={
             <ButtonGroup>
@@ -88,90 +99,40 @@ export const Cad = () => (
                       </Toolbar>
                       <Grid gap="sm">
                         <GridItem>
-                          <Card>
-                            <CardBody>
-                              <Heading
-                                as="h3"
-                                className="u-margin-bottom-sm"
-                                size="body-sm"
-                              >
-                                Longer project name truncation after a long...
-                              </Heading>
-                              <div className="fpo u-margin-none">
-                                Calendar Icon text
-                              </div>
-                            </CardBody>
-                          </Card>
+                          <ProjectCard
+                            meta="12 days"
+                            title="Project card title"
+                          ></ProjectCard>
                         </GridItem>
                         <GridItem>
-                          <Card>
-                            <CardBody>
-                              <Heading
-                                as="h3"
-                                className="u-margin-bottom-sm"
-                                size="body-sm"
-                              >
-                                Project name
-                              </Heading>
-                              <div className="fpo u-margin-none">12 days</div>
-                            </CardBody>
-                          </Card>
+                          <ProjectCard
+                            meta="12 days"
+                            title="Project card title"
+                          ></ProjectCard>
                         </GridItem>
                         <GridItem>
-                          <Card>
-                            <CardBody>
-                              <Heading
-                                as="h3"
-                                className="u-margin-bottom-sm"
-                                size="body-sm"
-                              >
-                                Project name
-                              </Heading>
-                              <div className="fpo u-margin-none">12 days</div>
-                            </CardBody>
-                          </Card>
+                          <ProjectCard
+                            meta="12 days"
+                            title="Project card title"
+                          ></ProjectCard>
                         </GridItem>
                         <GridItem>
-                          <Card>
-                            <CardBody>
-                              <Heading
-                                as="h3"
-                                className="u-margin-bottom-sm"
-                                size="body-sm"
-                              >
-                                Project name
-                              </Heading>
-                              <div className="fpo u-margin-none">12 days</div>
-                            </CardBody>
-                          </Card>
+                          <ProjectCard
+                            meta="12 days"
+                            title="Project card title"
+                          ></ProjectCard>
                         </GridItem>
                         <GridItem>
-                          <Card>
-                            <CardBody>
-                              <Heading
-                                as="h3"
-                                className="u-margin-bottom-sm"
-                                size="body-sm"
-                              >
-                                Project name
-                              </Heading>
-                              <div className="fpo u-margin-none">12 days</div>
-                            </CardBody>
-                          </Card>
+                          <ProjectCard
+                            meta="12 days"
+                            title="Project card title"
+                          ></ProjectCard>
                         </GridItem>
                         <GridItem>
-                          <Card>
-                            <CardBody>
-                              <Heading
-                                as="h3"
-                                className="u-margin-bottom-sm"
-                                size="body-sm"
-                              >
-                                Project name
-                              </Heading>
-                              <div className="fpo u-margin-none">12 days</div>
-                            </CardBody>
-                          </Card>
+                          <ProjectCard
+                            meta="12 days"
+                            title="Project card title"
+                          ></ProjectCard>
                         </GridItem>
                       </Grid>
                     </ProjectColumn>

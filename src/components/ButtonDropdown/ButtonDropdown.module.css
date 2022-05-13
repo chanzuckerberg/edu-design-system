@@ -1,0 +1,25 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #BUTTONDROPDOWN
+\*------------------------------------*/
+
+/**
+ * 1) 
+ */
+.button-dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.button-dropdown__dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: var(--eds-z-index-500);
+
+  .button-dropdown.eds-is-active & {
+    display: block;
+  }
+}
