@@ -7,26 +7,24 @@
 /**
  * 1) Styled clickable element that should look like a button or link
  * 2) Defaults to primary variant
- * 3) Margin 0 added becuase Safari has margin on buttons
- * 4) Adds a gap between children to automatically handle spacing between icons and text
- * 5) Removes the underline in the case that the rendered element is an <a> tag
- * 6) Adds default size for icons passed in for consistency
+ * 3) Adds a gap between children to automatically handle spacing between icons and text
+ * 4) Removes the underline in the case that the rendered element is an <a> tag
+ * 5) Adds default size for icons passed in for consistency
  */
 .clickable-style {
   @mixin eds-theme-typography-button-label;
   display: inline-flex;
   align-items: center;
-  margin: 0; /* 3 */
-  gap: 0.75rem; /* 4 */
+  gap: 0.75rem; /* 3 */
   border-width: var(--eds-theme-border-width);
   border-style: solid;
   border-radius: var(--eds-theme-border-radius);
   cursor: pointer;
-  text-decoration: none; /* 5 */
+  text-decoration: none; /* 4 */
   transition: all var(--eds-anim-fade-quick) var(--eds-anim-ease);
 
   svg {
-    --icon-size-default: 2em; /* 6 */
+    --icon-size-default: 2em; /* 5 */
   }
 
   &:focus {
@@ -36,6 +34,15 @@
   @media screen and (prefers-reduced-motion) {
     transition: none;
   }
+}
+
+/**
+ * Margin 0 added becuase Safari has margin on buttons.
+ * 1) Needs `:where` pseudoclass to reduce specificity so class overrides
+ *    for margin can happen where used.
+ */
+:where(.clickable-style) {
+  margin: 0;
 }
 
 /**
