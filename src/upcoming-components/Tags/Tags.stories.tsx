@@ -1,3 +1,4 @@
+import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
@@ -7,6 +8,9 @@ import TagsItem, { TagsItemProps } from '../TagsItem';
 export default {
   title: 'Molecules/Messaging/Tags',
   component: Tags,
+  parameters: {
+    badges: [BADGE.BETA],
+  },
 } as Meta;
 
 export const Default: StoryObj<Props & TagsItemProps> = {

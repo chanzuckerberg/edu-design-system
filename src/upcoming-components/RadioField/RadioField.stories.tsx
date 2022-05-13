@@ -1,3 +1,4 @@
+import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { StoryObj } from '@storybook/react';
 import React from 'react';
 
@@ -10,6 +11,9 @@ export default {
   subcomponents: { RadioFieldItem },
   args: {
     label: 'Radio field',
+  },
+  parameters: {
+    badges: [BADGE.BETA],
   },
 };
 

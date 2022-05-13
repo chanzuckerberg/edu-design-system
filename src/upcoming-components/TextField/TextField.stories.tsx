@@ -1,3 +1,4 @@
+import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { Story, Meta } from '@storybook/react';
 import React from 'react';
 
@@ -7,6 +8,9 @@ import Button from '../../components/Button';
 export default {
   title: 'Molecules/Forms/TextField',
   component: TextField,
+  parameters: {
+    badges: [BADGE.BETA],
+  },
 } as Meta;
 
 const Template: Story<Props> = (args) => <TextField {...args} />;
