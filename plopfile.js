@@ -3,6 +3,8 @@ const pascalCase = require('pascal-case');
 module.exports = (plop) => {
   plop.setHelper('upperCase', (txt) => txt.toUpperCase());
 
+  // This helper allows us to place a variable inside curly braces without spaces
+  // between the text and the braces.
   plop.setHelper('inBraces', (txt) => `{${pascalCase.pascalCase(txt)}}`);
 
   plop.setGenerator('component', {
