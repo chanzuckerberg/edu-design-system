@@ -14,24 +14,6 @@ exports[`<Tag /> ColorVariants story renders snapshot 1`] = `
     </span>
   </span>
   <span
-    class="tag tag--success text text--sm text--bold-weight"
-  >
-    <span
-      class="tag__body"
-    >
-      success
-    </span>
-  </span>
-  <span
-    class="tag tag--yield text text--sm text--bold-weight"
-  >
-    <span
-      class="tag__body"
-    >
-      yield
-    </span>
-  </span>
-  <span
     class="tag tag--error text text--sm text--bold-weight"
   >
     <span
@@ -41,12 +23,30 @@ exports[`<Tag /> ColorVariants story renders snapshot 1`] = `
     </span>
   </span>
   <span
+    class="tag tag--success text text--sm text--bold-weight"
+  >
+    <span
+      class="tag__body"
+    >
+      success
+    </span>
+  </span>
+  <span
     class="tag tag--warning text text--sm text--bold-weight"
   >
     <span
       class="tag__body"
     >
       warning
+    </span>
+  </span>
+  <span
+    class="tag tag--yield text text--sm text--bold-weight"
+  >
+    <span
+      class="tag__body"
+    >
+      yield
     </span>
   </span>
   <span
@@ -87,24 +87,6 @@ exports[`<Tag /> OutlineVariants story renders snapshot 1`] = `
     </span>
   </span>
   <span
-    class="tag tag--success tag--outline text text--sm text--bold-weight"
-  >
-    <span
-      class="tag__body"
-    >
-      success
-    </span>
-  </span>
-  <span
-    class="tag tag--yield tag--outline text text--sm text--bold-weight"
-  >
-    <span
-      class="tag__body"
-    >
-      yield
-    </span>
-  </span>
-  <span
     class="tag tag--error tag--outline text text--sm text--bold-weight"
   >
     <span
@@ -114,12 +96,30 @@ exports[`<Tag /> OutlineVariants story renders snapshot 1`] = `
     </span>
   </span>
   <span
+    class="tag tag--success tag--outline text text--sm text--bold-weight"
+  >
+    <span
+      class="tag__body"
+    >
+      success
+    </span>
+  </span>
+  <span
     class="tag tag--warning tag--outline text text--sm text--bold-weight"
   >
     <span
       class="tag__body"
     >
       warning
+    </span>
+  </span>
+  <span
+    class="tag tag--yield tag--outline text text--sm text--bold-weight"
+  >
+    <span
+      class="tag__body"
+    >
+      yield
     </span>
   </span>
   <span
@@ -158,44 +158,6 @@ exports[`<Tag /> WithIcon story renders snapshot 1`] = `
     </span>
   </span>
   <span
-    class="tag tag--success tag--outline text text--sm text--bold-weight"
-  >
-    <svg
-      aria-hidden="true"
-      class="icon"
-      fill="currentColor"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <use
-        xlink:href="test-file-stub#favorite"
-      />
-    </svg>
-    <span
-      class="tag__body"
-    >
-      success
-    </span>
-  </span>
-  <span
-    class="tag tag--yield tag--outline text text--sm text--bold-weight"
-  >
-    <svg
-      aria-hidden="true"
-      class="icon"
-      fill="currentColor"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <use
-        xlink:href="test-file-stub#favorite"
-      />
-    </svg>
-    <span
-      class="tag__body"
-    >
-      yield
-    </span>
-  </span>
-  <span
     class="tag tag--error tag--outline text text--sm text--bold-weight"
   >
     <svg
@@ -215,6 +177,25 @@ exports[`<Tag /> WithIcon story renders snapshot 1`] = `
     </span>
   </span>
   <span
+    class="tag tag--success tag--outline text text--sm text--bold-weight"
+  >
+    <svg
+      aria-hidden="true"
+      class="icon"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <use
+        xlink:href="test-file-stub#favorite"
+      />
+    </svg>
+    <span
+      class="tag__body"
+    >
+      success
+    </span>
+  </span>
+  <span
     class="tag tag--warning tag--outline text text--sm text--bold-weight"
   >
     <svg
@@ -231,6 +212,25 @@ exports[`<Tag /> WithIcon story renders snapshot 1`] = `
       class="tag__body"
     >
       warning
+    </span>
+  </span>
+  <span
+    class="tag tag--yield tag--outline text text--sm text--bold-weight"
+  >
+    <svg
+      aria-hidden="true"
+      class="icon"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <use
+        xlink:href="test-file-stub#favorite"
+      />
+    </svg>
+    <span
+      class="tag__body"
+    >
+      yield
     </span>
   </span>
   <span
@@ -279,44 +279,6 @@ exports[`<Tag /> WithLongTextAndIcon story renders snapshot 1`] = `
     </span>
   </span>
   <span
-    class="tag tag--success tag--outline text text--sm text--bold-weight"
-  >
-    <svg
-      aria-hidden="true"
-      class="icon"
-      fill="currentColor"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <use
-        xlink:href="test-file-stub#star"
-      />
-    </svg>
-    <span
-      class="tag__body"
-    >
-      This tag has a really long text message
-    </span>
-  </span>
-  <span
-    class="tag tag--yield tag--outline text text--sm text--bold-weight"
-  >
-    <svg
-      aria-hidden="true"
-      class="icon"
-      fill="currentColor"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <use
-        xlink:href="test-file-stub#star"
-      />
-    </svg>
-    <span
-      class="tag__body"
-    >
-      This tag has a really long text message
-    </span>
-  </span>
-  <span
     class="tag tag--error tag--outline text text--sm text--bold-weight"
   >
     <svg
@@ -336,7 +298,45 @@ exports[`<Tag /> WithLongTextAndIcon story renders snapshot 1`] = `
     </span>
   </span>
   <span
+    class="tag tag--success tag--outline text text--sm text--bold-weight"
+  >
+    <svg
+      aria-hidden="true"
+      class="icon"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <use
+        xlink:href="test-file-stub#star"
+      />
+    </svg>
+    <span
+      class="tag__body"
+    >
+      This tag has a really long text message
+    </span>
+  </span>
+  <span
     class="tag tag--warning tag--outline text text--sm text--bold-weight"
+  >
+    <svg
+      aria-hidden="true"
+      class="icon"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <use
+        xlink:href="test-file-stub#star"
+      />
+    </svg>
+    <span
+      class="tag__body"
+    >
+      This tag has a really long text message
+    </span>
+  </span>
+  <span
+    class="tag tag--yield tag--outline text text--sm text--bold-weight"
   >
     <svg
       aria-hidden="true"
