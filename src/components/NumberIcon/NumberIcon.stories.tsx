@@ -22,9 +22,8 @@ export const Small: StoryObj<Args> = {
   },
 };
 
-export const SuccessLarge: StoryObj<Args> = {
+export const Success: StoryObj<Args> = {
   args: {
-    size: 'lg',
     variant: 'success',
   },
 };

@@ -31,6 +31,20 @@ export const Default = () => (
   </Card>
 );
 
+export const Horizontal = () => (
+  <Card orientation="horizontal">
+    <Card.Header>
+      <div className="fpo">Card Header</div>
+    </Card.Header>
+    <Card.Body>
+      <div className="fpo">Card Body</div>
+    </Card.Body>
+    <Card.Footer>
+      <div className="fpo">Card Footer</div>
+    </Card.Footer>
+  </Card>
+);
+
 export const Inverted = () => (
   <div style={{ backgroundColor: 'black', padding: '1rem' }}>
     <Card inverted={true}>

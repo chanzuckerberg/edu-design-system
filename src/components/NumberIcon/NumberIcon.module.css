@@ -1,3 +1,4 @@
+@import '../../design-tokens/mixins.css';
 /*------------------------------------*\
     # NUMBER ICON
 \*------------------------------------*/
@@ -9,9 +10,13 @@
  */
 .number-icon {
   /* 1 */
+  @mixin eds-theme-typography-body-text-sm;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: var(--eds-size-3); /* 1 */
+  width: var(--eds-size-3);
+  min-width: var(--eds-size-3);
 
   /* 2 */
   border: var(--eds-border-width-sm) solid;
@@ -23,15 +28,10 @@
  * 1) Height and width should be the same to make the icon a circle and not oblong.
  */
 .number-icon--sm {
+  @mixin eds-theme-typography-body-text-xs;
   height: var(--eds-size-2-and-half); /* 1 */
   width: var(--eds-size-2-and-half);
   min-width: var(--eds-size-2-and-half);
-}
-
-.number-icon--lg {
-  height: var(--eds-size-3); /* 1 */
-  width: var(--eds-size-3);
-  min-width: var(--eds-size-3);
 }
 
 /**
@@ -41,6 +41,7 @@
   background-color: transparent;
   border-color: var(--eds-theme-color-icon-neutral-strong);
 }
+
 .number-icon--success {
   background-color: var(--eds-theme-color-icon-utility-success);
   border-color: var(--eds-theme-color-icon-utility-success);

@@ -1,0 +1,48 @@
+@import '../../../src/design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #PROJECTCARD
+\*------------------------------------*/
+
+/**
+ * 1) 
+ */
+.project-card {
+  transition: all var(--eds-anim-fade-quick) var(--eds-anim-fade-quick);
+
+  &:hover {
+    background: red;
+  }
+}
+
+.project-card__number {
+  .project-card:hover & {
+    display: none;
+  }
+}
+
+.project-card__drag-icon {
+  display: none;
+
+  .project-card:hover & {
+    display: block;
+  }
+}
+
+.project-card__body {
+  flex-direction: row;
+  gap: var(--eds-);
+}
+
+.project-card__meta {
+  @mixin eds-theme-typography-body-text-xs;
+  color: var(--eds-theme-color-text-neutral-subtle);
+}
+
+.project-card__meta-icon {
+  margin-right: var(--eds-size-1);
+}
+
+.project-card__dropdown {
+  min-width: 12.75rem;
+}
