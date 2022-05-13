@@ -2,6 +2,87 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.21.0-alpha.6](https://github.com/chanzuckerberg/edu-design-system/compare/v0.18.1...v0.21.0-alpha.6) (2022-05-13)
+
+
+### ⚠ BREAKING CHANGES
+
+* prop renamed
+* **clickable:** props renamed
+* renamed
+* subimports
+* props removed, renamed
+* props renamed, added text prop
+* renamed props and alert variant
+* removed and renamed props
+* **tokens:** size-font-base renamed
+
+### Features
+
+* add EDS icons ([0901b30](https://github.com/chanzuckerberg/edu-design-system/commit/0901b30d379668db989871b0b11daddd6dde148e))
+* add legacy type sizes ([3459b70](https://github.com/chanzuckerberg/edu-design-system/commit/3459b70bf661c19dbead177125b6db73a9c26753))
+* add Notification List ([#913](https://github.com/chanzuckerberg/edu-design-system/issues/913)) ([fad6083](https://github.com/chanzuckerberg/edu-design-system/commit/fad6083c9c6feac23147281cd28631a2edc551b3))
+* add page shell ([#891](https://github.com/chanzuckerberg/edu-design-system/issues/891)) ([374f967](https://github.com/chanzuckerberg/edu-design-system/commit/374f967e07b56fe45e384261bf32dc83efcbbf3e))
+* add scss, js, json transforms to style dictionary ([e9c3fd5](https://github.com/chanzuckerberg/edu-design-system/commit/e9c3fd50cf7513f97352d3a4dbf3cf1f57dbf648))
+* add sequence variant to List Detail ([#911](https://github.com/chanzuckerberg/edu-design-system/issues/911)) ([404aba0](https://github.com/chanzuckerberg/edu-design-system/commit/404aba022a35c429427419ee05ade54e0f3b3b06))
+* add SvgIcon props to Icon ([4118a9b](https://github.com/chanzuckerberg/edu-design-system/commit/4118a9b66cab2c98b2c5016c0292c02aebe301cd))
+* add tier 2 and tier 3 tokens ([8555a06](https://github.com/chanzuckerberg/edu-design-system/commit/8555a06aa8cec04c03f567327ef90c9f53ed67a9))
+* adding eslint-plugin-jsx-a11y ([#972](https://github.com/chanzuckerberg/edu-design-system/issues/972)) ([22c1d2b](https://github.com/chanzuckerberg/edu-design-system/commit/22c1d2b4745789fa261ee4abea2a3c87342a3f1b))
+* **banner, toast:** use status prop with close and action buttons ([#989](https://github.com/chanzuckerberg/edu-design-system/issues/989)) ([82af3b9](https://github.com/chanzuckerberg/edu-design-system/commit/82af3b9b4f4abb727eab3d0d5c35dbb22a846bd9))
+* **banner:** remove internal dismiss logic ([#1007](https://github.com/chanzuckerberg/edu-design-system/issues/1007)) ([a3a23dd](https://github.com/chanzuckerberg/edu-design-system/commit/a3a23dde57bf7c12a127235fb1b237588f6ba6cd))
+* **banner:** update banner main component styles ([#973](https://github.com/chanzuckerberg/edu-design-system/issues/973)) ([ca1e117](https://github.com/chanzuckerberg/edu-design-system/commit/ca1e1175f5fe790839f062ece2efba4ccf12df9a))
+* **buttongroup:** move buttongroup to next ([#970](https://github.com/chanzuckerberg/edu-design-system/issues/970)) ([56a352f](https://github.com/chanzuckerberg/edu-design-system/commit/56a352f4967a1b5313e4ed8df008d15cc33d1758))
+* **button:** polish button styles ([#957](https://github.com/chanzuckerberg/edu-design-system/issues/957)) ([5e1ec00](https://github.com/chanzuckerberg/edu-design-system/commit/5e1ec008c8cc4bee0e84e4435dc3b1138d29e493))
+* **button:** remove icon props ([#935](https://github.com/chanzuckerberg/edu-design-system/issues/935)) ([f501bde](https://github.com/chanzuckerberg/edu-design-system/commit/f501bde9b460e817bac4b3db6c29826ff48c3acc))
+* **button:** removed inverted prop ([#948](https://github.com/chanzuckerberg/edu-design-system/issues/948)) ([c2ca803](https://github.com/chanzuckerberg/edu-design-system/commit/c2ca803bd8201001379e157709903629f0776fa7))
+* **button:** update variants to match new tokens ([#936](https://github.com/chanzuckerberg/edu-design-system/issues/936)) ([7ae2bd1](https://github.com/chanzuckerberg/edu-design-system/commit/7ae2bd1e64528d3780b00608c1113367455ee02c))
+* **button:** use new button tokens, update storybook ([#952](https://github.com/chanzuckerberg/edu-design-system/issues/952)) ([ceb7949](https://github.com/chanzuckerberg/edu-design-system/commit/ceb79492ef1558dbda802c8d060653bfb834741f))
+* cad page scaffolding ([#1048](https://github.com/chanzuckerberg/edu-design-system/issues/1048)) ([e55b686](https://github.com/chanzuckerberg/edu-design-system/commit/e55b6862ef8fe0c971546b089621f9e16fb46c4c))
+* change FormGroup to Fieldset and move to next ([#971](https://github.com/chanzuckerberg/edu-design-system/issues/971)) ([3dbcb6e](https://github.com/chanzuckerberg/edu-design-system/commit/3dbcb6e474be9b66a30033bcbf6c055716de044a))
+* **clickable-style:** add 'status' prop, add full list of tokens ([#977](https://github.com/chanzuckerberg/edu-design-system/issues/977)) ([6605919](https://github.com/chanzuckerberg/edu-design-system/commit/66059193dbb395c6e3d28b7ea59c2bf9fcc53c06))
+* **clickable-style:** make secondary variant default ([#988](https://github.com/chanzuckerberg/edu-design-system/issues/988)) ([b4ab00c](https://github.com/chanzuckerberg/edu-design-system/commit/b4ab00c3778f2281aa888e75ea4b24c19b81b937))
+* **clickable:** add ClickableStyle, use it to style Button and Link ([#962](https://github.com/chanzuckerberg/edu-design-system/issues/962)) ([85fe558](https://github.com/chanzuckerberg/edu-design-system/commit/85fe558ac0c1b0e390db1bc6481f3bfb1970e9cc))
+* color design token import ([#903](https://github.com/chanzuckerberg/edu-design-system/issues/903)) ([9afd25c](https://github.com/chanzuckerberg/edu-design-system/commit/9afd25c25250d7f1eb9262b8e08dec9bb99bfe7c))
+* component color tokens update ([#924](https://github.com/chanzuckerberg/edu-design-system/issues/924)) ([3afd30e](https://github.com/chanzuckerberg/edu-design-system/commit/3afd30eba27a1d2f3b5adf9854dc5873ba2b6776))
+* **databar:** add databar and databarsegment ([#1031](https://github.com/chanzuckerberg/edu-design-system/issues/1031)) ([937840d](https://github.com/chanzuckerberg/edu-design-system/commit/937840dc632c22d30337364d5b6d4b1049b44a0e))
+* **dropdown:** move dropdown to next ([#966](https://github.com/chanzuckerberg/edu-design-system/issues/966)) ([014231e](https://github.com/chanzuckerberg/edu-design-system/commit/014231e2772027dfdf86127b3504bf81ae06e297))
+* generate Icon name union type ([cad6012](https://github.com/chanzuckerberg/edu-design-system/commit/cad6012dc9d4fee12db4e1190c2a8a04bd7c9e55))
+* global header ([#912](https://github.com/chanzuckerberg/edu-design-system/issues/912)) ([9f431ed](https://github.com/chanzuckerberg/edu-design-system/commit/9f431edbe23deeb7ecfdddabbd4ad9be0ddf7052))
+* global header tweaks ([#955](https://github.com/chanzuckerberg/edu-design-system/issues/955)) ([e478986](https://github.com/chanzuckerberg/edu-design-system/commit/e4789864684816035278de879bca09908d32afc5))
+* **HorizontalStepper:** introduce HorizontalStepper component ([#1015](https://github.com/chanzuckerberg/edu-design-system/issues/1015)) ([a035dac](https://github.com/chanzuckerberg/edu-design-system/commit/a035daccd16d57c9a52b2f903bae3ab4f8c83ff4))
+* **link:** use default link color tokens in textLink mixin ([#982](https://github.com/chanzuckerberg/edu-design-system/issues/982)) ([803c8f0](https://github.com/chanzuckerberg/edu-design-system/commit/803c8f07025ed29921ec795b7002c8b33839d3ef))
+* **list detail:** adjustments ([#1003](https://github.com/chanzuckerberg/edu-design-system/issues/1003)) ([4954099](https://github.com/chanzuckerberg/edu-design-system/commit/4954099cbebd08de768b9eb76f3e632ee5882ce6))
+* map new tokens components ([#965](https://github.com/chanzuckerberg/edu-design-system/issues/965)) ([87d689c](https://github.com/chanzuckerberg/edu-design-system/commit/87d689c6b961510b66c1855b768a2d1dc4ffc72a))
+* move checkbox to next ([#959](https://github.com/chanzuckerberg/edu-design-system/issues/959)) ([0623631](https://github.com/chanzuckerberg/edu-design-system/commit/062363126953a1dae4c68c5bc1f81e7d8737065f))
+* move heading to next ([#954](https://github.com/chanzuckerberg/edu-design-system/issues/954)) ([3b6bfe3](https://github.com/chanzuckerberg/edu-design-system/commit/3b6bfe316ccd991b244f74cc563808a63a30e69a))
+* move tag to next ([#941](https://github.com/chanzuckerberg/edu-design-system/issues/941)) ([a7110de](https://github.com/chanzuckerberg/edu-design-system/commit/a7110de773ae5e4f1878dcbbf843d19dc6b31814))
+* move toast to next ([#893](https://github.com/chanzuckerberg/edu-design-system/issues/893)) ([e8c1235](https://github.com/chanzuckerberg/edu-design-system/commit/e8c1235ff16e366666506a6e27c77b4f88e075cd))
+* move tooltip to next  ([#887](https://github.com/chanzuckerberg/edu-design-system/issues/887)) ([96799a0](https://github.com/chanzuckerberg/edu-design-system/commit/96799a0687a1dd8a9a04da96994f1ef8fb3a59ee))
+* **notification-icon:** remove component ([#1034](https://github.com/chanzuckerberg/edu-design-system/issues/1034)) ([830c129](https://github.com/chanzuckerberg/edu-design-system/commit/830c1296beaafd8dcf6ba22d4eb780abe830d9bd))
+* **numbericon:** add number icon ([#1043](https://github.com/chanzuckerberg/edu-design-system/issues/1043)) ([0163fad](https://github.com/chanzuckerberg/edu-design-system/commit/0163fad60dbb9c1067b6bd216a14513a66a011ae))
+* output Color tokens from all levels to colors.ts ([6bd5cf8](https://github.com/chanzuckerberg/edu-design-system/commit/6bd5cf842369a5428b82712fbb8dcb4b259ce1b7))
+* port changes menu-button-hover branch ([bdbb47b](https://github.com/chanzuckerberg/edu-design-system/commit/bdbb47b6aff4de81dd7a361dec69992903b30f35))
+* project overview content stubbing ([#918](https://github.com/chanzuckerberg/edu-design-system/issues/918)) ([d6a3202](https://github.com/chanzuckerberg/edu-design-system/commit/d6a3202fc695cf50d11fbb9246e8653e275e55a6))
+* replace FormGroup with Fieldset ([#1030](https://github.com/chanzuckerberg/edu-design-system/issues/1030)) ([0baacbc](https://github.com/chanzuckerberg/edu-design-system/commit/0baacbc70794bdf7cdfb5f03b0b7f8ebab9762aa))
+* replace nanoid with react-uid ([1c201b4](https://github.com/chanzuckerberg/edu-design-system/commit/1c201b43093696c665bd04ee92410afbb01d7a73))
+* **tag:** make variant names consistent with other components ([#1006](https://github.com/chanzuckerberg/edu-design-system/issues/1006)) ([363ac2d](https://github.com/chanzuckerberg/edu-design-system/commit/363ac2dc23bc042e814db71f37e9f5d92542bfb4))
+* **tag:** rename yellow variant to yield ([#1036](https://github.com/chanzuckerberg/edu-design-system/issues/1036)) ([6eb8fe4](https://github.com/chanzuckerberg/edu-design-system/commit/6eb8fe4bc0f8935c60c87b28dcfde8b67a56604f))
+* **tokens:** add new tier-1 color tokens ([5680c12](https://github.com/chanzuckerberg/edu-design-system/commit/5680c1215a6229f3549a8f3745b5cc5758fc9664))
+* **tokens:** add remaining tier-1 tokens ([34ae84f](https://github.com/chanzuckerberg/edu-design-system/commit/34ae84f1eb288290ac0653e22f90d80e04d89180))
+* **tokens:** add tier-1 and tier-2 typography presets ([931a2b4](https://github.com/chanzuckerberg/edu-design-system/commit/931a2b412e7155fd2ca64e6a9efc813e5be45ac9))
+* **tokens:** build into folders by file extension to match main ([f677633](https://github.com/chanzuckerberg/edu-design-system/commit/f6776330aff1f701b1b8e71cb99950adcd8e77f1))
+* **typography:** token updates and assignments ([#908](https://github.com/chanzuckerberg/edu-design-system/issues/908)) ([604492d](https://github.com/chanzuckerberg/edu-design-system/commit/604492d18801f16e230ab355fe1d037602741c82))
+* use 'error' instead of 'alert' for red variants ([#984](https://github.com/chanzuckerberg/edu-design-system/issues/984)) ([a82a376](https://github.com/chanzuckerberg/edu-design-system/commit/a82a376408a28fdc1865dd85ecce8f666abd62f9))
+* use existing hex values in tier-1 colors ([581a737](https://github.com/chanzuckerberg/edu-design-system/commit/581a73773d8f0954e5a14167263ad51dd70cbc2e))
+
+
+### Bug Fixes
+
+* useUIDSeed usage and guidelines ([50b1cda](https://github.com/chanzuckerberg/edu-design-system/commit/50b1cda0084e9b476b2ba5d632591daa197bed65))
+
+
+* move text to next ([#899](https://github.com/chanzuckerberg/edu-design-system/issues/899)) ([f03739a](https://github.com/chanzuckerberg/edu-design-system/commit/f03739a96ea03d75682b0261155bb5eef002ca2f))
+
 ## [0.20.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.19.0...v0.20.0) (2022-05-05)
 
 ### Features
