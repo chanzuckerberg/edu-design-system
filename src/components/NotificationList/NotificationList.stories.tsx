@@ -1,3 +1,4 @@
+import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
@@ -10,6 +11,9 @@ export default {
   title: 'Molecules/Lists/NotificationList',
   component: NotificationList,
   subcomponents: { NotificationListItem },
+  parameters: {
+    badges: [BADGE.BETA],
+  },
 } as Meta;
 
 export const Default: StoryObj<Props & NotificationListItemProps> = {

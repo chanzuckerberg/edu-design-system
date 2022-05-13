@@ -1,3 +1,4 @@
+import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { Story, Meta } from '@storybook/react';
 import React from 'react';
 
@@ -8,6 +9,9 @@ import TextPassage from '../TextPassage';
 export default {
   title: 'Organisms/Interactive/Tabs',
   component: Tabs,
+  parameters: {
+    badges: [BADGE.BETA],
+  },
 } as Meta;
 
 const Template: Story<Props> = (args) => (

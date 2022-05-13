@@ -1,3 +1,4 @@
+import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { Story, Meta } from '@storybook/react';
 import React from 'react';
 
@@ -8,6 +9,9 @@ export default {
   title: 'Molecules/Navigation/PrimaryNav',
   component: PrimaryNav,
   subcomponents: { PrimaryNavItem },
+  parameters: {
+    badges: [BADGE.BETA],
+  },
 } as Meta;
 
 const Template: Story<Props> = (args) => (
