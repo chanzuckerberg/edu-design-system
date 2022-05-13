@@ -539,7 +539,7 @@ exports[`<Checkbox /> LabelsOnly story renders snapshot 1`] = `
   <label
     class="label label--md"
     data-bootstrap-override="label"
-    for="id"
+    for="md-label"
     style="--checkbox-svg-size: 1.25rem;"
   >
     Medium label
@@ -548,7 +548,7 @@ exports[`<Checkbox /> LabelsOnly story renders snapshot 1`] = `
   <label
     class="label label--sm"
     data-bootstrap-override="label"
-    for="id"
+    for="sm-label"
     style="--checkbox-svg-size: 1.25rem;"
   >
     Small label
@@ -557,7 +557,7 @@ exports[`<Checkbox /> LabelsOnly story renders snapshot 1`] = `
   <label
     class="label label--md"
     data-bootstrap-override="label"
-    for="id"
+    for="long-md-label"
     style="--checkbox-svg-size: 1.25rem;"
   >
     Long medium label lorem ipsum dolor sit amet, consectetur adipiscing elit
@@ -566,7 +566,7 @@ exports[`<Checkbox /> LabelsOnly story renders snapshot 1`] = `
   <label
     class="label label--sm"
     data-bootstrap-override="label"
-    for="id"
+    for="long-sm-label"
     style="--checkbox-svg-size: 1.25rem;"
   >
     Long small label lorem ipsum dolor sit amet, consectetur adipiscing elit
@@ -575,7 +575,7 @@ exports[`<Checkbox /> LabelsOnly story renders snapshot 1`] = `
   <label
     class="label label--md label--disabled"
     data-bootstrap-override="label"
-    for="id"
+    for="md-disabled-label"
     style="--checkbox-svg-size: 1.25rem;"
   >
     Medium disabled
@@ -584,7 +584,7 @@ exports[`<Checkbox /> LabelsOnly story renders snapshot 1`] = `
   <label
     class="label label--sm label--disabled"
     data-bootstrap-override="label"
-    for="id"
+    for="sm-disabled-label"
     style="--checkbox-svg-size: 1.25rem;"
   >
     Small disabled
@@ -593,7 +593,7 @@ exports[`<Checkbox /> LabelsOnly story renders snapshot 1`] = `
   <label
     class="label label--md label--disabled"
     data-bootstrap-override="label"
-    for="id"
+    for="long-md-disabled-label"
     style="--checkbox-svg-size: 1.25rem;"
   >
     Long medium disabled label lorem ipsum dolor sit amet, consectetur adipiscing elit
@@ -602,7 +602,7 @@ exports[`<Checkbox /> LabelsOnly story renders snapshot 1`] = `
   <label
     class="label label--sm label--disabled"
     data-bootstrap-override="label"
-    for="id"
+    for="long-sm-disabled-label"
     style="--checkbox-svg-size: 1.25rem;"
   >
     Long small disabled label lorem ipsum dolor sit amet, consectetur adipiscing elit
