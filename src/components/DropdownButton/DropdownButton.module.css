@@ -1,6 +1,5 @@
 @import '../../design-tokens/mixins.css';
 
-
 /*------------------------------------*\
     #DROPDOWN BUTTON
 \*------------------------------------*/
@@ -8,12 +7,17 @@
 /**
  * The button to trigger the display of the dropdown.
  * 1) Place button text on the left and the expand more icon on the right.
+ * 2) Allow Dropdown font to shrink in contexts where body font size is smaller.
  */
 .dropdown-button {
+  @mixin eds-theme-typography-body-text-md;
+  font-size: inherit; /* 2 */
+
   width: 100%;
   padding: var(--eds-size-1);
 
-  border: var(--eds-theme-border-width) solid var(--eds-theme-color-border-neutral-default);
+  border: var(--eds-theme-border-width) solid
+    var(--eds-theme-color-border-neutral-strong);
   border-radius: var(--eds-theme-border-radius);
 
   display: flex;
@@ -23,8 +27,6 @@
   cursor: pointer;
 
   background-color: var(--eds-theme-color-background-neutral-default);
-
-  @mixin eds-theme-typography-body-text-md;
 }
 
 /**

@@ -4,7 +4,6 @@
     #DROPDOWN
 \*------------------------------------*/
 
-
 /**
  * Dropdown used to select one option from a list of options.
  */
@@ -27,7 +26,8 @@
  */
 .label {
   @mixin eds-theme-typography-label-md;
-  color: var(--eds-theme-color-form-label-text);
+  /* TODO(brand-tokens): update to eds-theme-color-form-label when new colors land */
+  color: var(--eds-color-neutral-500);
   margin-bottom: var(--eds-size-half);
 }
 
@@ -42,8 +42,12 @@
 /**
  * The container for the individual dropdown options.
  * 1) Ensures the options display over the underlying body elements.
+ * 2) Allow Dropdown font to shrink in contexts where body font size is smaller.
  */
 .dropdown__options {
+  @mixin eds-theme-typography-body-text-md;
+  font-size: inherit; /* 2 */
+
   position: absolute;
 
   margin-top: var(--eds-size-1);
@@ -55,8 +59,6 @@
   box-shadow: var(--eds-theme-box-shadow);
 
   z-index: var(--eds-z-index-100); /* 1 */
-
-  @mixin eds-theme-typography-body-text-md;
 }
 
 /**
@@ -79,7 +81,8 @@
  */
 .dropdown__option {
   cursor: pointer;
-  padding: var(--eds-size-1) var(--eds-size-3) var(--eds-size-1) var(--eds-size-6);
+  padding: var(--eds-size-1) var(--eds-size-3) var(--eds-size-1)
+    var(--eds-size-6);
 
   display: flex; /* 1 */
 }
@@ -105,7 +108,7 @@
 .dropdown__option--selected {
   padding-left: 0;
 
-  @mixin eds-theme-typography-body-text-bold
+  @mixin eds-theme-typography-body-text-bold;
 }
 
 /**
@@ -126,7 +129,6 @@
   align-items: center;
   justify-content: center;
 }
-
 
 /**
  * The content of the dropdown option
