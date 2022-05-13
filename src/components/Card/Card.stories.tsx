@@ -1,5 +1,7 @@
+import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { Meta } from '@storybook/react';
 import React from 'react';
+
 import { Card } from './Card';
 import CardBody from '../CardBody';
 import CardFooter from '../CardFooter';
@@ -14,6 +16,7 @@ export default {
       // TODO: re-enable when component is worked on
       skip: true,
     },
+    badges: [BADGE.BETA],
   },
 } as Meta;
 

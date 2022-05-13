@@ -1,3 +1,4 @@
+import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { StoryObj } from '@storybook/react';
 import React from 'react';
 
@@ -9,6 +10,9 @@ export default {
   args: {
     'aria-label': 'Step 1',
     number: '1',
+  },
+  parameters: {
+    badges: [BADGE.BETA],
   },
 };
 
