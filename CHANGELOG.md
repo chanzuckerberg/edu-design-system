@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.21.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.20.0...v0.21.0) (2022-05-13)
+
+### ⚠ BREAKING CHANGES
+
+- **Tooltip:** ([#887](https://github.com/chanzuckerberg/edu-design-system/issues/887)) ([96799a0](https://github.com/chanzuckerberg/edu-design-system/commit/96799a0687a1dd8a9a04da96994f1ef8fb3a59ee))
+  - renamed `content` prop to `text`
+  - renamed `placement` prop to `align`
+- **tokens:** renamed `eds-size-font-base` to `eds-font-size-base`
+
+### Features
+
+- **tokens:** Added new upcoming tokens for color and typography
+- Updated token architecture to support theming
+- Added components for CAD Implementation pilot: DataBar, HorizontalStepper, NumberIcon, DragDrop, OverflowList
+- Added WIP components from Project Overview pilot: GlobalHeader, PageShell, NotificationList, ListDetail
+
+### Bug Fixes
+
+- useUIDSeed usage and guidelines ([50b1cda](https://github.com/chanzuckerberg/edu-design-system/commit/50b1cda0084e9b476b2ba5d632591daa197bed65))
+
 ## [0.20.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.19.0...v0.20.0) (2022-05-05)
 
 ### Features
