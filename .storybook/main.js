@@ -4,7 +4,7 @@ const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin');
 module.exports = {
   stories: [
     './components/**/*.stories.@(js|jsx|ts|tsx)',
-    './components/**/*.stories.mdx)',
+    './components/**/*.stories.mdx',
     '../docs',
     '../src/components',
     './**/*.stories.@(js|jsx|ts|tsx)',
