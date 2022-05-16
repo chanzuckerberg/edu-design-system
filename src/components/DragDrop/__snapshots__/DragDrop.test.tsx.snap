@@ -298,6 +298,7 @@ exports[`<DragDrop /> DragByHandle story renders snapshot 1`] = `
       >
         <div
           aria-describedby="rbd-hidden-text-5-hidden-text-46"
+          aria-label="Handle for draggable item"
           class="drag-drop-item--handle"
           data-rbd-drag-handle-context-id="5"
           data-rbd-drag-handle-draggable-id="item-1"
@@ -332,6 +333,7 @@ exports[`<DragDrop /> DragByHandle story renders snapshot 1`] = `
       >
         <div
           aria-describedby="rbd-hidden-text-5-hidden-text-46"
+          aria-label="Handle for draggable item"
           class="drag-drop-item--handle"
           data-rbd-drag-handle-context-id="5"
           data-rbd-drag-handle-draggable-id="item-2"
@@ -366,6 +368,7 @@ exports[`<DragDrop /> DragByHandle story renders snapshot 1`] = `
       >
         <div
           aria-describedby="rbd-hidden-text-5-hidden-text-46"
+          aria-label="Handle for draggable item"
           class="drag-drop-item--handle"
           data-rbd-drag-handle-context-id="5"
           data-rbd-drag-handle-draggable-id="item-3"
@@ -406,6 +409,7 @@ exports[`<DragDrop /> DragByHandle story renders snapshot 1`] = `
       >
         <div
           aria-describedby="rbd-hidden-text-5-hidden-text-46"
+          aria-label="Handle for draggable item"
           class="drag-drop-item--handle"
           data-rbd-drag-handle-context-id="5"
           data-rbd-drag-handle-draggable-id="item-4"
@@ -440,6 +444,7 @@ exports[`<DragDrop /> DragByHandle story renders snapshot 1`] = `
       >
         <div
           aria-describedby="rbd-hidden-text-5-hidden-text-46"
+          aria-label="Handle for draggable item"
           class="drag-drop-item--handle"
           data-rbd-drag-handle-context-id="5"
           data-rbd-drag-handle-draggable-id="item-5"
