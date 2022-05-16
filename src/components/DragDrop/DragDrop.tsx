@@ -31,6 +31,7 @@ export interface Props {
    * Unstyled Items variant removes all styling from content within items
    */
   unstyledItems?: boolean;
+  dragByHandle?: boolean;
 }
 
 /**
@@ -40,6 +41,7 @@ export const DragDrop = ({
   className,
   items,
   containers,
+  dragByHandle = false,
   multipleContainers = false,
   unstyledItems = false,
 }: Props) => {
@@ -49,6 +51,7 @@ export const DragDrop = ({
   const componentClassName = clsx(
     styles['drag-drop'],
     className,
+    dragByHandle && styles['drag-drop--handles'],
     multipleContainers && styles['drag-drop--multiple'],
     unstyledItems && styles['drag-drop--unstyled'],
   );
