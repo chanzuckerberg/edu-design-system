@@ -54,9 +54,8 @@ export const DragDrop = ({
   const componentClassName = clsx(
     styles['drag-drop'],
     className,
-    unstyledItems
-      ? styles['drag-drop--unstyled']
-      : dragByHandle && styles['drag-drop--handles'],
+    (unstyledItems || dragByHandle) && styles['drag-drop--unstyled'],
+    dragByHandle && styles['drag-drop--handles'],
     multipleContainers && styles['drag-drop--multiple'],
   );
 
@@ -190,6 +189,7 @@ export const DragDrop = ({
                 return (
                   <DragDropContainer
                     container={container}
+                    dragByHandle={dragByHandle}
                     items={items}
                     key={container.id}
                   />
