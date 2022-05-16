@@ -312,5 +312,6 @@ export const DragByHandle: StoryObj<Args> = {
       },
     },
     dragByHandle: true,
+    unstyledItems: true,
   },
 };
