@@ -25,8 +25,6 @@ export type Props = {
 };
 
 /**
- * BETA: This component is still a work in progress and is subject to change.
- *
  * ```ts
  * import {HorizontalStep} from "@chanzuckerberg/eds";
  * ```
@@ -81,7 +79,13 @@ export const HorizontalStep = ({
   return (
     <li className={componentClassName}>
       {icon}
-      <Text as="span" size="sm" variant="inherit" weight="bold">
+      <Text
+        as="span"
+        className={styles['horizontal-step__text']}
+        size="sm"
+        variant="inherit"
+        weight="bold"
+      >
         {text}
       </Text>
     </li>
