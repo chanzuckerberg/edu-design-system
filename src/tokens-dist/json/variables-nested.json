@@ -478,7 +478,7 @@
                 "active": "#FFFFFF"
               },
               "icon": {
-                "@": "#766FFD",
+                "@": "#574EFF",
                 "hover": "#FFFFFF",
                 "active": "#FFFFFF"
               }
@@ -522,7 +522,7 @@
                 "active": "#FFFFFF"
               },
               "icon": {
-                "@": "#00A66A",
+                "@": "#008756",
                 "hover": "#FFFFFF",
                 "active": "#FFFFFF"
               }
@@ -544,7 +544,7 @@
                 "active": "#FFFFFF"
               },
               "icon": {
-                "@": "#E06C00",
+                "@": "#C64600",
                 "hover": "#FFFFFF",
                 "active": "#FFFFFF"
               }
@@ -566,7 +566,7 @@
                 "active": "#FFFFFF"
               },
               "icon": {
-                "@": "#F1497C",
+                "@": "#D41E52",
                 "hover": "#FFFFFF",
                 "active": "#FFFFFF"
               }
@@ -590,8 +590,8 @@
                 "active": "#FFFFFF"
               },
               "icon": {
-                "@": "#766FFD",
-                "hover": "#766FFD",
+                "@": "#574EFF",
+                "hover": "#574EFF",
                 "active": "#FFFFFF"
               }
             },
@@ -634,8 +634,8 @@
                 "active": "#FFFFFF"
               },
               "icon": {
-                "@": "#00A66A",
-                "hover": "#00A66A",
+                "@": "#008756",
+                "hover": "#008756",
                 "active": "#FFFFFF"
               }
             },
@@ -656,8 +656,8 @@
                 "active": "#FFFFFF"
               },
               "icon": {
-                "@": "#E06C00",
-                "hover": "#E06C00",
+                "@": "#C64600",
+                "hover": "#C64600",
                 "active": "#FFFFFF"
               }
             },
@@ -678,8 +678,8 @@
                 "active": "#FFFFFF"
               },
               "icon": {
-                "@": "#F1497C",
-                "hover": "#F1497C",
+                "@": "#D41E52",
+                "hover": "#D41E52",
                 "active": "#FFFFFF"
               }
             }

@@ -273,7 +273,7 @@
   --eds-theme-color-button-secondary-brand-text: #433BDE;
   --eds-theme-color-button-secondary-brand-text-hover: #FFFFFF;
   --eds-theme-color-button-secondary-brand-text-active: #FFFFFF;
-  --eds-theme-color-button-secondary-brand-icon: #766FFD;
+  --eds-theme-color-button-secondary-brand-icon: #574EFF;
   --eds-theme-color-button-secondary-brand-icon-hover: #FFFFFF;
   --eds-theme-color-button-secondary-brand-icon-active: #FFFFFF;
   --eds-theme-color-button-secondary-neutral-background: rgba(0, 0, 0, 0);
@@ -297,7 +297,7 @@
   --eds-theme-color-button-secondary-success-text: #007349;
   --eds-theme-color-button-secondary-success-text-hover: #FFFFFF;
   --eds-theme-color-button-secondary-success-text-active: #FFFFFF;
-  --eds-theme-color-button-secondary-success-icon: #00A66A;
+  --eds-theme-color-button-secondary-success-icon: #008756;
   --eds-theme-color-button-secondary-success-icon-hover: #FFFFFF;
   --eds-theme-color-button-secondary-success-icon-active: #FFFFFF;
   --eds-theme-color-button-secondary-warning-background: rgba(0, 0, 0, 0);
@@ -309,7 +309,7 @@
   --eds-theme-color-button-secondary-warning-text: #AC3400;
   --eds-theme-color-button-secondary-warning-text-hover: #FFFFFF;
   --eds-theme-color-button-secondary-warning-text-active: #FFFFFF;
-  --eds-theme-color-button-secondary-warning-icon: #E06C00;
+  --eds-theme-color-button-secondary-warning-icon: #C64600;
   --eds-theme-color-button-secondary-warning-icon-hover: #FFFFFF;
   --eds-theme-color-button-secondary-warning-icon-active: #FFFFFF;
   --eds-theme-color-button-secondary-error-background: rgba(0, 0, 0, 0);
@@ -321,7 +321,7 @@
   --eds-theme-color-button-secondary-error-text: #BD0044;
   --eds-theme-color-button-secondary-error-text-hover: #FFFFFF;
   --eds-theme-color-button-secondary-error-text-active: #FFFFFF;
-  --eds-theme-color-button-secondary-error-icon: #F1497C;
+  --eds-theme-color-button-secondary-error-icon: #D41E52;
   --eds-theme-color-button-secondary-error-icon-hover: #FFFFFF;
   --eds-theme-color-button-secondary-error-icon-active: #FFFFFF;
   --eds-theme-color-button-icon-brand-background: rgba(0, 0, 0, 0);
@@ -333,8 +333,8 @@
   --eds-theme-color-button-icon-brand-text: #433BDE;
   --eds-theme-color-button-icon-brand-text-hover: #433BDE;
   --eds-theme-color-button-icon-brand-text-active: #FFFFFF;
-  --eds-theme-color-button-icon-brand-icon: #766FFD;
-  --eds-theme-color-button-icon-brand-icon-hover: #766FFD;
+  --eds-theme-color-button-icon-brand-icon: #574EFF;
+  --eds-theme-color-button-icon-brand-icon-hover: #574EFF;
   --eds-theme-color-button-icon-brand-icon-active: #FFFFFF;
   --eds-theme-color-button-icon-neutral-background: rgba(0, 0, 0, 0);
   --eds-theme-color-button-icon-neutral-background-hover: #E8E8E9;
@@ -357,8 +357,8 @@
   --eds-theme-color-button-icon-success-text: #007349;
   --eds-theme-color-button-icon-success-text-hover: #007349;
   --eds-theme-color-button-icon-success-text-active: #FFFFFF;
-  --eds-theme-color-button-icon-success-icon: #00A66A;
-  --eds-theme-color-button-icon-success-icon-hover: #00A66A;
+  --eds-theme-color-button-icon-success-icon: #008756;
+  --eds-theme-color-button-icon-success-icon-hover: #008756;
   --eds-theme-color-button-icon-success-icon-active: #FFFFFF;
   --eds-theme-color-button-icon-warning-background: rgba(0, 0, 0, 0);
   --eds-theme-color-button-icon-warning-background-hover: #FFF1E9;
@@ -369,8 +369,8 @@
   --eds-theme-color-button-icon-warning-text: #AC3400;
   --eds-theme-color-button-icon-warning-text-hover: #AC3400;
   --eds-theme-color-button-icon-warning-text-active: #FFFFFF;
-  --eds-theme-color-button-icon-warning-icon: #E06C00;
-  --eds-theme-color-button-icon-warning-icon-hover: #E06C00;
+  --eds-theme-color-button-icon-warning-icon: #C64600;
+  --eds-theme-color-button-icon-warning-icon-hover: #C64600;
   --eds-theme-color-button-icon-warning-icon-active: #FFFFFF;
   --eds-theme-color-button-icon-error-background: rgba(0, 0, 0, 0);
   --eds-theme-color-button-icon-error-background-hover: #FFCCD8;
@@ -381,8 +381,8 @@
   --eds-theme-color-button-icon-error-text: #BD0044;
   --eds-theme-color-button-icon-error-text-hover: #BD0044;
   --eds-theme-color-button-icon-error-text-active: #FFFFFF;
-  --eds-theme-color-button-icon-error-icon: #F1497C;
-  --eds-theme-color-button-icon-error-icon-hover: #F1497C;
+  --eds-theme-color-button-icon-error-icon: #D41E52;
+  --eds-theme-color-button-icon-error-icon-hover: #D41E52;
   --eds-theme-color-button-icon-error-icon-active: #FFFFFF;
   --eds-theme-color-button-link-brand: #433BDE;
   --eds-theme-color-button-link-brand-hover: #312B9E;
