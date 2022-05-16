@@ -16,7 +16,7 @@ export type BannerProps = {
   /**
    * CSS class names that can be appended to the component.
    */
-  className?: ReactNode;
+  className?: string;
   /**
    * The description/body text of the banner
    */

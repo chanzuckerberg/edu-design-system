@@ -73,7 +73,6 @@
   position: absolute;
   top: var(--eds-size-half);
   right: var(--eds-size-half);
-  /* TODO: handle hover styles */
   color: inherit; /* 2 */
 }
 
