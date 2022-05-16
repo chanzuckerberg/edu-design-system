@@ -53,8 +53,7 @@
   background-color: var(--eds-theme-color-button-primary-brand-background);
   color: var(--eds-theme-color-button-primary-brand-text);
 
-  &:hover,
-  &:focus {
+  &:hover {
     border-color: var(--eds-theme-color-button-primary-brand-border-hover);
     background-color: var(
       --eds-theme-color-button-primary-brand-background-hover
@@ -79,8 +78,7 @@
   background-color: var(--eds-theme-color-button-primary-error-background);
   color: var(--eds-theme-color-button-primary-error-text);
 
-  &:hover,
-  &:focus {
+  &:hover {
     border-color: var(--eds-theme-color-button-primary-error-border-hover);
     background-color: var(
       --eds-theme-color-button-primary-error-background-hover
@@ -105,8 +103,11 @@
   background-color: var(--eds-theme-color-button-secondary-brand-background);
   color: var(--eds-theme-color-button-secondary-brand-text);
 
-  &:hover,
-  &:focus {
+  svg {
+    color: var(--eds-theme-color-button-icon-brand-icon);
+  }
+
+  &:hover {
     border-color: var(--eds-theme-color-button-secondary-brand-border-hover);
     background-color: var(
       --eds-theme-color-button-secondary-brand-background-hover
@@ -131,8 +132,11 @@
   background-color: var(--eds-theme-color-button-secondary-neutral-background);
   color: var(--eds-theme-color-button-secondary-neutral-text);
 
-  &:hover,
-  &:focus {
+  svg {
+    color: var(--eds-theme-color-button-icon-neutral-icon);
+  }
+
+  &:hover {
     border-color: var(--eds-theme-color-button-secondary-neutral-border-hover);
     background-color: var(
       --eds-theme-color-button-secondary-neutral-background-hover
@@ -157,8 +161,11 @@
   background-color: var(--eds-theme-color-button-secondary-success-background);
   color: var(--eds-theme-color-button-secondary-success-text);
 
-  &:hover,
-  &:focus {
+  svg {
+    color: var(--eds-theme-color-button-icon-success-icon);
+  }
+
+  &:hover {
     border-color: var(--eds-theme-color-button-secondary-success-border-hover);
     background-color: var(
       --eds-theme-color-button-secondary-success-background-hover
@@ -183,8 +190,11 @@
   background-color: var(--eds-theme-color-button-secondary-warning-background);
   color: var(--eds-theme-color-button-secondary-warning-text);
 
-  &:hover,
-  &:focus {
+  svg {
+    color: var(--eds-theme-color-button-icon-warning-icon);
+  }
+
+  &:hover {
     border-color: var(--eds-theme-color-button-secondary-warning-border-hover);
     background-color: var(
       --eds-theme-color-button-secondary-warning-background-hover
@@ -209,8 +219,11 @@
   background-color: var(--eds-theme-color-button-secondary-error-background);
   color: var(--eds-theme-color-button-secondary-error-text);
 
-  &:hover,
-  &:focus {
+  svg {
+    color: var(--eds-theme-color-button-icon-error-icon);
+  }
+
+  &:hover {
     border-color: var(--eds-theme-color-button-secondary-error-border-hover);
     background-color: var(
       --eds-theme-color-button-secondary-error-background-hover
@@ -237,8 +250,11 @@
   background-color: var(--eds-theme-color-button-icon-brand-background);
   color: var(--eds-theme-color-button-icon-brand-text);
 
-  &:hover,
-  &:focus {
+  svg {
+    color: var(--eds-theme-color-button-icon-brand-icon);
+  }
+
+  &:hover {
     border-color: var(--eds-theme-color-button-icon-brand-border-hover);
     background-color: var(--eds-theme-color-button-icon-brand-background-hover);
     color: var(--eds-theme-color-button-icon-brand-text-hover);
@@ -263,8 +279,11 @@
   background-color: var(--eds-theme-color-button-icon-neutral-background);
   color: var(--eds-theme-color-button-icon-neutral-text);
 
-  &:hover,
-  &:focus {
+  svg {
+    color: var(--eds-theme-color-button-icon-neutral-icon);
+  }
+
+  &:hover {
     border-color: var(--eds-theme-color-button-icon-neutral-border-hover);
     background-color: var(
       --eds-theme-color-button-icon-neutral-background-hover
@@ -291,8 +310,11 @@
   background-color: var(--eds-theme-color-button-icon-success-background);
   color: var(--eds-theme-color-button-icon-success-text);
 
-  &:hover,
-  &:focus {
+  svg {
+    color: var(--eds-theme-color-button-icon-success-icon);
+  }
+
+  &:hover {
     border-color: var(--eds-theme-color-button-icon-success-border-hover);
     background-color: var(
       --eds-theme-color-button-icon-success-background-hover
@@ -319,8 +341,11 @@
   background-color: var(--eds-theme-color-button-icon-warning-background);
   color: var(--eds-theme-color-button-icon-warning-text);
 
-  &:hover,
-  &:focus {
+  svg {
+    color: var(--eds-theme-color-button-icon-warning-icon);
+  }
+
+  &:hover {
     border-color: var(--eds-theme-color-button-icon-warning-border-hover);
     background-color: var(
       --eds-theme-color-button-icon-warning-background-hover
@@ -347,8 +372,11 @@
   background-color: var(--eds-theme-color-button-icon-error-background);
   color: var(--eds-theme-color-button-icon-error-text);
 
-  &:hover,
-  &:focus {
+  svg {
+    color: var(--eds-theme-color-button-icon-error-icon);
+  }
+
+  &:hover {
     border-color: var(--eds-theme-color-button-icon-error-border-hover);
     background-color: var(--eds-theme-color-button-icon-error-background-hover);
     color: var(--eds-theme-color-button-icon-error-text-hover);
@@ -364,7 +392,7 @@
 }
 
 /**
- * Link disabled button styles
+ * Link button styles
  */
 .clickable-style--link {
   @mixin textLink;
@@ -382,8 +410,7 @@
 .clickable-style--link.clickable-style--brand {
   color: var(--eds-theme-color-button-link-brand);
 
-  &:hover,
-  &:focus {
+  &:hover {
     color: var(--eds-theme-color-button-link-brand-hover);
   }
 
@@ -398,8 +425,7 @@
 .clickable-style--link.clickable-style--neutral {
   color: var(--eds-theme-color-button-link-neutral);
 
-  &:hover,
-  &:focus {
+  &:hover {
     color: var(--eds-theme-color-button-link-neutral-hover);
   }
 
@@ -414,8 +440,7 @@
 .clickable-style--link.clickable-style--success {
   color: var(--eds-theme-color-button-link-success);
 
-  &:hover,
-  &:focus {
+  &:hover {
     color: var(--eds-theme-color-button-link-success-hover);
   }
 
@@ -430,8 +455,7 @@
 .clickable-style--link.clickable-style--warning {
   color: var(--eds-theme-color-button-link-warning);
 
-  &:hover,
-  &:focus {
+  &:hover {
     color: var(--eds-theme-color-button-link-warning-hover);
   }
 
@@ -446,8 +470,7 @@
 .clickable-style--link.clickable-style--error {
   color: var(--eds-theme-color-button-link-error);
 
-  &:hover,
-  &:focus {
+  &:hover {
     color: var(--eds-theme-color-button-link-error-hover);
   }
 

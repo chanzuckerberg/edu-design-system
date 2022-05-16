@@ -41,6 +41,7 @@
 
 @define-mixin focus {
   outline: 2px solid var(--eds-theme-color-focus-ring);
+  outline-offset: 2px;
 }
 
 @define-mixin focusInverted {

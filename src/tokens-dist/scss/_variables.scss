@@ -267,12 +267,15 @@ $eds-theme-color-button-primary-error-text-active: #FFFFFF !default;
 $eds-theme-color-button-secondary-brand-background: rgba(0, 0, 0, 0) !default;
 $eds-theme-color-button-secondary-brand-background-hover: #433BDE !default;
 $eds-theme-color-button-secondary-brand-background-active: #312B9E !default;
-$eds-theme-color-button-secondary-brand-border: #433BDE !default;
+$eds-theme-color-button-secondary-brand-border: #574EFF !default;
 $eds-theme-color-button-secondary-brand-border-hover: #433BDE !default;
 $eds-theme-color-button-secondary-brand-border-active: #312B9E !default;
 $eds-theme-color-button-secondary-brand-text: #433BDE !default;
 $eds-theme-color-button-secondary-brand-text-hover: #FFFFFF !default;
 $eds-theme-color-button-secondary-brand-text-active: #FFFFFF !default;
+$eds-theme-color-button-secondary-brand-icon: #766FFD !default;
+$eds-theme-color-button-secondary-brand-icon-hover: #FFFFFF !default;
+$eds-theme-color-button-secondary-brand-icon-active: #FFFFFF !default;
 $eds-theme-color-button-secondary-neutral-background: rgba(0, 0, 0, 0) !default;
 $eds-theme-color-button-secondary-neutral-background-hover: #3C444C !default;
 $eds-theme-color-button-secondary-neutral-background-active: #21272D !default;
@@ -282,60 +285,81 @@ $eds-theme-color-button-secondary-neutral-border-active: #21272D !default;
 $eds-theme-color-button-secondary-neutral-text: #3C444C !default;
 $eds-theme-color-button-secondary-neutral-text-hover: #FFFFFF !default;
 $eds-theme-color-button-secondary-neutral-text-active: #FFFFFF !default;
+$eds-theme-color-button-secondary-neutral-icon: #838C95 !default;
+$eds-theme-color-button-secondary-neutral-icon-hover: #FFFFFF !default;
+$eds-theme-color-button-secondary-neutral-icon-active: #FFFFFF !default;
 $eds-theme-color-button-secondary-success-background: rgba(0, 0, 0, 0) !default;
 $eds-theme-color-button-secondary-success-background-hover: #007349 !default;
 $eds-theme-color-button-secondary-success-background-active: #005939 !default;
-$eds-theme-color-button-secondary-success-border: #007349 !default;
+$eds-theme-color-button-secondary-success-border: #008756 !default;
 $eds-theme-color-button-secondary-success-border-hover: #007349 !default;
 $eds-theme-color-button-secondary-success-border-active: #005939 !default;
 $eds-theme-color-button-secondary-success-text: #007349 !default;
 $eds-theme-color-button-secondary-success-text-hover: #FFFFFF !default;
 $eds-theme-color-button-secondary-success-text-active: #FFFFFF !default;
+$eds-theme-color-button-secondary-success-icon: #00A66A !default;
+$eds-theme-color-button-secondary-success-icon-hover: #FFFFFF !default;
+$eds-theme-color-button-secondary-success-icon-active: #FFFFFF !default;
 $eds-theme-color-button-secondary-warning-background: rgba(0, 0, 0, 0) !default;
 $eds-theme-color-button-secondary-warning-background-hover: #AC3400 !default;
 $eds-theme-color-button-secondary-warning-background-active: #852800 !default;
-$eds-theme-color-button-secondary-warning-border: #AC3400 !default;
+$eds-theme-color-button-secondary-warning-border: #C64600 !default;
 $eds-theme-color-button-secondary-warning-border-hover: #AC3400 !default;
 $eds-theme-color-button-secondary-warning-border-active: #852800 !default;
 $eds-theme-color-button-secondary-warning-text: #AC3400 !default;
 $eds-theme-color-button-secondary-warning-text-hover: #FFFFFF !default;
 $eds-theme-color-button-secondary-warning-text-active: #FFFFFF !default;
+$eds-theme-color-button-secondary-warning-icon: #E06C00 !default;
+$eds-theme-color-button-secondary-warning-icon-hover: #FFFFFF !default;
+$eds-theme-color-button-secondary-warning-icon-active: #FFFFFF !default;
 $eds-theme-color-button-secondary-error-background: rgba(0, 0, 0, 0) !default;
 $eds-theme-color-button-secondary-error-background-hover: #BD0044 !default;
 $eds-theme-color-button-secondary-error-background-active: #8F0134 !default;
-$eds-theme-color-button-secondary-error-border: #BD0044 !default;
+$eds-theme-color-button-secondary-error-border: #D41E52 !default;
 $eds-theme-color-button-secondary-error-border-hover: #BD0044 !default;
 $eds-theme-color-button-secondary-error-border-active: #8F0134 !default;
 $eds-theme-color-button-secondary-error-text: #BD0044 !default;
 $eds-theme-color-button-secondary-error-text-hover: #FFFFFF !default;
 $eds-theme-color-button-secondary-error-text-active: #FFFFFF !default;
+$eds-theme-color-button-secondary-error-icon: #F1497C !default;
+$eds-theme-color-button-secondary-error-icon-hover: #FFFFFF !default;
+$eds-theme-color-button-secondary-error-icon-active: #FFFFFF !default;
 $eds-theme-color-button-icon-brand-background: rgba(0, 0, 0, 0) !default;
-$eds-theme-color-button-icon-brand-background-hover: #F7F1FF !default;
+$eds-theme-color-button-icon-brand-background-hover: #C3C0FE !default;
 $eds-theme-color-button-icon-brand-background-active: #433BDE !default;
 $eds-theme-color-button-icon-brand-border: rgba(0, 0, 0, 0) !default;
-$eds-theme-color-button-icon-brand-border-hover: #F7F1FF !default;
+$eds-theme-color-button-icon-brand-border-hover: #C3C0FE !default;
 $eds-theme-color-button-icon-brand-border-active: #433BDE !default;
 $eds-theme-color-button-icon-brand-text: #433BDE !default;
 $eds-theme-color-button-icon-brand-text-hover: #433BDE !default;
 $eds-theme-color-button-icon-brand-text-active: #FFFFFF !default;
+$eds-theme-color-button-icon-brand-icon: #766FFD !default;
+$eds-theme-color-button-icon-brand-icon-hover: #766FFD !default;
+$eds-theme-color-button-icon-brand-icon-active: #FFFFFF !default;
 $eds-theme-color-button-icon-neutral-background: rgba(0, 0, 0, 0) !default;
-$eds-theme-color-button-icon-neutral-background-hover: #F3F3F3 !default;
+$eds-theme-color-button-icon-neutral-background-hover: #E8E8E9 !default;
 $eds-theme-color-button-icon-neutral-background-active: #3C444C !default;
 $eds-theme-color-button-icon-neutral-border: rgba(0, 0, 0, 0) !default;
-$eds-theme-color-button-icon-neutral-border-hover: #F3F3F3 !default;
+$eds-theme-color-button-icon-neutral-border-hover: #E8E8E9 !default;
 $eds-theme-color-button-icon-neutral-border-active: #3C444C !default;
 $eds-theme-color-button-icon-neutral-text: #3C444C !default;
 $eds-theme-color-button-icon-neutral-text-hover: #3C444C !default;
 $eds-theme-color-button-icon-neutral-text-active: #FFFFFF !default;
+$eds-theme-color-button-icon-neutral-icon: #3C444C !default;
+$eds-theme-color-button-icon-neutral-icon-hover: #3C444C !default;
+$eds-theme-color-button-icon-neutral-icon-active: #FFFFFF !default;
 $eds-theme-color-button-icon-success-background: rgba(0, 0, 0, 0) !default;
-$eds-theme-color-button-icon-success-background-hover: #ECFFF5 !default;
+$eds-theme-color-button-icon-success-background-hover: #B7E9CE !default;
 $eds-theme-color-button-icon-success-background-active: #007349 !default;
 $eds-theme-color-button-icon-success-border: rgba(0, 0, 0, 0) !default;
-$eds-theme-color-button-icon-success-border-hover: #ECFFF5 !default;
+$eds-theme-color-button-icon-success-border-hover: #B7E9CE !default;
 $eds-theme-color-button-icon-success-border-active: #007349 !default;
 $eds-theme-color-button-icon-success-text: #007349 !default;
 $eds-theme-color-button-icon-success-text-hover: #007349 !default;
 $eds-theme-color-button-icon-success-text-active: #FFFFFF !default;
+$eds-theme-color-button-icon-success-icon: #00A66A !default;
+$eds-theme-color-button-icon-success-icon-hover: #00A66A !default;
+$eds-theme-color-button-icon-success-icon-active: #FFFFFF !default;
 $eds-theme-color-button-icon-warning-background: rgba(0, 0, 0, 0) !default;
 $eds-theme-color-button-icon-warning-background-hover: #FFF1E9 !default;
 $eds-theme-color-button-icon-warning-background-active: #AC3400 !default;
@@ -345,15 +369,21 @@ $eds-theme-color-button-icon-warning-border-active: #AC3400 !default;
 $eds-theme-color-button-icon-warning-text: #AC3400 !default;
 $eds-theme-color-button-icon-warning-text-hover: #AC3400 !default;
 $eds-theme-color-button-icon-warning-text-active: #FFFFFF !default;
+$eds-theme-color-button-icon-warning-icon: #E06C00 !default;
+$eds-theme-color-button-icon-warning-icon-hover: #E06C00 !default;
+$eds-theme-color-button-icon-warning-icon-active: #FFFFFF !default;
 $eds-theme-color-button-icon-error-background: rgba(0, 0, 0, 0) !default;
-$eds-theme-color-button-icon-error-background-hover: #FFEBF0 !default;
+$eds-theme-color-button-icon-error-background-hover: #FFCCD8 !default;
 $eds-theme-color-button-icon-error-background-active: #BD0044 !default;
 $eds-theme-color-button-icon-error-border: rgba(0, 0, 0, 0) !default;
-$eds-theme-color-button-icon-error-border-hover: #FFEBF0 !default;
+$eds-theme-color-button-icon-error-border-hover: #FFCCD8 !default;
 $eds-theme-color-button-icon-error-border-active: #BD0044 !default;
 $eds-theme-color-button-icon-error-text: #BD0044 !default;
 $eds-theme-color-button-icon-error-text-hover: #BD0044 !default;
 $eds-theme-color-button-icon-error-text-active: #FFFFFF !default;
+$eds-theme-color-button-icon-error-icon: #F1497C !default;
+$eds-theme-color-button-icon-error-icon-hover: #F1497C !default;
+$eds-theme-color-button-icon-error-icon-active: #FFFFFF !default;
 $eds-theme-color-button-link-brand: #433BDE !default;
 $eds-theme-color-button-link-brand-hover: #312B9E !default;
 $eds-theme-color-button-link-brand-active: #312B9E !default;
@@ -369,7 +399,7 @@ $eds-theme-color-button-link-warning-active: #852800 !default;
 $eds-theme-color-button-link-error: #BD0044 !default;
 $eds-theme-color-button-link-error-hover: #8F0134 !default;
 $eds-theme-color-button-link-error-active: #8F0134 !default;
-$eds-theme-color-focus-ring: #766FFD !default;
+$eds-theme-color-focus-ring: #574EFF !default;
 $eds-theme-color-focus-ring-inverted: #FFFFFF !default;
 $eds-theme-color-form-border: #CAD1D8 !default;
 $eds-theme-color-form-border-hover: #838C95 !default;
@@ -888,6 +918,11 @@ $tokens: (
                 '@': $eds-theme-color-button-secondary-brand-text,
                 'hover': $eds-theme-color-button-secondary-brand-text-hover,
                 'active': $eds-theme-color-button-secondary-brand-text-active
+              ),
+              'icon': (
+                '@': $eds-theme-color-button-secondary-brand-icon,
+                'hover': $eds-theme-color-button-secondary-brand-icon-hover,
+                'active': $eds-theme-color-button-secondary-brand-icon-active
               )
             ),
             'neutral': (
@@ -905,6 +940,11 @@ $tokens: (
                 '@': $eds-theme-color-button-secondary-neutral-text,
                 'hover': $eds-theme-color-button-secondary-neutral-text-hover,
                 'active': $eds-theme-color-button-secondary-neutral-text-active
+              ),
+              'icon': (
+                '@': $eds-theme-color-button-secondary-neutral-icon,
+                'hover': $eds-theme-color-button-secondary-neutral-icon-hover,
+                'active': $eds-theme-color-button-secondary-neutral-icon-active
               )
             ),
             'success': (
@@ -922,6 +962,11 @@ $tokens: (
                 '@': $eds-theme-color-button-secondary-success-text,
                 'hover': $eds-theme-color-button-secondary-success-text-hover,
                 'active': $eds-theme-color-button-secondary-success-text-active
+              ),
+              'icon': (
+                '@': $eds-theme-color-button-secondary-success-icon,
+                'hover': $eds-theme-color-button-secondary-success-icon-hover,
+                'active': $eds-theme-color-button-secondary-success-icon-active
               )
             ),
             'warning': (
@@ -939,6 +984,11 @@ $tokens: (
                 '@': $eds-theme-color-button-secondary-warning-text,
                 'hover': $eds-theme-color-button-secondary-warning-text-hover,
                 'active': $eds-theme-color-button-secondary-warning-text-active
+              ),
+              'icon': (
+                '@': $eds-theme-color-button-secondary-warning-icon,
+                'hover': $eds-theme-color-button-secondary-warning-icon-hover,
+                'active': $eds-theme-color-button-secondary-warning-icon-active
               )
             ),
             'error': (
@@ -956,6 +1006,11 @@ $tokens: (
                 '@': $eds-theme-color-button-secondary-error-text,
                 'hover': $eds-theme-color-button-secondary-error-text-hover,
                 'active': $eds-theme-color-button-secondary-error-text-active
+              ),
+              'icon': (
+                '@': $eds-theme-color-button-secondary-error-icon,
+                'hover': $eds-theme-color-button-secondary-error-icon-hover,
+                'active': $eds-theme-color-button-secondary-error-icon-active
               )
             )
           ),
@@ -975,6 +1030,11 @@ $tokens: (
                 '@': $eds-theme-color-button-icon-brand-text,
                 'hover': $eds-theme-color-button-icon-brand-text-hover,
                 'active': $eds-theme-color-button-icon-brand-text-active
+              ),
+              'icon': (
+                '@': $eds-theme-color-button-icon-brand-icon,
+                'hover': $eds-theme-color-button-icon-brand-icon-hover,
+                'active': $eds-theme-color-button-icon-brand-icon-active
               )
             ),
             'neutral': (
@@ -992,6 +1052,11 @@ $tokens: (
                 '@': $eds-theme-color-button-icon-neutral-text,
                 'hover': $eds-theme-color-button-icon-neutral-text-hover,
                 'active': $eds-theme-color-button-icon-neutral-text-active
+              ),
+              'icon': (
+                '@': $eds-theme-color-button-icon-neutral-icon,
+                'hover': $eds-theme-color-button-icon-neutral-icon-hover,
+                'active': $eds-theme-color-button-icon-neutral-icon-active
               )
             ),
             'success': (
@@ -1009,6 +1074,11 @@ $tokens: (
                 '@': $eds-theme-color-button-icon-success-text,
                 'hover': $eds-theme-color-button-icon-success-text-hover,
                 'active': $eds-theme-color-button-icon-success-text-active
+              ),
+              'icon': (
+                '@': $eds-theme-color-button-icon-success-icon,
+                'hover': $eds-theme-color-button-icon-success-icon-hover,
+                'active': $eds-theme-color-button-icon-success-icon-active
               )
             ),
             'warning': (
@@ -1026,6 +1096,11 @@ $tokens: (
                 '@': $eds-theme-color-button-icon-warning-text,
                 'hover': $eds-theme-color-button-icon-warning-text-hover,
                 'active': $eds-theme-color-button-icon-warning-text-active
+              ),
+              'icon': (
+                '@': $eds-theme-color-button-icon-warning-icon,
+                'hover': $eds-theme-color-button-icon-warning-icon-hover,
+                'active': $eds-theme-color-button-icon-warning-icon-active
               )
             ),
             'error': (
@@ -1043,6 +1118,11 @@ $tokens: (
                 '@': $eds-theme-color-button-icon-error-text,
                 'hover': $eds-theme-color-button-icon-error-text-hover,
                 'active': $eds-theme-color-button-icon-error-text-active
+              ),
+              'icon': (
+                '@': $eds-theme-color-button-icon-error-icon,
+                'hover': $eds-theme-color-button-icon-error-icon-hover,
+                'active': $eds-theme-color-button-icon-error-icon-active
               )
             )
           ),
