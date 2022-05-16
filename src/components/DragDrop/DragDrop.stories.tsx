@@ -281,7 +281,6 @@ export const DragByHandle: StoryObj<Args> = {
   args: {
     items: {
       'item-1': {
-        title: 'Project #1',
         children: <div className="fpo">Content here</div>,
         handle: (
           <Icon
@@ -293,7 +292,6 @@ export const DragByHandle: StoryObj<Args> = {
         ),
       },
       'item-2': {
-        title: 'Project #2',
         children: <div className="fpo">Content here</div>,
         handle: (
           <Icon
@@ -305,7 +303,6 @@ export const DragByHandle: StoryObj<Args> = {
         ),
       },
       'item-3': {
-        title: 'Project #3',
         children: <div className="fpo">Content here</div>,
         handle: (
           <Icon
@@ -317,7 +314,6 @@ export const DragByHandle: StoryObj<Args> = {
         ),
       },
       'item-4': {
-        title: 'Project #4',
         children: <div className="fpo">Content here</div>,
         handle: (
           <Icon
@@ -346,10 +342,7 @@ export const DragByHandle: StoryObj<Args> = {
         itemIds: ['item-1', 'item-2', 'item-3'],
       },
       'container-2': {
-        itemIds: ['item-4'],
-      },
-      'container-3': {
-        itemIds: ['item-5'],
+        itemIds: ['item-4', 'item-5'],
       },
     },
     dragByHandle: true,

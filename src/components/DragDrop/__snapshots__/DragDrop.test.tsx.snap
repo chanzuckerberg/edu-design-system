@@ -433,12 +433,6 @@ exports[`<DragDrop /> DragByHandle story renders snapshot 1`] = `
           Content here
         </div>
       </div>
-    </div>
-    <div
-      class="drag-drop-container"
-      data-rbd-droppable-context-id="5"
-      data-rbd-droppable-id="container-3"
-    >
       <div
         class="drag-drop-item"
         data-rbd-draggable-context-id="5"
