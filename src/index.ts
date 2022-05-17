@@ -31,9 +31,9 @@ export { default as LayoutLinelengthContainer } from './components/LayoutLinelen
 export { default as LayoutSection } from './components/LayoutSection';
 export { default as Link } from './components/Link';
 export { default as LinkList } from './components/LinkList';
+export { default as NumberIcon } from './components/NumberIcon';
 export { default as OverflowList } from './components/OverflowList';
 export { default as OverflowListItem } from './components/OverflowListItem';
-export { default as NumberIcon } from './components/NumberIcon';
 export { default as PageHeader } from './components/PageHeader';
 export { default as Panel } from './components/Panel';
 export { default as Section } from './components/Section';
