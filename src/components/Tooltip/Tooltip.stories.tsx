@@ -33,6 +33,8 @@ export default {
   args: defaultArgs,
   parameters: {
     chromatic: {
+      // These stories are very flaky, though we're not sure why.
+      // We delay the snapshot just in case there's a timing issue at play here.
       delay: 900,
     },
   },
