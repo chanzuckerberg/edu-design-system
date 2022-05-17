@@ -1,3 +1,4 @@
+import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { Story, Meta } from '@storybook/react';
 import React from 'react';
 
@@ -13,6 +14,9 @@ import StackedBlockHeader from '../StackedBlockHeader';
 export default {
   title: 'Molecules/Blocks/StackedBlock',
   component: StackedBlock,
+  parameters: {
+    badges: [BADGE.BETA],
+  },
 } as Meta;
 
 const Template: Story<Props> = (args) => (

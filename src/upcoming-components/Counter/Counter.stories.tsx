@@ -1,3 +1,4 @@
+import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { Story, Meta } from '@storybook/react';
 import React from 'react';
 import { Counter, Props } from './Counter';
@@ -8,6 +9,9 @@ import Tooltip from '../../components/Tooltip';
 export default {
   title: 'Molecules/Forms/Counter',
   component: Counter,
+  parameters: {
+    badges: [BADGE.BETA],
+  },
 } as Meta;
 
 const Template: Story<Props> = (args) => <Counter {...args} />;

@@ -15,7 +15,13 @@ export interface Props {
 }
 
 /**
- * Primary UI component for user interaction
+ * BETA: This component is still a work in progress and is subject to change.
+ *
+ * ```ts
+ * import {Footer} from "@chanzuckerberg/eds";
+ * ```
+ *
+ * TODO: update this comment with a description of the component.
  */
 export const Footer = ({ children, className, ...other }: Props) => {
   const componentClassName = clsx(styles['footer'], className, {});
