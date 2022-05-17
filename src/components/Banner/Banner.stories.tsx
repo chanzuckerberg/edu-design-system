@@ -1,5 +1,7 @@
+import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { StoryObj } from '@storybook/react';
 import React from 'react';
+
 import { Banner, Variant } from './Banner';
 import Button from '../Button';
 import Heading from '../Heading';
@@ -231,4 +233,7 @@ export const Flat: StoryObj<Args> = {
   args: {
     isFlat: true,
   },
+};
+Flat.parameters = {
+  badges: [BADGE.DEPRECATED],
 };
