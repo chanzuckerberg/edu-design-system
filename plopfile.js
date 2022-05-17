@@ -54,12 +54,23 @@ module.exports = (plop) => {
         if (fs.existsSync(indexFile)) {
           // Split the index file into lines.
           const lines = fs.readFileSync(indexFile, 'utf8').split('\n');
+          // Only sort lines that begin with "export {" in order to ignore
+          // comments and exported types.
+          const sortableLines = lines.filter((line) =>
+            /^export {.*/g.test(line),
+          );
+          // Ignore all other lines and turn them back into a string.
+          const ignoreLines = lines
+            .filter((line) => !/^export {.*/g.test(line))
+            .join('\n');
 
-          // Sort the lines.
-          const sorted = lines.sort((a, b) => a.localeCompare(b)).join('\n');
+          // Sort the sortable lines.
+          const sortedLines = sortableLines
+            .sort((a, b) => a.localeCompare(b))
+            .join('\n');
 
-          // Write the sorted lines back to the file.
-          fs.writeFileSync(indexFile, sorted + '\n');
+          // Write all of the lines back to the file.
+          fs.writeFileSync(indexFile, `${sortedLines}\n${ignoreLines}\n`);
 
           return `index.ts lines sorted`;
         }
