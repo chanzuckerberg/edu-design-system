@@ -31,6 +31,11 @@ export default {
   title: 'Molecules/Messaging/Tooltip',
   component: Tooltip,
   args: defaultArgs,
+  parameters: {
+    chromatic: {
+      delay: 900,
+    },
+  },
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Tooltip>;
