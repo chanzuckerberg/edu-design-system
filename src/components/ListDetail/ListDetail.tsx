@@ -81,6 +81,10 @@ export interface Props {
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
+ * ```ts
+ * import {ListDetail} from "@chanzuckerberg/eds";
+ * ```
+ *
  * List Detail Component
  * 1) Provides a list-view pane for item labels/titles, and a details pane for each item's content. When an item in the list is selected, the details pane is updated.
  */

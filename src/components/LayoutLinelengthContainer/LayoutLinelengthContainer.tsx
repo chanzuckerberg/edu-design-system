@@ -16,6 +16,10 @@ export interface Props {
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
+ * ```ts
+ * import {LayoutLinelengthContainer} from "@chanzuckerberg/eds";
+ * ```
+ *
  * Component that caps the length of an excerpt of text to be easily readable.
  */
 export const LayoutLinelengthContainer = ({

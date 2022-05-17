@@ -35,6 +35,10 @@ export interface Props {
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
+ * ```ts
+ * import {Header} from "@chanzuckerberg/eds";
+ * ```
+ *
  * Global container for the header component. This helps set the stage for header recipes across applications.
  */
 export const Header = ({

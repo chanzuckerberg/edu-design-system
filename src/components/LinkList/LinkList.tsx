@@ -36,6 +36,10 @@ export interface Props {
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
+ * ```ts
+ * import {LinkList} from "@chanzuckerberg/eds";
+ * ```
+ *
  * List of links.
  */
 export const LinkList = ({

@@ -30,6 +30,10 @@ export interface Props {
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
+ * ```ts
+ * import {PrimaryNavItem} from "@chanzuckerberg/eds";
+ * ```
+ *
  * Individual item within the PrimaryNav.
  */
 export const PrimaryNavItem = React.forwardRef<HTMLLIElement, Props>(
