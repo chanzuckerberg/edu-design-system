@@ -71,7 +71,7 @@
 
   &:hover,
   &:focus {
-    background: var(--eds-theme-color-background-neutral-medium);
+    background: var(--eds-theme-color-background-neutral-subtle);
   }
 
   &:focus-visible {
