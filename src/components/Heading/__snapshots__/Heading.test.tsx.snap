@@ -48,6 +48,14 @@ exports[`<Heading /> Heading6 story renders snapshot 1`] = `
 </h6>
 `;
 
+exports[`<Heading /> Heading7 story renders snapshot 1`] = `
+<h6
+  class="heading heading--size-h7"
+>
+  Heading 7
+</h6>
+`;
+
 exports[`<Heading /> Sizes story renders snapshot 1`] = `
 <div
   class="variant__table"

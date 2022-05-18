@@ -20,6 +20,14 @@
   @mixin eds-typography-preset-005-bold $important;
 }
 
+@define-mixin eds-theme-typography-body-sm $important {
+  @mixin eds-typography-preset-006-bold $important;
+}
+
+@define-mixin eds-theme-typography-body-xs $important {
+  @mixin eds-typography-preset-008-bold $important;
+}
+
 @define-mixin eds-theme-typography-label-lg-subtle $important {
   @mixin eds-typography-preset-005 $important;
 }
@@ -90,27 +98,31 @@
 
 /* Old / legacy heading sizes */
 @define-mixin eds-theme-typography-heading-1 $important {
-  @mixin eds-typography-preset-003-bold $important;
+  @mixin eds-theme-typography-headline-lg $important;
 }
 
 @define-mixin eds-theme-typography-heading-2 $important {
-  @mixin eds-typography-preset-004-bold $important;
+  @mixin eds-theme-typography-headline-md $important;
 }
 
 @define-mixin eds-theme-typography-heading-3 $important {
-  @mixin eds-typography-preset-005-bold $important;
+  @mixin eds-theme-typography-headline-sm $important;
 }
 
 @define-mixin eds-theme-typography-heading-4 $important {
-  @mixin eds-typography-preset-006-bold $important;
+  @mixin eds-theme-typography-title-md $important;
 }
 
 @define-mixin eds-theme-typography-heading-5 $important {
-  @mixin eds-typography-preset-008-bold $important;
+  @mixin eds-theme-typography-title-sm $important;
 }
 
 @define-mixin eds-theme-typography-heading-6 $important {
-  @mixin eds-typography-preset-008-bold $important;
+  @mixin eds-theme-typography-body-sm $important;
+}
+
+@define-mixin eds-theme-typography-heading-7 $important {
+  @mixin eds-theme-typography-body-xs $important;
 }
 
 /**
