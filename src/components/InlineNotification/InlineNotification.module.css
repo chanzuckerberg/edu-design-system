@@ -1,0 +1,12 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #INLINENOTIFICATION
+\*------------------------------------*/
+
+/**
+ * 1) 
+ */
+.inline-notification {
+  border: var(--eds-theme-border-width) solid;
+}
