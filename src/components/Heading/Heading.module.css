@@ -92,15 +92,13 @@
   color: var(--eds-theme-color-text-brand-primary);
 }
 .heading--info {
-  /* TODO(brand-tokens): remove */
   color: var(--eds-color-info-700);
 }
 .heading--inherit {
   color: inherit;
 }
 .heading--neutral {
-  /* TODO(brand-tokens): update to text-neutral-default when new colors land */
-  color: var(--eds-theme-color-text-neutral-subtle);
+  color: var(--eds-theme-color-text-neutral-default);
 }
 .heading--success {
   color: var(--eds-theme-color-text-utility-success);
