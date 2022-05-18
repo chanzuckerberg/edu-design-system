@@ -1,9 +1,10 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { Story, StoryObj, Meta } from '@storybook/react';
 import React, { ComponentProps } from 'react';
-
 import { DragDrop, Props } from './DragDrop';
+import { EdsThemeColorIconNeutralSubtle } from '../../tokens-dist/ts/colors';
 import Card from '../Card';
+import Icon from '../Icon';
 
 export default {
   title: 'Organisms/Interactive/Drag and Drop',
@@ -273,5 +274,77 @@ export const UnstyledItems: StoryObj<Args> = {
     },
     unstyledItems: true,
     multipleContainers: true,
+  },
+};
+
+export const DragByHandle: StoryObj<Args> = {
+  args: {
+    items: {
+      'item-1': {
+        children: <div className="fpo">Content here</div>,
+        handle: (
+          <Icon
+            color={EdsThemeColorIconNeutralSubtle}
+            name="drag-indicator"
+            purpose="decorative"
+            size="1.25rem"
+          />
+        ),
+      },
+      'item-2': {
+        children: <div className="fpo">Content here</div>,
+        handle: (
+          <Icon
+            color={EdsThemeColorIconNeutralSubtle}
+            name="drag-indicator"
+            purpose="decorative"
+            size="1.25rem"
+          />
+        ),
+      },
+      'item-3': {
+        children: <div className="fpo">Content here</div>,
+        handle: (
+          <Icon
+            color={EdsThemeColorIconNeutralSubtle}
+            name="drag-indicator"
+            purpose="decorative"
+            size="1.25rem"
+          />
+        ),
+      },
+      'item-4': {
+        children: <div className="fpo">Content here</div>,
+        handle: (
+          <Icon
+            color={EdsThemeColorIconNeutralSubtle}
+            name="drag-indicator"
+            purpose="decorative"
+            size="1.25rem"
+          />
+        ),
+      },
+      'item-5': {
+        title: 'Project #5',
+        children: <div className="fpo">Content here</div>,
+        handle: (
+          <Icon
+            color={EdsThemeColorIconNeutralSubtle}
+            name="drag-indicator"
+            purpose="decorative"
+            size="1.25rem"
+          />
+        ),
+      },
+    },
+    containers: {
+      'container-1': {
+        itemIds: ['item-1', 'item-2', 'item-3'],
+      },
+      'container-2': {
+        itemIds: ['item-4', 'item-5'],
+      },
+    },
+    dragByHandle: true,
   },
 };

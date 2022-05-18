@@ -15,18 +15,42 @@ export interface Props {
   item: ItemType;
   /** Item's original indexed position */
   index: number;
+  /**
+   * DragDrop items can be dragged by grabbing a handle, or dragged by grabbing anywhere on the item (default)
+   */
+  dragByHandle: boolean;
 }
 
 /**
  * Primary UI component for user interaction
  */
-export const DragDropItem = ({ className, item, index }: Props) => {
+export const DragDropItem = ({
+  className,
+  dragByHandle,
+  item,
+  index,
+}: Props) => {
   const componentClassName = clsx(styles['drag-drop-item'], className, {});
   // `id` is injected in <DragDrop />
   return item.id ? (
     <Draggable draggableId={item.id} index={index}>
       {(provided: DraggableProvided) => {
-        return (
+        return dragByHandle ? (
+          <div
+            className={componentClassName}
+            ref={provided.innerRef}
+            {...provided.draggableProps}
+          >
+            <div
+              aria-label="Handle for draggable item"
+              className={clsx(styles['drag-drop-item--handle'])}
+              {...provided.dragHandleProps}
+            >
+              {item.handle}
+            </div>
+            {item.children}
+          </div>
+        ) : (
           <div
             className={componentClassName}
             ref={provided.innerRef}

@@ -277,6 +277,206 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
 </div>
 `;
 
+exports[`<DragDrop /> DragByHandle story renders snapshot 1`] = `
+<div
+  style="margin: 1rem;"
+>
+  <section
+    class="drag-drop drag-drop--unstyled drag-drop--handles"
+    data-rbd-droppable-context-id="5"
+    data-rbd-droppable-id="all-containers"
+  >
+    <div
+      class="drag-drop-container"
+      data-rbd-droppable-context-id="5"
+      data-rbd-droppable-id="container-1"
+    >
+      <div
+        class="drag-drop-item"
+        data-rbd-draggable-context-id="5"
+        data-rbd-draggable-id="item-1"
+      >
+        <div
+          aria-describedby="rbd-hidden-text-5-hidden-text-46"
+          aria-label="Handle for draggable item"
+          class="drag-drop-item--handle"
+          data-rbd-drag-handle-context-id="5"
+          data-rbd-drag-handle-draggable-id="item-1"
+          draggable="false"
+          role="button"
+          tabindex="0"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon"
+            fill="#58636F"
+            height="1.25rem"
+            style="--icon-size: 1.25rem;"
+            width="1.25rem"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="test-file-stub#drag-indicator"
+            />
+          </svg>
+        </div>
+        <div
+          class="fpo"
+        >
+          Content here
+        </div>
+      </div>
+      <div
+        class="drag-drop-item"
+        data-rbd-draggable-context-id="5"
+        data-rbd-draggable-id="item-2"
+      >
+        <div
+          aria-describedby="rbd-hidden-text-5-hidden-text-46"
+          aria-label="Handle for draggable item"
+          class="drag-drop-item--handle"
+          data-rbd-drag-handle-context-id="5"
+          data-rbd-drag-handle-draggable-id="item-2"
+          draggable="false"
+          role="button"
+          tabindex="0"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon"
+            fill="#58636F"
+            height="1.25rem"
+            style="--icon-size: 1.25rem;"
+            width="1.25rem"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="test-file-stub#drag-indicator"
+            />
+          </svg>
+        </div>
+        <div
+          class="fpo"
+        >
+          Content here
+        </div>
+      </div>
+      <div
+        class="drag-drop-item"
+        data-rbd-draggable-context-id="5"
+        data-rbd-draggable-id="item-3"
+      >
+        <div
+          aria-describedby="rbd-hidden-text-5-hidden-text-46"
+          aria-label="Handle for draggable item"
+          class="drag-drop-item--handle"
+          data-rbd-drag-handle-context-id="5"
+          data-rbd-drag-handle-draggable-id="item-3"
+          draggable="false"
+          role="button"
+          tabindex="0"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon"
+            fill="#58636F"
+            height="1.25rem"
+            style="--icon-size: 1.25rem;"
+            width="1.25rem"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="test-file-stub#drag-indicator"
+            />
+          </svg>
+        </div>
+        <div
+          class="fpo"
+        >
+          Content here
+        </div>
+      </div>
+    </div>
+    <div
+      class="drag-drop-container"
+      data-rbd-droppable-context-id="5"
+      data-rbd-droppable-id="container-2"
+    >
+      <div
+        class="drag-drop-item"
+        data-rbd-draggable-context-id="5"
+        data-rbd-draggable-id="item-4"
+      >
+        <div
+          aria-describedby="rbd-hidden-text-5-hidden-text-46"
+          aria-label="Handle for draggable item"
+          class="drag-drop-item--handle"
+          data-rbd-drag-handle-context-id="5"
+          data-rbd-drag-handle-draggable-id="item-4"
+          draggable="false"
+          role="button"
+          tabindex="0"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon"
+            fill="#58636F"
+            height="1.25rem"
+            style="--icon-size: 1.25rem;"
+            width="1.25rem"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="test-file-stub#drag-indicator"
+            />
+          </svg>
+        </div>
+        <div
+          class="fpo"
+        >
+          Content here
+        </div>
+      </div>
+      <div
+        class="drag-drop-item"
+        data-rbd-draggable-context-id="5"
+        data-rbd-draggable-id="item-5"
+      >
+        <div
+          aria-describedby="rbd-hidden-text-5-hidden-text-46"
+          aria-label="Handle for draggable item"
+          class="drag-drop-item--handle"
+          data-rbd-drag-handle-context-id="5"
+          data-rbd-drag-handle-draggable-id="item-5"
+          draggable="false"
+          role="button"
+          tabindex="0"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon"
+            fill="#58636F"
+            height="1.25rem"
+            style="--icon-size: 1.25rem;"
+            width="1.25rem"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="test-file-stub#drag-indicator"
+            />
+          </svg>
+        </div>
+        <div
+          class="fpo"
+        >
+          Content here
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;
+
 exports[`<DragDrop /> MultipleContainers story renders snapshot 1`] = `
 <div
   style="margin: 1rem;"
@@ -423,7 +623,7 @@ exports[`<DragDrop /> UnstyledItems story renders snapshot 1`] = `
   style="margin: 1rem;"
 >
   <section
-    class="drag-drop drag-drop--multiple drag-drop--unstyled"
+    class="drag-drop drag-drop--unstyled drag-drop--multiple"
     data-rbd-droppable-context-id="4"
     data-rbd-droppable-id="all-containers"
   >
