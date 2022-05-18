@@ -26,8 +26,7 @@
  */
 .label {
   @mixin eds-theme-typography-label-md;
-  /* TODO(brand-tokens): update to eds-theme-color-form-label when new colors land */
-  color: var(--eds-color-neutral-500);
+  color: var(--eds-theme-color-form-label);
   margin-bottom: var(--eds-size-half);
 }
 

@@ -3,53 +3,30 @@ import { Meta, Preview } from '@storybook/addon-docs';
 import TokenTable from './TokenTable.tsx';
 import tokens from '../../../../src/tokens-dist/json/variables-nested.json';
 
-<Meta title="Color Tokens" />
+<Meta title="Legacy Color Tokens" />
 
-# Color Tokens
+# Legacy Color Tokens
 
-## EDS Colors
+## **_Note: For reference only. These are outdated and should not be used in future work_**
+
+### For up-to-date color tokens, see "Design Tokens -> Tier 1: Definitions -> Colors"
 
 export const mapEDSColorToTokenArray = (color) => {
   const colorTokens = tokens.eds.color[color];
-  return (
-    Object.keys(colorTokens)
-      // Don't display new color tokens or neutral-800 shade for now
-      .filter(
-        (shade) => !isNaN(shade) && !(color === 'neutral' && shade === '800'),
-      )
-      .sort((shade1, shade2) => shade1.localeCompare(shade2))
-      .map((shade) => ({
-        name: `eds-color-${color}-${shade}`,
-        value: colorTokens[shade],
-      }))
-  );
+  return Object.keys(colorTokens)
+    .sort((shade1, shade2) => shade1.localeCompare(shade2))
+    .map((shade) => ({
+      name: `eds-color-${color}-${shade}`,
+      value: colorTokens[shade],
+    }));
 };
 
 <TokenTable
-  tokens={[
-    // Neutral Colors In Order
-    {
-      name: 'eds-color-white',
-      value: tokens.eds.color.white,
-    },
-    ...mapEDSColorToTokenArray('neutral'),
-    {
-      name: 'eds-color-black (alias for eds-color-neutral-700)',
-      value: tokens.eds.color.black,
-    },
-    // Remaining Colors
-    ...['brand', 'alert', 'warning', 'yellow', 'success', 'info', 'highlight']
-      .map(mapEDSColorToTokenArray)
-      .flat(),
-  ]}
+  tokens={[...['info', 'highlight'].map(mapEDSColorToTokenArray).flat()]}
   renderExample={(name, value) => (
     <div style={{ backgroundColor: value, width: '12rem', height: '1rem' }} />
   )}
 />
-
-## Legacy (Claro) Colors
-
-### **_Note: For reference only. These are outdated and should not be used in future work_**
 
 export const mapLegacyColorToTokenArray = (color) => {
   return Object.keys(tokens.legacy.color[color]).map((shade) => ({
@@ -61,10 +38,6 @@ export const mapLegacyColorToTokenArray = (color) => {
 <TokenTable
   tokens={[
     // Neutral Colors In Order
-    {
-      name: 'legacy-color-white',
-      value: tokens.legacy.color.white,
-    },
     ...mapLegacyColorToTokenArray('gray'),
     {
       name: 'legacy-color-black',

@@ -309,7 +309,7 @@ exports[`<DragDrop /> DragByHandle story renders snapshot 1`] = `
           <svg
             aria-hidden="true"
             class="icon"
-            fill="#58636F"
+            fill="#5D6369"
             height="1.25rem"
             style="--icon-size: 1.25rem;"
             width="1.25rem"
@@ -344,7 +344,7 @@ exports[`<DragDrop /> DragByHandle story renders snapshot 1`] = `
           <svg
             aria-hidden="true"
             class="icon"
-            fill="#58636F"
+            fill="#5D6369"
             height="1.25rem"
             style="--icon-size: 1.25rem;"
             width="1.25rem"
@@ -379,7 +379,7 @@ exports[`<DragDrop /> DragByHandle story renders snapshot 1`] = `
           <svg
             aria-hidden="true"
             class="icon"
-            fill="#58636F"
+            fill="#5D6369"
             height="1.25rem"
             style="--icon-size: 1.25rem;"
             width="1.25rem"
@@ -420,7 +420,7 @@ exports[`<DragDrop /> DragByHandle story renders snapshot 1`] = `
           <svg
             aria-hidden="true"
             class="icon"
-            fill="#58636F"
+            fill="#5D6369"
             height="1.25rem"
             style="--icon-size: 1.25rem;"
             width="1.25rem"
@@ -455,7 +455,7 @@ exports[`<DragDrop /> DragByHandle story renders snapshot 1`] = `
           <svg
             aria-hidden="true"
             class="icon"
-            fill="#58636F"
+            fill="#5D6369"
             height="1.25rem"
             style="--icon-size: 1.25rem;"
             width="1.25rem"

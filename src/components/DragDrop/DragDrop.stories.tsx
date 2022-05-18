@@ -2,7 +2,7 @@ import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { Story, StoryObj, Meta } from '@storybook/react';
 import React, { ComponentProps } from 'react';
 import { DragDrop, Props } from './DragDrop';
-import { EdsThemeColorIconNeutralSubtle } from '../../tokens-dist/ts/colors';
+import { EdsThemeColorIconNeutralDefault } from '../../tokens-dist/ts/colors';
 import Card from '../Card';
 import Icon from '../Icon';
 
@@ -284,7 +284,7 @@ export const DragByHandle: StoryObj<Args> = {
         children: <div className="fpo">Content here</div>,
         handle: (
           <Icon
-            color={EdsThemeColorIconNeutralSubtle}
+            color={EdsThemeColorIconNeutralDefault}
             name="drag-indicator"
             purpose="decorative"
             size="1.25rem"
@@ -295,7 +295,7 @@ export const DragByHandle: StoryObj<Args> = {
         children: <div className="fpo">Content here</div>,
         handle: (
           <Icon
-            color={EdsThemeColorIconNeutralSubtle}
+            color={EdsThemeColorIconNeutralDefault}
             name="drag-indicator"
             purpose="decorative"
             size="1.25rem"
@@ -306,7 +306,7 @@ export const DragByHandle: StoryObj<Args> = {
         children: <div className="fpo">Content here</div>,
         handle: (
           <Icon
-            color={EdsThemeColorIconNeutralSubtle}
+            color={EdsThemeColorIconNeutralDefault}
             name="drag-indicator"
             purpose="decorative"
             size="1.25rem"
@@ -317,7 +317,7 @@ export const DragByHandle: StoryObj<Args> = {
         children: <div className="fpo">Content here</div>,
         handle: (
           <Icon
-            color={EdsThemeColorIconNeutralSubtle}
+            color={EdsThemeColorIconNeutralDefault}
             name="drag-indicator"
             purpose="decorative"
             size="1.25rem"
@@ -329,7 +329,7 @@ export const DragByHandle: StoryObj<Args> = {
         children: <div className="fpo">Content here</div>,
         handle: (
           <Icon
-            color={EdsThemeColorIconNeutralSubtle}
+            color={EdsThemeColorIconNeutralDefault}
             name="drag-indicator"
             purpose="decorative"
             size="1.25rem"

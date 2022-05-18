@@ -48,7 +48,6 @@
  */
 .tag--neutral {
   --tag-primary-color: var(--eds-theme-color-text-neutral-default);
-  /* TODO(brand-tokens): use background-neutral-medium when new colors land */
   --tag-secondary-color: var(--eds-theme-color-background-neutral-subtle);
   --tag-outline-color: var(--eds-theme-color-border-neutral-default);
 }
