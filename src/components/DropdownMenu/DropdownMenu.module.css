@@ -67,11 +67,15 @@
   text-align: left;
   cursor: pointer;
   color: var(--eds-theme-color-text-neutral-default);
+  transition: background var(--eds-anim-fade-quick) var(--eds-anim-ease);
 
   &:hover,
   &:focus {
-    background: var(--eds-theme-color-background-brand-primary-strong);
-    color: var(--eds-theme-color-text-neutral-default-inverse);
+    background: var(--eds-theme-color-background-neutral-medium);
+  }
+
+  &:focus-visible {
+    @mixin focus;
   }
 
   /**
