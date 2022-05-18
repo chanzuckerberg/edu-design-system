@@ -16,7 +16,7 @@ export const VARIANTS = [
    */ 'info',
 ] as const;
 export type Variant = typeof VARIANTS[number];
-export type HeadingElement = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+export type HeadingElement = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'h7';
 // For now, "h1"-"h6" sizes point to the old type ramp, while
 // "headline-*" and "title-*" sizes point to the new type ramp.
 // These will be brought in sync with the next major release.
@@ -27,6 +27,7 @@ const TOKEN_TO_SIZE = {
   'title-md': 'h4',
   'title-sm': 'h5',
   'body-sm': 'h6',
+  'body-xs': 'h7',
 };
 export type HeadingSize = HeadingElement | keyof typeof TOKEN_TO_SIZE;
 
@@ -45,6 +46,14 @@ type Props = {
   tabIndex?: number;
   variant?: Variant;
 } & React.HTMLAttributes<HTMLHeadingElement>;
+
+const getComputedSize = (size: HeadingSize) => {
+  if (size === 'h7') {
+    return 'h6';
+  }
+
+  return size in TOKEN_TO_SIZE ? TOKEN_TO_SIZE[size] : size;
+};
 
 /**
  * ```ts
@@ -68,12 +77,21 @@ export const Heading = forwardRef(
     }: Props,
     ref: React.ForwardedRef<HTMLHeadingElement>,
   ) => {
-    if (variant === 'info' && process.env.NODE_ENV !== 'production') {
-      console.warn(
-        'Info variant is deprecated and will be removed in an upcoming release. Please use the consider another variant instead.',
-      );
+    if (process.env.NODE_ENV !== 'production') {
+      if (variant === 'info') {
+        console.warn(
+          'Info variant is deprecated and will be removed in an upcoming release. Please use the consider another variant instead.',
+        );
+      }
+      if (size === 'h6' || size === 'h7') {
+        console.warn(
+          `The ${size} size is deprecated and will be removed in an upcoming release.\n`,
+          'Please bump this heading up to a larger size if possible.',
+        );
+      }
     }
-    const computedSize = size in TOKEN_TO_SIZE ? TOKEN_TO_SIZE[size] : size;
+
+    const computedSize = getComputedSize(size);
     const TagName = as || computedSize;
     const componentClassName = clsx(
       className,
