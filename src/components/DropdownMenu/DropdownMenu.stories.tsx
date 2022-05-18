@@ -5,7 +5,7 @@ import { DropdownMenu, Props } from './DropdownMenu';
 import { DropdownMenuItem } from '../DropdownMenuItem/DropdownMenuItem';
 
 export default {
-  title: 'Molecules/Navigation/Dropdown',
+  title: 'Molecules/Navigation/DropdownMenu',
   component: DropdownMenu,
 } as Meta;
 
