@@ -47,7 +47,7 @@ type Props = {
   variant?: Variant;
 } & React.HTMLAttributes<HTMLHeadingElement>;
 
-const getComputedSize = (size: HeadingSize) => {
+const getComputedAs = (size: HeadingSize) => {
   if (size === 'h7') {
     return 'h6';
   }
@@ -91,8 +91,7 @@ export const Heading = forwardRef(
       }
     }
 
-    const computedSize = getComputedSize(size);
-    const TagName = as || computedSize;
+    const TagName = as || getComputedAs(size);
     const componentClassName = clsx(
       className,
       styles['heading'],
