@@ -1,14 +1,16 @@
 import clsx from 'clsx';
-import React, { useState } from 'react';
+import React, { ReactNode, useState } from 'react';
 import {
   DragDropContext,
   DropResult,
   Droppable,
   DroppableProvided,
 } from 'react-beautiful-dnd';
+import { oneByType } from 'react-children-by-type';
 import styles from './DragDrop.module.css';
 import { Items, Containers } from './DragDropTypes';
 import DragDropContainer from '../DragDropContainer';
+import DragDropContainerHeader from '../DragDropContainerHeader';
 
 export interface Props {
   /**
@@ -35,7 +37,19 @@ export interface Props {
    * DragDrop items can be dragged by grabbing a handle, or dragged by grabbing anywhere on the item (default)
    */
   dragByHandle: boolean;
+  /**
+   * Child node(s) that can be nested inside component. `ModalHeader`, `ModalBody`, and `ModelFooter` are the only permissible children of the Modal
+   */
+  children?: ReactNode;
+  containerHeader?: ReactNode;
 }
+
+// const dragDropContainerHeader = oneByType(children, DragDropContainerHeader);
+// const header = React.Children.map(dragDropContainerHeader, (child) => {
+//   return React.cloneElement(child, {
+//     dismissible: true,
+//   });
+// });
 
 /**
  * A flexible Drag and Drop component that allows items to be dragged and dropped in containers
@@ -44,6 +58,7 @@ export const DragDrop = ({
   className,
   items,
   containers,
+  containerHeader,
   dragByHandle = false,
   multipleContainers = false,
   unstyledItems = false,
@@ -167,6 +182,14 @@ export const DragDrop = ({
     setState(newState);
   };
 
+  const dragDropContainerHeader = oneByType(
+    containerHeader,
+    DragDropContainerHeader,
+  );
+  const contHeader = React.Children.map(dragDropContainerHeader, (child) => {
+    return React.cloneElement(child);
+  });
+
   return (
     <DragDropContext onDragEnd={onDragEnd}>
       <Droppable
@@ -189,12 +212,18 @@ export const DragDrop = ({
                     : [];
 
                   return (
-                    <DragDropContainer
-                      container={container}
-                      dragByHandle={dragByHandle}
-                      items={items}
-                      key={container.id}
-                    />
+                    <div
+                      className={styles['drag-drop--container-wrapper']}
+                      key={containerId}
+                    >
+                      {contHeader}
+                      <DragDropContainer
+                        container={container}
+                        dragByHandle={dragByHandle}
+                        items={items}
+                        key={container.id}
+                      />
+                    </div>
                   );
                 })}
               {provided.placeholder}
