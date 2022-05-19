@@ -6,11 +6,9 @@ import {
   Droppable,
   DroppableProvided,
 } from 'react-beautiful-dnd';
-import { oneByType } from 'react-children-by-type';
 import styles from './DragDrop.module.css';
 import { Items, Containers } from './DragDropTypes';
 import DragDropContainer from '../DragDropContainer';
-import DragDropContainerHeader from '../DragDropContainerHeader';
 import OverflowList from '../OverflowList';
 import OverflowListItem from '../OverflowListItem';
 
@@ -53,7 +51,6 @@ export const DragDrop = ({
   className,
   items,
   containers,
-  containerHeader,
   dragByHandle = false,
   multipleContainers = false,
   unstyledItems = false,
