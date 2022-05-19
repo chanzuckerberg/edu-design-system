@@ -10,12 +10,16 @@ export default {
 } as Meta;
 
 const Template: Story<Props> = (args) => (
-  <ButtonDropdown {...args} buttonChildren="Button Dropdown">
-    <DropdownMenuItem iconName="schedule" text="Dropdown menu item" />
-    <DropdownMenuItem iconName="schedule" text="Dropdown menu item" />
-    <DropdownMenuItem iconName="schedule" text="Dropdown menu item" />
-    <DropdownMenuItem iconName="schedule" text="Dropdown menu item" />
-  </ButtonDropdown>
+  <div style={{ width: '100%', display: 'flex' }}>
+    <div style={{ marginLeft: 'auto' }}>
+      <ButtonDropdown {...args} buttonChildren="Button Dropdown">
+        <DropdownMenuItem iconName="schedule" text="Item 1" />
+        <DropdownMenuItem iconName="schedule" text="Item 2" />
+        <DropdownMenuItem iconName="schedule" text="Item 3" />
+        <DropdownMenuItem iconName="schedule" text="Item 4" />
+      </ButtonDropdown>
+    </div>
+  </div>
 );
 
 export const Default = Template.bind({});

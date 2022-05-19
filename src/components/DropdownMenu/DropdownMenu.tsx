@@ -1,6 +1,12 @@
 import clsx from 'clsx';
-import React, { ReactNode } from 'react';
+import React, { ReactNode, useRef, useEffect, KeyboardEvent } from 'react';
 import styles from './DropdownMenu.module.css';
+import {
+  L_ARROW_KEYCODE,
+  U_ARROW_KEYCODE,
+  R_ARROW_KEYCODE,
+  D_ARROW_KEYCODE,
+} from '../../util/keycodes';
 
 export interface Props {
   /**
@@ -11,6 +17,10 @@ export interface Props {
    * CSS class names that can be appended to the component.
    */
   className?: string;
+  /**
+   * Sets the component to open or close by default
+   */
+  isActive?: boolean;
 }
 
 /**
@@ -19,12 +29,74 @@ export interface Props {
 export const DropdownMenu: React.FC<Props> = ({
   children,
   className,
+  isActive,
   ...other
 }) => {
-  const componentClassName = clsx(styles['eds-c-dropdown'], className);
+  const childRefs = useRef<Array<HTMLLIElement | null>>([]);
+
+  useEffect(() => {
+    setTimeout(() => {
+      if (isActive) {
+        childRefs.current[0]
+          .querySelector<HTMLButtonElement | HTMLAnchorElement>(':first-child')
+          .focus();
+      }
+    }, 1);
+  }, [isActive]);
+
+  const onKeyDown = (e: KeyboardEvent<HTMLUListElement>) => {
+    let activeTab = null;
+
+    // TODO: improve `any` type
+    childRefs.current.map((item: any) => {
+      if (item.querySelector(':first-child') === document.activeElement) {
+        activeTab = item;
+      }
+      return item;
+    });
+
+    if (!activeTab) return;
+
+    const index = childRefs.current.indexOf(activeTab); /* 2 */
+    const next = index === childRefs.current.length - 1 ? 0 : index + 1; /* 2 */
+
+    const prev = index === 0 ? childRefs.current.length - 1 : index - 1; /* 2 */
+
+    if ([R_ARROW_KEYCODE, D_ARROW_KEYCODE].includes(e.key)) {
+      /* 3 */
+      childRefs.current[next]
+        .querySelector<HTMLButtonElement | HTMLAnchorElement>(':first-child')
+        .focus();
+    } else if ([L_ARROW_KEYCODE, U_ARROW_KEYCODE].includes(e.key)) {
+      /* 4 */
+      childRefs.current[prev]
+        .querySelector<HTMLButtonElement | HTMLAnchorElement>(':first-child')
+        .focus();
+    }
+  };
+
+  const childrenWithProps = React.Children.map(
+    children,
+    // TODO: improve `any` type
+    (child: any, i: number) => {
+      // Checking isValidElement is the safe way and avoids a typescript
+      // error too.
+      if (React.isValidElement(child)) {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-expect-error TODO: fix "No overload matches this call" error
+        return React.cloneElement<Props>(child, {
+          ref: (el) => (childRefs.current[i] = el),
+        });
+      }
+    },
+  );
+
+  const componentClassName = clsx(styles['dropdown-menu'], className);
   return (
     <div className={componentClassName} {...other}>
-      <ul className={styles['eds-c-dropdown__list']}>{children}</ul>
+      <ul className={styles['dropdown-menu__list']} onKeyDown={onKeyDown}>
+        {childrenWithProps}
+      </ul>
     </div>
   );
 };

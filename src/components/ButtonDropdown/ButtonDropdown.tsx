@@ -133,7 +133,7 @@ export const ButtonDropdown = ({
    * 1) If the escape key is struck, close the panel
    */
   function handleKeyDown(e: React.KeyboardEvent) {
-    if (e.code === ESCAPE_KEYCODE) {
+    if (e.key === ESCAPE_KEYCODE) {
       closePanel();
     }
   }
@@ -144,6 +144,7 @@ export const ButtonDropdown = ({
   function togglePanel() {
     setIsActive(!isActiveVar);
   }
+
   const componentClassName = clsx(
     styles['button-dropdown'],
     className,
@@ -171,7 +172,10 @@ export const ButtonDropdown = ({
       >
         {buttonChildren}
       </Button>
-      <DropdownMenu className={styles['button-dropdown__dropdown-menu']}>
+      <DropdownMenu
+        className={styles['button-dropdown__dropdown-menu']}
+        isActive={isActiveVar}
+      >
         {children}
       </DropdownMenu>
     </div>
