@@ -1,7 +1,6 @@
 import clsx from 'clsx';
 import React from 'react';
 import { Draggable, DraggableProvided } from 'react-beautiful-dnd';
-import { oneByType } from 'react-children-by-type';
 import styles from '../DragDrop/DragDrop.module.css';
 import { ItemType } from '../DragDrop/DragDropTypes';
 
