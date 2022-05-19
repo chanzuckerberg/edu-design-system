@@ -4,7 +4,6 @@ import { Draggable, DraggableProvided } from 'react-beautiful-dnd';
 import { oneByType } from 'react-children-by-type';
 import styles from '../DragDrop/DragDrop.module.css';
 import { ItemType } from '../DragDrop/DragDropTypes';
-import DragDropItemHeader from '../DragDropItemHeader';
 
 export interface Props {
   /**
@@ -34,10 +33,6 @@ export const DragDropItem = ({
 }: Props) => {
   const componentClassName = clsx(styles['drag-drop-item'], className, {});
 
-  const dragDropItemHeader = oneByType(item.itemHeader, DragDropItemHeader);
-  const header = React.Children.map(dragDropItemHeader, (child) => {
-    return React.cloneElement(child);
-  });
   // `id` is injected in <DragDrop />
   return item.id ? (
     <Draggable draggableId={item.id} index={index}>
@@ -48,7 +43,6 @@ export const DragDropItem = ({
             ref={provided.innerRef}
             {...provided.draggableProps}
           >
-            {header}
             <div
               aria-label="Handle for draggable item"
               className={clsx(styles['drag-drop-item--handle'])}
