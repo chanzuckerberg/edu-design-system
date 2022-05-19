@@ -14,8 +14,6 @@
   border-radius: var(--eds-theme-border-radius);
 
   background-color: var(--eds-theme-color-background-neutral-default);
-
-  @mixin eds-theme-typography-body-text-lg;
 }
 
 /**

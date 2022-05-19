@@ -26,11 +26,6 @@ export default {
 type Args = React.ComponentProps<typeof InlineNotification>;
 
 export const Success: StoryObj<Args> = {};
-export const Score: StoryObj<Args> = {
-  args: {
-    score: '9/10',
-  },
-};
 
 export const LongText: StoryObj<Args> = {
   args: {

@@ -55,10 +55,6 @@ type Props = {
    */
   text: React.ReactNode;
   /**
-   * The score as a string to be appended after the text.
-   */
-  score?: string;
-  /**
    * The color variant of the tag. New variants should be supported
    * in the VARIANTS array and by its separate style in CSS file.
    */
@@ -79,7 +75,6 @@ export const InlineNotification = ({
   inactive,
   isFullWidth,
   isStrong,
-  score,
   text,
   variant,
   ...other
@@ -118,11 +113,6 @@ export const InlineNotification = ({
         variant={variant === 'yield' ? 'base' : variant}
       >
         {text}
-        {score && (
-          <Text as="span" className={textClassName} variant="base">
-            Score: {score}
-          </Text>
-        )}
       </Text>
     </div>
   );

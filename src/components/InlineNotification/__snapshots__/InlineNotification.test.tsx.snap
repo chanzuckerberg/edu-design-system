@@ -14,7 +14,7 @@ exports[`<InlineNotification /> FullWidthLongText story renders snapshot 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <title
-      id="13"
+      id="12"
     >
       success
     </title>
@@ -47,7 +47,7 @@ exports[`<InlineNotification /> FullWidthStrongVariants story renders snapshot 1
       xmlns="http://www.w3.org/2000/svg"
     >
       <title
-        id="19"
+        id="18"
       >
         info
       </title>
@@ -74,7 +74,7 @@ exports[`<InlineNotification /> FullWidthStrongVariants story renders snapshot 1
       xmlns="http://www.w3.org/2000/svg"
     >
       <title
-        id="20"
+        id="19"
       >
         success
       </title>
@@ -101,7 +101,7 @@ exports[`<InlineNotification /> FullWidthStrongVariants story renders snapshot 1
       xmlns="http://www.w3.org/2000/svg"
     >
       <title
-        id="21"
+        id="20"
       >
         alert
       </title>
@@ -128,7 +128,7 @@ exports[`<InlineNotification /> FullWidthStrongVariants story renders snapshot 1
       xmlns="http://www.w3.org/2000/svg"
     >
       <title
-        id="22"
+        id="21"
       >
         review
       </title>
@@ -155,7 +155,7 @@ exports[`<InlineNotification /> FullWidthStrongVariants story renders snapshot 1
       xmlns="http://www.w3.org/2000/svg"
     >
       <title
-        id="23"
+        id="22"
       >
         success
       </title>
@@ -186,7 +186,7 @@ exports[`<InlineNotification /> FullWidthSuccess story renders snapshot 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <title
-      id="12"
+      id="11"
     >
       success
     </title>
@@ -219,7 +219,7 @@ exports[`<InlineNotification /> FullWidthVariants story renders snapshot 1`] = `
       xmlns="http://www.w3.org/2000/svg"
     >
       <title
-        id="14"
+        id="13"
       >
         info
       </title>
@@ -246,7 +246,7 @@ exports[`<InlineNotification /> FullWidthVariants story renders snapshot 1`] = `
       xmlns="http://www.w3.org/2000/svg"
     >
       <title
-        id="15"
+        id="14"
       >
         success
       </title>
@@ -273,7 +273,7 @@ exports[`<InlineNotification /> FullWidthVariants story renders snapshot 1`] = `
       xmlns="http://www.w3.org/2000/svg"
     >
       <title
-        id="16"
+        id="15"
       >
         alert
       </title>
@@ -300,7 +300,7 @@ exports[`<InlineNotification /> FullWidthVariants story renders snapshot 1`] = `
       xmlns="http://www.w3.org/2000/svg"
     >
       <title
-        id="17"
+        id="16"
       >
         review
       </title>
@@ -327,7 +327,7 @@ exports[`<InlineNotification /> FullWidthVariants story renders snapshot 1`] = `
       xmlns="http://www.w3.org/2000/svg"
     >
       <title
-        id="18"
+        id="17"
       >
         success
       </title>
@@ -358,36 +358,6 @@ exports[`<InlineNotification /> LongText story renders snapshot 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <title
-      id="3"
-    >
-      success
-    </title>
-    <use
-      xlink:href="test-file-stub#check-circle"
-    />
-  </svg>
-  <span
-    class="inline-notification__text text text--body text--success"
-  >
-    Long text inline notification. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  </span>
-</div>
-`;
-
-exports[`<InlineNotification /> Score story renders snapshot 1`] = `
-<div
-  class="inline-notification inline-notification--success"
->
-  <svg
-    class="icon inline-notification__icon inline-notification__icon--success"
-    fill="currentColor"
-    height="1.5rem"
-    role="img"
-    style="--icon-size: 1.5rem;"
-    width="1.5rem"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <title
       id="2"
     >
       success
@@ -399,13 +369,7 @@ exports[`<InlineNotification /> Score story renders snapshot 1`] = `
   <span
     class="inline-notification__text text text--body text--success"
   >
-    Inline notifications lorem ipsum text
-    <span
-      class="inline-notification__text text text--body text--base"
-    >
-      Score: 
-      9/10
-    </span>
+    Long text inline notification. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
   </span>
 </div>
 `;
@@ -427,7 +391,7 @@ exports[`<InlineNotification /> StrongVariants story renders snapshot 1`] = `
       xmlns="http://www.w3.org/2000/svg"
     >
       <title
-        id="8"
+        id="7"
       >
         info
       </title>
@@ -454,7 +418,7 @@ exports[`<InlineNotification /> StrongVariants story renders snapshot 1`] = `
       xmlns="http://www.w3.org/2000/svg"
     >
       <title
-        id="9"
+        id="8"
       >
         success
       </title>
@@ -481,7 +445,7 @@ exports[`<InlineNotification /> StrongVariants story renders snapshot 1`] = `
       xmlns="http://www.w3.org/2000/svg"
     >
       <title
-        id="10"
+        id="9"
       >
         alert
       </title>
@@ -508,7 +472,7 @@ exports[`<InlineNotification /> StrongVariants story renders snapshot 1`] = `
       xmlns="http://www.w3.org/2000/svg"
     >
       <title
-        id="11"
+        id="10"
       >
         review
       </title>
@@ -542,7 +506,7 @@ exports[`<InlineNotification /> SubtleVariants story renders snapshot 1`] = `
       xmlns="http://www.w3.org/2000/svg"
     >
       <title
-        id="4"
+        id="3"
       >
         info
       </title>
@@ -569,7 +533,7 @@ exports[`<InlineNotification /> SubtleVariants story renders snapshot 1`] = `
       xmlns="http://www.w3.org/2000/svg"
     >
       <title
-        id="5"
+        id="4"
       >
         success
       </title>
@@ -596,7 +560,7 @@ exports[`<InlineNotification /> SubtleVariants story renders snapshot 1`] = `
       xmlns="http://www.w3.org/2000/svg"
     >
       <title
-        id="6"
+        id="5"
       >
         alert
       </title>
@@ -623,7 +587,7 @@ exports[`<InlineNotification /> SubtleVariants story renders snapshot 1`] = `
       xmlns="http://www.w3.org/2000/svg"
     >
       <title
-        id="7"
+        id="6"
       >
         review
       </title>
