@@ -59,7 +59,6 @@ export const DragDropItem = ({
             {...provided.draggableProps}
             {...provided.dragHandleProps}
           >
-            {header}
             {item.title && (
               <div className={clsx(styles['drag-drop-item--title'])}>
                 {item.title}
