@@ -9,7 +9,6 @@ export interface ItemType {
   title?: string;
   children?: React.ReactNode;
   handle?: React.ReactNode;
-  itemHeader?: React.ReactNode;
 }
 
 export interface Containers {
@@ -19,5 +18,5 @@ export interface Containers {
 export interface ContainerType {
   id?: string;
   itemIds: string[];
-  containerHeader?: React.ReactNode;
+  header?: React.ReactNode;
 }

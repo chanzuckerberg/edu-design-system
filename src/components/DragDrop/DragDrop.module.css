@@ -68,6 +68,7 @@
 */
 
 .drag-drop-item {
+  position: relative;
   padding: var(--eds-size-1);
   margin-bottom: var(--eds-size-1); /* 3 */
   background-color: var(--eds-color-neutral-100);
@@ -78,7 +79,6 @@
   * 1) The unstyled variant removes all styling from items.
   */
   .drag-drop--unstyled & {
-    @mixin reset;
     background-color: unset;
     border-radius: unset;
     box-shadow: unset;
@@ -92,7 +92,6 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: var(--eds-size-1);
   }
 }
 

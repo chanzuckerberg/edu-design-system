@@ -11,6 +11,8 @@ import styles from './DragDrop.module.css';
 import { Items, Containers } from './DragDropTypes';
 import DragDropContainer from '../DragDropContainer';
 import DragDropContainerHeader from '../DragDropContainerHeader';
+import OverflowList from '../OverflowList';
+import OverflowListItem from '../OverflowListItem';
 
 export interface Props {
   /**
@@ -175,14 +177,6 @@ export const DragDrop = ({
     setState(newState);
   };
 
-  const dragDropContainerHeader = oneByType(
-    containerHeader,
-    DragDropContainerHeader,
-  );
-  const header = React.Children.map(dragDropContainerHeader, (child) => {
-    return React.cloneElement(child);
-  });
-
   return (
     <DragDropContext onDragEnd={onDragEnd}>
       <Droppable
@@ -192,7 +186,7 @@ export const DragDrop = ({
       >
         {(provided: DroppableProvided) => {
           return (
-            <section
+            <OverflowList
               className={componentClassName}
               {...provided.droppableProps}
               ref={provided.innerRef}
@@ -205,22 +199,21 @@ export const DragDrop = ({
                     : [];
 
                   return (
-                    <div
+                    <OverflowListItem
                       className={styles['drag-drop--container-wrapper']}
                       key={containerId}
                     >
-                      {header}
                       <DragDropContainer
                         container={container}
                         dragByHandle={dragByHandle}
                         items={items}
                         key={container.id}
                       />
-                    </div>
+                    </OverflowListItem>
                   );
                 })}
               {provided.placeholder}
-            </section>
+            </OverflowList>
           );
         }}
       </Droppable>

@@ -38,7 +38,7 @@ export const DragDropContainer = ({
   const componentClassName = clsx(styles['drag-drop-container'], className, {});
 
   const dragDropContainerHeader = oneByType(
-    container.containerHeader,
+    container.header,
     DragDropContainerHeader,
   );
   const header = React.Children.map(dragDropContainerHeader, (child) => {
@@ -46,25 +46,27 @@ export const DragDropContainer = ({
   });
 
   return container.id ? (
-    <Droppable droppableId={container.id} type="item">
-      {(provided: DroppableProvided) => (
-        <div
-          className={componentClassName}
-          ref={provided.innerRef}
-          {...provided.droppableProps}
-        >
-          {header}
-          {items.map((item: ItemType, index: number) => (
-            <DragDropItem
-              dragByHandle={dragByHandle}
-              index={index}
-              item={item}
-              key={item.id}
-            />
-          ))}
-          {provided.placeholder}
-        </div>
-      )}
-    </Droppable>
+    <>
+      {header}
+      <Droppable droppableId={container.id} type="item">
+        {(provided: DroppableProvided) => (
+          <div
+            className={componentClassName}
+            ref={provided.innerRef}
+            {...provided.droppableProps}
+          >
+            {items.map((item: ItemType, index: number) => (
+              <DragDropItem
+                dragByHandle={dragByHandle}
+                index={index}
+                item={item}
+                key={item.id}
+              />
+            ))}
+            {provided.placeholder}
+          </div>
+        )}
+      </Droppable>
+    </>
   ) : null;
 };
