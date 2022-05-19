@@ -1,11 +1,355 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<InlineNotification /> FullWidthLongText story renders snapshot 1`] = `
+<div
+  class="inline-notification inline-notification--success inline-notification--full-width"
+>
+  <svg
+    class="icon inline-notification__icon inline-notification__icon--success"
+    fill="currentColor"
+    height="1.5rem"
+    role="img"
+    style="--icon-size: 1.5rem;"
+    width="1.5rem"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title
+      id="13"
+    >
+      success
+    </title>
+    <use
+      xlink:href="test-file-stub#check-circle"
+    />
+  </svg>
+  <span
+    class="inline-notification__text--full-width text text--body text--success"
+  >
+    Long text inline notification. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  </span>
+</div>
+`;
+
+exports[`<InlineNotification /> FullWidthStrongVariants story renders snapshot 1`] = `
+<div
+  style="display: flex; flex-direction: column; gap: 0.25rem;"
+>
+  <div
+    class="inline-notification inline-notification--brand inline-notification--brand-strong inline-notification--full-width"
+  >
+    <svg
+      class="icon inline-notification__icon inline-notification__icon--brand"
+      fill="currentColor"
+      height="1.5rem"
+      role="img"
+      style="--icon-size: 1.5rem;"
+      width="1.5rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="19"
+      >
+        info
+      </title>
+      <use
+        xlink:href="test-file-stub#info"
+      />
+    </svg>
+    <span
+      class="inline-notification__text--full-width text text--body text--brand"
+    >
+      brand inline notification lorem ipsum
+    </span>
+  </div>
+  <div
+    class="inline-notification inline-notification--success inline-notification--success-strong inline-notification--full-width"
+  >
+    <svg
+      class="icon inline-notification__icon inline-notification__icon--success"
+      fill="currentColor"
+      height="1.5rem"
+      role="img"
+      style="--icon-size: 1.5rem;"
+      width="1.5rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="20"
+      >
+        success
+      </title>
+      <use
+        xlink:href="test-file-stub#check-circle"
+      />
+    </svg>
+    <span
+      class="inline-notification__text--full-width text text--body text--success"
+    >
+      success inline notification lorem ipsum
+    </span>
+  </div>
+  <div
+    class="inline-notification inline-notification--warning inline-notification--warning-strong inline-notification--full-width"
+  >
+    <svg
+      class="icon inline-notification__icon inline-notification__icon--warning"
+      fill="currentColor"
+      height="1.5rem"
+      role="img"
+      style="--icon-size: 1.5rem;"
+      width="1.5rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="21"
+      >
+        alert
+      </title>
+      <use
+        xlink:href="test-file-stub#warning"
+      />
+    </svg>
+    <span
+      class="inline-notification__text--full-width text text--body text--warning"
+    >
+      warning inline notification lorem ipsum
+    </span>
+  </div>
+  <div
+    class="inline-notification inline-notification--yield inline-notification--yield-strong inline-notification--full-width"
+  >
+    <svg
+      class="icon inline-notification__icon inline-notification__icon--yield"
+      fill="currentColor"
+      height="1.5rem"
+      role="img"
+      style="--icon-size: 1.5rem;"
+      width="1.5rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="22"
+      >
+        review
+      </title>
+      <use
+        xlink:href="test-file-stub#error"
+      />
+    </svg>
+    <span
+      class="inline-notification__text--full-width text text--body text--base"
+    >
+      yield inline notification lorem ipsum
+    </span>
+  </div>
+  <div
+    class="inline-notification inline-notification--success inline-notification--full-width"
+  >
+    <svg
+      class="icon inline-notification__icon inline-notification__icon--success inline-notification__icon--inactive"
+      fill="currentColor"
+      height="1.5rem"
+      role="img"
+      style="--icon-size: 1.5rem;"
+      width="1.5rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="23"
+      >
+        success
+      </title>
+      <use
+        xlink:href="test-file-stub#check-circle"
+      />
+    </svg>
+    <span
+      class="inline-notification__text--full-width inline-notification__text--inactive text text--body text--success"
+    >
+      inactive inline notification lorem ipsum
+    </span>
+  </div>
+</div>
+`;
+
+exports[`<InlineNotification /> FullWidthSuccess story renders snapshot 1`] = `
+<div
+  class="inline-notification inline-notification--success inline-notification--full-width"
+>
+  <svg
+    class="icon inline-notification__icon inline-notification__icon--success"
+    fill="currentColor"
+    height="1.5rem"
+    role="img"
+    style="--icon-size: 1.5rem;"
+    width="1.5rem"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title
+      id="12"
+    >
+      success
+    </title>
+    <use
+      xlink:href="test-file-stub#check-circle"
+    />
+  </svg>
+  <span
+    class="inline-notification__text--full-width text text--body text--success"
+  >
+    Inline notifications lorem ipsum text
+  </span>
+</div>
+`;
+
+exports[`<InlineNotification /> FullWidthVariants story renders snapshot 1`] = `
+<div
+  style="display: flex; flex-direction: column; gap: 0.25rem;"
+>
+  <div
+    class="inline-notification inline-notification--brand inline-notification--full-width"
+  >
+    <svg
+      class="icon inline-notification__icon inline-notification__icon--brand"
+      fill="currentColor"
+      height="1.5rem"
+      role="img"
+      style="--icon-size: 1.5rem;"
+      width="1.5rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="14"
+      >
+        info
+      </title>
+      <use
+        xlink:href="test-file-stub#info"
+      />
+    </svg>
+    <span
+      class="inline-notification__text--full-width text text--body text--brand"
+    >
+      brand inline notification lorem ipsum
+    </span>
+  </div>
+  <div
+    class="inline-notification inline-notification--success inline-notification--full-width"
+  >
+    <svg
+      class="icon inline-notification__icon inline-notification__icon--success"
+      fill="currentColor"
+      height="1.5rem"
+      role="img"
+      style="--icon-size: 1.5rem;"
+      width="1.5rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="15"
+      >
+        success
+      </title>
+      <use
+        xlink:href="test-file-stub#check-circle"
+      />
+    </svg>
+    <span
+      class="inline-notification__text--full-width text text--body text--success"
+    >
+      success inline notification lorem ipsum
+    </span>
+  </div>
+  <div
+    class="inline-notification inline-notification--warning inline-notification--full-width"
+  >
+    <svg
+      class="icon inline-notification__icon inline-notification__icon--warning"
+      fill="currentColor"
+      height="1.5rem"
+      role="img"
+      style="--icon-size: 1.5rem;"
+      width="1.5rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="16"
+      >
+        alert
+      </title>
+      <use
+        xlink:href="test-file-stub#warning"
+      />
+    </svg>
+    <span
+      class="inline-notification__text--full-width text text--body text--warning"
+    >
+      warning inline notification lorem ipsum
+    </span>
+  </div>
+  <div
+    class="inline-notification inline-notification--yield inline-notification--full-width"
+  >
+    <svg
+      class="icon inline-notification__icon inline-notification__icon--yield"
+      fill="currentColor"
+      height="1.5rem"
+      role="img"
+      style="--icon-size: 1.5rem;"
+      width="1.5rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="17"
+      >
+        review
+      </title>
+      <use
+        xlink:href="test-file-stub#error"
+      />
+    </svg>
+    <span
+      class="inline-notification__text--full-width text text--body text--base"
+    >
+      yield inline notification lorem ipsum
+    </span>
+  </div>
+  <div
+    class="inline-notification inline-notification--success inline-notification--full-width"
+  >
+    <svg
+      class="icon inline-notification__icon inline-notification__icon--success inline-notification__icon--inactive"
+      fill="currentColor"
+      height="1.5rem"
+      role="img"
+      style="--icon-size: 1.5rem;"
+      width="1.5rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="18"
+      >
+        success
+      </title>
+      <use
+        xlink:href="test-file-stub#check-circle"
+      />
+    </svg>
+    <span
+      class="inline-notification__text--full-width inline-notification__text--inactive text text--body text--success"
+    >
+      inactive inline notification lorem ipsum
+    </span>
+  </div>
+</div>
+`;
+
 exports[`<InlineNotification /> LongText story renders snapshot 1`] = `
 <div
   class="inline-notification inline-notification--success"
 >
   <svg
-    class="icon inline-notification__icon inline-notification__icon-success"
+    class="icon inline-notification__icon inline-notification__icon--success"
     fill="currentColor"
     height="1.5rem"
     role="img"
@@ -35,7 +379,7 @@ exports[`<InlineNotification /> Score story renders snapshot 1`] = `
   class="inline-notification inline-notification--success"
 >
   <svg
-    class="icon inline-notification__icon inline-notification__icon-success"
+    class="icon inline-notification__icon inline-notification__icon--success"
     fill="currentColor"
     height="1.5rem"
     role="img"
@@ -80,7 +424,7 @@ exports[`<InlineNotification /> StrongVariants story renders snapshot 1`] = `
     class="inline-notification inline-notification--brand inline-notification--brand-strong"
   >
     <svg
-      class="icon inline-notification__icon inline-notification__icon-brand"
+      class="icon inline-notification__icon inline-notification__icon--brand"
       fill="currentColor"
       height="1.5rem"
       role="img"
@@ -107,7 +451,7 @@ exports[`<InlineNotification /> StrongVariants story renders snapshot 1`] = `
     class="inline-notification inline-notification--success inline-notification--success-strong"
   >
     <svg
-      class="icon inline-notification__icon inline-notification__icon-success"
+      class="icon inline-notification__icon inline-notification__icon--success"
       fill="currentColor"
       height="1.5rem"
       role="img"
@@ -134,7 +478,7 @@ exports[`<InlineNotification /> StrongVariants story renders snapshot 1`] = `
     class="inline-notification inline-notification--warning inline-notification--warning-strong"
   >
     <svg
-      class="icon inline-notification__icon inline-notification__icon-warning"
+      class="icon inline-notification__icon inline-notification__icon--warning"
       fill="currentColor"
       height="1.5rem"
       role="img"
@@ -161,7 +505,7 @@ exports[`<InlineNotification /> StrongVariants story renders snapshot 1`] = `
     class="inline-notification inline-notification--yield inline-notification--yield-strong"
   >
     <svg
-      class="icon inline-notification__icon inline-notification__icon-yield"
+      class="icon inline-notification__icon inline-notification__icon--yield"
       fill="currentColor"
       height="1.5rem"
       role="img"
@@ -195,7 +539,7 @@ exports[`<InlineNotification /> SubtleVariants story renders snapshot 1`] = `
     class="inline-notification inline-notification--brand"
   >
     <svg
-      class="icon inline-notification__icon inline-notification__icon-brand"
+      class="icon inline-notification__icon inline-notification__icon--brand"
       fill="currentColor"
       height="1.5rem"
       role="img"
@@ -222,7 +566,7 @@ exports[`<InlineNotification /> SubtleVariants story renders snapshot 1`] = `
     class="inline-notification inline-notification--success"
   >
     <svg
-      class="icon inline-notification__icon inline-notification__icon-success"
+      class="icon inline-notification__icon inline-notification__icon--success"
       fill="currentColor"
       height="1.5rem"
       role="img"
@@ -249,7 +593,7 @@ exports[`<InlineNotification /> SubtleVariants story renders snapshot 1`] = `
     class="inline-notification inline-notification--warning"
   >
     <svg
-      class="icon inline-notification__icon inline-notification__icon-warning"
+      class="icon inline-notification__icon inline-notification__icon--warning"
       fill="currentColor"
       height="1.5rem"
       role="img"
@@ -276,7 +620,7 @@ exports[`<InlineNotification /> SubtleVariants story renders snapshot 1`] = `
     class="inline-notification inline-notification--yield"
   >
     <svg
-      class="icon inline-notification__icon inline-notification__icon-yield"
+      class="icon inline-notification__icon inline-notification__icon--yield"
       fill="currentColor"
       height="1.5rem"
       role="img"
@@ -307,7 +651,7 @@ exports[`<InlineNotification /> Success story renders snapshot 1`] = `
   class="inline-notification inline-notification--success"
 >
   <svg
-    class="icon inline-notification__icon inline-notification__icon-success"
+    class="icon inline-notification__icon inline-notification__icon--success"
     fill="currentColor"
     height="1.5rem"
     role="img"
