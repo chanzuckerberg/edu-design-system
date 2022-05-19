@@ -143,7 +143,7 @@
 
 @define-mixin messagingBrand {
   --border-light-color: var(--eds-theme-color-border-brand-primary-subtle);
-  --border-dark-color: var(--eds-theme-color-icon-brand-primary);
+  --border-dark-color: var(--eds-theme-color-border-brand-primary-strong);
 
   background: var(--eds-theme-color-background-brand-primary-default);
   color: var(--eds-theme-color-text-brand-primary);
@@ -158,8 +158,8 @@
 }
 
 @define-mixin messagingSuccess {
-  --border-light-color: var(--eds-theme-color-border-utility-success-default);
-  --border-dark-color: var(--eds-theme-color-icon-utility-success);
+  --border-light-color: var(--eds-theme-color-border-utility-success-subtle);
+  --border-dark-color: var(--eds-theme-color-border-utility-success-default);
 
   background: var(--eds-theme-color-background-utility-success);
   color: var(--eds-theme-color-text-utility-success);
@@ -167,7 +167,7 @@
 
 @define-mixin messagingWarning {
   --border-light-color: var(--eds-theme-color-border-utility-warning-subtle);
-  --border-dark-color: var(--eds-theme-color-icon-utility-warning);
+  --border-dark-color: var(--eds-theme-color-border-utility-warning-strong);
 
   background: var(--eds-theme-color-background-utility-warning);
   color: var(--eds-theme-color-text-utility-warning);
@@ -179,4 +179,12 @@
 
   background: var(--eds-theme-color-background-utility-error);
   color: var(--eds-theme-color-text-utility-error);
+}
+
+@define-mixin messagingRevise {
+  --border-light-color: var(--eds-theme-color-border-grade-revise-subtle);
+  --border-dark-color: var(--eds-theme-color-border-grade-revise-strong);
+
+  background: var(--eds-theme-color-background-grade-revise-subtle);
+  color: var(--eds-theme-color-text-neutral-default);
 }

@@ -10,10 +10,8 @@
 .inline-notification {
   display: inline-flex;
   padding: var(--eds-size-half);
-  border: var(--eds-theme-border-width) solid;
+  border: var(--eds-theme-border-width) solid var(--border-dark-color);
   border-radius: var(--eds-theme-border-radius);
-
-  background-color: var(--eds-theme-color-background-neutral-default);
 }
 
 /**
@@ -33,56 +31,22 @@
 }
 
 /**
- * Full width variant of the inline notification.
- */
-.inline-notification--full-width {
-  display: flex;
-  border: 0;
-  background-color: var(--eds-theme-color-background-neutral-subtle);
-}
-
-/**
- * Inactive variant of the full width inline notification.
- * 1) Creates enough space to keep text in the same place.
- */
-.inline-notification__icon--inactive {
-  display: none;
-}
-.inline-notification__text--inactive {
-  padding-left: var(--eds-size-3); /* 1 */
-  color: var(--eds-theme-color-text-neutral-subtle);
-}
-
-/**
  * Color variants
  */
 .inline-notification--brand {
-  border-color: var(--eds-theme-color-border-brand-primary-strong);
+  @mixin messagingBrand;
 }
 .inline-notification--success {
-  border-color: var(--eds-theme-color-border-utility-success-default);
+  @mixin messagingSuccess;
 }
 .inline-notification--warning {
-  border-color: var(--eds-theme-color-border-utility-warning-strong);
+  @mixin messagingWarning;
 }
 .inline-notification--yield {
-  border-color: var(--eds-theme-color-border-grade-revise-strong);
+  @mixin messagingRevise;
 }
-
-/**
- * Strong color variants
- */
-.inline-notification--brand-strong {
-  background-color: var(--eds-theme-color-background-brand-primary-default);
-}
-.inline-notification--success-strong {
-  background-color: var(--eds-theme-color-background-grade-complete-subtle);
-}
-.inline-notification--warning-strong {
-  background-color: var(--eds-theme-color-background-utility-warning);
-}
-.inline-notification--yield-strong {
-  background-color: var(--eds-theme-color-background-grade-revise-subtle);
+.inline-notification--subtle {
+  background-color: var(--eds-theme-color-background-neutral-default);
 }
 
 /**
@@ -99,4 +63,26 @@
 }
 .inline-notification__icon--yield {
   fill: var(--eds-theme-color-background-grade-revise-default);
+}
+
+/**
+ * Full width variant of the inline notification.
+ */
+.inline-notification--full-width {
+  display: flex;
+  border: 0;
+}
+.inline-notification--full-width-subtle {
+  background-color: var(--eds-theme-color-background-neutral-subtle);
+}
+/**
+ * Inactive variant of the full width inline notification.
+ * 1) Creates enough space to keep text in the same place.
+ */
+.inline-notification__icon--inactive {
+  display: none;
+}
+.inline-notification__text--inactive {
+  padding-left: var(--eds-size-3); /* 1 */
+  color: var(--eds-theme-color-text-neutral-subtle);
 }

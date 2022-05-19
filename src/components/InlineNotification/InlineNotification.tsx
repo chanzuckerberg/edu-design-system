@@ -37,7 +37,9 @@ type Props = {
    */
   className?: string;
   /**
-   * Indicates inactive state for the full width variant. Overrides variant prop.
+   * Indicates an inactive state for the full width variant where the icon
+   * will be hidden and the text will be lighter.
+   * Overrides variant prop and isStrong prop as a result.
    * Only to be used with isFullWidth.
    */
   inactive?: boolean;
@@ -82,11 +84,15 @@ export const InlineNotification = ({
   if (!isFullWidth && inactive && process.env.NODE_ENV !== 'production') {
     throw new Error('inactive prop must be used with isFullWidth prop.');
   }
+  const subtle = !isStrong;
   const componentClassName = clsx(
     styles['inline-notification'],
     styles[`inline-notification--${variant}`],
-    !inactive && isStrong && styles[`inline-notification--${variant}-strong`],
+    subtle && styles['inline-notification--subtle'],
     isFullWidth && styles[`inline-notification--full-width`],
+    isFullWidth &&
+      (subtle || inactive) &&
+      styles[`inline-notification--full-width-subtle`],
     className,
   );
   const iconClassName = clsx(

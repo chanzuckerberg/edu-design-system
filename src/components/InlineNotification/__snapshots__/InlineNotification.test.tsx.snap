@@ -2,7 +2,7 @@
 
 exports[`<InlineNotification /> FullWidthLongText story renders snapshot 1`] = `
 <div
-  class="inline-notification inline-notification--success inline-notification--full-width"
+  class="inline-notification inline-notification--success inline-notification--subtle inline-notification--full-width inline-notification--full-width-subtle"
 >
   <svg
     class="icon inline-notification__icon inline-notification__icon--success"
@@ -35,7 +35,7 @@ exports[`<InlineNotification /> FullWidthStrongVariants story renders snapshot 1
   style="display: flex; flex-direction: column; gap: 0.25rem;"
 >
   <div
-    class="inline-notification inline-notification--brand inline-notification--brand-strong inline-notification--full-width"
+    class="inline-notification inline-notification--brand inline-notification--full-width"
   >
     <svg
       class="icon inline-notification__icon inline-notification__icon--brand"
@@ -62,7 +62,7 @@ exports[`<InlineNotification /> FullWidthStrongVariants story renders snapshot 1
     </span>
   </div>
   <div
-    class="inline-notification inline-notification--success inline-notification--success-strong inline-notification--full-width"
+    class="inline-notification inline-notification--success inline-notification--full-width"
   >
     <svg
       class="icon inline-notification__icon inline-notification__icon--success"
@@ -89,7 +89,7 @@ exports[`<InlineNotification /> FullWidthStrongVariants story renders snapshot 1
     </span>
   </div>
   <div
-    class="inline-notification inline-notification--warning inline-notification--warning-strong inline-notification--full-width"
+    class="inline-notification inline-notification--warning inline-notification--full-width"
   >
     <svg
       class="icon inline-notification__icon inline-notification__icon--warning"
@@ -116,7 +116,7 @@ exports[`<InlineNotification /> FullWidthStrongVariants story renders snapshot 1
     </span>
   </div>
   <div
-    class="inline-notification inline-notification--yield inline-notification--yield-strong inline-notification--full-width"
+    class="inline-notification inline-notification--yield inline-notification--full-width"
   >
     <svg
       class="icon inline-notification__icon inline-notification__icon--yield"
@@ -143,7 +143,7 @@ exports[`<InlineNotification /> FullWidthStrongVariants story renders snapshot 1
     </span>
   </div>
   <div
-    class="inline-notification inline-notification--success inline-notification--full-width"
+    class="inline-notification inline-notification--success inline-notification--full-width inline-notification--full-width-subtle"
   >
     <svg
       class="icon inline-notification__icon inline-notification__icon--success inline-notification__icon--inactive"
@@ -174,7 +174,7 @@ exports[`<InlineNotification /> FullWidthStrongVariants story renders snapshot 1
 
 exports[`<InlineNotification /> FullWidthSuccess story renders snapshot 1`] = `
 <div
-  class="inline-notification inline-notification--success inline-notification--full-width"
+  class="inline-notification inline-notification--success inline-notification--subtle inline-notification--full-width inline-notification--full-width-subtle"
 >
   <svg
     class="icon inline-notification__icon inline-notification__icon--success"
@@ -207,7 +207,7 @@ exports[`<InlineNotification /> FullWidthVariants story renders snapshot 1`] = `
   style="display: flex; flex-direction: column; gap: 0.25rem;"
 >
   <div
-    class="inline-notification inline-notification--brand inline-notification--full-width"
+    class="inline-notification inline-notification--brand inline-notification--subtle inline-notification--full-width inline-notification--full-width-subtle"
   >
     <svg
       class="icon inline-notification__icon inline-notification__icon--brand"
@@ -234,7 +234,7 @@ exports[`<InlineNotification /> FullWidthVariants story renders snapshot 1`] = `
     </span>
   </div>
   <div
-    class="inline-notification inline-notification--success inline-notification--full-width"
+    class="inline-notification inline-notification--success inline-notification--subtle inline-notification--full-width inline-notification--full-width-subtle"
   >
     <svg
       class="icon inline-notification__icon inline-notification__icon--success"
@@ -261,7 +261,7 @@ exports[`<InlineNotification /> FullWidthVariants story renders snapshot 1`] = `
     </span>
   </div>
   <div
-    class="inline-notification inline-notification--warning inline-notification--full-width"
+    class="inline-notification inline-notification--warning inline-notification--subtle inline-notification--full-width inline-notification--full-width-subtle"
   >
     <svg
       class="icon inline-notification__icon inline-notification__icon--warning"
@@ -288,7 +288,7 @@ exports[`<InlineNotification /> FullWidthVariants story renders snapshot 1`] = `
     </span>
   </div>
   <div
-    class="inline-notification inline-notification--yield inline-notification--full-width"
+    class="inline-notification inline-notification--yield inline-notification--subtle inline-notification--full-width inline-notification--full-width-subtle"
   >
     <svg
       class="icon inline-notification__icon inline-notification__icon--yield"
@@ -315,7 +315,7 @@ exports[`<InlineNotification /> FullWidthVariants story renders snapshot 1`] = `
     </span>
   </div>
   <div
-    class="inline-notification inline-notification--success inline-notification--full-width"
+    class="inline-notification inline-notification--success inline-notification--subtle inline-notification--full-width inline-notification--full-width-subtle"
   >
     <svg
       class="icon inline-notification__icon inline-notification__icon--success inline-notification__icon--inactive"
@@ -346,7 +346,7 @@ exports[`<InlineNotification /> FullWidthVariants story renders snapshot 1`] = `
 
 exports[`<InlineNotification /> LongText story renders snapshot 1`] = `
 <div
-  class="inline-notification inline-notification--success"
+  class="inline-notification inline-notification--success inline-notification--subtle"
 >
   <svg
     class="icon inline-notification__icon inline-notification__icon--success"
@@ -379,7 +379,7 @@ exports[`<InlineNotification /> StrongVariants story renders snapshot 1`] = `
   style="display: inline-flex; flex-direction: column; gap: 0.25rem;"
 >
   <div
-    class="inline-notification inline-notification--brand inline-notification--brand-strong"
+    class="inline-notification inline-notification--brand"
   >
     <svg
       class="icon inline-notification__icon inline-notification__icon--brand"
@@ -406,7 +406,7 @@ exports[`<InlineNotification /> StrongVariants story renders snapshot 1`] = `
     </span>
   </div>
   <div
-    class="inline-notification inline-notification--success inline-notification--success-strong"
+    class="inline-notification inline-notification--success"
   >
     <svg
       class="icon inline-notification__icon inline-notification__icon--success"
@@ -433,7 +433,7 @@ exports[`<InlineNotification /> StrongVariants story renders snapshot 1`] = `
     </span>
   </div>
   <div
-    class="inline-notification inline-notification--warning inline-notification--warning-strong"
+    class="inline-notification inline-notification--warning"
   >
     <svg
       class="icon inline-notification__icon inline-notification__icon--warning"
@@ -460,7 +460,7 @@ exports[`<InlineNotification /> StrongVariants story renders snapshot 1`] = `
     </span>
   </div>
   <div
-    class="inline-notification inline-notification--yield inline-notification--yield-strong"
+    class="inline-notification inline-notification--yield"
   >
     <svg
       class="icon inline-notification__icon inline-notification__icon--yield"
@@ -494,7 +494,7 @@ exports[`<InlineNotification /> SubtleVariants story renders snapshot 1`] = `
   style="display: inline-flex; flex-direction: column; gap: 0.25rem;"
 >
   <div
-    class="inline-notification inline-notification--brand"
+    class="inline-notification inline-notification--brand inline-notification--subtle"
   >
     <svg
       class="icon inline-notification__icon inline-notification__icon--brand"
@@ -521,7 +521,7 @@ exports[`<InlineNotification /> SubtleVariants story renders snapshot 1`] = `
     </span>
   </div>
   <div
-    class="inline-notification inline-notification--success"
+    class="inline-notification inline-notification--success inline-notification--subtle"
   >
     <svg
       class="icon inline-notification__icon inline-notification__icon--success"
@@ -548,7 +548,7 @@ exports[`<InlineNotification /> SubtleVariants story renders snapshot 1`] = `
     </span>
   </div>
   <div
-    class="inline-notification inline-notification--warning"
+    class="inline-notification inline-notification--warning inline-notification--subtle"
   >
     <svg
       class="icon inline-notification__icon inline-notification__icon--warning"
@@ -575,7 +575,7 @@ exports[`<InlineNotification /> SubtleVariants story renders snapshot 1`] = `
     </span>
   </div>
   <div
-    class="inline-notification inline-notification--yield"
+    class="inline-notification inline-notification--yield inline-notification--subtle"
   >
     <svg
       class="icon inline-notification__icon inline-notification__icon--yield"
@@ -606,7 +606,7 @@ exports[`<InlineNotification /> SubtleVariants story renders snapshot 1`] = `
 
 exports[`<InlineNotification /> Success story renders snapshot 1`] = `
 <div
-  class="inline-notification inline-notification--success"
+  class="inline-notification inline-notification--success inline-notification--subtle"
 >
   <svg
     class="icon inline-notification__icon inline-notification__icon--success"
