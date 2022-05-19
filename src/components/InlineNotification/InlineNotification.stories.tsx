@@ -38,8 +38,20 @@ export const LongText: StoryObj<Args> = {
   },
 };
 
+const getVariants = (optionalArgs: Omit<Args, 'text' | 'variant'> = {}) =>
+  VARIANTS.map((variant) => {
+    return (
+      <InlineNotification
+        key={variant}
+        {...optionalArgs}
+        text={`${variant} inline notification lorem ipsum`}
+        variant={variant}
+      />
+    );
+  });
+
 export const SubtleVariants: StoryObj<Args> = {
-  render: (args) => (
+  render: () => (
     <div
       style={{
         display: 'inline-flex',
@@ -47,22 +59,13 @@ export const SubtleVariants: StoryObj<Args> = {
         gap: '0.25rem',
       }}
     >
-      {VARIANTS.map((variant) => {
-        return (
-          <InlineNotification
-            key={variant}
-            {...args}
-            text={`${variant} inline notification lorem ipsum`}
-            variant={variant}
-          />
-        );
-      })}
+      {getVariants()}
     </div>
   ),
 };
 
 export const StrongVariants: StoryObj<Args> = {
-  render: (args) => (
+  render: () => (
     <div
       style={{
         display: 'inline-flex',
@@ -70,17 +73,61 @@ export const StrongVariants: StoryObj<Args> = {
         gap: '0.25rem',
       }}
     >
-      {VARIANTS.map((variant) => {
-        return (
-          <InlineNotification
-            {...args}
-            isStrong
-            key={variant}
-            text={`${variant} inline notification lorem ipsum`}
-            variant={variant}
-          />
-        );
-      })}
+      {getVariants({ isStrong: true })}
+    </div>
+  ),
+};
+
+export const FullWidthSuccess: StoryObj<Args> = {
+  args: {
+    isFullWidth: true,
+  },
+};
+
+export const FullWidthLongText: StoryObj<Args> = {
+  args: {
+    isFullWidth: true,
+    text: 'Long text inline notification. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  },
+};
+
+export const FullWidthVariants: StoryObj<Args> = {
+  render: () => (
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '0.25rem',
+      }}
+    >
+      {getVariants({ isFullWidth: true })}
+      <InlineNotification
+        inactive
+        isFullWidth
+        text="inactive inline notification lorem ipsum"
+        variant="success"
+      />
+    </div>
+  ),
+};
+
+export const FullWidthStrongVariants: StoryObj<Args> = {
+  render: () => (
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '0.25rem',
+      }}
+    >
+      {getVariants({ isFullWidth: true, isStrong: true })}
+      <InlineNotification
+        inactive
+        isFullWidth
+        isStrong
+        text="inactive inline notification lorem ipsum"
+        variant="success"
+      />
     </div>
   ),
 };

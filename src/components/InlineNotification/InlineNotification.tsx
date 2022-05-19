@@ -37,6 +37,11 @@ type Props = {
    */
   className?: string;
   /**
+   * Indicates inactive state for the full width variant. Overrides variant prop.
+   * Only to be used with isFullWidth.
+   */
+  inactive?: boolean;
+  /**
    * Toggles notification that fills the full width of its container.
    * Used for CardWithNotification recipe.
    */
@@ -48,7 +53,7 @@ type Props = {
   /**
    * The text contents of the tag, nested inside the component, in addition to the icon.
    */
-  text?: string;
+  text: React.ReactNode;
   /**
    * The score as a string to be appended after the text.
    */
@@ -71,6 +76,7 @@ type Props = {
  */
 export const InlineNotification = ({
   className,
+  inactive,
   isFullWidth,
   isStrong,
   score,
@@ -78,16 +84,24 @@ export const InlineNotification = ({
   variant,
   ...other
 }: Props) => {
+  if (!isFullWidth && inactive && process.env.NODE_ENV !== 'production') {
+    throw new Error('inactive prop must be used with isFullWidth prop.');
+  }
   const componentClassName = clsx(
     styles['inline-notification'],
     styles[`inline-notification--${variant}`],
+    !inactive && isStrong && styles[`inline-notification--${variant}-strong`],
     isFullWidth && styles[`inline-notification--full-width`],
-    isStrong && styles[`inline-notification--${variant}-strong`],
     className,
   );
   const iconClassName = clsx(
     styles['inline-notification__icon'],
-    styles[`inline-notification__icon-${variant}`],
+    styles[`inline-notification__icon--${variant}`],
+    inactive && styles[`inline-notification__icon--inactive`],
+  );
+  const textClassName = clsx(
+    isFullWidth && styles[`inline-notification__text--full-width`],
+    inactive && styles[`inline-notification__text--inactive`],
   );
   return (
     <div className={componentClassName} {...other}>
@@ -98,7 +112,11 @@ export const InlineNotification = ({
         size="1.5rem"
         title={variantToIconAssetsMap[variant].title}
       />
-      <Text as="span" variant={variant === 'yield' ? 'base' : variant}>
+      <Text
+        as="span"
+        className={textClassName}
+        variant={variant === 'yield' ? 'base' : variant}
+      >
         {text}
         {score && (
           <Text as="span" variant="base">

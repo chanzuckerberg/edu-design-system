@@ -180,7 +180,8 @@
       "base-unit": "var(--eds-size-base-unit)",
       "half": "var(--eds-size-half)",
       "1-and-half": "var(--eds-size-1-and-half)",
-      "2-and-half": "var(--eds-size-2-and-half)"
+      "2-and-half": "var(--eds-size-2-and-half)",
+      "3-and-half": "var(--eds-size-3-and-half)"
     },
     "font-family": {
       "primary": "var(--eds-font-family-primary)",

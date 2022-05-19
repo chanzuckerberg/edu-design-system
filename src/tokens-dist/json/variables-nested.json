@@ -180,7 +180,8 @@
       "base-unit": "0.5rem",
       "half": "0.25rem",
       "1-and-half": "0.75rem",
-      "2-and-half": "1.25rem"
+      "2-and-half": "1.25rem",
+      "3-and-half": "1.75rem"
     },
     "font-family": {
       "primary": "'Arimo', sans-serif",

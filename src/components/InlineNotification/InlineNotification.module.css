@@ -25,6 +25,26 @@
 }
 
 /**
+ * Full width variant of the inline notification.
+ */
+.inline-notification--full-width {
+  display: flex;
+  border: 0;
+  background-color: var(--eds-theme-color-background-neutral-subtle);
+}
+.inline-notification__text--full-width {
+  align-self: center;
+  @mixin eds-theme-typography-label-md-subtle;
+}
+.inline-notification__text--inactive {
+  padding-left: var(--eds-size-3-and-half);
+  color: var(--eds-theme-color-text-neutral-subtle);
+}
+.inline-notification__icon--inactive {
+  display: none;
+}
+
+/**
  * Color variants
  */
 .inline-notification--brand {
@@ -68,24 +88,15 @@
 /**
  * Icon color variants.
  */
-.inline-notification__icon-brand {
+.inline-notification__icon--brand {
   fill: var(--eds-theme-color-icon-brand-primary);
 }
-.inline-notification__icon-success {
+.inline-notification__icon--success {
   fill: var(--eds-theme-color-icon-utility-success);
 }
-.inline-notification__icon-warning {
+.inline-notification__icon--warning {
   fill: var(--eds-theme-color-icon-utility-warning);
 }
-.inline-notification__icon-yield {
+.inline-notification__icon--yield {
   fill: var(--eds-theme-color-background-grade-revise-default);
-}
-
-/**
- * Full width variant of the inline notification.
- */
-.inline-notification--full-width {
-  display: flex;
-  border: 0;
-  background-color: var(--eds-theme-color-background-neutral-subtle);
 }
