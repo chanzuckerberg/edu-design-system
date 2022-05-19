@@ -146,5 +146,5 @@
 }
 
 @define-mixin eds-theme-typography-body-text-xs-bold $important {
-  @mixin eds-typography-preset-007-bold $important;
+  @mixin eds-typography-preset-008-bold $important;
 }
