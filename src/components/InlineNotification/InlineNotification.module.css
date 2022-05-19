@@ -1,12 +1,91 @@
 @import '../../design-tokens/mixins.css';
 
 /*------------------------------------*\
-    #INLINENOTIFICATION
+    # INLINE NOTIFICATION
 \*------------------------------------*/
 
 /**
- * 1) 
+ * A messaging element that is used inline.
  */
 .inline-notification {
+  display: inline-flex;
+
+  gap: var(--eds-size-half);
+  padding-top: var(--eds-size-half);
+  padding-bottom: var(--eds-size-half);
+  padding-left: var(--eds-size-half);
+  padding-right: var(--eds-size-2);
+
   border: var(--eds-theme-border-width) solid;
+  border-radius: var(--eds-theme-border-radius);
+
+  background-color: var(--eds-theme-color-background-neutral-default);
+
+  @mixin eds-theme-typography-body-text-lg;
+}
+
+/**
+ * Color variants
+ */
+.inline-notification--brand {
+  border-color: var(--eds-theme-color-border-brand-primary-strong);
+}
+.inline-notification--success {
+  border-color: var(--eds-theme-color-border-utility-success-default);
+}
+.inline-notification--warning {
+  border-color: var(--eds-theme-color-border-utility-warning-strong);
+}
+.inline-notification--yield {
+  border-color: var(--eds-theme-color-border-grade-revise-strong);
+}
+
+/**
+ * Strong color variants
+ */
+.inline-notification--brand-strong {
+  background-color: var(--eds-theme-color-background-brand-primary-default);
+}
+.inline-notification--success-strong {
+  background-color: var(--eds-theme-color-background-grade-complete-subtle);
+}
+.inline-notification--warning-strong {
+  background-color: var(--eds-theme-color-background-utility-warning);
+}
+.inline-notification--yield-strong {
+  background-color: var(--eds-theme-color-background-grade-revise-subtle);
+}
+
+/**
+ * Icon that sits left of the notification text.
+ * 1) Retain icon original size and wrap text instead.
+ */
+.inline-notification__icon {
+  height: var(--eds-size-3);
+  flex-shrink: 0; /* 1 */
+}
+
+/**
+ * Icon color variants.
+ */
+.inline-notification__icon-brand {
+  fill: var(--eds-theme-color-icon-brand-primary);
+}
+.inline-notification__icon-success {
+  fill: var(--eds-theme-color-icon-utility-success);
+}
+.inline-notification__icon-warning {
+  fill: var(--eds-theme-color-icon-utility-warning);
+}
+.inline-notification__icon-yield {
+  fill: var(--eds-theme-color-background-grade-revise-default);
+}
+
+/**
+ * Full width variant of the inline notification.
+ */
+.inline-notification--full-width {
+  display: flex;
+  border: 0;
+  background-color: var(--eds-theme-color-background-neutral-subtle);
 }
