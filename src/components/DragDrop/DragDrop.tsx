@@ -44,13 +44,6 @@ export interface Props {
   containerHeader?: ReactNode;
 }
 
-// const dragDropContainerHeader = oneByType(children, DragDropContainerHeader);
-// const header = React.Children.map(dragDropContainerHeader, (child) => {
-//   return React.cloneElement(child, {
-//     dismissible: true,
-//   });
-// });
-
 /**
  * A flexible Drag and Drop component that allows items to be dragged and dropped in containers
  */
@@ -186,7 +179,7 @@ export const DragDrop = ({
     containerHeader,
     DragDropContainerHeader,
   );
-  const contHeader = React.Children.map(dragDropContainerHeader, (child) => {
+  const header = React.Children.map(dragDropContainerHeader, (child) => {
     return React.cloneElement(child);
   });
 
@@ -216,7 +209,7 @@ export const DragDrop = ({
                       className={styles['drag-drop--container-wrapper']}
                       key={containerId}
                     >
-                      {contHeader}
+                      {header}
                       <DragDropContainer
                         container={container}
                         dragByHandle={dragByHandle}

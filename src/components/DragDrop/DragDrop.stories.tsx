@@ -6,6 +6,7 @@ import { DragDrop, Props } from './DragDrop';
 import Toolbar from '../../upcoming-components/Toolbar';
 import Card from '../Card';
 import DragDropContainerHeader from '../DragDropContainerHeader';
+import DragDropItemHeader from '../DragDropItemHeader';
 import Heading from '../Heading';
 
 export default {
@@ -36,7 +37,33 @@ Default.args = {
   items: {
     'item-1': {
       title: 'Project #1',
-      children: <div className="fpo">Content here</div>,
+      children: (
+        <DragDropItemHeader>
+          <Toolbar>
+            <Heading as="h6" size="h6">
+              itemHeader as content of item
+            </Heading>
+          </Toolbar>
+        </DragDropItemHeader>
+      ),
+      itemHeader: (
+        <DragDropItemHeader>
+          <Toolbar>
+            <Heading as="h6" size="h6">
+              itemHeader at item level
+            </Heading>
+          </Toolbar>
+        </DragDropItemHeader>
+      ),
+      handle: (
+        <DragDropItemHeader>
+          <Toolbar>
+            <Heading as="h6" size="h6">
+              itemHeader as handle
+            </Heading>
+          </Toolbar>
+        </DragDropItemHeader>
+      ),
     },
     'item-2': {
       title: 'Project #2',
@@ -58,6 +85,15 @@ Default.args = {
   containers: {
     'container-1': {
       itemIds: ['item-1', 'item-2', 'item-3', 'item-4', 'item-5'],
+      containerHeader: (
+        <DragDropContainerHeader>
+          <Toolbar>
+            <Heading as="h6" size="h6">
+              containerHeader at container level
+            </Heading>
+          </Toolbar>
+        </DragDropContainerHeader>
+      ),
     },
     'container-2': {
       itemIds: [],
@@ -66,12 +102,14 @@ Default.args = {
   containerHeader: (
     <DragDropContainerHeader>
       <Toolbar>
-        <Heading as="h4" size="title-sm">
-          I am a heading inside a toolbar
+        <Heading as="h6" size="h6">
+          containerHeader at top level
         </Heading>
       </Toolbar>
     </DragDropContainerHeader>
   ),
+  unstyledItems: true,
+  dragByHandle: false,
 };
 
 export const MultipleContainers: StoryObj<Args> = {
