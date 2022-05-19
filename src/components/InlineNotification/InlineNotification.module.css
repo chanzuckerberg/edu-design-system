@@ -9,13 +9,7 @@
  */
 .inline-notification {
   display: inline-flex;
-
-  gap: var(--eds-size-half);
-  padding-top: var(--eds-size-half);
-  padding-bottom: var(--eds-size-half);
-  padding-left: var(--eds-size-half);
-  padding-right: var(--eds-size-2);
-
+  padding: var(--eds-size-half);
   border: var(--eds-theme-border-width) solid;
   border-radius: var(--eds-theme-border-radius);
 
@@ -25,17 +19,28 @@
 }
 
 /**
+ * Icon that sits left of the notification text.
+ * 1) Retain icon original size and wrap text instead.
+ */
+.inline-notification__icon {
+  flex-shrink: 0; /* 1 */
+}
+
+/**
+ * Text that sits right of the icon.
+ */
+.inline-notification__text {
+  margin: var(--eds-size-half);
+  @mixin eds-theme-typography-label-md-subtle;
+}
+
+/**
  * Full width variant of the inline notification.
- * 1) Only center align text since we want the icon in the top left corner.
  */
 .inline-notification--full-width {
   display: flex;
   border: 0;
   background-color: var(--eds-theme-color-background-neutral-subtle);
-}
-.inline-notification__text--full-width {
-  align-self: center; /* 1 */
-  @mixin eds-theme-typography-label-md-subtle;
 }
 
 /**
@@ -46,7 +51,7 @@
   display: none;
 }
 .inline-notification__text--inactive {
-  padding-left: var(--eds-size-3-and-half); /* 1 */
+  padding-left: var(--eds-size-3); /* 1 */
   color: var(--eds-theme-color-text-neutral-subtle);
 }
 
@@ -80,15 +85,6 @@
 }
 .inline-notification--yield-strong {
   background-color: var(--eds-theme-color-background-grade-revise-subtle);
-}
-
-/**
- * Icon that sits left of the notification text.
- * 1) Retain icon original size and wrap text instead.
- */
-.inline-notification__icon {
-  height: var(--eds-size-3);
-  flex-shrink: 0; /* 1 */
 }
 
 /**

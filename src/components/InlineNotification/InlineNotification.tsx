@@ -100,7 +100,7 @@ export const InlineNotification = ({
     inactive && styles[`inline-notification__icon--inactive`],
   );
   const textClassName = clsx(
-    isFullWidth && styles[`inline-notification__text--full-width`],
+    styles[`inline-notification__text`],
     inactive && styles[`inline-notification__text--inactive`],
   );
   return (
@@ -119,15 +119,8 @@ export const InlineNotification = ({
       >
         {text}
         {score && (
-          <Text as="span" variant="base">
-            {' '}
-            Score:
-          </Text>
-        )}
-        {score && (
-          <Text as="span" variant="base" weight="bold">
-            {' '}
-            {score}
+          <Text as="span" className={textClassName} variant="base">
+            Score: {score}
           </Text>
         )}
       </Text>
