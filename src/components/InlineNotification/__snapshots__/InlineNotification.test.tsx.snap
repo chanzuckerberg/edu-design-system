@@ -133,7 +133,7 @@ exports[`<InlineNotification /> FullWidthStrongVariants story renders snapshot 1
         review
       </title>
       <use
-        xlink:href="test-file-stub#error"
+        xlink:href="test-file-stub#yield"
       />
     </svg>
     <span
@@ -305,7 +305,7 @@ exports[`<InlineNotification /> FullWidthVariants story renders snapshot 1`] = `
         review
       </title>
       <use
-        xlink:href="test-file-stub#error"
+        xlink:href="test-file-stub#yield"
       />
     </svg>
     <span
@@ -477,7 +477,7 @@ exports[`<InlineNotification /> StrongVariants story renders snapshot 1`] = `
         review
       </title>
       <use
-        xlink:href="test-file-stub#error"
+        xlink:href="test-file-stub#yield"
       />
     </svg>
     <span
@@ -592,7 +592,7 @@ exports[`<InlineNotification /> SubtleVariants story renders snapshot 1`] = `
         review
       </title>
       <use
-        xlink:href="test-file-stub#error"
+        xlink:href="test-file-stub#yield"
       />
     </svg>
     <span

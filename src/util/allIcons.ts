@@ -118,4 +118,5 @@ export const ALL_ICONS = [
   'view-headline',
   'view-module',
   'warning',
+  'yield',
 ] as const;

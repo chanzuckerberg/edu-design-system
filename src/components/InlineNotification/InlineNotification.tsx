@@ -7,7 +7,7 @@ export const VARIANTS = ['brand', 'success', 'warning', 'yield'] as const;
 
 const variantToIconAssetsMap: {
   [key in 'brand' | 'success' | 'warning' | 'yield']: {
-    name: 'info' | 'check-circle' | 'warning' | 'error';
+    name: 'info' | 'check-circle' | 'warning' | 'yield';
     title: 'info' | 'success' | 'alert' | 'review';
   };
 } = {
@@ -24,7 +24,7 @@ const variantToIconAssetsMap: {
     title: 'alert',
   },
   yield: {
-    name: 'error',
+    name: 'yield',
     title: 'review',
   },
 };
