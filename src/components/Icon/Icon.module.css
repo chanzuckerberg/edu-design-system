@@ -26,3 +26,23 @@
 .icon--full-width {
   display: block;
 }
+
+.wrapper {
+  position: relative;
+  height: 16px;
+  width: 16px;
+}
+
+.blackBackground {
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 12px;
+  width: 12px;
+}
+
+.onBlackBackground {
+  position: absolute;
+}
