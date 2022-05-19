@@ -20,14 +20,6 @@
   @mixin eds-typography-preset-005-bold $important;
 }
 
-@define-mixin eds-theme-typography-body-sm $important {
-  @mixin eds-typography-preset-006-bold $important;
-}
-
-@define-mixin eds-theme-typography-body-xs $important {
-  @mixin eds-typography-preset-008-bold $important;
-}
-
 @define-mixin eds-theme-typography-label-lg-subtle $important {
   @mixin eds-typography-preset-005 $important;
 }
@@ -118,11 +110,11 @@
 }
 
 @define-mixin eds-theme-typography-heading-6 $important {
-  @mixin eds-theme-typography-body-sm $important;
+  @mixin eds-theme-typography-body-text-sm-bold $important;
 }
 
 @define-mixin eds-theme-typography-heading-7 $important {
-  @mixin eds-theme-typography-body-xs $important;
+  @mixin eds-theme-typography-body-text-xs-bold $important;
 }
 
 /**
