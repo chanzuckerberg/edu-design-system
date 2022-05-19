@@ -26,6 +26,7 @@
 
 /**
  * Full width variant of the inline notification.
+ * 1) Only center align text since we want the icon in the top left corner.
  */
 .inline-notification--full-width {
   display: flex;
@@ -33,15 +34,20 @@
   background-color: var(--eds-theme-color-background-neutral-subtle);
 }
 .inline-notification__text--full-width {
-  align-self: center;
+  align-self: center; /* 1 */
   @mixin eds-theme-typography-label-md-subtle;
 }
-.inline-notification__text--inactive {
-  padding-left: var(--eds-size-3-and-half);
-  color: var(--eds-theme-color-text-neutral-subtle);
-}
+
+/**
+ * Inactive variant of the full width inline notification.
+ * 1) Creates enough space to keep text in the same place.
+ */
 .inline-notification__icon--inactive {
   display: none;
+}
+.inline-notification__text--inactive {
+  padding-left: var(--eds-size-3-and-half); /* 1 */
+  color: var(--eds-theme-color-text-neutral-subtle);
 }
 
 /**
