@@ -2,8 +2,11 @@ import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import styles from './ButtonDropdown.module.css';
 import { DropdownMenu } from '../..';
-import { Button } from '../..';
-import { ESCAPE_KEYCODE } from '../../util/keycodes';
+import {
+  ESCAPE_KEYCODE,
+  TAB_KEYCODE,
+  SHIFT_TAB_KEYCODE,
+} from '../../util/keycodes';
 import type { ClickableStyleProps } from '../ClickableStyle';
 
 export interface Props {
@@ -36,9 +39,9 @@ export interface Props {
    */
   type?: 'button' | 'reset' | 'submit';
   /**
-   * Child node(s) that can be nested inside `Button`
+   * Dropdown trigger
    */
-  buttonChildren?: ReactNode;
+  dropdownMenuTrigger?: ReactNode;
   /**
    * Child node(s) that can be nested inside component
    */
@@ -55,7 +58,6 @@ export interface Props {
  * Contains the button and the dropdown
  */
 export const ButtonDropdown = ({
-  buttonChildren,
   fullWidth,
   buttonAriaLabel,
   buttonVariant,
@@ -63,6 +65,7 @@ export const ButtonDropdown = ({
   buttonSize,
   className,
   children,
+  dropdownMenuTrigger,
   ...other
 }: Props) => {
   /**
@@ -121,6 +124,7 @@ export const ButtonDropdown = ({
   function closePanel() {
     setIsActive(false); /* 1 */
 
+    console.log(buttonRef.current);
     setTimeout(() => {
       if (isActiveVar && buttonRef.current) {
         buttonRef.current.focus(); /* 2 */
@@ -145,6 +149,31 @@ export const ButtonDropdown = ({
     setIsActive(!isActiveVar);
   }
 
+  const dropdownMenuTriggerWithProps = React.Children.map(
+    dropdownMenuTrigger,
+    // TODO: improve `any` type
+    (child: any, i: number) => {
+      // Checking isValidElement is the safe way and avoids a typescript
+      // error too.
+      if (React.isValidElement(child)) {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-expect-error TODO: fix "No overload matches this call" error
+        return React.cloneElement<Props>(child, {
+          ref: buttonRef,
+          onClick: togglePanel,
+        });
+      }
+    },
+  );
+
+  const handleBlur = (event) => {
+    if (!event.currentTarget.contains(event.relatedTarget)) {
+      if (isActiveVar) {
+        closePanel();
+      }
+    }
+  };
+
   const componentClassName = clsx(
     styles['button-dropdown'],
     className,
@@ -156,22 +185,10 @@ export const ButtonDropdown = ({
       onKeyDown={(e) => handleKeyDown(e)}
       ref={ref}
       role="presentation"
+      onBlur={handleBlur}
       {...other}
     >
-      <Button
-        aria-expanded={isActiveVar ? true : false}
-        aria-label={buttonAriaLabel}
-        className={styles['button-dropdown__button']}
-        fullWidth={fullWidth}
-        onClick={togglePanel}
-        ref={buttonRef}
-        role="button"
-        size={buttonSize}
-        status={buttonStatus}
-        variant={buttonVariant}
-      >
-        {buttonChildren}
-      </Button>
+      {dropdownMenuTriggerWithProps}
       <DropdownMenu
         className={styles['button-dropdown__dropdown-menu']}
         isActive={isActiveVar}

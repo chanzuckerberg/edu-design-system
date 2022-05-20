@@ -3,6 +3,7 @@ import React from 'react';
 
 import { ButtonDropdown, Props } from './ButtonDropdown';
 import { DropdownMenuItem } from '../DropdownMenuItem/DropdownMenuItem';
+import { Button } from '../Button/Button';
 
 export default {
   title: 'Example/ButtonDropdown',
@@ -12,7 +13,10 @@ export default {
 const Template: Story<Props> = (args) => (
   <div style={{ width: '100%', display: 'flex' }}>
     <div style={{ marginLeft: 'auto' }}>
-      <ButtonDropdown {...args} buttonChildren="Button Dropdown">
+      <ButtonDropdown
+        {...args}
+        dropdownMenuTrigger={<Button>Open Dropdown</Button>}
+      >
         <DropdownMenuItem iconName="schedule" text="Item 1" />
         <DropdownMenuItem iconName="schedule" text="Item 2" />
         <DropdownMenuItem iconName="schedule" text="Item 3" />

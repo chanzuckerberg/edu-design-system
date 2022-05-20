@@ -44,20 +44,27 @@ export const DropdownMenu: React.FC<Props> = ({
     }, 1);
   }, [isActive]);
 
+  /**
+   * On KeyDown
+   * 1) Find active item. If there isn't one, do nothing on Keydown
+   * 2) Set active item, next item, and previous item.
+   * 3) If right or down arrow key keyed, focus on next item.
+   * 4) If left or up arrow key keyed, focus on the previous item.
+   */
   const onKeyDown = (e: KeyboardEvent<HTMLUListElement>) => {
-    let activeTab = null;
+    let activeItem = null;
 
     // TODO: improve `any` type
-    childRefs.current.map((item: any) => {
+    childRefs.current.map((item: HTMLLIElement) => {
       if (item.querySelector(':first-child') === document.activeElement) {
-        activeTab = item;
+        activeItem = item;
       }
       return item;
     });
 
-    if (!activeTab) return;
+    if (!activeItem) return;
 
-    const index = childRefs.current.indexOf(activeTab); /* 2 */
+    const index = childRefs.current.indexOf(activeItem); /* 2 */
     const next = index === childRefs.current.length - 1 ? 0 : index + 1; /* 2 */
 
     const prev = index === 0 ? childRefs.current.length - 1 : index - 1; /* 2 */
@@ -73,6 +80,14 @@ export const DropdownMenu: React.FC<Props> = ({
         .querySelector<HTMLButtonElement | HTMLAnchorElement>(':first-child')
         .focus();
     }
+
+    // if ([TAB_KEYCODE, SHIFT_TAB_KEYCODE].includes(e.key)) {
+    //   if (
+    //     childRefs.current.indexOf(activeItem) ===
+    //     childRefs.current.length - 1
+    //   ) {
+    //   }
+    // }
   };
 
   const childrenWithProps = React.Children.map(
@@ -85,7 +100,7 @@ export const DropdownMenu: React.FC<Props> = ({
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-expect-error TODO: fix "No overload matches this call" error
         return React.cloneElement<Props>(child, {
-          ref: (el) => (childRefs.current[i] = el),
+          ref: (el: HTMLLIElement) => (childRefs.current[i] = el),
         });
       }
     },

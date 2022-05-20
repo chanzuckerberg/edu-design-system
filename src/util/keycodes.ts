@@ -1,4 +1,5 @@
 export const TAB_KEYCODE = 'Tab';
+export const SHIFT_TAB_KEYCODE = 'ShiftTab';
 export const ENTER_KEYCODE = 'Enter';
 export const L_SHIFT_KEYCODE = 'ShiftLeft';
 export const R_SHIFT_KEYCODE = 'ShiftRight';

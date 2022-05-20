@@ -73,11 +73,17 @@ export const ProjectCard = ({ className, title, meta, ...other }: Props) => {
       </CardBody>
       <CardFooter className={styles['project-card__footer']}>
         <ButtonDropdown
-          buttonAriaLabel="Open project dropdown"
-          buttonChildren={<Icon name="dots-vertical" purpose="decorative" />}
-          buttonSize="sm"
-          buttonStatus="neutral"
-          buttonVariant="icon"
+          dropdownMenuTrigger={
+            <Button
+              className={styles['project-card__menu-button']}
+              aria-label="Open project dropdown"
+              size="sm"
+              status="neutral"
+              variant="icon"
+            >
+              <Icon name="dots-vertical" purpose="decorative" />
+            </Button>
+          }
           className={styles['project-card__button-dropdown']}
         >
           <DropdownMenuItem iconName="schedule" text="Move to other section" />
