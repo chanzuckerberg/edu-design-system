@@ -109,7 +109,11 @@ export const DropdownMenu: React.FC<Props> = ({
   const componentClassName = clsx(styles['dropdown-menu'], className);
   return (
     <div className={componentClassName} {...other}>
-      <ul className={styles['dropdown-menu__list']} onKeyDown={onKeyDown}>
+      <ul
+        className={styles['dropdown-menu__list']}
+        onKeyDown={onKeyDown}
+        role="presentation"
+      >
         {childrenWithProps}
       </ul>
     </div>

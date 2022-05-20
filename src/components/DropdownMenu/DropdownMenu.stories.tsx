@@ -3,6 +3,7 @@ import React from 'react';
 
 import { DropdownMenu, Props } from './DropdownMenu';
 import { DropdownMenuItem } from '../DropdownMenuItem/DropdownMenuItem';
+import { Icon } from '../Icon/Icon';
 
 export default {
   title: 'Molecules/Navigation/DropdownMenu',
@@ -11,10 +12,16 @@ export default {
 
 const Template: Story<Props> = (args) => (
   <DropdownMenu>
-    <DropdownMenuItem text="Item 1" variant="lined" />
-    <DropdownMenuItem text="Item 2" />
-    <DropdownMenuItem text="Longer item 3" />
-    <DropdownMenuItem href="#" text="Item 4 with link" />
+    <DropdownMenuItem onClick={() => console.log('Item 1')}>
+      Item 1
+    </DropdownMenuItem>
+    <DropdownMenuItem onClick={() => console.log('Item 2')}>
+      Item 2
+    </DropdownMenuItem>
+    <DropdownMenuItem onClick={() => console.log('Item 3')} variant="lined">
+      Item 3
+    </DropdownMenuItem>
+    <DropdownMenuItem href="#">Item 4</DropdownMenuItem>
   </DropdownMenu>
 );
 
@@ -23,9 +30,21 @@ Default.args = {};
 
 export const WithIcons = () => (
   <DropdownMenu>
-    <DropdownMenuItem iconName="schedule" text="Dropdown menu item" />
-    <DropdownMenuItem iconName="schedule" text="Dropdown menu item" />
-    <DropdownMenuItem iconName="schedule" text="Dropdown menu item" />
-    <DropdownMenuItem iconName="schedule" text="Dropdown menu item" />
+    <DropdownMenuItem>
+      <Icon name="schedule" purpose="decorative" size="1.25rem" />
+      Item 1
+    </DropdownMenuItem>
+    <DropdownMenuItem>
+      <Icon name="schedule" purpose="decorative" size="1.25rem" />
+      Item 2
+    </DropdownMenuItem>
+    <DropdownMenuItem>
+      <Icon name="schedule" purpose="decorative" size="1.25rem" />
+      Item 3
+    </DropdownMenuItem>
+    <DropdownMenuItem>
+      <Icon name="schedule" purpose="decorative" size="1.25rem" />
+      Item 4
+    </DropdownMenuItem>
   </DropdownMenu>
 );

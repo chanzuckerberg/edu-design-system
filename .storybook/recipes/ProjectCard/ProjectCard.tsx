@@ -10,7 +10,6 @@ import {
   Heading,
   Icon,
   Button,
-  Dropdown,
   NumberIcon,
   ButtonDropdown,
   DropdownMenuItem,
@@ -73,10 +72,11 @@ export const ProjectCard = ({ className, title, meta, ...other }: Props) => {
       </CardBody>
       <CardFooter className={styles['project-card__footer']}>
         <ButtonDropdown
+          className={styles['project-card__button-dropdown']}
           dropdownMenuTrigger={
             <Button
-              className={styles['project-card__menu-button']}
               aria-label="Open project dropdown"
+              className={styles['project-card__menu-button']}
               size="sm"
               status="neutral"
               variant="icon"
@@ -84,12 +84,23 @@ export const ProjectCard = ({ className, title, meta, ...other }: Props) => {
               <Icon name="dots-vertical" purpose="decorative" />
             </Button>
           }
-          className={styles['project-card__button-dropdown']}
         >
-          <DropdownMenuItem iconName="schedule" text="Move to other section" />
-          <DropdownMenuItem iconName="schedule" text="Move up" />
-          <DropdownMenuItem iconName="schedule" text="Move down" />
-          <DropdownMenuItem iconName="schedule" text="Move view details" />
+          <DropdownMenuItem>
+            <Icon name="schedule" purpose="decorative" size="1.25rem" />
+            Move to other section
+          </DropdownMenuItem>
+          <DropdownMenuItem>
+            <Icon name="schedule" purpose="decorative" size="1.25rem" />
+            Move up
+          </DropdownMenuItem>
+          <DropdownMenuItem>
+            <Icon name="schedule" purpose="decorative" size="1.25rem" />
+            Move down
+          </DropdownMenuItem>
+          <DropdownMenuItem>
+            <Icon name="schedule" purpose="decorative" size="1.25rem" />
+            Move view details
+          </DropdownMenuItem>
         </ButtonDropdown>
       </CardFooter>
     </Card>

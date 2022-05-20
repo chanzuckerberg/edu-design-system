@@ -16,13 +16,13 @@ export interface Props {
    */
   align?: 'top-left';
   /**
-   * Icon name
-   */
-  iconName?: IconName;
-  /**
    * CSS class names that can be appended to the component.
    */
   className?: string;
+  /**
+   * Child node(s) that can be nested inside component
+   */
+  children?: ReactNode;
   /**
    * URL or a URL fragment string that the hyperlink points to
    */
@@ -30,11 +30,11 @@ export interface Props {
   /**
    * On click handler for component
    */
-  onHover?: MouseEventHandler;
+  onClick?: () => void;
   /**
-   * Item text
+   * On hover handler for component
    */
-  text?: string;
+  onHover?: MouseEventHandler;
   /**
    * Stylistic variations of the GridL
    * - **lined** yields a dropdown item with a border bottom
@@ -46,53 +46,7 @@ export interface Props {
  * Primary UI component for user interaction
  */
 export const DropdownMenuItem = React.forwardRef<HTMLLIElement, Props>(
-  (
-    { align, className, href, children, iconName, text, variant, ...other },
-    ref,
-  ) => {
-    const [isActive, setIsActive] = useState(false);
-
-    /**
-     * Toggle active state
-     * 1) Used for click handlers
-     */
-    const handleClick = () => {
-      if (isActive === true) {
-        closeDropdown();
-      } else {
-        openDropdown();
-      }
-    };
-
-    /**
-     * Open dropdown
-     * 1) Used for hover and arrow key strike states to active dropdown item
-     */
-    const openDropdown = () => {
-      setIsActive(true);
-    };
-
-    /**
-     * Close dropdown
-     * 1) Used for mouseleave and escape key strike to close dropdown
-     */
-    const closeDropdown = () => {
-      setIsActive(false);
-    };
-
-    /**
-     * Handle onKeyDown
-     * 1) If escape button is struck, close the modal
-     */
-    function handleOnKeyDown(e: KeyboardEvent<HTMLLIElement>) {
-      if (e.code === ESCAPE_KEYCODE) {
-        closeDropdown(); /* 1 */
-      }
-      if (e.code === R_ARROW_KEYCODE) {
-        openDropdown();
-      }
-    }
-
+  ({ align, className, href, children, variant, onClick, ...other }, ref) => {
     const TagName = createTagName();
 
     function createTagName() {
@@ -108,35 +62,25 @@ export const DropdownMenuItem = React.forwardRef<HTMLLIElement, Props>(
       className,
       align === 'top-left' && styles['dropdown-menu__item--align-top-left'],
       variant === 'lined' && styles['dropdown-menu__item--lined'],
-      children && isActive === true && styles['eds-is-active'],
     );
 
     return (
       <li
         className={componentClassName}
         {...other}
-        onKeyDown={handleOnKeyDown}
-        role="presentation"
         ref={ref}
+        role="presentation"
       >
         <TagName
           className={styles['dropdown-menu__link']}
           href={href}
-          onClick={handleClick}
-          onMouseEnter={openDropdown}
-          onMouseLeave={closeDropdown}
+          onClick={onClick}
         >
-          {iconName && (
-            <Icon
-              className={styles['dropdown-menu__icon']}
-              name={iconName}
-              purpose="decorative"
-              size="1.25rem"
-            />
-          )}
-          <span className={styles['dropdown-menu__text']}>{text}</span>
+          {children}
         </TagName>
       </li>
     );
   },
 );
+
+DropdownMenuItem.displayName = 'DropdownMenuItem';

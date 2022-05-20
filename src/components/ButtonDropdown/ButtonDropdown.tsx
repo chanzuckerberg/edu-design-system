@@ -182,10 +182,10 @@ export const ButtonDropdown = ({
   return (
     <div
       className={componentClassName}
+      onBlur={handleBlur}
       onKeyDown={(e) => handleKeyDown(e)}
       ref={ref}
       role="presentation"
-      onBlur={handleBlur}
       {...other}
     >
       {dropdownMenuTriggerWithProps}

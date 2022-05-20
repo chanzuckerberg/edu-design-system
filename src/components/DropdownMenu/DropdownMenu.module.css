@@ -58,7 +58,9 @@
  */
 .dropdown-menu__link {
   @mixin eds-theme-typography-body-text-sm;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--eds-size-1);
   appearance: none;
   background: none;
   text-decoration: none;
@@ -86,27 +88,4 @@
   .dropdown-menu__item--lined & {
     border-bottom: 1px solid var(--eds-theme-color-border-neutral-subtle);
   }
-
-  /**
-  * Dropdown link within active dropdown item
-  */
-  .dropdown-menu__item.eds-is-active > & {
-    background: var(--eds-theme-color-background-neutral-subtle);
-
-    /**
-    * Hover/focus states for active dropdown item links
-    */
-    &:hover,
-    &:focus {
-      background: var(--eds-theme-color-background-brand-primary-strong);
-      color: var(--eds-theme-color-text-neutral-default-inverse);
-    }
-  }
-}
-
-/**
-* Dropdown item icon
-*/
-.dropdown-menu__icon {
-  margin-right: var(--eds-size-1);
 }

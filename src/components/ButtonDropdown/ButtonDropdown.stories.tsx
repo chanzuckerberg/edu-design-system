@@ -2,8 +2,9 @@ import { Story, Meta } from '@storybook/react';
 import React from 'react';
 
 import { ButtonDropdown, Props } from './ButtonDropdown';
-import { DropdownMenuItem } from '../DropdownMenuItem/DropdownMenuItem';
 import { Button } from '../Button/Button';
+import { DropdownMenuItem } from '../DropdownMenuItem/DropdownMenuItem';
+import { Icon } from '../Icon/Icon';
 
 export default {
   title: 'Example/ButtonDropdown',
@@ -17,10 +18,22 @@ const Template: Story<Props> = (args) => (
         {...args}
         dropdownMenuTrigger={<Button>Open Dropdown</Button>}
       >
-        <DropdownMenuItem iconName="schedule" text="Item 1" />
-        <DropdownMenuItem iconName="schedule" text="Item 2" />
-        <DropdownMenuItem iconName="schedule" text="Item 3" />
-        <DropdownMenuItem iconName="schedule" text="Item 4" />
+        <DropdownMenuItem>
+          <Icon name="schedule" purpose="decorative" size="1.25rem" />
+          Item 1
+        </DropdownMenuItem>
+        <DropdownMenuItem>
+          <Icon name="schedule" purpose="decorative" size="1.25rem" />
+          Item 2
+        </DropdownMenuItem>
+        <DropdownMenuItem>
+          <Icon name="schedule" purpose="decorative" size="1.25rem" />
+          Item 3
+        </DropdownMenuItem>
+        <DropdownMenuItem>
+          <Icon name="schedule" purpose="decorative" size="1.25rem" />
+          Item 4
+        </DropdownMenuItem>
       </ButtonDropdown>
     </div>
   </div>
