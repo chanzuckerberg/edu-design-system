@@ -324,6 +324,9 @@ $eds-theme-color-button-secondary-error-text-active: #FFFFFF !default;
 $eds-theme-color-button-secondary-error-icon: #D41E52 !default;
 $eds-theme-color-button-secondary-error-icon-hover: #FFFFFF !default;
 $eds-theme-color-button-secondary-error-icon-active: #FFFFFF !default;
+$eds-theme-color-button-icon-brand: #574EFF !default;
+$eds-theme-color-button-icon-brand-hover: #574EFF !default;
+$eds-theme-color-button-icon-brand-active: #FFFFFF !default;
 $eds-theme-color-button-icon-brand-background: rgba(0, 0, 0, 0) !default;
 $eds-theme-color-button-icon-brand-background-hover: #C3C0FE !default;
 $eds-theme-color-button-icon-brand-background-active: #433BDE !default;
@@ -333,9 +336,9 @@ $eds-theme-color-button-icon-brand-border-active: #433BDE !default;
 $eds-theme-color-button-icon-brand-text: #433BDE !default;
 $eds-theme-color-button-icon-brand-text-hover: #433BDE !default;
 $eds-theme-color-button-icon-brand-text-active: #FFFFFF !default;
-$eds-theme-color-button-icon-brand-icon: #574EFF !default;
-$eds-theme-color-button-icon-brand-icon-hover: #574EFF !default;
-$eds-theme-color-button-icon-brand-icon-active: #FFFFFF !default;
+$eds-theme-color-button-icon-neutral: #3C444C !default;
+$eds-theme-color-button-icon-neutral-hover: #3C444C !default;
+$eds-theme-color-button-icon-neutral-active: #FFFFFF !default;
 $eds-theme-color-button-icon-neutral-background: rgba(0, 0, 0, 0) !default;
 $eds-theme-color-button-icon-neutral-background-hover: #E8E8E9 !default;
 $eds-theme-color-button-icon-neutral-background-active: #3C444C !default;
@@ -345,9 +348,9 @@ $eds-theme-color-button-icon-neutral-border-active: #3C444C !default;
 $eds-theme-color-button-icon-neutral-text: #3C444C !default;
 $eds-theme-color-button-icon-neutral-text-hover: #3C444C !default;
 $eds-theme-color-button-icon-neutral-text-active: #FFFFFF !default;
-$eds-theme-color-button-icon-neutral-icon: #3C444C !default;
-$eds-theme-color-button-icon-neutral-icon-hover: #3C444C !default;
-$eds-theme-color-button-icon-neutral-icon-active: #FFFFFF !default;
+$eds-theme-color-button-icon-success: #008756 !default;
+$eds-theme-color-button-icon-success-hover: #008756 !default;
+$eds-theme-color-button-icon-success-active: #FFFFFF !default;
 $eds-theme-color-button-icon-success-background: rgba(0, 0, 0, 0) !default;
 $eds-theme-color-button-icon-success-background-hover: #B7E9CE !default;
 $eds-theme-color-button-icon-success-background-active: #007349 !default;
@@ -357,9 +360,9 @@ $eds-theme-color-button-icon-success-border-active: #007349 !default;
 $eds-theme-color-button-icon-success-text: #007349 !default;
 $eds-theme-color-button-icon-success-text-hover: #007349 !default;
 $eds-theme-color-button-icon-success-text-active: #FFFFFF !default;
-$eds-theme-color-button-icon-success-icon: #008756 !default;
-$eds-theme-color-button-icon-success-icon-hover: #008756 !default;
-$eds-theme-color-button-icon-success-icon-active: #FFFFFF !default;
+$eds-theme-color-button-icon-warning: #C64600 !default;
+$eds-theme-color-button-icon-warning-hover: #C64600 !default;
+$eds-theme-color-button-icon-warning-active: #FFFFFF !default;
 $eds-theme-color-button-icon-warning-background: rgba(0, 0, 0, 0) !default;
 $eds-theme-color-button-icon-warning-background-hover: #FFF1E9 !default;
 $eds-theme-color-button-icon-warning-background-active: #AC3400 !default;
@@ -369,9 +372,9 @@ $eds-theme-color-button-icon-warning-border-active: #AC3400 !default;
 $eds-theme-color-button-icon-warning-text: #AC3400 !default;
 $eds-theme-color-button-icon-warning-text-hover: #AC3400 !default;
 $eds-theme-color-button-icon-warning-text-active: #FFFFFF !default;
-$eds-theme-color-button-icon-warning-icon: #C64600 !default;
-$eds-theme-color-button-icon-warning-icon-hover: #C64600 !default;
-$eds-theme-color-button-icon-warning-icon-active: #FFFFFF !default;
+$eds-theme-color-button-icon-error: #D41E52 !default;
+$eds-theme-color-button-icon-error-hover: #D41E52 !default;
+$eds-theme-color-button-icon-error-active: #FFFFFF !default;
 $eds-theme-color-button-icon-error-background: rgba(0, 0, 0, 0) !default;
 $eds-theme-color-button-icon-error-background-hover: #FFCCD8 !default;
 $eds-theme-color-button-icon-error-background-active: #BD0044 !default;
@@ -381,9 +384,6 @@ $eds-theme-color-button-icon-error-border-active: #BD0044 !default;
 $eds-theme-color-button-icon-error-text: #BD0044 !default;
 $eds-theme-color-button-icon-error-text-hover: #BD0044 !default;
 $eds-theme-color-button-icon-error-text-active: #FFFFFF !default;
-$eds-theme-color-button-icon-error-icon: #D41E52 !default;
-$eds-theme-color-button-icon-error-icon-hover: #D41E52 !default;
-$eds-theme-color-button-icon-error-icon-active: #FFFFFF !default;
 $eds-theme-color-button-link-brand: #433BDE !default;
 $eds-theme-color-button-link-brand-hover: #312B9E !default;
 $eds-theme-color-button-link-brand-active: #312B9E !default;
@@ -1016,6 +1016,9 @@ $tokens: (
           ),
           'icon': (
             'brand': (
+              '@': $eds-theme-color-button-icon-brand,
+              'hover': $eds-theme-color-button-icon-brand-hover,
+              'active': $eds-theme-color-button-icon-brand-active,
               'background': (
                 '@': $eds-theme-color-button-icon-brand-background,
                 'hover': $eds-theme-color-button-icon-brand-background-hover,
@@ -1030,14 +1033,12 @@ $tokens: (
                 '@': $eds-theme-color-button-icon-brand-text,
                 'hover': $eds-theme-color-button-icon-brand-text-hover,
                 'active': $eds-theme-color-button-icon-brand-text-active
-              ),
-              'icon': (
-                '@': $eds-theme-color-button-icon-brand-icon,
-                'hover': $eds-theme-color-button-icon-brand-icon-hover,
-                'active': $eds-theme-color-button-icon-brand-icon-active
               )
             ),
             'neutral': (
+              '@': $eds-theme-color-button-icon-neutral,
+              'hover': $eds-theme-color-button-icon-neutral-hover,
+              'active': $eds-theme-color-button-icon-neutral-active,
               'background': (
                 '@': $eds-theme-color-button-icon-neutral-background,
                 'hover': $eds-theme-color-button-icon-neutral-background-hover,
@@ -1052,14 +1053,12 @@ $tokens: (
                 '@': $eds-theme-color-button-icon-neutral-text,
                 'hover': $eds-theme-color-button-icon-neutral-text-hover,
                 'active': $eds-theme-color-button-icon-neutral-text-active
-              ),
-              'icon': (
-                '@': $eds-theme-color-button-icon-neutral-icon,
-                'hover': $eds-theme-color-button-icon-neutral-icon-hover,
-                'active': $eds-theme-color-button-icon-neutral-icon-active
               )
             ),
             'success': (
+              '@': $eds-theme-color-button-icon-success,
+              'hover': $eds-theme-color-button-icon-success-hover,
+              'active': $eds-theme-color-button-icon-success-active,
               'background': (
                 '@': $eds-theme-color-button-icon-success-background,
                 'hover': $eds-theme-color-button-icon-success-background-hover,
@@ -1074,14 +1073,12 @@ $tokens: (
                 '@': $eds-theme-color-button-icon-success-text,
                 'hover': $eds-theme-color-button-icon-success-text-hover,
                 'active': $eds-theme-color-button-icon-success-text-active
-              ),
-              'icon': (
-                '@': $eds-theme-color-button-icon-success-icon,
-                'hover': $eds-theme-color-button-icon-success-icon-hover,
-                'active': $eds-theme-color-button-icon-success-icon-active
               )
             ),
             'warning': (
+              '@': $eds-theme-color-button-icon-warning,
+              'hover': $eds-theme-color-button-icon-warning-hover,
+              'active': $eds-theme-color-button-icon-warning-active,
               'background': (
                 '@': $eds-theme-color-button-icon-warning-background,
                 'hover': $eds-theme-color-button-icon-warning-background-hover,
@@ -1096,14 +1093,12 @@ $tokens: (
                 '@': $eds-theme-color-button-icon-warning-text,
                 'hover': $eds-theme-color-button-icon-warning-text-hover,
                 'active': $eds-theme-color-button-icon-warning-text-active
-              ),
-              'icon': (
-                '@': $eds-theme-color-button-icon-warning-icon,
-                'hover': $eds-theme-color-button-icon-warning-icon-hover,
-                'active': $eds-theme-color-button-icon-warning-icon-active
               )
             ),
             'error': (
+              '@': $eds-theme-color-button-icon-error,
+              'hover': $eds-theme-color-button-icon-error-hover,
+              'active': $eds-theme-color-button-icon-error-active,
               'background': (
                 '@': $eds-theme-color-button-icon-error-background,
                 'hover': $eds-theme-color-button-icon-error-background-hover,
@@ -1118,11 +1113,6 @@ $tokens: (
                 '@': $eds-theme-color-button-icon-error-text,
                 'hover': $eds-theme-color-button-icon-error-text-hover,
                 'active': $eds-theme-color-button-icon-error-text-active
-              ),
-              'icon': (
-                '@': $eds-theme-color-button-icon-error-icon,
-                'hover': $eds-theme-color-button-icon-error-icon-hover,
-                'active': $eds-theme-color-button-icon-error-icon-active
               )
             )
           ),

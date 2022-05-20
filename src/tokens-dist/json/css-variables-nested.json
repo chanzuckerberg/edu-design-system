@@ -574,6 +574,9 @@
           },
           "icon": {
             "brand": {
+              "@": "var(--eds-theme-color-button-icon-brand)",
+              "hover": "var(--eds-theme-color-button-icon-brand-hover)",
+              "active": "var(--eds-theme-color-button-icon-brand-active)",
               "background": {
                 "@": "var(--eds-theme-color-button-icon-brand-background)",
                 "hover": "var(--eds-theme-color-button-icon-brand-background-hover)",
@@ -588,14 +591,12 @@
                 "@": "var(--eds-theme-color-button-icon-brand-text)",
                 "hover": "var(--eds-theme-color-button-icon-brand-text-hover)",
                 "active": "var(--eds-theme-color-button-icon-brand-text-active)"
-              },
-              "icon": {
-                "@": "var(--eds-theme-color-button-icon-brand-icon)",
-                "hover": "var(--eds-theme-color-button-icon-brand-icon-hover)",
-                "active": "var(--eds-theme-color-button-icon-brand-icon-active)"
               }
             },
             "neutral": {
+              "@": "var(--eds-theme-color-button-icon-neutral)",
+              "hover": "var(--eds-theme-color-button-icon-neutral-hover)",
+              "active": "var(--eds-theme-color-button-icon-neutral-active)",
               "background": {
                 "@": "var(--eds-theme-color-button-icon-neutral-background)",
                 "hover": "var(--eds-theme-color-button-icon-neutral-background-hover)",
@@ -610,14 +611,12 @@
                 "@": "var(--eds-theme-color-button-icon-neutral-text)",
                 "hover": "var(--eds-theme-color-button-icon-neutral-text-hover)",
                 "active": "var(--eds-theme-color-button-icon-neutral-text-active)"
-              },
-              "icon": {
-                "@": "var(--eds-theme-color-button-icon-neutral-icon)",
-                "hover": "var(--eds-theme-color-button-icon-neutral-icon-hover)",
-                "active": "var(--eds-theme-color-button-icon-neutral-icon-active)"
               }
             },
             "success": {
+              "@": "var(--eds-theme-color-button-icon-success)",
+              "hover": "var(--eds-theme-color-button-icon-success-hover)",
+              "active": "var(--eds-theme-color-button-icon-success-active)",
               "background": {
                 "@": "var(--eds-theme-color-button-icon-success-background)",
                 "hover": "var(--eds-theme-color-button-icon-success-background-hover)",
@@ -632,14 +631,12 @@
                 "@": "var(--eds-theme-color-button-icon-success-text)",
                 "hover": "var(--eds-theme-color-button-icon-success-text-hover)",
                 "active": "var(--eds-theme-color-button-icon-success-text-active)"
-              },
-              "icon": {
-                "@": "var(--eds-theme-color-button-icon-success-icon)",
-                "hover": "var(--eds-theme-color-button-icon-success-icon-hover)",
-                "active": "var(--eds-theme-color-button-icon-success-icon-active)"
               }
             },
             "warning": {
+              "@": "var(--eds-theme-color-button-icon-warning)",
+              "hover": "var(--eds-theme-color-button-icon-warning-hover)",
+              "active": "var(--eds-theme-color-button-icon-warning-active)",
               "background": {
                 "@": "var(--eds-theme-color-button-icon-warning-background)",
                 "hover": "var(--eds-theme-color-button-icon-warning-background-hover)",
@@ -654,14 +651,12 @@
                 "@": "var(--eds-theme-color-button-icon-warning-text)",
                 "hover": "var(--eds-theme-color-button-icon-warning-text-hover)",
                 "active": "var(--eds-theme-color-button-icon-warning-text-active)"
-              },
-              "icon": {
-                "@": "var(--eds-theme-color-button-icon-warning-icon)",
-                "hover": "var(--eds-theme-color-button-icon-warning-icon-hover)",
-                "active": "var(--eds-theme-color-button-icon-warning-icon-active)"
               }
             },
             "error": {
+              "@": "var(--eds-theme-color-button-icon-error)",
+              "hover": "var(--eds-theme-color-button-icon-error-hover)",
+              "active": "var(--eds-theme-color-button-icon-error-active)",
               "background": {
                 "@": "var(--eds-theme-color-button-icon-error-background)",
                 "hover": "var(--eds-theme-color-button-icon-error-background-hover)",
@@ -676,11 +671,6 @@
                 "@": "var(--eds-theme-color-button-icon-error-text)",
                 "hover": "var(--eds-theme-color-button-icon-error-text-hover)",
                 "active": "var(--eds-theme-color-button-icon-error-text-active)"
-              },
-              "icon": {
-                "@": "var(--eds-theme-color-button-icon-error-icon)",
-                "hover": "var(--eds-theme-color-button-icon-error-icon-hover)",
-                "active": "var(--eds-theme-color-button-icon-error-icon-active)"
               }
             }
           },

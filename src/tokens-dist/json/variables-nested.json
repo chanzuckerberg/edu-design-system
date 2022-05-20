@@ -574,6 +574,9 @@
           },
           "icon": {
             "brand": {
+              "@": "#574EFF",
+              "hover": "#574EFF",
+              "active": "#FFFFFF",
               "background": {
                 "@": "rgba(0, 0, 0, 0)",
                 "hover": "#C3C0FE",
@@ -588,14 +591,12 @@
                 "@": "#433BDE",
                 "hover": "#433BDE",
                 "active": "#FFFFFF"
-              },
-              "icon": {
-                "@": "#574EFF",
-                "hover": "#574EFF",
-                "active": "#FFFFFF"
               }
             },
             "neutral": {
+              "@": "#3C444C",
+              "hover": "#3C444C",
+              "active": "#FFFFFF",
               "background": {
                 "@": "rgba(0, 0, 0, 0)",
                 "hover": "#E8E8E9",
@@ -610,14 +611,12 @@
                 "@": "#3C444C",
                 "hover": "#3C444C",
                 "active": "#FFFFFF"
-              },
-              "icon": {
-                "@": "#3C444C",
-                "hover": "#3C444C",
-                "active": "#FFFFFF"
               }
             },
             "success": {
+              "@": "#008756",
+              "hover": "#008756",
+              "active": "#FFFFFF",
               "background": {
                 "@": "rgba(0, 0, 0, 0)",
                 "hover": "#B7E9CE",
@@ -632,14 +631,12 @@
                 "@": "#007349",
                 "hover": "#007349",
                 "active": "#FFFFFF"
-              },
-              "icon": {
-                "@": "#008756",
-                "hover": "#008756",
-                "active": "#FFFFFF"
               }
             },
             "warning": {
+              "@": "#C64600",
+              "hover": "#C64600",
+              "active": "#FFFFFF",
               "background": {
                 "@": "rgba(0, 0, 0, 0)",
                 "hover": "#FFF1E9",
@@ -654,14 +651,12 @@
                 "@": "#AC3400",
                 "hover": "#AC3400",
                 "active": "#FFFFFF"
-              },
-              "icon": {
-                "@": "#C64600",
-                "hover": "#C64600",
-                "active": "#FFFFFF"
               }
             },
             "error": {
+              "@": "#D41E52",
+              "hover": "#D41E52",
+              "active": "#FFFFFF",
               "background": {
                 "@": "rgba(0, 0, 0, 0)",
                 "hover": "#FFCCD8",
@@ -675,11 +670,6 @@
               "text": {
                 "@": "#BD0044",
                 "hover": "#BD0044",
-                "active": "#FFFFFF"
-              },
-              "icon": {
-                "@": "#D41E52",
-                "hover": "#D41E52",
                 "active": "#FFFFFF"
               }
             }

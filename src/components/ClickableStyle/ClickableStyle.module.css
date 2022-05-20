@@ -104,7 +104,7 @@
   color: var(--eds-theme-color-button-secondary-brand-text);
 
   svg {
-    color: var(--eds-theme-color-button-icon-brand-icon);
+    color: var(--eds-theme-color-button-secondary-brand-icon);
   }
 
   &:hover {
@@ -113,6 +113,9 @@
       --eds-theme-color-button-secondary-brand-background-hover
     );
     color: var(--eds-theme-color-button-secondary-brand-text-hover);
+    svg {
+      color: var(--eds-theme-color-button-secondary-brand-icon-hover);
+    }
   }
 
   &:active {
@@ -121,6 +124,9 @@
       --eds-theme-color-button-secondary-brand-background-active
     );
     color: var(--eds-theme-color-button-secondary-brand-text-active);
+    svg {
+      color: var(--eds-theme-color-button-secondary-brand-icon-focus);
+    }
   }
 }
 
@@ -133,7 +139,7 @@
   color: var(--eds-theme-color-button-secondary-neutral-text);
 
   svg {
-    color: var(--eds-theme-color-button-icon-neutral-icon);
+    color: var(--eds-theme-color-button-secondary-neutral-icon);
   }
 
   &:hover {
@@ -142,6 +148,9 @@
       --eds-theme-color-button-secondary-neutral-background-hover
     );
     color: var(--eds-theme-color-button-secondary-neutral-text-hover);
+    svg {
+      color: var(--eds-theme-color-button-secondary-neutral-icon-hover);
+    }
   }
 
   &:active {
@@ -150,6 +159,9 @@
       --eds-theme-color-button-secondary-neutral-background-active
     );
     color: var(--eds-theme-color-button-secondary-neutral-text-active);
+    svg {
+      color: var(--eds-theme-color-button-secondary-neutral-icon-active);
+    }
   }
 }
 
@@ -162,7 +174,7 @@
   color: var(--eds-theme-color-button-secondary-success-text);
 
   svg {
-    color: var(--eds-theme-color-button-icon-success-icon);
+    color: var(--eds-theme-color-button-secondary-success-icon);
   }
 
   &:hover {
@@ -171,6 +183,9 @@
       --eds-theme-color-button-secondary-success-background-hover
     );
     color: var(--eds-theme-color-button-secondary-success-text-hover);
+    svg {
+      color: var(--eds-theme-color-button-secondary-success-icon-hover);
+    }
   }
 
   &:active {
@@ -179,6 +194,9 @@
       --eds-theme-color-button-secondary-success-background-active
     );
     color: var(--eds-theme-color-button-secondary-success-text-active);
+    svg {
+      color: var(--eds-theme-color-button-secondary-success-icon-active);
+    }
   }
 }
 
@@ -191,7 +209,7 @@
   color: var(--eds-theme-color-button-secondary-warning-text);
 
   svg {
-    color: var(--eds-theme-color-button-icon-warning-icon);
+    color: var(--eds-theme-color-button-secondary-warning-icon);
   }
 
   &:hover {
@@ -200,6 +218,9 @@
       --eds-theme-color-button-secondary-warning-background-hover
     );
     color: var(--eds-theme-color-button-secondary-warning-text-hover);
+    svg {
+      color: var(--eds-theme-color-button-secondary-warning-icon-hover);
+    }
   }
 
   &:active {
@@ -208,6 +229,9 @@
       --eds-theme-color-button-secondary-warning-background-active
     );
     color: var(--eds-theme-color-button-secondary-warning-text-active);
+    svg {
+      color: var(--eds-theme-color-button-secondary-warning-icon-active);
+    }
   }
 }
 
@@ -220,7 +244,7 @@
   color: var(--eds-theme-color-button-secondary-error-text);
 
   svg {
-    color: var(--eds-theme-color-button-icon-error-icon);
+    color: var(--eds-theme-color-button-secondary-error-icon);
   }
 
   &:hover {
@@ -229,6 +253,9 @@
       --eds-theme-color-button-secondary-error-background-hover
     );
     color: var(--eds-theme-color-button-secondary-error-text-hover);
+    svg {
+      color: var(--eds-theme-color-button-secondary-error-icon-hover);
+    }
   }
 
   &:active {
@@ -237,6 +264,9 @@
       --eds-theme-color-button-secondary-error-background-active
     );
     color: var(--eds-theme-color-button-secondary-error-text-active);
+    svg {
+      color: var(--eds-theme-color-button-secondary-error-icon-active);
+    }
   }
 }
 
@@ -251,13 +281,16 @@
   color: var(--eds-theme-color-button-icon-brand-text);
 
   svg {
-    color: var(--eds-theme-color-button-icon-brand-icon);
+    color: var(--eds-theme-color-button-icon-brand);
   }
 
   &:hover {
     border-color: var(--eds-theme-color-button-icon-brand-border-hover);
     background-color: var(--eds-theme-color-button-icon-brand-background-hover);
     color: var(--eds-theme-color-button-icon-brand-text-hover);
+    svg {
+      color: var(--eds-theme-color-button-icon-brand-hover);
+    }
   }
 
   &:active {
@@ -266,6 +299,9 @@
       --eds-theme-color-button-icon-brand-background-active
     );
     color: var(--eds-theme-color-button-icon-brand-text-active);
+    svg {
+      color: var(--eds-theme-color-button-icon-brand-active);
+    }
   }
 }
 
@@ -280,7 +316,7 @@
   color: var(--eds-theme-color-button-icon-neutral-text);
 
   svg {
-    color: var(--eds-theme-color-button-icon-neutral-icon);
+    color: var(--eds-theme-color-button-icon-neutral);
   }
 
   &:hover {
@@ -289,6 +325,9 @@
       --eds-theme-color-button-icon-neutral-background-hover
     );
     color: var(--eds-theme-color-button-icon-neutral-text-hover);
+    svg {
+      color: var(--eds-theme-color-button-icon-neutral-hover);
+    }
   }
 
   &:active {
@@ -297,6 +336,9 @@
       --eds-theme-color-button-icon-neutral-background-active
     );
     color: var(--eds-theme-color-button-icon-neutral-text-active);
+    svg {
+      color: var(--eds-theme-color-button-icon-neutral-active);
+    }
   }
 }
 
@@ -311,7 +353,7 @@
   color: var(--eds-theme-color-button-icon-success-text);
 
   svg {
-    color: var(--eds-theme-color-button-icon-success-icon);
+    color: var(--eds-theme-color-button-icon-success);
   }
 
   &:hover {
@@ -320,6 +362,9 @@
       --eds-theme-color-button-icon-success-background-hover
     );
     color: var(--eds-theme-color-button-icon-success-text-hover);
+    svg {
+      color: var(--eds-theme-color-button-icon-success-hover);
+    }
   }
 
   &:active {
@@ -328,6 +373,9 @@
       --eds-theme-color-button-icon-success-background-active
     );
     color: var(--eds-theme-color-button-icon-success-text-active);
+    svg {
+      color: var(--eds-theme-color-button-icon-success-active);
+    }
   }
 }
 
@@ -342,7 +390,7 @@
   color: var(--eds-theme-color-button-icon-warning-text);
 
   svg {
-    color: var(--eds-theme-color-button-icon-warning-icon);
+    color: var(--eds-theme-color-button-icon-warning);
   }
 
   &:hover {
@@ -351,6 +399,9 @@
       --eds-theme-color-button-icon-warning-background-hover
     );
     color: var(--eds-theme-color-button-icon-warning-text-hover);
+    svg {
+      color: var(--eds-theme-color-button-icon-warning-hover);
+    }
   }
 
   &:active {
@@ -359,6 +410,9 @@
       --eds-theme-color-button-icon-warning-background-active
     );
     color: var(--eds-theme-color-button-icon-warning-text-active);
+    svg {
+      color: var(--eds-theme-color-button-icon-warning-active);
+    }
   }
 }
 
@@ -373,13 +427,16 @@
   color: var(--eds-theme-color-button-icon-error-text);
 
   svg {
-    color: var(--eds-theme-color-button-icon-error-icon);
+    color: var(--eds-theme-color-button-icon-error);
   }
 
   &:hover {
     border-color: var(--eds-theme-color-button-icon-error-border-hover);
     background-color: var(--eds-theme-color-button-icon-error-background-hover);
     color: var(--eds-theme-color-button-icon-error-text-hover);
+    svg {
+      color: var(--eds-theme-color-button-icon-error-hover);
+    }
   }
 
   &:active {
@@ -388,6 +445,9 @@
       --eds-theme-color-button-icon-error-background-active
     );
     color: var(--eds-theme-color-button-icon-error-text-active);
+    svg {
+      color: var(--eds-theme-color-button-icon-error-active);
+    }
   }
 }
 
