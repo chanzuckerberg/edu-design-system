@@ -13,8 +13,6 @@ import {
   Grid,
   GridItem,
   Icon,
-  Card,
-  CardBody,
   OverflowList,
   OverflowListItem,
   Tabs,

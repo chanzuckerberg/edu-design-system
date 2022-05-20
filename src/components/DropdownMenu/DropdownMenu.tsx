@@ -12,7 +12,7 @@ export interface Props {
   /**
    * Child node(s) that can be nested inside component
    */
-  children: ReactNode;
+  children?: ReactNode;
   /**
    * CSS class names that can be appended to the component.
    */
@@ -32,14 +32,14 @@ export const DropdownMenu: React.FC<Props> = ({
   isActive,
   ...other
 }) => {
-  const childRefs = useRef<Array<HTMLLIElement | null>>([]);
+  const childRefs = useRef<Array<HTMLLIElement>>([]);
 
   useEffect(() => {
     setTimeout(() => {
       if (isActive && childRefs) {
         childRefs.current[0]
-          .querySelector<HTMLButtonElement | HTMLAnchorElement>(':first-child')
-          .focus();
+          ?.querySelector<HTMLButtonElement | HTMLAnchorElement>(':first-child')
+          ?.focus();
       }
     }, 1);
   }, [isActive]);
@@ -72,14 +72,22 @@ export const DropdownMenu: React.FC<Props> = ({
     if ([R_ARROW_KEYCODE, D_ARROW_KEYCODE].includes(e.key)) {
       /* 3 */
       childRefs.current[next]
-        .querySelector<HTMLButtonElement | HTMLAnchorElement>(':first-child')
-        .focus();
+        ?.querySelector<HTMLButtonElement | HTMLAnchorElement>(':first-child')
+        ?.focus();
     } else if ([L_ARROW_KEYCODE, U_ARROW_KEYCODE].includes(e.key)) {
       /* 4 */
       childRefs.current[prev]
-        .querySelector<HTMLButtonElement | HTMLAnchorElement>(':first-child')
-        .focus();
+        ?.querySelector<HTMLButtonElement | HTMLAnchorElement>(':first-child')
+        ?.focus();
     }
+
+    // if ([TAB_KEYCODE, SHIFT_TAB_KEYCODE].includes(e.key)) {
+    //   if (
+    //     childRefs.current.indexOf(activeItem) ===
+    //     childRefs.current.length - 1
+    //   ) {
+    //   }
+    // }
   };
 
   const childrenWithProps = React.Children.map(

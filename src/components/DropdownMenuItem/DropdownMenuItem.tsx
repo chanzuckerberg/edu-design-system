@@ -15,7 +15,7 @@ export interface Props {
   /**
    * Child node(s) that can be nested inside component
    */
-  children?: ReactNode;
+  children: ReactNode;
   /**
    * URL or a URL fragment string that the hyperlink points to
    */
