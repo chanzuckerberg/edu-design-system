@@ -33,6 +33,7 @@ module.exports = {
       },
     },
   ],
+  staticDirs: ['../src/design-tokens/tier-1-definitions'],
   webpackFinal: async (config) => {
     const SVGSpritesPlugin = new SVGSpritemapPlugin(
       path.resolve(__dirname, '../src/icons/**/*.svg'),

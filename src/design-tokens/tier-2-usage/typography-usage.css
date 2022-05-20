@@ -37,7 +37,7 @@
 }
 
 @define-mixin eds-theme-typography-body-text-lg $important {
-  @mixin eds-typography-preset-004 $important;
+  @mixin eds-typography-preset-004-light $important;
 }
 
 @define-mixin eds-theme-typography-body-text-md $important {

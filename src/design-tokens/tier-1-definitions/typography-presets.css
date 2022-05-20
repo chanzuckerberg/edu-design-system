@@ -62,13 +62,18 @@ should be reflected in the TypographyPresets story */
 }
 
 /**
- * Typography Preset 004: Medium & Bold
+ * Typography Preset 004: Medium, Light, & Bold
  */
 @define-mixin eds-typography-preset-004 $important {
   font-family: var(--eds-font-family-primary) $important;
   font-weight: var(--eds-font-weight-medium) $important;
   font-size: var(--eds-font-size-18) $important;
   line-height: 1.333 $important;
+}
+
+@define-mixin eds-typography-preset-004-light $important {
+  @mixin eds-typography-preset-004 $important;
+  font-weight: var(--eds-font-weight-light) $important;
 }
 
 @define-mixin eds-typography-preset-004-bold $important {
