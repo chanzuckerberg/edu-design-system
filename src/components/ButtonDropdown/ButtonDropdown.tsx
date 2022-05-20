@@ -124,7 +124,6 @@ export const ButtonDropdown = ({
   function closePanel() {
     setIsActive(false); /* 1 */
 
-    console.log(buttonRef.current);
     setTimeout(() => {
       if (isActiveVar && buttonRef.current) {
         buttonRef.current.focus(); /* 2 */
