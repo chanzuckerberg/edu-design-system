@@ -194,17 +194,12 @@ export const DragDrop = ({
                     : [];
 
                   return (
-                    <div
-                      className={styles['drag-drop--container-wrapper']}
-                      key={containerId}
-                    >
-                      <DragDropContainer
-                        container={container}
-                        dragByHandle={dragByHandle}
-                        items={items}
-                        key={container.id}
-                      />
-                    </div>
+                    <DragDropContainer
+                      container={container}
+                      dragByHandle={dragByHandle}
+                      items={items}
+                      key={container.id}
+                    />
                   );
                 })}
               {provided.placeholder}
