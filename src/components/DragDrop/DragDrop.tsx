@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { useState } from 'react';
+import React, { ReactNode, useState } from 'react';
 import {
   DragDropContext,
   DropResult,
@@ -32,9 +32,10 @@ export interface Props {
    */
   unstyledItems: boolean;
   /**
-   * DragDrop items can be dragged by grabbing a handle, or dragged by grabbing anywhere on the item (default)
+   * Child node(s) that can be nested inside component. `ModalHeader`, `ModalBody`, and `ModelFooter` are the only permissible children of the Modal
    */
-  dragByHandle: boolean;
+  children?: ReactNode;
+  containerHeader?: ReactNode;
 }
 
 /**
@@ -44,7 +45,6 @@ export const DragDrop = ({
   className,
   items,
   containers,
-  dragByHandle = false,
   multipleContainers = false,
   unstyledItems = false,
 }: Props) => {
@@ -54,8 +54,7 @@ export const DragDrop = ({
   const componentClassName = clsx(
     styles['drag-drop'],
     className,
-    (unstyledItems || dragByHandle) && styles['drag-drop--unstyled'],
-    dragByHandle && styles['drag-drop--handles'],
+    unstyledItems && styles['drag-drop--unstyled'],
     multipleContainers && styles['drag-drop--multiple'],
   );
 
@@ -100,7 +99,7 @@ export const DragDrop = ({
     const finish = state.containers[destination.droppableId];
 
     if (start === finish) {
-      const newItemIds = [...start.itemIds]; // create new array to avoid mutations
+      const newItemIds = start?.itemIds ? [...start.itemIds] : []; // create new array to avoid mutations
       newItemIds.splice(source.index, 1);
       newItemIds.splice(destination.index, 0, draggableId);
 
@@ -132,14 +131,14 @@ export const DragDrop = ({
     /**
      * The drag has ended over a container that is not the source container, so both containers contents need to be updated
      */
-    const startItemIds = [...start.itemIds];
+    const startItemIds = start?.itemIds ? [...start.itemIds] : [];
     startItemIds.splice(source.index, 1);
     const newStart = {
       ...start,
       itemIds: startItemIds,
     };
 
-    const finishItemIds = [...finish.itemIds];
+    const finishItemIds = finish?.itemIds ? [...finish.itemIds] : [];
     finishItemIds.splice(destination.index, 0, draggableId);
     const newFinish = {
       ...finish,
@@ -166,6 +165,7 @@ export const DragDrop = ({
      */
     setState(newState);
   };
+
   return (
     <DragDropContext onDragEnd={onDragEnd}>
       <Droppable
@@ -180,21 +180,21 @@ export const DragDrop = ({
               {...provided.droppableProps}
               ref={provided.innerRef}
             >
-              {state.containerOrder.map((containerId: string) => {
-                const container = state.containers[containerId];
-                const items = container.itemIds.map(
-                  (itemId) => state.items[itemId],
-                );
+              {state?.containerOrder &&
+                state.containerOrder.map((containerId: string) => {
+                  const container = state.containers[containerId];
+                  const items = container.itemIds
+                    ? container.itemIds.map((itemId) => state.items[itemId])
+                    : [];
 
-                return (
-                  <DragDropContainer
-                    container={container}
-                    dragByHandle={dragByHandle}
-                    items={items}
-                    key={container.id}
-                  />
-                );
-              })}
+                  return (
+                    <DragDropContainer
+                      container={container}
+                      items={items}
+                      key={container.id}
+                    />
+                  );
+                })}
               {provided.placeholder}
             </section>
           );
