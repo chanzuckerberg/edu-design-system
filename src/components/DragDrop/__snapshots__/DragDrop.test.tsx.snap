@@ -9,251 +9,243 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
     data-rbd-droppable-context-id="0"
     data-rbd-droppable-id="all-containers"
   >
-    <div
-      class="drag-drop--container-wrapper"
+    <header
+      class="drag-drop-container__header"
     >
-      <header
-        class="drag-drop-container__header"
-      >
-        <div
-          class="toolbar"
-        >
-          <h5
-            class="heading heading--size-h5"
-          >
-            Available Projects
-          </h5>
-        </div>
-      </header>
       <div
-        class="drag-drop-container"
-        data-rbd-droppable-context-id="0"
-        data-rbd-droppable-id="container-1"
+        class="toolbar"
+      >
+        <h5
+          class="heading heading--size-h5"
+        >
+          Available Projects
+        </h5>
+      </div>
+    </header>
+    <div
+      class="drag-drop-container"
+      data-rbd-droppable-context-id="0"
+      data-rbd-droppable-id="container-1"
+    >
+      <div
+        class="drag-drop-item"
+        data-rbd-draggable-context-id="0"
+        data-rbd-draggable-id="item-1"
       >
         <div
-          class="drag-drop-item"
-          data-rbd-draggable-context-id="0"
-          data-rbd-draggable-id="item-1"
+          aria-describedby="rbd-hidden-text-0-hidden-text-0"
+          aria-label="Handle for draggable item"
+          class="drag-drop-item--handle"
+          data-rbd-drag-handle-context-id="0"
+          data-rbd-drag-handle-draggable-id="item-1"
+          draggable="false"
+          role="button"
+          tabindex="0"
         >
           <div
-            aria-describedby="rbd-hidden-text-0-hidden-text-0"
-            aria-label="Handle for draggable item"
-            class="drag-drop-item--handle"
-            data-rbd-drag-handle-context-id="0"
-            data-rbd-drag-handle-draggable-id="item-1"
-            draggable="false"
-            role="button"
-            tabindex="0"
+            style="position: absolute; z-index: 999; top: 33%; left: 0.75rem;"
           >
-            <div
-              style="position: absolute; z-index: 999; top: 33%; left: 0.75rem;"
+            <svg
+              aria-hidden="true"
+              class="icon"
+              fill="currentColor"
+              height="1.5rem"
+              style="--icon-size: 1.5rem;"
+              width="1.5rem"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <svg
-                aria-hidden="true"
-                class="icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <use
-                  xlink:href="test-file-stub#drag-indicator"
-                />
-              </svg>
-            </div>
-          </div>
-          <div
-            class="fpo"
-            style="width: 100%;"
-          >
-            Content here
+              <use
+                xlink:href="test-file-stub#drag-indicator"
+              />
+            </svg>
           </div>
         </div>
         <div
-          class="drag-drop-item"
-          data-rbd-draggable-context-id="0"
-          data-rbd-draggable-id="item-2"
+          class="fpo"
+          style="width: 100%;"
+        >
+          Content here
+        </div>
+      </div>
+      <div
+        class="drag-drop-item"
+        data-rbd-draggable-context-id="0"
+        data-rbd-draggable-id="item-2"
+      >
+        <div
+          aria-describedby="rbd-hidden-text-0-hidden-text-0"
+          aria-label="Handle for draggable item"
+          class="drag-drop-item--handle"
+          data-rbd-drag-handle-context-id="0"
+          data-rbd-drag-handle-draggable-id="item-2"
+          draggable="false"
+          role="button"
+          tabindex="0"
         >
           <div
-            aria-describedby="rbd-hidden-text-0-hidden-text-0"
-            aria-label="Handle for draggable item"
-            class="drag-drop-item--handle"
-            data-rbd-drag-handle-context-id="0"
-            data-rbd-drag-handle-draggable-id="item-2"
-            draggable="false"
-            role="button"
-            tabindex="0"
+            style="position: absolute; z-index: 999; top: 33%; left: 0.75rem;"
           >
-            <div
-              style="position: absolute; z-index: 999; top: 33%; left: 0.75rem;"
+            <svg
+              aria-hidden="true"
+              class="icon"
+              fill="currentColor"
+              height="1.5rem"
+              style="--icon-size: 1.5rem;"
+              width="1.5rem"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <svg
-                aria-hidden="true"
-                class="icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <use
-                  xlink:href="test-file-stub#drag-indicator"
-                />
-              </svg>
-            </div>
-          </div>
-          <div
-            class="fpo"
-            style="width: 100%;"
-          >
-            Content here
+              <use
+                xlink:href="test-file-stub#drag-indicator"
+              />
+            </svg>
           </div>
         </div>
         <div
-          class="drag-drop-item"
-          data-rbd-draggable-context-id="0"
-          data-rbd-draggable-id="item-3"
+          class="fpo"
+          style="width: 100%;"
+        >
+          Content here
+        </div>
+      </div>
+      <div
+        class="drag-drop-item"
+        data-rbd-draggable-context-id="0"
+        data-rbd-draggable-id="item-3"
+      >
+        <div
+          aria-describedby="rbd-hidden-text-0-hidden-text-0"
+          aria-label="Handle for draggable item"
+          class="drag-drop-item--handle"
+          data-rbd-drag-handle-context-id="0"
+          data-rbd-drag-handle-draggable-id="item-3"
+          draggable="false"
+          role="button"
+          tabindex="0"
         >
           <div
-            aria-describedby="rbd-hidden-text-0-hidden-text-0"
-            aria-label="Handle for draggable item"
-            class="drag-drop-item--handle"
-            data-rbd-drag-handle-context-id="0"
-            data-rbd-drag-handle-draggable-id="item-3"
-            draggable="false"
-            role="button"
-            tabindex="0"
+            style="position: absolute; z-index: 999; top: 33%; left: 0.75rem;"
           >
-            <div
-              style="position: absolute; z-index: 999; top: 33%; left: 0.75rem;"
+            <svg
+              aria-hidden="true"
+              class="icon"
+              fill="currentColor"
+              height="1.5rem"
+              style="--icon-size: 1.5rem;"
+              width="1.5rem"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <svg
-                aria-hidden="true"
-                class="icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <use
-                  xlink:href="test-file-stub#drag-indicator"
-                />
-              </svg>
-            </div>
-          </div>
-          <div
-            class="fpo"
-            style="width: 100%;"
-          >
-            Content here
+              <use
+                xlink:href="test-file-stub#drag-indicator"
+              />
+            </svg>
           </div>
         </div>
         <div
-          class="drag-drop-item"
-          data-rbd-draggable-context-id="0"
-          data-rbd-draggable-id="item-4"
+          class="fpo"
+          style="width: 100%;"
+        >
+          Content here
+        </div>
+      </div>
+      <div
+        class="drag-drop-item"
+        data-rbd-draggable-context-id="0"
+        data-rbd-draggable-id="item-4"
+      >
+        <div
+          aria-describedby="rbd-hidden-text-0-hidden-text-0"
+          aria-label="Handle for draggable item"
+          class="drag-drop-item--handle"
+          data-rbd-drag-handle-context-id="0"
+          data-rbd-drag-handle-draggable-id="item-4"
+          draggable="false"
+          role="button"
+          tabindex="0"
         >
           <div
-            aria-describedby="rbd-hidden-text-0-hidden-text-0"
-            aria-label="Handle for draggable item"
-            class="drag-drop-item--handle"
-            data-rbd-drag-handle-context-id="0"
-            data-rbd-drag-handle-draggable-id="item-4"
-            draggable="false"
-            role="button"
-            tabindex="0"
+            style="position: absolute; z-index: 999; top: 33%; left: 0.75rem;"
           >
-            <div
-              style="position: absolute; z-index: 999; top: 33%; left: 0.75rem;"
+            <svg
+              aria-hidden="true"
+              class="icon"
+              fill="currentColor"
+              height="1.5rem"
+              style="--icon-size: 1.5rem;"
+              width="1.5rem"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <svg
-                aria-hidden="true"
-                class="icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <use
-                  xlink:href="test-file-stub#drag-indicator"
-                />
-              </svg>
-            </div>
-          </div>
-          <div
-            class="fpo"
-            style="width: 100%;"
-          >
-            Content here
+              <use
+                xlink:href="test-file-stub#drag-indicator"
+              />
+            </svg>
           </div>
         </div>
         <div
-          class="drag-drop-item"
-          data-rbd-draggable-context-id="0"
-          data-rbd-draggable-id="item-5"
+          class="fpo"
+          style="width: 100%;"
+        >
+          Content here
+        </div>
+      </div>
+      <div
+        class="drag-drop-item"
+        data-rbd-draggable-context-id="0"
+        data-rbd-draggable-id="item-5"
+      >
+        <div
+          aria-describedby="rbd-hidden-text-0-hidden-text-0"
+          aria-label="Handle for draggable item"
+          class="drag-drop-item--handle"
+          data-rbd-drag-handle-context-id="0"
+          data-rbd-drag-handle-draggable-id="item-5"
+          draggable="false"
+          role="button"
+          tabindex="0"
         >
           <div
-            aria-describedby="rbd-hidden-text-0-hidden-text-0"
-            aria-label="Handle for draggable item"
-            class="drag-drop-item--handle"
-            data-rbd-drag-handle-context-id="0"
-            data-rbd-drag-handle-draggable-id="item-5"
-            draggable="false"
-            role="button"
-            tabindex="0"
+            style="position: absolute; z-index: 999; top: 33%; left: 0.75rem;"
           >
-            <div
-              style="position: absolute; z-index: 999; top: 33%; left: 0.75rem;"
+            <svg
+              aria-hidden="true"
+              class="icon"
+              fill="currentColor"
+              height="1.5rem"
+              style="--icon-size: 1.5rem;"
+              width="1.5rem"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <svg
-                aria-hidden="true"
-                class="icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <use
-                  xlink:href="test-file-stub#drag-indicator"
-                />
-              </svg>
-            </div>
+              <use
+                xlink:href="test-file-stub#drag-indicator"
+              />
+            </svg>
           </div>
-          <div
-            class="fpo"
-            style="width: 100%;"
-          >
-            Content here
-          </div>
+        </div>
+        <div
+          class="fpo"
+          style="width: 100%;"
+        >
+          Content here
         </div>
       </div>
     </div>
-    <div
-      class="drag-drop--container-wrapper"
+    <header
+      class="drag-drop-container__header"
     >
-      <header
-        class="drag-drop-container__header"
-      >
-        <div
-          class="toolbar"
-        >
-          <h5
-            class="heading heading--size-h5"
-          >
-            Selected Projects
-          </h5>
-        </div>
-      </header>
       <div
-        class="drag-drop-container"
-        data-rbd-droppable-context-id="0"
-        data-rbd-droppable-id="container-2"
-      />
-    </div>
+        class="toolbar"
+      >
+        <h5
+          class="heading heading--size-h5"
+        >
+          Selected Projects
+        </h5>
+      </div>
+    </header>
+    <div
+      class="drag-drop-container"
+      data-rbd-droppable-context-id="0"
+      data-rbd-droppable-id="container-2"
+    />
   </section>
 </div>
 `;
