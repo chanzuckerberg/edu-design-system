@@ -12,13 +12,21 @@
   display: flex;
 }
 
+/**
+ * Drag drop container
+ * 1) Set to display flex so empty state can span entire column.
+ */
 .drag-drop__container {
-  display: flex;
+  display: flex; /* 1 */
   flex-direction: column;
   margin-left: var(--eds-size-2);
 
+  /**
+  * First drag drop container
+  * 1) Don't add left margin to left align with the rest of the content
+  */
   &:first-of-type {
-    margin-left: 0;
+    margin-left: 0; /* 1 */
   }
 }
 
@@ -119,5 +127,4 @@
   justify-content: center;
   align-items: center;
   padding: var(--eds-size-1);
-
 }
