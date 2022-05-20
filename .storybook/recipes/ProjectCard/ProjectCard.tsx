@@ -17,6 +17,14 @@ import {
 
 export interface Props {
   /**
+   * Determines type of clickable
+   * - default renders a dropdown menu to the bottom left of the button
+   * - **top-left** renders a dropdown menu to the top left of the button
+   * - **top-right** renders a dropdown menu to the top right of the button
+   * - **bottom-right** renders a dropdown menu to the bottom right of the button
+   */
+  buttonDropdownPosition?: 'top-left' | 'top-right' | 'bottom-right';
+  /**
    * CSS class names that can be appended to the component.
    */
   className?: string;
@@ -33,7 +41,13 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const ProjectCard = ({ className, title, meta, ...other }: Props) => {
+export const ProjectCard = ({
+  className,
+  title,
+  meta,
+  buttonDropdownPosition,
+  ...other
+}: Props) => {
   const componentClassName = clsx(styles['project-card'], className, {});
   return (
     <Card className={componentClassName} orientation="horizontal" {...other}>
@@ -72,6 +86,7 @@ export const ProjectCard = ({ className, title, meta, ...other }: Props) => {
       </CardBody>
       <CardFooter className={styles['project-card__footer']}>
         <ButtonDropdown
+          position={buttonDropdownPosition}
           className={styles['project-card__button-dropdown']}
           dropdownMenuTrigger={
             <Button
