@@ -12,7 +12,7 @@ export interface Props {
   /**
    * Child node(s) that can be nested inside component
    */
-  children?: ReactNode;
+  children: ReactNode;
   /**
    * CSS class names that can be appended to the component.
    */
@@ -36,7 +36,7 @@ export const DropdownMenu: React.FC<Props> = ({
 
   useEffect(() => {
     setTimeout(() => {
-      if (isActive) {
+      if (isActive && childRefs) {
         childRefs.current[0]
           .querySelector<HTMLButtonElement | HTMLAnchorElement>(':first-child')
           .focus();
@@ -80,14 +80,6 @@ export const DropdownMenu: React.FC<Props> = ({
         .querySelector<HTMLButtonElement | HTMLAnchorElement>(':first-child')
         .focus();
     }
-
-    // if ([TAB_KEYCODE, SHIFT_TAB_KEYCODE].includes(e.key)) {
-    //   if (
-    //     childRefs.current.indexOf(activeItem) ===
-    //     childRefs.current.length - 1
-    //   ) {
-    //   }
-    // }
   };
 
   const childrenWithProps = React.Children.map(

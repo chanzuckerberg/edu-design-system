@@ -1,9 +1,14 @@
 import clsx from 'clsx';
-import React, { ReactNode } from 'react';
+import React, { ReactNode, SyntheticEvent } from 'react';
 import styles from './ButtonDropdown.module.css';
 import { DropdownMenu } from '../..';
 import { ESCAPE_KEYCODE } from '../../util/keycodes';
 import type { ClickableStyleProps } from '../ClickableStyle';
+
+interface FocusEvent<T = Element> extends SyntheticEvent<T> {
+  relatedTarget: EventTarget | null;
+  target: EventTarget & T;
+}
 
 export interface Props {
   buttonAriaLabel?: string;
@@ -171,8 +176,8 @@ export const ButtonDropdown = ({
     },
   );
 
-  const handleBlur = (event) => {
-    if (!event.currentTarget.contains(event.relatedTarget)) {
+  const handleBlur = (event: FocusEvent<HTMLDivElement>) => {
+    if (!event.currentTarget.contains(event.relatedTarget as HTMLElement)) {
       if (isActiveVar) {
         closePanel();
       }
