@@ -1,0 +1,91 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #DROPDOWN
+\*------------------------------------*/
+
+/**
+ * Define themable properties
+ */
+
+/**
+ * 1) Dropdown menu
+ * 2) Set a minimum width for the dropdown menu
+ */
+.dropdown-menu {
+  width: 16rem; /* 2 */
+  background: var(--eds-theme-color-background-neutral-default);
+  border: 1px solid var(--eds-theme-color-border-neutral-subtle);
+  border-radius: var(--eds-theme-border-radius);
+  box-shadow: var(--eds-theme-box-shadow);
+
+  /**
+  * Dropdown menu within active dropdown menu item
+  */
+  .dropdown-menu__item.eds-is-active & {
+    visibility: visible;
+    transition-delay: 0s;
+  }
+
+  /**
+  * Dropdown menu within dropdown menu item align top left
+  * 1) Position nested dropdown menu to the left and aligned at the bottom of dropdown menu item
+  */
+  .dropdown-menu__item--align-top-left > & {
+    top: auto;
+    bottom: 0;
+  }
+}
+
+/**
+ * Dropdown menu list
+ */
+.dropdown-menu__list {
+  @mixin reset;
+  list-style: none;
+}
+
+/**
+ * Dropdown menu item
+ */
+.dropdown-menu__item {
+  position: relative;
+  width: 100%;
+}
+
+/**
+ * Dropdown menu link
+ */
+.dropdown-menu__link {
+  @mixin eds-theme-typography-body-text-sm;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--eds-size-1);
+  appearance: none;
+  background: none;
+  text-decoration: none;
+  border: none;
+  width: 100%;
+  padding: var(--eds-size-1-and-half) var(--eds-size-2);
+  text-align: left;
+  cursor: pointer;
+  color: var(--eds-theme-color-text-neutral-default);
+  transition: background var(--eds-anim-fade-quick) var(--eds-anim-ease);
+
+  &:hover,
+  &:focus {
+    background: var(--eds-theme-color-background-neutral-subtle);
+  }
+
+  &:focus-visible {
+    @mixin focus;
+  }
+
+  /**
+  * Dropdown menu link within a lined dropdown menu item
+  * 1) Add bottom border to the item
+  */
+  .dropdown-menu__item--lined & {
+    border-bottom: 1px solid var(--eds-theme-color-border-neutral-subtle);
+  }
+}

@@ -23,7 +23,7 @@ export interface Props {
   /**
    * The size of the icon. Defaults to 'lg'.
    */
-  size?: 'sm' | 'lg';
+  size?: 'sm';
   /**
    * The color variant of the icon. Defaults to 'base'.
    */
@@ -48,7 +48,7 @@ export interface Props {
 export const NumberIcon = ({
   className,
   number,
-  size = 'lg',
+  size,
   variant = 'base',
   ...other
 }: Props) => {

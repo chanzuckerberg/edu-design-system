@@ -18,23 +18,29 @@ export interface Props {
    * Card rendered on a dark backgorund
    */
   inverted?: boolean;
+  /**
+   * Orientation of a card
+   * - **horizontal** renders the header, body, and footer in a horizontal fashion
+   * where the body is required but the header and footer are not
+   */
+  orientation?: 'horizontal';
 }
 
 /**
- * BETA: This component is still a work in progress and is subject to change.
- *
- * ```ts
- * import {Card} from "@chanzuckerberg/eds";
- * ```
- *
- * Card component used to visually group information. Yypically contains a title, image,
- * text, and/or calls to action.
+ * Primary UI component for user interaction
  */
-export const Card = ({ className, children, inverted, ...other }: Props) => {
+export const Card = ({
+  className,
+  children,
+  inverted,
+  orientation,
+  ...other
+}: Props) => {
   const componentClassName = clsx(
     styles['card'],
     className,
     inverted && styles['card--inverted'],
+    orientation && styles['card--horizontal'],
   );
   return (
     <div className={componentClassName} {...other}>

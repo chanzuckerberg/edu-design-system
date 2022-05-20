@@ -11,7 +11,6 @@
 .card {
   display: flex;
   flex-direction: column;
-  overflow: hidden;
   padding: var(--eds-size-2);
   border-radius: var(--eds-theme-border-radius);
   border-width: var(--eds-theme-border-width);
@@ -36,6 +35,14 @@ a.card {
 }
 
 /**
+ * Horizontal card
+ * 1) Change the orientation to display header, body, and footer in a row
+ */
+.card--horizontal {
+  flex-direction: row;
+}
+
+/**
  * Centered card
  * 1) Card where the content is centered
  */
@@ -55,10 +62,27 @@ a.card {
 }
 
 /**
+ * Card header
+ * 1) Add spacing in between the header and body
+ */
+.card__header {
+  margin-bottom: var(--eds-size-2); /* 1 */
+
+  /**
+  * Card header within horizontal card
+  * 1) Remove default spacing for vertical card. Add margin right for spacing between header and body
+  */
+  .card--horizontal & {
+    margin-bottom: 0; /* 1 */
+    margin-right: var(--eds-size-2); /* 1 */
+  }
+}
+
+/**
  * Card body
  */
 .card__body {
-  flex: auto;
+  flex: 1;
 }
 
 /**
@@ -70,4 +94,13 @@ a.card {
  */
 .card__footer {
   margin-top: var(--eds-size-2); /* 1 */
+
+  /**
+  * Card footer within horizontal card
+  * 1) Using margin left to space away from card body. Zero out margin top.
+  */
+  .card--horizontal & {
+    margin-top: 0; /* 1 */
+    margin-left: var(--eds-size-2); /* 1 */
+  }
 }

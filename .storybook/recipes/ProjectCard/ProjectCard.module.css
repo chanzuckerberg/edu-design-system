@@ -1,0 +1,57 @@
+@import '../../../src/design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #PROJECTCARD
+\*------------------------------------*/
+
+/**
+ * 1) 
+ */
+.project-card {
+  position: relative;
+  transition: all var(--eds-anim-fade-quick) var(--eds-anim-fade-quick);
+}
+
+.project-card__drag-handle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: var(--eds-size-1);
+  background: var(--eds-theme-color-background-neutral-default);
+  z-index: var(--eds-z-index-100);
+  transition: opacity var(--eds-anim-fade-quick) var(--eds-anim-ease);
+
+  .project-card:hover &,
+  .project-card:focus & {
+    opacity: 1;
+  }
+}
+
+.project-card__body {
+  flex-direction: row;
+  gap: var(--eds-);
+}
+
+.project-card__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-card__meta {
+  @mixin eds-theme-typography-body-text-xs;
+  color: var(--eds-theme-color-text-neutral-subtle);
+}
+
+.project-card__meta-icon {
+  margin-right: var(--eds-size-1);
+  position: relative;
+  bottom: 1px;
+}
