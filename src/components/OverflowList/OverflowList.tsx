@@ -19,7 +19,6 @@ export interface Props {
    * CSS class names that can be appended to the component.
    */
   className?: string;
-  ref?: any;
 }
 
 /**
