@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'Graphik';
+  font-weight: 400;
+  src: url('./fonts/Graphik-Regular-Web.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Graphik';
+  font-weight: 500;
+  src: url('./fonts/Graphik-Medium-Web.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Graphik';
+  font-weight: 600;
+  src: url('./fonts/Graphik-Semibold-Web.woff2') format('woff2');
+}
