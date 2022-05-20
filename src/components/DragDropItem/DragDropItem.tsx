@@ -30,7 +30,7 @@ export const DragDropItem = ({
   item,
   index,
 }: Props) => {
-  const componentClassName = clsx(styles['drag-drop-item'], className, {});
+  const componentClassName = clsx(styles['drag-drop__item'], className, {});
 
   // `id` is injected in <DragDrop />
   return item.id ? (
@@ -44,7 +44,7 @@ export const DragDropItem = ({
           >
             <div
               aria-label="Handle for draggable item"
-              className={clsx(styles['drag-drop-item--handle'])}
+              className={clsx(styles['drag-drop-item__item-handle'])}
               {...provided.dragHandleProps}
             >
               {item.handle}
@@ -59,7 +59,7 @@ export const DragDropItem = ({
             {...provided.dragHandleProps}
           >
             {item.title && (
-              <div className={clsx(styles['drag-drop-item--title'])}>
+              <div className={clsx(styles['drag-drop-item__title'])}>
                 {item.title}
               </div>
             )}

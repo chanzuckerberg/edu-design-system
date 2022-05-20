@@ -35,7 +35,11 @@ export const DragDropContainer = ({
   dragByHandle,
   items,
 }: Props) => {
-  const componentClassName = clsx(styles['drag-drop-container'], className, {});
+  const componentClassName = clsx(
+    styles['drag-drop__container'],
+    className,
+    {},
+  );
 
   const dragDropContainerHeader = oneByType(
     container.header,
@@ -46,12 +50,12 @@ export const DragDropContainer = ({
   });
 
   return container.id ? (
-    <>
+    <div className={componentClassName}>
       {header}
       <Droppable droppableId={container.id} type="item">
         {(provided: DroppableProvided) => (
           <div
-            className={componentClassName}
+            className={styles['drag-drop__container-inner']}
             ref={provided.innerRef}
             {...provided.droppableProps}
           >
@@ -67,6 +71,6 @@ export const DragDropContainer = ({
           </div>
         )}
       </Droppable>
-    </>
+    </div>
   ) : null;
 };
