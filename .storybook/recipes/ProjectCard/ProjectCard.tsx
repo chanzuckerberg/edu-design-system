@@ -86,7 +86,6 @@ export const ProjectCard = ({
       </CardBody>
       <CardFooter className={styles['project-card__footer']}>
         <ButtonDropdown
-          position={buttonDropdownPosition}
           className={styles['project-card__button-dropdown']}
           dropdownMenuTrigger={
             <Button
@@ -99,6 +98,7 @@ export const ProjectCard = ({
               <Icon name="dots-vertical" purpose="decorative" />
             </Button>
           }
+          position={buttonDropdownPosition}
         >
           <DropdownMenuItem>
             <Icon name="schedule" purpose="decorative" size="1.25rem" />

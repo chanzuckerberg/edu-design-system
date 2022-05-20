@@ -123,16 +123,16 @@ export const Cad = () => (
                         </GridItem>
                         <GridItem>
                           <ProjectCard
+                            buttonDropdownPosition="top-left"
                             meta="12 days"
                             title="Project card title"
-                            buttonDropdownPosition="top-left"
                           ></ProjectCard>
                         </GridItem>
                         <GridItem>
                           <ProjectCard
+                            buttonDropdownPosition="top-left"
                             meta="12 days"
                             title="Project card title"
-                            buttonDropdownPosition="top-left"
                           ></ProjectCard>
                         </GridItem>
                       </Grid>
