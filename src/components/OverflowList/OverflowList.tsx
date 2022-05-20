@@ -128,6 +128,9 @@ export const OverflowList = ({ className, children, ...other }: Props) => {
         className={styles['overflow-list__inner']}
         onScroll={handleOnScroll}
         ref={overflowListInnerRef}
+        // TODO: add correct aria role for overflow list
+        // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
+        tabIndex={0}
       >
         {children}
       </ul>
