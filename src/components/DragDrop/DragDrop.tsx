@@ -9,8 +9,6 @@ import {
 import styles from './DragDrop.module.css';
 import { Items, Containers } from './DragDropTypes';
 import DragDropContainer from '../DragDropContainer';
-import OverflowList from '../OverflowList';
-import OverflowListItem from '../OverflowListItem';
 
 export interface Props {
   /**
@@ -183,7 +181,7 @@ export const DragDrop = ({
       >
         {(provided: DroppableProvided) => {
           return (
-            <OverflowList
+            <section
               className={componentClassName}
               {...provided.droppableProps}
               ref={provided.innerRef}
@@ -196,7 +194,7 @@ export const DragDrop = ({
                     : [];
 
                   return (
-                    <OverflowListItem
+                    <div
                       className={styles['drag-drop--container-wrapper']}
                       key={containerId}
                     >
@@ -206,11 +204,11 @@ export const DragDrop = ({
                         items={items}
                         key={container.id}
                       />
-                    </OverflowListItem>
+                    </div>
                   );
                 })}
               {provided.placeholder}
-            </OverflowList>
+            </section>
           );
         }}
       </Droppable>
