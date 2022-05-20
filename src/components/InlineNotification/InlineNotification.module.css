@@ -43,7 +43,7 @@
   @mixin messagingWarning;
 }
 .inline-notification--yield {
-  @mixin messagingRevise;
+  @mixin messagingYield;
 }
 .inline-notification--subtle {
   background-color: var(--eds-theme-color-background-neutral-default);

@@ -130,10 +130,10 @@ exports[`<InlineNotification /> FullWidthStrongVariants story renders snapshot 1
       <title
         id="21"
       >
-        review
+        yield
       </title>
       <use
-        xlink:href="test-file-stub#yield"
+        xlink:href="test-file-stub#error-inverted"
       />
     </svg>
     <span
@@ -302,10 +302,10 @@ exports[`<InlineNotification /> FullWidthVariants story renders snapshot 1`] = `
       <title
         id="16"
       >
-        review
+        yield
       </title>
       <use
-        xlink:href="test-file-stub#yield"
+        xlink:href="test-file-stub#error-inverted"
       />
     </svg>
     <span
@@ -474,10 +474,10 @@ exports[`<InlineNotification /> StrongVariants story renders snapshot 1`] = `
       <title
         id="10"
       >
-        review
+        yield
       </title>
       <use
-        xlink:href="test-file-stub#yield"
+        xlink:href="test-file-stub#error-inverted"
       />
     </svg>
     <span
@@ -589,10 +589,10 @@ exports[`<InlineNotification /> SubtleVariants story renders snapshot 1`] = `
       <title
         id="6"
       >
-        review
+        yield
       </title>
       <use
-        xlink:href="test-file-stub#yield"
+        xlink:href="test-file-stub#error-inverted"
       />
     </svg>
     <span

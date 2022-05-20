@@ -181,7 +181,7 @@
   color: var(--eds-theme-color-text-utility-error);
 }
 
-@define-mixin messagingRevise {
+@define-mixin messagingYield {
   --border-light-color: var(--eds-theme-color-border-grade-revise-subtle);
   --border-dark-color: var(--eds-theme-color-border-grade-revise-strong);
 
