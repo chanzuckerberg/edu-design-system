@@ -5,13 +5,16 @@
 \*------------------------------------*/
 
 /**
- * 1) 
+ * 1) Combination of a trigger and a dropdownmenu
  */
 .button-dropdown {
   display: inline-block;
   position: relative;
 }
 
+/**
+ * Button dropdown dropdown menu
+ */
 .button-dropdown__dropdown-menu {
   display: none;
   position: absolute;
@@ -19,6 +22,33 @@
   right: 0;
   z-index: var(--eds-z-index-500);
 
+  /**
+  * Button dropdown dropdown menu positioned to the top-left of the button
+  */
+  .button-dropdown--top-left {
+    bottom: 100%;
+  }
+
+  /**
+  * Button dropdown dropdown menu positioned to the top-right of the button
+  */
+  .button-dropdown--top-right {
+    right: initial;
+    left: 0;
+  }
+
+  /**
+  * Button dropdown dropdown menu positioned to the bottom-right of the button
+  */
+  .button-dropdown--bottom-right {
+    right: initial;
+    left: 0;
+  }
+
+  /**
+  * Button dropdown dropdown menu within active button dropdown
+  * 1) Show the dropdown menu
+  */
   .button-dropdown.eds-is-active & {
     display: block;
   }

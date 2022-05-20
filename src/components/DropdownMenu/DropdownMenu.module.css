@@ -9,8 +9,8 @@
  */
 
 /**
- * 1) Dropdown
- * 2) Set a minimum width for the dropdown
+ * 1) Dropdown menu
+ * 2) Set a minimum width for the dropdown menu
  */
 .dropdown-menu {
   width: 16rem; /* 2 */
@@ -20,7 +20,7 @@
   box-shadow: var(--eds-theme-box-shadow);
 
   /**
-  * Dropdown within active dropdown item
+  * Dropdown menu within active dropdown menu item
   */
   .dropdown-menu__item.eds-is-active & {
     visibility: visible;
@@ -28,8 +28,8 @@
   }
 
   /**
-  * Dropdown within dropdown item align top left
-  * 1) Position nested dropdown to the left and aligned at the bottom of dropdown item
+  * Dropdown menu within dropdown menu item align top left
+  * 1) Position nested dropdown menu to the left and aligned at the bottom of dropdown menu item
   */
   .dropdown-menu__item--align-top-left > & {
     top: auto;
@@ -38,7 +38,7 @@
 }
 
 /**
- * Dropdown list
+ * Dropdown menu list
  */
 .dropdown-menu__list {
   @mixin reset;
@@ -46,7 +46,7 @@
 }
 
 /**
- * Dropdown item
+ * Dropdown menu item
  */
 .dropdown-menu__item {
   position: relative;
@@ -54,7 +54,7 @@
 }
 
 /**
- * Dropdown link
+ * Dropdown menu link
  */
 .dropdown-menu__link {
   @mixin eds-theme-typography-body-text-sm;
@@ -82,7 +82,7 @@
   }
 
   /**
-  * Dropdown link within a lined dropdown item
+  * Dropdown menu link within a lined dropdown menu item
   * 1) Add bottom border to the item
   */
   .dropdown-menu__item--lined & {
