@@ -6,7 +6,6 @@ import { DragDrop, Props } from './DragDrop';
 import Toolbar from '../../upcoming-components/Toolbar';
 import DragDropContainerHeader from '../DragDropContainerHeader';
 import Heading from '../Heading';
-import Icon from '../Icon';
 
 export default {
   title: 'Organisms/Interactive/Drag and Drop',
@@ -41,36 +40,12 @@ Default.args = {
           Content here
         </div>
       ),
-      handle: (
-        <div
-          style={{
-            position: 'absolute',
-            zIndex: '999',
-            top: '33%',
-            left: '0.75rem',
-          }}
-        >
-          <Icon name="drag-indicator" purpose="decorative" size="1.5rem" />
-        </div>
-      ),
     },
     'item-2': {
       title: 'Project #2',
       children: (
         <div className="fpo" style={{ width: '100%' }}>
           Content here
-        </div>
-      ),
-      handle: (
-        <div
-          style={{
-            position: 'absolute',
-            zIndex: '999',
-            top: '33%',
-            left: '0.75rem',
-          }}
-        >
-          <Icon name="drag-indicator" purpose="decorative" size="1.5rem" />
         </div>
       ),
     },
@@ -81,18 +56,6 @@ Default.args = {
           Content here
         </div>
       ),
-      handle: (
-        <div
-          style={{
-            position: 'absolute',
-            zIndex: '999',
-            top: '33%',
-            left: '0.75rem',
-          }}
-        >
-          <Icon name="drag-indicator" purpose="decorative" size="1.5rem" />
-        </div>
-      ),
     },
     'item-4': {
       title: 'Project #4',
@@ -101,36 +64,12 @@ Default.args = {
           Content here
         </div>
       ),
-      handle: (
-        <div
-          style={{
-            position: 'absolute',
-            zIndex: '999',
-            top: '33%',
-            left: '0.75rem',
-          }}
-        >
-          <Icon name="drag-indicator" purpose="decorative" size="1.5rem" />
-        </div>
-      ),
     },
     'item-5': {
       title: 'Project #5',
       children: (
         <div className="fpo" style={{ width: '100%' }}>
           Content here
-        </div>
-      ),
-      handle: (
-        <div
-          style={{
-            position: 'absolute',
-            zIndex: '999',
-            top: '33%',
-            left: '0.75rem',
-          }}
-        >
-          <Icon name="drag-indicator" purpose="decorative" size="1.5rem" />
         </div>
       ),
     },
@@ -162,5 +101,4 @@ Default.args = {
     },
   },
   unstyledItems: true,
-  dragByHandle: true,
 };

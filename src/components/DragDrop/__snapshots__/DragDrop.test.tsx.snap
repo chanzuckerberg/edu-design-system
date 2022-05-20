@@ -5,45 +5,45 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
   style="margin: 1rem;"
 >
   <section
-    class="drag-drop drag-drop--unstyled drag-drop--handles"
+    class="drag-drop drag-drop--unstyled"
     data-rbd-droppable-context-id="0"
     data-rbd-droppable-id="all-containers"
   >
-    <header
-      class="drag-drop-container__header"
-    >
-      <div
-        class="toolbar"
-      >
-        <h5
-          class="heading heading--size-h5"
-        >
-          Available Projects
-        </h5>
-      </div>
-    </header>
     <div
-      class="drag-drop-container"
-      data-rbd-droppable-context-id="0"
-      data-rbd-droppable-id="container-1"
+      class="drag-drop__container"
     >
-      <div
-        class="drag-drop-item"
-        data-rbd-draggable-context-id="0"
-        data-rbd-draggable-id="item-1"
+      <header
+        class="drag-drop-container__header"
       >
         <div
-          aria-describedby="rbd-hidden-text-0-hidden-text-0"
-          aria-label="Handle for draggable item"
-          class="drag-drop-item--handle"
-          data-rbd-drag-handle-context-id="0"
-          data-rbd-drag-handle-draggable-id="item-1"
-          draggable="false"
-          role="button"
-          tabindex="0"
+          class="toolbar"
+        >
+          <h5
+            class="heading heading--size-h5"
+          >
+            Available Projects
+          </h5>
+        </div>
+      </header>
+      <div
+        class="drag-drop__container-inner"
+        data-rbd-droppable-context-id="0"
+        data-rbd-droppable-id="container-1"
+      >
+        <div
+          class="drag-drop__item"
+          data-rbd-draggable-context-id="0"
+          data-rbd-draggable-id="item-1"
         >
           <div
-            style="position: absolute; z-index: 999; top: 33%; left: 0.75rem;"
+            aria-describedby="rbd-hidden-text-0-hidden-text-0"
+            aria-label="Handle for draggable item: Project #1"
+            class="drag-drop-item__item-handle"
+            data-rbd-drag-handle-context-id="0"
+            data-rbd-drag-handle-draggable-id="item-1"
+            draggable="false"
+            role="button"
+            tabindex="0"
           >
             <svg
               aria-hidden="true"
@@ -59,31 +59,27 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
               />
             </svg>
           </div>
+          <div
+            class="fpo"
+            style="width: 100%;"
+          >
+            Content here
+          </div>
         </div>
         <div
-          class="fpo"
-          style="width: 100%;"
-        >
-          Content here
-        </div>
-      </div>
-      <div
-        class="drag-drop-item"
-        data-rbd-draggable-context-id="0"
-        data-rbd-draggable-id="item-2"
-      >
-        <div
-          aria-describedby="rbd-hidden-text-0-hidden-text-0"
-          aria-label="Handle for draggable item"
-          class="drag-drop-item--handle"
-          data-rbd-drag-handle-context-id="0"
-          data-rbd-drag-handle-draggable-id="item-2"
-          draggable="false"
-          role="button"
-          tabindex="0"
+          class="drag-drop__item"
+          data-rbd-draggable-context-id="0"
+          data-rbd-draggable-id="item-2"
         >
           <div
-            style="position: absolute; z-index: 999; top: 33%; left: 0.75rem;"
+            aria-describedby="rbd-hidden-text-0-hidden-text-0"
+            aria-label="Handle for draggable item: Project #2"
+            class="drag-drop-item__item-handle"
+            data-rbd-drag-handle-context-id="0"
+            data-rbd-drag-handle-draggable-id="item-2"
+            draggable="false"
+            role="button"
+            tabindex="0"
           >
             <svg
               aria-hidden="true"
@@ -99,31 +95,27 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
               />
             </svg>
           </div>
+          <div
+            class="fpo"
+            style="width: 100%;"
+          >
+            Content here
+          </div>
         </div>
         <div
-          class="fpo"
-          style="width: 100%;"
-        >
-          Content here
-        </div>
-      </div>
-      <div
-        class="drag-drop-item"
-        data-rbd-draggable-context-id="0"
-        data-rbd-draggable-id="item-3"
-      >
-        <div
-          aria-describedby="rbd-hidden-text-0-hidden-text-0"
-          aria-label="Handle for draggable item"
-          class="drag-drop-item--handle"
-          data-rbd-drag-handle-context-id="0"
-          data-rbd-drag-handle-draggable-id="item-3"
-          draggable="false"
-          role="button"
-          tabindex="0"
+          class="drag-drop__item"
+          data-rbd-draggable-context-id="0"
+          data-rbd-draggable-id="item-3"
         >
           <div
-            style="position: absolute; z-index: 999; top: 33%; left: 0.75rem;"
+            aria-describedby="rbd-hidden-text-0-hidden-text-0"
+            aria-label="Handle for draggable item: Project #3"
+            class="drag-drop-item__item-handle"
+            data-rbd-drag-handle-context-id="0"
+            data-rbd-drag-handle-draggable-id="item-3"
+            draggable="false"
+            role="button"
+            tabindex="0"
           >
             <svg
               aria-hidden="true"
@@ -139,31 +131,27 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
               />
             </svg>
           </div>
+          <div
+            class="fpo"
+            style="width: 100%;"
+          >
+            Content here
+          </div>
         </div>
         <div
-          class="fpo"
-          style="width: 100%;"
-        >
-          Content here
-        </div>
-      </div>
-      <div
-        class="drag-drop-item"
-        data-rbd-draggable-context-id="0"
-        data-rbd-draggable-id="item-4"
-      >
-        <div
-          aria-describedby="rbd-hidden-text-0-hidden-text-0"
-          aria-label="Handle for draggable item"
-          class="drag-drop-item--handle"
-          data-rbd-drag-handle-context-id="0"
-          data-rbd-drag-handle-draggable-id="item-4"
-          draggable="false"
-          role="button"
-          tabindex="0"
+          class="drag-drop__item"
+          data-rbd-draggable-context-id="0"
+          data-rbd-draggable-id="item-4"
         >
           <div
-            style="position: absolute; z-index: 999; top: 33%; left: 0.75rem;"
+            aria-describedby="rbd-hidden-text-0-hidden-text-0"
+            aria-label="Handle for draggable item: Project #4"
+            class="drag-drop-item__item-handle"
+            data-rbd-drag-handle-context-id="0"
+            data-rbd-drag-handle-draggable-id="item-4"
+            draggable="false"
+            role="button"
+            tabindex="0"
           >
             <svg
               aria-hidden="true"
@@ -179,31 +167,27 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
               />
             </svg>
           </div>
+          <div
+            class="fpo"
+            style="width: 100%;"
+          >
+            Content here
+          </div>
         </div>
         <div
-          class="fpo"
-          style="width: 100%;"
-        >
-          Content here
-        </div>
-      </div>
-      <div
-        class="drag-drop-item"
-        data-rbd-draggable-context-id="0"
-        data-rbd-draggable-id="item-5"
-      >
-        <div
-          aria-describedby="rbd-hidden-text-0-hidden-text-0"
-          aria-label="Handle for draggable item"
-          class="drag-drop-item--handle"
-          data-rbd-drag-handle-context-id="0"
-          data-rbd-drag-handle-draggable-id="item-5"
-          draggable="false"
-          role="button"
-          tabindex="0"
+          class="drag-drop__item"
+          data-rbd-draggable-context-id="0"
+          data-rbd-draggable-id="item-5"
         >
           <div
-            style="position: absolute; z-index: 999; top: 33%; left: 0.75rem;"
+            aria-describedby="rbd-hidden-text-0-hidden-text-0"
+            aria-label="Handle for draggable item: Project #5"
+            class="drag-drop-item__item-handle"
+            data-rbd-drag-handle-context-id="0"
+            data-rbd-drag-handle-draggable-id="item-5"
+            draggable="false"
+            role="button"
+            tabindex="0"
           >
             <svg
               aria-hidden="true"
@@ -219,33 +203,37 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
               />
             </svg>
           </div>
-        </div>
-        <div
-          class="fpo"
-          style="width: 100%;"
-        >
-          Content here
+          <div
+            class="fpo"
+            style="width: 100%;"
+          >
+            Content here
+          </div>
         </div>
       </div>
     </div>
-    <header
-      class="drag-drop-container__header"
-    >
-      <div
-        class="toolbar"
-      >
-        <h5
-          class="heading heading--size-h5"
-        >
-          Selected Projects
-        </h5>
-      </div>
-    </header>
     <div
-      class="drag-drop-container"
-      data-rbd-droppable-context-id="0"
-      data-rbd-droppable-id="container-2"
-    />
+      class="drag-drop__container"
+    >
+      <header
+        class="drag-drop-container__header"
+      >
+        <div
+          class="toolbar"
+        >
+          <h5
+            class="heading heading--size-h5"
+          >
+            Selected Projects
+          </h5>
+        </div>
+      </header>
+      <div
+        class="drag-drop__container-inner"
+        data-rbd-droppable-context-id="0"
+        data-rbd-droppable-id="container-2"
+      />
+    </div>
   </section>
 </div>
 `;

@@ -20,21 +20,12 @@ export interface Props {
    * Prop that will be an array of items
    */
   items: ItemType[];
-  /**
-   * Prop that gets passed to DragDropItem(s)
-   */
-  dragByHandle: boolean;
 }
 
 /**
  * Primary UI component for user interaction
  */
-export const DragDropContainer = ({
-  className,
-  container,
-  dragByHandle,
-  items,
-}: Props) => {
+export const DragDropContainer = ({ className, container, items }: Props) => {
   const componentClassName = clsx(
     styles['drag-drop__container'],
     className,
@@ -60,12 +51,7 @@ export const DragDropContainer = ({
             {...provided.droppableProps}
           >
             {items.map((item: ItemType, index: number) => (
-              <DragDropItem
-                dragByHandle={dragByHandle}
-                index={index}
-                item={item}
-                key={item.id}
-              />
+              <DragDropItem index={index} item={item} key={item.id} />
             ))}
             {provided.placeholder}
           </div>

@@ -32,10 +32,6 @@ export interface Props {
    */
   unstyledItems: boolean;
   /**
-   * DragDrop items can be dragged by grabbing a handle, or dragged by grabbing anywhere on the item (default)
-   */
-  dragByHandle: boolean;
-  /**
    * Child node(s) that can be nested inside component. `ModalHeader`, `ModalBody`, and `ModelFooter` are the only permissible children of the Modal
    */
   children?: ReactNode;
@@ -49,7 +45,6 @@ export const DragDrop = ({
   className,
   items,
   containers,
-  dragByHandle = false,
   multipleContainers = false,
   unstyledItems = false,
 }: Props) => {
@@ -59,8 +54,7 @@ export const DragDrop = ({
   const componentClassName = clsx(
     styles['drag-drop'],
     className,
-    (unstyledItems || dragByHandle) && styles['drag-drop--unstyled'],
-    dragByHandle && styles['drag-drop--handles'],
+    unstyledItems && styles['drag-drop--unstyled'],
     multipleContainers && styles['drag-drop--multiple'],
   );
 
@@ -196,7 +190,6 @@ export const DragDrop = ({
                   return (
                     <DragDropContainer
                       container={container}
-                      dragByHandle={dragByHandle}
                       items={items}
                       key={container.id}
                     />
