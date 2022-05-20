@@ -1,13 +1,6 @@
 import clsx from 'clsx';
-import React, {
-  ReactNode,
-  MouseEventHandler,
-  KeyboardEvent,
-  useState,
-} from 'react';
-import { ESCAPE_KEYCODE, R_ARROW_KEYCODE } from '../../util/keycodes';
+import React, { ReactNode, MouseEventHandler } from 'react';
 import styles from '../DropdownMenu/DropdownMenu.module.css';
-import { Icon, IconName } from '../Icon/Icon';
 
 export interface Props {
   /**
