@@ -2,11 +2,7 @@ import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import styles from './ButtonDropdown.module.css';
 import { DropdownMenu } from '../..';
-import {
-  ESCAPE_KEYCODE,
-  TAB_KEYCODE,
-  SHIFT_TAB_KEYCODE,
-} from '../../util/keycodes';
+import { ESCAPE_KEYCODE } from '../../util/keycodes';
 import type { ClickableStyleProps } from '../ClickableStyle';
 
 export interface Props {
@@ -31,6 +27,14 @@ export interface Props {
    * Disables the field and prevents editing the contents
    */
   disabled?: boolean;
+  /**
+   * Determines type of clickable
+   * - default renders a dropdown menu to the bottom left of the button
+   * - **top-left** renders a dropdown menu to the top left of the button
+   * - **top-right** renders a dropdown menu to the top right of the button
+   * - **bottom-right** renders a dropdown menu to the bottom right of the button
+   */
+  position?: 'top-left' | 'top-right' | 'bottom-right';
   /**
    * Determines type of clickable
    * - **button** The clickable is a clickable button.
@@ -64,6 +68,7 @@ export const ButtonDropdown = ({
   buttonStatus,
   buttonSize,
   className,
+  position,
   children,
   dropdownMenuTrigger,
   ...other
@@ -160,6 +165,7 @@ export const ButtonDropdown = ({
         return React.cloneElement<Props>(child, {
           ref: buttonRef,
           onClick: togglePanel,
+          'aria-expanded': isActiveVar,
         });
       }
     },
@@ -177,6 +183,9 @@ export const ButtonDropdown = ({
     styles['button-dropdown'],
     className,
     isActiveVar && styles['eds-is-active'],
+    position === 'top-left' && styles['button-dropdown--top-left'],
+    position === 'top-right' && styles['button-dropdown--top-right'],
+    position === 'bottom-right' && styles['button-dropdown--bottom-right'],
   );
   return (
     <div

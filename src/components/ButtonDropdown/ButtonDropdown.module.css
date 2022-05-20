@@ -25,14 +25,17 @@
   /**
   * Button dropdown dropdown menu positioned to the top-left of the button
   */
-  .button-dropdown--top-left {
+  .button-dropdown--top-left & {
+    top: initial;
     bottom: 100%;
   }
 
   /**
   * Button dropdown dropdown menu positioned to the top-right of the button
   */
-  .button-dropdown--top-right {
+  .button-dropdown--top-right & {
+    top: initial;
+    bottom: 100%;
     right: initial;
     left: 0;
   }
@@ -40,7 +43,7 @@
   /**
   * Button dropdown dropdown menu positioned to the bottom-right of the button
   */
-  .button-dropdown--bottom-right {
+  .button-dropdown--bottom-right & {
     right: initial;
     left: 0;
   }
