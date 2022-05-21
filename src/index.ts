@@ -25,6 +25,7 @@ export { default as HorizontalStep } from './components/HorizontalStep';
 export { default as HorizontalStepper } from './components/HorizontalStepper';
 export { default as Hr } from './components/Hr';
 export { default as Icon } from './components/Icon';
+export { default as InlineNotification } from './components/InlineNotification';
 export { default as Layout } from './components/Layout';
 export { default as LayoutContainer } from './components/LayoutContainer';
 export { default as LayoutLinelengthContainer } from './components/LayoutLinelengthContainer';
