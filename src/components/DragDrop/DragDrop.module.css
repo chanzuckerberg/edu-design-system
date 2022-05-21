@@ -10,6 +10,7 @@
  */
 .drag-drop {
   display: flex;
+  overflow: auto;
 }
 
 /**
@@ -18,11 +19,10 @@
  */
 .drag-drop__container {
   display: flex; /* 1 */
+  flex-shrink: 0;
   flex-direction: column;
   margin-left: var(--eds-size-2);
-  min-width: 14rem;
-  width: 50%;
-
+  width: 20rem;
   /**
   * First drag drop container
   * 1) Don't add left margin to left align with the rest of the content
@@ -64,6 +64,7 @@
     align-items: center;
     flex: 1;
     padding: var(--eds-size-4);
+    color: var(--eds-theme-color-text-neutral-subtle);
   }
 
   /**
