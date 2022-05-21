@@ -20,6 +20,8 @@
   display: flex; /* 1 */
   flex-direction: column;
   margin-left: var(--eds-size-2);
+  min-width: 14rem;
+  width: 50%;
 
   /**
   * First drag drop container
@@ -40,7 +42,6 @@
 .drag-drop__container-inner {
   display: block; /* 3 */
   border-radius: var(--eds-border-radius-md);
-  min-width: 14rem;
 
   /**
   * 1) Distinguish last container from first container (not used when more than two containers)
@@ -53,20 +54,18 @@
     .drag-drop--multiple & {
       background-color: unset;
     }
-
-    /* 2 */
-    &:empty {
-      flex: 1;
-      background-image: url('https://fakeimg.pl/240x120/?text=Drag%20in%20available%20projects');
-      background-repeat: no-repeat;
-      background-position: center;
-
-      /* stylelint-disable-next-line max-nesting-depth */
-      .drag-drop--multiple & {
-        background-image: unset;
-      }
-    }
   }
+
+  /* 2 */
+  .drag-drop__container--empty & {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: var(--eds-size-4);
+  }
+
   /**
   * 1) When there are more than two containers, apply a border
   */
@@ -105,7 +104,7 @@
 /** 
 * 1) Optional title div at the top of an item.
 */
-.drag-drop-item__title {
+.drag-drop__item-title {
   @mixin eds-typography-preset-007-bold;
   margin-bottom: var(--eds-size-2);
 }
@@ -113,18 +112,29 @@
 /**
 * 1) Used with handles variant to wrap children.
 */
-.drag-drop-item__content {
+.drag-drop__item-content {
   flex-grow: 1;
 }
 
 /**
 * 1) Wrapper for drag handle.
 */
-.drag-drop-item__item-handle {
-  height: 100%;
+.drag-drop__item-handle {
   position: absolute;
+  top: 1px;
+  left: 1px;
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0;
+  height: calc(100% - 2px);
   padding: var(--eds-size-1);
+  z-index: var(--eds-z-index-500);
+  background: var(--eds-theme-color-background-neutral-default);
+  transition: opacity var(--eds-anim-fade-quick) var(--eds-anim-ease);
+
+  .drag-drop__item:hover &,
+  .drag-drop__item:focus & {
+    opacity: 1;
+  }
 }

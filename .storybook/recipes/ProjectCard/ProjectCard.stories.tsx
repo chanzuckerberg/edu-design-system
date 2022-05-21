@@ -14,4 +14,5 @@ export const Default = Template.bind({});
 Default.args = {
   title: 'Project card title',
   meta: '12 days',
+  number: 1,
 };

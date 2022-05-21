@@ -36,6 +36,10 @@ export interface Props {
    * Project card meta data (e.g. calendar)
    */
   meta?: string;
+  /**
+   * Project card number
+   */
+  number?: number;
 }
 
 /**
@@ -45,24 +49,25 @@ export const ProjectCard = ({
   className,
   title,
   meta,
+  number,
   buttonDropdownPosition,
   ...other
 }: Props) => {
   const componentClassName = clsx(styles['project-card'], className, {});
   return (
     <Card className={componentClassName} orientation="horizontal" {...other}>
-      <div className={styles['project-card__drag-handle']}>
+      {/* <div className={styles['project-card__drag-handle']}>
         <Icon
           className={styles['project-card__drag-icon']}
           name="drag-indicator"
           purpose="decorative"
           size="2rem"
         />
-      </div>
+      </div> */}
       <CardHeader>
         <NumberIcon
           className={styles['project-card__number']}
-          number={1}
+          number={number}
           size="sm"
         />
       </CardHeader>

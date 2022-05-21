@@ -36,7 +36,7 @@ export const DragDropItem = ({ className, item, index }: Props) => {
           >
             <div
               aria-label={`Handle for draggable item: ${item.title}`}
-              className={clsx(styles['drag-drop-item__item-handle'])}
+              className={clsx(styles['drag-drop__item-handle'])}
               {...provided.dragHandleProps}
             >
               <Icon name="drag-indicator" purpose="decorative" size="1.5rem" />

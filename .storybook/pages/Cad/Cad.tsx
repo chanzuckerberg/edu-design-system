@@ -10,13 +10,13 @@ import {
   LayoutContainer,
   Layout,
   LayoutSection,
+  DragDrop,
+  DragDropContainerHeader,
   Grid,
   GridItem,
   Icon,
   OverflowList,
   OverflowListItem,
-  Tabs,
-  Tab,
   HorizontalStepper,
   DataBar,
 } from '../../../src';
@@ -78,11 +78,78 @@ export const Cad = () => (
                 quam, consequat iaculis pretium accumsan, fringilla id ligula.
               </p>
             </TextPassage>
-            <Tabs>
-              <Tab title="Planning overview">
-                <OverflowList>
-                  <OverflowListItem>
-                    <ProjectColumn>
+
+            <DragDrop
+              multipleContainers={false}
+              items={{
+                'item-1': {
+                  title: 'Project #1',
+                  children: (
+                    <ProjectCard
+                      number={1}
+                      meta="12 days"
+                      title="Project card title"
+                    ></ProjectCard>
+                  ),
+                },
+                'item-2': {
+                  title: 'Project #2',
+                  children: (
+                    <ProjectCard
+                      number={2}
+                      meta="12 days"
+                      title="Project card title"
+                    ></ProjectCard>
+                  ),
+                },
+                'item-3': {
+                  title: 'Project #3',
+                  children: (
+                    <ProjectCard
+                      number={3}
+                      meta="12 days"
+                      title="Project card title"
+                    ></ProjectCard>
+                  ),
+                },
+                'item-4': {
+                  title: 'Project #4',
+                  children: (
+                    <ProjectCard
+                      number={4}
+                      meta="12 days"
+                      title="Project card title"
+                    ></ProjectCard>
+                  ),
+                },
+                'item-5': {
+                  title: 'Project #5',
+                  children: (
+                    <ProjectCard
+                      number={5}
+                      buttonDropdownPosition="top-left"
+                      meta="12 days"
+                      title="Project card title"
+                    ></ProjectCard>
+                  ),
+                },
+                'item-6': {
+                  title: 'Project #6',
+                  children: (
+                    <ProjectCard
+                      number={6}
+                      buttonDropdownPosition="top-left"
+                      meta="12 days"
+                      title="Project card title"
+                    ></ProjectCard>
+                  ),
+                },
+              }}
+              containers={{
+                'container-1': {
+                  itemIds: ['item-1', 'item-2', 'item-3', 'item-4', 'item-5'],
+                  header: (
+                    <DragDropContainerHeader>
                       <Toolbar className="u-margin-bottom-md" variant="bare">
                         <ToolbarItem>
                           <Heading as="h2" size="title-sm">
@@ -96,50 +163,13 @@ export const Cad = () => (
                           </Button>
                         </ToolbarItem>
                       </Toolbar>
-                      <Grid gap="sm">
-                        <GridItem>
-                          <ProjectCard
-                            meta="12 days"
-                            title="Project card title"
-                          ></ProjectCard>
-                        </GridItem>
-                        <GridItem>
-                          <ProjectCard
-                            meta="12 days"
-                            title="Project card title"
-                          ></ProjectCard>
-                        </GridItem>
-                        <GridItem>
-                          <ProjectCard
-                            meta="12 days"
-                            title="Project card title"
-                          ></ProjectCard>
-                        </GridItem>
-                        <GridItem>
-                          <ProjectCard
-                            meta="12 days"
-                            title="Project card title"
-                          ></ProjectCard>
-                        </GridItem>
-                        <GridItem>
-                          <ProjectCard
-                            buttonDropdownPosition="top-left"
-                            meta="12 days"
-                            title="Project card title"
-                          ></ProjectCard>
-                        </GridItem>
-                        <GridItem>
-                          <ProjectCard
-                            buttonDropdownPosition="top-left"
-                            meta="12 days"
-                            title="Project card title"
-                          ></ProjectCard>
-                        </GridItem>
-                      </Grid>
-                    </ProjectColumn>
-                  </OverflowListItem>
-                  <OverflowListItem>
-                    <ProjectColumn>
+                    </DragDropContainerHeader>
+                  ),
+                },
+                'container-2': {
+                  itemIds: [],
+                  header: (
+                    <DragDropContainerHeader>
                       <Toolbar className="u-margin-bottom-md" variant="bare">
                         <ToolbarItem>
                           <Heading as="h2" size="title-sm">
@@ -153,26 +183,12 @@ export const Cad = () => (
                           </Button>
                         </ToolbarItem>
                       </Toolbar>
-                      <div className="fpo" style={{ flex: '1' }}>
-                        Empty state
-                      </div>
-                    </ProjectColumn>
-                  </OverflowListItem>
-                </OverflowList>
-              </Tab>
-
-              <Tab title="Calendar overview">
-                <TextPassage>
-                  <h3>Tab 2</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex{' '}
-                  </p>
-                </TextPassage>
-              </Tab>
-            </Tabs>
+                    </DragDropContainerHeader>
+                  ),
+                },
+              }}
+              unstyledItems={true}
+            />
           </Panel>
         </LayoutSection>
         <LayoutSection region="sidebar">
