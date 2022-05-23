@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import React, { forwardRef, ForwardedRef } from 'react';
 import styles from './Text.module.css';
+import LayoutLinelengthContainer from '../LayoutLinelengthContainer';
 
 export type Size = 'body' | 'sm' | 'md' | 'lg' | 'xs' | 'caption' | 'overline';
 
@@ -22,7 +23,8 @@ export type Props = {
   /**
    * Controls whether to render text inline (defaults to "p");
    */
-  as?: 'p' | 'span';
+  as?: 'p' | 'span' | 'div';
+  capLineLength?: boolean;
   children: React.ReactNode;
   className?: string;
   variant?: Variant;
@@ -41,6 +43,7 @@ export const Text = forwardRef(
   (
     {
       as = 'p',
+      capLineLength,
       children,
       className,
       variant,
@@ -61,7 +64,8 @@ export const Text = forwardRef(
         'Info variant is deprecated, please consider another variant.',
       );
     }
-    const TagName = as;
+    const TagName =
+      capLineLength && as === 'div' ? LayoutLinelengthContainer : as;
     const componentClassName = clsx(
       className,
       styles['text'],
@@ -69,6 +73,8 @@ export const Text = forwardRef(
       variant && styles[`text--${variant}`],
       weight && styles[`text--${weight}-weight`],
       spacing && styles[`text--${spacing}-spacing`],
+      as === 'div' && styles['text-passage'],
+      as === 'div' && styles[`text-passage--${size}`],
     );
     return (
       <TagName className={componentClassName} ref={ref} {...other}>
