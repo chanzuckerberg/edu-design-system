@@ -35,7 +35,6 @@ export interface Props {
    * Child node(s) that can be nested inside component. `ModalHeader`, `ModalBody`, and `ModelFooter` are the only permissible children of the Modal
    */
   children?: ReactNode;
-  containerHeader?: ReactNode;
 }
 
 /**
@@ -57,6 +56,8 @@ export const DragDrop = ({
     unstyledItems && styles['drag-drop--unstyled'],
     multipleContainers && styles['drag-drop--multiple'],
   );
+
+  console.log(Droppable);
 
   const containerOrder: string[] = [];
   Object.entries(items).forEach(([key, item]) => {
@@ -190,6 +191,7 @@ export const DragDrop = ({
                   return (
                     <DragDropContainer
                       container={container}
+                      emptyContent={container.emptyContent}
                       items={items}
                       key={container.id}
                     />

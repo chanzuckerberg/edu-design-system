@@ -36,12 +36,12 @@
 * 1) An area that can be dropped into.
 * 2) DragDropContainer styles are included here rather than in the /DragDropContainer directory as a workaround to CSS Modules' locally scoped class names 
 * 3) Explicitly giving container display type of 'block'. Avoid using flex; doing so may cause jumpy behavior when items are dropped.
-* 4) If a minimum height is not set, all containers in the same context will have their height determined by the longest "list" of items, and will resize as items are moved, which may or may not be desirable. 
-* 5) Setting a fixed width for containers avoids jumpy behavior caused by using flex grow or other non-fixed width methods.
 */
 .drag-drop__container-inner {
-  display: block; /* 3 */
+  display: flex;
+  flex-direction: column;
   border-radius: var(--eds-border-radius-md);
+  flex: 1;
 
   /**
   * 1) Distinguish last container from first container (not used when more than two containers)
@@ -49,7 +49,7 @@
   * 3) When there are more than two containers, disable the empty background
   */
   .drag-drop__container:last-of-type & {
-    background-color: var(--eds-color-neutral-200);
+    background-color: var(--eds-theme-color-background-neutral-subtle);
 
     .drag-drop--multiple & {
       background-color: unset;
@@ -58,11 +58,8 @@
 
   /* 2 */
   .drag-drop__container--empty & {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex: 1;
     padding: var(--eds-size-4);
     color: var(--eds-theme-color-text-neutral-subtle);
   }
@@ -89,8 +86,8 @@
   border-radius: var(--eds-border-radius-md);
   box-shadow: var(--eds-box-shadow-sm);
 
-  &:focus-within {
-    outline: 2px solid blue;
+  &:last-child {
+    margin-bottom: 0;
   }
 
   /**
