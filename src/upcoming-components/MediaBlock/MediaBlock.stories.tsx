@@ -4,7 +4,7 @@ import React from 'react';
 
 import { MediaBlock, Props } from './MediaBlock';
 import Heading from '../../components/Heading';
-import TextPassage from '../../components/TextPassage';
+import Text from '../../components/Text';
 
 export default {
   title: 'Molecules/Blocks/MediaBlock',
@@ -19,12 +19,10 @@ const Template: Story<Props> = (args) => (
     <Heading className="u-margin-bottom-md" size="h3">
       Media block title
     </Heading>
-    <TextPassage>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
-      </p>
-    </TextPassage>
+    <Text>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.
+    </Text>
   </MediaBlock>
 );
 

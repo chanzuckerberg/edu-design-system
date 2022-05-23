@@ -6,7 +6,7 @@ import { StackedBlock, Props } from './StackedBlock';
 import Button from '../../components/Button';
 import ButtonGroup from '../../components/ButtonGroup';
 import Heading from '../../components/Heading';
-import TextPassage from '../../components/TextPassage';
+import Text from '../../components/Text';
 import StackedBlockBody from '../StackedBlockBody';
 import StackedBlockFooter from '../StackedBlockFooter';
 import StackedBlockHeader from '../StackedBlockHeader';
@@ -32,12 +32,10 @@ const Template: Story<Props> = (args) => (
       <Heading className="u-margin-bottom-md" size="h3">
         Stacked block title
       </Heading>
-      <TextPassage className="u-margin-bottom-md">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-      </TextPassage>
+      <Text className="u-margin-bottom-md">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
+      </Text>
     </StackedBlockBody>
     <StackedBlockFooter>
       <ButtonGroup>

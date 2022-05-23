@@ -24,7 +24,7 @@ export type Props = {
    * Controls whether to render text inline (defaults to "p");
    */
   as?: 'p' | 'span' | 'div';
-  capLineLength?: boolean;
+  capLinelength?: boolean;
   children: React.ReactNode;
   className?: string;
   variant?: Variant;
@@ -43,7 +43,7 @@ export const Text = forwardRef(
   (
     {
       as = 'p',
-      capLineLength,
+      capLinelength = true,
       children,
       className,
       variant,
@@ -65,7 +65,7 @@ export const Text = forwardRef(
       );
     }
     const TagName =
-      capLineLength && as === 'div' ? LayoutLinelengthContainer : as;
+      capLinelength && as === 'div' ? LayoutLinelengthContainer : as;
     const componentClassName = clsx(
       className,
       styles['text'],

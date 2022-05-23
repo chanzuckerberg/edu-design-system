@@ -252,3 +252,11 @@ const TextPassageTemplate = (args: Args) => (
 export const TextPassage: StoryObj<Args> = {
   render: (args) => <TextPassageTemplate {...args} as="div" />,
 };
+
+export const TextPassageSmall: StoryObj<Args> = {
+  render: (args) => <TextPassageTemplate {...args} as="div" size="sm" />,
+};
+
+export const TextPassageLarge: StoryObj<Args> = {
+  render: (args) => <TextPassageTemplate {...args} as="div" size="lg" />,
+};
