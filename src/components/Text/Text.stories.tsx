@@ -1,4 +1,4 @@
-import type { StoryObj } from '@storybook/react';
+import type { StoryObj, Meta } from '@storybook/react';
 import clsx from 'clsx';
 import React from 'react';
 
@@ -16,7 +16,18 @@ export default {
       },
     },
   },
-};
+  decorators: [
+    (Story) => (
+      <div
+        style={{
+          margin: '0.25rem',
+        }}
+      >
+        <Story />
+      </div>
+    ),
+  ],
+} as Meta<Args>;
 
 const variants = [
   'error',
