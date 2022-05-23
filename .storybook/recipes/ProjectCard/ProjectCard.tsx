@@ -39,7 +39,7 @@ export interface Props {
   /**
    * Project card number
    */
-  number?: number;
+  number: number;
 }
 
 /**

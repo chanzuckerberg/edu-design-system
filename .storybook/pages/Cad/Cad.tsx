@@ -12,11 +12,7 @@ import {
   LayoutSection,
   DragDrop,
   DragDropContainerHeader,
-  Grid,
-  GridItem,
   Icon,
-  OverflowList,
-  OverflowListItem,
   HorizontalStepper,
   DataBar,
 } from '../../../src';
@@ -25,8 +21,6 @@ import '../../../src/components/Utilities/Spacing.css';
 import { Toolbar } from '../../../src/upcoming-components/Toolbar/Toolbar';
 import { ToolbarItem } from '../../../src/upcoming-components/ToolbarItem/ToolbarItem';
 import ProjectCard from '../../recipes/ProjectCard';
-
-import ProjectColumn from '../../recipes/ProjectColumn';
 
 export const Cad = () => (
   <>
