@@ -4,11 +4,64 @@
     #DRAGDROP
 \*------------------------------------*/
 
+.drag-drop {
+  position: relative;
+  /**
+    * Table object body with content overflowed left
+    */
+  &.eds-is-overflow-left {
+    /**
+         * Right overflow gradient for the overflow list
+         */
+    /* stylelint-disable-next-line max-nesting-depth */
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      background: linear-gradient(
+        to left,
+        rgba(255, 255, 255, 0.001) 50%,
+        var(--eds-theme-color-background-neutral-default)
+      );
+      height: 100%;
+      top: 0;
+      left: 0;
+      width: var(--eds-size-4);
+      z-index: var(--eds-z-index-100);
+    }
+  }
+
+  /**
+        * Table object body with content overflowed right
+        */
+  &.eds-is-overflow-right {
+    /**
+         * Right overflow gradient for the overflow list
+         */
+    /* stylelint-disable-next-line max-nesting-depth */
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.001) 50%,
+        var(--eds-theme-color-background-neutral-default)
+      );
+      height: 100%;
+      top: 0;
+      right: 0;
+      width: var(--eds-size-4);
+      z-index: var(--eds-z-index-100);
+    }
+  }
+}
+
 /**
  * 1) Outer container for DragDrop component; provides <DragDropContext />, which wraps droppable components (i.e. containers) and provides them with context 
  * 2) Uses a flex row to align containers
  */
-.drag-drop {
+.drag-drop__inner {
   display: flex;
   overflow: auto;
 }
@@ -41,21 +94,9 @@
   display: flex;
   flex-direction: column;
   flex: 1;
+  background-color: var(--eds-theme-color-background-neutral-subtle);
   padding: var(--eds-size-1);
   border-radius: var(--eds-border-radius-md);
-
-  /**
-  * 1) Distinguish last container from first container (not used when more than two containers)
-  * 2) When the container is empty, a background image may be displayed. This may be helpful when the app starts with all items in the first container
-  * 3) When there are more than two containers, disable the empty background
-  */
-  .drag-drop__container:last-of-type & {
-    background-color: var(--eds-theme-color-background-neutral-subtle);
-
-    .drag-drop--multiple & {
-      background-color: unset;
-    }
-  }
 
   /* 2 */
   .drag-drop__container--empty & {
