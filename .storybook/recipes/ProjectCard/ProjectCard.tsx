@@ -56,14 +56,6 @@ export const ProjectCard = ({
   const componentClassName = clsx(styles['project-card'], className, {});
   return (
     <Card className={componentClassName} orientation="horizontal" {...other}>
-      {/* <div className={styles['project-card__drag-handle']}>
-        <Icon
-          className={styles['project-card__drag-icon']}
-          name="drag-indicator"
-          purpose="decorative"
-          size="2rem"
-        />
-      </div> */}
       <CardHeader>
         <NumberIcon
           className={styles['project-card__number']}
