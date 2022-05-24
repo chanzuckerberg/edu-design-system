@@ -41,6 +41,10 @@ export interface Props {
    */
   number: number;
   /**
+   * Number aria label
+   */
+  numberAriaLabel?: string;
+  /**
    * Property passed in to style draggable project card
    */
   isDragging?: boolean;
@@ -55,6 +59,7 @@ export const ProjectCard = ({
   meta,
   number,
   buttonDropdownPosition,
+  numberAriaLabel,
   isDragging,
   ...other
 }: Props) => {
@@ -71,6 +76,7 @@ export const ProjectCard = ({
         <NumberIcon
           className={styles['project-card__number']}
           number={number}
+          aria-label={numberAriaLabel}
           size="sm"
         />
       </CardHeader>

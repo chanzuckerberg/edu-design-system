@@ -15,4 +15,5 @@ Default.args = {
   title: 'Project card title',
   meta: '12 days',
   number: 1,
+  numberAriaLabel: 'Project 1',
 };
