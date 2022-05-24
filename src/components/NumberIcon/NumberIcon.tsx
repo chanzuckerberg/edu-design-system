@@ -7,11 +7,7 @@ export interface Props {
   /**
    * Screen-reader text for the number icon.
    */
-  'aria-label'?: string;
-  /**
-   * Id that links a label text for the number icon.
-   */
-  'aria-labelledby'?: string;
+  'aria-label': string;
   /**
    * CSS class names that can be appended to the component.
    */
