@@ -62,6 +62,7 @@ export const NumberIcon = ({
     <Text
       as="span" /* 1 */
       className={componentClassName}
+      role="img"
       size="sm"
       variant={variant === 'base' ? 'base' : 'white'}
       {...other}
