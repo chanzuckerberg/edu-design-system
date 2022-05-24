@@ -74,9 +74,9 @@ export const ProjectCard = ({
     >
       <CardHeader>
         <NumberIcon
+          aria-label={numberAriaLabel}
           className={styles['project-card__number']}
           number={number}
-          aria-label={numberAriaLabel}
           size="sm"
         />
       </CardHeader>
