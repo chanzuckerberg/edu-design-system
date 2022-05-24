@@ -9,7 +9,7 @@
  */
 .inline-notification {
   display: inline-flex;
-  padding: var(--eds-size-half);
+  padding: var(--eds-size-quarter) var(--eds-size-half);
   border: var(--eds-theme-border-width) solid var(--border-dark-color);
   border-radius: var(--eds-theme-border-radius);
 }
@@ -67,10 +67,14 @@
 
 /**
  * Full width variant of the inline notification.
+ * 1) Accounts for the lack of border in height to make it 44px.
  */
 .inline-notification--full-width {
   display: flex;
   border: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  padding: calc(var(--eds-size-1) + var(--eds-theme-border-width)); /* 1 */
 }
 .inline-notification--full-width-subtle {
   background-color: var(--eds-theme-color-background-neutral-subtle);

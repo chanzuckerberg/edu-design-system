@@ -179,6 +179,7 @@
       "10": "var(--eds-size-10)",
       "base-unit": "var(--eds-size-base-unit)",
       "half": "var(--eds-size-half)",
+      "quarter": "var(--eds-size-quarter)",
       "1-and-half": "var(--eds-size-1-and-half)",
       "2-and-half": "var(--eds-size-2-and-half)"
     },

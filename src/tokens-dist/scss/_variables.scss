@@ -131,6 +131,7 @@ $eds-size-9: 4.5rem !default;
 $eds-size-10: 5rem !default;
 $eds-size-base-unit: 0.5rem !default;
 $eds-size-half: 0.25rem !default;
+$eds-size-quarter: 0.125rem !default;
 $eds-size-1-and-half: 0.75rem !default;
 $eds-size-2-and-half: 1.25rem !default;
 $eds-font-family-primary: 'Arimo', sans-serif !default;
@@ -591,6 +592,7 @@ $tokens: (
       '10': $eds-size-10,
       'base-unit': $eds-size-base-unit,
       'half': $eds-size-half,
+      'quarter': $eds-size-quarter,
       '1-and-half': $eds-size-1-and-half,
       '2-and-half': $eds-size-2-and-half
     ),

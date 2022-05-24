@@ -179,6 +179,7 @@
       "10": "5rem",
       "base-unit": "0.5rem",
       "half": "0.25rem",
+      "quarter": "0.125rem",
       "1-and-half": "0.75rem",
       "2-and-half": "1.25rem"
     },
