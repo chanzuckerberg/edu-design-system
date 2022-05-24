@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { Draggable, DraggableProvided } from 'react-beautiful-dnd';
 import styles from '../DragDrop/DragDrop.module.css';
 import { ItemType } from '../DragDrop/DragDropTypes';
@@ -22,12 +22,27 @@ export interface Props {
  * Primary UI component for user interaction
  */
 export const DragDropItem = ({ className, item, index }: Props) => {
-  const componentClassName = clsx(styles['drag-drop__item'], className, {});
+  const componentClassName = clsx(styles['drag-drop__item'], className);
 
   // `id` is injected in <DragDrop />
   return item.id ? (
     <Draggable draggableId={item.id} index={index}>
-      {(provided: DraggableProvided) => {
+      {(provided: DraggableProvided, snapshot) => {
+        const childrenWithProps = React.Children.map(
+          item.children,
+          // TODO: improve `any` type
+          (child: ReactNode) => {
+            // Checking isValidElement is the safe way and avoids a typescript
+            // error too.
+            if (React.isValidElement(child)) {
+              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+              // @ts-expect-error TODO: fix "No overload matches this call" error
+              return React.cloneElement<Props>(child, {
+                isDragging: snapshot.isDragging,
+              });
+            }
+          },
+        );
         return (
           <div
             className={componentClassName}
@@ -41,7 +56,7 @@ export const DragDropItem = ({ className, item, index }: Props) => {
             >
               <Icon name="drag-indicator" purpose="decorative" size="1.5rem" />
             </div>
-            {item.children}
+            {childrenWithProps}
           </div>
         );
       }}

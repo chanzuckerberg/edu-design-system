@@ -141,6 +141,7 @@
     box-shadow: unset;
   }
 }
+
 /** 
 * 1) Optional title div at the top of an item.
 */
@@ -174,7 +175,8 @@
   transition: opacity var(--eds-anim-fade-quick) var(--eds-anim-ease);
 
   .drag-drop__item:hover &,
-  .drag-drop__item:focus & {
+  .drag-drop__item:focus &,
+  &:focus {
     opacity: 1;
   }
 }

@@ -2,8 +2,11 @@ import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { Story, Meta } from '@storybook/react';
 import React, { ComponentProps } from 'react';
 import { DragDrop, Props } from './DragDrop';
+import styles from './DragDrop.stories.module.css';
 
 import Toolbar from '../../upcoming-components/Toolbar';
+import Card from '../Card';
+import CardBody from '../CardBody';
 import DragDropContainerHeader from '../DragDropContainerHeader';
 import Heading from '../Heading';
 import TextPassage from '../TextPassage';
@@ -37,41 +40,41 @@ Default.args = {
     'item-1': {
       title: 'Project #1',
       children: (
-        <div className="fpo" style={{ width: '100%' }}>
-          Content here
-        </div>
+        <Card className={styles['example-card']} elevation="raised">
+          <CardBody>Card 1</CardBody>
+        </Card>
       ),
     },
     'item-2': {
       title: 'Project #2',
       children: (
-        <div className="fpo" style={{ width: '100%' }}>
-          Content here
-        </div>
+        <Card className={styles['example-card']} elevation="raised">
+          <CardBody>Card 2</CardBody>
+        </Card>
       ),
     },
     'item-3': {
       title: 'Project #3',
       children: (
-        <div className="fpo" style={{ width: '100%' }}>
-          Content here
-        </div>
+        <Card className={styles['example-card']} elevation="raised">
+          <CardBody>Card 3</CardBody>
+        </Card>
       ),
     },
     'item-4': {
       title: 'Project #4',
       children: (
-        <div className="fpo" style={{ width: '100%' }}>
-          Content here
-        </div>
+        <Card className={styles['example-card']} elevation="raised">
+          <CardBody>Card 4</CardBody>
+        </Card>
       ),
     },
     'item-5': {
       title: 'Project #5',
       children: (
-        <div className="fpo" style={{ width: '100%' }}>
-          Content here
-        </div>
+        <Card className={styles['example-card']} elevation="raised">
+          <CardBody>Card 5</CardBody>
+        </Card>
       ),
     },
   },

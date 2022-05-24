@@ -40,6 +40,10 @@ export interface Props {
    * Project card number
    */
   number: number;
+  /**
+   * Property passed in to style draggable project card
+   */
+  isDragging?: boolean;
 }
 
 /**
@@ -51,11 +55,18 @@ export const ProjectCard = ({
   meta,
   number,
   buttonDropdownPosition,
+  isDragging,
   ...other
 }: Props) => {
-  const componentClassName = clsx(styles['project-card'], className, {});
+  const componentClassName = clsx(styles['project-card'], className);
   return (
-    <Card className={componentClassName} orientation="horizontal" {...other}>
+    <Card
+      className={componentClassName}
+      elevation="raised"
+      isDragging={isDragging}
+      orientation="horizontal"
+      {...other}
+    >
       <CardHeader>
         <NumberIcon
           className={styles['project-card__number']}

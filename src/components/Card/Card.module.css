@@ -35,6 +35,22 @@ a.card {
 }
 
 /**
+ * Raised card
+ * 1) Card that appears raised to show interactivity/emphasis
+ */
+.card--raised {
+  box-shadow: var(--eds-box-shadow-sm);
+}
+
+/**
+ * Card that is being dragged in drag and drop
+ * 1) Passed down to card to be reused. 
+ */
+.card.eds-is-dragging {
+  box-shadow: var(--eds-box-shadow-md);
+}
+
+/**
  * Horizontal card
  * 1) Change the orientation to display header, body, and footer in a row
  */
