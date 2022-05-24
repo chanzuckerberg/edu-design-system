@@ -3,7 +3,7 @@
 exports[`<NumberIcon /> Default story renders snapshot 1`] = `
 <span
   aria-label="Step 1"
-  class="number-icon number-icon--base number-icon--undefined text text--sm text--base"
+  class="number-icon number-icon--base text text--sm text--base"
   role="img"
 >
   1
@@ -14,133 +14,133 @@ exports[`<NumberIcon /> DifferentNumbers story renders snapshot 1`] = `
 <div>
   <span
     aria-label="Step 0"
-    class="number-icon number-icon--base number-icon--undefined text text--sm text--base"
+    class="number-icon number-icon--base text text--sm text--base"
     role="img"
   >
     0
   </span>
   <span
     aria-label="Step 1"
-    class="number-icon number-icon--base number-icon--undefined text text--sm text--base"
+    class="number-icon number-icon--base text text--sm text--base"
     role="img"
   >
     1
   </span>
   <span
     aria-label="Step 2"
-    class="number-icon number-icon--base number-icon--undefined text text--sm text--base"
+    class="number-icon number-icon--base text text--sm text--base"
     role="img"
   >
     2
   </span>
   <span
     aria-label="Step 3"
-    class="number-icon number-icon--base number-icon--undefined text text--sm text--base"
+    class="number-icon number-icon--base text text--sm text--base"
     role="img"
   >
     3
   </span>
   <span
     aria-label="Step 4"
-    class="number-icon number-icon--base number-icon--undefined text text--sm text--base"
+    class="number-icon number-icon--base text text--sm text--base"
     role="img"
   >
     4
   </span>
   <span
     aria-label="Step 5"
-    class="number-icon number-icon--base number-icon--undefined text text--sm text--base"
+    class="number-icon number-icon--base text text--sm text--base"
     role="img"
   >
     5
   </span>
   <span
     aria-label="Step 6"
-    class="number-icon number-icon--base number-icon--undefined text text--sm text--base"
+    class="number-icon number-icon--base text text--sm text--base"
     role="img"
   >
     6
   </span>
   <span
     aria-label="Step 7"
-    class="number-icon number-icon--base number-icon--undefined text text--sm text--base"
+    class="number-icon number-icon--base text text--sm text--base"
     role="img"
   >
     7
   </span>
   <span
     aria-label="Step 8"
-    class="number-icon number-icon--base number-icon--undefined text text--sm text--base"
+    class="number-icon number-icon--base text text--sm text--base"
     role="img"
   >
     8
   </span>
   <span
     aria-label="Step 9"
-    class="number-icon number-icon--base number-icon--undefined text text--sm text--base"
+    class="number-icon number-icon--base text text--sm text--base"
     role="img"
   >
     9
   </span>
   <span
     aria-label="Step 10"
-    class="number-icon number-icon--base number-icon--undefined text text--sm text--base"
+    class="number-icon number-icon--base text text--sm text--base"
     role="img"
   >
     10
   </span>
   <span
     aria-label="Step 21"
-    class="number-icon number-icon--base number-icon--undefined text text--sm text--base"
+    class="number-icon number-icon--base text text--sm text--base"
     role="img"
   >
     21
   </span>
   <span
     aria-label="Step 32"
-    class="number-icon number-icon--base number-icon--undefined text text--sm text--base"
+    class="number-icon number-icon--base text text--sm text--base"
     role="img"
   >
     32
   </span>
   <span
     aria-label="Step 43"
-    class="number-icon number-icon--base number-icon--undefined text text--sm text--base"
+    class="number-icon number-icon--base text text--sm text--base"
     role="img"
   >
     43
   </span>
   <span
     aria-label="Step 54"
-    class="number-icon number-icon--base number-icon--undefined text text--sm text--base"
+    class="number-icon number-icon--base text text--sm text--base"
     role="img"
   >
     54
   </span>
   <span
     aria-label="Step 65"
-    class="number-icon number-icon--base number-icon--undefined text text--sm text--base"
+    class="number-icon number-icon--base text text--sm text--base"
     role="img"
   >
     65
   </span>
   <span
     aria-label="Step 76"
-    class="number-icon number-icon--base number-icon--undefined text text--sm text--base"
+    class="number-icon number-icon--base text text--sm text--base"
     role="img"
   >
     76
   </span>
   <span
     aria-label="Step 87"
-    class="number-icon number-icon--base number-icon--undefined text text--sm text--base"
+    class="number-icon number-icon--base text text--sm text--base"
     role="img"
   >
     87
   </span>
   <span
     aria-label="Step 98"
-    class="number-icon number-icon--base number-icon--undefined text text--sm text--base"
+    class="number-icon number-icon--base text text--sm text--base"
     role="img"
   >
     98
@@ -161,7 +161,7 @@ exports[`<NumberIcon /> Small story renders snapshot 1`] = `
 exports[`<NumberIcon /> Success story renders snapshot 1`] = `
 <span
   aria-label="Step 1"
-  class="number-icon number-icon--success number-icon--undefined text text--sm text--white"
+  class="number-icon number-icon--success text text--sm text--white"
   role="img"
 >
   1

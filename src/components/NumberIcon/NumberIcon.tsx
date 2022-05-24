@@ -62,7 +62,7 @@ export const NumberIcon = ({
   const componentClassName = clsx(
     styles['number-icon'],
     styles[`number-icon--${variant}`],
-    styles[`number-icon--${size}`],
+    size && styles[`number-icon--${size}`],
     className,
   );
 
