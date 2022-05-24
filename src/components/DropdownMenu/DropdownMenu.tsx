@@ -54,7 +54,6 @@ export const DropdownMenu: React.FC<Props> = ({
   const onKeyDown = (e: KeyboardEvent<HTMLUListElement>) => {
     let activeItem = null;
 
-    // TODO: improve `any` type
     childRefs.current.map((item: HTMLLIElement) => {
       if (item.querySelector(':first-child') === document.activeElement) {
         activeItem = item;
@@ -80,14 +79,6 @@ export const DropdownMenu: React.FC<Props> = ({
         ?.querySelector<HTMLButtonElement | HTMLAnchorElement>(':first-child')
         ?.focus();
     }
-
-    // if ([TAB_KEYCODE, SHIFT_TAB_KEYCODE].includes(e.key)) {
-    //   if (
-    //     childRefs.current.indexOf(activeItem) ===
-    //     childRefs.current.length - 1
-    //   ) {
-    //   }
-    // }
   };
 
   const childrenWithProps = React.Children.map(
