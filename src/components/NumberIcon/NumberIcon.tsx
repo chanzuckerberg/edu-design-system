@@ -52,13 +52,6 @@ export const NumberIcon = ({
   variant = 'base',
   ...other
 }: Props) => {
-  if (
-    process.env.NODE_ENV !== 'production' &&
-    !other['aria-label'] &&
-    !other['aria-labelledby']
-  ) {
-    console.warn('No accessible name for the number icon.');
-  }
   const componentClassName = clsx(
     styles['number-icon'],
     styles[`number-icon--${variant}`],
@@ -73,7 +66,6 @@ export const NumberIcon = ({
     <Text
       as="span" /* 1 */
       className={componentClassName}
-      role="img"
       size="sm"
       variant={variant === 'base' ? 'base' : 'white'}
       {...other}
