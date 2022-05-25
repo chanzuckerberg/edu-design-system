@@ -30,7 +30,6 @@ export const DragDropItem = ({ className, item, index }: Props) => {
       {(provided: DraggableProvided, snapshot) => {
         const childrenWithProps = React.Children.map(
           item.children,
-          // TODO: improve `any` type
           (child: ReactNode) => {
             // Checking isValidElement is the safe way and avoids a typescript
             // error too.
