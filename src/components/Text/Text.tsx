@@ -45,7 +45,7 @@ export type Props = {
  * import {Text} from "@chanzuckerberg/eds";
  * ```
  *
- * There are two perceived used cases for the text component.
+ * There are two perceived use cases for the text component.
  * One is to decorate <p> and <span> with thematic variants.
  * Defaults to <p> and should pass as="span" to set as <span>
  *
