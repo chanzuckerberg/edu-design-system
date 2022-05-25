@@ -51,7 +51,7 @@ export const DragDropContainer = ({
       {header}
       <Droppable droppableId={container.id} type="item">
         {(provided: DroppableProvided) => (
-          <div
+          <ol
             className={styles['drag-drop__container-inner']}
             ref={provided.innerRef}
             {...provided.droppableProps}
@@ -62,7 +62,7 @@ export const DragDropContainer = ({
                 ))
               : emptyContent}
             {provided.placeholder}
-          </div>
+          </ol>
         )}
       </Droppable>
     </div>

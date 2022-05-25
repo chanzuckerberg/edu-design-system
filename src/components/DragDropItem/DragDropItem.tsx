@@ -44,7 +44,7 @@ export const DragDropItem = ({ className, item, index }: Props) => {
           },
         );
         return (
-          <div
+          <li
             className={componentClassName}
             ref={provided.innerRef}
             {...provided.draggableProps}
@@ -57,7 +57,7 @@ export const DragDropItem = ({ className, item, index }: Props) => {
               <Icon name="drag-indicator" purpose="decorative" size="1.5rem" />
             </div>
             {childrenWithProps}
-          </div>
+          </li>
         );
       }}
     </Draggable>

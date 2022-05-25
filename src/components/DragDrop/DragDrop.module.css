@@ -95,6 +95,8 @@
   flex-direction: column;
   flex: 1;
   background-color: var(--eds-theme-color-background-neutral-subtle);
+  list-style: none;
+  margin: 0;
   padding: var(--eds-size-1);
   border-radius: var(--eds-border-radius-md);
 
