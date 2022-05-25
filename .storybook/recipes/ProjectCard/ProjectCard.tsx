@@ -43,7 +43,7 @@ export interface Props {
   /**
    * Number aria label
    */
-  numberAriaLabel?: string;
+  numberAriaLabel: string;
   /**
    * Property passed in to style draggable project card
    */
