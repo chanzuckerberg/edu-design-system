@@ -87,7 +87,7 @@ export const Cad = () => (
                           course plan
                         </p>
                       </TextPassage>
-                      <img src={EmptyImage} alt="hand with pencil" />
+                      <img alt="hand with pencil" src={EmptyImage} />
                     </>
                   ),
                   header: (
@@ -117,7 +117,7 @@ export const Cad = () => (
                           Drag in available projects to build your course plan
                         </p>
                       </TextPassage>
-                      <img src={EmptyImage} alt="hand with pencil" />
+                      <img alt="hand with pencil" src={EmptyImage} />
                     </>
                   ),
                   header: (

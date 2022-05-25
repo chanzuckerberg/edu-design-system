@@ -197,15 +197,16 @@ export const ButtonDropdown = ({
   return (
     <div
       className={componentClassName}
+      /* TODO: Figure out role that allows blur to entire menu
+      /* eslint-disable-next-line jsx-a11y/no-static-element-interactions */
       onBlur={handleBlur}
-      onKeyDown={(e) => handleKeyDown(e)}
       ref={ref}
-      role="presentation"
       {...other}
     >
       {dropdownMenuTriggerWithProps}
       <DropdownMenu
         className={styles['button-dropdown__dropdown-menu']}
+        handleOnKeyDown={(e: React.KeyboardEvent) => handleKeyDown(e)}
         isActive={isActiveVar}
       >
         {children}

@@ -6,6 +6,7 @@ import {
   U_ARROW_KEYCODE,
   R_ARROW_KEYCODE,
   D_ARROW_KEYCODE,
+  ESCAPE_KEYCODE,
 } from '../../util/keycodes';
 
 export interface Props {
@@ -21,6 +22,7 @@ export interface Props {
    * Sets the component to open or close by default
    */
   isActive?: boolean;
+  handleOnKeyDown?: (e: React.KeyboardEvent) => void;
 }
 
 /**
@@ -36,6 +38,7 @@ export const DropdownMenu: React.FC<Props> = ({
   children,
   className,
   isActive,
+  handleOnKeyDown,
   ...other
 }) => {
   const childRefs = useRef<Array<HTMLLIElement>>([]);
@@ -58,6 +61,12 @@ export const DropdownMenu: React.FC<Props> = ({
    * 4) If left or up arrow key keyed, focus on the previous item.
    */
   const onKeyDown = (e: KeyboardEvent<HTMLUListElement>) => {
+    if ([ESCAPE_KEYCODE].includes(e.key)) {
+      if (handleOnKeyDown) {
+        handleOnKeyDown(e);
+      }
+    }
+
     let activeItem = null;
 
     childRefs.current.map((item: HTMLLIElement) => {

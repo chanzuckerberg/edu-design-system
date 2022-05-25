@@ -3,7 +3,6 @@
 exports[`<ButtonDropdown /> Default story renders snapshot 1`] = `
 <div
   class="button-dropdown"
-  role="presentation"
 >
   <button
     aria-expanded="false"
@@ -119,7 +118,6 @@ exports[`<ButtonDropdown /> Default story renders snapshot 1`] = `
 exports[`<ButtonDropdown /> PositionBottomRight story renders snapshot 1`] = `
 <div
   class="button-dropdown button-dropdown--bottom-right"
-  role="presentation"
 >
   <button
     aria-expanded="false"
@@ -235,7 +233,6 @@ exports[`<ButtonDropdown /> PositionBottomRight story renders snapshot 1`] = `
 exports[`<ButtonDropdown /> PositionTopLeft story renders snapshot 1`] = `
 <div
   class="button-dropdown button-dropdown--top-left"
-  role="presentation"
 >
   <button
     aria-expanded="false"
@@ -351,7 +348,6 @@ exports[`<ButtonDropdown /> PositionTopLeft story renders snapshot 1`] = `
 exports[`<ButtonDropdown /> PositionTopRight story renders snapshot 1`] = `
 <div
   class="button-dropdown button-dropdown--top-right"
-  role="presentation"
 >
   <button
     aria-expanded="false"
