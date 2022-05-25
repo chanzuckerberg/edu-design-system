@@ -48,11 +48,13 @@ export interface Props {
    */
   type?: 'button' | 'reset' | 'submit';
   /**
-   * Dropdown trigger
+   * Prop used to pass in the dropdown menu trigger (dropdownTrigger={<Button />}). This
+   * allows for maximum flexbility with extending the button and passing in props from the
+   * outside
    */
   dropdownMenuTrigger?: ReactNode;
   /**
-   * Child node(s) that can be nested inside component
+   * Prop used to pass in `DropdownMenuItem` child components
    */
   children?: ReactNode;
   /**
