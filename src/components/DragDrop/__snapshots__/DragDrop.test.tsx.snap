@@ -252,15 +252,11 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
           data-rbd-droppable-id="container-2"
         >
           <div
-            class="text-passage u-margin-bottom-lg"
+            class="layout-linelength-container u-margin-bottom-lg text text--body text-passage text-passage--body"
           >
-            <div
-              class="layout-linelength-container text-passage__inner"
-            >
-              <p>
-                Drag in available projects to build your couse plan
-              </p>
-            </div>
+            <p>
+              Drag in available projects to build your couse plan
+            </p>
           </div>
           <svg
             fill="none"
