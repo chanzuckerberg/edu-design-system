@@ -4,7 +4,7 @@ import React from 'react';
 
 import { FieldNote, Props } from './FieldNote';
 import Link from '../../components/Link';
-import TextPassage from '../../components/TextPassage';
+import Text from '../../components/Text';
 
 export default {
   title: 'Atoms/Forms/FieldNote',
@@ -21,10 +21,10 @@ const Template: Story<Props> = (args) => (
 export const Default = Template.bind({});
 Default.args = { id: 'field-1' };
 
-export const WithTextPassage = () => (
+export const WithText = () => (
   <FieldNote id="field-1">
-    <TextPassage size="sm">
-      Here is a field note that involves:
+    <Text as="div" size="sm">
+      <p>Here is a field note that involves:</p>
       <ul>
         <li>Multiple lines</li>
         <li>Arbitrary HTML text</li>
@@ -32,6 +32,6 @@ export const WithTextPassage = () => (
           Even <Link href="#">text links</Link>
         </li>
       </ul>
-    </TextPassage>
+    </Text>
   </FieldNote>
 );

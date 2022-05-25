@@ -4,7 +4,7 @@ import { Modal } from './Modal';
 import Button from '../../components/Button';
 import ButtonGroup from '../../components/ButtonGroup';
 import Heading from '../../components/Heading';
-import TextPassage from '../../components/TextPassage';
+import Text from '../../components/Text';
 
 export interface Props {
   /**
@@ -77,14 +77,12 @@ export const ModalExample = ({
           </Heading>
         </Modal.Header>
         <Modal.Body>
-          <TextPassage className="u-margin-bottom-md" id="modal-description-1">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
-          </TextPassage>
+          <Text className="u-margin-bottom-md" id="modal-description-1">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </Text>
         </Modal.Body>
         <Modal.Footer>
           <ButtonGroup>

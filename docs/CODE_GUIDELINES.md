@@ -78,7 +78,7 @@ Here's another example:
 #### Do's
 
 - Always declare the block class for a component (e.g. `card`, `button`, etc.). Modifier classes on their own (e.g. `card--inverted` or `button--primary`) are not permitted.
-- Each element within a component _must_ include the appropriate class applied in accordance with BEM standards (e.g. `accordion__panel` or `text-field__label`). Unclassed elements (e.g. stray `<p>` or `<span>` tags) are not permitted (with the exception of the `TextPassage` component which is explicitly designed to handle uncontrolled markup). While verbose, this approach yields a consistent codebase, allows for tight styling control, better future proofs of the design system's codebase.
+- Each element within a component _must_ include the appropriate class applied in accordance with BEM standards (e.g. `accordion__panel` or `text-field__label`). Unclassed elements (e.g. stray `<p>` or `<span>` tags) are not permitted (with the exception of the `Text` component which is explicitly designed to handle uncontrolled markup). While verbose, this approach yields a consistent codebase, allows for tight styling control, better future proofs of the design system's codebase.
 
 #### Don'ts
 

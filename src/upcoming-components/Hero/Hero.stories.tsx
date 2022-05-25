@@ -4,7 +4,7 @@ import React from 'react';
 
 import { Hero, Props } from './Hero';
 import Heading from '../../components/Heading';
-import TextPassage from '../../components/TextPassage';
+import Text from '../../components/Text';
 
 export default {
   title: 'Molecules/Blocks/Hero',
@@ -17,9 +17,7 @@ export default {
 const Template: Story<Props> = (args) => (
   <Hero {...args}>
     <Heading size="h1">Hero title</Heading>
-    <TextPassage className="u-margin-top-lg">
-      This is the hero description
-    </TextPassage>
+    <Text className="u-margin-top-lg">This is the hero description</Text>
   </Hero>
 );
 
