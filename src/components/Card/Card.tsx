@@ -36,6 +36,17 @@ export interface Props {
 }
 
 /**
+
+ * BETA: This component is still a work in progress and is subject to change.
+ *
+ * ```ts
+ * import {Card} from "@chanzuckerberg/eds";
+ * ```
+ *
+ * Card component.
+ */
+
+/**
  * Primary UI component for user interaction
  */
 export const Card = ({

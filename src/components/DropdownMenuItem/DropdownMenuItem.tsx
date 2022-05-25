@@ -36,7 +36,13 @@ export interface Props {
 }
 
 /**
- * Primary UI component for user interaction
+ * BETA: This component is still a work in progress and is subject to change.
+ *
+ * ```ts
+ * import {DropdownMenuItem} from "@chanzuckerberg/eds";
+ * ```
+ *
+ * Dropdown menu item within `DropdownMenu`
  */
 export const DropdownMenuItem = React.forwardRef<HTMLLIElement, Props>(
   ({ align, className, href, children, variant, onClick, ...other }, ref) => {
