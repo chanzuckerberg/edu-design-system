@@ -20,6 +20,8 @@ export interface Props {
 
 /**
  * Primary UI component for user interaction
+ *
+ * TEST CHANGE
  */
 export const Band = ({ children, className, variant, ...other }: Props) => {
   const componentClassName = clsx(
