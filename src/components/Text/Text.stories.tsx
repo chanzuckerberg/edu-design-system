@@ -89,16 +89,16 @@ export const Overline: StoryObj<Args> = {
   },
 };
 
-export const Spacing: StoryObj<Args> = {
+export const BottomSpacing: StoryObj<Args> = {
   render: () => (
     <div>
-      <Text className={styles['spacing']} spacing="half">
+      <Text bottomSpacing="half" className={styles['spacing']}>
         Spacing Half
       </Text>
-      <Text className={styles['spacing']} spacing="1x">
+      <Text bottomSpacing="1x" className={styles['spacing']}>
         Spacing 1x
       </Text>
-      <Text className={styles['spacing']} spacing="2x">
+      <Text bottomSpacing="2x" className={styles['spacing']}>
         Spacing 2x
       </Text>
       <Text className={styles['spacing']}>

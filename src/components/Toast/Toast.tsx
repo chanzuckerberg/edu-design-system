@@ -12,7 +12,7 @@ export type Props = {
    */
   className?: string;
   /**
-   * The child node(s) contains the toast message. Note: the toast message is displayed inside a Text, so children can contain raw HTML
+   * The child node(s) contains the toast message.
    */
   children: React.ReactNode;
   /**

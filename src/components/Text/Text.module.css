@@ -81,15 +81,15 @@
 /**
  * Spacing
  */
-.text--half-spacing {
+.text--half-bottom-spacing {
   margin-bottom: var(--eds-size-half);
 }
 
-.text--1x-spacing {
+.text--1x-bottom-spacing {
   margin-bottom: var(--eds-size-1);
 }
 
-.text--2x-spacing {
+.text--2x-bottom-spacing {
   margin-bottom: var(--eds-size-2);
 }
 
