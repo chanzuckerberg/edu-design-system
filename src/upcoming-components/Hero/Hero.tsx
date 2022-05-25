@@ -28,6 +28,8 @@ export interface Props {
 
 /**
  * Primary UI component for user interaction
+ *
+ * TEST CHANGE
  */
 export const Hero = ({
   children,
