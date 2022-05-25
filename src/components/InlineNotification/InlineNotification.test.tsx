@@ -1,6 +1,6 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
-import * as stories from './NumberIcon.stories';
+import * as stories from './InlineNotification.stories';
 
-describe('<NumberIcon />', () => {
+describe('<InlineNotification />', () => {
   generateSnapshots(stories);
 });

@@ -51,11 +51,6 @@ export const DifferentNumbers: StoryObj<Args> = {
         disable: true,
       },
     },
-    'aria-labelledby': {
-      table: {
-        disable: true,
-      },
-    },
   },
   render: (args) => (
     <div>

@@ -4,7 +4,7 @@ import React from 'react';
 
 import { ListDetail, Props } from './ListDetail';
 import ListDetailPanel from '../ListDetailPanel';
-import TextPassage from '../TextPassage';
+import Text from '../Text';
 
 export default {
   title: 'Example/ListDetail',
@@ -18,7 +18,7 @@ export default {
 const Template: Story<Props> = (args) => (
   <ListDetail variant="ordered">
     <ListDetailPanel title="Overview">
-      <TextPassage>
+      <Text as="div">
         <h3>Overview</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -26,10 +26,10 @@ const Template: Story<Props> = (args) => (
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex{' '}
         </p>
-      </TextPassage>
+      </Text>
     </ListDetailPanel>
     <ListDetailPanel title="ListDetailPanel 1" variant="number">
-      <TextPassage>
+      <Text as="div">
         <h3>ListDetailPanel 1</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -37,11 +37,11 @@ const Template: Story<Props> = (args) => (
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex{' '}
         </p>
-      </TextPassage>
+      </Text>
     </ListDetailPanel>
 
     <ListDetailPanel title="ListDetailPanel 2" variant="error">
-      <TextPassage>
+      <Text as="div">
         <h3>ListDetailPanel 2</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -49,11 +49,11 @@ const Template: Story<Props> = (args) => (
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex{' '}
         </p>
-      </TextPassage>
+      </Text>
     </ListDetailPanel>
 
     <ListDetailPanel title="ListDetailPanel 3" variant="warning">
-      <TextPassage>
+      <Text as="div">
         <h3>ListDetailPanel 3</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -61,11 +61,11 @@ const Template: Story<Props> = (args) => (
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex{' '}
         </p>
-      </TextPassage>
+      </Text>
     </ListDetailPanel>
 
     <ListDetailPanel title="ListDetailPanel 4" variant="success">
-      <TextPassage>
+      <Text as="div">
         <h3>ListDetailPanel 4</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -73,11 +73,11 @@ const Template: Story<Props> = (args) => (
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex{' '}
         </p>
-      </TextPassage>
+      </Text>
     </ListDetailPanel>
 
     <ListDetailPanel title="ListDetailPanel 5">
-      <TextPassage>
+      <Text as="div">
         <h3>ListDetailPanel 5</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -85,11 +85,11 @@ const Template: Story<Props> = (args) => (
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex{' '}
         </p>
-      </TextPassage>
+      </Text>
     </ListDetailPanel>
 
     <ListDetailPanel title="ListDetailPanel 6" variant="number">
-      <TextPassage>
+      <Text as="div">
         <h3>ListDetailPanel 5</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -97,11 +97,11 @@ const Template: Story<Props> = (args) => (
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex{' '}
         </p>
-      </TextPassage>
+      </Text>
     </ListDetailPanel>
 
     <ListDetailPanel title="Final Item - complete" variant="complete">
-      <TextPassage>
+      <Text as="div">
         <h3>Final Item - complete</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -109,7 +109,7 @@ const Template: Story<Props> = (args) => (
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex{' '}
         </p>
-      </TextPassage>
+      </Text>
     </ListDetailPanel>
   </ListDetail>
 );

@@ -6,7 +6,6 @@ import {
   ButtonGroup,
   Button,
   Heading,
-  TextPassage,
   LayoutContainer,
   Layout,
   LayoutSection,
@@ -17,6 +16,7 @@ import {
   DataBar,
   Toolbar,
   ToolbarItem,
+  Text,
 } from '../../../src';
 
 import '../../../src/components/Utilities/Spacing.css';
@@ -63,7 +63,7 @@ export const Cad = () => (
             <Heading as="h2" className="u-margin-bottom-lg" size="headline-sm">
               Select projects for your History 6 plan
             </Heading>
-            <TextPassage className="u-margin-bottom-lg">
+            <Text as="div" className="u-margin-bottom-lg">
               <p>
                 Make a plan so that you can stay connected to learning
                 objectives even as changes occur throughout the year.
@@ -73,7 +73,7 @@ export const Cad = () => (
                 ipsum dolor sit amet, consectetur adipiscing elit. Phasellus est
                 quam, consequat iaculis pretium accumsan, fringilla id ligula.
               </p>
-            </TextPassage>
+            </Text>
 
             <DragDrop
               containers={{
@@ -81,12 +81,12 @@ export const Cad = () => (
                   itemIds: ['item-1', 'item-2', 'item-3', 'item-4', 'item-5'],
                   emptyContent: (
                     <>
-                      <TextPassage className="u-margin-bottom-lg">
+                      <Text as="div" className="u-margin-bottom-lg">
                         <p>
                           There are no more available projects to create your
                           course plan
                         </p>
-                      </TextPassage>
+                      </Text>
                       <img alt="hand with pencil" src={EmptyImage} />
                     </>
                   ),
@@ -112,11 +112,11 @@ export const Cad = () => (
                   itemIds: [],
                   emptyContent: (
                     <>
-                      <TextPassage className="u-margin-bottom-lg">
+                      <Text as="div" className="u-margin-bottom-lg">
                         <p>
                           Drag in available projects to build your course plan
                         </p>
-                      </TextPassage>
+                      </Text>
                       <img alt="hand with pencil" src={EmptyImage} />
                     </>
                   ),

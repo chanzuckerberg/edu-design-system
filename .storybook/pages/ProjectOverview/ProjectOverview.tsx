@@ -3,7 +3,7 @@ import React from 'react';
 
 import {
   PageHeader,
-  TextPassage,
+  Text,
   Breadcrumbs,
   BreadcrumbsItem,
   Button,
@@ -42,19 +42,19 @@ export const ProjectOverview = () => {
           <Heading as="h2" className="u-margin-bottom-lg" size="headline-lg">
             What is this Project About?
           </Heading>
-          <TextPassage size="lg">
+          <Text size="lg">
             Consectetur adipiscing elit. Ac id velit ut egestas arcu. At
             maecenas urna, risus donec praesent eu consectetur. Nunc non eu
             mattis sem turpis id dictum. Volutpat ornare turpis ultrices augue
             bibendum pellentesque. Habitasse.
-          </TextPassage>
+          </Text>
           <Button className="u-margin-bottom-lg" variant="link">
             See More
           </Button>
           <Heading as="h3" className="u-margin-bottom-sm" size="title-md">
             Essential Questions
           </Heading>
-          <TextPassage className="u-margin-bottom-lg">
+          <Text as="div" className="u-margin-bottom-lg">
             <ul>
               <li>How are structures in the body organized?</li>
               <li>
@@ -64,11 +64,11 @@ export const ProjectOverview = () => {
               </li>
               <li>How are structures in the body organized?</li>
             </ul>
-          </TextPassage>
+          </Text>
           <Heading as="h3" className="u-margin-bottom-sm" size="title-md">
             Key Take Aways
           </Heading>
-          <TextPassage className="u-margin-bottom-lg">
+          <Text as="div" className="u-margin-bottom-lg">
             <ol>
               <li>
                 Groups of specialized cells make up organs and body systems,
@@ -80,7 +80,7 @@ export const ProjectOverview = () => {
               </li>
               <li>How are structures in the body organized?</li>
             </ol>
-          </TextPassage>
+          </Text>
           <Hr className="u-margin-bottom-none" />
           <Section
             title="Power Focus Areas"
@@ -97,10 +97,10 @@ export const ProjectOverview = () => {
                 <Heading as="h3" className="u-margin-bottom-sm" size="title-md">
                   What Was Medieval Japan Like?
                 </Heading>
-                <TextPassage>
+                <Text>
                   In this Focus Area, you explore the main question: How does
                   the structures of organisms enable lifes functions?
-                </TextPassage>
+                </Text>
               </CardBody>
             </Card>
           </Section>
@@ -119,10 +119,10 @@ export const ProjectOverview = () => {
                 <Heading as="h3" className="u-margin-bottom-sm" size="title-md">
                   What Was Medieval Japan Like?
                 </Heading>
-                <TextPassage>
+                <Text>
                   In this Focus Area, you explore the main question: How does
                   the structures of organisms enable life’s functions?
-                </TextPassage>
+                </Text>
               </CardBody>
             </Card>
             <Card>
@@ -130,10 +130,10 @@ export const ProjectOverview = () => {
                 <Heading as="h3" className="u-margin-bottom-sm" size="title-md">
                   What Was Medieval Japan Like?
                 </Heading>
-                <TextPassage>
+                <Text>
                   In this Focus Area, you explore the main question: How does
                   the structures of organisms enable life’s functions?
-                </TextPassage>
+                </Text>
               </CardBody>
             </Card>
           </Section>
@@ -147,7 +147,7 @@ export const ProjectOverview = () => {
               />
             }
           >
-            <TextPassage>
+            <Text as="div">
               <a href="#">Selecting Relevant Sources</a>
               <a href="#">Identifying Patterns and Relationships</a>
               <a href="#">Argumentative Claim</a>
@@ -155,12 +155,12 @@ export const ProjectOverview = () => {
               <a href="#">Explanation of Evidence</a>
               <a href="#">Multimedia in Communication</a>
               <a href="#">Integration of Evidence</a>
-            </TextPassage>
+            </Text>
           </Section>
         </ListDetailPanel>
 
         <ListDetailPanel title="Expectations of Samuri in Feudal Japan and Wars of 5th Century">
-          <TextPassage>
+          <Text as="div">
             <h3>ListDetailPanel 2</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -168,11 +168,11 @@ export const ProjectOverview = () => {
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex
             </p>
-          </TextPassage>
+          </Text>
         </ListDetailPanel>
 
         <ListDetailPanel title="Expectations of Samuri in Feudal Japan">
-          <TextPassage>
+          <Text as="div">
             <h3>ListDetailPanel 3</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -180,10 +180,10 @@ export const ProjectOverview = () => {
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex
             </p>
-          </TextPassage>
+          </Text>
         </ListDetailPanel>
         <ListDetailPanel title="Expectations of Samuri in Feudal Japan">
-          <TextPassage>
+          <Text as="div">
             <h3>ListDetailPanel 4</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -191,10 +191,10 @@ export const ProjectOverview = () => {
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex
             </p>
-          </TextPassage>
+          </Text>
         </ListDetailPanel>
         <ListDetailPanel title="Expectations of Samuri in Feudal Japan">
-          <TextPassage>
+          <Text as="div">
             <h3>ListDetailPanel 5</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -202,7 +202,7 @@ export const ProjectOverview = () => {
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex
             </p>
-          </TextPassage>
+          </Text>
         </ListDetailPanel>
       </ListDetail>
     </PageShell>

@@ -40,11 +40,13 @@
 }
 
 @define-mixin focus {
-  outline: 2px solid var(--eds-theme-color-focus-ring);
+  outline: var(--eds-border-width-sm) solid var(--eds-theme-color-focus-ring);
+  outline-offset: 2px;
 }
 
 @define-mixin focusInverted {
-  outline: 2px solid var(--eds-theme-color-focus-ring-inverted);
+  @mixin focus;
+  outline-color: var(--eds-theme-color-focus-ring-inverted);
 }
 
 @define-mixin focusTransparent {
@@ -143,7 +145,7 @@
 
 @define-mixin messagingBrand {
   --border-light-color: var(--eds-theme-color-border-brand-primary-subtle);
-  --border-dark-color: var(--eds-theme-color-icon-brand-primary);
+  --border-dark-color: var(--eds-theme-color-border-brand-primary-strong);
 
   background: var(--eds-theme-color-background-brand-primary-default);
   color: var(--eds-theme-color-text-brand-primary);
@@ -158,8 +160,8 @@
 }
 
 @define-mixin messagingSuccess {
-  --border-light-color: var(--eds-theme-color-border-utility-success-default);
-  --border-dark-color: var(--eds-theme-color-icon-utility-success);
+  --border-light-color: var(--eds-theme-color-border-utility-success-subtle);
+  --border-dark-color: var(--eds-theme-color-border-utility-success-default);
 
   background: var(--eds-theme-color-background-utility-success);
   color: var(--eds-theme-color-text-utility-success);
@@ -167,7 +169,7 @@
 
 @define-mixin messagingWarning {
   --border-light-color: var(--eds-theme-color-border-utility-warning-subtle);
-  --border-dark-color: var(--eds-theme-color-icon-utility-warning);
+  --border-dark-color: var(--eds-theme-color-border-utility-warning-strong);
 
   background: var(--eds-theme-color-background-utility-warning);
   color: var(--eds-theme-color-text-utility-warning);
@@ -179,4 +181,12 @@
 
   background: var(--eds-theme-color-background-utility-error);
   color: var(--eds-theme-color-text-utility-error);
+}
+
+@define-mixin messagingYield {
+  --border-light-color: var(--eds-theme-color-border-grade-revise-subtle);
+  --border-dark-color: var(--eds-theme-color-border-grade-revise-strong);
+
+  background: var(--eds-theme-color-background-grade-revise-subtle);
+  color: var(--eds-theme-color-text-neutral-default);
 }
