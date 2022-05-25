@@ -8,7 +8,7 @@ import Card from '../Card';
 import CardBody from '../CardBody';
 import DragDropContainerHeader from '../DragDropContainerHeader';
 import Heading from '../Heading';
-import TextPassage from '../TextPassage';
+import Text from '../Text';
 import Toolbar from '../Toolbar';
 
 export default {
@@ -95,9 +95,9 @@ Default.args = {
       itemIds: [],
       emptyContent: (
         <>
-          <TextPassage className="u-margin-bottom-lg">
+          <Text as="div" className="u-margin-bottom-lg">
             <p>Drag in available projects to build your couse plan</p>
-          </TextPassage>
+          </Text>
           <svg
             fill="none"
             height="164"
