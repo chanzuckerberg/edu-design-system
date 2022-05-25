@@ -19,5 +19,5 @@ export interface ContainerType {
   id?: string;
   itemIds: string[];
   header?: React.ReactNode;
-  emptyContent?: any;
+  emptyContent?: React.ReactNode;
 }
