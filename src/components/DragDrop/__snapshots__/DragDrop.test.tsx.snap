@@ -28,12 +28,12 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
             </h5>
           </div>
         </header>
-        <div
+        <ol
           class="drag-drop__container-inner"
           data-rbd-droppable-context-id="0"
           data-rbd-droppable-id="container-1"
         >
-          <div
+          <li
             class="drag-drop__item"
             data-rbd-draggable-context-id="0"
             data-rbd-draggable-id="item-1"
@@ -71,8 +71,8 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
                 Card 1
               </div>
             </div>
-          </div>
-          <div
+          </li>
+          <li
             class="drag-drop__item"
             data-rbd-draggable-context-id="0"
             data-rbd-draggable-id="item-2"
@@ -110,8 +110,8 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
                 Card 2
               </div>
             </div>
-          </div>
-          <div
+          </li>
+          <li
             class="drag-drop__item"
             data-rbd-draggable-context-id="0"
             data-rbd-draggable-id="item-3"
@@ -149,8 +149,8 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
                 Card 3
               </div>
             </div>
-          </div>
-          <div
+          </li>
+          <li
             class="drag-drop__item"
             data-rbd-draggable-context-id="0"
             data-rbd-draggable-id="item-4"
@@ -188,8 +188,8 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
                 Card 4
               </div>
             </div>
-          </div>
-          <div
+          </li>
+          <li
             class="drag-drop__item"
             data-rbd-draggable-context-id="0"
             data-rbd-draggable-id="item-5"
@@ -227,8 +227,8 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
                 Card 5
               </div>
             </div>
-          </div>
-        </div>
+          </li>
+        </ol>
       </div>
       <div
         class="drag-drop__container drag-drop__container--empty"
@@ -246,7 +246,7 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
             </h5>
           </div>
         </header>
-        <div
+        <ol
           class="drag-drop__container-inner"
           data-rbd-droppable-context-id="0"
           data-rbd-droppable-id="container-2"
@@ -390,7 +390,7 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
               </clippath>
             </defs>
           </svg>
-        </div>
+        </ol>
       </div>
     </div>
   </section>
