@@ -15,14 +15,14 @@ import {
   Icon,
   HorizontalStepper,
   DataBar,
+  Toolbar,
+  ToolbarItem,
 } from '../../../src';
 
 import '../../../src/components/Utilities/Spacing.css';
-import { Toolbar } from '../../../src/upcoming-components/Toolbar/Toolbar';
-import { ToolbarItem } from '../../../src/upcoming-components/ToolbarItem/ToolbarItem';
 import ProjectCard from '../../recipes/ProjectCard';
 
-const emptyImage = () => (
+const EmptyImage = () => (
   <svg
     fill="none"
     height="164"
@@ -133,6 +133,8 @@ const emptyImage = () => (
   </svg>
 );
 
+export default EmptyImage;
+
 export const Cad = () => (
   <>
     <Panel className="u-margin-bottom-lg" variant="squared">
@@ -196,7 +198,7 @@ export const Cad = () => (
                           course plan
                         </p>
                       </TextPassage>
-                      {emptyImage}
+                      <EmptyImage />
                     </>
                   ),
                   header: (
@@ -226,7 +228,7 @@ export const Cad = () => (
                           Drag in available projects to build your course plan
                         </p>
                       </TextPassage>
-                      {emptyImage}
+                      <EmptyImage />
                     </>
                   ),
                   header: (

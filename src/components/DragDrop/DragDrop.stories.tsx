@@ -4,12 +4,12 @@ import React, { ComponentProps } from 'react';
 import { DragDrop, Props } from './DragDrop';
 import styles from './DragDrop.stories.module.css';
 
-import Toolbar from '../../upcoming-components/Toolbar';
 import Card from '../Card';
 import CardBody from '../CardBody';
 import DragDropContainerHeader from '../DragDropContainerHeader';
 import Heading from '../Heading';
 import TextPassage from '../TextPassage';
+import Toolbar from '../Toolbar';
 
 export default {
   title: 'Organisms/Interactive/Drag and Drop',

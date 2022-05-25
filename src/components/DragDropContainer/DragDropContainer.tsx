@@ -16,6 +16,9 @@ export interface Props {
    * Prop that will contain an id for each container and an array of itemIds that will be used on initial render
    */
   container: ContainerType;
+  /**
+   * Empty state contents
+   */
   emptyContent?: ReactNode;
   /**
    * Prop that will be an array of items
@@ -50,20 +53,28 @@ export const DragDropContainer = ({
     <div className={componentClassName}>
       {header}
       <Droppable droppableId={container.id} type="item">
-        {(provided: DroppableProvided) => (
-          <ol
-            className={styles['drag-drop__container-inner']}
-            ref={provided.innerRef}
-            {...provided.droppableProps}
-          >
-            {items.length > 0
-              ? items.map((item: ItemType, index: number) => (
-                  <DragDropItem index={index} item={item} key={item.id} />
-                ))
-              : emptyContent}
-            {provided.placeholder}
-          </ol>
-        )}
+        {(provided: DroppableProvided) =>
+          items.length > 0 ? (
+            <ol
+              className={styles['drag-drop__container-inner']}
+              ref={provided.innerRef}
+              {...provided.droppableProps}
+            >
+              {items.map((item: ItemType, index: number) => (
+                <DragDropItem index={index} item={item} key={item.id} />
+              ))}
+              {provided.placeholder}
+            </ol>
+          ) : (
+            <div
+              className={styles['drag-drop__container-inner']}
+              ref={provided.innerRef}
+              {...provided.droppableProps}
+            >
+              {emptyContent}
+            </div>
+          )
+        }
       </Droppable>
     </div>
   ) : null;
