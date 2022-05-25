@@ -72,35 +72,6 @@ exports[`<Text /> BodyXSmall story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Text /> BottomSpacing story renders snapshot 1`] = `
-<div
-  style="margin: 0.25rem;"
->
-  <div>
-    <p
-      class="spacing text text--body text--half-bottom-spacing"
-    >
-      Spacing Half
-    </p>
-    <p
-      class="spacing text text--body text--1x-bottom-spacing"
-    >
-      Spacing 1x
-    </p>
-    <p
-      class="spacing text text--body text--2x-bottom-spacing"
-    >
-      Spacing 2x
-    </p>
-    <p
-      class="spacing text text--body"
-    >
-      Bottom text to show spacing for spacing 2x
-    </p>
-  </div>
-</div>
-`;
-
 exports[`<Text /> Caption story renders snapshot 1`] = `
 <div
   style="margin: 0.25rem;"
@@ -122,6 +93,35 @@ exports[`<Text /> Overline story renders snapshot 1`] = `
   >
     Overline
   </p>
+</div>
+`;
+
+exports[`<Text /> Spacing story renders snapshot 1`] = `
+<div
+  style="margin: 0.25rem;"
+>
+  <div>
+    <p
+      class="spacing text text--body text--half-spacing"
+    >
+      Spacing Half
+    </p>
+    <p
+      class="spacing text text--body text--1x-spacing"
+    >
+      Spacing 1x
+    </p>
+    <p
+      class="spacing text text--body text--2x-spacing"
+    >
+      Spacing 2x
+    </p>
+    <p
+      class="spacing text text--body"
+    >
+      Bottom text to show spacing for spacing 2x
+    </p>
+  </div>
 </div>
 `;
 

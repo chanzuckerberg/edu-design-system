@@ -35,7 +35,10 @@ export type Props = {
   className?: string;
   variant?: Variant;
   size?: Size;
-  bottomSpacing?: 'half' | '1x' | '2x';
+  /**
+   * Adds margin bottom spacing to the <Text> component.
+   */
+  spacing?: 'half' | '1x' | '2x';
   tabIndex?: number;
   weight?: 'bold' | 'normal' | null;
 } & React.HTMLAttributes<HTMLElement>;
@@ -68,7 +71,7 @@ export const Text = forwardRef(
       className,
       variant,
       size = 'body',
-      bottomSpacing,
+      spacing,
       weight,
       /**
        * Components that wrap typography sometimes requires props such as event handlers
@@ -92,7 +95,7 @@ export const Text = forwardRef(
       styles[`text--${size}`],
       variant && styles[`text--${variant}`],
       weight && styles[`text--${weight}-weight`],
-      bottomSpacing && styles[`text--${bottomSpacing}-bottom-spacing`],
+      spacing && styles[`text--${spacing}-spacing`],
       as === 'div' && styles['text-passage'],
       as === 'div' && styles[`text-passage--${size}`],
     );
