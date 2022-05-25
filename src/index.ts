@@ -50,6 +50,8 @@ export { default as Tag } from './components/Tag';
 export { default as Text } from './components/Text';
 export { default as TextPassage } from './components/TextPassage';
 export { default as Toast } from './components/Toast';
+export { default as Toolbar } from './components/Toolbar';
+export { default as ToolbarItem } from './components/ToolbarItem';
 export { default as Tooltip } from './components/Tooltip';
 
 /**
