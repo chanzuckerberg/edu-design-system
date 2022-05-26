@@ -3,6 +3,7 @@ import React from 'react';
 import {
   Button,
   ButtonGroup,
+  Grid,
   Heading,
   HorizontalStepper,
   Icon,
@@ -19,7 +20,6 @@ import '../../../src/components/Utilities/Spacing.css';
 import '../../../src/components/Utilities/TypographyUsage.css';
 
 import CompassCenter from '../../static/compass-center.svg';
-import CompassLeft from '../../static/compass-left.svg';
 
 export const CadStep1 = () => (
   <>
@@ -51,47 +51,52 @@ export const CadStep1 = () => (
       </LayoutContainer>
     </Panel>
     <LayoutContainer>
-      <Layout variant="50-50">
-        <LayoutSection className="u-margin-bottom-xl" region="main">
-          <Heading className="u-margin-bottom-xl" size="h1">
-            Welcome, Amy. Chart your course for the year here.
-          </Heading>
-          <Text className="u-margin-bottom-xl" size="lg">
+      <Layout gap="lg-xl" variant="50-50">
+        <LayoutSection region="main">
+          <Grid className="u-margin-bottom-lg" variant="1-2-1up">
+            <img alt="compass vignette" src={CompassCenter} />
+            <Heading size="headline-lg">
+              Let&apos;s start planning, Amy Frankle.
+            </Heading>
+          </Grid>
+          <Text className="u-theme-typography-body-text-xl">
             The course planner can help you set off on the right track, and
             navigate whatever comes your way.
           </Text>
-          <picture>
-            <source media="(min-width: 768px)" srcSet={CompassLeft} />
-            <img alt="compass vignette" src={CompassCenter} />
-          </picture>
         </LayoutSection>
         <LayoutSection region="main">
-          <Heading as="h2" className="u-margin-bottom-xl" size="h3">
-            Tell us how often your course meets.
-          </Heading>
-          <Text className="u-margin-bottom-xl" size="md">
-            We’ll adjust project plans based on your schedule. This way, you can
-            get a more accurate estimate of how long the course will actually
-            take.
+          <Text as="div" className="u-margin-bottom-lg">
+            <h3>Tell us how often your course meets.</h3>
+            <p>
+              We’ll adjust project plans based on your schedule. This way, you
+              can get a more accurate estimate of how long the course will
+              actually take.
+            </p>
+            <p>
+              If you teach multiple sections of this course, you can enter the
+              average amounts for each question below.
+            </p>
           </Text>
-          <Text className="u-margin-bottom-xl" size="md">
-            If you teach multiple sections of this course, you can enter the
-            average amounts for each question below.
+          <Text className="u-margin-bottom-sm u-theme-typography-title-md">
+            How many times per week do you have class?
           </Text>
           <TextField
             className="u-margin-bottom-lg"
-            fieldNote="times per week"
-            label="How many times per week do you have class?"
+            hideLabel
+            label="times per week"
             min={0}
-            placeholder="Enter"
+            placeholder="times per week"
             type="number"
           />
+          <Text className="u-margin-bottom-sm u-theme-typography-title-md">
+            How many minutes is each class?
+          </Text>
           <TextField
             className="u-margin-bottom-lg"
-            fieldNote="minutes"
-            label="How many minutes is each class?"
+            hideLabel
+            label="minutes"
             min={0}
-            placeholder="Enter"
+            placeholder="minutes"
             type="number"
           />
         </LayoutSection>

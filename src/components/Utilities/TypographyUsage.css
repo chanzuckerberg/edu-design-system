@@ -44,6 +44,10 @@
   @mixin eds-typography-preset-009-bold;
 }
 
+.u-theme-typography-body-text-xl {
+  @mixin eds-typography-preset-002;
+}
+
 .u-theme-typography-body-text-lg {
   @mixin eds-typography-preset-004;
 }

@@ -1,4 +1,4 @@
-import { Story, Meta } from '@storybook/react';
+import { StoryObj } from '@storybook/react';
 import React from 'react';
 
 import { CadStep1 } from './CadStep1';
@@ -6,9 +6,8 @@ import { CadStep1 } from './CadStep1';
 export default {
   title: 'Pages/CAD/CadStep1',
   component: CadStep1,
-} as Meta;
+};
 
-const Template: Story = (args) => <CadStep1 {...args} />;
+type Args = React.ComponentProps<typeof CadStep1>;
 
-export const Default = Template.bind({});
-Default.args = {};
+export const Default: StoryObj<Args> = {};
