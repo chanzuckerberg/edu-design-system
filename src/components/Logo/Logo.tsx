@@ -56,9 +56,9 @@ export const Logo = ({
   return (
     <div className={componentClassName} {...other}>
       <a
+        aria-label={ariaLabel}
         className={styles['logo__link']}
         href={href}
-        aria-label={ariaLabel}
         rel="home"
         title={title}
       >
