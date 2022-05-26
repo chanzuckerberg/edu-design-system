@@ -5,7 +5,7 @@
 \*------------------------------------*/
 
 /**
- * 1) Global container for the header component. This helps set the stage for header recipes across applications
+ *  1) Global container for the header component. This helps set the stage for header recipes across applications
  */
 .header {
   display: flex;
