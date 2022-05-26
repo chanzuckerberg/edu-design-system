@@ -38,7 +38,7 @@
 }
 
 /**
- * Layout no gap variant
+ * Layout lg-xl gap variant
  */
 .layout--gap-lg-xl {
   gap: var(--eds-size-5);
