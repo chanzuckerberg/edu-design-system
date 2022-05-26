@@ -19,6 +19,14 @@
   }
 }
 
+.page-header--50-50 {
+  @media all and (min-width: $eds-bp-md) {
+    > div {
+      max-width: 50%;
+    }
+  }
+}
+
 /**
  * Center-aligned page header
  */

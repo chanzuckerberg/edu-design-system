@@ -30,11 +30,7 @@ export const CadStep1 = () => (
           description={
             <HorizontalStepper
               activeIndex={0}
-              steps={[
-                'Add classroom details',
-                'Add projects',
-                'Create course plan',
-              ]}
+              steps={['Add course details', 'Select Projects']}
             />
           }
           headingSize="h5"
@@ -47,6 +43,7 @@ export const CadStep1 = () => (
             </ButtonGroup>
           }
           title="Course Planner: History 6"
+          variant="50-50"
         />
       </LayoutContainer>
     </Panel>
