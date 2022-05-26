@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { Droppable, DroppableProvided } from 'react-beautiful-dnd';
 import { oneByType } from 'react-children-by-type';
 import styles from '../DragDrop/DragDrop.module.css';
@@ -17,6 +17,10 @@ export interface Props {
    */
   container: ContainerType;
   /**
+   * Empty state contents
+   */
+  emptyContent?: ReactNode;
+  /**
    * Prop that will be an array of items
    */
   items: ItemType[];
@@ -25,11 +29,16 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const DragDropContainer = ({ className, container, items }: Props) => {
+export const DragDropContainer = ({
+  className,
+  container,
+  items,
+  emptyContent,
+}: Props) => {
   const componentClassName = clsx(
     styles['drag-drop__container'],
     className,
-    {},
+    items.length < 1 && styles['drag-drop__container--empty'],
   );
 
   const dragDropContainerHeader = oneByType(
@@ -44,18 +53,28 @@ export const DragDropContainer = ({ className, container, items }: Props) => {
     <div className={componentClassName}>
       {header}
       <Droppable droppableId={container.id} type="item">
-        {(provided: DroppableProvided) => (
-          <div
-            className={styles['drag-drop__container-inner']}
-            ref={provided.innerRef}
-            {...provided.droppableProps}
-          >
-            {items.map((item: ItemType, index: number) => (
-              <DragDropItem index={index} item={item} key={item.id} />
-            ))}
-            {provided.placeholder}
-          </div>
-        )}
+        {(provided: DroppableProvided) =>
+          items.length > 0 ? (
+            <ol
+              className={styles['drag-drop__container-inner']}
+              ref={provided.innerRef}
+              {...provided.droppableProps}
+            >
+              {items.map((item: ItemType, index: number) => (
+                <DragDropItem index={index} item={item} key={item.id} />
+              ))}
+              {provided.placeholder}
+            </ol>
+          ) : (
+            <div
+              className={styles['drag-drop__container-inner']}
+              ref={provided.innerRef}
+              {...provided.droppableProps}
+            >
+              {emptyContent}
+            </div>
+          )
+        }
       </Droppable>
     </div>
   ) : null;

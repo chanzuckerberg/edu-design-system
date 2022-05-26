@@ -1,7 +1,5 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { Meta } from '@storybook/react';
 import React from 'react';
-
 import { Card } from './Card';
 import CardBody from '../CardBody';
 import CardFooter from '../CardFooter';
@@ -16,12 +14,39 @@ export default {
       // TODO: re-enable when component is worked on
       skip: true,
     },
-    badges: [BADGE.BETA],
   },
 } as Meta;
 
 export const Default = () => (
   <Card>
+    <Card.Header>
+      <div className="fpo">Card Header</div>
+    </Card.Header>
+    <Card.Body>
+      <div className="fpo">Card Body</div>
+    </Card.Body>
+    <Card.Footer>
+      <div className="fpo">Card Footer</div>
+    </Card.Footer>
+  </Card>
+);
+
+export const Raised = () => (
+  <Card elevation="raised">
+    <Card.Header>
+      <div className="fpo">Card Header</div>
+    </Card.Header>
+    <Card.Body>
+      <div className="fpo">Card Body</div>
+    </Card.Body>
+    <Card.Footer>
+      <div className="fpo">Card Footer</div>
+    </Card.Footer>
+  </Card>
+);
+
+export const Horizontal = () => (
+  <Card orientation="horizontal">
     <Card.Header>
       <div className="fpo">Card Header</div>
     </Card.Header>
