@@ -492,20 +492,20 @@
 /**
  * Pseudo-element for background color on focus state
  * 1) Using a pseudo-element with a background-color allows us to animate it up and down
- * 2) We push it down 101% (not just 100%) to avoid a thin line being visible at some
- *    zoome levels
- * 3) 
+ * 2) We push it down 101% (not just 100%) to avoid a thin line being visible at some zoom levels
+ * 3) Use lower z-index so it sits behind the link text
  */
 .clickable-style--link::before {
   content: '';
-  position: absolute;
-  z-index: var(--eds-z-index-bottom);
-  top: 0;
-  left: 0;
-  transform: translateY(101%);
   width: 100%;
   height: 100%;
-  background-color: #6b65e2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: var(--eds-z-index-bottom); /* 3 */
+  background-color: var(--eds-theme-color-background-brand-primary-strong);
+
+  transform: translateY(101%); /* 2 */
   transition: transform var(--eds-anim-fade-quick) var(--eds-anim-ease);
 
   @media screen and (prefers-reduced-motion) {

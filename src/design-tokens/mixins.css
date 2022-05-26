@@ -24,10 +24,14 @@
   text-decoration-thickness: 2px;
   text-underline-offset: 2px;
 
+  /* TODO: double-check these tokens */
   color: var(--eds-theme-color-text-link-default);
 
   &:hover {
+    /* TODO: double-check these tokens */
     color: var(--eds-theme-color-text-link-default-hover);
+    /* TODO: add a token for this if it's different than the text color */
+    text-decoration-color: var(--eds-theme-color-text-link-default-hover);
   }
 
   &:focus {
@@ -35,7 +39,7 @@
     the background color but it will also make borders 100% opacity black. */
     outline: 1px solid transparent;
     color: white !important;
-    background-color: #6b65e2;
+    background-color: var(--eds-theme-color-background-brand-primary-strong);
   }
 }
 
