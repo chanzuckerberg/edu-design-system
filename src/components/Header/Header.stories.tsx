@@ -3,12 +3,6 @@ import { Story, Meta } from '@storybook/react';
 import React from 'react';
 
 import { Header, Props } from './Header';
-import Logo from '../Logo';
-import NavContainer from '../NavContainer';
-import PrimaryNav from '../PrimaryNav';
-import PrimaryNavItem from '../PrimaryNavItem';
-import UtilityNav from '../UtilityNav';
-import UtilityNavItem from '../UtilityNavItem';
 
 export default {
   title: 'Organisms/Global/Header',
