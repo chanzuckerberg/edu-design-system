@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.21.1](https://github.com/chanzuckerberg/edu-design-system/compare/v0.21.0...v0.21.1) (2022-05-26)
+
+### Features
+
+- **inlinenotification:** add inline notification ([#1076](https://github.com/chanzuckerberg/edu-design-system/issues/1076)) ([eafb1ab](https://github.com/chanzuckerberg/edu-design-system/commit/eafb1ab0e57bf2b35714e76bb821c078f14b19c3))
+- Expanded `Text` to support multiple paragraphs
+- CAD Implementation updates: integrated DragDrop, OverflowList
+
 ## [0.21.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.20.0...v0.21.0) (2022-05-13)
 
 ### ⚠ BREAKING CHANGES
