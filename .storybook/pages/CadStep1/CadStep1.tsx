@@ -34,6 +34,7 @@ export const CadStep1 = () => (
             />
           }
           headingSize="title-md"
+          orientation="2up"
           right={
             <ButtonGroup>
               <Button>Return to Course</Button>
@@ -43,7 +44,6 @@ export const CadStep1 = () => (
             </ButtonGroup>
           }
           title="Course Planner: History 6"
-          variant="50-50"
         />
       </LayoutContainer>
     </Panel>

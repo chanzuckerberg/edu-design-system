@@ -52,13 +52,13 @@ export const TitleAfter: StoryObj<Args> = {
   },
 };
 
-export const FiftyFifty: StoryObj<Args> = {
+export const TwoUp: StoryObj<Args> = {
   args: {
     description:
       'This is a description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     title: 'Page header title',
     right:
       'Right content. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    variant: '50-50',
+    orientation: '2up',
   },
 };

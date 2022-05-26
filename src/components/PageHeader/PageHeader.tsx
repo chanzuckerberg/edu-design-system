@@ -30,6 +30,10 @@ export interface Props {
    */
   headingSize?: HeadingSize;
   /**
+   * Controls the layout of the PageHeader, specifically the placement of the left and right slots.
+   */
+  orientation?: '2up';
+  /**
    * Page heading title text
    */
   title?: string;
@@ -37,7 +41,6 @@ export interface Props {
    * Slot for node to appear to the right of the page title. Typically used to include a Badge, Button, or other component
    */
   titleAfter?: ReactNode;
-  variant?: '50-50';
 }
 
 /**
@@ -55,17 +58,17 @@ export const PageHeader = ({
   description,
   headingSize = 'headline-lg',
   kicker,
+  orientation,
   right,
   title,
   titleAfter,
-  variant,
   ...other
 }: Props) => {
   const componentClassName = clsx(
     styles['page-header'],
     className,
     align === 'center' && styles['page-header--center'],
-    variant === '50-50' && styles['page-header--50-50'],
+    orientation === '2up' && styles['page-header--2up'],
   );
 
   return (
