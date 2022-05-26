@@ -1,0 +1,14 @@
+@import '../../../src/design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #NUMBERICONLIST
+\*------------------------------------*/
+
+/**
+ * 1) 
+ */
+.number-icon-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--eds-size-half);
+}

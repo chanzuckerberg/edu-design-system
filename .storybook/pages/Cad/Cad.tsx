@@ -21,6 +21,7 @@ import {
 
 import '../../../src/components/Utilities/Spacing.css';
 import ProjectCard from '../../recipes/ProjectCard';
+import StandardsCoverage from '../../recipes/StandardsCoverage';
 
 import EmptyImage from '../../static/hand-pencil.svg';
 
@@ -239,24 +240,7 @@ export const Cad = () => (
             </div>
             <div className="fpo">Inline Notification</div>
           </Panel>
-          <Panel>
-            <Toolbar className="u-margin-bottom-md" variant="bare">
-              <ToolbarItem>
-                <Heading as="h2" size="title-sm">
-                  Standards coverage
-                </Heading>
-              </ToolbarItem>
-              <ToolbarItem align="right">
-                <Button variant="icon">
-                  View all
-                  <Icon name="arrow-narrow-right" purpose="decorative" />
-                </Button>
-              </ToolbarItem>
-            </Toolbar>
-            <div className="fpo" style={{ height: '30rem' }}>
-              Standards coverage
-            </div>
-          </Panel>
+          <StandardsCoverage />
         </LayoutSection>
       </Layout>
     </LayoutContainer>

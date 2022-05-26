@@ -1,0 +1,21 @@
+@import '../../../src/design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #STANDARDSCOVERAGE
+\*------------------------------------*/
+
+/**
+ * 1) 
+ */
+.standards-coverage {
+}
+
+.standards-coverage__table {
+  color: var(--eds-theme-color-text-neutral-subtle);
+}
+
+.standards-coverage__table-header-cell {
+  &:first-child {
+    width: 10rem;
+  }
+}
