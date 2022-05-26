@@ -40,3 +40,7 @@
   top: 3px;
   margin-left: var(--eds-size-1);
 }
+
+.u-is-vishidden {
+  @mixin visuallyHide;
+}

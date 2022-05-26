@@ -129,6 +129,7 @@ $eds-size-7: 3.5rem !default;
 $eds-size-8: 4rem !default;
 $eds-size-9: 4.5rem !default;
 $eds-size-10: 5rem !default;
+$eds-size-12: 6rem !default;
 $eds-size-base-unit: 0.5rem !default;
 $eds-size-half: 0.25rem !default;
 $eds-size-1-and-half: 0.75rem !default;
@@ -619,6 +620,7 @@ $tokens: (
       '8': $eds-size-8,
       '9': $eds-size-9,
       '10': $eds-size-10,
+      '12': $eds-size-12,
       'base-unit': $eds-size-base-unit,
       'half': $eds-size-half,
       '1-and-half': $eds-size-1-and-half,

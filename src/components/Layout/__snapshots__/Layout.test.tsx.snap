@@ -50,6 +50,31 @@ exports[`<Layout /> FiftyFifty story renders snapshot 1`] = `
 </div>
 `;
 
+exports[`<Layout /> GapLgXl story renders snapshot 1`] = `
+<div
+  class="layout layout--gap-lg-xl"
+>
+  <div
+    class="layout__section layout__section--sidebar"
+  >
+    <div
+      class="fpo"
+    >
+      Sidebar Layout Section
+    </div>
+  </div>
+  <div
+    class="layout__section layout__section--main"
+  >
+    <div
+      class="fpo"
+    >
+      Main Layout Section
+    </div>
+  </div>
+</div>
+`;
+
 exports[`<Layout /> GapNone story renders snapshot 1`] = `
 <div
   class="layout layout--gap-none"
