@@ -20,17 +20,7 @@ export default {
 
 const Template: Story<Props> = (args) => (
   <Header {...args}>
-    <Logo href="#" />
-    <NavContainer>
-      <PrimaryNav>
-        <PrimaryNavItem href="#" text="Nav Item" />
-        <PrimaryNavItem href="#" text="Nav Item" />
-        <PrimaryNavItem href="#" text="Nav Item" />
-      </PrimaryNav>
-      <UtilityNav>
-        <UtilityNavItem href="#" text="Utility Nav"></UtilityNavItem>
-      </UtilityNav>
-    </NavContainer>
+    <div className="fpo">Header children</div>
   </Header>
 );
 
