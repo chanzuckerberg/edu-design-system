@@ -33,7 +33,7 @@ export const CadStep1 = () => (
               steps={['Add course details', 'Select Projects']}
             />
           }
-          headingSize="h5"
+          headingSize="title-md"
           right={
             <ButtonGroup>
               <Button>Return to Course</Button>
