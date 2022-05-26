@@ -71,13 +71,11 @@ export const LinkInBodyText = () => (
     Lorem ipsum dolor sit amet, <Link href="">consectetur</Link> adipiscing
     elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
     enim ad minim veniam, quis nostrud exercitation{' '}
-    <Link href="">
-      ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-      dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-      nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-      culpa qui officia deserunt mollit
-    </Link>
-    anim id est laborum.
+    <Link href="">ullamco laboris</Link> nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+    non proident, sunt in culpa qui officia deserunt{' '}
+    <Link href="">mollitanim</Link> id est laborum.
   </>
 );
 
