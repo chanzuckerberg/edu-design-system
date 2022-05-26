@@ -453,15 +453,73 @@
 
 /**
  * Link button styles
+ * 1) Smaller gap between text and icon in link button style
  */
 .clickable-style--link {
-  @mixin textLink;
+  /* @mixin textLink; */
+  outline: 0 !important;
 
   padding: 0;
   border: 0;
   text-align: left;
   background-color: transparent;
-  gap: 0.25em; /* 2 */
+  gap: 0.25em; /* 1 */
+
+  border-radius: 0;
+
+  position: relative;
+  z-index: 0;
+  display: inline-block;
+  /* padding: 5px 5px; */
+  overflow: hidden;
+  color: #333;
+  vertical-align: bottom;
+  transition: color 0.3s ease-out;
+
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+  padding: 2px;
+  margin: -2px;
+
+  font-size: inherit;
+  font-weight: var(--eds-font-weight-medium);
+  line-height: inherit;
+  text-transform: inherit;
+  display: inline-flex;
+}
+
+/**
+ * Pseudo-element for background color on focus state
+ * 1) Using a pseudo-element with a background-color allows us to animate it up and down
+ * 2) We push it down 101% (not just 100%) to avoid a thin line being visible at some
+ *    zoome levels
+ * 3) 
+ */
+.clickable-style--link::before {
+  content: '';
+  position: absolute;
+  z-index: var(--eds-z-index-bottom);
+  top: 0;
+  left: 0;
+  transform: translateY(101%);
+  width: 100%;
+  height: 100%;
+  background-color: #6b65e2;
+  transition: transform var(--eds-anim-fade-quick) var(--eds-anim-ease);
+
+  @media screen and (prefers-reduced-motion) {
+    transition: none;
+  }
+}
+
+.clickable-style--link:focus {
+  color: #fff !important;
+  outline: none;
+}
+.clickable-style--link:focus::before {
+  transform: translateY(0);
+  transition: transform 0.25s ease-out;
 }
 
 /**
