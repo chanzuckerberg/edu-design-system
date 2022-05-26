@@ -52,7 +52,7 @@ export const CadStep1 = () => (
         <LayoutSection region="main">
           <Grid className="u-margin-bottom-lg" variant="1-2-1up">
             <img alt="compass vignette" src={CompassCenter} />
-            <Heading size="headline-lg">
+            <Heading as="h2" size="headline-lg">
               Let&apos;s start planning, Amy Frankle.
             </Heading>
           </Grid>
