@@ -4,6 +4,10 @@ import styles from './Logo.module.css';
 
 export interface Props {
   /**
+   * Required string of text used to explain what the logo is or where it goes
+   */
+  ariaLabel?: string;
+  /**
    * Alt text used for the image of the logo
    */
   alt?: string;
@@ -44,13 +48,20 @@ export const Logo = ({
   children,
   href,
   src,
+  ariaLabel,
   title,
   ...other
 }: Props) => {
   const componentClassName = clsx(styles['logo'], className, {});
   return (
     <div className={componentClassName} {...other}>
-      <a className={styles['logo__link']} href={href} rel="home" title={title}>
+      <a
+        className={styles['logo__link']}
+        href={href}
+        aria-label={ariaLabel}
+        rel="home"
+        title={title}
+      >
         {children}
       </a>
     </div>

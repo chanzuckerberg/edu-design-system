@@ -64,7 +64,11 @@ export const GlobalHeader = ({ className, ...other }: Props) => {
   });
   return (
     <Header behavior="sticky" className={componentClassName} {...other}>
-      <Logo className={styles['global-header__logo']} href="#">
+      <Logo
+        ariaLabel="Link to Learning Platform Homepage"
+        className={styles['global-header__logo']}
+        href="#"
+      >
         <svg
           className={styles['global-header__logo-image']}
           fill="none"
