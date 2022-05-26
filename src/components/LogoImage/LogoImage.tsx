@@ -19,6 +19,10 @@ export interface Props {
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
+ * ```ts
+ * import {LogoImage} from "@chanzuckerberg/eds";
+ * ```
+ *
  * Logo image svg to be used inside the Logo component.
  */
 export const LogoImage = ({

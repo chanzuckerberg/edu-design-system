@@ -1,3 +1,4 @@
+import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { Story, Meta } from '@storybook/react';
 import React from 'react';
 
@@ -11,6 +12,9 @@ export default {
   title: 'Organisms/Tables/Table',
   component: Table,
   subcomponents: { TableBody, TableCell, TableHeader, TableRow },
+  parameters: {
+    badges: [BADGE.BETA],
+  },
 } as Meta;
 
 // const headerTableCellWrapColumns = [

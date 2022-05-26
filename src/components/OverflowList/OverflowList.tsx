@@ -24,6 +24,10 @@ export interface Props {
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
+ * ```ts
+ * import {OverflowList} from "@chanzuckerberg/eds";
+ * ```
+ *
  * TODO: update this comment with a description of the component.
  */
 export const OverflowList = ({ className, children, ...other }: Props) => {

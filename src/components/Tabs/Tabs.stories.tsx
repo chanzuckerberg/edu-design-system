@@ -4,7 +4,7 @@ import React from 'react';
 
 import { Tabs, Props } from './Tabs';
 import Tab from '../Tab';
-import TextPassage from '../TextPassage';
+import Text from '../Text';
 
 export default {
   title: 'Organisms/Interactive/Tabs',
@@ -17,7 +17,7 @@ export default {
 const Template: Story<Props> = (args) => (
   <Tabs {...args}>
     <Tab title="Tab 1">
-      <TextPassage>
+      <Text as="div">
         <h3>Tab 1</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -25,11 +25,11 @@ const Template: Story<Props> = (args) => (
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex{' '}
         </p>
-      </TextPassage>
+      </Text>
     </Tab>
 
     <Tab title="Tab 2">
-      <TextPassage>
+      <Text as="div">
         <h3>Tab 2</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -37,11 +37,11 @@ const Template: Story<Props> = (args) => (
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex{' '}
         </p>
-      </TextPassage>
+      </Text>
     </Tab>
 
     <Tab title="Tab 3">
-      <TextPassage>
+      <Text as="div">
         <h3>Tab 3</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -49,7 +49,7 @@ const Template: Story<Props> = (args) => (
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex{' '}
         </p>
-      </TextPassage>
+      </Text>
     </Tab>
   </Tabs>
 );
@@ -61,7 +61,7 @@ export const Inverted = () => (
   <div style={{ background: 'black' }}>
     <Tabs inverted={true}>
       <Tab title="Tab 1">
-        <TextPassage>
+        <Text as="div">
           <h3>Tab 1</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -69,11 +69,11 @@ export const Inverted = () => (
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex{' '}
           </p>
-        </TextPassage>
+        </Text>
       </Tab>
 
       <Tab title="Tab 2">
-        <TextPassage>
+        <Text as="div">
           <h3>Tab 2</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -81,11 +81,11 @@ export const Inverted = () => (
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex{' '}
           </p>
-        </TextPassage>
+        </Text>
       </Tab>
 
       <Tab title="Tab 3">
-        <TextPassage>
+        <Text as="div">
           <h3>Tab 3</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -93,7 +93,7 @@ export const Inverted = () => (
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex{' '}
           </p>
-        </TextPassage>
+        </Text>
       </Tab>
     </Tabs>
   </div>

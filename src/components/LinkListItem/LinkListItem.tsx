@@ -49,6 +49,10 @@ export interface Props {
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
+ * ```ts
+ * import {LinkListItem} from "@chanzuckerberg/eds";
+ * ```
+ *
  * Link list item to be used inside the LinkList component.
  */
 export const LinkListItem = ({

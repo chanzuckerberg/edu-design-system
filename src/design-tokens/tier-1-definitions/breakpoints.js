@@ -13,5 +13,5 @@ module.exports = {
   'eds-bp-md': '48rem', // 768px
   'eds-bp-lg': '60rem', // 960px
   'eds-bp-xl': '75rem', // 1200px
-  'eds-bp-xxl': '87.5rem', // 1600px
+  'eds-bp-xxl': '87.5rem', // 1400px
 };

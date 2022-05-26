@@ -6,7 +6,6 @@ import {
   ButtonGroup,
   Button,
   Heading,
-  TextPassage,
   LayoutContainer,
   Layout,
   LayoutSection,
@@ -19,6 +18,7 @@ import {
   OverflowListItem,
   Tabs,
   Tab,
+  Text,
 } from '../../../src';
 
 import '../../../src/components/Utilities/Spacing.css';
@@ -57,7 +57,7 @@ export const Cad = () => (
             <Heading as="h2" className="u-margin-bottom-lg" size="headline-sm">
               Select projects for your History 6 plan
             </Heading>
-            <TextPassage className="u-margin-bottom-lg">
+            <Text as="div" className="u-margin-bottom-lg">
               <p>
                 Make a plan so that you can stay connected to learning
                 objectives even as changes occur throughout the year.
@@ -67,7 +67,7 @@ export const Cad = () => (
                 ipsum dolor sit amet, consectetur adipiscing elit. Phasellus est
                 quam, consequat iaculis pretium accumsan, fringilla id ligula.
               </p>
-            </TextPassage>
+            </Text>
             <Tabs>
               <Tab title="Planning overview">
                 <OverflowList>
@@ -200,7 +200,7 @@ export const Cad = () => (
               </Tab>
 
               <Tab title="Calendar overview">
-                <TextPassage>
+                <Text as="div">
                   <h3>Tab 2</h3>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -208,7 +208,7 @@ export const Cad = () => (
                     aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                     ullamco laboris nisi ut aliquip ex{' '}
                   </p>
-                </TextPassage>
+                </Text>
               </Tab>
             </Tabs>
           </Panel>

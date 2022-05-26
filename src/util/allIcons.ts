@@ -51,6 +51,7 @@ export const ALL_ICONS = [
   'dots-horizontal',
   'dots-vertical',
   'drag-indicator',
+  'error-inverted',
   'error',
   'event-available',
   'event-busy',

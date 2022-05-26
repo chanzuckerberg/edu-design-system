@@ -27,6 +27,10 @@ export interface Props {
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
+ * ```ts
+ * import {Breadcrumbs} from "@chanzuckerberg/eds";
+ * ```
+ *
  * List of Breadcrumb components showing the user where they are in the system and allow them
  * to navigate to parent pages.
  */

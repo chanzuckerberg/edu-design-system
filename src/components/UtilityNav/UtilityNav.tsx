@@ -30,6 +30,10 @@ export interface Props {
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
+ * ```ts
+ * import {UtilityNav} from "@chanzuckerberg/eds";
+ * ```
+ *
  * Utility navigation existing in the header and maybe the footer.
  */
 export const UtilityNav = ({

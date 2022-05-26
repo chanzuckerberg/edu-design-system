@@ -21,6 +21,10 @@ export interface Props {
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
+ * ```ts
+ * import {NavContainer} from "@chanzuckerberg/eds";
+ * ```
+ *
  * Container that houses navigation to be toggled on and off on small screens.
  */
 export const NavContainer = ({

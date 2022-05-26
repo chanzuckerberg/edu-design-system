@@ -20,7 +20,13 @@ export interface Props {
 }
 
 /**
- * Primary UI component for user interaction
+ * BETA: This component is still a work in progress and is subject to change.
+ *
+ * ```ts
+ * import {ToolbarItem} from "@chanzuckerberg/eds";
+ * ```
+ *
+ * TODO: update this comment with a description of the component.
  */
 export const ToolbarItem = ({
   align,

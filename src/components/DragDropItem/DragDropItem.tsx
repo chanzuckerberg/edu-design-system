@@ -3,6 +3,7 @@ import React from 'react';
 import { Draggable, DraggableProvided } from 'react-beautiful-dnd';
 import styles from '../DragDrop/DragDrop.module.css';
 import { ItemType } from '../DragDrop/DragDropTypes';
+import Icon from '../Icon';
 
 export interface Props {
   /**
@@ -21,7 +22,8 @@ export interface Props {
  * Primary UI component for user interaction
  */
 export const DragDropItem = ({ className, item, index }: Props) => {
-  const componentClassName = clsx(styles['drag-drop-item'], className, {});
+  const componentClassName = clsx(styles['drag-drop__item'], className, {});
+
   // `id` is injected in <DragDrop />
   return item.id ? (
     <Draggable draggableId={item.id} index={index}>
@@ -31,13 +33,14 @@ export const DragDropItem = ({ className, item, index }: Props) => {
             className={componentClassName}
             ref={provided.innerRef}
             {...provided.draggableProps}
-            {...provided.dragHandleProps}
           >
-            {item.title && (
-              <div className={clsx(styles['drag-drop-item--title'])}>
-                {item.title}
-              </div>
-            )}
+            <div
+              aria-label={`Handle for draggable item: ${item.title}`}
+              className={clsx(styles['drag-drop-item__item-handle'])}
+              {...provided.dragHandleProps}
+            >
+              <Icon name="drag-indicator" purpose="decorative" size="1.5rem" />
+            </div>
             {item.children}
           </div>
         );

@@ -15,6 +15,10 @@ export interface Props {
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
+ * ```ts
+ * import {CardBody} from "@chanzuckerberg/eds";
+ * ```
+ *
  * Body of the Card component.
  */
 export const CardBody = ({ children, className, ...other }: Props) => {

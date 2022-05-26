@@ -10,7 +10,24 @@
  */
 .drag-drop {
   display: flex;
-  justify-content: space-around;
+}
+
+/**
+ * Drag drop container
+ * 1) Set to display flex so empty state can span entire column.
+ */
+.drag-drop__container {
+  display: flex; /* 1 */
+  flex-direction: column;
+  margin-left: var(--eds-size-2);
+
+  /**
+  * First drag drop container
+  * 1) Don't add left margin to left align with the rest of the content
+  */
+  &:first-of-type {
+    margin-left: 0; /* 1 */
+  }
 }
 
 /**
@@ -20,20 +37,17 @@
 * 4) If a minimum height is not set, all containers in the same context will have their height determined by the longest "list" of items, and will resize as items are moved, which may or may not be desirable. 
 * 5) Setting a fixed width for containers avoids jumpy behavior caused by using flex grow or other non-fixed width methods.
 */
-.drag-drop-container {
+.drag-drop__container-inner {
   display: block; /* 3 */
-  margin: var(--eds-size-2);
   border-radius: var(--eds-border-radius-md);
-  min-height: 630px; /* 4 */
-  width: 437px; /* 5 */
-  padding: var(--eds-size-1);
+  min-width: 14rem;
 
   /**
   * 1) Distinguish last container from first container (not used when more than two containers)
   * 2) When the container is empty, a background image may be displayed. This may be helpful when the app starts with all items in the first container
   * 3) When there are more than two containers, disable the empty background
   */
-  &:last-of-type {
+  .drag-drop__container:last-of-type & {
     background-color: var(--eds-color-neutral-200);
 
     .drag-drop--multiple & {
@@ -42,6 +56,7 @@
 
     /* 2 */
     &:empty {
+      flex: 1;
       background-image: url('https://fakeimg.pl/240x120/?text=Drag%20in%20available%20projects');
       background-repeat: no-repeat;
       background-position: center;
@@ -62,22 +77,54 @@
 }
 
 /**
-* 1) Container that holds droppable content. Adding the unstyled prop removes all styling from items.
+* 1) Container that holds droppable content. 
 * 2) DragDropItem styles are included here rather than in the /DragDropItem directory as a workaround to CSS Modules' locally scoped class names 
 * 3) For best experience, use a margin on a single side of an item to add a gap between items. Using a margin on both top and bottom, or using flex or grid gap spacing in the drag-drop-container, cause jumpy behavior.
 */
-.drag-drop:not(.drag-drop--unstyled) .drag-drop-item {
-  padding: var(--eds-size-1);
-  margin-bottom: var(--eds-size-1); /* 3 */
+
+.drag-drop__item {
+  position: relative;
+  margin-bottom: var(--eds-size-2); /* 3 */
   background-color: var(--eds-color-neutral-100);
   border-radius: var(--eds-border-radius-md);
   box-shadow: var(--eds-box-shadow-sm);
-}
 
+  &:focus-within {
+    outline: 2px solid blue;
+  }
+
+  /**
+  * 1) The unstyled variant removes all styling from items.
+  */
+  .drag-drop--unstyled & {
+    background-color: unset;
+    border-radius: unset;
+    box-shadow: unset;
+  }
+}
 /** 
 * 1) Optional title div at the top of an item.
 */
-.drag-drop-item--title {
+.drag-drop-item__title {
   @mixin eds-typography-preset-007-bold;
   margin-bottom: var(--eds-size-2);
+}
+
+/**
+* 1) Used with handles variant to wrap children.
+*/
+.drag-drop-item__content {
+  flex-grow: 1;
+}
+
+/**
+* 1) Wrapper for drag handle.
+*/
+.drag-drop-item__item-handle {
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--eds-size-1);
 }

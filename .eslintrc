@@ -42,7 +42,8 @@
           "src/**/*.stories.{ts,tsx}",
           "**/*.config.{js,ts}",
           "**/*.setup.{js,ts}",
-          ".storybook/**"
+          ".storybook/**",
+          "plopfile.js"
         ]
       }
     ],
@@ -80,7 +81,13 @@
       }
     },
     {
-      "files": ["config.js", "*.config.js", "main.js", "plopfile.js", "src/**/*.js"],
+      "files": [
+        "config.js",
+        "*.config.js",
+        "main.js",
+        "plopfile.js",
+        "src/**/*.js"
+      ],
       "env": {
         "browser": false,
         "node": true
