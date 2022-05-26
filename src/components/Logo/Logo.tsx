@@ -1,13 +1,16 @@
 import clsx from 'clsx';
-import React from 'react';
+import React, { ReactNode } from 'react';
 import styles from './Logo.module.css';
-import LogoImage from '../LogoImage';
 
 export interface Props {
   /**
    * Alt text used for the image of the logo
    */
   alt?: string;
+  /**
+   * Logo image that can be nested within at the application level, normally an inline SVG or `<img>` tag.
+   */
+  children?: ReactNode;
   /**
    * CSS class names that can be appended to the component.
    */
@@ -35,12 +38,20 @@ export interface Props {
  *
  * Branding image or text of the site.
  */
-export const Logo = ({ alt, className, href, src, title, ...other }: Props) => {
+export const Logo = ({
+  alt,
+  className,
+  children,
+  href,
+  src,
+  title,
+  ...other
+}: Props) => {
   const componentClassName = clsx(styles['logo'], className, {});
   return (
     <div className={componentClassName} {...other}>
       <a className={styles['logo__link']} href={href} rel="home" title={title}>
-        <LogoImage alt={alt} src={src} />
+        {children}
       </a>
     </div>
   );
