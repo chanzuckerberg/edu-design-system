@@ -16,6 +16,10 @@ export interface Props {
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
+ * ```ts
+ * import {GridItem} from "@chanzuckerberg/eds";
+ * ```
+ *
  * Single grid item to be used in the Grid component.
  */
 export const GridItem = ({ children, className, ...other }: Props) => {

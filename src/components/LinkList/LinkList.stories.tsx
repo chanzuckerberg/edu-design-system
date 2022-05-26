@@ -1,3 +1,4 @@
+import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { Story, Meta } from '@storybook/react';
 import React from 'react';
 
@@ -7,6 +8,9 @@ import LinkListItem from '../LinkListItem';
 export default {
   title: 'Molecules/Navigation/LinkList',
   component: LinkList,
+  parameters: {
+    badges: [BADGE.BETA],
+  },
 } as Meta;
 
 const Template: Story<Props> = (args) => (

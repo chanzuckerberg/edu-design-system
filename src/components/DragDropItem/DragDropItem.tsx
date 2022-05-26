@@ -1,8 +1,9 @@
 import clsx from 'clsx';
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { Draggable, DraggableProvided } from 'react-beautiful-dnd';
 import styles from '../DragDrop/DragDrop.module.css';
 import { ItemType } from '../DragDrop/DragDropTypes';
+import Icon from '../Icon';
 
 export interface Props {
   /**
@@ -21,25 +22,41 @@ export interface Props {
  * Primary UI component for user interaction
  */
 export const DragDropItem = ({ className, item, index }: Props) => {
-  const componentClassName = clsx(styles['drag-drop-item'], className, {});
+  const componentClassName = clsx(styles['drag-drop__item'], className);
+
   // `id` is injected in <DragDrop />
   return item.id ? (
     <Draggable draggableId={item.id} index={index}>
-      {(provided: DraggableProvided) => {
+      {(provided: DraggableProvided, snapshot) => {
+        const childrenWithProps = React.Children.map(
+          item.children,
+          (child: ReactNode) => {
+            // Checking isValidElement is the safe way and avoids a typescript
+            // error too.
+            if (React.isValidElement(child)) {
+              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+              // @ts-expect-error TODO: fix "No overload matches this call" error
+              return React.cloneElement<Props>(child, {
+                isDragging: snapshot.isDragging,
+              });
+            }
+          },
+        );
         return (
-          <div
+          <li
             className={componentClassName}
             ref={provided.innerRef}
             {...provided.draggableProps}
-            {...provided.dragHandleProps}
           >
-            {item.title && (
-              <div className={clsx(styles['drag-drop-item--title'])}>
-                {item.title}
-              </div>
-            )}
-            {item.children}
-          </div>
+            <div
+              aria-label={`Handle for draggable item: ${item.title}`}
+              className={clsx(styles['drag-drop__item-handle'])}
+              {...provided.dragHandleProps}
+            >
+              <Icon name="drag-indicator" purpose="decorative" size="1.5rem" />
+            </div>
+            {childrenWithProps}
+          </li>
         );
       }}
     </Draggable>

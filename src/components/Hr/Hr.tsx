@@ -12,7 +12,7 @@ export interface Props {
    * Size variations:
    * - **lg** yields a thicker horizontal rule
    */
-  size?: 'lg' | 'brand';
+  size?: 'lg';
   /**
    * CSS class names that can be appended to the component.
    */
@@ -21,6 +21,10 @@ export interface Props {
 
 /**
  * BETA: This component is still a work in progress and is subject to change.
+ *
+ * ```ts
+ * import {Hr} from "@chanzuckerberg/eds";
+ * ```
  *
  * Horizontal rule component to present a horizontal line separating content.
  */

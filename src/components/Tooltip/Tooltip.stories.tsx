@@ -31,6 +31,13 @@ export default {
   title: 'Molecules/Messaging/Tooltip',
   component: Tooltip,
   args: defaultArgs,
+  parameters: {
+    chromatic: {
+      // These stories are very flaky, though we're not sure why.
+      // We delay the snapshot just in case there's a timing issue at play here.
+      delay: 900,
+    },
+  },
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Tooltip>;

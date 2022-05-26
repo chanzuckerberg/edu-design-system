@@ -54,6 +54,10 @@ export interface Props {
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
+ * ```ts
+ * import {Popover} from "@chanzuckerberg/eds";
+ * ```
+ *
  * Content container that pops out over other content.
  */
 export const Popover = ({

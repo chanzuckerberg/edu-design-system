@@ -1,0 +1,461 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ButtonDropdown /> Default story renders snapshot 1`] = `
+<div
+  class="button-dropdown"
+>
+  <button
+    aria-expanded="false"
+    class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--brand"
+    type="button"
+  >
+    Open Dropdown
+  </button>
+  <div
+    class="dropdown-menu button-dropdown__dropdown-menu"
+  >
+    <ul
+      class="dropdown-menu__list"
+      role="presentation"
+    >
+      <li
+        class="dropdown-menu__item"
+        role="presentation"
+      >
+        <button
+          class="dropdown-menu__link"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon"
+            fill="currentColor"
+            height="1.25rem"
+            style="--icon-size: 1.25rem;"
+            width="1.25rem"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="test-file-stub#schedule"
+            />
+          </svg>
+          Item 1
+        </button>
+      </li>
+      <li
+        class="dropdown-menu__item"
+        role="presentation"
+      >
+        <button
+          class="dropdown-menu__link"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon"
+            fill="currentColor"
+            height="1.25rem"
+            style="--icon-size: 1.25rem;"
+            width="1.25rem"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="test-file-stub#schedule"
+            />
+          </svg>
+          Item 2
+        </button>
+      </li>
+      <li
+        class="dropdown-menu__item"
+        role="presentation"
+      >
+        <button
+          class="dropdown-menu__link"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon"
+            fill="currentColor"
+            height="1.25rem"
+            style="--icon-size: 1.25rem;"
+            width="1.25rem"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="test-file-stub#schedule"
+            />
+          </svg>
+          Item 3
+        </button>
+      </li>
+      <li
+        class="dropdown-menu__item"
+        role="presentation"
+      >
+        <button
+          class="dropdown-menu__link"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon"
+            fill="currentColor"
+            height="1.25rem"
+            style="--icon-size: 1.25rem;"
+            width="1.25rem"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="test-file-stub#schedule"
+            />
+          </svg>
+          Item 4
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`<ButtonDropdown /> PositionBottomRight story renders snapshot 1`] = `
+<div
+  class="button-dropdown button-dropdown--bottom-right"
+>
+  <button
+    aria-expanded="false"
+    class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--brand"
+    type="button"
+  >
+    Open Dropdown
+  </button>
+  <div
+    class="dropdown-menu button-dropdown__dropdown-menu"
+  >
+    <ul
+      class="dropdown-menu__list"
+      role="presentation"
+    >
+      <li
+        class="dropdown-menu__item"
+        role="presentation"
+      >
+        <button
+          class="dropdown-menu__link"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon"
+            fill="currentColor"
+            height="1.25rem"
+            style="--icon-size: 1.25rem;"
+            width="1.25rem"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="test-file-stub#schedule"
+            />
+          </svg>
+          Item 1
+        </button>
+      </li>
+      <li
+        class="dropdown-menu__item"
+        role="presentation"
+      >
+        <button
+          class="dropdown-menu__link"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon"
+            fill="currentColor"
+            height="1.25rem"
+            style="--icon-size: 1.25rem;"
+            width="1.25rem"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="test-file-stub#schedule"
+            />
+          </svg>
+          Item 2
+        </button>
+      </li>
+      <li
+        class="dropdown-menu__item"
+        role="presentation"
+      >
+        <button
+          class="dropdown-menu__link"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon"
+            fill="currentColor"
+            height="1.25rem"
+            style="--icon-size: 1.25rem;"
+            width="1.25rem"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="test-file-stub#schedule"
+            />
+          </svg>
+          Item 3
+        </button>
+      </li>
+      <li
+        class="dropdown-menu__item"
+        role="presentation"
+      >
+        <button
+          class="dropdown-menu__link"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon"
+            fill="currentColor"
+            height="1.25rem"
+            style="--icon-size: 1.25rem;"
+            width="1.25rem"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="test-file-stub#schedule"
+            />
+          </svg>
+          Item 4
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`<ButtonDropdown /> PositionTopLeft story renders snapshot 1`] = `
+<div
+  class="button-dropdown button-dropdown--top-left"
+>
+  <button
+    aria-expanded="false"
+    class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--brand"
+    type="button"
+  >
+    Open Dropdown
+  </button>
+  <div
+    class="dropdown-menu button-dropdown__dropdown-menu"
+  >
+    <ul
+      class="dropdown-menu__list"
+      role="presentation"
+    >
+      <li
+        class="dropdown-menu__item"
+        role="presentation"
+      >
+        <button
+          class="dropdown-menu__link"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon"
+            fill="currentColor"
+            height="1.25rem"
+            style="--icon-size: 1.25rem;"
+            width="1.25rem"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="test-file-stub#schedule"
+            />
+          </svg>
+          Item 1
+        </button>
+      </li>
+      <li
+        class="dropdown-menu__item"
+        role="presentation"
+      >
+        <button
+          class="dropdown-menu__link"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon"
+            fill="currentColor"
+            height="1.25rem"
+            style="--icon-size: 1.25rem;"
+            width="1.25rem"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="test-file-stub#schedule"
+            />
+          </svg>
+          Item 2
+        </button>
+      </li>
+      <li
+        class="dropdown-menu__item"
+        role="presentation"
+      >
+        <button
+          class="dropdown-menu__link"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon"
+            fill="currentColor"
+            height="1.25rem"
+            style="--icon-size: 1.25rem;"
+            width="1.25rem"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="test-file-stub#schedule"
+            />
+          </svg>
+          Item 3
+        </button>
+      </li>
+      <li
+        class="dropdown-menu__item"
+        role="presentation"
+      >
+        <button
+          class="dropdown-menu__link"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon"
+            fill="currentColor"
+            height="1.25rem"
+            style="--icon-size: 1.25rem;"
+            width="1.25rem"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="test-file-stub#schedule"
+            />
+          </svg>
+          Item 4
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`<ButtonDropdown /> PositionTopRight story renders snapshot 1`] = `
+<div
+  class="button-dropdown button-dropdown--top-right"
+>
+  <button
+    aria-expanded="false"
+    class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--brand"
+    type="button"
+  >
+    Open Dropdown
+  </button>
+  <div
+    class="dropdown-menu button-dropdown__dropdown-menu"
+  >
+    <ul
+      class="dropdown-menu__list"
+      role="presentation"
+    >
+      <li
+        class="dropdown-menu__item"
+        role="presentation"
+      >
+        <button
+          class="dropdown-menu__link"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon"
+            fill="currentColor"
+            height="1.25rem"
+            style="--icon-size: 1.25rem;"
+            width="1.25rem"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="test-file-stub#schedule"
+            />
+          </svg>
+          Item 1
+        </button>
+      </li>
+      <li
+        class="dropdown-menu__item"
+        role="presentation"
+      >
+        <button
+          class="dropdown-menu__link"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon"
+            fill="currentColor"
+            height="1.25rem"
+            style="--icon-size: 1.25rem;"
+            width="1.25rem"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="test-file-stub#schedule"
+            />
+          </svg>
+          Item 2
+        </button>
+      </li>
+      <li
+        class="dropdown-menu__item"
+        role="presentation"
+      >
+        <button
+          class="dropdown-menu__link"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon"
+            fill="currentColor"
+            height="1.25rem"
+            style="--icon-size: 1.25rem;"
+            width="1.25rem"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="test-file-stub#schedule"
+            />
+          </svg>
+          Item 3
+        </button>
+      </li>
+      <li
+        class="dropdown-menu__item"
+        role="presentation"
+      >
+        <button
+          class="dropdown-menu__link"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon"
+            fill="currentColor"
+            height="1.25rem"
+            style="--icon-size: 1.25rem;"
+            width="1.25rem"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="test-file-stub#schedule"
+            />
+          </svg>
+          Item 4
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
+`;

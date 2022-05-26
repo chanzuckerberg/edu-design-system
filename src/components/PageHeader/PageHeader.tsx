@@ -42,6 +42,10 @@ export interface Props {
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
+ * ```ts
+ * import {PageHeader} from "@chanzuckerberg/eds";
+ * ```
+ *
  * Header to be used at the top of a page.
  */
 export const PageHeader = ({

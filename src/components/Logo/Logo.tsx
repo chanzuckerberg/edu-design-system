@@ -29,6 +29,10 @@ export interface Props {
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
+ * ```ts
+ * import {Logo} from "@chanzuckerberg/eds";
+ * ```
+ *
  * Branding image or text of the site.
  */
 export const Logo = ({ alt, className, href, src, title, ...other }: Props) => {

@@ -22,9 +22,8 @@ export const Small: StoryObj<Args> = {
   },
 };
 
-export const SuccessLarge: StoryObj<Args> = {
+export const Success: StoryObj<Args> = {
   args: {
-    size: 'lg',
     variant: 'success',
   },
 };
@@ -48,11 +47,6 @@ export const DifferentNumbers: StoryObj<Args> = {
       },
     },
     'aria-label': {
-      table: {
-        disable: true,
-      },
-    },
-    'aria-labelledby': {
       table: {
         disable: true,
       },

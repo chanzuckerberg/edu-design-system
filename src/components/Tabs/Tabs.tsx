@@ -94,6 +94,10 @@ export interface Props {
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
+ * ```ts
+ * import {Tabs} from "@chanzuckerberg/eds";
+ * ```
+ *
  * List of of links where each link toggles open associated information in a tab panel.
  */
 export const Tabs = ({

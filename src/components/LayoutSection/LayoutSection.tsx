@@ -24,6 +24,10 @@ export interface Props {
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
+ * ```ts
+ * import {LayoutSection} from "@chanzuckerberg/eds";
+ * ```
+ *
  * Layout section.
  */
 export const LayoutSection = ({

@@ -1,0 +1,88 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    # INLINE NOTIFICATION
+\*------------------------------------*/
+
+/**
+ * A messaging element that is used inline.
+ */
+.inline-notification {
+  display: inline-flex;
+  padding: var(--eds-size-half);
+  border: var(--eds-theme-border-width) solid var(--border-dark-color);
+  border-radius: var(--eds-theme-border-radius);
+}
+
+/**
+ * Icon that sits left of the notification text.
+ * 1) Retain icon original size and wrap text instead.
+ */
+.inline-notification__icon {
+  flex-shrink: 0; /* 1 */
+}
+
+/**
+ * Text that sits right of the icon.
+ */
+.inline-notification__text {
+  margin: var(--eds-size-half);
+  @mixin eds-theme-typography-label-md-subtle;
+}
+
+/**
+ * Color variants
+ */
+.inline-notification--brand {
+  @mixin messagingBrand;
+}
+.inline-notification--success {
+  @mixin messagingSuccess;
+}
+.inline-notification--warning {
+  @mixin messagingWarning;
+}
+.inline-notification--yield {
+  @mixin messagingYield;
+}
+.inline-notification--subtle {
+  background-color: var(--eds-theme-color-background-neutral-default);
+}
+
+/**
+ * Icon color variants.
+ */
+.inline-notification__icon--brand {
+  fill: var(--eds-theme-color-icon-brand-primary);
+}
+.inline-notification__icon--success {
+  fill: var(--eds-theme-color-icon-utility-success);
+}
+.inline-notification__icon--warning {
+  fill: var(--eds-theme-color-icon-utility-warning);
+}
+.inline-notification__icon--yield {
+  fill: var(--eds-theme-color-background-grade-revise-default);
+}
+
+/**
+ * Full width variant of the inline notification.
+ */
+.inline-notification--full-width {
+  display: flex;
+  border: 0;
+}
+.inline-notification--full-width-subtle {
+  background-color: var(--eds-theme-color-background-neutral-subtle);
+}
+/**
+ * Inactive variant of the full width inline notification.
+ * 1) Creates enough space to keep text in the same place.
+ */
+.inline-notification__icon--inactive {
+  display: none;
+}
+.inline-notification__text--inactive {
+  padding-left: var(--eds-size-3); /* 1 */
+  color: var(--eds-theme-color-text-neutral-subtle);
+}

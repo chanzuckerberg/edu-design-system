@@ -1,6 +1,6 @@
 {
   "name": "@chanzuckerberg/eds",
-  "version": "0.21.0",
+  "version": "0.21.1",
   "description": "The React-powered design system library for Chan Zuckerberg Initiative education web applications",
   "author": "CZI <edu-frontend-infra@chanzuckerberg.com>",
   "homepage": "https://github.com/chanzuckerberg/edu-design-system",
@@ -145,6 +145,7 @@
     "jest": "^27.5.1",
     "lint-staged": "^10.5.4",
     "make-dir-cli": "^3.0.0",
+    "pascal-case": "^3.1.2",
     "plop": "^3.0.5",
     "postcss": "^8.4.12",
     "postcss-cli": "^9.1.0",

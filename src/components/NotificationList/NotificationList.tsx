@@ -17,6 +17,10 @@ export interface Props {
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
+ * ```ts
+ * import {NotificationList} from "@chanzuckerberg/eds";
+ * ```
+ *
  * List of NotificationListItem components.
  */
 export const NotificationList = ({ className, children, ...other }: Props) => {

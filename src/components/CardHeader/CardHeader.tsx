@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
+import styles from '../Card/Card.module.css';
 
 export interface Props {
   /**
@@ -13,12 +14,10 @@ export interface Props {
 }
 
 /**
- * BETA: This component is still a work in progress and is subject to change.
- *
- * Header of the Card component.
+ * Primary UI component for user interaction
  */
 export const CardHeader = ({ children, className, ...other }: Props) => {
-  const componentClassName = clsx('card__header', className, {});
+  const componentClassName = clsx(styles['card__header'], className, {});
   return (
     <header className={componentClassName} {...other}>
       {children}
