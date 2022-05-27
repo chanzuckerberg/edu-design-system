@@ -7,40 +7,42 @@ import GridItem from '../GridItem';
 
 export default {
   title: 'Molecules/Layout and Containers/Grid',
-  children: (
-    <>
-      <Grid.Item>
-        <div className="fpo u-margin-top-none u-margin-bottom-none">
-          Grid Item
-        </div>
-      </Grid.Item>
-      <Grid.Item>
-        <div className="fpo u-margin-top-none u-margin-bottom-none">
-          Grid Item
-        </div>
-      </Grid.Item>
-      <Grid.Item>
-        <div className="fpo u-margin-top-none u-margin-bottom-none">
-          Grid Item
-        </div>
-      </Grid.Item>
-      <Grid.Item>
-        <div className="fpo u-margin-top-none u-margin-bottom-none">
-          Grid Item
-        </div>
-      </Grid.Item>
-      <Grid.Item>
-        <div className="fpo u-margin-top-none u-margin-bottom-none">
-          Grid Item
-        </div>
-      </Grid.Item>
-      <Grid.Item>
-        <div className="fpo u-margin-top-none u-margin-bottom-none">
-          Grid Item
-        </div>
-      </Grid.Item>
-    </>
-  ),
+  args: {
+    children: (
+      <>
+        <Grid.Item>
+          <div className="fpo u-margin-top-none u-margin-bottom-none">
+            Grid Item
+          </div>
+        </Grid.Item>
+        <Grid.Item>
+          <div className="fpo u-margin-top-none u-margin-bottom-none">
+            Grid Item
+          </div>
+        </Grid.Item>
+        <Grid.Item>
+          <div className="fpo u-margin-top-none u-margin-bottom-none">
+            Grid Item
+          </div>
+        </Grid.Item>
+        <Grid.Item>
+          <div className="fpo u-margin-top-none u-margin-bottom-none">
+            Grid Item
+          </div>
+        </Grid.Item>
+        <Grid.Item>
+          <div className="fpo u-margin-top-none u-margin-bottom-none">
+            Grid Item
+          </div>
+        </Grid.Item>
+        <Grid.Item>
+          <div className="fpo u-margin-top-none u-margin-bottom-none">
+            Grid Item
+          </div>
+        </Grid.Item>
+      </>
+    ),
+  },
   component: Grid,
   subcomponents: { GridItem },
   parameters: {
