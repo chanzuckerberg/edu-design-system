@@ -28,8 +28,7 @@
 }
 
 .modal__transition--enter {
-  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  transition-duration: 300ms;
+  transition: opacity var(--eds-anim-fade-long) var(--eds-anim-ease);
   @media (prefers-reduced-motion) {
     transition: none;
   }
@@ -41,17 +40,16 @@
   opacity: 1;
 }
 .modal__transition--leave {
-  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  transition-duration: 300ms;
+  transition: opacity var(--eds-anim-fade-long) var(--eds-anim-ease);
   @media (prefers-reduced-motion) {
     transition: none;
   }
 }
 .modal__transition--leaveFrom {
-  opacity: 0;
+  opacity: 1;
 }
 .modal__transition--leaveTo {
-  opacity: 1;
+  opacity: 0;
 }
 
 .content {
