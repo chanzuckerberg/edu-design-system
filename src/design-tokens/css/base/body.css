@@ -1,5 +1,4 @@
 @import '../../mixins.css';
-@import '../../../styles/arimo.css';
 
 body {
   @mixin eds-theme-typography-body-text-md;
