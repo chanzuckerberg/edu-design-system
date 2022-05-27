@@ -4,7 +4,7 @@ import React from 'react';
 
 import { Tile, Props } from './Tile';
 import Heading from '../../components/Heading';
-import TextPassage from '../../components/TextPassage';
+import Text from '../../components/Text';
 import TileBody from '../TileBody';
 import TileHeader from '../TileHeader';
 
@@ -24,18 +24,16 @@ const Template: Story<Props> = (args) => (
       </Heading>
     </TileHeader>
     <TileBody>
-      <TextPassage capLinelength={false}>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam,{' '}
-          <strong>
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-            commodo
-          </strong>{' '}
-          consequat.
-        </p>
-      </TextPassage>
+      <Text capLinelength={false}>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam,{' '}
+        <strong>
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo
+        </strong>{' '}
+        consequat.
+      </Text>
     </TileBody>
   </Tile>
 );

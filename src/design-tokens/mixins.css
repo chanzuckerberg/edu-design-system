@@ -40,11 +40,13 @@
 }
 
 @define-mixin focus {
-  outline: 2px solid var(--eds-theme-color-focus-ring);
+  outline: var(--eds-border-width-sm) solid var(--eds-theme-color-focus-ring);
+  outline-offset: 2px;
 }
 
 @define-mixin focusInverted {
-  outline: 2px solid var(--eds-theme-color-focus-ring-inverted);
+  @mixin focus;
+  outline-color: var(--eds-theme-color-focus-ring-inverted);
 }
 
 @define-mixin focusTransparent {

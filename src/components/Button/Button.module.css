@@ -37,6 +37,10 @@
     border-color: var(--eds-theme-color-border-disabled);
     background-color: transparent;
     color: var(--eds-theme-color-text-disabled);
+
+    svg {
+      color: var(--eds-theme-color-text-disabled);
+    }
   }
 }
 
@@ -62,6 +66,10 @@
     border-color: var(--eds-theme-color-button-icon-brand-border);
     background-color: var(--eds-theme-color-button-icon-background);
     color: var(--eds-theme-color-text-disabled);
+
+    svg {
+      color: var(--eds-theme-color-text-disabled);
+    }
   }
 }
 
