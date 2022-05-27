@@ -72,8 +72,7 @@
 .inline-notification--full-width {
   display: flex;
   border: 0;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+  border-radius: 0;
   padding: calc(var(--eds-size-1) + var(--eds-theme-border-width)); /* 1 */
 }
 .inline-notification--full-width-subtle {

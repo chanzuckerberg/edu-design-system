@@ -102,22 +102,22 @@ exports[`<Text /> Spacing story renders snapshot 1`] = `
 >
   <div>
     <p
-      class="spacing text text--body text--half-spacing"
+      class="text text--body text--half-spacing spacing"
     >
       Spacing Half
     </p>
     <p
-      class="spacing text text--body text--1x-spacing"
+      class="text text--body text--1x-spacing spacing"
     >
       Spacing 1x
     </p>
     <p
-      class="spacing text text--body text--2x-spacing"
+      class="text text--body text--2x-spacing spacing"
     >
       Spacing 2x
     </p>
     <p
-      class="spacing text text--body"
+      class="text text--body spacing"
     >
       Bottom text to show spacing for spacing 2x
     </p>
