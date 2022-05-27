@@ -22,7 +22,7 @@ should be reflected in the TypographyPresets story */
 }
 
 /**
- * Typography Preset 002: Medium, Mobile, & Bold
+ * Typography Preset 002: Light, Medium, Mobile, & Bold
  */
 @define-mixin eds-typography-preset-002 $important {
   font-family: var(--eds-font-family-primary) $important;
@@ -39,6 +39,11 @@ should be reflected in the TypographyPresets story */
 @define-mixin eds-typography-preset-002-bold $important {
   @mixin eds-typography-preset-002 $important;
   font-weight: var(--eds-font-weight-bold) $important;
+}
+
+@define-mixin eds-typography-preset-002-light $important {
+  @mixin eds-typography-preset-002 $important;
+  font-weight: var(--eds-font-weight-light) $important;
 }
 
 /**

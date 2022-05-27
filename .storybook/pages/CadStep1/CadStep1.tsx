@@ -56,7 +56,7 @@ export const CadStep1 = () => (
               Let&apos;s start planning, Amy Frankle.
             </Heading>
           </Grid>
-          <Text className="u-theme-typography-body-text-xl">
+          <Text size="callout">
             The course planner can help you set off on the right track, and
             navigate whatever comes your way.
           </Text>

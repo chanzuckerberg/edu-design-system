@@ -88,6 +88,10 @@
   @mixin eds-typography-preset-009-bold $important;
 }
 
+@define-mixin eds-theme-typography-callout $important {
+  @mixin eds-typography-preset-002-light $important;
+}
+
 /* Old / legacy heading sizes */
 @define-mixin eds-theme-typography-heading-1 $important {
   @mixin eds-typography-preset-003-bold $important;

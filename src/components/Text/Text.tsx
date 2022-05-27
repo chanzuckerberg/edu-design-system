@@ -3,7 +3,15 @@ import React, { forwardRef, ForwardedRef } from 'react';
 import styles from './Text.module.css';
 import LayoutLinelengthContainer from '../LayoutLinelengthContainer';
 
-export type Size = 'body' | 'sm' | 'md' | 'lg' | 'xs' | 'caption' | 'overline';
+export type Size =
+  | 'body'
+  | 'sm'
+  | 'md'
+  | 'lg'
+  | 'xs'
+  | 'caption'
+  | 'overline'
+  | 'callout';
 
 export type Variant =
   | 'error'

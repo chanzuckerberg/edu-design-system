@@ -34,6 +34,9 @@
 .text--overline {
   @mixin eds-theme-typography-kicker;
 }
+.text--callout {
+  @mixin eds-theme-typography-callout;
+}
 
 /**
  * Variant
