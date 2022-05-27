@@ -1,0 +1,121 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    # MODAL
+\*------------------------------------*/
+.modal,
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+}
+
+.overlay {
+  background-color: var(--eds-theme-color-body-background-inverted);
+  opacity: 0.5;
+}
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--eds-size-2);
+
+  /* Set a default z-index on the modal container. This is our smallest z-index token. */
+  z-index: var(--eds-z-index-100);
+}
+
+.modal__transition--enter {
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-duration: 300ms;
+  @media (prefers-reduced-motion) {
+    transition: none;
+  }
+}
+.modal__transition--enterFrom {
+  opacity: 0;
+}
+.modal__transition--enterTo {
+  opacity: 1;
+}
+.modal__transition--leave {
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-duration: 300ms;
+  @media (prefers-reduced-motion) {
+    transition: none;
+  }
+}
+.modal__transition--leaveFrom {
+  opacity: 0;
+}
+.modal__transition--leaveTo {
+  opacity: 1;
+}
+
+.content {
+  position: relative;
+  max-height: 100%;
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--eds-border-radius-lg);
+  background-color: var(--eds-theme-color-background-neutral-default);
+  /* This transparent border is for Window High Contrast Mode, which removes all
+    background colors but makes borders 100% opacity black. Without this, the
+    modal would have no clear boundary. */
+  border: var(--eds-theme-form-border-width) transparent
+    var(--eds-theme-color-background-neutral-default);
+  /* We use flexbox to handle height and width automatically. 
+    The body can scroll when content goes beyond the component,
+    while the header/footer remains static. */
+  display: flex;
+  flex-direction: column;
+}
+
+.small {
+  max-width: 20rem;
+}
+
+.medium {
+  max-width: 42rem;
+}
+
+.large {
+  max-width: 64rem;
+}
+
+.header {
+  border-bottom: var(--eds-theme-border-width) solid
+    var(--eds-theme-color-border-neutral-subtle);
+
+  padding: var(--eds-size-4) var(--eds-size-4) var(--eds-size-3);
+  width: 100%;
+  background-color: var(--eds-theme-color-background-neutral-default);
+}
+
+.closeButton {
+  position: absolute;
+  top: var(--eds-size-2-and-half);
+  right: var(--eds-size-1);
+
+  z-index: 1;
+
+  color: var(--eds-theme-color-icon-neutral-subtle);
+}
+
+.body {
+  /* Margin needed to make sure that the focus outline is fully visible */
+  margin: 0.125rem;
+  overflow-y: auto;
+  padding: 1.75rem;
+}
+
+.footer {
+  border-top: var(--eds-theme-border-width) solid
+    var(--eds-theme-color-border-neutral-subtle);
+
+  padding: var(--eds-size-4);
+  width: 100%;
+  background-color: var(--eds-theme-color-background-neutral-default);
+}

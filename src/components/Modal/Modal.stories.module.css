@@ -1,0 +1,23 @@
+.footer__button-group {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.default__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.default__background {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: var(--eds-theme-color-body-background-inverted);
+  opacity: 0.5;
+}
+
+.long-text__last-paragraph {
+  margin-bottom: 0;
+}

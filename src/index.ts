@@ -39,6 +39,11 @@ export { default as LayoutLinelengthContainer } from './components/LayoutLinelen
 export { default as LayoutSection } from './components/LayoutSection';
 export { default as Link } from './components/Link';
 export { default as LinkList } from './components/LinkList';
+// export { default as Modal } from './components/Modal';
+export { default as ModalBody } from './components/ModalBody';
+export { default as ModalFooter } from './components/ModalFooter';
+export { default as ModalHeader } from './components/ModalHeader';
+export { default as ModalTitle } from './components/ModalTitle';
 export { default as NumberIcon } from './components/NumberIcon';
 export { default as OverflowList } from './components/OverflowList';
 export { default as OverflowListItem } from './components/OverflowListItem';
