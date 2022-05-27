@@ -24,14 +24,14 @@
   border-style: solid;
   border-radius: var(--eds-theme-border-radius);
   border-width: var(--eds-theme-border-width);
-  border-color: var(--border-light-color);
+  border-color: var(--messaging-border-color);
 
   /* Vertical-specific styles */
   padding: var(--eds-size-4);
   text-align: center;
   justify-items: center;
   border-top-width: var(--eds-border-width-lg);
-  border-top-color: var(--border-dark-color); /* 3 */
+  border-top-color: var(--messaging-icon-color); /* 3 */
 }
 
 /**
@@ -40,7 +40,7 @@
  *    vertical orientation)
  */
 .banner__icon {
-  color: var(--border-dark-color); /* 1 */
+  color: var(--messaging-icon-color); /* 1 */
   --icon-size-default: var(--eds-size-5);
 }
 
@@ -97,8 +97,8 @@
 
     border-top-width: var(--eds-theme-border-width); /* 3 */
     border-left-width: var(--eds-border-width-lg); /* 3 */
-    border-top-color: var(--border-light-color); /* 3 */
-    border-left-color: var(--border-dark-color); /* 3 */
+    border-top-color: var(--messaging-border-color); /* 3 */
+    border-left-color: var(--messaging-icon-color); /* 3 */
 
     .banner__icon {
       --icon-size-default: var(--eds-size-3); /* 4 */
@@ -175,6 +175,6 @@
  */
 .banner--flat {
   box-shadow: none; /* 1 */
-  --border-light-color: transparent; /* 2 */
+  --messaging-border-color: transparent; /* 2 */
   margin-bottom: 0; /* 3 */
 }
