@@ -72,6 +72,18 @@ exports[`<Text /> BodyXSmall story renders snapshot 1`] = `
 </div>
 `;
 
+exports[`<Text /> Callout story renders snapshot 1`] = `
+<div
+  style="margin: 0.25rem;"
+>
+  <p
+    class="text text--callout"
+  >
+    Callout
+  </p>
+</div>
+`;
+
 exports[`<Text /> Caption story renders snapshot 1`] = `
 <div
   style="margin: 0.25rem;"

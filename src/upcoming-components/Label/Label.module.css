@@ -40,3 +40,10 @@
   top: 3px;
   margin-left: var(--eds-size-1);
 }
+
+/**
+ * Visually hides the label element but is kept for screen reading accessibility.
+ */
+.u-is-vishidden {
+  @mixin visuallyHide;
+}

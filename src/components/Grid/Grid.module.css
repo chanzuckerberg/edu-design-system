@@ -168,3 +168,29 @@
     }
   }
 }
+
+/**
+ * 1-2-1up grid pattern
+ * yields a Grid whose GridItems are stacked on small screens, transforms to a 2-across pattern, and
+ * ultimately transforms back to a 1-across pattern
+ */
+.grid--1-2-1up {
+  @media all and (min-width: $eds-bp-md) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1.5rem; /* TODO */
+  }
+
+  @supports (display: grid) {
+    display: grid;
+    margin: 0;
+
+    @media all and (min-width: $eds-bp-md) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media all and (min-width: $eds-bp-xl) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

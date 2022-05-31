@@ -32,4 +32,5 @@
   margin-right: var(--eds-size-1);
 
   flex-grow: 1; /* 1 */
+  min-width: var(--eds-size-2);
 }

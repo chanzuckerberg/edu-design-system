@@ -30,6 +30,10 @@ export interface Props {
    */
   headingSize?: HeadingSize;
   /**
+   * Controls the layout of the PageHeader, specifically the placement of the left and right slots.
+   */
+  orientation?: '2up';
+  /**
    * Page heading title text
    */
   title?: string;
@@ -52,17 +56,19 @@ export const PageHeader = ({
   align,
   className,
   description,
+  headingSize = 'headline-lg',
   kicker,
+  orientation,
+  right,
   title,
   titleAfter,
-  right,
-  headingSize = 'headline-lg',
   ...other
 }: Props) => {
   const componentClassName = clsx(
     styles['page-header'],
     className,
     align === 'center' && styles['page-header--center'],
+    orientation === '2up' && styles['page-header--2up'],
   );
 
   return (
