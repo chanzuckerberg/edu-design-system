@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
-import styles from '../Modal/Modal.module.css';
+import styles from './ModalHeader.module.css';
 
 type Props = {
   /**
@@ -11,12 +11,23 @@ type Props = {
    * CSS class names that can be appended to the component.
    */
   className?: string;
+  variant?: 'brand';
 };
 
-export const ModalHeader = (props: Props) => {
+export const ModalHeader = ({
+  children,
+  className,
+  variant,
+  ...other
+}: Props) => {
+  const componentClassName = clsx(
+    styles['modal-header'],
+    variant === 'brand' && styles['modal-header--brand'],
+    className,
+  );
   return (
-    <div className={clsx(styles['header'], props.className)}>
-      {props.children}
+    <div className={componentClassName} {...other}>
+      {children}
     </div>
   );
 };

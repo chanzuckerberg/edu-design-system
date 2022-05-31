@@ -1,0 +1,10 @@
+.modal-header {
+  padding: var(--eds-size-4) var(--eds-size-4) var(--eds-size-3);
+  width: 100%;
+  background-color: var(--eds-theme-color-background-neutral-default);
+}
+
+.modal-header--brand {
+  color: var(--eds-theme-color-text-neutral-default-inverse);
+  background-color: var(--eds-color-brand-500);
+}

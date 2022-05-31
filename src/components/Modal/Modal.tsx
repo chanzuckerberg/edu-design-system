@@ -3,8 +3,9 @@ import clsx from 'clsx';
 import React, { MutableRefObject, ReactNode } from 'react';
 import styles from './Modal.module.css';
 import { ModalBody, ModalFooter, ModalHeader, ModalTitle } from '../../';
-import Button from '../Button';
 import Icon from '../Icon';
+
+type Variant = 'brand' | undefined;
 
 type ModalContentProps = {
   /**
@@ -52,6 +53,10 @@ type ModalContentProps = {
    * Contents of the modal.
    */
   children: ReactNode;
+  /**
+   * Color variants of the modal.
+   */
+  variant?: Variant;
 };
 
 type ModalProps = ModalContentProps & {
@@ -60,6 +65,8 @@ type ModalProps = ModalContentProps & {
    */
   open: boolean;
 };
+
+const VariantContext = React.createContext<Variant>(undefined);
 
 function childrenHaveModalTitle(children?: ReactNode): boolean {
   const childrenArray = React.Children.toArray(children);
@@ -92,36 +99,40 @@ export const ModalContent = (props: ModalContentProps) => {
     hideCloseButton = false,
     onClose,
     size = 'medium',
+    variant,
   } = props;
 
-  return (
-    <div
-      className={clsx(
-        styles['content'],
-        className,
-        size === 'small' && styles['small'],
-        size === 'medium' && styles['medium'],
-        size === 'large' && styles['large'],
-      )}
-    >
-      {!hideCloseButton && (
-        <Button
-          className={styles['closeButton']}
-          onClick={onClose}
-          status="neutral"
-          variant="icon"
-        >
-          <Icon
-            name="close"
-            purpose="informative"
-            size="2.5rem"
-            title="close modal"
-          />
-        </Button>
-      )}
+  const componentClassName = clsx(
+    styles['content'],
+    size === 'small' && styles['small'],
+    size === 'medium' && styles['medium'],
+    size === 'large' && styles['large'],
+    className,
+  );
 
-      {children}
-    </div>
+  const closeButtonIconClassName = clsx(
+    styles['close-button__icon'],
+    variant === 'brand' && styles['close-button__icon--brand'],
+  );
+
+  return (
+    <VariantContext.Provider value={variant}>
+      <div className={componentClassName}>
+        {!hideCloseButton && (
+          <button className={styles['close-button']} onClick={onClose}>
+            <Icon
+              className={closeButtonIconClassName}
+              name="close"
+              purpose="informative"
+              size="1.5rem"
+              title="close modal"
+            />
+          </button>
+        )}
+
+        {children}
+      </div>
+    </VariantContext.Provider>
   );
 };
 
@@ -183,7 +194,14 @@ export const Modal = (props: ModalProps) => {
   );
 };
 
-Modal.Header = ModalHeader;
+type ModalHeaderArgs = React.ComponentProps<typeof ModalHeader>;
+
+const VariantModalHeader = (args: ModalHeaderArgs) => {
+  const variant = React.useContext(VariantContext);
+  return <ModalHeader {...args} variant={variant} />;
+};
+
+Modal.Header = VariantModalHeader;
 Modal.Title = ModalTitle;
 Modal.Body = ModalBody;
 Modal.Footer = ModalFooter;

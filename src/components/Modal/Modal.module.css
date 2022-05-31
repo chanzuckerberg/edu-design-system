@@ -25,6 +25,14 @@
 
   /* Set a default z-index on the modal container. This is our smallest z-index token. */
   z-index: var(--eds-z-index-100);
+
+  max-width: 22.5rem;
+  @media all and (min-width: $eds-bp-md) {
+    max-width: 42rem;
+  }
+  @media all and (min-width: $eds-bp-xl) {
+    max-width: 64rem;
+  }
 }
 
 .modal__transition--enter {
@@ -72,7 +80,7 @@
 }
 
 .small {
-  max-width: 20rem;
+  max-width: 22.5rem;
 }
 
 .medium {
@@ -83,23 +91,24 @@
   max-width: 64rem;
 }
 
-.header {
-  border-bottom: var(--eds-theme-border-width) solid
-    var(--eds-theme-color-border-neutral-subtle);
+.close-button {
+  @mixin reset;
+  border: 0;
+  background-color: transparent;
 
-  padding: var(--eds-size-4) var(--eds-size-4) var(--eds-size-3);
-  width: 100%;
-  background-color: var(--eds-theme-color-background-neutral-default);
-}
-
-.closeButton {
   position: absolute;
-  top: var(--eds-size-2-and-half);
+  top: var(--eds-size-1);
   right: var(--eds-size-1);
 
   z-index: 1;
+}
 
+.close-button__icon {
   color: var(--eds-theme-color-icon-neutral-subtle);
+}
+
+.close-button__icon--brand {
+  color: var(--eds-theme-color-icon-neutral-default-inverse);
 }
 
 .body {

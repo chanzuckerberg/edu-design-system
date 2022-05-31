@@ -25,6 +25,7 @@ type TemplateArgs = {
   children: ReactNode;
   hideCloseButton?: boolean;
   size: 'small' | 'medium' | 'large';
+  variant?: 'brand';
 };
 
 const getChildren = (
@@ -84,6 +85,14 @@ export const Default: StoryObj<TemplateArgs> = {
   parameters: {
     // This story shows the modal content by default, for visual regression testing purposes.
     chromatic: { disableSnapshot: false },
+  },
+};
+
+export const Brand: StoryObj<TemplateArgs> = {
+  ...Default,
+  args: {
+    ...Default.args,
+    variant: 'brand',
   },
 };
 
