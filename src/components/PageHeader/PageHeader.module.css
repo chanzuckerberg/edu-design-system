@@ -5,7 +5,7 @@
 \*------------------------------------*/
 
 /**
- * 1) Container that consists of of a page header title and description
+ * 1) Container that consists of a page header title and description
  */
 .page-header {
   display: flex;
@@ -16,6 +16,19 @@
   @media all and (min-width: $eds-bp-md) {
     flex-direction: row;
     align-items: center;
+  }
+}
+
+/**
+ * Orientation variant that limits the left and right slots.
+ * Useful in aligning content with the 2up grid layouts.
+ */
+.page-header--2up {
+  @media all and (min-width: $eds-bp-md) {
+    .page-header__left,
+    .page-header__right {
+      max-width: 50%;
+    }
   }
 }
 

@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.22.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.21.1...v0.22.0) (2022-05-27)
+
+
+### Features
+
+* **heading:** use new heading tokens in old heading size props ([c776b38](https://github.com/chanzuckerberg/edu-design-system/commit/c776b3836f772b2286ea986e82110afbbcdfe291))
+* use Graphik as primary font family ([e8b30d5](https://github.com/chanzuckerberg/edu-design-system/commit/e8b30d5ef72008144952dfa813ea6c5045ac1451))
+
 ### [0.21.1](https://github.com/chanzuckerberg/edu-design-system/compare/v0.21.0...v0.21.1) (2022-05-26)
 
 ### Features

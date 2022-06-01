@@ -95,6 +95,9 @@
 .u-theme-typography-tag {
   @mixin eds-typography-preset-009-bold;
 }
+.u-theme-typography-callout {
+  @mixin eds-typography-preset-002-light;
+}
 
 /**
  * Legacy utility classes that aren't a part of the new

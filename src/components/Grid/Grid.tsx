@@ -27,7 +27,14 @@ export interface Props {
    * - **1-2-4up** yields a Grid whose GridItems are stacked on small screens, transforms to a 2-across pattern, and ultimately transforms to a 4-across pattern
    * - **side-by-side** yields a Grid whose GridItems are always displayed side-by-side
    */
-  variant?: '2up' | 'side-by-side' | '1-3up' | '3up' | '4up' | '1-2-4up';
+  variant?:
+    | '2up'
+    | 'side-by-side'
+    | '1-3up'
+    | '3up'
+    | '4up'
+    | '1-2-4up'
+    | '1-2-1up';
 }
 
 /**
@@ -50,12 +57,7 @@ export const Grid = ({
   const componentClassName = clsx(
     styles['grid'],
     className,
-    variant === '2up' && styles['grid--2up'],
-    variant === 'side-by-side' && styles['grid--side-by-side'],
-    variant === '1-3up' && styles['grid--1-3up'],
-    variant === '3up' && styles['grid--3up'],
-    variant === '4up' && styles['grid--4up'],
-    variant === '1-2-4up' && styles['grid--1-2-4up'],
+    variant && styles[`grid--${variant}`],
     gap === 'sm' && styles['grid--gap-sm'],
   );
 

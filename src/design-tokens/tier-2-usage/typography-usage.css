@@ -37,7 +37,7 @@
 }
 
 @define-mixin eds-theme-typography-body-text-lg $important {
-  @mixin eds-typography-preset-004 $important;
+  @mixin eds-typography-preset-004-light $important;
 }
 
 @define-mixin eds-theme-typography-body-text-md $important {
@@ -45,7 +45,7 @@
 }
 
 @define-mixin eds-theme-typography-body-text-sm $important {
-  @mixin eds-typography-preset-006 $important;
+  @mixin eds-typography-preset-006-light $important;
 }
 
 @define-mixin eds-theme-typography-body-text-xs $important {
@@ -53,7 +53,7 @@
 }
 
 @define-mixin eds-theme-typography-caption-text-lg $important {
-  @mixin eds-typography-preset-006 $important;
+  @mixin eds-typography-preset-006-light $important;
 }
 
 @define-mixin eds-theme-typography-caption-text-md $important {
@@ -65,52 +65,60 @@
 }
 
 @define-mixin eds-theme-typography-button-label $important {
-  @mixin eds-typography-preset-006-bold $important;
+  @mixin eds-typography-preset-006 $important;
 }
 
 @define-mixin eds-theme-typography-form-label $important {
-  @mixin eds-typography-preset-006-bold $important;
+  @mixin eds-typography-preset-006 $important;
 }
 
 @define-mixin eds-theme-typography-form-input $important {
-  @mixin eds-typography-preset-005 $important;
+  @mixin eds-typography-preset-005-light $important;
 }
 
 @define-mixin eds-theme-typography-kicker $important {
-  @mixin eds-typography-preset-011-bold $important;
+  @mixin eds-typography-preset-011 $important;
 }
 
 @define-mixin eds-theme-typography-kicker-sm $important {
-  @mixin eds-typography-preset-012-bold $important;
+  @mixin eds-typography-preset-012 $important;
 }
 
 @define-mixin eds-theme-typography-tag $important {
-  @mixin eds-typography-preset-009-bold $important;
+  @mixin eds-typography-preset-009 $important;
+}
+
+@define-mixin eds-theme-typography-callout $important {
+  @mixin eds-typography-preset-002-light $important;
 }
 
 /* Old / legacy heading sizes */
 @define-mixin eds-theme-typography-heading-1 $important {
-  @mixin eds-typography-preset-003-bold $important;
+  @mixin eds-theme-typography-headline-lg $important;
 }
 
 @define-mixin eds-theme-typography-heading-2 $important {
-  @mixin eds-typography-preset-004-bold $important;
+  @mixin eds-theme-typography-headline-md $important;
 }
 
 @define-mixin eds-theme-typography-heading-3 $important {
-  @mixin eds-typography-preset-005-bold $important;
+  @mixin eds-theme-typography-headline-sm $important;
 }
 
 @define-mixin eds-theme-typography-heading-4 $important {
-  @mixin eds-typography-preset-006-bold $important;
+  @mixin eds-theme-typography-title-md $important;
 }
 
 @define-mixin eds-theme-typography-heading-5 $important {
-  @mixin eds-typography-preset-008-bold $important;
+  @mixin eds-theme-typography-title-sm $important;
 }
 
 @define-mixin eds-theme-typography-heading-6 $important {
-  @mixin eds-typography-preset-008-bold $important;
+  @mixin eds-theme-typography-body-text-sm-bold $important;
+}
+
+@define-mixin eds-theme-typography-heading-7 $important {
+  @mixin eds-theme-typography-body-text-xs-bold $important;
 }
 
 /**
@@ -134,5 +142,5 @@
 }
 
 @define-mixin eds-theme-typography-body-text-xs-bold $important {
-  @mixin eds-typography-preset-007-bold $important;
+  @mixin eds-typography-preset-008-bold $important;
 }

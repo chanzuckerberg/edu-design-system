@@ -89,6 +89,13 @@ export const Overline: StoryObj<Args> = {
   },
 };
 
+export const Callout: StoryObj<Args> = {
+  args: {
+    size: 'callout',
+    children: 'Callout',
+  },
+};
+
 export const Spacing: StoryObj<Args> = {
   render: () => (
     <div>

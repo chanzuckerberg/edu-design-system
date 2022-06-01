@@ -1,6 +1,5 @@
 @import '../../design-tokens/mixins.css';
 
-
 /*------------------------------------*\
     #CHECKBOX LABEL
 \*------------------------------------*/
@@ -22,7 +21,7 @@
 }
 
 .label--md {
-  @mixin eds-theme-typography-label-md;
+  @mixin eds-theme-typography-label-md-subtle;
   line-height: var(--checkbox-svg-size); /* 1 */
 }
 
@@ -32,4 +31,3 @@
 .label--disabled {
   color: var(--eds-theme-color-text-disabled);
 }
-  

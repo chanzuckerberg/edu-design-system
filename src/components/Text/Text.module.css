@@ -34,6 +34,9 @@
 .text--overline {
   @mixin eds-theme-typography-kicker;
 }
+.text--callout {
+  @mixin eds-theme-typography-callout;
+}
 
 /**
  * Variant
@@ -48,15 +51,13 @@
   color: var(--eds-theme-color-text-brand-primary);
 }
 .text--info {
-  /* TODO(brand-tokens): remove */
   color: var(--eds-color-info-700);
 }
 .text--inherit {
   color: inherit;
 }
 .text--neutral {
-  /* TODO(brand-tokens): update to text-neutral-default when new colors land */
-  color: var(--eds-theme-color-text-neutral-subtle);
+  color: var(--eds-theme-color-text-neutral-default);
 }
 .text--success {
   color: var(--eds-theme-color-text-utility-success);
