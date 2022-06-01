@@ -49,7 +49,7 @@ class IconGrid extends React.Component {
                     deprecated
                   </div>
                 )}
-                {name === 'error' && (
+                {(name === 'error' || name === 'error-inverted') && (
                   <div className="icon-grid__deprecation">
                     <Icon
                       className="icon-grid__deprecation-icon"
