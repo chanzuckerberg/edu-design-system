@@ -82,6 +82,10 @@ export interface Props {
    */
   maxLength?: number;
   /**
+   * Minimum value allowed for the input, if type is 'number'. When the input value matches this minimum, the minus button becomes disabled.
+   */
+  min?: number;
+  /**
    * HTML name attribute for the input
    */
   name?: string;

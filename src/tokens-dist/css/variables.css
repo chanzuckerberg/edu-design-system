@@ -14,111 +14,78 @@
   --eds-border-radius-xl: 20px;
   --eds-border-radius-round: 50%;
   --eds-border-radius-full: 9999px;
-  --eds-color-brand-100: #F7F1FF; /* old token alias, remove with next major release */
-  --eds-color-brand-200: #C3C0FE; /* old token alias, remove with next major release */
-  --eds-color-brand-300: #A7A2FE; /* old token alias, remove with next major release */
-  --eds-color-brand-400: #928CFF; /* old token alias, remove with next major release */
-  --eds-color-brand-500: #766FFD; /* old token alias, remove with next major release */
-  --eds-color-brand-600: #574EFF; /* old token alias, remove with next major release */
-  --eds-color-brand-700: #433BDE; /* old token alias, remove with next major release */
-  --eds-color-brand-800: #312B9E; /* old token alias, remove with next major release */
-  --eds-color-brand-grape-100: #F7F1FF;
-  --eds-color-brand-grape-200: #C3C0FE;
-  --eds-color-brand-grape-300: #A7A2FE;
-  --eds-color-brand-grape-400: #928CFF;
-  --eds-color-brand-grape-500: #766FFD;
-  --eds-color-brand-grape-600: #574EFF;
-  --eds-color-brand-grape-700: #433BDE;
-  --eds-color-brand-grape-800: #312B9E;
-  --eds-color-neutral-100: #F3F3F3;
-  --eds-color-neutral-200: #E8E8E9;
-  --eds-color-neutral-300: #CAD1D8;
-  --eds-color-neutral-400: #838C95;
-  --eds-color-neutral-500: #58636F;
-  --eds-color-neutral-600: #3C444C;
-  --eds-color-neutral-700: #21272D;
+  --eds-color-brand-grape-100: #F0F0FC;
+  --eds-color-brand-grape-200: #E0E0F9;
+  --eds-color-brand-grape-300: #C4C1F3;
+  --eds-color-brand-grape-400: #A6A3EE;
+  --eds-color-brand-grape-500: #8984E8;
+  --eds-color-brand-grape-600: #6B65E2;
+  --eds-color-brand-grape-700: #5751D2;
+  --eds-color-brand-grape-800: #3E42B1;
+  --eds-color-neutral-100: #F4F6F8;
+  --eds-color-neutral-200: #E7E8EA;
+  --eds-color-neutral-300: #C0C4C8;
+  --eds-color-neutral-400: #999EA3;
+  --eds-color-neutral-500: #878C90;
+  --eds-color-neutral-600: #5D6369;
+  --eds-color-neutral-700: #383C43;
   --eds-color-neutral-800: #21272D;
   --eds-color-neutral-white: #FFFFFF;
-  --eds-color-neutral-black: #21272D;
+  --eds-color-neutral-black: #161B1F;
   --eds-color-other-mint-100: #ECFFF5;
   --eds-color-other-mint-200: #B7E9CE;
   --eds-color-other-mint-300: #8FDCB3;
   --eds-color-other-mint-400: #59C88C;
-  --eds-color-other-mint-500: #00A66A;
-  --eds-color-other-mint-600: #008756;
-  --eds-color-other-mint-700: #007349;
+  --eds-color-other-mint-500: #00A56A;
+  --eds-color-other-mint-600: #008656;
+  --eds-color-other-mint-700: #007249;
   --eds-color-other-mint-800: #005939;
   --eds-color-other-yellow-100: #FDF1D0;
   --eds-color-other-yellow-200: #FFEBB3;
   --eds-color-other-yellow-300: #FFDD80;
   --eds-color-other-yellow-400: #F7BE2D;
-  --eds-color-other-yellow-500: #F79D2D;
+  --eds-color-other-yellow-500: #D18400;
   --eds-color-other-yellow-600: #BF7300;
   --eds-color-other-yellow-700: #9E5B03;
   --eds-color-other-yellow-800: #854C03;
-  --eds-color-other-lemon: #FCFF00;
+  --eds-color-other-lemon: #F5FF8F;
+  --eds-color-other-eraser: #F3DCE2;
   --eds-color-other-orange-100: #FFF1E9;
-  --eds-color-other-orange-200: #FFCBA6;
-  --eds-color-other-orange-300: #FFB077;
+  --eds-color-other-orange-200: #FFCBA5;
+  --eds-color-other-orange-300: #FFAF76;
   --eds-color-other-orange-400: #F6924A;
-  --eds-color-other-orange-500: #E06C00;
+  --eds-color-other-orange-500: #E06B00;
   --eds-color-other-orange-600: #C64600;
   --eds-color-other-orange-700: #AC3400;
-  --eds-color-other-orange-800: #852800;
-  --eds-color-other-ruby-100: #FFEBF0;
-  --eds-color-other-ruby-200: #FFCCD8;
+  --eds-color-other-orange-800: #842800;
+  --eds-color-other-ruby-100: #FFF0F4;
+  --eds-color-other-ruby-200: #FFCBD7;
   --eds-color-other-ruby-300: #FB90B0;
   --eds-color-other-ruby-400: #F76C96;
-  --eds-color-other-ruby-500: #F1497C;
+  --eds-color-other-ruby-500: #F1497B;
   --eds-color-other-ruby-600: #D41E52;
   --eds-color-other-ruby-700: #BD0044;
   --eds-color-other-ruby-800: #8F0134;
-  --eds-color-white: #FFFFFF; /* old token alias, remove with next major release */
-  --eds-color-black: #21272D; /* old token alias, remove with next major release */
-  --eds-color-alert-100: #FFEBF0; /* old token alias, remove with next major release */
-  --eds-color-alert-200: #FFCCD8; /* old token alias, remove with next major release */
-  --eds-color-alert-300: #FB90B0; /* old token alias, remove with next major release */
-  --eds-color-alert-400: #F76C96; /* old token alias, remove with next major release */
-  --eds-color-alert-500: #F1497C; /* old token alias, remove with next major release */
-  --eds-color-alert-600: #D41E52; /* old token alias, remove with next major release */
-  --eds-color-alert-700: #BD0044; /* old token alias, remove with next major release */
-  --eds-color-alert-800: #8F0134; /* old token alias, remove with next major release */
-  --eds-color-success-100: #ECFFF5; /* old token alias, remove with next major release */
-  --eds-color-success-200: #B7E9CE; /* old token alias, remove with next major release */
-  --eds-color-success-300: #8FDCB3; /* old token alias, remove with next major release */
-  --eds-color-success-400: #59C88C; /* old token alias, remove with next major release */
-  --eds-color-success-500: #00A66A; /* old token alias, remove with next major release */
-  --eds-color-success-600: #008756; /* old token alias, remove with next major release */
-  --eds-color-success-700: #007349; /* old token alias, remove with next major release */
-  --eds-color-success-800: #005939; /* old token alias, remove with next major release */
-  --eds-color-info-100: #F1F9FF;
-  --eds-color-info-200: #B0D5FF;
-  --eds-color-info-300: #7FB9FD;
-  --eds-color-info-400: #5CA7FF;
-  --eds-color-info-500: #328EFB;
-  --eds-color-info-600: #1977CD;
-  --eds-color-info-700: #0563B8;
-  --eds-color-warning-100: #FFF1E9; /* old token alias, remove with next major release */
-  --eds-color-warning-200: #FFCBA6; /* old token alias, remove with next major release */
-  --eds-color-warning-300: #FFB077; /* old token alias, remove with next major release */
-  --eds-color-warning-400: #F6924A; /* old token alias, remove with next major release */
-  --eds-color-warning-500: #E06C00; /* old token alias, remove with next major release */
-  --eds-color-warning-600: #C64600; /* old token alias, remove with next major release */
-  --eds-color-warning-700: #AC3400; /* old token alias, remove with next major release */
-  --eds-color-warning-800: #852800; /* old token alias, remove with next major release */
-  --eds-color-yellow-100: #FDF1D0; /* old token alias, remove with next major release */
-  --eds-color-yellow-500: #F79D2D; /* old token alias, remove with next major release */
   --eds-color-highlight-100: #FF9FEC;
   --eds-color-highlight-200: #FFBEAA;
-  --eds-color-highlight-300: #FCFF00; /* old token alias, remove with next major release */
+  --eds-color-highlight-300: #FCFF00;
   --eds-color-highlight-400: #9DFFA4;
   --eds-color-highlight-500: #00F1FF;
   --eds-color-highlight-600: #CFC9FF;
+  --eds-color-info-100: #F1F9FF; /* legacy token, will be removed */
+  --eds-color-info-200: #B0D5FF; /* legacy token, will be removed */
+  --eds-color-info-300: #7FB9FD; /* legacy token, will be removed */
+  --eds-color-info-400: #5CA7FF; /* legacy token, will be removed */
+  --eds-color-info-500: #328EFB; /* legacy token, will be removed */
+  --eds-color-info-600: #1977CD; /* legacy token, will be removed */
+  --eds-color-info-700: #0563B8; /* legacy token, will be removed */
   --eds-l-max-width: 71.25rem;
   --eds-l-sidebar-width: 13.5rem;
   --eds-l-linelength-width: 36rem;
-  --eds-box-shadow-sm: 0px 1px 2px 1px rgba(0, 0, 0, 0.2);
-  --eds-box-shadow-md: 0px 0px 0px 1px var(--eds-color-neutral-200), 0px 2px 3px rgba(0, 0, 0, 0.02), 0px 4px 8px rgba(0, 0, 0, 0.08);
+  --eds-box-shadow-sm: 0px 0px 1px rgba(0, 0, 0, 0.25), 0px 2px 1px rgba(0, 0, 0, 0.05);
+  --eds-box-shadow-md: 0px 0px 2px rgba(0, 0, 0, 0.2), 0px 2px 8px rgba(0, 0, 0, 0.08);
+  --eds-box-shadow-lg: 0px 4px 12px rgba(0, 0, 0, 0.16);
+  --eds-box-shadow-xl: 0px 6px 20px rgba(0, 0, 0, 0.2);
   --eds-size-1: 0.5rem;
   --eds-size-2: 1rem;
   --eds-size-3: 1.5rem;
@@ -129,8 +96,10 @@
   --eds-size-8: 4rem;
   --eds-size-9: 4.5rem;
   --eds-size-10: 5rem;
+  --eds-size-12: 6rem;
   --eds-size-base-unit: 0.5rem;
   --eds-size-half: 0.25rem;
+  --eds-size-quarter: 0.125rem;
   --eds-size-1-and-half: 0.75rem;
   --eds-size-2-and-half: 1.25rem;
   --eds-font-family-primary: 'Graphik', sans-serif;
@@ -159,40 +128,40 @@
   --eds-theme-border-radius: 4px;
   --eds-theme-border-width: 1px;
   --eds-theme-color-background-neutral-default: #FFFFFF;
-  --eds-theme-color-background-neutral-default-hover: #F3F3F3;
-  --eds-theme-color-background-neutral-subtle: #F3F3F3;
-  --eds-theme-color-background-neutral-subtle-hover: #E8E8E9;
-  --eds-theme-color-background-neutral-medium: #E8E8E9;
-  --eds-theme-color-background-neutral-medium-hover: #CAD1D8;
-  --eds-theme-color-background-brand-primary-default: #F7F1FF;
-  --eds-theme-color-background-brand-primary-strong: #574EFF;
-  --eds-theme-color-background-brand-primary-strong-hover: #312B9E;
+  --eds-theme-color-background-neutral-default-hover: #F4F6F8;
+  --eds-theme-color-background-neutral-subtle: #F4F6F8;
+  --eds-theme-color-background-neutral-subtle-hover: #E7E8EA;
+  --eds-theme-color-background-neutral-medium: #E7E8EA;
+  --eds-theme-color-background-neutral-medium-hover: #C0C4C8;
+  --eds-theme-color-background-brand-primary-default: #F0F0FC;
+  --eds-theme-color-background-brand-primary-strong: #6B65E2;
+  --eds-theme-color-background-brand-primary-strong-hover: #3E42B1;
   --eds-theme-color-background-utility-success: #ECFFF5;
   --eds-theme-color-background-utility-warning: #FFF1E9;
-  --eds-theme-color-background-utility-error: #FFEBF0;
-  --eds-theme-color-background-grade-complete-default: #008756;
+  --eds-theme-color-background-utility-error: #FFF0F4;
+  --eds-theme-color-background-grade-complete-default: #008656;
   --eds-theme-color-background-grade-complete-subtle: #ECFFF5;
   --eds-theme-color-background-grade-revise-default: #F7BE2D;
   --eds-theme-color-background-grade-revise-subtle: #FDF1D0;
   --eds-theme-color-background-grade-stop-default: #D41E52;
-  --eds-theme-color-background-grade-stop-subtle: #FFEBF0;
-  --eds-theme-color-background-disabled: #CAD1D8;
-  --eds-theme-color-border-neutral-subtle: #E8E8E9;
-  --eds-theme-color-border-neutral-subtle-hover: #CAD1D8;
-  --eds-theme-color-border-neutral-default: #CAD1D8;
-  --eds-theme-color-border-neutral-default-hover: #838C95;
-  --eds-theme-color-border-neutral-strong: #838C95;
-  --eds-theme-color-border-neutral-strong-hover: #58636F;
-  --eds-theme-color-border-brand-primary-subtle: #C3C0FE;
-  --eds-theme-color-border-brand-primary: #A7A2FE;
-  --eds-theme-color-border-brand-primary-strong: #928CFF;
+  --eds-theme-color-background-grade-stop-subtle: #FFF0F4;
+  --eds-theme-color-background-disabled: #C0C4C8;
+  --eds-theme-color-border-neutral-subtle: #E7E8EA;
+  --eds-theme-color-border-neutral-subtle-hover: #C0C4C8;
+  --eds-theme-color-border-neutral-default: #C0C4C8;
+  --eds-theme-color-border-neutral-default-hover: #999EA3;
+  --eds-theme-color-border-neutral-strong: #999EA3;
+  --eds-theme-color-border-neutral-strong-hover: #878C90;
+  --eds-theme-color-border-brand-primary-subtle: #E0E0F9;
+  --eds-theme-color-border-brand-primary: #C4C1F3;
+  --eds-theme-color-border-brand-primary-strong: #A6A3EE;
   --eds-theme-color-border-utility-success-subtle: #B7E9CE;
   --eds-theme-color-border-utility-success-default: #8FDCB3;
   --eds-theme-color-border-utility-success-strong: #59C88C;
-  --eds-theme-color-border-utility-warning-subtle: #FFCBA6;
-  --eds-theme-color-border-utility-warning-default: #FFB077;
+  --eds-theme-color-border-utility-warning-subtle: #FFCBA5;
+  --eds-theme-color-border-utility-warning-default: #FFAF76;
   --eds-theme-color-border-utility-warning-strong: #F6924A;
-  --eds-theme-color-border-utility-error-subtle: #FFCCD8;
+  --eds-theme-color-border-utility-error-subtle: #FFCBD7;
   --eds-theme-color-border-utility-error-default: #FB90B0;
   --eds-theme-color-border-utility-error-strong: #F76C96;
   --eds-theme-color-border-grade-complete: #8FDCB3;
@@ -200,58 +169,58 @@
   --eds-theme-color-border-grade-revise-default: #FFDD80;
   --eds-theme-color-border-grade-revise-strong: #F7BE2D;
   --eds-theme-color-border-grade-stop: #FB90B0;
-  --eds-theme-color-border-disabled: #F3F3F3;
-  --eds-theme-color-icon-neutral-default: #3C444C;
+  --eds-theme-color-border-disabled: #F4F6F8;
+  --eds-theme-color-icon-neutral-default: #5D6369;
   --eds-theme-color-icon-neutral-default-inverse: #FFFFFF;
-  --eds-theme-color-icon-neutral-default-hover: #21272D;
-  --eds-theme-color-icon-neutral-strong: #21272D;
+  --eds-theme-color-icon-neutral-default-hover: #383C43;
+  --eds-theme-color-icon-neutral-strong: #383C43;
   --eds-theme-color-icon-neutral-strong-hover: #21272D;
-  --eds-theme-color-icon-neutral-subtle: #58636F;
-  --eds-theme-color-icon-neutral-subtle-hover: #3C444C;
-  --eds-theme-color-icon-link-default: #766FFD;
-  --eds-theme-color-icon-link-default-hover: #574EFF;
-  --eds-theme-color-icon-brand-primary: #766FFD;
-  --eds-theme-color-icon-brand-primary-hover: #574EFF;
-  --eds-theme-color-icon-utility-success: #00A66A;
-  --eds-theme-color-icon-utility-success-hover: #008756;
-  --eds-theme-color-icon-utility-warning: #E06C00;
+  --eds-theme-color-icon-neutral-subtle: #878C90;
+  --eds-theme-color-icon-neutral-subtle-hover: #5D6369;
+  --eds-theme-color-icon-link-default: #8984E8;
+  --eds-theme-color-icon-link-default-hover: #6B65E2;
+  --eds-theme-color-icon-brand-primary: #8984E8;
+  --eds-theme-color-icon-brand-primary-hover: #6B65E2;
+  --eds-theme-color-icon-utility-success: #00A56A;
+  --eds-theme-color-icon-utility-success-hover: #008656;
+  --eds-theme-color-icon-utility-warning: #E06B00;
   --eds-theme-color-icon-utility-warning-hover: #C64600;
-  --eds-theme-color-icon-utility-error: #F1497C;
+  --eds-theme-color-icon-utility-error: #F1497B;
   --eds-theme-color-icon-utility-error-hover: #D41E52;
-  --eds-theme-color-icon-grade-complete: #00A66A;
-  --eds-theme-color-icon-grade-complete-hover: #00A66A;
+  --eds-theme-color-icon-grade-complete: #00A56A;
+  --eds-theme-color-icon-grade-complete-hover: #00A56A;
   --eds-theme-color-icon-grade-revise: #21272D;
-  --eds-theme-color-icon-grade-revise-hover: #21272D;
-  --eds-theme-color-icon-grade-stop: #F1497C;
-  --eds-theme-color-icon-grade-stop-hover: #F1497C;
-  --eds-theme-color-icon-disabled: #CAD1D8;
-  --eds-theme-color-text-neutral-default: #21272D;
+  --eds-theme-color-icon-grade-revise-hover: #161B1F;
+  --eds-theme-color-icon-grade-stop: #F1497B;
+  --eds-theme-color-icon-grade-stop-hover: #D41E52;
+  --eds-theme-color-icon-disabled: #C0C4C8;
+  --eds-theme-color-text-neutral-default: #383C43;
   --eds-theme-color-text-neutral-default-inverse: #FFFFFF;
   --eds-theme-color-text-neutral-strong: #21272D;
-  --eds-theme-color-text-neutral-subtle: #3C444C;
+  --eds-theme-color-text-neutral-subtle: #5D6369;
   --eds-theme-color-text-link-default: #21272D;
-  --eds-theme-color-text-link-default-hover: #21272D;
-  --eds-theme-color-text-link-strong: #433BDE;
-  --eds-theme-color-text-link-strong-hover: #312B9E;
-  --eds-theme-color-text-utility-success: #007349;
+  --eds-theme-color-text-link-default-hover: #161B1F;
+  --eds-theme-color-text-link-strong: #5751D2;
+  --eds-theme-color-text-link-strong-hover: #3E42B1;
+  --eds-theme-color-text-utility-success: #007249;
   --eds-theme-color-text-utility-warning: #AC3400;
   --eds-theme-color-text-utility-error: #BD0044;
-  --eds-theme-color-text-grade-complete: #007349;
+  --eds-theme-color-text-grade-complete: #007249;
   --eds-theme-color-text-grade-revise: #21272D;
   --eds-theme-color-text-grade-stop: #BD0044;
-  --eds-theme-color-text-disabled: #CAD1D8;
-  --eds-theme-color-text-brand-primary: #433BDE;
+  --eds-theme-color-text-disabled: #C0C4C8;
+  --eds-theme-color-text-brand-primary: #5751D2;
   --eds-theme-color-transparent-black-0: rgba(0, 0, 0, 0);
   --eds-theme-color-transparent-black-30: rgba(0, 0, 0, .3);
   --eds-theme-color-transparent-white-0: rgba(255, 255, 255, 0);
-  --eds-theme-color-body-background: #F3F3F3;
-  --eds-theme-color-body-background-inverted: #21272D;
-  --eds-theme-color-button-primary-brand-background: #574EFF;
-  --eds-theme-color-button-primary-brand-background-hover: #433BDE;
-  --eds-theme-color-button-primary-brand-background-active: #312B9E;
-  --eds-theme-color-button-primary-brand-border: #574EFF;
-  --eds-theme-color-button-primary-brand-border-hover: #433BDE;
-  --eds-theme-color-button-primary-brand-border-active: #312B9E;
+  --eds-theme-color-body-background: #F4F6F8;
+  --eds-theme-color-body-background-inverted: #383C43;
+  --eds-theme-color-button-primary-brand-background: #6B65E2;
+  --eds-theme-color-button-primary-brand-background-hover: #5751D2;
+  --eds-theme-color-button-primary-brand-background-active: #3E42B1;
+  --eds-theme-color-button-primary-brand-border: #6B65E2;
+  --eds-theme-color-button-primary-brand-border-hover: #5751D2;
+  --eds-theme-color-button-primary-brand-border-active: #3E42B1;
   --eds-theme-color-button-primary-brand-text: #FFFFFF;
   --eds-theme-color-button-primary-brand-text-hover: #FFFFFF;
   --eds-theme-color-button-primary-brand-text-active: #FFFFFF;
@@ -265,47 +234,47 @@
   --eds-theme-color-button-primary-error-text-hover: #FFFFFF;
   --eds-theme-color-button-primary-error-text-active: #FFFFFF;
   --eds-theme-color-button-secondary-brand-background: rgba(0, 0, 0, 0);
-  --eds-theme-color-button-secondary-brand-background-hover: #433BDE;
-  --eds-theme-color-button-secondary-brand-background-active: #312B9E;
-  --eds-theme-color-button-secondary-brand-border: #574EFF;
-  --eds-theme-color-button-secondary-brand-border-hover: #433BDE;
-  --eds-theme-color-button-secondary-brand-border-active: #312B9E;
-  --eds-theme-color-button-secondary-brand-text: #433BDE;
+  --eds-theme-color-button-secondary-brand-background-hover: #5751D2;
+  --eds-theme-color-button-secondary-brand-background-active: #3E42B1;
+  --eds-theme-color-button-secondary-brand-border: #6B65E2;
+  --eds-theme-color-button-secondary-brand-border-hover: #5751D2;
+  --eds-theme-color-button-secondary-brand-border-active: #3E42B1;
+  --eds-theme-color-button-secondary-brand-text: #5751D2;
   --eds-theme-color-button-secondary-brand-text-hover: #FFFFFF;
   --eds-theme-color-button-secondary-brand-text-active: #FFFFFF;
-  --eds-theme-color-button-secondary-brand-icon: #574EFF;
+  --eds-theme-color-button-secondary-brand-icon: #6B65E2;
   --eds-theme-color-button-secondary-brand-icon-hover: #FFFFFF;
   --eds-theme-color-button-secondary-brand-icon-active: #FFFFFF;
   --eds-theme-color-button-secondary-neutral-background: rgba(0, 0, 0, 0);
-  --eds-theme-color-button-secondary-neutral-background-hover: #3C444C;
-  --eds-theme-color-button-secondary-neutral-background-active: #21272D;
-  --eds-theme-color-button-secondary-neutral-border: #3C444C;
-  --eds-theme-color-button-secondary-neutral-border-hover: #3C444C;
-  --eds-theme-color-button-secondary-neutral-border-active: #21272D;
-  --eds-theme-color-button-secondary-neutral-text: #3C444C;
+  --eds-theme-color-button-secondary-neutral-background-hover: #5D6369;
+  --eds-theme-color-button-secondary-neutral-background-active: #383C43;
+  --eds-theme-color-button-secondary-neutral-border: #5D6369;
+  --eds-theme-color-button-secondary-neutral-border-hover: #5D6369;
+  --eds-theme-color-button-secondary-neutral-border-active: #383C43;
+  --eds-theme-color-button-secondary-neutral-text: #5D6369;
   --eds-theme-color-button-secondary-neutral-text-hover: #FFFFFF;
   --eds-theme-color-button-secondary-neutral-text-active: #FFFFFF;
-  --eds-theme-color-button-secondary-neutral-icon: #838C95;
+  --eds-theme-color-button-secondary-neutral-icon: #999EA3;
   --eds-theme-color-button-secondary-neutral-icon-hover: #FFFFFF;
   --eds-theme-color-button-secondary-neutral-icon-active: #FFFFFF;
   --eds-theme-color-button-secondary-success-background: rgba(0, 0, 0, 0);
-  --eds-theme-color-button-secondary-success-background-hover: #007349;
+  --eds-theme-color-button-secondary-success-background-hover: #007249;
   --eds-theme-color-button-secondary-success-background-active: #005939;
-  --eds-theme-color-button-secondary-success-border: #008756;
-  --eds-theme-color-button-secondary-success-border-hover: #007349;
+  --eds-theme-color-button-secondary-success-border: #008656;
+  --eds-theme-color-button-secondary-success-border-hover: #007249;
   --eds-theme-color-button-secondary-success-border-active: #005939;
-  --eds-theme-color-button-secondary-success-text: #007349;
+  --eds-theme-color-button-secondary-success-text: #007249;
   --eds-theme-color-button-secondary-success-text-hover: #FFFFFF;
   --eds-theme-color-button-secondary-success-text-active: #FFFFFF;
-  --eds-theme-color-button-secondary-success-icon: #008756;
+  --eds-theme-color-button-secondary-success-icon: #008656;
   --eds-theme-color-button-secondary-success-icon-hover: #FFFFFF;
   --eds-theme-color-button-secondary-success-icon-active: #FFFFFF;
   --eds-theme-color-button-secondary-warning-background: rgba(0, 0, 0, 0);
   --eds-theme-color-button-secondary-warning-background-hover: #AC3400;
-  --eds-theme-color-button-secondary-warning-background-active: #852800;
+  --eds-theme-color-button-secondary-warning-background-active: #842800;
   --eds-theme-color-button-secondary-warning-border: #C64600;
   --eds-theme-color-button-secondary-warning-border-hover: #AC3400;
-  --eds-theme-color-button-secondary-warning-border-active: #852800;
+  --eds-theme-color-button-secondary-warning-border-active: #842800;
   --eds-theme-color-button-secondary-warning-text: #AC3400;
   --eds-theme-color-button-secondary-warning-text-hover: #FFFFFF;
   --eds-theme-color-button-secondary-warning-text-active: #FFFFFF;
@@ -324,41 +293,41 @@
   --eds-theme-color-button-secondary-error-icon: #D41E52;
   --eds-theme-color-button-secondary-error-icon-hover: #FFFFFF;
   --eds-theme-color-button-secondary-error-icon-active: #FFFFFF;
-  --eds-theme-color-button-icon-brand: #574EFF;
-  --eds-theme-color-button-icon-brand-hover: #574EFF;
+  --eds-theme-color-button-icon-brand: #6B65E2;
+  --eds-theme-color-button-icon-brand-hover: #6B65E2;
   --eds-theme-color-button-icon-brand-active: #FFFFFF;
   --eds-theme-color-button-icon-brand-background: rgba(0, 0, 0, 0);
-  --eds-theme-color-button-icon-brand-background-hover: #C3C0FE;
-  --eds-theme-color-button-icon-brand-background-active: #433BDE;
+  --eds-theme-color-button-icon-brand-background-hover: #E0E0F9;
+  --eds-theme-color-button-icon-brand-background-active: #5751D2;
   --eds-theme-color-button-icon-brand-border: rgba(0, 0, 0, 0);
-  --eds-theme-color-button-icon-brand-border-hover: #C3C0FE;
-  --eds-theme-color-button-icon-brand-border-active: #433BDE;
-  --eds-theme-color-button-icon-brand-text: #433BDE;
-  --eds-theme-color-button-icon-brand-text-hover: #433BDE;
+  --eds-theme-color-button-icon-brand-border-hover: #E0E0F9;
+  --eds-theme-color-button-icon-brand-border-active: #5751D2;
+  --eds-theme-color-button-icon-brand-text: #5751D2;
+  --eds-theme-color-button-icon-brand-text-hover: #5751D2;
   --eds-theme-color-button-icon-brand-text-active: #FFFFFF;
-  --eds-theme-color-button-icon-neutral: #3C444C;
-  --eds-theme-color-button-icon-neutral-hover: #3C444C;
+  --eds-theme-color-button-icon-neutral: #5D6369;
+  --eds-theme-color-button-icon-neutral-hover: #5D6369;
   --eds-theme-color-button-icon-neutral-active: #FFFFFF;
   --eds-theme-color-button-icon-neutral-background: rgba(0, 0, 0, 0);
-  --eds-theme-color-button-icon-neutral-background-hover: #E8E8E9;
-  --eds-theme-color-button-icon-neutral-background-active: #3C444C;
+  --eds-theme-color-button-icon-neutral-background-hover: #E7E8EA;
+  --eds-theme-color-button-icon-neutral-background-active: #5D6369;
   --eds-theme-color-button-icon-neutral-border: rgba(0, 0, 0, 0);
-  --eds-theme-color-button-icon-neutral-border-hover: #E8E8E9;
-  --eds-theme-color-button-icon-neutral-border-active: #3C444C;
-  --eds-theme-color-button-icon-neutral-text: #3C444C;
-  --eds-theme-color-button-icon-neutral-text-hover: #3C444C;
+  --eds-theme-color-button-icon-neutral-border-hover: #E7E8EA;
+  --eds-theme-color-button-icon-neutral-border-active: #5D6369;
+  --eds-theme-color-button-icon-neutral-text: #5D6369;
+  --eds-theme-color-button-icon-neutral-text-hover: #5D6369;
   --eds-theme-color-button-icon-neutral-text-active: #FFFFFF;
-  --eds-theme-color-button-icon-success: #008756;
-  --eds-theme-color-button-icon-success-hover: #008756;
+  --eds-theme-color-button-icon-success: #008656;
+  --eds-theme-color-button-icon-success-hover: #008656;
   --eds-theme-color-button-icon-success-active: #FFFFFF;
   --eds-theme-color-button-icon-success-background: rgba(0, 0, 0, 0);
   --eds-theme-color-button-icon-success-background-hover: #B7E9CE;
-  --eds-theme-color-button-icon-success-background-active: #007349;
+  --eds-theme-color-button-icon-success-background-active: #007249;
   --eds-theme-color-button-icon-success-border: rgba(0, 0, 0, 0);
   --eds-theme-color-button-icon-success-border-hover: #B7E9CE;
-  --eds-theme-color-button-icon-success-border-active: #007349;
-  --eds-theme-color-button-icon-success-text: #007349;
-  --eds-theme-color-button-icon-success-text-hover: #007349;
+  --eds-theme-color-button-icon-success-border-active: #007249;
+  --eds-theme-color-button-icon-success-text: #007249;
+  --eds-theme-color-button-icon-success-text-hover: #007249;
   --eds-theme-color-button-icon-success-text-active: #FFFFFF;
   --eds-theme-color-button-icon-warning: #C64600;
   --eds-theme-color-button-icon-warning-hover: #C64600;
@@ -376,39 +345,39 @@
   --eds-theme-color-button-icon-error-hover: #D41E52;
   --eds-theme-color-button-icon-error-active: #FFFFFF;
   --eds-theme-color-button-icon-error-background: rgba(0, 0, 0, 0);
-  --eds-theme-color-button-icon-error-background-hover: #FFCCD8;
+  --eds-theme-color-button-icon-error-background-hover: #FFCBD7;
   --eds-theme-color-button-icon-error-background-active: #BD0044;
   --eds-theme-color-button-icon-error-border: rgba(0, 0, 0, 0);
-  --eds-theme-color-button-icon-error-border-hover: #FFCCD8;
+  --eds-theme-color-button-icon-error-border-hover: #FFCBD7;
   --eds-theme-color-button-icon-error-border-active: #BD0044;
   --eds-theme-color-button-icon-error-text: #BD0044;
   --eds-theme-color-button-icon-error-text-hover: #BD0044;
   --eds-theme-color-button-icon-error-text-active: #FFFFFF;
-  --eds-theme-color-button-link-brand: #433BDE;
-  --eds-theme-color-button-link-brand-hover: #312B9E;
-  --eds-theme-color-button-link-brand-active: #312B9E;
-  --eds-theme-color-button-link-neutral: #3C444C;
-  --eds-theme-color-button-link-neutral-hover: #21272D;
-  --eds-theme-color-button-link-neutral-active: #21272D;
-  --eds-theme-color-button-link-success: #007349;
+  --eds-theme-color-button-link-brand: #5751D2;
+  --eds-theme-color-button-link-brand-hover: #3E42B1;
+  --eds-theme-color-button-link-brand-active: #3E42B1;
+  --eds-theme-color-button-link-neutral: #5D6369;
+  --eds-theme-color-button-link-neutral-hover: #383C43;
+  --eds-theme-color-button-link-neutral-active: #383C43;
+  --eds-theme-color-button-link-success: #007249;
   --eds-theme-color-button-link-success-hover: #005939;
   --eds-theme-color-button-link-success-active: #005939;
   --eds-theme-color-button-link-warning: #AC3400;
-  --eds-theme-color-button-link-warning-hover: #852800;
-  --eds-theme-color-button-link-warning-active: #852800;
+  --eds-theme-color-button-link-warning-hover: #842800;
+  --eds-theme-color-button-link-warning-active: #842800;
   --eds-theme-color-button-link-error: #BD0044;
   --eds-theme-color-button-link-error-hover: #8F0134;
   --eds-theme-color-button-link-error-active: #8F0134;
-  --eds-theme-color-focus-ring: #574EFF;
+  --eds-theme-color-focus-ring: #6B65E2;
   --eds-theme-color-focus-ring-inverted: #FFFFFF;
-  --eds-theme-color-form-border: #CAD1D8;
-  --eds-theme-color-form-border-hover: #838C95;
+  --eds-theme-color-form-border: #C0C4C8;
+  --eds-theme-color-form-border-hover: #999EA3;
   --eds-theme-color-form-background: #FFFFFF;
-  --eds-theme-color-form-background-hover: #F3F3F3;
-  --eds-theme-color-form-label: #21272D;
+  --eds-theme-color-form-background-hover: #F4F6F8;
+  --eds-theme-color-form-label: #383C43;
   --eds-theme-color-text-highlight-foreground: #21272D;
-  --eds-theme-color-text-highlight-background: #FCFF00;
-  --eds-theme-box-shadow: 0px 0px 0px 1px var(--eds-color-neutral-200), 0px 2px 3px rgba(0, 0, 0, 0.02), 0px 4px 8px rgba(0, 0, 0, 0.08);
+  --eds-theme-color-text-highlight-background: #F5FF8F;
+  --eds-theme-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2), 0px 2px 8px rgba(0, 0, 0, 0.08);
   --eds-theme-form-border-width: 1px;
   --eds-theme-form-border-radius: 4px;
   --legacy-color-gray-50: #F8F9FC;

@@ -4,7 +4,7 @@ exports[`<Icon /> CustomColor story renders snapshot 1`] = `
 <svg
   aria-hidden="true"
   class="icon"
-  fill="#928CFF"
+  fill="#A6A3EE"
   height="2em"
   style="--icon-size: 2em;"
   width="2em"
