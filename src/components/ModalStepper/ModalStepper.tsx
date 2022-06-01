@@ -47,7 +47,13 @@ export const ModalStepper = ({
     const name = isActivestep ? 'circle' : 'empty-circle';
     const title = isActivestep ? `Active Step ${i + 1}` : `Step ${i + 1}`;
     stepIcons.push(
-      <Icon name={name} purpose="informative" size="0.5rem" title={title} />,
+      <Icon
+        key={i}
+        name={name}
+        purpose="informative"
+        size="0.5rem"
+        title={title}
+      />,
     );
   }
   return (

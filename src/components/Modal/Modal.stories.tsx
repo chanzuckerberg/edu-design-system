@@ -276,6 +276,10 @@ const InteractiveModalStepperComponent = () => {
     </div>
   );
 };
+
+/**
+ * 1) For interactive purposes only, low value in snapping or checking for visual regression since they should be covered in the other stories.
+ */
 export const InteractiveModalStepper: StoryObj<ModalStepperArgs> = {
   ...ModalStepper,
   render: () => <InteractiveModalStepperComponent />,
