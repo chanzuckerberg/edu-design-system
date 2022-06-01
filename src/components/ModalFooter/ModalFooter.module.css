@@ -3,13 +3,11 @@
 \*------------------------------------*/
 
 .modal-footer {
-  border-top: var(--eds-theme-border-width) solid
-    var(--eds-theme-color-border-neutral-subtle);
-
   padding-top: var(--eds-size-2-and-half);
   padding-bottom: var(--eds-size-2-and-half);
   padding-left: var(--modal-horizontal-padding, var(--eds-size-3));
   padding-right: var(--eds-size-3);
+
   width: 100%;
   background-color: var(--eds-theme-color-background-neutral-default);
 }
