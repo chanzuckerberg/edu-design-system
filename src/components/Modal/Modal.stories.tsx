@@ -1,4 +1,5 @@
 import type { StoryObj } from '@storybook/react';
+import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import { useState } from 'react';
 import Modal, { ModalContent } from './Modal';
@@ -21,6 +22,7 @@ type InteractiveArgs = Omit<Args, 'onClose' | 'open'>;
 const getChildren = (
   inDialogComponent = true,
   bodyContent: ReactNode = 'Modal content.',
+  showStepper = false,
 ) => (
   <>
     <Modal.Header>
@@ -32,7 +34,10 @@ const getChildren = (
       )}
     </Modal.Header>
     <Modal.Body>{bodyContent}</Modal.Body>
-    <Modal.Footer>
+    <Modal.Footer
+      className={clsx(showStepper && styles['footer--with-stepper'])}
+    >
+      {showStepper && <Modal.Stepper activeStep={2} totalSteps={5} />}
       <ButtonGroup className={styles['footer__button-group']}>
         <Button
           onClick={
@@ -83,6 +88,18 @@ export const Brand: StoryObj<Args> = {
   args: {
     ...Default.args,
     variant: 'brand',
+  },
+};
+
+export const WithStepper: StoryObj<Args> = {
+  ...Default,
+  args: {
+    ...Default.args,
+    children: getChildren(
+      false,
+      'Modal body content. This is an example use case with the stepper in the footer.',
+      true,
+    ),
   },
 };
 
@@ -210,4 +227,56 @@ export const WithoutHeaderAndFooter: StoryObj<InteractiveArgs> = {
       <Modal.Body>{reallyLongText}</Modal.Body>
     </InteractiveExample>
   ),
+};
+
+type ModalStepperArgs = React.ComponentProps<typeof Modal.Stepper>;
+
+export const ModalStepper: StoryObj<ModalStepperArgs> = {
+  args: {
+    activeStep: 1,
+    totalSteps: 3,
+  },
+  render: (args) => <Modal.Stepper {...args} />,
+  decorators: [
+    (Story) => (
+      <div
+        style={{
+          margin: '0.5rem',
+        }}
+      >
+        <Story />
+      </div>
+    ),
+  ],
+};
+
+const InteractiveModalStepperComponent = () => {
+  const [activeStep, setActiveStep] = useState(1);
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+      <Modal.Stepper activeStep={activeStep} totalSteps={5} />
+      <ButtonGroup>
+        {activeStep > 1 && (
+          <Button
+            onClick={() => setActiveStep(activeStep - 1)}
+            status="neutral"
+          >
+            Back
+          </Button>
+        )}
+        {activeStep < 5 && (
+          <Button
+            onClick={() => setActiveStep(activeStep + 1)}
+            variant="primary"
+          >
+            Next
+          </Button>
+        )}
+      </ButtonGroup>
+    </div>
+  );
+};
+export const InteractiveModalStepper: StoryObj<ModalStepperArgs> = {
+  ...ModalStepper,
+  render: () => <InteractiveModalStepperComponent />,
 };

@@ -21,3 +21,9 @@
 .long-text__last-paragraph {
   margin-bottom: 0;
 }
+
+.footer--with-stepper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

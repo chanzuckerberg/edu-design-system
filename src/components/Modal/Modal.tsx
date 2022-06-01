@@ -12,6 +12,7 @@ import {
   ModalHeader,
   Props as ModalHeaderProps,
 } from '../ModalHeader/ModalHeader';
+import { ModalStepper } from '../ModalStepper/ModalStepper';
 import { ModalTitle } from '../ModalTitle/ModalTitle';
 
 type Variant = 'brand' | undefined;
@@ -220,5 +221,6 @@ Modal.Header = VariantModalHeader;
 Modal.Title = ModalTitle;
 Modal.Body = ModalBody;
 Modal.Footer = StickyModalFooter;
+Modal.Stepper = ModalStepper;
 
 export default Modal;
