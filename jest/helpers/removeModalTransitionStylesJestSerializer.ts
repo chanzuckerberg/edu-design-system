@@ -9,10 +9,8 @@
 expect.addSnapshotSerializer({
   test: (value) => {
     return (
-      value ===
-        'modal ease-out duration-300 motion-reduce:transition-none opacity-0' ||
-      value ===
-        'modal ease-in duration-300 motion-reduce:transition-none opacity-100'
+      value === 'modal modal__transition--enter modal__transition--enterFrom' ||
+      value === 'modal modal__transition--leave modal__transition--leaveFrom'
     );
   },
   print() {
