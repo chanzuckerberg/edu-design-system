@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
-import styles from '../Modal/Modal.module.css';
+import styles from './ModalBody.module.css';
 
-export type Props = {
+type Props = {
   /**
    * Child node(s) that can be nested inside component. `ModalHeader`, `ModalBody`, and `ModelFooter` are the only permissible children of the Modal
    */
@@ -17,7 +17,7 @@ export const ModalBody = (props: Props) => {
   return (
     // This element is tabbable to allow keyboard users to scroll long content.
     // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
-    <div className={clsx(styles['body'], props.className)} tabIndex={0}>
+    <div className={clsx(styles['modal-body'], props.className)}>
       {props.children}
     </div>
   );

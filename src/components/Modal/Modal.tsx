@@ -63,12 +63,6 @@ type ModalContentProps = {
    */
   onClose: () => void;
   /**
-   * The size of the modal.
-   *
-   * This controls the maximum width of the modal, but not the height.
-   */
-  size?: 'large' | 'medium' | 'small';
-  /**
    * Color variants of the modal.
    */
   variant?: Variant;
@@ -119,31 +113,27 @@ export const ModalContent = (props: ModalContentProps) => {
     hideCloseButton = false,
     isScrollable,
     onClose,
-    size,
     variant,
   } = props;
 
   const componentClassName = clsx(
-    styles['content'],
-    size === 'small' && styles['small'],
-    size === 'medium' && styles['medium'],
-    size === 'large' && styles['large'],
-    isScrollable && styles['content--scrollable'],
+    styles['modal__content'],
+    isScrollable && styles['modal__content--scrollable'],
     className,
   );
 
-  const closeButtonIconClassName = clsx(
-    styles['close-button__icon'],
-    variant === 'brand' && styles['close-button__icon--brand'],
+  const closeIconClassName = clsx(
+    styles['modal__close-icon'],
+    variant === 'brand' && styles['modal__close-icon--brand'],
   );
 
   return (
-    <ModalContext.Provider value={{ variant, isScrollable }}>
+    <ModalContext.Provider value={{ isScrollable, variant }}>
       <div className={componentClassName}>
         {!hideCloseButton && (
-          <button className={styles['close-button']} onClick={onClose}>
+          <button className={styles['modal__close-button']} onClick={onClose}>
             <Icon
-              className={closeButtonIconClassName}
+              className={closeIconClassName}
               name="close"
               purpose="informative"
               size="1.5rem"
@@ -208,7 +198,7 @@ export const Modal = (props: ModalProps) => {
         // Passing onClose to the Dialog allows it to close the modal when the ESC key is triggered.
         onClose={onClose}
       >
-        <Dialog.Overlay className={styles['overlay']} />
+        <Dialog.Overlay className={styles['modal__overlay']} />
 
         <ModalContent onClose={onClose} {...rest} />
       </Dialog>
@@ -218,12 +208,12 @@ export const Modal = (props: ModalProps) => {
 
 const VariantModalHeader = (props: ModalHeaderProps) => {
   const { variant } = React.useContext(ModalContext);
-  return <ModalHeader {...props} variant={variant} />;
+  return <ModalHeader variant={variant} {...props} />;
 };
 
 const StickyModalFooter = (props: ModalFooterProps) => {
   const { isScrollable } = React.useContext(ModalContext);
-  return <ModalFooter {...props} isSticky={isScrollable} />;
+  return <ModalFooter isSticky={isScrollable} {...props} />;
 };
 
 Modal.Header = VariantModalHeader;

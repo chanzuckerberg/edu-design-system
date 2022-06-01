@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
-import styles from '../Modal/Modal.module.css';
+import styles from './ModalFooter.module.css';
 
 export type Props = {
   /**
@@ -28,8 +28,8 @@ export const ModalFooter = ({
   return (
     <div
       className={clsx(
-        styles['footer'],
-        isSticky && styles['footer--sticky'],
+        styles['modal-footer'],
+        isSticky && styles['modal-footer--sticky'],
         className,
       )}
       {...other}

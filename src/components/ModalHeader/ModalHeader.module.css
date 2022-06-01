@@ -1,11 +1,14 @@
 .modal-header {
-  padding: var(--eds-size-4) var(--eds-size-4) var(--eds-size-3);
   width: 100%;
   background-color: var(--eds-theme-color-background-neutral-default);
+  padding-top: var(--eds-size-7);
+  padding-left: var(--modal-horizontal-padding, var(--eds-size-4));
+  padding-right: var(--modal-horizontal-padding, var(--eds-size-4));
 }
 
 .modal-header--brand {
   height: 19.75rem;
+
   color: var(--eds-theme-color-text-neutral-default-inverse);
-  background-color: var(--eds-color-brand-500);
+  background-color: var(--eds-color-brand-grape-500);
 }

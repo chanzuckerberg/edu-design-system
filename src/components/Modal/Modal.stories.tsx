@@ -86,30 +86,6 @@ export const Brand: StoryObj<Args> = {
   },
 };
 
-export const Large: StoryObj<Args> = {
-  ...Default,
-  args: {
-    ...Default.args,
-    size: 'large',
-  },
-};
-
-export const Medium: StoryObj<Args> = {
-  ...Default,
-  args: {
-    ...Default.args,
-    size: 'medium',
-  },
-};
-
-export const Small: StoryObj<Args> = {
-  ...Default,
-  args: {
-    ...Default.args,
-    size: 'small',
-  },
-};
-
 function InteractiveExample(args: InteractiveArgs) {
   const [open, setOpen] = useState(false);
 
@@ -211,7 +187,21 @@ export const WithLongText: StoryObj<InteractiveArgs> = {
   ),
 };
 
+export const WithLongTextScrollable: StoryObj<InteractiveArgs> = {
+  args: {
+    isScrollable: true,
+  },
+  render: (args) => (
+    <InteractiveExample {...args}>
+      {getChildren(true, reallyLongText)}
+    </InteractiveExample>
+  ),
+};
+
 export const WithoutHeaderAndFooter: StoryObj<InteractiveArgs> = {
+  args: {
+    isScrollable: true,
+  },
   render: (args) => (
     <InteractiveExample
       {...args}

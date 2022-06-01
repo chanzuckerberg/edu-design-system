@@ -2,20 +2,24 @@ import { Dialog } from '@headlessui/react';
 import React, { ReactNode } from 'react';
 import Heading from '../Heading';
 
-export interface Props {
+type Props = {
+  /**
+   * Text for the modal title.
+   */
+  children: ReactNode;
   /**
    * CSS class names that can be appended to the component.
    */
   className?: string;
-}
-
-export const ModalTitle = (props: {
-  children: ReactNode;
-  className?: string;
-}) => {
-  return (
-    <Dialog.Title as={Heading} className={props.className} size="h2">
-      {props.children}
-    </Dialog.Title>
-  );
 };
+
+export const ModalTitle = ({ children, className, ...other }: Props) => (
+  <Dialog.Title
+    as={Heading}
+    className={className}
+    size="headline-lg"
+    {...other}
+  >
+    {children}
+  </Dialog.Title>
+);
