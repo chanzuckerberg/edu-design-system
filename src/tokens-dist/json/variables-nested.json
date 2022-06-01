@@ -119,8 +119,10 @@
       "linelength-width": "36rem"
     },
     "box-shadow": {
-      "sm": "0px 1px 2px 1px rgba(0, 0, 0, 0.2)",
-      "md": "0px 0px 0px 1px var(--eds-color-neutral-200), 0px 2px 3px rgba(0, 0, 0, 0.02), 0px 4px 8px rgba(0, 0, 0, 0.08)"
+      "sm": "0px 0px 1px rgba(0, 0, 0, 0.25), 0px 2px 1px rgba(0, 0, 0, 0.05)",
+      "md": "0px 0px 2px rgba(0, 0, 0, 0.2), 0px 2px 8px rgba(0, 0, 0, 0.08)",
+      "lg": "0px 4px 12px rgba(0, 0, 0, 0.16)",
+      "xl": "0px 6px 20px rgba(0, 0, 0, 0.2)"
     },
     "size": {
       "1": "0.5rem",
@@ -680,7 +682,7 @@
           "background": "#F5FF8F"
         }
       },
-      "box-shadow": "0px 0px 0px 1px var(--eds-color-neutral-200), 0px 2px 3px rgba(0, 0, 0, 0.02), 0px 4px 8px rgba(0, 0, 0, 0.08)",
+      "box-shadow": "0px 0px 2px rgba(0, 0, 0, 0.2), 0px 2px 8px rgba(0, 0, 0, 0.08)",
       "form": {
         "border": {
           "width": "1px",

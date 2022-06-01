@@ -120,7 +120,9 @@
     },
     "box-shadow": {
       "sm": "var(--eds-box-shadow-sm)",
-      "md": "var(--eds-box-shadow-md)"
+      "md": "var(--eds-box-shadow-md)",
+      "lg": "var(--eds-box-shadow-lg)",
+      "xl": "var(--eds-box-shadow-xl)"
     },
     "size": {
       "1": "var(--eds-size-1)",

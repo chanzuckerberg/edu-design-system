@@ -81,8 +81,10 @@ $eds-color-highlight-600: #CFC9FF !default; // legacy token, will be removed
 $eds-l-max-width: 71.25rem !default;
 $eds-l-sidebar-width: 13.5rem !default;
 $eds-l-linelength-width: 36rem !default;
-$eds-box-shadow-sm: 0px 1px 2px 1px rgba(0, 0, 0, 0.2) !default;
-$eds-box-shadow-md: 0px 0px 0px 1px var(--eds-color-neutral-200), 0px 2px 3px rgba(0, 0, 0, 0.02), 0px 4px 8px rgba(0, 0, 0, 0.08) !default;
+$eds-box-shadow-sm: 0px 0px 1px rgba(0, 0, 0, 0.25), 0px 2px 1px rgba(0, 0, 0, 0.05) !default;
+$eds-box-shadow-md: 0px 0px 2px rgba(0, 0, 0, 0.2), 0px 2px 8px rgba(0, 0, 0, 0.08) !default;
+$eds-box-shadow-lg: 0px 4px 12px rgba(0, 0, 0, 0.16) !default;
+$eds-box-shadow-xl: 0px 6px 20px rgba(0, 0, 0, 0.2) !default;
 $eds-size-1: 0.5rem !default;
 $eds-size-2: 1rem !default;
 $eds-size-3: 1.5rem !default;
@@ -374,7 +376,7 @@ $eds-theme-color-form-background-hover: #F4F6F8 !default;
 $eds-theme-color-form-label: #383C43 !default;
 $eds-theme-color-text-highlight-foreground: #21272D !default;
 $eds-theme-color-text-highlight-background: #F5FF8F !default;
-$eds-theme-box-shadow: 0px 0px 0px 1px var(--eds-color-neutral-200), 0px 2px 3px rgba(0, 0, 0, 0.02), 0px 4px 8px rgba(0, 0, 0, 0.08) !default;
+$eds-theme-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2), 0px 2px 8px rgba(0, 0, 0, 0.08) !default;
 $eds-theme-form-border-width: 1px !default;
 $eds-theme-form-border-radius: 4px !default;
 $legacy-color-gray-50: #F8F9FC !default;
@@ -528,7 +530,9 @@ $tokens: (
     ),
     'box-shadow': (
       'sm': $eds-box-shadow-sm,
-      'md': $eds-box-shadow-md
+      'md': $eds-box-shadow-md,
+      'lg': $eds-box-shadow-lg,
+      'xl': $eds-box-shadow-xl
     ),
     'size': (
       '1': $eds-size-1,
