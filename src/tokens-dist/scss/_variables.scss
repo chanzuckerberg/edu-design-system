@@ -49,6 +49,7 @@ $eds-color-other-yellow-600: #BF7300 !default;
 $eds-color-other-yellow-700: #9E5B03 !default;
 $eds-color-other-yellow-800: #854C03 !default;
 $eds-color-other-lemon: #F5FF8F !default;
+$eds-color-other-eraser: #F3DCE2 !default;
 $eds-color-other-orange-100: #FFF1E9 !default;
 $eds-color-other-orange-200: #FFCBA5 !default;
 $eds-color-other-orange-300: #FFAF76 !default;
@@ -65,6 +66,12 @@ $eds-color-other-ruby-500: #F1497B !default;
 $eds-color-other-ruby-600: #D41E52 !default;
 $eds-color-other-ruby-700: #BD0044 !default;
 $eds-color-other-ruby-800: #8F0134 !default;
+$eds-color-highlight-100: #FF9FEC !default;
+$eds-color-highlight-200: #FFBEAA !default;
+$eds-color-highlight-300: #FCFF00 !default;
+$eds-color-highlight-400: #9DFFA4 !default;
+$eds-color-highlight-500: #00F1FF !default;
+$eds-color-highlight-600: #CFC9FF !default;
 $eds-color-info-100: #F1F9FF !default; // legacy token, will be removed
 $eds-color-info-200: #B0D5FF !default; // legacy token, will be removed
 $eds-color-info-300: #7FB9FD !default; // legacy token, will be removed
@@ -72,12 +79,6 @@ $eds-color-info-400: #5CA7FF !default; // legacy token, will be removed
 $eds-color-info-500: #328EFB !default; // legacy token, will be removed
 $eds-color-info-600: #1977CD !default; // legacy token, will be removed
 $eds-color-info-700: #0563B8 !default; // legacy token, will be removed
-$eds-color-highlight-100: #FF9FEC !default; // legacy token, will be removed
-$eds-color-highlight-200: #FFBEAA !default; // legacy token, will be removed
-$eds-color-highlight-300: #FCFF00 !default; // legacy token, will be removed
-$eds-color-highlight-400: #9DFFA4 !default; // legacy token, will be removed
-$eds-color-highlight-500: #00F1FF !default; // legacy token, will be removed
-$eds-color-highlight-600: #CFC9FF !default; // legacy token, will be removed
 $eds-l-max-width: 71.25rem !default;
 $eds-l-sidebar-width: 13.5rem !default;
 $eds-l-linelength-width: 36rem !default;
@@ -484,6 +485,7 @@ $tokens: (
           '800': $eds-color-other-yellow-800
         ),
         'lemon': $eds-color-other-lemon,
+        'eraser': $eds-color-other-eraser,
         'orange': (
           '100': $eds-color-other-orange-100,
           '200': $eds-color-other-orange-200,
@@ -505,6 +507,14 @@ $tokens: (
           '800': $eds-color-other-ruby-800
         )
       ),
+      'highlight': (
+        '100': $eds-color-highlight-100,
+        '200': $eds-color-highlight-200,
+        '300': $eds-color-highlight-300,
+        '400': $eds-color-highlight-400,
+        '500': $eds-color-highlight-500,
+        '600': $eds-color-highlight-600
+      ),
       'info': (
         '100': $eds-color-info-100,
         '200': $eds-color-info-200,
@@ -513,14 +523,6 @@ $tokens: (
         '500': $eds-color-info-500,
         '600': $eds-color-info-600,
         '700': $eds-color-info-700
-      ),
-      'highlight': (
-        '100': $eds-color-highlight-100,
-        '200': $eds-color-highlight-200,
-        '300': $eds-color-highlight-300,
-        '400': $eds-color-highlight-400,
-        '500': $eds-color-highlight-500,
-        '600': $eds-color-highlight-600
       )
     ),
     'l': (
