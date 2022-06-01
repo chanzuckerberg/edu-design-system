@@ -16,10 +16,10 @@ class IconGrid extends React.Component {
                 {name === 'warning' && (
                   <div className="icon-grid__deprecation">
                     <Icon
-                      size="0.875rem"
                       className="icon-grid__deprecation-icon"
                       name="status-error"
                       purpose="decorative"
+                      size="0.875rem"
                     />
                     This has been replaced by status-warning. This will be
                     deprecated
@@ -28,10 +28,10 @@ class IconGrid extends React.Component {
                 {name === 'check-circle' && (
                   <div className="icon-grid__deprecation">
                     <Icon
-                      size="0.875rem"
                       className="icon-grid__deprecation-icon"
                       name="status-error"
                       purpose="decorative"
+                      size="0.875rem"
                     />
                     This has been replaced by status-check-circle. This will be
                     deprecated
@@ -40,10 +40,10 @@ class IconGrid extends React.Component {
                 {name === 'info' && (
                   <div className="icon-grid__deprecation">
                     <Icon
-                      size="0.875rem"
                       className="icon-grid__deprecation-icon"
                       name="status-error"
                       purpose="decorative"
+                      size="0.875rem"
                     />
                     This has been replaced by status-info. This will be
                     deprecated
