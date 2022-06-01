@@ -11,4 +11,12 @@
 
   color: var(--eds-theme-color-text-neutral-default-inverse);
   background-color: var(--eds-color-brand-grape-500);
+  h2 {
+    font-family: 'Mint Grotesk V1.1', sans-serif;
+    font-weight: var(--eds-font-weight-medium);
+    @media all and (min-width: $eds-bp-xl) {
+      font-size: var(--eds-size-6);
+      line-height: var(--eds-size-7);
+    }
+  }
 }
