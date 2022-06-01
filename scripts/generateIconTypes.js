@@ -11,8 +11,11 @@ const iconFiles = fs
 
 // convert 'close.svg' => 'close'
 const iconNames = iconFiles.map((dirent) => {
-  const name = dirent.name.match(/([\w\s-]*)\.svg$/)[1];
-  return `'${name}'`;
+  const svgMatches = dirent.name.match(/([\w\s-]*)\.svg$/);
+  if (svgMatches) {
+    const name = svgMatches[1];
+    return `'${name}'`;
+  }
 });
 
 const fileHeader = `

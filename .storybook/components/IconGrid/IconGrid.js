@@ -11,8 +11,55 @@ class IconGrid extends React.Component {
           {ALL_ICONS.map((name, index) => {
             return (
               <li className="icon-grid__item" key={`icon-grid-item-${index}`}>
-                <Icon name={name} />
+                <Icon className="icon-grid__icon" name={name} />
                 <span className="icon-grid__text">{name}</span>
+                {name === 'warning' && (
+                  <div className="icon-grid__deprecation">
+                    <Icon
+                      className="icon-grid__deprecation-icon"
+                      name="status-error"
+                      purpose="decorative"
+                      size="0.875rem"
+                    />
+                    This has been replaced by status-warning. This will be
+                    deprecated
+                  </div>
+                )}
+                {name === 'check-circle' && (
+                  <div className="icon-grid__deprecation">
+                    <Icon
+                      className="icon-grid__deprecation-icon"
+                      name="status-error"
+                      purpose="decorative"
+                      size="0.875rem"
+                    />
+                    This has been replaced by status-check-circle. This will be
+                    deprecated
+                  </div>
+                )}
+                {name === 'info' && (
+                  <div className="icon-grid__deprecation">
+                    <Icon
+                      className="icon-grid__deprecation-icon"
+                      name="status-error"
+                      purpose="decorative"
+                      size="0.875rem"
+                    />
+                    This has been replaced by status-info. This will be
+                    deprecated
+                  </div>
+                )}
+                {(name === 'error' || name === 'error-inverted') && (
+                  <div className="icon-grid__deprecation">
+                    <Icon
+                      className="icon-grid__deprecation-icon"
+                      name="status-error"
+                      purpose="decorative"
+                    />
+                    This has been replaced by status-error. This will be
+                    deprecated
+                  </div>
+                )}
               </li>
             );
           })}
