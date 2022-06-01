@@ -5,7 +5,7 @@
 \*------------------------------------*/
 
 /**
- * 1) 
+ * Stepper that resides in the modal footer.
  */
 .modal-stepper {
   color: var(--eds-theme-color-icon-neutral-default);

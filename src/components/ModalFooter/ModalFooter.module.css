@@ -2,6 +2,9 @@
     # MODAL FOOTER
 \*------------------------------------*/
 
+/**
+ * Footer for the modal.
+ */
 .modal-footer {
   padding-top: var(--eds-size-2-and-half);
   padding-bottom: var(--eds-size-2-and-half);
@@ -12,6 +15,10 @@
   background-color: var(--eds-theme-color-background-neutral-default);
 }
 
+/**
+ * Sticky variant of the footer.
+ * Used when the modal variant is scrollable.
+ */
 .modal-footer--sticky {
   position: sticky;
   bottom: 0;

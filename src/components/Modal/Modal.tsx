@@ -165,7 +165,10 @@ export const ModalContent = (props: ModalContentProps) => {
  *     <Modal.Title>{modalTitle}</Modal.Title>
  *   </Modal.Header>
  *   <Modal.Body>{modalBodyContent}</Modal.Body>
- *   <Modal.Footer>{modalFooterContent}</Modal.Footer>
+ *   <Modal.Footer>
+ *     <Modal.Stepper />
+ *     {modalFooterContent}
+ *   </Modal.Footer>
  * </Modal>
  */
 export const Modal = (props: ModalProps) => {
@@ -207,6 +210,10 @@ export const Modal = (props: ModalProps) => {
   );
 };
 
+/**
+ * Variations of the subcomponent to pass props from parent Modal component.
+ * Same prop passed directly to subcomponent has priority over prop passed from Modal component.
+ */
 const VariantModalHeader = (props: ModalHeaderProps) => {
   const { variant } = React.useContext(ModalContext);
   return <ModalHeader variant={variant} {...props} />;
