@@ -237,6 +237,12 @@ IconButtonIconOnlySmall.args = {
 export const Link = Template.bind({});
 Link.args = { variant: 'link' };
 
+export const LinkNeutral = Template.bind({});
+LinkNeutral.args = {
+  status: 'neutral',
+  variant: 'link',
+};
+
 export const LinkDisabled = Template.bind({});
 LinkDisabled.args = { variant: 'link', disabled: true };
 
@@ -343,28 +349,4 @@ IconError.args = {
   ),
   status: 'error',
   variant: 'icon',
-};
-
-export const LinkNeutral = Template.bind({});
-LinkNeutral.args = {
-  status: 'neutral',
-  variant: 'link',
-};
-
-export const LinkSuccess = Template.bind({});
-LinkSuccess.args = {
-  status: 'success',
-  variant: 'link',
-};
-
-export const LinkWarning = Template.bind({});
-LinkWarning.args = {
-  status: 'warning',
-  variant: 'link',
-};
-
-export const LinkError = Template.bind({});
-LinkError.args = {
-  status: 'error',
-  variant: 'link',
 };
