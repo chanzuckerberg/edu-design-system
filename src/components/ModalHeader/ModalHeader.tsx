@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import styles from './ModalHeader.module.css';
 
-type Props = {
+export type Props = {
   /**
    * Child node(s) that can be nested inside component. `ModalHeader`, `ModalBody`, and `ModelFooter` are the only permissible children of the Modal
    */
@@ -11,6 +11,9 @@ type Props = {
    * CSS class names that can be appended to the component.
    */
   className?: string;
+  /**
+   * Adjusts height, color, and text of the header.
+   */
   variant?: 'brand';
 };
 

@@ -2,22 +2,21 @@ import { Dialog, Transition } from '@headlessui/react';
 import clsx from 'clsx';
 import React, { MutableRefObject, ReactNode } from 'react';
 import styles from './Modal.module.css';
-import { ModalBody, ModalFooter, ModalHeader, ModalTitle } from '../../';
-import Icon from '../Icon';
+import { Icon } from '../Icon/Icon';
+import { ModalBody } from '../ModalBody/ModalBody';
+import {
+  ModalFooter,
+  Props as ModalFooterProps,
+} from '../ModalFooter/ModalFooter';
+import {
+  ModalHeader,
+  Props as ModalHeaderProps,
+} from '../ModalHeader/ModalHeader';
+import { ModalTitle } from '../ModalTitle/ModalTitle';
 
 type Variant = 'brand' | undefined;
 
 type ModalContentProps = {
-  /**
-   * The size of the modal.
-   *
-   * This controls the maximum width of the modal, but not the height.
-   */
-  size?: 'large' | 'medium' | 'small';
-  /**
-   * Hides the close button in the top right of the modal.
-   */
-  hideCloseButton?: boolean;
   /**
    * Optional aria-label for the modal.
    *
@@ -26,11 +25,17 @@ type ModalContentProps = {
    */
   ariaLabel?: string;
   /**
-   * Method called when the close button is clicked. Use this to hide the modal.
-   *
-   * This is required even if you don't have a close button so the ESC key can close the modal.
+   * Additional classnames passed in for styling.
    */
-  onClose: () => void;
+  className?: string;
+  /**
+   * Contents of the modal.
+   */
+  children: ReactNode;
+  /**
+   * Hides the close button in the top right of the modal.
+   */
+  hideCloseButton?: boolean;
   /**
    * A ref to an element that should receive focus when the modal first opens.
    *
@@ -46,13 +51,23 @@ type ModalContentProps = {
    */
   initialFocus?: MutableRefObject<HTMLElement | null>;
   /**
-   * Additional classnames passed in for styling.
+   * Toggles scrollable variant of the modal. If modal is scrollable, footer is not, and vice versa.
+   * Defaults to false since modal default is not scrollable.
+   * Also adds border and shadow to the footer indicate sticky status.
    */
-  className?: string;
+  isScrollable?: boolean;
   /**
-   * Contents of the modal.
+   * Method called when the close button is clicked. Use this to hide the modal.
+   *
+   * This is required even if you don't have a close button so the ESC key can close the modal.
    */
-  children: ReactNode;
+  onClose: () => void;
+  /**
+   * The size of the modal.
+   *
+   * This controls the maximum width of the modal, but not the height.
+   */
+  size?: 'large' | 'medium' | 'small';
   /**
    * Color variants of the modal.
    */
@@ -66,7 +81,12 @@ type ModalProps = ModalContentProps & {
   open: boolean;
 };
 
-const VariantContext = React.createContext<Variant>(undefined);
+type Context = {
+  isScrollable?: boolean;
+  variant?: Variant;
+};
+
+const ModalContext = React.createContext<Context>({});
 
 function childrenHaveModalTitle(children?: ReactNode): boolean {
   const childrenArray = React.Children.toArray(children);
@@ -97,8 +117,9 @@ export const ModalContent = (props: ModalContentProps) => {
     children,
     className,
     hideCloseButton = false,
+    isScrollable,
     onClose,
-    size = 'medium',
+    size,
     variant,
   } = props;
 
@@ -107,6 +128,7 @@ export const ModalContent = (props: ModalContentProps) => {
     size === 'small' && styles['small'],
     size === 'medium' && styles['medium'],
     size === 'large' && styles['large'],
+    isScrollable && styles['content--scrollable'],
     className,
   );
 
@@ -116,7 +138,7 @@ export const ModalContent = (props: ModalContentProps) => {
   );
 
   return (
-    <VariantContext.Provider value={variant}>
+    <ModalContext.Provider value={{ variant, isScrollable }}>
       <div className={componentClassName}>
         {!hideCloseButton && (
           <button className={styles['close-button']} onClick={onClose}>
@@ -132,7 +154,7 @@ export const ModalContent = (props: ModalContentProps) => {
 
         {children}
       </div>
-    </VariantContext.Provider>
+    </ModalContext.Provider>
   );
 };
 
@@ -194,16 +216,19 @@ export const Modal = (props: ModalProps) => {
   );
 };
 
-type ModalHeaderArgs = React.ComponentProps<typeof ModalHeader>;
+const VariantModalHeader = (props: ModalHeaderProps) => {
+  const { variant } = React.useContext(ModalContext);
+  return <ModalHeader {...props} variant={variant} />;
+};
 
-const VariantModalHeader = (args: ModalHeaderArgs) => {
-  const variant = React.useContext(VariantContext);
-  return <ModalHeader {...args} variant={variant} />;
+const StickyModalFooter = (props: ModalFooterProps) => {
+  const { isScrollable } = React.useContext(ModalContext);
+  return <ModalFooter {...props} isSticky={isScrollable} />;
 };
 
 Modal.Header = VariantModalHeader;
 Modal.Title = ModalTitle;
 Modal.Body = ModalBody;
-Modal.Footer = ModalFooter;
+Modal.Footer = StickyModalFooter;
 
 export default Modal;

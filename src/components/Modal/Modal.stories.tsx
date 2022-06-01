@@ -15,18 +15,8 @@ export default {
   },
 };
 
-type InteractiveArgs = {
-  ariaLabel?: string;
-  hideCloseButton?: boolean;
-  children: ReactNode;
-};
-
-type TemplateArgs = {
-  children: ReactNode;
-  hideCloseButton?: boolean;
-  size: 'small' | 'medium' | 'large';
-  variant?: 'brand';
-};
+type Args = React.ComponentProps<typeof Modal>;
+type InteractiveArgs = Omit<Args, 'onClose' | 'open'>;
 
 const getChildren = (
   inDialogComponent = true,
@@ -65,22 +55,22 @@ const getChildren = (
   </>
 );
 
-export const Default: StoryObj<TemplateArgs> = {
+export const Default: StoryObj<Args> = {
   render: (args) => (
     <div className={styles['default__wrapper']}>
       <div className={styles['default__background']} />
       <ModalContent
+        {...args}
         onClose={
           () => {} /* eslint-disable-line @typescript-eslint/no-empty-function */
         }
-        {...args}
       />
     </div>
   ),
   args: {
     children: getChildren(false),
     hideCloseButton: false,
-    size: 'medium' as const,
+    open: true,
   },
   parameters: {
     // This story shows the modal content by default, for visual regression testing purposes.
@@ -88,7 +78,7 @@ export const Default: StoryObj<TemplateArgs> = {
   },
 };
 
-export const Brand: StoryObj<TemplateArgs> = {
+export const Brand: StoryObj<Args> = {
   ...Default,
   args: {
     ...Default.args,
@@ -96,7 +86,7 @@ export const Brand: StoryObj<TemplateArgs> = {
   },
 };
 
-export const Large: StoryObj<TemplateArgs> = {
+export const Large: StoryObj<Args> = {
   ...Default,
   args: {
     ...Default.args,
@@ -104,7 +94,15 @@ export const Large: StoryObj<TemplateArgs> = {
   },
 };
 
-export const Small: StoryObj<TemplateArgs> = {
+export const Medium: StoryObj<Args> = {
+  ...Default,
+  args: {
+    ...Default.args,
+    size: 'medium',
+  },
+};
+
+export const Small: StoryObj<Args> = {
   ...Default,
   args: {
     ...Default.args,
@@ -124,7 +122,7 @@ function InteractiveExample(args: InteractiveArgs) {
         Open the modal
       </Button>
 
-      <Modal onClose={() => setOpen(false)} open={open} {...args} />
+      <Modal {...args} onClose={() => setOpen(false)} open={open} />
     </>
   );
 }
@@ -205,15 +203,20 @@ const reallyLongText = (
   </div>
 );
 
-export const WithLongText = {
-  render: () => (
-    <InteractiveExample>{getChildren(true, reallyLongText)}</InteractiveExample>
+export const WithLongText: StoryObj<InteractiveArgs> = {
+  render: (args) => (
+    <InteractiveExample {...args}>
+      {getChildren(true, reallyLongText)}
+    </InteractiveExample>
   ),
 };
 
-export const WithoutHeaderAndFooter = {
-  render: () => (
-    <InteractiveExample ariaLabel="The Modal Amazing Modal You've Ever Seen">
+export const WithoutHeaderAndFooter: StoryObj<InteractiveArgs> = {
+  render: (args) => (
+    <InteractiveExample
+      {...args}
+      ariaLabel="The Modal Amazing Modal You've Ever Seen"
+    >
       <Modal.Body>{reallyLongText}</Modal.Body>
     </InteractiveExample>
   ),

@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import styles from '../Modal/Modal.module.css';
 
-type Props = {
+export type Props = {
   /**
    * Child node(s) that can be nested inside component. `ModalHeader`, `ModalBody`, and `ModelFooter` are the only permissible children of the Modal
    */
