@@ -8,7 +8,6 @@
  */
 
 export const ALL_ICONS = [
-  ,
   'account-circle',
   'add-alarm',
   'add-circle',
