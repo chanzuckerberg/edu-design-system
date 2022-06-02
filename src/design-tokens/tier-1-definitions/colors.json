@@ -51,6 +51,9 @@
         "lemon": {
           "value": "#F5FF8F"
         },
+        "eraser": {
+          "value": "#F3DCE2"
+        },
         "orange": {
           "100": { "value": "#FFF1E9" },
           "200": { "value": "#FFCBA5" },
@@ -71,6 +74,14 @@
           "700": { "value": "#BD0044" },
           "800": { "value": "#8F0134" }
         }
+      },
+      "highlight": {
+        "100": { "value": "#FF9FEC" },
+        "200": { "value": "#FFBEAA" },
+        "300": { "value": "#FCFF00" },
+        "400": { "value": "#9DFFA4" },
+        "500": { "value": "#00F1FF" },
+        "600": { "value": "#CFC9FF" }
       },
       "info": {
         "100": {
@@ -99,32 +110,6 @@
         },
         "700": {
           "value": "#0563B8",
-          "comment": "legacy token, will be removed"
-        }
-      },
-      "highlight": {
-        "100": {
-          "value": "#FF9FEC",
-          "comment": "legacy token, will be removed"
-        },
-        "200": {
-          "value": "#FFBEAA",
-          "comment": "legacy token, will be removed"
-        },
-        "300": {
-          "value": "#FCFF00",
-          "comment": "legacy token, will be removed"
-        },
-        "400": {
-          "value": "#9DFFA4",
-          "comment": "legacy token, will be removed"
-        },
-        "500": {
-          "value": "#00F1FF",
-          "comment": "legacy token, will be removed"
-        },
-        "600": {
-          "value": "#CFC9FF",
           "comment": "legacy token, will be removed"
         }
       }
