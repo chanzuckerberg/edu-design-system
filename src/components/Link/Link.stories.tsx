@@ -1,7 +1,9 @@
 import { Story, Meta } from '@storybook/react';
 import React from 'react';
-
 import { Link, LinkProps } from './Link';
+import getRandomUrl from '../../util/getRandomUrl';
+import '../../util/removeUrlJestSerializer';
+
 import Icon from '../Icon';
 
 export default {
@@ -41,9 +43,9 @@ export default {
 
 const Template: Story<LinkProps> = (args) => (
   <Link
-    href="/"
-    // stop link from navigating to another page so we can click the link for testing
-    onClick={(event: any) => event.preventDefault()}
+    // Use a randomized valid href so the link will be in an unvisited state when you load the page,
+    // and you can click the link to see the visited state.
+    href={getRandomUrl()}
     {...args}
   />
 );
@@ -74,14 +76,14 @@ LinkRightIcon.args = {
 
 export const LinkInBodyText = () => (
   <>
-    Lorem ipsum dolor sit amet, <Link href="">consectetur</Link> adipiscing
-    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-    enim ad minim veniam, quis nostrud exercitation{' '}
-    <Link href="">ullamco laboris</Link> nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-    non proident, sunt in culpa qui officia deserunt{' '}
-    <Link href="">mollitanim</Link> id est laborum.
+    Lorem ipsum dolor sit amet, <Link href={getRandomUrl()}>consectetur</Link>{' '}
+    adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+    aliqua. Ut enim ad minim veniam, quis nostrud exercitation{' '}
+    <Link href={getRandomUrl()}>ullamco laboris</Link> nisi ut aliquip ex ea
+    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+    cupidatat non proident, sunt in culpa qui officia deserunt{' '}
+    <Link href={getRandomUrl()}>mollitanim</Link> id est laborum.
   </>
 );
 
