@@ -5,7 +5,7 @@ exports[`<Link /> Default story renders snapshot 1`] = `
   class="clickable-style clickable-style--link clickable-style--brand"
   href="/"
 >
-  This is a link
+  Link
 </a>
 `;
 
@@ -14,7 +14,7 @@ exports[`<Link /> Destructive story renders snapshot 1`] = `
   class="clickable-style clickable-style--lg clickable-style--primary clickable-style--error"
   href="/"
 >
-  This is a link
+  Link
 </a>
 `;
 
@@ -42,7 +42,7 @@ exports[`<Link /> FullWidth story renders snapshot 1`] = `
   class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand clickable-style--full-width"
   href="/"
 >
-  This is a link
+  Link
 </a>
 `;
 
@@ -260,7 +260,7 @@ exports[`<Link /> LinkNeutral story renders snapshot 1`] = `
   class="clickable-style clickable-style--link clickable-style--neutral"
   href="/"
 >
-  This is a link
+  Link
 </a>
 `;
 
@@ -311,7 +311,7 @@ exports[`<Link /> Primary story renders snapshot 1`] = `
   class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand"
   href="/"
 >
-  This is a link
+  Link
 </a>
 `;
 
@@ -339,7 +339,7 @@ exports[`<Link /> PrimaryMedium story renders snapshot 1`] = `
   class="clickable-style clickable-style--md clickable-style--primary clickable-style--brand"
   href="/"
 >
-  This is a link
+  Link
 </a>
 `;
 
@@ -367,7 +367,7 @@ exports[`<Link /> PrimarySmall story renders snapshot 1`] = `
   class="clickable-style clickable-style--sm clickable-style--primary clickable-style--brand"
   href="/"
 >
-  This is a link
+  Link
 </a>
 `;
 
@@ -376,7 +376,7 @@ exports[`<Link /> Secondary story renders snapshot 1`] = `
   class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand"
   href="/"
 >
-  This is a link
+  Link
 </a>
 `;
 
@@ -385,7 +385,7 @@ exports[`<Link /> SecondaryError story renders snapshot 1`] = `
   class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--error"
   href="/"
 >
-  This is a link
+  Link
 </a>
 `;
 
@@ -413,7 +413,7 @@ exports[`<Link /> SecondaryMedium story renders snapshot 1`] = `
   class="clickable-style clickable-style--md clickable-style--secondary clickable-style--brand"
   href="/"
 >
-  This is a link
+  Link
 </a>
 `;
 
@@ -441,7 +441,7 @@ exports[`<Link /> SecondarySmall story renders snapshot 1`] = `
   class="clickable-style clickable-style--sm clickable-style--secondary clickable-style--brand"
   href="/"
 >
-  This is a link
+  Link
 </a>
 `;
 
@@ -450,7 +450,7 @@ exports[`<Link /> SecondarySuccess story renders snapshot 1`] = `
   class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--success"
   href="/"
 >
-  This is a link
+  Link
 </a>
 `;
 
@@ -459,7 +459,7 @@ exports[`<Link /> SecondaryWarning story renders snapshot 1`] = `
   class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--warning"
   href="/"
 >
-  This is a link
+  Link
 </a>
 `;
 
@@ -468,7 +468,7 @@ exports[`<Link /> Tertiary story renders snapshot 1`] = `
   class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral"
   href="/"
 >
-  This is a link
+  Link
 </a>
 `;
 
@@ -496,7 +496,7 @@ exports[`<Link /> TertiaryMedium story renders snapshot 1`] = `
   class="clickable-style clickable-style--md clickable-style--secondary clickable-style--neutral"
   href="/"
 >
-  This is a link
+  Link
 </a>
 `;
 
@@ -524,7 +524,7 @@ exports[`<Link /> TertiarySmall story renders snapshot 1`] = `
   class="clickable-style clickable-style--sm clickable-style--secondary clickable-style--neutral"
   href="/"
 >
-  This is a link
+  Link
 </a>
 `;
 

@@ -10,7 +10,7 @@ export default {
   title: 'Molecules/Buttons/Link',
   component: Link,
   args: {
-    children: 'This is a link',
+    children: 'Link',
     variant: 'secondary',
     status: 'brand',
     fullWidth: false,
