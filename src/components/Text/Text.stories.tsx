@@ -1,10 +1,12 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import clsx from 'clsx';
 import React from 'react';
+import '../../util/removeUrlJestSerializer';
 
 import { Text } from './Text';
 import type { Variant } from './Text';
 import styles from './Text.stories.module.css';
+import getRandomUrl from '../../util/getRandomUrl';
 
 export default {
   title: 'Atoms/Text/Text',
@@ -227,10 +229,10 @@ const TextPassageTemplate = (args: Args) => (
     </ol>
 
     <p>
-      <a href="/">Lorem ipsum dolor sit amet</a>, consectetur adipiscing elit,
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-      ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-      ex ea commodo consequat.
+      <a href={getRandomUrl()}>Lorem ipsum dolor sit amet</a>, consectetur
+      adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+      laboris nisi ut aliquip ex ea commodo consequat.
     </p>
 
     <blockquote>
