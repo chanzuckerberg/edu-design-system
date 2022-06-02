@@ -2,7 +2,7 @@ import { Story, Meta } from '@storybook/react';
 import React from 'react';
 import { Link, LinkProps } from './Link';
 import getRandomUrl from '../../util/getRandomUrl';
-import '../../util/removeUrlJestSerializer';
+import '../../util/removeRandomizedUrlJestSerializer';
 
 import Icon from '../Icon';
 
