@@ -456,85 +456,7 @@
  * 1) Smaller gap between text and icon in link button style
  */
 .clickable-style--link {
-  /* @mixin textLink; */
-  outline: 0 !important;
-
-  padding: 0;
-  border: 0;
-  text-align: left;
-  background-color: transparent;
-  gap: 0.25em; /* 1 */
-
-  border-radius: 0;
-
-  position: relative;
-  z-index: 0;
-  display: inline-block;
-  /* padding: 5px 5px; */
-  overflow: hidden;
-  color: #333;
-  vertical-align: bottom;
-  transition: color 0.3s ease-out;
-
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 2px;
-  padding: 2px;
-  margin: -2px;
-
-  font-size: inherit;
-  font-weight: var(--eds-font-weight-medium);
-  line-height: inherit;
-  text-transform: inherit;
-  display: inline-flex;
-}
-
-/**
- * Pseudo-element for background color on focus state
- * 1) Using a pseudo-element with a background-color allows us to animate it up and down
- * 2) We push it down 101% (not just 100%) to avoid a thin line being visible at some zoom levels
- * 3) Use lower z-index so it sits behind the link text
- */
-.clickable-style--link::before {
-  content: '';
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: var(--eds-z-index-bottom); /* 3 */
-  background-color: var(--eds-theme-color-background-brand-primary-strong);
-
-  transform: translateY(101%); /* 2 */
-  transition: transform var(--eds-anim-fade-quick) var(--eds-anim-ease);
-
-  @media screen and (prefers-reduced-motion) {
-    transition: none;
-  }
-}
-
-.clickable-style--link:focus {
-  color: #fff !important;
-  outline: none;
-}
-.clickable-style--link:focus::before {
-  transform: translateY(0);
-  transition: transform 0.25s ease-out;
-}
-
-/**
- * Link brand clickable style
- */
-.clickable-style--link.clickable-style--brand {
-  color: var(--eds-theme-color-button-link-brand);
-
-  &:hover {
-    color: var(--eds-theme-color-button-link-brand-hover);
-  }
-
-  &:active {
-    color: var(--eds-theme-color-button-link-brand-active);
-  }
+  @mixin textLink;
 }
 
 /**
@@ -552,54 +474,9 @@
   }
 }
 
-/**
- * Link success clickable style
- */
-.clickable-style--link.clickable-style--success {
-  color: var(--eds-theme-color-button-link-success);
-
-  &:hover {
-    color: var(--eds-theme-color-button-link-success-hover);
-  }
-
-  &:active {
-    color: var(--eds-theme-color-button-link-success-active);
-  }
-}
-
-/**
- * Link warning clickable style
- */
-.clickable-style--link.clickable-style--warning {
-  color: var(--eds-theme-color-button-link-warning);
-
-  &:hover {
-    color: var(--eds-theme-color-button-link-warning-hover);
-  }
-
-  &:active {
-    color: var(--eds-theme-color-button-link-warning-active);
-  }
-}
-
-/**
- * Link error clickable style
- */
-.clickable-style--link.clickable-style--error {
-  color: var(--eds-theme-color-button-link-error);
-
-  &:hover {
-    color: var(--eds-theme-color-button-link-error-hover);
-  }
-
-  &:active {
-    color: var(--eds-theme-color-button-link-error-active);
-  }
-}
-
-/* Style icons that may be in the clickable style children */
-.clickable-style--link svg {
-  --icon-size-default: 1.25em;
+.clickable-style--link.clickable-style--neutral::before {
+  /* TODO: update this token */
+  background-color: var(--eds-theme-color-background-brand-primary-strong);
 }
 
 /**
