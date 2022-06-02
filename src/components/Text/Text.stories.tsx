@@ -1,7 +1,7 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import clsx from 'clsx';
 import React from 'react';
-import '../../util/removeUrlJestSerializer';
+import '../../util/removeRandomizedUrlJestSerializer';
 
 import { Text } from './Text';
 import type { Variant } from './Text';
