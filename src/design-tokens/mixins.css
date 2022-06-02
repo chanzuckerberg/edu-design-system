@@ -28,7 +28,6 @@
   text-decoration-thickness: 2px;
   text-underline-offset: 2px;
 
-  @mixin textLink;
   outline: 0 !important;
 
   border: 0;
@@ -39,6 +38,7 @@
   position: relative;
   z-index: 0;
   overflow: hidden;
+  /* TODO: do we need this? */
   vertical-align: bottom;
   transition: color 0.3s ease-out;
 
@@ -46,6 +46,12 @@
 
   /* TODO: update these tokens */
   color: var(--eds-theme-color-text-link-default);
+  /* color: var(--eds-theme-color-button-link-brand-text); */
+
+  /* Style icons that may be in the clickable style children */
+  svg {
+    --icon-size-default: 1.25em;
+  }
 
   /**
    * Pseudo-element for background color on focus state
@@ -74,6 +80,7 @@
   &:hover {
     /* TODO: update these tokens */
     color: var(--eds-theme-color-text-link-default-hover);
+    color: var(--eds-theme-color-button-link-brand-hover);
     /* TODO: add a token for this if it's different than the text color */
     text-decoration-color: var(--eds-theme-color-text-link-default-hover);
   }
@@ -83,6 +90,15 @@
     the background color but it will also make borders 100% opacity black. */
     outline: 1px solid transparent;
     color: white !important;
+
+    &::before {
+      transform: translateY(0);
+      transition: transform 0.25s ease-out;
+    }
+  }
+
+  &:active {
+    color: var(--eds-theme-color-button-link-brand-active);
   }
 }
 

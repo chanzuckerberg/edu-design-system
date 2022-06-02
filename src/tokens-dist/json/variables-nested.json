@@ -637,29 +637,38 @@
           },
           "link": {
             "brand": {
-              "@": "#5751D2",
-              "hover": "#3E42B1",
-              "active": "#3E42B1"
+              "text": {
+                "@": "#5751D2",
+                "hover": "#3E42B1",
+                "active": "#3E42B1",
+                "focus": "#FFFFFF"
+              },
+              "background": {
+                "@": "#5751D2"
+              },
+              "underline": {
+                "@": "#5751D2",
+                "hover": "#3E42B1",
+                "active": "#3E42B1",
+                "focus": "#FFFFFF"
+              }
             },
             "neutral": {
-              "@": "#5D6369",
-              "hover": "#383C43",
-              "active": "#383C43"
-            },
-            "success": {
-              "@": "#007249",
-              "hover": "#005939",
-              "active": "#005939"
-            },
-            "warning": {
-              "@": "#AC3400",
-              "hover": "#842800",
-              "active": "#842800"
-            },
-            "error": {
-              "@": "#BD0044",
-              "hover": "#8F0134",
-              "active": "#8F0134"
+              "text": {
+                "@": "#5D6369",
+                "hover": "#383C43",
+                "active": "#383C43",
+                "focus": "#FFFFFF"
+              },
+              "background": {
+                "@": "#5D6369"
+              },
+              "underline": {
+                "@": "#5D6369",
+                "hover": "#383C43",
+                "active": "#383C43",
+                "focus": "#FFFFFF"
+              }
             }
           }
         },
