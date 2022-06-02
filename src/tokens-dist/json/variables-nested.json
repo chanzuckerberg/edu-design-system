@@ -634,42 +634,6 @@
                 "active": "#FFFFFF"
               }
             }
-          },
-          "link": {
-            "brand": {
-              "text": {
-                "@": "#5751D2",
-                "hover": "#3E42B1",
-                "active": "#3E42B1",
-                "focus": "#FFFFFF"
-              },
-              "background": {
-                "@": "#5751D2"
-              },
-              "underline": {
-                "@": "#5751D2",
-                "hover": "#3E42B1",
-                "active": "#3E42B1",
-                "focus": "#FFFFFF"
-              }
-            },
-            "neutral": {
-              "text": {
-                "@": "#5D6369",
-                "hover": "#383C43",
-                "active": "#383C43",
-                "focus": "#FFFFFF"
-              },
-              "background": {
-                "@": "#5D6369"
-              },
-              "underline": {
-                "@": "#5D6369",
-                "hover": "#383C43",
-                "active": "#383C43",
-                "focus": "#FFFFFF"
-              }
-            }
           }
         },
         "focus-ring": {
