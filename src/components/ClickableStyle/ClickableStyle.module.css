@@ -457,26 +457,25 @@
  */
 .clickable-style--link {
   @mixin textLink;
+
+  border-radius: 0;
+  border: 0;
+  background-color: transparent;
 }
 
 /**
  * Link neutral clickable style
  */
 .clickable-style--link.clickable-style--neutral {
-  color: var(--eds-theme-color-button-link-neutral);
+  text-decoration-color: var(--eds-theme-color-icon-neutral-strong);
 
   &:hover {
-    color: var(--eds-theme-color-button-link-neutral-hover);
-  }
-
-  &:active {
-    color: var(--eds-theme-color-button-link-neutral-active);
+    text-decoration-color: var(--eds-theme-color-border-neutral-strong);
   }
 }
 
 .clickable-style--link.clickable-style--neutral::before {
-  /* TODO: update this token */
-  background-color: var(--eds-theme-color-background-brand-primary-strong);
+  background-color: var(--eds-theme-color-icon-neutral-strong);
 }
 
 /**
