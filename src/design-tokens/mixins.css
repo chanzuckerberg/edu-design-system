@@ -13,14 +13,9 @@
  * 3) 2px padding gives the text breathing room in the focus state
  * 4) 2px margin compensates for the padding so the link doesn't have too much space between it
  *    and surrounding text
- * ?) Has position relative to support the background color pseudo element
- * ??) overflow: hidden hides the background color pseudo element from view
- * 5) Has smaller icons than other button styles
- * 6) Uses an absolutely-positioned pseudo element with a background color to animate it up and down
- * 7) The pseudo element has a negative z-index to position it behind the text
- * 8) We push the pseudo element down 101% (not just 100%) to avoid a thin line being visible at some 
-      zoom levels
- * 9) Make the focus outline invisible but don't remove it. High contrast mode will remove the background 
+ * 5) Has position relative to support the background color pseudo element
+ * 6) Has smaller icons than other button styles
+ * 7) Make the focus outline invisible but don't remove it. High contrast mode will remove the background 
       color, but it will also make borders 100% opacity black
  */
 @define-mixin textLink {
@@ -38,9 +33,8 @@
 
   padding: 2px !important; /* 3 */
   margin: -2px; /* 4 */
-  position: relative; /* ? */
+  position: relative; /* 5 */
   z-index: var(--eds-z-index-0);
-  overflow: hidden; /* ??? */
   transition: color var(--eds-anim-move-medium) var(--eds-anim-ease),
     text-decoration-color var(--eds-anim-move-medium) var(--eds-anim-ease);
 
@@ -49,26 +43,7 @@
   }
 
   svg {
-    --icon-size-default: 1.25em; /* 5 */
-  }
-
-  &::before {
-    /* 6 */
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: var(--eds-z-index-bottom); /* 7 */
-    background-color: var(--eds-theme-color-background-brand-primary-strong);
-
-    transform: translateY(101%); /* 8 */
-    transition: transform var(--eds-anim-move-medium) var(--eds-anim-ease);
-
-    @media screen and (prefers-reduced-motion) {
-      transition: none;
-    }
+    --icon-size-default: 1.25em; /* 6 */
   }
 
   &:hover {
@@ -77,15 +52,43 @@
   }
 
   &:focus {
-    outline: 1px solid transparent; /* 9 */
+    outline: 1px solid transparent; /* 7 */
     color: var(--eds-theme-color-text-neutral-default-inverse) !important;
     text-decoration-color: var(
       --eds-theme-color-text-neutral-default-inverse
     ) !important;
+  }
 
-    &::before {
-      transform: translateY(0);
+  /**
+   * Pseudo element with background color for focus state
+   * 1) Uses an absolutely-positioned pseudo element with a background color to animate it up and down
+   * 2) The pseudo element has a negative z-index to position it behind the text
+   * 3) We set transform-origin: to bottom so it animates up from the bottom, not out from the middle
+   * 4) The element is scaled down to 0 vertically by default so it's hidden
+   * 5) And we scale it back to 100% on focus so it appears
+   */
+  &::before {
+    /* 1 */
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: var(--eds-z-index-bottom); /* 2 */
+    background-color: var(--eds-theme-color-background-brand-primary-strong);
+
+    transform-origin: bottom; /* 3 */
+    transform: scaleY(0%); /* 4 */
+    transition: transform var(--eds-anim-move-medium) var(--eds-anim-ease);
+
+    @media screen and (prefers-reduced-motion) {
+      transition: none;
     }
+  }
+
+  &:focus::before {
+    transform: scaleY(1); /* 5 */
   }
 }
 
