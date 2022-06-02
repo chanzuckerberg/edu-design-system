@@ -453,7 +453,6 @@
 
 /**
  * Link button styles
- * 1) Smaller gap between text and icon in link button style
  */
 .clickable-style--link {
   @mixin textLink;
