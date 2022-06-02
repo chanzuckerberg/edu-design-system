@@ -8,69 +8,63 @@
 
 /**
  * Link button styles
- * 1) Smaller gap between text and icon in link button style
+ * 1) display: inline-flex allows us to manage icon placement and the focus background animation
+ * 2) Smaller gap between text and icon in link button style
+ * 3) 2px padding gives the text breathing room in the focus state
+ * 4) 2px margin compensates for the padding so the link doesn't have too much space between it
+ *    and surrounding text
+ * ?) Has position relative to support the background color pseudo element
+ * ??) overflow: hidden hides the background color pseudo element from view
+ * 5) Has smaller icons than other button styles
+ * 6) Uses an absolutely-positioned pseudo element with a background color to animate it up and down
+ * 7) The pseudo element has a negative z-index to position it behind the text
+ * 8) We push the pseudo element down 101% (not just 100%) to avoid a thin line being visible at some 
+      zoom levels
+ * 9) Make the focus outline invisible but don't remove it. High contrast mode will remove the background 
+      color, but it will also make borders 100% opacity black
  */
 @define-mixin textLink {
   font-size: inherit;
   font-weight: var(--eds-font-weight-medium);
   line-height: inherit;
-  text-transform: inherit;
+  display: inline-flex; /* 1 */
+  gap: 0.25em; /* 2 */
 
-  border-radius: 0;
-  /* 2px padding gives the text breathing room in the focus state */
-  padding: 2px !important;
-  /* 2px margin compensates for the padding so the link doesn't have too much space between it
-     and surrounding text
-  */
-  margin: -2px;
-
+  color: var(--eds-theme-color-text-link-default);
   text-decoration: underline;
+  text-decoration-color: var(--eds-theme-color-background-brand-primary-strong);
   text-decoration-thickness: 2px;
   text-underline-offset: 2px;
 
-  outline: 0 !important;
+  padding: 2px !important; /* 3 */
+  margin: -2px; /* 4 */
+  position: relative; /* ? */
+  z-index: var(--eds-z-index-0);
+  overflow: hidden; /* ??? */
+  transition: color var(--eds-anim-move-medium) var(--eds-anim-ease),
+    text-decoration-color var(--eds-anim-move-medium) var(--eds-anim-ease);
 
-  border: 0;
-  text-align: left;
-  background-color: transparent;
-  gap: 0.25em; /* 1 */
-
-  position: relative;
-  z-index: 0;
-  overflow: hidden;
-  /* TODO: do we need this? */
-  vertical-align: bottom;
-  transition: color 0.3s ease-out;
-
-  display: inline-flex;
-
-  /* TODO: update these tokens */
-  color: var(--eds-theme-color-text-link-default);
-  /* color: var(--eds-theme-color-button-link-brand-text); */
-
-  /* Style icons that may be in the clickable style children */
-  svg {
-    --icon-size-default: 1.25em;
+  @media screen and (prefers-reduced-motion) {
+    transition: none;
   }
 
-  /**
-   * Pseudo-element for background color on focus state
-   * 1) Using a pseudo-element with a background-color allows us to animate it up and down
-   * 2) We push it down 101% (not just 100%) to avoid a thin line being visible at some zoom levels
-   * 3) Use lower z-index so it sits behind the link text
-   */
+  svg {
+    --icon-size-default: 1.25em; /* 5 */
+  }
+
   &::before {
+    /* 6 */
     content: '';
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: var(--eds-z-index-bottom); /* 3 */
+    z-index: var(--eds-z-index-bottom); /* 7 */
     background-color: var(--eds-theme-color-background-brand-primary-strong);
 
-    transform: translateY(101%); /* 2 */
-    transition: transform var(--eds-anim-fade-quick) var(--eds-anim-ease);
+    transform: translateY(101%); /* 8 */
+    transition: transform var(--eds-anim-move-medium) var(--eds-anim-ease);
 
     @media screen and (prefers-reduced-motion) {
       transition: none;
@@ -78,27 +72,20 @@
   }
 
   &:hover {
-    /* TODO: update these tokens */
     color: var(--eds-theme-color-text-link-default-hover);
-    color: var(--eds-theme-color-button-link-brand-hover);
-    /* TODO: add a token for this if it's different than the text color */
-    text-decoration-color: var(--eds-theme-color-text-link-default-hover);
+    text-decoration-color: var(--eds-theme-color-border-brand-primary);
   }
 
   &:focus {
-    /* Make the focus outline invisible but don't remove it. High contrast mode will remove
-    the background color but it will also make borders 100% opacity black. */
-    outline: 1px solid transparent;
-    color: white !important;
+    outline: 1px solid transparent; /* 9 */
+    color: var(--eds-theme-color-text-neutral-default-inverse) !important;
+    text-decoration-color: var(
+      --eds-theme-color-text-neutral-default-inverse
+    ) !important;
 
     &::before {
       transform: translateY(0);
-      transition: transform 0.25s ease-out;
     }
-  }
-
-  &:active {
-    color: var(--eds-theme-color-button-link-brand-active);
   }
 }
 
