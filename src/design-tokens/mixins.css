@@ -6,6 +6,10 @@
   padding: 0;
 }
 
+/**
+ * Link button styles
+ * 1) Smaller gap between text and icon in link button style
+ */
 @define-mixin textLink {
   font-size: inherit;
   font-weight: var(--eds-font-weight-medium);
@@ -24,11 +28,51 @@
   text-decoration-thickness: 2px;
   text-underline-offset: 2px;
 
-  /* TODO: double-check these tokens */
+  @mixin textLink;
+  outline: 0 !important;
+
+  border: 0;
+  text-align: left;
+  background-color: transparent;
+  gap: 0.25em; /* 1 */
+
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  vertical-align: bottom;
+  transition: color 0.3s ease-out;
+
+  display: inline-flex;
+
+  /* TODO: update these tokens */
   color: var(--eds-theme-color-text-link-default);
 
+  /**
+   * Pseudo-element for background color on focus state
+   * 1) Using a pseudo-element with a background-color allows us to animate it up and down
+   * 2) We push it down 101% (not just 100%) to avoid a thin line being visible at some zoom levels
+   * 3) Use lower z-index so it sits behind the link text
+   */
+  &::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: var(--eds-z-index-bottom); /* 3 */
+    background-color: var(--eds-theme-color-background-brand-primary-strong);
+
+    transform: translateY(101%); /* 2 */
+    transition: transform var(--eds-anim-fade-quick) var(--eds-anim-ease);
+
+    @media screen and (prefers-reduced-motion) {
+      transition: none;
+    }
+  }
+
   &:hover {
-    /* TODO: double-check these tokens */
+    /* TODO: update these tokens */
     color: var(--eds-theme-color-text-link-default-hover);
     /* TODO: add a token for this if it's different than the text color */
     text-decoration-color: var(--eds-theme-color-text-link-default-hover);
@@ -39,7 +83,6 @@
     the background color but it will also make borders 100% opacity black. */
     outline: 1px solid transparent;
     color: white !important;
-    background-color: var(--eds-theme-color-background-brand-primary-strong);
   }
 }
 
