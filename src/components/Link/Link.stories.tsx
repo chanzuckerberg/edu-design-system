@@ -1,7 +1,9 @@
 import { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
+import { Link, LinkProps } from './Link';
+import getRandomUrl from '../../util/getRandomUrl';
+import '../../util/removeUrlJestSerializer';
 
-import { Link } from './Link';
 import Icon from '../Icon';
 
 export default {
@@ -13,7 +15,7 @@ export default {
     status: 'brand',
     fullWidth: false,
     size: 'lg',
-    href: '/',
+    href: getRandomUrl(),
     // stop link from navigating to another page so we can click the link for testing
     onClick: (event: any) => event.preventDefault(),
   },
