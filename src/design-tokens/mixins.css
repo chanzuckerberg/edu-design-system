@@ -59,6 +59,11 @@
     ) !important;
   }
 
+  &:visited {
+    color: var(--eds-theme-color-text-neutral-subtle);
+    text-decoration-color: var(--eds-theme-color-text-neutral-subtle);
+  }
+
   /**
    * Pseudo element with background color for focus state
    * 1) Uses an absolutely-positioned pseudo element with a background color to animate it up and down
