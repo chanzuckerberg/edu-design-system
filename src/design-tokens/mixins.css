@@ -22,6 +22,7 @@
   font-size: inherit;
   font-weight: var(--eds-font-weight-medium);
   line-height: inherit;
+  text-align: left;
   display: inline-flex; /* 1 */
   gap: 0.25em; /* 2 */
 
