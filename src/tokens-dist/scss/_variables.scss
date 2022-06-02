@@ -353,24 +353,6 @@ $eds-theme-color-button-icon-error-border-active: #BD0044 !default;
 $eds-theme-color-button-icon-error-text: #BD0044 !default;
 $eds-theme-color-button-icon-error-text-hover: #BD0044 !default;
 $eds-theme-color-button-icon-error-text-active: #FFFFFF !default;
-$eds-theme-color-button-link-brand-text: #5751D2 !default;
-$eds-theme-color-button-link-brand-text-hover: #3E42B1 !default;
-$eds-theme-color-button-link-brand-text-active: #3E42B1 !default;
-$eds-theme-color-button-link-brand-text-focus: #FFFFFF !default;
-$eds-theme-color-button-link-brand-background: #5751D2 !default;
-$eds-theme-color-button-link-brand-underline: #5751D2 !default;
-$eds-theme-color-button-link-brand-underline-hover: #3E42B1 !default;
-$eds-theme-color-button-link-brand-underline-active: #3E42B1 !default;
-$eds-theme-color-button-link-brand-underline-focus: #FFFFFF !default;
-$eds-theme-color-button-link-neutral-text: #5D6369 !default;
-$eds-theme-color-button-link-neutral-text-hover: #383C43 !default;
-$eds-theme-color-button-link-neutral-text-active: #383C43 !default;
-$eds-theme-color-button-link-neutral-text-focus: #FFFFFF !default;
-$eds-theme-color-button-link-neutral-background: #5D6369 !default;
-$eds-theme-color-button-link-neutral-underline: #5D6369 !default;
-$eds-theme-color-button-link-neutral-underline-hover: #383C43 !default;
-$eds-theme-color-button-link-neutral-underline-active: #383C43 !default;
-$eds-theme-color-button-link-neutral-underline-focus: #FFFFFF !default;
 $eds-theme-color-focus-ring: #6B65E2 !default;
 $eds-theme-color-focus-ring-inverted: #FFFFFF !default;
 $eds-theme-color-form-border: #C0C4C8 !default;
@@ -1046,42 +1028,6 @@ $tokens: (
                 '@': $eds-theme-color-button-icon-error-text,
                 'hover': $eds-theme-color-button-icon-error-text-hover,
                 'active': $eds-theme-color-button-icon-error-text-active
-              )
-            )
-          ),
-          'link': (
-            'brand': (
-              'text': (
-                '@': $eds-theme-color-button-link-brand-text,
-                'hover': $eds-theme-color-button-link-brand-text-hover,
-                'active': $eds-theme-color-button-link-brand-text-active,
-                'focus': $eds-theme-color-button-link-brand-text-focus
-              ),
-              'background': (
-                '@': $eds-theme-color-button-link-brand-background
-              ),
-              'underline': (
-                '@': $eds-theme-color-button-link-brand-underline,
-                'hover': $eds-theme-color-button-link-brand-underline-hover,
-                'active': $eds-theme-color-button-link-brand-underline-active,
-                'focus': $eds-theme-color-button-link-brand-underline-focus
-              )
-            ),
-            'neutral': (
-              'text': (
-                '@': $eds-theme-color-button-link-neutral-text,
-                'hover': $eds-theme-color-button-link-neutral-text-hover,
-                'active': $eds-theme-color-button-link-neutral-text-active,
-                'focus': $eds-theme-color-button-link-neutral-text-focus
-              ),
-              'background': (
-                '@': $eds-theme-color-button-link-neutral-background
-              ),
-              'underline': (
-                '@': $eds-theme-color-button-link-neutral-underline,
-                'hover': $eds-theme-color-button-link-neutral-underline-hover,
-                'active': $eds-theme-color-button-link-neutral-underline-active,
-                'focus': $eds-theme-color-button-link-neutral-underline-focus
               )
             )
           )
