@@ -27,6 +27,18 @@
   display: inline !important;
 }
 
+/**
+ * Display flex utility
+ * 1) Forces display property to flex
+ */
 .u-display-flex {
   display: flex !important;
+}
+
+/**
+ * Flex direction utility
+ * 1) Forces display direction to column
+ */
+.u-flex-direction-column {
+  flex-direction: column !important;
 }

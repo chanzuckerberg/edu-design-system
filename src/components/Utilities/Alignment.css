@@ -28,10 +28,42 @@
   text-align: right !important;
 }
 
+/** 
+ * Maximizes space between content
+ * 1) Forces justify-content to space-between.
+ */
 .u-justify-content-space-between {
   justify-content: space-between !important;
 }
 
+/** 
+ * Pushes content to the end
+ * 1) Forces justify-content to flex-end.
+ */
 .u-justify-content-flex-end {
   justify-content: flex-end !important;
+}
+
+/** 
+ * Centers content
+ * 1) Forces justify-content to center.
+ */
+.u-justify-content-center {
+  justify-content: center !important;
+}
+
+/** 
+ * Aligns content to the center
+ * 1) Forces align-items to center.
+ */
+.u-align-items-center {
+  align-items: center !important;
+}
+
+/**
+ * Aligns self to the start
+ * 1) Forces align-self to flex-start.
+ */
+.u-align-self-flex-start {
+  align-self: flex-start !important;
 }
