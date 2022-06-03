@@ -27,3 +27,7 @@
 .u-text-align-right {
   text-align: right !important;
 }
+
+.u-justify-content-space-between {
+  justify-content: space-between !important;
+}

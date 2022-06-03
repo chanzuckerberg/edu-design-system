@@ -26,3 +26,7 @@
 .u-display-inline {
   display: inline !important;
 }
+
+.u-display-flex {
+  display: flex !important;
+}
