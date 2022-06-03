@@ -17,7 +17,7 @@ export const ModalTitle = ({ children, className, ...other }: Props) => (
   <Dialog.Title
     as={Heading}
     className={className}
-    size="headline-lg"
+    size="headline-md"
     {...other}
   >
     {children}

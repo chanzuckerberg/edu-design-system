@@ -25,7 +25,13 @@ const getChildren = (
   showStepper = false,
 ) => (
   <>
-    <Modal.Header>
+    <Modal.Header
+      brandAsset={
+        <div className="fpo" style={{ width: '100%', height: '100%' }}>
+          Brand Asset
+        </div>
+      }
+    >
       {inDialogComponent ? (
         <Modal.Title>Modal Title</Modal.Title>
       ) : (

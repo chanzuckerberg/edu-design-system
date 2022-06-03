@@ -15,9 +15,14 @@ export type Props = {
    * Adjusts height, color, and text of the header.
    */
   variant?: 'brand';
+  /**
+   * Placeholder for brand asset.
+   */
+  brandAsset?: ReactNode;
 };
 
 export const ModalHeader = ({
+  brandAsset,
   children,
   className,
   variant,
@@ -30,6 +35,9 @@ export const ModalHeader = ({
   );
   return (
     <div className={componentClassName} {...other}>
+      {variant === 'brand' && brandAsset && (
+        <div className={styles['modal-header__brand-asset']}>{brandAsset}</div>
+      )}
       {children}
     </div>
   );

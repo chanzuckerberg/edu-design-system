@@ -42,12 +42,12 @@ exports[`Modal DefaultInteractive story renders snapshot 1`] = `
     <div
       class="modal-header"
     >
-      <h1
-        class="heading heading--size-headline-lg"
+      <h2
+        class="heading heading--size-headline-md"
         id="headlessui-dialog-title-4"
       >
         Modal Title
-      </h1>
+      </h2>
     </div>
     <div
       class="modal-body"
@@ -120,12 +120,12 @@ exports[`Modal WithLongText story renders snapshot 1`] = `
     <div
       class="modal-header"
     >
-      <h1
-        class="heading heading--size-headline-lg"
+      <h2
+        class="heading heading--size-headline-md"
         id="headlessui-dialog-title-12"
       >
         Modal Title
-      </h1>
+      </h2>
     </div>
     <div
       class="modal-body"
@@ -216,12 +216,12 @@ exports[`Modal WithLongTextScrollable story renders snapshot 1`] = `
     <div
       class="modal-header"
     >
-      <h1
-        class="heading heading--size-headline-lg"
+      <h2
+        class="heading heading--size-headline-md"
         id="headlessui-dialog-title-16"
       >
         Modal Title
-      </h1>
+      </h2>
     </div>
     <div
       class="modal-body"
@@ -289,12 +289,12 @@ exports[`Modal WithoutCloseButton story renders snapshot 1`] = `
     <div
       class="modal-header"
     >
-      <h1
-        class="heading heading--size-headline-lg"
+      <h2
+        class="heading heading--size-headline-md"
         id="headlessui-dialog-title-8"
       >
         Modal Title
-      </h1>
+      </h2>
     </div>
     <div
       class="modal-body"
@@ -427,6 +427,16 @@ exports[`Modal renders the Brand story 1`] = `
     <div
       class="modal-header modal-header--brand"
     >
+      <div
+        class="modal-header__brand-asset"
+      >
+        <div
+          class="fpo"
+          style="width: 100%; height: 100%;"
+        >
+          Brand Asset
+        </div>
+      </div>
       <h2
         class="heading heading--size-h2"
       >
