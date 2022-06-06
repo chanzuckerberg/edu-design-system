@@ -110,6 +110,7 @@
 
 /**
  * The modal close button
+ * 1) Minimum button target size is 44px, but 3rem (48px) is next closest ramp size.
  */
 .modal__close-button {
   @mixin reset;
@@ -120,8 +121,9 @@
   top: 0;
   right: 0;
 
-  width: 2.75rem;
-  height: 2.75rem;
+  /* 1 */
+  width: var(--eds-size-6);
+  height: var(--eds-size-6);
 
   cursor: pointer;
 
@@ -132,6 +134,9 @@
  * The modal close icon that resides in the close button.
  */
 .modal__close-icon {
+  position: absolute;
+  top: var(--eds-size-1);
+  right: var(--eds-size-1);
   color: var(--eds-theme-color-icon-neutral-subtle);
 }
 
