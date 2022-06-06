@@ -27,10 +27,6 @@ export interface Props {
    * Source of the image used for the logo
    */
   src?: string;
-  /**
-   * Title for the logo link
-   */
-  title?: string;
 }
 
 /**
@@ -49,7 +45,6 @@ export const Logo = ({
   href,
   src,
   ariaLabel,
-  title,
   ...other
 }: Props) => {
   const componentClassName = clsx(styles['logo'], className, {});
@@ -60,7 +55,7 @@ export const Logo = ({
         className={styles['logo__link']}
         href={href}
         rel="home"
-        title={title}
+        title={ariaLabel}
       >
         {children}
       </a>
