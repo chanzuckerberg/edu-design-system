@@ -65,7 +65,7 @@ export const GlobalHeader = ({ className, ...other }: Props) => {
   return (
     <Header behavior="sticky" className={componentClassName} {...other}>
       <Logo
-        ariaLabel="Link to Learning Platform Homepage"
+        ariaLabel="Learning Platform Homepage"
         className={styles['global-header__logo']}
         href="#"
       >
