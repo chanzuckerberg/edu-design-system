@@ -15,8 +15,6 @@ type Props = {
 
 export const ModalBody = (props: Props) => {
   return (
-    // This element is tabbable to allow keyboard users to scroll long content.
-    // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
     <div className={clsx(styles['modal-body'], props.className)}>
       {props.children}
     </div>

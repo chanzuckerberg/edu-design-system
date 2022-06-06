@@ -6,6 +6,6 @@
  * The body of the modal
  */
 .modal-body {
-  padding: var(--eds-size-4) var(--modal-horizontal-padding, var(--eds-size-4));
+  padding: var(--eds-size-4) var(--modal-horizontal-padding);
   flex: 1;
 }

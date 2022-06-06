@@ -9,8 +9,8 @@
   width: 100%;
   background-color: var(--eds-theme-color-background-neutral-default);
   padding-top: var(--eds-size-7);
-  padding-left: var(--modal-horizontal-padding, var(--eds-size-4));
-  padding-right: var(--modal-horizontal-padding, var(--eds-size-4));
+  padding-left: var(--modal-horizontal-padding);
+  padding-right: var(--modal-horizontal-padding);
 }
 
 /**
