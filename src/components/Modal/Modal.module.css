@@ -117,8 +117,11 @@
   background-color: transparent;
 
   position: absolute;
-  top: var(--eds-size-1);
-  right: var(--eds-size-1);
+  top: 0;
+  right: 0;
+
+  width: 2.75rem;
+  height: 2.75rem;
 
   cursor: pointer;
 

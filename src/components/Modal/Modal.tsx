@@ -55,6 +55,7 @@ type ModalContentProps = {
    * Toggles scrollable variant of the modal. If modal is scrollable, footer is not, and vice versa.
    * Defaults to false since modal default is not scrollable.
    * Also adds border and shadow to the footer indicate sticky status.
+   * Prop should be dependent on whether content overflows at the mobile level.
    */
   isScrollable?: boolean;
   /**
