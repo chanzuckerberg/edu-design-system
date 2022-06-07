@@ -1,0 +1,45 @@
+@import '../../design-tokens/mixins.css';
+/**
+ * Breadcrumbs list item
+ */
+.breadcrumbs__item {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+/**
+ * Breacrumbs link
+ */
+.breadcrumbs__link {
+  color: var(--eds-theme-color-text-neutral-subtle);
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+
+  &:focus-visible {
+    @mixin focus;
+  }
+}
+
+/**
+ * Breacrumbs Icon
+ * 1) Icon after each breadcrumb link
+ */
+.breadcrumbs__icon {
+  color: var(--eds-theme-color-icon-neutral-subtle);
+  margin-left: var(--eds-size-1);
+  margin-right: var(--eds-size-1);
+  cursor: default;
+}
+
+/**
+ * Last breadcrumbs item icon
+ * 1) Don't display the last item icon
+ */
+.breadcrumbs__item:last-child .breadcrumbs__icon.breadcrumbs__icon {
+  display: none;
+}

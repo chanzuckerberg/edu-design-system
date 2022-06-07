@@ -1,8 +1,6 @@
 import clsx from 'clsx';
 import React from 'react';
-import { EdsThemeColorIconNeutralStrong } from '../../tokens-dist/ts/colors';
-import styles from '../Breadcrumbs/Breadcrumbs.module.css';
-import Icon from '../Icon';
+import styles from './BreadcrumbsItem.module.css';
 
 export interface Props {
   /**
@@ -35,13 +33,9 @@ export const BreadcrumbsItem = ({ className, text, href, ...other }: Props) => {
       <a className={styles['breadcrumbs__link']} href={href}>
         {text}
       </a>
-      <Icon
-        className={styles['breadcrumbs__icon']}
-        color={EdsThemeColorIconNeutralStrong}
-        name="chevron-right"
-        purpose="decorative"
-        size="0.75rem"
-      />
+      <span aria-hidden className={styles['breadcrumbs__icon']}>
+        /
+      </span>
     </li>
   );
 };
