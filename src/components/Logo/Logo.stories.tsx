@@ -36,6 +36,6 @@ const Template: Story<Props> = (args) => (
 export const Default = Template.bind({});
 Default.args = {
   href: '#',
-  ariaLabel: 'Link to learning platform',
+  ariaLabel: 'Learning platform',
   alt: 'Learning Platform',
 };
