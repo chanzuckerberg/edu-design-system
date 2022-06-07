@@ -13,6 +13,9 @@ export default {
     title:
       'New curriculum updates are available for one or more of your courses.',
   },
+  parameters: {
+    badges: [BADGE.DEPRECATED],
+  },
 };
 
 type Args = React.ComponentProps<typeof Banner>;
@@ -233,7 +236,4 @@ export const Flat: StoryObj<Args> = {
   args: {
     isFlat: true,
   },
-};
-Flat.parameters = {
-  badges: [BADGE.DEPRECATED],
 };
