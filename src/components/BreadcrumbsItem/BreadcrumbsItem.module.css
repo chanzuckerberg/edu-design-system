@@ -1,4 +1,9 @@
 @import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    # BREADCRUMBS ITEM
+\*------------------------------------*/
+
 /**
  * Breadcrumbs list item
  */
@@ -9,7 +14,7 @@
 }
 
 /**
- * Breacrumbs link
+ * Breadcrumbs link
  */
 .breadcrumbs__link {
   color: var(--eds-theme-color-text-neutral-subtle);
@@ -26,7 +31,7 @@
 }
 
 /**
- * Breacrumbs Icon
+ * Breadcrumbs Icon
  * 1) Icon after each breadcrumb link
  */
 .breadcrumbs__icon {

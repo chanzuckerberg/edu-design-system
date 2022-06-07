@@ -24,7 +24,7 @@ export interface Props {
  * import {BreadcrumbsItem} from "@chanzuckerberg/eds";
  * ```
  *
- * A single breadcrumb, to be used in the Breadcrumbs component.
+ * A single breadcrumb subcomponent, to be used in the Breadcrumbs component.
  */
 export const BreadcrumbsItem = ({ className, text, href, ...other }: Props) => {
   const componentClassName = clsx(styles['breadcrumbs__item'], className, {});
