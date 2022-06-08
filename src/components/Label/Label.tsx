@@ -51,8 +51,6 @@ export interface Props {
  * ```ts
  * import {Label} from "@chanzuckerberg/eds";
  * ```
- *
- * TODO: update this comment with a description of the component.
  */
 export const Label = ({
   className,
