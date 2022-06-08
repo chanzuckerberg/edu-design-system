@@ -39,6 +39,7 @@ export { default as LayoutLinelengthContainer } from './components/LayoutLinelen
 export { default as LayoutSection } from './components/LayoutSection';
 export { default as Link } from './components/Link';
 export { default as LinkList } from './components/LinkList';
+export { default as Logo } from './components/Logo';
 export { default as Modal } from './components/Modal';
 export { default as ModalBody } from './components/ModalBody';
 export { default as ModalFooter } from './components/ModalFooter';
@@ -81,8 +82,6 @@ export type { BannerProps } from './components/Banner';
 // export { default as Header } from './components/Header';
 // export { default as ListDetail } from './components/ListDetail';
 // export { default as ListDetailPanel } from './components/ListDetailPanel';
-// export { default as Logo } from './components/Logo';
-// export { default as LogoImage } from './components/LogoImage';
 // export { default as Main } from './components/Main';
 // export { default as NavContainer } from './components/NavContainer';
 // export { default as NotificationList } from './components/NotificationList';
