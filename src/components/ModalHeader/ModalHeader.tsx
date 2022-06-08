@@ -35,10 +35,10 @@ export const ModalHeader = ({
   );
   return (
     <div className={componentClassName} {...other}>
+      {children}
       {variant === 'brand' && brandAsset && (
         <div className={styles['modal-header__brand-asset']}>{brandAsset}</div>
       )}
-      {children}
     </div>
   );
 };

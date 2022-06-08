@@ -18,10 +18,16 @@
  * 1) Brand specific font for the title.
  */
 .modal-header--brand {
-  height: 10.75rem;
+  display: flex;
+  flex-direction: column;
+
+  min-height: 10.75rem;
 
   @media all and (min-height: $eds-bp-sm-2) {
-    height: 19.75rem;
+    min-height: 19.75rem;
+  }
+  @media all and (min-width: $eds-bp-md) and (min-height: $eds-bp-sm-2) {
+    flex-direction: row;
   }
 
   flex-shrink: 0;
@@ -30,8 +36,12 @@
   background-color: var(--eds-color-brand-grape-500);
   h2 {
     /* 1 */
+    flex: 1;
     font-family: 'Mint Grotesk V1.1', sans-serif;
     font-weight: var(--eds-font-weight-medium);
+    @media all and (min-width: $eds-bp-sm-2) {
+      margin-bottom: var(--eds-size-3);
+    }
     @media all and (min-width: $eds-bp-xl) {
       font-size: var(--eds-size-6);
       line-height: var(--eds-size-7);
@@ -44,35 +54,29 @@
  * 1) For mobile landscape orientation.
  */
 .modal-header__brand-asset {
-  position: absolute;
-
-  top: 12rem;
-  right: var(--eds-size-2);
+  align-self: flex-end;
+  position: relative;
+  top: var(--eds-size-2);
+  left: var(--eds-size-2);
 
   width: 8.5rem;
   height: 8.5rem;
 
   /* 1 */
-  @media all and (min-width: $eds-bp-md) {
-    position: relative;
-    float: right;
-
-    top: -0.25rem;
-    right: -2rem;
+  @media all and (min-width: $eds-bp-sm-2) {
+    display: none;
   }
 
   @media all and (min-width: $eds-bp-md) and (min-height: $eds-bp-sm-2) {
-    top: 3.25rem;
-    right: -1.5rem;
+    display: block;
     width: 14rem;
     height: 14rem;
+    left: var(--eds-size-3);
   }
 
   @media all and (min-width: $eds-bp-xl) {
-    top: var(--eds-size-1-and-half);
-    right: calc(-1 * var(--eds-size-1));
-
     width: 16.5rem;
     height: 16.5rem;
+    left: 0;
   }
 }
