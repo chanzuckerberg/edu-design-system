@@ -90,8 +90,7 @@ const variantToIconAssetsMap: {
 
 /**
  * @deprecated The Banner component is deprecated and will be removed in an upcoming release.
- * If your banner appears at the top of the page, please use the PageLevelBanner instead.
- * If the banner appears lower in the page, please use the InlineNoticication component.
+ * Please visit Zeroheight to find the right notification component for your needs: https://eds.czi.design/
  *
  * ```ts
  * import {Banner} from "@chanzuckerberg/eds";
