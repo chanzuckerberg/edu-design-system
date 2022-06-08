@@ -2,10 +2,10 @@ import clsx from 'clsx';
 import React, { ChangeEventHandler, MouseEventHandler, ReactNode } from 'react';
 import { useUID } from 'react-uid';
 import styles from './TextField.module.css';
-import FieldNote from '../../upcoming-components/FieldNote';
-import Label from '../../upcoming-components/Label';
-import TextInput from '../../upcoming-components/TextInput';
+import FieldNote from '../FieldNote';
 import Icon, { IconName } from '../Icon';
+import Label from '../Label';
+import TextInput from '../TextInput';
 
 export interface Props {
   /**

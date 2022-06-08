@@ -1,8 +1,8 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
-import { Story, Meta } from '@storybook/react';
+import { StoryObj } from '@storybook/react';
 import React from 'react';
 
-import { TextField, Props } from './TextField';
+import { TextField } from './TextField';
 import Button from '../../components/Button';
 
 export default {
@@ -11,51 +11,58 @@ export default {
   parameters: {
     badges: [BADGE.BETA],
   },
-} as Meta;
-
-const Template: Story<Props> = (args) => <TextField {...args} />;
-
-const InvertedTemplate: Story<Props> = (args) => (
-  <div style={{ padding: '1rem', background: '#000' }}>
-    <TextField {...args} />
-  </div>
-);
-
-export const Default = Template.bind({});
-Default.args = {
-  fieldNote: 'This is a fieldnote.',
 };
 
-export const Inverted = InvertedTemplate.bind({});
-Inverted.args = {
-  inverted: true,
-  fieldNote: 'This is a fieldnote.',
+type Args = React.ComponentProps<typeof TextField>;
+
+export const Default: StoryObj<Args> = {
+  args: {
+    fieldNote: 'This is a fieldnote.',
+  },
 };
 
-export const Error = Template.bind({});
-Error.args = {
-  isError: true,
-  fieldNote: 'This is a fieldnote with an error.',
+export const Inverted: StoryObj<Args> = {
+  args: {
+    inverted: true,
+    fieldNote: 'This is a fieldnote.',
+  },
+  decorators: [
+    (Story) => (
+      <div style={{ padding: '1rem', background: '#000' }}>
+        <Story />
+      </div>
+    ),
+  ],
 };
 
-export const Disabled = Template.bind({});
-Disabled.args = {
-  disabled: true,
+export const Error: StoryObj<Args> = {
+  args: {
+    isError: true,
+    fieldNote: 'This is a fieldnote with an error.',
+  },
 };
 
-export const Optional = Template.bind({});
-Optional.args = {
-  required: false,
-  fieldNote: 'This is a fieldnote for an optional text field.',
+export const Disabled: StoryObj<Args> = {
+  args: {
+    disabled: true,
+  },
 };
 
-export const HideLabel = Template.bind({});
-HideLabel.args = {
-  hideLabel: true,
+export const Optional: StoryObj<Args> = {
+  args: {
+    required: false,
+    fieldNote: 'This is a fieldnote for an optional text field.',
+  },
 };
 
-export const InputWithin = () => {
-  return (
+export const HideLabel: StoryObj<Args> = {
+  args: {
+    hideLabel: true,
+  },
+};
+
+export const InputWithin: StoryObj<Args> = {
+  render: () => (
     <div>
       <TextField
         inputWithin={
@@ -66,5 +73,5 @@ export const InputWithin = () => {
         type="text"
       />
     </div>
-  );
+  ),
 };
