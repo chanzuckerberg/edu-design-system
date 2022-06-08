@@ -2,11 +2,11 @@ import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import { useUID } from 'react-uid';
 import styles from './CheckboxField.module.css';
+import FieldNote from '../../components/FieldNote';
 import Fieldset from '../../components/Fieldset';
 import FieldsetItems from '../../components/FieldsetItems';
 import FieldsetLegend from '../../components/FieldsetLegend';
 import CheckboxFieldItem from '../CheckboxFieldItem';
-import FieldNote from '../FieldNote';
 
 export interface Props {
   /**
