@@ -55,10 +55,6 @@
   gap: var(--eds-size-2);
 }
 
-.banner__textContent {
-  gap: var(--eds-size-1);
-}
-
 .banner__action {
   justify-self: center;
   align-self: center;
@@ -67,13 +63,11 @@
 /**
  * Banner close button
  * 1) Button used to dismiss dismissable banners
- * 2) Match close button icon color to the banner text color
  */
 .banner__close-btn.banner__close-btn {
   position: absolute;
   top: var(--eds-size-half);
   right: var(--eds-size-half);
-  color: inherit; /* 2 */
 }
 
 /*------------------------------------*\
