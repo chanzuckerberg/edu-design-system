@@ -189,7 +189,7 @@ export const DismissableWithAction: StoryObj<Args> = {
 export const DismissableBelowContent: StoryObj<Args> = {
   render: (args) => (
     <>
-      <Heading className={styles.headingBottomSpacing} size="h1">
+      <Heading className={styles['heading']} size="h1">
         Page Title
       </Heading>
       <Banner
