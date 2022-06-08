@@ -1,0 +1,50 @@
+@import '../../../src/design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #CALENDARCARD
+\*------------------------------------*/
+
+/**
+ * 1) 
+ */
+.calendar-card {
+  width: 16rem;
+  border-radius: var(--eds-border-radius-md);
+  background-color: var(--eds-theme-color-background-neutral-medium);
+}
+
+.calendar-card--brand {
+  border-left: var(--eds-border-width-lg) solid
+  var(--eds-theme-color-border-brand-primary-strong);
+}
+
+.calendar-card--revise {
+  border-left: var(--eds-border-width-lg) solid var(--eds-theme-color-border-grade-revise-strong);
+}
+
+.calendar-card--success {
+  border-left: var(--eds-border-width-lg) solid var(--eds-theme-color-border-utility-success-strong);
+}
+
+.calendar-card__body {
+  flex-direction: row;
+  gap: var(--eds-);
+}
+
+.calendar-card__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.calendar-card__meta {
+  @mixin eds-theme-typography-body-text-xs;
+  color: var(--eds-theme-color-text-neutral-subtle);
+}
+
+.calendar-card__meta-icon {
+  margin-right: var(--eds-size-1);
+  position: relative;
+  bottom: 1px;
+}
