@@ -18,7 +18,13 @@
  * 1) Brand specific font for the title.
  */
 .modal-header--brand {
-  height: 19.75rem;
+  height: 10.75rem;
+
+  @media all and (min-height: $eds-bp-sm-2) {
+    height: 19.75rem;
+  }
+
+  flex-shrink: 0;
 
   color: var(--eds-theme-color-text-neutral-default-inverse);
   background-color: var(--eds-color-brand-grape-500);
@@ -35,6 +41,7 @@
 
 /**
  * Specific asset placement for brand.
+ * 1) For mobile landscape orientation.
  */
 .modal-header__brand-asset {
   position: absolute;
@@ -45,16 +52,22 @@
   width: 8.5rem;
   height: 8.5rem;
 
+  /* 1 */
   @media all and (min-width: $eds-bp-md) {
     position: relative;
     float: right;
 
+    top: -0.25rem;
+    right: -2rem;
+  }
+
+  @media all and (min-width: $eds-bp-md) and (min-height: $eds-bp-sm-2) {
     top: 3.25rem;
     right: -1.5rem;
-
     width: 14rem;
     height: 14rem;
   }
+
   @media all and (min-width: $eds-bp-xl) {
     top: var(--eds-size-1-and-half);
     right: calc(-1 * var(--eds-size-1));

@@ -126,13 +126,15 @@ function InteractiveExample(args: InteractiveArgs) {
   );
 }
 
-export const DefaultInteractive = {
-  render: () => <InteractiveExample>{getChildren()}</InteractiveExample>,
+export const DefaultInteractive: StoryObj<InteractiveArgs> = {
+  render: (args) => (
+    <InteractiveExample {...args}>{getChildren()}</InteractiveExample>
+  ),
 };
 
-export const WithoutCloseButton = {
-  render: () => (
-    <InteractiveExample hideCloseButton={true}>
+export const WithoutCloseButton: StoryObj<InteractiveArgs> = {
+  render: (args) => (
+    <InteractiveExample {...args} hideCloseButton={true}>
       {getChildren()}
     </InteractiveExample>
   ),
