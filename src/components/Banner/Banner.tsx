@@ -121,13 +121,6 @@ export const Banner = ({
   title,
   titleAs = 'h3',
 }: BannerProps) => {
-  if (isFlat && process.env.NODE_ENV !== 'production') {
-    console.warn(
-      'The isFlat style is deprecated and will be removed in an upcoming release.\n',
-      'Please remove this prop to use the default elevated style (with a border and drop shadow) instead.',
-    );
-  }
-
   const isHorizontal = !orientation;
 
   const componentClassName = clsx(
