@@ -52,6 +52,7 @@ export { default as NumberIcon } from './components/NumberIcon';
 export { default as OverflowList } from './components/OverflowList';
 export { default as OverflowListItem } from './components/OverflowListItem';
 export { default as PageHeader } from './components/PageHeader';
+export { default as PageLevelBanner } from './components/PageLevelBanner';
 export { default as Panel } from './components/Panel';
 export { default as ProjectCard } from './components/ProjectCard';
 export { default as Section } from './components/Section';
