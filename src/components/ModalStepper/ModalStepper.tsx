@@ -26,7 +26,7 @@ export interface Props {
  * import {ModalStepper} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * Stepper for the modal to indicate page status.
  */
 export const ModalStepper = ({
   activeStep,
@@ -35,12 +35,18 @@ export const ModalStepper = ({
   ...other
 }: Props) => {
   const componentClassName = clsx(styles['modal-stepper'], className);
-  if (
-    process.env.NODE_ENV !== 'production' &&
-    (totalSteps < 1 || activeStep < 1 || totalSteps < activeStep)
-  ) {
-    throw new Error('Invalid step numbers.');
+  if (process.env.NODE_ENV !== 'production') {
+    if (totalSteps < 1) {
+      throw new Error('Must have more than one step in totalSteps.');
+    }
+    if (activeStep < 1) {
+      throw new Error('activeStep must be one or more.');
+    }
+    if (totalSteps < activeStep) {
+      throw new Error('activeStep cannot exceed totalSteps');
+    }
   }
+
   const stepIcons = [];
   for (let i = 0; i < totalSteps; i++) {
     const isActivestep = i + 1 === activeStep;
