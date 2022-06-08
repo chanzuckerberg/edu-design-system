@@ -23,9 +23,9 @@ export interface Props {
   expandable?: boolean;
   /**
    * Sidebar property
-   * 1) Adjust the size of the sidebar
+   * 1) Adjust the gap between layout sections.
    */
-  gap?: 'none';
+  gap?: 'none' | 'lg-xl';
   /**
    * Sidebar property
    * 1) Adjust the size of the sidebar
@@ -35,7 +35,7 @@ export interface Props {
    * Sidebar property
    * 1) Adjust the size of the sidebar
    */
-  variant?: 'right-sidebar' | '60-40';
+  variant?: 'right-sidebar' | '50-50' | '60-40';
 }
 
 /**
@@ -62,8 +62,9 @@ export const Layout = ({
     className,
     variant === '60-40' && styles['layout--60-40'],
     variant === 'right-sidebar' && styles['layout--right-sidebar'],
+    variant && styles[`layout--${variant}`],
     behavior === 'fixed-sidebar' && styles['layout--fixed-sidebar'],
-    gap === 'none' && styles['layout--gap-none'],
+    gap && styles[`layout--gap-${gap}`],
     sidebar === 'wide' && styles['layout--sidebar-wide'],
   );
 

@@ -3,7 +3,15 @@ import React, { forwardRef, ForwardedRef } from 'react';
 import styles from './Text.module.css';
 import LayoutLinelengthContainer from '../LayoutLinelengthContainer';
 
-export type Size = 'body' | 'sm' | 'md' | 'lg' | 'xs' | 'caption' | 'overline';
+export type Size =
+  | 'body'
+  | 'sm'
+  | 'md'
+  | 'lg'
+  | 'xs'
+  | 'caption'
+  | 'overline'
+  | 'callout';
 
 export type Variant =
   | 'error'
@@ -90,7 +98,6 @@ export const Text = forwardRef(
     const TagName =
       capLinelength && as === 'div' ? LayoutLinelengthContainer : as;
     const componentClassName = clsx(
-      className,
       styles['text'],
       styles[`text--${size}`],
       variant && styles[`text--${variant}`],
@@ -98,6 +105,7 @@ export const Text = forwardRef(
       spacing && styles[`text--${spacing}-spacing`],
       as === 'div' && styles['text-passage'],
       as === 'div' && styles[`text-passage--${size}`],
+      className,
     );
     return (
       <TagName className={componentClassName} ref={ref} {...other}>

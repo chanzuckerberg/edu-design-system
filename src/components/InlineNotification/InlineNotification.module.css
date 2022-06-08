@@ -9,8 +9,7 @@
  */
 .inline-notification {
   display: inline-flex;
-  padding: var(--eds-size-half);
-  border: var(--eds-theme-border-width) solid var(--border-dark-color);
+  padding: var(--eds-size-quarter) var(--eds-size-half);
   border-radius: var(--eds-theme-border-radius);
 }
 
@@ -20,6 +19,7 @@
  */
 .inline-notification__icon {
   flex-shrink: 0; /* 1 */
+  color: var(--messaging-icon-color);
 }
 
 /**
@@ -35,42 +35,41 @@
  */
 .inline-notification--brand {
   @mixin messagingBrand;
+
+  border: var(--eds-theme-border-width) solid
+    var(--eds-theme-color-border-brand-primary-strong);
 }
 .inline-notification--success {
   @mixin messagingSuccess;
+
+  border: var(--eds-theme-border-width) solid
+    var(--eds-theme-color-border-utility-success-default);
 }
 .inline-notification--warning {
   @mixin messagingWarning;
+
+  border: var(--eds-theme-border-width) solid
+    var(--eds-theme-color-border-utility-warning-strong);
 }
 .inline-notification--yield {
   @mixin messagingYield;
+
+  border: var(--eds-theme-border-width) solid
+    var(--eds-theme-color-border-grade-revise-strong);
 }
 .inline-notification--subtle {
   background-color: var(--eds-theme-color-background-neutral-default);
 }
 
 /**
- * Icon color variants.
- */
-.inline-notification__icon--brand {
-  fill: var(--eds-theme-color-icon-brand-primary);
-}
-.inline-notification__icon--success {
-  fill: var(--eds-theme-color-icon-utility-success);
-}
-.inline-notification__icon--warning {
-  fill: var(--eds-theme-color-icon-utility-warning);
-}
-.inline-notification__icon--yield {
-  fill: var(--eds-theme-color-background-grade-revise-default);
-}
-
-/**
  * Full width variant of the inline notification.
+ * 1) Accounts for the lack of border in height to make it 44px.
  */
 .inline-notification--full-width {
   display: flex;
   border: 0;
+  border-radius: 0;
+  padding: calc(var(--eds-size-1) + var(--eds-theme-border-width)); /* 1 */
 }
 .inline-notification--full-width-subtle {
   background-color: var(--eds-theme-color-background-neutral-subtle);

@@ -28,7 +28,7 @@
   border-left-width: var(--eds-border-width-lg); /* 3 */
   border-radius: var(--eds-size-half);
 
-  border-color: var(--border-light-color); /* 4 */
+  border-color: var(--messaging-border-color); /* 4 */
   border-left-color: var(--border-dark-color); /* 4 */
 
   box-shadow: var(--eds-box-shadow-sm);

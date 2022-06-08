@@ -3,6 +3,7 @@ import type { StoryObj } from '@storybook/react';
 import React from 'react';
 
 import { Banner, Variant } from './Banner';
+import styles from './Banner.stories.module.css';
 import Button from '../Button';
 import Heading from '../Heading';
 
@@ -12,6 +13,9 @@ export default {
   args: {
     title:
       'New curriculum updates are available for one or more of your courses.',
+  },
+  parameters: {
+    badges: [BADGE.DEPRECATED],
   },
 };
 
@@ -185,7 +189,9 @@ export const DismissableWithAction: StoryObj<Args> = {
 export const DismissableBelowContent: StoryObj<Args> = {
   render: (args) => (
     <>
-      <Heading size="h1">Page Title</Heading>
+      <Heading className={styles['heading']} size="h1">
+        Page Title
+      </Heading>
       <Banner
         {...args}
         description={getDescription()}
@@ -233,7 +239,4 @@ export const Flat: StoryObj<Args> = {
   args: {
     isFlat: true,
   },
-};
-Flat.parameters = {
-  badges: [BADGE.DEPRECATED],
 };

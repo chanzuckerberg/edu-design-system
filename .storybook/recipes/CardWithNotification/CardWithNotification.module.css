@@ -1,0 +1,22 @@
+@import '../../../src/design-tokens/mixins.css';
+
+/*------------------------------------*\
+    # CARD WITH NOTIFICATION
+\*------------------------------------*/
+
+/**
+ * Card recipe with a bottom notification.
+ * 1) Add a border around the entire card and notification.
+ * 2) Remove the redundant border that existed on the card component.
+ */
+.card-with-notification {
+  /* 1 */
+  border-radius: var(--eds-theme-border-radius);
+  border: var(--eds-theme-color-border-neutral-subtle) solid
+    var(--eds-theme-border-width);
+}
+.card-with-notification__card {
+  /* 2 */
+  border: 0;
+  border-radius: 0;
+}

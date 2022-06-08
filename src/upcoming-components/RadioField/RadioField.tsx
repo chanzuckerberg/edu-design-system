@@ -3,10 +3,10 @@ import React, { ReactNode, useState, FormEvent } from 'react';
 import { allByType } from 'react-children-by-type';
 import { useUID } from 'react-uid';
 import styles from './RadioField.module.css';
+import FieldNote from '../../components/FieldNote';
 import Fieldset from '../../components/Fieldset';
 import FieldsetItems from '../../components/FieldsetItems';
 import FieldsetLegend from '../../components/FieldsetLegend';
-import FieldNote from '../FieldNote';
 import RadioFieldItem from '../RadioFieldItem';
 
 export interface Props {

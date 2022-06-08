@@ -3,8 +3,8 @@ import React, { ReactNode } from 'react';
 import { useUID } from 'react-uid';
 import styles from './InlineForm.module.css';
 import Button from '../../components/Button';
-import Label from '../Label';
-import TextInput from '../TextInput';
+import Label from '../../components/Label';
+import TextInput from '../../components/TextInput';
 
 export interface Props {
   /**

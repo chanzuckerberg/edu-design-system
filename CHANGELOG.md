@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/chanzuckerberg/edu-design-system/compare/v1.2.0-alpha.0...v1.1.1) (2022-06-08)
+
+## [1.1.0](https://github.com/chanzuckerberg/edu-design-system/compare/v1.0.0...v1.1.0) (2022-06-02)
+
+### Features
+
+- use Material Sharp icons ([#1104](https://github.com/chanzuckerberg/edu-design-system/issues/1104))
+- add deprecation warning to older status icons ([#1104](https://github.com/chanzuckerberg/edu-design-system/issues/1104))
+
+## [1.0.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.22.0...v1.0.0) (2022-06-01)
+
+### Features
+
+- **cadstep1:** add cad step 1 ([#1073](https://github.com/chanzuckerberg/edu-design-system/issues/1073)) ([1a9406d](https://github.com/chanzuckerberg/edu-design-system/commit/1a9406d9e291f4952ee3dd7a28189cb5e6a14e4b))
+- **cardwithnotification:** create card with notification recipe ([#1097](https://github.com/chanzuckerberg/edu-design-system/issues/1097)) ([f741ce9](https://github.com/chanzuckerberg/edu-design-system/commit/f741ce9022b5d3adac664f0fbea12b0cd50ae868))
+- **tokens:** use brand colors ([391ce2d](https://github.com/chanzuckerberg/edu-design-system/commit/391ce2dad6756877cedd3bf033bb25d680579187))
+
+## [0.22.0](https://github.com/chanzuckerberg/edu-design-system/compare/v0.21.1...v0.22.0) (2022-05-27)
+
+### Features
+
+- **heading:** use new heading tokens in old heading size props ([c776b38](https://github.com/chanzuckerberg/edu-design-system/commit/c776b3836f772b2286ea986e82110afbbcdfe291))
+- use Graphik as primary font family ([e8b30d5](https://github.com/chanzuckerberg/edu-design-system/commit/e8b30d5ef72008144952dfa813ea6c5045ac1451))
+
 ### [0.21.1](https://github.com/chanzuckerberg/edu-design-system/compare/v0.21.0...v0.21.1) (2022-05-26)
 
 ### Features

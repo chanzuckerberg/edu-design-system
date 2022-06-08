@@ -95,15 +95,18 @@ export const InlineNotification = ({
       styles[`inline-notification--full-width-subtle`],
     className,
   );
+
   const iconClassName = clsx(
     styles['inline-notification__icon'],
     styles[`inline-notification__icon--${variant}`],
     inactive && styles[`inline-notification__icon--inactive`],
   );
+
   const textClassName = clsx(
     styles[`inline-notification__text`],
     inactive && styles[`inline-notification__text--inactive`],
   );
+
   return (
     <div className={componentClassName} {...other}>
       <Icon

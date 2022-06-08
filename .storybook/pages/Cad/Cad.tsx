@@ -20,6 +20,7 @@ import {
 } from '../../../src';
 
 import '../../../src/components/Utilities/Spacing.css';
+import CardWithNotification from '../../recipes/CardWithNotification';
 import ProjectCard from '../../recipes/ProjectCard';
 import StandardsCoverage from '../../recipes/StandardsCoverage';
 
@@ -217,28 +218,23 @@ export const Cad = () => (
         </LayoutSection>
         <LayoutSection region="sidebar">
           <Panel className="u-margin-bottom-lg" flush>
-            <div className="u-padding-md">
-              <Toolbar className="u-margin-bottom-md" variant="bare">
-                <ToolbarItem>
-                  <Heading as="h2" size="title-sm">
-                    Total Instructional days
-                  </Heading>
-                </ToolbarItem>
-                <ToolbarItem align="right">
-                  <div className="fpo u-margin-none">Meta</div>
-                </ToolbarItem>
-              </Toolbar>
-              <DataBar
-                label="Data bar"
-                max={100}
-                segments={[
-                  { value: 25, text: 'Segment 1' },
-                  { value: 10, text: 'Segment 2' },
-                  { value: 15, text: 'Segment 3' },
-                ]}
-              />
-            </div>
-            <div className="fpo">Inline Notification</div>
+            <CardWithNotification
+              text="Summit recommends teaching at least five (5) projects for this course."
+              variant="brand"
+            >
+              <CardWithNotification.Body>
+                <DataBar
+                  label="Total instructional days"
+                  max={60}
+                  segments={[
+                    { value: 10, text: 'Project 1' },
+                    { value: 11, text: 'Project 2' },
+                    { value: 22, text: 'Project 3' },
+                    { value: 11, text: 'Project 4' },
+                  ]}
+                />
+              </CardWithNotification.Body>
+            </CardWithNotification>
           </Panel>
           <StandardsCoverage />
         </LayoutSection>

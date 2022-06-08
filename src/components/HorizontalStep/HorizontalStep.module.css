@@ -4,11 +4,14 @@
 
 /**
  * Horizontal Step displays the step text and associated decorative icon.
+ * 1) Required to prevent overflowing outside container.
  */
 .horizontal-step {
   display: flex;
   align-items: center;
   gap: var(--eds-size-1);
+
+  min-width: 0; /* 1 */
 }
 
 /**
@@ -38,4 +41,19 @@
   margin-left: var(--eds-size-1);
   margin-right: var(--eds-size-1);
   fill: var(--eds-theme-color-icon-disabled);
+}
+
+/**
+ * Horizontal Step Text
+ * 1) Hides text for smaller screen sizes.
+ * 2) Hides overflow text with ellipsis.
+ */
+.horizontal-step__text {
+  display: none; /* 1 */
+  @media all and (min-width: $eds-bp-md) {
+    display: inline;
+    white-space: nowrap; /* 2 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }

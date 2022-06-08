@@ -1,6 +1,14 @@
 const path = require('path');
 const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin');
 
+/**
+ * Although `--static-dir` is marked as deprecated. The The Chromatic CLI
+ * currently pulls the staticDir from the build script, but does not support
+ * the staticDirs configuration option.
+ *
+ * We should refrain from using the staticDirs option in this configuration until
+ * https://github.com/chromaui/chromatic-cli/issues/462 is resolved.
+ */
 module.exports = {
   stories: [
     './components/**/*.stories.@(js|jsx|ts|tsx)',
@@ -33,6 +41,9 @@ module.exports = {
       },
     },
   ],
+  core: {
+    builder: 'webpack5',
+  },
   webpackFinal: async (config) => {
     const SVGSpritesPlugin = new SVGSpritemapPlugin(
       path.resolve(__dirname, '../src/icons/**/*.svg'),

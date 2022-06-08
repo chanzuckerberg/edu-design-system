@@ -36,9 +36,14 @@
   @mixin eds-theme-typography-title-sm;
 }
 
-/* Not in Figma yet */
+/* Deprecated; not in figma */
 .heading--size-body-sm {
   @mixin eds-theme-typography-body-text-sm-bold;
+}
+
+/* Deprecated; not in figma */
+.heading--size-body-xs {
+  @mixin eds-theme-typography-body-text-xs-bold;
 }
 
 /**
@@ -64,8 +69,14 @@
   @mixin eds-theme-typography-heading-5;
 }
 
+/* Deprecated; not in figma */
 .heading--size-h6 {
   @mixin eds-theme-typography-heading-6;
+}
+
+/* Deprecated; not in figma */
+.heading--size-h7 {
+  @mixin eds-theme-typography-heading-7;
 }
 
 /**
@@ -81,15 +92,13 @@
   color: var(--eds-theme-color-text-brand-primary);
 }
 .heading--info {
-  /* TODO(brand-tokens): remove */
   color: var(--eds-color-info-700);
 }
 .heading--inherit {
   color: inherit;
 }
 .heading--neutral {
-  /* TODO(brand-tokens): update to text-neutral-default when new colors land */
-  color: var(--eds-theme-color-text-neutral-subtle);
+  color: var(--eds-theme-color-text-neutral-default);
 }
 .heading--success {
   color: var(--eds-theme-color-text-utility-success);

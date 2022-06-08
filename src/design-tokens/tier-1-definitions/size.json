@@ -7,6 +7,9 @@
       "half": {
         "value": "0.25rem"
       },
+      "quarter": {
+        "value": "0.125rem"
+      },
       "1": {
         "value": "0.5rem"
       },
@@ -42,6 +45,9 @@
       },
       "10": {
         "value": "5rem"
+      },
+      "12": {
+        "value": "6rem"
       }
     }
   }

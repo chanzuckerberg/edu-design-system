@@ -29,7 +29,7 @@ exports[`<HorizontalStepper /> CompletedAllSteps story renders snapshot 1`] = `
         />
       </svg>
       <span
-        class="text text--sm text--inherit text--bold-weight"
+        class="text text--sm text--inherit text--bold-weight horizontal-step__text"
       >
         Step 1
       </span>
@@ -60,7 +60,7 @@ exports[`<HorizontalStepper /> CompletedAllSteps story renders snapshot 1`] = `
         />
       </svg>
       <span
-        class="text text--sm text--inherit text--bold-weight"
+        class="text text--sm text--inherit text--bold-weight horizontal-step__text"
       >
         Step 2
       </span>
@@ -91,7 +91,7 @@ exports[`<HorizontalStepper /> CompletedAllSteps story renders snapshot 1`] = `
         />
       </svg>
       <span
-        class="text text--sm text--inherit text--bold-weight"
+        class="text text--sm text--inherit text--bold-weight horizontal-step__text"
       >
         Step 3
       </span>
@@ -122,7 +122,7 @@ exports[`<HorizontalStepper /> CompletedAllSteps story renders snapshot 1`] = `
         />
       </svg>
       <span
-        class="text text--sm text--inherit text--bold-weight"
+        class="text text--sm text--inherit text--bold-weight horizontal-step__text"
       >
         Step 4
       </span>
@@ -153,7 +153,7 @@ exports[`<HorizontalStepper /> CompletedAllSteps story renders snapshot 1`] = `
         />
       </svg>
       <span
-        class="text text--sm text--inherit text--bold-weight"
+        class="text text--sm text--inherit text--bold-weight horizontal-step__text"
       >
         Step 5
       </span>
@@ -191,7 +191,7 @@ exports[`<HorizontalStepper /> HorizontalSteps story renders snapshot 1`] = `
         />
       </svg>
       <span
-        class="text text--sm text--inherit text--bold-weight"
+        class="text text--sm text--inherit text--bold-weight horizontal-step__text"
       >
         Horizontal step
       </span>
@@ -201,13 +201,13 @@ exports[`<HorizontalStepper /> HorizontalSteps story renders snapshot 1`] = `
     >
       <span
         aria-label="current step 1 Horizontal step"
-        class="number-icon number-icon--base text text--sm text--base"
+        class="text text--sm text--base number-icon number-icon--base"
         role="img"
       >
         1
       </span>
       <span
-        class="text text--sm text--inherit text--bold-weight"
+        class="text text--sm text--inherit text--bold-weight horizontal-step__text"
       >
         Horizontal step
       </span>
@@ -234,7 +234,7 @@ exports[`<HorizontalStepper /> HorizontalSteps story renders snapshot 1`] = `
         />
       </svg>
       <span
-        class="text text--sm text--inherit text--bold-weight"
+        class="text text--sm text--inherit text--bold-weight horizontal-step__text"
       >
         Horizontal step
       </span>
@@ -255,13 +255,13 @@ exports[`<HorizontalStepper /> HorizontalStepsDifferentNumbers story renders sna
     >
       <span
         aria-label="current step 1 Horizontal step"
-        class="number-icon number-icon--base text text--sm text--base"
+        class="text text--sm text--base number-icon number-icon--base"
         role="img"
       >
         1
       </span>
       <span
-        class="text text--sm text--inherit text--bold-weight"
+        class="text text--sm text--inherit text--bold-weight horizontal-step__text"
       >
         Horizontal step
       </span>
@@ -271,13 +271,13 @@ exports[`<HorizontalStepper /> HorizontalStepsDifferentNumbers story renders sna
     >
       <span
         aria-label="current step 2 Horizontal step"
-        class="number-icon number-icon--base text text--sm text--base"
+        class="text text--sm text--base number-icon number-icon--base"
         role="img"
       >
         2
       </span>
       <span
-        class="text text--sm text--inherit text--bold-weight"
+        class="text text--sm text--inherit text--bold-weight horizontal-step__text"
       >
         Horizontal step
       </span>
@@ -287,13 +287,13 @@ exports[`<HorizontalStepper /> HorizontalStepsDifferentNumbers story renders sna
     >
       <span
         aria-label="current step 3 Horizontal step"
-        class="number-icon number-icon--base text text--sm text--base"
+        class="text text--sm text--base number-icon number-icon--base"
         role="img"
       >
         3
       </span>
       <span
-        class="text text--sm text--inherit text--bold-weight"
+        class="text text--sm text--inherit text--bold-weight horizontal-step__text"
       >
         Horizontal step
       </span>
@@ -303,13 +303,13 @@ exports[`<HorizontalStepper /> HorizontalStepsDifferentNumbers story renders sna
     >
       <span
         aria-label="current step 4 Horizontal step"
-        class="number-icon number-icon--base text text--sm text--base"
+        class="text text--sm text--base number-icon number-icon--base"
         role="img"
       >
         4
       </span>
       <span
-        class="text text--sm text--inherit text--bold-weight"
+        class="text text--sm text--inherit text--bold-weight horizontal-step__text"
       >
         Horizontal step
       </span>
@@ -319,13 +319,13 @@ exports[`<HorizontalStepper /> HorizontalStepsDifferentNumbers story renders sna
     >
       <span
         aria-label="current step 5 Horizontal step"
-        class="number-icon number-icon--base text text--sm text--base"
+        class="text text--sm text--base number-icon number-icon--base"
         role="img"
       >
         5
       </span>
       <span
-        class="text text--sm text--inherit text--bold-weight"
+        class="text text--sm text--inherit text--bold-weight horizontal-step__text"
       >
         Horizontal step
       </span>
@@ -335,13 +335,13 @@ exports[`<HorizontalStepper /> HorizontalStepsDifferentNumbers story renders sna
     >
       <span
         aria-label="current step 6 Horizontal step"
-        class="number-icon number-icon--base text text--sm text--base"
+        class="text text--sm text--base number-icon number-icon--base"
         role="img"
       >
         6
       </span>
       <span
-        class="text text--sm text--inherit text--bold-weight"
+        class="text text--sm text--inherit text--bold-weight horizontal-step__text"
       >
         Horizontal step
       </span>
@@ -351,13 +351,13 @@ exports[`<HorizontalStepper /> HorizontalStepsDifferentNumbers story renders sna
     >
       <span
         aria-label="current step 7 Horizontal step"
-        class="number-icon number-icon--base text text--sm text--base"
+        class="text text--sm text--base number-icon number-icon--base"
         role="img"
       >
         7
       </span>
       <span
-        class="text text--sm text--inherit text--bold-weight"
+        class="text text--sm text--inherit text--bold-weight horizontal-step__text"
       >
         Horizontal step
       </span>
@@ -367,13 +367,13 @@ exports[`<HorizontalStepper /> HorizontalStepsDifferentNumbers story renders sna
     >
       <span
         aria-label="current step 8 Horizontal step"
-        class="number-icon number-icon--base text text--sm text--base"
+        class="text text--sm text--base number-icon number-icon--base"
         role="img"
       >
         8
       </span>
       <span
-        class="text text--sm text--inherit text--bold-weight"
+        class="text text--sm text--inherit text--bold-weight horizontal-step__text"
       >
         Horizontal step
       </span>
@@ -383,13 +383,13 @@ exports[`<HorizontalStepper /> HorizontalStepsDifferentNumbers story renders sna
     >
       <span
         aria-label="current step 9 Horizontal step"
-        class="number-icon number-icon--base text text--sm text--base"
+        class="text text--sm text--base number-icon number-icon--base"
         role="img"
       >
         9
       </span>
       <span
-        class="text text--sm text--inherit text--bold-weight"
+        class="text text--sm text--inherit text--bold-weight horizontal-step__text"
       >
         Horizontal step
       </span>
@@ -399,13 +399,13 @@ exports[`<HorizontalStepper /> HorizontalStepsDifferentNumbers story renders sna
     >
       <span
         aria-label="current step 10 Horizontal step"
-        class="number-icon number-icon--base text text--sm text--base"
+        class="text text--sm text--base number-icon number-icon--base"
         role="img"
       >
         10
       </span>
       <span
-        class="text text--sm text--inherit text--bold-weight"
+        class="text text--sm text--inherit text--bold-weight horizontal-step__text"
       >
         Horizontal step
       </span>
@@ -415,13 +415,13 @@ exports[`<HorizontalStepper /> HorizontalStepsDifferentNumbers story renders sna
     >
       <span
         aria-label="current step 21 Horizontal step"
-        class="number-icon number-icon--base text text--sm text--base"
+        class="text text--sm text--base number-icon number-icon--base"
         role="img"
       >
         21
       </span>
       <span
-        class="text text--sm text--inherit text--bold-weight"
+        class="text text--sm text--inherit text--bold-weight horizontal-step__text"
       >
         Horizontal step
       </span>
@@ -431,13 +431,13 @@ exports[`<HorizontalStepper /> HorizontalStepsDifferentNumbers story renders sna
     >
       <span
         aria-label="current step 32 Horizontal step"
-        class="number-icon number-icon--base text text--sm text--base"
+        class="text text--sm text--base number-icon number-icon--base"
         role="img"
       >
         32
       </span>
       <span
-        class="text text--sm text--inherit text--bold-weight"
+        class="text text--sm text--inherit text--bold-weight horizontal-step__text"
       >
         Horizontal step
       </span>
@@ -447,13 +447,13 @@ exports[`<HorizontalStepper /> HorizontalStepsDifferentNumbers story renders sna
     >
       <span
         aria-label="current step 43 Horizontal step"
-        class="number-icon number-icon--base text text--sm text--base"
+        class="text text--sm text--base number-icon number-icon--base"
         role="img"
       >
         43
       </span>
       <span
-        class="text text--sm text--inherit text--bold-weight"
+        class="text text--sm text--inherit text--bold-weight horizontal-step__text"
       >
         Horizontal step
       </span>
@@ -463,13 +463,13 @@ exports[`<HorizontalStepper /> HorizontalStepsDifferentNumbers story renders sna
     >
       <span
         aria-label="current step 54 Horizontal step"
-        class="number-icon number-icon--base text text--sm text--base"
+        class="text text--sm text--base number-icon number-icon--base"
         role="img"
       >
         54
       </span>
       <span
-        class="text text--sm text--inherit text--bold-weight"
+        class="text text--sm text--inherit text--bold-weight horizontal-step__text"
       >
         Horizontal step
       </span>
@@ -479,13 +479,13 @@ exports[`<HorizontalStepper /> HorizontalStepsDifferentNumbers story renders sna
     >
       <span
         aria-label="current step 65 Horizontal step"
-        class="number-icon number-icon--base text text--sm text--base"
+        class="text text--sm text--base number-icon number-icon--base"
         role="img"
       >
         65
       </span>
       <span
-        class="text text--sm text--inherit text--bold-weight"
+        class="text text--sm text--inherit text--bold-weight horizontal-step__text"
       >
         Horizontal step
       </span>
@@ -506,13 +506,13 @@ exports[`<HorizontalStepper /> OnFirstStep story renders snapshot 1`] = `
     >
       <span
         aria-label="current step 1 Step 1"
-        class="number-icon number-icon--base text text--sm text--base"
+        class="text text--sm text--base number-icon number-icon--base"
         role="img"
       >
         1
       </span>
       <span
-        class="text text--sm text--inherit text--bold-weight"
+        class="text text--sm text--inherit text--bold-weight horizontal-step__text"
       >
         Step 1
       </span>
@@ -543,7 +543,7 @@ exports[`<HorizontalStepper /> OnFirstStep story renders snapshot 1`] = `
         />
       </svg>
       <span
-        class="text text--sm text--inherit text--bold-weight"
+        class="text text--sm text--inherit text--bold-weight horizontal-step__text"
       >
         Step 2
       </span>
@@ -574,7 +574,7 @@ exports[`<HorizontalStepper /> OnFirstStep story renders snapshot 1`] = `
         />
       </svg>
       <span
-        class="text text--sm text--inherit text--bold-weight"
+        class="text text--sm text--inherit text--bold-weight horizontal-step__text"
       >
         Step 3
       </span>
@@ -605,7 +605,7 @@ exports[`<HorizontalStepper /> OnFirstStep story renders snapshot 1`] = `
         />
       </svg>
       <span
-        class="text text--sm text--inherit text--bold-weight"
+        class="text text--sm text--inherit text--bold-weight horizontal-step__text"
       >
         Step 4
       </span>
@@ -636,7 +636,7 @@ exports[`<HorizontalStepper /> OnFirstStep story renders snapshot 1`] = `
         />
       </svg>
       <span
-        class="text text--sm text--inherit text--bold-weight"
+        class="text text--sm text--inherit text--bold-weight horizontal-step__text"
       >
         Step 5
       </span>
@@ -674,7 +674,7 @@ exports[`<HorizontalStepper /> OnLastStep story renders snapshot 1`] = `
         />
       </svg>
       <span
-        class="text text--sm text--inherit text--bold-weight"
+        class="text text--sm text--inherit text--bold-weight horizontal-step__text"
       >
         Step 1
       </span>
@@ -705,7 +705,7 @@ exports[`<HorizontalStepper /> OnLastStep story renders snapshot 1`] = `
         />
       </svg>
       <span
-        class="text text--sm text--inherit text--bold-weight"
+        class="text text--sm text--inherit text--bold-weight horizontal-step__text"
       >
         Step 2
       </span>
@@ -736,7 +736,7 @@ exports[`<HorizontalStepper /> OnLastStep story renders snapshot 1`] = `
         />
       </svg>
       <span
-        class="text text--sm text--inherit text--bold-weight"
+        class="text text--sm text--inherit text--bold-weight horizontal-step__text"
       >
         Step 3
       </span>
@@ -767,7 +767,7 @@ exports[`<HorizontalStepper /> OnLastStep story renders snapshot 1`] = `
         />
       </svg>
       <span
-        class="text text--sm text--inherit text--bold-weight"
+        class="text text--sm text--inherit text--bold-weight horizontal-step__text"
       >
         Step 4
       </span>
@@ -781,13 +781,13 @@ exports[`<HorizontalStepper /> OnLastStep story renders snapshot 1`] = `
     >
       <span
         aria-label="current step 5 Step 5"
-        class="number-icon number-icon--base text text--sm text--base"
+        class="text text--sm text--base number-icon number-icon--base"
         role="img"
       >
         5
       </span>
       <span
-        class="text text--sm text--inherit text--bold-weight"
+        class="text text--sm text--inherit text--bold-weight horizontal-step__text"
       >
         Step 5
       </span>
@@ -825,7 +825,7 @@ exports[`<HorizontalStepper /> SomeCompletedSteps story renders snapshot 1`] = `
         />
       </svg>
       <span
-        class="text text--sm text--inherit text--bold-weight"
+        class="text text--sm text--inherit text--bold-weight horizontal-step__text"
       >
         Step 1
       </span>
@@ -856,7 +856,7 @@ exports[`<HorizontalStepper /> SomeCompletedSteps story renders snapshot 1`] = `
         />
       </svg>
       <span
-        class="text text--sm text--inherit text--bold-weight"
+        class="text text--sm text--inherit text--bold-weight horizontal-step__text"
       >
         Step 2
       </span>
@@ -870,13 +870,13 @@ exports[`<HorizontalStepper /> SomeCompletedSteps story renders snapshot 1`] = `
     >
       <span
         aria-label="current step 3 Step 3"
-        class="number-icon number-icon--base text text--sm text--base"
+        class="text text--sm text--base number-icon number-icon--base"
         role="img"
       >
         3
       </span>
       <span
-        class="text text--sm text--inherit text--bold-weight"
+        class="text text--sm text--inherit text--bold-weight horizontal-step__text"
       >
         Step 3
       </span>
@@ -907,7 +907,7 @@ exports[`<HorizontalStepper /> SomeCompletedSteps story renders snapshot 1`] = `
         />
       </svg>
       <span
-        class="text text--sm text--inherit text--bold-weight"
+        class="text text--sm text--inherit text--bold-weight horizontal-step__text"
       >
         Step 4
       </span>
@@ -938,7 +938,7 @@ exports[`<HorizontalStepper /> SomeCompletedSteps story renders snapshot 1`] = `
         />
       </svg>
       <span
-        class="text text--sm text--inherit text--bold-weight"
+        class="text text--sm text--inherit text--bold-weight horizontal-step__text"
       >
         Step 5
       </span>
