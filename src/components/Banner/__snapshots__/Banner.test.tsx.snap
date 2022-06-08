@@ -170,7 +170,7 @@ exports[`<Banner /> BrandWithAction story renders snapshot 1`] = `
 
 exports[`<Banner /> DismissableBelowContent story renders snapshot 1`] = `
 <h1
-  class="heading heading--size-h1"
+  class="headingBottomSpacing heading heading--size-h1"
 >
   Page Title
 </h1>

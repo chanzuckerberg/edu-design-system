@@ -3,6 +3,7 @@ import type { StoryObj } from '@storybook/react';
 import React from 'react';
 
 import { Banner, Variant } from './Banner';
+import styles from './Banner.stories.module.css';
 import Button from '../Button';
 import Heading from '../Heading';
 
@@ -188,7 +189,9 @@ export const DismissableWithAction: StoryObj<Args> = {
 export const DismissableBelowContent: StoryObj<Args> = {
   render: (args) => (
     <>
-      <Heading size="h1">Page Title</Heading>
+      <Heading className={styles.headingBottomSpacing} size="h1">
+        Page Title
+      </Heading>
       <Banner
         {...args}
         description={getDescription()}
