@@ -36,8 +36,6 @@ export interface Props {
  * ```ts
  * import {FieldNote} from "@chanzuckerberg/eds";
  * ```
- *
- * TODO: update this comment with a description of the component.
  */
 export const FieldNote = ({
   className,
