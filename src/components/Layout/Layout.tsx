@@ -35,7 +35,7 @@ export interface Props {
    * Sidebar property
    * 1) Adjust the size of the sidebar
    */
-  variant?: 'right-sidebar';
+  variant?: 'right-sidebar' | '60-40';
 }
 
 /**
@@ -60,6 +60,7 @@ export const Layout = ({
   const componentClassName = clsx(
     styles['layout'],
     className,
+    variant === '60-40' && styles['layout--60-40'],
     variant === 'right-sidebar' && styles['layout--right-sidebar'],
     behavior === 'fixed-sidebar' && styles['layout--fixed-sidebar'],
     gap === 'none' && styles['layout--gap-none'],

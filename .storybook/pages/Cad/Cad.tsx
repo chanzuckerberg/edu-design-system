@@ -58,7 +58,7 @@ export const Cad = () => (
       </LayoutContainer>
     </Panel>
     <LayoutContainer>
-      <Layout sidebar="wide" variant="right-sidebar">
+      <Layout variant="60-40">
         <LayoutSection region="main">
           <Panel>
             <Heading as="h2" className="u-margin-bottom-lg" size="headline-sm">
