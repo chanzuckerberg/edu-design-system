@@ -13,8 +13,8 @@ import {
   PageHeader,
   Panel,
   Text,
+  TextField,
 } from '../../../src';
-import TextField from '../../../src/upcoming-components/TextField';
 
 import '../../../src/components/Utilities/Spacing.css';
 import '../../../src/components/Utilities/TypographyUsage.css';

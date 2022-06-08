@@ -2,8 +2,8 @@ import clsx from 'clsx';
 import React, { ChangeEventHandler, MouseEventHandler, ReactNode } from 'react';
 import { useUID } from 'react-uid';
 import styles from './TextField.module.css';
-import Icon, { IconName } from '../../components/Icon';
 import FieldNote from '../FieldNote';
+import Icon, { IconName } from '../Icon';
 import Label from '../Label';
 import TextInput from '../TextInput';
 
@@ -149,9 +149,6 @@ export interface Props {
  *
  * ```ts
  * import {TextField} from "@chanzuckerberg/eds";
- * ```
- *
- * TODO: update this comment with a description of the component.
  */
 export const TextField = ({
   className,
