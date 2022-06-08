@@ -106,7 +106,7 @@
  * style the body content as they wish to handle overflow in various ways.
  */
 .modal__content--scrollable {
-  overflow: scroll;
+  overflow: auto;
 }
 
 /**
