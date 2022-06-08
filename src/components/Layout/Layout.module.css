@@ -55,11 +55,7 @@
  * Sidebar layout section region within right sidebar
  */
 .layout--right-sidebar > .layout__section--sidebar {
-  order: 1;
-
-  @media all and (min-width: $eds-bp-xl) {
-    order: 2;
-  }
+  order: 2;
 }
 
 /**
@@ -89,9 +85,5 @@
  * 2) Place to the left of the sidebar on large screens
  */
 .layout--right-sidebar > .layout__section--main {
-  order: 2; /* 1 */
-
-  @media all and (min-width: $eds-bp-xl) {
-    order: 1; /* 2 */
-  }
+  order: 1; /* 2 */
 }
