@@ -1,0 +1,245 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextField /> Default story renders snapshot 1`] = `
+<div
+  class="text-field"
+>
+  <label
+    class="label text-field__label"
+    for="1"
+  >
+    Label
+     
+  </label>
+  <div
+    class="text-field__body"
+  >
+    <input
+      aria-describedby="2"
+      aria-invalid="false"
+      class="text-input text-field__input"
+      id="1"
+      type="text"
+      value=""
+    />
+  </div>
+  <div
+    aria-live="assertive"
+    class="field-note text-field__note"
+    id="2"
+  >
+    This is a fieldnote.
+  </div>
+</div>
+`;
+
+exports[`<TextField /> Disabled story renders snapshot 1`] = `
+<div
+  class="text-field eds-is-disabled"
+>
+  <label
+    class="label text-field__label"
+    for="8"
+  >
+    Label
+     
+  </label>
+  <div
+    class="text-field__body"
+  >
+    <input
+      aria-invalid="false"
+      class="text-input text-field__input eds-is-disabled"
+      disabled=""
+      id="8"
+      type="text"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`<TextField /> Error story renders snapshot 1`] = `
+<div
+  class="text-field eds-is-error"
+>
+  <label
+    class="label text-field__label"
+    for="5"
+  >
+    Label
+     
+  </label>
+  <div
+    class="text-field__body"
+  >
+    <input
+      aria-describedby="6"
+      aria-invalid="true"
+      class="text-input text-field__input eds-is-error"
+      id="5"
+      type="text"
+      value=""
+    />
+  </div>
+  <div
+    aria-live="assertive"
+    class="field-note text-field__note eds-is-error"
+    id="6"
+  >
+    <svg
+      class="icon field-note__icon"
+      fill="currentColor"
+      role="img"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="7"
+      >
+        error
+      </title>
+      <use
+        xlink:href="test-file-stub#cancel"
+      />
+    </svg>
+    This is a fieldnote with an error.
+  </div>
+</div>
+`;
+
+exports[`<TextField /> HideLabel story renders snapshot 1`] = `
+<div
+  class="text-field"
+>
+  <label
+    class="label text-field__label u-is-vishidden"
+    for="12"
+  >
+    Label
+     
+  </label>
+  <div
+    class="text-field__body"
+  >
+    <input
+      aria-invalid="false"
+      class="text-input text-field__input"
+      id="12"
+      type="text"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`<TextField /> InputWithin story renders snapshot 1`] = `
+<div>
+  <div
+    class="text-field"
+  >
+    <label
+      class="label text-field__label"
+      for="14"
+    >
+      Label
+       
+    </label>
+    <div
+      class="text-field__body"
+    >
+      <input
+        aria-invalid="false"
+        class="text-input text-field__input"
+        id="14"
+        type="text"
+        value=""
+      />
+      <div
+        class="text-field__input-within"
+      >
+        <button
+          class="clickable-style button button--icon clickable-style--sm clickable-style--icon clickable-style--brand"
+          type="button"
+        >
+          Button
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<TextField /> Inverted story renders snapshot 1`] = `
+<div
+  style="padding: 1rem; background: rgb(0, 0, 0);"
+>
+  <div
+    class="text-field text-field--inverted"
+  >
+    <label
+      class="label text-field__label label--inverted"
+      for="3"
+    >
+      Label
+       
+    </label>
+    <div
+      class="text-field__body"
+    >
+      <input
+        aria-describedby="4"
+        aria-invalid="false"
+        class="text-input text-field__input"
+        id="3"
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      aria-live="assertive"
+      class="field-note text-field__note field-note--inverted"
+      id="4"
+    >
+      This is a fieldnote.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<TextField /> Optional story renders snapshot 1`] = `
+<div
+  class="text-field"
+>
+  <label
+    class="label text-field__label"
+    for="10"
+  >
+    Label
+     
+    <span
+      class="label__flag"
+    >
+      (optional)
+    </span>
+  </label>
+  <div
+    class="text-field__body"
+  >
+    <input
+      aria-describedby="11"
+      aria-invalid="false"
+      class="text-input text-field__input"
+      id="10"
+      type="text"
+      value=""
+    />
+  </div>
+  <div
+    aria-live="assertive"
+    class="field-note text-field__note"
+    id="11"
+  >
+    This is a fieldnote for an optional text field.
+  </div>
+</div>
+`;
