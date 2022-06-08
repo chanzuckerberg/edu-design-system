@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0-alpha.0](https://github.com/chanzuckerberg/edu-design-system/compare/v1.0.0...v1.2.0-alpha.0) (2022-06-08)
+
+
+### Features
+
+* Add actual logo. Make more product-specific ([3bf2027](https://github.com/chanzuckerberg/edu-design-system/commit/3bf202701cab985370644445ce67907342999ded))
+* aria-label added to logo for accessibility ([26cab0f](https://github.com/chanzuckerberg/edu-design-system/commit/26cab0ffeddcd351fd7e157b245c7c64e10ba3ff))
+
+
+### Bug Fixes
+
+* added href to logo story ([ced6035](https://github.com/chanzuckerberg/edu-design-system/commit/ced60351030a16e8225dc5758f15baf74e1df1fa))
+* aria-label on Logo story ([dd542ea](https://github.com/chanzuckerberg/edu-design-system/commit/dd542ea0eb5545941c6ad5dac9ad0cde45c509c8))
+* ariaLabel lint fix ([8bb3a23](https://github.com/chanzuckerberg/edu-design-system/commit/8bb3a234d84dfadc137c80f93d2e3c79da146583))
+* change logo title to take on ariaLabel prop ([0fcbc7f](https://github.com/chanzuckerberg/edu-design-system/commit/0fcbc7fc55ca0dd5c59217bfcb9de832cac002c8))
+* Header story to use fpo to be clearer ([ae943d7](https://github.com/chanzuckerberg/edu-design-system/commit/ae943d72eee4731ba676f38e2b785891e1ec0b40))
+* linting error ([18176f2](https://github.com/chanzuckerberg/edu-design-system/commit/18176f2a185bf0fb1c38535889fb559fc5f4619e))
+* linting error ([e697b5d](https://github.com/chanzuckerberg/edu-design-system/commit/e697b5d7ab9f499b138517e533700a0c31e70ab6))
+* remove link to global header logo ([78e9995](https://github.com/chanzuckerberg/edu-design-system/commit/78e999584b0208e5359378c0315a7d8d86cfb102))
+* remove link to in logo ([9e78e9f](https://github.com/chanzuckerberg/edu-design-system/commit/9e78e9ff4212e80d6835a2ea6fdc844fef726d91))
+* remove logo image. not used anymore ([4d3c7a3](https://github.com/chanzuckerberg/edu-design-system/commit/4d3c7a30b001c4fbc54f52ea5c9122e6f0875c99))
+* unused header elements ([8b0b248](https://github.com/chanzuckerberg/edu-design-system/commit/8b0b2482380e54a729459b0f7fe81d2092849b40))
+
 ## [1.1.0](https://github.com/chanzuckerberg/edu-design-system/compare/v1.0.0...v1.1.0) (2022-06-02)
 
 ### Features
