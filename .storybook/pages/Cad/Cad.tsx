@@ -16,21 +16,256 @@ import {
   DataBar,
   Toolbar,
   ToolbarItem,
+  Grid,
+  GridItem,
   Text,
 } from '../../../src';
 
 import '../../../src/components/Utilities/Spacing.css';
 import CardWithNotification from '../../recipes/CardWithNotification';
 import ProjectCard from '../../recipes/ProjectCard';
-import StandardsCoverage from '../../recipes/StandardsCoverage';
+import TableCard from '../../recipes/TableCard';
 
 import EmptyImage from '../../static/hand-pencil.svg';
+
+const CognitiveSkillColumns = [
+  {
+    title: 'Least covered Cognitive Skills',
+  },
+  {
+    title: 'Planned Projects',
+  },
+];
+
+const CognitiveSkillRows = [
+  {
+    value1: 'Argumentative Claim',
+    projects: [
+      {
+        ariaLabel: 'Project 1',
+        complete: true,
+      },
+      {
+        ariaLabel: 'Project 2',
+        complete: true,
+      },
+      {
+        ariaLabel: 'Project 3',
+        complete: false,
+      },
+      {
+        ariaLabel: 'Project 4',
+        complete: false,
+      },
+      {
+        ariaLabel: 'Project 5',
+        complete: false,
+      },
+      {
+        ariaLabel: 'Project 6',
+        complete: false,
+      },
+      {
+        ariaLabel: 'Project 7',
+        complete: false,
+      },
+      {
+        ariaLabel: 'Project 8',
+        complete: false,
+      },
+      {
+        ariaLabel: 'Project 9',
+        complete: false,
+      },
+      {
+        ariaLabel: 'Project 10',
+        complete: false,
+      },
+    ],
+  },
+  {
+    value1: 'Making Connections and Inferences',
+    projects: [
+      {
+        ariaLabel: 'Project 1',
+        complete: true,
+      },
+    ],
+  },
+  {
+    value1: 'A longer heading that is super duper long',
+    projects: [
+      {
+        ariaLabel: 'Project 1',
+        complete: true,
+      },
+      {
+        ariaLabel: 'Project 2',
+        complete: true,
+      },
+      {
+        ariaLabel: 'Project 3',
+        complete: true,
+      },
+      {
+        ariaLabel: 'Project 4',
+        complete: true,
+      },
+      {
+        ariaLabel: 'Project 5',
+        complete: true,
+      },
+    ],
+  },
+];
+
+const StandardsColumns = [
+  {
+    title: 'Least covered Stan',
+  },
+  {
+    title: 'Planned Projects',
+  },
+];
+
+const StandardsRows = [
+  {
+    value1: 'NGSS.3-5-ETS1-1',
+    projects: [
+      {
+        ariaLabel: 'Project 1',
+        complete: true,
+      },
+      {
+        ariaLabel: 'Project 2',
+        complete: true,
+      },
+      {
+        ariaLabel: 'Project 3',
+        complete: false,
+      },
+      {
+        ariaLabel: 'Project 4',
+        complete: false,
+      },
+      {
+        ariaLabel: 'Project 5',
+        complete: false,
+      },
+      {
+        ariaLabel: 'Project 6',
+        complete: false,
+      },
+      {
+        ariaLabel: 'Project 7',
+        complete: false,
+      },
+      {
+        ariaLabel: 'Project 8',
+        complete: false,
+      },
+      {
+        ariaLabel: 'Project 9',
+        complete: false,
+      },
+      {
+        ariaLabel: 'Project 10',
+        complete: false,
+      },
+    ],
+  },
+  {
+    value1: 'NGSS.3-5.ESS1.C',
+    projects: [
+      {
+        ariaLabel: 'Project 1',
+        complete: true,
+      },
+    ],
+  },
+  {
+    value1: 'NGSS.3-5.ESS1.E',
+    projects: [
+      {
+        ariaLabel: 'Project 1',
+        complete: true,
+      },
+      {
+        ariaLabel: 'Project 2',
+        complete: true,
+      },
+      {
+        ariaLabel: 'Project 3',
+        complete: true,
+      },
+      {
+        ariaLabel: 'Project 4',
+        complete: true,
+      },
+      {
+        ariaLabel: 'Project 5',
+        complete: true,
+      },
+    ],
+  },
+  {
+    value1: 'NGSS.3-5.PS3.C',
+    projects: [
+      {
+        ariaLabel: 'Project 1',
+        complete: false,
+      },
+      {
+        ariaLabel: 'Project 2',
+        complete: false,
+      },
+      {
+        ariaLabel: 'Project 3',
+        complete: false,
+      },
+      {
+        ariaLabel: 'Project 4',
+        complete: false,
+      },
+      {
+        ariaLabel: 'Project 5',
+        complete: false,
+      },
+    ],
+  },
+  {
+    value1: 'NGSS.3-5.PS3.E',
+    projects: [
+      {
+        ariaLabel: 'Project 1',
+        complete: false,
+      },
+      {
+        ariaLabel: 'Project 2',
+        complete: true,
+      },
+      {
+        ariaLabel: 'Project 3',
+        complete: false,
+      },
+      {
+        ariaLabel: 'Project 4',
+        complete: false,
+      },
+      {
+        ariaLabel: 'Project 5',
+        complete: false,
+      },
+    ],
+  },
+];
 
 export const Cad = () => (
   <>
     <Panel className="u-margin-bottom-lg" variant="squared">
       <LayoutContainer>
         <PageHeader
+          orientation="2up"
           className="u-margin-bottom-none"
           description={
             <HorizontalStepper
@@ -59,7 +294,7 @@ export const Cad = () => (
       </LayoutContainer>
     </Panel>
     <LayoutContainer>
-      <Layout variant="60-40">
+      <Layout variant="67-33">
         <LayoutSection region="main">
           <Panel>
             <Heading as="h2" className="u-margin-bottom-lg" size="headline-sm">
@@ -217,26 +452,42 @@ export const Cad = () => (
           </Panel>
         </LayoutSection>
         <LayoutSection region="sidebar">
-          <Panel className="u-margin-bottom-lg" flush>
-            <CardWithNotification
-              text="Summit recommends teaching at least five (5) projects for this course."
-              variant="brand"
-            >
-              <CardWithNotification.Body>
-                <DataBar
-                  label="Total instructional days"
-                  max={60}
-                  segments={[
-                    { value: 10, text: 'Project 1' },
-                    { value: 11, text: 'Project 2' },
-                    { value: 22, text: 'Project 3' },
-                    { value: 11, text: 'Project 4' },
-                  ]}
-                />
-              </CardWithNotification.Body>
-            </CardWithNotification>
-          </Panel>
-          <StandardsCoverage />
+          <CardWithNotification
+            className="u-margin-bottom-lg"
+            text="Summit recommends teaching at least five (5) projects for this course."
+            variant="brand"
+          >
+            <CardWithNotification.Body>
+              <DataBar
+                label="Total instructional days"
+                max={60}
+                segments={[
+                  { value: 10, text: 'Project 1' },
+                  { value: 11, text: 'Project 2' },
+                  { value: 22, text: 'Project 3' },
+                  { value: 11, text: 'Project 4' },
+                ]}
+              />
+            </CardWithNotification.Body>
+          </CardWithNotification>
+          <Grid variant="1-2-1up" className="u-margin-bottom-lg">
+            <GridItem>
+              <TableCard
+                tableColumns={CognitiveSkillColumns}
+                tableRows={CognitiveSkillRows}
+                title="Cognitive skills coverage"
+                buttonContent="View all Cognitive Skills"
+              />
+            </GridItem>
+            <GridItem>
+              <TableCard
+                tableColumns={StandardsColumns}
+                tableRows={StandardsRows}
+                title="Standards coverage"
+                buttonContent="View all Standards"
+              />
+            </GridItem>
+          </Grid>
         </LayoutSection>
       </Layout>
     </LayoutContainer>

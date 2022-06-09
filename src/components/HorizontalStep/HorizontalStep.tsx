@@ -56,18 +56,12 @@ export const HorizontalStep = ({
         size="1.5rem"
         title={`completed step ${stepNumber} ${text}`}
       />
-    ) : variant === 'active' ? (
+    ) : (
       <NumberIcon
         aria-label={`current step ${stepNumber} ${text}`}
         number={stepNumber}
-      />
-    ) : (
-      <Icon
-        className={styles['horizontal-step__incomplete-icon']}
-        name="circle"
-        purpose="informative"
-        size="0.5rem"
-        title={`incomplete step ${stepNumber} ${text}`}
+        numberIconTitle={`incomplete step ${stepNumber} ${text}`}
+        incomplete={variant !== 'active'}
       />
     );
 

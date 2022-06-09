@@ -87,15 +87,6 @@
   }
 
   /**
-  * Last table row in the table
-  */
-  .table__body & {
-    &:last-child {
-      border-bottom: 0;
-    }
-  }
-
-  /**
   * Table row within zebra table
   */
   .table--zebra & {

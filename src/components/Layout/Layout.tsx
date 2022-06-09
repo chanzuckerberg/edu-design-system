@@ -29,13 +29,11 @@ export interface Props {
   /**
    * Sidebar property
    * 1) Adjust the size of the sidebar
+   * - **right-sidebar** renders a main section with a fixed width right sidebar
+   * - **67-33** renders a 66.66% main section, 33.33% sidebar section
+   * - **50-50** renders a 50% main section, 50% sidebar section
    */
-  sidebar?: 'wide';
-  /**
-   * Sidebar property
-   * 1) Adjust the size of the sidebar
-   */
-  variant?: 'right-sidebar' | '50-50' | '60-40';
+  variant?: 'right-sidebar' | '50-50' | '67-33';
 }
 
 /**
@@ -54,18 +52,16 @@ export const Layout = ({
   className,
   variant,
   gap,
-  sidebar,
   ...other
 }: Props) => {
   const componentClassName = clsx(
     styles['layout'],
     className,
-    variant === '60-40' && styles['layout--60-40'],
+    variant === '67-33' && styles['layout--67-33'],
     variant === 'right-sidebar' && styles['layout--right-sidebar'],
     variant && styles[`layout--${variant}`],
     behavior === 'fixed-sidebar' && styles['layout--fixed-sidebar'],
     gap && styles[`layout--gap-${gap}`],
-    sidebar === 'wide' && styles['layout--sidebar-wide'],
   );
 
   return (

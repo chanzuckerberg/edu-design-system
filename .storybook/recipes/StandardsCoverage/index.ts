@@ -1,1 +1,0 @@
-export { StandardsCoverage as default } from './StandardsCoverage'

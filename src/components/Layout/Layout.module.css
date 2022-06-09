@@ -31,9 +31,9 @@
 }
 
 /**
- * Layout 60-40 variant
+ * Layout 67-33 variant
  */
-.layout--60-40 {
+.layout--67-33 {
   @media all and (min-width: $eds-bp-xl) {
     grid-template-columns: 2fr 1fr;
   }
@@ -79,9 +79,9 @@
   }
 
   /**
- * Layout 60-40 variant
+ * Layout 67-33 variant
  */
-  .layout--60-40 & {
+  .layout--67-33 & {
     @media all and (min-width: $eds-bp-xl) {
       width: 100%;
     }

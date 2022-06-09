@@ -2,6 +2,8 @@ import clsx from 'clsx';
 import React from 'react';
 import styles from './NumberIcon.module.css';
 import Text from '../Text';
+import Icon from '../Icon';
+import { EdsThemeColorIconNeutralSubtle } from '../../tokens-dist/ts/colors';
 
 export interface Props {
   /**
@@ -12,6 +14,10 @@ export interface Props {
    * CSS class names that can be appended to the component.
    */
   className?: string;
+  /**
+   * Incomplete prop to show incomplete state
+   */
+  incomplete?: boolean;
   /**
    * Number to be shown as the icon.
    */
@@ -24,6 +30,11 @@ export interface Props {
    * The color variant of the icon. Defaults to 'base'.
    */
   variant?: 'base' | 'success';
+  /**
+   * Number icon title
+   *
+   */
+  numberIconTitle?: string;
 }
 
 /**
@@ -46,12 +57,15 @@ export const NumberIcon = ({
   number,
   size,
   variant = 'base',
+  incomplete,
+  numberIconTitle,
   ...other
 }: Props) => {
   const componentClassName = clsx(
     styles['number-icon'],
     styles[`number-icon--${variant}`],
     size && styles[`number-icon--${size}`],
+    incomplete === true && styles['number-icon--incomplete'],
     className,
   );
 
@@ -67,7 +81,18 @@ export const NumberIcon = ({
       variant={variant === 'base' ? 'base' : 'white'}
       {...other}
     >
-      {number}
+      {incomplete && numberIconTitle ? (
+        <Icon
+          className={styles['number-icon__icon']}
+          name="circle"
+          purpose="informative"
+          size={size === 'sm' ? '0.25rem' : '0.5rem'}
+          color={EdsThemeColorIconNeutralSubtle}
+          title={numberIconTitle}
+        />
+      ) : (
+        number
+      )}
     </Text>
   );
 };

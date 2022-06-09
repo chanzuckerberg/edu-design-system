@@ -16,6 +16,8 @@
 
 .standards-coverage__table-header-cell {
   &:first-child {
-    width: 11.75rem;
+    @media all and (min-width: $eds-bp-md) {
+      width: 11.875rem;
+    }
   }
 }
