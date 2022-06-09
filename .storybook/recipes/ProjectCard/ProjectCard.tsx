@@ -72,7 +72,7 @@ export const ProjectCard = ({
       orientation="horizontal"
       {...other}
     >
-      <CardHeader>
+      <CardHeader className={styles['project-card__header']}>
         <NumberIcon
           aria-label={numberAriaLabel}
           className={styles['project-card__number']}
