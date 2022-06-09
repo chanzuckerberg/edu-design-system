@@ -16,11 +16,11 @@ export const ModalBrand = () => (
     open
     variant="brand"
   >
-    <Modal.Header brandAsset={<img alt="compass solo" src={CompassSolo} />}>
+    <Modal.Header brandAsset={<img alt="a compass" src={CompassSolo} />}>
       <Modal.Title>Check out the new course planner</Modal.Title>
     </Modal.Header>
     <Modal.Body>
-      <Heading className="u-margin-bottom-md" size="title-sm">
+      <Heading as="h3" className="u-margin-bottom-md" size="title-sm">
         Intro header copy
       </Heading>
       <Text>Content pieces go here</Text>

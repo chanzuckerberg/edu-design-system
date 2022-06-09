@@ -19,7 +19,7 @@ export const ModalFinalStep = () => (
         className="u-display-flex u-flex-direction-column u-justify-content-center u-align-items-center"
         style={{ height: '25rem' }}
       >
-        <img alt="cad-success" src={CadSuccess} />
+        <img alt="a checkmark" src={CadSuccess} />
       </div>
       <Modal.Title>Simple image and headline</Modal.Title>
     </Modal.Header>
