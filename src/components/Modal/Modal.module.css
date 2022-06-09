@@ -77,6 +77,7 @@
 .modal__content {
   position: relative;
   height: 43.125rem;
+  max-height: 90vh;
   overflow: hidden;
   border-radius: var(--eds-border-radius-lg);
   background-color: var(--eds-theme-color-background-neutral-default);
@@ -105,11 +106,12 @@
  * style the body content as they wish to handle overflow in various ways.
  */
 .modal__content--scrollable {
-  overflow: scroll;
+  overflow: auto;
 }
 
 /**
  * The modal close button
+ * 1) Minimum button target size is 44px, but 3rem (48px) is next closest ramp size.
  */
 .modal__close-button {
   @mixin reset;
@@ -117,8 +119,12 @@
   background-color: transparent;
 
   position: absolute;
-  top: var(--eds-size-1);
-  right: var(--eds-size-1);
+  top: 0;
+  right: 0;
+
+  /* 1 */
+  width: var(--eds-size-6);
+  height: var(--eds-size-6);
 
   cursor: pointer;
 
@@ -129,6 +135,9 @@
  * The modal close icon that resides in the close button.
  */
 .modal__close-icon {
+  position: absolute;
+  top: var(--eds-size-1);
+  right: var(--eds-size-1);
   color: var(--eds-theme-color-icon-neutral-subtle);
 }
 

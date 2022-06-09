@@ -55,6 +55,7 @@ type ModalContentProps = {
    * Toggles scrollable variant of the modal. If modal is scrollable, footer is not, and vice versa.
    * Defaults to false since modal default is not scrollable.
    * Also adds border and shadow to the footer indicate sticky status.
+   * Prop should be dependent on whether content overflows at the mobile level.
    */
   isScrollable?: boolean;
   /**
@@ -115,6 +116,7 @@ export const ModalContent = (props: ModalContentProps) => {
     isScrollable,
     onClose,
     variant,
+    ...other
   } = props;
 
   const componentClassName = clsx(
@@ -130,7 +132,7 @@ export const ModalContent = (props: ModalContentProps) => {
 
   return (
     <ModalContext.Provider value={{ isScrollable, variant }}>
-      <div className={componentClassName}>
+      <div className={componentClassName} {...other}>
         {!hideCloseButton && (
           <button className={styles['modal__close-button']} onClick={onClose}>
             <Icon

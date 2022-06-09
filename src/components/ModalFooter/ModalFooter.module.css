@@ -8,11 +8,14 @@
 .modal-footer {
   padding-top: var(--eds-size-2-and-half);
   padding-bottom: var(--eds-size-2-and-half);
-  padding-left: var(--modal-horizontal-padding, var(--eds-size-3));
+  padding-left: var(--modal-horizontal-padding);
   padding-right: var(--eds-size-3);
 
   width: 100%;
   background-color: var(--eds-theme-color-background-neutral-default);
+
+  border-bottom-left-radius: var(--eds-border-radius-lg);
+  border-bottom-right-radius: var(--eds-border-radius-lg);
 }
 
 /**
@@ -22,5 +25,5 @@
 .modal-footer--sticky {
   position: sticky;
   bottom: 0;
-  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--eds-box-shadow-xl);
 }

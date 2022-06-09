@@ -9,8 +9,8 @@
   width: 100%;
   background-color: var(--eds-theme-color-background-neutral-default);
   padding-top: var(--eds-size-7);
-  padding-left: var(--modal-horizontal-padding, var(--eds-size-4));
-  padding-right: var(--modal-horizontal-padding, var(--eds-size-4));
+  padding-left: var(--modal-horizontal-padding);
+  padding-right: var(--modal-horizontal-padding);
 }
 
 /**
@@ -18,14 +18,30 @@
  * 1) Brand specific font for the title.
  */
 .modal-header--brand {
-  height: 19.75rem;
+  display: flex;
+  flex-direction: column;
+
+  min-height: 10.75rem;
+
+  @media all and (min-height: $eds-bp-sm-2) {
+    min-height: 19.75rem;
+  }
+  @media all and (min-width: $eds-bp-md) and (min-height: $eds-bp-sm-2) {
+    flex-direction: row;
+  }
+
+  flex-shrink: 0;
 
   color: var(--eds-theme-color-text-neutral-default-inverse);
   background-color: var(--eds-color-brand-grape-500);
   h2 {
     /* 1 */
+    flex: 1;
     font-family: 'Mint Grotesk V1.1', sans-serif;
     font-weight: var(--eds-font-weight-medium);
+    @media all and (min-width: $eds-bp-sm-2) {
+      margin-bottom: var(--eds-size-3);
+    }
     @media all and (min-width: $eds-bp-xl) {
       font-size: var(--eds-size-6);
       line-height: var(--eds-size-7);
@@ -35,31 +51,32 @@
 
 /**
  * Specific asset placement for brand.
+ * 1) For mobile landscape orientation.
  */
 .modal-header__brand-asset {
-  position: absolute;
-
-  top: 12rem;
-  right: var(--eds-size-2);
+  align-self: flex-end;
+  position: relative;
+  top: var(--eds-size-2);
+  left: var(--eds-size-2);
 
   width: 8.5rem;
   height: 8.5rem;
 
-  @media all and (min-width: $eds-bp-md) {
-    position: relative;
-    float: right;
+  /* 1 */
+  @media all and (min-width: $eds-bp-sm-2) {
+    display: none;
+  }
 
-    top: 3.25rem;
-    right: -1.5rem;
-
+  @media all and (min-width: $eds-bp-md) and (min-height: $eds-bp-sm-2) {
+    display: block;
     width: 14rem;
     height: 14rem;
+    left: var(--eds-size-3);
   }
-  @media all and (min-width: $eds-bp-xl) {
-    top: var(--eds-size-1-and-half);
-    right: calc(-1 * var(--eds-size-1));
 
+  @media all and (min-width: $eds-bp-xl) {
     width: 16.5rem;
     height: 16.5rem;
+    left: 0;
   }
 }

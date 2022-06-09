@@ -34,8 +34,8 @@ export default {
   parameters: {
     chromatic: {
       // These stories are very flaky, though we're not sure why.
-      // We delay the snapshot just in case there's a timing issue at play here.
-      delay: 900,
+      // We tried delaying the snapshot just in case there's a timing issue at play here, which was not successful.
+      disableSnapshot: true,
     },
   },
 } as Meta<Args>;
@@ -156,11 +156,6 @@ export const Interactive: StoryObj<Args> = {
       </div>
     ),
   ],
-  parameters: {
-    chromatic: {
-      disableSnapshot: true,
-    },
-  },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const trigger = await canvas.findByRole('button');
