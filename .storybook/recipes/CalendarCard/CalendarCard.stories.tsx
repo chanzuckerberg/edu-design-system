@@ -38,7 +38,6 @@ export const Default: StoryObj<Args> = {
         </CalendarCard.Body>
       </>
     ),
-    tag: 'Ancient Mayan History',
     variant: 'success',
   },
 };
