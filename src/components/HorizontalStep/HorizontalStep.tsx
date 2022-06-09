@@ -59,9 +59,9 @@ export const HorizontalStep = ({
     ) : (
       <NumberIcon
         aria-label={`current step ${stepNumber} ${text}`}
+        incomplete={variant !== 'active'}
         number={stepNumber}
         numberIconTitle={`incomplete step ${stepNumber} ${text}`}
-        incomplete={variant !== 'active'}
       />
     );
 

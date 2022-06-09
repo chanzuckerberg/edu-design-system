@@ -265,7 +265,6 @@ export const Cad = () => (
     <Panel className="u-margin-bottom-lg" variant="squared">
       <LayoutContainer>
         <PageHeader
-          orientation="2up"
           className="u-margin-bottom-none"
           description={
             <HorizontalStepper
@@ -278,6 +277,7 @@ export const Cad = () => (
             ></HorizontalStepper>
           }
           headingSize="title-sm"
+          orientation="2up"
           right={
             <ButtonGroup>
               <Button>
@@ -470,21 +470,21 @@ export const Cad = () => (
               />
             </CardWithNotification.Body>
           </CardWithNotification>
-          <Grid variant="1-2-1up" className="u-margin-bottom-lg">
+          <Grid className="u-margin-bottom-lg" variant="1-2-1up">
             <GridItem>
               <TableCard
+                buttonContent="View all Cognitive Skills"
                 tableColumns={CognitiveSkillColumns}
                 tableRows={CognitiveSkillRows}
                 title="Cognitive skills coverage"
-                buttonContent="View all Cognitive Skills"
               />
             </GridItem>
             <GridItem>
               <TableCard
+                buttonContent="View all Standards"
                 tableColumns={StandardsColumns}
                 tableRows={StandardsRows}
                 title="Standards coverage"
-                buttonContent="View all Standards"
               />
             </GridItem>
           </Grid>

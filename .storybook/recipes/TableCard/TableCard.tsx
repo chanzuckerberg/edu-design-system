@@ -1,5 +1,5 @@
-import React, { ReactNode } from 'react';
 import clsx from 'clsx';
+import React, { ReactNode } from 'react';
 import styles from './TableCard.module.css';
 
 import {
@@ -66,12 +66,12 @@ export const TableCard = ({
   return (
     <Card className={componentClassName} {...other}>
       <CardBody>
-        <Heading className="u-margin-bottom-md" as="h2" size="title-sm">
+        <Heading as="h2" className="u-margin-bottom-md" size="title-sm">
           {title}
         </Heading>
         <Table
-          className={styles['standards-coverage__table']}
           caption="Standards coverage"
+          className={styles['standards-coverage__table']}
           hideCaption={true}
         >
           <TableHeader>
@@ -80,7 +80,7 @@ export const TableCard = ({
                 return (
                   <TableHeaderCell
                     className={styles['standards-coverage__table-header-cell']}
-                    key={'table-header-row-' + index}
+                    key={'table-header-cell-' + index}
                   >
                     {item.title}
                   </TableHeaderCell>
@@ -91,18 +91,19 @@ export const TableCard = ({
           <TableBody>
             {tableRows.map((item, index) => {
               return (
-                <TableRow>
+                <TableRow key={`table-row-${index}`}>
                   <TableHeaderCell>{item.value1}</TableHeaderCell>
                   <TableCell>
                     <NumberIconList>
                       {item.projects.map((item, index) => {
                         return (
                           <NumberIcon
-                            size="sm"
                             aria-label={item.ariaLabel}
-                            number={index + 1}
                             incomplete={!item.complete}
+                            key={`number-icon-${index}`}
+                            number={index + 1}
                             numberIconTitle={`incomplete step ${index + 1}`}
+                            size="sm"
                           />
                         );
                       })}
