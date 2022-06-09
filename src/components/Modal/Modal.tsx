@@ -116,6 +116,7 @@ export const ModalContent = (props: ModalContentProps) => {
     isScrollable,
     onClose,
     variant,
+    ...other
   } = props;
 
   const componentClassName = clsx(
@@ -131,7 +132,7 @@ export const ModalContent = (props: ModalContentProps) => {
 
   return (
     <ModalContext.Provider value={{ isScrollable, variant }}>
-      <div className={componentClassName}>
+      <div className={componentClassName} {...other}>
         {!hideCloseButton && (
           <button className={styles['modal__close-button']} onClick={onClose}>
             <Icon

@@ -72,6 +72,7 @@ export const Default: StoryObj<Args> = {
       <div className={styles['default__background']} />
       <ModalContent
         {...args}
+        data-testid="non-interactive"
         onClose={
           () => {} /* eslint-disable-line @typescript-eslint/no-empty-function */
         }
@@ -93,6 +94,78 @@ export const Brand: StoryObj<Args> = {
   ...Default,
   args: {
     ...Default.args,
+    variant: 'brand',
+  },
+};
+
+export const Mobile: StoryObj<Args> = {
+  ...Default,
+  parameters: {
+    ...Default.parameters,
+    viewport: {
+      defaultViewport: 'mobile2',
+    },
+  },
+};
+
+export const MobileLandscape: StoryObj<Args> = {
+  ...Default,
+  parameters: {
+    ...Default.parameters,
+    viewport: {
+      defaultViewport: 'mobilelandscape',
+      viewports: {
+        mobilelandscape: {
+          name: 'Mobile Landscape',
+          styles: {
+            width: '896px',
+            height: '414px',
+          },
+        },
+      },
+    },
+  },
+};
+
+export const MobileBrand: StoryObj<Args> = {
+  ...Mobile,
+  args: {
+    ...Mobile.args,
+    variant: 'brand',
+  },
+};
+
+export const MobileLandscapeBrand: StoryObj<Args> = {
+  ...MobileLandscape,
+  args: {
+    ...MobileLandscape.args,
+    variant: 'brand',
+  },
+};
+
+export const Tablet: StoryObj<Args> = {
+  ...Default,
+  parameters: {
+    ...Default.parameters,
+    viewport: {
+      defaultViewport: 'mobilelandscape',
+      viewports: {
+        mobilelandscape: {
+          name: 'Mobile Landscape',
+          styles: {
+            width: '768px',
+            height: '1024px',
+          },
+        },
+      },
+    },
+  },
+};
+
+export const TabletBrand: StoryObj<Args> = {
+  ...Tablet,
+  args: {
+    ...Tablet.args,
     variant: 'brand',
   },
 };
@@ -244,7 +317,7 @@ export const ModalStepper: StoryObj<ModalStepperArgs> = {
     activeStep: 1,
     totalSteps: 3,
   },
-  render: (args) => <Modal.Stepper {...args} />,
+  render: (args) => <Modal.Stepper {...args} data-testid="non-interactive" />,
   decorators: [
     (Story) => (
       <div
@@ -256,6 +329,9 @@ export const ModalStepper: StoryObj<ModalStepperArgs> = {
       </div>
     ),
   ],
+  parameters: {
+    chromatic: { disableSnapshot: false },
+  },
 };
 
 const InteractiveModalStepperComponent = () => {
@@ -291,4 +367,10 @@ const InteractiveModalStepperComponent = () => {
 export const InteractiveModalStepper: StoryObj<ModalStepperArgs> = {
   ...ModalStepper,
   render: () => <InteractiveModalStepperComponent />,
+  parameters: {
+    /* 1 */
+    snapshot: {
+      skip: true,
+    },
+  },
 };

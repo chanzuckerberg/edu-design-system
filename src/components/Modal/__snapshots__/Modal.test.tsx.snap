@@ -1,5 +1,147 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Modal Brand story renders snapshot 1`] = `
+<div
+  class="modal__content"
+  data-testid="non-interactive"
+  open=""
+>
+  <button
+    class="modal__close-button"
+  >
+    <svg
+      class="icon modal__close-icon modal__close-icon--brand"
+      fill="currentColor"
+      height="1.5rem"
+      role="img"
+      style="--icon-size: 1.5rem;"
+      width="1.5rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="2"
+      >
+        close modal
+      </title>
+      <use
+        xlink:href="test-file-stub#close"
+      />
+    </svg>
+  </button>
+  <div
+    class="modal-header modal-header--brand"
+  >
+    <h2
+      class="heading heading--size-h2"
+    >
+      Modal Title
+    </h2>
+    <div
+      class="modal-header__brand-asset"
+    >
+      <div
+        class="fpo"
+        style="width: 100%; height: 100%;"
+      >
+        Brand Asset
+      </div>
+    </div>
+  </div>
+  <div
+    class="modal-body"
+    tabindex="0"
+  >
+    Modal content.
+  </div>
+  <div
+    class="modal-footer"
+  >
+    <div
+      class="footer__button-group button-group button-group--spacing-1x"
+    >
+      <button
+        class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--neutral"
+        type="button"
+      >
+        Button 1
+      </button>
+      <button
+        class="clickable-style button button--primary clickable-style--lg clickable-style--primary clickable-style--brand"
+        type="button"
+      >
+        Button 2
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Modal Default story renders snapshot 1`] = `
+<div
+  class="modal__content"
+  data-testid="non-interactive"
+  open=""
+>
+  <button
+    class="modal__close-button"
+  >
+    <svg
+      class="icon modal__close-icon"
+      fill="currentColor"
+      height="1.5rem"
+      role="img"
+      style="--icon-size: 1.5rem;"
+      width="1.5rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="1"
+      >
+        close modal
+      </title>
+      <use
+        xlink:href="test-file-stub#close"
+      />
+    </svg>
+  </button>
+  <div
+    class="modal-header"
+  >
+    <h2
+      class="heading heading--size-h2"
+    >
+      Modal Title
+    </h2>
+  </div>
+  <div
+    class="modal-body"
+    tabindex="0"
+  >
+    Modal content.
+  </div>
+  <div
+    class="modal-footer"
+  >
+    <div
+      class="footer__button-group button-group button-group--spacing-1x"
+    >
+      <button
+        class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--neutral"
+        type="button"
+      >
+        Button 1
+      </button>
+      <button
+        class="clickable-style button button--primary clickable-style--lg clickable-style--primary clickable-style--brand"
+        type="button"
+      >
+        Button 2
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Modal DefaultInteractive story renders snapshot 1`] = `
 <div
   aria-labelledby="headlessui-dialog-title-4"
@@ -30,7 +172,7 @@ exports[`Modal DefaultInteractive story renders snapshot 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       >
         <title
-          id="12"
+          id="15"
         >
           close modal
         </title>
@@ -79,6 +221,494 @@ exports[`Modal DefaultInteractive story renders snapshot 1`] = `
 </div>
 `;
 
+exports[`Modal Mobile story renders snapshot 1`] = `
+<div
+  class="modal__content"
+  data-testid="non-interactive"
+  open=""
+>
+  <button
+    class="modal__close-button"
+  >
+    <svg
+      class="icon modal__close-icon"
+      fill="currentColor"
+      height="1.5rem"
+      role="img"
+      style="--icon-size: 1.5rem;"
+      width="1.5rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="3"
+      >
+        close modal
+      </title>
+      <use
+        xlink:href="test-file-stub#close"
+      />
+    </svg>
+  </button>
+  <div
+    class="modal-header"
+  >
+    <h2
+      class="heading heading--size-h2"
+    >
+      Modal Title
+    </h2>
+  </div>
+  <div
+    class="modal-body"
+    tabindex="0"
+  >
+    Modal content.
+  </div>
+  <div
+    class="modal-footer"
+  >
+    <div
+      class="footer__button-group button-group button-group--spacing-1x"
+    >
+      <button
+        class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--neutral"
+        type="button"
+      >
+        Button 1
+      </button>
+      <button
+        class="clickable-style button button--primary clickable-style--lg clickable-style--primary clickable-style--brand"
+        type="button"
+      >
+        Button 2
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Modal MobileBrand story renders snapshot 1`] = `
+<div
+  class="modal__content"
+  data-testid="non-interactive"
+  open=""
+>
+  <button
+    class="modal__close-button"
+  >
+    <svg
+      class="icon modal__close-icon modal__close-icon--brand"
+      fill="currentColor"
+      height="1.5rem"
+      role="img"
+      style="--icon-size: 1.5rem;"
+      width="1.5rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="5"
+      >
+        close modal
+      </title>
+      <use
+        xlink:href="test-file-stub#close"
+      />
+    </svg>
+  </button>
+  <div
+    class="modal-header modal-header--brand"
+  >
+    <h2
+      class="heading heading--size-h2"
+    >
+      Modal Title
+    </h2>
+    <div
+      class="modal-header__brand-asset"
+    >
+      <div
+        class="fpo"
+        style="width: 100%; height: 100%;"
+      >
+        Brand Asset
+      </div>
+    </div>
+  </div>
+  <div
+    class="modal-body"
+    tabindex="0"
+  >
+    Modal content.
+  </div>
+  <div
+    class="modal-footer"
+  >
+    <div
+      class="footer__button-group button-group button-group--spacing-1x"
+    >
+      <button
+        class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--neutral"
+        type="button"
+      >
+        Button 1
+      </button>
+      <button
+        class="clickable-style button button--primary clickable-style--lg clickable-style--primary clickable-style--brand"
+        type="button"
+      >
+        Button 2
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Modal MobileLandscape story renders snapshot 1`] = `
+<div
+  class="modal__content"
+  data-testid="non-interactive"
+  open=""
+>
+  <button
+    class="modal__close-button"
+  >
+    <svg
+      class="icon modal__close-icon"
+      fill="currentColor"
+      height="1.5rem"
+      role="img"
+      style="--icon-size: 1.5rem;"
+      width="1.5rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="4"
+      >
+        close modal
+      </title>
+      <use
+        xlink:href="test-file-stub#close"
+      />
+    </svg>
+  </button>
+  <div
+    class="modal-header"
+  >
+    <h2
+      class="heading heading--size-h2"
+    >
+      Modal Title
+    </h2>
+  </div>
+  <div
+    class="modal-body"
+    tabindex="0"
+  >
+    Modal content.
+  </div>
+  <div
+    class="modal-footer"
+  >
+    <div
+      class="footer__button-group button-group button-group--spacing-1x"
+    >
+      <button
+        class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--neutral"
+        type="button"
+      >
+        Button 1
+      </button>
+      <button
+        class="clickable-style button button--primary clickable-style--lg clickable-style--primary clickable-style--brand"
+        type="button"
+      >
+        Button 2
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Modal MobileLandscapeBrand story renders snapshot 1`] = `
+<div
+  class="modal__content"
+  data-testid="non-interactive"
+  open=""
+>
+  <button
+    class="modal__close-button"
+  >
+    <svg
+      class="icon modal__close-icon modal__close-icon--brand"
+      fill="currentColor"
+      height="1.5rem"
+      role="img"
+      style="--icon-size: 1.5rem;"
+      width="1.5rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="6"
+      >
+        close modal
+      </title>
+      <use
+        xlink:href="test-file-stub#close"
+      />
+    </svg>
+  </button>
+  <div
+    class="modal-header modal-header--brand"
+  >
+    <h2
+      class="heading heading--size-h2"
+    >
+      Modal Title
+    </h2>
+    <div
+      class="modal-header__brand-asset"
+    >
+      <div
+        class="fpo"
+        style="width: 100%; height: 100%;"
+      >
+        Brand Asset
+      </div>
+    </div>
+  </div>
+  <div
+    class="modal-body"
+    tabindex="0"
+  >
+    Modal content.
+  </div>
+  <div
+    class="modal-footer"
+  >
+    <div
+      class="footer__button-group button-group button-group--spacing-1x"
+    >
+      <button
+        class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--neutral"
+        type="button"
+      >
+        Button 1
+      </button>
+      <button
+        class="clickable-style button button--primary clickable-style--lg clickable-style--primary clickable-style--brand"
+        type="button"
+      >
+        Button 2
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Modal ModalStepper story renders snapshot 1`] = `
+<div
+  class="modal-stepper"
+  data-testid="non-interactive"
+>
+  <svg
+    class="icon"
+    fill="currentColor"
+    height="0.5rem"
+    role="img"
+    style="--icon-size: 0.5rem;"
+    width="0.5rem"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title
+      id="19"
+    >
+      Active Step 1
+    </title>
+    <use
+      xlink:href="test-file-stub#circle"
+    />
+  </svg>
+  <svg
+    class="icon"
+    fill="currentColor"
+    height="0.5rem"
+    role="img"
+    style="--icon-size: 0.5rem;"
+    width="0.5rem"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title
+      id="20"
+    >
+      Step 2
+    </title>
+    <use
+      xlink:href="test-file-stub#empty-circle"
+    />
+  </svg>
+  <svg
+    class="icon"
+    fill="currentColor"
+    height="0.5rem"
+    role="img"
+    style="--icon-size: 0.5rem;"
+    width="0.5rem"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title
+      id="21"
+    >
+      Step 3
+    </title>
+    <use
+      xlink:href="test-file-stub#empty-circle"
+    />
+  </svg>
+</div>
+`;
+
+exports[`Modal Tablet story renders snapshot 1`] = `
+<div
+  class="modal__content"
+  data-testid="non-interactive"
+  open=""
+>
+  <button
+    class="modal__close-button"
+  >
+    <svg
+      class="icon modal__close-icon"
+      fill="currentColor"
+      height="1.5rem"
+      role="img"
+      style="--icon-size: 1.5rem;"
+      width="1.5rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="7"
+      >
+        close modal
+      </title>
+      <use
+        xlink:href="test-file-stub#close"
+      />
+    </svg>
+  </button>
+  <div
+    class="modal-header"
+  >
+    <h2
+      class="heading heading--size-h2"
+    >
+      Modal Title
+    </h2>
+  </div>
+  <div
+    class="modal-body"
+    tabindex="0"
+  >
+    Modal content.
+  </div>
+  <div
+    class="modal-footer"
+  >
+    <div
+      class="footer__button-group button-group button-group--spacing-1x"
+    >
+      <button
+        class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--neutral"
+        type="button"
+      >
+        Button 1
+      </button>
+      <button
+        class="clickable-style button button--primary clickable-style--lg clickable-style--primary clickable-style--brand"
+        type="button"
+      >
+        Button 2
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Modal TabletBrand story renders snapshot 1`] = `
+<div
+  class="modal__content"
+  data-testid="non-interactive"
+  open=""
+>
+  <button
+    class="modal__close-button"
+  >
+    <svg
+      class="icon modal__close-icon modal__close-icon--brand"
+      fill="currentColor"
+      height="1.5rem"
+      role="img"
+      style="--icon-size: 1.5rem;"
+      width="1.5rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="8"
+      >
+        close modal
+      </title>
+      <use
+        xlink:href="test-file-stub#close"
+      />
+    </svg>
+  </button>
+  <div
+    class="modal-header modal-header--brand"
+  >
+    <h2
+      class="heading heading--size-h2"
+    >
+      Modal Title
+    </h2>
+    <div
+      class="modal-header__brand-asset"
+    >
+      <div
+        class="fpo"
+        style="width: 100%; height: 100%;"
+      >
+        Brand Asset
+      </div>
+    </div>
+  </div>
+  <div
+    class="modal-body"
+    tabindex="0"
+  >
+    Modal content.
+  </div>
+  <div
+    class="modal-footer"
+  >
+    <div
+      class="footer__button-group button-group button-group--spacing-1x"
+    >
+      <button
+        class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--neutral"
+        type="button"
+      >
+        Button 1
+      </button>
+      <button
+        class="clickable-style button button--primary clickable-style--lg clickable-style--primary clickable-style--brand"
+        type="button"
+      >
+        Button 2
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Modal WithLongText story renders snapshot 1`] = `
 <div
   aria-labelledby="headlessui-dialog-title-12"
@@ -109,7 +739,7 @@ exports[`Modal WithLongText story renders snapshot 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       >
         <title
-          id="13"
+          id="16"
         >
           close modal
         </title>
@@ -206,7 +836,7 @@ exports[`Modal WithLongTextScrollable story renders snapshot 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       >
         <title
-          id="14"
+          id="17"
         >
           close modal
         </title>
@@ -268,6 +898,166 @@ exports[`Modal WithLongTextScrollable story renders snapshot 1`] = `
           Button 2
         </button>
       </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Modal WithStepper story renders snapshot 1`] = `
+<div
+  class="modal__content"
+  data-testid="non-interactive"
+  open=""
+>
+  <button
+    class="modal__close-button"
+  >
+    <svg
+      class="icon modal__close-icon"
+      fill="currentColor"
+      height="1.5rem"
+      role="img"
+      style="--icon-size: 1.5rem;"
+      width="1.5rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="9"
+      >
+        close modal
+      </title>
+      <use
+        xlink:href="test-file-stub#close"
+      />
+    </svg>
+  </button>
+  <div
+    class="modal-header"
+  >
+    <h2
+      class="heading heading--size-h2"
+    >
+      Modal Title
+    </h2>
+  </div>
+  <div
+    class="modal-body"
+    tabindex="0"
+  >
+    Modal body content. This is an example use case with the stepper in the footer.
+  </div>
+  <div
+    class="modal-footer footer--with-stepper"
+  >
+    <div
+      class="modal-stepper"
+    >
+      <svg
+        class="icon"
+        fill="currentColor"
+        height="0.5rem"
+        role="img"
+        style="--icon-size: 0.5rem;"
+        width="0.5rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title
+          id="10"
+        >
+          Step 1
+        </title>
+        <use
+          xlink:href="test-file-stub#empty-circle"
+        />
+      </svg>
+      <svg
+        class="icon"
+        fill="currentColor"
+        height="0.5rem"
+        role="img"
+        style="--icon-size: 0.5rem;"
+        width="0.5rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title
+          id="11"
+        >
+          Active Step 2
+        </title>
+        <use
+          xlink:href="test-file-stub#circle"
+        />
+      </svg>
+      <svg
+        class="icon"
+        fill="currentColor"
+        height="0.5rem"
+        role="img"
+        style="--icon-size: 0.5rem;"
+        width="0.5rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title
+          id="12"
+        >
+          Step 3
+        </title>
+        <use
+          xlink:href="test-file-stub#empty-circle"
+        />
+      </svg>
+      <svg
+        class="icon"
+        fill="currentColor"
+        height="0.5rem"
+        role="img"
+        style="--icon-size: 0.5rem;"
+        width="0.5rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title
+          id="13"
+        >
+          Step 4
+        </title>
+        <use
+          xlink:href="test-file-stub#empty-circle"
+        />
+      </svg>
+      <svg
+        class="icon"
+        fill="currentColor"
+        height="0.5rem"
+        role="img"
+        style="--icon-size: 0.5rem;"
+        width="0.5rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title
+          id="14"
+        >
+          Step 5
+        </title>
+        <use
+          xlink:href="test-file-stub#empty-circle"
+        />
+      </svg>
+    </div>
+    <div
+      class="footer__button-group button-group button-group--spacing-1x"
+    >
+      <button
+        class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--neutral"
+        type="button"
+      >
+        Button 1
+      </button>
+      <button
+        class="clickable-style button button--primary clickable-style--lg clickable-style--primary clickable-style--brand"
+        type="button"
+      >
+        Button 2
+      </button>
     </div>
   </div>
 </div>
@@ -359,7 +1149,7 @@ exports[`Modal WithoutHeaderAndFooter story renders snapshot 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       >
         <title
-          id="15"
+          id="18"
         >
           close modal
         </title>
@@ -390,388 +1180,6 @@ exports[`Modal WithoutHeaderAndFooter story renders snapshot 1`] = `
         >
           Integer pulvinar felis sit amet dignissim fermentum. Nulla sodales enim mi, varius feugiat sapien congue eget. Morbi vitae ipsum non ligula eleifend molestie. Aenean bibendum tortor sapien, quis volutpat ante ultricies id. Morbi varius dolor ac ante posuere, sit amet tincidunt lectus pulvinar. Proin id efficitur neque. Nullam vel feugiat dui. Curabitur imperdiet lacinia eros, ac iaculis odio. Praesent quis pretium sapien, quis posuere lectus. Proin eleifend purus nec massa aliquam commodo. Quisque auctor suscipit ex sed tristique. Sed eget ultrices est. Suspendisse nunc justo, dapibus at eros ac, rutrum vestibulum est.
         </p>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Modal renders the Brand story 1`] = `
-<div
-  class="default__wrapper"
->
-  <div
-    class="default__background"
-  />
-  <div
-    class="modal__content"
-  >
-    <button
-      class="modal__close-button"
-    >
-      <svg
-        class="icon modal__close-icon modal__close-icon--brand"
-        fill="currentColor"
-        height="1.5rem"
-        role="img"
-        style="--icon-size: 1.5rem;"
-        width="1.5rem"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <title
-          id="2"
-        >
-          close modal
-        </title>
-        <use
-          xlink:href="test-file-stub#close"
-        />
-      </svg>
-    </button>
-    <div
-      class="modal-header modal-header--brand"
-    >
-      <div
-        class="modal-header__brand-asset"
-      >
-        <div
-          class="fpo"
-          style="width: 100%; height: 100%;"
-        >
-          Brand Asset
-        </div>
-      </div>
-      <h2
-        class="heading heading--size-h2"
-      >
-        Modal Title
-      </h2>
-    </div>
-    <div
-      class="modal-body"
-      tabindex="0"
-    >
-      Modal content.
-    </div>
-    <div
-      class="modal-footer"
-    >
-      <div
-        class="footer__button-group button-group button-group--spacing-1x"
-      >
-        <button
-          class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--neutral"
-          type="button"
-        >
-          Button 1
-        </button>
-        <button
-          class="clickable-style button button--primary clickable-style--lg clickable-style--primary clickable-style--brand"
-          type="button"
-        >
-          Button 2
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Modal renders the Default story 1`] = `
-<div
-  class="default__wrapper"
->
-  <div
-    class="default__background"
-  />
-  <div
-    class="modal__content"
-  >
-    <button
-      class="modal__close-button"
-    >
-      <svg
-        class="icon modal__close-icon"
-        fill="currentColor"
-        height="1.5rem"
-        role="img"
-        style="--icon-size: 1.5rem;"
-        width="1.5rem"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <title
-          id="1"
-        >
-          close modal
-        </title>
-        <use
-          xlink:href="test-file-stub#close"
-        />
-      </svg>
-    </button>
-    <div
-      class="modal-header"
-    >
-      <h2
-        class="heading heading--size-h2"
-      >
-        Modal Title
-      </h2>
-    </div>
-    <div
-      class="modal-body"
-      tabindex="0"
-    >
-      Modal content.
-    </div>
-    <div
-      class="modal-footer"
-    >
-      <div
-        class="footer__button-group button-group button-group--spacing-1x"
-      >
-        <button
-          class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--neutral"
-          type="button"
-        >
-          Button 1
-        </button>
-        <button
-          class="clickable-style button button--primary clickable-style--lg clickable-style--primary clickable-style--brand"
-          type="button"
-        >
-          Button 2
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Modal renders the ModalStepper story 1`] = `
-<div
-  style="margin: 0.5rem;"
->
-  <div
-    class="modal-stepper"
-  >
-    <svg
-      class="icon"
-      fill="currentColor"
-      height="0.5rem"
-      role="img"
-      style="--icon-size: 0.5rem;"
-      width="0.5rem"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <title
-        id="9"
-      >
-        Active Step 1
-      </title>
-      <use
-        xlink:href="test-file-stub#circle"
-      />
-    </svg>
-    <svg
-      class="icon"
-      fill="currentColor"
-      height="0.5rem"
-      role="img"
-      style="--icon-size: 0.5rem;"
-      width="0.5rem"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <title
-        id="10"
-      >
-        Step 2
-      </title>
-      <use
-        xlink:href="test-file-stub#empty-circle"
-      />
-    </svg>
-    <svg
-      class="icon"
-      fill="currentColor"
-      height="0.5rem"
-      role="img"
-      style="--icon-size: 0.5rem;"
-      width="0.5rem"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <title
-        id="11"
-      >
-        Step 3
-      </title>
-      <use
-        xlink:href="test-file-stub#empty-circle"
-      />
-    </svg>
-  </div>
-</div>
-`;
-
-exports[`Modal renders the WithStepper story 1`] = `
-<div
-  class="default__wrapper"
->
-  <div
-    class="default__background"
-  />
-  <div
-    class="modal__content"
-  >
-    <button
-      class="modal__close-button"
-    >
-      <svg
-        class="icon modal__close-icon"
-        fill="currentColor"
-        height="1.5rem"
-        role="img"
-        style="--icon-size: 1.5rem;"
-        width="1.5rem"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <title
-          id="3"
-        >
-          close modal
-        </title>
-        <use
-          xlink:href="test-file-stub#close"
-        />
-      </svg>
-    </button>
-    <div
-      class="modal-header"
-    >
-      <h2
-        class="heading heading--size-h2"
-      >
-        Modal Title
-      </h2>
-    </div>
-    <div
-      class="modal-body"
-      tabindex="0"
-    >
-      Modal body content. This is an example use case with the stepper in the footer.
-    </div>
-    <div
-      class="modal-footer footer--with-stepper"
-    >
-      <div
-        class="modal-stepper"
-      >
-        <svg
-          class="icon"
-          fill="currentColor"
-          height="0.5rem"
-          role="img"
-          style="--icon-size: 0.5rem;"
-          width="0.5rem"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title
-            id="4"
-          >
-            Step 1
-          </title>
-          <use
-            xlink:href="test-file-stub#empty-circle"
-          />
-        </svg>
-        <svg
-          class="icon"
-          fill="currentColor"
-          height="0.5rem"
-          role="img"
-          style="--icon-size: 0.5rem;"
-          width="0.5rem"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title
-            id="5"
-          >
-            Active Step 2
-          </title>
-          <use
-            xlink:href="test-file-stub#circle"
-          />
-        </svg>
-        <svg
-          class="icon"
-          fill="currentColor"
-          height="0.5rem"
-          role="img"
-          style="--icon-size: 0.5rem;"
-          width="0.5rem"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title
-            id="6"
-          >
-            Step 3
-          </title>
-          <use
-            xlink:href="test-file-stub#empty-circle"
-          />
-        </svg>
-        <svg
-          class="icon"
-          fill="currentColor"
-          height="0.5rem"
-          role="img"
-          style="--icon-size: 0.5rem;"
-          width="0.5rem"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title
-            id="7"
-          >
-            Step 4
-          </title>
-          <use
-            xlink:href="test-file-stub#empty-circle"
-          />
-        </svg>
-        <svg
-          class="icon"
-          fill="currentColor"
-          height="0.5rem"
-          role="img"
-          style="--icon-size: 0.5rem;"
-          width="0.5rem"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title
-            id="8"
-          >
-            Step 5
-          </title>
-          <use
-            xlink:href="test-file-stub#empty-circle"
-          />
-        </svg>
-      </div>
-      <div
-        class="footer__button-group button-group button-group--spacing-1x"
-      >
-        <button
-          class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--neutral"
-          type="button"
-        >
-          Button 1
-        </button>
-        <button
-          class="clickable-style button button--primary clickable-style--lg clickable-style--primary clickable-style--brand"
-          type="button"
-        >
-          Button 2
-        </button>
       </div>
     </div>
   </div>

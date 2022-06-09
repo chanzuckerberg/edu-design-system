@@ -6,48 +6,17 @@ import Modal from './Modal';
 import * as stories from './Modal.stories';
 import '../../../jest/helpers/removeModalTransitionStylesJestSerializer';
 
-// Get only the stories we want to write normal, non-snapshot tests for.
-const { Default, Brand, WithStepper, ModalStepper, DefaultInteractive } =
-  composeStories(stories);
-
-// Get only the stories we want to generate snapshot tests for.
-const storiesToSnapshot = { ...stories };
-[
-  'Default',
-  'Brand',
-  'WithStepper',
-  'ModalStepper',
-  'InteractiveModalStepper',
-].forEach((name) => {
-  delete storiesToSnapshot[name];
-});
+const { DefaultInteractive } = composeStories(stories);
 
 // Required because the modal uses react portal under the hood.
 require('intersection-observer');
 
 describe('Modal', () => {
-  it('renders the Default story', () => {
-    const { container } = render(<Default />);
-    expect(container.firstChild).toMatchSnapshot(); // eslint-disable-line testing-library/no-node-access
-  });
-
-  it('renders the Brand story', () => {
-    const { container } = render(<Brand />);
-    expect(container.firstChild).toMatchSnapshot(); // eslint-disable-line testing-library/no-node-access
-  });
-
-  it('renders the WithStepper story', () => {
-    const { container } = render(<WithStepper />);
-    expect(container.firstChild).toMatchSnapshot(); // eslint-disable-line testing-library/no-node-access
-  });
-
-  it('renders the ModalStepper story', () => {
-    const { container } = render(<ModalStepper />);
-    expect(container.firstChild).toMatchSnapshot(); // eslint-disable-line testing-library/no-node-access
-  });
-
-  generateSnapshots(storiesToSnapshot, {
+  generateSnapshots(stories, {
     getElement: async () => {
+      const nonInteractiveModal = screen.queryByTestId('non-interactive');
+      if (nonInteractiveModal) return nonInteractiveModal;
+
       const openModalButton = await screen.findByRole('button', {
         name: 'Open the modal',
       });
