@@ -2,10 +2,6 @@ import React from 'react';
 
 import { Button, Modal, Heading, Text } from '../../../src';
 
-import '../../../src/components/Utilities/Alignment.css';
-import '../../../src/components/Utilities/Display.css';
-import '../../../src/components/Utilities/Spacing.css';
-
 import CompassSolo from '../../static/compass-solo.svg';
 
 export const ModalBrand = () => (

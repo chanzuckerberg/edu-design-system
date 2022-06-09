@@ -4,10 +4,6 @@ import { Button, ButtonGroup, Icon, Modal, Heading } from '../../../src';
 
 import { RadioField } from '../../../src/upcoming-components/RadioField/RadioField';
 
-import '../../../src/components/Utilities/Alignment.css';
-import '../../../src/components/Utilities/Display.css';
-import '../../../src/components/Utilities/Spacing.css';
-
 export const ModalFirstStep = () => (
   <Modal
     onClose={
