@@ -105,9 +105,13 @@ export const Mobile: StoryObj<Args> = {
     viewport: {
       defaultViewport: 'mobile2',
     },
+    chromatic: { disableSnapshot: false, viewports: [414] },
   },
 };
 
+/**
+ * 1) Chromatic sets viewport height to 900px, hence won't snap as necessary
+ */
 export const MobileLandscape: StoryObj<Args> = {
   ...Default,
   parameters: {
@@ -123,6 +127,8 @@ export const MobileLandscape: StoryObj<Args> = {
           },
         },
       },
+      /* 1 */
+      chromatic: { disableSnapshot: true },
     },
   },
 };
@@ -159,6 +165,7 @@ export const Tablet: StoryObj<Args> = {
         },
       },
     },
+    chromatic: { disableSnapshot: false, viewports: [768] },
   },
 };
 
