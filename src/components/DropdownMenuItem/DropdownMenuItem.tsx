@@ -29,6 +29,11 @@ export interface Props {
    */
   onHover?: MouseEventHandler;
   /**
+   * Status variant
+   * - **error** yields a dropdown item with red text
+   */
+  status?: 'error';
+  /**
    * Stylistic variations of the GridL
    * - **lined** yields a dropdown item with a border bottom
    */
@@ -45,7 +50,10 @@ export interface Props {
  * Dropdown menu item within `DropdownMenu`
  */
 export const DropdownMenuItem = React.forwardRef<HTMLLIElement, Props>(
-  ({ align, className, href, children, variant, onClick, ...other }, ref) => {
+  (
+    { align, className, href, children, variant, onClick, status, ...other },
+    ref,
+  ) => {
     const TagName = createTagName();
 
     function createTagName() {
@@ -61,6 +69,7 @@ export const DropdownMenuItem = React.forwardRef<HTMLLIElement, Props>(
       className,
       align === 'top-left' && styles['dropdown-menu__item--align-top-left'],
       variant === 'lined' && styles['dropdown-menu__item--lined'],
+      status === 'error' && styles['dropdown-menu__item--error'],
     );
 
     return (

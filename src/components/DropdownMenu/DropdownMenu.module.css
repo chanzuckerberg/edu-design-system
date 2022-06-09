@@ -68,9 +68,9 @@
   width: 100%;
   padding: var(--eds-size-1-and-half) var(--eds-size-2);
   text-align: left;
-  cursor: pointer;
+
   color: var(--eds-theme-color-text-neutral-default);
-  transition: background var(--eds-anim-fade-quick) var(--eds-anim-ease);
+  transition: all var(--eds-anim-fade-quick) var(--eds-anim-ease);
 
   &:hover,
   &:focus {
@@ -87,5 +87,9 @@
   */
   .dropdown-menu__item--lined & {
     border-bottom: 1px solid var(--eds-theme-color-border-neutral-subtle);
+  }
+
+  .dropdown-menu__item--error & {
+    color: var(--eds-theme-color-text-utility-error);
   }
 }

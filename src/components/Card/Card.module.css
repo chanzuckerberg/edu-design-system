@@ -41,6 +41,13 @@ a.card {
  */
 .card--raised {
   box-shadow: var(--eds-box-shadow-md);
+  border-color: var(--eds-theme-color-background-neutral-default);
+  transition: border-color var(--eds-anim-fade-quick) var(--eds-anim-ease);
+
+  &:hover,
+  &:focus {
+    border-color: var(--eds-theme-color-border-neutral-subtle);
+  }
 }
 
 /**

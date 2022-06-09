@@ -48,3 +48,24 @@ export const WithIcons = () => (
     </DropdownMenuItem>
   </DropdownMenu>
 );
+
+export const WithDeleteButton = () => (
+  <DropdownMenu>
+    <DropdownMenuItem>
+      <Icon name="schedule" purpose="decorative" size="1.25rem" />
+      Item 1
+    </DropdownMenuItem>
+    <DropdownMenuItem>
+      <Icon name="schedule" purpose="decorative" size="1.25rem" />
+      Item 2
+    </DropdownMenuItem>
+    <DropdownMenuItem>
+      <Icon name="schedule" purpose="decorative" size="1.25rem" />
+      Item 3
+    </DropdownMenuItem>
+    <DropdownMenuItem status="error">
+      <Icon name="schedule" purpose="decorative" size="1.25rem" />
+      Delete Item
+    </DropdownMenuItem>
+  </DropdownMenu>
+);
