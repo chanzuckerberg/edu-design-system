@@ -119,7 +119,7 @@ export const ProjectCard = ({
         </div>
       </CardBody>
       <CardFooter
-        aria-label="Project card menu options"
+        aria-label={`${title} card menu options`}
         className={styles['project-card__footer']}
       >
         <ButtonDropdown

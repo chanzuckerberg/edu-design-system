@@ -17,3 +17,11 @@ Default.args = {
   number: 1,
   numberAriaLabel: 'Project 1',
 };
+
+export const Draggable = Template.bind({});
+Draggable.args = {
+  behavior: 'draggable',
+  title: 'DragDropItem provides handle to the left',
+  meta: '12 days',
+  numberAriaLabel: 'Project 1',
+};
