@@ -9,6 +9,7 @@ import CadSuccess from '../../static/cad-success.svg';
 
 export const ModalFinalStep = () => (
   <Modal
+    isScrollable
     onClose={
       () => {} /* eslint-disable-line @typescript-eslint/no-empty-function */
     }

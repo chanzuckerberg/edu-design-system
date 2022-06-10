@@ -10,6 +10,7 @@ import '../../../src/components/Utilities/Spacing.css';
 
 export const ModalFirstStep = () => (
   <Modal
+    isScrollable
     onClose={
       () => {} /* eslint-disable-line @typescript-eslint/no-empty-function */
     }
