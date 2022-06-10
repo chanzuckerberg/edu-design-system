@@ -18,20 +18,20 @@ export default {
     variant: {
       control: {
         type: 'select',
-        options: ['primary', 'secondary', 'icon', 'link'],
       },
+      options: ['primary', 'secondary', 'icon', 'link'],
     },
     status: {
       control: {
         type: 'select',
-        options: ['brand', 'neutral', 'success', 'warning', 'error'],
       },
+      options: ['brand', 'neutral', 'success', 'warning', 'error'],
     },
     size: {
       control: {
         type: 'select',
-        options: ['sm', 'md', 'lg'],
       },
+      options: ['sm', 'md', 'lg'],
     },
     fullWidth: {
       control: 'boolean',

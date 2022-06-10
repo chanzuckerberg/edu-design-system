@@ -7,16 +7,14 @@ import Icon from '../Icon';
 export default {
   title: 'Molecules/Messaging/Tag',
   component: Tag,
-
   argTypes: {
     variant: {
       control: {
         type: 'select',
-        options: VARIANTS,
       },
+      options: VARIANTS,
     },
   },
-
   args: {
     text: 'Tag text',
     variant: 'neutral' as const,
