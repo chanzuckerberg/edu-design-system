@@ -9,9 +9,6 @@
  */
 .panel {
   background: var(--eds-theme-color-background-neutral-default);
-  border-width: var(--eds-theme-border-width);
-  border-style: solid;
-  border-color: var(--eds-theme-color-border-neutral-subtle);
   border-radius: var(--eds-border-radius-xl);
   padding: var(--eds-size-3);
 }
