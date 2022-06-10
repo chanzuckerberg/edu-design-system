@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import React, { MutableRefObject, ReactNode } from 'react';
 import styles from './Modal.module.css';
 import { Icon } from '../Icon/Icon';
-import { ModalBody } from '../ModalBody/ModalBody';
+import { ModalBody, Props as ModalBodyProps } from '../ModalBody/ModalBody';
 import {
   ModalFooter,
   Props as ModalFooterProps,
@@ -53,9 +53,11 @@ type ModalContentProps = {
   initialFocus?: MutableRefObject<HTMLElement | null>;
   /**
    * Toggles scrollable variant of the modal. If modal is scrollable, footer is not, and vice versa.
-   * Defaults to false since modal default is not scrollable.
-   * Also adds border and shadow to the footer indicate sticky status.
+   * Also adds border and shadow to the footer indicate sticky status and tabindex to body for keyboard scrolling.
    * Prop should be dependent on whether content overflows at the mobile level.
+   * Tabindex for keyboard scroll is on the body, however, due to focus outline
+   * not having high contrast on the brand header and being overlapped by the footer.
+   * Defaults to false since modal default is not scrollable.
    */
   isScrollable?: boolean;
   /**
@@ -221,6 +223,11 @@ const VariantModalHeader = (props: ModalHeaderProps) => {
   return <ModalHeader variant={variant} {...props} />;
 };
 
+const FocusableModalBody = (props: ModalBodyProps) => {
+  const { isScrollable } = React.useContext(ModalContext);
+  return <ModalBody isFocusable={isScrollable} {...props} />;
+};
+
 const StickyModalFooter = (props: ModalFooterProps) => {
   const { isScrollable } = React.useContext(ModalContext);
   return <ModalFooter isSticky={isScrollable} {...props} />;
@@ -228,7 +235,7 @@ const StickyModalFooter = (props: ModalFooterProps) => {
 
 Modal.Header = VariantModalHeader;
 Modal.Title = ModalTitle;
-Modal.Body = ModalBody;
+Modal.Body = FocusableModalBody;
 Modal.Footer = StickyModalFooter;
 Modal.Stepper = ModalStepper;
 
