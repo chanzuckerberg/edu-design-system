@@ -176,7 +176,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0;
   height: calc(100% - 2px);
   padding: var(--eds-size-1);
   z-index: var(--eds-z-index-500);
@@ -184,8 +183,12 @@
   background: var(--eds-theme-color-background-neutral-default);
   transition: opacity var(--eds-anim-fade-quick) var(--eds-anim-ease);
 
-  .drag-drop__item:hover &,
-  .drag-drop__item:focus &,
+  .drag-drop__item--hover & {
+    opacity: 0;
+  }
+
+  .drag-drop__item--hover:hover &,
+  .drag-drop__item--hover:focus &,
   &:focus {
     opacity: 1;
   }

@@ -19,11 +19,11 @@ import {
   Grid,
   GridItem,
   Text,
+  ProjectCard,
 } from '../../../src';
 
 import '../../../src/components/Utilities/Spacing.css';
 import CardWithNotification from '../../recipes/CardWithNotification';
-import ProjectCard from '../../recipes/ProjectCard';
 import TableCard from '../../recipes/TableCard';
 
 import EmptyImage from '../../static/hand-pencil.svg';
@@ -379,13 +379,15 @@ export const Cad = () => (
               }}
               items={{
                 'item-1': {
+                  behavior: 'hover',
                   title: 'Project #1',
                   children: (
                     <ProjectCard
+                      behavior="draggable"
                       meta="12 days"
                       number={1}
                       numberAriaLabel="Project 1"
-                      title="Project card title"
+                      title="Longer project card title that wraps"
                     ></ProjectCard>
                   ),
                 },
@@ -393,8 +395,8 @@ export const Cad = () => (
                   title: 'Project #2',
                   children: (
                     <ProjectCard
+                      behavior="draggable"
                       meta="12 days"
-                      number={2}
                       numberAriaLabel="Project 2"
                       title="Project card title"
                     ></ProjectCard>
@@ -404,8 +406,8 @@ export const Cad = () => (
                   title: 'Project #3',
                   children: (
                     <ProjectCard
+                      behavior="draggable"
                       meta="12 days"
-                      number={3}
                       numberAriaLabel="Project 3"
                       title="Project card title"
                     ></ProjectCard>
@@ -415,8 +417,8 @@ export const Cad = () => (
                   title: 'Project #4',
                   children: (
                     <ProjectCard
+                      behavior="draggable"
                       meta="12 days"
-                      number={4}
                       numberAriaLabel="Project 4"
                       title="Project card title"
                     ></ProjectCard>
@@ -426,9 +428,9 @@ export const Cad = () => (
                   title: 'Project #5',
                   children: (
                     <ProjectCard
+                      behavior="draggable"
                       buttonDropdownPosition="top-left"
                       meta="12 days"
-                      number={5}
                       numberAriaLabel="Project 5"
                       title="Project card title"
                     ></ProjectCard>
@@ -438,6 +440,7 @@ export const Cad = () => (
                   title: 'Project #6',
                   children: (
                     <ProjectCard
+                      behavior="draggable"
                       buttonDropdownPosition="top-left"
                       meta="12 days"
                       number={6}

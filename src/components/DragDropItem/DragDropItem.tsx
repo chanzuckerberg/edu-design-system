@@ -7,6 +7,11 @@ import Icon from '../Icon';
 
 export interface Props {
   /**
+   * Behavior variants
+   * - **hover** renders a drag handle that only shows up on hover
+   */
+  behavior?: 'hover';
+  /**
    * CSS class names that can be appended to the component.
    */
   className?: string;
@@ -14,15 +19,21 @@ export interface Props {
    * The contents of an item; includes id, title (optional) and children (optional)
    */
   item: ItemType;
-  /** Item's original indexed position */
+  /**
+   * Item's original indexed position
+   */
   index: number;
 }
 
 /**
  * Primary UI component for user interaction
  */
-export const DragDropItem = ({ className, item, index }: Props) => {
-  const componentClassName = clsx(styles['drag-drop__item'], className);
+export const DragDropItem = ({ behavior, className, item, index }: Props) => {
+  const componentClassName = clsx(
+    styles['drag-drop__item'],
+    item.behavior === 'hover' && styles['drag-drop__item--hover'],
+    className,
+  );
 
   // `id` is injected in <DragDrop />
   return item.id ? (

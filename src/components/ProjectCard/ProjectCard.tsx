@@ -13,9 +13,15 @@ import {
   NumberIcon,
   ButtonDropdown,
   DropdownMenuItem,
-} from '../../../src';
+} from '../..';
+import { HeadingElement } from '../Heading';
 
 export interface Props {
+  /**
+   * Determines type of clickable
+   * - **draggable** renders a card that is used to drag with space for the handle on the left
+   */
+  behavior?: 'draggable';
   /**
    * Determines type of clickable
    * - default renders a dropdown menu to the bottom left of the button
@@ -29,6 +35,11 @@ export interface Props {
    */
   className?: string;
   /**
+   * Heading as element. Needed to create semantic heading order on page depending on
+   * where this is placed
+   */
+  headingAs?: HeadingElement;
+  /**
    * Project card title
    */
   title?: string;
@@ -39,7 +50,7 @@ export interface Props {
   /**
    * Project card number
    */
-  number: number;
+  number?: number;
   /**
    * Number aria label
    */
@@ -54,16 +65,22 @@ export interface Props {
  * Primary UI component for user interaction
  */
 export const ProjectCard = ({
+  behavior,
   className,
   title,
   meta,
   number,
+  headingAs = 'h3',
   buttonDropdownPosition,
   numberAriaLabel,
   isDragging,
   ...other
 }: Props) => {
-  const componentClassName = clsx(styles['project-card'], className);
+  const componentClassName = clsx(
+    styles['project-card'],
+    behavior === 'draggable' && styles['project-card--draggable'],
+    className,
+  );
   return (
     <Card
       className={componentClassName}
@@ -73,16 +90,18 @@ export const ProjectCard = ({
       {...other}
     >
       <CardHeader className={styles['project-card__header']}>
-        <NumberIcon
-          aria-label={numberAriaLabel}
-          className={styles['project-card__number']}
-          number={number}
-          size="sm"
-        />
+        {number && (
+          <NumberIcon
+            aria-label={numberAriaLabel}
+            className={styles['project-card__number']}
+            number={number}
+            size="sm"
+          />
+        )}
       </CardHeader>
       <CardBody className={styles['project-card__body']}>
         <Heading
-          as="h3"
+          as={headingAs}
           variant="base"
           className={styles['project-card__title']}
           size="body-sm"

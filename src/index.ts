@@ -47,6 +47,7 @@ export { default as OverflowList } from './components/OverflowList';
 export { default as OverflowListItem } from './components/OverflowListItem';
 export { default as PageHeader } from './components/PageHeader';
 export { default as Panel } from './components/Panel';
+export { default as ProjectCard } from './components/ProjectCard';
 export { default as Section } from './components/Section';
 export { default as Tab } from './components/Tab';
 export { default as Table } from './components/Table';
