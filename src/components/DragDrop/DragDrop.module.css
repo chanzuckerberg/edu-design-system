@@ -69,6 +69,7 @@
 /**
  * Drag drop container
  * 1) Set to display flex so empty state can span entire column.
+ * 2) Padding added to the top to account for outline of button
  */
 .drag-drop__container {
   display: flex; /* 1 */
@@ -76,6 +77,7 @@
   flex-direction: column;
   margin-left: var(--eds-size-2);
   width: 20rem;
+  padding-top: var(--eds-size-half); /* 2 */
   /**
   * First drag drop container
   * 1) Don't add left margin to left align with the rest of the content
