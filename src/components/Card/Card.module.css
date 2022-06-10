@@ -31,7 +31,7 @@ a.card {
   transition: box-shadow var(--eds-anim-fade-quick) var(--eds-anim-ease);
 
   &:hover {
-    box-shadow: var(--eds-theme-box-shadow);
+    box-shadow: var(--eds-box-shadow-md);
   }
 }
 

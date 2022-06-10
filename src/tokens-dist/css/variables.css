@@ -125,7 +125,6 @@
   --eds-z-index-500: 500;
   --eds-z-index-top: 99999;
   --eds-z-index-bottom: -100;
-  --eds-theme-border-radius: 4px;
   --eds-theme-border-width: 1px;
   --eds-theme-color-background-neutral-default: #FFFFFF;
   --eds-theme-color-background-neutral-default-hover: #F4F6F8;
@@ -377,7 +376,6 @@
   --eds-theme-color-form-label: #383C43;
   --eds-theme-color-text-highlight-foreground: #21272D;
   --eds-theme-color-text-highlight-background: #F5FF8F;
-  --eds-theme-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2), 0px 2px 8px rgba(0, 0, 0, 0.08);
   --eds-theme-form-border-width: 1px;
   --eds-theme-form-border-radius: 4px;
   --legacy-color-gray-50: #F8F9FC;

@@ -16,8 +16,8 @@
   width: 16rem; /* 2 */
   background: var(--eds-theme-color-background-neutral-default);
   border: 1px solid var(--eds-theme-color-border-neutral-subtle);
-  border-radius: var(--eds-theme-border-radius);
-  box-shadow: var(--eds-theme-box-shadow);
+  border-radius: var(--eds-border-radius-md);
+  box-shadow: var(--eds-box-shadow-md);
 
   /**
   * Dropdown menu within active dropdown menu item

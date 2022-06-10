@@ -2,7 +2,7 @@
 
 .token-specimen {
   border: 1px solid var(--eds-theme-color-border-neutral-subtle);
-  box-shadow: 1px solid var(--eds-theme-box-shadow);
+  box-shadow: 1px solid var(--eds-box-shadow-md);
   background: white;
   padding: 1rem;
   display: grid;

@@ -33,7 +33,7 @@ export class Tier2Borders extends Component {
 
         <Section title="Border Radius">
           <Grid>
-            {filterTokens(`eds-theme-border-radius`).map(function (
+            {filterTokens(`eds-border-radius-md`).map(function (
               listItem,
               index,
             ) {

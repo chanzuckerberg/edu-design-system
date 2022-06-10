@@ -9,10 +9,7 @@ export class Tier2Shadows extends Component {
       <div>
         <Section title="Box Shadow">
           <Grid>
-            {filterTokens(`eds-theme-box-shadow`).map(function (
-              listItem,
-              index,
-            ) {
+            {filterTokens(`eds-box-shadow-md`).map(function (listItem, index) {
               return (
                 <GridItem key={'box-shadow-' + index}>
                   <TokenSpecimen

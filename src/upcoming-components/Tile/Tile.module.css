@@ -10,5 +10,5 @@
 .tile {
   padding: var(--eds-size-2);
   background: var(--eds-theme-color-background-neutral-subtle);
-  border-radius: var(--eds-theme-border-radius);
+  border-radius: var(--eds-border-radius-md);
 }

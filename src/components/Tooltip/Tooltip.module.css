@@ -11,8 +11,8 @@
   border-style: solid;
   border-width: var(--eds-border-width-sm);
   border-radius: var(--eds-border-radius-lg);
-  box-shadow: var(--eds-theme-box-shadow);
-  
+  box-shadow: var(--eds-box-shadow-md);
+
   @media (prefers-reduced-motion) {
     transition: none;
   }
@@ -21,7 +21,7 @@
 /**
  * 1) Enables opacity fade animation 
  */
-.tooltip[data-state="hidden"] {
+.tooltip[data-state='hidden'] {
   opacity: 0;
 }
 
@@ -66,44 +66,44 @@
   border-color: transparent;
   border-width: var(--eds-size-1);
 
-  content: "";
+  content: '';
 }
 
-.tooltip[data-placement^="top"] :global(.tippy-arrow) {
+.tooltip[data-placement^='top'] :global(.tippy-arrow) {
   left: 0;
 
   transform: translate3d(73px, 0, 0);
 }
 
-.tooltip[data-placement^="bottom"] :global(.tippy-arrow) {
+.tooltip[data-placement^='bottom'] :global(.tippy-arrow) {
   top: 0;
   left: 0;
 
   transform: translate3d(73px, 0, 0);
 }
 
-.tooltip[data-placement^="left"] :global(.tippy-arrow) {
+.tooltip[data-placement^='left'] :global(.tippy-arrow) {
   top: 0;
   right: 0;
 
   transform: translate3d(0, 19px, 0);
 }
 
-.tooltip[data-placement^="right"] :global(.tippy-arrow) {
+.tooltip[data-placement^='right'] :global(.tippy-arrow) {
   top: 0;
   left: 0;
 
   transform: translate3d(0, 25px, 0);
 }
 
-.tooltip[data-placement^="top"] :global(.tippy-arrow::before) {
+.tooltip[data-placement^='top'] :global(.tippy-arrow::before) {
   left: 0;
 
   border-top-color: var(--arrow-color);
   border-bottom-width: 0;
 }
 
-.tooltip[data-placement^="bottom"] :global(.tippy-arrow::before) {
+.tooltip[data-placement^='bottom'] :global(.tippy-arrow::before) {
   left: 0;
 
   border-bottom-color: var(--arrow-color);
@@ -111,13 +111,13 @@
   top: -7px;
 }
 
-.tooltip[data-placement^="left"] :global(.tippy-arrow::before) {
+.tooltip[data-placement^='left'] :global(.tippy-arrow::before) {
   border-left-color: var(--arrow-color);
   border-right-width: 0;
   right: -7px;
 }
 
-.tooltip[data-placement^="right"] :global(.tippy-arrow::before) {
+.tooltip[data-placement^='right'] :global(.tippy-arrow::before) {
   border-right-color: var(--arrow-color);
   border-left-width: 0;
   left: -7px;

@@ -14,7 +14,7 @@
   align-items: stretch;
   background: var(--eds-theme-color-background-brand-primary-strong);
   color: var(--eds-theme-color-text-neutral-default-inverse);
-  border-radius: var(--eds-theme-border-radius);
+  border-radius: var(--eds-border-radius-md);
 
   @media all and (min-width: $eds-bp-md) {
     flex-direction: row;

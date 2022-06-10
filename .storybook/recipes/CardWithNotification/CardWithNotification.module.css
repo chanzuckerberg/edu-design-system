@@ -11,7 +11,7 @@
  */
 .card-with-notification {
   /* 1 */
-  border-radius: var(--eds-theme-border-radius);
+  border-radius: var(--eds-border-radius-md);
   border: var(--eds-theme-color-border-neutral-subtle) solid
     var(--eds-theme-border-width);
 }

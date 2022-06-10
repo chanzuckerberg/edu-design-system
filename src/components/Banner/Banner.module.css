@@ -18,11 +18,11 @@
   position: relative;
 
   background-color: var(--eds-theme-color-neutral-subtle-background);
-  box-shadow: var(--eds-theme-box-shadow); /* 2 */
+  box-shadow: var(--eds-box-shadow-md); /* 2 */
   margin-bottom: var(--eds-size-2); /* 2 */
 
   border-style: solid;
-  border-radius: var(--eds-theme-border-radius);
+  border-radius: var(--eds-border-radius-md);
   border-width: var(--eds-theme-border-width);
   border-color: var(--messaging-border-color);
 

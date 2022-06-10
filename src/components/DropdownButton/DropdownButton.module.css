@@ -18,7 +18,7 @@
 
   border: var(--eds-theme-border-width) solid
     var(--eds-theme-color-border-neutral-strong);
-  border-radius: var(--eds-theme-border-radius);
+  border-radius: var(--eds-border-radius-md);
 
   display: flex;
   justify-content: space-between; /* 1 */

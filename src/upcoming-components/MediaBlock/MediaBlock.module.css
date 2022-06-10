@@ -31,7 +31,7 @@
  * Media block image 
  */
 .media-block__img {
-  border-radius: var(--eds-theme-border-radius);
+  border-radius: var(--eds-border-radius-md);
 }
 
 /**
