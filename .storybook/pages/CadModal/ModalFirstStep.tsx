@@ -44,7 +44,7 @@ export const ModalFirstStep = () => (
         />
       </RadioField>
     </Modal.Body>
-    <Modal.Footer className="u-display-flex u-justify-content-space-between">
+    <Modal.Footer className="u-display-flex u-justify-content-space-between u-align-items-center">
       <Modal.Stepper activeStep={1} totalSteps={3} />
       <ButtonGroup>
         <Button
