@@ -21,6 +21,7 @@ export class TokenSpecimen extends Component {
           }
           contentEditable
           style={this.props.inlineStyles}
+          suppressContentEditableWarning={true}
         >
           AaBbCcDdEeFfGg
         </div>
@@ -34,6 +35,7 @@ export class TokenSpecimen extends Component {
           }
           contentEditable
           style={this.props.inlineStyles}
+          suppressContentEditableWarning={true}
         >
           Almost before we knew it, we had left the ground.
         </div>
