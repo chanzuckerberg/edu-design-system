@@ -2,7 +2,6 @@ import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import styles from './PageHeader.module.css';
 import Heading, { HeadingSize } from '../Heading';
-import Variant from '../Heading';
 
 export interface Props {
   /**
