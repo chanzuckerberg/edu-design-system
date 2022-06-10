@@ -49,7 +49,6 @@ exports[`Modal Brand story renders snapshot 1`] = `
   </div>
   <div
     class="modal-body"
-    tabindex="0"
   >
     Modal content.
   </div>
@@ -115,7 +114,6 @@ exports[`Modal Default story renders snapshot 1`] = `
   </div>
   <div
     class="modal-body"
-    tabindex="0"
   >
     Modal content.
   </div>
@@ -193,7 +191,6 @@ exports[`Modal DefaultInteractive story renders snapshot 1`] = `
     </div>
     <div
       class="modal-body"
-      tabindex="0"
     >
       Modal content.
     </div>
@@ -260,7 +257,6 @@ exports[`Modal Mobile story renders snapshot 1`] = `
   </div>
   <div
     class="modal-body"
-    tabindex="0"
   >
     Modal content.
   </div>
@@ -336,7 +332,6 @@ exports[`Modal MobileBrand story renders snapshot 1`] = `
   </div>
   <div
     class="modal-body"
-    tabindex="0"
   >
     Modal content.
   </div>
@@ -402,7 +397,6 @@ exports[`Modal MobileLandscape story renders snapshot 1`] = `
   </div>
   <div
     class="modal-body"
-    tabindex="0"
   >
     Modal content.
   </div>
@@ -478,7 +472,6 @@ exports[`Modal MobileLandscapeBrand story renders snapshot 1`] = `
   </div>
   <div
     class="modal-body"
-    tabindex="0"
   >
     Modal content.
   </div>
@@ -606,7 +599,6 @@ exports[`Modal Tablet story renders snapshot 1`] = `
   </div>
   <div
     class="modal-body"
-    tabindex="0"
   >
     Modal content.
   </div>
@@ -682,7 +674,6 @@ exports[`Modal TabletBrand story renders snapshot 1`] = `
   </div>
   <div
     class="modal-body"
-    tabindex="0"
   >
     Modal content.
   </div>
@@ -760,7 +751,6 @@ exports[`Modal WithLongText story renders snapshot 1`] = `
     </div>
     <div
       class="modal-body"
-      tabindex="0"
     >
       <div>
         <p>
@@ -942,7 +932,6 @@ exports[`Modal WithStepper story renders snapshot 1`] = `
   </div>
   <div
     class="modal-body"
-    tabindex="0"
   >
     Modal body content. This is an example use case with the stepper in the footer.
   </div>
@@ -1091,7 +1080,6 @@ exports[`Modal WithoutCloseButton story renders snapshot 1`] = `
     </div>
     <div
       class="modal-body"
-      tabindex="0"
     >
       Modal content.
     </div>
@@ -1103,6 +1091,7 @@ exports[`Modal WithoutCloseButton story renders snapshot 1`] = `
       >
         <button
           class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--neutral"
+          tabindex="0"
           type="button"
         >
           Button 1
