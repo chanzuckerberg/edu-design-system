@@ -102,9 +102,9 @@ export const ProjectCard = ({
       <CardBody className={styles['project-card__body']}>
         <Heading
           as={headingAs}
-          variant="base"
           className={styles['project-card__title']}
           size="body-sm"
+          variant="base"
         >
           {title}
         </Heading>
