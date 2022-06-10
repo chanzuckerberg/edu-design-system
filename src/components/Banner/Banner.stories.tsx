@@ -33,7 +33,7 @@ const getDescription = (status?: Variant) => (
     curriculum. To see the updates,{' '}
     <Button
       onClick={(event: any) => event.preventDefault()}
-      status={status}
+      status="neutral"
       variant="link"
     >
       click into the course
