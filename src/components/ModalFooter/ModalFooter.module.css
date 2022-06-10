@@ -16,6 +16,8 @@
 
   border-bottom-left-radius: var(--eds-border-radius-lg);
   border-bottom-right-radius: var(--eds-border-radius-lg);
+
+  z-index: var(--eds-z-index-100);
 }
 
 /**
