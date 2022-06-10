@@ -62,7 +62,7 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
                 />
               </svg>
             </div>
-            <div
+            <article
               class="card example-card card--raised"
             >
               <div
@@ -70,7 +70,7 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
               >
                 Card 1
               </div>
-            </div>
+            </article>
           </li>
           <li
             class="drag-drop__item"
@@ -101,7 +101,7 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
                 />
               </svg>
             </div>
-            <div
+            <article
               class="card example-card card--raised"
             >
               <div
@@ -109,7 +109,7 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
               >
                 Card 2
               </div>
-            </div>
+            </article>
           </li>
           <li
             class="drag-drop__item"
@@ -140,7 +140,7 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
                 />
               </svg>
             </div>
-            <div
+            <article
               class="card example-card card--raised"
             >
               <div
@@ -148,7 +148,7 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
               >
                 Card 3
               </div>
-            </div>
+            </article>
           </li>
           <li
             class="drag-drop__item"
@@ -179,7 +179,7 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
                 />
               </svg>
             </div>
-            <div
+            <article
               class="card example-card card--raised"
             >
               <div
@@ -187,7 +187,7 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
               >
                 Card 4
               </div>
-            </div>
+            </article>
           </li>
           <li
             class="drag-drop__item"
@@ -218,7 +218,7 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
                 />
               </svg>
             </div>
-            <div
+            <article
               class="card example-card card--raised"
             >
               <div
@@ -226,7 +226,7 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
               >
                 Card 5
               </div>
-            </div>
+            </article>
           </li>
         </ol>
       </div>
@@ -455,7 +455,7 @@ exports[`<DragDrop /> HoveredHandle story renders snapshot 1`] = `
                 />
               </svg>
             </div>
-            <div
+            <article
               class="card example-card card--raised"
             >
               <div
@@ -463,7 +463,7 @@ exports[`<DragDrop /> HoveredHandle story renders snapshot 1`] = `
               >
                 Card 1
               </div>
-            </div>
+            </article>
           </li>
           <li
             class="drag-drop__item drag-drop__item--hover"
@@ -494,7 +494,7 @@ exports[`<DragDrop /> HoveredHandle story renders snapshot 1`] = `
                 />
               </svg>
             </div>
-            <div
+            <article
               class="card example-card card--raised"
             >
               <div
@@ -502,7 +502,7 @@ exports[`<DragDrop /> HoveredHandle story renders snapshot 1`] = `
               >
                 Card 2
               </div>
-            </div>
+            </article>
           </li>
           <li
             class="drag-drop__item drag-drop__item--hover"
@@ -533,7 +533,7 @@ exports[`<DragDrop /> HoveredHandle story renders snapshot 1`] = `
                 />
               </svg>
             </div>
-            <div
+            <article
               class="card example-card card--raised"
             >
               <div
@@ -541,7 +541,7 @@ exports[`<DragDrop /> HoveredHandle story renders snapshot 1`] = `
               >
                 Card 3
               </div>
-            </div>
+            </article>
           </li>
           <li
             class="drag-drop__item drag-drop__item--hover"
@@ -572,7 +572,7 @@ exports[`<DragDrop /> HoveredHandle story renders snapshot 1`] = `
                 />
               </svg>
             </div>
-            <div
+            <article
               class="card example-card card--raised"
             >
               <div
@@ -580,7 +580,7 @@ exports[`<DragDrop /> HoveredHandle story renders snapshot 1`] = `
               >
                 Card 4
               </div>
-            </div>
+            </article>
           </li>
           <li
             class="drag-drop__item drag-drop__item--hover"
@@ -611,7 +611,7 @@ exports[`<DragDrop /> HoveredHandle story renders snapshot 1`] = `
                 />
               </svg>
             </div>
-            <div
+            <article
               class="card example-card card--raised"
             >
               <div
@@ -619,7 +619,7 @@ exports[`<DragDrop /> HoveredHandle story renders snapshot 1`] = `
               >
                 Card 5
               </div>
-            </div>
+            </article>
           </li>
         </ol>
       </div>

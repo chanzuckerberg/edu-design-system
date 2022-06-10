@@ -26,8 +26,8 @@ export interface Props {
 export const CardFooter = ({ children, className, ...other }: Props) => {
   const componentClassName = clsx(styles['card__footer'], className, {});
   return (
-    <div className={componentClassName} {...other}>
+    <footer className={componentClassName} {...other}>
       {children}
-    </div>
+    </footer>
   );
 };
