@@ -83,6 +83,7 @@ export const ProjectCard = ({
       <CardBody className={styles['project-card__body']}>
         <Heading
           as="h3"
+          variant="base"
           className={styles['project-card__title']}
           size="body-sm"
         >

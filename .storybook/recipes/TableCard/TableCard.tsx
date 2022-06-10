@@ -66,7 +66,12 @@ export const TableCard = ({
   return (
     <Card className={componentClassName} {...other}>
       <CardBody>
-        <Heading as="h2" className="u-margin-bottom-md" size="title-sm">
+        <Heading
+          as="h2"
+          className="u-margin-bottom-md"
+          size="title-sm"
+          variant="base"
+        >
           {title}
         </Heading>
         <Table

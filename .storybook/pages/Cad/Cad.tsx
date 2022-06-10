@@ -297,7 +297,12 @@ export const Cad = () => (
       <Layout variant="67-33">
         <LayoutSection region="main">
           <Panel>
-            <Heading as="h2" className="u-margin-bottom-md" size="headline-sm">
+            <Heading
+              as="h2"
+              className="u-margin-bottom-md"
+              size="headline-sm"
+              variant="base"
+            >
               Select projects for your History 6 plan
             </Heading>
             <Text as="div" className="u-margin-bottom-xl">
@@ -331,7 +336,7 @@ export const Cad = () => (
                     <DragDropContainerHeader>
                       <Toolbar className="u-margin-bottom-md" variant="bare">
                         <ToolbarItem>
-                          <Heading as="h2" size="title-sm">
+                          <Heading as="h2" size="title-sm" variant="base">
                             Available projects
                           </Heading>
                         </ToolbarItem>
@@ -361,7 +366,7 @@ export const Cad = () => (
                     <DragDropContainerHeader>
                       <Toolbar className="u-margin-bottom-md" variant="bare">
                         <ToolbarItem>
-                          <Heading as="h2" size="title-sm">
+                          <Heading as="h2" size="title-sm" variant="base">
                             Planned projects
                           </Heading>
                         </ToolbarItem>
