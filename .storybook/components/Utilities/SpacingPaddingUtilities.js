@@ -38,6 +38,13 @@ export class SpacingPaddingUtilities extends Component {
 
         <Hr />
 
+        <code>u-padding-xl</code>
+        <div className="u-padding-xl sg-demo-container-box">
+          <div className=" sg-demo-box-2">XL padding</div>
+        </div>
+
+        <Hr />
+
         <h2>
           <code>padding-top</code>
         </h2>
@@ -66,6 +73,13 @@ export class SpacingPaddingUtilities extends Component {
         <code>u-padding-top-lg</code>
         <div className="u-padding-top-lg sg-demo-container-box">
           <div className=" sg-demo-box-2">Padding top large</div>
+        </div>
+
+        <Hr />
+
+        <code>u-padding-top-xl</code>
+        <div className="u-padding-top-xl sg-demo-container-box">
+          <div className=" sg-demo-box-2">Padding top XL</div>
         </div>
 
         <Hr />
@@ -102,6 +116,13 @@ export class SpacingPaddingUtilities extends Component {
 
         <Hr />
 
+        <code>u-padding-right-xl</code>
+        <div className="u-padding-right-xl sg-demo-container-box">
+          <div className=" sg-demo-box-2">Padding right XL</div>
+        </div>
+
+        <Hr />
+
         <h2>
           <code>padding-bottom</code>
         </h2>
@@ -134,6 +155,13 @@ export class SpacingPaddingUtilities extends Component {
 
         <Hr />
 
+        <code>u-padding-bottom-xl</code>
+        <div className="u-padding-bottom-xl sg-demo-container-box">
+          <div className=" sg-demo-box-2">Padding bottom XL</div>
+        </div>
+
+        <Hr />
+
         <h2>
           <code>padding-left</code>
         </h2>
@@ -161,7 +189,14 @@ export class SpacingPaddingUtilities extends Component {
 
         <code>u-padding-left-lg</code>
         <div className="u-padding-left-lg sg-demo-container-box">
-          <div className="sg-demo-box-2">Padding left large</div>
+          <div className=" sg-demo-box-2">Padding left large</div>
+        </div>
+
+        <Hr />
+
+        <code>u-padding-left-xl</code>
+        <div className="u-padding-left-xl sg-demo-container-box">
+          <div className="sg-demo-box-2">Padding left XL</div>
         </div>
       </div>
     );

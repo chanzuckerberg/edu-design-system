@@ -39,7 +39,7 @@ export const ProjectOverview = () => {
       />
       <ListDetail>
         <ListDetailPanel title="Overview" variant="success">
-          <Heading as="h2" className="u-margin-bottom-lg" size="headline-lg">
+          <Heading as="h2" className="u-margin-bottom-xl" size="headline-lg">
             What is this Project About?
           </Heading>
           <Text size="lg">
@@ -48,13 +48,13 @@ export const ProjectOverview = () => {
             mattis sem turpis id dictum. Volutpat ornare turpis ultrices augue
             bibendum pellentesque. Habitasse.
           </Text>
-          <Button className="u-margin-bottom-lg" variant="link">
+          <Button className="u-margin-bottom-xl" variant="link">
             See More
           </Button>
           <Heading as="h3" className="u-margin-bottom-sm" size="title-md">
             Essential Questions
           </Heading>
-          <Text as="div" className="u-margin-bottom-lg">
+          <Text as="div" className="u-margin-bottom-xl">
             <ul>
               <li>How are structures in the body organized?</li>
               <li>
@@ -68,7 +68,7 @@ export const ProjectOverview = () => {
           <Heading as="h3" className="u-margin-bottom-sm" size="title-md">
             Key Take Aways
           </Heading>
-          <Text as="div" className="u-margin-bottom-lg">
+          <Text as="div" className="u-margin-bottom-xl">
             <ol>
               <li>
                 Groups of specialized cells make up organs and body systems,

@@ -17,7 +17,7 @@ export default {
 const Template: Story<Props> = (args) => (
   <Hero {...args}>
     <Heading size="h1">Hero title</Heading>
-    <Text className="u-margin-top-lg">This is the hero description</Text>
+    <Text className="u-margin-top-xl">This is the hero description</Text>
   </Hero>
 );
 

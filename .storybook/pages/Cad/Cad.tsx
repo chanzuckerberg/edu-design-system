@@ -297,10 +297,10 @@ export const Cad = () => (
       <Layout variant="67-33">
         <LayoutSection region="main">
           <Panel>
-            <Heading as="h2" className="u-margin-bottom-lg" size="headline-sm">
+            <Heading as="h2" className="u-margin-bottom-md" size="headline-sm">
               Select projects for your History 6 plan
             </Heading>
-            <Text as="div" className="u-margin-bottom-lg">
+            <Text as="div" className="u-margin-bottom-xl">
               <p>
                 Make a plan so that you can stay connected to learning
                 objectives even as changes occur throughout the year.
@@ -318,7 +318,7 @@ export const Cad = () => (
                   itemIds: ['item-1', 'item-2', 'item-3', 'item-4', 'item-5'],
                   emptyContent: (
                     <>
-                      <Text as="div" className="u-margin-bottom-lg">
+                      <Text as="div" className="u-margin-bottom-xl">
                         <p>
                           There are no more available projects to create your
                           course plan
@@ -349,7 +349,7 @@ export const Cad = () => (
                   itemIds: [],
                   emptyContent: (
                     <>
-                      <Text as="div" className="u-margin-bottom-lg">
+                      <Text as="div" className="u-margin-bottom-xl">
                         <p>
                           Drag in available projects to build your course plan
                         </p>

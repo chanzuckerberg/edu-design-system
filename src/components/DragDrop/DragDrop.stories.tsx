@@ -95,7 +95,7 @@ Default.args = {
       itemIds: [],
       emptyContent: (
         <>
-          <Text as="div" className="u-margin-bottom-lg">
+          <Text as="div" className="u-margin-bottom-xl">
             <p>Drag in available projects to build your couse plan</p>
           </Text>
           <svg
