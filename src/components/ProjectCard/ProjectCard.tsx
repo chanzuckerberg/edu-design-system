@@ -118,7 +118,10 @@ export const ProjectCard = ({
           {meta}
         </div>
       </CardBody>
-      <CardFooter className={styles['project-card__footer']}>
+      <CardFooter
+        aria-label="Project card menu options"
+        className={styles['project-card__footer']}
+      >
         <ButtonDropdown
           className={styles['project-card__button-dropdown']}
           dropdownMenuTrigger={

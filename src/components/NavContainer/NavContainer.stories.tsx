@@ -17,14 +17,16 @@ export default {
 } as Meta;
 
 export const Default = () => (
-  <NavContainer>
-    <PrimaryNav>
-      <PrimaryNavItem href="#" text="Nav Item" />
-      <PrimaryNavItem href="#" isActive={true} text="Nav Item" />
-      <PrimaryNavItem href="#" text="Nav Item" />
-    </PrimaryNav>
-    <UtilityNav>
-      <UtilityNavItem text="Utility Nav"></UtilityNavItem>
-    </UtilityNav>
-  </NavContainer>
+  <div style={{ background: '#000' }}>
+    <NavContainer>
+      <PrimaryNav>
+        <PrimaryNavItem href="#" text="Nav Item" />
+        <PrimaryNavItem href="#" isActive={true} text="Nav Item" />
+        <PrimaryNavItem href="#" text="Nav Item" />
+      </PrimaryNav>
+      <UtilityNav>
+        <UtilityNavItem text="Utility Nav"></UtilityNavItem>
+      </UtilityNav>
+    </NavContainer>
+  </div>
 );
