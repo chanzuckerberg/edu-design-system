@@ -15,11 +15,13 @@ export default {
 } as Meta;
 
 const Template: Story<Props> = (args) => (
-  <UtilityNav {...args}>
-    <UtilityNav.Item href="#" text="Utility nav"></UtilityNav.Item>
-    <UtilityNav.Item href="#" text="Utility nav"></UtilityNav.Item>
-    <UtilityNav.Item href="#" text="Utility nav"></UtilityNav.Item>
-  </UtilityNav>
+  <div style={{ background: '#000' }}>
+    <UtilityNav {...args}>
+      <UtilityNav.Item href="#" text="Utility nav"></UtilityNav.Item>
+      <UtilityNav.Item href="#" text="Utility nav"></UtilityNav.Item>
+      <UtilityNav.Item href="#" text="Utility nav"></UtilityNav.Item>
+    </UtilityNav>
+  </div>
 );
 
 export const Default = Template.bind({});

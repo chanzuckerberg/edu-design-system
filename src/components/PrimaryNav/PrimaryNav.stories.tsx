@@ -15,11 +15,13 @@ export default {
 } as Meta;
 
 const Template: Story<Props> = (args) => (
-  <PrimaryNav {...args}>
-    <PrimaryNav.Item href="#" text="Nav Item" />
-    <PrimaryNav.Item href="#" isActive={true} text="Nav Item" />
-    <PrimaryNav.Item href="#" text="Nav Item" />
-  </PrimaryNav>
+  <div style={{ background: '#000' }}>
+    <PrimaryNav {...args}>
+      <PrimaryNav.Item href="#" text="Nav Item" />
+      <PrimaryNav.Item href="#" isActive={true} text="Nav Item" />
+      <PrimaryNav.Item href="#" text="Nav Item" />
+    </PrimaryNav>
+  </div>
 );
 
 export const Default = Template.bind({});
