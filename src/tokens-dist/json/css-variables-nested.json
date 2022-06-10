@@ -154,6 +154,7 @@
       "16": "var(--eds-font-size-16)",
       "18": "var(--eds-font-size-18)",
       "24": "var(--eds-font-size-24)",
+      "28": "var(--eds-font-size-28)",
       "32": "var(--eds-font-size-32)",
       "40": "var(--eds-font-size-40)",
       "base": "var(--eds-font-size-base)"
