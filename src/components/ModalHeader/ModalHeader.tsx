@@ -4,7 +4,8 @@ import styles from './ModalHeader.module.css';
 
 export type Props = {
   /**
-   * Child node(s) that can be nested inside component. `ModalHeader`, `ModalBody`, and `ModelFooter` are the only permissible children of the Modal
+   * Child node(s) to place inside the Modal header.
+   * Should include the <Modal.Title>
    */
   children: ReactNode;
   /**
