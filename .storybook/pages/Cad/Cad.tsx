@@ -269,11 +269,7 @@ export const Cad = () => (
           description={
             <HorizontalStepper
               activeIndex={1}
-              steps={[
-                'Add classroom details',
-                'Add projects',
-                'Create course plan',
-              ]}
+              steps={['Add classroom details', 'Add projects']}
             ></HorizontalStepper>
           }
           headingSize="title-sm"
@@ -305,7 +301,7 @@ export const Cad = () => (
             >
               Select projects for your History 6 plan
             </Heading>
-            <Text as="div" className="u-margin-bottom-xl">
+            <Text as="div" className="u-margin-bottom-lg">
               <p>
                 Make a plan so that you can stay connected to learning
                 objectives even as changes occur throughout the year.
