@@ -535,8 +535,72 @@ export const Cad = () => {
     );
   };
 
+  const changeItems = () => {
+    setContainers({
+      'container-1': {
+        itemIds: ['item-1', 'item-2', 'item-3'],
+        emptyContent: (
+          <>
+            <Text as="div" className="u-margin-bottom-xl">
+              <p>
+                There are no more available projects to create your course plan
+              </p>
+            </Text>
+            <img alt="hand with pencil" src={EmptyImage} />
+          </>
+        ),
+        header: (
+          <DragDropContainerHeader>
+            <Toolbar className="u-margin-bottom-md" variant="bare">
+              <ToolbarItem>
+                <Heading as="h2" size="title-sm" variant="base">
+                  Available projects
+                </Heading>
+              </ToolbarItem>
+              <ToolbarItem align="right">
+                <Button variant="icon">
+                  <Icon name="add" purpose="decorative" />
+                  Add project
+                </Button>
+              </ToolbarItem>
+            </Toolbar>
+          </DragDropContainerHeader>
+        ),
+      },
+      'container-2': {
+        itemIds: ['item-4', 'item-5'],
+        emptyContent: (
+          <>
+            <Text as="div" className="u-margin-bottom-xl">
+              <p>Drag in available projects to build your course plan</p>
+            </Text>
+            <img alt="hand with pencil" src={EmptyImage} />
+          </>
+        ),
+        header: (
+          <DragDropContainerHeader>
+            <Toolbar className="u-margin-bottom-md" variant="bare">
+              <ToolbarItem>
+                <Heading as="h2" size="title-sm" variant="base">
+                  Planned projects
+                </Heading>
+              </ToolbarItem>
+              <ToolbarItem align="right">
+                <Button variant="icon">
+                  <Icon name="add" purpose="decorative" />
+                  Add project
+                </Button>
+              </ToolbarItem>
+            </Toolbar>
+          </DragDropContainerHeader>
+        ),
+      },
+    });
+  };
+
   return (
     <>
+      <Button onClick={changeItems}>Change items</Button>
       <Panel className="u-margin-bottom-lg" variant="squared">
         <LayoutContainer>
           <PageHeader
