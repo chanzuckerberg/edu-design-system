@@ -64,6 +64,7 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
             </div>
             <article
               class="card example-card card--raised"
+              number="1"
             >
               <div
                 class="card__body"
@@ -103,6 +104,7 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
             </div>
             <article
               class="card example-card card--raised"
+              number="2"
             >
               <div
                 class="card__body"
@@ -142,6 +144,7 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
             </div>
             <article
               class="card example-card card--raised"
+              number="3"
             >
               <div
                 class="card__body"
@@ -181,6 +184,7 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
             </div>
             <article
               class="card example-card card--raised"
+              number="4"
             >
               <div
                 class="card__body"
@@ -220,6 +224,7 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
             </div>
             <article
               class="card example-card card--raised"
+              number="5"
             >
               <div
                 class="card__body"
@@ -457,6 +462,7 @@ exports[`<DragDrop /> HoveredHandle story renders snapshot 1`] = `
             </div>
             <article
               class="card example-card card--raised"
+              number="1"
             >
               <div
                 class="card__body"
@@ -496,6 +502,7 @@ exports[`<DragDrop /> HoveredHandle story renders snapshot 1`] = `
             </div>
             <article
               class="card example-card card--raised"
+              number="2"
             >
               <div
                 class="card__body"
@@ -535,6 +542,7 @@ exports[`<DragDrop /> HoveredHandle story renders snapshot 1`] = `
             </div>
             <article
               class="card example-card card--raised"
+              number="3"
             >
               <div
                 class="card__body"
@@ -574,6 +582,7 @@ exports[`<DragDrop /> HoveredHandle story renders snapshot 1`] = `
             </div>
             <article
               class="card example-card card--raised"
+              number="4"
             >
               <div
                 class="card__body"
@@ -613,6 +622,7 @@ exports[`<DragDrop /> HoveredHandle story renders snapshot 1`] = `
             </div>
             <article
               class="card example-card card--raised"
+              number="5"
             >
               <div
                 class="card__body"

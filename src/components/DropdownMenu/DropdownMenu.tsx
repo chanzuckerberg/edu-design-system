@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import React, { ReactNode, useRef, useEffect, KeyboardEvent } from 'react';
 import styles from './DropdownMenu.module.css';
+import { isReactFragment } from '../../util/isReactFragment';
 import {
   L_ARROW_KEYCODE,
   U_ARROW_KEYCODE,
@@ -8,7 +9,6 @@ import {
   D_ARROW_KEYCODE,
   ESCAPE_KEYCODE,
 } from '../../util/keycodes';
-import { isReactFragment } from '../../util/isReactFragment';
 
 export interface Props {
   /**
@@ -113,7 +113,6 @@ export const DropdownMenu: React.FC<Props> = ({
           const newChildren = child.props.children;
           // eslint-disable-next-line @typescript-eslint/ban-ts-comment
           return newChildren.map((item: ReactNode, i: number) => {
-            console.log(item);
             // @ts-expect-error TODO: fix "No overload matches this call" error
             return React.cloneElement<Props>(item, {
               ref: (el: HTMLLIElement) => (childRefs.current[i] = el) /* 1 */,

@@ -15,19 +15,19 @@ const Template: Story<Props> = (args) => (
     {...args}
     buttonDropdownItems={
       <>
-        <DropdownMenuItem onClick={() => console.log('Item 1')}>
+        <DropdownMenuItem>
           <Icon name="schedule" purpose="decorative" size="1.25rem" />
           Move to other section
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => console.log('Item 2')}>
+        <DropdownMenuItem>
           <Icon name="schedule" purpose="decorative" size="1.25rem" />
           Move up
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => console.log('Item 3')}>
+        <DropdownMenuItem>
           <Icon name="schedule" purpose="decorative" size="1.25rem" />
           Move down
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => console.log('Item 4')}>
+        <DropdownMenuItem>
           <Icon name="schedule" purpose="decorative" size="1.25rem" />
           Move view details
         </DropdownMenuItem>

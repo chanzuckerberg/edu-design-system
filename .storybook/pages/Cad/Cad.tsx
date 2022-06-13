@@ -404,10 +404,6 @@ export const Cad = () => {
                     children: (
                       <ProjectCard
                         behavior="draggable"
-                        meta="12 days"
-                        number={1}
-                        numberAriaLabel="Project 1"
-                        title="Longer project card title that wraps"
                         buttonDropdownItems={
                           <>
                             <DropdownMenuItem>
@@ -444,6 +440,10 @@ export const Cad = () => {
                             </DropdownMenuItem>
                           </>
                         }
+                        meta="12 days"
+                        number={1}
+                        numberAriaLabel="Project 1"
+                        title="Longer project card title that wraps"
                       ></ProjectCard>
                     ),
                   },
@@ -452,10 +452,6 @@ export const Cad = () => {
                     children: (
                       <ProjectCard
                         behavior="draggable"
-                        meta="12 days"
-                        number={indexState}
-                        numberAriaLabel="Project 2"
-                        title="Project card title"
                         buttonDropdownItems={
                           <>
                             <DropdownMenuItem>
@@ -492,6 +488,10 @@ export const Cad = () => {
                             </DropdownMenuItem>
                           </>
                         }
+                        meta="12 days"
+                        number={indexState}
+                        numberAriaLabel="Project 2"
+                        title="Project card title"
                       ></ProjectCard>
                     ),
                   },
@@ -500,10 +500,6 @@ export const Cad = () => {
                     children: (
                       <ProjectCard
                         behavior="draggable"
-                        meta="12 days"
-                        number={3}
-                        numberAriaLabel="Project 3"
-                        title="Project card title"
                         buttonDropdownItems={
                           <>
                             <DropdownMenuItem>
@@ -540,6 +536,10 @@ export const Cad = () => {
                             </DropdownMenuItem>
                           </>
                         }
+                        meta="12 days"
+                        number={3}
+                        numberAriaLabel="Project 3"
+                        title="Project card title"
                       ></ProjectCard>
                     ),
                   },
@@ -548,10 +548,6 @@ export const Cad = () => {
                     children: (
                       <ProjectCard
                         behavior="draggable"
-                        meta="12 days"
-                        number={4}
-                        numberAriaLabel="Project 4"
-                        title="Project card title"
                         buttonDropdownItems={
                           <>
                             <DropdownMenuItem>
@@ -588,6 +584,10 @@ export const Cad = () => {
                             </DropdownMenuItem>
                           </>
                         }
+                        meta="12 days"
+                        number={4}
+                        numberAriaLabel="Project 4"
+                        title="Project card title"
                       ></ProjectCard>
                     ),
                   },
@@ -596,11 +596,6 @@ export const Cad = () => {
                     children: (
                       <ProjectCard
                         behavior="draggable"
-                        buttonDropdownPosition="top-left"
-                        meta="12 days"
-                        number={5}
-                        numberAriaLabel="Project 5"
-                        title="Project card title"
                         buttonDropdownItems={
                           <>
                             <DropdownMenuItem>
@@ -637,6 +632,11 @@ export const Cad = () => {
                             </DropdownMenuItem>
                           </>
                         }
+                        buttonDropdownPosition="top-left"
+                        meta="12 days"
+                        number={5}
+                        numberAriaLabel="Project 5"
+                        title="Project card title"
                       ></ProjectCard>
                     ),
                   },
@@ -645,11 +645,6 @@ export const Cad = () => {
                     children: (
                       <ProjectCard
                         behavior="draggable"
-                        buttonDropdownPosition="top-left"
-                        meta="12 days"
-                        number={6}
-                        numberAriaLabel="Project 6"
-                        title="Project card title"
                         buttonDropdownItems={
                           <>
                             <DropdownMenuItem>
@@ -686,6 +681,11 @@ export const Cad = () => {
                             </DropdownMenuItem>
                           </>
                         }
+                        buttonDropdownPosition="top-left"
+                        meta="12 days"
+                        number={6}
+                        numberAriaLabel="Project 6"
+                        title="Project card title"
                       ></ProjectCard>
                     ),
                   },
