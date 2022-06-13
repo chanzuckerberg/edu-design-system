@@ -481,7 +481,7 @@ export const Cad = () => {
               <HorizontalStepper
                 activeIndex={1}
                 steps={['Add classroom details', 'Add projects']}
-              ></HorizontalStepper>
+              />
             }
             headingSize="title-sm"
             orientation="2up"
