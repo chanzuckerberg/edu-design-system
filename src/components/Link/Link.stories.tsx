@@ -38,6 +38,9 @@ export default {
       control: 'boolean',
     },
   },
+  parameters: {
+    chromatic: { pauseAnimationAtEnd: true },
+  },
 } as Meta;
 
 const Template: Story<LinkProps> = (args) => (
