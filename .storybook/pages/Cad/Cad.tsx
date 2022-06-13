@@ -263,6 +263,52 @@ const StandardsRows = [
 ];
 
 export const Cad = () => {
+  const projectCardMenuItems = () => {
+    return (
+      <>
+        <DropdownMenuItem>
+          <Icon name="schedule" purpose="decorative" size="1.25rem" />
+          Move to other section
+        </DropdownMenuItem>
+        <DropdownMenuItem>
+          <Icon name="schedule" purpose="decorative" size="1.25rem" />
+          Move up
+        </DropdownMenuItem>
+        <DropdownMenuItem>
+          <Icon name="schedule" purpose="decorative" size="1.25rem" />
+          Move down
+        </DropdownMenuItem>
+        <DropdownMenuItem>
+          <Icon name="schedule" purpose="decorative" size="1.25rem" />
+          Move view details
+        </DropdownMenuItem>
+      </>
+    );
+  };
+
+  const projectCardMenuItemsWithDelete = () => {
+    return (
+      <>
+        <DropdownMenuItem>
+          <Icon name="schedule" purpose="decorative" size="1.25rem" />
+          Move to other section
+        </DropdownMenuItem>
+        <DropdownMenuItem>
+          <Icon name="schedule" purpose="decorative" size="1.25rem" />
+          Move up
+        </DropdownMenuItem>
+        <DropdownMenuItem>
+          <Icon name="schedule" purpose="decorative" size="1.25rem" />
+          Move down
+        </DropdownMenuItem>
+        <DropdownMenuItem status="error">
+          <Icon name="delete" purpose="decorative" size="1.25rem" />
+          Delete item
+        </DropdownMenuItem>
+      </>
+    );
+  };
+
   const [indexState, setIndexState] = useState<number | undefined>(2);
   const [containers, setContainers] = useState({
     'container-1': {
@@ -330,26 +376,7 @@ export const Cad = () => {
       children: (
         <ProjectCard
           behavior="draggable"
-          buttonDropdownItems={
-            <>
-              <DropdownMenuItem>
-                <Icon name="schedule" purpose="decorative" size="1.25rem" />
-                Move to other section
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Icon name="schedule" purpose="decorative" size="1.25rem" />
-                Move up
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Icon name="schedule" purpose="decorative" size="1.25rem" />
-                Move down
-              </DropdownMenuItem>
-              <DropdownMenuItem status="error">
-                <Icon name="delete" purpose="decorative" size="1.25rem" />
-                Delete item
-              </DropdownMenuItem>
-            </>
-          }
+          buttonDropdownItems={projectCardMenuItemsWithDelete()}
           meta="12 days"
           number={1}
           numberAriaLabel="Project 1"
@@ -362,26 +389,7 @@ export const Cad = () => {
       children: (
         <ProjectCard
           behavior="draggable"
-          buttonDropdownItems={
-            <>
-              <DropdownMenuItem>
-                <Icon name="schedule" purpose="decorative" size="1.25rem" />
-                Move to other section
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Icon name="schedule" purpose="decorative" size="1.25rem" />
-                Move up
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Icon name="schedule" purpose="decorative" size="1.25rem" />
-                Move down
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Icon name="schedule" purpose="decorative" size="1.25rem" />
-                Move view details
-              </DropdownMenuItem>
-            </>
-          }
+          buttonDropdownItems={projectCardMenuItems()}
           meta="12 days"
           number={indexState}
           numberAriaLabel="Project 2"
@@ -394,26 +402,7 @@ export const Cad = () => {
       children: (
         <ProjectCard
           behavior="draggable"
-          buttonDropdownItems={
-            <>
-              <DropdownMenuItem>
-                <Icon name="schedule" purpose="decorative" size="1.25rem" />
-                Move to other section
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Icon name="schedule" purpose="decorative" size="1.25rem" />
-                Move up
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Icon name="schedule" purpose="decorative" size="1.25rem" />
-                Move down
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Icon name="schedule" purpose="decorative" size="1.25rem" />
-                Move view details
-              </DropdownMenuItem>
-            </>
-          }
+          buttonDropdownItems={projectCardMenuItems()}
           meta="12 days"
           number={3}
           numberAriaLabel="Project 3"
@@ -426,26 +415,7 @@ export const Cad = () => {
       children: (
         <ProjectCard
           behavior="draggable"
-          buttonDropdownItems={
-            <>
-              <DropdownMenuItem>
-                <Icon name="schedule" purpose="decorative" size="1.25rem" />
-                Move to other section
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Icon name="schedule" purpose="decorative" size="1.25rem" />
-                Move up
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Icon name="schedule" purpose="decorative" size="1.25rem" />
-                Move down
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Icon name="schedule" purpose="decorative" size="1.25rem" />
-                Move view details
-              </DropdownMenuItem>
-            </>
-          }
+          buttonDropdownItems={projectCardMenuItems()}
           meta="12 days"
           number={4}
           numberAriaLabel="Project 4"
@@ -458,26 +428,7 @@ export const Cad = () => {
       children: (
         <ProjectCard
           behavior="draggable"
-          buttonDropdownItems={
-            <>
-              <DropdownMenuItem>
-                <Icon name="schedule" purpose="decorative" size="1.25rem" />
-                Move to other section
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Icon name="schedule" purpose="decorative" size="1.25rem" />
-                Move up
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Icon name="schedule" purpose="decorative" size="1.25rem" />
-                Move down
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Icon name="schedule" purpose="decorative" size="1.25rem" />
-                Move view details
-              </DropdownMenuItem>
-            </>
-          }
+          buttonDropdownItems={projectCardMenuItems()}
           buttonDropdownPosition="top-left"
           meta="12 days"
           number={5}
@@ -491,26 +442,7 @@ export const Cad = () => {
       children: (
         <ProjectCard
           behavior="draggable"
-          buttonDropdownItems={
-            <>
-              <DropdownMenuItem>
-                <Icon name="schedule" purpose="decorative" size="1.25rem" />
-                Move to other section
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Icon name="schedule" purpose="decorative" size="1.25rem" />
-                Move up
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Icon name="schedule" purpose="decorative" size="1.25rem" />
-                Move down
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Icon name="schedule" purpose="decorative" size="1.25rem" />
-                Move view details
-              </DropdownMenuItem>
-            </>
-          }
+          buttonDropdownItems={projectCardMenuItems()}
           buttonDropdownPosition="top-left"
           meta="12 days"
           number={6}
