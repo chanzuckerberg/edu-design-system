@@ -8,6 +8,7 @@ import {
   D_ARROW_KEYCODE,
   ESCAPE_KEYCODE,
 } from '../../util/keycodes';
+import { isReactFragment } from '../../util/isReactFragment';
 
 export interface Props {
   /**
@@ -96,18 +97,34 @@ export const DropdownMenu: React.FC<Props> = ({
     }
   };
 
+  /**
+   * Pass props down to children
+   * 1) Cycle through children and pass down ref
+   * 2) If fragment is used for children (ProjectCardDropdown)
+   */
   const childrenWithProps = React.Children.map(
     children,
     // TODO: improve `any` type
-    (child: any, i: number) => {
+    (child: ReactNode, i: number) => {
       // Checking isValidElement is the safe way and avoids a typescript
       // error too.
       if (React.isValidElement(child)) {
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-expect-error TODO: fix "No overload matches this call" error
-        return React.cloneElement<Props>(child, {
-          ref: (el: HTMLLIElement) => (childRefs.current[i] = el),
-        });
+        if (isReactFragment(child)) {
+          const newChildren = child.props.children;
+          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+          return newChildren.map((item: ReactNode, i: number) => {
+            console.log(item);
+            // @ts-expect-error TODO: fix "No overload matches this call" error
+            return React.cloneElement<Props>(item, {
+              ref: (el: HTMLLIElement) => (childRefs.current[i] = el) /* 1 */,
+            });
+          });
+        } else {
+          // @ts-expect-error TODO: fix "No overload matches this call" error
+          return React.cloneElement<Props>(child, {
+            ref: (el: HTMLLIElement) => (childRefs.current[i] = el) /* 1 */,
+          });
+        }
       }
     },
   );

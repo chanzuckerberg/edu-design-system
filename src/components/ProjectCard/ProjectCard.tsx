@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React from 'react';
+import React, { ReactNode } from 'react';
 import styles from './ProjectCard.module.css';
 
 import {
@@ -12,7 +12,6 @@ import {
   Button,
   NumberIcon,
   ButtonDropdown,
-  DropdownMenuItem,
 } from '../..';
 import { HeadingElement } from '../Heading';
 
@@ -22,6 +21,7 @@ export interface Props {
    * - **draggable** renders a card that is used to drag with space for the handle on the left
    */
   behavior?: 'draggable';
+  buttonDropdownItems: ReactNode;
   /**
    * Determines type of clickable
    * - default renders a dropdown menu to the bottom left of the button
@@ -71,6 +71,7 @@ export const ProjectCard = ({
   meta,
   number,
   headingAs = 'h3',
+  buttonDropdownItems,
   buttonDropdownPosition,
   numberAriaLabel,
   isDragging,
@@ -134,22 +135,7 @@ export const ProjectCard = ({
           }
           position={buttonDropdownPosition}
         >
-          <DropdownMenuItem>
-            <Icon name="schedule" purpose="decorative" size="1.25rem" />
-            Move to other section
-          </DropdownMenuItem>
-          <DropdownMenuItem>
-            <Icon name="schedule" purpose="decorative" size="1.25rem" />
-            Move up
-          </DropdownMenuItem>
-          <DropdownMenuItem>
-            <Icon name="schedule" purpose="decorative" size="1.25rem" />
-            Move down
-          </DropdownMenuItem>
-          <DropdownMenuItem>
-            <Icon name="schedule" purpose="decorative" size="1.25rem" />
-            Move view details
-          </DropdownMenuItem>
+          {buttonDropdownItems}
         </ButtonDropdown>
       </CardFooter>
     </Card>
