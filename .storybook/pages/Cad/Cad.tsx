@@ -20,8 +20,8 @@ import {
   GridItem,
   Text,
   ProjectCard,
-  NumberIcon,
 } from '../../../src';
+import { NewState } from '../../../src/components/DragDrop/DragDrop';
 
 import '../../../src/components/Utilities/Spacing.css';
 import CardWithNotification from '../../recipes/CardWithNotification';
@@ -394,7 +394,7 @@ export const Cad = () => {
                     ),
                   },
                 }}
-                getNewState={(updatedItems: object) =>
+                getNewState={(updatedItems: NewState) =>
                   returnUpdatedItems(updatedItems)
                 }
                 items={{

@@ -45,7 +45,13 @@ export interface Props {
   /**
    * Prop that allows parent components to get the updated drag and drop object data from the outside
    */
-  getNewState?: (newState: object) => void;
+  getNewState?: (newState: NewState) => void;
+}
+
+export interface NewState {
+  containerOrder: string[];
+  containers: Containers;
+  items: Items;
 }
 
 /**
