@@ -100,8 +100,8 @@ export const DropdownMenuItem = React.forwardRef<HTMLLIElement, Props>(
         <TagName
           className={styles['dropdown-menu__link']}
           href={href}
-          target={target}
           onClick={onClick}
+          target={target}
         >
           {children}
         </TagName>
