@@ -1734,6 +1734,7 @@ __metadata:
     react-portal: ^4.2.1
     react-uid: ^2.3.1
     size-limit: ^4.12.0
+    snake-case: ^3.0.4
     standard-version: ^9.3.2
     storybook-css-modules-preset: ^1.1.1
     style-dictionary: ^3.7.0
