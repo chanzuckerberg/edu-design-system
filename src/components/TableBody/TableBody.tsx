@@ -20,7 +20,7 @@ export interface Props {
  * import {TableBody} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * HTML `tbody` of the `Table` component
  */
 export const TableBody = ({ children, className, ...other }: Props) => {
   const componentClassName = clsx(styles['table__body'], className, {});

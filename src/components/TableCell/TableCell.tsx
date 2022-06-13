@@ -60,7 +60,7 @@ export interface Props {
  * import {TableCell} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * HTML table cell of the `Table` component
  */
 export const TableCell = ({
   behavior,

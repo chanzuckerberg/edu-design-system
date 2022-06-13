@@ -30,7 +30,7 @@ export interface Props {
  * import {TableRow} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * HTML `tr` of the `Table` component
  */
 export const TableRow = ({
   children,

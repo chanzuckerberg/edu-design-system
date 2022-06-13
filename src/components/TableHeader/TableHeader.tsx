@@ -20,7 +20,7 @@ export interface Props {
  * import {TableHeader} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * HTML `thead` of the `Table` component
  */
 export const TableHeader = ({ children, className, ...other }: Props) => {
   const componentClassName = clsx(styles['table__header'], className);

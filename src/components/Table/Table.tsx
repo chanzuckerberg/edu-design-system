@@ -45,7 +45,7 @@ export interface Props {
  * import {Table} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * HTML table component
  */
 export const Table = ({
   behavior,

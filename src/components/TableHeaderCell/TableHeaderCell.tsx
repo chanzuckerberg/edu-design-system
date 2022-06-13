@@ -48,7 +48,7 @@ export interface Props {
  * import {TableHeaderCell} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * HTML `th` cell of the `Table` component
  */
 export const TableHeaderCell = ({
   className,

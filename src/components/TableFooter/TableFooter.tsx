@@ -20,7 +20,7 @@ export interface Props {
  * import {TableFooter} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * HTML `tfoot` of the `Table` component
  */
 export const TableFooter = ({ children, className, ...other }: Props) => {
   const componentClassName = clsx(styles['table__footer'], className, {});
