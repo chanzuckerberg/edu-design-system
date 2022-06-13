@@ -54,6 +54,7 @@ const Template: Story<LinkProps> = (args) => (
 
 export const Default = Template.bind({});
 Default.args = { variant: 'link' };
+Default.parameters = { chromatic: { pauseAnimationAtEnd: true } };
 
 export const LinkNeutral = Template.bind({});
 LinkNeutral.args = {
