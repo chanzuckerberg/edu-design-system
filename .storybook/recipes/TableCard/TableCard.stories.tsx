@@ -1,14 +1,14 @@
-import { Story, Meta } from '@storybook/react';
+import type { StoryObj } from '@storybook/react';
 import React from 'react';
 
-import { TableCard, Props } from './TableCard';
+import { TableCard } from './TableCard';
 
 export default {
   title: 'Recipes/TableCard',
   component: TableCard,
-} as Meta;
+};
 
-const Template: Story<Props> = (args) => <TableCard {...args} />;
+type Args = React.ComponentProps<typeof TableCard>;
 
 const tableColumns = [
   {
@@ -101,10 +101,11 @@ const tableRows = [
   },
 ];
 
-export const Default = Template.bind({});
-Default.args = {
-  title: 'Standards coverage',
-  buttonContent: 'View all Standards',
-  tableRows: tableRows,
-  tableColumns: tableColumns,
+export const Default: StoryObj<Args> = {
+  args: {
+    title: 'Standards coverage',
+    buttonContent: 'View all Standards',
+    tableRows: tableRows,
+    tableColumns: tableColumns,
+  },
 };
