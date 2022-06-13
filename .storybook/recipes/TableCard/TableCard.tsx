@@ -61,7 +61,7 @@ export const TableCard = ({
   tableColumns,
   ...other
 }: Props) => {
-  const componentClassName = clsx(styles['table-card'], className, {});
+  const componentClassName = clsx(styles['table-card'], className);
 
   return (
     <Card className={componentClassName} {...other}>
