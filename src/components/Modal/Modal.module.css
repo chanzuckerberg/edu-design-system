@@ -1,0 +1,149 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    # MODAL
+\*------------------------------------*/
+
+/**
+ * The modal wrapper and overlay which takes up the entire screen.
+ */
+.modal,
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+}
+
+/**
+ * The inverted background of the modal to provide contrast with the actual modal.
+ */
+.modal__overlay {
+  background-color: var(--eds-theme-color-body-background-inverted);
+  opacity: 0.5;
+}
+
+/**
+ * The modal container which positions the modal in the center of the screen.
+ * 1) Set a default z-index on the modal container. This is our smallest z-index token.
+ */
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--eds-size-2);
+
+  z-index: var(--eds-z-index-100); /* 1 */
+}
+
+/**
+ * Modal transition animations.
+ */
+.modal__transition--enter {
+  transition: opacity var(--eds-anim-fade-long) var(--eds-anim-ease);
+  @media (prefers-reduced-motion) {
+    transition: none;
+  }
+}
+.modal__transition--enterFrom {
+  opacity: 0;
+}
+.modal__transition--enterTo {
+  opacity: 1;
+}
+.modal__transition--leave {
+  transition: opacity var(--eds-anim-fade-long) var(--eds-anim-ease);
+  @media (prefers-reduced-motion) {
+    transition: none;
+  }
+}
+.modal__transition--leaveFrom {
+  opacity: 1;
+}
+.modal__transition--leaveTo {
+  opacity: 0;
+}
+
+/**
+ * The content of the modal, which can wrap header, body, and footer.
+ * 1) This transparent border is for Window High Contrast Mode, which removes all
+    background colors but makes borders 100% opacity black. Without this, the
+    modal would have no clear boundary.
+ *  2) We use flexbox to handle height and width automatically. 
+    The body can scroll when content goes beyond the component,
+    while the footer remains static (if scrollable).
+ */
+.modal__content {
+  position: relative;
+  height: 43.125rem;
+  max-height: 90vh;
+  overflow: hidden;
+  border-radius: var(--eds-border-radius-lg);
+  background-color: var(--eds-theme-color-background-neutral-default);
+  /* 1 */
+  border: var(--eds-theme-form-border-width) transparent
+    var(--eds-theme-color-background-neutral-default);
+  /* 2 */
+  display: flex;
+  flex-direction: column;
+
+  width: 22.5rem;
+  --modal-horizontal-padding: var(--eds-size-4);
+  @media all and (min-width: $eds-bp-md) {
+    width: 42rem;
+    --modal-horizontal-padding: var(--eds-size-6);
+  }
+  @media all and (min-width: $eds-bp-xl) {
+    width: 64rem;
+    --modal-horizontal-padding: var(--eds-size-8);
+  }
+}
+
+/**
+ * Allows scrolling of the modal content except for sticky footer.
+ * This functionality is our intended scroll behavior but consuming teams can 
+ * style the body content as they wish to handle overflow in various ways.
+ */
+.modal__content--scrollable {
+  overflow: auto;
+}
+
+/**
+ * The modal close button
+ * 1) Minimum button target size is 44px, but 3rem (48px) is next closest ramp size.
+ */
+.modal__close-button {
+  @mixin reset;
+  border: 0;
+  background-color: transparent;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  /* 1 */
+  width: var(--eds-size-6);
+  height: var(--eds-size-6);
+
+  cursor: pointer;
+
+  z-index: 1;
+}
+
+/**
+ * The modal close icon that resides in the close button.
+ */
+.modal__close-icon {
+  position: absolute;
+  top: var(--eds-size-1);
+  right: var(--eds-size-1);
+  color: var(--eds-theme-color-icon-neutral-subtle);
+}
+
+/**
+ * White variant of the close icon in a brand variant of the modal.
+ */
+.modal__close-icon--brand {
+  color: var(--eds-theme-color-icon-neutral-default-inverse);
+}

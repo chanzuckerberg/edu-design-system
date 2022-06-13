@@ -1,5 +1,5 @@
 //------------------------------------//
-//   #BREAKPOINTS
+//   # BREAKPOINTS
 //------------------------------------//
 
 // 1) Breakpoints need to be defined as SCSS

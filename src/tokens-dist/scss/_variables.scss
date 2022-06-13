@@ -110,6 +110,7 @@ $eds-font-size-14: 0.875rem !default;
 $eds-font-size-16: 1rem !default;
 $eds-font-size-18: 1.125rem !default;
 $eds-font-size-24: 1.5rem !default;
+$eds-font-size-28: 1.75rem !default;
 $eds-font-size-32: 2rem !default;
 $eds-font-size-40: 2.5rem !default;
 $eds-font-size-base: 16px !default; // Base font size for design system in px
@@ -563,6 +564,7 @@ $tokens: (
       '16': $eds-font-size-16,
       '18': $eds-font-size-18,
       '24': $eds-font-size-24,
+      '28': $eds-font-size-28,
       '32': $eds-font-size-32,
       '40': $eds-font-size-40,
       'base': $eds-font-size-base
