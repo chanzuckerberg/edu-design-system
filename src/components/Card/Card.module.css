@@ -12,7 +12,8 @@
   display: flex;
   flex-direction: column;
   padding: var(--eds-size-2);
-  border-radius: var(--eds-theme-border-radius);
+  height: 100%;
+  border-radius: var(--eds-border-radius-lg);
   border-width: var(--eds-theme-border-width);
   border-style: solid;
   border-color: var(--eds-theme-color-border-neutral-subtle);
@@ -30,7 +31,7 @@ a.card {
   transition: box-shadow var(--eds-anim-fade-quick) var(--eds-anim-ease);
 
   &:hover {
-    box-shadow: var(--eds-theme-box-shadow);
+    box-shadow: var(--eds-box-shadow-md);
   }
 }
 
@@ -39,7 +40,8 @@ a.card {
  * 1) Card that appears raised to show interactivity/emphasis
  */
 .card--raised {
-  box-shadow: var(--eds-box-shadow-sm);
+  box-shadow: var(--eds-box-shadow-md);
+  border-color: var(--eds-theme-color-background-neutral-default);
 }
 
 /**
@@ -47,7 +49,7 @@ a.card {
  * 1) Passed down to card to be reused. 
  */
 .card.eds-is-dragging {
-  box-shadow: var(--eds-box-shadow-md);
+  box-shadow: var(--eds-box-shadow-xl);
 }
 
 /**

@@ -12,7 +12,7 @@
   border-width: var(--eds-theme-border-width);
   border-style: solid;
   border-color: var(--eds-theme-color-border-neutral-subtle);
-  border-radius: var(--eds-theme-border-radius);
+  border-radius: var(--eds-border-radius-md);
 
   @media all and (min-width: $eds-bp-lg) {
     display: flex;
@@ -92,7 +92,7 @@
     height: 45%; /* 3 */
     width: 0.0625rem;
     background: var(--eds-theme-color-border-neutral-subtle); /* 4 */
-    border-radius: var(--eds-theme-border-radius);
+    border-radius: var(--eds-border-radius-md);
   }
 
   /**
@@ -144,7 +144,7 @@
    * Before pseudoelement bullet (for non-number variant items)
    * 1) Set to 9px to center the border
    * 2) This is the same color used for the vertical line when list style is "ordered"
-   * 3) Using a percentage here instead of --eds-theme-border-radius because this is a cosmetic element (a cicular bullet), not a typical bordered object
+   * 3) Using a percentage here instead of --eds-border-radius-md because this is a cosmetic element (a cicular bullet), not a typical bordered object
    * 4) Make the pseudoelement bullet dark when li is active
    */
   &:before {
@@ -181,7 +181,7 @@
 * 1) Used on list items using number variant; provides a cosmetic cicular border
 * 2) Using flex to keep the number centered
 * 3) Since this will display as a cirlce, keep height and width equal; should be wide enough to fit a two-digit number
-* 4) Using a percentage here instead of --eds-theme-border-radius because this must always render as a circle
+* 4) Using a percentage here instead of --eds-border-radius-md because this must always render as a circle
 * 5) Make the border dark when li is active
 */
 .list-detail__number {

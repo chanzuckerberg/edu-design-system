@@ -12,7 +12,7 @@
 .table-object {
   width: 100%;
   overflow-x: hidden;
-  border-radius: var(--eds-theme-border-radius);
+  border-radius: var(--eds-border-radius-md);
 }
 
 /**

@@ -25,6 +25,10 @@
   border-radius: var(--eds-border-radius-round);
 }
 
+.number-icon--incomplete {
+  border: none;
+}
+
 /**
  * Size Variants
  * 1) Height and width should be the same to make the icon a circle and not oblong.

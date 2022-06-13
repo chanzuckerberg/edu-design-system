@@ -2,9 +2,6 @@
   "eds": {
     "theme": {
       "border": {
-        "radius": {
-          "value": "{eds.border.radius.md}"
-        },
         "width": {
           "value": "{eds.border.width.sm}"
         }

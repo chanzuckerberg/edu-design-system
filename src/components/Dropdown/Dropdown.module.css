@@ -54,8 +54,8 @@
 
   background-color: var(--eds-theme-color-background-neutral-default);
 
-  border-radius: var(--eds-theme-border-radius);
-  box-shadow: var(--eds-theme-box-shadow);
+  border-radius: var(--eds-border-radius-md);
+  box-shadow: var(--eds-box-shadow-md);
 
   z-index: var(--eds-z-index-100); /* 1 */
 }

@@ -31,6 +31,15 @@
 }
 
 /**
+ * Layout 67-33 variant
+ */
+.layout--67-33 {
+  @media all and (min-width: $eds-bp-xl) {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+/**
  * Layout no gap variant
  */
 .layout--gap-none {
@@ -68,17 +77,22 @@
     width: var(--eds-l-sidebar-width);
     z-index: var(--eds-z-index-500);
   }
+
+  /**
+ * Layout 67-33 variant
+ */
+  .layout--67-33 & {
+    @media all and (min-width: $eds-bp-xl) {
+      width: 100%;
+    }
+  }
 }
 
 /**
  * Sidebar layout section region within right sidebar
  */
 .layout--right-sidebar > .layout__section--sidebar {
-  order: 1;
-
-  @media all and (min-width: $eds-bp-xl) {
-    order: 2;
-  }
+  order: 2;
 }
 
 /**
@@ -108,9 +122,5 @@
  * 2) Place to the left of the sidebar on large screens
  */
 .layout--right-sidebar > .layout__section--main {
-  order: 2; /* 1 */
-
-  @media all and (min-width: $eds-bp-xl) {
-    order: 1; /* 2 */
-  }
+  order: 1; /* 2 */
 }

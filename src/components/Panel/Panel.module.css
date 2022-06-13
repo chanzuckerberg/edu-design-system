@@ -9,10 +9,7 @@
  */
 .panel {
   background: var(--eds-theme-color-background-neutral-default);
-  border-width: var(--eds-theme-border-width);
-  border-style: solid;
-  border-color: var(--eds-theme-color-border-neutral-subtle);
-  border-radius: var(--eds-theme-border-radius);
+  border-radius: var(--eds-border-radius-xl);
   padding: var(--eds-size-3);
 }
 
@@ -21,7 +18,7 @@
   padding-right: 0;
   border-radius: 0;
   border: none;
-  box-shadow: var(--eds-theme-box-shadow);
+  box-shadow: var(--eds-box-shadow-md);
 }
 
 .panel--flush {

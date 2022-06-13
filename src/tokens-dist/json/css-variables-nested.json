@@ -179,7 +179,6 @@
     },
     "theme": {
       "border": {
-        "radius": "var(--eds-theme-border-radius)",
         "width": "var(--eds-theme-border-width)"
       },
       "color": {
@@ -684,7 +683,6 @@
           "background": "var(--eds-theme-color-text-highlight-background)"
         }
       },
-      "box-shadow": "var(--eds-theme-box-shadow)",
       "form": {
         "border": {
           "width": "var(--eds-theme-form-border-width)",

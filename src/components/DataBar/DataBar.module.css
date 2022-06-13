@@ -24,6 +24,7 @@
  */
 .data-bar__label {
   @mixin eds-theme-typography-title-sm;
+  color: var(--eds-theme-color-text-neutral-strong);
 }
 
 /**

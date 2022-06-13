@@ -72,6 +72,7 @@ export const DragDropContainer = ({
               {...provided.droppableProps}
             >
               {emptyContent}
+              {provided.placeholder}
             </div>
           )
         }

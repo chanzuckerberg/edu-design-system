@@ -30,9 +30,17 @@
 
 /**
  * Margin large
- * 1) Forces margin to 2rem
+ * 1) Forces margin to 1.5rem
  */
 .u-margin-lg {
+  margin: var(--eds-size-3) !important;
+}
+
+/**
+ * Margin xl
+ * 1) Forces margin to 2rem
+ */
+.u-margin-xl {
   margin: var(--eds-size-4) !important;
 }
 
@@ -62,25 +70,33 @@
 
 /**
  * Margin top large
- * 1) Forces margin top to 2rem
+ * 1) Forces margin top to 1.5rem
  */
 .u-margin-top-lg {
-  margin-top: var(--eds-size-4) !important;
+  margin-top: var(--eds-size-3) !important;
 }
 
 /**
  * Margin top xl
- * 1) Forces margin top to 4rem
+ * 1) Forces margin top to 2rem
  */
 .u-margin-top-xl {
+  margin-top: var(--eds-size-4) !important;
+}
+
+/**
+ * Margin top xxl
+ * 1) Forces margin top to 3rem
+ */
+.u-margin-top-xxl {
   margin-top: var(--eds-size-6) !important;
 }
 
 /**
- * Margin bottom XXL
+ * Margin bottom xxxL
  * 1) Forces bottom margin to 6rem
  */
-.u-margin-top-xxl {
+.u-margin-top-xxxl {
   margin-top: var(--eds-size-12) !important;
 }
 
@@ -110,9 +126,17 @@
 
 /**
  * Margin right large
- * 1) Forces right margin to 2rem
+ * 1) Forces margin right to 1.5rem
  */
 .u-margin-right-lg {
+  margin-right: var(--eds-size-3) !important;
+}
+
+/**
+ * Margin right xl
+ * 1) Forces right margin to 2rem
+ */
+.u-margin-right-xl {
   margin-right: var(--eds-size-4) !important;
 }
 
@@ -142,9 +166,17 @@
 
 /**
  * Margin bottom large
- * 1) Forces bottom margin to 2rem
+ * 1) Forces margin bottom to 1.5rem
  */
 .u-margin-bottom-lg {
+  margin-bottom: var(--eds-size-3) !important;
+}
+
+/**
+ * Margin bottom xl
+ * 1) Forces bottom margin to 2rem
+ */
+.u-margin-bottom-xl {
   margin-bottom: var(--eds-size-4) !important;
 }
 
@@ -152,7 +184,7 @@
  * Margin bottom extra large
  * 1) Forces bottom margin to 3rem
  */
-.u-margin-bottom-xl {
+.u-margin-bottom-xxl {
   margin-bottom: var(--eds-size-6) !important;
 }
 
@@ -160,7 +192,7 @@
  * Margin bottom XXL
  * 1) Forces bottom margin to 6rem
  */
-.u-margin-bottom-xxl {
+.u-margin-bottom-xxxl {
   margin-bottom: var(--eds-size-12) !important;
 }
 
@@ -190,18 +222,18 @@
 
 /**
  * Margin left large
- * 1) Forces left margin to 2rem
+ * 1) Forces left margin to 1.5rem
  */
 .u-margin-left-lg {
-  margin-left: var(--eds-size-4) !important;
+  margin-left: var(--eds-size-3) !important;
 }
 
 /**
  * Margin left xl
- * 1) Forces margin left to 4rem
+ * 1) Forces left margin to 2rem
  */
 .u-margin-left-xl {
-  margin-left: var(--eds-size-8) !important;
+  margin-left: var(--eds-size-4) !important;
 }
 
 /*------------------------------------*\
@@ -233,10 +265,18 @@
 }
 
 /**
- * Padding large
- * 1) Forces padding to 2rem
+ * Padding
+ * 1) Forces padding to 1.5rem
  */
 .u-padding-lg {
+  padding: var(--eds-size-3) !important;
+}
+
+/**
+ * Padding xl
+ * 1) Forces padding to 2rem
+ */
+.u-padding-xl {
   padding: var(--eds-size-4) !important;
 }
 
@@ -266,9 +306,17 @@
 
 /**
  * Padding top large
- * 1) Forces padding top to 2rem
+ * 1) Forces padding top to 1.5rem
  */
 .u-padding-top-lg {
+  padding: var(--eds-size-3) !important;
+}
+
+/**
+ * Padding top xl
+ * 1) Forces padding top to 2rem
+ */
+.u-padding-top-xl {
   padding-top: var(--eds-size-4) !important;
 }
 
@@ -298,9 +346,17 @@
 
 /**
  * Padding right large
- * 1) Forces right padding to 2rem
+ * 1) Forces padding right to 1.5rem
  */
 .u-padding-right-lg {
+  padding: var(--eds-size-3) !important;
+}
+
+/**
+ * Padding right xl
+ * 1) Forces right padding to 2rem
+ */
+.u-padding-right-xl {
   padding-right: var(--eds-size-4) !important;
 }
 
@@ -330,9 +386,17 @@
 
 /**
  * Padding bottom large
- * 1) Forces bottom padding to 2rem
+ * 1) Forces bottom padding to 1.5rem
  */
 .u-padding-bottom-lg {
+  padding-bottom: var(--eds-size-3) !important;
+}
+
+/**
+ * Padding bottom xl
+ * 1) Forces bottom padding to 2rem
+ */
+.u-padding-bottom-xl {
   padding-bottom: var(--eds-size-4) !important;
 }
 
@@ -362,8 +426,16 @@
 
 /**
  * Padding left large
- * 1) Forces left padding to 2rem
+ * 1) Forces left padding to 1.5rem
  */
 .u-padding-left-lg {
+  padding-left: var(--eds-size-3) !important;
+}
+
+/**
+ * Padding left xl
+ * 1) Forces left padding to 2rem
+ */
+.u-padding-left-xl {
   padding-left: var(--eds-size-4) !important;
 }

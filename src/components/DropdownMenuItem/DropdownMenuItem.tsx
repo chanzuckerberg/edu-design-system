@@ -29,6 +29,19 @@ export interface Props {
    */
   onHover?: MouseEventHandler;
   /**
+   * Status variant
+   * - **error** yields a dropdown item with red text
+   */
+  status?: 'error';
+  /**
+   * Target attribute for a link (i.e. set to _blank to open in new tab)
+   * - **_blank** yields a link that opens in a new tab
+   * - **_self** yields a link that loads the URL into the same browsing context as the current one. This is the default behavior
+   * - **_parent** yields a link that loads the URL into the parent browsing context of the current one. If there is no parent, this behaves the same way as _self
+   * - **_top** yields a link that loads the URL into the top-level browsing context. If there is no parent, this behaves the same way as _self.
+   */
+  target?: '_blank' | '_self' | '_parent' | '_top';
+  /**
    * Stylistic variations of the GridL
    * - **lined** yields a dropdown item with a border bottom
    */
@@ -45,7 +58,20 @@ export interface Props {
  * Dropdown menu item within `DropdownMenu`
  */
 export const DropdownMenuItem = React.forwardRef<HTMLLIElement, Props>(
-  ({ align, className, href, children, variant, onClick, ...other }, ref) => {
+  (
+    {
+      align,
+      className,
+      href,
+      children,
+      variant,
+      onClick,
+      status,
+      target,
+      ...other
+    },
+    ref,
+  ) => {
     const TagName = createTagName();
 
     function createTagName() {
@@ -61,6 +87,7 @@ export const DropdownMenuItem = React.forwardRef<HTMLLIElement, Props>(
       className,
       align === 'top-left' && styles['dropdown-menu__item--align-top-left'],
       variant === 'lined' && styles['dropdown-menu__item--lined'],
+      status === 'error' && styles['dropdown-menu__item--error'],
     );
 
     return (
@@ -74,6 +101,7 @@ export const DropdownMenuItem = React.forwardRef<HTMLLIElement, Props>(
           className={styles['dropdown-menu__link']}
           href={href}
           onClick={onClick}
+          target={target}
         >
           {children}
         </TagName>

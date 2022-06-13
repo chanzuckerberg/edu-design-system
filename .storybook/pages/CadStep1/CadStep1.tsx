@@ -50,7 +50,7 @@ export const CadStep1 = () => (
     <LayoutContainer>
       <Layout gap="lg-xl" variant="50-50">
         <LayoutSection region="main">
-          <Grid className="u-margin-bottom-lg" variant="1-2-1up">
+          <Grid className="u-margin-bottom-xl" variant="1-2-1up">
             <img alt="compass vignette" src={CompassCenter} />
             <Heading as="h2" size="headline-lg">
               Let&apos;s start planning, Amy Frankle.
@@ -62,7 +62,7 @@ export const CadStep1 = () => (
           </Text>
         </LayoutSection>
         <LayoutSection region="main">
-          <Text as="div" className="u-margin-bottom-lg">
+          <Text as="div" className="u-margin-bottom-xl">
             <h3>Tell us how often your course meets.</h3>
             <p>
               We’ll adjust project plans based on your schedule. This way, you
@@ -78,7 +78,7 @@ export const CadStep1 = () => (
             How many times per week do you have class?
           </Text>
           <TextField
-            className="u-margin-bottom-lg"
+            className="u-margin-bottom-xl"
             hideLabel
             label="times per week"
             min={0}
@@ -89,7 +89,7 @@ export const CadStep1 = () => (
             How many minutes is each class?
           </Text>
           <TextField
-            className="u-margin-bottom-lg"
+            className="u-margin-bottom-xl"
             hideLabel
             label="minutes"
             min={0}

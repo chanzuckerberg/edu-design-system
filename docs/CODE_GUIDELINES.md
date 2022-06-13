@@ -249,7 +249,7 @@ import { EdsThemeColorUtilitySuccessForeground } from 'src/tokens-dist/ts/colors
 
 ## Utility classes <a name="utility-classes"></a>
 
-EDS provides a number of utility classes (e.g. `u-margin-bottom-lg` and `u-padding-none`) that can be appended to components (e.g. `<TableCell className="u-padding-none">`) in order to achieve certain style results. Utility classes provide an additional layer to help "massage" components into place without having to overwhelm component styles with too many style variants.
+EDS provides a number of utility classes (e.g. `u-margin-bottom-xl` and `u-padding-none`) that can be appended to components (e.g. `<TableCell className="u-padding-none">`) in order to achieve certain style results. Utility classes provide an additional layer to help "massage" components into place without having to overwhelm component styles with too many style variants.
 
 - Utility classes can be found in `src/components/Utilities`
 - Utility classes use the `!important` declaration to override any existing component styles
