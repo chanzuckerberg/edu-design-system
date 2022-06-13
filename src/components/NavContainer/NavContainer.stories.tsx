@@ -14,19 +14,24 @@ export default {
   parameters: {
     badges: [BADGE.BETA],
   },
+  decorators: [
+    (Story) => (
+      <div style={{ background: '#000' }}>
+        <Story />
+      </div>
+    ),
+  ],
 } as Meta;
 
 export const Default = () => (
-  <div style={{ background: '#000' }}>
-    <NavContainer>
-      <PrimaryNav>
-        <PrimaryNavItem href="#" text="Nav Item" />
-        <PrimaryNavItem href="#" isActive={true} text="Nav Item" />
-        <PrimaryNavItem href="#" text="Nav Item" />
-      </PrimaryNav>
-      <UtilityNav>
-        <UtilityNavItem text="Utility Nav"></UtilityNavItem>
-      </UtilityNav>
-    </NavContainer>
-  </div>
+  <NavContainer>
+    <PrimaryNav>
+      <PrimaryNavItem href="#" text="Nav Item" />
+      <PrimaryNavItem href="#" isActive={true} text="Nav Item" />
+      <PrimaryNavItem href="#" text="Nav Item" />
+    </PrimaryNav>
+    <UtilityNav>
+      <UtilityNavItem text="Utility Nav"></UtilityNavItem>
+    </UtilityNav>
+  </NavContainer>
 );

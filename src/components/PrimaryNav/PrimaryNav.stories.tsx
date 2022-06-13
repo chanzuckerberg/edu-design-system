@@ -12,16 +12,21 @@ export default {
   parameters: {
     badges: [BADGE.BETA],
   },
+  decorators: [
+    (Story) => (
+      <div style={{ background: '#000' }}>
+        <Story />
+      </div>
+    ),
+  ],
 } as Meta;
 
 const Template: Story<Props> = (args) => (
-  <div style={{ background: '#000' }}>
-    <PrimaryNav {...args}>
-      <PrimaryNav.Item href="#" text="Nav Item" />
-      <PrimaryNav.Item href="#" isActive={true} text="Nav Item" />
-      <PrimaryNav.Item href="#" text="Nav Item" />
-    </PrimaryNav>
-  </div>
+  <PrimaryNav {...args}>
+    <PrimaryNav.Item href="#" text="Nav Item" />
+    <PrimaryNav.Item href="#" isActive={true} text="Nav Item" />
+    <PrimaryNav.Item href="#" text="Nav Item" />
+  </PrimaryNav>
 );
 
 export const Default = Template.bind({});
