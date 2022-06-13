@@ -334,6 +334,26 @@ export const Cad = () => {
           number={1}
           numberAriaLabel="Project 1"
           title="Longer project card title that wraps"
+          buttonDropdownItems={
+            <>
+              <DropdownMenuItem>
+                <Icon name="schedule" purpose="decorative" size="1.25rem" />
+                Move to other section
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Icon name="schedule" purpose="decorative" size="1.25rem" />
+                Move up
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Icon name="schedule" purpose="decorative" size="1.25rem" />
+                Move down
+              </DropdownMenuItem>
+              <DropdownMenuItem status="error">
+                <Icon name="delete" purpose="decorative" size="1.25rem" />
+                Delete item
+              </DropdownMenuItem>
+            </>
+          }
         ></ProjectCard>
       ),
     },
@@ -346,6 +366,26 @@ export const Cad = () => {
           number={indexState}
           numberAriaLabel="Project 2"
           title="Project card title"
+          buttonDropdownItems={
+            <>
+              <DropdownMenuItem>
+                <Icon name="schedule" purpose="decorative" size="1.25rem" />
+                Move to other section
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Icon name="schedule" purpose="decorative" size="1.25rem" />
+                Move up
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Icon name="schedule" purpose="decorative" size="1.25rem" />
+                Move down
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Icon name="schedule" purpose="decorative" size="1.25rem" />
+                Move view details
+              </DropdownMenuItem>
+            </>
+          }
         ></ProjectCard>
       ),
     },
@@ -358,6 +398,26 @@ export const Cad = () => {
           number={3}
           numberAriaLabel="Project 3"
           title="Project card title"
+          buttonDropdownItems={
+            <>
+              <DropdownMenuItem>
+                <Icon name="schedule" purpose="decorative" size="1.25rem" />
+                Move to other section
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Icon name="schedule" purpose="decorative" size="1.25rem" />
+                Move up
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Icon name="schedule" purpose="decorative" size="1.25rem" />
+                Move down
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Icon name="schedule" purpose="decorative" size="1.25rem" />
+                Move view details
+              </DropdownMenuItem>
+            </>
+          }
         ></ProjectCard>
       ),
     },
@@ -370,6 +430,26 @@ export const Cad = () => {
           number={4}
           numberAriaLabel="Project 4"
           title="Project card title"
+          buttonDropdownItems={
+            <>
+              <DropdownMenuItem>
+                <Icon name="schedule" purpose="decorative" size="1.25rem" />
+                Move to other section
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Icon name="schedule" purpose="decorative" size="1.25rem" />
+                Move up
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Icon name="schedule" purpose="decorative" size="1.25rem" />
+                Move down
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Icon name="schedule" purpose="decorative" size="1.25rem" />
+                Move view details
+              </DropdownMenuItem>
+            </>
+          }
         ></ProjectCard>
       ),
     },
@@ -383,6 +463,26 @@ export const Cad = () => {
           number={5}
           numberAriaLabel="Project 5"
           title="Project card title"
+          buttonDropdownItems={
+            <>
+              <DropdownMenuItem>
+                <Icon name="schedule" purpose="decorative" size="1.25rem" />
+                Move to other section
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Icon name="schedule" purpose="decorative" size="1.25rem" />
+                Move up
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Icon name="schedule" purpose="decorative" size="1.25rem" />
+                Move down
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Icon name="schedule" purpose="decorative" size="1.25rem" />
+                Move view details
+              </DropdownMenuItem>
+            </>
+          }
         ></ProjectCard>
       ),
     },
@@ -396,6 +496,26 @@ export const Cad = () => {
           number={6}
           numberAriaLabel="Project 6"
           title="Project card title"
+          buttonDropdownItems={
+            <>
+              <DropdownMenuItem>
+                <Icon name="schedule" purpose="decorative" size="1.25rem" />
+                Move to other section
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Icon name="schedule" purpose="decorative" size="1.25rem" />
+                Move up
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Icon name="schedule" purpose="decorative" size="1.25rem" />
+                Move down
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Icon name="schedule" purpose="decorative" size="1.25rem" />
+                Move view details
+              </DropdownMenuItem>
+            </>
+          }
         ></ProjectCard>
       ),
     },
