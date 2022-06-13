@@ -3,27 +3,27 @@ import clsx from 'clsx';
 import styles from './{{pascalCase name}}.module.css';
 
 export interface Props {
-	/**
-	 * CSS class names that can be appended to the component.
-	 */
-	className?: string;
+  /**
+   * CSS class names that can be appended to the component.
+   */
+  className?: string;
 }
 
 /**
  * Primary UI component for user interaction
  */
 export const {{pascalCase name}} = ({
-	className,
-	...other
+  className,
+  ...other
 }: Props) => {
-	const componentClassName = clsx(styles['{{dashCase name}}'], className, {
-	});
-	return (
-		<div
-			className={componentClassName}
-			{...other}
-		>
-		Hello!
-		</div>
-	);
+  const componentClassName = clsx(styles['{{dashCase name}}'], className, {
+  });
+  return (
+    <div
+      className={componentClassName}
+      {...other}
+    >
+    Hello!
+    </div>
+  );
 };
