@@ -49,6 +49,7 @@ export const DragDropItem = ({ behavior, className, item, index }: Props) => {
               // @ts-expect-error TODO: fix "No overload matches this call" error
               return React.cloneElement<Props>(child, {
                 isDragging: snapshot.isDragging,
+                number: index + 1,
               });
             }
           },
