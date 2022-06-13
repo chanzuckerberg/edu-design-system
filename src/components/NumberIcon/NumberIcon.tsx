@@ -21,7 +21,7 @@ export interface Props {
   /**
    * Number to be shown as the icon.
    */
-  number: number;
+  number?: number;
   /**
    * The size of the icon. Defaults to 'lg'.
    */

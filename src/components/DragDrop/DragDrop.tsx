@@ -42,6 +42,10 @@ export interface Props {
    * Child node(s) that can be nested inside component. `ModalHeader`, `ModalBody`, and `ModelFooter` are the only permissible children of the Modal
    */
   children?: ReactNode;
+  /**
+   * Prop that allows parent components to get the updated drag and drop object data from the outside
+   */
+  getNewState?: (newState: object) => void;
 }
 
 /**
@@ -51,6 +55,7 @@ export const DragDrop = ({
   className,
   items,
   containers,
+  getNewState,
   multipleContainers = false,
   unstyledItems = false,
 }: Props) => {
@@ -136,7 +141,7 @@ export const DragDrop = ({
     return () => {
       window.removeEventListener('resize', setShadows); /* 3 */
     };
-  }, []);
+  }, [items]);
 
   /**
    * Update sticky wrapper height on mount
@@ -209,6 +214,9 @@ export const DragDrop = ({
        * Update state with new container's contents
        */
       setState(newState);
+      if (getNewState) {
+        getNewState(newState);
+      }
       return;
     }
 
@@ -248,6 +256,9 @@ export const DragDrop = ({
      * Update state with both source and destination containers
      */
     setState(newState);
+    if (getNewState) {
+      getNewState(newState);
+    }
   };
 
   /**
