@@ -387,7 +387,7 @@ export const Cad = () => {
           number={1}
           numberAriaLabel="Project 1"
           title="Longer project card title that wraps"
-        ></ProjectCard>
+        />
       ),
     },
     'item-2': {
@@ -400,7 +400,7 @@ export const Cad = () => {
           number={indexState}
           numberAriaLabel="Project 2"
           title="Project card title"
-        ></ProjectCard>
+        />
       ),
     },
     'item-3': {
@@ -413,7 +413,7 @@ export const Cad = () => {
           number={3}
           numberAriaLabel="Project 3"
           title="Project card title"
-        ></ProjectCard>
+        />
       ),
     },
     'item-4': {
@@ -426,7 +426,7 @@ export const Cad = () => {
           number={4}
           numberAriaLabel="Project 4"
           title="Project card title"
-        ></ProjectCard>
+        />
       ),
     },
     'item-5': {
@@ -440,7 +440,7 @@ export const Cad = () => {
           number={5}
           numberAriaLabel="Project 5"
           title="Project card title"
-        ></ProjectCard>
+        />
       ),
     },
     'item-6': {
@@ -454,7 +454,7 @@ export const Cad = () => {
           number={6}
           numberAriaLabel="Project 6"
           title="Project card title"
-        ></ProjectCard>
+        />
       ),
     },
   });
