@@ -30,31 +30,6 @@ export class Tier2Borders extends Component {
             })}
           </Grid>
         </Section>
-
-        <Section title="Border Radius">
-          <Grid>
-            {filterTokens(`eds-border-radius-md`).map(function (
-              listItem,
-              index,
-            ) {
-              return (
-                <GridItem key={'border-width-' + index}>
-                  <TokenSpecimen
-                    inlineStyles={{
-                      backgroundColor: 'transparent',
-                      borderWidth: '1px',
-                      borderRadius: `var(${listItem.name})`,
-                      borderStyle: 'solid',
-                      borderColor: 'black',
-                    }}
-                    name={listItem.name}
-                    value={listItem.value}
-                  />
-                </GridItem>
-              );
-            })}
-          </Grid>
-        </Section>
       </div>
     );
   }

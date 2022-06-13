@@ -5,7 +5,7 @@
 \*------------------------------------*/
 
 /**
- * 1) 
+ * 1) Container recipe for the number icons to flex wrap them
  */
 .number-icon-list {
   display: flex;

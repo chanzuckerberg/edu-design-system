@@ -6,7 +6,7 @@ export interface Props {
   /**
    * Slot for adding number icon elements
    */
-  children?: ReactNode;
+  children: ReactNode;
   /**
    * CSS class names that can be appended to the component.
    */
