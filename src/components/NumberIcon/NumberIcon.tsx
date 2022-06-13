@@ -70,6 +70,9 @@ export const NumberIcon = ({
 
   /**
    * 1) Set as 'span' since icon use is more inline than block, but no effect since display is 'flex'.
+   * 2) When `incomplete` is defined and there is a numberIconTitle on the circle icon, then this will render
+   * the proper icon with the incomplete text provided to that icon.
+   * 3) If this is not incomplete, then the number prop provided will show within the border
    */
   return (
     <Text
