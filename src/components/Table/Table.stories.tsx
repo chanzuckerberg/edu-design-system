@@ -17,24 +17,6 @@ export default {
   },
 } as Meta;
 
-// const headerTableCellWrapColumns = [
-//   {
-//     title: 'Table Header Cell Column 1',
-//   },
-//   {
-//     title: 'Table Header Cell Column 2',
-//   },
-//   {
-//     title: 'Table Header Cell Column 3',
-//   },
-//   {
-//     title: 'Table Header Cell Column 4',
-//   },
-//   {
-//     title: 'Table Header Cell Column 5',
-//   },
-// ];
-
 const tableColumns = [
   {
     title: 'Name',
