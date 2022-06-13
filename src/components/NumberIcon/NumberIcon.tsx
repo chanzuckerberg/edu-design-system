@@ -32,7 +32,6 @@ export interface Props {
   variant?: 'base' | 'success';
   /**
    * Number icon title
-   *
    */
   numberIconTitle?: string;
 }
