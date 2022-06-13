@@ -161,11 +161,10 @@ export const DragDrop = ({
     containers[key] = { ...item, id: key };
     containerOrder.push(key);
   });
-  const initialData = { items, containers, containerOrder };
-  const [state, setState] = useState(initialData);
+  const itemData = { items, containers, containerOrder };
 
   /**
-   * A drag has 5 life cycle events that can be monitored: onBeforeCapture, onBeforeDragStart, onDragStart, onDragUpdate, and onDragEnd. We perform our reordering functions and update state when onDragEnd is fired
+   * A drag has 5 life cycle events that can be monitored: onBeforeCapture, onBeforeDragStart, onDragStart, onDragUpdate, and onDragEnd. We perform our reordering functions and update itemData when onDragEnd is fired
    */
   const onDragEnd = (result: DropResult) => {
     const { destination, source, draggableId } = result;
@@ -190,8 +189,8 @@ export const DragDrop = ({
     /**
      * If a drag starts and ends over the same container, re-sort the contents of that container
      */
-    const start = state.containers[source.droppableId];
-    const finish = state.containers[destination.droppableId];
+    const start = itemData.containers[source.droppableId];
+    const finish = itemData.containers[destination.droppableId];
 
     if (start === finish) {
       const newItemIds = start?.itemIds ? [...start.itemIds] : []; // create new array to avoid mutations
@@ -204,22 +203,21 @@ export const DragDrop = ({
       };
 
       /**
-       * Reducer for creating a new state object for this container
+       * Reducer for creating a new itemData object for this container
        */
       const newState = newContainer.id
         ? {
-            ...state,
+            ...itemData,
             containers: {
-              ...state.containers,
+              ...itemData.containers,
               [newContainer.id]: newContainer,
             },
           }
-        : state;
+        : itemData;
 
       /**
-       * Update state with new container's contents
+       * Update itemData with new container's contents
        */
-      setState(newState);
       if (getNewState) {
         getNewState(newState);
       }
@@ -249,19 +247,18 @@ export const DragDrop = ({
     const newState =
       newStart.id && newFinish.id
         ? {
-            ...state,
+            ...itemData,
             containers: {
-              ...state.containers,
+              ...itemData.containers,
               [newStart.id]: newStart,
               [newFinish.id]: newFinish,
             },
           }
-        : state;
+        : itemData;
 
     /**
-     * Update state with both source and destination containers
+     * Update itemData with both source and destination containers
      */
-    setState(newState);
     if (getNewState) {
       getNewState(newState);
     }
@@ -298,11 +295,13 @@ export const DragDrop = ({
                 onScroll={handleOnScroll}
                 ref={dragDropInnerRef}
               >
-                {state?.containerOrder &&
-                  state.containerOrder.map((containerId: string) => {
-                    const container = state.containers[containerId];
+                {itemData?.containerOrder &&
+                  itemData.containerOrder.map((containerId: string) => {
+                    const container = itemData.containers[containerId];
                     const items = container.itemIds
-                      ? container.itemIds.map((itemId) => state.items[itemId])
+                      ? container.itemIds.map(
+                          (itemId) => itemData.items[itemId],
+                        )
                       : [];
 
                     return (

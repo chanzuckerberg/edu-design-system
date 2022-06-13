@@ -264,8 +264,146 @@ const StandardsRows = [
 
 export const Cad = () => {
   const [indexState, setIndexState] = useState<number | undefined>(2);
+  const [containers, setContainers] = useState({
+    'container-1': {
+      itemIds: ['item-1', 'item-2', 'item-3', 'item-4', 'item-5'],
+      emptyContent: (
+        <>
+          <Text as="div" className="u-margin-bottom-xl">
+            <p>
+              There are no more available projects to create your course plan
+            </p>
+          </Text>
+          <img alt="hand with pencil" src={EmptyImage} />
+        </>
+      ),
+      header: (
+        <DragDropContainerHeader>
+          <Toolbar className="u-margin-bottom-md" variant="bare">
+            <ToolbarItem>
+              <Heading as="h2" size="title-sm" variant="base">
+                Available projects
+              </Heading>
+            </ToolbarItem>
+            <ToolbarItem align="right">
+              <Button variant="icon">
+                <Icon name="add" purpose="decorative" />
+                Add project
+              </Button>
+            </ToolbarItem>
+          </Toolbar>
+        </DragDropContainerHeader>
+      ),
+    },
+    'container-2': {
+      itemIds: [],
+      emptyContent: (
+        <>
+          <Text as="div" className="u-margin-bottom-xl">
+            <p>Drag in available projects to build your course plan</p>
+          </Text>
+          <img alt="hand with pencil" src={EmptyImage} />
+        </>
+      ),
+      header: (
+        <DragDropContainerHeader>
+          <Toolbar className="u-margin-bottom-md" variant="bare">
+            <ToolbarItem>
+              <Heading as="h2" size="title-sm" variant="base">
+                Planned projects
+              </Heading>
+            </ToolbarItem>
+            <ToolbarItem align="right">
+              <Button variant="icon">
+                <Icon name="add" purpose="decorative" />
+                Add project
+              </Button>
+            </ToolbarItem>
+          </Toolbar>
+        </DragDropContainerHeader>
+      ),
+    },
+  });
+  const [items, setItems] = useState({
+    'item-1': {
+      title: 'Project #1',
+      children: (
+        <ProjectCard
+          behavior="draggable"
+          meta="12 days"
+          number={1}
+          numberAriaLabel="Project 1"
+          title="Longer project card title that wraps"
+        ></ProjectCard>
+      ),
+    },
+    'item-2': {
+      title: 'Project #2',
+      children: (
+        <ProjectCard
+          behavior="draggable"
+          meta="12 days"
+          number={indexState}
+          numberAriaLabel="Project 2"
+          title="Project card title"
+        ></ProjectCard>
+      ),
+    },
+    'item-3': {
+      title: 'Project #3',
+      children: (
+        <ProjectCard
+          behavior="draggable"
+          meta="12 days"
+          number={3}
+          numberAriaLabel="Project 3"
+          title="Project card title"
+        ></ProjectCard>
+      ),
+    },
+    'item-4': {
+      title: 'Project #4',
+      children: (
+        <ProjectCard
+          behavior="draggable"
+          meta="12 days"
+          number={4}
+          numberAriaLabel="Project 4"
+          title="Project card title"
+        ></ProjectCard>
+      ),
+    },
+    'item-5': {
+      title: 'Project #5',
+      children: (
+        <ProjectCard
+          behavior="draggable"
+          buttonDropdownPosition="top-left"
+          meta="12 days"
+          number={5}
+          numberAriaLabel="Project 5"
+          title="Project card title"
+        ></ProjectCard>
+      ),
+    },
+    'item-6': {
+      title: 'Project #6',
+      children: (
+        <ProjectCard
+          behavior="draggable"
+          buttonDropdownPosition="top-left"
+          meta="12 days"
+          number={6}
+          numberAriaLabel="Project 6"
+          title="Project card title"
+        ></ProjectCard>
+      ),
+    },
+  });
   const returnUpdatedItems = (updatedItems: any) => {
     console.log(updatedItems);
+    setContainers(updatedItems.containers);
+    setItems(updatedItems.items);
     updatedItems.containers['container-2'].itemIds.map(
       (item: string, index: number) => {
         if (item === 'item-2') {
@@ -332,364 +470,11 @@ export const Cad = () => {
               </Text>
 
               <DragDrop
-                containers={{
-                  'container-1': {
-                    itemIds: ['item-1', 'item-2', 'item-3', 'item-4', 'item-5'],
-                    emptyContent: (
-                      <>
-                        <Text as="div" className="u-margin-bottom-xl">
-                          <p>
-                            There are no more available projects to create your
-                            course plan
-                          </p>
-                        </Text>
-                        <img alt="hand with pencil" src={EmptyImage} />
-                      </>
-                    ),
-                    header: (
-                      <DragDropContainerHeader>
-                        <Toolbar className="u-margin-bottom-md" variant="bare">
-                          <ToolbarItem>
-                            <Heading as="h2" size="title-sm" variant="base">
-                              Available projects
-                            </Heading>
-                          </ToolbarItem>
-                          <ToolbarItem align="right">
-                            <Button variant="icon">
-                              <Icon name="add" purpose="decorative" />
-                              Add project
-                            </Button>
-                          </ToolbarItem>
-                        </Toolbar>
-                      </DragDropContainerHeader>
-                    ),
-                  },
-                  'container-2': {
-                    itemIds: [],
-                    emptyContent: (
-                      <>
-                        <Text as="div" className="u-margin-bottom-xl">
-                          <p>
-                            Drag in available projects to build your course plan
-                          </p>
-                        </Text>
-                        <img alt="hand with pencil" src={EmptyImage} />
-                      </>
-                    ),
-                    header: (
-                      <DragDropContainerHeader>
-                        <Toolbar className="u-margin-bottom-md" variant="bare">
-                          <ToolbarItem>
-                            <Heading as="h2" size="title-sm" variant="base">
-                              Planned projects
-                            </Heading>
-                          </ToolbarItem>
-                          <ToolbarItem align="right">
-                            <Button variant="icon">
-                              <Icon name="add" purpose="decorative" />
-                              Add project
-                            </Button>
-                          </ToolbarItem>
-                        </Toolbar>
-                      </DragDropContainerHeader>
-                    ),
-                  },
-                }}
+                containers={containers}
                 getNewState={(updatedItems: NewState) =>
                   returnUpdatedItems(updatedItems)
                 }
-                items={{
-                  'item-1': {
-                    title: 'Project #1',
-                    children: (
-                      <ProjectCard
-                        behavior="draggable"
-                        buttonDropdownItems={
-                          <>
-                            <DropdownMenuItem>
-                              <Icon
-                                name="schedule"
-                                purpose="decorative"
-                                size="1.25rem"
-                              />
-                              Move to other section
-                            </DropdownMenuItem>
-                            <DropdownMenuItem>
-                              <Icon
-                                name="schedule"
-                                purpose="decorative"
-                                size="1.25rem"
-                              />
-                              Move up
-                            </DropdownMenuItem>
-                            <DropdownMenuItem>
-                              <Icon
-                                name="schedule"
-                                purpose="decorative"
-                                size="1.25rem"
-                              />
-                              Move down
-                            </DropdownMenuItem>
-                            <DropdownMenuItem>
-                              <Icon
-                                name="schedule"
-                                purpose="decorative"
-                                size="1.25rem"
-                              />
-                              Move view details
-                            </DropdownMenuItem>
-                          </>
-                        }
-                        meta="12 days"
-                        number={1}
-                        numberAriaLabel="Project 1"
-                        title="Longer project card title that wraps"
-                      ></ProjectCard>
-                    ),
-                  },
-                  'item-2': {
-                    title: 'Project #2',
-                    children: (
-                      <ProjectCard
-                        behavior="draggable"
-                        buttonDropdownItems={
-                          <>
-                            <DropdownMenuItem>
-                              <Icon
-                                name="schedule"
-                                purpose="decorative"
-                                size="1.25rem"
-                              />
-                              Move to other section
-                            </DropdownMenuItem>
-                            <DropdownMenuItem>
-                              <Icon
-                                name="schedule"
-                                purpose="decorative"
-                                size="1.25rem"
-                              />
-                              Move up
-                            </DropdownMenuItem>
-                            <DropdownMenuItem>
-                              <Icon
-                                name="schedule"
-                                purpose="decorative"
-                                size="1.25rem"
-                              />
-                              Move down
-                            </DropdownMenuItem>
-                            <DropdownMenuItem>
-                              <Icon
-                                name="schedule"
-                                purpose="decorative"
-                                size="1.25rem"
-                              />
-                              Move view details
-                            </DropdownMenuItem>
-                          </>
-                        }
-                        meta="12 days"
-                        number={indexState}
-                        numberAriaLabel="Project 2"
-                        title="Project card title"
-                      ></ProjectCard>
-                    ),
-                  },
-                  'item-3': {
-                    title: 'Project #3',
-                    children: (
-                      <ProjectCard
-                        behavior="draggable"
-                        buttonDropdownItems={
-                          <>
-                            <DropdownMenuItem>
-                              <Icon
-                                name="schedule"
-                                purpose="decorative"
-                                size="1.25rem"
-                              />
-                              Move to other section
-                            </DropdownMenuItem>
-                            <DropdownMenuItem>
-                              <Icon
-                                name="schedule"
-                                purpose="decorative"
-                                size="1.25rem"
-                              />
-                              Move up
-                            </DropdownMenuItem>
-                            <DropdownMenuItem>
-                              <Icon
-                                name="schedule"
-                                purpose="decorative"
-                                size="1.25rem"
-                              />
-                              Move down
-                            </DropdownMenuItem>
-                            <DropdownMenuItem>
-                              <Icon
-                                name="schedule"
-                                purpose="decorative"
-                                size="1.25rem"
-                              />
-                              Move view details
-                            </DropdownMenuItem>
-                          </>
-                        }
-                        meta="12 days"
-                        number={3}
-                        numberAriaLabel="Project 3"
-                        title="Project card title"
-                      ></ProjectCard>
-                    ),
-                  },
-                  'item-4': {
-                    title: 'Project #4',
-                    children: (
-                      <ProjectCard
-                        behavior="draggable"
-                        buttonDropdownItems={
-                          <>
-                            <DropdownMenuItem>
-                              <Icon
-                                name="schedule"
-                                purpose="decorative"
-                                size="1.25rem"
-                              />
-                              Move to other section
-                            </DropdownMenuItem>
-                            <DropdownMenuItem>
-                              <Icon
-                                name="schedule"
-                                purpose="decorative"
-                                size="1.25rem"
-                              />
-                              Move up
-                            </DropdownMenuItem>
-                            <DropdownMenuItem>
-                              <Icon
-                                name="schedule"
-                                purpose="decorative"
-                                size="1.25rem"
-                              />
-                              Move down
-                            </DropdownMenuItem>
-                            <DropdownMenuItem>
-                              <Icon
-                                name="schedule"
-                                purpose="decorative"
-                                size="1.25rem"
-                              />
-                              Move view details
-                            </DropdownMenuItem>
-                          </>
-                        }
-                        meta="12 days"
-                        number={4}
-                        numberAriaLabel="Project 4"
-                        title="Project card title"
-                      ></ProjectCard>
-                    ),
-                  },
-                  'item-5': {
-                    title: 'Project #5',
-                    children: (
-                      <ProjectCard
-                        behavior="draggable"
-                        buttonDropdownItems={
-                          <>
-                            <DropdownMenuItem>
-                              <Icon
-                                name="schedule"
-                                purpose="decorative"
-                                size="1.25rem"
-                              />
-                              Move to other section
-                            </DropdownMenuItem>
-                            <DropdownMenuItem>
-                              <Icon
-                                name="schedule"
-                                purpose="decorative"
-                                size="1.25rem"
-                              />
-                              Move up
-                            </DropdownMenuItem>
-                            <DropdownMenuItem>
-                              <Icon
-                                name="schedule"
-                                purpose="decorative"
-                                size="1.25rem"
-                              />
-                              Move down
-                            </DropdownMenuItem>
-                            <DropdownMenuItem>
-                              <Icon
-                                name="schedule"
-                                purpose="decorative"
-                                size="1.25rem"
-                              />
-                              Move view details
-                            </DropdownMenuItem>
-                          </>
-                        }
-                        buttonDropdownPosition="top-left"
-                        meta="12 days"
-                        number={5}
-                        numberAriaLabel="Project 5"
-                        title="Project card title"
-                      ></ProjectCard>
-                    ),
-                  },
-                  'item-6': {
-                    title: 'Project #6',
-                    children: (
-                      <ProjectCard
-                        behavior="draggable"
-                        buttonDropdownItems={
-                          <>
-                            <DropdownMenuItem>
-                              <Icon
-                                name="schedule"
-                                purpose="decorative"
-                                size="1.25rem"
-                              />
-                              Move to other section
-                            </DropdownMenuItem>
-                            <DropdownMenuItem>
-                              <Icon
-                                name="schedule"
-                                purpose="decorative"
-                                size="1.25rem"
-                              />
-                              Move up
-                            </DropdownMenuItem>
-                            <DropdownMenuItem>
-                              <Icon
-                                name="schedule"
-                                purpose="decorative"
-                                size="1.25rem"
-                              />
-                              Move down
-                            </DropdownMenuItem>
-                            <DropdownMenuItem>
-                              <Icon
-                                name="schedule"
-                                purpose="decorative"
-                                size="1.25rem"
-                              />
-                              Move view details
-                            </DropdownMenuItem>
-                          </>
-                        }
-                        buttonDropdownPosition="top-left"
-                        meta="12 days"
-                        number={6}
-                        numberAriaLabel="Project 6"
-                        title="Project card title"
-                      ></ProjectCard>
-                    ),
-                  },
-                }}
+                items={items}
                 multipleContainers={false}
                 unstyledItems={true}
               />
