@@ -14,8 +14,9 @@
  * 4) 2px margin compensates for the padding so the link doesn't have too much space between it
  *    and surrounding text
  * 5) Has position relative to support the background color pseudo element
- * 6) Has smaller icons than other button styles
- * 7) Make the focus outline invisible but don't remove it. High contrast mode will remove the background 
+ * 6) We hide overflow so the pseudo element can be pushed out of site
+ * 7) Has smaller icons than other button styles
+ * 8) Make the focus outline invisible but don't remove it. High contrast mode will remove the background 
       color, but it will also make borders 100% opacity black
  */
 @define-mixin textLink {
@@ -35,6 +36,7 @@
   padding: 2px !important; /* 3 */
   margin: -2px; /* 4 */
   position: relative; /* 5 */
+  overflow: hidden; /* 6 */
   z-index: var(--eds-z-index-0);
   transition: color var(--eds-anim-move-medium) var(--eds-anim-ease),
     text-decoration-color var(--eds-anim-move-medium) var(--eds-anim-ease);
@@ -44,7 +46,7 @@
   }
 
   svg {
-    --icon-size-default: 1.25em; /* 6 */
+    --icon-size-default: 1.25em; /* 7 */
   }
 
   &:hover {
@@ -53,7 +55,7 @@
   }
 
   &:focus {
-    outline: 1px solid transparent; /* 7 */
+    outline: 1px solid transparent; /* 8 */
     color: var(--eds-theme-color-text-neutral-default-inverse) !important;
     text-decoration-color: var(
       --eds-theme-color-text-neutral-default-inverse
@@ -69,9 +71,9 @@
    * Pseudo element with background color for focus state
    * 1) Uses an absolutely-positioned pseudo element with a background color to animate it up and down
    * 2) The pseudo element has a negative z-index to position it behind the text
-   * 3) We set transform-origin: to bottom so it animates up from the bottom, not out from the middle
-   * 4) The element is scaled down to 0 vertically by default so it's hidden
-   * 5) And we scale it back to 100% on focus so it appears
+   * 3) The element is pushed down out of sight to hide it
+   * 4) We set transform-origin: to bottom so it animates up from the bottom, not out from the middle
+   * 5) And we pull it back up on focus so it's visible
    */
   &::before {
     /* 1 */
@@ -84,8 +86,8 @@
     z-index: var(--eds-z-index-bottom); /* 2 */
     background-color: var(--eds-theme-color-background-brand-primary-strong);
 
-    transform-origin: bottom; /* 3 */
-    transform: scaleY(0%); /* 4 */
+    transform: translateY(100%); /* 3 */
+    transform-origin: bottom; /* 4 */
     transition: transform var(--eds-anim-move-medium) var(--eds-anim-ease);
 
     @media screen and (prefers-reduced-motion) {
@@ -94,7 +96,7 @@
   }
 
   &:focus::before {
-    transform: scaleY(1); /* 5 */
+    transform: translateY(0); /* 5 */
   }
 }
 
