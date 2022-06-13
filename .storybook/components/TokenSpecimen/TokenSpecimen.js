@@ -89,7 +89,7 @@ TokenSpecimen.propTypes = {
   name: PropTypes.string.isRequired,
   value: PropTypes.any.isRequired,
   comment: PropTypes.string,
-  inlineStyles: PropTypes.any,
+  inlineStyles: PropTypes.objectOf(PropTypes.string),
   variant: PropTypes.string,
   specimenClassName: PropTypes.string,
 };
