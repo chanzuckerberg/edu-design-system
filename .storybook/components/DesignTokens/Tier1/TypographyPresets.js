@@ -58,6 +58,7 @@ export class Tier1TypographyPresets extends Component {
   render() {
     const renderTypeToken = (
       preset,
+      index,
       { boldVariant = true, lightVariant = false } = {},
     ) => {
       const { fontSize, lineHeight } = PRESET_SIZE_MAP[preset];
@@ -68,7 +69,7 @@ export class Tier1TypographyPresets extends Component {
       };
 
       return (
-        <>
+        <Grid key={`tier-1-typography-preset-${index}`}>
           <TokenSpecimen
             name={`eds-typography-preset-${preset}`}
             specimenClassName={`u-typography-preset-${preset}`}
@@ -88,17 +89,17 @@ export class Tier1TypographyPresets extends Component {
               {...commonProps}
             />
           )}
-        </>
+        </Grid>
       );
     };
 
     return (
       <Grid>
-        {Object.keys(PRESET_SIZE_MAP).map((preset) => {
+        {Object.keys(PRESET_SIZE_MAP).map((preset, index) => {
           if (preset === '005') {
-            return renderTypeToken(preset, { lightVariant: true });
+            return renderTypeToken(preset, index, { lightVariant: true });
           }
-          return renderTypeToken(preset);
+          return renderTypeToken(preset, index);
         })}
       </Grid>
     );
