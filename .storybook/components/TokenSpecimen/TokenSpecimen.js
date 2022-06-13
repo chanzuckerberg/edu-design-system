@@ -88,11 +88,10 @@ export class TokenSpecimen extends Component {
 }
 
 TokenSpecimen.propTypes = {
-  listItems: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      value: PropTypes.any.isRequired,
-      comment: PropTypes.string,
-    }),
-  ).isRequired,
+  name: PropTypes.string.isRequired,
+  value: PropTypes.any.isRequired,
+  comment: PropTypes.string,
+  inlineStyles: PropTypes.objectOf(PropTypes.string),
+  variant: PropTypes.string,
+  specimenClassName: PropTypes.string,
 };
