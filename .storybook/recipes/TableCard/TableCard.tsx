@@ -61,7 +61,7 @@ export const TableCard = ({
   tableColumns,
   ...other
 }: Props) => {
-  const componentClassName = clsx(styles['standards-coverage'], className, {});
+  const componentClassName = clsx(styles['table-card'], className, {});
 
   return (
     <Card className={componentClassName} {...other}>
@@ -76,7 +76,7 @@ export const TableCard = ({
         </Heading>
         <Table
           caption="Standards coverage"
-          className={styles['standards-coverage__table']}
+          className={styles['table-card__table']}
           hideCaption={true}
         >
           <TableHeader>
@@ -84,7 +84,7 @@ export const TableCard = ({
               {tableColumns.map((item, index) => {
                 return (
                   <TableHeaderCell
-                    className={styles['standards-coverage__table-header-cell']}
+                    className={styles['table-card__table-header-cell']}
                     key={'table-header-cell-' + index}
                   >
                     {item.title}

@@ -5,16 +5,24 @@
 \*------------------------------------*/
 
 /**
- * 1) 
+ * 1) Card with a title, table, and button within
  */
-.standards-coverage {
-}
 
-.standards-coverage__table {
+/**
+* Table card table
+* 1) Actual table within the card
+*/
+.table-card__table {
   color: var(--eds-theme-color-text-neutral-subtle);
 }
 
-.standards-coverage__table-header-cell {
+/**
+* Table card table header cell
+*/
+.table-card__table-header-cell {
+  /**
+  * First child within table card table header cell
+  */
   &:first-child {
     @media all and (min-width: $eds-bp-md) {
       width: 11.875rem;
