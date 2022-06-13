@@ -269,22 +269,15 @@ export const Cad = () => {
       (item: string, index: number) => {
         if (item === 'item-2') {
           updatedItems.items['item-2'].behavior = 'hover';
-          setIndexState(20);
+          setIndexState(index + 1);
+          console.log(index + 1);
         }
       },
     );
   };
 
-  const changeNumber = () => {
-    setIndexState(20);
-    console.log(indexState);
-  };
   return (
     <>
-      <Button onClick={changeNumber}>Change Number</Button>
-
-      <NumberIcon aria-label="1" number={indexState}></NumberIcon>
-
       <Panel className="u-margin-bottom-lg" variant="squared">
         <LayoutContainer>
           <PageHeader
@@ -338,9 +331,6 @@ export const Cad = () => {
               </Text>
 
               <DragDrop
-                getNewState={(updatedItems: object) =>
-                  returnUpdatedItems(updatedItems)
-                }
                 containers={{
                   'container-1': {
                     itemIds: ['item-1', 'item-2', 'item-3', 'item-4', 'item-5'],
@@ -404,6 +394,9 @@ export const Cad = () => {
                     ),
                   },
                 }}
+                getNewState={(updatedItems: object) =>
+                  returnUpdatedItems(updatedItems)
+                }
                 items={{
                   'item-1': {
                     title: 'Project #1',

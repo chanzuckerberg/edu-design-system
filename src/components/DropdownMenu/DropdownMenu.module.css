@@ -68,9 +68,8 @@
   width: 100%;
   padding: var(--eds-size-1-and-half) var(--eds-size-2);
   text-align: left;
-
   color: var(--eds-theme-color-text-neutral-default);
-  transition: all var(--eds-anim-fade-quick) var(--eds-anim-ease);
+  transition: background var(--eds-anim-fade-quick) var(--eds-anim-ease);
 
   &:hover,
   &:focus {
