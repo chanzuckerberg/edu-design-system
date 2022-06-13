@@ -263,6 +263,28 @@ const StandardsRows = [
 ];
 
 export const Cad = () => {
+  const container1EmptyContent = () => {
+    return (
+      <>
+        <Text as="div" className="u-margin-bottom-xl">
+          <p>There are no more available projects to create your course plan</p>
+        </Text>
+        <img alt="hand with pencil" src={EmptyImage} />
+      </>
+    );
+  };
+
+  const container2EmptyContent = () => {
+    return (
+      <>
+        <Text as="div" className="u-margin-bottom-xl">
+          <p>Drag in available projects to build your course plan</p>
+        </Text>
+        <img alt="hand with pencil" src={EmptyImage} />
+      </>
+    );
+  };
+
   const projectCardMenuItems = () => {
     return (
       <>
@@ -313,16 +335,7 @@ export const Cad = () => {
   const [containers, setContainers] = useState({
     'container-1': {
       itemIds: ['item-1', 'item-2', 'item-3', 'item-4', 'item-5'],
-      emptyContent: (
-        <>
-          <Text as="div" className="u-margin-bottom-xl">
-            <p>
-              There are no more available projects to create your course plan
-            </p>
-          </Text>
-          <img alt="hand with pencil" src={EmptyImage} />
-        </>
-      ),
+      emptyContent: container1EmptyContent(),
       header: (
         <DragDropContainerHeader>
           <Toolbar className="u-margin-bottom-md" variant="bare">
@@ -343,14 +356,7 @@ export const Cad = () => {
     },
     'container-2': {
       itemIds: [],
-      emptyContent: (
-        <>
-          <Text as="div" className="u-margin-bottom-xl">
-            <p>Drag in available projects to build your course plan</p>
-          </Text>
-          <img alt="hand with pencil" src={EmptyImage} />
-        </>
-      ),
+      emptyContent: container2EmptyContent(),
       header: (
         <DragDropContainerHeader>
           <Toolbar className="u-margin-bottom-md" variant="bare">
