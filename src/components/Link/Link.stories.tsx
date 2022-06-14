@@ -2,6 +2,7 @@ import { Story, Meta } from '@storybook/react';
 import React from 'react';
 import { Link, LinkProps } from './Link';
 import getRandomUrl from '../../util/getRandomUrl';
+import { SIZES, STATUSES, VARIANTS } from '../ClickableStyle';
 
 import Icon from '../Icon';
 
@@ -20,19 +21,19 @@ export default {
       control: {
         type: 'select',
       },
-      options: ['primary', 'secondary', 'icon', 'link'],
+      options: VARIANTS,
     },
     status: {
       control: {
         type: 'select',
       },
-      options: ['brand', 'neutral', 'success', 'warning', 'error'],
+      options: STATUSES,
     },
     size: {
       control: {
         type: 'select',
       },
-      options: ['sm', 'md', 'lg'],
+      options: SIZES,
     },
     fullWidth: {
       control: 'boolean',
