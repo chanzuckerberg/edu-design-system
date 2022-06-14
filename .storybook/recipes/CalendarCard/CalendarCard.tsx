@@ -21,11 +21,11 @@ export interface Props {
   /**
    * End of date range
    */
-  dateEnd: string;
+  dateEnd?: string;
   /**
    * Start of date range
    */
-  dateStart: string;
+  dateStart?: string;
   /**
    * Additional text for date range
    */
