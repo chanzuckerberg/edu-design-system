@@ -11,10 +11,10 @@ import TableRow from '../TableRow';
 export interface Props {
   /**
    * Behavior variations:
-   * - **overflow-sm** Removes the min-width from the table for tables with few columns
-   * - **overflow-lg** Used for tables with lots of table rows to overflow at a larger breakpoint
+   * - **overflow** renders a table that overflows horizontally off the screen
+   * - **stacked** renders a table that stacks its content into a card on small screens
    */
-  behavior?: 'overflow' | 'overflow-lg' | 'overflow-sm';
+  behavior?: 'overflow' | 'stacked';
   /**
    * HTML caption property for table
    */
@@ -31,6 +31,11 @@ export interface Props {
    * Boolean to determine if caption should be displayed visibly.
    */
   hideCaption?: boolean;
+  /**
+   * Highlight first cell
+   * 1) Make the first cell more prominent on smaller screens in stacked variant
+   */
+  highlightFirstCell?: boolean;
   /**
    * Stylistic variations:
    * - **zebra** yields a data table alternating colors every row
@@ -53,6 +58,7 @@ export const Table = ({
   children,
   className,
   hideCaption = true,
+  highlightFirstCell,
   variant,
   ...other
 }: Props) => {
@@ -61,6 +67,8 @@ export const Table = ({
     className,
     variant === 'zebra' && styles['table--zebra'],
     behavior === 'overflow' && styles['table--overflow'],
+    behavior === 'stacked' && styles['table--stacked'],
+    highlightFirstCell === true && styles['table--highlight-first-cell'],
   );
 
   const captionClassName = clsx(

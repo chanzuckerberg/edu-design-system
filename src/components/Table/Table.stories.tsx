@@ -96,6 +96,46 @@ const Template: Story<Props> = (args) => (
   </Table>
 );
 
+const StackedTemplate: Story<Props> = (args) => (
+  <Table {...args}>
+    <Table.Header>
+      <Table.Row>
+        {tableColumns.map((item, index) => {
+          return (
+            <Table.Cell as="th" key={'table-header-row-' + index}>
+              {item.title}
+            </Table.Cell>
+          );
+        })}
+      </Table.Row>
+    </Table.Header>
+
+    <Table.Body>
+      {tableRows.map((item, index) => {
+        return (
+          <Table.Row key={'table-row-' + index}>
+            <Table.Cell data-heading={tableColumns[0].title}>
+              {item.value1}
+            </Table.Cell>
+            <Table.Cell data-heading={tableColumns[1].title}>
+              {item.value2}
+            </Table.Cell>
+            <Table.Cell data-heading={tableColumns[2].title}>
+              {item.value3}
+            </Table.Cell>
+            <Table.Cell data-heading={tableColumns[3].title}>
+              {item.value4}
+            </Table.Cell>
+            <Table.Cell data-heading={tableColumns[4].title}>
+              {item.value5}
+            </Table.Cell>
+          </Table.Row>
+        );
+      })}
+    </Table.Body>
+  </Table>
+);
+
 export const Default = Template.bind({});
 Default.args = {};
 
@@ -107,6 +147,11 @@ Zebra.args = {
 export const Overflow = Template.bind({});
 Overflow.args = {
   behavior: 'overflow',
+};
+
+export const Stacked = StackedTemplate.bind({});
+Stacked.args = {
+  behavior: 'stacked',
 };
 
 export const AlignTableCellContentCenter = () => (

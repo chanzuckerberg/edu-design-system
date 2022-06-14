@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
-import styles from '../ListDetail/ListDetail.module.css';
+import styles from '../TimelineNav/TimelineNav.module.css';
 
-export type ListDetailPanelVariant =
+export type TimelineNavPanelVariant =
   | 'bullet'
   | 'complete'
   | 'error'
@@ -34,7 +34,7 @@ export interface Props {
   /**
    * The tab variant
    */
-  variant?: ListDetailPanelVariant;
+  variant?: TimelineNavPanelVariant;
   /**
    * The tab title
    */
@@ -45,12 +45,12 @@ export interface Props {
  * BETA: This component is still a work in progress and is subject to change.
  *
  * ```ts
- * import {ListDetailPanel} from "@chanzuckerberg/eds";
+ * import {TimelineNavPanel} from "@chanzuckerberg/eds";
  * ```
  *
- * Panel to be used inside of the ListDetail component.
+ * Panel to be used inside of the TimelineNav component.
  */
-export const ListDetailPanel = ({
+export const TimelineNavPanel = ({
   ariaLabelledBy,
   children,
   className,
@@ -60,7 +60,7 @@ export const ListDetailPanel = ({
   title,
   ...other
 }: Props) => {
-  const componentClassName = clsx(styles['list-detail__panel'], className, {});
+  const componentClassName = clsx(styles['timeline-nav__panel'], className, {});
   return (
     <div
       aria-hidden={false}

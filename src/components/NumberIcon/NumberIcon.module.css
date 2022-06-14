@@ -22,6 +22,7 @@
 
   /* 2 */
   border: var(--eds-border-width-sm) solid;
+  border-color: inherit;
   border-radius: var(--eds-border-radius-round);
 }
 
@@ -47,7 +48,6 @@
  */
 .number-icon--base {
   background-color: transparent;
-  border-color: var(--eds-theme-color-icon-neutral-strong);
 }
 
 .number-icon--success {

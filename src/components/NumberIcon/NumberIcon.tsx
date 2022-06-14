@@ -86,7 +86,6 @@ export const NumberIcon = ({
       {incomplete && numberIconTitle ? (
         <Icon
           className={styles['number-icon__icon']}
-          color={EdsThemeColorIconNeutralSubtle}
           name="circle"
           purpose="informative"
           size={size === 'sm' ? '0.25rem' : '0.5rem'}

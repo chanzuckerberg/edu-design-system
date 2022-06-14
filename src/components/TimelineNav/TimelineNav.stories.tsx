@@ -2,22 +2,22 @@ import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { Story, Meta } from '@storybook/react';
 import React from 'react';
 
-import { ListDetail, Props } from './ListDetail';
-import ListDetailPanel from '../ListDetailPanel';
+import { TimelineNav, Props } from './TimelineNav';
 import Text from '../Text';
+import TimelineNavPanel from '../TimelineNavPanel';
 
 export default {
-  title: 'Example/ListDetail',
-  component: ListDetail,
-  subcomponents: { ListDetailPanel },
+  title: 'Example/TimelineNav',
+  component: TimelineNav,
+  subcomponents: { TimelineNavPanel },
   parameters: {
     badges: [BADGE.BETA],
   },
 } as Meta;
 
 const Template: Story<Props> = (args) => (
-  <ListDetail variant="ordered">
-    <ListDetailPanel title="Overview">
+  <TimelineNav variant="ordered">
+    <TimelineNavPanel title="Overview">
       <Text as="div">
         <h3>Overview</h3>
         <p>
@@ -27,10 +27,10 @@ const Template: Story<Props> = (args) => (
           aliquip ex{' '}
         </p>
       </Text>
-    </ListDetailPanel>
-    <ListDetailPanel title="ListDetailPanel 1" variant="number">
+    </TimelineNavPanel>
+    <TimelineNavPanel title="TimelineNavPanel 1" variant="number">
       <Text as="div">
-        <h3>ListDetailPanel 1</h3>
+        <h3>TimelineNavPanel 1</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -38,11 +38,11 @@ const Template: Story<Props> = (args) => (
           aliquip ex{' '}
         </p>
       </Text>
-    </ListDetailPanel>
+    </TimelineNavPanel>
 
-    <ListDetailPanel title="ListDetailPanel 2" variant="error">
+    <TimelineNavPanel title="TimelineNavPanel 2" variant="error">
       <Text as="div">
-        <h3>ListDetailPanel 2</h3>
+        <h3>TimelineNavPanel 2</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -50,11 +50,11 @@ const Template: Story<Props> = (args) => (
           aliquip ex{' '}
         </p>
       </Text>
-    </ListDetailPanel>
+    </TimelineNavPanel>
 
-    <ListDetailPanel title="ListDetailPanel 3" variant="warning">
+    <TimelineNavPanel title="TimelineNavPanel 3" variant="warning">
       <Text as="div">
-        <h3>ListDetailPanel 3</h3>
+        <h3>TimelineNavPanel 3</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -62,11 +62,11 @@ const Template: Story<Props> = (args) => (
           aliquip ex{' '}
         </p>
       </Text>
-    </ListDetailPanel>
+    </TimelineNavPanel>
 
-    <ListDetailPanel title="ListDetailPanel 4" variant="success">
+    <TimelineNavPanel title="TimelineNavPanel 4" variant="success">
       <Text as="div">
-        <h3>ListDetailPanel 4</h3>
+        <h3>TimelineNavPanel 4</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -74,11 +74,11 @@ const Template: Story<Props> = (args) => (
           aliquip ex{' '}
         </p>
       </Text>
-    </ListDetailPanel>
+    </TimelineNavPanel>
 
-    <ListDetailPanel title="ListDetailPanel 5">
+    <TimelineNavPanel title="TimelineNavPanel 5">
       <Text as="div">
-        <h3>ListDetailPanel 5</h3>
+        <h3>TimelineNavPanel 5</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -86,11 +86,11 @@ const Template: Story<Props> = (args) => (
           aliquip ex{' '}
         </p>
       </Text>
-    </ListDetailPanel>
+    </TimelineNavPanel>
 
-    <ListDetailPanel title="ListDetailPanel 6" variant="number">
+    <TimelineNavPanel title="TimelineNavPanel 6" variant="number">
       <Text as="div">
-        <h3>ListDetailPanel 5</h3>
+        <h3>TimelineNavPanel 5</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -98,9 +98,9 @@ const Template: Story<Props> = (args) => (
           aliquip ex{' '}
         </p>
       </Text>
-    </ListDetailPanel>
+    </TimelineNavPanel>
 
-    <ListDetailPanel title="Final Item - complete" variant="complete">
+    <TimelineNavPanel title="Final Item - complete" variant="complete">
       <Text as="div">
         <h3>Final Item - complete</h3>
         <p>
@@ -110,8 +110,8 @@ const Template: Story<Props> = (args) => (
           aliquip ex{' '}
         </p>
       </Text>
-    </ListDetailPanel>
-  </ListDetail>
+    </TimelineNavPanel>
+  </TimelineNav>
 );
 
 export const Default = Template.bind({});
