@@ -2,8 +2,20 @@ import clsx from 'clsx';
 import React, { MouseEventHandler, ReactNode } from 'react';
 import styles from './ClickableStyle.module.css';
 
-type Variant = 'primary' | 'secondary' | 'icon' | 'link';
-type Status = 'brand' | 'neutral' | 'success' | 'warning' | 'error';
+export const VARIANTS = ['primary', 'secondary', 'icon', 'link'] as const;
+export type Variant = typeof VARIANTS[number];
+
+export const STATUSES = [
+  'brand',
+  'neutral',
+  'success',
+  'warning',
+  'error',
+] as const;
+export type Status = typeof STATUSES[number];
+
+export const SIZES = ['sm', 'md', 'lg'] as const;
+export type Size = typeof SIZES[number];
 
 export type ClickableStyleProps<IComponent extends React.ElementType> = {
   /**
@@ -30,7 +42,7 @@ export type ClickableStyleProps<IComponent extends React.ElementType> = {
   /**
    * Available size variations for the clickable
    */
-  size?: 'sm' | 'md' | 'lg';
+  size?: Size;
   /**
    * Available _color_ variations available for the ClickableStyle component
    */
