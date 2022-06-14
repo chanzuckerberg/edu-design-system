@@ -22,14 +22,6 @@ export const Default: StoryObj<Args> = {
     children: (
       <>
         <CalendarCard.Body>
-          <Heading as="h3" size="body-sm">
-            <Icon
-              name="status-check-circle"
-              purpose="decorative"
-              size="1.57rem"
-            />
-            Project name here
-          </Heading>
           <Text as="p" size="xs">
             <Icon name="event-note" purpose="decorative" size="1.2rem" />
             Feb 2 - Apr 1, 2022
@@ -38,6 +30,7 @@ export const Default: StoryObj<Args> = {
         </CalendarCard.Body>
       </>
     ),
+    title: 'Project name here',
     variant: 'success',
   },
 };

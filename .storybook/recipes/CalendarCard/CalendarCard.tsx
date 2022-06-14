@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import styles from './CalendarCard.module.css';
 
-import { Card } from '../../../src';
+import { Card, Heading, Icon } from '../../../src';
 
 export const VARIANTS = ['brand', 'revise', 'success'] as const;
 
@@ -18,6 +18,18 @@ export interface Props {
    */
   children: ReactNode;
   /**
+   * The card icon
+   */
+  icon?: ReactNode;
+  /**
+   * Project card meta data (e.g. calendar)
+   */
+  meta?: string;
+  /**
+   * The title text
+   */
+  title?: string;
+  /**
    * Notification variant for the card.
    */
   variant?: Variant;
@@ -29,16 +41,42 @@ export interface Props {
 export const CalendarCard = ({
   children,
   className,
+  icon,
+  title,
   variant = 'brand',
   ...other
 }: Props) => {
   const componentClassName = clsx(
-    styles['calendar-card'],
     className,
+    styles['calendar-card'],
     styles[`calendar-card--${variant}`],
   );
   return (
     <Card className={componentClassName} {...other}>
+      {title && (
+        <Heading
+          as="h3"
+          className={styles['calendar-card__title']}
+          size="body-sm"
+        >
+          {(variant === 'success' || variant === 'revise') && (
+            <span className={styles['calendar-card__title--icon']}>
+              <Icon
+                name={
+                  variant === 'success' ? 'status-check-circle' : 'status-error'
+                }
+                purpose="decorative"
+                size="1.28rem"
+              />
+            </span>
+          )}
+          {title && (
+            <span className={styles['calendar-card__title--text']}>
+              {title}
+            </span>
+          )}
+        </Heading>
+      )}
       {children}
     </Card>
   );
