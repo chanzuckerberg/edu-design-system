@@ -5,8 +5,6 @@ import React from 'react';
 import { OverflowList } from './OverflowList';
 import { OverflowListItem } from '../OverflowListItem/OverflowListItem';
 
-type Args = React.ComponentProps<typeof OverflowList>;
-
 export default {
   title: 'Molecules/Lists/OverflowList',
   component: OverflowList,
@@ -14,6 +12,8 @@ export default {
     badges: [BADGE.BETA],
   },
 } as Meta<Args>;
+
+type Args = React.ComponentProps<typeof OverflowList>;
 
 export const Default: StoryObj<Args> = {
   args: {
