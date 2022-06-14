@@ -1,4 +1,4 @@
-import { StoryObj } from '@storybook/react';
+import { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
 import { ButtonDropdown } from './ButtonDropdown';
@@ -36,7 +36,7 @@ export default {
     ),
     dropdownMenuTrigger: <Button>Open Dropdown</Button>,
   },
-};
+} as Meta<Args>;
 
 type Args = React.ComponentProps<typeof ButtonDropdown>;
 

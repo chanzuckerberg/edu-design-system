@@ -28,7 +28,7 @@ export default {
       </>
     ),
   },
-} as Meta;
+} as Meta<Args>;
 
 type Args = React.ComponentProps<typeof PrimaryNav>;
 

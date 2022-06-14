@@ -1,4 +1,4 @@
-import { StoryObj } from '@storybook/react';
+import { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
 import { ProjectCard } from './ProjectCard';
@@ -30,7 +30,7 @@ export default {
       </>
     ),
   },
-};
+} as Meta<Args>;
 
 type Args = React.ComponentProps<typeof ProjectCard>;
 

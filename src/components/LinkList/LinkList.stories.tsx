@@ -1,8 +1,8 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
-import { Story, Meta } from '@storybook/react';
+import { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
-import { LinkList, Props } from './LinkList';
+import { LinkList } from './LinkList';
 import LinkListItem from '../LinkListItem';
 
 export default {
@@ -11,67 +11,81 @@ export default {
   parameters: {
     badges: [BADGE.BETA],
   },
-} as Meta;
+  args: {
+    children: (
+      <>
+        <LinkListItem href="#" text="Link List Item 1" />
+        <LinkListItem href="#" text="Link List Item 2" />
+        <LinkListItem href="#" text="Link List Item 3" />
+      </>
+    ),
+  },
+} as Meta<Args>;
 
-const Template: Story<Props> = (args) => (
-  <LinkList {...args}>
-    <LinkListItem href="#" text="Link List Item 1" />
-    <LinkListItem href="#" text="Link List Item 2" />
-    <LinkListItem href="#" text="Link List Item 3" />
-  </LinkList>
-);
+type Args = React.ComponentProps<typeof LinkList>;
 
-export const Default = Template.bind({});
-Default.args = {};
+export const Default: StoryObj<Args> = {};
 
-export const Lined = Template.bind({});
-Lined.args = {
-  variant: 'lined',
+export const Lined: StoryObj<Args> = {
+  args: {
+    variant: 'lined',
+  },
 };
 
-export const Small = Template.bind({});
-Small.args = {
-  size: 'sm',
+export const Small: StoryObj<Args> = {
+  args: {
+    size: 'sm',
+  },
 };
 
-export const Horizontal = Template.bind({});
-Horizontal.args = {
-  behavior: 'horizontal',
+export const Horizontal: StoryObj<Args> = {
+  args: {
+    behavior: 'horizontal',
+  },
 };
 
-export const Responsive = Template.bind({});
-Responsive.args = {
-  behavior: 'responsive',
+export const Responsive: StoryObj<Args> = {
+  args: {
+    behavior: 'responsive',
+  },
 };
 
-export const IconAfterText = () => (
-  <LinkList>
-    <LinkListItem
-      href="#"
-      iconName="chevron-right"
-      iconPosition="after"
-      text="Link List Item 1"
-    />
-    <LinkListItem
-      href="#"
-      iconName="chevron-right"
-      iconPosition="after"
-      text="Link List Item 2"
-    />
-    <LinkListItem
-      href="#"
-      iconName="chevron-right"
-      iconPosition="after"
-      text="Link List Item 3"
-    />
-  </LinkList>
-);
-export const Inverted = () => (
-  <div style={{ backgroundColor: 'black' }}>
-    <LinkList inverted={true}>
-      <LinkListItem href="#" text="Link List Item 1" />
-      <LinkListItem href="#" text="Link List Item 2" />
-      <LinkListItem href="#" text="Link List Item 3" />
-    </LinkList>
-  </div>
-);
+export const IconAfterText: StoryObj<Args> = {
+  args: {
+    children: (
+      <>
+        <LinkListItem
+          href="#"
+          iconName="chevron-right"
+          iconPosition="after"
+          text="Link List Item 1"
+        />
+        <LinkListItem
+          href="#"
+          iconName="chevron-right"
+          iconPosition="after"
+          text="Link List Item 2"
+        />
+        <LinkListItem
+          href="#"
+          iconName="chevron-right"
+          iconPosition="after"
+          text="Link List Item 3"
+        />
+      </>
+    ),
+  },
+};
+
+export const Inverted: StoryObj<Args> = {
+  args: {
+    inverted: true,
+  },
+  decorators: [
+    (Story) => (
+      <div style={{ backgroundColor: 'black' }}>
+        <Story />
+      </div>
+    ),
+  ],
+};

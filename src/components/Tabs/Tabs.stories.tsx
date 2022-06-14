@@ -1,5 +1,5 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
-import { StoryObj } from '@storybook/react';
+import { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
 import { Tabs } from './Tabs';
@@ -54,7 +54,7 @@ export default {
       </>
     ),
   },
-};
+} as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Tabs>;
 

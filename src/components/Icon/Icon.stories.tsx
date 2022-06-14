@@ -1,4 +1,4 @@
-import type { StoryObj } from '@storybook/react';
+import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 import { Icon, IconProps } from './Icon';
 import * as ColorTokens from '../../tokens-dist/ts/colors';
@@ -22,7 +22,7 @@ export default {
       options: ['currentColor', ...Object.keys(ColorTokens)],
     },
   },
-};
+} as Meta<Args>;
 
 export const Default: StoryObj<IconProps> = {
   render: ({ name, color, ...rest }) => {

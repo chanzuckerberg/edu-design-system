@@ -1,4 +1,4 @@
-import type { StoryObj } from '@storybook/react';
+import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 import Tag, { VARIANTS } from './Tag';
 import styles from './Tag.stories.module.css';
@@ -19,7 +19,7 @@ export default {
     text: 'Tag text',
     variant: 'neutral' as const,
   },
-};
+} as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Tag>;
 

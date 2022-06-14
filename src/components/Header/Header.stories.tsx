@@ -1,5 +1,5 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
-import { Story, Meta } from '@storybook/react';
+import { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
 import { Header, Props } from './Header';
@@ -10,13 +10,11 @@ export default {
   parameters: {
     badges: [BADGE.BETA],
   },
-} as Meta;
+  args: {
+    children: <div className="fpo">Header children</div>,
+  },
+} as Meta<Args>;
 
-const Template: Story<Props> = (args) => (
-  <Header {...args}>
-    <div className="fpo">Header children</div>
-  </Header>
-);
+type Args = React.ComponentProps<typeof Header>;
 
-export const Default = Template.bind({});
-Default.args = {};
+export const Default: StoryObj<Args> = {};

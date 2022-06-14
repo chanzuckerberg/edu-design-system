@@ -1,4 +1,4 @@
-import { StoryObj } from '@storybook/react';
+import { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
 import { NumberIcon } from './NumberIcon';
@@ -8,9 +8,9 @@ export default {
   component: NumberIcon,
   args: {
     'aria-label': 'Step 1',
-    number: '1',
+    number: 1,
   },
-};
+} as Meta<Args>;
 
 type Args = React.ComponentProps<typeof NumberIcon>;
 

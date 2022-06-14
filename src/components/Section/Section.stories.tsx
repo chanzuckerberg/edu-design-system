@@ -1,5 +1,5 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
-import { StoryObj } from '@storybook/react';
+import { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
 import { Section } from './Section';
@@ -14,7 +14,7 @@ export default {
     children:
       'This is the section body, where you can put any content or include other components.',
   },
-};
+} as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Section>;
 

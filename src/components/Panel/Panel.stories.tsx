@@ -1,5 +1,5 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
-import { StoryObj } from '@storybook/react';
+import { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
 import { Panel } from './Panel';
@@ -13,7 +13,7 @@ export default {
   args: {
     children: 'A Panel is a generic bordered container for content.',
   },
-};
+} as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Panel>;
 

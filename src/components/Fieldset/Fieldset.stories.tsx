@@ -1,4 +1,4 @@
-import type { StoryObj } from '@storybook/react';
+import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 import { Fieldset } from './Fieldset';
 import Checkbox from '../Checkbox';
@@ -9,7 +9,7 @@ export default {
   title: 'Atoms/Forms/Fieldset',
   component: Fieldset,
   subcomponents: { FieldsetLegend, FieldsetItems },
-};
+} as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Fieldset>;
 
