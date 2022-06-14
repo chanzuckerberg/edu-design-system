@@ -9,19 +9,25 @@
  */
 .calendar-card {
   width: 16rem;
+  justify-content: space-between;
+  gap: var(--eds-size-1);
+  padding: var(--eds-size-1);
+  background-color: var(--eds-theme-color-background-neutral-default-hover);
 }
 
 .calendar-card--brand {
   border-left: var(--eds-border-width-lg) solid
-  var(--eds-theme-color-border-brand-primary-strong);
+    var(--eds-theme-color-border-brand-primary-strong);
 }
 
 .calendar-card--revise {
-  border-left: var(--eds-border-width-lg) solid var(--eds-theme-color-border-grade-revise-strong);
+  border-left: var(--eds-border-width-lg) solid
+    var(--eds-theme-color-border-grade-revise-strong);
 }
 
 .calendar-card--success {
-  border-left: var(--eds-border-width-lg) solid var(--eds-theme-color-border-utility-success-strong);
+  border-left: var(--eds-border-width-lg) solid
+    var(--eds-theme-color-border-utility-success-strong);
 }
 
 .calendar-card__title {
@@ -29,5 +35,18 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  gap: var(--eds-size-1);
+}
+
+.calendar-card__dates {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--eds-size-1);
+}
+
+.calendar-card__tags {
+  display: flex;
+  flex-wrap: wrap;
   gap: var(--eds-size-1);
 }

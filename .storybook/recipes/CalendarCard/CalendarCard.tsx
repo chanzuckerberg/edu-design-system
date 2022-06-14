@@ -2,7 +2,8 @@ import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import styles from './CalendarCard.module.css';
 
-import { Card, Heading, Icon } from '../../../src';
+import { Card, Heading, Icon, Tag, Text } from '../../../src';
+import { Variant as TagVariant } from '../../../src/components/Tag/Tag';
 
 export const VARIANTS = ['brand', 'revise', 'success'] as const;
 
@@ -16,23 +17,33 @@ export interface Props {
   /**
    * Card sub components that are nested within the Card wrapper.
    */
-  children: ReactNode;
+  children?: ReactNode;
   /**
-   * The card icon
+   * End of date range
    */
-  icon?: ReactNode;
+  dateEnd: string;
   /**
-   * Project card meta data (e.g. calendar)
+   * Start of date range
    */
-  meta?: string;
+  dateStart: string;
+  /**
+   * Text for tag(s)
+   */
+  tags?: TagType[];
   /**
    * The title text
    */
-  title?: string;
+  title: string;
   /**
    * Notification variant for the card.
    */
   variant?: Variant;
+}
+
+interface TagType {
+  text: string;
+  variant?: TagVariant;
+  hasOutline?: boolean;
 }
 
 /**
@@ -41,7 +52,9 @@ export interface Props {
 export const CalendarCard = ({
   children,
   className,
-  icon,
+  dateEnd,
+  dateStart,
+  tags,
   title,
   variant = 'brand',
   ...other
@@ -53,30 +66,38 @@ export const CalendarCard = ({
   );
   return (
     <Card className={componentClassName} {...other}>
-      {title && (
-        <Heading
-          as="h3"
-          className={styles['calendar-card__title']}
-          size="body-sm"
-        >
-          {(variant === 'success' || variant === 'revise') && (
-            <span className={styles['calendar-card__title--icon']}>
-              <Icon
-                name={
-                  variant === 'success' ? 'status-check-circle' : 'status-error'
-                }
-                purpose="decorative"
-                size="1.28rem"
-              />
-            </span>
-          )}
-          {title && (
-            <span className={styles['calendar-card__title--text']}>
-              {title}
-            </span>
-          )}
-        </Heading>
-      )}
+      <Heading
+        as="h3"
+        className={styles['calendar-card__title']}
+        size="body-sm"
+      >
+        {(variant === 'success' || variant === 'revise') && (
+          <span className={styles['calendar-card__title--icon']}>
+            <Icon
+              name={
+                variant === 'success' ? 'status-check-circle' : 'status-error'
+              }
+              purpose="decorative"
+              size="1.28rem"
+            />
+          </span>
+        )}
+        <span>{title}</span>
+      </Heading>
+      <Text as="p" className={styles['calendar-card__dates']} size="xs">
+        <Icon name="event-note" purpose="decorative" size="1.2rem" />
+        {dateStart} - {dateEnd}
+      </Text>
+      <div className={styles['calendar-card__tags']}>
+        {tags?.map(({ hasOutline, text, variant }) => (
+          <Tag
+            hasOutline={hasOutline || false}
+            key={`${text}`}
+            text={text}
+            variant={variant ? variant : 'brand'}
+          />
+        ))}
+      </div>
       {children}
     </Card>
   );

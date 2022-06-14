@@ -19,17 +19,15 @@ type Args = React.ComponentProps<typeof CalendarCard>;
 
 export const Default: StoryObj<Args> = {
   args: {
-    children: (
-      <>
-        <CalendarCard.Body>
-          <Text as="p" size="xs">
-            <Icon name="event-note" purpose="decorative" size="1.2rem" />
-            Feb 2 - Apr 1, 2022
-          </Text>
-          <Tag text="Ancient Mayan History" variant="neutral" />
-        </CalendarCard.Body>
-      </>
-    ),
+    dateEnd: 'Feb 2, 2022',
+    dateStart: 'Apr 1',
+    tags: [
+      { text: 'One', variant: 'error', hasOutline: false },
+      { text: 'Two', variant: 'success', hasOutline: false },
+      { text: 'Three has a longer', variant: 'warning', hasOutline: true },
+      { text: '4', variant: 'yield' },
+      { text: '5', variant: 'brand', hasOutline: false },
+    ],
     title: 'Project name here',
     variant: 'success',
   },
