@@ -15,8 +15,9 @@
  *    and surrounding text
  * 5) Has position relative to support the background color pseudo element
  * 6) We hide overflow so the pseudo element can be pushed out of site
- * 7) Has smaller icons than other button styles
- * 8) Make the focus outline invisible but don't remove it. High contrast mode will remove the background 
+ * 7) z-index 0 required for the background to appear correctly on focus
+ * 8) Has smaller icons than other button styles
+ * 9) Make the focus outline invisible but don't remove it. High contrast mode will remove the background 
       color, but it will also make borders 100% opacity black
  */
 @define-mixin textLink {
@@ -37,7 +38,7 @@
   margin: -2px; /* 4 */
   position: relative; /* 5 */
   overflow: hidden; /* 6 */
-  z-index: var(--eds-z-index-0);
+  z-index: var(--eds-z-index-0); /* 7 */
   transition: color var(--eds-anim-move-medium) var(--eds-anim-ease),
     text-decoration-color var(--eds-anim-move-medium) var(--eds-anim-ease);
 
@@ -46,7 +47,7 @@
   }
 
   svg {
-    --icon-size-default: 1.25em; /* 7 */
+    --icon-size-default: 1.25em; /* 8 */
   }
 
   &:hover {
@@ -55,7 +56,7 @@
   }
 
   &:focus {
-    outline: 1px solid transparent; /* 8 */
+    outline: 1px solid transparent; /* 9 */
     color: var(--eds-theme-color-text-neutral-default-inverse) !important;
     text-decoration-color: var(
       --eds-theme-color-text-neutral-default-inverse
