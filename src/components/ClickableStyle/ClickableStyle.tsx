@@ -100,7 +100,6 @@ export const ClickableStyle = React.forwardRef(
     }: ClickableStyleProps<IComponent>,
     ref: React.ForwardedRef<HTMLElement>,
   ) => {
-    // TODO: just move this whole thing out
     if (
       !getPropCombinationIsValid(variant, status) &&
       process.env.NODE_ENV !== 'production'
