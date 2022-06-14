@@ -47,14 +47,13 @@ export const Breadcrumbs = ({
   const ref = React.useRef<HTMLUListElement>(null);
 
   const updateShouldTruncate = () => {
+    setShouldTruncate(false);
     if (
       ref &&
       ref.current &&
       ref.current.clientWidth < ref.current.scrollWidth
     ) {
       setShouldTruncate(true);
-    } else {
-      setShouldTruncate(false);
     }
   };
 
@@ -92,7 +91,15 @@ export const Breadcrumbs = ({
     >
       <ul className={styles['breadcrumbs__list']} ref={ref}>
         {backBreadCrumb}
-        {breadcrumbItems}
+        {shouldTruncate && breadcrumbItems.length > 2 ? (
+          <>
+            {breadcrumbItems[0]}
+            <BreadcrumbsItem text="..." />
+            {breadcrumbItems[breadcrumbItems.length - 1]}
+          </>
+        ) : (
+          breadcrumbItems
+        )}
       </ul>
     </nav>
   );
