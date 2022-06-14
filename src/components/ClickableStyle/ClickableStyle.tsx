@@ -55,7 +55,7 @@ const getPropCombinationIsValid = (variant: Variant, status: Status) => {
   return true;
 };
 
-const logInvalidPropComboWarning = (variant: Variant, status: Status) => {
+const throwInvalidPropComboError = (variant: Variant, status: Status) => {
   const primaryStatuses = ['brand', 'error'];
   const linkStatuses = ['brand', 'neutral'];
 
@@ -66,10 +66,8 @@ const logInvalidPropComboWarning = (variant: Variant, status: Status) => {
     return `'${validStatuses[0]}' and '${validStatuses[1]}'`;
   };
 
-  console.warn(
-    `*** Invalid prop combo warning ***:\n`,
-    `This component does not support using the '${status}' status with a '${variant}' variant.`,
-    `The '${variant}' variant can only be used with the ${getValidStatusesString} statuses.`,
+  throw new Error(
+    `*** Invalid prop combo ***:\nThis component does not support using the '${status}' status with a '${variant}' variant. The '${variant}' variant can only be used with the ${getValidStatusesString} statuses.`,
   );
 };
 
@@ -104,7 +102,7 @@ export const ClickableStyle = React.forwardRef(
       !getPropCombinationIsValid(variant, status) &&
       process.env.NODE_ENV !== 'production'
     ) {
-      logInvalidPropComboWarning(variant, status);
+      throwInvalidPropComboError(variant, status);
     }
 
     const componentClassName = clsx(
