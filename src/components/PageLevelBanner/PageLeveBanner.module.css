@@ -6,19 +6,17 @@
 
 /**
  * 1) Message of information, success, caution, or warning to the user
- * 2) Default styles are for mobile view; desktop view is further down
+ * 2) Position is relative to allow for absolute-positioned close button
+ * 3) Grid is used to separate the icon from the text with correct spacing
  */
 .banner {
-  display: grid;
-  gap: var(--eds-size-2);
-  position: relative;
+  position: relative; /* 2 */
+  display: grid; /* 3 */
+  gap: var(--eds-size-2); /* 3 */
+  grid-template-columns: min-content 1fr; /* 3 */
+  padding: var(--eds-size-2) var(--eds-size-4);
   background-color: var(--eds-theme-color-neutral-subtle-background);
   border-bottom: var(--eds-border-width-md) solid var(--messaging-border-color);
-
-  /* 2 */
-  padding: var(--eds-size-4);
-  text-align: center;
-  justify-items: center;
 }
 
 /**
@@ -27,7 +25,7 @@
  */
 .banner__icon {
   color: var(--messaging-icon-color); /* 1 */
-  --icon-size-default: var(--eds-size-5);
+  --icon-size-default: var(--eds-size-3);
 }
 
 .banner__textContent {
@@ -46,35 +44,12 @@
   right: var(--eds-size-half);
 }
 
-/*------------------------------------*\
-    # DESKTOP VIEW
-\*------------------------------------*/
-
-@media screen and (min-width: $eds-bp-md) {
-  /**
-   * PageLeveBanner desktop view
-   * 1) Everything is left-aligned
-   * 2) Padding is reduced
-   * 3) Icon is smaller to match the heading line height
-   */
-  .banner {
-    grid-template-columns: min-content 1fr;
-    text-align: left; /* 1 */
-    justify-items: flex-start; /* 1 */
-    padding: var(--eds-size-2) var(--eds-size-4); /* 2 */
-
-    .banner__icon {
-      --icon-size-default: var(--eds-size-3); /* 3 */
-    }
-  }
-
-  /**
-   * Dismissable banner desktop view
-   * 1) Add extra right padding to account for close button
-   */
-  .banner--dismissable {
-    padding-right: var(--eds-size-9); /* 1 */
-  }
+/**
+ * Dismissable banner
+ * 1) Add extra right padding to account for close button
+ */
+.banner--dismissable {
+  padding-right: var(--eds-size-9); /* 1 */
 }
 
 /*------------------------------------*\
