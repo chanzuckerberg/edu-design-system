@@ -1,7 +1,6 @@
 import { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 import { CalendarCard } from './CalendarCard';
-import { Heading, Icon, Tag, Text } from '../../../src';
 
 export default {
   title: 'Recipes/CalendarCard',
@@ -21,13 +20,68 @@ export const Default: StoryObj<Args> = {
   args: {
     dateEnd: 'Feb 2, 2022',
     dateStart: 'Apr 1',
+    title: 'Project name here',
+  },
+};
+
+export const ExtraMetadata: StoryObj<Args> = {
+  args: {
+    dateEnd: 'Feb 2, 2022',
+    dateStart: 'Apr 1',
+    meta: '(12 days)',
+    title: 'Project name here',
+  },
+};
+
+export const SingleTag: StoryObj<Args> = {
+  args: {
+    dateEnd: 'Feb 2, 2022',
+    dateStart: 'Apr 1',
+    tags: [{ text: 'Ancient Mayan History' }],
+    title: 'Project name here',
+  },
+};
+
+export const LongerTextStrings: StoryObj<Args> = {
+  args: {
+    dateEnd: 'Feb 2, 2022',
+    dateStart: 'Apr 1',
+    meta: '(Wednesday and Thursday only until further notice)',
+    tags: [{ text: 'Ancient Mayan History' }],
+    title: 'Project name here with extra long title',
+    variant: 'revise',
+  },
+};
+
+export const MultipleTags: StoryObj<Args> = {
+  args: {
+    dateEnd: 'Feb 2, 2022',
+    dateStart: 'Apr 1',
     tags: [
-      { text: 'One', variant: 'error', hasOutline: false },
-      { text: 'Two', variant: 'success', hasOutline: false },
-      { text: 'Three has a longer', variant: 'warning', hasOutline: true },
-      { text: '4', variant: 'yield' },
-      { text: '5', variant: 'brand', hasOutline: false },
+      { text: 'Tag One' },
+      { text: '2' },
+      { text: 'Three' },
+      { text: 'Tag with a longer text string' },
     ],
+    title: 'Project name here',
+  },
+};
+
+export const ReviseVariant: StoryObj<Args> = {
+  args: {
+    dateEnd: 'Feb 2, 2022',
+    dateStart: 'Apr 1',
+    tags: [{ text: 'Ancient Mayan History' }],
+    title: 'Project name here',
+    variant: 'revise',
+  },
+};
+
+export const SuccessVariant: StoryObj<Args> = {
+  args: {
+    dateEnd: 'Feb 2, 2022',
+    dateStart: 'Apr 1',
+    tags: [{ text: 'Ancient Mayan History' }],
     title: 'Project name here',
     variant: 'success',
   },

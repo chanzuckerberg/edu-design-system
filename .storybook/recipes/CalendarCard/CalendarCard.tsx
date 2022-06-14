@@ -27,6 +27,10 @@ export interface Props {
    */
   dateStart: string;
   /**
+   * Additional text for date range
+   */
+  meta?: string;
+  /**
    * Text for tag(s)
    */
   tags?: TagType[];
@@ -54,6 +58,7 @@ export const CalendarCard = ({
   className,
   dateEnd,
   dateStart,
+  meta,
   tags,
   title,
   variant = 'brand',
@@ -78,23 +83,25 @@ export const CalendarCard = ({
                 variant === 'success' ? 'status-check-circle' : 'status-error'
               }
               purpose="decorative"
-              size="1.28rem"
+              size="1.2rem"
             />
           </span>
         )}
         <span>{title}</span>
       </Heading>
       <Text as="p" className={styles['calendar-card__dates']} size="xs">
-        <Icon name="event-note" purpose="decorative" size="1.2rem" />
-        {dateStart} - {dateEnd}
+        <span className={styles['calendar-card__dates--icon']}>
+          <Icon name="event-note" purpose="decorative" size="1.2rem" />
+        </span>
+        {dateStart} &mdash; {dateEnd} {meta}
       </Text>
       <div className={styles['calendar-card__tags']}>
         {tags?.map(({ hasOutline, text, variant }) => (
           <Tag
-            hasOutline={hasOutline || false}
+            hasOutline={hasOutline || true}
             key={`${text}`}
             text={text}
-            variant={variant ? variant : 'brand'}
+            variant={variant ? variant : 'neutral'}
           />
         ))}
       </div>

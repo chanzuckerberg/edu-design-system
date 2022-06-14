@@ -11,7 +11,6 @@
   width: 16rem;
   justify-content: space-between;
   gap: var(--eds-size-1);
-  padding: var(--eds-size-1);
   background-color: var(--eds-theme-color-background-neutral-default-hover);
 }
 
@@ -38,11 +37,19 @@
   gap: var(--eds-size-1);
 }
 
+.calendar-card__title--icon {
+  min-width: 1.2rem;
+}
+
 .calendar-card__dates {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
   gap: var(--eds-size-1);
+}
+
+.calendar-card__dates--icon {
+  min-width: 1.2rem;
 }
 
 .calendar-card__tags {
