@@ -60,8 +60,13 @@ export const LongText: StoryObj<Args> = {
           href="#"
           text="Breadcrumb 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 3 lines at 320px"
         />
-        <Breadcrumbs.Item href="#" text="Breadcrumb 4" />
       </>
     ),
+  },
+};
+
+export const OneItem: StoryObj<Args> = {
+  args: {
+    children: <Breadcrumbs.Item href="#" text="Breadcrumb 1" />,
   },
 };

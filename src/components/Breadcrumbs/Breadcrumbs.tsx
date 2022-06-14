@@ -5,7 +5,7 @@ import styles from './Breadcrumbs.module.css';
 import { flattenReactChildren } from '../../util/flattenReactChildren';
 import BreadcrumbsItem from '../BreadcrumbsItem';
 
-export interface Props {
+type Props = {
   /**
    * Child node(s) that can be nested inside component
    */
@@ -23,7 +23,7 @@ export interface Props {
    * HTML id for the component
    */
   id?: string;
-}
+};
 
 /**
  * BETA: This component is still a work in progress and is subject to change.
@@ -42,12 +42,46 @@ export const Breadcrumbs = ({
   ariaLabel = 'breadcrumbs links',
   ...other
 }: Props) => {
+  const [shouldTruncate, setShouldTruncate] = React.useState(false);
+
+  const ref = React.useRef<HTMLUListElement>(null);
+
+  const updateShouldTruncate = () => {
+    if (
+      ref &&
+      ref.current &&
+      ref.current.clientWidth < ref.current.scrollWidth
+    ) {
+      setShouldTruncate(true);
+    } else {
+      setShouldTruncate(false);
+    }
+  };
+
+  React.useEffect(() => {
+    window.addEventListener('resize', updateShouldTruncate);
+    return () => {
+      window.removeEventListener('resize', updateShouldTruncate);
+    };
+  });
+
   const generatedId = useUID();
   const breadcrumbsId = id || generatedId;
 
-  const componentClassName = clsx(styles['breadcrumbs'], className);
-
   const breadcrumbItems = flattenBreadCrumbItems(children);
+  const backBreadCrumb =
+    breadcrumbItems.length > 1
+      ? React.cloneElement(
+          breadcrumbItems[
+            breadcrumbItems.length - 2
+          ] as React.ReactElement<any>,
+          {
+            variant: 'back',
+          },
+        )
+      : null;
+
+  const componentClassName = clsx(styles['breadcrumbs'], className);
 
   return (
     <nav
@@ -56,7 +90,10 @@ export const Breadcrumbs = ({
       id={breadcrumbsId}
       {...other}
     >
-      <ul className={styles['breadcrumbs__list']}>{breadcrumbItems}</ul>
+      <ul className={styles['breadcrumbs__list']} ref={ref}>
+        {backBreadCrumb}
+        {breadcrumbItems}
+      </ul>
     </nav>
   );
 };

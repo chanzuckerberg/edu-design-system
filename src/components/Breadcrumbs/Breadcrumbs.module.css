@@ -9,10 +9,6 @@
  * 2) The outer wrapper for the breadcrumbs is a
  *    <nav> element
  */
-.breadcrumbs {
-  margin-bottom: var(--eds-size-2);
-  @mixin eds-theme-typography-body-text-xs;
-}
 
 /**
  * Breadcrumbs list
@@ -21,5 +17,4 @@
   @mixin reset;
   list-style: none;
   display: flex;
-  flex-wrap: wrap;
 }

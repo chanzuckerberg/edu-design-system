@@ -8,9 +8,34 @@
  * Breadcrumbs list item
  */
 .breadcrumbs__item {
-  display: flex;
+  @mixin eds-theme-typography-body-text-xs;
+
+  display: none;
   flex-wrap: nowrap;
   align-items: center;
+  flex-shrink: 0;
+  min-width: 0;
+
+  @media all and (max-width: $eds-bp-md) {
+    &:last-of-type {
+      display: flex;
+      flex: 1;
+    }
+  }
+  @media all and (min-width: $eds-bp-md) {
+    display: flex;
+  }
+}
+
+.breadcrumbs__item-back {
+  display: flex;
+  margin-right: var(--eds-size-1-and-half);
+  @media all and (min-width: $eds-bp-md) {
+    display: none;
+  }
+}
+.breadcrumbs__item-back > .breadcrumbs__icon {
+  display: none;
 }
 
 /**
@@ -19,6 +44,12 @@
 .breadcrumbs__link {
   color: var(--eds-theme-color-text-neutral-subtle);
   text-decoration: none;
+
+  &:last-of-type {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 
   &:hover,
   &:focus {
@@ -47,4 +78,14 @@
  */
 .breadcrumbs__item:last-child .breadcrumbs__icon.breadcrumbs__icon {
   display: none;
+}
+
+/**
+ * Breadcrumbs Back Icon
+ */
+.breadcrumbs__back-icon {
+  color: var(--eds-theme-color-icon-neutral-subtle);
+  transform: scale(1.5);
+  position: relative;
+  bottom: 0.125rem;
 }
