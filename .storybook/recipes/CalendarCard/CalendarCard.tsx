@@ -82,8 +82,9 @@ export const CalendarCard = ({
               name={
                 variant === 'success' ? 'status-check-circle' : 'status-error'
               }
-              purpose="decorative"
+              purpose="informative"
               size="1.2rem"
+              title={variant}
             />
           </span>
         )}
