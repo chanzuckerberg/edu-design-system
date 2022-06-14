@@ -38,11 +38,9 @@ export const CalendarCard = ({
     styles[`calendar-card--${variant}`],
   );
   return (
-    <div className={componentClassName}>
-      <Card className={styles['calendar-card__card']} {...other}>
-        {children}
-      </Card>
-    </div>
+    <Card className={componentClassName} {...other}>
+      {children}
+    </Card>
   );
 };
 

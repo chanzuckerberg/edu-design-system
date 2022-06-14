@@ -9,7 +9,6 @@
  */
 .calendar-card {
   width: 16rem;
-  border-radius: var(--eds-border-radius-md);
 }
 
 .calendar-card--brand {
