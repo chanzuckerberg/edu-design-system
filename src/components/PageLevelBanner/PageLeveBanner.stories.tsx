@@ -51,9 +51,6 @@ export const Success: StoryObj<Args> = {
   args: {
     variant: 'success',
   },
-  parameters: {
-    chromatic: { viewports: [560, 960, 1200] },
-  },
 };
 
 export const Warning: StoryObj<Args> = {
@@ -88,9 +85,6 @@ export const BrandDismissable: StoryObj<Args> = {
   ...Brand,
   args: {
     onDismiss: dismissMethod,
-  },
-  parameters: {
-    chromatic: { viewports: [560, 960, 1200] },
   },
 };
 
