@@ -1,8 +1,8 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
-import { Story, Meta } from '@storybook/react';
+import { StoryObj } from '@storybook/react';
 import React from 'react';
 
-import { PopoverExample, Props } from './PopoverExample';
+import { PopoverExample } from './PopoverExample';
 
 export default {
   title: 'Organisms/Interactive/Popover',
@@ -11,24 +11,26 @@ export default {
     layout: 'centered',
     badges: [BADGE.BETA],
   },
-} as Meta;
-
-const Template: Story<Props> = (args) => <PopoverExample {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {};
-
-export const TopLeft = Template.bind({});
-TopLeft.args = {
-  position: 'top-left',
 };
 
-export const BottomLeft = Template.bind({});
-BottomLeft.args = {
-  position: 'bottom-left',
+type Args = React.ComponentProps<typeof PopoverExample>;
+
+export const Default: StoryObj<Args> = {};
+
+export const TopLeft: StoryObj<Args> = {
+  args: {
+    position: 'top-left',
+  },
 };
 
-export const BottomRight = Template.bind({});
-BottomRight.args = {
-  position: 'bottom-right',
+export const BottomLeft: StoryObj<Args> = {
+  args: {
+    position: 'bottom-left',
+  },
+};
+
+export const BottomRight: StoryObj<Args> = {
+  args: {
+    position: 'bottom-right',
+  },
 };

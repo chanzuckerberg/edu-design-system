@@ -1,8 +1,8 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
-import { Story, Meta } from '@storybook/react';
+import { StoryObj } from '@storybook/react';
 import React from 'react';
 
-import { TextInput, Props } from './TextInput';
+import { TextInput } from './TextInput';
 
 export default {
   title: 'Atoms/Forms/TextInput',
@@ -14,9 +14,8 @@ export default {
     },
     badges: [BADGE.BETA],
   },
-} as Meta;
+};
 
-const Template: Story<Props> = (args) => <TextInput {...args} />;
+type Args = React.ComponentProps<typeof TextInput>;
 
-export const Default = Template.bind({});
-Default.args = {};
+export const Default: StoryObj<Args> = {};

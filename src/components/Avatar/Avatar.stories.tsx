@@ -1,8 +1,8 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
-import { Story, Meta } from '@storybook/react';
+import { StoryObj } from '@storybook/react';
 import React from 'react';
 
-import { Avatar, Props } from './Avatar';
+import { Avatar } from './Avatar';
 
 export default {
   title: 'Example/Avatar',
@@ -10,9 +10,8 @@ export default {
   parameters: {
     badges: [BADGE.BETA],
   },
-} as Meta;
+};
 
-const Template: Story<Props> = (args) => <Avatar {...args} />;
+type Args = React.ComponentProps<typeof Avatar>;
 
-export const Default = Template.bind({});
-Default.args = {};
+export const Default: StoryObj<Args> = {};

@@ -1,8 +1,8 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
-import { Story, Meta } from '@storybook/react';
+import { StoryObj } from '@storybook/react';
 import React from 'react';
 
-import { Table, Props } from './Table';
+import { Table } from './Table';
 import TableBody from '../TableBody';
 import TableCell from '../TableCell';
 import TableHeader from '../TableHeader';
@@ -15,7 +15,9 @@ export default {
   parameters: {
     badges: [BADGE.BETA],
   },
-} as Meta;
+};
+
+type Args = React.ComponentProps<typeof Table>;
 
 const tableColumns = [
   {
@@ -66,125 +68,140 @@ const tableRows = [
   },
 ];
 
-const Template: Story<Props> = (args) => (
-  <Table {...args}>
-    <Table.Header>
-      <Table.Row>
-        {tableColumns.map((item, index) => {
-          return (
-            <Table.Cell as="th" key={'table-header-row-' + index}>
-              {item.title}
-            </Table.Cell>
-          );
-        })}
-      </Table.Row>
-    </Table.Header>
-
-    <Table.Body>
-      {tableRows.map((item, index) => {
-        return (
-          <Table.Row key={'table-row-' + index}>
-            <Table.Cell>{item.value1}</Table.Cell>
-            <Table.Cell>{item.value2}</Table.Cell>
-            <Table.Cell>{item.value3}</Table.Cell>
-            <Table.Cell>{item.value4}</Table.Cell>
-            <Table.Cell>{item.value5}</Table.Cell>
+export const Default: StoryObj<Args> = {
+  args: {
+    children: (
+      <>
+        <Table.Header>
+          <Table.Row>
+            {tableColumns.map((item, index) => {
+              return (
+                <Table.Cell as="th" key={'table-header-row-' + index}>
+                  {item.title}
+                </Table.Cell>
+              );
+            })}
           </Table.Row>
-        );
-      })}
-    </Table.Body>
-  </Table>
-);
+        </Table.Header>
 
-export const Default = Template.bind({});
-Default.args = {};
-
-export const Zebra = Template.bind({});
-Zebra.args = {
-  variant: 'zebra',
+        <Table.Body>
+          {tableRows.map((item, index) => {
+            return (
+              <Table.Row key={'table-row-' + index}>
+                <Table.Cell>{item.value1}</Table.Cell>
+                <Table.Cell>{item.value2}</Table.Cell>
+                <Table.Cell>{item.value3}</Table.Cell>
+                <Table.Cell>{item.value4}</Table.Cell>
+                <Table.Cell>{item.value5}</Table.Cell>
+              </Table.Row>
+            );
+          })}
+        </Table.Body>
+      </>
+    ),
+  },
 };
 
-export const Overflow = Template.bind({});
-Overflow.args = {
-  behavior: 'overflow',
+export const Zebra: StoryObj<Args> = {
+  args: {
+    ...Default.args,
+    variant: 'zebra',
+  },
 };
 
-export const AlignTableCellContentCenter = () => (
-  <Table caption="This is a table caption and it is required">
-    <Table.Header>
-      <Table.Row>
-        {tableColumns.map(function (item, index) {
-          return (
-            <Table.Cell align="center" as="th" key={'table-cell-' + index}>
-              {item.title}
-            </Table.Cell>
-          );
-        })}
-      </Table.Row>
-    </Table.Header>
+export const Overflow: StoryObj<Args> = {
+  args: {
+    ...Default.args,
+    behavior: 'overflow',
+  },
+};
 
-    <Table.Body>
-      {tableRows.map(function (item, index) {
-        return (
-          <Table.Row key={'table-row-' + index}>
-            <Table.Cell align="center" data-label={tableColumns[0].title}>
-              {item.value1}
-            </Table.Cell>
-            <Table.Cell align="center" data-label={tableColumns[1].title}>
-              {item.value2}
-            </Table.Cell>
-            <Table.Cell align="center" data-label={tableColumns[2].title}>
-              {item.value3}
-            </Table.Cell>
-            <Table.Cell align="center" data-label={tableColumns[3].title}>
-              {item.value4}
-            </Table.Cell>
-            <Table.Cell align="center" data-label={tableColumns[4].title}>
-              {item.value5}
-            </Table.Cell>
+export const AlignTableCellContentCenter: StoryObj<Args> = {
+  args: {
+    caption: 'This is a table caption and it is required',
+    children: (
+      <>
+        <Table.Header>
+          <Table.Row>
+            {tableColumns.map(function (item, index) {
+              return (
+                <Table.Cell align="center" as="th" key={'table-cell-' + index}>
+                  {item.title}
+                </Table.Cell>
+              );
+            })}
           </Table.Row>
-        );
-      })}
-    </Table.Body>
-  </Table>
-);
+        </Table.Header>
 
-export const AlignTableCellContentRight = () => (
-  <Table caption="This is a table caption and it is required">
-    <Table.Header>
-      <Table.Row>
-        {tableColumns.map(function (item, index) {
-          return (
-            <Table.Cell align="right" as="th" key={'table-cell-' + index}>
-              {item.title}
-            </Table.Cell>
-          );
-        })}
-      </Table.Row>
-    </Table.Header>
+        <Table.Body>
+          {tableRows.map(function (item, index) {
+            return (
+              <Table.Row key={'table-row-' + index}>
+                <Table.Cell align="center" data-label={tableColumns[0].title}>
+                  {item.value1}
+                </Table.Cell>
+                <Table.Cell align="center" data-label={tableColumns[1].title}>
+                  {item.value2}
+                </Table.Cell>
+                <Table.Cell align="center" data-label={tableColumns[2].title}>
+                  {item.value3}
+                </Table.Cell>
+                <Table.Cell align="center" data-label={tableColumns[3].title}>
+                  {item.value4}
+                </Table.Cell>
+                <Table.Cell align="center" data-label={tableColumns[4].title}>
+                  {item.value5}
+                </Table.Cell>
+              </Table.Row>
+            );
+          })}
+        </Table.Body>
+      </>
+    ),
+  },
+};
 
-    <Table.Body>
-      {tableRows.map(function (item, index) {
-        return (
-          <Table.Row key={'table-row-' + index}>
-            <Table.Cell align="right" data-label={tableColumns[0].title}>
-              {item.value1}
-            </Table.Cell>
-            <Table.Cell align="right" data-label={tableColumns[1].title}>
-              {item.value2}
-            </Table.Cell>
-            <Table.Cell align="right" data-label={tableColumns[2].title}>
-              {item.value3}
-            </Table.Cell>
-            <Table.Cell align="right" data-label={tableColumns[3].title}>
-              {item.value4}
-            </Table.Cell>
-            <Table.Cell align="right" data-label={tableColumns[4].title}>
-              {item.value5}
-            </Table.Cell>
+export const AlignTableCellContentRight: StoryObj<Args> = {
+  args: {
+    caption: 'This is a table caption and it is required',
+    children: (
+      <>
+        <Table.Header>
+          <Table.Row>
+            {tableColumns.map(function (item, index) {
+              return (
+                <Table.Cell align="right" as="th" key={'table-cell-' + index}>
+                  {item.title}
+                </Table.Cell>
+              );
+            })}
           </Table.Row>
-        );
-      })}
-    </Table.Body>
-  </Table>
-);
+        </Table.Header>
+
+        <Table.Body>
+          {tableRows.map(function (item, index) {
+            return (
+              <Table.Row key={'table-row-' + index}>
+                <Table.Cell align="right" data-label={tableColumns[0].title}>
+                  {item.value1}
+                </Table.Cell>
+                <Table.Cell align="right" data-label={tableColumns[1].title}>
+                  {item.value2}
+                </Table.Cell>
+                <Table.Cell align="right" data-label={tableColumns[2].title}>
+                  {item.value3}
+                </Table.Cell>
+                <Table.Cell align="right" data-label={tableColumns[3].title}>
+                  {item.value4}
+                </Table.Cell>
+                <Table.Cell align="right" data-label={tableColumns[4].title}>
+                  {item.value5}
+                </Table.Cell>
+              </Table.Row>
+            );
+          })}
+        </Table.Body>
+      </>
+    ),
+  },
+};
