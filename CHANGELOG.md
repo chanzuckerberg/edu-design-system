@@ -2,6 +2,72 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/chanzuckerberg/edu-design-system/compare/v1.1.1...v1.2.0) (2022-06-14)
+
+
+### Features
+
+* add 60-40 layout for cad edit page ([8237c63](https://github.com/chanzuckerberg/edu-design-system/commit/8237c63a73447f34ec7abb4e2363aad98ba53870))
+* add error status to DropdownMenuItem ([b4a4695](https://github.com/chanzuckerberg/edu-design-system/commit/b4a4695d13e36131fe632a365298203876c01df1))
+* add project card dragdrop stories ([fecb1e8](https://github.com/chanzuckerberg/edu-design-system/commit/fecb1e86668d159ec5b9ba4f3c0daa64adadaa87))
+* add target prop ([97ce94f](https://github.com/chanzuckerberg/edu-design-system/commit/97ce94f8a3cd67447b9b822d2862d895bb6f6e56))
+* added detailed comments around numbericon ([dc1a49d](https://github.com/chanzuckerberg/edu-design-system/commit/dc1a49d5bb5d688dc3fdb64906f27958262a72e5))
+* cad tightening up. table card addition ([9254765](https://github.com/chanzuckerberg/edu-design-system/commit/9254765d5b58af632c0821855fb3efe08e788685))
+* **cadmodal:** create cad modal pages ([4b12f8a](https://github.com/chanzuckerberg/edu-design-system/commit/4b12f8a70ee134e19a92e00d3948b86712ace45d))
+* change lg util to xl. use 1.5rem as lg ([8a676e9](https://github.com/chanzuckerberg/edu-design-system/commit/8a676e90a29d7a840b397e7e812c5bd7480e9a00))
+* expose drag drop to outside components ([fc7e76d](https://github.com/chanzuckerberg/edu-design-system/commit/fc7e76dfc69ed44970a8495cdd5420fa29a127f7))
+* index number switch container 1 to 2 ([1c1c826](https://github.com/chanzuckerberg/edu-design-system/commit/1c1c8262f80f6f14ba38b299c9130b67c70b2187))
+* **modal:** add core modal ([15c222e](https://github.com/chanzuckerberg/edu-design-system/commit/15c222e94e17cf45c680817377586cc8b59a8d32))
+* move project card to components ([ba17797](https://github.com/chanzuckerberg/edu-design-system/commit/ba177973499d037905a692018c40046c8e3b4f4f))
+* number icon list story ([2f320a7](https://github.com/chanzuckerberg/edu-design-system/commit/2f320a7f2441b80095513fed0966f43a80e7fbd1))
+* remove third stepper item cad edit ([c5dcd88](https://github.com/chanzuckerberg/edu-design-system/commit/c5dcd88780770a6c79633e7adad4763403819fd1))
+* standards coverage wip ([3cd202d](https://github.com/chanzuckerberg/edu-design-system/commit/3cd202d85b442cf2dfb9e89d27add1bef20f5765))
+* util for if children is fragment logic ([18140e9](https://github.com/chanzuckerberg/edu-design-system/commit/18140e90853e5157412d71da9d134e3b25fdb0d2))
+
+
+### Bug Fixes
+
+* accessibility primary nav/utility nav stories ([4c3428e](https://github.com/chanzuckerberg/edu-design-system/commit/4c3428e92d21b88322e78581653001e9b67717cb))
+* accessibility test fixes ([c5e950e](https://github.com/chanzuckerberg/edu-design-system/commit/c5e950e7f126a85ba6065fc85bef939963d4ab13))
+* add buttondropdownitems to projectcard ([1a98e3b](https://github.com/chanzuckerberg/edu-design-system/commit/1a98e3b039c5b6c13d8a3e70423fc7400db4a859))
+* add empty content as variables ([3a849d4](https://github.com/chanzuckerberg/edu-design-system/commit/3a849d4e8334144c219b664cc943089937025162))
+* added ? diedra mentioned isReactFragment ([5e26bb9](https://github.com/chanzuckerberg/edu-design-system/commit/5e26bb9eb7bf5903c8c32618df095be2a34b8371))
+* cad project card feedback ([b085787](https://github.com/chanzuckerberg/edu-design-system/commit/b08578777da402e1b3db5a35337fdc3adb94da7a))
+* change base and neutral heading to strong ([170fb7b](https://github.com/chanzuckerberg/edu-design-system/commit/170fb7b4745c74c4a3bb4d559bd92221ac6e5305))
+* change class names of table card elements ([33afbe0](https://github.com/chanzuckerberg/edu-design-system/commit/33afbe06f40e66e5e78e34aa62673fb337d267da))
+* classname cleanup tablecard ([ac889a8](https://github.com/chanzuckerberg/edu-design-system/commit/ac889a88f3836054c2b48d3a4f22d048c6121100))
+* comments. remove non-tier 2 tokens docs ([6e033a8](https://github.com/chanzuckerberg/edu-design-system/commit/6e033a8e2ee2d0e24441504da7d4908c8644f05c))
+* drag drop newstate types ([f87e58b](https://github.com/chanzuckerberg/edu-design-system/commit/f87e58bc1316696937fbb7d7a4e3a30aca35fc33))
+* dragdrop snapshot test ([214ae43](https://github.com/chanzuckerberg/edu-design-system/commit/214ae4364c4dbe1981fbf08ffe1aae0d65ed9556))
+* dropdown menu transition ([47d4bb0](https://github.com/chanzuckerberg/edu-design-system/commit/47d4bb0cab24bf2b14b08cec4031d66204f0280a))
+* dropdownmenu children fragment addition ([ebd59c7](https://github.com/chanzuckerberg/edu-design-system/commit/ebd59c726c3e227098b2537c14ca032a4c522edb))
+* horizontal stepper self closing ([ab18d0a](https://github.com/chanzuckerberg/edu-design-system/commit/ab18d0af5785794093d6814f50c391512f93320a))
+* lint fix ([d72205b](https://github.com/chanzuckerberg/edu-design-system/commit/d72205b25408e36967048e3ba83278f70516318f))
+* lint fix. remove console logs ([8adc40e](https://github.com/chanzuckerberg/edu-design-system/commit/8adc40ee34473eb9371e1a413652fcba319cc906))
+* lint prop order fix project card ([856e54d](https://github.com/chanzuckerberg/edu-design-system/commit/856e54d2edbd2358d5ea3091034e78fa38f26815))
+* number icon story string ([a5bea3c](https://github.com/chanzuckerberg/edu-design-system/commit/a5bea3cabb9dc2af729d7057a8ca4367b42457bf))
+* number icon tests. lint. ([cfd2e80](https://github.com/chanzuckerberg/edu-design-system/commit/cfd2e80ae196c8e940a1fcff64d7b8b0bb3d1697))
+* numbericonlist classname cleanup ([8d6dc7a](https://github.com/chanzuckerberg/edu-design-system/commit/8d6dc7ae70071eabd16bffb37748e09627488470))
+* refactor numbericon story csf ([89fc37a](https://github.com/chanzuckerberg/edu-design-system/commit/89fc37ab8674b0d1dd55225639978776c7dfd6f6))
+* remove border from panel ([c1a09dd](https://github.com/chanzuckerberg/edu-design-system/commit/c1a09dd12baec366a617941692cf575e34dd7cc5))
+* remove button logic cad. lint fix ([d15f1b7](https://github.com/chanzuckerberg/edu-design-system/commit/d15f1b7697475d12ffd265c65f992b14545ff290))
+* remove commented out code table stories ([c3047fb](https://github.com/chanzuckerberg/edu-design-system/commit/c3047fb4c165a948b1389602a4e2af2cd48001ff))
+* remove unused import page header ([22b9e2a](https://github.com/chanzuckerberg/edu-design-system/commit/22b9e2a14b0a1f52f2bba8654f53429e80c4d173))
+* removed extra line numbericon ([ebee667](https://github.com/chanzuckerberg/edu-design-system/commit/ebee6673ebed02276168f24da55a44672fd1571c))
+* right sidebar always placed after main layout ([2ede056](https://github.com/chanzuckerberg/edu-design-system/commit/2ede0565c37d13c6170b84d28ae27adffedb5fb9))
+* self closing projectcard ([4f88b23](https://github.com/chanzuckerberg/edu-design-system/commit/4f88b239ec24c9cc8c467f455593093facb6ff12))
+* slight padding on dd container for borders ([2bcfef5](https://github.com/chanzuckerberg/edu-design-system/commit/2bcfef5c72fde186e5927c71db9baa4c5be3071b))
+* space out number icon list css title ([c16d1b6](https://github.com/chanzuckerberg/edu-design-system/commit/c16d1b697638aafc80438ff76a15ee32d9b85ebd))
+* storybook story decorator ([e9bbfe3](https://github.com/chanzuckerberg/edu-design-system/commit/e9bbfe39763553d9386bcb20add08c60c302f0b9))
+* table card csf story ([4f096b6](https://github.com/chanzuckerberg/edu-design-system/commit/4f096b6adeed6013d5249a6b161e45d9dc4f8fd7))
+* table component descriptions ([83cc522](https://github.com/chanzuckerberg/edu-design-system/commit/83cc5224d35f8625dd354ca4065e3b6befc673d2))
+* test changing card to article tag ([a0c05f4](https://github.com/chanzuckerberg/edu-design-system/commit/a0c05f47ece6f0531312de5157ebbe462bc320ab))
+* test onclick change of items ([5e9c19c](https://github.com/chanzuckerberg/edu-design-system/commit/5e9c19c845432db53087483bbebebf5250ec2a8d))
+* test removing footer and using div CardFooter ([b1dceb0](https://github.com/chanzuckerberg/edu-design-system/commit/b1dceb0560036a49d16d7276cff0a7df2bccb099))
+* test unique landmark card footer ([3514909](https://github.com/chanzuckerberg/edu-design-system/commit/35149093a58902b846256863e67458f97daa8b6f))
+* use tier 1 border radius box shadows ([60cf2a1](https://github.com/chanzuckerberg/edu-design-system/commit/60cf2a11667adc818f4e8afe84de8b9c8513aebe))
+* variablize project card menu items ([c1016b9](https://github.com/chanzuckerberg/edu-design-system/commit/c1016b9330f03fb748c9b921078ae9deac971979))
+
 ### [1.1.1](https://github.com/chanzuckerberg/edu-design-system/compare/v1.2.0-alpha.0...v1.1.1) (2022-06-08)
 
 ## [1.1.0](https://github.com/chanzuckerberg/edu-design-system/compare/v1.0.0...v1.1.0) (2022-06-02)
