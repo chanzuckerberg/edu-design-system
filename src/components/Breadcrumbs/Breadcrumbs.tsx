@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import { useUID } from 'react-uid';
 import styles from './Breadcrumbs.module.css';
+import { flattenReactChildren } from '../../util/flattenReactChildren';
 import BreadcrumbsItem from '../BreadcrumbsItem';
 
 export interface Props {
@@ -44,7 +45,9 @@ export const Breadcrumbs = ({
   const generatedId = useUID();
   const breadcrumbsId = id || generatedId;
 
-  const componentClassName = clsx(styles['breadcrumbs'], className, {});
+  const componentClassName = clsx(styles['breadcrumbs'], className);
+
+  const breadcrumbItems = flattenBreadCrumbItems(children);
 
   return (
     <nav
@@ -53,9 +56,28 @@ export const Breadcrumbs = ({
       id={breadcrumbsId}
       {...other}
     >
-      <ul className={styles['breadcrumbs__list']}>{children}</ul>
+      <ul className={styles['breadcrumbs__list']}>{breadcrumbItems}</ul>
     </nav>
   );
+};
+
+const flattenBreadCrumbItems = (children: React.ReactNode) => {
+  const flattenedChildren = flattenReactChildren(children);
+  /**
+   * Throws error if invalid children
+   */
+  const shouldThrowError = (flattenedChildren as JSX.Element[]).some(
+    (child) => {
+      if (child.type === BreadcrumbsItem || child.type === Breadcrumbs.Item) {
+        return false;
+      }
+      return true;
+    },
+  );
+  if (process.env.NODE_ENV !== 'production' && shouldThrowError) {
+    throw 'Only <Breadcrumbs.Item>, <BreadcrumbsItem>, or React.Fragment of aforementioned components allowed';
+  }
+  return flattenedChildren;
 };
 
 Breadcrumbs.Item = BreadcrumbsItem;
