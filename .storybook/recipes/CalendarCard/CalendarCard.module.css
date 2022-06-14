@@ -1,11 +1,11 @@
 @import '../../../src/design-tokens/mixins.css';
 
 /*------------------------------------*\
-    #CALENDARCARD
+    #CALENDAR CARD
 \*------------------------------------*/
 
 /**
- * 1) 
+ * Card recipe for displaying calendar data
  */
 .calendar-card {
   width: 16rem;
