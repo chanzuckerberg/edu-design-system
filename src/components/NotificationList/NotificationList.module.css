@@ -1,6 +1,6 @@
 @import '../../design-tokens/mixins.css';
 /*------------------------------------*\
-    #NOTIFICATION LIST
+    # NOTIFICATION LIST
 \*------------------------------------*/
 
 /**
@@ -75,7 +75,7 @@
   outline: none;
   padding: 0;
   flex-shrink: 0;
-  border-radius: var(--eds-theme-border-radius);
+  border-radius: var(--eds-border-radius-md);
   height: 0.5rem;
   width: 0.5rem;
   background-color: var(--eds-theme-color-text-link-strong);

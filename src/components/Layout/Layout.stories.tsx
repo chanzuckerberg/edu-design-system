@@ -37,14 +37,9 @@ export const GapLgXl: StoryObj<Args> = {
   },
 };
 
-export const SidebarWide: StoryObj<Args> = {
+export const SixtySevenThirtyThree: StoryObj<Args> = {
   args: {
-    sidebar: 'wide',
-  },
-};
-
-export const RightSidebar: StoryObj<Args> = {
-  args: {
+    variant: '67-33',
     children: (
       <>
         <LayoutSection region="main">
@@ -55,7 +50,6 @@ export const RightSidebar: StoryObj<Args> = {
         </LayoutSection>
       </>
     ),
-    variant: 'right-sidebar',
   },
 };
 

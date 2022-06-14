@@ -100,9 +100,9 @@ exports[`<Layout /> GapNone story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Layout /> RightSidebar story renders snapshot 1`] = `
+exports[`<Layout /> SixtySevenThirtyThree story renders snapshot 1`] = `
 <div
-  class="layout layout--right-sidebar"
+  class="layout layout--67-33 layout--67-33"
 >
   <div
     class="layout__section layout__section--main"
@@ -120,31 +120,6 @@ exports[`<Layout /> RightSidebar story renders snapshot 1`] = `
       class="fpo"
     >
       Sidebar Layout Section
-    </div>
-  </div>
-</div>
-`;
-
-exports[`<Layout /> SidebarWide story renders snapshot 1`] = `
-<div
-  class="layout layout--sidebar-wide"
->
-  <div
-    class="layout__section layout__section--sidebar"
-  >
-    <div
-      class="fpo"
-    >
-      Sidebar Layout Section
-    </div>
-  </div>
-  <div
-    class="layout__section layout__section--main"
-  >
-    <div
-      class="fpo"
-    >
-      Main Layout Section
     </div>
   </div>
 </div>

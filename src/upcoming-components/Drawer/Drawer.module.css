@@ -59,7 +59,7 @@
   border-left-width: var(--eds-theme-border-width);
   border-left-style: solid;
   border-left-color: var(--eds-theme-color-border-neutral-subtle);
-  box-shadow: var(--eds-theme-box-shadow);
+  box-shadow: var(--eds-box-shadow-md);
   transition: transform var(--eds-anim-move-quick) var(--eds-anim-ease);
 
   &:focus-visible {

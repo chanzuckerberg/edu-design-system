@@ -7,6 +7,7 @@ export interface Items {
 export interface ItemType {
   id?: string;
   title?: string;
+  behavior?: 'hover';
   children?: React.ReactNode;
   handle?: React.ReactNode;
 }

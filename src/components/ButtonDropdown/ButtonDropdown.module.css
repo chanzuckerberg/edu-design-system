@@ -1,14 +1,15 @@
 @import '../../design-tokens/mixins.css';
 
 /*------------------------------------*\
-    #BUTTONDROPDOWN
+    # BUTTON DROPDOWN
 \*------------------------------------*/
 
 /**
  * 1) Combination of a trigger and a dropdownmenu
  */
 .button-dropdown {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   position: relative;
 }
 

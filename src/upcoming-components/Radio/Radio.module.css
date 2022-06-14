@@ -1,7 +1,7 @@
 @import '../../design-tokens/mixins.css';
 
 /*------------------------------------*\
-    #RADIO BUTTON
+    # RADIO BUTTON
 \*------------------------------------*/
 
 /**
@@ -52,7 +52,6 @@
   right: 0; /* 1 */
   bottom: 0; /* 1 */
   left: 0; /* 1 */
-  z-index: var(--eds-z-index-100);
 
   /**
      * Custom radio background 

@@ -1,0 +1,31 @@
+@import '../../../src/design-tokens/mixins.css';
+
+/*------------------------------------*\
+    #STANDARDSCOVERAGE
+\*------------------------------------*/
+
+/**
+ * 1) Card with a title, table, and button within
+ */
+
+/**
+* Table card table
+* 1) Actual table within the card
+*/
+.table-card__table {
+  color: var(--eds-theme-color-text-neutral-subtle);
+}
+
+/**
+* Table card table header cell
+*/
+.table-card__table-header-cell {
+  /**
+  * First child within table card table header cell
+  */
+  &:first-child {
+    @media all and (min-width: $eds-bp-md) {
+      width: 11.875rem;
+    }
+  }
+}

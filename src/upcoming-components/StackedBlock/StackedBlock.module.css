@@ -1,7 +1,7 @@
 @import '../../design-tokens/mixins.css';
 
 /*------------------------------------*\
-    #STACKED BLOCK
+    # STACKED BLOCK
 \*------------------------------------*/
 
 /**
@@ -32,7 +32,7 @@
 }
 
 .stacked-block__img {
-  border-radius: var(--eds-theme-border-radius);
+  border-radius: var(--eds-border-radius-md);
 }
 
 /**

@@ -4,7 +4,7 @@ import React from 'react';
 import { Cad } from './Cad';
 
 export default {
-  title: 'Pages/CAD/CAD',
+  title: 'Pages/CAD/Edit',
   component: Cad,
 } as Meta;
 

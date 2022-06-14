@@ -1,7 +1,7 @@
 @import '../../design-tokens/mixins.css';
 
 /*------------------------------------*\
-    #TAGS
+    # TAGS
 \*------------------------------------*/
 
 /**
@@ -31,7 +31,7 @@
   align-items: center;
   -webkit-appearance: none;
   border: none;
-  border-radius: var(--eds-theme-border-radius);
+  border-radius: var(--eds-border-radius-md);
   background: var(--eds-theme-color-background-neutral-subtle);
   padding: var(--eds-size-half) var(--eds-size-1);
   @mixin eds-theme-typography-tag;

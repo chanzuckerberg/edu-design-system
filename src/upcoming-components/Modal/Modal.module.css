@@ -55,8 +55,8 @@
   max-width: 100%;
   opacity: 0;
   background: var(--eds-theme-color-background-neutral-default);
-  border-radius: var(--eds-theme-border-radius);
-  box-shadow: var(--eds-theme-box-shadow);
+  border-radius: var(--eds-border-radius-md);
+  box-shadow: var(--eds-box-shadow-md);
   transition: opacity var(--eds-anim-fade-quick) var(--eds-anim-ease);
   overscroll-behavior-y: contain;
 
