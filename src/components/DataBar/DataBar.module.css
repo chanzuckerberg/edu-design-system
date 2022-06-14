@@ -1,7 +1,7 @@
 @import '../../design-tokens/mixins.css';
 
 /*------------------------------------*\
-    #DATA BAR
+    # DATA BAR
 \*------------------------------------*/
 
 /**
@@ -24,6 +24,7 @@
  */
 .data-bar__label {
   @mixin eds-theme-typography-title-sm;
+  color: var(--eds-theme-color-text-neutral-strong);
 }
 
 /**

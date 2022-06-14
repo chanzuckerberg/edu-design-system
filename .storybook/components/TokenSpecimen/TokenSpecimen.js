@@ -21,6 +21,7 @@ export class TokenSpecimen extends Component {
           }
           contentEditable
           style={this.props.inlineStyles}
+          suppressContentEditableWarning
         >
           AaBbCcDdEeFfGg
         </div>
@@ -34,6 +35,7 @@ export class TokenSpecimen extends Component {
           }
           contentEditable
           style={this.props.inlineStyles}
+          suppressContentEditableWarning
         >
           Almost before we knew it, we had left the ground.
         </div>
@@ -86,11 +88,10 @@ export class TokenSpecimen extends Component {
 }
 
 TokenSpecimen.propTypes = {
-  listItems: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      value: PropTypes.any.isRequired,
-      comment: PropTypes.string,
-    }),
-  ).isRequired,
+  name: PropTypes.string.isRequired,
+  value: PropTypes.any.isRequired,
+  comment: PropTypes.string,
+  inlineStyles: PropTypes.objectOf(PropTypes.string),
+  variant: PropTypes.string,
+  specimenClassName: PropTypes.string,
 };

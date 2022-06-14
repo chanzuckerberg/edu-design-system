@@ -30,12 +30,8 @@ export type BannerProps = {
    */
   onDismiss?: () => void;
   /**
-   * This prop is deprecated and will be removed in an upcoming release. Please use the default false value for isFlat.
-   *
    * The perceived elevation of the banner. A banner with isFlat appears flat against the surface while
    * a banner with isFlat as false has a border and drop shadow.
-   *
-   * @deprecated
    */
   isFlat?: boolean;
   /**
@@ -93,6 +89,9 @@ const variantToIconAssetsMap: {
 };
 
 /**
+ * @deprecated The Banner component is deprecated and will be removed in an upcoming release.
+ * Please visit Zeroheight to find the right notification component for your needs: https://eds.czi.design/
+ *
  * ```ts
  * import {Banner} from "@chanzuckerberg/eds";
  * ```
@@ -122,13 +121,6 @@ export const Banner = ({
   title,
   titleAs = 'h3',
 }: BannerProps) => {
-  if (isFlat && process.env.NODE_ENV !== 'production') {
-    console.warn(
-      'The isFlat style is deprecated and will be removed in an upcoming release.\n',
-      'Please remove this prop to use the default elevated style (with a border and drop shadow) instead.',
-    );
-  }
-
   const isHorizontal = !orientation;
 
   const componentClassName = clsx(
@@ -153,7 +145,7 @@ export const Banner = ({
         <Button
           className={styles['banner__close-btn']}
           onClick={onDismiss}
-          status={variant}
+          status="neutral"
           variant="icon"
         >
           <Icon name={'close'} purpose="informative" title={'dismiss module'} />
@@ -168,14 +160,14 @@ export const Banner = ({
       />
 
       <div className={clsx(styles['banner__textAndAction'])}>
-        <div className={clsx(styles['banner__textContent'])}>
+        <div>
           {title && (
-            <Heading as={titleAs} size="title-sm" variant="inherit">
+            <Heading as={titleAs} size="title-md" variant={variant}>
               {title}
             </Heading>
           )}
           {description && (
-            <Text as={descriptionAs} variant="inherit">
+            <Text as={descriptionAs} size="sm" variant="neutral">
               {description}
             </Text>
           )}

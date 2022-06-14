@@ -12,14 +12,14 @@ export default {
     name: {
       control: {
         type: 'select',
-        options: ALL_ICONS,
       },
+      options: ALL_ICONS,
     },
     color: {
       control: {
         type: 'select',
-        options: ['currentColor', ...Object.keys(ColorTokens)],
       },
+      options: ['currentColor', ...Object.keys(ColorTokens)],
     },
   },
 };

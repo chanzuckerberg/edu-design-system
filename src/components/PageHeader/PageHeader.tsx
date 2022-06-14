@@ -30,6 +30,18 @@ export interface Props {
    */
   headingSize?: HeadingSize;
   /**
+   * Size property
+   */
+  headingVariant?:
+    | 'error'
+    | 'base'
+    | 'brand'
+    | 'inherit'
+    | 'neutral'
+    | 'success'
+    | 'warning'
+    | 'white';
+  /**
    * Controls the layout of the PageHeader, specifically the placement of the left and right slots.
    */
   orientation?: '2up';
@@ -57,6 +69,7 @@ export const PageHeader = ({
   className,
   description,
   headingSize = 'headline-lg',
+  headingVariant = 'base',
   kicker,
   orientation,
   right,
@@ -79,6 +92,7 @@ export const PageHeader = ({
           as="h1"
           className={styles['page-header__title']}
           size={headingSize}
+          variant={headingVariant}
         >
           {title}
           {titleAfter && (

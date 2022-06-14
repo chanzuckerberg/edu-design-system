@@ -172,24 +172,30 @@ exports[`<HorizontalStepper /> HorizontalSteps story renders snapshot 1`] = `
     <li
       class="horizontal-step horizontal-step--incomplete"
     >
-      <svg
-        class="icon horizontal-step__incomplete-icon"
-        fill="currentColor"
-        height="0.5rem"
+      <span
+        aria-label="current step 1 Horizontal step"
+        class="text text--sm text--base number-icon number-icon--base number-icon--incomplete"
         role="img"
-        style="--icon-size: 0.5rem;"
-        width="0.5rem"
-        xmlns="http://www.w3.org/2000/svg"
       >
-        <title
-          id="18"
+        <svg
+          class="icon number-icon__icon"
+          fill="#878C90"
+          height="0.5rem"
+          role="img"
+          style="--icon-size: 0.5rem;"
+          width="0.5rem"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          incomplete step 1 Horizontal step
-        </title>
-        <use
-          xlink:href="test-file-stub#circle"
-        />
-      </svg>
+          <title
+            id="18"
+          >
+            incomplete step 1 Horizontal step
+          </title>
+          <use
+            xlink:href="test-file-stub#circle"
+          />
+        </svg>
+      </span>
       <span
         class="text text--sm text--inherit text--bold-weight horizontal-step__text"
       >
@@ -524,24 +530,30 @@ exports[`<HorizontalStepper /> OnFirstStep story renders snapshot 1`] = `
     <li
       class="horizontal-step horizontal-step--incomplete"
     >
-      <svg
-        class="icon horizontal-step__incomplete-icon"
-        fill="currentColor"
-        height="0.5rem"
+      <span
+        aria-label="current step 2 Step 2"
+        class="text text--sm text--base number-icon number-icon--base number-icon--incomplete"
         role="img"
-        style="--icon-size: 0.5rem;"
-        width="0.5rem"
-        xmlns="http://www.w3.org/2000/svg"
       >
-        <title
-          id="1"
+        <svg
+          class="icon number-icon__icon"
+          fill="#878C90"
+          height="0.5rem"
+          role="img"
+          style="--icon-size: 0.5rem;"
+          width="0.5rem"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          incomplete step 2 Step 2
-        </title>
-        <use
-          xlink:href="test-file-stub#circle"
-        />
-      </svg>
+          <title
+            id="1"
+          >
+            incomplete step 2 Step 2
+          </title>
+          <use
+            xlink:href="test-file-stub#circle"
+          />
+        </svg>
+      </span>
       <span
         class="text text--sm text--inherit text--bold-weight horizontal-step__text"
       >
@@ -555,24 +567,30 @@ exports[`<HorizontalStepper /> OnFirstStep story renders snapshot 1`] = `
     <li
       class="horizontal-step horizontal-step--incomplete"
     >
-      <svg
-        class="icon horizontal-step__incomplete-icon"
-        fill="currentColor"
-        height="0.5rem"
+      <span
+        aria-label="current step 3 Step 3"
+        class="text text--sm text--base number-icon number-icon--base number-icon--incomplete"
         role="img"
-        style="--icon-size: 0.5rem;"
-        width="0.5rem"
-        xmlns="http://www.w3.org/2000/svg"
       >
-        <title
-          id="2"
+        <svg
+          class="icon number-icon__icon"
+          fill="#878C90"
+          height="0.5rem"
+          role="img"
+          style="--icon-size: 0.5rem;"
+          width="0.5rem"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          incomplete step 3 Step 3
-        </title>
-        <use
-          xlink:href="test-file-stub#circle"
-        />
-      </svg>
+          <title
+            id="2"
+          >
+            incomplete step 3 Step 3
+          </title>
+          <use
+            xlink:href="test-file-stub#circle"
+          />
+        </svg>
+      </span>
       <span
         class="text text--sm text--inherit text--bold-weight horizontal-step__text"
       >
@@ -586,24 +604,30 @@ exports[`<HorizontalStepper /> OnFirstStep story renders snapshot 1`] = `
     <li
       class="horizontal-step horizontal-step--incomplete"
     >
-      <svg
-        class="icon horizontal-step__incomplete-icon"
-        fill="currentColor"
-        height="0.5rem"
+      <span
+        aria-label="current step 4 Step 4"
+        class="text text--sm text--base number-icon number-icon--base number-icon--incomplete"
         role="img"
-        style="--icon-size: 0.5rem;"
-        width="0.5rem"
-        xmlns="http://www.w3.org/2000/svg"
       >
-        <title
-          id="3"
+        <svg
+          class="icon number-icon__icon"
+          fill="#878C90"
+          height="0.5rem"
+          role="img"
+          style="--icon-size: 0.5rem;"
+          width="0.5rem"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          incomplete step 4 Step 4
-        </title>
-        <use
-          xlink:href="test-file-stub#circle"
-        />
-      </svg>
+          <title
+            id="3"
+          >
+            incomplete step 4 Step 4
+          </title>
+          <use
+            xlink:href="test-file-stub#circle"
+          />
+        </svg>
+      </span>
       <span
         class="text text--sm text--inherit text--bold-weight horizontal-step__text"
       >
@@ -617,24 +641,30 @@ exports[`<HorizontalStepper /> OnFirstStep story renders snapshot 1`] = `
     <li
       class="horizontal-step horizontal-step--incomplete"
     >
-      <svg
-        class="icon horizontal-step__incomplete-icon"
-        fill="currentColor"
-        height="0.5rem"
+      <span
+        aria-label="current step 5 Step 5"
+        class="text text--sm text--base number-icon number-icon--base number-icon--incomplete"
         role="img"
-        style="--icon-size: 0.5rem;"
-        width="0.5rem"
-        xmlns="http://www.w3.org/2000/svg"
       >
-        <title
-          id="4"
+        <svg
+          class="icon number-icon__icon"
+          fill="#878C90"
+          height="0.5rem"
+          role="img"
+          style="--icon-size: 0.5rem;"
+          width="0.5rem"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          incomplete step 5 Step 5
-        </title>
-        <use
-          xlink:href="test-file-stub#circle"
-        />
-      </svg>
+          <title
+            id="4"
+          >
+            incomplete step 5 Step 5
+          </title>
+          <use
+            xlink:href="test-file-stub#circle"
+          />
+        </svg>
+      </span>
       <span
         class="text text--sm text--inherit text--bold-weight horizontal-step__text"
       >
@@ -888,24 +918,30 @@ exports[`<HorizontalStepper /> SomeCompletedSteps story renders snapshot 1`] = `
     <li
       class="horizontal-step horizontal-step--incomplete"
     >
-      <svg
-        class="icon horizontal-step__incomplete-icon"
-        fill="currentColor"
-        height="0.5rem"
+      <span
+        aria-label="current step 4 Step 4"
+        class="text text--sm text--base number-icon number-icon--base number-icon--incomplete"
         role="img"
-        style="--icon-size: 0.5rem;"
-        width="0.5rem"
-        xmlns="http://www.w3.org/2000/svg"
       >
-        <title
-          id="7"
+        <svg
+          class="icon number-icon__icon"
+          fill="#878C90"
+          height="0.5rem"
+          role="img"
+          style="--icon-size: 0.5rem;"
+          width="0.5rem"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          incomplete step 4 Step 4
-        </title>
-        <use
-          xlink:href="test-file-stub#circle"
-        />
-      </svg>
+          <title
+            id="7"
+          >
+            incomplete step 4 Step 4
+          </title>
+          <use
+            xlink:href="test-file-stub#circle"
+          />
+        </svg>
+      </span>
       <span
         class="text text--sm text--inherit text--bold-weight horizontal-step__text"
       >
@@ -919,24 +955,30 @@ exports[`<HorizontalStepper /> SomeCompletedSteps story renders snapshot 1`] = `
     <li
       class="horizontal-step horizontal-step--incomplete"
     >
-      <svg
-        class="icon horizontal-step__incomplete-icon"
-        fill="currentColor"
-        height="0.5rem"
+      <span
+        aria-label="current step 5 Step 5"
+        class="text text--sm text--base number-icon number-icon--base number-icon--incomplete"
         role="img"
-        style="--icon-size: 0.5rem;"
-        width="0.5rem"
-        xmlns="http://www.w3.org/2000/svg"
       >
-        <title
-          id="8"
+        <svg
+          class="icon number-icon__icon"
+          fill="#878C90"
+          height="0.5rem"
+          role="img"
+          style="--icon-size: 0.5rem;"
+          width="0.5rem"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          incomplete step 5 Step 5
-        </title>
-        <use
-          xlink:href="test-file-stub#circle"
-        />
-      </svg>
+          <title
+            id="8"
+          >
+            incomplete step 5 Step 5
+          </title>
+          <use
+            xlink:href="test-file-stub#circle"
+          />
+        </svg>
+      </span>
       <span
         class="text text--sm text--inherit text--bold-weight horizontal-step__text"
       >

@@ -14,6 +14,13 @@ export default {
   parameters: {
     badges: [BADGE.BETA],
   },
+  decorators: [
+    (Story) => (
+      <div style={{ background: '#000' }}>
+        <Story />
+      </div>
+    ),
+  ],
 } as Meta;
 
 export const Default = () => (

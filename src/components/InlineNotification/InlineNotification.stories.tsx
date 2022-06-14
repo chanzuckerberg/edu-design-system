@@ -14,8 +14,8 @@ export default {
     variant: {
       control: {
         type: 'select',
-        options: VARIANTS,
       },
+      options: VARIANTS,
     },
   },
   parameters: {

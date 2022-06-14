@@ -10,7 +10,7 @@
 .inline-notification {
   display: inline-flex;
   padding: var(--eds-size-quarter) var(--eds-size-half);
-  border-radius: var(--eds-theme-border-radius);
+  border-radius: var(--eds-border-radius-md);
 }
 
 /**

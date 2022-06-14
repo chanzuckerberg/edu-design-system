@@ -1,7 +1,7 @@
 @import '../../design-tokens/mixins.css';
 
 /*------------------------------------*\
-    #CLICKABLE STYLE
+    # CLICKABLE STYLE
 \*------------------------------------*/
 
 /**
@@ -18,7 +18,7 @@
   gap: 0.75rem; /* 3 */
   border-width: var(--eds-theme-border-width);
   border-style: solid;
-  border-radius: var(--eds-theme-border-radius);
+  border-radius: var(--eds-border-radius-md);
   cursor: pointer;
   text-decoration: none; /* 4 */
   transition: all var(--eds-anim-fade-quick) var(--eds-anim-ease);

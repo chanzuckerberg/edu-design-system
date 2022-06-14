@@ -1,7 +1,7 @@
 @import '../../design-tokens/tier-2-usage/typography-usage.css';
 
 /*------------------------------------*\
-    #HEADING
+    # HEADING
 \*------------------------------------*/
 
 /**
@@ -86,7 +86,7 @@
   color: var(--eds-theme-color-text-utility-error);
 }
 .heading--base {
-  color: var(--eds-theme-color-text-neutral-default);
+  color: var(--eds-theme-color-text-neutral-strong);
 }
 .heading--brand {
   color: var(--eds-theme-color-text-brand-primary);
@@ -98,7 +98,7 @@
   color: inherit;
 }
 .heading--neutral {
-  color: var(--eds-theme-color-text-neutral-default);
+  color: var(--eds-theme-color-text-neutral-strong);
 }
 .heading--success {
   color: var(--eds-theme-color-text-utility-success);

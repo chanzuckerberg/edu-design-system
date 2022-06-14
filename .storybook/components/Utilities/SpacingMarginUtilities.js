@@ -31,9 +31,18 @@ export class SpacingMarginUtilities extends Component {
 
         <Hr />
 
-        <code>u-margin-lg</code>
+        <code>u-margin-left-lg</code>
         <div className="sg-demo-container-box">
-          <div className="u-margin-lg sg-demo-box-2">Large margin</div>
+          <div className="u-margin-left-lg sg-demo-box-2">
+            Margin left large
+          </div>
+        </div>
+
+        <Hr />
+
+        <code>u-margin-xl</code>
+        <div className="sg-demo-container-box">
+          <div className="u-margin-xl sg-demo-box-2">Large margin</div>
         </div>
 
         <Hr />
@@ -124,6 +133,15 @@ export class SpacingMarginUtilities extends Component {
 
         <Hr />
 
+        <code>u-margin-right-xl</code>
+        <div className="sg-demo-container-box">
+          <div className="u-margin-right-xl sg-demo-box-2">
+            Margin right large
+          </div>
+        </div>
+
+        <Hr />
+
         <h2>
           <code>margin-bottom</code>
         </h2>
@@ -167,7 +185,7 @@ export class SpacingMarginUtilities extends Component {
         <code>u-margin-bottom-xl</code>
         <div className="sg-demo-container-box">
           <div className="u-margin-bottom-xl sg-demo-box-2">
-            Margin bottom xl
+            Margin bottom large
           </div>
         </div>
 
@@ -177,6 +195,14 @@ export class SpacingMarginUtilities extends Component {
         <div className="sg-demo-container-box">
           <div className="u-margin-bottom-xxl sg-demo-box-2">
             Margin bottom xxl
+          </div>
+        </div>
+        <Hr />
+
+        <code>u-margin-bottom-xxxl</code>
+        <div className="sg-demo-container-box">
+          <div className="u-margin-bottom-xxxl sg-demo-box-2">
+            Margin bottom xxxl
           </div>
         </div>
 
@@ -216,6 +242,15 @@ export class SpacingMarginUtilities extends Component {
         <code>u-margin-left-lg</code>
         <div className="sg-demo-container-box">
           <div className="u-margin-left-lg sg-demo-box-2">
+            Margin left large
+          </div>
+        </div>
+
+        <Hr />
+
+        <code>u-margin-left-xl</code>
+        <div className="sg-demo-container-box">
+          <div className="u-margin-left-xl sg-demo-box-2">
             Margin left large
           </div>
         </div>

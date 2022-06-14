@@ -3,10 +3,10 @@ import React, { ReactNode, useState } from 'react';
 import { useUID } from 'react-uid';
 import styles from './Counter.module.css';
 import Button from '../../components/Button';
+import FieldNote from '../../components/FieldNote';
 import Icon from '../../components/Icon';
-import FieldNote from '../FieldNote';
-import Label from '../Label';
-import TextInput from '../TextInput';
+import Label from '../../components/Label';
+import TextInput from '../../components/TextInput';
 
 export interface Props {
   /**

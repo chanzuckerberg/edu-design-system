@@ -1,7 +1,10 @@
 const pascalCase = require('pascal-case');
+const { snakeCase } = require('snake-case');
 
 module.exports = (plop) => {
-  plop.setHelper('upperCase', (txt) => txt.toUpperCase());
+  plop.setHelper('spacedUpperCase', (txt) =>
+    snakeCase(txt).split('_').join(' ').toUpperCase(),
+  );
 
   // This helper allows us to place a variable inside curly braces without spaces
   // between the text and the braces.

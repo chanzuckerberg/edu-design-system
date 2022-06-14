@@ -3,11 +3,11 @@ import React, { ReactNode, useState } from 'react';
 import { useUID, useUIDSeed } from 'react-uid';
 import styles from './FileUploadField.module.css';
 import Button from '../../components/Button';
+import FieldNote from '../../components/FieldNote';
 import Icon, { IconName } from '../../components/Icon';
-import FieldNote from '../FieldNote';
-import Label from '../Label';
+import Label from '../../components/Label';
+import TextInput from '../../components/TextInput';
 import LoadingIndicator from '../LoadingIndicator';
-import TextInput from '../TextInput';
 import TextList from '../TextList';
 import TextListItem from '../TextListItem';
 

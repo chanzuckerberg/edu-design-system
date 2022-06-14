@@ -3,9 +3,9 @@ import React, { ChangeEventHandler, MouseEventHandler, ReactNode } from 'react';
 import { useUID } from 'react-uid';
 import styles from './TextareaField.module.css';
 import Button from '../../components/Button';
+import FieldNote from '../../components/FieldNote';
 import Icon, { IconName } from '../../components/Icon';
-import FieldNote from '../FieldNote';
-import Label from '../Label';
+import Label from '../../components/Label';
 import Textarea from '../Textarea';
 
 export interface Props {

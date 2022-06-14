@@ -67,9 +67,9 @@ export const Card = ({
     elevation === 'raised' && styles['card--raised'],
   );
   return (
-    <div className={componentClassName} {...other}>
+    <article className={componentClassName} {...other}>
       {children}
-    </div>
+    </article>
   );
 };
 

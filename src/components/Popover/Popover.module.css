@@ -22,8 +22,8 @@
   opacity: 0;
   color: var(--eds-theme-color-text-neutral-default);
   background: var(--eds-theme-color-background-neutral-default);
-  border-radius: var(--eds-theme-border-radius);
-  box-shadow: var(--eds-theme-box-shadow);
+  border-radius: var(--eds-border-radius-md);
+  box-shadow: var(--eds-box-shadow-md);
   transition: opacity var(--eds-anim-fade-quick) var(--eds-anim-ease);
   overscroll-behavior-y: contain;
   z-index: var(--eds-z-index-bottom);
