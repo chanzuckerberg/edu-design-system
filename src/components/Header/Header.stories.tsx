@@ -2,7 +2,7 @@ import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
-import { Header, Props } from './Header';
+import { Header } from './Header';
 
 export default {
   title: 'Organisms/Global/Header',
