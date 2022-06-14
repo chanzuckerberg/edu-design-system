@@ -473,6 +473,11 @@
   }
 }
 
+/**
+ * Link neutral clickable style pseudo element for the focus background state.
+ * Overrides the default background color on focus. Often used when the default
+ * focus background color doesn't mesh well with the surrounding colors.
+ */
 .clickable-style--link.clickable-style--neutral::before {
   background-color: var(--eds-theme-color-icon-neutral-strong);
 }
