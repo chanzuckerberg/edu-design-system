@@ -26,6 +26,17 @@ type Args = React.ComponentProps<typeof Breadcrumbs>;
 
 export const Default: StoryObj<Args> = {};
 
+export const TwoCrumbs: StoryObj<Args> = {
+  args: {
+    children: (
+      <>
+        <Breadcrumbs.Item href="#" text="Breadcrumb 1" />
+        <Breadcrumbs.Item href="#" text="Breadcrumb 2" />
+      </>
+    ),
+  },
+};
+
 export const LongList: StoryObj<Args> = {
   args: {
     children: (
