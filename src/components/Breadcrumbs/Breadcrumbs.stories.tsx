@@ -92,6 +92,6 @@ export const LongText: StoryObj<Args> = {
     ),
   },
   parameters: {
-    chromatic: { viewports: [414, 700, 1200] },
+    chromatic: { viewports: [414, 768, 1366] },
   },
 };

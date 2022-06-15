@@ -9,6 +9,7 @@
  * 1) Required for dropdown menu to absolutely position relative to this container.
  * 2) Hides all breadcrumbs except the last breadcrumb in smaller breakpoints.
  * 3) Prevents breaking of breadcrumbs into multiple lines.
+ * 4) Make non inclusive of medium breakpoint.
  * 4) Display breadcrumbs in larger breakpoints.
  */
 .breadcrumbs__item {
@@ -24,14 +25,15 @@
 
   align-items: center;
 
-  @media all and (max-width: $eds-bp-md) {
+  /* 4 */
+  @media all and (max-width: calc($eds-bp-md - 1px)) {
     &:last-of-type {
       display: flex; /* 2 */
       flex: 1;
     }
   }
   @media all and (min-width: $eds-bp-md) {
-    display: flex; /* 4 */
+    display: flex; /* 5 */
   }
 }
 
