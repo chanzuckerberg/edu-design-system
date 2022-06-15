@@ -26,7 +26,7 @@ export const ProjectOverview = () => {
     <PageShell>
       <Breadcrumbs>
         <BreadcrumbsItem href="#" text="My Courses" />
-        <BreadcrumbsItem text="Disciplinary Science 7" />
+        <BreadcrumbsItem href="#" text="Disciplinary Science 7" />
       </Breadcrumbs>
       <PageHeader
         right={

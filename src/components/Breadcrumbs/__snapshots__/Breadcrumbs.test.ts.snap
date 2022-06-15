@@ -1,344 +1,542 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Tag /> Default story renders snapshot 1`] = `
-<nav
-  aria-label="breadcrumbs links"
-  class="breadcrumbs"
-  id="1"
+exports[`<Breadcrumbs /> Default story renders snapshot 1`] = `
+<div
+  style="margin: 0.5rem;"
 >
-  <ul
-    class="breadcrumbs__list"
+  <nav
+    aria-label="breadcrumbs links"
+    class="breadcrumbs"
+    id="1"
   >
-    <li
-      class="breadcrumbs__item"
+    <ul
+      class="breadcrumbs__list"
     >
-      <a
-        class="breadcrumbs__link"
-        href="#"
+      <li
+        class="breadcrumbs__item breadcrumbs__item-back"
       >
-        Home
-      </a>
-      <span
-        aria-hidden="true"
-        class="breadcrumbs__icon"
+        <a
+          class="breadcrumbs__link"
+          href="#"
+        >
+          <svg
+            class="icon breadcrumbs__back-icon"
+            fill="currentColor"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title
+              id="2"
+            >
+              back
+            </title>
+            <use
+              xlink:href="test-file-stub#chevron-left"
+            />
+          </svg>
+        </a>
+        <span
+          aria-hidden="true"
+          class="breadcrumbs__icon"
+        >
+          /
+        </span>
+      </li>
+      <li
+        class="breadcrumbs__item"
       >
-        /
-      </span>
-    </li>
-    <li
-      class="breadcrumbs__item"
-    >
-      <a
-        class="breadcrumbs__link"
-        href="#"
+        <a
+          class="breadcrumbs__link"
+          href="#"
+        >
+          Home
+        </a>
+        <span
+          aria-hidden="true"
+          class="breadcrumbs__icon"
+        >
+          /
+        </span>
+      </li>
+      <li
+        class="breadcrumbs__item"
       >
-        Child
-      </a>
-      <span
-        aria-hidden="true"
-        class="breadcrumbs__icon"
+        <a
+          class="breadcrumbs__link"
+          href="#"
+        >
+          Child
+        </a>
+        <span
+          aria-hidden="true"
+          class="breadcrumbs__icon"
+        >
+          /
+        </span>
+      </li>
+      <li
+        class="breadcrumbs__item"
       >
-        /
-      </span>
-    </li>
-    <li
-      class="breadcrumbs__item"
-    >
-      <a
-        class="breadcrumbs__link"
-        href="#"
-      >
-        Grandchild
-      </a>
-      <span
-        aria-hidden="true"
-        class="breadcrumbs__icon"
-      >
-        /
-      </span>
-    </li>
-  </ul>
-</nav>
+        <a
+          class="breadcrumbs__link"
+          href="#"
+        >
+          Grandchild
+        </a>
+        <span
+          aria-hidden="true"
+          class="breadcrumbs__icon"
+        >
+          /
+        </span>
+      </li>
+    </ul>
+  </nav>
+</div>
 `;
 
-exports[`<Tag /> LongList story renders snapshot 1`] = `
-<nav
-  aria-label="breadcrumbs links"
-  class="breadcrumbs"
-  id="2"
+exports[`<Breadcrumbs /> LongList story renders snapshot 1`] = `
+<div
+  style="margin: 0.5rem;"
 >
-  <ul
-    class="breadcrumbs__list"
+  <nav
+    aria-label="breadcrumbs links"
+    class="breadcrumbs"
+    id="6"
   >
-    <li
-      class="breadcrumbs__item"
+    <ul
+      class="breadcrumbs__list"
     >
-      <a
-        class="breadcrumbs__link"
-        href="#"
+      <li
+        class="breadcrumbs__item breadcrumbs__item-back"
       >
-        Parent
-      </a>
-      <span
-        aria-hidden="true"
-        class="breadcrumbs__icon"
+        <a
+          class="breadcrumbs__link"
+          href="#"
+        >
+          <svg
+            class="icon breadcrumbs__back-icon"
+            fill="currentColor"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title
+              id="7"
+            >
+              back
+            </title>
+            <use
+              xlink:href="test-file-stub#chevron-left"
+            />
+          </svg>
+        </a>
+        <span
+          aria-hidden="true"
+          class="breadcrumbs__icon"
+        >
+          /
+        </span>
+      </li>
+      <li
+        class="breadcrumbs__item"
       >
-        /
-      </span>
-    </li>
-    <li
-      class="breadcrumbs__item"
-    >
-      <a
-        class="breadcrumbs__link"
-        href="#"
+        <a
+          class="breadcrumbs__link"
+          href="#"
+        >
+          Parent
+        </a>
+        <span
+          aria-hidden="true"
+          class="breadcrumbs__icon"
+        >
+          /
+        </span>
+      </li>
+      <li
+        class="breadcrumbs__item"
       >
-        Breadcrumb 1
-      </a>
-      <span
-        aria-hidden="true"
-        class="breadcrumbs__icon"
+        <a
+          class="breadcrumbs__link"
+          href="#"
+        >
+          Breadcrumb 1
+        </a>
+        <span
+          aria-hidden="true"
+          class="breadcrumbs__icon"
+        >
+          /
+        </span>
+      </li>
+      <li
+        class="breadcrumbs__item"
       >
-        /
-      </span>
-    </li>
-    <li
-      class="breadcrumbs__item"
-    >
-      <a
-        class="breadcrumbs__link"
-        href="#"
+        <a
+          class="breadcrumbs__link"
+          href="#"
+        >
+          Breadcrumb 2
+        </a>
+        <span
+          aria-hidden="true"
+          class="breadcrumbs__icon"
+        >
+          /
+        </span>
+      </li>
+      <li
+        class="breadcrumbs__item"
       >
-        Breadcrumb 2
-      </a>
-      <span
-        aria-hidden="true"
-        class="breadcrumbs__icon"
+        <a
+          class="breadcrumbs__link"
+          href="#"
+        >
+          Breadcrumb 3
+        </a>
+        <span
+          aria-hidden="true"
+          class="breadcrumbs__icon"
+        >
+          /
+        </span>
+      </li>
+      <li
+        class="breadcrumbs__item"
       >
-        /
-      </span>
-    </li>
-    <li
-      class="breadcrumbs__item"
-    >
-      <a
-        class="breadcrumbs__link"
-        href="#"
+        <a
+          class="breadcrumbs__link"
+          href="#"
+        >
+          Breadcrumb 4
+        </a>
+        <span
+          aria-hidden="true"
+          class="breadcrumbs__icon"
+        >
+          /
+        </span>
+      </li>
+      <li
+        class="breadcrumbs__item"
       >
-        Breadcrumb 3
-      </a>
-      <span
-        aria-hidden="true"
-        class="breadcrumbs__icon"
+        <a
+          class="breadcrumbs__link"
+          href="#"
+        >
+          Breadcrumb 5
+        </a>
+        <span
+          aria-hidden="true"
+          class="breadcrumbs__icon"
+        >
+          /
+        </span>
+      </li>
+      <li
+        class="breadcrumbs__item"
       >
-        /
-      </span>
-    </li>
-    <li
-      class="breadcrumbs__item"
-    >
-      <a
-        class="breadcrumbs__link"
-        href="#"
+        <a
+          class="breadcrumbs__link"
+          href="#"
+        >
+          Breadcrumb 6
+        </a>
+        <span
+          aria-hidden="true"
+          class="breadcrumbs__icon"
+        >
+          /
+        </span>
+      </li>
+      <li
+        class="breadcrumbs__item"
       >
-        Breadcrumb 4
-      </a>
-      <span
-        aria-hidden="true"
-        class="breadcrumbs__icon"
+        <a
+          class="breadcrumbs__link"
+          href="#"
+        >
+          Breadcrumb 7
+        </a>
+        <span
+          aria-hidden="true"
+          class="breadcrumbs__icon"
+        >
+          /
+        </span>
+      </li>
+      <li
+        class="breadcrumbs__item"
       >
-        /
-      </span>
-    </li>
-    <li
-      class="breadcrumbs__item"
-    >
-      <a
-        class="breadcrumbs__link"
-        href="#"
+        <a
+          class="breadcrumbs__link"
+          href="#"
+        >
+          Breadcrumb 8
+        </a>
+        <span
+          aria-hidden="true"
+          class="breadcrumbs__icon"
+        >
+          /
+        </span>
+      </li>
+      <li
+        class="breadcrumbs__item"
       >
-        Breadcrumb 5
-      </a>
-      <span
-        aria-hidden="true"
-        class="breadcrumbs__icon"
+        <a
+          class="breadcrumbs__link"
+          href="#"
+        >
+          Breadcrumb 9
+        </a>
+        <span
+          aria-hidden="true"
+          class="breadcrumbs__icon"
+        >
+          /
+        </span>
+      </li>
+      <li
+        class="breadcrumbs__item"
       >
-        /
-      </span>
-    </li>
-    <li
-      class="breadcrumbs__item"
-    >
-      <a
-        class="breadcrumbs__link"
-        href="#"
-      >
-        Breadcrumb 6
-      </a>
-      <span
-        aria-hidden="true"
-        class="breadcrumbs__icon"
-      >
-        /
-      </span>
-    </li>
-    <li
-      class="breadcrumbs__item"
-    >
-      <a
-        class="breadcrumbs__link"
-        href="#"
-      >
-        Breadcrumb 7
-      </a>
-      <span
-        aria-hidden="true"
-        class="breadcrumbs__icon"
-      >
-        /
-      </span>
-    </li>
-    <li
-      class="breadcrumbs__item"
-    >
-      <a
-        class="breadcrumbs__link"
-        href="#"
-      >
-        Breadcrumb 8
-      </a>
-      <span
-        aria-hidden="true"
-        class="breadcrumbs__icon"
-      >
-        /
-      </span>
-    </li>
-    <li
-      class="breadcrumbs__item"
-    >
-      <a
-        class="breadcrumbs__link"
-        href="#"
-      >
-        Breadcrumb 9
-      </a>
-      <span
-        aria-hidden="true"
-        class="breadcrumbs__icon"
-      >
-        /
-      </span>
-    </li>
-    <li
-      class="breadcrumbs__item"
-    >
-      <a
-        class="breadcrumbs__link"
-        href="#"
-      >
-        Breadcrumb 10
-      </a>
-      <span
-        aria-hidden="true"
-        class="breadcrumbs__icon"
-      >
-        /
-      </span>
-    </li>
-  </ul>
-</nav>
+        <a
+          class="breadcrumbs__link"
+          href="#"
+        >
+          Breadcrumb 10
+        </a>
+        <span
+          aria-hidden="true"
+          class="breadcrumbs__icon"
+        >
+          /
+        </span>
+      </li>
+    </ul>
+  </nav>
+</div>
 `;
 
-exports[`<Tag /> LongText story renders snapshot 1`] = `
-<nav
-  aria-label="breadcrumbs links"
-  class="breadcrumbs"
-  id="3"
+exports[`<Breadcrumbs /> LongText story renders snapshot 1`] = `
+<div
+  style="margin: 0.5rem;"
 >
-  <ul
-    class="breadcrumbs__list"
+  <nav
+    aria-label="breadcrumbs links"
+    class="breadcrumbs"
+    id="8"
   >
-    <li
-      class="breadcrumbs__item"
+    <ul
+      class="breadcrumbs__list"
     >
-      <a
-        class="breadcrumbs__link"
-        href="#"
+      <li
+        class="breadcrumbs__item breadcrumbs__item-back"
       >
-        Home
-      </a>
-      <span
-        aria-hidden="true"
-        class="breadcrumbs__icon"
+        <a
+          class="breadcrumbs__link"
+          href="#"
+        >
+          <svg
+            class="icon breadcrumbs__back-icon"
+            fill="currentColor"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title
+              id="9"
+            >
+              back
+            </title>
+            <use
+              xlink:href="test-file-stub#chevron-left"
+            />
+          </svg>
+        </a>
+        <span
+          aria-hidden="true"
+          class="breadcrumbs__icon"
+        >
+          /
+        </span>
+      </li>
+      <li
+        class="breadcrumbs__item"
       >
-        /
-      </span>
-    </li>
-    <li
-      class="breadcrumbs__item"
+        <a
+          class="breadcrumbs__link"
+          href="#"
+        >
+          Home
+        </a>
+        <span
+          aria-hidden="true"
+          class="breadcrumbs__icon"
+        >
+          /
+        </span>
+      </li>
+      <li
+        class="breadcrumbs__item"
+      >
+        <a
+          class="breadcrumbs__link"
+          href="#"
+        >
+          Breadcrumb 1
+        </a>
+        <span
+          aria-hidden="true"
+          class="breadcrumbs__icon"
+        >
+          /
+        </span>
+      </li>
+      <li
+        class="breadcrumbs__item"
+      >
+        <a
+          class="breadcrumbs__link"
+          href="#"
+        >
+          Breadcrumb 2 Lorem ipsum dolor sit amet, no overflow is two lines at 320px
+        </a>
+        <span
+          aria-hidden="true"
+          class="breadcrumbs__icon"
+        >
+          /
+        </span>
+      </li>
+      <li
+        class="breadcrumbs__item"
+      >
+        <a
+          class="breadcrumbs__link"
+          href="#"
+        >
+          Breadcrumb 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, no overflow is 3 lines at 320px
+        </a>
+        <span
+          aria-hidden="true"
+          class="breadcrumbs__icon"
+        >
+          /
+        </span>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;
+
+exports[`<Breadcrumbs /> OneCrumb story renders snapshot 1`] = `
+<div
+  style="margin: 0.5rem;"
+>
+  <nav
+    aria-label="breadcrumbs links"
+    class="breadcrumbs"
+    id="3"
+  >
+    <ul
+      class="breadcrumbs__list"
     >
-      <a
-        class="breadcrumbs__link"
-        href="#"
+      <li
+        class="breadcrumbs__item"
       >
-        Breadcrumb 1
-      </a>
-      <span
-        aria-hidden="true"
-        class="breadcrumbs__icon"
-      >
-        /
-      </span>
-    </li>
-    <li
-      class="breadcrumbs__item"
+        <a
+          class="breadcrumbs__link"
+          href="#"
+        >
+          Breadcrumb 1
+        </a>
+        <span
+          aria-hidden="true"
+          class="breadcrumbs__icon"
+        >
+          /
+        </span>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;
+
+exports[`<Breadcrumbs /> TwoCrumbs story renders snapshot 1`] = `
+<div
+  style="margin: 0.5rem;"
+>
+  <nav
+    aria-label="breadcrumbs links"
+    class="breadcrumbs"
+    id="4"
+  >
+    <ul
+      class="breadcrumbs__list"
     >
-      <a
-        class="breadcrumbs__link"
-        href="#"
+      <li
+        class="breadcrumbs__item breadcrumbs__item-back"
       >
-        Breadcrumb 2 Lorem ipsum dolor sit amet, consectetur two lines at 320px
-      </a>
-      <span
-        aria-hidden="true"
-        class="breadcrumbs__icon"
+        <a
+          class="breadcrumbs__link"
+          href="#"
+        >
+          <svg
+            class="icon breadcrumbs__back-icon"
+            fill="currentColor"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title
+              id="5"
+            >
+              back
+            </title>
+            <use
+              xlink:href="test-file-stub#chevron-left"
+            />
+          </svg>
+        </a>
+        <span
+          aria-hidden="true"
+          class="breadcrumbs__icon"
+        >
+          /
+        </span>
+      </li>
+      <li
+        class="breadcrumbs__item"
       >
-        /
-      </span>
-    </li>
-    <li
-      class="breadcrumbs__item"
-    >
-      <a
-        class="breadcrumbs__link"
-        href="#"
+        <a
+          class="breadcrumbs__link"
+          href="#"
+        >
+          Breadcrumb 1
+        </a>
+        <span
+          aria-hidden="true"
+          class="breadcrumbs__icon"
+        >
+          /
+        </span>
+      </li>
+      <li
+        class="breadcrumbs__item"
       >
-        Breadcrumb 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 3 lines at 320px
-      </a>
-      <span
-        aria-hidden="true"
-        class="breadcrumbs__icon"
-      >
-        /
-      </span>
-    </li>
-    <li
-      class="breadcrumbs__item"
-    >
-      <a
-        class="breadcrumbs__link"
-        href="#"
-      >
-        Breadcrumb 4
-      </a>
-      <span
-        aria-hidden="true"
-        class="breadcrumbs__icon"
-      >
-        /
-      </span>
-    </li>
-  </ul>
-</nav>
+        <a
+          class="breadcrumbs__link"
+          href="#"
+        >
+          Breadcrumb 2
+        </a>
+        <span
+          aria-hidden="true"
+          class="breadcrumbs__icon"
+        >
+          /
+        </span>
+      </li>
+    </ul>
+  </nav>
+</div>
 `;
