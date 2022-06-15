@@ -44,14 +44,10 @@
   --icon-size-default: var(--eds-size-5);
 }
 
-.banner__textAndAction,
-.banner__text-content {
+.banner__text-and-action {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-.banner__textAndAction {
   gap: var(--eds-size-2);
 }
 
@@ -98,7 +94,7 @@
       --icon-size-default: var(--eds-size-3); /* 4 */
     }
 
-    .banner__textAndAction {
+    .banner__text-and-action {
       gap: var(--eds-size-1); /* 5 */
     }
 

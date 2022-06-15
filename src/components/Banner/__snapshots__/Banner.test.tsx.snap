@@ -20,7 +20,7 @@ exports[`<Banner /> Brand story renders snapshot 1`] = `
     />
   </svg>
   <div
-    class="banner__textAndAction"
+    class="banner__text-and-action"
   >
     <div>
       <h3
@@ -86,7 +86,7 @@ exports[`<Banner /> BrandDismissable story renders snapshot 1`] = `
     />
   </svg>
   <div
-    class="banner__textAndAction"
+    class="banner__text-and-action"
   >
     <div>
       <h3
@@ -132,7 +132,7 @@ exports[`<Banner /> BrandWithAction story renders snapshot 1`] = `
     />
   </svg>
   <div
-    class="banner__textAndAction"
+    class="banner__text-and-action"
   >
     <div>
       <h3
@@ -216,7 +216,7 @@ exports[`<Banner /> DismissableWithAction story renders snapshot 1`] = `
     />
   </svg>
   <div
-    class="banner__textAndAction"
+    class="banner__text-and-action"
   >
     <div>
       <h3
@@ -272,7 +272,7 @@ exports[`<Banner /> Error story renders snapshot 1`] = `
     />
   </svg>
   <div
-    class="banner__textAndAction"
+    class="banner__text-and-action"
   >
     <div>
       <h3
@@ -338,7 +338,7 @@ exports[`<Banner /> ErrorDismissable story renders snapshot 1`] = `
     />
   </svg>
   <div
-    class="banner__textAndAction"
+    class="banner__text-and-action"
   >
     <div>
       <h3
@@ -384,7 +384,7 @@ exports[`<Banner /> ErrorWithAction story renders snapshot 1`] = `
     />
   </svg>
   <div
-    class="banner__textAndAction"
+    class="banner__text-and-action"
   >
     <div>
       <h3
@@ -440,7 +440,7 @@ exports[`<Banner /> Flat story renders snapshot 1`] = `
     />
   </svg>
   <div
-    class="banner__textAndAction"
+    class="banner__text-and-action"
   >
     <div>
       <h3
@@ -486,7 +486,7 @@ exports[`<Banner /> Neutral story renders snapshot 1`] = `
     />
   </svg>
   <div
-    class="banner__textAndAction"
+    class="banner__text-and-action"
   >
     <div>
       <h3
@@ -552,7 +552,7 @@ exports[`<Banner /> NeutralDismissable story renders snapshot 1`] = `
     />
   </svg>
   <div
-    class="banner__textAndAction"
+    class="banner__text-and-action"
   >
     <div>
       <h3
@@ -598,7 +598,7 @@ exports[`<Banner /> NeutralWithAction story renders snapshot 1`] = `
     />
   </svg>
   <div
-    class="banner__textAndAction"
+    class="banner__text-and-action"
   >
     <div>
       <h3
@@ -654,7 +654,7 @@ exports[`<Banner /> NoDescription story renders snapshot 1`] = `
     />
   </svg>
   <div
-    class="banner__textAndAction"
+    class="banner__text-and-action"
   >
     <div>
       <h3
@@ -687,7 +687,7 @@ exports[`<Banner /> NoTitle story renders snapshot 1`] = `
     />
   </svg>
   <div
-    class="banner__textAndAction"
+    class="banner__text-and-action"
   >
     <div>
       <p
@@ -728,7 +728,7 @@ exports[`<Banner /> Success story renders snapshot 1`] = `
     />
   </svg>
   <div
-    class="banner__textAndAction"
+    class="banner__text-and-action"
   >
     <div>
       <h3
@@ -794,7 +794,7 @@ exports[`<Banner /> SuccessDismissable story renders snapshot 1`] = `
     />
   </svg>
   <div
-    class="banner__textAndAction"
+    class="banner__text-and-action"
   >
     <div>
       <h3
@@ -840,7 +840,7 @@ exports[`<Banner /> SuccessWithAction story renders snapshot 1`] = `
     />
   </svg>
   <div
-    class="banner__textAndAction"
+    class="banner__text-and-action"
   >
     <div>
       <h3
@@ -896,7 +896,7 @@ exports[`<Banner /> Vertical story renders snapshot 1`] = `
     />
   </svg>
   <div
-    class="banner__textAndAction"
+    class="banner__text-and-action"
   >
     <div>
       <h3
@@ -962,7 +962,7 @@ exports[`<Banner /> VerticalDismissable story renders snapshot 1`] = `
     />
   </svg>
   <div
-    class="banner__textAndAction"
+    class="banner__text-and-action"
   >
     <div>
       <h3
@@ -1028,7 +1028,7 @@ exports[`<Banner /> VerticalDismissableWithAction story renders snapshot 1`] = `
     />
   </svg>
   <div
-    class="banner__textAndAction"
+    class="banner__text-and-action"
   >
     <div>
       <h3
@@ -1084,7 +1084,7 @@ exports[`<Banner /> VerticalWithAction story renders snapshot 1`] = `
     />
   </svg>
   <div
-    class="banner__textAndAction"
+    class="banner__text-and-action"
   >
     <div>
       <h3
@@ -1140,7 +1140,7 @@ exports[`<Banner /> Warning story renders snapshot 1`] = `
     />
   </svg>
   <div
-    class="banner__textAndAction"
+    class="banner__text-and-action"
   >
     <div>
       <h3
@@ -1206,7 +1206,7 @@ exports[`<Banner /> WarningDismissable story renders snapshot 1`] = `
     />
   </svg>
   <div
-    class="banner__textAndAction"
+    class="banner__text-and-action"
   >
     <div>
       <h3
@@ -1252,7 +1252,7 @@ exports[`<Banner /> WarningWithAction story renders snapshot 1`] = `
     />
   </svg>
   <div
-    class="banner__textAndAction"
+    class="banner__text-and-action"
   >
     <div>
       <h3
