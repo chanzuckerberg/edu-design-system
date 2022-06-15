@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
-import styles from './PageLeveBanner.module.css';
+import styles from './PageLevelBanner.module.css';
 import Button from '../Button';
 import Heading, { HeadingElement } from '../Heading';
 import Icon from '../Icon';
@@ -8,7 +8,7 @@ import Text from '../Text';
 
 export type Variant = 'brand' | 'success' | 'warning' | 'error';
 
-export type PageLeveBannerProps = {
+export type PageLevelBannerProps = {
   /**
    * CSS class names that can be appended to the component.
    */
@@ -69,7 +69,7 @@ const variantToIconAssetsMap: {
 
 /**
  * ```ts
- * import {PageLeveBanner} from "@chanzuckerberg/eds";
+ * import {PageLevelBanner} from "@chanzuckerberg/eds";
  * ```
  *
  * A banner placed at the top of the page with important information.
@@ -77,14 +77,14 @@ const variantToIconAssetsMap: {
  * Example usage:
  *
  * ```tsx
- * <PageLeveBanner
+ * <PageLevelBanner
  *   onDismiss={handleDismiss}
  *   title="Some Title"
  *   description={<>Some description, possibly with a <Link href="https://go.czi.team/eds">link to some other resource</Link>.</>}
  * />
  * ```
  */
-export const PageLeveBanner = ({
+export const PageLevelBanner = ({
   className,
   description,
   descriptionAs = 'p',
@@ -92,7 +92,7 @@ export const PageLeveBanner = ({
   variant = 'brand',
   title,
   titleAs = 'h3',
-}: PageLeveBannerProps) => {
+}: PageLevelBannerProps) => {
   const componentClassName = clsx(
     // Base styles
     styles['banner'],
@@ -140,4 +140,4 @@ export const PageLeveBanner = ({
     </article>
   );
 };
-PageLeveBanner.displayName = 'PageLeveBanner';
+PageLevelBanner.displayName = 'PageLevelBanner';
