@@ -28,12 +28,6 @@
   --icon-size-default: var(--eds-size-3);
 }
 
-.banner__text-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
 /**
  * PageLevelBanner close button
  * 1) Button used to dismiss dismissable banners

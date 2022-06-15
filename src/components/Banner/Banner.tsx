@@ -159,7 +159,7 @@ export const Banner = ({
         title={variantToIconAssetsMap[variant].title}
       />
 
-      <div className={clsx(styles['banner__textAndAction'])}>
+      <div className={clsx(styles['banner__text-and-action'])}>
         <div>
           {title && (
             <Heading as={titleAs} size="title-md" variant={variant}>
