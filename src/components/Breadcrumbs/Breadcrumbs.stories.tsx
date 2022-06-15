@@ -1,5 +1,6 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { StoryObj, Meta } from '@storybook/react';
+import { within } from '@storybook/testing-library';
 import React from 'react';
 
 import { Breadcrumbs } from './Breadcrumbs';
@@ -93,5 +94,30 @@ export const LongText: StoryObj<Args> = {
   },
   parameters: {
     chromatic: { viewports: [414, 768, 1366] },
+  },
+};
+
+/**
+ * For visual regression more than demoing.
+ * 1) Visual regression sufficient in testing opening dropdown menu.
+ */
+export const LongTextMenu: StoryObj<Args> = {
+  args: {
+    ...LongText.args,
+  },
+  parameters: {
+    viewport: {
+      defaultViewport: 'tablet',
+    },
+    chromatic: { viewports: [834] },
+    snapshot: {
+      /* 1 */
+      skip: true,
+    },
+  },
+  play: ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const dropdownMenuTrigger = canvas.getByRole('button');
+    dropdownMenuTrigger.click();
   },
 };

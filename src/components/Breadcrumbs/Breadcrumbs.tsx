@@ -53,11 +53,7 @@ export const Breadcrumbs = ({
    */
   const updateShouldTruncate = () => {
     setShouldTruncate(false);
-    if (
-      ref &&
-      ref.current &&
-      ref.current.clientWidth < ref.current.scrollWidth
-    ) {
+    if ((ref?.current?.clientWidth ?? 0) < (ref?.current?.scrollWidth ?? 0)) {
       setShouldTruncate(true);
     }
   };
