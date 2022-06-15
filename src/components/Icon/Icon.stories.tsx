@@ -1,6 +1,6 @@
-import type { StoryObj } from '@storybook/react';
+import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
-import { Icon, IconProps } from './Icon';
+import { Icon } from './Icon';
 import * as ColorTokens from '../../tokens-dist/ts/colors';
 import { ALL_ICONS } from '../../util/allIcons';
 import Text from '../Text';
@@ -22,9 +22,11 @@ export default {
       options: ['currentColor', ...Object.keys(ColorTokens)],
     },
   },
-};
+} as Meta<Args>;
 
-export const Default: StoryObj<IconProps> = {
+type Args = React.ComponentProps<typeof Icon>;
+
+export const Default: StoryObj<Args> = {
   render: ({ name, color, ...rest }) => {
     const computedColor = color && ColorTokens[color];
     return <Icon {...rest} color={computedColor} name={name} />;
@@ -35,7 +37,7 @@ export const Default: StoryObj<IconProps> = {
   },
 };
 
-export const Medium: StoryObj<IconProps> = {
+export const Medium: StoryObj<Args> = {
   ...Default,
   args: {
     ...Default.args,
@@ -43,7 +45,7 @@ export const Medium: StoryObj<IconProps> = {
   },
 };
 
-export const Large: StoryObj<IconProps> = {
+export const Large: StoryObj<Args> = {
   ...Default,
   args: {
     ...Default.args,
@@ -51,7 +53,7 @@ export const Large: StoryObj<IconProps> = {
   },
 };
 
-export const FullScreen: StoryObj<IconProps> = {
+export const FullScreen: StoryObj<Args> = {
   ...Default,
   args: {
     ...Default.args,
@@ -64,7 +66,7 @@ export const FullScreen: StoryObj<IconProps> = {
   },
 };
 
-export const CustomColor: StoryObj<IconProps> = {
+export const CustomColor: StoryObj<Args> = {
   ...Default,
   args: {
     ...Default.args,
@@ -73,7 +75,7 @@ export const CustomColor: StoryObj<IconProps> = {
   },
 };
 
-export const InText: StoryObj<IconProps> = {
+export const InText: StoryObj<Args> = {
   render: (args) => {
     return (
       <Text as="p">
@@ -107,7 +109,7 @@ export const InText: StoryObj<IconProps> = {
   },
 };
 
-export const WithChildrenSvg: StoryObj<IconProps> = {
+export const WithChildrenSvg: StoryObj<Args> = {
   ...Default,
   args: {
     viewBox: '0 0 24 24',

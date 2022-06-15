@@ -20,18 +20,6 @@ export default {
       </>
     ),
   },
-  decorators: [
-    (Story) => (
-      <div
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-        }}
-      >
-        <Story />
-      </div>
-    ),
-  ],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Breadcrumbs>;

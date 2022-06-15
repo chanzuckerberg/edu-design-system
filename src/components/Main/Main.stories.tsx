@@ -1,8 +1,8 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
-import { Story, Meta } from '@storybook/react';
+import { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
-import { Main, Props } from './Main';
+import { Main } from './Main';
 
 export default {
   title: 'Molecules/Layout and Containers/Main',
@@ -14,13 +14,11 @@ export default {
     },
     badges: [BADGE.BETA],
   },
+  args: {
+    children: <div className="fpo">Main element</div>,
+  },
 } as Meta;
 
-const Template: Story<Props> = (args) => (
-  <Main {...args}>
-    <div className="fpo">Main element</div>
-  </Main>
-);
+type Args = React.ComponentProps<typeof Main>;
 
-export const Default = Template.bind({});
-Default.args = {};
+export const Default: StoryObj<Args> = {};

@@ -1,7 +1,7 @@
-import { Story, Meta } from '@storybook/react';
+import { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
-import { ButtonDropdown, Props } from './ButtonDropdown';
+import { ButtonDropdown } from './ButtonDropdown';
 import { Button } from '../Button/Button';
 import { DropdownMenuItem } from '../DropdownMenuItem/DropdownMenuItem';
 import { Icon } from '../Icon/Icon';
@@ -12,46 +12,50 @@ export default {
     layout: 'centered',
   },
   component: ButtonDropdown,
-} as Meta;
+  subcomponents: { DropdownMenuItem },
+  args: {
+    children: (
+      <>
+        <DropdownMenuItem>
+          <Icon name="schedule" purpose="decorative" size="1.25rem" />
+          Item 1
+        </DropdownMenuItem>
+        <DropdownMenuItem>
+          <Icon name="schedule" purpose="decorative" size="1.25rem" />
+          Item 2
+        </DropdownMenuItem>
+        <DropdownMenuItem>
+          <Icon name="schedule" purpose="decorative" size="1.25rem" />
+          Item 3
+        </DropdownMenuItem>
+        <DropdownMenuItem>
+          <Icon name="schedule" purpose="decorative" size="1.25rem" />
+          Item 4
+        </DropdownMenuItem>
+      </>
+    ),
+    dropdownMenuTrigger: <Button>Open Dropdown</Button>,
+  },
+} as Meta<Args>;
 
-const Template: Story<Props> = (args) => (
-  <ButtonDropdown
-    {...args}
-    dropdownMenuTrigger={<Button>Open Dropdown</Button>}
-  >
-    <DropdownMenuItem>
-      <Icon name="schedule" purpose="decorative" size="1.25rem" />
-      Item 1
-    </DropdownMenuItem>
-    <DropdownMenuItem>
-      <Icon name="schedule" purpose="decorative" size="1.25rem" />
-      Item 2
-    </DropdownMenuItem>
-    <DropdownMenuItem>
-      <Icon name="schedule" purpose="decorative" size="1.25rem" />
-      Item 3
-    </DropdownMenuItem>
-    <DropdownMenuItem>
-      <Icon name="schedule" purpose="decorative" size="1.25rem" />
-      Item 4
-    </DropdownMenuItem>
-  </ButtonDropdown>
-);
+type Args = React.ComponentProps<typeof ButtonDropdown>;
 
-export const Default = Template.bind({});
-Default.args = {};
+export const Default: StoryObj<Args> = {};
 
-export const PositionTopLeft = Template.bind({});
-PositionTopLeft.args = {
-  position: 'top-left',
+export const PositionTopLeft: StoryObj<Args> = {
+  args: {
+    position: 'top-left',
+  },
 };
 
-export const PositionTopRight = Template.bind({});
-PositionTopRight.args = {
-  position: 'top-right',
+export const PositionTopRight: StoryObj<Args> = {
+  args: {
+    position: 'top-right',
+  },
 };
 
-export const PositionBottomRight = Template.bind({});
-PositionBottomRight.args = {
-  position: 'bottom-right',
+export const PositionBottomRight: StoryObj<Args> = {
+  args: {
+    position: 'bottom-right',
+  },
 };

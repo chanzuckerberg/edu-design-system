@@ -14,9 +14,11 @@ export default {
   parameters: {
     badges: [BADGE.BETA],
   },
-} as Meta;
+} as Meta<Args>;
 
-export const Default: StoryObj<Props & NotificationListItemProps> = {
+type Args = Props & NotificationListItemProps;
+
+export const Default: StoryObj<Args> = {
   render: (args) => (
     <NotificationList>
       <NotificationList.Item

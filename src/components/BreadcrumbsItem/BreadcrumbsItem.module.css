@@ -6,27 +6,32 @@
 
 /**
  * Breadcrumbs list item
- * 1) Hides all breadcrumbs except the last breadcrumb in smaller breakpoints.
- * 2) Prevents breaking of breadcrumbs into multiple lines.
- * 3) Display breadcrumbs in larger breakpoints.
+ * 1) Required for dropdown menu to absolutely position relative to this container.
+ * 2) Hides all breadcrumbs except the last breadcrumb in smaller breakpoints.
+ * 3) Prevents breaking of breadcrumbs into multiple lines.
+ * 4) Display breadcrumbs in larger breakpoints.
  */
 .breadcrumbs__item {
   @mixin eds-theme-typography-body-text-xs;
+  max-width: 100%;
+  position: relative; /* 1 */
 
-  display: none; /* 1 */
-  flex-wrap: nowrap; /* 2 */
-  flex-shrink: 0; /* 2 */
-  min-width: 0; /* 2 */
+  display: none; /* 2 */
+
+  /* 3 */
+  flex-shrink: 0;
+  min-width: 0;
+
   align-items: center;
 
   @media all and (max-width: $eds-bp-md) {
     &:last-of-type {
-      display: flex; /* 1 */
+      display: flex; /* 2 */
       flex: 1;
     }
   }
   @media all and (min-width: $eds-bp-md) {
-    display: flex; /* 3 */
+    display: flex; /* 4 */
   }
 }
 
@@ -119,7 +124,6 @@
  */
 .breadcrumbs__dropdown-menu {
   display: none;
-  width: 21rem;
   position: absolute;
   top: var(--eds-size-3);
   z-index: var(--eds-z-index-100);
@@ -127,4 +131,7 @@
 /* 1 */
 .breadcrumbs__dropdown-menu--active {
   display: block;
+}
+.breadcrumbs__dropdown-menu.breadcrumbs__dropdown-menu {
+  width: 21rem;
 }

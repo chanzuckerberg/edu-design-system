@@ -1,8 +1,8 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
-import { Story, Meta } from '@storybook/react';
+import { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
-import { UtilityNav, Props } from './UtilityNav';
+import { UtilityNav } from './UtilityNav';
 import { UtilityNavItem } from '../UtilityNavItem/UtilityNavItem';
 
 export default {
@@ -11,6 +11,15 @@ export default {
   subcomponents: { UtilityNavItem },
   parameters: {
     badges: [BADGE.BETA],
+  },
+  args: {
+    children: (
+      <>
+        <UtilityNav.Item href="#" text="Utility nav"></UtilityNav.Item>
+        <UtilityNav.Item href="#" text="Utility nav"></UtilityNav.Item>
+        <UtilityNav.Item href="#" text="Utility nav"></UtilityNav.Item>
+      </>
+    ),
   },
   decorators: [
     (Story) => (
@@ -21,13 +30,6 @@ export default {
   ],
 } as Meta;
 
-const Template: Story<Props> = (args) => (
-  <UtilityNav {...args}>
-    <UtilityNav.Item href="#" text="Utility nav"></UtilityNav.Item>
-    <UtilityNav.Item href="#" text="Utility nav"></UtilityNav.Item>
-    <UtilityNav.Item href="#" text="Utility nav"></UtilityNav.Item>
-  </UtilityNav>
-);
+type Args = React.ComponentProps<typeof UtilityNav>;
 
-export const Default = Template.bind({});
-Default.args = {};
+export const Default: StoryObj<Args> = {};

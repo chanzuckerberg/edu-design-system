@@ -22,6 +22,10 @@ export interface Props {
    */
   className?: string;
   /**
+   * Sets the popover to open or closed by default
+   */
+  isActive?: boolean;
+  /**
    * Available _stylistic_ variations available for the Button component
    */
   position?: 'top-left' | 'bottom-left' | 'bottom-right';
@@ -33,9 +37,10 @@ export interface Props {
 export const PopoverExample: React.FC<Props> = ({
   className,
   position,
+  isActive,
   ...other
 }) => {
-  const [popoverOpen, setPopoverOpen] = useState(false);
+  const [popoverOpen, setPopoverOpen] = useState(!!isActive);
   const popoverButton = useRef<HTMLButtonElement>(null);
 
   function openPopover() {
@@ -54,7 +59,7 @@ export const PopoverExample: React.FC<Props> = ({
     }
     setPopoverOpen(false);
   }
-  const componentClassName = clsx('tooltip-popover', className, {});
+  const componentClassName = clsx('tooltip-popover', className);
   return (
     <div
       className={componentClassName}
@@ -72,6 +77,7 @@ export const PopoverExample: React.FC<Props> = ({
       <Popover
         ariaDescribedBy="popover-description-1"
         ariaLabelledBy="popover-heading-1"
+        data-testid="popover-test"
         isActive={popoverOpen}
         onClose={closePopover}
         position={position}
