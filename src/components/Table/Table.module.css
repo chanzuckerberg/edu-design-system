@@ -89,9 +89,7 @@
   border-bottom-color: var(--eds-theme-color-border-neutral-subtle);
 
   .table__header & {
-    border-bottom-width: var(--eds-border-width-md);
-    border-bottom-style: solid;
-    border-bottom-color: var(--eds-theme-color-border-neutral-subtle);
+    border-bottom-color: var(--eds-theme-color-border-neutral-default);
   }
 
   /**
@@ -106,17 +104,19 @@
     }
   }
 
-  .table--stacked & {
+  .table--stacked > .table__body & {
     display: block;
     width: 100%;
     border: var(--eds-theme-border-width) solid
-      var(--eds-theme-color-border-neutral-default);
+      var(--eds-theme-color-border-neutral-subtle);
     border-radius: var(--eds-border-radius-md);
     margin-bottom: var(--eds-size-2);
 
     @media all and (min-width: $eds-bp-md) {
       display: table-row;
-      border: initial;
+      border-top: none;
+      border-right: none;
+      border-left: none;
     }
   }
 }
