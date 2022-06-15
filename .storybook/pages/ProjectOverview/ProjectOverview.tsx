@@ -24,7 +24,7 @@ import { PageShell } from '../../recipes/PageShell/PageShell';
 export const ProjectOverview = () => {
   return (
     <PageShell>
-      <Breadcrumbs>
+      <Breadcrumbs className="u-margin-bottom-md">
         <BreadcrumbsItem href="#" text="My Courses" />
         <BreadcrumbsItem href="#" text="Disciplinary Science 7" />
       </Breadcrumbs>
