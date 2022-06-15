@@ -1,4 +1,4 @@
-import type { StoryObj } from '@storybook/react';
+import type { StoryObj, Meta } from '@storybook/react';
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import { useState } from 'react';
@@ -14,7 +14,7 @@ export default {
     // which renders testing it for visual regressions unhelpful.
     chromatic: { disableSnapshot: true },
   },
-};
+} as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Modal>;
 type InteractiveArgs = Omit<Args, 'onClose' | 'open'>;

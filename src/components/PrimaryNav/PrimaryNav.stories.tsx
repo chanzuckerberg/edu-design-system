@@ -1,8 +1,8 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
-import { Story, Meta } from '@storybook/react';
+import { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
-import { PrimaryNav, Props } from './PrimaryNav';
+import { PrimaryNav } from './PrimaryNav';
 import PrimaryNavItem from '../PrimaryNavItem';
 
 export default {
@@ -19,15 +19,17 @@ export default {
       </div>
     ),
   ],
-} as Meta;
+  args: {
+    children: (
+      <>
+        <PrimaryNav.Item href="#" text="Nav Item" />
+        <PrimaryNav.Item href="#" isActive={true} text="Nav Item" />
+        <PrimaryNav.Item href="#" text="Nav Item" />
+      </>
+    ),
+  },
+} as Meta<Args>;
 
-const Template: Story<Props> = (args) => (
-  <PrimaryNav {...args}>
-    <PrimaryNav.Item href="#" text="Nav Item" />
-    <PrimaryNav.Item href="#" isActive={true} text="Nav Item" />
-    <PrimaryNav.Item href="#" text="Nav Item" />
-  </PrimaryNav>
-);
+type Args = React.ComponentProps<typeof PrimaryNav>;
 
-export const Default = Template.bind({});
-Default.args = {};
+export const Default: StoryObj<Args> = {};

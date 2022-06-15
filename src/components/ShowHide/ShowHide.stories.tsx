@@ -1,8 +1,8 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
-import { Story, Meta } from '@storybook/react';
+import { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
-import { ShowHide, Props } from './ShowHide';
+import { ShowHide } from './ShowHide';
 import Button from '../Button';
 import Icon from '../Icon';
 
@@ -16,22 +16,27 @@ export default {
     },
     badges: [BADGE.BETA],
   },
-} as Meta;
+  decorators: [
+    (Story) => (
+      <div style={{ margin: '10rem' }}>
+        <Story />
+      </div>
+    ),
+  ],
+  args: {
+    children: <div className="fpo">Hidden Content</div>,
+    trigger: (
+      <Button type="button" variant="primary">
+        <Icon name="expand-more" purpose="decorative" />
+      </Button>
+    ),
+  },
+} as Meta<Args>;
 
-const Template: Story<Props> = (args) => (
-  <div style={{ margin: '10rem' }}>
-    <ShowHide
-      trigger={
-        <Button type="button" variant="primary">
-          <Icon name="expand-more" purpose="decorative" />
-        </Button>
-      }
-      {...args}
-    >
-      <div className="fpo">Hidden Content</div>
-    </ShowHide>
-  </div>
-);
+type Args = React.ComponentProps<typeof ShowHide>;
 
-export const Default = Template.bind({});
-Default.args = { text: 'Actions' };
+export const Default: StoryObj<Args> = {
+  args: {
+    text: 'Actions',
+  },
+};
