@@ -11,20 +11,23 @@ type Props = {
   className?: string;
   /**
    * URL for the breadcrumbs item.
-   * Required since breadcrubms should reroute user.
+   * Required since breadcrumbs should reroute user.
    * Null case is used for the collapsed variant, which uses dropdownMenuItems which has hrefs.
    */
   href: string | null;
   /**
    * URLs for the collapsed breadcrumbs variant.
+   * Should be <DropdownMenuItem href={href}>{text}</DropdownMenuItem>.
    */
   dropdownMenuItems?: React.ReactNode[];
   /**
-   * Breadcrumbs item text
+   * Breadcrumbs item text.
    */
   text?: string;
   /**
-   * Back button variant for mobile.
+   * Behavior variations for the breadcrumbs item.
+   * - **back** - results in a left facing icon, usually denoting the second last breadcrumb item in a mobile breakpoint.
+   * - **collapsed** - results in an ellipsis, where interaction spawns a dropdown menu containing more links.
    */
   variant?: 'back' | 'collapsed';
 };
@@ -48,6 +51,9 @@ export const BreadcrumbsItem = ({
 }: Props) => {
   const [isActive, setIsActive] = React.useState(false);
 
+  /**
+   * Closes the dropdown menu if there is focus or click outside.
+   */
   const handleBlur = (event: React.FocusEvent<HTMLElement, Element>) => {
     if (!event.currentTarget.contains(event.relatedTarget) && isActive) {
       setIsActive(false);
@@ -60,9 +66,9 @@ export const BreadcrumbsItem = ({
     className,
   );
 
-  const ellipseButtonClassName = clsx(
+  const ellipsisButtonClassName = clsx(
     styles['breadcrumbs__link'],
-    styles['breadcrumbs__ellipse'],
+    styles['breadcrumbs__ellipsis'],
   );
 
   const dropdownMenuClassName = clsx(
@@ -72,38 +78,50 @@ export const BreadcrumbsItem = ({
 
   return (
     <li className={componentClassName} {...other}>
-      {variant === 'collapsed' ? (
-        <>
-          <button
-            className={ellipseButtonClassName}
-            onClick={() => {
-              setIsActive(!isActive);
-            }}
-          >
-            ...
-          </button>
-          <DropdownMenu
-            className={dropdownMenuClassName}
-            isActive={isActive}
-            onBlur={handleBlur}
-          >
-            {dropdownMenuItems}
-          </DropdownMenu>
-        </>
-      ) : (
-        <a className={styles['breadcrumbs__link']} href={href as string}>
-          {variant === 'back' ? (
-            <Icon
-              className={styles['breadcrumbs__back-icon']}
-              name="chevron-left"
-              purpose="informative"
-              title="back"
-            />
-          ) : (
-            text
-          )}
-        </a>
-      )}
+      {/**
+       * 1) The collapsed variant is a button with ellipsis. Interaction spawns a dropdown containing the collapsed breadcrumb links.
+       * 2) The back variant is a left pointing icon that usually links to the second last breadcrumb href.
+       * 3) The default variant displays the prop text and links the prop href.
+       * 4) The decorative separator between breadcrumbs items.
+       */}
+      {
+        /* 1 */
+        variant === 'collapsed' ? (
+          <>
+            <button
+              className={ellipsisButtonClassName}
+              onClick={() => {
+                setIsActive(!isActive);
+              }}
+            >
+              ...
+            </button>
+            <DropdownMenu
+              className={dropdownMenuClassName}
+              isActive={isActive}
+              onBlur={handleBlur}
+            >
+              {dropdownMenuItems}
+            </DropdownMenu>
+          </>
+        ) : (
+          <a className={styles['breadcrumbs__link']} href={href as string}>
+            {/* 2 */}
+            {variant === 'back' ? (
+              <Icon
+                className={styles['breadcrumbs__back-icon']}
+                name="chevron-left"
+                purpose="informative"
+                title="back"
+              />
+            ) : (
+              /* 3 */
+              text
+            )}
+          </a>
+        )
+      }
+      {/* 4 */}
       <span aria-hidden className={styles['breadcrumbs__icon']}>
         /
       </span>

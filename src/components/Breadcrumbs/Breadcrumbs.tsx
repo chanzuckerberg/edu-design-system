@@ -47,6 +47,9 @@ export const Breadcrumbs = ({
 
   const ref = React.useRef<HTMLUListElement>(null);
 
+  /**
+   * Checks if breadcrumbs would overflow
+   */
   const updateShouldTruncate = () => {
     setShouldTruncate(false);
     if (
@@ -58,34 +61,39 @@ export const Breadcrumbs = ({
     }
   };
 
+  /**
+   * Needs useLayoutEffect over useEffect since it needs to be run before paint.
+   * TODO: with React 18, might be able to use useEffect https://github.com/reactjs/reactjs.org/blob/d14cbdca2445cd676526c4c52e1e106342ff7bb3/content/docs/hooks-reference.md?plain=1#L155
+   */
   React.useLayoutEffect(() => {
     updateShouldTruncate();
     window.addEventListener('resize', updateShouldTruncate);
     return () => {
       window.removeEventListener('resize', updateShouldTruncate);
     };
-  }, [children]);
+  }, []);
 
-  const generatedId = useUID();
-  const breadcrumbsId = id || generatedId;
-
-  const breadcrumbItems = flattenBreadCrumbItems(children);
+  /**
+   * 1) Flattens breadcrumb items that may be wrapped in React.Fragment into an array so they can be manipulated easily
+   * 2) Finds the second last breadcrumb item for mobile Breadcrumbs back icon
+   * 3) Finds all the breadcrumb items between the first and last breadcrumb items so they can be placed in the dropdown.
+   */
+  const breadcrumbsItems = flattenBreadcrumbsItems(children); /* 1 */
+  /* 2 */
   const backBreadCrumb =
-    breadcrumbItems.length > 1
+    breadcrumbsItems.length > 1
       ? React.cloneElement(
-          breadcrumbItems[
-            breadcrumbItems.length - 2
+          breadcrumbsItems[
+            breadcrumbsItems.length - 2
           ] as React.ReactElement<any>,
           {
             variant: 'back',
           },
         )
       : null;
-
-  const componentClassName = clsx(styles['breadcrumbs'], className);
-
-  const dropdownMenuItems = breadcrumbItems
-    .slice(1, breadcrumbItems.length - 1)
+  /* 3 */
+  const dropdownMenuItems = breadcrumbsItems
+    .slice(1, breadcrumbsItems.length - 1)
     .map((breadcrumbItem, index) => {
       const menuItem = breadcrumbItem as JSX.Element;
       return (
@@ -98,6 +106,10 @@ export const Breadcrumbs = ({
       );
     });
 
+  const generatedId = useUID();
+  const breadcrumbsId = id || generatedId;
+
+  const componentClassName = clsx(styles['breadcrumbs'], className);
   return (
     <nav
       aria-label={ariaLabel}
@@ -105,30 +117,38 @@ export const Breadcrumbs = ({
       id={breadcrumbsId}
       {...other}
     >
+      {/**
+       * 1) Back icon breadcrumb always exists, just hidden via css depending on breakpoint to increase performance
+       * 2) The ellipsis breadcrumb with dropdown only exists if there would be overflow and there are 3 or more breadcrumb items
+       * 3) If (2) conditions aren't met, display all breadcrumbs
+       */}
       <ul className={styles['breadcrumbs__list']} ref={ref}>
+        {/* 1 */}
         {backBreadCrumb}
-        {shouldTruncate && breadcrumbItems.length > 2 ? (
+        {/* 2 */}
+        {shouldTruncate && breadcrumbsItems.length > 2 ? (
           <>
-            {breadcrumbItems[0]}
+            {breadcrumbsItems[0]}
             <BreadcrumbsItem
               dropdownMenuItems={dropdownMenuItems}
               href={null}
               variant="collapsed"
             />
-            {breadcrumbItems[breadcrumbItems.length - 1]}
+            {breadcrumbsItems[breadcrumbsItems.length - 1]}
           </>
         ) : (
-          breadcrumbItems
+          /* 3 */
+          breadcrumbsItems
         )}
       </ul>
     </nav>
   );
 };
 
-const flattenBreadCrumbItems = (children: React.ReactNode) => {
+const flattenBreadcrumbsItems = (children: React.ReactNode) => {
   const flattenedChildren = flattenReactChildren(children);
   /**
-   * Throws error if invalid children
+   * Throws error if children are not BreadcrumbsItems
    */
   const shouldThrowError = (flattenedChildren as JSX.Element[]).some(
     (child) => {
