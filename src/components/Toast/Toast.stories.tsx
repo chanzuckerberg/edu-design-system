@@ -1,4 +1,4 @@
-import type { StoryObj } from '@storybook/react';
+import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 import Toast from './Toast';
 
@@ -9,7 +9,7 @@ export default {
   args: {
     children: "You've got toast!",
   },
-};
+} as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Toast>;
 

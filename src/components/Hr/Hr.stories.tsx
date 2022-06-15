@@ -1,8 +1,8 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
-import { Story, Meta } from '@storybook/react';
+import { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
-import { Hr, Props } from './Hr';
+import { Hr } from './Hr';
 
 export default {
   title: 'Atoms/Text/Hr',
@@ -10,19 +10,20 @@ export default {
   parameters: {
     badges: [BADGE.BETA],
   },
-} as Meta;
+} as Meta<Args>;
 
-const Template: Story<Props> = (args) => <Hr {...args} />;
+type Args = React.ComponentProps<typeof Hr>;
 
-export const Default = Template.bind({});
-Default.args = {};
+export const Default: StoryObj<Args> = {};
 
-export const Large = Template.bind({});
-Large.args = {
-  size: 'lg',
+export const Large: StoryObj<Args> = {
+  args: {
+    size: 'lg',
+  },
 };
 
-export const Brand = Template.bind({});
-Brand.args = {
-  variant: 'brand',
+export const Brand: StoryObj<Args> = {
+  args: {
+    variant: 'brand',
+  },
 };
