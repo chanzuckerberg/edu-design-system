@@ -25,9 +25,6 @@ export default {
       </>
     ),
   },
-  render: ({ variant, ...other }) => {
-    return <PageLevelBanner variant={variant} {...other} />;
-  },
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof PageLevelBanner>;
