@@ -112,7 +112,7 @@ export const BreadcrumbsItem = ({
                 className={styles['breadcrumbs__back-icon']}
                 name="chevron-left"
                 purpose="informative"
-                title="back"
+                title={href as string}
               />
             ) : (
               /* 3 */

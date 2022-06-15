@@ -8,8 +8,7 @@
  * Breadcrumbs list item
  * 1) Required for dropdown menu to absolutely position relative to this container.
  * 2) Hides all breadcrumbs except the last breadcrumb in smaller breakpoints.
- * 3) Prevents breaking of breadcrumbs into multiple lines.
- * 4) Make non inclusive of medium breakpoint.
+ * 3) Truncate last breadcrumb in smaller breakpoints.
  * 4) Display breadcrumbs in larger breakpoints.
  */
 .breadcrumbs__item {
@@ -17,23 +16,23 @@
   max-width: 100%;
   position: relative; /* 1 */
 
-  display: none; /* 2 */
-
-  /* 3 */
+  /* 2 */
+  display: none;
   flex-shrink: 0;
+  &:last-of-type {
+    display: flex;
+    flex: 1 0 0%; /* 3 */
+  }
+
   min-width: 0;
 
   align-items: center;
 
-  /* 4 */
-  @media all and (max-width: calc($eds-bp-md - 1px)) {
-    &:last-of-type {
-      display: flex; /* 2 */
-      flex: 1;
-    }
-  }
   @media all and (min-width: $eds-bp-md) {
-    display: flex; /* 5 */
+    display: flex; /* 4 */
+    &:last-of-type {
+      flex: 0 0 auto; /* 3 */
+    }
   }
 }
 

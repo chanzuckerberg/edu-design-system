@@ -1,4 +1,5 @@
 import clsx from 'clsx';
+import debounce from 'lodash.debounce';
 import React, { ReactNode } from 'react';
 import { useUID } from 'react-uid';
 import styles from './Breadcrumbs.module.css';
@@ -60,6 +61,7 @@ export const Breadcrumbs = ({
       setShouldTruncate(true);
     }
   };
+  const debouncedUpdateShouldTruncate = debounce(updateShouldTruncate, 200);
 
   /**
    * Needs useLayoutEffect over useEffect since it needs to be run before paint.
@@ -67,11 +69,11 @@ export const Breadcrumbs = ({
    */
   React.useLayoutEffect(() => {
     updateShouldTruncate();
-    window.addEventListener('resize', updateShouldTruncate);
+    window.addEventListener('resize', debouncedUpdateShouldTruncate);
     return () => {
-      window.removeEventListener('resize', updateShouldTruncate);
+      window.removeEventListener('resize', debouncedUpdateShouldTruncate);
     };
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   /**
    * 1) Flattens breadcrumb items that may be wrapped in React.Fragment into an array so they can be manipulated easily
