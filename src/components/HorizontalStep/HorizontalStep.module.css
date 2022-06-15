@@ -10,7 +10,6 @@
   display: flex;
   align-items: center;
   gap: var(--eds-size-1);
-
   min-width: 0; /* 1 */
 }
 
@@ -25,6 +24,14 @@
 }
 .horizontal-step--incomplete {
   color: var(--eds-theme-color-text-neutral-subtle);
+}
+
+/**
+ * Inherits the color from the parent
+ * 1) Changes icon from black to gray by default
+ */
+.horizontal-step__number-icon {
+  color: inherit;
 }
 
 /**
