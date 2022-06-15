@@ -1,0 +1,145 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PageHeader /> Centered story renders snapshot 1`] = `
+<header
+  class="page-header page-header--center"
+>
+  <div
+    class="page-header__left"
+  >
+    <h1
+      class="page-header__title heading heading--size-headline-lg heading--base"
+    >
+      Page header title
+    </h1>
+    <div
+      class="page-header__description"
+    >
+      This is a description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </div>
+  </div>
+</header>
+`;
+
+exports[`<PageHeader /> Default story renders snapshot 1`] = `
+<header
+  class="page-header"
+>
+  <div
+    class="page-header__left"
+  >
+    <h1
+      class="page-header__title heading heading--size-headline-lg heading--base"
+    >
+      Page header title
+    </h1>
+  </div>
+</header>
+`;
+
+exports[`<PageHeader /> TitleAfter story renders snapshot 1`] = `
+<header
+  class="page-header"
+>
+  <div
+    class="page-header__left"
+  >
+    <h1
+      class="page-header__title heading heading--size-headline-lg heading--base"
+    >
+      Page header title
+      <div
+        class="page-header__title-after"
+      >
+        <span
+          class="text text--sm text--bold-weight tag tag--neutral"
+        >
+          <span
+            class="tag__body"
+          >
+            Title after content
+          </span>
+        </span>
+      </div>
+    </h1>
+    <div
+      class="page-header__description"
+    >
+      This is a description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </div>
+  </div>
+</header>
+`;
+
+exports[`<PageHeader /> TwoUp story renders snapshot 1`] = `
+<header
+  class="page-header page-header--2up"
+>
+  <div
+    class="page-header__left"
+  >
+    <h1
+      class="page-header__title heading heading--size-headline-lg heading--base"
+    >
+      Page header title
+    </h1>
+    <div
+      class="page-header__description"
+    >
+      This is a description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </div>
+  </div>
+  <div
+    class="page-header__right"
+  >
+    Right content. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  </div>
+</header>
+`;
+
+exports[`<PageHeader /> WithDescription story renders snapshot 1`] = `
+<header
+  class="page-header"
+>
+  <div
+    class="page-header__left"
+  >
+    <h1
+      class="page-header__title heading heading--size-headline-lg heading--base"
+    >
+      Page header title
+    </h1>
+    <div
+      class="page-header__description"
+    >
+      This is a description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+    </div>
+  </div>
+</header>
+`;
+
+exports[`<PageHeader /> WithKicker story renders snapshot 1`] = `
+<header
+  class="page-header"
+>
+  <div
+    class="page-header__left"
+  >
+    <p
+      class="page-header__kicker"
+    >
+      Kicker above title
+    </p>
+    <h1
+      class="page-header__title heading heading--size-headline-lg heading--base"
+    >
+      Page header title
+    </h1>
+    <div
+      class="page-header__description"
+    >
+      This is a description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </div>
+  </div>
+</header>
+`;

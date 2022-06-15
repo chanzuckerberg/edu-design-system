@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Card /> Default story renders snapshot 1`] = `
+<article
+  class="card"
+>
+  <header
+    class="card__header"
+  >
+    <div
+      class="fpo"
+    >
+      Card Header
+    </div>
+  </header>
+  <div
+    class="card__body"
+  >
+    <div
+      class="fpo"
+    >
+      Card Body
+    </div>
+  </div>
+  <footer
+    class="card__footer"
+  >
+    <div
+      class="fpo"
+    >
+      Card Footer
+    </div>
+  </footer>
+</article>
+`;
+
+exports[`<Card /> Horizontal story renders snapshot 1`] = `
+<article
+  class="card card--horizontal"
+>
+  <header
+    class="card__header"
+  >
+    <div
+      class="fpo"
+    >
+      Card Header
+    </div>
+  </header>
+  <div
+    class="card__body"
+  >
+    <div
+      class="fpo"
+    >
+      Card Body
+    </div>
+  </div>
+  <footer
+    class="card__footer"
+  >
+    <div
+      class="fpo"
+    >
+      Card Footer
+    </div>
+  </footer>
+</article>
+`;
+
+exports[`<Card /> Inverted story renders snapshot 1`] = `
+<div
+  style="background-color: black; padding: 1rem;"
+>
+  <article
+    class="card card--inverted"
+  >
+    <header
+      class="card__header"
+    >
+      <div
+        class="fpo"
+      >
+        Card Header
+      </div>
+    </header>
+    <div
+      class="card__body"
+    >
+      <div
+        class="fpo"
+      >
+        Card Body
+      </div>
+    </div>
+    <footer
+      class="card__footer"
+    >
+      <div
+        class="fpo"
+      >
+        Card Footer
+      </div>
+    </footer>
+  </article>
+</div>
+`;
+
+exports[`<Card /> Raised story renders snapshot 1`] = `
+<article
+  class="card card--raised"
+>
+  <header
+    class="card__header"
+  >
+    <div
+      class="fpo"
+    >
+      Card Header
+    </div>
+  </header>
+  <div
+    class="card__body"
+  >
+    <div
+      class="fpo"
+    >
+      Card Body
+    </div>
+  </div>
+  <footer
+    class="card__footer"
+  >
+    <div
+      class="fpo"
+    >
+      Card Footer
+    </div>
+  </footer>
+</article>
+`;

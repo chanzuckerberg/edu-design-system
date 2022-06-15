@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ShowHide /> Default story renders snapshot 1`] = `
+<div
+  style="margin: 10rem;"
+>
+  <div
+    class="show-hide"
+  >
+    <button
+      aria-expanded="false"
+      class="clickable-style button show-hide__trigger button--primary clickable-style--lg clickable-style--primary clickable-style--brand"
+      text="Actions"
+      type="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="icon"
+        fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="test-file-stub#expand-more"
+        />
+      </svg>
+    </button>
+    <div
+      class="show-hide__panel"
+      hidden=""
+    >
+      <div
+        class="fpo"
+      >
+        Hidden Content
+      </div>
+    </div>
+  </div>
+</div>
+`;
