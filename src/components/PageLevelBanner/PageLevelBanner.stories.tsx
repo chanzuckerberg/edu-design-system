@@ -1,7 +1,7 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
-import { PageLevelBanner, Variant } from './PageLevelBanner';
+import { PageLevelBanner } from './PageLevelBanner';
 import Button from '../Button';
 
 export default {
@@ -10,34 +10,27 @@ export default {
   args: {
     title:
       'New curriculum updates are available for one or more of your courses.',
+    description: (
+      <>
+        Summit Learning has a full-time team dedicated to constantly improving
+        our curriculum. To see the updates,{' '}
+        <Button
+          onClick={(event: any) => event.preventDefault()}
+          status="neutral"
+          variant="link"
+        >
+          click into the course
+        </Button>
+        .
+      </>
+    ),
   },
   render: ({ variant, ...other }) => {
-    return (
-      <PageLevelBanner
-        description={getDescription(variant)}
-        variant={variant}
-        {...other}
-      />
-    );
+    return <PageLevelBanner variant={variant} {...other} />;
   },
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof PageLevelBanner>;
-
-const getDescription = (status?: Variant) => (
-  <>
-    Summit Learning has a full-time team dedicated to constantly improving our
-    curriculum. To see the updates,{' '}
-    <Button
-      onClick={(event: any) => event.preventDefault()}
-      status={status}
-      variant="link"
-    >
-      click into the course
-    </Button>
-    .
-  </>
-);
 
 const dismissMethod = () => {
   console.log('dismissing~');

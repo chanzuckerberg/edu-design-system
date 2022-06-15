@@ -25,6 +25,19 @@ exports[`<PageLevelBanner /> Brand story renders snapshot 1`] = `
     >
       New curriculum updates are available for one or more of your courses.
     </h3>
+    <p
+      class="text text--sm text--neutral"
+    >
+      Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
+       
+      <button
+        class="clickable-style button button--link clickable-style--link clickable-style--neutral"
+        type="button"
+      >
+        click into the course
+      </button>
+      .
+    </p>
   </div>
 </article>
 `;
@@ -74,6 +87,19 @@ exports[`<PageLevelBanner /> BrandDismissable story renders snapshot 1`] = `
     >
       New curriculum updates are available for one or more of your courses.
     </h3>
+    <p
+      class="text text--sm text--neutral"
+    >
+      Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
+       
+      <button
+        class="clickable-style button button--link clickable-style--link clickable-style--neutral"
+        type="button"
+      >
+        click into the course
+      </button>
+      .
+    </p>
   </div>
 </article>
 `;
@@ -103,6 +129,19 @@ exports[`<PageLevelBanner /> Error story renders snapshot 1`] = `
     >
       New curriculum updates are available for one or more of your courses.
     </h3>
+    <p
+      class="text text--sm text--neutral"
+    >
+      Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
+       
+      <button
+        class="clickable-style button button--link clickable-style--link clickable-style--neutral"
+        type="button"
+      >
+        click into the course
+      </button>
+      .
+    </p>
   </div>
 </article>
 `;
@@ -152,6 +191,19 @@ exports[`<PageLevelBanner /> ErrorDismissable story renders snapshot 1`] = `
     >
       New curriculum updates are available for one or more of your courses.
     </h3>
+    <p
+      class="text text--sm text--neutral"
+    >
+      Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
+       
+      <button
+        class="clickable-style button button--link clickable-style--link clickable-style--neutral"
+        type="button"
+      >
+        click into the course
+      </button>
+      .
+    </p>
   </div>
 </article>
 `;
@@ -204,7 +256,21 @@ exports[`<PageLevelBanner /> NoTitle story renders snapshot 1`] = `
       xlink:href="test-file-stub#notifications"
     />
   </svg>
-  <div />
+  <div>
+    <p
+      class="text text--sm text--neutral"
+    >
+      Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
+       
+      <button
+        class="clickable-style button button--link clickable-style--link clickable-style--neutral"
+        type="button"
+      >
+        click into the course
+      </button>
+      .
+    </p>
+  </div>
 </article>
 `;
 
@@ -233,6 +299,19 @@ exports[`<PageLevelBanner /> Success story renders snapshot 1`] = `
     >
       New curriculum updates are available for one or more of your courses.
     </h3>
+    <p
+      class="text text--sm text--neutral"
+    >
+      Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
+       
+      <button
+        class="clickable-style button button--link clickable-style--link clickable-style--neutral"
+        type="button"
+      >
+        click into the course
+      </button>
+      .
+    </p>
   </div>
 </article>
 `;
@@ -282,6 +361,19 @@ exports[`<PageLevelBanner /> SuccessDismissable story renders snapshot 1`] = `
     >
       New curriculum updates are available for one or more of your courses.
     </h3>
+    <p
+      class="text text--sm text--neutral"
+    >
+      Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
+       
+      <button
+        class="clickable-style button button--link clickable-style--link clickable-style--neutral"
+        type="button"
+      >
+        click into the course
+      </button>
+      .
+    </p>
   </div>
 </article>
 `;
@@ -311,6 +403,19 @@ exports[`<PageLevelBanner /> Warning story renders snapshot 1`] = `
     >
       New curriculum updates are available for one or more of your courses.
     </h3>
+    <p
+      class="text text--sm text--neutral"
+    >
+      Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
+       
+      <button
+        class="clickable-style button button--link clickable-style--link clickable-style--neutral"
+        type="button"
+      >
+        click into the course
+      </button>
+      .
+    </p>
   </div>
 </article>
 `;
@@ -360,6 +465,19 @@ exports[`<PageLevelBanner /> WarningDismissable story renders snapshot 1`] = `
     >
       New curriculum updates are available for one or more of your courses.
     </h3>
+    <p
+      class="text text--sm text--neutral"
+    >
+      Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
+       
+      <button
+        class="clickable-style button button--link clickable-style--link clickable-style--neutral"
+        type="button"
+      >
+        click into the course
+      </button>
+      .
+    </p>
   </div>
 </article>
 `;
