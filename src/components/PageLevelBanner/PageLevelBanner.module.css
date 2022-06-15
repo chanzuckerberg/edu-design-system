@@ -28,7 +28,7 @@
   --icon-size-default: var(--eds-size-3);
 }
 
-.banner__textContent {
+.banner__text-content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
