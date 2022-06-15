@@ -11,11 +11,6 @@ import {
   TimelineNavPanel,
   Heading,
   Text,
-  Button,
-  Hr,
-  Section,
-  Card,
-  CardBody,
   TableHeaderCell,
   TableRow,
   TableHeader,
@@ -23,7 +18,6 @@ import {
   TableBody,
   TableCell,
 } from '../../../src';
-import NumberIconList from '../../recipes/NumberIconList';
 
 import { PageShell } from '../../recipes/PageShell/PageShell';
 

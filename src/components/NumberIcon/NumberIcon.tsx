@@ -1,7 +1,6 @@
 import clsx from 'clsx';
 import React from 'react';
 import styles from './NumberIcon.module.css';
-import { EdsThemeColorIconNeutralSubtle } from '../../tokens-dist/ts/colors';
 import Icon from '../Icon';
 import Text from '../Text';
 
