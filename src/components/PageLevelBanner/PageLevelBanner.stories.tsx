@@ -1,4 +1,4 @@
-import type { StoryObj } from '@storybook/react';
+import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
 import { PageLevelBanner, Variant } from './PageLevelBanner';
@@ -11,7 +11,16 @@ export default {
     title:
       'New curriculum updates are available for one or more of your courses.',
   },
-};
+  render: ({ variant, ...other }) => {
+    return (
+      <PageLevelBanner
+        description={getDescription(variant)}
+        variant={variant}
+        {...other}
+      />
+    );
+  },
+} as Meta<Args>;
 
 type Args = React.ComponentProps<typeof PageLevelBanner>;
 
@@ -34,62 +43,45 @@ const dismissMethod = () => {
   console.log('dismissing~');
 };
 
-export const Brand: StoryObj<Args> = {
-  render: ({ variant, ...other }) => {
-    return (
-      <PageLevelBanner
-        description={getDescription(variant)}
-        variant={variant}
-        {...other}
-      />
-    );
-  },
-};
+export const Brand: StoryObj<Args> = {};
 
 export const Success: StoryObj<Args> = {
-  ...Brand,
   args: {
     variant: 'success',
   },
 };
 
 export const Warning: StoryObj<Args> = {
-  ...Brand,
   args: {
     variant: 'warning',
   },
 };
 
 export const Error: StoryObj<Args> = {
-  ...Brand,
   args: {
     variant: 'error',
   },
 };
 
 export const NoDescription: StoryObj<Args> = {
-  ...Brand,
   args: {
     description: undefined,
   },
 };
 
 export const NoTitle: StoryObj<Args> = {
-  ...Brand,
   args: {
     title: undefined,
   },
 };
 
 export const BrandDismissable: StoryObj<Args> = {
-  ...Brand,
   args: {
     onDismiss: dismissMethod,
   },
 };
 
 export const SuccessDismissable: StoryObj<Args> = {
-  ...Brand,
   args: {
     variant: 'success',
     onDismiss: dismissMethod,
@@ -97,7 +89,6 @@ export const SuccessDismissable: StoryObj<Args> = {
 };
 
 export const WarningDismissable: StoryObj<Args> = {
-  ...Brand,
   args: {
     variant: 'warning',
     onDismiss: dismissMethod,
@@ -105,7 +96,6 @@ export const WarningDismissable: StoryObj<Args> = {
 };
 
 export const ErrorDismissable: StoryObj<Args> = {
-  ...Brand,
   args: {
     variant: 'error',
     onDismiss: dismissMethod,
