@@ -3,15 +3,15 @@ import { Story, Meta } from '@storybook/react';
 import React from 'react';
 
 import { TableObject, Props } from './TableObject';
-import Table from '../Table';
-import TableBody from '../TableBody';
-import TableCell from '../TableCell';
-import TableHeader from '../TableHeader';
+import Table from '../../components/Table';
+import TableBody from '../../components/TableBody';
+import TableCell from '../../components/TableCell';
+import TableHeader from '../../components/TableHeader';
+import TableRow from '../../components/TableRow';
+import Toolbar from '../../components/Toolbar';
+import ToolbarItem from '../../components/ToolbarItem';
 import TableObjectBody from '../TableObjectBody';
 import TableObjectHeader from '../TableObjectHeader';
-import TableRow from '../TableRow';
-import Toolbar from '../Toolbar';
-import ToolbarItem from '../ToolbarItem';
 
 export default {
   title: 'Organisms/Tables/Table Object',
