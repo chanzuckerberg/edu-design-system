@@ -1,2 +1,2 @@
-export { PageLeveBanner as default } from './PageLeveBanner';
-export type { Variant, PageLeveBannerProps } from './PageLeveBanner';
+export { PageLevelBanner as default } from './PageLevelBanner';
+export type { Variant, PageLevelBannerProps } from './PageLevelBanner';

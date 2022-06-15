@@ -1,19 +1,19 @@
 import type { StoryObj } from '@storybook/react';
 import React from 'react';
 
-import { PageLeveBanner, Variant } from './PageLeveBanner';
+import { PageLevelBanner, Variant } from './PageLevelBanner';
 import Button from '../Button';
 
 export default {
-  title: 'Molecules/Messaging/PageLeveBanner',
-  component: PageLeveBanner,
+  title: 'Molecules/Messaging/PageLevelBanner',
+  component: PageLevelBanner,
   args: {
     title:
       'New curriculum updates are available for one or more of your courses.',
   },
 };
 
-type Args = React.ComponentProps<typeof PageLeveBanner>;
+type Args = React.ComponentProps<typeof PageLevelBanner>;
 
 const getDescription = (status?: Variant) => (
   <>
@@ -37,7 +37,7 @@ const dismissMethod = () => {
 export const Brand: StoryObj<Args> = {
   render: ({ variant, ...other }) => {
     return (
-      <PageLeveBanner
+      <PageLevelBanner
         description={getDescription(variant)}
         variant={variant}
         {...other}

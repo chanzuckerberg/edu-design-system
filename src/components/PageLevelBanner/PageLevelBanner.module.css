@@ -20,7 +20,7 @@
 }
 
 /**
- * PageLeveBanner informational icon
+ * PageLevelBanner informational icon
  * 1) Icon color matches the thick bottom border
  */
 .banner__icon {
@@ -35,7 +35,7 @@
 }
 
 /**
- * PageLeveBanner close button
+ * PageLevelBanner close button
  * 1) Button used to dismiss dismissable banners
  */
 .banner__close-btn.banner__close-btn {
@@ -57,7 +57,7 @@
 \*------------------------------------*/
 
 /**
- * PageLeveBanner success
+ * PageLevelBanner success
  */
 .banner--success {
   @mixin messagingSuccess;
@@ -65,7 +65,7 @@
 }
 
 /**
- * PageLeveBanner warning
+ * PageLevelBanner warning
  */
 .banner--warning {
   @mixin messagingWarning;
@@ -73,7 +73,7 @@
 }
 
 /**
- * PageLeveBanner error
+ * PageLevelBanner error
  */
 .banner--error {
   @mixin messagingError;
@@ -81,7 +81,7 @@
 }
 
 /**
- * PageLeveBanner brand
+ * PageLevelBanner brand
  */
 .banner--brand {
   @mixin messagingBrand;

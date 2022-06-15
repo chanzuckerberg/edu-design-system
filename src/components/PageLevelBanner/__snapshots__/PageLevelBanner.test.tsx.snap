@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<PageLeveBanner /> Brand story renders snapshot 1`] = `
+exports[`<PageLevelBanner /> Brand story renders snapshot 1`] = `
 <article
   class="banner banner--brand"
 >
@@ -42,7 +42,7 @@ exports[`<PageLeveBanner /> Brand story renders snapshot 1`] = `
 </article>
 `;
 
-exports[`<PageLeveBanner /> BrandDismissable story renders snapshot 1`] = `
+exports[`<PageLevelBanner /> BrandDismissable story renders snapshot 1`] = `
 <article
   class="banner banner--brand banner--dismissable"
 >
@@ -104,7 +104,7 @@ exports[`<PageLeveBanner /> BrandDismissable story renders snapshot 1`] = `
 </article>
 `;
 
-exports[`<PageLeveBanner /> Error story renders snapshot 1`] = `
+exports[`<PageLevelBanner /> Error story renders snapshot 1`] = `
 <article
   class="banner banner--error"
 >
@@ -146,7 +146,7 @@ exports[`<PageLeveBanner /> Error story renders snapshot 1`] = `
 </article>
 `;
 
-exports[`<PageLeveBanner /> ErrorDismissable story renders snapshot 1`] = `
+exports[`<PageLevelBanner /> ErrorDismissable story renders snapshot 1`] = `
 <article
   class="banner banner--error banner--dismissable"
 >
@@ -208,7 +208,7 @@ exports[`<PageLeveBanner /> ErrorDismissable story renders snapshot 1`] = `
 </article>
 `;
 
-exports[`<PageLeveBanner /> NoDescription story renders snapshot 1`] = `
+exports[`<PageLevelBanner /> NoDescription story renders snapshot 1`] = `
 <article
   class="banner banner--brand"
 >
@@ -237,7 +237,7 @@ exports[`<PageLeveBanner /> NoDescription story renders snapshot 1`] = `
 </article>
 `;
 
-exports[`<PageLeveBanner /> NoTitle story renders snapshot 1`] = `
+exports[`<PageLevelBanner /> NoTitle story renders snapshot 1`] = `
 <article
   class="banner banner--brand"
 >
@@ -274,7 +274,7 @@ exports[`<PageLeveBanner /> NoTitle story renders snapshot 1`] = `
 </article>
 `;
 
-exports[`<PageLeveBanner /> Success story renders snapshot 1`] = `
+exports[`<PageLevelBanner /> Success story renders snapshot 1`] = `
 <article
   class="banner banner--success"
 >
@@ -316,7 +316,7 @@ exports[`<PageLeveBanner /> Success story renders snapshot 1`] = `
 </article>
 `;
 
-exports[`<PageLeveBanner /> SuccessDismissable story renders snapshot 1`] = `
+exports[`<PageLevelBanner /> SuccessDismissable story renders snapshot 1`] = `
 <article
   class="banner banner--success banner--dismissable"
 >
@@ -378,7 +378,7 @@ exports[`<PageLeveBanner /> SuccessDismissable story renders snapshot 1`] = `
 </article>
 `;
 
-exports[`<PageLeveBanner /> Warning story renders snapshot 1`] = `
+exports[`<PageLevelBanner /> Warning story renders snapshot 1`] = `
 <article
   class="banner banner--warning"
 >
@@ -420,7 +420,7 @@ exports[`<PageLeveBanner /> Warning story renders snapshot 1`] = `
 </article>
 `;
 
-exports[`<PageLeveBanner /> WarningDismissable story renders snapshot 1`] = `
+exports[`<PageLevelBanner /> WarningDismissable story renders snapshot 1`] = `
 <article
   class="banner banner--warning banner--dismissable"
 >
