@@ -155,7 +155,7 @@ export const Popover = ({
    * 1) If escape button is struck, close the popover
    */
   const handleOnKeyDown = (e: KeyboardEvent<HTMLElement>) => {
-    if ([ESCAPE_KEYCODE].includes(e.key)) {
+    if (e.key === ESCAPE_KEYCODE) {
       handleOnClose(e); /* 1 */
     }
   };
