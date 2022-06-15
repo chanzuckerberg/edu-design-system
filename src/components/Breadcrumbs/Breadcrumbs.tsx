@@ -77,7 +77,7 @@ export const Breadcrumbs = ({
 
   /**
    * 1) Flattens breadcrumb items that may be wrapped in React.Fragment into an array so they can be manipulated easily
-   * 2) Finds the second last breadcrumb item for mobile Breadcrumbs back icon
+   * 2) Finds the second to last breadcrumb item for mobile Breadcrumbs back icon
    * 3) Finds all the breadcrumb items between the first and last breadcrumb items so they can be placed in the dropdown.
    */
   const breadcrumbsItems = flattenBreadcrumbsItems(children); /* 1 */
