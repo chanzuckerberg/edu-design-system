@@ -22,7 +22,7 @@ export interface Props {
    */
   className?: string;
   /**
-   * Sets the popover to open or close by default
+   * Sets the popover to open or closed by default
    */
   isActive?: boolean;
   /**
