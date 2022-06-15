@@ -5,39 +5,50 @@
 \*------------------------------------*/
 
 /**
- * Card recipe for displaying calendar data
+ * Card recipe for displaying calendar data with a colored left border (color dependent on variant)
+ * 1) Brand variant (default): brand colored left border
+ * 2) Revise variant
+ * 3) Success variant
  */
 .calendar-card {
   width: 16rem;
-  justify-content: space-between;
-  gap: var(--eds-size-1);
   background-color: var(--eds-theme-color-background-neutral-default-hover);
 }
 
 .calendar-card--brand {
+  /* 1 */
   border-left: var(--eds-border-width-lg) solid
     var(--eds-theme-color-border-brand-primary-strong);
 }
 
 .calendar-card--revise {
+  /* 2 */
   border-left: var(--eds-border-width-lg) solid
     var(--eds-theme-color-border-grade-revise-strong);
 }
 
 .calendar-card--success {
+  /* 3 */
   border-left: var(--eds-border-width-lg) solid
     var(--eds-theme-color-border-utility-success-strong);
+}
+
+.calendar-card__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--eds-size-1);
 }
 
 .calendar-card__title {
   @mixin eds-typography-preset-007-bold;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
   gap: var(--eds-size-1);
 }
 
-.calendar-card__title--icon {
+.calendar-card__title-icon {
   min-width: 1.2rem;
 }
 
@@ -48,7 +59,7 @@
   gap: var(--eds-size-1);
 }
 
-.calendar-card__dates--icon {
+.calendar-card__dates-icon {
   min-width: 1.2rem;
 }
 

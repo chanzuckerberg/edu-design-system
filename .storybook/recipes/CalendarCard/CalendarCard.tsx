@@ -71,49 +71,44 @@ export const CalendarCard = ({
   );
   return (
     <Card className={componentClassName} {...other}>
-      <Heading
-        as="h3"
-        className={styles['calendar-card__title']}
-        size="body-sm"
-      >
-        {(variant === 'success' || variant === 'revise') && (
-          <span className={styles['calendar-card__title--icon']}>
-            <Icon
-              name={
-                variant === 'success' ? 'status-check-circle' : 'status-error'
-              }
-              purpose="informative"
-              size="1.2rem"
-              title={variant}
-            />
+      <Card.Body className={styles['calendar-card__body']}>
+        <Heading
+          as="h3"
+          className={styles['calendar-card__title']}
+          size="body-sm"
+        >
+          {(variant === 'success' || variant === 'revise') && (
+            <span className={styles['calendar-card__title-icon']}>
+              <Icon
+                name={
+                  variant === 'success' ? 'status-check-circle' : 'status-error'
+                }
+                purpose="informative"
+                size="1.2rem"
+                title={variant}
+              />
+            </span>
+          )}
+          <span>{title}</span>
+        </Heading>
+        <Text as="p" className={styles['calendar-card__dates']} size="xs">
+          <span className={styles['calendar-card__dates-icon']}>
+            <Icon name="event-note" purpose="decorative" size="1.2rem" />
           </span>
-        )}
-        <span>{title}</span>
-      </Heading>
-      <Text as="p" className={styles['calendar-card__dates']} size="xs">
-        <span className={styles['calendar-card__dates--icon']}>
-          <Icon name="event-note" purpose="decorative" size="1.2rem" />
-        </span>
-        {dateStart} &mdash; {dateEnd} {meta}
-      </Text>
-      <div className={styles['calendar-card__tags']}>
-        {tags?.map(({ hasOutline, text, variant }) => (
-          <Tag
-            hasOutline={hasOutline || true}
-            key={`${text}`}
-            text={text}
-            variant={variant ? variant : 'neutral'}
-          />
-        ))}
-      </div>
-      {children}
+          {dateStart} &mdash; {dateEnd} {meta}
+        </Text>
+        <div className={styles['calendar-card__tags']}>
+          {tags?.map(({ hasOutline = true, text, variant = 'neutral' }) => (
+            <Tag
+              hasOutline={hasOutline}
+              key={text}
+              text={text}
+              variant={variant}
+            />
+          ))}
+        </div>
+        {children}
+      </Card.Body>
     </Card>
   );
 };
-
-/**
- * Re-exports subcomponents so consuming apps don't have to import the Card component or the individual subcomponents.
- */
-CalendarCard.Body = Card.Body;
-CalendarCard.Footer = Card.Footer;
-CalendarCard.Header = Card.Header;
