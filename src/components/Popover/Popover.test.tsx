@@ -6,27 +6,20 @@ import React from 'react';
 import * as PopoverStoryFile from './Popover.stories';
 
 const { Default } = composeStories(PopoverStoryFile);
+PopoverStoryFile.default.args = {
+  isActive: true,
+};
 
 describe('<Popover />', () => {
-  generateSnapshots(PopoverStoryFile, {
-    // Need to open the popover for snapping
-    getElement: (wrapper) => {
-      userEvent.click(screen.getByRole('button'));
-      return wrapper.baseElement;
-    },
-  });
+  generateSnapshots(PopoverStoryFile);
 
   it('should close Popover via escape key', async () => {
-    render(<Default />);
-    userEvent.click(screen.getByRole('button'));
+    render(<Default isActive />);
     expect(screen.getByTestId('popover-test')).toBeInTheDocument();
     expect(screen.getByTestId('popover-test')).toHaveAttribute(
       'aria-hidden',
       'false',
     );
-    // Needed to focus inside the popover due to animation
-    userEvent.tab();
-    expect(screen.getByTestId('popover-test')).toHaveFocus();
     userEvent.keyboard('{esc}');
     expect(screen.getByTestId('popover-test')).toHaveAttribute(
       'aria-hidden',
