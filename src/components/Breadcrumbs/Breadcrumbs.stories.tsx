@@ -26,6 +26,12 @@ type Args = React.ComponentProps<typeof Breadcrumbs>;
 
 export const Default: StoryObj<Args> = {};
 
+export const OneCrumb: StoryObj<Args> = {
+  args: {
+    children: <Breadcrumbs.Item href="#" text="Breadcrumb 1" />,
+  },
+};
+
 export const TwoCrumbs: StoryObj<Args> = {
   args: {
     children: (
@@ -65,19 +71,13 @@ export const LongText: StoryObj<Args> = {
         <Breadcrumbs.Item href="#" text="Breadcrumb 1" />
         <Breadcrumbs.Item
           href="#"
-          text="Breadcrumb 2 Lorem ipsum dolor sit amet, consectetur two lines at 320px"
+          text="Breadcrumb 2 Lorem ipsum dolor sit amet, no overflow is two lines at 320px"
         />
         <Breadcrumbs.Item
           href="#"
-          text="Breadcrumb 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 3 lines at 320px"
+          text="Breadcrumb 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, no overflow is 3 lines at 320px"
         />
       </>
     ),
-  },
-};
-
-export const OneItem: StoryObj<Args> = {
-  args: {
-    children: <Breadcrumbs.Item href="#" text="Breadcrumb 1" />,
   },
 };

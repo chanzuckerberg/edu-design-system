@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import React from 'react';
 import styles from './BreadcrumbsItem.module.css';
+import DropdownMenu from '../DropdownMenu';
 import Icon from '../Icon';
 
 type Props = {
@@ -9,9 +10,15 @@ type Props = {
    */
   className?: string;
   /**
-   * URL for the breadcrumbs item
+   * URL for the breadcrumbs item.
+   * Required since breadcrubms should reroute user.
+   * Null case is used for the collapsed variant, which uses dropdownMenuItems which has hrefs.
    */
-  href?: string;
+  href: string | null;
+  /**
+   * URLs for the collapsed breadcrumbs variant.
+   */
+  dropdownMenuItems?: React.ReactNode[];
   /**
    * Breadcrumbs item text
    */
@@ -19,7 +26,7 @@ type Props = {
   /**
    * Back button variant for mobile.
    */
-  variant?: 'back';
+  variant?: 'back' | 'collapsed';
 };
 
 /**
@@ -32,31 +39,71 @@ type Props = {
  * A single breadcrumb subcomponent, to be used in the Breadcrumbs component.
  */
 export const BreadcrumbsItem = ({
+  dropdownMenuItems,
   className,
   href,
   text,
   variant,
   ...other
 }: Props) => {
+  const [isActive, setIsActive] = React.useState(false);
+
+  const handleBlur = (event: React.FocusEvent<HTMLElement, Element>) => {
+    if (!event.currentTarget.contains(event.relatedTarget) && isActive) {
+      setIsActive(false);
+    }
+  };
+
   const componentClassName = clsx(
     styles['breadcrumbs__item'],
     variant === 'back' && styles['breadcrumbs__item-back'],
     className,
   );
+
+  const ellipseButtonClassName = clsx(
+    styles['breadcrumbs__link'],
+    styles['breadcrumbs__ellipse'],
+  );
+
+  const dropdownMenuClassName = clsx(
+    styles['breadcrumbs__dropdown-menu'],
+    isActive && styles['breadcrumbs__dropdown-menu--active'],
+  );
+
   return (
     <li className={componentClassName} {...other}>
-      <a className={styles['breadcrumbs__link']} href={href}>
-        {variant === 'back' ? (
-          <Icon
-            className={styles['breadcrumbs__back-icon']}
-            name="chevron-left"
-            purpose="informative"
-            title="back"
-          />
-        ) : (
-          text
-        )}
-      </a>
+      {variant === 'collapsed' ? (
+        <>
+          <button
+            className={ellipseButtonClassName}
+            onClick={() => {
+              setIsActive(!isActive);
+            }}
+          >
+            ...
+          </button>
+          <DropdownMenu
+            className={dropdownMenuClassName}
+            isActive={isActive}
+            onBlur={handleBlur}
+          >
+            {dropdownMenuItems}
+          </DropdownMenu>
+        </>
+      ) : (
+        <a className={styles['breadcrumbs__link']} href={href as string}>
+          {variant === 'back' ? (
+            <Icon
+              className={styles['breadcrumbs__back-icon']}
+              name="chevron-left"
+              purpose="informative"
+              title="back"
+            />
+          ) : (
+            text
+          )}
+        </a>
+      )}
       <span aria-hidden className={styles['breadcrumbs__icon']}>
         /
       </span>

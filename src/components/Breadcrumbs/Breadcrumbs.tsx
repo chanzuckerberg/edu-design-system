@@ -4,6 +4,7 @@ import { useUID } from 'react-uid';
 import styles from './Breadcrumbs.module.css';
 import { flattenReactChildren } from '../../util/flattenReactChildren';
 import BreadcrumbsItem from '../BreadcrumbsItem';
+import DropdownMenuItem from '../DropdownMenuItem';
 
 type Props = {
   /**
@@ -57,12 +58,13 @@ export const Breadcrumbs = ({
     }
   };
 
-  React.useEffect(() => {
+  React.useLayoutEffect(() => {
+    updateShouldTruncate();
     window.addEventListener('resize', updateShouldTruncate);
     return () => {
       window.removeEventListener('resize', updateShouldTruncate);
     };
-  });
+  }, [children]);
 
   const generatedId = useUID();
   const breadcrumbsId = id || generatedId;
@@ -82,6 +84,20 @@ export const Breadcrumbs = ({
 
   const componentClassName = clsx(styles['breadcrumbs'], className);
 
+  const dropdownMenuItems = breadcrumbItems
+    .slice(1, breadcrumbItems.length - 1)
+    .map((breadcrumbItem, index) => {
+      const menuItem = breadcrumbItem as JSX.Element;
+      return (
+        <DropdownMenuItem
+          href={menuItem.props.href}
+          key={`breadcrumb-menu-item-${index}`}
+        >
+          {menuItem.props.text}
+        </DropdownMenuItem>
+      );
+    });
+
   return (
     <nav
       aria-label={ariaLabel}
@@ -94,7 +110,11 @@ export const Breadcrumbs = ({
         {shouldTruncate && breadcrumbItems.length > 2 ? (
           <>
             {breadcrumbItems[0]}
-            <BreadcrumbsItem text="..." />
+            <BreadcrumbsItem
+              dropdownMenuItems={dropdownMenuItems}
+              href={null}
+              variant="collapsed"
+            />
             {breadcrumbItems[breadcrumbItems.length - 1]}
           </>
         ) : (

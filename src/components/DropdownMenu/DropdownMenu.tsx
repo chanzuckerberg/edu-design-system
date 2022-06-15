@@ -1,5 +1,11 @@
 import clsx from 'clsx';
-import React, { ReactNode, useRef, useEffect, KeyboardEvent } from 'react';
+import React, {
+  ReactNode,
+  useRef,
+  useEffect,
+  KeyboardEvent,
+  HTMLAttributes,
+} from 'react';
 import styles from './DropdownMenu.module.css';
 import { isReactFragment } from '../../util/isReactFragment';
 import {
@@ -10,7 +16,7 @@ import {
   ESCAPE_KEYCODE,
 } from '../../util/keycodes';
 
-export interface Props {
+export type Props = {
   /**
    * Child node(s) that can be nested inside component
    */
@@ -24,7 +30,7 @@ export interface Props {
    */
   isActive?: boolean;
   handleOnKeyDown?: (e: React.KeyboardEvent) => void;
-}
+} & HTMLAttributes<HTMLElement>;
 
 /**
  * BETA: This component is still a work in progress and is subject to change.
