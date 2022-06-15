@@ -76,52 +76,54 @@ export const BreadcrumbsItem = ({
     isActive && styles['breadcrumbs__dropdown-menu--active'],
   );
 
+  const getInteractionElement = () => {
+    if (variant === 'collapsed') {
+      /* The collapsed variant is a button with ellipsis. Interaction spawns a dropdown containing the collapsed breadcrumb links. */
+      return (
+        <>
+          <button
+            className={ellipsisButtonClassName}
+            onClick={() => {
+              setIsActive(!isActive);
+            }}
+          >
+            ...
+          </button>
+          <DropdownMenu
+            className={dropdownMenuClassName}
+            isActive={isActive}
+            onBlur={handleBlur}
+          >
+            {dropdownMenuItems}
+          </DropdownMenu>
+        </>
+      );
+    } else if (variant === 'back') {
+      /* The back variant is a left pointing icon that usually links to the second last breadcrumb href. */
+      return (
+        <a className={styles['breadcrumbs__link']} href={href as string}>
+          <Icon
+            className={styles['breadcrumbs__back-icon']}
+            name="chevron-left"
+            purpose="informative"
+            title={href as string}
+          />
+        </a>
+      );
+    } else {
+      /* The default variant displays the prop text and links the prop href. */
+      return (
+        <a className={styles['breadcrumbs__link']} href={href as string}>
+          {text}
+        </a>
+      );
+    }
+  };
+
   return (
     <li className={componentClassName} {...other}>
-      {/**
-       * 1) The collapsed variant is a button with ellipsis. Interaction spawns a dropdown containing the collapsed breadcrumb links.
-       * 2) The back variant is a left pointing icon that usually links to the second last breadcrumb href.
-       * 3) The default variant displays the prop text and links the prop href.
-       * 4) The decorative separator between breadcrumbs items.
-       */}
-      {
-        /* 1 */
-        variant === 'collapsed' ? (
-          <>
-            <button
-              className={ellipsisButtonClassName}
-              onClick={() => {
-                setIsActive(!isActive);
-              }}
-            >
-              ...
-            </button>
-            <DropdownMenu
-              className={dropdownMenuClassName}
-              isActive={isActive}
-              onBlur={handleBlur}
-            >
-              {dropdownMenuItems}
-            </DropdownMenu>
-          </>
-        ) : (
-          <a className={styles['breadcrumbs__link']} href={href as string}>
-            {/* 2 */}
-            {variant === 'back' ? (
-              <Icon
-                className={styles['breadcrumbs__back-icon']}
-                name="chevron-left"
-                purpose="informative"
-                title={href as string}
-              />
-            ) : (
-              /* 3 */
-              text
-            )}
-          </a>
-        )
-      }
-      {/* 4 */}
+      {getInteractionElement()}
+      {/* The decorative separator between breadcrumbs items. */}
       <span aria-hidden className={styles['breadcrumbs__icon']}>
         /
       </span>
