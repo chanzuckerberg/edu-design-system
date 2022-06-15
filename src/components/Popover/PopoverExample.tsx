@@ -72,6 +72,7 @@ export const PopoverExample: React.FC<Props> = ({
       <Popover
         ariaDescribedBy="popover-description-1"
         ariaLabelledBy="popover-heading-1"
+        data-testid="popover-test"
         isActive={popoverOpen}
         onClose={closePopover}
         position={position}
