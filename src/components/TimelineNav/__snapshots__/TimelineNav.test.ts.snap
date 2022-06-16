@@ -69,7 +69,7 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
           tabindex="-1"
         >
           <div
-            class="timeline-nav__link-left"
+            class="timeline-nav__link-left timeline-nav__link-hidden"
           >
             <span
               aria-label="step 1"
@@ -96,7 +96,7 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
           tabindex="-1"
         >
           <div
-            class="timeline-nav__link-left"
+            class="timeline-nav__link-left timeline-nav__link-hidden"
           >
             <svg
               aria-hidden="true"
@@ -126,7 +126,7 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
           tabindex="-1"
         >
           <div
-            class="timeline-nav__link-left"
+            class="timeline-nav__link-left timeline-nav__link-hidden"
           >
             <svg
               aria-hidden="true"
@@ -156,7 +156,7 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
           tabindex="-1"
         >
           <div
-            class="timeline-nav__link-left"
+            class="timeline-nav__link-left timeline-nav__link-hidden"
           >
             <svg
               aria-hidden="true"
@@ -230,7 +230,7 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
           tabindex="-1"
         >
           <div
-            class="timeline-nav__link-left"
+            class="timeline-nav__link-left timeline-nav__link-hidden"
           >
             <span
               aria-label="step 6"
@@ -257,7 +257,7 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
           tabindex="-1"
         >
           <div
-            class="timeline-nav__link-left"
+            class="timeline-nav__link-left timeline-nav__link-hidden"
           >
             <svg
               aria-hidden="true"
