@@ -102,6 +102,50 @@ export const Default: StoryObj<Args> = {
   },
 };
 
+export const StackedTemplate: StoryObj<Args> = {
+  args: {
+    children: (
+      <>
+        <Table.Header>
+          <Table.Row>
+            {tableColumns.map((item, index) => {
+              return (
+                <Table.Cell as="th" key={'table-header-row-' + index}>
+                  {item.title}
+                </Table.Cell>
+              );
+            })}
+          </Table.Row>
+        </Table.Header>
+
+        <Table.Body>
+          {tableRows.map((item, index) => {
+            return (
+              <Table.Row key={'table-row-' + index}>
+                <Table.Cell data-heading={tableColumns[0].title}>
+                  {item.value1}
+                </Table.Cell>
+                <Table.Cell data-heading={tableColumns[1].title}>
+                  {item.value2}
+                </Table.Cell>
+                <Table.Cell data-heading={tableColumns[2].title}>
+                  {item.value3}
+                </Table.Cell>
+                <Table.Cell data-heading={tableColumns[3].title}>
+                  {item.value4}
+                </Table.Cell>
+                <Table.Cell data-heading={tableColumns[4].title}>
+                  {item.value5}
+                </Table.Cell>
+              </Table.Row>
+            );
+          })}
+        </Table.Body>
+      </>
+    ),
+  },
+};
+
 export const Zebra: StoryObj<Args> = {
   args: {
     ...Default.args,
@@ -109,10 +153,10 @@ export const Zebra: StoryObj<Args> = {
   },
 };
 
-export const Overflow: StoryObj<Args> = {
+export const Stacked: StoryObj<Args> = {
   args: {
-    ...Default.args,
-    behavior: 'overflow',
+    ...StackedTemplate.args,
+    behavior: 'stacked',
   },
 };
 

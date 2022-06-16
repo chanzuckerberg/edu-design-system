@@ -29,6 +29,14 @@
   min-width: 1200px;
 }
 
+.table--stacked {
+  display: block;
+
+  @media all and (min-width: $eds-bp-md) {
+    display: table;
+  }
+}
+
 /**
  * Table Caption
  */
@@ -81,9 +89,7 @@
   border-bottom-color: var(--eds-theme-color-border-neutral-subtle);
 
   .table__header & {
-    border-bottom-width: var(--eds-border-width-md);
-    border-bottom-style: solid;
-    border-bottom-color: var(--eds-theme-color-border-neutral-subtle);
+    border-bottom-color: var(--eds-theme-color-border-neutral-default);
   }
 
   /**
@@ -95,6 +101,22 @@
     */
     &:nth-child(even) {
       background: var(--eds-theme-color-background-neutral-medium);
+    }
+  }
+
+  .table--stacked > .table__body & {
+    display: block;
+    width: 100%;
+    border: var(--eds-theme-border-width) solid
+      var(--eds-theme-color-border-neutral-subtle);
+    border-radius: var(--eds-border-radius-md);
+    margin-bottom: var(--eds-size-2);
+
+    @media all and (min-width: $eds-bp-md) {
+      display: table-row;
+      border-top: none;
+      border-right: none;
+      border-left: none;
     }
   }
 }
@@ -192,14 +214,17 @@
      *    table header cells become visible
      */
   .table--stacked & {
-    display: block;
+    display: flex;
+    gap: var(--eds-size-1);
+    width: 100%;
     padding-left: var(--eds-size-2);
     padding-right: var(--eds-size-2);
 
     &:before {
       content: attr(data-heading); /* 1 */
       display: block;
-      @mixin eds-theme-typography-body-text-md;
+      margin-right: auto;
+      @mixin eds-theme-typography-body-text-sm-bold;
 
       /* stylelint-disable-next-line max-nesting-depth */
       @media all and (min-width: $eds-bp-md) {
@@ -209,7 +234,14 @@
 
     @media all and (min-width: $eds-bp-md) {
       display: table-cell;
+      width: auto;
       padding: var(--eds-size-2) var(--eds-size-1);
+    }
+  }
+
+  .table--stacked.table--highlight-first-cell & {
+    &:first-child:before {
+      content: none;
     }
   }
 
@@ -262,14 +294,11 @@
   /**
    * First table cell within each row directly within table body of stacked table
    */
-  .table--stacked.table--stacked-first-cell-heading
-    > .table__body
-    > .table__row
-    > & {
+  .table--stacked.table--highlight-first-cell > .table__body > .table__row > & {
     &:first-child {
       /* stylelint-disable-next-line max-nesting-depth */
       @media all and (max-width: $eds-bp-md) {
-        @mixin eds-theme-typography-heading-3;
+        @mixin eds-theme-typography-title-md;
       }
     }
   }

@@ -13,10 +13,10 @@ import {
   CardBody,
   Icon,
   Section,
+  TimelineNav,
+  TimelineNavPanel,
 } from '../../../src';
 // Project Overview pilot components -- not yet exported from src/index.ts
-import ListDetail from '../../../src/components/ListDetail';
-import ListDetailPanel from '../../../src/components/ListDetailPanel';
 import '../../../src/components/Utilities/Spacing.css';
 
 import { PageShell } from '../../recipes/PageShell/PageShell';
@@ -37,8 +37,8 @@ export const ProjectOverview = () => {
         }
         title="Feudal Honor Codes and Values"
       />
-      <ListDetail>
-        <ListDetailPanel title="Overview" variant="success">
+      <TimelineNav>
+        <TimelineNavPanel title="Overview" variant="success">
           <Heading as="h2" className="u-margin-bottom-xl" size="headline-lg">
             What is this Project About?
           </Heading>
@@ -157,11 +157,11 @@ export const ProjectOverview = () => {
               <a href="#">Integration of Evidence</a>
             </Text>
           </Section>
-        </ListDetailPanel>
+        </TimelineNavPanel>
 
-        <ListDetailPanel title="Expectations of Samuri in Feudal Japan and Wars of 5th Century">
+        <TimelineNavPanel title="Expectations of Samuri in Feudal Japan and Wars of 5th Century">
           <Text as="div">
-            <h3>ListDetailPanel 2</h3>
+            <h3>TimelineNavPanel 2</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -169,11 +169,11 @@ export const ProjectOverview = () => {
               nisi ut aliquip ex
             </p>
           </Text>
-        </ListDetailPanel>
+        </TimelineNavPanel>
 
-        <ListDetailPanel title="Expectations of Samuri in Feudal Japan">
+        <TimelineNavPanel title="Expectations of Samuri in Feudal Japan">
           <Text as="div">
-            <h3>ListDetailPanel 3</h3>
+            <h3>TimelineNavPanel 3</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -181,10 +181,10 @@ export const ProjectOverview = () => {
               nisi ut aliquip ex
             </p>
           </Text>
-        </ListDetailPanel>
-        <ListDetailPanel title="Expectations of Samuri in Feudal Japan">
+        </TimelineNavPanel>
+        <TimelineNavPanel title="Expectations of Samuri in Feudal Japan">
           <Text as="div">
-            <h3>ListDetailPanel 4</h3>
+            <h3>TimelineNavPanel 4</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -192,10 +192,10 @@ export const ProjectOverview = () => {
               nisi ut aliquip ex
             </p>
           </Text>
-        </ListDetailPanel>
-        <ListDetailPanel title="Expectations of Samuri in Feudal Japan">
+        </TimelineNavPanel>
+        <TimelineNavPanel title="Expectations of Samuri in Feudal Japan">
           <Text as="div">
-            <h3>ListDetailPanel 5</h3>
+            <h3>TimelineNavPanel 5</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -203,8 +203,8 @@ export const ProjectOverview = () => {
               nisi ut aliquip ex
             </p>
           </Text>
-        </ListDetailPanel>
-      </ListDetail>
+        </TimelineNavPanel>
+      </TimelineNav>
     </PageShell>
   );
 };

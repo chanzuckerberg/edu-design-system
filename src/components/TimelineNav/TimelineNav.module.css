@@ -1,13 +1,13 @@
 @import '../../design-tokens/mixins.css';
 
 /*------------------------------------*\
- #List Detail
+ # TIMELINE NAV
 \*------------------------------------*/
 
 /**
  * 1) List of of links where each link toggles open associated information
  */
-.list-detail {
+.timeline-nav {
   background: var(--eds-theme-color-background-neutral-default);
   border-width: var(--eds-theme-border-width);
   border-style: solid;
@@ -20,11 +20,11 @@
 }
 
 /**
- * List detail nav
+ * Timeline nav
  * 1) Contains the tab list
  * 2) Tab overflow behavior
  */
-.list-detail__nav {
+.timeline-nav__nav {
   width: 100%;
   position: relative;
   padding: var(--eds-size-4) var(--eds-size-2);
@@ -36,11 +36,11 @@
 }
 
 /**
- * List detail body
+ * Timeline nav body
  * TODO: Tokenize the box shadow
  * 1) Take up the rest of the space
  */
-.list-detail__body {
+.timeline-nav__body {
   padding: var(--eds-size-2);
 
   @media all and (min-width: $eds-bp-lg) {
@@ -51,11 +51,11 @@
 }
 
 /**
- * List detail list
- * 1) Actual unordered list of list-detail
- * 2) Set to display flex to place list-detail side by side
+ * Timeline nav list
+ * 1) Actual unordered list of timeline-nav
+ * 2) Set to display flex to place timeline-nav side by side
  */
-.list-detail__list {
+.timeline-nav__list {
   @mixin reset;
   list-style: none;
   @mixin eds-theme-typography-body-text;
@@ -67,42 +67,42 @@
 }
 
 /**
- * List detail item
- * 1) Flex shrink 0 keeps list-detail from expanding to fill up the space of the container
+ * Timeline nav item
+ * 1) Flex shrink 0 keeps timeline-nav from expanding to fill up the space of the container
  */
-.list-detail__item {
+.timeline-nav__item {
   position: relative;
   flex-shrink: 0; /* 1 */
   padding-bottom: var(--eds-size-4);
 }
 
 /**
-  * List detail item after
+  * Timeline nav item after
   * 1) When list variant is 'ordered', add a line between items that shouldn't link out unliike the bullet
   * 2) This sets the size of the gap above the vertical line by determining the top of the line relative to the top of the current list item; a value of 0 would position the line at the top of the current list item; 100% would position it at the bottom of the current list item. We want a small visual gap between the bullet/icon and the top of the line 
   * 3) This sets the height of the vertical line relative to the height of the current list item. We want a small visual gap between the bottom of the line and the next bullet/icon
   * 4) Using a border color here because this is a vertical line, similar to a border
   */
-.list-detail__list--ordered .list-detail__item {
+.timeline-nav__list--ordered .timeline-nav__item {
   &:after {
     content: '';
     position: absolute;
-    left: 0.25rem;
-    top: 1.75rem; /* 2 */
-    height: 45%; /* 3 */
+    top: 0;
+    left: 0.75rem;
+    height: 100%; /* 3 */
     width: 0.0625rem;
     background: var(--eds-theme-color-border-neutral-subtle); /* 4 */
     border-radius: var(--eds-border-radius-md);
   }
 
   /**
-    * Last list detail item
+    * Last Timeline nav item
     */
   &:last-child {
     padding-bottom: 0;
 
     /**
-      * List list detail item after
+      * List Timeline nav item after
       * 1) Don't add a line after the last list item
       */
     &:after {
@@ -112,79 +112,49 @@
 }
 
 /**
- * List detail link
+ * Timeline nav link
  * 1) Base style for each link in the list
  * 2) Using disabled text color here because all links are "inactive" until selected and this color is overridden
  */
-.list-detail__link {
+.timeline-nav__link {
   position: relative;
   display: flex;
+  align-items: baseline;
+  gap: var(--eds-size-1);
   text-decoration: none;
-  color: var(--eds-theme-color-text-disabled); /* 2 */
+  color: var(--eds-theme-color-text-neutral-subtle); /* 2 */
   cursor: pointer;
   transition: color var(--eds-anim-fade-quick) var(--eds-anim-ease),
     box-shadow var(--eds-anim-fade-quick) var(--eds-anim-ease),
     background-color var(--eds-anim-fade-quick) var(--eds-anim-ease);
+
+  &:hover,
+  &:focus {
+    color: var(--eds-theme-color-text-neutral-default);
+  }
 
   &:focus-visible {
     @mixin focus;
   }
 
   /**
-   * List detail link within active list-detail item
+   * Timeline nav link within active timeline-nav item
    */
-  .list-detail__item.eds-is-active & {
+  .timeline-nav__item.eds-is-active & {
     @mixin eds-theme-typography-body-text-bold;
     color: var(--eds-theme-color-text-neutral-default);
   }
 }
 
-.list-detail__link-left:not(.list-detail__link-hidden) {
-  /**
-   * Before pseudoelement bullet (for non-number variant items)
-   * 1) Set to 9px to center the border
-   * 2) This is the same color used for the vertical line when list style is "ordered"
-   * 3) Using a percentage here instead of --eds-border-radius-md because this is a cosmetic element (a cicular bullet), not a typical bordered object
-   * 4) Make the pseudoelement bullet dark when li is active
-   */
-  &:before {
-    content: '';
-    flex-shrink: 0;
-    margin-right: var(--eds-size-2);
-    display: block;
-    position: relative;
-    top: var(--eds-size-1);
-    height: 9px; /* 1 */
-    width: 9px; /* 1 */
-    background: var(--eds-theme-color-border-neutral-subtle); /* 2 */
-    border-radius: 50%; /* 3 */
-
-    .list-detail__item.eds-is-active & {
-      background: var(--eds-theme-color-text-neutral-default); /* 4 */
-    }
-  }
-
-  /**
-  * List detail item variants
-  * 1) Remove the bullet since the icon will take its place
-  */
-  li[class*='list-detail__item--'] & {
-    /* stylelint-disable-next-line */
-    &:before {
-      content: none;
-    }
-  }
-}
-
 /**
-* List detail number
+* Timeline nav number
 * 1) Used on list items using number variant; provides a cosmetic cicular border
 * 2) Using flex to keep the number centered
 * 3) Since this will display as a cirlce, keep height and width equal; should be wide enough to fit a two-digit number
 * 4) Using a percentage here instead of --eds-border-radius-md because this must always render as a circle
 * 5) Make the border dark when li is active
 */
-.list-detail__number {
+.timeline-nav__number {
   position: relative;
   display: flex; /* 2 */
   justify-content: center;
@@ -199,21 +169,32 @@
   margin-left: -4px;
   background: var(--eds-theme-color-background-neutral-default);
 
-  .list-detail__item.eds-is-active & {
+  .timeline-nav__item.eds-is-active & {
     border: 1px solid var(--eds-theme-color-text-neutral-default); /* 5 */
   }
 }
 
+.timeline-nav__link-left {
+  position: relative;
+  height: fit-content;
+  padding: var(--eds-size-half) 0;
+  background: var(--eds-theme-color-background-neutral-default); /* 1*/
+  z-index: var(--eds-z-index-100);
+}
+
 /**
-* List detail icon
+* Timeline nav icon
 * 1) Used so the transparent icon doesn't show the line behind. 
 */
-.list-detail__icon {
+.timeline-nav__icon {
   --icon-size: var(--eds-size-3);
+  color: var(--eds-theme-color-text-neutral-subtle);
+  border-color: var(--eds-theme-color-border-neutral-default);
   position: relative;
-  left: -7px;
-  top: -2px;
   margin-right: var(--eds-size-half);
-  background: var(---eds-theme-color-background-neutral-default); /* 1*/
-  z-index: var(--eds-z-index-100);
+
+  .timeline-nav__item.eds-is-active & {
+    color: 1px solid var(--eds-theme-color-text-neutral-default);
+    border-color: 1px solid var(--eds-theme-color-text-neutral-strong);
+  }
 }
