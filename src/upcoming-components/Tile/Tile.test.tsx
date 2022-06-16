@@ -1,8 +1,6 @@
-// import { generateSnapshots } from '@chanzuckerberg/story-utils';
-// import * as stories from './Tile.stories';
+import { generateSnapshots } from '@chanzuckerberg/story-utils';
+import * as stories from './Tile.stories';
 
 describe('<Tile />', () => {
-  // TODO: uncomment this and delete the skipped test when moving this component into the main src/components directory
-  // generateSnapshots(stories);
-  test.skip('Workaround', () => undefined);
+  generateSnapshots(stories);
 });
