@@ -118,11 +118,4 @@ export default {
 
 type Args = React.ComponentProps<typeof TimelineNav>;
 
-export const Default: StoryObj<Args> = {
-  parameters: {
-    axe: {
-      // TODO: default text is too light
-      disabledRules: ['color-contrast'],
-    },
-  },
-};
+export const Default: StoryObj<Args> = {};
