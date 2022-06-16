@@ -50,7 +50,6 @@
 * 2) If icon is used, the gap setting will maintain spacing between icon and text.
 */
 .calendar-card__title {
-  @mixin eds-typography-preset-007-bold;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start; /* 1 */

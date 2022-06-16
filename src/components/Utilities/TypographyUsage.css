@@ -28,6 +28,10 @@
   @mixin eds-typography-preset-005-bold;
 }
 
+.u-theme-typography-title-xs {
+  @mixin eds-typography-preset-007-bold;
+}
+
 .u-theme-typography-label-lg-subtle {
   @mixin eds-typography-preset-005;
 }

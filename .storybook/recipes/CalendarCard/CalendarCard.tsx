@@ -75,7 +75,7 @@ export const CalendarCard = ({
         <Heading
           as="h3"
           className={styles['calendar-card__title']}
-          size="body-sm"
+          size="title-xs"
         >
           {(variant === 'success' || variant === 'revise') && (
             <span className={styles['calendar-card__title-icon']}>

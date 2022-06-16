@@ -39,6 +39,7 @@ export class Tier2TypographyUsage extends Component {
           <Grid>
             {renderTypeToken('title-md', '004-bold', 'h4')}
             {renderTypeToken('title-sm', '005-bold', 'h5')}
+            {renderTypeToken('title-xs', '007-bold')}
           </Grid>
         </Section>
 
