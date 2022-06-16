@@ -74,7 +74,7 @@ export interface Props {
    */
   variant?: 'ordered';
   /**
-   * List detail item tab name
+   * Timeline nav item tab name
    */
   title?: string;
 }
@@ -86,7 +86,7 @@ export interface Props {
  * import {TimelineNav} from "@chanzuckerberg/eds";
  * ```
  *
- * List Detail Component
+ * Timeline nav Component
  * 1) Provides a list-view pane for item labels/titles, and a details pane for each item's content. When an item in the list is selected, the details pane is updated.
  */
 export const TimelineNav = ({
