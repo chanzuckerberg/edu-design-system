@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React from 'react';
 import styles from './BreadcrumbsItem.module.css';
-import DropdownMenu from '../DropdownMenu';
+import ButtonDropdown from '../ButtonDropdown';
 import Icon from '../Icon';
 
 type Props = {
@@ -49,17 +49,6 @@ export const BreadcrumbsItem = ({
   variant,
   ...other
 }: Props) => {
-  const [isActive, setIsActive] = React.useState(false);
-
-  /**
-   * Closes the dropdown menu if there is focus or click outside.
-   */
-  const handleBlur = (event: React.FocusEvent<HTMLElement, Element>) => {
-    if (!event.currentTarget.contains(event.relatedTarget) && isActive) {
-      setIsActive(false);
-    }
-  };
-
   const componentClassName = clsx(
     styles['breadcrumbs__item'],
     variant === 'back' && styles['breadcrumbs__item-back'],
@@ -71,31 +60,24 @@ export const BreadcrumbsItem = ({
     styles['breadcrumbs__ellipsis'],
   );
 
-  const dropdownMenuClassName = clsx(
-    styles['breadcrumbs__dropdown-menu'],
-    isActive && styles['breadcrumbs__dropdown-menu--active'],
-  );
-
   const getInteractionElement = () => {
     if (variant === 'collapsed') {
       /* The collapsed variant is a button with ellipsis. Interaction spawns a dropdown containing the collapsed breadcrumb links. */
       return (
         <>
-          <button
-            className={ellipsisButtonClassName}
-            onClick={() => {
-              setIsActive(!isActive);
-            }}
-          >
-            ...
-          </button>
-          <DropdownMenu
-            className={dropdownMenuClassName}
-            isActive={isActive}
-            onBlur={handleBlur}
+          <ButtonDropdown
+            dropdownMenuTrigger={
+              <button
+                aria-label="Show more breadcrumbs"
+                className={ellipsisButtonClassName}
+              >
+                ...
+              </button>
+            }
+            position="bottom-right"
           >
             {dropdownMenuItems}
-          </DropdownMenu>
+          </ButtonDropdown>
         </>
       );
     } else if (variant === 'back') {
@@ -106,7 +88,7 @@ export const BreadcrumbsItem = ({
             className={styles['breadcrumbs__back-icon']}
             name="chevron-left"
             purpose="informative"
-            title={href as string}
+            title={text as string}
           />
         </a>
       );
@@ -123,8 +105,7 @@ export const BreadcrumbsItem = ({
   return (
     <li className={componentClassName} {...other}>
       {getInteractionElement()}
-      {/* The decorative separator between breadcrumbs items. */}
-      <span aria-hidden className={styles['breadcrumbs__icon']}>
+      <span aria-hidden className={styles['breadcrumbs__separator']}>
         /
       </span>
     </li>

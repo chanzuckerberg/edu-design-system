@@ -48,7 +48,7 @@
     display: none; /* 1 */
   }
 }
-.breadcrumbs__item-back > .breadcrumbs__icon {
+.breadcrumbs__item-back > .breadcrumbs__separator {
   display: none; /* 2 */
 }
 
@@ -93,7 +93,7 @@
  * Breadcrumbs Icon
  * 1) Separator between breadcrumb links
  */
-.breadcrumbs__icon {
+.breadcrumbs__separator {
   color: var(--eds-theme-color-icon-neutral-subtle);
   margin-left: var(--eds-size-1);
   margin-right: var(--eds-size-1);
@@ -104,7 +104,7 @@
  * Last breadcrumbs item icon
  * 1) A separator shouldn't be displayed after last link.
  */
-.breadcrumbs__item:last-child .breadcrumbs__icon.breadcrumbs__icon {
+.breadcrumbs__item:last-child .breadcrumbs__separator.breadcrumbs__separator {
   display: none; /* 1 */
 }
 
@@ -117,22 +117,4 @@
   transform: scale(1.5); /* 1 */
   position: relative;
   bottom: 0.125rem;
-}
-
-/**
- * Breadcrumbs Dropdown Menu
- * 1) Is hidden until active.
- */
-.breadcrumbs__dropdown-menu {
-  display: none;
-  position: absolute;
-  top: var(--eds-size-3);
-  z-index: var(--eds-z-index-100);
-}
-/* 1 */
-.breadcrumbs__dropdown-menu--active {
-  display: block;
-}
-.breadcrumbs__dropdown-menu.breadcrumbs__dropdown-menu {
-  width: 21rem;
 }

@@ -37,7 +37,7 @@ exports[`<Breadcrumbs /> Default story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__icon"
+          class="breadcrumbs__separator"
         >
           /
         </span>
@@ -53,7 +53,7 @@ exports[`<Breadcrumbs /> Default story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__icon"
+          class="breadcrumbs__separator"
         >
           /
         </span>
@@ -69,7 +69,7 @@ exports[`<Breadcrumbs /> Default story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__icon"
+          class="breadcrumbs__separator"
         >
           /
         </span>
@@ -85,7 +85,7 @@ exports[`<Breadcrumbs /> Default story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__icon"
+          class="breadcrumbs__separator"
         >
           /
         </span>
@@ -132,7 +132,7 @@ exports[`<Breadcrumbs /> LongList story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__icon"
+          class="breadcrumbs__separator"
         >
           /
         </span>
@@ -148,7 +148,7 @@ exports[`<Breadcrumbs /> LongList story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__icon"
+          class="breadcrumbs__separator"
         >
           /
         </span>
@@ -164,7 +164,7 @@ exports[`<Breadcrumbs /> LongList story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__icon"
+          class="breadcrumbs__separator"
         >
           /
         </span>
@@ -180,7 +180,7 @@ exports[`<Breadcrumbs /> LongList story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__icon"
+          class="breadcrumbs__separator"
         >
           /
         </span>
@@ -196,7 +196,7 @@ exports[`<Breadcrumbs /> LongList story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__icon"
+          class="breadcrumbs__separator"
         >
           /
         </span>
@@ -212,7 +212,7 @@ exports[`<Breadcrumbs /> LongList story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__icon"
+          class="breadcrumbs__separator"
         >
           /
         </span>
@@ -228,7 +228,7 @@ exports[`<Breadcrumbs /> LongList story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__icon"
+          class="breadcrumbs__separator"
         >
           /
         </span>
@@ -244,7 +244,7 @@ exports[`<Breadcrumbs /> LongList story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__icon"
+          class="breadcrumbs__separator"
         >
           /
         </span>
@@ -260,7 +260,7 @@ exports[`<Breadcrumbs /> LongList story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__icon"
+          class="breadcrumbs__separator"
         >
           /
         </span>
@@ -276,7 +276,7 @@ exports[`<Breadcrumbs /> LongList story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__icon"
+          class="breadcrumbs__separator"
         >
           /
         </span>
@@ -292,7 +292,7 @@ exports[`<Breadcrumbs /> LongList story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__icon"
+          class="breadcrumbs__separator"
         >
           /
         </span>
@@ -308,7 +308,7 @@ exports[`<Breadcrumbs /> LongList story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__icon"
+          class="breadcrumbs__separator"
         >
           /
         </span>
@@ -355,7 +355,7 @@ exports[`<Breadcrumbs /> LongText story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__icon"
+          class="breadcrumbs__separator"
         >
           /
         </span>
@@ -371,7 +371,7 @@ exports[`<Breadcrumbs /> LongText story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__icon"
+          class="breadcrumbs__separator"
         >
           /
         </span>
@@ -387,7 +387,7 @@ exports[`<Breadcrumbs /> LongText story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__icon"
+          class="breadcrumbs__separator"
         >
           /
         </span>
@@ -403,7 +403,7 @@ exports[`<Breadcrumbs /> LongText story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__icon"
+          class="breadcrumbs__separator"
         >
           /
         </span>
@@ -419,7 +419,7 @@ exports[`<Breadcrumbs /> LongText story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__icon"
+          class="breadcrumbs__separator"
         >
           /
         </span>
@@ -452,7 +452,7 @@ exports[`<Breadcrumbs /> OneCrumb story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__icon"
+          class="breadcrumbs__separator"
         >
           /
         </span>
@@ -499,7 +499,7 @@ exports[`<Breadcrumbs /> TwoCrumbs story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__icon"
+          class="breadcrumbs__separator"
         >
           /
         </span>
@@ -515,7 +515,7 @@ exports[`<Breadcrumbs /> TwoCrumbs story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__icon"
+          class="breadcrumbs__separator"
         >
           /
         </span>
@@ -531,7 +531,7 @@ exports[`<Breadcrumbs /> TwoCrumbs story renders snapshot 1`] = `
         </a>
         <span
           aria-hidden="true"
-          class="breadcrumbs__icon"
+          class="breadcrumbs__separator"
         >
           /
         </span>
