@@ -1,8 +1,6 @@
-// import { generateSnapshots } from '@chanzuckerberg/story-utils';
-// import * as stories from './Textarea.stories';
+import { generateSnapshots } from '@chanzuckerberg/story-utils';
+import * as stories from './Textarea.stories';
 
 describe('<Textarea />', () => {
-  // TODO: uncomment this and delete the skipped test when moving this component into the main src/components directory
-  // generateSnapshots(stories);
-  test.skip('Workaround', () => undefined);
+  generateSnapshots(stories);
 });
