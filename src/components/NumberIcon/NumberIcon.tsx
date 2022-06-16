@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import React from 'react';
 import styles from './NumberIcon.module.css';
+import { EdsThemeColorIconNeutralSubtle } from '../../tokens-dist/ts/colors';
 import Icon from '../Icon';
 import Text from '../Text';
 
@@ -85,6 +86,7 @@ export const NumberIcon = ({
       {incomplete && numberIconTitle ? (
         <Icon
           className={styles['number-icon__icon']}
+          color={EdsThemeColorIconNeutralSubtle}
           name="circle"
           purpose="informative"
           size={size === 'sm' ? '0.25rem' : '0.5rem'}
