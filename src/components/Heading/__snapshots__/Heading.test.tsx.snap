@@ -362,3 +362,11 @@ exports[`<Heading /> Sizes story renders snapshot 1`] = `
   </div>
 </div>
 `;
+
+exports[`<Heading /> TitleXs story renders snapshot 1`] = `
+<h5
+  class="heading heading--size-title-xs"
+>
+  Title xs heading size
+</h5>
+`;
