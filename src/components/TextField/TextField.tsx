@@ -214,6 +214,7 @@ export const TextField = ({
           aria-invalid={!!isError}
           ariaDescribedBy={ariaDescribedByVar}
           className={styles['text-field__input']}
+          data-bootstrap-override="checkbox"
           defaultValue={defaultValue}
           disabled={disabled}
           id={idVar}
