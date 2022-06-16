@@ -98,8 +98,7 @@ export const LongText: StoryObj<Args> = {
 };
 
 /**
- * For visual regression more than demoing.
- * 1) Visual regression sufficient in testing opening dropdown menu.
+ * Mostly for visual regression testing.
  */
 export const LongTextMenu: StoryObj<Args> = {
   args: {
@@ -110,8 +109,11 @@ export const LongTextMenu: StoryObj<Args> = {
       defaultViewport: 'tablet',
     },
     chromatic: { viewports: [834] },
+    /* 1 */
+    axe: {
+      skip: true,
+    },
     snapshot: {
-      /* 1 */
       skip: true,
     },
   },
