@@ -10,10 +10,11 @@ import {
 } from '../../../src';
 
 import { PageShell } from '../../recipes/PageShell/PageShell';
+import '../../../src/components/Utilities/Spacing.css';
 
 export const FeedbackOverview: React.FC = () => (
   <PageShell>
-    <Breadcrumbs>
+    <Breadcrumbs className="u-margin-bottom-md">
       <BreadcrumbsItem href="#" text="My Courses" />
       <BreadcrumbsItem
         href="#"

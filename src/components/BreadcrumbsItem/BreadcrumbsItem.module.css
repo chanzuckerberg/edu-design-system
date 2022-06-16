@@ -1,0 +1,120 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    # BREADCRUMBS ITEM
+\*------------------------------------*/
+
+/**
+ * Breadcrumbs list item
+ * 1) Required for dropdown menu to absolutely position relative to this container.
+ * 2) Hides all breadcrumbs except the last breadcrumb in smaller breakpoints.
+ * 3) Truncate last breadcrumb in smaller breakpoints.
+ * 4) Display breadcrumbs in larger breakpoints.
+ */
+.breadcrumbs__item {
+  @mixin eds-theme-typography-body-text-xs;
+  max-width: 100%;
+  position: relative; /* 1 */
+
+  /* 2 */
+  display: none;
+  flex-shrink: 0;
+  &:last-of-type {
+    display: flex;
+    flex: 1 0 0%; /* 3 */
+  }
+
+  min-width: 0;
+
+  align-items: center;
+
+  @media all and (min-width: $eds-bp-md) {
+    display: flex; /* 4 */
+    &:last-of-type {
+      flex: 0 0 auto; /* 3 */
+    }
+  }
+}
+
+/**
+ * Back variant of the breadcrumbs list item
+ * 1) Hidden for larger breakpoints.
+ * 2) Hide the separator for the back variant.
+ */
+.breadcrumbs__item-back {
+  display: flex;
+  margin-right: var(--eds-size-1-and-half);
+  @media all and (min-width: $eds-bp-md) {
+    display: none; /* 1 */
+  }
+}
+.breadcrumbs__item-back > .breadcrumbs__separator {
+  display: none; /* 2 */
+}
+
+/**
+ * Ellipsis variant of the breadcrumbs list item
+ * 1) Remove default browser styles for <button> and make more like a link.
+ */
+.breadcrumbs__ellipsis {
+  /* 1 */
+  @mixin reset;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/**
+ * Breadcrumbs link
+ * 1) Truncate last link with ellipsis.
+ */
+.breadcrumbs__link {
+  color: var(--eds-theme-color-text-neutral-subtle);
+  text-decoration: none;
+
+  &:last-of-type {
+    /* 1 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+
+  &:focus-visible {
+    @mixin focus;
+  }
+}
+
+/**
+ * Breadcrumbs Icon
+ * 1) Separator between breadcrumb links
+ */
+.breadcrumbs__separator {
+  color: var(--eds-theme-color-icon-neutral-subtle);
+  margin-left: var(--eds-size-1);
+  margin-right: var(--eds-size-1);
+  cursor: default;
+}
+
+/**
+ * Last breadcrumbs item icon
+ * 1) A separator shouldn't be displayed after last link.
+ */
+.breadcrumbs__item:last-child .breadcrumbs__separator.breadcrumbs__separator {
+  display: none; /* 1 */
+}
+
+/**
+ * Breadcrumbs Back Icon
+ * 1) Transform over height due to icon being placed inside <a>.
+ */
+.breadcrumbs__back-icon {
+  color: var(--eds-theme-color-icon-neutral-subtle);
+  transform: scale(1.5); /* 1 */
+  position: relative;
+  bottom: 0.125rem;
+}
