@@ -329,7 +329,6 @@ export const TimelineNav = ({
         >
           {/* TODO: improve `any` type */}
           {timelineNavItems().map((tab: TimelineNavItem, i: number) => {
-            console.log(tab);
             const isActive = activeIndexState === i;
             const itemVariant = variant && tab.props.variant;
             return (
