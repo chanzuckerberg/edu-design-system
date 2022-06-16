@@ -9,7 +9,9 @@ export type TimelineNavPanelVariant =
   | 'incomplete'
   | 'number'
   | 'success'
-  | 'warning';
+  | 'warning'
+  | undefined;
+
 export interface Props {
   /**
    * aria-labelledby attribute that associates a tab panel with its accompanying tab title text

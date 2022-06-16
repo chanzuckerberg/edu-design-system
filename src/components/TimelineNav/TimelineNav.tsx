@@ -79,6 +79,15 @@ export interface Props {
   title?: string;
 }
 
+export interface TimelineNavItem {
+  props: {
+    ariaLabel: string;
+    children: ReactNode;
+    variant?: TimelineNavPanelVariant;
+    title?: string;
+  };
+}
+
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
@@ -319,7 +328,8 @@ export const TimelineNav = ({
           role="tablist"
         >
           {/* TODO: improve `any` type */}
-          {timelineNavItems().map((tab: any, i: number) => {
+          {timelineNavItems().map((tab: TimelineNavItem, i: number) => {
+            console.log(tab);
             const isActive = activeIndexState === i;
             const itemVariant = variant && tab.props.variant;
             return (
@@ -349,7 +359,12 @@ export const TimelineNav = ({
                   role="tab"
                   tabIndex={isActive ? 0 : -1}
                 >
-                  <div className={styles['timeline-nav__link-left']}>
+                  <div
+                    className={clsx(
+                      styles['timeline-nav__link-left'],
+                      itemVariant && styles['timeline-nav__link-hidden'],
+                    )}
+                  >
                     {iconVariant(itemVariant, i)}
                   </div>
                   {tab.props.title}
