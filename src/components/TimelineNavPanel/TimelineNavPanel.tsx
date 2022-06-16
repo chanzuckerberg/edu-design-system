@@ -14,7 +14,7 @@ export interface Props {
   /**
    * aria-labelledby attribute that associates a tab panel with its accompanying tab title text
    */
-  ariaLabelledBy?: string;
+  'aria-labelledby'?: string;
   /**
    * Child node(s) that can be nested inside component
    */
@@ -51,7 +51,6 @@ export interface Props {
  * Panel to be used inside of the TimelineNav component.
  */
 export const TimelineNavPanel = ({
-  ariaLabelledBy,
   children,
   className,
   completed,
@@ -64,7 +63,6 @@ export const TimelineNavPanel = ({
   return (
     <div
       aria-hidden={false}
-      aria-labelledby={ariaLabelledBy}
       className={componentClassName}
       id={id}
       role="tabpanel"

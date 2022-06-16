@@ -29,7 +29,7 @@ export interface Props {
   /**
    * The aria-labelledby attribute creates a relationship between the tab list and the tab panels
    */
-  ariaLabelledBy?: string;
+  'aria-labelledby'?: string;
   /**
    * Calls back with the active index
    */
@@ -95,7 +95,6 @@ export const TimelineNav = ({
   variant,
   activeIndex = 0,
   timelineNavOnClick,
-  ariaLabelledBy,
   id,
   overflow,
   onChange,
@@ -165,7 +164,9 @@ export const TimelineNav = ({
     setAriaLabelledBy(
       // TODO: improve `any` type
       timelineNavItems().map((item: any) =>
-        item.props.ariaLabelledBy ? item.props.ariaLabelledBy : getUID(item),
+        item.props['aria-labelledby']
+          ? item.props['aria-labelledby']
+          : getUID(item),
       ),
     );
   }, [timelineNavItems, getUID]);
@@ -231,7 +232,7 @@ export const TimelineNav = ({
         // @ts-expect-error TODO: fix "No overload matches this call" error
         return React.cloneElement<Props>(child, {
           id: idVar[i],
-          ariaLabelledBy: ariaLabelledByVar[i],
+          ['aria-labelledby']: ariaLabelledByVar[i],
         });
       }
       return child;
