@@ -36,6 +36,10 @@
   @mixin eds-theme-typography-title-sm;
 }
 
+.heading--size-title-xs {
+  @mixin eds-theme-typography-title-xs;
+}
+
 /* Deprecated; not in figma */
 .heading--size-body-sm {
   @mixin eds-theme-typography-body-text-sm-bold;

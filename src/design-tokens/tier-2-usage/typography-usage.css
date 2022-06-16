@@ -20,6 +20,10 @@
   @mixin eds-typography-preset-005-bold $important;
 }
 
+@define-mixin eds-theme-typography-title-xs $important {
+  @mixin eds-typography-preset-007-bold $important;
+}
+
 @define-mixin eds-theme-typography-label-lg-subtle $important {
   @mixin eds-typography-preset-005 $important;
 }

@@ -28,6 +28,7 @@ const TOKEN_TO_SIZE = {
   'title-sm': 'h5',
   'body-sm': 'h6',
   'body-xs': 'h7',
+  'title-xs': 'h5',
 };
 export type HeadingSize = HeadingElement | keyof typeof TOKEN_TO_SIZE;
 

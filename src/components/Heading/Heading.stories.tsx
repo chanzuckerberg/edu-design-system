@@ -67,6 +67,13 @@ export const Heading7: StoryObj<Args> = {
   },
 };
 
+export const TitleXs: StoryObj<Args> = {
+  args: {
+    size: 'title-xs',
+    children: 'Title xs heading size',
+  },
+};
+
 /**
  * 1) Mainly for visual use and other stories generate enough confidence for our needs.
  */
