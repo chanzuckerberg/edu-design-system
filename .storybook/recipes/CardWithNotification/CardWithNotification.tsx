@@ -2,7 +2,13 @@ import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import styles from './CardWithNotification.module.css';
 
-import { Card, InlineNotification } from '../../../src';
+import {
+  Card,
+  CardBody,
+  CardFooter,
+  CardHeader,
+  InlineNotification,
+} from '../../../src';
 import { VARIANTS } from '../../../src/components/InlineNotification/InlineNotification';
 
 export interface Props {
@@ -58,6 +64,6 @@ export const CardWithNotification = ({
 /**
  * Re-exports subcomponents so consuming apps don't have to import the Card component or the individual subcomponents.
  */
-CardWithNotification.Body = Card.Body;
-CardWithNotification.Footer = Card.Footer;
-CardWithNotification.Header = Card.Header;
+CardWithNotification.Body = CardBody;
+CardWithNotification.Footer = CardFooter;
+CardWithNotification.Header = CardHeader;
