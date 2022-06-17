@@ -257,6 +257,14 @@ export const ControlHeadingInteractive: StoryObj<HeadingArgs> = {
       <Modal.Body>Modal Content</Modal.Body>
     </InteractiveExample>
   ),
+  /**
+   * Purpose of this story is to have different controls for the Modal.Title but defaults to what all the other stories are.
+   * Hence will snap similarly to the other stories has no value in snapping both unit and Chromatic.
+   */
+  parameters: {
+    snapshot: { skip: true },
+    chromatic: { disableSnapshot: false },
+  },
 };
 
 export const WithoutCloseButton: StoryObj<InteractiveArgs> = {
