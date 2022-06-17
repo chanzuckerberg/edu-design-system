@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Section /> Center story renders snapshot 1`] = `
+<section
+  class="section section--center"
+>
+  <div
+    class="section__inner"
+  >
+    <header
+      class="section__header"
+    >
+      <div
+        class="section__header-inner"
+      >
+        <h2
+          class="section__title"
+        >
+          Section Title
+        </h2>
+      </div>
+      <p
+        class="section__description"
+      >
+        This is a description of what the section is
+      </p>
+    </header>
+    <div
+      class="section__body"
+    >
+      This is the section body, where you can put any content or include other components.
+    </div>
+  </div>
+</section>
+`;
+
+exports[`<Section /> Default story renders snapshot 1`] = `
+<section
+  class="section"
+>
+  <div
+    class="section__inner"
+  >
+    <header
+      class="section__header"
+    >
+      <div
+        class="section__header-inner"
+      >
+        <h2
+          class="section__title"
+        >
+          Section Title
+        </h2>
+      </div>
+    </header>
+    <div
+      class="section__body"
+    >
+      This is the section body, where you can put any content or include other components.
+    </div>
+  </div>
+</section>
+`;
+
+exports[`<Section /> WithDescription story renders snapshot 1`] = `
+<section
+  class="section"
+>
+  <div
+    class="section__inner"
+  >
+    <header
+      class="section__header"
+    >
+      <div
+        class="section__header-inner"
+      >
+        <h2
+          class="section__title"
+        >
+          Section Title
+        </h2>
+      </div>
+      <p
+        class="section__description"
+      >
+        This is a description of what the section is
+      </p>
+    </header>
+    <div
+      class="section__body"
+    >
+      This is the section body, where you can put any content or include other components.
+    </div>
+  </div>
+</section>
+`;

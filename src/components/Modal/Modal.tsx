@@ -95,7 +95,7 @@ function childrenHaveModalTitle(children?: ReactNode): boolean {
       'props' in child &&
       child.type &&
       typeof child.type !== 'string' &&
-      child.type?.name === 'ModalTitle'
+      (child.type?.name === 'ModalTitle' || child.type?.name === 'Modal.Title')
     ) {
       return true;
     } else if ('props' in child && child.props.children) {

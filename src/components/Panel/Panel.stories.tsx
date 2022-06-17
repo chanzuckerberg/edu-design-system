@@ -1,8 +1,8 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
-import { Story, Meta } from '@storybook/react';
+import { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
-import { Panel, Props } from './Panel';
+import { Panel } from './Panel';
 
 export default {
   title: 'Molecules/Layout and Containers/Panel',
@@ -10,20 +10,29 @@ export default {
   parameters: {
     badges: [BADGE.BETA],
   },
-} as Meta;
+  args: {
+    children: 'A Panel is a generic bordered container for content.',
+  },
+} as Meta<Args>;
 
-const Template: Story<Props> = (args) => (
-  <Panel {...args}>A Panel is a generic bordered container for content.</Panel>
-);
+type Args = React.ComponentProps<typeof Panel>;
 
-export const Default = Template.bind({});
-Default.args = {};
+export const Default: StoryObj<Args> = {};
 
-export const Flush = Template.bind({});
-Flush.args = { flush: true };
+export const Flush: StoryObj<Args> = {
+  args: {
+    flush: true,
+  },
+};
 
-export const Squared = Template.bind({});
-Squared.args = { variant: 'squared' };
+export const Squared: StoryObj<Args> = {
+  args: {
+    variant: 'squared',
+  },
+};
 
-export const Centered = Template.bind({});
-Centered.args = { align: 'center' };
+export const Centered: StoryObj<Args> = {
+  args: {
+    align: 'center',
+  },
+};

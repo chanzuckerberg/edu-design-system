@@ -1,8 +1,8 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
-import { Story, Meta } from '@storybook/react';
+import { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
-import { LayoutLinelengthContainer, Props } from './LayoutLinelengthContainer';
+import { LayoutLinelengthContainer } from './LayoutLinelengthContainer';
 
 export default {
   title: 'Molecules/Layout and Containers/Linelength Container',
@@ -10,22 +10,24 @@ export default {
   parameters: {
     badges: [BADGE.BETA],
   },
-} as Meta;
+  args: {
+    children: (
+      <>
+        <p>
+          A Linelength Container caps the width of the content to a comfortable
+          reading width.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+      </>
+    ),
+  },
+} as Meta<Args>;
 
-const Template: Story<Props> = (args) => (
-  <LayoutLinelengthContainer {...args}>
-    <p>
-      A Linelength Container caps the width of the content to a comfortable
-      reading width.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.
-    </p>
-  </LayoutLinelengthContainer>
-);
+type Args = React.ComponentProps<typeof LayoutLinelengthContainer>;
 
-export const Default = Template.bind({});
-Default.args = {};
+export const Default: StoryObj<Args> = {};

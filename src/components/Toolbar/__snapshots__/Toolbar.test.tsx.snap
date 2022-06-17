@@ -1,0 +1,173 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Toolbar /> AlignBottom story renders snapshot 1`] = `
+<div
+  class="toolbar toolbar--vertical-align-bottom"
+>
+  <div
+    class="toolbar__item"
+  >
+    <div
+      class="fpo u-margin-none"
+    >
+      Left
+    </div>
+  </div>
+  <div
+    class="toolbar__item"
+  >
+    <div
+      class="fpo u-margin-none"
+    >
+      Left
+    </div>
+  </div>
+  <div
+    class="toolbar__item"
+  >
+    <div
+      class="fpo u-margin-none"
+    >
+      Left
+    </div>
+  </div>
+  <div
+    class="toolbar__item toolbar__item--align-right"
+  >
+    <div
+      class="fpo u-margin-none"
+    >
+      Right
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Toolbar /> AlignTop story renders snapshot 1`] = `
+<div
+  class="toolbar toolbar--vertical-align-top"
+>
+  <div
+    class="toolbar__item"
+  >
+    <div
+      class="fpo u-margin-none"
+    >
+      Left
+    </div>
+  </div>
+  <div
+    class="toolbar__item"
+  >
+    <div
+      class="fpo u-margin-none"
+    >
+      Left
+    </div>
+  </div>
+  <div
+    class="toolbar__item"
+  >
+    <div
+      class="fpo u-margin-none"
+    >
+      Left
+    </div>
+  </div>
+  <div
+    class="toolbar__item toolbar__item--align-right"
+  >
+    <div
+      class="fpo u-margin-none"
+    >
+      Right
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Toolbar /> Bare story renders snapshot 1`] = `
+<div
+  class="toolbar toolbar--bare"
+>
+  <div
+    class="toolbar__item"
+  >
+    <div
+      class="fpo u-margin-none"
+    >
+      Left
+    </div>
+  </div>
+  <div
+    class="toolbar__item"
+  >
+    <div
+      class="fpo u-margin-none"
+    >
+      Left
+    </div>
+  </div>
+  <div
+    class="toolbar__item"
+  >
+    <div
+      class="fpo u-margin-none"
+    >
+      Left
+    </div>
+  </div>
+  <div
+    class="toolbar__item toolbar__item--align-right"
+  >
+    <div
+      class="fpo u-margin-none"
+    >
+      Right
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Toolbar /> Default story renders snapshot 1`] = `
+<div
+  class="toolbar"
+>
+  <div
+    class="toolbar__item"
+  >
+    <div
+      class="fpo u-margin-none"
+    >
+      Left
+    </div>
+  </div>
+  <div
+    class="toolbar__item"
+  >
+    <div
+      class="fpo u-margin-none"
+    >
+      Left
+    </div>
+  </div>
+  <div
+    class="toolbar__item"
+  >
+    <div
+      class="fpo u-margin-none"
+    >
+      Left
+    </div>
+  </div>
+  <div
+    class="toolbar__item toolbar__item--align-right"
+  >
+    <div
+      class="fpo u-margin-none"
+    >
+      Right
+    </div>
+  </div>
+</div>
+`;

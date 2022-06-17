@@ -1,8 +1,8 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
-import { Story, Meta } from '@storybook/react';
+import { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
-import { Logo, Props } from './Logo';
+import { Logo } from './Logo';
 
 export default {
   title: 'Molecules/Global/Logo',
@@ -10,11 +10,8 @@ export default {
   parameters: {
     badges: [BADGE.BETA],
   },
-} as Meta;
-
-const Template: Story<Props> = (args) => (
-  <div style={{ background: '#000' }}>
-    <Logo {...args}>
+  args: {
+    children: (
       <svg
         fill="none"
         height="32"
@@ -29,13 +26,23 @@ const Template: Story<Props> = (args) => (
           fillRule="evenodd"
         />
       </svg>
-    </Logo>
-  </div>
-);
+    ),
+  },
+  decorators: [
+    (Story) => (
+      <div style={{ background: '#000' }}>
+        <Story />
+      </div>
+    ),
+  ],
+} as Meta<Args>;
 
-export const Default = Template.bind({});
-Default.args = {
-  href: '#',
-  ariaLabel: 'Learning platform',
-  alt: 'Learning Platform',
+type Args = React.ComponentProps<typeof Logo>;
+
+export const Default: StoryObj<Args> = {
+  args: {
+    href: '#',
+    ariaLabel: 'Learning platform',
+    alt: 'Learning Platform',
+  },
 };

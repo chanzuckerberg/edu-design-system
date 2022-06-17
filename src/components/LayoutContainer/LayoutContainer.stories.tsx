@@ -1,8 +1,8 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
-import { Story, Meta } from '@storybook/react';
+import { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
-import { LayoutContainer, Props } from './LayoutContainer';
+import { LayoutContainer } from './LayoutContainer';
 
 export default {
   title: 'Molecules/Layout and Containers/Layout Container',
@@ -14,13 +14,11 @@ export default {
     },
     badges: [BADGE.BETA],
   },
-} as Meta;
+  args: {
+    children: <div className="fpo">Layout container</div>,
+  },
+} as Meta<Args>;
 
-const Template: Story<Props> = (args) => (
-  <LayoutContainer {...args}>
-    <div className="fpo">Layout container</div>
-  </LayoutContainer>
-);
+type Args = React.ComponentProps<typeof LayoutContainer>;
 
-export const Default = Template.bind({});
-Default.args = {};
+export const Default: StoryObj<Args> = {};

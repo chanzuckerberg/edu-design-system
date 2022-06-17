@@ -1,5 +1,5 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
-import { StoryObj } from '@storybook/react';
+import { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
 import Heading, { VARIANTS } from './Heading';
@@ -8,7 +8,7 @@ import styles from './Heading.stories.module.css';
 export default {
   title: 'Atoms/Text/Heading',
   component: Heading,
-};
+} as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Heading>;
 
@@ -64,6 +64,13 @@ export const Heading7: StoryObj<Args> = {
   },
   parameters: {
     badges: [BADGE.DEPRECATED],
+  },
+};
+
+export const TitleXs: StoryObj<Args> = {
+  args: {
+    size: 'title-xs',
+    children: 'Title xs heading size',
   },
 };
 

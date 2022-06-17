@@ -1,5 +1,5 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
-import type { StoryObj } from '@storybook/react';
+import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
 import { Banner, Variant } from './Banner';
@@ -17,7 +17,7 @@ export default {
   parameters: {
     badges: [BADGE.DEPRECATED],
   },
-};
+} as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Banner>;
 

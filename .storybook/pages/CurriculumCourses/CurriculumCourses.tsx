@@ -9,11 +9,13 @@ import {
   Tab,
 } from '../../../src';
 
+import '../../../src/components/Utilities/Spacing.css';
+
 import { PageShell } from '../../recipes/PageShell/PageShell';
 
 export const CurriculumCourses: React.FC = () => (
   <PageShell>
-    <Breadcrumbs>
+    <Breadcrumbs className="u-margin-bottom-md">
       <BreadcrumbsItem href="#" text="My Courses" />
     </Breadcrumbs>
     <PageHeader title="English 10" />
