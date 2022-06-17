@@ -2,41 +2,6 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-## [1.3.0-alpha.0](https://github.com/chanzuckerberg/edu-design-system/compare/v1.2.0...v1.3.0-alpha.0) (2022-06-16)
-
-
-### Features
-
-* add title-xs as Heading size option ([3b15816](https://github.com/chanzuckerberg/edu-design-system/commit/3b15816107edf85b79f953c27ea20ee03a8d79e1))
-* **calendarcard:** create calendar card recipe ([25e3899](https://github.com/chanzuckerberg/edu-design-system/commit/25e3899bd71eabbe436ecc757adfeff9bbff7699))
-* **calendarcard:** rm ununsed imp ([5a22a35](https://github.com/chanzuckerberg/edu-design-system/commit/5a22a35c4b74ac3a8a8200dbedcaecbac49ede39))
-* **calendarcard:** variant ([c64b0b8](https://github.com/chanzuckerberg/edu-design-system/commit/c64b0b8aff6fb2c1abf6a808f468e753fc6ffe30))
-* feedback overview scaffolding ([bc6dc63](https://github.com/chanzuckerberg/edu-design-system/commit/bc6dc63de3df8e3ed1fb5d233c8c9c31b052d0d2))
-* heading snapshot update ([403c59d](https://github.com/chanzuckerberg/edu-design-system/commit/403c59dc3e2bc70d15a14cb3eb59b3ec2da9783d))
-* **page-level-banner:** add component ([5c7809e](https://github.com/chanzuckerberg/edu-design-system/commit/5c7809ead3f32a86987f9b549b23edd0a68151f4))
-* stacked table border tweaks ([036a73b](https://github.com/chanzuckerberg/edu-design-system/commit/036a73b16f16ec6242c940aa153798451a47c432))
-
-
-### Bug Fixes
-
-* added timelinenav tests ([033c2dd](https://github.com/chanzuckerberg/edu-design-system/commit/033c2dd8b1ff005ebf786668e0c6768221a0a7d8))
-* **cardwithnotification:** re-export subcomponents directly ([10b3212](https://github.com/chanzuckerberg/edu-design-system/commit/10b321295d69c1dea4d853768e0e6c9599a8ff38))
-* **cardwithnotification:** re-export subcomponents directly ([0cd2e71](https://github.com/chanzuckerberg/edu-design-system/commit/0cd2e71b9473ce1d58d303b7dadd5e123e5c18a3))
-* change ariaLabelledBy to aria-labelledby TNav ([b66edaa](https://github.com/chanzuckerberg/edu-design-system/commit/b66edaa33600f4cd04d9868f8b84f8ab3bb3805c))
-* horiz stepper test update ([fb56043](https://github.com/chanzuckerberg/edu-design-system/commit/fb560434aa723bfd31e9bea7cc1836604133bc2a))
-* horizontal stepper styles ([734b948](https://github.com/chanzuckerberg/edu-design-system/commit/734b948c01fa00cb57a45b94c30d25a3d44fcc95))
-* lint and tests ([0a6d600](https://github.com/chanzuckerberg/edu-design-system/commit/0a6d600e4f60edb62083600e890477e37b495169))
-* name timelinenav test correctly ([2d3ee70](https://github.com/chanzuckerberg/edu-design-system/commit/2d3ee705bfce4e7c89da07fa7a96f8581a588488))
-* number icon horiz stepper tweaks ([3bb3c15](https://github.com/chanzuckerberg/edu-design-system/commit/3bb3c15498d04e7cedd535b133bac99b2df5abaa))
-* **popover:** close popover on escape ([089e70e](https://github.com/chanzuckerberg/edu-design-system/commit/089e70ed4736feb2e9c12953af1556be134cdb6d))
-* **popover:** close popover on escape ([056aff3](https://github.com/chanzuckerberg/edu-design-system/commit/056aff357ab87a9f1a23a284d3e8b36f909dafe0))
-* remove axe test ([99344a3](https://github.com/chanzuckerberg/edu-design-system/commit/99344a3a863697f618eaff84e25a94a9ddcc0a8e))
-* remove axe. proj and feed overview CSF ([ac72a79](https://github.com/chanzuckerberg/edu-design-system/commit/ac72a79553e30c9f6888c7e15a75cd6285607f3f))
-* remove unused imports ([b669363](https://github.com/chanzuckerberg/edu-design-system/commit/b669363837a0c93bfcf11d6d96f093a56e08a682))
-* replace list detail with timeline nav ([6b1a004](https://github.com/chanzuckerberg/edu-design-system/commit/6b1a004279c4d163888ed19a58ee88f4270a507c))
-* timeline nav type detailed test ([bbc4053](https://github.com/chanzuckerberg/edu-design-system/commit/bbc4053f55452c5aa5925d1eb5d94c75a0a77527))
-* typer errors around tab in timelinenav ([86041c6](https://github.com/chanzuckerberg/edu-design-system/commit/86041c68b87054d2bd4e85cc4e618dac78d2b190))
-
 ## [1.2.0](https://github.com/chanzuckerberg/edu-design-system/compare/v1.1.1...v1.2.0) (2022-06-14)
 
 
