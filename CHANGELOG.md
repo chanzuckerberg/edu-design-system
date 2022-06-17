@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.1](https://github.com/chanzuckerberg/edu-design-system/compare/v1.3.0-alpha.1...v1.2.1) (2022-06-17)
+
+
+### Bug Fixes
+
+* **table-object:** fix behavior type updated in Table ([5277456](https://github.com/chanzuckerberg/edu-design-system/commit/5277456bca5d1084d39a4b6275c912a8b5631899))
+
 ## [1.2.0](https://github.com/chanzuckerberg/edu-design-system/compare/v1.1.1...v1.2.0) (2022-06-14)
 
 
