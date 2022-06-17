@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Hr /> Brand story renders snapshot 1`] = `
+<hr
+  class="hr hr--brand"
+/>
+`;
+
+exports[`<Hr /> Default story renders snapshot 1`] = `
+<hr
+  class="hr"
+/>
+`;
+
+exports[`<Hr /> Large story renders snapshot 1`] = `
+<hr
+  class="hr hr--lg"
+/>
+`;

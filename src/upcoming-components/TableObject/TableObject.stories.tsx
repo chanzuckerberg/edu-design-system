@@ -80,7 +80,7 @@ const Template: Story<Props> = (args) => (
   </TableObject>
 );
 
-const OverflowLargeTemplate: Story<Props> = (args) => (
+const OverflowTemplate: Story<Props> = (args) => (
   <TableObject>
     <TableObject.Header>
       <Toolbar>
@@ -91,64 +91,7 @@ const OverflowLargeTemplate: Story<Props> = (args) => (
     </TableObject.Header>
     <TableObject.Body>
       <Table
-        behavior="overflow-lg"
-        caption="This is a table caption and it is required"
-      >
-        <TableHeader>
-          <TableRow>
-            <TableCell as="th">Table heading</TableCell>
-            <TableCell as="th">Table heading</TableCell>
-            <TableCell as="th">Table heading</TableCell>
-            <TableCell as="th">Table heading</TableCell>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          <TableRow>
-            <TableCell>Value</TableCell>
-            <TableCell>Value</TableCell>
-
-            <TableCell>Value</TableCell>
-            <TableCell>Value</TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell>Value</TableCell>
-            <TableCell>Value</TableCell>
-
-            <TableCell>Value</TableCell>
-            <TableCell>Value</TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell>Value</TableCell>
-            <TableCell>Value</TableCell>
-
-            <TableCell>Value</TableCell>
-            <TableCell>Value</TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell>Value</TableCell>
-            <TableCell>Value</TableCell>
-
-            <TableCell>Value</TableCell>
-            <TableCell>Value</TableCell>
-          </TableRow>
-        </TableBody>
-      </Table>
-    </TableObject.Body>
-  </TableObject>
-);
-
-const OverflowSmallTemplate: Story<Props> = (args) => (
-  <TableObject>
-    <TableObject.Header>
-      <Toolbar>
-        <ToolbarItem>
-          <div className="fpo">Toolbar Item</div>
-        </ToolbarItem>
-      </Toolbar>{' '}
-    </TableObject.Header>
-    <TableObject.Body>
-      <Table
-        behavior="overflow-sm"
+        behavior="overflow"
         caption="This is a table caption and it is required"
       >
         <TableHeader>
@@ -197,8 +140,5 @@ const OverflowSmallTemplate: Story<Props> = (args) => (
 export const Default = Template.bind({});
 Default.args = {};
 
-export const OverflowLarge = OverflowLargeTemplate.bind({});
-OverflowLarge.args = {};
-
-export const OverflowSmall = OverflowSmallTemplate.bind({});
-OverflowSmall.args = {};
+export const Overflow = OverflowTemplate.bind({});
+Overflow.args = {};
