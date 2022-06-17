@@ -263,7 +263,6 @@ export const ControlHeadingInteractive: StoryObj<HeadingArgs> = {
    */
   parameters: {
     snapshot: { skip: true },
-    chromatic: { disableSnapshot: false },
   },
 };
 
