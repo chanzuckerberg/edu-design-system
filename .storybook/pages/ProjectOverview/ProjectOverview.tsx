@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 
 import {
@@ -148,13 +147,15 @@ export const ProjectOverview = () => {
             }
           >
             <Text as="div">
-              <a href="#">Selecting Relevant Sources</a>
-              <a href="#">Identifying Patterns and Relationships</a>
-              <a href="#">Argumentative Claim</a>
-              <a href="#">Selection of Evidence</a>
-              <a href="#">Explanation of Evidence</a>
-              <a href="#">Multimedia in Communication</a>
-              <a href="#">Integration of Evidence</a>
+              <a href="https://go.czi.team/eds">Selecting Relevant Sources</a>
+              <a href="https://go.czi.team/eds">
+                Identifying Patterns and Relationships
+              </a>
+              <a href="https://go.czi.team/eds">Argumentative Claim</a>
+              <a href="https://go.czi.team/eds">Selection of Evidence</a>
+              <a href="https://go.czi.team/eds">Explanation of Evidence</a>
+              <a href="https://go.czi.team/eds">Multimedia in Communication</a>
+              <a href="https://go.czi.team/eds">Integration of Evidence</a>
             </Text>
           </Section>
         </TimelineNavPanel>
