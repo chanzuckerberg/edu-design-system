@@ -5,25 +5,34 @@
 \*------------------------------------*/
 
 /**
- * 1) 
+ * Card recipe for a baseline card to display short text and metadata.
  */
 .baseline-card {
   padding: var(--eds-size-3);
   width: 20.5rem;
 }
 
-.baseline-card__header {
+/**
+ * Baseline card label.
+ */
+.baseline-card__label {
   @mixin eds-theme-typography-label-md;
 
   color: var(--eds-theme-color-text-neutral-strong);
 }
 
+/**
+ * Baseline card body for more content.
+ */
 .baseline-card__body {
   @mixin eds-theme-typography-body-text-sm;
 
   color: var(--eds-theme-color-text-neutral-subtle);
 }
 
+/**
+ * Baseline card footer that displays the metadata.
+ */
 .baseline-card__footer {
   display: flex;
   justify-content: space-between;
@@ -31,6 +40,9 @@
   margin-top: var(--eds-size-3);
 }
 
+/**
+ * Baseline card footer columns for separating metadata categories.
+ */
 .baseline-card__footer-item {
   display: flex;
   flex-direction: column;
@@ -38,12 +50,18 @@
   align-items: center;
 }
 
-.baseline-card__footer-label {
+/**
+ * Item labels for the metadata categories.
+ */
+.baseline-card__footer-item-label {
   @mixin eds-theme-typography-label-sm;
 
   color: var(--eds-theme-color-text-neutral-subtle);
 }
 
+/**
+ * Score tag for the score category.
+ */
 .baseline-card__score {
   @mixin eds-theme-typography-tag;
 
