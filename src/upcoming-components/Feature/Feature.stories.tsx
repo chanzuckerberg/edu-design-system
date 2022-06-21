@@ -5,6 +5,7 @@ import React from 'react';
 import { Feature, Props } from './Feature';
 import Heading from '../../components/Heading';
 import Text from '../../components/Text';
+import PlaceholderImage from '../../static/compass-solo.svg';
 
 export default {
   title: 'Molecules/Blocks/Feature',
@@ -27,8 +28,7 @@ const Template: Story<Props> = (args) => (
 
 export const Default = Template.bind({});
 Default.args = {
-  // eslint-disable-next-line @chanzuckerberg/stories/no-ext-resources-in-stories
-  imgSrc: 'https://via.placeholder.com/450x500.png',
+  imgSrc: PlaceholderImage,
   imgAlt: 'Placeholder Text',
   title: 'Feature Title',
 };

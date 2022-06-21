@@ -7,6 +7,7 @@ import Button from '../../components/Button';
 import ButtonGroup from '../../components/ButtonGroup';
 import Heading from '../../components/Heading';
 import Text from '../../components/Text';
+import PlaceholderImage from '../../static/compass-solo.svg';
 import StackedBlockBody from '../StackedBlockBody';
 import StackedBlockFooter from '../StackedBlockFooter';
 import StackedBlockHeader from '../StackedBlockHeader';
@@ -22,11 +23,7 @@ export default {
 const Template: Story<Props> = (args) => (
   <StackedBlock>
     <StackedBlockHeader>
-      <img
-        alt="placeholder"
-        // eslint-disable-next-line @chanzuckerberg/stories/no-ext-resources-in-stories
-        src="https://st1.latestly.com/wp-content/uploads/2021/08/31-6.jpg"
-      />
+      <img alt="placeholder" src={PlaceholderImage} />
     </StackedBlockHeader>
     <StackedBlockBody>
       <Heading className="u-margin-bottom-md" size="h3">

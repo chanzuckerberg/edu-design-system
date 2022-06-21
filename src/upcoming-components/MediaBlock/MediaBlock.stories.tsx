@@ -5,6 +5,7 @@ import React from 'react';
 import { MediaBlock, Props } from './MediaBlock';
 import Heading from '../../components/Heading';
 import Text from '../../components/Text';
+import PlaceholderImage from '../../static/compass-solo.svg';
 
 export default {
   title: 'Molecules/Blocks/MediaBlock',
@@ -28,15 +29,13 @@ const Template: Story<Props> = (args) => (
 
 export const Default = Template.bind({});
 Default.args = {
-  // eslint-disable-next-line @chanzuckerberg/stories/no-ext-resources-in-stories
-  imgSrc: 'https://st1.latestly.com/wp-content/uploads/2021/08/31-6.jpg',
+  imgSrc: PlaceholderImage,
   imgAlt: 'placeholder image',
 };
 
 export const Reversed = Template.bind({});
 Reversed.args = {
   variant: 'reversed',
-  // eslint-disable-next-line @chanzuckerberg/stories/no-ext-resources-in-stories
-  imgSrc: 'https://st1.latestly.com/wp-content/uploads/2021/08/31-6.jpg',
+  imgSrc: PlaceholderImage,
   imgAlt: 'placeholder image',
 };
