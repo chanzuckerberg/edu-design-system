@@ -5,6 +5,7 @@ import { useState } from 'react';
 import Modal, { ModalContent } from './Modal';
 import styles from './Modal.stories.module.css';
 import { Button, ButtonGroup, Heading, Text } from '../../';
+import { VARIANTS } from '../Heading/Heading';
 
 export default {
   title: 'Organisms/Interactive/Modal',
@@ -210,6 +211,60 @@ export const DefaultInteractive: StoryObj<InteractiveArgs> = {
   render: (args) => (
     <InteractiveExample {...args}>{getChildren()}</InteractiveExample>
   ),
+};
+
+type HeadingArgs = React.ComponentProps<typeof Heading>;
+export const ControlHeadingInteractive: StoryObj<HeadingArgs> = {
+  argTypes: {
+    as: {
+      control: 'select',
+      name: 'title "as" prop',
+      options: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
+    },
+    size: {
+      control: 'select',
+      name: 'title "size" prop',
+      options: [
+        'h1',
+        'h2',
+        'h3',
+        'h4',
+        'h5',
+        'h6',
+        'h7',
+        'headline-lg',
+        'headline-md',
+        'headline-sm',
+        'title-md',
+        'title-sm',
+        'body-sm',
+        'body-xs',
+        'title-xs',
+      ],
+    },
+    variant: {
+      control: 'select',
+      name: 'title "variant" prop',
+      options: VARIANTS,
+    },
+  },
+  render: ({ as, size, variant, ...args }) => (
+    <InteractiveExample {...args}>
+      <Modal.Header>
+        <Modal.Title as={as} size={size} variant={variant}>
+          Modal Title
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body>Modal Content</Modal.Body>
+    </InteractiveExample>
+  ),
+  /**
+   * Purpose of this story is to have different controls for the Modal.Title but defaults to what all the other stories are.
+   * Hence will snap similarly to the other stories has no value in snapping both unit and Chromatic.
+   */
+  parameters: {
+    snapshot: { skip: true },
+  },
 };
 
 export const WithoutCloseButton: StoryObj<InteractiveArgs> = {
