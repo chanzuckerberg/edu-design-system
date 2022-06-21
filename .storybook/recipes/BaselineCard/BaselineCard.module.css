@@ -9,7 +9,7 @@
  */
 .baseline-card {
   padding: var(--eds-size-3);
-  width: 20.5rem;
+  max-width: 20.5rem;
 }
 
 /**
