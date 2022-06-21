@@ -1,0 +1,56 @@
+@import '../../../src/design-tokens/mixins.css';
+
+/*------------------------------------*\
+    # BASELINE CARD
+\*------------------------------------*/
+
+/**
+ * 1) 
+ */
+.baseline-card {
+  padding: var(--eds-size-3);
+  width: 20.5rem;
+}
+
+.baseline-card__header {
+  @mixin eds-theme-typography-label-md;
+
+  color: var(--eds-theme-color-text-neutral-strong);
+}
+
+.baseline-card__body {
+  @mixin eds-theme-typography-body-text-sm;
+
+  color: var(--eds-theme-color-text-neutral-subtle);
+}
+
+.baseline-card__footer {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: var(--eds-size-3);
+}
+
+.baseline-card__footer-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--eds-size-1);
+  align-items: center;
+}
+
+.baseline-card__footer-label {
+  @mixin eds-theme-typography-label-sm;
+
+  color: var(--eds-theme-color-text-neutral-subtle);
+}
+
+.baseline-card__score {
+  @mixin eds-theme-typography-tag;
+
+  background-color: transparent;
+  color: var(--theme-color-text-neutral-default);
+
+  height: var(--eds-size-3);
+  padding-left: 0.875rem;
+  padding-right: 0.875rem;
+}

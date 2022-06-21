@@ -43,7 +43,7 @@ export const OutlineVariants: StoryObj<Args> = {
           <Tag
             key={variant}
             {...args}
-            hasOutline={true}
+            hasOutline
             text={variant}
             variant={variant}
           />
@@ -65,7 +65,7 @@ export const WithIcon: StoryObj<Args> = {
           <Tag
             key={variant}
             {...args}
-            hasOutline={true}
+            hasOutline
             text={variant}
             variant={variant}
           />
