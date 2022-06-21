@@ -231,6 +231,7 @@ export const ControlHeadingInteractive: StoryObj<HeadingArgs> = {
         'h4',
         'h5',
         'h6',
+        'h7',
         'headline-lg',
         'headline-md',
         'headline-sm',
