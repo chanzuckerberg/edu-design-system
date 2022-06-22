@@ -24,7 +24,7 @@ type ModalContentProps = {
    * If undefined, the headingText of the Modal.Header will be used.
    * If there is no Modal.Header, an ariaLabel is required.
    */
-  ariaLabel?: string;
+  'aria-label'?: string;
   /**
    * Additional classnames passed in for styling.
    */
@@ -176,12 +176,12 @@ export const ModalContent = (props: ModalContentProps) => {
  * </Modal>
  */
 export const Modal = (props: ModalProps) => {
-  const { ariaLabel, initialFocus, onClose, open, ...rest } = props;
+  const { 'aria-label': ariaLabel, initialFocus, onClose, open, ...rest } = props;
   const { children } = rest;
 
   if (process.env.NODE_ENV !== 'production') {
     const hasModalTitle = childrenHaveModalTitle(children);
-    if (!hasModalTitle && !ariaLabel) {
+    if (!hasModalTitle && !props['aria-label']) {
       throw new Error(
         "You must use the Modal.Title helper component or pass in an aria-label when using the Modal. The Modal uses the Modal.Title to describe the modal to screen readers using aria-labelledby. If you're not using the Modal.Title component, you can pass in an aria-label instead.",
       );
@@ -200,7 +200,7 @@ export const Modal = (props: ModalProps) => {
       show={open}
     >
       <Dialog
-        aria-label={ariaLabel}
+        aria-label={props['aria-label']}
         className={styles['modal']}
         initialFocus={initialFocus}
         // Passing onClose to the Dialog allows it to close the modal when the ESC key is triggered.
