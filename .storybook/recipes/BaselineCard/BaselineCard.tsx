@@ -2,14 +2,7 @@ import clsx from 'clsx';
 import React from 'react';
 import styles from './BaselineCard.module.css';
 
-import {
-  Card,
-  CardBody,
-  CardFooter,
-  CardHeader,
-  Tag,
-  Text,
-} from '../../../src';
+import { Card, CardBody, CardFooter, CardHeader, Tag } from '../../../src';
 
 import { Variant } from '../../../src/components/Tag/Tag';
 
