@@ -20,9 +20,14 @@ export type Props = {
    * Placeholder for brand asset.
    */
   brandAsset?: ReactNode;
+  /**
+   * CSS class names that can be appended to the brand asset.
+   */
+  assetClassName?: string;
 };
 
 export const ModalHeader = ({
+  assetClassName,
   brandAsset,
   children,
   className,
@@ -34,11 +39,15 @@ export const ModalHeader = ({
     variant === 'brand' && styles['modal-header--brand'],
     className,
   );
+  const brandAssetClassName = clsx(
+    styles['modal-header__brand-asset'],
+    assetClassName,
+  );
   return (
     <div className={componentClassName} {...other}>
       {children}
       {variant === 'brand' && brandAsset && (
-        <div className={styles['modal-header__brand-asset']}>{brandAsset}</div>
+        <div className={brandAssetClassName}>{brandAsset}</div>
       )}
     </div>
   );
