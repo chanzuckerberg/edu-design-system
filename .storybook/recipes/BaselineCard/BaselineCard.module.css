@@ -34,16 +34,28 @@
  * Baseline card footer that displays the metadata.
  */
 .baseline-card__footer {
-  display: flex;
-  justify-content: space-between;
-
   margin-top: var(--eds-size-3);
 }
 
 /**
- * Baseline card footer columns for separating metadata categories.
+ * Baseline card table for accessibility.
  */
-.baseline-card__footer-item {
+.baseline-card__table {
+  width: 100%;
+}
+
+/**
+ * Baseline card table body wraps the table rows.
+ */
+.baseline-card__table-body {
+  display: flex;
+  justify-content: space-between;
+}
+
+/**
+ * Baseline card table rows, made into columns for separating metadata categories.
+ */
+.baseline-card__table-row {
   display: flex;
   flex-direction: column;
   gap: var(--eds-size-1);
@@ -53,10 +65,17 @@
 /**
  * Item labels for the metadata categories.
  */
-.baseline-card__footer-item-label {
+.baseline-card__table-label {
   @mixin eds-theme-typography-label-sm;
 
   color: var(--eds-theme-color-text-neutral-subtle);
+}
+
+/**
+ * Metadata item content.
+ */
+.baseline-card__table-data {
+  @mixin eds-theme-typography-body-text-sm;
 }
 
 /**

@@ -70,29 +70,48 @@ export const BaselineCard = ({
       <CardBody className={styles['baseline-card__body']}>{body}</CardBody>
       {metadata && (
         <CardFooter className={styles['baseline-card__footer']}>
-          <div className={styles['baseline-card__footer-item']}>
-            <Text className={styles['baseline-card__footer-item-label']}>
-              Score
-            </Text>
-            <Tag
-              className={styles['baseline-card__score']}
-              hasOutline
-              text={metadata.score}
-              variant={metadata.variant}
-            />
-          </div>
-          <div className={styles['baseline-card__footer-item']}>
-            <Text className={styles['baseline-card__footer-item-label']}>
-              Attempts
-            </Text>
-            <Text size="sm">{metadata.attempts}</Text>
-          </div>
-          <div className={styles['baseline-card__footer-item']}>
-            <Text className={styles['baseline-card__footer-item-label']}>
-              Line Passes On
-            </Text>
-            <Text size="sm">{metadata.deadline}</Text>
-          </div>
+          <table className={styles['baseline-card__table']}>
+            <tbody className={styles['baseline-card__table-body']}>
+              <tr className={styles['baseline-card__table-row']}>
+                <th
+                  className={styles['baseline-card__table-label']}
+                  scope="row"
+                >
+                  Score
+                </th>
+                <td>
+                  <Tag
+                    className={styles['baseline-card__score']}
+                    hasOutline
+                    text={metadata.score}
+                    variant={metadata.variant}
+                  />
+                </td>
+              </tr>
+              <tr className={styles['baseline-card__table-row']}>
+                <th
+                  className={styles['baseline-card__table-label']}
+                  scope="row"
+                >
+                  Attempts
+                </th>
+                <td className={styles['baseline-card__table-data']}>
+                  {metadata.attempts}
+                </td>
+              </tr>
+              <tr className={styles['baseline-card__table-row']}>
+                <th
+                  className={styles['baseline-card__table-label']}
+                  scope="row"
+                >
+                  Line Passes On
+                </th>
+                <td className={styles['baseline-card__table-data']}>
+                  {metadata.deadline}
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </CardFooter>
       )}
     </Card>
