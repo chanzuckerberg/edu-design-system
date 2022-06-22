@@ -54,8 +54,8 @@ export const DrawerExample = ({ className, ...other }: Props) => {
       </Button>
 
       <Drawer
-        ariaDescribedBy="drawer-description-1"
-        ariaLabelledBy="drawer-heading-1"
+        aria-describedby="drawer-description-1"
+        aria-labelledby="drawer-heading-1"
         dismissible={true}
         isActive={drawerOpen}
         onClose={closeDrawerExample}

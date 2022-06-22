@@ -212,7 +212,7 @@ export const TextField = ({
       <div className={styles['text-field__body']}>
         <TextInput
           aria-invalid={!!isError}
-          ariaDescribedBy={ariaDescribedByVar}
+          aria-describedby={ariaDescribedByVar}
           className={styles['text-field__input']}
           data-bootstrap-override="textinput"
           defaultValue={defaultValue}

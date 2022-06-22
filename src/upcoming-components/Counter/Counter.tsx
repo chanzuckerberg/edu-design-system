@@ -181,9 +181,9 @@ export const Counter = ({
           <Icon name="remove" purpose="informative" title={minusButtonText} />
         </Button>
         <TextInput
+          aria-describedby={ariaDescribedByVar}
           aria-labelledby={ariaLabelledByVar}
           aria-live="assertive"
-          ariaDescribedBy={ariaDescribedByVar}
           className={styles['counter__input']}
           disabled={disabled}
           id={idVar}

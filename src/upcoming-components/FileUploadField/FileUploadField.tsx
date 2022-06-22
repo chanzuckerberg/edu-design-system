@@ -343,8 +343,8 @@ export const FileUploadField = ({
         >
           <TextInput
             accept={acceptedFileTypes}
+            aria-describedby={ariaDescribedByVar}
             aria-invalid={!!isError}
-            ariaDescribedBy={ariaDescribedByVar}
             className={styles['file-upload-field__input']}
             disabled={isDisabled}
             id={idVar}

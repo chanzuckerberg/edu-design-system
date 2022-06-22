@@ -245,7 +245,7 @@ export const Tabs = ({
         // @ts-expect-error TODO: fix "No overload matches this call" error
         return React.cloneElement<Props>(child, {
           id: idVar[i],
-          ariaLabelledBy: ariaLabelledByVar[i],
+          ['aria-labelledby']: ariaLabelledByVar[i],
         });
       }
       return child;

@@ -441,6 +441,7 @@ Card.Footer = CardFooter;
 - \*_camelCase for multi-word props_ - \*
 - **All props declared at top of `render` method** - this defines all the props available to a component in one place and keeps the rest of the component code cleaner (you don't have to repeat `this.props.[thing]` everywhere).
 - Don't use ternaries for most things, especially blocks of JSX.
+- Update aria attribute prop names to native HTML names (`aria-label`, `aria-describedby`, `aria-labelledby`)
 
 ## Component API naming conventions <a name="api-naming"></a>
 

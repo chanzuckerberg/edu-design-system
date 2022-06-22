@@ -184,8 +184,8 @@ export const TextareaField = ({
 
       <div className={styles['textarea-field__body']}>
         <Textarea
+          aria-describedby={ariaDescribedByVar}
           aria-invalid={!!isError}
-          ariaDescribedBy={ariaDescribedByVar}
           className={styles['textarea-field__textarea']}
           defaultValue={defaultValue}
           disabled={disabled}
