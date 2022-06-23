@@ -186,7 +186,7 @@ export const Tabs = ({
   }, [tabs, getUID]);
 
   /**
-   * Handles if tabs can be scrolled left or right.
+   * Handles if scroll fade indicators should be displayed.
    */
   const handleTabsScroll = debounce(
     (headerEl: HTMLDivElement) => {
@@ -210,6 +210,9 @@ export const Tabs = ({
     { leading: true },
   );
 
+  /**
+   * Listens for window resize to display scroll fade indicators.
+   */
   useEffect(() => {
     if (headerRef && headerRef.current) {
       const resizeHandleTabs = () => {
