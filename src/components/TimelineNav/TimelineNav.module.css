@@ -66,6 +66,8 @@
   overflow: hidden;
 
   @media all and (min-width: $eds-bp-lg) {
+    padding: var(--eds-size-5) var(--eds-size-8);
+    box-shadow: -6px 0px 10px -2px var(--eds-theme-color-border-neutral-subtle); 
     height: unset;
     transform: unset;
     transition: unset;
@@ -75,14 +77,11 @@
 }
 
 .timeline-nav__body.eds-is-active {
-  /* 3 */
-  transform: translateX(0);
+  transform: translateX(0); /* 3 */
   z-index: var(--eds-z-index-top);
 
   @media all and (min-width: $eds-bp-lg) {
     transform: unset;
-    padding: var(--eds-size-5) var(--eds-size-8);
-    box-shadow: -6px 0px 10px -2px var(--eds-theme-color-border-neutral-subtle); /* 1 */
   }
 }
 
