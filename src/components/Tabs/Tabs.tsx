@@ -219,6 +219,12 @@ export const Tabs = ({
         // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
         handleTabsScroll(headerRef.current!);
       };
+      /**
+       * The event listener actually calls the callback once when initiated, but the event listener
+       * is not triggered with prop changes so this line is required.
+       * This means the callback may be called twice on initial paint, which is fine, and
+       * is better than it not being called at all.
+       */
       resizeHandleTabs();
       window.addEventListener('resize', resizeHandleTabs);
       return () => {
