@@ -1,4 +1,5 @@
 import clsx from 'clsx';
+import debounce from 'lodash.debounce';
 import React, {
   ReactNode,
   useRef,
@@ -122,7 +123,10 @@ export const Tabs = ({
    * Initialize states, constants, and refs
    */
   const ref = useRef<number | undefined>();
+  const headerRef = useRef<HTMLDivElement>(null);
   const [activeIndexState, setActiveIndexState] = useState(activeIndex);
+  const [scrollableLeft, setScrollableLeft] = useState<boolean>(false);
+  const [scrollableRight, setScrollableRight] = useState<boolean>(false);
   /**
    * Set the only children components allowed within <Tabs> to be Tab
    */
@@ -182,6 +186,45 @@ export const Tabs = ({
   }, [tabs, getUID]);
 
   /**
+   * Handles if tabs can be scrolled left or right.
+   */
+  const handleTabsScroll = debounce(
+    (headerEl: HTMLDivElement) => {
+      const scrollLeft = headerEl.scrollLeft;
+      const width = headerEl.clientWidth;
+      const scrollWidth = headerEl.scrollWidth;
+
+      if (scrollLeft > 0) {
+        setScrollableLeft(true);
+      } else {
+        setScrollableLeft(false);
+      }
+
+      if (scrollWidth > width && scrollLeft + width < scrollWidth) {
+        setScrollableRight(true);
+      } else {
+        setScrollableRight(false);
+      }
+    },
+    100,
+    { leading: true },
+  );
+
+  useEffect(() => {
+    if (headerRef && headerRef.current) {
+      const resizeHandleTabs = () => {
+        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+        handleTabsScroll(headerRef.current!);
+      };
+      resizeHandleTabs();
+      window.addEventListener('resize', resizeHandleTabs);
+      return () => {
+        window.removeEventListener('resize', resizeHandleTabs);
+      };
+    }
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  /**
    * On open
    * 1) On click of a tab, set activeIndexState to index of tab being clicked\
    * 2) If function is passed into onChange prop, run that on click
@@ -230,8 +273,10 @@ export const Tabs = ({
 
   const componentClassName = clsx(
     styles['tabs'],
-    className,
     inverted && styles['tabs--inverted'],
+    scrollableLeft && styles['tabs--scrollable-left'],
+    scrollableRight && styles['tabs--scrollable-right'],
+    className,
   );
 
   const childrenWithProps = React.Children.map(
@@ -254,7 +299,11 @@ export const Tabs = ({
 
   return (
     <div className={componentClassName} {...other}>
-      <div className={styles['tabs__header']}>
+      <div
+        className={styles['tabs__header']}
+        onScroll={(e) => handleTabsScroll(e.target as HTMLDivElement)}
+        ref={headerRef}
+      >
         <ul className={styles['tabs__list']} role="tablist">
           {/* TODO: improve `any` type */}
           {tabs().map((tab: any, i: number) => {

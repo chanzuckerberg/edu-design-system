@@ -9,6 +9,48 @@
  */
 /* stylelint-disable-next-line block-no-empty */
 .tabs {
+  /** Psuedo-element ::after
+  * 1) Adds a cosmetic triangle to the bottom edge of the popover, pointing toward the button that opened the popover
+  */
+  position: relative;
+}
+
+.tabs--scrollable-left::before {
+  pointer-events: none;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--eds-size-8);
+  background-image: linear-gradient(
+    to right,
+    var(--eds-theme-color-background-neutral-default),
+    transparent 90%
+  );
+
+  height: 2.75rem;
+  @media all and (max-width: $eds-bp-md) {
+    height: 2.5rem;
+  }
+}
+
+.tabs--scrollable-right::after {
+  pointer-events: none;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: var(--eds-size-8);
+  background-image: linear-gradient(
+    to left,
+    var(--eds-theme-color-background-neutral-default),
+    transparent 90%
+  );
+
+  height: 2.75rem;
+  @media all and (max-width: $eds-bp-md) {
+    height: 2.5rem;
+  }
 }
 
 .tabs--inverted {

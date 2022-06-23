@@ -16,7 +16,7 @@ export default {
   args: {
     children: (
       <>
-        <Tab title="Tab 1">
+        <Tab title="Tab Title 1">
           <Text as="div">
             <h3>Tab 1</h3>
             <p>
@@ -28,7 +28,7 @@ export default {
           </Text>
         </Tab>
 
-        <Tab title="Tab 2">
+        <Tab title="Tab Title 2">
           <Text as="div">
             <h3>Tab 2</h3>
             <p>
@@ -40,7 +40,79 @@ export default {
           </Text>
         </Tab>
 
-        <Tab title="Tab 3">
+        <Tab title="Tab Title 3">
+          <Text as="div">
+            <h3>Tab 3</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex{' '}
+            </p>
+          </Text>
+        </Tab>
+
+        <Tab title="Tab Title 4">
+          <Text as="div">
+            <h3>Tab 3</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex{' '}
+            </p>
+          </Text>
+        </Tab>
+
+        <Tab title="Tab Title 5">
+          <Text as="div">
+            <h3>Tab 3</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex{' '}
+            </p>
+          </Text>
+        </Tab>
+
+        <Tab title="Tab Title 6">
+          <Text as="div">
+            <h3>Tab 3</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex{' '}
+            </p>
+          </Text>
+        </Tab>
+
+        <Tab title="Tab Title 7">
+          <Text as="div">
+            <h3>Tab 3</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex{' '}
+            </p>
+          </Text>
+        </Tab>
+
+        <Tab title="Tab Title 8">
+          <Text as="div">
+            <h3>Tab 3</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex{' '}
+            </p>
+          </Text>
+        </Tab>
+
+        <Tab title="Tab Title 9">
           <Text as="div">
             <h3>Tab 3</h3>
             <p>
