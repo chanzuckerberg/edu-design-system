@@ -6,25 +6,30 @@
 
 /**
  * 1) List of of links where each link toggles open associated information
- * 2) On smaller viewports, the list of links and body are each full width; 
- * on click, the list slides out to the left and the body slides in from the right
- * 3) On larger viewports, the list of links and body are stacked and both are visible
  */
 .timeline-nav {
   display: flex;
-  position: relative;
+  width: 100%;
   overflow: hidden;
-  flex-direction: row; /* 2 */
+  transition: var(--eds-anim-fade-long) var(--eds-anim-ease);
   background: var(--eds-theme-color-background-neutral-default);
   border-width: var(--eds-theme-border-width);
   border-style: solid;
   border-color: var(--eds-theme-color-border-neutral-subtle);
   border-radius: var(--eds-border-radius-md);
-  width: 100%;
 
   @media all and (min-width: $eds-bp-lg) {
-    flex-direction: row; /* 3 */
+    transition: unset;
     gap: var(--eds-size-2);
+  }
+}
+
+.timeline-nav.eds-is-active {
+  transform: translateX(-100%);
+  overflow: visible;
+
+  @media all and (min-width: $eds-bp-lg) {
+    transform: unset;
   }
 }
 
@@ -34,51 +39,56 @@
  * 2) Tab overflow behavior
  */
 .timeline-nav__nav {
+  display: block;
   width: 100%;
-  position: relative;
+  flex-shrink: 0;
   padding: var(--eds-size-4) var(--eds-size-2);
 
   @media all and (min-width: $eds-bp-lg) {
     padding: var(--eds-size-5);
-    width: 20rem;
+    width: 33.33%;
+    flex-shrink: initial;
   }
 }
 
 /**
  * Timeline nav body
- * 1) On smaller viewports, we want the body to always fill the available
- * vertical space to completely slide over the list
- * 2) On larger viewports: take up the rest of the space
- * 3) On smaller viewports, the body slides in from and out to the right
  * TODO: Tokenize the box shadow
+ * 1) Take up the rest of the space
  */
 .timeline-nav__body {
   display: block;
-  background: var(--eds-theme-color-background-neutral-default);
-  height: 100%; /* 1 */
-  width: 100%;
-  top: 0;
-  left: 0;
-  transform: translateX(100%);
-  transition: var(--eds-anim-fade-long) var(--eds-anim-ease);
+  visibility: hidden;
+  z-index: var(--eds-z-index-bottom);
   position: absolute;
+  height: 0;
+  width: 0;
+  overflow: hidden; 
+  flex-shrink: 0;
   padding: var(--eds-size-2);
-  overflow: hidden;
 
   @media all and (min-width: $eds-bp-lg) {
-    padding: var(--eds-size-5) var(--eds-size-8);
-    box-shadow: -6px 0px 10px -2px var(--eds-theme-color-border-neutral-subtle); 
-    height: unset;
-    transform: unset;
-    transition: unset;
+    display: block;
     position: static;
-    flex: 1; /* 2 */
+    z-index: var(--eds-z-index-0);
+    flex-shrink: 1;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    visibility: visible;
+    transform: translateX(0);
+    padding: var(--eds-size-5) var(--eds-size-8);
+    box-shadow: -6px 0px 10px -2px var(--eds-theme-color-border-neutral-subtle); /* 1 */
   }
 }
 
 .timeline-nav__body.eds-is-active {
-  transform: translateX(0); /* 3 */
-  z-index: var(--eds-z-index-top);
+  position: static;
+  z-index: var(--eds-z-index-0);
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  visibility: visible;
 
   @media all and (min-width: $eds-bp-lg) {
     transform: unset;
@@ -101,29 +111,16 @@
 /**
  * Timeline nav list
  * 1) Actual unordered list of timeline-nav
- * 2) On smaller viewports, the list slides out to the left
- * when an item becomes active
+ * 2) Set to display flex to place timeline-nav side by side
  */
 .timeline-nav__list {
   @mixin reset;
   list-style: none;
   @mixin eds-theme-typography-body-text;
-  transform: translateX(0);
-  transition: var(--eds-anim-fade-long) var(--eds-anim-ease);
 
   @media all and (min-width: $eds-bp-lg) {
     position: sticky;
     top: var(--eds-size-5);
-    transform: unset;
-    transition: unset;
-  }
-}
-
-.timeline-nav__list.eds-is-active {
-  transform: translateX(-100%); /* 2 */
-
-  @media all and (min-width: $eds-bp-lg) {
-    transform: unset;
   }
 }
 
