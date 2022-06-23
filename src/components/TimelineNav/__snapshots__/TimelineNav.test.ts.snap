@@ -52,7 +52,24 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
               </svg>
             </span>
           </div>
-          Overview
+          <div
+            class="timeline-nav__link-title"
+          >
+            Overview
+          </div>
+          <svg
+            aria-hidden="true"
+            class="icon timeline-nav__link-arrow"
+            fill="currentColor"
+            height="20px"
+            style="--icon-size: 20px;"
+            width="20px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="test-file-stub#arrow-forward"
+            />
+          </svg>
         </a>
       </li>
       <li
@@ -79,7 +96,24 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
               1
             </span>
           </div>
-          TimelineNavPanel 1
+          <div
+            class="timeline-nav__link-title"
+          >
+            TimelineNavPanel 1
+          </div>
+          <svg
+            aria-hidden="true"
+            class="icon timeline-nav__link-arrow"
+            fill="currentColor"
+            height="20px"
+            style="--icon-size: 20px;"
+            width="20px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="test-file-stub#arrow-forward"
+            />
+          </svg>
         </a>
       </li>
       <li
@@ -109,7 +143,24 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
               />
             </svg>
           </div>
-          TimelineNavPanel 2
+          <div
+            class="timeline-nav__link-title"
+          >
+            TimelineNavPanel 2
+          </div>
+          <svg
+            aria-hidden="true"
+            class="icon timeline-nav__link-arrow"
+            fill="currentColor"
+            height="20px"
+            style="--icon-size: 20px;"
+            width="20px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="test-file-stub#arrow-forward"
+            />
+          </svg>
         </a>
       </li>
       <li
@@ -139,7 +190,26 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
               />
             </svg>
           </div>
-          TimelineNavPanel 3
+          <div
+            class="timeline-nav__link-title"
+          >
+            
+              Panel with a long name that breaks into multiple lines on smaller
+              viewports
+          </div>
+          <svg
+            aria-hidden="true"
+            class="icon timeline-nav__link-arrow"
+            fill="currentColor"
+            height="20px"
+            style="--icon-size: 20px;"
+            width="20px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="test-file-stub#arrow-forward"
+            />
+          </svg>
         </a>
       </li>
       <li
@@ -169,7 +239,24 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
               />
             </svg>
           </div>
-          TimelineNavPanel 4
+          <div
+            class="timeline-nav__link-title"
+          >
+            TimelineNavPanel 4
+          </div>
+          <svg
+            aria-hidden="true"
+            class="icon timeline-nav__link-arrow"
+            fill="currentColor"
+            height="20px"
+            style="--icon-size: 20px;"
+            width="20px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="test-file-stub#arrow-forward"
+            />
+          </svg>
         </a>
       </li>
       <li
@@ -203,7 +290,7 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <title
-                  id="6"
+                  id="11"
                 >
                   incomplete step
                 </title>
@@ -213,7 +300,24 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
               </svg>
             </span>
           </div>
-          TimelineNavPanel 5
+          <div
+            class="timeline-nav__link-title"
+          >
+            TimelineNavPanel 5
+          </div>
+          <svg
+            aria-hidden="true"
+            class="icon timeline-nav__link-arrow"
+            fill="currentColor"
+            height="20px"
+            style="--icon-size: 20px;"
+            width="20px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="test-file-stub#arrow-forward"
+            />
+          </svg>
         </a>
       </li>
       <li
@@ -240,7 +344,24 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
               6
             </span>
           </div>
-          TimelineNavPanel 6
+          <div
+            class="timeline-nav__link-title"
+          >
+            TimelineNavPanel 6
+          </div>
+          <svg
+            aria-hidden="true"
+            class="icon timeline-nav__link-arrow"
+            fill="currentColor"
+            height="20px"
+            style="--icon-size: 20px;"
+            width="20px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="test-file-stub#arrow-forward"
+            />
+          </svg>
         </a>
       </li>
       <li
@@ -270,7 +391,24 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
               />
             </svg>
           </div>
-          Final Item - complete
+          <div
+            class="timeline-nav__link-title"
+          >
+            Final Item - complete
+          </div>
+          <svg
+            aria-hidden="true"
+            class="icon timeline-nav__link-arrow"
+            fill="currentColor"
+            height="20px"
+            style="--icon-size: 20px;"
+            width="20px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="test-file-stub#arrow-forward"
+            />
+          </svg>
         </a>
       </li>
     </ol>
@@ -278,6 +416,22 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
   <div
     class="timeline-nav__body"
   >
+    <button
+      class="clickable-style button timeline-nav__back button--link clickable-style--link clickable-style--neutral"
+      type="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="icon"
+        fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="test-file-stub#arrow-back"
+        />
+      </svg>
+      Back
+    </button>
     <div
       aria-hidden="false"
       aria-labelledby="1uid9"

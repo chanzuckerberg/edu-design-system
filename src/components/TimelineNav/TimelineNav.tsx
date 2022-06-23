@@ -399,6 +399,7 @@ export const TimelineNav = ({
         <Button
           className={clsx(styles['timeline-nav__back'])}
           onClick={onClick}
+          size="sm"
           status="neutral"
           variant="link"
         >
