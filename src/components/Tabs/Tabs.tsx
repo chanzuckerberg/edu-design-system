@@ -283,9 +283,13 @@ export const Tabs = ({
   const componentClassName = clsx(
     styles['tabs'],
     inverted && styles['tabs--inverted'],
+    className,
+  );
+
+  const headerClassName = clsx(
+    styles['tabs__header'],
     scrollableLeft && styles['tabs--scrollable-left'],
     scrollableRight && styles['tabs--scrollable-right'],
-    className,
   );
 
   const childrenWithProps = React.Children.map(
@@ -309,7 +313,7 @@ export const Tabs = ({
   return (
     <div className={componentClassName} {...other}>
       <div
-        className={styles['tabs__header']}
+        className={headerClassName}
         onScroll={(e) => handleTabsScroll(e.target as HTMLDivElement)}
         ref={headerRef}
       >

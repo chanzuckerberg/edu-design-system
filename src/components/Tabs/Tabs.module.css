@@ -7,51 +7,6 @@
 /**
  * List of of links where each link toggles open associated information
  */
-.tabs {
-  position: relative;
-}
-
-/**
- * Fade scrollable indicators to display if there is scrollable area on either side.
- * 1) Indicators are non interactable and should be able to click tab under them.
- */
-.tabs--scrollable-left::before,
-.tabs--scrollable-right::after {
-  pointer-events: none; /* 1 */
-  content: '';
-  position: absolute;
-  top: 0;
-  width: var(--eds-size-8);
-
-  height: 2.75rem;
-  @media all and (max-width: $eds-bp-md) {
-    height: 2.5rem;
-  }
-}
-
-/**
- * Left fade scrollable indicator.
- */
-.tabs--scrollable-left::before {
-  left: 0;
-  background-image: linear-gradient(
-    to right,
-    var(--eds-theme-color-background-neutral-default),
-    transparent 90%
-  );
-}
-
-/**
- * Right fade scrollable indicator.
- */
-.tabs--scrollable-right::after {
-  right: 0;
-  background-image: linear-gradient(
-    to left,
-    var(--eds-theme-color-background-neutral-default),
-    transparent 90%
-  );
-}
 
 /**
  * Inverted variant.
@@ -66,14 +21,42 @@
  * 2) Tab overflow behavior
  */
 .tabs__header {
-  width: 100%;
-  overflow: hidden;
   overflow-x: auto;
   position: relative;
 
   .tabs--inverted & {
     background: none;
   }
+}
+
+/**
+ * Fade scrollable indicators to display if there is scrollable area on either side.
+ * 1) The color "white" is arbitrary and any non transparent color can be used here.
+ */
+.tabs--scrollable-left {
+  -webkit-mask-image: -webkit-linear-gradient(
+    left,
+    transparent,
+    white var(--eds-size-8) /* 1 */
+  );
+}
+
+.tabs--scrollable-right {
+  -webkit-mask-image: -webkit-linear-gradient(
+    right,
+    transparent,
+    white var(--eds-size-8) /* 1 */
+  );
+}
+
+.tabs--scrollable-left.tabs--scrollable-right {
+  -webkit-mask-image: -webkit-linear-gradient(
+    left,
+    transparent,
+    /* 1 */ white var(--eds-size-8),
+    white calc(100% - var(--eds-size-8)),
+    transparent 100%
+  );
 }
 
 /**
