@@ -52,9 +52,17 @@ export default {
           </Text>
         </TimelineNavPanel>
 
-        <TimelineNavPanel title="TimelineNavPanel 3" variant="warning">
+        <TimelineNavPanel
+          title="
+              Panel with a long name that breaks into multiple lines on smaller
+              viewports"
+          variant="warning"
+        >
           <Text as="div">
-            <h3>TimelineNavPanel 3</h3>
+            <h3>
+              Panel with a long name that breaks into multiple lines on smaller
+              viewports
+            </h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut

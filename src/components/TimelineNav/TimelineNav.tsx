@@ -21,6 +21,7 @@ import {
   R_ARROW_KEYCODE,
   D_ARROW_KEYCODE,
 } from '../../util/keycodes';
+import Button from '../Button';
 import Icon from '../Icon';
 import NumberIcon from '../NumberIcon';
 import TimelineNavPanel, { TimelineNavPanelVariant } from '../TimelineNavPanel';
@@ -115,6 +116,7 @@ export const TimelineNav = ({
    * Initialize states, constants, and refs
    */
   const ref = useRef<number | undefined>();
+  const [isActive, setIsActive] = useState(false);
   const [activeIndexState, setActiveIndexState] = useState(
     activeIndex ? activeIndex : 0,
   );
@@ -187,6 +189,7 @@ export const TimelineNav = ({
    */
   function onOpen(index: number) {
     setActiveIndexState(index); /* 1 */
+    setIsActive(true);
 
     if (onChange) {
       /* 2 */
@@ -318,13 +321,19 @@ export const TimelineNav = ({
     }
   };
 
+  const onClick = () => setIsActive(false);
+
   return (
     <div className={componentClassName} {...other}>
       <div className={styles['timeline-nav__nav']}>
         <ol
-          className={clsx(styles['timeline-nav__list'], {
-            [styles['timeline-nav__list--ordered']]: variant === 'ordered',
-          })}
+          className={clsx(
+            styles['timeline-nav__list'],
+            isActive && styles['eds-is-active'],
+            {
+              [styles['timeline-nav__list--ordered']]: variant === 'ordered',
+            },
+          )}
           role="tablist"
         >
           {/* TODO: improve `any` type */}
@@ -335,7 +344,6 @@ export const TimelineNav = ({
               <li
                 className={clsx(
                   styles['timeline-nav__item'],
-
                   isActive && styles['eds-is-active'],
                 )}
                 key={'timeline-nav-item-' + i}
@@ -366,14 +374,37 @@ export const TimelineNav = ({
                   >
                     {iconVariant(itemVariant, i)}
                   </div>
-                  {tab.props.title}
+                  <div className={clsx(styles['timeline-nav__link-title'])}>
+                    {tab.props.title}
+                  </div>
+
+                  <Icon
+                    className={clsx(styles['timeline-nav__link-arrow'])}
+                    name="arrow-forward"
+                    purpose="decorative"
+                    size="20px"
+                  />
                 </a>
               </li>
             );
           })}
         </ol>
       </div>
-      <div className={styles['timeline-nav__body']}>
+      <div
+        className={clsx(
+          styles['timeline-nav__body'],
+          isActive && styles['eds-is-active'],
+        )}
+      >
+        <Button
+          className={clsx(styles['timeline-nav__back'])}
+          onClick={onClick}
+          status="neutral"
+          variant="link"
+        >
+          <Icon name="arrow-back" purpose="decorative" />
+          Back
+        </Button>
         {childrenWithProps[activeIndexState]}
       </div>
     </div>

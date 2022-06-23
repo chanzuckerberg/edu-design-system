@@ -6,16 +6,25 @@
 
 /**
  * 1) List of of links where each link toggles open associated information
+ * 2) On smaller viewports, the list of links and body are each full width; 
+ * on click, the list slides out to the left and the body slides in from the right
+ * 3) On larger viewports, the list of links and body are stacked and both are visible
  */
 .timeline-nav {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  flex-direction: row; /* 2 */
   background: var(--eds-theme-color-background-neutral-default);
   border-width: var(--eds-theme-border-width);
   border-style: solid;
   border-color: var(--eds-theme-color-border-neutral-subtle);
   border-radius: var(--eds-border-radius-md);
+  width: 100%;
 
   @media all and (min-width: $eds-bp-lg) {
-    display: flex;
+    flex-direction: row; /* 3 */
+    gap: var(--eds-size-2);
   }
 }
 
@@ -37,32 +46,85 @@
 
 /**
  * Timeline nav body
+ * 1) On smaller viewports, we want the body to always fill the available
+ * vertical space to completely slide over the list
+ * 2) On larger viewports: take up the rest of the space
+ * 3) On smaller viewports, the body slides in from and out to the right
  * TODO: Tokenize the box shadow
- * 1) Take up the rest of the space
  */
 .timeline-nav__body {
+  display: block;
+  background: var(--eds-theme-color-background-neutral-default);
+  height: 100%; /* 1 */
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+  transition: var(--eds-anim-fade-long) var(--eds-anim-ease);
+  position: absolute;
   padding: var(--eds-size-2);
+  overflow: hidden;
 
   @media all and (min-width: $eds-bp-lg) {
-    flex: 1; /* 1 */
+    height: unset;
+    transform: unset;
+    transition: unset;
+    position: static;
+    flex: 1; /* 2 */
+  }
+}
+
+.timeline-nav__body.eds-is-active {
+  /* 3 */
+  transform: translateX(0);
+  z-index: var(--eds-z-index-top);
+
+  @media all and (min-width: $eds-bp-lg) {
+    transform: unset;
     padding: var(--eds-size-5) var(--eds-size-8);
     box-shadow: -6px 0px 10px -2px var(--eds-theme-color-border-neutral-subtle); /* 1 */
   }
 }
 
 /**
+* Timeline nav back button
+* 1) On smaller viewports, a back button is placed at the top of the 
+* body to allow navigation back to the list of links
+*/
+.timeline-nav__back {
+  text-decoration: none;
+
+  @media all and (min-width: $eds-bp-lg) {
+    display: none;
+  }
+}
+
+/**
  * Timeline nav list
  * 1) Actual unordered list of timeline-nav
- * 2) Set to display flex to place timeline-nav side by side
+ * 2) On smaller viewports, the list slides out to the left
+ * when an item becomes active
  */
 .timeline-nav__list {
   @mixin reset;
   list-style: none;
   @mixin eds-theme-typography-body-text;
+  transform: translateX(0);
+  transition: var(--eds-anim-fade-long) var(--eds-anim-ease);
 
   @media all and (min-width: $eds-bp-lg) {
     position: sticky;
     top: var(--eds-size-5);
+    transform: unset;
+    transition: unset;
+  }
+}
+
+.timeline-nav__list.eds-is-active {
+  transform: translateX(-100%); /* 2 */
+
+  @media all and (min-width: $eds-bp-lg) {
+    transform: unset;
   }
 }
 
@@ -139,10 +201,13 @@
 
   /**
    * Timeline nav link within active timeline-nav item
+   * 1) On larger viewports, the active list item is bold
    */
   .timeline-nav__item.eds-is-active & {
-    @mixin eds-theme-typography-body-text-bold;
-    color: var(--eds-theme-color-text-neutral-default);
+    @media all and (min-width: $eds-bp-lg) {
+      @mixin eds-theme-typography-body-text-bold;
+      color: var(--eds-theme-color-text-neutral-default);
+    }
   }
 }
 
@@ -180,6 +245,30 @@
   padding: var(--eds-size-half) 0;
   background: var(--eds-theme-color-background-neutral-default); /* 1*/
   z-index: var(--eds-z-index-100);
+}
+
+/**
+* Timeline- nav link title
+* 1) Wrapped in a div so that it doesn't affect the position of the arrow if the title is long and breaks onto multiple lines
+*/
+.timeline-nav__link-title {
+  display: block;
+}
+
+/**
+* Timeline nav link arrow
+* 1) (Only used on smaller screens) - an arrow icon at the right 
+* end of each item.
+* 2) Must be used to prevent icon from shrinking to fit space
+*/
+.timeline-nav__link-arrow {
+  margin-left: auto;
+  align-self: center;
+  flex-shrink: 0; /* 2 */
+
+  @media all and (min-width: $eds-bp-lg) {
+    display: none;
+  }
 }
 
 /**
