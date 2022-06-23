@@ -271,10 +271,10 @@ export const Tabs = ({
     const next = index === tabRefs.length - 1 ? 0 : index + 1; /* 2 */
     const prev = index === 0 ? tabRefs.length - 1 : index - 1; /* 2 */
 
-    if ([R_ARROW_KEYCODE, D_ARROW_KEYCODE].includes(e.code)) {
+    if ([R_ARROW_KEYCODE, D_ARROW_KEYCODE].includes(e.key)) {
       /* 3 */
       tabRefs[next].current.focus();
-    } else if ([L_ARROW_KEYCODE, U_ARROW_KEYCODE].includes(e.code)) {
+    } else if ([L_ARROW_KEYCODE, U_ARROW_KEYCODE].includes(e.key)) {
       /* 4 */
       tabRefs[prev].current.focus();
     }

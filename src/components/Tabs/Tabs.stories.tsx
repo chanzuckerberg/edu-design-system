@@ -54,7 +54,7 @@ export default {
 
         <Tab title="Tab Title 4">
           <Text as="div">
-            <h3>Tab 3</h3>
+            <h3>Tab 4</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -66,7 +66,7 @@ export default {
 
         <Tab title="Tab Title 5">
           <Text as="div">
-            <h3>Tab 3</h3>
+            <h3>Tab 5</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -78,7 +78,7 @@ export default {
 
         <Tab title="Tab Title 6">
           <Text as="div">
-            <h3>Tab 3</h3>
+            <h3>Tab 6</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -90,7 +90,7 @@ export default {
 
         <Tab title="Tab Title 7">
           <Text as="div">
-            <h3>Tab 3</h3>
+            <h3>Tab 7</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -102,7 +102,7 @@ export default {
 
         <Tab title="Tab Title 8">
           <Text as="div">
-            <h3>Tab 3</h3>
+            <h3>Tab 8</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -114,7 +114,7 @@ export default {
 
         <Tab title="Tab Title 9">
           <Text as="div">
-            <h3>Tab 3</h3>
+            <h3>Tab 9</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
