@@ -42,8 +42,8 @@
   display: block;
   width: 100%;
   flex-shrink: 0;
-  padding: var(--eds-size-4) var(--eds-size-2);
-
+  padding: var(--eds-size-4) 0;
+  
   @media all and (min-width: $eds-bp-lg) {
     padding: var(--eds-size-5);
     width: 33.33%;
@@ -65,7 +65,7 @@
   width: 0;
   overflow: hidden; 
   flex-shrink: 0;
-  padding: var(--eds-size-2);
+  padding: var(--eds-size-2) 0;
 
   @media all and (min-width: $eds-bp-lg) {
     display: block;
