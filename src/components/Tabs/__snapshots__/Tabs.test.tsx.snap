@@ -157,9 +157,7 @@ exports[`<Tabs /> Default story renders snapshot 1`] = `
       </li>
     </ul>
   </div>
-  <div
-    class="tabs__body"
-  >
+  <div>
     <div
       aria-hidden="false"
       aria-labelledby="1uid10"
@@ -343,9 +341,7 @@ exports[`<Tabs /> Inverted story renders snapshot 1`] = `
         </li>
       </ul>
     </div>
-    <div
-      class="tabs__body"
-    >
+    <div>
       <div
         aria-hidden="false"
         aria-labelledby="3uid28"

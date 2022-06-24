@@ -354,9 +354,7 @@ export const Tabs = ({
           })}
         </ul>
       </div>
-      <div className={styles['tabs__body']}>
-        {childrenWithProps[activeIndexState]}
-      </div>
+      <div>{childrenWithProps[activeIndexState]}</div>
     </div>
   );
 };

@@ -23,6 +23,7 @@
 .tabs__header {
   overflow-x: auto;
   position: relative;
+  padding-bottom: var(--eds-size-2);
 
   .tabs--inverted & {
     background: none;
@@ -113,11 +114,4 @@
         var(--eds-theme-color-border-brand-primary-subtle);
     }
   }
-}
-
-/**
- * Tabs body
- */
-.tabs__body {
-  padding-top: var(--eds-size-2);
 }
