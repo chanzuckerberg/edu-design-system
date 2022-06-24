@@ -257,17 +257,12 @@
 /**
 * Timeline- nav link title
 * 1) Wrapped in a div so that it doesn't affect the position of the arrow if the title is long and breaks onto multiple lines
-* 2) In the case of a long text string, we don't want the text to overflow; truncate with an ellipsis instead
+* 2) In the case of a long text string with no breaking spaces and/or a browser with text-only-zoom, we don't want the text to overflow; truncate with an ellipsis instead
 */
 .timeline-nav__link-title {
   display: block;
-
-  /* 2 */
-  @media all and (min-width: $eds-bp-lg) {
-    white-space: nowrap;
-    overflow: hidden; 
-    text-overflow: ellipsis;
-  }
+  overflow: hidden; 
+  text-overflow: ellipsis; /* 2 */
 }
 
 /**

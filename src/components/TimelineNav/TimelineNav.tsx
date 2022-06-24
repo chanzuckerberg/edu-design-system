@@ -326,7 +326,9 @@ export const TimelineNav = ({
     }
   };
 
-  const onClick = () => setIsActive(false);
+  const onClick = () => {
+    setIsActive(false);
+  };
 
   return (
     <div className={componentClassName} {...other}>
@@ -386,8 +388,9 @@ export const TimelineNav = ({
                   <Icon
                     className={clsx(styles['timeline-nav__link-arrow'])}
                     name="arrow-forward"
-                    purpose="decorative"
+                    purpose="informative"
                     size="var(--eds-size-2-and-half)"
+                    title="forward"
                   />
                 </a>
               </li>
@@ -407,7 +410,7 @@ export const TimelineNav = ({
           status="neutral"
           variant="link"
         >
-          <Icon name="arrow-back" purpose="decorative" />
+          <Icon name="arrow-back" purpose="informative" title="back" />
           Back
         </Button>
         {childrenWithProps[activeIndexState]}
