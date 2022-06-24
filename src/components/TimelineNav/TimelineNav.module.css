@@ -23,6 +23,10 @@
     border-radius: var(--eds-border-radius-md);
     overflow: visible;
   }
+
+  @media screen and (prefers-reduced-motion) {
+    transition: none;
+  }
 }
 
 /**
