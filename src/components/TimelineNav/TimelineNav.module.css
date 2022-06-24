@@ -207,14 +207,10 @@
   }
 
   /**
-   * Timeline nav link within active timeline-nav item
-   * 1) On larger viewports, the active list item is bold
+   * Timeline nav link within active timeline-nav item uses darker color
    */
   .timeline-nav__item.eds-is-active & {
-    @media all and (min-width: $eds-bp-lg) {
-      @mixin eds-theme-typography-body-text-bold;
-      color: var(--eds-theme-color-text-neutral-default);
-    }
+    color: var(--eds-theme-color-text-neutral-default);
   }
 }
 
