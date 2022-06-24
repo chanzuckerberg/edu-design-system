@@ -12,7 +12,7 @@
   gap: var(--eds-size-2);
   width: 100%;
   overflow: hidden;
-  transition: var(--eds-anim-fade-long) var(--eds-anim-ease);
+  transition: transform var(--eds-anim-fade-long) var(--eds-anim-ease);
   background: var(--eds-theme-color-background-neutral-default);
 
   @media all and (min-width: $eds-bp-lg) {
