@@ -114,10 +114,6 @@
 .timeline-nav__back {
   text-decoration: none;
 
-  &:focus {
-    outline: none;
-  }
-
   @media all and (min-width: $eds-bp-lg) {
     display: none;
   }
