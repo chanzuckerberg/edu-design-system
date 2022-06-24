@@ -137,6 +137,10 @@
     @mixin focus;
   }
 
+  @media screen and (prefers-reduced-motion) {
+    transition: none;
+  }
+
   /**
    * Timeline nav link within active timeline-nav item
    */

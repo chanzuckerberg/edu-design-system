@@ -31,6 +31,10 @@
   width: var(--eds-size-1);
   transition: transform var(--eds-anim-fade-quick) var(--eds-anim-ease); /* 1 */
 
+  @media screen and (prefers-reduced-motion) {
+    transition: none;
+  }
+
   /**
    * Button icon within small show hide component
    */

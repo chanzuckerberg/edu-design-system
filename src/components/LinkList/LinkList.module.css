@@ -85,6 +85,10 @@
   position: relative;
   top: 5px;
   transition: fill var(--eds-anim-fade-quick) var(--eds-anim-ease);
+
+  @media screen and (prefers-reduced-motion) {
+    transition: none;
+  }
 }
 
 .link-list__text + .link-list__icon {

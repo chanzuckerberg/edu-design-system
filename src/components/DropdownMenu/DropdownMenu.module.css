@@ -80,6 +80,10 @@
     @mixin focus;
   }
 
+  @media screen and (prefers-reduced-motion) {
+    transition: none;
+  }
+
   /**
   * Dropdown menu link within a lined dropdown menu item
   * 1) Add bottom border to the item
