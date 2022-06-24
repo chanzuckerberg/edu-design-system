@@ -52,6 +52,8 @@ jobs:
         run: yarn install --immutable
       - name: Build design tokens
         run: yarn build:tokens
+      - name: Build Storybook
+        run: yarn build:storybook
       # We are relying on Chromatic to build the Storybook due to incompatibility between
       # `--storybook-build-dir` which prevents Chromatic's Storybook build and uses a pre-built Storybook
       # and `--only-changed` which enables Chromatic TurboSnap
@@ -61,7 +63,7 @@ jobs:
         run: |
           yarn run chromatic \
             --project-token=${{ secrets.CHROMATIC_PROJECT_TOKEN }} \
-            --output-dir storybook-static \
+            --storybook-build-dir storybook-static \
             --exit-zero-on-changes \
             --exit-once-uploaded \
             --skip 'dependabot/**'
