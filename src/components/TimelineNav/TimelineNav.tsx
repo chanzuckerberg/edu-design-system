@@ -387,7 +387,7 @@ export const TimelineNav = ({
                     className={clsx(styles['timeline-nav__link-arrow'])}
                     name="arrow-forward"
                     purpose="decorative"
-                    size="1.25rem"
+                    size="var(--eds-size-2-and-half)"
                   />
                 </a>
               </li>

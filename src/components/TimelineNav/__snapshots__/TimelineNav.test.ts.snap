@@ -61,9 +61,9 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
             aria-hidden="true"
             class="icon timeline-nav__link-arrow"
             fill="currentColor"
-            height="20px"
-            style="--icon-size: 20px;"
-            width="20px"
+            height="var(--eds-size-2-and-half)"
+            style="--icon-size: var(--eds-size-2-and-half);"
+            width="var(--eds-size-2-and-half)"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -105,9 +105,9 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
             aria-hidden="true"
             class="icon timeline-nav__link-arrow"
             fill="currentColor"
-            height="20px"
-            style="--icon-size: 20px;"
-            width="20px"
+            height="var(--eds-size-2-and-half)"
+            style="--icon-size: var(--eds-size-2-and-half);"
+            width="var(--eds-size-2-and-half)"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -152,9 +152,9 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
             aria-hidden="true"
             class="icon timeline-nav__link-arrow"
             fill="currentColor"
-            height="20px"
-            style="--icon-size: 20px;"
-            width="20px"
+            height="var(--eds-size-2-and-half)"
+            style="--icon-size: var(--eds-size-2-and-half);"
+            width="var(--eds-size-2-and-half)"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -201,9 +201,9 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
             aria-hidden="true"
             class="icon timeline-nav__link-arrow"
             fill="currentColor"
-            height="20px"
-            style="--icon-size: 20px;"
-            width="20px"
+            height="var(--eds-size-2-and-half)"
+            style="--icon-size: var(--eds-size-2-and-half);"
+            width="var(--eds-size-2-and-half)"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -248,9 +248,9 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
             aria-hidden="true"
             class="icon timeline-nav__link-arrow"
             fill="currentColor"
-            height="20px"
-            style="--icon-size: 20px;"
-            width="20px"
+            height="var(--eds-size-2-and-half)"
+            style="--icon-size: var(--eds-size-2-and-half);"
+            width="var(--eds-size-2-and-half)"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -309,9 +309,9 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
             aria-hidden="true"
             class="icon timeline-nav__link-arrow"
             fill="currentColor"
-            height="20px"
-            style="--icon-size: 20px;"
-            width="20px"
+            height="var(--eds-size-2-and-half)"
+            style="--icon-size: var(--eds-size-2-and-half);"
+            width="var(--eds-size-2-and-half)"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -353,9 +353,9 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
             aria-hidden="true"
             class="icon timeline-nav__link-arrow"
             fill="currentColor"
-            height="20px"
-            style="--icon-size: 20px;"
-            width="20px"
+            height="var(--eds-size-2-and-half)"
+            style="--icon-size: var(--eds-size-2-and-half);"
+            width="var(--eds-size-2-and-half)"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -400,9 +400,9 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
             aria-hidden="true"
             class="icon timeline-nav__link-arrow"
             fill="currentColor"
-            height="20px"
-            style="--icon-size: 20px;"
-            width="20px"
+            height="var(--eds-size-2-and-half)"
+            style="--icon-size: var(--eds-size-2-and-half);"
+            width="var(--eds-size-2-and-half)"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
