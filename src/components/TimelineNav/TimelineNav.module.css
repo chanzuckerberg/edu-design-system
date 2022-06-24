@@ -114,6 +114,10 @@
 .timeline-nav__back {
   text-decoration: none;
 
+  &:focus {
+    outline: none;
+  }
+
   @media all and (min-width: $eds-bp-lg) {
     display: none;
   }
@@ -257,7 +261,7 @@
 */
 .timeline-nav__link-title {
   display: block;
-  overflow: hidden; 
+  overflow: hidden;
   text-overflow: ellipsis; /* 2 */
 }
 

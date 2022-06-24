@@ -116,6 +116,7 @@ export const TimelineNav = ({
    * Initialize states, constants, and refs
    */
   const ref = useRef<number | undefined>();
+  const backRef = useRef<HTMLButtonElement>(null);
   const [isActive, setIsActive] = useState(false);
   const [activeIndexState, setActiveIndexState] = useState(
     activeIndex ? activeIndex : 0,
@@ -184,15 +185,19 @@ export const TimelineNav = ({
 
   /**
    * On open
-   * 1) On click of a tab, set activeIndexState to index of tab being clicked\
-   * 2) If function is passed into onChange prop, run that on click
+   * 1) On click of a tab, set activeIndexState to index of tab being clicked
+   * 2) Set focus to the 'Back' button. This is wrapped in a setTimeout() method to ensure that document.activeElement gets set properly. TODO: determine why backRef.current?.focus() needs to be in a callback
+   * 3) If function is passed into onChange prop, run that on click
    */
   function onOpen(index: number) {
     setActiveIndexState(index); /* 1 */
     setIsActive(true);
+    setTimeout(() => {
+      backRef.current?.focus(); /* 2 */
+    }, 500);
 
     if (onChange) {
-      /* 2 */
+      /* 3 */
       onChange(index);
     }
   }
@@ -333,7 +338,7 @@ export const TimelineNav = ({
    * 3) Body panel is visible/hidden depending on true/false value of isActive; hide it by setting isActive to false
    */
   const onClick = () => {
-    timelineNavItemRefs[activeIndexState].current.focus(); /* 2 */
+    timelineNavItemRefs[activeIndexState].current?.focus(); /* 2 */
     setIsActive(false); /* 3 */
   };
 
@@ -414,6 +419,7 @@ export const TimelineNav = ({
         <Button
           className={clsx(styles['timeline-nav__back'])}
           onClick={onClick}
+          ref={backRef}
           status="neutral"
           variant="link"
         >
