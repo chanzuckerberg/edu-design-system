@@ -20,11 +20,11 @@ exports[`<Tabs /> Default story renders snapshot 1`] = `
           aria-selected="true"
           class="tabs__link"
           href="#1uid1"
-          id="1uid4"
+          id="1uid10"
           role="tab"
           tabindex="0"
         >
-          Tab 1
+          Tab Title 1
         </a>
       </li>
       <li
@@ -36,11 +36,11 @@ exports[`<Tabs /> Default story renders snapshot 1`] = `
           aria-selected="false"
           class="tabs__link"
           href="#1uid2"
-          id="1uid5"
+          id="1uid11"
           role="tab"
           tabindex="-1"
         >
-          Tab 2
+          Tab Title 2
         </a>
       </li>
       <li
@@ -52,21 +52,115 @@ exports[`<Tabs /> Default story renders snapshot 1`] = `
           aria-selected="false"
           class="tabs__link"
           href="#1uid3"
-          id="1uid6"
+          id="1uid12"
           role="tab"
           tabindex="-1"
         >
-          Tab 3
+          Tab Title 3
+        </a>
+      </li>
+      <li
+        class="tabs__item"
+        role="presentation"
+      >
+        <a
+          aria-controls="1uid4"
+          aria-selected="false"
+          class="tabs__link"
+          href="#1uid4"
+          id="1uid13"
+          role="tab"
+          tabindex="-1"
+        >
+          Tab Title 4
+        </a>
+      </li>
+      <li
+        class="tabs__item"
+        role="presentation"
+      >
+        <a
+          aria-controls="1uid5"
+          aria-selected="false"
+          class="tabs__link"
+          href="#1uid5"
+          id="1uid14"
+          role="tab"
+          tabindex="-1"
+        >
+          Tab Title 5
+        </a>
+      </li>
+      <li
+        class="tabs__item"
+        role="presentation"
+      >
+        <a
+          aria-controls="1uid6"
+          aria-selected="false"
+          class="tabs__link"
+          href="#1uid6"
+          id="1uid15"
+          role="tab"
+          tabindex="-1"
+        >
+          Tab Title 6
+        </a>
+      </li>
+      <li
+        class="tabs__item"
+        role="presentation"
+      >
+        <a
+          aria-controls="1uid7"
+          aria-selected="false"
+          class="tabs__link"
+          href="#1uid7"
+          id="1uid16"
+          role="tab"
+          tabindex="-1"
+        >
+          Tab Title 7
+        </a>
+      </li>
+      <li
+        class="tabs__item"
+        role="presentation"
+      >
+        <a
+          aria-controls="1uid8"
+          aria-selected="false"
+          class="tabs__link"
+          href="#1uid8"
+          id="1uid17"
+          role="tab"
+          tabindex="-1"
+        >
+          Tab Title 8
+        </a>
+      </li>
+      <li
+        class="tabs__item"
+        role="presentation"
+      >
+        <a
+          aria-controls="1uid9"
+          aria-selected="false"
+          class="tabs__link"
+          href="#1uid9"
+          id="1uid18"
+          role="tab"
+          tabindex="-1"
+        >
+          Tab Title 9
         </a>
       </li>
     </ul>
   </div>
-  <div
-    class="tabs__body"
-  >
+  <div>
     <div
       aria-hidden="false"
-      aria-labelledby="1uid4"
+      aria-labelledby="1uid10"
       class="tabs__panel"
       id="1uid1"
       role="tabpanel"
@@ -106,15 +200,15 @@ exports[`<Tabs /> Inverted story renders snapshot 1`] = `
           role="presentation"
         >
           <a
-            aria-controls="3uid7"
+            aria-controls="3uid19"
             aria-selected="true"
             class="tabs__link"
-            href="#3uid7"
-            id="3uid10"
+            href="#3uid19"
+            id="3uid28"
             role="tab"
             tabindex="0"
           >
-            Tab 1
+            Tab Title 1
           </a>
         </li>
         <li
@@ -122,15 +216,15 @@ exports[`<Tabs /> Inverted story renders snapshot 1`] = `
           role="presentation"
         >
           <a
-            aria-controls="3uid8"
+            aria-controls="3uid20"
             aria-selected="false"
             class="tabs__link"
-            href="#3uid8"
-            id="3uid11"
+            href="#3uid20"
+            id="3uid29"
             role="tab"
             tabindex="-1"
           >
-            Tab 2
+            Tab Title 2
           </a>
         </li>
         <li
@@ -138,27 +232,121 @@ exports[`<Tabs /> Inverted story renders snapshot 1`] = `
           role="presentation"
         >
           <a
-            aria-controls="3uid9"
+            aria-controls="3uid21"
             aria-selected="false"
             class="tabs__link"
-            href="#3uid9"
-            id="3uid12"
+            href="#3uid21"
+            id="3uid30"
             role="tab"
             tabindex="-1"
           >
-            Tab 3
+            Tab Title 3
+          </a>
+        </li>
+        <li
+          class="tabs__item"
+          role="presentation"
+        >
+          <a
+            aria-controls="3uid22"
+            aria-selected="false"
+            class="tabs__link"
+            href="#3uid22"
+            id="3uid31"
+            role="tab"
+            tabindex="-1"
+          >
+            Tab Title 4
+          </a>
+        </li>
+        <li
+          class="tabs__item"
+          role="presentation"
+        >
+          <a
+            aria-controls="3uid23"
+            aria-selected="false"
+            class="tabs__link"
+            href="#3uid23"
+            id="3uid32"
+            role="tab"
+            tabindex="-1"
+          >
+            Tab Title 5
+          </a>
+        </li>
+        <li
+          class="tabs__item"
+          role="presentation"
+        >
+          <a
+            aria-controls="3uid24"
+            aria-selected="false"
+            class="tabs__link"
+            href="#3uid24"
+            id="3uid33"
+            role="tab"
+            tabindex="-1"
+          >
+            Tab Title 6
+          </a>
+        </li>
+        <li
+          class="tabs__item"
+          role="presentation"
+        >
+          <a
+            aria-controls="3uid25"
+            aria-selected="false"
+            class="tabs__link"
+            href="#3uid25"
+            id="3uid34"
+            role="tab"
+            tabindex="-1"
+          >
+            Tab Title 7
+          </a>
+        </li>
+        <li
+          class="tabs__item"
+          role="presentation"
+        >
+          <a
+            aria-controls="3uid26"
+            aria-selected="false"
+            class="tabs__link"
+            href="#3uid26"
+            id="3uid35"
+            role="tab"
+            tabindex="-1"
+          >
+            Tab Title 8
+          </a>
+        </li>
+        <li
+          class="tabs__item"
+          role="presentation"
+        >
+          <a
+            aria-controls="3uid27"
+            aria-selected="false"
+            class="tabs__link"
+            href="#3uid27"
+            id="3uid36"
+            role="tab"
+            tabindex="-1"
+          >
+            Tab Title 9
           </a>
         </li>
       </ul>
     </div>
-    <div
-      class="tabs__body"
-    >
+    <div>
       <div
         aria-hidden="false"
-        aria-labelledby="3uid10"
+        aria-labelledby="3uid28"
         class="tabs__panel"
-        id="3uid7"
+        id="3uid19"
         role="tabpanel"
       >
         <div
