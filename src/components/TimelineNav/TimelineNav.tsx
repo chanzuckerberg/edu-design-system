@@ -326,7 +326,14 @@ export const TimelineNav = ({
     }
   };
 
+  /**
+   * onClick function
+   * 1) Triggered by 'Back' button on < lg viewports
+   * 2) Return focus to the button that was clicked to open the current panel; activeIndexState holds the index of the last nav item selected in the timelinNavItemRefs array
+   * 3) Body panel is visible/hidden depending on true/false value of isActive; hide it by setting isActive to false
+   */
   const onClick = () => {
+    timelineNavItemRefs[activeIndexState].current.focus(); /* 2 */
     setIsActive(false);
   };
 
