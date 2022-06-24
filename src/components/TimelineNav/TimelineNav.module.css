@@ -261,9 +261,13 @@
 */
 .timeline-nav__link-title {
   display: block;
-  white-space: nowrap;
-  overflow: hidden; /* 2 */
-  text-overflow: ellipsis;
+
+  /* 2 */
+  @media all and (min-width: $eds-bp-lg) {
+    white-space: nowrap;
+    overflow: hidden; 
+    text-overflow: ellipsis;
+  }
 }
 
 /**
