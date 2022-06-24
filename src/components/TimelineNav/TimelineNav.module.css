@@ -25,6 +25,10 @@
   }
 }
 
+/**
+ * Active timeline nav
+ *  1) Calc accounts for left and right padding of layout container (gutters on small screens)
+ */
 .timeline-nav.eds-is-active {
   transform: translateX(calc(-100% - 1rem));
   overflow: visible;
