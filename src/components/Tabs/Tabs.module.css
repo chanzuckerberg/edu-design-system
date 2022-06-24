@@ -96,6 +96,10 @@
     @mixin focus;
   }
 
+  @media screen and (prefers-reduced-motion) {
+    transition: none;
+  }
+
   .tabs--inverted & {
     color: var(--eds-theme-color-text-neutral-default-inverse);
   }

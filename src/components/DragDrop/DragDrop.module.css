@@ -142,6 +142,10 @@
     border-color: var(--eds-theme-color-border-neutral-subtle);
   }
 
+  @media screen and (prefers-reduced-motion) {
+    transition: none;
+  }
+
   /**
   * 1) The unstyled variant removes all styling from items.
   */
@@ -182,6 +186,10 @@
   border-radius: var(--eds-border-radius-lg);
   background: var(--eds-theme-color-background-neutral-default);
   transition: opacity var(--eds-anim-fade-quick) var(--eds-anim-ease);
+
+  @media screen and (prefers-reduced-motion) {
+    transition: none;
+  }
 
   .drag-drop__item--hover & {
     opacity: 0;

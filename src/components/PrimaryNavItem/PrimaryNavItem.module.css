@@ -29,6 +29,10 @@
   &:focus-visible {
     @mixin focusInverted;
   }
+
+  @media screen and (prefers-reduced-motion) {
+    transition: none;
+  }
 }
 
 /**

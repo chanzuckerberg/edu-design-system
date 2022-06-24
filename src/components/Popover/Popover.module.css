@@ -32,6 +32,10 @@
     @mixin focus;
   }
 
+  @media screen and (prefers-reduced-motion) {
+    transition: none;
+  }
+
   /** Psuedo-element ::after
   * 1) Adds a cosmetic triangle to the bottom edge of the popover, pointing toward the button that opened the popover
   */
@@ -56,6 +60,10 @@
     transform: translateY(0);
     transition: opacity var(--eds-anim-fade-quick) var(--eds-anim-ease);
     z-index: var(--eds-z-index-top);
+
+    @media screen and (prefers-reduced-motion) {
+      transition: none;
+    }
   }
 }
 
