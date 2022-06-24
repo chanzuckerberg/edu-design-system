@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/no-static-element-interactions */
 import clsx from 'clsx';
 import React, {
   useState,
@@ -129,6 +128,8 @@ export const ShowHide = ({
     <div
       className={componentClassName}
       ref={dropdownRef}
+      role="button"
+      tabIndex={0}
       {...other}
       onKeyDown={handleOnKeyDown}
     >

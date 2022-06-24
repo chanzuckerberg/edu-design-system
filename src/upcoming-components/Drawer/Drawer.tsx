@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/no-static-element-interactions */
 import clsx from 'clsx';
 import React, {
   useState,
@@ -216,6 +215,8 @@ export const Drawer = ({
           onClick={handleOnClickOutside}
           onKeyDown={handleOnKeyDown}
           ref={ref}
+          role="button"
+          tabIndex={0}
           {...other}
         >
           <article
@@ -225,7 +226,6 @@ export const Drawer = ({
             className={styles['drawer__window']}
             ref={windowRef}
             role="dialog"
-            tabIndex={0} // eslint-disable-line jsx-a11y/no-noninteractive-tabindex
           >
             {header}
             {body}
