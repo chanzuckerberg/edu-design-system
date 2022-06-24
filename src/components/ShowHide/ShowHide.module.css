@@ -12,8 +12,8 @@
   display: none;
 
   /**
-     * 1) Button that toggles open and closes a panel
-     */
+   * 1) Button that toggles open and closes a panel
+   */
   .show-hide.eds-is-active & {
     margin-top: var(--eds-size-1);
     display: block;
@@ -21,34 +21,21 @@
 }
 
 /**
-   * Button icon within show hide component
-   * 1) Add transition for icon flip when activated
-   */
-.show-hide__btn .button__icon {
-  position: relative;
-  top: 4px;
-  height: var(--eds-size-1);
-  width: var(--eds-size-1);
-  transition: transform var(--eds-anim-fade-quick) var(--eds-anim-ease); /* 1 */
+ * Button icon within show hide component
+ * 1) Add transition for icon flip when activated
+ */
+.show-hide svg {
+  transition: transform var(--eds-anim-fade-long) var(--eds-anim-ease); /* 1 */
 
   @media screen and (prefers-reduced-motion) {
     transition: none;
   }
+}
 
-  /**
-   * Button icon within small show hide component
-   */
-  .show-hide--sm & {
-    top: 2px;
-    height: var(--eds-size-1);
-    width: var(--eds-size-1);
-  }
-
-  /**
-   * Button icon within active show hide component
-   * 1) Rotate icon 180 deg when show hide component is open
-   */
-  .show-hide.eds-is-active & {
-    transform: rotate(90deg); /* 1 */
-  }
+/**
+ * Button icon within active show hide component
+ * 1) Rotate icon 180 deg when show hide component is open
+ */
+.show-hide.eds-is-active svg {
+  transform: rotate(90deg); /* 1 */
 }
