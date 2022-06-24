@@ -52,14 +52,12 @@ jobs:
         run: yarn install --immutable
       - name: Build design tokens
         run: yarn build:tokens
-      - name: Build Storybook
+      - name: Build Storybook 📚
         run: yarn build:storybook
-      # We are relying on Chromatic to build the Storybook due to incompatibility between
-      # `--storybook-build-dir` which prevents Chromatic's Storybook build and uses a pre-built Storybook
-      # and `--only-changed` which enables Chromatic TurboSnap
-      # https://github.com/chromaui/chromatic-cli/issues/403
-      # Once fixed, Storybook build can be its own step for modularity
-      - name: Build Storybook and Publish to Chromatic
+      # TODO: Since the storybook builds to root now, no longer need to fiddle with "--storybook-base-dir", "--webpack-stats-json",
+      # and other related storybook/chromatic flags, explore turning TurboSnap back on with "--only-changed".
+      # https://app.shortcut.com/czi-edu/story/203071
+      - name: Publish to Chromatic 🦄
         run: |
           yarn run chromatic \
             --project-token=${{ secrets.CHROMATIC_PROJECT_TOKEN }} \
