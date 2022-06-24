@@ -100,7 +100,7 @@ export const ShowHide = ({
    * 1) If escape button is struck, close the show hide contents
    */
   function handleOnKeyDown(e: KeyboardEvent<HTMLElement>) {
-    if (e.code === ESCAPE_KEYCODE) {
+    if (e.key === ESCAPE_KEYCODE) {
       setIsActive(false); /* 1 */
     }
   }
