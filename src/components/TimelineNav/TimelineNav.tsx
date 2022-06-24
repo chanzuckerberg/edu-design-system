@@ -334,7 +334,7 @@ export const TimelineNav = ({
    */
   const onClick = () => {
     timelineNavItemRefs[activeIndexState].current.focus(); /* 2 */
-    setIsActive(false);
+    setIsActive(false); /* 3 */
   };
 
   return (
