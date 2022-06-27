@@ -6,6 +6,8 @@ exports[`<ShowHide /> Default story renders snapshot 1`] = `
 >
   <div
     class="show-hide"
+    role="button"
+    tabindex="0"
   >
     <button
       aria-expanded="false"
