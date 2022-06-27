@@ -8,14 +8,37 @@
  * 1) List of of links where each link toggles open associated information
  */
 .timeline-nav {
+  display: flex;
+  gap: var(--eds-size-2);
+  width: 100%;
+  overflow: hidden;
+  transition: transform var(--eds-anim-fade-long) var(--eds-anim-ease);
   background: var(--eds-theme-color-background-neutral-default);
-  border-width: var(--eds-theme-border-width);
-  border-style: solid;
-  border-color: var(--eds-theme-color-border-neutral-subtle);
-  border-radius: var(--eds-border-radius-md);
 
   @media all and (min-width: $eds-bp-lg) {
-    display: flex;
+    transition: unset;
+    border-width: var(--eds-theme-border-width);
+    border-style: solid;
+    border-color: var(--eds-theme-color-border-neutral-subtle);
+    border-radius: var(--eds-border-radius-md);
+    overflow: visible;
+  }
+
+  @media screen and (prefers-reduced-motion) {
+    transition: none;
+  }
+}
+
+/**
+ * Active timeline nav
+ *  1) Calc accounts for left and right padding of layout container (gutters on small screens)
+ */
+.timeline-nav.eds-is-active {
+  transform: translateX(calc(-100% - 1rem));
+  overflow: visible;
+
+  @media all and (min-width: $eds-bp-lg) {
+    transform: unset;
   }
 }
 
@@ -25,28 +48,74 @@
  * 2) Tab overflow behavior
  */
 .timeline-nav__nav {
+  display: block;
   width: 100%;
-  position: relative;
-  padding: var(--eds-size-4) var(--eds-size-2);
+  flex-shrink: 0;
+  padding: var(--eds-size-4) 0;
 
   @media all and (min-width: $eds-bp-lg) {
+    position: relative;
     padding: var(--eds-size-5);
-    width: 20rem;
+    width: 33.33%;
+    flex-shrink: initial;
   }
 }
 
 /**
- * Timeline nav body
+ * Timeline nav body 
  * TODO: Tokenize the box shadow
  * 1) Take up the rest of the space
  */
 .timeline-nav__body {
-  padding: var(--eds-size-2);
+  display: block;
+  visibility: hidden;
+  z-index: var(--eds-z-index-bottom);
+  position: absolute;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  flex-shrink: 0;
+  padding: var(--eds-size-2) 0;
 
   @media all and (min-width: $eds-bp-lg) {
-    flex: 1; /* 1 */
+    display: block;
+    position: static;
+    z-index: var(--eds-z-index-0);
+    flex: 1;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+    visibility: visible;
+    transform: translateX(0);
     padding: var(--eds-size-5) var(--eds-size-8);
     box-shadow: -6px 0px 10px -2px var(--eds-theme-color-border-neutral-subtle); /* 1 */
+  }
+}
+
+.timeline-nav__body.eds-is-active {
+  position: static;
+  z-index: var(--eds-z-index-0);
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  visibility: visible;
+
+  @media all and (min-width: $eds-bp-lg) {
+    transform: unset;
+    height: auto;
+  }
+}
+
+/**
+* Timeline nav back button
+* 1) On smaller viewports, a back button is placed at the top of the 
+* body to allow navigation back to the list of links
+*/
+.timeline-nav__back {
+  text-decoration: none;
+
+  @media all and (min-width: $eds-bp-lg) {
+    display: none;
   }
 }
 
@@ -142,10 +211,9 @@
   }
 
   /**
-   * Timeline nav link within active timeline-nav item
+   * Timeline nav link within active timeline-nav item uses darker color
    */
   .timeline-nav__item.eds-is-active & {
-    @mixin eds-theme-typography-body-text-bold;
     color: var(--eds-theme-color-text-neutral-default);
   }
 }
@@ -184,6 +252,33 @@
   padding: var(--eds-size-half) 0;
   background: var(--eds-theme-color-background-neutral-default); /* 1*/
   z-index: var(--eds-z-index-100);
+}
+
+/**
+* Timeline- nav link title
+* 1) Wrapped in a div so that it doesn't affect the position of the arrow if the title is long and breaks onto multiple lines
+* 2) In the case of a long text string with no breaking spaces and/or a browser with text-only-zoom, we don't want the text to overflow; truncate with an ellipsis instead
+*/
+.timeline-nav__link-title {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis; /* 2 */
+}
+
+/**
+* Timeline nav link arrow
+* 1) (Only used on smaller screens) - an arrow icon at the right 
+* end of each item.
+* 2) Must be used to prevent icon from shrinking to fit space
+*/
+.timeline-nav__link-arrow {
+  margin-left: auto;
+  align-self: center;
+  flex-shrink: 0; /* 2 */
+
+  @media all and (min-width: $eds-bp-lg) {
+    display: none;
+  }
 }
 
 /**

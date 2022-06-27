@@ -21,6 +21,7 @@ import {
   R_ARROW_KEYCODE,
   D_ARROW_KEYCODE,
 } from '../../util/keycodes';
+import Button from '../Button';
 import Icon from '../Icon';
 import NumberIcon from '../NumberIcon';
 import TimelineNavPanel, { TimelineNavPanelVariant } from '../TimelineNavPanel';
@@ -115,6 +116,8 @@ export const TimelineNav = ({
    * Initialize states, constants, and refs
    */
   const ref = useRef<number | undefined>();
+  const backRef = useRef<HTMLButtonElement>(null);
+  const [isActive, setIsActive] = useState(false);
   const [activeIndexState, setActiveIndexState] = useState(
     activeIndex ? activeIndex : 0,
   );
@@ -182,14 +185,19 @@ export const TimelineNav = ({
 
   /**
    * On open
-   * 1) On click of a tab, set activeIndexState to index of tab being clicked\
-   * 2) If function is passed into onChange prop, run that on click
+   * 1) On click of a tab, set activeIndexState to index of tab being clicked
+   * 2) Set focus to the 'Back' button. This is wrapped in a setTimeout() method to ensure that document.activeElement gets set properly. TODO: determine why backRef.current?.focus() needs to be in a callback
+   * 3) If function is passed into onChange prop, run that on click
    */
   function onOpen(index: number) {
     setActiveIndexState(index); /* 1 */
+    setIsActive(true);
+    setTimeout(() => {
+      backRef.current?.focus(); /* 2 */
+    }, 500);
 
     if (onChange) {
-      /* 2 */
+      /* 3 */
       onChange(index);
     }
   }
@@ -221,10 +229,10 @@ export const TimelineNav = ({
     const prev =
       index === 0 ? timelineNavItemRefs.length - 1 : index - 1; /* 2 */
 
-    if ([R_ARROW_KEYCODE, D_ARROW_KEYCODE].includes(e.code)) {
+    if ([R_ARROW_KEYCODE, D_ARROW_KEYCODE].includes(e.key)) {
       /* 3 */
       timelineNavItemRefs[next].current.focus();
-    } else if ([L_ARROW_KEYCODE, U_ARROW_KEYCODE].includes(e.code)) {
+    } else if ([L_ARROW_KEYCODE, U_ARROW_KEYCODE].includes(e.key)) {
       /* 4 */
       timelineNavItemRefs[prev].current.focus();
     }
@@ -247,7 +255,12 @@ export const TimelineNav = ({
       return child;
     },
   );
-  const componentClassName = clsx(styles['timeline-nav'], className, {});
+  const componentClassName = clsx(
+    styles['timeline-nav'],
+    className,
+    isActive && styles['eds-is-active'],
+    {},
+  );
 
   const iconVariant = (itemVariant: TimelineNavPanelVariant, i: number) => {
     switch (itemVariant) {
@@ -318,13 +331,28 @@ export const TimelineNav = ({
     }
   };
 
+  /**
+   * onClick function
+   * 1) Triggered by 'Back' button on < lg viewports
+   * 2) Return focus to the button that was clicked to open the current panel; activeIndexState holds the index of the last nav item selected in the timelinNavItemRefs array
+   * 3) Body panel is visible/hidden depending on true/false value of isActive; hide it by setting isActive to false
+   */
+  const onClick = () => {
+    timelineNavItemRefs[activeIndexState].current?.focus(); /* 2 */
+    setIsActive(false); /* 3 */
+  };
+
   return (
     <div className={componentClassName} {...other}>
       <div className={styles['timeline-nav__nav']}>
         <ol
-          className={clsx(styles['timeline-nav__list'], {
-            [styles['timeline-nav__list--ordered']]: variant === 'ordered',
-          })}
+          className={clsx(
+            styles['timeline-nav__list'],
+            isActive && styles['eds-is-active'],
+            {
+              [styles['timeline-nav__list--ordered']]: variant === 'ordered',
+            },
+          )}
           role="tablist"
         >
           {/* TODO: improve `any` type */}
@@ -335,7 +363,6 @@ export const TimelineNav = ({
               <li
                 className={clsx(
                   styles['timeline-nav__item'],
-
                   isActive && styles['eds-is-active'],
                 )}
                 key={'timeline-nav-item-' + i}
@@ -366,14 +393,39 @@ export const TimelineNav = ({
                   >
                     {iconVariant(itemVariant, i)}
                   </div>
-                  {tab.props.title}
+                  <div className={clsx(styles['timeline-nav__link-title'])}>
+                    {tab.props.title}
+                  </div>
+
+                  <Icon
+                    className={clsx(styles['timeline-nav__link-arrow'])}
+                    name="arrow-forward"
+                    purpose="informative"
+                    size="var(--eds-size-2-and-half)"
+                    title="forward"
+                  />
                 </a>
               </li>
             );
           })}
         </ol>
       </div>
-      <div className={styles['timeline-nav__body']}>
+      <div
+        className={clsx(
+          styles['timeline-nav__body'],
+          isActive && styles['eds-is-active'],
+        )}
+      >
+        <Button
+          className={clsx(styles['timeline-nav__back'])}
+          onClick={onClick}
+          ref={backRef}
+          status="neutral"
+          variant="link"
+        >
+          <Icon name="arrow-back" purpose="informative" title="back" />
+          Back
+        </Button>
         {childrenWithProps[activeIndexState]}
       </div>
     </div>
