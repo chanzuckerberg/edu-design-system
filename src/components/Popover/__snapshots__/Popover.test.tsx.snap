@@ -19,21 +19,165 @@ exports[`<Popover /> BottomLeft story renders snapshot 1`] = `
   <div
     data-focus-lock-disabled="false"
   >
-    <div
+    <article
+      aria-describedby="popover-description-1"
       aria-hidden="false"
+      aria-labelledby="popover-heading-1"
       class="popover eds-is-active popover--bottom-left"
       data-testid="popover-test"
-      role="button"
+      role="dialog"
       tabindex="0"
     >
-      <article
-        aria-describedby="popover-description-1"
-        aria-labelledby="popover-heading-1"
-        role="dialog"
+      <div
+        class="popover__content"
       >
-        <div
-          class="popover__content"
+        <header
+          class="popover__header"
         >
+          <div
+            class="popover__header-content"
+          >
+            <h3
+              class="heading heading--size-body-sm"
+              id="popover-heading-1"
+            >
+              Notifications (4)
+            </h3>
+            <span
+              class="popover__header-title-after"
+            >
+              <button
+                class="clickable-style button button--icon clickable-style--sm clickable-style--icon clickable-style--brand"
+                type="button"
+              >
+                Mark All Seen
+              </button>
+            </span>
+          </div>
+        </header>
+        <div
+          class="popover__body"
+        >
+          <ul
+            class="notification-list"
+          >
+            <li
+              class="notification-list__item"
+            >
+              <div
+                class="notification-list__content"
+              >
+                <div
+                  class="notification-list__title"
+                >
+                  <a
+                    class="notification-list__link"
+                    href="#"
+                  >
+                    <h6
+                      class="heading heading--size-body-sm"
+                    >
+                      English Teacher gave you feedback
+                    </h6>
+                  </a>
+                </div>
+                now
+                 · 
+                Outsiders on Trial: Self Awareness = Trial Brief Outline
+              </div>
+              <button
+                aria-label="Mark as read"
+                class="notification-list__button"
+              />
+            </li>
+            <li
+              class="notification-list__item"
+            >
+              <div
+                class="notification-list__content"
+              >
+                <div
+                  class="notification-list__title"
+                >
+                  <a
+                    class="notification-list__link"
+                    href="#"
+                  >
+                    <h6
+                      class="heading heading--size-body-sm"
+                    >
+                      English Teacher gave you feedback
+                    </h6>
+                  </a>
+                </div>
+                now
+                 · 
+                Outsiders on Trial: Self Awareness = Trial Brief Outline
+              </div>
+              <button
+                aria-label="Mark as read"
+                class="notification-list__button"
+              />
+            </li>
+            <li
+              class="notification-list__item"
+            >
+              <div
+                class="notification-list__content"
+              >
+                <div
+                  class="notification-list__title"
+                >
+                  <a
+                    class="notification-list__link"
+                    href="#"
+                  >
+                    <h6
+                      class="heading heading--size-body-sm"
+                    >
+                      English Teacher gave you feedback
+                    </h6>
+                  </a>
+                </div>
+                now
+                 · 
+                Outsiders on Trial: Self Awareness = Trial Brief Outline
+              </div>
+              <button
+                aria-label="Mark as read"
+                class="notification-list__button"
+              />
+            </li>
+            <li
+              class="notification-list__item"
+            >
+              <div
+                class="notification-list__content"
+              >
+                <div
+                  class="notification-list__title"
+                >
+                  <a
+                    class="notification-list__link"
+                    href="#"
+                  >
+                    <h6
+                      class="heading heading--size-body-sm"
+                    >
+                      English Teacher gave you feedback
+                    </h6>
+                  </a>
+                </div>
+                now
+                 · 
+                Outsiders on Trial: Self Awareness = Trial Brief Outline
+              </div>
+              <button
+                aria-label="Mark as read"
+                class="notification-list__button"
+              />
+            </li>
+          </ul>
           <header
             class="popover__header"
           >
@@ -42,228 +186,80 @@ exports[`<Popover /> BottomLeft story renders snapshot 1`] = `
             >
               <h3
                 class="heading heading--size-body-sm"
-                id="popover-heading-1"
+                id="popover-heading-2"
               >
-                Notifications (4)
+                Already Seen
               </h3>
-              <span
-                class="popover__header-title-after"
-              >
-                <button
-                  class="clickable-style button button--icon clickable-style--sm clickable-style--icon clickable-style--brand"
-                  type="button"
-                >
-                  Mark All Seen
-                </button>
-              </span>
             </div>
           </header>
-          <div
-            class="popover__body"
+          <ul
+            class="notification-list"
           >
-            <ul
-              class="notification-list"
-            >
-              <li
-                class="notification-list__item"
-              >
-                <div
-                  class="notification-list__content"
-                >
-                  <div
-                    class="notification-list__title"
-                  >
-                    <a
-                      class="notification-list__link"
-                      href="#"
-                    >
-                      <h6
-                        class="heading heading--size-body-sm"
-                      >
-                        English Teacher gave you feedback
-                      </h6>
-                    </a>
-                  </div>
-                  now
-                   · 
-                  Outsiders on Trial: Self Awareness = Trial Brief Outline
-                </div>
-                <button
-                  aria-label="Mark as read"
-                  class="notification-list__button"
-                />
-              </li>
-              <li
-                class="notification-list__item"
-              >
-                <div
-                  class="notification-list__content"
-                >
-                  <div
-                    class="notification-list__title"
-                  >
-                    <a
-                      class="notification-list__link"
-                      href="#"
-                    >
-                      <h6
-                        class="heading heading--size-body-sm"
-                      >
-                        English Teacher gave you feedback
-                      </h6>
-                    </a>
-                  </div>
-                  now
-                   · 
-                  Outsiders on Trial: Self Awareness = Trial Brief Outline
-                </div>
-                <button
-                  aria-label="Mark as read"
-                  class="notification-list__button"
-                />
-              </li>
-              <li
-                class="notification-list__item"
-              >
-                <div
-                  class="notification-list__content"
-                >
-                  <div
-                    class="notification-list__title"
-                  >
-                    <a
-                      class="notification-list__link"
-                      href="#"
-                    >
-                      <h6
-                        class="heading heading--size-body-sm"
-                      >
-                        English Teacher gave you feedback
-                      </h6>
-                    </a>
-                  </div>
-                  now
-                   · 
-                  Outsiders on Trial: Self Awareness = Trial Brief Outline
-                </div>
-                <button
-                  aria-label="Mark as read"
-                  class="notification-list__button"
-                />
-              </li>
-              <li
-                class="notification-list__item"
-              >
-                <div
-                  class="notification-list__content"
-                >
-                  <div
-                    class="notification-list__title"
-                  >
-                    <a
-                      class="notification-list__link"
-                      href="#"
-                    >
-                      <h6
-                        class="heading heading--size-body-sm"
-                      >
-                        English Teacher gave you feedback
-                      </h6>
-                    </a>
-                  </div>
-                  now
-                   · 
-                  Outsiders on Trial: Self Awareness = Trial Brief Outline
-                </div>
-                <button
-                  aria-label="Mark as read"
-                  class="notification-list__button"
-                />
-              </li>
-            </ul>
-            <header
-              class="popover__header"
+            <li
+              class="notification-list__item notification-list__is-read"
             >
               <div
-                class="popover__header-content"
+                class="notification-list__content"
               >
-                <h3
-                  class="heading heading--size-body-sm"
-                  id="popover-heading-2"
+                <div
+                  class="notification-list__title"
                 >
-                  Already Seen
-                </h3>
+                  <a
+                    class="notification-list__link"
+                    href="#"
+                  >
+                    <h6
+                      class="heading heading--size-body-sm"
+                    >
+                      English Teacher gave you feedback
+                    </h6>
+                  </a>
+                </div>
+                now
+                 · 
+                Outsiders on Trial: Self Awareness = Trial Brief Outline
               </div>
-            </header>
-            <ul
-              class="notification-list"
+              <button
+                aria-label="Mark as unread"
+                class="notification-list__button"
+              />
+            </li>
+            <li
+              class="notification-list__item notification-list__is-read"
             >
-              <li
-                class="notification-list__item notification-list__is-read"
+              <div
+                class="notification-list__content"
               >
                 <div
-                  class="notification-list__content"
+                  class="notification-list__title"
                 >
-                  <div
-                    class="notification-list__title"
+                  <a
+                    class="notification-list__link"
+                    href="#"
                   >
-                    <a
-                      class="notification-list__link"
-                      href="#"
+                    <h6
+                      class="heading heading--size-body-sm"
                     >
-                      <h6
-                        class="heading heading--size-body-sm"
-                      >
-                        English Teacher gave you feedback
-                      </h6>
-                    </a>
-                  </div>
-                  now
-                   · 
-                  Outsiders on Trial: Self Awareness = Trial Brief Outline
+                      English Teacher gave you feedback
+                    </h6>
+                  </a>
                 </div>
-                <button
-                  aria-label="Mark as unread"
-                  class="notification-list__button"
-                />
-              </li>
-              <li
-                class="notification-list__item notification-list__is-read"
-              >
-                <div
-                  class="notification-list__content"
-                >
-                  <div
-                    class="notification-list__title"
-                  >
-                    <a
-                      class="notification-list__link"
-                      href="#"
-                    >
-                      <h6
-                        class="heading heading--size-body-sm"
-                      >
-                        English Teacher gave you feedback
-                      </h6>
-                    </a>
-                  </div>
-                  now
-                   · 
-                  Outsiders on Trial: Self Awareness = Trial Brief Outline
-                </div>
-                <button
-                  aria-label="Mark as unread"
-                  class="notification-list__button"
-                />
-              </li>
-            </ul>
-          </div>
+                now
+                 · 
+                Outsiders on Trial: Self Awareness = Trial Brief Outline
+              </div>
+              <button
+                aria-label="Mark as unread"
+                class="notification-list__button"
+              />
+            </li>
+          </ul>
         </div>
-        <div
-          class="popover__arrow"
-        />
-      </article>
-    </div>
+      </div>
+      <div
+        class="popover__arrow"
+      />
+    </article>
   </div>
   <div
     data-focus-guard="true"
@@ -292,21 +288,165 @@ exports[`<Popover /> BottomRight story renders snapshot 1`] = `
   <div
     data-focus-lock-disabled="false"
   >
-    <div
+    <article
+      aria-describedby="popover-description-1"
       aria-hidden="false"
+      aria-labelledby="popover-heading-1"
       class="popover eds-is-active popover--bottom-right"
       data-testid="popover-test"
-      role="button"
+      role="dialog"
       tabindex="0"
     >
-      <article
-        aria-describedby="popover-description-1"
-        aria-labelledby="popover-heading-1"
-        role="dialog"
+      <div
+        class="popover__content"
       >
-        <div
-          class="popover__content"
+        <header
+          class="popover__header"
         >
+          <div
+            class="popover__header-content"
+          >
+            <h3
+              class="heading heading--size-body-sm"
+              id="popover-heading-1"
+            >
+              Notifications (4)
+            </h3>
+            <span
+              class="popover__header-title-after"
+            >
+              <button
+                class="clickable-style button button--icon clickable-style--sm clickable-style--icon clickable-style--brand"
+                type="button"
+              >
+                Mark All Seen
+              </button>
+            </span>
+          </div>
+        </header>
+        <div
+          class="popover__body"
+        >
+          <ul
+            class="notification-list"
+          >
+            <li
+              class="notification-list__item"
+            >
+              <div
+                class="notification-list__content"
+              >
+                <div
+                  class="notification-list__title"
+                >
+                  <a
+                    class="notification-list__link"
+                    href="#"
+                  >
+                    <h6
+                      class="heading heading--size-body-sm"
+                    >
+                      English Teacher gave you feedback
+                    </h6>
+                  </a>
+                </div>
+                now
+                 · 
+                Outsiders on Trial: Self Awareness = Trial Brief Outline
+              </div>
+              <button
+                aria-label="Mark as read"
+                class="notification-list__button"
+              />
+            </li>
+            <li
+              class="notification-list__item"
+            >
+              <div
+                class="notification-list__content"
+              >
+                <div
+                  class="notification-list__title"
+                >
+                  <a
+                    class="notification-list__link"
+                    href="#"
+                  >
+                    <h6
+                      class="heading heading--size-body-sm"
+                    >
+                      English Teacher gave you feedback
+                    </h6>
+                  </a>
+                </div>
+                now
+                 · 
+                Outsiders on Trial: Self Awareness = Trial Brief Outline
+              </div>
+              <button
+                aria-label="Mark as read"
+                class="notification-list__button"
+              />
+            </li>
+            <li
+              class="notification-list__item"
+            >
+              <div
+                class="notification-list__content"
+              >
+                <div
+                  class="notification-list__title"
+                >
+                  <a
+                    class="notification-list__link"
+                    href="#"
+                  >
+                    <h6
+                      class="heading heading--size-body-sm"
+                    >
+                      English Teacher gave you feedback
+                    </h6>
+                  </a>
+                </div>
+                now
+                 · 
+                Outsiders on Trial: Self Awareness = Trial Brief Outline
+              </div>
+              <button
+                aria-label="Mark as read"
+                class="notification-list__button"
+              />
+            </li>
+            <li
+              class="notification-list__item"
+            >
+              <div
+                class="notification-list__content"
+              >
+                <div
+                  class="notification-list__title"
+                >
+                  <a
+                    class="notification-list__link"
+                    href="#"
+                  >
+                    <h6
+                      class="heading heading--size-body-sm"
+                    >
+                      English Teacher gave you feedback
+                    </h6>
+                  </a>
+                </div>
+                now
+                 · 
+                Outsiders on Trial: Self Awareness = Trial Brief Outline
+              </div>
+              <button
+                aria-label="Mark as read"
+                class="notification-list__button"
+              />
+            </li>
+          </ul>
           <header
             class="popover__header"
           >
@@ -315,228 +455,80 @@ exports[`<Popover /> BottomRight story renders snapshot 1`] = `
             >
               <h3
                 class="heading heading--size-body-sm"
-                id="popover-heading-1"
+                id="popover-heading-2"
               >
-                Notifications (4)
+                Already Seen
               </h3>
-              <span
-                class="popover__header-title-after"
-              >
-                <button
-                  class="clickable-style button button--icon clickable-style--sm clickable-style--icon clickable-style--brand"
-                  type="button"
-                >
-                  Mark All Seen
-                </button>
-              </span>
             </div>
           </header>
-          <div
-            class="popover__body"
+          <ul
+            class="notification-list"
           >
-            <ul
-              class="notification-list"
-            >
-              <li
-                class="notification-list__item"
-              >
-                <div
-                  class="notification-list__content"
-                >
-                  <div
-                    class="notification-list__title"
-                  >
-                    <a
-                      class="notification-list__link"
-                      href="#"
-                    >
-                      <h6
-                        class="heading heading--size-body-sm"
-                      >
-                        English Teacher gave you feedback
-                      </h6>
-                    </a>
-                  </div>
-                  now
-                   · 
-                  Outsiders on Trial: Self Awareness = Trial Brief Outline
-                </div>
-                <button
-                  aria-label="Mark as read"
-                  class="notification-list__button"
-                />
-              </li>
-              <li
-                class="notification-list__item"
-              >
-                <div
-                  class="notification-list__content"
-                >
-                  <div
-                    class="notification-list__title"
-                  >
-                    <a
-                      class="notification-list__link"
-                      href="#"
-                    >
-                      <h6
-                        class="heading heading--size-body-sm"
-                      >
-                        English Teacher gave you feedback
-                      </h6>
-                    </a>
-                  </div>
-                  now
-                   · 
-                  Outsiders on Trial: Self Awareness = Trial Brief Outline
-                </div>
-                <button
-                  aria-label="Mark as read"
-                  class="notification-list__button"
-                />
-              </li>
-              <li
-                class="notification-list__item"
-              >
-                <div
-                  class="notification-list__content"
-                >
-                  <div
-                    class="notification-list__title"
-                  >
-                    <a
-                      class="notification-list__link"
-                      href="#"
-                    >
-                      <h6
-                        class="heading heading--size-body-sm"
-                      >
-                        English Teacher gave you feedback
-                      </h6>
-                    </a>
-                  </div>
-                  now
-                   · 
-                  Outsiders on Trial: Self Awareness = Trial Brief Outline
-                </div>
-                <button
-                  aria-label="Mark as read"
-                  class="notification-list__button"
-                />
-              </li>
-              <li
-                class="notification-list__item"
-              >
-                <div
-                  class="notification-list__content"
-                >
-                  <div
-                    class="notification-list__title"
-                  >
-                    <a
-                      class="notification-list__link"
-                      href="#"
-                    >
-                      <h6
-                        class="heading heading--size-body-sm"
-                      >
-                        English Teacher gave you feedback
-                      </h6>
-                    </a>
-                  </div>
-                  now
-                   · 
-                  Outsiders on Trial: Self Awareness = Trial Brief Outline
-                </div>
-                <button
-                  aria-label="Mark as read"
-                  class="notification-list__button"
-                />
-              </li>
-            </ul>
-            <header
-              class="popover__header"
+            <li
+              class="notification-list__item notification-list__is-read"
             >
               <div
-                class="popover__header-content"
+                class="notification-list__content"
               >
-                <h3
-                  class="heading heading--size-body-sm"
-                  id="popover-heading-2"
+                <div
+                  class="notification-list__title"
                 >
-                  Already Seen
-                </h3>
+                  <a
+                    class="notification-list__link"
+                    href="#"
+                  >
+                    <h6
+                      class="heading heading--size-body-sm"
+                    >
+                      English Teacher gave you feedback
+                    </h6>
+                  </a>
+                </div>
+                now
+                 · 
+                Outsiders on Trial: Self Awareness = Trial Brief Outline
               </div>
-            </header>
-            <ul
-              class="notification-list"
+              <button
+                aria-label="Mark as unread"
+                class="notification-list__button"
+              />
+            </li>
+            <li
+              class="notification-list__item notification-list__is-read"
             >
-              <li
-                class="notification-list__item notification-list__is-read"
+              <div
+                class="notification-list__content"
               >
                 <div
-                  class="notification-list__content"
+                  class="notification-list__title"
                 >
-                  <div
-                    class="notification-list__title"
+                  <a
+                    class="notification-list__link"
+                    href="#"
                   >
-                    <a
-                      class="notification-list__link"
-                      href="#"
+                    <h6
+                      class="heading heading--size-body-sm"
                     >
-                      <h6
-                        class="heading heading--size-body-sm"
-                      >
-                        English Teacher gave you feedback
-                      </h6>
-                    </a>
-                  </div>
-                  now
-                   · 
-                  Outsiders on Trial: Self Awareness = Trial Brief Outline
+                      English Teacher gave you feedback
+                    </h6>
+                  </a>
                 </div>
-                <button
-                  aria-label="Mark as unread"
-                  class="notification-list__button"
-                />
-              </li>
-              <li
-                class="notification-list__item notification-list__is-read"
-              >
-                <div
-                  class="notification-list__content"
-                >
-                  <div
-                    class="notification-list__title"
-                  >
-                    <a
-                      class="notification-list__link"
-                      href="#"
-                    >
-                      <h6
-                        class="heading heading--size-body-sm"
-                      >
-                        English Teacher gave you feedback
-                      </h6>
-                    </a>
-                  </div>
-                  now
-                   · 
-                  Outsiders on Trial: Self Awareness = Trial Brief Outline
-                </div>
-                <button
-                  aria-label="Mark as unread"
-                  class="notification-list__button"
-                />
-              </li>
-            </ul>
-          </div>
+                now
+                 · 
+                Outsiders on Trial: Self Awareness = Trial Brief Outline
+              </div>
+              <button
+                aria-label="Mark as unread"
+                class="notification-list__button"
+              />
+            </li>
+          </ul>
         </div>
-        <div
-          class="popover__arrow"
-        />
-      </article>
-    </div>
+      </div>
+      <div
+        class="popover__arrow"
+      />
+    </article>
   </div>
   <div
     data-focus-guard="true"
@@ -565,21 +557,165 @@ exports[`<Popover /> Default story renders snapshot 1`] = `
   <div
     data-focus-lock-disabled="false"
   >
-    <div
+    <article
+      aria-describedby="popover-description-1"
       aria-hidden="false"
+      aria-labelledby="popover-heading-1"
       class="popover eds-is-active"
       data-testid="popover-test"
-      role="button"
+      role="dialog"
       tabindex="0"
     >
-      <article
-        aria-describedby="popover-description-1"
-        aria-labelledby="popover-heading-1"
-        role="dialog"
+      <div
+        class="popover__content"
       >
-        <div
-          class="popover__content"
+        <header
+          class="popover__header"
         >
+          <div
+            class="popover__header-content"
+          >
+            <h3
+              class="heading heading--size-body-sm"
+              id="popover-heading-1"
+            >
+              Notifications (4)
+            </h3>
+            <span
+              class="popover__header-title-after"
+            >
+              <button
+                class="clickable-style button button--icon clickable-style--sm clickable-style--icon clickable-style--brand"
+                type="button"
+              >
+                Mark All Seen
+              </button>
+            </span>
+          </div>
+        </header>
+        <div
+          class="popover__body"
+        >
+          <ul
+            class="notification-list"
+          >
+            <li
+              class="notification-list__item"
+            >
+              <div
+                class="notification-list__content"
+              >
+                <div
+                  class="notification-list__title"
+                >
+                  <a
+                    class="notification-list__link"
+                    href="#"
+                  >
+                    <h6
+                      class="heading heading--size-body-sm"
+                    >
+                      English Teacher gave you feedback
+                    </h6>
+                  </a>
+                </div>
+                now
+                 · 
+                Outsiders on Trial: Self Awareness = Trial Brief Outline
+              </div>
+              <button
+                aria-label="Mark as read"
+                class="notification-list__button"
+              />
+            </li>
+            <li
+              class="notification-list__item"
+            >
+              <div
+                class="notification-list__content"
+              >
+                <div
+                  class="notification-list__title"
+                >
+                  <a
+                    class="notification-list__link"
+                    href="#"
+                  >
+                    <h6
+                      class="heading heading--size-body-sm"
+                    >
+                      English Teacher gave you feedback
+                    </h6>
+                  </a>
+                </div>
+                now
+                 · 
+                Outsiders on Trial: Self Awareness = Trial Brief Outline
+              </div>
+              <button
+                aria-label="Mark as read"
+                class="notification-list__button"
+              />
+            </li>
+            <li
+              class="notification-list__item"
+            >
+              <div
+                class="notification-list__content"
+              >
+                <div
+                  class="notification-list__title"
+                >
+                  <a
+                    class="notification-list__link"
+                    href="#"
+                  >
+                    <h6
+                      class="heading heading--size-body-sm"
+                    >
+                      English Teacher gave you feedback
+                    </h6>
+                  </a>
+                </div>
+                now
+                 · 
+                Outsiders on Trial: Self Awareness = Trial Brief Outline
+              </div>
+              <button
+                aria-label="Mark as read"
+                class="notification-list__button"
+              />
+            </li>
+            <li
+              class="notification-list__item"
+            >
+              <div
+                class="notification-list__content"
+              >
+                <div
+                  class="notification-list__title"
+                >
+                  <a
+                    class="notification-list__link"
+                    href="#"
+                  >
+                    <h6
+                      class="heading heading--size-body-sm"
+                    >
+                      English Teacher gave you feedback
+                    </h6>
+                  </a>
+                </div>
+                now
+                 · 
+                Outsiders on Trial: Self Awareness = Trial Brief Outline
+              </div>
+              <button
+                aria-label="Mark as read"
+                class="notification-list__button"
+              />
+            </li>
+          </ul>
           <header
             class="popover__header"
           >
@@ -588,228 +724,80 @@ exports[`<Popover /> Default story renders snapshot 1`] = `
             >
               <h3
                 class="heading heading--size-body-sm"
-                id="popover-heading-1"
+                id="popover-heading-2"
               >
-                Notifications (4)
+                Already Seen
               </h3>
-              <span
-                class="popover__header-title-after"
-              >
-                <button
-                  class="clickable-style button button--icon clickable-style--sm clickable-style--icon clickable-style--brand"
-                  type="button"
-                >
-                  Mark All Seen
-                </button>
-              </span>
             </div>
           </header>
-          <div
-            class="popover__body"
+          <ul
+            class="notification-list"
           >
-            <ul
-              class="notification-list"
-            >
-              <li
-                class="notification-list__item"
-              >
-                <div
-                  class="notification-list__content"
-                >
-                  <div
-                    class="notification-list__title"
-                  >
-                    <a
-                      class="notification-list__link"
-                      href="#"
-                    >
-                      <h6
-                        class="heading heading--size-body-sm"
-                      >
-                        English Teacher gave you feedback
-                      </h6>
-                    </a>
-                  </div>
-                  now
-                   · 
-                  Outsiders on Trial: Self Awareness = Trial Brief Outline
-                </div>
-                <button
-                  aria-label="Mark as read"
-                  class="notification-list__button"
-                />
-              </li>
-              <li
-                class="notification-list__item"
-              >
-                <div
-                  class="notification-list__content"
-                >
-                  <div
-                    class="notification-list__title"
-                  >
-                    <a
-                      class="notification-list__link"
-                      href="#"
-                    >
-                      <h6
-                        class="heading heading--size-body-sm"
-                      >
-                        English Teacher gave you feedback
-                      </h6>
-                    </a>
-                  </div>
-                  now
-                   · 
-                  Outsiders on Trial: Self Awareness = Trial Brief Outline
-                </div>
-                <button
-                  aria-label="Mark as read"
-                  class="notification-list__button"
-                />
-              </li>
-              <li
-                class="notification-list__item"
-              >
-                <div
-                  class="notification-list__content"
-                >
-                  <div
-                    class="notification-list__title"
-                  >
-                    <a
-                      class="notification-list__link"
-                      href="#"
-                    >
-                      <h6
-                        class="heading heading--size-body-sm"
-                      >
-                        English Teacher gave you feedback
-                      </h6>
-                    </a>
-                  </div>
-                  now
-                   · 
-                  Outsiders on Trial: Self Awareness = Trial Brief Outline
-                </div>
-                <button
-                  aria-label="Mark as read"
-                  class="notification-list__button"
-                />
-              </li>
-              <li
-                class="notification-list__item"
-              >
-                <div
-                  class="notification-list__content"
-                >
-                  <div
-                    class="notification-list__title"
-                  >
-                    <a
-                      class="notification-list__link"
-                      href="#"
-                    >
-                      <h6
-                        class="heading heading--size-body-sm"
-                      >
-                        English Teacher gave you feedback
-                      </h6>
-                    </a>
-                  </div>
-                  now
-                   · 
-                  Outsiders on Trial: Self Awareness = Trial Brief Outline
-                </div>
-                <button
-                  aria-label="Mark as read"
-                  class="notification-list__button"
-                />
-              </li>
-            </ul>
-            <header
-              class="popover__header"
+            <li
+              class="notification-list__item notification-list__is-read"
             >
               <div
-                class="popover__header-content"
+                class="notification-list__content"
               >
-                <h3
-                  class="heading heading--size-body-sm"
-                  id="popover-heading-2"
+                <div
+                  class="notification-list__title"
                 >
-                  Already Seen
-                </h3>
+                  <a
+                    class="notification-list__link"
+                    href="#"
+                  >
+                    <h6
+                      class="heading heading--size-body-sm"
+                    >
+                      English Teacher gave you feedback
+                    </h6>
+                  </a>
+                </div>
+                now
+                 · 
+                Outsiders on Trial: Self Awareness = Trial Brief Outline
               </div>
-            </header>
-            <ul
-              class="notification-list"
+              <button
+                aria-label="Mark as unread"
+                class="notification-list__button"
+              />
+            </li>
+            <li
+              class="notification-list__item notification-list__is-read"
             >
-              <li
-                class="notification-list__item notification-list__is-read"
+              <div
+                class="notification-list__content"
               >
                 <div
-                  class="notification-list__content"
+                  class="notification-list__title"
                 >
-                  <div
-                    class="notification-list__title"
+                  <a
+                    class="notification-list__link"
+                    href="#"
                   >
-                    <a
-                      class="notification-list__link"
-                      href="#"
+                    <h6
+                      class="heading heading--size-body-sm"
                     >
-                      <h6
-                        class="heading heading--size-body-sm"
-                      >
-                        English Teacher gave you feedback
-                      </h6>
-                    </a>
-                  </div>
-                  now
-                   · 
-                  Outsiders on Trial: Self Awareness = Trial Brief Outline
+                      English Teacher gave you feedback
+                    </h6>
+                  </a>
                 </div>
-                <button
-                  aria-label="Mark as unread"
-                  class="notification-list__button"
-                />
-              </li>
-              <li
-                class="notification-list__item notification-list__is-read"
-              >
-                <div
-                  class="notification-list__content"
-                >
-                  <div
-                    class="notification-list__title"
-                  >
-                    <a
-                      class="notification-list__link"
-                      href="#"
-                    >
-                      <h6
-                        class="heading heading--size-body-sm"
-                      >
-                        English Teacher gave you feedback
-                      </h6>
-                    </a>
-                  </div>
-                  now
-                   · 
-                  Outsiders on Trial: Self Awareness = Trial Brief Outline
-                </div>
-                <button
-                  aria-label="Mark as unread"
-                  class="notification-list__button"
-                />
-              </li>
-            </ul>
-          </div>
+                now
+                 · 
+                Outsiders on Trial: Self Awareness = Trial Brief Outline
+              </div>
+              <button
+                aria-label="Mark as unread"
+                class="notification-list__button"
+              />
+            </li>
+          </ul>
         </div>
-        <div
-          class="popover__arrow"
-        />
-      </article>
-    </div>
+      </div>
+      <div
+        class="popover__arrow"
+      />
+    </article>
   </div>
   <div
     data-focus-guard="true"
@@ -838,21 +826,165 @@ exports[`<Popover /> TopLeft story renders snapshot 1`] = `
   <div
     data-focus-lock-disabled="false"
   >
-    <div
+    <article
+      aria-describedby="popover-description-1"
       aria-hidden="false"
+      aria-labelledby="popover-heading-1"
       class="popover eds-is-active popover--top-left"
       data-testid="popover-test"
-      role="button"
+      role="dialog"
       tabindex="0"
     >
-      <article
-        aria-describedby="popover-description-1"
-        aria-labelledby="popover-heading-1"
-        role="dialog"
+      <div
+        class="popover__content"
       >
-        <div
-          class="popover__content"
+        <header
+          class="popover__header"
         >
+          <div
+            class="popover__header-content"
+          >
+            <h3
+              class="heading heading--size-body-sm"
+              id="popover-heading-1"
+            >
+              Notifications (4)
+            </h3>
+            <span
+              class="popover__header-title-after"
+            >
+              <button
+                class="clickable-style button button--icon clickable-style--sm clickable-style--icon clickable-style--brand"
+                type="button"
+              >
+                Mark All Seen
+              </button>
+            </span>
+          </div>
+        </header>
+        <div
+          class="popover__body"
+        >
+          <ul
+            class="notification-list"
+          >
+            <li
+              class="notification-list__item"
+            >
+              <div
+                class="notification-list__content"
+              >
+                <div
+                  class="notification-list__title"
+                >
+                  <a
+                    class="notification-list__link"
+                    href="#"
+                  >
+                    <h6
+                      class="heading heading--size-body-sm"
+                    >
+                      English Teacher gave you feedback
+                    </h6>
+                  </a>
+                </div>
+                now
+                 · 
+                Outsiders on Trial: Self Awareness = Trial Brief Outline
+              </div>
+              <button
+                aria-label="Mark as read"
+                class="notification-list__button"
+              />
+            </li>
+            <li
+              class="notification-list__item"
+            >
+              <div
+                class="notification-list__content"
+              >
+                <div
+                  class="notification-list__title"
+                >
+                  <a
+                    class="notification-list__link"
+                    href="#"
+                  >
+                    <h6
+                      class="heading heading--size-body-sm"
+                    >
+                      English Teacher gave you feedback
+                    </h6>
+                  </a>
+                </div>
+                now
+                 · 
+                Outsiders on Trial: Self Awareness = Trial Brief Outline
+              </div>
+              <button
+                aria-label="Mark as read"
+                class="notification-list__button"
+              />
+            </li>
+            <li
+              class="notification-list__item"
+            >
+              <div
+                class="notification-list__content"
+              >
+                <div
+                  class="notification-list__title"
+                >
+                  <a
+                    class="notification-list__link"
+                    href="#"
+                  >
+                    <h6
+                      class="heading heading--size-body-sm"
+                    >
+                      English Teacher gave you feedback
+                    </h6>
+                  </a>
+                </div>
+                now
+                 · 
+                Outsiders on Trial: Self Awareness = Trial Brief Outline
+              </div>
+              <button
+                aria-label="Mark as read"
+                class="notification-list__button"
+              />
+            </li>
+            <li
+              class="notification-list__item"
+            >
+              <div
+                class="notification-list__content"
+              >
+                <div
+                  class="notification-list__title"
+                >
+                  <a
+                    class="notification-list__link"
+                    href="#"
+                  >
+                    <h6
+                      class="heading heading--size-body-sm"
+                    >
+                      English Teacher gave you feedback
+                    </h6>
+                  </a>
+                </div>
+                now
+                 · 
+                Outsiders on Trial: Self Awareness = Trial Brief Outline
+              </div>
+              <button
+                aria-label="Mark as read"
+                class="notification-list__button"
+              />
+            </li>
+          </ul>
           <header
             class="popover__header"
           >
@@ -861,228 +993,80 @@ exports[`<Popover /> TopLeft story renders snapshot 1`] = `
             >
               <h3
                 class="heading heading--size-body-sm"
-                id="popover-heading-1"
+                id="popover-heading-2"
               >
-                Notifications (4)
+                Already Seen
               </h3>
-              <span
-                class="popover__header-title-after"
-              >
-                <button
-                  class="clickable-style button button--icon clickable-style--sm clickable-style--icon clickable-style--brand"
-                  type="button"
-                >
-                  Mark All Seen
-                </button>
-              </span>
             </div>
           </header>
-          <div
-            class="popover__body"
+          <ul
+            class="notification-list"
           >
-            <ul
-              class="notification-list"
-            >
-              <li
-                class="notification-list__item"
-              >
-                <div
-                  class="notification-list__content"
-                >
-                  <div
-                    class="notification-list__title"
-                  >
-                    <a
-                      class="notification-list__link"
-                      href="#"
-                    >
-                      <h6
-                        class="heading heading--size-body-sm"
-                      >
-                        English Teacher gave you feedback
-                      </h6>
-                    </a>
-                  </div>
-                  now
-                   · 
-                  Outsiders on Trial: Self Awareness = Trial Brief Outline
-                </div>
-                <button
-                  aria-label="Mark as read"
-                  class="notification-list__button"
-                />
-              </li>
-              <li
-                class="notification-list__item"
-              >
-                <div
-                  class="notification-list__content"
-                >
-                  <div
-                    class="notification-list__title"
-                  >
-                    <a
-                      class="notification-list__link"
-                      href="#"
-                    >
-                      <h6
-                        class="heading heading--size-body-sm"
-                      >
-                        English Teacher gave you feedback
-                      </h6>
-                    </a>
-                  </div>
-                  now
-                   · 
-                  Outsiders on Trial: Self Awareness = Trial Brief Outline
-                </div>
-                <button
-                  aria-label="Mark as read"
-                  class="notification-list__button"
-                />
-              </li>
-              <li
-                class="notification-list__item"
-              >
-                <div
-                  class="notification-list__content"
-                >
-                  <div
-                    class="notification-list__title"
-                  >
-                    <a
-                      class="notification-list__link"
-                      href="#"
-                    >
-                      <h6
-                        class="heading heading--size-body-sm"
-                      >
-                        English Teacher gave you feedback
-                      </h6>
-                    </a>
-                  </div>
-                  now
-                   · 
-                  Outsiders on Trial: Self Awareness = Trial Brief Outline
-                </div>
-                <button
-                  aria-label="Mark as read"
-                  class="notification-list__button"
-                />
-              </li>
-              <li
-                class="notification-list__item"
-              >
-                <div
-                  class="notification-list__content"
-                >
-                  <div
-                    class="notification-list__title"
-                  >
-                    <a
-                      class="notification-list__link"
-                      href="#"
-                    >
-                      <h6
-                        class="heading heading--size-body-sm"
-                      >
-                        English Teacher gave you feedback
-                      </h6>
-                    </a>
-                  </div>
-                  now
-                   · 
-                  Outsiders on Trial: Self Awareness = Trial Brief Outline
-                </div>
-                <button
-                  aria-label="Mark as read"
-                  class="notification-list__button"
-                />
-              </li>
-            </ul>
-            <header
-              class="popover__header"
+            <li
+              class="notification-list__item notification-list__is-read"
             >
               <div
-                class="popover__header-content"
+                class="notification-list__content"
               >
-                <h3
-                  class="heading heading--size-body-sm"
-                  id="popover-heading-2"
+                <div
+                  class="notification-list__title"
                 >
-                  Already Seen
-                </h3>
+                  <a
+                    class="notification-list__link"
+                    href="#"
+                  >
+                    <h6
+                      class="heading heading--size-body-sm"
+                    >
+                      English Teacher gave you feedback
+                    </h6>
+                  </a>
+                </div>
+                now
+                 · 
+                Outsiders on Trial: Self Awareness = Trial Brief Outline
               </div>
-            </header>
-            <ul
-              class="notification-list"
+              <button
+                aria-label="Mark as unread"
+                class="notification-list__button"
+              />
+            </li>
+            <li
+              class="notification-list__item notification-list__is-read"
             >
-              <li
-                class="notification-list__item notification-list__is-read"
+              <div
+                class="notification-list__content"
               >
                 <div
-                  class="notification-list__content"
+                  class="notification-list__title"
                 >
-                  <div
-                    class="notification-list__title"
+                  <a
+                    class="notification-list__link"
+                    href="#"
                   >
-                    <a
-                      class="notification-list__link"
-                      href="#"
+                    <h6
+                      class="heading heading--size-body-sm"
                     >
-                      <h6
-                        class="heading heading--size-body-sm"
-                      >
-                        English Teacher gave you feedback
-                      </h6>
-                    </a>
-                  </div>
-                  now
-                   · 
-                  Outsiders on Trial: Self Awareness = Trial Brief Outline
+                      English Teacher gave you feedback
+                    </h6>
+                  </a>
                 </div>
-                <button
-                  aria-label="Mark as unread"
-                  class="notification-list__button"
-                />
-              </li>
-              <li
-                class="notification-list__item notification-list__is-read"
-              >
-                <div
-                  class="notification-list__content"
-                >
-                  <div
-                    class="notification-list__title"
-                  >
-                    <a
-                      class="notification-list__link"
-                      href="#"
-                    >
-                      <h6
-                        class="heading heading--size-body-sm"
-                      >
-                        English Teacher gave you feedback
-                      </h6>
-                    </a>
-                  </div>
-                  now
-                   · 
-                  Outsiders on Trial: Self Awareness = Trial Brief Outline
-                </div>
-                <button
-                  aria-label="Mark as unread"
-                  class="notification-list__button"
-                />
-              </li>
-            </ul>
-          </div>
+                now
+                 · 
+                Outsiders on Trial: Self Awareness = Trial Brief Outline
+              </div>
+              <button
+                aria-label="Mark as unread"
+                class="notification-list__button"
+              />
+            </li>
+          </ul>
         </div>
-        <div
-          class="popover__arrow"
-        />
-      </article>
-    </div>
+      </div>
+      <div
+        class="popover__arrow"
+      />
+    </article>
   </div>
   <div
     data-focus-guard="true"

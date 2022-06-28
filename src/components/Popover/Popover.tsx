@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import clsx from 'clsx';
 import React, {
   useState,
@@ -181,28 +182,25 @@ export const Popover = ({
 
   return (
     <FocusLock disabled={!activeFocus}>
-      <div
+      <article
+        aria-describedby={ariaDescribedBy}
         aria-hidden={!isActive}
+        aria-labelledby={ariaLabelledBy}
         className={componentClassName}
         onKeyDown={(e) => handleOnKeyDown(e)}
-        role="button"
+        ref={ref}
+        role="dialog"
+        // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
         tabIndex={0}
         {...other}
       >
-        <article
-          aria-describedby={ariaDescribedBy}
-          aria-labelledby={ariaLabelledBy}
-          ref={ref}
-          role="dialog"
-        >
-          <div className={styles['popover__content']}>
-            {header}
-            {body}
-            {footer}
-          </div>
-          <div className={styles['popover__arrow']}></div>
-        </article>
-      </div>
+        <div className={styles['popover__content']}>
+          {header}
+          {body}
+          {footer}
+        </div>
+        <div className={styles['popover__arrow']}></div>
+      </article>
     </FocusLock>
   );
 };

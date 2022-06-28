@@ -121,18 +121,12 @@ export const ShowHide = ({
     'aria-expanded': isActive ? 'true' : 'false',
     className: 'show-hide__trigger',
     onClick: handleClick,
+    onKeyDown: handleOnKeyDown,
     text: isActive ? closeText || text : text,
   });
 
   return (
-    <div
-      className={componentClassName}
-      ref={dropdownRef}
-      role="button"
-      tabIndex={0}
-      {...other}
-      onKeyDown={handleOnKeyDown}
-    >
+    <div className={componentClassName} ref={dropdownRef} {...other}>
       {triggerElement}
       <div className={styles['show-hide__panel']} hidden={!isActive}>
         {children}
