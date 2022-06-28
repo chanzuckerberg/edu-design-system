@@ -1,4 +1,4 @@
-import { Meta } from '@storybook/react';
+import { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 import { Card } from './Card';
 import CardBody from '../CardBody';
@@ -9,68 +9,48 @@ export default {
   title: 'Molecules/Blocks/Card',
   component: Card,
   subcomponents: { CardHeader, CardBody, CardFooter },
-  parameters: {
-    axe: {
-      // TODO: re-enable when component is worked on
-      skip: true,
-    },
+  args: {
+    children: (
+      <>
+        <Card.Header>
+          <div className="fpo">Card Header</div>
+        </Card.Header>
+        <Card.Body>
+          <div className="fpo">Card Body</div>
+        </Card.Body>
+        <Card.Footer>
+          <div className="fpo">Card Footer</div>
+        </Card.Footer>
+      </>
+    ),
   },
-} as Meta;
+} as Meta<Args>;
 
-export const Default = () => (
-  <Card>
-    <Card.Header>
-      <div className="fpo">Card Header</div>
-    </Card.Header>
-    <Card.Body>
-      <div className="fpo">Card Body</div>
-    </Card.Body>
-    <Card.Footer>
-      <div className="fpo">Card Footer</div>
-    </Card.Footer>
-  </Card>
-);
+type Args = React.ComponentProps<typeof Card>;
 
-export const Raised = () => (
-  <Card elevation="raised">
-    <Card.Header>
-      <div className="fpo">Card Header</div>
-    </Card.Header>
-    <Card.Body>
-      <div className="fpo">Card Body</div>
-    </Card.Body>
-    <Card.Footer>
-      <div className="fpo">Card Footer</div>
-    </Card.Footer>
-  </Card>
-);
+export const Default: StoryObj<Args> = {};
 
-export const Horizontal = () => (
-  <Card orientation="horizontal">
-    <Card.Header>
-      <div className="fpo">Card Header</div>
-    </Card.Header>
-    <Card.Body>
-      <div className="fpo">Card Body</div>
-    </Card.Body>
-    <Card.Footer>
-      <div className="fpo">Card Footer</div>
-    </Card.Footer>
-  </Card>
-);
+export const Raised: StoryObj<Args> = {
+  args: {
+    elevation: 'raised',
+  },
+};
 
-export const Inverted = () => (
-  <div style={{ backgroundColor: 'black', padding: '1rem' }}>
-    <Card inverted={true}>
-      <Card.Header>
-        <div className="fpo">Card Header</div>
-      </Card.Header>
-      <Card.Body>
-        <div className="fpo">Card Body</div>
-      </Card.Body>
-      <Card.Footer>
-        <div className="fpo">Card Footer</div>
-      </Card.Footer>
-    </Card>
-  </div>
-);
+export const Horizontal: StoryObj<Args> = {
+  args: {
+    orientation: 'horizontal',
+  },
+};
+
+export const Inverted: StoryObj<Args> = {
+  args: {
+    inverted: true,
+  },
+  decorators: [
+    (Story) => (
+      <div style={{ backgroundColor: 'black', padding: '1rem' }}>
+        <Story />
+      </div>
+    ),
+  ],
+};
