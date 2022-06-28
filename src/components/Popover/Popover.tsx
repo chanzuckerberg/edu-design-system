@@ -1,3 +1,7 @@
+/**
+ * we need to keep the escape key close logic on line 190 <article>
+ * so keep the lint suppression for now and fix it later on.
+ */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import clsx from 'clsx';
 import React, {
