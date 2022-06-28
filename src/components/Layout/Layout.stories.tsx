@@ -39,7 +39,6 @@ export const GapLgXl: StoryObj<Args> = {
 
 export const SixtySevenThirtyThree: StoryObj<Args> = {
   args: {
-    variant: '67-33',
     children: (
       <>
         <LayoutSection region="main">
@@ -50,6 +49,7 @@ export const SixtySevenThirtyThree: StoryObj<Args> = {
         </LayoutSection>
       </>
     ),
+    variant: '67-33',
   },
 };
 
@@ -66,5 +66,21 @@ export const FiftyFifty: StoryObj<Args> = {
       </>
     ),
     variant: '50-50',
+  },
+};
+
+export const ThirtyThreeSixtySeven: StoryObj<Args> = {
+  args: {
+    children: (
+      <>
+        <LayoutSection region="sidebar">
+          <div className="fpo">Sidebar Layout Section</div>
+        </LayoutSection>
+        <LayoutSection region="main">
+          <div className="fpo">Main Layout Section</div>
+        </LayoutSection>
+      </>
+    ),
+    variant: '33-67',
   },
 };
