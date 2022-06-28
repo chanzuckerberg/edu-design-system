@@ -2,6 +2,36 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0-alpha.0](https://github.com/chanzuckerberg/edu-design-system/compare/v1.3.0...v1.4.0-alpha.0) (2022-06-28)
+
+
+### Features
+
+* **baselinecard:** create baseline card recipe ([0099602](https://github.com/chanzuckerberg/edu-design-system/commit/00996029a199aa7808dca85d0ccf05fdf191178d))
+* **baselinecard:** create baseline card recipe ([2834882](https://github.com/chanzuckerberg/edu-design-system/commit/2834882fd707d4bec394f67ee822c91f827cf574))
+* timeline nav responsive ([89e7b86](https://github.com/chanzuckerberg/edu-design-system/commit/89e7b868107fcad04f2a0e34e412ce828487035a))
+* **timelinenav:** acc changes ([fff121b](https://github.com/chanzuckerberg/edu-design-system/commit/fff121b86b51bf67621dda26beaecbbb98c1eaca))
+* **timelinenav:** accessibility ([7e14241](https://github.com/chanzuckerberg/edu-design-system/commit/7e1424182aebb188ad7cc8d2ed94bb7ef1259c60))
+* **timelinenav:** add transition-property ([5d37f09](https://github.com/chanzuckerberg/edu-design-system/commit/5d37f09d62dd869b56d32b8a0257b0e11acf2870))
+* **timelinenav:** cr changes ([8afc63d](https://github.com/chanzuckerberg/edu-design-system/commit/8afc63de277fb8ff271ccd134d4a0bf3f1686010))
+* **timelinenav:** edge case title overflow ([9893529](https://github.com/chanzuckerberg/edu-design-system/commit/9893529c0d63dffe4d84cfd8acb840e0f1c1e04c))
+* **timelinenav:** excl < lg bp ([cf9d46d](https://github.com/chanzuckerberg/edu-design-system/commit/cf9d46d8423c07fa26fcd80dba39267dda766a92))
+* **timelinenav:** handle long title ([eafbf11](https://github.com/chanzuckerberg/edu-design-system/commit/eafbf116f532417edc74136ff1b23e1f4838a986))
+* **timelinenav:** minor - comm ([41965db](https://github.com/chanzuckerberg/edu-design-system/commit/41965db27e860bd33998e28ecf0fee0f79fe5327))
+* **timelinenav:** minor - comment ([185c72b](https://github.com/chanzuckerberg/edu-design-system/commit/185c72bc1b15634286d3dd45345b742eef572d39))
+* **timelinenav:** move trans to container ([4ae3d87](https://github.com/chanzuckerberg/edu-design-system/commit/4ae3d8727d499e0a489604dd9f68047d44676a33))
+* **timelinenav:** rm unused tests ([66637c9](https://github.com/chanzuckerberg/edu-design-system/commit/66637c93e76a0583502dc2127d585e01d560053b))
+* **timelinenav:** set focus to back btn ([55f54c8](https://github.com/chanzuckerberg/edu-design-system/commit/55f54c80f7be6b9050babddb9311056a41b3f96e))
+* **timelinenav:** tests ([53d9289](https://github.com/chanzuckerberg/edu-design-system/commit/53d9289f0a48bf39ee3bc0ab1698a83047452fee))
+* **timelinenav:** undo rm outline ([f0a9116](https://github.com/chanzuckerberg/edu-design-system/commit/f0a911665714dfb2bb5e27a4f1a5e827dbe0f1a8))
+* **timelinenav:** use size var ([fb38917](https://github.com/chanzuckerberg/edu-design-system/commit/fb38917ebd905a05cfc5498487e60f5eeffd997e))
+
+
+### Bug Fixes
+
+* timeline nav comment tweak to trigger commit ([3e4491b](https://github.com/chanzuckerberg/edu-design-system/commit/3e4491bbaf25d8db6fbfb61fbcaae767fe5cb9ac))
+* timeline nav tweaks and sticky behavior ([7d999ac](https://github.com/chanzuckerberg/edu-design-system/commit/7d999ac0ab1de5bfaf3b90e48b1460d2d4282d57))
+
 ## [1.3.0](https://github.com/chanzuckerberg/edu-design-system/compare/v1.3.0-alpha.1...v1.3.0) (2022-06-17)
 
 ### Features
