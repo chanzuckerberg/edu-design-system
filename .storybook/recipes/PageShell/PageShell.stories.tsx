@@ -1,14 +1,15 @@
-import { Story, Meta } from '@storybook/react';
+import { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
-import { PageShell, Props } from './PageShell';
+import { PageShell } from './PageShell';
 
 export default {
   title: 'Recipes/PageShell',
   component: PageShell,
+  args: {
+    children: 'Test',
+  },
 } as Meta;
 
-const Template: Story<Props> = (args) => <PageShell {...args}>Test</PageShell>;
-
-export const Default = Template.bind({});
-Default.args = {};
+type Args = React.ComponentProps<typeof PageShell>;
+export const Default: StoryObj<Args> = {};
