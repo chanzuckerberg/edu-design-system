@@ -3,6 +3,7 @@
 exports[`<Link /> Default story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--link clickable-style--brand"
+  data-bootstrap-override="clickable-style-link"
   href="/"
 >
   Link
@@ -12,6 +13,7 @@ exports[`<Link /> Default story renders snapshot 1`] = `
 exports[`<Link /> Destructive story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--lg clickable-style--primary clickable-style--error"
+  data-bootstrap-override="clickable-style-primary"
   href="/"
 >
   Link
@@ -21,6 +23,7 @@ exports[`<Link /> Destructive story renders snapshot 1`] = `
 exports[`<Link /> DestructiveLeftIcon story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--lg clickable-style--primary clickable-style--error"
+  data-bootstrap-override="clickable-style-primary"
   href="/"
 >
   <svg
@@ -40,6 +43,7 @@ exports[`<Link /> DestructiveLeftIcon story renders snapshot 1`] = `
 exports[`<Link /> FullWidth story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand clickable-style--full-width"
+  data-bootstrap-override="clickable-style-secondary"
   href="/"
 >
   Link
@@ -49,6 +53,7 @@ exports[`<Link /> FullWidth story renders snapshot 1`] = `
 exports[`<Link /> IconClickableStyleIconOnly story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--lg clickable-style--icon clickable-style--brand"
+  data-bootstrap-override="clickable-style-icon"
   href="/"
 >
   <svg
@@ -72,6 +77,7 @@ exports[`<Link /> IconClickableStyleIconOnly story renders snapshot 1`] = `
 exports[`<Link /> IconClickableStyleIconOnlySmall story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--sm clickable-style--icon clickable-style--brand"
+  data-bootstrap-override="clickable-style-icon"
   href="/"
 >
   <svg
@@ -95,6 +101,7 @@ exports[`<Link /> IconClickableStyleIconOnlySmall story renders snapshot 1`] = `
 exports[`<Link /> IconClickableStyleLeftIcon story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--lg clickable-style--icon clickable-style--brand"
+  data-bootstrap-override="clickable-style-icon"
   href="/"
 >
   <svg
@@ -114,6 +121,7 @@ exports[`<Link /> IconClickableStyleLeftIcon story renders snapshot 1`] = `
 exports[`<Link /> IconClickableStyleLeftIconSmall story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--sm clickable-style--icon clickable-style--brand"
+  data-bootstrap-override="clickable-style-icon"
   href="/"
 >
   <svg
@@ -133,6 +141,7 @@ exports[`<Link /> IconClickableStyleLeftIconSmall story renders snapshot 1`] = `
 exports[`<Link /> IconClickableStyleRightIcon story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--lg clickable-style--icon clickable-style--brand"
+  data-bootstrap-override="clickable-style-icon"
   href="/"
 >
   Link
@@ -152,6 +161,7 @@ exports[`<Link /> IconClickableStyleRightIcon story renders snapshot 1`] = `
 exports[`<Link /> IconClickableStyleRightIconSmall story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--sm clickable-style--icon clickable-style--brand"
+  data-bootstrap-override="clickable-style-icon"
   href="/"
 >
   Link
@@ -171,6 +181,7 @@ exports[`<Link /> IconClickableStyleRightIconSmall story renders snapshot 1`] = 
 exports[`<Link /> IconError story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--lg clickable-style--icon clickable-style--error"
+  data-bootstrap-override="clickable-style-icon"
   href="/"
 >
   Link
@@ -190,6 +201,7 @@ exports[`<Link /> IconError story renders snapshot 1`] = `
 exports[`<Link /> IconNeutral story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral"
+  data-bootstrap-override="clickable-style-icon"
   href="/"
 >
   Link
@@ -209,6 +221,7 @@ exports[`<Link /> IconNeutral story renders snapshot 1`] = `
 exports[`<Link /> IconSuccess story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--lg clickable-style--icon clickable-style--success"
+  data-bootstrap-override="clickable-style-icon"
   href="/"
 >
   Link
@@ -228,6 +241,7 @@ exports[`<Link /> IconSuccess story renders snapshot 1`] = `
 exports[`<Link /> IconWarning story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--lg clickable-style--icon clickable-style--warning"
+  data-bootstrap-override="clickable-style-icon"
   href="/"
 >
   Link
@@ -247,6 +261,7 @@ exports[`<Link /> IconWarning story renders snapshot 1`] = `
 exports[`<Link /> LinkNeutral story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--link clickable-style--neutral"
+  data-bootstrap-override="clickable-style-link"
   href="/"
 >
   Link
@@ -256,6 +271,7 @@ exports[`<Link /> LinkNeutral story renders snapshot 1`] = `
 exports[`<Link /> LinkRightIcon story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--link clickable-style--brand"
+  data-bootstrap-override="clickable-style-link"
   href="/"
 >
   Link
@@ -280,6 +296,7 @@ exports[`<Link /> LinkRightIcon story renders snapshot 1`] = `
 exports[`<Link /> Primary story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand"
+  data-bootstrap-override="clickable-style-primary"
   href="/"
 >
   Link
@@ -289,6 +306,7 @@ exports[`<Link /> Primary story renders snapshot 1`] = `
 exports[`<Link /> PrimaryLeftIcon story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand"
+  data-bootstrap-override="clickable-style-primary"
   href="/"
 >
   <svg
@@ -308,6 +326,7 @@ exports[`<Link /> PrimaryLeftIcon story renders snapshot 1`] = `
 exports[`<Link /> PrimaryMedium story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--md clickable-style--primary clickable-style--brand"
+  data-bootstrap-override="clickable-style-primary"
   href="/"
 >
   Link
@@ -317,6 +336,7 @@ exports[`<Link /> PrimaryMedium story renders snapshot 1`] = `
 exports[`<Link /> PrimaryRightIcon story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand"
+  data-bootstrap-override="clickable-style-primary"
   href="/"
 >
   Link
@@ -336,6 +356,7 @@ exports[`<Link /> PrimaryRightIcon story renders snapshot 1`] = `
 exports[`<Link /> PrimarySmall story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--sm clickable-style--primary clickable-style--brand"
+  data-bootstrap-override="clickable-style-primary"
   href="/"
 >
   Link
@@ -345,6 +366,7 @@ exports[`<Link /> PrimarySmall story renders snapshot 1`] = `
 exports[`<Link /> Secondary story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand"
+  data-bootstrap-override="clickable-style-secondary"
   href="/"
 >
   Link
@@ -354,6 +376,7 @@ exports[`<Link /> Secondary story renders snapshot 1`] = `
 exports[`<Link /> SecondaryError story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--error"
+  data-bootstrap-override="clickable-style-secondary"
   href="/"
 >
   Link
@@ -363,6 +386,7 @@ exports[`<Link /> SecondaryError story renders snapshot 1`] = `
 exports[`<Link /> SecondaryLeftIcon story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand"
+  data-bootstrap-override="clickable-style-secondary"
   href="/"
 >
   <svg
@@ -382,6 +406,7 @@ exports[`<Link /> SecondaryLeftIcon story renders snapshot 1`] = `
 exports[`<Link /> SecondaryMedium story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--md clickable-style--secondary clickable-style--brand"
+  data-bootstrap-override="clickable-style-secondary"
   href="/"
 >
   Link
@@ -391,6 +416,7 @@ exports[`<Link /> SecondaryMedium story renders snapshot 1`] = `
 exports[`<Link /> SecondaryRightIcon story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand"
+  data-bootstrap-override="clickable-style-secondary"
   href="/"
 >
   Link
@@ -410,6 +436,7 @@ exports[`<Link /> SecondaryRightIcon story renders snapshot 1`] = `
 exports[`<Link /> SecondarySmall story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--sm clickable-style--secondary clickable-style--brand"
+  data-bootstrap-override="clickable-style-secondary"
   href="/"
 >
   Link
@@ -419,6 +446,7 @@ exports[`<Link /> SecondarySmall story renders snapshot 1`] = `
 exports[`<Link /> SecondarySuccess story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--success"
+  data-bootstrap-override="clickable-style-secondary"
   href="/"
 >
   Link
@@ -428,6 +456,7 @@ exports[`<Link /> SecondarySuccess story renders snapshot 1`] = `
 exports[`<Link /> SecondaryWarning story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--warning"
+  data-bootstrap-override="clickable-style-secondary"
   href="/"
 >
   Link
@@ -437,6 +466,7 @@ exports[`<Link /> SecondaryWarning story renders snapshot 1`] = `
 exports[`<Link /> Tertiary story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral"
+  data-bootstrap-override="clickable-style-secondary"
   href="/"
 >
   Link
@@ -446,6 +476,7 @@ exports[`<Link /> Tertiary story renders snapshot 1`] = `
 exports[`<Link /> TertiaryLeftIcon story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral"
+  data-bootstrap-override="clickable-style-secondary"
   href="/"
 >
   <svg
@@ -465,6 +496,7 @@ exports[`<Link /> TertiaryLeftIcon story renders snapshot 1`] = `
 exports[`<Link /> TertiaryMedium story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--md clickable-style--secondary clickable-style--neutral"
+  data-bootstrap-override="clickable-style-secondary"
   href="/"
 >
   Link
@@ -474,6 +506,7 @@ exports[`<Link /> TertiaryMedium story renders snapshot 1`] = `
 exports[`<Link /> TertiaryRightIcon story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral"
+  data-bootstrap-override="clickable-style-secondary"
   href="/"
 >
   Link
@@ -493,6 +526,7 @@ exports[`<Link /> TertiaryRightIcon story renders snapshot 1`] = `
 exports[`<Link /> TertiarySmall story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--sm clickable-style--secondary clickable-style--neutral"
+  data-bootstrap-override="clickable-style-secondary"
   href="/"
 >
   Link
@@ -502,6 +536,7 @@ exports[`<Link /> TertiarySmall story renders snapshot 1`] = `
 exports[`<Link /> passes class names down properly 1`] = `
 <a
   class="clickable-style exampleClassName clickable-style--link clickable-style--brand"
+  data-bootstrap-override="clickable-style-link"
   data-testid="example-class-name"
   href="/"
 >
@@ -512,6 +547,7 @@ exports[`<Link /> passes class names down properly 1`] = `
 exports[`<Link /> passes test ids down properly 1`] = `
 <a
   class="clickable-style clickable-style--link clickable-style--brand"
+  data-bootstrap-override="clickable-style-link"
   data-testid="example-test-id"
   href="/"
 >

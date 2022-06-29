@@ -32,6 +32,7 @@ exports[`<PageLevelBanner /> Brand story renders snapshot 1`] = `
        
       <button
         class="clickable-style button button--link clickable-style--link clickable-style--neutral"
+        data-bootstrap-override="clickable-style-link"
         type="button"
       >
         click into the course
@@ -48,6 +49,7 @@ exports[`<PageLevelBanner /> BrandDismissable story renders snapshot 1`] = `
 >
   <button
     class="clickable-style button banner__close-btn button--icon clickable-style--lg clickable-style--icon clickable-style--neutral"
+    data-bootstrap-override="clickable-style-icon"
     type="button"
   >
     <svg
@@ -94,6 +96,7 @@ exports[`<PageLevelBanner /> BrandDismissable story renders snapshot 1`] = `
        
       <button
         class="clickable-style button button--link clickable-style--link clickable-style--neutral"
+        data-bootstrap-override="clickable-style-link"
         type="button"
       >
         click into the course
@@ -136,6 +139,7 @@ exports[`<PageLevelBanner /> Error story renders snapshot 1`] = `
        
       <button
         class="clickable-style button button--link clickable-style--link clickable-style--neutral"
+        data-bootstrap-override="clickable-style-link"
         type="button"
       >
         click into the course
@@ -152,6 +156,7 @@ exports[`<PageLevelBanner /> ErrorDismissable story renders snapshot 1`] = `
 >
   <button
     class="clickable-style button banner__close-btn button--icon clickable-style--lg clickable-style--icon clickable-style--neutral"
+    data-bootstrap-override="clickable-style-icon"
     type="button"
   >
     <svg
@@ -198,6 +203,7 @@ exports[`<PageLevelBanner /> ErrorDismissable story renders snapshot 1`] = `
        
       <button
         class="clickable-style button button--link clickable-style--link clickable-style--neutral"
+        data-bootstrap-override="clickable-style-link"
         type="button"
       >
         click into the course
@@ -264,6 +270,7 @@ exports[`<PageLevelBanner /> NoTitle story renders snapshot 1`] = `
        
       <button
         class="clickable-style button button--link clickable-style--link clickable-style--neutral"
+        data-bootstrap-override="clickable-style-link"
         type="button"
       >
         click into the course
@@ -306,6 +313,7 @@ exports[`<PageLevelBanner /> Success story renders snapshot 1`] = `
        
       <button
         class="clickable-style button button--link clickable-style--link clickable-style--neutral"
+        data-bootstrap-override="clickable-style-link"
         type="button"
       >
         click into the course
@@ -322,6 +330,7 @@ exports[`<PageLevelBanner /> SuccessDismissable story renders snapshot 1`] = `
 >
   <button
     class="clickable-style button banner__close-btn button--icon clickable-style--lg clickable-style--icon clickable-style--neutral"
+    data-bootstrap-override="clickable-style-icon"
     type="button"
   >
     <svg
@@ -368,6 +377,7 @@ exports[`<PageLevelBanner /> SuccessDismissable story renders snapshot 1`] = `
        
       <button
         class="clickable-style button button--link clickable-style--link clickable-style--neutral"
+        data-bootstrap-override="clickable-style-link"
         type="button"
       >
         click into the course
@@ -410,6 +420,7 @@ exports[`<PageLevelBanner /> Warning story renders snapshot 1`] = `
        
       <button
         class="clickable-style button button--link clickable-style--link clickable-style--neutral"
+        data-bootstrap-override="clickable-style-link"
         type="button"
       >
         click into the course
@@ -426,6 +437,7 @@ exports[`<PageLevelBanner /> WarningDismissable story renders snapshot 1`] = `
 >
   <button
     class="clickable-style button banner__close-btn button--icon clickable-style--lg clickable-style--icon clickable-style--neutral"
+    data-bootstrap-override="clickable-style-icon"
     type="button"
   >
     <svg
@@ -472,6 +484,7 @@ exports[`<PageLevelBanner /> WarningDismissable story renders snapshot 1`] = `
        
       <button
         class="clickable-style button button--link clickable-style--link clickable-style--neutral"
+        data-bootstrap-override="clickable-style-link"
         type="button"
       >
         click into the course
