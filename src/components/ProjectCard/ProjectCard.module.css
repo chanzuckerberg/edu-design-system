@@ -10,6 +10,10 @@
 .project-card {
   position: relative;
   transition: all var(--eds-anim-fade-quick) var(--eds-anim-fade-quick);
+
+  @media screen and (prefers-reduced-motion) {
+    transition: none;
+  }
 }
 
 .project-card__header.project-card__header {

@@ -53,4 +53,8 @@
   margin-left: var(--eds-size-1);
   pointer-events: none;
   transition: var(--eds-anim-fade-quick) var(--eds-anim-ease);
+
+  @media screen and (prefers-reduced-motion) {
+    transition: none;
+  }
 }

@@ -19,6 +19,10 @@
     margin-bottom: 0;
     padding-left: var(--eds-size-2-and-half);
     transition: width var(--eds-anim-move-quick) var(--eds-anim-ease);
+
+    @media screen and (prefers-reduced-motion) {
+      transition: none;
+    }
   }
 }
 

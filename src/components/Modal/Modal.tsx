@@ -77,6 +77,10 @@ type ModalProps = ModalContentProps & {
    * Whether or not the modal is visible.
    */
   open: boolean;
+  /**
+   * Additional classnames passed in for the modal container.
+   */
+  modalContainerClassName?: string;
 };
 
 type Context = {
@@ -179,6 +183,7 @@ export const Modal = (props: ModalProps) => {
   const {
     'aria-label': ariaLabel,
     initialFocus,
+    modalContainerClassName,
     onClose,
     open,
     ...rest
@@ -194,6 +199,8 @@ export const Modal = (props: ModalProps) => {
     }
   }
 
+  const componentClassName = clsx(styles['modal'], modalContainerClassName);
+
   return (
     <Transition
       as={React.Fragment}
@@ -207,7 +214,7 @@ export const Modal = (props: ModalProps) => {
     >
       <Dialog
         aria-label={ariaLabel}
-        className={styles['modal']}
+        className={componentClassName}
         initialFocus={initialFocus}
         // Passing onClose to the Dialog allows it to close the modal when the ESC key is triggered.
         onClose={onClose}

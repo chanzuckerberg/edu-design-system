@@ -66,6 +66,10 @@
     @mixin focus;
   }
 
+  @media screen and (prefers-reduced-motion) {
+    transition: none;
+  }
+
   /**
   * Modal window inside active modal
   * 1) Transform added for animation

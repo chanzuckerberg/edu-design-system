@@ -13,6 +13,10 @@
 
 .loading-indicator__icon {
   animation: rotateIcon 2s linear infinite;
+
+  @media screen and (prefers-reduced-motion) {
+    animation: none;
+  }
 }
 
 /* The animation code */

@@ -84,6 +84,10 @@
     border-color: var(--eds-theme-color-border-brand-primary-strong);
   }
 
+  @media screen and (prefers-reduced-motion) {
+    transition: none;
+  }
+
   /**
    * Input error state
    */

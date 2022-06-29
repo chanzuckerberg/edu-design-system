@@ -1,4 +1,4 @@
-import { Story, Meta } from '@storybook/react';
+import { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
 import { Button } from './Button';
@@ -41,330 +41,384 @@ export default {
       control: 'boolean',
     },
   },
-} as Meta;
+} as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Button>;
 
-const Template: Story<Args> = (args) => <Button {...args} />;
-
-export const Default = Template.bind({});
-Default.args = { variant: 'secondary' };
-
-export const Primary = Template.bind({});
-Primary.args = { variant: 'primary' };
-
-export const PrimaryDisabled = Template.bind({});
-PrimaryDisabled.args = {
-  disabled: true,
-  variant: 'primary',
+export const Default: StoryObj<Args> = {
+  args: {
+    variant: 'secondary',
+  },
 };
 
-export const PrimaryLeftIcon = Template.bind({});
-PrimaryLeftIcon.args = {
-  children: (
-    <>
-      <Icon name="arrow-back" purpose="decorative" />
-      Button
-    </>
-  ),
-  variant: 'primary',
+export const Primary: StoryObj<Args> = {
+  args: {
+    variant: 'primary',
+  },
 };
 
-export const PrimaryRightIcon = Template.bind({});
-PrimaryRightIcon.args = {
-  children: (
-    <>
-      Button
-      <Icon name="arrow-forward" purpose="decorative" />
-    </>
-  ),
-  variant: 'primary',
+export const PrimaryDisabled: StoryObj<Args> = {
+  args: {
+    disabled: true,
+    variant: 'primary',
+  },
 };
 
-export const PrimaryMedium = Template.bind({});
-PrimaryMedium.args = { size: 'md', variant: 'primary' };
-
-export const PrimarySmall = Template.bind({});
-PrimarySmall.args = { size: 'sm', variant: 'primary' };
-
-export const SecondaryDisabled = Template.bind({});
-SecondaryDisabled.args = {
-  disabled: true,
+export const PrimaryLeftIcon: StoryObj<Args> = {
+  args: {
+    children: (
+      <>
+        <Icon name="arrow-back" purpose="decorative" />
+        Button
+      </>
+    ),
+    variant: 'primary',
+  },
 };
 
-export const SecondaryLeftIcon = Template.bind({});
-SecondaryLeftIcon.args = {
-  children: (
-    <>
-      <Icon name="arrow-back" purpose="decorative" />
-      Button
-    </>
-  ),
+export const PrimaryRightIcon: StoryObj<Args> = {
+  args: {
+    children: (
+      <>
+        Button
+        <Icon name="arrow-forward" purpose="decorative" />
+      </>
+    ),
+    variant: 'primary',
+  },
 };
 
-export const SecondaryRightIcon = Template.bind({});
-SecondaryRightIcon.args = {
-  children: (
-    <>
-      Button
-      <Icon name="arrow-forward" purpose="decorative" />
-    </>
-  ),
+export const PrimaryMedium: StoryObj<Args> = {
+  args: {
+    size: 'md',
+    variant: 'primary',
+  },
 };
 
-export const SecondaryMedium = Template.bind({});
-SecondaryMedium.args = { variant: 'secondary', size: 'md' };
-
-export const SecondarySmall = Template.bind({});
-SecondarySmall.args = { variant: 'secondary', size: 'sm' };
-
-export const Tertiary = Template.bind({});
-Tertiary.args = {
-  status: 'neutral',
+export const PrimarySmall: StoryObj<Args> = {
+  args: {
+    size: 'sm',
+    variant: 'primary',
+  },
 };
 
-export const TertiaryDisabled = Template.bind({});
-TertiaryDisabled.args = {
-  status: 'neutral',
-  disabled: true,
+export const SecondaryDisabled: StoryObj<Args> = {
+  args: {
+    disabled: true,
+  },
 };
 
-export const TertiaryLeftIcon = Template.bind({});
-TertiaryLeftIcon.args = {
-  children: (
-    <>
-      <Icon name="arrow-back" purpose="decorative" />
-      Button
-    </>
-  ),
-  status: 'neutral',
+export const SecondaryLeftIcon: StoryObj<Args> = {
+  args: {
+    children: (
+      <>
+        <Icon name="arrow-back" purpose="decorative" />
+        Button
+      </>
+    ),
+  },
 };
 
-export const TertiaryRightIcon = Template.bind({});
-TertiaryRightIcon.args = {
-  children: (
-    <>
-      Button
-      <Icon name="arrow-forward" purpose="decorative" />
-    </>
-  ),
-  status: 'neutral',
+export const SecondaryRightIcon: StoryObj<Args> = {
+  args: {
+    children: (
+      <>
+        Button
+        <Icon name="arrow-forward" purpose="decorative" />
+      </>
+    ),
+  },
 };
 
-export const TertiaryMedium = Template.bind({});
-TertiaryMedium.args = {
-  status: 'neutral',
-  size: 'md',
+export const SecondaryMedium: StoryObj<Args> = {
+  args: {
+    variant: 'secondary',
+    size: 'md',
+  },
 };
 
-export const TertiarySmall = Template.bind({});
-TertiarySmall.args = {
-  status: 'neutral',
-  size: 'sm',
+export const SecondarySmall: StoryObj<Args> = {
+  args: { variant: 'secondary', size: 'sm' },
 };
 
-export const IconButtonLeftIcon = Template.bind({});
-IconButtonLeftIcon.args = {
-  children: (
-    <>
-      <Icon name="arrow-back" purpose="decorative" />
-      Button
-    </>
-  ),
-  variant: 'icon',
+export const Tertiary: StoryObj<Args> = {
+  args: {
+    status: 'neutral',
+  },
 };
 
-export const IconButtonDisabled = Template.bind({});
-IconButtonDisabled.args = {
-  children: (
-    <>
-      <Icon name="arrow-back" purpose="decorative" />
-      Button
-    </>
-  ),
-  variant: 'icon',
-  disabled: true,
+export const TertiaryDisabled: StoryObj<Args> = {
+  args: {
+    status: 'neutral',
+    disabled: true,
+  },
 };
 
-export const IconButtonRightIcon = Template.bind({});
-IconButtonRightIcon.args = {
-  children: (
-    <>
-      Button
-      <Icon name="arrow-forward" purpose="decorative" />
-    </>
-  ),
-  variant: 'icon',
+export const TertiaryLeftIcon: StoryObj<Args> = {
+  args: {
+    children: (
+      <>
+        <Icon name="arrow-back" purpose="decorative" />
+        Button
+      </>
+    ),
+    status: 'neutral',
+  },
 };
 
-export const IconButtonIconOnly = Template.bind({});
-IconButtonIconOnly.args = {
-  children: <Icon name="arrow-back" purpose="informative" title="go back" />,
-  variant: 'icon',
+export const TertiaryRightIcon: StoryObj<Args> = {
+  args: {
+    children: (
+      <>
+        Button
+        <Icon name="arrow-forward" purpose="decorative" />
+      </>
+    ),
+    status: 'neutral',
+  },
 };
 
-export const IconButtonLeftIconSmall = Template.bind({});
-IconButtonLeftIconSmall.args = {
-  children: (
-    <>
-      <Icon name="arrow-back" purpose="decorative" />
-      Button
-    </>
-  ),
-  variant: 'icon',
-  size: 'sm',
+export const TertiaryMedium: StoryObj<Args> = {
+  args: {
+    status: 'neutral',
+    size: 'md',
+  },
 };
 
-export const IconButtonRightIconSmall = Template.bind({});
-IconButtonRightIconSmall.args = {
-  children: (
-    <>
-      Button
-      <Icon name="arrow-forward" purpose="decorative" />
-    </>
-  ),
-  variant: 'icon',
-  size: 'sm',
+export const TertiarySmall: StoryObj<Args> = {
+  args: {
+    status: 'neutral',
+    size: 'sm',
+  },
 };
 
-export const IconButtonIconOnlySmall = Template.bind({});
-IconButtonIconOnlySmall.args = {
-  children: <Icon name="arrow-back" purpose="informative" title="go back" />,
-  variant: 'icon',
-  size: 'sm',
+export const IconButtonLeftIcon: StoryObj<Args> = {
+  args: {
+    children: (
+      <>
+        <Icon name="arrow-back" purpose="decorative" />
+        Button
+      </>
+    ),
+    variant: 'icon',
+  },
 };
 
-export const Link = Template.bind({});
-Link.args = { variant: 'link' };
-
-export const LinkDisabled = Template.bind({});
-LinkDisabled.args = { variant: 'link', disabled: true };
-
-export const LinkRightIcon = Template.bind({});
-LinkRightIcon.args = {
-  children: (
-    <>
-      Button
-      <Icon
-        name="open-in-new"
-        purpose="informative"
-        title="opens in a new tab"
-      />
-    </>
-  ),
-  variant: 'link',
+export const IconButtonDisabled: StoryObj<Args> = {
+  args: {
+    children: (
+      <>
+        <Icon name="arrow-back" purpose="decorative" />
+        Button
+      </>
+    ),
+    variant: 'icon',
+    disabled: true,
+  },
 };
 
-export const Destructive = Template.bind({});
-Destructive.args = {
-  status: 'error',
-  variant: 'primary',
+export const IconButtonRightIcon: StoryObj<Args> = {
+  args: {
+    children: (
+      <>
+        Button
+        <Icon name="arrow-forward" purpose="decorative" />
+      </>
+    ),
+    variant: 'icon',
+  },
 };
 
-export const DestructiveLeftIcon = Template.bind({});
-DestructiveLeftIcon.args = {
-  children: (
-    <>
-      <Icon name="arrow-back" purpose="decorative" />
-      Button
-    </>
-  ),
-  status: 'error',
-  variant: 'primary',
+export const IconButtonIconOnly: StoryObj<Args> = {
+  args: {
+    children: <Icon name="arrow-back" purpose="informative" title="go back" />,
+    variant: 'icon',
+  },
 };
 
-export const FullWidth = Template.bind({});
-FullWidth.args = { fullWidth: true };
-
-export const Loading = Template.bind({});
-Loading.args = {
-  loading: true,
-  disabled: true,
+export const IconButtonLeftIconSmall: StoryObj<Args> = {
+  args: {
+    children: (
+      <>
+        <Icon name="arrow-back" purpose="decorative" />
+        Button
+      </>
+    ),
+    variant: 'icon',
+    size: 'sm',
+  },
 };
 
-export const SecondarySuccess = Template.bind({});
-SecondarySuccess.args = {
-  status: 'success',
+export const IconButtonRightIconSmall: StoryObj<Args> = {
+  args: {
+    children: (
+      <>
+        Button
+        <Icon name="arrow-forward" purpose="decorative" />
+      </>
+    ),
+    variant: 'icon',
+    size: 'sm',
+  },
 };
 
-export const SecondaryWarning = Template.bind({});
-SecondaryWarning.args = {
-  status: 'warning',
+export const IconButtonIconOnlySmall: StoryObj<Args> = {
+  args: {
+    children: <Icon name="arrow-back" purpose="informative" title="go back" />,
+    variant: 'icon',
+    size: 'sm',
+  },
 };
 
-export const SecondaryError = Template.bind({});
-SecondaryError.args = {
-  status: 'error',
+export const Link: StoryObj<Args> = {
+  args: { variant: 'link' },
 };
 
-export const IconNeutral = Template.bind({});
-IconNeutral.args = {
-  children: (
-    <>
-      Button
-      <Icon name="arrow-forward" purpose="decorative" />
-    </>
-  ),
-  status: 'neutral',
-  variant: 'icon',
+export const LinkDisabled: StoryObj<Args> = {
+  args: { variant: 'link', disabled: true },
 };
 
-export const IconSuccess = Template.bind({});
-IconSuccess.args = {
-  children: (
-    <>
-      Button
-      <Icon name="arrow-forward" purpose="decorative" />
-    </>
-  ),
-  status: 'success',
-  variant: 'icon',
+export const LinkRightIcon: StoryObj<Args> = {
+  args: {
+    children: (
+      <>
+        Button
+        <Icon
+          name="open-in-new"
+          purpose="informative"
+          title="opens in a new tab"
+        />
+      </>
+    ),
+    variant: 'link',
+  },
 };
 
-export const IconWarning = Template.bind({});
-IconWarning.args = {
-  children: (
-    <>
-      Button
-      <Icon name="arrow-forward" purpose="decorative" />
-    </>
-  ),
-  status: 'warning',
-  variant: 'icon',
+export const Destructive: StoryObj<Args> = {
+  args: {
+    status: 'error',
+    variant: 'primary',
+  },
 };
 
-export const IconError = Template.bind({});
-IconError.args = {
-  children: (
-    <>
-      Button
-      <Icon name="arrow-forward" purpose="decorative" />
-    </>
-  ),
-  status: 'error',
-  variant: 'icon',
+export const DestructiveLeftIcon: StoryObj<Args> = {
+  args: {
+    children: (
+      <>
+        <Icon name="arrow-back" purpose="decorative" />
+        Button
+      </>
+    ),
+    status: 'error',
+    variant: 'primary',
+  },
 };
 
-export const LinkNeutral = Template.bind({});
-LinkNeutral.args = {
-  status: 'neutral',
-  variant: 'link',
+export const FullWidth: StoryObj<Args> = {
+  args: { fullWidth: true },
 };
 
-export const LinkSuccess = Template.bind({});
-LinkSuccess.args = {
-  status: 'success',
-  variant: 'link',
+export const Loading: StoryObj<Args> = {
+  args: {
+    loading: true,
+    disabled: true,
+  },
 };
 
-export const LinkWarning = Template.bind({});
-LinkWarning.args = {
-  status: 'warning',
-  variant: 'link',
+export const SecondarySuccess: StoryObj<Args> = {
+  args: {
+    status: 'success',
+  },
 };
 
-export const LinkError = Template.bind({});
-LinkError.args = {
-  status: 'error',
-  variant: 'link',
+export const SecondaryWarning: StoryObj<Args> = {
+  args: {
+    status: 'warning',
+  },
+};
+
+export const SecondaryError: StoryObj<Args> = {
+  args: {
+    status: 'error',
+  },
+};
+
+export const IconNeutral: StoryObj<Args> = {
+  args: {
+    children: (
+      <>
+        Button
+        <Icon name="arrow-forward" purpose="decorative" />
+      </>
+    ),
+    status: 'neutral',
+    variant: 'icon',
+  },
+};
+
+export const IconSuccess: StoryObj<Args> = {
+  args: {
+    children: (
+      <>
+        Button
+        <Icon name="arrow-forward" purpose="decorative" />
+      </>
+    ),
+    status: 'success',
+    variant: 'icon',
+  },
+};
+
+export const IconWarning: StoryObj<Args> = {
+  args: {
+    children: (
+      <>
+        Button
+        <Icon name="arrow-forward" purpose="decorative" />
+      </>
+    ),
+    status: 'warning',
+    variant: 'icon',
+  },
+};
+
+export const IconError: StoryObj<Args> = {
+  args: {
+    children: (
+      <>
+        Button
+        <Icon name="arrow-forward" purpose="decorative" />
+      </>
+    ),
+    status: 'error',
+    variant: 'icon',
+  },
+};
+
+export const LinkNeutral: StoryObj<Args> = {
+  args: {
+    status: 'neutral',
+    variant: 'link',
+  },
+};
+
+export const LinkSuccess: StoryObj<Args> = {
+  args: {
+    status: 'success',
+    variant: 'link',
+  },
+};
+
+export const LinkWarning: StoryObj<Args> = {
+  args: {
+    status: 'warning',
+    variant: 'link',
+  },
+};
+
+export const LinkError: StoryObj<Args> = {
+  args: {
+    status: 'error',
+    variant: 'link',
+  },
 };

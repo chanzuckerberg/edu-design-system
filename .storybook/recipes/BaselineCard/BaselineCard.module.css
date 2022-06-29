@@ -1,0 +1,93 @@
+@import '../../../src/design-tokens/mixins.css';
+
+/*------------------------------------*\
+    # BASELINE CARD
+\*------------------------------------*/
+
+/**
+ * Card recipe for a baseline card to display short text and metadata.
+ */
+.baseline-card {
+  padding: var(--eds-size-3);
+  max-width: 20.5rem;
+}
+
+/**
+ * Baseline card label.
+ */
+.baseline-card__label {
+  @mixin eds-theme-typography-label-md;
+
+  color: var(--eds-theme-color-text-neutral-strong);
+}
+
+/**
+ * Baseline card body for more content.
+ */
+.baseline-card__body {
+  @mixin eds-theme-typography-body-text-sm;
+
+  color: var(--eds-theme-color-text-neutral-subtle);
+}
+
+/**
+ * Baseline card footer that displays the metadata.
+ */
+.baseline-card__footer {
+  margin-top: var(--eds-size-3);
+}
+
+/**
+ * Baseline card table for accessibility.
+ */
+.baseline-card__table {
+  width: 100%;
+}
+
+/**
+ * Baseline card table body wraps the table rows.
+ */
+.baseline-card__table-body {
+  display: flex;
+  justify-content: space-between;
+}
+
+/**
+ * Baseline card table rows, made into columns for separating metadata categories.
+ */
+.baseline-card__table-row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--eds-size-1);
+  align-items: center;
+}
+
+/**
+ * Item labels for the metadata categories.
+ */
+.baseline-card__table-label {
+  @mixin eds-theme-typography-label-sm;
+
+  color: var(--eds-theme-color-text-neutral-subtle);
+}
+
+/**
+ * Metadata item content.
+ */
+.baseline-card__table-data {
+  @mixin eds-theme-typography-body-text-sm;
+}
+
+/**
+ * Score tag for the score category.
+ */
+.baseline-card__score {
+  @mixin eds-theme-typography-tag;
+
+  background-color: transparent;
+  color: var(--theme-color-text-neutral-default);
+
+  height: var(--eds-size-3);
+  padding-left: 0.875rem;
+  padding-right: 0.875rem;
+}

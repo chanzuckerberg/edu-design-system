@@ -45,6 +45,10 @@
     position: static;
     margin-bottom: var(--eds-size-4);
   }
+
+  @media screen and (prefers-reduced-motion) {
+    transition: none;
+  }
 }
 
 /**

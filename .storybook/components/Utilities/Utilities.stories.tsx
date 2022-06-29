@@ -17,9 +17,26 @@ export default {
   },
 };
 
-export const Color = () => <ColorUtilities />;
-export const Shadow = () => <ShadowUtilities />;
-export const SpacingMargin = () => <SpacingMarginUtilities />;
-export const SpacingPadding = () => <SpacingPaddingUtilities />;
-export const Visibility = () => <VisibilityUtilities />;
-export const Width = () => <WidthUtilities />;
+export const Color = {
+  render: () => <ColorUtilities />,
+};
+
+export const Shadow = {
+  render: () => <ShadowUtilities />,
+};
+
+export const SpacingMargin = {
+  render: () => <SpacingMarginUtilities />,
+};
+
+export const SpacingPadding = {
+  render: () => <SpacingPaddingUtilities />,
+};
+
+export const Visibility = {
+  render: () => <VisibilityUtilities />,
+};
+
+export const Width = {
+  render: () => <WidthUtilities />,
+};

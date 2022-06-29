@@ -24,7 +24,7 @@ export interface Props {
  * Body of the Card component.
  */
 export const CardBody = ({ children, className, ...other }: Props) => {
-  const componentClassName = clsx(styles['card__body'], className, {});
+  const componentClassName = clsx(styles['card__body'], className);
   return (
     <div className={componentClassName} {...other}>
       {children}

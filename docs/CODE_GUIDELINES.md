@@ -156,6 +156,30 @@ Use the following conventions:
 }
 ```
 
+### Disable animations for prefers reduced motion setting
+
+There are some disabilities (ex: vestibular disorders) that cause users to become nauseous when they see a lot of movement happening on screen. Luckily, there is an operating system accessibility setting called "prefers reduced motion" that we can detect with CSS using a media query. Just to be safe, we disable all animations for users who have this setting turned on.
+
+Examples:
+
+```scss
+.dropdown-button__icon {
+  transition: transform var(--eds-anim-move-medium) var(--eds-anim-ease);
+
+  @media (prefers-reduced-motion) {
+    transition: none;
+  }
+}
+
+.loading-indicator__icon {
+  animation: rotateIcon 2s linear infinite;
+
+  @media screen and (prefers-reduced-motion) {
+    animation: none;
+  }
+}
+```
+
 ### CSS Comments
 
 EDS uses the following commenting conventions, which take much inspiration from [these commenting guidelines](https://cssguidelin.es/#commenting).

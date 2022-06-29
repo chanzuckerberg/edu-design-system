@@ -1,4 +1,5 @@
 import clsx from 'clsx';
+import debounce from 'lodash.debounce';
 import React, {
   ReactNode,
   useRef,
@@ -122,7 +123,10 @@ export const Tabs = ({
    * Initialize states, constants, and refs
    */
   const ref = useRef<number | undefined>();
+  const headerRef = useRef<HTMLDivElement>(null);
   const [activeIndexState, setActiveIndexState] = useState(activeIndex);
+  const [scrollableLeft, setScrollableLeft] = useState<boolean>(false);
+  const [scrollableRight, setScrollableRight] = useState<boolean>(false);
   /**
    * Set the only children components allowed within <Tabs> to be Tab
    */
@@ -184,6 +188,54 @@ export const Tabs = ({
   }, [tabs, getUID]);
 
   /**
+   * Handles if scroll fade indicators should be displayed.
+   */
+  const handleTabsScroll = debounce(
+    (headerEl: HTMLDivElement) => {
+      const scrollLeft = headerEl.scrollLeft;
+      const width = headerEl.clientWidth;
+      const scrollWidth = headerEl.scrollWidth;
+
+      if (scrollLeft > 0) {
+        setScrollableLeft(true);
+      } else {
+        setScrollableLeft(false);
+      }
+
+      if (scrollWidth > width && scrollLeft + width < scrollWidth) {
+        setScrollableRight(true);
+      } else {
+        setScrollableRight(false);
+      }
+    },
+    100,
+    { leading: true },
+  );
+
+  /**
+   * Listens for window resize to display scroll fade indicators.
+   */
+  useEffect(() => {
+    if (headerRef && headerRef.current) {
+      const resizeHandleTabs = () => {
+        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+        handleTabsScroll(headerRef.current!);
+      };
+      /**
+       * The event listener actually calls the callback once when initiated, but the event listener
+       * is not triggered with prop changes so this line is required.
+       * This means the callback may be called twice on initial paint, which is fine, and
+       * is better than it not being called at all.
+       */
+      resizeHandleTabs();
+      window.addEventListener('resize', resizeHandleTabs);
+      return () => {
+        window.removeEventListener('resize', resizeHandleTabs);
+      };
+    }
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  /**
    * On open
    * 1) On click of a tab, set activeIndexState to index of tab being clicked\
    * 2) If function is passed into onChange prop, run that on click
@@ -221,10 +273,10 @@ export const Tabs = ({
     const next = index === tabRefs.length - 1 ? 0 : index + 1; /* 2 */
     const prev = index === 0 ? tabRefs.length - 1 : index - 1; /* 2 */
 
-    if ([R_ARROW_KEYCODE, D_ARROW_KEYCODE].includes(e.code)) {
+    if ([R_ARROW_KEYCODE, D_ARROW_KEYCODE].includes(e.key)) {
       /* 3 */
       tabRefs[next].current.focus();
-    } else if ([L_ARROW_KEYCODE, U_ARROW_KEYCODE].includes(e.code)) {
+    } else if ([L_ARROW_KEYCODE, U_ARROW_KEYCODE].includes(e.key)) {
       /* 4 */
       tabRefs[prev].current.focus();
     }
@@ -232,8 +284,14 @@ export const Tabs = ({
 
   const componentClassName = clsx(
     styles['tabs'],
-    className,
     inverted && styles['tabs--inverted'],
+    className,
+  );
+
+  const headerClassName = clsx(
+    styles['tabs__header'],
+    scrollableLeft && styles['tabs--scrollable-left'],
+    scrollableRight && styles['tabs--scrollable-right'],
   );
 
   const childrenWithProps = React.Children.map(
@@ -256,7 +314,11 @@ export const Tabs = ({
 
   return (
     <div className={componentClassName} {...other}>
-      <div className={styles['tabs__header']}>
+      <div
+        className={headerClassName}
+        onScroll={(e) => handleTabsScroll(e.target as HTMLDivElement)}
+        ref={headerRef}
+      >
         <ul className={styles['tabs__list']} role="tablist">
           {/* TODO: improve `any` type */}
           {tabs().map((tab: any, i: number) => {
@@ -294,9 +356,7 @@ export const Tabs = ({
           })}
         </ul>
       </div>
-      <div className={styles['tabs__body']}>
-        {childrenWithProps[activeIndexState]}
-      </div>
+      <div>{childrenWithProps[activeIndexState]}</div>
     </div>
   );
 };

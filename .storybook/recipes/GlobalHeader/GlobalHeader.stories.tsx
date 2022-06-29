@@ -1,14 +1,12 @@
-import { Story, Meta } from '@storybook/react';
+import { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
-import { GlobalHeader, Props } from './GlobalHeader';
+import { GlobalHeader } from './GlobalHeader';
 
 export default {
   title: 'Recipes/GlobalHeader',
   component: GlobalHeader,
 } as Meta;
 
-const Template: Story<Props> = (args) => <GlobalHeader {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {};
+type Args = React.ComponentProps<typeof GlobalHeader>;
+export const Default: StoryObj<Args> = {};
