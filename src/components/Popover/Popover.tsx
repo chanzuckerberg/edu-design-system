@@ -1,8 +1,3 @@
-/**
- * We're intentionally adding keyboard interaction to an article element for better accessibility
- * so we're comfortable suppressing this rule
- */
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import clsx from 'clsx';
 import React, {
   useState,
@@ -186,6 +181,11 @@ export const Popover = ({
 
   return (
     <FocusLock disabled={!activeFocus}>
+      {/**
+       * We're intentionally adding keyboard interaction to an article element for better accessibility,
+       * so we're comfortable suppressing this rule
+       */}
+      {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */}
       <article
         aria-describedby={ariaDescribedBy}
         aria-hidden={!isActive}

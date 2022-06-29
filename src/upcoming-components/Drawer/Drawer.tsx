@@ -1,8 +1,3 @@
-/**
- * we need to keep the escape key close logic on line 190 <article>
- * so keep the lint suppression for now and fix it later on.
- */
-/* eslint-disable jsx-a11y/no-static-element-interactions */
 import clsx from 'clsx';
 import React, {
   useState,
@@ -214,6 +209,12 @@ export const Drawer = ({
   return (
     <Portal>
       <FocusLock disabled={!activeFocus}>
+        {/**
+         * the drawer will probably have buttons inside,
+         * We're intentionally not adding role=button for now,
+         * may so we're comfortable suppressing this rule
+         */}
+        {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions */}
         <div
           aria-hidden={!isActive}
           className={componentClassName}
