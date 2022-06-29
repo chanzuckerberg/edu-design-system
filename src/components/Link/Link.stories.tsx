@@ -8,7 +8,7 @@ export default {
   title: 'Molecules/Buttons/Link',
   component: Link,
   args: {
-    children: 'Link',
+    children: 'This is a link',
     variant: 'secondary',
     status: 'brand',
     fullWidth: false,
