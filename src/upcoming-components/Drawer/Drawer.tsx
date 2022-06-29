@@ -182,7 +182,7 @@ export const Drawer = ({
    * 1) If escape button is struck, close the drawer
    */
   function handleOnKeyDown(e: KeyboardEvent<HTMLElement>) {
-    if (e.key === ESCAPE_KEYCODE) {
+    if (e.code === ESCAPE_KEYCODE) {
       handleOnClose(); /* 1 */
     }
   }
