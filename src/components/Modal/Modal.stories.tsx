@@ -365,7 +365,7 @@ export const WithoutHeaderAndFooter: StoryObj<InteractiveArgs> = {
   render: (args) => (
     <InteractiveExample
       {...args}
-      ariaLabel="The Modal Amazing Modal You've Ever Seen"
+      aria-label="The Modal Amazing Modal You've Ever Seen"
     >
       <Modal.Body>{reallyLongText}</Modal.Body>
     </InteractiveExample>

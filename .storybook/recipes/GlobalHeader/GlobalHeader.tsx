@@ -65,7 +65,7 @@ export const GlobalHeader = ({ className, ...other }: Props) => {
   return (
     <Header behavior="sticky" className={componentClassName} {...other}>
       <Logo
-        ariaLabel="Learning Platform Homepage"
+        aria-label="Learning Platform Homepage"
         className={styles['global-header__logo']}
         href="#"
       >
@@ -122,10 +122,10 @@ export const GlobalHeader = ({ className, ...other }: Props) => {
         </PrimaryNav>
       </NavContainer>
       <UtilityNav className={styles['global-header__utility-nav']}>
-        <UtilityNavItem ariaLabel="Notifications" itemBefore={<Avatar />}>
+        <UtilityNavItem aria-label="Notifications" itemBefore={<Avatar />}>
           <Popover
-            ariaDescribedBy="popover-description-1"
-            ariaLabelledBy="popover-heading-1"
+            aria-describedby="popover-description-1"
+            aria-labelledby="popover-heading-1"
             className={styles['global-header__popover']}
             isActive={true}
             position={isLarge === false ? 'bottom-left' : undefined}

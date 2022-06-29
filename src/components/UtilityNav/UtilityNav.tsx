@@ -8,7 +8,7 @@ export interface Props {
   /**
    * aria-label for `nav` element to describe navigation to screen readers
    */
-  ariaLabel?: string;
+  'aria-label'?: string;
   /**
    * Child node(s) that can be nested inside component
    */
@@ -40,7 +40,7 @@ export const UtilityNav = ({
   className,
   children,
   id,
-  ariaLabel,
+  'aria-label': ariaLabel,
   ...other
 }: Props) => {
   const generatedId = useUID();

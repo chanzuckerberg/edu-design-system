@@ -12,7 +12,7 @@ export interface Props {
   /**
    * HTML id of the helper text used to describe the component
    */
-  ariaDescribedBy?: string;
+  'aria-describedby'?: string;
   /**
    * Child node(s) that can be nested inside component
    */
@@ -80,7 +80,7 @@ export const CheckboxField = ({
   isError,
   fieldNote,
   disabled,
-  ariaDescribedBy,
+  'aria-describedby': ariaDescribedBy,
   children,
   optionalLabel,
   inverted,

@@ -23,7 +23,7 @@ export interface Props {
   /**
    * The aria-labelledby attribute creates a relationship between the tab list and the tab panels
    */
-  ariaLabelledBy?: string;
+  'aria-labelledby'?: string;
   /**
    * Calls back with the active index
    */
@@ -103,7 +103,7 @@ export interface Props {
  */
 export const Tabs = ({
   activeIndex = 0,
-  ariaLabelledBy,
+  'aria-labelledby': ariaLabelledBy,
   children,
   className,
   hideLegend,
@@ -180,7 +180,9 @@ export const Tabs = ({
     // TODO: improve `any` type
     setAriaLabelledBy(
       tabs().map((tab: any) =>
-        tab.props.ariaLabelledBy ? tab.props.ariaLabelledBy : getUID(tab),
+        tab.props['aria-labelledby']
+          ? tab.props['aria-labelledby']
+          : getUID(tab),
       ),
     );
   }, [tabs, getUID]);
@@ -303,7 +305,7 @@ export const Tabs = ({
         // @ts-expect-error TODO: fix "No overload matches this call" error
         return React.cloneElement<Props>(child, {
           id: idVar[i],
-          ariaLabelledBy: ariaLabelledByVar[i],
+          ['aria-labelledby']: ariaLabelledByVar[i],
         });
       }
       return child;

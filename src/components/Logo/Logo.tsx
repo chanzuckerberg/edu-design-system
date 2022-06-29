@@ -6,7 +6,7 @@ export interface Props {
   /**
    * Required string of text used to explain what the logo is or where it goes
    */
-  ariaLabel?: string;
+  'aria-label'?: string;
   /**
    * Alt text used for the image of the logo
    */
@@ -40,11 +40,11 @@ export interface Props {
  */
 export const Logo = ({
   alt,
+  'aria-label': ariaLabel,
   className,
   children,
   href,
   src,
-  ariaLabel,
   ...other
 }: Props) => {
   const componentClassName = clsx(styles['logo'], className, {});

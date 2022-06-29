@@ -12,11 +12,11 @@ export interface Props {
   /**
    * HTML id of the helper text used to describe the component
    */
-  ariaDescribedBy?: string;
+  'aria-describedby'?: string;
   /**
    * HTML id of the helper text to connect label to input
    */
-  ariaLabelledBy?: string;
+  'aria-labelledby'?: string;
   /**
    * Child node(s) that can be nested inside component
    */
@@ -107,8 +107,8 @@ export const Counter = ({
   min,
   max,
   readOnly,
-  ariaDescribedBy,
-  ariaLabelledBy,
+  'aria-describedby': ariaDescribedBy,
+  'aria-labelledby': ariaLabelledBy,
   hideLabel,
   isError,
   fieldNote,
@@ -181,9 +181,9 @@ export const Counter = ({
           <Icon name="remove" purpose="informative" title={minusButtonText} />
         </Button>
         <TextInput
+          aria-describedby={ariaDescribedByVar}
           aria-labelledby={ariaLabelledByVar}
           aria-live="assertive"
-          ariaDescribedBy={ariaDescribedByVar}
           className={styles['counter__input']}
           disabled={disabled}
           id={idVar}

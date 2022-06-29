@@ -6,7 +6,7 @@ export interface Props {
   /**
    * HTML id of the helper text used to describe the component
    */
-  ariaDescribedBy?: string;
+  'aria-describedby'?: string;
   /**
    * Toggles whether or not the checkbox is checked or unchecked
    */
@@ -59,7 +59,7 @@ export interface Props {
  * TODO: update this comment with a description of the component.
  */
 export const Radio = ({
-  ariaDescribedBy,
+  'aria-describedby': ariaDescribedBy,
   id,
   name,
   value,

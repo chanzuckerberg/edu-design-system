@@ -18,13 +18,13 @@ import PopoverHeader from '../PopoverHeader';
 
 export interface Props {
   /**
-   * HTML id of the helper text used to describe the component after ariaLabelledBy
+   * HTML id of the helper text used to describe the component after aria-describedby
    */
-  ariaDescribedBy?: string;
+  'aria-describedby'?: string;
   /**
    * HTML id of the helper text used to label the popover component
    */
-  ariaLabelledBy?: string;
+  'aria-labelledby'?: string;
   /**
    * Child node(s) that can be nested inside component. `PopoverHeader`, `PopoverBody`, and `ModelFooter` are the only permissible children of the Popover
    */
@@ -61,8 +61,8 @@ export interface Props {
  * Content container that pops out over other content.
  */
 export const Popover = ({
-  ariaDescribedBy,
-  ariaLabelledBy,
+  'aria-describedby': ariaDescribedBy,
+  'aria-labelledby': ariaLabelledBy,
   className,
   isActive,
   children,

@@ -11,7 +11,7 @@ export interface Props {
   /**
    * Aria-describedby id string
    */
-  ariaDescribedBy?: string;
+  'aria-describedby'?: string;
   /**
    * CSS class names that can be appended to the component.
    */
@@ -173,7 +173,7 @@ export const TextField = ({
   hideLabel,
   maxLength,
   inputMode,
-  ariaDescribedBy,
+  'aria-describedby': ariaDescribedBy,
   isError,
   optionalLabel,
   requiredLabel,
@@ -211,8 +211,8 @@ export const TextField = ({
 
       <div className={styles['text-field__body']}>
         <TextInput
+          aria-describedby={ariaDescribedByVar}
           aria-invalid={!!isError}
-          ariaDescribedBy={ariaDescribedByVar}
           className={styles['text-field__input']}
           data-bootstrap-override="textinput"
           defaultValue={defaultValue}

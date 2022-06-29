@@ -22,9 +22,9 @@ type ModalContentProps = {
    * Optional aria-label for the modal.
    *
    * If undefined, the headingText of the Modal.Header will be used.
-   * If there is no Modal.Header, an ariaLabel is required.
+   * If there is no Modal.Header, an aria-label is required.
    */
-  ariaLabel?: string;
+  'aria-label'?: string;
   /**
    * Additional classnames passed in for styling.
    */
@@ -181,7 +181,7 @@ export const ModalContent = (props: ModalContentProps) => {
  */
 export const Modal = (props: ModalProps) => {
   const {
-    ariaLabel,
+    'aria-label': ariaLabel,
     initialFocus,
     modalContainerClassName,
     onClose,

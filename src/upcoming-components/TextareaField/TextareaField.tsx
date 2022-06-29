@@ -12,7 +12,7 @@ export interface Props {
   /**
    * Aria-describedby id string
    */
-  ariaDescribedBy?: string;
+  'aria-describedby'?: string;
   /**
    * CSS class names that can be appended to the component.
    */
@@ -125,7 +125,7 @@ export interface Props {
 }
 
 export const TextareaField = ({
-  ariaDescribedBy,
+  'aria-describedby': ariaDescribedBy,
   className,
   disabled,
   fieldButtonOnClick,
@@ -184,8 +184,8 @@ export const TextareaField = ({
 
       <div className={styles['textarea-field__body']}>
         <Textarea
+          aria-describedby={ariaDescribedByVar}
           aria-invalid={!!isError}
-          ariaDescribedBy={ariaDescribedByVar}
           className={styles['textarea-field__textarea']}
           defaultValue={defaultValue}
           disabled={disabled}

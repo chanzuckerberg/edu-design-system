@@ -25,9 +25,9 @@ export interface Props {
    */
   acceptedFileTypes?: string;
   /**
-   * Aria-describedby id string
+   * aria-describedby id string
    */
-  ariaDescribedBy?: string;
+  'aria-describedby'?: string;
   /**
    * CSS class names that can be appended to the component.
    */
@@ -156,7 +156,7 @@ export interface Props {
  */
 export const FileUploadField = ({
   acceptedFileTypes,
-  ariaDescribedBy,
+  'aria-describedby': ariaDescribedBy,
   className,
   disabled,
   dragAndDropText = 'Drag and drop files here or click to choose files',
@@ -343,8 +343,8 @@ export const FileUploadField = ({
         >
           <TextInput
             accept={acceptedFileTypes}
+            aria-describedby={ariaDescribedByVar}
             aria-invalid={!!isError}
-            ariaDescribedBy={ariaDescribedByVar}
             className={styles['file-upload-field__input']}
             disabled={isDisabled}
             id={idVar}

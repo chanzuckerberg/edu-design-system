@@ -27,7 +27,7 @@ export interface Props {
   /**
    * HTML id for aria-labelledby, which associates panel contents with the accordion title
    */
-  ariaLabelledBy?: string;
+  'aria-labelledby'?: string;
   /**
    * CSS class names that can be appended to the component.
    */
@@ -58,7 +58,7 @@ export const AccordionPanel = ({
   children,
   className,
   header,
-  ariaLabelledBy,
+  'aria-labelledby': ariaLabelledBy,
   isActive,
   height,
   ariaControls,
