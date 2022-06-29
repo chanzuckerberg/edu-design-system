@@ -34,7 +34,7 @@
   text-decoration-thickness: 2px;
   text-underline-offset: 2px;
 
-  padding: 2px !important; /* 3 */
+  padding: 2px; /* 3 */
   margin: -2px; /* 4 */
   position: relative; /* 5 */
   overflow: hidden; /* 6 */
@@ -53,6 +53,7 @@
   &:hover {
     color: var(--eds-theme-color-text-link-default-hover);
     text-decoration-color: var(--eds-theme-color-border-brand-primary);
+    text-decoration-thickness: 2px;
   }
 
   &:focus {
@@ -61,6 +62,7 @@
     text-decoration-color: var(
       --eds-theme-color-text-neutral-default-inverse
     ) !important;
+    text-decoration-thickness: 2px;
   }
 
   &:visited {
