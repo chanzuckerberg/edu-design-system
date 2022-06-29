@@ -5,12 +5,12 @@
 \*------------------------------------*/
 
 /**
- * 1) List of of links where each link toggles open associated information
+ * List of of links where each link toggles open associated information
  */
-/* stylelint-disable-next-line block-no-empty */
-.tabs {
-}
 
+/**
+ * Inverted variant.
+ */
 .tabs--inverted {
   color: var(--eds-theme-color-text-neutral-default-inverse);
 }
@@ -21,14 +21,43 @@
  * 2) Tab overflow behavior
  */
 .tabs__header {
-  width: 100%;
-  overflow: hidden;
   overflow-x: auto;
   position: relative;
+  padding-bottom: var(--eds-size-2);
 
   .tabs--inverted & {
     background: none;
   }
+}
+
+/**
+ * Fade scrollable indicators to display if there is scrollable area on either side.
+ * 1) The color "white" is arbitrary and any non transparent color can be used here.
+ */
+.tabs--scrollable-left {
+  -webkit-mask-image: -webkit-linear-gradient(
+    left,
+    transparent,
+    white var(--eds-size-8) /* 1 */
+  );
+}
+
+.tabs--scrollable-right {
+  -webkit-mask-image: -webkit-linear-gradient(
+    right,
+    transparent,
+    white var(--eds-size-8) /* 1 */
+  );
+}
+
+.tabs--scrollable-left.tabs--scrollable-right {
+  -webkit-mask-image: -webkit-linear-gradient(
+    left,
+    transparent,
+    /* 1 */ white var(--eds-size-8),
+    white calc(100% - var(--eds-size-8)),
+    transparent 100%
+  );
 }
 
 /**
@@ -40,7 +69,7 @@
   @mixin reset;
   list-style: none;
   display: flex; /* 2 */
-  @mixin eds-theme-typography-body-text-md;
+  @mixin eds-theme-typography-tab;
 }
 
 /**
@@ -67,6 +96,10 @@
     @mixin focus;
   }
 
+  @media screen and (prefers-reduced-motion) {
+    transition: none;
+  }
+
   .tabs--inverted & {
     color: var(--eds-theme-color-text-neutral-default-inverse);
   }
@@ -76,20 +109,13 @@
    */
   .tabs__item.eds-is-active & {
     color: var(--eds-theme-color-text-link-strong);
-    box-shadow: inset 0 calc(var(--eds-border-width-lg) * -1) 0 0
+    box-shadow: inset 0 calc(var(--eds-border-width-md) * -1) 0 0
       var(--eds-theme-color-border-brand-primary-strong);
 
     .tabs--inverted & {
       color: var(--eds-theme-color-text-neutral-default-inverse);
-      box-shadow: inset 0 calc(var(--eds-border-width-lg) * -1) 0 0
+      box-shadow: inset 0 calc(var(--eds-border-width-md) * -1) 0 0
         var(--eds-theme-color-border-brand-primary-subtle);
     }
   }
-}
-
-/**
- * Tabs body
- */
-.tabs__body {
-  padding-top: var(--eds-size-2);
 }

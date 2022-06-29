@@ -21,6 +21,10 @@
   );
   background-size: 400% 100%;
   animation: pulse 5s linear infinite;
+
+  @media screen and (prefers-reduced-motion) {
+    animation: none;
+  }
 }
 
 .skeleton-bar--sm {

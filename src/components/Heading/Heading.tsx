@@ -16,7 +16,7 @@ export const VARIANTS = [
    */ 'info',
 ] as const;
 export type Variant = typeof VARIANTS[number];
-export type HeadingElement = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'h7';
+export type HeadingElement = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 // For now, "h1"-"h6" sizes point to the old type ramp, while
 // "headline-*" and "title-*" sizes point to the new type ramp.
 // These will be brought in sync with the next major release.
@@ -30,7 +30,7 @@ const TOKEN_TO_SIZE = {
   'body-xs': 'h7',
   'title-xs': 'h5',
 };
-export type HeadingSize = HeadingElement | keyof typeof TOKEN_TO_SIZE;
+export type HeadingSize = HeadingElement | 'h7' | keyof typeof TOKEN_TO_SIZE;
 
 type Props = {
   /**

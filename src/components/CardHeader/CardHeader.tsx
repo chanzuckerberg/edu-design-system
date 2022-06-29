@@ -17,7 +17,7 @@ export interface Props {
  * Primary UI component for user interaction
  */
 export const CardHeader = ({ children, className, ...other }: Props) => {
-  const componentClassName = clsx(styles['card__header'], className, {});
+  const componentClassName = clsx(styles['card__header'], className);
   return (
     <header className={componentClassName} {...other}>
       {children}

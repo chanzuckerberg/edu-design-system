@@ -33,6 +33,10 @@ a.card {
   &:hover {
     box-shadow: var(--eds-box-shadow-md);
   }
+
+  @media screen and (prefers-reduced-motion) {
+    transition: none;
+  }
 }
 
 /**

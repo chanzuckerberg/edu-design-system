@@ -26,7 +26,7 @@
 
 /**
  * The modal container which positions the modal in the center of the screen.
- * 1) Set a default z-index on the modal container. This is our smallest z-index token.
+ * 1) Ensures modal is above other components.
  */
 .modal {
   display: flex;
@@ -34,7 +34,7 @@
   justify-content: center;
   padding: var(--eds-size-2);
 
-  z-index: var(--eds-z-index-100); /* 1 */
+  z-index: var(--eds-z-index-top); /* 1 */
 }
 
 /**

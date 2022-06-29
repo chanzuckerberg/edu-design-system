@@ -86,6 +86,10 @@
     visibility var(--eds-anim-move-quick) var(--eds-anim-ease),
     overflow var(--eds-anim-move-quick) steps(1, end),
     opacity var(--eds-anim-move-quick) var(--eds-anim-ease);
+
+  @media screen and (prefers-reduced-motion) {
+    transition: none;
+  }
 }
 
 /**
@@ -127,6 +131,10 @@
 .accordion__panel-icon.accordion__panel-icon {
   margin-left: auto;
   transition: transform var(--eds-anim-fade-quick) var(--eds-anim-ease);
+
+  @media screen and (prefers-reduced-motion) {
+    transition: none;
+  }
 }
 
 /**

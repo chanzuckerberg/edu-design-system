@@ -1,5 +1,5 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
-import { Meta } from '@storybook/react';
+import { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
 import { NavContainer } from './NavContainer';
@@ -11,27 +11,33 @@ import UtilityNavItem from '../UtilityNavItem';
 export default {
   title: 'Molecules/Global/NavContainer',
   component: NavContainer,
+  subcomponents: { PrimaryNav, UtilityNav },
   parameters: {
     badges: [BADGE.BETA],
   },
+  args: {
+    children: (
+      <>
+        <PrimaryNav>
+          <PrimaryNavItem href="#" text="Nav Item" />
+          <PrimaryNavItem href="#" isActive={true} text="Nav Item" />
+          <PrimaryNavItem href="#" text="Nav Item" />
+        </PrimaryNav>
+        <UtilityNav>
+          <UtilityNavItem text="Utility Nav"></UtilityNavItem>
+        </UtilityNav>
+      </>
+    ),
+  },
   decorators: [
     (Story) => (
-      <div style={{ background: '#000' }}>
+      <div style={{ background: '#000000' }}>
         <Story />
       </div>
     ),
   ],
-} as Meta;
+} as Meta<Args>;
 
-export const Default = () => (
-  <NavContainer>
-    <PrimaryNav>
-      <PrimaryNavItem href="#" text="Nav Item" />
-      <PrimaryNavItem href="#" isActive={true} text="Nav Item" />
-      <PrimaryNavItem href="#" text="Nav Item" />
-    </PrimaryNav>
-    <UtilityNav>
-      <UtilityNavItem text="Utility Nav"></UtilityNavItem>
-    </UtilityNav>
-  </NavContainer>
-);
+type Args = React.ComponentProps<typeof NavContainer>;
+
+export const Default: StoryObj<Args> = {};

@@ -40,6 +40,24 @@
 }
 
 /**
+ * Layout 50-50 variant with two main columns of equal width
+ */
+.layout--50-50 {
+  @media all and (min-width: $eds-bp-xl) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/**
+ * Layout 33-67 variant
+ */
+.layout--33-67 {
+  @media all and (min-width: $eds-bp-xl) {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+/**
  * Layout no gap variant
  */
 .layout--gap-none {
@@ -53,15 +71,6 @@
   gap: var(--eds-size-5);
   @media all and (min-width: $eds-bp-xl) {
     gap: var(--eds-size-12);
-  }
-}
-
-/**
- * Layout 50-50 variant with two main columns of equal width
- */
-.layout--50-50 {
-  @media all and (min-width: $eds-bp-xl) {
-    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -82,6 +91,15 @@
  * Layout 67-33 variant
  */
   .layout--67-33 & {
+    @media all and (min-width: $eds-bp-xl) {
+      width: 100%;
+    }
+  }
+
+  /**
+ * Layout 33-67 variant
+ */
+  .layout--33-67 & {
     @media all and (min-width: $eds-bp-xl) {
       width: 100%;
     }

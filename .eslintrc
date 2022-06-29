@@ -19,7 +19,7 @@
     "plugin:react/recommended",
     "plugin:storybook/recommended",
     "plugin:testing-library/react",
-    "plugin:@chanzuckerberg/stories/recommended"
+    "plugin:@chanzuckerberg/stories/strict"
   ],
   "parserOptions": {
     "ecmaVersion": 2018,

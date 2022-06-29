@@ -1,3 +1,4 @@
+import { StoryObj } from '@storybook/react';
 import React from 'react';
 import { Documentation } from './Documentation';
 import Code from '../../../docs/CODE_GUIDELINES.md';
@@ -18,38 +19,40 @@ export default {
   },
 };
 
-export const CodeGuidelines = () => (
-  <Documentation>
-    <Code />
-  </Documentation>
-);
+type Args = React.ComponentProps<typeof Documentation>;
 
-export const Components = () => (
-  <Documentation>
-    <ComponentDocs />
-  </Documentation>
-);
+export const CodeGuidelines: StoryObj<Args> = {
+  args: {
+    children: <Code />,
+  },
+};
 
-export const Icons = () => (
-  <Documentation>
-    <IconDocs />
-  </Documentation>
-);
+export const Components: StoryObj<Args> = {
+  args: {
+    children: <ComponentDocs />,
+  },
+};
 
-export const Layout = () => (
-  <Documentation>
-    <LayoutDocs />
-  </Documentation>
-);
+export const Icons: StoryObj<Args> = {
+  args: {
+    children: <IconDocs />,
+  },
+};
 
-export const Tokens = () => (
-  <Documentation>
-    <TokenDocs />
-  </Documentation>
-);
+export const Layout: StoryObj<Args> = {
+  args: {
+    children: <LayoutDocs />,
+  },
+};
 
-export const Typography = () => (
-  <Documentation>
-    <TypographyDocs />
-  </Documentation>
-);
+export const Tokens: StoryObj<Args> = {
+  args: {
+    children: <TokenDocs />,
+  },
+};
+
+export const Typography: StoryObj<Args> = {
+  args: {
+    children: <TypographyDocs />,
+  },
+};

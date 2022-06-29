@@ -15,10 +15,18 @@ export default {
   },
 };
 
-export const Borders = () => <Tier2Borders />;
+export const Borders = {
+  render: () => <Tier2Borders />,
+};
 
-export const Colors = () => <Tier2Colors />;
+export const Colors = {
+  render: () => <Tier2Colors />,
+};
 
-export const Forms = () => <Tier2Forms />;
+export const Forms = {
+  render: () => <Tier2Forms />,
+};
 
-export const TypographyUsage = () => <Tier2TypographyUsage />;
+export const TypographyUsage = {
+  render: () => <Tier2TypographyUsage />,
+};
