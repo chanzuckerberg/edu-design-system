@@ -77,6 +77,10 @@ type ModalProps = ModalContentProps & {
    * Whether or not the modal is visible.
    */
   open: boolean;
+  /**
+   * Additional classnames passed in for the modal container.
+   */
+  modalContainerClassName?: string;
 };
 
 type Context = {
@@ -176,7 +180,14 @@ export const ModalContent = (props: ModalContentProps) => {
  * </Modal>
  */
 export const Modal = (props: ModalProps) => {
-  const { ariaLabel, initialFocus, onClose, open, ...rest } = props;
+  const {
+    ariaLabel,
+    initialFocus,
+    modalContainerClassName,
+    onClose,
+    open,
+    ...rest
+  } = props;
   const { children } = rest;
 
   if (process.env.NODE_ENV !== 'production') {
@@ -187,6 +198,8 @@ export const Modal = (props: ModalProps) => {
       );
     }
   }
+
+  const componentClassName = clsx(styles['modal'], modalContainerClassName);
 
   return (
     <Transition
@@ -201,7 +214,7 @@ export const Modal = (props: ModalProps) => {
     >
       <Dialog
         aria-label={ariaLabel}
-        className={styles['modal']}
+        className={componentClassName}
         initialFocus={initialFocus}
         // Passing onClose to the Dialog allows it to close the modal when the ESC key is triggered.
         onClose={onClose}
