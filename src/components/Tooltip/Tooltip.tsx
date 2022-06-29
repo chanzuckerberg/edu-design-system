@@ -79,7 +79,6 @@ type Plugin = Plugins[number];
  * ```
  *
  * A styled tooltip built on Tippy.js.
- * If used within the EDS Modal component, pass zIndex greater than 99999.
  *
  * https://atomiks.github.io/tippyjs/
  * https://github.com/atomiks/tippyjs-react
