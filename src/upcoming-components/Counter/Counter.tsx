@@ -12,7 +12,7 @@ export interface Props {
   /**
    * HTML id of the helper text used to describe the component
    */
-  ariaDescribedBy?: string;
+  'aria-describedby'?: string;
   /**
    * HTML id of the helper text to connect label to input
    */
@@ -107,7 +107,7 @@ export const Counter = ({
   min,
   max,
   readOnly,
-  ariaDescribedBy,
+  'aria-describedby': ariaDescribedBy,
   ariaLabelledBy,
   hideLabel,
   isError,

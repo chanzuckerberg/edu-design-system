@@ -13,7 +13,7 @@ export interface Props {
   /**
    * HTML id of the helper text used to describe the component
    */
-  ariaDescribedBy?: string;
+  'aria-describedby'?: string;
   /**
    * Property that checks the radio when true and unchecks it when false
    */
@@ -91,7 +91,7 @@ export const RadioField = ({
   fieldNote,
   disabled,
   inverted,
-  ariaDescribedBy,
+  'aria-describedby': ariaDescribedBy,
   optionalLabel,
   onChange,
   ...other

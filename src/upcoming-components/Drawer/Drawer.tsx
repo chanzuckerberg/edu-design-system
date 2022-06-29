@@ -19,9 +19,9 @@ import DrawerHeader from '../DrawerHeader';
 
 export interface Props {
   /**
-   * HTML id of the helper text used to describe the component after ariaLabelledBy
+   * HTML id of the helper text used to describe the component after aria-labelledby
    */
-  ariaDescribedBy?: string;
+  'aria-describedby'?: string;
   /**
    * HTML id of the helper text used to label the drawer component
    */
@@ -66,7 +66,7 @@ export interface Props {
  * TODO: update this comment with a description of the component.
  */
 export const Drawer = ({
-  ariaDescribedBy,
+  'aria-describedby': ariaDescribedBy,
   ariaLabelledBy,
   className,
   isActive,

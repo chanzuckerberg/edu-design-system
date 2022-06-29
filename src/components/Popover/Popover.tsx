@@ -18,9 +18,9 @@ import PopoverHeader from '../PopoverHeader';
 
 export interface Props {
   /**
-   * HTML id of the helper text used to describe the component after ariaLabelledBy
+   * HTML id of the helper text used to describe the component after aria-describedby
    */
-  ariaDescribedBy?: string;
+  'aria-describedby'?: string;
   /**
    * HTML id of the helper text used to label the popover component
    */
@@ -61,7 +61,7 @@ export interface Props {
  * Content container that pops out over other content.
  */
 export const Popover = ({
-  ariaDescribedBy,
+  'aria-describedby': ariaDescribedBy,
   ariaLabelledBy,
   className,
   isActive,
