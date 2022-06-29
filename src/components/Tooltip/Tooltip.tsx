@@ -1,4 +1,4 @@
-import Tippy from '@tippyjs/react';
+import Tippy, { TippyProps } from '@tippyjs/react';
 import clsx from 'clsx';
 import * as React from 'react';
 import styles from './Tooltip.module.css';
@@ -67,7 +67,7 @@ type TooltipProps = {
    * controls if/when the bubble appears (on hover, click, focus, etc).
    */
   visible?: boolean;
-};
+} & TippyProps;
 
 // @tippyjs/react does not expose tippy.js types, have to extract via props and grab element type from array type
 type Plugins = NonNullable<React.ComponentProps<typeof Tippy>['plugins']>;
@@ -79,6 +79,7 @@ type Plugin = Plugins[number];
  * ```
  *
  * A styled tooltip built on Tippy.js.
+ * If used within the EDS Modal component, pass zIndex greater than 99999.
  *
  * https://atomiks.github.io/tippyjs/
  * https://github.com/atomiks/tippyjs-react
@@ -122,9 +123,9 @@ export const Tooltip = ({
       {...rest}
       className={clsx(
         styles['tooltip'],
-        className,
         variant === 'light' && styles['tooltip--light'],
         variant === 'dark' && styles['tooltip--dark'],
+        className,
       )}
       content={text}
       duration={duration}

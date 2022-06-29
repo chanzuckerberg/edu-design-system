@@ -1090,6 +1090,7 @@ exports[`Modal WithoutCloseButton story renders snapshot 1`] = `
         class="footer__button-group button-group button-group--spacing-1x"
       >
         <button
+          aria-describedby="tippy-11"
           class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--neutral"
           tabindex="0"
           type="button"

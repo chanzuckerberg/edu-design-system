@@ -34,7 +34,7 @@
   justify-content: center;
   padding: var(--eds-size-2);
 
-  z-index: var(--eds-z-index-top); /* 1 */
+  z-index: 1050; /* 1 */
 }
 
 /**
