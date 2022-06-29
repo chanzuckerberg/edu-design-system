@@ -1,6 +1,6 @@
 import { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
-import { Link, LinkProps } from './Link';
+import { Link } from './Link';
 import getRandomUrl from '../../util/getRandomUrl';
 import { SIZES, STATUSES, VARIANTS } from '../ClickableStyle';
 
@@ -62,6 +62,13 @@ export const LinkRightIcon: StoryObj<Args> = {
         />
       </>
     ),
+    variant: 'link',
+  },
+};
+
+export const LinkNeutral: StoryObj<Args> = {
+  args: {
+    status: 'neutral',
     variant: 'link',
   },
 };
@@ -338,33 +345,5 @@ export const IconError: StoryObj<Args> = {
     ),
     status: 'error',
     variant: 'icon',
-  },
-};
-
-export const LinkNeutral: StoryObj<Args> = {
-  args: {
-    status: 'neutral',
-    variant: 'link',
-  },
-};
-
-export const LinkSuccess: StoryObj<Args> = {
-  args: {
-    status: 'success',
-    variant: 'link',
-  },
-};
-
-export const LinkWarning: StoryObj<Args> = {
-  args: {
-    status: 'warning',
-    variant: 'link',
-  },
-};
-
-export const LinkError: StoryObj<Args> = {
-  args: {
-    status: 'error',
-    variant: 'link',
   },
 };

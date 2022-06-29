@@ -402,24 +402,3 @@ export const LinkNeutral: StoryObj<Args> = {
     variant: 'link',
   },
 };
-
-export const LinkSuccess: StoryObj<Args> = {
-  args: {
-    status: 'success',
-    variant: 'link',
-  },
-};
-
-export const LinkWarning: StoryObj<Args> = {
-  args: {
-    status: 'warning',
-    variant: 'link',
-  },
-};
-
-export const LinkError: StoryObj<Args> = {
-  args: {
-    status: 'error',
-    variant: 'link',
-  },
-};

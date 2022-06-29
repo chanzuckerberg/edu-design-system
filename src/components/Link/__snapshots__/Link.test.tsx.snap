@@ -244,17 +244,6 @@ exports[`<Link /> IconWarning story renders snapshot 1`] = `
 </a>
 `;
 
-exports[`<Link /> LinkError story renders snapshot 1`] = `
-<a
-  class="clickable-style clickable-style--link clickable-style--error"
-  href="/"
->
-  This is a link
-</a>
-`;
-
-exports[`<Link /> LinkInBodyText story renders snapshot 1`] = `Lorem ipsum dolor sit amet, `;
-
 exports[`<Link /> LinkNeutral story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--link clickable-style--neutral"
@@ -285,24 +274,6 @@ exports[`<Link /> LinkRightIcon story renders snapshot 1`] = `
       xlink:href="test-file-stub#open-in-new"
     />
   </svg>
-</a>
-`;
-
-exports[`<Link /> LinkSuccess story renders snapshot 1`] = `
-<a
-  class="clickable-style clickable-style--link clickable-style--success"
-  href="/"
->
-  This is a link
-</a>
-`;
-
-exports[`<Link /> LinkWarning story renders snapshot 1`] = `
-<a
-  class="clickable-style clickable-style--link clickable-style--warning"
-  href="/"
->
-  This is a link
 </a>
 `;
 
