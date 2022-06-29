@@ -6,7 +6,7 @@ export interface Props {
   /**
    * aria-labelledby attribute that associates a tab panel with its accompanying tab title text
    */
-  ariaLabelledBy?: string;
+  'aria-labelledby'?: string;
   /**
    * Child node(s) that can be nested inside component
    */
@@ -42,7 +42,7 @@ export const Tab = ({
   children,
   className,
   id,
-  ariaLabelledBy,
+  'aria-labelledby': ariaLabelledBy,
   title,
   ...other
 }: Props) => {

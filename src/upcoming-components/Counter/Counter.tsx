@@ -16,7 +16,7 @@ export interface Props {
   /**
    * HTML id of the helper text to connect label to input
    */
-  ariaLabelledBy?: string;
+  'aria-labelledby'?: string;
   /**
    * Child node(s) that can be nested inside component
    */
@@ -108,7 +108,7 @@ export const Counter = ({
   max,
   readOnly,
   'aria-describedby': ariaDescribedBy,
-  ariaLabelledBy,
+  'aria-labelledby': ariaLabelledBy,
   hideLabel,
   isError,
   fieldNote,

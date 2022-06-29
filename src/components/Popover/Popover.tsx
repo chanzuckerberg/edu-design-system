@@ -24,7 +24,7 @@ export interface Props {
   /**
    * HTML id of the helper text used to label the popover component
    */
-  ariaLabelledBy?: string;
+  'aria-labelledby'?: string;
   /**
    * Child node(s) that can be nested inside component. `PopoverHeader`, `PopoverBody`, and `ModelFooter` are the only permissible children of the Popover
    */
@@ -62,7 +62,7 @@ export interface Props {
  */
 export const Popover = ({
   'aria-describedby': ariaDescribedBy,
-  ariaLabelledBy,
+  'aria-labelledby': ariaLabelledBy,
   className,
   isActive,
   children,

@@ -25,7 +25,7 @@ export interface Props {
   /**
    * HTML id of the helper text used to label the drawer component
    */
-  ariaLabelledBy?: string;
+  'aria-labelledby'?: string;
   /**
    * Child node(s) that can be nested inside component. `DrawerHeader`, `DrawerBody`, and `ModelFooter` are the only permissible children of the Drawer
    */
@@ -67,7 +67,7 @@ export interface Props {
  */
 export const Drawer = ({
   'aria-describedby': ariaDescribedBy,
-  ariaLabelledBy,
+  'aria-labelledby': ariaLabelledBy,
   className,
   isActive,
   children,
