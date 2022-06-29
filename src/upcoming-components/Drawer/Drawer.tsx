@@ -1,3 +1,8 @@
+/**
+ * we need to keep the escape key close logic on line 190 <article>
+ * so keep the lint suppression for now and fix it later on.
+ */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import clsx from 'clsx';
 import React, {
   useState,
@@ -182,7 +187,7 @@ export const Drawer = ({
    * 1) If escape button is struck, close the drawer
    */
   function handleOnKeyDown(e: KeyboardEvent<HTMLElement>) {
-    if (e.code === ESCAPE_KEYCODE) {
+    if (e.key === ESCAPE_KEYCODE) {
       handleOnClose(); /* 1 */
     }
   }
@@ -215,8 +220,6 @@ export const Drawer = ({
           onClick={handleOnClickOutside}
           onKeyDown={handleOnKeyDown}
           ref={ref}
-          role="button"
-          tabIndex={0}
           {...other}
         >
           <article
@@ -226,6 +229,7 @@ export const Drawer = ({
             className={styles['drawer__window']}
             ref={windowRef}
             role="dialog"
+            tabIndex={0} // eslint-disable-line jsx-a11y/no-noninteractive-tabindex
           >
             {header}
             {body}

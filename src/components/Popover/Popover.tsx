@@ -1,6 +1,6 @@
 /**
- * we need to keep the escape key close logic on line 190 <article>
- * so keep the lint suppression for now and fix it later on.
+ * We're intentionally adding keyboard interaction to an article element for better accessibility
+ * so we're comfortable suppressing this rule
  */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import clsx from 'clsx';
