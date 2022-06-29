@@ -295,6 +295,13 @@ export const LinkRightIcon: StoryObj<Args> = {
   },
 };
 
+export const LinkNeutral: StoryObj<Args> = {
+  args: {
+    status: 'neutral',
+    variant: 'link',
+  },
+};
+
 export const Destructive: StoryObj<Args> = {
   args: {
     status: 'error',
@@ -393,12 +400,5 @@ export const IconError: StoryObj<Args> = {
     ),
     status: 'error',
     variant: 'icon',
-  },
-};
-
-export const LinkNeutral: StoryObj<Args> = {
-  args: {
-    status: 'neutral',
-    variant: 'link',
   },
 };
