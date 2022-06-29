@@ -53,7 +53,6 @@
   &:hover {
     color: var(--eds-theme-color-text-link-default-hover);
     text-decoration-color: var(--eds-theme-color-border-brand-primary);
-    text-decoration-thickness: 2px;
   }
 
   &:focus {
@@ -62,7 +61,6 @@
     text-decoration-color: var(
       --eds-theme-color-text-neutral-default-inverse
     ) !important;
-    text-decoration-thickness: 2px;
   }
 
   &:visited {
