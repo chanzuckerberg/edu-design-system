@@ -79,7 +79,17 @@ const throwInvalidPropComboError = (variant: Variant, status: Status) => {
   };
 
   throw new Error(
-    `*** Invalid prop combo ***:\nThis component does not support using the '${status}' status with a '${variant}' variant. The '${variant}' variant can only be used with the ${getValidStatusesString} statuses.`,
+    // We have to add the strings and variables together because string interpolation doesn't work in console messages.
+    "\n*** Invalid prop combo ***:\n\nThe `Button` and `Link` components do not support using the '" +
+      variant +
+      "' variant with a '" +
+      status +
+      "' status." +
+      "\n\nThe '" +
+      variant +
+      "' variant can only be used with the " +
+      getValidStatusesString() +
+      ' statuses.\n',
   );
 };
 
