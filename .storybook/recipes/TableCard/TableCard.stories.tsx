@@ -24,43 +24,43 @@ const tableRows = [
     value1: 'Argumentative Claim',
     projects: [
       {
-        ariaLabel: 'Project 1',
+        'aria-label': 'Project 1',
         complete: true,
       },
       {
-        ariaLabel: 'Project 2',
+        'aria-label': 'Project 2',
         complete: true,
       },
       {
-        ariaLabel: 'Project 3',
+        'aria-label': 'Project 3',
         complete: false,
       },
       {
-        ariaLabel: 'Project 4',
+        'aria-label': 'Project 4',
         complete: false,
       },
       {
-        ariaLabel: 'Project 5',
+        'aria-label': 'Project 5',
         complete: false,
       },
       {
-        ariaLabel: 'Project 6',
+        'aria-label': 'Project 6',
         complete: false,
       },
       {
-        ariaLabel: 'Project 7',
+        'aria-label': 'Project 7',
         complete: false,
       },
       {
-        ariaLabel: 'Project 8',
+        'aria-label': 'Project 8',
         complete: false,
       },
       {
-        ariaLabel: 'Project 9',
+        'aria-label': 'Project 9',
         complete: false,
       },
       {
-        ariaLabel: 'Project 10',
+        'aria-label': 'Project 10',
         complete: false,
       },
     ],
@@ -69,7 +69,7 @@ const tableRows = [
     value1: 'Making Connections and Inferences',
     projects: [
       {
-        ariaLabel: 'Project 1',
+        'aria-label': 'Project 1',
         complete: true,
       },
     ],
@@ -78,23 +78,23 @@ const tableRows = [
     value1: 'A longer heading that is super duper long',
     projects: [
       {
-        ariaLabel: 'Project 1',
+        'aria-label': 'Project 1',
         complete: true,
       },
       {
-        ariaLabel: 'Project 2',
+        'aria-label': 'Project 2',
         complete: true,
       },
       {
-        ariaLabel: 'Project 3',
+        'aria-label': 'Project 3',
         complete: true,
       },
       {
-        ariaLabel: 'Project 4',
+        'aria-label': 'Project 4',
         complete: true,
       },
       {
-        ariaLabel: 'Project 5',
+        'aria-label': 'Project 5',
         complete: true,
       },
     ],

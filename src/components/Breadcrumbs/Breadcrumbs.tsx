@@ -19,7 +19,7 @@ type Props = {
   /**
    * aria-label for `nav` element to describe Breadcrumbs navigation to screen readers
    */
-  ariaLabel?: string;
+  'aria-label'?: string;
 
   /**
    * HTML id for the component
@@ -41,7 +41,7 @@ export const Breadcrumbs = ({
   className,
   children,
   id,
-  ariaLabel = 'breadcrumbs links',
+  'aria-label': ariaLabel = 'breadcrumbs links',
   ...other
 }: Props) => {
   const [shouldTruncate, setShouldTruncate] = React.useState(false);

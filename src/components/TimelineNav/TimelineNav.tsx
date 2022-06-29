@@ -81,7 +81,7 @@ export interface Props {
 
 export interface TimelineNavItem {
   props: {
-    ariaLabel: string;
+    'aria-label': string;
     children: ReactNode;
     variant?: TimelineNavPanelVariant;
     title?: string;
@@ -343,7 +343,7 @@ export const TimelineNav = ({
               >
                 <a
                   aria-controls={idVar[i]}
-                  aria-label={tab.props.ariaLabel}
+                  aria-label={tab.props['aria-label']}
                   aria-selected={isActive}
                   className={styles['timeline-nav__link']}
                   href={`#${idVar[i]}`}

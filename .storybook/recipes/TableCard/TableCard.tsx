@@ -31,7 +31,7 @@ export interface Props {
 }
 
 interface Item {
-  ariaLabel: string;
+  'aria-label': string;
   complete: boolean;
 }
 
@@ -103,7 +103,7 @@ export const TableCard = ({
                       {item.projects.map((item, index) => {
                         return (
                           <NumberIcon
-                            aria-label={item.ariaLabel}
+                            aria-label={item['aria-label']}
                             incomplete={!item.complete}
                             key={`number-icon-${index}`}
                             number={index + 1}
