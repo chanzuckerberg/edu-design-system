@@ -24,18 +24,34 @@ export default {
   },
 };
 
-export const Colors = () => <Tier1Colors />;
+export const Colors = {
+  render: () => <Tier1Colors />,
+};
 
-export const Animation = () => <Tier1Animation />;
+export const Animation = {
+  render: () => <Tier1Animation />,
+};
 
-export const Borders = () => <Tier1Borders />;
+export const Borders = {
+  render: () => <Tier1Borders />,
+};
 
-export const Sizes = () => <Tier1Sizes />;
+export const Sizes = {
+  render: () => <Tier1Sizes />,
+};
 
-export const Layout = () => <Tier1Layout />;
+export const Layout = {
+  render: () => <Tier1Layout />,
+};
 
-export const Shadows = () => <Tier1Shadows />;
+export const Shadows = {
+  render: () => <Tier1Shadows />,
+};
 
-export const TypographyTokens = () => <Tier1TypographyTokens />;
+export const TypographyTokens = {
+  render: () => <Tier1TypographyTokens />,
+};
 
-export const TypographyPresets = () => <Tier1TypographyPresets />;
+export const TypographyPresets = {
+  render: () => <Tier1TypographyPresets />,
+};
