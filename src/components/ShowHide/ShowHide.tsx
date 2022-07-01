@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/no-static-element-interactions */
 import clsx from 'clsx';
 import React, {
   useState,
@@ -122,16 +121,12 @@ export const ShowHide = ({
     'aria-expanded': isActive ? 'true' : 'false',
     className: 'show-hide__trigger',
     onClick: handleClick,
+    onKeyDown: handleOnKeyDown,
     text: isActive ? closeText || text : text,
   });
 
   return (
-    <div
-      className={componentClassName}
-      ref={dropdownRef}
-      {...other}
-      onKeyDown={handleOnKeyDown}
-    >
+    <div className={componentClassName} ref={dropdownRef} {...other}>
       {triggerElement}
       <div className={styles['show-hide__panel']} hidden={!isActive}>
         {children}
