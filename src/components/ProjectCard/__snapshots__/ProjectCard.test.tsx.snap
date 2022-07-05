@@ -333,3 +333,48 @@ exports[`<ProjectCard /> Draggable story renders snapshot 1`] = `
   </footer>
 </article>
 `;
+
+exports[`<ProjectCard /> WithoutDropdown story renders snapshot 1`] = `
+<article
+  class="card project-card card--horizontal card--raised"
+>
+  <header
+    class="card__header project-card__header"
+  >
+    <span
+      aria-label="Project 1"
+      class="text text--sm text--base number-icon number-icon--base number-icon--sm project-card__number"
+      role="img"
+    >
+      1
+    </span>
+  </header>
+  <div
+    class="card__body project-card__body"
+  >
+    <h3
+      class="project-card__title heading heading--size-body-sm heading--base"
+    >
+      DragDropItem provides handle to the left
+    </h3>
+    <div
+      class="project-card__meta"
+    >
+      <svg
+        aria-hidden="true"
+        class="icon project-card__meta-icon"
+        fill="currentColor"
+        height="0.875rem"
+        style="--icon-size: 0.875rem;"
+        width="0.875rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="test-file-stub#event-note"
+        />
+      </svg>
+      12 days
+    </div>
+  </div>
+</article>
+`;
