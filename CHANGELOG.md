@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.2](https://github.com/chanzuckerberg/edu-design-system/compare/v1.3.1...v1.3.2) (2022-07-05)
+
+
+### Bug Fixes
+
+* **modal:** render tooltips on top of modal ([0965c28](https://github.com/chanzuckerberg/edu-design-system/commit/0965c2891284cb2fcc417fe8bcb7c3de24e32a80))
+* **modal:** render tooltips on top of modal ([683ae77](https://github.com/chanzuckerberg/edu-design-system/commit/683ae774d047508eccab4c0a4ddbe073d4dc9316))
+
 ### [1.3.1](https://github.com/chanzuckerberg/edu-design-system/compare/v1.3.0-alpha.1...v1.3.1) (2022-06-29)
 
 
