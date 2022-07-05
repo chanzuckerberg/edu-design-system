@@ -6,6 +6,8 @@ import React from 'react';
 import { Text } from './Text';
 import * as TextStoryFile from './Text.stories';
 
+import '../../../jest/helpers/removeRandomizedUrlJestSerializer';
+
 describe('<Text />', () => {
   generateSnapshots(TextStoryFile);
 

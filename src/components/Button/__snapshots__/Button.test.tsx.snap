@@ -285,15 +285,6 @@ exports[`<Button /> LinkDisabled story renders snapshot 1`] = `
 </button>
 `;
 
-exports[`<Button /> LinkError story renders snapshot 1`] = `
-<button
-  class="clickable-style button button--link clickable-style--link clickable-style--error"
-  type="button"
->
-  Button
-</button>
-`;
-
 exports[`<Button /> LinkNeutral story renders snapshot 1`] = `
 <button
   class="clickable-style button button--link clickable-style--link clickable-style--neutral"
@@ -324,24 +315,6 @@ exports[`<Button /> LinkRightIcon story renders snapshot 1`] = `
       xlink:href="test-file-stub#open-in-new"
     />
   </svg>
-</button>
-`;
-
-exports[`<Button /> LinkSuccess story renders snapshot 1`] = `
-<button
-  class="clickable-style button button--link clickable-style--link clickable-style--success"
-  type="button"
->
-  Button
-</button>
-`;
-
-exports[`<Button /> LinkWarning story renders snapshot 1`] = `
-<button
-  class="clickable-style button button--link clickable-style--link clickable-style--warning"
-  type="button"
->
-  Button
 </button>
 `;
 

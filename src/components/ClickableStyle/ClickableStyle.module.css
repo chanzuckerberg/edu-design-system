@@ -457,91 +457,29 @@
 .clickable-style--link {
   @mixin textLink;
 
-  padding: 0;
+  border-radius: 0;
   border: 0;
-  text-align: left;
   background-color: transparent;
-  gap: 0.25em; /* 2 */
-}
-
-/**
- * Link brand clickable style
- */
-.clickable-style--link.clickable-style--brand {
-  color: var(--eds-theme-color-button-link-brand);
-
-  &:hover {
-    color: var(--eds-theme-color-button-link-brand-hover);
-  }
-
-  &:active {
-    color: var(--eds-theme-color-button-link-brand-active);
-  }
 }
 
 /**
  * Link neutral clickable style
  */
 .clickable-style--link.clickable-style--neutral {
-  color: var(--eds-theme-color-button-link-neutral);
+  text-decoration-color: var(--eds-theme-color-icon-neutral-strong);
 
   &:hover {
-    color: var(--eds-theme-color-button-link-neutral-hover);
-  }
-
-  &:active {
-    color: var(--eds-theme-color-button-link-neutral-active);
+    text-decoration-color: var(--eds-theme-color-border-neutral-strong);
   }
 }
 
 /**
- * Link success clickable style
+ * Link neutral clickable style pseudo element for the focus background state.
+ * Overrides the default background color on focus. Often used when the default
+ * focus background color doesn't mesh well with the surrounding colors.
  */
-.clickable-style--link.clickable-style--success {
-  color: var(--eds-theme-color-button-link-success);
-
-  &:hover {
-    color: var(--eds-theme-color-button-link-success-hover);
-  }
-
-  &:active {
-    color: var(--eds-theme-color-button-link-success-active);
-  }
-}
-
-/**
- * Link warning clickable style
- */
-.clickable-style--link.clickable-style--warning {
-  color: var(--eds-theme-color-button-link-warning);
-
-  &:hover {
-    color: var(--eds-theme-color-button-link-warning-hover);
-  }
-
-  &:active {
-    color: var(--eds-theme-color-button-link-warning-active);
-  }
-}
-
-/**
- * Link error clickable style
- */
-.clickable-style--link.clickable-style--error {
-  color: var(--eds-theme-color-button-link-error);
-
-  &:hover {
-    color: var(--eds-theme-color-button-link-error-hover);
-  }
-
-  &:active {
-    color: var(--eds-theme-color-button-link-error-active);
-  }
-}
-
-/* Style icons that may be in the clickable style children */
-.clickable-style--link svg {
-  --icon-size-default: 1.25em;
+.clickable-style--link.clickable-style--neutral::before {
+  background-color: var(--eds-theme-color-icon-neutral-strong);
 }
 
 /**

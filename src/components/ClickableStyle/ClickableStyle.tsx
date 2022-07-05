@@ -2,6 +2,21 @@ import clsx from 'clsx';
 import React, { MouseEventHandler, ReactNode } from 'react';
 import styles from './ClickableStyle.module.css';
 
+export const VARIANTS = ['primary', 'secondary', 'icon', 'link'] as const;
+export type Variant = typeof VARIANTS[number];
+
+export const STATUSES = [
+  'brand',
+  'neutral',
+  'success',
+  'warning',
+  'error',
+] as const;
+export type Status = typeof STATUSES[number];
+
+export const SIZES = ['sm', 'md', 'lg'] as const;
+export type Size = typeof SIZES[number];
+
 export type ClickableStyleProps<IComponent extends React.ElementType> = {
   /**
    * Visually hidden clickable text (but text is still accessible to assistive technology).
@@ -27,16 +42,56 @@ export type ClickableStyleProps<IComponent extends React.ElementType> = {
   /**
    * Available size variations for the clickable
    */
-  size?: 'sm' | 'md' | 'lg';
+  size?: Size;
   /**
    * Available _color_ variations available for the ClickableStyle component
    */
-  status?: 'brand' | 'neutral' | 'success' | 'warning' | 'error';
+  status?: Status;
   /**
    * Available _shape_ variations available for the ClickableStyle component
    */
-  variant?: 'primary' | 'secondary' | 'icon' | 'link';
+  variant?: Variant;
 } & React.ComponentProps<IComponent>;
+
+const getPropCombinationIsValid = (variant: Variant, status: Status) => {
+  const nonPrimaryStatuses = ['neutral', 'success', 'warning'];
+  const nonLinkStatuses = ['success', 'warning', 'error'];
+
+  if (
+    (variant === 'primary' && nonPrimaryStatuses.includes(status)) ||
+    (variant === 'link' && nonLinkStatuses.includes(status))
+  ) {
+    return false;
+  }
+
+  return true;
+};
+
+const throwInvalidPropComboError = (variant: Variant, status: Status) => {
+  const primaryStatuses = ['brand', 'error'];
+  const linkStatuses = ['brand', 'neutral'];
+
+  const getValidStatusesString = () => {
+    const validStatuses =
+      variant === 'primary' ? primaryStatuses : linkStatuses;
+
+    return `'${validStatuses[0]}' and '${validStatuses[1]}'`;
+  };
+
+  throw new Error(
+    // We have to add the strings and variables together because string interpolation doesn't work in console messages.
+    "\n*** Invalid prop combo ***:\n\nThe `Button` and `Link` components do not support using the '" +
+      variant +
+      "' variant with a '" +
+      status +
+      "' status." +
+      "\n\nThe '" +
+      variant +
+      "' variant can only be used with the " +
+      getValidStatusesString() +
+      ' statuses.\n',
+  );
+};
 
 /**
  * ```ts
@@ -65,17 +120,11 @@ export const ClickableStyle = React.forwardRef(
     }: ClickableStyleProps<IComponent>,
     ref: React.ForwardedRef<HTMLElement>,
   ) => {
-    const nonPrimaryStatuses = ['neutral', 'success', 'warning'];
     if (
-      variant === 'primary' &&
-      nonPrimaryStatuses.includes(status) &&
+      !getPropCombinationIsValid(variant, status) &&
       process.env.NODE_ENV !== 'production'
     ) {
-      console.warn(
-        `*** Invalid prop combo warning ***:\n`,
-        `This component does not support using the '${status}' status with a 'primary' variant.`,
-        `The 'primary' variant can only be used with the 'brand' and 'error' statuses.`,
-      );
+      throwInvalidPropComboError(variant, status);
     }
 
     const componentClassName = clsx(

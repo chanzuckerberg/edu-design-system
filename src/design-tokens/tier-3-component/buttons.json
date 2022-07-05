@@ -528,63 +528,6 @@
                 }
               }
             }
-          },
-          "link": {
-            "brand": {
-              "@": {
-                "value": "{eds.color.brand.grape.700}"
-              },
-              "hover": {
-                "value": "{eds.color.brand.grape.800}"
-              },
-              "active": {
-                "value": "{eds.color.brand.grape.800}"
-              }
-            },
-            "neutral": {
-              "@": {
-                "value": "{eds.color.neutral.600}"
-              },
-              "hover": {
-                "value": "{eds.color.neutral.700}"
-              },
-              "active": {
-                "value": "{eds.color.neutral.700}"
-              }
-            },
-            "success": {
-              "@": {
-                "value": "{eds.color.other.mint.700}"
-              },
-              "hover": {
-                "value": "{eds.color.other.mint.800}"
-              },
-              "active": {
-                "value": "{eds.color.other.mint.800}"
-              }
-            },
-            "warning": {
-              "@": {
-                "value": "{eds.color.other.orange.700}"
-              },
-              "hover": {
-                "value": "{eds.color.other.orange.800}"
-              },
-              "active": {
-                "value": "{eds.color.other.orange.800}"
-              }
-            },
-            "error": {
-              "@": {
-                "value": "{eds.color.other.ruby.700}"
-              },
-              "hover": {
-                "value": "{eds.color.other.ruby.800}"
-              },
-              "active": {
-                "value": "{eds.color.other.ruby.800}"
-              }
-            }
           }
         }
       }

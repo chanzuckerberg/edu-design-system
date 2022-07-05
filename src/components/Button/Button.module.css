@@ -52,7 +52,7 @@
   &:disabled,
   &:disabled:hover {
     color: var(--eds-theme-color-text-disabled);
-    text-decoration-thickness: 1px;
+    text-decoration-color: var(--eds-theme-color-text-disabled);
   }
 }
 
