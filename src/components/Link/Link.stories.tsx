@@ -1,7 +1,9 @@
 import { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
-
 import { Link } from './Link';
+import getRandomUrl from '../../util/getRandomUrl';
+import { SIZES, STATUSES, VARIANTS } from '../ClickableStyle';
+
 import Icon from '../Icon';
 
 export default {
@@ -13,7 +15,7 @@ export default {
     status: 'brand',
     fullWidth: false,
     size: 'lg',
-    href: '/',
+    href: getRandomUrl(),
     // stop link from navigating to another page so we can click the link for testing
     onClick: (event: any) => event.preventDefault(),
   },
@@ -22,19 +24,19 @@ export default {
       control: {
         type: 'select',
       },
-      options: ['primary', 'secondary', 'icon', 'link'],
+      options: VARIANTS,
     },
     status: {
       control: {
         type: 'select',
       },
-      options: ['brand', 'neutral', 'success', 'warning', 'error'],
+      options: STATUSES,
     },
     size: {
       control: {
         type: 'select',
       },
-      options: ['sm', 'md', 'lg'],
+      options: SIZES,
     },
     fullWidth: {
       control: 'boolean',
@@ -60,6 +62,13 @@ export const LinkRightIcon: StoryObj<Args> = {
         />
       </>
     ),
+    variant: 'link',
+  },
+};
+
+export const LinkNeutral: StoryObj<Args> = {
+  args: {
+    status: 'neutral',
     variant: 'link',
   },
 };
@@ -336,33 +345,5 @@ export const IconError: StoryObj<Args> = {
     ),
     status: 'error',
     variant: 'icon',
-  },
-};
-
-export const LinkNeutral: StoryObj<Args> = {
-  args: {
-    status: 'neutral',
-    variant: 'link',
-  },
-};
-
-export const LinkSuccess: StoryObj<Args> = {
-  args: {
-    status: 'success',
-    variant: 'link',
-  },
-};
-
-export const LinkWarning: StoryObj<Args> = {
-  args: {
-    status: 'warning',
-    variant: 'link',
-  },
-};
-
-export const LinkError: StoryObj<Args> = {
-  args: {
-    status: 'error',
-    variant: 'link',
   },
 };

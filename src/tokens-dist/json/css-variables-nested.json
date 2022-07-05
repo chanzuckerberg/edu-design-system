@@ -634,33 +634,6 @@
                 "active": "var(--eds-theme-color-button-icon-error-text-active)"
               }
             }
-          },
-          "link": {
-            "brand": {
-              "@": "var(--eds-theme-color-button-link-brand)",
-              "hover": "var(--eds-theme-color-button-link-brand-hover)",
-              "active": "var(--eds-theme-color-button-link-brand-active)"
-            },
-            "neutral": {
-              "@": "var(--eds-theme-color-button-link-neutral)",
-              "hover": "var(--eds-theme-color-button-link-neutral-hover)",
-              "active": "var(--eds-theme-color-button-link-neutral-active)"
-            },
-            "success": {
-              "@": "var(--eds-theme-color-button-link-success)",
-              "hover": "var(--eds-theme-color-button-link-success-hover)",
-              "active": "var(--eds-theme-color-button-link-success-active)"
-            },
-            "warning": {
-              "@": "var(--eds-theme-color-button-link-warning)",
-              "hover": "var(--eds-theme-color-button-link-warning-hover)",
-              "active": "var(--eds-theme-color-button-link-warning-active)"
-            },
-            "error": {
-              "@": "var(--eds-theme-color-button-link-error)",
-              "hover": "var(--eds-theme-color-button-link-error-hover)",
-              "active": "var(--eds-theme-color-button-link-error-active)"
-            }
           }
         },
         "focus-ring": {

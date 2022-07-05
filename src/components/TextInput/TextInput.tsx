@@ -11,7 +11,7 @@ export interface Props {
   /**
    * HTML id of the helper text used to describe the component
    */
-  ariaDescribedBy?: string;
+  'aria-describedby'?: string;
   /**
    * CSS class names that can be appended to the component.
    */
@@ -121,7 +121,7 @@ export interface Props {
  */
 export const TextInput = ({
   accept,
-  ariaDescribedBy,
+  'aria-describedby': ariaDescribedBy,
   className,
   disabled,
   id,

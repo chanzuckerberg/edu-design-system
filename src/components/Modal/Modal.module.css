@@ -26,7 +26,8 @@
 
 /**
  * The modal container which positions the modal in the center of the screen.
- * 1) Ensures modal is above other components.
+ * 1) Ensures modal is above other components. This is not a design token for now since we need to align on 
+ *    z-indeces across the app and in the platform. https://app.shortcut.com/czi-edu/story/203871
  */
 .modal {
   display: flex;
@@ -34,7 +35,7 @@
   justify-content: center;
   padding: var(--eds-size-2);
 
-  z-index: var(--eds-z-index-top); /* 1 */
+  z-index: 1050; /* 1 */
 }
 
 /**

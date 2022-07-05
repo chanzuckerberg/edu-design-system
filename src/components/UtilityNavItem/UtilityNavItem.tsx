@@ -8,7 +8,7 @@ export interface Props {
    * Aria label
    * 1) Use aria label for icon-only utility nav item
    */
-  ariaLabel?: string;
+  'aria-label'?: string;
   /**
    * Child node(s) that can be nested inside component as a menu
    */
@@ -42,7 +42,15 @@ export interface Props {
  */
 export const UtilityNavItem = React.forwardRef<HTMLLIElement, Props>(
   function UtilityNavItem(
-    { ariaLabel, className, children, text, href, itemBefore, ...other },
+    {
+      'aria-label': ariaLabel,
+      className,
+      children,
+      text,
+      href,
+      itemBefore,
+      ...other
+    },
     ref,
   ) {
     const [isActive, setIsActive] = useState(false);

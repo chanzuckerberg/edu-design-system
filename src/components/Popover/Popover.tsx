@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import clsx from 'clsx';
 import React, {
   useState,
@@ -18,13 +17,13 @@ import PopoverHeader from '../PopoverHeader';
 
 export interface Props {
   /**
-   * HTML id of the helper text used to describe the component after ariaLabelledBy
+   * HTML id of the helper text used to describe the component after aria-describedby
    */
-  ariaDescribedBy?: string;
+  'aria-describedby'?: string;
   /**
    * HTML id of the helper text used to label the popover component
    */
-  ariaLabelledBy?: string;
+  'aria-labelledby'?: string;
   /**
    * Child node(s) that can be nested inside component. `PopoverHeader`, `PopoverBody`, and `ModelFooter` are the only permissible children of the Popover
    */
@@ -61,8 +60,8 @@ export interface Props {
  * Content container that pops out over other content.
  */
 export const Popover = ({
-  ariaDescribedBy,
-  ariaLabelledBy,
+  'aria-describedby': ariaDescribedBy,
+  'aria-labelledby': ariaLabelledBy,
   className,
   isActive,
   children,
@@ -182,6 +181,11 @@ export const Popover = ({
 
   return (
     <FocusLock disabled={!activeFocus}>
+      {/**
+       * We're intentionally adding keyboard interaction to an article element for better accessibility,
+       * so we're comfortable suppressing this rule
+       */}
+      {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */}
       <article
         aria-describedby={ariaDescribedBy}
         aria-hidden={!isActive}

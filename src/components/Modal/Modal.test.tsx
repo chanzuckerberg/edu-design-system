@@ -99,7 +99,7 @@ describe('Modal', () => {
   it('does not throw an error if modal uses aria-label', () => {
     const modalWithAriaLabel = (
       <Modal
-        ariaLabel="aria label"
+        aria-label="aria label"
         onClose={
           () => {} /* eslint-disable-line @typescript-eslint/no-empty-function */
         }

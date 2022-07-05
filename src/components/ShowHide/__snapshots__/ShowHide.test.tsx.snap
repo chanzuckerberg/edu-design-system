@@ -10,6 +10,7 @@ exports[`<ShowHide /> Default story renders snapshot 1`] = `
     <button
       aria-expanded="false"
       class="clickable-style button show-hide__trigger button--primary clickable-style--lg clickable-style--primary clickable-style--brand"
+      data-bootstrap-override="clickable-style-primary"
       text="Actions"
       type="button"
     >

@@ -4,7 +4,7 @@ import React, { ReactNode } from 'react';
 import { useState } from 'react';
 import Modal, { ModalContent } from './Modal';
 import styles from './Modal.stories.module.css';
-import { Button, ButtonGroup, Heading, Text } from '../../';
+import { Button, ButtonGroup, Heading, Text, Tooltip } from '../../';
 import { VARIANTS } from '../Heading/Heading';
 
 export default {
@@ -46,14 +46,17 @@ const getChildren = (
     >
       {showStepper && <Modal.Stepper activeStep={2} totalSteps={5} />}
       <ButtonGroup className={styles['footer__button-group']}>
-        <Button
-          onClick={
-            () => {} /* eslint-disable-line @typescript-eslint/no-empty-function */
-          }
-          status="neutral"
-        >
-          Button 1
-        </Button>
+        {/* This has to be manually tested since Tooltip tests are flaky in Chromatic */}
+        <Tooltip text="Tooltip should spawn on top of modal">
+          <Button
+            onClick={
+              () => {} /* eslint-disable-line @typescript-eslint/no-empty-function */
+            }
+            status="neutral"
+          >
+            Button 1
+          </Button>
+        </Tooltip>
         <Button
           onClick={
             () => {} /* eslint-disable-line @typescript-eslint/no-empty-function */
@@ -365,7 +368,7 @@ export const WithoutHeaderAndFooter: StoryObj<InteractiveArgs> = {
   render: (args) => (
     <InteractiveExample
       {...args}
-      ariaLabel="The Modal Amazing Modal You've Ever Seen"
+      aria-label="The Modal Amazing Modal You've Ever Seen"
     >
       <Modal.Body>{reallyLongText}</Modal.Body>
     </InteractiveExample>

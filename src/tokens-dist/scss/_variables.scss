@@ -353,21 +353,6 @@ $eds-theme-color-button-icon-error-border-active: #BD0044 !default;
 $eds-theme-color-button-icon-error-text: #BD0044 !default;
 $eds-theme-color-button-icon-error-text-hover: #BD0044 !default;
 $eds-theme-color-button-icon-error-text-active: #FFFFFF !default;
-$eds-theme-color-button-link-brand: #5751D2 !default;
-$eds-theme-color-button-link-brand-hover: #3E42B1 !default;
-$eds-theme-color-button-link-brand-active: #3E42B1 !default;
-$eds-theme-color-button-link-neutral: #5D6369 !default;
-$eds-theme-color-button-link-neutral-hover: #383C43 !default;
-$eds-theme-color-button-link-neutral-active: #383C43 !default;
-$eds-theme-color-button-link-success: #007249 !default;
-$eds-theme-color-button-link-success-hover: #005939 !default;
-$eds-theme-color-button-link-success-active: #005939 !default;
-$eds-theme-color-button-link-warning: #AC3400 !default;
-$eds-theme-color-button-link-warning-hover: #842800 !default;
-$eds-theme-color-button-link-warning-active: #842800 !default;
-$eds-theme-color-button-link-error: #BD0044 !default;
-$eds-theme-color-button-link-error-hover: #8F0134 !default;
-$eds-theme-color-button-link-error-active: #8F0134 !default;
 $eds-theme-color-focus-ring: #6B65E2 !default;
 $eds-theme-color-focus-ring-inverted: #FFFFFF !default;
 $eds-theme-color-form-border: #C0C4C8 !default;
@@ -1043,33 +1028,6 @@ $tokens: (
                 'hover': $eds-theme-color-button-icon-error-text-hover,
                 'active': $eds-theme-color-button-icon-error-text-active
               )
-            )
-          ),
-          'link': (
-            'brand': (
-              '@': $eds-theme-color-button-link-brand,
-              'hover': $eds-theme-color-button-link-brand-hover,
-              'active': $eds-theme-color-button-link-brand-active
-            ),
-            'neutral': (
-              '@': $eds-theme-color-button-link-neutral,
-              'hover': $eds-theme-color-button-link-neutral-hover,
-              'active': $eds-theme-color-button-link-neutral-active
-            ),
-            'success': (
-              '@': $eds-theme-color-button-link-success,
-              'hover': $eds-theme-color-button-link-success-hover,
-              'active': $eds-theme-color-button-link-success-active
-            ),
-            'warning': (
-              '@': $eds-theme-color-button-link-warning,
-              'hover': $eds-theme-color-button-link-warning-hover,
-              'active': $eds-theme-color-button-link-warning-active
-            ),
-            'error': (
-              '@': $eds-theme-color-button-link-error,
-              'hover': $eds-theme-color-button-link-error-hover,
-              'active': $eds-theme-color-button-link-error-active
             )
           )
         ),

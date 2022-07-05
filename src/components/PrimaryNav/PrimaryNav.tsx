@@ -8,7 +8,7 @@ export interface Props {
   /**
    * aria-label for `nav` element to describe Breadcrumbs navigation to screen readers
    */
-  ariaLabel?: string;
+  'aria-label'?: string;
   /**
    * Child node(s) that can be nested inside component. `ModalHeader`, `ModalBody`, and `ModelFooter` are the only permissible children of the Modal
    */
@@ -36,7 +36,7 @@ export const PrimaryNav = ({
   className,
   children,
   id,
-  ariaLabel,
+  'aria-label': ariaLabel,
   ...other
 }: Props) => {
   const generatedId = useUID();

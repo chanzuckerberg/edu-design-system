@@ -42,7 +42,7 @@ type Args = React.ComponentProps<typeof Logo>;
 export const Default: StoryObj<Args> = {
   args: {
     href: '#',
-    ariaLabel: 'Learning platform',
+    'aria-label': 'Learning platform',
     alt: 'Learning Platform',
   },
 };

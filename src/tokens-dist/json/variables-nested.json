@@ -634,33 +634,6 @@
                 "active": "#FFFFFF"
               }
             }
-          },
-          "link": {
-            "brand": {
-              "@": "#5751D2",
-              "hover": "#3E42B1",
-              "active": "#3E42B1"
-            },
-            "neutral": {
-              "@": "#5D6369",
-              "hover": "#383C43",
-              "active": "#383C43"
-            },
-            "success": {
-              "@": "#007249",
-              "hover": "#005939",
-              "active": "#005939"
-            },
-            "warning": {
-              "@": "#AC3400",
-              "hover": "#842800",
-              "active": "#842800"
-            },
-            "error": {
-              "@": "#BD0044",
-              "hover": "#8F0134",
-              "active": "#8F0134"
-            }
           }
         },
         "focus-ring": {

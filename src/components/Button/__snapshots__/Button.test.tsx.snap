@@ -3,6 +3,7 @@
 exports[`<Button /> Default story renders snapshot 1`] = `
 <button
   class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--brand"
+  data-bootstrap-override="clickable-style-secondary"
   type="button"
 >
   Button
@@ -12,6 +13,7 @@ exports[`<Button /> Default story renders snapshot 1`] = `
 exports[`<Button /> Destructive story renders snapshot 1`] = `
 <button
   class="clickable-style button button--primary clickable-style--lg clickable-style--primary clickable-style--error"
+  data-bootstrap-override="clickable-style-primary"
   type="button"
 >
   Button
@@ -21,6 +23,7 @@ exports[`<Button /> Destructive story renders snapshot 1`] = `
 exports[`<Button /> DestructiveLeftIcon story renders snapshot 1`] = `
 <button
   class="clickable-style button button--primary clickable-style--lg clickable-style--primary clickable-style--error"
+  data-bootstrap-override="clickable-style-primary"
   type="button"
 >
   <svg
@@ -40,6 +43,7 @@ exports[`<Button /> DestructiveLeftIcon story renders snapshot 1`] = `
 exports[`<Button /> FullWidth story renders snapshot 1`] = `
 <button
   class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--brand clickable-style--full-width"
+  data-bootstrap-override="clickable-style-secondary"
   type="button"
 >
   Button
@@ -49,6 +53,7 @@ exports[`<Button /> FullWidth story renders snapshot 1`] = `
 exports[`<Button /> IconButtonDisabled story renders snapshot 1`] = `
 <button
   class="clickable-style button button--icon button--disabled clickable-style--lg clickable-style--icon clickable-style--brand"
+  data-bootstrap-override="clickable-style-icon"
   disabled=""
   tabindex="-1"
   type="button"
@@ -70,6 +75,7 @@ exports[`<Button /> IconButtonDisabled story renders snapshot 1`] = `
 exports[`<Button /> IconButtonIconOnly story renders snapshot 1`] = `
 <button
   class="clickable-style button button--icon clickable-style--lg clickable-style--icon clickable-style--brand"
+  data-bootstrap-override="clickable-style-icon"
   type="button"
 >
   <svg
@@ -93,6 +99,7 @@ exports[`<Button /> IconButtonIconOnly story renders snapshot 1`] = `
 exports[`<Button /> IconButtonIconOnlySmall story renders snapshot 1`] = `
 <button
   class="clickable-style button button--icon clickable-style--sm clickable-style--icon clickable-style--brand"
+  data-bootstrap-override="clickable-style-icon"
   type="button"
 >
   <svg
@@ -116,6 +123,7 @@ exports[`<Button /> IconButtonIconOnlySmall story renders snapshot 1`] = `
 exports[`<Button /> IconButtonLeftIcon story renders snapshot 1`] = `
 <button
   class="clickable-style button button--icon clickable-style--lg clickable-style--icon clickable-style--brand"
+  data-bootstrap-override="clickable-style-icon"
   type="button"
 >
   <svg
@@ -135,6 +143,7 @@ exports[`<Button /> IconButtonLeftIcon story renders snapshot 1`] = `
 exports[`<Button /> IconButtonLeftIconSmall story renders snapshot 1`] = `
 <button
   class="clickable-style button button--icon clickable-style--sm clickable-style--icon clickable-style--brand"
+  data-bootstrap-override="clickable-style-icon"
   type="button"
 >
   <svg
@@ -154,6 +163,7 @@ exports[`<Button /> IconButtonLeftIconSmall story renders snapshot 1`] = `
 exports[`<Button /> IconButtonRightIcon story renders snapshot 1`] = `
 <button
   class="clickable-style button button--icon clickable-style--lg clickable-style--icon clickable-style--brand"
+  data-bootstrap-override="clickable-style-icon"
   type="button"
 >
   Button
@@ -173,6 +183,7 @@ exports[`<Button /> IconButtonRightIcon story renders snapshot 1`] = `
 exports[`<Button /> IconButtonRightIconSmall story renders snapshot 1`] = `
 <button
   class="clickable-style button button--icon clickable-style--sm clickable-style--icon clickable-style--brand"
+  data-bootstrap-override="clickable-style-icon"
   type="button"
 >
   Button
@@ -192,6 +203,7 @@ exports[`<Button /> IconButtonRightIconSmall story renders snapshot 1`] = `
 exports[`<Button /> IconError story renders snapshot 1`] = `
 <button
   class="clickable-style button button--icon clickable-style--lg clickable-style--icon clickable-style--error"
+  data-bootstrap-override="clickable-style-icon"
   type="button"
 >
   Button
@@ -211,6 +223,7 @@ exports[`<Button /> IconError story renders snapshot 1`] = `
 exports[`<Button /> IconNeutral story renders snapshot 1`] = `
 <button
   class="clickable-style button button--icon clickable-style--lg clickable-style--icon clickable-style--neutral"
+  data-bootstrap-override="clickable-style-icon"
   type="button"
 >
   Button
@@ -230,6 +243,7 @@ exports[`<Button /> IconNeutral story renders snapshot 1`] = `
 exports[`<Button /> IconSuccess story renders snapshot 1`] = `
 <button
   class="clickable-style button button--icon clickable-style--lg clickable-style--icon clickable-style--success"
+  data-bootstrap-override="clickable-style-icon"
   type="button"
 >
   Button
@@ -249,6 +263,7 @@ exports[`<Button /> IconSuccess story renders snapshot 1`] = `
 exports[`<Button /> IconWarning story renders snapshot 1`] = `
 <button
   class="clickable-style button button--icon clickable-style--lg clickable-style--icon clickable-style--warning"
+  data-bootstrap-override="clickable-style-icon"
   type="button"
 >
   Button
@@ -268,6 +283,7 @@ exports[`<Button /> IconWarning story renders snapshot 1`] = `
 exports[`<Button /> Link story renders snapshot 1`] = `
 <button
   class="clickable-style button button--link clickable-style--link clickable-style--brand"
+  data-bootstrap-override="clickable-style-link"
   type="button"
 >
   Button
@@ -277,17 +293,9 @@ exports[`<Button /> Link story renders snapshot 1`] = `
 exports[`<Button /> LinkDisabled story renders snapshot 1`] = `
 <button
   class="clickable-style button button--link button--disabled clickable-style--link clickable-style--brand"
+  data-bootstrap-override="clickable-style-link"
   disabled=""
   tabindex="-1"
-  type="button"
->
-  Button
-</button>
-`;
-
-exports[`<Button /> LinkError story renders snapshot 1`] = `
-<button
-  class="clickable-style button button--link clickable-style--link clickable-style--error"
   type="button"
 >
   Button
@@ -297,6 +305,7 @@ exports[`<Button /> LinkError story renders snapshot 1`] = `
 exports[`<Button /> LinkNeutral story renders snapshot 1`] = `
 <button
   class="clickable-style button button--link clickable-style--link clickable-style--neutral"
+  data-bootstrap-override="clickable-style-link"
   type="button"
 >
   Button
@@ -306,6 +315,7 @@ exports[`<Button /> LinkNeutral story renders snapshot 1`] = `
 exports[`<Button /> LinkRightIcon story renders snapshot 1`] = `
 <button
   class="clickable-style button button--link clickable-style--link clickable-style--brand"
+  data-bootstrap-override="clickable-style-link"
   type="button"
 >
   Button
@@ -327,27 +337,10 @@ exports[`<Button /> LinkRightIcon story renders snapshot 1`] = `
 </button>
 `;
 
-exports[`<Button /> LinkSuccess story renders snapshot 1`] = `
-<button
-  class="clickable-style button button--link clickable-style--link clickable-style--success"
-  type="button"
->
-  Button
-</button>
-`;
-
-exports[`<Button /> LinkWarning story renders snapshot 1`] = `
-<button
-  class="clickable-style button button--link clickable-style--link clickable-style--warning"
-  type="button"
->
-  Button
-</button>
-`;
-
 exports[`<Button /> Loading story renders snapshot 1`] = `
 <button
   class="clickable-style button button--secondary button--disabled eds-is-loading clickable-style--lg clickable-style--secondary clickable-style--brand"
+  data-bootstrap-override="clickable-style-secondary"
   disabled=""
   tabindex="-1"
   type="button"
@@ -377,6 +370,7 @@ exports[`<Button /> Loading story renders snapshot 1`] = `
 exports[`<Button /> Primary story renders snapshot 1`] = `
 <button
   class="clickable-style button button--primary clickable-style--lg clickable-style--primary clickable-style--brand"
+  data-bootstrap-override="clickable-style-primary"
   type="button"
 >
   Button
@@ -386,6 +380,7 @@ exports[`<Button /> Primary story renders snapshot 1`] = `
 exports[`<Button /> PrimaryDisabled story renders snapshot 1`] = `
 <button
   class="clickable-style button button--primary button--disabled clickable-style--lg clickable-style--primary clickable-style--brand"
+  data-bootstrap-override="clickable-style-primary"
   disabled=""
   tabindex="-1"
   type="button"
@@ -397,6 +392,7 @@ exports[`<Button /> PrimaryDisabled story renders snapshot 1`] = `
 exports[`<Button /> PrimaryLeftIcon story renders snapshot 1`] = `
 <button
   class="clickable-style button button--primary clickable-style--lg clickable-style--primary clickable-style--brand"
+  data-bootstrap-override="clickable-style-primary"
   type="button"
 >
   <svg
@@ -416,6 +412,7 @@ exports[`<Button /> PrimaryLeftIcon story renders snapshot 1`] = `
 exports[`<Button /> PrimaryMedium story renders snapshot 1`] = `
 <button
   class="clickable-style button button--primary clickable-style--md clickable-style--primary clickable-style--brand"
+  data-bootstrap-override="clickable-style-primary"
   type="button"
 >
   Button
@@ -425,6 +422,7 @@ exports[`<Button /> PrimaryMedium story renders snapshot 1`] = `
 exports[`<Button /> PrimaryRightIcon story renders snapshot 1`] = `
 <button
   class="clickable-style button button--primary clickable-style--lg clickable-style--primary clickable-style--brand"
+  data-bootstrap-override="clickable-style-primary"
   type="button"
 >
   Button
@@ -444,6 +442,7 @@ exports[`<Button /> PrimaryRightIcon story renders snapshot 1`] = `
 exports[`<Button /> PrimarySmall story renders snapshot 1`] = `
 <button
   class="clickable-style button button--primary clickable-style--sm clickable-style--primary clickable-style--brand"
+  data-bootstrap-override="clickable-style-primary"
   type="button"
 >
   Button
@@ -453,6 +452,7 @@ exports[`<Button /> PrimarySmall story renders snapshot 1`] = `
 exports[`<Button /> SecondaryDisabled story renders snapshot 1`] = `
 <button
   class="clickable-style button button--secondary button--disabled clickable-style--lg clickable-style--secondary clickable-style--brand"
+  data-bootstrap-override="clickable-style-secondary"
   disabled=""
   tabindex="-1"
   type="button"
@@ -464,6 +464,7 @@ exports[`<Button /> SecondaryDisabled story renders snapshot 1`] = `
 exports[`<Button /> SecondaryError story renders snapshot 1`] = `
 <button
   class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--error"
+  data-bootstrap-override="clickable-style-secondary"
   type="button"
 >
   Button
@@ -473,6 +474,7 @@ exports[`<Button /> SecondaryError story renders snapshot 1`] = `
 exports[`<Button /> SecondaryLeftIcon story renders snapshot 1`] = `
 <button
   class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--brand"
+  data-bootstrap-override="clickable-style-secondary"
   type="button"
 >
   <svg
@@ -492,6 +494,7 @@ exports[`<Button /> SecondaryLeftIcon story renders snapshot 1`] = `
 exports[`<Button /> SecondaryMedium story renders snapshot 1`] = `
 <button
   class="clickable-style button button--secondary clickable-style--md clickable-style--secondary clickable-style--brand"
+  data-bootstrap-override="clickable-style-secondary"
   type="button"
 >
   Button
@@ -501,6 +504,7 @@ exports[`<Button /> SecondaryMedium story renders snapshot 1`] = `
 exports[`<Button /> SecondaryRightIcon story renders snapshot 1`] = `
 <button
   class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--brand"
+  data-bootstrap-override="clickable-style-secondary"
   type="button"
 >
   Button
@@ -520,6 +524,7 @@ exports[`<Button /> SecondaryRightIcon story renders snapshot 1`] = `
 exports[`<Button /> SecondarySmall story renders snapshot 1`] = `
 <button
   class="clickable-style button button--secondary clickable-style--sm clickable-style--secondary clickable-style--brand"
+  data-bootstrap-override="clickable-style-secondary"
   type="button"
 >
   Button
@@ -529,6 +534,7 @@ exports[`<Button /> SecondarySmall story renders snapshot 1`] = `
 exports[`<Button /> SecondarySuccess story renders snapshot 1`] = `
 <button
   class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--success"
+  data-bootstrap-override="clickable-style-secondary"
   type="button"
 >
   Button
@@ -538,6 +544,7 @@ exports[`<Button /> SecondarySuccess story renders snapshot 1`] = `
 exports[`<Button /> SecondaryWarning story renders snapshot 1`] = `
 <button
   class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--warning"
+  data-bootstrap-override="clickable-style-secondary"
   type="button"
 >
   Button
@@ -547,6 +554,7 @@ exports[`<Button /> SecondaryWarning story renders snapshot 1`] = `
 exports[`<Button /> Tertiary story renders snapshot 1`] = `
 <button
   class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--neutral"
+  data-bootstrap-override="clickable-style-secondary"
   type="button"
 >
   Button
@@ -556,6 +564,7 @@ exports[`<Button /> Tertiary story renders snapshot 1`] = `
 exports[`<Button /> TertiaryDisabled story renders snapshot 1`] = `
 <button
   class="clickable-style button button--secondary button--disabled clickable-style--lg clickable-style--secondary clickable-style--neutral"
+  data-bootstrap-override="clickable-style-secondary"
   disabled=""
   tabindex="-1"
   type="button"
@@ -567,6 +576,7 @@ exports[`<Button /> TertiaryDisabled story renders snapshot 1`] = `
 exports[`<Button /> TertiaryLeftIcon story renders snapshot 1`] = `
 <button
   class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--neutral"
+  data-bootstrap-override="clickable-style-secondary"
   type="button"
 >
   <svg
@@ -586,6 +596,7 @@ exports[`<Button /> TertiaryLeftIcon story renders snapshot 1`] = `
 exports[`<Button /> TertiaryMedium story renders snapshot 1`] = `
 <button
   class="clickable-style button button--secondary clickable-style--md clickable-style--secondary clickable-style--neutral"
+  data-bootstrap-override="clickable-style-secondary"
   type="button"
 >
   Button
@@ -595,6 +606,7 @@ exports[`<Button /> TertiaryMedium story renders snapshot 1`] = `
 exports[`<Button /> TertiaryRightIcon story renders snapshot 1`] = `
 <button
   class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--neutral"
+  data-bootstrap-override="clickable-style-secondary"
   type="button"
 >
   Button
@@ -614,6 +626,7 @@ exports[`<Button /> TertiaryRightIcon story renders snapshot 1`] = `
 exports[`<Button /> TertiarySmall story renders snapshot 1`] = `
 <button
   class="clickable-style button button--secondary clickable-style--sm clickable-style--secondary clickable-style--neutral"
+  data-bootstrap-override="clickable-style-secondary"
   type="button"
 >
   Button
@@ -623,6 +636,7 @@ exports[`<Button /> TertiarySmall story renders snapshot 1`] = `
 exports[`<Button /> passes class names down properly 1`] = `
 <button
   class="clickable-style button exampleClassName button--secondary clickable-style--lg clickable-style--secondary clickable-style--brand"
+  data-bootstrap-override="clickable-style-secondary"
   data-testid="example-class-name"
   type="button"
 >
@@ -633,6 +647,7 @@ exports[`<Button /> passes class names down properly 1`] = `
 exports[`<Button /> passes test ids down properly 1`] = `
 <button
   class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--brand"
+  data-bootstrap-override="clickable-style-secondary"
   data-testid="example-test-id"
   type="button"
 >
