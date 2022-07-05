@@ -33,6 +33,7 @@ exports[`<FieldNote /> WithText story renders snapshot 1`] = `
         Even 
         <a
           class="clickable-style clickable-style--link clickable-style--brand"
+          data-bootstrap-override="clickable-style-link"
           href="#"
         >
           text links
