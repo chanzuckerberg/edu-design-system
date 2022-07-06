@@ -1,41 +1,62 @@
 import { render } from '@testing-library/react';
 import React from 'react';
 import { ClickableStyle } from './ClickableStyle';
+import consoleWarnMockHelper from '../../../jest/helpers/consoleWarnMock';
 
 describe('<ClickableStyle />', () => {
-  test('throws an error for primary neutral combo', () => {
-    expect(() => {
-      render(<ClickableStyle status="neutral" variant="primary" />);
-    }).toThrow(/Invalid prop combo/);
+  const consoleWarnMock = consoleWarnMockHelper();
+
+  it('logs a warning for primary neutral combo', () => {
+    render(
+      <ClickableStyle as="button" status="neutral" variant="primary">
+        Clickable style
+      </ClickableStyle>,
+    );
+    expect(consoleWarnMock).toHaveBeenCalledTimes(1);
   });
 
-  test('throws an error for primary success combo', () => {
-    expect(() => {
-      render(<ClickableStyle status="success" variant="primary" />);
-    }).toThrow(/Invalid prop combo/);
+  it('logs a warning for primary success combo', () => {
+    render(
+      <ClickableStyle status="neutral" variant="primary">
+        Clickable style
+      </ClickableStyle>,
+    );
+    expect(consoleWarnMock).toHaveBeenCalledTimes(1);
   });
 
-  test('throws an error for primary warning combo', () => {
-    expect(() => {
-      render(<ClickableStyle status="warning" variant="primary" />);
-    }).toThrow(/Invalid prop combo/);
+  it('logs a warning for primary warning combo', () => {
+    render(
+      <ClickableStyle status="warning" variant="primary">
+        Clickable style
+      </ClickableStyle>,
+    );
+    expect(consoleWarnMock).toHaveBeenCalledTimes(1);
   });
 
-  test('throws an error for link success combo', () => {
-    expect(() => {
-      render(<ClickableStyle status="success" variant="link" />);
-    }).toThrow(/Invalid prop combo/);
+  it('logs a warning for link success combo', () => {
+    render(
+      <ClickableStyle status="success" variant="link">
+        Clickable style
+      </ClickableStyle>,
+    );
+    expect(consoleWarnMock).toHaveBeenCalledTimes(1);
   });
 
-  test('throws an error for link warning combo', () => {
-    expect(() => {
-      render(<ClickableStyle status="warning" variant="link" />);
-    }).toThrow(/Invalid prop combo/);
+  it('logs a warning for link warning combo', () => {
+    render(
+      <ClickableStyle status="warning" variant="link">
+        Clickable style
+      </ClickableStyle>,
+    );
+    expect(consoleWarnMock).toHaveBeenCalledTimes(1);
   });
 
-  test('throws an error for link error combo', () => {
-    expect(() => {
-      render(<ClickableStyle status="error" variant="link" />);
-    }).toThrow(/Invalid prop combo/);
+  it('logs a warning for link error combo', () => {
+    render(
+      <ClickableStyle status="error" variant="link">
+        Clickable style
+      </ClickableStyle>,
+    );
+    expect(consoleWarnMock).toHaveBeenCalledTimes(1);
   });
 });
