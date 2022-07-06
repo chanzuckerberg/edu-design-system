@@ -59,14 +59,14 @@ exports[`Modal Brand story renders snapshot 1`] = `
       class="footer__button-group button-group button-group--spacing-1x"
     >
       <button
-        class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--neutral"
+        class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
         data-bootstrap-override="clickable-style-secondary"
         type="button"
       >
         Button 1
       </button>
       <button
-        class="clickable-style button button--primary clickable-style--lg clickable-style--primary clickable-style--brand"
+        class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
         data-bootstrap-override="clickable-style-primary"
         type="button"
       >
@@ -126,14 +126,14 @@ exports[`Modal Default story renders snapshot 1`] = `
       class="footer__button-group button-group button-group--spacing-1x"
     >
       <button
-        class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--neutral"
+        class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
         data-bootstrap-override="clickable-style-secondary"
         type="button"
       >
         Button 1
       </button>
       <button
-        class="clickable-style button button--primary clickable-style--lg clickable-style--primary clickable-style--brand"
+        class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
         data-bootstrap-override="clickable-style-primary"
         type="button"
       >
@@ -205,14 +205,14 @@ exports[`Modal DefaultInteractive story renders snapshot 1`] = `
         class="footer__button-group button-group button-group--spacing-1x"
       >
         <button
-          class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--neutral"
+          class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
           data-bootstrap-override="clickable-style-secondary"
           type="button"
         >
           Button 1
         </button>
         <button
-          class="clickable-style button button--primary clickable-style--lg clickable-style--primary clickable-style--brand"
+          class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
           data-bootstrap-override="clickable-style-primary"
           type="button"
         >
@@ -273,14 +273,14 @@ exports[`Modal Mobile story renders snapshot 1`] = `
       class="footer__button-group button-group button-group--spacing-1x"
     >
       <button
-        class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--neutral"
+        class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
         data-bootstrap-override="clickable-style-secondary"
         type="button"
       >
         Button 1
       </button>
       <button
-        class="clickable-style button button--primary clickable-style--lg clickable-style--primary clickable-style--brand"
+        class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
         data-bootstrap-override="clickable-style-primary"
         type="button"
       >
@@ -350,14 +350,14 @@ exports[`Modal MobileBrand story renders snapshot 1`] = `
       class="footer__button-group button-group button-group--spacing-1x"
     >
       <button
-        class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--neutral"
+        class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
         data-bootstrap-override="clickable-style-secondary"
         type="button"
       >
         Button 1
       </button>
       <button
-        class="clickable-style button button--primary clickable-style--lg clickable-style--primary clickable-style--brand"
+        class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
         data-bootstrap-override="clickable-style-primary"
         type="button"
       >
@@ -417,14 +417,14 @@ exports[`Modal MobileLandscape story renders snapshot 1`] = `
       class="footer__button-group button-group button-group--spacing-1x"
     >
       <button
-        class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--neutral"
+        class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
         data-bootstrap-override="clickable-style-secondary"
         type="button"
       >
         Button 1
       </button>
       <button
-        class="clickable-style button button--primary clickable-style--lg clickable-style--primary clickable-style--brand"
+        class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
         data-bootstrap-override="clickable-style-primary"
         type="button"
       >
@@ -494,14 +494,14 @@ exports[`Modal MobileLandscapeBrand story renders snapshot 1`] = `
       class="footer__button-group button-group button-group--spacing-1x"
     >
       <button
-        class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--neutral"
+        class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
         data-bootstrap-override="clickable-style-secondary"
         type="button"
       >
         Button 1
       </button>
       <button
-        class="clickable-style button button--primary clickable-style--lg clickable-style--primary clickable-style--brand"
+        class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
         data-bootstrap-override="clickable-style-primary"
         type="button"
       >
@@ -623,14 +623,14 @@ exports[`Modal Tablet story renders snapshot 1`] = `
       class="footer__button-group button-group button-group--spacing-1x"
     >
       <button
-        class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--neutral"
+        class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
         data-bootstrap-override="clickable-style-secondary"
         type="button"
       >
         Button 1
       </button>
       <button
-        class="clickable-style button button--primary clickable-style--lg clickable-style--primary clickable-style--brand"
+        class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
         data-bootstrap-override="clickable-style-primary"
         type="button"
       >
@@ -700,14 +700,14 @@ exports[`Modal TabletBrand story renders snapshot 1`] = `
       class="footer__button-group button-group button-group--spacing-1x"
     >
       <button
-        class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--neutral"
+        class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
         data-bootstrap-override="clickable-style-secondary"
         type="button"
       >
         Button 1
       </button>
       <button
-        class="clickable-style button button--primary clickable-style--lg clickable-style--primary clickable-style--brand"
+        class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
         data-bootstrap-override="clickable-style-primary"
         type="button"
       >
@@ -797,14 +797,14 @@ exports[`Modal WithLongText story renders snapshot 1`] = `
         class="footer__button-group button-group button-group--spacing-1x"
       >
         <button
-          class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--neutral"
+          class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
           data-bootstrap-override="clickable-style-secondary"
           type="button"
         >
           Button 1
         </button>
         <button
-          class="clickable-style button button--primary clickable-style--lg clickable-style--primary clickable-style--brand"
+          class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
           data-bootstrap-override="clickable-style-primary"
           type="button"
         >
@@ -896,14 +896,14 @@ exports[`Modal WithLongTextScrollable story renders snapshot 1`] = `
         class="footer__button-group button-group button-group--spacing-1x"
       >
         <button
-          class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--neutral"
+          class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
           data-bootstrap-override="clickable-style-secondary"
           type="button"
         >
           Button 1
         </button>
         <button
-          class="clickable-style button button--primary clickable-style--lg clickable-style--primary clickable-style--brand"
+          class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
           data-bootstrap-override="clickable-style-primary"
           type="button"
         >
@@ -1058,14 +1058,14 @@ exports[`Modal WithStepper story renders snapshot 1`] = `
       class="footer__button-group button-group button-group--spacing-1x"
     >
       <button
-        class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--neutral"
+        class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
         data-bootstrap-override="clickable-style-secondary"
         type="button"
       >
         Button 1
       </button>
       <button
-        class="clickable-style button button--primary clickable-style--lg clickable-style--primary clickable-style--brand"
+        class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
         data-bootstrap-override="clickable-style-primary"
         type="button"
       >
@@ -1115,7 +1115,7 @@ exports[`Modal WithoutCloseButton story renders snapshot 1`] = `
       >
         <button
           aria-describedby="tippy-11"
-          class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--neutral"
+          class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
           data-bootstrap-override="clickable-style-secondary"
           tabindex="0"
           type="button"
@@ -1123,7 +1123,7 @@ exports[`Modal WithoutCloseButton story renders snapshot 1`] = `
           Button 1
         </button>
         <button
-          class="clickable-style button button--primary clickable-style--lg clickable-style--primary clickable-style--brand"
+          class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
           data-bootstrap-override="clickable-style-primary"
           type="button"
         >
