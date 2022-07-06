@@ -463,6 +463,19 @@
 }
 
 /**
+ * Margin 0 added becuase Safari has margin on buttons.
+ * 1) Needs `:where` pseudoclass to reduce specificity so class overrides
+ *    for margin can happen where used.
+ * 2) 2px padding gives the text breathing room in the focus state
+ * 3) 2px margin compensates for the padding so the link doesn't have too much space between it
+ *    and surrounding text
+ */
+:where(.clickable-style--link) {
+  padding: 2px; /* 2 */
+  margin: -2px; /* 3 */
+}
+
+/**
  * Link neutral clickable style
  */
 .clickable-style--link.clickable-style--neutral {
