@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
+import { useUID } from 'react-uid';
 import styles from './Table.module.css';
 import TableBody from '../TableBody';
 import TableCell from '../TableCell';
@@ -37,6 +38,10 @@ export interface Props {
    */
   highlightFirstCell?: boolean;
   /**
+   * HTML id attribute for accessibility.
+   */
+  id?: string;
+  /**
    * Stylistic variations:
    * - **zebra** yields a data table alternating colors every row
    */
@@ -59,6 +64,7 @@ export const Table = ({
   className,
   hideCaption = true,
   highlightFirstCell,
+  id,
   variant,
   ...other
 }: Props) => {
@@ -76,8 +82,11 @@ export const Table = ({
     hideCaption && 'u-is-vishidden',
   );
 
+  const generatedId = useUID();
+  const tableId = id || generatedId;
+
   return (
-    <table className={componentClassName} {...other}>
+    <table className={componentClassName} id={tableId} {...other}>
       <caption className={captionClassName}>{caption}</caption>
       {children}
     </table>

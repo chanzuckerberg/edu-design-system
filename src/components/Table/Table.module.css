@@ -142,7 +142,7 @@
 }
 
 .table__header-cell {
-  @mixin eds-theme-typography-label-sm;
+  @mixin eds-theme-typography-label-md;
   padding: var(--eds-size-1) var(--eds-size-1);
   text-align: left;
 

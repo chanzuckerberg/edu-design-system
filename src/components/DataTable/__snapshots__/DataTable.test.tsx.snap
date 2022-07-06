@@ -1,0 +1,730 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DataTable /> Default story renders snapshot 1`] = `
+<div
+  style="margin: 0.25rem;"
+>
+  <div
+    class="data-table"
+  >
+    <div
+      class="data-table__label-wrapper"
+    >
+      <label
+        class="data-table__label"
+        for="1"
+      >
+        Data Table
+      </label>
+    </div>
+    <table
+      class="table data-table__table table--zebra"
+      id="1"
+    >
+      <caption
+        class="table__caption u-is-vishidden"
+      >
+        This is a dataTable caption and it is required
+      </caption>
+      <thead
+        class="table__header"
+      >
+        <tr
+          class="table__row data-table__table"
+        >
+          <th
+            class="table__header-cell data-table__column data-table__header-cell table-header-cell--none"
+            selector="student"
+          >
+            Student
+          </th>
+          <th
+            class="table__header-cell data-table__column data-table__header-cell table-header-cell--none"
+            selector="status"
+          >
+            Status
+          </th>
+          <th
+            class="table__header-cell data-table__column data-table__header-cell table-header-cell--none"
+            selector="updated"
+          >
+            Updated
+          </th>
+          <th
+            class="table__header-cell data-table__column data-table__header-cell table-header-cell--none"
+            selector="completed"
+          >
+            Completed
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        class="table__body"
+      >
+        <tr
+          class="table__row"
+        >
+          <td
+            class="table__cell"
+            data-heading="Student"
+            id="row0-student"
+          >
+            Flores, Juanita
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Status"
+            id="row1-status"
+          >
+            Needs Feedback
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Updated"
+            id="row2-updated"
+          >
+            5/1/2022
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Completed"
+            id="row3-completed"
+          >
+            50%
+          </td>
+        </tr>
+        <tr
+          class="table__row"
+        >
+          <td
+            class="table__cell"
+            data-heading="Student"
+            id="row0-student"
+          >
+            Miles, Esther
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Status"
+            id="row1-status"
+          >
+            Stop and Revise
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Updated"
+            id="row2-updated"
+          >
+            6/13/2022
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Completed"
+            id="row3-completed"
+          >
+            33%
+          </td>
+        </tr>
+        <tr
+          class="table__row"
+        >
+          <td
+            class="table__cell"
+            data-heading="Student"
+            id="row0-student"
+          >
+            Black, Marvin
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Status"
+            id="row1-status"
+          >
+            Finish Work
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Updated"
+            id="row2-updated"
+          >
+            4/12/2022
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Completed"
+            id="row3-completed"
+          >
+            20%
+          </td>
+        </tr>
+        <tr
+          class="table__row"
+        >
+          <td
+            class="table__cell"
+            data-heading="Student"
+            id="row0-student"
+          >
+            Nguyen, Savannah
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Status"
+            id="row1-status"
+          >
+            Needs Feedback
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Updated"
+            id="row2-updated"
+          >
+            12/9/2021
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Completed"
+            id="row3-completed"
+          >
+            80%
+          </td>
+        </tr>
+        <tr
+          class="table__row"
+        >
+          <td
+            class="table__cell"
+            data-heading="Student"
+            id="row0-student"
+          >
+            Alexander, Leslie
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Status"
+            id="row1-status"
+          >
+            Continue Working
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Updated"
+            id="row2-updated"
+          >
+            5/29/2022
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Completed"
+            id="row3-completed"
+          >
+            20%
+          </td>
+        </tr>
+        <tr
+          class="table__row"
+        >
+          <td
+            class="table__cell"
+            data-heading="Student"
+            id="row0-student"
+          >
+            Bell, Jerome
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Status"
+            id="row1-status"
+          >
+            Review Feedback
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Updated"
+            id="row2-updated"
+          >
+            2/21/2022
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Completed"
+            id="row3-completed"
+          >
+            5%
+          </td>
+        </tr>
+        <tr
+          class="table__row"
+        >
+          <td
+            class="table__cell"
+            data-heading="Student"
+            id="row0-student"
+          >
+            Richards, Ronald
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Status"
+            id="row1-status"
+          >
+            Needs Feedback
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Updated"
+            id="row2-updated"
+          >
+            6/28/2022
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Completed"
+            id="row3-completed"
+          >
+            60%
+          </td>
+        </tr>
+        <tr
+          class="table__row"
+        >
+          <td
+            class="table__cell"
+            data-heading="Student"
+            id="row0-student"
+          >
+            Simmons, Brooklyn
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Status"
+            id="row1-status"
+          >
+            Stop and Revise
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Updated"
+            id="row2-updated"
+          >
+            4/18/2022
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Completed"
+            id="row3-completed"
+          >
+            40%
+          </td>
+        </tr>
+        <tr
+          class="table__row"
+        >
+          <td
+            class="table__cell"
+            data-heading="Student"
+            id="row0-student"
+          >
+            Williamson, Cameron
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Status"
+            id="row1-status"
+          >
+            Finish Work
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Updated"
+            id="row2-updated"
+          >
+            5/14/2022
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Completed"
+            id="row3-completed"
+          >
+            50%
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
+
+exports[`<DataTable /> Filters story renders snapshot 1`] = `
+<div
+  style="margin: 0.25rem;"
+>
+  <div
+    class="data-table data-table--filters"
+  >
+    <div
+      class="data-table__label-wrapper"
+    >
+      <label
+        class="data-table__label"
+        for="3"
+      >
+        Data Table
+      </label>
+      <button
+        class="clickable-style button button--secondary clickable-style--md clickable-style--secondary clickable-style--brand"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          class="icon"
+          fill="currentColor"
+          height="1.375rem"
+          style="--icon-size: 1.375rem;"
+          width="1.375rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="test-file-stub#filter-list"
+          />
+        </svg>
+        Filters
+      </button>
+    </div>
+    <table
+      class="table data-table__table table--zebra"
+      id="3"
+    >
+      <caption
+        class="table__caption u-is-vishidden"
+      >
+        This is a dataTable caption and it is required
+      </caption>
+      <thead
+        class="table__header"
+      >
+        <tr
+          class="table__row data-table__table"
+        >
+          <th
+            class="table__header-cell data-table__column data-table__header-cell table-header-cell--none"
+            selector="student"
+          >
+            Student
+          </th>
+          <th
+            class="table__header-cell data-table__column data-table__header-cell table-header-cell--none"
+            selector="status"
+          >
+            Status
+          </th>
+          <th
+            class="table__header-cell data-table__column data-table__header-cell table-header-cell--none"
+            selector="updated"
+          >
+            Updated
+          </th>
+          <th
+            class="table__header-cell data-table__column data-table__header-cell table-header-cell--none"
+            selector="completed"
+          >
+            Completed
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        class="table__body"
+      >
+        <tr
+          class="table__row"
+        >
+          <td
+            class="table__cell"
+            data-heading="Student"
+            id="row0-student"
+          >
+            Flores, Juanita
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Status"
+            id="row1-status"
+          >
+            Needs Feedback
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Updated"
+            id="row2-updated"
+          >
+            5/1/2022
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Completed"
+            id="row3-completed"
+          >
+            50%
+          </td>
+        </tr>
+        <tr
+          class="table__row"
+        >
+          <td
+            class="table__cell"
+            data-heading="Student"
+            id="row0-student"
+          >
+            Miles, Esther
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Status"
+            id="row1-status"
+          >
+            Stop and Revise
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Updated"
+            id="row2-updated"
+          >
+            6/13/2022
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Completed"
+            id="row3-completed"
+          >
+            33%
+          </td>
+        </tr>
+        <tr
+          class="table__row"
+        >
+          <td
+            class="table__cell"
+            data-heading="Student"
+            id="row0-student"
+          >
+            Black, Marvin
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Status"
+            id="row1-status"
+          >
+            Finish Work
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Updated"
+            id="row2-updated"
+          >
+            4/12/2022
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Completed"
+            id="row3-completed"
+          >
+            20%
+          </td>
+        </tr>
+        <tr
+          class="table__row"
+        >
+          <td
+            class="table__cell"
+            data-heading="Student"
+            id="row0-student"
+          >
+            Nguyen, Savannah
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Status"
+            id="row1-status"
+          >
+            Needs Feedback
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Updated"
+            id="row2-updated"
+          >
+            12/9/2021
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Completed"
+            id="row3-completed"
+          >
+            80%
+          </td>
+        </tr>
+        <tr
+          class="table__row"
+        >
+          <td
+            class="table__cell"
+            data-heading="Student"
+            id="row0-student"
+          >
+            Alexander, Leslie
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Status"
+            id="row1-status"
+          >
+            Continue Working
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Updated"
+            id="row2-updated"
+          >
+            5/29/2022
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Completed"
+            id="row3-completed"
+          >
+            20%
+          </td>
+        </tr>
+        <tr
+          class="table__row"
+        >
+          <td
+            class="table__cell"
+            data-heading="Student"
+            id="row0-student"
+          >
+            Bell, Jerome
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Status"
+            id="row1-status"
+          >
+            Review Feedback
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Updated"
+            id="row2-updated"
+          >
+            2/21/2022
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Completed"
+            id="row3-completed"
+          >
+            5%
+          </td>
+        </tr>
+        <tr
+          class="table__row"
+        >
+          <td
+            class="table__cell"
+            data-heading="Student"
+            id="row0-student"
+          >
+            Richards, Ronald
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Status"
+            id="row1-status"
+          >
+            Needs Feedback
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Updated"
+            id="row2-updated"
+          >
+            6/28/2022
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Completed"
+            id="row3-completed"
+          >
+            60%
+          </td>
+        </tr>
+        <tr
+          class="table__row"
+        >
+          <td
+            class="table__cell"
+            data-heading="Student"
+            id="row0-student"
+          >
+            Simmons, Brooklyn
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Status"
+            id="row1-status"
+          >
+            Stop and Revise
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Updated"
+            id="row2-updated"
+          >
+            4/18/2022
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Completed"
+            id="row3-completed"
+          >
+            40%
+          </td>
+        </tr>
+        <tr
+          class="table__row"
+        >
+          <td
+            class="table__cell"
+            data-heading="Student"
+            id="row0-student"
+          >
+            Williamson, Cameron
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Status"
+            id="row1-status"
+          >
+            Finish Work
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Updated"
+            id="row2-updated"
+          >
+            5/14/2022
+          </td>
+          <td
+            class="table__cell"
+            data-heading="Completed"
+            id="row3-completed"
+          >
+            50%
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;

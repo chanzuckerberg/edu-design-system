@@ -1,0 +1,32 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    # DATA TABLE
+\*------------------------------------*/
+
+/**
+ * Wraps the label and the optional filter button
+ * 1) Vertically align items in this row at the bottom; this is only needed
+ *    when the label text breaks to multiple rows; the filter button will
+ *    remain aligned to the bottom of this row
+ * 2) If filter button is present, position it at the end of the flex row
+ */
+.data-table__label-wrapper {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: var(--eds-size-2);
+
+  .data-table--filters & {
+    justify-content: space-between; /* 2 */
+  }
+}
+
+/**
+ * The label title above the data table provides an accessible name.
+ */
+.data-table__label {
+  @mixin eds-typography-preset-003;
+  color: var(--eds-theme-color-text-neutral-strong);
+}
+
+

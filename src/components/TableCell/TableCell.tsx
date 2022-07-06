@@ -13,8 +13,9 @@ export interface Props {
   behavior?: string;
   /**
    * Child node(s) that can be nested inside component
+   * 1) When data is passed to TableCell from the DataTable component from a data source, it will be in a key:string/value:string pair, so we add the utility type Record<string, string> for an object type whose property keys and values are each of type string.
    */
-  children?: ReactNode;
+  children?: ReactNode | Record<string, string>;
   /**
    * CSS class names that can be appended to the component.
    */

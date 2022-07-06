@@ -3,6 +3,7 @@
 exports[`<Table /> AlignTableCellContentCenter story renders snapshot 1`] = `
 <table
   class="table"
+  id="5"
 >
   <caption
     class="table__caption u-is-vishidden"
@@ -188,6 +189,7 @@ exports[`<Table /> AlignTableCellContentCenter story renders snapshot 1`] = `
 exports[`<Table /> AlignTableCellContentRight story renders snapshot 1`] = `
 <table
   class="table"
+  id="6"
 >
   <caption
     class="table__caption u-is-vishidden"
@@ -373,6 +375,7 @@ exports[`<Table /> AlignTableCellContentRight story renders snapshot 1`] = `
 exports[`<Table /> Default story renders snapshot 1`] = `
 <table
   class="table"
+  id="1"
 >
   <caption
     class="table__caption u-is-vishidden"
@@ -536,6 +539,7 @@ exports[`<Table /> Default story renders snapshot 1`] = `
 exports[`<Table /> Stacked story renders snapshot 1`] = `
 <table
   class="table table--stacked"
+  id="4"
 >
   <caption
     class="table__caption u-is-vishidden"
@@ -719,6 +723,7 @@ exports[`<Table /> Stacked story renders snapshot 1`] = `
 exports[`<Table /> StackedTemplate story renders snapshot 1`] = `
 <table
   class="table"
+  id="2"
 >
   <caption
     class="table__caption u-is-vishidden"
@@ -902,6 +907,7 @@ exports[`<Table /> StackedTemplate story renders snapshot 1`] = `
 exports[`<Table /> Zebra story renders snapshot 1`] = `
 <table
   class="table table--zebra"
+  id="3"
 >
   <caption
     class="table__caption u-is-vishidden"
