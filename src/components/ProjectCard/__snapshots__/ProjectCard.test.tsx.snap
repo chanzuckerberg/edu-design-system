@@ -51,7 +51,7 @@ exports[`<ProjectCard /> Default story renders snapshot 1`] = `
       <button
         aria-expanded="false"
         aria-label="Open project dropdown"
-        class="clickable-style button project-card__menu-button button--icon clickable-style--sm clickable-style--icon clickable-style--neutral"
+        class="clickable-style clickable-style--sm clickable-style--icon clickable-style--neutral button project-card__menu-button button--icon"
         data-bootstrap-override="clickable-style-icon"
         type="button"
       >
@@ -215,7 +215,7 @@ exports[`<ProjectCard /> Draggable story renders snapshot 1`] = `
       <button
         aria-expanded="false"
         aria-label="Open project dropdown"
-        class="clickable-style button project-card__menu-button button--icon clickable-style--sm clickable-style--icon clickable-style--neutral"
+        class="clickable-style clickable-style--sm clickable-style--icon clickable-style--neutral button project-card__menu-button button--icon"
         data-bootstrap-override="clickable-style-icon"
         type="button"
       >

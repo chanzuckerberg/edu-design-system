@@ -131,7 +131,6 @@ export const ClickableStyle = React.forwardRef(
     const componentClassName = clsx(
       // Base styles
       styles['clickable-style'],
-      className,
       // Sizes
       variant !== 'link' && [
         size === 'sm' && styles['clickable-style--sm'],
@@ -151,6 +150,7 @@ export const ClickableStyle = React.forwardRef(
       status === 'error' && styles['clickable-style--error'],
       // Other options
       fullWidth && styles['clickable-style--full-width'],
+      className,
     );
 
     const dataAttribute = `clickable-style-${variant}`;

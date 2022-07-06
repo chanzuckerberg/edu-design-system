@@ -6,7 +6,7 @@ exports[`<ButtonDropdown /> Default story renders snapshot 1`] = `
 >
   <button
     aria-expanded="false"
-    class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--brand"
+    class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
     data-bootstrap-override="clickable-style-secondary"
     type="button"
   >
@@ -122,7 +122,7 @@ exports[`<ButtonDropdown /> PositionBottomRight story renders snapshot 1`] = `
 >
   <button
     aria-expanded="false"
-    class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--brand"
+    class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
     data-bootstrap-override="clickable-style-secondary"
     type="button"
   >
@@ -238,7 +238,7 @@ exports[`<ButtonDropdown /> PositionTopLeft story renders snapshot 1`] = `
 >
   <button
     aria-expanded="false"
-    class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--brand"
+    class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
     data-bootstrap-override="clickable-style-secondary"
     type="button"
   >
@@ -354,7 +354,7 @@ exports[`<ButtonDropdown /> PositionTopRight story renders snapshot 1`] = `
 >
   <button
     aria-expanded="false"
-    class="clickable-style button button--secondary clickable-style--lg clickable-style--secondary clickable-style--brand"
+    class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
     data-bootstrap-override="clickable-style-secondary"
     type="button"
   >
