@@ -124,11 +124,7 @@ export const DataTable = ({
             {rows.map((row, rowIndex) => (
               <Table.Row key={rowIndex}>
                 {columns.map((col, colIndex) => (
-                  <Table.Cell
-                    data-heading={col.title}
-                    id={`row${colIndex}-${col.selector}`}
-                    key={colIndex}
-                  >
+                  <Table.Cell data-heading={col.title} key={colIndex}>
                     {rows[rowIndex][col.selector]}
                   </Table.Cell>
                 ))}
