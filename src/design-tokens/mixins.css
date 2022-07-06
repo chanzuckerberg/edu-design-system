@@ -72,7 +72,8 @@
    * Pseudo element with background color for focus state
    * 1) Uses an absolutely-positioned pseudo element with a background color to animate it up and down
    * 2) The pseudo element has a negative z-index to position it behind the text
-   * 3) The element is pushed down out of sight to hide it
+   * 3) The element is pushed down out of sight to hide it. Needs to be 101%, not 100%, to or the very top
+   *    will be visible
    * 4) We set transform-origin: to bottom so it animates up from the bottom, not out from the middle
    * 5) And we pull it back up on focus so it's visible
    */
@@ -87,7 +88,7 @@
     z-index: var(--eds-z-index-bottom); /* 2 */
     background-color: var(--eds-theme-color-background-brand-primary-strong);
 
-    transform: translateY(100%); /* 3 */
+    transform: translateY(101%); /* 3 */
     transform-origin: bottom; /* 4 */
     transition: transform var(--eds-anim-move-medium) var(--eds-anim-ease);
 
