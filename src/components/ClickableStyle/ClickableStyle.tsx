@@ -78,7 +78,8 @@ const throwInvalidPropComboError = (variant: Variant, status: Status) => {
     return `'${validStatuses[0]}' and '${validStatuses[1]}'`;
   };
 
-  throw new Error(
+  // TODO: change to `throw new Error()` when invalid combos have been removed from downstream product
+  console.warn(
     // We have to add the strings and variables together because string interpolation doesn't work in console messages.
     "\n*** Invalid prop combo ***:\n\nThe `Button` and `Link` components do not support using the '" +
       variant +
@@ -110,7 +111,7 @@ const throwInvalidPropComboError = (variant: Variant, status: Status) => {
 export const ClickableStyle = React.forwardRef(
   <IComponent extends React.ElementType>(
     {
-      as: Component,
+      as: Component = 'button',
       className,
       fullWidth,
       size = 'lg',
