@@ -64,7 +64,6 @@ export interface Props {
  * HTML table cell of the `Table` component
  */
 export const TableCell = ({
-  behavior,
   children,
   className,
   as = 'td',
