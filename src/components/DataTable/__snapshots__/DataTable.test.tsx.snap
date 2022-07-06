@@ -12,7 +12,6 @@ exports[`<DataTable /> Default story renders snapshot 1`] = `
     >
       <label
         class="data-table__label"
-        for="1"
       >
         Data Table
       </label>
@@ -367,7 +366,6 @@ exports[`<DataTable /> Filters story renders snapshot 1`] = `
     >
       <label
         class="data-table__label"
-        for="3"
       >
         Data Table
       </label>
