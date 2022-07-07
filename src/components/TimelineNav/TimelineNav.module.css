@@ -18,10 +18,7 @@
     background: var(--eds-theme-color-background-neutral-default);
     border-bottom-left-radius: var(--eds-border-radius-xl);
     border-top-left-radius: var(--eds-border-radius-xl);
-    border-width: var(--eds-theme-border-width);
-    border-color: var(--eds-theme-color-border-neutral-subtle);
-    border-style: none;
-    transition: unset;
+    transition: none;
     overflow: visible;
   }
 
