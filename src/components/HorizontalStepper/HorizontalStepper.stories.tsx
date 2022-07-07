@@ -2,6 +2,7 @@ import { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
 import { HorizontalStepper } from './HorizontalStepper';
+import styles from './HorizontalStepper.stories.module.css';
 import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';
 import HorizontalStep from '../HorizontalStep';
@@ -123,4 +124,10 @@ export const HorizontalStepsDifferentNumbers: StoryObj<Args> = {
       <HorizontalStep stepNumber={65} text="Horizontal step" variant="active" />
     </ol>
   ),
+};
+
+export const CappedLine: StoryObj<Args> = {
+  args: {
+    linesClassName: styles['capped-line'],
+  },
 };

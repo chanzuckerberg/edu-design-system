@@ -14,6 +14,10 @@ export type Props = {
    */
   className?: string;
   /**
+   * CSS class names that can be appended to the separating horizontal lines.
+   */
+  linesClassName?: string;
+  /**
    * Ordered list of step texts.
    */
   steps: string[];
@@ -32,7 +36,12 @@ export type Props = {
  * <HorizontalStepper activeIndex={0} steps={['Step 1', 'Step 2', 'Step 3']} />
  * ```
  */
-export const HorizontalStepper = ({ activeIndex, className, steps }: Props) => {
+export const HorizontalStepper = ({
+  activeIndex,
+  className,
+  linesClassName,
+  steps,
+}: Props) => {
   /**
    * Warns dev if the activeIndex is invalid
    * 1) Negative conditional to account for 'NaN' values which pass the number type check since "typeof NaN === 'number'"
@@ -56,14 +65,19 @@ export const HorizontalStepper = ({ activeIndex, className, steps }: Props) => {
   const stepComponents: React.ReactNode[] = [];
   steps.forEach((step, index) => {
     /* 1 */
-    if (index > 0)
+    if (index > 0) {
+      const stepperLinesClassName = clsx(
+        styles['horizontal-stepper__line'],
+        linesClassName,
+      );
       stepComponents.push(
         <hr
           aria-hidden /* 2 */
-          className={styles['horizontal-stepper__line']}
+          className={stepperLinesClassName}
           key={`horizontal-stepper__line-${index}`}
         />,
       );
+    }
 
     /* 3 */
     const stepVariant =

@@ -34,7 +34,7 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
             >
               <svg
                 class="icon number-icon__icon"
-                fill="#878C90"
+                fill="#C0C4C8"
                 height="0.5rem"
                 role="img"
                 style="--icon-size: 0.5rem;"
@@ -307,7 +307,7 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
             >
               <svg
                 class="icon number-icon__icon"
-                fill="#878C90"
+                fill="#C0C4C8"
                 height="0.5rem"
                 role="img"
                 style="--icon-size: 0.5rem;"
