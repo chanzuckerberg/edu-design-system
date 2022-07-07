@@ -32,12 +32,12 @@ exports[`<HorizontalStepper /> CappedLine story renders snapshot 1`] = `
     >
       <span
         aria-label="current step 2 Step 2"
-        class="text text--sm text--base number-icon number-icon--base number-icon--incomplete horizontal-step__number-icon"
+        class="text text--sm text--base number-icon number-icon--base number-icon--incomplete horizontal-step__number-icon horizontal-step__number-icon--incomplete"
         role="img"
       >
         <svg
           class="icon number-icon__icon"
-          fill="#C0C4C8"
+          fill="inherit"
           height="0.5rem"
           role="img"
           style="--icon-size: 0.5rem;"
@@ -69,12 +69,12 @@ exports[`<HorizontalStepper /> CappedLine story renders snapshot 1`] = `
     >
       <span
         aria-label="current step 3 Step 3"
-        class="text text--sm text--base number-icon number-icon--base number-icon--incomplete horizontal-step__number-icon"
+        class="text text--sm text--base number-icon number-icon--base number-icon--incomplete horizontal-step__number-icon horizontal-step__number-icon--incomplete"
         role="img"
       >
         <svg
           class="icon number-icon__icon"
-          fill="#C0C4C8"
+          fill="inherit"
           height="0.5rem"
           role="img"
           style="--icon-size: 0.5rem;"
@@ -106,12 +106,12 @@ exports[`<HorizontalStepper /> CappedLine story renders snapshot 1`] = `
     >
       <span
         aria-label="current step 4 Step 4"
-        class="text text--sm text--base number-icon number-icon--base number-icon--incomplete horizontal-step__number-icon"
+        class="text text--sm text--base number-icon number-icon--base number-icon--incomplete horizontal-step__number-icon horizontal-step__number-icon--incomplete"
         role="img"
       >
         <svg
           class="icon number-icon__icon"
-          fill="#C0C4C8"
+          fill="inherit"
           height="0.5rem"
           role="img"
           style="--icon-size: 0.5rem;"
@@ -143,12 +143,12 @@ exports[`<HorizontalStepper /> CappedLine story renders snapshot 1`] = `
     >
       <span
         aria-label="current step 5 Step 5"
-        class="text text--sm text--base number-icon number-icon--base number-icon--incomplete horizontal-step__number-icon"
+        class="text text--sm text--base number-icon number-icon--base number-icon--incomplete horizontal-step__number-icon horizontal-step__number-icon--incomplete"
         role="img"
       >
         <svg
           class="icon number-icon__icon"
-          fill="#C0C4C8"
+          fill="inherit"
           height="0.5rem"
           role="img"
           style="--icon-size: 0.5rem;"
@@ -349,12 +349,12 @@ exports[`<HorizontalStepper /> HorizontalSteps story renders snapshot 1`] = `
     >
       <span
         aria-label="current step 1 Horizontal step"
-        class="text text--sm text--base number-icon number-icon--base number-icon--incomplete horizontal-step__number-icon"
+        class="text text--sm text--base number-icon number-icon--base number-icon--incomplete horizontal-step__number-icon horizontal-step__number-icon--incomplete"
         role="img"
       >
         <svg
           class="icon number-icon__icon"
-          fill="#C0C4C8"
+          fill="inherit"
           height="0.5rem"
           role="img"
           style="--icon-size: 0.5rem;"
@@ -707,12 +707,12 @@ exports[`<HorizontalStepper /> OnFirstStep story renders snapshot 1`] = `
     >
       <span
         aria-label="current step 2 Step 2"
-        class="text text--sm text--base number-icon number-icon--base number-icon--incomplete horizontal-step__number-icon"
+        class="text text--sm text--base number-icon number-icon--base number-icon--incomplete horizontal-step__number-icon horizontal-step__number-icon--incomplete"
         role="img"
       >
         <svg
           class="icon number-icon__icon"
-          fill="#C0C4C8"
+          fill="inherit"
           height="0.5rem"
           role="img"
           style="--icon-size: 0.5rem;"
@@ -744,12 +744,12 @@ exports[`<HorizontalStepper /> OnFirstStep story renders snapshot 1`] = `
     >
       <span
         aria-label="current step 3 Step 3"
-        class="text text--sm text--base number-icon number-icon--base number-icon--incomplete horizontal-step__number-icon"
+        class="text text--sm text--base number-icon number-icon--base number-icon--incomplete horizontal-step__number-icon horizontal-step__number-icon--incomplete"
         role="img"
       >
         <svg
           class="icon number-icon__icon"
-          fill="#C0C4C8"
+          fill="inherit"
           height="0.5rem"
           role="img"
           style="--icon-size: 0.5rem;"
@@ -781,12 +781,12 @@ exports[`<HorizontalStepper /> OnFirstStep story renders snapshot 1`] = `
     >
       <span
         aria-label="current step 4 Step 4"
-        class="text text--sm text--base number-icon number-icon--base number-icon--incomplete horizontal-step__number-icon"
+        class="text text--sm text--base number-icon number-icon--base number-icon--incomplete horizontal-step__number-icon horizontal-step__number-icon--incomplete"
         role="img"
       >
         <svg
           class="icon number-icon__icon"
-          fill="#C0C4C8"
+          fill="inherit"
           height="0.5rem"
           role="img"
           style="--icon-size: 0.5rem;"
@@ -818,12 +818,12 @@ exports[`<HorizontalStepper /> OnFirstStep story renders snapshot 1`] = `
     >
       <span
         aria-label="current step 5 Step 5"
-        class="text text--sm text--base number-icon number-icon--base number-icon--incomplete horizontal-step__number-icon"
+        class="text text--sm text--base number-icon number-icon--base number-icon--incomplete horizontal-step__number-icon horizontal-step__number-icon--incomplete"
         role="img"
       >
         <svg
           class="icon number-icon__icon"
-          fill="#C0C4C8"
+          fill="inherit"
           height="0.5rem"
           role="img"
           style="--icon-size: 0.5rem;"
@@ -1095,12 +1095,12 @@ exports[`<HorizontalStepper /> SomeCompletedSteps story renders snapshot 1`] = `
     >
       <span
         aria-label="current step 4 Step 4"
-        class="text text--sm text--base number-icon number-icon--base number-icon--incomplete horizontal-step__number-icon"
+        class="text text--sm text--base number-icon number-icon--base number-icon--incomplete horizontal-step__number-icon horizontal-step__number-icon--incomplete"
         role="img"
       >
         <svg
           class="icon number-icon__icon"
-          fill="#C0C4C8"
+          fill="inherit"
           height="0.5rem"
           role="img"
           style="--icon-size: 0.5rem;"
@@ -1132,12 +1132,12 @@ exports[`<HorizontalStepper /> SomeCompletedSteps story renders snapshot 1`] = `
     >
       <span
         aria-label="current step 5 Step 5"
-        class="text text--sm text--base number-icon number-icon--base number-icon--incomplete horizontal-step__number-icon"
+        class="text text--sm text--base number-icon number-icon--base number-icon--incomplete horizontal-step__number-icon horizontal-step__number-icon--incomplete"
         role="img"
       >
         <svg
           class="icon number-icon__icon"
-          fill="#C0C4C8"
+          fill="inherit"
           height="0.5rem"
           role="img"
           style="--icon-size: 0.5rem;"

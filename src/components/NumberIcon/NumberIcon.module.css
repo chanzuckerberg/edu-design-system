@@ -28,6 +28,10 @@
 
 .number-icon--incomplete {
   border: none;
+  fill: var(
+    --number-icon-incomplete-fill,
+    var(--eds-theme-color-icon-neutral-subtle)
+  );
 }
 
 /**
