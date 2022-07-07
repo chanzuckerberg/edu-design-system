@@ -1,0 +1,96 @@
+{
+  "eds": {
+    "font-family": {
+      "primary": {
+        "value": "'Graphik', sans-serif"
+      },
+      "secondary": {
+        "value": "'Open Sans', sans-serif"
+      }
+    },
+    "font-size": {
+      "base": {
+        "value": "16px",
+        "comment": "Base font size for design system in px"
+      },
+      "40": {
+        "value": "2.5rem"
+      },
+      "32": {
+        "value": "2rem"
+      },
+      "28": {
+        "value": "1.75rem"
+      },
+      "24": {
+        "value": "1.5rem"
+      },
+      "18": {
+        "value": "1.125rem"
+      },
+      "16": {
+        "value": "1rem"
+      },
+      "14": {
+        "value": "0.875rem"
+      },
+      "12": {
+        "value": "0.75rem"
+      },
+      "11": {
+        "value": "0.688rem"
+      }
+    },
+    "font-weight": {
+      "light": {
+        "value": "400"
+      },
+      "medium": {
+        "value": "500"
+      },
+      "bold": {
+        "value": "600"
+      }
+    },
+    "letter-spacing": {
+      "sm": {
+        "value": "0.5px"
+      }
+    }
+  },
+  "legacy": {
+    "size": {
+      "font": {
+        "h1": {
+          "value": "1.5rem"
+        },
+        "h2": {
+          "value": "1.125rem"
+        },
+        "body": {
+          "value": "1rem"
+        },
+        "sm": {
+          "value": "0.875rem"
+        },
+        "xs": {
+          "value": "0.75rem"
+        }
+      },
+      "line-height": {
+        "h1": {
+          "value": "2rem"
+        },
+        "body": {
+          "value": "1.5rem"
+        },
+        "sm": {
+          "value": "1.25rem"
+        },
+        "xs": {
+          "value": "1rem"
+        }
+      }
+    }
+  }
+}
