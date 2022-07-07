@@ -34,6 +34,10 @@
   color: inherit;
 }
 
+.horizontal-step__number-icon--incomplete {
+  --number-icon-incomplete-fill: var(--eds-theme-color-icon-disabled);
+}
+
 /**
  * Horizontal Step Complete
  */

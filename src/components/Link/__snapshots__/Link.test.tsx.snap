@@ -535,7 +535,7 @@ exports[`<Link /> TertiarySmall story renders snapshot 1`] = `
 
 exports[`<Link /> passes class names down properly 1`] = `
 <a
-  class="clickable-style exampleClassName clickable-style--link clickable-style--brand"
+  class="clickable-style clickable-style--link clickable-style--brand exampleClassName"
   data-bootstrap-override="clickable-style-link"
   data-testid="example-class-name"
   href="/"

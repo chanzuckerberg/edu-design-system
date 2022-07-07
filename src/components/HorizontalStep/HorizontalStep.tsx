@@ -47,6 +47,11 @@ export const HorizontalStep = ({
   /**
    * Determines which icon to display.
    */
+  const numberIconClassName = clsx(
+    styles['horizontal-step__number-icon'],
+    variant === 'incomplete' &&
+      styles['horizontal-step__number-icon--incomplete'],
+  );
   const icon =
     variant === 'complete' ? (
       <Icon
@@ -59,7 +64,7 @@ export const HorizontalStep = ({
     ) : (
       <NumberIcon
         aria-label={`current step ${stepNumber} ${text}`}
-        className={styles['horizontal-step__number-icon']}
+        className={numberIconClassName}
         incomplete={variant !== 'active'}
         number={stepNumber}
         numberIconTitle={`incomplete step ${stepNumber} ${text}`}

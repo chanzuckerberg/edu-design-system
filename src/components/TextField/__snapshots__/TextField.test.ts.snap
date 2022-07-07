@@ -163,7 +163,7 @@ exports[`<TextField /> InputWithin story renders snapshot 1`] = `
         class="text-field__input-within"
       >
         <button
-          class="clickable-style button button--icon clickable-style--sm clickable-style--icon clickable-style--brand"
+          class="clickable-style clickable-style--sm clickable-style--icon clickable-style--brand button button--icon"
           data-bootstrap-override="clickable-style-icon"
           type="button"
         >

@@ -6,7 +6,7 @@ exports[`<Popover /> BottomLeft story renders snapshot 1`] = `
   style="position: relative; display: inline-block; margin-top: 12rem;"
 >
   <button
-    class="clickable-style button button--primary clickable-style--lg clickable-style--primary clickable-style--brand"
+    class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
     data-bootstrap-override="clickable-style-primary"
     type="button"
   >
@@ -48,7 +48,7 @@ exports[`<Popover /> BottomLeft story renders snapshot 1`] = `
               class="popover__header-title-after"
             >
               <button
-                class="clickable-style button button--icon clickable-style--sm clickable-style--icon clickable-style--brand"
+                class="clickable-style clickable-style--sm clickable-style--icon clickable-style--brand button button--icon"
                 data-bootstrap-override="clickable-style-icon"
                 type="button"
               >
@@ -277,7 +277,7 @@ exports[`<Popover /> BottomRight story renders snapshot 1`] = `
   style="position: relative; display: inline-block; margin-top: 12rem;"
 >
   <button
-    class="clickable-style button button--primary clickable-style--lg clickable-style--primary clickable-style--brand"
+    class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
     data-bootstrap-override="clickable-style-primary"
     type="button"
   >
@@ -319,7 +319,7 @@ exports[`<Popover /> BottomRight story renders snapshot 1`] = `
               class="popover__header-title-after"
             >
               <button
-                class="clickable-style button button--icon clickable-style--sm clickable-style--icon clickable-style--brand"
+                class="clickable-style clickable-style--sm clickable-style--icon clickable-style--brand button button--icon"
                 data-bootstrap-override="clickable-style-icon"
                 type="button"
               >
@@ -548,7 +548,7 @@ exports[`<Popover /> Default story renders snapshot 1`] = `
   style="position: relative; display: inline-block; margin-top: 12rem;"
 >
   <button
-    class="clickable-style button button--primary clickable-style--lg clickable-style--primary clickable-style--brand"
+    class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
     data-bootstrap-override="clickable-style-primary"
     type="button"
   >
@@ -590,7 +590,7 @@ exports[`<Popover /> Default story renders snapshot 1`] = `
               class="popover__header-title-after"
             >
               <button
-                class="clickable-style button button--icon clickable-style--sm clickable-style--icon clickable-style--brand"
+                class="clickable-style clickable-style--sm clickable-style--icon clickable-style--brand button button--icon"
                 data-bootstrap-override="clickable-style-icon"
                 type="button"
               >
@@ -819,7 +819,7 @@ exports[`<Popover /> TopLeft story renders snapshot 1`] = `
   style="position: relative; display: inline-block; margin-top: 12rem;"
 >
   <button
-    class="clickable-style button button--primary clickable-style--lg clickable-style--primary clickable-style--brand"
+    class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
     data-bootstrap-override="clickable-style-primary"
     type="button"
   >
@@ -861,7 +861,7 @@ exports[`<Popover /> TopLeft story renders snapshot 1`] = `
               class="popover__header-title-after"
             >
               <button
-                class="clickable-style button button--icon clickable-style--sm clickable-style--icon clickable-style--brand"
+                class="clickable-style clickable-style--sm clickable-style--icon clickable-style--brand button button--icon"
                 data-bootstrap-override="clickable-style-icon"
                 type="button"
               >

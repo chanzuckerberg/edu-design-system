@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/chanzuckerberg/edu-design-system/compare/v1.4.0...v1.5.0) (2022-07-07)
+
+### Bug Fixes
+
+- **clickablestyle:** downgrade error to warning for invalid combos ([1b8441a](https://github.com/chanzuckerberg/edu-design-system/commit/1b8441ac55b8222b9e4e7f48e902a0b2aa7c9ed6))
+- **link:** translateY 101% so the focus bg is fully offscreen ([809d783](https://github.com/chanzuckerberg/edu-design-system/commit/809d78310c22de0d6f80db984e89d31024875360))
+- **link:** lower spacing specificity ([0c1385c](https://github.com/chanzuckerberg/edu-design-system/commit/0c1385c584c0320a35fc300e6bf5e56a8ef7aabd))
+
+### Features
+
+- **horizontalstepper:** allow line class names and change dot color ([1a65f82](https://github.com/chanzuckerberg/edu-design-system/commit/1a65f825e284eda39859b6d9080b1d899911555a))
+
 ### [1.4.0](https://github.com/chanzuckerberg/edu-design-system/compare/v1.3.1...v1.4.0) (2022-07-05)
 
 ### Bug Fixes
