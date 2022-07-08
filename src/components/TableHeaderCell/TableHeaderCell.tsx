@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import React, { MouseEventHandler, ReactNode } from 'react';
+import Icon from '../Icon';
 import styles from '../Table/Table.module.css';
 
 export interface Props {
@@ -36,6 +37,10 @@ export interface Props {
    */
   scope?: 'row' | 'col' | 'colgroup';
   /**
+   * Boolean to enable sorting on a table column
+   */
+  sortable?: boolean;
+  /**
    * The direction the selected column will be sorted
    */
   sortDirection?: 'ascending' | 'descending';
@@ -56,6 +61,7 @@ export const TableHeaderCell = ({
   colSpan,
   scope,
   headers,
+  sortable,
   sortDirection,
   id,
   onClick,
@@ -65,11 +71,26 @@ export const TableHeaderCell = ({
   const componentClassName = clsx(
     styles['table__header-cell'],
     className,
-    sortDirection === 'ascending' && styles['table-header-cell--ascending'],
-    sortDirection === 'descending' && styles['table-header-cell--descending'],
-    !sortDirection && styles['table-header-cell--none'],
-    sortDirection && styles['table-header-cell--ascending'],
+    sortable &&
+      (sortDirection === 'ascending' && styles['table__header-cell--ascending'],
+      sortDirection === 'descending' &&
+        styles['table__header-cell--descending'],
+      sortDirection && styles['table__header-cell--ascending']),
   );
+
+  const iconName =
+    sortDirection === 'ascending'
+      ? 'arrow-narrow-up'
+      : sortDirection === 'descending'
+      ? 'arrow-narrow-down'
+      : 'filter-list';
+
+  const iconTitle =
+    sortDirection === 'ascending'
+      ? 'Sorted, ascending'
+      : sortDirection === 'descending'
+      ? 'Sorted, descending'
+      : 'Sort';
 
   return (
     <th
@@ -82,7 +103,19 @@ export const TableHeaderCell = ({
       scope={scope}
       {...other}
     >
-      {children}
+      <div className={clsx(styles['table__header-cell--contents'])}>
+        {children}
+        {sortable && (
+          <div className={clsx(styles['table__header-cell--sort'])}>
+            <Icon
+              name={iconName}
+              purpose="informative"
+              size="1rem"
+              title={iconTitle}
+            />
+          </div>
+        )}
+      </div>
     </th>
   );
 };

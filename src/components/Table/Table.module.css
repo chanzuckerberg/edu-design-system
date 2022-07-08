@@ -141,15 +141,43 @@
   }
 }
 
+/**
+* Table header cell
+* 1) When column is sortable, add an icon to the th after the title
+* 2) On hover over the th, the sort icon animates to opacity 1
+* 3) Cursor:pointer is used on the sort icon only
+* 4) Within th, wrap title and sort icon in a flex row so that icon remains at the bottom when one or more titles breaks into multiple lines
+* 
+*/
+
 .table__header-cell {
   @mixin eds-theme-typography-label-sm;
   padding: var(--eds-size-1) var(--eds-size-1);
   text-align: left;
 
-  .table__body & {
-    padding: var(--eds-size-2) var(--eds-size-1);
-    @mixin eds-theme-typography-body-text-xs-bold;
+  /* 1 */
+  .table__header-cell--sort {
+    display: inline;
+    opacity: 0;
+    transition: opacity var(--eds-anim-fade-quick) var(--eds-anim-ease);
+
+    @media screen and (prefers-reduced-motion) {
+      transition: none;
+    }
   }
+  /* 2 */
+  &:hover {
+    .table__header-cell--sort {
+      opacity: 1;
+      cursor: pointer; /* 3 */
+    }
+  }
+}
+/* 4 */
+.table__header-cell--contents {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--eds-size-1-and-half);
 }
 
 /**
