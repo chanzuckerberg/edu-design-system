@@ -29,7 +29,7 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
           </div>
         </header>
         <ol
-          class="drag-drop__container-inner"
+          class="drag-drop__container-inner undefined"
           data-rbd-droppable-context-id="0"
           data-rbd-droppable-id="container-1"
         >
@@ -252,7 +252,7 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
           </div>
         </header>
         <div
-          class="drag-drop__container-inner"
+          class="drag-drop__container-inner undefined"
           data-rbd-droppable-context-id="0"
           data-rbd-droppable-id="container-2"
         >
@@ -427,7 +427,7 @@ exports[`<DragDrop /> HoveredHandle story renders snapshot 1`] = `
           </div>
         </header>
         <ol
-          class="drag-drop__container-inner"
+          class="drag-drop__container-inner undefined"
           data-rbd-droppable-context-id="1"
           data-rbd-droppable-id="container-1"
         >
@@ -650,7 +650,7 @@ exports[`<DragDrop /> HoveredHandle story renders snapshot 1`] = `
           </div>
         </header>
         <div
-          class="drag-drop__container-inner"
+          class="drag-drop__container-inner undefined"
           data-rbd-droppable-context-id="1"
           data-rbd-droppable-id="container-2"
         >
