@@ -8,7 +8,6 @@ export default {
   title: 'Recipes/ButtonActionCalloutCard',
   component: ButtonActionCalloutCard,
 } as Meta<Args>;
-
 type Args = React.ComponentProps<typeof ButtonActionCalloutCard>;
 
 export const Default: StoryObj<Args> = {
