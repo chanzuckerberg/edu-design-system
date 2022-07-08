@@ -95,7 +95,7 @@ export const ProjectCard = ({
       {...other}
     >
       <CardHeader className={styles['project-card__header']}>
-        {number && (
+        {number && numberAriaLabel && (
           <NumberIcon
             aria-label={numberAriaLabel}
             className={styles['project-card__number']}
