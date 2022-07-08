@@ -149,7 +149,6 @@
 * 4) Within th, wrap title and sort icon in a flex row so that icon remains at the bottom when one or more titles breaks into multiple lines
 * 
 */
-
 .table__header-cell {
   @mixin eds-theme-typography-label-sm;
   padding: var(--eds-size-1) var(--eds-size-1);
