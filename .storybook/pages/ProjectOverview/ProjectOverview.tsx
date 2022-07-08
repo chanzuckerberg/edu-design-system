@@ -38,9 +38,14 @@ export const ProjectOverview = () => {
       />
       <TimelineNav>
         <TimelineNavPanel title="Overview" variant="success">
-          <Heading as="h2" className="u-margin-bottom-xl" size="headline-lg">
-            What is this Project About?
-          </Heading>
+          <PageHeader
+            as="h2"
+            className="u-margin-bottom-xl"
+            description="Estimated schedule: Days 4,5,6"
+            headingSize="headline-md"
+            kicker="CHECKPOINT 1"
+            title="What is this Project About?"
+          />
           <Text size="lg">
             Consectetur adipiscing elit. Ac id velit ut egestas arcu. At
             maecenas urna, risus donec praesent eu consectetur. Nunc non eu

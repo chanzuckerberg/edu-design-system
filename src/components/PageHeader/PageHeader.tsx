@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import styles from './PageHeader.module.css';
-import Heading, { HeadingSize } from '../Heading';
+import Heading, { HeadingSize, HeadingElement } from '../Heading';
 
 export interface Props {
   /**
@@ -9,6 +9,14 @@ export interface Props {
    * - **center** yields a PageHeader whose contents are centered
    */
   align?: 'center';
+  /**
+   * This prop can be used to specify which size heading should
+   * actually be rendered, in the case that you want to render an element
+   * as one heading but style it as if it were another. If both an `as` prop
+   * and a `size` prop are passed, the `as` will be used to determine the element
+   * and the `size` will be used to determine the styling.
+   */
+  as?: HeadingElement;
   /**
    * CSS class names that can be appended to the component.
    */
@@ -66,6 +74,7 @@ export interface Props {
  */
 export const PageHeader = ({
   align,
+  as = 'h1',
   className,
   description,
   headingSize = 'headline-lg',
@@ -89,7 +98,7 @@ export const PageHeader = ({
       <div className={styles['page-header__left']}>
         {kicker && <p className={styles['page-header__kicker']}>{kicker}</p>}
         <Heading
-          as="h1"
+          as={as}
           className={styles['page-header__title']}
           size={headingSize}
           variant={headingVariant}
