@@ -1,0 +1,11 @@
+{
+  "eds": {
+    "theme": {
+      "border": {
+        "width": {
+          "value": "{eds.border.width.sm}"
+        }
+      }
+    }
+  }
+}

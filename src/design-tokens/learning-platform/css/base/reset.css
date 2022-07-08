@@ -1,0 +1,16 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: var(--eds-theme-color-text-highlight-foreground);
+  background: var(--eds-theme-color-text-highlight-background);
+}
+
+::selection {
+  color: var(--eds-theme-color-text-highlight-foreground);
+  background: var(--eds-theme-color-text-highlight-background);
+}

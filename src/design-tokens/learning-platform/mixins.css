@@ -1,0 +1,272 @@
+@import '../design-tokens/tier-2-usage/typography-usage.css';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap');
+
+@define-mixin reset {
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Link button styles
+ * 1) display: inline-flex allows us to manage icon placement and the focus background animation
+ * 2) Smaller gap between text and icon in link button style
+ * 3) Has position relative to support the background color pseudo element
+ * 4) We hide overflow so the pseudo element can be pushed out of site
+ * 5) z-index 0 required for the background to appear correctly on focus
+ * 6) Has smaller icons than other button styles
+ * 7) Make the focus outline invisible but don't remove it. High contrast mode will remove the background 
+      color, but it will also make borders 100% opacity black
+ */
+@define-mixin textLink {
+  font-size: inherit;
+  font-weight: var(--eds-font-weight-medium);
+  line-height: inherit;
+  text-align: left;
+  display: inline-flex; /* 1 */
+  gap: 0.25em; /* 2 */
+
+  color: var(--eds-theme-color-text-link-default);
+  text-decoration: underline;
+  text-decoration-color: var(--eds-theme-color-background-brand-primary-strong);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+
+  position: relative; /* 3 */
+  overflow: hidden; /* 4 */
+  z-index: var(--eds-z-index-0); /* 5 */
+  transition: color var(--eds-anim-move-medium) var(--eds-anim-ease),
+    text-decoration-color var(--eds-anim-move-medium) var(--eds-anim-ease);
+
+  @media screen and (prefers-reduced-motion) {
+    transition: none;
+  }
+
+  svg {
+    --icon-size-default: 1.25em; /* 6 */
+  }
+
+  &:hover {
+    color: var(--eds-theme-color-text-link-default-hover);
+    text-decoration-color: var(--eds-theme-color-border-brand-primary);
+  }
+
+  &:focus {
+    outline: 1px solid transparent; /* 7 */
+    color: var(--eds-theme-color-text-neutral-default-inverse) !important;
+    text-decoration-color: var(
+      --eds-theme-color-text-neutral-default-inverse
+    ) !important;
+  }
+
+  &:visited {
+    color: var(--eds-theme-color-text-neutral-subtle);
+    text-decoration-color: var(--eds-theme-color-text-neutral-subtle);
+  }
+
+  /**
+   * Pseudo element with background color for focus state
+   * 1) Uses an absolutely-positioned pseudo element with a background color to animate it up and down
+   * 2) The pseudo element has a negative z-index to position it behind the text
+   * 3) The element is pushed down out of sight to hide it. Needs to be 101%, not 100%, to or the very top
+   *    will be visible
+   * 4) We set transform-origin: to bottom so it animates up from the bottom, not out from the middle
+   * 5) And we pull it back up on focus so it's visible
+   */
+  &::before {
+    /* 1 */
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: var(--eds-z-index-bottom); /* 2 */
+    background-color: var(--eds-theme-color-background-brand-primary-strong);
+
+    transform: translateY(101%); /* 3 */
+    transform-origin: bottom; /* 4 */
+    transition: transform var(--eds-anim-move-medium) var(--eds-anim-ease);
+
+    @media screen and (prefers-reduced-motion) {
+      transition: none;
+    }
+  }
+
+  &:focus::before {
+    transform: translateY(0); /* 5 */
+  }
+}
+
+@define-mixin TextLinkInverted {
+  @mixin textLink;
+  color: var(--eds-theme-color-text-neutral-default-inverse);
+
+  &:focus-visible {
+    @mixin focusInverted;
+  }
+}
+
+@define-mixin focus {
+  outline: var(--eds-border-width-sm) solid var(--eds-theme-color-focus-ring);
+  outline-offset: 2px;
+}
+
+@define-mixin focusInside {
+  @mixin focus;
+  outline-offset: -2px;
+}
+
+@define-mixin focusInverted {
+  @mixin focus;
+  outline-color: var(--eds-theme-color-focus-ring-inverted);
+}
+
+@define-mixin focusTransparent {
+  outline: 2px solid transparent;
+}
+
+@define-mixin inputStyles {
+  @mixin eds-theme-typography-form-input;
+  font-family: inherit;
+  -webkit-appearance: none;
+  width: 100%;
+  border-width: var(--eds-theme-form-border-width);
+  border-style: solid;
+  border-color: var(--eds-theme-color-form-border);
+  border-radius: var(--eds-theme-form-border-radius);
+  outline: none;
+  padding: var(--eds-size-1);
+  margin: 0;
+  color: var(--eds-theme-color-neutral-default);
+  background-color: var(--eds-theme-color-form-background);
+  transition: box-shadow var(--eds-anim-fade-quick) var(--eds-anim-ease),
+    border-color var(--eds-anim-fade-quick) var(--eds-anim-ease);
+
+  &:hover {
+    border-color: var(--eds-theme-color-form-border-hover);
+  }
+
+  &:focus-visible {
+    @mixin focus;
+    border-color: var(--eds-theme-color-border-brand-primary-strong);
+  }
+
+  @media screen and (prefers-reduced-motion) {
+    transition: none;
+  }
+
+  /**
+   * Input error state
+   */
+  &.eds-is-error {
+    border-color: var(--eds-theme-color-border-utility-error-strong);
+  }
+
+  /**
+   * Disabled state
+   */
+  &.eds-is-disabled {
+    background-color: var(--eds-theme-color-background-disabled);
+    border-color: var(--eds-theme-color-border-disabled);
+    color: var(--eds-theme-color-text-disabled);
+    cursor: not-allowed;
+  }
+
+  &::-webkit-input-placeholder {
+    @mixin placeholderStyles;
+  }
+
+  &::-moz-placeholder {
+    @mixin placeholderStyles;
+  }
+
+  &:-ms-input-placeholder {
+    @mixin placeholderStyles;
+  }
+}
+
+@define-mixin labelStyles {
+  @mixin eds-theme-typography-form-label;
+  display: inline-block;
+  color: var(--eds-theme-color-form-label);
+}
+
+@define-mixin placeholderStyles {
+  font-style: italic;
+  color: var(--eds-theme-color-text-neutral-subtle);
+}
+
+@define-mixin fieldsetStyles {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+@define-mixin legendReset {
+  display: inline-block;
+  padding: 0;
+  border: none;
+}
+
+@define-mixin visuallyHide {
+  position: absolute !important;
+  overflow: hidden !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+}
+
+@define-mixin messagingBrand {
+  --messaging-border-color: var(--eds-theme-color-border-brand-primary-subtle);
+  --messaging-icon-color: var(--eds-theme-color-icon-brand-primary);
+
+  background: var(--eds-theme-color-background-brand-primary-default);
+  color: var(--eds-theme-color-text-brand-primary);
+}
+
+@define-mixin messagingNeutral {
+  --messaging-border-color: var(--eds-theme-color-border-neutral-subtle);
+  --messaging-icon-color: var(--eds-theme-color-icon-neutral-subtle);
+
+  background: var(--eds-theme-color-background-neutral-subtle);
+  color: var(--eds-theme-color-text-neutral-default);
+}
+
+@define-mixin messagingSuccess {
+  --messaging-border-color: var(
+    --eds-theme-color-border-utility-success-subtle
+  );
+  --messaging-icon-color: var(--eds-theme-color-icon-utility-success);
+
+  background: var(--eds-theme-color-background-utility-success);
+  color: var(--eds-theme-color-text-utility-success);
+}
+
+@define-mixin messagingWarning {
+  --messaging-border-color: var(
+    --eds-theme-color-border-utility-warning-subtle
+  );
+  --messaging-icon-color: var(--eds-theme-color-icon-utility-warning);
+
+  background: var(--eds-theme-color-background-utility-warning);
+  color: var(--eds-theme-color-text-utility-warning);
+}
+
+@define-mixin messagingError {
+  --messaging-border-color: var(--eds-theme-color-border-utility-error-subtle);
+  --messaging-icon-color: var(--eds-theme-color-icon-utility-error);
+
+  background: var(--eds-theme-color-background-utility-error);
+  color: var(--eds-theme-color-text-utility-error);
+}
+
+@define-mixin messagingYield {
+  --messaging-border-color: var(--eds-theme-color-border-grade-revise-strong);
+  --messaging-icon-color: var(--eds-theme-color-border-grade-revise-strong);
+
+  background: var(--eds-theme-color-background-grade-revise-subtle);
+  color: var(--eds-theme-color-text-neutral-default);
+}
