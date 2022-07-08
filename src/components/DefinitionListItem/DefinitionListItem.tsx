@@ -33,7 +33,7 @@ export const DefinitionListItem = ({
   ...other
 }: Props) => {
   const componentClassName = clsx(
-    styles['definition-list-item'],
+    styles['definition-list__item'],
     className,
     {},
   );

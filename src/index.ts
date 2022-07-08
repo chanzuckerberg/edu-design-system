@@ -14,6 +14,7 @@ export { default as CheckboxLabel } from './components/CheckboxLabel';
 export { default as ClickableStyle } from './components/ClickableStyle';
 export { default as DataBar } from './components/DataBar';
 export { default as DataBarSegment } from './components/DataBarSegment';
+export { default as DefinitionList } from './components/DefinitionList';
 export { default as DragDrop } from './components/DragDrop';
 export { default as DragDropContainer } from './components/DragDropContainer';
 export { default as DragDropContainerHeader } from './components/DragDropContainerHeader';
