@@ -21,5 +21,5 @@ export interface ContainerType {
   itemIds: string[];
   header?: React.ReactNode;
   emptyContent?: React.ReactNode;
-  columnClassName?: string;
+  columnClassName?: string[];
 }
