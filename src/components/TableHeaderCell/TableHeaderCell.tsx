@@ -83,7 +83,7 @@ export const TableHeaderCell = ({
       ? 'arrow-narrow-up'
       : sortDirection === 'descending'
       ? 'arrow-narrow-down'
-      : 'filter-list';
+      : 'unfold-more';
 
   const iconTitle =
     sortDirection === 'ascending'
