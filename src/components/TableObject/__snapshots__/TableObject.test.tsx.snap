@@ -508,7 +508,7 @@ exports[`<TableObject /> Sortable story renders snapshot 1`] = `
                       Sort
                     </title>
                     <use
-                      xlink:href="test-file-stub#filter-list"
+                      xlink:href="test-file-stub#unfold-more"
                     />
                   </svg>
                 </div>
