@@ -13,6 +13,11 @@ export interface Props {
    */
   className?: string;
   /**
+   * Column class names that can be appended to the component.
+   * 1) Used to add additional styles to the column
+   */
+  columnClassName?: string;
+  /**
    * Prop that will contain an id for each container and an array of itemIds that will be used on initial render
    */
   container: ContainerType;
@@ -34,6 +39,7 @@ export const DragDropContainer = ({
   container,
   items,
   emptyContent,
+  columnClassName,
 }: Props) => {
   const componentClassName = clsx(
     styles['drag-drop__container'],
@@ -56,7 +62,9 @@ export const DragDropContainer = ({
         {(provided: DroppableProvided) =>
           items.length > 0 ? (
             <ol
-              className={styles['drag-drop__container-inner']}
+              className={`${styles['drag-drop__container-inner']} ${
+                container.columnClassName && container.columnClassName
+              }`}
               ref={provided.innerRef}
               {...provided.droppableProps}
             >
@@ -67,7 +75,9 @@ export const DragDropContainer = ({
             </ol>
           ) : (
             <div
-              className={styles['drag-drop__container-inner']}
+              className={`${styles['drag-drop__container-inner']} ${
+                container.columnClassName && container.columnClassName
+              }`}
               ref={provided.innerRef}
               {...provided.droppableProps}
             >
