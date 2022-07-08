@@ -527,7 +527,7 @@ exports[`Modal ModalStepper story renders snapshot 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <title
-      id="20"
+      id="19"
     >
       Active Step 1
     </title>
@@ -545,7 +545,7 @@ exports[`Modal ModalStepper story renders snapshot 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <title
-      id="21"
+      id="20"
     >
       Step 2
     </title>
@@ -563,7 +563,7 @@ exports[`Modal ModalStepper story renders snapshot 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <title
-      id="22"
+      id="21"
     >
       Step 3
     </title>
