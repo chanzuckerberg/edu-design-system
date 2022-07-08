@@ -15,7 +15,10 @@ import {
   TimelineNav,
   TimelineNavPanel,
   DefinitionList,
+  StackedBlock,
   Link,
+  GridItem,
+  Grid,
 } from '../../../src';
 // Project Overview pilot components -- not yet exported from src/index.ts
 import '../../../src/components/Utilities/Spacing.css';
@@ -38,6 +41,7 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
         <BreadcrumbsItem href="#" text="Disciplinary Science 7" />
       </Breadcrumbs>
       <PageHeader
+        headingSize="h3"
         right={
           <Button variant="icon">
             View plan
@@ -48,7 +52,12 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
       />
       <TimelineNav activeIndex={activeIndex}>
         <TimelineNavPanel title="Overview" variant="success">
-          <Heading as="h2" className="u-margin-bottom-xl" size="headline-lg">
+          <Heading
+            as="h2"
+            className="u-margin-bottom-xl"
+            size="headline-lg"
+            variant="base"
+          >
             What is this Project About?
           </Heading>
           <Text size="lg">
@@ -60,7 +69,12 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
           <Button className="u-margin-bottom-xl" variant="link">
             See More
           </Button>
-          <Heading as="h3" className="u-margin-bottom-sm" size="title-md">
+          <Heading
+            as="h3"
+            className="u-margin-bottom-sm"
+            size="title-md"
+            variant="base"
+          >
             Essential Questions
           </Heading>
           <Text as="div" className="u-margin-bottom-xl">
@@ -74,7 +88,12 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
               <li>How are structures in the body organized?</li>
             </ul>
           </Text>
-          <Heading as="h3" className="u-margin-bottom-sm" size="title-md">
+          <Heading
+            as="h3"
+            className="u-margin-bottom-sm"
+            size="title-md"
+            variant="base"
+          >
             Key Take Aways
           </Heading>
           <Text as="div" className="u-margin-bottom-xl">
@@ -103,7 +122,12 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
           >
             <Card>
               <CardBody>
-                <Heading as="h3" className="u-margin-bottom-sm" size="title-md">
+                <Heading
+                  as="h3"
+                  className="u-margin-bottom-sm"
+                  size="title-md"
+                  variant="base"
+                >
                   What Was Medieval Japan Like?
                 </Heading>
                 <Text>
@@ -125,7 +149,12 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
           >
             <Card className="u-margin-bottom-md">
               <CardBody>
-                <Heading as="h3" className="u-margin-bottom-sm" size="title-md">
+                <Heading
+                  as="h3"
+                  className="u-margin-bottom-sm"
+                  size="title-md"
+                  variant="base"
+                >
                   What Was Medieval Japan Like?
                 </Heading>
                 <Text>
@@ -136,7 +165,12 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
             </Card>
             <Card>
               <CardBody>
-                <Heading as="h3" className="u-margin-bottom-sm" size="title-md">
+                <Heading
+                  as="h3"
+                  className="u-margin-bottom-sm"
+                  size="title-md"
+                  variant="base"
+                >
                   What Was Medieval Japan Like?
                 </Heading>
                 <Text>
@@ -172,7 +206,12 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
 
         <TimelineNavPanel title="Expectations of Samuri in Feudal Japan and Wars of 5th Century">
           <Section title="Expectations of Samuri in Feudal Japan">
-            <Heading as="h3" className="u-margin-bottom-lg" size="h3">
+            <Heading
+              as="h3"
+              className="u-margin-bottom-lg"
+              size="h3"
+              variant="base"
+            >
               What to Focus on this Checkpoint
             </Heading>
             <Text as="div" className="u-margin-bottom-md">
@@ -200,7 +239,7 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
               </p>
             </Text>
             <DefinitionList
-              className="u-margin-bottom-lg"
+              className="u-margin-bottom-xl"
               orientation="horizontal"
             >
               <DefinitionList.Item title="Term 1:">
@@ -208,17 +247,81 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
               </DefinitionList.Item>
             </DefinitionList>
 
-            <Heading as="h3" className="u-margin-bottom-lg" size="h3">
-              What to Focus on this Checkpoint
-            </Heading>
-
             <ButtonActionCalloutCard
               actions={<Button variant="primary">Preview</Button>}
+              className="u-margin-bottom-xl"
               title="Do This Checkpoint"
             >
               Develop the text of your Body Book, crafting evidence-supported
               explanations on how the body is organized and its functions.
             </ButtonActionCalloutCard>
+
+            <Hr className="u-margin-top-xxl" />
+
+            <Heading
+              as="h3"
+              className="u-margin-bottom-lg"
+              size="h3"
+              variant="base"
+            >
+              Resources for You
+            </Heading>
+
+            <Grid className="u-margin-bottom-xl">
+              <GridItem>
+                <StackedBlock href="#" title="This is a link">
+                  This is a stacked block description
+                </StackedBlock>
+              </GridItem>{' '}
+              <GridItem>
+                <StackedBlock href="#" title="This is a link">
+                  This is a stacked block description
+                </StackedBlock>
+              </GridItem>
+              <GridItem>
+                <StackedBlock href="#" title="This is a link">
+                  This is a stacked block description
+                </StackedBlock>
+              </GridItem>
+              <GridItem>
+                <StackedBlock href="#" title="This is a link">
+                  This is a stacked block description
+                </StackedBlock>
+              </GridItem>
+            </Grid>
+
+            <Heading
+              as="h3"
+              className="u-margin-bottom-lg"
+              size="h3"
+              variant="base"
+            >
+              Resources for You
+            </Heading>
+
+            <Grid className="u-margin-bottom-xl">
+              <GridItem>
+                <StackedBlock href="#" title="This is a link">
+                  This is a stacked block description
+                </StackedBlock>
+              </GridItem>{' '}
+              <GridItem>
+                <StackedBlock href="#" title="This is a link">
+                  This is a stacked block description
+                </StackedBlock>
+              </GridItem>
+              <GridItem>
+                <StackedBlock href="#" title="This is a link">
+                  This is a stacked block description
+                </StackedBlock>
+              </GridItem>
+              <GridItem>
+                <StackedBlock href="#" title="This is a link">
+                  This is a stacked block description
+                </StackedBlock>
+              </GridItem>
+            </Grid>
+            <Hr className="u-margin-top-xxl" />
           </Section>
         </TimelineNavPanel>
 

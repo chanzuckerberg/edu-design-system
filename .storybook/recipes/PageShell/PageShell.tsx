@@ -38,7 +38,7 @@ export const PageShell = ({ children, className, ...other }: Props) => {
           <GlobalHeader />
         </LayoutSection>
         <LayoutSection region="main">
-          <Main>
+          <Main className={styles['page-shell__main']}>
             <LayoutContainer>{children}</LayoutContainer>
           </Main>
         </LayoutSection>

@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StackedBlock /> Default story renders snapshot 1`] = `
+<div
+  class="stacked-block"
+>
+  <a
+    class="clickable-style clickable-style--link clickable-style--brand stacked-block__link"
+    data-bootstrap-override="clickable-style-link"
+  >
+    This is a link
+  </a>
+  <p
+    class="text text--body stacked-block__description"
+  >
+    This is a stacked block description
+  </p>
+</div>
+`;
