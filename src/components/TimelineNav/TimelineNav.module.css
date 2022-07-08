@@ -7,7 +7,7 @@
 /**
  * 1) List of of links where each link toggles open associated information
  */
-.timeline-nav {
+ .timeline-nav {
   display: flex;
   gap: var(--eds-size-2);
   width: 100%;
@@ -247,11 +247,15 @@
     border: 1px solid var(--eds-theme-color-text-neutral-default); /* 5 */
   }
 }
-
+/**
+* Timeline nav link-left 
+* 1) Provides white background to fake a visual gap in the vertical line between nav items
+*/
 .timeline-nav__link-left {
   position: relative;
   height: fit-content;
   padding: var(--eds-size-half) 0;
+  background: var(--eds-theme-color-background-neutral-default); /* 1*/
   z-index: var(--eds-z-index-100);
 }
 
