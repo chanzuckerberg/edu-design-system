@@ -46,6 +46,11 @@ export const DragDropContainer = ({
     items.length < 1 && styles['drag-drop__container--empty'],
   );
 
+  const containerInnerClassName = clsx(
+    styles['drag-drop__container-inner'],
+    container.columnClassName,
+  );
+
   const dragDropContainerHeader = oneByType(
     container.header,
     DragDropContainerHeader,
@@ -61,9 +66,7 @@ export const DragDropContainer = ({
         {(provided: DroppableProvided) =>
           items.length > 0 ? (
             <ol
-              className={`${styles['drag-drop__container-inner']} ${
-                container.columnClassName && container.columnClassName
-              }`}
+              className={containerInnerClassName}
               ref={provided.innerRef}
               {...provided.droppableProps}
             >
@@ -74,9 +77,7 @@ export const DragDropContainer = ({
             </ol>
           ) : (
             <div
-              className={`${styles['drag-drop__container-inner']} ${
-                container.columnClassName && container.columnClassName
-              }`}
+              className={containerInnerClassName}
               ref={provided.innerRef}
               {...provided.droppableProps}
             >
