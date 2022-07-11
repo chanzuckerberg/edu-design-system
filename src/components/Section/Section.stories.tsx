@@ -4,8 +4,8 @@ import React from 'react';
 import { Section } from './Section';
 import Avatar from '../Avatar';
 import Button from '../Button';
-import ButtonGroup from '../ButtonGroup';
 import Icon from '../Icon';
+import Text from '../Text';
 
 export default {
   title: 'Organisms/Sections/Section',
@@ -30,22 +30,70 @@ export const Default: StoryObj<Args> = {
 export const Center: StoryObj<Args> = {
   args: {
     align: 'center',
-    kicker: 'Kicker above title',
+    kicker: (
+      <Text
+        as="p"
+        style={{
+          fontSize: '12px',
+          fontWeight: '500',
+          lineHeight: '15.9996px',
+          color: 'rgb(56, 60, 67)',
+        }}
+      >
+        KICKER ABOVE TITLE
+      </Text>
+    ),
     title: 'Section Title',
-    description: 'This is a description of what the section is',
+    description: (
+      <Text
+        as="p"
+        style={{
+          fontSize: '12px',
+          fontWeight: '500',
+          lineHeight: '15.996px',
+          color: 'rgb(93,99,105',
+        }}
+      >
+        This is a description of what the section is
+      </Text>
+    ),
   },
 };
 
 export const WithDescription: StoryObj<Args> = {
   args: {
     title: 'Section Title',
-    description: 'This is a description of what the section is',
+    description: (
+      <Text
+        as="p"
+        style={{
+          fontSize: '12px',
+          fontWeight: '500',
+          lineHeight: '15.996px',
+          color: 'rgb(93,99,105',
+        }}
+      >
+        This is a description of what the section is
+      </Text>
+    ),
   },
 };
 
 export const WithKicker: StoryObj<Args> = {
   args: {
-    kicker: 'Kicker above title',
+    kicker: (
+      <Text
+        as="p"
+        style={{
+          fontSize: '12px',
+          fontWeight: '500',
+          lineHeight: '15.9996px',
+          color: 'rgb(56, 60, 67)',
+        }}
+      >
+        KICKER ABOVE TITLE
+      </Text>
+    ),
     title: 'Section Title',
   },
 };
@@ -53,14 +101,9 @@ export const WithKicker: StoryObj<Args> = {
 export const WithRight: StoryObj<Args> = {
   args: {
     right: (
-      <ButtonGroup>
-        <Button size="md" status="neutral">
-          Button 1
-        </Button>
-        <Button size="md" variant="primary">
-          Button 2
-        </Button>
-      </ButtonGroup>
+      <Button size="md" variant="primary">
+        Button
+      </Button>
     ),
     title: 'Section Title',
   },
@@ -81,5 +124,7 @@ export const WithTitleBefore: StoryObj<Args> = {
   args: {
     titleBefore: <Avatar />,
     title: 'Section Title',
+    headingSize: 'h4',
+    headingAs: 'h4',
   },
 };

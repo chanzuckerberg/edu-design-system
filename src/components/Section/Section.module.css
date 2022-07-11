@@ -43,7 +43,7 @@
   display: flex;
   flex-direction: row;
   gap: var(--eds-size-1);
-  
+
   .section--center & {
     flex-grow: 0; /* 3 */
   }
@@ -60,7 +60,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  
+
   .section--center & {
     justify-self: center; /* 2 */
     align-items: center; /* 3 */
@@ -71,8 +71,6 @@
  * Section title
  */
 .section__title {
-
-  @mixin eds-theme-typography-headline-md;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -100,7 +98,6 @@
 * 1) Optional string that appears above the section title
 */
 .section__kicker {
-  @mixin eds-typography-preset-009;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -110,9 +107,6 @@
  * 1) Optional string that appears beneath the section title
  */
 .section__description {
-  @mixin reset;
-  @mixin eds-typography-preset-009;
-  color: var(--eds-theme-color-text-neutral-subtle);
   margin-top: var(--eds-size-half);
   margin-bottom: 0;
 }

@@ -39,8 +39,32 @@ export const ProjectOverview = () => {
       <TimelineNav>
         <TimelineNavPanel title="Overview" variant="success">
           <Section
-            description="Estimated schedule: Days 4,5,6"
-            kicker="OVERVIEW"
+            description={
+              <Text
+                as="p"
+                style={{
+                  fontSize: '12px',
+                  fontWeight: '500',
+                  lineHeight: '15.996px',
+                  color: 'rgb(93,99,105',
+                }}
+              >
+                Estimated schedule: Days 4,5,6
+              </Text>
+            }
+            kicker={
+              <Text
+                as="p"
+                style={{
+                  fontSize: '12px',
+                  fontWeight: '500',
+                  lineHeight: '15.9996px',
+                  color: 'rgb(56, 60, 67)',
+                }}
+              >
+                OVERVIEW
+              </Text>
+            }
             title="What is this Project About?"
           >
             <Text size="lg">
@@ -179,7 +203,19 @@ export const ProjectOverview = () => {
 
         <TimelineNavPanel title="Expectations of Samuri in Feudal Japan and Wars of 5th Century">
           <Section
-            description="Estimated schedule: Days 5,6,7"
+            description={
+              <Text
+                as="p"
+                style={{
+                  fontSize: '12px',
+                  fontWeight: '500',
+                  lineHeight: '15.996px',
+                  color: 'rgb(93,99,105',
+                }}
+              >
+                Estimated schedule: Days 4,5,6
+              </Text>
+            }
             kicker="CHECKPOINT 1"
             title="Expectations of Samuri in Feudal Japan and Wars of 5th Century"
           >
@@ -196,8 +232,32 @@ export const ProjectOverview = () => {
 
         <TimelineNavPanel title="Expectations of Samuri in Feudal Japan">
           <Section
-            description="Estimated schedule: Days 5,6,7"
-            kicker="CHECKPOINT 2"
+            description={
+              <Text
+                as="p"
+                style={{
+                  fontSize: '12px',
+                  fontWeight: '500',
+                  lineHeight: '15.996px',
+                  color: 'rgb(93,99,105',
+                }}
+              >
+                Estimated schedule: Days 4,5,6
+              </Text>
+            }
+            kicker={
+              <Text
+                as="p"
+                style={{
+                  fontSize: '12px',
+                  fontWeight: '500',
+                  lineHeight: '15.9996px',
+                  color: 'rgb(56, 60, 67)',
+                }}
+              >
+                CHECKPOINT 2
+              </Text>
+            }
             title="Expectations of Samuri in Feudal Japan"
           >
             <Text as="div">
@@ -212,8 +272,32 @@ export const ProjectOverview = () => {
         </TimelineNavPanel>
         <TimelineNavPanel title="Expectations of Samuri in Feudal Japan">
           <Section
-            description="Estimated schedule: Days 5,6,7"
-            kicker="CHECKPOINT 3"
+            description={
+              <Text
+                as="p"
+                style={{
+                  fontSize: '12px',
+                  fontWeight: '500',
+                  lineHeight: '15.996px',
+                  color: 'rgb(93,99,105',
+                }}
+              >
+                Estimated schedule: Days 4,5,6
+              </Text>
+            }
+            kicker={
+              <Text
+                as="p"
+                style={{
+                  fontSize: '12px',
+                  fontWeight: '500',
+                  lineHeight: '15.9996px',
+                  color: 'rgb(56, 60, 67)',
+                }}
+              >
+                CHECKPOINT 3
+              </Text>
+            }
             title="Expectations of Samuri in Feudal Japan"
           >
             <Text as="div">
@@ -228,8 +312,32 @@ export const ProjectOverview = () => {
         </TimelineNavPanel>
         <TimelineNavPanel title="Expectations of Samuri in Feudal Japan">
           <Section
-            description="Estimated schedule: Days 5,6,7"
-            kicker="CHECKPOINT 4"
+            description={
+              <Text
+                as="p"
+                style={{
+                  fontSize: '12px',
+                  fontWeight: '500',
+                  lineHeight: '15.996px',
+                  color: 'rgb(93,99,105',
+                }}
+              >
+                Estimated schedule: Days 4,5,6
+              </Text>
+            }
+            kicker={
+              <Text
+                as="p"
+                style={{
+                  fontSize: '12px',
+                  fontWeight: '500',
+                  lineHeight: '15.9996px',
+                  color: 'rgb(56, 60, 67)',
+                }}
+              >
+                CHECKPOINT 4
+              </Text>
+            }
             title="Expectations of Samuri in Feudal Japan"
           >
             <Text as="div">

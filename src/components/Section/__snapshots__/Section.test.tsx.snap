@@ -16,21 +16,31 @@ exports[`<Section /> Center story renders snapshot 1`] = `
         <div
           class="section__title-inner"
         >
-          <p
+          <div
             class="section__kicker"
           >
-            Kicker above title
-          </p>
-          <div
-            class="section__title"
+            <p
+              class="text text--body"
+              style="font-size: 12px; font-weight: 500; line-height: 15.9996px; color: rgb(56, 60, 67);"
+            >
+              KICKER ABOVE TITLE
+            </p>
+          </div>
+          <h2
+            class="section__title heading heading--size-h2"
           >
             Section Title
-          </div>
-          <p
+          </h2>
+          <div
             class="section__description"
           >
-            This is a description of what the section is
-          </p>
+            <p
+              class="text text--body"
+              style="font-size: 12px; font-weight: 500; line-height: 15.996px;"
+            >
+              This is a description of what the section is
+            </p>
+          </div>
         </div>
       </div>
     </header>
@@ -59,11 +69,11 @@ exports[`<Section /> Default story renders snapshot 1`] = `
         <div
           class="section__title-inner"
         >
-          <div
-            class="section__title"
+          <h2
+            class="section__title heading heading--size-h2"
           >
             Section Title
-          </div>
+          </h2>
         </div>
       </div>
     </header>
@@ -92,16 +102,21 @@ exports[`<Section /> WithDescription story renders snapshot 1`] = `
         <div
           class="section__title-inner"
         >
-          <div
-            class="section__title"
+          <h2
+            class="section__title heading heading--size-h2"
           >
             Section Title
-          </div>
-          <p
+          </h2>
+          <div
             class="section__description"
           >
-            This is a description of what the section is
-          </p>
+            <p
+              class="text text--body"
+              style="font-size: 12px; font-weight: 500; line-height: 15.996px;"
+            >
+              This is a description of what the section is
+            </p>
+          </div>
         </div>
       </div>
     </header>
@@ -130,16 +145,21 @@ exports[`<Section /> WithKicker story renders snapshot 1`] = `
         <div
           class="section__title-inner"
         >
-          <p
+          <div
             class="section__kicker"
           >
-            Kicker above title
-          </p>
-          <div
-            class="section__title"
+            <p
+              class="text text--body"
+              style="font-size: 12px; font-weight: 500; line-height: 15.9996px; color: rgb(56, 60, 67);"
+            >
+              KICKER ABOVE TITLE
+            </p>
+          </div>
+          <h2
+            class="section__title heading heading--size-h2"
           >
             Section Title
-          </div>
+          </h2>
         </div>
       </div>
     </header>
@@ -168,34 +188,23 @@ exports[`<Section /> WithRight story renders snapshot 1`] = `
         <div
           class="section__title-inner"
         >
-          <div
-            class="section__title"
+          <h2
+            class="section__title heading heading--size-h2"
           >
             Section Title
-          </div>
+          </h2>
         </div>
       </div>
       <div
         class="section__right"
       >
-        <div
-          class="button-group button-group--spacing-1x"
+        <button
+          class="clickable-style clickable-style--md clickable-style--primary clickable-style--brand button button--primary"
+          data-bootstrap-override="clickable-style-primary"
+          type="button"
         >
-          <button
-            class="clickable-style clickable-style--md clickable-style--secondary clickable-style--neutral button button--secondary"
-            data-bootstrap-override="clickable-style-secondary"
-            type="button"
-          >
-            Button 1
-          </button>
-          <button
-            class="clickable-style clickable-style--md clickable-style--primary clickable-style--brand button button--primary"
-            data-bootstrap-override="clickable-style-primary"
-            type="button"
-          >
-            Button 2
-          </button>
-        </div>
+          Button
+        </button>
       </div>
     </header>
     <div
@@ -223,11 +232,11 @@ exports[`<Section /> WithTitleAfter story renders snapshot 1`] = `
         <div
           class="section__title-inner"
         >
-          <div
-            class="section__title"
+          <h2
+            class="section__title heading heading--size-h2"
           >
             Section Title
-            <div
+            <span
               class="section__title-after"
             >
               <button
@@ -254,8 +263,8 @@ exports[`<Section /> WithTitleAfter story renders snapshot 1`] = `
                   />
                 </svg>
               </button>
-            </div>
-          </div>
+            </span>
+          </h2>
         </div>
       </div>
     </header>
@@ -335,11 +344,11 @@ exports[`<Section /> WithTitleBefore story renders snapshot 1`] = `
         <div
           class="section__title-inner"
         >
-          <div
-            class="section__title"
+          <h4
+            class="section__title heading heading--size-h4"
           >
             Section Title
-          </div>
+          </h4>
         </div>
       </div>
     </header>

@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import styles from './Section.module.css';
+import Heading, { HeadingElement } from '../Heading';
 export interface Props {
   /**
    * Align variations:
@@ -16,13 +17,21 @@ export interface Props {
    */
   className?: string;
   /**
-   * Description text string that appears below the section title
+   * Description that appears below the section title
    */
-  description?: string;
+  description?: ReactNode;
   /**
    * Kicker appears above the section title
    */
-  kicker?: string;
+  kicker?: ReactNode;
+  /**
+   * "as" prop, passed to Heading Component
+   */
+  headingAs?: HeadingElement;
+  /**
+   * "size" prop, passed to Heading Component
+   */
+  headingSize?: HeadingElement;
   /**
    * Right slot - an area to put right-aligned content after section title
    */
@@ -48,13 +57,16 @@ export interface Props {
  * import {Section} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * 1) Section component contains a section header and body
+ * 2) The Heading component requires a value for "size", so this headingAs prop is provided a default value of "h2" to allow it to remain optional on Section component
  */
 export const Section = ({
   align,
   children,
   className,
   description,
+  headingAs,
+  headingSize = 'h2' /* 2 */,
   kicker,
   right,
   title,
@@ -71,29 +83,6 @@ export const Section = ({
   return (
     <section className={componentClassName} {...other}>
       <div className={styles['section__inner']}>
-        {/* <header className={styles['section__header']}>
-          {kicker && <p className={styles['section__kicker']}>{kicker}</p>}
-          <div className={styles['section__header-inner']}>
-            {titleBefore && (
-              <div className={styles['section__title-before']}>
-                {titleBefore}
-              </div>
-            )}
-            <h2 className={styles['section__title']}>
-              {title}
-              {titleAfter && (
-                <div className={styles['section__title-after']}>
-                  {titleAfter}
-                </div>
-              )}
-            </h2>
-
-            {right && <div className={styles['section__right']}>{right}</div>}
-          </div>
-          {description && (
-            <p className={styles['section__description']}>{description}</p>
-          )}
-        </header> */}
         <header className={styles['section__header']}>
           <div className={styles['section__header-inner']}>
             {titleBefore && (
@@ -102,17 +91,25 @@ export const Section = ({
               </div>
             )}
             <div className={styles['section__title-inner']}>
-              {kicker && <p className={styles['section__kicker']}>{kicker}</p>}
-              <div className={styles['section__title']}>
+              {kicker && (
+                <div className={styles['section__kicker']}>{kicker}</div>
+              )}
+              <Heading
+                as={headingAs}
+                className={styles['section__title']}
+                size={headingSize}
+              >
                 {title}
                 {titleAfter && (
-                  <div className={styles['section__title-after']}>
+                  <span className={styles['section__title-after']}>
                     {titleAfter}
-                  </div>
+                  </span>
                 )}
-              </div>
+              </Heading>
               {description && (
-                <p className={styles['section__description']}>{description}</p>
+                <div className={styles['section__description']}>
+                  {description}
+                </div>
               )}
             </div>
           </div>
