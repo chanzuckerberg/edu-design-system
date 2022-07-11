@@ -40,7 +40,7 @@ export const ProjectOverview = () => {
         <TimelineNavPanel title="Overview" variant="success">
           <Section
             description="Estimated schedule: Days 4,5,6"
-            kicker="CHECKPOINT 1"
+            kicker="OVERVIEW"
             title="What is this Project About?"
           >
             <Text size="lg">
@@ -178,49 +178,69 @@ export const ProjectOverview = () => {
         </TimelineNavPanel>
 
         <TimelineNavPanel title="Expectations of Samuri in Feudal Japan and Wars of 5th Century">
-          <Text as="div">
-            <h3>TimelineNavPanel 2</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex
-            </p>
-          </Text>
+          <Section
+            description="Estimated schedule: Days 5,6,7"
+            kicker="CHECKPOINT 1"
+            title="Expectations of Samuri in Feudal Japan and Wars of 5th Century"
+          >
+            <Text as="div">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex
+              </p>
+            </Text>
+          </Section>
         </TimelineNavPanel>
 
         <TimelineNavPanel title="Expectations of Samuri in Feudal Japan">
-          <Text as="div">
-            <h3>TimelineNavPanel 3</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex
-            </p>
-          </Text>
+          <Section
+            description="Estimated schedule: Days 5,6,7"
+            kicker="CHECKPOINT 2"
+            title="Expectations of Samuri in Feudal Japan"
+          >
+            <Text as="div">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex
+              </p>
+            </Text>
+          </Section>
         </TimelineNavPanel>
         <TimelineNavPanel title="Expectations of Samuri in Feudal Japan">
-          <Text as="div">
-            <h3>TimelineNavPanel 4</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex
-            </p>
-          </Text>
+          <Section
+            description="Estimated schedule: Days 5,6,7"
+            kicker="CHECKPOINT 3"
+            title="Expectations of Samuri in Feudal Japan"
+          >
+            <Text as="div">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex
+              </p>
+            </Text>
+          </Section>
         </TimelineNavPanel>
         <TimelineNavPanel title="Expectations of Samuri in Feudal Japan">
-          <Text as="div">
-            <h3>TimelineNavPanel 5</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex
-            </p>
-          </Text>
+          <Section
+            description="Estimated schedule: Days 5,6,7"
+            kicker="CHECKPOINT 4"
+            title="Expectations of Samuri in Feudal Japan"
+          >
+            <Text as="div">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex
+              </p>
+            </Text>
+          </Section>
         </TimelineNavPanel>
       </TimelineNav>
     </PageShell>
