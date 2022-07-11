@@ -83,27 +83,3 @@ export const WithTitleBefore: StoryObj<Args> = {
     title: 'Section Title',
   },
 };
-
-export const KitchenSinkInHeader: StoryObj<Args> = {
-  args: {
-    description: 'This is a description of what the section is',
-    kicker: 'Kicker above title',
-    titleAfter: (
-      <Button size="sm" variant="icon">
-        <Icon name="help" purpose="informative" size="1.375rem" title="help" />
-      </Button>
-    ),
-    right: (
-      <ButtonGroup>
-        <Button size="md" status="neutral">
-          Button 1
-        </Button>
-        <Button size="md" variant="primary">
-          Button 2
-        </Button>
-      </ButtonGroup>
-    ),
-    titleBefore: <Avatar />,
-    title: 'Section Title',
-  },
-};
