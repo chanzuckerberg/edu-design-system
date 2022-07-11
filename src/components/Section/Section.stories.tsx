@@ -1,8 +1,11 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
-
 import { Section } from './Section';
+import Avatar from '../Avatar';
+import Button from '../Button';
+import ButtonGroup from '../ButtonGroup';
+import Icon from '../Icon';
 
 export default {
   title: 'Organisms/Sections/Section',
@@ -24,6 +27,15 @@ export const Default: StoryObj<Args> = {
   },
 };
 
+export const Center: StoryObj<Args> = {
+  args: {
+    align: 'center',
+    kicker: 'Kicker above title',
+    title: 'Section Title',
+    description: 'This is a description of what the section is',
+  },
+};
+
 export const WithDescription: StoryObj<Args> = {
   args: {
     title: 'Section Title',
@@ -31,10 +43,67 @@ export const WithDescription: StoryObj<Args> = {
   },
 };
 
-export const Center: StoryObj<Args> = {
+export const WithKicker: StoryObj<Args> = {
   args: {
-    align: 'center',
+    kicker: 'Kicker above title',
     title: 'Section Title',
+  },
+};
+
+export const WithRight: StoryObj<Args> = {
+  args: {
+    right: (
+      <ButtonGroup>
+        <Button size="md" status="neutral">
+          Button 1
+        </Button>
+        <Button size="md" variant="primary">
+          Button 2
+        </Button>
+      </ButtonGroup>
+    ),
+    title: 'Section Title',
+  },
+};
+
+export const WithTitleAfter: StoryObj<Args> = {
+  args: {
+    titleAfter: (
+      <Button size="sm" variant="icon">
+        <Icon name="help" purpose="informative" size="1.375rem" title="help" />
+      </Button>
+    ),
+    title: 'Section Title',
+  },
+};
+
+export const WithTitleBefore: StoryObj<Args> = {
+  args: {
+    titleBefore: <Avatar />,
+    title: 'Section Title',
+  },
+};
+
+export const KitchenSinkInHeader: StoryObj<Args> = {
+  args: {
     description: 'This is a description of what the section is',
+    kicker: 'Kicker above title',
+    titleAfter: (
+      <Button size="sm" variant="icon">
+        <Icon name="help" purpose="informative" size="1.375rem" title="help" />
+      </Button>
+    ),
+    right: (
+      <ButtonGroup>
+        <Button size="md" status="neutral">
+          Button 1
+        </Button>
+        <Button size="md" variant="primary">
+          Button 2
+        </Button>
+      </ButtonGroup>
+    ),
+    titleBefore: <Avatar />,
+    title: 'Section Title',
   },
 };
