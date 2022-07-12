@@ -69,7 +69,7 @@ exports[`<TableObject /> Default story renders snapshot 1`] = `
               class="table__header-cell"
             >
               <div
-                class="table__header-cell--contents"
+                class="table__header-cell-contents"
               >
                 Table heading
               </div>
@@ -78,7 +78,7 @@ exports[`<TableObject /> Default story renders snapshot 1`] = `
               class="table__header-cell"
             >
               <div
-                class="table__header-cell--contents"
+                class="table__header-cell-contents"
               >
                 Table heading
               </div>
@@ -87,7 +87,7 @@ exports[`<TableObject /> Default story renders snapshot 1`] = `
               class="table__header-cell"
             >
               <div
-                class="table__header-cell--contents"
+                class="table__header-cell-contents"
               >
                 Table heading
               </div>
@@ -96,7 +96,7 @@ exports[`<TableObject /> Default story renders snapshot 1`] = `
               class="table__header-cell"
             >
               <div
-                class="table__header-cell--contents"
+                class="table__header-cell-contents"
               >
                 Table heading
               </div>
@@ -278,7 +278,7 @@ exports[`<TableObject /> Overflow story renders snapshot 1`] = `
               class="table__header-cell"
             >
               <div
-                class="table__header-cell--contents"
+                class="table__header-cell-contents"
               >
                 Table heading
               </div>
@@ -287,7 +287,7 @@ exports[`<TableObject /> Overflow story renders snapshot 1`] = `
               class="table__header-cell"
             >
               <div
-                class="table__header-cell--contents"
+                class="table__header-cell-contents"
               >
                 Table heading
               </div>
@@ -296,7 +296,7 @@ exports[`<TableObject /> Overflow story renders snapshot 1`] = `
               class="table__header-cell"
             >
               <div
-                class="table__header-cell--contents"
+                class="table__header-cell-contents"
               >
                 Table heading
               </div>
@@ -305,7 +305,7 @@ exports[`<TableObject /> Overflow story renders snapshot 1`] = `
               class="table__header-cell"
             >
               <div
-                class="table__header-cell--contents"
+                class="table__header-cell-contents"
               >
                 Table heading
               </div>
@@ -486,12 +486,12 @@ exports[`<TableObject /> Sortable story renders snapshot 1`] = `
             <th
               class="table__header-cell"
             >
-              <div
-                class="table__header-cell--contents"
+              <button
+                class="table__header-cell-button"
               >
-                Sortable, not sorted
+                Sortable
                 <div
-                  class="table__header-cell--sort"
+                  class="table__header-cell-sort"
                 >
                   <svg
                     class="icon"
@@ -512,77 +512,13 @@ exports[`<TableObject /> Sortable story renders snapshot 1`] = `
                     />
                   </svg>
                 </div>
-              </div>
-            </th>
-            <th
-              aria-sort="ascending"
-              class="table__header-cell table__header-cell--ascending"
-            >
-              <div
-                class="table__header-cell--contents"
-              >
-                Sortable, ascending
-                <div
-                  class="table__header-cell--sort"
-                >
-                  <svg
-                    class="icon"
-                    fill="currentColor"
-                    height="1rem"
-                    role="img"
-                    style="--icon-size: 1rem;"
-                    width="1rem"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <title
-                      id="5"
-                    >
-                      Sorted, ascending
-                    </title>
-                    <use
-                      xlink:href="test-file-stub#arrow-narrow-up"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </th>
-            <th
-              aria-sort="descending"
-              class="table__header-cell table__header-cell--ascending"
-            >
-              <div
-                class="table__header-cell--contents"
-              >
-                Sortable, descending
-                <div
-                  class="table__header-cell--sort"
-                >
-                  <svg
-                    class="icon"
-                    fill="currentColor"
-                    height="1rem"
-                    role="img"
-                    style="--icon-size: 1rem;"
-                    width="1rem"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <title
-                      id="6"
-                    >
-                      Sorted, descending
-                    </title>
-                    <use
-                      xlink:href="test-file-stub#arrow-narrow-down"
-                    />
-                  </svg>
-                </div>
-              </div>
+              </button>
             </th>
             <th
               class="table__header-cell"
             >
               <div
-                class="table__header-cell--contents"
+                class="table__header-cell-contents"
               >
                 Not sortable
               </div>
@@ -605,6 +541,10 @@ exports[`<TableObject /> Sortable story renders snapshot 1`] = `
             >
               Value
             </td>
+          </tr>
+          <tr
+            class="table__row"
+          >
             <td
               class="table__cell"
             >
@@ -629,54 +569,10 @@ exports[`<TableObject /> Sortable story renders snapshot 1`] = `
             >
               Value
             </td>
-            <td
-              class="table__cell"
-            >
-              Value
-            </td>
-            <td
-              class="table__cell"
-            >
-              Value
-            </td>
           </tr>
           <tr
             class="table__row"
           >
-            <td
-              class="table__cell"
-            >
-              Value
-            </td>
-            <td
-              class="table__cell"
-            >
-              Value
-            </td>
-            <td
-              class="table__cell"
-            >
-              Value
-            </td>
-            <td
-              class="table__cell"
-            >
-              Value
-            </td>
-          </tr>
-          <tr
-            class="table__row"
-          >
-            <td
-              class="table__cell"
-            >
-              Value
-            </td>
-            <td
-              class="table__cell"
-            >
-              Value
-            </td>
             <td
               class="table__cell"
             >

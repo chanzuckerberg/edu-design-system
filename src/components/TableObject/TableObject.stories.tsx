@@ -175,12 +175,8 @@ const SortableTemplate: Story<Props> = (args) => (
       <Table caption="This is a table caption and it is required">
         <TableHeader>
           <TableRow>
-            <TableHeaderCell sortable>Sortable, not sorted</TableHeaderCell>
-            <TableHeaderCell sortDirection="ascending" sortable>
-              Sortable, ascending
-            </TableHeaderCell>
-            <TableHeaderCell sortDirection="descending" sortable>
-              Sortable, descending
+            <TableHeaderCell sortDirection="default" sortable>
+              Sortable
             </TableHeaderCell>
             <TableHeaderCell>Not sortable</TableHeaderCell>
           </TableRow>
@@ -189,28 +185,16 @@ const SortableTemplate: Story<Props> = (args) => (
           <TableRow>
             <TableCell>Value</TableCell>
             <TableCell>Value</TableCell>
-
+          </TableRow>
+          <TableRow>
             <TableCell>Value</TableCell>
             <TableCell>Value</TableCell>
           </TableRow>
           <TableRow>
             <TableCell>Value</TableCell>
             <TableCell>Value</TableCell>
-
-            <TableCell>Value</TableCell>
-            <TableCell>Value</TableCell>
           </TableRow>
           <TableRow>
-            <TableCell>Value</TableCell>
-            <TableCell>Value</TableCell>
-
-            <TableCell>Value</TableCell>
-            <TableCell>Value</TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell>Value</TableCell>
-            <TableCell>Value</TableCell>
-
             <TableCell>Value</TableCell>
             <TableCell>Value</TableCell>
           </TableRow>
