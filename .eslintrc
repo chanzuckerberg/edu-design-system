@@ -101,10 +101,6 @@
           {
             "patterns": [
               {
-                "group": [".storybook"],
-                "message": "Do not import files from `.storybook/` into `src`. If needed, move files into `src/storyUtils` instead."
-              },
-              {
                 "group": ["**/docs/*"],
                 "message": "Do not import files from `docs/` into `src`. If needed, move files into `src/storyUtils` instead."
               }
