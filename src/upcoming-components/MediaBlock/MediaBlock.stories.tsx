@@ -3,9 +3,9 @@ import { Story, Meta } from '@storybook/react';
 import React from 'react';
 
 import { MediaBlock, Props } from './MediaBlock';
+import PlaceholderImage from '../../../.storybook/static/compass-solo.svg';
 import Heading from '../../components/Heading';
 import Text from '../../components/Text';
-import PlaceholderImage from '../../static/compass-solo.svg';
 
 export default {
   title: 'Molecules/Blocks/MediaBlock',

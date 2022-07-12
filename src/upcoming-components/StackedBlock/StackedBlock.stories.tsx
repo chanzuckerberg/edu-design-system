@@ -3,11 +3,11 @@ import { Story, Meta } from '@storybook/react';
 import React from 'react';
 
 import { StackedBlock, Props } from './StackedBlock';
+import PlaceholderImage from '../../../.storybook/static/compass-solo.svg';
 import Button from '../../components/Button';
 import ButtonGroup from '../../components/ButtonGroup';
 import Heading from '../../components/Heading';
 import Text from '../../components/Text';
-import PlaceholderImage from '../../static/compass-solo.svg';
 import StackedBlockBody from '../StackedBlockBody';
 import StackedBlockFooter from '../StackedBlockFooter';
 import StackedBlockHeader from '../StackedBlockHeader';
