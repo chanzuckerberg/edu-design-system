@@ -21,7 +21,11 @@ export interface Props {
    * - **draggable** renders a card that is used to drag with space for the handle on the left
    */
   behavior?: 'draggable';
-  buttonDropdownItems: ReactNode;
+  /**
+   * Button dropdown items
+   * 1) If not declared, the button dropdown does not render
+   */
+  buttonDropdownItems?: ReactNode;
   /**
    * Determines type of clickable
    * - default renders a dropdown menu to the bottom left of the button
@@ -91,7 +95,7 @@ export const ProjectCard = ({
       {...other}
     >
       <CardHeader className={styles['project-card__header']}>
-        {number && (
+        {number && numberAriaLabel && (
           <NumberIcon
             aria-label={numberAriaLabel}
             className={styles['project-card__number']}
@@ -119,25 +123,27 @@ export const ProjectCard = ({
           {meta}
         </div>
       </CardBody>
-      <CardFooter className={styles['project-card__footer']}>
-        <ButtonDropdown
-          className={styles['project-card__button-dropdown']}
-          dropdownMenuTrigger={
-            <Button
-              aria-label="Open project dropdown"
-              className={styles['project-card__menu-button']}
-              size="sm"
-              status="neutral"
-              variant="icon"
-            >
-              <Icon name="dots-vertical" purpose="decorative" />
-            </Button>
-          }
-          position={buttonDropdownPosition}
-        >
-          {buttonDropdownItems}
-        </ButtonDropdown>
-      </CardFooter>
+      {buttonDropdownItems && (
+        <CardFooter className={styles['project-card__footer']}>
+          <ButtonDropdown
+            className={styles['project-card__button-dropdown']}
+            dropdownMenuTrigger={
+              <Button
+                aria-label="Open project dropdown"
+                className={styles['project-card__menu-button']}
+                size="sm"
+                status="neutral"
+                variant="icon"
+              >
+                <Icon name="dots-vertical" purpose="decorative" />
+              </Button>
+            }
+            position={buttonDropdownPosition}
+          >
+            {buttonDropdownItems}
+          </ButtonDropdown>
+        </CardFooter>
+      )}
     </Card>
   );
 };
