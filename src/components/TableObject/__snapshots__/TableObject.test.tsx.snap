@@ -71,7 +71,7 @@ exports[`<TableObject /> Default story renders snapshot 1`] = `
               <div
                 class="table__header-cell-contents"
               >
-                Table heading
+                Name
               </div>
             </th>
             <th
@@ -80,7 +80,7 @@ exports[`<TableObject /> Default story renders snapshot 1`] = `
               <div
                 class="table__header-cell-contents"
               >
-                Table heading
+                Status
               </div>
             </th>
             <th
@@ -89,7 +89,7 @@ exports[`<TableObject /> Default story renders snapshot 1`] = `
               <div
                 class="table__header-cell-contents"
               >
-                Table heading
+                Chart
               </div>
             </th>
             <th
@@ -98,7 +98,7 @@ exports[`<TableObject /> Default story renders snapshot 1`] = `
               <div
                 class="table__header-cell-contents"
               >
-                Table heading
+                Last Update
               </div>
             </th>
           </tr>
@@ -112,46 +112,22 @@ exports[`<TableObject /> Default story renders snapshot 1`] = `
             <td
               class="table__cell"
             >
-              Value
+              Table Row 1, Table Cell 1
             </td>
             <td
               class="table__cell"
             >
-              Value
+              Row 2 Cell 2
             </td>
             <td
               class="table__cell"
             >
-              Value
+              Table Row 1, Table Cell 3
             </td>
             <td
               class="table__cell"
             >
-              Value
-            </td>
-          </tr>
-          <tr
-            class="table__row"
-          >
-            <td
-              class="table__cell"
-            >
-              Value
-            </td>
-            <td
-              class="table__cell"
-            >
-              Value
-            </td>
-            <td
-              class="table__cell"
-            >
-              Value
-            </td>
-            <td
-              class="table__cell"
-            >
-              Value
+              Table Row 1, Table Cell 4
             </td>
           </tr>
           <tr
@@ -160,22 +136,22 @@ exports[`<TableObject /> Default story renders snapshot 1`] = `
             <td
               class="table__cell"
             >
-              Value
+              Table Row 2, Table Cell 1
             </td>
             <td
               class="table__cell"
             >
-              Value
+              Row 2 Cell 2
             </td>
             <td
               class="table__cell"
             >
-              Value
+              Table Row 2, Table Cell 3
             </td>
             <td
               class="table__cell"
             >
-              Value
+              Table Row 2, Table Cell 4
             </td>
           </tr>
           <tr
@@ -184,22 +160,46 @@ exports[`<TableObject /> Default story renders snapshot 1`] = `
             <td
               class="table__cell"
             >
-              Value
+              Table Row 3, Table Cell 1
             </td>
             <td
               class="table__cell"
             >
-              Value
+              Row 2 Cell 2
             </td>
             <td
               class="table__cell"
             >
-              Value
+              Table Row 3, Table Cell 3
             </td>
             <td
               class="table__cell"
             >
-              Value
+              Table Row 3, Table Cell 4
+            </td>
+          </tr>
+          <tr
+            class="table__row"
+          >
+            <td
+              class="table__cell"
+            >
+              Table Row 4, Table Cell 1
+            </td>
+            <td
+              class="table__cell"
+            >
+              Row 2 Cell 2
+            </td>
+            <td
+              class="table__cell"
+            >
+              Table Row 4, Table Cell 3
+            </td>
+            <td
+              class="table__cell"
+            >
+              Table Row 4, Table Cell 4
             </td>
           </tr>
         </tbody>
@@ -280,7 +280,7 @@ exports[`<TableObject /> Overflow story renders snapshot 1`] = `
               <div
                 class="table__header-cell-contents"
               >
-                Table heading
+                Name
               </div>
             </th>
             <th
@@ -289,7 +289,7 @@ exports[`<TableObject /> Overflow story renders snapshot 1`] = `
               <div
                 class="table__header-cell-contents"
               >
-                Table heading
+                Status
               </div>
             </th>
             <th
@@ -298,7 +298,7 @@ exports[`<TableObject /> Overflow story renders snapshot 1`] = `
               <div
                 class="table__header-cell-contents"
               >
-                Table heading
+                Chart
               </div>
             </th>
             <th
@@ -307,7 +307,7 @@ exports[`<TableObject /> Overflow story renders snapshot 1`] = `
               <div
                 class="table__header-cell-contents"
               >
-                Table heading
+                Last Update
               </div>
             </th>
           </tr>
@@ -321,46 +321,22 @@ exports[`<TableObject /> Overflow story renders snapshot 1`] = `
             <td
               class="table__cell"
             >
-              Value
+              Table Row 1, Table Cell 1
             </td>
             <td
               class="table__cell"
             >
-              Value
+              Table Row 1, Table Cell 2
             </td>
             <td
               class="table__cell"
             >
-              Value
+              Table Row 1, Table Cell 3
             </td>
             <td
               class="table__cell"
             >
-              Value
-            </td>
-          </tr>
-          <tr
-            class="table__row"
-          >
-            <td
-              class="table__cell"
-            >
-              Value
-            </td>
-            <td
-              class="table__cell"
-            >
-              Value
-            </td>
-            <td
-              class="table__cell"
-            >
-              Value
-            </td>
-            <td
-              class="table__cell"
-            >
-              Value
+              Table Row 1, Table Cell 4
             </td>
           </tr>
           <tr
@@ -369,22 +345,22 @@ exports[`<TableObject /> Overflow story renders snapshot 1`] = `
             <td
               class="table__cell"
             >
-              Value
+              Table Row 2, Table Cell 1
             </td>
             <td
               class="table__cell"
             >
-              Value
+              Table Row 2, Table Cell 2
             </td>
             <td
               class="table__cell"
             >
-              Value
+              Table Row 2, Table Cell 3
             </td>
             <td
               class="table__cell"
             >
-              Value
+              Table Row 2, Table Cell 4
             </td>
           </tr>
           <tr
@@ -393,22 +369,46 @@ exports[`<TableObject /> Overflow story renders snapshot 1`] = `
             <td
               class="table__cell"
             >
-              Value
+              Table Row 3, Table Cell 1
             </td>
             <td
               class="table__cell"
             >
-              Value
+              Table Row 3, Table Cell 2
             </td>
             <td
               class="table__cell"
             >
-              Value
+              Table Row 3, Table Cell 3
             </td>
             <td
               class="table__cell"
             >
-              Value
+              Table Row 3, Table Cell 4
+            </td>
+          </tr>
+          <tr
+            class="table__row"
+          >
+            <td
+              class="table__cell"
+            >
+              Table Row 4, Table Cell 1
+            </td>
+            <td
+              class="table__cell"
+            >
+              Table Row 4, Table Cell 2
+            </td>
+            <td
+              class="table__cell"
+            >
+              Table Row 4, Table Cell 3
+            </td>
+            <td
+              class="table__cell"
+            >
+              Table Row 4, Table Cell 4
             </td>
           </tr>
         </tbody>

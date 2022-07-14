@@ -10,9 +10,17 @@
 .table {
   border-collapse: collapse;
   border-spacing: 0;
-  width: 100%;
   margin-bottom: var(--eds-size-2);
   position: relative;
+  display: flex;
+  table-layout: fixed;
+  width: 100%;
+
+  @media all and (min-width: $eds-bp-md) {
+    display: table;
+    table-layout: auto;
+    width: 100%;
+  }
 }
 
 /**
@@ -29,13 +37,10 @@
   min-width: 1200px;
 }
 
-.table--stacked {
+/* .table--stacked {
   display: block;
 
-  @media all and (min-width: $eds-bp-md) {
-    display: table;
-  }
-}
+} */
 
 /**
  * Table Caption
@@ -48,34 +53,35 @@
 
 /**
  * Table Header
- * 1) First row of a table that contains the table header cells
+ * 1) Hide on small screens so rows can stack, card style
+ * 2) First row of a table that contains the table header cells
  */
 .table__header {
-  /**
-     * Table header inside a stacked table
-     * 1) Hide on small screens
-     */
-  .table--stacked & {
-    display: none;
+  display: none; /* 1 */
 
-    @media all and (min-width: $eds-bp-md) {
-      display: table-header-group; /* 1 */
-    }
+  @media all and (min-width: $eds-bp-md) {
+    display: table-header-group; /* 2 */
   }
 }
 
 /**
  * Table body
  * 1) <tbody> tag, contains the table rows in the body of the table
+ * 2) On small screens, use display: block to allow rows to stack
  */
 .table__body {
-  .table--stacked > & {
-    display: block;
-    width: 100%;
+  display: block; /* 2 */
+  width: 100%;
+  border: var(--eds-theme-border-width) solid
+    var(--eds-theme-color-border-neutral-subtle);
+  border-radius: var(--eds-border-radius-md);
+  margin-bottom: var(--eds-size-2);
 
-    @media all and (min-width: $eds-bp-md) {
-      display: table-row-group;
-    }
+  @media all and (min-width: $eds-bp-md) {
+    display: table-row-group;
+    border-top: none;
+    border-right: none;
+    border-left: none;
   }
 }
 
@@ -87,11 +93,11 @@
   border-bottom-width: var(--eds-theme-border-width);
   border-bottom-style: solid;
   border-bottom-color: var(--eds-theme-color-border-neutral-subtle);
-
+  
   .table__header & {
     border-bottom-color: var(--eds-theme-color-border-neutral-default);
   }
-
+  
   /**
   * Table row within zebra table
   */
@@ -103,20 +109,19 @@
       background: var(--eds-theme-color-background-neutral-medium);
     }
   }
-
-  .table--stacked > .table__body & {
-    display: block;
-    width: 100%;
-    border: var(--eds-theme-border-width) solid
+  
+  .table__body & {
+    /* display: block; */
+    /* width: 100%; */
+    display: flex;
+    border-bottom: var(--eds-theme-border-width) solid
       var(--eds-theme-color-border-neutral-subtle);
     border-radius: var(--eds-border-radius-md);
     margin-bottom: var(--eds-size-2);
+    flex-wrap: wrap;
 
     @media all and (min-width: $eds-bp-md) {
       display: table-row;
-      border-top: none;
-      border-right: none;
-      border-left: none;
     }
   }
 }
@@ -157,16 +162,20 @@
 /**
 * Table header cell button
 * 1) On table header cells that are sortable, the container is a button
-* 2) When column is sortable, add an inline icon after the title
+* 2) Using flex to set alignment and spacing between title and sort icon
+* 3) Add an inline icon after the title to indicate current sort order
 */
 .table__header-cell-button {
+  display: flex; /* 2 */
+  align-items: center;
+  gap: var(--eds-size-half);
   padding: 0;
   background: none;
   border: none;
   &:hover {
     cursor: pointer;
   }
-  /* 2 */
+  /* 3 */
   .table__header-cell-sort {
     display: inline;
   }
@@ -186,9 +195,17 @@
  * Table Cell
  */
 .table__cell {
+  display: flex;
+  gap: var(--eds-size-1);
+  width: 50%;
   padding: var(--eds-size-2) var(--eds-size-1);
   @mixin eds-theme-typography-body-text-sm;
-
+  
+  @media all and (min-width: $eds-bp-md) {
+    display: table-cell;
+    width: auto;
+  }
+  
   /**
      * Condensed table
      * 1) shrinks padding between table rows
@@ -220,58 +237,6 @@
 
     &.table__cell--valign-center {
       vertical-align: middle;
-    }
-  }
-
-  /**
-     * Header table cells in a stacked table
-     */
-  .table--stacked .table__header & {
-    @media all and (max-width: $eds-bp-md) {
-      /* stylelint-disable-next-line max-nesting-depth */
-      &:after {
-        content: none;
-      }
-    }
-  }
-
-  /**
-     * Table cell inside a stacked table
-     * 1) Take data-heading attribute and display
-     *    that value as a block-level title above
-     *    each table cell
-     * 2) Hide data-heading on large screens since
-     *    table header cells become visible
-     */
-  .table--stacked & {
-    display: flex;
-    gap: var(--eds-size-1);
-    width: 100%;
-    padding-left: var(--eds-size-2);
-    padding-right: var(--eds-size-2);
-
-    &:before {
-      content: attr(data-heading); /* 1 */
-      display: block;
-      margin-right: auto;
-      @mixin eds-theme-typography-body-text-sm-bold;
-
-      /* stylelint-disable-next-line max-nesting-depth */
-      @media all and (min-width: $eds-bp-md) {
-        content: none; /* 2 */
-      }
-    }
-
-    @media all and (min-width: $eds-bp-md) {
-      display: table-cell;
-      width: auto;
-      padding: var(--eds-size-2) var(--eds-size-1);
-    }
-  }
-
-  .table--stacked.table--highlight-first-cell & {
-    &:first-child:before {
-      content: none;
     }
   }
 

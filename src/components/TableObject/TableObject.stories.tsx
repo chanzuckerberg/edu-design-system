@@ -51,40 +51,36 @@ const Template: Story<Props> = (args) => (
       <Table caption="This is a table caption and it is required">
         <TableHeader>
           <TableRow>
-            <TableHeaderCell>Table heading</TableHeaderCell>
-            <TableHeaderCell>Table heading</TableHeaderCell>
-            <TableHeaderCell>Table heading</TableHeaderCell>
-            <TableHeaderCell>Table heading</TableHeaderCell>
+            <TableHeaderCell>Name</TableHeaderCell>
+            <TableHeaderCell>Status</TableHeaderCell>
+            <TableHeaderCell>Chart</TableHeaderCell>
+            <TableHeaderCell>Last Update</TableHeaderCell>
           </TableRow>
         </TableHeader>
         <TableBody>
           <TableRow>
-            <TableCell>Value</TableCell>
-            <TableCell>Value</TableCell>
-
-            <TableCell>Value</TableCell>
-            <TableCell>Value</TableCell>
+            <TableCell>Table Row 1, Table Cell 1</TableCell>
+            <TableCell>Row 2 Cell 2</TableCell>
+            <TableCell>Table Row 1, Table Cell 3</TableCell>
+            <TableCell>Table Row 1, Table Cell 4</TableCell>
           </TableRow>
           <TableRow>
-            <TableCell>Value</TableCell>
-            <TableCell>Value</TableCell>
-
-            <TableCell>Value</TableCell>
-            <TableCell>Value</TableCell>
+            <TableCell>Table Row 2, Table Cell 1</TableCell>
+            <TableCell>Row 2 Cell 2</TableCell>
+            <TableCell>Table Row 2, Table Cell 3</TableCell>
+            <TableCell>Table Row 2, Table Cell 4</TableCell>
           </TableRow>
           <TableRow>
-            <TableCell>Value</TableCell>
-            <TableCell>Value</TableCell>
-
-            <TableCell>Value</TableCell>
-            <TableCell>Value</TableCell>
+            <TableCell>Table Row 3, Table Cell 1</TableCell>
+            <TableCell>Row 2 Cell 2</TableCell>
+            <TableCell>Table Row 3, Table Cell 3</TableCell>
+            <TableCell>Table Row 3, Table Cell 4</TableCell>
           </TableRow>
           <TableRow>
-            <TableCell>Value</TableCell>
-            <TableCell>Value</TableCell>
-
-            <TableCell>Value</TableCell>
-            <TableCell>Value</TableCell>
+            <TableCell>Table Row 4, Table Cell 1</TableCell>
+            <TableCell>Row 2 Cell 2</TableCell>
+            <TableCell>Table Row 4, Table Cell 3</TableCell>
+            <TableCell>Table Row 4, Table Cell 4</TableCell>
           </TableRow>
         </TableBody>
       </Table>
@@ -113,40 +109,36 @@ const OverflowTemplate: Story<Props> = (args) => (
       <Table caption="This is a table caption and it is required">
         <TableHeader>
           <TableRow>
-            <TableHeaderCell>Table heading</TableHeaderCell>
-            <TableHeaderCell>Table heading</TableHeaderCell>
-            <TableHeaderCell>Table heading</TableHeaderCell>
-            <TableHeaderCell>Table heading</TableHeaderCell>
+            <TableHeaderCell>Name</TableHeaderCell>
+            <TableHeaderCell>Status</TableHeaderCell>
+            <TableHeaderCell>Chart</TableHeaderCell>
+            <TableHeaderCell>Last Update</TableHeaderCell>
           </TableRow>
         </TableHeader>
         <TableBody>
           <TableRow>
-            <TableCell>Value</TableCell>
-            <TableCell>Value</TableCell>
-
-            <TableCell>Value</TableCell>
-            <TableCell>Value</TableCell>
+            <TableCell>Table Row 1, Table Cell 1</TableCell>
+            <TableCell>Table Row 1, Table Cell 2</TableCell>
+            <TableCell>Table Row 1, Table Cell 3</TableCell>
+            <TableCell>Table Row 1, Table Cell 4</TableCell>
           </TableRow>
           <TableRow>
-            <TableCell>Value</TableCell>
-            <TableCell>Value</TableCell>
-
-            <TableCell>Value</TableCell>
-            <TableCell>Value</TableCell>
+            <TableCell>Table Row 2, Table Cell 1</TableCell>
+            <TableCell>Table Row 2, Table Cell 2</TableCell>
+            <TableCell>Table Row 2, Table Cell 3</TableCell>
+            <TableCell>Table Row 2, Table Cell 4</TableCell>
           </TableRow>
           <TableRow>
-            <TableCell>Value</TableCell>
-            <TableCell>Value</TableCell>
-
-            <TableCell>Value</TableCell>
-            <TableCell>Value</TableCell>
+            <TableCell>Table Row 3, Table Cell 1</TableCell>
+            <TableCell>Table Row 3, Table Cell 2</TableCell>
+            <TableCell>Table Row 3, Table Cell 3</TableCell>
+            <TableCell>Table Row 3, Table Cell 4</TableCell>
           </TableRow>
           <TableRow>
-            <TableCell>Value</TableCell>
-            <TableCell>Value</TableCell>
-
-            <TableCell>Value</TableCell>
-            <TableCell>Value</TableCell>
+            <TableCell>Table Row 4, Table Cell 1</TableCell>
+            <TableCell>Table Row 4, Table Cell 2</TableCell>
+            <TableCell>Table Row 4, Table Cell 3</TableCell>
+            <TableCell>Table Row 4, Table Cell 4</TableCell>
           </TableRow>
         </TableBody>
       </Table>
