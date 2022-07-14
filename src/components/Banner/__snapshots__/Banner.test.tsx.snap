@@ -65,7 +65,7 @@ exports[`<Banner /> BrandDismissable story renders snapshot 1`] = `
       <title
         id="13"
       >
-        dismiss module
+        dismiss notification
       </title>
       <use
         xlink:href="test-file-stub#close"
@@ -199,7 +199,7 @@ exports[`<Banner /> DismissableWithAction story renders snapshot 1`] = `
       <title
         id="23"
       >
-        dismiss module
+        dismiss notification
       </title>
       <use
         xlink:href="test-file-stub#close"
@@ -325,7 +325,7 @@ exports[`<Banner /> ErrorDismissable story renders snapshot 1`] = `
       <title
         id="21"
       >
-        dismiss module
+        dismiss notification
       </title>
       <use
         xlink:href="test-file-stub#close"
@@ -545,7 +545,7 @@ exports[`<Banner /> NeutralDismissable story renders snapshot 1`] = `
       <title
         id="15"
       >
-        dismiss module
+        dismiss notification
       </title>
       <use
         xlink:href="test-file-stub#close"
@@ -793,7 +793,7 @@ exports[`<Banner /> SuccessDismissable story renders snapshot 1`] = `
       <title
         id="17"
       >
-        dismiss module
+        dismiss notification
       </title>
       <use
         xlink:href="test-file-stub#close"
@@ -966,7 +966,7 @@ exports[`<Banner /> VerticalDismissable story renders snapshot 1`] = `
       <title
         id="28"
       >
-        dismiss module
+        dismiss notification
       </title>
       <use
         xlink:href="test-file-stub#close"
@@ -1034,7 +1034,7 @@ exports[`<Banner /> VerticalDismissableWithAction story renders snapshot 1`] = `
       <title
         id="31"
       >
-        dismiss module
+        dismiss notification
       </title>
       <use
         xlink:href="test-file-stub#close"
@@ -1218,7 +1218,7 @@ exports[`<Banner /> WarningDismissable story renders snapshot 1`] = `
       <title
         id="19"
       >
-        dismiss module
+        dismiss notification
       </title>
       <use
         xlink:href="test-file-stub#close"

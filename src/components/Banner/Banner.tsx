@@ -148,7 +148,11 @@ export const Banner = ({
           status="neutral"
           variant="icon"
         >
-          <Icon name={'close'} purpose="informative" title={'dismiss module'} />
+          <Icon
+            name="close"
+            purpose="informative"
+            title="dismiss notification"
+          />
         </Button>
       )}
 
