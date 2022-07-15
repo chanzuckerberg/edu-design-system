@@ -16,6 +16,18 @@ type Args = React.ComponentProps<typeof BaselineCard>;
 
 export const Default: StoryObj<Args> = {};
 
+export const Clickable: StoryObj<Args> = {
+  args: {},
+  decorators: [
+    (Story) => (
+      // eslint-disable-next-line jsx-a11y/anchor-is-valid
+      <a href="#">
+        <Story />
+      </a>
+    ),
+  ],
+};
+
 export const WithMetadata: StoryObj<Args> = {
   args: {
     metadata: {
