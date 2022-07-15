@@ -13,6 +13,15 @@
 }
 
 /**
+* Baseline card container
+* 1) Used to pass the cardRef object to Card component
+*/
+.baseline-card__container {
+  @mixin reset;
+  display: block;
+}
+
+/**
  * Baseline card label.
  */
 .baseline-card__label {
@@ -22,12 +31,77 @@
 }
 
 /**
+* Baseline card clickable 
+* 1) When an href prop is passed in, the card gets a :hover style to indicate
+* that it is clickable.
+*/
+.baseline-card--clickable {
+  transition: box-shadow var(--eds-anim-fade-quick) var(--eds-anim-ease);
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: var(--eds-box-shadow-xl);
+  }
+
+  @media screen and (prefers-reduced-motion) {
+    transition: none;
+  }
+}
+
+/**
  * Baseline card body for more content.
  */
 .baseline-card__body {
   @mixin eds-theme-typography-body-text-sm;
 
   color: var(--eds-theme-color-text-neutral-subtle);
+}
+
+/**
+* Baseline card link (based on WordPress' .screen-reader-text class)
+* 1) On a clickable card, the link should be visually hidden but still
+* accessible to screen readers. It should also become visible when it 
+* receives keyboard focus, i.e. using the Tab key
+* 2) Set width and height to 1px; some screen readers don't announce 
+* an element with a size of 0 px
+* 3) Hide the link
+* 4) Prevent screen readers reading the text letter for letter, as the
+* text is placed in a 1 pixel wide space. Many screen reader and browser
+* combinations announce broken words as they would appear visually.
+* 5) Clip is deprecated, but is added to support older browsers that don't support clip-path yet.
+* 
+* See https://make.wordpress.org/accessibility/handbook/markup/the-css-class-screen-reader-text/
+*/
+
+.baseline-card__link {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  width: 1px; /* 2 */
+  height: 1px;
+  margin: -1px; /* 3 */
+  padding: 0;
+  position: absolute;
+  overflow: hidden;
+  word-wrap: normal !important; /* 4 */
+}
+
+.baseline-card__link:focus {
+  @mixin eds-theme-typography-body-text-sm;
+  background-color: var(--eds-theme-color-background-neutral-default);
+  clip: auto !important; /* 5 */
+  clip-path: none;
+  color: var(--eds-theme-color-text-neutral-default);
+  display: block;
+  font-size: 1em;
+  height: auto;
+  left: var(--eds-size-half);
+  line-height: normal;
+  padding: var(--eds-size-half) var(--eds-size-1);
+  text-decoration: none;
+  top: var(--eds-size-half);
+  width: auto;
+  z-index: var(--eds-z-index-top); /* 1 */
 }
 
 /**

@@ -20,24 +20,6 @@
   background-color: var(--eds-theme-color-background-neutral-default);
 }
 
-/**
- * Linked card
- * 1) Card that is wrapped in an a tag
- */
-a.card {
-  appearance: none;
-  text-decoration: none;
-  color: var(--eds-theme-color-text-neutral-default);
-  transition: box-shadow var(--eds-anim-fade-quick) var(--eds-anim-ease);
-
-  &:hover {
-    box-shadow: var(--eds-box-shadow-md);
-  }
-
-  @media screen and (prefers-reduced-motion) {
-    transition: none;
-  }
-}
 
 /**
  * Raised card
