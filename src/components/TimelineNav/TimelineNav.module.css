@@ -270,6 +270,13 @@
   text-overflow: ellipsis; /* 2 */
 }
 
+/**Timeline nav right
+* 1) Optional content that will be positioned to the right of title
+*/
+.timeline-nav__link-right {
+  display: inline-block;
+}
+
 /**
 * Timeline nav link arrow
 * 1) (Only used on smaller screens) - an arrow icon at the right 

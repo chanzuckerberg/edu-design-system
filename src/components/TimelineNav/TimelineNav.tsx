@@ -32,6 +32,10 @@ export interface Props {
    */
   'aria-labelledby'?: string;
   /**
+   * Passed down to initially set the activeIndex state
+   */
+  activeIndex?: number;
+  /**
    * Calls back with the active index
    */
   onChange?: (index: number) => void;
@@ -48,44 +52,40 @@ export interface Props {
    */
   id?: string;
   /**
-   * Passed down to initially set the activeIndex state
-   */
-  activeIndex?: number;
-  /**
-   * The array of items to be passed into the component. The array must take on the specified shape
-   * TODO: improve `any` type
-   */
-  items?: Array<any>;
-  /**
-   * Indicates that field is required for form to be successfully submitted
-   */
-  required?: boolean;
-  /**
-   * Function passed down from higher level component into TimelineNav
-   */
-  timelineNavOnClick?: () => void;
-  /**
    * Overflow variants
    * - **inverted** changes the overflow shadow to the inverted color
    */
   overflow?: 'inverted';
   /**
-   * Stylistic variations:
-   * - **ordered** uses a ordered list <ol> instead of the default unordered list <ul>, and allows for icons, bullets, or numbers
+   * Indicates that field is required for form to be successfully submitted
    */
-  variant?: 'ordered';
+  required?: boolean;
+  /**
+   * Right slot: content that will be positioned to the right of title
+   */
+  right?: ReactNode;
+  /**
+   * Function passed down from higher level component into TimelineNav
+   */
+  timelineNavOnClick?: () => void;
   /**
    * Timeline nav item tab name
    */
   title?: string;
+  /**
+   * Stylistic variations:
+   * - **ordered** uses a ordered list <ol> instead of the default unordered list <ul>, and allows for icons, bullets, or numbers
+   */
+  variant?: 'ordered';
 }
 
 export interface TimelineNavItem {
   props: {
     'aria-label': string;
     children: ReactNode;
-    variant?: TimelineNavPanelVariant;
+    right?: ReactNode;
     title?: string;
+    variant?: TimelineNavPanelVariant;
   };
 }
 
@@ -109,6 +109,7 @@ export const TimelineNav = ({
   overflow,
   onChange,
   required,
+  right,
   title,
   ...other
 }: Props) => {
@@ -359,6 +360,9 @@ export const TimelineNav = ({
           {timelineNavItems().map((tab: TimelineNavItem, i: number) => {
             const isActive = activeIndexState === i;
             const itemVariant = variant && tab.props.variant;
+            {
+              console.log({ tab: tab });
+            }
             return (
               <li
                 className={clsx(
@@ -396,7 +400,11 @@ export const TimelineNav = ({
                   <div className={clsx(styles['timeline-nav__link-title'])}>
                     {tab.props.title}
                   </div>
-
+                  {tab.props.right && (
+                    <div className={clsx(styles['timeline-nav__link-right'])}>
+                      {tab.props.right}
+                    </div>
+                  )}
                   <Icon
                     className={clsx(styles['timeline-nav__link-arrow'])}
                     name="arrow-forward"

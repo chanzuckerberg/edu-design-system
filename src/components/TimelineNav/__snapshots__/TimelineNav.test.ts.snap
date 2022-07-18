@@ -106,6 +106,19 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
           >
             TimelineNavPanel 1
           </div>
+          <div
+            class="timeline-nav__link-right"
+          >
+            <span
+              class="text text--sm text--bold-weight tag tag--brand tag--outline"
+            >
+              <span
+                class="tag__body"
+              >
+                Feedback
+              </span>
+            </span>
+          </div>
           <svg
             class="icon timeline-nav__link-arrow"
             fill="currentColor"
@@ -156,7 +169,7 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
           <div
             class="timeline-nav__link-title"
           >
-            TimelineNavPanel 2
+            Putting right here
           </div>
           <svg
             class="icon timeline-nav__link-arrow"
@@ -211,6 +224,19 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
             
               Panel with a long name that breaks into multiple lines on smaller
               viewports
+          </div>
+          <div
+            class="timeline-nav__link-right"
+          >
+            <span
+              class="text text--sm text--bold-weight tag tag--brand tag--outline"
+            >
+              <span
+                class="tag__body"
+              >
+                New
+              </span>
+            </span>
           </div>
           <svg
             class="icon timeline-nav__link-arrow"

@@ -34,6 +34,10 @@ export interface Props {
    */
   id?: string;
   /**
+   * Right slot: content that will be positioned to the right of title
+   */
+  right?: ReactNode;
+  /**
    * The tab variant
    */
   variant?: TimelineNavPanelVariant;
@@ -57,6 +61,7 @@ export const TimelineNavPanel = ({
   className,
   completed,
   id,
+  right,
   variant,
   title,
   ...other

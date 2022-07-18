@@ -3,6 +3,7 @@ import { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
 import { TimelineNav } from './TimelineNav';
+import Tag from '../Tag';
 import Text from '../Text';
 import TimelineNavPanel from '../TimelineNavPanel';
 
@@ -28,7 +29,11 @@ export default {
             </p>
           </Text>
         </TimelineNavPanel>
-        <TimelineNavPanel title="TimelineNavPanel 1" variant="number">
+        <TimelineNavPanel
+          right={<Tag hasOutline text="Feedback" variant="brand" />}
+          title="TimelineNavPanel 1"
+          variant="number"
+        >
           <Text as="div">
             <h3>TimelineNavPanel 1</h3>
             <p>
@@ -40,7 +45,7 @@ export default {
           </Text>
         </TimelineNavPanel>
 
-        <TimelineNavPanel title="TimelineNavPanel 2" variant="error">
+        <TimelineNavPanel title="Putting right here" variant="error">
           <Text as="div">
             <h3>TimelineNavPanel 2</h3>
             <p>
@@ -53,6 +58,7 @@ export default {
         </TimelineNavPanel>
 
         <TimelineNavPanel
+          right={<Tag hasOutline text="New" variant="brand" />}
           title="
               Panel with a long name that breaks into multiple lines on smaller
               viewports"
