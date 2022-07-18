@@ -46,7 +46,7 @@ exports[`<TableObject /> Default story renders snapshot 1`] = `
     </div>
   </div>
   <div
-    class="table-object__body"
+    class="table-object__body eds-is-overflow-right"
   >
     <div
       class="table-object__body-inner"
@@ -255,13 +255,13 @@ exports[`<TableObject /> Overflow story renders snapshot 1`] = `
     </div>
   </div>
   <div
-    class="table-object__body"
+    class="table-object__body table-object__body--overflow"
   >
     <div
       class="table-object__body-inner"
     >
       <table
-        class="table"
+        class="table table--overflow"
       >
         <caption
           class="table__caption u-is-vishidden"
@@ -464,7 +464,7 @@ exports[`<TableObject /> Sortable story renders snapshot 1`] = `
     </div>
   </div>
   <div
-    class="table-object__body"
+    class="table-object__body eds-is-overflow-right"
   >
     <div
       class="table-object__body-inner"

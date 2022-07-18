@@ -16,17 +16,10 @@
 }
 
 /**
- * Table that overflows at a small breakpoint
- */
-.table--overflow-sm {
-  min-width: auto;
-}
-
-/**
  * Table that overflows at a large breakpoint
  */
-.table--overflow-lg {
-  min-width: 1200px;
+.table--overflow {
+  min-width: 50rem;
 }
 
 .table--stacked {

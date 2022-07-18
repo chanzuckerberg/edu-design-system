@@ -109,7 +109,7 @@ const OverflowTemplate: Story<Props> = (args) => (
         </ToolbarItem>
       </Toolbar>
     </TableObject.Header>
-    <TableObject.Body>
+    <TableObject.Body behavior="overflow">
       <Table caption="This is a table caption and it is required">
         <TableHeader>
           <TableRow>
