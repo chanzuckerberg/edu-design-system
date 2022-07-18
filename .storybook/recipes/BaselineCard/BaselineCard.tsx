@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { MutableRefObject, useEffect, useRef } from 'react';
+import React, { MutableRefObject, ReactNode, useEffect, useRef } from 'react';
 import styles from './BaselineCard.module.css';
 
 import { Card, CardBody, CardFooter, CardHeader, Tag } from '../../../src';
@@ -57,7 +57,7 @@ export interface Props {
  */
 export type LinkType = {
   href: string /* 1 */;
-  text: string /* 2 */;
+  text: ReactNode /* 2 */;
   target?: '_blank' | '_parent' | '_self' | '_top' /* 3 */;
 };
 
