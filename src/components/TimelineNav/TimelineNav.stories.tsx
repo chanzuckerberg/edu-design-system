@@ -45,7 +45,7 @@ export default {
           </Text>
         </TimelineNavPanel>
 
-        <TimelineNavPanel title="Putting right here" variant="error">
+        <TimelineNavPanel title="TimelineNavPanel 2" variant="error">
           <Text as="div">
             <h3>TimelineNavPanel 2</h3>
             <p>
