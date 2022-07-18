@@ -113,15 +113,17 @@ export const ProjectCard = ({
         >
           {title}
         </Heading>
-        <div className={styles['project-card__meta']}>
-          <Icon
-            className={styles['project-card__meta-icon']}
-            name="event-note"
-            purpose="decorative"
-            size="0.875rem"
-          />
-          {meta}
-        </div>
+        {meta && (
+          <div className={styles['project-card__meta']}>
+            <Icon
+              className={styles['project-card__meta-icon']}
+              name="event-note"
+              purpose="decorative"
+              size="0.875rem"
+            />
+            {meta}
+          </div>
+        )}
       </CardBody>
       {buttonDropdownItems && (
         <CardFooter className={styles['project-card__footer']}>
