@@ -63,6 +63,9 @@ export type LinkType = {
 
 /**
  * Recipe for a Card component that displays a common card use case.
+ * A link may be added to the card to create a clickable card.
+ * NOTE: when card is clickable, it does not support links or buttons
+ * in the contents of the card.
  */
 export const BaselineCard = ({
   className,
