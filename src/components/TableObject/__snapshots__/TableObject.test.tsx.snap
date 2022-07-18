@@ -494,7 +494,7 @@ exports[`<TableObject /> Sortable story renders snapshot 1`] = `
                   class="table__header-cell-sort"
                 >
                   <svg
-                    class="icon"
+                    class="icon table__header-cell-icon"
                     fill="currentColor"
                     height="1rem"
                     role="img"
