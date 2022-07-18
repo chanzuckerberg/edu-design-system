@@ -10,21 +10,60 @@ import '../src/design-tokens/tier-1-definitions/fonts.css';
 // Import storybook-specific CSS
 import './css/styleguide-only.css';
 
-// Import theme
-import headStyles from 'THEME/head.scss';
-
 import type { Story } from '@storybook/react';
 import React from 'react';
 
+/**
+ * From BM theming from here down
+ */
+
+let cachedTheme = 'theme-1';
+// Update the storybook toolbar with any custom buttons you want to add
+export const globalTypes = {
+  theme: {
+    name: 'Theme',
+    description: 'Brand theme',
+    defaultValue: cachedTheme,
+    toolbar: {
+      icon: 'paintbrush',
+      items: ['theme-1', 'theme-2'],
+      showName: false,
+    },
+  },
+};
+
+// Add in a decorator to render the proper theme properties
+const withThemeContainer = (Story: any, context: any) => {
+  const css =
+    require(`!css-loader!../src/design-tokens/${context.globals.theme}/tokens.css`).default;
+
+  if (!document.getElementById('ds-styles')) {
+    const style = document.createElement('style');
+    style.id = 'ds-styles';
+    document.head.appendChild(style);
+  }
+
+  // Add the CSS in to the head
+  // @ts-ignore
+  document.getElementById('ds-styles').innerHTML = css;
+
+  return Story();
+};
+
 export const decorators = [
+  // From EDS
   (Story: Story) => (
     <div dir="ltr">
       <Story />
     </div>
   ),
+  // From BM theming
+  withThemeContainer,
 ];
 
+//Parameters for storybook addons
 export const parameters = {
+  // From EDS
   backgrounds: {
     values: [
       {
@@ -37,35 +76,19 @@ export const parameters = {
       },
     ],
   },
-};
-
-// Theming logic
-let cachedTheme = 'nameoftheme';
-try {
-  cachedTheme = require('!!raw-loader!../node_modules/.cache/storybook-theme/theme');
-} catch (err) {}
-
-const headStyleElement = document.createElement('style');
-headStyleElement.innerHTML = headStyles;
-document.head.appendChild(headStyleElement);
-
-// Update the storybook toolbar with any custom buttons you want to add
-export const globalTypes = {
-  theme: {
-    name: 'Theme',
-    description: 'Brand theme',
-    defaultValue: cachedTheme,
-    toolbar: {
-      icon: 'paintbrush',
-      items: ['nameoftheme', 'additionaltheme', 'onemoretheme'],
-      showName: false,
+  // From BM theming
+  layout: 'fullscreen',
+  actions: { argTypesRegex: '^on[A-Z].*' },
+  controls: {
+    matchers: {
+      color: /(background|color)$/i,
+      date: /Date$/,
     },
   },
 };
 
-const channel = addons.getChannel();
-channel.addListener(UPDATE_GLOBALS, ({ globals }) => {
-  if (globals.theme && fetch) {
-    fetch('/set-theme?theme=' + globals.theme);
-  }
-});
+// Import all design-system related files
+import '../src/design-tokens/theme-1/head.scss';
+
+// Import all storybook-specific CSS
+import './css/styleguide-only.scss';
