@@ -153,6 +153,8 @@
 * 2) When column is sortable, add an inline icon after the title
 */
 .table__header-cell-button {
+  display: inline-flex;
+  gap: var(--eds-size-half);
   padding: 0;
   background: none;
   border: none;
@@ -163,6 +165,11 @@
   .table__header-cell-sort {
     display: inline;
   }
+}
+
+.table__header-cell-icon {
+  position: relative;
+  bottom: 1px;
 }
 
 /*

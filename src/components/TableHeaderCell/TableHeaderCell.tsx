@@ -126,6 +126,7 @@ export const TableHeaderCell = ({
           {children}
           <div className={clsx(styles['table__header-cell-sort'])}>
             <Icon
+              className={styles['table__header-cell-icon']}
               name={iconName}
               purpose="informative"
               size="1rem"
