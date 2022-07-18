@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import clsx from 'clsx';
 import React, { MutableRefObject, useEffect, useRef } from 'react';
 import styles from './BaselineCard.module.css';
@@ -31,14 +30,10 @@ export interface Props {
    * CSS class names that can be appended to the component.
    */
   className?: string;
-  /**
-   * Clickable card: link URL
+  /*
+   * Clickable card: link properties
    */
-  linkHref?: string;
-  /**
-   * Clickable card: link text
-   */
-  linkText?: string;
+  linkProps?: LinkType;
   /**
    * Label for the baseline card, placed in the card header.
    */
@@ -53,13 +48,25 @@ export interface Props {
   metadata?: Metadata;
 }
 
+/*
+ * Clickable card: link properties
+ * 1) Href and text are required attributes
+ * 2) Text will be used by screen readers; it will only be visible when the
+ * link is focused by a keyboard
+ * 3) Target attribute is optional
+ */
+export type LinkType = {
+  href: string /* 1 */;
+  text: string /* 2 */;
+  target?: '_blank' | '_parent' | '_self' | '_top' /* 3 */;
+};
+
 /**
  * Recipe for a Card component that displays a common card use case.
  */
 export const BaselineCard = ({
   className,
-  linkHref,
-  linkText,
+  linkProps,
   label,
   body,
   metadata,
@@ -109,7 +116,7 @@ export const BaselineCard = ({
 
   const componentClassName = clsx(
     styles['baseline-card'],
-    linkHref && styles['baseline-card--clickable'],
+    linkProps && styles['baseline-card--clickable'],
     className,
   );
   return (
@@ -125,16 +132,14 @@ export const BaselineCard = ({
         </CardHeader>
         <CardBody className={styles['baseline-card__body']}>
           {body}
-          {` `}
-          {linkHref && (
+          {linkProps && (
             <a
               className={styles['baseline-card__link']}
-              href={linkHref}
+              href={linkProps.href}
               ref={linkRef}
-              rel="noreferrer"
-              target="_blank"
+              target={linkProps.target ? linkProps.target : '_self'}
             >
-              {linkText}
+              {linkProps.text}
             </a>
           )}
         </CardBody>
