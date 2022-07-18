@@ -51,7 +51,6 @@ export const FeedbackOverview: React.FC = () => (
               <div className="fpo u-margin-bottom-xl">Progress bar</div>
               <div className="fpo u-margin-bottom-lg">Filters</div>
               <Table
-                behavior="stacked"
                 caption="Student comments"
                 hideCaption={true}
                 highlightFirstCell={true}

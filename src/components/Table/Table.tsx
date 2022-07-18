@@ -11,7 +11,7 @@ import TableRow from '../TableRow';
 export interface Props {
   /**
    * Behavior variations:
-   * - **overflow** renders a table that overflows horizontally off the screen
+   * - **overflow** renders a table with a max width to overflow
    * - **stacked** renders a table that stacks its content into a card on small screens
    */
   behavior?: 'overflow' | 'stacked';
