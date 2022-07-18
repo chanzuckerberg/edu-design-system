@@ -169,7 +169,7 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
           <div
             class="timeline-nav__link-title"
           >
-            Putting right here
+            TimelineNavPanel 2
           </div>
           <svg
             class="icon timeline-nav__link-arrow"
