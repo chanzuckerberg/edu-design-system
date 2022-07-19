@@ -59,7 +59,11 @@ export interface Props {
 export const TimelineNavPanel = ({
   children,
   className,
+  completed,
   id,
+  right,
+  title,
+  variant,
   ...other
 }: Props) => {
   const componentClassName = clsx(styles['timeline-nav__panel'], className, {});
