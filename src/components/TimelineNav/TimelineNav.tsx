@@ -83,6 +83,7 @@ export interface TimelineNavItem {
   props: {
     'aria-label': string;
     children: ReactNode;
+    completed?: boolean;
     right?: ReactNode;
     title?: string;
     variant?: TimelineNavPanelVariant;
@@ -104,13 +105,7 @@ export const TimelineNav = ({
   children,
   variant,
   activeIndex = 0,
-  timelineNavOnClick,
-  id,
-  overflow,
   onChange,
-  required,
-  right,
-  title,
   ...other
 }: Props) => {
   /**
@@ -399,12 +394,12 @@ export const TimelineNav = ({
                   </div>
                   <div className={clsx(styles['timeline-nav__link-title'])}>
                     {tab.props.title}
+                    {tab.props.right && (
+                      <div className={clsx(styles['timeline-nav__link-right'])}>
+                        {tab.props.right}
+                      </div>
+                    )}
                   </div>
-                  {tab.props.right && (
-                    <div className={clsx(styles['timeline-nav__link-right'])}>
-                      {tab.props.right}
-                    </div>
-                  )}
                   <Icon
                     className={clsx(styles['timeline-nav__link-arrow'])}
                     name="arrow-forward"

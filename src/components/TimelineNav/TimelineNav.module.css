@@ -275,6 +275,7 @@
 */
 .timeline-nav__link-right {
   display: inline-block;
+  margin-left: var(--eds-size-half);
 }
 
 /**
