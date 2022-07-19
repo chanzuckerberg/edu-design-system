@@ -343,7 +343,6 @@ export const TimelineNav = ({
     timelineNavItemRefs[activeIndexState].current?.focus(); /* 2 */
     setIsActive(false); /* 3 */
   };
-
   return (
     <div className={componentClassName} {...other}>
       <div className={styles['timeline-nav__nav']}>
@@ -361,9 +360,6 @@ export const TimelineNav = ({
           {timelineNavItems().map((tab: TimelineNavItem, i: number) => {
             const isActive = activeIndexState === i;
             const itemVariant = variant && tab.props.variant;
-            {
-              console.log({ tab: tab });
-            }
             return (
               <li
                 className={clsx(
