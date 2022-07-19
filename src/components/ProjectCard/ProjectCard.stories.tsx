@@ -71,6 +71,34 @@ export const Draggable: StoryObj<Args> = {
   },
 };
 
+export const WithoutMeta: StoryObj<Args> = {
+  args: {
+    number: 1,
+    title: 'Project card title',
+    numberAriaLabel: 'Project 1',
+    buttonDropdownItems: (
+      <>
+        <DropdownMenuItem>
+          <Icon name="schedule" purpose="decorative" size="1.25rem" />
+          Move to other section
+        </DropdownMenuItem>
+        <DropdownMenuItem>
+          <Icon name="schedule" purpose="decorative" size="1.25rem" />
+          Move up
+        </DropdownMenuItem>
+        <DropdownMenuItem>
+          <Icon name="schedule" purpose="decorative" size="1.25rem" />
+          Move down
+        </DropdownMenuItem>
+        <DropdownMenuItem>
+          <Icon name="schedule" purpose="decorative" size="1.25rem" />
+          Move view details
+        </DropdownMenuItem>
+      </>
+    ),
+  },
+};
+
 export const WithoutDropdown: StoryObj<Args> = {
   args: {
     number: 1,
