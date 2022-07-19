@@ -106,7 +106,7 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
           >
             TimelineNavPanel 1
             <div
-              class="timeline-nav__link-right"
+              class="timeline-nav__link-title-after"
             >
               <svg
                 class="icon"
@@ -234,7 +234,7 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
               Panel with a long name that breaks into multiple lines on smaller
               viewports
             <div
-              class="timeline-nav__link-right"
+              class="timeline-nav__link-title-after"
             >
               <svg
                 class="icon"

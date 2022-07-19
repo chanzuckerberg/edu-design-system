@@ -34,7 +34,8 @@ export default {
           </Text>
         </TimelineNavPanel>
         <TimelineNavPanel
-          right={
+          title="TimelineNavPanel 1"
+          titleAfter={
             <Icon
               color={EdsThemeColorIconUtilitySuccess}
               name="circle-small"
@@ -43,7 +44,6 @@ export default {
               title="29 students have completed"
             />
           }
-          title="TimelineNavPanel 1"
           variant="number"
         >
           <Text as="div">
@@ -70,7 +70,10 @@ export default {
         </TimelineNavPanel>
 
         <TimelineNavPanel
-          right={
+          title="
+              Panel with a long name that breaks into multiple lines on smaller
+              viewports"
+          titleAfter={
             <Icon
               color={EdsThemeColorIconBrandPrimary}
               name="circle-small"
@@ -79,9 +82,6 @@ export default {
               title="2 students need feedback"
             />
           }
-          title="
-              Panel with a long name that breaks into multiple lines on smaller
-              viewports"
           variant="warning"
         >
           <Text as="div">

@@ -61,10 +61,6 @@ export interface Props {
    */
   required?: boolean;
   /**
-   * Right slot: content that will be positioned to the right of title
-   */
-  right?: ReactNode;
-  /**
    * Function passed down from higher level component into TimelineNav
    */
   timelineNavOnClick?: () => void;
@@ -72,6 +68,10 @@ export interface Props {
    * Timeline nav item tab name
    */
   title?: string;
+  /**
+   * Slot for node to appear to the right of the title. Typically used to include a Badge, Button, or other component
+   */
+  titleAfter?: ReactNode;
   /**
    * Stylistic variations:
    * - **ordered** uses a ordered list <ol> instead of the default unordered list <ul>, and allows for icons, bullets, or numbers
@@ -84,8 +84,8 @@ export interface TimelineNavItem {
     'aria-label': string;
     children: ReactNode;
     completed?: boolean;
-    right?: ReactNode;
     title?: string;
+    titleAfter?: ReactNode;
     variant?: TimelineNavPanelVariant;
   };
 }
@@ -108,9 +108,9 @@ export const TimelineNav = ({
   onChange,
   overflow,
   required,
-  right,
   timelineNavOnClick,
   title,
+  titleAfter,
   variant,
   ...other
 }: Props) => {
@@ -396,9 +396,13 @@ export const TimelineNav = ({
                   </div>
                   <div className={clsx(styles['timeline-nav__link-title'])}>
                     {tab.props.title}
-                    {tab.props.right && (
-                      <div className={clsx(styles['timeline-nav__link-right'])}>
-                        {tab.props.right}
+                    {tab.props.titleAfter && (
+                      <div
+                        className={clsx(
+                          styles['timeline-nav__link-title-after'],
+                        )}
+                      >
+                        {tab.props.titleAfter}
                       </div>
                     )}
                   </div>

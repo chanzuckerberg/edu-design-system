@@ -34,10 +34,6 @@ export interface Props {
    */
   id?: string;
   /**
-   * Right slot: content that will be positioned to the right of title
-   */
-  right?: ReactNode;
-  /**
    * The tab variant
    */
   variant?: TimelineNavPanelVariant;
@@ -45,6 +41,10 @@ export interface Props {
    * The tab title
    */
   title?: string;
+  /**
+   * Slot for node to appear to the right of the title. Typically used to include a Badge, Button, or other component
+   */
+  titleAfter?: ReactNode;
 }
 
 /**
@@ -61,8 +61,8 @@ export const TimelineNavPanel = ({
   className,
   completed,
   id,
-  right,
   title,
+  titleAfter,
   variant,
   ...other
 }: Props) => {
