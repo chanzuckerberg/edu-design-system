@@ -16,17 +16,10 @@
 }
 
 /**
- * Table that overflows at a small breakpoint
- */
-.table--overflow-sm {
-  min-width: auto;
-}
-
-/**
  * Table that overflows at a large breakpoint
  */
-.table--overflow-lg {
-  min-width: 1200px;
+.table--overflow {
+  min-width: 50rem;
 }
 
 .table--stacked {
@@ -107,10 +100,8 @@
   .table--stacked > .table__body & {
     display: block;
     width: 100%;
-    border: var(--eds-theme-border-width) solid
+    border-bottom: var(--eds-theme-border-width) solid
       var(--eds-theme-color-border-neutral-subtle);
-    border-radius: var(--eds-border-radius-md);
-    margin-bottom: var(--eds-size-2);
 
     @media all and (min-width: $eds-bp-md) {
       display: table-row;
@@ -141,15 +132,52 @@
   }
 }
 
-.table__header-cell {
+/**
+* Table header cell
+* 1) On table header cells that are not sortable, the container is a div
+* 2) On table header cells that are sortable, the container is a button, but the text styling is the same as a non-sortable table header cell
+*/
+.table__header-cell,
+/* 2 */
+.table__header-cell-button {
   @mixin eds-theme-typography-label-sm;
   padding: var(--eds-size-1) var(--eds-size-1);
   text-align: left;
+}
 
-  .table__body & {
-    padding: var(--eds-size-2) var(--eds-size-1);
-    @mixin eds-theme-typography-body-text-xs-bold;
+/**
+* Table header cell button
+* 1) On table header cells that are sortable, the container is a button
+* 2) When column is sortable, add an inline icon after the title
+*/
+.table__header-cell-button {
+  display: inline-flex;
+  gap: var(--eds-size-half);
+  padding: 0;
+  background: none;
+  border: none;
+  &:hover {
+    cursor: pointer;
   }
+  /* 2 */
+  .table__header-cell-sort {
+    display: inline;
+  }
+}
+
+.table__header-cell-icon {
+  position: relative;
+  bottom: 1px;
+}
+
+/*
+* Table header cell contents
+* 1) A wrapper for the title and sort icon. Uses a flex row so that icon remains at the bottom when one or more titles breaks into multiple lines 
+*/
+.table__header-cell-contents {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--eds-size-1-and-half);
 }
 
 /**
@@ -217,8 +245,8 @@
     display: flex;
     gap: var(--eds-size-1);
     width: 100%;
-    padding-left: var(--eds-size-2);
-    padding-right: var(--eds-size-2);
+    padding-left: 0;
+    padding-right: 0;
 
     &:before {
       content: attr(data-heading); /* 1 */

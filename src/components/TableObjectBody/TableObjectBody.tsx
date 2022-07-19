@@ -4,6 +4,11 @@ import styles from '../TableObject/TableObject.module.css';
 
 export interface Props {
   /**
+   * Behavior variations:
+   * - **overflow** renders a table object body that overflows horizontally off the screen
+   */
+  behavior?: 'overflow';
+  /**
    * Child node(s) that can be nested inside component
    */
   children: ReactNode;
@@ -22,7 +27,12 @@ export interface Props {
  *
  * TODO: update this comment with a description of the component.
  */
-export const TableObjectBody = ({ children, className, ...other }: Props) => {
+export const TableObjectBody = ({
+  behavior,
+  children,
+  className,
+  ...other
+}: Props) => {
   /**
    * Set states and refs
    * 1) Set isEnd state: set to true, right shadow gradient activates. Removed when false
@@ -46,7 +56,7 @@ export const TableObjectBody = ({ children, className, ...other }: Props) => {
   const setShadows = () => {
     const table =
       tableObjectBodyRef.current &&
-      tableObjectBodyRef.current.querySelector('.table'); /* 1 */
+      tableObjectBodyRef.current.querySelector('table'); /* 1 */
     if (table) {
       const tableObjectBodyWidth =
         tableObjectBodyRef.current.clientWidth; /* 2 */
@@ -86,7 +96,9 @@ export const TableObjectBody = ({ children, className, ...other }: Props) => {
    * 1) Set shadows when user scrolls the table right and left
    */
   const handleOnScroll = (e: UIEvent<HTMLElement>): void => {
-    setShadows(); /* 1 */
+    if (behavior === 'overflow') {
+      setShadows(); /* 1 */
+    }
   };
 
   /**
@@ -96,16 +108,34 @@ export const TableObjectBody = ({ children, className, ...other }: Props) => {
    * 3) Remove window resize listener
    */
   useEffect(() => {
-    setShadows(); /* 1 */
-    window.addEventListener('resize', setShadows); /* 2 */
-    return () => {
-      window.removeEventListener('resize', setShadows); /* 3 */
-    };
+    if (behavior === 'overflow') {
+      setShadows(); /* 1 */
+      window.addEventListener('resize', setShadows); /* 2 */
+      return () => {
+        window.removeEventListener('resize', setShadows); /* 3 */
+      };
+    }
   });
+
+  const childrenWithProps = React.Children.map(
+    children,
+    // TODO: improve `any` type
+    (child: ReactNode) => {
+      // Checking isValidElement is the safe way and avoids a typescript
+      // error too.
+      if (React.isValidElement(child)) {
+        return React.cloneElement<Props>(child, {
+          behavior: behavior,
+        });
+      }
+      return child;
+    },
+  );
 
   const componentClassName = clsx(
     styles['table-object__body'],
     className,
+    behavior === 'overflow' && styles['table-object__body--overflow'],
     isStart && styles['eds-is-overflow-left'],
     isEnd && styles['eds-is-overflow-right'],
   );
@@ -116,7 +146,7 @@ export const TableObjectBody = ({ children, className, ...other }: Props) => {
         onScroll={handleOnScroll}
         ref={tableObjectBodyInnerRef}
       >
-        {children}
+        {childrenWithProps}
       </div>
     </div>
   );

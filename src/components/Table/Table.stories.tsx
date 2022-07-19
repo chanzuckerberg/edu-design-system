@@ -102,8 +102,16 @@ export const Default: StoryObj<Args> = {
   },
 };
 
-export const StackedTemplate: StoryObj<Args> = {
+export const Zebra: StoryObj<Args> = {
   args: {
+    ...Default.args,
+    variant: 'zebra',
+  },
+};
+
+export const Stacked: StoryObj<Args> = {
+  args: {
+    behavior: 'stacked',
     children: (
       <>
         <Table.Header>
@@ -143,20 +151,6 @@ export const StackedTemplate: StoryObj<Args> = {
         </Table.Body>
       </>
     ),
-  },
-};
-
-export const Zebra: StoryObj<Args> = {
-  args: {
-    ...Default.args,
-    variant: 'zebra',
-  },
-};
-
-export const Stacked: StoryObj<Args> = {
-  args: {
-    ...StackedTemplate.args,
-    behavior: 'stacked',
   },
 };
 

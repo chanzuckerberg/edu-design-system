@@ -20,7 +20,13 @@
   */
 .table-object__body {
   position: relative;
+}
 
+/**
+* Overflow table object body
+* 1) Used to create a scrollable table on small screens
+*/
+.table-object__body--overflow {
   /**
     * Table object body with content overflowed left
     */

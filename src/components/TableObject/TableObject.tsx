@@ -25,7 +25,7 @@ export interface Props {
  * TODO: update this comment with a description of the component.
  */
 export const TableObject = ({ children, className, ...other }: Props) => {
-  const componentClassName = clsx(styles['table-object'], className, {});
+  const componentClassName = clsx(styles['table-object'], className);
   return (
     <div className={componentClassName} {...other}>
       {children}
