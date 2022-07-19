@@ -23,7 +23,8 @@ export interface Props {
 }
 
 /**
- * Primary UI component for user interaction
+ * Card recipe with treatment to bring attention to the user. This contains a title,
+ * description, and slot for actions.
  */
 export const ButtonActionCalloutCard = ({
   actions,
@@ -39,29 +40,17 @@ export const ButtonActionCalloutCard = ({
   );
   return (
     <Card className={componentClassName} elevation="raised" {...other}>
-      <Card.Body className={styles['button-action-callout-card__body']}>
-        <Heading
-          as="h3"
-          className={styles['button-action-callout-card__heading']}
-          size="h5"
-        >
+      <Card.Body>
+        <Heading as="h3" size="h5">
           {title}
         </Heading>
         <div className={styles['button-action-callout-card__body-inner']}>
           {children && (
-            <Text
-              as="div"
-              className={styles['button-action-callout-card__description']}
-              size="sm"
-            >
+            <Text as="div" size="sm">
               {children}
             </Text>
           )}
-          {actions && (
-            <div className={styles['button-action-callout-card__actions']}>
-              {actions}
-            </div>
-          )}
+          {actions && <div>{actions}</div>}
         </div>
       </Card.Body>
     </Card>

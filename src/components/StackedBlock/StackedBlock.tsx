@@ -31,7 +31,8 @@ export interface Props {
  * import {StackedBlock} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * A stacked block is a block that contains stacked text content, with a
+ * text link around the title and a description.
  */
 export const StackedBlock = ({
   className,

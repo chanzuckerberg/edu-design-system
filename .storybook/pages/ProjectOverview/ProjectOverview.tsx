@@ -209,7 +209,7 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
             <Heading
               as="h3"
               className="u-margin-bottom-lg"
-              size="h3"
+              size="headline-sm"
               variant="base"
             >
               What to Focus on this Checkpoint
@@ -261,7 +261,7 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
             <Heading
               as="h3"
               className="u-margin-bottom-lg"
-              size="h3"
+              size="headline-sm"
               variant="base"
             >
               Resources for You
@@ -293,7 +293,7 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
             <Heading
               as="h3"
               className="u-margin-bottom-lg"
-              size="h3"
+              size="headline-sm"
               variant="base"
             >
               Resources for You
