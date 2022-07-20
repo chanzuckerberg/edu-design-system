@@ -91,10 +91,16 @@
 
   width: 22.5rem;
   --modal-horizontal-padding: var(--eds-size-4);
+}
+
+.modal__content--md {
   @media all and (min-width: $eds-bp-md) {
     width: 42rem;
     --modal-horizontal-padding: var(--eds-size-6);
   }
+}
+
+.modal__content--lg {
   @media all and (min-width: $eds-bp-xl) {
     width: 64rem;
     --modal-horizontal-padding: var(--eds-size-8);
