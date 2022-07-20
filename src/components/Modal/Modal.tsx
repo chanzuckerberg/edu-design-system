@@ -67,6 +67,11 @@ type ModalContentProps = {
    */
   onClose: () => void;
   /**
+   * Max size of the modal. Defaults to 'lg'.
+   * Will still break responsively.
+   */
+  size?: 'sm' | 'md' | 'lg';
+  /**
    * Color variants of the modal.
    */
   variant?: Variant;
@@ -121,6 +126,7 @@ export const ModalContent = (props: ModalContentProps) => {
     hideCloseButton = false,
     isScrollable,
     onClose,
+    size = 'lg',
     variant,
     ...other
   } = props;
@@ -128,6 +134,8 @@ export const ModalContent = (props: ModalContentProps) => {
   const componentClassName = clsx(
     styles['modal__content'],
     isScrollable && styles['modal__content--scrollable'],
+    (size === 'md' || size === 'lg') && styles['modal__content--md'],
+    size === 'lg' && styles['modal__content--lg'],
     className,
   );
 

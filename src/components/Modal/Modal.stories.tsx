@@ -94,6 +94,22 @@ export const Default: StoryObj<Args> = {
   },
 };
 
+export const Medium: StoryObj<Args> = {
+  ...Default,
+  args: {
+    ...Default.args,
+    size: 'md',
+  },
+};
+
+export const Small: StoryObj<Args> = {
+  ...Default,
+  args: {
+    ...Default.args,
+    size: 'sm',
+  },
+};
+
 export const Brand: StoryObj<Args> = {
   ...Default,
   args: {
