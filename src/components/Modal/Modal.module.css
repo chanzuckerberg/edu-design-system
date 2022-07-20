@@ -93,6 +93,10 @@
   --modal-horizontal-padding: var(--eds-size-4);
 }
 
+/**
+ * The medium modal size used for the md modal.
+ * Also used for the lg modal size for when the screen size is smaller than 75rem.
+ */
 .modal__content--md {
   @media all and (min-width: $eds-bp-md) {
     width: 42rem;
@@ -100,6 +104,9 @@
   }
 }
 
+/**
+ * The large modal size used for the lg/default modal.
+ */
 .modal__content--lg {
   @media all and (min-width: $eds-bp-xl) {
     width: 64rem;
