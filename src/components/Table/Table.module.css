@@ -133,7 +133,7 @@
 }
 
 /**
-* Table header cell
+* Table header cell and table header cell button
 * 1) On table header cells that are not sortable, the container is a div
 * 2) On table header cells that are sortable, the container is a button, but the text styling is the same as a non-sortable table header cell
 */
@@ -143,6 +143,19 @@
   @mixin eds-theme-typography-label-sm;
   padding: var(--eds-size-1) var(--eds-size-1);
   text-align: left;
+}
+
+/**
+* Table header cell
+*/
+.table__header-cell {
+  /**
+  * Table header cell within table body
+  * 1) Adjust the padding to match the table__cell padding for alignment
+  */
+  .table__body & {
+    padding: var(--eds-size-2) var(--eds-size-1);
+  }
 }
 
 /**
