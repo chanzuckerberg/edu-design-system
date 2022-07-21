@@ -19,12 +19,11 @@ exports[`<Section /> Center story renders snapshot 1`] = `
           <div
             class="section__kicker"
           >
-            <p
-              class="text text--body"
-              style="font-size: 12px; font-weight: 500; line-height: 15.9996px; color: rgb(56, 60, 67);"
+            <div
+              class="layout-linelength-container text text--overline text-passage text-passage--overline"
             >
-              KICKER ABOVE TITLE
-            </p>
+              Kicker above title
+            </div>
           </div>
           <h2
             class="section__title heading heading--size-h2"
@@ -35,8 +34,7 @@ exports[`<Section /> Center story renders snapshot 1`] = `
             class="section__description"
           >
             <p
-              class="text text--body"
-              style="font-size: 12px; font-weight: 500; line-height: 15.996px;"
+              class="text text--sm u-theme-typography-body-text-xs-bold"
             >
               This is a description of what the section is
             </p>
@@ -111,8 +109,7 @@ exports[`<Section /> WithDescription story renders snapshot 1`] = `
             class="section__description"
           >
             <p
-              class="text text--body"
-              style="font-size: 12px; font-weight: 500; line-height: 15.996px;"
+              class="text text--sm u-theme-typography-body-text-xs-bold"
             >
               This is a description of what the section is
             </p>

@@ -125,11 +125,15 @@ exports[`<PageHeader /> WithKicker story renders snapshot 1`] = `
   <div
     class="page-header__left"
   >
-    <p
+    <div
       class="page-header__kicker"
     >
-      Kicker above title
-    </p>
+      <div
+        class="layout-linelength-container text text--overline text-passage text-passage--overline"
+      >
+        Kicker above title
+      </div>
+    </div>
     <h1
       class="page-header__title heading heading--size-headline-lg heading--base"
     >
