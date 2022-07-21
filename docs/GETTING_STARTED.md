@@ -16,7 +16,7 @@ The navigation consists of:
 - **LegacyTypographySizes** contains legacy typography sizes before the system was refactored [TODO]
 - **DesignTokens** includes colors, typography, and other properties that build a theme across the system. These are shipped with the system to be consumed by product teams.
 - **Documentation** contains documenation around code guidelines, component structure, icon, layout, token, and typography
-- **Atoms**are the smallest level of components within the system. These are shipped with the system to be consumed by product teams.
+- **Atoms** are the smallest level of components within the system. These are shipped with the system to be consumed by product teams.
 - **Molecules** are made up of atoms and other HTML elements to create larger components. These are shipped with the system to be consumed by product teams.
 - **Organisms** are built up of atoms, molecules, and other HTML elements to create larger, more complex components.
 - **Recipes** are product-specific compositions that use the design system components to structure, but are not shipped with the system. This is to allow for teams to meet their business needs without polluting or complicating the reusable component structure and styling. Read [Brad Frost's post on recipes](https://bradfrost.com/blog/post/design-system-components-recipes-and-snowflakes/).
