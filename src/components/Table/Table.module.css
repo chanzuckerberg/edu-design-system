@@ -175,7 +175,7 @@
     position: relative;
     padding: var(--eds-size-2) var(--eds-size-1-and-half) var(--eds-size-2)
       var(--eds-size-1);
-    @mixin eds-theme-typography-kicker-sm;
+    @mixin eds-theme-typography-overline-sm;
     border-bottom-width: var(--eds-theme-border-width);
     border-bottom-style: solid;
     border-bottom-color: var(--eds-theme-color-border-neutral-subtle);
@@ -363,13 +363,13 @@
   padding-top: 0;
   padding-bottom: 0;
   text-align: left;
-  @mixin eds-theme-typography-kicker-sm;
+  @mixin eds-theme-typography-overline-sm;
 
   @media all and (min-width: $eds-bp-md) {
     width: 60%;
     padding-top: var(--eds-size-2);
     padding-bottom: var(--eds-size-2);
-    @mixin eds-theme-typography-kicker-sm;
+    @mixin eds-theme-typography-overline-sm;
   }
 }
 

@@ -26,9 +26,9 @@ export interface Props {
    */
   description?: string | ReactNode;
   /**
-   * Kicker appears above the title
+   * overline appears above the title
    */
-  kicker?: ReactNode;
+  overline?: ReactNode;
   /**
    * Right slot - an area to put right-aligned content in the right column
    */
@@ -79,7 +79,7 @@ export const PageHeader = ({
   description,
   headingSize = 'headline-lg',
   headingVariant = 'base',
-  kicker,
+  overline,
   orientation,
   right,
   title,
@@ -96,8 +96,8 @@ export const PageHeader = ({
   return (
     <header className={componentClassName} {...other}>
       <div className={styles['page-header__left']}>
-        {kicker && (
-          <div className={styles['page-header__kicker']}>{kicker}</div>
+        {overline && (
+          <div className={styles['page-header__overline']}>{overline}</div>
         )}
         <Heading
           as={as}

@@ -21,9 +21,9 @@ export interface Props {
    */
   description?: ReactNode;
   /**
-   * Kicker appears above the section title
+   * overline appears above the section title
    */
-  kicker?: ReactNode;
+  overline?: ReactNode;
   /**
    * "as" prop, passed to Heading Component
    */
@@ -67,7 +67,7 @@ export const Section = ({
   description,
   headingAs,
   headingSize = 'h2' /* 2 */,
-  kicker,
+  overline,
   right,
   title,
   titleAfter,
@@ -91,8 +91,8 @@ export const Section = ({
               </div>
             )}
             <div className={styles['section__title-inner']}>
-              {kicker && (
-                <div className={styles['section__kicker']}>{kicker}</div>
+              {overline && (
+                <div className={styles['section__overline']}>{overline}</div>
               )}
               <Heading
                 as={headingAs}

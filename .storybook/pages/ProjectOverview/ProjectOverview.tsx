@@ -41,15 +41,14 @@ export const ProjectOverview = () => {
           <Section
             description={
               <Text
-                as="p"
                 className="u-theme-typography-body-text-xs-bold"
                 variant="neutral"
               >
                 Estimated schedule: Days 4,5,6
               </Text>
             }
-            kicker={
-              <Text as="p" size="overline">
+            overline={
+              <Text as="div" size="overline">
                 Overview
               </Text>
             }
@@ -204,7 +203,7 @@ export const ProjectOverview = () => {
                 Estimated schedule: Days 4,5,6
               </Text>
             }
-            kicker="CHECKPOINT 1"
+            overline="CHECKPOINT 1"
             title="Expectations of Samuri in Feudal Japan and Wars of 5th Century"
           >
             <Text as="div">
@@ -233,7 +232,7 @@ export const ProjectOverview = () => {
                 Estimated schedule: Days 4,5,6
               </Text>
             }
-            kicker={
+            overline={
               <Text
                 as="p"
                 style={{
@@ -273,7 +272,7 @@ export const ProjectOverview = () => {
                 Estimated schedule: Days 4,5,6
               </Text>
             }
-            kicker={
+            overline={
               <Text
                 as="p"
                 style={{
@@ -313,7 +312,7 @@ export const ProjectOverview = () => {
                 Estimated schedule: Days 4,5,6
               </Text>
             }
-            kicker={
+            overline={
               <Text
                 as="p"
                 style={{

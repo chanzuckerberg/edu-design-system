@@ -17,12 +17,12 @@ exports[`<Section /> Center story renders snapshot 1`] = `
           class="section__title-inner"
         >
           <div
-            class="section__kicker"
+            class="section__overline"
           >
             <div
               class="layout-linelength-container text text--overline text-passage text-passage--overline"
             >
-              Kicker above title
+              Overline above title
             </div>
           </div>
           <h2
@@ -126,7 +126,7 @@ exports[`<Section /> WithDescription story renders snapshot 1`] = `
 </section>
 `;
 
-exports[`<Section /> WithKicker story renders snapshot 1`] = `
+exports[`<Section /> WithOverline story renders snapshot 1`] = `
 <section
   class="section"
 >
@@ -143,14 +143,13 @@ exports[`<Section /> WithKicker story renders snapshot 1`] = `
           class="section__title-inner"
         >
           <div
-            class="section__kicker"
+            class="section__overline"
           >
-            <p
-              class="text text--body"
-              style="font-size: 12px; font-weight: 500; line-height: 15.9996px; color: rgb(56, 60, 67);"
+            <div
+              class="layout-linelength-container text text--overline text-passage text-passage--overline"
             >
-              KICKER ABOVE TITLE
-            </p>
+              Overline above title
+            </div>
           </div>
           <h2
             class="section__title heading heading--size-h2"

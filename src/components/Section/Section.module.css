@@ -51,7 +51,7 @@
 
 /**
 * Section title inner
-* 1) Contains the section title, kicker, and description in a column
+* 1) Contains the section title, overline, and description in a column
 * 2) When variant === center, the title inner container gets centered in the header inner container
 * 3) When variant === center, the title inner container's contents get center aligned on the cross-axis
 */
@@ -94,10 +94,10 @@
 }
 
 /**
-* Kicker 
+* overline 
 * 1) Optional string that appears above the section title
 */
-.section__kicker {
+.section__overline {
   margin-top: 0;
   margin-bottom: var(--eds-size-1);
 }

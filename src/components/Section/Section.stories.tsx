@@ -30,9 +30,9 @@ export const Default: StoryObj<Args> = {
 export const Center: StoryObj<Args> = {
   args: {
     align: 'center',
-    kicker: (
+    overline: (
       <Text as="div" size="overline">
-        Kicker above title
+        Overline above title
       </Text>
     ),
     title: 'Section Title',
@@ -55,19 +55,11 @@ export const WithDescription: StoryObj<Args> = {
   },
 };
 
-export const WithKicker: StoryObj<Args> = {
+export const WithOverline: StoryObj<Args> = {
   args: {
-    kicker: (
-      <Text
-        as="p"
-        style={{
-          fontSize: '12px',
-          fontWeight: '500',
-          lineHeight: '15.9996px',
-          color: 'rgb(56, 60, 67)',
-        }}
-      >
-        KICKER ABOVE TITLE
+    overline: (
+      <Text as="div" size="overline">
+        Overline above title
       </Text>
     ),
     title: 'Section Title',
