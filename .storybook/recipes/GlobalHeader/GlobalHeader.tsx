@@ -23,13 +23,51 @@ export interface Props {
    * CSS class names that can be appended to the component.
    */
   className?: string;
+  /**
+   * Search students primary nav item is active
+   */
+  searchStudentsIsActive?: boolean;
+  /**
+   * Announcements primary nav item is active
+   */
+  announcementsIsActive?: boolean;
+  /**
+   * Subject primary nav item is active
+   */
+  subjectIsActive?: boolean;
+  /**
+   * Mentoring primary nav item is active
+   */
+  mentoringIsActive?: boolean;
+  /**
+   * Student progress primary nav item is active
+   */
+  studentProgressIsActive?: boolean;
+  /**
+   * Search students primary nav item is active
+   */
+  educatorToolsIsActive?: boolean;
+  /**
+   * Search students primary nav item is active
+   */
+  curriculumIsActive?: boolean;
 }
 
 /**
  * Primary UI component for user interaction
  * 1) Use the xl breakpoint to match the CSS breakpoint for the popover position change
  */
-export const GlobalHeader = ({ className, ...other }: Props) => {
+export const GlobalHeader = ({
+  className,
+  searchStudentsIsActive,
+  announcementsIsActive,
+  subjectIsActive,
+  mentoringIsActive,
+  studentProgressIsActive,
+  educatorToolsIsActive,
+  curriculumIsActive,
+  ...other
+}: Props) => {
   const [isActive, setisActive] = useState(false);
   const [isLarge, setIsLarge] = useState(false);
   const popoverBreakpoint = parseInt(breakpoint['eds-bp-xl']) * 16; /* 1 */
@@ -104,19 +142,46 @@ export const GlobalHeader = ({ className, ...other }: Props) => {
         isActive={isActive}
       >
         <PrimaryNav>
-          <PrimaryNavItem href="#" iconName="search" text="Search Students" />
-          <PrimaryNavItem href="#" iconName="class-copy" text="Announcements" />
-          <PrimaryNavItem href="#" iconName="mood" text="Math 7 (IM)" />
-          <PrimaryNavItem href="#" iconName="account-circle" text="Mentoring" />
-          <PrimaryNavItem href="#" iconName="school" text="Student Progress" />
+          <PrimaryNavItem
+            href="#"
+            iconName="search"
+            isActive={searchStudentsIsActive}
+            text="Search Students"
+          />
+          <PrimaryNavItem
+            href="#"
+            iconName="class-copy"
+            isActive={announcementsIsActive}
+            text="Announcements"
+          />
+          <PrimaryNavItem
+            href="#"
+            iconName="mood"
+            isActive={subjectIsActive}
+            text="Math 7 (IM)"
+          />
+          <PrimaryNavItem
+            href="#"
+            iconName="account-circle"
+            isActive={mentoringIsActive}
+            text="Mentoring"
+          />
+          <PrimaryNavItem
+            href="#"
+            iconName="school"
+            isActive={studentProgressIsActive}
+            text="Student Progress"
+          />
           <PrimaryNavItem
             href="#"
             iconName="view-module"
+            isActive={educatorToolsIsActive}
             text="Educator Tools"
           />
           <PrimaryNavItem
             href="#"
             iconName="business-center"
+            isActive={curriculumIsActive}
             text="Curriculum"
           />
         </PrimaryNav>

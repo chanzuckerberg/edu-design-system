@@ -23,11 +23,18 @@
   }
 
   &:active {
-    background: var(--eds-theme-color-button-primary-background-active);
+    background: var(--eds-theme-color-button-primary-brandbackground-active);
   }
 
   &:focus-visible {
     @mixin focusInverted;
+  }
+
+  /**
+  * Primary nav link within active primary nav item
+  */
+  .primary-nav__item.eds-is-active & {
+    background: var(--eds-theme-color-button-primary-brand-background-active);
   }
 
   @media screen and (prefers-reduced-motion) {

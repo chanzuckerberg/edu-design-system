@@ -1,0 +1,12 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    # STACKED BLOCK
+\*------------------------------------*/
+
+/**
+ * 1) 
+ */
+.stacked-block__description {
+  margin-top: var(--eds-size-1);
+}

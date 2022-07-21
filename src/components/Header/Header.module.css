@@ -43,7 +43,6 @@
   @media all and (max-width: $eds-bp-xl) {
     height: auto;
     position: static;
-    margin-bottom: var(--eds-size-4);
   }
 
   @media screen and (prefers-reduced-motion) {
