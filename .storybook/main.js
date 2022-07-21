@@ -11,9 +11,9 @@ const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin');
  */
 module.exports = {
   stories: [
+    '../docs',
     './components/**/*.stories.@(js|jsx|ts|tsx)',
     './components/**/*.stories.mdx',
-    '../docs',
     '../src/components',
     './**/*.stories.@(js|jsx|ts|tsx)',
     './**/*.stories.mdx',

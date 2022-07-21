@@ -3,6 +3,7 @@ import React from 'react';
 import { Documentation } from './Documentation';
 import Code from '../../../docs/CODE_GUIDELINES.md';
 import ComponentDocs from '../../../docs/COMPONENTS.md';
+import GettingStartedDocs from '../../../docs/GETTING_STARTED.md';
 import IconDocs from '../../../docs/ICONS.md';
 import LayoutDocs from '../../../docs/LAYOUT.md';
 import TokenDocs from '../../../docs/TOKENS.md';
@@ -21,6 +22,11 @@ export default {
 
 type Args = React.ComponentProps<typeof Documentation>;
 
+export const GettingStarted: StoryObj<Args> = {
+  args: {
+    children: <GettingStartedDocs />,
+  },
+};
 export const CodeGuidelines: StoryObj<Args> = {
   args: {
     children: <Code />,
