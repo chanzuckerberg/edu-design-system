@@ -31,29 +31,13 @@ export const Center: StoryObj<Args> = {
   args: {
     align: 'center',
     kicker: (
-      <Text
-        as="p"
-        style={{
-          fontSize: '12px',
-          fontWeight: '500',
-          lineHeight: '15.9996px',
-          color: 'rgb(56, 60, 67)',
-        }}
-      >
-        KICKER ABOVE TITLE
+      <Text as="div" size="overline">
+        Kicker above title
       </Text>
     ),
     title: 'Section Title',
     description: (
-      <Text
-        as="p"
-        style={{
-          fontSize: '12px',
-          fontWeight: '500',
-          lineHeight: '15.996px',
-          color: 'rgb(93,99,105',
-        }}
-      >
+      <Text as="p" className="u-theme-typography-body-text-xs-bold" size="sm">
         This is a description of what the section is
       </Text>
     ),
@@ -64,15 +48,7 @@ export const WithDescription: StoryObj<Args> = {
   args: {
     title: 'Section Title',
     description: (
-      <Text
-        as="p"
-        style={{
-          fontSize: '12px',
-          fontWeight: '500',
-          lineHeight: '15.996px',
-          color: 'rgb(93,99,105',
-        }}
-      >
+      <Text as="p" className="u-theme-typography-body-text-xs-bold" size="sm">
         This is a description of what the section is
       </Text>
     ),

@@ -71,9 +71,8 @@
  * 1) Kicker is an optional element that appears above the header
  */
 .page-header__kicker {
-  @mixin eds-typography-preset-009;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: var(--eds-size-1);
 }
 
 /**
@@ -103,7 +102,6 @@
  */
 .page-header__description {
   @mixin reset;
-  @mixin eds-typography-preset-009;
   color: var(--eds-theme-color-text-neutral-subtle);
   margin-top: var(--eds-size-1);
 

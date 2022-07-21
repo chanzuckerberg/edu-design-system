@@ -99,7 +99,7 @@
 */
 .section__kicker {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: var(--eds-size-1);
 }
 
 /**

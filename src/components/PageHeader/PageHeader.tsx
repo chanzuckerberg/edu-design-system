@@ -28,7 +28,7 @@ export interface Props {
   /**
    * Kicker appears above the title
    */
-  kicker?: string;
+  kicker?: ReactNode;
   /**
    * Right slot - an area to put right-aligned content in the right column
    */
@@ -96,7 +96,9 @@ export const PageHeader = ({
   return (
     <header className={componentClassName} {...other}>
       <div className={styles['page-header__left']}>
-        {kicker && <p className={styles['page-header__kicker']}>{kicker}</p>}
+        {kicker && (
+          <div className={styles['page-header__kicker']}>{kicker}</div>
+        )}
         <Heading
           as={as}
           className={styles['page-header__title']}
