@@ -45,9 +45,7 @@ export const StackedBlock = ({
 
   return (
     <div className={componentClassName} {...other}>
-      <Link className={styles['stacked-block__link']} href={href}>
-        {title}
-      </Link>
+      <Link href={href}>{title}</Link>
       <Text className={styles['stacked-block__description']}>{children}</Text>
     </div>
   );
