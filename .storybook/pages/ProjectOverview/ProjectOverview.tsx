@@ -42,27 +42,15 @@ export const ProjectOverview = () => {
             description={
               <Text
                 as="p"
-                style={{
-                  fontSize: '12px',
-                  fontWeight: '500',
-                  lineHeight: '15.996px',
-                  color: 'rgb(93,99,105',
-                }}
+                className="u-theme-typography-body-text-xs-bold"
+                variant="neutral"
               >
                 Estimated schedule: Days 4,5,6
               </Text>
             }
             kicker={
-              <Text
-                as="p"
-                style={{
-                  fontSize: '12px',
-                  fontWeight: '500',
-                  lineHeight: '15.9996px',
-                  color: 'rgb(56, 60, 67)',
-                }}
-              >
-                OVERVIEW
+              <Text as="p" size="overline">
+                Overview
               </Text>
             }
             title="What is this Project About?"
