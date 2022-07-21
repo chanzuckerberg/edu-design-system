@@ -306,6 +306,7 @@ export const DragDrop = ({
 
                     return (
                       <DragDropContainer
+                        columnClassName={container.columnClassName}
                         container={container}
                         emptyContent={container.emptyContent}
                         items={items}

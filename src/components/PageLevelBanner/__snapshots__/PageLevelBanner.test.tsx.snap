@@ -61,7 +61,7 @@ exports[`<PageLevelBanner /> BrandDismissable story renders snapshot 1`] = `
       <title
         id="7"
       >
-        dismiss module
+        dismiss notification
       </title>
       <use
         xlink:href="test-file-stub#close"
@@ -168,7 +168,7 @@ exports[`<PageLevelBanner /> ErrorDismissable story renders snapshot 1`] = `
       <title
         id="13"
       >
-        dismiss module
+        dismiss notification
       </title>
       <use
         xlink:href="test-file-stub#close"
@@ -342,7 +342,7 @@ exports[`<PageLevelBanner /> SuccessDismissable story renders snapshot 1`] = `
       <title
         id="9"
       >
-        dismiss module
+        dismiss notification
       </title>
       <use
         xlink:href="test-file-stub#close"
@@ -449,7 +449,7 @@ exports[`<PageLevelBanner /> WarningDismissable story renders snapshot 1`] = `
       <title
         id="11"
       >
-        dismiss module
+        dismiss notification
       </title>
       <use
         xlink:href="test-file-stub#close"

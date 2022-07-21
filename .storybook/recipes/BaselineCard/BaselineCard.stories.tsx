@@ -16,6 +16,17 @@ type Args = React.ComponentProps<typeof BaselineCard>;
 
 export const Default: StoryObj<Args> = {};
 
+export const Clickable: StoryObj<Args> = {
+  args: {
+    label: 'Clickable card',
+    body: 'This card is linked and clickable. Clicking anywhere on the card will open a link in a new tab. Its link is visually hidden but is still focusable when tabbing. Text within the card can still be selected. Right-clicking within the card works.',
+    linkProps: {
+      href: 'https://css-tricks.com/block-links-the-search-for-a-perfect-solution/',
+      text: 'Block links article',
+    },
+  },
+};
+
 export const WithMetadata: StoryObj<Args> = {
   args: {
     metadata: {

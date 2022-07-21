@@ -2,6 +2,53 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.6.1](https://github.com/chanzuckerberg/edu-design-system/compare/v1.6.0...v1.6.1) (2022-07-20)
+
+
+### Bug Fixes
+
+* adjust table header cell padding table body ([6d8fba7](https://github.com/chanzuckerberg/edu-design-system/commit/6d8fba711156c2f0572c40c9da4544e9394ade16))
+
+### [1.6.0](https://github.com/chanzuckerberg/edu-design-system/compare/v1.5.1...v1.6.0) (2022-07-19)
+
+### Features
+
+- added clickable behavior to BaselineCard ([3df4ada](https://github.com/chanzuckerberg/edu-design-system/commit/3df4ada7cd8f20527ea4ffed73da04e83b708c64))
+- added TableObject, TableObjectBody, TableObjectFooter, and TableObjectHeader components ([01ad741](https://github.com/chanzuckerberg/edu-design-system/commit/01ad741279e663938c61fca766cd8dbd7eeb6147#diff-a2a171449d862fe29692ce031981047d7ab755ae7f84c707aef80701b3ea0c80))
+
+### Bug Fixes
+
+- improved screen reader description for close button in banner components ([23284e6](https://github.com/chanzuckerberg/edu-design-system/commit/23284e6806f488df8e68c0cf85dd7ad309dcc7d3))
+- made meta prop optional in ProjectCard ([986ec95](https://github.com/chanzuckerberg/edu-design-system/commit/986ec95bab304fdbe71da165fbd784dd12c88efb))
+
+### [1.5.1](https://github.com/chanzuckerberg/edu-design-system/compare/v1.4.0...v1.5.1) (2022-07-13)
+
+### Features
+
+- added columnClassName drag drop styles ([63e7d8c](https://github.com/chanzuckerberg/edu-design-system/commit/63e7d8ccdd522ecfb26d76b60a78621b7b460a33))
+- optional dropdown items project card ([4fb073a](https://github.com/chanzuckerberg/edu-design-system/commit/4fb073afb677b59aa78bed0005978e4c84201d8b))
+
+### Bug Fixes
+
+- consistent string array type column class ([264655e](https://github.com/chanzuckerberg/edu-design-system/commit/264655eaef9ff57f70451f5ad02057080d34ff53))
+- numberAriaLabel conditional project card ([48f5e23](https://github.com/chanzuckerberg/edu-design-system/commit/48f5e237fdc8de3e8d0084c59ded44463e739a20))
+- snapshot dragdrop update ([de921bd](https://github.com/chanzuckerberg/edu-design-system/commit/de921bd639b01dfee7d46c03c9974f78b8bba197))
+- snapshot test project card ([53817b6](https://github.com/chanzuckerberg/edu-design-system/commit/53817b662ef4c26098d225b1bd26dd4481e0703e))
+- type on drag drop container column class ([17b13c4](https://github.com/chanzuckerberg/edu-design-system/commit/17b13c440c86700dc5ce274e59b36268641ad4c3))
+- use clsx for classnames column class ([534aa08](https://github.com/chanzuckerberg/edu-design-system/commit/534aa08e08ee4c3f315c13d35504f36e086a02be))
+
+## [1.5.0](https://github.com/chanzuckerberg/edu-design-system/compare/v1.4.0...v1.5.0) (2022-07-07)
+
+### Bug Fixes
+
+- **clickablestyle:** downgrade error to warning for invalid combos ([1b8441a](https://github.com/chanzuckerberg/edu-design-system/commit/1b8441ac55b8222b9e4e7f48e902a0b2aa7c9ed6))
+- **link:** translateY 101% so the focus bg is fully offscreen ([809d783](https://github.com/chanzuckerberg/edu-design-system/commit/809d78310c22de0d6f80db984e89d31024875360))
+- **link:** lower spacing specificity ([0c1385c](https://github.com/chanzuckerberg/edu-design-system/commit/0c1385c584c0320a35fc300e6bf5e56a8ef7aabd))
+
+### Features
+
+- **horizontalstepper:** allow line class names and change dot color ([1a65f82](https://github.com/chanzuckerberg/edu-design-system/commit/1a65f825e284eda39859b6d9080b1d899911555a))
+
 ### [1.4.0](https://github.com/chanzuckerberg/edu-design-system/compare/v1.3.1...v1.4.0) (2022-07-05)
 
 ### Bug Fixes

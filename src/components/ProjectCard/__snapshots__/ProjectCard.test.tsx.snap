@@ -335,3 +335,202 @@ exports[`<ProjectCard /> Draggable story renders snapshot 1`] = `
   </footer>
 </article>
 `;
+
+exports[`<ProjectCard /> WithoutDropdown story renders snapshot 1`] = `
+<article
+  class="card project-card card--horizontal card--raised"
+>
+  <header
+    class="card__header project-card__header"
+  >
+    <span
+      aria-label="Project 1"
+      class="text text--sm text--base number-icon number-icon--base number-icon--sm project-card__number"
+      role="img"
+    >
+      1
+    </span>
+  </header>
+  <div
+    class="card__body project-card__body"
+  >
+    <h3
+      class="project-card__title heading heading--size-body-sm heading--base"
+    >
+      DragDropItem provides handle to the left
+    </h3>
+    <div
+      class="project-card__meta"
+    >
+      <svg
+        aria-hidden="true"
+        class="icon project-card__meta-icon"
+        fill="currentColor"
+        height="0.875rem"
+        style="--icon-size: 0.875rem;"
+        width="0.875rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="test-file-stub#event-note"
+        />
+      </svg>
+      12 days
+    </div>
+  </div>
+</article>
+`;
+
+exports[`<ProjectCard /> WithoutMeta story renders snapshot 1`] = `
+<article
+  class="card project-card card--horizontal card--raised"
+>
+  <header
+    class="card__header project-card__header"
+  >
+    <span
+      aria-label="Project 1"
+      class="text text--sm text--base number-icon number-icon--base number-icon--sm project-card__number"
+      role="img"
+    >
+      1
+    </span>
+  </header>
+  <div
+    class="card__body project-card__body"
+  >
+    <h3
+      class="project-card__title heading heading--size-body-sm heading--base"
+    >
+      Project card title
+    </h3>
+  </div>
+  <footer
+    class="card__footer project-card__footer"
+  >
+    <div
+      class="button-dropdown project-card__button-dropdown"
+    >
+      <button
+        aria-expanded="false"
+        aria-label="Open project dropdown"
+        class="clickable-style clickable-style--sm clickable-style--icon clickable-style--neutral button project-card__menu-button button--icon"
+        data-bootstrap-override="clickable-style-icon"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          class="icon"
+          fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="test-file-stub#dots-vertical"
+          />
+        </svg>
+      </button>
+      <div
+        class="dropdown-menu button-dropdown__dropdown-menu"
+      >
+        <ul
+          class="dropdown-menu__list"
+          role="presentation"
+        >
+          <li
+            class="dropdown-menu__item"
+            role="presentation"
+          >
+            <button
+              class="dropdown-menu__link"
+            >
+              <svg
+                aria-hidden="true"
+                class="icon"
+                fill="currentColor"
+                height="1.25rem"
+                style="--icon-size: 1.25rem;"
+                width="1.25rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <use
+                  xlink:href="test-file-stub#schedule"
+                />
+              </svg>
+              Move to other section
+            </button>
+          </li>
+          <li
+            class="dropdown-menu__item"
+            role="presentation"
+          >
+            <button
+              class="dropdown-menu__link"
+            >
+              <svg
+                aria-hidden="true"
+                class="icon"
+                fill="currentColor"
+                height="1.25rem"
+                style="--icon-size: 1.25rem;"
+                width="1.25rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <use
+                  xlink:href="test-file-stub#schedule"
+                />
+              </svg>
+              Move up
+            </button>
+          </li>
+          <li
+            class="dropdown-menu__item"
+            role="presentation"
+          >
+            <button
+              class="dropdown-menu__link"
+            >
+              <svg
+                aria-hidden="true"
+                class="icon"
+                fill="currentColor"
+                height="1.25rem"
+                style="--icon-size: 1.25rem;"
+                width="1.25rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <use
+                  xlink:href="test-file-stub#schedule"
+                />
+              </svg>
+              Move down
+            </button>
+          </li>
+          <li
+            class="dropdown-menu__item"
+            role="presentation"
+          >
+            <button
+              class="dropdown-menu__link"
+            >
+              <svg
+                aria-hidden="true"
+                class="icon"
+                fill="currentColor"
+                height="1.25rem"
+                style="--icon-size: 1.25rem;"
+                width="1.25rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <use
+                  xlink:href="test-file-stub#schedule"
+                />
+              </svg>
+              Move view details
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</article>
+`;

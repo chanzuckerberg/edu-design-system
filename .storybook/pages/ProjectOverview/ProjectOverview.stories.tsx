@@ -10,3 +10,9 @@ export default {
 
 type Args = React.ComponentProps<typeof ProjectOverview>;
 export const StudentView: StoryObj<Args> = {};
+
+export const ProjectCheckpoint: StoryObj<Args> = {
+  args: {
+    activeIndex: 1,
+  },
+};
