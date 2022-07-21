@@ -31,3 +31,11 @@
     transition: none;
   }
 }
+
+.page-shell__main {
+  padding-top: var(--eds-size-4);
+
+  @media all and (min-width: $eds-bp-xl) {
+    padding-top: var(--eds-size-6);
+  }
+}

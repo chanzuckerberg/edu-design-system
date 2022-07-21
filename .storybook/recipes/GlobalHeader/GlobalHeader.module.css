@@ -8,7 +8,6 @@
  */
 .global-header {
   position: relative;
-  margin-bottom: var(--eds-size-4);
   padding-left: var(--eds-size-1);
 
   @media all and (min-width: $eds-bp-xl) {
