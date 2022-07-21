@@ -4,7 +4,7 @@ import React from 'react';
 import { ProjectOverview } from './ProjectOverview';
 
 export default {
-  title: 'Pages/Projects/Overview',
+  title: 'Pages/Projects/Project',
   component: ProjectOverview,
 };
 
