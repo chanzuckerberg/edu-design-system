@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import styles from './Section.module.css';
-import Heading, { HeadingElement } from '../Heading';
+import Heading, { HeadingElement, HeadingSize } from '../Heading';
 export interface Props {
   /**
    * Align variations:
@@ -31,7 +31,7 @@ export interface Props {
   /**
    * "size" prop, passed to Heading Component
    */
-  headingSize?: HeadingElement;
+  headingSize?: HeadingSize;
   /**
    * Right slot - an area to put right-aligned content after section title
    */

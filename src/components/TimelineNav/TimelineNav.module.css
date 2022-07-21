@@ -7,13 +7,13 @@
 /**
  * 1) List of of links where each link toggles open associated information
  */
- .timeline-nav {
+.timeline-nav {
   display: flex;
   gap: var(--eds-size-2);
   width: 100%;
   overflow: hidden;
   transition: transform var(--eds-anim-fade-long) var(--eds-anim-ease);
-  
+
   @media all and (min-width: $eds-bp-lg) {
     background: var(--eds-theme-color-background-neutral-default);
     border-bottom-left-radius: var(--eds-border-radius-xl);
@@ -86,7 +86,7 @@
     visibility: visible;
     transform: translateX(0);
     padding: var(--eds-size-5) var(--eds-size-8);
-    box-shadow: 0px 2px 8px var(--eds-theme-color-border-neutral-subtle); /* 1 */ 
+    box-shadow: 0px 2px 8px var(--eds-theme-color-border-neutral-subtle); /* 1 */
   }
 }
 
@@ -296,12 +296,8 @@
   border-color: var(--eds-theme-color-border-neutral-default);
   position: relative;
   margin-right: var(--eds-size-half);
-  background: var(--eds-color-neutral-100);
+  background: var(--eds-theme-color-background-neutral-default);
   border-radius: 100%;
-  
-  @media all and (min-width: $eds-bp-lg) {
-    background: var(--eds-theme-color-background-neutral-default);
-  }
 
   .timeline-nav__item.eds-is-active & {
     color: 1px solid var(--eds-theme-color-text-neutral-default);
