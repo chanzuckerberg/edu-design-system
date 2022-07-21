@@ -89,10 +89,6 @@
   justify-content: center;
 }
 
-.section__title-after {
-  align-self: flex-start; /* 2 */
-}
-
 /**
 * overline 
 * 1) Optional string that appears above the section title
