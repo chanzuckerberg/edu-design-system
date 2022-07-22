@@ -105,6 +105,28 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
             class="timeline-nav__link-title"
           >
             TimelineNavPanel 1
+            <div
+              class="timeline-nav__link-title-after"
+            >
+              <svg
+                class="icon"
+                fill="#00A56A"
+                height="1.5em"
+                role="img"
+                style="--icon-size: 1.5em;"
+                width="1.5em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title
+                  id="4"
+                >
+                  29 students have completed
+                </title>
+                <use
+                  xlink:href="test-file-stub#circle-small"
+                />
+              </svg>
+            </div>
           </div>
           <svg
             class="icon timeline-nav__link-arrow"
@@ -116,7 +138,7 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
             xmlns="http://www.w3.org/2000/svg"
           >
             <title
-              id="4"
+              id="5"
             >
               forward
             </title>
@@ -168,7 +190,7 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
             xmlns="http://www.w3.org/2000/svg"
           >
             <title
-              id="6"
+              id="7"
             >
               forward
             </title>
@@ -211,6 +233,28 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
             
               Panel with a long name that breaks into multiple lines on smaller
               viewports
+            <div
+              class="timeline-nav__link-title-after"
+            >
+              <svg
+                class="icon"
+                fill="#8984E8"
+                height="1.5em"
+                role="img"
+                style="--icon-size: 1.5em;"
+                width="1.5em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title
+                  id="9"
+                >
+                  2 students need feedback
+                </title>
+                <use
+                  xlink:href="test-file-stub#circle-small"
+                />
+              </svg>
+            </div>
           </div>
           <svg
             class="icon timeline-nav__link-arrow"
@@ -222,7 +266,7 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
             xmlns="http://www.w3.org/2000/svg"
           >
             <title
-              id="8"
+              id="10"
             >
               forward
             </title>
@@ -274,7 +318,7 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
             xmlns="http://www.w3.org/2000/svg"
           >
             <title
-              id="10"
+              id="12"
             >
               forward
             </title>
@@ -315,7 +359,7 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <title
-                  id="11"
+                  id="13"
                 >
                   incomplete step
                 </title>
@@ -340,7 +384,7 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
             xmlns="http://www.w3.org/2000/svg"
           >
             <title
-              id="12"
+              id="14"
             >
               forward
             </title>
@@ -389,7 +433,7 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
             xmlns="http://www.w3.org/2000/svg"
           >
             <title
-              id="13"
+              id="15"
             >
               forward
             </title>
@@ -441,7 +485,7 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
             xmlns="http://www.w3.org/2000/svg"
           >
             <title
-              id="15"
+              id="17"
             >
               forward
             </title>
@@ -468,7 +512,7 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       >
         <title
-          id="16"
+          id="18"
         >
           back
         </title>
