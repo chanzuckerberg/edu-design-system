@@ -25,7 +25,10 @@ import {
   Icon,
 } from '../../../src';
 
-import { EdsThemeColorIconNeutralSubtle } from '../../../src/tokens-dist/ts/colors';
+import {
+  EdsThemeColorIconNeutralSubtle,
+  EdsThemeColorIconBrandPrimary,
+} from '../../../src/tokens-dist/ts/colors';
 import NumberIconList from '../../recipes/NumberIconList';
 import { PageShell } from '../../recipes/PageShell/PageShell';
 import '../../../src/components/Utilities/Spacing.css';
@@ -1525,7 +1528,19 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
               </TableObject>
             </TimelineNavPanel>
 
-            <TimelineNavPanel title="Plan your body" variant="number">
+            <TimelineNavPanel
+              title="Plan your body"
+              titleAfter={
+                <Icon
+                  color={EdsThemeColorIconBrandPrimary}
+                  name="circle-small"
+                  purpose="informative"
+                  size="1.5em"
+                  title="2 students need feedback"
+                />
+              }
+              variant="number"
+            >
               <TableObject>
                 <TableObject.Header>
                   <Toolbar variant="bare">
