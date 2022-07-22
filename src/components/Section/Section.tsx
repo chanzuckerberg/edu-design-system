@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import styles from './Section.module.css';
-
+import Heading, { HeadingElement, HeadingSize } from '../Heading';
 export interface Props {
   /**
    * Align variations:
@@ -17,15 +17,35 @@ export interface Props {
    */
   className?: string;
   /**
-   * Description text string that appears below the section title
+   * Description that appears below the section title
    */
-  description?: string;
+  description?: ReactNode;
+  /**
+   * overline appears above the section title
+   */
+  overline?: ReactNode;
+  /**
+   * "as" prop, passed to Heading Component
+   */
+  headingAs?: HeadingElement;
+  /**
+   * "size" prop, passed to Heading Component
+   */
+  headingSize?: HeadingSize;
+  /**
+   * Right slot - an area to put right-aligned content after section title
+   */
+  right?: ReactNode;
   /**
    * Section heading text string
    */
   title?: string;
   /**
-   * Section title before container to place items like images or avatars
+   * Slot for node to appear to the right of the section title. Typically used to include a Badge, Button, Tooltip, or other component
+   */
+  titleAfter?: ReactNode;
+  /**
+   * Slot for node to appear to the left of the section title. Typically used for images or avatars
    */
   titleBefore?: ReactNode;
 }
@@ -37,14 +57,20 @@ export interface Props {
  * import {Section} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * 1) Section component contains a section header and body
+ * 2) The Heading component requires a value for "size", so this headingAs prop is provided a default value of "h2" to allow it to remain optional on Section component
  */
 export const Section = ({
-  className,
-  title,
-  description,
-  children,
   align,
+  children,
+  className,
+  description,
+  headingAs,
+  headingSize = 'h2' /* 2 */,
+  overline,
+  right,
+  title,
+  titleAfter,
   titleBefore,
   ...other
 }: Props) => {
@@ -64,11 +90,30 @@ export const Section = ({
                 {titleBefore}
               </div>
             )}
-            <h2 className={styles['section__title']}>{title}</h2>
+            <div className={styles['section__title-inner']}>
+              {overline && (
+                <div className={styles['section__overline']}>{overline}</div>
+              )}
+              <Heading
+                as={headingAs}
+                className={styles['section__title']}
+                size={headingSize}
+              >
+                {title}
+                {titleAfter && (
+                  <span className={styles['section__title-after']}>
+                    {titleAfter}
+                  </span>
+                )}
+              </Heading>
+              {description && (
+                <div className={styles['section__description']}>
+                  {description}
+                </div>
+              )}
+            </div>
           </div>
-          {description && (
-            <p className={styles['section__description']}>{description}</p>
-          )}
+          {right && <div className={styles['section__right']}>{right}</div>}
         </header>
         <div className={styles['section__body']}>{children}</div>
       </div>

@@ -122,8 +122,8 @@ export const TypographyUsageUtilities = () => (
     </p>
 
     <Hr />
-    <code>u-theme-typography-kicker</code>
-    <p className="u-theme-typography-kicker">
+    <code>u-theme-typography-overline</code>
+    <p className="u-theme-typography-overline">
       Door neat week do find past he. Be no surprise he honoured indulged.
       Unpacked endeavor six steepest had husbands her. Painted no or affixed it
       so civilly. Exposed neither pressed so cottage as proceed at offices.

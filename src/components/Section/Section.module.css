@@ -1,7 +1,7 @@
 @import '../../design-tokens/mixins.css';
 
 /*------------------------------------*\
-    # SECTION
+    # SECTION
 \*------------------------------------*/
 
 /**
@@ -15,44 +15,103 @@
 
 /**
  * Section header
- * 1) contains the section title, description and other header content
+ * 1) contains section header inner, left, and right elements
  */
 .section__header {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: var(--eds-size-1);
   margin-bottom: var(--eds-size-3);
 
   /**
      * Section header within centered section
      */
   .section--center & {
-    align-items: center;
+    justify-content: center;
   }
 }
 
 /**
- * Section header
- * 1) contains the section title, description and other header content
- */
+* Section header inner
+* 1) Contains the titleBefore, title-inner, and titleAfter
+* 2) Flex grow only has an effect if there is content in the section__right slot; section_right gets forced to the right edge of the header
+* 3) To center the header, flex-grow must be disabled
+*/
 .section__header-inner {
+  flex-grow: 1; /* 2 */
   display: flex;
-  align-items: center;
-  gap: var(--eds-size-2);
+  flex-direction: row;
+  gap: var(--eds-size-1);
+
+  .section--center & {
+    flex-grow: 0; /* 3 */
+  }
+}
+
+/**
+* Section title inner
+* 1) Contains the section title, overline, and description in a column
+* 2) When variant === center, the title inner container gets centered in the header inner container
+* 3) When variant === center, the title inner container's contents get center aligned on the cross-axis
+*/
+.section__title-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  .section--center & {
+    justify-self: center; /* 2 */
+    align-items: center; /* 3 */
+  }
 }
 
 /**
  * Section title
  */
 .section__title {
-  margin: 0;
-  @mixin eds-theme-typography-headline-md;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/**
+* Section title before, after
+* 1) Slots for node(s) to appear to the left (before) and right (after) of the title. 
+* 2) The title after slot is vertically aligned to the top of the title, similar to the positioning of a superscript
+*/
+.section__title-before,
+.section__title-after {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/**
+* overline 
+* 1) Optional string that appears above the section title
+*/
+.section__overline {
+  margin-top: 0;
+  margin-bottom: var(--eds-size-1);
 }
 
 /**
  * Section description
+ * 1) Optional string that appears beneath the section title
  */
 .section__description {
-  @mixin eds-theme-typography-body-text-md;
-  @mixin reset;
-  margin-top: var(--eds-size-1);
+  margin-top: var(--eds-size-half);
+  margin-bottom: 0;
+}
+
+/**
+* Section right
+* 1) Optional area to put right-aligned content after section title
+**/
+.section__right {
+  display: flex;
+  align-items: center;
 }

@@ -80,11 +80,11 @@
   @mixin eds-typography-preset-005-light $important;
 }
 
-@define-mixin eds-theme-typography-kicker $important {
+@define-mixin eds-theme-typography-overline $important {
   @mixin eds-typography-preset-011 $important;
 }
 
-@define-mixin eds-theme-typography-kicker-sm $important {
+@define-mixin eds-theme-typography-overline-sm $important {
   @mixin eds-typography-preset-012 $important;
 }
 
