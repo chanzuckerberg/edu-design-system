@@ -57,7 +57,7 @@
   color: inherit;
 }
 .text--neutral {
-  color: var(--eds-theme-color-text-neutral-default);
+  color: var(--eds-theme-color-text-neutral-subtle);
 }
 .text--success {
   color: var(--eds-theme-color-text-utility-success);
