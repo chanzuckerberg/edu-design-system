@@ -2,6 +2,38 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/chanzuckerberg/edu-design-system/compare/v1.6.1...v2.0.0) (2022-07-22)
+
+
+### Features
+
+* added getting started. removed examples nav ([3a722ba](https://github.com/chanzuckerberg/edu-design-system/commit/3a722baefaa04e5b6454da9a97c55393ce1493e4))
+* buttonactioncalloutcard addition ([eb193d5](https://github.com/chanzuckerberg/edu-design-system/commit/eb193d5e089ca6e9c3dbaadff9858eb69ec460f6))
+* getting started page ([13c2ab6](https://github.com/chanzuckerberg/edu-design-system/commit/13c2ab69bbb4362124a47f424dd41a83c2cdd24b))
+* roughly populate getting started ([7099a1e](https://github.com/chanzuckerberg/edu-design-system/commit/7099a1e550af156a6ff258cded1fd7c06d8d4e20))
+* scaffold out feedback overview checkpoint ([1a8ce07](https://github.com/chanzuckerberg/edu-design-system/commit/1a8ce07cd320d6fb2ea7098f49d3c4fbee313b6f))
+* stacked block. active primary nav items ([cf95896](https://github.com/chanzuckerberg/edu-design-system/commit/cf95896184983ae104db9c533002e9475940c693))
+
+
+### Bug Fixes
+
+* active primary nav items pass down ([c79fabc](https://github.com/chanzuckerberg/edu-design-system/commit/c79fabc561b2a1fed08678f858ddc24b5de498a3))
+* adjusted alignment of tooltip section ([9e2a28c](https://github.com/chanzuckerberg/edu-design-system/commit/9e2a28c34ba37b5c41a930ab8dc4de57722b81ba))
+* adjusted section/page header spacing ([c45076d](https://github.com/chanzuckerberg/edu-design-system/commit/c45076d6fadde1b1cfe32abffe08de715af3339d))
+* change kicker to overline to align teams ([d17c267](https://github.com/chanzuckerberg/edu-design-system/commit/d17c2676cd7520b81b1b061271fb7f335745425c))
+* descriptions and cleanup in proj checkpoint ([6b46dac](https://github.com/chanzuckerberg/edu-design-system/commit/6b46dac37210e5f7208a36ea1a4d6be1347cab50))
+* inline styles ([a3a0f6a](https://github.com/chanzuckerberg/edu-design-system/commit/a3a0f6a6e8f2f697c3adb3937d4f8345fd3586e2))
+* project overview typography sizes ([ce7e425](https://github.com/chanzuckerberg/edu-design-system/commit/ce7e425d8920ac3380a37b687b63fe3be3906a2b))
+* remove unused class name from stacked block ([14aa47c](https://github.com/chanzuckerberg/edu-design-system/commit/14aa47c94c57683b54a5d0486ea158b1c1e693c6))
+* replaced section indentation ([ad0d7e8](https://github.com/chanzuckerberg/edu-design-system/commit/ad0d7e8e741030cd6ff3c6a6e4e40287de9d8a54))
+* stacked block location. plopfile change ([2871f1d](https://github.com/chanzuckerberg/edu-design-system/commit/2871f1d6ba5b6e8fd2d866f220ae7185b7935806))
+* storybook page cleanup ([31f41e1](https://github.com/chanzuckerberg/edu-design-system/commit/31f41e16c0fd5accc2015653bec58c3178455b6b))
+* test and lint fixes ([2ab2741](https://github.com/chanzuckerberg/edu-design-system/commit/2ab2741bc809dd82d5724f054d48b0a0c3a847c2))
+* ts error for getting started ([8d6caef](https://github.com/chanzuckerberg/edu-design-system/commit/8d6caefb9d50d5ac33e5f6f69ea92ced50ad74af))
+* update stacked block tests ([5baf891](https://github.com/chanzuckerberg/edu-design-system/commit/5baf8916a41ab5dd5a0164e50c936243b51a6520))
+* update table styles stacked ([30e0707](https://github.com/chanzuckerberg/edu-design-system/commit/30e0707213c8d6b291c76aed709fce2d97564594))
+* update tests ([fadd955](https://github.com/chanzuckerberg/edu-design-system/commit/fadd955b66a66a4d03abe397cd614cdc4a15ea6f))
+
 ### [1.6.1](https://github.com/chanzuckerberg/edu-design-system/compare/v1.6.0...v1.6.1) (2022-07-20)
 
 
