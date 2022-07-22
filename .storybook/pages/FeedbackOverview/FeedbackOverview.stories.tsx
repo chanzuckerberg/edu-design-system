@@ -9,4 +9,10 @@ export default {
 };
 
 type Args = React.ComponentProps<typeof FeedbackOverview>;
-export const TeacherView: StoryObj<Args> = {};
+export const Overview: StoryObj<Args> = {};
+
+export const Checkpoint: StoryObj<Args> = {
+  args: {
+    activeIndex: 1,
+  },
+};
