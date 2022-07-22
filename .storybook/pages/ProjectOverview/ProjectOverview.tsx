@@ -55,7 +55,7 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
           <Heading
             as="h2"
             className="u-margin-bottom-xl"
-            size="headline-lg"
+            size="headline-md"
             variant="base"
           >
             What is this Project About?
@@ -66,9 +66,7 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
             mattis sem turpis id dictum. Volutpat ornare turpis ultrices augue
             bibendum pellentesque. Habitasse.
           </Text>
-          <Button className="u-margin-bottom-xl" variant="link">
-            See More
-          </Button>
+
           <Heading
             as="h3"
             className="u-margin-bottom-sm"
@@ -110,41 +108,20 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
             </ol>
           </Text>
           <Hr className="u-margin-bottom-none" />
+
+          <div className="fpo">FPO Brand asset</div>
           <Section
+            headingSize="headline-sm"
             title="Power Focus Areas"
-            titleBefore={
-              <img
-                alt="placeholder"
-                src="https://via.placeholder.com/32x32"
-                style={{ display: 'block', borderRadius: '50%' }}
-              />
-            }
-          >
-            <Card>
-              <CardBody>
-                <Heading
-                  as="h3"
-                  className="u-margin-bottom-sm"
-                  size="title-md"
-                  variant="base"
-                >
-                  What Was Medieval Japan Like?
-                </Heading>
-                <Text>
-                  In this Focus Area, you explore the main question: How does
-                  the structures of organisms enable lifes functions?
-                </Text>
-              </CardBody>
-            </Card>
-          </Section>
-          <Section
-            title="Additional Focus Areas"
-            titleBefore={
-              <img
-                alt="placeholder"
-                src="https://via.placeholder.com/32x32"
-                style={{ display: 'block', borderRadius: '50%' }}
-              />
+            titleAfter={
+              <Button size="sm" variant="icon">
+                <Icon
+                  name="help"
+                  purpose="informative"
+                  size="1.375rem"
+                  title="help"
+                />
+              </Button>
             }
           >
             <Card className="u-margin-bottom-md">
@@ -152,7 +129,23 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
                 <Heading
                   as="h3"
                   className="u-margin-bottom-sm"
-                  size="title-md"
+                  size="title-xs"
+                  variant="base"
+                >
+                  What Was Medieval Japan Like?
+                </Heading>
+                <Text>
+                  In this Focus Area, you explore the main question: How does
+                  the structures of organisms enable life’s functions?
+                </Text>
+              </CardBody>
+            </Card>
+            <Card className="u-margin-bottom-md">
+              <CardBody>
+                <Heading
+                  as="h3"
+                  className="u-margin-bottom-sm"
+                  size="title-xs"
                   variant="base"
                 >
                   What Was Medieval Japan Like?
@@ -168,7 +161,7 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
                 <Heading
                   as="h3"
                   className="u-margin-bottom-sm"
-                  size="title-md"
+                  size="title-xs"
                   variant="base"
                 >
                   What Was Medieval Japan Like?
@@ -180,32 +173,56 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
               </CardBody>
             </Card>
           </Section>
-          <Section
-            title="Cognitive Skills"
-            titleBefore={
-              <img
-                alt="placeholder"
-                src="https://via.placeholder.com/32x32"
-                style={{ display: 'block', borderRadius: '50%' }}
-              />
-            }
-          >
-            <Text as="div">
-              <a href="https://go.czi.team/eds">Selecting Relevant Sources</a>
-              <a href="https://go.czi.team/eds">
-                Identifying Patterns and Relationships
-              </a>
-              <a href="https://go.czi.team/eds">Argumentative Claim</a>
-              <a href="https://go.czi.team/eds">Selection of Evidence</a>
-              <a href="https://go.czi.team/eds">Explanation of Evidence</a>
-              <a href="https://go.czi.team/eds">Multimedia in Communication</a>
-              <a href="https://go.czi.team/eds">Integration of Evidence</a>
-            </Text>
+          <Section headingSize="headline-sm" title="Additional Focus Areas">
+            <Card className="u-margin-bottom-md">
+              <CardBody>
+                <Heading
+                  as="h3"
+                  className="u-margin-bottom-sm"
+                  size="title-xs"
+                  variant="base"
+                >
+                  What Was Medieval Japan Like?
+                </Heading>
+                <Text>
+                  In this Focus Area, you explore the main question: How does
+                  the structures of organisms enable life’s functions?
+                </Text>
+              </CardBody>
+            </Card>
+            <Card>
+              <CardBody>
+                <Heading
+                  as="h3"
+                  className="u-margin-bottom-sm"
+                  size="title-xs"
+                  variant="base"
+                >
+                  What Was Medieval Japan Like?
+                </Heading>
+                <Text>
+                  In this Focus Area, you explore the main question: How does
+                  the structures of organisms enable life’s functions?
+                </Text>
+              </CardBody>
+            </Card>
           </Section>
         </TimelineNavPanel>
 
         <TimelineNavPanel title="Expectations of Samuri in Feudal Japan and Wars of 5th Century">
-          <Section title="Expectations of Samuri in Feudal Japan">
+          <Section
+            description={
+              <Text as="p" className="u-theme-typography-body-text-xs-bold">
+                Estimated schedule: Days 4,5,6
+              </Text>
+            }
+            overline={
+              <Text as="div" size="overline">
+                Overline above title
+              </Text>
+            }
+            title="Expectations of Samuri in Feudal Japan"
+          >
             <Heading
               as="h3"
               className="u-margin-bottom-lg"
@@ -326,37 +343,76 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
         </TimelineNavPanel>
 
         <TimelineNavPanel title="Expectations of Samuri in Feudal Japan">
-          <Text as="div">
-            <h3>TimelineNavPanel 3</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex
-            </p>
-          </Text>
+          <Section
+            description={
+              <Text as="p" className="u-theme-typography-body-text-xs-bold">
+                Estimated schedule: Days 4,5,6
+              </Text>
+            }
+            overline={
+              <Text as="div" size="overline">
+                Checkpoint 2
+              </Text>
+            }
+            title="Expectations of Samuri in Feudal Japan"
+          >
+            <Text as="div">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex
+              </p>
+            </Text>
+          </Section>
         </TimelineNavPanel>
         <TimelineNavPanel title="Expectations of Samuri in Feudal Japan">
-          <Text as="div">
-            <h3>TimelineNavPanel 4</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex
-            </p>
-          </Text>
+          <Section
+            description={
+              <Text as="p" className="u-theme-typography-body-text-xs-bold">
+                Estimated schedule: Days 4,5,6
+              </Text>
+            }
+            overline={
+              <Text as="div" size="overline">
+                Checkpoint 3
+              </Text>
+            }
+            title="Expectations of Samuri in Feudal Japan"
+          >
+            <Text as="div">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex
+              </p>
+            </Text>
+          </Section>
         </TimelineNavPanel>
         <TimelineNavPanel title="Expectations of Samuri in Feudal Japan">
-          <Text as="div">
-            <h3>TimelineNavPanel 5</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex
-            </p>
-          </Text>
+          <Section
+            description={
+              <Text as="p" className="u-theme-typography-body-text-xs-bold">
+                Estimated schedule: Days 4,5,6
+              </Text>
+            }
+            overline={
+              <Text as="div" size="overline">
+                Checkpoint 4
+              </Text>
+            }
+            title="Expectations of Samuri in Feudal Japan"
+          >
+            <Text as="div">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex
+              </p>
+            </Text>
+          </Section>
         </TimelineNavPanel>
       </TimelineNav>
     </PageShell>

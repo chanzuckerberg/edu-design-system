@@ -3,6 +3,11 @@ import { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
 import { TimelineNav } from './TimelineNav';
+import {
+  EdsThemeColorIconBrandPrimary,
+  EdsThemeColorIconUtilitySuccess,
+} from '../../tokens-dist/ts/colors';
+import Icon from '../Icon';
 import Text from '../Text';
 import TimelineNavPanel from '../TimelineNavPanel';
 
@@ -28,7 +33,19 @@ export default {
             </p>
           </Text>
         </TimelineNavPanel>
-        <TimelineNavPanel title="TimelineNavPanel 1" variant="number">
+        <TimelineNavPanel
+          title="TimelineNavPanel 1"
+          titleAfter={
+            <Icon
+              color={EdsThemeColorIconUtilitySuccess}
+              name="circle-small"
+              purpose="informative"
+              size="1.5em"
+              title="29 students have completed"
+            />
+          }
+          variant="number"
+        >
           <Text as="div">
             <h3>TimelineNavPanel 1</h3>
             <p>
@@ -56,6 +73,15 @@ export default {
           title="
               Panel with a long name that breaks into multiple lines on smaller
               viewports"
+          titleAfter={
+            <Icon
+              color={EdsThemeColorIconBrandPrimary}
+              name="circle-small"
+              purpose="informative"
+              size="1.5em"
+              title="2 students need feedback"
+            />
+          }
           variant="warning"
         >
           <Text as="div">
@@ -124,6 +150,6 @@ export default {
   },
 } as Meta;
 
-type Args = React.ComponentProps<typeof TimelineNav>;
+type Args = React.ComponentProps<typeof TimelineNavPanel>;
 
 export const Default: StoryObj<Args> = {};

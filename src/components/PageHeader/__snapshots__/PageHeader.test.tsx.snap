@@ -118,18 +118,22 @@ exports[`<PageHeader /> WithDescription story renders snapshot 1`] = `
 </header>
 `;
 
-exports[`<PageHeader /> WithKicker story renders snapshot 1`] = `
+exports[`<PageHeader /> WithOverline story renders snapshot 1`] = `
 <header
   class="page-header"
 >
   <div
     class="page-header__left"
   >
-    <p
-      class="page-header__kicker"
+    <div
+      class="page-header__overline"
     >
-      Kicker above title
-    </p>
+      <div
+        class="layout-linelength-container text text--overline text-passage text-passage--overline"
+      >
+        Overline above title
+      </div>
+    </div>
     <h1
       class="page-header__title heading heading--size-headline-lg heading--base"
     >

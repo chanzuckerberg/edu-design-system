@@ -73,10 +73,10 @@ export class Tier2TypographyUsage extends Component {
           <Grid>{renderTypeToken('button-label', '006-bold')}</Grid>
         </Section>
 
-        <Section title="Kicker">
+        <Section title="Overline">
           <Grid>
-            {renderTypeToken('kicker', '011-bold')}
-            {renderTypeToken('kicker-sm', '012-bold')}
+            {renderTypeToken('overline', '011-bold')}
+            {renderTypeToken('overline-sm', '012-bold')}
           </Grid>
         </Section>
 

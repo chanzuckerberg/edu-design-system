@@ -6,7 +6,7 @@ import { ModalFinalStep } from './ModalFinalStep';
 import { ModalFirstStep } from './ModalFirstStep';
 
 export default {
-  title: 'Pages/CAD/CadModal',
+  title: 'Pages/Course Planner/Modal',
 };
 
 export const FirstStep: StoryObj = {

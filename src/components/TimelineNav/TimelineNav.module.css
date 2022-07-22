@@ -271,6 +271,14 @@
   text-overflow: ellipsis; /* 2 */
 }
 
+/**Timeline nav title after
+* 1) Optional content that will be positioned to the right of title
+*/
+.timeline-nav__link-title-after {
+  display: inline-block;
+  margin-left: var(--eds-size-half);
+}
+
 /**
 * Timeline nav link arrow
 * 1) (Only used on smaller screens) - an arrow icon at the right 
@@ -297,7 +305,7 @@
   border-color: var(--eds-theme-color-border-neutral-default);
   position: relative;
   margin-right: var(--eds-size-half);
-  background: var(--eds-color-neutral-100);
+  background: var(--eds-theme-color-background-neutral-default);
   border-radius: 100%;
 
   @media all and (min-width: $eds-bp-lg) {
