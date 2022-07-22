@@ -1674,7 +1674,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
 
             <TimelineNavPanel title="Research and Model Cells" variant="number">
               <Text as="div">
-                <h3>TimelineNavPanel 3</h3>
+                <h3>Research and Model Cells</h3>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -1688,7 +1688,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
               variant="number"
             >
               <Text as="div">
-                <h3>TimelineNavPanel 4</h3>
+                <h3>Research and Model Body Systems</h3>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -1699,7 +1699,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
             </TimelineNavPanel>
             <TimelineNavPanel title="Draft Your Book" variant="number">
               <Text as="div">
-                <h3>TimelineNavPanel 5</h3>
+                <h3>Draft Your Book</h3>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -1710,7 +1710,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
             </TimelineNavPanel>
             <TimelineNavPanel title="Critique a Peer's Book" variant="number">
               <Text as="div">
-                <h3>TimelineNavPanel 5</h3>
+                <h3>Critique a Peer&apos;s Book</h3>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -1721,7 +1721,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
             </TimelineNavPanel>
             <TimelineNavPanel title="Human Body Book" variant="number">
               <Text as="div">
-                <h3>TimelineNavPanel 5</h3>
+                <h3>Human Body Book</h3>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -1732,7 +1732,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
             </TimelineNavPanel>
             <TimelineNavPanel title="Book Review" variant="incomplete">
               <Text as="div">
-                <h3>TimelineNavPanel 5</h3>
+                <h3>Book Review</h3>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
