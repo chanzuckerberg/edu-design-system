@@ -2,12 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [1.6.1](https://github.com/chanzuckerberg/edu-design-system/compare/v1.6.0...v1.6.1) (2022-07-20)
+## [2.0.0](https://github.com/chanzuckerberg/edu-design-system/compare/v1.6.1...v2.0.0) (2022-07-22)
 
+### ⚠ BREAKING CHANGES
+
+- made neutral variant in Text component lighter ([06d66c4](06d66c43200a984aab695f77d0347938544bd3c6))
+
+### Features
+
+- added getting started page in storybook; removed examples section ([3a722ba](https://github.com/chanzuckerberg/edu-design-system/commit/3a722baefaa04e5b6454da9a97c55393ce1493e4))
+- added ButtonActionCalloutCard ([eb193d5](https://github.com/chanzuckerberg/edu-design-system/commit/eb193d5e089ca6e9c3dbaadff9858eb69ec460f6))
+- scaffold out feedback overview checkpoint ([1a8ce07](https://github.com/chanzuckerberg/edu-design-system/commit/1a8ce07cd320d6fb2ea7098f49d3c4fbee313b6f))
+- added StackedBlock, exported TableCell and TableFooter, and added active state to PrimaryNav ([cf95896](https://github.com/chanzuckerberg/edu-design-system/commit/cf95896184983ae104db9c533002e9475940c693))
 
 ### Bug Fixes
 
-* adjust table header cell padding table body ([6d8fba7](https://github.com/chanzuckerberg/edu-design-system/commit/6d8fba711156c2f0572c40c9da4544e9394ade16))
+- adjusted section/page header spacing ([c45076d](https://github.com/chanzuckerberg/edu-design-system/commit/c45076d6fadde1b1cfe32abffe08de715af3339d))
+- renamed overline prop to kicker ([d17c267](https://github.com/chanzuckerberg/edu-design-system/commit/d17c2676cd7520b81b1b061271fb7f335745425c))
+- updated project overview typography sizes ([ce7e425](https://github.com/chanzuckerberg/edu-design-system/commit/ce7e425d8920ac3380a37b687b63fe3be3906a2b))
+- update table styles stacked ([30e0707](https://github.com/chanzuckerberg/edu-design-system/commit/30e0707213c8d6b291c76aed709fce2d97564594))
+
+### [1.6.1](https://github.com/chanzuckerberg/edu-design-system/compare/v1.6.0...v1.6.1) (2022-07-20)
+
+### Bug Fixes
+
+- adjust table header cell padding table body ([6d8fba7](https://github.com/chanzuckerberg/edu-design-system/commit/6d8fba711156c2f0572c40c9da4544e9394ade16))
 
 ### [1.6.0](https://github.com/chanzuckerberg/edu-design-system/compare/v1.5.1...v1.6.0) (2022-07-19)
 
