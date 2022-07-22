@@ -31,14 +31,15 @@ export default {
 } as Meta<Args>;
 
 const variants = [
-  'error',
-  'base',
+  'neutralSubtle',
+  'neutralMedium',
+  'neutralStrong',
   'brand',
-  'inherit',
-  'neutral',
   'success',
   'warning',
+  'error',
   'white',
+  'inherit',
 ];
 
 type Args = React.ComponentProps<typeof Text>;

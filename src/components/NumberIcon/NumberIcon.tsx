@@ -79,7 +79,7 @@ export const NumberIcon = ({
       className={componentClassName}
       role="img"
       size="sm"
-      variant={variant === 'base' ? 'base' : 'white'}
+      variant={variant === 'base' ? 'neutralMedium' : 'white'}
       {...other}
     >
       {incomplete && numberIconTitle ? (

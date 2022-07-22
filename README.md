@@ -51,7 +51,7 @@ import { Heading } from '@chanzuckerberg/eds';
 and then use them in your React components
 
 ```jsx
-<Heading variant="neutral" size="h2">
+<Heading variant="neutralStrong" size="h2">
   Coffee!
 </Heading>
 ```

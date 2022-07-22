@@ -3,14 +3,15 @@ import React, { forwardRef } from 'react';
 import styles from './Heading.module.css';
 
 export const VARIANTS = [
-  'error',
-  'base',
+  'neutralSubtle',
+  'neutralMedium',
+  'neutralStrong',
   'brand',
-  'inherit',
-  'neutral',
   'success',
   'warning',
+  'error',
   'white',
+  'inherit',
   /**
    * @deprecated Info variant is deprecated.
    */ 'info',
@@ -92,12 +93,21 @@ export const Heading = forwardRef(
       }
     }
 
+    let variantComputed: string | undefined = variant;
+    if (variant === 'neutralSubtle') {
+      variantComputed = 'neutral-subtle';
+    } else if (variant === 'neutralMedium') {
+      variantComputed = 'neutral-medium';
+    } else if (variant === 'neutralStrong') {
+      variantComputed = 'neutral-strong';
+    }
+
     const TagName = as || getComputedAs(size);
     const componentClassName = clsx(
       className,
       styles['heading'],
       styles[`heading--size-${size}`],
-      variant && styles[`heading--${variant}`],
+      variant && styles[`heading--${variantComputed}`],
     );
     return (
       <TagName className={componentClassName} ref={ref} {...other}>

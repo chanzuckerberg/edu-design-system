@@ -14,14 +14,15 @@ export type Size =
   | 'callout';
 
 export type Variant =
-  | 'error'
-  | 'base'
+  | 'neutralSubtle'
+  | 'neutralMedium'
+  | 'neutralStrong'
   | 'brand'
-  | 'inherit'
-  | 'neutral'
   | 'success'
   | 'warning'
+  | 'error'
   | 'white'
+  | 'inherit'
   /**
    * @deprecated Info variant is deprecated.
    */
@@ -90,6 +91,15 @@ export const Text = forwardRef(
     }: Props,
     ref: ForwardedRef<HTMLParagraphElement>, // Setting as HTMLParagraphElement to satisfy TS, but unit test covers both span and p cases for sanity
   ) => {
+    let variantComputed: string | undefined = variant;
+    if (variant === 'neutralSubtle') {
+      variantComputed = 'neutral-subtle';
+    } else if (variant === 'neutralMedium') {
+      variantComputed = 'neutral-medium';
+    } else if (variant === 'neutralStrong') {
+      variantComputed = 'neutral-strong';
+    }
+
     if (variant === 'info' && process.env.NODE_ENV !== 'production') {
       console.warn(
         'Info variant is deprecated, please consider another variant.',
@@ -100,7 +110,7 @@ export const Text = forwardRef(
     const componentClassName = clsx(
       styles['text'],
       styles[`text--${size}`],
-      variant && styles[`text--${variant}`],
+      variant && styles[`text--${variantComputed}`],
       weight && styles[`text--${weight}-weight`],
       spacing && styles[`text--${spacing}-spacing`],
       as === 'div' && styles['text-passage'],

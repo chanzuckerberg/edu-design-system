@@ -42,10 +42,11 @@ export interface Props {
    */
   headingVariant?:
     | 'error'
-    | 'base'
     | 'brand'
     | 'inherit'
-    | 'neutral'
+    | 'neutralSubtle'
+    | 'neutralMedium'
+    | 'neutralStrong'
     | 'success'
     | 'warning'
     | 'white';
@@ -78,7 +79,7 @@ export const PageHeader = ({
   className,
   description,
   headingSize = 'headline-lg',
-  headingVariant = 'base',
+  headingVariant = 'neutralStrong',
   overline,
   orientation,
   right,
