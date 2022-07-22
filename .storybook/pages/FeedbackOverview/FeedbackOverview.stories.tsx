@@ -4,7 +4,7 @@ import React from 'react';
 import { FeedbackOverview } from './FeedbackOverview';
 
 export default {
-  title: 'Pages/Feedback/Overview',
+  title: 'Pages/Projects/Feedback',
   component: FeedbackOverview,
 };
 

@@ -5,7 +5,7 @@ import React from 'react';
 import { Avatar } from './Avatar';
 
 export default {
-  title: 'Example/Avatar',
+  title: 'Atoms/Media/Avatar',
   component: Avatar,
   parameters: {
     badges: [BADGE.BETA],

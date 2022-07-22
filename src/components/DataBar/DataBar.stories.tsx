@@ -7,7 +7,7 @@ import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';
 
 export default {
-  title: 'Example/DataBar',
+  title: 'Molecules/Data/DataBar',
   component: DataBar,
   args: {
     label: 'Data bar',
