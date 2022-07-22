@@ -2,7 +2,7 @@
 
 exports[`Modal Brand story renders snapshot 1`] = `
 <div
-  class="modal__content"
+  class="modal__content modal__content--md modal__content--lg"
   data-testid="non-interactive"
   open=""
 >
@@ -19,7 +19,7 @@ exports[`Modal Brand story renders snapshot 1`] = `
       xmlns="http://www.w3.org/2000/svg"
     >
       <title
-        id="2"
+        id="4"
       >
         close modal
       </title>
@@ -79,7 +79,7 @@ exports[`Modal Brand story renders snapshot 1`] = `
 
 exports[`Modal Default story renders snapshot 1`] = `
 <div
-  class="modal__content"
+  class="modal__content modal__content--md modal__content--lg"
   data-testid="non-interactive"
   open=""
 >
@@ -158,7 +158,7 @@ exports[`Modal DefaultInteractive story renders snapshot 1`] = `
     id="headlessui-dialog-overlay-3"
   />
   <div
-    class="modal__content"
+    class="modal__content modal__content--md modal__content--lg"
   >
     <button
       class="modal__close-button"
@@ -174,7 +174,7 @@ exports[`Modal DefaultInteractive story renders snapshot 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       >
         <title
-          id="15"
+          id="17"
         >
           close modal
         </title>
@@ -224,9 +224,9 @@ exports[`Modal DefaultInteractive story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`Modal Mobile story renders snapshot 1`] = `
+exports[`Modal Medium story renders snapshot 1`] = `
 <div
-  class="modal__content"
+  class="modal__content modal__content--md"
   data-testid="non-interactive"
   open=""
 >
@@ -243,7 +243,74 @@ exports[`Modal Mobile story renders snapshot 1`] = `
       xmlns="http://www.w3.org/2000/svg"
     >
       <title
-        id="3"
+        id="2"
+      >
+        close modal
+      </title>
+      <use
+        xlink:href="test-file-stub#close"
+      />
+    </svg>
+  </button>
+  <div
+    class="modal-header"
+  >
+    <h2
+      class="heading heading--size-h2"
+    >
+      Modal Title
+    </h2>
+  </div>
+  <div
+    class="modal-body"
+  >
+    Modal content.
+  </div>
+  <div
+    class="modal-footer"
+  >
+    <div
+      class="footer__button-group button-group button-group--spacing-1x"
+    >
+      <button
+        class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
+        data-bootstrap-override="clickable-style-secondary"
+        type="button"
+      >
+        Button 1
+      </button>
+      <button
+        class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
+        data-bootstrap-override="clickable-style-primary"
+        type="button"
+      >
+        Button 2
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Modal Mobile story renders snapshot 1`] = `
+<div
+  class="modal__content modal__content--md modal__content--lg"
+  data-testid="non-interactive"
+  open=""
+>
+  <button
+    class="modal__close-button"
+  >
+    <svg
+      class="icon modal__close-icon"
+      fill="currentColor"
+      height="1.5rem"
+      role="img"
+      style="--icon-size: 1.5rem;"
+      width="1.5rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="5"
       >
         close modal
       </title>
@@ -293,7 +360,7 @@ exports[`Modal Mobile story renders snapshot 1`] = `
 
 exports[`Modal MobileBrand story renders snapshot 1`] = `
 <div
-  class="modal__content"
+  class="modal__content modal__content--md modal__content--lg"
   data-testid="non-interactive"
   open=""
 >
@@ -310,7 +377,7 @@ exports[`Modal MobileBrand story renders snapshot 1`] = `
       xmlns="http://www.w3.org/2000/svg"
     >
       <title
-        id="5"
+        id="7"
       >
         close modal
       </title>
@@ -370,7 +437,7 @@ exports[`Modal MobileBrand story renders snapshot 1`] = `
 
 exports[`Modal MobileLandscape story renders snapshot 1`] = `
 <div
-  class="modal__content"
+  class="modal__content modal__content--md modal__content--lg"
   data-testid="non-interactive"
   open=""
 >
@@ -387,7 +454,7 @@ exports[`Modal MobileLandscape story renders snapshot 1`] = `
       xmlns="http://www.w3.org/2000/svg"
     >
       <title
-        id="4"
+        id="6"
       >
         close modal
       </title>
@@ -437,213 +504,7 @@ exports[`Modal MobileLandscape story renders snapshot 1`] = `
 
 exports[`Modal MobileLandscapeBrand story renders snapshot 1`] = `
 <div
-  class="modal__content"
-  data-testid="non-interactive"
-  open=""
->
-  <button
-    class="modal__close-button"
-  >
-    <svg
-      class="icon modal__close-icon modal__close-icon--brand"
-      fill="currentColor"
-      height="1.5rem"
-      role="img"
-      style="--icon-size: 1.5rem;"
-      width="1.5rem"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <title
-        id="6"
-      >
-        close modal
-      </title>
-      <use
-        xlink:href="test-file-stub#close"
-      />
-    </svg>
-  </button>
-  <div
-    class="modal-header modal-header--brand"
-  >
-    <h2
-      class="heading heading--size-h2"
-    >
-      Modal Title
-    </h2>
-    <div
-      class="modal-header__brand-asset"
-    >
-      <div
-        class="fpo"
-        style="width: 100%; height: 100%;"
-      >
-        Brand Asset
-      </div>
-    </div>
-  </div>
-  <div
-    class="modal-body"
-  >
-    Modal content.
-  </div>
-  <div
-    class="modal-footer"
-  >
-    <div
-      class="footer__button-group button-group button-group--spacing-1x"
-    >
-      <button
-        class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
-        data-bootstrap-override="clickable-style-secondary"
-        type="button"
-      >
-        Button 1
-      </button>
-      <button
-        class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
-        data-bootstrap-override="clickable-style-primary"
-        type="button"
-      >
-        Button 2
-      </button>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Modal ModalStepper story renders snapshot 1`] = `
-<div
-  class="modal-stepper"
-  data-testid="non-interactive"
->
-  <svg
-    class="icon"
-    fill="currentColor"
-    height="0.5rem"
-    role="img"
-    style="--icon-size: 0.5rem;"
-    width="0.5rem"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <title
-      id="19"
-    >
-      Active Step 1
-    </title>
-    <use
-      xlink:href="test-file-stub#circle"
-    />
-  </svg>
-  <svg
-    class="icon"
-    fill="currentColor"
-    height="0.5rem"
-    role="img"
-    style="--icon-size: 0.5rem;"
-    width="0.5rem"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <title
-      id="20"
-    >
-      Step 2
-    </title>
-    <use
-      xlink:href="test-file-stub#empty-circle"
-    />
-  </svg>
-  <svg
-    class="icon"
-    fill="currentColor"
-    height="0.5rem"
-    role="img"
-    style="--icon-size: 0.5rem;"
-    width="0.5rem"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <title
-      id="21"
-    >
-      Step 3
-    </title>
-    <use
-      xlink:href="test-file-stub#empty-circle"
-    />
-  </svg>
-</div>
-`;
-
-exports[`Modal Tablet story renders snapshot 1`] = `
-<div
-  class="modal__content"
-  data-testid="non-interactive"
-  open=""
->
-  <button
-    class="modal__close-button"
-  >
-    <svg
-      class="icon modal__close-icon"
-      fill="currentColor"
-      height="1.5rem"
-      role="img"
-      style="--icon-size: 1.5rem;"
-      width="1.5rem"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <title
-        id="7"
-      >
-        close modal
-      </title>
-      <use
-        xlink:href="test-file-stub#close"
-      />
-    </svg>
-  </button>
-  <div
-    class="modal-header"
-  >
-    <h2
-      class="heading heading--size-h2"
-    >
-      Modal Title
-    </h2>
-  </div>
-  <div
-    class="modal-body"
-  >
-    Modal content.
-  </div>
-  <div
-    class="modal-footer"
-  >
-    <div
-      class="footer__button-group button-group button-group--spacing-1x"
-    >
-      <button
-        class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
-        data-bootstrap-override="clickable-style-secondary"
-        type="button"
-      >
-        Button 1
-      </button>
-      <button
-        class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
-        data-bootstrap-override="clickable-style-primary"
-        type="button"
-      >
-        Button 2
-      </button>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Modal TabletBrand story renders snapshot 1`] = `
-<div
-  class="modal__content"
+  class="modal__content modal__content--md modal__content--lg"
   data-testid="non-interactive"
   open=""
 >
@@ -718,6 +579,279 @@ exports[`Modal TabletBrand story renders snapshot 1`] = `
 </div>
 `;
 
+exports[`Modal ModalStepper story renders snapshot 1`] = `
+<div
+  class="modal-stepper"
+  data-testid="non-interactive"
+>
+  <svg
+    class="icon"
+    fill="currentColor"
+    height="0.5rem"
+    role="img"
+    style="--icon-size: 0.5rem;"
+    width="0.5rem"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title
+      id="21"
+    >
+      Active Step 1
+    </title>
+    <use
+      xlink:href="test-file-stub#circle"
+    />
+  </svg>
+  <svg
+    class="icon"
+    fill="currentColor"
+    height="0.5rem"
+    role="img"
+    style="--icon-size: 0.5rem;"
+    width="0.5rem"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title
+      id="22"
+    >
+      Step 2
+    </title>
+    <use
+      xlink:href="test-file-stub#empty-circle"
+    />
+  </svg>
+  <svg
+    class="icon"
+    fill="currentColor"
+    height="0.5rem"
+    role="img"
+    style="--icon-size: 0.5rem;"
+    width="0.5rem"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title
+      id="23"
+    >
+      Step 3
+    </title>
+    <use
+      xlink:href="test-file-stub#empty-circle"
+    />
+  </svg>
+</div>
+`;
+
+exports[`Modal Small story renders snapshot 1`] = `
+<div
+  class="modal__content"
+  data-testid="non-interactive"
+  open=""
+>
+  <button
+    class="modal__close-button"
+  >
+    <svg
+      class="icon modal__close-icon"
+      fill="currentColor"
+      height="1.5rem"
+      role="img"
+      style="--icon-size: 1.5rem;"
+      width="1.5rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="3"
+      >
+        close modal
+      </title>
+      <use
+        xlink:href="test-file-stub#close"
+      />
+    </svg>
+  </button>
+  <div
+    class="modal-header"
+  >
+    <h2
+      class="heading heading--size-h2"
+    >
+      Modal Title
+    </h2>
+  </div>
+  <div
+    class="modal-body"
+  >
+    Modal content.
+  </div>
+  <div
+    class="modal-footer"
+  >
+    <div
+      class="footer__button-group button-group button-group--spacing-1x"
+    >
+      <button
+        class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
+        data-bootstrap-override="clickable-style-secondary"
+        type="button"
+      >
+        Button 1
+      </button>
+      <button
+        class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
+        data-bootstrap-override="clickable-style-primary"
+        type="button"
+      >
+        Button 2
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Modal Tablet story renders snapshot 1`] = `
+<div
+  class="modal__content modal__content--md modal__content--lg"
+  data-testid="non-interactive"
+  open=""
+>
+  <button
+    class="modal__close-button"
+  >
+    <svg
+      class="icon modal__close-icon"
+      fill="currentColor"
+      height="1.5rem"
+      role="img"
+      style="--icon-size: 1.5rem;"
+      width="1.5rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="9"
+      >
+        close modal
+      </title>
+      <use
+        xlink:href="test-file-stub#close"
+      />
+    </svg>
+  </button>
+  <div
+    class="modal-header"
+  >
+    <h2
+      class="heading heading--size-h2"
+    >
+      Modal Title
+    </h2>
+  </div>
+  <div
+    class="modal-body"
+  >
+    Modal content.
+  </div>
+  <div
+    class="modal-footer"
+  >
+    <div
+      class="footer__button-group button-group button-group--spacing-1x"
+    >
+      <button
+        class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
+        data-bootstrap-override="clickable-style-secondary"
+        type="button"
+      >
+        Button 1
+      </button>
+      <button
+        class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
+        data-bootstrap-override="clickable-style-primary"
+        type="button"
+      >
+        Button 2
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Modal TabletBrand story renders snapshot 1`] = `
+<div
+  class="modal__content modal__content--md modal__content--lg"
+  data-testid="non-interactive"
+  open=""
+>
+  <button
+    class="modal__close-button"
+  >
+    <svg
+      class="icon modal__close-icon modal__close-icon--brand"
+      fill="currentColor"
+      height="1.5rem"
+      role="img"
+      style="--icon-size: 1.5rem;"
+      width="1.5rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="10"
+      >
+        close modal
+      </title>
+      <use
+        xlink:href="test-file-stub#close"
+      />
+    </svg>
+  </button>
+  <div
+    class="modal-header modal-header--brand"
+  >
+    <h2
+      class="heading heading--size-h2"
+    >
+      Modal Title
+    </h2>
+    <div
+      class="modal-header__brand-asset"
+    >
+      <div
+        class="fpo"
+        style="width: 100%; height: 100%;"
+      >
+        Brand Asset
+      </div>
+    </div>
+  </div>
+  <div
+    class="modal-body"
+  >
+    Modal content.
+  </div>
+  <div
+    class="modal-footer"
+  >
+    <div
+      class="footer__button-group button-group button-group--spacing-1x"
+    >
+      <button
+        class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
+        data-bootstrap-override="clickable-style-secondary"
+        type="button"
+      >
+        Button 1
+      </button>
+      <button
+        class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
+        data-bootstrap-override="clickable-style-primary"
+        type="button"
+      >
+        Button 2
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Modal WithLongText story renders snapshot 1`] = `
 <div
   aria-labelledby="headlessui-dialog-title-12"
@@ -732,7 +866,7 @@ exports[`Modal WithLongText story renders snapshot 1`] = `
     id="headlessui-dialog-overlay-11"
   />
   <div
-    class="modal__content"
+    class="modal__content modal__content--md modal__content--lg"
   >
     <button
       class="modal__close-button"
@@ -748,7 +882,7 @@ exports[`Modal WithLongText story renders snapshot 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       >
         <title
-          id="16"
+          id="18"
         >
           close modal
         </title>
@@ -830,7 +964,7 @@ exports[`Modal WithLongTextScrollable story renders snapshot 1`] = `
     id="headlessui-dialog-overlay-15"
   />
   <div
-    class="modal__content modal__content--scrollable"
+    class="modal__content modal__content--scrollable modal__content--md modal__content--lg"
   >
     <button
       class="modal__close-button"
@@ -846,7 +980,7 @@ exports[`Modal WithLongTextScrollable story renders snapshot 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       >
         <title
-          id="17"
+          id="19"
         >
           close modal
         </title>
@@ -917,7 +1051,7 @@ exports[`Modal WithLongTextScrollable story renders snapshot 1`] = `
 
 exports[`Modal WithStepper story renders snapshot 1`] = `
 <div
-  class="modal__content"
+  class="modal__content modal__content--md modal__content--lg"
   data-testid="non-interactive"
   open=""
 >
@@ -934,7 +1068,7 @@ exports[`Modal WithStepper story renders snapshot 1`] = `
       xmlns="http://www.w3.org/2000/svg"
     >
       <title
-        id="9"
+        id="11"
       >
         close modal
       </title>
@@ -973,7 +1107,7 @@ exports[`Modal WithStepper story renders snapshot 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       >
         <title
-          id="10"
+          id="12"
         >
           Step 1
         </title>
@@ -991,7 +1125,7 @@ exports[`Modal WithStepper story renders snapshot 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       >
         <title
-          id="11"
+          id="13"
         >
           Active Step 2
         </title>
@@ -1009,7 +1143,7 @@ exports[`Modal WithStepper story renders snapshot 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       >
         <title
-          id="12"
+          id="14"
         >
           Step 3
         </title>
@@ -1027,7 +1161,7 @@ exports[`Modal WithStepper story renders snapshot 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       >
         <title
-          id="13"
+          id="15"
         >
           Step 4
         </title>
@@ -1045,7 +1179,7 @@ exports[`Modal WithStepper story renders snapshot 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       >
         <title
-          id="14"
+          id="16"
         >
           Step 5
         </title>
@@ -1090,7 +1224,7 @@ exports[`Modal WithoutCloseButton story renders snapshot 1`] = `
     id="headlessui-dialog-overlay-7"
   />
   <div
-    class="modal__content"
+    class="modal__content modal__content--md modal__content--lg"
   >
     <div
       class="modal-header"
@@ -1114,7 +1248,7 @@ exports[`Modal WithoutCloseButton story renders snapshot 1`] = `
         class="footer__button-group button-group button-group--spacing-1x"
       >
         <button
-          aria-describedby="tippy-11"
+          aria-describedby="tippy-13"
           class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
           data-bootstrap-override="clickable-style-secondary"
           tabindex="0"
@@ -1149,7 +1283,7 @@ exports[`Modal WithoutHeaderAndFooter story renders snapshot 1`] = `
     id="headlessui-dialog-overlay-19"
   />
   <div
-    class="modal__content modal__content--scrollable"
+    class="modal__content modal__content--scrollable modal__content--md modal__content--lg"
   >
     <button
       class="modal__close-button"
@@ -1165,7 +1299,7 @@ exports[`Modal WithoutHeaderAndFooter story renders snapshot 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       >
         <title
-          id="18"
+          id="20"
         >
           close modal
         </title>

@@ -67,12 +67,12 @@
 }
 
 /**
- * Page header kicker
- * 1) Kicker is an optional element that appears above the header
+ * Page header overline
+ * 1) overline is an optional element that appears above the header
  */
-.page-header__kicker {
+.page-header__overline {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: var(--eds-size-1);
 }
 
 /**
@@ -102,8 +102,8 @@
  */
 .page-header__description {
   @mixin reset;
+  color: var(--eds-theme-color-text-neutral-subtle);
   margin-top: var(--eds-size-1);
-  @mixin eds-theme-typography-body-text-md;
 
   .page-header--center & {
     text-align: center;

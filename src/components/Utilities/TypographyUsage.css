@@ -88,11 +88,11 @@
   @mixin eds-typography-preset-005;
 }
 
-.u-theme-typography-kicker {
+.u-theme-typography-overline {
   @mixin eds-typography-preset-011-bold;
 }
 
-.u-theme-typography-kicker-sm {
+.u-theme-typography-overline-sm {
   @mixin eds-typography-preset-012-bold;
 }
 
@@ -126,7 +126,7 @@
  *  Body text xs bold
  */
 .u-theme-typography-body-text-xs-bold {
-  @mixin eds-theme-typography-body-text-xs;
+  @mixin eds-theme-typography-body-text-xs-bold;
 }
 
 /**

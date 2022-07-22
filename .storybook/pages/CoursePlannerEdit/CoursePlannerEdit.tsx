@@ -262,7 +262,7 @@ const StandardsRows = [
   },
 ];
 
-export const Cad = () => {
+export const CoursePlannerEdit = () => {
   const container1EmptyContent = () => {
     return (
       <>

@@ -32,7 +32,7 @@
   @mixin eds-theme-typography-caption-text-md;
 }
 .text--overline {
-  @mixin eds-theme-typography-kicker;
+  @mixin eds-theme-typography-overline;
 }
 .text--callout {
   @mixin eds-theme-typography-callout;
@@ -57,7 +57,7 @@
   color: inherit;
 }
 .text--neutral {
-  color: var(--eds-theme-color-text-neutral-default);
+  color: var(--eds-theme-color-text-neutral-subtle);
 }
 .text--success {
   color: var(--eds-theme-color-text-utility-success);

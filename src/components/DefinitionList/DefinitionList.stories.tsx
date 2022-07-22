@@ -28,7 +28,7 @@ Default.args = {};
 
 export const Horizontal = Template.bind({});
 Horizontal.args = {
-  behavior: 'horizontal',
+  orientation: 'horizontal',
 };
 
 export const Small = Template.bind({});

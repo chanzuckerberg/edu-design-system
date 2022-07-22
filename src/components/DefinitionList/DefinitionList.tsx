@@ -5,9 +5,10 @@ import DefinitionListItem from '../DefinitionListItem';
 
 export interface Props {
   /**
-   * Behavioral variations
+   * Orientation variations
+   * - **horizontal** renders the term next to the definition
    */
-  behavior?: 'horizontal';
+  orientation?: 'horizontal';
   /**
    * Child node(s) that can be nested inside component
    */
@@ -32,7 +33,7 @@ export interface Props {
  * TODO: update this comment with a description of the component.
  */
 export const DefinitionList = ({
-  behavior,
+  orientation,
   className,
   children,
   size,
@@ -41,7 +42,7 @@ export const DefinitionList = ({
   const componentClassName = clsx(
     styles['definition-list'],
     className,
-    behavior === 'horizontal' && styles['definition-list--horizontal'],
+    orientation === 'horizontal' && styles['definition-list--horizontal'],
     size === 'sm' && styles['definition-list--sm'],
   );
   return (

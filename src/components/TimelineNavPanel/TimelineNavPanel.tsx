@@ -41,6 +41,10 @@ export interface Props {
    * The tab title
    */
   title?: string;
+  /**
+   * Slot for node to appear to the right of the title. Typically used to include a Badge, Button, or other component
+   */
+  titleAfter?: ReactNode;
 }
 
 /**
@@ -57,8 +61,9 @@ export const TimelineNavPanel = ({
   className,
   completed,
   id,
-  variant,
   title,
+  titleAfter,
+  variant,
   ...other
 }: Props) => {
   const componentClassName = clsx(styles['timeline-nav__panel'], className, {});

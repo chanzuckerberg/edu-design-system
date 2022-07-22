@@ -16,12 +16,51 @@ export interface Props {
    * CSS class names that can be appended to the component.
    */
   className?: string;
+  /**
+   * Search students primary nav item is active
+   */
+  searchStudentsIsActive?: boolean;
+  /**
+   * Announcements primary nav item is active
+   */
+  announcementsIsActive?: boolean;
+  /**
+   * Subject primary nav item is active
+   */
+  subjectIsActive?: boolean;
+  /**
+   * Mentoring primary nav item is active
+   */
+  mentoringIsActive?: boolean;
+  /**
+   * Student progress primary nav item is active
+   */
+  studentProgressIsActive?: boolean;
+  /**
+   * Search students primary nav item is active
+   */
+  educatorToolsIsActive?: boolean;
+  /**
+   * Search students primary nav item is active
+   */
+  curriculumIsActive?: boolean;
 }
 
 /**
  * Primary UI component for user interaction
  */
-export const PageShell = ({ children, className, ...other }: Props) => {
+export const PageShell = ({
+  children,
+  className,
+  searchStudentsIsActive,
+  announcementsIsActive,
+  subjectIsActive,
+  mentoringIsActive,
+  studentProgressIsActive,
+  educatorToolsIsActive,
+  curriculumIsActive,
+  ...other
+}: Props) => {
   const componentClassName = clsx(styles['page-shell'], className, {});
   return (
     <body className={componentClassName}>
@@ -35,10 +74,18 @@ export const PageShell = ({ children, className, ...other }: Props) => {
       </Link>
       <Layout gap="none">
         <LayoutSection region="sidebar">
-          <GlobalHeader />
+          <GlobalHeader
+            announcementsIsActive={announcementsIsActive}
+            curriculumIsActive={curriculumIsActive}
+            educatorToolsIsActive={educatorToolsIsActive}
+            mentoringIsActive={mentoringIsActive}
+            searchStudentsIsActive={searchStudentsIsActive}
+            studentProgressIsActive={studentProgressIsActive}
+            subjectIsActive={subjectIsActive}
+          />
         </LayoutSection>
         <LayoutSection region="main">
-          <Main>
+          <Main className={styles['page-shell__main']}>
             <LayoutContainer>{children}</LayoutContainer>
           </Main>
         </LayoutSection>

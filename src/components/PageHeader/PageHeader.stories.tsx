@@ -4,6 +4,7 @@ import React from 'react';
 
 import { PageHeader } from './PageHeader';
 import Tag from '../Tag';
+import Text from '../Text';
 
 export default {
   title: 'Molecules/Text/PageHeader',
@@ -27,9 +28,13 @@ export const WithDescription: StoryObj<Args> = {
       'This is a description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
   },
 };
-export const WithKicker: StoryObj<Args> = {
+export const WithOverline: StoryObj<Args> = {
   args: {
-    kicker: 'Kicker above title',
+    overline: (
+      <Text as="div" size="overline">
+        Overline above title
+      </Text>
+    ),
     title: 'Page header title',
     description:
       'This is a description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',

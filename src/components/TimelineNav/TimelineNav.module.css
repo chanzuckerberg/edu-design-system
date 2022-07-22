@@ -7,13 +7,13 @@
 /**
  * 1) List of of links where each link toggles open associated information
  */
- .timeline-nav {
+.timeline-nav {
   display: flex;
   gap: var(--eds-size-2);
   width: 100%;
   overflow: hidden;
   transition: transform var(--eds-anim-fade-long) var(--eds-anim-ease);
-  
+
   @media all and (min-width: $eds-bp-lg) {
     background: var(--eds-theme-color-background-neutral-default);
     border-bottom-left-radius: var(--eds-border-radius-xl);
@@ -55,6 +55,7 @@
     position: relative;
     padding: var(--eds-size-5);
     width: 33.33%;
+    min-width: 20rem;
     flex-shrink: initial;
   }
 }
@@ -86,7 +87,7 @@
     visibility: visible;
     transform: translateX(0);
     padding: var(--eds-size-5) var(--eds-size-8);
-    box-shadow: 0px 2px 8px var(--eds-theme-color-border-neutral-subtle); /* 1 */ 
+    box-shadow: 0px 2px 8px var(--eds-theme-color-border-neutral-subtle); /* 1 */
   }
 }
 
@@ -270,6 +271,14 @@
   text-overflow: ellipsis; /* 2 */
 }
 
+/**Timeline nav title after
+* 1) Optional content that will be positioned to the right of title
+*/
+.timeline-nav__link-title-after {
+  display: inline-block;
+  margin-left: var(--eds-size-half);
+}
+
 /**
 * Timeline nav link arrow
 * 1) (Only used on smaller screens) - an arrow icon at the right 
@@ -296,9 +305,9 @@
   border-color: var(--eds-theme-color-border-neutral-default);
   position: relative;
   margin-right: var(--eds-size-half);
-  background: var(--eds-color-neutral-100);
+  background: var(--eds-theme-color-background-neutral-default);
   border-radius: 100%;
-  
+
   @media all and (min-width: $eds-bp-lg) {
     background: var(--eds-theme-color-background-neutral-default);
   }

@@ -21,7 +21,7 @@ import '../../../src/components/Utilities/TypographyUsage.css';
 
 import CompassCenter from '../../static/compass-center.svg';
 
-export const CadStep1 = () => (
+export const CoursePlannerStep1 = () => (
   <>
     <Panel className="u-margin-bottom-xl" variant="squared">
       <LayoutContainer>

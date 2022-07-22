@@ -32,6 +32,10 @@ export interface Props {
    */
   'aria-labelledby'?: string;
   /**
+   * Passed down to initially set the activeIndex state
+   */
+  activeIndex?: number;
+  /**
    * Calls back with the active index
    */
   onChange?: (index: number) => void;
@@ -48,14 +52,10 @@ export interface Props {
    */
   id?: string;
   /**
-   * Passed down to initially set the activeIndex state
+   * Overflow variants
+   * - **inverted** changes the overflow shadow to the inverted color
    */
-  activeIndex?: number;
-  /**
-   * The array of items to be passed into the component. The array must take on the specified shape
-   * TODO: improve `any` type
-   */
-  items?: Array<any>;
+  overflow?: 'inverted';
   /**
    * Indicates that field is required for form to be successfully submitted
    */
@@ -65,27 +65,28 @@ export interface Props {
    */
   timelineNavOnClick?: () => void;
   /**
-   * Overflow variants
-   * - **inverted** changes the overflow shadow to the inverted color
+   * Timeline nav item tab name
    */
-  overflow?: 'inverted';
+  title?: string;
+  /**
+   * Slot for node to appear to the right of the title. Typically used to include a Badge, Button, or other component
+   */
+  titleAfter?: ReactNode;
   /**
    * Stylistic variations:
    * - **ordered** uses a ordered list <ol> instead of the default unordered list <ul>, and allows for icons, bullets, or numbers
    */
   variant?: 'ordered';
-  /**
-   * Timeline nav item tab name
-   */
-  title?: string;
 }
 
 export interface TimelineNavItem {
   props: {
     'aria-label': string;
     children: ReactNode;
-    variant?: TimelineNavPanelVariant;
+    completed?: boolean;
     title?: string;
+    titleAfter?: ReactNode;
+    variant?: TimelineNavPanelVariant;
   };
 }
 
@@ -100,16 +101,17 @@ export interface TimelineNavItem {
  * 1) Provides a list-view pane for item labels/titles, and a details pane for each item's content. When an item in the list is selected, the details pane is updated.
  */
 export const TimelineNav = ({
-  className,
-  children,
-  variant,
   activeIndex = 0,
-  timelineNavOnClick,
+  children,
+  className,
   id,
-  overflow,
   onChange,
+  overflow,
   required,
+  timelineNavOnClick,
   title,
+  titleAfter,
+  variant,
   ...other
 }: Props) => {
   /**
@@ -341,7 +343,6 @@ export const TimelineNav = ({
     timelineNavItemRefs[activeIndexState].current?.focus(); /* 2 */
     setIsActive(false); /* 3 */
   };
-
   return (
     <div className={componentClassName} {...other}>
       <div className={styles['timeline-nav__nav']}>
@@ -395,8 +396,16 @@ export const TimelineNav = ({
                   </div>
                   <div className={clsx(styles['timeline-nav__link-title'])}>
                     {tab.props.title}
+                    {tab.props.titleAfter && (
+                      <div
+                        className={clsx(
+                          styles['timeline-nav__link-title-after'],
+                        )}
+                      >
+                        {tab.props.titleAfter}
+                      </div>
+                    )}
                   </div>
-
                   <Icon
                     className={clsx(styles['timeline-nav__link-arrow'])}
                     name="arrow-forward"
