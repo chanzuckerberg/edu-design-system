@@ -69,6 +69,8 @@
   @mixin reset;
   list-style: none;
   display: flex; /* 2 */
+  border-bottom: var(--eds-theme-border-width) solid
+    var(--eds-theme-color-border-neutral-subtle);
   @mixin eds-theme-typography-tab;
 }
 

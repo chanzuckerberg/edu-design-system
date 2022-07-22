@@ -100,14 +100,25 @@
   .table--stacked > .table__body & {
     display: block;
     width: 100%;
+    border-top: var(--eds-theme-border-width) solid
+      var(--eds-theme-color-border-neutral-subtle);
+    border-right: var(--eds-theme-border-width) solid
+      var(--eds-theme-color-border-neutral-subtle);
     border-bottom: var(--eds-theme-border-width) solid
       var(--eds-theme-color-border-neutral-subtle);
+    border-left: var(--eds-theme-border-width) solid
+      var(--eds-theme-color-border-neutral-subtle);
+    border-radius: var(--eds-border-radius-lg);
+    margin-bottom: var(--eds-size-2);
+    padding: var(--eds-size-4) var(--eds-size-2);
 
     @media all and (min-width: $eds-bp-md) {
       display: table-row;
       border-top: none;
       border-right: none;
       border-left: none;
+      border-radius: 0;
+      padding: 0;
     }
   }
 }

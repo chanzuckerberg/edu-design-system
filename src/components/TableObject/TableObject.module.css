@@ -15,6 +15,10 @@
   border-radius: var(--eds-border-radius-md);
 }
 
+.table-object__header {
+  padding-bottom: var(--eds-size-2);
+}
+
 /**
   * Table object body
   */

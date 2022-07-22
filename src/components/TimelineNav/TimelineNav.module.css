@@ -55,6 +55,7 @@
     position: relative;
     padding: var(--eds-size-5);
     width: 33.33%;
+    min-width: 20rem;
     flex-shrink: initial;
   }
 }
@@ -306,6 +307,10 @@
   margin-right: var(--eds-size-half);
   background: var(--eds-theme-color-background-neutral-default);
   border-radius: 100%;
+
+  @media all and (min-width: $eds-bp-lg) {
+    background: var(--eds-theme-color-background-neutral-default);
+  }
 
   .timeline-nav__item.eds-is-active & {
     color: 1px solid var(--eds-theme-color-text-neutral-default);

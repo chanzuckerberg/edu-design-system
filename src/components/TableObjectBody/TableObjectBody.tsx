@@ -117,21 +117,6 @@ export const TableObjectBody = ({
     }
   });
 
-  const childrenWithProps = React.Children.map(
-    children,
-    // TODO: improve `any` type
-    (child: ReactNode) => {
-      // Checking isValidElement is the safe way and avoids a typescript
-      // error too.
-      if (React.isValidElement(child)) {
-        return React.cloneElement<Props>(child, {
-          behavior: behavior,
-        });
-      }
-      return child;
-    },
-  );
-
   const componentClassName = clsx(
     styles['table-object__body'],
     className,
@@ -146,7 +131,7 @@ export const TableObjectBody = ({
         onScroll={handleOnScroll}
         ref={tableObjectBodyInnerRef}
       >
-        {childrenWithProps}
+        {children}
       </div>
     </div>
   );

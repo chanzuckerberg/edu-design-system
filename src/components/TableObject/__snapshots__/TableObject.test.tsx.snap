@@ -261,7 +261,7 @@ exports[`<TableObject /> Overflow story renders snapshot 1`] = `
       class="table-object__body-inner"
     >
       <table
-        class="table table--overflow"
+        class="table"
       >
         <caption
           class="table__caption u-is-vishidden"
