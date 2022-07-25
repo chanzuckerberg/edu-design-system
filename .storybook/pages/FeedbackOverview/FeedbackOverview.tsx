@@ -92,7 +92,6 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                 </TableObject.Header>
                 <TableObject.Body>
                   <Table
-                    behavior="stacked"
                     caption="Feedback overview"
                     hideCaption={true}
                     highlightFirstCell={true}
