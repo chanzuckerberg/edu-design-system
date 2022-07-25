@@ -208,8 +208,11 @@
  * Table Cell
  */
 .table__cell {
-  padding: var(--eds-size-2) var(--eds-size-1);
   @mixin eds-theme-typography-body-text-sm;
+
+  @media all and (min-width: $eds-bp-md) {
+    padding: var(--eds-size-2) var(--eds-size-1);
+  }
 
   /**
      * Condensed table
@@ -291,7 +294,22 @@
     }
   }
 
+  /**
+  * 1) When using the stacked and highlight-first-cell variants, the 
+  * first cell in each row gets padding-bottom added on smaller breakpoints.
+  * 2) The first cell's column title is not displayed, allowing the first cell's
+  * value to appear as the card's "title".
+  **/
   .table--stacked.table--highlight-first-cell & {
+    &:first-child {
+      padding-bottom: var(--eds-size-1) /* 1 */;
+
+      /* stylelint-disable-next-line max-nesting-depth */
+      @media all and (min-width: $eds-bp-md) {
+        padding-bottom: unset;
+      }
+    }
+
     &:first-child:before {
       content: none;
     }
