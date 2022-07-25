@@ -141,21 +141,6 @@ export const Banner = ({
 
   return (
     <article className={componentClassName}>
-      {onDismiss && (
-        <Button
-          className={styles['banner__close-btn']}
-          onClick={onDismiss}
-          status="neutral"
-          variant="icon"
-        >
-          <Icon
-            name="close"
-            purpose="informative"
-            title="dismiss notification"
-          />
-        </Button>
-      )}
-
       <Icon
         className={styles['banner__icon']}
         name={variantToIconAssetsMap[variant].name}
@@ -181,6 +166,21 @@ export const Banner = ({
           <div className={clsx(styles['banner__action'])}>{action}</div>
         )}
       </div>
+
+      {onDismiss && (
+        <Button
+          className={styles['banner__close-btn']}
+          onClick={onDismiss}
+          status="neutral"
+          variant="icon"
+        >
+          <Icon
+            name="close"
+            purpose="informative"
+            title="dismiss notification"
+          />
+        </Button>
+      )}
     </article>
   );
 };

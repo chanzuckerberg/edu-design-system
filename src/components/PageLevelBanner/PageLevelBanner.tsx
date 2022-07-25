@@ -108,6 +108,26 @@ export const PageLevelBanner = ({
 
   return (
     <article className={componentClassName}>
+      <Icon
+        className={styles['banner__icon']}
+        name={variantToIconAssetsMap[variant].name}
+        purpose="informative"
+        title={variantToIconAssetsMap[variant].title}
+      />
+
+      <div>
+        {title && (
+          <Heading as={titleAs} size="title-md" variant={variant}>
+            {title}
+          </Heading>
+        )}
+        {description && (
+          <Text as={descriptionAs} size="sm" variant="neutral">
+            {description}
+          </Text>
+        )}
+      </div>
+
       {onDismiss && (
         <Button
           className={styles['banner__close-btn']}
@@ -122,25 +142,6 @@ export const PageLevelBanner = ({
           />
         </Button>
       )}
-
-      <Icon
-        className={styles['banner__icon']}
-        name={variantToIconAssetsMap[variant].name}
-        purpose="informative"
-        title={variantToIconAssetsMap[variant].title}
-      />
-      <div>
-        {title && (
-          <Heading as={titleAs} size="title-md" variant={variant}>
-            {title}
-          </Heading>
-        )}
-        {description && (
-          <Text as={descriptionAs} size="sm" variant="neutral">
-            {description}
-          </Text>
-        )}
-      </div>
     </article>
   );
 };
