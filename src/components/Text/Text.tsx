@@ -91,15 +91,6 @@ export const Text = forwardRef(
     }: Props,
     ref: ForwardedRef<HTMLParagraphElement>, // Setting as HTMLParagraphElement to satisfy TS, but unit test covers both span and p cases for sanity
   ) => {
-    let variantComputed: string | undefined = variant;
-    if (variant === 'neutral-subtle') {
-      variantComputed = 'neutral-subtle';
-    } else if (variant === 'neutral-medium') {
-      variantComputed = 'neutral-medium';
-    } else if (variant === 'neutral-strong') {
-      variantComputed = 'neutral-strong';
-    }
-
     if (variant === 'info' && process.env.NODE_ENV !== 'production') {
       console.warn(
         'Info variant is deprecated, please consider another variant.',
@@ -110,7 +101,7 @@ export const Text = forwardRef(
     const componentClassName = clsx(
       styles['text'],
       styles[`text--${size}`],
-      variant && styles[`text--${variantComputed}`],
+      variant && styles[`text--${variant}`],
       weight && styles[`text--${weight}-weight`],
       spacing && styles[`text--${spacing}-spacing`],
       as === 'div' && styles['text-passage'],

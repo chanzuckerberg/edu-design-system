@@ -93,21 +93,12 @@ export const Heading = forwardRef(
       }
     }
 
-    let variantComputed: string | undefined = variant;
-    if (variant === 'neutral-subtle') {
-      variantComputed = 'neutral-subtle';
-    } else if (variant === 'neutral-medium') {
-      variantComputed = 'neutral-medium';
-    } else if (variant === 'neutral-strong') {
-      variantComputed = 'neutral-strong';
-    }
-
     const TagName = as || getComputedAs(size);
     const componentClassName = clsx(
       className,
       styles['heading'],
       styles[`heading--size-${size}`],
-      variant && styles[`heading--${variantComputed}`],
+      variant && styles[`heading--${variant}`],
     );
     return (
       <TagName className={componentClassName} ref={ref} {...other}>
