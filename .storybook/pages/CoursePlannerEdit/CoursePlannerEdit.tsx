@@ -340,7 +340,7 @@ export const CoursePlannerEdit = () => {
         <DragDropContainerHeader>
           <Toolbar className="u-margin-bottom-md" variant="bare">
             <ToolbarItem>
-              <Heading as="h2" size="title-sm" variant="base">
+              <Heading as="h2" size="title-sm" variant="neutral-strong">
                 Available projects
               </Heading>
             </ToolbarItem>
@@ -361,7 +361,7 @@ export const CoursePlannerEdit = () => {
         <DragDropContainerHeader>
           <Toolbar className="u-margin-bottom-md" variant="bare">
             <ToolbarItem>
-              <Heading as="h2" size="title-sm" variant="base">
+              <Heading as="h2" size="title-sm" variant="neutral-strong">
                 Planned projects
               </Heading>
             </ToolbarItem>
@@ -508,7 +508,7 @@ export const CoursePlannerEdit = () => {
                 as="h2"
                 className="u-margin-bottom-md"
                 size="headline-sm"
-                variant="base"
+                variant="neutral-strong"
               >
                 Select projects for your History 6 plan
               </Heading>

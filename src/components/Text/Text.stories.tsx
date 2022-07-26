@@ -31,13 +31,14 @@ export default {
 } as Meta<Args>;
 
 const variants = [
-  'error',
-  'base',
-  'brand',
   'inherit',
-  'neutral',
+  'neutral-subtle',
+  'neutral-medium',
+  'neutral-strong',
+  'brand',
   'success',
   'warning',
+  'error',
   'white',
 ];
 

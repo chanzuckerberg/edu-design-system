@@ -41,13 +41,14 @@ export interface Props {
    * Size property
    */
   headingVariant?:
-    | 'error'
-    | 'base'
-    | 'brand'
     | 'inherit'
-    | 'neutral'
+    | 'neutral-subtle'
+    | 'neutral-medium'
+    | 'neutral-strong'
+    | 'brand'
     | 'success'
     | 'warning'
+    | 'error'
     | 'white';
   /**
    * Controls the layout of the PageHeader, specifically the placement of the left and right slots.
@@ -78,7 +79,7 @@ export const PageHeader = ({
   className,
   description,
   headingSize = 'headline-lg',
-  headingVariant = 'base',
+  headingVariant = 'neutral-strong',
   overline,
   orientation,
   right,

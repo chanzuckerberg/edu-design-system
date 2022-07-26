@@ -89,9 +89,6 @@
 .heading--error {
   color: var(--eds-theme-color-text-utility-error);
 }
-.heading--base {
-  color: var(--eds-theme-color-text-neutral-strong);
-}
 .heading--brand {
   color: var(--eds-theme-color-text-brand-primary);
 }
@@ -101,7 +98,13 @@
 .heading--inherit {
   color: inherit;
 }
-.heading--neutral {
+.heading--neutral-subtle {
+  color: var(--eds-theme-color-text-neutral-subtle);
+}
+.heading--neutral-medium {
+  color: var(--eds-theme-color-text-neutral-default);
+}
+.heading--neutral-strong {
   color: var(--eds-theme-color-text-neutral-strong);
 }
 .heading--success {

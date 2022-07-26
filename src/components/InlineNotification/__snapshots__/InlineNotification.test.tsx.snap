@@ -137,7 +137,7 @@ exports[`<InlineNotification /> FullWidthStrongVariants story renders snapshot 1
       />
     </svg>
     <span
-      class="text text--body text--base inline-notification__text"
+      class="text text--body text--neutral-medium inline-notification__text"
     >
       yield inline notification lorem ipsum
     </span>
@@ -309,7 +309,7 @@ exports[`<InlineNotification /> FullWidthVariants story renders snapshot 1`] = `
       />
     </svg>
     <span
-      class="text text--body text--base inline-notification__text"
+      class="text text--body text--neutral-medium inline-notification__text"
     >
       yield inline notification lorem ipsum
     </span>
@@ -481,7 +481,7 @@ exports[`<InlineNotification /> StrongVariants story renders snapshot 1`] = `
       />
     </svg>
     <span
-      class="text text--body text--base inline-notification__text"
+      class="text text--body text--neutral-medium inline-notification__text"
     >
       yield inline notification lorem ipsum
     </span>
@@ -596,7 +596,7 @@ exports[`<InlineNotification /> SubtleVariants story renders snapshot 1`] = `
       />
     </svg>
     <span
-      class="text text--body text--base inline-notification__text"
+      class="text text--body text--neutral-medium inline-notification__text"
     >
       yield inline notification lorem ipsum
     </span>

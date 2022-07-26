@@ -29,7 +29,7 @@ exports[`<Banner /> Brand story renders snapshot 1`] = `
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--sm text--base"
+        class="text text--sm text--neutral-medium"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -75,7 +75,7 @@ exports[`<Banner /> BrandDismissable story renders snapshot 1`] = `
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--sm text--base"
+        class="text text--sm text--neutral-medium"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -142,7 +142,7 @@ exports[`<Banner /> BrandWithAction story renders snapshot 1`] = `
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--sm text--base"
+        class="text text--sm text--neutral-medium"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -207,7 +207,7 @@ exports[`<Banner /> DismissableWithAction story renders snapshot 1`] = `
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--sm text--base"
+        class="text text--sm text--neutral-medium"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -285,7 +285,7 @@ exports[`<Banner /> Error story renders snapshot 1`] = `
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--sm text--base"
+        class="text text--sm text--neutral-medium"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -331,7 +331,7 @@ exports[`<Banner /> ErrorDismissable story renders snapshot 1`] = `
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--sm text--base"
+        class="text text--sm text--neutral-medium"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -398,7 +398,7 @@ exports[`<Banner /> ErrorWithAction story renders snapshot 1`] = `
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--sm text--base"
+        class="text text--sm text--neutral-medium"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -455,7 +455,7 @@ exports[`<Banner /> Flat story renders snapshot 1`] = `
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--sm text--base"
+        class="text text--sm text--neutral-medium"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -496,12 +496,12 @@ exports[`<Banner /> Neutral story renders snapshot 1`] = `
   >
     <div>
       <h3
-        class="heading heading--size-title-md heading--neutral"
+        class="heading heading--size-title-md heading--neutral-strong"
       >
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--sm text--base"
+        class="text text--sm text--neutral-medium"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -542,12 +542,12 @@ exports[`<Banner /> NeutralDismissable story renders snapshot 1`] = `
   >
     <div>
       <h3
-        class="heading heading--size-title-md heading--neutral"
+        class="heading heading--size-title-md heading--neutral-strong"
       >
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--sm text--base"
+        class="text text--sm text--neutral-medium"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -609,12 +609,12 @@ exports[`<Banner /> NeutralWithAction story renders snapshot 1`] = `
   >
     <div>
       <h3
-        class="heading heading--size-title-md heading--neutral"
+        class="heading heading--size-title-md heading--neutral-strong"
       >
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--sm text--base"
+        class="text text--sm text--neutral-medium"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -699,7 +699,7 @@ exports[`<Banner /> NoTitle story renders snapshot 1`] = `
   >
     <div>
       <p
-        class="text text--sm text--base"
+        class="text text--sm text--neutral-medium"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -745,7 +745,7 @@ exports[`<Banner /> Success story renders snapshot 1`] = `
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--sm text--base"
+        class="text text--sm text--neutral-medium"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -791,7 +791,7 @@ exports[`<Banner /> SuccessDismissable story renders snapshot 1`] = `
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--sm text--base"
+        class="text text--sm text--neutral-medium"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -858,7 +858,7 @@ exports[`<Banner /> SuccessWithAction story renders snapshot 1`] = `
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--sm text--base"
+        class="text text--sm text--neutral-medium"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -915,7 +915,7 @@ exports[`<Banner /> Vertical story renders snapshot 1`] = `
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--sm text--base"
+        class="text text--sm text--neutral-medium"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -961,7 +961,7 @@ exports[`<Banner /> VerticalDismissable story renders snapshot 1`] = `
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--sm text--base"
+        class="text text--sm text--neutral-medium"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -1028,7 +1028,7 @@ exports[`<Banner /> VerticalDismissableWithAction story renders snapshot 1`] = `
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--sm text--base"
+        class="text text--sm text--neutral-medium"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -1106,7 +1106,7 @@ exports[`<Banner /> VerticalWithAction story renders snapshot 1`] = `
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--sm text--base"
+        class="text text--sm text--neutral-medium"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -1163,7 +1163,7 @@ exports[`<Banner /> Warning story renders snapshot 1`] = `
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--sm text--base"
+        class="text text--sm text--neutral-medium"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -1209,7 +1209,7 @@ exports[`<Banner /> WarningDismissable story renders snapshot 1`] = `
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--sm text--base"
+        class="text text--sm text--neutral-medium"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -1276,7 +1276,7 @@ exports[`<Banner /> WarningWithAction story renders snapshot 1`] = `
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--sm text--base"
+        class="text text--sm text--neutral-medium"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          

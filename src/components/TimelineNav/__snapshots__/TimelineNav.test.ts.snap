@@ -29,7 +29,7 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
           >
             <span
               aria-label="incomplete step"
-              class="text text--sm text--base number-icon number-icon--base number-icon--incomplete timeline-nav__icon"
+              class="text text--sm text--neutral-medium number-icon number-icon--base number-icon--incomplete timeline-nav__icon"
               role="img"
             >
               <svg
@@ -95,7 +95,7 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
           >
             <span
               aria-label="step 1"
-              class="text text--sm text--base number-icon number-icon--base timeline-nav__icon"
+              class="text text--sm text--neutral-medium number-icon number-icon--base timeline-nav__icon"
               role="img"
             >
               1
@@ -346,7 +346,7 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
           >
             <span
               aria-label="incomplete step"
-              class="text text--sm text--base number-icon number-icon--base number-icon--incomplete timeline-nav__icon"
+              class="text text--sm text--neutral-medium number-icon number-icon--base number-icon--incomplete timeline-nav__icon"
               role="img"
             >
               <svg
@@ -412,7 +412,7 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
           >
             <span
               aria-label="step 6"
-              class="text text--sm text--base number-icon number-icon--base timeline-nav__icon"
+              class="text text--sm text--neutral-medium number-icon number-icon--base timeline-nav__icon"
               role="img"
             >
               6

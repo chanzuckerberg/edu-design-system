@@ -70,7 +70,7 @@ export const TableCard = ({
           as="h2"
           className="u-margin-bottom-md"
           size="title-sm"
-          variant="base"
+          variant="neutral-strong"
         >
           {title}
         </Heading>

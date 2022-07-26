@@ -3,13 +3,14 @@ import React, { forwardRef } from 'react';
 import styles from './Heading.module.css';
 
 export const VARIANTS = [
-  'error',
-  'base',
-  'brand',
   'inherit',
-  'neutral',
+  'neutral-subtle',
+  'neutral-medium',
+  'neutral-strong',
+  'brand',
   'success',
   'warning',
+  'error',
   'white',
   /**
    * @deprecated Info variant is deprecated.

@@ -139,6 +139,8 @@ export const Banner = ({
     isFlat && styles['banner--flat'],
   );
 
+  const variantComputed = variant === 'neutral' ? 'neutral-strong' : variant;
+
   return (
     <article className={componentClassName}>
       <Icon
@@ -151,12 +153,12 @@ export const Banner = ({
       <div className={clsx(styles['banner__text-and-action'])}>
         <div>
           {title && (
-            <Heading as={titleAs} size="title-md" variant={variant}>
+            <Heading as={titleAs} size="title-md" variant={variantComputed}>
               {title}
             </Heading>
           )}
           {description && (
-            <Text as={descriptionAs} size="sm" variant="base">
+            <Text as={descriptionAs} size="sm" variant="neutral-medium">
               {description}
             </Text>
           )}
