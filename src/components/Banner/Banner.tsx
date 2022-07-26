@@ -139,7 +139,7 @@ export const Banner = ({
     isFlat && styles['banner--flat'],
   );
 
-  const variantComputed = variant === 'neutral' ? 'neutralStrong' : variant;
+  const variantComputed = variant === 'neutral' ? 'neutral-strong' : variant;
 
   return (
     <article className={componentClassName}>
@@ -158,7 +158,7 @@ export const Banner = ({
             </Heading>
           )}
           {description && (
-            <Text as={descriptionAs} size="sm" variant="neutralMedium">
+            <Text as={descriptionAs} size="sm" variant="neutral-medium">
               {description}
             </Text>
           )}

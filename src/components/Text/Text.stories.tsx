@@ -31,9 +31,9 @@ export default {
 } as Meta<Args>;
 
 const variants = [
-  'neutralSubtle',
-  'neutralMedium',
-  'neutralStrong',
+  'neutral-subtle',
+  'neutral-medium',
+  'neutral-strong',
   'brand',
   'success',
   'warning',

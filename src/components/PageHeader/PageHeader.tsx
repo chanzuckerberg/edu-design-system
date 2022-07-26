@@ -44,9 +44,9 @@ export interface Props {
     | 'error'
     | 'brand'
     | 'inherit'
-    | 'neutralSubtle'
-    | 'neutralMedium'
-    | 'neutralStrong'
+    | 'neutral-subtle'
+    | 'neutral-medium'
+    | 'neutral-strong'
     | 'success'
     | 'warning'
     | 'white';
@@ -79,7 +79,7 @@ export const PageHeader = ({
   className,
   description,
   headingSize = 'headline-lg',
-  headingVariant = 'neutralStrong',
+  headingVariant = 'neutral-strong',
   overline,
   orientation,
   right,

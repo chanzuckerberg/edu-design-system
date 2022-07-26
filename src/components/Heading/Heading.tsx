@@ -3,9 +3,9 @@ import React, { forwardRef } from 'react';
 import styles from './Heading.module.css';
 
 export const VARIANTS = [
-  'neutralSubtle',
-  'neutralMedium',
-  'neutralStrong',
+  'neutral-subtle',
+  'neutral-medium',
+  'neutral-strong',
   'brand',
   'success',
   'warning',
@@ -94,11 +94,11 @@ export const Heading = forwardRef(
     }
 
     let variantComputed: string | undefined = variant;
-    if (variant === 'neutralSubtle') {
+    if (variant === 'neutral-subtle') {
       variantComputed = 'neutral-subtle';
-    } else if (variant === 'neutralMedium') {
+    } else if (variant === 'neutral-medium') {
       variantComputed = 'neutral-medium';
-    } else if (variant === 'neutralStrong') {
+    } else if (variant === 'neutral-strong') {
       variantComputed = 'neutral-strong';
     }
 

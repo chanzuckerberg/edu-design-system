@@ -14,9 +14,9 @@ export type Size =
   | 'callout';
 
 export type Variant =
-  | 'neutralSubtle'
-  | 'neutralMedium'
-  | 'neutralStrong'
+  | 'neutral-subtle'
+  | 'neutral-medium'
+  | 'neutral-strong'
   | 'brand'
   | 'success'
   | 'warning'
@@ -92,11 +92,11 @@ export const Text = forwardRef(
     ref: ForwardedRef<HTMLParagraphElement>, // Setting as HTMLParagraphElement to satisfy TS, but unit test covers both span and p cases for sanity
   ) => {
     let variantComputed: string | undefined = variant;
-    if (variant === 'neutralSubtle') {
+    if (variant === 'neutral-subtle') {
       variantComputed = 'neutral-subtle';
-    } else if (variant === 'neutralMedium') {
+    } else if (variant === 'neutral-medium') {
       variantComputed = 'neutral-medium';
-    } else if (variant === 'neutralStrong') {
+    } else if (variant === 'neutral-strong') {
       variantComputed = 'neutral-strong';
     }
 

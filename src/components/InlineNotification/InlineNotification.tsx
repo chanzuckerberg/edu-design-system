@@ -119,7 +119,7 @@ export const InlineNotification = ({
       <Text
         as="span"
         className={textClassName}
-        variant={variant === 'yield' ? 'neutralMedium' : variant}
+        variant={variant === 'yield' ? 'neutral-medium' : variant}
       >
         {text}
       </Text>

@@ -56,7 +56,7 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
             as="h2"
             className="u-margin-bottom-xl"
             size="headline-md"
-            variant="neutralStrong"
+            variant="neutral-strong"
           >
             What is this Project About?
           </Heading>
@@ -71,7 +71,7 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
             as="h3"
             className="u-margin-bottom-sm"
             size="title-md"
-            variant="neutralStrong"
+            variant="neutral-strong"
           >
             Essential Questions
           </Heading>
@@ -90,7 +90,7 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
             as="h3"
             className="u-margin-bottom-sm"
             size="title-md"
-            variant="neutralStrong"
+            variant="neutral-strong"
           >
             Key Take Aways
           </Heading>
@@ -130,7 +130,7 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
                   as="h3"
                   className="u-margin-bottom-sm"
                   size="title-xs"
-                  variant="neutralStrong"
+                  variant="neutral-strong"
                 >
                   What Was Medieval Japan Like?
                 </Heading>
@@ -146,7 +146,7 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
                   as="h3"
                   className="u-margin-bottom-sm"
                   size="title-xs"
-                  variant="neutralStrong"
+                  variant="neutral-strong"
                 >
                   What Was Medieval Japan Like?
                 </Heading>
@@ -162,7 +162,7 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
                   as="h3"
                   className="u-margin-bottom-sm"
                   size="title-xs"
-                  variant="neutralStrong"
+                  variant="neutral-strong"
                 >
                   What Was Medieval Japan Like?
                 </Heading>
@@ -180,7 +180,7 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
                   as="h3"
                   className="u-margin-bottom-sm"
                   size="title-xs"
-                  variant="neutralStrong"
+                  variant="neutral-strong"
                 >
                   What Was Medieval Japan Like?
                 </Heading>
@@ -196,7 +196,7 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
                   as="h3"
                   className="u-margin-bottom-sm"
                   size="title-xs"
-                  variant="neutralStrong"
+                  variant="neutral-strong"
                 >
                   What Was Medieval Japan Like?
                 </Heading>
@@ -227,7 +227,7 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
               as="h3"
               className="u-margin-bottom-lg"
               size="headline-sm"
-              variant="neutralStrong"
+              variant="neutral-strong"
             >
               What to Focus on this Checkpoint
             </Heading>
@@ -279,7 +279,7 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
               as="h3"
               className="u-margin-bottom-lg"
               size="headline-sm"
-              variant="neutralStrong"
+              variant="neutral-strong"
             >
               Resources for You
             </Heading>
@@ -311,7 +311,7 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
               as="h3"
               className="u-margin-bottom-lg"
               size="headline-sm"
-              variant="neutralStrong"
+              variant="neutral-strong"
             >
               Resources for You
             </Heading>
