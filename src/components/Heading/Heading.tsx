@@ -3,6 +3,7 @@ import React, { forwardRef } from 'react';
 import styles from './Heading.module.css';
 
 export const VARIANTS = [
+  'inherit',
   'neutral-subtle',
   'neutral-medium',
   'neutral-strong',
@@ -11,7 +12,6 @@ export const VARIANTS = [
   'warning',
   'error',
   'white',
-  'inherit',
   /**
    * @deprecated Info variant is deprecated.
    */ 'info',

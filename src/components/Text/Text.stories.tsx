@@ -31,6 +31,7 @@ export default {
 } as Meta<Args>;
 
 const variants = [
+  'inherit',
   'neutral-subtle',
   'neutral-medium',
   'neutral-strong',
@@ -39,7 +40,6 @@ const variants = [
   'warning',
   'error',
   'white',
-  'inherit',
 ];
 
 type Args = React.ComponentProps<typeof Text>;

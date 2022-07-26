@@ -41,14 +41,14 @@ export interface Props {
    * Size property
    */
   headingVariant?:
-    | 'error'
-    | 'brand'
     | 'inherit'
     | 'neutral-subtle'
     | 'neutral-medium'
     | 'neutral-strong'
+    | 'brand'
     | 'success'
     | 'warning'
+    | 'error'
     | 'white';
   /**
    * Controls the layout of the PageHeader, specifically the placement of the left and right slots.

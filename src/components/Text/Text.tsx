@@ -14,6 +14,7 @@ export type Size =
   | 'callout';
 
 export type Variant =
+  | 'inherit'
   | 'neutral-subtle'
   | 'neutral-medium'
   | 'neutral-strong'
@@ -22,7 +23,6 @@ export type Variant =
   | 'warning'
   | 'error'
   | 'white'
-  | 'inherit'
   /**
    * @deprecated Info variant is deprecated.
    */
