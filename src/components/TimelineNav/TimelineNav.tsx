@@ -346,8 +346,13 @@ export const TimelineNav = ({
   /**
    * onFocus (used by 'Back' button on <lg viewports)
    * 1) This fixes an issue where a keyboard user who has focus on the
-   * Back button could use alt-tab to put keyboard focus back
-   * on the menu, which is currently off-canvas.
+   * 'Back' button could use alt-tab to put keyboard focus back
+   * on the menu, which is currently off-canvas. To prevent this
+   * unwanted behavior, we set the currently active menu item's
+   * tabIndex to "-1" so that it can't be focusable in sequential
+   * keyboard navigation. The 'Back' button should be the only way
+   * users are able to return to the nav list, both visually and
+   * via keyboard navigation.
    * See https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex#sect1
    */
   const onFocus = () => {
