@@ -19,9 +19,8 @@ export default {
           status="neutral"
           variant="link"
         >
-          click into the course
+          click into the course.
         </Button>
-        .
       </>
     ),
   },
