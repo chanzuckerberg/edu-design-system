@@ -344,9 +344,9 @@ export const TimelineNav = ({
   };
 
   /**
-   * onFocus (used by 'Back' button on <lg viewports)
+   * resetTabIndex (used by 'Back' button on <lg viewports)
    * 1) This fixes an issue where a keyboard user who has focus on the
-   * 'Back' button could use alt-tab to put keyboard focus back
+   * 'Back' button could use shift-tab to put keyboard focus back
    * on the menu, which is currently off-canvas. To prevent this
    * unwanted behavior, we set the currently active menu item's
    * tabIndex to "-1" so that it can't be focusable in sequential
@@ -355,7 +355,7 @@ export const TimelineNav = ({
    * via keyboard navigation.
    * See https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex#sect1
    */
-  const onFocus = () => {
+  const resetTabIndex = () => {
     timelineNavItemRefs[activeIndexState].current.tabIndex = '-1';
   };
 
@@ -444,17 +444,12 @@ export const TimelineNav = ({
         <Button
           className={clsx(styles['timeline-nav__back'])}
           onClick={onClick}
-          onFocus={onFocus}
+          onFocus={resetTabIndex}
           ref={backRef}
           status="neutral"
           variant="link"
         >
-          <Icon
-            id="back"
-            name="arrow-back"
-            purpose="informative"
-            title="back"
-          />
+          <Icon name="arrow-back" purpose="informative" title="back" />
           Back
         </Button>
         {childrenWithProps[activeIndexState]}
