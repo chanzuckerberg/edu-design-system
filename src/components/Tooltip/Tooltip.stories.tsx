@@ -134,6 +134,19 @@ export const LongButtonText: StoryObj<Args> = {
   },
 };
 
+export const Disabled: StoryObj<Args> = {
+  args: {
+    children: (
+      // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
+      <span className={clsx(styles['trigger--spacing'])} tabIndex={0}>
+        <Button disabled variant="primary">
+          Tooltip trigger
+        </Button>
+      </span>
+    ),
+  },
+};
+
 export const Interactive: StoryObj<Args> = {
   args: {
     // reset prop values defined in defaultArgs

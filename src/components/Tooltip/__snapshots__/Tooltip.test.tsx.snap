@@ -110,6 +110,68 @@ exports[`<Tooltip /> DarkVariant story renders snapshot 1`] = `
 </body>
 `;
 
+exports[`<Tooltip /> Disabled story renders snapshot 1`] = `
+<body>
+  <div>
+    <span
+      aria-describedby="tippy-8"
+      class="trigger--spacing"
+      tabindex="0"
+    >
+      <button
+        class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary button--disabled"
+        data-bootstrap-override="clickable-style-primary"
+        disabled=""
+        tabindex="-1"
+        type="button"
+      >
+        Tooltip trigger
+      </button>
+    </span>
+  </div>
+  <div
+    data-tippy-root=""
+    id="tippy-8"
+    style="pointer-events: none; z-index: 9999; visibility: visible; position: absolute; left: 0px; top: 0px; margin: 0px; transform: translate(10px, 0px);"
+  >
+    <div
+      class="tippy-box tooltip tooltip--light"
+      data-animation="fade"
+      data-escaped=""
+      data-placement="right"
+      data-reference-hidden=""
+      data-state="visible"
+      role="tooltip"
+      style="max-width: 350px; transition-duration: 0ms;"
+      tabindex="-1"
+    >
+      <div
+        class="tippy-content"
+        data-state="visible"
+        style="transition-duration: 0ms;"
+      >
+        <div>
+          <span
+            data-testid="tooltip-content"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+             
+            <b>
+              Donec a erat eu augue consequat eleifend non vel sem.
+            </b>
+             Praesent efficitur mauris ac leo semper accumsan.
+          </span>
+        </div>
+      </div>
+      <div
+        class="tippy-arrow"
+        style="position: absolute; top: 0px; transform: translate(0px, 3px);"
+      />
+    </div>
+  </div>
+</body>
+`;
+
 exports[`<Tooltip /> Interactive story renders snapshot 1`] = `
 <body>
   <div>
@@ -118,7 +180,7 @@ exports[`<Tooltip /> Interactive story renders snapshot 1`] = `
         Click somewhere in this area to dismiss the tooltip, then hover over the button to make it reappear.
       </p>
       <button
-        aria-describedby="tippy-8"
+        aria-describedby="tippy-9"
         class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary trigger--spacing"
         data-bootstrap-override="clickable-style-primary"
         type="button"
@@ -129,7 +191,7 @@ exports[`<Tooltip /> Interactive story renders snapshot 1`] = `
   </div>
   <div
     data-tippy-root=""
-    id="tippy-8"
+    id="tippy-9"
     style="pointer-events: none; z-index: 9999; visibility: visible; position: absolute; left: 0px; top: 0px; margin: 0px; transform: translate(10px, 0px);"
   >
     <div

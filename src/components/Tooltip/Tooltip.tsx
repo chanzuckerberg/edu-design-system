@@ -82,6 +82,32 @@ type Plugin = Plugins[number];
  *
  * https://atomiks.github.io/tippyjs/
  * https://github.com/atomiks/tippyjs-react
+ *
+ * Example usage:
+ *
+ * ```tsx
+ * <Tooltip>
+ *   <Button className={clsx(styles['trigger--spacing'])} variant="primary">
+ *     Tooltip trigger
+ *   </Button>
+ * </Tooltip>
+ * ```
+ *
+ * If the tooltip trigger is a disabled button, you'll need to wrap the button in a span with tabIndex={0}.
+ *
+ * https://atomiks.github.io/tippyjs/v5/creating-tooltips/#disabled-elements
+ *
+ * Example:
+ *
+ * ```tsx
+ * <Tooltip>
+ *   <span tabIndex={0}>
+ *     <Button className={clsx(styles['trigger--spacing'])} variant="primary">
+ *       Tooltip trigger
+ *     </Button>
+ *   </span>
+ * </Tooltip>
+ * ```
  */
 export const Tooltip = ({
   variant = 'light',
