@@ -334,25 +334,26 @@ export const TimelineNav = ({
   };
 
   /**
-   * onClick function
-   * 1) Triggered by 'Back' button on < lg viewports
-   * 2) Return focus to the button that was clicked to open the current panel; activeIndexState holds the index of the last nav item selected in the timelinNavItemRefs array
-   * 3) Body panel is visible/hidden depending on true/false value of isActive; hide it by setting isActive to false
+   * onClick (used by 'Back' button on < lg viewports)
+   * 1) Return focus to the button that was clicked to open the current panel; activeIndexState holds the index of the last nav item selected in the timelinNavItemRefs array
+   * 2) Body panel is visible/hidden depending on true/false value of isActive; hide it by setting isActive to false
    */
   const onClick = () => {
-    timelineNavItemRefs[activeIndexState].current?.focus(); /* 2 */
-    setIsActive(false); /* 3 */
+    timelineNavItemRefs[activeIndexState].current?.focus(); /* 1 */
+    setIsActive(false); /* 2 */
   };
 
+  /**
+   * onFocus (used by 'Back' button on <lg viewports)
+   * 1) This fixes an issue where a keyboard user who has focus on the
+   * Back button could use alt-tab to put keyboard focus back
+   * on the menu, which is currently off-canvas.
+   * See https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex#sect1
+   */
   const onFocus = () => {
-    // document.activeElement.parentNode.hidden = true;
-    // console.log(document.activeElement.parentNode)
-    // timelineNavItemRefs[activeIndexState].current.ariaHidden = 'true';
-    // timelineNavItemRefs[activeIndexState].current.ariaSelected = 'false';
-    // timelineNavItemRefs[activeIndexState].current.ariaCurrent = 'false';
-    // timelineNavItemRefs[activeIndexState].current.remove();
-    // console.log(timelineNavItemRefs[activeIndexState].current);
+    timelineNavItemRefs[activeIndexState].current.tabIndex = '-1';
   };
+
   return (
     <div className={componentClassName} {...other}>
       <div className={styles['timeline-nav__nav']}>
