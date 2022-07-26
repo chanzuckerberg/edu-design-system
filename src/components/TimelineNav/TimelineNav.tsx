@@ -343,6 +343,16 @@ export const TimelineNav = ({
     timelineNavItemRefs[activeIndexState].current?.focus(); /* 2 */
     setIsActive(false); /* 3 */
   };
+
+  const onFocus = () => {
+    // document.activeElement.parentNode.hidden = true;
+    // console.log(document.activeElement.parentNode)
+    // timelineNavItemRefs[activeIndexState].current.ariaHidden = 'true';
+    // timelineNavItemRefs[activeIndexState].current.ariaSelected = 'false';
+    // timelineNavItemRefs[activeIndexState].current.ariaCurrent = 'false';
+    // timelineNavItemRefs[activeIndexState].current.remove();
+    // console.log(timelineNavItemRefs[activeIndexState].current);
+  };
   return (
     <div className={componentClassName} {...other}>
       <div className={styles['timeline-nav__nav']}>
@@ -428,11 +438,17 @@ export const TimelineNav = ({
         <Button
           className={clsx(styles['timeline-nav__back'])}
           onClick={onClick}
+          onFocus={onFocus}
           ref={backRef}
           status="neutral"
           variant="link"
         >
-          <Icon name="arrow-back" purpose="informative" title="back" />
+          <Icon
+            id="back"
+            name="arrow-back"
+            purpose="informative"
+            title="back"
+          />
           Back
         </Button>
         {childrenWithProps[activeIndexState]}
