@@ -20,6 +20,7 @@ import {
   U_ARROW_KEYCODE,
   R_ARROW_KEYCODE,
   D_ARROW_KEYCODE,
+  ENTER_KEYCODE,
 } from '../../util/keycodes';
 import Button from '../Button';
 import Icon from '../Icon';
@@ -188,18 +189,14 @@ export const TimelineNav = ({
   /**
    * On open
    * 1) On click of a tab, set activeIndexState to index of tab being clicked
-   * 2) Set focus to the 'Back' button. This is wrapped in a setTimeout() method to ensure that document.activeElement gets set properly. TODO: determine why backRef.current?.focus() needs to be in a callback
-   * 3) If function is passed into onChange prop, run that on click
+   * 2) If function is passed into onChange prop, run that on click
    */
   function onOpen(index: number) {
     setActiveIndexState(index); /* 1 */
     setIsActive(true);
-    setTimeout(() => {
-      backRef.current?.focus(); /* 2 */
-    }, 500);
 
     if (onChange) {
-      /* 3 */
+      /* 2 */
       onChange(index);
     }
   }
@@ -210,6 +207,7 @@ export const TimelineNav = ({
    * 2) Set active tab, next tab, and previous tab.
    * 3) If right or down arrow key keyed, focus on next tab.
    * 4) If left or up arrow key keyed, focus on the previous tab.
+   * 5) If enter keyed, set focus to the 'Back' button. This is wrapped in a setTimeout() method to ensure that document.activeElement gets set properly. TODO: determine why backRef.current?.focus() needs to be in a callback
    *
    * TODO: improve `any` type
    */
@@ -237,6 +235,10 @@ export const TimelineNav = ({
     } else if ([L_ARROW_KEYCODE, U_ARROW_KEYCODE].includes(e.key)) {
       /* 4 */
       timelineNavItemRefs[prev].current.focus();
+    } else if (e.key === ENTER_KEYCODE) {
+      setTimeout(() => {
+        backRef.current?.focus(); /* 5 */
+      }, 500);
     }
   }
 
