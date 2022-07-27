@@ -334,15 +334,33 @@ export const TimelineNav = ({
   };
 
   /**
-   * onClick function
-   * 1) Triggered by 'Back' button on < lg viewports
-   * 2) Return focus to the button that was clicked to open the current panel; activeIndexState holds the index of the last nav item selected in the timelinNavItemRefs array
+   * onBack (used by 'Back' button on < lg viewports)
+   * 1) Return focus to the button that was clicked to open the current panel; activeIndexState holds the index of the last nav item selected in the timelinNavItemRefs array
+   * 2) Because the 'Back' button's onFocus listener removes the selected nav item from the tab order, we need to manually insert it back into the tab order by setting its tabIndex back to "0"
    * 3) Body panel is visible/hidden depending on true/false value of isActive; hide it by setting isActive to false
    */
-  const onClick = () => {
-    timelineNavItemRefs[activeIndexState].current?.focus(); /* 2 */
+  const onBack = () => {
+    timelineNavItemRefs[activeIndexState].current?.focus(); /* 1 */
+    timelineNavItemRefs[activeIndexState].current.tabIndex = '0'; /* 2 */
     setIsActive(false); /* 3 */
   };
+
+  /**
+   * resetTabIndex (used by 'Back' button on <lg viewports)
+   * 1) This fixes an issue where a keyboard user who has focus on the
+   * 'Back' button could use shift-tab to put keyboard focus back
+   * on the menu, which is currently off-canvas. To prevent this
+   * unwanted behavior, we set the currently active menu item's
+   * tabIndex to "-1" so that it can't be focusable in sequential
+   * keyboard navigation. The 'Back' button should be the only way
+   * users are able to return to the nav list, both visually and
+   * via keyboard navigation.
+   * See https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex#sect1
+   */
+  const resetTabIndex = () => {
+    timelineNavItemRefs[activeIndexState].current.tabIndex = '-1';
+  };
+
   return (
     <div className={componentClassName} {...other}>
       <div className={styles['timeline-nav__nav']}>
@@ -427,7 +445,8 @@ export const TimelineNav = ({
       >
         <Button
           className={clsx(styles['timeline-nav__back'])}
-          onClick={onClick}
+          onClick={onBack}
+          onFocus={resetTabIndex}
           ref={backRef}
           status="neutral"
           variant="link"
