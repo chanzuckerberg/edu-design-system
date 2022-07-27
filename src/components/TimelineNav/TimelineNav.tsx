@@ -336,11 +336,13 @@ export const TimelineNav = ({
   /**
    * onClick (used by 'Back' button on < lg viewports)
    * 1) Return focus to the button that was clicked to open the current panel; activeIndexState holds the index of the last nav item selected in the timelinNavItemRefs array
-   * 2) Body panel is visible/hidden depending on true/false value of isActive; hide it by setting isActive to false
+   * 2) Because the 'Back' button's onFocus listener removes the selected nav item from the tab order, we need to manually insert it back into the tab order by setting its tabIndex back to "0"
+   * 3) Body panel is visible/hidden depending on true/false value of isActive; hide it by setting isActive to false
    */
   const onClick = () => {
     timelineNavItemRefs[activeIndexState].current?.focus(); /* 1 */
-    setIsActive(false); /* 2 */
+    timelineNavItemRefs[activeIndexState].current.tabIndex = '0'; /* 2 */
+    setIsActive(false); /* 3 */
   };
 
   /**
