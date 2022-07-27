@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0](https://github.com/chanzuckerberg/edu-design-system/compare/v2.0.0...v3.0.0) (2022-07-27)
+
+### ⚠ BREAKING CHANGES
+
+- **text, heading:** allow all 3 neutral text colors via variant prop ([01b2250](https://github.com/chanzuckerberg/edu-design-system/commit/01b2250cf4b1d96f1881a4c96b6f48a5f2fbe9f6))
+
+### Bug Fixes
+
+- **banner, page-level-banner:** darken content text to base ([625a7a5](https://github.com/chanzuckerberg/edu-design-system/commit/625a7a599c2edf6e8d48f0e5d9ba555ce9d43d01))
+- **banner:** move close button to end of content ([7e3da1d](https://github.com/chanzuckerberg/edu-design-system/commit/7e3da1d0e08c0d985d4e3fa5f5829ceba043d5a4))
+- **table:** add extra padding beneath first cell when the highlight-first-cell variant and stacked behavior are used together ([1647e0e](1647e0e4069f0012dc66d7065d3df62b550ce47f))
+
 ## [2.0.0](https://github.com/chanzuckerberg/edu-design-system/compare/v1.6.1...v2.0.0) (2022-07-22)
 
 ### ⚠ BREAKING CHANGES

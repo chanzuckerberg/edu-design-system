@@ -29,7 +29,7 @@ exports[`<Banner /> Brand story renders snapshot 1`] = `
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--sm text--neutral"
+        class="text text--sm text--neutral-medium"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -38,9 +38,8 @@ exports[`<Banner /> Brand story renders snapshot 1`] = `
           data-bootstrap-override="clickable-style-link"
           type="button"
         >
-          click into the course
+          click into the course.
         </button>
-        .
       </p>
     </div>
   </div>
@@ -51,27 +50,6 @@ exports[`<Banner /> BrandDismissable story renders snapshot 1`] = `
 <article
   class="banner banner--brand banner--horizontal banner--dismissable"
 >
-  <button
-    class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button banner__close-btn button--icon"
-    data-bootstrap-override="clickable-style-icon"
-    type="button"
-  >
-    <svg
-      class="icon"
-      fill="currentColor"
-      role="img"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <title
-        id="13"
-      >
-        dismiss notification
-      </title>
-      <use
-        xlink:href="test-file-stub#close"
-      />
-    </svg>
-  </button>
   <svg
     class="icon banner__icon"
     fill="currentColor"
@@ -79,7 +57,7 @@ exports[`<Banner /> BrandDismissable story renders snapshot 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <title
-      id="14"
+      id="13"
     >
       attention
     </title>
@@ -97,7 +75,7 @@ exports[`<Banner /> BrandDismissable story renders snapshot 1`] = `
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--sm text--neutral"
+        class="text text--sm text--neutral-medium"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -106,12 +84,32 @@ exports[`<Banner /> BrandDismissable story renders snapshot 1`] = `
           data-bootstrap-override="clickable-style-link"
           type="button"
         >
-          click into the course
+          click into the course.
         </button>
-        .
       </p>
     </div>
   </div>
+  <button
+    class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button banner__close-btn button--icon"
+    data-bootstrap-override="clickable-style-icon"
+    type="button"
+  >
+    <svg
+      class="icon"
+      fill="currentColor"
+      role="img"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="14"
+      >
+        dismiss notification
+      </title>
+      <use
+        xlink:href="test-file-stub#close"
+      />
+    </svg>
+  </button>
 </article>
 `;
 
@@ -144,7 +142,7 @@ exports[`<Banner /> BrandWithAction story renders snapshot 1`] = `
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--sm text--neutral"
+        class="text text--sm text--neutral-medium"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -153,9 +151,8 @@ exports[`<Banner /> BrandWithAction story renders snapshot 1`] = `
           data-bootstrap-override="clickable-style-link"
           type="button"
         >
-          click into the course
+          click into the course.
         </button>
-        .
       </p>
     </div>
     <div
@@ -185,27 +182,6 @@ exports[`<Banner /> DismissableWithAction story renders snapshot 1`] = `
 <article
   class="banner banner--brand banner--horizontal banner--dismissable"
 >
-  <button
-    class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button banner__close-btn button--icon"
-    data-bootstrap-override="clickable-style-icon"
-    type="button"
-  >
-    <svg
-      class="icon"
-      fill="currentColor"
-      role="img"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <title
-        id="23"
-      >
-        dismiss notification
-      </title>
-      <use
-        xlink:href="test-file-stub#close"
-      />
-    </svg>
-  </button>
   <svg
     class="icon banner__icon"
     fill="currentColor"
@@ -213,7 +189,7 @@ exports[`<Banner /> DismissableWithAction story renders snapshot 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <title
-      id="24"
+      id="23"
     >
       attention
     </title>
@@ -231,7 +207,7 @@ exports[`<Banner /> DismissableWithAction story renders snapshot 1`] = `
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--sm text--neutral"
+        class="text text--sm text--neutral-medium"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -240,9 +216,8 @@ exports[`<Banner /> DismissableWithAction story renders snapshot 1`] = `
           data-bootstrap-override="clickable-style-link"
           type="button"
         >
-          click into the course
+          click into the course.
         </button>
-        .
       </p>
     </div>
     <div
@@ -257,6 +232,27 @@ exports[`<Banner /> DismissableWithAction story renders snapshot 1`] = `
       </button>
     </div>
   </div>
+  <button
+    class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button banner__close-btn button--icon"
+    data-bootstrap-override="clickable-style-icon"
+    type="button"
+  >
+    <svg
+      class="icon"
+      fill="currentColor"
+      role="img"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="24"
+      >
+        dismiss notification
+      </title>
+      <use
+        xlink:href="test-file-stub#close"
+      />
+    </svg>
+  </button>
 </article>
 `;
 
@@ -289,7 +285,7 @@ exports[`<Banner /> Error story renders snapshot 1`] = `
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--sm text--neutral"
+        class="text text--sm text--neutral-medium"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -298,9 +294,8 @@ exports[`<Banner /> Error story renders snapshot 1`] = `
           data-bootstrap-override="clickable-style-link"
           type="button"
         >
-          click into the course
+          click into the course.
         </button>
-        .
       </p>
     </div>
   </div>
@@ -311,27 +306,6 @@ exports[`<Banner /> ErrorDismissable story renders snapshot 1`] = `
 <article
   class="banner banner--error banner--horizontal banner--dismissable"
 >
-  <button
-    class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button banner__close-btn button--icon"
-    data-bootstrap-override="clickable-style-icon"
-    type="button"
-  >
-    <svg
-      class="icon"
-      fill="currentColor"
-      role="img"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <title
-        id="21"
-      >
-        dismiss notification
-      </title>
-      <use
-        xlink:href="test-file-stub#close"
-      />
-    </svg>
-  </button>
   <svg
     class="icon banner__icon"
     fill="currentColor"
@@ -339,7 +313,7 @@ exports[`<Banner /> ErrorDismissable story renders snapshot 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <title
-      id="22"
+      id="21"
     >
       error
     </title>
@@ -357,7 +331,7 @@ exports[`<Banner /> ErrorDismissable story renders snapshot 1`] = `
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--sm text--neutral"
+        class="text text--sm text--neutral-medium"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -366,12 +340,32 @@ exports[`<Banner /> ErrorDismissable story renders snapshot 1`] = `
           data-bootstrap-override="clickable-style-link"
           type="button"
         >
-          click into the course
+          click into the course.
         </button>
-        .
       </p>
     </div>
   </div>
+  <button
+    class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button banner__close-btn button--icon"
+    data-bootstrap-override="clickable-style-icon"
+    type="button"
+  >
+    <svg
+      class="icon"
+      fill="currentColor"
+      role="img"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="22"
+      >
+        dismiss notification
+      </title>
+      <use
+        xlink:href="test-file-stub#close"
+      />
+    </svg>
+  </button>
 </article>
 `;
 
@@ -404,7 +398,7 @@ exports[`<Banner /> ErrorWithAction story renders snapshot 1`] = `
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--sm text--neutral"
+        class="text text--sm text--neutral-medium"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -413,9 +407,8 @@ exports[`<Banner /> ErrorWithAction story renders snapshot 1`] = `
           data-bootstrap-override="clickable-style-link"
           type="button"
         >
-          click into the course
+          click into the course.
         </button>
-        .
       </p>
     </div>
     <div
@@ -462,7 +455,7 @@ exports[`<Banner /> Flat story renders snapshot 1`] = `
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--sm text--neutral"
+        class="text text--sm text--neutral-medium"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -471,9 +464,8 @@ exports[`<Banner /> Flat story renders snapshot 1`] = `
           data-bootstrap-override="clickable-style-link"
           type="button"
         >
-          click into the course
+          click into the course.
         </button>
-        .
       </p>
     </div>
   </div>
@@ -504,12 +496,12 @@ exports[`<Banner /> Neutral story renders snapshot 1`] = `
   >
     <div>
       <h3
-        class="heading heading--size-title-md heading--neutral"
+        class="heading heading--size-title-md heading--neutral-strong"
       >
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--sm text--neutral"
+        class="text text--sm text--neutral-medium"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -518,9 +510,8 @@ exports[`<Banner /> Neutral story renders snapshot 1`] = `
           data-bootstrap-override="clickable-style-link"
           type="button"
         >
-          click into the course
+          click into the course.
         </button>
-        .
       </p>
     </div>
   </div>
@@ -531,27 +522,6 @@ exports[`<Banner /> NeutralDismissable story renders snapshot 1`] = `
 <article
   class="banner banner--neutral banner--horizontal banner--dismissable"
 >
-  <button
-    class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button banner__close-btn button--icon"
-    data-bootstrap-override="clickable-style-icon"
-    type="button"
-  >
-    <svg
-      class="icon"
-      fill="currentColor"
-      role="img"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <title
-        id="15"
-      >
-        dismiss notification
-      </title>
-      <use
-        xlink:href="test-file-stub#close"
-      />
-    </svg>
-  </button>
   <svg
     class="icon banner__icon"
     fill="currentColor"
@@ -559,7 +529,7 @@ exports[`<Banner /> NeutralDismissable story renders snapshot 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <title
-      id="16"
+      id="15"
     >
       notice
     </title>
@@ -572,12 +542,12 @@ exports[`<Banner /> NeutralDismissable story renders snapshot 1`] = `
   >
     <div>
       <h3
-        class="heading heading--size-title-md heading--neutral"
+        class="heading heading--size-title-md heading--neutral-strong"
       >
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--sm text--neutral"
+        class="text text--sm text--neutral-medium"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -586,12 +556,32 @@ exports[`<Banner /> NeutralDismissable story renders snapshot 1`] = `
           data-bootstrap-override="clickable-style-link"
           type="button"
         >
-          click into the course
+          click into the course.
         </button>
-        .
       </p>
     </div>
   </div>
+  <button
+    class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button banner__close-btn button--icon"
+    data-bootstrap-override="clickable-style-icon"
+    type="button"
+  >
+    <svg
+      class="icon"
+      fill="currentColor"
+      role="img"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="16"
+      >
+        dismiss notification
+      </title>
+      <use
+        xlink:href="test-file-stub#close"
+      />
+    </svg>
+  </button>
 </article>
 `;
 
@@ -619,12 +609,12 @@ exports[`<Banner /> NeutralWithAction story renders snapshot 1`] = `
   >
     <div>
       <h3
-        class="heading heading--size-title-md heading--neutral"
+        class="heading heading--size-title-md heading--neutral-strong"
       >
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--sm text--neutral"
+        class="text text--sm text--neutral-medium"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -633,9 +623,8 @@ exports[`<Banner /> NeutralWithAction story renders snapshot 1`] = `
           data-bootstrap-override="clickable-style-link"
           type="button"
         >
-          click into the course
+          click into the course.
         </button>
-        .
       </p>
     </div>
     <div
@@ -710,7 +699,7 @@ exports[`<Banner /> NoTitle story renders snapshot 1`] = `
   >
     <div>
       <p
-        class="text text--sm text--neutral"
+        class="text text--sm text--neutral-medium"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -719,9 +708,8 @@ exports[`<Banner /> NoTitle story renders snapshot 1`] = `
           data-bootstrap-override="clickable-style-link"
           type="button"
         >
-          click into the course
+          click into the course.
         </button>
-        .
       </p>
     </div>
   </div>
@@ -757,7 +745,7 @@ exports[`<Banner /> Success story renders snapshot 1`] = `
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--sm text--neutral"
+        class="text text--sm text--neutral-medium"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -766,9 +754,8 @@ exports[`<Banner /> Success story renders snapshot 1`] = `
           data-bootstrap-override="clickable-style-link"
           type="button"
         >
-          click into the course
+          click into the course.
         </button>
-        .
       </p>
     </div>
   </div>
@@ -779,27 +766,6 @@ exports[`<Banner /> SuccessDismissable story renders snapshot 1`] = `
 <article
   class="banner banner--success banner--horizontal banner--dismissable"
 >
-  <button
-    class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button banner__close-btn button--icon"
-    data-bootstrap-override="clickable-style-icon"
-    type="button"
-  >
-    <svg
-      class="icon"
-      fill="currentColor"
-      role="img"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <title
-        id="17"
-      >
-        dismiss notification
-      </title>
-      <use
-        xlink:href="test-file-stub#close"
-      />
-    </svg>
-  </button>
   <svg
     class="icon banner__icon"
     fill="currentColor"
@@ -807,7 +773,7 @@ exports[`<Banner /> SuccessDismissable story renders snapshot 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <title
-      id="18"
+      id="17"
     >
       success
     </title>
@@ -825,7 +791,7 @@ exports[`<Banner /> SuccessDismissable story renders snapshot 1`] = `
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--sm text--neutral"
+        class="text text--sm text--neutral-medium"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -834,12 +800,32 @@ exports[`<Banner /> SuccessDismissable story renders snapshot 1`] = `
           data-bootstrap-override="clickable-style-link"
           type="button"
         >
-          click into the course
+          click into the course.
         </button>
-        .
       </p>
     </div>
   </div>
+  <button
+    class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button banner__close-btn button--icon"
+    data-bootstrap-override="clickable-style-icon"
+    type="button"
+  >
+    <svg
+      class="icon"
+      fill="currentColor"
+      role="img"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="18"
+      >
+        dismiss notification
+      </title>
+      <use
+        xlink:href="test-file-stub#close"
+      />
+    </svg>
+  </button>
 </article>
 `;
 
@@ -872,7 +858,7 @@ exports[`<Banner /> SuccessWithAction story renders snapshot 1`] = `
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--sm text--neutral"
+        class="text text--sm text--neutral-medium"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -881,9 +867,8 @@ exports[`<Banner /> SuccessWithAction story renders snapshot 1`] = `
           data-bootstrap-override="clickable-style-link"
           type="button"
         >
-          click into the course
+          click into the course.
         </button>
-        .
       </p>
     </div>
     <div
@@ -930,7 +915,7 @@ exports[`<Banner /> Vertical story renders snapshot 1`] = `
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--sm text--neutral"
+        class="text text--sm text--neutral-medium"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -939,9 +924,8 @@ exports[`<Banner /> Vertical story renders snapshot 1`] = `
           data-bootstrap-override="clickable-style-link"
           type="button"
         >
-          click into the course
+          click into the course.
         </button>
-        .
       </p>
     </div>
   </div>
@@ -952,27 +936,6 @@ exports[`<Banner /> VerticalDismissable story renders snapshot 1`] = `
 <article
   class="banner banner--brand banner--dismissable"
 >
-  <button
-    class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button banner__close-btn button--icon"
-    data-bootstrap-override="clickable-style-icon"
-    type="button"
-  >
-    <svg
-      class="icon"
-      fill="currentColor"
-      role="img"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <title
-        id="28"
-      >
-        dismiss notification
-      </title>
-      <use
-        xlink:href="test-file-stub#close"
-      />
-    </svg>
-  </button>
   <svg
     class="icon banner__icon"
     fill="currentColor"
@@ -980,7 +943,7 @@ exports[`<Banner /> VerticalDismissable story renders snapshot 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <title
-      id="29"
+      id="28"
     >
       attention
     </title>
@@ -998,7 +961,7 @@ exports[`<Banner /> VerticalDismissable story renders snapshot 1`] = `
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--sm text--neutral"
+        class="text text--sm text--neutral-medium"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -1007,12 +970,32 @@ exports[`<Banner /> VerticalDismissable story renders snapshot 1`] = `
           data-bootstrap-override="clickable-style-link"
           type="button"
         >
-          click into the course
+          click into the course.
         </button>
-        .
       </p>
     </div>
   </div>
+  <button
+    class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button banner__close-btn button--icon"
+    data-bootstrap-override="clickable-style-icon"
+    type="button"
+  >
+    <svg
+      class="icon"
+      fill="currentColor"
+      role="img"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="29"
+      >
+        dismiss notification
+      </title>
+      <use
+        xlink:href="test-file-stub#close"
+      />
+    </svg>
+  </button>
 </article>
 `;
 
@@ -1020,27 +1003,6 @@ exports[`<Banner /> VerticalDismissableWithAction story renders snapshot 1`] = `
 <article
   class="banner banner--brand banner--dismissable"
 >
-  <button
-    class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button banner__close-btn button--icon"
-    data-bootstrap-override="clickable-style-icon"
-    type="button"
-  >
-    <svg
-      class="icon"
-      fill="currentColor"
-      role="img"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <title
-        id="31"
-      >
-        dismiss notification
-      </title>
-      <use
-        xlink:href="test-file-stub#close"
-      />
-    </svg>
-  </button>
   <svg
     class="icon banner__icon"
     fill="currentColor"
@@ -1048,7 +1010,7 @@ exports[`<Banner /> VerticalDismissableWithAction story renders snapshot 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <title
-      id="32"
+      id="31"
     >
       attention
     </title>
@@ -1066,7 +1028,7 @@ exports[`<Banner /> VerticalDismissableWithAction story renders snapshot 1`] = `
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--sm text--neutral"
+        class="text text--sm text--neutral-medium"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -1075,9 +1037,8 @@ exports[`<Banner /> VerticalDismissableWithAction story renders snapshot 1`] = `
           data-bootstrap-override="clickable-style-link"
           type="button"
         >
-          click into the course
+          click into the course.
         </button>
-        .
       </p>
     </div>
     <div
@@ -1092,6 +1053,27 @@ exports[`<Banner /> VerticalDismissableWithAction story renders snapshot 1`] = `
       </button>
     </div>
   </div>
+  <button
+    class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button banner__close-btn button--icon"
+    data-bootstrap-override="clickable-style-icon"
+    type="button"
+  >
+    <svg
+      class="icon"
+      fill="currentColor"
+      role="img"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="32"
+      >
+        dismiss notification
+      </title>
+      <use
+        xlink:href="test-file-stub#close"
+      />
+    </svg>
+  </button>
 </article>
 `;
 
@@ -1124,7 +1106,7 @@ exports[`<Banner /> VerticalWithAction story renders snapshot 1`] = `
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--sm text--neutral"
+        class="text text--sm text--neutral-medium"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -1133,9 +1115,8 @@ exports[`<Banner /> VerticalWithAction story renders snapshot 1`] = `
           data-bootstrap-override="clickable-style-link"
           type="button"
         >
-          click into the course
+          click into the course.
         </button>
-        .
       </p>
     </div>
     <div
@@ -1182,7 +1163,7 @@ exports[`<Banner /> Warning story renders snapshot 1`] = `
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--sm text--neutral"
+        class="text text--sm text--neutral-medium"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -1191,9 +1172,8 @@ exports[`<Banner /> Warning story renders snapshot 1`] = `
           data-bootstrap-override="clickable-style-link"
           type="button"
         >
-          click into the course
+          click into the course.
         </button>
-        .
       </p>
     </div>
   </div>
@@ -1204,27 +1184,6 @@ exports[`<Banner /> WarningDismissable story renders snapshot 1`] = `
 <article
   class="banner banner--warning banner--horizontal banner--dismissable"
 >
-  <button
-    class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button banner__close-btn button--icon"
-    data-bootstrap-override="clickable-style-icon"
-    type="button"
-  >
-    <svg
-      class="icon"
-      fill="currentColor"
-      role="img"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <title
-        id="19"
-      >
-        dismiss notification
-      </title>
-      <use
-        xlink:href="test-file-stub#close"
-      />
-    </svg>
-  </button>
   <svg
     class="icon banner__icon"
     fill="currentColor"
@@ -1232,7 +1191,7 @@ exports[`<Banner /> WarningDismissable story renders snapshot 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <title
-      id="20"
+      id="19"
     >
       warning
     </title>
@@ -1250,7 +1209,7 @@ exports[`<Banner /> WarningDismissable story renders snapshot 1`] = `
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--sm text--neutral"
+        class="text text--sm text--neutral-medium"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -1259,12 +1218,32 @@ exports[`<Banner /> WarningDismissable story renders snapshot 1`] = `
           data-bootstrap-override="clickable-style-link"
           type="button"
         >
-          click into the course
+          click into the course.
         </button>
-        .
       </p>
     </div>
   </div>
+  <button
+    class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button banner__close-btn button--icon"
+    data-bootstrap-override="clickable-style-icon"
+    type="button"
+  >
+    <svg
+      class="icon"
+      fill="currentColor"
+      role="img"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="20"
+      >
+        dismiss notification
+      </title>
+      <use
+        xlink:href="test-file-stub#close"
+      />
+    </svg>
+  </button>
 </article>
 `;
 
@@ -1297,7 +1276,7 @@ exports[`<Banner /> WarningWithAction story renders snapshot 1`] = `
         New curriculum updates are available for one or more of your courses.
       </h3>
       <p
-        class="text text--sm text--neutral"
+        class="text text--sm text--neutral-medium"
       >
         Summit Learning has a full-time team dedicated to constantly improving our curriculum. To see the updates,
          
@@ -1306,9 +1285,8 @@ exports[`<Banner /> WarningWithAction story renders snapshot 1`] = `
           data-bootstrap-override="clickable-style-link"
           type="button"
         >
-          click into the course
+          click into the course.
         </button>
-        .
       </p>
     </div>
     <div

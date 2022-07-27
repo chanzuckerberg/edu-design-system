@@ -139,8 +139,36 @@ export const Banner = ({
     isFlat && styles['banner--flat'],
   );
 
+  const variantComputed = variant === 'neutral' ? 'neutral-strong' : variant;
+
   return (
     <article className={componentClassName}>
+      <Icon
+        className={styles['banner__icon']}
+        name={variantToIconAssetsMap[variant].name}
+        purpose="informative"
+        title={variantToIconAssetsMap[variant].title}
+      />
+
+      <div className={clsx(styles['banner__text-and-action'])}>
+        <div>
+          {title && (
+            <Heading as={titleAs} size="title-md" variant={variantComputed}>
+              {title}
+            </Heading>
+          )}
+          {description && (
+            <Text as={descriptionAs} size="sm" variant="neutral-medium">
+              {description}
+            </Text>
+          )}
+        </div>
+
+        {action && (
+          <div className={clsx(styles['banner__action'])}>{action}</div>
+        )}
+      </div>
+
       {onDismiss && (
         <Button
           className={styles['banner__close-btn']}
@@ -155,32 +183,6 @@ export const Banner = ({
           />
         </Button>
       )}
-
-      <Icon
-        className={styles['banner__icon']}
-        name={variantToIconAssetsMap[variant].name}
-        purpose="informative"
-        title={variantToIconAssetsMap[variant].title}
-      />
-
-      <div className={clsx(styles['banner__text-and-action'])}>
-        <div>
-          {title && (
-            <Heading as={titleAs} size="title-md" variant={variant}>
-              {title}
-            </Heading>
-          )}
-          {description && (
-            <Text as={descriptionAs} size="sm" variant="neutral">
-              {description}
-            </Text>
-          )}
-        </div>
-
-        {action && (
-          <div className={clsx(styles['banner__action'])}>{action}</div>
-        )}
-      </div>
     </article>
   );
 };

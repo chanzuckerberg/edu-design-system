@@ -8,7 +8,7 @@ exports[`<PageHeader /> Centered story renders snapshot 1`] = `
     class="page-header__left"
   >
     <h1
-      class="page-header__title heading heading--size-headline-lg heading--base"
+      class="page-header__title heading heading--size-headline-lg heading--neutral-strong"
     >
       Page header title
     </h1>
@@ -29,7 +29,7 @@ exports[`<PageHeader /> Default story renders snapshot 1`] = `
     class="page-header__left"
   >
     <h1
-      class="page-header__title heading heading--size-headline-lg heading--base"
+      class="page-header__title heading heading--size-headline-lg heading--neutral-strong"
     >
       Page header title
     </h1>
@@ -45,7 +45,7 @@ exports[`<PageHeader /> TitleAfter story renders snapshot 1`] = `
     class="page-header__left"
   >
     <h1
-      class="page-header__title heading heading--size-headline-lg heading--base"
+      class="page-header__title heading heading--size-headline-lg heading--neutral-strong"
     >
       Page header title
       <div
@@ -79,7 +79,7 @@ exports[`<PageHeader /> TwoUp story renders snapshot 1`] = `
     class="page-header__left"
   >
     <h1
-      class="page-header__title heading heading--size-headline-lg heading--base"
+      class="page-header__title heading heading--size-headline-lg heading--neutral-strong"
     >
       Page header title
     </h1>
@@ -105,7 +105,7 @@ exports[`<PageHeader /> WithDescription story renders snapshot 1`] = `
     class="page-header__left"
   >
     <h1
-      class="page-header__title heading heading--size-headline-lg heading--base"
+      class="page-header__title heading heading--size-headline-lg heading--neutral-strong"
     >
       Page header title
     </h1>
@@ -135,7 +135,7 @@ exports[`<PageHeader /> WithOverline story renders snapshot 1`] = `
       </div>
     </div>
     <h1
-      class="page-header__title heading heading--size-headline-lg heading--base"
+      class="page-header__title heading heading--size-headline-lg heading--neutral-strong"
     >
       Page header title
     </h1>

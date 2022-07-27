@@ -44,8 +44,14 @@
 .text--error {
   color: var(--eds-theme-color-text-utility-error);
 }
-.text--base {
+.text--neutral-subtle {
+  color: var(--eds-theme-color-text-neutral-subtle);
+}
+.text--neutral-medium {
   color: var(--eds-theme-color-text-neutral-default);
+}
+.text--neutral-strong {
+  color: var(--eds-theme-color-text-neutral-strong);
 }
 .text--brand {
   color: var(--eds-theme-color-text-brand-primary);
@@ -55,9 +61,6 @@
 }
 .text--inherit {
   color: inherit;
-}
-.text--neutral {
-  color: var(--eds-theme-color-text-neutral-subtle);
 }
 .text--success {
   color: var(--eds-theme-color-text-utility-success);

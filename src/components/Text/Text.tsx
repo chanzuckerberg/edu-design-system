@@ -14,13 +14,14 @@ export type Size =
   | 'callout';
 
 export type Variant =
-  | 'error'
-  | 'base'
-  | 'brand'
   | 'inherit'
-  | 'neutral'
+  | 'neutral-subtle'
+  | 'neutral-medium'
+  | 'neutral-strong'
+  | 'brand'
   | 'success'
   | 'warning'
+  | 'error'
   | 'white'
   /**
    * @deprecated Info variant is deprecated.
