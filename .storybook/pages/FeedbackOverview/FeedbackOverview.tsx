@@ -103,11 +103,9 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                         <TableHeaderCell>Checkpoints Status</TableHeaderCell>
                         <TableHeaderCell>Final Product</TableHeaderCell>
                       </TableRow>
-                    </TableHeader>
-                    <TableBody>
                       <TableRow>
-                        <TableCell></TableCell>
-                        <TableCell>
+                        <TableHeaderCell></TableHeaderCell>
+                        <TableHeaderCell>
                           <NumberIconList>
                             <NumberIcon
                               aria-label="Item 1"
@@ -168,9 +166,11 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                               size="sm"
                             />
                           </NumberIconList>
-                        </TableCell>
-                        <TableCell></TableCell>
+                        </TableHeaderCell>
+                        <TableHeaderCell></TableHeaderCell>
                       </TableRow>
+                    </TableHeader>
+                    <TableBody>
                       <TableRow>
                         <TableCell data-heading="Student">
                           Araya, Raquel
