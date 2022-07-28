@@ -486,7 +486,7 @@ export const CoursePlannerEdit = () => {
             headingSize="title-sm"
             orientation="2up"
             right={
-              <ButtonGroup className="u-margin-top-xl">
+              <ButtonGroup className="u-margin-top-xl-mobile">
                 <Button>
                   <Icon name="arrow-narrow-left" purpose="decorative" />
                   Back
