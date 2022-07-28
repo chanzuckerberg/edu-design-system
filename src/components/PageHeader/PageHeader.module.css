@@ -56,13 +56,12 @@
 
 /**
  * Page header right
+ * 1) On larger viewports, add margin-left to keep space between title and header-right content. If additional margin needs to be added, add a spacing utility class to the contents of header-right.
  */
-.page-header__right {
-  margin-top: var(--eds-size-4); /* 1 */
-
+ .page-header__right {
+  
   @media all and (min-width: $eds-bp-md) {
-    margin-top: 0;
-    margin-left: var(--eds-size-4); /* 1 */
+    margin-left: var(--eds-size-4); 
   }
 }
 

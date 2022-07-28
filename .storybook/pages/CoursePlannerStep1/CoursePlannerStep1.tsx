@@ -36,7 +36,7 @@ export const CoursePlannerStep1 = () => (
           headingSize="title-md"
           orientation="2up"
           right={
-            <ButtonGroup>
+            <ButtonGroup className="u-margin-top-xl">
               <Button>Return to Course</Button>
               <Button variant="primary">
                 Next <Icon name="arrow-narrow-right" purpose="decorative" />

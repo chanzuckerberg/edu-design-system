@@ -47,10 +47,10 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
       <BreadcrumbsItem href="#" text="Modern World 2" />
     </Breadcrumbs>
     <PageHeader
-      className="u-margin-bottom-xl"
+      className="u-margin-bottom-xl u-flex-direction-row"
       right={
         <Button status="neutral" variant="icon">
-          More options
+          <div className="u-mobile-hidden">More options</div>
           <Icon name="dots-vertical" purpose="decorative" />
         </Button>
       }

@@ -6,6 +6,10 @@
   padding: 0;
 }
 
+@define-mixin resetAll {
+  all: unset !important;
+}
+
 /**
  * Link button styles
  * 1) display: inline-flex allows us to manage icon placement and the focus background animation
