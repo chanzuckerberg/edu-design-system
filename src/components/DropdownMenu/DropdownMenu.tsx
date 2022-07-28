@@ -118,7 +118,6 @@ export const DropdownMenu: React.FC<Props> = ({
         if (isReactFragment(child)) {
           const newChildren = child.props.children;
           return newChildren.map((item: ReactNode, i: number) => {
-            console.log({ item: item });
             return React.cloneElement<Props>(
               item as any,
               {
