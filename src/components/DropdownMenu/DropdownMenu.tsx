@@ -117,18 +117,22 @@ export const DropdownMenu: React.FC<Props> = ({
       if (React.isValidElement(child)) {
         if (isReactFragment(child)) {
           const newChildren = child.props.children;
-          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
           return newChildren.map((item: ReactNode, i: number) => {
-            // @ts-expect-error TODO: fix "No overload matches this call" error
-            return React.cloneElement<Props>(item, {
-              ref: (el: HTMLLIElement) => (childRefs.current[i] = el) /* 1 */,
-            });
+            console.log({ item: item });
+            return React.cloneElement<Props>(
+              item as any,
+              {
+                ref: (el: HTMLLIElement) => (childRefs.current[i] = el) /* 1 */,
+              } as any,
+            );
           });
         } else {
-          // @ts-expect-error TODO: fix "No overload matches this call" error
-          return React.cloneElement<Props>(child, {
-            ref: (el: HTMLLIElement) => (childRefs.current[i] = el) /* 1 */,
-          });
+          return React.cloneElement<Props>(
+            child as any,
+            {
+              ref: (el: HTMLLIElement) => (childRefs.current[i] = el) /* 1 */,
+            } as any,
+          );
         }
       }
     },
