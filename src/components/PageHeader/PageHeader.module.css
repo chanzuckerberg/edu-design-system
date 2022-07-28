@@ -56,7 +56,7 @@
 
 /**
  * Page header right
- * 1) On larger viewports, add margin-left to keep space between title and header-right content. If additional margin needs to be added, add a spacing utility class to the contents of header-right.
+ * 1) On larger viewports, add margin-left to keep space between title and header-right content. If additional margin needs to be added (i.e. margin-top on smaller viewports), add a spacing utility class to the contents of header-right.
  */
  .page-header__right {
   
