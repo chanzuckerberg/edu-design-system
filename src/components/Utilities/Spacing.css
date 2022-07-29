@@ -85,6 +85,18 @@
 }
 
 /**
+ * Margin top xl mobile
+ * 1) Forces margin top to 2rem (on smaller viewports only)
+ */
+.u-margin-top-xl-mobile {
+  margin-top: var(--eds-size-4) !important;
+
+  @media all and (min-width: $eds-bp-md) {
+    margin-top: unset !important;
+  }
+}
+
+/**
  * Margin top xxl
  * 1) Forces margin top to 3rem
  */

@@ -20,3 +20,15 @@
 .u-is-vishidden {
   @mixin visuallyHide;
 }
+
+/**
+ * Mobile Visibly Hidden 
+ * 1) Hides (on smaller screens only) but leaves content available to assitive technologies.
+ */
+.u-mobile-hidden {
+  @mixin visuallyHide;
+
+  @media all and (min-width: $eds-bp-lg) {
+    @mixin resetAll;
+  }
+}
