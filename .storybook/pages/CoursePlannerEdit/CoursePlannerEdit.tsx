@@ -486,6 +486,13 @@ export const CoursePlannerEdit = () => {
             headingSize="title-sm"
             orientation="2up"
             right={
+              // The parent class of this ButtonGroup is .page-header,
+              // which uses flex-direction:column, with a media query
+              // that changes flex-direction to row at the medium
+              // breakpoint. This ButtonGroup needs to have a margin
+              // above it only when the flex-direction is column, so
+              // this utility class was written with a media query
+              // that matches the behavior of .page-header
               <ButtonGroup className="u-margin-top-xl-mobile">
                 <Button>
                   <Icon name="arrow-narrow-left" purpose="decorative" />
