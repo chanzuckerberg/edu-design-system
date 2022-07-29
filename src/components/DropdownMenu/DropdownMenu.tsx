@@ -105,30 +105,32 @@ export const DropdownMenu: React.FC<Props> = ({
 
   /**
    * Pass props down to children
-   * 1) Cycle through children and pass down ref
-   * 2) If fragment is used for children (ProjectCardDropdown)
+   * 1) Using type 'any' here because TS requires typechecking at this point, but these elements have already been typechecked
+   * 2) Cycle through children and pass down ref
    */
   const childrenWithProps = React.Children.map(
     children,
-    // TODO: improve `any` type
     (child: ReactNode, i: number) => {
       // Checking isValidElement is the safe way and avoids a typescript
       // error too.
       if (React.isValidElement(child)) {
         if (isReactFragment(child)) {
           const newChildren = child.props.children;
-          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
           return newChildren.map((item: ReactNode, i: number) => {
-            // @ts-expect-error TODO: fix "No overload matches this call" error
-            return React.cloneElement<Props>(item, {
-              ref: (el: HTMLLIElement) => (childRefs.current[i] = el) /* 1 */,
-            });
+            return React.cloneElement<Props>(
+              item as any /* 1 */,
+              {
+                ref: (el: HTMLLIElement) => (childRefs.current[i] = el) /* 2 */,
+              } as any /* 1 */,
+            );
           });
         } else {
-          // @ts-expect-error TODO: fix "No overload matches this call" error
-          return React.cloneElement<Props>(child, {
-            ref: (el: HTMLLIElement) => (childRefs.current[i] = el) /* 1 */,
-          });
+          return React.cloneElement<Props>(
+            child as any /* 1 */,
+            {
+              ref: (el: HTMLLIElement) => (childRefs.current[i] = el) /* 2 */,
+            } as any /* 1 */,
+          );
         }
       }
     },
