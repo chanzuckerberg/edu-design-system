@@ -105,12 +105,11 @@ export const DropdownMenu: React.FC<Props> = ({
 
   /**
    * Pass props down to children
-   * 1) Cycle through children and pass down ref
-   * 2) If fragment is used for children (ProjectCardDropdown)
+   * 1) Using type 'any' here because TS requires typechecking at this point, but these elements have already been typechecked
+   * 2) Cycle through children and pass down ref
    */
   const childrenWithProps = React.Children.map(
     children,
-    // TODO: improve `any` type
     (child: ReactNode, i: number) => {
       // Checking isValidElement is the safe way and avoids a typescript
       // error too.
@@ -119,18 +118,18 @@ export const DropdownMenu: React.FC<Props> = ({
           const newChildren = child.props.children;
           return newChildren.map((item: ReactNode, i: number) => {
             return React.cloneElement<Props>(
-              item as any,
+              item as any /* 1 */,
               {
-                ref: (el: HTMLLIElement) => (childRefs.current[i] = el) /* 1 */,
-              } as any,
+                ref: (el: HTMLLIElement) => (childRefs.current[i] = el) /* 2 */,
+              } as any /* 1 */,
             );
           });
         } else {
           return React.cloneElement<Props>(
-            child as any,
+            child as any /* 1 */,
             {
-              ref: (el: HTMLLIElement) => (childRefs.current[i] = el) /* 1 */,
-            } as any,
+              ref: (el: HTMLLIElement) => (childRefs.current[i] = el) /* 2 */,
+            } as any /* 1 */,
           );
         }
       }
