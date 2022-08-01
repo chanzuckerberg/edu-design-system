@@ -1,60 +1,66 @@
-import type { StoryObj } from '@storybook/react';
+import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 import { Button, ButtonProps } from './Button';
 import * as colors from '../../tokens-dist/ts/colors';
-import { STATUSES as buttonColors } from '../ClickableStyle/ClickableStyle';
+import { STATUSES } from '../ClickableStyle/ClickableStyle';
 
 export default {
   title: 'Focus Indicator',
   component: Button,
   argTypes: {
-    color: {
-      options: buttonColors,
+    status: {
       control: {
         type: 'radio',
       },
+      options: STATUSES,
     },
   },
-};
+} as Meta<Args>;
+
+type Args = React.ComponentProps<typeof Button>;
 
 export const Current: StoryObj<ButtonProps> = {
   render: (args) => (
     <div
       style={{
-        gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
+        gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
         display: 'grid',
         gap: '1rem',
       }}
     >
-      {Object.keys(colors).map((colorName) => {
-        const color = colors[colorName];
-        return (
-          <div key={colorName}>
-            <div className="text-center">{colorName}</div>
-            <div
-              className="u-padding-xl u-width-100"
-              style={{
-                backgroundColor: color,
-                display: 'flex',
-                justifyContent: 'center',
-              }}
-            >
-              <Button
-                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-                // @ts-ignore
-                state="focus"
-                {...args}
+      {Object.keys(colors)
+        .filter((colorName) => colorName.includes('Background'))
+        .map((colorName) => {
+          const color = colors[colorName];
+          return (
+            <div key={colorName}>
+              <div style={{ textAlign: 'center' }}>
+                {colorName.replace('EdsThemeColor', '')}
+              </div>
+              <div
+                className="u-padding-xl u-width-100"
+                style={{
+                  backgroundColor: color,
+                  display: 'flex',
+                  justifyContent: 'center',
+                }}
               >
-                Coffee
-              </Button>
+                <Button
+                  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                  // @ts-ignore
+                  state="focus"
+                  {...args}
+                >
+                  Coffee
+                </Button>
+              </div>
             </div>
-          </div>
-        );
-      })}
+          );
+        })}
     </div>
   ),
   args: {
-    color: 'brand',
+    status: 'brand',
     size: 'lg',
     variant: 'primary',
   },
@@ -65,8 +71,9 @@ export const ProtoA: StoryObj<ButtonProps> = {
   args: {
     ...Current.args,
     style: {
-      '--tw-ring-offset-width': '2px',
-      '--tw-ring-color': 'black',
+      boxShadow: `0 0 0 2px white`,
+      outline: `2px black solid`,
+      outlineOffset: '2px',
     } as React.CSSProperties,
   },
   storyName: 'Proto A (black-white)',
@@ -77,10 +84,9 @@ export const ProtoB: StoryObj<ButtonProps> = {
   args: {
     ...Current.args,
     style: {
-      '--tw-ring-offset-width': '2px',
-      '--tw-ring-color': 'white',
-      outline: '3px solid black',
-      outlineOffset: '0',
+      boxShadow: `0 0 0 2px black`,
+      outline: `2px white solid`,
+      outlineOffset: '2px',
     } as React.CSSProperties,
   },
   storyName: 'Proto B (white-black)',
@@ -122,4 +128,43 @@ export const ProtoE: StoryObj<ButtonProps> = {
     },
   },
   storyName: 'Proto E (like Firefox)',
+};
+
+export const ProtoF: StoryObj<ButtonProps> = {
+  ...Current,
+  args: {
+    ...Current.args,
+    style: {
+      boxShadow: `0 0 0 2px white`,
+      outline: `2px ${colors.EdsColorBrandGrape700} solid`,
+      outlineOffset: '2px',
+    },
+  },
+  storyName: 'Proto F (purple-white)',
+};
+
+export const ProtoG: StoryObj<ButtonProps> = {
+  ...Current,
+  args: {
+    ...Current.args,
+    style: {
+      boxShadow: `0 0 0 2px white`,
+      outline: `2px ${colors.EdsColorBrandGrape500} solid`,
+      outlineOffset: '2px',
+    },
+  },
+  storyName: 'Proto G (light purple-white)',
+};
+
+export const ProtoH: StoryObj<ButtonProps> = {
+  ...Current,
+  args: {
+    ...Current.args,
+    style: {
+      boxShadow: `0 0 0 2px white`,
+      outline: `2px ${colors.EdsColorBrandGrape800} solid`,
+      outlineOffset: '2px',
+    },
+  },
+  storyName: 'Proto H (dark purple-white)',
 };
