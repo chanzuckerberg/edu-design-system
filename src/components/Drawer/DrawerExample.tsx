@@ -1,9 +1,9 @@
 import clsx from 'clsx';
 import React, { ReactNode, useState, useRef } from 'react';
 import { Drawer } from './Drawer';
-import Button from '../../components/Button';
-import ButtonGroup from '../../components/ButtonGroup';
-import Heading from '../../components/Heading';
+import Button from '../Button';
+import ButtonGroup from '../ButtonGroup';
+import Heading from '../Heading';
 
 export interface Props {
   /**
