@@ -10,5 +10,6 @@
  */
 .fieldset {
   @mixin fieldsetStyles; /* 1 */
+  --checkbox-svg-size: normal;
   margin: var(--eds-size-2);
 }
