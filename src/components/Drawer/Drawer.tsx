@@ -5,7 +5,6 @@ import React, {
   useRef,
   ReactNode,
   KeyboardEvent,
-  MouseEvent,
 } from 'react';
 import { oneByType } from 'react-children-by-type';
 import FocusLock from 'react-focus-lock';
@@ -30,7 +29,7 @@ export type Props = {
    */
   children?: ReactNode;
   /**
-   * CSS class names that can be appended to the component.
+   * CSS class names that can be appended to the Drawer wrapper component that the Drawer window translates in and out of.
    */
   className?: string;
   /**
@@ -45,6 +44,10 @@ export type Props = {
    * Handler to be called when the drawer is being closed (by ESCAPE / clicking X / clicking outside)
    */
   onClose?: (e?: any) => void;
+  /**
+   * CSS class names that can be appended to the Drawer window component that the Drawer components reside in.
+   */
+  windowClassName?: string;
 };
 
 /**
@@ -64,6 +67,7 @@ export const Drawer = ({
   children,
   dismissible,
   onClose,
+  windowClassName,
   ...other
 }: Props) => {
   /**
@@ -156,13 +160,8 @@ export const Drawer = ({
    * Handle "click outside"
    * 1) onClick of the area around the drawer window, close the drawer
    */
-  function handleOnClickOutside(e: MouseEvent<HTMLElement>) {
-    if (
-      isActive &&
-      dismissible &&
-      windowRef.current &&
-      !windowRef.current.contains(e.target as HTMLElement)
-    ) {
+  function handleOnClickOutside() {
+    if (isActive && dismissible) {
       handleOnClose(); /* 1 */
     }
   }
@@ -193,6 +192,11 @@ export const Drawer = ({
     className,
   );
 
+  const windowComponentClassName = clsx(
+    styles['drawer__window'],
+    windowClassName,
+  );
+
   if (!isMounted) return null;
 
   return (
@@ -207,7 +211,7 @@ export const Drawer = ({
         <div
           aria-hidden={!isActive}
           className={componentClassName}
-          onClick={handleOnClickOutside}
+          onBlur={handleOnClickOutside}
           onKeyDown={handleOnKeyDown}
           ref={ref}
           {...other}
@@ -216,7 +220,7 @@ export const Drawer = ({
             aria-describedby={ariaDescribedBy}
             aria-labelledby={ariaLabelledBy}
             aria-modal={isActive}
-            className={styles['drawer__window']}
+            className={windowComponentClassName}
             ref={windowRef}
             role="dialog"
             tabIndex={0} // eslint-disable-line jsx-a11y/no-noninteractive-tabindex

@@ -33,7 +33,12 @@ export const FiltersCheckboxField = ({
 
   return (
     <Fieldset className={componentClassName} {...other}>
-      {legend && <FieldsetLegend text={legend} />}
+      {legend && (
+        <FieldsetLegend
+          className={styles['filters-fieldset__legend']}
+          text={legend}
+        />
+      )}
       <Fieldset.Items className={styles['filters-fieldset__checkboxes']}>
         {children}
       </Fieldset.Items>

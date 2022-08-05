@@ -11,6 +11,11 @@
   margin: 0 0 var(--eds-size-6) 0;
 }
 
+.filters-fieldset__legend {
+  @mixin eds-theme-typography-title-sm;
+  margin-bottom: var(--eds-size-3);
+}
+
 .filters-fieldset__checkboxes > :not(:last-child) {
   margin-bottom: var(--eds-size-2-and-half);
 }

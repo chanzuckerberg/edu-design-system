@@ -78,6 +78,7 @@ export const Filters = ({ children, className }: Props) => {
         dismissible={true}
         isActive={filtersOpen}
         onClose={closeDrawerExample}
+        windowClassName={styles['filters__window']}
       >
         <Drawer.Header closeButtonText="close filters">
           <Heading
@@ -90,7 +91,6 @@ export const Filters = ({ children, className }: Props) => {
           </Heading>
         </Drawer.Header>
         <Drawer.Body className={styles['filters__body']} ref={filtersBody}>
-          <div className="fpo">Drawer body</div>
           {children}
         </Drawer.Body>
         <Drawer.Footer className={footerClassName}>
