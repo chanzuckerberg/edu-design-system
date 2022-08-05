@@ -28,6 +28,8 @@ export { default as FieldNote } from './components/FieldNote';
 export { default as Fieldset } from './components/Fieldset';
 export { default as FieldsetItems } from './components/FieldsetItems';
 export { default as FieldsetLegend } from './components/FieldsetLegend';
+export { default as Filters } from './components/Filters';
+export { default as FiltersCheckboxField } from './components/FiltersCheckboxField';
 export { default as Grid } from './components/Grid';
 export { default as GridItem } from './components/GridItem';
 export { default as Heading } from './components/Heading';

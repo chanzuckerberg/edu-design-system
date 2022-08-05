@@ -1,0 +1,28 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    # FILTERS
+\*------------------------------------*/
+
+/**
+ * The drawer containing the filters.
+ */
+.filters {
+  width: 22.5rem;
+}
+
+/* TODO: FILTERS ON FILTERS OFF button */
+.filters__button {
+  border: var(--eds-theme-color-border-neutral-subtle);
+}
+
+.filters__body {
+  flex: 1;
+}
+
+.footer__button-group {
+  display: flex;
+}
+.footer__button {
+  flex: 1;
+}

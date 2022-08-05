@@ -1,0 +1,12 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    # FILTERS FIELDSET
+\*------------------------------------*/
+
+/**
+ * 1) 
+ */
+.filters-fieldset {
+  margin: 0 0 var(--eds-size-6) 0;
+}

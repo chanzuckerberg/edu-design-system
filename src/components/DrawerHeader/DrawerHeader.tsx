@@ -44,7 +44,7 @@ export const DrawerHeader = ({
   children,
   ...other
 }: Props) => {
-  const componentClassName = clsx(styles['drawer__header'], className, {});
+  const componentClassName = clsx(styles['drawer__header'], className);
   return (
     <header className={componentClassName} {...other}>
       <div className={styles['drawer__header-content']}>{children}</div>

@@ -22,7 +22,7 @@ export interface Props {
  * TODO: update this comment with a description of the component.
  */
 export const DrawerFooter = ({ children, className, ...other }: Props) => {
-  const componentClassName = clsx('drawer__footer', className, {});
+  const componentClassName = clsx('drawer__footer', className);
   return (
     <footer className={componentClassName} {...other}>
       {children}

@@ -22,7 +22,7 @@ export interface Props {
  * TODO: update this comment with a description of the component.
  */
 export const DrawerBody = ({ children, className, ...other }: Props) => {
-  const componentClassName = clsx('drawer__body', className, {});
+  const componentClassName = clsx('drawer__body', className);
   return (
     <div className={componentClassName} {...other}>
       {children}
