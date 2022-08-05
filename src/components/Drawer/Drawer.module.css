@@ -13,32 +13,25 @@
   display: flex;
   justify-content: flex-end;
   visibility: hidden;
-  width: 100%;
+  width: 28rem;
   height: 100vh;
   position: fixed;
   top: 0;
   right: 0;
   z-index: var(--eds-z-index-bottom);
-  opacity: 0;
-  overflow: auto;
   background-color: transparent;
+}
 
-  /**
-  * Active modal
-  */
-  &.eds-is-active {
-    opacity: 1;
-    visibility: visible;
-    z-index: var(--eds-z-index-400);
-  }
+.drawer:focus-visible {
+  @mixin focus;
+}
 
-  .drawer--show-backdrop & {
-    background-color: rgba(0, 0, 0, 0.4);
-  }
-
-  &:focus-visible {
-    @mixin focus;
-  }
+/**
+* Active modal
+*/
+.drawer--is-active {
+  visibility: visible;
+  z-index: var(--eds-z-index-400);
 }
 
 /**
@@ -48,13 +41,9 @@
 .drawer__window {
   display: flex;
   flex-direction: column;
-  position: fixed;
-  top: 0;
-  left: right;
   height: 100vh;
-  width: 28rem;
-  max-width: 100%;
-  transform: translateX(28rem);
+  width: 100%;
+  transform: translateX(100%);
   background: var(--eds-theme-color-background-neutral-default);
   border-left-width: var(--eds-theme-border-width);
   border-left-style: solid;
@@ -62,56 +51,39 @@
   box-shadow: var(--eds-box-shadow-md);
   transition: transform var(--eds-anim-move-quick) var(--eds-anim-ease);
 
-  &:focus-visible {
-    @mixin focus;
-  }
-
   @media screen and (prefers-reduced-motion) {
     transition: none;
   }
-
-  /**
-  * Modal window inside active modal
-  * 1) Transform added for animation
-  */
-  .drawer.eds-is-active & {
-    transform: translateX(0); /* 1 */
-  }
+}
+.drawer__window:focus-visible {
+  @mixin focus;
 }
 
 /**
-* Modal close button
+* Modal window inside active modal
+* 1) Transform added for animation
 */
-.drawer__close-button {
-  margin-left: auto;
-
-  @media all and (min-width: $eds-bp-sm) {
-    display: block;
-    position: absolute;
-    top: var(--eds-size-2);
-    right: var(--eds-size-2);
-  }
+.drawer--is-active .drawer__window {
+  transform: translateX(0); /* 1 */
 }
 
 /**
  * Modal header
  */
 .drawer__header {
+  flex-shrink: 0;
+  height: var(--eds-size-9);
+  border-bottom: var(--eds-theme-border-width) solid
+    var(--eds-theme-color-border-neutral-subtle);
+
   display: flex;
-  padding: var(--eds-size-2) var(--eds-size-3);
+  align-items: center;
+  justify-content: space-between;
 }
 
 /**
  * Modal body
  */
 .drawer__body {
-  padding: var(--eds-size-3);
   flex: 1;
-}
-
-/**
- * Modal footer
- */
-.drawer__footer {
-  padding: 0 var(--eds-size-3) var(--eds-size-3);
 }

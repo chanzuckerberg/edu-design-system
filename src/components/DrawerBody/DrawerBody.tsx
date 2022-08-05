@@ -1,7 +1,8 @@
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
+import styles from '../Drawer/Drawer.module.css';
 
-export interface Props {
+export type Props = {
   /**
    * Child node(s) that can be nested inside component
    */
@@ -10,7 +11,7 @@ export interface Props {
    * CSS class names that can be appended to the component.
    */
   className?: string;
-}
+};
 
 /**
  * BETA: This component is still a work in progress and is subject to change.
@@ -22,7 +23,7 @@ export interface Props {
  * TODO: update this comment with a description of the component.
  */
 export const DrawerBody = ({ children, className, ...other }: Props) => {
-  const componentClassName = clsx('drawer__body', className);
+  const componentClassName = clsx(styles['drawer__body'], className);
   return (
     <div className={componentClassName} {...other}>
       {children}

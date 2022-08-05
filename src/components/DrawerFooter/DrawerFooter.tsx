@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 
-export interface Props {
+export type Props = {
   /**
    * Child node(s) that can be nested inside component. `DrawerHeader`, `DrawerBody`, and `ModelFooter` are the only permissible children of the Drawer
    */
@@ -10,7 +10,7 @@ export interface Props {
    * CSS class names that can be appended to the component.
    */
   className?: string;
-}
+};
 
 /**
  * BETA: This component is still a work in progress and is subject to change.

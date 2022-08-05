@@ -1,10 +1,11 @@
 import clsx from 'clsx';
 import React, { MouseEventHandler, ReactNode } from 'react';
+import { EdsThemeColorIconNeutralSubtle } from '../../../src/tokens-dist/ts/colors';
 import Button from '../../components/Button';
 import Icon from '../../components/Icon';
 import styles from '../Drawer/Drawer.module.css';
 
-export interface Props {
+export type Props = {
   /**
    * Child node(s) that can be nested inside component. `DrawerHeader`, `DrawerBody`, and `DrawerFooter` are the only permissible children of the Drawer
    */
@@ -25,7 +26,7 @@ export interface Props {
    * Close button text that is visually hidden for accessibility
    */
   closeButtonText?: string;
-}
+};
 
 /**
  * BETA: This component is still a work in progress and is subject to change.
@@ -47,14 +48,16 @@ export const DrawerHeader = ({
   const componentClassName = clsx(styles['drawer__header'], className);
   return (
     <header className={componentClassName} {...other}>
-      <div className={styles['drawer__header-content']}>{children}</div>
+      {children}
       {dismissible && (
-        <Button
-          className={styles['drawer__close-button']}
-          onClick={onClick}
-          variant="icon"
-        >
-          <Icon name="close" purpose="informative" title={closeButtonText} />
+        <Button onClick={onClick} status="neutral" variant="icon">
+          <Icon
+            color={EdsThemeColorIconNeutralSubtle}
+            name="close"
+            purpose="informative"
+            size="1.5rem"
+            title={closeButtonText}
+          />
         </Button>
       )}
     </header>

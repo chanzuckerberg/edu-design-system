@@ -16,7 +16,7 @@ import DrawerBody from '../DrawerBody';
 import DrawerFooter from '../DrawerFooter';
 import DrawerHeader from '../DrawerHeader';
 
-export interface Props {
+export type Props = {
   /**
    * HTML id of the helper text used to describe the component after aria-labelledby
    */
@@ -34,10 +34,6 @@ export interface Props {
    */
   className?: string;
   /**
-   * Button text for the drawer close button. This is visibly hidden but announced to screen reader users.
-   */
-  closeButtonText?: string;
-  /**
    * Toggles the ability to dismiss the Drawer window
    */
   dismissible?: boolean;
@@ -46,14 +42,10 @@ export interface Props {
    */
   isActive?: boolean;
   /**
-   * Toggles the shadowed backdrop of the drawer on or off for flexibility
-   */
-  showBackdrop?: boolean;
-  /**
    * Handler to be called when the drawer is being closed (by ESCAPE / clicking X / clicking outside)
    */
   onClose?: (e?: any) => void;
-}
+};
 
 /**
  * BETA: This component is still a work in progress and is subject to change.
@@ -72,8 +64,6 @@ export const Drawer = ({
   children,
   dismissible,
   onClose,
-  closeButtonText,
-  showBackdrop = false,
   ...other
 }: Props) => {
   /**
@@ -199,9 +189,8 @@ export const Drawer = ({
 
   const componentClassName = clsx(
     styles['drawer'],
+    isActive && styles['drawer--is-active'],
     className,
-    showBackdrop && styles['drawer--show-backdrop'],
-    isActive && styles['eds-is-active'],
   );
 
   if (!isMounted) return null;

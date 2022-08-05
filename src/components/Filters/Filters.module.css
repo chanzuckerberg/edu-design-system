@@ -11,13 +11,13 @@
   width: 22.5rem;
 }
 
+.filters__heading {
+  padding-left: var(--eds-size-4);
+}
+
 /* TODO: FILTERS ON FILTERS OFF button */
 .filters__button {
   border: var(--eds-theme-color-border-neutral-subtle);
-}
-
-.filters__body {
-  flex: 1;
 }
 
 .footer__button-group {

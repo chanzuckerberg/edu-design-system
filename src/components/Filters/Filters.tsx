@@ -23,7 +23,7 @@ export interface Props {
  * import {Filters} from "@chanzuckerberg/eds";
  * ```
  */
-export const Filters = ({ children, className, ...other }: Props) => {
+export const Filters = ({ children, className }: Props) => {
   const [filtersOpen, setFiltersOpen] = useState(false);
   const filtersButton = useRef<HTMLButtonElement>(null);
 
@@ -46,7 +46,7 @@ export const Filters = ({ children, className, ...other }: Props) => {
   const buttonClassName = clsx(styles['filters__button']);
   const generatedId = useUID();
   return (
-    <div className={componentClassName} {...other}>
+    <div>
       <Button
         className={buttonClassName}
         onClick={openDrawerExample}
@@ -64,8 +64,12 @@ export const Filters = ({ children, className, ...other }: Props) => {
         isActive={filtersOpen}
         onClose={closeDrawerExample}
       >
-        <Drawer.Header>
-          <Heading id={generatedId} size="h2">
+        <Drawer.Header closeButtonText="close filters">
+          <Heading
+            className={styles['filters__heading']}
+            id={generatedId}
+            size="headline-sm"
+          >
             {/* TODO: allow different headings */}
             All Filters
           </Heading>
