@@ -29,8 +29,6 @@ export const FiltersCheckboxField = ({
   legend,
   ...other
 }: Props) => {
-  // children.some()
-  console.log(children);
   const componentClassName = clsx(styles['filters-fieldset'], className);
 
   return (

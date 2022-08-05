@@ -22,11 +22,14 @@ export type Props = {
  *
  * TODO: update this comment with a description of the component.
  */
-export const DrawerBody = ({ children, className, ...other }: Props) => {
-  const componentClassName = clsx(styles['drawer__body'], className);
-  return (
-    <div className={componentClassName} {...other}>
-      {children}
-    </div>
-  );
-};
+export const DrawerBody = React.forwardRef<HTMLDivElement, Props>(
+  ({ children, className }, ref) => {
+    const componentClassName = clsx(styles['drawer__body'], className);
+    return (
+      <div className={componentClassName} ref={ref}>
+        {children}
+      </div>
+    );
+  },
+);
+DrawerBody.displayName = 'DrawerBody';

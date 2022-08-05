@@ -11,8 +11,16 @@
   width: 22.5rem;
 }
 
-.filters__heading {
+.filters__title {
   padding-left: var(--eds-size-4);
+}
+
+.filters__body {
+  overflow: auto;
+  padding-top: var(--eds-size-5);
+  @media all and (min-width: $eds-bp-md) {
+    padding-top: var(--eds-size-6);
+  }
 }
 
 /* TODO: FILTERS ON FILTERS OFF button */
@@ -20,9 +28,19 @@
   border: var(--eds-theme-color-border-neutral-subtle);
 }
 
+.filters__footer {
+  height: var(--eds-size-10);
+  padding: var(--eds-size-2-and-half) var(--eds-size-3);
+}
+
+.filters__footer--overflow {
+  box-shadow: var(--eds-box-shadow-xl);
+}
+
 .footer__button-group {
   display: flex;
 }
+
 .footer__button {
   flex: 1;
 }
