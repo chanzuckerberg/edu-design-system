@@ -160,11 +160,22 @@ export const Drawer = ({
    * Handle "click outside"
    * 1) onClick of the area around the drawer window, close the drawer
    */
-  function handleOnClickOutside() {
-    if (isActive && dismissible) {
-      handleOnClose(); /* 1 */
+  useEffect(() => {
+    function handleOnClickOutside(e: MouseEvent) {
+      if (
+        isActive &&
+        dismissible &&
+        windowRef.current &&
+        !windowRef.current.contains(e.target as HTMLElement)
+      ) {
+        handleOnClose(); /* 1 */
+      }
     }
-  }
+    document.addEventListener('click', handleOnClickOutside);
+    return () => {
+      document.removeEventListener('click', handleOnClickOutside);
+    };
+  }, [isActive, windowRef]); // eslint-disable-line react-hooks/exhaustive-deps
 
   /**
    * Handle onKeyDown
@@ -211,7 +222,6 @@ export const Drawer = ({
         <div
           aria-hidden={!isActive}
           className={componentClassName}
-          onBlur={handleOnClickOutside}
           onKeyDown={handleOnKeyDown}
           ref={ref}
           {...other}
