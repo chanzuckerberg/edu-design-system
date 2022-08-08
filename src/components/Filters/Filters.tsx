@@ -4,6 +4,7 @@ import { useUID } from 'react-uid';
 import styles from './Filters.module.css';
 import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';
+import Checkbox from '../Checkbox';
 import Drawer from '../Drawer';
 import FiltersCheckboxField from '../FiltersCheckboxField';
 import Heading from '../Heading';
@@ -13,7 +14,18 @@ export type Props = {
    * CSS class names that can be appended to the component.
    */
   className?: string;
-  children: React.ReactNode;
+  checkboxFields: CheckboxField[];
+  closeFilters: (checkedIdentifiers: { [key: string]: boolean }) => void;
+};
+
+export type CheckboxField = {
+  legend?: string;
+  checkboxes: Checkbox[];
+};
+
+export type Checkbox = {
+  label: string;
+  identifier: string;
 };
 
 /**
@@ -23,7 +35,40 @@ export type Props = {
  * import {Filters} from "@chanzuckerberg/eds";
  * ```
  */
-export const Filters = ({ children, className }: Props) => {
+export const Filters = ({ checkboxFields, className, closeFilters }: Props) => {
+  const checkedMap = {};
+  checkboxFields.forEach(({ checkboxes }) => {
+    checkboxes.forEach(({ identifier }) => {
+      checkedMap[identifier] = false;
+    });
+  });
+  const [checkedBoxes, setCheckedBoxes] = useState({ ...checkedMap });
+  const [appliedCheckedBoxes, setAppliedCheckedBoxes] = useState({
+    ...checkedMap,
+  });
+
+  const handleCheckboxChange = (identifier: string) => {
+    setCheckedBoxes({
+      ...checkedBoxes,
+      [identifier]: !checkedBoxes[identifier],
+    });
+  };
+
+  const filtersCheckboxFieldComponents = checkboxFields.map(
+    ({ legend, checkboxes }, index) => (
+      <FiltersCheckboxField key={legend || '' + index} legend={legend}>
+        {checkboxes.map(({ label, identifier }) => (
+          <Checkbox
+            checked={checkedBoxes[identifier]}
+            key={identifier}
+            label={label}
+            onChange={() => handleCheckboxChange(identifier)}
+          />
+        ))}
+      </FiltersCheckboxField>
+    ),
+  );
+
   const [filtersOpen, setFiltersOpen] = useState(false);
   const [isOverflowing, setIsOverflowing] = useState(false);
   const filtersButton = useRef<HTMLButtonElement>(null);
@@ -38,33 +83,48 @@ export const Filters = ({ children, className }: Props) => {
     }
   }, [filtersBody]);
 
-  function openDrawerExample() {
+  function openFilterWindow() {
+    setCheckedBoxes({ ...appliedCheckedBoxes });
     setFiltersOpen(true);
   }
 
-  function closeDrawerExample(event: any) {
+  function closeFiltersWindow() {
     setTimeout(() => {
       filtersButton?.current?.focus();
     }, 1);
-    if (event) {
-      event.preventDefault();
-    }
     setFiltersOpen(false);
   }
+
+  function clearFilters() {
+    const clearedBoxes = {};
+    Object.keys(checkedBoxes).forEach((identifier) => {
+      clearedBoxes[identifier] = false;
+    });
+    setAppliedCheckedBoxes(clearedBoxes);
+    closeFilters(clearedBoxes);
+    closeFiltersWindow();
+  }
+
+  function applyFilters() {
+    const newBoxes = { ...checkedBoxes };
+    setAppliedCheckedBoxes(newBoxes);
+    closeFilters(newBoxes);
+    closeFiltersWindow();
+  }
+
   const componentClassName = clsx(styles['filters'], className);
   const footerClassName = clsx(
     styles['filters__footer'],
     isOverflowing && styles['filters__footer--overflow'],
   );
 
-  // TODO: find if filters enabled
   const buttonClassName = clsx(styles['filters__button']);
   const generatedId = useUID();
   return (
     <div>
       <Button
         className={buttonClassName}
-        onClick={openDrawerExample}
+        onClick={openFilterWindow}
         ref={filtersButton}
         variant="primary"
       >
@@ -77,7 +137,7 @@ export const Filters = ({ children, className }: Props) => {
         className={componentClassName}
         dismissible={true}
         isActive={filtersOpen}
-        onClose={closeDrawerExample}
+        onClose={closeFiltersWindow}
         windowClassName={styles['filters__window']}
       >
         <Drawer.Header closeButtonText="close filters">
@@ -91,17 +151,18 @@ export const Filters = ({ children, className }: Props) => {
           </Heading>
         </Drawer.Header>
         <Drawer.Body className={styles['filters__body']} ref={filtersBody}>
-          {children}
+          {filtersCheckboxFieldComponents}
         </Drawer.Body>
         <Drawer.Footer className={footerClassName}>
           <ButtonGroup className={styles['footer__button-group']}>
-            <Button
-              className={styles['footer__button']}
-              onClick={closeDrawerExample}
-            >
+            <Button className={styles['footer__button']} onClick={clearFilters}>
               Clear All
             </Button>
-            <Button className={styles['footer__button']} variant="primary">
+            <Button
+              className={styles['footer__button']}
+              onClick={applyFilters}
+              variant="primary"
+            >
               Apply
             </Button>
           </ButtonGroup>
@@ -110,5 +171,3 @@ export const Filters = ({ children, className }: Props) => {
     </div>
   );
 };
-
-Filters.CheckboxField = FiltersCheckboxField;
