@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Filters /> Default story renders snapshot 1`] = `
+<div>
+  <button
+    class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button filters__button--no-filter button--secondary"
+    data-bootstrap-override="clickable-style-secondary"
+    type="button"
+  >
+    <svg
+      aria-hidden="true"
+      class="icon"
+      fill="currentColor"
+      height="1.5rem"
+      style="--icon-size: 1.5rem;"
+      width="1.5rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <use
+        xlink:href="test-file-stub#filter-list"
+      />
+    </svg>
+    Filters 
+  </button>
+</div>
+`;
+
+exports[`<Filters /> Overflow story renders snapshot 1`] = `
+<div>
+  <button
+    class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button filters__button--no-filter button--secondary"
+    data-bootstrap-override="clickable-style-secondary"
+    type="button"
+  >
+    <svg
+      aria-hidden="true"
+      class="icon"
+      fill="currentColor"
+      height="1.5rem"
+      style="--icon-size: 1.5rem;"
+      width="1.5rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <use
+        xlink:href="test-file-stub#filter-list"
+      />
+    </svg>
+    Filters 
+  </button>
+</div>
+`;

@@ -2,11 +2,6 @@
     # FILTERS
 \*------------------------------------*/
 
-.filters__button--no-filter.filters__button--no-filter {
-  background-color: var(--eds-theme-color-background-neutral-subtle);
-  border: var(--eds-theme-form-border-width) solid
-    var(--eds-theme-color-border-neutral-subtle);
-  color: var(--eds-theme-color-button-secondary-neutral-text);
-
+.filters__button--no-filter {
   gap: var(--eds-size-1);
 }

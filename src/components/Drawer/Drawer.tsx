@@ -57,7 +57,7 @@ export type Props = {
  * import {Drawer} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * A window component that slides from and out of the right side of the screen.
  */
 export const Drawer = ({
   'aria-describedby': ariaDescribedBy,

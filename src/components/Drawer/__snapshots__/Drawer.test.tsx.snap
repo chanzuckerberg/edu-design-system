@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Drawer /> Default story renders snapshot 1`] = `
+<div
+  class="tooltip-drawer"
+  style="padding: 1rem; min-height: 500px;"
+>
+  <button
+    class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
+    data-bootstrap-override="clickable-style-primary"
+    type="button"
+  >
+    Open Drawer
+  </button>
+</div>
+`;

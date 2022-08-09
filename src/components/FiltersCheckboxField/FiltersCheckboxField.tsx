@@ -4,14 +4,20 @@ import styles from './FiltersCheckboxField.module.css';
 import Fieldset from '../Fieldset';
 import FieldsetLegend from '../FieldsetLegend';
 
-export interface Props {
+export type Props = {
   /**
    * CSS class names that can be appended to the component.
    */
   className?: string;
+  /**
+   * List of checkboxes to be placed in the filters.
+   */
   children: React.ReactNode;
+  /**
+   * Legend text string that names the fieldset.
+   */
   legend?: string;
-}
+};
 
 /**
  * BETA: This component is still a work in progress and is subject to change.
@@ -21,18 +27,17 @@ export interface Props {
  * <Filters.CheckboxField>
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * Field of checkboxes that are placed within a FiltersDrawer component.
  */
 export const FiltersCheckboxField = ({
   className,
   children,
   legend,
-  ...other
 }: Props) => {
   const componentClassName = clsx(styles['filters-fieldset'], className);
 
   return (
-    <Fieldset className={componentClassName} {...other}>
+    <Fieldset className={componentClassName}>
       {legend && (
         <FieldsetLegend
           className={styles['filters-fieldset__legend']}

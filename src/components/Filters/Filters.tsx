@@ -2,26 +2,22 @@ import clsx from 'clsx';
 import React, { useState, useRef } from 'react';
 import styles from './Filters.module.css';
 import Button from '../Button';
-import FiltersDrawer from '../FiltersDrawer';
+import { CheckboxField, FiltersDrawer } from '../FiltersDrawer/FiltersDrawer';
 import Icon from '../Icon';
 
 export type Props = {
   /**
+   * Checkbox fields that will be displayed in the filters drawer.
+   */
+  checkboxFields: CheckboxField[];
+  /**
    * CSS class names that can be appended to the component.
    */
   className?: string;
-  checkboxFields: CheckboxField[];
+  /**
+   * Callback called when filters drawer is closed.
+   */
   closeFilters: (checkedIdentifiers: { [key: string]: boolean }) => void;
-};
-
-export type CheckboxField = {
-  legend?: string;
-  checkboxes: Checkbox[];
-};
-
-export type Checkbox = {
-  label: string;
-  identifier: string;
 };
 
 /**
@@ -29,7 +25,9 @@ export type Checkbox = {
  *
  * ```ts
  * import {Filters} from "@chanzuckerberg/eds";
- * ```
+ * ```'
+ *
+ * A filter component with a button that triggers a drawer of checkbox filters to be selected.
  */
 export const Filters = ({ checkboxFields, className, closeFilters }: Props) => {
   const checkedMap = {};
@@ -42,7 +40,7 @@ export const Filters = ({ checkboxFields, className, closeFilters }: Props) => {
     ...checkedMap,
   });
 
-  const [filtersOpen, setFiltersOpen] = useState(false);
+  const [isActive, setIsActive] = useState(false);
 
   function closeFiltersDrawer(checkedIdentifiers: { [key: string]: boolean }) {
     setTimeout(() => {
@@ -50,7 +48,7 @@ export const Filters = ({ checkboxFields, className, closeFilters }: Props) => {
     }, 1);
     closeFilters(checkedIdentifiers);
     setAppliedCheckedBoxes({ ...checkedIdentifiers });
-    setFiltersOpen(false);
+    setIsActive(false);
   }
 
   const filtersButton = useRef<HTMLButtonElement>(null);
@@ -72,21 +70,20 @@ export const Filters = ({ checkboxFields, className, closeFilters }: Props) => {
     <div>
       <Button
         className={buttonClassName}
-        onClick={() => setFiltersOpen(true)}
+        onClick={() => setIsActive(true)}
         ref={filtersButton}
         status={statusVariant}
         variant={hasFilters ? 'primary' : 'secondary'}
       >
         <Icon name="filter-list" purpose="decorative" size="1.5rem" />
-        {/* TODO: allow button labels */}
-        All Filters {filterCount > 0 && `(${filterCount})`}
+        Filters {filterCount > 0 && `(${filterCount})`}
       </Button>
       <FiltersDrawer
         checkboxFields={checkboxFields}
         checkedMap={appliedCheckedBoxes}
         className={className}
         closeFilters={closeFiltersDrawer}
-        filtersOpen={filtersOpen}
+        isActive={isActive}
       />
     </div>
   );

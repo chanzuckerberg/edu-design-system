@@ -9,24 +9,49 @@ import Drawer from '../Drawer';
 import FiltersCheckboxField from '../FiltersCheckboxField';
 import Heading from '../Heading';
 
-export interface Props {
+export type Props = {
+  /**
+   * Checkbox fields that will be displayed in the filters drawer.
+   */
+  checkboxFields: CheckboxField[];
+  /**
+   * Checked identifier keys mapped to their boolean checked status.
+   */
+  checkedMap: { [key: string]: boolean };
   /**
    * CSS class names that can be appended to the component.
    */
-  checkboxFields: CheckboxField[];
-  checkedMap: { [key: string]: boolean };
   className?: string;
+  /**
+   * Callback called when filters drawer is closed.
+   */
   closeFilters: (checkedIdentifiers: { [key: string]: boolean }) => void;
-  filtersOpen: boolean;
-}
+  /**
+   * Sets the filters drawer window open or closed.
+   */
+  isActive: boolean;
+};
 
 export type CheckboxField = {
+  /**
+   * Legend text string that names the fieldset.
+   */
   legend?: string;
+  /**
+   * List of checkboxes to be placed in the filters.
+   */
   checkboxes: Checkbox[];
 };
 
 export type Checkbox = {
+  /**
+   * Visible text label for the checkbox.
+   */
   label: string;
+  /**
+   * Checkbox identifier that is mapped with a boolean value that indicates checked status.
+   * Should be unique to the checkbox unless the checkbox is repeated.
+   */
   identifier: string;
 };
 
@@ -37,21 +62,21 @@ export type Checkbox = {
  * import {FiltersDrawer} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * A drawer component with fields of checkboxes to select filters.
  */
 export const FiltersDrawer = ({
   checkboxFields,
   checkedMap,
   className,
   closeFilters,
-  filtersOpen,
+  isActive,
 }: Props) => {
   const [checkedBoxes, setCheckedBoxes] = useState({ ...checkedMap });
   useEffect(() => {
-    if (filtersOpen) {
+    if (isActive) {
       setCheckedBoxes({ ...checkedMap });
     }
-  }, [filtersOpen, checkedMap]);
+  }, [isActive, checkedMap]);
 
   const handleCheckboxChange = (identifier: string) => {
     setCheckedBoxes({
@@ -112,7 +137,7 @@ export const FiltersDrawer = ({
       aria-labelledby={generatedId}
       className={componentClassName}
       dismissible={true}
-      isActive={filtersOpen}
+      isActive={isActive}
       onClose={() => closeFilters(checkedMap)}
       windowClassName={styles['filters-drawer__window']}
     >
@@ -122,8 +147,7 @@ export const FiltersDrawer = ({
           id={generatedId}
           size="headline-sm"
         >
-          {/* TODO: allow different headings */}
-          All Filters
+          Filters
         </Heading>
       </Drawer.Header>
       <Drawer.Body className={styles['filters-drawer__body']} ref={filtersBody}>
