@@ -20,7 +20,7 @@ export type Props = {
  * import {DrawerBody} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * The main center content of the Drawer component.
  */
 export const DrawerBody = React.forwardRef<HTMLDivElement, Props>(
   ({ children, className }, ref) => {

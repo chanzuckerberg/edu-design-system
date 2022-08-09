@@ -35,7 +35,7 @@ export type Props = {
  * import {DrawerHeader} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * The header content of the Drawer component. Usually houses the heading and the close button.
  */
 export const DrawerHeader = ({
   className,
