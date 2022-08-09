@@ -30,16 +30,28 @@ export type Props = {
  * A filter component with a button that triggers a drawer of checkbox filters to be selected.
  */
 export const Filters = ({ checkboxFields, className, closeFilters }: Props) => {
+  /**
+   * Maps the checkbox values to false initially to indicate that there are no filters selected.
+   * TODO: customize to allow initial filter values.
+   */
   const checkedMap = {};
   checkboxFields.forEach(({ checkboxes }) => {
     checkboxes.forEach(({ value }) => {
       checkedMap[value] = false;
     });
   });
+
+  /**
+   * Manages state of the applied checkboxes in the context of the filters component.
+   * It is only updated when the filters drawer is closed.
+   */
   const [appliedCheckedBoxes, setAppliedCheckedBoxes] = useState({
     ...checkedMap,
   });
 
+  /**
+   * Manages the active state of the filters drawer.
+   */
   const [isActive, setIsActive] = useState(false);
 
   function closeFiltersDrawer(checkedValues: { [key: string]: boolean }) {
@@ -52,6 +64,9 @@ export const Filters = ({ checkboxFields, className, closeFilters }: Props) => {
   }
 
   const filtersButton = useRef<HTMLButtonElement>(null);
+  /**
+   * Counts how many filters have been applied.
+   */
   const filterCount = Object.values(appliedCheckedBoxes).reduce(
     (count: number, status) => {
       if (status) return count + 1;

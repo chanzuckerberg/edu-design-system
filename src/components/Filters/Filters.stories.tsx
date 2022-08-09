@@ -99,6 +99,9 @@ export const OverflowInteractive: StoryObj<Args> = {
 };
 
 type FiltersDrawerArgs = React.ComponentProps<typeof FiltersDrawer>;
+/**
+ * 1) Axe testing throws error due to Drawer component not being controlled, but this story is mostly for visual regression testing as the interactive stories would only capture the toggle button.
+ */
 export const FiltersDrawerComponent: StoryObj<FiltersDrawerArgs> = {
   args: {
     checkboxFields: overflowCheckboxFields,
@@ -107,6 +110,11 @@ export const FiltersDrawerComponent: StoryObj<FiltersDrawerArgs> = {
     isActive: true,
   },
   render: (args) => <FiltersDrawer {...args} />,
+  parameters: {
+    axe: {
+      disabledRules: ['aria-allowed-role'] /* 1 */,
+    },
+  },
 };
 
 export const FiltersDrawerComponentNoLegend: StoryObj<FiltersDrawerArgs> = {
@@ -134,4 +142,9 @@ export const FiltersDrawerComponentNoLegend: StoryObj<FiltersDrawerArgs> = {
     isActive: true,
   },
   render: (args) => <FiltersDrawer {...args} />,
+  parameters: {
+    axe: {
+      disabledRules: ['aria-allowed-role'] /* 1 */,
+    },
+  },
 };

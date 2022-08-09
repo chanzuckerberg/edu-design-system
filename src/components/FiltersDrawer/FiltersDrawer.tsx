@@ -71,6 +71,10 @@ export const FiltersDrawer = ({
   closeFilters,
   isActive,
 }: Props) => {
+  /**
+   * Manages state of the checkboxes within the drawer to control the state of the individual checkboxes.
+   * It is updated whenever the checkboxes have change.
+   */
   const [checkedBoxes, setCheckedBoxes] = useState({ ...checkedMap });
   useEffect(() => {
     if (isActive) {
@@ -85,6 +89,10 @@ export const FiltersDrawer = ({
     });
   };
 
+  /**
+   * Maps given checkboxFields to <FiltersCheckboxField> components and <Checkbox> children.
+   * TODO: give control to developer rather than internalizing this logic to follow similar API as other components.
+   */
   const filtersCheckboxFieldComponents = checkboxFields.map(
     ({ legend, checkboxes }, index) => (
       <FiltersCheckboxField key={legend || '' + index} legend={legend}>
