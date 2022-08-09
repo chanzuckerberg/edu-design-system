@@ -8,6 +8,7 @@ import Checkbox from '../Checkbox';
 import Drawer from '../Drawer';
 import FiltersCheckboxField from '../FiltersCheckboxField';
 import Heading from '../Heading';
+import Icon from '../Icon';
 
 export type Props = {
   /**
@@ -118,18 +119,27 @@ export const Filters = ({ checkboxFields, className, closeFilters }: Props) => {
     isOverflowing && styles['filters__footer--overflow'],
   );
 
-  const buttonClassName = clsx(styles['filters__button']);
   const generatedId = useUID();
+  const filterCount = Object.values(appliedCheckedBoxes).reduce(
+    (count: number, status) => {
+      if (status) return count + 1;
+      else return count;
+    },
+    0,
+  );
+  const statusVariant = filterCount > 0 ? 'brand' : 'neutral';
   return (
     <div>
       <Button
-        className={buttonClassName}
+        className={styles['filters__button']}
         onClick={openFilterWindow}
         ref={filtersButton}
+        status={statusVariant}
         variant="primary"
       >
+        <Icon name="filter-list" purpose="decorative" size="1.5rem" />
         {/* TODO: allow button labels */}
-        All Filters
+        All Filters {filterCount > 0 && `(${filterCount})`}
       </Button>
 
       <Drawer

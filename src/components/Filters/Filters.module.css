@@ -34,7 +34,12 @@
 
 /* TODO: FILTERS ON FILTERS OFF button */
 .filters__button {
-  border: var(--eds-theme-color-border-neutral-subtle);
+  background-color: var(--eds-theme-color-background-neutral-subtle);
+  border: var(--eds-theme-form-border-width) solid
+    var(--eds-theme-color-border-neutral-subtle);
+  color: var(--eds-theme-color-button-secondary-neutral-text);
+
+  gap: var(--eds-size-1);
 }
 
 .filters__footer {
