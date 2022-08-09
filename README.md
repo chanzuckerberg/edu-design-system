@@ -16,27 +16,18 @@ npm install --save @chanzuckerberg/eds
 yarn add @chanzuckerberg/eds
 ```
 
-We currently use Arimo as our base font. This package does not export it, so you will need to import this separately. We recommend importing from Google Fonts into a top-level CSS file:
-
-```css
-@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600&display=swap');
+Import the CSS tokens somewhere in your app, e.g. an `init.ts` or `app.ts` file:
+```js
+import '@chanzuckerberg/eds/lib/tokens/css/variables.css';
+// optionally import EDS font faces
+// import '@chanzuckerberg/eds/lib/tokens/fonts.css';
 ```
 
-and setting up base font settings:
+EDS components are designed for the Graphik font, but you may use other fonts by re-defining the `--eds-font-family-primary` CSS property. We also surface an `--eds-font-size-base` property to set your base `rem` font size, eg:
 
 ```css
 html {
-  font-size: 16px;
-
-  /* or if using Tailwind:
-  @apply text-base */
-}
-
-body {
-  font-family: Arimo, sans-serif;
-
-  /* or if using Tailwind:
-  @apply font-arimo */
+  font-size: var(--eds-font-size-base);
 }
 ```
 
