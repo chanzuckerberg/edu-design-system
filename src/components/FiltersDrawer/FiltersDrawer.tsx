@@ -15,7 +15,7 @@ export type Props = {
    */
   checkboxFields: CheckboxField[];
   /**
-   * Checked identifier keys mapped to their boolean checked status.
+   * Checked value keys mapped to their boolean checked status.
    */
   checkedMap: { [key: string]: boolean };
   /**
@@ -25,7 +25,7 @@ export type Props = {
   /**
    * Callback called when filters drawer is closed.
    */
-  closeFilters: (checkedIdentifiers: { [key: string]: boolean }) => void;
+  closeFilters: (checkedValues: { [key: string]: boolean }) => void;
   /**
    * Sets the filters drawer window open or closed.
    */
@@ -49,10 +49,10 @@ export type Checkbox = {
    */
   label: string;
   /**
-   * Checkbox identifier that is mapped with a boolean value that indicates checked status.
+   * Checkbox value that is mapped with a boolean value that indicates checked status.
    * Should be unique to the checkbox unless the checkbox is repeated.
    */
-  identifier: string;
+  value: string;
 };
 
 /**
@@ -78,22 +78,23 @@ export const FiltersDrawer = ({
     }
   }, [isActive, checkedMap]);
 
-  const handleCheckboxChange = (identifier: string) => {
+  const handleCheckboxChange = (value: string) => {
     setCheckedBoxes({
       ...checkedBoxes,
-      [identifier]: !checkedBoxes[identifier],
+      [value]: !checkedBoxes[value],
     });
   };
 
   const filtersCheckboxFieldComponents = checkboxFields.map(
     ({ legend, checkboxes }, index) => (
       <FiltersCheckboxField key={legend || '' + index} legend={legend}>
-        {checkboxes.map(({ label, identifier }) => (
+        {checkboxes.map(({ label, value }) => (
           <Checkbox
-            checked={checkedBoxes[identifier]}
-            key={identifier}
+            checked={checkedBoxes[value]}
+            key={value}
             label={label}
-            onChange={() => handleCheckboxChange(identifier)}
+            onChange={() => handleCheckboxChange(value)}
+            value={value}
           />
         ))}
       </FiltersCheckboxField>
@@ -114,8 +115,8 @@ export const FiltersDrawer = ({
 
   function clearFilters() {
     const clearedBoxes = {};
-    Object.keys(checkedBoxes).forEach((identifier) => {
-      clearedBoxes[identifier] = false;
+    Object.keys(checkedBoxes).forEach((value) => {
+      clearedBoxes[value] = false;
     });
     closeFilters(clearedBoxes);
   }

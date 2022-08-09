@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Filters /> Default story renders snapshot 1`] = `
+exports[`<Filters /> DefaultInteractive story renders snapshot 1`] = `
 <div>
   <button
     class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button filters__button--no-filter button--secondary"
@@ -25,7 +25,11 @@ exports[`<Filters /> Default story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Filters /> Overflow story renders snapshot 1`] = `
+exports[`<Filters /> FiltersDrawerComponent story renders snapshot 1`] = `null`;
+
+exports[`<Filters /> FiltersDrawerComponentNoLegend story renders snapshot 1`] = `null`;
+
+exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
 <div>
   <button
     class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button filters__button--no-filter button--secondary"

@@ -17,7 +17,7 @@ export type Props = {
   /**
    * Callback called when filters drawer is closed.
    */
-  closeFilters: (checkedIdentifiers: { [key: string]: boolean }) => void;
+  closeFilters: (checkedValues: { [key: string]: boolean }) => void;
 };
 
 /**
@@ -32,8 +32,8 @@ export type Props = {
 export const Filters = ({ checkboxFields, className, closeFilters }: Props) => {
   const checkedMap = {};
   checkboxFields.forEach(({ checkboxes }) => {
-    checkboxes.forEach(({ identifier }) => {
-      checkedMap[identifier] = false;
+    checkboxes.forEach(({ value }) => {
+      checkedMap[value] = false;
     });
   });
   const [appliedCheckedBoxes, setAppliedCheckedBoxes] = useState({
@@ -42,12 +42,12 @@ export const Filters = ({ checkboxFields, className, closeFilters }: Props) => {
 
   const [isActive, setIsActive] = useState(false);
 
-  function closeFiltersDrawer(checkedIdentifiers: { [key: string]: boolean }) {
+  function closeFiltersDrawer(checkedValues: { [key: string]: boolean }) {
     setTimeout(() => {
       filtersButton?.current?.focus();
     }, 1);
-    closeFilters(checkedIdentifiers);
-    setAppliedCheckedBoxes({ ...checkedIdentifiers });
+    closeFilters(checkedValues);
+    setAppliedCheckedBoxes({ ...checkedValues });
     setIsActive(false);
   }
 
