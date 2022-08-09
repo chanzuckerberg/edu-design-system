@@ -1,0 +1,59 @@
+/*------------------------------------*\
+    # FILTERS DRAWER
+\*------------------------------------*/
+
+/**
+ * The drawer containing the filters.
+ */
+.filters-drawer {
+  width: 22.5rem;
+}
+
+.filters-drawer__window {
+  height: calc(100vh - var(--eds-size-2));
+  max-width: calc(100vw - var(--eds-size-2));
+  @media all and (min-width: $eds-bp-md) {
+    height: 100vh;
+  }
+}
+
+.filters-drawer__title {
+  margin-left: var(--eds-size-4);
+}
+
+.filters-drawer__body {
+  overflow: auto;
+
+  padding-top: var(--eds-size-5);
+  padding-right: var(--eds-size-4);
+  padding-left: var(--eds-size-4);
+  @media all and (min-width: $eds-bp-md) {
+    padding-top: var(--eds-size-6);
+  }
+}
+
+.filters-drawer__button {
+  background-color: var(--eds-theme-color-background-neutral-subtle);
+  border: var(--eds-theme-form-border-width) solid
+    var(--eds-theme-color-border-neutral-subtle);
+  color: var(--eds-theme-color-button-secondary-neutral-text);
+
+  gap: var(--eds-size-1);
+}
+
+.filters-drawer__footer {
+  height: var(--eds-size-10);
+  padding: var(--eds-size-2-and-half) var(--eds-size-3);
+}
+
+.filters-drawer__footer--overflow {
+  box-shadow: var(--eds-box-shadow-xl);
+}
+
+.footer__button-group {
+  display: flex;
+}
+
+.footer__button {
+  flex: 1;
+}
