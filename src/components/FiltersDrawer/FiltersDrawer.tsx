@@ -109,6 +109,9 @@ export const FiltersDrawer = ({
     ),
   );
 
+  /**
+   * Manages overflow state.
+   */
   const [isOverflowing, setIsOverflowing] = useState(false);
   const filtersBody = createRef<HTMLDivElement>();
 

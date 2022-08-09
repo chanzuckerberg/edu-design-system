@@ -1,4 +1,3 @@
-import clsx from 'clsx';
 import React, { useState, useRef } from 'react';
 import styles from './Filters.module.css';
 import Button from '../Button';
@@ -78,13 +77,10 @@ export const Filters = ({ checkboxFields, className, closeFilters }: Props) => {
   const hasFilters = filterCount > 0;
   const statusVariant = hasFilters ? 'brand' : 'neutral';
 
-  const buttonClassName = clsx(
-    !hasFilters && styles['filters__button--no-filter'],
-  );
   return (
     <div>
       <Button
-        className={buttonClassName}
+        className={styles['filters__button']}
         onClick={() => setIsActive(true)}
         ref={filtersButton}
         status={statusVariant}

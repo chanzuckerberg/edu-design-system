@@ -2,6 +2,9 @@
     # FILTERS
 \*------------------------------------*/
 
-.filters__button--no-filter {
+/**
+ * 1) The filter trigger button.
+ */
+.filters__button {
   gap: var(--eds-size-1);
 }

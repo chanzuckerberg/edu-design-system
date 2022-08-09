@@ -3,7 +3,7 @@
 exports[`<Filters /> DefaultInteractive story renders snapshot 1`] = `
 <div>
   <button
-    class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button filters__button--no-filter button--secondary"
+    class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button filters__button button--secondary"
     data-bootstrap-override="clickable-style-secondary"
     type="button"
   >
@@ -32,7 +32,7 @@ exports[`<Filters /> FiltersDrawerComponentNoLegend story renders snapshot 1`] =
 exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
 <div>
   <button
-    class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button filters__button--no-filter button--secondary"
+    class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button filters__button button--secondary"
     data-bootstrap-override="clickable-style-secondary"
     type="button"
   >
