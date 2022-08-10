@@ -57,9 +57,6 @@ export const Filters = ({ checkboxFields, className, onClose }: Props) => {
     onClose(checkedValues);
     setAppliedCheckedBoxes({ ...checkedValues });
     setIsActive(false);
-    setTimeout(() => {
-      filtersButton?.current?.focus();
-    }, 1);
   }
 
   const filtersButton = useRef<HTMLButtonElement>(null);

@@ -1730,7 +1730,7 @@ __metadata:
     react-beautiful-dnd: ^13.1.0
     react-children-by-type: ^1.1.0
     react-dom: ^16.14.0
-    react-focus-lock: ^2.8.1
+    react-focus-lock: ^2.9.1
     react-portal: ^4.2.1
     react-uid: ^2.3.1
     size-limit: ^4.12.0
@@ -17520,7 +17520,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-focus-lock@npm:^2.8.1":
+"react-focus-lock@npm:^2.9.1":
   version: 2.9.1
   resolution: "react-focus-lock@npm:2.9.1"
   dependencies:

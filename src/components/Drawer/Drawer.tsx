@@ -195,7 +195,7 @@ export const Drawer = ({
 
   return (
     <Portal>
-      <FocusLock disabled={!activeFocus}>
+      <FocusLock disabled={!activeFocus} returnFocus={true}>
         {/**
          * the drawer will probably have buttons inside,
          * We're intentionally not adding role=button for now,
