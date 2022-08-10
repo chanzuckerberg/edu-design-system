@@ -22,7 +22,7 @@ export default {
         ],
       },
     ],
-    closeFilters: (checkedValues) => {
+    onClose: (checkedValues) => {
       console.log(checkedValues);
     },
   },
@@ -92,7 +92,7 @@ overflowCheckboxFields.forEach(({ checkboxes }) => {
 export const OverflowInteractive: StoryObj<Args> = {
   args: {
     checkboxFields: overflowCheckboxFields,
-    closeFilters: (checkedValues) => {
+    onClose: (checkedValues) => {
       console.log(checkedValues);
     },
   },
@@ -106,7 +106,7 @@ export const FiltersDrawerComponent: StoryObj<FiltersDrawerArgs> = {
   args: {
     checkboxFields: overflowCheckboxFields,
     checkedMap: { ...checkedMap },
-    closeFilters: () => {}, // eslint-disable-line @typescript-eslint/no-empty-function
+    onClose: () => {}, // eslint-disable-line @typescript-eslint/no-empty-function
     isActive: true,
   },
   render: (args) => <FiltersDrawer {...args} />,
@@ -138,7 +138,7 @@ export const FiltersDrawerComponentNoLegend: StoryObj<FiltersDrawerArgs> = {
       },
     ],
     checkedMap: { checkbox1: false, checkbox2: false, checkbox3: false },
-    closeFilters: () => {}, // eslint-disable-line @typescript-eslint/no-empty-function
+    onClose: () => {}, // eslint-disable-line @typescript-eslint/no-empty-function
     isActive: true,
   },
   render: (args) => <FiltersDrawer {...args} />,

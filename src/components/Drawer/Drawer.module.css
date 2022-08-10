@@ -5,11 +5,9 @@
 \*------------------------------------*/
 
 /**
- * 1) Box that overlays the application's content, prompting a user to perform an action
- * 2) This transform rule stops the background overlay (present when modal is open)
- *    from flickering when a button is hovered within the modal
+ * 1) Box that overlays the application's content, prompting a user to perform an action.
  */
-.drawer {
+.drawer__container {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -24,14 +22,14 @@
   background-color: transparent;
 }
 
-.drawer:focus-visible {
+.drawer__container:focus-visible {
   @mixin focus;
 }
 
 /**
 * Active modal
 */
-.drawer--is-active {
+.drawer__container--is-active {
   visibility: visible;
   z-index: var(--eds-z-index-400);
 }
@@ -40,7 +38,7 @@
  * Modal window
  * 1) Actual box with content within
  */
-.drawer__window {
+.drawer {
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -57,7 +55,7 @@
     transition: none;
   }
 }
-.drawer__window:focus-visible {
+.drawer:focus-visible {
   @mixin focus;
 }
 
@@ -65,7 +63,7 @@
 * Modal window inside active modal
 * 1) Transform added for animation
 */
-.drawer--is-active .drawer__window {
+.drawer__container--is-active .drawer {
   transform: translateX(0); /* 1 */
 }
 

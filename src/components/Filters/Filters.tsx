@@ -16,7 +16,7 @@ export type Props = {
   /**
    * Callback called when filters drawer is closed.
    */
-  closeFilters: (checkedValues: { [key: string]: boolean }) => void;
+  onClose: (checkedValues: { [key: string]: boolean }) => void;
 };
 
 /**
@@ -28,7 +28,7 @@ export type Props = {
  *
  * A filter component with a button that triggers a drawer of checkbox filters to be selected.
  */
-export const Filters = ({ checkboxFields, className, closeFilters }: Props) => {
+export const Filters = ({ checkboxFields, className, onClose }: Props) => {
   /**
    * Maps the checkbox values to false initially to indicate that there are no filters selected.
    * TODO: customize to allow initial filter values.
@@ -57,7 +57,7 @@ export const Filters = ({ checkboxFields, className, closeFilters }: Props) => {
     setTimeout(() => {
       filtersButton?.current?.focus();
     }, 1);
-    closeFilters(checkedValues);
+    onClose(checkedValues);
     setAppliedCheckedBoxes({ ...checkedValues });
     setIsActive(false);
   }
@@ -93,8 +93,8 @@ export const Filters = ({ checkboxFields, className, closeFilters }: Props) => {
         checkboxFields={checkboxFields}
         checkedMap={appliedCheckedBoxes}
         className={className}
-        closeFilters={closeFiltersDrawer}
         isActive={isActive}
+        onClose={closeFiltersDrawer}
       />
     </div>
   );

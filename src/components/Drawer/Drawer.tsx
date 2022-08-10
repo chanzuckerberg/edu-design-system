@@ -29,13 +29,17 @@ export type Props = {
    */
   children?: ReactNode;
   /**
-   * CSS class names that can be appended to the Drawer wrapper component that the Drawer window translates in and out of.
+   * CSS class names that can be appended to the Drawer container component that the Drawer components reside in.
    */
   className?: string;
   /**
    * Toggles the ability to dismiss the Drawer window
    */
   dismissible?: boolean;
+  /**
+   * CSS class names that can be appended to the Drawer wrapper component that the Drawer window translates in and out of.
+   */
+  drawerContainerClassName?: string;
   /**
    * Sets the drawer to open or close by default
    */
@@ -44,10 +48,6 @@ export type Props = {
    * Handler to be called when the drawer is being closed (by ESCAPE / clicking X / clicking outside)
    */
   onClose?: (e?: any) => void;
-  /**
-   * CSS class names that can be appended to the Drawer window component that the Drawer components reside in.
-   */
-  windowClassName?: string;
 };
 
 /**
@@ -62,12 +62,12 @@ export type Props = {
 export const Drawer = ({
   'aria-describedby': ariaDescribedBy,
   'aria-labelledby': ariaLabelledBy,
-  className,
+  drawerContainerClassName,
   isActive,
   children,
   dismissible,
   onClose,
-  windowClassName,
+  className,
   ...other
 }: Props) => {
   /**
@@ -197,16 +197,13 @@ export const Drawer = ({
   const body = oneByType(children, DrawerBody);
   const footer = oneByType(children, DrawerFooter);
 
-  const componentClassName = clsx(
-    styles['drawer'],
-    isActive && styles['drawer--is-active'],
-    className,
+  const containerClassName = clsx(
+    styles['drawer__container'],
+    isActive && styles['drawer__container--is-active'],
+    drawerContainerClassName,
   );
 
-  const windowComponentClassName = clsx(
-    styles['drawer__window'],
-    windowClassName,
-  );
+  const componentClassName = clsx(styles['drawer'], className);
 
   if (!isMounted) return null;
 
@@ -221,7 +218,7 @@ export const Drawer = ({
         {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions */}
         <div
           aria-hidden={!isActive}
-          className={componentClassName}
+          className={containerClassName}
           onKeyDown={handleOnKeyDown}
           ref={ref}
           {...other}
@@ -230,7 +227,7 @@ export const Drawer = ({
             aria-describedby={ariaDescribedBy}
             aria-labelledby={ariaLabelledBy}
             aria-modal={isActive}
-            className={windowComponentClassName}
+            className={componentClassName}
             ref={windowRef}
             role="dialog"
             tabIndex={0} // eslint-disable-line jsx-a11y/no-noninteractive-tabindex

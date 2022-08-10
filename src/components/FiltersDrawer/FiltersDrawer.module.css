@@ -5,14 +5,14 @@
 /**
  * 1) The space the filters drawer takes up.
  */
-.filters-drawer {
+.filters-drawer__container {
   width: 22.5rem;
 }
 
 /**
- * 1) The drawer window containing the filters. Resides in the filters drawer.
+ * 1) The drawer containing the filters. Resides in the filters drawer container.
  */
-.filters-drawer__window {
+.filters-drawer {
   height: calc(100vh - var(--eds-size-2));
   max-width: calc(100vw - var(--eds-size-2));
   @media all and (min-width: $eds-bp-md) {

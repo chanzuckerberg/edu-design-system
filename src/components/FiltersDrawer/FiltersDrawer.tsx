@@ -25,7 +25,7 @@ export type Props = {
   /**
    * Callback called when filters drawer is closed.
    */
-  closeFilters: (checkedValues: { [key: string]: boolean }) => void;
+  onClose: (checkedValues: { [key: string]: boolean }) => void;
   /**
    * Sets the filters drawer window open or closed.
    */
@@ -68,7 +68,7 @@ export const FiltersDrawer = ({
   checkboxFields,
   checkedMap,
   className,
-  closeFilters,
+  onClose,
   isActive,
 }: Props) => {
   /**
@@ -129,14 +129,17 @@ export const FiltersDrawer = ({
     Object.keys(checkedBoxes).forEach((value) => {
       clearedBoxes[value] = false;
     });
-    closeFilters(clearedBoxes);
+    onClose(clearedBoxes);
   }
 
   function applyFilters() {
-    closeFilters(checkedBoxes);
+    onClose(checkedBoxes);
   }
 
-  const componentClassName = clsx(styles['filters-drawer'], className);
+  const containerClassName = clsx(
+    styles['filters-drawer__container'],
+    className,
+  );
   const footerClassName = clsx(
     styles['filters-drawer__footer'],
     isOverflowing && styles['filters-drawer__footer--overflow'],
@@ -147,11 +150,11 @@ export const FiltersDrawer = ({
   return (
     <Drawer
       aria-labelledby={generatedId}
-      className={componentClassName}
+      className={styles['filters-drawer']}
       dismissible={true}
+      drawerContainerClassName={containerClassName}
       isActive={isActive}
-      onClose={() => closeFilters(checkedMap)}
-      windowClassName={styles['filters-drawer__window']}
+      onClose={() => onClose(checkedMap)}
     >
       <Drawer.Header closeButtonText="close filters">
         <Heading
