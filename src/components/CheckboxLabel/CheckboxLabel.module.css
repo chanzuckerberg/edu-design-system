@@ -16,12 +16,12 @@
  * 1) line-height is set to be same as checkbox size to center label text relative to the checkbox.
  */
 .label--sm {
-  @mixin eds-theme-typography-label-sm;
+  @mixin eds-theme-typography-body-text-sm;
   line-height: var(--checkbox-svg-size); /* 1 */
 }
 
 .label--md {
-  @mixin eds-theme-typography-label-md-subtle;
+  @mixin eds-theme-typography-body-text-md;
   line-height: var(--checkbox-svg-size); /* 1 */
 }
 
