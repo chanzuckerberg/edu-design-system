@@ -1,0 +1,13 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    # LINK
+\*------------------------------------*/
+
+/**
+ * Link button with link variant styles
+ * 1) Override display: inline-flex from ClickableStyle
+ */
+.link--link {
+  display: inline; /* 1 */
+}
