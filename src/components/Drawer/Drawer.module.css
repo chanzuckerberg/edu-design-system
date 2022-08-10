@@ -27,7 +27,7 @@
 }
 
 /**
-* Active modal
+* Active drawer container
 */
 .drawer__container--is-active {
   visibility: visible;
@@ -35,7 +35,7 @@
 }
 
 /**
- * Modal window
+ * Drawer window
  * 1) Actual box with content within
  */
 .drawer {
@@ -60,7 +60,7 @@
 }
 
 /**
-* Modal window inside active modal
+* Drawer window inside active drawer container
 * 1) Transform added for animation
 */
 .drawer__container--is-active .drawer {
@@ -82,7 +82,7 @@
 }
 
 /**
- * Modal body
+ * Drawer body
  */
 .drawer__body {
   flex: 1;

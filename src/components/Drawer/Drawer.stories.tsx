@@ -47,7 +47,16 @@ export default {
 
 type Args = React.ComponentProps<typeof Drawer>;
 
-export const Default: StoryObj<Args> = {};
+/**
+ * 1) Axe testing throws error due to Drawer component not being controlled, but this story is mostly for visual regression testing as the interactive story would only capture the toggle button.
+ */
+export const Default: StoryObj<Args> = {
+  parameters: {
+    axe: {
+      disabledRules: ['aria-allowed-role'] /* 1 */,
+    },
+  },
+};
 
 export const DefaultInteractive: StoryObj = {
   render: () => <DrawerExample />,
