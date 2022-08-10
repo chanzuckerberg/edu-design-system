@@ -14,7 +14,18 @@ afterAll(() => {
 });
 
 describe('<Filters />', () => {
-  generateSnapshots(stories);
+  generateSnapshots(stories, {
+    getElement: async () => {
+      const toggleFiltersButton = screen.queryByRole('button', {
+        name: 'Filters',
+      });
+      if (toggleFiltersButton) {
+        fireEvent.click(toggleFiltersButton);
+      }
+      const filters = await screen.findByRole('dialog');
+      return filters.parentElement; // eslint-disable-line testing-library/no-node-access
+    },
+  });
 
   it('saves filters appropriately', () => {
     render(<OverflowInteractive />);

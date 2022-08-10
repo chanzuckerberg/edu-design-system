@@ -73,24 +73,10 @@ export const Drawer = ({
   /**
    * Initialize states, constants, and refs
    */
-  const [isMounted, setIsMounted] = useState(false);
-  const BODY_DISABLED_CLASS = `eds-body-is-disabled`;
-  const [activeFocus, setActiveFocus] = useState(isActive || false);
+  const [activeFocus, setActiveFocus] = useState(isActive);
   const windowRef = useRef<HTMLElement | null>(null);
   const ref = useRef<HTMLDivElement | null>(null);
-
-  /**
-   * Get previous prop
-   * 1) This is used to compare the previous prop to the current prop
-   *
-   * TODO: improve `any` type
-   */
-  function usePrevious(isActive: any) {
-    useEffect(() => {
-      ref.current = isActive;
-    });
-    return ref.current;
-  }
+  const isMountedRef = useRef(true);
 
   /**
    * Use effect
@@ -98,16 +84,14 @@ export const Drawer = ({
    * 2) If prevIsActive is defined and previous isActive prop is not equal
    * to current isActive prop, toggle state
    */
-  const prevIsActive = usePrevious(isActive); /* 1 */
+  // const prevIsActive = usePrevious(isActive); /* 1 */
   useEffect(() => {
-    if (prevIsActive !== undefined || null) {
-      if (isActive) {
-        activateDOM();
-      } else {
-        deactivateDOM();
-      }
+    if (isActive) {
+      activateFocusTrap();
+    } else {
+      deactivateFocusTrap();
     }
-  });
+  }, [isActive]);
 
   /**
    * Set a flag when this item has mounted
@@ -115,8 +99,11 @@ export const Drawer = ({
    * between React and Next.js
    */
   useEffect(() => {
-    setIsMounted(true);
-  }, [setIsMounted]);
+    isMountedRef.current = true;
+    return () => {
+      isMountedRef.current = false;
+    };
+  }, []);
 
   /**
    * Activate DOM
@@ -124,12 +111,12 @@ export const Drawer = ({
    * 2) Set activeFocus state to true
    * 3) This accommodates drawer animation so that it auto receives focus
    */
-  function activateDOM() {
-    document.body.classList.add(BODY_DISABLED_CLASS);
-
+  function activateFocusTrap() {
     /* 3 */
     setTimeout(() => {
-      setActiveFocus(true); /* 2 */
+      if (isMountedRef.current) {
+        setActiveFocus(true); /* 2 */
+      }
     }, 300);
   }
 
@@ -138,8 +125,7 @@ export const Drawer = ({
    * 1) Close the drawer
    * 2) Set activeFocus state to false
    */
-  function deactivateDOM() {
-    document.body.classList.remove(BODY_DISABLED_CLASS);
+  function deactivateFocusTrap() {
     setActiveFocus(false); /* 2 */
   }
 
@@ -149,7 +135,7 @@ export const Drawer = ({
    * 2) Run the onClose prop (pass in function) if it exists
    */
   function handleOnClose() {
-    deactivateDOM(); /* 1 */
+    deactivateFocusTrap(); /* 1 */
 
     if (onClose) {
       onClose(); /* 2 */
@@ -205,7 +191,7 @@ export const Drawer = ({
 
   const componentClassName = clsx(styles['drawer'], className);
 
-  if (!isMounted) return null;
+  if (!isMountedRef.current) return null;
 
   return (
     <Portal>
