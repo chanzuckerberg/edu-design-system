@@ -54,9 +54,7 @@ export const Filters = ({ checkboxFields, className, onClose }: Props) => {
   const [isActive, setIsActive] = useState(false);
 
   function closeFiltersDrawer(checkedValues: { [key: string]: boolean }) {
-    setTimeout(() => {
-      filtersButton?.current?.focus();
-    }, 1);
+    filtersButton?.current?.focus();
     onClose(checkedValues);
     setAppliedCheckedBoxes({ ...checkedValues });
     setIsActive(false);
