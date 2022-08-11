@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React from 'react';
 import styles from './CheckboxInput.module.css';
-import icons from '../../icons/spritemap/spritemap.svg';
+import Icon from '../Icon';
 
 type CheckboxHTMLElementProps = Omit<
   React.InputHTMLAttributes<HTMLInputElement>,
@@ -40,40 +40,28 @@ export const svgStyle: SvgStyle = {
   '--checkbox-svg-size': svgSizeRem,
 };
 
-/**
- * Using a technique from https://www.sarasoueidan.com/blog/inclusively-hiding-and-styling-checkboxes-and-radio-buttons/,
- * we hide the checkbox input and instead completely style through an
- * SVG overlaid on top of the input element.
- */
-const CheckboxSvg = ({ indeterminate }: { indeterminate?: boolean }) => {
-  const name = indeterminate ? 'remove' : 'check';
-  const computedSvg = (
-    <use
-      className={styles['checkmark__content']}
-      fill="none"
-      xlinkHref={`${icons}#${name}`}
-    />
-  );
+const checkboxIconNameMap = {
+  indeterminate: 'checkbox-indeterminate',
+  true: 'checkbox-checked',
+  false: 'checkbox-unchecked',
+  undefined: 'checkbox-unchecked',
+};
+const CheckboxSvg = ({
+  checked,
+}: {
+  checked: boolean | 'indeterminate' | undefined;
+}) => {
+  const name = checkboxIconNameMap[`${checked}`] as
+    | 'checkbox-indeterminate'
+    | 'checkbox-checked'
+    | 'checkbox-unchecked';
+
   return (
-    <svg
-      aria-hidden="true"
-      height={svgSizeRem}
-      viewBox={`0 0 ${svgViewBoxSize} ${svgViewBoxSize}`}
-      width={svgSizeRem}
-    >
-      <rect
-        className={styles['checkmark__outline']}
-        fill="none"
-        height="18"
-        rx="3"
-        stroke="currentColor"
-        strokeWidth="2"
-        width="18"
-        x="1"
-        y="1"
-      />
-      {computedSvg}
-    </svg>
+    <Icon
+      className={styles['checkbox__icon']}
+      name={name}
+      purpose="decorative"
+    />
   );
 };
 
@@ -103,18 +91,18 @@ export const CheckboxInput = React.forwardRef<
         styles['input__wrapper'],
         disabled && styles['input__wrapper--disabled'],
       )}
+      style={svgStyle}
     >
       <input
         className={clsx(className, styles['checkbox__input'])}
         data-bootstrap-override="checkbox"
         disabled={disabled}
         ref={ref}
-        style={svgStyle}
         type="checkbox"
         {...checkedProps}
         {...other}
       />
-      <CheckboxSvg indeterminate={checked === 'indeterminate'} />
+      <CheckboxSvg checked={checked} />
     </span>
   );
 });

@@ -38,26 +38,10 @@
   opacity: 0; /* 4 */
 }
 
-/**
-   * The visible checkbox graphic.
-   * 1) Provides a focus indicator outline around the checkbox.
-   */
-.checkbox__input + svg {
-  vertical-align: top;
-
-  display: inline-block;
-
-  color: var(--eds-theme-color-icon-neutral-default);
-  --checked-color: var(--eds-theme-color-icon-brand-primary);
+.checkbox__icon {
+  color: var(--eds-theme-color-icon-brand-primary);
 }
-.checkbox__input:checked + svg > .checkmark__outline {
-  fill: var(--checked-color);
-  stroke: var(--checked-color);
-}
-.checkbox__input:checked + svg > .checkmark__content {
-  fill: var(--eds-theme-color-icon-neutral-default-inverse);
-}
-.checkbox__input:focus + svg {
+.checkbox__input:focus + .checkbox__icon {
   @mixin focus; /* 1 */
 }
 
@@ -67,7 +51,6 @@
 .checkbox__input:disabled {
   cursor: not-allowed;
 }
-.checkbox__input:disabled + svg {
+.checkbox__input:disabled + .checkbox__icon {
   color: var(--eds-theme-color-icon-disabled);
-  --checked-color: var(--eds-theme-color-icon-disabled);
 }

@@ -40,7 +40,9 @@ type Args = React.ComponentProps<typeof Checkbox>;
  * Controlled example to make checked stories interactive.
  */
 function CheckedExample(args: Args) {
-  const [checked, setChecked] = React.useState(true);
+  const [checked, setChecked] = React.useState<
+    boolean | 'indeterminate' | undefined
+  >(args.checked);
   const handleChange = () => {
     setChecked(!checked);
   };
@@ -48,32 +50,31 @@ function CheckedExample(args: Args) {
   return <Checkbox checked={checked} onChange={handleChange} {...args} />;
 }
 
-export const Default: StoryObj<Args> = {};
+export const Default: StoryObj<Args> = {
+  render: (args) => <CheckedExample {...args} />,
+};
 
 export const Checked: StoryObj<Args> = {
-  render: () => <CheckedExample {...defaultArgs} />,
+  render: (args) => <CheckedExample {...args} checked={true} />,
 };
 
 export const Small: StoryObj<Args> = {
-  ...Default,
-  args: {
-    size: 'sm',
-  },
+  render: (args) => <CheckedExample {...args} />,
 };
 
 export const SmallChecked: StoryObj<Args> = {
-  render: () => <CheckedExample size="sm" {...defaultArgs} />,
+  render: (args) => <CheckedExample {...args} checked={true} size="sm" />,
 };
 
 export const Indeterminate: StoryObj<Args> = {
-  ...Default,
   args: {
     checked: 'indeterminate',
     readOnly: true,
   },
+  render: (args) => <CheckedExample {...args} />,
 };
 
-export const Disabled = {
+export const Disabled: StoryObj<Args> = {
   render: () => (
     <table style={{ borderSpacing: '2rem' }}>
       <tbody>
