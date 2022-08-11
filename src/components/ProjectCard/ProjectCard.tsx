@@ -56,9 +56,9 @@ export interface Props {
    */
   number?: number;
   /**
-   * Number aria label
+   * Number aria label. Required if number prop is passed.
    */
-  numberAriaLabel: string;
+  numberAriaLabel?: string;
   /**
    * Property passed in to style draggable project card
    */
@@ -81,6 +81,11 @@ export const ProjectCard = ({
   isDragging,
   ...other
 }: Props) => {
+  if (number && !numberAriaLabel && process.env.NODE_ENV !== 'production') {
+    console.warn(
+      'You must provide a "numberAriaLabel" for the number icon if a "number" has been passed',
+    );
+  }
   const componentClassName = clsx(
     styles['project-card'],
     behavior === 'draggable' && styles['project-card--draggable'],
