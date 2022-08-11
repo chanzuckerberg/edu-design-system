@@ -1,0 +1,2131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Filters /> DefaultInteractive story renders snapshot 1`] = `
+<div
+  aria-hidden="false"
+  class="drawer__container drawer__container--is-active filters-drawer__container"
+>
+  <article
+    aria-labelledby="2"
+    aria-modal="true"
+    class="drawer filters-drawer"
+    role="dialog"
+    tabindex="0"
+  >
+    <header
+      class="drawer__header"
+    >
+      <h3
+        class="filters-drawer__title heading heading--size-headline-sm"
+        id="2"
+      >
+        Filters
+      </h3>
+      <button
+        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button button--icon"
+        data-bootstrap-override="clickable-style-icon"
+        type="button"
+      >
+        <svg
+          class="icon"
+          fill="#878C90"
+          height="1.5rem"
+          role="img"
+          style="--icon-size: 1.5rem;"
+          width="1.5rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title
+            id="3"
+          >
+            close filters
+          </title>
+          <use
+            xlink:href="test-file-stub#close"
+          />
+        </svg>
+      </button>
+    </header>
+    <div
+      class="drawer__body filters-drawer__body"
+    >
+      <fieldset
+        class="filters-fieldset fieldset"
+      >
+        <legend
+          class="fieldset-legend filters-fieldset__legend"
+        >
+          Filters Segment 1
+           
+        </legend>
+        <div
+          class="filters-fieldset__checkboxes fieldset-items"
+        >
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="4"
+                type="checkbox"
+                value="Filters label 1"
+              />
+              <svg
+                aria-hidden="true"
+                height="1.25rem"
+                viewBox="0 0 20 20"
+                width="1.25rem"
+              >
+                <rect
+                  class="checkmark__outline"
+                  fill="none"
+                  height="18"
+                  rx="3"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  width="18"
+                  x="1"
+                  y="1"
+                />
+                <use
+                  class="checkmark__content"
+                  fill="none"
+                  xlink:href="test-file-stub#check"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--md"
+              data-bootstrap-override="label"
+              for="4"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              Filters label 1
+            </label>
+          </div>
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="5"
+                type="checkbox"
+                value="Filters label 2"
+              />
+              <svg
+                aria-hidden="true"
+                height="1.25rem"
+                viewBox="0 0 20 20"
+                width="1.25rem"
+              >
+                <rect
+                  class="checkmark__outline"
+                  fill="none"
+                  height="18"
+                  rx="3"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  width="18"
+                  x="1"
+                  y="1"
+                />
+                <use
+                  class="checkmark__content"
+                  fill="none"
+                  xlink:href="test-file-stub#check"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--md"
+              data-bootstrap-override="label"
+              for="5"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              Filters label 2
+            </label>
+          </div>
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="6"
+                type="checkbox"
+                value="Filters label 3"
+              />
+              <svg
+                aria-hidden="true"
+                height="1.25rem"
+                viewBox="0 0 20 20"
+                width="1.25rem"
+              >
+                <rect
+                  class="checkmark__outline"
+                  fill="none"
+                  height="18"
+                  rx="3"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  width="18"
+                  x="1"
+                  y="1"
+                />
+                <use
+                  class="checkmark__content"
+                  fill="none"
+                  xlink:href="test-file-stub#check"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--md"
+              data-bootstrap-override="label"
+              for="6"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              Filters label 3
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <footer
+      class="drawer__footer filters-drawer__footer"
+    >
+      <div
+        class="footer__button-group button-group button-group--spacing-1x"
+      >
+        <button
+          class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button footer__button button--secondary"
+          data-bootstrap-override="clickable-style-secondary"
+          type="button"
+        >
+          Clear All
+        </button>
+        <button
+          class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button footer__button button--primary"
+          data-bootstrap-override="clickable-style-primary"
+          type="button"
+        >
+          Apply
+        </button>
+      </div>
+    </footer>
+  </article>
+</div>
+`;
+
+exports[`<Filters /> FiltersDrawerComponent story renders snapshot 1`] = `
+<div
+  aria-hidden="false"
+  class="drawer__container drawer__container--is-active filters-drawer__container"
+>
+  <article
+    aria-labelledby="71"
+    aria-modal="true"
+    class="drawer filters-drawer"
+    role="dialog"
+    tabindex="0"
+  >
+    <header
+      class="drawer__header"
+    >
+      <h3
+        class="filters-drawer__title heading heading--size-headline-sm"
+        id="71"
+      >
+        Filters
+      </h3>
+      <button
+        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button button--icon"
+        data-bootstrap-override="clickable-style-icon"
+        type="button"
+      >
+        <svg
+          class="icon"
+          fill="#878C90"
+          height="1.5rem"
+          role="img"
+          style="--icon-size: 1.5rem;"
+          width="1.5rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title
+            id="72"
+          >
+            close filters
+          </title>
+          <use
+            xlink:href="test-file-stub#close"
+          />
+        </svg>
+      </button>
+    </header>
+    <div
+      class="drawer__body filters-drawer__body"
+    >
+      <fieldset
+        class="filters-fieldset fieldset"
+      >
+        <legend
+          class="fieldset-legend filters-fieldset__legend"
+        >
+          Filters Segment 1
+           
+        </legend>
+        <div
+          class="filters-fieldset__checkboxes fieldset-items"
+        >
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="73"
+                type="checkbox"
+                value="segment1label1"
+              />
+              <svg
+                aria-hidden="true"
+                height="1.25rem"
+                viewBox="0 0 20 20"
+                width="1.25rem"
+              >
+                <rect
+                  class="checkmark__outline"
+                  fill="none"
+                  height="18"
+                  rx="3"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  width="18"
+                  x="1"
+                  y="1"
+                />
+                <use
+                  class="checkmark__content"
+                  fill="none"
+                  xlink:href="test-file-stub#check"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--md"
+              data-bootstrap-override="label"
+              for="73"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              Filters long label 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            </label>
+          </div>
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="74"
+                type="checkbox"
+                value="segment1label2"
+              />
+              <svg
+                aria-hidden="true"
+                height="1.25rem"
+                viewBox="0 0 20 20"
+                width="1.25rem"
+              >
+                <rect
+                  class="checkmark__outline"
+                  fill="none"
+                  height="18"
+                  rx="3"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  width="18"
+                  x="1"
+                  y="1"
+                />
+                <use
+                  class="checkmark__content"
+                  fill="none"
+                  xlink:href="test-file-stub#check"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--md"
+              data-bootstrap-override="label"
+              for="74"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              Filters label 2
+            </label>
+          </div>
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="75"
+                type="checkbox"
+                value="segment1label3"
+              />
+              <svg
+                aria-hidden="true"
+                height="1.25rem"
+                viewBox="0 0 20 20"
+                width="1.25rem"
+              >
+                <rect
+                  class="checkmark__outline"
+                  fill="none"
+                  height="18"
+                  rx="3"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  width="18"
+                  x="1"
+                  y="1"
+                />
+                <use
+                  class="checkmark__content"
+                  fill="none"
+                  xlink:href="test-file-stub#check"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--md"
+              data-bootstrap-override="label"
+              for="75"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              Filters label 3
+            </label>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset
+        class="filters-fieldset fieldset"
+      >
+        <legend
+          class="fieldset-legend filters-fieldset__legend"
+        >
+          Filters Segment 2
+           
+        </legend>
+        <div
+          class="filters-fieldset__checkboxes fieldset-items"
+        >
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="76"
+                type="checkbox"
+                value="segment2label1"
+              />
+              <svg
+                aria-hidden="true"
+                height="1.25rem"
+                viewBox="0 0 20 20"
+                width="1.25rem"
+              >
+                <rect
+                  class="checkmark__outline"
+                  fill="none"
+                  height="18"
+                  rx="3"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  width="18"
+                  x="1"
+                  y="1"
+                />
+                <use
+                  class="checkmark__content"
+                  fill="none"
+                  xlink:href="test-file-stub#check"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--md"
+              data-bootstrap-override="label"
+              for="76"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              Filters label 1
+            </label>
+          </div>
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="77"
+                type="checkbox"
+                value="segment2label2"
+              />
+              <svg
+                aria-hidden="true"
+                height="1.25rem"
+                viewBox="0 0 20 20"
+                width="1.25rem"
+              >
+                <rect
+                  class="checkmark__outline"
+                  fill="none"
+                  height="18"
+                  rx="3"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  width="18"
+                  x="1"
+                  y="1"
+                />
+                <use
+                  class="checkmark__content"
+                  fill="none"
+                  xlink:href="test-file-stub#check"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--md"
+              data-bootstrap-override="label"
+              for="77"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              Filters long label 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            </label>
+          </div>
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="78"
+                type="checkbox"
+                value="segment2label3"
+              />
+              <svg
+                aria-hidden="true"
+                height="1.25rem"
+                viewBox="0 0 20 20"
+                width="1.25rem"
+              >
+                <rect
+                  class="checkmark__outline"
+                  fill="none"
+                  height="18"
+                  rx="3"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  width="18"
+                  x="1"
+                  y="1"
+                />
+                <use
+                  class="checkmark__content"
+                  fill="none"
+                  xlink:href="test-file-stub#check"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--md"
+              data-bootstrap-override="label"
+              for="78"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              Filters label 3
+            </label>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset
+        class="filters-fieldset fieldset"
+      >
+        <legend
+          class="fieldset-legend filters-fieldset__legend"
+        >
+          Filters Segment 3
+           
+        </legend>
+        <div
+          class="filters-fieldset__checkboxes fieldset-items"
+        >
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="79"
+                type="checkbox"
+                value="segment3label1"
+              />
+              <svg
+                aria-hidden="true"
+                height="1.25rem"
+                viewBox="0 0 20 20"
+                width="1.25rem"
+              >
+                <rect
+                  class="checkmark__outline"
+                  fill="none"
+                  height="18"
+                  rx="3"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  width="18"
+                  x="1"
+                  y="1"
+                />
+                <use
+                  class="checkmark__content"
+                  fill="none"
+                  xlink:href="test-file-stub#check"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--md"
+              data-bootstrap-override="label"
+              for="79"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              Filters label 1
+            </label>
+          </div>
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="80"
+                type="checkbox"
+                value="segment3label2"
+              />
+              <svg
+                aria-hidden="true"
+                height="1.25rem"
+                viewBox="0 0 20 20"
+                width="1.25rem"
+              >
+                <rect
+                  class="checkmark__outline"
+                  fill="none"
+                  height="18"
+                  rx="3"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  width="18"
+                  x="1"
+                  y="1"
+                />
+                <use
+                  class="checkmark__content"
+                  fill="none"
+                  xlink:href="test-file-stub#check"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--md"
+              data-bootstrap-override="label"
+              for="80"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              Filters label 2
+            </label>
+          </div>
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="81"
+                type="checkbox"
+                value="segment3label3"
+              />
+              <svg
+                aria-hidden="true"
+                height="1.25rem"
+                viewBox="0 0 20 20"
+                width="1.25rem"
+              >
+                <rect
+                  class="checkmark__outline"
+                  fill="none"
+                  height="18"
+                  rx="3"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  width="18"
+                  x="1"
+                  y="1"
+                />
+                <use
+                  class="checkmark__content"
+                  fill="none"
+                  xlink:href="test-file-stub#check"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--md"
+              data-bootstrap-override="label"
+              for="81"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              Filters long label 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            </label>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset
+        class="filters-fieldset fieldset"
+      >
+        <legend
+          class="fieldset-legend filters-fieldset__legend"
+        >
+          Filters Segment 4
+           
+        </legend>
+        <div
+          class="filters-fieldset__checkboxes fieldset-items"
+        >
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="82"
+                type="checkbox"
+                value="segment4label1"
+              />
+              <svg
+                aria-hidden="true"
+                height="1.25rem"
+                viewBox="0 0 20 20"
+                width="1.25rem"
+              >
+                <rect
+                  class="checkmark__outline"
+                  fill="none"
+                  height="18"
+                  rx="3"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  width="18"
+                  x="1"
+                  y="1"
+                />
+                <use
+                  class="checkmark__content"
+                  fill="none"
+                  xlink:href="test-file-stub#check"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--md"
+              data-bootstrap-override="label"
+              for="82"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              Filters label 1
+            </label>
+          </div>
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="83"
+                type="checkbox"
+                value="segment4label2"
+              />
+              <svg
+                aria-hidden="true"
+                height="1.25rem"
+                viewBox="0 0 20 20"
+                width="1.25rem"
+              >
+                <rect
+                  class="checkmark__outline"
+                  fill="none"
+                  height="18"
+                  rx="3"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  width="18"
+                  x="1"
+                  y="1"
+                />
+                <use
+                  class="checkmark__content"
+                  fill="none"
+                  xlink:href="test-file-stub#check"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--md"
+              data-bootstrap-override="label"
+              for="83"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              Filters label 2
+            </label>
+          </div>
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="84"
+                type="checkbox"
+                value="segment4label3"
+              />
+              <svg
+                aria-hidden="true"
+                height="1.25rem"
+                viewBox="0 0 20 20"
+                width="1.25rem"
+              >
+                <rect
+                  class="checkmark__outline"
+                  fill="none"
+                  height="18"
+                  rx="3"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  width="18"
+                  x="1"
+                  y="1"
+                />
+                <use
+                  class="checkmark__content"
+                  fill="none"
+                  xlink:href="test-file-stub#check"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--md"
+              data-bootstrap-override="label"
+              for="84"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              Filters label 3
+            </label>
+          </div>
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="85"
+                type="checkbox"
+                value="segment4label4"
+              />
+              <svg
+                aria-hidden="true"
+                height="1.25rem"
+                viewBox="0 0 20 20"
+                width="1.25rem"
+              >
+                <rect
+                  class="checkmark__outline"
+                  fill="none"
+                  height="18"
+                  rx="3"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  width="18"
+                  x="1"
+                  y="1"
+                />
+                <use
+                  class="checkmark__content"
+                  fill="none"
+                  xlink:href="test-file-stub#check"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--md"
+              data-bootstrap-override="label"
+              for="85"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              Filters label 4
+            </label>
+          </div>
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="86"
+                type="checkbox"
+                value="segment4label5"
+              />
+              <svg
+                aria-hidden="true"
+                height="1.25rem"
+                viewBox="0 0 20 20"
+                width="1.25rem"
+              >
+                <rect
+                  class="checkmark__outline"
+                  fill="none"
+                  height="18"
+                  rx="3"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  width="18"
+                  x="1"
+                  y="1"
+                />
+                <use
+                  class="checkmark__content"
+                  fill="none"
+                  xlink:href="test-file-stub#check"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--md"
+              data-bootstrap-override="label"
+              for="86"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              Filters label 5
+            </label>
+          </div>
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="87"
+                type="checkbox"
+                value="segment4label6"
+              />
+              <svg
+                aria-hidden="true"
+                height="1.25rem"
+                viewBox="0 0 20 20"
+                width="1.25rem"
+              >
+                <rect
+                  class="checkmark__outline"
+                  fill="none"
+                  height="18"
+                  rx="3"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  width="18"
+                  x="1"
+                  y="1"
+                />
+                <use
+                  class="checkmark__content"
+                  fill="none"
+                  xlink:href="test-file-stub#check"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--md"
+              data-bootstrap-override="label"
+              for="87"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              Filters label 6
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <footer
+      class="drawer__footer filters-drawer__footer"
+    >
+      <div
+        class="footer__button-group button-group button-group--spacing-1x"
+      >
+        <button
+          class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button footer__button button--secondary"
+          data-bootstrap-override="clickable-style-secondary"
+          type="button"
+        >
+          Clear All
+        </button>
+        <button
+          class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button footer__button button--primary"
+          data-bootstrap-override="clickable-style-primary"
+          type="button"
+        >
+          Apply
+        </button>
+      </div>
+    </footer>
+  </article>
+</div>
+`;
+
+exports[`<Filters /> FiltersDrawerComponentNoLegend story renders snapshot 1`] = `
+<div
+  aria-hidden="false"
+  class="drawer__container drawer__container--is-active filters-drawer__container"
+>
+  <article
+    aria-labelledby="105"
+    aria-modal="true"
+    class="drawer filters-drawer"
+    role="dialog"
+    tabindex="0"
+  >
+    <header
+      class="drawer__header"
+    >
+      <h3
+        class="filters-drawer__title heading heading--size-headline-sm"
+        id="105"
+      >
+        Filters
+      </h3>
+      <button
+        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button button--icon"
+        data-bootstrap-override="clickable-style-icon"
+        type="button"
+      >
+        <svg
+          class="icon"
+          fill="#878C90"
+          height="1.5rem"
+          role="img"
+          style="--icon-size: 1.5rem;"
+          width="1.5rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title
+            id="106"
+          >
+            close filters
+          </title>
+          <use
+            xlink:href="test-file-stub#close"
+          />
+        </svg>
+      </button>
+    </header>
+    <div
+      class="drawer__body filters-drawer__body"
+    >
+      <fieldset
+        class="filters-fieldset fieldset"
+      >
+        <div
+          class="filters-fieldset__checkboxes fieldset-items"
+        >
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="107"
+                type="checkbox"
+                value="checkbox1"
+              />
+              <svg
+                aria-hidden="true"
+                height="1.25rem"
+                viewBox="0 0 20 20"
+                width="1.25rem"
+              >
+                <rect
+                  class="checkmark__outline"
+                  fill="none"
+                  height="18"
+                  rx="3"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  width="18"
+                  x="1"
+                  y="1"
+                />
+                <use
+                  class="checkmark__content"
+                  fill="none"
+                  xlink:href="test-file-stub#check"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--md"
+              data-bootstrap-override="label"
+              for="107"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              Checkbox label 1
+            </label>
+          </div>
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="108"
+                type="checkbox"
+                value="checkbox2"
+              />
+              <svg
+                aria-hidden="true"
+                height="1.25rem"
+                viewBox="0 0 20 20"
+                width="1.25rem"
+              >
+                <rect
+                  class="checkmark__outline"
+                  fill="none"
+                  height="18"
+                  rx="3"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  width="18"
+                  x="1"
+                  y="1"
+                />
+                <use
+                  class="checkmark__content"
+                  fill="none"
+                  xlink:href="test-file-stub#check"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--md"
+              data-bootstrap-override="label"
+              for="108"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              Checkbox label 2
+            </label>
+          </div>
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="109"
+                type="checkbox"
+                value="checkbox3"
+              />
+              <svg
+                aria-hidden="true"
+                height="1.25rem"
+                viewBox="0 0 20 20"
+                width="1.25rem"
+              >
+                <rect
+                  class="checkmark__outline"
+                  fill="none"
+                  height="18"
+                  rx="3"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  width="18"
+                  x="1"
+                  y="1"
+                />
+                <use
+                  class="checkmark__content"
+                  fill="none"
+                  xlink:href="test-file-stub#check"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--md"
+              data-bootstrap-override="label"
+              for="109"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              Checkbox label 3
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <footer
+      class="drawer__footer filters-drawer__footer"
+    >
+      <div
+        class="footer__button-group button-group button-group--spacing-1x"
+      >
+        <button
+          class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button footer__button button--secondary"
+          data-bootstrap-override="clickable-style-secondary"
+          type="button"
+        >
+          Clear All
+        </button>
+        <button
+          class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button footer__button button--primary"
+          data-bootstrap-override="clickable-style-primary"
+          type="button"
+        >
+          Apply
+        </button>
+      </div>
+    </footer>
+  </article>
+</div>
+`;
+
+exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
+<div
+  aria-hidden="false"
+  class="drawer__container drawer__container--is-active filters-drawer__container"
+>
+  <article
+    aria-labelledby="19"
+    aria-modal="true"
+    class="drawer filters-drawer"
+    role="dialog"
+    tabindex="0"
+  >
+    <header
+      class="drawer__header"
+    >
+      <h3
+        class="filters-drawer__title heading heading--size-headline-sm"
+        id="19"
+      >
+        Filters
+      </h3>
+      <button
+        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button button--icon"
+        data-bootstrap-override="clickable-style-icon"
+        type="button"
+      >
+        <svg
+          class="icon"
+          fill="#878C90"
+          height="1.5rem"
+          role="img"
+          style="--icon-size: 1.5rem;"
+          width="1.5rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title
+            id="20"
+          >
+            close filters
+          </title>
+          <use
+            xlink:href="test-file-stub#close"
+          />
+        </svg>
+      </button>
+    </header>
+    <div
+      class="drawer__body filters-drawer__body"
+    >
+      <fieldset
+        class="filters-fieldset fieldset"
+      >
+        <legend
+          class="fieldset-legend filters-fieldset__legend"
+        >
+          Filters Segment 1
+           
+        </legend>
+        <div
+          class="filters-fieldset__checkboxes fieldset-items"
+        >
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="21"
+                type="checkbox"
+                value="segment1label1"
+              />
+              <svg
+                aria-hidden="true"
+                height="1.25rem"
+                viewBox="0 0 20 20"
+                width="1.25rem"
+              >
+                <rect
+                  class="checkmark__outline"
+                  fill="none"
+                  height="18"
+                  rx="3"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  width="18"
+                  x="1"
+                  y="1"
+                />
+                <use
+                  class="checkmark__content"
+                  fill="none"
+                  xlink:href="test-file-stub#check"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--md"
+              data-bootstrap-override="label"
+              for="21"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              Filters long label 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            </label>
+          </div>
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="22"
+                type="checkbox"
+                value="segment1label2"
+              />
+              <svg
+                aria-hidden="true"
+                height="1.25rem"
+                viewBox="0 0 20 20"
+                width="1.25rem"
+              >
+                <rect
+                  class="checkmark__outline"
+                  fill="none"
+                  height="18"
+                  rx="3"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  width="18"
+                  x="1"
+                  y="1"
+                />
+                <use
+                  class="checkmark__content"
+                  fill="none"
+                  xlink:href="test-file-stub#check"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--md"
+              data-bootstrap-override="label"
+              for="22"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              Filters label 2
+            </label>
+          </div>
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="23"
+                type="checkbox"
+                value="segment1label3"
+              />
+              <svg
+                aria-hidden="true"
+                height="1.25rem"
+                viewBox="0 0 20 20"
+                width="1.25rem"
+              >
+                <rect
+                  class="checkmark__outline"
+                  fill="none"
+                  height="18"
+                  rx="3"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  width="18"
+                  x="1"
+                  y="1"
+                />
+                <use
+                  class="checkmark__content"
+                  fill="none"
+                  xlink:href="test-file-stub#check"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--md"
+              data-bootstrap-override="label"
+              for="23"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              Filters label 3
+            </label>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset
+        class="filters-fieldset fieldset"
+      >
+        <legend
+          class="fieldset-legend filters-fieldset__legend"
+        >
+          Filters Segment 2
+           
+        </legend>
+        <div
+          class="filters-fieldset__checkboxes fieldset-items"
+        >
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="24"
+                type="checkbox"
+                value="segment2label1"
+              />
+              <svg
+                aria-hidden="true"
+                height="1.25rem"
+                viewBox="0 0 20 20"
+                width="1.25rem"
+              >
+                <rect
+                  class="checkmark__outline"
+                  fill="none"
+                  height="18"
+                  rx="3"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  width="18"
+                  x="1"
+                  y="1"
+                />
+                <use
+                  class="checkmark__content"
+                  fill="none"
+                  xlink:href="test-file-stub#check"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--md"
+              data-bootstrap-override="label"
+              for="24"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              Filters label 1
+            </label>
+          </div>
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="25"
+                type="checkbox"
+                value="segment2label2"
+              />
+              <svg
+                aria-hidden="true"
+                height="1.25rem"
+                viewBox="0 0 20 20"
+                width="1.25rem"
+              >
+                <rect
+                  class="checkmark__outline"
+                  fill="none"
+                  height="18"
+                  rx="3"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  width="18"
+                  x="1"
+                  y="1"
+                />
+                <use
+                  class="checkmark__content"
+                  fill="none"
+                  xlink:href="test-file-stub#check"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--md"
+              data-bootstrap-override="label"
+              for="25"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              Filters long label 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            </label>
+          </div>
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="26"
+                type="checkbox"
+                value="segment2label3"
+              />
+              <svg
+                aria-hidden="true"
+                height="1.25rem"
+                viewBox="0 0 20 20"
+                width="1.25rem"
+              >
+                <rect
+                  class="checkmark__outline"
+                  fill="none"
+                  height="18"
+                  rx="3"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  width="18"
+                  x="1"
+                  y="1"
+                />
+                <use
+                  class="checkmark__content"
+                  fill="none"
+                  xlink:href="test-file-stub#check"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--md"
+              data-bootstrap-override="label"
+              for="26"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              Filters label 3
+            </label>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset
+        class="filters-fieldset fieldset"
+      >
+        <legend
+          class="fieldset-legend filters-fieldset__legend"
+        >
+          Filters Segment 3
+           
+        </legend>
+        <div
+          class="filters-fieldset__checkboxes fieldset-items"
+        >
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="27"
+                type="checkbox"
+                value="segment3label1"
+              />
+              <svg
+                aria-hidden="true"
+                height="1.25rem"
+                viewBox="0 0 20 20"
+                width="1.25rem"
+              >
+                <rect
+                  class="checkmark__outline"
+                  fill="none"
+                  height="18"
+                  rx="3"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  width="18"
+                  x="1"
+                  y="1"
+                />
+                <use
+                  class="checkmark__content"
+                  fill="none"
+                  xlink:href="test-file-stub#check"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--md"
+              data-bootstrap-override="label"
+              for="27"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              Filters label 1
+            </label>
+          </div>
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="28"
+                type="checkbox"
+                value="segment3label2"
+              />
+              <svg
+                aria-hidden="true"
+                height="1.25rem"
+                viewBox="0 0 20 20"
+                width="1.25rem"
+              >
+                <rect
+                  class="checkmark__outline"
+                  fill="none"
+                  height="18"
+                  rx="3"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  width="18"
+                  x="1"
+                  y="1"
+                />
+                <use
+                  class="checkmark__content"
+                  fill="none"
+                  xlink:href="test-file-stub#check"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--md"
+              data-bootstrap-override="label"
+              for="28"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              Filters label 2
+            </label>
+          </div>
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="29"
+                type="checkbox"
+                value="segment3label3"
+              />
+              <svg
+                aria-hidden="true"
+                height="1.25rem"
+                viewBox="0 0 20 20"
+                width="1.25rem"
+              >
+                <rect
+                  class="checkmark__outline"
+                  fill="none"
+                  height="18"
+                  rx="3"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  width="18"
+                  x="1"
+                  y="1"
+                />
+                <use
+                  class="checkmark__content"
+                  fill="none"
+                  xlink:href="test-file-stub#check"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--md"
+              data-bootstrap-override="label"
+              for="29"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              Filters long label 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            </label>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset
+        class="filters-fieldset fieldset"
+      >
+        <legend
+          class="fieldset-legend filters-fieldset__legend"
+        >
+          Filters Segment 4
+           
+        </legend>
+        <div
+          class="filters-fieldset__checkboxes fieldset-items"
+        >
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="30"
+                type="checkbox"
+                value="segment4label1"
+              />
+              <svg
+                aria-hidden="true"
+                height="1.25rem"
+                viewBox="0 0 20 20"
+                width="1.25rem"
+              >
+                <rect
+                  class="checkmark__outline"
+                  fill="none"
+                  height="18"
+                  rx="3"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  width="18"
+                  x="1"
+                  y="1"
+                />
+                <use
+                  class="checkmark__content"
+                  fill="none"
+                  xlink:href="test-file-stub#check"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--md"
+              data-bootstrap-override="label"
+              for="30"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              Filters label 1
+            </label>
+          </div>
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="31"
+                type="checkbox"
+                value="segment4label2"
+              />
+              <svg
+                aria-hidden="true"
+                height="1.25rem"
+                viewBox="0 0 20 20"
+                width="1.25rem"
+              >
+                <rect
+                  class="checkmark__outline"
+                  fill="none"
+                  height="18"
+                  rx="3"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  width="18"
+                  x="1"
+                  y="1"
+                />
+                <use
+                  class="checkmark__content"
+                  fill="none"
+                  xlink:href="test-file-stub#check"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--md"
+              data-bootstrap-override="label"
+              for="31"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              Filters label 2
+            </label>
+          </div>
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="32"
+                type="checkbox"
+                value="segment4label3"
+              />
+              <svg
+                aria-hidden="true"
+                height="1.25rem"
+                viewBox="0 0 20 20"
+                width="1.25rem"
+              >
+                <rect
+                  class="checkmark__outline"
+                  fill="none"
+                  height="18"
+                  rx="3"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  width="18"
+                  x="1"
+                  y="1"
+                />
+                <use
+                  class="checkmark__content"
+                  fill="none"
+                  xlink:href="test-file-stub#check"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--md"
+              data-bootstrap-override="label"
+              for="32"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              Filters label 3
+            </label>
+          </div>
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="33"
+                type="checkbox"
+                value="segment4label4"
+              />
+              <svg
+                aria-hidden="true"
+                height="1.25rem"
+                viewBox="0 0 20 20"
+                width="1.25rem"
+              >
+                <rect
+                  class="checkmark__outline"
+                  fill="none"
+                  height="18"
+                  rx="3"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  width="18"
+                  x="1"
+                  y="1"
+                />
+                <use
+                  class="checkmark__content"
+                  fill="none"
+                  xlink:href="test-file-stub#check"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--md"
+              data-bootstrap-override="label"
+              for="33"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              Filters label 4
+            </label>
+          </div>
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="34"
+                type="checkbox"
+                value="segment4label5"
+              />
+              <svg
+                aria-hidden="true"
+                height="1.25rem"
+                viewBox="0 0 20 20"
+                width="1.25rem"
+              >
+                <rect
+                  class="checkmark__outline"
+                  fill="none"
+                  height="18"
+                  rx="3"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  width="18"
+                  x="1"
+                  y="1"
+                />
+                <use
+                  class="checkmark__content"
+                  fill="none"
+                  xlink:href="test-file-stub#check"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--md"
+              data-bootstrap-override="label"
+              for="34"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              Filters label 5
+            </label>
+          </div>
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="35"
+                type="checkbox"
+                value="segment4label6"
+              />
+              <svg
+                aria-hidden="true"
+                height="1.25rem"
+                viewBox="0 0 20 20"
+                width="1.25rem"
+              >
+                <rect
+                  class="checkmark__outline"
+                  fill="none"
+                  height="18"
+                  rx="3"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  width="18"
+                  x="1"
+                  y="1"
+                />
+                <use
+                  class="checkmark__content"
+                  fill="none"
+                  xlink:href="test-file-stub#check"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--md"
+              data-bootstrap-override="label"
+              for="35"
+              style="--checkbox-svg-size: 1.25rem;"
+            >
+              Filters label 6
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <footer
+      class="drawer__footer filters-drawer__footer"
+    >
+      <div
+        class="footer__button-group button-group button-group--spacing-1x"
+      >
+        <button
+          class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button footer__button button--secondary"
+          data-bootstrap-override="clickable-style-secondary"
+          type="button"
+        >
+          Clear All
+        </button>
+        <button
+          class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button footer__button button--primary"
+          data-bootstrap-override="clickable-style-primary"
+          type="button"
+        >
+          Apply
+        </button>
+      </div>
+    </footer>
+  </article>
+</div>
+`;

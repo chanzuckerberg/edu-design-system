@@ -5,7 +5,6 @@ import React, {
   useRef,
   ReactNode,
   KeyboardEvent,
-  MouseEvent,
 } from 'react';
 import { oneByType } from 'react-children-by-type';
 import FocusLock from 'react-focus-lock';
@@ -16,7 +15,7 @@ import DrawerBody from '../DrawerBody';
 import DrawerFooter from '../DrawerFooter';
 import DrawerHeader from '../DrawerHeader';
 
-export interface Props {
+export type Props = {
   /**
    * HTML id of the helper text used to describe the component after aria-labelledby
    */
@@ -30,30 +29,26 @@ export interface Props {
    */
   children?: ReactNode;
   /**
-   * CSS class names that can be appended to the component.
+   * CSS class names that can be appended to the Drawer container component that the Drawer components reside in.
    */
   className?: string;
-  /**
-   * Button text for the drawer close button. This is visibly hidden but announced to screen reader users.
-   */
-  closeButtonText?: string;
   /**
    * Toggles the ability to dismiss the Drawer window
    */
   dismissible?: boolean;
   /**
+   * CSS class names that can be appended to the Drawer wrapper component that the Drawer window translates in and out of.
+   */
+  drawerContainerClassName?: string;
+  /**
    * Sets the drawer to open or close by default
    */
   isActive?: boolean;
   /**
-   * Toggles the shadowed backdrop of the drawer on or off for flexibility
-   */
-  showBackdrop?: boolean;
-  /**
    * Handler to be called when the drawer is being closed (by ESCAPE / clicking X / clicking outside)
    */
   onClose?: (e?: any) => void;
-}
+};
 
 /**
  * BETA: This component is still a work in progress and is subject to change.
@@ -62,41 +57,26 @@ export interface Props {
  * import {Drawer} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * A window component that slides from and out of the right side of the screen.
  */
 export const Drawer = ({
   'aria-describedby': ariaDescribedBy,
   'aria-labelledby': ariaLabelledBy,
-  className,
+  drawerContainerClassName,
   isActive,
   children,
   dismissible,
   onClose,
-  closeButtonText,
-  showBackdrop = false,
+  className,
   ...other
 }: Props) => {
   /**
    * Initialize states, constants, and refs
    */
-  const [isMounted, setIsMounted] = useState(false);
-  const BODY_DISABLED_CLASS = `eds-body-is-disabled`;
-  const [activeFocus, setActiveFocus] = useState(isActive || false);
+  const [activeFocus, setActiveFocus] = useState(isActive);
   const windowRef = useRef<HTMLElement | null>(null);
   const ref = useRef<HTMLDivElement | null>(null);
-
-  /**
-   * Get previous prop
-   * 1) This is used to compare the previous prop to the current prop
-   *
-   * TODO: improve `any` type
-   */
-  function usePrevious(isActive: any) {
-    useEffect(() => {
-      ref.current = isActive;
-    });
-    return ref.current;
-  }
+  const isMountedRef = useRef(true);
 
   /**
    * Use effect
@@ -104,16 +84,14 @@ export const Drawer = ({
    * 2) If prevIsActive is defined and previous isActive prop is not equal
    * to current isActive prop, toggle state
    */
-  const prevIsActive = usePrevious(isActive); /* 1 */
+  // const prevIsActive = usePrevious(isActive); /* 1 */
   useEffect(() => {
-    if (prevIsActive !== undefined || null) {
-      if (isActive) {
-        activateDOM();
-      } else {
-        deactivateDOM();
-      }
+    if (isActive) {
+      activateFocusTrap();
+    } else {
+      deactivateFocusTrap();
     }
-  });
+  }, [isActive]);
 
   /**
    * Set a flag when this item has mounted
@@ -121,8 +99,11 @@ export const Drawer = ({
    * between React and Next.js
    */
   useEffect(() => {
-    setIsMounted(true);
-  }, [setIsMounted]);
+    isMountedRef.current = true;
+    return () => {
+      isMountedRef.current = false;
+    };
+  }, []);
 
   /**
    * Activate DOM
@@ -130,12 +111,12 @@ export const Drawer = ({
    * 2) Set activeFocus state to true
    * 3) This accommodates drawer animation so that it auto receives focus
    */
-  function activateDOM() {
-    document.body.classList.add(BODY_DISABLED_CLASS);
-
+  function activateFocusTrap() {
     /* 3 */
     setTimeout(() => {
-      setActiveFocus(true); /* 2 */
+      if (isMountedRef.current) {
+        setActiveFocus(true); /* 2 */
+      }
     }, 300);
   }
 
@@ -144,8 +125,7 @@ export const Drawer = ({
    * 1) Close the drawer
    * 2) Set activeFocus state to false
    */
-  function deactivateDOM() {
-    document.body.classList.remove(BODY_DISABLED_CLASS);
+  function deactivateFocusTrap() {
     setActiveFocus(false); /* 2 */
   }
 
@@ -155,7 +135,7 @@ export const Drawer = ({
    * 2) Run the onClose prop (pass in function) if it exists
    */
   function handleOnClose() {
-    deactivateDOM(); /* 1 */
+    deactivateFocusTrap(); /* 1 */
 
     if (onClose) {
       onClose(); /* 2 */
@@ -166,16 +146,22 @@ export const Drawer = ({
    * Handle "click outside"
    * 1) onClick of the area around the drawer window, close the drawer
    */
-  function handleOnClickOutside(e: MouseEvent<HTMLElement>) {
-    if (
-      isActive &&
-      dismissible &&
-      windowRef.current &&
-      !windowRef.current.contains(e.target as HTMLElement)
-    ) {
-      handleOnClose(); /* 1 */
+  useEffect(() => {
+    function handleOnClickOutside(e: MouseEvent) {
+      if (
+        isActive &&
+        dismissible &&
+        windowRef.current &&
+        !windowRef.current.contains(e.target as HTMLElement)
+      ) {
+        handleOnClose(); /* 1 */
+      }
     }
-  }
+    document.addEventListener('click', handleOnClickOutside);
+    return () => {
+      document.removeEventListener('click', handleOnClickOutside);
+    };
+  }, [isActive, windowRef]); // eslint-disable-line react-hooks/exhaustive-deps
 
   /**
    * Handle onKeyDown
@@ -197,18 +183,19 @@ export const Drawer = ({
   const body = oneByType(children, DrawerBody);
   const footer = oneByType(children, DrawerFooter);
 
-  const componentClassName = clsx(
-    styles['drawer'],
-    className,
-    showBackdrop && styles['drawer--show-backdrop'],
-    isActive && styles['eds-is-active'],
+  const containerClassName = clsx(
+    styles['drawer__container'],
+    isActive && styles['drawer__container--is-active'],
+    drawerContainerClassName,
   );
 
-  if (!isMounted) return null;
+  const componentClassName = clsx(styles['drawer'], className);
+
+  if (!isMountedRef.current) return null;
 
   return (
     <Portal>
-      <FocusLock disabled={!activeFocus}>
+      <FocusLock disabled={!activeFocus} returnFocus={true}>
         {/**
          * the drawer will probably have buttons inside,
          * We're intentionally not adding role=button for now,
@@ -217,8 +204,7 @@ export const Drawer = ({
         {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions */}
         <div
           aria-hidden={!isActive}
-          className={componentClassName}
-          onClick={handleOnClickOutside}
+          className={containerClassName}
           onKeyDown={handleOnKeyDown}
           ref={ref}
           {...other}
@@ -227,7 +213,7 @@ export const Drawer = ({
             aria-describedby={ariaDescribedBy}
             aria-labelledby={ariaLabelledBy}
             aria-modal={isActive}
-            className={styles['drawer__window']}
+            className={componentClassName}
             ref={windowRef}
             role="dialog"
             tabIndex={0} // eslint-disable-line jsx-a11y/no-noninteractive-tabindex
