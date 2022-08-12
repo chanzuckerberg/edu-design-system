@@ -47,10 +47,10 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
       <BreadcrumbsItem href="#" text="Modern World 2" />
     </Breadcrumbs>
     <PageHeader
-      className="u-margin-bottom-xl"
+      className="u-margin-bottom-xl u-flex-direction-row"
       right={
         <Button status="neutral" variant="icon">
-          More options
+          <div className="u-mobile-hidden">More options</div>
           <Icon name="dots-vertical" purpose="decorative" />
         </Button>
       }
@@ -103,11 +103,9 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                         <TableHeaderCell>Checkpoints Status</TableHeaderCell>
                         <TableHeaderCell>Final Product</TableHeaderCell>
                       </TableRow>
-                    </TableHeader>
-                    <TableBody>
                       <TableRow>
-                        <TableCell></TableCell>
-                        <TableCell>
+                        <TableHeaderCell></TableHeaderCell>
+                        <TableHeaderCell>
                           <NumberIconList>
                             <NumberIcon
                               aria-label="Item 1"
@@ -168,9 +166,11 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                               size="sm"
                             />
                           </NumberIconList>
-                        </TableCell>
-                        <TableCell></TableCell>
+                        </TableHeaderCell>
+                        <TableHeaderCell></TableHeaderCell>
                       </TableRow>
+                    </TableHeader>
+                    <TableBody>
                       <TableRow>
                         <TableCell data-heading="Student">
                           Araya, Raquel
@@ -194,7 +194,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              1
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -206,7 +206,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              2
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -218,7 +218,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              3
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -230,7 +230,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              4
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -242,7 +242,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              5
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -254,7 +254,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              6
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -266,7 +266,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              7
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -278,7 +278,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              8
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -290,7 +290,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              9
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -302,7 +302,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              10
+                              &nbsp;
                             </div>
                           </div>
                         </TableCell>
@@ -351,7 +351,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              1
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -363,7 +363,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              2
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -375,7 +375,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              3
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -387,7 +387,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              4
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -399,7 +399,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              5
+                              &nbsp;
                             </div>
                           </div>
                         </TableCell>
@@ -448,7 +448,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              1
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -460,7 +460,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              2
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -472,7 +472,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              3
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -484,7 +484,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              4
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -496,7 +496,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              5
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -508,7 +508,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              6
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -520,7 +520,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              7
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -532,7 +532,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              8
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -544,7 +544,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              9
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -556,7 +556,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              10
+                              &nbsp;
                             </div>
                           </div>
                         </TableCell>
@@ -605,7 +605,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              1
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -617,7 +617,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              2
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -629,7 +629,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              3
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -641,7 +641,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              4
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -653,7 +653,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              5
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -665,7 +665,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              6
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -677,7 +677,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              7
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -689,7 +689,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              8
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -701,7 +701,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              9
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -713,7 +713,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              10
+                              &nbsp;
                             </div>
                           </div>
                         </TableCell>
@@ -762,7 +762,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              1
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -774,7 +774,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              2
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -786,7 +786,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              3
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -798,7 +798,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              4
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -810,7 +810,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              5
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -822,7 +822,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              6
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -834,7 +834,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              7
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -846,7 +846,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              8
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -858,7 +858,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              9
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -870,7 +870,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              10
+                              &nbsp;
                             </div>
                           </div>
                         </TableCell>
@@ -919,7 +919,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              1
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -931,7 +931,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              2
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -943,7 +943,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              3
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -955,7 +955,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              4
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -967,7 +967,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              5
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -979,7 +979,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              6
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -991,7 +991,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              7
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -1003,7 +1003,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              8
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -1015,7 +1015,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              9
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -1027,7 +1027,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              10
+                              &nbsp;
                             </div>
                           </div>
                         </TableCell>
@@ -1076,7 +1076,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              1
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -1088,7 +1088,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              2
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -1100,7 +1100,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              3
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -1112,7 +1112,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              4
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -1124,7 +1124,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              5
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -1136,7 +1136,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              6
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -1148,7 +1148,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              7
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -1160,7 +1160,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              8
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -1172,7 +1172,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              9
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -1184,7 +1184,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              10
+                              &nbsp;
                             </div>
                           </div>
                         </TableCell>
@@ -1233,7 +1233,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              1
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -1245,7 +1245,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              2
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -1257,7 +1257,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              3
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -1269,7 +1269,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              4
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -1281,7 +1281,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              5
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -1293,7 +1293,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              6
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -1305,7 +1305,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              7
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -1317,7 +1317,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              8
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -1329,7 +1329,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              9
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -1341,7 +1341,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              10
+                              &nbsp;
                             </div>
                           </div>
                         </TableCell>
@@ -1388,7 +1388,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              1
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -1400,7 +1400,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              2
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -1412,7 +1412,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              3
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -1424,7 +1424,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              4
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -1436,7 +1436,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              5
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -1448,7 +1448,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              6
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -1460,7 +1460,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              7
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -1472,7 +1472,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              8
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -1484,7 +1484,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              9
+                              &nbsp;
                             </div>
                             <div
                               className="fpo"
@@ -1496,7 +1496,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
                                 flexShrink: 0,
                               }}
                             >
-                              10
+                              &nbsp;
                             </div>
                           </div>
                         </TableCell>

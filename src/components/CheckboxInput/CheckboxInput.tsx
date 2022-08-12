@@ -103,13 +103,13 @@ export const CheckboxInput = React.forwardRef<
         styles['input__wrapper'],
         disabled && styles['input__wrapper--disabled'],
       )}
+      style={svgStyle}
     >
       <input
         className={clsx(className, styles['checkbox__input'])}
         data-bootstrap-override="checkbox"
         disabled={disabled}
         ref={ref}
-        style={svgStyle}
         type="checkbox"
         {...checkedProps}
         {...other}

@@ -18,12 +18,12 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
     >
       <span
         class="input__wrapper"
+        style="--checkbox-svg-size: 1.25rem;"
       >
         <input
           class="checkbox__input"
           data-bootstrap-override="checkbox"
           id="1"
-          style="--checkbox-svg-size: 1.25rem;"
           type="checkbox"
         />
         <svg
@@ -64,12 +64,12 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
     >
       <span
         class="input__wrapper"
+        style="--checkbox-svg-size: 1.25rem;"
       >
         <input
           class="checkbox__input"
           data-bootstrap-override="checkbox"
           id="2"
-          style="--checkbox-svg-size: 1.25rem;"
           type="checkbox"
         />
         <svg
@@ -110,12 +110,12 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
     >
       <span
         class="input__wrapper"
+        style="--checkbox-svg-size: 1.25rem;"
       >
         <input
           class="checkbox__input"
           data-bootstrap-override="checkbox"
           id="3"
-          style="--checkbox-svg-size: 1.25rem;"
           type="checkbox"
         />
         <svg
@@ -156,12 +156,12 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
     >
       <span
         class="input__wrapper"
+        style="--checkbox-svg-size: 1.25rem;"
       >
         <input
           class="checkbox__input"
           data-bootstrap-override="checkbox"
           id="4"
-          style="--checkbox-svg-size: 1.25rem;"
           type="checkbox"
         />
         <svg
@@ -202,12 +202,12 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
     >
       <span
         class="input__wrapper"
+        style="--checkbox-svg-size: 1.25rem;"
       >
         <input
           class="checkbox__input"
           data-bootstrap-override="checkbox"
           id="5"
-          style="--checkbox-svg-size: 1.25rem;"
           type="checkbox"
         />
         <svg

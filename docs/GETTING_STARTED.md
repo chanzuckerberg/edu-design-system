@@ -2,8 +2,6 @@
 
 EDS is a design system that provides foundations to create a consistent, accessible web experience across products.
 
-## What Does EDS Provide? [TODO]
-
 ## Storybook structure
 
 [Storybook](https://storybook.js.org/) is a tool that provides a place for developers to build, document, and ship components as well as prototype ideas and pages.
@@ -12,8 +10,8 @@ EDS' Storybook structure follows the [Atomic Design](https://bradfrost.com/blog/
 
 The navigation consists of:
 
-- **LegacyTokens** contains legacy tokens before the system was refactored [TODO]
-- **LegacyTypographySizes** contains legacy typography sizes before the system was refactored [TODO]
+- **LegacyTokens** contains legacy tokens before the system was refactored
+- **LegacyTypographySizes** contains legacy typography sizes before the system was refactored
 - **DesignTokens** includes colors, typography, and other properties that build a theme across the system. These are shipped with the system to be consumed by product teams.
 - **Documentation** contains documenation around code guidelines, component structure, icon, layout, token, and typography
 - **Atoms** are the smallest level of components within the system. These are shipped with the system to be consumed by product teams.

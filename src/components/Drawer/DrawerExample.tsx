@@ -1,20 +1,8 @@
-import clsx from 'clsx';
-import React, { ReactNode, useState, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import { Drawer } from './Drawer';
-import Button from '../../components/Button';
-import ButtonGroup from '../../components/ButtonGroup';
-import Heading from '../../components/Heading';
-
-export interface Props {
-  /**
-   * Child node(s) that can be nested inside component
-   */
-  children: ReactNode;
-  /**
-   * CSS class names that can be appended to the component.
-   */
-  className?: string;
-}
+import Button from '../Button';
+import ButtonGroup from '../ButtonGroup';
+import Heading from '../Heading';
 
 /**
  * BETA: This component is still a work in progress and is subject to change.
@@ -23,9 +11,9 @@ export interface Props {
  * import {DrawerExample} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * An example of a controlled Drawer for use as a story.
  */
-export const DrawerExample = ({ className, ...other }: Props) => {
+export const DrawerExample = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const drawerButton = useRef<HTMLButtonElement>(null);
 
@@ -42,13 +30,8 @@ export const DrawerExample = ({ className, ...other }: Props) => {
     }
     setDrawerOpen(false);
   }
-  const componentClassName = clsx('tooltip-drawer', className, {});
   return (
-    <div
-      className={componentClassName}
-      style={{ padding: '1rem', minHeight: '500px' }}
-      {...other}
-    >
+    <div style={{ padding: '1rem', minHeight: '500px' }}>
       <Button onClick={openDrawerExample} ref={drawerButton} variant="primary">
         Open Drawer
       </Button>
