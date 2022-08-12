@@ -720,7 +720,9 @@ exports[`<Checkbox /> WithCustomPositioning story renders snapshot 1`] = `
 <div
   style="margin: 0.25rem;"
 >
-  <span>
+  <div
+    style="display: flex; align-items: center;"
+  >
     <label
       class="label label--md"
       data-bootstrap-override="label"
@@ -751,7 +753,7 @@ exports[`<Checkbox /> WithCustomPositioning story renders snapshot 1`] = `
         />
       </svg>
     </span>
-  </span>
+  </div>
 </div>
 `;
 

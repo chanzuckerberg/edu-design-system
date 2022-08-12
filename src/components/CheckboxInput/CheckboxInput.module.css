@@ -21,10 +21,7 @@
  * The visually hidden input element for the checkbox. The visual checkmark is provided by an svg element.
  * 1) Removes default margins placed by browser for checkboxes.
  * 2) Remove the checkbox from the page flow, positioning it on top of the SVG.
- * 3) Hide the input element visually.
- *    This ensures the checkbox is still "physically" present so that all users,
- *    especially on touch screen readers, still interact with the real checkbox element
- *    where it would naturally be present.
+*  3) Set same dimensions as the CheckboxSvg element.
  * 4) Hide the input element visually.
  *    This ensures the checkbox is still "physically" present so that all users,
  *    especially on touch screen readers, still interact with the real checkbox element
