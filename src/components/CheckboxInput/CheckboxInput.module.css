@@ -4,6 +4,7 @@
     # CHECKBOX INPUT
 \*------------------------------------*/
 .input__wrapper {
+  position: relative;
   display: flex;
   align-items: center;
   align-self: flex-start;
@@ -18,12 +19,20 @@
    *    where it would naturally be present.
    */
 .checkbox__input {
-  @mixin visuallyHide;
+  cursor: pointer;
+
+  margin: 0; /* 1 */
+
+  position: absolute; /* 2 */
+  left: 0.25rem;
+  height: var(--eds-size-2); /* 3 */
+  width: var(--eds-size-2);
+
+  opacity: 0; /* 4 */
 }
 
 .checkbox__icon {
   color: var(--eds-theme-color-icon-brand-primary);
-  cursor: pointer;
 }
 .checkbox__input:focus + .checkbox__icon {
   @mixin focus; /* 1 */
@@ -35,5 +44,7 @@
    */
 .checkbox__icon--disabled {
   color: var(--eds-theme-color-icon-disabled);
+}
+.checkbox__input:disabled {
   cursor: not-allowed;
 }
