@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 import React, { MouseEventHandler, ReactNode } from 'react';
-import { EdsThemeColorIconNeutralSubtle } from '../../../src/tokens-dist/ts/colors';
 import Button from '../../components/Button';
 import Icon from '../../components/Icon';
+import { EdsThemeColorIconNeutralSubtle } from '../../tokens-dist/ts/colors';
 import styles from '../Drawer/Drawer.module.css';
 
 export type Props = {
