@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.1.1](https://github.com/chanzuckerberg/edu-design-system/compare/v3.1.0...v3.1.1) (2022-08-12)
+
+
+### Bug Fixes
+
+* **drawerheader:** correctly refer to color token ([a92c92b](https://github.com/chanzuckerberg/edu-design-system/commit/a92c92b1df000737839bb2473cc60c8563549b1e))
+* **drawerheader:** correctly refer to color token ([84409b3](https://github.com/chanzuckerberg/edu-design-system/commit/84409b372e2c0c84014bae52747a336b167eb1c1))
+
 ## [3.1.0](https://github.com/chanzuckerberg/edu-design-system/compare/v1.5.1...v3.1.0) (2022-08-12)
 
 
