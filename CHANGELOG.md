@@ -2,6 +2,61 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.1.0](https://github.com/chanzuckerberg/edu-design-system/compare/v1.5.1...v3.1.0) (2022-08-12)
+
+
+### Features
+
+* added getting started. removed examples nav ([3a722ba](https://github.com/chanzuckerberg/edu-design-system/commit/3a722baefaa04e5b6454da9a97c55393ce1493e4))
+* buttonactioncalloutcard addition ([eb193d5](https://github.com/chanzuckerberg/edu-design-system/commit/eb193d5e089ca6e9c3dbaadff9858eb69ec460f6))
+* **filters:** add filters component 1/n ([dcb7714](https://github.com/chanzuckerberg/edu-design-system/commit/dcb77148fe89b56d3e01671d1c8cb64e4933c16e))
+* **filters:** add filters logic ([48f3d1b](https://github.com/chanzuckerberg/edu-design-system/commit/48f3d1b79b7d67009d1ce57c37cf59ed9322a9e3))
+* **filters:** add overflow detection ([a3e6c79](https://github.com/chanzuckerberg/edu-design-system/commit/a3e6c790fa71886918afbabdd8999cb9c07c2b0c))
+* **filters:** complete styling pass 1 of filters ([09c2c4f](https://github.com/chanzuckerberg/edu-design-system/commit/09c2c4f44cd90892197282d19d42cdd1f653086d))
+* **filters:** init filters, filterscheckboxfield ([404b463](https://github.com/chanzuckerberg/edu-design-system/commit/404b46328f356d6e2369ade70f432321835ce3c8))
+* **filters:** style filter toggle button ([5591c5f](https://github.com/chanzuckerberg/edu-design-system/commit/5591c5fca82c8146098741bbafc64b4edb9c4ae8))
+* getting started page ([13c2ab6](https://github.com/chanzuckerberg/edu-design-system/commit/13c2ab69bbb4362124a47f424dd41a83c2cdd24b))
+* overflow table functionality ([74c8b5c](https://github.com/chanzuckerberg/edu-design-system/commit/74c8b5cd878e1020982c9d604ebc92580cbc53cd))
+* roughly populate getting started ([7099a1e](https://github.com/chanzuckerberg/edu-design-system/commit/7099a1e550af156a6ff258cded1fd7c06d8d4e20))
+* scaffold out feedback overview checkpoint ([1a8ce07](https://github.com/chanzuckerberg/edu-design-system/commit/1a8ce07cd320d6fb2ea7098f49d3c4fbee313b6f))
+* stacked block. active primary nav items ([cf95896](https://github.com/chanzuckerberg/edu-design-system/commit/cf95896184983ae104db9c533002e9475940c693))
+* **table:** comments ([7ef4996](https://github.com/chanzuckerberg/edu-design-system/commit/7ef4996ed7072cfbb02c7704a7c8b8b9dac5243a))
+* **table:** icon ([1150f21](https://github.com/chanzuckerberg/edu-design-system/commit/1150f21af74138cecd813ade0d42ebfac128e0c9))
+* **table:** nit spacing ([caf42a6](https://github.com/chanzuckerberg/edu-design-system/commit/caf42a663ca60f05f910cee862e44483349d1348))
+* **tables:** sortable ([7551b72](https://github.com/chanzuckerberg/edu-design-system/commit/7551b72a1cf3a164760887e79c302dd7eef12542))
+* **table:** test ([7bb0f93](https://github.com/chanzuckerberg/edu-design-system/commit/7bb0f938dd6e7591d454186822ba0d15e05830c2))
+* **table:** tests ([ef7fe62](https://github.com/chanzuckerberg/edu-design-system/commit/ef7fe625c6d25c929c5c59d152a8f52eb2922063))
+* **text, heading:** allow all 3 neutral text colors via variant prop ([01b2250](https://github.com/chanzuckerberg/edu-design-system/commit/01b2250cf4b1d96f1881a4c96b6f48a5f2fbe9f6))
+
+
+### Bug Fixes
+
+* active primary nav items pass down ([c79fabc](https://github.com/chanzuckerberg/edu-design-system/commit/c79fabc561b2a1fed08678f858ddc24b5de498a3))
+* adjust table header cell padding table body ([6d8fba7](https://github.com/chanzuckerberg/edu-design-system/commit/6d8fba711156c2f0572c40c9da4544e9394ade16))
+* adjusted alignment of tooltip section ([9e2a28c](https://github.com/chanzuckerberg/edu-design-system/commit/9e2a28c34ba37b5c41a930ab8dc4de57722b81ba))
+* adjusted section/page header spacing ([c45076d](https://github.com/chanzuckerberg/edu-design-system/commit/c45076d6fadde1b1cfe32abffe08de715af3339d))
+* **banner, page-level-banner:** darken content text to base ([625a7a5](https://github.com/chanzuckerberg/edu-design-system/commit/625a7a599c2edf6e8d48f0e5d9ba555ce9d43d01))
+* **banner:** move close button to end of content ([7e3da1d](https://github.com/chanzuckerberg/edu-design-system/commit/7e3da1d0e08c0d985d4e3fa5f5829ceba043d5a4))
+* change kicker to overline to align teams ([d17c267](https://github.com/chanzuckerberg/edu-design-system/commit/d17c2676cd7520b81b1b061271fb7f335745425c))
+* changed stacked variant to lined between rows ([ff9a507](https://github.com/chanzuckerberg/edu-design-system/commit/ff9a507eb9e40f0a51ee3a8235d4c12d8c6f263a))
+* descriptions and cleanup in proj checkpoint ([6b46dac](https://github.com/chanzuckerberg/edu-design-system/commit/6b46dac37210e5f7208a36ea1a4d6be1347cab50))
+* **drawer:** make on click outside to close work ([4ef99a4](https://github.com/chanzuckerberg/edu-design-system/commit/4ef99a4896ba16aef5eea67f5389b49eb268f024))
+* inline styles ([a3a0f6a](https://github.com/chanzuckerberg/edu-design-system/commit/a3a0f6a6e8f2f697c3adb3937d4f8345fd3586e2))
+* optional meta in project card ([c004c49](https://github.com/chanzuckerberg/edu-design-system/commit/c004c4970130cd8740d34124da9a12b1a53ddabf))
+* project overview typography sizes ([ce7e425](https://github.com/chanzuckerberg/edu-design-system/commit/ce7e425d8920ac3380a37b687b63fe3be3906a2b))
+* **projectcard:** make numberAriaLabel optional but warn ([43b369b](https://github.com/chanzuckerberg/edu-design-system/commit/43b369b68401532bbc21d882c0f63e226bf38ede))
+* remove unused class name from stacked block ([14aa47c](https://github.com/chanzuckerberg/edu-design-system/commit/14aa47c94c57683b54a5d0486ea158b1c1e693c6))
+* replaced section indentation ([ad0d7e8](https://github.com/chanzuckerberg/edu-design-system/commit/ad0d7e8e741030cd6ff3c6a6e4e40287de9d8a54))
+* spacing and positioning table header cell ([f6012dd](https://github.com/chanzuckerberg/edu-design-system/commit/f6012dd9c5c34ddc2de95b74b2d03dbef19e0588))
+* stacked block location. plopfile change ([2871f1d](https://github.com/chanzuckerberg/edu-design-system/commit/2871f1d6ba5b6e8fd2d866f220ae7185b7935806))
+* storybook page cleanup ([31f41e1](https://github.com/chanzuckerberg/edu-design-system/commit/31f41e16c0fd5accc2015653bec58c3178455b6b))
+* test and lint fixes ([2ab2741](https://github.com/chanzuckerberg/edu-design-system/commit/2ab2741bc809dd82d5724f054d48b0a0c3a847c2))
+* ts error for getting started ([8d6caef](https://github.com/chanzuckerberg/edu-design-system/commit/8d6caefb9d50d5ac33e5f6f69ea92ced50ad74af))
+* update stacked block tests ([5baf891](https://github.com/chanzuckerberg/edu-design-system/commit/5baf8916a41ab5dd5a0164e50c936243b51a6520))
+* update table styles stacked ([30e0707](https://github.com/chanzuckerberg/edu-design-system/commit/30e0707213c8d6b291c76aed709fce2d97564594))
+* update tests ([fadd955](https://github.com/chanzuckerberg/edu-design-system/commit/fadd955b66a66a4d03abe397cd614cdc4a15ea6f))
+* yarn test addition table object ([1a6904e](https://github.com/chanzuckerberg/edu-design-system/commit/1a6904e08dd192f88f7b7dfe837fa7bb7a97804b))
+
 ## [3.0.0](https://github.com/chanzuckerberg/edu-design-system/compare/v2.0.0...v3.0.0) (2022-07-27)
 
 ### ⚠ BREAKING CHANGES
