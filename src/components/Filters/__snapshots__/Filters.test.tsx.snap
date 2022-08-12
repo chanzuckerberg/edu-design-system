@@ -62,11 +62,10 @@ exports[`<Filters /> DefaultInteractive story renders snapshot 1`] = `
           class="filters-fieldset__checkboxes fieldset-items"
         >
           <div
-            class="checkbox"
+            class="checkbox checkbox--md"
           >
             <span
               class="input__wrapper"
-              style="--checkbox-svg-size: 1.25rem;"
             >
               <input
                 class="checkbox__input"
@@ -77,25 +76,15 @@ exports[`<Filters /> DefaultInteractive story renders snapshot 1`] = `
               />
               <svg
                 aria-hidden="true"
-                height="1.25rem"
-                viewBox="0 0 20 20"
-                width="1.25rem"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <rect
-                  class="checkmark__outline"
-                  fill="none"
-                  height="18"
-                  rx="3"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  width="18"
-                  x="1"
-                  y="1"
-                />
                 <use
-                  class="checkmark__content"
-                  fill="none"
-                  xlink:href="test-file-stub#check"
+                  xlink:href="test-file-stub#checkbox-unchecked"
                 />
               </svg>
             </span>
@@ -103,93 +92,34 @@ exports[`<Filters /> DefaultInteractive story renders snapshot 1`] = `
               class="label label--md"
               data-bootstrap-override="label"
               for="4"
-              style="--checkbox-svg-size: 1.25rem;"
             >
               Filters label 1
             </label>
           </div>
           <div
-            class="checkbox"
+            class="checkbox checkbox--md"
           >
             <span
               class="input__wrapper"
-              style="--checkbox-svg-size: 1.25rem;"
-            >
-              <input
-                class="checkbox__input"
-                data-bootstrap-override="checkbox"
-                id="5"
-                type="checkbox"
-                value="Filters label 2"
-              />
-              <svg
-                aria-hidden="true"
-                height="1.25rem"
-                viewBox="0 0 20 20"
-                width="1.25rem"
-              >
-                <rect
-                  class="checkmark__outline"
-                  fill="none"
-                  height="18"
-                  rx="3"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  width="18"
-                  x="1"
-                  y="1"
-                />
-                <use
-                  class="checkmark__content"
-                  fill="none"
-                  xlink:href="test-file-stub#check"
-                />
-              </svg>
-            </span>
-            <label
-              class="label label--md"
-              data-bootstrap-override="label"
-              for="5"
-              style="--checkbox-svg-size: 1.25rem;"
-            >
-              Filters label 2
-            </label>
-          </div>
-          <div
-            class="checkbox"
-          >
-            <span
-              class="input__wrapper"
-              style="--checkbox-svg-size: 1.25rem;"
             >
               <input
                 class="checkbox__input"
                 data-bootstrap-override="checkbox"
                 id="6"
                 type="checkbox"
-                value="Filters label 3"
+                value="Filters label 2"
               />
               <svg
                 aria-hidden="true"
-                height="1.25rem"
-                viewBox="0 0 20 20"
-                width="1.25rem"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <rect
-                  class="checkmark__outline"
-                  fill="none"
-                  height="18"
-                  rx="3"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  width="18"
-                  x="1"
-                  y="1"
-                />
                 <use
-                  class="checkmark__content"
-                  fill="none"
-                  xlink:href="test-file-stub#check"
+                  xlink:href="test-file-stub#checkbox-unchecked"
                 />
               </svg>
             </span>
@@ -197,7 +127,41 @@ exports[`<Filters /> DefaultInteractive story renders snapshot 1`] = `
               class="label label--md"
               data-bootstrap-override="label"
               for="6"
-              style="--checkbox-svg-size: 1.25rem;"
+            >
+              Filters label 2
+            </label>
+          </div>
+          <div
+            class="checkbox checkbox--md"
+          >
+            <span
+              class="input__wrapper"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="8"
+                type="checkbox"
+                value="Filters label 3"
+              />
+              <svg
+                aria-hidden="true"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <use
+                  xlink:href="test-file-stub#checkbox-unchecked"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--md"
+              data-bootstrap-override="label"
+              for="8"
             >
               Filters label 3
             </label>
@@ -237,7 +201,7 @@ exports[`<Filters /> FiltersDrawerComponent story renders snapshot 1`] = `
   class="drawer__container drawer__container--is-active filters-drawer__container"
 >
   <article
-    aria-labelledby="71"
+    aria-labelledby="125"
     aria-modal="true"
     class="drawer filters-drawer"
     role="dialog"
@@ -248,7 +212,7 @@ exports[`<Filters /> FiltersDrawerComponent story renders snapshot 1`] = `
     >
       <h3
         class="filters-drawer__title heading heading--size-headline-sm"
-        id="71"
+        id="125"
       >
         Filters
       </h3>
@@ -267,7 +231,7 @@ exports[`<Filters /> FiltersDrawerComponent story renders snapshot 1`] = `
           xmlns="http://www.w3.org/2000/svg"
         >
           <title
-            id="72"
+            id="126"
           >
             close filters
           </title>
@@ -293,142 +257,106 @@ exports[`<Filters /> FiltersDrawerComponent story renders snapshot 1`] = `
           class="filters-fieldset__checkboxes fieldset-items"
         >
           <div
-            class="checkbox"
+            class="checkbox checkbox--md"
           >
             <span
               class="input__wrapper"
-              style="--checkbox-svg-size: 1.25rem;"
             >
               <input
                 class="checkbox__input"
                 data-bootstrap-override="checkbox"
-                id="73"
+                id="127"
                 type="checkbox"
                 value="segment1label1"
               />
               <svg
                 aria-hidden="true"
-                height="1.25rem"
-                viewBox="0 0 20 20"
-                width="1.25rem"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <rect
-                  class="checkmark__outline"
-                  fill="none"
-                  height="18"
-                  rx="3"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  width="18"
-                  x="1"
-                  y="1"
-                />
                 <use
-                  class="checkmark__content"
-                  fill="none"
-                  xlink:href="test-file-stub#check"
+                  xlink:href="test-file-stub#checkbox-unchecked"
                 />
               </svg>
             </span>
             <label
               class="label label--md"
               data-bootstrap-override="label"
-              for="73"
-              style="--checkbox-svg-size: 1.25rem;"
+              for="127"
             >
               Filters long label 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
             </label>
           </div>
           <div
-            class="checkbox"
+            class="checkbox checkbox--md"
           >
             <span
               class="input__wrapper"
-              style="--checkbox-svg-size: 1.25rem;"
             >
               <input
                 class="checkbox__input"
                 data-bootstrap-override="checkbox"
-                id="74"
+                id="129"
                 type="checkbox"
                 value="segment1label2"
               />
               <svg
                 aria-hidden="true"
-                height="1.25rem"
-                viewBox="0 0 20 20"
-                width="1.25rem"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <rect
-                  class="checkmark__outline"
-                  fill="none"
-                  height="18"
-                  rx="3"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  width="18"
-                  x="1"
-                  y="1"
-                />
                 <use
-                  class="checkmark__content"
-                  fill="none"
-                  xlink:href="test-file-stub#check"
+                  xlink:href="test-file-stub#checkbox-unchecked"
                 />
               </svg>
             </span>
             <label
               class="label label--md"
               data-bootstrap-override="label"
-              for="74"
-              style="--checkbox-svg-size: 1.25rem;"
+              for="129"
             >
               Filters label 2
             </label>
           </div>
           <div
-            class="checkbox"
+            class="checkbox checkbox--md"
           >
             <span
               class="input__wrapper"
-              style="--checkbox-svg-size: 1.25rem;"
             >
               <input
                 class="checkbox__input"
                 data-bootstrap-override="checkbox"
-                id="75"
+                id="131"
                 type="checkbox"
                 value="segment1label3"
               />
               <svg
                 aria-hidden="true"
-                height="1.25rem"
-                viewBox="0 0 20 20"
-                width="1.25rem"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <rect
-                  class="checkmark__outline"
-                  fill="none"
-                  height="18"
-                  rx="3"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  width="18"
-                  x="1"
-                  y="1"
-                />
                 <use
-                  class="checkmark__content"
-                  fill="none"
-                  xlink:href="test-file-stub#check"
+                  xlink:href="test-file-stub#checkbox-unchecked"
                 />
               </svg>
             </span>
             <label
               class="label label--md"
               data-bootstrap-override="label"
-              for="75"
-              style="--checkbox-svg-size: 1.25rem;"
+              for="131"
             >
               Filters label 3
             </label>
@@ -448,142 +376,106 @@ exports[`<Filters /> FiltersDrawerComponent story renders snapshot 1`] = `
           class="filters-fieldset__checkboxes fieldset-items"
         >
           <div
-            class="checkbox"
+            class="checkbox checkbox--md"
           >
             <span
               class="input__wrapper"
-              style="--checkbox-svg-size: 1.25rem;"
             >
               <input
                 class="checkbox__input"
                 data-bootstrap-override="checkbox"
-                id="76"
+                id="133"
                 type="checkbox"
                 value="segment2label1"
               />
               <svg
                 aria-hidden="true"
-                height="1.25rem"
-                viewBox="0 0 20 20"
-                width="1.25rem"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <rect
-                  class="checkmark__outline"
-                  fill="none"
-                  height="18"
-                  rx="3"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  width="18"
-                  x="1"
-                  y="1"
-                />
                 <use
-                  class="checkmark__content"
-                  fill="none"
-                  xlink:href="test-file-stub#check"
+                  xlink:href="test-file-stub#checkbox-unchecked"
                 />
               </svg>
             </span>
             <label
               class="label label--md"
               data-bootstrap-override="label"
-              for="76"
-              style="--checkbox-svg-size: 1.25rem;"
+              for="133"
             >
               Filters label 1
             </label>
           </div>
           <div
-            class="checkbox"
+            class="checkbox checkbox--md"
           >
             <span
               class="input__wrapper"
-              style="--checkbox-svg-size: 1.25rem;"
             >
               <input
                 class="checkbox__input"
                 data-bootstrap-override="checkbox"
-                id="77"
+                id="135"
                 type="checkbox"
                 value="segment2label2"
               />
               <svg
                 aria-hidden="true"
-                height="1.25rem"
-                viewBox="0 0 20 20"
-                width="1.25rem"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <rect
-                  class="checkmark__outline"
-                  fill="none"
-                  height="18"
-                  rx="3"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  width="18"
-                  x="1"
-                  y="1"
-                />
                 <use
-                  class="checkmark__content"
-                  fill="none"
-                  xlink:href="test-file-stub#check"
+                  xlink:href="test-file-stub#checkbox-unchecked"
                 />
               </svg>
             </span>
             <label
               class="label label--md"
               data-bootstrap-override="label"
-              for="77"
-              style="--checkbox-svg-size: 1.25rem;"
+              for="135"
             >
               Filters long label 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
             </label>
           </div>
           <div
-            class="checkbox"
+            class="checkbox checkbox--md"
           >
             <span
               class="input__wrapper"
-              style="--checkbox-svg-size: 1.25rem;"
             >
               <input
                 class="checkbox__input"
                 data-bootstrap-override="checkbox"
-                id="78"
+                id="137"
                 type="checkbox"
                 value="segment2label3"
               />
               <svg
                 aria-hidden="true"
-                height="1.25rem"
-                viewBox="0 0 20 20"
-                width="1.25rem"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <rect
-                  class="checkmark__outline"
-                  fill="none"
-                  height="18"
-                  rx="3"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  width="18"
-                  x="1"
-                  y="1"
-                />
                 <use
-                  class="checkmark__content"
-                  fill="none"
-                  xlink:href="test-file-stub#check"
+                  xlink:href="test-file-stub#checkbox-unchecked"
                 />
               </svg>
             </span>
             <label
               class="label label--md"
               data-bootstrap-override="label"
-              for="78"
-              style="--checkbox-svg-size: 1.25rem;"
+              for="137"
             >
               Filters label 3
             </label>
@@ -603,142 +495,106 @@ exports[`<Filters /> FiltersDrawerComponent story renders snapshot 1`] = `
           class="filters-fieldset__checkboxes fieldset-items"
         >
           <div
-            class="checkbox"
+            class="checkbox checkbox--md"
           >
             <span
               class="input__wrapper"
-              style="--checkbox-svg-size: 1.25rem;"
             >
               <input
                 class="checkbox__input"
                 data-bootstrap-override="checkbox"
-                id="79"
+                id="139"
                 type="checkbox"
                 value="segment3label1"
               />
               <svg
                 aria-hidden="true"
-                height="1.25rem"
-                viewBox="0 0 20 20"
-                width="1.25rem"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <rect
-                  class="checkmark__outline"
-                  fill="none"
-                  height="18"
-                  rx="3"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  width="18"
-                  x="1"
-                  y="1"
-                />
                 <use
-                  class="checkmark__content"
-                  fill="none"
-                  xlink:href="test-file-stub#check"
+                  xlink:href="test-file-stub#checkbox-unchecked"
                 />
               </svg>
             </span>
             <label
               class="label label--md"
               data-bootstrap-override="label"
-              for="79"
-              style="--checkbox-svg-size: 1.25rem;"
+              for="139"
             >
               Filters label 1
             </label>
           </div>
           <div
-            class="checkbox"
+            class="checkbox checkbox--md"
           >
             <span
               class="input__wrapper"
-              style="--checkbox-svg-size: 1.25rem;"
             >
               <input
                 class="checkbox__input"
                 data-bootstrap-override="checkbox"
-                id="80"
+                id="141"
                 type="checkbox"
                 value="segment3label2"
               />
               <svg
                 aria-hidden="true"
-                height="1.25rem"
-                viewBox="0 0 20 20"
-                width="1.25rem"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <rect
-                  class="checkmark__outline"
-                  fill="none"
-                  height="18"
-                  rx="3"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  width="18"
-                  x="1"
-                  y="1"
-                />
                 <use
-                  class="checkmark__content"
-                  fill="none"
-                  xlink:href="test-file-stub#check"
+                  xlink:href="test-file-stub#checkbox-unchecked"
                 />
               </svg>
             </span>
             <label
               class="label label--md"
               data-bootstrap-override="label"
-              for="80"
-              style="--checkbox-svg-size: 1.25rem;"
+              for="141"
             >
               Filters label 2
             </label>
           </div>
           <div
-            class="checkbox"
+            class="checkbox checkbox--md"
           >
             <span
               class="input__wrapper"
-              style="--checkbox-svg-size: 1.25rem;"
             >
               <input
                 class="checkbox__input"
                 data-bootstrap-override="checkbox"
-                id="81"
+                id="143"
                 type="checkbox"
                 value="segment3label3"
               />
               <svg
                 aria-hidden="true"
-                height="1.25rem"
-                viewBox="0 0 20 20"
-                width="1.25rem"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <rect
-                  class="checkmark__outline"
-                  fill="none"
-                  height="18"
-                  rx="3"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  width="18"
-                  x="1"
-                  y="1"
-                />
                 <use
-                  class="checkmark__content"
-                  fill="none"
-                  xlink:href="test-file-stub#check"
+                  xlink:href="test-file-stub#checkbox-unchecked"
                 />
               </svg>
             </span>
             <label
               class="label label--md"
               data-bootstrap-override="label"
-              for="81"
-              style="--checkbox-svg-size: 1.25rem;"
+              for="143"
             >
               Filters long label 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
             </label>
@@ -758,283 +614,211 @@ exports[`<Filters /> FiltersDrawerComponent story renders snapshot 1`] = `
           class="filters-fieldset__checkboxes fieldset-items"
         >
           <div
-            class="checkbox"
+            class="checkbox checkbox--md"
           >
             <span
               class="input__wrapper"
-              style="--checkbox-svg-size: 1.25rem;"
             >
               <input
                 class="checkbox__input"
                 data-bootstrap-override="checkbox"
-                id="82"
+                id="145"
                 type="checkbox"
                 value="segment4label1"
               />
               <svg
                 aria-hidden="true"
-                height="1.25rem"
-                viewBox="0 0 20 20"
-                width="1.25rem"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <rect
-                  class="checkmark__outline"
-                  fill="none"
-                  height="18"
-                  rx="3"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  width="18"
-                  x="1"
-                  y="1"
-                />
                 <use
-                  class="checkmark__content"
-                  fill="none"
-                  xlink:href="test-file-stub#check"
+                  xlink:href="test-file-stub#checkbox-unchecked"
                 />
               </svg>
             </span>
             <label
               class="label label--md"
               data-bootstrap-override="label"
-              for="82"
-              style="--checkbox-svg-size: 1.25rem;"
+              for="145"
             >
               Filters label 1
             </label>
           </div>
           <div
-            class="checkbox"
+            class="checkbox checkbox--md"
           >
             <span
               class="input__wrapper"
-              style="--checkbox-svg-size: 1.25rem;"
             >
               <input
                 class="checkbox__input"
                 data-bootstrap-override="checkbox"
-                id="83"
+                id="147"
                 type="checkbox"
                 value="segment4label2"
               />
               <svg
                 aria-hidden="true"
-                height="1.25rem"
-                viewBox="0 0 20 20"
-                width="1.25rem"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <rect
-                  class="checkmark__outline"
-                  fill="none"
-                  height="18"
-                  rx="3"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  width="18"
-                  x="1"
-                  y="1"
-                />
                 <use
-                  class="checkmark__content"
-                  fill="none"
-                  xlink:href="test-file-stub#check"
+                  xlink:href="test-file-stub#checkbox-unchecked"
                 />
               </svg>
             </span>
             <label
               class="label label--md"
               data-bootstrap-override="label"
-              for="83"
-              style="--checkbox-svg-size: 1.25rem;"
+              for="147"
             >
               Filters label 2
             </label>
           </div>
           <div
-            class="checkbox"
+            class="checkbox checkbox--md"
           >
             <span
               class="input__wrapper"
-              style="--checkbox-svg-size: 1.25rem;"
             >
               <input
                 class="checkbox__input"
                 data-bootstrap-override="checkbox"
-                id="84"
+                id="149"
                 type="checkbox"
                 value="segment4label3"
               />
               <svg
                 aria-hidden="true"
-                height="1.25rem"
-                viewBox="0 0 20 20"
-                width="1.25rem"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <rect
-                  class="checkmark__outline"
-                  fill="none"
-                  height="18"
-                  rx="3"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  width="18"
-                  x="1"
-                  y="1"
-                />
                 <use
-                  class="checkmark__content"
-                  fill="none"
-                  xlink:href="test-file-stub#check"
+                  xlink:href="test-file-stub#checkbox-unchecked"
                 />
               </svg>
             </span>
             <label
               class="label label--md"
               data-bootstrap-override="label"
-              for="84"
-              style="--checkbox-svg-size: 1.25rem;"
+              for="149"
             >
               Filters label 3
             </label>
           </div>
           <div
-            class="checkbox"
+            class="checkbox checkbox--md"
           >
             <span
               class="input__wrapper"
-              style="--checkbox-svg-size: 1.25rem;"
             >
               <input
                 class="checkbox__input"
                 data-bootstrap-override="checkbox"
-                id="85"
+                id="151"
                 type="checkbox"
                 value="segment4label4"
               />
               <svg
                 aria-hidden="true"
-                height="1.25rem"
-                viewBox="0 0 20 20"
-                width="1.25rem"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <rect
-                  class="checkmark__outline"
-                  fill="none"
-                  height="18"
-                  rx="3"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  width="18"
-                  x="1"
-                  y="1"
-                />
                 <use
-                  class="checkmark__content"
-                  fill="none"
-                  xlink:href="test-file-stub#check"
+                  xlink:href="test-file-stub#checkbox-unchecked"
                 />
               </svg>
             </span>
             <label
               class="label label--md"
               data-bootstrap-override="label"
-              for="85"
-              style="--checkbox-svg-size: 1.25rem;"
+              for="151"
             >
               Filters label 4
             </label>
           </div>
           <div
-            class="checkbox"
+            class="checkbox checkbox--md"
           >
             <span
               class="input__wrapper"
-              style="--checkbox-svg-size: 1.25rem;"
             >
               <input
                 class="checkbox__input"
                 data-bootstrap-override="checkbox"
-                id="86"
+                id="153"
                 type="checkbox"
                 value="segment4label5"
               />
               <svg
                 aria-hidden="true"
-                height="1.25rem"
-                viewBox="0 0 20 20"
-                width="1.25rem"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <rect
-                  class="checkmark__outline"
-                  fill="none"
-                  height="18"
-                  rx="3"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  width="18"
-                  x="1"
-                  y="1"
-                />
                 <use
-                  class="checkmark__content"
-                  fill="none"
-                  xlink:href="test-file-stub#check"
+                  xlink:href="test-file-stub#checkbox-unchecked"
                 />
               </svg>
             </span>
             <label
               class="label label--md"
               data-bootstrap-override="label"
-              for="86"
-              style="--checkbox-svg-size: 1.25rem;"
+              for="153"
             >
               Filters label 5
             </label>
           </div>
           <div
-            class="checkbox"
+            class="checkbox checkbox--md"
           >
             <span
               class="input__wrapper"
-              style="--checkbox-svg-size: 1.25rem;"
             >
               <input
                 class="checkbox__input"
                 data-bootstrap-override="checkbox"
-                id="87"
+                id="155"
                 type="checkbox"
                 value="segment4label6"
               />
               <svg
                 aria-hidden="true"
-                height="1.25rem"
-                viewBox="0 0 20 20"
-                width="1.25rem"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <rect
-                  class="checkmark__outline"
-                  fill="none"
-                  height="18"
-                  rx="3"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  width="18"
-                  x="1"
-                  y="1"
-                />
                 <use
-                  class="checkmark__content"
-                  fill="none"
-                  xlink:href="test-file-stub#check"
+                  xlink:href="test-file-stub#checkbox-unchecked"
                 />
               </svg>
             </span>
             <label
               class="label label--md"
               data-bootstrap-override="label"
-              for="87"
-              style="--checkbox-svg-size: 1.25rem;"
+              for="155"
             >
               Filters label 6
             </label>
@@ -1074,7 +858,7 @@ exports[`<Filters /> FiltersDrawerComponentNoLegend story renders snapshot 1`] =
   class="drawer__container drawer__container--is-active filters-drawer__container"
 >
   <article
-    aria-labelledby="105"
+    aria-labelledby="189"
     aria-modal="true"
     class="drawer filters-drawer"
     role="dialog"
@@ -1085,7 +869,7 @@ exports[`<Filters /> FiltersDrawerComponentNoLegend story renders snapshot 1`] =
     >
       <h3
         class="filters-drawer__title heading heading--size-headline-sm"
-        id="105"
+        id="189"
       >
         Filters
       </h3>
@@ -1104,7 +888,7 @@ exports[`<Filters /> FiltersDrawerComponentNoLegend story renders snapshot 1`] =
           xmlns="http://www.w3.org/2000/svg"
         >
           <title
-            id="106"
+            id="190"
           >
             close filters
           </title>
@@ -1124,142 +908,106 @@ exports[`<Filters /> FiltersDrawerComponentNoLegend story renders snapshot 1`] =
           class="filters-fieldset__checkboxes fieldset-items"
         >
           <div
-            class="checkbox"
+            class="checkbox checkbox--md"
           >
             <span
               class="input__wrapper"
-              style="--checkbox-svg-size: 1.25rem;"
             >
               <input
                 class="checkbox__input"
                 data-bootstrap-override="checkbox"
-                id="107"
+                id="191"
                 type="checkbox"
                 value="checkbox1"
               />
               <svg
                 aria-hidden="true"
-                height="1.25rem"
-                viewBox="0 0 20 20"
-                width="1.25rem"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <rect
-                  class="checkmark__outline"
-                  fill="none"
-                  height="18"
-                  rx="3"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  width="18"
-                  x="1"
-                  y="1"
-                />
                 <use
-                  class="checkmark__content"
-                  fill="none"
-                  xlink:href="test-file-stub#check"
+                  xlink:href="test-file-stub#checkbox-unchecked"
                 />
               </svg>
             </span>
             <label
               class="label label--md"
               data-bootstrap-override="label"
-              for="107"
-              style="--checkbox-svg-size: 1.25rem;"
+              for="191"
             >
               Checkbox label 1
             </label>
           </div>
           <div
-            class="checkbox"
+            class="checkbox checkbox--md"
           >
             <span
               class="input__wrapper"
-              style="--checkbox-svg-size: 1.25rem;"
             >
               <input
                 class="checkbox__input"
                 data-bootstrap-override="checkbox"
-                id="108"
+                id="193"
                 type="checkbox"
                 value="checkbox2"
               />
               <svg
                 aria-hidden="true"
-                height="1.25rem"
-                viewBox="0 0 20 20"
-                width="1.25rem"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <rect
-                  class="checkmark__outline"
-                  fill="none"
-                  height="18"
-                  rx="3"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  width="18"
-                  x="1"
-                  y="1"
-                />
                 <use
-                  class="checkmark__content"
-                  fill="none"
-                  xlink:href="test-file-stub#check"
+                  xlink:href="test-file-stub#checkbox-unchecked"
                 />
               </svg>
             </span>
             <label
               class="label label--md"
               data-bootstrap-override="label"
-              for="108"
-              style="--checkbox-svg-size: 1.25rem;"
+              for="193"
             >
               Checkbox label 2
             </label>
           </div>
           <div
-            class="checkbox"
+            class="checkbox checkbox--md"
           >
             <span
               class="input__wrapper"
-              style="--checkbox-svg-size: 1.25rem;"
             >
               <input
                 class="checkbox__input"
                 data-bootstrap-override="checkbox"
-                id="109"
+                id="195"
                 type="checkbox"
                 value="checkbox3"
               />
               <svg
                 aria-hidden="true"
-                height="1.25rem"
-                viewBox="0 0 20 20"
-                width="1.25rem"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <rect
-                  class="checkmark__outline"
-                  fill="none"
-                  height="18"
-                  rx="3"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  width="18"
-                  x="1"
-                  y="1"
-                />
                 <use
-                  class="checkmark__content"
-                  fill="none"
-                  xlink:href="test-file-stub#check"
+                  xlink:href="test-file-stub#checkbox-unchecked"
                 />
               </svg>
             </span>
             <label
               class="label label--md"
               data-bootstrap-override="label"
-              for="109"
-              style="--checkbox-svg-size: 1.25rem;"
+              for="195"
             >
               Checkbox label 3
             </label>
@@ -1299,7 +1047,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
   class="drawer__container drawer__container--is-active filters-drawer__container"
 >
   <article
-    aria-labelledby="19"
+    aria-labelledby="28"
     aria-modal="true"
     class="drawer filters-drawer"
     role="dialog"
@@ -1310,7 +1058,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
     >
       <h3
         class="filters-drawer__title heading heading--size-headline-sm"
-        id="19"
+        id="28"
       >
         Filters
       </h3>
@@ -1329,7 +1077,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
           xmlns="http://www.w3.org/2000/svg"
         >
           <title
-            id="20"
+            id="29"
           >
             close filters
           </title>
@@ -1355,142 +1103,106 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
           class="filters-fieldset__checkboxes fieldset-items"
         >
           <div
-            class="checkbox"
+            class="checkbox checkbox--md"
           >
             <span
               class="input__wrapper"
-              style="--checkbox-svg-size: 1.25rem;"
             >
               <input
                 class="checkbox__input"
                 data-bootstrap-override="checkbox"
-                id="21"
+                id="30"
                 type="checkbox"
                 value="segment1label1"
               />
               <svg
                 aria-hidden="true"
-                height="1.25rem"
-                viewBox="0 0 20 20"
-                width="1.25rem"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <rect
-                  class="checkmark__outline"
-                  fill="none"
-                  height="18"
-                  rx="3"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  width="18"
-                  x="1"
-                  y="1"
-                />
                 <use
-                  class="checkmark__content"
-                  fill="none"
-                  xlink:href="test-file-stub#check"
+                  xlink:href="test-file-stub#checkbox-unchecked"
                 />
               </svg>
             </span>
             <label
               class="label label--md"
               data-bootstrap-override="label"
-              for="21"
-              style="--checkbox-svg-size: 1.25rem;"
+              for="30"
             >
               Filters long label 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
             </label>
           </div>
           <div
-            class="checkbox"
+            class="checkbox checkbox--md"
           >
             <span
               class="input__wrapper"
-              style="--checkbox-svg-size: 1.25rem;"
             >
               <input
                 class="checkbox__input"
                 data-bootstrap-override="checkbox"
-                id="22"
+                id="32"
                 type="checkbox"
                 value="segment1label2"
               />
               <svg
                 aria-hidden="true"
-                height="1.25rem"
-                viewBox="0 0 20 20"
-                width="1.25rem"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <rect
-                  class="checkmark__outline"
-                  fill="none"
-                  height="18"
-                  rx="3"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  width="18"
-                  x="1"
-                  y="1"
-                />
                 <use
-                  class="checkmark__content"
-                  fill="none"
-                  xlink:href="test-file-stub#check"
+                  xlink:href="test-file-stub#checkbox-unchecked"
                 />
               </svg>
             </span>
             <label
               class="label label--md"
               data-bootstrap-override="label"
-              for="22"
-              style="--checkbox-svg-size: 1.25rem;"
+              for="32"
             >
               Filters label 2
             </label>
           </div>
           <div
-            class="checkbox"
+            class="checkbox checkbox--md"
           >
             <span
               class="input__wrapper"
-              style="--checkbox-svg-size: 1.25rem;"
             >
               <input
                 class="checkbox__input"
                 data-bootstrap-override="checkbox"
-                id="23"
+                id="34"
                 type="checkbox"
                 value="segment1label3"
               />
               <svg
                 aria-hidden="true"
-                height="1.25rem"
-                viewBox="0 0 20 20"
-                width="1.25rem"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <rect
-                  class="checkmark__outline"
-                  fill="none"
-                  height="18"
-                  rx="3"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  width="18"
-                  x="1"
-                  y="1"
-                />
                 <use
-                  class="checkmark__content"
-                  fill="none"
-                  xlink:href="test-file-stub#check"
+                  xlink:href="test-file-stub#checkbox-unchecked"
                 />
               </svg>
             </span>
             <label
               class="label label--md"
               data-bootstrap-override="label"
-              for="23"
-              style="--checkbox-svg-size: 1.25rem;"
+              for="34"
             >
               Filters label 3
             </label>
@@ -1510,142 +1222,106 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
           class="filters-fieldset__checkboxes fieldset-items"
         >
           <div
-            class="checkbox"
+            class="checkbox checkbox--md"
           >
             <span
               class="input__wrapper"
-              style="--checkbox-svg-size: 1.25rem;"
             >
               <input
                 class="checkbox__input"
                 data-bootstrap-override="checkbox"
-                id="24"
+                id="36"
                 type="checkbox"
                 value="segment2label1"
               />
               <svg
                 aria-hidden="true"
-                height="1.25rem"
-                viewBox="0 0 20 20"
-                width="1.25rem"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <rect
-                  class="checkmark__outline"
-                  fill="none"
-                  height="18"
-                  rx="3"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  width="18"
-                  x="1"
-                  y="1"
-                />
                 <use
-                  class="checkmark__content"
-                  fill="none"
-                  xlink:href="test-file-stub#check"
+                  xlink:href="test-file-stub#checkbox-unchecked"
                 />
               </svg>
             </span>
             <label
               class="label label--md"
               data-bootstrap-override="label"
-              for="24"
-              style="--checkbox-svg-size: 1.25rem;"
+              for="36"
             >
               Filters label 1
             </label>
           </div>
           <div
-            class="checkbox"
+            class="checkbox checkbox--md"
           >
             <span
               class="input__wrapper"
-              style="--checkbox-svg-size: 1.25rem;"
             >
               <input
                 class="checkbox__input"
                 data-bootstrap-override="checkbox"
-                id="25"
+                id="38"
                 type="checkbox"
                 value="segment2label2"
               />
               <svg
                 aria-hidden="true"
-                height="1.25rem"
-                viewBox="0 0 20 20"
-                width="1.25rem"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <rect
-                  class="checkmark__outline"
-                  fill="none"
-                  height="18"
-                  rx="3"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  width="18"
-                  x="1"
-                  y="1"
-                />
                 <use
-                  class="checkmark__content"
-                  fill="none"
-                  xlink:href="test-file-stub#check"
+                  xlink:href="test-file-stub#checkbox-unchecked"
                 />
               </svg>
             </span>
             <label
               class="label label--md"
               data-bootstrap-override="label"
-              for="25"
-              style="--checkbox-svg-size: 1.25rem;"
+              for="38"
             >
               Filters long label 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
             </label>
           </div>
           <div
-            class="checkbox"
+            class="checkbox checkbox--md"
           >
             <span
               class="input__wrapper"
-              style="--checkbox-svg-size: 1.25rem;"
             >
               <input
                 class="checkbox__input"
                 data-bootstrap-override="checkbox"
-                id="26"
+                id="40"
                 type="checkbox"
                 value="segment2label3"
               />
               <svg
                 aria-hidden="true"
-                height="1.25rem"
-                viewBox="0 0 20 20"
-                width="1.25rem"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <rect
-                  class="checkmark__outline"
-                  fill="none"
-                  height="18"
-                  rx="3"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  width="18"
-                  x="1"
-                  y="1"
-                />
                 <use
-                  class="checkmark__content"
-                  fill="none"
-                  xlink:href="test-file-stub#check"
+                  xlink:href="test-file-stub#checkbox-unchecked"
                 />
               </svg>
             </span>
             <label
               class="label label--md"
               data-bootstrap-override="label"
-              for="26"
-              style="--checkbox-svg-size: 1.25rem;"
+              for="40"
             >
               Filters label 3
             </label>
@@ -1665,142 +1341,106 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
           class="filters-fieldset__checkboxes fieldset-items"
         >
           <div
-            class="checkbox"
+            class="checkbox checkbox--md"
           >
             <span
               class="input__wrapper"
-              style="--checkbox-svg-size: 1.25rem;"
             >
               <input
                 class="checkbox__input"
                 data-bootstrap-override="checkbox"
-                id="27"
+                id="42"
                 type="checkbox"
                 value="segment3label1"
               />
               <svg
                 aria-hidden="true"
-                height="1.25rem"
-                viewBox="0 0 20 20"
-                width="1.25rem"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <rect
-                  class="checkmark__outline"
-                  fill="none"
-                  height="18"
-                  rx="3"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  width="18"
-                  x="1"
-                  y="1"
-                />
                 <use
-                  class="checkmark__content"
-                  fill="none"
-                  xlink:href="test-file-stub#check"
+                  xlink:href="test-file-stub#checkbox-unchecked"
                 />
               </svg>
             </span>
             <label
               class="label label--md"
               data-bootstrap-override="label"
-              for="27"
-              style="--checkbox-svg-size: 1.25rem;"
+              for="42"
             >
               Filters label 1
             </label>
           </div>
           <div
-            class="checkbox"
+            class="checkbox checkbox--md"
           >
             <span
               class="input__wrapper"
-              style="--checkbox-svg-size: 1.25rem;"
             >
               <input
                 class="checkbox__input"
                 data-bootstrap-override="checkbox"
-                id="28"
+                id="44"
                 type="checkbox"
                 value="segment3label2"
               />
               <svg
                 aria-hidden="true"
-                height="1.25rem"
-                viewBox="0 0 20 20"
-                width="1.25rem"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <rect
-                  class="checkmark__outline"
-                  fill="none"
-                  height="18"
-                  rx="3"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  width="18"
-                  x="1"
-                  y="1"
-                />
                 <use
-                  class="checkmark__content"
-                  fill="none"
-                  xlink:href="test-file-stub#check"
+                  xlink:href="test-file-stub#checkbox-unchecked"
                 />
               </svg>
             </span>
             <label
               class="label label--md"
               data-bootstrap-override="label"
-              for="28"
-              style="--checkbox-svg-size: 1.25rem;"
+              for="44"
             >
               Filters label 2
             </label>
           </div>
           <div
-            class="checkbox"
+            class="checkbox checkbox--md"
           >
             <span
               class="input__wrapper"
-              style="--checkbox-svg-size: 1.25rem;"
             >
               <input
                 class="checkbox__input"
                 data-bootstrap-override="checkbox"
-                id="29"
+                id="46"
                 type="checkbox"
                 value="segment3label3"
               />
               <svg
                 aria-hidden="true"
-                height="1.25rem"
-                viewBox="0 0 20 20"
-                width="1.25rem"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <rect
-                  class="checkmark__outline"
-                  fill="none"
-                  height="18"
-                  rx="3"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  width="18"
-                  x="1"
-                  y="1"
-                />
                 <use
-                  class="checkmark__content"
-                  fill="none"
-                  xlink:href="test-file-stub#check"
+                  xlink:href="test-file-stub#checkbox-unchecked"
                 />
               </svg>
             </span>
             <label
               class="label label--md"
               data-bootstrap-override="label"
-              for="29"
-              style="--checkbox-svg-size: 1.25rem;"
+              for="46"
             >
               Filters long label 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
             </label>
@@ -1820,283 +1460,211 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
           class="filters-fieldset__checkboxes fieldset-items"
         >
           <div
-            class="checkbox"
+            class="checkbox checkbox--md"
           >
             <span
               class="input__wrapper"
-              style="--checkbox-svg-size: 1.25rem;"
             >
               <input
                 class="checkbox__input"
                 data-bootstrap-override="checkbox"
-                id="30"
+                id="48"
                 type="checkbox"
                 value="segment4label1"
               />
               <svg
                 aria-hidden="true"
-                height="1.25rem"
-                viewBox="0 0 20 20"
-                width="1.25rem"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <rect
-                  class="checkmark__outline"
-                  fill="none"
-                  height="18"
-                  rx="3"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  width="18"
-                  x="1"
-                  y="1"
-                />
                 <use
-                  class="checkmark__content"
-                  fill="none"
-                  xlink:href="test-file-stub#check"
+                  xlink:href="test-file-stub#checkbox-unchecked"
                 />
               </svg>
             </span>
             <label
               class="label label--md"
               data-bootstrap-override="label"
-              for="30"
-              style="--checkbox-svg-size: 1.25rem;"
+              for="48"
             >
               Filters label 1
             </label>
           </div>
           <div
-            class="checkbox"
+            class="checkbox checkbox--md"
           >
             <span
               class="input__wrapper"
-              style="--checkbox-svg-size: 1.25rem;"
             >
               <input
                 class="checkbox__input"
                 data-bootstrap-override="checkbox"
-                id="31"
+                id="50"
                 type="checkbox"
                 value="segment4label2"
               />
               <svg
                 aria-hidden="true"
-                height="1.25rem"
-                viewBox="0 0 20 20"
-                width="1.25rem"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <rect
-                  class="checkmark__outline"
-                  fill="none"
-                  height="18"
-                  rx="3"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  width="18"
-                  x="1"
-                  y="1"
-                />
                 <use
-                  class="checkmark__content"
-                  fill="none"
-                  xlink:href="test-file-stub#check"
+                  xlink:href="test-file-stub#checkbox-unchecked"
                 />
               </svg>
             </span>
             <label
               class="label label--md"
               data-bootstrap-override="label"
-              for="31"
-              style="--checkbox-svg-size: 1.25rem;"
+              for="50"
             >
               Filters label 2
             </label>
           </div>
           <div
-            class="checkbox"
+            class="checkbox checkbox--md"
           >
             <span
               class="input__wrapper"
-              style="--checkbox-svg-size: 1.25rem;"
             >
               <input
                 class="checkbox__input"
                 data-bootstrap-override="checkbox"
-                id="32"
+                id="52"
                 type="checkbox"
                 value="segment4label3"
               />
               <svg
                 aria-hidden="true"
-                height="1.25rem"
-                viewBox="0 0 20 20"
-                width="1.25rem"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <rect
-                  class="checkmark__outline"
-                  fill="none"
-                  height="18"
-                  rx="3"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  width="18"
-                  x="1"
-                  y="1"
-                />
                 <use
-                  class="checkmark__content"
-                  fill="none"
-                  xlink:href="test-file-stub#check"
+                  xlink:href="test-file-stub#checkbox-unchecked"
                 />
               </svg>
             </span>
             <label
               class="label label--md"
               data-bootstrap-override="label"
-              for="32"
-              style="--checkbox-svg-size: 1.25rem;"
+              for="52"
             >
               Filters label 3
             </label>
           </div>
           <div
-            class="checkbox"
+            class="checkbox checkbox--md"
           >
             <span
               class="input__wrapper"
-              style="--checkbox-svg-size: 1.25rem;"
             >
               <input
                 class="checkbox__input"
                 data-bootstrap-override="checkbox"
-                id="33"
+                id="54"
                 type="checkbox"
                 value="segment4label4"
               />
               <svg
                 aria-hidden="true"
-                height="1.25rem"
-                viewBox="0 0 20 20"
-                width="1.25rem"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <rect
-                  class="checkmark__outline"
-                  fill="none"
-                  height="18"
-                  rx="3"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  width="18"
-                  x="1"
-                  y="1"
-                />
                 <use
-                  class="checkmark__content"
-                  fill="none"
-                  xlink:href="test-file-stub#check"
+                  xlink:href="test-file-stub#checkbox-unchecked"
                 />
               </svg>
             </span>
             <label
               class="label label--md"
               data-bootstrap-override="label"
-              for="33"
-              style="--checkbox-svg-size: 1.25rem;"
+              for="54"
             >
               Filters label 4
             </label>
           </div>
           <div
-            class="checkbox"
+            class="checkbox checkbox--md"
           >
             <span
               class="input__wrapper"
-              style="--checkbox-svg-size: 1.25rem;"
             >
               <input
                 class="checkbox__input"
                 data-bootstrap-override="checkbox"
-                id="34"
+                id="56"
                 type="checkbox"
                 value="segment4label5"
               />
               <svg
                 aria-hidden="true"
-                height="1.25rem"
-                viewBox="0 0 20 20"
-                width="1.25rem"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <rect
-                  class="checkmark__outline"
-                  fill="none"
-                  height="18"
-                  rx="3"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  width="18"
-                  x="1"
-                  y="1"
-                />
                 <use
-                  class="checkmark__content"
-                  fill="none"
-                  xlink:href="test-file-stub#check"
+                  xlink:href="test-file-stub#checkbox-unchecked"
                 />
               </svg>
             </span>
             <label
               class="label label--md"
               data-bootstrap-override="label"
-              for="34"
-              style="--checkbox-svg-size: 1.25rem;"
+              for="56"
             >
               Filters label 5
             </label>
           </div>
           <div
-            class="checkbox"
+            class="checkbox checkbox--md"
           >
             <span
               class="input__wrapper"
-              style="--checkbox-svg-size: 1.25rem;"
             >
               <input
                 class="checkbox__input"
                 data-bootstrap-override="checkbox"
-                id="35"
+                id="58"
                 type="checkbox"
                 value="segment4label6"
               />
               <svg
                 aria-hidden="true"
-                height="1.25rem"
-                viewBox="0 0 20 20"
-                width="1.25rem"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <rect
-                  class="checkmark__outline"
-                  fill="none"
-                  height="18"
-                  rx="3"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  width="18"
-                  x="1"
-                  y="1"
-                />
                 <use
-                  class="checkmark__content"
-                  fill="none"
-                  xlink:href="test-file-stub#check"
+                  xlink:href="test-file-stub#checkbox-unchecked"
                 />
               </svg>
             </span>
             <label
               class="label label--md"
               data-bootstrap-override="label"
-              for="35"
-              style="--checkbox-svg-size: 1.25rem;"
+              for="58"
             >
               Filters label 6
             </label>
