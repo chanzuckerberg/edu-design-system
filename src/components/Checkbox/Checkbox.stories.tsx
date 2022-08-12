@@ -39,7 +39,7 @@ type Args = React.ComponentProps<typeof Checkbox>;
 /**
  * Controlled example to make checked stories interactive.
  */
-function CheckedExample(args: Args) {
+function CheckboxExample(args: Args) {
   const [checked, setChecked] = React.useState<
     boolean | 'indeterminate' | undefined
   >(args.checked);
@@ -51,19 +51,19 @@ function CheckedExample(args: Args) {
 }
 
 export const Default: StoryObj<Args> = {
-  render: (args) => <CheckedExample {...args} />,
+  render: (args) => <CheckboxExample {...args} />,
 };
 
 export const Checked: StoryObj<Args> = {
-  render: (args) => <CheckedExample {...args} checked={true} />,
+  render: (args) => <CheckboxExample {...args} checked={true} />,
 };
 
 export const Small: StoryObj<Args> = {
-  render: (args) => <CheckedExample {...args} />,
+  render: (args) => <CheckboxExample {...args} size="sm" />,
 };
 
 export const SmallChecked: StoryObj<Args> = {
-  render: (args) => <CheckedExample {...args} checked={true} size="sm" />,
+  render: (args) => <CheckboxExample {...args} checked={true} size="sm" />,
 };
 
 export const Indeterminate: StoryObj<Args> = {
@@ -71,7 +71,7 @@ export const Indeterminate: StoryObj<Args> = {
     checked: 'indeterminate',
     readOnly: true,
   },
-  render: (args) => <CheckedExample {...args} />,
+  render: (args) => <CheckboxExample {...args} />,
 };
 
 export const Disabled: StoryObj<Args> = {
@@ -99,14 +99,13 @@ export const Disabled: StoryObj<Args> = {
 };
 
 export const WithoutVisibleLabel: StoryObj<Args> = {
-  ...Default,
   args: {
     'aria-label': 'a checkbox has no name',
     label: undefined,
   },
   render: (args) => (
     <>
-      <Checkbox {...args} />
+      <Checkbox {...args} readOnly />
       <Checkbox {...args} checked readOnly />
       <Checkbox {...args} checked="indeterminate" readOnly />
       <Checkbox {...args} disabled />
@@ -122,8 +121,8 @@ export const LongLabels = {
 
     return (
       <div className={styles['longlabels--grid']}>
-        <Checkbox label={label} />
-        <Checkbox label={label} size="sm" />
+        <Checkbox label={label} readOnly />
+        <Checkbox label={label} readOnly size="sm" />
         <Checkbox disabled label={label} />
         <Checkbox disabled label={label} size="sm" />
       </div>
@@ -200,11 +199,22 @@ export const LabelsOnly: StoryObj = {
   },
 };
 
+function CheckboxInputExample() {
+  const [checked, setChecked] = React.useState<
+    boolean | 'indeterminate' | undefined
+  >(false);
+  const handleChange = () => {
+    setChecked(!checked);
+  };
+
+  return <CheckboxInput checked={checked} id="test" onChange={handleChange} />;
+}
+
 export const WithCustomPositioning = {
   render: () => (
     <span>
       <CheckboxLabel htmlFor="test" text="label on left" />
-      <CheckboxInput id="test" />
+      <CheckboxInputExample />
     </span>
   ),
 };

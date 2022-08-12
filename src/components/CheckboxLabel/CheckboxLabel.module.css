@@ -12,22 +12,18 @@
 }
 
 /**
- * Size variants for the label.
- * 1) line-height is set to be same as checkbox size to center label text relative to the checkbox.
- */
-.label--sm {
-  @mixin eds-theme-typography-body-text-sm;
-  line-height: var(--checkbox-svg-size); /* 1 */
-}
-
-.label--md {
-  @mixin eds-theme-typography-body-text-md;
-  line-height: var(--checkbox-svg-size); /* 1 */
-}
-
-/**
  * Disabled state
  */
 .label--disabled {
   color: var(--eds-theme-color-text-disabled);
+}
+
+.label--sm {
+  @mixin eds-theme-typography-body-text-sm;
+  position: relative;
+  top: 0.0625rem;
+}
+
+.label--md {
+  @mixin eds-theme-typography-body-text-md;
 }

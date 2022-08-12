@@ -25,42 +25,33 @@ export type CheckboxInputProps = CheckboxHTMLElementProps & {
   id: string;
 };
 
-interface SvgStyle extends React.CSSProperties {
-  '--checkbox-svg-size': string;
-}
-
-/**
- * Variables controlling checkbox SVG size.
- * Surfaced here since they're used in the input, label, and CSS
- */
-const svgViewBoxSize = 20;
-const svgSizeRem = `${svgViewBoxSize / 16}rem`;
-export const svgStyle: SvgStyle = {
-  /* stylelint-disable-next-line value-keyword-case */
-  '--checkbox-svg-size': svgSizeRem,
-};
-
 const checkboxIconNameMap = {
   indeterminate: 'checkbox-indeterminate',
   true: 'checkbox-checked',
   false: 'checkbox-unchecked',
-  undefined: 'checkbox-unchecked',
 };
 const CheckboxSvg = ({
   checked,
+  disabled,
 }: {
-  checked: boolean | 'indeterminate' | undefined;
+  checked: boolean | 'indeterminate';
+  disabled?: boolean;
 }) => {
-  const name = checkboxIconNameMap[`${checked}`] as
-    | 'checkbox-indeterminate'
-    | 'checkbox-checked'
-    | 'checkbox-unchecked';
-
+  const iconClassName = clsx(
+    styles['checkbox__icon'],
+    disabled && styles['checkbox__icon--disabled'],
+  );
   return (
     <Icon
-      className={styles['checkbox__icon']}
-      name={name}
+      className={iconClassName}
+      name={
+        checkboxIconNameMap[`${checked}`] as
+          | 'checkbox-indeterminate'
+          | 'checkbox-checked'
+          | 'checkbox-unchecked'
+      }
       purpose="decorative"
+      size="1.5rem"
     />
   );
 };
@@ -72,7 +63,7 @@ const CheckboxSvg = ({
 export const CheckboxInput = React.forwardRef<
   HTMLInputElement,
   CheckboxInputProps
->(({ checked, className, disabled, ...other }, ref) => {
+>(({ checked = false, className, disabled, ...other }, ref) => {
   // Make indeterminate checkbox visually match the colors of a
   // checked state, but announce itself as "mixed" to screen readers
   const checkedProps =
@@ -91,7 +82,6 @@ export const CheckboxInput = React.forwardRef<
         styles['input__wrapper'],
         disabled && styles['input__wrapper--disabled'],
       )}
-      style={svgStyle}
     >
       <input
         className={clsx(className, styles['checkbox__input'])}
@@ -102,7 +92,7 @@ export const CheckboxInput = React.forwardRef<
         {...checkedProps}
         {...other}
       />
-      <CheckboxSvg checked={checked} />
+      <CheckboxSvg checked={checked} disabled={disabled} />
     </span>
   );
 });

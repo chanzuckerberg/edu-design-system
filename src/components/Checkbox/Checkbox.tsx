@@ -44,7 +44,7 @@ export type CheckboxProps = Omit<CheckboxInputProps, 'id'> & {
 export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
   (props, ref) => {
     // All remaining props are passed to the `input` element
-    const { className, id, label, size, disabled, ...other } = props;
+    const { className, id, label, size = 'md', disabled, ...other } = props;
 
     // When possible, use a visible label through the `label` prop instead.
     // In rare cases where there's no visible label, you must provide an
@@ -59,8 +59,14 @@ export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
     const generatedId = useUID();
     const checkboxId = id || generatedId;
 
+    const componentClassName = clsx(
+      styles['checkbox'],
+      styles[`checkbox--${size}`],
+      className,
+    );
+
     return (
-      <div className={clsx(className, styles['checkbox'])}>
+      <div className={componentClassName}>
         <CheckboxInput
           disabled={disabled}
           id={checkboxId}
