@@ -82,7 +82,7 @@ export const ProjectCard = ({
   ...other
 }: Props) => {
   if (number && !numberAriaLabel && process.env.NODE_ENV !== 'production') {
-    console.warn(
+    throw new Error(
       'You must provide a "numberAriaLabel" for the number icon if a "number" has been passed',
     );
   }
