@@ -12,7 +12,7 @@
 .input__wrapper {
   position: relative;
 
-  display: flex; /* 1 */
+  display: inline-flex; /* 1 */
   align-items: center;
 
   align-self: flex-start; /* 2 */
