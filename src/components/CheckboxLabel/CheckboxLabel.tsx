@@ -1,7 +1,6 @@
 import clsx from 'clsx';
 import React from 'react';
 import styles from './CheckboxLabel.module.css';
-import { svgStyle } from '../CheckboxInput';
 
 export type CheckboxLabelProps = {
   /**
@@ -47,7 +46,6 @@ export const CheckboxLabel = ({
       )}
       data-bootstrap-override="label"
       htmlFor={htmlFor}
-      style={svgStyle}
     >
       {text}
     </label>
