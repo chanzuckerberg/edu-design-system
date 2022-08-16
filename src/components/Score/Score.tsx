@@ -34,5 +34,5 @@ export const Score = ({ className, variant, ...other }: Props) => {
     className,
   );
 
-  return <Tag className={componentClassName} {...other} />;
+  return <Tag className={componentClassName} hasOutline {...other} />;
 };
