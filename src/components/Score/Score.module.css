@@ -1,0 +1,25 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    # SCORE
+\*------------------------------------*/
+
+/**
+ * Rounded rectangle container that houses a score.
+ */
+.score {
+  background-color: transparent;
+}
+
+/**
+ * Color variants
+ */
+.score--success {
+  --tag-secondary-color: var(--eds-theme-color-border-utility-success-strong);
+}
+.score--error {
+  --tag-secondary-color: var(--eds-theme-color-border-utility-error-default);
+}
+.score--neutral {
+  --tag-secondary-color: transparent;
+}
