@@ -1,20 +1,13 @@
+@import '../../design-tokens/mixins.css';
+
 /*------------------------------------*\
     # CHECKBOX
 \*------------------------------------*/
 
 /**
  * A custom individual checkbox control
- * 1) Outer wrapper div for custom control
- * 2) Grid display aligns label and the checkbox
- * 3) Prevents control from being "squished" in 
- *    a flexbox parent
  */
 .checkbox {
-  /* 1 */
-  position: relative;
-
-  display: grid; /* 2 */
-  align-items: flex-start;
-  grid-template-columns: min-content 1fr;
+  display: flex;
   gap: var(--eds-size-1);
 }

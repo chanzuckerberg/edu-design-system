@@ -5,69 +5,64 @@
 \*------------------------------------*/
 
 /**
- * Wrapper for the checkbox, including the visually hidden input element.
- * 1) Setting position is required to place the absolutely positioned input element in the same spot as the SVG 
- *    when a (n^c)parent element in the tree is relatively positioned.
- * 2) line-height is set to be same as checkbox size to equal checkbox size and prevent browser styling.
+ * Wraps the visually hidden checkbox input element and the visible sibling svg element.
+ * 1) Centers the checkbox icon in the wrapper.
+ * 2) Aligns the checkbox with the first line of the label.
  */
 .input__wrapper {
-  position: relative; /* 1 */
-  line-height: var(--checkbox-svg-size); /* 2 */
-}
+  position: relative;
 
+  display: inline-flex; /* 1 */
+  align-items: center;
+
+  align-self: flex-start; /* 2 */
+}
 /**
-   * The visually hidden input element for the checkbox. The visual checkmark is provided by an svg element.
-   * 1) Removes default margins placed by browser for checkboxes.
-   * 2) Remove the checkbox from the page flow, positioning it on top of the SVG.
-   * 3) Set same dimensions as the CheckboxSvg element.
-   * 4) Hide the input element visually.
-   *    This ensures the checkbox is still "physically" present so that all users,
-   *    especially on touch screen readers, still interact with the real checkbox element
-   *    where it would naturally be present.
-   */
+ * The visually hidden input element for the checkbox. The visual checkmark is provided by an svg element.
+ * 1) Removes default margins placed by browser for checkboxes.
+ * 2) Remove the checkbox from the page flow, positioning it on top of the SVG.
+*  3) Set same dimensions as the CheckboxSvg element.
+ * 4) Hide the input element visually.
+ *    This ensures the checkbox is still "physically" present so that all users,
+ *    especially on touch screen readers, still interact with the real checkbox element
+ *    where it would naturally be present.
+ */
 .checkbox__input {
   cursor: pointer;
 
   margin: 0; /* 1 */
 
   position: absolute; /* 2 */
+  left: 0.25rem;
 
-  height: var(--checkbox-svg-size); /* 3 */
-  width: var(--checkbox-svg-size);
+  height: var(--eds-size-2); /* 3 */
+  width: var(--eds-size-2);
 
   opacity: 0; /* 4 */
 }
 
 /**
-   * The visible checkbox graphic.
-   * 1) Provides a focus indicator outline around the checkbox.
-   */
-.checkbox__input + svg {
-  vertical-align: top;
-
-  display: inline-block;
-
-  color: var(--eds-theme-color-icon-neutral-default);
-  --checked-color: var(--eds-theme-color-icon-brand-primary);
+ * The visible checkbox svg icon element.
+ */
+.checkbox__icon {
+  color: var(--eds-theme-color-icon-brand-primary);
 }
-.checkbox__input:checked + svg > .checkmark__outline {
-  fill: var(--checked-color);
-  stroke: var(--checked-color);
-}
-.checkbox__input:checked + svg > .checkmark__content {
-  fill: var(--eds-theme-color-icon-neutral-default-inverse);
-}
-.checkbox__input:focus + svg {
+.checkbox__input:focus + .checkbox__icon {
   @mixin focus; /* 1 */
+  outline-offset: -2px;
 }
 
 /**
-   * Disabled styles 
-   */
-.checkbox__input:disabled {
-  cursor: not-allowed;
-}
-.checkbox__input:disabled + svg {
+ * The disabled variant of the visible checkbbox svg icon.
+ */
+.checkbox__icon--disabled {
   color: var(--eds-theme-color-icon-disabled);
-  --checked-color: var(--eds-theme-color-icon-disabled);
+}
+
+/**
+ * The disabled status of the visually hidden input element.
+ * 1) Needed since the input element overlays the visible svg icon for user input and cursor.
+ */
+.checkbox__input:disabled {
+  cursor: not-allowed; /* 1 */
 }

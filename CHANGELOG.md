@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.1.2](https://github.com/chanzuckerberg/edu-design-system/compare/v3.1.1...v3.1.2) (2022-08-16)
+
+
+### Chores
+
+* **checkbox** update styles to match library ([c94e2ca]https://github.com/chanzuckerberg/edu-design-system/commit/c94e2caee24c675e81eab6f9cff44d17a04dfcad)
+
 ### [3.1.1](https://github.com/chanzuckerberg/edu-design-system/compare/v3.1.0...v3.1.1) (2022-08-12)
 
 

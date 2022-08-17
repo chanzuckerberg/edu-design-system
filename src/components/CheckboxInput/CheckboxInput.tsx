@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React from 'react';
 import styles from './CheckboxInput.module.css';
-import icons from '../../icons/spritemap/spritemap.svg';
+import Icon from '../Icon';
 
 type CheckboxHTMLElementProps = Omit<
   React.InputHTMLAttributes<HTMLInputElement>,
@@ -25,55 +25,34 @@ export type CheckboxInputProps = CheckboxHTMLElementProps & {
   id: string;
 };
 
-interface SvgStyle extends React.CSSProperties {
-  '--checkbox-svg-size': string;
-}
-
-/**
- * Variables controlling checkbox SVG size.
- * Surfaced here since they're used in the input, label, and CSS
- */
-const svgViewBoxSize = 20;
-const svgSizeRem = `${svgViewBoxSize / 16}rem`;
-export const svgStyle: SvgStyle = {
-  /* stylelint-disable-next-line value-keyword-case */
-  '--checkbox-svg-size': svgSizeRem,
+const checkboxIconNameMap = {
+  indeterminate: 'checkbox-indeterminate',
+  true: 'checkbox-checked',
+  false: 'checkbox-unchecked',
 };
-
-/**
- * Using a technique from https://www.sarasoueidan.com/blog/inclusively-hiding-and-styling-checkboxes-and-radio-buttons/,
- * we hide the checkbox input and instead completely style through an
- * SVG overlaid on top of the input element.
- */
-const CheckboxSvg = ({ indeterminate }: { indeterminate?: boolean }) => {
-  const name = indeterminate ? 'remove' : 'check';
-  const computedSvg = (
-    <use
-      className={styles['checkmark__content']}
-      fill="none"
-      xlinkHref={`${icons}#${name}`}
-    />
+const CheckboxSvg = ({
+  checked,
+  disabled,
+}: {
+  checked: boolean | 'indeterminate';
+  disabled?: boolean;
+}) => {
+  const iconClassName = clsx(
+    styles['checkbox__icon'],
+    disabled && styles['checkbox__icon--disabled'],
   );
   return (
-    <svg
-      aria-hidden="true"
-      height={svgSizeRem}
-      viewBox={`0 0 ${svgViewBoxSize} ${svgViewBoxSize}`}
-      width={svgSizeRem}
-    >
-      <rect
-        className={styles['checkmark__outline']}
-        fill="none"
-        height="18"
-        rx="3"
-        stroke="currentColor"
-        strokeWidth="2"
-        width="18"
-        x="1"
-        y="1"
-      />
-      {computedSvg}
-    </svg>
+    <Icon
+      className={iconClassName}
+      name={
+        checkboxIconNameMap[`${checked}`] as
+          | 'checkbox-indeterminate'
+          | 'checkbox-checked'
+          | 'checkbox-unchecked'
+      }
+      purpose="decorative"
+      size="1.5rem"
+    />
   );
 };
 
@@ -84,7 +63,7 @@ const CheckboxSvg = ({ indeterminate }: { indeterminate?: boolean }) => {
 export const CheckboxInput = React.forwardRef<
   HTMLInputElement,
   CheckboxInputProps
->(({ checked, className, disabled, ...other }, ref) => {
+>(({ checked = false, className, disabled, ...other }, ref) => {
   // Make indeterminate checkbox visually match the colors of a
   // checked state, but announce itself as "mixed" to screen readers
   const checkedProps =
@@ -103,7 +82,6 @@ export const CheckboxInput = React.forwardRef<
         styles['input__wrapper'],
         disabled && styles['input__wrapper--disabled'],
       )}
-      style={svgStyle}
     >
       <input
         className={clsx(className, styles['checkbox__input'])}
@@ -114,7 +92,7 @@ export const CheckboxInput = React.forwardRef<
         {...checkedProps}
         {...other}
       />
-      <CheckboxSvg indeterminate={checked === 'indeterminate'} />
+      <CheckboxSvg checked={checked} disabled={disabled} />
     </span>
   );
 });

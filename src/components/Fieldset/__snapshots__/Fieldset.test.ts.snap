@@ -14,11 +14,10 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
     class="fieldset-items"
   >
     <div
-      class="checkbox"
+      class="checkbox checkbox--md"
     >
       <span
         class="input__wrapper"
-        style="--checkbox-svg-size: 1.25rem;"
       >
         <input
           class="checkbox__input"
@@ -28,25 +27,15 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
         />
         <svg
           aria-hidden="true"
-          height="1.25rem"
-          viewBox="0 0 20 20"
-          width="1.25rem"
+          class="icon checkbox__icon"
+          fill="currentColor"
+          height="1.5rem"
+          style="--icon-size: 1.5rem;"
+          width="1.5rem"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <rect
-            class="checkmark__outline"
-            fill="none"
-            height="18"
-            rx="3"
-            stroke="currentColor"
-            stroke-width="2"
-            width="18"
-            x="1"
-            y="1"
-          />
           <use
-            class="checkmark__content"
-            fill="none"
-            xlink:href="test-file-stub#check"
+            xlink:href="test-file-stub#checkbox-unchecked"
           />
         </svg>
       </span>
@@ -54,63 +43,15 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
         class="label label--md"
         data-bootstrap-override="label"
         for="1"
-        style="--checkbox-svg-size: 1.25rem;"
       >
         Checkbox label 1
       </label>
     </div>
     <div
-      class="checkbox"
+      class="checkbox checkbox--md"
     >
       <span
         class="input__wrapper"
-        style="--checkbox-svg-size: 1.25rem;"
-      >
-        <input
-          class="checkbox__input"
-          data-bootstrap-override="checkbox"
-          id="2"
-          type="checkbox"
-        />
-        <svg
-          aria-hidden="true"
-          height="1.25rem"
-          viewBox="0 0 20 20"
-          width="1.25rem"
-        >
-          <rect
-            class="checkmark__outline"
-            fill="none"
-            height="18"
-            rx="3"
-            stroke="currentColor"
-            stroke-width="2"
-            width="18"
-            x="1"
-            y="1"
-          />
-          <use
-            class="checkmark__content"
-            fill="none"
-            xlink:href="test-file-stub#check"
-          />
-        </svg>
-      </span>
-      <label
-        class="label label--md"
-        data-bootstrap-override="label"
-        for="2"
-        style="--checkbox-svg-size: 1.25rem;"
-      >
-        Checkbox label 2
-      </label>
-    </div>
-    <div
-      class="checkbox"
-    >
-      <span
-        class="input__wrapper"
-        style="--checkbox-svg-size: 1.25rem;"
       >
         <input
           class="checkbox__input"
@@ -120,25 +61,15 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
         />
         <svg
           aria-hidden="true"
-          height="1.25rem"
-          viewBox="0 0 20 20"
-          width="1.25rem"
+          class="icon checkbox__icon"
+          fill="currentColor"
+          height="1.5rem"
+          style="--icon-size: 1.5rem;"
+          width="1.5rem"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <rect
-            class="checkmark__outline"
-            fill="none"
-            height="18"
-            rx="3"
-            stroke="currentColor"
-            stroke-width="2"
-            width="18"
-            x="1"
-            y="1"
-          />
           <use
-            class="checkmark__content"
-            fill="none"
-            xlink:href="test-file-stub#check"
+            xlink:href="test-file-stub#checkbox-unchecked"
           />
         </svg>
       </span>
@@ -146,63 +77,15 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
         class="label label--md"
         data-bootstrap-override="label"
         for="3"
-        style="--checkbox-svg-size: 1.25rem;"
       >
-        Checkbox label 3
+        Checkbox label 2
       </label>
     </div>
     <div
-      class="checkbox"
+      class="checkbox checkbox--md"
     >
       <span
         class="input__wrapper"
-        style="--checkbox-svg-size: 1.25rem;"
-      >
-        <input
-          class="checkbox__input"
-          data-bootstrap-override="checkbox"
-          id="4"
-          type="checkbox"
-        />
-        <svg
-          aria-hidden="true"
-          height="1.25rem"
-          viewBox="0 0 20 20"
-          width="1.25rem"
-        >
-          <rect
-            class="checkmark__outline"
-            fill="none"
-            height="18"
-            rx="3"
-            stroke="currentColor"
-            stroke-width="2"
-            width="18"
-            x="1"
-            y="1"
-          />
-          <use
-            class="checkmark__content"
-            fill="none"
-            xlink:href="test-file-stub#check"
-          />
-        </svg>
-      </span>
-      <label
-        class="label label--md"
-        data-bootstrap-override="label"
-        for="4"
-        style="--checkbox-svg-size: 1.25rem;"
-      >
-        Checkbox label 4
-      </label>
-    </div>
-    <div
-      class="checkbox"
-    >
-      <span
-        class="input__wrapper"
-        style="--checkbox-svg-size: 1.25rem;"
       >
         <input
           class="checkbox__input"
@@ -212,25 +95,15 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
         />
         <svg
           aria-hidden="true"
-          height="1.25rem"
-          viewBox="0 0 20 20"
-          width="1.25rem"
+          class="icon checkbox__icon"
+          fill="currentColor"
+          height="1.5rem"
+          style="--icon-size: 1.5rem;"
+          width="1.5rem"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <rect
-            class="checkmark__outline"
-            fill="none"
-            height="18"
-            rx="3"
-            stroke="currentColor"
-            stroke-width="2"
-            width="18"
-            x="1"
-            y="1"
-          />
           <use
-            class="checkmark__content"
-            fill="none"
-            xlink:href="test-file-stub#check"
+            xlink:href="test-file-stub#checkbox-unchecked"
           />
         </svg>
       </span>
@@ -238,7 +111,74 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
         class="label label--md"
         data-bootstrap-override="label"
         for="5"
-        style="--checkbox-svg-size: 1.25rem;"
+      >
+        Checkbox label 3
+      </label>
+    </div>
+    <div
+      class="checkbox checkbox--md"
+    >
+      <span
+        class="input__wrapper"
+      >
+        <input
+          class="checkbox__input"
+          data-bootstrap-override="checkbox"
+          id="7"
+          type="checkbox"
+        />
+        <svg
+          aria-hidden="true"
+          class="icon checkbox__icon"
+          fill="currentColor"
+          height="1.5rem"
+          style="--icon-size: 1.5rem;"
+          width="1.5rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="test-file-stub#checkbox-unchecked"
+          />
+        </svg>
+      </span>
+      <label
+        class="label label--md"
+        data-bootstrap-override="label"
+        for="7"
+      >
+        Checkbox label 4
+      </label>
+    </div>
+    <div
+      class="checkbox checkbox--md"
+    >
+      <span
+        class="input__wrapper"
+      >
+        <input
+          class="checkbox__input"
+          data-bootstrap-override="checkbox"
+          id="9"
+          type="checkbox"
+        />
+        <svg
+          aria-hidden="true"
+          class="icon checkbox__icon"
+          fill="currentColor"
+          height="1.5rem"
+          style="--icon-size: 1.5rem;"
+          width="1.5rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="test-file-stub#checkbox-unchecked"
+          />
+        </svg>
+      </span>
+      <label
+        class="label label--md"
+        data-bootstrap-override="label"
+        for="9"
       >
         Checkbox label 5
       </label>

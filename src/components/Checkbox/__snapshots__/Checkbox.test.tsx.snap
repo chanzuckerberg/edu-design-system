@@ -5,48 +5,36 @@ exports[`<Checkbox /> Checked story renders snapshot 1`] = `
   style="margin: 0.25rem;"
 >
   <div
-    class="checkbox"
+    class="checkbox checkbox--md"
   >
     <span
       class="input__wrapper"
-      style="--checkbox-svg-size: 1.25rem;"
     >
       <input
         checked=""
         class="checkbox__input"
         data-bootstrap-override="checkbox"
-        id="2"
+        id="3"
         type="checkbox"
       />
       <svg
         aria-hidden="true"
-        height="1.25rem"
-        viewBox="0 0 20 20"
-        width="1.25rem"
+        class="icon checkbox__icon"
+        fill="currentColor"
+        height="1.5rem"
+        style="--icon-size: 1.5rem;"
+        width="1.5rem"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <rect
-          class="checkmark__outline"
-          fill="none"
-          height="18"
-          rx="3"
-          stroke="currentColor"
-          stroke-width="2"
-          width="18"
-          x="1"
-          y="1"
-        />
         <use
-          class="checkmark__content"
-          fill="none"
-          xlink:href="test-file-stub#check"
+          xlink:href="test-file-stub#checkbox-checked"
         />
       </svg>
     </span>
     <label
       class="label label--md"
       data-bootstrap-override="label"
-      for="2"
-      style="--checkbox-svg-size: 1.25rem;"
+      for="3"
     >
       Checkbox
     </label>
@@ -59,11 +47,10 @@ exports[`<Checkbox /> Default story renders snapshot 1`] = `
   style="margin: 0.25rem;"
 >
   <div
-    class="checkbox"
+    class="checkbox checkbox--md"
   >
     <span
       class="input__wrapper"
-      style="--checkbox-svg-size: 1.25rem;"
     >
       <input
         class="checkbox__input"
@@ -73,25 +60,15 @@ exports[`<Checkbox /> Default story renders snapshot 1`] = `
       />
       <svg
         aria-hidden="true"
-        height="1.25rem"
-        viewBox="0 0 20 20"
-        width="1.25rem"
+        class="icon checkbox__icon"
+        fill="currentColor"
+        height="1.5rem"
+        style="--icon-size: 1.5rem;"
+        width="1.5rem"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <rect
-          class="checkmark__outline"
-          fill="none"
-          height="18"
-          rx="3"
-          stroke="currentColor"
-          stroke-width="2"
-          width="18"
-          x="1"
-          y="1"
-        />
         <use
-          class="checkmark__content"
-          fill="none"
-          xlink:href="test-file-stub#check"
+          xlink:href="test-file-stub#checkbox-unchecked"
         />
       </svg>
     </span>
@@ -99,7 +76,6 @@ exports[`<Checkbox /> Default story renders snapshot 1`] = `
       class="label label--md"
       data-bootstrap-override="label"
       for="1"
-      style="--checkbox-svg-size: 1.25rem;"
     >
       Checkbox
     </label>
@@ -118,303 +94,231 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
       <tr>
         <td>
           <div
-            class="checkbox"
+            class="checkbox checkbox--md"
           >
             <span
               class="input__wrapper input__wrapper--disabled"
-              style="--checkbox-svg-size: 1.25rem;"
             >
               <input
                 class="checkbox__input"
                 data-bootstrap-override="checkbox"
                 disabled=""
-                id="6"
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                height="1.25rem"
-                viewBox="0 0 20 20"
-                width="1.25rem"
-              >
-                <rect
-                  class="checkmark__outline"
-                  fill="none"
-                  height="18"
-                  rx="3"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  width="18"
-                  x="1"
-                  y="1"
-                />
-                <use
-                  class="checkmark__content"
-                  fill="none"
-                  xlink:href="test-file-stub#check"
-                />
-              </svg>
-            </span>
-            <label
-              class="label label--md label--disabled"
-              data-bootstrap-override="label"
-              for="6"
-              style="--checkbox-svg-size: 1.25rem;"
-            >
-              Disabled
-            </label>
-          </div>
-        </td>
-        <td>
-          <div
-            class="checkbox"
-          >
-            <span
-              class="input__wrapper"
-              style="--checkbox-svg-size: 1.25rem;"
-            >
-              <input
-                class="checkbox__input"
-                data-bootstrap-override="checkbox"
-                id="7"
-                readonly=""
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                height="1.25rem"
-                viewBox="0 0 20 20"
-                width="1.25rem"
-              >
-                <rect
-                  class="checkmark__outline"
-                  fill="none"
-                  height="18"
-                  rx="3"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  width="18"
-                  x="1"
-                  y="1"
-                />
-                <use
-                  class="checkmark__content"
-                  fill="none"
-                  xlink:href="test-file-stub#check"
-                />
-              </svg>
-            </span>
-            <label
-              class="label label--md"
-              data-bootstrap-override="label"
-              for="7"
-              style="--checkbox-svg-size: 1.25rem;"
-            >
-              Default
-            </label>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <div
-            class="checkbox"
-          >
-            <span
-              class="input__wrapper input__wrapper--disabled"
-              style="--checkbox-svg-size: 1.25rem;"
-            >
-              <input
-                checked=""
-                class="checkbox__input"
-                data-bootstrap-override="checkbox"
-                disabled=""
-                id="8"
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                height="1.25rem"
-                viewBox="0 0 20 20"
-                width="1.25rem"
-              >
-                <rect
-                  class="checkmark__outline"
-                  fill="none"
-                  height="18"
-                  rx="3"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  width="18"
-                  x="1"
-                  y="1"
-                />
-                <use
-                  class="checkmark__content"
-                  fill="none"
-                  xlink:href="test-file-stub#check"
-                />
-              </svg>
-            </span>
-            <label
-              class="label label--md label--disabled"
-              data-bootstrap-override="label"
-              for="8"
-              style="--checkbox-svg-size: 1.25rem;"
-            >
-              Disabled
-            </label>
-          </div>
-        </td>
-        <td>
-          <div
-            class="checkbox"
-          >
-            <span
-              class="input__wrapper"
-              style="--checkbox-svg-size: 1.25rem;"
-            >
-              <input
-                checked=""
-                class="checkbox__input"
-                data-bootstrap-override="checkbox"
-                id="9"
-                readonly=""
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                height="1.25rem"
-                viewBox="0 0 20 20"
-                width="1.25rem"
-              >
-                <rect
-                  class="checkmark__outline"
-                  fill="none"
-                  height="18"
-                  rx="3"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  width="18"
-                  x="1"
-                  y="1"
-                />
-                <use
-                  class="checkmark__content"
-                  fill="none"
-                  xlink:href="test-file-stub#check"
-                />
-              </svg>
-            </span>
-            <label
-              class="label label--md"
-              data-bootstrap-override="label"
-              for="9"
-              style="--checkbox-svg-size: 1.25rem;"
-            >
-              Default
-            </label>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <div
-            class="checkbox"
-          >
-            <span
-              class="input__wrapper input__wrapper--disabled"
-              style="--checkbox-svg-size: 1.25rem;"
-            >
-              <input
-                aria-checked="mixed"
-                checked=""
-                class="checkbox__input"
-                data-bootstrap-override="checkbox"
-                disabled=""
-                id="10"
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                height="1.25rem"
-                viewBox="0 0 20 20"
-                width="1.25rem"
-              >
-                <rect
-                  class="checkmark__outline"
-                  fill="none"
-                  height="18"
-                  rx="3"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  width="18"
-                  x="1"
-                  y="1"
-                />
-                <use
-                  class="checkmark__content"
-                  fill="none"
-                  xlink:href="test-file-stub#remove"
-                />
-              </svg>
-            </span>
-            <label
-              class="label label--md label--disabled"
-              data-bootstrap-override="label"
-              for="10"
-              style="--checkbox-svg-size: 1.25rem;"
-            >
-              Disabled
-            </label>
-          </div>
-        </td>
-        <td>
-          <div
-            class="checkbox"
-          >
-            <span
-              class="input__wrapper"
-              style="--checkbox-svg-size: 1.25rem;"
-            >
-              <input
-                aria-checked="mixed"
-                checked=""
-                class="checkbox__input"
-                data-bootstrap-override="checkbox"
                 id="11"
-                readonly=""
                 type="checkbox"
               />
               <svg
                 aria-hidden="true"
-                height="1.25rem"
-                viewBox="0 0 20 20"
-                width="1.25rem"
+                class="icon checkbox__icon checkbox__icon--disabled"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <rect
-                  class="checkmark__outline"
-                  fill="none"
-                  height="18"
-                  rx="3"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  width="18"
-                  x="1"
-                  y="1"
-                />
                 <use
-                  class="checkmark__content"
-                  fill="none"
-                  xlink:href="test-file-stub#remove"
+                  xlink:href="test-file-stub#checkbox-unchecked"
                 />
               </svg>
             </span>
             <label
-              class="label label--md"
+              class="label label--md label--disabled"
               data-bootstrap-override="label"
               for="11"
-              style="--checkbox-svg-size: 1.25rem;"
+            >
+              Disabled
+            </label>
+          </div>
+        </td>
+        <td>
+          <div
+            class="checkbox checkbox--md"
+          >
+            <span
+              class="input__wrapper"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="13"
+                readonly=""
+                type="checkbox"
+              />
+              <svg
+                aria-hidden="true"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <use
+                  xlink:href="test-file-stub#checkbox-unchecked"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--md"
+              data-bootstrap-override="label"
+              for="13"
+            >
+              Default
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div
+            class="checkbox checkbox--md"
+          >
+            <span
+              class="input__wrapper input__wrapper--disabled"
+            >
+              <input
+                checked=""
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                disabled=""
+                id="15"
+                type="checkbox"
+              />
+              <svg
+                aria-hidden="true"
+                class="icon checkbox__icon checkbox__icon--disabled"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <use
+                  xlink:href="test-file-stub#checkbox-checked"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--md label--disabled"
+              data-bootstrap-override="label"
+              for="15"
+            >
+              Disabled
+            </label>
+          </div>
+        </td>
+        <td>
+          <div
+            class="checkbox checkbox--md"
+          >
+            <span
+              class="input__wrapper"
+            >
+              <input
+                checked=""
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="17"
+                readonly=""
+                type="checkbox"
+              />
+              <svg
+                aria-hidden="true"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <use
+                  xlink:href="test-file-stub#checkbox-checked"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--md"
+              data-bootstrap-override="label"
+              for="17"
+            >
+              Default
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div
+            class="checkbox checkbox--md"
+          >
+            <span
+              class="input__wrapper input__wrapper--disabled"
+            >
+              <input
+                aria-checked="mixed"
+                checked=""
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                disabled=""
+                id="19"
+                type="checkbox"
+              />
+              <svg
+                aria-hidden="true"
+                class="icon checkbox__icon checkbox__icon--disabled"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <use
+                  xlink:href="test-file-stub#checkbox-indeterminate"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--md label--disabled"
+              data-bootstrap-override="label"
+              for="19"
+            >
+              Disabled
+            </label>
+          </div>
+        </td>
+        <td>
+          <div
+            class="checkbox checkbox--md"
+          >
+            <span
+              class="input__wrapper"
+            >
+              <input
+                aria-checked="mixed"
+                checked=""
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="21"
+                readonly=""
+                type="checkbox"
+              />
+              <svg
+                aria-hidden="true"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <use
+                  xlink:href="test-file-stub#checkbox-indeterminate"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--md"
+              data-bootstrap-override="label"
+              for="21"
             >
               Default
             </label>
@@ -428,48 +332,36 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
 
 exports[`<Checkbox /> Disabled story renders snapshot 2`] = `
 <div
-  class="checkbox"
+  class="checkbox checkbox--md"
 >
   <span
     class="input__wrapper input__wrapper--disabled"
-    style="--checkbox-svg-size: 1.25rem;"
   >
     <input
       class="checkbox__input"
       data-bootstrap-override="checkbox"
       disabled=""
-      id="22"
+      id="44"
       type="checkbox"
     />
     <svg
       aria-hidden="true"
-      height="1.25rem"
-      viewBox="0 0 20 20"
-      width="1.25rem"
+      class="icon checkbox__icon checkbox__icon--disabled"
+      fill="currentColor"
+      height="1.5rem"
+      style="--icon-size: 1.5rem;"
+      width="1.5rem"
+      xmlns="http://www.w3.org/2000/svg"
     >
-      <rect
-        class="checkmark__outline"
-        fill="none"
-        height="18"
-        rx="3"
-        stroke="currentColor"
-        stroke-width="2"
-        width="18"
-        x="1"
-        y="1"
-      />
       <use
-        class="checkmark__content"
-        fill="none"
-        xlink:href="test-file-stub#check"
+        xlink:href="test-file-stub#checkbox-unchecked"
       />
     </svg>
   </span>
   <label
     class="label label--md label--disabled"
     data-bootstrap-override="label"
-    for="22"
-    style="--checkbox-svg-size: 1.25rem;"
+    for="44"
   >
     Disabled
   </label>
@@ -481,50 +373,38 @@ exports[`<Checkbox /> Indeterminate story renders snapshot 1`] = `
   style="margin: 0.25rem;"
 >
   <div
-    class="checkbox"
+    class="checkbox checkbox--md"
   >
     <span
       class="input__wrapper"
-      style="--checkbox-svg-size: 1.25rem;"
     >
       <input
         aria-checked="mixed"
         checked=""
         class="checkbox__input"
         data-bootstrap-override="checkbox"
-        id="5"
+        id="9"
         readonly=""
         type="checkbox"
       />
       <svg
         aria-hidden="true"
-        height="1.25rem"
-        viewBox="0 0 20 20"
-        width="1.25rem"
+        class="icon checkbox__icon"
+        fill="currentColor"
+        height="1.5rem"
+        style="--icon-size: 1.5rem;"
+        width="1.5rem"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <rect
-          class="checkmark__outline"
-          fill="none"
-          height="18"
-          rx="3"
-          stroke="currentColor"
-          stroke-width="2"
-          width="18"
-          x="1"
-          y="1"
-        />
         <use
-          class="checkmark__content"
-          fill="none"
-          xlink:href="test-file-stub#remove"
+          xlink:href="test-file-stub#checkbox-indeterminate"
         />
       </svg>
     </span>
     <label
       class="label label--md"
       data-bootstrap-override="label"
-      for="5"
-      style="--checkbox-svg-size: 1.25rem;"
+      for="9"
     >
       Checkbox
     </label>
@@ -540,7 +420,6 @@ exports[`<Checkbox /> LabelsOnly story renders snapshot 1`] = `
     class="label label--md"
     data-bootstrap-override="label"
     for="md-label"
-    style="--checkbox-svg-size: 1.25rem;"
   >
     Medium label
   </label>
@@ -549,7 +428,6 @@ exports[`<Checkbox /> LabelsOnly story renders snapshot 1`] = `
     class="label label--sm"
     data-bootstrap-override="label"
     for="sm-label"
-    style="--checkbox-svg-size: 1.25rem;"
   >
     Small label
   </label>
@@ -558,7 +436,6 @@ exports[`<Checkbox /> LabelsOnly story renders snapshot 1`] = `
     class="label label--md"
     data-bootstrap-override="label"
     for="long-md-label"
-    style="--checkbox-svg-size: 1.25rem;"
   >
     Long medium label lorem ipsum dolor sit amet, consectetur adipiscing elit
   </label>
@@ -567,7 +444,6 @@ exports[`<Checkbox /> LabelsOnly story renders snapshot 1`] = `
     class="label label--sm"
     data-bootstrap-override="label"
     for="long-sm-label"
-    style="--checkbox-svg-size: 1.25rem;"
   >
     Long small label lorem ipsum dolor sit amet, consectetur adipiscing elit
   </label>
@@ -576,7 +452,6 @@ exports[`<Checkbox /> LabelsOnly story renders snapshot 1`] = `
     class="label label--md label--disabled"
     data-bootstrap-override="label"
     for="md-disabled-label"
-    style="--checkbox-svg-size: 1.25rem;"
   >
     Medium disabled
   </label>
@@ -585,7 +460,6 @@ exports[`<Checkbox /> LabelsOnly story renders snapshot 1`] = `
     class="label label--sm label--disabled"
     data-bootstrap-override="label"
     for="sm-disabled-label"
-    style="--checkbox-svg-size: 1.25rem;"
   >
     Small disabled
   </label>
@@ -594,7 +468,6 @@ exports[`<Checkbox /> LabelsOnly story renders snapshot 1`] = `
     class="label label--md label--disabled"
     data-bootstrap-override="label"
     for="long-md-disabled-label"
-    style="--checkbox-svg-size: 1.25rem;"
   >
     Long medium disabled label lorem ipsum dolor sit amet, consectetur adipiscing elit
   </label>
@@ -603,7 +476,6 @@ exports[`<Checkbox /> LabelsOnly story renders snapshot 1`] = `
     class="label label--sm label--disabled"
     data-bootstrap-override="label"
     for="long-sm-disabled-label"
-    style="--checkbox-svg-size: 1.25rem;"
   >
     Long small disabled label lorem ipsum dolor sit amet, consectetur adipiscing elit
   </label>
@@ -618,187 +490,141 @@ exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
     class="longlabels--grid"
   >
     <div
-      class="checkbox"
+      class="checkbox checkbox--md"
     >
       <span
         class="input__wrapper"
-        style="--checkbox-svg-size: 1.25rem;"
       >
         <input
           class="checkbox__input"
           data-bootstrap-override="checkbox"
-          id="18"
+          id="35"
+          readonly=""
           type="checkbox"
         />
         <svg
           aria-hidden="true"
-          height="1.25rem"
-          viewBox="0 0 20 20"
-          width="1.25rem"
+          class="icon checkbox__icon"
+          fill="currentColor"
+          height="1.5rem"
+          style="--icon-size: 1.5rem;"
+          width="1.5rem"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <rect
-            class="checkmark__outline"
-            fill="none"
-            height="18"
-            rx="3"
-            stroke="currentColor"
-            stroke-width="2"
-            width="18"
-            x="1"
-            y="1"
-          />
           <use
-            class="checkmark__content"
-            fill="none"
-            xlink:href="test-file-stub#check"
+            xlink:href="test-file-stub#checkbox-unchecked"
           />
         </svg>
       </span>
       <label
         class="label label--md"
         data-bootstrap-override="label"
-        for="18"
-        style="--checkbox-svg-size: 1.25rem;"
+        for="35"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit
       </label>
     </div>
     <div
-      class="checkbox"
+      class="checkbox checkbox--sm"
     >
       <span
         class="input__wrapper"
-        style="--checkbox-svg-size: 1.25rem;"
       >
         <input
           class="checkbox__input"
           data-bootstrap-override="checkbox"
-          id="19"
+          id="37"
+          readonly=""
           type="checkbox"
         />
         <svg
           aria-hidden="true"
-          height="1.25rem"
-          viewBox="0 0 20 20"
-          width="1.25rem"
+          class="icon checkbox__icon"
+          fill="currentColor"
+          height="1.5rem"
+          style="--icon-size: 1.5rem;"
+          width="1.5rem"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <rect
-            class="checkmark__outline"
-            fill="none"
-            height="18"
-            rx="3"
-            stroke="currentColor"
-            stroke-width="2"
-            width="18"
-            x="1"
-            y="1"
-          />
           <use
-            class="checkmark__content"
-            fill="none"
-            xlink:href="test-file-stub#check"
+            xlink:href="test-file-stub#checkbox-unchecked"
           />
         </svg>
       </span>
       <label
         class="label label--sm"
         data-bootstrap-override="label"
-        for="19"
-        style="--checkbox-svg-size: 1.25rem;"
+        for="37"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit
       </label>
     </div>
     <div
-      class="checkbox"
+      class="checkbox checkbox--md"
     >
       <span
         class="input__wrapper input__wrapper--disabled"
-        style="--checkbox-svg-size: 1.25rem;"
       >
         <input
           class="checkbox__input"
           data-bootstrap-override="checkbox"
           disabled=""
-          id="20"
+          id="39"
           type="checkbox"
         />
         <svg
           aria-hidden="true"
-          height="1.25rem"
-          viewBox="0 0 20 20"
-          width="1.25rem"
+          class="icon checkbox__icon checkbox__icon--disabled"
+          fill="currentColor"
+          height="1.5rem"
+          style="--icon-size: 1.5rem;"
+          width="1.5rem"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <rect
-            class="checkmark__outline"
-            fill="none"
-            height="18"
-            rx="3"
-            stroke="currentColor"
-            stroke-width="2"
-            width="18"
-            x="1"
-            y="1"
-          />
           <use
-            class="checkmark__content"
-            fill="none"
-            xlink:href="test-file-stub#check"
+            xlink:href="test-file-stub#checkbox-unchecked"
           />
         </svg>
       </span>
       <label
         class="label label--md label--disabled"
         data-bootstrap-override="label"
-        for="20"
-        style="--checkbox-svg-size: 1.25rem;"
+        for="39"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit
       </label>
     </div>
     <div
-      class="checkbox"
+      class="checkbox checkbox--sm"
     >
       <span
         class="input__wrapper input__wrapper--disabled"
-        style="--checkbox-svg-size: 1.25rem;"
       >
         <input
           class="checkbox__input"
           data-bootstrap-override="checkbox"
           disabled=""
-          id="21"
+          id="41"
           type="checkbox"
         />
         <svg
           aria-hidden="true"
-          height="1.25rem"
-          viewBox="0 0 20 20"
-          width="1.25rem"
+          class="icon checkbox__icon checkbox__icon--disabled"
+          fill="currentColor"
+          height="1.5rem"
+          style="--icon-size: 1.5rem;"
+          width="1.5rem"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <rect
-            class="checkmark__outline"
-            fill="none"
-            height="18"
-            rx="3"
-            stroke="currentColor"
-            stroke-width="2"
-            width="18"
-            x="1"
-            y="1"
-          />
           <use
-            class="checkmark__content"
-            fill="none"
-            xlink:href="test-file-stub#check"
+            xlink:href="test-file-stub#checkbox-unchecked"
           />
         </svg>
       </span>
       <label
         class="label label--sm label--disabled"
         data-bootstrap-override="label"
-        for="21"
-        style="--checkbox-svg-size: 1.25rem;"
+        for="41"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit
       </label>
@@ -812,47 +638,35 @@ exports[`<Checkbox /> Small story renders snapshot 1`] = `
   style="margin: 0.25rem;"
 >
   <div
-    class="checkbox"
+    class="checkbox checkbox--sm"
   >
     <span
       class="input__wrapper"
-      style="--checkbox-svg-size: 1.25rem;"
     >
       <input
         class="checkbox__input"
         data-bootstrap-override="checkbox"
-        id="3"
+        id="5"
         type="checkbox"
       />
       <svg
         aria-hidden="true"
-        height="1.25rem"
-        viewBox="0 0 20 20"
-        width="1.25rem"
+        class="icon checkbox__icon"
+        fill="currentColor"
+        height="1.5rem"
+        style="--icon-size: 1.5rem;"
+        width="1.5rem"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <rect
-          class="checkmark__outline"
-          fill="none"
-          height="18"
-          rx="3"
-          stroke="currentColor"
-          stroke-width="2"
-          width="18"
-          x="1"
-          y="1"
-        />
         <use
-          class="checkmark__content"
-          fill="none"
-          xlink:href="test-file-stub#check"
+          xlink:href="test-file-stub#checkbox-unchecked"
         />
       </svg>
     </span>
     <label
       class="label label--sm"
       data-bootstrap-override="label"
-      for="3"
-      style="--checkbox-svg-size: 1.25rem;"
+      for="5"
     >
       Checkbox
     </label>
@@ -865,48 +679,36 @@ exports[`<Checkbox /> SmallChecked story renders snapshot 1`] = `
   style="margin: 0.25rem;"
 >
   <div
-    class="checkbox"
+    class="checkbox checkbox--sm"
   >
     <span
       class="input__wrapper"
-      style="--checkbox-svg-size: 1.25rem;"
     >
       <input
         checked=""
         class="checkbox__input"
         data-bootstrap-override="checkbox"
-        id="4"
+        id="7"
         type="checkbox"
       />
       <svg
         aria-hidden="true"
-        height="1.25rem"
-        viewBox="0 0 20 20"
-        width="1.25rem"
+        class="icon checkbox__icon"
+        fill="currentColor"
+        height="1.5rem"
+        style="--icon-size: 1.5rem;"
+        width="1.5rem"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <rect
-          class="checkmark__outline"
-          fill="none"
-          height="18"
-          rx="3"
-          stroke="currentColor"
-          stroke-width="2"
-          width="18"
-          x="1"
-          y="1"
-        />
         <use
-          class="checkmark__content"
-          fill="none"
-          xlink:href="test-file-stub#check"
+          xlink:href="test-file-stub#checkbox-checked"
         />
       </svg>
     </span>
     <label
       class="label label--sm"
       data-bootstrap-override="label"
-      for="4"
-      style="--checkbox-svg-size: 1.25rem;"
+      for="7"
     >
       Checkbox
     </label>
@@ -918,18 +720,18 @@ exports[`<Checkbox /> WithCustomPositioning story renders snapshot 1`] = `
 <div
   style="margin: 0.25rem;"
 >
-  <span>
+  <div
+    style="display: flex; align-items: center;"
+  >
     <label
       class="label label--md"
       data-bootstrap-override="label"
       for="test"
-      style="--checkbox-svg-size: 1.25rem;"
     >
       label on left
     </label>
     <span
       class="input__wrapper"
-      style="--checkbox-svg-size: 1.25rem;"
     >
       <input
         class="checkbox__input"
@@ -939,29 +741,19 @@ exports[`<Checkbox /> WithCustomPositioning story renders snapshot 1`] = `
       />
       <svg
         aria-hidden="true"
-        height="1.25rem"
-        viewBox="0 0 20 20"
-        width="1.25rem"
+        class="icon checkbox__icon"
+        fill="currentColor"
+        height="1.5rem"
+        style="--icon-size: 1.5rem;"
+        width="1.5rem"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <rect
-          class="checkmark__outline"
-          fill="none"
-          height="18"
-          rx="3"
-          stroke="currentColor"
-          stroke-width="2"
-          width="18"
-          x="1"
-          y="1"
-        />
         <use
-          class="checkmark__content"
-          fill="none"
-          xlink:href="test-file-stub#check"
+          xlink:href="test-file-stub#checkbox-unchecked"
         />
       </svg>
     </span>
-  </span>
+  </div>
 </div>
 `;
 
@@ -970,91 +762,69 @@ exports[`<Checkbox /> WithoutVisibleLabel story renders snapshot 1`] = `
   style="margin: 0.25rem;"
 >
   <div
-    class="checkbox"
+    class="checkbox checkbox--md"
   >
     <span
       class="input__wrapper"
-      style="--checkbox-svg-size: 1.25rem;"
     >
       <input
         aria-label="a checkbox has no name"
         class="checkbox__input"
         data-bootstrap-override="checkbox"
-        id="12"
+        id="23"
+        readonly=""
         type="checkbox"
       />
       <svg
         aria-hidden="true"
-        height="1.25rem"
-        viewBox="0 0 20 20"
-        width="1.25rem"
+        class="icon checkbox__icon"
+        fill="currentColor"
+        height="1.5rem"
+        style="--icon-size: 1.5rem;"
+        width="1.5rem"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <rect
-          class="checkmark__outline"
-          fill="none"
-          height="18"
-          rx="3"
-          stroke="currentColor"
-          stroke-width="2"
-          width="18"
-          x="1"
-          y="1"
-        />
         <use
-          class="checkmark__content"
-          fill="none"
-          xlink:href="test-file-stub#check"
+          xlink:href="test-file-stub#checkbox-unchecked"
         />
       </svg>
     </span>
   </div>
   <div
-    class="checkbox"
+    class="checkbox checkbox--md"
   >
     <span
       class="input__wrapper"
-      style="--checkbox-svg-size: 1.25rem;"
     >
       <input
         aria-label="a checkbox has no name"
         checked=""
         class="checkbox__input"
         data-bootstrap-override="checkbox"
-        id="13"
+        id="25"
         readonly=""
         type="checkbox"
       />
       <svg
         aria-hidden="true"
-        height="1.25rem"
-        viewBox="0 0 20 20"
-        width="1.25rem"
+        class="icon checkbox__icon"
+        fill="currentColor"
+        height="1.5rem"
+        style="--icon-size: 1.5rem;"
+        width="1.5rem"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <rect
-          class="checkmark__outline"
-          fill="none"
-          height="18"
-          rx="3"
-          stroke="currentColor"
-          stroke-width="2"
-          width="18"
-          x="1"
-          y="1"
-        />
         <use
-          class="checkmark__content"
-          fill="none"
-          xlink:href="test-file-stub#check"
+          xlink:href="test-file-stub#checkbox-checked"
         />
       </svg>
     </span>
   </div>
   <div
-    class="checkbox"
+    class="checkbox checkbox--md"
   >
     <span
       class="input__wrapper"
-      style="--checkbox-svg-size: 1.25rem;"
     >
       <input
         aria-checked="mixed"
@@ -1062,81 +832,59 @@ exports[`<Checkbox /> WithoutVisibleLabel story renders snapshot 1`] = `
         checked=""
         class="checkbox__input"
         data-bootstrap-override="checkbox"
-        id="14"
+        id="27"
         readonly=""
         type="checkbox"
       />
       <svg
         aria-hidden="true"
-        height="1.25rem"
-        viewBox="0 0 20 20"
-        width="1.25rem"
+        class="icon checkbox__icon"
+        fill="currentColor"
+        height="1.5rem"
+        style="--icon-size: 1.5rem;"
+        width="1.5rem"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <rect
-          class="checkmark__outline"
-          fill="none"
-          height="18"
-          rx="3"
-          stroke="currentColor"
-          stroke-width="2"
-          width="18"
-          x="1"
-          y="1"
-        />
         <use
-          class="checkmark__content"
-          fill="none"
-          xlink:href="test-file-stub#remove"
+          xlink:href="test-file-stub#checkbox-indeterminate"
         />
       </svg>
     </span>
   </div>
   <div
-    class="checkbox"
+    class="checkbox checkbox--md"
   >
     <span
       class="input__wrapper input__wrapper--disabled"
-      style="--checkbox-svg-size: 1.25rem;"
     >
       <input
         aria-label="a checkbox has no name"
         class="checkbox__input"
         data-bootstrap-override="checkbox"
         disabled=""
-        id="15"
+        id="29"
         type="checkbox"
       />
       <svg
         aria-hidden="true"
-        height="1.25rem"
-        viewBox="0 0 20 20"
-        width="1.25rem"
+        class="icon checkbox__icon checkbox__icon--disabled"
+        fill="currentColor"
+        height="1.5rem"
+        style="--icon-size: 1.5rem;"
+        width="1.5rem"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <rect
-          class="checkmark__outline"
-          fill="none"
-          height="18"
-          rx="3"
-          stroke="currentColor"
-          stroke-width="2"
-          width="18"
-          x="1"
-          y="1"
-        />
         <use
-          class="checkmark__content"
-          fill="none"
-          xlink:href="test-file-stub#check"
+          xlink:href="test-file-stub#checkbox-unchecked"
         />
       </svg>
     </span>
   </div>
   <div
-    class="checkbox"
+    class="checkbox checkbox--md"
   >
     <span
       class="input__wrapper input__wrapper--disabled"
-      style="--checkbox-svg-size: 1.25rem;"
     >
       <input
         aria-label="a checkbox has no name"
@@ -1144,40 +892,29 @@ exports[`<Checkbox /> WithoutVisibleLabel story renders snapshot 1`] = `
         class="checkbox__input"
         data-bootstrap-override="checkbox"
         disabled=""
-        id="16"
+        id="31"
         type="checkbox"
       />
       <svg
         aria-hidden="true"
-        height="1.25rem"
-        viewBox="0 0 20 20"
-        width="1.25rem"
+        class="icon checkbox__icon checkbox__icon--disabled"
+        fill="currentColor"
+        height="1.5rem"
+        style="--icon-size: 1.5rem;"
+        width="1.5rem"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <rect
-          class="checkmark__outline"
-          fill="none"
-          height="18"
-          rx="3"
-          stroke="currentColor"
-          stroke-width="2"
-          width="18"
-          x="1"
-          y="1"
-        />
         <use
-          class="checkmark__content"
-          fill="none"
-          xlink:href="test-file-stub#check"
+          xlink:href="test-file-stub#checkbox-checked"
         />
       </svg>
     </span>
   </div>
   <div
-    class="checkbox"
+    class="checkbox checkbox--md"
   >
     <span
       class="input__wrapper input__wrapper--disabled"
-      style="--checkbox-svg-size: 1.25rem;"
     >
       <input
         aria-checked="mixed"
@@ -1186,30 +923,20 @@ exports[`<Checkbox /> WithoutVisibleLabel story renders snapshot 1`] = `
         class="checkbox__input"
         data-bootstrap-override="checkbox"
         disabled=""
-        id="17"
+        id="33"
         type="checkbox"
       />
       <svg
         aria-hidden="true"
-        height="1.25rem"
-        viewBox="0 0 20 20"
-        width="1.25rem"
+        class="icon checkbox__icon checkbox__icon--disabled"
+        fill="currentColor"
+        height="1.5rem"
+        style="--icon-size: 1.5rem;"
+        width="1.5rem"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <rect
-          class="checkmark__outline"
-          fill="none"
-          height="18"
-          rx="3"
-          stroke="currentColor"
-          stroke-width="2"
-          width="18"
-          x="1"
-          y="1"
-        />
         <use
-          class="checkmark__content"
-          fill="none"
-          xlink:href="test-file-stub#remove"
+          xlink:href="test-file-stub#checkbox-indeterminate"
         />
       </svg>
     </span>
