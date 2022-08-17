@@ -3,6 +3,10 @@ import React from 'react';
 import styles from './Score.module.css';
 import Tag from '../Tag';
 
+export const VARIANTS = ['neutral', 'error', 'success'] as const;
+
+export type Variant = typeof VARIANTS[number];
+
 export interface Props {
   /**
    * CSS class names that can be appended to the component.
@@ -11,7 +15,7 @@ export interface Props {
   /**
    * The color variant of the score.
    */
-  variant: 'success' | 'error' | 'neutral';
+  variant: Variant;
   /**
    * The score value text.
    */
@@ -25,7 +29,7 @@ export interface Props {
  * import {Score} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * A (pill shaped badge) wrapper intended for use with scores.
  */
 export const Score = ({ className, variant, ...other }: Props) => {
   const componentClassName = clsx(

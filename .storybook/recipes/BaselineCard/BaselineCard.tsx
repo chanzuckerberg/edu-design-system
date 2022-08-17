@@ -3,6 +3,7 @@ import React, { MutableRefObject, ReactNode, useEffect, useRef } from 'react';
 import styles from './BaselineCard.module.css';
 
 import { Card, CardBody, CardFooter, CardHeader, Score } from '../../../src';
+import { Variant } from '../../../src/components/Score/Score';
 
 interface Metadata {
   /**
@@ -20,7 +21,7 @@ interface Metadata {
   /**
    * Score variant. For coloring outline since background and fonts are fixed.
    */
-  variant: 'success' | 'error' | 'neutral';
+  variant: Variant;
 }
 
 export interface Props {
