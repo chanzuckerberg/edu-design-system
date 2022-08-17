@@ -2,9 +2,8 @@ import clsx from 'clsx';
 import React, { MutableRefObject, ReactNode, useEffect, useRef } from 'react';
 import styles from './BaselineCard.module.css';
 
-import { Card, CardBody, CardFooter, CardHeader, Tag } from '../../../src';
-
-import { Variant } from '../../../src/components/Tag/Tag';
+import { Card, CardBody, CardFooter, CardHeader, Score } from '../../../src';
+import { Variant } from '../../../src/components/Score/Score';
 
 interface Metadata {
   /**
@@ -20,9 +19,9 @@ interface Metadata {
    */
   deadline: string;
   /**
-   * Tag variant for the score. For coloring outline since background and fonts are fixed.
+   * Score variant. For coloring outline since background and fonts are fixed.
    */
-  variant?: Variant;
+  variant: Variant;
 }
 
 export interface Props {
@@ -158,9 +157,8 @@ export const BaselineCard = ({
                     Score
                   </th>
                   <td>
-                    <Tag
+                    <Score
                       className={styles['baseline-card__score']}
-                      hasOutline
                       text={metadata.score}
                       variant={metadata.variant}
                     />

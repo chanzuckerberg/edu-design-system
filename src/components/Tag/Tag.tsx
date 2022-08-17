@@ -54,10 +54,10 @@ export const Tag = ({
   hasOutline = false,
 }: Props) => {
   const componentClassName = clsx(
-    className,
     styles['tag'],
     styles[`tag--${variant}`],
     hasOutline && styles['tag--outline'],
+    className,
   );
 
   return (
