@@ -3,6 +3,7 @@ import { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
 import { PageHeader } from './PageHeader';
+import Breadcrumbs from '../Breadcrumbs';
 import Tag from '../Tag';
 import Text from '../Text';
 
@@ -34,6 +35,20 @@ export const WithOverline: StoryObj<Args> = {
       <Text as="div" size="overline">
         Overline above title
       </Text>
+    ),
+    title: 'Page header title',
+    description:
+      'This is a description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  },
+};
+
+export const WithBreadcrumbs: StoryObj<Args> = {
+  args: {
+    overline: (
+      <Breadcrumbs>
+        <Breadcrumbs.Item href="#" text="My Courses" />
+        <Breadcrumbs.Item href="#" text="(2023) Modern World 1" />
+      </Breadcrumbs>
     ),
     title: 'Page header title',
     description:

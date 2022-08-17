@@ -97,6 +97,99 @@ exports[`<PageHeader /> TwoUp story renders snapshot 1`] = `
 </header>
 `;
 
+exports[`<PageHeader /> WithBreadcrumbs story renders snapshot 1`] = `
+<header
+  class="page-header"
+>
+  <div
+    class="page-header__left"
+  >
+    <nav
+      aria-label="breadcrumbs links"
+      class="breadcrumbs"
+      id="1"
+    >
+      <ul
+        class="breadcrumbs__list"
+      >
+        <li
+          class="breadcrumbs__item breadcrumbs__item-back"
+        >
+          <a
+            class="breadcrumbs__link"
+            href="#"
+          >
+            <svg
+              class="icon breadcrumbs__back-icon"
+              fill="currentColor"
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title
+                id="2"
+              >
+                My Courses
+              </title>
+              <use
+                xlink:href="test-file-stub#chevron-left"
+              />
+            </svg>
+          </a>
+          <span
+            aria-hidden="true"
+            class="breadcrumbs__separator"
+          >
+            /
+          </span>
+        </li>
+        <li
+          class="breadcrumbs__item"
+        >
+          <a
+            class="breadcrumbs__link"
+            href="#"
+          >
+            My Courses
+          </a>
+          <span
+            aria-hidden="true"
+            class="breadcrumbs__separator"
+          >
+            /
+          </span>
+        </li>
+        <li
+          class="breadcrumbs__item"
+        >
+          <a
+            class="breadcrumbs__link"
+            href="#"
+          >
+            (2023) Modern World 1
+          </a>
+          <span
+            aria-hidden="true"
+            class="breadcrumbs__separator"
+          >
+            /
+          </span>
+        </li>
+      </ul>
+    </nav>
+    <h1
+      class="page-header__title heading heading--size-headline-lg heading--neutral-strong"
+    >
+      Page header title
+    </h1>
+    <div
+      class="page-header__description"
+    >
+      This is a description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </div>
+  </div>
+</header>
+`;
+
 exports[`<PageHeader /> WithDescription story renders snapshot 1`] = `
 <header
   class="page-header"
@@ -126,13 +219,9 @@ exports[`<PageHeader /> WithOverline story renders snapshot 1`] = `
     class="page-header__left"
   >
     <div
-      class="page-header__overline"
+      class="layout-linelength-container text text--overline text-passage text-passage--overline"
     >
-      <div
-        class="layout-linelength-container text text--overline text-passage text-passage--overline"
-      >
-        Overline above title
-      </div>
+      Overline above title
     </div>
     <h1
       class="page-header__title heading heading--size-headline-lg heading--neutral-strong"

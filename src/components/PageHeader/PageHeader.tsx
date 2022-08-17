@@ -97,9 +97,7 @@ export const PageHeader = ({
   return (
     <header className={componentClassName} {...other}>
       <div className={styles['page-header__left']}>
-        {overline && (
-          <div className={styles['page-header__overline']}>{overline}</div>
-        )}
+        {overline}
         <Heading
           as={as}
           className={styles['page-header__title']}
