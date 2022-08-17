@@ -58,20 +58,10 @@
  * Page header right
  * 1) On larger viewports, add margin-left to keep space between title and header-right content. If additional margin needs to be added (i.e. margin-top on smaller viewports), add a spacing utility class to the contents of header-right.
  */
- .page-header__right {
-  
+.page-header__right {
   @media all and (min-width: $eds-bp-md) {
-    margin-left: var(--eds-size-4); 
+    margin-left: var(--eds-size-4);
   }
-}
-
-/**
- * Page header overline
- * 1) overline is an optional element that appears above the header
- */
-.page-header__overline {
-  margin-top: 0;
-  margin-bottom: var(--eds-size-1);
 }
 
 /**
