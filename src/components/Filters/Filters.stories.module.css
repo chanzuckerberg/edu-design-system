@@ -1,0 +1,4 @@
+.button-group__apply-only {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}

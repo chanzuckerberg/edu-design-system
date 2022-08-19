@@ -1,22 +1,43 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import styles from './Filters.module.css';
 import Button from '../Button';
-import { CheckboxField, FiltersDrawer } from '../FiltersDrawer/FiltersDrawer';
+import { FiltersCheckboxField } from '../FiltersCheckboxField/FiltersCheckboxField';
+import { FiltersDrawer } from '../FiltersDrawer/FiltersDrawer';
 import Icon from '../Icon';
 
 export type Props = {
   /**
-   * Checkbox fields that will be displayed in the filters drawer.
+   * Text to be placed in the button that activates the Filters Drawer
    */
-  checkboxFields: CheckboxField[];
+  triggerText?: string;
+  /**
+   * Indicates status that filters have been selected, influencing toggle button variant.
+   */
+  hasSelectedFilters?: boolean;
+  /**
+   * Input components, input component fields, or relevant information that will be displayed in the filters drawer.
+   */
+  children: React.ReactNode;
   /**
    * CSS class names that can be appended to the component.
    */
   className?: string;
   /**
+   * Callback called when the clear button is called.
+   */
+  onClear?: () => void;
+  /**
+   * CSS class names that can be appended to the footer button group.
+   */
+  footerButtonGroupClassName?: string;
+  /**
    * Callback called when filters drawer is closed.
    */
-  onClose: (checkedValues: { [key: string]: boolean }) => void;
+  onClose?: () => void;
+  /**
+   * Callback called when the apply button is called.
+   */
+  onApply?: () => void;
 };
 
 /**
@@ -28,71 +49,67 @@ export type Props = {
  *
  * A filter component with a button that triggers a drawer of checkbox filters to be selected.
  */
-export const Filters = ({ checkboxFields, className, onClose }: Props) => {
-  /**
-   * Maps the checkbox values to false initially to indicate that there are no filters selected.
-   * TODO: customize to allow initial filter values.
-   */
-  const checkedMap = {};
-  checkboxFields.forEach(({ checkboxes }) => {
-    checkboxes.forEach(({ value }) => {
-      checkedMap[value] = false;
-    });
-  });
-
-  /**
-   * Manages state of the applied checkboxes in the context of the filters component.
-   * It is only updated when the filters drawer is closed.
-   */
-  const [appliedCheckedBoxes, setAppliedCheckedBoxes] = useState({
-    ...checkedMap,
-  });
-
+export const Filters = ({
+  triggerText,
+  hasSelectedFilters,
+  children,
+  className,
+  footerButtonGroupClassName,
+  onClear,
+  onClose,
+  onApply,
+}: Props) => {
   /**
    * Manages the active state of the filters drawer.
    */
   const [isActive, setIsActive] = useState(false);
 
-  function closeFiltersDrawer(checkedValues: { [key: string]: boolean }) {
-    onClose(checkedValues);
-    setAppliedCheckedBoxes({ ...checkedValues });
+  function closeFiltersDrawer() {
     setIsActive(false);
   }
 
-  const filtersButton = useRef<HTMLButtonElement>(null);
-  /**
-   * Counts how many filters have been applied.
-   */
-  const filterCount = Object.values(appliedCheckedBoxes).reduce(
-    (count: number, status) => {
-      if (status) return count + 1;
-      else return count;
-    },
-    0,
-  );
+  function closeFilters() {
+    closeFiltersDrawer();
+    onClose && onClose();
+  }
 
-  const hasFilters = filterCount > 0;
-  const statusVariant = hasFilters ? 'brand' : 'neutral';
+  function clearFilters() {
+    closeFiltersDrawer();
+    onClear && onClear();
+  }
+
+  function applyFilters() {
+    closeFiltersDrawer();
+    onApply && onApply();
+  }
+
+  const buttonVariant = hasSelectedFilters ? 'primary' : 'secondary';
+  const buttonStatus = hasSelectedFilters ? 'brand' : 'neutral';
 
   return (
     <div>
       <Button
         className={styles['filters__button']}
         onClick={() => setIsActive(true)}
-        ref={filtersButton}
-        status={statusVariant}
-        variant={hasFilters ? 'primary' : 'secondary'}
+        status={buttonStatus}
+        variant={buttonVariant}
       >
         <Icon name="filter-list" purpose="decorative" size="1.5rem" />
-        Filters {filterCount > 0 && `(${filterCount})`}
+        {triggerText}
       </Button>
       <FiltersDrawer
-        checkboxFields={checkboxFields}
-        checkedMap={appliedCheckedBoxes}
         className={className}
+        footerButtonGroupClassName={footerButtonGroupClassName}
         isActive={isActive}
-        onClose={closeFiltersDrawer}
-      />
+        onApply={onApply ? applyFilters : undefined}
+        onClear={onClear ? clearFilters : undefined}
+        onClose={closeFilters}
+      >
+        {children}
+      </FiltersDrawer>
     </div>
   );
 };
+
+Filters.FiltersDrawer = FiltersDrawer;
+Filters.FiltersCheckboxField = FiltersCheckboxField;

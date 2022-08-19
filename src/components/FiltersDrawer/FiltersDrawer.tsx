@@ -4,55 +4,38 @@ import { useUID } from 'react-uid';
 import styles from './FiltersDrawer.module.css';
 import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';
-import Checkbox from '../Checkbox';
 import Drawer from '../Drawer';
-import FiltersCheckboxField from '../FiltersCheckboxField';
 import Heading from '../Heading';
 
 export type Props = {
   /**
-   * Checkbox fields that will be displayed in the filters drawer.
+   * Form controls, form fields, or other relevant information that will be displayed in the filters drawer.
    */
-  checkboxFields: CheckboxField[];
-  /**
-   * Checked value keys mapped to their boolean checked status.
-   */
-  checkedMap: { [key: string]: boolean };
+  children: React.ReactNode;
   /**
    * CSS class names that can be appended to the component.
    */
   className?: string;
   /**
+   * CSS class names that can be appended to the footer button group.
+   */
+  footerButtonGroupClassName?: string;
+  /**
+   * Callback called when the clear button is called.
+   */
+  onClear?: () => void;
+  /**
    * Callback called when filters drawer is closed.
    */
-  onClose: (checkedValues: { [key: string]: boolean }) => void;
+  onClose?: () => void;
+  /**
+   * Callback called when the apply button is called.
+   */
+  onApply?: () => void;
   /**
    * Sets the filters drawer window open or closed.
    */
   isActive: boolean;
-};
-
-export type CheckboxField = {
-  /**
-   * Legend text string that names the fieldset.
-   */
-  legend?: string;
-  /**
-   * List of checkboxes to be placed in the filters.
-   */
-  checkboxes: Checkbox[];
-};
-
-export type Checkbox = {
-  /**
-   * Visible text label for the checkbox.
-   */
-  label: string;
-  /**
-   * Checkbox value that is mapped with a boolean value that indicates checked status.
-   * Should be unique to the checkbox unless the checkbox is repeated.
-   */
-  value: string;
 };
 
 /**
@@ -65,50 +48,14 @@ export type Checkbox = {
  * A drawer component with fields of checkboxes to select filters.
  */
 export const FiltersDrawer = ({
-  checkboxFields,
-  checkedMap,
+  children,
   className,
+  footerButtonGroupClassName,
+  onClear,
+  onApply,
   onClose,
   isActive,
 }: Props) => {
-  /**
-   * Manages state of the checkboxes within the drawer to control the state of the individual checkboxes.
-   * It is updated whenever the checkboxes have change.
-   */
-  const [checkedBoxes, setCheckedBoxes] = useState({ ...checkedMap });
-  useEffect(() => {
-    if (isActive) {
-      setCheckedBoxes({ ...checkedMap });
-    }
-  }, [isActive, checkedMap]);
-
-  const handleCheckboxChange = (value: string) => {
-    setCheckedBoxes({
-      ...checkedBoxes,
-      [value]: !checkedBoxes[value],
-    });
-  };
-
-  /**
-   * Maps given checkboxFields to <FiltersCheckboxField> components and <Checkbox> children.
-   * TODO: give control to developer rather than internalizing this logic to follow similar API as other components.
-   */
-  const filtersCheckboxFieldComponents = checkboxFields.map(
-    ({ legend, checkboxes }, index) => (
-      <FiltersCheckboxField key={legend || '' + index} legend={legend}>
-        {checkboxes.map(({ label, value }) => (
-          <Checkbox
-            checked={checkedBoxes[value]}
-            key={value}
-            label={label}
-            onChange={() => handleCheckboxChange(value)}
-            value={value}
-          />
-        ))}
-      </FiltersCheckboxField>
-    ),
-  );
-
   /**
    * Manages overflow state.
    */
@@ -124,18 +71,6 @@ export const FiltersDrawer = ({
     }
   }, [filtersBody]);
 
-  function clearFilters() {
-    const clearedBoxes = {};
-    Object.keys(checkedBoxes).forEach((value) => {
-      clearedBoxes[value] = false;
-    });
-    onClose(clearedBoxes);
-  }
-
-  function applyFilters() {
-    onClose(checkedBoxes);
-  }
-
   const containerClassName = clsx(
     styles['filters-drawer__container'],
     className,
@@ -143,6 +78,11 @@ export const FiltersDrawer = ({
   const footerClassName = clsx(
     styles['filters-drawer__footer'],
     isOverflowing && styles['filters-drawer__footer--overflow'],
+  );
+
+  const buttonGroupClassName = clsx(
+    styles['footer__button-group'],
+    footerButtonGroupClassName,
   );
 
   const generatedId = useUID();
@@ -154,7 +94,9 @@ export const FiltersDrawer = ({
       dismissible={true}
       drawerContainerClassName={containerClassName}
       isActive={isActive}
-      onClose={() => onClose(checkedMap)}
+      onClose={() => {
+        onClose && onClose();
+      }}
     >
       <Drawer.Header closeButtonText="close filters">
         <Heading
@@ -166,22 +108,31 @@ export const FiltersDrawer = ({
         </Heading>
       </Drawer.Header>
       <Drawer.Body className={styles['filters-drawer__body']} ref={filtersBody}>
-        {filtersCheckboxFieldComponents}
+        {children}
       </Drawer.Body>
-      <Drawer.Footer className={footerClassName}>
-        <ButtonGroup className={styles['footer__button-group']}>
-          <Button className={styles['footer__button']} onClick={clearFilters}>
-            Clear All
-          </Button>
-          <Button
-            className={styles['footer__button']}
-            onClick={applyFilters}
-            variant="primary"
-          >
-            Apply
-          </Button>
-        </ButtonGroup>
-      </Drawer.Footer>
+      {(onClear || onApply) && (
+        <Drawer.Footer className={footerClassName}>
+          <ButtonGroup className={buttonGroupClassName}>
+            {onClear && (
+              <Button
+                className={styles['footer__button']}
+                onClick={() => onClear()}
+              >
+                Clear All
+              </Button>
+            )}
+            {onApply && (
+              <Button
+                className={styles['footer__button']}
+                onClick={() => onApply()}
+                variant="primary"
+              >
+                Apply
+              </Button>
+            )}
+          </ButtonGroup>
+        </Drawer.Footer>
+      )}
     </Drawer>
   );
 };
