@@ -16,7 +16,7 @@ export default {
   },
   args: {
     triggerText: 'Filters',
-    buttonStatusVariant: 'neutral',
+    hasFilters: false,
     children: (
       <Filters.FiltersCheckboxField legend="Filters Segment 1">
         <Checkbox
