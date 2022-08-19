@@ -58,24 +58,24 @@ export const Filters = ({
   }
 
   function closeFilters() {
+    closeFiltersDrawer();
     if (onClose) {
       onClose();
     }
-    closeFiltersDrawer();
   }
 
   function clearFilters() {
+    closeFiltersDrawer();
     if (onClear) {
       onClear();
     }
-    closeFiltersDrawer();
   }
 
   function applyFilters() {
+    closeFiltersDrawer();
     if (onApply) {
       onApply();
     }
-    closeFiltersDrawer();
   }
 
   const buttonVariant =
