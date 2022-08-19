@@ -21,10 +21,6 @@ export type CheckboxProps = Omit<CheckboxInputProps, 'id'> & {
    * Size of the checkbox label.
    */
   size?: CheckboxLabelProps['size'];
-  /**
-   * Callback called when the checkbox is toggled.
-   */
-  onChange: () => void;
 };
 
 /**
