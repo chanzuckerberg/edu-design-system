@@ -39,6 +39,13 @@ export default {
       </Filters.FiltersCheckboxField>
     ),
   },
+  decorators: [
+    (Story) => (
+      <div style={{ margin: '0.25rem', height: '100vh' }}>
+        <Story />
+      </div>
+    ),
+  ],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Filters>;
