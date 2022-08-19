@@ -6,7 +6,13 @@ import { FiltersDrawer } from '../FiltersDrawer/FiltersDrawer';
 import Icon from '../Icon';
 
 export type Props = {
+  /**
+   * Text to be placed in the button that activates the Filters Drawer
+   */
   buttonText?: string;
+  /**
+   * Button status variant that indicates if filters had been selected.
+   */
   buttonStatusVariant: 'neutral' | 'brand';
   /**
    * Checkboxes or Checkbox fields that will be displayed in the filters drawer.
