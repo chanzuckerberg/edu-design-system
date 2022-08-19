@@ -9,13 +9,13 @@ export type Props = {
   /**
    * Text to be placed in the button that activates the Filters Drawer
    */
-  buttonText?: string;
+  triggerText?: string;
   /**
    * Button status variant that indicates if filters had been selected.
    */
-  buttonStatusVariant: 'neutral' | 'brand';
+  hasFilters?: boolean;
   /**
-   * Checkboxes or Checkbox fields that will be displayed in the filters drawer.
+   * Input components, input component fields, or relevant information that will be displayed in the filters drawer.
    */
   children: React.ReactNode;
   /**
@@ -23,15 +23,19 @@ export type Props = {
    */
   className?: string;
   /**
-   * Callback called when Clear All button is called.
+   * Callback called when the clear button is called.
    */
   onClear?: () => void;
+  /**
+   * CSS class names that can be appended to the footer button group.
+   */
+  footerButtonGroupClassName?: string;
   /**
    * Callback called when filters drawer is closed.
    */
   onClose?: () => void;
   /**
-   * Callback called when Apply button is called.
+   * Callback called when the apply button is called.
    */
   onApply?: () => void;
 };
@@ -46,10 +50,11 @@ export type Props = {
  * A filter component with a button that triggers a drawer of checkbox filters to be selected.
  */
 export const Filters = ({
-  buttonText,
-  buttonStatusVariant,
+  triggerText,
+  hasFilters,
   children,
   className,
+  footerButtonGroupClassName,
   onClear,
   onClose,
   onApply,
@@ -65,44 +70,39 @@ export const Filters = ({
 
   function closeFilters() {
     closeFiltersDrawer();
-    if (onClose) {
-      onClose();
-    }
+    onClose && onClose();
   }
 
   function clearFilters() {
     closeFiltersDrawer();
-    if (onClear) {
-      onClear();
-    }
+    onClear && onClear();
   }
 
   function applyFilters() {
     closeFiltersDrawer();
-    if (onApply) {
-      onApply();
-    }
+    onApply && onApply();
   }
 
-  const buttonVariant =
-    buttonStatusVariant === 'brand' ? 'primary' : 'secondary';
+  const buttonVariant = hasFilters ? 'primary' : 'secondary';
+  const buttonStatus = hasFilters ? 'brand' : 'neutral';
 
   return (
     <div>
       <Button
         className={styles['filters__button']}
         onClick={() => setIsActive(true)}
-        status={buttonStatusVariant}
+        status={buttonStatus}
         variant={buttonVariant}
       >
         <Icon name="filter-list" purpose="decorative" size="1.5rem" />
-        {buttonText}
+        {triggerText}
       </Button>
       <FiltersDrawer
         className={className}
+        footerButtonGroupClassName={footerButtonGroupClassName}
         isActive={isActive}
-        onApply={applyFilters}
-        onClear={clearFilters}
+        onApply={onApply ? applyFilters : undefined}
+        onClear={onClear ? clearFilters : undefined}
         onClose={closeFilters}
       >
         {children}

@@ -9,7 +9,7 @@ import Heading from '../Heading';
 
 export type Props = {
   /**
-   * Checkboxes or Checkbox fields that will be displayed in the filters drawer.
+   * Input components, input component fields, or relevant information that will be displayed in the filters drawer.
    */
   children: React.ReactNode;
   /**
@@ -17,7 +17,11 @@ export type Props = {
    */
   className?: string;
   /**
-   * Callback called when Clear All button is called.
+   * CSS class names that can be appended to the footer button group.
+   */
+  footerButtonGroupClassName?: string;
+  /**
+   * Callback called when the clear button is called.
    */
   onClear?: () => void;
   /**
@@ -25,7 +29,7 @@ export type Props = {
    */
   onClose?: () => void;
   /**
-   * Callback called when Apply button is called.
+   * Callback called when the apply button is called.
    */
   onApply?: () => void;
   /**
@@ -46,6 +50,7 @@ export type Props = {
 export const FiltersDrawer = ({
   children,
   className,
+  footerButtonGroupClassName,
   onClear,
   onApply,
   onClose,
@@ -75,6 +80,11 @@ export const FiltersDrawer = ({
     isOverflowing && styles['filters-drawer__footer--overflow'],
   );
 
+  const buttonGroupClassName = clsx(
+    styles['footer__button-group'],
+    footerButtonGroupClassName,
+  );
+
   const generatedId = useUID();
 
   return (
@@ -85,9 +95,7 @@ export const FiltersDrawer = ({
       drawerContainerClassName={containerClassName}
       isActive={isActive}
       onClose={() => {
-        if (onClose) {
-          onClose();
-        }
+        onClose && onClose();
       }}
     >
       <Drawer.Header closeButtonText="close filters">
@@ -104,28 +112,24 @@ export const FiltersDrawer = ({
       </Drawer.Body>
       {(onClear || onApply) && (
         <Drawer.Footer className={footerClassName}>
-          <ButtonGroup className={styles['footer__button-group']}>
-            <Button
-              className={styles['footer__button']}
-              onClick={() => {
-                if (onClear) {
-                  onClear();
-                }
-              }}
-            >
-              Clear All
-            </Button>
-            <Button
-              className={styles['footer__button']}
-              onClick={() => {
-                if (onApply) {
-                  onApply();
-                }
-              }}
-              variant="primary"
-            >
-              Apply
-            </Button>
+          <ButtonGroup className={buttonGroupClassName}>
+            {onClear && (
+              <Button
+                className={styles['footer__button']}
+                onClick={() => onClear()}
+              >
+                Clear All
+              </Button>
+            )}
+            {onApply && (
+              <Button
+                className={styles['footer__button']}
+                onClick={() => onApply()}
+                variant="primary"
+              >
+                Apply
+              </Button>
+            )}
           </ButtonGroup>
         </Drawer.Footer>
       )}

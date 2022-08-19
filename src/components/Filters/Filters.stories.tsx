@@ -5,16 +5,17 @@ import isChromatic from 'chromatic/isChromatic';
 import React from 'react';
 
 import { Filters } from './Filters';
+import styles from './Filters.stories.module.css';
 import { Checkbox } from '../Checkbox/Checkbox';
 
 export default {
-  title: 'Organisms/Tables/Filters',
+  title: 'Organisms/Interactive/Filters',
   component: Filters,
   parameters: {
     badges: [BADGE.BETA],
   },
   args: {
-    buttonText: 'Filters',
+    triggerText: 'Filters',
     buttonStatusVariant: 'neutral',
     children: (
       <Filters.FiltersCheckboxField legend="Filters Segment 1">
@@ -58,6 +59,23 @@ export const Default: StoryObj<Args> = {
       const filtersTrigger = await canvas.findByRole('button');
       filtersTrigger.click();
     }
+  },
+};
+
+export const WithOnClear: StoryObj<Args> = {
+  ...Default,
+  args: {
+    onClear:
+      () => {} /* eslint-disable-line @typescript-eslint/no-empty-function */,
+  },
+};
+
+export const WithOnApplyAndCustomButtonGroup: StoryObj<Args> = {
+  ...Default,
+  args: {
+    footerButtonGroupClassName: styles['button-group__apply-only'],
+    onApply:
+      () => {} /* eslint-disable-line @typescript-eslint/no-empty-function */,
   },
 };
 
@@ -112,16 +130,15 @@ const OverflowCheckboxFields = () => {
   );
 
   const hasFilters = filterCount > 0;
-  const buttonStatusVariant = hasFilters ? 'brand' : 'neutral';
-  const buttonText = hasFilters ? `Filters (${filterCount})` : 'Filters';
+  const triggerText = hasFilters ? `Filters (${filterCount})` : 'Filters';
 
   return (
     <Filters
-      buttonStatusVariant={buttonStatusVariant}
-      buttonText={buttonText}
+      hasFilters={hasFilters}
       onApply={onApply}
       onClear={onClear}
       onClose={onClose}
+      triggerText={triggerText}
     >
       <Filters.FiltersCheckboxField legend="Filters Segment 1">
         <Checkbox
