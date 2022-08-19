@@ -149,7 +149,7 @@ exports[`Modal DefaultInteractive story renders snapshot 1`] = `
   aria-labelledby="headlessui-dialog-title-4"
   aria-modal="true"
   class="modal"
-  id="headlessui-dialog-1"
+  id="headlessui-dialog-2"
   role="dialog"
 >
   <div
@@ -1248,7 +1248,6 @@ exports[`Modal WithoutCloseButton story renders snapshot 1`] = `
         class="footer__button-group button-group button-group--spacing-1x"
       >
         <button
-          aria-describedby="tippy-13"
           class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
           data-bootstrap-override="clickable-style-secondary"
           tabindex="0"

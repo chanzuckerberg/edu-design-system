@@ -78,7 +78,7 @@
     "react": ">= 16.8.0"
   },
   "dependencies": {
-    "@headlessui/react": "1.5.0",
+    "@headlessui/react": "^1.6.6",
     "@tippyjs/react": "^4.2.6",
     "clsx": "^1.1.1",
     "downshift": "^6.1.7",
