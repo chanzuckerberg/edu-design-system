@@ -9,7 +9,7 @@ import Heading from '../Heading';
 
 export type Props = {
   /**
-   * Input components, input component fields, or relevant information that will be displayed in the filters drawer.
+   * Form controls, form fields, or other relevant information that will be displayed in the filters drawer.
    */
   children: React.ReactNode;
   /**

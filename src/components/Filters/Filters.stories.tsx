@@ -16,7 +16,7 @@ export default {
   },
   args: {
     triggerText: 'Filters',
-    hasFilters: false,
+    hasSelectedFilters: false,
     children: (
       <Filters.FiltersCheckboxField legend="Filters Segment 1">
         <Checkbox
@@ -129,12 +129,14 @@ const OverflowCheckboxFields = () => {
     0,
   );
 
-  const hasFilters = filterCount > 0;
-  const triggerText = hasFilters ? `Filters (${filterCount})` : 'Filters';
+  const hasSelectedFilters = filterCount > 0;
+  const triggerText = hasSelectedFilters
+    ? `Filters (${filterCount})`
+    : 'Filters';
 
   return (
     <Filters
-      hasFilters={hasFilters}
+      hasSelectedFilters={hasSelectedFilters}
       onApply={onApply}
       onClear={onClear}
       onClose={onClose}

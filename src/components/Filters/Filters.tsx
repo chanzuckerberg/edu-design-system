@@ -11,9 +11,9 @@ export type Props = {
    */
   triggerText?: string;
   /**
-   * Button status variant that indicates if filters had been selected.
+   * Indicates status that filters have been selected, influencing toggle button variant.
    */
-  hasFilters?: boolean;
+  hasSelectedFilters?: boolean;
   /**
    * Input components, input component fields, or relevant information that will be displayed in the filters drawer.
    */
@@ -51,7 +51,7 @@ export type Props = {
  */
 export const Filters = ({
   triggerText,
-  hasFilters,
+  hasSelectedFilters,
   children,
   className,
   footerButtonGroupClassName,
@@ -83,8 +83,8 @@ export const Filters = ({
     onApply && onApply();
   }
 
-  const buttonVariant = hasFilters ? 'primary' : 'secondary';
-  const buttonStatus = hasFilters ? 'brand' : 'neutral';
+  const buttonVariant = hasSelectedFilters ? 'primary' : 'secondary';
+  const buttonStatus = hasSelectedFilters ? 'brand' : 'neutral';
 
   return (
     <div>
