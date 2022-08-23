@@ -292,6 +292,9 @@ export const WithoutCloseButton: StoryObj<InteractiveArgs> = {
       {getChildren()}
     </InteractiveExample>
   ),
+  parameters: {
+    snapshot: { skip: true },
+  },
 };
 
 const reallyLongText = (
