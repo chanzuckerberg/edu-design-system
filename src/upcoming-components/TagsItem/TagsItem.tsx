@@ -55,7 +55,7 @@ export const TagsItem = ({
   return (
     <li className={className} {...other}>
       <button className={styles['tags__tag']} onClick={handleOnClick}>
-        <span className={className}>{text}</span>
+        <span>{text}</span>
         {dismissible && (
           <Icon
             className={styles['tags__icon']}

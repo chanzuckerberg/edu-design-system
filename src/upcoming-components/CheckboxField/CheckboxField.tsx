@@ -104,7 +104,6 @@ export const CheckboxField = ({
     <Fieldset className={componentClassName} id={id} {...other}>
       <FieldsetLegend
         aria-describedby={fieldNote && ariaDescribedByVar}
-        className={className}
         optionalLabel={optionalLabel}
         text={label}
       />
