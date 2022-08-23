@@ -45,7 +45,7 @@ export const KeyValueTable = ({
   );
   return (
     <table className={componentClassName} {...other}>
-      <tbody className={className}>{children}</tbody>
+      <tbody>{children}</tbody>
     </table>
   );
 };

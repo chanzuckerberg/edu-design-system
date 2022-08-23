@@ -142,9 +142,7 @@ export const AccordionPanel = ({
         id={ariaControlsVar}
         style={{ height: heightVar }}
       >
-        <div className={className} data-accordion-panel>
-          {children}
-        </div>
+        <div data-accordion-panel>{children}</div>
       </dd>
     </div>
   );

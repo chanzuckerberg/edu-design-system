@@ -168,7 +168,6 @@ export const RadioField = ({
       </FieldsetItems>
       {fieldNote && (
         <FieldNote
-          className={className}
           id={ariaDescribedByVar}
           inverted={inverted}
           isError={isError}

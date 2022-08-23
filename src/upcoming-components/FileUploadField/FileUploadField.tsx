@@ -360,7 +360,7 @@ export const FileUploadField = ({
             value=""
             {...other}
           />
-          <div className={className}>{dragAndDropText}</div>
+          <div>{dragAndDropText}</div>
         </div>
       </div>
 

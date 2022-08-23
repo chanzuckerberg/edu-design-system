@@ -172,7 +172,6 @@ export const TextareaField = ({
   return (
     <div className={componentClassName}>
       <Label
-        className={className}
         hideLabel={hideLabel}
         htmlFor={idVar}
         inverted={inverted}
@@ -186,7 +185,6 @@ export const TextareaField = ({
         <Textarea
           aria-describedby={ariaDescribedByVar}
           aria-invalid={!!isError}
-          className={className}
           defaultValue={defaultValue}
           disabled={disabled}
           id={idVar}
@@ -206,7 +204,6 @@ export const TextareaField = ({
         {fieldButtonText && (
           <Button
             aria-label={fieldButtonAriaLabel}
-            className={className}
             onClick={fieldButtonOnClick}
             size="sm"
             type="button"
@@ -215,13 +212,10 @@ export const TextareaField = ({
             {fieldButtonText}
           </Button>
         )}
-        {iconName && (
-          <Icon className={className} name={iconName} purpose="decorative" />
-        )}
+        {iconName && <Icon name={iconName} purpose="decorative" />}
       </div>
       {fieldNote && (
         <FieldNote
-          className={className}
           id={ariaDescribedByVar}
           inverted={inverted}
           isError={isError}

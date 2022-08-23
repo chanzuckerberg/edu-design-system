@@ -1,4 +1,3 @@
-import clsx from 'clsx';
 import React, { useState, MouseEvent } from 'react';
 import Icon from '../../components/Icon';
 import styles from '../Tags/Tags.module.css';
@@ -53,10 +52,8 @@ export const TagsItem = ({
     return null;
   }
 
-  const componentClassName = clsx(styles, className);
-
   return (
-    <li className={componentClassName} {...other}>
+    <li className={className} {...other}>
       <button className={styles['tags__tag']} onClick={handleOnClick}>
         <span className={className}>{text}</span>
         {dismissible && (

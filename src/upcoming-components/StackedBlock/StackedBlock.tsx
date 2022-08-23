@@ -1,6 +1,4 @@
-import clsx from 'clsx';
 import React, { ReactNode } from 'react';
-import styles from './StackedBlock.module.css';
 
 export interface Props {
   /**
@@ -23,9 +21,8 @@ export interface Props {
  * TODO: update this comment with a description of the component.
  */
 export const StackedBlock = ({ children, className, ...other }: Props) => {
-  const componentClassName = clsx(styles['stacked-block'], className);
   return (
-    <div className={componentClassName} {...other}>
+    <div className={className} {...other}>
       {children}
     </div>
   );

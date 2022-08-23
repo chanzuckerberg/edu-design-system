@@ -161,7 +161,6 @@ export const Counter = ({
   return (
     <div className={componentClassName} {...other}>
       <Label
-        className={className}
         hideLabel={hideLabel}
         htmlFor={idVar}
         labelAfter={labelAfter}
@@ -206,11 +205,7 @@ export const Counter = ({
         </Button>
       </div>
       {fieldNote && (
-        <FieldNote
-          className={className}
-          id={ariaDescribedByVar}
-          isError={isError}
-        >
+        <FieldNote id={ariaDescribedByVar} isError={isError}>
           {fieldNote}
         </FieldNote>
       )}
