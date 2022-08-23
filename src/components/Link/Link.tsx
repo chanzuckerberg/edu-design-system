@@ -1,4 +1,6 @@
+import clsx from 'clsx';
 import React, { ReactNode, forwardRef } from 'react';
+import styles from './Link.module.css';
 import ClickableStyle from '../ClickableStyle';
 import type { ClickableStyleProps } from '../ClickableStyle';
 
@@ -40,11 +42,20 @@ export type LinkProps = LinkHTMLElementProps & {
  * components are exactly the same.
  */
 export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
-  ({ variant = 'link', status = 'brand', size = 'lg', ...rest }, ref) => {
+  (
+    { className, variant = 'link', status = 'brand', size = 'lg', ...rest },
+    ref,
+  ) => {
+    const componentClassName = clsx(
+      variant === 'link' && styles['link--link'],
+      className,
+    );
+
     return (
       <ClickableStyle
         {...rest}
         as="a"
+        className={componentClassName}
         ref={ref}
         size={size}
         status={status}

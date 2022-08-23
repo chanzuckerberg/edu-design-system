@@ -2,7 +2,7 @@
 
 exports[`<Link /> Default story renders snapshot 1`] = `
 <a
-  class="clickable-style clickable-style--link clickable-style--brand"
+  class="clickable-style clickable-style--link clickable-style--brand link--link"
   data-bootstrap-override="clickable-style-link"
   href="/"
 >
@@ -258,9 +258,43 @@ exports[`<Link /> IconWarning story renders snapshot 1`] = `
 </a>
 `;
 
+exports[`<Link /> LinkInParagraphContext story renders snapshot 1`] = `
+<div>
+  Lorem ipsum dolor sit amet,
+   
+  <a
+    class="clickable-style clickable-style--link clickable-style--brand link--link"
+    data-bootstrap-override="clickable-style-link"
+    href="/"
+  >
+    consectetur adipiscing elit
+  </a>
+  . Morbi porta at ante quis molestie. Nam scelerisque id diam at iaculis. Nullam sit amet iaculis erat. Nulla id tellus ante.
+   
+  <a
+    class="clickable-style clickable-style--link clickable-style--brand link--link"
+    data-bootstrap-override="clickable-style-link"
+    href="/"
+  >
+    Aliquam pellentesque ipsum sagittis, commodo neque at, ornare est. Maecenas a malesuada sem, vitae euismod erat. Nullam molestie nunc non dui dignissim fermentum.
+  </a>
+   
+  Aliquam id volutpat nulla, sed auctor orci. Fusce cursus leo nisi. Fusce vehicula vitae nisl nec ultricies. Cras ut enim nec magna semper egestas. Sed sed quam id nisl bibendum convallis. Proin suscipit, odio
+   
+  <a
+    class="clickable-style clickable-style--link clickable-style--brand link--link"
+    data-bootstrap-override="clickable-style-link"
+    href="/"
+  >
+    vel pulvinar
+  </a>
+   euismod, risus eros ullamcorper lectus, non blandit nulla dui eget massa.
+</div>
+`;
+
 exports[`<Link /> LinkNeutral story renders snapshot 1`] = `
 <a
-  class="clickable-style clickable-style--link clickable-style--neutral"
+  class="clickable-style clickable-style--link clickable-style--neutral link--link"
   data-bootstrap-override="clickable-style-link"
   href="/"
 >
@@ -270,7 +304,7 @@ exports[`<Link /> LinkNeutral story renders snapshot 1`] = `
 
 exports[`<Link /> LinkRightIcon story renders snapshot 1`] = `
 <a
-  class="clickable-style clickable-style--link clickable-style--brand"
+  class="clickable-style clickable-style--link clickable-style--brand link--link"
   data-bootstrap-override="clickable-style-link"
   href="/"
 >
@@ -535,7 +569,7 @@ exports[`<Link /> TertiarySmall story renders snapshot 1`] = `
 
 exports[`<Link /> passes class names down properly 1`] = `
 <a
-  class="clickable-style clickable-style--link clickable-style--brand exampleClassName"
+  class="clickable-style clickable-style--link clickable-style--brand link--link exampleClassName"
   data-bootstrap-override="clickable-style-link"
   data-testid="example-class-name"
   href="/"
@@ -546,7 +580,7 @@ exports[`<Link /> passes class names down properly 1`] = `
 
 exports[`<Link /> passes test ids down properly 1`] = `
 <a
-  class="clickable-style clickable-style--link clickable-style--brand"
+  class="clickable-style clickable-style--link clickable-style--brand link--link"
   data-bootstrap-override="clickable-style-link"
   data-testid="example-test-id"
   href="/"
