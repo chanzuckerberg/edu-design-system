@@ -98,9 +98,9 @@ export const Textarea = ({
 }: Props) => {
   const componentClassName = clsx(
     styles['textarea'],
-    className,
     disabled && styles['eds-is-disabled'],
     isError && styles['eds-is-error'],
+    className,
   );
 
   return (

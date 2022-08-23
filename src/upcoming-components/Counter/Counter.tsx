@@ -154,14 +154,14 @@ export const Counter = ({
 
   const componentClassName = clsx(
     styles['counter'],
-    className,
     isError && styles['eds-is-error'],
     disabled && styles['eds-is-disabled'],
+    className,
   );
   return (
     <div className={componentClassName} {...other}>
       <Label
-        className={styles['counter__label']}
+        className={className}
         hideLabel={hideLabel}
         htmlFor={idVar}
         labelAfter={labelAfter}
@@ -207,7 +207,7 @@ export const Counter = ({
       </div>
       {fieldNote && (
         <FieldNote
-          className={styles['counter-field__note']}
+          className={className}
           id={ariaDescribedByVar}
           isError={isError}
         >

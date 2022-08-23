@@ -311,9 +311,9 @@ export const FileUploadField = ({
 
   const componentClassName = clsx(
     styles['file-upload-field'],
-    className,
     isErrorState && styles['eds-is-error'],
     isDisabled && styles['eds-is-disabled'],
+    className,
   );
 
   const hitAreaClassName = clsx(
@@ -360,9 +360,7 @@ export const FileUploadField = ({
             value=""
             {...other}
           />
-          <div className={styles['file-upload-field__instructions']}>
-            {dragAndDropText}
-          </div>
+          <div className={className}>{dragAndDropText}</div>
         </div>
       </div>
 

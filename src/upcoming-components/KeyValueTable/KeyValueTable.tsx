@@ -39,13 +39,13 @@ export const KeyValueTable = ({
 }: Props) => {
   const componentClassName = clsx(
     styles['key-value-table'],
-    className,
     variant === 'lined' && styles['key-value-table--lined'],
     fullWidth && styles['key-value-table--full-width'],
+    className,
   );
   return (
     <table className={componentClassName} {...other}>
-      <tbody className={styles['key-value-table__body']}>{children}</tbody>
+      <tbody className={className}>{children}</tbody>
     </table>
   );
 };

@@ -53,12 +53,12 @@ export const TagsItem = ({
     return null;
   }
 
-  const componentClassName = clsx('tags__item', className, {});
+  const componentClassName = clsx(styles, className);
 
   return (
     <li className={componentClassName} {...other}>
       <button className={styles['tags__tag']} onClick={handleOnClick}>
-        <span className={styles['tags__text']}>{text}</span>
+        <span className={className}>{text}</span>
         {dismissible && (
           <Icon
             className={styles['tags__icon']}

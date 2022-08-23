@@ -24,12 +24,10 @@ export interface Props {
  * TODO: update this comment with a description of the component.
  */
 export const Footer = ({ children, className, ...other }: Props) => {
-  const componentClassName = clsx(styles['footer'], className, {});
+  const componentClassName = clsx(styles, className);
   return (
     <footer className={componentClassName} role="contentinfo" {...other}>
-      <LayoutContainer className={styles['footer__inner']}>
-        {children}
-      </LayoutContainer>
+      <LayoutContainer className={className}>{children}</LayoutContainer>
     </footer>
   );
 };

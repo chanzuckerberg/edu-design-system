@@ -113,8 +113,8 @@ export const AccordionPanel = ({
 
   const componentClassName = clsx(
     styles['accordion__panel'],
-    className,
     isActiveVar && styles['eds-is-active'],
+    className,
   );
   return (
     <div className={componentClassName} {...other} ref={panelRef}>
@@ -142,10 +142,7 @@ export const AccordionPanel = ({
         id={ariaControlsVar}
         style={{ height: heightVar }}
       >
-        <div
-          className={styles['accordion__panel-body-inner']}
-          data-accordion-panel
-        >
+        <div className={className} data-accordion-panel>
           {children}
         </div>
       </dd>

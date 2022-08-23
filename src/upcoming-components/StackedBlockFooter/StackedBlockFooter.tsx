@@ -27,11 +27,7 @@ export const StackedBlockFooter = ({
   className,
   ...other
 }: Props) => {
-  const componentClassName = clsx(
-    styles['stacked-block__footer'],
-    className,
-    {},
-  );
+  const componentClassName = clsx(styles, className);
   return (
     <footer className={componentClassName} {...other}>
       {children}

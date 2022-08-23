@@ -163,16 +163,16 @@ export const TextareaField = ({
 
   const componentClassName = clsx(
     styles['textarea-field'],
-    className,
     inverted && styles['textarea-field--inverted'],
     isError && styles['eds-is-error'],
     disabled && styles['eds-is-disabled'],
+    className,
   );
 
   return (
     <div className={componentClassName}>
       <Label
-        className={styles['textarea-field__label']}
+        className={className}
         hideLabel={hideLabel}
         htmlFor={idVar}
         inverted={inverted}
@@ -186,7 +186,7 @@ export const TextareaField = ({
         <Textarea
           aria-describedby={ariaDescribedByVar}
           aria-invalid={!!isError}
-          className={styles['textarea-field__textarea']}
+          className={className}
           defaultValue={defaultValue}
           disabled={disabled}
           id={idVar}
@@ -206,7 +206,7 @@ export const TextareaField = ({
         {fieldButtonText && (
           <Button
             aria-label={fieldButtonAriaLabel}
-            className={styles['textarea-field__button']}
+            className={className}
             onClick={fieldButtonOnClick}
             size="sm"
             type="button"
@@ -216,16 +216,12 @@ export const TextareaField = ({
           </Button>
         )}
         {iconName && (
-          <Icon
-            className={styles['textarea-field__icon']}
-            name={iconName}
-            purpose="decorative"
-          />
+          <Icon className={className} name={iconName} purpose="decorative" />
         )}
       </div>
       {fieldNote && (
         <FieldNote
-          className={styles['textarea-field__note']}
+          className={className}
           id={ariaDescribedByVar}
           inverted={inverted}
           isError={isError}

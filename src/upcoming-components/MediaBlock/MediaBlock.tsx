@@ -44,18 +44,14 @@ export const MediaBlock = ({
 }: Props) => {
   const componentClassName = clsx(
     styles['media-block'],
-    className,
     variant === 'reversed' && styles['media-block--reversed'],
+    className,
   );
   return (
     <div className={componentClassName} {...other}>
       <div className={styles['media-block__body']}>{children}</div>
       <div className={styles['media-block__media']}>
-        <img
-          alt={imgAlt}
-          className={styles['media-block__image']}
-          src={imgSrc}
-        />
+        <img alt={imgAlt} className={styles['media-block__img']} src={imgSrc} />
       </div>
     </div>
   );

@@ -93,18 +93,18 @@ export const CheckboxField = ({
 
   const componentClassName = clsx(
     styles['checkbox-field'],
-    className,
     variant === 'inline' && styles['checkbox-field--inline'],
     size === 'sm' && styles['checkbox-field--sm'],
     inverted && styles['checkbox-field--inverted'],
     isError && styles['eds-is-error'],
     disabled && styles['eds-is-disabled'],
+    className,
   );
   return (
     <Fieldset className={componentClassName} id={id} {...other}>
       <FieldsetLegend
         aria-describedby={fieldNote && ariaDescribedByVar}
-        className={styles['checkbox-field__label']}
+        className={className}
         optionalLabel={optionalLabel}
         text={label}
       />
@@ -114,7 +114,7 @@ export const CheckboxField = ({
       </FieldsetItems>
       {fieldNote && (
         <FieldNote
-          className={styles['checkbox-field__note']}
+          className={className}
           id={ariaDescribedByVar}
           inverted={inverted}
           isError={isError}

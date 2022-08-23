@@ -26,11 +26,7 @@ export const StackedBlockHeader = ({
   className,
   ...other
 }: Props) => {
-  const componentClassName = clsx(
-    styles['stacked-block__header'],
-    className,
-    {},
-  );
+  const componentClassName = clsx(styles, className);
   return (
     <header className={componentClassName} {...other}>
       {children}

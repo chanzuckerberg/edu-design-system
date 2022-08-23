@@ -81,11 +81,7 @@ export const RadioFieldItem = ({
   const generatedId = useUID();
   const idVar = id || generatedId;
 
-  const componentClassName = clsx(
-    styles['radio-field__item'],
-    className,
-    inverted && styles['radio-field__item--inverted'],
-  );
+  const componentClassName = clsx(styles['radio-field__item'], className);
   return (
     <li className={componentClassName} {...other}>
       <Radio
