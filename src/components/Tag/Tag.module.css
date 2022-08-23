@@ -11,8 +11,10 @@
  */
 .tag {
   width: max-content;
+  height: var(--eds-size-3);
   max-width: 20rem;
-  padding: var(--eds-size-half) var(--eds-size-1-and-half);
+  padding-left: var(--eds-size-1-and-half);
+  padding-right: var(--eds-size-1-and-half);
 
   display: inline-flex;
   align-items: center;
@@ -22,7 +24,7 @@
 
   background-color: var(--tag-secondary-color); /* 1 */
   color: var(--tag-primary-color);
-  --icon-size-default: 1.25rem;
+  --icon-size-default: 0.875rem;
 }
 
 /**
@@ -41,42 +43,44 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+
+  @mixin eds-theme-typography-tag;
 }
 
 /**
  * Color variants.
  */
-.tag--neutral {
+:where(.tag--neutral) {
   --tag-primary-color: var(--eds-theme-color-text-neutral-default);
   --tag-secondary-color: var(--eds-theme-color-background-neutral-subtle);
   --tag-outline-color: var(--eds-theme-color-border-neutral-default);
 }
 
-.tag--error {
+:where(.tag--error) {
   --tag-primary-color: var(--eds-theme-color-text-utility-error);
   --tag-secondary-color: var(--eds-theme-color-background-utility-error);
   --tag-outline-color: var(--eds-theme-color-border-utility-error-default);
 }
 
-.tag--success {
+:where(.tag--success) {
   --tag-primary-color: var(--eds-theme-color-text-utility-success);
   --tag-secondary-color: var(--eds-theme-color-background-utility-success);
   --tag-outline-color: var(--eds-theme-color-border-utility-success-default);
 }
 
-.tag--warning {
+:where(.tag--warning) {
   --tag-primary-color: var(--eds-theme-color-text-utility-warning);
   --tag-secondary-color: var(--eds-theme-color-background-utility-warning);
   --tag-outline-color: var(--eds-theme-color-border-utility-warning-default);
 }
 
-.tag--yield {
+:where(.tag--yield) {
   --tag-primary-color: var(--eds-theme-color-text-grade-revise);
   --tag-secondary-color: var(--eds-theme-color-background-grade-revise-subtle);
   --tag-outline-color: var(--eds-theme-color-border-grade-revise-default);
 }
 
-.tag--brand {
+:where(.tag--brand) {
   --tag-primary-color: var(--eds-theme-color-text-brand-primary);
   --tag-secondary-color: var(
     --eds-theme-color-background-brand-primary-default

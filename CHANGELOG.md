@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.2.0](https://github.com/chanzuckerberg/edu-design-system/compare/v3.1.2...v3.2.0) (2022-08-23)
+
+
+### Features
+
+* **filters:** make filters components controlled ([e589c46](https://github.com/chanzuckerberg/edu-design-system/commit/e589c468c62ddae44c63f9136355edf570d1c4ec))
+* **filters:** make filters components controlled ([799e904](https://github.com/chanzuckerberg/edu-design-system/commit/799e904eba5444cf464b45bbc7d0426a93d4fd37))
+* **score:** add score component ([2941cea](https://github.com/chanzuckerberg/edu-design-system/commit/2941cea097a105caa03411cc904bcb159f22b7d2))
+* **score:** init score component ([4424c97](https://github.com/chanzuckerberg/edu-design-system/commit/4424c97d4f0e00a268794836e9cae936cc3743b0))
+
+
+### Bug Fixes
+
+* **checkbox:** require onChange for checkbox ([39c1353](https://github.com/chanzuckerberg/edu-design-system/commit/39c135385e1995032376e6cdcf97c6059428b9b3))
+* **pageheader:** remove wrapping div for overline ([a604dad](https://github.com/chanzuckerberg/edu-design-system/commit/a604dad582cd11499ead073b063b1b3a512570a1))
+* **pageheader:** remove wrapping div for overline ([515660c](https://github.com/chanzuckerberg/edu-design-system/commit/515660cd233809f8b57ce9d8e5cb9cc3272aa7ec))
+
 ### [3.1.2](https://github.com/chanzuckerberg/edu-design-system/compare/v3.1.1...v3.1.2) (2022-08-16)
 
 
