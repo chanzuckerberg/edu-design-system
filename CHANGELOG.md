@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.2.0-alpha.0](https://github.com/chanzuckerberg/edu-design-system/compare/v3.1.2...v3.2.0-alpha.0) (2022-08-23)
+
+
+### Features
+
+* **score:** add score component ([2941cea](https://github.com/chanzuckerberg/edu-design-system/commit/2941cea097a105caa03411cc904bcb159f22b7d2))
+* **score:** init score component ([4424c97](https://github.com/chanzuckerberg/edu-design-system/commit/4424c97d4f0e00a268794836e9cae936cc3743b0))
+
+
+### Bug Fixes
+
+* **pageheader:** remove wrapping div for overline ([a604dad](https://github.com/chanzuckerberg/edu-design-system/commit/a604dad582cd11499ead073b063b1b3a512570a1))
+* **pageheader:** remove wrapping div for overline ([515660c](https://github.com/chanzuckerberg/edu-design-system/commit/515660cd233809f8b57ce9d8e5cb9cc3272aa7ec))
+
 ### [3.1.2](https://github.com/chanzuckerberg/edu-design-system/compare/v3.1.1...v3.1.2) (2022-08-16)
 
 
