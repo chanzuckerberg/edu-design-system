@@ -2,10 +2,10 @@ import clsx from 'clsx';
 import React, { ChangeEventHandler, MouseEventHandler, ReactNode } from 'react';
 import { useUID } from 'react-uid';
 import styles from './TextareaField.module.css';
-import Button from '../../components/Button';
-import FieldNote from '../../components/FieldNote';
-import Icon, { IconName } from '../../components/Icon';
-import Label from '../../components/Label';
+import Button from '../Button';
+import FieldNote from '../FieldNote';
+import Icon, { IconName } from '../Icon';
+import Label from '../Label';
 import Textarea from '../Textarea';
 
 export interface Props {

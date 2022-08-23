@@ -78,6 +78,8 @@ export { default as TableRow } from './components/TableRow';
 export { default as Tabs } from './components/Tabs';
 export { default as Tag } from './components/Tag';
 export { default as Text } from './components/Text';
+export { default as Textarea } from './components/Textarea';
+export { default as TextareaField } from './components/TextareaField';
 export { default as TextField } from './components/TextField';
 export { default as TextInput } from './components/TextInput';
 export { default as TimelineNav } from './components/TimelineNav';

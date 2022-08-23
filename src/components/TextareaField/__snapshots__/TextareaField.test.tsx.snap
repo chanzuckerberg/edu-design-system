@@ -1,0 +1,196 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextareaField /> Default story renders snapshot 1`] = `
+<div
+  class="textarea-field"
+>
+  <label
+    class="label textarea-field__label"
+    for="1"
+  >
+    Label
+     
+  </label>
+  <div
+    class="textarea-field__body"
+  >
+    <textarea
+      aria-describedby="2"
+      aria-invalid="false"
+      class="textarea textarea-field__textarea"
+      id="1"
+    />
+  </div>
+  <div
+    aria-live="assertive"
+    class="field-note textarea-field__note"
+    id="2"
+  >
+    This is a fieldnote.
+  </div>
+</div>
+`;
+
+exports[`<TextareaField /> Disabled story renders snapshot 1`] = `
+<div
+  class="textarea-field eds-is-disabled"
+>
+  <label
+    class="label textarea-field__label"
+    for="8"
+  >
+    Label
+     
+  </label>
+  <div
+    class="textarea-field__body"
+  >
+    <textarea
+      aria-invalid="false"
+      class="textarea textarea-field__textarea eds-is-disabled"
+      disabled=""
+      id="8"
+    />
+  </div>
+</div>
+`;
+
+exports[`<TextareaField /> Error story renders snapshot 1`] = `
+<div
+  class="textarea-field eds-is-error"
+>
+  <label
+    class="label textarea-field__label"
+    for="5"
+  >
+    Label
+     
+  </label>
+  <div
+    class="textarea-field__body"
+  >
+    <textarea
+      aria-describedby="6"
+      aria-invalid="true"
+      class="textarea textarea-field__textarea eds-is-error"
+      id="5"
+    />
+  </div>
+  <div
+    aria-live="assertive"
+    class="field-note textarea-field__note eds-is-error"
+    id="6"
+  >
+    <svg
+      class="icon field-note__icon"
+      fill="currentColor"
+      role="img"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="7"
+      >
+        error
+      </title>
+      <use
+        xlink:href="test-file-stub#cancel"
+      />
+    </svg>
+    This is a fieldnote with an error.
+  </div>
+</div>
+`;
+
+exports[`<TextareaField /> HideLabel story renders snapshot 1`] = `
+<div
+  class="textarea-field"
+>
+  <label
+    class="label textarea-field__label u-is-vishidden"
+    for="12"
+  >
+    Label
+     
+  </label>
+  <div
+    class="textarea-field__body"
+  >
+    <textarea
+      aria-invalid="false"
+      class="textarea textarea-field__textarea"
+      id="12"
+    />
+  </div>
+</div>
+`;
+
+exports[`<TextareaField /> Inverted story renders snapshot 1`] = `
+<div
+  style="padding: 1rem; background: rgb(0, 0, 0);"
+>
+  <div
+    class="textarea-field textarea-field--inverted"
+  >
+    <label
+      class="label textarea-field__label label--inverted"
+      for="3"
+    >
+      Label
+       
+    </label>
+    <div
+      class="textarea-field__body"
+    >
+      <textarea
+        aria-describedby="4"
+        aria-invalid="false"
+        class="textarea textarea-field__textarea"
+        id="3"
+      />
+    </div>
+    <div
+      aria-live="assertive"
+      class="field-note textarea-field__note field-note--inverted"
+      id="4"
+    >
+      This is a fieldnote.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<TextareaField /> Optional story renders snapshot 1`] = `
+<div
+  class="textarea-field"
+>
+  <label
+    class="label textarea-field__label"
+    for="10"
+  >
+    Label
+     
+    <span
+      class="label__flag"
+    >
+      (optional)
+    </span>
+  </label>
+  <div
+    class="textarea-field__body"
+  >
+    <textarea
+      aria-describedby="11"
+      aria-invalid="false"
+      class="textarea textarea-field__textarea"
+      id="10"
+    />
+  </div>
+  <div
+    aria-live="assertive"
+    class="field-note textarea-field__note"
+    id="11"
+  >
+    This is a fieldnote for an optional textarea field.
+  </div>
+</div>
+`;
