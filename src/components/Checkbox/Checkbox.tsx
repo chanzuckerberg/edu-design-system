@@ -70,12 +70,9 @@ export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
           {...other}
         />
         {label && (
-          <CheckboxLabel
-            disabled={disabled}
-            htmlFor={checkboxId}
-            size={size}
-            text={label}
-          />
+          <CheckboxLabel disabled={disabled} htmlFor={checkboxId} size={size}>
+            {label}
+          </CheckboxLabel>
         )}
       </div>
     );

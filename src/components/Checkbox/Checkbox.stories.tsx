@@ -149,7 +149,7 @@ function CheckboxInputExample() {
 export const WithCustomPositioning = {
   render: () => (
     <div style={{ display: 'flex', alignItems: 'center' }}>
-      <CheckboxLabel htmlFor="test" text="label on left" />
+      <CheckboxLabel htmlFor="test">Label on Left</CheckboxLabel>
       <CheckboxInputExample />
     </div>
   ),

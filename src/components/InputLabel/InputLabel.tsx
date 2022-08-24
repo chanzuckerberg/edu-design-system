@@ -6,7 +6,7 @@ export type InputLabelProps = {
   /**
    * Text to render in label.
    */
-  text: React.ReactNode;
+  children: React.ReactNode;
   /**
    * Additional classnames passed in for styling.
    */
@@ -35,7 +35,7 @@ export type InputLabelProps = {
  * Label associated with an input element such as a radio or checkbox.
  */
 export const InputLabel = ({
-  text,
+  children,
   className,
   htmlFor,
   size = 'lg',
@@ -54,7 +54,7 @@ export const InputLabel = ({
       data-bootstrap-override="label"
       htmlFor={htmlFor}
     >
-      {text}
+      {children}
     </label>
   );
 };
