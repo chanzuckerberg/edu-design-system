@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React, { ChangeEventHandler, ReactNode } from 'react';
 import { useUID } from 'react-uid';
-import Radio from '../Radio';
+import { Radio } from '../../components/Radio/Radio';
 import styles from '../RadioField/RadioField.module.css';
 
 export interface Props {
