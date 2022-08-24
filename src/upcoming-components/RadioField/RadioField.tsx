@@ -40,10 +40,6 @@ export interface Props {
    */
   id?: string;
   /**
-   * Inverted variation for dark backgrounds
-   */
-  inverted?: boolean;
-  /**
    * Error state of the form field
    */
   isError?: boolean;
@@ -90,7 +86,6 @@ export const RadioField = ({
   isError,
   fieldNote,
   disabled,
-  inverted,
   'aria-describedby': ariaDescribedBy,
   optionalLabel,
   onChange,
@@ -150,7 +145,6 @@ export const RadioField = ({
     className,
     variant === 'inline' && styles['radio-field--inline'],
     size === 'sm' && styles['radio-field--sm'],
-    inverted && styles['radio-field--inverted'],
     isError && styles['eds-is-error'],
     disabled && styles['eds-is-disabled'],
   );
@@ -170,7 +164,6 @@ export const RadioField = ({
         <FieldNote
           className={styles['radio-field__note']}
           id={ariaDescribedByVar}
-          inverted={inverted}
           isError={isError}
         >
           {fieldNote}

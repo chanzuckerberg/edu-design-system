@@ -46,10 +46,6 @@ export interface Props {
    */
   text?: string | ReactNode;
   /**
-   * Inverted is for a RadioFieldItem displayed on a dark background
-   */
-  inverted?: boolean;
-  /**
    * A string representing the value of the radio button
    */
   value?: string;
@@ -75,17 +71,12 @@ export const RadioFieldItem = ({
   readOnly,
   text,
   tabIndex,
-  inverted,
   ...other
 }: Props) => {
   const generatedId = useUID();
   const idVar = id || generatedId;
 
-  const componentClassName = clsx(
-    styles['radio-field__item'],
-    className,
-    inverted && styles['radio-field__item--inverted'],
-  );
+  const componentClassName = clsx(styles['radio-field__item'], className);
   return (
     <li className={componentClassName} {...other}>
       <Radio
@@ -93,7 +84,6 @@ export const RadioFieldItem = ({
         className={styles['radio-field__item-control']}
         disabled={disabled}
         id={idVar}
-        inverted={inverted}
         name={name}
         onChange={onChange}
         readOnly={readOnly}

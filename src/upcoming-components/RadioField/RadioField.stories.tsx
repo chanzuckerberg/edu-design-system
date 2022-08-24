@@ -78,31 +78,3 @@ export const Error = {
     fieldNote: 'This is a field with an error',
   },
 };
-
-export const Inverted: StoryObj<Props> = {
-  render: (args) => (
-    <div style={{ padding: '1rem', background: '#000' }}>
-      <RadioField
-        fieldNote="This is an inverted field"
-        inverted={true}
-        {...args}
-      >
-        <RadioField.Item
-          name="checkbox-example"
-          text="Checkbox 1"
-          value="checkbox1"
-        />
-        <RadioField.Item
-          name="checkbox-example"
-          text="Checkbox 2"
-          value="checkbox2"
-        />
-        <RadioField.Item
-          name="checkbox-example"
-          text="Checkbox 3"
-          value="checkbox3"
-        />
-      </RadioField>
-    </div>
-  ),
-};
