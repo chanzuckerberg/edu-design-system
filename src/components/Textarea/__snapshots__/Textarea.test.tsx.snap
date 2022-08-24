@@ -3,5 +3,6 @@
 exports[`<Textarea /> Default story renders snapshot 1`] = `
 <textarea
   class="textarea"
+  id="textarea-prototype-id"
 />
 `;

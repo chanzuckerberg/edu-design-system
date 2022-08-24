@@ -150,7 +150,7 @@
 }
 
 @define-mixin placeholderStyles {
-  font-style: italic;
+  /* font-style: italic; */
   color: var(--eds-theme-color-text-neutral-subtle);
 }
 

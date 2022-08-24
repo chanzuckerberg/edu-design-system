@@ -21,3 +21,21 @@
 .textarea-field__body {
   position: relative;
 }
+
+/**
+ * Text Field Within
+ * 1) A slot to put arbitrary content that appears within
+ *    the text field border to the right. 
+ * 2) Typically used for buttons and icon buttons to enable
+ *    things like show/hide password buttons 
+ */
+.text-field__input-within {
+  position: absolute;
+  right: var(--eds-size-1);
+  top: 0.5rem;
+  bottom: 0;
+  /* display: grid;
+  align-items: center;
+  justify-content: center; */
+  min-height: 48px;
+}

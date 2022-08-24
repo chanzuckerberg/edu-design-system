@@ -52,3 +52,18 @@ export const HideLabel = Template.bind({});
 HideLabel.args = {
   hideLabel: true,
 };
+
+export const WithIcon = Template.bind({});
+WithIcon.args = {
+  iconName: 'search',
+};
+
+export const WithButtonInside = Template.bind({});
+WithButtonInside.args = {
+  fieldButtonText: 'Post',
+  fieldButtonOnClick: () => console.log('clicky!'),
+  placeholder: 'Add a note',
+  rows: 1,
+  hideLabel: true,
+  label: 'add a note',
+};

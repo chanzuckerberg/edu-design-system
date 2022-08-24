@@ -204,16 +204,18 @@ export const TextareaField = ({
           {...other}
         />
         {fieldButtonText && (
-          <Button
-            aria-label={fieldButtonAriaLabel}
-            className={styles['textarea-field__button']}
-            onClick={fieldButtonOnClick}
-            size="sm"
-            type="button"
-            variant="icon"
-          >
-            {fieldButtonText}
-          </Button>
+          <div className={styles['text-field__input-within']}>
+            <Button
+              aria-label={fieldButtonAriaLabel}
+              className={styles['textarea-field__button']}
+              onClick={fieldButtonOnClick}
+              size="md"
+              type="button"
+              variant="primary"
+            >
+              {fieldButtonText}
+            </Button>
+          </div>
         )}
         {iconName && (
           <Icon

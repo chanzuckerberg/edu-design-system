@@ -9,5 +9,9 @@
  */
 .textarea {
   @mixin inputStyles;
-  resize: none;
+  resize: vertical;
+  padding: var(--eds-size-1-and-half);
+  padding-left: var(--eds-size-2);
+  border-radius: 0.5rem;
+  min-height: 50px;
 }

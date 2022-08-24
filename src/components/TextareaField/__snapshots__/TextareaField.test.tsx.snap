@@ -18,7 +18,7 @@ exports[`<TextareaField /> Default story renders snapshot 1`] = `
       aria-describedby="2"
       aria-invalid="false"
       class="textarea textarea-field__textarea"
-      id="1"
+      id="textarea-prototype-id"
     />
   </div>
   <div
@@ -49,7 +49,7 @@ exports[`<TextareaField /> Disabled story renders snapshot 1`] = `
       aria-invalid="false"
       class="textarea textarea-field__textarea eds-is-disabled"
       disabled=""
-      id="8"
+      id="textarea-prototype-id"
     />
   </div>
 </div>
@@ -73,7 +73,7 @@ exports[`<TextareaField /> Error story renders snapshot 1`] = `
       aria-describedby="6"
       aria-invalid="true"
       class="textarea textarea-field__textarea eds-is-error"
-      id="5"
+      id="textarea-prototype-id"
     />
   </div>
   <div
@@ -118,7 +118,7 @@ exports[`<TextareaField /> HideLabel story renders snapshot 1`] = `
     <textarea
       aria-invalid="false"
       class="textarea textarea-field__textarea"
-      id="12"
+      id="textarea-prototype-id"
     />
   </div>
 </div>
@@ -145,7 +145,7 @@ exports[`<TextareaField /> Inverted story renders snapshot 1`] = `
         aria-describedby="4"
         aria-invalid="false"
         class="textarea textarea-field__textarea"
-        id="3"
+        id="textarea-prototype-id"
       />
     </div>
     <div
@@ -182,7 +182,7 @@ exports[`<TextareaField /> Optional story renders snapshot 1`] = `
       aria-describedby="11"
       aria-invalid="false"
       class="textarea textarea-field__textarea"
-      id="10"
+      id="textarea-prototype-id"
     />
   </div>
   <div
@@ -191,6 +191,75 @@ exports[`<TextareaField /> Optional story renders snapshot 1`] = `
     id="11"
   >
     This is a fieldnote for an optional textarea field.
+  </div>
+</div>
+`;
+
+exports[`<TextareaField /> WithButtonInside story renders snapshot 1`] = `
+<div
+  class="textarea-field"
+>
+  <label
+    class="label textarea-field__label u-is-vishidden"
+    for="17"
+  >
+    add a note
+     
+  </label>
+  <div
+    class="textarea-field__body"
+  >
+    <textarea
+      aria-invalid="false"
+      class="textarea textarea-field__textarea"
+      id="textarea-prototype-id"
+      placeholder="Add a note"
+      rows="1"
+    />
+    <div
+      class="text-field__input-within"
+    >
+      <button
+        class="clickable-style clickable-style--md clickable-style--primary clickable-style--brand button textarea-field__button button--primary"
+        data-bootstrap-override="clickable-style-primary"
+        type="button"
+      >
+        Post
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<TextareaField /> WithIcon story renders snapshot 1`] = `
+<div
+  class="textarea-field"
+>
+  <label
+    class="label textarea-field__label"
+    for="14"
+  >
+    Label
+     
+  </label>
+  <div
+    class="textarea-field__body"
+  >
+    <textarea
+      aria-invalid="false"
+      class="textarea textarea-field__textarea"
+      id="textarea-prototype-id"
+    />
+    <svg
+      aria-hidden="true"
+      class="icon textarea-field__icon"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <use
+        xlink:href="test-file-stub#search"
+      />
+    </svg>
   </div>
 </div>
 `;

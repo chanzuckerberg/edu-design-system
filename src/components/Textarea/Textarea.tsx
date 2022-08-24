@@ -96,6 +96,14 @@ export const Textarea = ({
   defaultValue,
   ...other
 }: Props) => {
+  const handleInput = () => {
+    const textareaElement = document.getElementById('textarea-prototype-id');
+    if (textareaElement) {
+      textareaElement.style.height = 'auto';
+      textareaElement.style.height = textareaElement.scrollHeight + 'px';
+    }
+  };
+
   const componentClassName = clsx(
     styles['textarea'],
     className,
@@ -109,11 +117,13 @@ export const Textarea = ({
       className={componentClassName}
       defaultValue={defaultValue}
       disabled={disabled}
-      id={id}
+      // id={id}
+      id="textarea-prototype-id"
       inputMode={inputMode}
       maxLength={maxLength}
       name={name}
       onChange={onChange}
+      onInput={handleInput}
       placeholder={placeholder}
       readOnly={readOnly}
       required={required}
