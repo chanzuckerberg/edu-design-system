@@ -1,32 +1,12 @@
-@import '../../design-tokens/mixins.css';
-
 /*------------------------------------*\
     # CHECKBOX LABEL
 \*------------------------------------*/
 
 /**
- * Text labelling the checkbox.
+ * Checkbox medium variant.
  */
-.label {
-  color: var(--eds-theme-color-form-label-text);
-}
-
-/**
- * Disabled variant of the checkbox.
- */
-.label--disabled {
-  color: var(--eds-theme-color-text-disabled);
-}
-
-/**
- * Checkbox size variants.
- * 1) Centers the first line of the medium label with the checkbox.
- */
-.label--md {
-  @mixin eds-theme-typography-body-text-sm;
+.checkbox__label--md {
+  /* Centers the first line of the medium label with the checkbox. */
   position: relative;
-  top: 0.0625rem; /* 1 */
-}
-.label--lg {
-  @mixin eds-theme-typography-body-text-md;
+  top: 0.0625rem;
 }
