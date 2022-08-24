@@ -100,7 +100,7 @@ export const Textarea = ({
     const textareaElement = document.getElementById('textarea-prototype-id');
     if (textareaElement) {
       textareaElement.style.height = 'auto';
-      textareaElement.style.height = textareaElement.scrollHeight + 'px';
+      textareaElement.style.height = textareaElement.scrollHeight + 2 + 'px';
     }
   };
 

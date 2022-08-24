@@ -14,4 +14,9 @@
   padding-left: var(--eds-size-2);
   border-radius: 0.5rem;
   min-height: 50px;
+  /*
+    NOTE: this is just for the button inside prototype.
+    TODO: move to JS in TextareaField and adding padding based on width of button
+  */
+  padding-right: 68px;
 }

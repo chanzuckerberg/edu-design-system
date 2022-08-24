@@ -32,10 +32,8 @@
 .text-field__input-within {
   position: absolute;
   right: var(--eds-size-1);
-  top: 0.5rem;
-  bottom: 0;
-  /* display: grid;
-  align-items: center;
-  justify-content: center; */
-  min-height: 48px;
+  bottom: 15px;
+  /* another way to get the button correctly positioned */
+  /* bottom: 0; */
+  /* min-height: 48px; */
 }
