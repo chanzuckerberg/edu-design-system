@@ -5,7 +5,7 @@ exports[`<Checkbox /> Checked story renders snapshot 1`] = `
   style="margin: 0.25rem;"
 >
   <div
-    class="checkbox checkbox--md"
+    class="checkbox"
   >
     <span
       class="input__wrapper"
@@ -47,7 +47,7 @@ exports[`<Checkbox /> Default story renders snapshot 1`] = `
   style="margin: 0.25rem;"
 >
   <div
-    class="checkbox checkbox--md"
+    class="checkbox"
   >
     <span
       class="input__wrapper"
@@ -94,7 +94,7 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
       <tr>
         <td>
           <div
-            class="checkbox checkbox--md"
+            class="checkbox"
           >
             <span
               class="input__wrapper input__wrapper--disabled"
@@ -131,7 +131,7 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
         </td>
         <td>
           <div
-            class="checkbox checkbox--md"
+            class="checkbox"
           >
             <span
               class="input__wrapper"
@@ -170,7 +170,7 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
       <tr>
         <td>
           <div
-            class="checkbox checkbox--md"
+            class="checkbox"
           >
             <span
               class="input__wrapper input__wrapper--disabled"
@@ -208,7 +208,7 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
         </td>
         <td>
           <div
-            class="checkbox checkbox--md"
+            class="checkbox"
           >
             <span
               class="input__wrapper"
@@ -248,7 +248,7 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
       <tr>
         <td>
           <div
-            class="checkbox checkbox--md"
+            class="checkbox"
           >
             <span
               class="input__wrapper input__wrapper--disabled"
@@ -287,7 +287,7 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
         </td>
         <td>
           <div
-            class="checkbox checkbox--md"
+            class="checkbox"
           >
             <span
               class="input__wrapper"
@@ -332,7 +332,7 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
 
 exports[`<Checkbox /> Disabled story renders snapshot 2`] = `
 <div
-  class="checkbox checkbox--md"
+  class="checkbox"
 >
   <span
     class="input__wrapper input__wrapper--disabled"
@@ -373,7 +373,7 @@ exports[`<Checkbox /> Indeterminate story renders snapshot 1`] = `
   style="margin: 0.25rem;"
 >
   <div
-    class="checkbox checkbox--md"
+    class="checkbox"
   >
     <span
       class="input__wrapper"
@@ -417,7 +417,7 @@ exports[`<Checkbox /> LabelsOnly story renders snapshot 1`] = `
   style="margin: 0.25rem;"
 >
   <label
-    class="label label--md"
+    class="label label--lg"
     data-bootstrap-override="label"
     for="md-label"
   >
@@ -425,7 +425,7 @@ exports[`<Checkbox /> LabelsOnly story renders snapshot 1`] = `
   </label>
   <br />
   <label
-    class="label label--sm"
+    class="label label--md"
     data-bootstrap-override="label"
     for="sm-label"
   >
@@ -433,7 +433,7 @@ exports[`<Checkbox /> LabelsOnly story renders snapshot 1`] = `
   </label>
   <br />
   <label
-    class="label label--md"
+    class="label label--lg"
     data-bootstrap-override="label"
     for="long-md-label"
   >
@@ -441,7 +441,7 @@ exports[`<Checkbox /> LabelsOnly story renders snapshot 1`] = `
   </label>
   <br />
   <label
-    class="label label--sm"
+    class="label label--md"
     data-bootstrap-override="label"
     for="long-sm-label"
   >
@@ -449,7 +449,7 @@ exports[`<Checkbox /> LabelsOnly story renders snapshot 1`] = `
   </label>
   <br />
   <label
-    class="label label--md label--disabled"
+    class="label label--lg label--disabled"
     data-bootstrap-override="label"
     for="md-disabled-label"
   >
@@ -457,7 +457,7 @@ exports[`<Checkbox /> LabelsOnly story renders snapshot 1`] = `
   </label>
   <br />
   <label
-    class="label label--sm label--disabled"
+    class="label label--md label--disabled"
     data-bootstrap-override="label"
     for="sm-disabled-label"
   >
@@ -465,7 +465,7 @@ exports[`<Checkbox /> LabelsOnly story renders snapshot 1`] = `
   </label>
   <br />
   <label
-    class="label label--md label--disabled"
+    class="label label--lg label--disabled"
     data-bootstrap-override="label"
     for="long-md-disabled-label"
   >
@@ -473,7 +473,7 @@ exports[`<Checkbox /> LabelsOnly story renders snapshot 1`] = `
   </label>
   <br />
   <label
-    class="label label--sm label--disabled"
+    class="label label--md label--disabled"
     data-bootstrap-override="label"
     for="long-sm-disabled-label"
   >
@@ -490,7 +490,7 @@ exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
     class="longlabels--grid"
   >
     <div
-      class="checkbox checkbox--md"
+      class="checkbox"
     >
       <span
         class="input__wrapper"
@@ -525,7 +525,7 @@ exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
       </label>
     </div>
     <div
-      class="checkbox checkbox--sm"
+      class="checkbox"
     >
       <span
         class="input__wrapper"
@@ -552,7 +552,7 @@ exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
         </svg>
       </span>
       <label
-        class="label label--sm"
+        class="label label--md"
         data-bootstrap-override="label"
         for="37"
       >
@@ -560,7 +560,7 @@ exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
       </label>
     </div>
     <div
-      class="checkbox checkbox--md"
+      class="checkbox"
     >
       <span
         class="input__wrapper input__wrapper--disabled"
@@ -595,7 +595,7 @@ exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
       </label>
     </div>
     <div
-      class="checkbox checkbox--sm"
+      class="checkbox"
     >
       <span
         class="input__wrapper input__wrapper--disabled"
@@ -622,7 +622,7 @@ exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
         </svg>
       </span>
       <label
-        class="label label--sm label--disabled"
+        class="label label--md label--disabled"
         data-bootstrap-override="label"
         for="41"
       >
@@ -633,12 +633,12 @@ exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Checkbox /> Small story renders snapshot 1`] = `
+exports[`<Checkbox /> Medium story renders snapshot 1`] = `
 <div
   style="margin: 0.25rem;"
 >
   <div
-    class="checkbox checkbox--sm"
+    class="checkbox"
   >
     <span
       class="input__wrapper"
@@ -664,7 +664,7 @@ exports[`<Checkbox /> Small story renders snapshot 1`] = `
       </svg>
     </span>
     <label
-      class="label label--sm"
+      class="label label--md"
       data-bootstrap-override="label"
       for="5"
     >
@@ -674,12 +674,12 @@ exports[`<Checkbox /> Small story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Checkbox /> SmallChecked story renders snapshot 1`] = `
+exports[`<Checkbox /> MediumChecked story renders snapshot 1`] = `
 <div
   style="margin: 0.25rem;"
 >
   <div
-    class="checkbox checkbox--sm"
+    class="checkbox"
   >
     <span
       class="input__wrapper"
@@ -706,7 +706,7 @@ exports[`<Checkbox /> SmallChecked story renders snapshot 1`] = `
       </svg>
     </span>
     <label
-      class="label label--sm"
+      class="label label--md"
       data-bootstrap-override="label"
       for="7"
     >
@@ -724,7 +724,7 @@ exports[`<Checkbox /> WithCustomPositioning story renders snapshot 1`] = `
     style="display: flex; align-items: center;"
   >
     <label
-      class="label label--md"
+      class="label label--lg"
       data-bootstrap-override="label"
       for="test"
     >
@@ -762,7 +762,7 @@ exports[`<Checkbox /> WithoutVisibleLabel story renders snapshot 1`] = `
   style="margin: 0.25rem;"
 >
   <div
-    class="checkbox checkbox--md"
+    class="checkbox"
   >
     <span
       class="input__wrapper"
@@ -791,7 +791,7 @@ exports[`<Checkbox /> WithoutVisibleLabel story renders snapshot 1`] = `
     </span>
   </div>
   <div
-    class="checkbox checkbox--md"
+    class="checkbox"
   >
     <span
       class="input__wrapper"
@@ -821,7 +821,7 @@ exports[`<Checkbox /> WithoutVisibleLabel story renders snapshot 1`] = `
     </span>
   </div>
   <div
-    class="checkbox checkbox--md"
+    class="checkbox"
   >
     <span
       class="input__wrapper"
@@ -852,7 +852,7 @@ exports[`<Checkbox /> WithoutVisibleLabel story renders snapshot 1`] = `
     </span>
   </div>
   <div
-    class="checkbox checkbox--md"
+    class="checkbox"
   >
     <span
       class="input__wrapper input__wrapper--disabled"
@@ -881,7 +881,7 @@ exports[`<Checkbox /> WithoutVisibleLabel story renders snapshot 1`] = `
     </span>
   </div>
   <div
-    class="checkbox checkbox--md"
+    class="checkbox"
   >
     <span
       class="input__wrapper input__wrapper--disabled"
@@ -911,7 +911,7 @@ exports[`<Checkbox /> WithoutVisibleLabel story renders snapshot 1`] = `
     </span>
   </div>
   <div
-    class="checkbox checkbox--md"
+    class="checkbox"
   >
     <span
       class="input__wrapper input__wrapper--disabled"

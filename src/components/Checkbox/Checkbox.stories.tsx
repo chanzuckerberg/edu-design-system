@@ -58,12 +58,12 @@ export const Checked: StoryObj<Args> = {
   render: (args) => <CheckboxExample {...args} checked={true} />,
 };
 
-export const Small: StoryObj<Args> = {
-  render: (args) => <CheckboxExample {...args} size="sm" />,
+export const Medium: StoryObj<Args> = {
+  render: (args) => <CheckboxExample {...args} size="md" />,
 };
 
-export const SmallChecked: StoryObj<Args> = {
-  render: (args) => <CheckboxExample {...args} checked={true} size="sm" />,
+export const MediumChecked: StoryObj<Args> = {
+  render: (args) => <CheckboxExample {...args} checked={true} size="md" />,
 };
 
 export const Indeterminate: StoryObj<Args> = {
@@ -122,9 +122,9 @@ export const LongLabels = {
     return (
       <div className={styles['longlabels--grid']}>
         <Checkbox label={label} readOnly />
-        <Checkbox label={label} readOnly size="sm" />
+        <Checkbox label={label} readOnly size="md" />
         <Checkbox disabled label={label} />
-        <Checkbox disabled label={label} size="sm" />
+        <Checkbox disabled label={label} size="md" />
       </div>
     );
   },
@@ -144,7 +144,7 @@ export const LabelsOnly: StoryObj = {
       <CheckboxLabel
         htmlFor="sm-label"
         {...args}
-        size="sm"
+        size="md"
         text="Small label"
       />
       <br />
@@ -157,7 +157,7 @@ export const LabelsOnly: StoryObj = {
       <CheckboxLabel
         {...args}
         htmlFor="long-sm-label"
-        size="sm"
+        size="md"
         text="Long small label lorem ipsum dolor sit amet, consectetur adipiscing elit"
       />
       <br />
@@ -172,7 +172,7 @@ export const LabelsOnly: StoryObj = {
         {...args}
         disabled
         htmlFor="sm-disabled-label"
-        size="sm"
+        size="md"
         text="Small disabled"
       />
       <br />
@@ -187,7 +187,7 @@ export const LabelsOnly: StoryObj = {
         {...args}
         disabled
         htmlFor="long-sm-disabled-label"
-        size="sm"
+        size="md"
         text="Long small disabled label lorem ipsum dolor sit amet, consectetur adipiscing elit"
       />
     </>
