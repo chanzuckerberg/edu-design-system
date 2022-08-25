@@ -5,10 +5,10 @@ import React from 'react';
 import { InputLabel } from './InputLabel';
 
 export default {
-  title: 'Atoms/Forms/Label',
+  title: 'Atoms/Forms/InputLabel',
   component: InputLabel,
   args: {
-    text: 'Large label',
+    children: 'Label',
   },
   parameters: {
     badges: [BADGE.BETA],
