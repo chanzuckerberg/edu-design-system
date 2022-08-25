@@ -1,0 +1,546 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Radio /> Checked story renders snapshot 1`] = `
+<div
+  style="margin: 0.25rem;"
+>
+  <div
+    class="radio"
+  >
+    <span
+      class="input__wrapper"
+    >
+      <input
+        checked=""
+        class="radio__input"
+        data-bootstrap-override="radio"
+        id="5"
+        type="radio"
+      />
+      <svg
+        aria-hidden="true"
+        class="icon radio__icon"
+        fill="currentColor"
+        height="1.625rem"
+        style="--icon-size: 1.625rem;"
+        width="1.625rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="test-file-stub#radio-selected"
+        />
+      </svg>
+    </span>
+    <label
+      class="label label--lg radio__label radio__label--lg"
+      data-bootstrap-override="label"
+      for="5"
+    >
+      Option 1
+    </label>
+  </div>
+</div>
+`;
+
+exports[`<Radio /> CheckedMedium story renders snapshot 1`] = `
+<div
+  style="margin: 0.25rem;"
+>
+  <div
+    class="radio"
+  >
+    <span
+      class="input__wrapper"
+    >
+      <input
+        checked=""
+        class="radio__input"
+        data-bootstrap-override="radio"
+        id="7"
+        type="radio"
+      />
+      <svg
+        aria-hidden="true"
+        class="icon radio__icon"
+        fill="currentColor"
+        height="1.625rem"
+        style="--icon-size: 1.625rem;"
+        width="1.625rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="test-file-stub#radio-selected"
+        />
+      </svg>
+    </span>
+    <label
+      class="label label--md radio__label radio__label--md"
+      data-bootstrap-override="label"
+      for="7"
+    >
+      Option 1
+    </label>
+  </div>
+</div>
+`;
+
+exports[`<Radio /> Default story renders snapshot 1`] = `
+<div
+  style="margin: 0.25rem;"
+>
+  <div
+    class="radio"
+  >
+    <span
+      class="input__wrapper"
+    >
+      <input
+        class="radio__input"
+        data-bootstrap-override="radio"
+        id="1"
+        type="radio"
+      />
+      <svg
+        aria-hidden="true"
+        class="icon radio__icon"
+        fill="currentColor"
+        height="1.625rem"
+        style="--icon-size: 1.625rem;"
+        width="1.625rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="test-file-stub#radio-unselected"
+        />
+      </svg>
+    </span>
+    <label
+      class="label label--lg radio__label radio__label--lg"
+      data-bootstrap-override="label"
+      for="1"
+    >
+      Option 1
+    </label>
+  </div>
+</div>
+`;
+
+exports[`<Radio /> Disabled story renders snapshot 1`] = `
+<div
+  style="margin: 0.25rem;"
+>
+  <div
+    class="radio"
+  >
+    <span
+      class="input__wrapper input__wrapper--disabled"
+    >
+      <input
+        class="radio__input"
+        data-bootstrap-override="radio"
+        disabled=""
+        id="9"
+        type="radio"
+      />
+      <svg
+        aria-hidden="true"
+        class="icon radio__icon radio__icon--disabled"
+        fill="currentColor"
+        height="1.625rem"
+        style="--icon-size: 1.625rem;"
+        width="1.625rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="test-file-stub#radio-unselected"
+        />
+      </svg>
+    </span>
+    <label
+      class="label label--lg label--disabled radio__label radio__label--lg"
+      data-bootstrap-override="label"
+      for="9"
+    >
+      Option 1
+    </label>
+  </div>
+</div>
+`;
+
+exports[`<Radio /> LongLabels story renders snapshot 1`] = `
+<div
+  style="margin: 0.25rem;"
+>
+  <div
+    style="display: grid; width: 20rem; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem;"
+  >
+    <div
+      class="radio"
+    >
+      <span
+        class="input__wrapper"
+      >
+        <input
+          class="radio__input"
+          data-bootstrap-override="radio"
+          id="19"
+          readonly=""
+          type="radio"
+        />
+        <svg
+          aria-hidden="true"
+          class="icon radio__icon"
+          fill="currentColor"
+          height="1.625rem"
+          style="--icon-size: 1.625rem;"
+          width="1.625rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="test-file-stub#radio-unselected"
+          />
+        </svg>
+      </span>
+      <label
+        class="label label--lg radio__label radio__label--lg"
+        data-bootstrap-override="label"
+        for="19"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+      </label>
+    </div>
+    <div
+      class="radio"
+    >
+      <span
+        class="input__wrapper"
+      >
+        <input
+          class="radio__input"
+          data-bootstrap-override="radio"
+          id="21"
+          readonly=""
+          type="radio"
+        />
+        <svg
+          aria-hidden="true"
+          class="icon radio__icon"
+          fill="currentColor"
+          height="1.625rem"
+          style="--icon-size: 1.625rem;"
+          width="1.625rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="test-file-stub#radio-unselected"
+          />
+        </svg>
+      </span>
+      <label
+        class="label label--md radio__label radio__label--md"
+        data-bootstrap-override="label"
+        for="21"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+      </label>
+    </div>
+    <div
+      class="radio"
+    >
+      <span
+        class="input__wrapper input__wrapper--disabled"
+      >
+        <input
+          class="radio__input"
+          data-bootstrap-override="radio"
+          disabled=""
+          id="23"
+          type="radio"
+        />
+        <svg
+          aria-hidden="true"
+          class="icon radio__icon radio__icon--disabled"
+          fill="currentColor"
+          height="1.625rem"
+          style="--icon-size: 1.625rem;"
+          width="1.625rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="test-file-stub#radio-unselected"
+          />
+        </svg>
+      </span>
+      <label
+        class="label label--lg label--disabled radio__label radio__label--lg"
+        data-bootstrap-override="label"
+        for="23"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+      </label>
+    </div>
+    <div
+      class="radio"
+    >
+      <span
+        class="input__wrapper input__wrapper--disabled"
+      >
+        <input
+          class="radio__input"
+          data-bootstrap-override="radio"
+          disabled=""
+          id="25"
+          type="radio"
+        />
+        <svg
+          aria-hidden="true"
+          class="icon radio__icon radio__icon--disabled"
+          fill="currentColor"
+          height="1.625rem"
+          style="--icon-size: 1.625rem;"
+          width="1.625rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="test-file-stub#radio-unselected"
+          />
+        </svg>
+      </span>
+      <label
+        class="label label--md label--disabled radio__label radio__label--md"
+        data-bootstrap-override="label"
+        for="25"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Radio /> Medium story renders snapshot 1`] = `
+<div
+  style="margin: 0.25rem;"
+>
+  <div
+    class="radio"
+  >
+    <span
+      class="input__wrapper"
+    >
+      <input
+        class="radio__input"
+        data-bootstrap-override="radio"
+        id="3"
+        type="radio"
+      />
+      <svg
+        aria-hidden="true"
+        class="icon radio__icon"
+        fill="currentColor"
+        height="1.625rem"
+        style="--icon-size: 1.625rem;"
+        width="1.625rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="test-file-stub#radio-unselected"
+        />
+      </svg>
+    </span>
+    <label
+      class="label label--md radio__label radio__label--md"
+      data-bootstrap-override="label"
+      for="3"
+    >
+      Option 1
+    </label>
+  </div>
+</div>
+`;
+
+exports[`<Radio /> WithCustomPositioning story renders snapshot 1`] = `
+<div
+  style="margin: 0.25rem;"
+>
+  <div
+    style="display: flex; align-items: center;"
+  >
+    <label
+      class="label label--lg radio__label radio__label--lg"
+      data-bootstrap-override="label"
+      for="test"
+    >
+      Label on Left
+    </label>
+    <span
+      class="input__wrapper"
+    >
+      <input
+        class="radio__input"
+        data-bootstrap-override="radio"
+        readonly=""
+        type="radio"
+      />
+      <svg
+        aria-hidden="true"
+        class="icon radio__icon"
+        fill="currentColor"
+        height="1.625rem"
+        style="--icon-size: 1.625rem;"
+        width="1.625rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="test-file-stub#radio-unselected"
+        />
+      </svg>
+    </span>
+  </div>
+</div>
+`;
+
+exports[`<Radio /> WithoutVisibleLabel story renders snapshot 1`] = `
+<div
+  style="margin: 0.25rem;"
+>
+  <div
+    class="radio"
+  >
+    <span
+      class="input__wrapper"
+    >
+      <input
+        aria-label="unchecked radio"
+        class="radio__input"
+        data-bootstrap-override="radio"
+        id="11"
+        readonly=""
+        type="radio"
+      />
+      <svg
+        aria-hidden="true"
+        class="icon radio__icon"
+        fill="currentColor"
+        height="1.625rem"
+        style="--icon-size: 1.625rem;"
+        width="1.625rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="test-file-stub#radio-unselected"
+        />
+      </svg>
+    </span>
+    <label
+      class="label label--lg radio__label radio__label--lg"
+      data-bootstrap-override="label"
+      for="11"
+    />
+  </div>
+  <div
+    class="radio"
+  >
+    <span
+      class="input__wrapper"
+    >
+      <input
+        aria-label="checked radio"
+        checked=""
+        class="radio__input"
+        data-bootstrap-override="radio"
+        id="13"
+        readonly=""
+        type="radio"
+      />
+      <svg
+        aria-hidden="true"
+        class="icon radio__icon"
+        fill="currentColor"
+        height="1.625rem"
+        style="--icon-size: 1.625rem;"
+        width="1.625rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="test-file-stub#radio-selected"
+        />
+      </svg>
+    </span>
+    <label
+      class="label label--lg radio__label radio__label--lg"
+      data-bootstrap-override="label"
+      for="13"
+    />
+  </div>
+  <div
+    class="radio"
+  >
+    <span
+      class="input__wrapper input__wrapper--disabled"
+    >
+      <input
+        aria-label="unchecked disabled radio"
+        class="radio__input"
+        data-bootstrap-override="radio"
+        disabled=""
+        id="15"
+        type="radio"
+      />
+      <svg
+        aria-hidden="true"
+        class="icon radio__icon radio__icon--disabled"
+        fill="currentColor"
+        height="1.625rem"
+        style="--icon-size: 1.625rem;"
+        width="1.625rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="test-file-stub#radio-unselected"
+        />
+      </svg>
+    </span>
+    <label
+      class="label label--lg label--disabled radio__label radio__label--lg"
+      data-bootstrap-override="label"
+      for="15"
+    />
+  </div>
+  <div
+    class="radio"
+  >
+    <span
+      class="input__wrapper input__wrapper--disabled"
+    >
+      <input
+        aria-label="checked disabled radio"
+        checked=""
+        class="radio__input"
+        data-bootstrap-override="radio"
+        disabled=""
+        id="17"
+        type="radio"
+      />
+      <svg
+        aria-hidden="true"
+        class="icon radio__icon radio__icon--disabled"
+        fill="currentColor"
+        height="1.625rem"
+        style="--icon-size: 1.625rem;"
+        width="1.625rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="test-file-stub#radio-selected"
+        />
+      </svg>
+    </span>
+    <label
+      class="label label--lg label--disabled radio__label radio__label--lg"
+      data-bootstrap-override="label"
+      for="17"
+    />
+  </div>
+</div>
+`;

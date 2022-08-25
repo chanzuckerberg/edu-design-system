@@ -2,44 +2,44 @@ import clsx from 'clsx';
 import React from 'react';
 import { useUID } from 'react-uid';
 import styles from './Radio.module.css';
-import { RadioButton, RadioButtonProps } from '../RadioButton/RadioButton';
+import RadioInput, { RadioInputProps } from '../RadioInput';
+import RadioLabel, { RadioLabelProps } from '../RadioLabel';
 
-export type RadioProps = {
+export type RadioProps = RadioInputProps & {
   /**
    * HTML id attribute. If not passed, this component
    * will generate an id to use for accessibility.
    */
   id?: string;
   /**
-   * Visible text label for the checkbox.
+   * Visible text label for the radio.
    */
   label?: React.ReactNode;
-} & RadioButtonProps;
+  /**
+   * Size of the radio label.
+   */
+  size?: RadioLabelProps['size'];
+};
 
 /**
  * ```ts
- * import Radio from 'v2/core/EDSCandidates/Radio';
- * ```
- * ```ts
- * import {Label, RadioButton} from 'v2/core/EDSCandidates/Radio';
+ * import {Radio} from "@chanzuckerberg/eds";
  * ```
  *
- * Radio button and commonly a visual label.
- *
- * @example
- * <Radio label="Option 1" />
+ * This component provides a radio component and a label for form selection.
  */
 export const Radio = ({
-  id,
-  label,
   className,
   disabled,
-  ...radioProps
+  label,
+  id,
+  size,
+  ...other
 }: RadioProps) => {
   if (
     process.env.NODE_ENV !== 'production' &&
     !label &&
-    !('aria-label' in radioProps)
+    !('aria-label' in other)
   ) {
     throw new Error('You must provide a visible label or aria-label');
   }
@@ -48,15 +48,15 @@ export const Radio = ({
 
   const componentClassName = clsx(styles['radio'], className);
 
-  const labelClassName = clsx(
-    styles['radio__label'],
-    disabled && styles['radio__label--disabled'],
-  );
-
   return (
     <div className={componentClassName}>
-      <RadioButton disabled={disabled} id={radioId} {...radioProps} />
-      <label htmlFor={radioId}>{label}</label>
+      <RadioInput disabled={disabled} id={radioId} {...other} />
+      <RadioLabel disabled={disabled} htmlFor={radioId} size={size}>
+        {label}
+      </RadioLabel>
     </div>
   );
 };
+
+Radio.Input = RadioInput;
+Radio.Label = RadioLabel;

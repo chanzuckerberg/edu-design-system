@@ -6,8 +6,18 @@ import { InputLabel, InputLabelProps } from '../InputLabel/InputLabel';
 export type RadioLabelProps = InputLabelProps;
 
 /**
- * Checkbox label element, styles and relies on the InputLabel component.
+ * Radio label element, styles and relies on the InputLabel component.
  */
-export const RadioLabel = ({ ...other }: RadioLabelProps) => {
-  return <InputLabel {...other} />;
+export const RadioLabel = ({
+  className,
+  size = 'lg',
+  ...other
+}: RadioLabelProps) => {
+  const componentClassName = clsx(
+    styles['radio__label'],
+    styles[`radio__label--${size}`],
+    className,
+  );
+
+  return <InputLabel className={componentClassName} size={size} {...other} />;
 };

@@ -73,8 +73,8 @@
   }
 }
 /**
- * Checkbox field item label 
- * 1) Aligns label to checkbox control
+ * Radio field item label 
+ * 1) Aligns label to radio control
  */
 .radio-field__item-label {
   @mixin eds-theme-typography-body-text-md;

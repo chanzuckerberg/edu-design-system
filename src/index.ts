@@ -62,7 +62,7 @@ export { default as PageLevelBanner } from './components/PageLevelBanner';
 export { default as Panel } from './components/Panel';
 export { default as ProjectCard } from './components/ProjectCard';
 export { default as Radio } from './components/Radio';
-export { default as RadioButton } from './components/RadioButton';
+export { default as RadioInput } from './components/RadioInput';
 export { default as RadioLabel } from './components/RadioLabel';
 export { default as Score } from './components/Score';
 export { default as Section } from './components/Section';
