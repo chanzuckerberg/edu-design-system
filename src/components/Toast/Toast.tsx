@@ -44,10 +44,10 @@ export const Toast = ({
   ...other
 }: Props) => {
   const componentClassName = clsx(
-    className,
     styles['toast'],
     variant === 'success' && styles['toast--success'],
     variant === 'error' && styles['toast--error'],
+    className,
   );
   return (
     <div className={componentClassName} {...other}>

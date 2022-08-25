@@ -40,9 +40,9 @@ export const LayoutContainer = ({
 }: Props) => {
   const componentClassName = clsx(
     styles['layout-container'],
-    className,
     variant === 'narrow' && styles['layout-container--narrow'],
     fullHeight && styles['layout-container--narrow'],
+    className,
   );
   return (
     <div className={componentClassName} {...other}>

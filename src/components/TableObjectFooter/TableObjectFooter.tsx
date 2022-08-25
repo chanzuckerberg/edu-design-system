@@ -23,13 +23,8 @@ export interface Props {
  * TODO: update this comment with a description of the component.
  */
 export const TableObjectFooter = ({ children, className, ...other }: Props) => {
-  const componentClassName = clsx(
-    styles['table-object__footer'],
-    className,
-    {},
-  );
   return (
-    <div className={componentClassName} {...other}>
+    <div className={className} {...other}>
       {children}
     </div>
   );

@@ -67,9 +67,9 @@ export const Label = ({
 }: Props) => {
   const componentClassName = clsx(
     styles['label'],
-    className,
     inverted && styles['label--inverted'],
     hideLabel && styles['u-is-vishidden'],
+    className,
   );
 
   return (

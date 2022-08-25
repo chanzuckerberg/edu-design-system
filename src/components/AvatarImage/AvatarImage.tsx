@@ -19,7 +19,7 @@ export interface Props {
  * Component that presents the user's avatar SVG.
  */
 export const AvatarImage = ({ className, ...other }: Props) => {
-  const componentClassName = clsx(styles['avatar-image'], className, {});
+  const componentClassName = clsx(styles['avatar-image'], className);
   return (
     <div className={componentClassName} {...other}>
       <svg

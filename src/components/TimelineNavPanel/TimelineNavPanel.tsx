@@ -1,6 +1,4 @@
-import clsx from 'clsx';
 import React, { ReactNode } from 'react';
-import styles from '../TimelineNav/TimelineNav.module.css';
 
 export type TimelineNavPanelVariant =
   | 'bullet'
@@ -66,11 +64,10 @@ export const TimelineNavPanel = ({
   variant,
   ...other
 }: Props) => {
-  const componentClassName = clsx(styles['timeline-nav__panel'], className, {});
   return (
     <div
       aria-hidden={false}
-      className={componentClassName}
+      className={className}
       id={id}
       role="tabpanel"
       {...other}

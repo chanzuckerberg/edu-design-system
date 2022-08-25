@@ -67,7 +67,7 @@ export const LinkListItem = ({
   target,
   ...other
 }: Props) => {
-  const componentClassName = clsx('link-list__item', className, {});
+  const componentClassName = clsx('link-list__item', className);
   return (
     <li className={componentClassName} {...other}>
       <a

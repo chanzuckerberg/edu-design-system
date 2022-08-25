@@ -43,10 +43,10 @@ export const Toolbar = ({
 }: Props) => {
   const componentClassName = clsx(
     styles['toolbar'],
-    className,
     variant === 'bare' && styles['toolbar--bare'],
     verticalAlign === 'bottom' && styles['toolbar--vertical-align-bottom'],
     verticalAlign === 'top' && styles['toolbar--vertical-align-top'],
+    className,
   );
   return (
     <div className={componentClassName} {...other}>

@@ -145,9 +145,9 @@ export const TextInput = ({
 }: Props) => {
   const componentClassName = clsx(
     styles['text-input'],
-    className,
     disabled && styles['eds-is-disabled'],
     isError && styles['eds-is-error'],
+    className,
   );
 
   return (

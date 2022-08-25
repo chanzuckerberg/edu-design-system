@@ -95,10 +95,10 @@ export const Heading = forwardRef(
 
     const TagName = as || getComputedAs(size);
     const componentClassName = clsx(
-      className,
       styles['heading'],
       styles[`heading--size-${size}`],
       variant && styles[`heading--${variant}`],
+      className,
     );
     return (
       <TagName className={componentClassName} ref={ref} {...other}>

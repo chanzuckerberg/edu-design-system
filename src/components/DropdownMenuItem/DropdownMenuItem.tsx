@@ -84,10 +84,10 @@ export const DropdownMenuItem = React.forwardRef<HTMLLIElement, Props>(
 
     const componentClassName = clsx(
       styles['dropdown-menu__item'],
-      className,
       align === 'top-left' && styles['dropdown-menu__item--align-top-left'],
       variant === 'lined' && styles['dropdown-menu__item--lined'],
       status === 'error' && styles['dropdown-menu__item--error'],
+      className,
     );
 
     return (
