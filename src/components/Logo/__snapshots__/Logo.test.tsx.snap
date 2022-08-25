@@ -4,9 +4,7 @@ exports[`<Logo /> Default story renders snapshot 1`] = `
 <div
   style="background: rgb(0, 0, 0);"
 >
-  <div
-    class="logo"
-  >
+  <div>
     <a
       aria-label="Learning platform"
       class="logo__link"

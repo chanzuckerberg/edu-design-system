@@ -1,6 +1,4 @@
-import clsx from 'clsx';
 import React, { ReactNode } from 'react';
-import styles from '../TableObject/TableObject.module.css';
 
 export interface Props {
   /**
