@@ -379,6 +379,7 @@ exports[`<Radio /> WithCustomPositioning story renders snapshot 1`] = `
       <input
         class="radio__input"
         data-bootstrap-override="radio"
+        id="test"
         readonly=""
         type="radio"
       />

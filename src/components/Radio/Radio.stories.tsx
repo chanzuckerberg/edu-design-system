@@ -122,7 +122,7 @@ export const WithCustomPositioning = {
   render: () => (
     <div style={{ display: 'flex', alignItems: 'center' }}>
       <Radio.Label htmlFor="test">Label on Left</Radio.Label>
-      <Radio.Input checked={false} readOnly />
+      <Radio.Input checked={false} id="test" readOnly />
     </div>
   ),
 };
