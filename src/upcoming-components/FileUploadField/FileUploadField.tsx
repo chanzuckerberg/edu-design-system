@@ -311,9 +311,9 @@ export const FileUploadField = ({
 
   const componentClassName = clsx(
     styles['file-upload-field'],
+    isErrorState && styles['file-upload-field--error'],
+    isDisabled && styles['file-upload-field--disabled'],
     className,
-    isErrorState && styles['eds-is-error'],
-    isDisabled && styles['eds-is-disabled'],
   );
 
   const hitAreaClassName = clsx(

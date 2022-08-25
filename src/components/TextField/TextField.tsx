@@ -192,8 +192,6 @@ export const TextField = ({
     styles['text-field'],
     className,
     inverted && styles['text-field--inverted'],
-    isError && styles['eds-is-error'],
-    disabled && styles['eds-is-disabled'],
   );
 
   return (

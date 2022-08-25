@@ -97,8 +97,6 @@ export const CheckboxField = ({
     variant === 'inline' && styles['checkbox-field--inline'],
     size === 'sm' && styles['checkbox-field--sm'],
     inverted && styles['checkbox-field--inverted'],
-    isError && styles['eds-is-error'],
-    disabled && styles['eds-is-disabled'],
   );
   return (
     <Fieldset className={componentClassName} id={id} {...other}>

@@ -50,7 +50,7 @@ export const FieldNote = ({
     styles['field-note'],
     className,
     inverted && styles['field-note--inverted'],
-    isError && styles['eds-is-error'],
+    isError && styles['field-note--error'],
   );
   return (
     <div

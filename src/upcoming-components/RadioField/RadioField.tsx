@@ -147,12 +147,11 @@ export const RadioField = ({
 
   const componentClassName = clsx(
     styles['radio-field'],
-    className,
     variant === 'inline' && styles['radio-field--inline'],
     size === 'sm' && styles['radio-field--sm'],
     inverted && styles['radio-field--inverted'],
-    isError && styles['eds-is-error'],
-    disabled && styles['eds-is-disabled'],
+    disabled && styles['radio-field--disabed'],
+    className,
   );
   return (
     <Fieldset className={componentClassName} id={id} {...other}>

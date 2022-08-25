@@ -9,12 +9,13 @@ body {
   margin: 0;
   color: var(--eds-theme-color-text-neutral-default);
   background: var(--eds-theme-color-background-neutral-subtle);
+}
 
-  &.eds-is-disabled {
-    overflow: hidden;
-    width: 100%;
-    min-height: 100%;
-  }
+/* Body disabled variant */
+.body--disabled {
+  overflow: hidden;
+  width: 100%;
+  min-height: 100%;
 }
 
 /* Body with light background on small screens */

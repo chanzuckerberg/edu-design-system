@@ -24,10 +24,10 @@
   border-style: solid;
   border-color: var(--eds-theme-color-form-border);
   border-radius: var(--eds-theme-form-border-radius);
+}
 
-  .eds-is-error & {
-    border-color: var(--eds-theme-color-border-utility-error-strong);
-  }
+.counter--error > .counter__body {
+  border-color: var(--eds-theme-color-border-utility-error-strong);
 }
 
 /**
