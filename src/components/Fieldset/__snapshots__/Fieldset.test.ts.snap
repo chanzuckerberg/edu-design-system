@@ -14,7 +14,7 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
     class="fieldset-items"
   >
     <div
-      class="checkbox checkbox--md"
+      class="checkbox"
     >
       <span
         class="input__wrapper"
@@ -40,7 +40,7 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
         </svg>
       </span>
       <label
-        class="label label--md"
+        class="label label--lg"
         data-bootstrap-override="label"
         for="1"
       >
@@ -48,7 +48,7 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
       </label>
     </div>
     <div
-      class="checkbox checkbox--md"
+      class="checkbox"
     >
       <span
         class="input__wrapper"
@@ -74,7 +74,7 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
         </svg>
       </span>
       <label
-        class="label label--md"
+        class="label label--lg"
         data-bootstrap-override="label"
         for="3"
       >
@@ -82,7 +82,7 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
       </label>
     </div>
     <div
-      class="checkbox checkbox--md"
+      class="checkbox"
     >
       <span
         class="input__wrapper"
@@ -108,7 +108,7 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
         </svg>
       </span>
       <label
-        class="label label--md"
+        class="label label--lg"
         data-bootstrap-override="label"
         for="5"
       >
@@ -116,7 +116,7 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
       </label>
     </div>
     <div
-      class="checkbox checkbox--md"
+      class="checkbox"
     >
       <span
         class="input__wrapper"
@@ -142,7 +142,7 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
         </svg>
       </span>
       <label
-        class="label label--md"
+        class="label label--lg"
         data-bootstrap-override="label"
         for="7"
       >
@@ -150,7 +150,7 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
       </label>
     </div>
     <div
-      class="checkbox checkbox--md"
+      class="checkbox"
     >
       <span
         class="input__wrapper"
@@ -176,7 +176,7 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
         </svg>
       </span>
       <label
-        class="label label--md"
+        class="label label--lg"
         data-bootstrap-override="label"
         for="9"
       >

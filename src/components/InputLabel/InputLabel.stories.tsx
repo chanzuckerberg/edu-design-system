@@ -50,6 +50,7 @@ export const MediumDisabled: StoryObj<Args> = {
 
 export const LongCopy: StoryObj<Args> = {
   args: {
-    text: 'Long label lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac id velit ut egestas arcu. Atmaecenas urna, risus donec praesent eu consectetur.',
+    children:
+      'Long label lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac id velit ut egestas arcu. Atmaecenas urna, risus donec praesent eu consectetur.',
   },
 };
