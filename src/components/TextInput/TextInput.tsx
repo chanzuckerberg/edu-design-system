@@ -65,7 +65,7 @@ export interface Props {
    */
   onChange?: ChangeEventHandler;
   /**
-   * Input pattern
+   * Defines a regular expression that the input's value must match in order for the value to pass constraint validation.
    */
   pattern?: string;
   /**
@@ -120,58 +120,23 @@ export interface Props {
  * ```
  */
 export const TextInput = ({
-  accept,
-  'aria-describedby': ariaDescribedBy,
   className,
   disabled,
   id,
-  inputMode,
   isError,
-  min,
-  max,
-  maxLength,
-  multiple,
-  name,
-  pattern,
-  onChange,
-  placeholder,
-  readOnly,
-  required,
-  type,
-  title,
-  value,
-  defaultValue,
   ...other
 }: Props) => {
   const componentClassName = clsx(
     styles['text-input'],
+    isError && styles['error'],
     className,
-    disabled && styles['eds-is-disabled'],
-    isError && styles['eds-is-error'],
   );
 
   return (
     <input
-      accept={accept}
-      aria-describedby={ariaDescribedBy}
       className={componentClassName}
-      defaultValue={defaultValue}
       disabled={disabled}
       id={id}
-      inputMode={inputMode}
-      max={max}
-      maxLength={maxLength}
-      min={min}
-      multiple={multiple}
-      name={name}
-      onChange={onChange}
-      pattern={pattern}
-      placeholder={placeholder}
-      readOnly={readOnly}
-      required={required}
-      title={title}
-      type={type}
-      value={value}
       {...other}
     />
   );

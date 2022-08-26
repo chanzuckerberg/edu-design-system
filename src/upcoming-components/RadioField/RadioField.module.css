@@ -82,10 +82,13 @@
   position: relative; /* 1 */
   top: -3px; /* 1 */
 
-  .radio-field.eds-is-disabled & {
-    color: var(--eds-theme-color-text-disabled);
-    cursor: not-allowed;
+  .radio-field--inverted & {
+    color: var(--eds-theme-color-text-neutral-default-inverse);
   }
+}
+.radio-field--disabled > .radio-field__item-label {
+  color: var(--eds-theme-color-text-disabled);
+  cursor: not-allowed;
 }
 
 .radio-field__item-after {
