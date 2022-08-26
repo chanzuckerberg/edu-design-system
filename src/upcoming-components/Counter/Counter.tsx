@@ -159,16 +159,18 @@ export const Counter = ({
   );
   return (
     <div className={componentClassName} {...other}>
-      <Label
-        className={styles['counter__label']}
-        hideLabel={hideLabel}
-        htmlFor={idVar}
-        labelAfter={labelAfter}
-        optionalLabel={optionalLabel}
-        required={required}
-        requiredLabel={requiredLabel}
-        text={label}
-      />
+      {label && (
+        <Label
+          className={styles['counter__label']}
+          hideLabel={hideLabel}
+          htmlFor={idVar}
+          labelAfter={labelAfter}
+          optionalLabel={optionalLabel}
+          required={required}
+          requiredLabel={requiredLabel}
+          text={label}
+        />
+      )}
 
       <div className={styles['counter__body']}>
         <Button

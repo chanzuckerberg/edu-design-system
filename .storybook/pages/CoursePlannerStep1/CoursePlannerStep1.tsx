@@ -78,9 +78,8 @@ export const CoursePlannerStep1 = () => (
             How many times per week do you have class?
           </Text>
           <TextField
+            aria-label="times per week"
             className="u-margin-bottom-xl"
-            hideLabel
-            label="times per week"
             min={0}
             placeholder="times per week"
             type="number"
@@ -89,9 +88,8 @@ export const CoursePlannerStep1 = () => (
             How many minutes is each class?
           </Text>
           <TextField
+            aria-label="minutes"
             className="u-margin-bottom-xl"
-            hideLabel
-            label="minutes"
             min={0}
             placeholder="minutes"
             type="number"

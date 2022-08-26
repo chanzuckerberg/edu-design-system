@@ -38,7 +38,7 @@ export interface Props {
   /**
    * The label text string
    */
-  text?: string | boolean;
+  text: string;
 }
 
 /**
@@ -57,7 +57,7 @@ export const Label = ({
   optionalLabel = '(optional)',
   required = true,
   requiredLabel,
-  text = 'Label',
+  text,
   ...other
 }: Props) => {
   const componentClassName = clsx(
