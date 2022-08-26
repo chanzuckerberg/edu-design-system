@@ -1,0 +1,11 @@
+/*------------------------------------*\
+    # RADIO BUTTON
+\*------------------------------------*/
+
+/**
+ * A custom individual radio control
+ */
+.radio {
+  display: flex;
+  gap: var(--eds-size-1);
+}

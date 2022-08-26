@@ -58,12 +58,12 @@ export const Checked: StoryObj<Args> = {
   render: (args) => <CheckboxExample {...args} checked={true} />,
 };
 
-export const Small: StoryObj<Args> = {
-  render: (args) => <CheckboxExample {...args} size="sm" />,
+export const Medium: StoryObj<Args> = {
+  render: (args) => <CheckboxExample {...args} size="md" />,
 };
 
-export const SmallChecked: StoryObj<Args> = {
-  render: (args) => <CheckboxExample {...args} checked={true} size="sm" />,
+export const MediumChecked: StoryObj<Args> = {
+  render: (args) => <CheckboxExample {...args} checked={true} size="md" />,
 };
 
 export const Indeterminate: StoryObj<Args> = {
@@ -122,76 +122,12 @@ export const LongLabels = {
     return (
       <div className={styles['longlabels--grid']}>
         <Checkbox label={label} readOnly />
-        <Checkbox label={label} readOnly size="sm" />
+        <Checkbox label={label} readOnly size="md" />
         <Checkbox disabled label={label} />
-        <Checkbox disabled label={label} size="sm" />
+        <Checkbox disabled label={label} size="md" />
       </div>
     );
   },
-  parameters: {
-    axe: {
-      disabledRules: ['color-contrast'],
-    },
-  },
-};
-
-// For visual regression testing
-export const LabelsOnly: StoryObj = {
-  render: (args) => (
-    <>
-      <CheckboxLabel htmlFor="md-label" {...args} text="Medium label" />
-      <br />
-      <CheckboxLabel
-        htmlFor="sm-label"
-        {...args}
-        size="sm"
-        text="Small label"
-      />
-      <br />
-      <CheckboxLabel
-        {...args}
-        htmlFor="long-md-label"
-        text="Long medium label lorem ipsum dolor sit amet, consectetur adipiscing elit"
-      />
-      <br />
-      <CheckboxLabel
-        {...args}
-        htmlFor="long-sm-label"
-        size="sm"
-        text="Long small label lorem ipsum dolor sit amet, consectetur adipiscing elit"
-      />
-      <br />
-      <CheckboxLabel
-        {...args}
-        disabled
-        htmlFor="md-disabled-label"
-        text="Medium disabled"
-      />
-      <br />
-      <CheckboxLabel
-        {...args}
-        disabled
-        htmlFor="sm-disabled-label"
-        size="sm"
-        text="Small disabled"
-      />
-      <br />
-      <CheckboxLabel
-        {...args}
-        disabled
-        htmlFor="long-md-disabled-label"
-        text="Long medium disabled label lorem ipsum dolor sit amet, consectetur adipiscing elit"
-      />
-      <br />
-      <CheckboxLabel
-        {...args}
-        disabled
-        htmlFor="long-sm-disabled-label"
-        size="sm"
-        text="Long small disabled label lorem ipsum dolor sit amet, consectetur adipiscing elit"
-      />
-    </>
-  ),
   parameters: {
     axe: {
       disabledRules: ['color-contrast'],
@@ -213,7 +149,7 @@ function CheckboxInputExample() {
 export const WithCustomPositioning = {
   render: () => (
     <div style={{ display: 'flex', alignItems: 'center' }}>
-      <CheckboxLabel htmlFor="test" text="label on left" />
+      <CheckboxLabel htmlFor="test">Label on Left</CheckboxLabel>
       <CheckboxInputExample />
     </div>
   ),

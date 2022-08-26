@@ -494,7 +494,7 @@ EDS adheres to the following API naming conventions:
 - Default to `text` for short strings of text, such as `<BreadCrumbsItem text="My Courses">` or `<Badge text="Overdue" />`.
 - For headings, default to `title`, such as `<PageHeader title="My Page Title">`.
 - Default to `description` for text that serves as a descriptor, such as `<PageHeader title="Project name" description="Brief overview of the project..." />`
-- For form-related components, use the semantic `label` or `legend` (e.g. `<TextField label="first name" />` and `<RadioField legend="Grade level">`).
+- For form-related components, use the semantic `label` or `legend` (e.g. `<TextField label="first name" />` and `<Fieldset.Legend text="Grade level">`).
 - `children` can be used for components that only have one main block of content being passed in (so there will be no confusion with other content props) and when it's safe for that content to be a `ReactNode`. (If it's important for the content to only come in the form of a string, use a different prop name, like `text`.)
 
 ### Tag name

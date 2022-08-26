@@ -1,6 +1,6 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
-import * as stories from './Radio.stories';
+import * as stories from './InputLabel.stories';
 
-describe('<Radio />', () => {
+describe('<InputLabel />', () => {
   generateSnapshots(stories);
 });
