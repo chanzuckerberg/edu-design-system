@@ -49,7 +49,7 @@ export const FieldNote = ({
   const componentClassName = clsx(
     styles['field-note'],
     inverted && styles['field-note--inverted'],
-    isError && styles['eds-is-error'],
+    isError && styles['field-note--error'],
     className,
   );
   return (

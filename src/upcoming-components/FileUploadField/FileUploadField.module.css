@@ -45,36 +45,26 @@
   &.file-upload-field__hit-area--drag-over {
     border-color: var(--eds-theme-color-form-input-border-focus);
   }
-
-  /**
-   * Hit area within error state
-   */
-  .eds-is-error & {
-    border-color: var(--eds-theme-color-border-utility-error-strong);
-  }
-
-  /**
-   * Hit area within disabled field
-   */
-  .eds-is-disabled & {
-    border-color: var(--eds-theme-color-border-disabled);
-    background: var(--eds-theme-color-background-disabled);
-    color: var(--eds-theme-color-text-disabled);
-    cursor: not-allowed;
-
-    &.file-upload-field__hit-area--drag-over {
-      border-color: var(--eds-theme-color-disabled-border);
-    }
-  }
+}
+.file-upload-field--error > .file-upload-field__hit-area {
+  border-color: var(--eds-theme-color-border-utility-error-strong);
+}
+.file-upload-field--disabled > .file-upload-field__hit-area {
+  border-color: var(--eds-theme-color-border-disabled);
+  background: var(--eds-theme-color-background-disabled);
+  color: var(--eds-theme-color-text-disabled);
+  cursor: not-allowed;
+}
+.file-upload-field--disabled
+  > .file-upload-field__hit-area.file-upload-field__hit-area--drag-over {
+  border-color: var(--eds-theme-color-disabled-border);
 }
 
 /**
- * Label 
+ * Label, disabled variant
  */
-.file-upload-field__label {
-  .eds-is-disabled & {
-    color: var(--eds-theme-color-text-disabled);
-  }
+.file-upload-field--disabled > .file-upload-field__label {
+  color: var(--eds-theme-color-text-disabled);
 }
 
 /**
@@ -100,23 +90,17 @@
   outline: none;
   opacity: 0;
   cursor: pointer;
-
-  .eds-is-disabled & {
-    cursor: not-allowed;
-  }
 }
 
 /**
  * file-upload-field note
  */
-.file-upload-field__note {
+.file-upload-field--error > .file-upload-field__note {
   /**
-     * file-upload-field note within error state
-     * 1) Set to display flex to place icon next to the fieldnote
-     */
-  .eds-is-error & {
-    display: inline-flex;
-  }
+   * file-upload-field note within error state
+   * 1) Set to display flex to place icon next to the fieldnote
+   */
+  display: inline-flex;
 }
 
 /**

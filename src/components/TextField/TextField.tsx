@@ -191,8 +191,6 @@ export const TextField = ({
   const componentClassName = clsx(
     styles['text-field'],
     inverted && styles['text-field--inverted'],
-    isError && styles['eds-is-error'],
-    disabled && styles['eds-is-disabled'],
     className,
   );
 

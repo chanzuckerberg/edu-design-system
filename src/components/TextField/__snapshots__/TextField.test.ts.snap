@@ -36,7 +36,7 @@ exports[`<TextField /> Default story renders snapshot 1`] = `
 
 exports[`<TextField /> Disabled story renders snapshot 1`] = `
 <div
-  class="text-field eds-is-disabled"
+  class="text-field"
 >
   <label
     class="label text-field__label"
@@ -50,7 +50,7 @@ exports[`<TextField /> Disabled story renders snapshot 1`] = `
   >
     <input
       aria-invalid="false"
-      class="text-input eds-is-disabled text-field__input"
+      class="text-input text-field__input"
       data-bootstrap-override="textinput"
       disabled=""
       id="8"
@@ -63,7 +63,7 @@ exports[`<TextField /> Disabled story renders snapshot 1`] = `
 
 exports[`<TextField /> Error story renders snapshot 1`] = `
 <div
-  class="text-field eds-is-error"
+  class="text-field"
 >
   <label
     class="label text-field__label"
@@ -78,7 +78,7 @@ exports[`<TextField /> Error story renders snapshot 1`] = `
     <input
       aria-describedby="6"
       aria-invalid="true"
-      class="text-input eds-is-error text-field__input"
+      class="text-input error text-field__input"
       data-bootstrap-override="textinput"
       id="5"
       type="text"
@@ -87,7 +87,7 @@ exports[`<TextField /> Error story renders snapshot 1`] = `
   </div>
   <div
     aria-live="assertive"
-    class="field-note eds-is-error text-field__note"
+    class="field-note field-note--error text-field__note"
     id="6"
   >
     <svg
