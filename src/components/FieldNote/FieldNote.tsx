@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import styles from './FieldNote.module.css';
-import Icon, { IconName } from '../Icon';
+import Icon from '../Icon';
 
 export interface Props {
   /**
@@ -16,10 +16,6 @@ export interface Props {
    * Toggles disabled styling of the field note.
    */
   disabled?: boolean;
-  /**
-   * Name of the fieldnote icon
-   */
-  iconName?: IconName;
   /**
    * HTML id for the component
    */

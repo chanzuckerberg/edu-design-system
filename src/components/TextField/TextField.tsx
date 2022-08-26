@@ -147,12 +147,12 @@ export const TextField = ({
     throw new Error('You must provide a visible label or aria-label');
   }
 
-  const shouldRenderOverline = label || required || optionalIndicator;
   const indicator = required
     ? 'Required'
     : optionalIndicator
     ? 'Optional'
     : null;
+  const shouldRenderOverline = !!(label || indicator);
   const overlineClassName = clsx(
     styles['text-field__overline'],
     !label && styles['text-field__overline--no-label'],

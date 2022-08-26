@@ -119,7 +119,7 @@ export type Props = React.InputHTMLAttributes<HTMLInputElement> & {
  * import {TextInput} from "@chanzuckerberg/eds";
  * ```
  *
- * Text input component for one line of text. For multiple lines, consider the Textarea upcoming-component.
+ * Text input component for one line of text. For multiple lines, consider the Textarea component.
  */
 export const TextInput = ({
   className,
