@@ -150,7 +150,7 @@ export const RadioField = ({
     variant === 'inline' && styles['radio-field--inline'],
     size === 'sm' && styles['radio-field--sm'],
     inverted && styles['radio-field--inverted'],
-    disabled && styles['radio-field--disabed'],
+    disabled && styles['radio-field--disabled'],
     className,
   );
   return (
