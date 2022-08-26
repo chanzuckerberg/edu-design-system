@@ -9,4 +9,5 @@
  */
 .text-input {
   @mixin inputStyles;
+  padding-left: var(--eds-size-2);
 }

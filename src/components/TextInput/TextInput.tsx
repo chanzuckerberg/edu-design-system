@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import React, { ChangeEventHandler } from 'react';
 import styles from './TextInput.module.css';
 
-export interface Props {
+export type Props = React.InputHTMLAttributes<HTMLInputElement> & {
   /**
    * String that describes a type of file that may be selected by the user
    * https://developer.mozilla.org/en-US/docs/Web/*HTML/Element/input/file#Unique_file_type_specifiers
@@ -110,7 +110,7 @@ export interface Props {
    * The default value of the input
    */
   defaultValue?: string | number;
-}
+};
 
 /**
  * BETA: This component is still a work in progress and is subject to change.
@@ -118,6 +118,8 @@ export interface Props {
  * ```ts
  * import {TextInput} from "@chanzuckerberg/eds";
  * ```
+ *
+ * Text input component for one line of text. For multiple lines, consider the Textarea upcoming-component.
  */
 export const TextInput = ({
   className,

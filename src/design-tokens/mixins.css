@@ -123,8 +123,8 @@
   /**
    * Disabled state
    */
-  &:disabled {
-    background-color: var(--eds-theme-color-background-disabled);
+  &:disabled,
+  &:disabled::placeholder {
     border-color: var(--eds-theme-color-border-disabled);
     color: var(--eds-theme-color-text-disabled);
     cursor: not-allowed;
