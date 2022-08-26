@@ -3,6 +3,5 @@
 exports[`<TextInput /> Default story renders snapshot 1`] = `
 <input
   class="text-input"
-  value=""
 />
 `;

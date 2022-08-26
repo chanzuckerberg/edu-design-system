@@ -165,8 +165,6 @@ export const TextareaField = ({
     styles['textarea-field'],
     className,
     inverted && styles['textarea-field--inverted'],
-    isError && styles['eds-is-error'],
-    disabled && styles['eds-is-disabled'],
   );
 
   return (
