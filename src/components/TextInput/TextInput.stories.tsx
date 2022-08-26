@@ -9,6 +9,10 @@ export default {
   component: TextInput,
   parameters: {
     badges: [BADGE.BETA],
+    axe: {
+      // textinput component independent of label, expected accessibility error
+      disabledRules: ['label'],
+    },
   },
   decorators: [
     (Story) => (

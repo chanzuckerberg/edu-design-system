@@ -45,6 +45,7 @@ export const Disabled: StoryObj<Args> = {
   },
   parameters: {
     axe: {
+      // Disabled input does not need to meet color contrast
       disabledRules: ['color-contrast'],
     },
   },
@@ -151,6 +152,7 @@ export const DisabledVariants: StoryObj<Args> = {
   ...LabelFieldnoteVariants,
   parameters: {
     axe: {
+      // Disabled input does not need to meet color contrast
       disabledRules: ['color-contrast'],
     },
   },
@@ -234,6 +236,12 @@ export const RequiredIndicatorVariants: StoryObj<Args> = {
       </div>
     </>
   ),
+  parameters: {
+    axe: {
+      // Disabled input does not need to meet color contrast
+      disabledRules: ['color-contrast'],
+    },
+  },
 };
 
 export const OptionalIndicatorVariants: StoryObj<Args> = {
@@ -241,5 +249,11 @@ export const OptionalIndicatorVariants: StoryObj<Args> = {
   args: {
     optionalIndicator: true,
     required: false,
+  },
+  parameters: {
+    axe: {
+      // Disabled input does not need to meet color contrast
+      disabledRules: ['color-contrast'],
+    },
   },
 };
