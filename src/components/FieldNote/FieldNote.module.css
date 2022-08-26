@@ -15,11 +15,10 @@
  * Fieldnote icon
  */
 .field-note__icon {
-  height: var(--eds-size-2);
-  width: var(--eds-size-2);
   /* Centers icon with accompanying text */
   position: relative;
   bottom: 1px;
+  margin-right: var(--eds-size-half);
 }
 
 /**
@@ -33,7 +32,6 @@
 }
 .field-note--error.field-note__icon {
   color: var(--eds-theme-color-icon-utility-error);
-  margin-right: var(--eds-size-half);
 }
 
 /**

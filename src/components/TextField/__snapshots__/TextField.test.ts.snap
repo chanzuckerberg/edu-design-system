@@ -334,7 +334,10 @@ exports[`<TextField /> Error story renders snapshot 1`] = `
       <svg
         class="icon field-note__icon"
         fill="currentColor"
+        height="1rem"
         role="img"
+        style="--icon-size: 1rem;"
+        width="1rem"
         xmlns="http://www.w3.org/2000/svg"
       >
         <title
@@ -401,7 +404,10 @@ exports[`<TextField /> ErrorVariants story renders snapshot 1`] = `
         <svg
           class="icon field-note__icon"
           fill="currentColor"
+          height="1rem"
           role="img"
+          style="--icon-size: 1rem;"
+          width="1rem"
           xmlns="http://www.w3.org/2000/svg"
         >
           <title
@@ -447,7 +453,10 @@ exports[`<TextField /> ErrorVariants story renders snapshot 1`] = `
         <svg
           class="icon field-note__icon"
           fill="currentColor"
+          height="1rem"
           role="img"
+          style="--icon-size: 1rem;"
+          width="1rem"
           xmlns="http://www.w3.org/2000/svg"
         >
           <title
@@ -539,7 +548,10 @@ exports[`<TextField /> ErrorVariants story renders snapshot 1`] = `
         <svg
           class="icon field-note__icon"
           fill="currentColor"
+          height="1rem"
           role="img"
+          style="--icon-size: 1rem;"
+          width="1rem"
           xmlns="http://www.w3.org/2000/svg"
         >
           <title
@@ -575,7 +587,10 @@ exports[`<TextField /> ErrorVariants story renders snapshot 1`] = `
         <svg
           class="icon field-note__icon"
           fill="currentColor"
+          height="1rem"
           role="img"
+          style="--icon-size: 1rem;"
+          width="1rem"
           xmlns="http://www.w3.org/2000/svg"
         >
           <title
@@ -1269,7 +1284,10 @@ exports[`<TextField /> OptionalIndicatorVariants story renders snapshot 1`] = `
         <svg
           class="icon field-note__icon"
           fill="currentColor"
+          height="1rem"
           role="img"
+          style="--icon-size: 1rem;"
+          width="1rem"
           xmlns="http://www.w3.org/2000/svg"
         >
           <title
@@ -1320,7 +1338,10 @@ exports[`<TextField /> OptionalIndicatorVariants story renders snapshot 1`] = `
         <svg
           class="icon field-note__icon"
           fill="currentColor"
+          height="1rem"
           role="img"
+          style="--icon-size: 1rem;"
+          width="1rem"
           xmlns="http://www.w3.org/2000/svg"
         >
           <title
@@ -1776,7 +1797,10 @@ exports[`<TextField /> RequiredIndicatorVariants story renders snapshot 1`] = `
         <svg
           class="icon field-note__icon"
           fill="currentColor"
+          height="1rem"
           role="img"
+          style="--icon-size: 1rem;"
+          width="1rem"
           xmlns="http://www.w3.org/2000/svg"
         >
           <title
@@ -1828,7 +1852,10 @@ exports[`<TextField /> RequiredIndicatorVariants story renders snapshot 1`] = `
         <svg
           class="icon field-note__icon"
           fill="currentColor"
+          height="1rem"
           role="img"
+          style="--icon-size: 1rem;"
+          width="1rem"
           xmlns="http://www.w3.org/2000/svg"
         >
           <title

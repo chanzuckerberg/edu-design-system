@@ -66,6 +66,7 @@ export const FieldNote = ({
           className={styles['field-note__icon']}
           name="dangerous"
           purpose="informative"
+          size="1rem"
           title="error"
         />
       )}
