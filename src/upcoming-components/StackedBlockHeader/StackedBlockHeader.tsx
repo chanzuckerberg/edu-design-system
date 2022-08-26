@@ -1,6 +1,4 @@
-import clsx from 'clsx';
 import React, { ReactNode } from 'react';
-import styles from '../StackedBlock/StackedBlock.module.css';
 export interface Props {
   /**
    * Child node(s) that can be nested inside component
@@ -26,13 +24,8 @@ export const StackedBlockHeader = ({
   className,
   ...other
 }: Props) => {
-  const componentClassName = clsx(
-    styles['stacked-block__header'],
-    className,
-    {},
-  );
   return (
-    <header className={componentClassName} {...other}>
+    <header className={className} {...other}>
       {children}
     </header>
   );

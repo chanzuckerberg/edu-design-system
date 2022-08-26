@@ -52,11 +52,11 @@ export const TextList = ({
 }: Props) => {
   const componentClassName = clsx(
     styles['text-list'],
-    className,
     size === 'sm' && styles['text-list--sm'],
     variant === 'inline' && styles['text-list--inline'],
     inverted && styles['text-list--inverted'],
     as === 'ol' && styles['text-list--ol'],
+    className,
   );
   if (as === 'ol') {
     return (

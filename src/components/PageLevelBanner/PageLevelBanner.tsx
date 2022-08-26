@@ -96,7 +96,6 @@ export const PageLevelBanner = ({
   const componentClassName = clsx(
     // Base styles
     styles['banner'],
-    className,
     // Variants
     variant === 'brand' && styles['banner--brand'],
     variant === 'error' && styles['banner--error'],
@@ -104,6 +103,7 @@ export const PageLevelBanner = ({
     variant === 'success' && styles['banner--success'],
     // Other options
     onDismiss && styles['banner--dismissable'],
+    className,
   );
 
   return (

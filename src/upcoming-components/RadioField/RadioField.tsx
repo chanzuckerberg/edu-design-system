@@ -161,11 +161,7 @@ export const RadioField = ({
         <ul className={styles['radio-field__list']}>{children}</ul>
       </FieldsetItems>
       {fieldNote && (
-        <FieldNote
-          className={styles['radio-field__note']}
-          id={ariaDescribedByVar}
-          isError={isError}
-        >
+        <FieldNote id={ariaDescribedByVar} isError={isError}>
           {fieldNote}
         </FieldNote>
       )}

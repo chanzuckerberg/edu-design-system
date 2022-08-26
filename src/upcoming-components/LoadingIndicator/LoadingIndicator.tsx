@@ -29,7 +29,7 @@ export const LoadingIndicator = ({
   size = '3rem',
   ...other
 }: Props) => {
-  const componentClassName = clsx(styles['loading-indicator'], className, {});
+  const componentClassName = clsx(styles['loading-indicator'], className);
   return (
     <div className={componentClassName} {...other}>
       <Icon

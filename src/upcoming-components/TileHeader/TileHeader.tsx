@@ -1,6 +1,4 @@
-import clsx from 'clsx';
 import React, { ReactNode } from 'react';
-import styles from '../Tile/Tile.module.css';
 
 export interface Props {
   /**
@@ -23,9 +21,8 @@ export interface Props {
  * TODO: update this comment with a description of the component.
  */
 export const TileHeader = ({ children, className, ...other }: Props) => {
-  const componentClassName = clsx(styles['tile__header'], className, {});
   return (
-    <header className={componentClassName} {...other}>
+    <header className={className} {...other}>
       {children}
     </header>
   );

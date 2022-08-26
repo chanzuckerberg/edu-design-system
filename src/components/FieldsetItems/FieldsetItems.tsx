@@ -30,7 +30,7 @@ export const FieldsetItems = ({
   as: Component = 'div',
   className,
 }: FieldsetItemsProps) => {
-  const componentClassName = clsx(className, styles['fieldset-items']);
+  const componentClassName = clsx(styles['fieldset-items'], className);
   // @ts-expect-error TODO: investigate error
   return <Component className={componentClassName}>{children}</Component>;
 };

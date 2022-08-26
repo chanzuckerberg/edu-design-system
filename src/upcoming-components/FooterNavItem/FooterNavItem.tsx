@@ -27,7 +27,7 @@ export interface Props {
  * TODO: update this comment with a description of the component.
  */
 export const FooterNavItem = ({ className, href, text, ...other }: Props) => {
-  const componentClassName = clsx(styles['footer-nav__item'], className, {});
+  const componentClassName = clsx(styles['footer-nav__item'], className);
   return (
     <li className={componentClassName} {...other}>
       <a className={styles['footer-nav__link']} href={href}>

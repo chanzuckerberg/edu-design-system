@@ -67,7 +67,6 @@ export const NotificationListItem = ({
     styles['notification-list__item'],
     isRead === true && styles['notification-list__is-read'],
     className,
-    {},
   );
 
   /**
@@ -78,7 +77,7 @@ export const NotificationListItem = ({
   return (
     <li className={componentClassName}>
       <div className={styles['notification-list__content']}>
-        <div className={styles['notification-list__title']}>
+        <div>
           <a className={styles['notification-list__link']} href={href}>
             <Heading size="body-sm">{title}</Heading>
           </a>

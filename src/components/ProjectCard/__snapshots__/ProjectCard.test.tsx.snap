@@ -2,7 +2,7 @@
 
 exports[`<ProjectCard /> Default story renders snapshot 1`] = `
 <article
-  class="card project-card card--horizontal card--raised"
+  class="card card--horizontal card--raised project-card"
 >
   <header
     class="card__header project-card__header"
@@ -19,7 +19,7 @@ exports[`<ProjectCard /> Default story renders snapshot 1`] = `
     class="card__body project-card__body"
   >
     <h3
-      class="project-card__title heading heading--size-body-sm heading--neutral-strong"
+      class="heading heading--size-body-sm heading--neutral-strong project-card__title"
     >
       Project card title
     </h3>
@@ -51,7 +51,7 @@ exports[`<ProjectCard /> Default story renders snapshot 1`] = `
       <button
         aria-expanded="false"
         aria-label="Open project dropdown"
-        class="clickable-style clickable-style--sm clickable-style--icon clickable-style--neutral button project-card__menu-button button--icon"
+        class="clickable-style clickable-style--sm clickable-style--icon clickable-style--neutral button button--icon project-card__menu-button"
         data-bootstrap-override="clickable-style-icon"
         type="button"
       >
@@ -174,7 +174,7 @@ exports[`<ProjectCard /> Default story renders snapshot 1`] = `
 
 exports[`<ProjectCard /> Draggable story renders snapshot 1`] = `
 <article
-  class="card project-card project-card--draggable card--horizontal card--raised"
+  class="card card--horizontal card--raised project-card project-card--draggable"
 >
   <header
     class="card__header project-card__header"
@@ -183,7 +183,7 @@ exports[`<ProjectCard /> Draggable story renders snapshot 1`] = `
     class="card__body project-card__body"
   >
     <h3
-      class="project-card__title heading heading--size-body-sm heading--neutral-strong"
+      class="heading heading--size-body-sm heading--neutral-strong project-card__title"
     >
       DragDropItem provides handle to the left
     </h3>
@@ -215,7 +215,7 @@ exports[`<ProjectCard /> Draggable story renders snapshot 1`] = `
       <button
         aria-expanded="false"
         aria-label="Open project dropdown"
-        class="clickable-style clickable-style--sm clickable-style--icon clickable-style--neutral button project-card__menu-button button--icon"
+        class="clickable-style clickable-style--sm clickable-style--icon clickable-style--neutral button button--icon project-card__menu-button"
         data-bootstrap-override="clickable-style-icon"
         type="button"
       >
@@ -338,7 +338,7 @@ exports[`<ProjectCard /> Draggable story renders snapshot 1`] = `
 
 exports[`<ProjectCard /> WithoutDropdown story renders snapshot 1`] = `
 <article
-  class="card project-card card--horizontal card--raised"
+  class="card card--horizontal card--raised project-card"
 >
   <header
     class="card__header project-card__header"
@@ -355,7 +355,7 @@ exports[`<ProjectCard /> WithoutDropdown story renders snapshot 1`] = `
     class="card__body project-card__body"
   >
     <h3
-      class="project-card__title heading heading--size-body-sm heading--neutral-strong"
+      class="heading heading--size-body-sm heading--neutral-strong project-card__title"
     >
       DragDropItem provides handle to the left
     </h3>
@@ -383,7 +383,7 @@ exports[`<ProjectCard /> WithoutDropdown story renders snapshot 1`] = `
 
 exports[`<ProjectCard /> WithoutMeta story renders snapshot 1`] = `
 <article
-  class="card project-card card--horizontal card--raised"
+  class="card card--horizontal card--raised project-card"
 >
   <header
     class="card__header project-card__header"
@@ -400,7 +400,7 @@ exports[`<ProjectCard /> WithoutMeta story renders snapshot 1`] = `
     class="card__body project-card__body"
   >
     <h3
-      class="project-card__title heading heading--size-body-sm heading--neutral-strong"
+      class="heading heading--size-body-sm heading--neutral-strong project-card__title"
     >
       Project card title
     </h3>
@@ -414,7 +414,7 @@ exports[`<ProjectCard /> WithoutMeta story renders snapshot 1`] = `
       <button
         aria-expanded="false"
         aria-label="Open project dropdown"
-        class="clickable-style clickable-style--sm clickable-style--icon clickable-style--neutral button project-card__menu-button button--icon"
+        class="clickable-style clickable-style--sm clickable-style--icon clickable-style--neutral button button--icon project-card__menu-button"
         data-bootstrap-override="clickable-style-icon"
         type="button"
       >

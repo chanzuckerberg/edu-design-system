@@ -35,8 +35,8 @@ export const NavContainer = ({
 }: Props) => {
   const componentClassName = clsx(
     styles['nav-container'],
-    className,
     isActive && [styles['is-active']],
+    className,
   );
 
   return (

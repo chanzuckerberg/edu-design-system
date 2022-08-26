@@ -25,10 +25,10 @@ export interface Props {
 export const SkeletonBar = ({ className, size, ...other }: Props) => {
   const componentClassName = clsx(
     styles['skeleton-bar'],
-    className,
     size === 'sm' && styles['skeleton-bar--sm'],
     size === 'lg' && styles['skeleton-bar--lg'],
     size === 'xl' && styles['skeleton-bar--xl'],
+    className,
   );
 
   return <div className={componentClassName} {...other}></div>;

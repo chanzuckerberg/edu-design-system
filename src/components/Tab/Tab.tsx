@@ -1,6 +1,4 @@
-import clsx from 'clsx';
 import React, { ReactNode } from 'react';
-import styles from './Tab.module.css';
 
 export interface Props {
   /**
@@ -46,12 +44,11 @@ export const Tab = ({
   title,
   ...other
 }: Props) => {
-  const componentClassName = clsx(styles['tabs__panel'], className, {});
   return (
     <div
       aria-hidden={false}
       aria-labelledby={ariaLabelledBy}
-      className={componentClassName}
+      className={className}
       id={id}
       role="tabpanel"
       {...other}

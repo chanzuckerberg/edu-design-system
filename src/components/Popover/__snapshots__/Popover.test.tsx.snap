@@ -44,9 +44,7 @@ exports[`<Popover /> BottomLeft story renders snapshot 1`] = `
             >
               Notifications (4)
             </h3>
-            <span
-              class="popover__header-title-after"
-            >
+            <span>
               <button
                 class="clickable-style clickable-style--sm clickable-style--icon clickable-style--brand button button--icon"
                 data-bootstrap-override="clickable-style-icon"
@@ -57,9 +55,7 @@ exports[`<Popover /> BottomLeft story renders snapshot 1`] = `
             </span>
           </div>
         </header>
-        <div
-          class="popover__body"
-        >
+        <div>
           <ul
             class="notification-list"
           >
@@ -69,9 +65,7 @@ exports[`<Popover /> BottomLeft story renders snapshot 1`] = `
               <div
                 class="notification-list__content"
               >
-                <div
-                  class="notification-list__title"
-                >
+                <div>
                   <a
                     class="notification-list__link"
                     href="#"
@@ -98,9 +92,7 @@ exports[`<Popover /> BottomLeft story renders snapshot 1`] = `
               <div
                 class="notification-list__content"
               >
-                <div
-                  class="notification-list__title"
-                >
+                <div>
                   <a
                     class="notification-list__link"
                     href="#"
@@ -127,9 +119,7 @@ exports[`<Popover /> BottomLeft story renders snapshot 1`] = `
               <div
                 class="notification-list__content"
               >
-                <div
-                  class="notification-list__title"
-                >
+                <div>
                   <a
                     class="notification-list__link"
                     href="#"
@@ -156,9 +146,7 @@ exports[`<Popover /> BottomLeft story renders snapshot 1`] = `
               <div
                 class="notification-list__content"
               >
-                <div
-                  class="notification-list__title"
-                >
+                <div>
                   <a
                     class="notification-list__link"
                     href="#"
@@ -203,9 +191,7 @@ exports[`<Popover /> BottomLeft story renders snapshot 1`] = `
               <div
                 class="notification-list__content"
               >
-                <div
-                  class="notification-list__title"
-                >
+                <div>
                   <a
                     class="notification-list__link"
                     href="#"
@@ -232,9 +218,7 @@ exports[`<Popover /> BottomLeft story renders snapshot 1`] = `
               <div
                 class="notification-list__content"
               >
-                <div
-                  class="notification-list__title"
-                >
+                <div>
                   <a
                     class="notification-list__link"
                     href="#"
@@ -315,9 +299,7 @@ exports[`<Popover /> BottomRight story renders snapshot 1`] = `
             >
               Notifications (4)
             </h3>
-            <span
-              class="popover__header-title-after"
-            >
+            <span>
               <button
                 class="clickable-style clickable-style--sm clickable-style--icon clickable-style--brand button button--icon"
                 data-bootstrap-override="clickable-style-icon"
@@ -328,9 +310,7 @@ exports[`<Popover /> BottomRight story renders snapshot 1`] = `
             </span>
           </div>
         </header>
-        <div
-          class="popover__body"
-        >
+        <div>
           <ul
             class="notification-list"
           >
@@ -340,9 +320,7 @@ exports[`<Popover /> BottomRight story renders snapshot 1`] = `
               <div
                 class="notification-list__content"
               >
-                <div
-                  class="notification-list__title"
-                >
+                <div>
                   <a
                     class="notification-list__link"
                     href="#"
@@ -369,9 +347,7 @@ exports[`<Popover /> BottomRight story renders snapshot 1`] = `
               <div
                 class="notification-list__content"
               >
-                <div
-                  class="notification-list__title"
-                >
+                <div>
                   <a
                     class="notification-list__link"
                     href="#"
@@ -398,9 +374,7 @@ exports[`<Popover /> BottomRight story renders snapshot 1`] = `
               <div
                 class="notification-list__content"
               >
-                <div
-                  class="notification-list__title"
-                >
+                <div>
                   <a
                     class="notification-list__link"
                     href="#"
@@ -427,9 +401,7 @@ exports[`<Popover /> BottomRight story renders snapshot 1`] = `
               <div
                 class="notification-list__content"
               >
-                <div
-                  class="notification-list__title"
-                >
+                <div>
                   <a
                     class="notification-list__link"
                     href="#"
@@ -474,9 +446,7 @@ exports[`<Popover /> BottomRight story renders snapshot 1`] = `
               <div
                 class="notification-list__content"
               >
-                <div
-                  class="notification-list__title"
-                >
+                <div>
                   <a
                     class="notification-list__link"
                     href="#"
@@ -503,9 +473,7 @@ exports[`<Popover /> BottomRight story renders snapshot 1`] = `
               <div
                 class="notification-list__content"
               >
-                <div
-                  class="notification-list__title"
-                >
+                <div>
                   <a
                     class="notification-list__link"
                     href="#"
@@ -586,9 +554,7 @@ exports[`<Popover /> Default story renders snapshot 1`] = `
             >
               Notifications (4)
             </h3>
-            <span
-              class="popover__header-title-after"
-            >
+            <span>
               <button
                 class="clickable-style clickable-style--sm clickable-style--icon clickable-style--brand button button--icon"
                 data-bootstrap-override="clickable-style-icon"
@@ -599,9 +565,7 @@ exports[`<Popover /> Default story renders snapshot 1`] = `
             </span>
           </div>
         </header>
-        <div
-          class="popover__body"
-        >
+        <div>
           <ul
             class="notification-list"
           >
@@ -611,9 +575,7 @@ exports[`<Popover /> Default story renders snapshot 1`] = `
               <div
                 class="notification-list__content"
               >
-                <div
-                  class="notification-list__title"
-                >
+                <div>
                   <a
                     class="notification-list__link"
                     href="#"
@@ -640,9 +602,7 @@ exports[`<Popover /> Default story renders snapshot 1`] = `
               <div
                 class="notification-list__content"
               >
-                <div
-                  class="notification-list__title"
-                >
+                <div>
                   <a
                     class="notification-list__link"
                     href="#"
@@ -669,9 +629,7 @@ exports[`<Popover /> Default story renders snapshot 1`] = `
               <div
                 class="notification-list__content"
               >
-                <div
-                  class="notification-list__title"
-                >
+                <div>
                   <a
                     class="notification-list__link"
                     href="#"
@@ -698,9 +656,7 @@ exports[`<Popover /> Default story renders snapshot 1`] = `
               <div
                 class="notification-list__content"
               >
-                <div
-                  class="notification-list__title"
-                >
+                <div>
                   <a
                     class="notification-list__link"
                     href="#"
@@ -745,9 +701,7 @@ exports[`<Popover /> Default story renders snapshot 1`] = `
               <div
                 class="notification-list__content"
               >
-                <div
-                  class="notification-list__title"
-                >
+                <div>
                   <a
                     class="notification-list__link"
                     href="#"
@@ -774,9 +728,7 @@ exports[`<Popover /> Default story renders snapshot 1`] = `
               <div
                 class="notification-list__content"
               >
-                <div
-                  class="notification-list__title"
-                >
+                <div>
                   <a
                     class="notification-list__link"
                     href="#"
@@ -857,9 +809,7 @@ exports[`<Popover /> TopLeft story renders snapshot 1`] = `
             >
               Notifications (4)
             </h3>
-            <span
-              class="popover__header-title-after"
-            >
+            <span>
               <button
                 class="clickable-style clickable-style--sm clickable-style--icon clickable-style--brand button button--icon"
                 data-bootstrap-override="clickable-style-icon"
@@ -870,9 +820,7 @@ exports[`<Popover /> TopLeft story renders snapshot 1`] = `
             </span>
           </div>
         </header>
-        <div
-          class="popover__body"
-        >
+        <div>
           <ul
             class="notification-list"
           >
@@ -882,9 +830,7 @@ exports[`<Popover /> TopLeft story renders snapshot 1`] = `
               <div
                 class="notification-list__content"
               >
-                <div
-                  class="notification-list__title"
-                >
+                <div>
                   <a
                     class="notification-list__link"
                     href="#"
@@ -911,9 +857,7 @@ exports[`<Popover /> TopLeft story renders snapshot 1`] = `
               <div
                 class="notification-list__content"
               >
-                <div
-                  class="notification-list__title"
-                >
+                <div>
                   <a
                     class="notification-list__link"
                     href="#"
@@ -940,9 +884,7 @@ exports[`<Popover /> TopLeft story renders snapshot 1`] = `
               <div
                 class="notification-list__content"
               >
-                <div
-                  class="notification-list__title"
-                >
+                <div>
                   <a
                     class="notification-list__link"
                     href="#"
@@ -969,9 +911,7 @@ exports[`<Popover /> TopLeft story renders snapshot 1`] = `
               <div
                 class="notification-list__content"
               >
-                <div
-                  class="notification-list__title"
-                >
+                <div>
                   <a
                     class="notification-list__link"
                     href="#"
@@ -1016,9 +956,7 @@ exports[`<Popover /> TopLeft story renders snapshot 1`] = `
               <div
                 class="notification-list__content"
               >
-                <div
-                  class="notification-list__title"
-                >
+                <div>
                   <a
                     class="notification-list__link"
                     href="#"
@@ -1045,9 +983,7 @@ exports[`<Popover /> TopLeft story renders snapshot 1`] = `
               <div
                 class="notification-list__content"
               >
-                <div
-                  class="notification-list__title"
-                >
+                <div>
                   <a
                     class="notification-list__link"
                     href="#"

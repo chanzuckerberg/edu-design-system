@@ -87,7 +87,7 @@ exports[`<TextField /> Error story renders snapshot 1`] = `
   </div>
   <div
     aria-live="assertive"
-    class="field-note text-field__note field-note--error"
+    class="field-note field-note--error text-field__note"
     id="6"
   >
     <svg
@@ -115,7 +115,7 @@ exports[`<TextField /> HideLabel story renders snapshot 1`] = `
   class="text-field"
 >
   <label
-    class="label text-field__label u-is-vishidden"
+    class="label u-is-vishidden text-field__label"
     for="12"
   >
     Label
@@ -183,7 +183,7 @@ exports[`<TextField /> Inverted story renders snapshot 1`] = `
     class="text-field text-field--inverted"
   >
     <label
-      class="label text-field__label label--inverted"
+      class="label label--inverted text-field__label"
       for="3"
     >
       Label
@@ -204,7 +204,7 @@ exports[`<TextField /> Inverted story renders snapshot 1`] = `
     </div>
     <div
       aria-live="assertive"
-      class="field-note text-field__note field-note--inverted"
+      class="field-note field-note--inverted text-field__note"
       id="4"
     >
       This is a fieldnote.

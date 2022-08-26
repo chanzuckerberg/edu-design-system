@@ -106,11 +106,11 @@ export const ShowHide = ({
 
   const componentClassName = clsx(
     styles['show-hide'],
-    className,
     align === 'right' && styles['show-hide--align-right'],
     align === 'top-right' && styles['show-hide--align-top-right'],
     align === 'top-left' && styles['show-hide--align-top-left'],
     isActive && styles['eds-is-active'],
+    className,
   );
 
   /**

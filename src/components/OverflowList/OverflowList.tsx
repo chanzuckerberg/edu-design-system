@@ -118,9 +118,9 @@ export const OverflowList = ({ className, children, ...other }: Props) => {
 
   const componentClassName = clsx(
     styles['overflow-list'],
-    className,
     isStart && styles['eds-is-overflow-left'],
     isEnd && styles['eds-is-overflow-right'],
+    className,
   );
   return (
     <div className={componentClassName} ref={overflowListRef} {...other}>

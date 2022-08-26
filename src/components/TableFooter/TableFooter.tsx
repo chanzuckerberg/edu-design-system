@@ -1,6 +1,4 @@
-import clsx from 'clsx';
 import React, { ReactNode } from 'react';
-import styles from '../Table/Table.module.css';
 
 export interface Props {
   /**
@@ -23,9 +21,8 @@ export interface Props {
  * HTML `tfoot` of the `Table` component
  */
 export const TableFooter = ({ children, className, ...other }: Props) => {
-  const componentClassName = clsx(styles['table__footer'], className, {});
   return (
-    <tfoot className={componentClassName} {...other}>
+    <tfoot className={className} {...other}>
       {children}
     </tfoot>
   );
