@@ -192,9 +192,9 @@ For example:
 \*------------------------------------*/
 
 /**
- * Button
+ * ButtonGroup
  */
-.button {
+.button-group {
 }
 
 /**
@@ -360,6 +360,38 @@ export interface Props {
 ```
 
 All component props must be defined with appropriate [TypeScript type](https://www.typescriptlang.org/docs/handbook/basic-types.html) applied. Each prop must contain a comment above the prop declaration to document the prop's function. These comments and prop declarations are automatically converted into prop documentation in Storybook. As a general guideline, try to organize component prop definitions alphabetically.
+
+### Component comments
+
+All components should be documented with a comment directly before the component declaration. (It's important that there are no spaces between the comment and the component so that the comment will appear in storybook.)
+
+The comment should begin with an import example, include a general description of the component, possibly note behavior that may not be obvious to developers (so they don't have to dig through the code to understand what it does), and end with example usage.
+
+Example:
+
+````
+/**
+ * ```ts
+ * import {ButtonGroup} from "@chanzuckerberg/eds";
+ * ```
+ *
+ * A container for buttons grouped together horizontally or vertically.
+ *
+ * Example usage:
+ *
+ * ```ts
+ * <ButtonGroup
+ *   className={componentClassName}
+ *   spacing='1x'
+ *   orientation='vertical'
+ * >
+ *   <Button>Left button</Button>
+ *   <Button>Right button</Button>
+ * </ButtonGroup>
+ * ```
+ */
+ export const ButtonGroup = ({
+````
 
 ### Export module
 
