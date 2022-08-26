@@ -5,15 +5,19 @@
 \*------------------------------------*/
 
 /**
- * Textfield label
- * 1) Consists of a label, form control, and an optional note about the field.
+ * Wraps the Label and the optional/required indicator.
  */
-.text-field {
-  position: relative;
-
-  .text-field--inverted & {
-    color: var(--eds-theme-color-text-neutral-default-inverse);
-  }
+.text-field__overline {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--eds-size-half);
+  color: var(--eds-theme-color-form-label);
+}
+.text-field__overline--no-label {
+  justify-content: flex-end;
+}
+.text-field__overline--disabled {
+  color: var(--eds-theme-color-text-disabled);
 }
 
 /**
@@ -22,15 +26,6 @@
 .text-field__body {
   position: relative;
   margin-bottom: var(--eds-size-half);
-}
-
-/**
- * Text field label after
- * 1) Slot after the label that can be used to place components like a tooltip
- */
-.text-field-after {
-  display: inherit;
-  margin-left: var(--eds-size-1);
 }
 
 /**

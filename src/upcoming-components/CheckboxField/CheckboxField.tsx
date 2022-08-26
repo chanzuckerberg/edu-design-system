@@ -114,7 +114,6 @@ export const CheckboxField = ({
         <FieldNote
           className={styles['checkbox-field__note']}
           id={ariaDescribedByVar}
-          inverted={inverted}
           isError={isError}
         >
           {fieldNote}

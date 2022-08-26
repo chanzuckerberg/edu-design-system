@@ -10,11 +10,6 @@
  */
 .label {
   @mixin labelStyles;
-  margin-bottom: var(--eds-size-1);
-}
-
-.label--inverted {
-  color: var(--eds-theme-color-text-neutral-default-inverse);
 }
 
 /**

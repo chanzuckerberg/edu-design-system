@@ -173,7 +173,6 @@ export const TextareaField = ({
         className={styles['textarea-field__label']}
         hideLabel={hideLabel}
         htmlFor={idVar}
-        inverted={inverted}
         optionalLabel={optionalLabel}
         required={required}
         requiredLabel={requiredLabel}

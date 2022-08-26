@@ -13,6 +13,10 @@ export interface Props {
    */
   className?: string;
   /**
+   * Toggles disabled styling of the field note.
+   */
+  disabled?: boolean;
+  /**
    * Name of the fieldnote icon
    */
   iconName?: IconName;
@@ -36,11 +40,13 @@ export interface Props {
  * ```ts
  * import {FieldNote} from "@chanzuckerberg/eds";
  * ```
+ *
+ * Fieldnote component wraps text to describe other components.
  */
 export const FieldNote = ({
   className,
+  disabled,
   id,
-  iconName,
   isError,
   inverted,
   children,
@@ -48,21 +54,17 @@ export const FieldNote = ({
 }: Props) => {
   const componentClassName = clsx(
     styles['field-note'],
-    className,
+    disabled && styles['field-note--disabled'],
     inverted && styles['field-note--inverted'],
     isError && styles['field-note--error'],
+    className,
   );
   return (
-    <div
-      aria-live="assertive"
-      className={componentClassName}
-      id={id}
-      {...other}
-    >
+    <div className={componentClassName} id={id} {...other}>
       {isError && (
         <Icon
           className={styles['field-note__icon']}
-          name={isError ? 'cancel' : undefined}
+          name="dangerous"
           purpose="informative"
           title="error"
         />

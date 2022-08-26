@@ -2,7 +2,6 @@
 
 exports[`<FieldNote /> Default story renders snapshot 1`] = `
 <div
-  aria-live="assertive"
   class="field-note"
   id="field-1"
 >
@@ -12,7 +11,6 @@ exports[`<FieldNote /> Default story renders snapshot 1`] = `
 
 exports[`<FieldNote /> WithText story renders snapshot 1`] = `
 <div
-  aria-live="assertive"
   class="field-note"
   id="field-1"
 >
