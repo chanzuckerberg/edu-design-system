@@ -854,16 +854,16 @@ exports[`Modal TabletBrand story renders snapshot 1`] = `
 
 exports[`Modal WithLongText story renders snapshot 1`] = `
 <div
-  aria-labelledby="headlessui-dialog-title-12"
+  aria-labelledby="headlessui-dialog-title-8"
   aria-modal="true"
   class="modal"
-  id="headlessui-dialog-10"
+  id="headlessui-dialog-6"
   role="dialog"
 >
   <div
     aria-hidden="true"
     class="modal__overlay"
-    id="headlessui-dialog-overlay-11"
+    id="headlessui-dialog-overlay-7"
   />
   <div
     class="modal__content modal__content--md modal__content--lg"
@@ -896,7 +896,7 @@ exports[`Modal WithLongText story renders snapshot 1`] = `
     >
       <h2
         class="heading heading--size-headline-md"
-        id="headlessui-dialog-title-12"
+        id="headlessui-dialog-title-8"
       >
         Modal Title
       </h2>
@@ -952,16 +952,16 @@ exports[`Modal WithLongText story renders snapshot 1`] = `
 
 exports[`Modal WithLongTextScrollable story renders snapshot 1`] = `
 <div
-  aria-labelledby="headlessui-dialog-title-16"
+  aria-labelledby="headlessui-dialog-title-12"
   aria-modal="true"
   class="modal"
-  id="headlessui-dialog-14"
+  id="headlessui-dialog-10"
   role="dialog"
 >
   <div
     aria-hidden="true"
     class="modal__overlay"
-    id="headlessui-dialog-overlay-15"
+    id="headlessui-dialog-overlay-11"
   />
   <div
     class="modal__content modal__content--scrollable modal__content--md modal__content--lg"
@@ -994,7 +994,7 @@ exports[`Modal WithLongTextScrollable story renders snapshot 1`] = `
     >
       <h2
         class="heading heading--size-headline-md"
-        id="headlessui-dialog-title-16"
+        id="headlessui-dialog-title-12"
       >
         Modal Title
       </h2>
@@ -1210,76 +1210,18 @@ exports[`Modal WithStepper story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`Modal WithoutCloseButton story renders snapshot 1`] = `
-<div
-  aria-labelledby="headlessui-dialog-title-8"
-  aria-modal="true"
-  class="modal"
-  id="headlessui-dialog-6"
-  role="dialog"
->
-  <div
-    aria-hidden="true"
-    class="modal__overlay"
-    id="headlessui-dialog-overlay-7"
-  />
-  <div
-    class="modal__content modal__content--md modal__content--lg"
-  >
-    <div
-      class="modal-header"
-    >
-      <h2
-        class="heading heading--size-headline-md"
-        id="headlessui-dialog-title-8"
-      >
-        Modal Title
-      </h2>
-    </div>
-    <div
-      class="modal-body"
-    >
-      Modal content.
-    </div>
-    <div
-      class="modal-footer"
-    >
-      <div
-        class="footer__button-group button-group button-group--spacing-1x"
-      >
-        <button
-          class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
-          data-bootstrap-override="clickable-style-secondary"
-          tabindex="0"
-          type="button"
-        >
-          Button 1
-        </button>
-        <button
-          class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
-          data-bootstrap-override="clickable-style-primary"
-          type="button"
-        >
-          Button 2
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
 exports[`Modal WithoutHeaderAndFooter story renders snapshot 1`] = `
 <div
   aria-label="The Modal Amazing Modal You've Ever Seen"
   aria-modal="true"
   class="modal"
-  id="headlessui-dialog-18"
+  id="headlessui-dialog-14"
   role="dialog"
 >
   <div
     aria-hidden="true"
     class="modal__overlay"
-    id="headlessui-dialog-overlay-19"
+    id="headlessui-dialog-overlay-15"
   />
   <div
     class="modal__content modal__content--scrollable modal__content--md modal__content--lg"

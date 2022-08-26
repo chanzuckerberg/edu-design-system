@@ -5,7 +5,7 @@ exports[`<StackedBlock /> Default story renders snapshot 1`] = `
   class="stacked-block"
 >
   <a
-    class="clickable-style clickable-style--link clickable-style--brand"
+    class="clickable-style clickable-style--link clickable-style--brand link--link"
     data-bootstrap-override="clickable-style-link"
   >
     This is a link

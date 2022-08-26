@@ -92,11 +92,10 @@
   .radio-field--inverted & {
     color: var(--eds-theme-color-text-neutral-default-inverse);
   }
-
-  .radio-field.eds-is-disabled & {
-    color: var(--eds-theme-color-text-disabled);
-    cursor: not-allowed;
-  }
+}
+.radio-field--disabled > .radio-field__item-label {
+  color: var(--eds-theme-color-text-disabled);
+  cursor: not-allowed;
 }
 
 .radio-field__item-after {

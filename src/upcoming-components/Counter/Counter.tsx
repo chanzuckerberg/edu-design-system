@@ -154,8 +154,7 @@ export const Counter = ({
 
   const componentClassName = clsx(
     styles['counter'],
-    isError && styles['eds-is-error'],
-    disabled && styles['eds-is-disabled'],
+    isError && styles['counter--error'],
     className,
   );
   return (

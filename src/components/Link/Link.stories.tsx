@@ -347,3 +347,24 @@ export const IconError: StoryObj<Args> = {
     variant: 'icon',
   },
 };
+
+export const LinkInParagraphContext = {
+  render: () => (
+    <div>
+      Lorem ipsum dolor sit amet,{' '}
+      <Link href={getRandomUrl()}>consectetur adipiscing elit</Link>. Morbi
+      porta at ante quis molestie. Nam scelerisque id diam at iaculis. Nullam
+      sit amet iaculis erat. Nulla id tellus ante.{' '}
+      <Link href={getRandomUrl()}>
+        Aliquam pellentesque ipsum sagittis, commodo neque at, ornare est.
+        Maecenas a malesuada sem, vitae euismod erat. Nullam molestie nunc non
+        dui dignissim fermentum.
+      </Link>{' '}
+      Aliquam id volutpat nulla, sed auctor orci. Fusce cursus leo nisi. Fusce
+      vehicula vitae nisl nec ultricies. Cras ut enim nec magna semper egestas.
+      Sed sed quam id nisl bibendum convallis. Proin suscipit, odio{' '}
+      <Link href={getRandomUrl()}>vel pulvinar</Link> euismod, risus eros
+      ullamcorper lectus, non blandit nulla dui eget massa.
+    </div>
+  ),
+};

@@ -75,9 +75,9 @@ export const GlobalHeader = ({
   const toggleMenu = () => {
     setisActive(!isActive);
     if (isActive) {
-      document.body.classList.remove('eds-is-disabled');
+      document.body.classList.remove('body--disabled');
     } else {
-      document.body.classList.add('eds-is-disabled');
+      document.body.classList.add('body--disabled');
     }
   };
 
