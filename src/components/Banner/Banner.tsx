@@ -126,7 +126,6 @@ export const Banner = ({
   const componentClassName = clsx(
     // Base styles
     styles['banner'],
-    className,
     // Variants
     variant === 'neutral' && styles['banner--neutral'],
     variant === 'brand' && styles['banner--brand'],
@@ -137,6 +136,7 @@ export const Banner = ({
     isHorizontal && styles['banner--horizontal'],
     onDismiss && styles['banner--dismissable'],
     isFlat && styles['banner--flat'],
+    className,
   );
 
   const variantComputed = variant === 'neutral' ? 'neutral-strong' : variant;

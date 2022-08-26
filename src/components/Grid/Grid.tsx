@@ -56,9 +56,9 @@ export const Grid = ({
 }: Props) => {
   const componentClassName = clsx(
     styles['grid'],
-    className,
     variant && styles[`grid--${variant}`],
     gap === 'sm' && styles['grid--gap-sm'],
+    className,
   );
 
   return (

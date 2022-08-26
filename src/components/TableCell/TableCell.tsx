@@ -79,13 +79,13 @@ export const TableCell = ({
 }: Props) => {
   const componentClassName = clsx(
     styles['table__cell'],
-    className,
     align === 'left' && styles['table__cell--align-left'],
     align === 'insetLeft' && styles['table__cell--align-inset-left'],
     align === 'right' && styles['table__cell--align-right'],
     align === 'center' && styles['table__cell--align-center'],
     verticalAlign === 'center' && styles['table__cell--valign-center'],
     wrap && styles['table__cell--wrap'],
+    className,
   );
 
   const TagName = as;

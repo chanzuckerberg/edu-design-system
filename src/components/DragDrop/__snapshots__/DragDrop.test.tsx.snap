@@ -15,9 +15,7 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
       <div
         class="drag-drop__container"
       >
-        <header
-          class="drag-drop-container__header"
-        >
+        <header>
           <div
             class="toolbar"
           >
@@ -63,7 +61,7 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
               </svg>
             </div>
             <article
-              class="card example-card card--raised"
+              class="card card--raised example-card"
               number="1"
             >
               <div
@@ -103,7 +101,7 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
               </svg>
             </div>
             <article
-              class="card example-card card--raised"
+              class="card card--raised example-card"
               number="2"
             >
               <div
@@ -143,7 +141,7 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
               </svg>
             </div>
             <article
-              class="card example-card card--raised"
+              class="card card--raised example-card"
               number="3"
             >
               <div
@@ -183,7 +181,7 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
               </svg>
             </div>
             <article
-              class="card example-card card--raised"
+              class="card card--raised example-card"
               number="4"
             >
               <div
@@ -223,7 +221,7 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
               </svg>
             </div>
             <article
-              class="card example-card card--raised"
+              class="card card--raised example-card"
               number="5"
             >
               <div
@@ -238,9 +236,7 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
       <div
         class="drag-drop__container drag-drop__container--empty"
       >
-        <header
-          class="drag-drop-container__header"
-        >
+        <header>
           <div
             class="toolbar"
           >
@@ -473,9 +469,7 @@ exports[`<DragDrop /> HoveredHandle story renders snapshot 1`] = `
       <div
         class="drag-drop__container"
       >
-        <header
-          class="drag-drop-container__header"
-        >
+        <header>
           <div
             class="toolbar"
           >
@@ -521,7 +515,7 @@ exports[`<DragDrop /> HoveredHandle story renders snapshot 1`] = `
               </svg>
             </div>
             <article
-              class="card example-card card--raised"
+              class="card card--raised example-card"
               number="1"
             >
               <div
@@ -561,7 +555,7 @@ exports[`<DragDrop /> HoveredHandle story renders snapshot 1`] = `
               </svg>
             </div>
             <article
-              class="card example-card card--raised"
+              class="card card--raised example-card"
               number="2"
             >
               <div
@@ -601,7 +595,7 @@ exports[`<DragDrop /> HoveredHandle story renders snapshot 1`] = `
               </svg>
             </div>
             <article
-              class="card example-card card--raised"
+              class="card card--raised example-card"
               number="3"
             >
               <div
@@ -641,7 +635,7 @@ exports[`<DragDrop /> HoveredHandle story renders snapshot 1`] = `
               </svg>
             </div>
             <article
-              class="card example-card card--raised"
+              class="card card--raised example-card"
               number="4"
             >
               <div
@@ -681,7 +675,7 @@ exports[`<DragDrop /> HoveredHandle story renders snapshot 1`] = `
               </svg>
             </div>
             <article
-              class="card example-card card--raised"
+              class="card card--raised example-card"
               number="5"
             >
               <div
@@ -696,9 +690,7 @@ exports[`<DragDrop /> HoveredHandle story renders snapshot 1`] = `
       <div
         class="drag-drop__container drag-drop__container--empty"
       >
-        <header
-          class="drag-drop-container__header"
-        >
+        <header>
           <div
             class="toolbar"
           >

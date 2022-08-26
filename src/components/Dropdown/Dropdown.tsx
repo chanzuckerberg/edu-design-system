@@ -282,8 +282,8 @@ export function Dropdown(props: DropdownProps) {
 
   const componentClassName = clsx(
     styles['dropdown'],
-    className,
     compact && styles['dropdown--compact'],
+    className,
   );
   const sharedProps = {
     className: componentClassName,

@@ -49,8 +49,8 @@ export const Feature = ({
 }: Props) => {
   const componentClassName = clsx(
     styles['feature'],
-    className,
     inverted && styles['feature--inverted'],
+    className,
   );
   return (
     <div className={componentClassName} {...other}>

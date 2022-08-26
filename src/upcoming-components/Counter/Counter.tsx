@@ -207,11 +207,7 @@ export const Counter = ({
         </Button>
       </div>
       {fieldNote && (
-        <FieldNote
-          className={styles['counter-field__note']}
-          id={ariaDescribedByVar}
-          isError={isError}
-        >
+        <FieldNote id={ariaDescribedByVar} isError={isError}>
           {fieldNote}
         </FieldNote>
       )}

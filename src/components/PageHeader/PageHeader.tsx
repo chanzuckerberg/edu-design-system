@@ -89,9 +89,9 @@ export const PageHeader = ({
 }: Props) => {
   const componentClassName = clsx(
     styles['page-header'],
-    className,
     align === 'center' && styles['page-header--center'],
     orientation === '2up' && styles['page-header--2up'],
+    className,
   );
 
   return (

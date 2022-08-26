@@ -72,7 +72,6 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     const componentClassName = clsx(
       // Base styles
       styles['button'],
-      className,
       // Variants
       variant === 'primary' && styles['button--primary'],
       variant === 'secondary' && styles['button--secondary'],
@@ -81,6 +80,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       // Other options
       disabled && styles['button--disabled'],
       loading && styles['eds-is-loading'],
+      className,
     );
 
     return (

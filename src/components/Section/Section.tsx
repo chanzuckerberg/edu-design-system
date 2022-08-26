@@ -76,8 +76,8 @@ export const Section = ({
 }: Props) => {
   const componentClassName = clsx(
     styles['section'],
-    className,
     align === 'center' && styles['section--center'],
+    className,
   );
 
   return (

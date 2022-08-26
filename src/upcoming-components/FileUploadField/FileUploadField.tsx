@@ -360,9 +360,7 @@ export const FileUploadField = ({
             value=""
             {...other}
           />
-          <div className={styles['file-upload-field__instructions']}>
-            {dragAndDropText}
-          </div>
+          <div>{dragAndDropText}</div>
         </div>
       </div>
 

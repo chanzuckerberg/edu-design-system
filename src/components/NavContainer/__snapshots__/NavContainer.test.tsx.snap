@@ -36,9 +36,7 @@ exports[`<NavContainer /> Default story renders snapshot 1`] = `
                 xlink:href="test-file-stub#undefined"
               />
             </svg>
-            <span
-              class="primary-nav__text"
-            >
+            <span>
               Nav Item
             </span>
           </a>
@@ -63,9 +61,7 @@ exports[`<NavContainer /> Default story renders snapshot 1`] = `
                 xlink:href="test-file-stub#undefined"
               />
             </svg>
-            <span
-              class="primary-nav__text"
-            >
+            <span>
               Nav Item
             </span>
           </a>
@@ -90,9 +86,7 @@ exports[`<NavContainer /> Default story renders snapshot 1`] = `
                 xlink:href="test-file-stub#undefined"
               />
             </svg>
-            <span
-              class="primary-nav__text"
-            >
+            <span>
               Nav Item
             </span>
           </a>

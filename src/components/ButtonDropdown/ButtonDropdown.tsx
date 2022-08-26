@@ -188,11 +188,11 @@ export const ButtonDropdown = ({
 
   const componentClassName = clsx(
     styles['button-dropdown'],
-    className,
     isActiveVar && styles['eds-is-active'],
     position === 'top-left' && styles['button-dropdown--top-left'],
     position === 'top-right' && styles['button-dropdown--top-right'],
     position === 'bottom-right' && styles['button-dropdown--bottom-right'],
+    className,
   );
   return (
     <div

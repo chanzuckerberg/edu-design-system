@@ -115,8 +115,8 @@ export const CheckboxFieldItem = ({
 
   const componentClassName = clsx(
     'checkbox-field__item',
-    className,
     inverted && styles['checkbox-field__item--inverted'],
+    className,
   );
   return (
     <li className={componentClassName}>

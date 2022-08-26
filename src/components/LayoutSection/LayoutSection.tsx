@@ -38,9 +38,9 @@ export const LayoutSection = ({
 }: Props) => {
   const componentClassName = clsx(
     styles['layout__section'],
-    className,
     region === 'main' && styles['layout__section--main'],
     region === 'sidebar' && styles['layout__section--sidebar'],
+    className,
   );
 
   return (

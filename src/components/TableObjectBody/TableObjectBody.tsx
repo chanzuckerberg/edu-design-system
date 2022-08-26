@@ -119,10 +119,10 @@ export const TableObjectBody = ({
 
   const componentClassName = clsx(
     styles['table-object__body'],
-    className,
     behavior === 'overflow' && styles['table-object__body--overflow'],
     isStart && styles['eds-is-overflow-left'],
     isEnd && styles['eds-is-overflow-right'],
+    className,
   );
   return (
     <div className={componentClassName} ref={tableObjectBodyRef} {...other}>

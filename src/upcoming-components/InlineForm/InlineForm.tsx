@@ -64,7 +64,7 @@ export const InlineForm = ({
   const generatedId = useUID();
   const idVar = id || generatedId;
 
-  const componentClassName = clsx(styles['inline-form'], className, {});
+  const componentClassName = clsx(styles['inline-form'], className);
   return (
     <form
       action={action}

@@ -32,11 +32,7 @@ export const DefinitionListItem = ({
   title,
   ...other
 }: Props) => {
-  const componentClassName = clsx(
-    styles['definition-list__item'],
-    className,
-    {},
-  );
+  const componentClassName = clsx(styles['definition-list__item'], className);
   return (
     <div className={componentClassName} {...other}>
       <dt className={styles['definition-list-item__term']}>{title}</dt>

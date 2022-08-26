@@ -16,7 +16,7 @@ exports[`<Filters /> Default story renders snapshot 1`] = `
       class="drawer__header"
     >
       <h3
-        class="filters-drawer__title heading heading--size-headline-sm"
+        class="heading heading--size-headline-sm filters-drawer__title"
         id="2"
       >
         Filters
@@ -50,7 +50,7 @@ exports[`<Filters /> Default story renders snapshot 1`] = `
       class="drawer__body filters-drawer__body"
     >
       <fieldset
-        class="filters-fieldset fieldset"
+        class="fieldset filters-fieldset"
       >
         <legend
           class="fieldset-legend filters-fieldset__legend"
@@ -59,7 +59,7 @@ exports[`<Filters /> Default story renders snapshot 1`] = `
            
         </legend>
         <div
-          class="filters-fieldset__checkboxes fieldset-items"
+          class="fieldset-items filters-fieldset__checkboxes"
         >
           <div
             class="checkbox checkbox--md"
@@ -186,7 +186,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
       class="drawer__header"
     >
       <h3
-        class="filters-drawer__title heading heading--size-headline-sm"
+        class="heading heading--size-headline-sm filters-drawer__title"
         id="38"
       >
         Filters
@@ -220,7 +220,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
       class="drawer__body filters-drawer__body"
     >
       <fieldset
-        class="filters-fieldset fieldset"
+        class="fieldset filters-fieldset"
       >
         <legend
           class="fieldset-legend filters-fieldset__legend"
@@ -229,7 +229,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
            
         </legend>
         <div
-          class="filters-fieldset__checkboxes fieldset-items"
+          class="fieldset-items filters-fieldset__checkboxes"
         >
           <div
             class="checkbox checkbox--md"
@@ -336,7 +336,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="filters-fieldset fieldset"
+        class="fieldset filters-fieldset"
       >
         <legend
           class="fieldset-legend filters-fieldset__legend"
@@ -345,7 +345,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
            
         </legend>
         <div
-          class="filters-fieldset__checkboxes fieldset-items"
+          class="fieldset-items filters-fieldset__checkboxes"
         >
           <div
             class="checkbox checkbox--md"
@@ -452,7 +452,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="filters-fieldset fieldset"
+        class="fieldset filters-fieldset"
       >
         <legend
           class="fieldset-legend filters-fieldset__legend"
@@ -461,7 +461,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
            
         </legend>
         <div
-          class="filters-fieldset__checkboxes fieldset-items"
+          class="fieldset-items filters-fieldset__checkboxes"
         >
           <div
             class="checkbox checkbox--md"
@@ -568,7 +568,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="filters-fieldset fieldset"
+        class="fieldset filters-fieldset"
       >
         <legend
           class="fieldset-legend filters-fieldset__legend"
@@ -577,7 +577,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
            
         </legend>
         <div
-          class="filters-fieldset__checkboxes fieldset-items"
+          class="fieldset-items filters-fieldset__checkboxes"
         >
           <div
             class="checkbox checkbox--md"
@@ -790,17 +790,17 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
       class="drawer__footer filters-drawer__footer"
     >
       <div
-        class="footer__button-group button-group button-group--spacing-1x"
+        class="button-group button-group--spacing-1x footer__button-group"
       >
         <button
-          class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button footer__button button--secondary"
+          class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary footer__button"
           data-bootstrap-override="clickable-style-secondary"
           type="button"
         >
           Clear All
         </button>
         <button
-          class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button footer__button button--primary"
+          class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary footer__button"
           data-bootstrap-override="clickable-style-primary"
           type="button"
         >
@@ -828,7 +828,7 @@ exports[`<Filters /> WithOnApplyAndCustomButtonGroup story renders snapshot 1`] 
       class="drawer__header"
     >
       <h3
-        class="filters-drawer__title heading heading--size-headline-sm"
+        class="heading heading--size-headline-sm filters-drawer__title"
         id="26"
       >
         Filters
@@ -862,7 +862,7 @@ exports[`<Filters /> WithOnApplyAndCustomButtonGroup story renders snapshot 1`] 
       class="drawer__body filters-drawer__body"
     >
       <fieldset
-        class="filters-fieldset fieldset"
+        class="fieldset filters-fieldset"
       >
         <legend
           class="fieldset-legend filters-fieldset__legend"
@@ -871,7 +871,7 @@ exports[`<Filters /> WithOnApplyAndCustomButtonGroup story renders snapshot 1`] 
            
         </legend>
         <div
-          class="filters-fieldset__checkboxes fieldset-items"
+          class="fieldset-items filters-fieldset__checkboxes"
         >
           <div
             class="checkbox checkbox--md"
@@ -982,10 +982,10 @@ exports[`<Filters /> WithOnApplyAndCustomButtonGroup story renders snapshot 1`] 
       class="drawer__footer filters-drawer__footer"
     >
       <div
-        class="footer__button-group button-group__apply-only button-group button-group--spacing-1x"
+        class="button-group button-group--spacing-1x footer__button-group button-group__apply-only"
       >
         <button
-          class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button footer__button button--primary"
+          class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary footer__button"
           data-bootstrap-override="clickable-style-primary"
           type="button"
         >
@@ -1013,7 +1013,7 @@ exports[`<Filters /> WithOnClear story renders snapshot 1`] = `
       class="drawer__header"
     >
       <h3
-        class="filters-drawer__title heading heading--size-headline-sm"
+        class="heading heading--size-headline-sm filters-drawer__title"
         id="14"
       >
         Filters
@@ -1047,7 +1047,7 @@ exports[`<Filters /> WithOnClear story renders snapshot 1`] = `
       class="drawer__body filters-drawer__body"
     >
       <fieldset
-        class="filters-fieldset fieldset"
+        class="fieldset filters-fieldset"
       >
         <legend
           class="fieldset-legend filters-fieldset__legend"
@@ -1056,7 +1056,7 @@ exports[`<Filters /> WithOnClear story renders snapshot 1`] = `
            
         </legend>
         <div
-          class="filters-fieldset__checkboxes fieldset-items"
+          class="fieldset-items filters-fieldset__checkboxes"
         >
           <div
             class="checkbox checkbox--md"
@@ -1167,10 +1167,10 @@ exports[`<Filters /> WithOnClear story renders snapshot 1`] = `
       class="drawer__footer filters-drawer__footer"
     >
       <div
-        class="footer__button-group button-group button-group--spacing-1x"
+        class="button-group button-group--spacing-1x footer__button-group"
       >
         <button
-          class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button footer__button button--secondary"
+          class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary footer__button"
           data-bootstrap-override="clickable-style-secondary"
           type="button"
         >

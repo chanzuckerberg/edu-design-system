@@ -136,11 +136,11 @@ export const Header = ({
 
   const componentClassName = clsx(
     styles['header'],
-    className,
     behavior === 'sticky' && styles['header--sticky'],
     unpinned === true && styles['eds-is-unpinned'],
     pinned === true && styles['eds-is-pinned'],
     scrolled === true && styles['eds-is-scrolled'],
+    className,
   );
 
   if (behavior === 'sticky') {

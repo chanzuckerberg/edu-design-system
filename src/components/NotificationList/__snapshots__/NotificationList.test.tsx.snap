@@ -10,9 +10,7 @@ exports[`<NotificationList /> Default story renders snapshot 1`] = `
     <div
       class="notification-list__content"
     >
-      <div
-        class="notification-list__title"
-      >
+      <div>
         <a
           class="notification-list__link"
           href="#"
@@ -39,9 +37,7 @@ exports[`<NotificationList /> Default story renders snapshot 1`] = `
     <div
       class="notification-list__content"
     >
-      <div
-        class="notification-list__title"
-      >
+      <div>
         <a
           class="notification-list__link"
           href="#"
@@ -75,9 +71,7 @@ exports[`<NotificationList /> MarkedAsRead story renders snapshot 1`] = `
     <div
       class="notification-list__content"
     >
-      <div
-        class="notification-list__title"
-      >
+      <div>
         <a
           class="notification-list__link"
           href="#"
@@ -104,9 +98,7 @@ exports[`<NotificationList /> MarkedAsRead story renders snapshot 1`] = `
     <div
       class="notification-list__content"
     >
-      <div
-        class="notification-list__title"
-      >
+      <div>
         <a
           class="notification-list__link"
           href="#"

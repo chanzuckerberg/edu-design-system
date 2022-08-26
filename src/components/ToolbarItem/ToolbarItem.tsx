@@ -36,9 +36,9 @@ export const ToolbarItem = ({
 }: Props) => {
   const componentClassName = clsx(
     'toolbar__item',
-    className,
     align === 'center' && styles['toolbar__item--align-center'],
     align === 'right' && styles['toolbar__item--align-right'],
+    className,
   );
   return (
     <div className={componentClassName} {...other}>

@@ -31,9 +31,9 @@ export interface Props {
 export const Hr = ({ className, size, variant, ...other }: Props) => {
   const componentClassName = clsx(
     styles['hr'],
-    className,
     size === 'lg' && styles['hr--lg'],
     variant === 'brand' && styles['hr--brand'],
+    className,
   );
 
   return <hr className={componentClassName} {...other} />;

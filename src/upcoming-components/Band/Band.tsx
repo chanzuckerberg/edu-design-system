@@ -30,8 +30,8 @@ export interface Props {
 export const Band = ({ children, className, variant, ...other }: Props) => {
   const componentClassName = clsx(
     styles['band'],
-    className,
     variant === 'brand' && styles['band--brand'],
+    className,
   );
 
   return (

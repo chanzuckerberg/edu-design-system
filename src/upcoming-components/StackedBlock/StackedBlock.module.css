@@ -9,8 +9,6 @@
  * 2) Display flex is added to put contents within the media block side by side
  */
 /* stylelint-disable-next-line block-no-empty */
-.stacked-block {
-}
 
 .stacked-block__link {
   @mixin textLink;
