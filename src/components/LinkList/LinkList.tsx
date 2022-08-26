@@ -53,12 +53,12 @@ export const LinkList = ({
 }: Props) => {
   const componentClassName = clsx(
     styles['link-list'],
-    className,
     size === 'sm' && styles['link-list--sm'],
     inverted && styles['link-list--inverted'],
     variant === 'lined' && styles['link-list--lined'],
     behavior === 'responsive' && styles['link-list--responsive'],
     behavior === 'horizontal' && styles['link-list--horizontal'],
+    className,
   );
   return (
     <ul className={componentClassName} {...other}>

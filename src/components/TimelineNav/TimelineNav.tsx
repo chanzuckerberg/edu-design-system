@@ -262,9 +262,8 @@ export const TimelineNav = ({
   );
   const componentClassName = clsx(
     styles['timeline-nav'],
-    className,
     isActive && styles['eds-is-active'],
-    {},
+    className,
   );
 
   const iconVariant = (itemVariant: TimelineNavPanelVariant, i: number) => {

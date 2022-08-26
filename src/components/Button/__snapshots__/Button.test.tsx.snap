@@ -635,7 +635,7 @@ exports[`<Button /> TertiarySmall story renders snapshot 1`] = `
 
 exports[`<Button /> passes class names down properly 1`] = `
 <button
-  class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button exampleClassName button--secondary"
+  class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary exampleClassName"
   data-bootstrap-override="clickable-style-secondary"
   data-testid="example-class-name"
   type="button"

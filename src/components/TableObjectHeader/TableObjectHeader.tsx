@@ -23,11 +23,7 @@ export interface Props {
  * TODO: update this comment with a description of the component.
  */
 export const TableObjectHeader = ({ children, className, ...other }: Props) => {
-  const componentClassName = clsx(
-    styles['table-object__header'],
-    className,
-    {},
-  );
+  const componentClassName = clsx(styles['table-object__header'], className);
   return (
     <div className={componentClassName} {...other}>
       {children}

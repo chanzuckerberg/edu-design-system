@@ -46,11 +46,11 @@ export function ButtonGroup({
     );
   }
   const componentClassName = clsx(
-    className,
     styles['button-group'],
     spacing === '1x' && styles['button-group--spacing-1x'],
     spacing === 'max' && styles['button-group--spacing-max'],
     orientation === 'vertical' && styles['button-group--vertical'],
+    className,
   );
   return <div className={componentClassName}>{children}</div>;
 }

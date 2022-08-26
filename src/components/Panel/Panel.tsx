@@ -47,10 +47,10 @@ export const Panel = ({
 }: Props) => {
   const componentClassName = clsx(
     styles['panel'],
-    className,
     align === 'center' && styles['panel--align-center'],
     variant === 'squared' && styles['panel--squared'],
     flush && styles['panel--flush'],
+    className,
   );
 
   return (

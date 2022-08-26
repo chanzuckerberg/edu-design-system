@@ -42,8 +42,8 @@ export const DragDropContainer = ({
 }: Props) => {
   const componentClassName = clsx(
     styles['drag-drop__container'],
-    className,
     items.length < 1 && styles['drag-drop__container--empty'],
+    className,
   );
 
   const containerInnerClassName = clsx(

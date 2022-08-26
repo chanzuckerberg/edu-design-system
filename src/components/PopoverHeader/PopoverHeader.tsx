@@ -37,16 +37,12 @@ export const PopoverHeader: React.FC<Props> = ({
   children,
   ...other
 }) => {
-  const componentClassName = clsx([styles['popover__header']], className, {});
+  const componentClassName = clsx([styles['popover__header']], className);
   return (
     <header className={componentClassName} {...other}>
       <div className={styles['popover__header-content']}>
         {children}
-        {titleAfter && (
-          <span className={styles['popover__header-title-after']}>
-            {titleAfter}
-          </span>
-        )}
+        {titleAfter && <span>{titleAfter}</span>}
       </div>
     </header>
   );

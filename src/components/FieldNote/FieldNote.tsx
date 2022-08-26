@@ -48,9 +48,9 @@ export const FieldNote = ({
 }: Props) => {
   const componentClassName = clsx(
     styles['field-note'],
-    className,
     inverted && styles['field-note--inverted'],
     isError && styles['field-note--error'],
+    className,
   );
   return (
     <div

@@ -1,6 +1,4 @@
-import clsx from 'clsx';
 import React, { ReactNode } from 'react';
-import styles from '../Popover/Popover.module.css';
 
 export interface Props {
   /**
@@ -27,9 +25,8 @@ export const PopoverBody: React.FC<Props> = ({
   className,
   ...other
 }) => {
-  const componentClassName = clsx(styles['popover__body'], className, {});
   return (
-    <div className={componentClassName} {...other}>
+    <div className={className} {...other}>
       {children}
     </div>
   );

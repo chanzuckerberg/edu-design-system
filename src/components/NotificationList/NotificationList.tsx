@@ -24,7 +24,7 @@ export interface Props {
  * List of NotificationListItem components.
  */
 export const NotificationList = ({ className, children, ...other }: Props) => {
-  const componentClassName = clsx(styles['notification-list'], className, {});
+  const componentClassName = clsx(styles['notification-list'], className);
   return <ul className={componentClassName}>{children}</ul>;
 };
 

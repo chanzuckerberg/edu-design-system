@@ -57,10 +57,10 @@ export const Layout = ({
 }: Props) => {
   const componentClassName = clsx(
     styles['layout'],
-    className,
     variant && styles[`layout--${variant}`],
     behavior === 'fixed-sidebar' && styles['layout--fixed-sidebar'],
     gap && styles[`layout--gap-${gap}`],
+    className,
   );
 
   return (

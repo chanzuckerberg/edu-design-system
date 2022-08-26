@@ -269,11 +269,11 @@ export const DragDrop = ({
    */
   const componentClassName = clsx(
     styles['drag-drop'],
-    className,
     unstyledItems && styles['drag-drop--unstyled'],
     multipleContainers && styles['drag-drop--multiple'],
     isStart && styles['eds-is-overflow-left'],
     isEnd && styles['eds-is-overflow-right'],
+    className,
   );
 
   return (

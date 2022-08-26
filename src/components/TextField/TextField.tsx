@@ -190,8 +190,8 @@ export const TextField = ({
 
   const componentClassName = clsx(
     styles['text-field'],
-    className,
     inverted && styles['text-field--inverted'],
+    className,
   );
 
   return (

@@ -26,7 +26,7 @@ exports[`<Section /> Center story renders snapshot 1`] = `
             </div>
           </div>
           <h2
-            class="section__title heading heading--size-h2"
+            class="heading heading--size-h2 section__title"
           >
             Section Title
           </h2>
@@ -68,7 +68,7 @@ exports[`<Section /> Default story renders snapshot 1`] = `
           class="section__title-inner"
         >
           <h2
-            class="section__title heading heading--size-h2"
+            class="heading heading--size-h2 section__title"
           >
             Section Title
           </h2>
@@ -101,7 +101,7 @@ exports[`<Section /> WithDescription story renders snapshot 1`] = `
           class="section__title-inner"
         >
           <h2
-            class="section__title heading heading--size-h2"
+            class="heading heading--size-h2 section__title"
           >
             Section Title
           </h2>
@@ -152,7 +152,7 @@ exports[`<Section /> WithOverline story renders snapshot 1`] = `
             </div>
           </div>
           <h2
-            class="section__title heading heading--size-h2"
+            class="heading heading--size-h2 section__title"
           >
             Section Title
           </h2>
@@ -185,7 +185,7 @@ exports[`<Section /> WithRight story renders snapshot 1`] = `
           class="section__title-inner"
         >
           <h2
-            class="section__title heading heading--size-h2"
+            class="heading heading--size-h2 section__title"
           >
             Section Title
           </h2>
@@ -229,7 +229,7 @@ exports[`<Section /> WithTitleAfter story renders snapshot 1`] = `
           class="section__title-inner"
         >
           <h2
-            class="section__title heading heading--size-h2"
+            class="heading heading--size-h2 section__title"
           >
             Section Title
             <span
@@ -289,9 +289,7 @@ exports[`<Section /> WithTitleBefore story renders snapshot 1`] = `
         <div
           class="section__title-before"
         >
-          <div
-            class="avatar"
-          >
+          <div>
             <div
               class="avatar-image"
             >
@@ -341,7 +339,7 @@ exports[`<Section /> WithTitleBefore story renders snapshot 1`] = `
           class="section__title-inner"
         >
           <h4
-            class="section__title heading heading--size-h4"
+            class="heading heading--size-h4 section__title"
           >
             Section Title
           </h4>

@@ -64,11 +64,11 @@ export const Table = ({
 }: Props) => {
   const componentClassName = clsx(
     styles['table'],
-    className,
     variant === 'zebra' && styles['table--zebra'],
     behavior === 'overflow' && styles['table--overflow'],
     behavior === 'stacked' && styles['table--stacked'],
     highlightFirstCell === true && styles['table--highlight-first-cell'],
+    className,
   );
 
   const captionClassName = clsx(

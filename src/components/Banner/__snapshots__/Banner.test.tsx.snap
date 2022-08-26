@@ -90,7 +90,7 @@ exports[`<Banner /> BrandDismissable story renders snapshot 1`] = `
     </div>
   </div>
   <button
-    class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button banner__close-btn button--icon"
+    class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button button--icon banner__close-btn"
     data-bootstrap-override="clickable-style-icon"
     type="button"
   >
@@ -172,7 +172,7 @@ exports[`<Banner /> BrandWithAction story renders snapshot 1`] = `
 
 exports[`<Banner /> DismissableBelowContent story renders snapshot 1`] = `
 <h1
-  class="heading heading heading--size-h1"
+  class="heading heading--size-h1 heading"
 >
   Page Title
 </h1>
@@ -233,7 +233,7 @@ exports[`<Banner /> DismissableWithAction story renders snapshot 1`] = `
     </div>
   </div>
   <button
-    class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button banner__close-btn button--icon"
+    class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button button--icon banner__close-btn"
     data-bootstrap-override="clickable-style-icon"
     type="button"
   >
@@ -346,7 +346,7 @@ exports[`<Banner /> ErrorDismissable story renders snapshot 1`] = `
     </div>
   </div>
   <button
-    class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button banner__close-btn button--icon"
+    class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button button--icon banner__close-btn"
     data-bootstrap-override="clickable-style-icon"
     type="button"
   >
@@ -562,7 +562,7 @@ exports[`<Banner /> NeutralDismissable story renders snapshot 1`] = `
     </div>
   </div>
   <button
-    class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button banner__close-btn button--icon"
+    class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button button--icon banner__close-btn"
     data-bootstrap-override="clickable-style-icon"
     type="button"
   >
@@ -806,7 +806,7 @@ exports[`<Banner /> SuccessDismissable story renders snapshot 1`] = `
     </div>
   </div>
   <button
-    class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button banner__close-btn button--icon"
+    class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button button--icon banner__close-btn"
     data-bootstrap-override="clickable-style-icon"
     type="button"
   >
@@ -976,7 +976,7 @@ exports[`<Banner /> VerticalDismissable story renders snapshot 1`] = `
     </div>
   </div>
   <button
-    class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button banner__close-btn button--icon"
+    class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button button--icon banner__close-btn"
     data-bootstrap-override="clickable-style-icon"
     type="button"
   >
@@ -1054,7 +1054,7 @@ exports[`<Banner /> VerticalDismissableWithAction story renders snapshot 1`] = `
     </div>
   </div>
   <button
-    class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button banner__close-btn button--icon"
+    class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button button--icon banner__close-btn"
     data-bootstrap-override="clickable-style-icon"
     type="button"
   >
@@ -1224,7 +1224,7 @@ exports[`<Banner /> WarningDismissable story renders snapshot 1`] = `
     </div>
   </div>
   <button
-    class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button banner__close-btn button--icon"
+    class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button button--icon banner__close-btn"
     data-bootstrap-override="clickable-style-icon"
     type="button"
   >
