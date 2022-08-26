@@ -23,6 +23,7 @@ export interface Props {
   className?: string;
   /**
    * Disables the field and prevents editing the contents
+   * TODO: disabled variant needs to be styled. Checkbox components themselves already support disabled styling.
    */
   disabled?: boolean;
   /**
@@ -79,7 +80,6 @@ export const CheckboxField = ({
   label,
   isError,
   fieldNote,
-  disabled,
   'aria-describedby': ariaDescribedBy,
   children,
   optionalLabel,
@@ -91,6 +91,7 @@ export const CheckboxField = ({
     ? ariaDescribedBy || generatedId
     : undefined;
 
+  // TODO: disabled variant styling
   const componentClassName = clsx(
     styles['checkbox-field'],
     className,
