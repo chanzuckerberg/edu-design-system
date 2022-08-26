@@ -1,6 +1,4 @@
-import clsx from 'clsx';
 import React, { ReactNode } from 'react';
-import styles from '../StackedBlock/StackedBlock.module.css';
 
 export interface Props {
   /**
@@ -27,13 +25,8 @@ export const StackedBlockFooter = ({
   className,
   ...other
 }: Props) => {
-  const componentClassName = clsx(
-    styles['stacked-block__footer'],
-    className,
-    {},
-  );
   return (
-    <footer className={componentClassName} {...other}>
+    <footer className={className} {...other}>
       {children}
     </footer>
   );

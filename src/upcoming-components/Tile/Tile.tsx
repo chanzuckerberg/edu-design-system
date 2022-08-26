@@ -23,7 +23,7 @@ export interface Props {
  * TODO: update this comment with a description of the component.
  */
 export const Tile = ({ children, className, ...other }: Props) => {
-  const componentClassName = clsx(styles['tile'], className, {});
+  const componentClassName = clsx(styles['tile'], className);
   return (
     <div className={componentClassName} {...other}>
       {children}

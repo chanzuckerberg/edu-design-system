@@ -74,8 +74,8 @@ export const Radio = ({
 }: Props) => {
   const componentClassName = clsx(
     styles['radio'],
-    className,
     inverted && styles['radio--inverted'],
+    className,
   );
   return (
     <div className={componentClassName} {...other}>

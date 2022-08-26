@@ -43,7 +43,7 @@ export const Hero = ({
   title,
   ...other
 }: Props) => {
-  const componentClassName = clsx(styles['hero'], className, {});
+  const componentClassName = clsx(styles['hero'], className);
   return (
     <div className={componentClassName} {...other}>
       <img alt={imgAlt} className={styles['hero__img']} src={imgSrc} />

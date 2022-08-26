@@ -23,7 +23,7 @@ export interface Props {
  * TODO: update this comment with a description of the component.
  */
 export const TextListItem = ({ children, className, ...other }: Props) => {
-  const componentClassName = clsx(styles['text-list__item'], className, {});
+  const componentClassName = clsx(styles['text-list__item'], className);
   return (
     <li className={componentClassName} {...other}>
       {children}
