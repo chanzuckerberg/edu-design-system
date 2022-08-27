@@ -20,10 +20,6 @@ export interface Props {
    */
   id?: string;
   /**
-   * Inverted variation for dark backgrounds
-   */
-  inverted?: boolean;
-  /**
    * Slot for node to appear directly after field label. Typically used to include a Toolip
    */
   labelAfter?: ReactNode;
@@ -42,7 +38,7 @@ export interface Props {
   /**
    * The label text string
    */
-  text?: string | boolean;
+  text: string;
 }
 
 /**
@@ -54,20 +50,18 @@ export interface Props {
  */
 export const Label = ({
   className,
-  id,
+  hideLabel,
   htmlFor,
-  inverted,
+  id,
   labelAfter,
   optionalLabel = '(optional)',
-  text = 'Label',
   required = true,
   requiredLabel,
-  hideLabel,
+  text,
   ...other
 }: Props) => {
   const componentClassName = clsx(
     styles['label'],
-    inverted && styles['label--inverted'],
     hideLabel && styles['u-is-vishidden'],
     className,
   );

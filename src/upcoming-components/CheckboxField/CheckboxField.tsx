@@ -111,11 +111,7 @@ export const CheckboxField = ({
         <ul className={styles['checkbox-field__list']}>{children}</ul>
       </FieldsetItems>
       {fieldNote && (
-        <FieldNote
-          id={ariaDescribedByVar}
-          inverted={inverted}
-          isError={isError}
-        >
+        <FieldNote id={ariaDescribedByVar} isError={isError}>
           {fieldNote}
         </FieldNote>
       )}

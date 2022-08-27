@@ -27,18 +27,3 @@ export const Optional: StoryObj<Args> = {
     required: false,
   },
 };
-
-export const Inverted: StoryObj<Args> = {
-  args: {
-    inverted: true,
-    text: 'Label',
-    required: true,
-  },
-  decorators: [
-    (Story) => (
-      <div style={{ padding: '1rem', background: '#000' }}>
-        <Story />
-      </div>
-    ),
-  ],
-};

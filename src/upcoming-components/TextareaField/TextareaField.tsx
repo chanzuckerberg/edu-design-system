@@ -169,15 +169,17 @@ export const TextareaField = ({
 
   return (
     <div className={componentClassName}>
-      <Label
-        hideLabel={hideLabel}
-        htmlFor={idVar}
-        inverted={inverted}
-        optionalLabel={optionalLabel}
-        required={required}
-        requiredLabel={requiredLabel}
-        text={label}
-      />
+      {label && (
+        <Label
+          className={styles['textarea-field__label']}
+          hideLabel={hideLabel}
+          htmlFor={idVar}
+          optionalLabel={optionalLabel}
+          required={required}
+          requiredLabel={requiredLabel}
+          text={label}
+        />
+      )}
 
       <div className={styles['textarea-field__body']}>
         <Textarea

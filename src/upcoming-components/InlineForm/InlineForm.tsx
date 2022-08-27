@@ -72,12 +72,14 @@ export const InlineForm = ({
       method={method}
       {...other}
     >
-      <Label
-        className="inline-form__label u-is-vishidden"
-        htmlFor={idVar}
-        labelAfter={labelAfter}
-        text={label}
-      />
+      {label && (
+        <Label
+          className="inline-form__label u-is-vishidden"
+          htmlFor={idVar}
+          labelAfter={labelAfter}
+          text={label}
+        />
+      )}
       <TextInput
         className={styles['inline-form__input']}
         id={idVar}
