@@ -7,12 +7,21 @@
   gap: var(--eds-size-1);
 }
 
+.search-field__icon {
+  color: var(--eds-theme-color-icon-neutral-default);
+  position: absolute;
+  top: 0.6875rem;
+  left: 0.625rem;
+}
+
 .search-field__input {
-  /* todo: check padding-left size with mocks */
-  padding-left: var(--eds-size-5);
+  padding-left: 2.25rem;
+}
+.search-field__input:focus-visible + .search-field__icon {
+  color: var(--eds-theme-color-icon-brand-primary);
 }
 
 .search-field__button {
-  /* Matches height with input field (2px accounts for input border) */
-  height: calc(var(--eds-size-5) + 2px);
+  /* Matches height with input field */
+  height: calc(var(--eds-size-5) + 2 * var(--eds-theme-form-border-width));
 }

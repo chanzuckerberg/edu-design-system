@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import React, { ChangeEventHandler } from 'react';
 import styles from './SearchField.module.css';
 import Button from '../Button';
+import Icon from '../Icon';
 import TextInput from '../TextInput';
 
 export type Props = {
@@ -31,6 +32,13 @@ export const SearchField = ({ className, ...other }: Props) => {
         className={styles['search-field__input']}
         placeholder="Search"
         {...other}
+      />
+      <Icon
+        className={styles['search-field__icon']}
+        name="search"
+        purpose="informative"
+        size="1.25rem"
+        title="search"
       />
       <Button className={styles['search-field__button']} variant="primary">
         Search
