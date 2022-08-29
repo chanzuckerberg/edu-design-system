@@ -130,7 +130,6 @@
     "chromatic": "^6.5.3",
     "codecov": "^3.8.3",
     "copyfiles": "^2.4.1",
-    "cz-conventional-changelog": "3.3.0",
     "eslint": "^8.8.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.25.4",
