@@ -45,7 +45,7 @@
   color: var(--eds-theme-color-icon-brand-primary);
   border: var(--eds-border-width-sm) solid transparent; /* 1 */
 }
-.radio__input:focus + .radio__icon {
+.radio__input:focus-visible + .radio__icon {
   border: var(--eds-border-width-sm) solid var(--eds-theme-color-focus-ring);
   border-radius: 9999px;
 }

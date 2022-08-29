@@ -28,7 +28,7 @@
     --icon-size-default: 2em; /* 5 */
   }
 
-  &:focus {
+  &:focus-visible {
     @mixin focus;
   }
 
@@ -492,7 +492,7 @@
     text-decoration-color: var(--eds-theme-color-border-neutral-strong);
   }
 
-  &:focus {
+  &:focus-visible {
     background-color: var(--eds-theme-color-icon-neutral-strong); /* 1 */
   }
 }

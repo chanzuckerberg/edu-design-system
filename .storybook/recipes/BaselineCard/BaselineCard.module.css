@@ -86,7 +86,7 @@
   word-wrap: normal !important; /* 4 */
 }
 
-.baseline-card__link:focus {
+.baseline-card__link:focus-visible {
   @mixin eds-theme-typography-body-text-sm;
   background-color: var(--eds-theme-color-background-neutral-default);
   clip: auto !important; /* 5 */

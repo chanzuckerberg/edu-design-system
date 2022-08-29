@@ -49,7 +49,7 @@
   color: var(--eds-theme-color-text-neutral-default-inverse);
 
   &:hover,
-  &:focus {
+  &:focus-visible {
     background: var(
       --eds-theme-color-button-primary-brand-background-hover
     ); /* TODO */

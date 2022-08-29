@@ -201,7 +201,7 @@
     background-color var(--eds-anim-fade-quick) var(--eds-anim-ease);
 
   &:hover,
-  &:focus {
+  &:focus-visible {
     color: var(--eds-theme-color-text-neutral-default);
   }
 

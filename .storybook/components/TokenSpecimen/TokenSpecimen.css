@@ -74,7 +74,7 @@
   transition: all 0.15s ease;
 
   &:hover,
-  &:focus {
+  &:focus-visible {
     opacity: 0.2;
   }
 }
@@ -83,7 +83,7 @@
   transition: all 0.15s ease;
 
   &:hover,
-  &:focus {
+  &:focus-visible {
     transform: translateX(-3rem);
   }
 }

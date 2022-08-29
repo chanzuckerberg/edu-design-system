@@ -113,7 +113,7 @@ EDS uses [PostCSS Nested](https://github.com/postcss/postcss-nested) to provide 
   background: var(--eds-theme-color-background-brand-primary-strong);
 
   &:hover,
-  &:focus {
+  &:focus-visible {
     background: var(--eds-theme-color-background-brand-primary-strong-hover);
   }
 
@@ -269,6 +269,30 @@ Use:
 import { EdsThemeColorUtilitySuccessForeground } from 'src/tokens-dist/ts/colors';
 
 <Icon color={EdsThemeColorUtilitySuccessForeground} />;
+```
+
+- Use `:focus-visible` instead of `:focus`
+
+This allows focus indicators to appear for keyboard users while remaining hidden from mouse-only users.
+
+Instead of:
+
+```scss
+.button--primary {
+  &:focus {
+    @mixin focus;
+  }
+}
+```
+
+Use:
+
+```scss
+.button--primary {
+  &:focus-visible {
+    @mixin focus;
+  }
+}
 ```
 
 ## Utility classes <a name="utility-classes"></a>

@@ -23,7 +23,7 @@
   transform: translateY(-100%);
   transition: transform var(--eds-anim-fade-quick);
 
-  &:focus {
+  &:focus-visible {
     transform: translateY(0%);
   }
 

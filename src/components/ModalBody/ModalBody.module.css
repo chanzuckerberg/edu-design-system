@@ -12,6 +12,6 @@
   flex: 1;
 }
 
-.modal-body:focus {
+.modal-body:focus-visible {
   @mixin focusInside;
 }

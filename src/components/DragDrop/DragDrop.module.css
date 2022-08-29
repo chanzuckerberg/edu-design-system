@@ -196,8 +196,8 @@
   }
 
   .drag-drop__item--hover:hover &,
-  .drag-drop__item--hover:focus &,
-  &:focus {
+  .drag-drop__item--hover:focus-visible &,
+  &:focus-visible {
     opacity: 1;
   }
 }

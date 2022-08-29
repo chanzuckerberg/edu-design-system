@@ -145,7 +145,7 @@ Additional branded values ("secondary", "tertiary", "accent", "supports", etc) c
 
 #### Focus colors
 
-- `focus-ring` defines the focus ring color used for component `:focus` state
+- `focus-ring` defines the focus ring color used for component `:focus-visible` state
 
 #### Link colors
 

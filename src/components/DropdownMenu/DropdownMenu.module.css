@@ -72,7 +72,7 @@
   transition: background var(--eds-anim-fade-quick) var(--eds-anim-ease);
 
   &:hover,
-  &:focus {
+  &:focus-visible {
     background: var(--eds-theme-color-background-neutral-subtle);
   }
 
