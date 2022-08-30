@@ -2,7 +2,7 @@
 
 exports[`<HorizontalStepper /> CappedLine story renders snapshot 1`] = `
 <div
-  style="margin: 1rem;"
+  class="m-4"
 >
   <ol
     class="horizontal-stepper"
@@ -25,7 +25,7 @@ exports[`<HorizontalStepper /> CappedLine story renders snapshot 1`] = `
     </li>
     <hr
       aria-hidden="true"
-      class="horizontal-stepper__line capped-line"
+      class="horizontal-stepper__line max-w-[120px]"
     />
     <li
       class="horizontal-step horizontal-step--incomplete"
@@ -62,7 +62,7 @@ exports[`<HorizontalStepper /> CappedLine story renders snapshot 1`] = `
     </li>
     <hr
       aria-hidden="true"
-      class="horizontal-stepper__line capped-line"
+      class="horizontal-stepper__line max-w-[120px]"
     />
     <li
       class="horizontal-step horizontal-step--incomplete"
@@ -99,7 +99,7 @@ exports[`<HorizontalStepper /> CappedLine story renders snapshot 1`] = `
     </li>
     <hr
       aria-hidden="true"
-      class="horizontal-stepper__line capped-line"
+      class="horizontal-stepper__line max-w-[120px]"
     />
     <li
       class="horizontal-step horizontal-step--incomplete"
@@ -136,7 +136,7 @@ exports[`<HorizontalStepper /> CappedLine story renders snapshot 1`] = `
     </li>
     <hr
       aria-hidden="true"
-      class="horizontal-stepper__line capped-line"
+      class="horizontal-stepper__line max-w-[120px]"
     />
     <li
       class="horizontal-step horizontal-step--incomplete"
@@ -177,7 +177,7 @@ exports[`<HorizontalStepper /> CappedLine story renders snapshot 1`] = `
 
 exports[`<HorizontalStepper /> CompletedAllSteps story renders snapshot 1`] = `
 <div
-  style="margin: 1rem;"
+  class="m-4"
 >
   <ol
     class="horizontal-stepper"
@@ -339,10 +339,10 @@ exports[`<HorizontalStepper /> CompletedAllSteps story renders snapshot 1`] = `
 
 exports[`<HorizontalStepper /> HorizontalSteps story renders snapshot 1`] = `
 <div
-  style="margin: 1rem;"
+  class="m-4"
 >
   <ol
-    style="padding: 0px;"
+    class="p-0"
   >
     <li
       class="horizontal-step horizontal-step--incomplete"
@@ -426,10 +426,10 @@ exports[`<HorizontalStepper /> HorizontalSteps story renders snapshot 1`] = `
 
 exports[`<HorizontalStepper /> HorizontalStepsDifferentNumbers story renders snapshot 1`] = `
 <div
-  style="margin: 1rem;"
+  class="m-4"
 >
   <ol
-    style="padding: 0px;"
+    class="p-0"
   >
     <li
       class="horizontal-step horizontal-step--active"
@@ -677,7 +677,7 @@ exports[`<HorizontalStepper /> HorizontalStepsDifferentNumbers story renders sna
 
 exports[`<HorizontalStepper /> OnFirstStep story renders snapshot 1`] = `
 <div
-  style="margin: 1rem;"
+  class="m-4"
 >
   <ol
     class="horizontal-stepper"
@@ -852,7 +852,7 @@ exports[`<HorizontalStepper /> OnFirstStep story renders snapshot 1`] = `
 
 exports[`<HorizontalStepper /> OnLastStep story renders snapshot 1`] = `
 <div
-  style="margin: 1rem;"
+  class="m-4"
 >
   <ol
     class="horizontal-stepper"
@@ -1003,7 +1003,7 @@ exports[`<HorizontalStepper /> OnLastStep story renders snapshot 1`] = `
 
 exports[`<HorizontalStepper /> SomeCompletedSteps story renders snapshot 1`] = `
 <div
-  style="margin: 1rem;"
+  class="m-4"
 >
   <ol
     class="horizontal-stepper"
