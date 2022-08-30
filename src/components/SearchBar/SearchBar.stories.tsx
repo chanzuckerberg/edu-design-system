@@ -5,7 +5,7 @@ import React from 'react';
 import { SearchBar } from '../SearchBar/SearchBar';
 
 export default {
-  title: 'PleaseUpdateThisToADifferentFolder/SearchBar',
+  title: 'Organisms/Interactive/SearchBar',
   component: SearchBar,
   parameters: {
     badges: [BADGE.BETA],
@@ -21,10 +21,30 @@ export default {
 
 type Args = React.ComponentProps<typeof SearchBar>;
 
-export const Default: StoryObj<Args> = {};
+export const Default: StoryObj<Args> = {
+  args: {
+    children: (
+      <>
+        <SearchBar.InputField />
+        <SearchBar.Button />
+      </>
+    ),
+  },
+};
+
 export const Disabled: StoryObj<Args> = {
   args: {
-    disabled: true,
+    children: (
+      <>
+        <SearchBar.InputField disabled />
+        <SearchBar.Button disabled />
+      </>
+    ),
+  },
+  parameters: {
+    axe: {
+      disabledRules: ['color-contrast'],
+    },
   },
 };
 
@@ -41,4 +61,18 @@ export const Custom: StoryObj<Args> = {
       </div>
     </>
   ),
+};
+
+export const SearchField: StoryObj<
+  React.ComponentProps<typeof SearchBar.InputField>
+> = {
+  argTypes: { onChange: { action: 'onChange' } },
+  render: (args) => <SearchBar.InputField {...args} />,
+};
+
+export const SearchButton: StoryObj<
+  React.ComponentProps<typeof SearchBar.Button>
+> = {
+  argTypes: { onClick: { action: 'onClick' } },
+  render: (args) => <SearchBar.Button {...args} />,
 };

@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React from 'react';
+import React, { MouseEventHandler } from 'react';
 import styles from './SearchButton.module.css';
 import Button from '../Button';
 
@@ -12,6 +12,10 @@ export type SearchButtonProps = {
    * Disables the button and prevents button use.
    */
   disabled?: boolean;
+  /**
+   * On click handler for component
+   */
+  onClick?: MouseEventHandler;
 };
 
 /**
