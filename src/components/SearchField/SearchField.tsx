@@ -1,18 +1,8 @@
 import clsx from 'clsx';
-import React, { ChangeEventHandler } from 'react';
+import React from 'react';
 import styles from './SearchField.module.css';
-import Button from '../Button';
 import Icon from '../Icon';
-import TextInput from '../TextInput';
-
-export type Props = {
-  /**
-   * CSS class names that can be appended to the component.
-   */
-  className?: string;
-  disabled?: boolean;
-  onChange?: ChangeEventHandler;
-};
+import TextInput, { TextInputProps } from '../TextInput';
 
 /**
  * BETA: This component is still a work in progress and is subject to change.
@@ -21,16 +11,17 @@ export type Props = {
  * import {SearchField} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * A search TextInput component styled for use with the SearchBar.
  */
-export const SearchField = ({ className, ...other }: Props) => {
+export const SearchField = ({ className, ...other }: TextInputProps) => {
   const componentClassName = clsx(styles['search-field'], className);
 
   return (
-    <div className={componentClassName}>
+    <>
       <TextInput
-        className={styles['search-field__input']}
+        className={componentClassName}
         placeholder="Search"
+        type="search"
         {...other}
       />
       <Icon
@@ -40,9 +31,6 @@ export const SearchField = ({ className, ...other }: Props) => {
         size="1.25rem"
         title="search"
       />
-      <Button className={styles['search-field__button']} variant="primary">
-        Search
-      </Button>
-    </div>
+    </>
   );
 };

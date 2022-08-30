@@ -1,0 +1,8 @@
+/*------------------------------------*\
+    # SEARCH BUTTON
+\*------------------------------------*/
+
+.search-button {
+  /* Matches height with input field */
+  height: calc(var(--eds-size-5) + 2 * var(--eds-theme-form-border-width));
+}

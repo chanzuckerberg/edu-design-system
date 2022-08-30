@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import React, { ChangeEventHandler } from 'react';
 import styles from './TextInput.module.css';
 
-export type Props = React.InputHTMLAttributes<HTMLInputElement> & {
+export type TextInputProps = React.InputHTMLAttributes<HTMLInputElement> & {
   /**
    * String that describes a type of file that may be selected by the user
    * https://developer.mozilla.org/en-US/docs/Web/*HTML/Element/input/file#Unique_file_type_specifiers
@@ -127,7 +127,7 @@ export const TextInput = ({
   id,
   isError,
   ...other
-}: Props) => {
+}: TextInputProps) => {
   const componentClassName = clsx(
     styles['text-input'],
     isError && styles['error'],
