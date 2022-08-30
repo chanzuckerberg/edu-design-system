@@ -5,8 +5,8 @@ import styles from './FileUploadField.module.css';
 import Button from '../../components/Button';
 import FieldNote from '../../components/FieldNote';
 import Icon, { IconName } from '../../components/Icon';
+import InputField from '../../components/InputField';
 import Label from '../../components/Label';
-import TextInput from '../../components/TextInput';
 import LoadingIndicator from '../LoadingIndicator';
 import TextList from '../TextList';
 import TextListItem from '../TextListItem';
@@ -341,7 +341,7 @@ export const FileUploadField = ({
           onDragOver={() => onDragOver()}
           onDrop={() => onDragEnd()}
         >
-          <TextInput
+          <InputField
             accept={acceptedFileTypes}
             aria-describedby={ariaDescribedByVar}
             aria-invalid={!!isError}

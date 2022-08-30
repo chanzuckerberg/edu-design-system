@@ -18,7 +18,7 @@ exports[`<SearchField /> Custom story renders snapshot 1`] = `
       class="search-field"
     >
       <input
-        class="text-input search-field__input"
+        class="input-field search-field__input"
         placeholder="Search"
         type="search"
       />
@@ -47,7 +47,7 @@ exports[`<SearchField /> Custom story renders snapshot 1`] = `
       class="search-field"
     >
       <input
-        class="text-input search-field__input"
+        class="input-field search-field__input"
         placeholder="Search"
         type="search"
       />
@@ -92,7 +92,7 @@ exports[`<SearchField /> Default story renders snapshot 1`] = `
       class="search-field"
     >
       <input
-        class="text-input search-field__input"
+        class="input-field search-field__input"
         placeholder="Search"
         type="search"
       />
@@ -137,7 +137,7 @@ exports[`<SearchField /> Disabled story renders snapshot 1`] = `
       class="search-field"
     >
       <input
-        class="text-input search-field__input"
+        class="input-field search-field__input"
         disabled=""
         placeholder="Search"
         type="search"
@@ -196,7 +196,7 @@ exports[`<SearchField /> SearchField story renders snapshot 1`] = `
     class="search-field"
   >
     <input
-      class="text-input search-field__input"
+      class="input-field search-field__input"
       placeholder="Search"
       type="search"
     />

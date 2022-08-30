@@ -22,8 +22,8 @@ exports[`<TextField /> Default story renders snapshot 1`] = `
       <input
         aria-describedby="2"
         aria-invalid="false"
-        class="text-input"
-        data-bootstrap-override="textinput"
+        class="input-field"
+        data-bootstrap-override="InputField"
         id="1"
         type="text"
       />
@@ -60,8 +60,8 @@ exports[`<TextField /> Disabled story renders snapshot 1`] = `
       <input
         aria-describedby="7"
         aria-invalid="false"
-        class="text-input"
-        data-bootstrap-override="textinput"
+        class="input-field"
+        data-bootstrap-override="InputField"
         disabled=""
         id="6"
         type="text"
@@ -112,8 +112,8 @@ exports[`<TextField /> DisabledVariants story renders snapshot 1`] = `
         <input
           aria-describedby="53"
           aria-invalid="false"
-          class="text-input"
-          data-bootstrap-override="textinput"
+          class="input-field"
+          data-bootstrap-override="InputField"
           disabled=""
           id="52"
           placeholder="placeholder"
@@ -145,8 +145,8 @@ exports[`<TextField /> DisabledVariants story renders snapshot 1`] = `
         <input
           aria-describedby="55"
           aria-invalid="false"
-          class="text-input"
-          data-bootstrap-override="textinput"
+          class="input-field"
+          data-bootstrap-override="InputField"
           disabled=""
           id="54"
           type="text"
@@ -179,8 +179,8 @@ exports[`<TextField /> DisabledVariants story renders snapshot 1`] = `
       >
         <input
           aria-invalid="false"
-          class="text-input"
-          data-bootstrap-override="textinput"
+          class="input-field"
+          data-bootstrap-override="InputField"
           disabled=""
           id="56"
           placeholder="placeholder"
@@ -205,8 +205,8 @@ exports[`<TextField /> DisabledVariants story renders snapshot 1`] = `
       >
         <input
           aria-invalid="false"
-          class="text-input"
-          data-bootstrap-override="textinput"
+          class="input-field"
+          data-bootstrap-override="InputField"
           disabled=""
           id="58"
           type="text"
@@ -224,8 +224,8 @@ exports[`<TextField /> DisabledVariants story renders snapshot 1`] = `
           aria-describedby="61"
           aria-invalid="false"
           aria-label="Label text"
-          class="text-input"
-          data-bootstrap-override="textinput"
+          class="input-field"
+          data-bootstrap-override="InputField"
           disabled=""
           id="60"
           placeholder="placeholder"
@@ -247,8 +247,8 @@ exports[`<TextField /> DisabledVariants story renders snapshot 1`] = `
           aria-describedby="63"
           aria-invalid="false"
           aria-label="Label text"
-          class="text-input"
-          data-bootstrap-override="textinput"
+          class="input-field"
+          data-bootstrap-override="InputField"
           disabled=""
           id="62"
           type="text"
@@ -271,8 +271,8 @@ exports[`<TextField /> DisabledVariants story renders snapshot 1`] = `
         <input
           aria-invalid="false"
           aria-label="Label text"
-          class="text-input"
-          data-bootstrap-override="textinput"
+          class="input-field"
+          data-bootstrap-override="InputField"
           disabled=""
           id="64"
           placeholder="placeholder"
@@ -287,8 +287,8 @@ exports[`<TextField /> DisabledVariants story renders snapshot 1`] = `
         <input
           aria-invalid="false"
           aria-label="Label text"
-          class="text-input"
-          data-bootstrap-override="textinput"
+          class="input-field"
+          data-bootstrap-override="InputField"
           disabled=""
           id="66"
           type="text"
@@ -321,8 +321,8 @@ exports[`<TextField /> Error story renders snapshot 1`] = `
       <input
         aria-describedby="4"
         aria-invalid="true"
-        class="text-input error"
-        data-bootstrap-override="textinput"
+        class="input-field error"
+        data-bootstrap-override="InputField"
         id="3"
         type="text"
       />
@@ -390,8 +390,8 @@ exports[`<TextField /> ErrorVariants story renders snapshot 1`] = `
         <input
           aria-describedby="33"
           aria-invalid="true"
-          class="text-input error"
-          data-bootstrap-override="textinput"
+          class="input-field error"
+          data-bootstrap-override="InputField"
           id="32"
           placeholder="placeholder"
           type="text"
@@ -440,8 +440,8 @@ exports[`<TextField /> ErrorVariants story renders snapshot 1`] = `
         <input
           aria-describedby="36"
           aria-invalid="true"
-          class="text-input error"
-          data-bootstrap-override="textinput"
+          class="input-field error"
+          data-bootstrap-override="InputField"
           id="35"
           type="text"
         />
@@ -491,8 +491,8 @@ exports[`<TextField /> ErrorVariants story renders snapshot 1`] = `
       >
         <input
           aria-invalid="true"
-          class="text-input error"
-          data-bootstrap-override="textinput"
+          class="input-field error"
+          data-bootstrap-override="InputField"
           id="38"
           placeholder="placeholder"
           type="text"
@@ -516,8 +516,8 @@ exports[`<TextField /> ErrorVariants story renders snapshot 1`] = `
       >
         <input
           aria-invalid="true"
-          class="text-input error"
-          data-bootstrap-override="textinput"
+          class="input-field error"
+          data-bootstrap-override="InputField"
           id="40"
           type="text"
         />
@@ -534,8 +534,8 @@ exports[`<TextField /> ErrorVariants story renders snapshot 1`] = `
           aria-describedby="43"
           aria-invalid="true"
           aria-label="Label text"
-          class="text-input error"
-          data-bootstrap-override="textinput"
+          class="input-field error"
+          data-bootstrap-override="InputField"
           id="42"
           placeholder="placeholder"
           type="text"
@@ -574,8 +574,8 @@ exports[`<TextField /> ErrorVariants story renders snapshot 1`] = `
           aria-describedby="46"
           aria-invalid="true"
           aria-label="Label text"
-          class="text-input error"
-          data-bootstrap-override="textinput"
+          class="input-field error"
+          data-bootstrap-override="InputField"
           id="45"
           type="text"
         />
@@ -615,8 +615,8 @@ exports[`<TextField /> ErrorVariants story renders snapshot 1`] = `
         <input
           aria-invalid="true"
           aria-label="Label text"
-          class="text-input error"
-          data-bootstrap-override="textinput"
+          class="input-field error"
+          data-bootstrap-override="InputField"
           id="48"
           placeholder="placeholder"
           type="text"
@@ -630,8 +630,8 @@ exports[`<TextField /> ErrorVariants story renders snapshot 1`] = `
         <input
           aria-invalid="true"
           aria-label="Label text"
-          class="text-input error"
-          data-bootstrap-override="textinput"
+          class="input-field error"
+          data-bootstrap-override="InputField"
           id="50"
           type="text"
         />
@@ -662,8 +662,8 @@ exports[`<TextField /> InputWithin story renders snapshot 1`] = `
     >
       <input
         aria-invalid="false"
-        class="text-input"
-        data-bootstrap-override="textinput"
+        class="input-field"
+        data-bootstrap-override="InputField"
         id="14"
         type="text"
       />
@@ -718,8 +718,8 @@ exports[`<TextField /> LabelFieldnoteVariants story renders snapshot 1`] = `
         <input
           aria-describedby="17"
           aria-invalid="false"
-          class="text-input"
-          data-bootstrap-override="textinput"
+          class="input-field"
+          data-bootstrap-override="InputField"
           id="16"
           placeholder="placeholder"
           type="text"
@@ -750,8 +750,8 @@ exports[`<TextField /> LabelFieldnoteVariants story renders snapshot 1`] = `
         <input
           aria-describedby="19"
           aria-invalid="false"
-          class="text-input"
-          data-bootstrap-override="textinput"
+          class="input-field"
+          data-bootstrap-override="InputField"
           id="18"
           type="text"
         />
@@ -783,8 +783,8 @@ exports[`<TextField /> LabelFieldnoteVariants story renders snapshot 1`] = `
       >
         <input
           aria-invalid="false"
-          class="text-input"
-          data-bootstrap-override="textinput"
+          class="input-field"
+          data-bootstrap-override="InputField"
           id="20"
           placeholder="placeholder"
           type="text"
@@ -808,8 +808,8 @@ exports[`<TextField /> LabelFieldnoteVariants story renders snapshot 1`] = `
       >
         <input
           aria-invalid="false"
-          class="text-input"
-          data-bootstrap-override="textinput"
+          class="input-field"
+          data-bootstrap-override="InputField"
           id="22"
           type="text"
         />
@@ -826,8 +826,8 @@ exports[`<TextField /> LabelFieldnoteVariants story renders snapshot 1`] = `
           aria-describedby="25"
           aria-invalid="false"
           aria-label="Label text"
-          class="text-input"
-          data-bootstrap-override="textinput"
+          class="input-field"
+          data-bootstrap-override="InputField"
           id="24"
           placeholder="placeholder"
           type="text"
@@ -848,8 +848,8 @@ exports[`<TextField /> LabelFieldnoteVariants story renders snapshot 1`] = `
           aria-describedby="27"
           aria-invalid="false"
           aria-label="Label text"
-          class="text-input"
-          data-bootstrap-override="textinput"
+          class="input-field"
+          data-bootstrap-override="InputField"
           id="26"
           type="text"
         />
@@ -871,8 +871,8 @@ exports[`<TextField /> LabelFieldnoteVariants story renders snapshot 1`] = `
         <input
           aria-invalid="false"
           aria-label="Label text"
-          class="text-input"
-          data-bootstrap-override="textinput"
+          class="input-field"
+          data-bootstrap-override="InputField"
           id="28"
           placeholder="placeholder"
           type="text"
@@ -886,8 +886,8 @@ exports[`<TextField /> LabelFieldnoteVariants story renders snapshot 1`] = `
         <input
           aria-invalid="false"
           aria-label="Label text"
-          class="text-input"
-          data-bootstrap-override="textinput"
+          class="input-field"
+          data-bootstrap-override="InputField"
           id="30"
           type="text"
         />
@@ -918,8 +918,8 @@ exports[`<TextField /> NoVisibleLabel story renders snapshot 1`] = `
         aria-describedby="13"
         aria-invalid="false"
         aria-label="Input for no visible label"
-        class="text-input"
-        data-bootstrap-override="textinput"
+        class="input-field"
+        data-bootstrap-override="InputField"
         id="12"
         required=""
         type="text"
@@ -962,8 +962,8 @@ exports[`<TextField /> OptionalIndicator story renders snapshot 1`] = `
       <input
         aria-describedby="11"
         aria-invalid="false"
-        class="text-input"
-        data-bootstrap-override="textinput"
+        class="input-field"
+        data-bootstrap-override="InputField"
         id="10"
         type="text"
       />
@@ -1018,8 +1018,8 @@ exports[`<TextField /> OptionalIndicatorVariants story renders snapshot 1`] = `
         <input
           aria-describedby="95"
           aria-invalid="false"
-          class="text-input"
-          data-bootstrap-override="textinput"
+          class="input-field"
+          data-bootstrap-override="InputField"
           id="94"
           placeholder="placeholder"
           type="text"
@@ -1055,8 +1055,8 @@ exports[`<TextField /> OptionalIndicatorVariants story renders snapshot 1`] = `
         <input
           aria-describedby="97"
           aria-invalid="false"
-          class="text-input"
-          data-bootstrap-override="textinput"
+          class="input-field"
+          data-bootstrap-override="InputField"
           id="96"
           type="text"
         />
@@ -1093,8 +1093,8 @@ exports[`<TextField /> OptionalIndicatorVariants story renders snapshot 1`] = `
       >
         <input
           aria-invalid="false"
-          class="text-input"
-          data-bootstrap-override="textinput"
+          class="input-field"
+          data-bootstrap-override="InputField"
           id="98"
           placeholder="placeholder"
           type="text"
@@ -1123,8 +1123,8 @@ exports[`<TextField /> OptionalIndicatorVariants story renders snapshot 1`] = `
       >
         <input
           aria-invalid="false"
-          class="text-input"
-          data-bootstrap-override="textinput"
+          class="input-field"
+          data-bootstrap-override="InputField"
           id="100"
           type="text"
         />
@@ -1150,8 +1150,8 @@ exports[`<TextField /> OptionalIndicatorVariants story renders snapshot 1`] = `
           aria-describedby="103"
           aria-invalid="false"
           aria-label="Label text"
-          class="text-input"
-          data-bootstrap-override="textinput"
+          class="input-field"
+          data-bootstrap-override="InputField"
           id="102"
           placeholder="placeholder"
           type="text"
@@ -1181,8 +1181,8 @@ exports[`<TextField /> OptionalIndicatorVariants story renders snapshot 1`] = `
           aria-describedby="105"
           aria-invalid="false"
           aria-label="Label text"
-          class="text-input"
-          data-bootstrap-override="textinput"
+          class="input-field"
+          data-bootstrap-override="InputField"
           id="104"
           type="text"
         />
@@ -1213,8 +1213,8 @@ exports[`<TextField /> OptionalIndicatorVariants story renders snapshot 1`] = `
         <input
           aria-invalid="false"
           aria-label="Label text"
-          class="text-input"
-          data-bootstrap-override="textinput"
+          class="input-field"
+          data-bootstrap-override="InputField"
           id="106"
           placeholder="placeholder"
           type="text"
@@ -1237,8 +1237,8 @@ exports[`<TextField /> OptionalIndicatorVariants story renders snapshot 1`] = `
         <input
           aria-invalid="false"
           aria-label="Label text"
-          class="text-input"
-          data-bootstrap-override="textinput"
+          class="input-field"
+          data-bootstrap-override="InputField"
           id="108"
           type="text"
         />
@@ -1270,8 +1270,8 @@ exports[`<TextField /> OptionalIndicatorVariants story renders snapshot 1`] = `
         <input
           aria-describedby="111"
           aria-invalid="true"
-          class="text-input error"
-          data-bootstrap-override="textinput"
+          class="input-field error"
+          data-bootstrap-override="InputField"
           id="110"
           placeholder="placeholder"
           type="text"
@@ -1325,8 +1325,8 @@ exports[`<TextField /> OptionalIndicatorVariants story renders snapshot 1`] = `
         <input
           aria-describedby="114"
           aria-invalid="true"
-          class="text-input error"
-          data-bootstrap-override="textinput"
+          class="input-field error"
+          data-bootstrap-override="InputField"
           id="113"
           type="text"
         />
@@ -1382,8 +1382,8 @@ exports[`<TextField /> OptionalIndicatorVariants story renders snapshot 1`] = `
         <input
           aria-describedby="117"
           aria-invalid="false"
-          class="text-input"
-          data-bootstrap-override="textinput"
+          class="input-field"
+          data-bootstrap-override="InputField"
           disabled=""
           id="116"
           placeholder="placeholder"
@@ -1420,8 +1420,8 @@ exports[`<TextField /> OptionalIndicatorVariants story renders snapshot 1`] = `
         <input
           aria-describedby="119"
           aria-invalid="false"
-          class="text-input"
-          data-bootstrap-override="textinput"
+          class="input-field"
+          data-bootstrap-override="InputField"
           disabled=""
           id="118"
           type="text"
@@ -1465,8 +1465,8 @@ exports[`<TextField /> RequiredIndicator story renders snapshot 1`] = `
       <input
         aria-describedby="9"
         aria-invalid="false"
-        class="text-input"
-        data-bootstrap-override="textinput"
+        class="input-field"
+        data-bootstrap-override="InputField"
         id="8"
         required=""
         type="text"
@@ -1522,8 +1522,8 @@ exports[`<TextField /> RequiredIndicatorVariants story renders snapshot 1`] = `
         <input
           aria-describedby="69"
           aria-invalid="false"
-          class="text-input"
-          data-bootstrap-override="textinput"
+          class="input-field"
+          data-bootstrap-override="InputField"
           id="68"
           placeholder="placeholder"
           required=""
@@ -1560,8 +1560,8 @@ exports[`<TextField /> RequiredIndicatorVariants story renders snapshot 1`] = `
         <input
           aria-describedby="71"
           aria-invalid="false"
-          class="text-input"
-          data-bootstrap-override="textinput"
+          class="input-field"
+          data-bootstrap-override="InputField"
           id="70"
           required=""
           type="text"
@@ -1599,8 +1599,8 @@ exports[`<TextField /> RequiredIndicatorVariants story renders snapshot 1`] = `
       >
         <input
           aria-invalid="false"
-          class="text-input"
-          data-bootstrap-override="textinput"
+          class="input-field"
+          data-bootstrap-override="InputField"
           id="72"
           placeholder="placeholder"
           required=""
@@ -1630,8 +1630,8 @@ exports[`<TextField /> RequiredIndicatorVariants story renders snapshot 1`] = `
       >
         <input
           aria-invalid="false"
-          class="text-input"
-          data-bootstrap-override="textinput"
+          class="input-field"
+          data-bootstrap-override="InputField"
           id="74"
           required=""
           type="text"
@@ -1658,8 +1658,8 @@ exports[`<TextField /> RequiredIndicatorVariants story renders snapshot 1`] = `
           aria-describedby="77"
           aria-invalid="false"
           aria-label="Label text"
-          class="text-input"
-          data-bootstrap-override="textinput"
+          class="input-field"
+          data-bootstrap-override="InputField"
           id="76"
           placeholder="placeholder"
           required=""
@@ -1690,8 +1690,8 @@ exports[`<TextField /> RequiredIndicatorVariants story renders snapshot 1`] = `
           aria-describedby="79"
           aria-invalid="false"
           aria-label="Label text"
-          class="text-input"
-          data-bootstrap-override="textinput"
+          class="input-field"
+          data-bootstrap-override="InputField"
           id="78"
           required=""
           type="text"
@@ -1723,8 +1723,8 @@ exports[`<TextField /> RequiredIndicatorVariants story renders snapshot 1`] = `
         <input
           aria-invalid="false"
           aria-label="Label text"
-          class="text-input"
-          data-bootstrap-override="textinput"
+          class="input-field"
+          data-bootstrap-override="InputField"
           id="80"
           placeholder="placeholder"
           required=""
@@ -1748,8 +1748,8 @@ exports[`<TextField /> RequiredIndicatorVariants story renders snapshot 1`] = `
         <input
           aria-invalid="false"
           aria-label="Label text"
-          class="text-input"
-          data-bootstrap-override="textinput"
+          class="input-field"
+          data-bootstrap-override="InputField"
           id="82"
           required=""
           type="text"
@@ -1782,8 +1782,8 @@ exports[`<TextField /> RequiredIndicatorVariants story renders snapshot 1`] = `
         <input
           aria-describedby="85"
           aria-invalid="true"
-          class="text-input error"
-          data-bootstrap-override="textinput"
+          class="input-field error"
+          data-bootstrap-override="InputField"
           id="84"
           placeholder="placeholder"
           required=""
@@ -1838,8 +1838,8 @@ exports[`<TextField /> RequiredIndicatorVariants story renders snapshot 1`] = `
         <input
           aria-describedby="88"
           aria-invalid="true"
-          class="text-input error"
-          data-bootstrap-override="textinput"
+          class="input-field error"
+          data-bootstrap-override="InputField"
           id="87"
           required=""
           type="text"
@@ -1896,8 +1896,8 @@ exports[`<TextField /> RequiredIndicatorVariants story renders snapshot 1`] = `
         <input
           aria-describedby="91"
           aria-invalid="false"
-          class="text-input"
-          data-bootstrap-override="textinput"
+          class="input-field"
+          data-bootstrap-override="InputField"
           disabled=""
           id="90"
           placeholder="placeholder"
@@ -1935,8 +1935,8 @@ exports[`<TextField /> RequiredIndicatorVariants story renders snapshot 1`] = `
         <input
           aria-describedby="93"
           aria-invalid="false"
-          class="text-input"
-          data-bootstrap-override="textinput"
+          class="input-field"
+          data-bootstrap-override="InputField"
           disabled=""
           id="92"
           required=""
