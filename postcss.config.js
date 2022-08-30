@@ -1,12 +1,15 @@
 const breakpoints = require('./src/design-tokens/tier-1-definitions/breakpoints');
 
 module.exports = {
-  plugins: [
-    require('postcss-import')({
+  plugins: {
+    'postcss-import': {
       addModulesDirectories: ['node_modules'],
-    }),
-    require('postcss-mixins'),
-    require('postcss-nested'),
-    require('postcss-simple-vars')({ variables: breakpoints }),
-  ],
+    },
+    'postcss-mixins': {},
+    'postcss-simple-vars': { variables: breakpoints },
+    // TODO: replace with tailwindcss/nesting (https://tailwindcss.com/docs/using-with-preprocessors#nesting)
+    // to silence warnings; for some reason this is not working currently.
+    'postcss-nested': {},
+    tailwindcss: {},
+  },
 };
