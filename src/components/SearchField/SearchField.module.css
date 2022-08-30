@@ -3,6 +3,11 @@
 \*------------------------------------*/
 
 .search-field {
+  flex: 1;
+  position: relative;
+}
+
+.search-field__input {
   padding-left: 2.25rem;
 }
 
@@ -13,6 +18,10 @@
   left: 0.625rem;
 }
 
-.search-field:focus-visible + .search-field__icon {
+.search-field__input:focus-visible + .search-field__icon {
   color: var(--eds-theme-color-icon-brand-primary);
+}
+
+.search-field__icon--disabled {
+  color: var(--eds-theme-color-icon-disabled);
 }

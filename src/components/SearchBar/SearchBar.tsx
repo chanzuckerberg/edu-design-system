@@ -29,8 +29,8 @@ export const SearchBar = ({ className, disabled }: Props) => {
 
   return (
     <div className={componentClassName}>
-      <SearchField />
-      <SearchButton />
+      <SearchField disabled={disabled} />
+      <SearchButton disabled={disabled} />
     </div>
   );
 };

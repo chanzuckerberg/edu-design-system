@@ -8,6 +8,10 @@ export type SearchButtonProps = {
    * CSS class names that can be appended to the component.
    */
   className?: string;
+  /**
+   * Disables the button and prevents button use.
+   */
+  disabled?: boolean;
 };
 
 /**

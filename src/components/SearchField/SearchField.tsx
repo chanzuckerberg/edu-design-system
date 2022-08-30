@@ -13,24 +13,33 @@ import TextInput, { TextInputProps } from '../TextInput';
  *
  * A search TextInput component styled for use with the SearchBar.
  */
-export const SearchField = ({ className, ...other }: TextInputProps) => {
-  const componentClassName = clsx(styles['search-field'], className);
+export const SearchField = ({
+  className,
+  disabled,
+  ...other
+}: TextInputProps) => {
+  const inputClassName = clsx(styles['search-field__input'], className);
+  const iconClassName = clsx(
+    styles['search-field__icon'],
+    disabled && styles['search-field__icon--disabled'],
+  );
 
   return (
-    <>
+    <div className={styles['search-field']}>
       <TextInput
-        className={componentClassName}
+        className={inputClassName}
+        disabled={disabled}
         placeholder="Search"
         type="search"
         {...other}
       />
       <Icon
-        className={styles['search-field__icon']}
+        className={iconClassName}
         name="search"
         purpose="informative"
         size="1.25rem"
         title="search"
       />
-    </>
+    </div>
   );
 };
