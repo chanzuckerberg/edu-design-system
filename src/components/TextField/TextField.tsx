@@ -184,7 +184,7 @@ export const TextField = ({
         <InputField
           aria-describedby={ariaDescribedByVar}
           aria-invalid={!!isError}
-          data-bootstrap-override="InputField"
+          data-bootstrap-override="inputfield"
           disabled={disabled}
           id={idVar}
           isError={isError}
