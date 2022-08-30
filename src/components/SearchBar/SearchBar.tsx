@@ -22,7 +22,7 @@ export type Props = {
  * import {SearchBar} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * Input field and button used for searching through various data fields.
  */
 export const SearchBar = ({ children, className }: Props) => {
   const componentClassName = clsx(styles['search-bar'], className);

@@ -2,6 +2,9 @@
     # SEARCH FIELD
 \*------------------------------------*/
 
+/**
+ * Search bar wrapper for the SearchField and SearchButton
+ */
 .search-bar {
   display: flex;
   gap: var(--eds-size-1);
