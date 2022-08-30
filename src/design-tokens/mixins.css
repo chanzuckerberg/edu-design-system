@@ -59,7 +59,7 @@
   @mixin textLink;
   color: var(--eds-theme-color-text-neutral-default-inverse);
 
-  &:focus-visible {
+  &:focus {
     @mixin focusInverted;
   }
 }
@@ -104,7 +104,7 @@
     border-color: var(--eds-theme-color-form-border-hover);
   }
 
-  &:focus-visible {
+  &:focus {
     @mixin focus;
     border-color: var(--eds-theme-color-border-brand-primary-strong);
   }

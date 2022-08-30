@@ -17,7 +17,7 @@
   display: block;
   width: fit-content; /* 1 */
 
-  &:focus-visible {
+  &:focus {
     @mixin focusInverted;
   }
 }

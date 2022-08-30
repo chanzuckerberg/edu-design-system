@@ -28,7 +28,7 @@
   overscroll-behavior-y: contain;
   z-index: var(--eds-z-index-bottom);
 
-  &:focus-visible {
+  &:focus {
     @mixin focus;
   }
 

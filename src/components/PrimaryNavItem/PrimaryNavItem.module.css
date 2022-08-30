@@ -26,7 +26,7 @@
     background: var(--eds-theme-color-button-primary-brandbackground-active);
   }
 
-  &:focus-visible {
+  &:focus {
     @mixin focusInverted;
   }
 
