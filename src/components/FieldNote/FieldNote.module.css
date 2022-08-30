@@ -22,15 +22,19 @@
 }
 
 /**
+ * Disabled variant
+ */
+.field-note--disabled {
+  color: var(--eds-theme-color-text-disabled);
+}
+
+/**
  * Error variant
  */
 .field-note--error {
   color: var(--eds-theme-color-text-utility-error);
 }
-.field-note--disabled {
-  color: var(--eds-theme-color-text-disabled);
-}
-.field-note--error.field-note__icon {
+.field-note--error > .field-note__icon {
   color: var(--eds-theme-color-icon-utility-error);
 }
 
