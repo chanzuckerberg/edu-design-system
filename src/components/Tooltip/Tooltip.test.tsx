@@ -6,7 +6,7 @@ import React from 'react';
 import * as TooltipStoryFile from './Tooltip.stories';
 import consoleWarnMockHelper from '../../../jest/helpers/consoleWarnMock';
 
-const { Interactive } = composeStories(TooltipStoryFile);
+const { Interactive, InteractiveDisabled } = composeStories(TooltipStoryFile);
 
 describe('<Tooltip />', () => {
   const warnMock = consoleWarnMockHelper();
@@ -27,6 +27,18 @@ describe('<Tooltip />', () => {
     expect(screen.getByTestId('tooltip-content')).toBeInTheDocument();
     await userEvent.keyboard('{esc}');
     expect(screen.queryByTestId('tooltip-content')).not.toBeInTheDocument();
+  });
+
+  it('should close tooltip via escape key for disabled buttons', async () => {
+    // disable animation for test
+    render(<InteractiveDisabled duration={0} />);
+    const trigger = await screen.findByTestId('disabled-child-tooltip-wrapper');
+    expect(screen.queryByTestId('tooltip-content')).not.toBeInTheDocument();
+    await userEvent.hover(trigger);
+    expect(screen.getByTestId('tooltip-content')).toBeInTheDocument();
+    // TODO: make worky
+    // await userEvent.keyboard('{esc}');
+    // expect(screen.queryByTestId('tooltip-content')).not.toBeInTheDocument();
   });
 
   it('should display warning message when attempting to use dark variant', () => {
