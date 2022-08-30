@@ -30,7 +30,7 @@
 /**
  * Focused variant of the Search Icon.
  */
-.search-field__input:focus-visible + .search-field__icon {
+.search-field__input:focus + .search-field__icon {
   color: var(--eds-theme-color-icon-brand-primary);
 }
 
