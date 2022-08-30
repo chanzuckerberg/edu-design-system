@@ -1,5 +1,6 @@
 // Import base-level styles
 import '../src/design-tokens/css/base/reset.css';
+import '../src/design-tokens/css/base/tailwind.css';
 import '../src/design-tokens/css/base/body.css';
 import '../src/design-tokens/css/base/media.css';
 
