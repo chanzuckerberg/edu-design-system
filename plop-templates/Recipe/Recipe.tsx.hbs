@@ -1,5 +1,5 @@
-import React from 'react';
 import clsx from 'clsx';
+import React from 'react';
 import styles from './{{pascalCase name}}.module.css';
 
 export interface Props {
@@ -16,8 +16,7 @@ export const {{pascalCase name}} = ({
   className,
   ...other
 }: Props) => {
-  const componentClassName = clsx(styles['{{dashCase name}}'], className, {
-  });
+  const componentClassName = clsx(styles['{{dashCase name}}'], className);
   return (
     <div
       className={componentClassName}

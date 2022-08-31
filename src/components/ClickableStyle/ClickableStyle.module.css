@@ -22,10 +22,17 @@
   border-radius: var(--eds-border-radius-md);
   cursor: pointer;
   text-decoration: none; /* 4 */
-  transition: all var(--eds-anim-fade-quick) var(--eds-anim-ease);
+  transition-property: color, background-color, border-color;
+  transition-duration: var(--eds-anim-fade-quick);
+  transition-timing-function: var(--eds-anim-ease);
 
   svg {
     --icon-size-default: 2em; /* 5 */
+    transition: color var(--eds-anim-fade-quick) var(--eds-anim-ease);
+
+    @media screen and (prefers-reduced-motion) {
+      transition: none;
+    }
   }
 
   &:focus {
