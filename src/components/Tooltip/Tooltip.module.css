@@ -53,7 +53,7 @@
  * 1) When childDisabled is true and alignment is top or bottom
  */
 .tooltip__child-disabled-wrapper--vertical {
-  /* Needed for the bottom alignment to work properly */
+  /* Needed for the top and bottom alignment to work properly */
   display: inline-flex;
 }
 
