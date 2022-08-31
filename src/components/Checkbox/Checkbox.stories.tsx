@@ -11,7 +11,7 @@ const defaultArgs = {
 };
 
 export default {
-  title: 'Molecules/Forms/Checkbox',
+  title: 'Atoms/Forms/Checkbox',
   component: Checkbox,
   args: defaultArgs,
   argTypes: {
