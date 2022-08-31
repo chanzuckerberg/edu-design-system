@@ -177,7 +177,10 @@ export const Interactive: StoryObj<Args> = {
 };
 
 export const InteractiveDisabled: StoryObj<Args> = {
-  render: () => (
+  args: {
+    duration: undefined,
+  },
+  render: (args) => (
     <div
       className={clsx(
         styles['trigger--spacing-top'],
@@ -187,7 +190,7 @@ export const InteractiveDisabled: StoryObj<Args> = {
       <Tooltip
         align="top"
         childDisabled={true}
-        duration={0}
+        duration={args.duration}
         text={defaultArgs.text}
       >
         <Button disabled variant="primary">
