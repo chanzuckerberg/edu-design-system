@@ -7,10 +7,10 @@ export default {
   title: 'Recipes/DataSummaryCard',
   component: DataSummaryCard,
   args: {
-    title: 'students',
-    data: 'XXX',
+    title: 'title',
+    dataAmount: 'XXX',
     dataUnit: '/ XXX',
-    description: 'Off Track',
+    description: 'Description',
   },
 } as Meta<Args>;
 
@@ -25,13 +25,15 @@ export const OffTrack: StoryObj<Args> = {
 
 export const NoDataUnit: StoryObj<Args> = {
   args: {
-    data: '30',
+    dataAmount: '30',
     dataUnit: undefined,
   },
 };
 
 export const NoDescription: StoryObj<Args> = {
   args: {
+    dataAmount: '50',
+    dataUnit: '%',
     description: undefined,
   },
 };

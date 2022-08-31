@@ -12,7 +12,7 @@ export interface Props {
   /**
    * Main data text of the card.
    */
-  data?: string;
+  dataAmount: string;
   /**
    * Text that provides a unit of measurement for the data.
    */
@@ -20,10 +20,9 @@ export interface Props {
   /**
    * Text to provide more context for the data.
    */
-
   description?: string;
   /**
-   * Title text of the data to represented.
+   * Title text of the data represented.
    */
   title: string;
   /**
@@ -37,7 +36,7 @@ export interface Props {
  */
 export const DataSummaryCard = ({
   className,
-  data,
+  dataAmount,
   dataUnit,
   description,
   title,
@@ -54,11 +53,10 @@ export const DataSummaryCard = ({
       </Card.Header>
       <Card.Body className={styles['data-summary-card__body']}>
         <Text
-          as="p"
           className={styles['data-summary-card__data']}
           variant="neutral-medium"
         >
-          {data}
+          {dataAmount}
           {dataUnit && (
             <Text
               as="span"
@@ -71,7 +69,6 @@ export const DataSummaryCard = ({
         </Text>
         {description && (
           <Text
-            as="p"
             className={styles['data-summary-card__description']}
             variant="neutral-subtle"
           >
