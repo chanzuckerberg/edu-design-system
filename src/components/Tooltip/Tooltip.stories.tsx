@@ -162,7 +162,7 @@ export const Interactive: StoryObj<Args> = {
     visible: undefined,
     children: (
       <Button className={clsx(styles['trigger--spacing'])} variant="primary">
-        Hover here to see tooltip after clicking somewhere outside.
+        Tooltip trigger
       </Button>
     ),
   },

@@ -189,7 +189,7 @@ exports[`<Tooltip /> Interactive story renders snapshot 1`] = `
         data-bootstrap-override="clickable-style-primary"
         type="button"
       >
-        Hover here to see tooltip after clicking somewhere outside.
+        Tooltip trigger
       </button>
     </div>
   </div>
