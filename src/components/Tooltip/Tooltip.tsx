@@ -23,6 +23,14 @@ type TooltipProps = {
    */
   children?: React.ReactElement;
   /**
+   * If the child being passed into the Tooltip via the `children` prop is disabled (e.g. a disabled button).
+   *
+   * Please note that spacing and placement styling will need to be added to a wrapper around the Tooltip,
+   * not on the button child inside the Tooltip, because there will be a wrapper around the button child. Example:
+   * <div className="spacing-goes-here"><Tooltip text="Tooltip text"><Button disabled>Button text</Button></Tooltip></div>
+   */
+  childDisabled?: boolean;
+  /**
    * Custom classname for additional styles.
    *
    * These styles will only affect the tooltip bubble.
@@ -82,10 +90,21 @@ type Plugin = Plugins[number];
  *
  * https://atomiks.github.io/tippyjs/
  * https://github.com/atomiks/tippyjs-react
+ *
+ * Example usage:
+ *
+ * ```tsx
+ * <Tooltip>
+ *   <Button variant="primary">
+ *     Tooltip trigger
+ *   </Button>
+ * </Tooltip>
+ * ```
  */
 export const Tooltip = ({
   variant = 'light',
   align = 'top',
+  childDisabled,
   className,
   duration = 200,
   text,
@@ -96,6 +115,7 @@ export const Tooltip = ({
       'The dark variant is deprecated and will be removed in an upcoming release. Please use the default light variant instead.',
     );
   }
+
   // Hides tooltip when escape key is pressed, following:
   // https://atomiks.github.io/tippyjs/v6/plugins/#hideonesc
   const hideOnEsc: Plugin = {
@@ -117,6 +137,26 @@ export const Tooltip = ({
       };
     },
   };
+
+  let children = rest.children;
+  // Tippy only works on elements with a tabindex. If the child is disabled, we need to
+  // wrap it in an element with a tabindex in order for it to work.
+  if (childDisabled) {
+    children = (
+      <span
+        className={clsx(
+          (align === 'bottom' || align === 'top') &&
+            styles['tooltip__child-disabled-wrapper--vertical'],
+        )}
+        data-testid="disabled-child-tooltip-wrapper"
+        // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
+        tabIndex={0}
+      >
+        {rest.children}
+      </span>
+    );
+  }
+
   return (
     <Tippy
       {...rest}
@@ -130,6 +170,8 @@ export const Tooltip = ({
       duration={duration}
       placement={align}
       plugins={[hideOnEsc]}
-    />
+    >
+      {children}
+    </Tippy>
   );
 };
