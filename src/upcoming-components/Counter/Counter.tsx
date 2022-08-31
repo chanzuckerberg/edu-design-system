@@ -5,8 +5,8 @@ import styles from './Counter.module.css';
 import Button from '../../components/Button';
 import FieldNote from '../../components/FieldNote';
 import Icon from '../../components/Icon';
+import InputField from '../../components/InputField';
 import Label from '../../components/Label';
-import TextInput from '../../components/TextInput';
 
 export interface Props {
   /**
@@ -181,7 +181,7 @@ export const Counter = ({
         >
           <Icon name="remove" purpose="informative" title={minusButtonText} />
         </Button>
-        <TextInput
+        <InputField
           aria-describedby={ariaDescribedByVar}
           aria-labelledby={ariaLabelledByVar}
           aria-live="assertive"

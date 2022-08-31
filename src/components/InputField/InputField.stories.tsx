@@ -2,15 +2,15 @@ import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
-import { TextInput } from './TextInput';
+import { InputField } from './InputField';
 
 export default {
-  title: 'Atoms/Forms/TextInput',
-  component: TextInput,
+  title: 'Atoms/Forms/InputField',
+  component: InputField,
   parameters: {
     badges: [BADGE.BETA],
     axe: {
-      // textinput component independent of label, expected accessibility error
+      // InputField component independent of label, expected accessibility error
       disabledRules: ['label'],
     },
   },
@@ -23,7 +23,7 @@ export default {
   ],
 } as Meta<Args>;
 
-type Args = React.ComponentProps<typeof TextInput>;
+type Args = React.ComponentProps<typeof InputField>;
 
 export const Default: StoryObj<Args> = {
   args: {
@@ -33,20 +33,20 @@ export const Default: StoryObj<Args> = {
 export const Disabled: StoryObj<Args> = {
   render: () => (
     <>
-      <TextInput
+      <InputField
         defaultValue="Default Value"
         disabled
         style={{ marginBottom: '0.5rem' }}
       />
-      <TextInput disabled placeholder="Placeholder" />
+      <InputField disabled placeholder="Placeholder" />
     </>
   ),
 };
 export const Error: StoryObj<Args> = {
   render: () => (
     <>
-      <TextInput isError style={{ marginBottom: '0.5rem' }} />
-      <TextInput isError placeholder="Placeholder" />
+      <InputField isError style={{ marginBottom: '0.5rem' }} />
+      <InputField isError placeholder="Placeholder" />
     </>
   ),
 };

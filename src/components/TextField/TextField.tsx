@@ -3,9 +3,9 @@ import React, { ChangeEventHandler, ReactNode } from 'react';
 import { useUID } from 'react-uid';
 import styles from './TextField.module.css';
 import FieldNote from '../FieldNote';
+import InputField from '../InputField';
 import Label from '../Label';
 import Text from '../Text';
-import TextInput from '../TextInput';
 
 export interface Props {
   /**
@@ -181,10 +181,10 @@ export const TextField = ({
       )}
 
       <div className={styles['text-field__body']}>
-        <TextInput
+        <InputField
           aria-describedby={ariaDescribedByVar}
           aria-invalid={!!isError}
-          data-bootstrap-override="textinput"
+          data-bootstrap-override="inputfield"
           disabled={disabled}
           id={idVar}
           isError={isError}

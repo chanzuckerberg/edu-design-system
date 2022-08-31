@@ -3,8 +3,8 @@ import React, { ReactNode } from 'react';
 import { useUID } from 'react-uid';
 import styles from './InlineForm.module.css';
 import Button from '../../components/Button';
+import InputField from '../../components/InputField';
 import Label from '../../components/Label';
-import TextInput from '../../components/TextInput';
 
 export interface Props {
   /**
@@ -80,7 +80,7 @@ export const InlineForm = ({
           text={label}
         />
       )}
-      <TextInput
+      <InputField
         className={styles['inline-form__input']}
         id={idVar}
         placeholder={placeholder}

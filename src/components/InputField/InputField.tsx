@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 import React, { ChangeEventHandler } from 'react';
-import styles from './TextInput.module.css';
+import styles from './InputField.module.css';
 
-export type TextInputProps = React.InputHTMLAttributes<HTMLInputElement> & {
+export type InputFieldProps = React.InputHTMLAttributes<HTMLInputElement> & {
   /**
    * String that describes a type of file that may be selected by the user
    * https://developer.mozilla.org/en-US/docs/Web/*HTML/Element/input/file#Unique_file_type_specifiers
@@ -116,20 +116,20 @@ export type TextInputProps = React.InputHTMLAttributes<HTMLInputElement> & {
  * BETA: This component is still a work in progress and is subject to change.
  *
  * ```ts
- * import {TextInput} from "@chanzuckerberg/eds";
+ * import {InputField} from "@chanzuckerberg/eds";
  * ```
  *
  * Text input component for one line of text. For multiple lines, consider the Textarea component.
  */
-export const TextInput = ({
+export const InputField = ({
   className,
   disabled,
   id,
   isError,
   ...other
-}: TextInputProps) => {
+}: InputFieldProps) => {
   const componentClassName = clsx(
-    styles['text-input'],
+    styles['input-field'],
     isError && styles['error'],
     className,
   );
