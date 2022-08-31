@@ -36,9 +36,8 @@ describe('<Tooltip />', () => {
     expect(screen.queryByTestId('tooltip-content')).not.toBeInTheDocument();
     await userEvent.hover(trigger);
     expect(screen.getByTestId('tooltip-content')).toBeInTheDocument();
-    // TODO: make worky
-    // await userEvent.keyboard('{esc}');
-    // expect(screen.queryByTestId('tooltip-content')).not.toBeInTheDocument();
+    await userEvent.keyboard('{esc}');
+    expect(screen.queryByTestId('tooltip-content')).not.toBeInTheDocument();
   });
 
   it('should display warning message when attempting to use dark variant', () => {

@@ -184,7 +184,12 @@ export const InteractiveDisabled: StoryObj<Args> = {
         styles['trigger--spacing-left'],
       )}
     >
-      <Tooltip align="top" childDisabled={true} text={defaultArgs.text}>
+      <Tooltip
+        align="top"
+        childDisabled={true}
+        duration={0}
+        text={defaultArgs.text}
+      >
         <Button disabled variant="primary">
           Tooltip trigger
         </Button>
