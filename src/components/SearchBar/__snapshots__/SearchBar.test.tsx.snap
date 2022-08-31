@@ -1,0 +1,223 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SearchField /> Custom story renders snapshot 1`] = `
+<div
+  style="padding: 0.5rem; background-color: white;"
+>
+  <div
+    style="margin-bottom: 1rem;"
+  >
+    <button
+      class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary search-button"
+      data-bootstrap-override="clickable-style-primary"
+      type="button"
+    >
+      Search
+    </button>
+    <div
+      class="search-field"
+    >
+      <input
+        class="text-input search-field__input"
+        placeholder="Search"
+        type="search"
+      />
+      <svg
+        class="icon search-field__icon"
+        fill="currentColor"
+        height="1.25rem"
+        role="img"
+        style="--icon-size: 1.25rem;"
+        width="1.25rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title
+          id="3"
+        >
+          search
+        </title>
+        <use
+          xlink:href="test-file-stub#search"
+        />
+      </svg>
+    </div>
+  </div>
+  <div>
+    <div
+      class="search-field"
+    >
+      <input
+        class="text-input search-field__input"
+        placeholder="Search"
+        type="search"
+      />
+      <svg
+        class="icon search-field__icon"
+        fill="currentColor"
+        height="1.25rem"
+        role="img"
+        style="--icon-size: 1.25rem;"
+        width="1.25rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title
+          id="4"
+        >
+          search
+        </title>
+        <use
+          xlink:href="test-file-stub#search"
+        />
+      </svg>
+    </div>
+    <button
+      class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary search-button"
+      data-bootstrap-override="clickable-style-primary"
+      type="button"
+    >
+      Search
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<SearchField /> Default story renders snapshot 1`] = `
+<div
+  style="padding: 0.5rem; background-color: white;"
+>
+  <div
+    class="search-bar"
+  >
+    <div
+      class="search-field"
+    >
+      <input
+        class="text-input search-field__input"
+        placeholder="Search"
+        type="search"
+      />
+      <svg
+        class="icon search-field__icon"
+        fill="currentColor"
+        height="1.25rem"
+        role="img"
+        style="--icon-size: 1.25rem;"
+        width="1.25rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title
+          id="1"
+        >
+          search
+        </title>
+        <use
+          xlink:href="test-file-stub#search"
+        />
+      </svg>
+    </div>
+    <button
+      class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary search-button"
+      data-bootstrap-override="clickable-style-primary"
+      type="button"
+    >
+      Search
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<SearchField /> Disabled story renders snapshot 1`] = `
+<div
+  style="padding: 0.5rem; background-color: white;"
+>
+  <div
+    class="search-bar"
+  >
+    <div
+      class="search-field"
+    >
+      <input
+        class="text-input search-field__input"
+        disabled=""
+        placeholder="Search"
+        type="search"
+      />
+      <svg
+        class="icon search-field__icon search-field__icon--disabled"
+        fill="currentColor"
+        height="1.25rem"
+        role="img"
+        style="--icon-size: 1.25rem;"
+        width="1.25rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title
+          id="2"
+        >
+          search
+        </title>
+        <use
+          xlink:href="test-file-stub#search"
+        />
+      </svg>
+    </div>
+    <button
+      class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary button--disabled search-button"
+      data-bootstrap-override="clickable-style-primary"
+      disabled=""
+      tabindex="-1"
+      type="button"
+    >
+      Search
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<SearchField /> SearchButton story renders snapshot 1`] = `
+<div
+  style="padding: 0.5rem; background-color: white;"
+>
+  <button
+    class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary search-button"
+    data-bootstrap-override="clickable-style-primary"
+    type="button"
+  >
+    Search
+  </button>
+</div>
+`;
+
+exports[`<SearchField /> SearchField story renders snapshot 1`] = `
+<div
+  style="padding: 0.5rem; background-color: white;"
+>
+  <div
+    class="search-field"
+  >
+    <input
+      class="text-input search-field__input"
+      placeholder="Search"
+      type="search"
+    />
+    <svg
+      class="icon search-field__icon"
+      fill="currentColor"
+      height="1.25rem"
+      role="img"
+      style="--icon-size: 1.25rem;"
+      width="1.25rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="5"
+      >
+        search
+      </title>
+      <use
+        xlink:href="test-file-stub#search"
+      />
+    </svg>
+  </div>
+</div>
+`;
