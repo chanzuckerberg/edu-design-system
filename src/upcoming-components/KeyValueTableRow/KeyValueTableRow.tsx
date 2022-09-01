@@ -13,9 +13,7 @@ export interface Props {
    * 1) The value in the key value pair that sits on the right
    */
   rowValue?: ReactNode;
-  /**
-   * CSS class names that can be appended to the component.
-   */
+  /* CSS class names that can be appended to the component. */
   className?: string;
 }
 
@@ -26,7 +24,8 @@ export interface Props {
  * import {KeyValueTableRow} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * Component represents the layout for the rows in the KeyValue table with key value pair passed in the props along with the
+ * addtional styles passed in.
  */
 export const KeyValueTableRow = ({
   className,

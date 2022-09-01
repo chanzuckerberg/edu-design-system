@@ -3,19 +3,9 @@ import React, { ReactNode } from 'react';
 import styles from './Band.module.css';
 
 export interface Props {
-  /**
-   * Child node(s) that can be nested inside component
-   */
-  children: ReactNode;
-  /**
-   * CSS class names that can be appended to the component.
-   */
-  className?: string;
-  /**
-   * Stylistic variations of component.
-   * - `brand` yields the primary brand color
-   */
-  variant?: 'brand';
+  children: ReactNode /* Child node(s) that can be nested inside component */;
+  className?: string /* CSS class names that can be appended to the component. */;
+  variant?: 'brand' /* Stylistic variations of component. - `brand` yields the primary brand color */;
 }
 
 /**
@@ -25,7 +15,7 @@ export interface Props {
  * import {Band} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * Component is called Band with the band syling and based on variant props ,addtional styling passed in
  */
 export const Band = ({ children, className, variant, ...other }: Props) => {
   const componentClassName = clsx(

@@ -3,21 +3,13 @@ import Icon from '../../components/Icon';
 import styles from '../Tags/Tags.module.css';
 
 export interface TagsItemProps {
-  /**
-   * CSS class names that can be appended to the component.
-   */
+  /* CSS class names that can be appended to the component. */
   className?: string;
-  /**
-   * Toggles whether or not a tag is dismissible (rendered with an x button)
-   */
+  /* Toggles whether or not a tag is dismissible (rendered with an x button) */
   dismissible?: boolean;
-  /**
-   * Click handler function that a user can pass in when a tag is clicked
-   */
+  /* Click handler function that a user can pass in when a tag is clicked */
   onClick?: (e?: MouseEvent<HTMLElement>) => void;
-  /**
-   * Text string of the tag
-   */
+  /* Text string of the tag */
   text: string;
 }
 
@@ -28,7 +20,8 @@ export interface TagsItemProps {
  * import {TagsItem} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * TagsItem component is the clickable items with text embedded with passed in props, have dismissible property handled by the
+ * click event.
  */
 export const TagsItem = ({
   className,

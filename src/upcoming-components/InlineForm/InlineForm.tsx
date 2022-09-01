@@ -7,37 +7,21 @@ import Label from '../../components/Label';
 import TextInput from '../../components/TextInput';
 
 export interface Props {
-  /**
-   * HTML action attribute, which contains the URI to be triggered on form submission
-   */
+  /* HTML action attribute, which contains the URI to be triggered on form submission */
   action?: string;
-  /**
-   * Button call to action text
-   */
+  /* Button call to action text */
   buttonText?: string;
-  /**
-   * CSS class names that can be appended to the component.
-   */
+  /* CSS class names that can be appended to the component. */
   className?: string;
-  /**
-   * HTML id for the component
-   */
+  /* HTML id for the component */
   id?: string;
-  /**
-   * HTML label text
-   */
+  /* HTML label text */
   label?: string;
-  /**
-   * Slot for node to appear directly after field label. Typically used to include a Toolip
-   */
+  /* Slot for node to appear directly after field label. Typically used to include a Toolip */
   labelAfter: ReactNode;
-  /**
-   * The HTTP method the browser uses to submit the form
-   */
+  /* The HTTP method the browser uses to submit the form */
   method: 'get' | 'post';
-  /**
-   * Placeholder attribute for input. Note: placeholder should be used sparingly
-   */
+  /* Placeholder attribute for input. Note: placeholder should be used sparingly */
   placeholder?: string;
 }
 
@@ -48,7 +32,7 @@ export interface Props {
  * import {InlineForm} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * Component presents the inline form with button text input ,addtional styles passed in.
  */
 export const InlineForm = ({
   action,

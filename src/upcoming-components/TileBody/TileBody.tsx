@@ -1,13 +1,9 @@
 import React, { ReactNode } from 'react';
 
 export interface Props {
-  /**
-   * Child node(s) that can be nested inside component
-   */
+  /* Child node(s) that can be nested inside component */
   children: ReactNode;
-  /**
-   * CSS class names that can be appended to the component.
-   */
+  /* CSS class names that can be appended to the component. */
   className?: string;
 }
 
@@ -18,7 +14,7 @@ export interface Props {
  * import {TileBody} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * Component presents the container for the TileBody.
  */
 export const TileBody = ({ children, className, ...other }: Props) => {
   return (

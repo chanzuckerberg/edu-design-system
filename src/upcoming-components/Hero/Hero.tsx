@@ -4,25 +4,15 @@ import styles from './Hero.module.css';
 import LayoutContainer from '../../components/LayoutContainer';
 
 export interface Props {
-  /**
-   * Child node(s) that can be nested inside component. The Hero child nodes will appear below the hero title
-   */
+  /* Child node(s) that can be nested inside component. The Hero child nodes will appear below the hero title */
   children: ReactNode;
-  /**
-   * CSS class names that can be appended to the component.
-   */
+  /* CSS class names that can be appended to the component. */
   className?: string;
-  /**
-   * Hero image alt text
-   */
+  /* Hero image alt text */
   imgAlt: string;
-  /**
-   * Path to hero image
-   */
+  /* Path to hero image */
   imgSrc: string;
-  /**
-   * Hero heading title text
-   */
+  /* Hero heading title text */
   title?: string;
 }
 
@@ -33,7 +23,7 @@ export interface Props {
  * import {Hero} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * Hero component is the layout container for the hero image and the body, title props, and addtional styles passed in for the landing page.
  */
 export const Hero = ({
   children,

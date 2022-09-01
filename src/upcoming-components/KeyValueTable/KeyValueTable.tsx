@@ -3,21 +3,13 @@ import React, { ReactNode } from 'react';
 import styles from './KeyValueTable.module.css';
 
 export interface Props {
-  /**
-   * Child node(s) that can be nested inside component
-   */
+  /* Child node(s) that can be nested inside component */
   children: ReactNode;
-  /**
-   * CSS class names that can be appended to the component.
-   */
+  /* CSS class names that can be appended to the component. */
   className?: string;
-  /**
-   * Toggles component that fills the full width of its container
-   */
+  /* Toggles component that fills the full width of its container */
   fullWidth?: boolean;
-  /**
-   * Available _stylistic_ variations available for the component
-   */
+  /* Available _stylistic_ variations available for the component */
   variant?: 'lined';
 }
 
@@ -28,7 +20,8 @@ export interface Props {
  * import {KeyValueTable} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * Component presents the table for KeyValue items ,with styles defined based on the props variant and fullWidth and addtional
+ * style props passed in.
  */
 export const KeyValueTable = ({
   children,

@@ -3,13 +3,9 @@ import React from 'react';
 import styles from './SkeletonBar.module.css';
 
 export interface Props {
-  /**
-   * CSS class names that can be appended to the component.
-   */
+  /* CSS class names that can be appended to the component. */
   className?: string;
-  /**
-   * Stylistic variations of the bar
-   */
+  /* Stylistic variations of the bar */
   size?: 'sm' | 'lg' | 'xl';
 }
 
@@ -20,7 +16,7 @@ export interface Props {
  * import {SkeletonBar} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * Component present the bar layout for all the media screens sm, lg, xl.
  */
 export const SkeletonBar = ({ className, size, ...other }: Props) => {
   const componentClassName = clsx(

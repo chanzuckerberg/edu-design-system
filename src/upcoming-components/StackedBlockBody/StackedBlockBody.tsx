@@ -3,13 +3,9 @@ import React, { ReactNode } from 'react';
 import styles from '../StackedBlock/StackedBlock.module.css';
 
 export interface Props {
-  /**
-   * Child node(s) that can be nested inside component
-   */
+  /* Child node(s) that can be nested inside component */
   children?: ReactNode;
-  /**
-   * CSS class names that can be appended to the component.
-   */
+  /* CSS class names that can be appended to the component. */
   className?: string;
 }
 
@@ -20,7 +16,7 @@ export interface Props {
  * import {StackedBlockBody} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * Component represents the stacked block content tile, description and the hyperlink.
  */
 export const StackedBlockBody = ({ children, className, ...other }: Props) => {
   const componentClassName = clsx(styles['stacked-block__body'], className);

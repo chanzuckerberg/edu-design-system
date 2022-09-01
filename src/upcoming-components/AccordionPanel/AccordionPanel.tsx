@@ -12,37 +12,13 @@ import Icon from '../../components/Icon';
 import { EdsThemeColorIconNeutralStrong } from '../../tokens-dist/ts/colors';
 
 export interface Props {
-  /**
-   * Thinks the aria-control attribute in the accordion panel header to the id in the accordion panel body
-   */
-  ariaControls?: string;
-  /**
-   * Child node(s) that can be nested inside component
-   */
-  children?: ReactNode;
-  /**
-   * Accordion panel header slot for elements like heading
-   */
-  header?: ReactNode;
-  /**
-   * HTML id for aria-labelledby, which associates panel contents with the accordion title
-   */
-  'aria-labelledby'?: string;
-  /**
-   * CSS class names that can be appended to the component.
-   */
-  className?: string;
-  /**
-   * is Active
-   * 1) Panel is open when set to true. Close when set to false
-   */
-
-  isActive?: boolean;
-  /**
-   * Height property
-   */
-
-  height?: string;
+  ariaControls?: string /* Thinks the aria-control attribute in the accordion panel header to the id in the accordion panel body */;
+  children?: ReactNode /* Child node(s) that can be nested inside component */;
+  header?: ReactNode /* Accordion panel header slot for elements like heading */;
+  'aria-labelledby'?: string /* HTML id for aria-labelledby, which associates panel contents with the accordion title */;
+  className?: string /* CSS class names that can be appended to the component. */;
+  isActive?: boolean /* is Active 1) Panel is open when set to true. Close when set to false */;
+  height?: string /* Height property */;
 }
 
 /**
@@ -52,7 +28,8 @@ export interface Props {
  * import {AccordionPanel} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * Accordian panel component to toggle between accordian content and active styling for the selected accordian,
+ * with adddtional styling passing in.
  */
 export const AccordionPanel = ({
   children,

@@ -24,47 +24,16 @@ export interface Props {
    * https://developer.mozilla.org/en-US/docs/Web/*HTML/Element/input/file#Unique_file_type_specifiers
    */
   acceptedFileTypes?: string;
-  /**
-   * aria-describedby id string
-   */
-  'aria-describedby'?: string;
-  /**
-   * CSS class names that can be appended to the component.
-   */
-  className?: string;
-  /**
-   * Disables the field and prevents editing the contents
-   */
-  disabled?: boolean;
-  /**
-   * Drag and drop text
-   */
-  dragAndDropText?: string;
-  /**
-   * FieldNote
-   * Used as helper text or error message
-   */
-  fieldNote?: string;
-  /**
-   * FieldNote
-   * Used as helper text or error message
-   */
-  files?: Array<FileWithId>;
-  /**
-   * Toggles the visibility of the label. If hidden, the label text will still be accessible to assistive technologies
-   */
+  'aria-describedby'?: string /* aria-describedby id string */;
+  className?: string /* CSS class names that can be appended to the component. */;
+  disabled?: boolean /* Disables the field and prevents editing the contents */;
+  dragAndDropText?: string /* Drag and drop text */;
+  fieldNote?: string /* Used as helper text or error message */;
+  files?: Array<FileWithId> /* FieldNote Used as helper text or error message */;
+  /* Toggles the visibility of the label. If hidden, the label text will still be accessible to assistive technologies */
   hideLabel?: boolean;
-  /**
-   * Name of SVG icon (i.e. caret-down, minus, warning)
-   */
-  iconName?: IconName;
-  /**
-   * HTML id for the component
-   */
-  id?: string;
-  /**
-   * Gives a hint as to the type of data needed for text input
-   */
+  iconName?: IconName /* Name of SVG icon (i.e. caret-down, minus, warning) */;
+  id?: string /* HTML id for the component */;
   inputMode?:
     | 'search'
     | 'text'
@@ -73,76 +42,29 @@ export interface Props {
     | 'tel'
     | 'none'
     | 'numeric'
-    | 'decimal';
-  /**
-   * Error prop that can be passed into the field
-   */
-  isError?: boolean;
-  /**
-   * HTML label text
-   */
-  label?: string;
-  /**
-   * Slot for node to appear directly after field label. Typically used to include a Toolip
-   */
-  labelAfter?: ReactNode;
-  /**
-   * Maximum number of files to allow
-   */
-  maxFiles?: number;
-  /**
-   * Maximum file size in bytes
-   */
-  maxFileSize?: number;
-  /**
-   * Max file size error text
-   */
-  maxFileSizeErrorText?: string;
-  /**
-   * Multiple is a boolean to allow multiple files to be uploaded
-   */
-  multiple?: boolean;
-  /**
-   * HTML name attribute for the input
-   */
-  name?: string;
-  /**
-   * Function that runs on change of the input
-   * TODO: improve `any` type
-   */
-  onChange?: (e: any) => void;
-  /**
-   * String for the optional label. By default it is '(optional)'
-   */
-  optionalLabel?: string;
-  /**
-   * Placeholder attribute for input. Note: placeholder should be used sparingly
-   */
-  placeholder?: string;
-  /**
-   * Toggles the form control's interactivity. When `readOnly` is set to `true`, the form control is not interactive
-   */
-  readOnly?: boolean;
-  /**
-   * String for remove/x button text (for screen readers only) to remove file
-   */
-  removeFileButtonText?: string;
-  /**
-   * Indicates that field is required for form to be successfully submitted
-   */
-  required?: boolean;
-  /**
-   * String for the required label to add additional information if needed.
-   */
-  requiredLabel?: string;
-  /**
-   * String to denote the statusLabel of the upload
-   */
-  statusLabel?: 'uploading' | 'success' | 'error';
-  /**
-   * Value passed down from higher levels for initial state
-   */
-  value?: string;
+    | 'decimal' /* Gives a hint as to the type of data needed for text input */;
+  isError?: boolean /* Error prop that can be passed into the field */;
+  label?: string /* HTML label text */;
+  labelAfter?: ReactNode /* Slot for node to appear directly after field label. Typically used to include a Toolip */;
+  maxFiles?: number /* Maximum number of files to allow */;
+  maxFileSize?: number /* Maximum file size in bytes */;
+  maxFileSizeErrorText?: string /* Max file size error text */;
+  multiple?: boolean /* Multiple is a boolean to allow multiple files to be uploaded */;
+  name?: string /* HTML name attribute for the input */;
+  onChange?: (
+    e: any,
+  ) => void /* Function that runs on change of the input TODO: improve `any` type */;
+  optionalLabel?: string /* String for the optional label. By default it is '(optional)'*/;
+  placeholder?: string /* Placeholder attribute for input. Note: placeholder should be used sparingly */;
+  readOnly?: boolean /* Toggles the form control's interactivity. When `readOnly` is set to `true`, the form control is not interactive */;
+  removeFileButtonText?: string /* String for remove/x button text (for screen readers only) to remove file */;
+  required?: boolean /* Indicates that field is required for form to be successfully submitted */;
+  requiredLabel?: string /* String for the required label to add additional information if needed. */;
+  statusLabel?:
+    | 'uploading'
+    | 'success'
+    | 'error' /* String to denote the statusLabel of the upload */;
+  value?: string /* Value passed down from higher levels for initial state */;
 }
 
 /**
@@ -152,7 +74,8 @@ export interface Props {
  * import {FileUploadField} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * FileUploadField component used for file upload field with drag and drop feature ,with properties maximum file size limit and
+ * file types allowed defined with fieldNote props passed in, also consists of button component to remove file uploaded.
  */
 export const FileUploadField = ({
   acceptedFileTypes,
@@ -237,18 +160,10 @@ export const FileUploadField = ({
     if (!fileObjects) return;
     const fileArray: Array<File> = Array.from(fileObjects);
 
-    /*
-     * 1. Copy existing files from state to a new variable
-     * 2. Append new files to this new array
-     * 3. If there is a maxFiles limit and if the more files have been selected than the max,
-     *    remove those over the limit from the array.
-     * 4. Set new state with existing and newly selected files
-     */
-
-    /* 1 */
+    /* Copy existing files from state to a new variable */
     let files = [...filesState];
 
-    /* 2 */
+    /* Append new files to this new array */
     fileArray.forEach((file: File) => {
       if (maxFileSize && file.size >= maxFileSize) {
         setFieldNoteState(maxFileSizeErrorText);
@@ -262,12 +177,13 @@ export const FileUploadField = ({
       }
     });
 
-    /* 3 */
+    /* If there is a maxFiles limit and if the more files have been selected than the max,
+     remove those over the limit from the array. */
     if (maxFiles && files.length >= maxFiles) {
       files = files.splice(0, maxFiles);
     }
 
-    /* 4 */
+    /* Set new state with existing and newly selected files */
     setFilesState(files);
 
     if (onChange) {

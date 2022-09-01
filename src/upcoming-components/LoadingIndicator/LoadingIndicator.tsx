@@ -5,13 +5,9 @@ import Icon from '../../components/Icon';
 import { EdsThemeColorTextNeutralDefault } from '../../tokens-dist/ts/colors';
 
 export interface Props {
-  /**
-   * CSS class names that can be appended to the component.
-   */
+  /* CSS class names that can be appended to the component. */
   className?: string;
-  /**
-   * Width/Height string (px, rem, em, vh, etc.)
-   */
+  /* Width/Height string (px, rem, em, vh, etc.) */
   size?: string;
 }
 
@@ -22,7 +18,7 @@ export interface Props {
  * import {LoadingIndicator} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * Component used for the loader indicator for fileUpload ,data fetching...
  */
 export const LoadingIndicator = ({
   className,

@@ -3,18 +3,9 @@ import React from 'react';
 import styles from '../FooterNav/FooterNav.module.css';
 
 export interface Props {
-  /**
-   * CSS class names that can be appended to the component.
-   */
-  className?: string;
-  /**
-   * URL for the footer nav item
-   */
-  href?: string;
-  /**
-   * Footer nav item text
-   */
-  text?: string;
+  className?: string /* CSS class names that can be appended to the component */;
+  href?: string /* URL for the footer nav item */;
+  text?: string /* Footer nav item text */;
 }
 
 /**
@@ -24,7 +15,7 @@ export interface Props {
  * import {FooterNavItem} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * Component represents the footer navigation bar items consists hyperlink to redirect to respective links added to hrefs.
  */
 export const FooterNavItem = ({ className, href, text, ...other }: Props) => {
   const componentClassName = clsx(styles['footer-nav__item'], className);

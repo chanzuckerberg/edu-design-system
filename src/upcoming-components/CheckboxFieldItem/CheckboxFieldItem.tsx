@@ -5,51 +5,17 @@ import Checkbox from '../../components/Checkbox';
 import styles from '../CheckboxField/CheckboxField.module.css';
 
 export interface Props {
-  /**
-   * Toggles whether or not the checkbox is checked or unchecked
-   */
-  checked?: boolean;
-  /**
-   * CSS class names that can be appended to the component.
-   */
-  className?: string;
-  /**
-   * Disables the field and prevents editing the contents
-   */
-  disabled?: boolean;
-  /**
-   * HTML id for the component
-   */
-  id?: string;
-  /**
-   * Inverted variant for dark backgrounds
-   */
-  inverted?: boolean;
-  /**
-   /**
-    * HTML name attribute for the checkbox
-    */
-  name?: string;
-  /**
-   * Function that fires when the value changes
-   */
-  onChange?: ChangeEventHandler;
-  /**
-   * Toggles the form control's interactivity. When `readOnly` is set to `true`, the form control is not interactive
-   */
-  readOnly?: boolean;
-  /**
-   * Indicates that field is required for form to be successfully submitted
-   */
-  required?: boolean;
-  /**
-   * The label text for the CheckboxFieldItem
-   */
-  text: string;
-  /**
-   * A string representing the value of the checkbox
-   */
-  value?: string;
+  checked?: boolean /* Toggles whether or not the checkbox is checked or unchecked */;
+  className?: string /* CSS class names that can be appended to the component. */;
+  disabled?: boolean /* Disables the field and prevents editing the contents */;
+  id?: string /* HTML id for the component */;
+  inverted?: boolean /* Inverted variant for dark backgrounds */;
+  name?: string /* HTML name attribute for the checkbox */;
+  onChange?: ChangeEventHandler /* Function that fires when the value changes */;
+  readOnly?: boolean /* Toggles the form control's interactivity. When `readOnly` is set to `true`, the form control is not interactive */;
+  required?: boolean /* Indicates that field is required for form to be successfully submitted */;
+  text: string /* The label text for the CheckboxFieldItem */;
+  value?: string /* A string representing the value of the checkbox */;
 }
 
 /**
@@ -59,7 +25,7 @@ export interface Props {
  * import {CheckboxFieldItem} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * CheckboxFieldItem are the checkbox component with properties: checked, disabled, readOnly, text, inverted passed in
  */
 export const CheckboxFieldItem = ({
   className,

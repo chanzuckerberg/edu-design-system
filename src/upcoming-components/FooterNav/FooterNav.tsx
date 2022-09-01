@@ -4,18 +4,9 @@ import styles from './FooterNav.module.css';
 import FooterNavItem from '../FooterNavItem';
 
 export interface Props {
-  /**
-   * Child node(s) that can be nested inside component
-   */
-  children?: ReactNode;
-  /**
-   * CSS class names that can be appended to the component.
-   */
-  className?: string;
-  /**
-   * The array of items to be passed into the component. The array must take on the specified shape
-   */
-  items?: any;
+  children?: ReactNode /* Child node(s) that can be nested inside component */;
+  className?: string /* CSS class names that can be appended to the component. */;
+  items?: any /* The array of items to be passed into the component. The array must take on the specified shape */;
 }
 
 /**
@@ -25,7 +16,7 @@ export interface Props {
  * import {FooterNav} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * Component presents footer navigation bar with additional styles passed in with props className
  */
 export const FooterNav = ({ children, className, items, ...other }: Props) => {
   const componentClassName = clsx(styles['footer-nav'], className);

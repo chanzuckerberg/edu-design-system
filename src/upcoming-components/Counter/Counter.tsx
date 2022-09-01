@@ -9,87 +9,26 @@ import Label from '../../components/Label';
 import TextInput from '../../components/TextInput';
 
 export interface Props {
-  /**
-   * HTML id of the helper text used to describe the component
-   */
-  'aria-describedby'?: string;
-  /**
-   * HTML id of the helper text to connect label to input
-   */
-  'aria-labelledby'?: string;
-  /**
-   * Child node(s) that can be nested inside component
-   */
-  children?: ReactNode;
-  /**
-   * CSS class names that can be appended to the component.
-   */
-  className?: string;
-  /**
-   * Disables the field and prevents editing the contents
-   */
-  disabled?: boolean;
-  /**
-   * FieldNote
-   * Used as helper text or error message
-   */
-  fieldNote?: string;
-  /**
-   * Toggles the visibility of the label. If hidden, the label text will still be accessible to assistive technologies
-   */
-  hideLabel?: boolean;
-  /**
-   * HTML id for the component
-   */
-  id?: string;
-  /**
-   * Error state of the form field
-   */
-  isError?: boolean;
-  /**
-   * HTML label text
-   */
-  label?: string;
-  /**
-   * Slot for node to appear directly after field label. Typically used to include a Toolip
-   */
-  labelAfter?: ReactNode;
-  /**
-   * Maximum number the input can take. When this number equals the input value, the plus button becomes disabled.
-   */
-  max?: number;
-  /**
-   * Minimum number the input can take. When this number equals the input value, the minus button becomes disabled.
-   */
-  min?: number;
-  /**
-   * Screen reader instruction text for minus button. Example: "add one adult passenger"
-   */
-  minusButtonText: string;
-  /**
-   * String for the optional label. By default it is '(optional)'
-   */
-  optionalLabel?: string;
-  /**
-   * Screen reader instruction text for plus button. Example: "subtract one bag"
-   */
-  plusButtonText: string;
-  /**
-   * Toggles the form control's interactivity. When `readOnly` is set to `true`, the form control is not interactive
-   */
-  readOnly?: boolean;
-  /**
-   * Indicates that field is required for form to be successfully submitted
-   */
-  required?: boolean;
-  /**
-   * String for the required label to add additional information if needed.
-   */
-  requiredLabel?: string;
-  /**
-   * The number value of the Counter input
-   */
-  value?: number;
+  'aria-describedby'?: string /* HTML id of the helper text used to describe the component */;
+  'aria-labelledby'?: string /* HTML id of the helper text to connect label to input */;
+  children?: ReactNode /* Child node(s) that can be nested inside component */;
+  className?: string /* CSS class names that can be appended to the component.*/;
+  disabled?: boolean /* Disables the field and prevents editing the contents */;
+  fieldNote?: string /* FieldNote Used as helper text or error message */;
+  hideLabel?: boolean /* Toggles the visibility of the label. If hidden, the label text will still be accessible to assistive technologies */;
+  id?: string /* HTML id for the component */;
+  isError?: boolean /* Error state of the form field */;
+  label?: string /* HTML label text */;
+  labelAfter?: ReactNode /* Slot for node to appear directly after field label. Typically used to include a Toolip */;
+  max?: number /* Maximum number the input can take. When this number equals the input value, the plus button becomes disabled. */;
+  min?: number /* Minimum number the input can take. When this number equals the input value, the minus button becomes disabled. */;
+  minusButtonText: string /* Screen reader instruction text for minus button. Example: "add one adult passenger" */;
+  optionalLabel?: string /* String for the optional label. By default it is '(optional)' */;
+  plusButtonText: string /* Screen reader instruction text for plus button. Example: "subtract one bag" */;
+  readOnly?: boolean /* Toggles the form control's interactivity. When `readOnly` is set to `true`, the form control is not interactive */;
+  required?: boolean /* Indicates that field is required for form to be successfully submitted */;
+  requiredLabel?: string /* String for the required label to add additional information if needed. */;
+  value?: number /* The number value of the Counter input */;
 }
 
 /**
@@ -99,7 +38,7 @@ export interface Props {
  * import {Counter} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * Counter component is used as button to add/subtract field items, disabled based on the error props passed in from children
  */
 export const Counter = ({
   className,

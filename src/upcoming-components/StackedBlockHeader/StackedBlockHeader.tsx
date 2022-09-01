@@ -1,12 +1,8 @@
 import React, { ReactNode } from 'react';
 export interface Props {
-  /**
-   * Child node(s) that can be nested inside component
-   */
+  /* Child node(s) that can be nested inside component */
   children?: ReactNode;
-  /**
-   * CSS class names that can be appended to the component.
-   */
+  /* CSS class names that can be appended to the component. */
   className?: string;
 }
 
@@ -17,7 +13,7 @@ export interface Props {
  * import {StackedBlockHeader} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * StackedBlockHeader component is the header container for the stackedblock items lists.
  */
 export const StackedBlockHeader = ({
   children,

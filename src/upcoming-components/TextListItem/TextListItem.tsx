@@ -3,13 +3,9 @@ import React, { ReactNode } from 'react';
 import styles from '../TextList/TextList.module.css';
 
 export interface Props {
-  /**
-   * Child node(s) that can be nested inside component
-   */
+  /* Child node(s) that can be nested inside component */
   children: ReactNode;
-  /**
-   * CSS class names that can be appended to the component.
-   */
+  /* CSS class names that can be appended to the component. */
   className?: string;
 }
 
@@ -20,7 +16,7 @@ export interface Props {
  * import {TextListItem} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * TextListItem compnent presents the list items for the Textist component.
  */
 export const TextListItem = ({ children, className, ...other }: Props) => {
   const componentClassName = clsx(styles['text-list__item'], className);

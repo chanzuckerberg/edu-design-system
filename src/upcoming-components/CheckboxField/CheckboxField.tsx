@@ -9,48 +9,31 @@ import FieldsetLegend from '../../components/FieldsetLegend';
 import CheckboxFieldItem from '../CheckboxFieldItem';
 
 export interface Props {
-  /**
-   * HTML id of the helper text used to describe the component
-   */
-  'aria-describedby'?: string;
-  /**
-   * Child node(s) that can be nested inside component
-   */
-  children?: ReactNode;
-  /**
-   * CSS class names that can be appended to the component.
-   */
-  className?: string;
+  'aria-describedby'?: string /* HTML id of the helper text used to describe the component */;
+
+  children?: ReactNode /* Child node(s) that can be nested inside component */;
+
+  className?: string /* CSS class names that can be appended to the component. */;
   /**
    * Disables the field and prevents editing the contents
    * TODO: disabled variant needs to be styled. Checkbox components themselves already support disabled styling.
    */
   disabled?: boolean;
-  /**
-   * FieldNote
-   * Used as helper text or error message
-   */
-  fieldNote?: string | ReactNode;
-  /**
-   * HTML id for the component
-   */
-  id?: string;
-  /**
-   * Inverted variant for dark backgrounds
-   */
-  inverted?: boolean;
-  /**
-   * Error state of the form field
-   */
-  isError?: boolean;
-  /**
-   * HTML label text
-   */
-  label: string;
-  /**
-   * String for the optional label. By default it is '(optional)'
-   */
-  optionalLabel?: '(required)' | '(optional)';
+  fieldNote?:
+    | string
+    | ReactNode /* FieldNote - Used as helper text or error message */;
+
+  id?: string /* HTML id for the component */;
+
+  inverted?: boolean /* Inverted variant for dark backgrounds */;
+
+  isError?: boolean /* Error state of the form field */;
+
+  label: string /* HTML label text */;
+
+  optionalLabel?:
+    | '(required)'
+    | '(optional)' /* String for the optional label. By default it is '(optional)' */;
   /**
    * Size variations for the CheckboxField
    * - **sm** results in a visually smaller CheckboxField
@@ -70,7 +53,8 @@ export interface Props {
  * import {CheckboxField} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * CheckboxField are the fieldset component consists checkbox items with label ,fieldnote passed as props, styles are defined based on the props
+ * variant, size and inverted with additional styles passed in
  */
 export const CheckboxField = ({
   className,

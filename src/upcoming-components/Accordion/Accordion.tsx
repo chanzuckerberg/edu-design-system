@@ -4,19 +4,9 @@ import styles from './Accordion.module.css';
 import AccordionPanel from '../AccordionPanel';
 
 export interface Props {
-  /**
-   * Child node(s) that can be nested inside component
-   */
-  children?: ReactNode;
-  /**
-   * CSS class names that can be appended to the component.
-   */
-  className?: string;
-  /**
-   * Inverted variant
-   * 1) Used for dark backgrounds
-   */
-  inverted?: boolean;
+  children?: ReactNode /* Child node(s) that can be nested inside component */;
+  className?: string /* CSS class names that can be appended to the component */;
+  inverted?: boolean /* 1) Used for dark backgrounds */;
 }
 
 /**
@@ -26,7 +16,7 @@ export interface Props {
  * import {Accordion} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * Component is an accordian panel element with additional styling passing in
  */
 export const Accordion = ({
   children,

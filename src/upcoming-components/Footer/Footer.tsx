@@ -2,14 +2,8 @@ import React, { ReactNode } from 'react';
 import LayoutContainer from '../../components/LayoutContainer';
 
 export interface Props {
-  /**
-   * Child node(s) that can be nested inside component
-   */
-  children: ReactNode;
-  /**
-   * CSS class names that can be appended to the component.
-   */
-  className?: string;
+  children: ReactNode /* Child node(s) that can be nested inside component */;
+  className?: string /* CSS class names that can be appended to the component. */;
 }
 
 /**
@@ -19,7 +13,7 @@ export interface Props {
  * import {Footer} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * Components thats presents the footer layout with addtional styles passed in props.
  */
 export const Footer = ({ children, className, ...other }: Props) => {
   return (

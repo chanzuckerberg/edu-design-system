@@ -3,30 +3,12 @@ import React, { ReactNode } from 'react';
 import styles from './Feature.module.css';
 
 export interface Props {
-  /**
-   * Child node(s) that can be nested inside component
-   */
-  children?: ReactNode;
-  /**
-   * CSS class names that can be appended to the component.
-   */
-  className?: string;
-  /**
-   * Alt text for feature image
-   */
-  imgAlt?: string;
-  /**
-   * Path to image file
-   */
-  imgSrc?: string;
-  /**
-   * Color theme for the component. "inverted" theme is for use on dark backgrounds
-   */
-  inverted?: boolean;
-  /**
-   * Title heading text string
-   */
-  title?: string;
+  children?: ReactNode /* Child node(s) that can be nested inside component */;
+  className?: string /* CSS class names that can be appended to the component. */;
+  imgAlt?: string /* Alt text for feature image */;
+  imgSrc?: string /* Path to image file */;
+  inverted?: boolean /* Color theme for the component. "inverted" theme is for use on dark backgrounds */;
+  title?: string /* Title heading text string */;
 }
 
 /**
@@ -36,7 +18,7 @@ export interface Props {
  * import {Feature} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * Component that presents the feature image with additional styling passed in.
  */
 export const Feature = ({
   className,

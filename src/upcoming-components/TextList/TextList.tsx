@@ -3,32 +3,17 @@ import React, { ReactNode } from 'react';
 import styles from './TextList.module.css';
 
 export interface Props {
-  /**
-   * Child node(s) that can be nested inside component
-   */
+  /* Child node(s) that can be nested inside component */
   children: ReactNode;
-  /**
-   * CSS class names that can be appended to the component.
-   */
+  /* CSS class names that can be appended to the component. */
   className?: string;
-  /**
-   * Size variant:
-   * - **sm** yields a TextList with smaller typography
-   */
+  /* Size variant: - **sm** yields a TextList with smaller typography */
   size?: 'sm';
-  /**
-   * The as name for the list element, defaults to use ul
-   */
+  /* The as name for the list element, defaults to use ul */
   as?: string;
-  /**
-   * Theme variant:
-   * - **inverted** yields a TextList with lighter typography for darker backgrounds
-   */
+  /* Theme variant: - **inverted** yields a TextList with lighter typography for darker backgrounds */
   inverted?: boolean;
-  /**
-   * Style variant:
-   * - **inline** yields a TextList that places items side by side
-   */
+  /* Style variant: - **inline** yields a TextList that places items side by side */
   variant?: 'inline';
 }
 
@@ -39,7 +24,8 @@ export interface Props {
  * import {TextList} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * Component represents the text list container with styles added with passed in props size, variant, invertes and as ordered
+ * list with addtional styles.
  */
 export const TextList = ({
   children,

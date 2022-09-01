@@ -9,50 +9,27 @@ import Label from '../../components/Label';
 import Textarea from '../Textarea';
 
 export interface Props {
-  /**
-   * Aria-describedby id string
-   */
+  /* Aria-describedby id string */
   'aria-describedby'?: string;
-  /**
-   * CSS class names that can be appended to the component.
-   */
+  /* CSS class names that can be appended to the component. */
   className?: string;
-  /**
-   * Disables the field and prevents editing the contents
-   */
+  /* Disables the field and prevents editing the contents */
   disabled?: boolean;
-  /**
-   * FieldNote
-   * Used as helper text or error message
-   */
+  /* FieldNote Used as helper text or error message */
   fieldNote?: string | ReactNode;
-  /**
-   * Toggles the visibility of the label. If hidden, the label text will still be accessible to assistive technologies
-   */
+  /* Toggles the visibility of the label. If hidden, the label text will still be accessible to assistive technologies */
   hideLabel?: boolean;
-  /**
-   * Screen reader text used for the button alongside the input field (i.e. show/hide password button)
-   */
+  /* Screen reader text used for the button alongside the input field (i.e. show/hide password button) */
   fieldButtonAriaLabel?: string;
-  /**
-   * Text used for the button alongside the input field (i.e. show/hide password button)
-   */
+  /* Text used for the button alongside the input field (i.e. show/hide password button) */
   fieldButtonText?: string;
-  /**
-   * Function passed down from higher level component to trigger on click function of text field button
-   */
+  /* Function passed down from higher level component to trigger on click function of text field button */
   fieldButtonOnClick?: MouseEventHandler;
-  /**
-   * Name of SVG icon (i.e. chevron-down, minus, warning)
-   */
+  /* Name of SVG icon (i.e. chevron-down, minus, warning) */
   iconName?: IconName;
-  /**
-   * HTML id for the component
-   */
+  /* HTML id for the component */
   id?: string;
-  /**
-   * Gives a hint as to the type of data needed for textarea
-   */
+  /* Gives a hint as to the type of data needed for textarea */
   inputMode?:
     | 'text'
     | 'email'
@@ -62,67 +39,48 @@ export interface Props {
     | 'none'
     | 'numeric'
     | 'decimal';
-  /**
-   * Inverted variant for dark backgrounds
-   */
+  /* Inverted variant for dark backgrounds */
   inverted?: boolean;
-  /**
-   * Error state of the form field
-   */
+  /* Error state of the form field */
   isError?: boolean;
-  /**
-   * HTML label text
-   */
+  /* HTML label text */
   label?: string;
-  /**
-   * Max number of characters for the text input
-   */
+  /* Max number of characters for the text input */
   maxLength?: number;
-  /**
-   * HTML name attribute for the input
-   */
+  /* HTML name attribute for the input */
   name?: string;
-  /**
-   * Function that runs on change of the input
-   */
+  /* Function that runs on change of the input */
   onChange?: ChangeEventHandler;
-  /**
-   * String for the optional label. By default it is '(optional)'
-   */
+  /* String for the optional label. By default it is '(optional)' */
   optionalLabel?: string;
-  /**
-   * Placeholder attribute for input. Note: placeholder should be used sparingly
-   */
+  /* Placeholder attribute for input. Note: placeholder should be used sparingly */
   placeholder?: string;
-  /**
-   * Toggles the form control's interactivity. When `readOnly` is set to `true`, the form control is not interactive
-   */
+  /* Toggles the form control's interactivity. When `readOnly` is set to `true`, the form control is not interactive */
   readOnly?: boolean;
-  /**
-   * Indicates that field is required for form to be successfully submitted
-   */
+  /* Indicates that field is required for form to be successfully submitted */
   required?: boolean;
-  /**
-   * String for the required label to add additional information if needed.
-   */
+  /* String for the required label to add additional information if needed. */
   requiredLabel?: string;
-  /**
-   *  Specifies the visible number of lines in a text area
-   */
+  /* Specifies the visible number of lines in a text area */
   rows?: number;
-  /**
-   * Title attribute on input
-   */
+  /* Title attribute on input */
   title?: string;
-  /**
-   * Value passed down from higher levels for initial state
-   */
+  /* Value passed down from higher levels for initial state */
   value?: string;
-  /**
-   * Default value passed down from higher levels for initial state
-   */
+  /* Default value passed down from higher levels for initial state */
   defaultValue?: string;
 }
+
+/**
+ * BETA: This component is still a work in progress and is subject to change.
+ *
+ * ```ts
+ * import {TextareaField} from "@chanzuckerberg/eds";
+ * ```
+ *
+ * TextareaField component consists of textarea body, fieldnote label and button with clickable event handled with passed in
+ * props fieldButtonOnClick.
+ */
 
 export const TextareaField = ({
   'aria-describedby': ariaDescribedBy,

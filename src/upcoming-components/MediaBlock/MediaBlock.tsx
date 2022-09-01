@@ -3,25 +3,15 @@ import React, { ReactNode } from 'react';
 import styles from './MediaBlock.module.css';
 
 export interface Props {
-  /**
-   * Child node(s) that can be nested inside component
-   */
+  /* Child node(s) that can be nested inside component */
   children: ReactNode;
-  /**
-   * CSS class names that can be appended to the component.
-   */
+  /* CSS class names that can be appended to the component. */
   className?: string;
-  /**
-   * Hero image alt text
-   */
+  /* Hero image alt text */
   imgAlt: string;
-  /**
-   * Path to hero image
-   */
+  /* Path to hero image */
   imgSrc: string;
-  /**
-   * Available _stylistic_ variations available for the component
-   */
+  /* Available _stylistic_ variations available for the component */
   variant?: 'reversed';
 }
 
@@ -32,7 +22,7 @@ export interface Props {
  * import {MediaBlock} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * Component presents the layout container for the hero image and the media, along with body content.
  */
 export const MediaBlock = ({
   children,
