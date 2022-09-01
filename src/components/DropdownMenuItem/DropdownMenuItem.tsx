@@ -1,8 +1,9 @@
 import clsx from 'clsx';
-import React, { ReactNode, MouseEventHandler } from 'react';
+import React, { ReactNode, MouseEventHandler, useContext } from 'react';
+import { DropdownMenuContext } from '../DropdownMenu';
 import styles from '../DropdownMenu/DropdownMenu.module.css';
 
-export interface Props {
+export type DropdownMenuItemProps = {
   /**
    * Stylistic variations for the Box
    * - **top** horizontally and vertically aligns the content
@@ -46,7 +47,7 @@ export interface Props {
    * - **lined** yields a dropdown item with a border bottom
    */
   variant?: 'lined';
-}
+};
 
 /**
  * BETA: This component is still a work in progress and is subject to change.
@@ -57,57 +58,71 @@ export interface Props {
  *
  * Dropdown menu item within `DropdownMenu`
  */
-export const DropdownMenuItem = React.forwardRef<HTMLLIElement, Props>(
-  (
-    {
-      align,
-      className,
-      href,
-      children,
-      variant,
-      onClick,
-      status,
-      target,
-      ...other
-    },
-    ref,
-  ) => {
-    const TagName = createTagName();
+export const DropdownMenuItem = ({
+  align,
+  className,
+  href,
+  children,
+  variant,
+  onClick,
+  status,
+  target,
+  ...other
+}: DropdownMenuItemProps) => {
+  const { refs } = useContext(DropdownMenuContext);
 
-    function createTagName() {
-      if (href) {
-        return 'a';
-      } else {
-        return 'button';
-      }
+  const TagName = createTagName();
+
+  function createTagName() {
+    if (href) {
+      return 'a';
+    } else {
+      return 'button';
     }
+  }
 
-    const componentClassName = clsx(
-      styles['dropdown-menu__item'],
-      align === 'top-left' && styles['dropdown-menu__item--align-top-left'],
-      variant === 'lined' && styles['dropdown-menu__item--lined'],
-      status === 'error' && styles['dropdown-menu__item--error'],
-      className,
-    );
+  const componentClassName = clsx(
+    styles['dropdown-menu__item'],
+    align === 'top-left' && styles['dropdown-menu__item--align-top-left'],
+    variant === 'lined' && styles['dropdown-menu__item--lined'],
+    status === 'error' && styles['dropdown-menu__item--error'],
+    className,
+  );
 
-    return (
-      <li
-        className={componentClassName}
-        {...other}
-        ref={ref}
-        role="presentation"
+  return (
+    <li
+      className={componentClassName}
+      {...other}
+      ref={(el: HTMLLIElement) => {
+        if (el && !refs.current.set.has(el)) {
+          const node = {
+            prev: refs.current.tail,
+            next: refs.current.head,
+            value: el,
+          };
+          refs.current.set.add(el);
+          if (!refs.current.head) {
+            refs.current.head = node;
+            refs.current.tail = node;
+          } else {
+            refs.current.head.prev = node;
+            refs.current.tail.next = node;
+            refs.current.tail = node;
+          }
+        }
+      }}
+      role="menuitem"
+    >
+      <TagName
+        className={styles['dropdown-menu__link']}
+        href={href}
+        onClick={onClick}
+        target={target}
       >
-        <TagName
-          className={styles['dropdown-menu__link']}
-          href={href}
-          onClick={onClick}
-          target={target}
-        >
-          {children}
-        </TagName>
-      </li>
-    );
-  },
-);
+        {children}
+      </TagName>
+    </li>
+  );
+};
 
 DropdownMenuItem.displayName = 'DropdownMenuItem';

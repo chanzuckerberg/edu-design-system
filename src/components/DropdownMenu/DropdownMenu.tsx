@@ -1,13 +1,13 @@
 import clsx from 'clsx';
 import React, {
   ReactNode,
+  createContext,
   useRef,
   useEffect,
   KeyboardEvent,
   HTMLAttributes,
 } from 'react';
 import styles from './DropdownMenu.module.css';
-import { isReactFragment } from '../../util/isReactFragment';
 import {
   L_ARROW_KEYCODE,
   U_ARROW_KEYCODE,
@@ -32,6 +32,7 @@ export type Props = {
   handleOnKeyDown?: (e: React.KeyboardEvent) => void;
 } & HTMLAttributes<HTMLElement>;
 
+export const DropdownMenuContext = createContext<any>({});
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
@@ -48,104 +49,70 @@ export const DropdownMenu: React.FC<Props> = ({
   handleOnKeyDown,
   ...other
 }) => {
-  const childRefs = useRef<Array<HTMLLIElement>>([]);
+  interface Node {
+    value: HTMLLIElement;
+    next: this | null;
+    prev: this | null;
+  }
+  interface RefMap {
+    head: Node | null;
+    tail: Node | null;
+    focus: Node | null;
+    set: Set<Node>;
+  }
+  const childRefs = useRef<RefMap>({
+    head: null,
+    tail: null,
+    focus: null,
+    set: new Set(),
+  });
 
   useEffect(() => {
     setTimeout(() => {
-      if (isActive && childRefs) {
-        childRefs.current[0]
+      if (isActive && childRefs.current.head?.value) {
+        (childRefs.current.head.value as HTMLLIElement)
           ?.querySelector<HTMLButtonElement | HTMLAnchorElement>(':first-child')
           ?.focus();
+        childRefs.current.focus = childRefs.current.head;
       }
     }, 1);
   }, [isActive]);
 
-  /**
-   * On KeyDown
-   * 1) Find active item. If there isn't one, do nothing on Keydown
-   * 2) Set active item, next item, and previous item.
-   * 3) If right or down arrow key keyed, focus on next item.
-   * 4) If left or up arrow key keyed, focus on the previous item.
-   */
   const onKeyDown = (e: KeyboardEvent<HTMLUListElement>) => {
     if ([ESCAPE_KEYCODE].includes(e.key)) {
       if (handleOnKeyDown) {
         handleOnKeyDown(e);
       }
     }
-
-    let activeItem = null;
-
-    childRefs.current.map((item: HTMLLIElement) => {
-      if (item.querySelector(':first-child') === document.activeElement) {
-        activeItem = item;
-      }
-      return item;
-    });
-
-    if (!activeItem) return;
-
-    const index = childRefs.current.indexOf(activeItem); /* 2 */
-    const next = index === childRefs.current.length - 1 ? 0 : index + 1; /* 2 */
-
-    const prev = index === 0 ? childRefs.current.length - 1 : index - 1; /* 2 */
+    e.preventDefault();
 
     if ([R_ARROW_KEYCODE, D_ARROW_KEYCODE].includes(e.key)) {
       /* 3 */
-      childRefs.current[next]
+      (childRefs.current.focus?.next?.value as HTMLLIElement)
         ?.querySelector<HTMLButtonElement | HTMLAnchorElement>(':first-child')
         ?.focus();
+      childRefs.current.focus = childRefs.current.focus?.next || null;
     } else if ([L_ARROW_KEYCODE, U_ARROW_KEYCODE].includes(e.key)) {
       /* 4 */
-      childRefs.current[prev]
+      (childRefs.current.focus?.prev?.value as HTMLLIElement)
         ?.querySelector<HTMLButtonElement | HTMLAnchorElement>(':first-child')
         ?.focus();
+      childRefs.current.focus = childRefs.current.focus?.prev || null;
     }
   };
 
-  /**
-   * Pass props down to children
-   * 1) Using type 'any' here because TS requires typechecking at this point, but these elements have already been typechecked
-   * 2) Cycle through children and pass down ref
-   */
-  const childrenWithProps = React.Children.map(
-    children,
-    (child: ReactNode, i: number) => {
-      // Checking isValidElement is the safe way and avoids a typescript
-      // error too.
-      if (React.isValidElement(child)) {
-        if (isReactFragment(child)) {
-          const newChildren = child.props.children;
-          return newChildren.map((item: ReactNode, i: number) => {
-            return React.cloneElement<Props>(
-              item as any /* 1 */,
-              {
-                ref: (el: HTMLLIElement) => (childRefs.current[i] = el) /* 2 */,
-              } as any /* 1 */,
-            );
-          });
-        } else {
-          return React.cloneElement<Props>(
-            child as any /* 1 */,
-            {
-              ref: (el: HTMLLIElement) => (childRefs.current[i] = el) /* 2 */,
-            } as any /* 1 */,
-          );
-        }
-      }
-    },
-  );
-
   const componentClassName = clsx(styles['dropdown-menu'], className);
   return (
-    <div className={componentClassName} {...other}>
-      <ul
-        className={styles['dropdown-menu__list']}
-        onKeyDown={onKeyDown}
-        role="presentation"
-      >
-        {childrenWithProps}
-      </ul>
-    </div>
+    <DropdownMenuContext.Provider value={{ refs: childRefs }}>
+      <div className={componentClassName} {...other}>
+        <ul
+          className={styles['dropdown-menu__list']}
+          onKeyDown={onKeyDown}
+          role="menu"
+        >
+          {children}
+        </ul>
+      </div>
+    </DropdownMenuContext.Provider>
   );
 };
