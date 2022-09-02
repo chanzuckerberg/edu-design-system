@@ -82,36 +82,46 @@ export const DropdownMenu: React.FC<Props> = ({
   }, [isActive]);
 
   const onKeyDown = (e: KeyboardEvent<HTMLUListElement>) => {
+    // Calls callback on escape key trigger, typically to close the menu.
     if (e.key === ESCAPE_KEYCODE && handleOnEscDown) {
       handleOnEscDown(e);
     }
 
+    // Focus next element with right or down arrow key.
     if (e.key === R_ARROW_KEYCODE || e.key === D_ARROW_KEYCODE) {
       if (focusIndex < refs.current.list.length - 1) {
         focusIndex++;
       } else {
+        // Wrap around to top of menu since we're at the bottom
         focusIndex = 0;
       }
       focusItem(focusIndex);
       // prevents page from scrolling
       e.preventDefault();
     }
+
+    // Focus previous element with left or up arrow key.
     if (e.key === L_ARROW_KEYCODE || e.key === U_ARROW_KEYCODE) {
       if (focusIndex > 0) {
         focusIndex--;
       } else {
+        // Wrap around to bottom of menu since we're at the bottom
         focusIndex = refs.current.list.length - 1;
       }
       focusItem(focusIndex);
       // prevents page from scrolling
       e.preventDefault();
     }
+
+    // Focus first item with home key.
     if (e.key === HOME_KEYCODE) {
       focusIndex = 0;
       focusItem(focusIndex);
       // prevents page from scrolling
       e.preventDefault();
     }
+
+    // Focus last item with end key.
     if (e.key === END_KEYCODE) {
       focusIndex = refs.current.list.length - 1;
       focusItem(focusIndex);
