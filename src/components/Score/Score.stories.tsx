@@ -28,9 +28,17 @@ export const Error: StoryObj<Args> = {
   },
 };
 
-export const Neutral: StoryObj<Args> = {
+export const Table: StoryObj<Args> = {
   args: {
     text: '6 / 10',
-    variant: 'neutral',
+    variant: 'table',
   },
+  decorators: [
+    (Story) => (
+      <div>
+        <p>Score has transparent border for use in Table component</p>
+        <Story />
+      </div>
+    ),
+  ],
 };
