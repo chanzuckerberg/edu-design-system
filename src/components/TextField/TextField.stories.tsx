@@ -51,19 +51,11 @@ export const Disabled: StoryObj<Args> = {
   },
 };
 
-export const RequiredIndicator: StoryObj<Args> = {
+export const Required: StoryObj<Args> = {
   args: {
     label: 'Text field with fieldNote',
     required: true,
     fieldNote: 'This is a fieldnote for a required text field.',
-  },
-};
-
-export const OptionalIndicator: StoryObj<Args> = {
-  args: {
-    label: 'Text field with fieldNote',
-    optionalIndicator: true,
-    fieldNote: 'This is a fieldnote for an optional text field.',
   },
 };
 
@@ -158,7 +150,7 @@ export const DisabledVariants: StoryObj<Args> = {
   },
 };
 
-export const RequiredIndicatorVariants: StoryObj<Args> = {
+export const RequiredVariants: StoryObj<Args> = {
   args: {
     required: true,
   },
@@ -236,20 +228,6 @@ export const RequiredIndicatorVariants: StoryObj<Args> = {
       </div>
     </>
   ),
-  parameters: {
-    axe: {
-      // Disabled input does not need to meet color contrast
-      disabledRules: ['color-contrast'],
-    },
-  },
-};
-
-export const OptionalIndicatorVariants: StoryObj<Args> = {
-  ...RequiredIndicatorVariants,
-  args: {
-    optionalIndicator: true,
-    required: false,
-  },
   parameters: {
     axe: {
       // Disabled input does not need to meet color contrast
