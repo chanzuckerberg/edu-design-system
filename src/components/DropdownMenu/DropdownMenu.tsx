@@ -49,33 +49,26 @@ export const DropdownMenu: React.FC<Props> = ({
   handleOnKeyDown,
   ...other
 }) => {
-  interface Node {
-    value: HTMLLIElement;
-    next: this | null;
-    prev: this | null;
-  }
-  interface RefMap {
-    head: Node | null;
-    tail: Node | null;
-    focus: Node | null;
-    set: Set<Node>;
-  }
-  const childRefs = useRef<RefMap>({
-    head: null,
-    tail: null,
-    focus: null,
+  type Refs = {
+    set: Set<HTMLLIElement>;
+    list: HTMLLIElement[];
+  };
+  const refs = useRef<Refs>({
     set: new Set(),
+    list: [],
   });
 
+  let focusIndex = 0;
+  const focusItem = (index: number) => {
+    refs.current.list[index]
+      ?.querySelector<HTMLButtonElement | HTMLAnchorElement>(':first-child')
+      ?.focus();
+  };
+
   useEffect(() => {
-    setTimeout(() => {
-      if (isActive && childRefs.current.head?.value) {
-        (childRefs.current.head.value as HTMLLIElement)
-          ?.querySelector<HTMLButtonElement | HTMLAnchorElement>(':first-child')
-          ?.focus();
-        childRefs.current.focus = childRefs.current.head;
-      }
-    }, 1);
+    if (isActive && refs.current.list.length) {
+      focusItem(0);
+    }
   }, [isActive]);
 
   const onKeyDown = (e: KeyboardEvent<HTMLUListElement>) => {
@@ -84,26 +77,31 @@ export const DropdownMenu: React.FC<Props> = ({
         handleOnKeyDown(e);
       }
     }
-    e.preventDefault();
 
     if ([R_ARROW_KEYCODE, D_ARROW_KEYCODE].includes(e.key)) {
-      /* 3 */
-      (childRefs.current.focus?.next?.value as HTMLLIElement)
-        ?.querySelector<HTMLButtonElement | HTMLAnchorElement>(':first-child')
-        ?.focus();
-      childRefs.current.focus = childRefs.current.focus?.next || null;
+      if (focusIndex < refs.current.list.length - 1) {
+        focusIndex++;
+      } else {
+        focusIndex = 0;
+      }
+      focusItem(focusIndex);
+      // prevents page from scrolling
+      e.preventDefault();
     } else if ([L_ARROW_KEYCODE, U_ARROW_KEYCODE].includes(e.key)) {
-      /* 4 */
-      (childRefs.current.focus?.prev?.value as HTMLLIElement)
-        ?.querySelector<HTMLButtonElement | HTMLAnchorElement>(':first-child')
-        ?.focus();
-      childRefs.current.focus = childRefs.current.focus?.prev || null;
+      if (focusIndex > 0) {
+        focusIndex--;
+      } else {
+        focusIndex = refs.current.list.length - 1;
+      }
+      focusItem(focusIndex);
+      // prevents page from scrolling
+      e.preventDefault();
     }
   };
 
   const componentClassName = clsx(styles['dropdown-menu'], className);
   return (
-    <DropdownMenuContext.Provider value={{ refs: childRefs }}>
+    <DropdownMenuContext.Provider value={{ refs: refs }}>
       <div className={componentClassName} {...other}>
         <ul
           className={styles['dropdown-menu__list']}

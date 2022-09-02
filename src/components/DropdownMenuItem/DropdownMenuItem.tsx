@@ -95,20 +95,8 @@ export const DropdownMenuItem = ({
       {...other}
       ref={(el: HTMLLIElement) => {
         if (el && !refs.current.set.has(el)) {
-          const node = {
-            prev: refs.current.tail,
-            next: refs.current.head,
-            value: el,
-          };
           refs.current.set.add(el);
-          if (!refs.current.head) {
-            refs.current.head = node;
-            refs.current.tail = node;
-          } else {
-            refs.current.head.prev = node;
-            refs.current.tail.next = node;
-            refs.current.tail = node;
-          }
+          refs.current.list.push(el);
         }
       }}
       role="menuitem"
