@@ -71,11 +71,11 @@ exports[`<ProjectCard /> Default story renders snapshot 1`] = `
       >
         <ul
           class="dropdown-menu__list"
-          role="presentation"
+          role="menu"
         >
           <li
             class="dropdown-menu__item"
-            role="presentation"
+            role="menuitem"
           >
             <button
               class="dropdown-menu__link"
@@ -98,7 +98,7 @@ exports[`<ProjectCard /> Default story renders snapshot 1`] = `
           </li>
           <li
             class="dropdown-menu__item"
-            role="presentation"
+            role="menuitem"
           >
             <button
               class="dropdown-menu__link"
@@ -121,7 +121,7 @@ exports[`<ProjectCard /> Default story renders snapshot 1`] = `
           </li>
           <li
             class="dropdown-menu__item"
-            role="presentation"
+            role="menuitem"
           >
             <button
               class="dropdown-menu__link"
@@ -144,7 +144,7 @@ exports[`<ProjectCard /> Default story renders snapshot 1`] = `
           </li>
           <li
             class="dropdown-menu__item"
-            role="presentation"
+            role="menuitem"
           >
             <button
               class="dropdown-menu__link"
@@ -235,11 +235,11 @@ exports[`<ProjectCard /> Draggable story renders snapshot 1`] = `
       >
         <ul
           class="dropdown-menu__list"
-          role="presentation"
+          role="menu"
         >
           <li
             class="dropdown-menu__item"
-            role="presentation"
+            role="menuitem"
           >
             <button
               class="dropdown-menu__link"
@@ -262,7 +262,7 @@ exports[`<ProjectCard /> Draggable story renders snapshot 1`] = `
           </li>
           <li
             class="dropdown-menu__item"
-            role="presentation"
+            role="menuitem"
           >
             <button
               class="dropdown-menu__link"
@@ -285,7 +285,7 @@ exports[`<ProjectCard /> Draggable story renders snapshot 1`] = `
           </li>
           <li
             class="dropdown-menu__item"
-            role="presentation"
+            role="menuitem"
           >
             <button
               class="dropdown-menu__link"
@@ -308,7 +308,7 @@ exports[`<ProjectCard /> Draggable story renders snapshot 1`] = `
           </li>
           <li
             class="dropdown-menu__item"
-            role="presentation"
+            role="menuitem"
           >
             <button
               class="dropdown-menu__link"
@@ -434,11 +434,11 @@ exports[`<ProjectCard /> WithoutMeta story renders snapshot 1`] = `
       >
         <ul
           class="dropdown-menu__list"
-          role="presentation"
+          role="menu"
         >
           <li
             class="dropdown-menu__item"
-            role="presentation"
+            role="menuitem"
           >
             <button
               class="dropdown-menu__link"
@@ -461,7 +461,7 @@ exports[`<ProjectCard /> WithoutMeta story renders snapshot 1`] = `
           </li>
           <li
             class="dropdown-menu__item"
-            role="presentation"
+            role="menuitem"
           >
             <button
               class="dropdown-menu__link"
@@ -484,7 +484,7 @@ exports[`<ProjectCard /> WithoutMeta story renders snapshot 1`] = `
           </li>
           <li
             class="dropdown-menu__item"
-            role="presentation"
+            role="menuitem"
           >
             <button
               class="dropdown-menu__link"
@@ -507,7 +507,7 @@ exports[`<ProjectCard /> WithoutMeta story renders snapshot 1`] = `
           </li>
           <li
             class="dropdown-menu__item"
-            role="presentation"
+            role="menuitem"
           >
             <button
               class="dropdown-menu__link"
