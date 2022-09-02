@@ -12,18 +12,6 @@ exports[`<Score /> Error story renders snapshot 1`] = `
 </span>
 `;
 
-exports[`<Score /> Neutral story renders snapshot 1`] = `
-<span
-  class="text text--sm text--bold-weight tag tag--neutral tag--outline score score--neutral"
->
-  <span
-    class="tag__body"
-  >
-    6 / 10
-  </span>
-</span>
-`;
-
 exports[`<Score /> Success story renders snapshot 1`] = `
 <span
   class="text text--sm text--bold-weight tag tag--neutral tag--outline score score--success"
@@ -34,4 +22,21 @@ exports[`<Score /> Success story renders snapshot 1`] = `
     91 / 100
   </span>
 </span>
+`;
+
+exports[`<Score /> Table story renders snapshot 1`] = `
+<div>
+  <p>
+    Score has transparent border for use in Table component
+  </p>
+  <span
+    class="text text--sm text--bold-weight tag tag--neutral tag--outline score score--table"
+  >
+    <span
+      class="tag__body"
+    >
+      6 / 10
+    </span>
+  </span>
+</div>
 `;

@@ -18,6 +18,6 @@
 .score--error {
   --tag-outline-color: var(--eds-theme-color-border-utility-error-default);
 }
-.score--neutral {
+.score--table {
   --tag-outline-color: transparent;
 }

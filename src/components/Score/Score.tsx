@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './Score.module.css';
 import Tag from '../Tag';
 
-export const VARIANTS = ['neutral', 'error', 'success'] as const;
+export const VARIANTS = ['table', 'error', 'success'] as const;
 
 export type Variant = typeof VARIANTS[number];
 
