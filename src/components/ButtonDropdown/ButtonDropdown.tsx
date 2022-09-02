@@ -136,11 +136,9 @@ export const ButtonDropdown = ({
   function closePanel() {
     setIsActive(false); /* 1 */
 
-    setTimeout(() => {
-      if (isActiveVar && buttonRef.current) {
-        buttonRef.current.focus(); /* 2 */
-      }
-    }, 1);
+    if (isActiveVar && buttonRef.current) {
+      buttonRef.current.focus(); /* 2 */
+    }
   }
 
   /**
@@ -173,6 +171,7 @@ export const ButtonDropdown = ({
           ref: buttonRef,
           onClick: togglePanel,
           'aria-expanded': isActiveVar,
+          'aria-haspopup': 'menu',
         });
       }
     },
@@ -206,7 +205,7 @@ export const ButtonDropdown = ({
       {dropdownMenuTriggerWithProps}
       <DropdownMenu
         className={styles['button-dropdown__dropdown-menu']}
-        handleOnKeyDown={(e: React.KeyboardEvent) => handleKeyDown(e)}
+        handleOnEscDown={(e: React.KeyboardEvent) => handleKeyDown(e)}
         isActive={isActiveVar}
       >
         {children}

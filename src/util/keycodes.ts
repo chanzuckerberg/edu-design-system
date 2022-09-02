@@ -8,3 +8,5 @@ export const L_ARROW_KEYCODE = 'ArrowLeft';
 export const U_ARROW_KEYCODE = 'ArrowUp';
 export const R_ARROW_KEYCODE = 'ArrowRight';
 export const D_ARROW_KEYCODE = 'ArrowDown';
+export const HOME_KEYCODE = 'Home';
+export const END_KEYCODE = 'End';

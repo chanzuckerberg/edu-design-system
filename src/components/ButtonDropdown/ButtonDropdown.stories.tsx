@@ -34,7 +34,9 @@ export default {
         </DropdownMenuItem>
       </>
     ),
-    dropdownMenuTrigger: <Button>Open Dropdown</Button>,
+    dropdownMenuTrigger: (
+      <Button data-testid="trigger-button">Open Dropdown</Button>
+    ),
   },
 } as Meta<Args>;
 
@@ -57,5 +59,41 @@ export const PositionTopRight: StoryObj<Args> = {
 export const PositionBottomRight: StoryObj<Args> = {
   args: {
     position: 'bottom-right',
+  },
+};
+
+const TestComponent = ({ color }: { color: string }) => {
+  return (
+    <>
+      <DropdownMenuItem>
+        <Icon name="schedule" purpose="decorative" size="1.25rem" />
+        Item 1
+      </DropdownMenuItem>
+      <DropdownMenuItem>
+        <div style={{ backgroundColor: color }}>
+          <Icon name="schedule" purpose="decorative" size="1.25rem" />
+          Item 2
+        </div>
+      </DropdownMenuItem>
+      <DropdownMenuItem>
+        <Icon name="schedule" purpose="decorative" size="1.25rem" />
+        Item 3
+      </DropdownMenuItem>
+      <DropdownMenuItem>
+        <div style={{ backgroundColor: color }}>
+          <Icon name="schedule" purpose="decorative" size="1.25rem" />
+          Item 4
+        </div>
+      </DropdownMenuItem>
+    </>
+  );
+};
+/**
+ * This story is required to test DropdownMenu functionality when wrapped in a helper component.
+ * Tests refs being properly passed to DropdownMenuItem components.
+ */
+export const ComponentWrapped: StoryObj<Args> = {
+  args: {
+    children: <TestComponent color="blanchedalmond" />,
   },
 };

@@ -1,19 +1,21 @@
 import clsx from 'clsx';
 import React, {
   ReactNode,
+  createContext,
   useRef,
   useEffect,
   KeyboardEvent,
   HTMLAttributes,
 } from 'react';
 import styles from './DropdownMenu.module.css';
-import { isReactFragment } from '../../util/isReactFragment';
 import {
   L_ARROW_KEYCODE,
   U_ARROW_KEYCODE,
   R_ARROW_KEYCODE,
   D_ARROW_KEYCODE,
   ESCAPE_KEYCODE,
+  HOME_KEYCODE,
+  END_KEYCODE,
 } from '../../util/keycodes';
 
 export type Props = {
@@ -29,8 +31,21 @@ export type Props = {
    * Sets the component to open or close by default
    */
   isActive?: boolean;
-  handleOnKeyDown?: (e: React.KeyboardEvent) => void;
+  /**
+   * Invoked when the escape key is pressed.
+   */
+  handleOnEscDown?: (e: React.KeyboardEvent) => void;
 } & HTMLAttributes<HTMLElement>;
+
+type Refs = {
+  set: Set<HTMLLIElement>;
+  list: HTMLLIElement[];
+};
+
+type ContextRefs = {
+  refs: React.MutableRefObject<Refs>;
+};
+export const DropdownMenuContext = createContext<ContextRefs | null>(null);
 
 /**
  * BETA: This component is still a work in progress and is subject to change.
@@ -45,107 +60,88 @@ export const DropdownMenu: React.FC<Props> = ({
   children,
   className,
   isActive,
-  handleOnKeyDown,
+  handleOnEscDown,
   ...other
 }) => {
-  const childRefs = useRef<Array<HTMLLIElement>>([]);
+  const refs = useRef<Refs>({
+    set: new Set(),
+    list: [],
+  });
+
+  let focusIndex = 0;
+  const focusItem = (index: number) => {
+    refs.current.list[index]
+      ?.querySelector<HTMLButtonElement | HTMLAnchorElement>(':first-child')
+      ?.focus();
+  };
 
   useEffect(() => {
-    setTimeout(() => {
-      if (isActive && childRefs) {
-        childRefs.current[0]
-          ?.querySelector<HTMLButtonElement | HTMLAnchorElement>(':first-child')
-          ?.focus();
-      }
-    }, 1);
+    if (isActive && refs.current.list.length) {
+      focusItem(0);
+    }
   }, [isActive]);
 
-  /**
-   * On KeyDown
-   * 1) Find active item. If there isn't one, do nothing on Keydown
-   * 2) Set active item, next item, and previous item.
-   * 3) If right or down arrow key keyed, focus on next item.
-   * 4) If left or up arrow key keyed, focus on the previous item.
-   */
   const onKeyDown = (e: KeyboardEvent<HTMLUListElement>) => {
-    if ([ESCAPE_KEYCODE].includes(e.key)) {
-      if (handleOnKeyDown) {
-        handleOnKeyDown(e);
-      }
+    // Calls callback on escape key trigger, typically to close the menu.
+    if (e.key === ESCAPE_KEYCODE && handleOnEscDown) {
+      handleOnEscDown(e);
     }
 
-    let activeItem = null;
-
-    childRefs.current.map((item: HTMLLIElement) => {
-      if (item.querySelector(':first-child') === document.activeElement) {
-        activeItem = item;
+    // Focus next element with right or down arrow key.
+    if (e.key === R_ARROW_KEYCODE || e.key === D_ARROW_KEYCODE) {
+      if (focusIndex < refs.current.list.length - 1) {
+        focusIndex++;
+      } else {
+        // Wrap around to top of menu since we're at the bottom
+        focusIndex = 0;
       }
-      return item;
-    });
+      focusItem(focusIndex);
+      // prevents page from scrolling
+      e.preventDefault();
+    }
 
-    if (!activeItem) return;
+    // Focus previous element with left or up arrow key.
+    if (e.key === L_ARROW_KEYCODE || e.key === U_ARROW_KEYCODE) {
+      if (focusIndex > 0) {
+        focusIndex--;
+      } else {
+        // Wrap around to bottom of menu since we're at the bottom
+        focusIndex = refs.current.list.length - 1;
+      }
+      focusItem(focusIndex);
+      // prevents page from scrolling
+      e.preventDefault();
+    }
 
-    const index = childRefs.current.indexOf(activeItem); /* 2 */
-    const next = index === childRefs.current.length - 1 ? 0 : index + 1; /* 2 */
+    // Focus first item with home key.
+    if (e.key === HOME_KEYCODE) {
+      focusIndex = 0;
+      focusItem(focusIndex);
+      // prevents page from scrolling
+      e.preventDefault();
+    }
 
-    const prev = index === 0 ? childRefs.current.length - 1 : index - 1; /* 2 */
-
-    if ([R_ARROW_KEYCODE, D_ARROW_KEYCODE].includes(e.key)) {
-      /* 3 */
-      childRefs.current[next]
-        ?.querySelector<HTMLButtonElement | HTMLAnchorElement>(':first-child')
-        ?.focus();
-    } else if ([L_ARROW_KEYCODE, U_ARROW_KEYCODE].includes(e.key)) {
-      /* 4 */
-      childRefs.current[prev]
-        ?.querySelector<HTMLButtonElement | HTMLAnchorElement>(':first-child')
-        ?.focus();
+    // Focus last item with end key.
+    if (e.key === END_KEYCODE) {
+      focusIndex = refs.current.list.length - 1;
+      focusItem(focusIndex);
+      // prevents page from scrolling
+      e.preventDefault();
     }
   };
 
-  /**
-   * Pass props down to children
-   * 1) Using type 'any' here because TS requires typechecking at this point, but these elements have already been typechecked
-   * 2) Cycle through children and pass down ref
-   */
-  const childrenWithProps = React.Children.map(
-    children,
-    (child: ReactNode, i: number) => {
-      // Checking isValidElement is the safe way and avoids a typescript
-      // error too.
-      if (React.isValidElement(child)) {
-        if (isReactFragment(child)) {
-          const newChildren = child.props.children;
-          return newChildren.map((item: ReactNode, i: number) => {
-            return React.cloneElement<Props>(
-              item as any /* 1 */,
-              {
-                ref: (el: HTMLLIElement) => (childRefs.current[i] = el) /* 2 */,
-              } as any /* 1 */,
-            );
-          });
-        } else {
-          return React.cloneElement<Props>(
-            child as any /* 1 */,
-            {
-              ref: (el: HTMLLIElement) => (childRefs.current[i] = el) /* 2 */,
-            } as any /* 1 */,
-          );
-        }
-      }
-    },
-  );
-
   const componentClassName = clsx(styles['dropdown-menu'], className);
   return (
-    <div className={componentClassName} {...other}>
-      <ul
-        className={styles['dropdown-menu__list']}
-        onKeyDown={onKeyDown}
-        role="presentation"
-      >
-        {childrenWithProps}
-      </ul>
-    </div>
+    <DropdownMenuContext.Provider value={{ refs }}>
+      <div className={componentClassName} {...other}>
+        <ul
+          className={styles['dropdown-menu__list']}
+          onKeyDown={onKeyDown}
+          role="menu"
+        >
+          {children}
+        </ul>
+      </div>
+    </DropdownMenuContext.Provider>
   );
 };

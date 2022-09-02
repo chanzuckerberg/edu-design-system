@@ -1,1 +1,1 @@
-export { DropdownMenu as default } from './DropdownMenu';
+export { DropdownMenu as default, DropdownMenuContext } from './DropdownMenu';
