@@ -35,7 +35,16 @@ export type Props = {
   handleOnEscDown?: (e: React.KeyboardEvent) => void;
 } & HTMLAttributes<HTMLElement>;
 
-export const DropdownMenuContext = createContext<any>({});
+type Refs = {
+  set: Set<HTMLLIElement>;
+  list: HTMLLIElement[];
+};
+
+type ContextRefs = {
+  refs: React.MutableRefObject<Refs>;
+};
+export const DropdownMenuContext = createContext<ContextRefs | null>(null);
+
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
@@ -52,10 +61,6 @@ export const DropdownMenu: React.FC<Props> = ({
   handleOnEscDown,
   ...other
 }) => {
-  type Refs = {
-    set: Set<HTMLLIElement>;
-    list: HTMLLIElement[];
-  };
   const refs = useRef<Refs>({
     set: new Set(),
     list: [],

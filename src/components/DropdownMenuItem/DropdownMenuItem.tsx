@@ -69,7 +69,13 @@ export const DropdownMenuItem = ({
   target,
   ...other
 }: DropdownMenuItemProps) => {
-  const { refs } = useContext(DropdownMenuContext);
+  const context = useContext(DropdownMenuContext);
+  const ref = (el: HTMLLIElement) => {
+    if (context && el && !context.refs.current.set.has(el)) {
+      context.refs.current.set.add(el);
+      context.refs.current.list.push(el);
+    }
+  };
 
   const TagName = createTagName();
 
@@ -90,17 +96,7 @@ export const DropdownMenuItem = ({
   );
 
   return (
-    <li
-      className={componentClassName}
-      {...other}
-      ref={(el: HTMLLIElement) => {
-        if (el && !refs.current.set.has(el)) {
-          refs.current.set.add(el);
-          refs.current.list.push(el);
-        }
-      }}
-      role="menuitem"
-    >
+    <li className={componentClassName} {...other} ref={ref} role="menuitem">
       <TagName
         className={styles['dropdown-menu__link']}
         href={href}
