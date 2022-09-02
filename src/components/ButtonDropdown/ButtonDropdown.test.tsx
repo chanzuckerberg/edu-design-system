@@ -16,6 +16,16 @@ describe('<ButtonDropdown />', () => {
     const triggerButton = screen.getByTestId('trigger-button');
     userEvent.click(triggerButton);
     expect(screen.getByRole('button', { name: 'Item 1' })).toHaveFocus();
+    expect(triggerButton).toHaveAttribute('aria-expanded', 'true');
+  });
+
+  it('should close with esc key', () => {
+    render(<ComponentWrapped />);
+    const triggerButton = screen.getByTestId('trigger-button');
+    userEvent.click(triggerButton);
+    userEvent.keyboard('{esc}');
+    expect(triggerButton).toHaveFocus();
+    expect(triggerButton).toHaveAttribute('aria-expanded', 'false');
   });
 
   it('should focus next item or cycle to beginning on down and right arrow keys', () => {

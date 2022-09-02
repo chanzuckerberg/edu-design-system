@@ -6,6 +6,7 @@ exports[`<ButtonDropdown /> ComponentWrapped story renders snapshot 1`] = `
 >
   <button
     aria-expanded="false"
+    aria-haspopup="menu"
     class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
     data-bootstrap-override="clickable-style-secondary"
     data-testid="trigger-button"
@@ -131,6 +132,7 @@ exports[`<ButtonDropdown /> Default story renders snapshot 1`] = `
 >
   <button
     aria-expanded="false"
+    aria-haspopup="menu"
     class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
     data-bootstrap-override="clickable-style-secondary"
     data-testid="trigger-button"
@@ -248,6 +250,7 @@ exports[`<ButtonDropdown /> PositionBottomRight story renders snapshot 1`] = `
 >
   <button
     aria-expanded="false"
+    aria-haspopup="menu"
     class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
     data-bootstrap-override="clickable-style-secondary"
     data-testid="trigger-button"
@@ -365,6 +368,7 @@ exports[`<ButtonDropdown /> PositionTopLeft story renders snapshot 1`] = `
 >
   <button
     aria-expanded="false"
+    aria-haspopup="menu"
     class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
     data-bootstrap-override="clickable-style-secondary"
     data-testid="trigger-button"
@@ -482,6 +486,7 @@ exports[`<ButtonDropdown /> PositionTopRight story renders snapshot 1`] = `
 >
   <button
     aria-expanded="false"
+    aria-haspopup="menu"
     class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
     data-bootstrap-override="clickable-style-secondary"
     data-testid="trigger-button"

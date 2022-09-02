@@ -70,10 +70,10 @@ export const DropdownMenuItem = ({
   ...other
 }: DropdownMenuItemProps) => {
   const context = useContext(DropdownMenuContext);
-  const ref = (el: HTMLLIElement) => {
-    if (context && el && !context.refs.current.set.has(el)) {
-      context.refs.current.set.add(el);
-      context.refs.current.list.push(el);
+  const ref = (element: HTMLLIElement) => {
+    if (context && element && !context.refs.current.set.has(element)) {
+      context.refs.current.set.add(element);
+      context.refs.current.list.push(element);
     }
   };
 

@@ -14,6 +14,8 @@ import {
   R_ARROW_KEYCODE,
   D_ARROW_KEYCODE,
   ESCAPE_KEYCODE,
+  HOME_KEYCODE,
+  END_KEYCODE,
 } from '../../util/keycodes';
 
 export type Props = {
@@ -80,13 +82,11 @@ export const DropdownMenu: React.FC<Props> = ({
   }, [isActive]);
 
   const onKeyDown = (e: KeyboardEvent<HTMLUListElement>) => {
-    if ([ESCAPE_KEYCODE].includes(e.key)) {
-      if (handleOnEscDown) {
-        handleOnEscDown(e);
-      }
+    if (e.key === ESCAPE_KEYCODE && handleOnEscDown) {
+      handleOnEscDown(e);
     }
 
-    if ([R_ARROW_KEYCODE, D_ARROW_KEYCODE].includes(e.key)) {
+    if (e.key === R_ARROW_KEYCODE || e.key === D_ARROW_KEYCODE) {
       if (focusIndex < refs.current.list.length - 1) {
         focusIndex++;
       } else {
@@ -95,12 +95,25 @@ export const DropdownMenu: React.FC<Props> = ({
       focusItem(focusIndex);
       // prevents page from scrolling
       e.preventDefault();
-    } else if ([L_ARROW_KEYCODE, U_ARROW_KEYCODE].includes(e.key)) {
+    }
+    if (e.key === L_ARROW_KEYCODE || e.key === U_ARROW_KEYCODE) {
       if (focusIndex > 0) {
         focusIndex--;
       } else {
         focusIndex = refs.current.list.length - 1;
       }
+      focusItem(focusIndex);
+      // prevents page from scrolling
+      e.preventDefault();
+    }
+    if (e.key === HOME_KEYCODE) {
+      focusIndex = 0;
+      focusItem(focusIndex);
+      // prevents page from scrolling
+      e.preventDefault();
+    }
+    if (e.key === END_KEYCODE) {
+      focusIndex = refs.current.list.length - 1;
       focusItem(focusIndex);
       // prevents page from scrolling
       e.preventDefault();
