@@ -88,7 +88,10 @@ const TestComponent = ({ color }: { color: string }) => {
     </>
   );
 };
-
+/**
+ * This story is required to test DropdownMenu functionality when wrapped in a helper component.
+ * Tests refs being properly passed to DropdownMenuItem components.
+ */
 export const ComponentWrapped: StoryObj<Args> = {
   args: {
     children: <TestComponent color="blanchedalmond" />,
