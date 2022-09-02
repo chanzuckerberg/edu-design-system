@@ -206,7 +206,7 @@ export const ButtonDropdown = ({
       {dropdownMenuTriggerWithProps}
       <DropdownMenu
         className={styles['button-dropdown__dropdown-menu']}
-        handleOnKeyDown={(e: React.KeyboardEvent) => handleKeyDown(e)}
+        handleOnEscDown={(e: React.KeyboardEvent) => handleKeyDown(e)}
         isActive={isActiveVar}
       >
         {children}

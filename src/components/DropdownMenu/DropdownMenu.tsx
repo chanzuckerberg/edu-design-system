@@ -29,7 +29,10 @@ export type Props = {
    * Sets the component to open or close by default
    */
   isActive?: boolean;
-  handleOnKeyDown?: (e: React.KeyboardEvent) => void;
+  /**
+   * Invoked when the escape key is pressed.
+   */
+  handleOnEscDown?: (e: React.KeyboardEvent) => void;
 } & HTMLAttributes<HTMLElement>;
 
 export const DropdownMenuContext = createContext<any>({});
@@ -46,7 +49,7 @@ export const DropdownMenu: React.FC<Props> = ({
   children,
   className,
   isActive,
-  handleOnKeyDown,
+  handleOnEscDown,
   ...other
 }) => {
   type Refs = {
@@ -73,8 +76,8 @@ export const DropdownMenu: React.FC<Props> = ({
 
   const onKeyDown = (e: KeyboardEvent<HTMLUListElement>) => {
     if ([ESCAPE_KEYCODE].includes(e.key)) {
-      if (handleOnKeyDown) {
-        handleOnKeyDown(e);
+      if (handleOnEscDown) {
+        handleOnEscDown(e);
       }
     }
 
@@ -101,7 +104,7 @@ export const DropdownMenu: React.FC<Props> = ({
 
   const componentClassName = clsx(styles['dropdown-menu'], className);
   return (
-    <DropdownMenuContext.Provider value={{ refs: refs }}>
+    <DropdownMenuContext.Provider value={{ refs }}>
       <div className={componentClassName} {...other}>
         <ul
           className={styles['dropdown-menu__list']}
