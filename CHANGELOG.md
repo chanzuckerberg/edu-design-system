@@ -2,48 +2,6 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [3.2.1-alpha.0](https://github.com/chanzuckerberg/edu-design-system/compare/v3.1.2...v3.2.1-alpha.0) (2022-09-01)
-
-
-### ⚠ BREAKING CHANGES
-
-* **inputfield:** rename textinput to inputfield
-* **inputfield:** rename textinput to inputfield
-* **inputlabel:** accepts children instead of text prop
-
-### Features
-
-* **datasummarycard:** adds DataSummaryCard recipe ([abd6054](https://github.com/chanzuckerberg/edu-design-system/commit/abd60546b7b51e9f8218db7737ce00a28bcbba5f))
-* **datasummarycard:** adds DataSummaryCard recipe ([03961b2](https://github.com/chanzuckerberg/edu-design-system/commit/03961b2b027faf22c39df7571371f1ac7f68bec2))
-* **filters:** make filters components controlled ([e589c46](https://github.com/chanzuckerberg/edu-design-system/commit/e589c468c62ddae44c63f9136355edf570d1c4ec))
-* **filters:** make filters components controlled ([799e904](https://github.com/chanzuckerberg/edu-design-system/commit/799e904eba5444cf464b45bbc7d0426a93d4fd37))
-* **inputlabel:** create inputlabel and use in radio and checkbox ([d935ffc](https://github.com/chanzuckerberg/edu-design-system/commit/d935ffc380cc481b80d0ab12f8ef1bab2c3a744a))
-* **radio:** init import radio from EDSCandidates ([f56bdc4](https://github.com/chanzuckerberg/edu-design-system/commit/f56bdc4fbb74aa26c51f1b0fbeb01149a3af9fda))
-* **radio:** migrate radio from EDScandidates and match mocks ([b7f25a5](https://github.com/chanzuckerberg/edu-design-system/commit/b7f25a5b88007f144fa05b5c2e09eaa714723835))
-* **score:** add score component ([2941cea](https://github.com/chanzuckerberg/edu-design-system/commit/2941cea097a105caa03411cc904bcb159f22b7d2))
-* **score:** init score component ([4424c97](https://github.com/chanzuckerberg/edu-design-system/commit/4424c97d4f0e00a268794836e9cae936cc3743b0))
-* **searchbar:** add SearchBar component ([70457d8](https://github.com/chanzuckerberg/edu-design-system/commit/70457d8a43e446cce6453ae8d71bcc9aa81a2ddc))
-* **searchbar:** componentize and export under searchbar ([ff19761](https://github.com/chanzuckerberg/edu-design-system/commit/ff1976193f88597c83bc1952e0580bcbbeb3b84e))
-* **searchfield:** add searchfield component ([e11f2e7](https://github.com/chanzuckerberg/edu-design-system/commit/e11f2e7ea826b2fb644d732c7beae56a1158dc4a))
-* **textfield:** matches mocks, update snaps, update dependent components, add stories ([b6ffe70](https://github.com/chanzuckerberg/edu-design-system/commit/b6ffe701059cf82aa29f2660f4c87f4a05fcb063))
-* **textinput, textfield:** migrate components from EDSCandidates ([a337a40](https://github.com/chanzuckerberg/edu-design-system/commit/a337a401101500e5b0f6039c79f484c1243f44d8))
-* **tooltip:** add childDisabled prop ([ab3610e](https://github.com/chanzuckerberg/edu-design-system/commit/ab3610ed29c5526379e242391ec6dc44f4368ece))
-
-
-### Bug Fixes
-
-* **checkbox:** make checkbox sizes variants match ui kit ([5c5d663](https://github.com/chanzuckerberg/edu-design-system/commit/5c5d6635cb07baf806458219c0c1d0f7471be280))
-* **checkbox:** require onChange for checkbox ([39c1353](https://github.com/chanzuckerberg/edu-design-system/commit/39c135385e1995032376e6cdcf97c6059428b9b3))
-* **fieldnote:** match error icon color to mocks ([2c11e61](https://github.com/chanzuckerberg/edu-design-system/commit/2c11e61c0ccc1ca81070fb03360729e8854a0947))
-* **fieldnote:** match error icon color to mocks ([19e4f2e](https://github.com/chanzuckerberg/edu-design-system/commit/19e4f2e29d8db3af424123ac2d8201d1952fc779))
-* **pageheader:** remove wrapping div for overline ([a604dad](https://github.com/chanzuckerberg/edu-design-system/commit/a604dad582cd11499ead073b063b1b3a512570a1))
-* **pageheader:** remove wrapping div for overline ([515660c](https://github.com/chanzuckerberg/edu-design-system/commit/515660cd233809f8b57ce9d8e5cb9cc3272aa7ec))
-
-
-* **inputfield:** rename textinput to inputfield ([34cdbe4](https://github.com/chanzuckerberg/edu-design-system/commit/34cdbe444ee7ca2b4db4ce552a311600db45cc98))
-* **inputfield:** rename textinput to inputfield ([4ef5f9e](https://github.com/chanzuckerberg/edu-design-system/commit/4ef5f9e41f72c904d293b57532cbcc5079bafa69))
-* **inputlabel:** accepts children instead of text prop ([1932fb9](https://github.com/chanzuckerberg/edu-design-system/commit/1932fb9e8e4fbfe0eec8f917cedb8f7d0e7f602a))
-
 ## [3.2.0](https://github.com/chanzuckerberg/edu-design-system/compare/v3.1.2...v3.2.0) (2022-08-23)
 
 
