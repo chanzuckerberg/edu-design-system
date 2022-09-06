@@ -43,6 +43,12 @@ Each EDS component is documented in Storybook, which surfaces each component's A
 4. Edit component source code in accordance with [EDS's code guidelines](./CODE_GUIDELINES.md)
 5. Create relevant stories for all component variants
 
+### Beta status
+
+When components are first created using the `plop` feature, they're given a beta tag in the `.stories` file and a line is added to the component docstring stating that the component is in beta. When the component is first officially released/announced internally, the component will be in beta, but it will leave beta in the following release. We expect these releases to happen about once/month, and the removal of the beta information will happen as part of the release process.
+
+Exceptions can be made for components that are still fluctuating and experiencing a lot of changes when the second release comes around.
+
 ---
 
 ## Working with pages
