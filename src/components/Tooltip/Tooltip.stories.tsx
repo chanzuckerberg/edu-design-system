@@ -133,7 +133,7 @@ export const LongButtonText: StoryObj<Args> = {
   },
 };
 
-export const Disabled: StoryObj<Args> = {
+export const DisabledButton: StoryObj<Args> = {
   render: () => (
     <div
       className={clsx(
@@ -150,6 +150,26 @@ export const Disabled: StoryObj<Args> = {
         <Button disabled variant="primary">
           Tooltip trigger
         </Button>
+      </Tooltip>
+    </div>
+  ),
+};
+
+export const TextChild: StoryObj<Args> = {
+  render: () => (
+    <div
+      className={clsx(
+        styles['trigger--spacing-top'],
+        styles['trigger--spacing-left'],
+      )}
+    >
+      <Tooltip
+        align="top"
+        childNotInteractive={true}
+        text={defaultArgs.text}
+        visible={true}
+      >
+        <>Tooltip trigger</>
       </Tooltip>
     </div>
   ),
@@ -176,7 +196,7 @@ export const Interactive: StoryObj<Args> = {
   ],
 };
 
-export const InteractiveDisabled: StoryObj<Args> = {
+export const InteractiveDisabledButton: StoryObj<Args> = {
   args: {
     duration: undefined,
   },
