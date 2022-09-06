@@ -23,13 +23,13 @@ type TooltipProps = {
    */
   children?: React.ReactElement;
   /**
-   * If the child being passed into the Tooltip via the `children` prop is disabled (e.g. a disabled button).
+   * If the child being passed into the Tooltip via the `children` prop is not interactive (e.g. a disabled button or an icon).
    *
    * Please note that spacing and placement styling will need to be added to a wrapper around the Tooltip,
-   * not on the button child inside the Tooltip, because there will be a wrapper around the button child. Example:
+   * not on the child component inside the Tooltip, because there will be a wrapper around the child. Example:
    * <div className="spacing-goes-here"><Tooltip text="Tooltip text"><Button disabled>Button text</Button></Tooltip></div>
    */
-  childDisabled?: boolean;
+  childNotInteractive?: boolean;
   /**
    * Custom classname for additional styles.
    *
@@ -104,7 +104,7 @@ type Plugin = Plugins[number];
 export const Tooltip = ({
   variant = 'light',
   align = 'top',
-  childDisabled,
+  childNotInteractive,
   className,
   duration = 200,
   text,
@@ -141,12 +141,12 @@ export const Tooltip = ({
   let children = rest.children;
   // Tippy only works on elements with a tabindex. If the child is disabled, we need to
   // wrap it in an element with a tabindex in order for it to work.
-  if (childDisabled) {
+  if (childNotInteractive) {
     children = (
       <span
         className={clsx(
           (align === 'bottom' || align === 'top') &&
-            styles['tooltip__child-disabled-wrapper--vertical'],
+            styles['tooltip__child-not-interactive-wrapper--vertical'],
         )}
         data-testid="disabled-child-tooltip-wrapper"
         // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex

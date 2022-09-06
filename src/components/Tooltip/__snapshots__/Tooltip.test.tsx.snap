@@ -118,7 +118,7 @@ exports[`<Tooltip /> Disabled story renders snapshot 1`] = `
     >
       <span
         aria-describedby="tippy-8"
-        class="tooltip__child-disabled-wrapper--vertical"
+        class="tooltip__child-not-interactive-wrapper--vertical"
         data-testid="disabled-child-tooltip-wrapper"
         tabindex="0"
       >
@@ -207,7 +207,7 @@ exports[`<Tooltip /> InteractiveDisabled story renders snapshot 1`] = `
         class="trigger--spacing-top trigger--spacing-left"
       >
         <span
-          class="tooltip__child-disabled-wrapper--vertical"
+          class="tooltip__child-not-interactive-wrapper--vertical"
           data-testid="disabled-child-tooltip-wrapper"
           tabindex="0"
         >

@@ -143,7 +143,7 @@ export const Disabled: StoryObj<Args> = {
     >
       <Tooltip
         align="top"
-        childDisabled={true}
+        childNotInteractive={true}
         text={defaultArgs.text}
         visible={true}
       >
@@ -189,7 +189,7 @@ export const InteractiveDisabled: StoryObj<Args> = {
     >
       <Tooltip
         align="top"
-        childDisabled={true}
+        childNotInteractive={true}
         duration={args.duration}
         text={defaultArgs.text}
       >
