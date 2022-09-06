@@ -60,11 +60,11 @@ export const Card = ({
 }: Props) => {
   const componentClassName = clsx(
     styles['card'],
-    className,
     inverted && styles['card--inverted'],
     orientation && styles['card--horizontal'],
     isDragging && styles['eds-is-dragging'],
     elevation === 'raised' && styles['card--raised'],
+    className,
   );
   return (
     <article className={componentClassName} {...other}>

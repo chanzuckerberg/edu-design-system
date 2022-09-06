@@ -163,30 +163,28 @@ export const TextareaField = ({
 
   const componentClassName = clsx(
     styles['textarea-field'],
-    className,
     inverted && styles['textarea-field--inverted'],
-    isError && styles['eds-is-error'],
-    disabled && styles['eds-is-disabled'],
+    className,
   );
 
   return (
     <div className={componentClassName}>
-      <Label
-        className={styles['textarea-field__label']}
-        hideLabel={hideLabel}
-        htmlFor={idVar}
-        inverted={inverted}
-        optionalLabel={optionalLabel}
-        required={required}
-        requiredLabel={requiredLabel}
-        text={label}
-      />
+      {label && (
+        <Label
+          className={styles['textarea-field__label']}
+          hideLabel={hideLabel}
+          htmlFor={idVar}
+          optionalLabel={optionalLabel}
+          required={required}
+          requiredLabel={requiredLabel}
+          text={label}
+        />
+      )}
 
       <div className={styles['textarea-field__body']}>
         <Textarea
           aria-describedby={ariaDescribedByVar}
           aria-invalid={!!isError}
-          className={styles['textarea-field__textarea']}
           defaultValue={defaultValue}
           disabled={disabled}
           id={idVar}
@@ -206,7 +204,6 @@ export const TextareaField = ({
         {fieldButtonText && (
           <Button
             aria-label={fieldButtonAriaLabel}
-            className={styles['textarea-field__button']}
             onClick={fieldButtonOnClick}
             size="sm"
             type="button"
@@ -215,17 +212,10 @@ export const TextareaField = ({
             {fieldButtonText}
           </Button>
         )}
-        {iconName && (
-          <Icon
-            className={styles['textarea-field__icon']}
-            name={iconName}
-            purpose="decorative"
-          />
-        )}
+        {iconName && <Icon name={iconName} purpose="decorative" />}
       </div>
       {fieldNote && (
         <FieldNote
-          className={styles['textarea-field__note']}
           id={ariaDescribedByVar}
           inverted={inverted}
           isError={isError}

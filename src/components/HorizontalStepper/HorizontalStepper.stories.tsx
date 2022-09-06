@@ -2,7 +2,6 @@ import { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
 import { HorizontalStepper } from './HorizontalStepper';
-import styles from './HorizontalStepper.stories.module.css';
 import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';
 import HorizontalStep from '../HorizontalStep';
@@ -17,11 +16,8 @@ export default {
   },
   decorators: [
     (Story) => (
-      <div
-        style={{
-          margin: '1rem', // Pushes contents away from storybook borders.
-        }}
-      >
+      // Pushes contents away from storybook borders.
+      <div className="m-4">
         <Story />
       </div>
     ),
@@ -88,7 +84,7 @@ export const Interactive: StoryObj<Args> = {
 
 export const HorizontalSteps: StoryObj<Args> = {
   render: () => (
-    <ol style={{ padding: 0 }}>
+    <ol className="p-0">
       <HorizontalStep
         stepNumber={1}
         text="Horizontal step"
@@ -106,7 +102,7 @@ export const HorizontalSteps: StoryObj<Args> = {
 
 export const HorizontalStepsDifferentNumbers: StoryObj<Args> = {
   render: () => (
-    <ol style={{ padding: 0 }}>
+    <ol className="p-0">
       <HorizontalStep stepNumber={1} text="Horizontal step" variant="active" />
       <HorizontalStep stepNumber={2} text="Horizontal step" variant="active" />
       <HorizontalStep stepNumber={3} text="Horizontal step" variant="active" />
@@ -128,6 +124,6 @@ export const HorizontalStepsDifferentNumbers: StoryObj<Args> = {
 
 export const CappedLine: StoryObj<Args> = {
   args: {
-    linesClassName: styles['capped-line'],
+    linesClassName: 'max-w-[120px]',
   },
 };

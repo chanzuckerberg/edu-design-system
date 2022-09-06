@@ -3,8 +3,8 @@ import React, { ReactNode } from 'react';
 import { useUID } from 'react-uid';
 import styles from './InlineForm.module.css';
 import Button from '../../components/Button';
+import InputField from '../../components/InputField';
 import Label from '../../components/Label';
-import TextInput from '../../components/TextInput';
 
 export interface Props {
   /**
@@ -64,7 +64,7 @@ export const InlineForm = ({
   const generatedId = useUID();
   const idVar = id || generatedId;
 
-  const componentClassName = clsx(styles['inline-form'], className, {});
+  const componentClassName = clsx(styles['inline-form'], className);
   return (
     <form
       action={action}
@@ -72,13 +72,15 @@ export const InlineForm = ({
       method={method}
       {...other}
     >
-      <Label
-        className="inline-form__label u-is-vishidden"
-        htmlFor={idVar}
-        labelAfter={labelAfter}
-        text={label}
-      />
-      <TextInput
+      {label && (
+        <Label
+          className="inline-form__label u-is-vishidden"
+          htmlFor={idVar}
+          labelAfter={labelAfter}
+          text={label}
+        />
+      )}
+      <InputField
         className={styles['inline-form__input']}
         id={idVar}
         placeholder={placeholder}

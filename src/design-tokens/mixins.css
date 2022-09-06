@@ -116,29 +116,21 @@
   /**
    * Input error state
    */
-  &.eds-is-error {
+  &.error {
     border-color: var(--eds-theme-color-border-utility-error-strong);
   }
 
   /**
    * Disabled state
    */
-  &.eds-is-disabled {
-    background-color: var(--eds-theme-color-background-disabled);
+  &:disabled,
+  &:disabled::placeholder {
     border-color: var(--eds-theme-color-border-disabled);
     color: var(--eds-theme-color-text-disabled);
     cursor: not-allowed;
   }
 
-  &::-webkit-input-placeholder {
-    @mixin placeholderStyles;
-  }
-
-  &::-moz-placeholder {
-    @mixin placeholderStyles;
-  }
-
-  &:-ms-input-placeholder {
+  &::placeholder {
     @mixin placeholderStyles;
   }
 }
@@ -146,11 +138,9 @@
 @define-mixin labelStyles {
   @mixin eds-theme-typography-form-label;
   display: inline-block;
-  color: var(--eds-theme-color-form-label);
 }
 
 @define-mixin placeholderStyles {
-  font-style: italic;
   color: var(--eds-theme-color-text-neutral-subtle);
 }
 

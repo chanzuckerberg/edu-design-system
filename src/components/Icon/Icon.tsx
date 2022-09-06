@@ -124,8 +124,8 @@ export const Icon = (props: IconProps) => {
 
   const componentClassName = clsx(
     styles['icon'],
-    className,
     fullWidth && styles['icon--full-width'],
+    className,
   );
   const style: SvgStyle = {
     '--icon-size': size,

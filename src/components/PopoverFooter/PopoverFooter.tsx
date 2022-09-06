@@ -27,7 +27,7 @@ export const PopoverFooter: React.FC<Props> = ({
   className,
   ...other
 }) => {
-  const componentClassName = clsx(styles['popover__footer'], className, {});
+  const componentClassName = clsx(styles['popover__footer'], className);
   return (
     <footer className={componentClassName} {...other}>
       {children}

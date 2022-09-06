@@ -1,5 +1,3 @@
-@import '../../design-tokens/mixins.css';
-
 /*------------------------------------*\
     # CARD
 \*------------------------------------*/
@@ -19,7 +17,6 @@
   border-color: var(--eds-theme-color-border-neutral-subtle);
   background-color: var(--eds-theme-color-background-neutral-default);
 }
-
 
 /**
  * Raised card

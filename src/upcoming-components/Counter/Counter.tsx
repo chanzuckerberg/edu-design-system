@@ -5,8 +5,8 @@ import styles from './Counter.module.css';
 import Button from '../../components/Button';
 import FieldNote from '../../components/FieldNote';
 import Icon from '../../components/Icon';
+import InputField from '../../components/InputField';
 import Label from '../../components/Label';
-import TextInput from '../../components/TextInput';
 
 export interface Props {
   /**
@@ -154,22 +154,23 @@ export const Counter = ({
 
   const componentClassName = clsx(
     styles['counter'],
+    isError && styles['counter--error'],
     className,
-    isError && styles['eds-is-error'],
-    disabled && styles['eds-is-disabled'],
   );
   return (
     <div className={componentClassName} {...other}>
-      <Label
-        className={styles['counter__label']}
-        hideLabel={hideLabel}
-        htmlFor={idVar}
-        labelAfter={labelAfter}
-        optionalLabel={optionalLabel}
-        required={required}
-        requiredLabel={requiredLabel}
-        text={label}
-      />
+      {label && (
+        <Label
+          className={styles['counter__label']}
+          hideLabel={hideLabel}
+          htmlFor={idVar}
+          labelAfter={labelAfter}
+          optionalLabel={optionalLabel}
+          required={required}
+          requiredLabel={requiredLabel}
+          text={label}
+        />
+      )}
 
       <div className={styles['counter__body']}>
         <Button
@@ -180,7 +181,7 @@ export const Counter = ({
         >
           <Icon name="remove" purpose="informative" title={minusButtonText} />
         </Button>
-        <TextInput
+        <InputField
           aria-describedby={ariaDescribedByVar}
           aria-labelledby={ariaLabelledByVar}
           aria-live="assertive"
@@ -206,11 +207,7 @@ export const Counter = ({
         </Button>
       </div>
       {fieldNote && (
-        <FieldNote
-          className={styles['counter-field__note']}
-          id={ariaDescribedByVar}
-          isError={isError}
-        >
+        <FieldNote id={ariaDescribedByVar} isError={isError}>
           {fieldNote}
         </FieldNote>
       )}

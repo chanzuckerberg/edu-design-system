@@ -170,11 +170,11 @@ export const Popover = ({
 
   const componentClassName = clsx(
     styles['popover'],
-    className,
     isActive && [styles['eds-is-active']],
     position === 'top-left' && [styles['popover--top-left']],
     position === 'bottom-left' && [styles['popover--bottom-left']],
     position === 'bottom-right' && [styles['popover--bottom-right']],
+    className,
   );
 
   if (!isMounted) return null;

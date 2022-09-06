@@ -5,36 +5,37 @@
 \*------------------------------------*/
 
 /**
- * Field note
+ * Fieldnote
  */
 .field-note {
-  display: inline-block;
-  @mixin eds-theme-typography-body-text-xs;
-  margin-top: var(--eds-size-half);
-  color: var(--eds-theme-color-text-neutral-subtle);
-
-  /**
-     * Field note inside a field that has an error 
-     */
-  &.eds-is-error {
-    color: var(--eds-theme-color-text-utility-error);
-  }
+  @mixin eds-theme-typography-body-text-sm;
 }
 
 /**
-  * Fieldnote icon
-  */
-.field-note__icon.field-note__icon {
-  height: var(--eds-size-2);
-  width: var(--eds-size-2);
+ * Fieldnote icon
+ */
+.field-note__icon {
+  /* Centers icon with accompanying text */
   position: relative;
   bottom: 1px;
+  margin-right: var(--eds-size-half);
+}
 
-  .eds-is-error & {
-    display: inline-block;
-    position: relative;
-    margin-right: var(--eds-size-1);
-  }
+/**
+ * Disabled variant
+ */
+.field-note--disabled {
+  color: var(--eds-theme-color-text-disabled);
+}
+
+/**
+ * Error variant
+ */
+.field-note--error {
+  color: var(--eds-theme-color-text-utility-error);
+}
+.field-note--error > .field-note__icon {
+  color: var(--eds-theme-color-icon-utility-error);
 }
 
 /**

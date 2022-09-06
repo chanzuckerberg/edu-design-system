@@ -5,7 +5,7 @@ import React from 'react';
 import { Score } from './Score';
 
 export default {
-  title: 'PleaseUpdateThisToADifferentFolder/Score',
+  title: 'Molecules/Messaging/Score',
   component: Score,
   parameters: {
     badges: [BADGE.BETA],

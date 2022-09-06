@@ -1,6 +1,5 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { Meta, Story, StoryObj } from '@storybook/react';
-import { within, userEvent } from '@storybook/testing-library';
 import clsx from 'clsx';
 import React from 'react';
 import { Tooltip } from './Tooltip';
@@ -134,6 +133,28 @@ export const LongButtonText: StoryObj<Args> = {
   },
 };
 
+export const Disabled: StoryObj<Args> = {
+  render: () => (
+    <div
+      className={clsx(
+        styles['trigger--spacing-top'],
+        styles['trigger--spacing-left'],
+      )}
+    >
+      <Tooltip
+        align="top"
+        childDisabled={true}
+        text={defaultArgs.text}
+        visible={true}
+      >
+        <Button disabled variant="primary">
+          Tooltip trigger
+        </Button>
+      </Tooltip>
+    </div>
+  ),
+};
+
 export const Interactive: StoryObj<Args> = {
   args: {
     // reset prop values defined in defaultArgs
@@ -141,24 +162,49 @@ export const Interactive: StoryObj<Args> = {
     visible: undefined,
     children: (
       <Button className={clsx(styles['trigger--spacing'])} variant="primary">
-        Hover here to see tooltip after clicking somewhere outside.
+        Tooltip trigger
       </Button>
     ),
   },
   decorators: [
     (Story: Story) => (
       <div>
-        <p>
-          Click somewhere in this area to dismiss the tooltip, then hover over
-          the button to make it reappear.
-        </p>
+        <p>Hover over the button to make the tooltip appear.</p>
         <Story />
       </div>
     ),
   ],
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    const trigger = await canvas.findByRole('button');
-    await userEvent.hover(trigger);
+};
+
+export const InteractiveDisabled: StoryObj<Args> = {
+  args: {
+    duration: undefined,
   },
+  render: (args) => (
+    <div
+      className={clsx(
+        styles['trigger--spacing-top'],
+        styles['trigger--spacing-left'],
+      )}
+    >
+      <Tooltip
+        align="top"
+        childDisabled={true}
+        duration={args.duration}
+        text={defaultArgs.text}
+      >
+        <Button disabled variant="primary">
+          Tooltip trigger
+        </Button>
+      </Tooltip>
+    </div>
+  ),
+  decorators: [
+    (Story: Story) => (
+      <div>
+        <p>Hover over the button to make the tooltip appear.</p>
+        <Story />
+      </div>
+    ),
+  ],
 };

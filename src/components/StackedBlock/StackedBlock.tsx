@@ -1,4 +1,3 @@
-import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import styles from './StackedBlock.module.css';
 import Link from '../Link';
@@ -41,10 +40,8 @@ export const StackedBlock = ({
   children,
   ...other
 }: Props) => {
-  const componentClassName = clsx(styles['stacked-block'], className);
-
   return (
-    <div className={componentClassName} {...other}>
+    <div className={className} {...other}>
       <Link href={href}>{title}</Link>
       <Text className={styles['stacked-block__description']}>{children}</Text>
     </div>

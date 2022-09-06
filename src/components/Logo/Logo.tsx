@@ -1,4 +1,3 @@
-import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import styles from './Logo.module.css';
 
@@ -47,9 +46,8 @@ export const Logo = ({
   src,
   ...other
 }: Props) => {
-  const componentClassName = clsx(styles['logo'], className, {});
   return (
-    <div className={componentClassName} {...other}>
+    <div className={className} {...other}>
       <a
         aria-label={ariaLabel}
         className={styles['logo__link']}

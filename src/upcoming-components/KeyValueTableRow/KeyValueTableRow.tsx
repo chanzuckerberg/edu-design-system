@@ -34,7 +34,7 @@ export const KeyValueTableRow = ({
   rowValue,
   ...other
 }: Props) => {
-  const componentClassName = clsx('key-value-table__row', className, {});
+  const componentClassName = clsx('key-value-table__row', className);
   return (
     <tr className={componentClassName} {...other}>
       <th className={styles['key-value-table__key']} scope="row">

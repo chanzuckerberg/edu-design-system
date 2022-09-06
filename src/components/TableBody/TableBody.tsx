@@ -23,7 +23,7 @@ export interface Props {
  * HTML `tbody` of the `Table` component
  */
 export const TableBody = ({ children, className, ...other }: Props) => {
-  const componentClassName = clsx(styles['table__body'], className, {});
+  const componentClassName = clsx(styles['table__body'], className);
 
   return (
     <tbody className={componentClassName} {...other}>

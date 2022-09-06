@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<InputField /> Default story renders snapshot 1`] = `
+<div
+  style="padding: 0.5rem; background-color: white;"
+>
+  <input
+    class="input-field"
+    placeholder="Placeholder"
+  />
+</div>
+`;
+
+exports[`<InputField /> Disabled story renders snapshot 1`] = `
+<div
+  style="padding: 0.5rem; background-color: white;"
+>
+  <input
+    class="input-field"
+    disabled=""
+    style="margin-bottom: 0.5rem;"
+    value="Default Value"
+  />
+  <input
+    class="input-field"
+    disabled=""
+    placeholder="Placeholder"
+  />
+</div>
+`;
+
+exports[`<InputField /> Error story renders snapshot 1`] = `
+<div
+  style="padding: 0.5rem; background-color: white;"
+>
+  <input
+    class="input-field error"
+    style="margin-bottom: 0.5rem;"
+  />
+  <input
+    class="input-field error"
+    placeholder="Placeholder"
+  />
+</div>
+`;

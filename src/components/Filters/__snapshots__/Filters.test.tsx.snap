@@ -16,7 +16,7 @@ exports[`<Filters /> Default story renders snapshot 1`] = `
       class="drawer__header"
     >
       <h3
-        class="filters-drawer__title heading heading--size-headline-sm"
+        class="heading heading--size-headline-sm filters-drawer__title"
         id="2"
       >
         Filters
@@ -50,7 +50,7 @@ exports[`<Filters /> Default story renders snapshot 1`] = `
       class="drawer__body filters-drawer__body"
     >
       <fieldset
-        class="filters-fieldset fieldset"
+        class="fieldset filters-fieldset"
       >
         <legend
           class="fieldset-legend filters-fieldset__legend"
@@ -59,10 +59,10 @@ exports[`<Filters /> Default story renders snapshot 1`] = `
            
         </legend>
         <div
-          class="filters-fieldset__checkboxes fieldset-items"
+          class="fieldset-items filters-fieldset__checkboxes"
         >
           <div
-            class="checkbox checkbox--md"
+            class="checkbox"
           >
             <span
               class="input__wrapper"
@@ -88,7 +88,7 @@ exports[`<Filters /> Default story renders snapshot 1`] = `
               </svg>
             </span>
             <label
-              class="label label--md"
+              class="label label--lg"
               data-bootstrap-override="label"
               for="4"
             >
@@ -96,7 +96,7 @@ exports[`<Filters /> Default story renders snapshot 1`] = `
             </label>
           </div>
           <div
-            class="checkbox checkbox--md"
+            class="checkbox"
           >
             <span
               class="input__wrapper"
@@ -122,7 +122,7 @@ exports[`<Filters /> Default story renders snapshot 1`] = `
               </svg>
             </span>
             <label
-              class="label label--md"
+              class="label label--lg"
               data-bootstrap-override="label"
               for="6"
             >
@@ -130,7 +130,7 @@ exports[`<Filters /> Default story renders snapshot 1`] = `
             </label>
           </div>
           <div
-            class="checkbox checkbox--md"
+            class="checkbox"
           >
             <span
               class="input__wrapper"
@@ -156,7 +156,7 @@ exports[`<Filters /> Default story renders snapshot 1`] = `
               </svg>
             </span>
             <label
-              class="label label--md"
+              class="label label--lg"
               data-bootstrap-override="label"
               for="8"
             >
@@ -186,7 +186,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
       class="drawer__header"
     >
       <h3
-        class="filters-drawer__title heading heading--size-headline-sm"
+        class="heading heading--size-headline-sm filters-drawer__title"
         id="38"
       >
         Filters
@@ -220,7 +220,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
       class="drawer__body filters-drawer__body"
     >
       <fieldset
-        class="filters-fieldset fieldset"
+        class="fieldset filters-fieldset"
       >
         <legend
           class="fieldset-legend filters-fieldset__legend"
@@ -229,10 +229,10 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
            
         </legend>
         <div
-          class="filters-fieldset__checkboxes fieldset-items"
+          class="fieldset-items filters-fieldset__checkboxes"
         >
           <div
-            class="checkbox checkbox--md"
+            class="checkbox"
           >
             <span
               class="input__wrapper"
@@ -258,7 +258,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
               </svg>
             </span>
             <label
-              class="label label--md"
+              class="label label--lg"
               data-bootstrap-override="label"
               for="40"
             >
@@ -266,7 +266,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
             </label>
           </div>
           <div
-            class="checkbox checkbox--md"
+            class="checkbox"
           >
             <span
               class="input__wrapper"
@@ -292,7 +292,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
               </svg>
             </span>
             <label
-              class="label label--md"
+              class="label label--lg"
               data-bootstrap-override="label"
               for="42"
             >
@@ -300,7 +300,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
             </label>
           </div>
           <div
-            class="checkbox checkbox--md"
+            class="checkbox"
           >
             <span
               class="input__wrapper"
@@ -326,7 +326,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
               </svg>
             </span>
             <label
-              class="label label--md"
+              class="label label--lg"
               data-bootstrap-override="label"
               for="44"
             >
@@ -336,7 +336,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="filters-fieldset fieldset"
+        class="fieldset filters-fieldset"
       >
         <legend
           class="fieldset-legend filters-fieldset__legend"
@@ -345,10 +345,10 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
            
         </legend>
         <div
-          class="filters-fieldset__checkboxes fieldset-items"
+          class="fieldset-items filters-fieldset__checkboxes"
         >
           <div
-            class="checkbox checkbox--md"
+            class="checkbox"
           >
             <span
               class="input__wrapper"
@@ -374,7 +374,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
               </svg>
             </span>
             <label
-              class="label label--md"
+              class="label label--lg"
               data-bootstrap-override="label"
               for="46"
             >
@@ -382,7 +382,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
             </label>
           </div>
           <div
-            class="checkbox checkbox--md"
+            class="checkbox"
           >
             <span
               class="input__wrapper"
@@ -408,7 +408,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
               </svg>
             </span>
             <label
-              class="label label--md"
+              class="label label--lg"
               data-bootstrap-override="label"
               for="48"
             >
@@ -416,7 +416,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
             </label>
           </div>
           <div
-            class="checkbox checkbox--md"
+            class="checkbox"
           >
             <span
               class="input__wrapper"
@@ -442,7 +442,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
               </svg>
             </span>
             <label
-              class="label label--md"
+              class="label label--lg"
               data-bootstrap-override="label"
               for="50"
             >
@@ -452,7 +452,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="filters-fieldset fieldset"
+        class="fieldset filters-fieldset"
       >
         <legend
           class="fieldset-legend filters-fieldset__legend"
@@ -461,10 +461,10 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
            
         </legend>
         <div
-          class="filters-fieldset__checkboxes fieldset-items"
+          class="fieldset-items filters-fieldset__checkboxes"
         >
           <div
-            class="checkbox checkbox--md"
+            class="checkbox"
           >
             <span
               class="input__wrapper"
@@ -490,7 +490,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
               </svg>
             </span>
             <label
-              class="label label--md"
+              class="label label--lg"
               data-bootstrap-override="label"
               for="52"
             >
@@ -498,7 +498,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
             </label>
           </div>
           <div
-            class="checkbox checkbox--md"
+            class="checkbox"
           >
             <span
               class="input__wrapper"
@@ -524,7 +524,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
               </svg>
             </span>
             <label
-              class="label label--md"
+              class="label label--lg"
               data-bootstrap-override="label"
               for="54"
             >
@@ -532,7 +532,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
             </label>
           </div>
           <div
-            class="checkbox checkbox--md"
+            class="checkbox"
           >
             <span
               class="input__wrapper"
@@ -558,7 +558,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
               </svg>
             </span>
             <label
-              class="label label--md"
+              class="label label--lg"
               data-bootstrap-override="label"
               for="56"
             >
@@ -568,7 +568,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="filters-fieldset fieldset"
+        class="fieldset filters-fieldset"
       >
         <legend
           class="fieldset-legend filters-fieldset__legend"
@@ -577,10 +577,10 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
            
         </legend>
         <div
-          class="filters-fieldset__checkboxes fieldset-items"
+          class="fieldset-items filters-fieldset__checkboxes"
         >
           <div
-            class="checkbox checkbox--md"
+            class="checkbox"
           >
             <span
               class="input__wrapper"
@@ -606,7 +606,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
               </svg>
             </span>
             <label
-              class="label label--md"
+              class="label label--lg"
               data-bootstrap-override="label"
               for="58"
             >
@@ -614,7 +614,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
             </label>
           </div>
           <div
-            class="checkbox checkbox--md"
+            class="checkbox"
           >
             <span
               class="input__wrapper"
@@ -640,7 +640,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
               </svg>
             </span>
             <label
-              class="label label--md"
+              class="label label--lg"
               data-bootstrap-override="label"
               for="60"
             >
@@ -648,7 +648,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
             </label>
           </div>
           <div
-            class="checkbox checkbox--md"
+            class="checkbox"
           >
             <span
               class="input__wrapper"
@@ -674,7 +674,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
               </svg>
             </span>
             <label
-              class="label label--md"
+              class="label label--lg"
               data-bootstrap-override="label"
               for="62"
             >
@@ -682,7 +682,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
             </label>
           </div>
           <div
-            class="checkbox checkbox--md"
+            class="checkbox"
           >
             <span
               class="input__wrapper"
@@ -708,7 +708,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
               </svg>
             </span>
             <label
-              class="label label--md"
+              class="label label--lg"
               data-bootstrap-override="label"
               for="64"
             >
@@ -716,7 +716,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
             </label>
           </div>
           <div
-            class="checkbox checkbox--md"
+            class="checkbox"
           >
             <span
               class="input__wrapper"
@@ -742,7 +742,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
               </svg>
             </span>
             <label
-              class="label label--md"
+              class="label label--lg"
               data-bootstrap-override="label"
               for="66"
             >
@@ -750,7 +750,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
             </label>
           </div>
           <div
-            class="checkbox checkbox--md"
+            class="checkbox"
           >
             <span
               class="input__wrapper"
@@ -776,7 +776,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
               </svg>
             </span>
             <label
-              class="label label--md"
+              class="label label--lg"
               data-bootstrap-override="label"
               for="68"
             >
@@ -790,17 +790,17 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
       class="drawer__footer filters-drawer__footer"
     >
       <div
-        class="footer__button-group button-group button-group--spacing-1x"
+        class="button-group button-group--spacing-1x footer__button-group"
       >
         <button
-          class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button footer__button button--secondary"
+          class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary footer__button"
           data-bootstrap-override="clickable-style-secondary"
           type="button"
         >
           Clear All
         </button>
         <button
-          class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button footer__button button--primary"
+          class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary footer__button"
           data-bootstrap-override="clickable-style-primary"
           type="button"
         >
@@ -828,7 +828,7 @@ exports[`<Filters /> WithOnApplyAndCustomButtonGroup story renders snapshot 1`] 
       class="drawer__header"
     >
       <h3
-        class="filters-drawer__title heading heading--size-headline-sm"
+        class="heading heading--size-headline-sm filters-drawer__title"
         id="26"
       >
         Filters
@@ -862,7 +862,7 @@ exports[`<Filters /> WithOnApplyAndCustomButtonGroup story renders snapshot 1`] 
       class="drawer__body filters-drawer__body"
     >
       <fieldset
-        class="filters-fieldset fieldset"
+        class="fieldset filters-fieldset"
       >
         <legend
           class="fieldset-legend filters-fieldset__legend"
@@ -871,10 +871,10 @@ exports[`<Filters /> WithOnApplyAndCustomButtonGroup story renders snapshot 1`] 
            
         </legend>
         <div
-          class="filters-fieldset__checkboxes fieldset-items"
+          class="fieldset-items filters-fieldset__checkboxes"
         >
           <div
-            class="checkbox checkbox--md"
+            class="checkbox"
           >
             <span
               class="input__wrapper"
@@ -900,7 +900,7 @@ exports[`<Filters /> WithOnApplyAndCustomButtonGroup story renders snapshot 1`] 
               </svg>
             </span>
             <label
-              class="label label--md"
+              class="label label--lg"
               data-bootstrap-override="label"
               for="28"
             >
@@ -908,7 +908,7 @@ exports[`<Filters /> WithOnApplyAndCustomButtonGroup story renders snapshot 1`] 
             </label>
           </div>
           <div
-            class="checkbox checkbox--md"
+            class="checkbox"
           >
             <span
               class="input__wrapper"
@@ -934,7 +934,7 @@ exports[`<Filters /> WithOnApplyAndCustomButtonGroup story renders snapshot 1`] 
               </svg>
             </span>
             <label
-              class="label label--md"
+              class="label label--lg"
               data-bootstrap-override="label"
               for="30"
             >
@@ -942,7 +942,7 @@ exports[`<Filters /> WithOnApplyAndCustomButtonGroup story renders snapshot 1`] 
             </label>
           </div>
           <div
-            class="checkbox checkbox--md"
+            class="checkbox"
           >
             <span
               class="input__wrapper"
@@ -968,7 +968,7 @@ exports[`<Filters /> WithOnApplyAndCustomButtonGroup story renders snapshot 1`] 
               </svg>
             </span>
             <label
-              class="label label--md"
+              class="label label--lg"
               data-bootstrap-override="label"
               for="32"
             >
@@ -982,10 +982,10 @@ exports[`<Filters /> WithOnApplyAndCustomButtonGroup story renders snapshot 1`] 
       class="drawer__footer filters-drawer__footer"
     >
       <div
-        class="footer__button-group button-group__apply-only button-group button-group--spacing-1x"
+        class="button-group button-group--spacing-1x footer__button-group button-group__apply-only"
       >
         <button
-          class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button footer__button button--primary"
+          class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary footer__button"
           data-bootstrap-override="clickable-style-primary"
           type="button"
         >
@@ -1013,7 +1013,7 @@ exports[`<Filters /> WithOnClear story renders snapshot 1`] = `
       class="drawer__header"
     >
       <h3
-        class="filters-drawer__title heading heading--size-headline-sm"
+        class="heading heading--size-headline-sm filters-drawer__title"
         id="14"
       >
         Filters
@@ -1047,7 +1047,7 @@ exports[`<Filters /> WithOnClear story renders snapshot 1`] = `
       class="drawer__body filters-drawer__body"
     >
       <fieldset
-        class="filters-fieldset fieldset"
+        class="fieldset filters-fieldset"
       >
         <legend
           class="fieldset-legend filters-fieldset__legend"
@@ -1056,10 +1056,10 @@ exports[`<Filters /> WithOnClear story renders snapshot 1`] = `
            
         </legend>
         <div
-          class="filters-fieldset__checkboxes fieldset-items"
+          class="fieldset-items filters-fieldset__checkboxes"
         >
           <div
-            class="checkbox checkbox--md"
+            class="checkbox"
           >
             <span
               class="input__wrapper"
@@ -1085,7 +1085,7 @@ exports[`<Filters /> WithOnClear story renders snapshot 1`] = `
               </svg>
             </span>
             <label
-              class="label label--md"
+              class="label label--lg"
               data-bootstrap-override="label"
               for="16"
             >
@@ -1093,7 +1093,7 @@ exports[`<Filters /> WithOnClear story renders snapshot 1`] = `
             </label>
           </div>
           <div
-            class="checkbox checkbox--md"
+            class="checkbox"
           >
             <span
               class="input__wrapper"
@@ -1119,7 +1119,7 @@ exports[`<Filters /> WithOnClear story renders snapshot 1`] = `
               </svg>
             </span>
             <label
-              class="label label--md"
+              class="label label--lg"
               data-bootstrap-override="label"
               for="18"
             >
@@ -1127,7 +1127,7 @@ exports[`<Filters /> WithOnClear story renders snapshot 1`] = `
             </label>
           </div>
           <div
-            class="checkbox checkbox--md"
+            class="checkbox"
           >
             <span
               class="input__wrapper"
@@ -1153,7 +1153,7 @@ exports[`<Filters /> WithOnClear story renders snapshot 1`] = `
               </svg>
             </span>
             <label
-              class="label label--md"
+              class="label label--lg"
               data-bootstrap-override="label"
               for="20"
             >
@@ -1167,10 +1167,10 @@ exports[`<Filters /> WithOnClear story renders snapshot 1`] = `
       class="drawer__footer filters-drawer__footer"
     >
       <div
-        class="footer__button-group button-group button-group--spacing-1x"
+        class="button-group button-group--spacing-1x footer__button-group"
       >
         <button
-          class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button footer__button button--secondary"
+          class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary footer__button"
           data-bootstrap-override="clickable-style-secondary"
           type="button"
         >

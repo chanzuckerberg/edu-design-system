@@ -23,7 +23,7 @@ export interface Props {
  * TODO: update this comment with a description of the component.
  */
 export const StackedBlockBody = ({ children, className, ...other }: Props) => {
-  const componentClassName = clsx(styles['stacked-block__body'], className, {});
+  const componentClassName = clsx(styles['stacked-block__body'], className);
   return (
     <div className={componentClassName} {...other}>
       {children}

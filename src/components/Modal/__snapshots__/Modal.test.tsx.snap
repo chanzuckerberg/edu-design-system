@@ -56,7 +56,7 @@ exports[`Modal Brand story renders snapshot 1`] = `
     class="modal-footer"
   >
     <div
-      class="footer__button-group button-group button-group--spacing-1x"
+      class="button-group button-group--spacing-1x footer__button-group"
     >
       <button
         class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
@@ -123,7 +123,7 @@ exports[`Modal Default story renders snapshot 1`] = `
     class="modal-footer"
   >
     <div
-      class="footer__button-group button-group button-group--spacing-1x"
+      class="button-group button-group--spacing-1x footer__button-group"
     >
       <button
         class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
@@ -202,7 +202,7 @@ exports[`Modal DefaultInteractive story renders snapshot 1`] = `
       class="modal-footer"
     >
       <div
-        class="footer__button-group button-group button-group--spacing-1x"
+        class="button-group button-group--spacing-1x footer__button-group"
       >
         <button
           class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
@@ -270,7 +270,7 @@ exports[`Modal Medium story renders snapshot 1`] = `
     class="modal-footer"
   >
     <div
-      class="footer__button-group button-group button-group--spacing-1x"
+      class="button-group button-group--spacing-1x footer__button-group"
     >
       <button
         class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
@@ -337,7 +337,7 @@ exports[`Modal Mobile story renders snapshot 1`] = `
     class="modal-footer"
   >
     <div
-      class="footer__button-group button-group button-group--spacing-1x"
+      class="button-group button-group--spacing-1x footer__button-group"
     >
       <button
         class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
@@ -414,7 +414,7 @@ exports[`Modal MobileBrand story renders snapshot 1`] = `
     class="modal-footer"
   >
     <div
-      class="footer__button-group button-group button-group--spacing-1x"
+      class="button-group button-group--spacing-1x footer__button-group"
     >
       <button
         class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
@@ -481,7 +481,7 @@ exports[`Modal MobileLandscape story renders snapshot 1`] = `
     class="modal-footer"
   >
     <div
-      class="footer__button-group button-group button-group--spacing-1x"
+      class="button-group button-group--spacing-1x footer__button-group"
     >
       <button
         class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
@@ -558,7 +558,7 @@ exports[`Modal MobileLandscapeBrand story renders snapshot 1`] = `
     class="modal-footer"
   >
     <div
-      class="footer__button-group button-group button-group--spacing-1x"
+      class="button-group button-group--spacing-1x footer__button-group"
     >
       <button
         class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
@@ -687,7 +687,7 @@ exports[`Modal Small story renders snapshot 1`] = `
     class="modal-footer"
   >
     <div
-      class="footer__button-group button-group button-group--spacing-1x"
+      class="button-group button-group--spacing-1x footer__button-group"
     >
       <button
         class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
@@ -754,7 +754,7 @@ exports[`Modal Tablet story renders snapshot 1`] = `
     class="modal-footer"
   >
     <div
-      class="footer__button-group button-group button-group--spacing-1x"
+      class="button-group button-group--spacing-1x footer__button-group"
     >
       <button
         class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
@@ -831,7 +831,7 @@ exports[`Modal TabletBrand story renders snapshot 1`] = `
     class="modal-footer"
   >
     <div
-      class="footer__button-group button-group button-group--spacing-1x"
+      class="button-group button-group--spacing-1x footer__button-group"
     >
       <button
         class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
@@ -928,7 +928,7 @@ exports[`Modal WithLongText story renders snapshot 1`] = `
       class="modal-footer"
     >
       <div
-        class="footer__button-group button-group button-group--spacing-1x"
+        class="button-group button-group--spacing-1x footer__button-group"
       >
         <button
           class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
@@ -1027,7 +1027,7 @@ exports[`Modal WithLongTextScrollable story renders snapshot 1`] = `
       class="modal-footer modal-footer--sticky"
     >
       <div
-        class="footer__button-group button-group button-group--spacing-1x"
+        class="button-group button-group--spacing-1x footer__button-group"
       >
         <button
           class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"
@@ -1189,7 +1189,7 @@ exports[`Modal WithStepper story renders snapshot 1`] = `
       </svg>
     </div>
     <div
-      class="footer__button-group button-group button-group--spacing-1x"
+      class="button-group button-group--spacing-1x footer__button-group"
     >
       <button
         class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary"

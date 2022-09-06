@@ -15,10 +15,12 @@ type Props = {
   className?: string;
   /**
    * How much space there should be between the buttons.
+   * 'max' does not work with 'vertical' orientation.
    */
   spacing?: 'none' | '1x' | 'max';
   /**
    * Whether the buttons should be laid out horizontally or stacked vertically.
+   * 'vertical' does not work with 'max' spacing.
    */
   orientation?: 'horizontal' | 'vertical';
 };
@@ -29,6 +31,19 @@ type Props = {
  * ```
  *
  * A container for buttons grouped together horizontally or vertically.
+ *
+ * Example usage:
+ *
+ * ```ts
+ * <ButtonGroup
+ *   className={componentClassName}
+ *   spacing='1x'
+ *   orientation='vertical'
+ * >
+ *   <Button>Left button</Button>
+ *   <Button>Right button</Button>
+ * </ButtonGroup>
+ * ```
  */
 export function ButtonGroup({
   children,
@@ -46,11 +61,11 @@ export function ButtonGroup({
     );
   }
   const componentClassName = clsx(
-    className,
     styles['button-group'],
     spacing === '1x' && styles['button-group--spacing-1x'],
     spacing === 'max' && styles['button-group--spacing-max'],
     orientation === 'vertical' && styles['button-group--vertical'],
+    className,
   );
   return <div className={componentClassName}>{children}</div>;
 }

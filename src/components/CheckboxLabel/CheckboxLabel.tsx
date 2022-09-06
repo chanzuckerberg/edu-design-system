@@ -1,53 +1,22 @@
 import clsx from 'clsx';
 import React from 'react';
 import styles from './CheckboxLabel.module.css';
+import { InputLabel, InputLabelProps } from '../InputLabel/InputLabel';
 
-export type CheckboxLabelProps = {
-  /**
-   * Text to render in label.
-   */
-  text: React.ReactNode;
-  /**
-   * Additional classnames passed in for styling.
-   */
-  className?: string;
-  /**
-   * ID of input that label is associated with.
-   */
-  htmlFor: string;
-  /**
-   * Size of the checkbox label.
-   */
-  size?: 'sm' | 'md';
-  /**
-   * Indicates disabled state of the checkbox.
-   */
-  disabled?: boolean;
-};
+export type CheckboxLabelProps = InputLabelProps;
 
 /**
- * Label element, exported for greater flexibility. Can be used with any form input.
+ * Checkbox label element, styles and relies on the InputLabel component.
  */
 export const CheckboxLabel = ({
-  text,
   className,
-  htmlFor,
-  size = 'md',
-  disabled,
+  size,
+  ...other
 }: CheckboxLabelProps) => {
-  return (
-    <label
-      className={clsx(
-        className,
-        styles['label'],
-        size === 'sm' && styles['label--sm'],
-        size === 'md' && styles['label--md'],
-        disabled && styles['label--disabled'],
-      )}
-      data-bootstrap-override="label"
-      htmlFor={htmlFor}
-    >
-      {text}
-    </label>
+  const componentClassName = clsx(
+    size === 'md' && styles['checkbox__label--md'],
+    className,
   );
+
+  return <InputLabel className={componentClassName} size={size} {...other} />;
 };

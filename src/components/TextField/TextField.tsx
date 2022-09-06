@@ -1,17 +1,21 @@
 import clsx from 'clsx';
-import React, { ChangeEventHandler, MouseEventHandler, ReactNode } from 'react';
+import React, { ChangeEventHandler, ReactNode } from 'react';
 import { useUID } from 'react-uid';
 import styles from './TextField.module.css';
 import FieldNote from '../FieldNote';
-import Icon, { IconName } from '../Icon';
+import InputField from '../InputField';
 import Label from '../Label';
-import TextInput from '../TextInput';
+import Text from '../Text';
 
 export interface Props {
   /**
    * Aria-describedby id string
    */
   'aria-describedby'?: string;
+  /**
+   * Aria-label to provide an accesible name for the text input if no visible label is provided.
+   */
+  'aria-label'?: string;
   /**
    * CSS class names that can be appended to the component.
    */
@@ -21,30 +25,9 @@ export interface Props {
    */
   disabled?: boolean;
   /**
-   * FieldNote
-   * Used as helper text or error message
+   * Text under the text input used to provide a description or error message to describe the input.
    */
-  fieldNote?: string | ReactNode;
-  /**
-   * Toggles the visibility of the label. If hidden, the label text will still be accessible to assistive technologies
-   */
-  hideLabel?: boolean;
-  /**
-   * Screen reader text used for the button alongside the input field (i.e. show/hide password button)
-   */
-  fieldButtonScreenReaderText?: string;
-  /**
-   * Text used for the button alongside the input field (i.e. show/hide password button)
-   */
-  fieldButtonText?: string;
-  /**
-   * Function passed down from higher level component to trigger on click function of text field button
-   */
-  fieldButtonOnClick?: MouseEventHandler;
-  /**
-   * Name of SVG icon (i.e. chevron-down, minus, warning)
-   */
-  iconName?: IconName;
+  fieldNote?: ReactNode;
   /**
    * HTML id for the component
    */
@@ -65,10 +48,6 @@ export interface Props {
    * Node(s) that can be nested within the text field
    */
   inputWithin?: ReactNode;
-  /**
-   * Inverted variant for dark backgrounds
-   */
-  inverted?: boolean;
   /**
    * Error state of the form field
    */
@@ -94,9 +73,9 @@ export interface Props {
    */
   onChange?: ChangeEventHandler;
   /**
-   * String for the optional label. By default it is '(optional)'
+   * Used to show 'Optional' description on top of input field if input is not required.
    */
-  optionalLabel?: string;
+  optionalIndicator?: boolean;
   /**
    * Placeholder attribute for input. Note: placeholder should be used sparingly
    */
@@ -120,7 +99,7 @@ export interface Props {
   /**
    * HTML type attribute, allowing switching between text, password, and other HTML5 input field types
    */
-  type:
+  type?:
     | 'text'
     | 'password'
     | 'datetime'
@@ -151,35 +130,35 @@ export interface Props {
  * import {TextField} from "@chanzuckerberg/eds";
  */
 export const TextField = ({
+  'aria-describedby': ariaDescribedBy,
   className,
-  type = 'text',
-  id,
-  required,
-  label,
   disabled,
   fieldNote,
-  fieldButtonText,
-  fieldButtonScreenReaderText,
-  fieldButtonOnClick,
+  id,
   inputWithin,
-  name,
-  value,
-  defaultValue,
-  onChange,
-  placeholder,
-  readOnly,
-  iconName,
-  inverted,
-  hideLabel,
-  maxLength,
-  inputMode,
-  'aria-describedby': ariaDescribedBy,
   isError,
-  optionalLabel,
-  requiredLabel,
-  title,
+  label,
+  optionalIndicator,
+  required,
+  type = 'text',
   ...other
 }: Props) => {
+  if (process.env.NODE_ENV !== 'production' && !label && !other['aria-label']) {
+    throw new Error('You must provide a visible label or aria-label');
+  }
+
+  const indicator = required
+    ? 'Required'
+    : optionalIndicator
+    ? 'Optional'
+    : null;
+  const shouldRenderOverline = !!(label || indicator);
+  const overlineClassName = clsx(
+    styles['text-field__overline'],
+    !label && styles['text-field__overline--no-label'],
+    disabled && styles['text-field__overline--disabled'],
+  );
+
   const generatedId = useUID();
   const idVar = id || generatedId;
 
@@ -188,47 +167,29 @@ export const TextField = ({
     ? ariaDescribedBy || generatedAriaDescribedById
     : undefined;
 
-  const componentClassName = clsx(
-    styles['text-field'],
-    className,
-    inverted && styles['text-field--inverted'],
-    isError && styles['eds-is-error'],
-    disabled && styles['eds-is-disabled'],
-  );
-
   return (
-    <div className={componentClassName}>
-      <Label
-        className={styles['text-field__label']}
-        hideLabel={hideLabel}
-        htmlFor={idVar}
-        inverted={inverted}
-        optionalLabel={optionalLabel}
-        required={required}
-        requiredLabel={requiredLabel}
-        text={label}
-      />
+    <div className={className}>
+      {shouldRenderOverline && (
+        <div className={overlineClassName}>
+          {label && <Label htmlFor={idVar} text={label} />}
+          {indicator && (
+            <Text as="p" size="sm">
+              {indicator}
+            </Text>
+          )}
+        </div>
+      )}
 
       <div className={styles['text-field__body']}>
-        <TextInput
+        <InputField
           aria-describedby={ariaDescribedByVar}
           aria-invalid={!!isError}
-          className={styles['text-field__input']}
-          data-bootstrap-override="textinput"
-          defaultValue={defaultValue}
+          data-bootstrap-override="inputfield"
           disabled={disabled}
           id={idVar}
-          inputMode={inputMode}
           isError={isError}
-          maxLength={maxLength}
-          name={name}
-          onChange={onChange}
-          placeholder={placeholder}
-          readOnly={readOnly}
           required={required}
-          title={title}
           type={type}
-          value={value}
           {...other}
         />
         {inputWithin && (
@@ -236,19 +197,11 @@ export const TextField = ({
             {inputWithin}
           </div>
         )}
-        {iconName && (
-          <Icon
-            className={styles['text-field__icon']}
-            name={iconName}
-            purpose="decorative"
-          />
-        )}
       </div>
       {fieldNote && (
         <FieldNote
-          className={styles['text-field__note']}
+          disabled={disabled}
           id={ariaDescribedByVar}
-          inverted={inverted}
           isError={isError}
         >
           {fieldNote}

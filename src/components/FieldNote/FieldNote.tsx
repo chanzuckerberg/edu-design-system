@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import styles from './FieldNote.module.css';
-import Icon, { IconName } from '../Icon';
+import Icon from '../Icon';
 
 export interface Props {
   /**
@@ -13,9 +13,9 @@ export interface Props {
    */
   className?: string;
   /**
-   * Name of the fieldnote icon
+   * Toggles disabled styling of the field note.
    */
-  iconName?: IconName;
+  disabled?: boolean;
   /**
    * HTML id for the component
    */
@@ -36,11 +36,13 @@ export interface Props {
  * ```ts
  * import {FieldNote} from "@chanzuckerberg/eds";
  * ```
+ *
+ * Fieldnote component wraps text to describe other components.
  */
 export const FieldNote = ({
   className,
+  disabled,
   id,
-  iconName,
   isError,
   inverted,
   children,
@@ -48,22 +50,19 @@ export const FieldNote = ({
 }: Props) => {
   const componentClassName = clsx(
     styles['field-note'],
-    className,
+    disabled && styles['field-note--disabled'],
     inverted && styles['field-note--inverted'],
-    isError && styles['eds-is-error'],
+    isError && styles['field-note--error'],
+    className,
   );
   return (
-    <div
-      aria-live="assertive"
-      className={componentClassName}
-      id={id}
-      {...other}
-    >
+    <div className={componentClassName} id={id} {...other}>
       {isError && (
         <Icon
           className={styles['field-note__icon']}
-          name={isError ? 'cancel' : undefined}
+          name="dangerous"
           purpose="informative"
+          size="1rem"
           title="error"
         />
       )}

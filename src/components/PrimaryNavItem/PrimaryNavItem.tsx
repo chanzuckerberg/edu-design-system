@@ -53,8 +53,8 @@ export const PrimaryNavItem = React.forwardRef<HTMLLIElement, Props>(
 
     const componentClassName = clsx(
       styles['primary-nav__item'],
-      className,
       isActive && styles['eds-is-active'],
+      className,
     );
     return (
       <li className={componentClassName} {...other} ref={ref}>
@@ -66,7 +66,7 @@ export const PrimaryNavItem = React.forwardRef<HTMLLIElement, Props>(
             purpose="decorative"
             size="1.25rem"
           />
-          <span className={styles['primary-nav__text']}>{text}</span>
+          <span>{text}</span>
         </TagName>
       </li>
     );

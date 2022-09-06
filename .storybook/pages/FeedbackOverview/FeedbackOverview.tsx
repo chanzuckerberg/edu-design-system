@@ -31,7 +31,6 @@ import {
 } from '../../../src/tokens-dist/ts/colors';
 import NumberIconList from '../../recipes/NumberIconList';
 import { PageShell } from '../../recipes/PageShell/PageShell';
-import '../../../src/components/Utilities/Spacing.css';
 
 export interface Props {
   /**
@@ -42,15 +41,15 @@ export interface Props {
 
 export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
   <PageShell className="body--alternate">
-    <Breadcrumbs className="u-margin-bottom-md">
+    <Breadcrumbs className="mb-4">
       <BreadcrumbsItem href="#" text="My Courses" />
       <BreadcrumbsItem href="#" text="Modern World 2" />
     </Breadcrumbs>
     <PageHeader
-      className="u-margin-bottom-xl u-flex-direction-row"
+      className="!mb-8 !flex-row"
       right={
         <Button status="neutral" variant="icon">
-          <div className="u-mobile-hidden">More options</div>
+          <div className="sr-only lg:not-sr-only">More options</div>
           <Icon name="dots-vertical" purpose="decorative" />
         </Button>
       }

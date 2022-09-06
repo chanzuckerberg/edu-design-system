@@ -2,162 +2,670 @@
 
 exports[`<TextField /> Default story renders snapshot 1`] = `
 <div
-  class="text-field"
+  style="padding: 0.5rem; background-color: white;"
 >
-  <label
-    class="label text-field__label"
-    for="1"
-  >
-    Label
-     
-  </label>
-  <div
-    class="text-field__body"
-  >
-    <input
-      aria-describedby="2"
-      aria-invalid="false"
-      class="text-input text-field__input"
-      data-bootstrap-override="textinput"
-      id="1"
-      type="text"
-      value=""
-    />
-  </div>
-  <div
-    aria-live="assertive"
-    class="field-note text-field__note"
-    id="2"
-  >
-    This is a fieldnote.
+  <div>
+    <div
+      class="text-field__overline"
+    >
+      <label
+        class="label"
+        for="1"
+      >
+        Default text field
+         
+      </label>
+    </div>
+    <div
+      class="text-field__body"
+    >
+      <input
+        aria-describedby="2"
+        aria-invalid="false"
+        class="input-field"
+        data-bootstrap-override="inputfield"
+        id="1"
+        type="text"
+      />
+    </div>
+    <div
+      class="field-note"
+      id="2"
+    >
+      This is a fieldnote.
+    </div>
   </div>
 </div>
 `;
 
 exports[`<TextField /> Disabled story renders snapshot 1`] = `
 <div
-  class="text-field eds-is-disabled"
+  style="padding: 0.5rem; background-color: white;"
 >
-  <label
-    class="label text-field__label"
-    for="8"
-  >
-    Label
-     
-  </label>
+  <div>
+    <div
+      class="text-field__overline text-field__overline--disabled"
+    >
+      <label
+        class="label"
+        for="6"
+      >
+        Disabled text field
+         
+      </label>
+    </div>
+    <div
+      class="text-field__body"
+    >
+      <input
+        aria-describedby="7"
+        aria-invalid="false"
+        class="input-field"
+        data-bootstrap-override="inputfield"
+        disabled=""
+        id="6"
+        type="text"
+      />
+    </div>
+    <div
+      class="field-note field-note--disabled"
+      id="7"
+    >
+      This TextField is disabled
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<TextField /> DisabledVariants story renders snapshot 1`] = `
+<div
+  style="padding: 0.5rem; background-color: white;"
+>
   <div
-    class="text-field__body"
+    style="display: grid; grid-template-columns: 1fr 2fr 2fr; gap: 2rem;"
   >
-    <input
-      aria-invalid="false"
-      class="text-input text-field__input eds-is-disabled"
-      data-bootstrap-override="textinput"
-      disabled=""
-      id="8"
-      type="text"
-      value=""
-    />
+    <div />
+    <p>
+      Placeholder
+    </p>
+    <p>
+      No Placeholder
+    </p>
+    <p>
+      fieldNote, label
+    </p>
+    <div>
+      <div
+        class="text-field__overline text-field__overline--disabled"
+      >
+        <label
+          class="label"
+          for="52"
+        >
+          Label text
+           
+        </label>
+      </div>
+      <div
+        class="text-field__body"
+      >
+        <input
+          aria-describedby="53"
+          aria-invalid="false"
+          class="input-field"
+          data-bootstrap-override="inputfield"
+          disabled=""
+          id="52"
+          placeholder="placeholder"
+          type="text"
+        />
+      </div>
+      <div
+        class="field-note field-note--disabled"
+        id="53"
+      >
+        fieldNote text
+      </div>
+    </div>
+    <div>
+      <div
+        class="text-field__overline text-field__overline--disabled"
+      >
+        <label
+          class="label"
+          for="54"
+        >
+          Label text
+           
+        </label>
+      </div>
+      <div
+        class="text-field__body"
+      >
+        <input
+          aria-describedby="55"
+          aria-invalid="false"
+          class="input-field"
+          data-bootstrap-override="inputfield"
+          disabled=""
+          id="54"
+          type="text"
+        />
+      </div>
+      <div
+        class="field-note field-note--disabled"
+        id="55"
+      >
+        fieldNote text
+      </div>
+    </div>
+    <p>
+      no fieldNote, label
+    </p>
+    <div>
+      <div
+        class="text-field__overline text-field__overline--disabled"
+      >
+        <label
+          class="label"
+          for="56"
+        >
+          Label text
+           
+        </label>
+      </div>
+      <div
+        class="text-field__body"
+      >
+        <input
+          aria-invalid="false"
+          class="input-field"
+          data-bootstrap-override="inputfield"
+          disabled=""
+          id="56"
+          placeholder="placeholder"
+          type="text"
+        />
+      </div>
+    </div>
+    <div>
+      <div
+        class="text-field__overline text-field__overline--disabled"
+      >
+        <label
+          class="label"
+          for="58"
+        >
+          Label text
+           
+        </label>
+      </div>
+      <div
+        class="text-field__body"
+      >
+        <input
+          aria-invalid="false"
+          class="input-field"
+          data-bootstrap-override="inputfield"
+          disabled=""
+          id="58"
+          type="text"
+        />
+      </div>
+    </div>
+    <p>
+      fieldNote, no label
+    </p>
+    <div>
+      <div
+        class="text-field__body"
+      >
+        <input
+          aria-describedby="61"
+          aria-invalid="false"
+          aria-label="Label text"
+          class="input-field"
+          data-bootstrap-override="inputfield"
+          disabled=""
+          id="60"
+          placeholder="placeholder"
+          type="text"
+        />
+      </div>
+      <div
+        class="field-note field-note--disabled"
+        id="61"
+      >
+        fieldNote text
+      </div>
+    </div>
+    <div>
+      <div
+        class="text-field__body"
+      >
+        <input
+          aria-describedby="63"
+          aria-invalid="false"
+          aria-label="Label text"
+          class="input-field"
+          data-bootstrap-override="inputfield"
+          disabled=""
+          id="62"
+          type="text"
+        />
+      </div>
+      <div
+        class="field-note field-note--disabled"
+        id="63"
+      >
+        fieldNote text
+      </div>
+    </div>
+    <p>
+      no fieldNote, no label
+    </p>
+    <div>
+      <div
+        class="text-field__body"
+      >
+        <input
+          aria-invalid="false"
+          aria-label="Label text"
+          class="input-field"
+          data-bootstrap-override="inputfield"
+          disabled=""
+          id="64"
+          placeholder="placeholder"
+          type="text"
+        />
+      </div>
+    </div>
+    <div>
+      <div
+        class="text-field__body"
+      >
+        <input
+          aria-invalid="false"
+          aria-label="Label text"
+          class="input-field"
+          data-bootstrap-override="inputfield"
+          disabled=""
+          id="66"
+          type="text"
+        />
+      </div>
+    </div>
   </div>
 </div>
 `;
 
 exports[`<TextField /> Error story renders snapshot 1`] = `
 <div
-  class="text-field eds-is-error"
+  style="padding: 0.5rem; background-color: white;"
 >
-  <label
-    class="label text-field__label"
-    for="5"
-  >
-    Label
-     
-  </label>
-  <div
-    class="text-field__body"
-  >
-    <input
-      aria-describedby="6"
-      aria-invalid="true"
-      class="text-input text-field__input eds-is-error"
-      data-bootstrap-override="textinput"
-      id="5"
-      type="text"
-      value=""
-    />
-  </div>
-  <div
-    aria-live="assertive"
-    class="field-note text-field__note eds-is-error"
-    id="6"
-  >
-    <svg
-      class="icon field-note__icon"
-      fill="currentColor"
-      role="img"
-      xmlns="http://www.w3.org/2000/svg"
+  <div>
+    <div
+      class="text-field__overline"
     >
-      <title
-        id="7"
+      <label
+        class="label"
+        for="3"
       >
-        error
-      </title>
-      <use
-        xlink:href="test-file-stub#cancel"
+        Error text field
+         
+      </label>
+    </div>
+    <div
+      class="text-field__body"
+    >
+      <input
+        aria-describedby="4"
+        aria-invalid="true"
+        class="input-field error"
+        data-bootstrap-override="inputfield"
+        id="3"
+        type="text"
       />
-    </svg>
-    This is a fieldnote with an error.
+    </div>
+    <div
+      class="field-note field-note--error"
+      id="4"
+    >
+      <svg
+        class="icon field-note__icon"
+        fill="currentColor"
+        height="1rem"
+        role="img"
+        style="--icon-size: 1rem;"
+        width="1rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title
+          id="5"
+        >
+          error
+        </title>
+        <use
+          xlink:href="test-file-stub#dangerous"
+        />
+      </svg>
+      This is a fieldnote with an error.
+    </div>
   </div>
 </div>
 `;
 
-exports[`<TextField /> HideLabel story renders snapshot 1`] = `
+exports[`<TextField /> ErrorVariants story renders snapshot 1`] = `
 <div
-  class="text-field"
+  style="padding: 0.5rem; background-color: white;"
 >
-  <label
-    class="label text-field__label u-is-vishidden"
-    for="12"
-  >
-    Label
-     
-  </label>
   <div
-    class="text-field__body"
+    style="display: grid; grid-template-columns: 1fr 2fr 2fr; gap: 2rem;"
   >
-    <input
-      aria-invalid="false"
-      class="text-input text-field__input"
-      data-bootstrap-override="textinput"
-      id="12"
-      type="text"
-      value=""
-    />
+    <div />
+    <p>
+      Placeholder
+    </p>
+    <p>
+      No Placeholder
+    </p>
+    <p>
+      fieldNote, label
+    </p>
+    <div>
+      <div
+        class="text-field__overline"
+      >
+        <label
+          class="label"
+          for="32"
+        >
+          Label text
+           
+        </label>
+      </div>
+      <div
+        class="text-field__body"
+      >
+        <input
+          aria-describedby="33"
+          aria-invalid="true"
+          class="input-field error"
+          data-bootstrap-override="inputfield"
+          id="32"
+          placeholder="placeholder"
+          type="text"
+        />
+      </div>
+      <div
+        class="field-note field-note--error"
+        id="33"
+      >
+        <svg
+          class="icon field-note__icon"
+          fill="currentColor"
+          height="1rem"
+          role="img"
+          style="--icon-size: 1rem;"
+          width="1rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title
+            id="34"
+          >
+            error
+          </title>
+          <use
+            xlink:href="test-file-stub#dangerous"
+          />
+        </svg>
+        fieldNote text
+      </div>
+    </div>
+    <div>
+      <div
+        class="text-field__overline"
+      >
+        <label
+          class="label"
+          for="35"
+        >
+          Label text
+           
+        </label>
+      </div>
+      <div
+        class="text-field__body"
+      >
+        <input
+          aria-describedby="36"
+          aria-invalid="true"
+          class="input-field error"
+          data-bootstrap-override="inputfield"
+          id="35"
+          type="text"
+        />
+      </div>
+      <div
+        class="field-note field-note--error"
+        id="36"
+      >
+        <svg
+          class="icon field-note__icon"
+          fill="currentColor"
+          height="1rem"
+          role="img"
+          style="--icon-size: 1rem;"
+          width="1rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title
+            id="37"
+          >
+            error
+          </title>
+          <use
+            xlink:href="test-file-stub#dangerous"
+          />
+        </svg>
+        fieldNote text
+      </div>
+    </div>
+    <p>
+      no fieldNote, label
+    </p>
+    <div>
+      <div
+        class="text-field__overline"
+      >
+        <label
+          class="label"
+          for="38"
+        >
+          Label text
+           
+        </label>
+      </div>
+      <div
+        class="text-field__body"
+      >
+        <input
+          aria-invalid="true"
+          class="input-field error"
+          data-bootstrap-override="inputfield"
+          id="38"
+          placeholder="placeholder"
+          type="text"
+        />
+      </div>
+    </div>
+    <div>
+      <div
+        class="text-field__overline"
+      >
+        <label
+          class="label"
+          for="40"
+        >
+          Label text
+           
+        </label>
+      </div>
+      <div
+        class="text-field__body"
+      >
+        <input
+          aria-invalid="true"
+          class="input-field error"
+          data-bootstrap-override="inputfield"
+          id="40"
+          type="text"
+        />
+      </div>
+    </div>
+    <p>
+      fieldNote, no label
+    </p>
+    <div>
+      <div
+        class="text-field__body"
+      >
+        <input
+          aria-describedby="43"
+          aria-invalid="true"
+          aria-label="Label text"
+          class="input-field error"
+          data-bootstrap-override="inputfield"
+          id="42"
+          placeholder="placeholder"
+          type="text"
+        />
+      </div>
+      <div
+        class="field-note field-note--error"
+        id="43"
+      >
+        <svg
+          class="icon field-note__icon"
+          fill="currentColor"
+          height="1rem"
+          role="img"
+          style="--icon-size: 1rem;"
+          width="1rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title
+            id="44"
+          >
+            error
+          </title>
+          <use
+            xlink:href="test-file-stub#dangerous"
+          />
+        </svg>
+        fieldNote text
+      </div>
+    </div>
+    <div>
+      <div
+        class="text-field__body"
+      >
+        <input
+          aria-describedby="46"
+          aria-invalid="true"
+          aria-label="Label text"
+          class="input-field error"
+          data-bootstrap-override="inputfield"
+          id="45"
+          type="text"
+        />
+      </div>
+      <div
+        class="field-note field-note--error"
+        id="46"
+      >
+        <svg
+          class="icon field-note__icon"
+          fill="currentColor"
+          height="1rem"
+          role="img"
+          style="--icon-size: 1rem;"
+          width="1rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title
+            id="47"
+          >
+            error
+          </title>
+          <use
+            xlink:href="test-file-stub#dangerous"
+          />
+        </svg>
+        fieldNote text
+      </div>
+    </div>
+    <p>
+      no fieldNote, no label
+    </p>
+    <div>
+      <div
+        class="text-field__body"
+      >
+        <input
+          aria-invalid="true"
+          aria-label="Label text"
+          class="input-field error"
+          data-bootstrap-override="inputfield"
+          id="48"
+          placeholder="placeholder"
+          type="text"
+        />
+      </div>
+    </div>
+    <div>
+      <div
+        class="text-field__body"
+      >
+        <input
+          aria-invalid="true"
+          aria-label="Label text"
+          class="input-field error"
+          data-bootstrap-override="inputfield"
+          id="50"
+          type="text"
+        />
+      </div>
+    </div>
   </div>
 </div>
 `;
 
 exports[`<TextField /> InputWithin story renders snapshot 1`] = `
-<div>
-  <div
-    class="text-field"
-  >
-    <label
-      class="label text-field__label"
-      for="14"
+<div
+  style="padding: 0.5rem; background-color: white;"
+>
+  <div>
+    <div
+      class="text-field__overline"
     >
-      Label
-       
-    </label>
+      <label
+        class="label"
+        for="14"
+      >
+        Input field with button inside
+         
+      </label>
+    </div>
     <div
       class="text-field__body"
     >
       <input
         aria-invalid="false"
-        class="text-input text-field__input"
-        data-bootstrap-override="textinput"
+        class="input-field"
+        data-bootstrap-override="inputfield"
         id="14"
         type="text"
-        value=""
       />
       <div
         class="text-field__input-within"
@@ -175,79 +683,1273 @@ exports[`<TextField /> InputWithin story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<TextField /> Inverted story renders snapshot 1`] = `
+exports[`<TextField /> LabelFieldnoteVariants story renders snapshot 1`] = `
 <div
-  style="padding: 1rem; background: rgb(0, 0, 0);"
+  style="padding: 0.5rem; background-color: white;"
 >
   <div
-    class="text-field text-field--inverted"
+    style="display: grid; grid-template-columns: 1fr 2fr 2fr; gap: 2rem;"
   >
-    <label
-      class="label text-field__label label--inverted"
-      for="3"
-    >
-      Label
-       
-    </label>
-    <div
-      class="text-field__body"
-    >
-      <input
-        aria-describedby="4"
-        aria-invalid="false"
-        class="text-input text-field__input"
-        data-bootstrap-override="textinput"
-        id="3"
-        type="text"
-        value=""
-      />
+    <div />
+    <p>
+      Placeholder
+    </p>
+    <p>
+      No Placeholder
+    </p>
+    <p>
+      fieldNote, label
+    </p>
+    <div>
+      <div
+        class="text-field__overline"
+      >
+        <label
+          class="label"
+          for="16"
+        >
+          Label text
+           
+        </label>
+      </div>
+      <div
+        class="text-field__body"
+      >
+        <input
+          aria-describedby="17"
+          aria-invalid="false"
+          class="input-field"
+          data-bootstrap-override="inputfield"
+          id="16"
+          placeholder="placeholder"
+          type="text"
+        />
+      </div>
+      <div
+        class="field-note"
+        id="17"
+      >
+        fieldNote text
+      </div>
     </div>
-    <div
-      aria-live="assertive"
-      class="field-note text-field__note field-note--inverted"
-      id="4"
-    >
-      This is a fieldnote.
+    <div>
+      <div
+        class="text-field__overline"
+      >
+        <label
+          class="label"
+          for="18"
+        >
+          Label text
+           
+        </label>
+      </div>
+      <div
+        class="text-field__body"
+      >
+        <input
+          aria-describedby="19"
+          aria-invalid="false"
+          class="input-field"
+          data-bootstrap-override="inputfield"
+          id="18"
+          type="text"
+        />
+      </div>
+      <div
+        class="field-note"
+        id="19"
+      >
+        fieldNote text
+      </div>
+    </div>
+    <p>
+      no fieldNote, label
+    </p>
+    <div>
+      <div
+        class="text-field__overline"
+      >
+        <label
+          class="label"
+          for="20"
+        >
+          Label text
+           
+        </label>
+      </div>
+      <div
+        class="text-field__body"
+      >
+        <input
+          aria-invalid="false"
+          class="input-field"
+          data-bootstrap-override="inputfield"
+          id="20"
+          placeholder="placeholder"
+          type="text"
+        />
+      </div>
+    </div>
+    <div>
+      <div
+        class="text-field__overline"
+      >
+        <label
+          class="label"
+          for="22"
+        >
+          Label text
+           
+        </label>
+      </div>
+      <div
+        class="text-field__body"
+      >
+        <input
+          aria-invalid="false"
+          class="input-field"
+          data-bootstrap-override="inputfield"
+          id="22"
+          type="text"
+        />
+      </div>
+    </div>
+    <p>
+      fieldNote, no label
+    </p>
+    <div>
+      <div
+        class="text-field__body"
+      >
+        <input
+          aria-describedby="25"
+          aria-invalid="false"
+          aria-label="Label text"
+          class="input-field"
+          data-bootstrap-override="inputfield"
+          id="24"
+          placeholder="placeholder"
+          type="text"
+        />
+      </div>
+      <div
+        class="field-note"
+        id="25"
+      >
+        fieldNote text
+      </div>
+    </div>
+    <div>
+      <div
+        class="text-field__body"
+      >
+        <input
+          aria-describedby="27"
+          aria-invalid="false"
+          aria-label="Label text"
+          class="input-field"
+          data-bootstrap-override="inputfield"
+          id="26"
+          type="text"
+        />
+      </div>
+      <div
+        class="field-note"
+        id="27"
+      >
+        fieldNote text
+      </div>
+    </div>
+    <p>
+      no fieldNote, no label
+    </p>
+    <div>
+      <div
+        class="text-field__body"
+      >
+        <input
+          aria-invalid="false"
+          aria-label="Label text"
+          class="input-field"
+          data-bootstrap-override="inputfield"
+          id="28"
+          placeholder="placeholder"
+          type="text"
+        />
+      </div>
+    </div>
+    <div>
+      <div
+        class="text-field__body"
+      >
+        <input
+          aria-invalid="false"
+          aria-label="Label text"
+          class="input-field"
+          data-bootstrap-override="inputfield"
+          id="30"
+          type="text"
+        />
+      </div>
     </div>
   </div>
 </div>
 `;
 
-exports[`<TextField /> Optional story renders snapshot 1`] = `
+exports[`<TextField /> NoVisibleLabel story renders snapshot 1`] = `
 <div
-  class="text-field"
+  style="padding: 0.5rem; background-color: white;"
 >
-  <label
-    class="label text-field__label"
-    for="10"
-  >
-    Label
-     
-    <span
-      class="label__flag"
+  <div>
+    <div
+      class="text-field__overline text-field__overline--no-label"
     >
-      (optional)
-    </span>
-  </label>
-  <div
-    class="text-field__body"
-  >
-    <input
-      aria-describedby="11"
-      aria-invalid="false"
-      class="text-input text-field__input"
-      data-bootstrap-override="textinput"
-      id="10"
-      type="text"
-      value=""
-    />
+      <p
+        class="text text--sm"
+      >
+        Required
+      </p>
+    </div>
+    <div
+      class="text-field__body"
+    >
+      <input
+        aria-describedby="13"
+        aria-invalid="false"
+        aria-label="Input for no visible label"
+        class="input-field"
+        data-bootstrap-override="inputfield"
+        id="12"
+        required=""
+        type="text"
+      />
+    </div>
+    <div
+      class="field-note"
+      id="13"
+    >
+      This text field has no visible label
+    </div>
   </div>
+</div>
+`;
+
+exports[`<TextField /> OptionalIndicator story renders snapshot 1`] = `
+<div
+  style="padding: 0.5rem; background-color: white;"
+>
+  <div>
+    <div
+      class="text-field__overline"
+    >
+      <label
+        class="label"
+        for="10"
+      >
+        Text field with fieldNote
+         
+      </label>
+      <p
+        class="text text--sm"
+      >
+        Optional
+      </p>
+    </div>
+    <div
+      class="text-field__body"
+    >
+      <input
+        aria-describedby="11"
+        aria-invalid="false"
+        class="input-field"
+        data-bootstrap-override="inputfield"
+        id="10"
+        type="text"
+      />
+    </div>
+    <div
+      class="field-note"
+      id="11"
+    >
+      This is a fieldnote for an optional text field.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<TextField /> OptionalIndicatorVariants story renders snapshot 1`] = `
+<div
+  style="padding: 0.5rem; background-color: white;"
+>
   <div
-    aria-live="assertive"
-    class="field-note text-field__note"
-    id="11"
+    style="display: grid; grid-template-columns: 1fr 2fr 2fr; gap: 2rem;"
   >
-    This is a fieldnote for an optional text field.
+    <div />
+    <p>
+      Placeholder
+    </p>
+    <p>
+      No Placeholder
+    </p>
+    <p>
+      fieldNote, label
+    </p>
+    <div>
+      <div
+        class="text-field__overline"
+      >
+        <label
+          class="label"
+          for="94"
+        >
+          Label text
+           
+        </label>
+        <p
+          class="text text--sm"
+        >
+          Optional
+        </p>
+      </div>
+      <div
+        class="text-field__body"
+      >
+        <input
+          aria-describedby="95"
+          aria-invalid="false"
+          class="input-field"
+          data-bootstrap-override="inputfield"
+          id="94"
+          placeholder="placeholder"
+          type="text"
+        />
+      </div>
+      <div
+        class="field-note"
+        id="95"
+      >
+        fieldNote text
+      </div>
+    </div>
+    <div>
+      <div
+        class="text-field__overline"
+      >
+        <label
+          class="label"
+          for="96"
+        >
+          Label text
+           
+        </label>
+        <p
+          class="text text--sm"
+        >
+          Optional
+        </p>
+      </div>
+      <div
+        class="text-field__body"
+      >
+        <input
+          aria-describedby="97"
+          aria-invalid="false"
+          class="input-field"
+          data-bootstrap-override="inputfield"
+          id="96"
+          type="text"
+        />
+      </div>
+      <div
+        class="field-note"
+        id="97"
+      >
+        fieldNote text
+      </div>
+    </div>
+    <p>
+      no fieldNote, label
+    </p>
+    <div>
+      <div
+        class="text-field__overline"
+      >
+        <label
+          class="label"
+          for="98"
+        >
+          Label text
+           
+        </label>
+        <p
+          class="text text--sm"
+        >
+          Optional
+        </p>
+      </div>
+      <div
+        class="text-field__body"
+      >
+        <input
+          aria-invalid="false"
+          class="input-field"
+          data-bootstrap-override="inputfield"
+          id="98"
+          placeholder="placeholder"
+          type="text"
+        />
+      </div>
+    </div>
+    <div>
+      <div
+        class="text-field__overline"
+      >
+        <label
+          class="label"
+          for="100"
+        >
+          Label text
+           
+        </label>
+        <p
+          class="text text--sm"
+        >
+          Optional
+        </p>
+      </div>
+      <div
+        class="text-field__body"
+      >
+        <input
+          aria-invalid="false"
+          class="input-field"
+          data-bootstrap-override="inputfield"
+          id="100"
+          type="text"
+        />
+      </div>
+    </div>
+    <p>
+      fieldNote, no label
+    </p>
+    <div>
+      <div
+        class="text-field__overline text-field__overline--no-label"
+      >
+        <p
+          class="text text--sm"
+        >
+          Optional
+        </p>
+      </div>
+      <div
+        class="text-field__body"
+      >
+        <input
+          aria-describedby="103"
+          aria-invalid="false"
+          aria-label="Label text"
+          class="input-field"
+          data-bootstrap-override="inputfield"
+          id="102"
+          placeholder="placeholder"
+          type="text"
+        />
+      </div>
+      <div
+        class="field-note"
+        id="103"
+      >
+        fieldNote text
+      </div>
+    </div>
+    <div>
+      <div
+        class="text-field__overline text-field__overline--no-label"
+      >
+        <p
+          class="text text--sm"
+        >
+          Optional
+        </p>
+      </div>
+      <div
+        class="text-field__body"
+      >
+        <input
+          aria-describedby="105"
+          aria-invalid="false"
+          aria-label="Label text"
+          class="input-field"
+          data-bootstrap-override="inputfield"
+          id="104"
+          type="text"
+        />
+      </div>
+      <div
+        class="field-note"
+        id="105"
+      >
+        fieldNote text
+      </div>
+    </div>
+    <p>
+      no fieldNote, no label
+    </p>
+    <div>
+      <div
+        class="text-field__overline text-field__overline--no-label"
+      >
+        <p
+          class="text text--sm"
+        >
+          Optional
+        </p>
+      </div>
+      <div
+        class="text-field__body"
+      >
+        <input
+          aria-invalid="false"
+          aria-label="Label text"
+          class="input-field"
+          data-bootstrap-override="inputfield"
+          id="106"
+          placeholder="placeholder"
+          type="text"
+        />
+      </div>
+    </div>
+    <div>
+      <div
+        class="text-field__overline text-field__overline--no-label"
+      >
+        <p
+          class="text text--sm"
+        >
+          Optional
+        </p>
+      </div>
+      <div
+        class="text-field__body"
+      >
+        <input
+          aria-invalid="false"
+          aria-label="Label text"
+          class="input-field"
+          data-bootstrap-override="inputfield"
+          id="108"
+          type="text"
+        />
+      </div>
+    </div>
+    <p>
+      fieldNote, label, isError
+    </p>
+    <div>
+      <div
+        class="text-field__overline"
+      >
+        <label
+          class="label"
+          for="110"
+        >
+          Label text
+           
+        </label>
+        <p
+          class="text text--sm"
+        >
+          Optional
+        </p>
+      </div>
+      <div
+        class="text-field__body"
+      >
+        <input
+          aria-describedby="111"
+          aria-invalid="true"
+          class="input-field error"
+          data-bootstrap-override="inputfield"
+          id="110"
+          placeholder="placeholder"
+          type="text"
+        />
+      </div>
+      <div
+        class="field-note field-note--error"
+        id="111"
+      >
+        <svg
+          class="icon field-note__icon"
+          fill="currentColor"
+          height="1rem"
+          role="img"
+          style="--icon-size: 1rem;"
+          width="1rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title
+            id="112"
+          >
+            error
+          </title>
+          <use
+            xlink:href="test-file-stub#dangerous"
+          />
+        </svg>
+        fieldNote text
+      </div>
+    </div>
+    <div>
+      <div
+        class="text-field__overline"
+      >
+        <label
+          class="label"
+          for="113"
+        >
+          Label text
+           
+        </label>
+        <p
+          class="text text--sm"
+        >
+          Optional
+        </p>
+      </div>
+      <div
+        class="text-field__body"
+      >
+        <input
+          aria-describedby="114"
+          aria-invalid="true"
+          class="input-field error"
+          data-bootstrap-override="inputfield"
+          id="113"
+          type="text"
+        />
+      </div>
+      <div
+        class="field-note field-note--error"
+        id="114"
+      >
+        <svg
+          class="icon field-note__icon"
+          fill="currentColor"
+          height="1rem"
+          role="img"
+          style="--icon-size: 1rem;"
+          width="1rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title
+            id="115"
+          >
+            error
+          </title>
+          <use
+            xlink:href="test-file-stub#dangerous"
+          />
+        </svg>
+        fieldNote text
+      </div>
+    </div>
+    <p>
+      fieldNote, label, disabled
+    </p>
+    <div>
+      <div
+        class="text-field__overline text-field__overline--disabled"
+      >
+        <label
+          class="label"
+          for="116"
+        >
+          Label text
+           
+        </label>
+        <p
+          class="text text--sm"
+        >
+          Optional
+        </p>
+      </div>
+      <div
+        class="text-field__body"
+      >
+        <input
+          aria-describedby="117"
+          aria-invalid="false"
+          class="input-field"
+          data-bootstrap-override="inputfield"
+          disabled=""
+          id="116"
+          placeholder="placeholder"
+          type="text"
+        />
+      </div>
+      <div
+        class="field-note field-note--disabled"
+        id="117"
+      >
+        fieldNote text
+      </div>
+    </div>
+    <div>
+      <div
+        class="text-field__overline text-field__overline--disabled"
+      >
+        <label
+          class="label"
+          for="118"
+        >
+          Label text
+           
+        </label>
+        <p
+          class="text text--sm"
+        >
+          Optional
+        </p>
+      </div>
+      <div
+        class="text-field__body"
+      >
+        <input
+          aria-describedby="119"
+          aria-invalid="false"
+          class="input-field"
+          data-bootstrap-override="inputfield"
+          disabled=""
+          id="118"
+          type="text"
+        />
+      </div>
+      <div
+        class="field-note field-note--disabled"
+        id="119"
+      >
+        fieldNote text
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<TextField /> RequiredIndicator story renders snapshot 1`] = `
+<div
+  style="padding: 0.5rem; background-color: white;"
+>
+  <div>
+    <div
+      class="text-field__overline"
+    >
+      <label
+        class="label"
+        for="8"
+      >
+        Text field with fieldNote
+         
+      </label>
+      <p
+        class="text text--sm"
+      >
+        Required
+      </p>
+    </div>
+    <div
+      class="text-field__body"
+    >
+      <input
+        aria-describedby="9"
+        aria-invalid="false"
+        class="input-field"
+        data-bootstrap-override="inputfield"
+        id="8"
+        required=""
+        type="text"
+      />
+    </div>
+    <div
+      class="field-note"
+      id="9"
+    >
+      This is a fieldnote for a required text field.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<TextField /> RequiredIndicatorVariants story renders snapshot 1`] = `
+<div
+  style="padding: 0.5rem; background-color: white;"
+>
+  <div
+    style="display: grid; grid-template-columns: 1fr 2fr 2fr; gap: 2rem;"
+  >
+    <div />
+    <p>
+      Placeholder
+    </p>
+    <p>
+      No Placeholder
+    </p>
+    <p>
+      fieldNote, label
+    </p>
+    <div>
+      <div
+        class="text-field__overline"
+      >
+        <label
+          class="label"
+          for="68"
+        >
+          Label text
+           
+        </label>
+        <p
+          class="text text--sm"
+        >
+          Required
+        </p>
+      </div>
+      <div
+        class="text-field__body"
+      >
+        <input
+          aria-describedby="69"
+          aria-invalid="false"
+          class="input-field"
+          data-bootstrap-override="inputfield"
+          id="68"
+          placeholder="placeholder"
+          required=""
+          type="text"
+        />
+      </div>
+      <div
+        class="field-note"
+        id="69"
+      >
+        fieldNote text
+      </div>
+    </div>
+    <div>
+      <div
+        class="text-field__overline"
+      >
+        <label
+          class="label"
+          for="70"
+        >
+          Label text
+           
+        </label>
+        <p
+          class="text text--sm"
+        >
+          Required
+        </p>
+      </div>
+      <div
+        class="text-field__body"
+      >
+        <input
+          aria-describedby="71"
+          aria-invalid="false"
+          class="input-field"
+          data-bootstrap-override="inputfield"
+          id="70"
+          required=""
+          type="text"
+        />
+      </div>
+      <div
+        class="field-note"
+        id="71"
+      >
+        fieldNote text
+      </div>
+    </div>
+    <p>
+      no fieldNote, label
+    </p>
+    <div>
+      <div
+        class="text-field__overline"
+      >
+        <label
+          class="label"
+          for="72"
+        >
+          Label text
+           
+        </label>
+        <p
+          class="text text--sm"
+        >
+          Required
+        </p>
+      </div>
+      <div
+        class="text-field__body"
+      >
+        <input
+          aria-invalid="false"
+          class="input-field"
+          data-bootstrap-override="inputfield"
+          id="72"
+          placeholder="placeholder"
+          required=""
+          type="text"
+        />
+      </div>
+    </div>
+    <div>
+      <div
+        class="text-field__overline"
+      >
+        <label
+          class="label"
+          for="74"
+        >
+          Label text
+           
+        </label>
+        <p
+          class="text text--sm"
+        >
+          Required
+        </p>
+      </div>
+      <div
+        class="text-field__body"
+      >
+        <input
+          aria-invalid="false"
+          class="input-field"
+          data-bootstrap-override="inputfield"
+          id="74"
+          required=""
+          type="text"
+        />
+      </div>
+    </div>
+    <p>
+      fieldNote, no label
+    </p>
+    <div>
+      <div
+        class="text-field__overline text-field__overline--no-label"
+      >
+        <p
+          class="text text--sm"
+        >
+          Required
+        </p>
+      </div>
+      <div
+        class="text-field__body"
+      >
+        <input
+          aria-describedby="77"
+          aria-invalid="false"
+          aria-label="Label text"
+          class="input-field"
+          data-bootstrap-override="inputfield"
+          id="76"
+          placeholder="placeholder"
+          required=""
+          type="text"
+        />
+      </div>
+      <div
+        class="field-note"
+        id="77"
+      >
+        fieldNote text
+      </div>
+    </div>
+    <div>
+      <div
+        class="text-field__overline text-field__overline--no-label"
+      >
+        <p
+          class="text text--sm"
+        >
+          Required
+        </p>
+      </div>
+      <div
+        class="text-field__body"
+      >
+        <input
+          aria-describedby="79"
+          aria-invalid="false"
+          aria-label="Label text"
+          class="input-field"
+          data-bootstrap-override="inputfield"
+          id="78"
+          required=""
+          type="text"
+        />
+      </div>
+      <div
+        class="field-note"
+        id="79"
+      >
+        fieldNote text
+      </div>
+    </div>
+    <p>
+      no fieldNote, no label
+    </p>
+    <div>
+      <div
+        class="text-field__overline text-field__overline--no-label"
+      >
+        <p
+          class="text text--sm"
+        >
+          Required
+        </p>
+      </div>
+      <div
+        class="text-field__body"
+      >
+        <input
+          aria-invalid="false"
+          aria-label="Label text"
+          class="input-field"
+          data-bootstrap-override="inputfield"
+          id="80"
+          placeholder="placeholder"
+          required=""
+          type="text"
+        />
+      </div>
+    </div>
+    <div>
+      <div
+        class="text-field__overline text-field__overline--no-label"
+      >
+        <p
+          class="text text--sm"
+        >
+          Required
+        </p>
+      </div>
+      <div
+        class="text-field__body"
+      >
+        <input
+          aria-invalid="false"
+          aria-label="Label text"
+          class="input-field"
+          data-bootstrap-override="inputfield"
+          id="82"
+          required=""
+          type="text"
+        />
+      </div>
+    </div>
+    <p>
+      fieldNote, label, isError
+    </p>
+    <div>
+      <div
+        class="text-field__overline"
+      >
+        <label
+          class="label"
+          for="84"
+        >
+          Label text
+           
+        </label>
+        <p
+          class="text text--sm"
+        >
+          Required
+        </p>
+      </div>
+      <div
+        class="text-field__body"
+      >
+        <input
+          aria-describedby="85"
+          aria-invalid="true"
+          class="input-field error"
+          data-bootstrap-override="inputfield"
+          id="84"
+          placeholder="placeholder"
+          required=""
+          type="text"
+        />
+      </div>
+      <div
+        class="field-note field-note--error"
+        id="85"
+      >
+        <svg
+          class="icon field-note__icon"
+          fill="currentColor"
+          height="1rem"
+          role="img"
+          style="--icon-size: 1rem;"
+          width="1rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title
+            id="86"
+          >
+            error
+          </title>
+          <use
+            xlink:href="test-file-stub#dangerous"
+          />
+        </svg>
+        fieldNote text
+      </div>
+    </div>
+    <div>
+      <div
+        class="text-field__overline"
+      >
+        <label
+          class="label"
+          for="87"
+        >
+          Label text
+           
+        </label>
+        <p
+          class="text text--sm"
+        >
+          Required
+        </p>
+      </div>
+      <div
+        class="text-field__body"
+      >
+        <input
+          aria-describedby="88"
+          aria-invalid="true"
+          class="input-field error"
+          data-bootstrap-override="inputfield"
+          id="87"
+          required=""
+          type="text"
+        />
+      </div>
+      <div
+        class="field-note field-note--error"
+        id="88"
+      >
+        <svg
+          class="icon field-note__icon"
+          fill="currentColor"
+          height="1rem"
+          role="img"
+          style="--icon-size: 1rem;"
+          width="1rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title
+            id="89"
+          >
+            error
+          </title>
+          <use
+            xlink:href="test-file-stub#dangerous"
+          />
+        </svg>
+        fieldNote text
+      </div>
+    </div>
+    <p>
+      fieldNote, label, disabled
+    </p>
+    <div>
+      <div
+        class="text-field__overline text-field__overline--disabled"
+      >
+        <label
+          class="label"
+          for="90"
+        >
+          Label text
+           
+        </label>
+        <p
+          class="text text--sm"
+        >
+          Required
+        </p>
+      </div>
+      <div
+        class="text-field__body"
+      >
+        <input
+          aria-describedby="91"
+          aria-invalid="false"
+          class="input-field"
+          data-bootstrap-override="inputfield"
+          disabled=""
+          id="90"
+          placeholder="placeholder"
+          required=""
+          type="text"
+        />
+      </div>
+      <div
+        class="field-note field-note--disabled"
+        id="91"
+      >
+        fieldNote text
+      </div>
+    </div>
+    <div>
+      <div
+        class="text-field__overline text-field__overline--disabled"
+      >
+        <label
+          class="label"
+          for="92"
+        >
+          Label text
+           
+        </label>
+        <p
+          class="text text--sm"
+        >
+          Required
+        </p>
+      </div>
+      <div
+        class="text-field__body"
+      >
+        <input
+          aria-describedby="93"
+          aria-invalid="false"
+          class="input-field"
+          data-bootstrap-override="inputfield"
+          disabled=""
+          id="92"
+          required=""
+          type="text"
+        />
+      </div>
+      <div
+        class="field-note field-note--disabled"
+        id="93"
+      >
+        fieldNote text
+      </div>
+    </div>
   </div>
 </div>
 `;

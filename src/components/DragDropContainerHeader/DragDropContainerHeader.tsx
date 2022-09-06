@@ -1,4 +1,3 @@
-import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 
 export interface Props {
@@ -17,9 +16,8 @@ export const DragDropContainerHeader = ({
   children,
   ...other
 }: Props) => {
-  const componentClassName = clsx('drag-drop-container__header', className, {});
   return (
-    <header className={componentClassName} {...other}>
+    <header className={className} {...other}>
       {children}
     </header>
   );

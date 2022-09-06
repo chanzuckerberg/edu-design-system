@@ -9,19 +9,6 @@ exports[`<Label /> Default story renders snapshot 1`] = `
 </label>
 `;
 
-exports[`<Label /> Inverted story renders snapshot 1`] = `
-<div
-  style="padding: 1rem; background: rgb(0, 0, 0);"
->
-  <label
-    class="label label--inverted"
-  >
-    Label
-     
-  </label>
-</div>
-`;
-
 exports[`<Label /> Optional story renders snapshot 1`] = `
 <label
   class="label"
