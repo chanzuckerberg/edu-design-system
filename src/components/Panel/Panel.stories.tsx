@@ -1,4 +1,3 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
@@ -7,9 +6,6 @@ import { Panel } from './Panel';
 export default {
   title: 'Molecules/Layout and Containers/Panel',
   component: Panel,
-  parameters: {
-    badges: [BADGE.BETA],
-  },
   args: {
     children: 'A Panel is a generic bordered container for content.',
   },

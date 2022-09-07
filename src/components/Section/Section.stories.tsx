@@ -1,4 +1,3 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 import { Section } from './Section';
@@ -10,9 +9,6 @@ import Text from '../Text';
 export default {
   title: 'Organisms/Sections/Section',
   component: Section,
-  parameters: {
-    badges: [BADGE.BETA],
-  },
   args: {
     children:
       'This is the section body, where you can put any content or include other components.',

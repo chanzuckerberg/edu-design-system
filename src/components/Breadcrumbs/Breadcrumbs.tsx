@@ -28,8 +28,6 @@ type Props = {
 };
 
 /**
- * BETA: This component is still a work in progress and is subject to change.
- *
  * ```ts
  * import {Breadcrumbs} from "@chanzuckerberg/eds";
  * ```
