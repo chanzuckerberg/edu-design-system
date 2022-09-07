@@ -1,4 +1,3 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { StoryObj, Meta } from '@storybook/react';
 import { within } from '@storybook/testing-library';
 import React from 'react';
@@ -9,9 +8,6 @@ export default {
   title: 'Molecules/Navigation/Breadcrumbs',
   component: Breadcrumbs,
   subcomponents: { 'Breadcrumbs.Item': Breadcrumbs.Item },
-  parameters: {
-    badges: [BADGE.BETA],
-  },
   args: {
     children: (
       <>

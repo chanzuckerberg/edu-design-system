@@ -19,8 +19,6 @@ export interface Props {
 }
 
 /**
- * BETA: This component is still a work in progress and is subject to change.
- *
  * ```ts
  * import {NavContainer} from "@chanzuckerberg/eds";
  * ```

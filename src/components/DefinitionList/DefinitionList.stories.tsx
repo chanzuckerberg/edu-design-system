@@ -1,4 +1,3 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { Story, Meta } from '@storybook/react';
 import React from 'react';
 
@@ -9,9 +8,6 @@ export default {
   title: 'Molecules/Lists/DefinitionList',
   component: DefinitionList,
   subcomponents: { DefinitionListItem },
-  parameters: {
-    badges: [BADGE.BETA],
-  },
 } as Meta;
 
 const Template: Story<Props> = (args) => (

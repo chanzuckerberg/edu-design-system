@@ -1,4 +1,3 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
@@ -9,7 +8,6 @@ export default {
   component: PopoverExample,
   parameters: {
     layout: 'centered',
-    badges: [BADGE.BETA],
   },
 } as Meta<Args>;
 

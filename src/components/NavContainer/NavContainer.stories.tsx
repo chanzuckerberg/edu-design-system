@@ -1,4 +1,3 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
@@ -12,9 +11,6 @@ export default {
   title: 'Molecules/Global/NavContainer',
   component: NavContainer,
   subcomponents: { PrimaryNav, UtilityNav },
-  parameters: {
-    badges: [BADGE.BETA],
-  },
   args: {
     children: (
       <>

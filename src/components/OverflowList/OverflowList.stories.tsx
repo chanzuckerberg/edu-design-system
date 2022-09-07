@@ -1,4 +1,3 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
@@ -8,9 +7,6 @@ import { OverflowListItem } from '../OverflowListItem/OverflowListItem';
 export default {
   title: 'Molecules/Lists/OverflowList',
   component: OverflowList,
-  parameters: {
-    badges: [BADGE.BETA],
-  },
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof OverflowList>;

@@ -1,4 +1,3 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 import { InlineNotification, VARIANTS } from './InlineNotification';
@@ -17,9 +16,6 @@ export default {
       },
       options: VARIANTS,
     },
-  },
-  parameters: {
-    badges: [BADGE.BETA],
   },
 } as Meta<Args>;
 

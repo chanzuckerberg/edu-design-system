@@ -48,8 +48,6 @@ type ContextRefs = {
 export const DropdownMenuContext = createContext<ContextRefs | null>(null);
 
 /**
- * BETA: This component is still a work in progress and is subject to change.
- *
  * ```ts
  * import {DropdownMenu} from "@chanzuckerberg/eds";
  * ```

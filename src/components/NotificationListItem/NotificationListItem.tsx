@@ -40,8 +40,6 @@ interface State {
 }
 
 /**
- * BETA: This component is still a work in progress and is subject to change.
- *
  * ```ts
  * import {NotificationListItem} from "@chanzuckerberg/eds";
  * ```
