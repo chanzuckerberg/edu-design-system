@@ -110,7 +110,7 @@ exports[`<Tooltip /> DarkVariant story renders snapshot 1`] = `
 </body>
 `;
 
-exports[`<Tooltip /> Disabled story renders snapshot 1`] = `
+exports[`<Tooltip /> DisabledButton story renders snapshot 1`] = `
 <body>
   <div>
     <div
@@ -118,7 +118,7 @@ exports[`<Tooltip /> Disabled story renders snapshot 1`] = `
     >
       <span
         aria-describedby="tippy-8"
-        class="tooltip__child-disabled-wrapper--vertical"
+        class="tooltip__child-not-interactive-wrapper--vertical"
         data-testid="disabled-child-tooltip-wrapper"
         tabindex="0"
       >
@@ -196,7 +196,7 @@ exports[`<Tooltip /> Interactive story renders snapshot 1`] = `
 </body>
 `;
 
-exports[`<Tooltip /> InteractiveDisabled story renders snapshot 1`] = `
+exports[`<Tooltip /> InteractiveDisabledButton story renders snapshot 1`] = `
 <body>
   <div>
     <div>
@@ -207,7 +207,7 @@ exports[`<Tooltip /> InteractiveDisabled story renders snapshot 1`] = `
         class="trigger--spacing-top trigger--spacing-left"
       >
         <span
-          class="tooltip__child-disabled-wrapper--vertical"
+          class="tooltip__child-not-interactive-wrapper--vertical"
           data-testid="disabled-child-tooltip-wrapper"
           tabindex="0"
         >
@@ -439,6 +439,65 @@ exports[`<Tooltip /> LongText story renders snapshot 1`] = `
       <div
         class="tippy-arrow"
         style="position: absolute; top: 0px; transform: translate(0px, 3px);"
+      />
+    </div>
+  </div>
+</body>
+`;
+
+exports[`<Tooltip /> TextChild story renders snapshot 1`] = `
+<body>
+  <div>
+    <div
+      class="trigger--spacing-top trigger--spacing-left"
+    >
+      <span
+        aria-describedby="tippy-9"
+        class="tooltip__child-not-interactive-wrapper--vertical"
+        data-testid="disabled-child-tooltip-wrapper"
+        tabindex="0"
+      >
+        Tooltip trigger
+      </span>
+    </div>
+  </div>
+  <div
+    data-tippy-root=""
+    id="tippy-9"
+    style="pointer-events: none; z-index: 9999; visibility: visible; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, -10px);"
+  >
+    <div
+      class="tippy-box tooltip tooltip--light"
+      data-animation="fade"
+      data-escaped=""
+      data-placement="top"
+      data-reference-hidden=""
+      data-state="visible"
+      role="tooltip"
+      style="max-width: 350px; transition-duration: 200ms;"
+      tabindex="-1"
+    >
+      <div
+        class="tippy-content"
+        data-state="visible"
+        style="transition-duration: 200ms;"
+      >
+        <div>
+          <span
+            data-testid="tooltip-content"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+             
+            <b>
+              Donec a erat eu augue consequat eleifend non vel sem.
+            </b>
+             Praesent efficitur mauris ac leo semper accumsan.
+          </span>
+        </div>
+      </div>
+      <div
+        class="tippy-arrow"
+        style="position: absolute; left: 0px; transform: translate(3px, 0px);"
       />
     </div>
   </div>
