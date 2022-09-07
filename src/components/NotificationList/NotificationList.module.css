@@ -81,6 +81,10 @@
   background-color: var(--eds-theme-color-text-link-strong);
   cursor: pointer;
 
+  &:focus {
+    @mixin focus;
+  }
+
   /*
     * Notification List Item (is read)
     * 1) When isRead === true, button's background and border are changed to neutral
