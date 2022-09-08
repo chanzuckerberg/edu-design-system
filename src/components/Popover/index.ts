@@ -1,1 +1,5 @@
-export { Popover as default } from './Popover';
+export {
+  Popover as default,
+  PopoverContext,
+  defaultPopoverModifiers,
+} from './Popover';
