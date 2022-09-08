@@ -50,6 +50,7 @@ exports[`<ProjectCard /> Default story renders snapshot 1`] = `
     >
       <button
         aria-expanded="false"
+        aria-haspopup="menu"
         aria-label="Open project dropdown"
         class="clickable-style clickable-style--sm clickable-style--icon clickable-style--neutral button button--icon project-card__menu-button"
         data-bootstrap-override="clickable-style-icon"
@@ -71,11 +72,11 @@ exports[`<ProjectCard /> Default story renders snapshot 1`] = `
       >
         <ul
           class="dropdown-menu__list"
-          role="presentation"
+          role="menu"
         >
           <li
             class="dropdown-menu__item"
-            role="presentation"
+            role="menuitem"
           >
             <button
               class="dropdown-menu__link"
@@ -98,7 +99,7 @@ exports[`<ProjectCard /> Default story renders snapshot 1`] = `
           </li>
           <li
             class="dropdown-menu__item"
-            role="presentation"
+            role="menuitem"
           >
             <button
               class="dropdown-menu__link"
@@ -121,7 +122,7 @@ exports[`<ProjectCard /> Default story renders snapshot 1`] = `
           </li>
           <li
             class="dropdown-menu__item"
-            role="presentation"
+            role="menuitem"
           >
             <button
               class="dropdown-menu__link"
@@ -144,7 +145,7 @@ exports[`<ProjectCard /> Default story renders snapshot 1`] = `
           </li>
           <li
             class="dropdown-menu__item"
-            role="presentation"
+            role="menuitem"
           >
             <button
               class="dropdown-menu__link"
@@ -214,6 +215,7 @@ exports[`<ProjectCard /> Draggable story renders snapshot 1`] = `
     >
       <button
         aria-expanded="false"
+        aria-haspopup="menu"
         aria-label="Open project dropdown"
         class="clickable-style clickable-style--sm clickable-style--icon clickable-style--neutral button button--icon project-card__menu-button"
         data-bootstrap-override="clickable-style-icon"
@@ -235,11 +237,11 @@ exports[`<ProjectCard /> Draggable story renders snapshot 1`] = `
       >
         <ul
           class="dropdown-menu__list"
-          role="presentation"
+          role="menu"
         >
           <li
             class="dropdown-menu__item"
-            role="presentation"
+            role="menuitem"
           >
             <button
               class="dropdown-menu__link"
@@ -262,7 +264,7 @@ exports[`<ProjectCard /> Draggable story renders snapshot 1`] = `
           </li>
           <li
             class="dropdown-menu__item"
-            role="presentation"
+            role="menuitem"
           >
             <button
               class="dropdown-menu__link"
@@ -285,7 +287,7 @@ exports[`<ProjectCard /> Draggable story renders snapshot 1`] = `
           </li>
           <li
             class="dropdown-menu__item"
-            role="presentation"
+            role="menuitem"
           >
             <button
               class="dropdown-menu__link"
@@ -308,7 +310,7 @@ exports[`<ProjectCard /> Draggable story renders snapshot 1`] = `
           </li>
           <li
             class="dropdown-menu__item"
-            role="presentation"
+            role="menuitem"
           >
             <button
               class="dropdown-menu__link"
@@ -413,6 +415,7 @@ exports[`<ProjectCard /> WithoutMeta story renders snapshot 1`] = `
     >
       <button
         aria-expanded="false"
+        aria-haspopup="menu"
         aria-label="Open project dropdown"
         class="clickable-style clickable-style--sm clickable-style--icon clickable-style--neutral button button--icon project-card__menu-button"
         data-bootstrap-override="clickable-style-icon"
@@ -434,11 +437,11 @@ exports[`<ProjectCard /> WithoutMeta story renders snapshot 1`] = `
       >
         <ul
           class="dropdown-menu__list"
-          role="presentation"
+          role="menu"
         >
           <li
             class="dropdown-menu__item"
-            role="presentation"
+            role="menuitem"
           >
             <button
               class="dropdown-menu__link"
@@ -461,7 +464,7 @@ exports[`<ProjectCard /> WithoutMeta story renders snapshot 1`] = `
           </li>
           <li
             class="dropdown-menu__item"
-            role="presentation"
+            role="menuitem"
           >
             <button
               class="dropdown-menu__link"
@@ -484,7 +487,7 @@ exports[`<ProjectCard /> WithoutMeta story renders snapshot 1`] = `
           </li>
           <li
             class="dropdown-menu__item"
-            role="presentation"
+            role="menuitem"
           >
             <button
               class="dropdown-menu__link"
@@ -507,7 +510,7 @@ exports[`<ProjectCard /> WithoutMeta story renders snapshot 1`] = `
           </li>
           <li
             class="dropdown-menu__item"
-            role="presentation"
+            role="menuitem"
           >
             <button
               class="dropdown-menu__link"

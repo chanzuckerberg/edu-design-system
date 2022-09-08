@@ -45,7 +45,7 @@
   display: flex;
   @mixin textLink;
 
-  &:focus-visible {
+  &:focus {
     @mixin focus;
   }
 
@@ -71,7 +71,7 @@
     color: var(--eds-theme-color-text-neutral-default-inverse);
     text-decoration: none;
 
-    &:focus-visible {
+    &:focus {
       @mixin focusInverted;
     }
   }

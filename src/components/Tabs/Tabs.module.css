@@ -94,7 +94,7 @@
     box-shadow var(--eds-anim-fade-quick) var(--eds-anim-ease),
     background-color var(--eds-anim-fade-quick) var(--eds-anim-ease);
 
-  &:focus-visible {
+  &:focus {
     @mixin focus;
   }
 

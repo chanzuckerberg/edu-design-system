@@ -1,4 +1,3 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
@@ -45,9 +44,6 @@ export default {
   },
   component: Grid,
   subcomponents: { GridItem },
-  parameters: {
-    badges: [BADGE.BETA],
-  },
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Grid>;

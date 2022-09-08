@@ -6,11 +6,11 @@ exports[`<DropdownMenu /> Default story renders snapshot 1`] = `
 >
   <ul
     class="dropdown-menu__list"
-    role="presentation"
+    role="menu"
   >
     <li
       class="dropdown-menu__item"
-      role="presentation"
+      role="menuitem"
     >
       <button
         class="dropdown-menu__link"
@@ -20,7 +20,7 @@ exports[`<DropdownMenu /> Default story renders snapshot 1`] = `
     </li>
     <li
       class="dropdown-menu__item"
-      role="presentation"
+      role="menuitem"
     >
       <button
         class="dropdown-menu__link"
@@ -30,7 +30,7 @@ exports[`<DropdownMenu /> Default story renders snapshot 1`] = `
     </li>
     <li
       class="dropdown-menu__item dropdown-menu__item--lined"
-      role="presentation"
+      role="menuitem"
     >
       <button
         class="dropdown-menu__link"
@@ -40,7 +40,7 @@ exports[`<DropdownMenu /> Default story renders snapshot 1`] = `
     </li>
     <li
       class="dropdown-menu__item"
-      role="presentation"
+      role="menuitem"
     >
       <a
         class="dropdown-menu__link"
@@ -59,11 +59,11 @@ exports[`<DropdownMenu /> WithDeleteButton story renders snapshot 1`] = `
 >
   <ul
     class="dropdown-menu__list"
-    role="presentation"
+    role="menu"
   >
     <li
       class="dropdown-menu__item"
-      role="presentation"
+      role="menuitem"
     >
       <button
         class="dropdown-menu__link"
@@ -86,7 +86,7 @@ exports[`<DropdownMenu /> WithDeleteButton story renders snapshot 1`] = `
     </li>
     <li
       class="dropdown-menu__item"
-      role="presentation"
+      role="menuitem"
     >
       <button
         class="dropdown-menu__link"
@@ -109,7 +109,7 @@ exports[`<DropdownMenu /> WithDeleteButton story renders snapshot 1`] = `
     </li>
     <li
       class="dropdown-menu__item"
-      role="presentation"
+      role="menuitem"
     >
       <button
         class="dropdown-menu__link"
@@ -132,7 +132,7 @@ exports[`<DropdownMenu /> WithDeleteButton story renders snapshot 1`] = `
     </li>
     <li
       class="dropdown-menu__item dropdown-menu__item--error"
-      role="presentation"
+      role="menuitem"
     >
       <button
         class="dropdown-menu__link"
@@ -163,11 +163,11 @@ exports[`<DropdownMenu /> WithIcons story renders snapshot 1`] = `
 >
   <ul
     class="dropdown-menu__list"
-    role="presentation"
+    role="menu"
   >
     <li
       class="dropdown-menu__item"
-      role="presentation"
+      role="menuitem"
     >
       <button
         class="dropdown-menu__link"
@@ -190,7 +190,7 @@ exports[`<DropdownMenu /> WithIcons story renders snapshot 1`] = `
     </li>
     <li
       class="dropdown-menu__item"
-      role="presentation"
+      role="menuitem"
     >
       <button
         class="dropdown-menu__link"
@@ -213,7 +213,7 @@ exports[`<DropdownMenu /> WithIcons story renders snapshot 1`] = `
     </li>
     <li
       class="dropdown-menu__item"
-      role="presentation"
+      role="menuitem"
     >
       <button
         class="dropdown-menu__link"
@@ -236,7 +236,7 @@ exports[`<DropdownMenu /> WithIcons story renders snapshot 1`] = `
     </li>
     <li
       class="dropdown-menu__item"
-      role="presentation"
+      role="menuitem"
     >
       <button
         class="dropdown-menu__link"

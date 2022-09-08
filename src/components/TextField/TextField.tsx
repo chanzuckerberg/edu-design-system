@@ -73,10 +73,6 @@ export interface Props {
    */
   onChange?: ChangeEventHandler;
   /**
-   * Used to show 'Optional' description on top of input field if input is not required.
-   */
-  optionalIndicator?: boolean;
-  /**
    * Placeholder attribute for input. Note: placeholder should be used sparingly
    */
   placeholder?: string;
@@ -138,7 +134,6 @@ export const TextField = ({
   inputWithin,
   isError,
   label,
-  optionalIndicator,
   required,
   type = 'text',
   ...other
@@ -147,12 +142,7 @@ export const TextField = ({
     throw new Error('You must provide a visible label or aria-label');
   }
 
-  const indicator = required
-    ? 'Required'
-    : optionalIndicator
-    ? 'Optional'
-    : null;
-  const shouldRenderOverline = !!(label || indicator);
+  const shouldRenderOverline = !!(label || required);
   const overlineClassName = clsx(
     styles['text-field__overline'],
     !label && styles['text-field__overline--no-label'],
@@ -172,9 +162,9 @@ export const TextField = ({
       {shouldRenderOverline && (
         <div className={overlineClassName}>
           {label && <Label htmlFor={idVar} text={label} />}
-          {indicator && (
+          {required && (
             <Text as="p" size="sm">
-              {indicator}
+              Required
             </Text>
           )}
         </div>

@@ -56,7 +56,7 @@
     border-color: transparent; /* TODO */
   }
 
-  &:focus-visible {
+  &:focus {
     @mixin focusInverted;
   }
 

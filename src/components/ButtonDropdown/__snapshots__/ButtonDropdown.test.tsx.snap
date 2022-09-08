@@ -1,13 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ButtonDropdown /> Default story renders snapshot 1`] = `
+exports[`<ButtonDropdown /> ComponentWrapped story renders snapshot 1`] = `
 <div
   class="button-dropdown"
 >
   <button
     aria-expanded="false"
+    aria-haspopup="menu"
     class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
     data-bootstrap-override="clickable-style-secondary"
+    data-testid="trigger-button"
     type="button"
   >
     Open Dropdown
@@ -17,11 +19,11 @@ exports[`<ButtonDropdown /> Default story renders snapshot 1`] = `
   >
     <ul
       class="dropdown-menu__list"
-      role="presentation"
+      role="menu"
     >
       <li
         class="dropdown-menu__item"
-        role="presentation"
+        role="menuitem"
       >
         <button
           class="dropdown-menu__link"
@@ -44,30 +46,34 @@ exports[`<ButtonDropdown /> Default story renders snapshot 1`] = `
       </li>
       <li
         class="dropdown-menu__item"
-        role="presentation"
+        role="menuitem"
       >
         <button
           class="dropdown-menu__link"
         >
-          <svg
-            aria-hidden="true"
-            class="icon"
-            fill="currentColor"
-            height="1.25rem"
-            style="--icon-size: 1.25rem;"
-            width="1.25rem"
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            style="background-color: blanchedalmond;"
           >
-            <use
-              xlink:href="test-file-stub#schedule"
-            />
-          </svg>
-          Item 2
+            <svg
+              aria-hidden="true"
+              class="icon"
+              fill="currentColor"
+              height="1.25rem"
+              style="--icon-size: 1.25rem;"
+              width="1.25rem"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <use
+                xlink:href="test-file-stub#schedule"
+              />
+            </svg>
+            Item 2
+          </div>
         </button>
       </li>
       <li
         class="dropdown-menu__item"
-        role="presentation"
+        role="menuitem"
       >
         <button
           class="dropdown-menu__link"
@@ -90,7 +96,129 @@ exports[`<ButtonDropdown /> Default story renders snapshot 1`] = `
       </li>
       <li
         class="dropdown-menu__item"
-        role="presentation"
+        role="menuitem"
+      >
+        <button
+          class="dropdown-menu__link"
+        >
+          <div
+            style="background-color: blanchedalmond;"
+          >
+            <svg
+              aria-hidden="true"
+              class="icon"
+              fill="currentColor"
+              height="1.25rem"
+              style="--icon-size: 1.25rem;"
+              width="1.25rem"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <use
+                xlink:href="test-file-stub#schedule"
+              />
+            </svg>
+            Item 4
+          </div>
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`<ButtonDropdown /> Default story renders snapshot 1`] = `
+<div
+  class="button-dropdown"
+>
+  <button
+    aria-expanded="false"
+    aria-haspopup="menu"
+    class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
+    data-bootstrap-override="clickable-style-secondary"
+    data-testid="trigger-button"
+    type="button"
+  >
+    Open Dropdown
+  </button>
+  <div
+    class="dropdown-menu button-dropdown__dropdown-menu"
+  >
+    <ul
+      class="dropdown-menu__list"
+      role="menu"
+    >
+      <li
+        class="dropdown-menu__item"
+        role="menuitem"
+      >
+        <button
+          class="dropdown-menu__link"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon"
+            fill="currentColor"
+            height="1.25rem"
+            style="--icon-size: 1.25rem;"
+            width="1.25rem"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="test-file-stub#schedule"
+            />
+          </svg>
+          Item 1
+        </button>
+      </li>
+      <li
+        class="dropdown-menu__item"
+        role="menuitem"
+      >
+        <button
+          class="dropdown-menu__link"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon"
+            fill="currentColor"
+            height="1.25rem"
+            style="--icon-size: 1.25rem;"
+            width="1.25rem"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="test-file-stub#schedule"
+            />
+          </svg>
+          Item 2
+        </button>
+      </li>
+      <li
+        class="dropdown-menu__item"
+        role="menuitem"
+      >
+        <button
+          class="dropdown-menu__link"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon"
+            fill="currentColor"
+            height="1.25rem"
+            style="--icon-size: 1.25rem;"
+            width="1.25rem"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="test-file-stub#schedule"
+            />
+          </svg>
+          Item 3
+        </button>
+      </li>
+      <li
+        class="dropdown-menu__item"
+        role="menuitem"
       >
         <button
           class="dropdown-menu__link"
@@ -122,8 +250,10 @@ exports[`<ButtonDropdown /> PositionBottomRight story renders snapshot 1`] = `
 >
   <button
     aria-expanded="false"
+    aria-haspopup="menu"
     class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
     data-bootstrap-override="clickable-style-secondary"
+    data-testid="trigger-button"
     type="button"
   >
     Open Dropdown
@@ -133,11 +263,11 @@ exports[`<ButtonDropdown /> PositionBottomRight story renders snapshot 1`] = `
   >
     <ul
       class="dropdown-menu__list"
-      role="presentation"
+      role="menu"
     >
       <li
         class="dropdown-menu__item"
-        role="presentation"
+        role="menuitem"
       >
         <button
           class="dropdown-menu__link"
@@ -160,7 +290,7 @@ exports[`<ButtonDropdown /> PositionBottomRight story renders snapshot 1`] = `
       </li>
       <li
         class="dropdown-menu__item"
-        role="presentation"
+        role="menuitem"
       >
         <button
           class="dropdown-menu__link"
@@ -183,7 +313,7 @@ exports[`<ButtonDropdown /> PositionBottomRight story renders snapshot 1`] = `
       </li>
       <li
         class="dropdown-menu__item"
-        role="presentation"
+        role="menuitem"
       >
         <button
           class="dropdown-menu__link"
@@ -206,7 +336,7 @@ exports[`<ButtonDropdown /> PositionBottomRight story renders snapshot 1`] = `
       </li>
       <li
         class="dropdown-menu__item"
-        role="presentation"
+        role="menuitem"
       >
         <button
           class="dropdown-menu__link"
@@ -238,8 +368,10 @@ exports[`<ButtonDropdown /> PositionTopLeft story renders snapshot 1`] = `
 >
   <button
     aria-expanded="false"
+    aria-haspopup="menu"
     class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
     data-bootstrap-override="clickable-style-secondary"
+    data-testid="trigger-button"
     type="button"
   >
     Open Dropdown
@@ -249,11 +381,11 @@ exports[`<ButtonDropdown /> PositionTopLeft story renders snapshot 1`] = `
   >
     <ul
       class="dropdown-menu__list"
-      role="presentation"
+      role="menu"
     >
       <li
         class="dropdown-menu__item"
-        role="presentation"
+        role="menuitem"
       >
         <button
           class="dropdown-menu__link"
@@ -276,7 +408,7 @@ exports[`<ButtonDropdown /> PositionTopLeft story renders snapshot 1`] = `
       </li>
       <li
         class="dropdown-menu__item"
-        role="presentation"
+        role="menuitem"
       >
         <button
           class="dropdown-menu__link"
@@ -299,7 +431,7 @@ exports[`<ButtonDropdown /> PositionTopLeft story renders snapshot 1`] = `
       </li>
       <li
         class="dropdown-menu__item"
-        role="presentation"
+        role="menuitem"
       >
         <button
           class="dropdown-menu__link"
@@ -322,7 +454,7 @@ exports[`<ButtonDropdown /> PositionTopLeft story renders snapshot 1`] = `
       </li>
       <li
         class="dropdown-menu__item"
-        role="presentation"
+        role="menuitem"
       >
         <button
           class="dropdown-menu__link"
@@ -354,8 +486,10 @@ exports[`<ButtonDropdown /> PositionTopRight story renders snapshot 1`] = `
 >
   <button
     aria-expanded="false"
+    aria-haspopup="menu"
     class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
     data-bootstrap-override="clickable-style-secondary"
+    data-testid="trigger-button"
     type="button"
   >
     Open Dropdown
@@ -365,11 +499,11 @@ exports[`<ButtonDropdown /> PositionTopRight story renders snapshot 1`] = `
   >
     <ul
       class="dropdown-menu__list"
-      role="presentation"
+      role="menu"
     >
       <li
         class="dropdown-menu__item"
-        role="presentation"
+        role="menuitem"
       >
         <button
           class="dropdown-menu__link"
@@ -392,7 +526,7 @@ exports[`<ButtonDropdown /> PositionTopRight story renders snapshot 1`] = `
       </li>
       <li
         class="dropdown-menu__item"
-        role="presentation"
+        role="menuitem"
       >
         <button
           class="dropdown-menu__link"
@@ -415,7 +549,7 @@ exports[`<ButtonDropdown /> PositionTopRight story renders snapshot 1`] = `
       </li>
       <li
         class="dropdown-menu__item"
-        role="presentation"
+        role="menuitem"
       >
         <button
           class="dropdown-menu__link"
@@ -438,7 +572,7 @@ exports[`<ButtonDropdown /> PositionTopRight story renders snapshot 1`] = `
       </li>
       <li
         class="dropdown-menu__item"
-        role="presentation"
+        role="menuitem"
       >
         <button
           class="dropdown-menu__link"

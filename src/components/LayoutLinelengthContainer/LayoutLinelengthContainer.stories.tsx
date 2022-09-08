@@ -1,4 +1,3 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
@@ -7,9 +6,6 @@ import { LayoutLinelengthContainer } from './LayoutLinelengthContainer';
 export default {
   title: 'Molecules/Layout and Containers/Linelength Container',
   component: LayoutLinelengthContainer,
-  parameters: {
-    badges: [BADGE.BETA],
-  },
   args: {
     children: (
       <>

@@ -1,8 +1,9 @@
 import clsx from 'clsx';
-import React, { ReactNode, MouseEventHandler } from 'react';
+import React, { ReactNode, MouseEventHandler, useContext } from 'react';
+import { DropdownMenuContext } from '../DropdownMenu';
 import styles from '../DropdownMenu/DropdownMenu.module.css';
 
-export interface Props {
+export type DropdownMenuItemProps = {
   /**
    * Stylistic variations for the Box
    * - **top** horizontally and vertically aligns the content
@@ -46,68 +47,64 @@ export interface Props {
    * - **lined** yields a dropdown item with a border bottom
    */
   variant?: 'lined';
-}
+};
 
 /**
- * BETA: This component is still a work in progress and is subject to change.
- *
  * ```ts
  * import {DropdownMenuItem} from "@chanzuckerberg/eds";
  * ```
  *
  * Dropdown menu item within `DropdownMenu`
  */
-export const DropdownMenuItem = React.forwardRef<HTMLLIElement, Props>(
-  (
-    {
-      align,
-      className,
-      href,
-      children,
-      variant,
-      onClick,
-      status,
-      target,
-      ...other
-    },
-    ref,
-  ) => {
-    const TagName = createTagName();
-
-    function createTagName() {
-      if (href) {
-        return 'a';
-      } else {
-        return 'button';
-      }
+export const DropdownMenuItem = ({
+  align,
+  className,
+  href,
+  children,
+  variant,
+  onClick,
+  status,
+  target,
+  ...other
+}: DropdownMenuItemProps) => {
+  const context = useContext(DropdownMenuContext);
+  const ref = (element: HTMLLIElement) => {
+    if (context && element && !context.refs.current.set.has(element)) {
+      context.refs.current.set.add(element);
+      context.refs.current.list.push(element);
     }
+  };
 
-    const componentClassName = clsx(
-      styles['dropdown-menu__item'],
-      align === 'top-left' && styles['dropdown-menu__item--align-top-left'],
-      variant === 'lined' && styles['dropdown-menu__item--lined'],
-      status === 'error' && styles['dropdown-menu__item--error'],
-      className,
-    );
+  const TagName = createTagName();
 
-    return (
-      <li
-        className={componentClassName}
-        {...other}
-        ref={ref}
-        role="presentation"
+  function createTagName() {
+    if (href) {
+      return 'a';
+    } else {
+      return 'button';
+    }
+  }
+
+  const componentClassName = clsx(
+    styles['dropdown-menu__item'],
+    align === 'top-left' && styles['dropdown-menu__item--align-top-left'],
+    variant === 'lined' && styles['dropdown-menu__item--lined'],
+    status === 'error' && styles['dropdown-menu__item--error'],
+    className,
+  );
+
+  return (
+    <li className={componentClassName} {...other} ref={ref} role="menuitem">
+      <TagName
+        className={styles['dropdown-menu__link']}
+        href={href}
+        onClick={onClick}
+        target={target}
       >
-        <TagName
-          className={styles['dropdown-menu__link']}
-          href={href}
-          onClick={onClick}
-          target={target}
-        >
-          {children}
-        </TagName>
-      </li>
-    );
-  },
-);
+        {children}
+      </TagName>
+    </li>
+  );
+};
 
 DropdownMenuItem.displayName = 'DropdownMenuItem';

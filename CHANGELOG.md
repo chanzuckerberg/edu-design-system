@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.0.0](https://github.com/chanzuckerberg/edu-design-system/compare/v4.0.0...v5.0.0) (2022-09-08)
+
+
+### ⚠ BREAKING CHANGES
+
+* **tooltip:** rename childDisabled to childNotInteractive
+
+### Bug Fixes
+
+* **dropdownmenu:** make up and down key to navigate work 1/n ([2b40a5b](https://github.com/chanzuckerberg/edu-design-system/commit/2b40a5b74d892ccfdc4bfd37179f0c4be2b88bcf))
+* **dropdownmenu:** make up and down key to navigate work 2/n ([4c0d449](https://github.com/chanzuckerberg/edu-design-system/commit/4c0d449fe703a6b97b41107281883b847f18d3b3))
+* **notification-list:** add focus state to button ([766f928](https://github.com/chanzuckerberg/edu-design-system/commit/766f9281e4661526c310cb17685dce1bd2ae882a))
+
+
+* **tooltip:** rename childDisabled to childNotInteractive ([393b640](https://github.com/chanzuckerberg/edu-design-system/commit/393b640498d08e6e0d661706b008f4ac9d5e7d3c))
+
 ## [4.0.0](https://github.com/chanzuckerberg/edu-design-system/compare/v3.2.0...v4.0.0) (2022-09-02)
 
 ### ⚠ BREAKING CHANGES

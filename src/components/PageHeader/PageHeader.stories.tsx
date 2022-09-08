@@ -1,4 +1,3 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
@@ -10,9 +9,6 @@ import Text from '../Text';
 export default {
   title: 'Molecules/Text/PageHeader',
   component: PageHeader,
-  parameters: {
-    badges: [BADGE.BETA],
-  },
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof PageHeader>;
