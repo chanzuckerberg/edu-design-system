@@ -200,4 +200,11 @@
   &:focus-visible {
     opacity: 1;
   }
+
+  @supports not selector(:focus-visible) {
+    .drag-drop__item--hover:focus &,
+    &:focus {
+      opacity: 1;
+    }
+  }
 }

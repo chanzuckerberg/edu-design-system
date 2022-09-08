@@ -104,6 +104,28 @@
   z-index: var(--eds-z-index-top); /* 1 */
 }
 
+@supports not selector(:focus-visible) {
+  &:focus {
+    .baseline-card__link:focus {
+      @mixin eds-theme-typography-body-text-sm;
+      background-color: var(--eds-theme-color-background-neutral-default);
+      clip: auto !important; /* 5 */
+      clip-path: none;
+      color: var(--eds-theme-color-text-neutral-default);
+      display: block;
+      font-size: 1em;
+      height: auto;
+      left: var(--eds-size-half);
+      line-height: normal;
+      padding: var(--eds-size-half) var(--eds-size-1);
+      text-decoration: none;
+      top: var(--eds-size-half);
+      width: auto;
+      z-index: var(--eds-z-index-top); /* 1 */
+    }
+  }
+}
+
 /**
  * Baseline card footer that displays the metadata.
  */

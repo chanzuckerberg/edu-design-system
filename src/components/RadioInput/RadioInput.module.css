@@ -49,6 +49,12 @@
   border: var(--eds-border-width-sm) solid var(--eds-theme-color-focus-ring);
   border-radius: 9999px;
 }
+@supports not selector(:focus-visible) {
+  .radio__input:focus + .radio__icon {
+    border: var(--eds-border-width-sm) solid var(--eds-theme-color-focus-ring);
+    border-radius: 9999px;
+  }
+}
 
 /**
  * The disabled variant of the visible radio svg icon.

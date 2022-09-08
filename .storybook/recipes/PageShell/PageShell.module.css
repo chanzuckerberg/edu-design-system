@@ -27,6 +27,12 @@
     transform: translateY(0%);
   }
 
+  @supports not selector(:focus-visible) {
+    &:focus {
+      transform: translateY(0%);
+    }
+  }
+
   @media screen and (prefers-reduced-motion) {
     transition: none;
   }

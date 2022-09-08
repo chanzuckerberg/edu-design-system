@@ -26,6 +26,12 @@
   @mixin focus;
 }
 
+@supports not selector(:focus-visible) {
+  .drawer__container:focus {
+    @mixin focus;
+  }
+}
+
 /**
 * Active drawer container
 */
@@ -57,6 +63,11 @@
 }
 .drawer:focus-visible {
   @mixin focus;
+}
+@supports not selector(:focus-visible) {
+  .drawer:focus {
+    @mixin focus;
+  }
 }
 
 /**

@@ -30,6 +30,13 @@
     @mixin focusInverted;
   }
 
+  @supports not selector(:focus-visible) {
+    &:focus {
+      @mixin focusInverted;
+      background: var(--eds-theme-color-button-primary-brand-background-hover);
+    }
+  }
+
   /**
   * Primary nav link within active primary nav item
   */

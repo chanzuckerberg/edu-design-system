@@ -98,6 +98,12 @@
     @mixin focus;
   }
 
+  @supports not selector(:focus-visible) {
+    &:focus {
+      @mixin focus;
+    }
+  }
+
   @media screen and (prefers-reduced-motion) {
     transition: none;
   }

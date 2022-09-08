@@ -49,6 +49,17 @@
     background-color: var(--eds-theme-color-background-brand-primary-strong);
   }
 
+  @supports not selector(:focus-visible) {
+    &:focus {
+      outline: 1px solid transparent; /* 7 */
+      color: var(--eds-theme-color-text-neutral-default-inverse) !important;
+      text-decoration-color: var(
+        --eds-theme-color-text-neutral-default-inverse
+      ) !important;
+      background-color: var(--eds-theme-color-background-brand-primary-strong);
+    }
+  }
+
   &:visited {
     color: var(--eds-theme-color-text-neutral-subtle);
     text-decoration-color: var(--eds-theme-color-text-neutral-subtle);
@@ -61,6 +72,12 @@
 
   &:focus-visible {
     @mixin focusInverted;
+  }
+
+  @supports not selector(:focus-visible) {
+    &:focus {
+      @mixin focusInverted;
+    }
   }
 }
 
@@ -107,6 +124,13 @@
   &:focus-visible {
     @mixin focus;
     border-color: var(--eds-theme-color-border-brand-primary-strong);
+  }
+
+  @supports not selector(:focus-visible) {
+    &:focus {
+      @mixin focus;
+      border-color: var(--eds-theme-color-border-brand-primary-strong);
+    }
   }
 
   @media screen and (prefers-reduced-motion) {

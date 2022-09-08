@@ -40,6 +40,12 @@
     border-color: var(--eds-theme-color-form-input-border-focus);
   }
 
+  @supports not selector(:focus-visible) {
+    &:focus {
+      border-color: var(--eds-theme-color-form-input-border-focus);
+    }
+  }
+
   &.file-upload-field__hit-area--drag-over {
     border-color: var(--eds-theme-color-form-input-border-focus);
   }

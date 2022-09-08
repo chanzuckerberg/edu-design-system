@@ -271,9 +271,9 @@ import { EdsThemeColorUtilitySuccessForeground } from 'src/tokens-dist/ts/colors
 <Icon color={EdsThemeColorUtilitySuccessForeground} />;
 ```
 
-- Use `:focus-visible` instead of `:focus`
+- Use `:focus-visible` with fallback instead of `:focus`
 
-This allows focus indicators to appear for keyboard users while remaining hidden from mouse-only users.
+This allows focus indicators to appear for keyboard users while remaining hidden from mouse-only users. However, not all of the browser versions we support support this feature, so we also need a fallback.
 
 Instead of:
 
@@ -291,6 +291,12 @@ Use:
 .button--primary {
   &:focus-visible {
     @mixin focus;
+  }
+
+  @supports not selector(:focus-visible) {
+    &:focus {
+      @mixin focus;
+    }
   }
 }
 ```

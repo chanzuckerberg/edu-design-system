@@ -32,6 +32,12 @@
     @mixin focus;
   }
 
+  @supports not selector(:focus-visible) {
+    &:focus {
+      @mixin focus;
+    }
+  }
+
   @media screen and (prefers-reduced-motion) {
     transition: none;
   }
@@ -494,6 +500,12 @@
 
   &:focus-visible {
     background-color: var(--eds-theme-color-icon-neutral-strong); /* 1 */
+  }
+
+  @supports not selector(:focus-visible) {
+    &:focus {
+      background-color: var(--eds-theme-color-icon-neutral-strong); /* 1 */
+    }
   }
 }
 

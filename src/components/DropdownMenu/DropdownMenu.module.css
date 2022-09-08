@@ -80,6 +80,13 @@
     @mixin focus;
   }
 
+  @supports not selector(:focus-visible) {
+    &:focus {
+      @mixin focus;
+      background: var(--eds-theme-color-background-neutral-subtle);
+    }
+  }
+
   @media screen and (prefers-reduced-motion) {
     transition: none;
   }

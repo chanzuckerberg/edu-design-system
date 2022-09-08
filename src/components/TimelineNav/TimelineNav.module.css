@@ -209,6 +209,13 @@
     @mixin focus;
   }
 
+  @supports not selector(:focus-visible) {
+    &:focus {
+      @mixin focus;
+      color: var(--eds-theme-color-text-neutral-default);
+    }
+  }
+
   @media screen and (prefers-reduced-motion) {
     transition: none;
   }

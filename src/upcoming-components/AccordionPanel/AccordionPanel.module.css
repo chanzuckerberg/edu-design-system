@@ -63,6 +63,12 @@
   @mixin focus;
 }
 
+@supports not selector(:focus-visible) {
+  .accordion__panel-button:focus {
+    @mixin focus;
+  }
+}
+
 /**
  * Accordion panel button within inverted accordion
  * 1) The wrapper for the text

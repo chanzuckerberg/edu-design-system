@@ -77,6 +77,12 @@
   &:focus-visible {
     opacity: 0.2;
   }
+
+  @supports not selector(:focus-visible) {
+    &:focus {
+      opacity: 0.2;
+    }
+  }
 }
 
 .token-specimen__sample--animation-move {
@@ -85,5 +91,11 @@
   &:hover,
   &:focus-visible {
     transform: translateX(-3rem);
+  }
+
+  @supports not selector(:focus-visible) {
+    &:focus {
+      transform: translateX(-3rem);
+    }
   }
 }
