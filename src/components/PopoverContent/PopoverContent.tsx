@@ -29,6 +29,7 @@ export type PopoverContentProps = {
 }>;
 
 export const PopoverContent = ({
+  arrowClassName,
   children,
   className,
   showArrow,
@@ -49,11 +50,20 @@ export const PopoverContent = ({
     className,
   );
 
+  const arrowComponentClassName = clsx(
+    styles['popover-content__arrow'],
+    arrowClassName,
+  );
+
   return (
-    <HeadlessPopover.Panel {...allProps} className={styles['popover-content']}>
+    <HeadlessPopover.Panel
+      {...allProps}
+      as="article"
+      className={styles['popover-content']}
+    >
       <div className={componentClassName}>{children}</div>
       {showArrow && (
-        <div className={styles['popover-content__arrow']} data-popper-arrow />
+        <div className={arrowComponentClassName} data-popper-arrow />
       )}
     </HeadlessPopover.Panel>
   );
