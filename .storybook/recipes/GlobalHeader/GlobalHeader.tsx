@@ -187,26 +187,20 @@ export const GlobalHeader = ({
         </PrimaryNav>
       </NavContainer>
       <UtilityNav className={styles['global-header__utility-nav']}>
-        <UtilityNavItem aria-label="Notifications" itemBefore={<Avatar />}>
-          <Popover
-            aria-describedby="popover-description-1"
-            aria-labelledby="popover-heading-1"
-            className={styles['global-header__popover']}
-            isActive={true}
-            position={isLarge === false ? 'bottom-left' : undefined}
-          >
-            <Popover.Header
-              titleAfter={
+        <UtilityNavItem>
+          <Popover placement="bottom-end">
+            <Popover.Button as={Button}>
+              <Avatar />
+            </Popover.Button>
+            <Popover.Content showArrow>
+              <header className={styles['global-header-popover__header']}>
+                <Heading as="h3" id="popover-heading-1" size="body-sm">
+                  Notifications (4)
+                </Heading>
                 <Button size="sm" variant="icon">
                   Mark All Seen
                 </Button>
-              }
-            >
-              <Heading as="h3" id="popover-heading-1" size="body-sm">
-                Notifications (4)
-              </Heading>
-            </Popover.Header>
-            <Popover.Body>
+              </header>
               <NotificationList>
                 <NotificationList.Item
                   date="now"
@@ -233,11 +227,11 @@ export const GlobalHeader = ({
                   title="English Teacher gave you feedback"
                 ></NotificationList.Item>
               </NotificationList>
-              <Popover.Header>
+              <header className={styles['global-header-popover__header']}>
                 <Heading as="h3" id="popover-heading-2" size="body-sm">
                   Already Seen
                 </Heading>
-              </Popover.Header>
+              </header>
               <NotificationList>
                 <NotificationList.Item
                   date="now"
@@ -254,7 +248,7 @@ export const GlobalHeader = ({
                   title="English Teacher gave you feedback"
                 ></NotificationList.Item>
               </NotificationList>
-            </Popover.Body>
+            </Popover.Content>
           </Popover>
         </UtilityNavItem>
       </UtilityNav>
