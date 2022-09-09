@@ -12,7 +12,6 @@ import Popover from '../../../src/components/Popover';
 import PrimaryNav from '../../../src/components/PrimaryNav';
 import PrimaryNavItem from '../../../src/components/PrimaryNavItem';
 import UtilityNav from '../../../src/components/UtilityNav';
-import UtilityNavItem from '../../../src/components/UtilityNavItem';
 
 // @ts-expect-error breakpoints file must be in JS to work with postcss config
 import breakpoint from '../../../src/design-tokens/tier-1-definitions/breakpoints';
@@ -187,70 +186,80 @@ export const GlobalHeader = ({
         </PrimaryNav>
       </NavContainer>
       <UtilityNav className={styles['global-header__utility-nav']}>
-        <UtilityNavItem>
-          <Popover placement="bottom-end">
-            <Popover.Button as={Button}>
+        <Popover
+          as={React.Fragment}
+          placement={isLarge ? 'top-start' : 'bottom-end'}
+        >
+          <Popover.Button
+            as="li"
+            className={styles['global-header__avatar-button']}
+          >
+            <Button variant="icon">
               <Avatar />
-            </Popover.Button>
-            <Popover.Content showArrow>
-              <header className={styles['global-header-popover__header']}>
-                <Heading as="h3" id="popover-heading-1" size="body-sm">
-                  Notifications (4)
-                </Heading>
-                <Button size="sm" variant="icon">
-                  Mark All Seen
-                </Button>
-              </header>
-              <NotificationList>
-                <NotificationList.Item
-                  date="now"
-                  href="#"
-                  source="Outsiders on Trial: Self Awareness = Trial Brief Outline"
-                  title="English Teacher gave you feedback"
-                ></NotificationList.Item>
-                <NotificationList.Item
-                  date="now"
-                  href="#"
-                  source="Outsiders on Trial: Self Awareness = Trial Brief Outline"
-                  title="English Teacher gave you feedback"
-                ></NotificationList.Item>
-                <NotificationList.Item
-                  date="now"
-                  href="#"
-                  source="Outsiders on Trial: Self Awareness = Trial Brief Outline"
-                  title="English Teacher gave you feedback"
-                ></NotificationList.Item>
-                <NotificationList.Item
-                  date="now"
-                  href="#"
-                  source="Outsiders on Trial: Self Awareness = Trial Brief Outline"
-                  title="English Teacher gave you feedback"
-                ></NotificationList.Item>
-              </NotificationList>
-              <header className={styles['global-header-popover__header']}>
-                <Heading as="h3" id="popover-heading-2" size="body-sm">
-                  Already Seen
-                </Heading>
-              </header>
-              <NotificationList>
-                <NotificationList.Item
-                  date="now"
-                  href="#"
-                  markedAsRead={true}
-                  source="Outsiders on Trial: Self Awareness = Trial Brief Outline"
-                  title="English Teacher gave you feedback"
-                ></NotificationList.Item>
-                <NotificationList.Item
-                  date="now"
-                  href="#"
-                  markedAsRead={true}
-                  source="Outsiders on Trial: Self Awareness = Trial Brief Outline"
-                  title="English Teacher gave you feedback"
-                ></NotificationList.Item>
-              </NotificationList>
-            </Popover.Content>
-          </Popover>
-        </UtilityNavItem>
+            </Button>
+          </Popover.Button>
+          <Popover.Content
+            arrowClassName={styles['popover__arrow']}
+            className={styles['global-header__popover']}
+            showArrow
+          >
+            <header className={styles['global-header__popover-header']}>
+              <Heading as="h3" id="popover-heading-1" size="body-sm">
+                Notifications (4)
+              </Heading>
+              <Button size="sm" variant="icon">
+                Mark All Seen
+              </Button>
+            </header>
+            <NotificationList>
+              <NotificationList.Item
+                date="now"
+                href="#"
+                source="Outsiders on Trial: Self Awareness = Trial Brief Outline"
+                title="English Teacher gave you feedback"
+              ></NotificationList.Item>
+              <NotificationList.Item
+                date="now"
+                href="#"
+                source="Outsiders on Trial: Self Awareness = Trial Brief Outline"
+                title="English Teacher gave you feedback"
+              ></NotificationList.Item>
+              <NotificationList.Item
+                date="now"
+                href="#"
+                source="Outsiders on Trial: Self Awareness = Trial Brief Outline"
+                title="English Teacher gave you feedback"
+              ></NotificationList.Item>
+              <NotificationList.Item
+                date="now"
+                href="#"
+                source="Outsiders on Trial: Self Awareness = Trial Brief Outline"
+                title="English Teacher gave you feedback"
+              ></NotificationList.Item>
+            </NotificationList>
+            <header className={styles['global-header-popover__header']}>
+              <Heading as="h3" id="popover-heading-2" size="body-sm">
+                Already Seen
+              </Heading>
+            </header>
+            <NotificationList>
+              <NotificationList.Item
+                date="now"
+                href="#"
+                markedAsRead={true}
+                source="Outsiders on Trial: Self Awareness = Trial Brief Outline"
+                title="English Teacher gave you feedback"
+              ></NotificationList.Item>
+              <NotificationList.Item
+                date="now"
+                href="#"
+                markedAsRead={true}
+                source="Outsiders on Trial: Self Awareness = Trial Brief Outline"
+                title="English Teacher gave you feedback"
+              ></NotificationList.Item>
+            </NotificationList>
+          </Popover.Content>
+        </Popover>
       </UtilityNav>
     </Header>
   );

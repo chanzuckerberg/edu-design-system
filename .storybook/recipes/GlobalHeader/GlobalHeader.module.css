@@ -83,6 +83,8 @@
  * 1) On small screens, create a max width so that the popover flexes to accommodate small screens
  */
 .global-header__popover {
+  max-height: 28rem;
+  width: max-content;
   max-width: calc(100vw - 2rem); /* 1 */
 
   @media all and (min-width: $eds-bp-xl) {
@@ -90,8 +92,26 @@
   }
 }
 
-.global-header-popover__header {
+.global-header__popover-header {
   display: flex;
   justify-content: space-between;
   padding: var(--eds-size-1) var(--eds-size-2);
+}
+
+.global-header__avatar-button {
+  display: flex;
+  position: relative;
+  border: 0;
+  left: var(--eds-size-2);
+  @media all and (min-width: $eds-bp-xl) {
+    left: -1rem;
+  }
+}
+
+[data-popper-placement='top-start'] > .popover__arrow {
+  left: var(--eds-size-4);
+}
+
+[data-popper-placement='bottom-end'] > .popover__arrow {
+  right: var(--eds-size-4);
 }
