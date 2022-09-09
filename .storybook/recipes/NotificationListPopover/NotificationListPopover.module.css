@@ -3,13 +3,16 @@
 \*------------------------------------*/
 
 /**
- * 1) 
+ * Notifications List Popover
  */
 .notifications-list-popover {
   padding: 0;
   max-height: 25rem;
 }
 
+/**
+ * Notifications List Popover Header
+ */
 .notifications-list-popover__header {
   display: flex;
   justify-content: space-between;
