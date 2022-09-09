@@ -72,6 +72,10 @@
   @mixin eds-typography-preset-006 $important;
 }
 
+@define-mixin eds-theme-typography-button-label-sm $important {
+  @mixin eds-typography-preset-008-bold $important;
+}
+
 @define-mixin eds-theme-typography-form-label $important {
   @mixin eds-typography-preset-006 $important;
 }
