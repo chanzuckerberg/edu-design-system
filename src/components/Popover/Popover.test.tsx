@@ -3,12 +3,18 @@ import { userEvent } from '@storybook/testing-library';
 import { composeStories } from '@storybook/testing-react';
 import { render, screen } from '@testing-library/react';
 import React from 'react';
-import * as PopoverStoryFile from './Popover.stories';
+import * as stories from './Popover.stories';
 
-const { Default } = composeStories(PopoverStoryFile);
+const { Default } = composeStories(stories);
 
 describe('<Popover />', () => {
-  generateSnapshots(PopoverStoryFile);
+  generateSnapshots(stories, {
+    getElement: async () => {
+      const triggerButton = await screen.findByRole('button');
+      userEvent.click(triggerButton);
+      return triggerButton.parentElement; // eslint-disable-line testing-library/no-node-access
+    },
+  });
 
   it('should open Popover with trigger button', () => {
     render(<Default />);

@@ -22,7 +22,13 @@ export type PopoverContentProps = {
    */
   showArrow?: boolean;
 } & RenderProps<{
+  /**
+   * Render prop indicating popover open status.
+   */
   open: boolean;
+  /**
+   * Render prop that closes popover when called.
+   */
   close: (
     focusableElement?: HTMLElement | React.RefObject<HTMLElement>,
   ) => void;
@@ -35,6 +41,7 @@ export const PopoverContent = ({
   showArrow,
   ...other
 }: PopoverContentProps) => {
+  // Grabs popper behavior generated from usePopper hook from Popover parent component.
   const { popperStyles, popperAttributes, setPopperElement } =
     useContext(PopoverContext);
   const allProps = {
@@ -42,13 +49,10 @@ export const PopoverContent = ({
     ...other,
     ref: setPopperElement,
     style: popperStyles,
-    className: clsx(styles['popover-content'], className),
+    className: clsx(styles['popover-content']),
   };
 
-  const componentClassName = clsx(
-    styles['popover-content__scroll-area'],
-    className,
-  );
+  const componentClassName = clsx(styles['popover-content__main'], className);
 
   const arrowComponentClassName = clsx(
     styles['popover-content__arrow'],
@@ -63,7 +67,11 @@ export const PopoverContent = ({
     >
       <div className={componentClassName}>{children}</div>
       {showArrow && (
-        <div className={arrowComponentClassName} data-popper-arrow />
+        <div
+          aria-hidden
+          className={arrowComponentClassName}
+          data-popper-arrow
+        />
       )}
     </HeadlessPopover.Panel>
   );

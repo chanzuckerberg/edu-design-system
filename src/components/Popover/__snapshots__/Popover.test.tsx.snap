@@ -3,7 +3,8 @@
 exports[`<Popover /> Arrow story renders snapshot 1`] = `
 <div>
   <button
-    aria-expanded="false"
+    aria-controls="headlessui-popover-panel-7"
+    aria-expanded="true"
     class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
     data-bootstrap-override="clickable-style-secondary"
     id="headlessui-popover-button-6"
@@ -11,13 +12,38 @@ exports[`<Popover /> Arrow story renders snapshot 1`] = `
   >
     Open Popover
   </button>
+  <article
+    class="popover-content"
+    data-popper-escaped="true"
+    data-popper-placement="bottom"
+    data-popper-reference-hidden="true"
+    id="headlessui-popover-panel-7"
+    style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 10px);"
+    tabindex="-1"
+  >
+    <div
+      class="popover-content__main"
+    >
+      <div
+        style="width: 250px;"
+      >
+        My popover content Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      </div>
+    </div>
+    <div
+      aria-hidden="true"
+      class="popover-content__arrow"
+      data-popper-arrow="true"
+    />
+  </article>
 </div>
 `;
 
 exports[`<Popover /> Bottom story renders snapshot 1`] = `
 <div>
   <button
-    aria-expanded="false"
+    aria-controls="headlessui-popover-panel-22"
+    aria-expanded="true"
     class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
     data-bootstrap-override="clickable-style-secondary"
     data-testid="popover-trigger-button"
@@ -26,13 +52,34 @@ exports[`<Popover /> Bottom story renders snapshot 1`] = `
   >
     Open Popover
   </button>
+  <article
+    class="popover-content"
+    data-popper-escaped="true"
+    data-popper-placement="bottom"
+    data-popper-reference-hidden="true"
+    data-testid="popover-content"
+    id="headlessui-popover-panel-22"
+    style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 10px);"
+    tabindex="-1"
+  >
+    <div
+      class="popover-content__main"
+    >
+      <div
+        style="width: 250px;"
+      >
+        My popover content Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      </div>
+    </div>
+  </article>
 </div>
 `;
 
 exports[`<Popover /> BottomEnd story renders snapshot 1`] = `
 <div>
   <button
-    aria-expanded="false"
+    aria-controls="headlessui-popover-panel-47"
+    aria-expanded="true"
     class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
     data-bootstrap-override="clickable-style-secondary"
     data-testid="popover-trigger-button"
@@ -41,13 +88,34 @@ exports[`<Popover /> BottomEnd story renders snapshot 1`] = `
   >
     Open Popover
   </button>
+  <article
+    class="popover-content"
+    data-popper-escaped="true"
+    data-popper-placement="bottom-end"
+    data-popper-reference-hidden="true"
+    data-testid="popover-content"
+    id="headlessui-popover-panel-47"
+    style="position: absolute; left: 0px; top: 0px; right: 0px; transform: translate(0px, 10px);"
+    tabindex="-1"
+  >
+    <div
+      class="popover-content__main"
+    >
+      <div
+        style="width: 250px;"
+      >
+        My popover content Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      </div>
+    </div>
+  </article>
 </div>
 `;
 
 exports[`<Popover /> BottomStart story renders snapshot 1`] = `
 <div>
   <button
-    aria-expanded="false"
+    aria-controls="headlessui-popover-panel-42"
+    aria-expanded="true"
     class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
     data-bootstrap-override="clickable-style-secondary"
     data-testid="popover-trigger-button"
@@ -56,13 +124,34 @@ exports[`<Popover /> BottomStart story renders snapshot 1`] = `
   >
     Open Popover
   </button>
+  <article
+    class="popover-content"
+    data-popper-escaped="true"
+    data-popper-placement="bottom-start"
+    data-popper-reference-hidden="true"
+    data-testid="popover-content"
+    id="headlessui-popover-panel-42"
+    style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 10px);"
+    tabindex="-1"
+  >
+    <div
+      class="popover-content__main"
+    >
+      <div
+        style="width: 250px;"
+      >
+        My popover content Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      </div>
+    </div>
+  </article>
 </div>
 `;
 
 exports[`<Popover /> Default story renders snapshot 1`] = `
 <div>
   <button
-    aria-expanded="false"
+    aria-controls="headlessui-popover-panel-5"
+    aria-expanded="true"
     class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
     data-bootstrap-override="clickable-style-secondary"
     data-testid="popover-trigger-button"
@@ -71,13 +160,34 @@ exports[`<Popover /> Default story renders snapshot 1`] = `
   >
     Open Popover
   </button>
+  <article
+    class="popover-content"
+    data-popper-escaped="true"
+    data-popper-placement="bottom"
+    data-popper-reference-hidden="true"
+    data-testid="popover-content"
+    id="headlessui-popover-panel-5"
+    style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 10px);"
+    tabindex="-1"
+  >
+    <div
+      class="popover-content__main"
+    >
+      <div
+        style="width: 250px;"
+      >
+        My popover content Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      </div>
+    </div>
+  </article>
 </div>
 `;
 
 exports[`<Popover /> Left story renders snapshot 1`] = `
 <div>
   <button
-    aria-expanded="false"
+    aria-controls="headlessui-popover-panel-27"
+    aria-expanded="true"
     class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
     data-bootstrap-override="clickable-style-secondary"
     data-testid="popover-trigger-button"
@@ -86,13 +196,34 @@ exports[`<Popover /> Left story renders snapshot 1`] = `
   >
     Open Popover
   </button>
+  <article
+    class="popover-content"
+    data-popper-escaped="true"
+    data-popper-placement="left"
+    data-popper-reference-hidden="true"
+    data-testid="popover-content"
+    id="headlessui-popover-panel-27"
+    style="position: absolute; left: 0px; top: 0px; right: 0px; transform: translate(-10px, 0px);"
+    tabindex="-1"
+  >
+    <div
+      class="popover-content__main"
+    >
+      <div
+        style="width: 250px;"
+      >
+        My popover content Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      </div>
+    </div>
+  </article>
 </div>
 `;
 
 exports[`<Popover /> LeftEnd story renders snapshot 1`] = `
 <div>
   <button
-    aria-expanded="false"
+    aria-controls="headlessui-popover-panel-67"
+    aria-expanded="true"
     class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
     data-bootstrap-override="clickable-style-secondary"
     data-testid="popover-trigger-button"
@@ -101,13 +232,34 @@ exports[`<Popover /> LeftEnd story renders snapshot 1`] = `
   >
     Open Popover
   </button>
+  <article
+    class="popover-content"
+    data-popper-escaped="true"
+    data-popper-placement="left-end"
+    data-popper-reference-hidden="true"
+    data-testid="popover-content"
+    id="headlessui-popover-panel-67"
+    style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; transform: translate(-10px, 0px);"
+    tabindex="-1"
+  >
+    <div
+      class="popover-content__main"
+    >
+      <div
+        style="width: 250px;"
+      >
+        My popover content Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      </div>
+    </div>
+  </article>
 </div>
 `;
 
 exports[`<Popover /> LeftStart story renders snapshot 1`] = `
 <div>
   <button
-    aria-expanded="false"
+    aria-controls="headlessui-popover-panel-62"
+    aria-expanded="true"
     class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
     data-bootstrap-override="clickable-style-secondary"
     data-testid="popover-trigger-button"
@@ -116,13 +268,34 @@ exports[`<Popover /> LeftStart story renders snapshot 1`] = `
   >
     Open Popover
   </button>
+  <article
+    class="popover-content"
+    data-popper-escaped="true"
+    data-popper-placement="left-start"
+    data-popper-reference-hidden="true"
+    data-testid="popover-content"
+    id="headlessui-popover-panel-62"
+    style="position: absolute; left: 0px; top: 0px; right: 0px; transform: translate(-10px, 0px);"
+    tabindex="-1"
+  >
+    <div
+      class="popover-content__main"
+    >
+      <div
+        style="width: 250px;"
+      >
+        My popover content Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      </div>
+    </div>
+  </article>
 </div>
 `;
 
 exports[`<Popover /> Right story renders snapshot 1`] = `
 <div>
   <button
-    aria-expanded="false"
+    aria-controls="headlessui-popover-panel-17"
+    aria-expanded="true"
     class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
     data-bootstrap-override="clickable-style-secondary"
     data-testid="popover-trigger-button"
@@ -131,13 +304,34 @@ exports[`<Popover /> Right story renders snapshot 1`] = `
   >
     Open Popover
   </button>
+  <article
+    class="popover-content"
+    data-popper-escaped="true"
+    data-popper-placement="right"
+    data-popper-reference-hidden="true"
+    data-testid="popover-content"
+    id="headlessui-popover-panel-17"
+    style="position: absolute; left: 0px; top: 0px; transform: translate(10px, 0px);"
+    tabindex="-1"
+  >
+    <div
+      class="popover-content__main"
+    >
+      <div
+        style="width: 250px;"
+      >
+        My popover content Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      </div>
+    </div>
+  </article>
 </div>
 `;
 
 exports[`<Popover /> RightEnd story renders snapshot 1`] = `
 <div>
   <button
-    aria-expanded="false"
+    aria-controls="headlessui-popover-panel-57"
+    aria-expanded="true"
     class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
     data-bootstrap-override="clickable-style-secondary"
     data-testid="popover-trigger-button"
@@ -146,13 +340,34 @@ exports[`<Popover /> RightEnd story renders snapshot 1`] = `
   >
     Open Popover
   </button>
+  <article
+    class="popover-content"
+    data-popper-escaped="true"
+    data-popper-placement="right-end"
+    data-popper-reference-hidden="true"
+    data-testid="popover-content"
+    id="headlessui-popover-panel-57"
+    style="position: absolute; left: 0px; top: 0px; bottom: 0px; transform: translate(10px, 0px);"
+    tabindex="-1"
+  >
+    <div
+      class="popover-content__main"
+    >
+      <div
+        style="width: 250px;"
+      >
+        My popover content Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      </div>
+    </div>
+  </article>
 </div>
 `;
 
 exports[`<Popover /> RightStart story renders snapshot 1`] = `
 <div>
   <button
-    aria-expanded="false"
+    aria-controls="headlessui-popover-panel-52"
+    aria-expanded="true"
     class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
     data-bootstrap-override="clickable-style-secondary"
     data-testid="popover-trigger-button"
@@ -161,13 +376,34 @@ exports[`<Popover /> RightStart story renders snapshot 1`] = `
   >
     Open Popover
   </button>
+  <article
+    class="popover-content"
+    data-popper-escaped="true"
+    data-popper-placement="right-start"
+    data-popper-reference-hidden="true"
+    data-testid="popover-content"
+    id="headlessui-popover-panel-52"
+    style="position: absolute; left: 0px; top: 0px; transform: translate(10px, 0px);"
+    tabindex="-1"
+  >
+    <div
+      class="popover-content__main"
+    >
+      <div
+        style="width: 250px;"
+      >
+        My popover content Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      </div>
+    </div>
+  </article>
 </div>
 `;
 
 exports[`<Popover /> Top story renders snapshot 1`] = `
 <div>
   <button
-    aria-expanded="false"
+    aria-controls="headlessui-popover-panel-12"
+    aria-expanded="true"
     class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
     data-bootstrap-override="clickable-style-secondary"
     data-testid="popover-trigger-button"
@@ -176,13 +412,34 @@ exports[`<Popover /> Top story renders snapshot 1`] = `
   >
     Open Popover
   </button>
+  <article
+    class="popover-content"
+    data-popper-escaped="true"
+    data-popper-placement="top"
+    data-popper-reference-hidden="true"
+    data-testid="popover-content"
+    id="headlessui-popover-panel-12"
+    style="position: absolute; left: 0px; top: 0px; bottom: 0px; transform: translate(0px, -10px);"
+    tabindex="-1"
+  >
+    <div
+      class="popover-content__main"
+    >
+      <div
+        style="width: 250px;"
+      >
+        My popover content Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      </div>
+    </div>
+  </article>
 </div>
 `;
 
 exports[`<Popover /> TopEnd story renders snapshot 1`] = `
 <div>
   <button
-    aria-expanded="false"
+    aria-controls="headlessui-popover-panel-37"
+    aria-expanded="true"
     class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
     data-bootstrap-override="clickable-style-secondary"
     data-testid="popover-trigger-button"
@@ -191,13 +448,34 @@ exports[`<Popover /> TopEnd story renders snapshot 1`] = `
   >
     Open Popover
   </button>
+  <article
+    class="popover-content"
+    data-popper-escaped="true"
+    data-popper-placement="top-end"
+    data-popper-reference-hidden="true"
+    data-testid="popover-content"
+    id="headlessui-popover-panel-37"
+    style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; transform: translate(0px, -10px);"
+    tabindex="-1"
+  >
+    <div
+      class="popover-content__main"
+    >
+      <div
+        style="width: 250px;"
+      >
+        My popover content Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      </div>
+    </div>
+  </article>
 </div>
 `;
 
 exports[`<Popover /> TopStart story renders snapshot 1`] = `
 <div>
   <button
-    aria-expanded="false"
+    aria-controls="headlessui-popover-panel-32"
+    aria-expanded="true"
     class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary"
     data-bootstrap-override="clickable-style-secondary"
     data-testid="popover-trigger-button"
@@ -206,5 +484,25 @@ exports[`<Popover /> TopStart story renders snapshot 1`] = `
   >
     Open Popover
   </button>
+  <article
+    class="popover-content"
+    data-popper-escaped="true"
+    data-popper-placement="top-start"
+    data-popper-reference-hidden="true"
+    data-testid="popover-content"
+    id="headlessui-popover-panel-32"
+    style="position: absolute; left: 0px; top: 0px; bottom: 0px; transform: translate(0px, -10px);"
+    tabindex="-1"
+  >
+    <div
+      class="popover-content__main"
+    >
+      <div
+        style="width: 250px;"
+      >
+        My popover content Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      </div>
+    </div>
+  </article>
 </div>
 `;

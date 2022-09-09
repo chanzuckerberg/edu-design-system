@@ -13,11 +13,7 @@ export type PopoverProps = ExtractProps<typeof HeadlessPopover> & {
    */
   className?: string;
   /**
-   * Object to customize how your popover will behave. For a full list of what is available,
-   * reference https://popper.js.org/docs/v2/constructors/#options.
-   */
-  /**
-   * Although all popper js placement options are allowed, only 'top', 'bottom', 'left', 'right' have arrow options.
+   * Popover placement options relative to the trigger element.
    */
   placement?:
     | 'top-start'
@@ -32,6 +28,10 @@ export type PopoverProps = ExtractProps<typeof HeadlessPopover> & {
     | 'right'
     | 'bottom'
     | 'left';
+  /**
+   * Object to customize how your popover will behave. For a full list of what is available,
+   * refer to https://popper.js.org/docs/v2/modifiers/.
+   */
   modifiers?: PopperJSOptions['modifiers'];
   /**
    * Describes the positioning strategy to use. By default, it is 'absolute', which in the simplest cases does not require repositioning of the popper.
@@ -89,6 +89,8 @@ export const Popover = ({
   const [referenceElement, setReferenceElement] = useState<Element>();
 
   const [popperElement, setPopperElement] = useState<HTMLElement>();
+
+  // Leverage usePopper hook from Popper js for additional popover behavior and adds behavior to context for consumption by subcomponents.
   const { styles: popperStyles, attributes } = usePopper(
     referenceElement,
     popperElement,
