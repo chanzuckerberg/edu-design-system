@@ -48,11 +48,6 @@
     ) !important;
     background-color: var(--eds-theme-color-background-brand-primary-strong);
   }
-
-  &:visited {
-    color: var(--eds-theme-color-text-neutral-subtle);
-    text-decoration-color: var(--eds-theme-color-text-neutral-subtle);
-  }
 }
 
 @define-mixin TextLinkInverted {

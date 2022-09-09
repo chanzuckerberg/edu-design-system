@@ -1,7 +1,6 @@
 import { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 import { Link } from './Link';
-import getRandomUrl from '../../util/getRandomUrl';
 import { SIZES, STATUSES, VARIANTS } from '../ClickableStyle';
 
 import Icon from '../Icon';
@@ -15,7 +14,7 @@ export default {
     status: 'brand',
     fullWidth: false,
     size: 'lg',
-    href: getRandomUrl(),
+    href: 'https://go.czi.team/eds',
     // stop link from navigating to another page so we can click the link for testing
     onClick: (event: any) => event.preventDefault(),
   },
@@ -352,10 +351,10 @@ export const LinkInParagraphContext = {
   render: () => (
     <div>
       Lorem ipsum dolor sit amet,{' '}
-      <Link href={getRandomUrl()}>consectetur adipiscing elit</Link>. Morbi
-      porta at ante quis molestie. Nam scelerisque id diam at iaculis. Nullam
-      sit amet iaculis erat. Nulla id tellus ante.{' '}
-      <Link href={getRandomUrl()}>
+      <Link href="https://go.czi.team/eds">consectetur adipiscing elit</Link>.
+      Morbi porta at ante quis molestie. Nam scelerisque id diam at iaculis.
+      Nullam sit amet iaculis erat. Nulla id tellus ante.{' '}
+      <Link href="https://go.czi.team/eds">
         Aliquam pellentesque ipsum sagittis, commodo neque at, ornare est.
         Maecenas a malesuada sem, vitae euismod erat. Nullam molestie nunc non
         dui dignissim fermentum.
@@ -363,8 +362,8 @@ export const LinkInParagraphContext = {
       Aliquam id volutpat nulla, sed auctor orci. Fusce cursus leo nisi. Fusce
       vehicula vitae nisl nec ultricies. Cras ut enim nec magna semper egestas.
       Sed sed quam id nisl bibendum convallis. Proin suscipit, odio{' '}
-      <Link href={getRandomUrl()}>vel pulvinar</Link> euismod, risus eros
-      ullamcorper lectus, non blandit nulla dui eget massa.
+      <Link href="https://go.czi.team/eds">vel pulvinar</Link> euismod, risus
+      eros ullamcorper lectus, non blandit nulla dui eget massa.
     </div>
   ),
 };
