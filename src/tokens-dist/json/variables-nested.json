@@ -447,7 +447,7 @@
             "neutral": {
               "background": {
                 "@": "rgba(0, 0, 0, 0)",
-                "hover": "#5D6369",
+                "hover": "#E7E8EA",
                 "active": "#383C43"
               },
               "border": {
@@ -457,12 +457,12 @@
               },
               "text": {
                 "@": "#5D6369",
-                "hover": "#FFFFFF",
+                "hover": "#5D6369",
                 "active": "#FFFFFF"
               },
               "icon": {
                 "@": "#999EA3",
-                "hover": "#FFFFFF",
+                "hover": "#999EA3",
                 "active": "#FFFFFF"
               }
             },
