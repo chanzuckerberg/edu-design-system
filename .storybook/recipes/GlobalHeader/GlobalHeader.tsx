@@ -194,7 +194,7 @@ export const GlobalHeader = ({
             as="li"
             className={styles['global-header__avatar-button']}
           >
-            <Button variant="icon">
+            <Button aria-label="Notifications" variant="icon">
               <Avatar />
             </Button>
           </Popover.Button>
