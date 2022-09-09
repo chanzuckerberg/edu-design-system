@@ -14,8 +14,10 @@ export default {
   args: {
     children: (
       <>
-        <Popover.Button as={Button}>Open Popover</Popover.Button>
-        <Popover.Content>
+        <Popover.Button as={Button} data-testid="popover-trigger-button">
+          Open Popover
+        </Popover.Button>
+        <Popover.Content data-testid="popover-content">
           <div style={{ width: '250px' }}>
             my popover content my popover content my popover content my popover
             content my popover content

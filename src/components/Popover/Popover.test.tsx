@@ -6,24 +6,23 @@ import React from 'react';
 import * as PopoverStoryFile from './Popover.stories';
 
 const { Default } = composeStories(PopoverStoryFile);
-PopoverStoryFile.default.args = {
-  isActive: true,
-};
 
 describe('<Popover />', () => {
   generateSnapshots(PopoverStoryFile);
 
+  it('should open Popover with trigger button', () => {
+    render(<Default />);
+    expect(screen.queryByTestId('popover-content')).not.toBeInTheDocument();
+    const triggerButton = screen.getByTestId('popover-trigger-button');
+    userEvent.click(triggerButton);
+    expect(screen.getByTestId('popover-content')).toBeInTheDocument();
+  });
+
   it('should close Popover via escape key', async () => {
-    render(<Default isActive />);
-    expect(screen.getByTestId('popover-test')).toBeInTheDocument();
-    expect(screen.getByTestId('popover-test')).toHaveAttribute(
-      'aria-hidden',
-      'false',
-    );
+    render(<Default />);
+    const triggerButton = screen.getByTestId('popover-trigger-button');
+    userEvent.click(triggerButton);
     userEvent.keyboard('{esc}');
-    expect(screen.getByTestId('popover-test')).toHaveAttribute(
-      'aria-hidden',
-      'true',
-    );
+    expect(screen.queryByTestId('popover-content')).not.toBeInTheDocument();
   });
 });
