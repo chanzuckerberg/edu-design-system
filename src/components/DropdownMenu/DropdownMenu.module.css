@@ -76,7 +76,7 @@
     background: var(--eds-theme-color-background-neutral-subtle);
   }
 
-  &:focus-visible {
+  &:focus {
     @mixin focus;
   }
 

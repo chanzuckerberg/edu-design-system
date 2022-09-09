@@ -93,8 +93,6 @@ export interface TimelineNavItem {
 }
 
 /**
- * BETA: This component is still a work in progress and is subject to change.
- *
  * ```ts
  * import {TimelineNav} from "@chanzuckerberg/eds";
  * ```

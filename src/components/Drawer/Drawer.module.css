@@ -22,7 +22,7 @@
   background-color: transparent;
 }
 
-.drawer__container:focus-visible {
+.drawer__container:focus {
   @mixin focus;
 }
 
@@ -55,7 +55,7 @@
     transition: none;
   }
 }
-.drawer:focus-visible {
+.drawer:focus {
   @mixin focus;
 }
 

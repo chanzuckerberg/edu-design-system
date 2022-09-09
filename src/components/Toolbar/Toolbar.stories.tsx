@@ -1,4 +1,3 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
@@ -14,7 +13,6 @@ export default {
       // TODO: re-enable when component is worked on
       skip: true,
     },
-    badges: [BADGE.BETA],
   },
   args: {
     children: (

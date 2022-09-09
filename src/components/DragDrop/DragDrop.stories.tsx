@@ -1,4 +1,3 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { StoryObj, Meta } from '@storybook/react';
 import React, { ComponentProps } from 'react';
 import { DragDrop } from './DragDrop';
@@ -25,9 +24,6 @@ export default {
       </div>
     ),
   ],
-  parameters: {
-    badges: [BADGE.BETA],
-  },
 } as Meta<Args>;
 
 type Args = ComponentProps<typeof DragDrop>;
