@@ -29,8 +29,8 @@ export type PopoverButtonProps = {
  *
  * @example
  * // Passing your own button
- * <Popover.Button as={MySpecialButton}>
- *   Amazing!
+ * <Popover.Button as={Button}>
+ *   EDS Button Yay
  * </Popover.Button>
  */
 export const PopoverButton = (props: PopoverButtonProps) => {
