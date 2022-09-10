@@ -20,15 +20,19 @@ export type Props = {
   isFocusable?: boolean;
 };
 
-export const ModalBody = (props: Props) => {
-  return (
-    <div
-      className={clsx(styles['modal-body'], props.className)}
-      // This element is tabbable to allow keyboard users to scroll long content.
-      // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
-      tabIndex={props.isFocusable ? 0 : undefined}
-    >
-      {props.children}
-    </div>
-  );
-};
+export const ModalBody = ({
+  children,
+  className,
+  isFocusable,
+  ...other
+}: Props) => (
+  <div
+    className={clsx(styles['modal-body'], className)}
+    // This element is tabbable to allow keyboard users to scroll long content.
+    // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
+    tabIndex={isFocusable ? 0 : undefined}
+    {...other}
+  >
+    {children}
+  </div>
+);
