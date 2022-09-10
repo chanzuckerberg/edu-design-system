@@ -31,6 +31,7 @@ export { default as FieldsetLegend } from './components/FieldsetLegend';
 export { default as Filters } from './components/Filters';
 export { default as FiltersCheckboxField } from './components/FiltersCheckboxField';
 export { default as FiltersDrawer } from './components/FiltersDrawer';
+export { default as FiltersPopover } from './components/FiltersPopover';
 export { default as Grid } from './components/Grid';
 export { default as GridItem } from './components/GridItem';
 export { default as Heading } from './components/Heading';

@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import styles from './Filters.module.css';
 import Button from '../Button';
-import { FiltersCheckboxField } from '../FiltersCheckboxField/FiltersCheckboxField';
-import { FiltersDrawer } from '../FiltersDrawer/FiltersDrawer';
+import FiltersCheckboxField from '../FiltersCheckboxField';
+import FiltersDrawer from '../FiltersDrawer';
+import FiltersPopover from '../FiltersPopover';
 import Icon from '../Icon';
+import Popover from '../Popover';
 
 export type Props = {
   /**
@@ -31,13 +33,18 @@ export type Props = {
    */
   footerButtonGroupClassName?: string;
   /**
-   * Callback called when filters drawer is closed.
+   * Callback called when filters are closed.
+   * Currently only works with the 'drawer' variant.
    */
   onClose?: () => void;
   /**
    * Callback called when the apply button is called.
    */
   onApply?: () => void;
+  /**
+   * Which filters variant to render.
+   */
+  variant: 'drawer' | 'popover';
 };
 
 /**
@@ -58,6 +65,7 @@ export const Filters = ({
   onClear,
   onClose,
   onApply,
+  variant,
 }: Props) => {
   /**
    * Manages the active state of the filters drawer.
@@ -88,25 +96,51 @@ export const Filters = ({
 
   return (
     <div>
-      <Button
-        className={styles['filters__button']}
-        onClick={() => setIsActive(true)}
-        status={buttonStatus}
-        variant={buttonVariant}
-      >
-        <Icon name="filter-list" purpose="decorative" size="1.5rem" />
-        {triggerText}
-      </Button>
-      <FiltersDrawer
-        className={className}
-        footerButtonGroupClassName={footerButtonGroupClassName}
-        isActive={isActive}
-        onApply={onApply ? applyFilters : undefined}
-        onClear={onClear ? clearFilters : undefined}
-        onClose={closeFilters}
-      >
-        {children}
-      </FiltersDrawer>
+      {variant === 'popover' && (
+        <Popover placement="bottom-start">
+          <Popover.Button as={React.Fragment}>
+            <Button
+              className={styles['filters__button']}
+              onClick={() => setIsActive(true)}
+              status={buttonStatus}
+              variant={buttonVariant}
+            >
+              <Icon name="filter-list" purpose="decorative" size="1.5rem" />
+              {triggerText}
+            </Button>
+          </Popover.Button>
+          <FiltersPopover
+            className={className}
+            onApply={onApply ? applyFilters : undefined}
+            onClear={onClear ? clearFilters : undefined}
+          >
+            {children}
+          </FiltersPopover>
+        </Popover>
+      )}
+      {variant === 'drawer' && (
+        <>
+          <Button
+            className={styles['filters__button']}
+            onClick={() => setIsActive(true)}
+            status={buttonStatus}
+            variant={buttonVariant}
+          >
+            <Icon name="filter-list" purpose="decorative" size="1.5rem" />
+            {triggerText}
+          </Button>
+          <FiltersDrawer
+            className={className}
+            footerButtonGroupClassName={footerButtonGroupClassName}
+            isActive={isActive}
+            onApply={onApply ? applyFilters : undefined}
+            onClear={onClear ? clearFilters : undefined}
+            onClose={closeFilters}
+          >
+            {children}
+          </FiltersDrawer>
+        </>
+      )}
     </div>
   );
 };

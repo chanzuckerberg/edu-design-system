@@ -37,3 +37,5 @@ export const PopoverButton = (props: PopoverButtonProps) => {
   const { setReferenceElement } = useContext(PopoverContext);
   return <HeadlessPopover.Button {...props} ref={setReferenceElement} />;
 };
+
+PopoverButton.displayName = 'PopoverButton';

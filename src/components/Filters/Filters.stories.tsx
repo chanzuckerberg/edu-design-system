@@ -39,6 +39,7 @@ export default {
         />
       </Filters.FiltersCheckboxField>
     ),
+    variant: 'drawer',
   },
   decorators: [
     (Story) => (
@@ -141,6 +142,7 @@ const OverflowCheckboxFields = () => {
       onClear={onClear}
       onClose={onClose}
       triggerText={triggerText}
+      variant="popover"
     >
       <Filters.FiltersCheckboxField legend="Filters Segment 1">
         <Checkbox

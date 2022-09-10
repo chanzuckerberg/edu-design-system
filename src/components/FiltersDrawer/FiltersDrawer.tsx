@@ -7,7 +7,7 @@ import ButtonGroup from '../ButtonGroup';
 import Drawer from '../Drawer';
 import Heading from '../Heading';
 
-export type Props = {
+export type FiltersDrawerProps = {
   /**
    * Form controls, form fields, or other relevant information that will be displayed in the filters drawer.
    */
@@ -55,7 +55,7 @@ export const FiltersDrawer = ({
   onApply,
   onClose,
   isActive,
-}: Props) => {
+}: FiltersDrawerProps) => {
   /**
    * Manages overflow state.
    */
