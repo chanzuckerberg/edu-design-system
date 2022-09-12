@@ -34,6 +34,20 @@ export type PopoverContentProps = {
   ) => void;
 }>;
 
+/**
+ * BETA: This component is still a work in progress and is subject to change.
+ *
+ * The floating panel component for the Popover.
+ * WARNING: do not import directly and instead use the subcomponent Popover.Content to avoid context errors.
+ *
+ * ```ts
+ * import {Popover} from "@chanzuckerberg/eds";
+ *
+ * <Popover.Content>
+ *  {Possible Popover Elements}
+ * </Popover.Content>
+ * ```
+ */
 export const PopoverContent = ({
   arrowClassName,
   children,
