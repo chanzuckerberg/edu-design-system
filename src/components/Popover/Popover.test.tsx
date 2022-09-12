@@ -3,27 +3,32 @@ import { userEvent } from '@storybook/testing-library';
 import { composeStories } from '@storybook/testing-react';
 import { render, screen } from '@testing-library/react';
 import React from 'react';
-import * as PopoverStoryFile from './Popover.stories';
+import * as stories from './Popover.stories';
 
-const { Default } = composeStories(PopoverStoryFile);
-PopoverStoryFile.default.args = {
-  isActive: true,
-};
+const { Default } = composeStories(stories);
 
 describe('<Popover />', () => {
-  generateSnapshots(PopoverStoryFile);
+  generateSnapshots(stories, {
+    getElement: async () => {
+      const triggerButton = await screen.findByRole('button');
+      userEvent.click(triggerButton);
+      return triggerButton.parentElement; // eslint-disable-line testing-library/no-node-access
+    },
+  });
+
+  it('should open Popover with trigger button', () => {
+    render(<Default />);
+    expect(screen.queryByTestId('popover-content')).not.toBeInTheDocument();
+    const triggerButton = screen.getByTestId('popover-trigger-button');
+    userEvent.click(triggerButton);
+    expect(screen.getByTestId('popover-content')).toBeInTheDocument();
+  });
 
   it('should close Popover via escape key', async () => {
-    render(<Default isActive />);
-    expect(screen.getByTestId('popover-test')).toBeInTheDocument();
-    expect(screen.getByTestId('popover-test')).toHaveAttribute(
-      'aria-hidden',
-      'false',
-    );
+    render(<Default />);
+    const triggerButton = screen.getByTestId('popover-trigger-button');
+    userEvent.click(triggerButton);
     userEvent.keyboard('{esc}');
-    expect(screen.getByTestId('popover-test')).toHaveAttribute(
-      'aria-hidden',
-      'true',
-    );
+    expect(screen.queryByTestId('popover-content')).not.toBeInTheDocument();
   });
 });
