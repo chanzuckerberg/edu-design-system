@@ -506,35 +506,39 @@
 
 /**
  * Small clickable style
- * 1) Height is used instead of vertical padding because the icon size we use would
- *    cause the height to expand
  */
 .clickable-style--sm {
-  height: var(--eds-size-3); /* 1 */
-  padding-left: var(--eds-size-half);
-  padding-right: var(--eds-size-half);
+  @mixin eds-theme-typography-button-label-sm;
+  /**
+   * Height is used instead of vertical padding because the icon size we use would
+   * cause the height to expand
+   */
+  height: var(--eds-size-3);
+  padding: 0 var(--eds-size-1);
 }
 
 /**
  * Medium clickable style
- * 1) Height is used instead of vertical padding because the icon size we use would
- *    cause the height to expand
  */
 .clickable-style--md {
-  height: var(--eds-size-4); /* 1 */
-  padding-left: var(--eds-size-1);
-  padding-right: var(--eds-size-1);
+  /**
+   * Height is used instead of vertical padding because the icon size we use would
+   * cause the height to expand
+   */
+  height: var(--eds-size-4);
+  padding: 0 var(--eds-size-1);
 }
 
 /**
  * Large clickable style
- * 1) Height is used instead of vertical padding because the icon size we use would
- *    cause the height to expand
  */
 .clickable-style--lg {
-  height: var(--eds-size-5); /* 1 */
-  padding-left: var(--eds-size-2);
-  padding-right: var(--eds-size-2);
+  /**
+   * Height is used instead of vertical padding because the icon size we use would
+   * cause the height to expand
+   */
+  height: var(--eds-size-5);
+  padding: 0 var(--eds-size-2);
 }
 
 /**
