@@ -33,105 +33,97 @@
  * Arrow directions, made into mixins for brevity in use.
  */
 @define-mixin down-arrow {
-  border-top: var(--eds-size-half) solid
-    var(--eds-theme-color-background-neutral-default);
-  border-left: var(--eds-size-half) solid transparent;
-  border-right: var(--eds-size-half) solid transparent;
+  bottom: -0.25rem;
+
+  border: var(--eds-size-half) solid transparent;
+  border-top-color: var(--eds-theme-color-background-neutral-default);
+  border-bottom: none;
 }
 @define-mixin up-arrow {
-  border-bottom: var(--eds-size-half) solid
-    var(--eds-theme-color-background-neutral-default);
-  border-left: var(--eds-size-half) solid transparent;
-  border-right: var(--eds-size-half) solid transparent;
+  top: -0.25rem;
+
+  border: var(--eds-size-half) solid transparent;
+  border-bottom-color: var(--eds-theme-color-background-neutral-default);
+  border-top: none;
 }
 @define-mixin left-arrow {
-  border-right: var(--eds-size-half) solid
-    var(--eds-theme-color-background-neutral-default);
-  border-top: var(--eds-size-half) solid transparent;
-  border-bottom: var(--eds-size-half) solid transparent;
+  left: -0.25rem;
+
+  border: var(--eds-size-half) solid transparent;
+  border-right-color: var(--eds-theme-color-background-neutral-default);
+  border-left: none;
 }
 @define-mixin right-arrow {
-  border-left: var(--eds-size-half) solid
-    var(--eds-theme-color-background-neutral-default);
-  border-top: var(--eds-size-half) solid transparent;
-  border-bottom: var(--eds-size-half) solid transparent;
+  right: -0.25rem;
+
+  border: var(--eds-size-half) solid transparent;
+  border-left-color: var(--eds-theme-color-background-neutral-default);
+  border-right: none;
 }
 
 /**
  * Arrow placement according to popover placement.
  */
 :where([data-popper-placement='top-start'] > .popover-content__arrow) {
-  bottom: -0.25rem;
   left: var(--eds-size-2);
 
   @mixin down-arrow;
 }
 :where([data-popper-placement='top-end'] > .popover-content__arrow) {
-  bottom: -0.25rem;
   right: var(--eds-size-2);
 
   @mixin down-arrow;
 }
 :where([data-popper-placement='bottom-start'] > .popover-content__arrow) {
-  top: -0.25rem;
   left: var(--eds-size-2);
 
   @mixin up-arrow;
 }
 :where([data-popper-placement='bottom-end'] > .popover-content__arrow) {
-  top: -0.25rem;
   right: var(--eds-size-2);
 
   @mixin up-arrow;
 }
 :where([data-popper-placement='right-start'] > .popover-content__arrow) {
-  left: -0.25rem;
   top: var(--eds-size-2);
 
   @mixin left-arrow;
 }
 :where([data-popper-placement='right-end'] > .popover-content__arrow) {
-  left: -0.25rem;
   bottom: var(--eds-size-2);
 
   @mixin left-arrow;
 }
 :where([data-popper-placement='left-start'] > .popover-content__arrow) {
-  right: -0.25rem;
   top: var(--eds-size-2);
 
   @mixin right-arrow;
 }
 :where([data-popper-placement='left-end'] > .popover-content__arrow) {
-  right: -0.25rem;
   bottom: var(--eds-size-2);
 
   @mixin right-arrow;
 }
 
 :where([data-popper-placement='top'] > .popover-content__arrow) {
-  bottom: -0.25rem;
   left: 50%;
 
   @mixin down-arrow;
 }
 
 :where([data-popper-placement='bottom'] > .popover-content__arrow) {
-  top: -0.25rem;
   left: 50%;
 
   @mixin up-arrow;
 }
 
 :where([data-popper-placement='right'] > .popover-content__arrow) {
-  left: -0.25rem;
   top: 50%;
 
   @mixin left-arrow;
 }
 
 :where([data-popper-placement='left'] > .popover-content__arrow) {
-  right: -0.25rem;
   top: 50%;
 
   @mixin right-arrow;
