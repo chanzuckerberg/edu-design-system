@@ -489,18 +489,16 @@
 
 /**
  * Link neutral clickable style
- * 1) Overrides the default background color on focus. Often used when the default
- *    focus background color doesn't mesh well with the surrounding colors.
  */
 .clickable-style--link.clickable-style--neutral {
-  text-decoration-color: var(--eds-theme-color-icon-neutral-strong);
+  text-decoration-color: var(--eds-theme-color-text-link-default);
 
   &:hover {
-    text-decoration-color: var(--eds-theme-color-border-neutral-strong);
+    text-decoration-color: var(--eds-theme-color-text-link-strong);
   }
 
   &:focus {
-    background-color: var(--eds-theme-color-icon-neutral-strong); /* 1 */
+    background-color: var(--eds-theme-color-text-link-default); /* 1 */
   }
 }
 
