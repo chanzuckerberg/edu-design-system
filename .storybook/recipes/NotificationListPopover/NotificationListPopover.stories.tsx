@@ -1,4 +1,6 @@
 import { StoryObj, Meta } from '@storybook/react';
+import { within } from '@storybook/testing-library';
+import isChromatic from 'chromatic/isChromatic';
 import React from 'react';
 
 import { NotificationListPopover } from './NotificationListPopover';
@@ -27,4 +29,11 @@ export const Default: StoryObj<Args> = {
       </div>
     ),
   ],
+  play: async ({ canvasElement }) => {
+    if (isChromatic()) {
+      const canvas = within(canvasElement);
+      const filtersTrigger = await canvas.findByRole('button');
+      filtersTrigger.click();
+    }
+  },
 };
