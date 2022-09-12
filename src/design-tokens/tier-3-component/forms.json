@@ -9,6 +9,9 @@
             },
             "hover": {
               "value": "{eds.color.neutral.400}"
+            },
+            "disabled": {
+              "value": "{eds.color.neutral.100}"
             }
           },
           "background": {
