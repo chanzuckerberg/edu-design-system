@@ -97,7 +97,7 @@
             }
           },
           "disabled": {
-            "value": "{eds.color.neutral.100}"
+            "value": "{eds.color.neutral.300}"
           }
         }
       }

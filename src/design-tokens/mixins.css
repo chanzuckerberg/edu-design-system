@@ -120,7 +120,7 @@
    */
   &:disabled,
   &:disabled::placeholder {
-    border-color: var(--eds-theme-color-border-disabled);
+    border-color: var(--eds-theme-color-form-border-disabled);
     color: var(--eds-theme-color-text-disabled);
     cursor: not-allowed;
   }
