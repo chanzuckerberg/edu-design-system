@@ -189,7 +189,7 @@ exports[`<Text /> TextPassage story renders snapshot 1`] = `
     </ol>
     <p>
       <a
-        href="/"
+        href="https://go.czi.team/eds"
       >
         Lorem ipsum dolor sit amet
       </a>
@@ -278,7 +278,7 @@ exports[`<Text /> TextPassageLarge story renders snapshot 1`] = `
     </ol>
     <p>
       <a
-        href="/"
+        href="https://go.czi.team/eds"
       >
         Lorem ipsum dolor sit amet
       </a>
@@ -367,7 +367,7 @@ exports[`<Text /> TextPassageSmall story renders snapshot 1`] = `
     </ol>
     <p>
       <a
-        href="/"
+        href="https://go.czi.team/eds"
       >
         Lorem ipsum dolor sit amet
       </a>

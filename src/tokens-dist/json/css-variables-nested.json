@@ -643,7 +643,8 @@
         "form": {
           "border": {
             "@": "var(--eds-theme-color-form-border)",
-            "hover": "var(--eds-theme-color-form-border-hover)"
+            "hover": "var(--eds-theme-color-form-border-hover)",
+            "disabled": "var(--eds-theme-color-form-border-disabled)"
           },
           "background": {
             "@": "var(--eds-theme-color-form-background)",

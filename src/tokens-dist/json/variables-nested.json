@@ -275,7 +275,7 @@
             },
             "stop": "#FB90B0"
           },
-          "disabled": "#F4F6F8"
+          "disabled": "#C0C4C8"
         },
         "icon": {
           "neutral": {
@@ -447,7 +447,7 @@
             "neutral": {
               "background": {
                 "@": "rgba(0, 0, 0, 0)",
-                "hover": "#5D6369",
+                "hover": "#E7E8EA",
                 "active": "#383C43"
               },
               "border": {
@@ -457,12 +457,12 @@
               },
               "text": {
                 "@": "#5D6369",
-                "hover": "#FFFFFF",
+                "hover": "#5D6369",
                 "active": "#FFFFFF"
               },
               "icon": {
                 "@": "#999EA3",
-                "hover": "#FFFFFF",
+                "hover": "#999EA3",
                 "active": "#FFFFFF"
               }
             },
@@ -643,7 +643,8 @@
         "form": {
           "border": {
             "@": "#C0C4C8",
-            "hover": "#999EA3"
+            "hover": "#999EA3",
+            "disabled": "#F4F6F8"
           },
           "background": {
             "@": "#FFFFFF",
