@@ -14,6 +14,7 @@ export default {
   component: FiltersPopover,
   parameters: {
     badges: [BADGE.BETA],
+    chromatic: { delay: 300 },
   },
   args: {
     triggerText: 'Filters',
