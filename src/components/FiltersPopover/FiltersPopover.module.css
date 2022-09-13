@@ -7,7 +7,6 @@
  * Styling for the Popover component since the parent <Popover> component provides functionality.
  */
 .filters-popover {
-  z-index: var(--eds-z-index-top);
   padding: var(--eds-size-3);
 }
 

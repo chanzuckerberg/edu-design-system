@@ -107,7 +107,7 @@ const FiltersPopoverRender = ({
           {triggerText}
         </Button>
       </Popover.Button>
-      <Popover.Content className={styles['filters-popover']} {...other}>
+      <Popover.Content bodyClassName={styles['filters-popover']} {...other}>
         <div className={className}>{children}</div>
         {(onClear || onApply) && (
           <ButtonGroup className={buttonGroupClassName}>
