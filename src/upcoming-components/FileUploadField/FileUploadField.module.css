@@ -48,7 +48,7 @@
   border-color: var(--eds-theme-color-border-utility-error-strong);
 }
 .file-upload-field--disabled > .file-upload-field__hit-area {
-  border-color: var(--eds-theme-color-border-disabled);
+  border-color: var(--eds-theme-color-form-border-disabled);
   background: var(--eds-theme-color-background-disabled);
   color: var(--eds-theme-color-text-disabled);
   cursor: not-allowed;

@@ -128,7 +128,7 @@
                   "value": "{eds.theme.color.transparent.black.0}"
                 },
                 "hover": {
-                  "value": "{eds.color.neutral.600}"
+                  "value": "{eds.color.neutral.200}"
                 },
                 "active": {
                   "value": "{eds.color.neutral.700}"
@@ -150,7 +150,7 @@
                   "value": "{eds.color.neutral.600}"
                 },
                 "hover": {
-                  "value": "{eds.color.neutral.white}"
+                  "value": "{eds.color.neutral.600}"
                 },
                 "active": {
                   "value": "{eds.color.neutral.white}"
@@ -161,7 +161,7 @@
                   "value": "{eds.color.neutral.400}"
                 },
                 "hover": {
-                  "value": "{eds.color.neutral.white}"
+                  "value": "{eds.color.neutral.400}"
                 },
                 "active": {
                   "value": "{eds.color.neutral.white}"

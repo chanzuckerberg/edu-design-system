@@ -1,6 +1,6 @@
 {
   "name": "@chanzuckerberg/eds",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "description": "The React-powered design system library for Chan Zuckerberg Initiative education web applications",
   "author": "CZI <edu-frontend-infra@chanzuckerberg.com>",
   "homepage": "https://github.com/chanzuckerberg/edu-design-system",
@@ -80,6 +80,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.6.6",
+    "@popperjs/core": "^2.11.6",
     "@tippyjs/react": "^4.2.6",
     "clsx": "^1.1.1",
     "downshift": "^6.1.7",
@@ -87,6 +88,7 @@
     "react-beautiful-dnd": "^13.1.0",
     "react-children-by-type": "^1.1.0",
     "react-focus-lock": "^2.9.1",
+    "react-popper": "^2.3.0",
     "react-portal": "^4.2.1",
     "react-uid": "^2.3.1",
     "svg4everybody": "^2.1.9"

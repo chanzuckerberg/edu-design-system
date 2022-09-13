@@ -4,7 +4,7 @@ exports[`<Link /> Default story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--link clickable-style--brand link--link"
   data-bootstrap-override="clickable-style-link"
-  href="/"
+  href="https://go.czi.team/eds"
 >
   Link
 </a>
@@ -14,7 +14,7 @@ exports[`<Link /> Destructive story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--lg clickable-style--primary clickable-style--error"
   data-bootstrap-override="clickable-style-primary"
-  href="/"
+  href="https://go.czi.team/eds"
 >
   Link
 </a>
@@ -24,7 +24,7 @@ exports[`<Link /> DestructiveLeftIcon story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--lg clickable-style--primary clickable-style--error"
   data-bootstrap-override="clickable-style-primary"
-  href="/"
+  href="https://go.czi.team/eds"
 >
   <svg
     aria-hidden="true"
@@ -44,7 +44,7 @@ exports[`<Link /> FullWidth story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand clickable-style--full-width"
   data-bootstrap-override="clickable-style-secondary"
-  href="/"
+  href="https://go.czi.team/eds"
 >
   Link
 </a>
@@ -54,7 +54,7 @@ exports[`<Link /> IconClickableStyleIconOnly story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--lg clickable-style--icon clickable-style--brand"
   data-bootstrap-override="clickable-style-icon"
-  href="/"
+  href="https://go.czi.team/eds"
 >
   <svg
     class="icon"
@@ -78,7 +78,7 @@ exports[`<Link /> IconClickableStyleIconOnlySmall story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--sm clickable-style--icon clickable-style--brand"
   data-bootstrap-override="clickable-style-icon"
-  href="/"
+  href="https://go.czi.team/eds"
 >
   <svg
     class="icon"
@@ -102,7 +102,7 @@ exports[`<Link /> IconClickableStyleLeftIcon story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--lg clickable-style--icon clickable-style--brand"
   data-bootstrap-override="clickable-style-icon"
-  href="/"
+  href="https://go.czi.team/eds"
 >
   <svg
     aria-hidden="true"
@@ -122,7 +122,7 @@ exports[`<Link /> IconClickableStyleLeftIconSmall story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--sm clickable-style--icon clickable-style--brand"
   data-bootstrap-override="clickable-style-icon"
-  href="/"
+  href="https://go.czi.team/eds"
 >
   <svg
     aria-hidden="true"
@@ -142,7 +142,7 @@ exports[`<Link /> IconClickableStyleRightIcon story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--lg clickable-style--icon clickable-style--brand"
   data-bootstrap-override="clickable-style-icon"
-  href="/"
+  href="https://go.czi.team/eds"
 >
   Link
   <svg
@@ -162,7 +162,7 @@ exports[`<Link /> IconClickableStyleRightIconSmall story renders snapshot 1`] = 
 <a
   class="clickable-style clickable-style--sm clickable-style--icon clickable-style--brand"
   data-bootstrap-override="clickable-style-icon"
-  href="/"
+  href="https://go.czi.team/eds"
 >
   Link
   <svg
@@ -182,7 +182,7 @@ exports[`<Link /> IconError story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--lg clickable-style--icon clickable-style--error"
   data-bootstrap-override="clickable-style-icon"
-  href="/"
+  href="https://go.czi.team/eds"
 >
   Link
   <svg
@@ -202,7 +202,7 @@ exports[`<Link /> IconNeutral story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral"
   data-bootstrap-override="clickable-style-icon"
-  href="/"
+  href="https://go.czi.team/eds"
 >
   Link
   <svg
@@ -222,7 +222,7 @@ exports[`<Link /> IconSuccess story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--lg clickable-style--icon clickable-style--success"
   data-bootstrap-override="clickable-style-icon"
-  href="/"
+  href="https://go.czi.team/eds"
 >
   Link
   <svg
@@ -242,7 +242,7 @@ exports[`<Link /> IconWarning story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--lg clickable-style--icon clickable-style--warning"
   data-bootstrap-override="clickable-style-icon"
-  href="/"
+  href="https://go.czi.team/eds"
 >
   Link
   <svg
@@ -265,7 +265,7 @@ exports[`<Link /> LinkInParagraphContext story renders snapshot 1`] = `
   <a
     class="clickable-style clickable-style--link clickable-style--brand link--link"
     data-bootstrap-override="clickable-style-link"
-    href="/"
+    href="https://go.czi.team/eds"
   >
     consectetur adipiscing elit
   </a>
@@ -274,7 +274,7 @@ exports[`<Link /> LinkInParagraphContext story renders snapshot 1`] = `
   <a
     class="clickable-style clickable-style--link clickable-style--brand link--link"
     data-bootstrap-override="clickable-style-link"
-    href="/"
+    href="https://go.czi.team/eds"
   >
     Aliquam pellentesque ipsum sagittis, commodo neque at, ornare est. Maecenas a malesuada sem, vitae euismod erat. Nullam molestie nunc non dui dignissim fermentum.
   </a>
@@ -284,7 +284,7 @@ exports[`<Link /> LinkInParagraphContext story renders snapshot 1`] = `
   <a
     class="clickable-style clickable-style--link clickable-style--brand link--link"
     data-bootstrap-override="clickable-style-link"
-    href="/"
+    href="https://go.czi.team/eds"
   >
     vel pulvinar
   </a>
@@ -296,7 +296,7 @@ exports[`<Link /> LinkNeutral story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--link clickable-style--neutral link--link"
   data-bootstrap-override="clickable-style-link"
-  href="/"
+  href="https://go.czi.team/eds"
 >
   Link
 </a>
@@ -306,7 +306,7 @@ exports[`<Link /> LinkRightIcon story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--link clickable-style--brand link--link"
   data-bootstrap-override="clickable-style-link"
-  href="/"
+  href="https://go.czi.team/eds"
 >
   Link
   <svg
@@ -331,7 +331,7 @@ exports[`<Link /> Primary story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand"
   data-bootstrap-override="clickable-style-primary"
-  href="/"
+  href="https://go.czi.team/eds"
 >
   Link
 </a>
@@ -341,7 +341,7 @@ exports[`<Link /> PrimaryLeftIcon story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand"
   data-bootstrap-override="clickable-style-primary"
-  href="/"
+  href="https://go.czi.team/eds"
 >
   <svg
     aria-hidden="true"
@@ -361,7 +361,7 @@ exports[`<Link /> PrimaryMedium story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--md clickable-style--primary clickable-style--brand"
   data-bootstrap-override="clickable-style-primary"
-  href="/"
+  href="https://go.czi.team/eds"
 >
   Link
 </a>
@@ -371,7 +371,7 @@ exports[`<Link /> PrimaryRightIcon story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand"
   data-bootstrap-override="clickable-style-primary"
-  href="/"
+  href="https://go.czi.team/eds"
 >
   Link
   <svg
@@ -391,7 +391,7 @@ exports[`<Link /> PrimarySmall story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--sm clickable-style--primary clickable-style--brand"
   data-bootstrap-override="clickable-style-primary"
-  href="/"
+  href="https://go.czi.team/eds"
 >
   Link
 </a>
@@ -401,7 +401,7 @@ exports[`<Link /> Secondary story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand"
   data-bootstrap-override="clickable-style-secondary"
-  href="/"
+  href="https://go.czi.team/eds"
 >
   Link
 </a>
@@ -411,7 +411,7 @@ exports[`<Link /> SecondaryError story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--error"
   data-bootstrap-override="clickable-style-secondary"
-  href="/"
+  href="https://go.czi.team/eds"
 >
   Link
 </a>
@@ -421,7 +421,7 @@ exports[`<Link /> SecondaryLeftIcon story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand"
   data-bootstrap-override="clickable-style-secondary"
-  href="/"
+  href="https://go.czi.team/eds"
 >
   <svg
     aria-hidden="true"
@@ -441,7 +441,7 @@ exports[`<Link /> SecondaryMedium story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--md clickable-style--secondary clickable-style--brand"
   data-bootstrap-override="clickable-style-secondary"
-  href="/"
+  href="https://go.czi.team/eds"
 >
   Link
 </a>
@@ -451,7 +451,7 @@ exports[`<Link /> SecondaryRightIcon story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand"
   data-bootstrap-override="clickable-style-secondary"
-  href="/"
+  href="https://go.czi.team/eds"
 >
   Link
   <svg
@@ -471,7 +471,7 @@ exports[`<Link /> SecondarySmall story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--sm clickable-style--secondary clickable-style--brand"
   data-bootstrap-override="clickable-style-secondary"
-  href="/"
+  href="https://go.czi.team/eds"
 >
   Link
 </a>
@@ -481,7 +481,7 @@ exports[`<Link /> SecondarySuccess story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--success"
   data-bootstrap-override="clickable-style-secondary"
-  href="/"
+  href="https://go.czi.team/eds"
 >
   Link
 </a>
@@ -491,7 +491,7 @@ exports[`<Link /> SecondaryWarning story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--warning"
   data-bootstrap-override="clickable-style-secondary"
-  href="/"
+  href="https://go.czi.team/eds"
 >
   Link
 </a>
@@ -501,7 +501,7 @@ exports[`<Link /> Tertiary story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral"
   data-bootstrap-override="clickable-style-secondary"
-  href="/"
+  href="https://go.czi.team/eds"
 >
   Link
 </a>
@@ -511,7 +511,7 @@ exports[`<Link /> TertiaryLeftIcon story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral"
   data-bootstrap-override="clickable-style-secondary"
-  href="/"
+  href="https://go.czi.team/eds"
 >
   <svg
     aria-hidden="true"
@@ -531,7 +531,7 @@ exports[`<Link /> TertiaryMedium story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--md clickable-style--secondary clickable-style--neutral"
   data-bootstrap-override="clickable-style-secondary"
-  href="/"
+  href="https://go.czi.team/eds"
 >
   Link
 </a>
@@ -541,7 +541,7 @@ exports[`<Link /> TertiaryRightIcon story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral"
   data-bootstrap-override="clickable-style-secondary"
-  href="/"
+  href="https://go.czi.team/eds"
 >
   Link
   <svg
@@ -561,7 +561,7 @@ exports[`<Link /> TertiarySmall story renders snapshot 1`] = `
 <a
   class="clickable-style clickable-style--sm clickable-style--secondary clickable-style--neutral"
   data-bootstrap-override="clickable-style-secondary"
-  href="/"
+  href="https://go.czi.team/eds"
 >
   Link
 </a>

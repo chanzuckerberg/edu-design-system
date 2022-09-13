@@ -5,8 +5,6 @@ import React from 'react';
 import { Link } from './Link';
 import * as ButtonStoryFile from './Link.stories';
 
-import '../../../jest/helpers/removeRandomizedUrlJestSerializer';
-
 describe('<Link />', () => {
   generateSnapshots(ButtonStoryFile);
 
