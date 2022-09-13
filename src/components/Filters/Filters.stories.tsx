@@ -2,6 +2,7 @@ import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { StoryObj, Meta } from '@storybook/react';
 import { within } from '@storybook/testing-library';
 import isChromatic from 'chromatic/isChromatic';
+import clsx from 'clsx';
 import React from 'react';
 
 import { Filters } from './Filters';
@@ -80,7 +81,11 @@ export const WithOnApplyAndCustomButtonGroup: StoryObj<Args> = {
   },
 };
 
-const OverflowCheckboxFields = () => {
+const OverflowCheckboxFields = ({
+  variant,
+}: {
+  variant: 'drawer' | 'popover';
+}) => {
   const initialCheckedState = [
     false,
     false,
@@ -135,14 +140,19 @@ const OverflowCheckboxFields = () => {
     ? `Filters (${filterCount})`
     : 'Filters';
 
+  const filtersClassName = clsx(
+    variant === 'drawer' && styles['filters__drawer'],
+  );
+
   return (
     <Filters
+      className={filtersClassName}
       hasSelectedFilters={hasSelectedFilters}
       onApply={onApply}
       onClear={onClear}
       onClose={onClose}
       triggerText={triggerText}
-      variant="popover"
+      variant={variant}
     >
       <Filters.FiltersCheckboxField legend="Filters Segment 1">
         <Checkbox
@@ -232,7 +242,7 @@ const OverflowCheckboxFields = () => {
 };
 
 export const OverflowInteractive: StoryObj<Args> = {
-  render: () => <OverflowCheckboxFields />,
+  render: ({ variant }) => <OverflowCheckboxFields variant={variant} />,
   play: async ({ canvasElement }) => {
     // We want to test visual regression for the drawer as well as the button, but don't want the drawer open initally outside Chromatic
     if (isChromatic()) {

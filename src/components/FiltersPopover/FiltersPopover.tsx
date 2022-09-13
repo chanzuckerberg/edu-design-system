@@ -1,5 +1,6 @@
 import clsx from 'clsx';
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import styles from './FiltersPopover.module.css';
 import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';
 import Popover from '../Popover';
@@ -13,6 +14,10 @@ export type FiltersPopoverProps = {
    * CSS class names that can be appended to the component.
    */
   className?: string;
+  /**
+   * Open or closed status for the filters popover.
+   */
+  isActive?: boolean;
   /**
    * Callback called when the clear button is called.
    */
@@ -39,11 +44,26 @@ export type FiltersPopoverProps = {
 export const FiltersPopover = ({
   children,
   className,
+  isActive,
   onApply,
   onClear,
+  onClose,
   ...other
 }: FiltersPopoverProps) => {
   const componentClassName = clsx(styles['filters-popover'], className);
+
+  /**
+   * Watches open status and calls onClose callback if status changes from open to close.
+   * Ref is required to prevent calling on render, since popover usually initially renders as closed.
+   */
+  const firstUpdate = useRef(true);
+  useEffect(() => {
+    if (firstUpdate.current) {
+      firstUpdate.current = false;
+    } else if (!isActive && onClose) {
+      onClose();
+    }
+  }, [isActive]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <Popover.Content className={componentClassName} {...other}>

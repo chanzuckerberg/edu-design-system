@@ -71,10 +71,7 @@ export const FiltersDrawer = ({
     }
   }, [filtersBody]);
 
-  const containerClassName = clsx(
-    styles['filters-drawer__container'],
-    className,
-  );
+  const bodyClassName = clsx(styles['filters-drawer__body'], className);
   const footerClassName = clsx(
     styles['filters-drawer__footer'],
     isOverflowing && styles['filters-drawer__footer--overflow'],
@@ -92,7 +89,7 @@ export const FiltersDrawer = ({
       aria-labelledby={generatedId}
       className={styles['filters-drawer']}
       dismissible={true}
-      drawerContainerClassName={containerClassName}
+      drawerContainerClassName={styles['filters-drawer__container']}
       isActive={isActive}
       onClose={() => {
         onClose && onClose();
@@ -107,7 +104,7 @@ export const FiltersDrawer = ({
           Filters
         </Heading>
       </Drawer.Header>
-      <Drawer.Body className={styles['filters-drawer__body']} ref={filtersBody}>
+      <Drawer.Body className={bodyClassName} ref={filtersBody}>
         {children}
       </Drawer.Body>
       {(onClear || onApply) && (

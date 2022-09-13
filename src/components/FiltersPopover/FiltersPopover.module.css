@@ -1,0 +1,19 @@
+/*------------------------------------*\
+    # FILTERS POPOVER
+\*------------------------------------*/
+
+/**
+ * A floating panel component with arbitrary content.
+ * Styling for the Popover component since the parent <Popover> component provides functionality.
+ */
+.filters-popover {
+  z-index: var(--eds-z-index-top);
+  padding: var(--eds-size-3);
+}
+
+/**
+ * The footer of the filters popover that houses the apply and clear all button group.
+ */
+.filters-popover__footer {
+  margin-top: var(--eds-size-3);
+}

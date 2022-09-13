@@ -98,24 +98,44 @@ export const Filters = ({
     <div>
       {variant === 'popover' && (
         <Popover placement="bottom-start">
-          <Popover.Button as={React.Fragment}>
-            <Button
-              className={styles['filters__button']}
-              onClick={() => setIsActive(true)}
-              status={buttonStatus}
-              variant={buttonVariant}
-            >
-              <Icon name="filter-list" purpose="decorative" size="1.5rem" />
-              {triggerText}
-            </Button>
-          </Popover.Button>
-          <FiltersPopover
-            className={className}
-            onApply={onApply ? applyFilters : undefined}
-            onClear={onClear ? clearFilters : undefined}
-          >
-            {children}
-          </FiltersPopover>
+          {({ close, open }) => (
+            <>
+              <Popover.Button as={React.Fragment}>
+                <Button
+                  className={styles['filters__button']}
+                  onClick={() => setIsActive(true)}
+                  status={buttonStatus}
+                  variant={buttonVariant}
+                >
+                  <Icon name="filter-list" purpose="decorative" size="1.5rem" />
+                  {triggerText}
+                </Button>
+              </Popover.Button>
+              <FiltersPopover
+                className={className}
+                isActive={open}
+                onApply={
+                  onApply
+                    ? () => {
+                        applyFilters();
+                        close();
+                      }
+                    : undefined
+                }
+                onClear={
+                  onClear
+                    ? () => {
+                        clearFilters();
+                        close();
+                      }
+                    : undefined
+                }
+                onClose={closeFilters}
+              >
+                {children}
+              </FiltersPopover>
+            </>
+          )}
         </Popover>
       )}
       {variant === 'drawer' && (

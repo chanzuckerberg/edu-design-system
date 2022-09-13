@@ -2,3 +2,9 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+
+.filters__drawer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--eds-size-6);
+}
