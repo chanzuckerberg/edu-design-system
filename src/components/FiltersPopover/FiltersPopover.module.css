@@ -12,8 +12,17 @@
 }
 
 /**
- * The footer of the filters popover that houses the apply and clear all button group.
+ * Trigger button that opens the filters popover.
  */
-.filters-popover__footer {
+.filters-popover__button {
+  gap: var(--eds-size-1);
+}
+
+/**
+ * The button group of the houses the apply and clear all buttons.
+ */
+.footer__button-group {
   margin-top: var(--eds-size-3);
+  display: flex;
+  justify-content: end;
 }

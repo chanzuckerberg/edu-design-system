@@ -6,6 +6,7 @@ import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';
 import Drawer from '../Drawer';
 import Heading from '../Heading';
+import Icon from '../Icon';
 
 export type FiltersDrawerProps = {
   /**
@@ -21,6 +22,10 @@ export type FiltersDrawerProps = {
    */
   footerButtonGroupClassName?: string;
   /**
+   * Indicates status that filters have been selected, influencing toggle button variant.
+   */
+  hasSelectedFilters?: boolean;
+  /**
    * Callback called when the clear button is called.
    */
   onClear?: () => void;
@@ -33,9 +38,9 @@ export type FiltersDrawerProps = {
    */
   onApply?: () => void;
   /**
-   * Sets the filters drawer window open or closed.
+   * Text to be placed in the button that activates the Filters Drawer
    */
-  isActive: boolean;
+  triggerText?: string;
 };
 
 /**
@@ -51,11 +56,36 @@ export const FiltersDrawer = ({
   children,
   className,
   footerButtonGroupClassName,
+  hasSelectedFilters,
   onClear,
   onApply,
   onClose,
-  isActive,
+  triggerText,
 }: FiltersDrawerProps) => {
+  /**
+   * Manages the active state of the filters drawer.
+   */
+  const [isActive, setIsActive] = useState(false);
+
+  function closeFiltersDrawer() {
+    setIsActive(false);
+  }
+
+  function closeFilters() {
+    closeFiltersDrawer();
+    onClose && onClose();
+  }
+
+  function clearFilters() {
+    closeFiltersDrawer();
+    onClear && onClear();
+  }
+
+  function applyFilters() {
+    closeFiltersDrawer();
+    onApply && onApply();
+  }
+
   /**
    * Manages overflow state.
    */
@@ -71,6 +101,9 @@ export const FiltersDrawer = ({
     }
   }, [filtersBody]);
 
+  const buttonVariant = hasSelectedFilters ? 'primary' : 'secondary';
+  const buttonStatus = hasSelectedFilters ? 'brand' : 'neutral';
+
   const bodyClassName = clsx(styles['filters-drawer__body'], className);
   const footerClassName = clsx(
     styles['filters-drawer__footer'],
@@ -85,51 +118,60 @@ export const FiltersDrawer = ({
   const generatedId = useUID();
 
   return (
-    <Drawer
-      aria-labelledby={generatedId}
-      className={styles['filters-drawer']}
-      dismissible={true}
-      drawerContainerClassName={styles['filters-drawer__container']}
-      isActive={isActive}
-      onClose={() => {
-        onClose && onClose();
-      }}
-    >
-      <Drawer.Header closeButtonText="close filters">
-        <Heading
-          className={styles['filters-drawer__title']}
-          id={generatedId}
-          size="headline-sm"
-        >
-          Filters
-        </Heading>
-      </Drawer.Header>
-      <Drawer.Body className={bodyClassName} ref={filtersBody}>
-        {children}
-      </Drawer.Body>
-      {(onClear || onApply) && (
-        <Drawer.Footer className={footerClassName}>
-          <ButtonGroup className={buttonGroupClassName}>
-            {onClear && (
-              <Button
-                className={styles['footer__button']}
-                onClick={() => onClear()}
-              >
-                Clear All
-              </Button>
-            )}
-            {onApply && (
-              <Button
-                className={styles['footer__button']}
-                onClick={() => onApply()}
-                variant="primary"
-              >
-                Apply
-              </Button>
-            )}
-          </ButtonGroup>
-        </Drawer.Footer>
-      )}
-    </Drawer>
+    <div>
+      <Button
+        className={styles['fitlers-drawer__trigger']}
+        onClick={() => setIsActive(true)}
+        status={buttonStatus}
+        variant={buttonVariant}
+      >
+        <Icon name="filter-list" purpose="decorative" size="1.5rem" />
+        {triggerText}
+      </Button>
+      <Drawer
+        aria-labelledby={generatedId}
+        className={styles['filters-drawer']}
+        dismissible={true}
+        drawerContainerClassName={styles['filters-drawer__container']}
+        isActive={isActive}
+        onClose={closeFilters}
+      >
+        <Drawer.Header closeButtonText="close filters">
+          <Heading
+            className={styles['filters-drawer__title']}
+            id={generatedId}
+            size="headline-sm"
+          >
+            Filters
+          </Heading>
+        </Drawer.Header>
+        <Drawer.Body className={bodyClassName} ref={filtersBody}>
+          {children}
+        </Drawer.Body>
+        {(onClear || onApply) && (
+          <Drawer.Footer className={footerClassName}>
+            <ButtonGroup className={buttonGroupClassName}>
+              {onClear && (
+                <Button
+                  className={styles['footer__button']}
+                  onClick={clearFilters}
+                >
+                  Clear All
+                </Button>
+              )}
+              {onApply && (
+                <Button
+                  className={styles['footer__button']}
+                  onClick={applyFilters}
+                  variant="primary"
+                >
+                  Apply
+                </Button>
+              )}
+            </ButtonGroup>
+          </Drawer.Footer>
+        )}
+      </Drawer>
+    </div>
   );
 };

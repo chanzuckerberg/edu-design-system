@@ -20,6 +20,10 @@
   }
 }
 
+.filters-drawer__trigger {
+  gap: var(--eds-size-1);
+}
+
 /**
  * 1) The title name of the filters drawer.
  */

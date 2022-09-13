@@ -2,16 +2,9 @@ import { generateSnapshots } from '@chanzuckerberg/story-utils';
 import { composeStories } from '@storybook/testing-react';
 import { fireEvent, render, screen } from '@testing-library/react';
 import React from 'react';
-import * as stories from './Filters.stories';
+import * as stories from './FiltersDrawer.stories';
 
 const { OverflowInteractive } = composeStories(stories);
-const consoleLogMock = jest.spyOn(console, 'log').mockImplementation();
-beforeEach(() => {
-  consoleLogMock.mockClear();
-});
-afterAll(() => {
-  consoleLogMock.mockRestore();
-});
 
 describe('<Filters />', () => {
   generateSnapshots(stories, {
