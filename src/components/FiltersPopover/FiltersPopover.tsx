@@ -87,8 +87,6 @@ const FiltersPopoverRender = ({
     }
   }, [open]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  const componentClassName = clsx(styles['filters-popover'], className);
-
   const buttonVariant = hasSelectedFilters ? 'primary' : 'secondary';
   const buttonStatus = hasSelectedFilters ? 'brand' : 'neutral';
 
@@ -109,8 +107,8 @@ const FiltersPopoverRender = ({
           {triggerText}
         </Button>
       </Popover.Button>
-      <Popover.Content className={componentClassName} {...other}>
-        <div>{children}</div>
+      <Popover.Content className={styles['filters-popover']} {...other}>
+        <div className={className}>{children}</div>
         {(onClear || onApply) && (
           <ButtonGroup className={buttonGroupClassName}>
             {onClear && (

@@ -120,7 +120,7 @@ export const FiltersDrawer = ({
   return (
     <div>
       <Button
-        className={styles['fitlers-drawer__trigger']}
+        className={styles['filters-drawer__trigger']}
         onClick={() => setIsActive(true)}
         status={buttonStatus}
         variant={buttonVariant}

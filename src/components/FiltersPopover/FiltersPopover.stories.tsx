@@ -1,7 +1,11 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { StoryObj, Meta } from '@storybook/react';
+import { within } from '@storybook/testing-library';
+import isChromatic from 'chromatic/isChromatic';
 import React from 'react';
-import { FiltersPopover } from './FiltersPopover';
+
+import { FiltersPopover, FiltersPopoverProps } from './FiltersPopover';
+import styles from './FiltersPopover.stories.module.css';
 import { Checkbox } from '../Checkbox/Checkbox';
 import { FiltersCheckboxField } from '../FiltersCheckboxField/FiltersCheckboxField';
 
@@ -11,11 +15,77 @@ export default {
   parameters: {
     badges: [BADGE.BETA],
   },
+  args: {
+    triggerText: 'Filters',
+    hasSelectedFilters: false,
+    children: (
+      <FiltersCheckboxField legend="Filters Segment 1">
+        <Checkbox
+          label="Filters label 1"
+          onChange={
+            () => {} /* eslint-disable-line @typescript-eslint/no-empty-function */
+          }
+        />
+        <Checkbox
+          label="Filters label 2"
+          onChange={
+            () => {} /* eslint-disable-line @typescript-eslint/no-empty-function */
+          }
+        />
+        <Checkbox
+          label="Filters label 3"
+          onChange={
+            () => {} /* eslint-disable-line @typescript-eslint/no-empty-function */
+          }
+        />
+      </FiltersCheckboxField>
+    ),
+    placement: 'bottom-start',
+  },
+  decorators: [
+    (Story) => (
+      <div style={{ margin: '0.25rem', height: '100vh' }}>
+        <Story />
+      </div>
+    ),
+  ],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof FiltersPopover>;
 
-const OverflowCheckboxFields = () => {
+export const Default: StoryObj<Args> = {
+  play: async ({ canvasElement }) => {
+    // We want to test visual regression for the drawer as well as the button, but don't want the drawer open initally outside Chromatic
+    if (isChromatic()) {
+      const canvas = within(canvasElement);
+      const filtersTrigger = await canvas.findByRole('button');
+      filtersTrigger.click();
+    }
+  },
+};
+
+export const WithOnClear: StoryObj<Args> = {
+  ...Default,
+  args: {
+    onClear:
+      () => {} /* eslint-disable-line @typescript-eslint/no-empty-function */,
+  },
+};
+
+export const WithOnApplyAndCustomButtonGroup: StoryObj<Args> = {
+  ...Default,
+  args: {
+    footerButtonGroupClassName: styles['button-group__apply-only'],
+    onApply:
+      () => {} /* eslint-disable-line @typescript-eslint/no-empty-function */,
+  },
+};
+
+const OverflowCheckboxFields = ({
+  placement,
+}: {
+  placement: FiltersPopoverProps['placement'];
+}) => {
   const initialCheckedState = [
     false,
     false,
@@ -72,13 +142,18 @@ const OverflowCheckboxFields = () => {
 
   return (
     <FiltersPopover
+      className={styles['filters-popover']}
       hasSelectedFilters={hasSelectedFilters}
       onApply={onApply}
       onClear={onClear}
       onClose={onClose}
+      placement={placement}
       triggerText={triggerText}
     >
-      <FiltersCheckboxField legend="Filters Segment 1">
+      <FiltersCheckboxField
+        className={styles['filters-popover__checkbox-field']}
+        legend="Filters Segment 1"
+      >
         <Checkbox
           checked={transientChecked[0]}
           label="Filters long label 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod"
@@ -95,7 +170,10 @@ const OverflowCheckboxFields = () => {
           onChange={() => onCheckboxChange(2)}
         />
       </FiltersCheckboxField>
-      <FiltersCheckboxField legend="Filters Segment 2">
+      <FiltersCheckboxField
+        className={styles['filters-popover__checkbox-field']}
+        legend="Filters Segment 2"
+      >
         <Checkbox
           checked={transientChecked[3]}
           label="Filters label 1"
@@ -112,7 +190,10 @@ const OverflowCheckboxFields = () => {
           onChange={() => onCheckboxChange(5)}
         />
       </FiltersCheckboxField>
-      <FiltersCheckboxField legend="Filters Segment 3">
+      <FiltersCheckboxField
+        className={styles['filters-popover__checkbox-field']}
+        legend="Filters Segment 3"
+      >
         <Checkbox
           checked={transientChecked[6]}
           label="Filters label 1"
@@ -129,7 +210,10 @@ const OverflowCheckboxFields = () => {
           onChange={() => onCheckboxChange(8)}
         />
       </FiltersCheckboxField>
-      <FiltersCheckboxField legend="Filters Segment 4">
+      <FiltersCheckboxField
+        className={styles['filters-popover__checkbox-field']}
+        legend="Filters Segment 4"
+      >
         <Checkbox
           checked={transientChecked[9]}
           label="Filters label 1"
@@ -165,6 +249,14 @@ const OverflowCheckboxFields = () => {
   );
 };
 
-export const Default: StoryObj<Args> = {
-  render: () => <OverflowCheckboxFields />,
+export const OverflowInteractive: StoryObj<Args> = {
+  render: ({ placement }) => <OverflowCheckboxFields placement={placement} />,
+  play: async ({ canvasElement }) => {
+    // We want to test visual regression for the drawer as well as the button, but don't want the drawer open initally outside Chromatic
+    if (isChromatic()) {
+      const canvas = within(canvasElement);
+      const filtersTrigger = await canvas.findByRole('button');
+      filtersTrigger.click();
+    }
+  },
 };
