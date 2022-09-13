@@ -5,13 +5,10 @@
         "form": {
           "border": {
             "@": {
-              "value": "{eds.color.neutral.300}"
+              "value": "{eds.color.neutral.500}"
             },
             "hover": {
-              "value": "{eds.color.neutral.400}"
-            },
-            "disabled": {
-              "value": "{eds.color.neutral.100}"
+              "value": "{eds.color.neutral.800}"
             }
           },
           "background": {

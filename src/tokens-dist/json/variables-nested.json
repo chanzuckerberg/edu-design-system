@@ -642,9 +642,8 @@
         },
         "form": {
           "border": {
-            "@": "#C0C4C8",
-            "hover": "#999EA3",
-            "disabled": "#F4F6F8"
+            "@": "#878C90",
+            "hover": "#21272D"
           },
           "background": {
             "@": "#FFFFFF",

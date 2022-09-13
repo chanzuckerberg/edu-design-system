@@ -355,9 +355,8 @@ $eds-theme-color-button-icon-error-text-hover: #BD0044 !default;
 $eds-theme-color-button-icon-error-text-active: #FFFFFF !default;
 $eds-theme-color-focus-ring: #6B65E2 !default;
 $eds-theme-color-focus-ring-inverted: #FFFFFF !default;
-$eds-theme-color-form-border: #C0C4C8 !default;
-$eds-theme-color-form-border-hover: #999EA3 !default;
-$eds-theme-color-form-border-disabled: #F4F6F8 !default;
+$eds-theme-color-form-border: #878C90 !default;
+$eds-theme-color-form-border-hover: #21272D !default;
 $eds-theme-color-form-background: #FFFFFF !default;
 $eds-theme-color-form-background-hover: #F4F6F8 !default;
 $eds-theme-color-form-label: #383C43 !default;
@@ -1039,8 +1038,7 @@ $tokens: (
         'form': (
           'border': (
             '@': $eds-theme-color-form-border,
-            'hover': $eds-theme-color-form-border-hover,
-            'disabled': $eds-theme-color-form-border-disabled
+            'hover': $eds-theme-color-form-border-hover
           ),
           'background': (
             '@': $eds-theme-color-form-background,
