@@ -42,7 +42,7 @@
 }
 
 /**
- * The visible checkbox svg icon element.
+ * 1) The visible checkbox svg icon element.
  */
 .checkbox__icon {
   color: var(--eds-theme-color-icon-brand-primary);

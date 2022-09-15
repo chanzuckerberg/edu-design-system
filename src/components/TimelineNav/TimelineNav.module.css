@@ -160,7 +160,7 @@
     content: '';
     position: absolute;
     top: 0;
-    left: 0.75rem;
+    left: 0.75rem; /* 2 */
     height: 100%; /* 3 */
     width: 0.0625rem;
     background: var(--eds-theme-color-border-neutral-subtle); /* 4 */
@@ -238,7 +238,7 @@
   width: 1.5rem; /* 3 */
   height: 1.5rem; /* 3 */
   border-radius: 50%; /* 4 */
-  border: 1px solid var(--eds-theme-color-border-neutral-subtle);
+  border: 1px solid var(--eds-theme-color-border-neutral-subtle); /* 1 */
   margin-right: 9px;
   font-size: var(--eds-font-size-12);
   margin-left: -4px;

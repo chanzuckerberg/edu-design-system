@@ -24,7 +24,7 @@ export interface Props {
  * import {ToolbarItem} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * ToolbarItem component is used in the Toolbar component to filter the content based on alignment.
  */
 export const ToolbarItem = ({
   align,

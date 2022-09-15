@@ -80,13 +80,13 @@ export const Drawer = ({
 
   /**
    * Use effect
-   * 1) Set prevIsActive to previous isActive prop
-   * 2) If prevIsActive is defined and previous isActive prop is not equal
-   * to current isActive prop, toggle state
+   * 1) If isActive is defined ,set activeFocus state to true,
+   * else set activeFocus state to false.
    */
   // const prevIsActive = usePrevious(isActive); /* 1 */
   useEffect(() => {
     if (isActive) {
+      /* 1 */
       activateFocusTrap();
     } else {
       deactivateFocusTrap();

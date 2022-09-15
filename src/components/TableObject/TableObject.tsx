@@ -22,7 +22,7 @@ export interface Props {
  * import {TableObject} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * Container for a data table and toolbars either above or below the table.
  */
 export const TableObject = ({ children, className, ...other }: Props) => {
   const componentClassName = clsx(styles['table-object'], className);

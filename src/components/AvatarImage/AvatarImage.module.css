@@ -5,9 +5,13 @@
 /**
  * Avatar image SVG
  * 1) This component contains an outer wrapper
- *    and SVG fragments for avatars
+ *    and SVG fragments for avatars.
+ * 2) Styles to set the vertical length for the
+ *    rendering area of the SVG viewport for head, 
+ *    body and legs of the Avatar image.
  */
 .avatar-image {
+  /* 1 */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,17 +21,17 @@
   border-radius: var(--eds-border-radius-round);
 }
 
-/* TODO */
+/* 2 */
 .avatar-image__head {
   height: 8px;
 }
 
-/* TODO */
+/* 2 */
 .avatar-image__body {
   height: 13px;
 }
 
-/* TODO */
+/* 2 */
 .avatar-image__legs {
   height: 10px;
 }

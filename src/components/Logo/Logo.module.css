@@ -13,9 +13,10 @@
 /**
  * Logo link 
  */
+ /* 1 */
 .logo__link {
   display: block;
-  width: fit-content; /* 1 */
+  width: fit-content; /* 2 */
 
   &:focus {
     @mixin focusInverted;

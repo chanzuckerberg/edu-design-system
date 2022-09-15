@@ -17,6 +17,7 @@
  * 1) Class is doubled to increase specificity
  */
 .button--primary.button--primary {
+  /* 1 */
   &:disabled,
   &:disabled:hover {
     border-color: var(--eds-theme-color-border-disabled);
@@ -30,6 +31,7 @@
  * 1) Class is doubled to increase specificity
  */
 .button--secondary.button--secondary {
+  /* 1 */
   &:disabled,
   &:disabled:hover {
     border-color: var(--eds-theme-color-border-disabled);
@@ -47,6 +49,7 @@
  * 1) Class is doubled to increase specificity
  */
 .button--link.button--link {
+  /* 1 */
   &:disabled,
   &:disabled:hover {
     color: var(--eds-theme-color-text-disabled);
@@ -59,6 +62,7 @@
  * 1) Class is doubled to increase specificity
  */
 .button--icon.button--icon {
+  /* 1 */
   &:disabled,
   &:disabled:hover {
     border-color: var(--eds-theme-color-button-icon-brand-border);
@@ -72,10 +76,10 @@
 }
 
 /**
- * Loading icon rotiation style
+ * 1) Loading icon rotiation style
  */
 .eds-is-loading svg {
-  animation: rotateIcon 2s linear infinite;
+  animation: rotateIcon 2s linear infinite; /* 1 */
   overflow: visible;
 
   @media screen and (prefers-reduced-motion) {
@@ -84,11 +88,11 @@
 }
 
 /**
- * Loading icon rotation animation
+ * 1) Loading icon rotation animation
  */
 @keyframes rotateIcon {
   0% {
-    transform: rotate(0deg);
+    transform: rotate(0deg); /* 1 */
   }
   100% {
     transform: rotate(360deg);

@@ -89,7 +89,7 @@
   * 1) Add bottom border to the item
   */
   .dropdown-menu__item--lined & {
-    border-bottom: 1px solid var(--eds-theme-color-border-neutral-subtle);
+    border-bottom: 1px solid var(--eds-theme-color-border-neutral-subtle); /* 1 */
   }
 
   .dropdown-menu__item--error & {

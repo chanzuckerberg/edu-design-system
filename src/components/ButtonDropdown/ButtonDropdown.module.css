@@ -52,6 +52,6 @@
   * 1) Show the dropdown menu
   */
   .button-dropdown.eds-is-active & {
-    display: block;
+    display: block; /* 1 */
   }
 }

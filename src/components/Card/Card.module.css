@@ -40,7 +40,7 @@
  * 1) Change the orientation to display header, body, and footer in a row
  */
 .card--horizontal {
-  flex-direction: row;
+  flex-direction: row; /* 1 */
 }
 
 /**
@@ -48,7 +48,7 @@
  * 1) Card where the content is centered
  */
 .card--center {
-  text-align: center;
+  text-align: center; /* 1 */
 }
 
 /**
@@ -57,9 +57,9 @@
  */
 .card--inverted {
   color: var(--eds-theme-color-text-neutral-default-inverse);
-  background: transparent;
+  background: transparent; /* 1 */
   border-color: var(--eds-theme-color-border-neutral-strong);
-  box-shadow: none;
+  box-shadow: none; /* 1 */
 }
 
 /**

@@ -62,7 +62,7 @@
  * 2) Uses a flex row to align containers
  */
 .drag-drop__inner {
-  display: flex;
+  display: flex; /* 2 */
   overflow: auto;
 }
 

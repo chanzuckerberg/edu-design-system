@@ -25,7 +25,7 @@ export interface Props {
  * import {TableObjectBody} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * Component TableObjectBody is used in the TableObject component to display the content with shadow gradient and overflow scroll behaviour.
  */
 export const TableObjectBody = ({
   behavior,
