@@ -10,7 +10,7 @@ export default {
   component: Popover,
   parameters: {
     layout: 'centered',
-    chromatic: { delay: 300 },
+    chromatic: { disableSnapshot: true },
   },
   args: {
     children: (
