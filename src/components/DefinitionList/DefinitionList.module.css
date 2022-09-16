@@ -6,7 +6,7 @@
 /**
  * 1) Definition list (`dl`) that contains a definition term (`dt`) and a definition description (`dd`)
  */
-.definition-list { /* 1 */
+.definition-list { 
   @mixin reset;
   display: grid;
   gap: var(--eds-size-2);

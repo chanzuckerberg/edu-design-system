@@ -42,13 +42,13 @@
 }
 
 /**
- * 1) The visible checkbox svg icon element.
+ * The visible checkbox svg icon element.
  */
 .checkbox__icon {
   color: var(--eds-theme-color-icon-brand-primary);
 }
 .checkbox__input:focus + .checkbox__icon {
-  @mixin focus; /* 1 */
+  @mixin focus;
   outline-offset: -2px;
 }
 
