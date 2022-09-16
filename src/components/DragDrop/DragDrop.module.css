@@ -88,9 +88,9 @@
 }
 
 /**
-* 1) An area that can be dropped into.
-* 2) Explicitly giving container display type of 'block'. Avoid using flex; doing so may cause jumpy behavior when items are dropped.
-*/
+  * 1) An area that can be dropped into.
+  * 2) Explicitly giving container display type of 'block'. Avoid using flex; doing so may cause jumpy behavior when items are dropped.
+  */
 .drag-drop__container-inner {
   display: flex;
   flex-direction: column;
@@ -110,8 +110,8 @@
   }
 
   /**
-  * 1) When there are more than two containers, apply a border
-  */
+    * 1) When there are more than two containers, apply a border
+    */
   .drag-drop--multiple & {
     border: var(--eds-theme-border-width) solid
       var(--eds-theme-color-border-neutral-default);
@@ -119,9 +119,9 @@
 }
 
 /**
-* 1) Container that holds droppable content. 
-* 2) DragDropItem styles are included here rather than in the /DragDropItem directory as a workaround to CSS Modules' locally scoped class names.
-*/
+  * 1) Container that holds droppable content. 
+  * 2) DragDropItem styles are included here rather than in the /DragDropItem directory as a workaround to CSS Modules' locally scoped class names.
+  */
 
 .drag-drop__item {
   position: relative;
@@ -146,8 +146,8 @@
   }
 
   /**
-  * 1) The unstyled variant removes all styling from items.
-  */
+    * 1) The unstyled variant removes all styling from items.
+    */
   .drag-drop--unstyled & {
     background-color: unset;
     box-shadow: unset;
@@ -155,23 +155,23 @@
 }
 
 /** 
-* 1) Optional title div at the top of an item.
-*/
+  * 1) Optional title div at the top of an item.
+  */
 .drag-drop__item-title {
   @mixin eds-typography-preset-007-bold;
   margin-bottom: var(--eds-size-2);
 }
 
 /**
-* 1) Used with handles variant to wrap children.
-*/
+  * 1) Used with handles variant to wrap children.
+  */
 .drag-drop__item-content {
   flex-grow: 1;
 }
 
 /**
-* 1) Wrapper for drag handle.
-*/
+  * 1) Wrapper for drag handle.
+  */
 .drag-drop__item-handle {
   position: absolute;
   top: 1px;

@@ -231,8 +231,8 @@
 }
 
 /**
-* Timeline nav number
-*/
+ * Timeline nav number
+ */
 .timeline-nav__number {
   position: relative;
   /* Using flex to keep the number centered */
@@ -257,9 +257,9 @@
   }
 }
 /**
-* Timeline nav link-left 
-* 1) Provides white background to fake a visual gap in the vertical line between nav items
-*/
+ * Timeline nav link-left 
+ * 1) Provides white background to fake a visual gap in the vertical line between nav items
+ */
 .timeline-nav__link-left {
   position: relative;
   height: fit-content;
@@ -269,10 +269,10 @@
 }
 
 /**
-* Timeline- nav link title
-* 1) Wrapped in a div so that it doesn't affect the position of the arrow if the title is long and breaks onto multiple lines
-* 2) In the case of a long text string with no breaking spaces and/or a browser with text-only-zoom, we don't want the text to overflow; truncate with an ellipsis instead
-*/
+  * Timeline- nav link title
+  * 1) Wrapped in a div so that it doesn't affect the position of the arrow if the title is long and breaks onto multiple lines
+  * 2) In the case of a long text string with no breaking spaces and/or a browser with text-only-zoom, we don't want the text to overflow; truncate with an ellipsis instead
+  */
 .timeline-nav__link-title {
   display: block;
   overflow: hidden;
@@ -280,19 +280,19 @@
 }
 
 /**Timeline nav title after
-* 1) Optional content that will be positioned to the right of title
-*/
+  * 1) Optional content that will be positioned to the right of title
+  */
 .timeline-nav__link-title-after {
   display: inline-block;
   margin-left: var(--eds-size-half);
 }
 
 /**
-* Timeline nav link arrow
-* 1) (Only used on smaller screens) - an arrow icon at the right 
-* end of each item.
-* 2) Must be used to prevent icon from shrinking to fit space
-*/
+  * Timeline nav link arrow
+  * 1) (Only used on smaller screens) - an arrow icon at the right 
+  * end of each item.
+  * 2) Must be used to prevent icon from shrinking to fit space
+  */
 .timeline-nav__link-arrow {
   margin-left: auto;
   align-self: center;
@@ -304,9 +304,9 @@
 }
 
 /**
-* Timeline nav icon
-* 1) Used so the transparent icon doesn't show the line behind. 
-*/
+  * Timeline nav icon
+  * 1) Used so the transparent icon doesn't show the line behind. 
+  */
 .timeline-nav__icon {
   --icon-size: var(--eds-size-3);
   color: var(--eds-theme-color-text-neutral-subtle);
