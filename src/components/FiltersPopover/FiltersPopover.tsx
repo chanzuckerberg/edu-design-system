@@ -77,6 +77,7 @@ const FiltersPopoverRender = ({
 }: FiltersPopoverRenderProps) => {
   /**
    * Hooks to emulate an onClose callback for the Popover.
+   * Tracking first render is required to prevent useEffect callback from running on first render since Popover may render as closed.
    */
   const firstRender = useRef(true);
   useEffect(() => {
@@ -86,6 +87,7 @@ const FiltersPopoverRender = ({
       onClose();
     }
   }, [open]); // eslint-disable-line react-hooks/exhaustive-deps
+  // onClose is not included as a dependency since it usually affects external state and can cause a callback loop
 
   const buttonVariant = hasSelectedFilters ? 'primary' : 'secondary';
   const buttonStatus = hasSelectedFilters ? 'brand' : 'neutral';

@@ -46,4 +46,9 @@ export default {
 
 type Args = React.ComponentProps<typeof Filters>;
 
-export const Default: StoryObj<Args> = {};
+export const Drawer: StoryObj<Args> = {};
+export const Popover: StoryObj<Args> = {
+  args: {
+    as: 'FiltersPopover',
+  },
+};
