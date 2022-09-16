@@ -78,6 +78,12 @@ export const Drawer = ({
   const ref = useRef<HTMLDivElement | null>(null);
   const isMountedRef = useRef(true);
 
+  /**
+   * Use effect
+   * 1) Set prevIsActive to previous isActive prop
+   * 2) If prevIsActive is defined and previous isActive prop is not equal
+   * to current isActive prop, toggle state
+   */
   useEffect(() => {
     if (isActive) {
       activateFocusTrap();

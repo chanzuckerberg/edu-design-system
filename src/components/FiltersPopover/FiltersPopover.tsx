@@ -86,8 +86,8 @@ const FiltersPopoverRender = ({
     } else if (!open && onClose) {
       onClose();
     }
+    // onClose is not included as a dependency since it usually affects external state and can cause a callback loop
   }, [open]); // eslint-disable-line react-hooks/exhaustive-deps
-  // onClose is not included as a dependency since it usually affects external state and can cause a callback loop
 
   const buttonVariant = hasSelectedFilters ? 'primary' : 'secondary';
   const buttonStatus = hasSelectedFilters ? 'brand' : 'neutral';
