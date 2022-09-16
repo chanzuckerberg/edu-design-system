@@ -12,7 +12,8 @@
 .layout {
   display: grid;
   gap: var(--eds-size-3);
-  grid-template-columns: minmax(0, 1fr); /* 1 */
+  /* 1 */
+  grid-template-columns: minmax(0, 1fr); 
 
   @media all and (min-width: $eds-bp-xl) {
     grid-template-columns: auto 1fr;

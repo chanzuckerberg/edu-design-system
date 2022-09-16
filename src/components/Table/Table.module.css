@@ -45,14 +45,14 @@
  */
 .table__header {
   /**
-     * Table header inside a stacked table
-     * 1) Hide on small screens
+     * Table header inside a stacked table.
      */
   .table--stacked & {
     display: none;
 
     @media all and (min-width: $eds-bp-md) {
-      display: table-header-group; /* 1 */
+      /* Hide on small screens */
+      display: table-header-group; 
     }
   }
 }
@@ -124,11 +124,11 @@
 }
 
 /**
- * Bare table row
- * 1) Removes border
+ * Bare table row.
  */
 .table__row--bare {
-  border-bottom: none; /* 1 */
+  /* Removes border. */
+  border-bottom: none; 
 }
 
 /**
@@ -145,11 +145,13 @@
 
 /**
 * Table header cell and table header cell button
-* 1) On table header cells that are not sortable, the container is a div
-* 2) On table header cells that are sortable, the container is a button, but the text styling is the same as a non-sortable table header cell
+* 1) On table header cells that are not sortable, the container is a div.
 */
 .table__header-cell,
-/* 2 */
+/**
+* On table header cells that are sortable, the container is a button, 
+* but the text styling is the same as a non-sortable table header cell
+*/
 .table__header-cell-button {
   @mixin eds-theme-typography-label-sm;
   padding: var(--eds-size-1) var(--eds-size-1);
@@ -171,8 +173,7 @@
 
 /**
 * Table header cell button
-* 1) On table header cells that are sortable, the container is a button
-* 2) When column is sortable, add an inline icon after the title
+* 1) On table header cells that are sortable, the container is a button.
 */
 .table__header-cell-button {
   display: inline-flex;
@@ -183,7 +184,7 @@
   &:hover {
     cursor: pointer;
   }
-  /* 2 */
+  /* When column is sortable, add an inline icon after the title. */
   .table__header-cell-sort {
     display: inline;
   }
@@ -215,11 +216,11 @@
   }
 
   /**
-     * Condensed table
-     * 1) shrinks padding between table rows
+     * Condensed table.
      */
   .table--condensed & {
-    padding: var(--eds-size-1) var(--eds-size-1); /* 1 */
+     /*  shrinks padding between table rows. */
+    padding: var(--eds-size-1) var(--eds-size-1);
   }
 
   /**
@@ -262,11 +263,8 @@
 
   /**
      * Table cell inside a stacked table
-     * 1) Take data-heading attribute and display
-     *    that value as a block-level title above
-     *    each table cell
-     * 2) Hide data-heading on large screens since
-     *    table header cells become visible
+     * 1) 
+     * 2) 
      */
   .table--stacked & {
     display: flex;
@@ -276,14 +274,23 @@
     padding-right: 0;
 
     &:before {
-      content: attr(data-heading); /* 1 */
+    /**
+    * Take data-heading attribute and display
+    *    that value as a block-level title above
+    *    each table cell.
+    */
+      content: attr(data-heading); 
       display: block;
       margin-right: auto;
       @mixin eds-theme-typography-body-text-sm-bold;
 
       /* stylelint-disable-next-line max-nesting-depth */
       @media all and (min-width: $eds-bp-md) {
-        content: none; /* 2 */
+        /**
+        * Hide data-heading on large screens since
+        * table header cells become visible 
+        */
+        content: none; 
       }
     }
 
@@ -295,14 +302,17 @@
   }
 
   /**
-  * 1) When using the stacked and highlight-first-cell variants, the 
-  * first cell in each row gets padding-bottom added on smaller breakpoints.
+  * 1) 
   * 2) The first cell's column title is not displayed, allowing the first cell's
   * value to appear as the card's "title".
   **/
   .table--stacked.table--highlight-first-cell & {
     &:first-child {
-      padding-bottom: var(--eds-size-1) /* 1 */;
+      /**
+      * When using the stacked and highlight-first-cell variants, the 
+      * first cell in each row gets padding-bottom added on smaller breakpoints.
+      */
+      padding-bottom: var(--eds-size-1);
 
       /* stylelint-disable-next-line max-nesting-depth */
       @media all and (min-width: $eds-bp-md) {
@@ -351,13 +361,16 @@
 
   /**
    * Table cell inside a lined table with stacked behavior
-   * 1) Remove table cell borders on small screens since
-   *    cells stack on top of each other and are displayed
-   *    as a single cluster with headings
+   * 1) 
    */
   .table--stacked.table--lined & {
     @media all and (max-width: $eds-bp-md) {
-      border: 0; /* 1 */
+      /**
+      * Remove table cell borders on small screens since
+      * cells stack on top of each other and are displayed
+      * as a single cluster with headings
+      */
+      border: 0; 
     }
   }
 
@@ -374,11 +387,11 @@
   }
 
   /**
-   * Table cell inside a clickable table row
-   * 1) Mimic clickable link styles
+   * Table cell inside a clickable table row.
    */
   .table__row--clickable & {
-    @mixin textLink; /* 1 */
+     /* Mimic clickable link styles. */
+    @mixin textLink;
   }
 
   /**

@@ -9,18 +9,18 @@
  */
 
 /**
- * 1) Dropdown menu
- * 2) Set a minimum width for the dropdown menu
+ * 1) Dropdown menu.
  */
 .dropdown-menu {
-  width: 16rem; /* 2 */
+  /* Set a minimum width for the dropdown menu. */
+  width: 16rem; 
   background: var(--eds-theme-color-background-neutral-default);
   border: 1px solid var(--eds-theme-color-border-neutral-subtle);
   border-radius: var(--eds-border-radius-md);
   box-shadow: var(--eds-box-shadow-md);
 
   /**
-  * Dropdown menu within active dropdown menu item
+  * Dropdown menu within active dropdown menu item.
   */
   .dropdown-menu__item.eds-is-active & {
     visibility: visible;
@@ -38,7 +38,7 @@
 }
 
 /**
- * Dropdown menu list
+ * Dropdown menu list.
  */
 .dropdown-menu__list {
   @mixin reset;
@@ -46,7 +46,7 @@
 }
 
 /**
- * Dropdown menu item
+ * Dropdown menu item.
  */
 .dropdown-menu__item {
   position: relative;
@@ -54,7 +54,7 @@
 }
 
 /**
- * Dropdown menu link
+ * Dropdown menu link.
  */
 .dropdown-menu__link {
   @mixin eds-theme-typography-body-text-sm;
@@ -85,11 +85,11 @@
   }
 
   /**
-  * Dropdown menu link within a lined dropdown menu item
-  * 1) Add bottom border to the item
+  * Dropdown menu link within a lined dropdown menu item.
   */
   .dropdown-menu__item--lined & {
-    border-bottom: 1px solid var(--eds-theme-color-border-neutral-subtle); /* 1 */
+    /* Add bottom border to the item. */
+    border-bottom: 1px solid var(--eds-theme-color-border-neutral-subtle); 
   }
 
   .dropdown-menu__item--error & {

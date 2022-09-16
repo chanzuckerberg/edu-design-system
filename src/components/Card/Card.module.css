@@ -36,19 +36,19 @@
 }
 
 /**
- * Horizontal card
- * 1) Change the orientation to display header, body, and footer in a row
+ * Horizontal card.
  */
 .card--horizontal {
-  flex-direction: row; /* 1 */
+  /* Change the orientation to display header, body, and footer in a row. */
+  flex-direction: row; 
 }
 
 /**
  * Centered card
- * 1) Card where the content is centered
  */
 .card--center {
-  text-align: center; /* 1 */
+  /* Card where the content is centered. */
+  text-align: center; 
 }
 
 /**
@@ -63,11 +63,11 @@
 }
 
 /**
- * Card header
- * 1) Add spacing in between the header and body
+ * Card header.
  */
 .card__header {
-  margin-bottom: var(--eds-size-2); /* 1 */
+  /* Add spacing in between the header and body. */
+  margin-bottom: var(--eds-size-2); 
 
   /**
   * Card header within horizontal card
@@ -80,7 +80,7 @@
 }
 
 /**
- * Card body
+ * Card body.
  */
 .card__body {
   flex: 1;

@@ -58,39 +58,38 @@
 }
 
 /**
- * 1) Outer container for DragDrop component; provides <DragDropContext />, which wraps droppable components (i.e. containers) and provides them with context 
- * 2) Uses a flex row to align containers
+ * 1) Outer container for DragDrop component; provides <DragDropContext />, which wraps droppable components (i.e. containers) and provides them with context.
  */
 .drag-drop__inner {
-  display: flex; /* 2 */
+  /* Uses a flex row to align containers. */
+  display: flex; 
   overflow: auto;
 }
 
 /**
- * Drag drop container
- * 1) Set to display flex so empty state can span entire column.
- * 2) Padding added to the top to account for outline of button
+ * Drag drop container.
  */
 .drag-drop__container {
-  display: flex; /* 1 */
+  /* Set to display flex so empty state can span entire column. */
+  display: flex; 
   flex-shrink: 0;
   flex-direction: column;
   margin-left: var(--eds-size-2);
   width: 20rem;
-  padding-top: var(--eds-size-half); /* 2 */
+  /* Padding added to the top to account for outline of button. */
+  padding-top: var(--eds-size-half); 
   /**
-  * First drag drop container
-  * 1) Don't add left margin to left align with the rest of the content
+  * First drag drop container.
   */
   &:first-of-type {
-    margin-left: 0; /* 1 */
+    /* Don't add left margin to left align with the rest of the content. */
+    margin-left: 0; 
   }
 }
 
 /**
 * 1) An area that can be dropped into.
-* 2) DragDropContainer styles are included here rather than in the /DragDropContainer directory as a workaround to CSS Modules' locally scoped class names 
-* 3) Explicitly giving container display type of 'block'. Avoid using flex; doing so may cause jumpy behavior when items are dropped.
+* 2) Explicitly giving container display type of 'block'. Avoid using flex; doing so may cause jumpy behavior when items are dropped.
 */
 .drag-drop__container-inner {
   display: flex;
@@ -102,7 +101,7 @@
   padding: var(--eds-size-1);
   border-radius: var(--eds-border-radius-md);
 
-  /* 2 */
+  /*  DragDropContainer styles are included here rather than in the /DragDropContainer directory as a workaround to CSS Modules' locally scoped class names. */
   .drag-drop__container--empty & {
     justify-content: center;
     align-items: center;
@@ -121,13 +120,13 @@
 
 /**
 * 1) Container that holds droppable content. 
-* 2) DragDropItem styles are included here rather than in the /DragDropItem directory as a workaround to CSS Modules' locally scoped class names 
-* 3) For best experience, use a margin on a single side of an item to add a gap between items. Using a margin on both top and bottom, or using flex or grid gap spacing in the drag-drop-container, cause jumpy behavior.
+* 2) DragDropItem styles are included here rather than in the /DragDropItem directory as a workaround to CSS Modules' locally scoped class names.
 */
 
 .drag-drop__item {
   position: relative;
-  margin-bottom: var(--eds-size-1); /* 3 */
+  /*  For best experience, use a margin on a single side of an item to add a gap between items. Using a margin on both top and bottom, or using flex or grid gap spacing in the drag-drop-container, cause jumpy behavior. */
+  margin-bottom: var(--eds-size-1); 
   background-color: var(--eds-color-neutral-100);
   border-radius: var(--eds-border-radius-lg);
   box-shadow: var(--eds-box-shadow-sm);

@@ -48,10 +48,10 @@
   }
 
   /**
-  * Button dropdown dropdown menu within active button dropdown
-  * 1) Show the dropdown menu
+  * Button dropdown dropdown menu within active button dropdown.
   */
   .button-dropdown.eds-is-active & {
-    display: block; /* 1 */
+    /* Show the dropdown menu */
+    display: block; 
   }
 }

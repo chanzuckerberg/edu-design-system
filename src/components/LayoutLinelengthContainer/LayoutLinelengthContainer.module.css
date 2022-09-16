@@ -3,9 +3,9 @@
 \*------------------------------------*/
 
 /**
- * Linelength Container
- * 1) Caps the length of an excerpt of text to be easily readable
+ * Linelength Container.
  */
 .layout-linelength-container {
-  max-width: var(--eds-l-linelength-width); /* 1 */
+  /*  Caps the length of an excerpt of text to be easily readable. */
+  max-width: var(--eds-l-linelength-width); 
 }
