@@ -4,13 +4,14 @@ import { within } from '@storybook/testing-library';
 import isChromatic from 'chromatic/isChromatic';
 import React from 'react';
 
-import { Filters } from './Filters';
-import styles from './Filters.stories.module.css';
+import { FiltersDrawer } from './FiltersDrawer';
+import styles from './FiltersDrawer.stories.module.css';
 import { Checkbox } from '../Checkbox/Checkbox';
+import { FiltersCheckboxField } from '../FiltersCheckboxField/FiltersCheckboxField';
 
 export default {
-  title: 'Organisms/Interactive/Filters',
-  component: Filters,
+  title: 'Organisms/Interactive/FiltersDrawer',
+  component: FiltersDrawer,
   parameters: {
     badges: [BADGE.BETA],
   },
@@ -18,7 +19,7 @@ export default {
     triggerText: 'Filters',
     hasSelectedFilters: false,
     children: (
-      <Filters.FiltersCheckboxField legend="Filters Segment 1">
+      <FiltersCheckboxField legend="Filters Segment 1">
         <Checkbox
           label="Filters label 1"
           onChange={
@@ -37,7 +38,7 @@ export default {
             () => {} /* eslint-disable-line @typescript-eslint/no-empty-function */
           }
         />
-      </Filters.FiltersCheckboxField>
+      </FiltersCheckboxField>
     ),
   },
   decorators: [
@@ -49,7 +50,7 @@ export default {
   ],
 } as Meta<Args>;
 
-type Args = React.ComponentProps<typeof Filters>;
+type Args = React.ComponentProps<typeof FiltersDrawer>;
 
 export const Default: StoryObj<Args> = {
   play: async ({ canvasElement }) => {
@@ -135,14 +136,15 @@ const OverflowCheckboxFields = () => {
     : 'Filters';
 
   return (
-    <Filters
+    <FiltersDrawer
+      className={styles['filters-drawer']}
       hasSelectedFilters={hasSelectedFilters}
       onApply={onApply}
       onClear={onClear}
       onClose={onClose}
       triggerText={triggerText}
     >
-      <Filters.FiltersCheckboxField legend="Filters Segment 1">
+      <FiltersCheckboxField legend="Filters Segment 1">
         <Checkbox
           checked={transientChecked[0]}
           label="Filters long label 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod"
@@ -158,8 +160,8 @@ const OverflowCheckboxFields = () => {
           label="Filters label 3"
           onChange={() => onCheckboxChange(2)}
         />
-      </Filters.FiltersCheckboxField>
-      <Filters.FiltersCheckboxField legend="Filters Segment 2">
+      </FiltersCheckboxField>
+      <FiltersCheckboxField legend="Filters Segment 2">
         <Checkbox
           checked={transientChecked[3]}
           label="Filters label 1"
@@ -175,8 +177,8 @@ const OverflowCheckboxFields = () => {
           label="Filters label 3"
           onChange={() => onCheckboxChange(5)}
         />
-      </Filters.FiltersCheckboxField>
-      <Filters.FiltersCheckboxField legend="Filters Segment 3">
+      </FiltersCheckboxField>
+      <FiltersCheckboxField legend="Filters Segment 3">
         <Checkbox
           checked={transientChecked[6]}
           label="Filters label 1"
@@ -192,8 +194,8 @@ const OverflowCheckboxFields = () => {
           label="Filters long label 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod"
           onChange={() => onCheckboxChange(8)}
         />
-      </Filters.FiltersCheckboxField>
-      <Filters.FiltersCheckboxField legend="Filters Segment 4">
+      </FiltersCheckboxField>
+      <FiltersCheckboxField legend="Filters Segment 4">
         <Checkbox
           checked={transientChecked[9]}
           label="Filters label 1"
@@ -224,8 +226,8 @@ const OverflowCheckboxFields = () => {
           label="Filters label 6"
           onChange={() => onCheckboxChange(14)}
         />
-      </Filters.FiltersCheckboxField>
-    </Filters>
+      </FiltersCheckboxField>
+    </FiltersDrawer>
   );
 };
 

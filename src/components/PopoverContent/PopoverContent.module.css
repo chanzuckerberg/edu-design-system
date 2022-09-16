@@ -11,9 +11,9 @@
 }
 
 /**
- * Main popover content, as opposed to the visual indicator arrow.
+ * Body popover content, as opposed to the visual indicator arrow.
  */
-.popover-content__main {
+.popover-content__body {
   border-radius: var(--eds-border-radius-md);
   overflow: auto;
   box-shadow: var(--eds-box-shadow-md);

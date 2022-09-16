@@ -6,7 +6,7 @@ exports[`<Filters /> Default story renders snapshot 1`] = `
   class="drawer__container drawer__container--is-active filters-drawer__container"
 >
   <article
-    aria-labelledby="2"
+    aria-labelledby="1"
     aria-modal="true"
     class="drawer filters-drawer"
     role="dialog"
@@ -17,7 +17,7 @@ exports[`<Filters /> Default story renders snapshot 1`] = `
     >
       <h3
         class="heading heading--size-headline-sm filters-drawer__title"
-        id="2"
+        id="1"
       >
         Filters
       </h3>
@@ -176,7 +176,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
   class="drawer__container drawer__container--is-active filters-drawer__container"
 >
   <article
-    aria-labelledby="38"
+    aria-labelledby="37"
     aria-modal="true"
     class="drawer filters-drawer"
     role="dialog"
@@ -187,7 +187,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
     >
       <h3
         class="heading heading--size-headline-sm filters-drawer__title"
-        id="38"
+        id="37"
       >
         Filters
       </h3>
@@ -217,7 +217,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
       </button>
     </header>
     <div
-      class="drawer__body filters-drawer__body"
+      class="drawer__body filters-drawer__body filters-drawer"
     >
       <fieldset
         class="fieldset filters-fieldset"
@@ -818,7 +818,7 @@ exports[`<Filters /> WithOnApplyAndCustomButtonGroup story renders snapshot 1`] 
   class="drawer__container drawer__container--is-active filters-drawer__container"
 >
   <article
-    aria-labelledby="26"
+    aria-labelledby="25"
     aria-modal="true"
     class="drawer filters-drawer"
     role="dialog"
@@ -829,7 +829,7 @@ exports[`<Filters /> WithOnApplyAndCustomButtonGroup story renders snapshot 1`] 
     >
       <h3
         class="heading heading--size-headline-sm filters-drawer__title"
-        id="26"
+        id="25"
       >
         Filters
       </h3>
@@ -1003,7 +1003,7 @@ exports[`<Filters /> WithOnClear story renders snapshot 1`] = `
   class="drawer__container drawer__container--is-active filters-drawer__container"
 >
   <article
-    aria-labelledby="14"
+    aria-labelledby="13"
     aria-modal="true"
     class="drawer filters-drawer"
     role="dialog"
@@ -1014,7 +1014,7 @@ exports[`<Filters /> WithOnClear story renders snapshot 1`] = `
     >
       <h3
         class="heading heading--size-headline-sm filters-drawer__title"
-        id="14"
+        id="13"
       >
         Filters
       </h3>
