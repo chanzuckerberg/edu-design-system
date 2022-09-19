@@ -1,9 +1,9 @@
 import clsx from 'clsx';
-import React, { useEffect, useRef } from 'react';
+import React, { ReactNode, useEffect, useRef } from 'react';
 import styles from './FiltersPopover.module.css';
 import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';
-import Icon from '../Icon';
+import FiltersButton from '../FiltersButton';
 import Popover, { PopoverProps } from '../Popover';
 
 export type FiltersPopoverProps = {
@@ -40,9 +40,14 @@ export type FiltersPopoverProps = {
    */
   placement?: PopoverProps['placement'];
   /**
-   * Text to be placed in the button that activates the Filters Popover
+   * Trigger element that toggles the filters drawer.
+   * Must be able to forward a ref.
    */
-  triggerText: string;
+  triggerElement?: ReactNode;
+  /**
+   * Text to be placed in the button that activates the Filters Drawer
+   */
+  triggerText?: string;
 };
 
 type FiltersPopoverRenderProps = {
@@ -72,9 +77,20 @@ const FiltersPopoverRender = ({
   onClear,
   onClose,
   open,
+  triggerElement,
   triggerText,
   ...other
 }: FiltersPopoverRenderProps) => {
+  if (
+    !triggerElement &&
+    !triggerText &&
+    process.env.NODE_ENV !== 'production'
+  ) {
+    throw new Error(
+      'Provide triggerText as trigger button text or a custom triggerElement for FiltersPopover control',
+    );
+  }
+
   /**
    * Hooks to emulate an onClose callback for the Popover.
    * Tracking first render is required to prevent useEffect callback from running on first render since Popover may render as closed.
@@ -89,8 +105,13 @@ const FiltersPopoverRender = ({
     // onClose is not included as a dependency since it usually affects external state and can cause a callback loop
   }, [open]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  const buttonVariant = hasSelectedFilters ? 'primary' : 'secondary';
-  const buttonStatus = hasSelectedFilters ? 'brand' : 'neutral';
+  const trigger = triggerElement || (
+    <FiltersButton
+      hasSelectedFilters={hasSelectedFilters}
+      // in this ternary operator, triggerText will never be falsy since we check for it earlier.
+      triggerText={triggerText!} // eslint-disable-line @typescript-eslint/no-non-null-assertion
+    />
+  );
 
   const buttonGroupClassName = clsx(
     styles['footer__button-group'],
@@ -99,16 +120,7 @@ const FiltersPopoverRender = ({
 
   return (
     <>
-      <Popover.Button as={React.Fragment}>
-        <Button
-          className={styles['filters-popover__button']}
-          status={buttonStatus}
-          variant={buttonVariant}
-        >
-          <Icon name="filter-list" purpose="decorative" size="1.5rem" />
-          {triggerText}
-        </Button>
-      </Popover.Button>
+      <Popover.Button as={React.Fragment}>{trigger}</Popover.Button>
       <Popover.Content bodyClassName={styles['filters-popover']} {...other}>
         <div className={className}>{children}</div>
         {(onClear || onApply) && (

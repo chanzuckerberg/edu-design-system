@@ -1,12 +1,18 @@
 import clsx from 'clsx';
-import React, { createRef, useEffect, useState } from 'react';
+import React, {
+  createRef,
+  ReactElement,
+  ReactNode,
+  useEffect,
+  useState,
+} from 'react';
 import { useUID } from 'react-uid';
 import styles from './FiltersDrawer.module.css';
 import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';
 import Drawer from '../Drawer';
+import FiltersButton from '../FiltersButton';
 import Heading from '../Heading';
-import Icon from '../Icon';
 
 export type FiltersDrawerProps = {
   /**
@@ -38,6 +44,11 @@ export type FiltersDrawerProps = {
    */
   onApply?: () => void;
   /**
+   * Trigger element that toggles the filters drawer.
+   * Must be able to accept an 'onClick: MouseEventHandler' prop.
+   */
+  triggerElement?: ReactNode;
+  /**
    * Text to be placed in the button that activates the Filters Drawer
    */
   triggerText?: string;
@@ -60,8 +71,19 @@ export const FiltersDrawer = ({
   onClear,
   onApply,
   onClose,
+  triggerElement,
   triggerText,
 }: FiltersDrawerProps) => {
+  if (
+    !triggerElement &&
+    !triggerText &&
+    process.env.NODE_ENV !== 'production'
+  ) {
+    throw new Error(
+      'Provide triggerText as trigger button text or a custom triggerElement for FiltersDrawer control',
+    );
+  }
+
   /**
    * Manages the active state of the filters drawer.
    */
@@ -101,8 +123,18 @@ export const FiltersDrawer = ({
     }
   }, [filtersBody]);
 
-  const buttonVariant = hasSelectedFilters ? 'primary' : 'secondary';
-  const buttonStatus = hasSelectedFilters ? 'brand' : 'neutral';
+  const trigger = triggerElement ? (
+    React.cloneElement(triggerElement as ReactElement, {
+      onClick: () => setIsActive(true),
+    })
+  ) : (
+    <FiltersButton
+      hasSelectedFilters={hasSelectedFilters}
+      onClick={() => setIsActive(true)}
+      // in this ternary operator, triggerText will never be falsy since we check for it earlier.
+      triggerText={triggerText!} // eslint-disable-line @typescript-eslint/no-non-null-assertion
+    />
+  );
 
   const bodyClassName = clsx(styles['filters-drawer__body'], className);
   const footerClassName = clsx(
@@ -119,15 +151,7 @@ export const FiltersDrawer = ({
 
   return (
     <div>
-      <Button
-        className={styles['filters-drawer__trigger']}
-        onClick={() => setIsActive(true)}
-        status={buttonStatus}
-        variant={buttonVariant}
-      >
-        <Icon name="filter-list" purpose="decorative" size="1.5rem" />
-        {triggerText}
-      </Button>
+      {trigger}
       <Drawer
         aria-labelledby={generatedId}
         className={styles['filters-drawer']}
