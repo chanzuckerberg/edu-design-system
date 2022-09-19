@@ -1,0 +1,9 @@
+.student-refinement__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.student-refinement__more-options {
+  gap: var(--eds-size-1);
+}
