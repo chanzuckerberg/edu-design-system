@@ -106,6 +106,26 @@ EDS uses [PostCSS Nested](https://github.com/postcss/postcss-nested) to provide 
 }
 ```
 
+#### Focus states
+
+We use focus-visible for most focus states. This ensures that the focus state will appear when the user is interacting with an element using a keyboard, but the focus state will not be present if the user if interacting with the element using a mouse. Exceptions to this rule include situations where the focus state also communicates to users that they are in some sort of edit state, e.g. when typing in an input field.
+
+However, we currently support some browser versions that do not support the focus-visible CSS feature, so we also use a fallback block in conjunciton with focus-visible.
+
+```scss
+.button--primary {
+  &:focus-visible {
+    @mixin focus;
+  }
+
+  @supports not selector(:focus-visible) {
+    &:focus {
+      @mixin focus;
+    }
+  }
+}
+```
+
 #### States and pseudo-selectors
 
 ```scss
@@ -113,8 +133,14 @@ EDS uses [PostCSS Nested](https://github.com/postcss/postcss-nested) to provide 
   background: var(--eds-theme-color-background-brand-primary-strong);
 
   &:hover,
-  &:focus {
+  &:focus-visible {
     background: var(--eds-theme-color-background-brand-primary-strong-hover);
+  }
+
+  @supports not selector(:focus-visible) {
+    &:focus {
+      background: var(--eds-theme-color-background-brand-primary-strong-hover);
+    }
   }
 
   &:after {

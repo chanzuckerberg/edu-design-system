@@ -201,12 +201,23 @@
     background-color var(--eds-anim-fade-quick) var(--eds-anim-ease);
 
   &:hover,
-  &:focus {
+  &:focus-visible {
     color: var(--eds-theme-color-text-neutral-default);
   }
 
-  &:focus {
+  &:focus-visible {
     @mixin focus;
+  }
+
+  @supports not selector(:focus-visible) {
+    &:hover,
+    &:focus {
+      color: var(--eds-theme-color-text-neutral-default);
+    }
+
+    &:focus {
+      @mixin focus;
+    }
   }
 
   @media screen and (prefers-reduced-motion) {

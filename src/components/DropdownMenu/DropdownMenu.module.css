@@ -72,12 +72,23 @@
   transition: background var(--eds-anim-fade-quick) var(--eds-anim-ease);
 
   &:hover,
-  &:focus {
+  &:focus-visible {
     background: var(--eds-theme-color-background-neutral-subtle);
   }
 
-  &:focus {
+  &:focus-visible {
     @mixin focus;
+  }
+
+  @supports not selector(:focus-visible) {
+    &:hover,
+    &:focus {
+      background: var(--eds-theme-color-background-neutral-subtle);
+    }
+
+    &:focus {
+      @mixin focus;
+    }
   }
 
   @media screen and (prefers-reduced-motion) {
