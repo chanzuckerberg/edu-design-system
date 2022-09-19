@@ -206,7 +206,6 @@ For example:
   background: red;
   /* Pushes the button away from the other content because it lives in a flexbox container */
   margin-right: auto;
-  /* Button should take up the full width of the container it lives within. */
   width: 100%;
   /* I know this a weird magic number, but [succinct-but-clear explanation] */
   height: 37px;
