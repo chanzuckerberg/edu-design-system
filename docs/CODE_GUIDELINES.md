@@ -98,7 +98,7 @@ EDS uses [PostCSS Nested](https://github.com/postcss/postcss-nested) to provide 
 ```scss
 .primary-nav {
   /**
-    * 1) On larger displays, convert to a horizontal list
+    * On larger displays, convert to a horizontal list
     */
   @media all and (min-width: $eds-bp-md) {
     display: flex;
@@ -182,7 +182,7 @@ Examples:
 
 ### CSS Comments
 
-EDS uses the following commenting conventions, which take much inspiration from [these commenting guidelines](https://cssguidelin.es/#commenting).
+CSS comments should be added inline above the styles it's referring to or above the block when it applies to the whole block or class name format.
 
 For example:
 
@@ -198,16 +198,17 @@ For example:
 }
 
 /**
- * Full width button
- * 1) Button should take up the full width of the container it lives within
- * 2) Pushes the button away from the other content because it lives in a flexbox container
- * 3) I know this a weird magic number, but [succinct-but-clear explanation]
+ * Full width button.
+ *
+ * Class is doubled to increase specificity.
  */
-.button--full-width {
+.button--full-width.button--full-width {
   background: red;
-  margin-right: auto; /* 2 */
-  width: 100%; /* 1 */
-  height: 37px; /* 3 */
+  /* Pushes the button away from the other content because it lives in a flexbox container */
+  margin-right: auto;
+  width: 100%;
+  /* I know this a weird magic number, but [succinct-but-clear explanation] */
+  height: 37px;
 }
 ```
 
