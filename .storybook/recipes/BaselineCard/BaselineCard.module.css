@@ -22,6 +22,17 @@
 }
 
 /**
+ * Inner wrapper that is also clickable
+ *
+ * This is needed because the outermost div may extend beyond the visible card,
+ * which means the user could click on empty space and still activate the click
+ * handler.
+ */
+.baseline-card__clickable-wrapper {
+  width: max-content;
+}
+
+/**
  * Baseline card label.
  */
 .baseline-card__label {
