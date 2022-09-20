@@ -22,10 +22,6 @@
   background-color: transparent;
 }
 
-.drawer__container:focus {
-  @mixin focus;
-}
-
 /**
 * Active drawer container
 */
@@ -55,8 +51,14 @@
     transition: none;
   }
 }
-.drawer:focus {
-  @mixin focus;
+.drawer:focus-visible {
+  @mixin focusInside;
+}
+
+@supports not selector(:focus-visible) {
+  .drawer:focus {
+    @mixin focusInside;
+  }
 }
 
 /**

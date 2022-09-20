@@ -8,7 +8,7 @@
  * 1) The filters checkbox fieldset with legend and various checkbox filters.
  */
 .filters-fieldset {
-  margin: 0 0 var(--eds-size-6) 0;
+  margin: 0;
 }
 
 /**

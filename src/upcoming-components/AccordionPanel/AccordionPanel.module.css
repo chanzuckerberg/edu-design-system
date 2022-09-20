@@ -59,8 +59,14 @@
  * Accordion panel button focus visible
  * 1) Show focus ring when focused only with keyboard
  */
-.accordion__panel-button:focus {
+.accordion__panel-button:focus-visible {
   @mixin focus;
+}
+
+@supports not selector(:focus-visible) {
+  .accordion__panel-button:focus {
+    @mixin focus;
+  }
 }
 
 /**

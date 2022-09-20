@@ -131,7 +131,7 @@ export const InteractiveExample: StoryObj<Args> = {
   parameters: {
     /* 1 */
     chromatic: {
-      skip: true,
+      disableSnapshot: true,
     },
     snapshot: {
       skip: true,

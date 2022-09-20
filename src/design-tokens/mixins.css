@@ -40,13 +40,24 @@
     text-decoration-color: var(--eds-theme-color-text-link-strong);
   }
 
-  &:focus {
+  &:focus-visible {
     outline: 1px solid transparent; /* 7 */
     color: var(--eds-theme-color-text-neutral-default-inverse) !important;
     text-decoration-color: var(
       --eds-theme-color-text-neutral-default-inverse
     ) !important;
     background-color: var(--eds-theme-color-text-link-strong);
+  }
+
+  @supports not selector(:focus-visible) {
+    &:focus {
+      outline: 1px solid transparent; /* 7 */
+      color: var(--eds-theme-color-text-neutral-default-inverse) !important;
+      text-decoration-color: var(
+        --eds-theme-color-text-neutral-default-inverse
+      ) !important;
+      background-color: var(--eds-theme-color-text-link-strong);
+    }
   }
 }
 

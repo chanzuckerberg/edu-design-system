@@ -48,7 +48,7 @@ describe('<Heading />', () => {
     const { Heading6 } = composeStories(HeadingStoryFile);
     render(<Heading6 />);
     expect(consoleWarnMock).toHaveBeenCalledTimes(1);
-    expect(consoleWarnMock).toBeCalledWith(
+    expect(consoleWarnMock).toHaveBeenCalledWith(
       `The h6 size is deprecated and will be removed in an upcoming release.\n`,
       'Please bump this heading up to a larger size if possible.',
     );
@@ -58,7 +58,7 @@ describe('<Heading />', () => {
     const { Heading7 } = composeStories(HeadingStoryFile);
     render(<Heading7 />);
     expect(consoleWarnMock).toHaveBeenCalledTimes(1);
-    expect(consoleWarnMock).toBeCalledWith(
+    expect(consoleWarnMock).toHaveBeenCalledWith(
       `The h7 size is deprecated and will be removed in an upcoming release.\n`,
       'Please bump this heading up to a larger size if possible.',
     );

@@ -1,0 +1,10 @@
+.button-group__apply-only {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.filters-drawer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--eds-size-6);
+}
