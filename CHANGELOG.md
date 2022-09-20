@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.1.0](https://github.com/chanzuckerberg/edu-design-system/compare/v5.0.1...v5.1.0) (2022-09-20)
+
+
+### Features
+
+* **filterspopover:** add filters popover ([541e226](https://github.com/chanzuckerberg/edu-design-system/commit/541e2262a3980098f3a97785a39eeaede02391ba))
+
+
+### Bug Fixes
+
+* **baseline-card:** stop clicks outside visible card area ([7913e4b](https://github.com/chanzuckerberg/edu-design-system/commit/7913e4bf0440482b28aebdabf3c3ec12acffa84d))
+
 ### [5.0.1](https://github.com/chanzuckerberg/edu-design-system/compare/v5.0.0...v5.0.1) (2022-09-13)
 
 ## [5.0.0](https://github.com/chanzuckerberg/edu-design-system/compare/v4.0.0...v5.0.0) (2022-09-08)
