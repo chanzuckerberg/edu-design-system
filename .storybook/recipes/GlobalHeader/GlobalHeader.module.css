@@ -50,10 +50,8 @@
 
   &:hover,
   &:focus-visible {
-    background: var(
-      --eds-theme-color-button-primary-brand-background-hover
-    ); /* TODO */
-    border-color: transparent; /* TODO */
+    background: var(--eds-theme-color-button-primary-brand-background-hover);
+    border-color: transparent;
   }
 
   &:focus-visible {
@@ -63,10 +61,8 @@
   @supports not selector(:focus-visible) {
     &:hover,
     &:focus {
-      background: var(
-        --eds-theme-color-button-primary-brand-background-hover
-      ); /* TODO */
-      border-color: transparent; /* TODO */
+      background: var(--eds-theme-color-button-primary-brand-background-hover);
+      border-color: transparent;
     }
 
     &:focus {
