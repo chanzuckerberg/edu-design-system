@@ -80,12 +80,23 @@
   }
 
   &:hover,
-  &:focus {
+  &:focus-visible {
     text-decoration: underline;
   }
 
-  &:focus {
+  &:focus-visible {
     @mixin focus;
+  }
+
+  @supports not selector(:focus-visible) {
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+
+    &:focus {
+      @mixin focus;
+    }
   }
 }
 

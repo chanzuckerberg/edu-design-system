@@ -17,7 +17,13 @@
   display: block;
   width: fit-content; /* 1 */
 
-  &:focus {
+  &:focus-visible {
     @mixin focusInverted;
+  }
+
+  @supports not selector(:focus-visible) {
+    &:focus {
+      @mixin focusInverted;
+    }
   }
 }

@@ -51,8 +51,14 @@
     transition: none;
   }
 }
-.drawer:focus {
+.drawer:focus-visible {
   @mixin focusInside;
+}
+
+@supports not selector(:focus-visible) {
+  .drawer:focus {
+    @mixin focusInside;
+  }
 }
 
 /**

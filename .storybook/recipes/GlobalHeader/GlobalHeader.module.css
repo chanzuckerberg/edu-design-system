@@ -49,15 +49,25 @@
   color: var(--eds-theme-color-text-neutral-default-inverse);
 
   &:hover,
-  &:focus {
-    background: var(
-      --eds-theme-color-button-primary-brand-background-hover
-    ); /* TODO */
-    border-color: transparent; /* TODO */
+  &:focus-visible {
+    background: var(--eds-theme-color-button-primary-brand-background-hover);
+    border-color: transparent;
   }
 
-  &:focus {
+  &:focus-visible {
     @mixin focusInverted;
+  }
+
+  @supports not selector(:focus-visible) {
+    &:hover,
+    &:focus {
+      background: var(--eds-theme-color-button-primary-brand-background-hover);
+      border-color: transparent;
+    }
+
+    &:focus {
+      @mixin focusInverted;
+    }
   }
 
   @media all and (min-width: $eds-bp-xl) {
