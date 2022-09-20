@@ -3,7 +3,7 @@
 \*------------------------------------*/
 
 /**
- * 1) Combination of a trigger and a dropdownmenu
+ * Combination of a trigger and a dropdownmenu
  */
 .button-dropdown {
   display: flex;
@@ -22,16 +22,16 @@
   z-index: var(--eds-z-index-500);
 
   /**
-  * Button dropdown dropdown menu positioned to the top-left of the button
-  */
+   * Button dropdown dropdown menu positioned to the top-left of the button
+   */
   .button-dropdown--top-left & {
     top: initial;
     bottom: 100%;
   }
 
   /**
-  * Button dropdown dropdown menu positioned to the top-right of the button
-  */
+   * Button dropdown dropdown menu positioned to the top-right of the button
+   */
   .button-dropdown--top-right & {
     top: initial;
     bottom: 100%;
@@ -40,16 +40,16 @@
   }
 
   /**
-    * Button dropdown dropdown menu positioned to the bottom-right of the button
-    */
+   * Button dropdown dropdown menu positioned to the bottom-right of the button
+   */
   .button-dropdown--bottom-right & {
     right: initial;
     left: 0;
   }
 
   /**
-    * Button dropdown dropdown menu within active button dropdown.
-    */
+   * Button dropdown dropdown menu within active button dropdown.
+   */
   .button-dropdown.eds-is-active & {
     /* Show the dropdown menu */
     display: block; 

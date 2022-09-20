@@ -45,8 +45,8 @@
  */
 .table__header {
   /**
-     * Table header inside a stacked table.
-     */
+   * Table header inside a stacked table.
+   */
   .table--stacked & {
     display: none;
 
@@ -86,12 +86,12 @@
   }
 
   /**
-  * Table row within zebra table
-  */
+   * Table row within zebra table
+   */
   .table--zebra & {
     /**
-    * Even table rows within zebra table
-    */
+     * Even table rows within zebra table
+     */
     &:nth-child(even) {
       background: var(--eds-theme-color-background-neutral-medium);
     }
@@ -149,9 +149,9 @@
 */
 .table__header-cell,
 /**
-* On table header cells that are sortable, the container is a button, 
-* but the text styling is the same as a non-sortable table header cell
-*/
+ * On table header cells that are sortable, the container is a button, 
+ * but the text styling is the same as a non-sortable table header cell
+ */
 .table__header-cell-button {
   @mixin eds-theme-typography-label-sm;
   padding: var(--eds-size-1) var(--eds-size-1);
@@ -159,8 +159,8 @@
 }
 
 /**
-* Table header cell
-*/
+ * Table header cell
+ */
 .table__header-cell {
   /**
   * Table header cell within table body
@@ -195,10 +195,10 @@
   bottom: 1px;
 }
 
-/*
-* Table header cell contents
-* 1) A wrapper for the title and sort icon. Uses a flex row so that icon remains at the bottom when one or more titles breaks into multiple lines 
-*/
+/**
+ * Table header cell contents
+ * 1) A wrapper for the title and sort icon. Uses a flex row so that icon remains at the bottom when one or more titles breaks into multiple lines 
+ */
 .table__header-cell-contents {
   display: flex;
   align-items: flex-end;
@@ -216,8 +216,8 @@
   }
 
   /**
-     * Condensed table.
-     */
+   * Condensed table.
+   */
   .table--condensed & {
      /*  shrinks padding between table rows. */
     padding: var(--eds-size-1) var(--eds-size-1);
@@ -250,8 +250,8 @@
   }
 
   /**
-     * Header table cells in a stacked table
-     */
+   * Header table cells in a stacked table
+   */
   .table--stacked .table__header & {
     @media all and (max-width: $eds-bp-md) {
       /* stylelint-disable-next-line max-nesting-depth */
@@ -262,10 +262,8 @@
   }
 
   /**
-     * Table cell inside a stacked table
-     * 1) 
-     * 2) 
-     */
+   * Table cell inside a stacked table
+   */
   .table--stacked & {
     display: flex;
     gap: var(--eds-size-1);
@@ -275,10 +273,10 @@
 
     &:before {
     /**
-    * Take data-heading attribute and display
-    *    that value as a block-level title above
-    *    each table cell.
-    */
+     * Take data-heading attribute and display
+     * that value as a block-level title above
+     * each table cell.
+     */
       content: attr(data-heading); 
       display: block;
       margin-right: auto;
@@ -287,9 +285,9 @@
       /* stylelint-disable-next-line max-nesting-depth */
       @media all and (min-width: $eds-bp-md) {
         /**
-        * Hide data-heading on large screens since
-        * table header cells become visible 
-        */
+         * Hide data-heading on large screens since
+         * table header cells become visible 
+         */
         content: none; 
       }
     }
@@ -302,16 +300,15 @@
   }
 
   /**
-  * 1) 
-  * 2) The first cell's column title is not displayed, allowing the first cell's
-  * value to appear as the card's "title".
-  **/
+   * The first cell's column title is not displayed, allowing the first cell's
+   * value to appear as the card's "title".
+   */
   .table--stacked.table--highlight-first-cell & {
     &:first-child {
       /**
-      * When using the stacked and highlight-first-cell variants, the 
-      * first cell in each row gets padding-bottom added on smaller breakpoints.
-      */
+       * When using the stacked and highlight-first-cell variants, the 
+       * first cell in each row gets padding-bottom added on smaller breakpoints.
+       */
       padding-bottom: var(--eds-size-1);
 
       /* stylelint-disable-next-line max-nesting-depth */
@@ -326,8 +323,8 @@
   }
 
   /**
-     * Table cell inside a lined table
-     */
+   * Table cell inside a lined table
+   */
   .table--lined & {
     border-width: var(--eds-theme-border-width);
     border-style: solid;
@@ -335,22 +332,22 @@
   }
 
   /**
-     * First table cell inside a lined table
-     */
+   * First table cell inside a lined table
+   */
   .table--lined &:first-child {
     border-left: none;
   }
 
   /**
-     * Last table cell inside a lined table
-     */
+   * Last table cell inside a lined table
+   */
   .table--lined &:last-child {
     border-right: none;
   }
 
   /**
-     * Table cell inside a lined table's header
-     */
+   * Table cell inside a lined table's header
+   */
   .table--lined .table__header & {
     border-bottom-width: var(--eds-theme-border-width);
 
@@ -360,16 +357,15 @@
   }
 
   /**
-   * Table cell inside a lined table with stacked behavior
-   * 1) 
+   * Table cell inside a lined table with stacked behavior.
    */
   .table--stacked.table--lined & {
     @media all and (max-width: $eds-bp-md) {
       /**
-      * Remove table cell borders on small screens since
-      * cells stack on top of each other and are displayed
-      * as a single cluster with headings
-      */
+       * Remove table cell borders on small screens since
+       * cells stack on top of each other and are displayed
+       * as a single cluster with headings
+       */
       border: 0; 
     }
   }
@@ -404,15 +400,15 @@
     list-style: none;
 
     > li {
-      margin-left: 1rem; /* 1 */
-      text-indent: -1rem; /* 1 */
+      margin-left: 1rem; 
+      text-indent: -1rem; 
     }
   }
 }
 
 /**
- * Table Footer Cell
- */
+  * Table Footer Cell
+  */
 .table__footer-cell {
   padding: var(--eds-size-2);
 }

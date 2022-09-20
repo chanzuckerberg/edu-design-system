@@ -5,14 +5,14 @@
 \*------------------------------------*/
 
 /**
- * 1) The filters checkbox fieldset with legend and various checkbox filters.
+ * The filters checkbox fieldset with legend and various checkbox filters.
  */
 .filters-fieldset {
   margin: 0 0 var(--eds-size-6) 0;
 }
 
 /**
- * 1) The filters checkbox fieldset legend.
+ * The filters checkbox fieldset legend.
  */
 .filters-fieldset__legend {
   @mixin eds-theme-typography-title-sm;
@@ -20,7 +20,7 @@
 }
 
 /**
- * 1) The filters checkboxes.
+ * The filters checkboxes.
  */
 .filters-fieldset__checkboxes > :not(:last-child) {
   margin-bottom: var(--eds-size-2-and-half);

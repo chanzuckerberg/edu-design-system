@@ -3,7 +3,7 @@
 \*------------------------------------*/
 
 /**
- * 1) The filter trigger button.
+ * The filter trigger button.
  */
 .filters__button {
   gap: var(--eds-size-1);

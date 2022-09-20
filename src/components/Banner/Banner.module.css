@@ -16,8 +16,8 @@
 
   background-color: var(--eds-theme-color-neutral-subtle-background);
   /**
-  * Has a bottom margin to accommodate drop shadow
-  */
+   * Has a bottom margin to accommodate drop shadow
+   */
   box-shadow: var(--eds-box-shadow-md); 
   margin-bottom: var(--eds-size-2); 
 
@@ -32,19 +32,18 @@
   justify-items: center;
   border-top-width: var(--eds-border-width-lg);
   /**
-  * The thick border (left for horizontal and top for vertical orientation)
-  * matches the icon color.
-  */
+   * The thick border (left for horizontal and top for vertical orientation)
+   * matches the icon color.
+   */
   border-top-color: var(--messaging-icon-color); 
 }
 
 /**
  * Banner informational icon
- * 1) Icon color matches the thick border (left for horizontal and top for
- *    vertical orientation)
  */
 .banner__icon {
-  color: var(--messaging-icon-color); /* 1 */
+  /* Icon color matches the thick border (left for horizontal and top for vertical orientation) */
+  color: var(--messaging-icon-color);
   --icon-size-default: var(--eds-size-5);
 }
 
@@ -106,10 +105,10 @@
 
   /**
    * Dismissable banner horizontal orientation
-   * 1) Add extra right padding to account for close button
+   * Add extra right padding to account for close button
    */
   .banner--dismissable.banner--horizontal {
-    padding-right: var(--eds-size-4); /* 1 */
+    padding-right: var(--eds-size-4);
   }
 }
 
@@ -163,10 +162,10 @@
   /* Has no drop shadow or visible border so it sits flat on the page */
   box-shadow: none; 
   /**
-  * Instead of removing the border, we replace it with a transparent one.
-  * On windows high contrast mode, the background color will be removed,
-  * but this border will become 100% opacity black to retain visual separation
-  */
+   * Instead of removing the border, we replace it with a transparent one.
+   * On windows high contrast mode, the background color will be removed,
+   * but this border will become 100% opacity black to retain visual separation
+   */
   --messaging-border-color: transparent; 
   /* Remove the bottom margin which is usually there to account for the drop shadow length */
   margin-bottom: 0; 

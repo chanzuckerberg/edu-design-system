@@ -7,12 +7,12 @@
 .overflow-list {
   position: relative;
   /**
-    * Table object body with content overflowed left
-    */
+   * Table object body with content overflowed left
+   */
   &.eds-is-overflow-left {
     /**
-       * Right overflow gradient for the overflow list
-       */
+     * Right overflow gradient for the overflow list
+     */
     /* stylelint-disable-next-line max-nesting-depth */
     &:before {
       content: '';
@@ -32,12 +32,12 @@
   }
 
   /**
-      * Table object body with content overflowed right
-      */
+   * Table object body with content overflowed right
+   */
   &.eds-is-overflow-right {
     /**
-       * Right overflow gradient for the overflow list
-       */
+     * Right overflow gradient for the overflow list
+     */
     /* stylelint-disable-next-line max-nesting-depth */
     &:after {
       content: '';

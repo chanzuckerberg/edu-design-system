@@ -5,7 +5,7 @@
 \*------------------------------------*/
 
 /**
- * 1) List of links
+ * List of links
  */
 .link-list {
   @mixin reset;

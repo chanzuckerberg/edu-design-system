@@ -8,8 +8,8 @@
   padding-bottom: var(--eds-size-8);
 
   /**
-     * Main element inside fixed layout
-     */
+   * Main element inside fixed layout
+   */
   .eds-l-sidebar--fixed & {
     padding-top: var(--eds-size-4);
   }

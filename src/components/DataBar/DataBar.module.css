@@ -6,7 +6,6 @@
 
 /**
  * The data bar represents the relative completion of a task.
- * 1) Rounds the sides rather than making the bar elliptical.
  */
 .data-bar {
   --data-bar-height: var(--eds-size-2);
@@ -16,7 +15,8 @@
 
   border: var(--eds-theme-color-border-neutral-default) solid
     var(--eds-theme-border-width);
-  border-radius: var(--eds-border-radius-full); /* 1 */
+  /* Rounds the sides rather than making the bar elliptical. */  
+  border-radius: var(--eds-border-radius-full); 
 }
 
 /**

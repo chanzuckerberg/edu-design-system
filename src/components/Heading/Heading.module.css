@@ -6,11 +6,9 @@
 
 /**
  * Remove top and bottom margins applied by browser for headings.
- * 1) Needs `:where` pseudoclass to reduce specificity so class overrides 
- *    for margin can happen where used.
  */
 :where(.heading) {
-  /* 1 */
+  /* Needs `:where` pseudoclass to reduce specificity so class overrides for margin can happen where used. */
   margin-top: 0;
   margin-bottom: 0;
 }

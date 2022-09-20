@@ -53,13 +53,13 @@
 
 /**
  * Card Inverted
- * 1) Used on dark backgrounds to lighten the text color and remove a box shadow
  */
 .card--inverted {
   color: var(--eds-theme-color-text-neutral-default-inverse);
-  background: transparent; /* 1 */
+  /* Used on dark backgrounds to lighten the text color and remove a box shadow */
+  background: transparent;
   border-color: var(--eds-theme-color-border-neutral-strong);
-  box-shadow: none; /* 1 */
+  box-shadow: none; 
 }
 
 /**

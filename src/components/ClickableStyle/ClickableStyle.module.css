@@ -46,7 +46,7 @@
 
 /**
  * Margin 0 added becuase Safari has margin on buttons.
- * 1) Needs `:where` pseudoclass to reduce specificity so class overrides
+ * Needs `:where` pseudoclass to reduce specificity so class overrides
  *    for margin can happen where used.
  */
 :where(.clickable-style) {
@@ -483,9 +483,9 @@
   /* 2px padding gives the text breathing room in the focus state */
   padding: 2px;
   /**
-  * -2px margin compensates for the padding so the link doesn't have too much space between it
-  *  and surrounding text
-  */ 
+   * -2px margin compensates for the padding so the link doesn't have too much space between it
+   *  and surrounding text
+   */ 
   margin: -2px; 
 }
 
@@ -543,7 +543,7 @@
 
 /**
  * Full-width clickable style
- * 1) A block clickable style that fills 100% of the width of its container
+ * A block clickable style that fills 100% of the width of its container
  */
 .clickable-style--full-width {
   width: 100%;

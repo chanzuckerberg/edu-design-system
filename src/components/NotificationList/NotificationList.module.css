@@ -4,7 +4,7 @@
 \*------------------------------------*/
 
 /**
- * 1)  Notification list contains notification items, a count of unread notifications, and a button to mark all notifications as read
+ * Notification list contains notification items, a count of unread notifications, and a button to mark all notifications as read
  */
 .notification-list {
   @mixin reset;

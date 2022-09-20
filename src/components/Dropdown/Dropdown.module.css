@@ -118,9 +118,9 @@
   flex-shrink: 0; 
   width: var(--eds-size-6);
   /**
-    * Position the contained icon. It's shifted slightly to the right from center so that the 
-    * checkmark's visual "center of mass" is centered. 
-    */
+   * Position the contained icon. It's shifted slightly to the right from center so that the 
+   * checkmark's visual "center of mass" is centered. 
+   */
   padding-left: var(--eds-size-1); 
   display: inline-flex;
   align-items: center;
@@ -132,9 +132,9 @@
  */
 .option__content {
   /**
-    * Wrap overflowing content onto multiple lines. We're doing this instead of truncating so that
-    * users can still see all the content. 
-    */
+   * Wrap overflowing content onto multiple lines. We're doing this instead of truncating so that
+   * users can still see all the content. 
+   */
   overflow-wrap: normal; 
   word-break: normal;
 }

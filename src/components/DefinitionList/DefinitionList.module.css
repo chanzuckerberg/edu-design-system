@@ -4,7 +4,7 @@
 \*------------------------------------*/
 
 /**
- * 1) Definition list (`dl`) that contains a definition term (`dt`) and a definition description (`dd`)
+ * Definition list (`dl`) that contains a definition term (`dt`) and a definition description (`dd`)
  */
 .definition-list { 
   @mixin reset;

@@ -9,7 +9,7 @@
  */
 
 /**
- * 1) Dropdown menu.
+ * Dropdown menu.
  */
 .dropdown-menu {
   /* Set a minimum width for the dropdown menu. */
@@ -20,17 +20,17 @@
   box-shadow: var(--eds-box-shadow-md);
 
   /**
-    * Dropdown menu within active dropdown menu item.
-    */
+   * Dropdown menu within active dropdown menu item.
+   */
   .dropdown-menu__item.eds-is-active & {
     visibility: visible;
     transition-delay: 0s;
   }
 
   /**
-    * Dropdown menu within dropdown menu item align top left
-    * 1) Position nested dropdown menu to the left and aligned at the bottom of dropdown menu item
-    */
+   * Dropdown menu within dropdown menu item align top left
+   * Position nested dropdown menu to the left and aligned at the bottom of dropdown menu item
+   */
   .dropdown-menu__item--align-top-left > & {
     top: auto;
     bottom: 0;
@@ -85,8 +85,8 @@
   }
 
   /**
-  * Dropdown menu link within a lined dropdown menu item.
-  */
+   * Dropdown menu link within a lined dropdown menu item.
+   */
   .dropdown-menu__item--lined & {
     /* Add bottom border to the item. */
     border-bottom: 1px solid var(--eds-theme-color-border-neutral-subtle); 
