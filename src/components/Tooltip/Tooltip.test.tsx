@@ -44,7 +44,7 @@ describe('<Tooltip />', () => {
   it('should display warning message when attempting to use dark variant', () => {
     render(<Interactive variant="dark" />);
     expect(warnMock).toHaveBeenCalledTimes(1);
-    expect(warnMock).toBeCalledWith(
+    expect(warnMock).toHaveBeenCalledWith(
       'The dark variant is deprecated and will be removed in an upcoming release. Please use the default light variant instead.',
     );
   });

@@ -50,7 +50,7 @@ describe('<Text />', () => {
       .mockImplementation();
     render(<Text variant="info">Some Text 2</Text>);
     expect(consoleWarnMock).toHaveBeenCalledTimes(1);
-    expect(consoleWarnMock).toBeCalledWith(
+    expect(consoleWarnMock).toHaveBeenCalledWith(
       'Info variant is deprecated, please consider another variant.',
     );
     consoleWarnMock.mockRestore();
