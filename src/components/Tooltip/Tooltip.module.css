@@ -50,14 +50,6 @@
 }
 
 /**
- * 1) When childNotInteractive is true and alignment is top or bottom
- */
-.tooltip__child-not-interactive-wrapper--vertical {
-  /* Needed for the top and bottom alignment to work properly */
-  display: inline-flex;
-}
-
-/**
  * 1) Add arrows
  */
 .tooltip :global(.tippy-arrow) {
