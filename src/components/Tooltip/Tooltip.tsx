@@ -144,10 +144,6 @@ export const Tooltip = ({
   if (childNotInteractive) {
     children = (
       <span
-        className={clsx(
-          (align === 'bottom' || align === 'top') &&
-            styles['tooltip__child-not-interactive-wrapper--vertical'],
-        )}
         data-testid="disabled-child-tooltip-wrapper"
         // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
         tabIndex={0}
