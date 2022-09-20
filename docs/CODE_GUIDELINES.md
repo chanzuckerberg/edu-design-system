@@ -133,14 +133,8 @@ However, we currently support some browser versions that do not support the focu
   background: var(--eds-theme-color-background-brand-primary-strong);
 
   &:hover,
-  &:focus-visible {
+  &:active {
     background: var(--eds-theme-color-background-brand-primary-strong-hover);
-  }
-
-  @supports not selector(:focus-visible) {
-    &:focus {
-      background: var(--eds-theme-color-background-brand-primary-strong-hover);
-    }
   }
 
   &:after {
