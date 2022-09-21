@@ -20,10 +20,6 @@ export interface Props {
    */
   elevation?: 'raised';
   /**
-   * Card rendered on a dark backgorund
-   */
-  inverted?: boolean;
-  /**
    * Property passed in to style draggable project card
    */
   isDragging?: boolean;
@@ -51,14 +47,12 @@ export const Card = ({
   className,
   children,
   elevation,
-  inverted,
   isDragging,
   orientation,
   ...other
 }: Props) => {
   const componentClassName = clsx(
     styles['card'],
-    inverted && styles['card--inverted'],
     orientation && styles['card--horizontal'],
     isDragging && styles['eds-is-dragging'],
     elevation === 'raised' && styles['card--raised'],

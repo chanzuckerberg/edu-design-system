@@ -75,10 +75,6 @@ export interface Props {
    */
   tabsOnClick?: () => void;
   /**
-   * Tabs rendered on a dark backgorund
-   */
-  inverted?: boolean;
-  /**
    * Overflow variants
    * - **inverted** changes the overflow shadow to the inverted color
    */
@@ -106,7 +102,6 @@ export const Tabs = ({
   className,
   hideLegend,
   id,
-  inverted,
   onChange,
   overflow,
   radioLegend,
@@ -281,11 +276,7 @@ export const Tabs = ({
     }
   }
 
-  const componentClassName = clsx(
-    styles['tabs'],
-    inverted && styles['tabs--inverted'],
-    className,
-  );
+  const componentClassName = clsx(styles['tabs'], className);
 
   const headerClassName = clsx(
     styles['tabs__header'],

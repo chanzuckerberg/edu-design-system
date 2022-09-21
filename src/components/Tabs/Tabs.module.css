@@ -9,13 +9,6 @@
  */
 
 /**
- * Inverted variant.
- */
-.tabs--inverted {
-  color: var(--eds-theme-color-text-neutral-default-inverse);
-}
-
-/**
  * Tabs header
  *
  * Contains the tab list.
@@ -25,10 +18,6 @@
   overflow-x: auto;
   position: relative;
   padding-bottom: var(--eds-size-2);
-
-  .tabs--inverted & {
-    background: none;
-  }
 }
 
 /**
@@ -109,10 +98,6 @@
     transition: none;
   }
 
-  .tabs--inverted & {
-    color: var(--eds-theme-color-text-neutral-default-inverse);
-  }
-
   /**
    * Tabs link within active tabs item
    */
@@ -120,11 +105,5 @@
     color: var(--eds-theme-color-text-link-brand);
     box-shadow: inset 0 calc(var(--eds-border-width-md) * -1) 0 0
       var(--eds-theme-color-border-brand-primary-strong);
-
-    .tabs--inverted & {
-      color: var(--eds-theme-color-text-neutral-default-inverse);
-      box-shadow: inset 0 calc(var(--eds-border-width-md) * -1) 0 0
-        var(--eds-theme-color-border-brand-primary-subtle);
-    }
   }
 }

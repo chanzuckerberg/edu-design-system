@@ -57,7 +57,7 @@ export interface Props {
    * Overflow variants
    * - **inverted** changes the overflow shadow to the inverted color
    */
-  overflow?: 'inverted';
+  overflow?: 'inverted' /** AH-Strip? */;
   /**
    * Indicates that field is required for form to be successfully submitted
    */

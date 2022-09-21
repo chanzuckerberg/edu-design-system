@@ -13,13 +13,6 @@
 }
 
 /**
- * Inverted Checkbox Field
- */
-.checkbox-field--inverted {
-  color: var(--eds-theme-color-body-foreground-inverted);
-}
-
-/**
  * Checkbox field body
  * 
  * Contains the list of checkbox options

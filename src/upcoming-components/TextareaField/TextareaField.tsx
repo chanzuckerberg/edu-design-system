@@ -63,10 +63,6 @@ export interface Props {
     | 'numeric'
     | 'decimal';
   /**
-   * Inverted variant for dark backgrounds
-   */
-  inverted?: boolean;
-  /**
    * Error state of the form field
    */
   isError?: boolean;
@@ -137,7 +133,6 @@ export const TextareaField = ({
   id,
   inputMode,
   isError,
-  inverted,
   label,
   maxLength,
   name,
@@ -161,11 +156,7 @@ export const TextareaField = ({
     ? ariaDescribedBy || generatedAriaDescribedById
     : undefined;
 
-  const componentClassName = clsx(
-    styles['textarea-field'],
-    inverted && styles['textarea-field--inverted'],
-    className,
-  );
+  const componentClassName = clsx(styles['textarea-field'], className);
 
   return (
     <div className={componentClassName}>
@@ -215,11 +206,7 @@ export const TextareaField = ({
         {iconName && <Icon name={iconName} purpose="decorative" />}
       </div>
       {fieldNote && (
-        <FieldNote
-          id={ariaDescribedByVar}
-          inverted={inverted}
-          isError={isError}
-        >
+        <FieldNote id={ariaDescribedByVar} isError={isError}>
           {fieldNote}
         </FieldNote>
       )}

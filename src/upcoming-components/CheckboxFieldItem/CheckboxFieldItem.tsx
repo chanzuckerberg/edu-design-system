@@ -22,10 +22,6 @@ export interface Props {
    */
   id?: string;
   /**
-   * Inverted variant for dark backgrounds
-   */
-  inverted?: boolean;
-  /**
    /**
     * HTML name attribute for the checkbox
     */
@@ -70,7 +66,6 @@ export const CheckboxFieldItem = ({
   disabled,
   readOnly,
   text,
-  inverted,
   ...other
 }: Props) => {
   /**
@@ -113,11 +108,7 @@ export const CheckboxFieldItem = ({
     setCheckedState(!checkboxChecked); /* 1 */
   }
 
-  const componentClassName = clsx(
-    'checkbox-field__item',
-    inverted && styles['checkbox-field__item--inverted'],
-    className,
-  );
+  const componentClassName = clsx('checkbox-field__item', className);
   return (
     <li className={componentClassName}>
       <Checkbox

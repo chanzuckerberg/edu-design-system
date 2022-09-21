@@ -41,16 +41,3 @@ export const Horizontal: StoryObj<Args> = {
     orientation: 'horizontal',
   },
 };
-
-export const Inverted: StoryObj<Args> = {
-  args: {
-    inverted: true,
-  },
-  decorators: [
-    (Story) => (
-      <div style={{ backgroundColor: 'black', padding: '1rem' }}>
-        <Story />
-      </div>
-    ),
-  ],
-};
