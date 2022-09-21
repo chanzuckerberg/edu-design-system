@@ -84,45 +84,44 @@ export const DataBar = ({
 
   /**
    * Manages focus of the progress bar elements and implements left and right arrow key interaction.
-   * 1) Used to set tabIndex of the segment components.
-   * 2) Collects a list of element refs to set focus.
-   * 3) Manage tabIndex to allow focus before setting focus.
-   * 4) Set focus on the next or previous element respective to the arrow key interaction.
    */
-  /* 1 */
+  /* Used to set tabIndex of the segment components. */
   const [focusableElementIndex, setFocusableElementIndex] = React.useState(0);
-  const segmentsRef = React.useRef<Array<HTMLDivElement | null>>([]); /* 2 */
+  /* Collects a list of element refs to set focus. */
+  const segmentsRef = React.useRef<Array<HTMLDivElement | null>>([]);
   const handleOnKeyDown = (
     e: React.KeyboardEvent<HTMLElement>,
     index: number,
   ) => {
     if (e.key === 'ArrowLeft' && index > 0) {
-      setFocusableElementIndex(index - 1); /* 3 */
-      segmentsRef.current[index - 1]?.focus(); /* 4 */
+      /* Manage tabIndex to allow focus before setting focus. */
+      setFocusableElementIndex(index - 1);
+      /* Set focus on the next or previous element respective to the arrow key interaction. */
+      segmentsRef.current[index - 1]?.focus();
     }
     if (e.key === 'ArrowRight' && index < segmentComponents.length - 1) {
-      setFocusableElementIndex(index + 1); /* 3 */
-      segmentsRef.current[index + 1]?.focus(); /* 4 */
+      /*  Manage tabIndex to allow focus before setting focus. */
+      setFocusableElementIndex(index + 1);
+      /* Set focus on the next or previous element respective to the arrow key interaction. */
+      segmentsRef.current[index + 1]?.focus();
     }
   };
 
   /**
-   * Adds a segment component to the segmentComponents array
-   * 1) Keeps a running accumulator to prevent adding any more segments if the accumulated value has already met max.
-   * 2) Ensures a minimumum width of 5% for the segment.
-   * 3) Rounds the right side of the segment if it completes the data bar.
+   * Adds a segment component to the segmentComponents array.
    */
   for (
-    let index = 0, accumulator = 0 /* 1 */;
+    /* Keeps a running accumulator to prevent adding any more segments if the accumulated value has already met max. */
+    let index = 0, accumulator = 0;
     index < segments.length && accumulator < max;
     index++
   ) {
     const segment = segments[index];
     accumulator += segment.value;
-
-    const percentage = Math.max(5, (segment.value / max) * 100); /* 2 */
-
-    const isRoundRight = accumulator >= max; /* 3 */
+    /* Ensures a minimumum width of 5% for the segment. */
+    const percentage = Math.max(5, (segment.value / max) * 100);
+    /* Rounds the right side of the segment if it completes the data bar. */
+    const isRoundRight = accumulator >= max;
     segmentComponents.push(
       <DataBarSegment
         aria-label={segment.text}

@@ -18,7 +18,7 @@ export interface Props {
  * import {Main} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * Component defines the Main element inside layout.
  */
 export const Main = ({ children, className, ...other }: Props) => {
   const componentClassName = clsx(styles['main'], className);

@@ -19,11 +19,11 @@
 }
 
 /**
- * Button icon within show hide component
- * 1) Add transition for icon flip when activated
+ * Button icon within show hide component.
  */
 .show-hide svg {
-  transition: transform var(--eds-anim-fade-long) var(--eds-anim-ease); /* 1 */
+  /* Add transition for icon flip when activated. */
+  transition: transform var(--eds-anim-fade-long) var(--eds-anim-ease); 
 
   @media screen and (prefers-reduced-motion) {
     transition: none;
@@ -31,9 +31,9 @@
 }
 
 /**
- * Button icon within active show hide component
- * 1) Rotate icon 180 deg when show hide component is open
+ * Button icon within active show hide component.
  */
 .show-hide.eds-is-active svg {
-  transform: rotate(90deg); /* 1 */
+  /* Rotate icon 180 deg when show hide component is open. */
+  transform: rotate(90deg); 
 }

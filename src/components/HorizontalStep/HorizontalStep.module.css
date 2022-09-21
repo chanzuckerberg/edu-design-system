@@ -28,7 +28,7 @@
 
 /**
  * Inherits the color from the parent
- * 1) Changes icon from black to gray by default
+ * 1) Changes icon from black to gray by default.
  */
 .horizontal-step__number-icon {
   color: inherit;
@@ -39,14 +39,14 @@
 }
 
 /**
- * Horizontal Step Complete
+ * Horizontal Step Complete.
  */
 .horizontal-step__complete-icon {
   fill: var(--eds-theme-color-icon-utility-success);
 }
 
 /**
- * Horizontal Step Incomplete
+ * Horizontal Step Incomplete.
  */
 .horizontal-step__incomplete-icon {
   margin-left: var(--eds-size-1);
@@ -55,15 +55,15 @@
 }
 
 /**
- * Horizontal Step Text
- * 1) Hides text for smaller screen sizes.
- * 2) Hides overflow text with ellipsis.
+ * Horizontal Step Text.
  */
 .horizontal-step__text {
-  display: none; /* 1 */
+   /* Hides text for smaller screen sizes. */
+  display: none;
   @media all and (min-width: $eds-bp-md) {
     display: inline;
-    white-space: nowrap; /* 2 */
+    /* Hides overflow text with ellipsis. */
+    white-space: nowrap; 
     overflow: hidden;
     text-overflow: ellipsis;
   }

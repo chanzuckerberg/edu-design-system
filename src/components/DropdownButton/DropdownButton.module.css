@@ -6,12 +6,11 @@
 
 /**
  * The button to trigger the display of the dropdown.
- * 1) Place button text on the left and the expand more icon on the right.
- * 2) Allow Dropdown font to shrink in contexts where body font size is smaller.
  */
 .dropdown-button {
   @mixin eds-theme-typography-body-text-md;
-  font-size: inherit; /* 2 */
+  /* Allow Dropdown font to shrink in contexts where body font size is smaller. */
+  font-size: inherit; 
 
   width: 100%;
   padding: var(--eds-size-1);
@@ -21,7 +20,8 @@
   border-radius: var(--eds-border-radius-md);
 
   display: flex;
-  justify-content: space-between; /* 1 */
+  /* Place button text on the left and the expand more icon on the right. */
+  justify-content: space-between; 
   align-items: center;
 
   cursor: pointer;
@@ -31,14 +31,14 @@
 
 /**
  * The caret icon to decorate the dropdown button, animated to rotate.
- * 1) Turns off animation if user prefers reduced motion
  */
 .dropdown-button__icon {
   transform: rotate(0);
 
   transition: transform var(--eds-anim-move-medium) ease-out;
   @media (prefers-reduced-motion) {
-    transition: none; /* 1 */
+    /* Turns off animation if user prefers reduced motion. */
+    transition: none; 
   }
 }
 

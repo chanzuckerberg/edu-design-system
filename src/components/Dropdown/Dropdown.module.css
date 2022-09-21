@@ -39,13 +39,12 @@
 }
 
 /**
- * The container for the individual dropdown options.
- * 1) Ensures the options display over the underlying body elements.
- * 2) Allow Dropdown font to shrink in contexts where body font size is smaller.
+ * The container for the individual dropdown options. 
  */
 .dropdown__options {
   @mixin eds-theme-typography-body-text-md;
-  font-size: inherit; /* 2 */
+  /* Allow Dropdown font to shrink in contexts where body font size is smaller. */
+  font-size: inherit; 
 
   position: absolute;
 
@@ -56,8 +55,8 @@
 
   border-radius: var(--eds-border-radius-md);
   box-shadow: var(--eds-box-shadow-md);
-
-  z-index: var(--eds-z-index-100); /* 1 */
+  /* Ensures the options display over the underlying body elements. */
+  z-index: var(--eds-z-index-100); 
 }
 
 /**
@@ -76,14 +75,13 @@
 
 /**
  * The individual dropdown option of a collection of options.
- * 1) Allow the option text and the selected icon to be easily aligned.
  */
 .dropdown__option {
   cursor: pointer;
   padding: var(--eds-size-1) var(--eds-size-3) var(--eds-size-1)
     var(--eds-size-6);
-
-  display: flex; /* 1 */
+  /* Allow the option text and the selected icon to be easily aligned. */
+  display: flex; 
 }
 
 /**
@@ -113,28 +111,30 @@
 /**
  * Wraps the check icon that indicates a selected option.
  * Required even if option is unselected to prevent the option content from shifting in position.
- * 1) Take up the same amount of space as an unselected option's padding-left.
- * 2) Position the contained icon. It's shifted slightly to the right from center so that the 
- *    checkmark's visual "center of mass" is centered.
  */
 .selected-icon__container {
   color: var(--eds-theme-color-icon-brand-primary);
-
-  flex-shrink: 0; /* 1 */
+  /* Take up the same amount of space as an unselected option's padding-left. */
+  flex-shrink: 0; 
   width: var(--eds-size-6);
-
-  padding-left: var(--eds-size-1); /* 2 */
+  /**
+   * Position the contained icon. It's shifted slightly to the right from center so that the 
+   * checkmark's visual "center of mass" is centered. 
+   */
+  padding-left: var(--eds-size-1); 
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
 
 /**
- * The content of the dropdown option
- * 1) Wrap overflowing content onto multiple lines. We're doing this instead of truncating so that
- *    users can still see all the content.
+ * The content of the dropdown option.
  */
 .option__content {
-  overflow-wrap: normal; /* 1 */
+  /**
+   * Wrap overflowing content onto multiple lines. We're doing this instead of truncating so that
+   * users can still see all the content. 
+   */
+  overflow-wrap: normal; 
   word-break: normal;
 }

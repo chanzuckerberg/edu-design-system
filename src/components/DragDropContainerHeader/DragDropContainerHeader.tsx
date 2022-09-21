@@ -11,6 +11,10 @@ export interface Props {
   className?: string;
 }
 
+/**
+ * Component that contains header section for the container which consists of drag and drop components.
+ */
+
 export const DragDropContainerHeader = ({
   className,
   children,

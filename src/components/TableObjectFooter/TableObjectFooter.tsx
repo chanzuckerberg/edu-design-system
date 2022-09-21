@@ -18,7 +18,7 @@ export interface Props {
  * import {TableObjectFooter} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * TableObjectFooter component represents the footer section of the TableObject container.
  */
 export const TableObjectFooter = ({ children, className, ...other }: Props) => {
   return (

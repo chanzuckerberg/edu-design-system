@@ -55,7 +55,7 @@ export interface NewState {
 }
 
 /**
- * A flexible Drag and Drop component that allows items to be dragged and dropped in containers
+ * A flexible Drag and Drop component that allows items to be dragged and dropped in containers.
  */
 export const DragDrop = ({
   className,

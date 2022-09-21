@@ -3,7 +3,7 @@
 \*------------------------------------*/
 
 /**
- * 1) Global container for the header component. This helps set the stage for header recipes across applications
+ * Global container for the header component. This helps set the stage for header recipes across applications
  */
 .header {
   display: flex;
@@ -31,8 +31,7 @@
 }
 
 /**
- * Container around sticky header
- * 1) This is added to
+ * Container around sticky header.
  */
 .header-sticky-container {
   height: 100vh;
@@ -49,9 +48,9 @@
 }
 
 /**
-* Pinned sticky header
-* 1) Pins the sticky header to the top of the page. Transitions in from above the viewport
-*/
+ * Pinned sticky header
+ * 1) Pins the sticky header to the top of the page. Transitions in from above the viewport.
+ */
 .header--sticky.eds-is-pinned {
   @media all and (max-width: $eds-bp-xl) {
     position: fixed;
@@ -60,9 +59,9 @@
 }
 
 /**
-* Sticky header with scrolled class applied
-* 1) Class is applied when the sticky header gets pinned/unpinned and animation is needed
-*/
+ * Sticky header with scrolled class applied
+ * 1) Class is applied when the sticky header gets pinned/unpinned and animation is needed
+ */
 .header--sticky.eds-is-scrolled {
   @media all and (max-width: $eds-bp-xl) {
     transition: transform var(--eds-anim-fade-quick) var(--eds-anim-ease);
@@ -70,12 +69,12 @@
 }
 
 /**
-* Unpinned sticky header
-* 1) Tuck header above the viewport to be pulled down when the pinned class is applied
-*/
+ * Unpinned sticky header.
+ */
 .header--sticky.eds-is-unpinned {
   @media all and (max-width: $eds-bp-xl) {
     position: fixed;
-    transform: translateY(-100%); /* 1 */
+    /* Tuck header above the viewport to be pulled down when the pinned class is applied. */
+    transform: translateY(-100%); 
   }
 }

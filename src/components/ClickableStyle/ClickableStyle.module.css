@@ -5,29 +5,29 @@
 \*------------------------------------*/
 
 /**
- * 1) Styled clickable element that should look like a button or link
- * 2) Defaults to primary variant
- * 3) Adds a gap between children to automatically handle spacing between icons and text
- * 4) Removes the underline in the case that the rendered element is an <a> tag
- * 5) Adds default size for icons passed in for consistency
+ * 1) Styled clickable element that should look like a button or link.
+ * 2) Defaults to primary variant.
  */
 .clickable-style {
   @mixin eds-theme-typography-button-label;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  gap: 0.75rem; /* 3 */
+  /* Adds a gap between children to automatically handle spacing between icons and text. */
+  gap: 0.75rem; 
   border-width: var(--eds-theme-border-width);
   border-style: solid;
   border-radius: var(--eds-border-radius-md);
   cursor: pointer;
-  text-decoration: none; /* 4 */
+  /* Removes the underline in the case that the rendered element is an <a> tag. */
+  text-decoration: none;
   transition-property: color, background-color, border-color;
   transition-duration: var(--eds-anim-fade-quick);
   transition-timing-function: var(--eds-anim-ease);
 
   svg {
-    --icon-size-default: 2em; /* 5 */
+    /* Adds default size for icons passed in for consistency. */
+    --icon-size-default: 2em; 
     transition: color var(--eds-anim-fade-quick) var(--eds-anim-ease);
 
     @media screen and (prefers-reduced-motion) {
@@ -52,7 +52,7 @@
 
 /**
  * Margin 0 added becuase Safari has margin on buttons.
- * 1) Needs `:where` pseudoclass to reduce specificity so class overrides
+ * Needs `:where` pseudoclass to reduce specificity so class overrides
  *    for margin can happen where used.
  */
 :where(.clickable-style) {
@@ -484,13 +484,15 @@
 /**
  * 1) Needs `:where` pseudoclass to reduce specificity so class overrides
  *    for margin can happen where used.
- * 2) 2px padding gives the text breathing room in the focus state
- * 3) -2px margin compensates for the padding so the link doesn't have too much space between it
- *    and surrounding text
  */
 :where(.clickable-style--link) {
-  padding: 2px; /* 2 */
-  margin: -2px; /* 3 */
+  /* 2px padding gives the text breathing room in the focus state */
+  padding: 2px;
+  /**
+   * -2px margin compensates for the padding so the link doesn't have too much space between it
+   *  and surrounding text
+   */ 
+  margin: -2px; 
 }
 
 /**
@@ -553,7 +555,7 @@
 
 /**
  * Full-width clickable style
- * 1) A block clickable style that fills 100% of the width of its container
+ * A block clickable style that fills 100% of the width of its container
  */
 .clickable-style--full-width {
   width: 100%;
