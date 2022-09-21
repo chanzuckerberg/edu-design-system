@@ -45,8 +45,14 @@
   display: flex;
   @mixin textLink;
 
-  &:focus {
+  &:focus-visible {
     @mixin focus;
+  }
+
+  @supports not selector(:focus-visible) {
+    &:focus {
+      @mixin focus;
+    }
   }
 
   /**

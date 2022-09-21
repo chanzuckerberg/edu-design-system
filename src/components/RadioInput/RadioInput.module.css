@@ -42,9 +42,16 @@
   /* Creates space for the border so that there's no jitter when the focus border is visible. */
   border: var(--eds-border-width-sm) solid transparent; 
 }
-.radio__input:focus + .radio__icon {
+.radio__input:focus-visible + .radio__icon {
   border: var(--eds-border-width-sm) solid var(--eds-theme-color-focus-ring);
-  border-radius: 9999px;
+  border-radius: var(--eds-border-radius-full);
+}
+
+@supports not selector(:focus-visible) {
+  .radio__input:focus + .radio__icon {
+    border: var(--eds-border-width-sm) solid var(--eds-theme-color-focus-ring);
+    border-radius: var(--eds-border-radius-full);
+  }
 }
 
 /**

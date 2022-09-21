@@ -16,6 +16,10 @@ export type PopoverContentProps = {
   /**
    * Custom classname for additional styles for the scroll area.
    */
+  bodyClassName?: string;
+  /**
+   * Custom classname for additional styles for the entire popover content.
+   */
   className?: string;
   /**
    * Displays arrow that points to the popover trigger.
@@ -50,6 +54,7 @@ export type PopoverContentProps = {
  */
 export const PopoverContent = ({
   arrowClassName,
+  bodyClassName,
   children,
   className,
   showArrow,
@@ -63,10 +68,14 @@ export const PopoverContent = ({
     ...other,
     ref: setPopperElement,
     style: popperStyles,
-    className: clsx(styles['popover-content']),
   };
 
-  const componentClassName = clsx(styles['popover-content__main'], className);
+  const componentClassName = clsx(styles['popover-content'], className);
+
+  const bodyComponentClassName = clsx(
+    styles['popover-content__body'],
+    bodyClassName,
+  );
 
   const arrowComponentClassName = clsx(
     styles['popover-content__arrow'],
@@ -77,9 +86,9 @@ export const PopoverContent = ({
     <HeadlessPopover.Panel
       {...allProps}
       as="article"
-      className={styles['popover-content']}
+      className={componentClassName}
     >
-      <div className={componentClassName}>{children}</div>
+      <div className={bodyComponentClassName}>{children}</div>
       {showArrow && (
         <div
           aria-hidden

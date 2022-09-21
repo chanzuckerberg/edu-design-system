@@ -81,8 +81,14 @@
   background-color: var(--eds-theme-color-text-link-strong);
   cursor: pointer;
 
-  &:focus {
+  &:focus-visible {
     @mixin focus;
+  }
+
+  @supports not selector(:focus-visible) {
+    &:focus {
+      @mixin focus;
+    }
   }
 
   /*

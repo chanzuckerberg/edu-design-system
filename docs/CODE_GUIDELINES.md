@@ -98,10 +98,30 @@ EDS uses [PostCSS Nested](https://github.com/postcss/postcss-nested) to provide 
 ```scss
 .primary-nav {
   /**
-    * 1) On larger displays, convert to a horizontal list
+    * On larger displays, convert to a horizontal list
     */
   @media all and (min-width: $eds-bp-md) {
     display: flex;
+  }
+}
+```
+
+#### Focus states
+
+We use focus-visible for most focus states. This ensures that the focus state will appear when the user is interacting with an element using a keyboard, but the focus state will not be present if the user if interacting with the element using a mouse. Exceptions to this rule include situations where the focus state also communicates to users that they are in some sort of edit state, e.g. when typing in an input field.
+
+However, we currently support some browser versions that do not support the focus-visible CSS feature, so we also use a fallback block in conjunciton with focus-visible.
+
+```scss
+.button--primary {
+  &:focus-visible {
+    @mixin focus;
+  }
+
+  @supports not selector(:focus-visible) {
+    &:focus {
+      @mixin focus;
+    }
   }
 }
 ```
@@ -113,7 +133,7 @@ EDS uses [PostCSS Nested](https://github.com/postcss/postcss-nested) to provide 
   background: var(--eds-theme-color-background-brand-primary-strong);
 
   &:hover,
-  &:focus {
+  &:active {
     background: var(--eds-theme-color-background-brand-primary-strong-hover);
   }
 
@@ -182,7 +202,7 @@ Examples:
 
 ### CSS Comments
 
-EDS uses the following commenting conventions, which take much inspiration from [these commenting guidelines](https://cssguidelin.es/#commenting).
+CSS comments should be added inline above the styles it's referring to or above the block when it applies to the whole block or class name format.
 
 For example:
 
@@ -198,16 +218,17 @@ For example:
 }
 
 /**
- * Full width button
- * 1) Button should take up the full width of the container it lives within
- * 2) Pushes the button away from the other content because it lives in a flexbox container
- * 3) I know this a weird magic number, but [succinct-but-clear explanation]
+ * Full width button.
+ *
+ * Class is doubled to increase specificity.
  */
-.button--full-width {
+.button--full-width.button--full-width {
   background: red;
-  margin-right: auto; /* 2 */
-  width: 100%; /* 1 */
-  height: 37px; /* 3 */
+  /* Pushes the button away from the other content because it lives in a flexbox container */
+  margin-right: auto;
+  width: 100%;
+  /* I know this a weird magic number, but [succinct-but-clear explanation] */
+  height: 37px;
 }
 ```
 

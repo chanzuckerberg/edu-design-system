@@ -35,8 +35,14 @@
     }
   }
 
-  &:focus {
+  &:focus-visible {
     @mixin focus;
+  }
+
+  @supports not selector(:focus-visible) {
+    &:focus {
+      @mixin focus;
+    }
   }
 
   @media screen and (prefers-reduced-motion) {
@@ -499,8 +505,14 @@
     text-decoration-color: var(--eds-theme-color-text-link-strong);
   }
 
-  &:focus {
+  &:focus-visible {
     background-color: var(--eds-theme-color-text-link-default); /* 1 */
+  }
+
+  @supports not selector(:focus-visible) {
+    &:focus {
+      background-color: var(--eds-theme-color-text-link-default); /* 1 */
+    }
   }
 }
 

@@ -17,7 +17,13 @@
   /* Width always set to fit content within whether it's an SVG or an img. */
   width: fit-content; 
 
-  &:focus {
+  &:focus-visible {
     @mixin focusInverted;
+  }
+
+  @supports not selector(:focus-visible) {
+    &:focus {
+      @mixin focusInverted;
+    }
   }
 }

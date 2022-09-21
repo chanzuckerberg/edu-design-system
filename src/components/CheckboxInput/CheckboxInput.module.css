@@ -48,6 +48,13 @@
   outline-offset: -2px;
 }
 
+@supports not selector(:focus-visible) {
+  .checkbox__input:focus + .checkbox__icon {
+    @mixin focus; /* 1 */
+    outline-offset: -2px;
+  }
+}
+
 /**
  * The disabled variant of the visible checkbbox svg icon.
  */

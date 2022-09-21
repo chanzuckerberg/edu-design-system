@@ -83,7 +83,6 @@ export const Drawer = ({
    * 1) If isActive is defined ,set activeFocus state to true,
    * else set activeFocus state to false.
    */
-  // const prevIsActive = usePrevious(isActive); /* 1 */
   useEffect(() => {
     if (isActive) {
       /* 1 */

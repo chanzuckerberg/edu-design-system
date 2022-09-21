@@ -9,7 +9,10 @@ import NotificationList from '../../../src/components/NotificationList';
 export const NotificationListPopover = () => (
   <Popover placement="top-start">
     <Popover.Button as={Button}>Open Popover</Popover.Button>
-    <Popover.Content className={styles['notifications-list-popover']} showArrow>
+    <Popover.Content
+      bodyClassName={styles['notifications-list-popover']}
+      showArrow
+    >
       <header className={styles['notifications-list-popover__header']}>
         <Heading as="h3" id="popover-heading-1" size="body-sm">
           Notifications (4)
