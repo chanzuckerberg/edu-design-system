@@ -43,8 +43,8 @@
 .checkbox__icon {
   color: var(--eds-theme-color-icon-brand-primary);
 }
-.checkbox__input:focus + .checkbox__icon {
-  @mixin focus;
+.checkbox__input:focus-visible + .checkbox__icon {
+  @mixin focus; /* 1 */
   outline-offset: -2px;
 }
 
