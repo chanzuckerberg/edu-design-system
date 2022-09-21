@@ -7,3 +7,28 @@
 .student-refinement__more-options {
   gap: var(--eds-size-1);
 }
+
+.student-refinement__tabs {
+  padding-top: var(--eds-size-1);
+}
+
+.student-refinement__students-page {
+  padding: var(--eds-size-4) var(--eds-size-6) var(--eds-size-6)
+    var(--eds-size-6);
+}
+
+.student-refinement__summary-cards {
+  display: flex;
+  gap: var(--eds-size-2);
+  margin-bottom: 2.875rem;
+}
+
+@media all and (min-width: $eds-bp-xl) {
+  .student-refinement__table-control-button-group {
+    justify-content: flex-end;
+  }
+}
+
+.student-refinement__filters-checkbox-field {
+  margin-top: var(--eds-size-6);
+}
