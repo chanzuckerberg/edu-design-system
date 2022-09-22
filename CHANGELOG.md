@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [5.1.1](https://github.com/chanzuckerberg/edu-design-system/compare/v5.1.1-alpha.0...v5.1.1) (2022-09-22)
+
+
+### Bug Fixes
+
+* **tag:** allow data attributes on tag ([5aeaa9c](https://github.com/chanzuckerberg/edu-design-system/commit/5aeaa9ce2b0985e608bfc91aadae46dc60f8fbad))
+* **tag:** remove max-width ([6f787a5](https://github.com/chanzuckerberg/edu-design-system/commit/6f787a5e4c5f6d60b51a604d5f3aae1c8d80bbdc))
+
 ## [5.1.0](https://github.com/chanzuckerberg/edu-design-system/compare/v5.0.1...v5.1.0) (2022-09-20)
 
 
