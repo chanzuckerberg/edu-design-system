@@ -8,7 +8,11 @@
 
 /**
 * Reset all
-* 1) The 'all' shorthand CSS property resets all of an element's properties except unicode-bidi, direction, and CSS Custom Properties. The value 'unset' specifies that all of an element's properties should be changed to their inherited values if they inherit by default, or to their initial values if not.
+*
+* The 'all' shorthand CSS property resets all of an element's properties except unicode-bidi,
+* direction, and CSS Custom Properties. The value 'unset' specifies that all of an element's
+* properties should be changed to their inherited values if they inherit by default, or to their
+* initial values if not.
 */
 @define-mixin resetAll {
   all: unset !important;

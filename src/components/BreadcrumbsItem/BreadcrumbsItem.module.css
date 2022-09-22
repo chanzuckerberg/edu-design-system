@@ -11,14 +11,14 @@
   @mixin eds-theme-typography-body-text-xs;
   max-width: 100%;
   /* Required for dropdown menu to absolutely position relative to this container. */
-  position: relative; 
+  position: relative;
 
   /* Hides all breadcrumbs except the last breadcrumb in smaller breakpoints. */
   display: none;
   flex-shrink: 0;
   &:last-of-type {
     display: flex;
-     /* Truncate last breadcrumb in smaller breakpoints */
+    /* Truncate last breadcrumb in smaller breakpoints */
     flex: 1 0 0%;
   }
 
@@ -28,10 +28,10 @@
 
   @media all and (min-width: $eds-bp-md) {
     /* Display breadcrumbs in larger breakpoints. */
-    display: flex; 
+    display: flex;
     &:last-of-type {
       /* Truncate last breadcrumb in smaller breakpoints */
-      flex: 0 0 auto; 
+      flex: 0 0 auto;
     }
   }
 }
@@ -44,12 +44,12 @@
   margin-right: var(--eds-size-1-and-half);
   @media all and (min-width: $eds-bp-md) {
     /* Hidden for larger breakpoints. */
-    display: none; 
+    display: none;
   }
 }
 .breadcrumbs__item-back > .breadcrumbs__separator {
   /* Hide the separator for the back variant. */
-  display: none; 
+  display: none;
 }
 
 /**
@@ -99,8 +99,7 @@
 }
 
 /**
- * Breadcrumbs Icon
- * 1) Separator between breadcrumb links
+ * Breadcrumbs Icon - a separator between breadcrumb links.
  */
 .breadcrumbs__separator {
   color: var(--eds-theme-color-icon-neutral-subtle);
@@ -114,7 +113,7 @@
  */
 .breadcrumbs__item:last-child .breadcrumbs__separator.breadcrumbs__separator {
   /*  A separator shouldn't be displayed after last link. */
-  display: none; 
+  display: none;
 }
 
 /**
@@ -122,7 +121,7 @@
  */
 .breadcrumbs__back-icon {
   color: var(--eds-theme-color-icon-neutral-subtle);
-   /* Transform over height due to icon being placed inside <a>. */
+  /* Transform over height due to icon being placed inside <a>. */
   transform: scale(1.5);
   position: relative;
   bottom: 0.125rem;

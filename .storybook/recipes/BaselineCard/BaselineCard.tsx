@@ -123,7 +123,7 @@ export const BaselineCard = ({
   );
   return (
     /**
-     * 1) Wrapping the Card component in a container for attaching cardRef
+     * Wrapping the Card component in a container for attaching cardRef
      * to the card without adding a ref prop to <Card />
      */
 

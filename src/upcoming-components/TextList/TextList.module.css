@@ -5,7 +5,7 @@
 \*------------------------------------*/
 
 /**
- * 1) Basic list of lines of text that can contain optional inline items afterwards
+ * Basic list of lines of text that can contain optional inline items afterwards
  */
 .text-list {
   @mixin reset;

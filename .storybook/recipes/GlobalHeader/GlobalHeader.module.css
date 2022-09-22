@@ -4,7 +4,7 @@
     # GLOBAL HEADER
 \*------------------------------------*/
 /**
- * 1) Global navigation bar of site
+ * Global navigation bar of site
  */
 .global-header {
   position: relative;
@@ -27,7 +27,8 @@
 
 /**
  * Global header logo
- * 1) The SVG logo
+ *
+ * The SVG logo.
  */
 .global-header__logo {
   display: none;

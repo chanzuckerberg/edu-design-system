@@ -5,7 +5,7 @@
 \*------------------------------------*/
 
 /**
- * 1) Primary UI components acts as container for card components.
+ * Primary UI components acts as container for card components.
  */
 .project-card {
   position: relative;
@@ -24,7 +24,7 @@
   */
   .project-card--draggable & {
     /* Allows room for the handle to show on hover without overlaying content. */
-    min-width: var(--eds-size-2-and-half); 
+    min-width: var(--eds-size-2-and-half);
   }
 }
 

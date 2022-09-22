@@ -5,12 +5,13 @@
 \*------------------------------------*/
 
 /**
- * 1) Card elevated to drive attention and give an action
+ * Card elevated to drive attention and give an action.
  */
 
 /**
  * Button action callout card body inner
- * 1) Wrapper around the description and button
+ *
+ * Wrapper around the description and button.
  */
 .button-action-callout-card__body-inner {
   display: flex;

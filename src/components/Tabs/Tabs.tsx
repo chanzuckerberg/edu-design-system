@@ -141,7 +141,8 @@ export const Tabs = ({
 
   /**
    * Get previous prop
-   * 1) This is used to compare the previous prop to the current prop
+   *
+   * This is used to compare the previous prop to the current prop.
    */
   function usePrevious(activeIndex: number) {
     useEffect(() => {
