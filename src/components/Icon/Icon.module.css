@@ -3,7 +3,7 @@
 \*------------------------------------ */
 
 /**
- * 1) Small graphic that represents functionality
+ * Small graphic that represents functionality.
  */
 .icon {
   display: inline-block;
@@ -20,8 +20,7 @@
 }
 
 /**
- * Full-width icon
- * 1) A block icon fills 100% of the width of its container
+ * A block icon fills 100% of the width of its container
  */
 .icon--full-width {
   display: block;

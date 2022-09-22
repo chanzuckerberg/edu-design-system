@@ -5,7 +5,7 @@
 \*------------------------------------*/
 
 /**
- * 1) List of of links where each link toggles open associated information
+ * List of of links where each link toggles open associated information
  */
 .timeline-nav {
   display: flex;
@@ -42,8 +42,10 @@
 
 /**
  * Timeline nav
- * 1) Contains the tab list
- * 2) Tab overflow behavior
+ *
+ * Contains the tab list.
+ * 
+ * Tab overflow behavior.
  */
 .timeline-nav__nav {
   display: block;
@@ -62,8 +64,6 @@
 
 /**
  * Timeline nav body 
- * TODO: Tokenize the box shadow
- * 1) Take up the rest of the space
  */
 .timeline-nav__body {
   display: block;
@@ -87,7 +87,7 @@
     visibility: visible;
     transform: translateX(0);
     padding: var(--eds-size-5) var(--eds-size-8);
-    box-shadow: 0px 2px 8px var(--eds-theme-color-border-neutral-subtle); /* 1 */
+    box-shadow: 0px 2px 8px var(--eds-theme-color-border-neutral-subtle); /* TODO: Tokenize the box shadow */
   }
 }
 
@@ -120,8 +120,8 @@
 
 /**
  * Timeline nav list
- * 1) Actual unordered list of timeline-nav
- * 2) Set to display flex to place timeline-nav side by side
+ *
+ * Actual unordered list of timeline-nav.
  */
 .timeline-nav__list {
   @mixin reset;
@@ -136,7 +136,8 @@
 
 /**
  * Timeline nav item
- * 1) Flex shrink 0 keeps timeline-nav from expanding to fill up the space of the container
+ *
+ * Flex shrink 0 keeps timeline-nav from expanding to fill up the space of the container.
  */
 .timeline-nav__item {
   position: relative;
@@ -150,20 +151,29 @@
 
 /**
   * Timeline nav item after
-  * 1) When list variant is 'ordered', add a line between items that shouldn't link out unliike the bullet
-  * 2) This sets the size of the gap above the vertical line by determining the top of the line relative to the top of the current list item; a value of 0 would position the line at the top of the current list item; 100% would position it at the bottom of the current list item. We want a small visual gap between the bullet/icon and the top of the line 
-  * 3) This sets the height of the vertical line relative to the height of the current list item. We want a small visual gap between the bottom of the line and the next bullet/icon
-  * 4) Using a border color here because this is a vertical line, similar to a border
+  * When list variant is 'ordered', add a line between items that shouldn't link out unlike the bullet
   */
 .timeline-nav__list--ordered .timeline-nav__item {
   &:after {
     content: '';
     position: absolute;
     top: 0;
+    /**
+    * This sets the size of the gap above the vertical line by determining the top of the line relative to the top of the current 
+    * list item; a value of 0 would position the line at the top of the current list item; 100% would position it at the bottom of
+    * the current list item. We want a small visual gap between the bullet/icon and the top of the line 
+    */
     left: 0.75rem;
-    height: 100%; /* 3 */
+    /**
+    * This sets the height of the vertical line relative to the height of the current list item.
+    * We want a small visual gap between the bottom of the line and the next bullet/icon.
+    */
+    height: 100%;
     width: 0.0625rem;
-    background: var(--eds-theme-color-border-neutral-subtle); /* 4 */
+    /**
+    * Using a border color here because this is a vertical line, similar to a border
+    */
+    background: var(--eds-theme-color-border-neutral-subtle);
     border-radius: var(--eds-border-radius-md);
   }
 
@@ -175,7 +185,8 @@
 
     /**
       * List Timeline nav item after
-      * 1) Don't add a line after the last list item
+      *
+      * Don't add a line after the last list item.
       */
     &:after {
       content: none;
@@ -185,8 +196,10 @@
 
 /**
  * Timeline nav link
- * 1) Base style for each link in the list
- * 2) Using disabled text color here because all links are "inactive" until selected and this color is overridden
+ * 
+ * Base style for each link in the list.
+ *
+ * Using disabled text color here because all links are "inactive" until selected and this color is overridden.
  */
 .timeline-nav__link {
   position: relative;
@@ -233,49 +246,52 @@
 }
 
 /**
-* Timeline nav number
-* 1) Used on list items using number variant; provides a cosmetic cicular border
-* 2) Using flex to keep the number centered
-* 3) Since this will display as a cirlce, keep height and width equal; should be wide enough to fit a two-digit number
-* 4) Using a percentage here instead of --eds-border-radius-md because this must always render as a circle
-* 5) Make the border dark when li is active
-*/
+ * Timeline nav number
+ */
 .timeline-nav__number {
   position: relative;
-  display: flex; /* 2 */
+  /* Using flex to keep the number centered */
+  display: flex;
   justify-content: center;
   align-items: center;
   left: -4px;
-  width: 1.5rem; /* 3 */
-  height: 1.5rem; /* 3 */
-  border-radius: 50%; /* 4 */
+  /* Since this will display as a cirlce, keep height and width equal; should be wide enough to fit a two-digit number */
+  width: 1.5rem;
+  height: 1.5rem;
+  /* Using a percentage here instead of --eds-border-radius-md because this must always render as a circle */
+  border-radius: 50%;
+  /* Used on list items using number variant; provides a cosmetic cicular border */
   border: 1px solid var(--eds-theme-color-border-neutral-subtle);
   margin-right: 9px;
   font-size: var(--eds-font-size-12);
   margin-left: -4px;
   background: var(--eds-theme-color-background-neutral-default);
-
+  /* Make the border dark when li is active */
   .timeline-nav__item.eds-is-active & {
-    border: 1px solid var(--eds-theme-color-text-neutral-default); /* 5 */
+    border: 1px solid var(--eds-theme-color-text-neutral-default);
   }
 }
 /**
-* Timeline nav link-left 
-* 1) Provides white background to fake a visual gap in the vertical line between nav items
-*/
+ * Timeline nav link-left 
+ * 1) Provides white background to fake a visual gap in the vertical line between nav items
+ */
 .timeline-nav__link-left {
   position: relative;
   height: fit-content;
   padding: var(--eds-size-half) 0;
-  background: var(--eds-theme-color-background-neutral-default); /* 1*/
+  background: var(--eds-theme-color-background-neutral-default); /* 1 */
   z-index: var(--eds-z-index-100);
 }
 
 /**
-* Timeline- nav link title
-* 1) Wrapped in a div so that it doesn't affect the position of the arrow if the title is long and breaks onto multiple lines
-* 2) In the case of a long text string with no breaking spaces and/or a browser with text-only-zoom, we don't want the text to overflow; truncate with an ellipsis instead
-*/
+  * Timeline- nav link title
+  *
+  * Wrapped in a div so that it doesn't affect the position of the arrow if the
+  * title is long and breaks onto multiple lines.
+  *
+  * In the case of a long text string with no breaking spaces and/or a browser
+  * with text-only-zoom, we don't want the text to overflow; truncate with an ellipsis instead.
+  */
 .timeline-nav__link-title {
   display: block;
   overflow: hidden;
@@ -283,19 +299,22 @@
 }
 
 /**Timeline nav title after
-* 1) Optional content that will be positioned to the right of title
-*/
+  *
+  * Optional content that will be positioned to the right of title
+  */
 .timeline-nav__link-title-after {
   display: inline-block;
   margin-left: var(--eds-size-half);
 }
 
 /**
-* Timeline nav link arrow
-* 1) (Only used on smaller screens) - an arrow icon at the right 
-* end of each item.
-* 2) Must be used to prevent icon from shrinking to fit space
-*/
+  * Timeline nav link arrow
+  *
+  * (Only used on smaller screens) - an arrow icon at the right 
+  * end of each item.
+  *
+  * Must be used to prevent icon from shrinking to fit space.
+  */
 .timeline-nav__link-arrow {
   margin-left: auto;
   align-self: center;
@@ -307,9 +326,10 @@
 }
 
 /**
-* Timeline nav icon
-* 1) Used so the transparent icon doesn't show the line behind. 
-*/
+  * Timeline nav icon
+  *
+  * Used so the transparent icon doesn't show the line behind. 
+  */
 .timeline-nav__icon {
   --icon-size: var(--eds-size-3);
   color: var(--eds-theme-color-text-neutral-subtle);

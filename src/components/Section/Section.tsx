@@ -55,8 +55,10 @@ export interface Props {
  * import {Section} from "@chanzuckerberg/eds";
  * ```
  *
- * 1) Section component contains a section header and body
- * 2) The Heading component requires a value for "size", so this headingAs prop is provided a default value of "h2" to allow it to remain optional on Section component
+ * Section component contains a section header and body.
+ *
+ * The Heading component requires a value for "size", so this headingAs prop is provided
+ * a default value of "h2" to allow it to remain optional on Section component.
  */
 export const Section = ({
   align,

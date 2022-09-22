@@ -26,7 +26,7 @@ export interface Props {
  * import {OverflowList} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * Component that is used to maintain the object body with content overflowed.
  */
 export const OverflowList = ({ className, children, ...other }: Props) => {
   /**

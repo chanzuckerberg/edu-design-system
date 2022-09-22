@@ -65,8 +65,10 @@
 
 /**
 * Card calendar row which holds an icon and a combination of text strings.
-* 1) Keeps the icon positioned at the top of the cross-axis if the text strings expands to use multiple lines.
-* 2) The gap setting will maintain spacing between icon and text.
+* 
+* Keeps the icon positioned at the top of the cross-axis if the text strings expands to use multiple lines.
+* 
+* The gap setting will maintain spacing between icon and text.
 */
 .calendar-card__dates {
   display: flex;

@@ -14,7 +14,8 @@
 
 /**
 * Baseline card container
-* 1) Used to pass the cardRef object to Card component
+*
+* Used to pass the cardRef object to Card component.
 */
 .baseline-card__container {
   @mixin reset;
@@ -43,7 +44,8 @@
 
 /**
 * Baseline card clickable 
-* 1) When an href prop is passed in, the card gets a :hover style to indicate
+*
+* When an href prop is passed in, the card gets a :hover style to indicate
 * that it is clickable.
 */
 .baseline-card--clickable {

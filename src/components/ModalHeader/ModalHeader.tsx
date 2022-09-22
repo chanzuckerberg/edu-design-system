@@ -26,6 +26,10 @@ export type Props = {
   assetClassName?: string;
 };
 
+/**
+ * Component defines the Header section of the modal.
+ */
+
 export const ModalHeader = ({
   assetClassName,
   brandAsset,

@@ -3,9 +3,9 @@
 \*------------------------------------*/
 
 /**
- * 1) Layout Grid is a flexible component
- *    allowing for a variety of responsive layout
- *    components
+ * Layout Grid is a flexible component
+ * allowing for a variety of responsive layout
+ * components
  */
 .grid {
   display: flex;

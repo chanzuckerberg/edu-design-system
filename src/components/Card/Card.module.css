@@ -3,8 +3,7 @@
 \*------------------------------------*/
 
 /**
- * 1) A card is a block that typically contains a title, image,
- *    text, and/or calls to action
+ * A card is a block that typically contains a title, image, text, and/or calls to action.
  */
 .card {
   display: flex;
@@ -19,8 +18,7 @@
 }
 
 /**
- * Raised card
- * 1) Card that appears raised to show interactivity/emphasis
+ * Card that appears raised to show interactivity/emphasis.
  */
 .card--raised {
   box-shadow: var(--eds-box-shadow-md);
@@ -28,46 +26,47 @@
 }
 
 /**
- * Card that is being dragged in drag and drop
- * 1) Passed down to card to be reused. 
+ * Card that is being dragged in drag and drop.
+ * 
+ * Passed down to card to be reused.
  */
 .card.eds-is-dragging {
   box-shadow: var(--eds-box-shadow-xl);
 }
 
 /**
- * Horizontal card
- * 1) Change the orientation to display header, body, and footer in a row
+ * Horizontal card.
  */
 .card--horizontal {
+  /* Change the orientation to display header, body, and footer in a row. */
   flex-direction: row;
 }
 
 /**
  * Centered card
- * 1) Card where the content is centered
  */
 .card--center {
+  /* Card where the content is centered. */
   text-align: center;
 }
 
 /**
  * Card Inverted
- * 1) Used on dark backgrounds to lighten the text color and remove a box shadow
  */
 .card--inverted {
   color: var(--eds-theme-color-text-neutral-default-inverse);
+  /* Used on dark backgrounds to lighten the text color and remove a box shadow */
   background: transparent;
   border-color: var(--eds-theme-color-border-neutral-strong);
   box-shadow: none;
 }
 
 /**
- * Card header
- * 1) Add spacing in between the header and body
+ * Card header.
  */
 .card__header {
-  margin-bottom: var(--eds-size-2); /* 1 */
+  /* Add spacing in between the header and body. */
+  margin-bottom: var(--eds-size-2);
 
   /**
   * Card header within horizontal card
@@ -80,7 +79,7 @@
 }
 
 /**
- * Card body
+ * Card body.
  */
 .card__body {
   flex: 1;

@@ -67,7 +67,8 @@ export const TableHeaderCell = ({
 }: Props) => {
   /**
    * Sort status
-   * 1) State variable to hold current sort direction. Initialized with value in sortDirection prop.
+   *
+   * State variable to hold current sort direction. Initialized with value in sortDirection prop.
    */
   const [sortStatus, setSortStatus] = useState<SortOptions>(sortDirection);
 

@@ -15,10 +15,10 @@
 
 /**
  * Icon that sits left of the notification text.
- * 1) Retain icon original size and wrap text instead.
  */
 .inline-notification__icon {
-  flex-shrink: 0; /* 1 */
+  /* Retain icon original size and wrap text instead. */
+  flex-shrink: 0; 
   color: var(--messaging-icon-color);
 }
 
@@ -63,25 +63,25 @@
 
 /**
  * Full width variant of the inline notification.
- * 1) Accounts for the lack of border in height to make it 44px.
  */
 .inline-notification--full-width {
   display: flex;
   border: 0;
   border-radius: 0;
-  padding: calc(var(--eds-size-1) + var(--eds-theme-border-width)); /* 1 */
+  /*  Accounts for the lack of border in height to make it 44px. */
+  padding: calc(var(--eds-size-1) + var(--eds-theme-border-width)); 
 }
 .inline-notification--full-width-subtle {
   background-color: var(--eds-theme-color-background-neutral-subtle);
 }
 /**
  * Inactive variant of the full width inline notification.
- * 1) Creates enough space to keep text in the same place.
  */
 .inline-notification__icon--inactive {
   display: none;
 }
 .inline-notification__text--inactive {
-  padding-left: var(--eds-size-3); /* 1 */
+  /* Creates enough space to keep text in the same place. */
+  padding-left: var(--eds-size-3); 
   color: var(--eds-theme-color-text-neutral-subtle);
 }

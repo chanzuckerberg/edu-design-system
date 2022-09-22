@@ -20,7 +20,7 @@ export interface Props {
  * import {TableObjectHeader} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * TableObjectHeadercomponent represents the header section of the TableObject container.
  */
 export const TableObjectHeader = ({ children, className, ...other }: Props) => {
   const componentClassName = clsx(styles['table-object__header'], className);

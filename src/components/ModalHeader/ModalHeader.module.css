@@ -51,7 +51,6 @@
 
 /**
  * Specific asset placement for brand.
- * 1) For mobile landscape orientation.
  */
 .modal-header__brand-asset {
   align-self: flex-end;
@@ -62,7 +61,7 @@
   width: 8.5rem;
   height: 8.5rem;
 
-  /* 1 */
+  /* For mobile landscape orientation. */
   @media all and (min-width: $eds-bp-sm-2) {
     display: none;
   }

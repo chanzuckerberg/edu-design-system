@@ -4,7 +4,8 @@
 
 /**
  * Box shadow small
- * 1) Forces box shadow to box-shadow-sm variable
+ *
+ * Forces box shadow to box-shadow-sm variable.
  */
 .u-box-shadow-sm {
   box-shadow: var(--eds-box-shadow-sm) !important;
@@ -12,7 +13,8 @@
 
 /**
  * Box shadow medium
- * 1) Forces box shadow to box-shadow-md variable
+ *
+ * Forces box shadow to box-shadow-md variable.
  */
 .u-box-shadow-md {
   box-shadow: var(--eds-box-shadow-md) !important;

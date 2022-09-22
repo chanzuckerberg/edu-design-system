@@ -5,29 +5,28 @@
 \*------------------------------------*/
 
 /**
- * 1) Styled clickable element that should look like a button or link
- * 2) Defaults to primary variant
- * 3) Adds a gap between children to automatically handle spacing between icons and text
- * 4) Removes the underline in the case that the rendered element is an <a> tag
- * 5) Adds default size for icons passed in for consistency
+ * Styled clickable element that should look like a button or link.
  */
 .clickable-style {
   @mixin eds-theme-typography-button-label;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  gap: 0.75rem; /* 3 */
+  /* Adds a gap between children to automatically handle spacing between icons and text. */
+  gap: 0.75rem;
   border-width: var(--eds-theme-border-width);
   border-style: solid;
   border-radius: var(--eds-border-radius-md);
   cursor: pointer;
-  text-decoration: none; /* 4 */
+  /* Removes the underline in the case that the rendered element is an <a> tag. */
+  text-decoration: none;
   transition-property: color, background-color, border-color;
   transition-duration: var(--eds-anim-fade-quick);
   transition-timing-function: var(--eds-anim-ease);
 
   svg {
-    --icon-size-default: 2em; /* 5 */
+    /* Adds default size for icons passed in for consistency. */
+    --icon-size-default: 2em;
     transition: color var(--eds-anim-fade-quick) var(--eds-anim-ease);
 
     @media screen and (prefers-reduced-motion) {
@@ -52,7 +51,7 @@
 
 /**
  * Margin 0 added becuase Safari has margin on buttons.
- * 1) Needs `:where` pseudoclass to reduce specificity so class overrides
+ * Needs `:where` pseudoclass to reduce specificity so class overrides
  *    for margin can happen where used.
  */
 :where(.clickable-style) {
@@ -286,8 +285,10 @@
 
 /**
  * Icon brand clickable style
- * 1) A clickable style that strips out borders, backgrounds, etc
- * 2) Use for Close "X" buttons, tooltip icons, and other
+ * 
+ * A clickable style that strips out borders, backgrounds, etc.
+ *
+ * Use for Close "X" buttons, tooltip icons, and other.
  */
 .clickable-style--icon.clickable-style--brand {
   border-color: var(--eds-theme-color-button-icon-brand-border);
@@ -321,8 +322,10 @@
 
 /**
  * Icon neutral clickable style
- * 1) A clickable style that strips out borders, backgrounds, etc
- * 2) Use for Close "X" buttons, tooltip icons, and other
+ * 
+ * A clickable style that strips out borders, backgrounds, etc.
+ *
+ * Use for Close "X" buttons, tooltip icons, and other.
  */
 .clickable-style--icon.clickable-style--neutral {
   border-color: var(--eds-theme-color-button-icon-neutral-border);
@@ -358,8 +361,10 @@
 
 /**
  * Icon success clickable style
- * 1) A clickable style that strips out borders, backgrounds, etc
- * 2) Use for Close "X" buttons, tooltip icons, and other
+ * 
+ * A clickable style that strips out borders, backgrounds, etc.
+ *
+ * Use for Close "X" buttons, tooltip icons, and other.
  */
 .clickable-style--icon.clickable-style--success {
   border-color: var(--eds-theme-color-button-icon-success-border);
@@ -395,8 +400,10 @@
 
 /**
  * Icon warning clickable style
- * 1) A clickable style that strips out borders, backgrounds, etc
- * 2) Use for Close "X" buttons, tooltip icons, and other
+ * 
+ * A clickable style that strips out borders, backgrounds, etc.
+ *
+ * Use for Close "X" buttons, tooltip icons, and other.
  */
 .clickable-style--icon.clickable-style--warning {
   border-color: var(--eds-theme-color-button-icon-warning-border);
@@ -432,8 +439,10 @@
 
 /**
  * Icon error clickable style
- * 1) A clickable style that strips out borders, backgrounds, etc
- * 2) Use for Close "X" buttons, tooltip icons, and other
+ * 
+ * A clickable style that strips out borders, backgrounds, etc.
+ *
+ * Use for Close "X" buttons, tooltip icons, and other.
  */
 .clickable-style--icon.clickable-style--error {
   border-color: var(--eds-theme-color-button-icon-error-border);
@@ -482,34 +491,36 @@
 }
 
 /**
- * 1) Needs `:where` pseudoclass to reduce specificity so class overrides
- *    for margin can happen where used.
- * 2) 2px padding gives the text breathing room in the focus state
- * 3) -2px margin compensates for the padding so the link doesn't have too much space between it
- *    and surrounding text
+ * Needs `:where` pseudoclass to reduce specificity so class overrides
+ * for margin can happen where used.
  */
 :where(.clickable-style--link) {
-  padding: 2px; /* 2 */
-  margin: -2px; /* 3 */
+  /* 2px padding gives the text breathing room in the focus state */
+  padding: 2px;
+  /**
+   * -2px margin compensates for the padding so the link doesn't have too much space between it
+   *  and surrounding text
+   */
+  margin: -2px;
 }
 
 /**
  * Link neutral clickable style
  */
 .clickable-style--link.clickable-style--neutral {
-  text-decoration-color: var(--eds-theme-color-text-link-default);
+  text-decoration-color: var(--eds-theme-color-border-link-neutral);
 
   &:hover {
-    text-decoration-color: var(--eds-theme-color-text-link-strong);
+    text-decoration-color: var(--eds-theme-color-border-link-brand);
   }
 
   &:focus-visible {
-    background-color: var(--eds-theme-color-text-link-default); /* 1 */
+    background-color: var(--eds-theme-color-border-link-neutral); /* 1 */
   }
 
   @supports not selector(:focus-visible) {
     &:focus {
-      background-color: var(--eds-theme-color-text-link-default); /* 1 */
+      background-color: var(--eds-theme-color-border-link-neutral); /* 1 */
     }
   }
 }
@@ -553,7 +564,7 @@
 
 /**
  * Full-width clickable style
- * 1) A block clickable style that fills 100% of the width of its container
+ * A block clickable style that fills 100% of the width of its container
  */
 .clickable-style--full-width {
   width: 100%;

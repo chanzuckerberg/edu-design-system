@@ -33,7 +33,7 @@ export interface Props {
  * import {Panel} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * Component Panel is the container to show the contents with props passed through for conditional styling of the panel based on variants props.
  */
 export const Panel = ({
   className,

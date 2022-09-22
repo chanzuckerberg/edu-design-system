@@ -4,8 +4,8 @@
 
 /**
  * Avatar image SVG
- * 1) This component contains an outer wrapper
- *    and SVG fragments for avatars
+ *
+ * This component contains an outer wrapper and SVG fragments for avatars.
  */
 .avatar-image {
   display: flex;
@@ -17,17 +17,17 @@
   border-radius: var(--eds-border-radius-round);
 }
 
-/* TODO */
+/* Head of the avatar image. */
 .avatar-image__head {
   height: 8px;
 }
 
-/* TODO */
+/* Body of the avatar image. */
 .avatar-image__body {
   height: 13px;
 }
 
-/* TODO */
+/* Legs of the avatar image. */
 .avatar-image__legs {
   height: 10px;
 }

@@ -228,6 +228,10 @@
           "disabled": "var(--eds-theme-color-background-disabled)"
         },
         "border": {
+          "link": {
+            "neutral": "var(--eds-theme-color-border-link-neutral)",
+            "brand": "var(--eds-theme-color-border-link-brand)"
+          },
           "neutral": {
             "subtle": {
               "@": "var(--eds-theme-color-border-neutral-subtle)",
@@ -345,14 +349,8 @@
             "subtle": "var(--eds-theme-color-text-neutral-subtle)"
           },
           "link": {
-            "default": {
-              "@": "var(--eds-theme-color-text-link-default)",
-              "hover": "var(--eds-theme-color-text-link-default-hover)"
-            },
-            "strong": {
-              "@": "var(--eds-theme-color-text-link-strong)",
-              "hover": "var(--eds-theme-color-text-link-strong-hover)"
-            }
+            "neutral": "var(--eds-theme-color-text-link-neutral)",
+            "brand": "var(--eds-theme-color-text-link-brand)"
           },
           "utility": {
             "success": "var(--eds-theme-color-text-utility-success)",

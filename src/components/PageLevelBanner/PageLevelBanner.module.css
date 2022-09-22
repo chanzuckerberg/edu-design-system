@@ -5,15 +5,15 @@
 \*------------------------------------*/
 
 /**
- * 1) Message of information, success, caution, or warning to the user
- * 2) Position is relative to allow for absolute-positioned close button
- * 3) Grid is used to separate the icon from the text with correct spacing
+ * Message of information, success, caution, or warning to the user.
  */
 .banner {
-  position: relative; /* 2 */
-  display: grid; /* 3 */
-  gap: var(--eds-size-2); /* 3 */
-  grid-template-columns: min-content 1fr; /* 3 */
+  /* Position is relative to allow for absolute-positioned close button. */
+  position: relative;
+  /* Grid is used to separate the icon from the text with correct spacing. */
+  display: grid;
+  gap: var(--eds-size-2);
+  grid-template-columns: min-content 1fr;
   padding: var(--eds-size-2) var(--eds-size-4);
   background-color: var(--eds-theme-color-neutral-subtle-background);
   border-bottom: var(--eds-border-width-md) solid var(--messaging-border-color);
@@ -21,16 +21,18 @@
 
 /**
  * PageLevelBanner informational icon
- * 1) Icon color matches the thick bottom border
+ *
+ * Icon color matches the thick bottom border.
  */
 .banner__icon {
-  color: var(--messaging-icon-color); /* 1 */
+  color: var(--messaging-icon-color);
   --icon-size-default: var(--eds-size-3);
 }
 
 /**
  * PageLevelBanner close button
- * 1) Button used to dismiss dismissable banners
+ *
+ * Button used to dismiss dismissable banners.
  */
 .banner__close-btn.banner__close-btn {
   position: absolute;
@@ -40,10 +42,11 @@
 
 /**
  * Dismissable banner
- * 1) Add extra right padding to account for close button
+ *
+ * Add extra right padding to account for close button.
  */
 .banner--dismissable {
-  padding-right: var(--eds-size-9); /* 1 */
+  padding-right: var(--eds-size-9);
 }
 
 /*------------------------------------*\

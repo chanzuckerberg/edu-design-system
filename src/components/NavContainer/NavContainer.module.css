@@ -3,20 +3,19 @@
 \*------------------------------------*/
 
 /**
- * 1) Container that houses navigation to be toggled on and off on small screens
- * 2) Hide by default on small screens
- * 3) 
+ * Container that houses navigation to be toggled on and off on small screens.
  */
 .nav-container {
-  position: absolute; /* 1 */
-  top: 100%; /* 1 */
-  left: 0; /* 1 */
-  visibility: hidden; /* 2 */
-  opacity: 0; /* 2 */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  /* Hide by default on small screens. */
+  visibility: hidden;
+  opacity: 0;
   height: 0;
-  width: 100%; /* 1 */
+  width: 100%;
   padding: var(--eds-size-1);
-  z-index: var(--eds-z-index-bottom); /* 2 */
+  z-index: var(--eds-z-index-bottom);
   transition: all var(--eds-anim-move-quick) var(--eds-anim-ease);
 
   @media screen and (prefers-reduced-motion) {
@@ -24,13 +23,13 @@
   }
 
   /**
-   * Large screen styles
-   * 1) Un-hide navcontainer to display nav by default on larger screens
-   * 2) Display children as horizontal flex items
+   * Large screen styles.
   */
   @media all and (min-width: $eds-bp-xl) {
-    display: flex; /* 1 */
-    justify-content: space-between; /* 2 */
+    /* Un-hide navcontainer to display nav by default on larger screens. */
+    display: flex;
+    /* Display children as horizontal flex items. */
+    justify-content: space-between;
     position: static;
     visibility: visible;
     opacity: 1;
@@ -42,7 +41,8 @@
 
 /**
 * Active nav container
-* 1) Open state on small screens
+*
+* Open state on small screens.
 */
 .nav-container.is-active {
   display: block;
@@ -54,7 +54,7 @@
     flex-direction: column;
     overflow: auto;
     gap: var(--eds-size-8);
-    height: calc(100vh - 3rem); /* 2 */
+    height: calc(100vh - 3rem);
     background-color: var(--eds-theme-color-background-brand-primary-strong);
     z-index: var(--eds-z-index-400);
   }

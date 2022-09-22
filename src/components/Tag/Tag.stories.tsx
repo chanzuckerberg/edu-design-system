@@ -29,7 +29,15 @@ export const ColorVariants: StoryObj<Args> = {
   render: (args) => (
     <div className={styles.tagList}>
       {VARIANTS.map((variant) => {
-        return <Tag key={variant} {...args} text={variant} variant={variant} />;
+        return (
+          <Tag
+            data-testid="test"
+            key={variant}
+            {...args}
+            text={variant}
+            variant={variant}
+          />
+        );
       })}
     </div>
   ),

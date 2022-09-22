@@ -40,7 +40,8 @@ export interface Props {
  * import {Card} from "@chanzuckerberg/eds";
  * ```
  *
- * Card component.
+ * Card component is the outer wrapper for the block that typically contains a title, image,
+ *    text, and/or calls to action.
  */
 
 /**

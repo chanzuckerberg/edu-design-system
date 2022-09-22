@@ -146,6 +146,8 @@ $eds-theme-color-background-grade-revise-subtle: #FDF1D0 !default;
 $eds-theme-color-background-grade-stop-default: #D41E52 !default;
 $eds-theme-color-background-grade-stop-subtle: #FFF0F4 !default;
 $eds-theme-color-background-disabled: #C0C4C8 !default;
+$eds-theme-color-border-link-neutral: #21272D !default;
+$eds-theme-color-border-link-brand: #5751D2 !default;
 $eds-theme-color-border-neutral-subtle: #E7E8EA !default;
 $eds-theme-color-border-neutral-subtle-hover: #C0C4C8 !default;
 $eds-theme-color-border-neutral-default: #C0C4C8 !default;
@@ -198,10 +200,8 @@ $eds-theme-color-text-neutral-default: #383C43 !default;
 $eds-theme-color-text-neutral-default-inverse: #FFFFFF !default;
 $eds-theme-color-text-neutral-strong: #21272D !default;
 $eds-theme-color-text-neutral-subtle: #5D6369 !default;
-$eds-theme-color-text-link-default: #21272D !default;
-$eds-theme-color-text-link-default-hover: #161B1F !default;
-$eds-theme-color-text-link-strong: #5751D2 !default;
-$eds-theme-color-text-link-strong-hover: #3E42B1 !default;
+$eds-theme-color-text-link-neutral: #21272D !default;
+$eds-theme-color-text-link-brand: #5751D2 !default;
 $eds-theme-color-text-utility-success: #007249 !default;
 $eds-theme-color-text-utility-warning: #AC3400 !default;
 $eds-theme-color-text-utility-error: #BD0044 !default;
@@ -623,6 +623,10 @@ $tokens: (
           'disabled': $eds-theme-color-background-disabled
         ),
         'border': (
+          'link': (
+            'neutral': $eds-theme-color-border-link-neutral,
+            'brand': $eds-theme-color-border-link-brand
+          ),
           'neutral': (
             'subtle': (
               '@': $eds-theme-color-border-neutral-subtle,
@@ -740,14 +744,8 @@ $tokens: (
             'subtle': $eds-theme-color-text-neutral-subtle
           ),
           'link': (
-            'default': (
-              '@': $eds-theme-color-text-link-default,
-              'hover': $eds-theme-color-text-link-default-hover
-            ),
-            'strong': (
-              '@': $eds-theme-color-text-link-strong,
-              'hover': $eds-theme-color-text-link-strong-hover
-            )
+            'neutral': $eds-theme-color-text-link-neutral,
+            'brand': $eds-theme-color-text-link-brand
           ),
           'utility': (
             'success': $eds-theme-color-text-utility-success,

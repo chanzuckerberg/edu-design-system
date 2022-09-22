@@ -3,8 +3,7 @@
 \*------------------------------------*/
 
 /**
- * 1) A toolbar is a container that houses form controls for uses
- *    things like filtering a data table
+ * A toolbar is a container that houses form controls for uses things like filtering a data table.
  */
 .toolbar {
   display: flex;
@@ -26,16 +25,14 @@
 }
 
 /**
- * Vertical align top
- * 1) Veritcally aligns toolbar items to the top of the toolbar
+ * Veritcally aligns toolbar items to the top of the toolbar.
  */
 .toolbar--vertical-align-top {
   align-items: flex-start;
 }
 
 /**
- * Vertical align bottom
- * 1) Veritcally aligns toolbar items to the bottom of the toolbar
+ * Veritcally aligns toolbar items to the bottom of the toolbar.
  */
 .toolbar--vertical-align-bottom {
   align-items: flex-end;
@@ -43,21 +40,23 @@
 
 /**
  * Center-aligned toolbar item
- * 1) since the toolbar is set to display: flex, 
- *    using margin: auto will push item away from  
- *    other items
  */
 .toolbar__item--align-center {
+  /**
+   * Since the toolbar is set to display: flex, using margin: auto will
+   * push item away from other items.
+   */
   margin-left: auto;
   margin-right: auto;
 }
 
 /**
- * Center-aligned toolbar item
- * 1) since the toolbar is set to display: flex, 
- *    using margin: auto will push item away from
- *    other items  
+ * Right-aligned toolbar item
  */
 .toolbar__item--align-right {
+  /**
+   * Since the toolbar is set to display: flex, using margin: auto will
+   * push item away from other items.
+   */
   margin-left: auto;
 }

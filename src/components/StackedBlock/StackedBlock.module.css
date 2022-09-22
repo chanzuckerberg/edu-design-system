@@ -3,7 +3,7 @@
 \*------------------------------------*/
 
 /**
- * 1) 
+ * Container for the stacked blocks items vertically aligned with hyperlinked.
  */
 .stacked-block__description {
   margin-top: var(--eds-size-1);

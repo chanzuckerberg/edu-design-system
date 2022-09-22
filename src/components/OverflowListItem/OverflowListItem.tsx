@@ -18,7 +18,7 @@ export interface Props {
  * import {OverflowListItem} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * OverflowListItem to be used in the OverflowList component to maintain the body of the elements overflow.
  */
 export const OverflowListItem = ({ className, children, ...other }: Props) => {
   const componentClassName = clsx(styles['overflow-list__item'], className);

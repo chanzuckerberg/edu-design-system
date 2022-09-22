@@ -20,6 +20,10 @@ export type Props = {
   isFocusable?: boolean;
 };
 
+/**
+ * Component defines the body of the modal.
+ */
+
 export const ModalBody = ({
   children,
   className,

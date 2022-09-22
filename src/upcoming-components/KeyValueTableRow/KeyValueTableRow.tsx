@@ -5,12 +5,14 @@ import styles from '../KeyValueTable/KeyValueTable.module.css';
 export interface Props {
   /**
    * Row key
-   * 1) The key in the key value pair that sits on the left
+   *
+   * The key in the key value pair that sits on the left.
    */
   rowKey?: ReactNode;
   /**
    * Row value
-   * 1) The value in the key value pair that sits on the right
+   *
+   * The value in the key value pair that sits on the right.
    */
   rowValue?: ReactNode;
   /**

@@ -6,7 +6,8 @@ import { useMergedRefs } from '../../hooks';
 export interface Props {
   /**
    * Aria label
-   * 1) Use aria label for icon-only utility nav item
+   *
+   * Use aria label for icon-only utility nav item.
    */
   'aria-label'?: string;
   /**

@@ -5,11 +5,9 @@
 \*------------------------------------*/
 
 /**
- * 1) Message of information, success, caution, or warning to the user
- * 2) Container for the toast content, to provide background styling
- * 3) The thick left border operates as a foreground band of color, 
- *    so foreground rather than border is used
- * 4) The border CSS variables are defined in the messaging mixins
+ * Message of information, success, caution, or warning to the user.
+ *
+ * Container for the toast content, to provide background styling.
  */
 .toast {
   width: 100%;
@@ -25,11 +23,17 @@
 
   border-style: solid;
   border-width: var(--eds-border-width-sm);
-  border-left-width: var(--eds-border-width-lg); /* 3 */
+  /**
+   * The thick left border operates as a foreground band of color, 
+   * so foreground rather than border is used
+   */
+  border-left-width: var(--eds-border-width-lg);
   border-radius: var(--eds-size-half);
-
-  border-color: var(--messaging-border-color); /* 4 */
-  border-left-color: var(--border-dark-color); /* 4 */
+  /**
+   * The border CSS variables are defined in the messaging mixins    
+   */
+  border-color: var(--messaging-border-color);
+  border-left-color: var(--border-dark-color);
 
   box-shadow: var(--eds-box-shadow-sm);
 }
@@ -43,14 +47,15 @@
 }
 
 /**
- * 1) The toast content, usually an icon and text message. Does not include the optional close button
- * 2) Grid places the icon on the left and message on the right, with both vertically aligned to the center.
+ * The toast content, usually an icon and text message. Does not include the optional close button
  */
 .toast__content {
   padding-top: var(--eds-size-2);
   padding-bottom: var(--eds-size-2);
-
-  display: grid; /* 2 */
+  /**
+   * Grid places the icon on the left and message on the right, with both vertically aligned to the center.   
+   */
+  display: grid;
   gap: var(--eds-size-2);
   grid-template-columns: min-content 1fr;
   align-items: center;
