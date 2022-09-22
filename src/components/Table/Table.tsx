@@ -33,7 +33,8 @@ export interface Props {
   hideCaption?: boolean;
   /**
    * Highlight first cell
-   * 1) Make the first cell more prominent on smaller screens in stacked variant
+   *
+   * Make the first cell more prominent on smaller screens in stacked variant.
    */
   highlightFirstCell?: boolean;
   /**

@@ -23,7 +23,8 @@ export interface Props {
   behavior?: 'draggable';
   /**
    * Button dropdown items
-   * 1) If not declared, the button dropdown does not render
+   *
+   * If not declared, the button dropdown does not render.
    */
   buttonDropdownItems?: ReactNode;
   /**

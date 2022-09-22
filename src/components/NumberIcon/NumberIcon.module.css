@@ -5,12 +5,13 @@
 
 /**
  * Number Icon displays a number enclosed in a circle.
- * 1) Centers the number text in the circle.
+ * 
+ * Centers the number text in the circle.
  */
 .number-icon {
   @mixin eds-theme-typography-body-text-sm;
   /* Line height set to 1 here since this should only ever be on 1 line and it evens out padding in circle. */
-  line-height: 1; 
+  line-height: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,9 +39,9 @@
 .number-icon--sm {
   @mixin eds-theme-typography-body-text-xs;
   /* Line height set to 1 here since this should only ever be on 1 line and it evens out padding in circle. */
-  line-height: 1; 
+  line-height: 1;
   /* Height and width should be the same to make the icon a circle and not oblong. */
-  height: var(--eds-size-2-and-half); 
+  height: var(--eds-size-2-and-half);
   width: var(--eds-size-2-and-half);
   min-width: var(--eds-size-2-and-half);
 }

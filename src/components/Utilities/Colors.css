@@ -4,7 +4,8 @@
 
 /**
  * Success utility
- * 1) Forces color of text to be the success variable
+ *
+ * Forces color of text to be the success variable.
  */
 .u-color-utility-success {
   color: var(--eds-theme-color-text-utility-success) !important;
@@ -12,7 +13,8 @@
 
 /**
  * Error utility
- * 1) Forces color of text to be the error variable
+ *
+ * Forces color of text to be the error variable.
  */
 .u-color-utility-error {
   color: var(--eds-theme-color-text-utility-error) !important;
@@ -20,7 +22,8 @@
 
 /**
  * Warning utility
- * 1) Forces color of text to be the Warning variable
+ *
+ * Forces color of text to be the Warning variable.
  */
 .u-color-utility-warning {
   color: var(--eds-theme-color-text-utility-warning) !important;
@@ -28,7 +31,8 @@
 
 /**
  * Info utility
- * 1) Forces color of text to be the Info variable
+ *
+ * Forces color of text to be the Info variable.
  */
 .u-color-utility-info {
   color: var(--eds-theme-color-text-utility-info) !important;

@@ -3,7 +3,7 @@
 \*------------------------------------*/
 
 /**
- * 1) Line that acts as a separator of content
+ * Line that acts as a separator of content.
  * 
  */
 .hr {
@@ -18,16 +18,14 @@
 }
 
 /**
- * Hr Thick
- * 1) Horizontal rule with a thick border
+ * Horizontal rule with a thick border.
  */
 .hr--lg {
   border-width: var(--eds-border-width-lg);
 }
 
 /**
- * Hr Brand
- * 1) Branded horizontal rule
+ * Branded horizontal rule.
  */
 .hr--brand {
   border-color: var(--eds-theme-color-border-brand-primary-strong);

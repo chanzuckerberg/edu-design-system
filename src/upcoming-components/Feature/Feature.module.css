@@ -5,8 +5,8 @@
 \*------------------------------------*/
 
 /**
- * 1) A Feature is a prominent marketing block that contains
- *    Side by side information and an image
+ * A Feature is a prominent marketing block that contains and image
+ * and information side by side.
  */
 .feature {
   display: flex; /* 2 */
@@ -23,8 +23,8 @@
 
 /**
  * Feature body
- * 1) Container within feature that usually contains an excerpt of text
- * 2) Take up the remaining space on medr screens
+ *
+ * Container within feature that usually contains an excerpt of text.
  */
 .feature__body {
   margin-bottom: var(--eds-size-4);
@@ -40,7 +40,6 @@
 
 /**
  * Feature title
- * 1) Feature headline
  */
 .feature__title {
   @mixin reset;

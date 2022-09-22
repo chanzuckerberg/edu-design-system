@@ -6,14 +6,18 @@ import styles from './Header.module.css';
 export interface Props {
   /**
    * Pinned stop property
-   * 1) Pixel value from the top of the page scrolled before the header goes away
-   * 2) Used only for `behavior="sticky"` header variant
+   *
+   * Pixel value from the top of the page scrolled before the header goes away.
+   *
+   * Used only for `behavior="sticky"` header variant.
    */
   pinnedStop?: number;
   /**
    * Unpinned property
-   * 1) Used to move the header offscreen but have it ready to move back in
-   * 2) Used only for `behavior="sticky"` header variant
+   *
+   * Used to move the header offscreen but have it ready to move back in.
+   *
+   * Used only for `behavior="sticky"` header variant.
    */
   unpinned?: boolean;
   /**
@@ -120,7 +124,8 @@ export const Header = ({
 
   /**
    * Use effect lifecycle hook
-   * 1) Add scroll and window resize event to adjust values
+   *
+   * Add scroll and window resize event to adjust values.
    */
   useEffect(() => {
     window.addEventListener('scroll', handleWindowScroll, false);

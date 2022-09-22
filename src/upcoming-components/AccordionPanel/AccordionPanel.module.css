@@ -38,7 +38,8 @@
 
 /**
  * Accordion Button
- * 1) The accordion trigger marked up as a <button>
+ * 
+ * The accordion trigger marked up as a <button>.
  */
 .accordion__panel-button {
   all: inherit;
@@ -57,7 +58,6 @@
 
 /**
  * Accordion panel button focus visible
- * 1) Show focus ring when focused only with keyboard
  */
 .accordion__panel-button:focus-visible {
   @mixin focus;
@@ -71,7 +71,8 @@
 
 /**
  * Accordion panel button within inverted accordion
- * 1) The wrapper for the text
+ *
+ * The wrapper for the text
  */
 .accordion--inverted .accordion__panel-button {
   color: var(--eds-theme-color-text-neutral-default-inverse);
@@ -79,7 +80,8 @@
 
 /**
  * Accordion body
- * 1) Set max height to 0 and overflow to hidden to get smoother transition when activated
+ *
+ * Set max height to 0 and overflow to hidden to get smoother transition when activated.
  */
 .accordion__panel-body {
   display: block;
@@ -116,7 +118,8 @@
 
 /**
  * Accordion panel left
- * 1) Section that contains the title and other text of the accordion
+ *
+ * Section that contains the title and other text of the accordion.
  */
 .accordion__panel-left {
   flex: 1;
@@ -131,8 +134,10 @@
 
 /**
  * Accordion Icon
- * 1) The icon that indicates the accordion
- * 2) Double up on the classname to override default `icon` height and width
+ *
+ * The icon that indicates the accordion.
+ * 
+ * Double up on the classname to override default `icon` height and width.
  */
 .accordion__panel-icon.accordion__panel-icon {
   margin-left: auto;

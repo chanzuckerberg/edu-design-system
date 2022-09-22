@@ -25,7 +25,8 @@
 
 /**
 * Notification List- is read 
-* 1) When a list item is marked as read, this class is added to enable "is read" styles
+* 
+* When a list item is marked as read, this class is added to enable "is read" styles.
 */
 
 .notification-list__is-read {
@@ -33,7 +34,8 @@
 }
 /* 
 * Notification list item content
-* 1) The wrapper for the text
+* 
+* The wrapper for the text.
 */
 .notification-list__content {
   color: var(--eds-theme-color-text-neutral-default);
@@ -42,7 +44,8 @@
 
 /*
 * Notification list item title link
-* 1) Main text title of the notification
+* 
+* Main text title of the notification.
 */
 .notification-list__link {
   color: var(--eds-theme-color-text-link-strong);
@@ -51,7 +54,8 @@
 
   /**
   *  Notification List Item (is read)
-  * 1) When isRead === true, the title link text changes to grey
+  * 
+  * When isRead === true, the title link text changes to grey.
   */
   .notification-list__is-read & {
     color: var(--eds-theme-color-text-neutral-default);
@@ -60,12 +64,13 @@
 
 /*
 * Notification list item subtitle
-* 1) Contains the created date (relative) and the originating source of the notification
+* 
+* Contains the created date (relative) and the originating source of the notification.
 
 * Notification list item button
-* 1) Indicator that displays the item's read/not read status in
-* a <button> element; when clicked, it toggles between read/not
-* read statuses
+* 
+* Indicator that displays the item's read/not read status in a <button> element;
+* when clicked, it toggles between read/not read statuses.
 */
 .notification-list__button {
   position: relative;
@@ -93,7 +98,6 @@
 
   /*
     * Notification List Item (is read)
-    * 1) When isRead === true, button's background and border are changed to neutral
     */
   .notification-list__is-read & {
     background-color: var(--eds-theme-color-background-neutral-default);

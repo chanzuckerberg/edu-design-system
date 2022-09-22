@@ -5,7 +5,7 @@
 \*------------------------------------*/
 
 /**
- * 1) Navigation within the footer that contains auxiliary links
+ * Navigation within the footer that contains auxiliary links.
  */
 .footer-nav {
   padding: var(--eds-size-1) 0;
@@ -14,7 +14,8 @@
 
 /**
  * Footer nav listItems
- * 1) Actual list of the footer nav
+ *
+ * Actual list of the footer nav.
  */
 .footer-nav__list {
   @mixin reset;
@@ -25,7 +26,8 @@
 
 /**
  * Footer nav items
- * 1) Nav item within the footer nav list
+ *
+ * Nav item within the footer nav list.
  */
 .footer-nav__item {
   margin: var(--eds-size-1) var(--eds-size-2);
