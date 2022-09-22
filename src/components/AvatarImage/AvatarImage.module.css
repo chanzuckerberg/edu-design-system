@@ -4,8 +4,8 @@
 
 /**
  * Avatar image SVG
- * 1) This component contains an outer wrapper
- *    and SVG fragments for avatars.
+ *
+ * This component contains an outer wrapper and SVG fragments for avatars.
  */
 .avatar-image {
   display: flex;

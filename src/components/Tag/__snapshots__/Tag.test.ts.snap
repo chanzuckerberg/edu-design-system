@@ -6,6 +6,7 @@ exports[`<Tag /> ColorVariants story renders snapshot 1`] = `
 >
   <span
     class="text text--sm text--bold-weight tag tag--neutral"
+    data-testid="test"
   >
     <span
       class="tag__body"
@@ -15,6 +16,7 @@ exports[`<Tag /> ColorVariants story renders snapshot 1`] = `
   </span>
   <span
     class="text text--sm text--bold-weight tag tag--error"
+    data-testid="test"
   >
     <span
       class="tag__body"
@@ -24,6 +26,7 @@ exports[`<Tag /> ColorVariants story renders snapshot 1`] = `
   </span>
   <span
     class="text text--sm text--bold-weight tag tag--success"
+    data-testid="test"
   >
     <span
       class="tag__body"
@@ -33,6 +36,7 @@ exports[`<Tag /> ColorVariants story renders snapshot 1`] = `
   </span>
   <span
     class="text text--sm text--bold-weight tag tag--warning"
+    data-testid="test"
   >
     <span
       class="tag__body"
@@ -42,6 +46,7 @@ exports[`<Tag /> ColorVariants story renders snapshot 1`] = `
   </span>
   <span
     class="text text--sm text--bold-weight tag tag--yield"
+    data-testid="test"
   >
     <span
       class="tag__body"
@@ -51,6 +56,7 @@ exports[`<Tag /> ColorVariants story renders snapshot 1`] = `
   </span>
   <span
     class="text text--sm text--bold-weight tag tag--brand"
+    data-testid="test"
   >
     <span
       class="tag__body"

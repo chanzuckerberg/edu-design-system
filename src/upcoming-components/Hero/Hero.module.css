@@ -5,7 +5,7 @@
 \*------------------------------------*/
 
 /**
- * 1) A hero is a pronounced block typically situated at the top of a page layout
+ * A hero is a pronounced block typically situated at the top of a page layout.
  */
 .hero {
   position: relative;
@@ -48,7 +48,8 @@
 
 /**
  * Hero layout container
- * 1) Instance of LayoutContainer that sets left gutter 
+ * 
+ * Instance of LayoutContainer that sets left gutter.
  */
 .hero__layout-container {
   position: relative;
@@ -58,7 +59,8 @@
 
 /**
  * Hero body
- * 1) Contains the hero text, call to action, and other things
+ *
+ * Contains the hero text, call to action, and other things.
  */
 .hero__body {
   @media all and (min-width: $eds-bp-sm) {
@@ -69,18 +71,11 @@
 
 /**
  * Hero title
- * 1) Note: this typography needs to be addressed at a system level
+ *
+ * Note: this typography needs to be addressed at a system level.
  */
 .hero__title {
   @mixin reset;
   @mixin eds-theme-typography-heading-1;
   margin-bottom: var(--eds-size-2);
-}
-
-/**
- * Hero description
- * 1) Slot for additional hero items
- */
-/* stylelint-disable-next-line block-no-empty */
-.hero__description {
 }

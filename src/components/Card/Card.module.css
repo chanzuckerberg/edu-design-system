@@ -3,8 +3,7 @@
 \*------------------------------------*/
 
 /**
- * 1) A card is a block that typically contains a title, image,
- *    text, and/or calls to action
+ * A card is a block that typically contains a title, image, text, and/or calls to action.
  */
 .card {
   display: flex;
@@ -19,8 +18,7 @@
 }
 
 /**
- * Raised card
- * 1) Card that appears raised to show interactivity/emphasis
+ * Card that appears raised to show interactivity/emphasis.
  */
 .card--raised {
   box-shadow: var(--eds-box-shadow-md);
@@ -28,8 +26,9 @@
 }
 
 /**
- * Card that is being dragged in drag and drop
- * 1) Passed down to card to be reused. 
+ * Card that is being dragged in drag and drop.
+ * 
+ * Passed down to card to be reused.
  */
 .card.eds-is-dragging {
   box-shadow: var(--eds-box-shadow-xl);
@@ -40,7 +39,7 @@
  */
 .card--horizontal {
   /* Change the orientation to display header, body, and footer in a row. */
-  flex-direction: row; 
+  flex-direction: row;
 }
 
 /**
@@ -48,7 +47,7 @@
  */
 .card--center {
   /* Card where the content is centered. */
-  text-align: center; 
+  text-align: center;
 }
 
 /**
@@ -59,7 +58,7 @@
   /* Used on dark backgrounds to lighten the text color and remove a box shadow */
   background: transparent;
   border-color: var(--eds-theme-color-border-neutral-strong);
-  box-shadow: none; 
+  box-shadow: none;
 }
 
 /**
@@ -67,7 +66,7 @@
  */
 .card__header {
   /* Add spacing in between the header and body. */
-  margin-bottom: var(--eds-size-2); 
+  margin-bottom: var(--eds-size-2);
 
   /**
   * Card header within horizontal card

@@ -1,4 +1,3 @@
-import clsx from 'clsx';
 import React from 'react';
 import styles from './LoadingIndicator.module.css';
 import Icon from '../../components/Icon';
@@ -29,9 +28,8 @@ export const LoadingIndicator = ({
   size = '3rem',
   ...other
 }: Props) => {
-  const componentClassName = clsx(styles['loading-indicator'], className);
   return (
-    <div className={componentClassName} {...other}>
+    <div className={className} {...other}>
       <Icon
         className={styles['loading-indicator__icon']}
         color={EdsThemeColorTextNeutralDefault}

@@ -8,7 +8,11 @@
 
 /**
 * Reset all
-* 1) The 'all' shorthand CSS property resets all of an element's properties except unicode-bidi, direction, and CSS Custom Properties. The value 'unset' specifies that all of an element's properties should be changed to their inherited values if they inherit by default, or to their initial values if not.
+*
+* The 'all' shorthand CSS property resets all of an element's properties except unicode-bidi,
+* direction, and CSS Custom Properties. The value 'unset' specifies that all of an element's
+* properties should be changed to their inherited values if they inherit by default, or to their
+* initial values if not.
 */
 @define-mixin resetAll {
   all: unset !important;
@@ -25,9 +29,9 @@
   font-weight: var(--eds-font-weight-medium);
   line-height: inherit;
 
-  color: var(--eds-theme-color-text-link-default);
+  color: var(--eds-theme-color-text-link-neutral);
   text-decoration: underline;
-  text-decoration-color: var(--eds-theme-color-text-link-strong);
+  text-decoration-color: var(--eds-theme-color-border-link-brand);
   text-decoration-thickness: 2px;
   text-underline-offset: 2px;
 
@@ -36,8 +40,8 @@
   }
 
   &:hover {
-    color: var(--eds-theme-color-text-link-strong);
-    text-decoration-color: var(--eds-theme-color-text-link-strong);
+    color: var(--eds-theme-color-text-link-brand);
+    text-decoration-color: var(--eds-theme-color-border-link-brand);
   }
 
   &:focus-visible {
@@ -46,7 +50,7 @@
     text-decoration-color: var(
       --eds-theme-color-text-neutral-default-inverse
     ) !important;
-    background-color: var(--eds-theme-color-text-link-strong);
+    background-color: var(--eds-theme-color-border-link-brand);
   }
 
   @supports not selector(:focus-visible) {
@@ -56,7 +60,7 @@
       text-decoration-color: var(
         --eds-theme-color-text-neutral-default-inverse
       ) !important;
-      background-color: var(--eds-theme-color-text-link-strong);
+      background-color: var(--eds-theme-color-border-link-brand);
     }
   }
 }

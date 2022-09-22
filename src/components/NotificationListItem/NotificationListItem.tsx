@@ -18,7 +18,8 @@ export interface NotificationListItemProps {
   href?: string;
   /**
    * Marked as read
-   * 1) If notification is marked as read using 'Mark All Seen', this gets set to true
+   *
+   * If notification is marked as read using 'Mark All Seen', this gets set to true.
    */
   markedAsRead?: boolean;
   /**

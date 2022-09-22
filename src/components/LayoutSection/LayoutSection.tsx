@@ -4,10 +4,6 @@ import styles from '../Layout/Layout.module.css';
 
 export interface Props {
   /**
-   * Behavioral variations
-   */
-  behavior?: 'expandable';
-  /**
    * Child node(s) that can be nested inside component
    */
   children: ReactNode;

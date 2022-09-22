@@ -62,7 +62,7 @@
  */
 .drag-drop__inner {
   /* Uses a flex row to align containers. */
-  display: flex; 
+  display: flex;
   overflow: auto;
 }
 
@@ -71,25 +71,24 @@
  */
 .drag-drop__container {
   /* Set to display flex so empty state can span entire column. */
-  display: flex; 
+  display: flex;
   flex-shrink: 0;
   flex-direction: column;
   margin-left: var(--eds-size-2);
   width: 20rem;
   /* Padding added to the top to account for outline of button. */
-  padding-top: var(--eds-size-half); 
+  padding-top: var(--eds-size-half);
   /**
    * First drag drop container.
    */
   &:first-of-type {
     /* Don't add left margin to left align with the rest of the content. */
-    margin-left: 0; 
+    margin-left: 0;
   }
 }
 
 /**
- * 1) An area that can be dropped into.
- * 2) Explicitly giving container display type of 'block'. Avoid using flex; doing so may cause jumpy behavior when items are dropped.
+ * An area that can be dropped into.
  */
 .drag-drop__container-inner {
   display: flex;
@@ -110,7 +109,7 @@
   }
 
   /**
-   * 1) When there are more than two containers, apply a border
+   * When there are more than two containers, apply a border.
    */
   .drag-drop--multiple & {
     border: var(--eds-theme-border-width) solid
@@ -119,14 +118,15 @@
 }
 
 /**
- * 1) Container that holds droppable content. 
- * 2) DragDropItem styles are included here rather than in the /DragDropItem directory as a workaround to CSS Modules' locally scoped class names.
+ * Container that holds droppable content. 
+ *
+ * DragDropItem styles are included here rather than in the /DragDropItem directory as a workaround to CSS Modules' locally scoped class names.
  */
 
 .drag-drop__item {
   position: relative;
   /*  For best experience, use a margin on a single side of an item to add a gap between items. Using a margin on both top and bottom, or using flex or grid gap spacing in the drag-drop-container, cause jumpy behavior. */
-  margin-bottom: var(--eds-size-1); 
+  margin-bottom: var(--eds-size-1);
   background-color: var(--eds-color-neutral-100);
   border-radius: var(--eds-border-radius-lg);
   box-shadow: var(--eds-box-shadow-sm);

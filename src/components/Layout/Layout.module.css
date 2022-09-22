@@ -3,16 +3,18 @@
 \*------------------------------------*/
 
 /**
- * 1) Component that controls an overarching page layout. By default,
- *    the layout renders a fixed-position left sidebar on larger screens
- * 2) Left sidebar is the default
- * 3) minmax(0, 1fr) used to prevent content from overflowing the viewport
- * when items are stacked
+ * Component that controls an overarching page layout.
+ *
+ * By default, the layout renders a fixed-position left sidebar on larger screens.
  */
 .layout {
   display: grid;
   gap: var(--eds-size-3);
-  grid-template-columns: minmax(0, 1fr); 
+  /**
+   * minmax(0, 1fr) used to prevent content from overflowing the viewport
+   * when items are stacked
+   */
+  grid-template-columns: minmax(0, 1fr);
 
   @media all and (min-width: $eds-bp-xl) {
     grid-template-columns: auto 1fr;
@@ -74,7 +76,8 @@
 
 /**
  * Sidebar layout section region
- * 1) Contains the global header and site navigation
+ * 
+ * Contains the global header and site navigation.
  */
 .layout__section--sidebar {
   @media all and (min-width: $eds-bp-xl) {
@@ -113,7 +116,8 @@
 
 /**
  * Sidebar layout section region within wide sidebar variant
- * 1) Width should be larger than the default
+ *
+ * Width should be larger than the default.
  */
 .layout--sidebar-wide > .layout__section--sidebar {
   @media all and (min-width: $eds-bp-xl) {
@@ -123,7 +127,8 @@
 
 /**
  * Main layout section region 
- * 1) Contains the main page content
+ *
+ * Contains the main page content.
  */
 .layout__section--main {
   @media all and (min-width: $eds-bp-xl) {
@@ -134,9 +139,10 @@
 
 /**
  * Main layout section region within right sidebar
- * 1) Place below the right sidebar on small screens.
+ *
+ * Place below the right sidebar on small screens..
  */
 .layout--right-sidebar > .layout__section--main {
   /* Place to the left of the sidebar on large screens. */
-  order: 1; 
+  order: 1;
 }

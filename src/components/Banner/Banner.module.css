@@ -18,8 +18,8 @@
   /**
    * Has a bottom margin to accommodate drop shadow
    */
-  box-shadow: var(--eds-box-shadow-md); 
-  margin-bottom: var(--eds-size-2); 
+  box-shadow: var(--eds-box-shadow-md);
+  margin-bottom: var(--eds-size-2);
 
   border-style: solid;
   border-radius: var(--eds-border-radius-md);
@@ -35,7 +35,7 @@
    * The thick border (left for horizontal and top for vertical orientation)
    * matches the icon color.
    */
-  border-top-color: var(--messaging-icon-color); 
+  border-top-color: var(--messaging-icon-color);
 }
 
 /**
@@ -60,8 +60,7 @@
 }
 
 /**
- * Banner close button
- * 1) Button used to dismiss dismissable banners
+ * Banner close button - button used to dismiss dismissable banners.
  */
 .banner__close-btn.banner__close-btn {
   position: absolute;
@@ -80,22 +79,22 @@
   .banner--horizontal {
     grid-template-columns: min-content 1fr;
     /* Everything is left-aligned */
-    text-align: left; 
+    text-align: left;
     justify-items: flex-start;
     /* Padding is reduced */
-    padding: 1rem; 
+    padding: 1rem;
     /* Left border is thick and dark instead of the top border */
-    border-top-width: var(--eds-theme-border-width); 
-    border-left-width: var(--eds-border-width-lg); 
+    border-top-width: var(--eds-theme-border-width);
+    border-left-width: var(--eds-border-width-lg);
     border-top-color: var(--messaging-border-color);
     border-left-color: var(--messaging-icon-color);
     /* Icon is smaller to match the heading line height */
     .banner__icon {
-      --icon-size-default: var(--eds-size-3); 
+      --icon-size-default: var(--eds-size-3);
     }
     /* Gap between text and action button is reduced */
     .banner__text-and-action {
-      gap: var(--eds-size-1); 
+      gap: var(--eds-size-1);
     }
 
     .banner__action {
@@ -160,13 +159,13 @@
  */
 .banner--flat {
   /* Has no drop shadow or visible border so it sits flat on the page */
-  box-shadow: none; 
+  box-shadow: none;
   /**
    * Instead of removing the border, we replace it with a transparent one.
    * On windows high contrast mode, the background color will be removed,
    * but this border will become 100% opacity black to retain visual separation
    */
-  --messaging-border-color: transparent; 
+  --messaging-border-color: transparent;
   /* Remove the bottom margin which is usually there to account for the drop shadow length */
-  margin-bottom: 0; 
+  margin-bottom: 0;
 }

@@ -141,7 +141,8 @@ export const ButtonDropdown = ({
 
   /**
    * Handle keydown function
-   * 1) If the escape key is struck, close the panel
+   *
+   * If the escape key is struck, close the panel.
    */
   function handleKeyDown(e: React.KeyboardEvent) {
     if (e.key === ESCAPE_KEYCODE) {

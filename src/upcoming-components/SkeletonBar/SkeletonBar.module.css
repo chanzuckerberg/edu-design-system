@@ -3,8 +3,9 @@
 \*------------------------------------*/
 
 /**
- * 1) Skeleton bar used to indicate a loading state
- *    Used within table cells and other loading components
+ * Skeleton bar used to indicate a loading state
+ *
+ * Used within table cells and other loading components.
  */
 .skeleton-bar {
   position: relative;
@@ -39,7 +40,8 @@
 
 /**
  * Continuous rotation animation
- * 1) Used for loading spinner animation
+ *
+ * Used for loading spinner animation.
  */
 @keyframes pulse {
   0% {

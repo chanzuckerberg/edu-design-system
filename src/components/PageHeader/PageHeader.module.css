@@ -46,16 +46,20 @@
  */
 .page-header__left {
   /* Flex 1 added so the right content doesn't wrap. */
-  flex: 1; 
+  flex: 1;
   /* Push page header right all the way to the right. */
   @media all and (min-width: $eds-bp-md) {
-    margin-right: auto; 
+    margin-right: auto;
   }
 }
 
 /**
  * Page header right
- * 1) On larger viewports, add margin-left to keep space between title and header-right content. If additional margin needs to be added (i.e. margin-top on smaller viewports), add a spacing utility class to the contents of header-right.
+ * 
+ * On larger viewports, add margin-left to keep space between title and
+ * header-right content. If additional margin needs to be added (i.e.
+ * margin-top on smaller viewports), add a spacing utility class to the
+ * contents of header-right.
  */
 .page-header__right {
   @media all and (min-width: $eds-bp-md) {
@@ -76,13 +80,12 @@
 
 /**
  * Page title after
- * 1) An optional container that lives inside
  */
 .page-header__title-after {
   display: inline-block;
   margin-left: var(--eds-size-1-and-half);
   position: relative;
-  top: -1rem; /* TODO */
+  top: -1rem;
 }
 
 /**

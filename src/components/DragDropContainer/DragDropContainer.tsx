@@ -14,7 +14,8 @@ export interface Props {
   className?: string;
   /**
    * Column class names that can be appended to the component.
-   * 1) Used to add additional styles to the column
+   *
+   * Used to add additional styles to the column.
    */
   columnClassName?: string[];
   /**

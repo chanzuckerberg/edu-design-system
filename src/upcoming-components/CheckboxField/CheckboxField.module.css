@@ -5,7 +5,7 @@
 \*------------------------------------*/
 
 /**
- * 1) Consists of a label, form control, and an optional note about the field.
+ * Consists of a label, form control, and an optional note about the field.
  */
 .checkbox-field {
   @mixin fieldsetStyles;
@@ -21,7 +21,8 @@
 
 /**
  * Checkbox field body
- * 1) Contains the list of checkbox options
+ * 
+ * Contains the list of checkbox options
  */
 .checkbox-field__body {
   position: relative;
@@ -68,8 +69,10 @@
 
 /**
  * Checkbox field control
- * 1) The actual checkbox form control
- * 2) Align control to label
+ * 
+ * The actual checkbox form control.
+ * 
+ * Align control to label.
  */
 .checkbox-field__item-control {
   position: relative;
