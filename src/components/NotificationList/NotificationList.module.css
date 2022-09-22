@@ -45,7 +45,7 @@
 * 1) Main text title of the notification
 */
 .notification-list__link {
-  color: var(--eds-theme-color-text-link-strong);
+  color: var(--eds-theme-color-text-link-brand);
   @mixin eds-theme-typography-body-text-sm;
   text-decoration: none;
 
@@ -78,7 +78,7 @@
   border-radius: var(--eds-border-radius-md);
   height: 0.5rem;
   width: 0.5rem;
-  background-color: var(--eds-theme-color-text-link-strong);
+  background-color: var(--eds-theme-color-border-link-brand);
   cursor: pointer;
 
   &:focus-visible {
