@@ -5,19 +5,25 @@
 \*------------------------------------*/
 
 /**
- * Branding image or text of the site
- * 1) Wrapper (usually a link) that contains the logo graphic
- * 2) Width always set to fit content within whether it's an SVG or an img
+ * Branding image or text of the site.
  */
 
 /**
  * Logo link 
  */
+ /* Wrapper (usually a link) that contains the logo graphic. */
 .logo__link {
   display: block;
-  width: fit-content; /* 1 */
+  /* Width always set to fit content within whether it's an SVG or an img. */
+  width: fit-content; 
 
-  &:focus {
+  &:focus-visible {
     @mixin focusInverted;
+  }
+
+  @supports not selector(:focus-visible) {
+    &:focus {
+      @mixin focusInverted;
+    }
   }
 }

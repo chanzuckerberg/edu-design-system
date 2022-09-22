@@ -4,7 +4,7 @@
     # GLOBAL HEADER
 \*------------------------------------*/
 /**
- * 1) Global navigation bar of site
+ * Global navigation bar of site
  */
 .global-header {
   position: relative;
@@ -27,7 +27,8 @@
 
 /**
  * Global header logo
- * 1) The SVG logo
+ *
+ * The SVG logo.
  */
 .global-header__logo {
   display: none;
@@ -49,15 +50,25 @@
   color: var(--eds-theme-color-text-neutral-default-inverse);
 
   &:hover,
-  &:focus {
-    background: var(
-      --eds-theme-color-button-primary-brand-background-hover
-    ); /* TODO */
-    border-color: transparent; /* TODO */
+  &:focus-visible {
+    background: var(--eds-theme-color-button-primary-brand-background-hover);
+    border-color: transparent;
   }
 
-  &:focus {
+  &:focus-visible {
     @mixin focusInverted;
+  }
+
+  @supports not selector(:focus-visible) {
+    &:hover,
+    &:focus {
+      background: var(--eds-theme-color-button-primary-brand-background-hover);
+      border-color: transparent;
+    }
+
+    &:focus {
+      @mixin focusInverted;
+    }
   }
 
   @media all and (min-width: $eds-bp-xl) {

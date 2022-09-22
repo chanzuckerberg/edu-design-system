@@ -3,11 +3,8 @@
 \*------------------------------------*/
 
 /**
- * 1) 
+ * A spinner that indicates content is loadaing.
  */
-/* stylelint-disable-next-line block-no-empty */
-.loading-indicator {
-}
 
 .loading-indicator__icon {
   animation: rotateIcon 2s linear infinite;

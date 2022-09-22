@@ -21,8 +21,8 @@ export interface Props {
  * ```ts
  * import {DefinitionListItem} from "@chanzuckerberg/eds";
  * ```
- *
- * TODO: update this comment with a description of the component.
+ * DefinitionListItem is the component to show the definition term (`dt`)
+ * and a definition description (`dd`)
  */
 export const DefinitionListItem = ({
   className,

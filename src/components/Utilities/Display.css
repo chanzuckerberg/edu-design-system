@@ -3,7 +3,8 @@
 \*------------------------------------*/
 /**
  * Display block utility
- * 1) Forces display property to block
+ *
+ * Forces display property to block.
  */
 .u-display-block {
   display: block !important;
@@ -11,7 +12,8 @@
 
 /**
  * Display inline block utility
- * 1) Forces display property to inline-block
+ *
+ * Forces display property to inline-block.
  */
 .u-display-inline-block {
   display: inline-block !important;
@@ -19,7 +21,8 @@
 
 /**
  * Display inline utility
- * 1) Forces display property to inline
+ *
+ * Forces display property to inline.
  */
 .u-display-inline {
   display: inline !important;
@@ -27,7 +30,8 @@
 
 /**
  * Display flex utility
- * 1) Forces display property to flex
+ *
+ * Forces display property to flex.
  */
 .u-display-flex {
   display: flex !important;

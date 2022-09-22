@@ -6,7 +6,8 @@
 
 /**
  * Primary nav link
- * 1) Individual link within each primary nav item
+ *
+ * Individual link within each primary nav item.
  */
 .primary-nav__link {
   display: flex;
@@ -18,7 +19,7 @@
   transition: background var(--eds-anim-fade-quick) var(--eds-anim-ease);
 
   &:hover,
-  &:focus {
+  &:focus-visible {
     background: var(--eds-theme-color-button-primary-brand-background-hover);
   }
 
@@ -26,8 +27,19 @@
     background: var(--eds-theme-color-button-primary-brandbackground-active);
   }
 
-  &:focus {
+  &:focus-visible {
     @mixin focusInverted;
+  }
+
+  @supports not selector(:focus-visible) {
+    &:hover,
+    &:focus {
+      background: var(--eds-theme-color-button-primary-brand-background-hover);
+    }
+
+    &:focus {
+      @mixin focusInverted;
+    }
   }
 
   /**

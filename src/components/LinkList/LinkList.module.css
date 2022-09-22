@@ -5,7 +5,7 @@
 \*------------------------------------*/
 
 /**
- * 1) List of links
+ * List of links
  */
 .link-list {
   @mixin reset;
@@ -32,21 +32,20 @@
 }
 
 /**
- * Link list item
- */
-/* stylelint-disable-next-line block-no-empty */
-.link-list__item {
-}
-
-/**
  * Link list link
  */
 .link-list__link {
   display: flex;
   @mixin textLink;
 
-  &:focus {
+  &:focus-visible {
     @mixin focus;
+  }
+
+  @supports not selector(:focus-visible) {
+    &:focus {
+      @mixin focus;
+    }
   }
 
   /**

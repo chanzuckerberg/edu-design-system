@@ -105,7 +105,6 @@ export const LongTextMenu: StoryObj<Args> = {
       defaultViewport: 'tablet',
     },
     chromatic: { viewports: [834] },
-    /* 1 */
     axe: {
       skip: true,
     },

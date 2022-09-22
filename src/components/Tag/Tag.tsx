@@ -52,6 +52,7 @@ export const Tag = ({
   icon,
   text,
   hasOutline = false,
+  ...other
 }: Props) => {
   const componentClassName = clsx(
     styles['tag'],
@@ -61,7 +62,13 @@ export const Tag = ({
   );
 
   return (
-    <Text as="span" className={componentClassName} size="sm" weight="bold">
+    <Text
+      as="span"
+      className={componentClassName}
+      size="sm"
+      weight="bold"
+      {...other}
+    >
       {icon}
       {text && <span className={styles['tag__body']}>{text}</span>}
     </Text>

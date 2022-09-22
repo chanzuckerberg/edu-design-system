@@ -5,7 +5,7 @@
 \*------------------------------------*/
 
 /**
- * 1) Box that overlays the application's content, prompting a user to perform an action.
+ * Box that overlays the application's content, prompting a user to perform an action.
  */
 .drawer__container {
   display: flex;
@@ -23,8 +23,8 @@
 }
 
 /**
-* Active drawer container
-*/
+ * Active drawer container
+ */
 .drawer__container--is-active {
   visibility: visible;
   z-index: var(--eds-z-index-400);
@@ -32,7 +32,7 @@
 
 /**
  * Drawer window
- * 1) Actual box with content within
+ * Actual box with content within
  */
 .drawer {
   display: flex;
@@ -51,14 +51,20 @@
     transition: none;
   }
 }
-.drawer:focus {
+.drawer:focus-visible {
   @mixin focusInside;
 }
 
+@supports not selector(:focus-visible) {
+  .drawer:focus {
+    @mixin focusInside;
+  }
+}
+
 /**
-* Drawer window inside active drawer container
-* 1) Transform added for animation
-*/
+ * Drawer window inside active drawer container
+ * Transform added for animation
+ */
 .drawer__container--is-active .drawer {
   transform: translateX(0); /* 1 */
 }

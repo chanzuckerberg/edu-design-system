@@ -5,15 +5,14 @@
 \*------------------------------------*/
 
 /**
- * 1) 
+ * Primary shell around the entire page.
  */
 .page-shell {
   position: relative;
 }
 
 /**
- * Skip link
- * 1) The skip link 
+ * Skip link – allows the user to skip past the main navigation to the page content.
  */
 .page-shell__skip-link {
   position: absolute;

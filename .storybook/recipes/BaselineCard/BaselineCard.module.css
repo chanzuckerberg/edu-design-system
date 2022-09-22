@@ -14,11 +14,23 @@
 
 /**
 * Baseline card container
-* 1) Used to pass the cardRef object to Card component
+*
+* Used to pass the cardRef object to Card component.
 */
 .baseline-card__container {
   @mixin reset;
   display: block;
+}
+
+/**
+ * Inner wrapper that is also clickable
+ *
+ * This is needed because the outermost div may extend beyond the visible card,
+ * which means the user could click on empty space and still activate the click
+ * handler.
+ */
+.baseline-card__clickable-wrapper {
+  width: max-content;
 }
 
 /**
@@ -32,7 +44,8 @@
 
 /**
 * Baseline card clickable 
-* 1) When an href prop is passed in, the card gets a :hover style to indicate
+*
+* When an href prop is passed in, the card gets a :hover style to indicate
 * that it is clickable.
 */
 .baseline-card--clickable {

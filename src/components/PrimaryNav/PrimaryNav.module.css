@@ -5,15 +5,15 @@
 \*------------------------------------*/
 
 /**
- * Primary navigation existing in the header and maybe the footer
- * 1) The outer <nav> wrapper of the primary navigation
- * 2) Normally margin-top should not be used to space elements, but
- *    the primary navigation is
+ * Primary navigation existing in the header and maybe the footer.
+ * 
+ * The outer <nav> wrapper of the primary navigation.
  */
 
 /**
  * Primary nav list
- * 1) The actual list of nav items
+ * 
+ The actual list of nav items.
  */
 .primary-nav__list {
   @mixin reset;

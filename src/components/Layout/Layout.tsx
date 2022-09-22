@@ -18,17 +18,20 @@ export interface Props {
   className?: string;
   /**
    * Expandable layout sections
-   * 1) Used for hover/focus states showing/hiding extra content
+   *
+   * Used for hover/focus states showing/hiding extra content
    */
   expandable?: boolean;
   /**
    * Sidebar property
-   * 1) Adjust the gap between layout sections.
+   *
+   * Adjust the gap between layout sections.
    */
   gap?: 'none' | 'lg-xl';
   /**
    * Sidebar property
-   * 1) Adjust the size of the sidebar
+   *
+   * Adjust the size of the sidebar:
    * - **right-sidebar** renders a main section with a fixed width right sidebar
    * - **67-33** renders a 66.66% main section, 33.33% right sidebar section
    * - **50-50** renders a 50% main section, 50% sidebar section

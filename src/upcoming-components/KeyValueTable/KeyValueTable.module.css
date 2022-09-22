@@ -5,7 +5,7 @@
 \*------------------------------------*/
 
 /**
- * 1) Data table that always consists of 2 columns (i.e. a list of items and prices with total)
+ * Data table that always consists of 2 columns (i.e. a list of items and prices with total)
  */
 .key-value-table {
   border-collapse: collapse;

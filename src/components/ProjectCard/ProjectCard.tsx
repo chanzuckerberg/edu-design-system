@@ -23,7 +23,8 @@ export interface Props {
   behavior?: 'draggable';
   /**
    * Button dropdown items
-   * 1) If not declared, the button dropdown does not render
+   *
+   * If not declared, the button dropdown does not render.
    */
   buttonDropdownItems?: ReactNode;
   /**
@@ -66,7 +67,8 @@ export interface Props {
 }
 
 /**
- * Primary UI component for user interaction
+ * ProjectCard is the primary UI component for user interaction contains card components, button components
+ * and draggable components.
  */
 export const ProjectCard = ({
   behavior,

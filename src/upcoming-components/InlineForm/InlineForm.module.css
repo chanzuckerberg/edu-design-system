@@ -3,8 +3,9 @@
 \*------------------------------------*/
 
 /**
- * 1) An inline form displays an input and a button side-by-side.
- * 2) Can be used for search, email newsletter signup, and other one-field forms
+ * An inline form displays an input and a button side-by-side.
+ *
+ * Can be used for search, email newsletter signup, and other one-field forms.
  */
 .inline-form {
   display: flex;

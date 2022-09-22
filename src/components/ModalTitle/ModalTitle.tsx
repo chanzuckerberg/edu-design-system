@@ -20,6 +20,10 @@ type Props = Omit<HeadingProps, 'size'> & {
   size?: HeadingSize;
 };
 
+/**
+ * Component defines the Title section of the modal.
+ */
+
 export const ModalTitle = ({
   children,
   className,

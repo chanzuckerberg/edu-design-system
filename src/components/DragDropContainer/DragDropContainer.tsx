@@ -14,7 +14,8 @@ export interface Props {
   className?: string;
   /**
    * Column class names that can be appended to the component.
-   * 1) Used to add additional styles to the column
+   *
+   * Used to add additional styles to the column.
    */
   columnClassName?: string[];
   /**
@@ -32,7 +33,7 @@ export interface Props {
 }
 
 /**
- * Primary UI component for user interaction
+ * Primary UI component for user interaction for draggable components to be dropped within the container.
  */
 export const DragDropContainer = ({
   className,

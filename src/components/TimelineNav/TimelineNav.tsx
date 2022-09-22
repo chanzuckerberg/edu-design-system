@@ -98,7 +98,9 @@ export interface TimelineNavItem {
  * ```
  *
  * Timeline nav Component
- * 1) Provides a list-view pane for item labels/titles, and a details pane for each item's content. When an item in the list is selected, the details pane is updated.
+ *
+ * Provides a list-view pane for item labels/titles, and a details pane for each item's content.
+ * When an item in the list is selected, the details pane is updated.
  */
 export const TimelineNav = ({
   activeIndex = 0,
@@ -139,7 +141,8 @@ export const TimelineNav = ({
 
   /**
    * Get previous prop
-   * 1) This is used to compare the previous prop to the current prop
+   *
+   * This is used to compare the previous prop to the current prop.
    */
   function usePrevious(activeIndex: number) {
     useEffect(() => {
@@ -347,7 +350,8 @@ export const TimelineNav = ({
 
   /**
    * resetTabIndex (used by 'Back' button on <lg viewports)
-   * 1) This fixes an issue where a keyboard user who has focus on the
+   *
+   * This fixes an issue where a keyboard user who has focus on the
    * 'Back' button could use shift-tab to put keyboard focus back
    * on the menu, which is currently off-canvas. To prevent this
    * unwanted behavior, we set the currently active menu item's

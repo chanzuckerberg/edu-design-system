@@ -4,50 +4,54 @@
 
 /**
  * Wraps the visually hidden radio input element and the visible sibling svg element.
- * 1) Centers the radio icon in the wrapper.
- * 2) Aligns the radio with the first line of the label.
  */
 .input__wrapper {
   position: relative;
-
-  display: inline-flex; /* 1 */
+  /* Centers the radio icon in the wrapper. */
+  display: inline-flex; 
   align-items: center;
-
-  align-self: flex-start; /* 2 */
+   /* Aligns the radio with the first line of the label. */
+  align-self: flex-start;
 }
 /**
  * The visually hidden input element for the radio. The visual radio is provided by an svg element.
- * 1) Removes default margins placed by browser for radioes.
- * 2) Remove the radio from the page flow, positioning it on top of the SVG.
-*  3) Set same dimensions as the RadioSvg element.
- * 4) Hide the input element visually.
- *    This ensures the radio is still "physically" present so that all users,
- *    especially on touch screen readers, still interact with the real radio element
- *    where it would naturally be present.
  */
 .radio__input {
-  margin: 0; /* 1 */
-
-  position: absolute; /* 2 */
+  /* Removes default margins placed by browser for radioes. */
+  margin: 0;
+  /* Remove the radio from the page flow, positioning it on top of the SVG. */
+  position: absolute; 
   left: 0.25rem;
-
-  height: var(--eds-size-2); /* 3 */
+  /* Set same dimensions as the RadioSvg element. */
+  height: var(--eds-size-2); 
   width: var(--eds-size-2);
-
-  opacity: 0; /* 4 */
+  /**
+   * Hide the input element visually.
+   * This ensures the radio is still "physically" present so that all users,
+   * especially on touch screen readers, still interact with the real radio element
+   * where it would naturally be present.
+   */
+  opacity: 0; 
 }
 
 /**
  * The visible radio svg icon element.
- * 1) Creates space for the border so that there's no jitter when the focus border is visible.
  */
 .radio__icon {
   color: var(--eds-theme-color-icon-brand-primary);
-  border: var(--eds-border-width-sm) solid transparent; /* 1 */
+  /* Creates space for the border so that there's no jitter when the focus border is visible. */
+  border: var(--eds-border-width-sm) solid transparent; 
 }
-.radio__input:focus + .radio__icon {
+.radio__input:focus-visible + .radio__icon {
   border: var(--eds-border-width-sm) solid var(--eds-theme-color-focus-ring);
-  border-radius: 9999px;
+  border-radius: var(--eds-border-radius-full);
+}
+
+@supports not selector(:focus-visible) {
+  .radio__input:focus + .radio__icon {
+    border: var(--eds-border-width-sm) solid var(--eds-theme-color-focus-ring);
+    border-radius: var(--eds-border-radius-full);
+  }
 }
 
 /**
@@ -59,8 +63,8 @@
 
 /**
  * The disabled status of the visually hidden input element.
- * 1) Needed since the input element overlays the visible svg icon for user input and cursor.
  */
 .radio__input:disabled {
-  cursor: not-allowed; /* 1 */
+  /* Needed since the input element overlays the visible svg icon for user input and cursor. */
+  cursor: not-allowed; 
 }
