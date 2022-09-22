@@ -1,3 +1,4 @@
+import debounce from 'lodash.debounce';
 import React, { useEffect, useState } from 'react';
 import FiltersDrawer from '../../../src/components/FiltersDrawer';
 import {
@@ -18,7 +19,7 @@ type Props = {
  */
 export const Filters = ({ placement, ...other }: Props) => {
   const [isLarge, setIsLarge] = useState(false);
-  const popoverBreakpoint = parseInt(breakpoint['eds-bp-md']) * 16; /* 1 */
+  const popoverBreakpoint = parseInt(breakpoint['eds-bp-md']) * 16;
   useEffect(() => {
     updateScreenSize();
     window.addEventListener('resize', updateScreenSize);
@@ -27,13 +28,14 @@ export const Filters = ({ placement, ...other }: Props) => {
     };
   });
 
-  const updateScreenSize = () => {
-    if (window.innerWidth >= popoverBreakpoint) {
+  const updateScreenSize = debounce(() => {
+    if (window.innerWidth >= popoverBreakpoint && !isLarge) {
       setIsLarge(true);
-    } else {
+    }
+    if (window.innerWidth < popoverBreakpoint && isLarge) {
       setIsLarge(false);
     }
-  };
+  }, 200);
   return (
     <div>
       {!isLarge && <FiltersDrawer {...other} />}

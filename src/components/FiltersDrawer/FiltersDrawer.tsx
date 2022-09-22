@@ -45,11 +45,15 @@ export type FiltersDrawerProps = {
   onApply?: () => void;
   /**
    * Trigger element that toggles the filters drawer.
-   * Must be able to accept an 'onClick: MouseEventHandler' prop.
+   * Must be able to accept an 'onClick: () => void' prop.
+   *
+   * Either `triggerElement` or `triggerText` must be passed in, and if both are passed, `triggerElement` will be used.
    */
   triggerElement?: ReactNode;
   /**
    * Text to be placed in the button that activates the Filters Drawer
+   *
+   * Either `triggerElement` or `triggerText` must be passed in, and if both are passed, `triggerElement` will be used.
    */
   triggerText?: string;
 };
