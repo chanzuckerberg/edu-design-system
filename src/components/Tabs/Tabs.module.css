@@ -17,11 +17,11 @@
 
 /**
  * Tabs header
- * 1) Contains the tab list
- * 2) Tab overflow behavior
+ * 1) Contains the tab list.
  */
 .tabs__header {
-  overflow-x: auto;
+  /* Tab overflow behavior*/
+  overflow-x: auto; 
   position: relative;
   padding-bottom: var(--eds-size-2);
 
@@ -38,7 +38,7 @@
   -webkit-mask-image: -webkit-linear-gradient(
     left,
     transparent,
-    white var(--eds-size-8) /* 1 */
+    white var(--eds-size-8)
   );
 }
 
@@ -46,7 +46,6 @@
   -webkit-mask-image: -webkit-linear-gradient(
     right,
     transparent,
-    white var(--eds-size-8) /* 1 */
   );
 }
 
@@ -54,7 +53,7 @@
   -webkit-mask-image: -webkit-linear-gradient(
     left,
     transparent,
-    /* 1 */ white var(--eds-size-8),
+    white var(--eds-size-8),
     white calc(100% - var(--eds-size-8)),
     transparent 100%
   );
@@ -62,13 +61,13 @@
 
 /**
  * Tabs list
- * 1) Actual unordered list of tabs
- * 2) Set to display flex to place tabs side by side
+ * 1) Actual unordered list of tabs.
  */
 .tabs__list {
   @mixin reset;
   list-style: none;
-  display: flex; /* 2 */
+  /* Set to display flex to place tabs side by side. */
+  display: flex; 
   border-bottom: var(--eds-theme-border-width) solid
     var(--eds-theme-color-border-neutral-subtle);
   @mixin eds-theme-typography-tab;
@@ -79,7 +78,7 @@
  * 1) Flex shrink 0 keeps tabs from expanding to fill up the space of the container
  */
 .tabs__item {
-  flex-shrink: 0; /* 1 */
+  flex-shrink: 0; 
 }
 
 /**

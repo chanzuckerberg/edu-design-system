@@ -23,5 +23,5 @@
 .footer__button-group {
   margin-top: var(--eds-size-3);
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }

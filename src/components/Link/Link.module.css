@@ -3,9 +3,9 @@
 \*------------------------------------*/
 
 /**
- * Link button with link variant styles
- * 1) Override display: inline-flex from ClickableStyle
+ * Link button with link variant styles.
  */
 .link--link {
-  display: inline; /* 1 */
+  /*  Override display: inline-flex from ClickableStyle. */
+  display: inline; 
 }

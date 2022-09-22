@@ -19,6 +19,10 @@ export type Props = {
   isSticky?: boolean;
 };
 
+/**
+ * Component defines the Footer section of the modal.
+ */
+
 export const ModalFooter = ({
   children,
   className,

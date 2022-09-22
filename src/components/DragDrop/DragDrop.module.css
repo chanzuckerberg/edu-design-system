@@ -7,12 +7,12 @@
 .drag-drop {
   position: relative;
   /**
-    * Table object body with content overflowed left
-    */
+   * Table object body with content overflowed left
+   */
   &.eds-is-overflow-left {
     /**
-         * Right overflow gradient for the overflow list
-         */
+     * Right overflow gradient for the overflow list
+     */
     /* stylelint-disable-next-line max-nesting-depth */
     &:before {
       content: '';
@@ -32,12 +32,12 @@
   }
 
   /**
-        * Table object body with content overflowed right
-        */
+   * Table object body with content overflowed right
+   */
   &.eds-is-overflow-right {
     /**
-         * Right overflow gradient for the overflow list
-         */
+     * Right overflow gradient for the overflow list
+     */
     /* stylelint-disable-next-line max-nesting-depth */
     &:after {
       content: '';
@@ -58,40 +58,39 @@
 }
 
 /**
- * 1) Outer container for DragDrop component; provides <DragDropContext />, which wraps droppable components (i.e. containers) and provides them with context 
- * 2) Uses a flex row to align containers
+ * Outer container for DragDrop component; provides <DragDropContext />, which wraps droppable components (i.e. containers) and provides them with context.
  */
 .drag-drop__inner {
-  display: flex;
+  /* Uses a flex row to align containers. */
+  display: flex; 
   overflow: auto;
 }
 
 /**
- * Drag drop container
- * 1) Set to display flex so empty state can span entire column.
- * 2) Padding added to the top to account for outline of button
+ * Drag drop container.
  */
 .drag-drop__container {
-  display: flex; /* 1 */
+  /* Set to display flex so empty state can span entire column. */
+  display: flex; 
   flex-shrink: 0;
   flex-direction: column;
   margin-left: var(--eds-size-2);
   width: 20rem;
-  padding-top: var(--eds-size-half); /* 2 */
+  /* Padding added to the top to account for outline of button. */
+  padding-top: var(--eds-size-half); 
   /**
-  * First drag drop container
-  * 1) Don't add left margin to left align with the rest of the content
-  */
+   * First drag drop container.
+   */
   &:first-of-type {
-    margin-left: 0; /* 1 */
+    /* Don't add left margin to left align with the rest of the content. */
+    margin-left: 0; 
   }
 }
 
 /**
-* 1) An area that can be dropped into.
-* 2) DragDropContainer styles are included here rather than in the /DragDropContainer directory as a workaround to CSS Modules' locally scoped class names 
-* 3) Explicitly giving container display type of 'block'. Avoid using flex; doing so may cause jumpy behavior when items are dropped.
-*/
+ * 1) An area that can be dropped into.
+ * 2) Explicitly giving container display type of 'block'. Avoid using flex; doing so may cause jumpy behavior when items are dropped.
+ */
 .drag-drop__container-inner {
   display: flex;
   flex-direction: column;
@@ -102,7 +101,7 @@
   padding: var(--eds-size-1);
   border-radius: var(--eds-border-radius-md);
 
-  /* 2 */
+  /*  DragDropContainer styles are included here rather than in the /DragDropContainer directory as a workaround to CSS Modules' locally scoped class names. */
   .drag-drop__container--empty & {
     justify-content: center;
     align-items: center;
@@ -111,8 +110,8 @@
   }
 
   /**
-  * 1) When there are more than two containers, apply a border
-  */
+   * 1) When there are more than two containers, apply a border
+   */
   .drag-drop--multiple & {
     border: var(--eds-theme-border-width) solid
       var(--eds-theme-color-border-neutral-default);
@@ -120,14 +119,14 @@
 }
 
 /**
-* 1) Container that holds droppable content. 
-* 2) DragDropItem styles are included here rather than in the /DragDropItem directory as a workaround to CSS Modules' locally scoped class names 
-* 3) For best experience, use a margin on a single side of an item to add a gap between items. Using a margin on both top and bottom, or using flex or grid gap spacing in the drag-drop-container, cause jumpy behavior.
-*/
+ * 1) Container that holds droppable content. 
+ * 2) DragDropItem styles are included here rather than in the /DragDropItem directory as a workaround to CSS Modules' locally scoped class names.
+ */
 
 .drag-drop__item {
   position: relative;
-  margin-bottom: var(--eds-size-1); /* 3 */
+  /*  For best experience, use a margin on a single side of an item to add a gap between items. Using a margin on both top and bottom, or using flex or grid gap spacing in the drag-drop-container, cause jumpy behavior. */
+  margin-bottom: var(--eds-size-1); 
   background-color: var(--eds-color-neutral-100);
   border-radius: var(--eds-border-radius-lg);
   box-shadow: var(--eds-box-shadow-sm);
@@ -147,8 +146,8 @@
   }
 
   /**
-  * 1) The unstyled variant removes all styling from items.
-  */
+   * The unstyled variant removes all styling from items.
+   */
   .drag-drop--unstyled & {
     background-color: unset;
     box-shadow: unset;
@@ -156,23 +155,23 @@
 }
 
 /** 
-* 1) Optional title div at the top of an item.
-*/
+ * Optional title div at the top of an item.
+ */
 .drag-drop__item-title {
   @mixin eds-typography-preset-007-bold;
   margin-bottom: var(--eds-size-2);
 }
 
 /**
-* 1) Used with handles variant to wrap children.
-*/
+ * Used with handles variant to wrap children.
+ */
 .drag-drop__item-content {
   flex-grow: 1;
 }
 
 /**
-* 1) Wrapper for drag handle.
-*/
+ * Wrapper for drag handle.
+ */
 .drag-drop__item-handle {
   position: absolute;
   top: 1px;

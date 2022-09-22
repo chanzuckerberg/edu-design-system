@@ -26,16 +26,17 @@
 
 /**
  * The modal container which positions the modal in the center of the screen.
- * 1) Ensures modal is above other components. This is not a design token for now since we need to align on 
- *    z-indeces across the app and in the platform. https://app.shortcut.com/czi-edu/story/203871
  */
 .modal {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: var(--eds-size-2);
-
-  z-index: 1050; /* 1 */
+  /**
+   * Ensures modal is above other components. This is not a design token for now since we need to align on 
+   * z-indeces across the app and in the platform. https://app.shortcut.com/czi-edu/story/203871.
+   */
+  z-index: 1050; 
 }
 
 /**
@@ -68,12 +69,6 @@
 
 /**
  * The content of the modal, which can wrap header, body, and footer.
- * 1) This transparent border is for Window High Contrast Mode, which removes all
-    background colors but makes borders 100% opacity black. Without this, the
-    modal would have no clear boundary.
- *  2) We use flexbox to handle height and width automatically. 
-    The body can scroll when content goes beyond the component,
-    while the footer remains static (if scrollable).
  */
 .modal__content {
   position: relative;
@@ -82,10 +77,18 @@
   overflow: hidden;
   border-radius: var(--eds-border-radius-lg);
   background-color: var(--eds-theme-color-background-neutral-default);
-  /* 1 */
+  /** 
+  * This transparent border is for Window High Contrast Mode, which removes all
+  * background colors but makes borders 100% opacity black. Without this, the
+  * modal would have no clear boundary. 
+  */
   border: var(--eds-theme-form-border-width) transparent
     var(--eds-theme-color-background-neutral-default);
-  /* 2 */
+  /** 
+  * We use flexbox to handle height and width automatically. 
+  * The body can scroll when content goes beyond the component,
+  * while the footer remains static (if scrollable).
+  */
   display: flex;
   flex-direction: column;
 
@@ -124,8 +127,7 @@
 }
 
 /**
- * The modal close button
- * 1) Minimum button target size is 44px, but 3rem (48px) is next closest ramp size.
+ * The modal close button.
  */
 .modal__close-button {
   @mixin reset;
@@ -136,7 +138,7 @@
   top: 0;
   right: 0;
 
-  /* 1 */
+  /* Minimum button target size is 44px, but 3rem (48px) is next closest ramp size. */
   width: var(--eds-size-6);
   height: var(--eds-size-6);
 

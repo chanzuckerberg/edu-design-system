@@ -26,7 +26,7 @@ export interface Props {
 }
 
 /**
- * Primary UI component for user interaction
+ * Primary UI component for user interaction to be dragged and dropped in containers.
  */
 export const DragDropItem = ({ behavior, className, item, index }: Props) => {
   const componentClassName = clsx(

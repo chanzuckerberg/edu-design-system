@@ -80,7 +80,7 @@ export const NumberIcon = ({
       variant={variant === 'base' ? 'neutral-medium' : 'white'}
       {...other}
     >
-      {incomplete && numberIconTitle ? (
+      {incomplete && numberIconTitle /* 2 */ ? (
         <Icon
           className={styles['number-icon__icon']}
           color="inherit"
@@ -90,7 +90,7 @@ export const NumberIcon = ({
           title={numberIconTitle}
         />
       ) : (
-        number
+        number /* 3 */
       )}
     </Text>
   );

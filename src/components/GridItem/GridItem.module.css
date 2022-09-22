@@ -2,7 +2,7 @@
     # GRID ITEM
 \*------------------------------------*/
 /**
- * 1) Direct child of grid
+ * Direct child of grid
  */
 .grid__item {
   .grid & {
@@ -15,8 +15,8 @@
   }
 
   /**
-     * Grid item that span 2 columns
-     */
+   * Grid item that span 2 columns
+   */
   &.grid__item.grid__item--span-2 {
     width: 100%;
 

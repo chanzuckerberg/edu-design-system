@@ -28,7 +28,8 @@ export interface Props {
  * import {DefinitionList} from "@chanzuckerberg/eds";
  * ```
  *
- * TODO: update this comment with a description of the component.
+ * DefinitionList is the wrapper component that contains the definition term (`dt`)
+ * and a definition description (`dd`)
  */
 export const DefinitionList = ({
   orientation,

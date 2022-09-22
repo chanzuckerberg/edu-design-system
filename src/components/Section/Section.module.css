@@ -23,8 +23,8 @@
   margin-bottom: var(--eds-size-3);
 
   /**
-     * Section header within centered section
-     */
+   * Section header within centered section
+   */
   .section--center & {
     justify-content: center;
   }
@@ -32,26 +32,26 @@
 
 /**
 * Section header inner
-* 1) Contains the titleBefore, title-inner, and titleAfter
-* 2) Flex grow only has an effect if there is content in the section__right slot; section_right gets forced to the right edge of the header
-* 3) To center the header, flex-grow must be disabled
+* 1) Contains the titleBefore, title-inner, and titleAfter.
 */
 .section__header-inner {
-  flex-grow: 1; /* 2 */
+  /**
+   * Flex grow only has an effect if there is content in the section__right slot;
+   * section_right gets forced to the right edge of the header 
+   */
+  flex-grow: 1; 
   display: flex;
   flex-direction: row;
   gap: var(--eds-size-1);
-
+  /*  To center the header, flex-grow must be disabled. */
   .section--center & {
-    flex-grow: 0; /* 3 */
+    flex-grow: 0;
   }
 }
 
 /**
 * Section title inner
-* 1) Contains the section title, overline, and description in a column
-* 2) When variant === center, the title inner container gets centered in the header inner container
-* 3) When variant === center, the title inner container's contents get center aligned on the cross-axis
+* 1) Contains the section title, overline, and description in a column.
 */
 .section__title-inner {
   display: flex;
@@ -60,8 +60,10 @@
   align-items: flex-start;
 
   .section--center & {
-    justify-self: center; /* 2 */
-    align-items: center; /* 3 */
+    /* When variant === center, the title inner container gets centered in the header inner container */
+    justify-self: center; 
+    /* When variant === center, the title inner container's contents get center aligned on the cross-axis */
+    align-items: center; 
   }
 }
 

@@ -5,7 +5,7 @@
 \*------------------------------------*/
 
 /**
- * 1) Container that consists of a page header title and description
+ * Container that consists of a page header title and description.
  */
 .page-header {
   display: flex;
@@ -42,15 +42,14 @@
 }
 
 /**
- * Page header left
- * 1) Flex 1 added so the right content doesn't wrap
- * 2) Push page header right all the way to the right
+ * Page header left.
  */
 .page-header__left {
-  flex: 1; /* 1 */
-
+  /* Flex 1 added so the right content doesn't wrap. */
+  flex: 1; 
+  /* Push page header right all the way to the right. */
   @media all and (min-width: $eds-bp-md) {
-    margin-right: auto;
+    margin-right: auto; 
   }
 }
 

@@ -66,7 +66,8 @@ export interface Props {
 }
 
 /**
- * Primary UI component for user interaction
+ * ProjectCard is the primary UI component for user interaction contains card components, button components
+ * and draggable components.
  */
 export const ProjectCard = ({
   behavior,
