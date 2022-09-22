@@ -63,7 +63,6 @@ export interface Props {
  * HTML table cell of the `Table` component
  */
 export const TableCell = ({
-  behavior,
   children,
   className,
   as = 'td',
@@ -71,7 +70,7 @@ export const TableCell = ({
   colSpan,
   scope,
   headers,
-  align,
+  align = 'left',
   verticalAlign,
   id,
   wrap,
@@ -80,7 +79,6 @@ export const TableCell = ({
   const componentClassName = clsx(
     styles['table__cell'],
     align === 'left' && styles['table__cell--align-left'],
-    align === 'insetLeft' && styles['table__cell--align-inset-left'],
     align === 'right' && styles['table__cell--align-right'],
     align === 'center' && styles['table__cell--align-center'],
     verticalAlign === 'center' && styles['table__cell--valign-center'],
