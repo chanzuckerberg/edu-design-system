@@ -5,12 +5,13 @@
 \*------------------------------------*/
 
 /**
- * 1) Card with a title, table, and button within
+ * Card with a title, table, and button within
  */
 
 /**
 * Table card table
-* 1) Actual table within the card
+*
+* Actual table within the card.
 */
 .table-card__table {
   color: var(--eds-theme-color-text-neutral-subtle);

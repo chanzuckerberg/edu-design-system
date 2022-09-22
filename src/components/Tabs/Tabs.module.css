@@ -17,7 +17,8 @@
 
 /**
  * Tabs header
- * 1) Contains the tab list.
+ *
+ * Contains the tab list.
  */
 .tabs__header {
   /* Tab overflow behavior*/
@@ -32,7 +33,8 @@
 
 /**
  * Fade scrollable indicators to display if there is scrollable area on either side.
- * 1) The color "white" is arbitrary and any non transparent color can be used here.
+ *
+ * The color "white" is arbitrary and any non transparent color can be used here.
  */
 .tabs--scrollable-left {
   -webkit-mask-image: -webkit-linear-gradient(
@@ -58,7 +60,8 @@
 
 /**
  * Tabs list
- * 1) Actual unordered list of tabs.
+ *
+ * Actual unordered list of tabs.
  */
 .tabs__list {
   @mixin reset;
@@ -72,9 +75,11 @@
 
 /**
  * Tabs item
- * 1) Flex shrink 0 keeps tabs from expanding to fill up the space of the container
  */
 .tabs__item {
+  /**
+   * Flex shrink 0 keeps tabs from expanding to fill up the space of the container.
+   */
   flex-shrink: 0;
 }
 

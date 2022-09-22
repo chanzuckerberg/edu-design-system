@@ -3,10 +3,10 @@
 \*------------------------------------*/
 
 /**
- * 1) A counter is a form control that consists of a 
- *    numeric input and + - buttons to increment the 
- *    value on either side of the input 
- * 2) Cap the width of the input
+ * A counter is a form control that consists of a  numeric input and
+ * + - buttons to increment the  value on either side of the input .
+ *
+ * Cap the width of the input.
  */
 
 /**
@@ -48,9 +48,8 @@
 
 /**
  * Counter +/- button styles
- * 1) Instance of icon button variant, and then rebuilds
- *    styles to match text input styles
- * 2) Margin left and margin right 0 added to remove margin in Safari from these 
+ *
+ * Instance of icon button variant, and then rebuilds styles to match text input styles.
  */
 .counter__btn {
   padding-top: var(--eds-size-1-and-half);

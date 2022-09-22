@@ -3,7 +3,7 @@
 \*------------------------------------*/
 
 /**
- * 1) Consists of a label, form control, and an optional note about the field.
+ * Consists of a label, form control, and an optional note about the field.
  */
 .file-upload-field {
   position: relative;
@@ -19,8 +19,8 @@
 
 /**
  * Hit area
- * 1) the area where users can drag files onto or click
- *    to bring up the file explorer
+ *
+ * The area where users can drag files onto or click to bring up the file explorer.
  */
 .file-upload-field__hit-area {
   border: var(--eds-theme-border-width) dashed
@@ -67,7 +67,8 @@
 
 /**
  * Label after
- * 1) Slot after the label that can be used to place components like a tooltip
+ *
+ * Slot after the label that can be used to place components like a tooltip.
  */
 .file-upload-field__label-after {
   display: inherit;
@@ -76,7 +77,8 @@
 
 /**
  * Text field input
- * 1) The actual form control
+ *
+ * The actual form control.
  */
 .file-upload-field__input {
   position: absolute;
@@ -96,7 +98,8 @@
 .file-upload-field--error > .file-upload-field__note {
   /**
    * file-upload-field note within error state
-   * 1) Set to display flex to place icon next to the fieldnote
+   *
+   * Set to display flex to place icon next to the fieldnote.
    */
   display: inline-flex;
 }
@@ -112,7 +115,8 @@
 
 /**
  * file-upload-field icon
- * 1) Icon that can be placed at the end of the text input
+ *
+ * Icon that can be placed at the end of the text input.
  */
 .file-upload-field__icon {
   position: absolute;

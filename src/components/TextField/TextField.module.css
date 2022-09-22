@@ -28,10 +28,10 @@
 
 /**
  * Text Field Within
- * 1) A slot to put arbitrary content that appears within
- *    the text field border to the right. 
- * 2) Typically used for buttons and icon buttons to enable
- *    things like show/hide password buttons 
+ *
+ * A slot to put arbitrary content that appears within the text field border to the right. 
+ *
+ * Typically used for buttons and icon buttons to enable things like show/hide password buttons .
  */
 .text-field__input-within {
   position: absolute;

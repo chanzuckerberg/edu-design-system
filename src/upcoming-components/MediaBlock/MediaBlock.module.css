@@ -19,7 +19,8 @@
 
 /**
  * Media Container
- * 1) This is the container that holds the image (or media)
+ *
+ * This is the container that holds the image (or media).
  */
 .media-block__media {
   width: 100%;
@@ -49,7 +50,8 @@
 
 /**
  * Media Block Headline
- * 1) This is the headline of the media block
+ *
+ * This is the headline of the media block.
  */
 .media-block__title {
   @mixin eds-theme-typography-heading-3;

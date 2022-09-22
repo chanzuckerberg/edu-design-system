@@ -5,7 +5,7 @@
 \*------------------------------------*/
 
 /**
- * 1) Data Table
+ * Data Table
  */
 .table {
   border-collapse: collapse;
@@ -41,7 +41,8 @@
 
 /**
  * Table Header
- * 1) First row of a table that contains the table header cells
+ * 
+ * First row of a table that contains the table header cells.
  */
 .table__header {
   /**
@@ -52,14 +53,15 @@
 
     @media all and (min-width: $eds-bp-md) {
       /* Hide on small screens */
-      display: table-header-group; 
+      display: table-header-group;
     }
   }
 }
 
 /**
  * Table body
- * 1) <tbody> tag, contains the table rows in the body of the table
+ * 
+ * <tbody> tag, contains the table rows in the body of the table.
  */
 .table__body {
   .table--stacked > & {
@@ -128,12 +130,11 @@
  */
 .table__row--bare {
   /* Removes border. */
-  border-bottom: none; 
+  border-bottom: none;
 }
 
 /**
  * Clickable table row
- * 1) Indicates a clickable table row
  */
 .table__row--clickable {
   cursor: pointer;
@@ -145,7 +146,8 @@
 
 /**
 * Table header cell and table header cell button
-* 1) On table header cells that are not sortable, the container is a div.
+* 
+* On table header cells that are not sortable, the container is a div.
 */
 .table__header-cell,
 /**
@@ -164,7 +166,8 @@
 .table__header-cell {
   /**
   * Table header cell within table body
-  * 1) Adjust the padding to match the table__cell padding for alignment
+  *
+  * Adjust the padding to match the table__cell padding for alignment.
   */
   .table__body & {
     padding: var(--eds-size-2) var(--eds-size-1);
@@ -173,7 +176,8 @@
 
 /**
 * Table header cell button
-* 1) On table header cells that are sortable, the container is a button.
+*
+* On table header cells that are sortable, the container is a button.
 */
 .table__header-cell-button {
   display: inline-flex;
@@ -197,7 +201,9 @@
 
 /**
  * Table header cell contents
- * 1) A wrapper for the title and sort icon. Uses a flex row so that icon remains at the bottom when one or more titles breaks into multiple lines 
+ *
+ * A wrapper for the title and sort icon. Uses a flex row so that icon remains at
+ * the bottom when one or more titles breaks into multiple lines .
  */
 .table__header-cell-contents {
   display: flex;
@@ -219,7 +225,7 @@
    * Condensed table.
    */
   .table--condensed & {
-     /*  shrinks padding between table rows. */
+    /*  shrinks padding between table rows. */
     padding: var(--eds-size-1) var(--eds-size-1);
   }
 
@@ -272,12 +278,12 @@
     padding-right: 0;
 
     &:before {
-    /**
+      /**
      * Take data-heading attribute and display
      * that value as a block-level title above
      * each table cell.
      */
-      content: attr(data-heading); 
+      content: attr(data-heading);
       display: block;
       margin-right: auto;
       @mixin eds-theme-typography-body-text-sm-bold;
@@ -288,7 +294,7 @@
          * Hide data-heading on large screens since
          * table header cells become visible 
          */
-        content: none; 
+        content: none;
       }
     }
 
@@ -366,7 +372,7 @@
        * cells stack on top of each other and are displayed
        * as a single cluster with headings
        */
-      border: 0; 
+      border: 0;
     }
   }
 
@@ -386,13 +392,14 @@
    * Table cell inside a clickable table row.
    */
   .table__row--clickable & {
-     /* Mimic clickable link styles. */
+    /* Mimic clickable link styles. */
     @mixin textLink;
   }
 
   /**
    * Lists inside table
-   * 1) If text wraps onto a new line, it gets indented
+   *
+   * If text wraps onto a new line, it gets indented.
    */
   > ul,
   > ol {
@@ -400,8 +407,8 @@
     list-style: none;
 
     > li {
-      margin-left: 1rem; 
-      text-indent: -1rem; 
+      margin-left: 1rem;
+      text-indent: -1rem;
     }
   }
 }

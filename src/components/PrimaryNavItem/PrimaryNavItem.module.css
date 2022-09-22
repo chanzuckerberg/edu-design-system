@@ -6,7 +6,8 @@
 
 /**
  * Primary nav link
- * 1) Individual link within each primary nav item
+ *
+ * Individual link within each primary nav item.
  */
 .primary-nav__link {
   display: flex;
