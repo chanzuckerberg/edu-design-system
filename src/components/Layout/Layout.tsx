@@ -7,7 +7,6 @@ export interface Props {
    * Behavior
    */
   behavior?: 'fixed-sidebar';
-
   /**
    * Child node(s) that can be nested inside component
    */
@@ -16,12 +15,6 @@ export interface Props {
    * CSS class names that can be appended to the component.
    */
   className?: string;
-  /**
-   * Expandable layout sections
-   *
-   * Used for hover/focus states showing/hiding extra content
-   */
-  expandable?: boolean;
   /**
    * Sidebar property
    *
