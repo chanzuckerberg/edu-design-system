@@ -24,10 +24,6 @@ export interface Props {
    * Error state of the form field
    */
   isError?: boolean;
-  /**
-   * Inverted variation for dark backgrounds
-   */
-  inverted?: boolean;
 }
 
 /**
@@ -44,14 +40,12 @@ export const FieldNote = ({
   disabled,
   id,
   isError,
-  inverted,
   children,
   ...other
 }: Props) => {
   const componentClassName = clsx(
     styles['field-note'],
     disabled && styles['field-note--disabled'],
-    inverted && styles['field-note--inverted'],
     isError && styles['field-note--error'],
     className,
   );

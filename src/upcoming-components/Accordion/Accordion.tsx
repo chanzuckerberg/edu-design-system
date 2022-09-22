@@ -12,11 +12,6 @@ export interface Props {
    * CSS class names that can be appended to the component.
    */
   className?: string;
-  /**
-   * Inverted variant
-   * 1) Used for dark backgrounds
-   */
-  inverted?: boolean;
 }
 
 /**
@@ -28,17 +23,8 @@ export interface Props {
  *
  * TODO: update this comment with a description of the component.
  */
-export const Accordion = ({
-  children,
-  className,
-  inverted,
-  ...other
-}: Props) => {
-  const componentClassName = clsx(
-    styles['accordion'],
-    inverted && styles['accordion--inverted'],
-    className,
-  );
+export const Accordion = ({ children, className, ...other }: Props) => {
+  const componentClassName = clsx(styles['accordion'], className);
   return (
     <dl className={componentClassName} {...other}>
       {children}

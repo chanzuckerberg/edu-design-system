@@ -37,10 +37,3 @@
 .field-note--error > .field-note__icon {
   color: var(--eds-theme-color-icon-utility-error);
 }
-
-/**
- * Fieldnote inverted
- */
-.field-note--inverted {
-  color: var(--eds-theme-color-text-neutral-default-inverse);
-}

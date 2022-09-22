@@ -36,10 +36,6 @@ export interface Props {
    */
   id?: string;
   /**
-   * Inverted variant for dark backgrounds
-   */
-  inverted?: boolean;
-  /**
    * Error state of the form field
    */
   isError?: boolean;
@@ -83,7 +79,6 @@ export const CheckboxField = ({
   'aria-describedby': ariaDescribedBy,
   children,
   optionalLabel,
-  inverted,
   ...other
 }: Props) => {
   const generatedId = useUID();
@@ -96,7 +91,6 @@ export const CheckboxField = ({
     styles['checkbox-field'],
     variant === 'inline' && styles['checkbox-field--inline'],
     size === 'sm' && styles['checkbox-field--sm'],
-    inverted && styles['checkbox-field--inverted'],
     className,
   );
   return (

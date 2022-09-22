@@ -20,10 +20,6 @@ export interface Props {
    */
   imgSrc?: string;
   /**
-   * Color theme for the component. "inverted" theme is for use on dark backgrounds
-   */
-  inverted?: boolean;
-  /**
    * Title heading text string
    */
   title?: string;
@@ -44,14 +40,9 @@ export const Feature = ({
   imgSrc,
   imgAlt,
   title,
-  inverted,
   ...other
 }: Props) => {
-  const componentClassName = clsx(
-    styles['feature'],
-    inverted && styles['feature--inverted'],
-    className,
-  );
+  const componentClassName = clsx(styles['feature'], className);
   return (
     <div className={componentClassName} {...other}>
       <div className={styles['feature__body']}>{children}</div>

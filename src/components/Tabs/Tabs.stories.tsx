@@ -127,16 +127,3 @@ export default {
 type Args = React.ComponentProps<typeof Tabs>;
 
 export const Default: StoryObj<Args> = {};
-
-export const Inverted: StoryObj<Args> = {
-  args: {
-    inverted: true,
-  },
-  decorators: [
-    (Story) => (
-      <div style={{ background: 'black' }}>
-        <Story />
-      </div>
-    ),
-  ],
-};

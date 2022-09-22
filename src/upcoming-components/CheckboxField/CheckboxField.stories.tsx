@@ -90,37 +90,3 @@ export const Error = {
     fieldNote: 'This is a field with an error',
   },
 };
-
-export const Inverted: StoryObj<Props> = {
-  render: (args) => (
-    <div style={{ padding: '1rem', background: '#000' }}>
-      <CheckboxField
-        fieldNote="This is an inverted field"
-        inverted={true}
-        {...args}
-      >
-        <CheckboxField.Item
-          name="checkbox-example"
-          text="Checkbox 1"
-          value="checkbox1"
-        />
-        <CheckboxField.Item
-          name="checkbox-example"
-          text="Checkbox 2"
-          value="checkbox2"
-        />
-        <CheckboxField.Item
-          name="checkbox-example"
-          text="Checkbox 3"
-          value="checkbox3"
-        />
-      </CheckboxField>
-    </div>
-  ),
-  parameters: {
-    axe: {
-      // TODO: re-enable when component is worked on
-      disabledRules: ['color-contrast'],
-    },
-  },
-};

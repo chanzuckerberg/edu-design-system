@@ -186,59 +186,6 @@ exports[`<LinkList /> IconAfterText story renders snapshot 1`] = `
 </ul>
 `;
 
-exports[`<LinkList /> Inverted story renders snapshot 1`] = `
-<div
-  style="background-color: black;"
->
-  <ul
-    class="link-list link-list--inverted"
-  >
-    <li
-      class="link-list__item"
-    >
-      <a
-        class="link-list__link"
-        href="#"
-      >
-        <div
-          class="link-list__text"
-        >
-          Link List Item 1
-        </div>
-      </a>
-    </li>
-    <li
-      class="link-list__item"
-    >
-      <a
-        class="link-list__link"
-        href="#"
-      >
-        <div
-          class="link-list__text"
-        >
-          Link List Item 2
-        </div>
-      </a>
-    </li>
-    <li
-      class="link-list__item"
-    >
-      <a
-        class="link-list__link"
-        href="#"
-      >
-        <div
-          class="link-list__text"
-        >
-          Link List Item 3
-        </div>
-      </a>
-    </li>
-  </ul>
-</div>
-`;
-
 exports[`<LinkList /> Lined story renders snapshot 1`] = `
 <ul
   class="link-list link-list--lined"

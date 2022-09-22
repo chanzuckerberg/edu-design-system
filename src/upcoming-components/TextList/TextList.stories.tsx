@@ -28,19 +28,6 @@ type Args = React.ComponentProps<typeof TextList>;
 
 export const Default: StoryObj<Args> = {};
 
-export const Inverted: StoryObj<Args> = {
-  args: {
-    inverted: true,
-  },
-  decorators: [
-    (Story) => (
-      <div className="u-padding-sm" style={{ background: '#000000' }}>
-        <Story />
-      </div>
-    ),
-  ],
-};
-
 export const OrderedList: StoryObj<Args> = {
   args: {
     as: 'ol',
