@@ -17,9 +17,10 @@ export interface Containers {
 }
 
 export interface ContainerType {
+  className?: string;
+  columnClassName?: string;
+  emptyContent?: React.ReactNode;
+  header?: React.ReactNode;
   id?: string;
   itemIds: string[];
-  header?: React.ReactNode;
-  emptyContent?: React.ReactNode;
-  columnClassName?: string[];
 }
