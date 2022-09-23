@@ -7,7 +7,7 @@ TODO: CZI to update to match specific git working model.
 This project uses [Git-flow](https://nvie.com/posts/a-successful-git-branching-model/) to manage the development workflow. Here's a breakdown of what this means for the design system:
 
 - The `main` always represents the latest production-ready version of the design system. Every commit to `main` indicates a new release.
-- `next` represents the unpublished next Major release of the design system. All feature work that belongs to the new architecture  TODO: revisit the existance of `next` once the new architecture is in place and launched
+- `next` represents the unpublished next Major release of the design system. **use this branch as the base of your changes**.
 - `feature` branches are for standalone/larger product features, and are created using the syntax `[FIRSTINITIAL][LASTNAME]/[FEATURE NAME]`.
 - `release` branches are for preparing the next release of the design system. Only bug fixes and metadata changes should happen in release branches.
 - `hotfix` branches are for fixes that need to be production.
