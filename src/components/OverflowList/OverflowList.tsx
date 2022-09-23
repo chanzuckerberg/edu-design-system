@@ -31,28 +31,27 @@ export interface Props {
 export const OverflowList = ({ className, children, ...other }: Props) => {
   /**
    * Set states and refs
-   * 1) Set isEnd state: set to true, right shadow gradient activates. Removed when false
-   * 2) Set isState state: set to true, left shadow gradient activates. Removed when false
-   * 3) Target overflow list and overflow list inner DOM elements
+   *
+   * Set isEnd state: set to true, right shadow gradient activates. Removed when false
    */
-  const [isEnd, setIsEnd] = useState(true); /* 1 */
-  const [isStart, setIsStart] = useState(false); /* 2 */
-  const overflowListRef = useRef() as MutableRefObject<HTMLDivElement>; /* 3 */
-  const overflowListInnerRef =
-    useRef() as MutableRefObject<HTMLUListElement>; /* 3 */
+  const [isEnd, setIsEnd] = useState(true);
   /**
-   * Set right and left gradients on tables
-   * 1) Target the actual overflow list inside overflow list
-   * 2) Get the width of the overflow list offscreen when overflow list overflows
-   * 3) If overflow list width is less than or equal to overflow list width, remove all shadows
-   * 4) If overflow list inner scroll isn't all the way to the left or to the right, turn all shadows on
-   * 5) If overflow list inner scroll is >= to width of overflow list offscreen, turn off right shadow and turn left shadow on
-   * 6) Else, set the right shadow to true and the left shadow to false
+   * Set isState state: set to true, left shadow gradient activates. Removed when false
+   */
+  const [isStart, setIsStart] = useState(false);
+  /**
+   * Target overflow list and overflow list inner DOM elements
+   */
+  const overflowListRef = useRef() as MutableRefObject<HTMLDivElement>;
+  const overflowListInnerRef = useRef() as MutableRefObject<HTMLUListElement>;
+  /**
+   * Set right and left gradients on tables.
    */
   const setShadows = () => {
-    const overflowListItems = Array.from(
-      overflowListInnerRef.current.children,
-    ); /* 1 */
+    /**
+     * Target the actual overflow list inside overflow list
+     */
+    const overflowListItems = Array.from(overflowListInnerRef.current.children);
     let childrenWidth = 0;
 
     overflowListItems.forEach(function (item) {
@@ -62,30 +61,41 @@ export const OverflowList = ({ className, children, ...other }: Props) => {
       childrenWidth += item.clientWidth + itemMarginLeft;
     });
     if (overflowListItems) {
-      const overflowListWidth = overflowListRef.current.clientWidth; /* 2 */
-      const totalItemsWidth = childrenWidth; /* 2 */
+      /**
+       * Get the width of the overflow list offscreen when overflow list overflows
+       */
+      const overflowListWidth = overflowListRef.current.clientWidth;
+      const totalItemsWidth = childrenWidth;
       const overflowListOffscreen =
-        totalItemsWidth - overflowListRef.current.clientWidth; /* 2 */
+        totalItemsWidth - overflowListRef.current.clientWidth;
 
       if (totalItemsWidth <= overflowListWidth) {
-        /* 3 */
+        /**
+         * If overflow list width is less than or equal to overflow list width, remove all shadows.
+         */
         setIsEnd(false);
         setIsStart(false);
       } else if (
         overflowListInnerRef.current.scrollLeft > 0 &&
         overflowListInnerRef.current.scrollLeft < overflowListOffscreen
       ) {
-        /* 4 */
+        /**
+         * If overflow list inner scroll isn't all the way to the left or to the right, turn all shadows on.
+         */
         setIsEnd(true);
         setIsStart(true);
       } else if (
         overflowListInnerRef.current.scrollLeft >= overflowListOffscreen
       ) {
-        /* 5 */
+        /**
+         * If overflow list inner scroll is >= to width of overflow list offscreen, turn off right shadow and turn left shadow on.
+         */
         setIsEnd(false);
         setIsStart(true);
       } else {
-        /* 6 */
+        /**
+         * Else, set the right shadow to true and the left shadow to false.
+         */
         setIsEnd(true);
         setIsStart(false);
       }
@@ -94,23 +104,22 @@ export const OverflowList = ({ className, children, ...other }: Props) => {
 
   /**
    * Overflow list inner onscroll
-   * 1) Set shadows when user scrolls the overflow list right and left
    */
   const handleOnScroll = (e: UIEvent<HTMLElement>): void => {
-    setShadows(); /* 1 */
+    /**
+     * Set shadows when user scrolls the overflow list right and left
+     */
+    setShadows();
   };
 
   /**
-   * Use effect lifecycle
-   * 1) Set shadows when component is updated/loaded
-   * 2) Set window resize listener
-   * 3) Remove window resize listener
+   * Set shadows when component is updated/loaded
    */
   useEffect(() => {
-    setShadows(); /* 1 */
-    window.addEventListener('resize', setShadows); /* 2 */
+    setShadows();
+    window.addEventListener('resize', setShadows);
     return () => {
-      window.removeEventListener('resize', setShadows); /* 3 */
+      window.removeEventListener('resize', setShadows);
     };
   });
 

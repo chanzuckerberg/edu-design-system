@@ -89,23 +89,20 @@ export const CheckboxFieldItem = ({
   }
 
   /**
-   * UseEffect lifecycle hook
-   * 1) When the component loads or updates, update the state if change from the outside
+   * When the component loads or updates, update the state if changed from the outside.
    */
   const prevChecked = usePrevious(checkboxChecked);
   useEffect(() => {
     if (prevChecked !== checkboxChecked) {
-      /* 1 */
       setCheckedState(checkboxChecked);
     }
   }, [prevChecked, checkboxChecked]);
 
   /**
-   * On change handler
-   * 1) Toggle the checked state of item on change
+   * Toggle the checked state of item on change.
    */
   function onChange() {
-    setCheckedState(!checkboxChecked); /* 1 */
+    setCheckedState(!checkboxChecked);
   }
 
   const componentClassName = clsx('checkbox-field__item', className);

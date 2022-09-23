@@ -67,27 +67,27 @@ export const DragDrop = ({
 }: Props) => {
   /**
    * Set states and refs
-   * 1) Set isEnd state: set to true, right shadow gradient activates. Removed when false
-   * 2) Set isState state: set to true, left shadow gradient activates. Removed when false
-   * 3) Target drag drop and drag drop inner DOM elements
+   *
+   * Set isEnd state: set to true, right shadow gradient activates. Removed when false.
    */
-  const [isEnd, setIsEnd] = useState(true); /* 1 */
-  const [isStart, setIsStart] = useState(false); /* 2 */
-  const dragDropInnerRef = useRef() as MutableRefObject<HTMLDivElement>; /* 3 */
+  const [isEnd, setIsEnd] = useState(true);
+  /**
+   * Set isState state: set to true, left shadow gradient activates. Removed when false.
+   */
+  const [isStart, setIsStart] = useState(false);
+  /**
+   * Target drag drop and drag drop inner DOM elements
+   */
+  const dragDropInnerRef = useRef() as MutableRefObject<HTMLDivElement>;
   const dragDropRef = useRef() as MutableRefObject<HTMLElement>;
   /**
    * Set right and left gradients on tables
-   * 1) Target the actual drag drop inside drag drop
-   * 2) Get the width of the drag drop offscreen when drag drop overflows
-   * 3) If drag drop width is less than or equal to drag drop width, remove all shadows
-   * 4) If drag drop inner scroll isn't all the way to the left or to the right, turn all shadows on
-   * 5) If drag drop inner scroll is >= to width of drag drop offscreen, turn off right shadow and turn left shadow on
-   * 6) Else, set the right shadow to true and the left shadow to false
    */
   const setShadows = () => {
-    const overflowListItems = Array.from(
-      dragDropInnerRef.current.children,
-    ); /* 1 */
+    /**
+     * Target the actual drag drop inside drag drop.
+     */
+    const overflowListItems = Array.from(dragDropInnerRef.current.children);
     let childrenWidth = 0;
 
     overflowListItems.forEach(function (item) {
@@ -97,28 +97,39 @@ export const DragDrop = ({
       childrenWidth += item.clientWidth + itemMarginLeft;
     });
     if (overflowListItems) {
-      const dragDropWidth = dragDropRef.current.clientWidth; /* 2 */
-      const totalItemsWidth = childrenWidth; /* 2 */
+      /**
+       * Get the width of the drag drop offscreen when drag drop overflows.
+       */
+      const dragDropWidth = dragDropRef.current.clientWidth;
+      const totalItemsWidth = childrenWidth;
       const dragDropOffScreen =
-        totalItemsWidth - dragDropRef.current.clientWidth; /* 2 */
+        totalItemsWidth - dragDropRef.current.clientWidth;
 
       if (totalItemsWidth <= dragDropWidth) {
-        /* 3 */
+        /**
+         * If drag drop width is less than or equal to drag drop width, remove all shadows
+         */
         setIsEnd(false);
         setIsStart(false);
       } else if (
         dragDropInnerRef.current.scrollLeft > 0 &&
         dragDropInnerRef.current.scrollLeft < dragDropOffScreen
       ) {
-        /* 4 */
+        /**
+         * If drag drop inner scroll isn't all the way to the left or to the right, turn all shadows on
+         */
         setIsEnd(true);
         setIsStart(true);
       } else if (dragDropInnerRef.current.scrollLeft >= dragDropOffScreen) {
-        /* 5 */
+        /**
+         * If drag drop inner scroll is >= to width of drag drop offscreen, turn off right shadow and turn left shadow on
+         */
         setIsEnd(false);
         setIsStart(true);
       } else {
-        /* 6 */
+        /**
+         * Else, set the right shadow to true and the left shadow to false
+         */
         setIsEnd(true);
         setIsStart(false);
       }
@@ -127,32 +138,28 @@ export const DragDrop = ({
 
   /**
    * drag drop inner onscroll
-   * 1) Set shadows when user scrolls the drag drop right and left
+   *
+   * Set shadows when user scrolls the drag drop right and left.
    */
   const handleOnScroll = (e: UIEvent<HTMLElement>): void => {
-    setShadows(); /* 1 */
+    setShadows();
   };
 
   /**
-   * Use effect lifecycle
-   * 1) Set shadows when component is updated/loaded
-   * 2) Set window resize listener
-   * 3) Remove window resize listener
+   * Set shadows when component is updated/loaded.
    */
   useEffect(() => {
-    dragDropRef.current = dragDropInnerRef.current
-      .parentNode as HTMLElement; /* 3 */
-    setShadows(); /* 1 */
-    window.addEventListener('resize', setShadows); /* 2 */
+    dragDropRef.current = dragDropInnerRef.current.parentNode as HTMLElement;
+    setShadows();
+    window.addEventListener('resize', setShadows);
     return () => {
-      window.removeEventListener('resize', setShadows); /* 3 */
+      window.removeEventListener('resize', setShadows);
     };
   }, [items]);
 
   /**
    * Update sticky wrapper height on mount
    */
-
   const containerOrder: string[] = [];
   Object.entries(items).forEach(([key, item]) => {
     items[key] = { ...item, id: key };

@@ -3,12 +3,11 @@
 \*------------------------------------ */
 
 /**
- * 1) For the "variant" story to display the different text variant options.
- * 2) Uses grid to neatly align the variant variations.
+ * For the "variant" story to display the different text variant options.
  */
 .variant__table {
-  /* 1 */
-  display: grid; /* 2 */
+  /*  Uses grid to neatly align the variant variations. */
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: var(--eds-size-half);
 }
@@ -25,21 +24,23 @@
     var(--eds-theme-color-border-neutral-default);
 }
 
-/**
- * 1) Variants are segmented into left, middle, and right columns.
- * 2) Background variants were chosen to represent typical body backgrounds.
- */
 .variant__item-white {
-  grid-column: 1; /* 1 */
-  background-color: var(--eds-theme-color-background-neutral-default); /* 2 */
+  /* Variants are segmented into left, middle, and right columns. */
+  grid-column: 1;
+  /* Background variants were chosen to represent typical body backgrounds. */
+  background-color: var(--eds-theme-color-background-neutral-default);
 }
 
 .variant__item-light {
-  grid-column: 2; /* 1 */
-  background-color: var(--eds-theme-color-body-background); /* 2 */
+  /* Variants are segmented into left, middle, and right columns. */
+  grid-column: 2;
+  /* Background variants were chosen to represent typical body backgrounds. */
+  background-color: var(--eds-theme-color-body-background);
 }
 
 .variant__item-dark {
-  grid-column: 3; /* 1 */
-  background-color: var(--eds-theme-color-body-background-inverted); /* 2 */
+  /* Variants are segmented into left, middle, and right columns. */
+  grid-column: 3;
+  /* Background variants were chosen to represent typical body backgrounds. */
+  background-color: var(--eds-theme-color-body-background-inverted);
 }

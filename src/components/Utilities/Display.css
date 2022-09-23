@@ -39,13 +39,13 @@
 
 /**
  * Flex direction utility classes
- * 1) Forces display direction to column
- * 2) Forces display direction to row. Useful for overriding columnar display at specific breakpoints only
  */
 .u-flex-direction-column {
-  flex-direction: column !important /* 1 */;
+  /* Forces display direction to column. */
+  flex-direction: column !important;
 }
 
 .u-flex-direction-row {
-  flex-direction: row !important /* 2 */;
+  /* Forces display direction to row. Useful for overriding columnar display at specific breakpoints only. */
+  flex-direction: row !important;
 }

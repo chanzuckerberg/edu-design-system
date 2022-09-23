@@ -15,7 +15,6 @@
 
 /**
  * Brand variant for the header.
- * 1) Brand specific font for the title.
  */
 .modal-header--brand {
   display: flex;
@@ -35,7 +34,9 @@
   color: var(--eds-theme-color-text-neutral-default-inverse);
   background-color: var(--eds-color-brand-grape-500);
   h2 {
-    /* 1 */
+    /**
+     * Brand specific font for the title.
+     */
     flex: 1;
     font-family: 'Mint Grotesk V1.1', sans-serif;
     font-weight: var(--eds-font-weight-medium);

@@ -476,18 +476,20 @@
 
 /**
  * Link button styles
- * 1) Override default Clickable styles
- * 2) Smaller gap between text and icon in link button style
  */
 .clickable-style--link {
   @mixin textLink;
 
-  /* 1 */
+  /**
+   * Override default Clickable styles
+   */
   border: 0;
   border-radius: 0;
   background-color: transparent;
-
-  gap: 0.25em; /* 2 */
+  /**
+   * Smaller gap between text and icon in link button style
+   */
+  gap: 0.25em;
 }
 
 /**
@@ -515,12 +517,12 @@
   }
 
   &:focus-visible {
-    background-color: var(--eds-theme-color-border-link-neutral); /* 1 */
+    background-color: var(--eds-theme-color-border-link-neutral);
   }
 
   @supports not selector(:focus-visible) {
     &:focus {
-      background-color: var(--eds-theme-color-border-link-neutral); /* 1 */
+      background-color: var(--eds-theme-color-border-link-neutral);
     }
   }
 }

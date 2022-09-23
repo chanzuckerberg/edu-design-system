@@ -87,7 +87,6 @@ export const ButtonDropdown = ({
 
   /**
    * On component load/updated
-   * * 1) Handle click outside panel event handling for both tap and mouse events
    */
   React.useEffect(() => {
     if (isActiveVar) {
@@ -95,47 +94,44 @@ export const ButtonDropdown = ({
       const el = ref.current.querySelector<HTMLElement>('.sparky-c-dropdown');
       if (el) el.focus();
     }
-    document.addEventListener('mousedown', handleOnClickOutside, false); /* 1 */
-    document.addEventListener(
-      'touchstart',
-      handleOnClickOutside,
-      false,
-    ); /* 1 */
+    /**
+     * Handle click outside panel event handling for both tap and mouse events
+     */
+    document.addEventListener('mousedown', handleOnClickOutside, false);
+    document.addEventListener('touchstart', handleOnClickOutside, false);
     return () => {
-      document.removeEventListener(
-        'mousedown',
-        handleOnClickOutside,
-        false,
-      ); /* 1 */
-      document.removeEventListener(
-        'touchstart',
-        handleOnClickOutside,
-        false,
-      ); /* 1 */
+      document.removeEventListener('mousedown', handleOnClickOutside, false);
+      document.removeEventListener('touchstart', handleOnClickOutside, false);
     };
   });
 
   /**
    * Handle click outside function
-   * 1) If the event isn't inside to the dropdown button itself or the entire
-   * component, then close the panel
    */
   const handleOnClickOutside = (event: MouseEvent | TouchEvent) => {
     if (ref.current && !ref.current.contains(event.target as HTMLElement)) {
-      closePanel(); /* 1 */
+      /**
+       * If the event isn't inside to the dropdown button itself or the entire
+       * component, then close the panel
+       */
+      closePanel();
     }
   };
 
   /**
    * Close the panel
-   * 1) Set active state to false
-   * 2) Return the focus to the button that triggered the dropdown when closed
    */
   function closePanel() {
-    setIsActive(false); /* 1 */
+    /**
+     * Set active state to false
+     */
+    setIsActive(false);
 
     if (isActiveVar && buttonRef.current) {
-      buttonRef.current.focus(); /* 2 */
+      /**
+       * Return the focus to the button that triggered the dropdown when closed
+       */
+      buttonRef.current.focus();
     }
   }
 

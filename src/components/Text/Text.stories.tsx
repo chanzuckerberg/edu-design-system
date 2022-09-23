@@ -117,8 +117,7 @@ export const Spacing: StoryObj<Args> = {
 };
 
 /**
- * 1) Used mainly for visual regression testing and to show the different color options available.
- * 2) Has problems with snapshots since it has too many components and other stories generate enough confidence for our needs.
+ * Used mainly for visual regression testing and to show the different color options available.
  */
 export const Variants: StoryObj<Args> = {
   render: () => {
@@ -162,7 +161,9 @@ export const Variants: StoryObj<Args> = {
     );
   },
   parameters: {
-    /* 2 */
+    /**
+     * Has problems with snapshots since it has too many components and other stories generate enough confidence for our needs.
+     */
     axe: {
       skip: true,
     },

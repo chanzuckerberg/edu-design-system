@@ -44,11 +44,13 @@ export const HorizontalStepper = ({
 }: Props) => {
   /**
    * Warns dev if the activeIndex is invalid
-   * 1) Negative conditional to account for 'NaN' values which pass the number type check since "typeof NaN === 'number'"
    */
   if (
     process.env.NODE_ENV !== 'production' &&
-    !(activeIndex >= 0 && activeIndex <= steps.length) /* 1 */
+    /**
+     * Negative conditional to account for 'NaN' values which pass the number type check since "typeof NaN === 'number'"
+     */
+    !(activeIndex >= 0 && activeIndex <= steps.length)
   ) {
     console.warn(
       'The active index is an invalid index relative to the number of steps.',
@@ -57,14 +59,12 @@ export const HorizontalStepper = ({
 
   /**
    * Creates a list of <HorizontalStep> components with lines in between.
-   * 1) If it is not the first step, add a line to stepComponents.
-   * 2) Hides the decorative line to prevent accessibility issue with it not being <li> in an <ol>.
-   * 3) Figure out what variant of step according to the activeIndex.
-   * 4) Add step to stepComponents.
    */
   const stepComponents: React.ReactNode[] = [];
   steps.forEach((step, index) => {
-    /* 1 */
+    /**
+     * If it is not the first step, add a line to stepComponents.
+     */
     if (index > 0) {
       const stepperLinesClassName = clsx(
         styles['horizontal-stepper__line'],
@@ -72,14 +72,19 @@ export const HorizontalStepper = ({
       );
       stepComponents.push(
         <hr
-          aria-hidden /* 2 */
+          aria-hidden
+          /**
+           * Hides the decorative line to prevent accessibility issue with it not being <li> in an <ol>.
+           */
           className={stepperLinesClassName}
           key={`horizontal-stepper__line-${index}`}
         />,
       );
     }
 
-    /* 3 */
+    /**
+     * Figure out what variant of step according to the activeIndex.
+     */
     const stepVariant =
       index < activeIndex
         ? 'complete'
@@ -87,7 +92,9 @@ export const HorizontalStepper = ({
         ? 'active'
         : 'incomplete';
 
-    /* 4 */
+    /**
+     * Add step to stepComponents.
+     */
     stepComponents.push(
       <HorizontalStep
         key={`horizontal-stepper__step-${index}`}

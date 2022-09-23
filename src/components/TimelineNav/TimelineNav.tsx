@@ -147,11 +147,13 @@ export const TimelineNav = ({
 
   /**
    * Use effect
-   * 1) Set prevActiveIndex to previous value prop
-   * 2) If prevActiveIndex is defined and previous value prop is not equal
-   * to current value prop, toggle state
+   *
+   * Set prevActiveIndex to previous value prop.
+   *
+   * If prevActiveIndex is defined and previous value prop is not equal
+   * to current value prop, toggle state.
    */
-  const prevActiveIndex = usePrevious(activeIndex); /* 1 */
+  const prevActiveIndex = usePrevious(activeIndex);
   useEffect(() => {
     if (
       (prevActiveIndex !== undefined || null) &&
@@ -184,26 +186,24 @@ export const TimelineNav = ({
 
   /**
    * On open
-   * 1) On click of a tab, set activeIndexState to index of tab being clicked
-   * 2) If function is passed into onChange prop, run that on click
    */
   function onOpen(index: number) {
-    setActiveIndexState(index); /* 1 */
+    // On click of a tab, set activeIndexState to index of tab being clicked.
+    setActiveIndexState(index);
     setIsActive(true);
 
     if (onChange) {
-      /* 2 */
+      // If function is passed into onChange prop, run that on click.
       onChange(index);
     }
   }
 
   /**
    * On KeyDown
-   * 1) Find active tab. If there isn't one, do nothing on Keydown
-   * 2) Set active tab, next tab, and previous tab.
-   * 3) If right or down arrow key keyed, focus on next tab.
-   * 4) If left or up arrow key keyed, focus on the previous tab.
-   * 5) If enter or spacebar keyed, set focus to the 'Back' button. This is wrapped in a setTimeout() method to ensure that document.activeElement gets set properly. TODO: determine why backRef.current?.focus() needs to be in a callback
+   *
+   * Find active tab. If there isn't one, do nothing on Keydown.
+   *
+   * TODO: determine why backRef.current?.focus() needs to be in a callback
    *
    * TODO: improve `any` type
    */
@@ -219,21 +219,25 @@ export const TimelineNav = ({
 
     if (!activeTimelineNavPanel) return;
 
-    const index = timelineNavItemRefs.indexOf(activeTimelineNavPanel); /* 2 */
-    const next =
-      index === timelineNavItemRefs.length - 1 ? 0 : index + 1; /* 2 */
-    const prev =
-      index === 0 ? timelineNavItemRefs.length - 1 : index - 1; /* 2 */
+    // Set active tab, next tab, and previous tab.
+    const index = timelineNavItemRefs.indexOf(activeTimelineNavPanel);
+    const next = index === timelineNavItemRefs.length - 1 ? 0 : index + 1;
+    const prev = index === 0 ? timelineNavItemRefs.length - 1 : index - 1;
 
     if ([R_ARROW_KEYCODE, D_ARROW_KEYCODE].includes(e.key)) {
-      /* 3 */
+      // If right or down arrow key keyed, focus on next tab.
       timelineNavItemRefs[next].current.focus();
     } else if ([L_ARROW_KEYCODE, U_ARROW_KEYCODE].includes(e.key)) {
-      /* 4 */
+      // If left or up arrow key keyed, focus on the previous tab.
       timelineNavItemRefs[prev].current.focus();
     } else if (e.key === ENTER_KEYCODE || e.key === SPACEBAR_KEYCODE) {
       setTimeout(() => {
-        backRef.current?.focus(); /* 5 */
+        /**
+         * If enter or spacebar keyed, set focus to the 'Back' button. This
+         * is wrapped in a setTimeout() method to ensure that document.activeElement
+         * gets set properly.
+         */
+        backRef.current?.focus();
       }, 500);
     }
   }
@@ -332,14 +336,29 @@ export const TimelineNav = ({
 
   /**
    * onBack (used by 'Back' button on < lg viewports)
-   * 1) Return focus to the button that was clicked to open the current panel; activeIndexState holds the index of the last nav item selected in the timelinNavItemRefs array
-   * 2) Because the 'Back' button's onFocus listener removes the selected nav item from the tab order, we need to manually insert it back into the tab order by setting its tabIndex back to "0"
-   * 3) Body panel is visible/hidden depending on true/false value of isActive; hide it by setting isActive to false
+   *
+   * Return focus to the button that was clicked to open the current panel;
+   * activeIndexState holds the index of the last nav item selected in the
+   * timelinNavItemRefs array.
    */
   const onBack = () => {
-    timelineNavItemRefs[activeIndexState].current?.focus(); /* 1 */
-    timelineNavItemRefs[activeIndexState].current.tabIndex = '0'; /* 2 */
-    setIsActive(false); /* 3 */
+    /**
+     * Return focus to the button that was clicked to open the current panel;
+     * activeIndexState holds the index of the last nav item selected in the
+     * timelinNavItemRefs array.
+     */
+    timelineNavItemRefs[activeIndexState].current?.focus();
+    /**
+     * Because the 'Back' button's onFocus listener removes the selected nav
+     * item from the tab order, we need to manually insert it back into the tab
+     * order by setting its tabIndex back to "0".
+     */
+    timelineNavItemRefs[activeIndexState].current.tabIndex = '0';
+    /**
+     * Body panel is visible/hidden depending on true/false value of isActive;
+     * hide it by setting isActive to false.
+     */
+    setIsActive(false);
   };
 
   /**
