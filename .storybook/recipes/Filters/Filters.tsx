@@ -1,15 +1,13 @@
-import React from 'react';
+import debounce from 'lodash.debounce';
+import React, { useEffect, useState } from 'react';
 import FiltersDrawer from '../../../src/components/FiltersDrawer';
 import {
   FiltersPopover,
   FiltersPopoverProps,
 } from '../../../src/components/FiltersPopover/FiltersPopover';
 
+import breakpoint from '../../../src/design-tokens/tier-1-definitions/breakpoints';
 type Props = {
-  /**
-   * Filters component to render.
-   */
-  as?: 'FiltersDrawer' | 'FiltersPopover';
   /**
    * Popover placement options relative to the filters trigger button.
    */
@@ -17,15 +15,31 @@ type Props = {
 } & FiltersPopoverProps;
 
 /**
- * Primary UI component for user interaction
+ * Demonstrates usage of both FiltersPopover and FiltersDrawer depending on screensize.
  */
-export const Filters = ({ as, placement, ...other }: Props) => {
+export const Filters = ({ placement, ...other }: Props) => {
+  const [isLarge, setIsLarge] = useState(false);
+  const popoverBreakpoint = parseInt(breakpoint['eds-bp-md']) * 16;
+  useEffect(() => {
+    updateScreenSize();
+    window.addEventListener('resize', updateScreenSize);
+    return () => {
+      window.removeEventListener('resize', updateScreenSize);
+    };
+  });
+
+  const updateScreenSize = debounce(() => {
+    if (window.innerWidth >= popoverBreakpoint && !isLarge) {
+      setIsLarge(true);
+    }
+    if (window.innerWidth < popoverBreakpoint && isLarge) {
+      setIsLarge(false);
+    }
+  }, 200);
   return (
     <div>
-      {as === 'FiltersDrawer' && <FiltersDrawer {...other} />}
-      {as === 'FiltersPopover' && (
-        <FiltersPopover placement={placement} {...other} />
-      )}
+      {!isLarge && <FiltersDrawer {...other} />}
+      {isLarge && <FiltersPopover placement={placement} {...other} />}
     </div>
   );
 };

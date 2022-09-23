@@ -13,7 +13,6 @@ import PrimaryNav from '../../../src/components/PrimaryNav';
 import PrimaryNavItem from '../../../src/components/PrimaryNavItem';
 import UtilityNav from '../../../src/components/UtilityNav';
 
-// @ts-expect-error breakpoints file must be in JS to work with postcss config
 import breakpoint from '../../../src/design-tokens/tier-1-definitions/breakpoints';
 import { EdsThemeColorIconNeutralDefaultInverse } from '../../../src/tokens-dist/ts/colors';
 
