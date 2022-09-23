@@ -17,7 +17,7 @@ import {
   R_ARROW_KEYCODE,
   D_ARROW_KEYCODE,
 } from '../../util/keycodes';
-import Tab from '../Tab';
+import { default as Tab, TabProps } from '../Tab';
 
 export interface Props {
   /**
@@ -37,10 +37,6 @@ export interface Props {
    */
   className?: string;
   /**
-   * Toggles the visibility of the RadioField legend
-   */
-  hideLegend?: boolean;
-  /**
    * HTML id for the component
    */
   id?: string;
@@ -53,38 +49,6 @@ export interface Props {
    * TODO: improve `any` type
    */
   items?: Array<any>;
-  /**
-   * HTML radio tabs label text
-   */
-  radioLegend?: string;
-  /**
-   * Changes the position of the radio tabs legend to inline
-   */
-  radioLegendPosition?: 'inline-label';
-  /**
-   * Indicates that field is required for form to be successfully submitted
-   */
-  required?: boolean;
-  /**
-   * Stylistic variations:
-   * - **sm** yields smaller, uppercase tabs
-   */
-  size?: 'sm';
-  /**
-   * Function passed down from higher level component into Tabs
-   */
-  tabsOnClick?: () => void;
-  /**
-   * Overflow variants
-   * - **inverted** changes the overflow shadow to the inverted color
-   */
-  overflow?: 'inverted';
-  /**
-   * Stylistic variations:
-   * - **boxed** yields a chunkier, distinct boxed tabs used for primary content
-   * - **radio** yields tabs that are controlled by radio buttons
-   */
-  variant?: 'boxed' | 'radio';
   title?: string;
 }
 
@@ -97,19 +61,9 @@ export interface Props {
  */
 export const Tabs = ({
   activeIndex = 0,
-  'aria-labelledby': ariaLabelledBy,
   children,
   className,
-  hideLegend,
-  id,
   onChange,
-  overflow,
-  radioLegend,
-  radioLegendPosition,
-  required,
-  size,
-  tabsOnClick,
-  variant,
   ...other
 }: Props) => {
   /**
@@ -169,13 +123,13 @@ export const Tabs = ({
    * Autogenerate ids on tabs if not defined.
    */
   useEffect(() => {
-    // TODO: improve `any` type
     setId(
-      tabs().map((tab: any) => (tab.props.id ? tab.props.id : getUID(tab))),
+      tabs().map((tab: React.ReactElement<TabProps>) =>
+        tab.props.id ? tab.props.id : getUID(tab),
+      ),
     );
-    // TODO: improve `any` type
     setAriaLabelledBy(
-      tabs().map((tab: any) =>
+      tabs().map((tab: React.ReactElement<TabProps>) =>
         tab.props['aria-labelledby']
           ? tab.props['aria-labelledby']
           : getUID(tab),
@@ -318,8 +272,7 @@ export const Tabs = ({
         ref={headerRef}
       >
         <ul className={styles['tabs__list']} role="tablist">
-          {/* TODO: improve `any` type */}
-          {tabs().map((tab: any, i: number) => {
+          {tabs().map((tab: React.ReactElement<TabProps>, i: number) => {
             const isActive = activeIndexState === i;
             return (
               <li
@@ -332,7 +285,6 @@ export const Tabs = ({
               >
                 <a
                   aria-controls={idVar[i]}
-                  aria-label={tab.props.ariaLabel}
                   aria-selected={isActive}
                   className={styles['tabs__link']}
                   href={`#${idVar[i]}`}

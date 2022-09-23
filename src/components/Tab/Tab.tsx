@@ -39,7 +39,6 @@ export const Tab = ({
   className,
   id,
   'aria-labelledby': ariaLabelledBy,
-  title,
   ...other
 }: Props) => {
   return (

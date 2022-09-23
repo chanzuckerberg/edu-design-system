@@ -163,6 +163,7 @@ exports[`<Tabs /> Default story renders snapshot 1`] = `
       aria-labelledby="1uid10"
       id="1uid1"
       role="tabpanel"
+      title="Tab Title 1"
     >
       <div
         class="layout-linelength-container text text--body text-passage text-passage--body"
