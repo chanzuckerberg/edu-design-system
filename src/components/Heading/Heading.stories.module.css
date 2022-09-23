@@ -4,10 +4,12 @@
 
 /**
  * For the "variant" story to display the different text variant options.
- * 1) Uses grid to neatly align the variant variations.
  */
 .variant__table {
-  display: grid; /* 1 */
+  /**
+   * Uses grid to neatly align the variant variations.
+   */
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: var(--eds-size-half);
 }

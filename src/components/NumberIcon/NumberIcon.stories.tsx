@@ -35,11 +35,10 @@ export const SuccessSmall: StoryObj<Args> = {
   },
 };
 
-/**
- * 1) Disables controls for args that have no affect on this story
- */
 export const DifferentNumbers: StoryObj<Args> = {
-  /* 1 */
+  /**
+   * Disables controls for args that have no affect on this story
+   */
   argTypes: {
     number: {
       table: {

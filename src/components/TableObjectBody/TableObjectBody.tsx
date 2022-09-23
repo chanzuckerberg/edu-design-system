@@ -35,37 +35,43 @@ export const TableObjectBody = ({
 }: Props) => {
   /**
    * Set states and refs
-   * 1) Set isEnd state: set to true, right shadow gradient activates. Removed when false
-   * 2) Set isState state: set to true, left shadow gradient activates. Removed when false
-   * 3) Target table body and table body inner DOM elements
+   *
+   * Set isEnd state: set to true, right shadow gradient activates. Removed when false.
    */
-  const [isEnd, setIsEnd] = useState(true); /* 1 */
-  const [isStart, setIsStart] = useState(false); /* 2 */
-  const tableObjectBodyRef = useRef<HTMLDivElement>(null); /* 3 */
-  const tableObjectBodyInnerRef = useRef<HTMLDivElement>(null); /* 3 */
+  const [isEnd, setIsEnd] = useState(true);
+  /**
+   * Set isState state: set to true, left shadow gradient activates. Removed when false.
+   */
+  const [isStart, setIsStart] = useState(false);
+  /**
+   * Target table body and table body inner DOM elements.
+   */
+  const tableObjectBodyRef = useRef<HTMLDivElement>(null);
+  const tableObjectBodyInnerRef = useRef<HTMLDivElement>(null);
 
   /**
    * Set right and left gradients on tables
-   * 1) Target the actual table inside table object body
-   * 2) Get the width of the table offscreen when table overflows
-   * 3) If table width is less than or equal to table object body width, remove all shadows
-   * 4) If table object body inner scroll isn't all the way to the left or to the right, turn all shadows on
-   * 5) If table body inner scroll is >= to width of table offscreen, turn off right shadow and turn left shadow on
-   * 6) Else, set the right shadow to true and the left shadow to false
    */
   const setShadows = () => {
+    /**
+     * Target the actual table inside table object body.
+     */
     const table =
       tableObjectBodyRef.current &&
-      tableObjectBodyRef.current.querySelector('table'); /* 1 */
+      tableObjectBodyRef.current.querySelector('table');
     if (table) {
-      const tableObjectBodyWidth =
-        tableObjectBodyRef.current.clientWidth; /* 2 */
-      const tableWidth = table.clientWidth; /* 2 */
+      /**
+       * Get the width of the table offscreen when table overflows.
+       */
+      const tableObjectBodyWidth = tableObjectBodyRef.current.clientWidth;
+      const tableWidth = table.clientWidth;
       const tableOffScreen =
-        table.clientWidth - tableObjectBodyRef?.current?.clientWidth; /* 2 */
+        table.clientWidth - tableObjectBodyRef?.current?.clientWidth;
 
       if (tableWidth <= tableObjectBodyWidth) {
-        /* 3 */
+        /**
+         * If table width is less than or equal to table object body width, remove all shadows.
+         */
         setIsEnd(false);
         setIsStart(false);
       } else if (
@@ -73,18 +79,24 @@ export const TableObjectBody = ({
         tableObjectBodyInnerRef.current.scrollLeft > 0 &&
         tableObjectBodyInnerRef.current.scrollLeft < tableOffScreen
       ) {
-        /* 4 */
+        /**
+         * If table object body inner scroll isn't all the way to the left or to the right, turn all shadows on.
+         */
         setIsEnd(true);
         setIsStart(true);
       } else if (
         tableObjectBodyInnerRef.current &&
         tableObjectBodyInnerRef.current.scrollLeft >= tableOffScreen
       ) {
-        /* 5 */
+        /**
+         * If table body inner scroll is >= to width of table offscreen, turn off right shadow and turn left shadow on.
+         */
         setIsEnd(false);
         setIsStart(true);
       } else {
-        /* 6 */
+        /**
+         * Else, set the right shadow to true and the left shadow to false.
+         */
         setIsEnd(true);
         setIsStart(false);
       }
@@ -93,26 +105,24 @@ export const TableObjectBody = ({
 
   /**
    * Table body inner onscroll
-   * 1) Set shadows when user scrolls the table right and left
+   *
+   * Set shadows when user scrolls the table right and left.
    */
   const handleOnScroll = (e: UIEvent<HTMLElement>): void => {
     if (behavior === 'overflow') {
-      setShadows(); /* 1 */
+      setShadows();
     }
   };
 
   /**
-   * Use effect lifecycle
-   * 1) Set shadows when component is updated/loaded
-   * 2) Set window resize listener
-   * 3) Remove window resize listener
+   * Set shadows when component is updated/loaded
    */
   useEffect(() => {
     if (behavior === 'overflow') {
-      setShadows(); /* 1 */
-      window.addEventListener('resize', setShadows); /* 2 */
+      setShadows();
+      window.addEventListener('resize', setShadows);
       return () => {
-        window.removeEventListener('resize', setShadows); /* 3 */
+        window.removeEventListener('resize', setShadows);
       };
     }
   });

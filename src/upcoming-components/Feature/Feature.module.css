@@ -9,7 +9,7 @@
  * and information side by side.
  */
 .feature {
-  display: flex; /* 2 */
+  display: flex;
   flex-direction: column;
   align-items: stretch;
   background: var(--eds-theme-color-background-brand-primary-strong);

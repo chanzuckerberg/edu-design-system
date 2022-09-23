@@ -63,10 +63,12 @@
 
 /**
  * Drawer window inside active drawer container
- * Transform added for animation
  */
 .drawer__container--is-active .drawer {
-  transform: translateX(0); /* 1 */
+  /**
+   * Transform added for animation
+   */
+  transform: translateX(0);
 }
 
 /**

@@ -3,14 +3,12 @@
 \*------------------------------------*/
 
 /**
- * 1) Consists of a label, textarea input, and an optional note about the field.
- * 2) Default spacing away from text field
- * 3)
+ * Consists of a label, textarea input, and an optional note about the field.
  */
 .textarea-field {
-  margin-bottom: var(--eds-size-4); /* 2 */
+  margin-bottom: var(--eds-size-4);
   position: relative;
-  padding-top: var(--eds-size-1-and-half); /* 3 */
+  padding-top: var(--eds-size-1-and-half);
 }
 
 /**

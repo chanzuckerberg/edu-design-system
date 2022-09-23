@@ -74,9 +74,6 @@ export const TitleXs: StoryObj<Args> = {
   },
 };
 
-/**
- * 1) Mainly for visual use and other stories generate enough confidence for our needs.
- */
 export const Variants: StoryObj<Args> = {
   ...Heading1,
   render: (args) => {
@@ -98,7 +95,9 @@ export const Variants: StoryObj<Args> = {
     );
   },
   parameters: {
-    /* 1 */
+    /**
+     * Mainly for visual use and other stories generate enough confidence for our needs.
+     */
     axe: {
       skip: true,
     },

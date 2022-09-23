@@ -11,8 +11,10 @@
 
 /**
   * Counter body
-  * 1) Container of the buttons and input
-  * 2) Set a max width so content doesn't span the entire width 
+  * 
+  * Container of the buttons and input.
+  *
+  * Set a max width so content doesn't span the entire width .
   */
 .counter__body {
   display: flex;
@@ -30,14 +32,14 @@
 
 /**
  * Counter input
- * 1) Flex 1 added for IE to work with buttons
- * 2) Min width: 0 added to fix flexbox bug with inputs
  */
 .counter__input.counter__input {
   position: relative;
-  flex: 1; /* 1 */
+  /* Flex 1 added for IE to work with buttons. */
+  flex: 1;
   z-index: var(--eds-z-index-100);
-  min-width: 0; /* 2 */
+  /* Min width: 0 added to fix flexbox bug with inputs. */
+  min-width: 0;
   padding-left: 0;
   padding-right: 0;
   text-align: center;

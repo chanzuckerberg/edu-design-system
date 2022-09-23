@@ -148,11 +148,13 @@ export const Tabs = ({
 
   /**
    * Use effect
-   * 1) Set prevActiveIndex to previous value prop
-   * 2) If prevActiveIndex is defined and previous value prop is not equal
-   * to current value prop, toggle state
+   *
+   * Set prevActiveIndex to previous value prop
+   *
+   * If prevActiveIndex is defined and previous value prop is not equal
+   * to current value prop, toggle state.
    */
-  const prevActiveIndex = usePrevious(activeIndex); /* 1 */
+  const prevActiveIndex = usePrevious(activeIndex);
   useEffect(() => {
     if (
       (prevActiveIndex !== undefined || null) &&
@@ -231,24 +233,23 @@ export const Tabs = ({
 
   /**
    * On open
-   * 1) On click of a tab, set activeIndexState to index of tab being clicked\
-   * 2) If function is passed into onChange prop, run that on click
    */
   function onOpen(index: number) {
-    setActiveIndexState(index); /* 1 */
+    /**
+     * On click of a tab, set activeIndexState to index of tab being clicked.
+     */
+    setActiveIndexState(index);
 
     if (onChange) {
-      /* 2 */
+      /**
+       * If function is passed into onChange prop, run that on click.
+       */
       onChange(index);
     }
   }
 
   /**
    * On KeyDown
-   * 1) Find active tab. If there isn't one, do nothing on Keydown
-   * 2) Set active tab, next tab, and previous tab.
-   * 3) If right or down arrow key keyed, focus on next tab.
-   * 4) If left or up arrow key keyed, focus on the previous tab.
    */
   function onKeyDown(e: KeyboardEvent<HTMLAnchorElement>) {
     let activeTab = null;
@@ -263,15 +264,22 @@ export const Tabs = ({
 
     if (!activeTab) return;
 
-    const index = tabRefs.indexOf(activeTab); /* 2 */
-    const next = index === tabRefs.length - 1 ? 0 : index + 1; /* 2 */
-    const prev = index === 0 ? tabRefs.length - 1 : index - 1; /* 2 */
+    /**
+     * Set active tab, next tab, and previous tab.
+     */
+    const index = tabRefs.indexOf(activeTab);
+    const next = index === tabRefs.length - 1 ? 0 : index + 1;
+    const prev = index === 0 ? tabRefs.length - 1 : index - 1;
 
     if ([R_ARROW_KEYCODE, D_ARROW_KEYCODE].includes(e.key)) {
-      /* 3 */
+      /**
+       * If right or down arrow key keyed, focus on next tab.
+       */
       tabRefs[next].current.focus();
     } else if ([L_ARROW_KEYCODE, U_ARROW_KEYCODE].includes(e.key)) {
-      /* 4 */
+      /**
+       * If left or up arrow key keyed, focus on the previous tab.
+       */
       tabRefs[prev].current.focus();
     }
   }
