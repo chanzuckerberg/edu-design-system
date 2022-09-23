@@ -127,10 +127,21 @@ export const FiltersDrawer = ({
     }
   }, [filtersBody]);
 
+  const addFiltersToTriggerElement = (trigger: ReactNode) => {
+    if (!React.isValidElement(trigger)) return;
+
+    // Grabs the original onClick callback and calls it after toggling the FiltersDrawer
+    const { onClick } = (trigger as ReactElement).props;
+    return React.cloneElement(trigger as ReactElement, {
+      onClick: (event: MouseEvent) => {
+        setIsActive(true);
+        onClick && onClick(event);
+      },
+    });
+  };
+
   const trigger = triggerElement ? (
-    React.cloneElement(triggerElement as ReactElement, {
-      onClick: () => setIsActive(true),
-    })
+    addFiltersToTriggerElement(triggerElement)
   ) : (
     <FiltersButton
       hasSelectedFilters={hasSelectedFilters}
