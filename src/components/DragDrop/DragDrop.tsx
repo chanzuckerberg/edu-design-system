@@ -1,11 +1,10 @@
 import clsx from 'clsx';
 import React, {
-  ReactNode,
+  type ReactNode,
   useState,
   useEffect,
   useRef,
-  MutableRefObject,
-  UIEvent,
+  type UIEvent,
 } from 'react';
 import {
   DragDropContext,
@@ -78,12 +77,16 @@ export const DragDrop = ({
   /**
    * Target drag drop and drag drop inner DOM elements
    */
-  const dragDropInnerRef = useRef() as MutableRefObject<HTMLDivElement>;
-  const dragDropRef = useRef() as MutableRefObject<HTMLElement>;
+  const dragDropInnerRef = useRef<HTMLDivElement>(null);
+  const dragDropRef = useRef<HTMLElement | null>(null);
   /**
    * Set right and left gradients on tables
    */
   const setShadows = () => {
+    if (!dragDropInnerRef.current) {
+      return;
+    }
+
     /**
      * Target the actual drag drop inside drag drop.
      */
@@ -96,7 +99,8 @@ export const DragDrop = ({
       );
       childrenWidth += item.clientWidth + itemMarginLeft;
     });
-    if (overflowListItems) {
+
+    if (dragDropRef.current) {
       /**
        * Get the width of the drag drop offscreen when drag drop overflows.
        */
@@ -149,7 +153,7 @@ export const DragDrop = ({
    * Set shadows when component is updated/loaded.
    */
   useEffect(() => {
-    dragDropRef.current = dragDropInnerRef.current.parentNode as HTMLElement;
+    dragDropRef.current = dragDropInnerRef.current?.parentNode as HTMLElement;
     setShadows();
     window.addEventListener('resize', setShadows);
     return () => {
