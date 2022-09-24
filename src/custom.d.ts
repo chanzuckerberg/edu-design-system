@@ -10,6 +10,17 @@ declare module '*.module.css' {
 
 declare module '*.md';
 
-// TODO: improve typing for exported functions.
 // Reference https://github.com/tshelburne/react-children-by-type
-declare module 'react-children-by-type';
+declare module 'react-children-by-type' {
+  import type { ReactNode, JSXElementConstructor } from 'react';
+
+  export function allByType<P>(
+    children: ReactNode,
+    type: JSXElementConstructor<P>,
+  ): ReactElement<P>[];
+
+  export function oneByType<P>(
+    children: ReactNode,
+    type: JSXElementConstructor<P>,
+  ): ReactElement<P>;
+}

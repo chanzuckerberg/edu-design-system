@@ -45,6 +45,7 @@ export const DragDropContainer = ({
     container.header,
     DragDropContainerHeader,
   );
+
   const header = React.Children.map(dragDropContainerHeader, (child) => {
     return React.cloneElement(child);
   });
