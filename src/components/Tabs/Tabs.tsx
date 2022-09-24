@@ -83,7 +83,6 @@ export const Tabs = ({
     return allByType(children, Tab);
   }, [children]);
 
-  // When rendered, we use the anchor tag below to attach these refs
   const tabRefs = tabs().map(() => React.createRef<HTMLAnchorElement>());
 
   // we can't use the hook in an iterator like this, so generate the base and increment if needed
@@ -246,7 +245,7 @@ export const Tabs = ({
     scrollableRight && styles['tabs--scrollable-right'],
   );
 
-  const childrenWithProps = React.Children.map(tabs(), (child, i: number) => {
+  const childrenWithProps = React.Children.map(tabs(), (child, i) => {
     // Checking isValidElement is the safe way and avoids a typescript
     // error too.
     if (React.isValidElement(child)) {
@@ -266,7 +265,7 @@ export const Tabs = ({
         ref={headerRef}
       >
         <ul className={styles['tabs__list']} role="tablist">
-          {tabs().map((tab, i: number) => {
+          {tabs().map((tab, i) => {
             const isActive = activeIndexState === i;
             return (
               <li
