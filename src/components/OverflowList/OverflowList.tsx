@@ -1,11 +1,10 @@
 import clsx from 'clsx';
 import React, {
-  ReactNode,
+  type ReactNode,
   useState,
   useRef,
   useEffect,
-  UIEvent,
-  MutableRefObject,
+  type UIEvent,
 } from 'react';
 import styles from './OverflowList.module.css';
 
@@ -42,16 +41,21 @@ export const OverflowList = ({ className, children, ...other }: Props) => {
   /**
    * Target overflow list and overflow list inner DOM elements
    */
-  const overflowListRef = useRef() as MutableRefObject<HTMLDivElement>;
-  const overflowListInnerRef = useRef() as MutableRefObject<HTMLUListElement>;
+  const overflowListRef = useRef<HTMLDivElement>(null);
+  const overflowListInnerRef = useRef<HTMLUListElement>(null);
   /**
    * Set right and left gradients on tables.
    */
   const setShadows = () => {
+    if (!overflowListInnerRef.current) {
+      return;
+    }
+
     /**
      * Target the actual overflow list inside overflow list
      */
     const overflowListItems = Array.from(overflowListInnerRef.current.children);
+
     let childrenWidth = 0;
 
     overflowListItems.forEach(function (item) {
@@ -60,7 +64,8 @@ export const OverflowList = ({ className, children, ...other }: Props) => {
       );
       childrenWidth += item.clientWidth + itemMarginLeft;
     });
-    if (overflowListItems) {
+
+    if (overflowListRef.current) {
       /**
        * Get the width of the overflow list offscreen when overflow list overflows
        */

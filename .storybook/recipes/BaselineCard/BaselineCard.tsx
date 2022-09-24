@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { MutableRefObject, ReactNode, useEffect, useRef } from 'react';
+import React, { type ReactNode, useEffect, useRef } from 'react';
 import styles from './BaselineCard.module.css';
 
 import { Card, CardBody, CardFooter, CardHeader, Score } from '../../../src';
@@ -78,8 +78,8 @@ export const BaselineCard = ({
    * Initialize refs to use on the card container and the link
    *  (for clickable card)
    */
-  const cardRef = useRef() as MutableRefObject<HTMLDivElement>;
-  const linkRef = useRef() as MutableRefObject<HTMLAnchorElement>;
+  const cardRef = useRef<HTMLDivElement>(null);
+  const linkRef = useRef<HTMLAnchorElement>(null);
 
   /**
    * Hook up the link functionality on component mount if a link is present
@@ -103,7 +103,7 @@ export const BaselineCard = ({
     function handleClick() {
       const isTextSelected = window.getSelection()?.toString();
       if (!isTextSelected) {
-        linkRef.current.click();
+        linkRef.current?.click();
       }
     }
 
