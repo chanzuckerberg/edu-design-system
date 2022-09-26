@@ -1,3 +1,4 @@
+import omit from 'lodash.omit';
 import React, { ReactNode } from 'react';
 
 export interface Props {
@@ -48,7 +49,7 @@ export const Tab = ({
       className={className}
       id={id}
       role="tabpanel"
-      {...other}
+      {...omit(other, 'title')}
     >
       {children}
     </div>
