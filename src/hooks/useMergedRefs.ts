@@ -1,57 +1,33 @@
-import { useCallback } from 'react';
+import type { RefCallback, Ref } from 'react';
 
 /**
- * NOTE: This was "borrowed" from reach-ui!
+ * Assign a value to a ref function or object.
  */
-
-/**
- * React.Ref uses the readonly type `React.RefObject` instead of
- * `React.MutableRefObject`, We pretty much always assume ref objects are
- * mutable (at least when we create them), so this type is a workaround so some
- * of the weird mechanics of using refs with TS.
- */
-export type AssignableRef<ValueType> =
-  | {
-      bivarianceHack(instance: ValueType | null): void;
-    }['bivarianceHack']
-  | React.MutableRefObject<ValueType | null>;
-
-/**
- * Passes or assigns an arbitrary value to a ref function or object.
- *
- * @param ref
- * @param value
- */
-export function assignRef<RefValueType = any>(
-  ref: AssignableRef<RefValueType> | null | undefined,
-  value: any,
-) {
+function assignRef<Val>(ref: Ref<Val>, value: Val) {
   if (ref == null) return;
   if (typeof ref === 'function') {
     ref(value);
   } else {
-    try {
-      ref.current = value;
-    } catch (error) {
-      throw new Error(`Cannot assign value "${value}" to ref "${ref}"`);
-    }
+    // @ts-expect-error RefObjects have a readonly type, but we're going to assign to it anyway.
+    ref.current = value;
   }
 }
 
 /**
- * Passes or assigns a value to multiple refs (typically a DOM node). Useful for
- * dealing with components that need an explicit ref for DOM calculations but
- * also forwards refs assigned by an app.
+ * Assign one value to multiple refs.
  *
- * @param refs Refs to fork
+ * Typically used for DOM nodes. For example, when a component forwards a ref but also needs its
+ * own ref for DOM calculations.
+ *
+ * @example
+ *
+ * const combinedRef = useMergedRefs(refA, refB);
+ * return <span ref={combinedRef}>hi</span>;
  */
-export function useMergedRefs<RefValueType = any>(
-  ...refs: (AssignableRef<RefValueType> | null | undefined)[]
-) {
-  return useCallback((node: any) => {
+export function useMergedRefs<Val>(...refs: Ref<Val>[]): RefCallback<Val> {
+  return function (value: Val) {
     for (const ref of refs) {
-      assignRef(ref, node);
+      assignRef(ref, value);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, refs);
+  };
 }
