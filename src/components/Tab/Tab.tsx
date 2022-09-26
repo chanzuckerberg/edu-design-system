@@ -1,4 +1,3 @@
-import omit from 'lodash.omit';
 import React, { ReactNode } from 'react';
 
 export interface Props {
@@ -23,7 +22,7 @@ export interface Props {
    */
   isActiveIndex?: number;
   /**
-   * Number passed down from Tabs to show the active index state of Tabs
+   * Text used to label the tab in the tab list
    */
   title?: string;
 }
@@ -39,6 +38,9 @@ export const Tab = ({
   children,
   className,
   id,
+  // Destructure `title` so it is not applied to the rendered element
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  title,
   'aria-labelledby': ariaLabelledBy,
   ...other
 }: Props) => {
@@ -49,7 +51,7 @@ export const Tab = ({
       className={className}
       id={id}
       role="tabpanel"
-      {...omit(other, 'title')}
+      {...other}
     >
       {children}
     </div>
