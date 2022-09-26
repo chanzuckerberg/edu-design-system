@@ -17,7 +17,7 @@ import {
   R_ARROW_KEYCODE,
   D_ARROW_KEYCODE,
 } from '../../util/keycodes';
-import Tab from '../Tab';
+import { default as Tab, TabProps } from '../Tab';
 
 export interface Props {
   /**
@@ -37,10 +37,6 @@ export interface Props {
    */
   className?: string;
   /**
-   * Toggles the visibility of the RadioField legend
-   */
-  hideLegend?: boolean;
-  /**
    * HTML id for the component
    */
   id?: string;
@@ -53,39 +49,6 @@ export interface Props {
    * TODO: improve `any` type
    */
   items?: Array<any>;
-  /**
-   * HTML radio tabs label text
-   */
-  radioLegend?: string;
-  /**
-   * Changes the position of the radio tabs legend to inline
-   */
-  radioLegendPosition?: 'inline-label';
-  /**
-   * Indicates that field is required for form to be successfully submitted
-   */
-  required?: boolean;
-  /**
-   * Stylistic variations:
-   * - **sm** yields smaller, uppercase tabs
-   */
-  size?: 'sm';
-  /**
-   * Function passed down from higher level component into Tabs
-   */
-  tabsOnClick?: () => void;
-  /**
-   * Overflow variants
-   * - **inverted** changes the overflow shadow to the inverted color
-   */
-  overflow?: 'inverted';
-  /**
-   * Stylistic variations:
-   * - **boxed** yields a chunkier, distinct boxed tabs used for primary content
-   * - **radio** yields tabs that are controlled by radio buttons
-   */
-  variant?: 'boxed' | 'radio';
-  title?: string;
 }
 
 /**
@@ -97,19 +60,9 @@ export interface Props {
  */
 export const Tabs = ({
   activeIndex = 0,
-  'aria-labelledby': ariaLabelledBy,
   children,
   className,
-  hideLegend,
-  id,
   onChange,
-  overflow,
-  radioLegend,
-  radioLegendPosition,
-  required,
-  size,
-  tabsOnClick,
-  variant,
   ...other
 }: Props) => {
   /**
@@ -123,11 +76,14 @@ export const Tabs = ({
   /**
    * Set the only children components allowed within <Tabs> to be Tab
    */
-  const tabs = useCallback(() => {
+  const tabs = useCallback<() => React.ReactElement<TabProps>[]>(() => {
+    // TODO: apply types from module, specify type definitions in custom.d.ts,
+    // or replace with inline equivalent
     return allByType(children, Tab);
   }, [children]);
 
-  const tabRefs = tabs().map(() => React.createRef());
+  // When rendered, we use the anchor tag below to attach these refs
+  const tabRefs = tabs().map(() => React.createRef<HTMLAnchorElement>());
 
   // we can't use the hook in an iterator like this, so generate the base and increment if needed
   const [idVar, setId] = useState<string[]>([]);
@@ -161,7 +117,7 @@ export const Tabs = ({
       prevActiveIndex !== activeIndex
     ) {
       setActiveIndexState(activeIndex);
-      tabRefs[activeIndex].current.focus();
+      tabRefs[activeIndex].current?.focus();
     }
   }, [prevActiveIndex, activeIndex, tabRefs]);
 
@@ -169,13 +125,9 @@ export const Tabs = ({
    * Autogenerate ids on tabs if not defined.
    */
   useEffect(() => {
-    // TODO: improve `any` type
-    setId(
-      tabs().map((tab: any) => (tab.props.id ? tab.props.id : getUID(tab))),
-    );
-    // TODO: improve `any` type
+    setId(tabs().map((tab) => (tab.props.id ? tab.props.id : getUID(tab))));
     setAriaLabelledBy(
-      tabs().map((tab: any) =>
+      tabs().map((tab) =>
         tab.props['aria-labelledby']
           ? tab.props['aria-labelledby']
           : getUID(tab),
@@ -254,8 +206,7 @@ export const Tabs = ({
   function onKeyDown(e: KeyboardEvent<HTMLAnchorElement>) {
     let activeTab = null;
 
-    // TODO: improve `any` type
-    tabRefs.map((item: any) => {
+    tabRefs.map((item) => {
       if (item.current === document.activeElement) {
         activeTab = item;
       }
@@ -275,12 +226,12 @@ export const Tabs = ({
       /**
        * If right or down arrow key keyed, focus on next tab.
        */
-      tabRefs[next].current.focus();
+      tabRefs[next].current?.focus();
     } else if ([L_ARROW_KEYCODE, U_ARROW_KEYCODE].includes(e.key)) {
       /**
        * If left or up arrow key keyed, focus on the previous tab.
        */
-      tabRefs[prev].current.focus();
+      tabRefs[prev].current?.focus();
     }
   }
 
@@ -292,23 +243,17 @@ export const Tabs = ({
     scrollableRight && styles['tabs--scrollable-right'],
   );
 
-  const childrenWithProps = React.Children.map(
-    tabs(),
-    // TODO: improve `any` type
-    (child: any, i: number) => {
-      // Checking isValidElement is the safe way and avoids a typescript
-      // error too.
-      if (React.isValidElement(child)) {
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-expect-error TODO: fix "No overload matches this call" error
-        return React.cloneElement<Props>(child, {
-          id: idVar[i],
-          ['aria-labelledby']: ariaLabelledByVar[i],
-        });
-      }
-      return child;
-    },
-  );
+  const childrenWithProps = React.Children.map(tabs(), (child, i: number) => {
+    // Checking isValidElement is the safe way and avoids a typescript
+    // error too.
+    if (React.isValidElement(child)) {
+      return React.cloneElement<Props>(child, {
+        id: idVar[i],
+        ['aria-labelledby']: ariaLabelledByVar[i],
+      });
+    }
+    return child;
+  });
 
   return (
     <div className={componentClassName} {...other}>
@@ -318,8 +263,7 @@ export const Tabs = ({
         ref={headerRef}
       >
         <ul className={styles['tabs__list']} role="tablist">
-          {/* TODO: improve `any` type */}
-          {tabs().map((tab: any, i: number) => {
+          {tabs().map((tab, i: number) => {
             const isActive = activeIndexState === i;
             return (
               <li
@@ -332,7 +276,6 @@ export const Tabs = ({
               >
                 <a
                   aria-controls={idVar[i]}
-                  aria-label={tab.props.ariaLabel}
                   aria-selected={isActive}
                   className={styles['tabs__link']}
                   href={`#${idVar[i]}`}

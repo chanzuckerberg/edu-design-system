@@ -22,7 +22,7 @@ export interface Props {
    */
   isActiveIndex?: number;
   /**
-   * Number passed down from Tabs to show the active index state of Tabs
+   * Text used to label the tab in the tab list
    */
   title?: string;
 }
@@ -38,8 +38,10 @@ export const Tab = ({
   children,
   className,
   id,
-  'aria-labelledby': ariaLabelledBy,
+  // Destructure `title` so it is not applied to the rendered element
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   title,
+  'aria-labelledby': ariaLabelledBy,
   ...other
 }: Props) => {
   return (
