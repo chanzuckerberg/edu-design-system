@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { ReactNode, useEffect, useRef } from 'react';
+import React, { type ReactNode, useEffect, useRef } from 'react';
 import styles from './FiltersPopover.module.css';
 import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';
@@ -91,6 +91,12 @@ const FiltersPopoverRender = ({
     );
   }
 
+  // Get a stable reference to the onClose callback.
+  const onCloseRef = useRef(onClose);
+  useEffect(() => {
+    onCloseRef.current = onClose;
+  }, [onClose]);
+
   /**
    * Hooks to emulate an onClose callback for the Popover.
    * Tracking first render is required to prevent useEffect callback from running on first render since Popover may render as closed.
@@ -99,11 +105,10 @@ const FiltersPopoverRender = ({
   useEffect(() => {
     if (firstRender.current) {
       firstRender.current = false;
-    } else if (!open && onClose) {
-      onClose();
+    } else if (!open && onCloseRef.current) {
+      onCloseRef.current();
     }
-    // onClose is not included as a dependency since it usually affects external state and can cause a callback loop
-  }, [open]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [open]);
 
   const trigger = triggerElement || (
     <FiltersButton
