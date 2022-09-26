@@ -36,7 +36,6 @@
     "copy-tokens-to-lib": "copyfiles -u 2 src/tokens-dist/**/* lib/tokens",
     "create-component": "plop",
     "deploy:docs": "storybook-to-ghpages --ci",
-    "generateFlowTypes": "./scripts/generateFlowTypes.sh",
     "generate-icon-types": "node ./scripts/generateIconTypes.js",
     "lint": "yarn run lint:styles && yarn run lint:scripts",
     "lint:fix": "yarn run lint:styles:fix && yarn run lint:scripts:fix",
