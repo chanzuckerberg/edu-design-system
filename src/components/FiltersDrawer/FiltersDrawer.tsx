@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import React, {
-  createRef,
+  useRef,
   ReactElement,
   ReactNode,
   useEffect,
@@ -116,7 +116,7 @@ export const FiltersDrawer = ({
    * Manages overflow state.
    */
   const [isOverflowing, setIsOverflowing] = useState(false);
-  const filtersBody = createRef<HTMLDivElement>();
+  const filtersBody = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (
