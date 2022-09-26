@@ -847,3 +847,579 @@ exports[`<DragDrop /> HoveredHandle story renders snapshot 1`] = `
   </section>
 </div>
 `;
+
+exports[`<DragDrop /> Interactive story renders snapshot 1`] = `
+<div
+  style="margin: 1rem;"
+>
+  <section
+    class="drag-drop drag-drop--unstyled eds-is-overflow-right"
+    data-rbd-droppable-context-id="2"
+    data-rbd-droppable-id="all-containers"
+  >
+    <div
+      class="drag-drop__inner grid-square"
+    >
+      <div
+        class="drag-drop__container"
+      >
+        <header>
+          <div
+            class="toolbar toolbar--bare u-margin-bottom-md"
+          >
+            <div
+              class="toolbar__item"
+            >
+              <h2
+                class="heading heading--size-title-sm heading--neutral-strong"
+              >
+                Available projects
+              </h2>
+            </div>
+            <div
+              class="toolbar__item toolbar__item--align-right"
+            >
+              <button
+                class="clickable-style clickable-style--lg clickable-style--icon clickable-style--brand button button--icon"
+                data-bootstrap-override="clickable-style-icon"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="icon"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <use
+                    xlink:href="test-file-stub#add"
+                  />
+                </svg>
+                Add project
+              </button>
+            </div>
+          </div>
+        </header>
+        <ol
+          class="drag-drop__container-inner bg-yellow"
+          data-rbd-droppable-context-id="2"
+          data-rbd-droppable-id="container-1"
+        >
+          <li
+            class="drag-drop__item"
+            data-rbd-draggable-context-id="2"
+            data-rbd-draggable-id="item-1"
+          >
+            <div
+              aria-describedby="rbd-hidden-text-2-hidden-text-18"
+              aria-label="Handle for draggable item: Project #1"
+              class="drag-drop__item-handle"
+              data-rbd-drag-handle-context-id="2"
+              data-rbd-drag-handle-draggable-id="item-1"
+              draggable="false"
+              role="button"
+              tabindex="0"
+            >
+              <svg
+                aria-hidden="true"
+                class="icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <use
+                  xlink:href="test-file-stub#drag-indicator"
+                />
+              </svg>
+            </div>
+            <article
+              class="card card--horizontal card--raised project-card project-card--draggable"
+            >
+              <header
+                class="card__header project-card__header"
+              >
+                <span
+                  aria-label="Project 1"
+                  class="text text--sm text--neutral-medium number-icon number-icon--base number-icon--sm project-card__number"
+                  role="img"
+                >
+                  1
+                </span>
+              </header>
+              <div
+                class="card__body project-card__body"
+              >
+                <h3
+                  class="heading heading--size-body-sm heading--neutral-strong project-card__title"
+                >
+                  Longer project card title that wraps lorem ipsum dolor
+                </h3>
+                <div
+                  class="project-card__meta"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="icon project-card__meta-icon"
+                    fill="currentColor"
+                    height="0.875rem"
+                    style="--icon-size: 0.875rem;"
+                    width="0.875rem"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <use
+                      xlink:href="test-file-stub#event-note"
+                    />
+                  </svg>
+                  12 days
+                </div>
+              </div>
+            </article>
+          </li>
+          <li
+            class="drag-drop__item"
+            data-rbd-draggable-context-id="2"
+            data-rbd-draggable-id="item-2"
+          >
+            <div
+              aria-describedby="rbd-hidden-text-2-hidden-text-18"
+              aria-label="Handle for draggable item: Project #2"
+              class="drag-drop__item-handle"
+              data-rbd-drag-handle-context-id="2"
+              data-rbd-drag-handle-draggable-id="item-2"
+              draggable="false"
+              role="button"
+              tabindex="0"
+            >
+              <svg
+                aria-hidden="true"
+                class="icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <use
+                  xlink:href="test-file-stub#drag-indicator"
+                />
+              </svg>
+            </div>
+            <article
+              class="card card--horizontal card--raised project-card project-card--draggable"
+            >
+              <header
+                class="card__header project-card__header"
+              >
+                <span
+                  aria-label="Project 2"
+                  class="text text--sm text--neutral-medium number-icon number-icon--base number-icon--sm project-card__number"
+                  role="img"
+                >
+                  2
+                </span>
+              </header>
+              <div
+                class="card__body project-card__body"
+              >
+                <h3
+                  class="heading heading--size-body-sm heading--neutral-strong project-card__title"
+                >
+                  Project card title
+                </h3>
+                <div
+                  class="project-card__meta"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="icon project-card__meta-icon"
+                    fill="currentColor"
+                    height="0.875rem"
+                    style="--icon-size: 0.875rem;"
+                    width="0.875rem"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <use
+                      xlink:href="test-file-stub#event-note"
+                    />
+                  </svg>
+                  12 days
+                </div>
+              </div>
+            </article>
+          </li>
+          <li
+            class="drag-drop__item"
+            data-rbd-draggable-context-id="2"
+            data-rbd-draggable-id="item-3"
+          >
+            <div
+              aria-describedby="rbd-hidden-text-2-hidden-text-18"
+              aria-label="Handle for draggable item: Project #3"
+              class="drag-drop__item-handle"
+              data-rbd-drag-handle-context-id="2"
+              data-rbd-drag-handle-draggable-id="item-3"
+              draggable="false"
+              role="button"
+              tabindex="0"
+            >
+              <svg
+                aria-hidden="true"
+                class="icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <use
+                  xlink:href="test-file-stub#drag-indicator"
+                />
+              </svg>
+            </div>
+            <article
+              class="card card--horizontal card--raised project-card project-card--draggable"
+            >
+              <header
+                class="card__header project-card__header"
+              >
+                <span
+                  aria-label="Project 3"
+                  class="text text--sm text--neutral-medium number-icon number-icon--base number-icon--sm project-card__number"
+                  role="img"
+                >
+                  3
+                </span>
+              </header>
+              <div
+                class="card__body project-card__body"
+              >
+                <h3
+                  class="heading heading--size-body-sm heading--neutral-strong project-card__title"
+                >
+                  Project card title
+                </h3>
+                <div
+                  class="project-card__meta"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="icon project-card__meta-icon"
+                    fill="currentColor"
+                    height="0.875rem"
+                    style="--icon-size: 0.875rem;"
+                    width="0.875rem"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <use
+                      xlink:href="test-file-stub#event-note"
+                    />
+                  </svg>
+                  12 days
+                </div>
+              </div>
+            </article>
+          </li>
+          <li
+            class="drag-drop__item"
+            data-rbd-draggable-context-id="2"
+            data-rbd-draggable-id="item-4"
+          >
+            <div
+              aria-describedby="rbd-hidden-text-2-hidden-text-18"
+              aria-label="Handle for draggable item: Project #4"
+              class="drag-drop__item-handle"
+              data-rbd-drag-handle-context-id="2"
+              data-rbd-drag-handle-draggable-id="item-4"
+              draggable="false"
+              role="button"
+              tabindex="0"
+            >
+              <svg
+                aria-hidden="true"
+                class="icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <use
+                  xlink:href="test-file-stub#drag-indicator"
+                />
+              </svg>
+            </div>
+            <article
+              class="card card--horizontal card--raised project-card project-card--draggable"
+            >
+              <header
+                class="card__header project-card__header"
+              >
+                <span
+                  aria-label="Project 4"
+                  class="text text--sm text--neutral-medium number-icon number-icon--base number-icon--sm project-card__number"
+                  role="img"
+                >
+                  4
+                </span>
+              </header>
+              <div
+                class="card__body project-card__body"
+              >
+                <h3
+                  class="heading heading--size-body-sm heading--neutral-strong project-card__title"
+                >
+                  Project card title
+                </h3>
+                <div
+                  class="project-card__meta"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="icon project-card__meta-icon"
+                    fill="currentColor"
+                    height="0.875rem"
+                    style="--icon-size: 0.875rem;"
+                    width="0.875rem"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <use
+                      xlink:href="test-file-stub#event-note"
+                    />
+                  </svg>
+                  12 days
+                </div>
+              </div>
+            </article>
+          </li>
+          <li
+            class="drag-drop__item"
+            data-rbd-draggable-context-id="2"
+            data-rbd-draggable-id="item-5"
+          >
+            <div
+              aria-describedby="rbd-hidden-text-2-hidden-text-18"
+              aria-label="Handle for draggable item: Project #5"
+              class="drag-drop__item-handle"
+              data-rbd-drag-handle-context-id="2"
+              data-rbd-drag-handle-draggable-id="item-5"
+              draggable="false"
+              role="button"
+              tabindex="0"
+            >
+              <svg
+                aria-hidden="true"
+                class="icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <use
+                  xlink:href="test-file-stub#drag-indicator"
+                />
+              </svg>
+            </div>
+            <article
+              class="card card--horizontal card--raised project-card project-card--draggable"
+            >
+              <header
+                class="card__header project-card__header"
+              >
+                <span
+                  aria-label="Project 5"
+                  class="text text--sm text--neutral-medium number-icon number-icon--base number-icon--sm project-card__number"
+                  role="img"
+                >
+                  5
+                </span>
+              </header>
+              <div
+                class="card__body project-card__body"
+              >
+                <h3
+                  class="heading heading--size-body-sm heading--neutral-strong project-card__title"
+                >
+                  Project card title
+                </h3>
+                <div
+                  class="project-card__meta"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="icon project-card__meta-icon"
+                    fill="currentColor"
+                    height="0.875rem"
+                    style="--icon-size: 0.875rem;"
+                    width="0.875rem"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <use
+                      xlink:href="test-file-stub#event-note"
+                    />
+                  </svg>
+                  12 days
+                </div>
+              </div>
+            </article>
+          </li>
+        </ol>
+      </div>
+      <div
+        class="drag-drop__container drag-drop__container--empty margin-0"
+      >
+        <header>
+          <div
+            class="toolbar toolbar--bare u-margin-bottom-md"
+          >
+            <div
+              class="toolbar__item"
+            >
+              <h2
+                class="heading heading--size-title-sm heading--neutral-strong"
+              >
+                Planned projects
+              </h2>
+            </div>
+            <div
+              class="toolbar__item toolbar__item--align-right"
+            >
+              <button
+                class="clickable-style clickable-style--lg clickable-style--icon clickable-style--brand button button--icon"
+                data-bootstrap-override="clickable-style-icon"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="icon"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <use
+                    xlink:href="test-file-stub#add"
+                  />
+                </svg>
+                Add project
+              </button>
+            </div>
+          </div>
+        </header>
+        <div
+          class="drag-drop__container-inner bg-white"
+          data-rbd-droppable-context-id="2"
+          data-rbd-droppable-id="container-2"
+        >
+          <p
+            class="text text--body u-margin-bottom-xl"
+          >
+            Empty Content
+          </p>
+        </div>
+      </div>
+      <div
+        class="drag-drop__container drag-drop__container--empty margin-0"
+      >
+        <header>
+          <div
+            class="toolbar toolbar--bare u-margin-bottom-md"
+          >
+            <div
+              class="toolbar__item"
+            >
+              <h2
+                class="heading heading--size-title-sm heading--neutral-strong"
+              >
+                Planned projects
+              </h2>
+            </div>
+            <div
+              class="toolbar__item toolbar__item--align-right"
+            >
+              <button
+                class="clickable-style clickable-style--lg clickable-style--icon clickable-style--brand button button--icon"
+                data-bootstrap-override="clickable-style-icon"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="icon"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <use
+                    xlink:href="test-file-stub#add"
+                  />
+                </svg>
+                Add project
+              </button>
+            </div>
+          </div>
+        </header>
+        <div
+          class="drag-drop__container-inner bg-white"
+          data-rbd-droppable-context-id="2"
+          data-rbd-droppable-id="container-3"
+        >
+          <p
+            class="text text--body u-margin-bottom-xl"
+          >
+            Empty Content
+          </p>
+        </div>
+      </div>
+      <div
+        class="drag-drop__container drag-drop__container--empty margin-0"
+      >
+        <header>
+          <div
+            class="toolbar toolbar--bare u-margin-bottom-md"
+          >
+            <div
+              class="toolbar__item"
+            >
+              <h2
+                class="heading heading--size-title-sm heading--neutral-strong"
+              >
+                Planned projects
+              </h2>
+            </div>
+            <div
+              class="toolbar__item toolbar__item--align-right"
+            >
+              <button
+                class="clickable-style clickable-style--lg clickable-style--icon clickable-style--brand button button--icon"
+                data-bootstrap-override="clickable-style-icon"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="icon"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <use
+                    xlink:href="test-file-stub#add"
+                  />
+                </svg>
+                Add project
+              </button>
+            </div>
+          </div>
+        </header>
+        <div
+          class="drag-drop__container-inner bg-white"
+          data-rbd-droppable-context-id="2"
+          data-rbd-droppable-id="container-4"
+        >
+          <p
+            class="text text--body u-margin-bottom-xl"
+          >
+            Empty Content
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;

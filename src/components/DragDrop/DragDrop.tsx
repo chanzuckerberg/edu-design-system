@@ -31,6 +31,10 @@ export interface Props {
    */
   containers: Containers;
   /**
+   * CSS class names that can be appended to div wrapping the containers.
+   */
+  containersClassName?: string;
+  /**
    * By default, the last container in a context gets unique styling. If more than two containers will be used, setting this prop to true will remove this unique styling and give all containers a simple border.
    */
   multipleContainers: boolean;
@@ -61,6 +65,7 @@ export const DragDrop = ({
   className,
   items,
   containers,
+  containersClassName,
   getNewState,
   multipleContainers = false,
   unstyledItems = false,
@@ -283,6 +288,8 @@ export const DragDrop = ({
     className,
   );
 
+  const innerClassName = clsx(styles['drag-drop__inner'], containersClassName);
+
   return (
     <DragDropContext onDragEnd={onDragEnd}>
       <Droppable
@@ -298,7 +305,7 @@ export const DragDrop = ({
               ref={provided.innerRef}
             >
               <div
-                className={styles['drag-drop__inner']}
+                className={innerClassName}
                 onScroll={handleOnScroll}
                 ref={dragDropInnerRef}
               >
@@ -313,7 +320,6 @@ export const DragDrop = ({
 
                     return (
                       <DragDropContainer
-                        columnClassName={container.columnClassName}
                         container={container}
                         emptyContent={container.emptyContent}
                         items={items}

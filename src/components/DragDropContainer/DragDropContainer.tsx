@@ -9,16 +9,6 @@ import DragDropItem from '../DragDropItem';
 
 export interface Props {
   /**
-   * CSS class names that can be appended to the component.
-   */
-  className?: string;
-  /**
-   * Column class names that can be appended to the component.
-   *
-   * Used to add additional styles to the column.
-   */
-  columnClassName?: string[];
-  /**
    * Prop that will contain an id for each container and an array of itemIds that will be used on initial render
    */
   container: ContainerType;
@@ -36,7 +26,6 @@ export interface Props {
  * Primary UI component for user interaction for draggable components to be dropped within the container.
  */
 export const DragDropContainer = ({
-  className,
   container,
   items,
   emptyContent,
@@ -44,7 +33,7 @@ export const DragDropContainer = ({
   const componentClassName = clsx(
     styles['drag-drop__container'],
     items.length < 1 && styles['drag-drop__container--empty'],
-    className,
+    container.className,
   );
 
   const containerInnerClassName = clsx(

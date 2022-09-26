@@ -59,8 +59,9 @@
 
 /**
  * Outer container for DragDrop component; provides <DragDropContext />, which wraps droppable components (i.e. containers) and provides them with context.
+ * The `:where` pseudo class function allows easy overriding via className.
  */
-.drag-drop__inner {
+:where(.drag-drop__inner) {
   /* Uses a flex row to align containers. */
   display: flex;
   overflow: auto;
