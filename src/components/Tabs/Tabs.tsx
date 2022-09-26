@@ -1,12 +1,12 @@
 import clsx from 'clsx';
 import debounce from 'lodash.debounce';
 import React, {
-  ReactNode,
+  type ReactNode,
   useRef,
   useState,
   useEffect,
   useCallback,
-  KeyboardEvent,
+  type KeyboardEvent,
 } from 'react';
 import { allByType } from 'react-children-by-type';
 import { useUIDSeed } from 'react-uid';
@@ -120,6 +120,7 @@ export const Tabs = ({
   const [activeIndexState, setActiveIndexState] = useState(activeIndex);
   const [scrollableLeft, setScrollableLeft] = useState<boolean>(false);
   const [scrollableRight, setScrollableRight] = useState<boolean>(false);
+
   /**
    * Set the only children components allowed within <Tabs> to be Tab
    */
@@ -186,37 +187,39 @@ export const Tabs = ({
   /**
    * Handles if scroll fade indicators should be displayed.
    */
-  const handleTabsScroll = debounce(
-    (headerEl: HTMLDivElement) => {
-      const scrollLeft = headerEl.scrollLeft;
-      const width = headerEl.clientWidth;
-      const scrollWidth = headerEl.scrollWidth;
+  const handleTabsScroll = useCallback((headerEl: HTMLDivElement) => {
+    const scrollLeft = headerEl.scrollLeft;
+    const width = headerEl.clientWidth;
+    const scrollWidth = headerEl.scrollWidth;
 
-      if (scrollLeft > 0) {
-        setScrollableLeft(true);
-      } else {
-        setScrollableLeft(false);
-      }
+    if (scrollLeft > 0) {
+      setScrollableLeft(true);
+    } else {
+      setScrollableLeft(false);
+    }
 
-      if (scrollWidth > width && scrollLeft + width < scrollWidth) {
-        setScrollableRight(true);
-      } else {
-        setScrollableRight(false);
-      }
-    },
-    100,
-    { leading: true },
-  );
+    if (scrollWidth > width && scrollLeft + width < scrollWidth) {
+      setScrollableRight(true);
+    } else {
+      setScrollableRight(false);
+    }
+  }, []);
 
   /**
    * Listens for window resize to display scroll fade indicators.
    */
   useEffect(() => {
     if (headerRef && headerRef.current) {
-      const resizeHandleTabs = () => {
-        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-        handleTabsScroll(headerRef.current!);
-      };
+      const resizeHandleTabs = debounce(
+        () => {
+          if (headerRef.current) {
+            handleTabsScroll(headerRef.current);
+          }
+        },
+        100,
+        { leading: true },
+      );
+
       /**
        * The event listener actually calls the callback once when initiated, but the event listener
        * is not triggered with prop changes so this line is required.
@@ -229,7 +232,7 @@ export const Tabs = ({
         window.removeEventListener('resize', resizeHandleTabs);
       };
     }
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [handleTabsScroll]);
 
   /**
    * On open

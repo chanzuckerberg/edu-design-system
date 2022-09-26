@@ -1,10 +1,11 @@
 import clsx from 'clsx';
 import React, {
+  useCallback,
   useState,
   useEffect,
   useRef,
-  ReactNode,
-  KeyboardEvent,
+  type ReactNode,
+  type KeyboardEvent,
 } from 'react';
 import { oneByType } from 'react-children-by-type';
 import FocusLock from 'react-focus-lock';
@@ -75,8 +76,8 @@ export const Drawer = ({
    */
   const [activeFocus, setActiveFocus] = useState(isActive);
   const windowRef = useRef<HTMLElement | null>(null);
-  const ref = useRef<HTMLDivElement | null>(null);
   const isMountedRef = useRef(true);
+  const onCloseRef = useRef(onClose);
 
   /**
    * Update activeFocus to be consistent with isActive.
@@ -100,6 +101,10 @@ export const Drawer = ({
       isMountedRef.current = false;
     };
   }, []);
+
+  useEffect(() => {
+    onCloseRef.current = onClose;
+  }, [onClose]);
 
   /**
    * Open the Drawer and give it focus.
@@ -125,13 +130,13 @@ export const Drawer = ({
   /**
    * Close the drawer and run the onClose prop (pass in function) if it exists.
    */
-  function handleOnClose() {
+  const handleOnClose = useCallback(() => {
     deactivateFocusTrap();
 
-    if (onClose) {
-      onClose();
+    if (onCloseRef.current) {
+      onCloseRef.current();
     }
-  }
+  }, []);
 
   /**
    * Handle "click outside"
@@ -154,7 +159,7 @@ export const Drawer = ({
     return () => {
       document.removeEventListener('click', handleOnClickOutside);
     };
-  }, [isActive, windowRef]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [isActive, dismissible, handleOnClose, windowRef]);
 
   /**
    * If escape button is struck, close the drawer
@@ -198,7 +203,6 @@ export const Drawer = ({
           aria-hidden={!isActive}
           className={containerClassName}
           onKeyDown={handleOnKeyDown}
-          ref={ref}
           {...other}
         >
           <article
