@@ -17,7 +17,7 @@ import {
   R_ARROW_KEYCODE,
   D_ARROW_KEYCODE,
 } from '../../util/keycodes';
-import { default as Tab, TabProps } from '../Tab';
+import Tab from '../Tab';
 
 export interface Props {
   /**
@@ -77,9 +77,7 @@ export const Tabs = ({
   /**
    * Set the only children components allowed within <Tabs> to be Tab
    */
-  const tabs = useCallback<() => React.ReactElement<TabProps>[]>(() => {
-    // TODO: apply types from module, specify type definitions in custom.d.ts,
-    // or replace with inline equivalent
+  const tabs = useCallback(() => {
     return allByType(children, Tab);
   }, [children]);
 
