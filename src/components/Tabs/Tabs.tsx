@@ -65,27 +65,20 @@ export const Tabs = ({
   onChange,
   ...other
 }: Props) => {
-  /**
-   * Initialize states, constants, and refs
-   */
   const ref = useRef<number | undefined>();
   const headerRef = useRef<HTMLDivElement>(null);
   const [activeIndexState, setActiveIndexState] = useState(activeIndex);
   const [scrollableLeft, setScrollableLeft] = useState<boolean>(false);
   const [scrollableRight, setScrollableRight] = useState<boolean>(false);
 
-  /**
-   * Set the only children components allowed within <Tabs> to be Tab
-   */
-  const tabs = useCallback(() => {
+  /** Get all children that are Tab components. Ignore any others. */
+  const getTabs = useCallback(() => {
     return allByType(children, Tab);
   }, [children]);
 
-  const tabRefs = tabs().map(() => React.createRef<HTMLAnchorElement>());
-
-  // we can't use the hook in an iterator like this, so generate the base and increment if needed
-  const [idVar, setId] = useState<string[]>([]);
-  const [ariaLabelledByVar, setAriaLabelledBy] = useState<string[]>([]);
+  const tabRefs = getTabs().map(() => React.createRef<HTMLAnchorElement>());
+  const [tabPanelIds, setTabPanelIds] = useState<string[]>([]);
+  const [tabIds, setTabIds] = useState<string[]>([]);
   const getUID = useUIDSeed();
 
   /**
@@ -101,8 +94,6 @@ export const Tabs = ({
   }
 
   /**
-   * Use effect
-   *
    * Set prevActiveIndex to previous value prop
    *
    * If prevActiveIndex is defined and previous value prop is not equal
@@ -119,19 +110,20 @@ export const Tabs = ({
     }
   }, [prevActiveIndex, activeIndex, tabRefs]);
 
-  /**
-   * Autogenerate ids on tabs if not defined.
-   */
+  // Set the tab and tab panel ids. Autogenerate them if necessary.
   useEffect(() => {
-    setId(tabs().map((tab) => (tab.props.id ? tab.props.id : getUID(tab))));
-    setAriaLabelledBy(
-      tabs().map((tab) =>
+    setTabPanelIds(
+      getTabs().map((tab) => (tab.props.id ? tab.props.id : getUID(tab))),
+    );
+
+    setTabIds(
+      getTabs().map((tab) =>
         tab.props['aria-labelledby']
           ? tab.props['aria-labelledby']
           : getUID(tab),
       ),
     );
-  }, [tabs, getUID]);
+  }, [getTabs, getUID]);
 
   /**
    * Handles if scroll fade indicators should be displayed.
@@ -183,27 +175,15 @@ export const Tabs = ({
     }
   }, [handleTabsScroll]);
 
-  /**
-   * On open
-   */
-  function onOpen(index: number) {
-    /**
-     * On click of a tab, set activeIndexState to index of tab being clicked.
-     */
+  function handleClick(index: number) {
     setActiveIndexState(index);
 
     if (onChange) {
-      /**
-       * If function is passed into onChange prop, run that on click.
-       */
       onChange(index);
     }
   }
 
-  /**
-   * On KeyDown
-   */
-  function onKeyDown(e: KeyboardEvent<HTMLAnchorElement>) {
+  function handleKeyDown(e: KeyboardEvent<HTMLAnchorElement>) {
     let activeTab = null;
 
     tabRefs.map((item) => {
@@ -215,22 +195,16 @@ export const Tabs = ({
 
     if (!activeTab) return;
 
-    /**
-     * Set active tab, next tab, and previous tab.
-     */
+    // Set active, next, and previous tab.
     const index = tabRefs.indexOf(activeTab);
     const next = index === tabRefs.length - 1 ? 0 : index + 1;
     const prev = index === 0 ? tabRefs.length - 1 : index - 1;
 
     if ([R_ARROW_KEYCODE, D_ARROW_KEYCODE].includes(e.key)) {
-      /**
-       * If right or down arrow key keyed, focus on next tab.
-       */
+      // Right or down arrow was pressed. Focus the next tab.
       tabRefs[next].current?.focus();
     } else if ([L_ARROW_KEYCODE, U_ARROW_KEYCODE].includes(e.key)) {
-      /**
-       * If left or up arrow key keyed, focus on the previous tab.
-       */
+      // Left or up was pressed. Focus the previous tab.
       tabRefs[prev].current?.focus();
     }
   }
@@ -243,13 +217,13 @@ export const Tabs = ({
     scrollableRight && styles['tabs--scrollable-right'],
   );
 
-  const childrenWithProps = React.Children.map(tabs(), (child, i) => {
+  const childrenWithProps = React.Children.map(getTabs(), (child, i) => {
     // Checking isValidElement is the safe way and avoids a typescript
     // error too.
     if (React.isValidElement(child)) {
       return React.cloneElement<Props>(child, {
-        id: idVar[i],
-        ['aria-labelledby']: ariaLabelledByVar[i],
+        id: tabPanelIds[i],
+        'aria-labelledby': tabIds[i],
       });
     }
     return child;
@@ -263,7 +237,7 @@ export const Tabs = ({
         ref={headerRef}
       >
         <ul className={styles['tabs__list']} role="tablist">
-          {tabs().map((tab, i) => {
+          {getTabs().map((tab, i) => {
             const isActive = activeIndexState === i;
             return (
               <li
@@ -275,17 +249,17 @@ export const Tabs = ({
                 role="presentation"
               >
                 <a
-                  aria-controls={idVar[i]}
+                  aria-controls={tabPanelIds[i]}
                   aria-selected={isActive}
                   className={styles['tabs__link']}
-                  href={`#${idVar[i]}`}
-                  id={ariaLabelledByVar[i]}
+                  href={`#${tabPanelIds[i]}`}
+                  id={tabIds[i]}
                   key={'tab-' + i}
                   onClick={(e) => {
                     e.preventDefault();
-                    onOpen(i);
+                    handleClick(i);
                   }}
-                  onKeyDown={onKeyDown}
+                  onKeyDown={handleKeyDown}
                   ref={tabRefs[i]}
                   role="tab"
                   tabIndex={isActive ? 0 : -1}
