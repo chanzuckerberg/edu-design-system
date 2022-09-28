@@ -44,11 +44,6 @@ export interface Props {
    * Passed down to initially set the activeIndex state
    */
   activeIndex?: number;
-  /**
-   * The array of items to be passed into the component. The array must take on the specified shape
-   * TODO: improve `any` type
-   */
-  items?: Array<any>;
 }
 
 /**
