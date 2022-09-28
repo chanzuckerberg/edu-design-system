@@ -2,10 +2,11 @@ import clsx from 'clsx';
 import debounce from 'lodash.debounce';
 import React, {
   type ReactNode,
+  useCallback,
+  useEffect,
+  useMemo,
   useRef,
   useState,
-  useEffect,
-  useCallback,
   type KeyboardEvent,
 } from 'react';
 import { allByType } from 'react-children-by-type';
@@ -60,21 +61,32 @@ export const Tabs = ({
   onChange,
   ...other
 }: Props) => {
+  const getUID = useUIDSeed();
   const ref = useRef<number | undefined>();
   const headerRef = useRef<HTMLDivElement>(null);
   const [activeIndexState, setActiveIndexState] = useState(activeIndex);
   const [scrollableLeft, setScrollableLeft] = useState<boolean>(false);
   const [scrollableRight, setScrollableRight] = useState<boolean>(false);
 
-  /** Get all children that are Tab components. Ignore any others. */
-  const getTabs = useCallback(() => {
+  /** Children that are actually tabs. Any others are ignored. */
+  const tabs = useMemo(() => {
     return allByType(children, Tab);
   }, [children]);
 
-  const tabRefs = getTabs().map(() => React.createRef<HTMLAnchorElement>());
-  const [tabPanelIds, setTabPanelIds] = useState<string[]>([]);
-  const [tabIds, setTabIds] = useState<string[]>([]);
-  const getUID = useUIDSeed();
+  const tabRefs = useMemo(
+    () => tabs.map(() => React.createRef<HTMLAnchorElement>()),
+    [tabs],
+  );
+
+  const tabPanelIds = useMemo(
+    () => tabs.map((tab, i) => tab.props.id || getUID('panel' + i)),
+    [tabs, getUID],
+  );
+
+  const tabIds = useMemo(
+    () => tabs.map((tab) => tab.props['aria-labelledby'] || getUID(tab)),
+    [tabs, getUID],
+  );
 
   /**
    * Get previous prop
@@ -104,21 +116,6 @@ export const Tabs = ({
       tabRefs[activeIndex].current?.focus();
     }
   }, [prevActiveIndex, activeIndex, tabRefs]);
-
-  // Set the tab and tab panel ids. Autogenerate them if necessary.
-  useEffect(() => {
-    setTabPanelIds(
-      getTabs().map((tab) => (tab.props.id ? tab.props.id : getUID(tab))),
-    );
-
-    setTabIds(
-      getTabs().map((tab) =>
-        tab.props['aria-labelledby']
-          ? tab.props['aria-labelledby']
-          : getUID(tab),
-      ),
-    );
-  }, [getTabs, getUID]);
 
   /**
    * Handles if scroll fade indicators should be displayed.
@@ -212,7 +209,7 @@ export const Tabs = ({
     scrollableRight && styles['tabs--scrollable-right'],
   );
 
-  const childrenWithProps = React.Children.map(getTabs(), (child, i) => {
+  const childrenWithProps = React.Children.map(tabs, (child, i) => {
     // Checking isValidElement is the safe way and avoids a typescript
     // error too.
     if (React.isValidElement(child)) {
@@ -232,7 +229,7 @@ export const Tabs = ({
         ref={headerRef}
       >
         <ul className={styles['tabs__list']} role="tablist">
-          {getTabs().map((tab, i) => {
+          {tabs.map((tab, i) => {
             const isActive = activeIndexState === i;
             return (
               <li
