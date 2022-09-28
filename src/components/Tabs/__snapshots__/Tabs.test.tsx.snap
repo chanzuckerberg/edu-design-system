@@ -20,7 +20,7 @@ exports[`<Tabs /> Default story renders snapshot 1`] = `
           aria-selected="true"
           class="tabs__link"
           href="#2"
-          id="1"
+          id="1uid1"
           role="tab"
           tabindex="0"
         >
@@ -36,6 +36,7 @@ exports[`<Tabs /> Default story renders snapshot 1`] = `
           aria-selected="false"
           class="tabs__link"
           href="#2"
+          id="1uid2"
           role="tab"
           tabindex="-1"
         >
@@ -51,6 +52,7 @@ exports[`<Tabs /> Default story renders snapshot 1`] = `
           aria-selected="false"
           class="tabs__link"
           href="#2"
+          id="1uid3"
           role="tab"
           tabindex="-1"
         >
@@ -66,6 +68,7 @@ exports[`<Tabs /> Default story renders snapshot 1`] = `
           aria-selected="false"
           class="tabs__link"
           href="#2"
+          id="1uid4"
           role="tab"
           tabindex="-1"
         >
@@ -81,6 +84,7 @@ exports[`<Tabs /> Default story renders snapshot 1`] = `
           aria-selected="false"
           class="tabs__link"
           href="#2"
+          id="1uid5"
           role="tab"
           tabindex="-1"
         >
@@ -96,6 +100,7 @@ exports[`<Tabs /> Default story renders snapshot 1`] = `
           aria-selected="false"
           class="tabs__link"
           href="#2"
+          id="1uid6"
           role="tab"
           tabindex="-1"
         >
@@ -111,6 +116,7 @@ exports[`<Tabs /> Default story renders snapshot 1`] = `
           aria-selected="false"
           class="tabs__link"
           href="#2"
+          id="1uid7"
           role="tab"
           tabindex="-1"
         >
@@ -126,6 +132,7 @@ exports[`<Tabs /> Default story renders snapshot 1`] = `
           aria-selected="false"
           class="tabs__link"
           href="#2"
+          id="1uid8"
           role="tab"
           tabindex="-1"
         >
@@ -141,6 +148,7 @@ exports[`<Tabs /> Default story renders snapshot 1`] = `
           aria-selected="false"
           class="tabs__link"
           href="#2"
+          id="1uid9"
           role="tab"
           tabindex="-1"
         >
@@ -152,7 +160,7 @@ exports[`<Tabs /> Default story renders snapshot 1`] = `
   <div>
     <div
       aria-hidden="false"
-      aria-labelledby="1"
+      aria-labelledby="1uid1"
       id="2"
       role="tabpanel"
     >
