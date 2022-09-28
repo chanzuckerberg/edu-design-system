@@ -177,6 +177,7 @@ export const TextChild: StoryObj<Args> = {
 
 export const Interactive: StoryObj<Args> = {
   args: {
+    id: 'id-for-testing',
     // reset prop values defined in defaultArgs
     duration: undefined,
     visible: undefined,

@@ -75,7 +75,8 @@ type TooltipProps = {
    * controls if/when the bubble appears (on hover, click, focus, etc).
    */
   visible?: boolean;
-} & TippyProps;
+} & TippyProps &
+  React.HTMLAttributes<HTMLElement>;
 
 // @tippyjs/react does not expose tippy.js types, have to extract via props and grab element type from array type
 type Plugins = NonNullable<React.ComponentProps<typeof Tippy>['plugins']>;
