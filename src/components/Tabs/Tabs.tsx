@@ -78,18 +78,10 @@ export const Tabs = ({
     [tabs],
   );
 
-  /**
-   * Set prevActiveIndex to previous value prop
-   *
-   * If prevActiveIndex is defined and previous value prop is not equal
-   * to current value prop, toggle state.
-   */
+  // Set the active tab if the `activeIndex` prop changes.
   const prevActiveIndex = usePrevious(activeIndex);
   useEffect(() => {
-    if (
-      (prevActiveIndex !== undefined || null) &&
-      prevActiveIndex !== activeIndex
-    ) {
+    if (prevActiveIndex != null && prevActiveIndex !== activeIndex) {
       setActiveIndexState(activeIndex);
       tabRefs[activeIndex].current?.focus();
     }
