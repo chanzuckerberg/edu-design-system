@@ -63,7 +63,6 @@ export const Tabs = ({
 }: Props) => {
   const activeTabId = useUID();
   const activeTabPanelId = useUID();
-  const ref = useRef<number | undefined>();
   const headerRef = useRef<HTMLDivElement>(null);
   const [activeIndexState, setActiveIndexState] = useState(activeIndex);
   const [scrollableLeft, setScrollableLeft] = useState<boolean>(false);
@@ -78,18 +77,6 @@ export const Tabs = ({
     () => tabs.map(() => React.createRef<HTMLAnchorElement>()),
     [tabs],
   );
-
-  /**
-   * Get previous prop
-   *
-   * This is used to compare the previous prop to the current prop.
-   */
-  function usePrevious(activeIndex: number) {
-    useEffect(() => {
-      ref.current = activeIndex;
-    });
-    return ref.current;
-  }
 
   /**
    * Set prevActiveIndex to previous value prop
@@ -251,3 +238,14 @@ export const Tabs = ({
     </div>
   );
 };
+
+/**
+ * Get the previous value of a prop. Useful for comparing the previous to the current value.
+ */
+function usePrevious<T>(prop: T) {
+  const ref = useRef<T | undefined>();
+  useEffect(() => {
+    ref.current = prop;
+  });
+  return ref.current;
+}
