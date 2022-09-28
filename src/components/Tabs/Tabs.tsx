@@ -209,16 +209,9 @@ export const Tabs = ({
     scrollableRight && styles['tabs--scrollable-right'],
   );
 
-  const childrenWithProps = React.Children.map(tabs, (child, i) => {
-    // Checking isValidElement is the safe way and avoids a typescript
-    // error too.
-    if (React.isValidElement(child)) {
-      return React.cloneElement<Props>(child, {
-        id: tabPanelIds[i],
-        'aria-labelledby': tabIds[i],
-      });
-    }
-    return child;
+  const activeTabPanel = React.cloneElement(tabs[activeIndexState], {
+    id: tabPanelIds[activeIndexState],
+    'aria-labelledby': tabIds[activeIndexState],
   });
 
   return (
@@ -263,7 +256,7 @@ export const Tabs = ({
           })}
         </ul>
       </div>
-      <div>{childrenWithProps[activeIndexState]}</div>
+      <div>{activeTabPanel}</div>
     </div>
   );
 };
