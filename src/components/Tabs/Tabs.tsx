@@ -10,7 +10,7 @@ import React, {
   type KeyboardEvent,
 } from 'react';
 import { allByType } from 'react-children-by-type';
-import { useUIDSeed } from 'react-uid';
+import { useUID } from 'react-uid';
 import styles from './Tabs.module.css';
 import {
   L_ARROW_KEYCODE,
@@ -61,7 +61,8 @@ export const Tabs = ({
   onChange,
   ...other
 }: Props) => {
-  const getUID = useUIDSeed();
+  const activeTabId = useUID();
+  const activeTabPanelId = useUID();
   const ref = useRef<number | undefined>();
   const headerRef = useRef<HTMLDivElement>(null);
   const [activeIndexState, setActiveIndexState] = useState(activeIndex);
@@ -76,16 +77,6 @@ export const Tabs = ({
   const tabRefs = useMemo(
     () => tabs.map(() => React.createRef<HTMLAnchorElement>()),
     [tabs],
-  );
-
-  const tabPanelIds = useMemo(
-    () => tabs.map((tab, i) => tab.props.id || getUID('panel' + i)),
-    [tabs, getUID],
-  );
-
-  const tabIds = useMemo(
-    () => tabs.map((tab) => tab.props['aria-labelledby'] || getUID(tab)),
-    [tabs, getUID],
   );
 
   /**
@@ -210,8 +201,8 @@ export const Tabs = ({
   );
 
   const activeTabPanel = React.cloneElement(tabs[activeIndexState], {
-    id: tabPanelIds[activeIndexState],
-    'aria-labelledby': tabIds[activeIndexState],
+    id: activeTabPanelId,
+    'aria-labelledby': activeTabId,
   });
 
   return (
@@ -234,11 +225,11 @@ export const Tabs = ({
                 role="presentation"
               >
                 <a
-                  aria-controls={tabPanelIds[i]}
+                  aria-controls={activeTabPanelId}
                   aria-selected={isActive}
                   className={styles['tabs__link']}
-                  href={`#${tabPanelIds[i]}`}
-                  id={tabIds[i]}
+                  href={`#${activeTabPanelId}`}
+                  id={isActive ? activeTabId : undefined}
                   key={'tab-' + i}
                   onClick={(e) => {
                     e.preventDefault();
