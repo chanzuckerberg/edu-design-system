@@ -21,6 +21,33 @@
 }
 
 /**
+ * Fade scrollable indicators to display if there is scrollable area on either side.
+ *
+ * The color "white" is arbitrary and any non transparent color can be used here.
+ */
+.tabs--scrollable-left {
+  -webkit-mask-image: -webkit-linear-gradient(
+    left,
+    transparent,
+    white var(--eds-size-8)
+  );
+}
+
+.tabs--scrollable-right {
+  -webkit-mask-image: -webkit-linear-gradient(right, transparent);
+}
+
+.tabs--scrollable-left.tabs--scrollable-right {
+  -webkit-mask-image: -webkit-linear-gradient(
+    left,
+    transparent,
+    white var(--eds-size-8),
+    white calc(100% - var(--eds-size-8)),
+    transparent 100%
+  );
+}
+
+/**
  * Tabs list
  *
  * Actual unordered list of tabs.
