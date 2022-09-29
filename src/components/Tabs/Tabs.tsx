@@ -74,7 +74,10 @@ export const Tabs = ({
     [tabs],
   );
 
-  const tabIds = useMemo(() => tabs.map(getUID), [tabs, getUID]);
+  const tabIds = useMemo(
+    () => tabs.map((tab) => tab.props.id || getUID(tab)),
+    [tabs, getUID],
+  );
 
   // Set the active tab if the `activeIndex` prop changes.
   const prevActiveIndex = usePrevious(activeIndex);
