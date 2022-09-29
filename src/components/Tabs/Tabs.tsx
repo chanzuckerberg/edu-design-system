@@ -56,6 +56,7 @@ export interface Props {
  */
 export const Tabs = ({
   activeIndex = 0,
+  'aria-labelledby': ariaLabelledBy,
   children,
   className,
   onChange,
@@ -193,7 +194,11 @@ export const Tabs = ({
         onScroll={(e) => handleTabsScroll(e.target as HTMLDivElement)}
         ref={headerRef}
       >
-        <ul className={styles['tabs__list']} role="tablist">
+        <ul
+          aria-labelledby={ariaLabelledBy}
+          className={styles['tabs__list']}
+          role="tablist"
+        >
           {tabs.map((tab, i) => {
             const isActive = activeIndexState === i;
             return (
