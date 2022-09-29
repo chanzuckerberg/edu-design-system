@@ -338,7 +338,7 @@ export const CoursePlannerEdit = () => {
       emptyContent: container1EmptyContent(),
       header: (
         <DragDropContainerHeader>
-          <Toolbar className="mb-4" variant="bare">
+          <Toolbar className="!mb-4" variant="bare">
             <ToolbarItem>
               <Heading as="h2" size="title-sm" variant="neutral-strong">
                 Available projects
@@ -359,7 +359,7 @@ export const CoursePlannerEdit = () => {
       emptyContent: container2EmptyContent(),
       header: (
         <DragDropContainerHeader>
-          <Toolbar className="mb-4" variant="bare">
+          <Toolbar className="!mb-4" variant="bare">
             <ToolbarItem>
               <Heading as="h2" size="title-sm" variant="neutral-strong">
                 Planned projects

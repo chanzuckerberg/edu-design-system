@@ -50,7 +50,7 @@ export const CoursePlannerStep1 = () => (
     <LayoutContainer>
       <Layout gap="lg-xl" variant="50-50">
         <LayoutSection region="main">
-          <Grid className="mb-8" variant="1-2-1up">
+          <Grid className="!mb-8" variant="1-2-1up">
             <img alt="compass vignette" src={CompassCenter} />
             <Heading as="h2" size="headline-lg">
               Let&apos;s start planning, Amy Frankle.
@@ -62,7 +62,7 @@ export const CoursePlannerStep1 = () => (
           </Text>
         </LayoutSection>
         <LayoutSection region="main">
-          <Text as="div" className="mb-8">
+          <Text as="div" className="!mb-8">
             <h3>Tell us how often your course meets.</h3>
             <p>
               We’ll adjust project plans based on your schedule. This way, you
@@ -74,22 +74,22 @@ export const CoursePlannerStep1 = () => (
               average amounts for each question below.
             </p>
           </Text>
-          <Text className="mb-2 font-semibold">
+          <Text className="!mb-2 font-semibold">
             How many times per week do you have class?
           </Text>
           <TextField
             aria-label="times per week"
-            className="mb-8"
+            className="!mb-8"
             min={0}
             placeholder="times per week"
             type="number"
           />
-          <Text className="mb-2 font-semibold">
+          <Text className="!mb-2 font-semibold">
             How many minutes is each class?
           </Text>
           <TextField
             aria-label="minutes"
-            className="mb-8"
+            className="!mb-8"
             min={0}
             placeholder="minutes"
             type="number"
