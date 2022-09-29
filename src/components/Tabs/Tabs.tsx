@@ -241,7 +241,7 @@ export const Tabs = ({
  * Get the previous value of a prop. Useful for comparing the previous to the current value.
  */
 function usePrevious<T>(prop: T) {
-  const ref = useRef<T | undefined>();
+  const ref = useRef<T>(prop);
   useEffect(() => {
     ref.current = prop;
   });
