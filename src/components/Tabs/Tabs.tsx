@@ -22,7 +22,7 @@ import Tab from '../Tab';
 
 export interface Props {
   /**
-   * The aria-labelledby attribute creates a relationship between the tab list and the tab panels
+   * Reference to another element that describes the purpose of the set of tabs.
    */
   'aria-labelledby'?: string;
   /**
@@ -78,10 +78,7 @@ export const Tabs = ({
     [tabs],
   );
 
-  const tabIds = useMemo(
-    () => tabs.map((tab) => tab.props['aria-labelledby'] || getUID(tab)),
-    [tabs, getUID],
-  );
+  const tabIds = useMemo(() => tabs.map(getUID), [tabs, getUID]);
 
   // Set the active tab if the `activeIndex` prop changes.
   const prevActiveIndex = usePrevious(activeIndex);
