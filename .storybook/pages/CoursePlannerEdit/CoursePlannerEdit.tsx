@@ -473,7 +473,7 @@ export const CoursePlannerEdit = () => {
 
   return (
     <>
-      <Panel className="mb-6" variant="squared">
+      <Panel className="!mb-6" variant="squared">
         <LayoutContainer>
           <PageHeader
             className="!mb-0"
@@ -545,7 +545,7 @@ export const CoursePlannerEdit = () => {
           </LayoutSection>
           <LayoutSection region="sidebar">
             <CardWithNotification
-              className="mb-6"
+              className="!mb-6"
               text="Summit recommends teaching at least five (5) projects for this course."
               variant="brand"
             >
@@ -562,7 +562,7 @@ export const CoursePlannerEdit = () => {
                 />
               </CardWithNotification.Body>
             </CardWithNotification>
-            <Grid className="mb-6" variant="1-2-1up">
+            <Grid className="!mb-6" variant="1-2-1up">
               <GridItem>
                 <TableCard
                   buttonContent="View all Cognitive Skills"
