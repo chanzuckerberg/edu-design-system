@@ -34,7 +34,7 @@ export const ModalFirstStep = () => {
           Before we start, tell us your planning needs
         </Modal.Title>
         <Heading as="h3" size="title-md">
-          We’ll need to know how to set up your plan. Can you tell us how you’ll
+          We’ll need to know how to set up your plan.Can you tell us how you’ll
           use the planner?
         </Heading>
       </Modal.Header>
