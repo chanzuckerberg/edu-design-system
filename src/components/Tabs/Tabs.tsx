@@ -1,6 +1,8 @@
 import clsx from 'clsx';
+import debounce from 'lodash.debounce';
 import React, {
   type ReactNode,
+  useCallback,
   useEffect,
   useMemo,
   useRef,
@@ -62,7 +64,10 @@ export const Tabs = ({
 }: Props) => {
   const getUID = useUIDSeed();
   const activeTabPanelId = useUID();
+  const headerRef = useRef<HTMLDivElement>(null);
   const [activeIndexState, setActiveIndexState] = useState(activeIndex);
+  const [scrollableLeft, setScrollableLeft] = useState<boolean>(false);
+  const [scrollableRight, setScrollableRight] = useState<boolean>(false);
 
   /** Children that are actually tabs. Any others are ignored. */
   const tabs = useMemo(() => {
@@ -87,6 +92,56 @@ export const Tabs = ({
       tabRefs[activeIndex].current?.focus();
     }
   }, [prevActiveIndex, activeIndex, tabRefs]);
+
+  /**
+   * Handles if scroll fade indicators should be displayed.
+   */
+  const handleTabsScroll = useCallback((headerEl: HTMLDivElement) => {
+    const scrollLeft = headerEl.scrollLeft;
+    const width = headerEl.clientWidth;
+    const scrollWidth = headerEl.scrollWidth;
+
+    if (scrollLeft > 0) {
+      setScrollableLeft(true);
+    } else {
+      setScrollableLeft(false);
+    }
+
+    if (scrollWidth > width && scrollLeft + width < scrollWidth) {
+      setScrollableRight(true);
+    } else {
+      setScrollableRight(false);
+    }
+  }, []);
+
+  /**
+   * Listens for window resize to display scroll fade indicators.
+   */
+  useEffect(() => {
+    if (headerRef && headerRef.current) {
+      const resizeHandleTabs = debounce(
+        () => {
+          if (headerRef.current) {
+            handleTabsScroll(headerRef.current);
+          }
+        },
+        100,
+        { leading: true },
+      );
+
+      /**
+       * The event listener actually calls the callback once when initiated, but the event listener
+       * is not triggered with prop changes so this line is required.
+       * This means the callback may be called twice on initial paint, which is fine, and
+       * is better than it not being called at all.
+       */
+      resizeHandleTabs();
+      window.addEventListener('resize', resizeHandleTabs);
+      return () => {
+        window.removeEventListener('resize', resizeHandleTabs);
+      };
+    }
+  }, [handleTabsScroll]);
 
   function handleClick(index: number) {
     setActiveIndexState(index);
@@ -122,14 +177,26 @@ export const Tabs = ({
     }
   }
 
+  const componentClassName = clsx(styles['tabs'], className);
+
+  const headerClassName = clsx(
+    styles['tabs__header'],
+    scrollableLeft && styles['tabs--scrollable-left'],
+    scrollableRight && styles['tabs--scrollable-right'],
+  );
+
   const activeTabPanel = React.cloneElement(tabs[activeIndexState], {
     id: activeTabPanelId,
     'aria-labelledby': tabIds[activeIndexState],
   });
 
   return (
-    <div className={clsx(styles['tabs'], className)} {...other}>
-      <div className={styles['tabs__header']}>
+    <div className={componentClassName} {...other}>
+      <div
+        className={headerClassName}
+        onScroll={(e) => handleTabsScroll(e.target as HTMLDivElement)}
+        ref={headerRef}
+      >
         <ul
           aria-labelledby={ariaLabelledBy}
           className={styles['tabs__list']}
