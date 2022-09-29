@@ -476,7 +476,7 @@ export const CoursePlannerEdit = () => {
       <Panel className="mb-6" variant="squared">
         <LayoutContainer>
           <PageHeader
-            className="mb-0"
+            className="!mb-0"
             description={
               <HorizontalStepper
                 activeIndex={1}

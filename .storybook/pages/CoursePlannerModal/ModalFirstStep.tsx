@@ -39,7 +39,7 @@ export const ModalFirstStep = () => {
         </Heading>
       </Modal.Header>
       <Modal.Body>
-        <Fieldset className="m-0">
+        <Fieldset className="!m-0">
           <Fieldset.Legend text="Content pieces go here" />
           <Fieldset.Items>
             <Radio

@@ -26,7 +26,7 @@ export const CoursePlannerStep1 = () => (
     <Panel className="mb-8" variant="squared">
       <LayoutContainer>
         <PageHeader
-          className="mb-0"
+          className="!mb-0"
           description={
             <HorizontalStepper
               activeIndex={0}

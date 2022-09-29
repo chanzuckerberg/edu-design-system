@@ -75,7 +75,7 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
           >
             Essential Questions
           </Heading>
-          <Text as="div" className="mb-8">
+          <Text as="div" className="!mb-8">
             <ul>
               <li>How are structures in the body organized?</li>
               <li>
@@ -107,7 +107,7 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
               <li>How are structures in the body organized?</li>
             </ol>
           </Text>
-          <Hr className="mb-0" />
+          <Hr />
 
           <div className="fpo">FPO Brand asset</div>
           <Section
@@ -212,7 +212,7 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
         <TimelineNavPanel title="Expectations of Samuri in Feudal Japan and Wars of 5th Century">
           <Section
             description={
-              <Text as="p" className="u-theme-typography-body-text-xs-bold">
+              <Text as="p" className="!text-xs !font-bold">
                 Estimated schedule: Days 4,5,6
               </Text>
             }
@@ -225,13 +225,13 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
           >
             <Heading
               as="h3"
-              className="u-margin-bottom-lg"
+              className="mb-6"
               size="headline-sm"
               variant="neutral-strong"
             >
               What to Focus on this Checkpoint
             </Heading>
-            <Text as="div" className="mb-4">
+            <Text as="div" className="!mb-4">
               <p>
                 Students individually develop a follow up question that builds
                 from their group’s experiment and describe their follow up
@@ -239,23 +239,20 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
                 explanations of how the body is organized and functions.
               </p>
             </Text>
-            <DefinitionList
-              className="u-margin-bottom-lg"
-              orientation="horizontal"
-            >
+            <DefinitionList className="mb-6" orientation="horizontal">
               <DefinitionList.Item title="Term 1:">
                 <Link>Constructing and Evidence based Explanation</Link>
               </DefinitionList.Item>
             </DefinitionList>
 
-            <Text as="div" className="mb-4">
+            <Text as="div" className="!mb-4">
               <p>
                 Students collaboratively develop a single group research
                 question to frame their shared experiment, then describe the
                 group research question in the introduction.
               </p>
             </Text>
-            <DefinitionList className="mb-8" orientation="horizontal">
+            <DefinitionList className="!mb-8" orientation="horizontal">
               <DefinitionList.Item title="Term 1:">
                 <Link>Constructing and Evidence based Explanation</Link>
               </DefinitionList.Item>
@@ -270,11 +267,11 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
               explanations on how the body is organized and its functions.
             </ButtonActionCalloutCard>
 
-            <Hr className="u-margin-top-xxl" />
+            <Hr className="mb-12" />
 
             <Heading
               as="h3"
-              className="u-margin-bottom-lg"
+              className="mb-6"
               size="headline-sm"
               variant="neutral-strong"
             >
@@ -306,7 +303,7 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
 
             <Heading
               as="h3"
-              className="u-margin-bottom-lg"
+              className="mb-6"
               size="headline-sm"
               variant="neutral-strong"
             >
@@ -335,14 +332,14 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
                 </StackedBlock>
               </GridItem>
             </Grid>
-            <Hr className="u-margin-top-xxl" />
+            <Hr className="mb-12" />
           </Section>
         </TimelineNavPanel>
 
         <TimelineNavPanel title="Expectations of Samuri in Feudal Japan">
           <Section
             description={
-              <Text as="p" className="u-theme-typography-body-text-xs-bold">
+              <Text as="p" className="!text-xs !font-bold">
                 Estimated schedule: Days 4,5,6
               </Text>
             }
@@ -366,7 +363,7 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
         <TimelineNavPanel title="Expectations of Samuri in Feudal Japan">
           <Section
             description={
-              <Text as="p" className="u-theme-typography-body-text-xs-bold">
+              <Text as="p" className="!text-xs !font-bold">
                 Estimated schedule: Days 4,5,6
               </Text>
             }
@@ -390,7 +387,7 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
         <TimelineNavPanel title="Expectations of Samuri in Feudal Japan">
           <Section
             description={
-              <Text as="p" className="u-theme-typography-body-text-xs-bold">
+              <Text as="p" className="!text-xs !font-bold">
                 Estimated schedule: Days 4,5,6
               </Text>
             }
