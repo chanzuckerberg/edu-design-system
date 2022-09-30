@@ -23,7 +23,7 @@ import CompassCenter from '../../static/compass-center.svg';
 
 export const CoursePlannerStep1 = () => (
   <>
-    <Panel className="mb-8" variant="squared">
+    <Panel className="!mb-8" variant="squared">
       <LayoutContainer>
         <PageHeader
           className="!mb-0"
@@ -36,7 +36,7 @@ export const CoursePlannerStep1 = () => (
           headingSize="title-md"
           orientation="2up"
           right={
-            <ButtonGroup className="mt-8">
+            <ButtonGroup className="!mt-8">
               <Button>Return to Course</Button>
               <Button variant="primary">
                 Next <Icon name="arrow-narrow-right" purpose="decorative" />
@@ -74,7 +74,7 @@ export const CoursePlannerStep1 = () => (
               average amounts for each question below.
             </p>
           </Text>
-          <Text className="!mb-2 font-semibold">
+          <Text className="!mb-2 !font-semibold">
             How many times per week do you have class?
           </Text>
           <TextField
@@ -84,7 +84,7 @@ export const CoursePlannerStep1 = () => (
             placeholder="times per week"
             type="number"
           />
-          <Text className="!mb-2 font-semibold">
+          <Text className="!mb-2 !font-semibold">
             How many minutes is each class?
           </Text>
           <TextField
