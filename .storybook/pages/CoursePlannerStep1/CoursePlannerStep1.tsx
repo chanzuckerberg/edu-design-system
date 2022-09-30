@@ -74,7 +74,7 @@ export const CoursePlannerStep1 = () => (
               average amounts for each question below.
             </p>
           </Text>
-          <Text className="u-margin-bottom-sm u-theme-typography-title-md">
+          <Text className="!mb-2 u-theme-typography-title-md">
             How many times per week do you have class?
           </Text>
           <TextField
@@ -84,7 +84,7 @@ export const CoursePlannerStep1 = () => (
             placeholder="times per week"
             type="number"
           />
-          <Text className="u-margin-bottom-sm u-theme-typography-title-md">
+          <Text className="!mb-2 u-theme-typography-title-md">
             How many minutes is each class?
           </Text>
           <TextField
