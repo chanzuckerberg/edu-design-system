@@ -212,7 +212,7 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
         <TimelineNavPanel title="Expectations of Samuri in Feudal Japan and Wars of 5th Century">
           <Section
             description={
-              <Text as="p" className="u-theme-typography-body-text-xs-bold">
+              <Text as="p" className="!font-semibold">
                 Estimated schedule: Days 4,5,6
               </Text>
             }
@@ -339,7 +339,7 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
         <TimelineNavPanel title="Expectations of Samuri in Feudal Japan">
           <Section
             description={
-              <Text as="p" className="u-theme-typography-body-text-xs-bold">
+              <Text as="p" className="!font-semibold">
                 Estimated schedule: Days 4,5,6
               </Text>
             }
@@ -363,7 +363,7 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
         <TimelineNavPanel title="Expectations of Samuri in Feudal Japan">
           <Section
             description={
-              <Text as="p" className="u-theme-typography-body-text-xs-bold">
+              <Text as="p" className="!font-semibold">
                 Estimated schedule: Days 4,5,6
               </Text>
             }
@@ -387,7 +387,7 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
         <TimelineNavPanel title="Expectations of Samuri in Feudal Japan">
           <Section
             description={
-              <Text as="p" className="u-theme-typography-body-text-xs-bold">
+              <Text as="p" className="!font-semibold">
                 Estimated schedule: Days 4,5,6
               </Text>
             }
