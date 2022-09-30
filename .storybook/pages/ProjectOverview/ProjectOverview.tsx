@@ -267,7 +267,7 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
               explanations on how the body is organized and its functions.
             </ButtonActionCalloutCard>
 
-            <Hr className="!mb-12" />
+            <Hr />
 
             <Heading
               as="h3"
