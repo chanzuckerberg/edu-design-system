@@ -20,12 +20,12 @@ export const ModalBrand = () => (
       <Modal.Title>Check out the new course planner</Modal.Title>
     </Modal.Header>
     <Modal.Body>
-      <Heading as="h3" className="u-margin-bottom-md" size="title-sm">
+      <Heading as="h3" className="mb-4" size="title-sm">
         Intro header copy
       </Heading>
       <Text>Content pieces go here</Text>
     </Modal.Body>
-    <Modal.Footer className="u-display-flex u-justify-content-flex-end">
+    <Modal.Footer className="flex justify-end">
       <Button
         onClick={
           () => {} /* eslint-disable-line @typescript-eslint/no-empty-function */

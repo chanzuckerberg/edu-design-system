@@ -266,7 +266,7 @@ export const CoursePlannerEdit = () => {
   const container1EmptyContent = () => {
     return (
       <>
-        <Text as="div" className="u-margin-bottom-xl">
+        <Text as="div" className="!mb-8">
           <p>There are no more available projects to create your course plan</p>
         </Text>
         <img alt="hand with pencil" src={EmptyImage} />
@@ -277,7 +277,7 @@ export const CoursePlannerEdit = () => {
   const container2EmptyContent = () => {
     return (
       <>
-        <Text as="div" className="u-margin-bottom-xl">
+        <Text as="div" className="!mb-8">
           <p>Drag in available projects to build your course plan</p>
         </Text>
         <img alt="hand with pencil" src={EmptyImage} />
@@ -338,7 +338,7 @@ export const CoursePlannerEdit = () => {
       emptyContent: container1EmptyContent(),
       header: (
         <DragDropContainerHeader>
-          <Toolbar className="u-margin-bottom-md" variant="bare">
+          <Toolbar className="!mb-4" variant="bare">
             <ToolbarItem>
               <Heading as="h2" size="title-sm" variant="neutral-strong">
                 Available projects
@@ -359,7 +359,7 @@ export const CoursePlannerEdit = () => {
       emptyContent: container2EmptyContent(),
       header: (
         <DragDropContainerHeader>
-          <Toolbar className="u-margin-bottom-md" variant="bare">
+          <Toolbar className="!mb-4" variant="bare">
             <ToolbarItem>
               <Heading as="h2" size="title-sm" variant="neutral-strong">
                 Planned projects
@@ -473,10 +473,10 @@ export const CoursePlannerEdit = () => {
 
   return (
     <>
-      <Panel className="u-margin-bottom-lg" variant="squared">
+      <Panel className="!mb-6" variant="squared">
         <LayoutContainer>
           <PageHeader
-            className="u-margin-bottom-none"
+            className="!mb-0"
             description={
               <HorizontalStepper
                 activeIndex={1}
@@ -513,13 +513,13 @@ export const CoursePlannerEdit = () => {
             <Panel>
               <Heading
                 as="h2"
-                className="u-margin-bottom-md"
+                className="!mb-4"
                 size="headline-sm"
                 variant="neutral-strong"
               >
                 Select projects for your History 6 plan
               </Heading>
-              <Text as="div" className="u-margin-bottom-lg">
+              <Text as="div" className="!mb-6">
                 <p>
                   Make a plan so that you can stay connected to learning
                   objectives even as changes occur throughout the year.
@@ -545,7 +545,7 @@ export const CoursePlannerEdit = () => {
           </LayoutSection>
           <LayoutSection region="sidebar">
             <CardWithNotification
-              className="u-margin-bottom-lg"
+              className="!mb-6"
               text="Summit recommends teaching at least five (5) projects for this course."
               variant="brand"
             >
@@ -562,7 +562,7 @@ export const CoursePlannerEdit = () => {
                 />
               </CardWithNotification.Body>
             </CardWithNotification>
-            <Grid className="u-margin-bottom-lg" variant="1-2-1up">
+            <Grid className="!mb-6" variant="1-2-1up">
               <GridItem>
                 <TableCard
                   buttonContent="View all Cognitive Skills"

@@ -30,7 +30,7 @@ export const ModalFirstStep = () => {
       open
     >
       <Modal.Header>
-        <Modal.Title className="u-margin-bottom-md">
+        <Modal.Title className="!mb-4">
           Before we start, tell us your planning needs
         </Modal.Title>
         <Heading as="h3" size="title-md">
@@ -39,7 +39,7 @@ export const ModalFirstStep = () => {
         </Heading>
       </Modal.Header>
       <Modal.Body>
-        <Fieldset className="u-margin-none">
+        <Fieldset className="!m-0">
           <Fieldset.Legend text="Content pieces go here" />
           <Fieldset.Items>
             <Radio
@@ -66,9 +66,9 @@ export const ModalFirstStep = () => {
           </Fieldset.Items>
         </Fieldset>
       </Modal.Body>
-      <Modal.Footer className="u-display-flex u-justify-content-space-between u-align-items-center">
+      <Modal.Footer className="flex justify-between items-center">
         <Modal.Stepper activeStep={1} totalSteps={3} />
-        <ButtonGroup className="u-justify-content-flex-end">
+        <ButtonGroup className="justify-end">
           <Button
             onClick={
               () => {} /* eslint-disable-line @typescript-eslint/no-empty-function */

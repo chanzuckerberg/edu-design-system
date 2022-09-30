@@ -36,7 +36,7 @@ export interface Props {
 export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
   return (
     <PageShell className="body--alternate" mentoringIsActive={true}>
-      <Breadcrumbs className="u-margin-bottom-md">
+      <Breadcrumbs className="!mb-4">
         <BreadcrumbsItem href="#" text="My Courses" />
         <BreadcrumbsItem href="#" text="Disciplinary Science 7" />
       </Breadcrumbs>
@@ -54,7 +54,7 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
         <TimelineNavPanel title="Overview" variant="success">
           <Heading
             as="h2"
-            className="u-margin-bottom-xl"
+            className="!mb-8"
             size="headline-md"
             variant="neutral-strong"
           >
@@ -69,13 +69,13 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
 
           <Heading
             as="h3"
-            className="u-margin-bottom-sm"
+            className="!mb-2"
             size="title-md"
             variant="neutral-strong"
           >
             Essential Questions
           </Heading>
-          <Text as="div" className="u-margin-bottom-xl">
+          <Text as="div" className="!mb-8">
             <ul>
               <li>How are structures in the body organized?</li>
               <li>
@@ -88,13 +88,13 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
           </Text>
           <Heading
             as="h3"
-            className="u-margin-bottom-sm"
+            className="!mb-2"
             size="title-md"
             variant="neutral-strong"
           >
             Key Take Aways
           </Heading>
-          <Text as="div" className="u-margin-bottom-xl">
+          <Text as="div" className="!mb-8">
             <ol>
               <li>
                 Groups of specialized cells make up organs and body systems,
@@ -107,7 +107,7 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
               <li>How are structures in the body organized?</li>
             </ol>
           </Text>
-          <Hr className="u-margin-bottom-none" />
+          <Hr className="!mb-0" />
 
           <div className="fpo">FPO Brand asset</div>
           <Section
@@ -124,11 +124,11 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
               </Button>
             }
           >
-            <Card className="u-margin-bottom-md">
+            <Card className="!mb-4">
               <CardBody>
                 <Heading
                   as="h3"
-                  className="u-margin-bottom-sm"
+                  className="!mb-2"
                   size="title-xs"
                   variant="neutral-strong"
                 >
@@ -140,11 +140,11 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
                 </Text>
               </CardBody>
             </Card>
-            <Card className="u-margin-bottom-md">
+            <Card className="!mb-4">
               <CardBody>
                 <Heading
                   as="h3"
-                  className="u-margin-bottom-sm"
+                  className="!mb-2"
                   size="title-xs"
                   variant="neutral-strong"
                 >
@@ -160,7 +160,7 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
               <CardBody>
                 <Heading
                   as="h3"
-                  className="u-margin-bottom-sm"
+                  className="!mb-2"
                   size="title-xs"
                   variant="neutral-strong"
                 >
@@ -174,11 +174,11 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
             </Card>
           </Section>
           <Section headingSize="headline-sm" title="Additional Focus Areas">
-            <Card className="u-margin-bottom-md">
+            <Card className="!mb-4">
               <CardBody>
                 <Heading
                   as="h3"
-                  className="u-margin-bottom-sm"
+                  className="!mb-2"
                   size="title-xs"
                   variant="neutral-strong"
                 >
@@ -194,7 +194,7 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
               <CardBody>
                 <Heading
                   as="h3"
-                  className="u-margin-bottom-sm"
+                  className="!mb-2"
                   size="title-xs"
                   variant="neutral-strong"
                 >
@@ -225,13 +225,13 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
           >
             <Heading
               as="h3"
-              className="u-margin-bottom-lg"
+              className="!mb-6"
               size="headline-sm"
               variant="neutral-strong"
             >
               What to Focus on this Checkpoint
             </Heading>
-            <Text as="div" className="u-margin-bottom-md">
+            <Text as="div" className="!mb-4">
               <p>
                 Students individually develop a follow up question that builds
                 from their group’s experiment and describe their follow up
@@ -239,26 +239,20 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
                 explanations of how the body is organized and functions.
               </p>
             </Text>
-            <DefinitionList
-              className="u-margin-bottom-lg"
-              orientation="horizontal"
-            >
+            <DefinitionList className="!mb-6" orientation="horizontal">
               <DefinitionList.Item title="Term 1:">
                 <Link>Constructing and Evidence based Explanation</Link>
               </DefinitionList.Item>
             </DefinitionList>
 
-            <Text as="div" className="u-margin-bottom-md">
+            <Text as="div" className="!mb-4">
               <p>
                 Students collaboratively develop a single group research
                 question to frame their shared experiment, then describe the
                 group research question in the introduction.
               </p>
             </Text>
-            <DefinitionList
-              className="u-margin-bottom-xl"
-              orientation="horizontal"
-            >
+            <DefinitionList className="!mb-8" orientation="horizontal">
               <DefinitionList.Item title="Term 1:">
                 <Link>Constructing and Evidence based Explanation</Link>
               </DefinitionList.Item>
@@ -266,25 +260,25 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
 
             <ButtonActionCalloutCard
               actions={<Button variant="primary">Preview</Button>}
-              className="u-margin-bottom-xl"
+              className="!mb-8"
               title="Do This Checkpoint"
             >
               Develop the text of your Body Book, crafting evidence-supported
               explanations on how the body is organized and its functions.
             </ButtonActionCalloutCard>
 
-            <Hr className="u-margin-top-xxl" />
+            <Hr className="!mt-12" />
 
             <Heading
               as="h3"
-              className="u-margin-bottom-lg"
+              className="!mb-6"
               size="headline-sm"
               variant="neutral-strong"
             >
               Resources for You
             </Heading>
 
-            <Grid className="u-margin-bottom-xl">
+            <Grid className="!mb-8">
               <GridItem>
                 <StackedBlock href="#" title="This is a link">
                   This is a stacked block description
@@ -309,14 +303,14 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
 
             <Heading
               as="h3"
-              className="u-margin-bottom-lg"
+              className="!mb-6"
               size="headline-sm"
               variant="neutral-strong"
             >
               Resources for You
             </Heading>
 
-            <Grid className="u-margin-bottom-xl">
+            <Grid className="!mb-8">
               <GridItem>
                 <StackedBlock href="#" title="This is a link">
                   This is a stacked block description
@@ -338,7 +332,7 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
                 </StackedBlock>
               </GridItem>
             </Grid>
-            <Hr className="u-margin-top-xxl" />
+            <Hr className="!mt-12" />
           </Section>
         </TimelineNavPanel>
 
