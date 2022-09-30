@@ -266,7 +266,7 @@ export const CoursePlannerEdit = () => {
   const container1EmptyContent = () => {
     return (
       <>
-        <Text as="div" className="mb-8">
+        <Text as="div" className="!mb-8">
           <p>There are no more available projects to create your course plan</p>
         </Text>
         <img alt="hand with pencil" src={EmptyImage} />
@@ -277,7 +277,7 @@ export const CoursePlannerEdit = () => {
   const container2EmptyContent = () => {
     return (
       <>
-        <Text as="div" className="mb-8">
+        <Text as="div" className="!mb-8">
           <p>Drag in available projects to build your course plan</p>
         </Text>
         <img alt="hand with pencil" src={EmptyImage} />
@@ -513,13 +513,13 @@ export const CoursePlannerEdit = () => {
             <Panel>
               <Heading
                 as="h2"
-                className="mb-4"
+                className="!mb-4"
                 size="headline-sm"
                 variant="neutral-strong"
               >
                 Select projects for your History 6 plan
               </Heading>
-              <Text as="div" className="mb-6">
+              <Text as="div" className="!mb-6">
                 <p>
                   Make a plan so that you can stay connected to learning
                   objectives even as changes occur throughout the year.
