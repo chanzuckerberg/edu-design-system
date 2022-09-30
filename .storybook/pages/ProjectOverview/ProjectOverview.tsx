@@ -36,7 +36,7 @@ export interface Props {
 export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
   return (
     <PageShell className="body--alternate" mentoringIsActive={true}>
-      <Breadcrumbs className="mb-4">
+      <Breadcrumbs className="!mb-4">
         <BreadcrumbsItem href="#" text="My Courses" />
         <BreadcrumbsItem href="#" text="Disciplinary Science 7" />
       </Breadcrumbs>
@@ -107,7 +107,7 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
               <li>How are structures in the body organized?</li>
             </ol>
           </Text>
-          <Hr className="mb-0" />
+          <Hr className="!mb-0" />
 
           <div className="fpo">FPO Brand asset</div>
           <Section
@@ -267,7 +267,7 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
               explanations on how the body is organized and its functions.
             </ButtonActionCalloutCard>
 
-            <Hr className="mb-12" />
+            <Hr className="!mt-12" />
 
             <Heading
               as="h3"
@@ -332,7 +332,7 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
                 </StackedBlock>
               </GridItem>
             </Grid>
-            <Hr className="mb-12" />
+            <Hr className="!mt-12" />
           </Section>
         </TimelineNavPanel>
 
