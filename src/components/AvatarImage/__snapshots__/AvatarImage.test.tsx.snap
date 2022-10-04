@@ -19,7 +19,7 @@ exports[`<AvatarImage /> Default story renders snapshot 1`] = `
     </g>
   </svg>
   <svg
-    class="h-3.25"
+    class="h-[13px]"
     fill="#508278"
     viewBox="0 0 42.64 62.94"
   >

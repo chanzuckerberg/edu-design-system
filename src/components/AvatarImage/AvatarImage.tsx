@@ -26,7 +26,7 @@ export const AvatarImage = ({ className, ...other }: Props) => {
           <path d="M33.59,39.32l.1,0Z"></path>
         </g>
       </svg>
-      <svg className="h-3.25" fill="#508278" viewBox="0 0 42.64 62.94">
+      <svg className="h-[13px]" fill="#508278" viewBox="0 0 42.64 62.94">
         <g>
           <path d="M0,61.3l42.59,1.64s-.33-21.32,0-32.46S39,6.88,33.78,2.95s-18-3.93-24.9,0S-.3,24.25,0,32.44,0,61.3,0,61.3Z"></path>
         </g>
