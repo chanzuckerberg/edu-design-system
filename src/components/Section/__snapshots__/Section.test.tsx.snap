@@ -294,7 +294,7 @@ exports[`<Section /> WithTitleBefore story renders snapshot 1`] = `
               class="avatar-image"
             >
               <svg
-                class="avatar-image__head"
+                class="h-2"
                 fill="#96d2dc"
                 viewBox="0 0 41.74 43.22"
               >
@@ -308,7 +308,7 @@ exports[`<Section /> WithTitleBefore story renders snapshot 1`] = `
                 </g>
               </svg>
               <svg
-                class="avatar-image__body"
+                class="h-3.25"
                 fill="#508278"
                 viewBox="0 0 42.64 62.94"
               >
@@ -319,7 +319,7 @@ exports[`<Section /> WithTitleBefore story renders snapshot 1`] = `
                 </g>
               </svg>
               <svg
-                class="avatar-image__legs"
+                class="h-2.5"
                 fill="#ffd2b4"
                 viewBox="0 0 34.62 61.95"
               >
