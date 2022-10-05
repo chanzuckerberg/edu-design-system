@@ -5,6 +5,7 @@ module.exports = {
     'postcss-import': {
       addModulesDirectories: ['node_modules'],
     },
+    'tailwindcss/nesting': {},
     'postcss-mixins': {},
     'postcss-simple-vars': { variables: breakpoints },
     // TODO: replace with tailwindcss/nesting (https://tailwindcss.com/docs/using-with-preprocessors#nesting)
