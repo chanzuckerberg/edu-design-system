@@ -6,7 +6,7 @@ exports[`<Avatar /> Default story renders snapshot 1`] = `
     class="avatar-image"
   >
     <svg
-      class="h-8px"
+      class="avatar-image__head"
       fill="#96d2dc"
       viewBox="0 0 41.74 43.22"
     >
@@ -20,7 +20,7 @@ exports[`<Avatar /> Default story renders snapshot 1`] = `
       </g>
     </svg>
     <svg
-      class="h-13px"
+      class="avatar-image__body"
       fill="#508278"
       viewBox="0 0 42.64 62.94"
     >
@@ -31,7 +31,7 @@ exports[`<Avatar /> Default story renders snapshot 1`] = `
       </g>
     </svg>
     <svg
-      class="h-10px"
+      class="avatar-image__legs"
       fill="#ffd2b4"
       viewBox="0 0 34.62 61.95"
     >

@@ -19,15 +19,15 @@
 
 /* Head of the avatar image. */
 .avatar-image__head {
-  height: 8px;
+  @apply h-2;
 }
 
 /* Body of the avatar image. */
 .avatar-image__body {
-  height: 13px;
+  @apply h-[13px];
 }
 
 /* Legs of the avatar image. */
 .avatar-image__legs {
-  height: 10px;
+  @apply h-2.5;
 }
