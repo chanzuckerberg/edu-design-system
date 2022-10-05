@@ -8,13 +8,8 @@
  * This component contains an outer wrapper and SVG fragments for avatars.
  */
 .avatar-image {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 2.25rem;
-  height: 2.25rem;
-  background: white;
-  border-radius: var(--eds-border-radius-round);
+  @apply flex flex-col justify-center;
+  @apply w-9 h-9 bg-white rounded-[50%];
 }
 
 /* Head of the avatar image. */
