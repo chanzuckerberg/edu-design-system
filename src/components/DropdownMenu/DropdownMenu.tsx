@@ -6,6 +6,7 @@ import React, {
   useEffect,
   KeyboardEvent,
   HTMLAttributes,
+  MouseEventHandler,
 } from 'react';
 import styles from './DropdownMenu.module.css';
 import {
@@ -40,6 +41,10 @@ export type Props = {
    * Invoked when the tab key is pressed.
    */
   handleOnTabDown?: (e: React.KeyboardEvent) => void;
+  /**
+   * Invoked when the dropdown menu is clicked. Used to close the dropdown menu.
+   */
+  handleOnClick?: MouseEventHandler;
 } & HTMLAttributes<HTMLElement>;
 
 type Refs = {
@@ -63,6 +68,7 @@ export const DropdownMenu: React.FC<Props> = ({
   children,
   className,
   isActive,
+  handleOnClick,
   handleOnEscDown,
   handleOnTabDown,
   ...other
@@ -143,6 +149,7 @@ export const DropdownMenu: React.FC<Props> = ({
       <div className={componentClassName} {...other}>
         <ul
           className={styles['dropdown-menu__list']}
+          onClick={handleOnClick}
           onKeyDown={onKeyDown}
           role="menu"
         >

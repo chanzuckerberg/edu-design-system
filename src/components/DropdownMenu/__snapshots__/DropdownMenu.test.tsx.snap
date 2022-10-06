@@ -14,6 +14,7 @@ exports[`<DropdownMenu /> Default story renders snapshot 1`] = `
     >
       <button
         class="dropdown-menu__link"
+        tabindex="-1"
       >
         Item 1
       </button>
@@ -24,6 +25,7 @@ exports[`<DropdownMenu /> Default story renders snapshot 1`] = `
     >
       <button
         class="dropdown-menu__link"
+        tabindex="-1"
       >
         Item 2
       </button>
@@ -34,6 +36,7 @@ exports[`<DropdownMenu /> Default story renders snapshot 1`] = `
     >
       <button
         class="dropdown-menu__link"
+        tabindex="-1"
       >
         Item 3
       </button>
@@ -45,6 +48,7 @@ exports[`<DropdownMenu /> Default story renders snapshot 1`] = `
       <a
         class="dropdown-menu__link"
         href="#"
+        tabindex="-1"
       >
         Item 4
       </a>
@@ -67,6 +71,7 @@ exports[`<DropdownMenu /> WithDeleteButton story renders snapshot 1`] = `
     >
       <button
         class="dropdown-menu__link"
+        tabindex="-1"
       >
         <svg
           aria-hidden="true"
@@ -90,6 +95,7 @@ exports[`<DropdownMenu /> WithDeleteButton story renders snapshot 1`] = `
     >
       <button
         class="dropdown-menu__link"
+        tabindex="-1"
       >
         <svg
           aria-hidden="true"
@@ -113,6 +119,7 @@ exports[`<DropdownMenu /> WithDeleteButton story renders snapshot 1`] = `
     >
       <button
         class="dropdown-menu__link"
+        tabindex="-1"
       >
         <svg
           aria-hidden="true"
@@ -136,6 +143,7 @@ exports[`<DropdownMenu /> WithDeleteButton story renders snapshot 1`] = `
     >
       <button
         class="dropdown-menu__link"
+        tabindex="-1"
       >
         <svg
           aria-hidden="true"
@@ -171,6 +179,7 @@ exports[`<DropdownMenu /> WithIcons story renders snapshot 1`] = `
     >
       <button
         class="dropdown-menu__link"
+        tabindex="-1"
       >
         <svg
           aria-hidden="true"
@@ -194,6 +203,7 @@ exports[`<DropdownMenu /> WithIcons story renders snapshot 1`] = `
     >
       <button
         class="dropdown-menu__link"
+        tabindex="-1"
       >
         <svg
           aria-hidden="true"
@@ -217,6 +227,7 @@ exports[`<DropdownMenu /> WithIcons story renders snapshot 1`] = `
     >
       <button
         class="dropdown-menu__link"
+        tabindex="-1"
       >
         <svg
           aria-hidden="true"
@@ -240,6 +251,7 @@ exports[`<DropdownMenu /> WithIcons story renders snapshot 1`] = `
     >
       <button
         class="dropdown-menu__link"
+        tabindex="-1"
       >
         <svg
           aria-hidden="true"

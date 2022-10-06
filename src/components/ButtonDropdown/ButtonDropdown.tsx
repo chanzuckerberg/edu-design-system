@@ -1,14 +1,9 @@
 import clsx from 'clsx';
-import React, { ReactNode, SyntheticEvent } from 'react';
+import React, { ReactNode } from 'react';
 import styles from './ButtonDropdown.module.css';
 import { DropdownMenu } from '../..';
 import { ESCAPE_KEYCODE, TAB_KEYCODE } from '../../util/keycodes';
 import type { ClickableStyleProps } from '../ClickableStyle';
-
-interface FocusEvent<T = Element> extends SyntheticEvent<T> {
-  relatedTarget: EventTarget | null;
-  target: EventTarget & T;
-}
 
 export interface Props {
   buttonAriaLabel?: string;
@@ -185,6 +180,7 @@ export const ButtonDropdown = ({
       {dropdownMenuTriggerWithProps}
       <DropdownMenu
         className={styles['button-dropdown__dropdown-menu']}
+        handleOnClick={closePanel}
         handleOnEscDown={(e) => handleKeyDown(e)}
         handleOnTabDown={(e) => handleKeyDown(e)}
         isActive={isActiveVar}

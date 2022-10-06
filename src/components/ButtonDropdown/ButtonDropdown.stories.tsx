@@ -16,19 +16,35 @@ export default {
   args: {
     children: (
       <>
-        <DropdownMenuItem>
+        <DropdownMenuItem
+          onClick={() => {
+            console.log('yeehaw');
+          }}
+        >
           <Icon name="schedule" purpose="decorative" size="1.25rem" />
           Item 1
         </DropdownMenuItem>
-        <DropdownMenuItem>
+        <DropdownMenuItem
+          onClick={() => {
+            console.log('yeehaw');
+          }}
+        >
           <Icon name="schedule" purpose="decorative" size="1.25rem" />
           Item 2
         </DropdownMenuItem>
-        <DropdownMenuItem>
+        <DropdownMenuItem
+          onClick={() => {
+            console.log('yeehaw');
+          }}
+        >
           <Icon name="schedule" purpose="decorative" size="1.25rem" />
           Item 3
         </DropdownMenuItem>
-        <DropdownMenuItem>
+        <DropdownMenuItem
+          onClick={() => {
+            console.log('yeehaw');
+          }}
+        >
           <Icon name="schedule" purpose="decorative" size="1.25rem" />
           Item 4
         </DropdownMenuItem>
