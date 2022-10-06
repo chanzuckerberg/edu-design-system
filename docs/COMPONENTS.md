@@ -37,6 +37,8 @@ Each EDS component is documented in Storybook, which surfaces each component's A
 
 ### Creating a component
 
+**NOTE**: Refer to this [Pull Request](https://github.com/chanzuckerberg/edu-design-system/pull/1329) for examples of potential upcoming components. If you see one you like, you can use it as a baseline for implementation.
+
 1. To create a component, run `yarn plop` in the command line.
 2. The command will ask, "What is your component name?" Add your component name (you can either type `PageHeader` or `page header` and it will automatically generate the proper casing).
 3. In `src/components/[component]/[component].stories.tsx`, change `title: 'Example/[ComponentName]'` to the location in the Storybook navigation where you want your component to live. For instance, `PageHeader` component you would change `title: 'Example/PageHeader'` to `title: 'Molecules/Text/PageHeader'`.
