@@ -180,7 +180,6 @@ export const ButtonDropdown = ({
       {dropdownMenuTriggerWithProps}
       <DropdownMenu
         className={styles['button-dropdown__dropdown-menu']}
-        handleOnClick={closePanel}
         handleOnEscDown={(e) => handleKeyDown(e)}
         handleOnTabDown={(e) => handleKeyDown(e)}
         isActive={isActiveVar}
