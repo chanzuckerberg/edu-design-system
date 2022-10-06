@@ -99,6 +99,7 @@ export const DropdownMenuItem = ({
         className={styles['dropdown-menu__link']}
         href={href}
         onClick={onClick}
+        tabIndex={-1}
         target={target}
       >
         {children}

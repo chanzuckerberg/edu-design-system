@@ -16,6 +16,7 @@ import {
   ESCAPE_KEYCODE,
   HOME_KEYCODE,
   END_KEYCODE,
+  TAB_KEYCODE,
 } from '../../util/keycodes';
 
 export type Props = {
@@ -35,6 +36,10 @@ export type Props = {
    * Invoked when the escape key is pressed.
    */
   handleOnEscDown?: (e: React.KeyboardEvent) => void;
+  /**
+   * Invoked when the tab key is pressed.
+   */
+  handleOnTabDown?: (e: React.KeyboardEvent) => void;
 } & HTMLAttributes<HTMLElement>;
 
 type Refs = {
@@ -59,6 +64,7 @@ export const DropdownMenu: React.FC<Props> = ({
   className,
   isActive,
   handleOnEscDown,
+  handleOnTabDown,
   ...other
 }) => {
   const refs = useRef<Refs>({
@@ -80,9 +86,12 @@ export const DropdownMenu: React.FC<Props> = ({
   }, [isActive]);
 
   const onKeyDown = (e: KeyboardEvent<HTMLUListElement>) => {
-    // Calls callback on escape key trigger, typically to close the menu.
+    // Calls callback on escape and tab key triggers, typically to close the menu.
     if (e.key === ESCAPE_KEYCODE && handleOnEscDown) {
       handleOnEscDown(e);
+    }
+    if (e.key === TAB_KEYCODE && handleOnTabDown) {
+      handleOnTabDown(e);
     }
 
     // Focus next element with right or down arrow key.

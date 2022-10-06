@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import React, { ReactNode, SyntheticEvent } from 'react';
 import styles from './ButtonDropdown.module.css';
 import { DropdownMenu } from '../..';
-import { ESCAPE_KEYCODE } from '../../util/keycodes';
+import { ESCAPE_KEYCODE, TAB_KEYCODE } from '../../util/keycodes';
 import type { ClickableStyleProps } from '../ClickableStyle';
 
 interface FocusEvent<T = Element> extends SyntheticEvent<T> {
@@ -141,7 +141,7 @@ export const ButtonDropdown = ({
    * If the escape key is struck, close the panel.
    */
   function handleKeyDown(e: React.KeyboardEvent) {
-    if (e.key === ESCAPE_KEYCODE) {
+    if (e.key === ESCAPE_KEYCODE || e.key === TAB_KEYCODE) {
       closePanel();
     }
   }
@@ -172,14 +172,6 @@ export const ButtonDropdown = ({
     },
   );
 
-  const handleBlur = (event: FocusEvent<HTMLDivElement>) => {
-    if (!event.currentTarget.contains(event.relatedTarget as HTMLElement)) {
-      if (isActiveVar) {
-        closePanel();
-      }
-    }
-  };
-
   const componentClassName = clsx(
     styles['button-dropdown'],
     isActiveVar && styles['eds-is-active'],
@@ -189,18 +181,12 @@ export const ButtonDropdown = ({
     className,
   );
   return (
-    <div
-      className={componentClassName}
-      /* TODO: Figure out role that allows blur to entire menu
-      /* eslint-disable-next-line jsx-a11y/no-static-element-interactions */
-      onBlur={handleBlur}
-      ref={ref}
-      {...other}
-    >
+    <div className={componentClassName} ref={ref} {...other}>
       {dropdownMenuTriggerWithProps}
       <DropdownMenu
         className={styles['button-dropdown__dropdown-menu']}
-        handleOnEscDown={(e: React.KeyboardEvent) => handleKeyDown(e)}
+        handleOnEscDown={(e) => handleKeyDown(e)}
+        handleOnTabDown={(e) => handleKeyDown(e)}
         isActive={isActiveVar}
       >
         {children}
