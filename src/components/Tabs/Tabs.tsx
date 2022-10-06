@@ -1,15 +1,16 @@
 import clsx from 'clsx';
 import debounce from 'lodash.debounce';
 import React, {
-  ReactNode,
+  type ReactNode,
+  useCallback,
+  useEffect,
+  useMemo,
   useRef,
   useState,
-  useEffect,
-  useCallback,
-  KeyboardEvent,
+  type KeyboardEvent,
 } from 'react';
 import { allByType } from 'react-children-by-type';
-import { useUIDSeed } from 'react-uid';
+import { useUID, useUIDSeed } from 'react-uid';
 import styles from './Tabs.module.css';
 import {
   L_ARROW_KEYCODE,
@@ -21,7 +22,7 @@ import Tab from '../Tab';
 
 export interface Props {
   /**
-   * The aria-labelledby attribute creates a relationship between the tab list and the tab panels
+   * Reference to another element that describes the purpose of the set of tabs.
    */
   'aria-labelledby'?: string;
   /**
@@ -37,10 +38,6 @@ export interface Props {
    */
   className?: string;
   /**
-   * Toggles the visibility of the RadioField legend
-   */
-  hideLegend?: boolean;
-  /**
    * HTML id for the component
    */
   id?: string;
@@ -48,48 +45,6 @@ export interface Props {
    * Passed down to initially set the activeIndex state
    */
   activeIndex?: number;
-  /**
-   * The array of items to be passed into the component. The array must take on the specified shape
-   * TODO: improve `any` type
-   */
-  items?: Array<any>;
-  /**
-   * HTML radio tabs label text
-   */
-  radioLegend?: string;
-  /**
-   * Changes the position of the radio tabs legend to inline
-   */
-  radioLegendPosition?: 'inline-label';
-  /**
-   * Indicates that field is required for form to be successfully submitted
-   */
-  required?: boolean;
-  /**
-   * Stylistic variations:
-   * - **sm** yields smaller, uppercase tabs
-   */
-  size?: 'sm';
-  /**
-   * Function passed down from higher level component into Tabs
-   */
-  tabsOnClick?: () => void;
-  /**
-   * Tabs rendered on a dark backgorund
-   */
-  inverted?: boolean;
-  /**
-   * Overflow variants
-   * - **inverted** changes the overflow shadow to the inverted color
-   */
-  overflow?: 'inverted';
-  /**
-   * Stylistic variations:
-   * - **boxed** yields a chunkier, distinct boxed tabs used for primary content
-   * - **radio** yields tabs that are controlled by radio buttons
-   */
-  variant?: 'boxed' | 'radio';
-  title?: string;
 }
 
 /**
@@ -104,122 +59,76 @@ export const Tabs = ({
   'aria-labelledby': ariaLabelledBy,
   children,
   className,
-  hideLegend,
-  id,
-  inverted,
   onChange,
-  overflow,
-  radioLegend,
-  radioLegendPosition,
-  required,
-  size,
-  tabsOnClick,
-  variant,
   ...other
 }: Props) => {
-  /**
-   * Initialize states, constants, and refs
-   */
-  const ref = useRef<number | undefined>();
+  const getUID = useUIDSeed();
+  const activeTabPanelId = useUID();
   const headerRef = useRef<HTMLDivElement>(null);
   const [activeIndexState, setActiveIndexState] = useState(activeIndex);
   const [scrollableLeft, setScrollableLeft] = useState<boolean>(false);
   const [scrollableRight, setScrollableRight] = useState<boolean>(false);
-  /**
-   * Set the only children components allowed within <Tabs> to be Tab
-   */
-  const tabs = useCallback(() => {
+
+  /** Children that are actually tabs. Any others are ignored. */
+  const tabs = useMemo(() => {
     return allByType(children, Tab);
   }, [children]);
 
-  const tabRefs = tabs().map(() => React.createRef());
+  const tabRefs = useMemo(
+    () => tabs.map(() => React.createRef<HTMLAnchorElement>()),
+    [tabs],
+  );
 
-  // we can't use the hook in an iterator like this, so generate the base and increment if needed
-  const [idVar, setId] = useState<string[]>([]);
-  const [ariaLabelledByVar, setAriaLabelledBy] = useState<string[]>([]);
-  const getUID = useUIDSeed();
+  const tabIds = useMemo(
+    () => tabs.map((tab) => tab.props.id || getUID(tab)),
+    [tabs, getUID],
+  );
 
-  /**
-   * Get previous prop
-   *
-   * This is used to compare the previous prop to the current prop.
-   */
-  function usePrevious(activeIndex: number) {
-    useEffect(() => {
-      ref.current = activeIndex;
-    });
-    return ref.current;
-  }
-
-  /**
-   * Use effect
-   * 1) Set prevActiveIndex to previous value prop
-   * 2) If prevActiveIndex is defined and previous value prop is not equal
-   * to current value prop, toggle state
-   */
-  const prevActiveIndex = usePrevious(activeIndex); /* 1 */
+  // Set the active tab if the `activeIndex` prop changes.
+  const prevActiveIndex = usePrevious(activeIndex);
   useEffect(() => {
-    if (
-      (prevActiveIndex !== undefined || null) &&
-      prevActiveIndex !== activeIndex
-    ) {
+    if (prevActiveIndex != null && prevActiveIndex !== activeIndex) {
       setActiveIndexState(activeIndex);
-      tabRefs[activeIndex].current.focus();
+      tabRefs[activeIndex].current?.focus();
     }
   }, [prevActiveIndex, activeIndex, tabRefs]);
 
   /**
-   * Autogenerate ids on tabs if not defined.
-   */
-  useEffect(() => {
-    // TODO: improve `any` type
-    setId(
-      tabs().map((tab: any) => (tab.props.id ? tab.props.id : getUID(tab))),
-    );
-    // TODO: improve `any` type
-    setAriaLabelledBy(
-      tabs().map((tab: any) =>
-        tab.props['aria-labelledby']
-          ? tab.props['aria-labelledby']
-          : getUID(tab),
-      ),
-    );
-  }, [tabs, getUID]);
-
-  /**
    * Handles if scroll fade indicators should be displayed.
    */
-  const handleTabsScroll = debounce(
-    (headerEl: HTMLDivElement) => {
-      const scrollLeft = headerEl.scrollLeft;
-      const width = headerEl.clientWidth;
-      const scrollWidth = headerEl.scrollWidth;
+  const handleTabsScroll = useCallback((headerEl: HTMLDivElement) => {
+    const scrollLeft = headerEl.scrollLeft;
+    const width = headerEl.clientWidth;
+    const scrollWidth = headerEl.scrollWidth;
 
-      if (scrollLeft > 0) {
-        setScrollableLeft(true);
-      } else {
-        setScrollableLeft(false);
-      }
+    if (scrollLeft > 0) {
+      setScrollableLeft(true);
+    } else {
+      setScrollableLeft(false);
+    }
 
-      if (scrollWidth > width && scrollLeft + width < scrollWidth) {
-        setScrollableRight(true);
-      } else {
-        setScrollableRight(false);
-      }
-    },
-    100,
-    { leading: true },
-  );
+    if (scrollWidth > width && scrollLeft + width < scrollWidth) {
+      setScrollableRight(true);
+    } else {
+      setScrollableRight(false);
+    }
+  }, []);
 
   /**
    * Listens for window resize to display scroll fade indicators.
    */
   useEffect(() => {
     if (headerRef && headerRef.current) {
-      const resizeHandleTabs = () => {
-        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-        handleTabsScroll(headerRef.current!);
-      };
+      const resizeHandleTabs = debounce(
+        () => {
+          if (headerRef.current) {
+            handleTabsScroll(headerRef.current);
+          }
+        },
+        100,
+        { leading: true },
+      );
+
       /**
        * The event listener actually calls the callback once when initiated, but the event listener
        * is not triggered with prop changes so this line is required.
@@ -232,34 +141,20 @@ export const Tabs = ({
         window.removeEventListener('resize', resizeHandleTabs);
       };
     }
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [handleTabsScroll]);
 
-  /**
-   * On open
-   * 1) On click of a tab, set activeIndexState to index of tab being clicked\
-   * 2) If function is passed into onChange prop, run that on click
-   */
-  function onOpen(index: number) {
-    setActiveIndexState(index); /* 1 */
+  function handleClick(index: number) {
+    setActiveIndexState(index);
 
     if (onChange) {
-      /* 2 */
       onChange(index);
     }
   }
 
-  /**
-   * On KeyDown
-   * 1) Find active tab. If there isn't one, do nothing on Keydown
-   * 2) Set active tab, next tab, and previous tab.
-   * 3) If right or down arrow key keyed, focus on next tab.
-   * 4) If left or up arrow key keyed, focus on the previous tab.
-   */
-  function onKeyDown(e: KeyboardEvent<HTMLAnchorElement>) {
+  function handleKeyDown(e: KeyboardEvent<HTMLAnchorElement>) {
     let activeTab = null;
 
-    // TODO: improve `any` type
-    tabRefs.map((item: any) => {
+    tabRefs.map((item) => {
       if (item.current === document.activeElement) {
         activeTab = item;
       }
@@ -268,24 +163,21 @@ export const Tabs = ({
 
     if (!activeTab) return;
 
-    const index = tabRefs.indexOf(activeTab); /* 2 */
-    const next = index === tabRefs.length - 1 ? 0 : index + 1; /* 2 */
-    const prev = index === 0 ? tabRefs.length - 1 : index - 1; /* 2 */
+    // Set active, next, and previous tab.
+    const index = tabRefs.indexOf(activeTab);
+    const next = index === tabRefs.length - 1 ? 0 : index + 1;
+    const prev = index === 0 ? tabRefs.length - 1 : index - 1;
 
     if ([R_ARROW_KEYCODE, D_ARROW_KEYCODE].includes(e.key)) {
-      /* 3 */
-      tabRefs[next].current.focus();
+      // Right or down arrow was pressed. Focus the next tab.
+      tabRefs[next].current?.focus();
     } else if ([L_ARROW_KEYCODE, U_ARROW_KEYCODE].includes(e.key)) {
-      /* 4 */
-      tabRefs[prev].current.focus();
+      // Left or up was pressed. Focus the previous tab.
+      tabRefs[prev].current?.focus();
     }
   }
 
-  const componentClassName = clsx(
-    styles['tabs'],
-    inverted && styles['tabs--inverted'],
-    className,
-  );
+  const componentClassName = clsx(styles['tabs'], className);
 
   const headerClassName = clsx(
     styles['tabs__header'],
@@ -293,23 +185,10 @@ export const Tabs = ({
     scrollableRight && styles['tabs--scrollable-right'],
   );
 
-  const childrenWithProps = React.Children.map(
-    tabs(),
-    // TODO: improve `any` type
-    (child: any, i: number) => {
-      // Checking isValidElement is the safe way and avoids a typescript
-      // error too.
-      if (React.isValidElement(child)) {
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-expect-error TODO: fix "No overload matches this call" error
-        return React.cloneElement<Props>(child, {
-          id: idVar[i],
-          ['aria-labelledby']: ariaLabelledByVar[i],
-        });
-      }
-      return child;
-    },
-  );
+  const activeTabPanel = React.cloneElement(tabs[activeIndexState], {
+    id: activeTabPanelId,
+    'aria-labelledby': tabIds[activeIndexState],
+  });
 
   return (
     <div className={componentClassName} {...other}>
@@ -318,9 +197,12 @@ export const Tabs = ({
         onScroll={(e) => handleTabsScroll(e.target as HTMLDivElement)}
         ref={headerRef}
       >
-        <ul className={styles['tabs__list']} role="tablist">
-          {/* TODO: improve `any` type */}
-          {tabs().map((tab: any, i: number) => {
+        <ul
+          aria-labelledby={ariaLabelledBy}
+          className={styles['tabs__list']}
+          role="tablist"
+        >
+          {tabs.map((tab, i) => {
             const isActive = activeIndexState === i;
             return (
               <li
@@ -328,22 +210,20 @@ export const Tabs = ({
                   styles['tabs__item'],
                   isActive && styles['eds-is-active'],
                 )}
-                key={'tabs-item-' + i}
+                key={tabIds[i]}
                 role="presentation"
               >
                 <a
-                  aria-controls={idVar[i]}
-                  aria-label={tab.props.ariaLabel}
+                  aria-controls={activeTabPanelId}
                   aria-selected={isActive}
                   className={styles['tabs__link']}
-                  href={`#${idVar[i]}`}
-                  id={ariaLabelledByVar[i]}
-                  key={'tab-' + i}
+                  href={`#${activeTabPanelId}`}
+                  id={tabIds[i]}
                   onClick={(e) => {
                     e.preventDefault();
-                    onOpen(i);
+                    handleClick(i);
                   }}
-                  onKeyDown={onKeyDown}
+                  onKeyDown={handleKeyDown}
                   ref={tabRefs[i]}
                   role="tab"
                   tabIndex={isActive ? 0 : -1}
@@ -355,7 +235,18 @@ export const Tabs = ({
           })}
         </ul>
       </div>
-      <div>{childrenWithProps[activeIndexState]}</div>
+      <div>{activeTabPanel}</div>
     </div>
   );
 };
+
+/**
+ * Get the previous value of a prop. Useful for comparing the previous to the current value.
+ */
+function usePrevious<T>(prop: T) {
+  const ref = useRef<T>(prop);
+  useEffect(() => {
+    ref.current = prop;
+  });
+  return ref.current;
+}

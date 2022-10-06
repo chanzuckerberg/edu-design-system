@@ -10,10 +10,10 @@
 .input__wrapper {
   position: relative;
   /* Centers the checkbox icon in the wrapper. */
-  display: inline-flex; 
+  display: inline-flex;
   align-items: center;
   /* Aligns the checkbox with the first line of the label. */
-  align-self: flex-start; 
+  align-self: flex-start;
 }
 /**
  * The visually hidden input element for the checkbox. The visual checkmark is provided by an svg element.
@@ -21,12 +21,12 @@
 .checkbox__input {
   cursor: pointer;
   /* Removes default margins placed by browser for checkboxes. */
-  margin: 0; 
+  margin: 0;
   /* Remove the checkbox from the page flow, positioning it on top of the SVG. */
-  position: absolute; 
+  position: absolute;
   left: 0.25rem;
   /* Set same dimensions as the CheckboxSvg element. */
-  height: var(--eds-size-2); 
+  height: var(--eds-size-2);
   width: var(--eds-size-2);
   /** 
    * Hide the input element visually.
@@ -34,7 +34,7 @@
    * especially on touch screen readers, still interact with the real checkbox element
    * where it would naturally be present. 
    */
-  opacity: 0; 
+  opacity: 0;
 }
 
 /**
@@ -44,13 +44,13 @@
   color: var(--eds-theme-color-icon-brand-primary);
 }
 .checkbox__input:focus-visible + .checkbox__icon {
-  @mixin focus; /* 1 */
+  @mixin focus;
   outline-offset: -2px;
 }
 
 @supports not selector(:focus-visible) {
   .checkbox__input:focus + .checkbox__icon {
-    @mixin focus; /* 1 */
+    @mixin focus;
     outline-offset: -2px;
   }
 }

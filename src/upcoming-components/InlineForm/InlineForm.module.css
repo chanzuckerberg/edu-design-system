@@ -14,10 +14,13 @@
 
 /**
  * Inline form input
- * 1) Actual text input of the inline form
- * 2) Set to flex: 1 to allow the input to take up most of the space.
+ * 
+ * Actual text input of the inline form.
  */
 .inline-form__input {
-  flex: 1; /* 2 */
+  /**
+   * Set to flex: 1 to allow the input to take up most of the space.
+   */
+  flex: 1;
   padding: var(--eds-size-1);
 }

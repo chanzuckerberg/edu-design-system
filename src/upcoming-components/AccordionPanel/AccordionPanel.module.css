@@ -21,14 +21,6 @@
 }
 
 /**
- * Accordion panel in an inverted accordion 
- */
-.accordion--inverted .accordion__panel {
-  border-top-color: var(--eds-theme-color-border-neutral-strong);
-  border-bottom-color: var(--eds-theme-color-border-neutral-strong);
-}
-
-/**
  * Accordion panel header
  */
 .accordion__panel-header {
@@ -70,15 +62,6 @@
 }
 
 /**
- * Accordion panel button within inverted accordion
- *
- * The wrapper for the text
- */
-.accordion--inverted .accordion__panel-button {
-  color: var(--eds-theme-color-text-neutral-default-inverse);
-}
-
-/**
  * Accordion body
  *
  * Set max height to 0 and overflow to hidden to get smoother transition when activated.
@@ -98,13 +81,6 @@
   @media screen and (prefers-reduced-motion) {
     transition: none;
   }
-}
-
-/**
- * Accordion body within active accordion panel
- */
-.accordion--inverted .accordion__panel-body {
-  color: var(--eds-theme-color-text-neutral-default-inverse);
 }
 
 /**

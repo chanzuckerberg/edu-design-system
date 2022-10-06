@@ -60,22 +60,19 @@ export const Header = ({
 
   /**
    * Update the header wrapper height
-   * 1) Set the height of the header wrapper so that the spacing stays consistent when
-   * the header gets pinned to the top of the page.
    */
   const updateHeaderWrapperHeight = () => {
     if (behavior === 'sticky' && stickyRef.current) {
-      stickyRef.current.style.height =
-        ref?.current?.clientHeight + 'px'; /* 1 */
+      /**
+       * Set the height of the header wrapper so that the spacing stays consistent when
+       * the header gets pinned to the top of the page.
+       */
+      stickyRef.current.style.height = ref?.current?.clientHeight + 'px';
     }
   };
 
   /**
    * Handle window scroll
-   * 1) On scroll up below the bottom of the header position, pin the header to the top of the page
-   * 2) Else if on scroll down below the header position and above the pinnedStop prop, pin the header to the top of the page
-   * 3) Else if on scroll down below the header position, remove the pin
-   * 4) Otherwise, remove the pin and scrolled classes
    */
   const handleWindowScroll = () => {
     if (behavior === 'sticky') {
@@ -84,7 +81,9 @@ export const Header = ({
         stickyRef.current &&
         stickyRef.current.getBoundingClientRect().bottom < 0
       ) {
-        /* 1 */
+        /**
+         * On scroll up below the bottom of the header position, pin the header to the top of the page.
+         */
         setUnpinned(false);
         setPinned(true);
       } else if (
@@ -92,21 +91,27 @@ export const Header = ({
         stickyRef.current.getBoundingClientRect().top < 0 &&
         window.scrollY <= pinnedStop
       ) {
-        /* 2 */
+        /**
+         * Else if on scroll down below the header position and above the pinnedStop prop, pin the header to the top of the page.
+         */
         setUnpinned(false);
         setPinned(true);
       } else if (
         stickyRef.current &&
         stickyRef.current.getBoundingClientRect().bottom < 0
       ) {
-        /* 3 */
+        /**
+         * Else if on scroll down below the header position, remove the pin.
+         */
         setUnpinned(true);
         setPinned(false);
         setTimeout(() => {
           setScrolled(true);
         }, 300);
       } else {
-        /* 4 */
+        /**
+         * Otherwise, remove the pin and scrolled classes.
+         */
         setPinned(false);
         setUnpinned(false);
         setScrolled(false);

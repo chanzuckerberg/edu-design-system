@@ -23,10 +23,10 @@ import CompassCenter from '../../static/compass-center.svg';
 
 export const CoursePlannerStep1 = () => (
   <>
-    <Panel className="u-margin-bottom-xl" variant="squared">
+    <Panel className="!mb-8" variant="squared">
       <LayoutContainer>
         <PageHeader
-          className="u-margin-bottom-none"
+          className="!mb-0"
           description={
             <HorizontalStepper
               activeIndex={0}
@@ -36,7 +36,7 @@ export const CoursePlannerStep1 = () => (
           headingSize="title-md"
           orientation="2up"
           right={
-            <ButtonGroup className="u-margin-top-xl">
+            <ButtonGroup className="!mt-8">
               <Button>Return to Course</Button>
               <Button variant="primary">
                 Next <Icon name="arrow-narrow-right" purpose="decorative" />
@@ -50,7 +50,7 @@ export const CoursePlannerStep1 = () => (
     <LayoutContainer>
       <Layout gap="lg-xl" variant="50-50">
         <LayoutSection region="main">
-          <Grid className="u-margin-bottom-xl" variant="1-2-1up">
+          <Grid className="!mb-8" variant="1-2-1up">
             <img alt="compass vignette" src={CompassCenter} />
             <Heading as="h2" size="headline-lg">
               Let&apos;s start planning, Amy Frankle.
@@ -62,7 +62,7 @@ export const CoursePlannerStep1 = () => (
           </Text>
         </LayoutSection>
         <LayoutSection region="main">
-          <Text as="div" className="u-margin-bottom-xl">
+          <Text as="div" className="!mb-8">
             <h3>Tell us how often your course meets.</h3>
             <p>
               We’ll adjust project plans based on your schedule. This way, you
@@ -74,22 +74,22 @@ export const CoursePlannerStep1 = () => (
               average amounts for each question below.
             </p>
           </Text>
-          <Text className="u-margin-bottom-sm u-theme-typography-title-md">
+          <Text className="!mb-2 u-theme-typography-title-md">
             How many times per week do you have class?
           </Text>
           <TextField
             aria-label="times per week"
-            className="u-margin-bottom-xl"
+            className="!mb-8"
             min={0}
             placeholder="times per week"
             type="number"
           />
-          <Text className="u-margin-bottom-sm u-theme-typography-title-md">
+          <Text className="!mb-2 u-theme-typography-title-md">
             How many minutes is each class?
           </Text>
           <TextField
             aria-label="minutes"
-            className="u-margin-bottom-xl"
+            className="!mb-8"
             min={0}
             placeholder="minutes"
             type="number"

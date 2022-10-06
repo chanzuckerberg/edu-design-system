@@ -4,13 +4,15 @@
 
 /**
  * Horizontal Step displays the step text and associated decorative icon.
- * 1) Required to prevent overflowing outside container.
  */
 .horizontal-step {
   display: flex;
   align-items: center;
   gap: var(--eds-size-1);
-  min-width: 0; /* 1 */
+  /**
+   * Required to prevent overflowing outside container.
+   */
+  min-width: 0;
 }
 
 /**
@@ -27,8 +29,9 @@
 }
 
 /**
- * Inherits the color from the parent
- * 1) Changes icon from black to gray by default.
+ * Inherits the color from the parent.
+ *
+ * Changes icon from black to gray by default.
  */
 .horizontal-step__number-icon {
   color: inherit;
@@ -58,12 +61,12 @@
  * Horizontal Step Text.
  */
 .horizontal-step__text {
-   /* Hides text for smaller screen sizes. */
+  /* Hides text for smaller screen sizes. */
   display: none;
   @media all and (min-width: $eds-bp-md) {
     display: inline;
     /* Hides overflow text with ellipsis. */
-    white-space: nowrap; 
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }

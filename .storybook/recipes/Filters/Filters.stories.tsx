@@ -8,7 +8,6 @@ export default {
   title: 'Recipes/Filters',
   component: Filters,
   args: {
-    as: 'FiltersDrawer',
     hasSelectedFilters: false,
     placement: 'bottom-start',
     triggerText: 'Filters',
@@ -38,6 +37,7 @@ export default {
   decorators: [
     (Story) => (
       <div style={{ margin: '0.25rem', height: '100vh' }}>
+        <p>Filters are popover when larger screen size and drawer when not</p>
         <Story />
       </div>
     ),
@@ -46,9 +46,4 @@ export default {
 
 type Args = React.ComponentProps<typeof Filters>;
 
-export const Drawer: StoryObj<Args> = {};
-export const Popover: StoryObj<Args> = {
-  args: {
-    as: 'FiltersPopover',
-  },
-};
+export const Default: StoryObj<Args> = {};

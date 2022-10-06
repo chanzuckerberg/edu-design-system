@@ -65,22 +65,24 @@ export const NumberIcon = ({
     className,
   );
 
-  /**
-   * 1) Set as 'span' since icon use is more inline than block, but no effect since display is 'flex'.
-   * 2) When `incomplete` is defined and there is a numberIconTitle on the circle icon, then this will render
-   * the proper icon with the incomplete text provided to that icon.
-   * 3) If this is not incomplete, then the number prop provided will show within the border
-   */
   return (
     <Text
-      as="span" /* 1 */
+      /**
+       * Set as 'span' since icon use is more inline than block, but no effect since display is 'flex'.
+       */
+      as="span"
       className={componentClassName}
       role="img"
       size="sm"
       variant={variant === 'base' ? 'neutral-medium' : 'white'}
       {...other}
     >
-      {incomplete && numberIconTitle /* 2 */ ? (
+      {/**
+       *
+       * When `incomplete` is defined and there is a numberIconTitle on the circle icon, then this will render
+       * the proper icon with the incomplete text provided to that icon.
+       */}
+      {incomplete && numberIconTitle ? (
         <Icon
           className={styles['number-icon__icon']}
           color="inherit"
@@ -90,7 +92,10 @@ export const NumberIcon = ({
           title={numberIconTitle}
         />
       ) : (
-        number /* 3 */
+        /**
+         * If this is not incomplete, then the number prop provided will show within the border.
+         */
+        number
       )}
     </Text>
   );

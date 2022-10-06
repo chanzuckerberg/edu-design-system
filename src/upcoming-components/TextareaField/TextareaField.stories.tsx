@@ -14,20 +14,8 @@ export default {
 
 const Template: Story<Props> = (args) => <TextareaField {...args} />;
 
-const InvertedTemplate: Story<Props> = (args) => (
-  <div style={{ padding: '1rem', background: '#000' }}>
-    <TextareaField {...args} />
-  </div>
-);
-
 export const Default = Template.bind({});
 Default.args = {
-  fieldNote: 'This is a fieldnote.',
-};
-
-export const Inverted = InvertedTemplate.bind({});
-Inverted.args = {
-  inverted: true,
   fieldNote: 'This is a fieldnote.',
 };
 

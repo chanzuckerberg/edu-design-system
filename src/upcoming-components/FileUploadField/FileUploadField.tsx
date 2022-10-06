@@ -237,18 +237,10 @@ export const FileUploadField = ({
     if (!fileObjects) return;
     const fileArray: Array<File> = Array.from(fileObjects);
 
-    /*
-     * 1. Copy existing files from state to a new variable
-     * 2. Append new files to this new array
-     * 3. If there is a maxFiles limit and if the more files have been selected than the max,
-     *    remove those over the limit from the array.
-     * 4. Set new state with existing and newly selected files
-     */
-
-    /* 1 */
+    // Copy existing files from state to a new variable.
     let files = [...filesState];
 
-    /* 2 */
+    // Append new files to this new array.
     fileArray.forEach((file: File) => {
       if (maxFileSize && file.size >= maxFileSize) {
         setFieldNoteState(maxFileSizeErrorText);
@@ -262,12 +254,13 @@ export const FileUploadField = ({
       }
     });
 
-    /* 3 */
+    // If there is a maxFiles limit and if the more files have been selected than the max,
+    // remove those over the limit from the array.
     if (maxFiles && files.length >= maxFiles) {
       files = files.splice(0, maxFiles);
     }
 
-    /* 4 */
+    // Set new state with existing and newly selected files
     setFilesState(files);
 
     if (onChange) {

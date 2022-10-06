@@ -13,13 +13,6 @@
 }
 
 /**
- * Inverted Checkbox Field
- */
-.checkbox-field--inverted {
-  color: var(--eds-theme-color-body-foreground-inverted);
-}
-
-/**
  * Checkbox field body
  * 
  * Contains the list of checkbox options
@@ -40,30 +33,26 @@
 
   /**
    * Checkbox field list inside inline variant
-   * 1) place items beside each other
    */
   .checkbox-field--inline & {
-    display: flex; /* 1 */
+    display: flex;
     gap: var(--eds-size-4);
   }
 
   /**
    * Checkbox field list inside inline-wrap variant
-   * 1) place items beside each other
    */
   .checkbox-field--inline-wrap & {
-    display: flex; /* 1 */
+    display: flex;
     flex-wrap: wrap;
   }
 }
 
 /**
  * Checkbox field list item
- * 1) Place control and label beside each other
- * 2) Spacing between items
  */
 .checkbox-field__item {
-  display: flex; /* 1 */
+  display: flex;
   gap: var(--eds-size-1);
 }
 
@@ -80,12 +69,13 @@
 
 /**
  * Checkbox field item after
- * 1) Slot to place tooltip, icon, or other helpter text
- * 2) adds margin left to visually separate from label
+ * 
+ * Slot to place tooltip, icon, or other helpter text.
  */
 .checkbox-field__item-after {
   position: relative;
   top: 2px;
   display: inline;
-  margin-left: var(--eds-size-1); /* 2 */
+  /* adds margin left to visually separate from label. */
+  margin-left: var(--eds-size-1);
 }

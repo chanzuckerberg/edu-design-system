@@ -1,6 +1,6 @@
 {
   "name": "@chanzuckerberg/eds",
-  "version": "5.1.1",
+  "version": "5.2.0",
   "description": "The React-powered design system library for Chan Zuckerberg Initiative education web applications",
   "author": "CZI <edu-frontend-infra@chanzuckerberg.com>",
   "homepage": "https://github.com/chanzuckerberg/edu-design-system",
@@ -36,7 +36,6 @@
     "copy-tokens-to-lib": "copyfiles -u 2 src/tokens-dist/**/* lib/tokens",
     "create-component": "plop",
     "deploy:docs": "storybook-to-ghpages --ci",
-    "generateFlowTypes": "./scripts/generateFlowTypes.sh",
     "generate-icon-types": "node ./scripts/generateIconTypes.js",
     "lint": "yarn run lint:styles && yarn run lint:scripts",
     "lint:fix": "yarn run lint:styles:fix && yarn run lint:scripts:fix",
@@ -51,7 +50,7 @@
     "release:patch": "yarn release --release-as patch",
     "release:alpha": "yarn release --prerelease alpha",
     "start": "yarn build:tokens && yarn storybook",
-    "storybook": "start-storybook -p 9009 -s src/design-tokens/tier-1-definitions/fonts",
+    "storybook": "start-storybook -p 9000 -s src/design-tokens/tier-1-definitions/fonts",
     "storybook:axe": "yarn run build:storybook && yarn run storybook:axeOnly",
     "storybook:axeOnly": "axe-storybook --build-dir storybook-static",
     "plop": "plop component",
@@ -170,7 +169,7 @@
     "svg-spritemap-webpack-plugin": "^3.9.1",
     "tailwindcss": "^3.1.8",
     "ts-jest": "^29.0.1",
-    "typescript": "^4.6.2"
+    "typescript": "^4.8.3"
   },
   "husky": {
     "hooks": {

@@ -72,16 +72,3 @@ export const IconAfterText: StoryObj<Args> = {
     ),
   },
 };
-
-export const Inverted: StoryObj<Args> = {
-  args: {
-    inverted: true,
-  },
-  decorators: [
-    (Story) => (
-      <div style={{ backgroundColor: 'black' }}>
-        <Story />
-      </div>
-    ),
-  ],
-};

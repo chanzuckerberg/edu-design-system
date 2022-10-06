@@ -77,25 +77,25 @@ export const AccordionPanel = ({
 
   /**
    * Set panel height
-   * 1) If isActive is true, set the height to panel body inner height
-   * 2) If isActive is false, set the height to 0
    */
   const setPanelHeight = useCallback(() => {
     if (isActiveVar === true) {
+      // If isActive is true, set the height to panel body inner height.
       setHeight(
         panelRef?.current?.querySelector('[data-accordion-panel]')
           ?.scrollHeight + 'px',
-      ); /* 1 */
+      );
     } else if (isActiveVar === false) {
-      setHeight('0'); /* 2 */
+      // If isActive is false, set the height to 0.
+      setHeight('0');
     }
   }, [isActiveVar]);
 
   useEffect(() => {
     setPanelHeight();
-    window.addEventListener('resize', setPanelHeight); /* 2 */
+    window.addEventListener('resize', setPanelHeight);
     return () => {
-      window.removeEventListener('resize', setPanelHeight); /* 3 */
+      window.removeEventListener('resize', setPanelHeight);
     };
   }, [setPanelHeight]);
 

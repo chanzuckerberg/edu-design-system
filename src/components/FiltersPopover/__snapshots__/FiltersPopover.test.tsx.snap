@@ -5,7 +5,7 @@ exports[`<Filters /> Default story renders snapshot 1`] = `
   <button
     aria-controls="headlessui-popover-panel-5"
     aria-expanded="true"
-    class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary filters-popover__button"
+    class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary filters-button"
     data-bootstrap-override="clickable-style-secondary"
     id="headlessui-popover-button-4"
     type="button"
@@ -165,7 +165,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
   <button
     aria-controls="headlessui-popover-panel-17"
     aria-expanded="true"
-    class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary filters-popover__button"
+    class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary filters-button"
     data-bootstrap-override="clickable-style-secondary"
     id="headlessui-popover-button-16"
     type="button"
@@ -795,7 +795,7 @@ exports[`<Filters /> WithOnApplyAndCustomButtonGroup story renders snapshot 1`] 
   <button
     aria-controls="headlessui-popover-panel-12"
     aria-expanded="true"
-    class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary filters-popover__button"
+    class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary filters-button"
     data-bootstrap-override="clickable-style-secondary"
     id="headlessui-popover-button-11"
     type="button"
@@ -966,7 +966,7 @@ exports[`<Filters /> WithOnClear story renders snapshot 1`] = `
   <button
     aria-controls="headlessui-popover-panel-7"
     aria-expanded="true"
-    class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary filters-popover__button"
+    class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary filters-button"
     data-bootstrap-override="clickable-style-secondary"
     id="headlessui-popover-button-6"
     type="button"

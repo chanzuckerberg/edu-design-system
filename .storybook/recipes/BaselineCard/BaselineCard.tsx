@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { MutableRefObject, ReactNode, useEffect, useRef } from 'react';
+import React, { type ReactNode, useEffect, useRef } from 'react';
 import styles from './BaselineCard.module.css';
 
 import { Card, CardBody, CardFooter, CardHeader, Score } from '../../../src';
@@ -49,15 +49,15 @@ export interface Props {
 
 /*
  * Clickable card: link properties
- * 1) Href and text are required attributes
- * 2) Text will be used by screen readers; it will only be visible when the
- * link is focused by a keyboard
- * 3) Target attribute is optional
  */
 export type LinkType = {
-  href: string /* 1 */;
-  text: ReactNode /* 2 */;
-  target?: '_blank' | '_parent' | '_self' | '_top' /* 3 */;
+  href: string;
+  /**
+   * Text will be used by screen readers; it will only be visible when the
+   * link is focused by a keyboard.
+   */
+  text: ReactNode;
+  target?: '_blank' | '_parent' | '_self' | '_top';
 };
 
 /**
@@ -78,18 +78,11 @@ export const BaselineCard = ({
    * Initialize refs to use on the card container and the link
    *  (for clickable card)
    */
-  const cardRef = useRef() as MutableRefObject<HTMLDivElement>;
-  const linkRef = useRef() as MutableRefObject<HTMLAnchorElement>;
+  const cardRef = useRef<HTMLDivElement>(null);
+  const linkRef = useRef<HTMLAnchorElement>(null);
 
   /**
-   * useEffect hook
-   * 1) On component load or update, check for both a cardRef and a linkRef.
-   * The presence of both means this card has a clickable link.
-   * 2) Attach click handler to the card.
-   * 3) Check to see if text is selected; if so, do not call .click() on the
-   * linkRef
-   * 4) Pass the click to the linkRef.
-   * 5) Cleanup.
+   * Hook up the link functionality on component mount if a link is present
    *
    * TODO: If the visible text of the card also contains links, these will
    * need to have an event listener added to them to stop propagation of the
@@ -97,20 +90,23 @@ export const BaselineCard = ({
    * links.
    */
   useEffect(() => {
+    /**
+     * On component load or update, check for both a cardRef and a linkRef.
+     * The presence of both means this card has a clickable link.
+     */
     if (!cardRef.current || !linkRef.current) {
-      /* 1 */
       return;
     }
     const curr = cardRef.current;
-    curr.addEventListener('click', handleClick); /* 2 */
+    curr.addEventListener('click', handleClick);
 
     function handleClick() {
-      const isTextSelected = window.getSelection()?.toString(); /* 3 */
+      const isTextSelected = window.getSelection()?.toString();
       if (!isTextSelected) {
-        linkRef.current.click(); /* 4 */
+        linkRef.current?.click();
       }
     }
-    /* 5 */
+
     return () => {
       curr.removeEventListener('click', handleClick, false);
     };

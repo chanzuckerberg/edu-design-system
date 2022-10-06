@@ -1,10 +1,11 @@
 import clsx from 'clsx';
 import React, {
+  useCallback,
   useState,
   useEffect,
   useRef,
-  ReactNode,
-  KeyboardEvent,
+  type ReactNode,
+  type KeyboardEvent,
 } from 'react';
 import { oneByType } from 'react-children-by-type';
 import FocusLock from 'react-focus-lock';
@@ -75,17 +76,14 @@ export const Drawer = ({
    */
   const [activeFocus, setActiveFocus] = useState(isActive);
   const windowRef = useRef<HTMLElement | null>(null);
-  const ref = useRef<HTMLDivElement | null>(null);
   const isMountedRef = useRef(true);
+  const onCloseRef = useRef(onClose);
 
   /**
-   * Use effect
-   * 1) If isActive is defined ,set activeFocus state to true,
-   * else set activeFocus state to false.
+   * Update activeFocus to be consistent with isActive.
    */
   useEffect(() => {
     if (isActive) {
-      /* 1 */
       activateFocusTrap();
     } else {
       deactivateFocusTrap();
@@ -104,46 +102,44 @@ export const Drawer = ({
     };
   }, []);
 
+  useEffect(() => {
+    onCloseRef.current = onClose;
+  }, [onClose]);
+
   /**
-   * Activate DOM
-   * 1) Open the Drawer
-   * 2) Set activeFocus state to true
-   * 3) This accommodates drawer animation so that it auto receives focus
+   * Open the Drawer and give it focus.
    */
   function activateFocusTrap() {
-    /* 3 */
+    /**
+     * This accommodates drawer animation so that it auto receives focus
+     */
     setTimeout(() => {
       if (isMountedRef.current) {
-        setActiveFocus(true); /* 2 */
+        setActiveFocus(true);
       }
     }, 300);
   }
 
   /**
-   * Deactivate DOM
-   * 1) Close the drawer
-   * 2) Set activeFocus state to false
+   * Close the drawer and remove focus.
    */
   function deactivateFocusTrap() {
-    setActiveFocus(false); /* 2 */
+    setActiveFocus(false);
   }
 
   /**
-   * Handle onClose
-   * 1) Close the drawer
-   * 2) Run the onClose prop (pass in function) if it exists
+   * Close the drawer and run the onClose prop (pass in function) if it exists.
    */
-  function handleOnClose() {
-    deactivateFocusTrap(); /* 1 */
+  const handleOnClose = useCallback(() => {
+    deactivateFocusTrap();
 
-    if (onClose) {
-      onClose(); /* 2 */
+    if (onCloseRef.current) {
+      onCloseRef.current();
     }
-  }
+  }, []);
 
   /**
    * Handle "click outside"
-   * 1) onClick of the area around the drawer window, close the drawer
    */
   useEffect(() => {
     function handleOnClickOutside(e: MouseEvent) {
@@ -153,22 +149,24 @@ export const Drawer = ({
         windowRef.current &&
         !windowRef.current.contains(e.target as HTMLElement)
       ) {
-        handleOnClose(); /* 1 */
+        /**
+         * onClick of the area around the drawer window, close the drawer
+         */
+        handleOnClose();
       }
     }
     document.addEventListener('click', handleOnClickOutside);
     return () => {
       document.removeEventListener('click', handleOnClickOutside);
     };
-  }, [isActive, windowRef]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [isActive, dismissible, handleOnClose, windowRef]);
 
   /**
-   * Handle onKeyDown
-   * 1) If escape button is struck, close the drawer
+   * If escape button is struck, close the drawer
    */
   function handleOnKeyDown(e: KeyboardEvent<HTMLElement>) {
     if (e.key === ESCAPE_KEYCODE) {
-      handleOnClose(); /* 1 */
+      handleOnClose();
     }
   }
 
@@ -205,7 +203,6 @@ export const Drawer = ({
           aria-hidden={!isActive}
           className={containerClassName}
           onKeyDown={handleOnKeyDown}
-          ref={ref}
           {...other}
         >
           <article

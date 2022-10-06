@@ -98,7 +98,7 @@
 }
 
 /**
- * sA passage of text, including various components (i.e. article, blog post)
+ * A passage of text, including various components (i.e. article, blog post).
  */
 .text-passage {
   /**
@@ -110,20 +110,22 @@
 
   /**
    * First child of a text passage
-   * 1) Zero out top margin to avoid unintended
-   *    gaps when leading with a heading or other
-   *    element that has a top margin
    */
   > :first-child {
-    margin-top: 0; /* 1 */
+    /**
+     * Zero out top margin to avoid unintended gaps when leading with a heading or other
+     * element that has a top margin.
+     */
+    margin-top: 0;
   }
 
   /**
    * Last child of a text passage
-   * 1) Zero out bottom margin to allow the container
-   *    element to control the bottom margin
    */
   > :last-child {
+    /**
+     * Zero out bottom margin to allow the container element to control the bottom margin.
+     */
     margin-bottom: 0;
   }
 

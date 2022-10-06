@@ -42,56 +42,10 @@ import { Heading } from '@chanzuckerberg/eds';
 and then use them in your React components
 
 ```jsx
-<Heading variant="neutralStrong" size="h2">
+<Heading variant="neutral-strong" size="h2">
   Coffee!
 </Heading>
 ```
-
-## Flow types
-
-For any component, run
-
-```bash
-yarn generateFlowTypes <Component>
-```
-
-to get automatically generated flowtypes.
-
-We use a combination of `flowgen` and common React mutations to get the best automatic types possible, but manual fixing may still be required. Thus, we recommend maintaining a `flow-typed` file with libdefs.
-
-```js
-// declare a module for each component
-declare module '@chanzuckerberg/eds/lib/<Component>' {
-  ...
-}
-
-// re-declare each component from a root-level index
-declare module '@chanzuckerberg/eds' {
-  declare export var <Component>: $Exports<"@chanzuckerberg/eds/lib/<Component>">;
-}
-```
-
-When translating your generated flow types to this `flow-typed` file, you will need to:
-
-- Update React type imports to follow `import type { ... } from "react"`
-- Update internal type imports to be from `"@chanzuckerberg/eds/lib/..."`
-- Update ForwardRef components. For example:
-
-```js
-declare var x: React.ForwardRefExoticComponent<{
-  ...Props,
-  ...React.RefAttributes<HTMLElement>,
-}>;
-```
-
-should become:
-
-```js
-import type { AbstractComponent } from 'react';
-declare var x: AbstractComponent<Props, HTMLElement>;
-```
-
-- Preserve exact-typed objects when possible. If you must make them inexact, add an explicit `...` at the end of the object.
 
 ## Development
 

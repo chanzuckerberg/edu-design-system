@@ -21,11 +21,6 @@ export interface Props {
    */
   as?: string;
   /**
-   * Theme variant:
-   * - **inverted** yields a TextList with lighter typography for darker backgrounds
-   */
-  inverted?: boolean;
-  /**
    * Style variant:
    * - **inline** yields a TextList that places items side by side
    */
@@ -46,7 +41,6 @@ export const TextList = ({
   className,
   size,
   as,
-  inverted,
   variant,
   ...other
 }: Props) => {
@@ -54,7 +48,6 @@ export const TextList = ({
     styles['text-list'],
     size === 'sm' && styles['text-list--sm'],
     variant === 'inline' && styles['text-list--inline'],
-    inverted && styles['text-list--inverted'],
     as === 'ol' && styles['text-list--ol'],
     className,
   );

@@ -13,6 +13,12 @@ type TooltipProps = {
    */
   align?: 'top' | 'right' | 'bottom' | 'left';
   /**
+   * The element or ref to append the tooltip to.
+   * Defaults to the body element.
+   * 'parent' is suggested if used in a modal.
+   */
+  appendTo?: 'parent' | Element | ((ref: Element) => Element);
+  /**
    * Behavior of the tooltip transition, defaults to an opacity "fade".
    * Animation guidelines are provided in https://atomiks.github.io/tippyjs/v5/animations/.
    * To disable animations, pass `duration={0}`.
@@ -75,7 +81,8 @@ type TooltipProps = {
    * controls if/when the bubble appears (on hover, click, focus, etc).
    */
   visible?: boolean;
-} & TippyProps;
+} & TippyProps &
+  React.HTMLAttributes<HTMLElement>;
 
 // @tippyjs/react does not expose tippy.js types, have to extract via props and grab element type from array type
 type Plugins = NonNullable<React.ComponentProps<typeof Tippy>['plugins']>;

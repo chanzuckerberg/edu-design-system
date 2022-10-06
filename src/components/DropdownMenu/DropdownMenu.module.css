@@ -13,7 +13,7 @@
  */
 .dropdown-menu {
   /* Set a minimum width for the dropdown menu. */
-  width: 16rem; 
+  width: 16rem;
   background: var(--eds-theme-color-background-neutral-default);
   border: 1px solid var(--eds-theme-color-border-neutral-subtle);
   border-radius: var(--eds-border-radius-md);
@@ -71,24 +71,12 @@
   color: var(--eds-theme-color-text-neutral-default);
   transition: background var(--eds-anim-fade-quick) var(--eds-anim-ease);
 
-  &:hover,
-  &:focus-visible {
+  &:hover {
     background: var(--eds-theme-color-background-neutral-subtle);
   }
 
-  &:focus-visible {
+  &:focus {
     @mixin focus;
-  }
-
-  @supports not selector(:focus-visible) {
-    &:hover,
-    &:focus {
-      background: var(--eds-theme-color-background-neutral-subtle);
-    }
-
-    &:focus {
-      @mixin focus;
-    }
   }
 
   @media screen and (prefers-reduced-motion) {
@@ -100,7 +88,7 @@
    */
   .dropdown-menu__item--lined & {
     /* Add bottom border to the item. */
-    border-bottom: 1px solid var(--eds-theme-color-border-neutral-subtle); 
+    border-bottom: 1px solid var(--eds-theme-color-border-neutral-subtle);
   }
 
   .dropdown-menu__item--error & {

@@ -54,11 +54,6 @@ export interface Props {
    */
   id?: string;
   /**
-   * Overflow variants
-   * - **inverted** changes the overflow shadow to the inverted color
-   */
-  overflow?: 'inverted';
-  /**
    * Indicates that field is required for form to be successfully submitted
    */
   required?: boolean;
@@ -108,7 +103,6 @@ export const TimelineNav = ({
   className,
   id,
   onChange,
-  overflow,
   required,
   timelineNavOnClick,
   title,
@@ -132,7 +126,9 @@ export const TimelineNav = ({
     return allByType(children, TimelineNavPanel);
   }, [children]);
 
-  const timelineNavItemRefs = timelineNavItems().map(() => React.createRef());
+  const timelineNavItemRefs = timelineNavItems().map(() =>
+    React.createRef<HTMLAnchorElement>(),
+  );
 
   // we can't use the hook in an iterator like this, so generate the base and increment if needed
   const [idVar, setId] = useState<string[]>([]);
@@ -153,18 +149,20 @@ export const TimelineNav = ({
 
   /**
    * Use effect
-   * 1) Set prevActiveIndex to previous value prop
-   * 2) If prevActiveIndex is defined and previous value prop is not equal
-   * to current value prop, toggle state
+   *
+   * Set prevActiveIndex to previous value prop.
+   *
+   * If prevActiveIndex is defined and previous value prop is not equal
+   * to current value prop, toggle state.
    */
-  const prevActiveIndex = usePrevious(activeIndex); /* 1 */
+  const prevActiveIndex = usePrevious(activeIndex);
   useEffect(() => {
     if (
       (prevActiveIndex !== undefined || null) &&
       prevActiveIndex !== activeIndex
     ) {
       setActiveIndexState(activeIndex);
-      timelineNavItemRefs[activeIndex].current.focus();
+      timelineNavItemRefs[activeIndex].current?.focus();
     }
   }, [prevActiveIndex, activeIndex, timelineNavItemRefs]);
 
@@ -173,14 +171,12 @@ export const TimelineNav = ({
    */
   useEffect(() => {
     setId(
-      // TODO: improve `any` type
-      timelineNavItems().map((item: any) =>
+      timelineNavItems().map((item) =>
         item.props.id ? item.props.id : getUID(item),
       ),
     );
     setAriaLabelledBy(
-      // TODO: improve `any` type
-      timelineNavItems().map((item: any) =>
+      timelineNavItems().map((item) =>
         item.props['aria-labelledby']
           ? item.props['aria-labelledby']
           : getUID(item),
@@ -190,33 +186,30 @@ export const TimelineNav = ({
 
   /**
    * On open
-   * 1) On click of a tab, set activeIndexState to index of tab being clicked
-   * 2) If function is passed into onChange prop, run that on click
    */
   function onOpen(index: number) {
-    setActiveIndexState(index); /* 1 */
+    // On click of a tab, set activeIndexState to index of tab being clicked.
+    setActiveIndexState(index);
     setIsActive(true);
 
     if (onChange) {
-      /* 2 */
+      // If function is passed into onChange prop, run that on click.
       onChange(index);
     }
   }
 
   /**
    * On KeyDown
-   * 1) Find active tab. If there isn't one, do nothing on Keydown
-   * 2) Set active tab, next tab, and previous tab.
-   * 3) If right or down arrow key keyed, focus on next tab.
-   * 4) If left or up arrow key keyed, focus on the previous tab.
-   * 5) If enter or spacebar keyed, set focus to the 'Back' button. This is wrapped in a setTimeout() method to ensure that document.activeElement gets set properly. TODO: determine why backRef.current?.focus() needs to be in a callback
+   *
+   * Find active tab. If there isn't one, do nothing on Keydown.
+   *
+   * TODO: determine why backRef.current?.focus() needs to be in a callback
    *
    * TODO: improve `any` type
    */
   function onKeyDown(e: any) {
     let activeTimelineNavPanel = null;
-    // TODO: improve `any` type
-    timelineNavItemRefs.map((item: any) => {
+    timelineNavItemRefs.map((item) => {
       if (item.current === document.activeElement) {
         activeTimelineNavPanel = item;
       }
@@ -225,29 +218,32 @@ export const TimelineNav = ({
 
     if (!activeTimelineNavPanel) return;
 
-    const index = timelineNavItemRefs.indexOf(activeTimelineNavPanel); /* 2 */
-    const next =
-      index === timelineNavItemRefs.length - 1 ? 0 : index + 1; /* 2 */
-    const prev =
-      index === 0 ? timelineNavItemRefs.length - 1 : index - 1; /* 2 */
+    // Set active tab, next tab, and previous tab.
+    const index = timelineNavItemRefs.indexOf(activeTimelineNavPanel);
+    const next = index === timelineNavItemRefs.length - 1 ? 0 : index + 1;
+    const prev = index === 0 ? timelineNavItemRefs.length - 1 : index - 1;
 
     if ([R_ARROW_KEYCODE, D_ARROW_KEYCODE].includes(e.key)) {
-      /* 3 */
-      timelineNavItemRefs[next].current.focus();
+      // If right or down arrow key keyed, focus on next tab.
+      timelineNavItemRefs[next].current?.focus();
     } else if ([L_ARROW_KEYCODE, U_ARROW_KEYCODE].includes(e.key)) {
-      /* 4 */
-      timelineNavItemRefs[prev].current.focus();
+      // If left or up arrow key keyed, focus on the previous tab.
+      timelineNavItemRefs[prev].current?.focus();
     } else if (e.key === ENTER_KEYCODE || e.key === SPACEBAR_KEYCODE) {
       setTimeout(() => {
-        backRef.current?.focus(); /* 5 */
+        /**
+         * If enter or spacebar keyed, set focus to the 'Back' button. This
+         * is wrapped in a setTimeout() method to ensure that document.activeElement
+         * gets set properly.
+         */
+        backRef.current?.focus();
       }, 500);
     }
   }
 
   const childrenWithProps = React.Children.map(
     timelineNavItems(),
-    // TODO: improve `any` type
-    (child: any, i: number) => {
+    (child, i) => {
       // Checking isValidElement is the safe way and avoids a typescript
       // error too.
       if (React.isValidElement(child)) {
@@ -338,14 +334,34 @@ export const TimelineNav = ({
 
   /**
    * onBack (used by 'Back' button on < lg viewports)
-   * 1) Return focus to the button that was clicked to open the current panel; activeIndexState holds the index of the last nav item selected in the timelinNavItemRefs array
-   * 2) Because the 'Back' button's onFocus listener removes the selected nav item from the tab order, we need to manually insert it back into the tab order by setting its tabIndex back to "0"
-   * 3) Body panel is visible/hidden depending on true/false value of isActive; hide it by setting isActive to false
+   *
+   * Return focus to the button that was clicked to open the current panel;
+   * activeIndexState holds the index of the last nav item selected in the
+   * timelinNavItemRefs array.
    */
   const onBack = () => {
-    timelineNavItemRefs[activeIndexState].current?.focus(); /* 1 */
-    timelineNavItemRefs[activeIndexState].current.tabIndex = '0'; /* 2 */
-    setIsActive(false); /* 3 */
+    const element = timelineNavItemRefs[activeIndexState].current;
+
+    if (element) {
+      /**
+       * Return focus to the button that was clicked to open the current panel;
+       * activeIndexState holds the index of the last nav item selected in the
+       * timelinNavItemRefs array.
+       */
+      element.focus();
+      /**
+       * Because the 'Back' button's onFocus listener removes the selected nav
+       * item from the tab order, we need to manually insert it back into the tab
+       * order by setting its tabIndex back to "0".
+       */
+      element.tabIndex = 0;
+    }
+
+    /**
+     * Body panel is visible/hidden depending on true/false value of isActive;
+     * hide it by setting isActive to false.
+     */
+    setIsActive(false);
   };
 
   /**
@@ -362,7 +378,11 @@ export const TimelineNav = ({
    * See https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex#sect1
    */
   const resetTabIndex = () => {
-    timelineNavItemRefs[activeIndexState].current.tabIndex = '-1';
+    const element = timelineNavItemRefs[activeIndexState].current;
+
+    if (element) {
+      element.tabIndex = -1;
+    }
   };
 
   return (
@@ -378,8 +398,7 @@ export const TimelineNav = ({
           )}
           role="tablist"
         >
-          {/* TODO: improve `any` type */}
-          {timelineNavItems().map((tab: TimelineNavItem, i: number) => {
+          {timelineNavItems().map((tab, i) => {
             const isActive = activeIndexState === i;
             const itemVariant = variant && tab.props.variant;
             return (

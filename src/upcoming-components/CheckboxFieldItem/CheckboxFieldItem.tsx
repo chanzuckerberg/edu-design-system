@@ -22,10 +22,6 @@ export interface Props {
    */
   id?: string;
   /**
-   * Inverted variant for dark backgrounds
-   */
-  inverted?: boolean;
-  /**
    /**
     * HTML name attribute for the checkbox
     */
@@ -70,7 +66,6 @@ export const CheckboxFieldItem = ({
   disabled,
   readOnly,
   text,
-  inverted,
   ...other
 }: Props) => {
   /**
@@ -94,30 +89,23 @@ export const CheckboxFieldItem = ({
   }
 
   /**
-   * UseEffect lifecycle hook
-   * 1) When the component loads or updates, update the state if change from the outside
+   * When the component loads or updates, update the state if changed from the outside.
    */
   const prevChecked = usePrevious(checkboxChecked);
   useEffect(() => {
     if (prevChecked !== checkboxChecked) {
-      /* 1 */
       setCheckedState(checkboxChecked);
     }
   }, [prevChecked, checkboxChecked]);
 
   /**
-   * On change handler
-   * 1) Toggle the checked state of item on change
+   * Toggle the checked state of item on change.
    */
   function onChange() {
-    setCheckedState(!checkboxChecked); /* 1 */
+    setCheckedState(!checkboxChecked);
   }
 
-  const componentClassName = clsx(
-    'checkbox-field__item',
-    inverted && styles['checkbox-field__item--inverted'],
-    className,
-  );
+  const componentClassName = clsx('checkbox-field__item', className);
   return (
     <li className={componentClassName}>
       <Checkbox

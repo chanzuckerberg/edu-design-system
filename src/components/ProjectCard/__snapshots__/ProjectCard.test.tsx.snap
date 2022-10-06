@@ -80,6 +80,7 @@ exports[`<ProjectCard /> Default story renders snapshot 1`] = `
           >
             <button
               class="dropdown-menu__link"
+              tabindex="-1"
             >
               <svg
                 aria-hidden="true"
@@ -103,6 +104,7 @@ exports[`<ProjectCard /> Default story renders snapshot 1`] = `
           >
             <button
               class="dropdown-menu__link"
+              tabindex="-1"
             >
               <svg
                 aria-hidden="true"
@@ -126,6 +128,7 @@ exports[`<ProjectCard /> Default story renders snapshot 1`] = `
           >
             <button
               class="dropdown-menu__link"
+              tabindex="-1"
             >
               <svg
                 aria-hidden="true"
@@ -149,6 +152,7 @@ exports[`<ProjectCard /> Default story renders snapshot 1`] = `
           >
             <button
               class="dropdown-menu__link"
+              tabindex="-1"
             >
               <svg
                 aria-hidden="true"
@@ -245,6 +249,7 @@ exports[`<ProjectCard /> Draggable story renders snapshot 1`] = `
           >
             <button
               class="dropdown-menu__link"
+              tabindex="-1"
             >
               <svg
                 aria-hidden="true"
@@ -268,6 +273,7 @@ exports[`<ProjectCard /> Draggable story renders snapshot 1`] = `
           >
             <button
               class="dropdown-menu__link"
+              tabindex="-1"
             >
               <svg
                 aria-hidden="true"
@@ -291,6 +297,7 @@ exports[`<ProjectCard /> Draggable story renders snapshot 1`] = `
           >
             <button
               class="dropdown-menu__link"
+              tabindex="-1"
             >
               <svg
                 aria-hidden="true"
@@ -314,6 +321,7 @@ exports[`<ProjectCard /> Draggable story renders snapshot 1`] = `
           >
             <button
               class="dropdown-menu__link"
+              tabindex="-1"
             >
               <svg
                 aria-hidden="true"
@@ -445,6 +453,7 @@ exports[`<ProjectCard /> WithoutMeta story renders snapshot 1`] = `
           >
             <button
               class="dropdown-menu__link"
+              tabindex="-1"
             >
               <svg
                 aria-hidden="true"
@@ -468,6 +477,7 @@ exports[`<ProjectCard /> WithoutMeta story renders snapshot 1`] = `
           >
             <button
               class="dropdown-menu__link"
+              tabindex="-1"
             >
               <svg
                 aria-hidden="true"
@@ -491,6 +501,7 @@ exports[`<ProjectCard /> WithoutMeta story renders snapshot 1`] = `
           >
             <button
               class="dropdown-menu__link"
+              tabindex="-1"
             >
               <svg
                 aria-hidden="true"
@@ -514,6 +525,7 @@ exports[`<ProjectCard /> WithoutMeta story renders snapshot 1`] = `
           >
             <button
               class="dropdown-menu__link"
+              tabindex="-1"
             >
               <svg
                 aria-hidden="true"

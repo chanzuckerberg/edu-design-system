@@ -1,12 +1,15 @@
 import { StoryObj, Meta } from '@storybook/react';
-import React, { ComponentProps } from 'react';
-import { DragDrop } from './DragDrop';
+import React, { ComponentProps, useState } from 'react';
+import { DragDrop, NewState } from './DragDrop';
 import styles from './DragDrop.stories.module.css';
 
+import Button from '../Button';
 import Card from '../Card';
 import CardBody from '../CardBody';
 import DragDropContainerHeader from '../DragDropContainerHeader';
 import Heading from '../Heading';
+import Icon from '../Icon';
+import ProjectCard from '../ProjectCard';
 import Text from '../Text';
 import Toolbar from '../Toolbar';
 
@@ -489,4 +492,207 @@ export const HoveredHandle: StoryObj<Args> = {
     },
     unstyledItems: true,
   },
+};
+
+const InteractiveDragDrop = () => {
+  const emptyContent = () => (
+    <Text as="p" className="u-margin-bottom-xl">
+      Empty Content
+    </Text>
+  );
+
+  const [indexState, setIndexState] = useState<number | undefined>(2);
+  const [containers, setContainers] = useState({
+    'container-1': {
+      columnClassName: styles['bg-yellow'],
+      emptyContent: emptyContent(),
+      itemIds: ['item-1', 'item-2', 'item-3', 'item-4', 'item-5'],
+      header: (
+        <DragDropContainerHeader>
+          <Toolbar className="u-margin-bottom-md" variant="bare">
+            <Toolbar.Item>
+              <Heading as="h2" size="title-sm" variant="neutral-strong">
+                Available projects
+              </Heading>
+            </Toolbar.Item>
+            <Toolbar.Item align="right">
+              <Button variant="icon">
+                <Icon name="add" purpose="decorative" />
+                Add project
+              </Button>
+            </Toolbar.Item>
+          </Toolbar>
+        </DragDropContainerHeader>
+      ),
+    },
+    'container-2': {
+      className: styles['margin-0'],
+      columnClassName: styles['bg-white'],
+      emptyContent: emptyContent(),
+      itemIds: [],
+      header: (
+        <DragDropContainerHeader>
+          <Toolbar className="u-margin-bottom-md" variant="bare">
+            <Toolbar.Item>
+              <Heading as="h2" size="title-sm" variant="neutral-strong">
+                Planned projects
+              </Heading>
+            </Toolbar.Item>
+            <Toolbar.Item align="right">
+              <Button variant="icon">
+                <Icon name="add" purpose="decorative" />
+                Add project
+              </Button>
+            </Toolbar.Item>
+          </Toolbar>
+        </DragDropContainerHeader>
+      ),
+    },
+    'container-3': {
+      className: styles['margin-0'],
+      columnClassName: styles['bg-white'],
+      emptyContent: emptyContent(),
+      itemIds: [],
+      header: (
+        <DragDropContainerHeader>
+          <Toolbar className="u-margin-bottom-md" variant="bare">
+            <Toolbar.Item>
+              <Heading as="h2" size="title-sm" variant="neutral-strong">
+                Planned projects
+              </Heading>
+            </Toolbar.Item>
+            <Toolbar.Item align="right">
+              <Button variant="icon">
+                <Icon name="add" purpose="decorative" />
+                Add project
+              </Button>
+            </Toolbar.Item>
+          </Toolbar>
+        </DragDropContainerHeader>
+      ),
+    },
+    'container-4': {
+      className: styles['margin-0'],
+      columnClassName: styles['bg-white'],
+      emptyContent: emptyContent(),
+      itemIds: [],
+      header: (
+        <DragDropContainerHeader>
+          <Toolbar className="u-margin-bottom-md" variant="bare">
+            <Toolbar.Item>
+              <Heading as="h2" size="title-sm" variant="neutral-strong">
+                Planned projects
+              </Heading>
+            </Toolbar.Item>
+            <Toolbar.Item align="right">
+              <Button variant="icon">
+                <Icon name="add" purpose="decorative" />
+                Add project
+              </Button>
+            </Toolbar.Item>
+          </Toolbar>
+        </DragDropContainerHeader>
+      ),
+    },
+  });
+  const [items, setItems] = useState({
+    'item-1': {
+      title: 'Project #1',
+      children: (
+        <ProjectCard
+          behavior="draggable"
+          meta="12 days"
+          number={1}
+          numberAriaLabel="Project 1"
+          title="Longer project card title that wraps lorem ipsum dolor"
+        />
+      ),
+    },
+    'item-2': {
+      title: 'Project #2',
+      children: (
+        <ProjectCard
+          behavior="draggable"
+          meta="12 days"
+          number={indexState}
+          numberAriaLabel="Project 2"
+          title="Project card title"
+        />
+      ),
+    },
+    'item-3': {
+      title: 'Project #3',
+      children: (
+        <ProjectCard
+          behavior="draggable"
+          meta="12 days"
+          number={3}
+          numberAriaLabel="Project 3"
+          title="Project card title"
+        />
+      ),
+    },
+    'item-4': {
+      title: 'Project #4',
+      children: (
+        <ProjectCard
+          behavior="draggable"
+          meta="12 days"
+          number={4}
+          numberAriaLabel="Project 4"
+          title="Project card title"
+        />
+      ),
+    },
+    'item-5': {
+      title: 'Project #5',
+      children: (
+        <ProjectCard
+          behavior="draggable"
+          meta="12 days"
+          number={5}
+          numberAriaLabel="Project 5"
+          title="Project card title"
+        />
+      ),
+    },
+    'item-6': {
+      title: 'Project #6',
+      children: (
+        <ProjectCard
+          behavior="draggable"
+          meta="12 days"
+          number={6}
+          numberAriaLabel="Project 6"
+          title="Project card title"
+        />
+      ),
+    },
+  });
+  const returnUpdatedItems = (updatedItems: any) => {
+    setContainers(updatedItems.containers);
+    setItems(updatedItems.items);
+    updatedItems.containers['container-2'].itemIds.map(
+      (item: string, index: number) => {
+        if (item === 'item-2') {
+          updatedItems.items['item-2'].behavior = 'hover';
+          setIndexState(index + 1);
+        }
+      },
+    );
+  };
+  return (
+    <DragDrop
+      containers={containers}
+      containersClassName={styles['grid-square']}
+      getNewState={(updatedItems: NewState) => returnUpdatedItems(updatedItems)}
+      items={items}
+      multipleContainers={false}
+      unstyledItems={true}
+    />
+  );
+};
+
+export const Interactive: StoryObj<Args> = {
+  render: () => <InteractiveDragDrop />,
 };

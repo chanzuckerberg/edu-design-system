@@ -66,7 +66,7 @@ export const Section = ({
   className,
   description,
   headingAs,
-  headingSize = 'h2' /* 2 */,
+  headingSize = 'h2',
   overline,
   right,
   title,

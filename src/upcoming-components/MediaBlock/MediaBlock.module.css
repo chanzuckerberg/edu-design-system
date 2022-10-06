@@ -5,11 +5,13 @@
 \*------------------------------------*/
 
 /**
- * 1) A media block features a block of media(i.e. image) and text
- * 2) Display flex is added to put contents within the media block side by side
+ * A media block features a block of media(i.e. image) and text.
  */
 .media-block {
-  display: flex; /* 2 */
+  /**
+   * Display flex is added to put contents within the media block side by side
+   */
+  display: flex;
   gap: var(--eds-size-4);
 }
 
@@ -39,8 +41,8 @@
  * Media Block body
  */
 .media-block__body {
-  display: flex; /* 2 */
-  flex-direction: column; /* 2 */
+  display: flex;
+  flex-direction: column;
   flex: 1;
 
   .media-block--reversed & {
