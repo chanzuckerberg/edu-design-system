@@ -7,7 +7,7 @@ import InputField from '../InputField';
 import Label from '../Label';
 import Text from '../Text';
 
-export interface Props {
+export type Props = React.InputHTMLAttributes<HTMLInputElement> & {
   /**
    * Aria-describedby id string
    */
@@ -56,6 +56,10 @@ export interface Props {
    * HTML label text
    */
   label?: string;
+  /**
+   * Maximum value allowed for the input, if type is 'number'. When the input value matches this maximum, the plus button becomes disabled.
+   */
+  max?: number;
   /**
    * Max number of characters for the text input
    */
@@ -117,7 +121,7 @@ export interface Props {
    * Default value passed down from higher levels for initial state
    */
   defaultValue?: string | number;
-}
+};
 
 /**
  * BETA: This component is still a work in progress and is subject to change.
