@@ -14,18 +14,12 @@
   position: relative;
 
   /* Hides all breadcrumbs except the last breadcrumb in smaller breakpoints. */
-  display: none;
-  flex-shrink: 0;
+  @apply hidden shrink-0;
   &:last-of-type {
-    display: flex;
     /* Truncate last breadcrumb in smaller breakpoints */
-    flex: 1 0 0%;
+    @apply flex flex-[1_0_0%];
   }
-
-  min-width: 0;
-
-  align-items: center;
-
+  @apply min-w-0 items-center;
   @media all and (min-width: $eds-bp-md) {
     /* Display breadcrumbs in larger breakpoints. */
     display: flex;
@@ -42,10 +36,8 @@
 .breadcrumbs__item-back {
   display: flex;
   margin-right: var(--eds-size-1-and-half);
-  @media all and (min-width: $eds-bp-md) {
-    /* Hidden for larger breakpoints. */
-    display: none;
-  }
+  /* Hidden for larger breakpoints. */
+  @apply hidden md:min-w-[768px];
 }
 .breadcrumbs__item-back > .breadcrumbs__separator {
   /* Hide the separator for the back variant. */
@@ -57,24 +49,17 @@
  */
 .breadcrumbs__ellipsis {
   /* Remove default browser styles for <button> and make more like a link. */
-  @mixin reset;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
+  @apply m-0 p-0 border-none bg-transparent cursor-pointer;
 }
 
 /**
  * Breadcrumbs link.
  */
 .breadcrumbs__link {
-  color: var(--eds-theme-color-text-neutral-subtle);
-  text-decoration: none;
-
+  @apply bg-neutral-600 no-underline;
   &:last-of-type {
     /* Truncate last link with ellipsis. */
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    @apply whitespace-nowrap overflow-hidden text-ellipsis;
   }
 
   &:hover,
@@ -102,10 +87,8 @@
  * Breadcrumbs Icon - a separator between breadcrumb links.
  */
 .breadcrumbs__separator {
-  color: var(--eds-theme-color-icon-neutral-subtle);
-  margin-left: var(--eds-size-1);
-  margin-right: var(--eds-size-1);
-  cursor: default;
+
+  @apply bg-neutral-500 ml-2 mr-2 cursor-default;
 }
 
 /**
@@ -120,9 +103,6 @@
  * Breadcrumbs Back Icon.
  */
 .breadcrumbs__back-icon {
-  color: var(--eds-theme-color-icon-neutral-subtle);
   /* Transform over height due to icon being placed inside <a>. */
-  transform: scale(1.5);
-  position: relative;
-  bottom: 0.125rem;
+  @apply bg-neutral-500 scale-150 relative bottom-0.5;
 }
