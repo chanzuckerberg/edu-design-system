@@ -2,15 +2,13 @@ import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import styles from './ButtonDropdown.module.css';
 import { DropdownMenu } from '../..';
-import { ESCAPE_KEYCODE, TAB_KEYCODE } from '../../util/keycodes';
 import type { ClickableStyleProps } from '../ClickableStyle';
 
 export interface Props {
-  buttonAriaLabel?: string;
   /**
-   * Makes button full width
+   * Aria label to be attacehd to the dropdown trigger button.
    */
-  fullWidth?: boolean;
+  buttonAriaLabel?: string;
   /**
    * Adds status to the button (e.g. error, success)
    */
@@ -24,9 +22,27 @@ export interface Props {
    */
   buttonVariant?: ClickableStyleProps<'button'>['variant'];
   /**
+   * Prop used to pass in `DropdownMenuItem` child components
+   */
+  children?: ReactNode;
+  /**
+   * CSS class names that can be appended to the component.
+   */
+  className?: string;
+  /**
    * Disables the field and prevents editing the contents
    */
   disabled?: boolean;
+  /**
+   * Prop used to pass in the dropdown menu trigger (dropdownTrigger={<Button />}). This
+   * allows for maximum flexbility with extending the button and passing in props from the
+   * outside
+   */
+  dropdownMenuTrigger?: ReactNode;
+  /**
+   * Makes button full width
+   */
+  fullWidth?: boolean;
   /**
    * Determines type of clickable
    * - default renders a dropdown menu to the bottom left of the button
@@ -42,20 +58,6 @@ export interface Props {
    * - **reset** The clickable is a reset clickable (resets the form-data to its initial values)
    */
   type?: 'button' | 'reset' | 'submit';
-  /**
-   * Prop used to pass in the dropdown menu trigger (dropdownTrigger={<Button />}). This
-   * allows for maximum flexbility with extending the button and passing in props from the
-   * outside
-   */
-  dropdownMenuTrigger?: ReactNode;
-  /**
-   * Prop used to pass in `DropdownMenuItem` child components
-   */
-  children?: ReactNode;
-  /**
-   * CSS class names that can be appended to the component.
-   */
-  className?: string;
 }
 
 /**
@@ -131,17 +133,6 @@ export const ButtonDropdown = ({
   }
 
   /**
-   * Handle keydown function
-   *
-   * If the escape key is struck, close the panel.
-   */
-  function handleKeyDown(e: React.KeyboardEvent) {
-    if (e.key === ESCAPE_KEYCODE || e.key === TAB_KEYCODE) {
-      closePanel();
-    }
-  }
-
-  /**
    * Toggle accordion panel
    */
   function togglePanel() {
@@ -151,7 +142,7 @@ export const ButtonDropdown = ({
   const dropdownMenuTriggerWithProps = React.Children.map(
     dropdownMenuTrigger,
     // TODO: improve `any` type
-    (child: any, i: number) => {
+    (child: any) => {
       // Checking isValidElement is the safe way and avoids a typescript
       // error too.
       if (React.isValidElement(child)) {
@@ -180,8 +171,7 @@ export const ButtonDropdown = ({
       {dropdownMenuTriggerWithProps}
       <DropdownMenu
         className={styles['button-dropdown__dropdown-menu']}
-        handleOnEscDown={(e) => handleKeyDown(e)}
-        handleOnTabDown={(e) => handleKeyDown(e)}
+        closeDropdownMenu={closePanel}
         isActive={isActiveVar}
       >
         {children}
