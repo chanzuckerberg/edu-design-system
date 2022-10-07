@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { ChangeEventHandler, ReactNode } from 'react';
+import React, { ChangeEventHandler, forwardRef, ReactNode } from 'react';
 import { useUID } from 'react-uid';
 import styles from './TextField.module.css';
 import FieldNote from '../FieldNote';
@@ -125,78 +125,89 @@ export interface Props {
  * ```ts
  * import {TextField} from "@chanzuckerberg/eds";
  */
-export const TextField = ({
-  'aria-describedby': ariaDescribedBy,
-  className,
-  disabled,
-  fieldNote,
-  id,
-  inputWithin,
-  isError,
-  label,
-  required,
-  type = 'text',
-  ...other
-}: Props) => {
-  if (process.env.NODE_ENV !== 'production' && !label && !other['aria-label']) {
-    throw new Error('You must provide a visible label or aria-label');
-  }
+export const TextField = forwardRef<HTMLInputElement, Props>(
+  (
+    {
+      'aria-describedby': ariaDescribedBy,
+      className,
+      disabled,
+      fieldNote,
+      id,
+      inputWithin,
+      isError,
+      label,
+      required,
+      type = 'text',
+      ...other
+    },
+    ref,
+  ) => {
+    if (
+      process.env.NODE_ENV !== 'production' &&
+      !label &&
+      !other['aria-label']
+    ) {
+      throw new Error('You must provide a visible label or aria-label');
+    }
 
-  const shouldRenderOverline = !!(label || required);
-  const overlineClassName = clsx(
-    styles['text-field__overline'],
-    !label && styles['text-field__overline--no-label'],
-    disabled && styles['text-field__overline--disabled'],
-  );
+    const shouldRenderOverline = !!(label || required);
+    const overlineClassName = clsx(
+      styles['text-field__overline'],
+      !label && styles['text-field__overline--no-label'],
+      disabled && styles['text-field__overline--disabled'],
+    );
 
-  const generatedId = useUID();
-  const idVar = id || generatedId;
+    const generatedId = useUID();
+    const idVar = id || generatedId;
 
-  const generatedAriaDescribedById = useUID();
-  const ariaDescribedByVar = fieldNote
-    ? ariaDescribedBy || generatedAriaDescribedById
-    : undefined;
+    const generatedAriaDescribedById = useUID();
+    const ariaDescribedByVar = fieldNote
+      ? ariaDescribedBy || generatedAriaDescribedById
+      : undefined;
 
-  return (
-    <div className={className}>
-      {shouldRenderOverline && (
-        <div className={overlineClassName}>
-          {label && <Label htmlFor={idVar} text={label} />}
-          {required && (
-            <Text as="p" size="sm">
-              Required
-            </Text>
-          )}
-        </div>
-      )}
-
-      <div className={styles['text-field__body']}>
-        <InputField
-          aria-describedby={ariaDescribedByVar}
-          aria-invalid={!!isError}
-          data-bootstrap-override="inputfield"
-          disabled={disabled}
-          id={idVar}
-          isError={isError}
-          required={required}
-          type={type}
-          {...other}
-        />
-        {inputWithin && (
-          <div className={styles['text-field__input-within']}>
-            {inputWithin}
+    return (
+      <div className={className}>
+        {shouldRenderOverline && (
+          <div className={overlineClassName}>
+            {label && <Label htmlFor={idVar} text={label} />}
+            {required && (
+              <Text as="p" size="sm">
+                Required
+              </Text>
+            )}
           </div>
         )}
+
+        <div className={styles['text-field__body']}>
+          <InputField
+            aria-describedby={ariaDescribedByVar}
+            aria-invalid={!!isError}
+            data-bootstrap-override="inputfield"
+            disabled={disabled}
+            id={idVar}
+            isError={isError}
+            ref={ref}
+            required={required}
+            type={type}
+            {...other}
+          />
+          {inputWithin && (
+            <div className={styles['text-field__input-within']}>
+              {inputWithin}
+            </div>
+          )}
+        </div>
+        {fieldNote && (
+          <FieldNote
+            disabled={disabled}
+            id={ariaDescribedByVar}
+            isError={isError}
+          >
+            {fieldNote}
+          </FieldNote>
+        )}
       </div>
-      {fieldNote && (
-        <FieldNote
-          disabled={disabled}
-          id={ariaDescribedByVar}
-          isError={isError}
-        >
-          {fieldNote}
-        </FieldNote>
-      )}
-    </div>
-  );
-};
+    );
+  },
+);
+TextField.displayName = 'TextField';
