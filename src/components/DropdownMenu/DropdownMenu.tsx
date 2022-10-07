@@ -88,6 +88,8 @@ export const DropdownMenu: React.FC<Props> = ({
       closeDropdownMenu
     ) {
       closeDropdownMenu();
+      // Prevents focus from moving onto next element in tab order and keeps it on trigger button.
+      e.preventDefault();
     }
 
     // Focus next element with right or down arrow key.
