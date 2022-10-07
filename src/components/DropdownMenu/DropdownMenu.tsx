@@ -34,17 +34,9 @@ export type Props = {
    */
   isActive?: boolean;
   /**
-   * Invoked when the escape key is pressed.
+   * Callback used to close the dropdown menu. Typically sets active state to false in parent.
    */
-  handleOnEscDown?: (e: React.KeyboardEvent) => void;
-  /**
-   * Invoked when the tab key is pressed.
-   */
-  handleOnTabDown?: (e: React.KeyboardEvent) => void;
-  /**
-   * Invoked when the dropdown menu is clicked. Used to close the dropdown menu.
-   */
-  handleOnClick?: MouseEventHandler;
+  closeDropdownMenu?: () => void;
 } & HTMLAttributes<HTMLElement>;
 
 type Refs = {
@@ -67,10 +59,8 @@ export const DropdownMenuContext = createContext<ContextRefs | null>(null);
 export const DropdownMenu: React.FC<Props> = ({
   children,
   className,
+  closeDropdownMenu,
   isActive,
-  handleOnClick,
-  handleOnEscDown,
-  handleOnTabDown,
   ...other
 }) => {
   const refs = useRef<Refs>({
@@ -92,12 +82,14 @@ export const DropdownMenu: React.FC<Props> = ({
   }, [isActive]);
 
   const onKeyDown = (e: KeyboardEvent<HTMLUListElement>) => {
-    // Calls callback on escape and tab key triggers, typically to close the menu.
-    if (e.key === ESCAPE_KEYCODE && handleOnEscDown) {
-      handleOnEscDown(e);
-    }
-    if (e.key === TAB_KEYCODE && handleOnTabDown) {
-      handleOnTabDown(e);
+    // Calls callback on escape or tab key, typically to close the menu.
+    if (
+      (e.key === ESCAPE_KEYCODE || e.key === TAB_KEYCODE) &&
+      closeDropdownMenu
+    ) {
+      closeDropdownMenu();
+      // Prevents focus from moving onto next element in tab order and keeps it on trigger button.
+      e.preventDefault();
     }
 
     // Focus next element with right or down arrow key.
@@ -141,6 +133,13 @@ export const DropdownMenu: React.FC<Props> = ({
       // prevents page from scrolling
       e.preventDefault();
     }
+  };
+
+  const handleOnClick: MouseEventHandler = (e) => {
+    focusIndex = refs.current.list.findIndex((ref) =>
+      ref.contains(e.target as HTMLElement),
+    );
+    focusItem(focusIndex);
   };
 
   const componentClassName = clsx(styles['dropdown-menu'], className);

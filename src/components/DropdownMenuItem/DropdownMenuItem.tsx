@@ -24,7 +24,7 @@ export type DropdownMenuItemProps = {
   /**
    * On click handler for component
    */
-  onClick?: () => void;
+  onClick?: MouseEventHandler;
   /**
    * On hover handler for component
    */
