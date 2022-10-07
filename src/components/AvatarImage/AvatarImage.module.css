@@ -10,7 +10,8 @@
 .avatar-image {
   @apply flex flex-col justify-center;
   @apply w-9 h-9 rounded-[50%];
-  background: white;
+  /* background: white; */
+  @apply bg-neutral-white;
 }
 
 /* Head of the avatar image. */
