@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [5.2.1](https://github.com/chanzuckerberg/edu-design-system/compare/v5.2.0...v5.2.1) (2022-10-07)
+
+
+### Chores
+
+* clean up types and onclick, forward ref ([fd5b65d](https://github.com/chanzuckerberg/edu-design-system/commit/fd5b65d68b745e532eeb876efe557e77fb174a62))
+
 ## [5.2.0](https://github.com/chanzuckerberg/edu-design-system/compare/v5.1.1-alpha.0...v5.2.0) (2022-10-06)
 
 
