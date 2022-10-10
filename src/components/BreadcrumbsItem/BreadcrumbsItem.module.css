@@ -57,7 +57,7 @@
  */
 .breadcrumbs__link {
   color: var(--eds-theme-color-text-neutral-subtle);
-  @apply no-underline;
+  text-decoration: none;
   &:last-of-type {
     /* Truncate last link with ellipsis. */
     @apply whitespace-nowrap overflow-hidden text-ellipsis;
