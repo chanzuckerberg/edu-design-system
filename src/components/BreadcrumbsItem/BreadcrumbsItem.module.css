@@ -91,7 +91,8 @@
  * Breadcrumbs Icon - a separator between breadcrumb links.
  */
 .breadcrumbs__separator {
-  @apply bg-neutral-500 ml-2 mr-2 cursor-default;
+  color: var(--eds-theme-color-icon-neutral-subtle);
+  @apply ml-2 mr-2 cursor-default;
 }
 
 /**
@@ -107,5 +108,6 @@
  */
 .breadcrumbs__back-icon {
   /* Transform over height due to icon being placed inside <a>. */
-  @apply bg-neutral-500 scale-150 relative bottom-0.5;
+  color: var(--eds-theme-color-icon-neutral-subtle);
+  @apply scale-150 relative bottom-0.5;
 }
