@@ -59,7 +59,7 @@
  * Breadcrumbs link.
  */
 .breadcrumbs__link {
-  @apply bg-neutral-500;
+  color: var(--eds-theme-color-text-neutral-subtle);
   text-decoration: none;
   &:last-of-type {
     /* Truncate last link with ellipsis. */
