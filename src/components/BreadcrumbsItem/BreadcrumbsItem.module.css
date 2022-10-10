@@ -36,8 +36,10 @@
 .breadcrumbs__item-back {
   display: flex;
   margin-right: var(--eds-size-1-and-half);
-  /* Hidden for larger breakpoints. */
-  @apply hidden md:min-w-[768px];
+  @media all and (min-width: $eds-bp-md) {
+    /* Hidden for larger breakpoints. */
+    display: none;
+  }
 }
 .breadcrumbs__item-back > .breadcrumbs__separator {
   /* Hide the separator for the back variant. */
