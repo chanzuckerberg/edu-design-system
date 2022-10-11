@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import React from 'react';
 import styles from './StudentRefinement.module.css';
 
@@ -18,7 +19,10 @@ import {
   Tabs,
   Table,
   Tag,
+  Text,
 } from '../../../src';
+import { EdsThemeColorIconUtilityWarning } from '../../../src/tokens-dist/ts/colors';
+
 import { DataSummaryCard } from '../../recipes/DataSummaryCard/DataSummaryCard';
 import { PageShell } from '../../recipes/PageShell/PageShell';
 
@@ -47,6 +51,7 @@ export const StudentRefinement = () => (
           <div className={styles['student-refinement__students-page']}>
             <div className={styles['student-refinement__summary-cards']}>
               <DataSummaryCard
+                className={styles['student-refinement__summary-card']}
                 dataAmount="38"
                 dataUnit="%"
                 description="Off Track"
@@ -54,6 +59,7 @@ export const StudentRefinement = () => (
                 variant="off-track"
               />
               <DataSummaryCard
+                className={styles['student-refinement__summary-card']}
                 dataAmount="63"
                 dataUnit="%"
                 description="Below C-"
@@ -61,6 +67,7 @@ export const StudentRefinement = () => (
                 variant="off-track"
               />
               <DataSummaryCard
+                className={styles['student-refinement__summary-card']}
                 dataAmount="41"
                 dataUnit="%"
                 description="Below 70%"
@@ -68,6 +75,7 @@ export const StudentRefinement = () => (
                 variant="off-track"
               />
               <DataSummaryCard
+                className={styles['student-refinement__summary-card']}
                 dataAmount="24"
                 dataUnit="/ 96"
                 description="Overdue"
@@ -75,6 +83,7 @@ export const StudentRefinement = () => (
                 variant="off-track"
               />
               <DataSummaryCard
+                className={styles['student-refinement__summary-card']}
                 dataAmount="91"
                 dataUnit="%"
                 description="Students Off Track"
@@ -82,7 +91,10 @@ export const StudentRefinement = () => (
                 variant="off-track"
               />
             </div>
-            <Layout variant="50-50">
+            <Layout
+              className={styles['student-refinement__table-controls']}
+              variant="50-50"
+            >
               <SearchBar>
                 <SearchBar.InputField />
                 <SearchBar.Button />
@@ -142,43 +154,418 @@ export const StudentRefinement = () => (
                 <Button>Export</Button>
               </ButtonGroup>
             </Layout>
-            <Table caption="Student Data">
+            <Table behavior="stacked" caption="Student Data">
               <Table.Header>
-                <Table.Row>
-                  <Table.Cell as="th">Students (32)</Table.Cell>
-                  <Table.Cell as="th">Grade</Table.Cell>
-                  <Table.Cell as="th">Cog Skill Avg</Table.Cell>
-                  <Table.Cell as="th">Projects</Table.Cell>
-                  <Table.Cell as="th">Power Focus Areas</Table.Cell>
+                <Table.Row
+                  className={clsx(
+                    styles['student-refinement__table-row'],
+                    styles['student-refinement__header-row'],
+                  )}
+                >
+                  <Table.Cell
+                    as="th"
+                    className={clsx(
+                      styles['student-refinement__header-cell'],
+                      styles['student-refinement__header-name-cell'],
+                    )}
+                  >
+                    Students (32)
+                  </Table.Cell>
+                  <Table.Cell
+                    as="th"
+                    className={clsx(
+                      styles['student-refinement__header-cell'],
+                      styles['student-refinement__header-grade-cell'],
+                    )}
+                  >
+                    Grade
+                  </Table.Cell>
+                  <Table.Cell
+                    as="th"
+                    className={clsx(
+                      styles['student-refinement__header-cell'],
+                      styles['student-refinement__header-avg-cell'],
+                    )}
+                  >
+                    Cog Skill Avg
+                  </Table.Cell>
+                  <Table.Cell
+                    as="th"
+                    className={clsx(
+                      styles['student-refinement__header-cell'],
+                      styles['student-refinement__header-project-cell'],
+                    )}
+                  >
+                    Projects
+                  </Table.Cell>
+                  <Table.Cell
+                    as="th"
+                    className={clsx(
+                      styles['student-refinement__header-cell'],
+                      styles['student-refinement__header-area-cell'],
+                    )}
+                  >
+                    Power Focus Areas
+                  </Table.Cell>
                 </Table.Row>
               </Table.Header>
               <Table.Body>
-                <Table.Row>
-                  <Table.Cell>
-                    Caroline Garcia
+                <Table.Row className={styles['student-refinement__table-row']}>
+                  <Table.Cell
+                    className={styles['student-refinement__name-cell']}
+                    data-heading="Student"
+                  >
+                    <Text as="span" size="sm">
+                      Caroline Garcia
+                    </Text>
                     <Tag hasOutline text="Off Track" variant="warning" />
                   </Table.Cell>
-                  <Table.Cell>
+                  <Table.Cell
+                    className={styles['student-refinement__body-cell']}
+                    data-heading="Grade"
+                  >
                     <Icon
+                      className={styles['student-refinement__grade']}
+                      color={EdsThemeColorIconUtilityWarning}
                       name="circle-small"
                       purpose="informative"
+                      size="1.25rem"
                       title="off track"
                     />
                     <Score text="53%" variant="table" />
                   </Table.Cell>
-                  <Table.Cell>
+                  <Table.Cell
+                    className={styles['student-refinement__body-cell']}
+                    data-heading="Cog Skill Avg"
+                  >
                     <Icon
+                      className={styles['student-refinement__grade']}
+                      color={EdsThemeColorIconUtilityWarning}
                       name="circle-small"
                       purpose="informative"
+                      size="1.25rem"
                       title="off track"
                     />
                     <Score text="30%" variant="table" />
                   </Table.Cell>
-                  <Table.Cell>
-                    <Score text="3 / 3" variant="table" />
+                  <Table.Cell
+                    className={styles['student-refinement__body-cell']}
+                    data-heading="Project"
+                  >
+                    <Score
+                      className={styles['student-refinement__second-item']}
+                      text="3 / 3"
+                      variant="table"
+                    />
                   </Table.Cell>
-                  <Table.Cell>
-                    <Score text="8 / 10" variant="table" />
+                  <Table.Cell
+                    className={clsx(
+                      styles['student-refinement__body-cell'],
+                      styles['student-refinement__body-area-cell'],
+                    )}
+                    data-heading="Power Focus Area"
+                  >
+                    <Score
+                      className={styles['student-refinement__second-item']}
+                      text="8 / 10"
+                      variant="table"
+                    />
+                  </Table.Cell>
+                </Table.Row>
+                <Table.Row className={styles['student-refinement__table-row']}>
+                  <Table.Cell
+                    className={styles['student-refinement__name-cell']}
+                    data-heading="Student"
+                  >
+                    <Text as="span" size="sm">
+                      Anthony Smith
+                    </Text>
+                  </Table.Cell>
+                  <Table.Cell
+                    className={styles['student-refinement__body-cell']}
+                    data-heading="Grade"
+                  >
+                    <Text
+                      as="span"
+                      className={styles['student-refinement__grade']}
+                    >
+                      A
+                    </Text>
+                    <Score text="93%" variant="table" />
+                  </Table.Cell>
+                  <Table.Cell
+                    className={styles['student-refinement__body-cell']}
+                    data-heading="Cog Skill Avg"
+                  >
+                    <Score
+                      className={styles['student-refinement__second-item']}
+                      text="84%"
+                      variant="table"
+                    />
+                  </Table.Cell>
+                  <Table.Cell
+                    className={styles['student-refinement__body-cell']}
+                    data-heading="Project"
+                  >
+                    <Icon
+                      className={styles['student-refinement__grade']}
+                      color={EdsThemeColorIconUtilityWarning}
+                      name="circle-small"
+                      purpose="informative"
+                      size="1.25rem"
+                      title="off track"
+                    />
+                    <Score text="2 / 3" variant="table" />
+                  </Table.Cell>
+                  <Table.Cell
+                    className={clsx(
+                      styles['student-refinement__body-cell'],
+                      styles['student-refinement__body-area-cell'],
+                    )}
+                    data-heading="Power Focus Area"
+                  >
+                    <Score
+                      className={styles['student-refinement__second-item']}
+                      text="4 / 10"
+                      variant="table"
+                    />
+                  </Table.Cell>
+                </Table.Row>
+                <Table.Row className={styles['student-refinement__table-row']}>
+                  <Table.Cell
+                    className={styles['student-refinement__name-cell']}
+                    data-heading="Student"
+                  >
+                    <Text as="span" size="sm">
+                      Sai Kumar
+                    </Text>
+                  </Table.Cell>
+                  <Table.Cell
+                    className={styles['student-refinement__body-cell']}
+                    data-heading="Grade"
+                  >
+                    <Text
+                      as="span"
+                      className={styles['student-refinement__grade']}
+                    >
+                      B-
+                    </Text>
+                    <Score text="81%" variant="table" />
+                  </Table.Cell>
+                  <Table.Cell
+                    className={styles['student-refinement__body-cell']}
+                    data-heading="Cog Skill Avg"
+                  >
+                    <Score
+                      className={styles['student-refinement__second-item']}
+                      text="78%"
+                      variant="table"
+                    />
+                  </Table.Cell>
+                  <Table.Cell
+                    className={styles['student-refinement__body-cell']}
+                    data-heading="Project"
+                  >
+                    <Icon
+                      className={styles['student-refinement__grade']}
+                      color={EdsThemeColorIconUtilityWarning}
+                      name="circle-small"
+                      purpose="informative"
+                      size="1.25rem"
+                      title="off track"
+                    />
+                    <Score text="1 / 3" variant="table" />
+                  </Table.Cell>
+                  <Table.Cell
+                    className={clsx(
+                      styles['student-refinement__body-cell'],
+                      styles['student-refinement__body-area-cell'],
+                    )}
+                    data-heading="Power Focus Area"
+                  >
+                    <Score
+                      className={styles['student-refinement__second-item']}
+                      text="7 / 10"
+                      variant="table"
+                    />
+                  </Table.Cell>
+                </Table.Row>
+                <Table.Row className={styles['student-refinement__table-row']}>
+                  <Table.Cell
+                    className={styles['student-refinement__name-cell']}
+                    data-heading="Student"
+                  >
+                    <Text as="span" size="sm">
+                      Rachel Campbell
+                    </Text>
+                  </Table.Cell>
+                  <Table.Cell
+                    className={styles['student-refinement__body-cell']}
+                    data-heading="Grade"
+                  >
+                    <Icon
+                      className={styles['student-refinement__grade']}
+                      color={EdsThemeColorIconUtilityWarning}
+                      name="circle-small"
+                      purpose="informative"
+                      size="1.25rem"
+                      title="off track"
+                    />
+                    <Score text="68%" variant="table" />
+                  </Table.Cell>
+                  <Table.Cell
+                    className={styles['student-refinement__body-cell']}
+                    data-heading="Cog Skill Avg"
+                  >
+                    <Score
+                      className={styles['student-refinement__second-item']}
+                      text="73%"
+                      variant="table"
+                    />
+                  </Table.Cell>
+                  <Table.Cell
+                    className={styles['student-refinement__body-cell']}
+                    data-heading="Project"
+                  >
+                    <Score
+                      className={styles['student-refinement__second-item']}
+                      text="3 / 3"
+                      variant="table"
+                    />
+                  </Table.Cell>
+                  <Table.Cell
+                    className={clsx(
+                      styles['student-refinement__body-cell'],
+                      styles['student-refinement__body-area-cell'],
+                    )}
+                    data-heading="Power Focus Area"
+                  >
+                    <Score
+                      className={styles['student-refinement__second-item']}
+                      text="5 / 10"
+                      variant="table"
+                    />
+                  </Table.Cell>
+                </Table.Row>
+                <Table.Row className={styles['student-refinement__table-row']}>
+                  <Table.Cell
+                    className={styles['student-refinement__name-cell']}
+                    data-heading="Student"
+                  >
+                    <Text as="span" size="sm">
+                      Emily Tran
+                    </Text>
+                    <Tag hasOutline text="Off Track" variant="warning" />
+                  </Table.Cell>
+                  <Table.Cell
+                    className={styles['student-refinement__body-cell']}
+                    data-heading="Grade"
+                  >
+                    <Icon
+                      className={styles['student-refinement__grade']}
+                      color={EdsThemeColorIconUtilityWarning}
+                      name="circle-small"
+                      purpose="informative"
+                      size="1.25rem"
+                      title="off track"
+                    />
+                    <Score text="30%" variant="table" />
+                  </Table.Cell>
+                  <Table.Cell
+                    className={styles['student-refinement__body-cell']}
+                    data-heading="Cog Skill Avg"
+                  >
+                    <Score
+                      className={styles['student-refinement__second-item']}
+                      text="100%"
+                      variant="table"
+                    />
+                  </Table.Cell>
+                  <Table.Cell
+                    className={styles['student-refinement__body-cell']}
+                    data-heading="Project"
+                  >
+                    <Icon
+                      className={styles['student-refinement__grade']}
+                      color={EdsThemeColorIconUtilityWarning}
+                      name="circle-small"
+                      purpose="informative"
+                      size="1.25rem"
+                      title="off track"
+                    />
+                    <Score text="2 / 3" variant="table" />
+                  </Table.Cell>
+                  <Table.Cell
+                    className={clsx(
+                      styles['student-refinement__body-cell'],
+                      styles['student-refinement__body-area-cell'],
+                    )}
+                    data-heading="Power Focus Area"
+                  >
+                    <Icon
+                      className={styles['student-refinement__grade']}
+                      color={EdsThemeColorIconUtilityWarning}
+                      name="circle-small"
+                      purpose="informative"
+                      size="1.25rem"
+                      title="off track"
+                    />
+                    <Score text="3 / 10" variant="table" />
+                  </Table.Cell>
+                </Table.Row>
+                <Table.Row className={styles['student-refinement__table-row']}>
+                  <Table.Cell
+                    className={styles['student-refinement__name-cell']}
+                    data-heading="Student"
+                  >
+                    <Text as="span" size="sm">
+                      Wei Zhang
+                    </Text>
+                  </Table.Cell>
+                  <Table.Cell
+                    className={styles['student-refinement__body-cell']}
+                    data-heading="Grade"
+                  >
+                    <Text
+                      as="span"
+                      className={styles['student-refinement__grade']}
+                    >
+                      C
+                    </Text>
+                    <Score text="73%" variant="table" />
+                  </Table.Cell>
+                  <Table.Cell
+                    className={styles['student-refinement__body-cell']}
+                    data-heading="Cog Skill Avg"
+                  >
+                    <Score
+                      className={styles['student-refinement__second-item']}
+                      text="75%"
+                      variant="table"
+                    />
+                  </Table.Cell>
+                  <Table.Cell
+                    className={styles['student-refinement__body-cell']}
+                    data-heading="Project"
+                  >
+                    <Score
+                      className={styles['student-refinement__second-item']}
+                      text="3 / 3"
+                      variant="table"
+                    />
+                  </Table.Cell>
+                  <Table.Cell
+                    className={clsx(
+                      styles['student-refinement__body-cell'],
+                      styles['student-refinement__body-area-cell'],
+                    )}
+                    data-heading="Power Focus Area"
+                  >
+                    <Score
+                      className={styles['student-refinement__second-item']}
+                      text="6 / 10"
+                      variant="table"
+                    />
                   </Table.Cell>
                 </Table.Row>
               </Table.Body>

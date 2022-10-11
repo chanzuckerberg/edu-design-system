@@ -21,6 +21,17 @@
   display: flex;
   gap: var(--eds-size-2);
   margin-bottom: 2.875rem;
+  flex-wrap: wrap;
+}
+
+.student-refinement__summary-card {
+  min-width: 10rem;
+  max-width: 12.75rem;
+  flex: 1;
+}
+
+.student-refinement__table-controls {
+  margin-bottom: var(--eds-size-4);
 }
 
 @media all and (min-width: $eds-bp-xl) {
@@ -31,4 +42,76 @@
 
 .student-refinement__filters-checkbox-field {
   margin-top: var(--eds-size-6);
+}
+
+.student-refinement__table-row.student-refinement__table-row.student-refinement__table-row {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  margin-bottom: 0;
+}
+
+.student-refinement__header-row {
+  border-top: var(--eds-theme-border-width) solid
+    var(--eds-theme-color-border-neutral-strong);
+}
+
+.student-refinement__header-cell.student-refinement__header-cell {
+  padding-top: var(--eds-size-2);
+  padding-bottom: var(--eds-size-2);
+  border-bottom: none;
+}
+
+.student-refinement__header-name-cell.student-refinement__header-name-cell {
+  padding-right: var(--eds-size-1);
+  padding-left: var(--eds-size-1);
+}
+
+.student-refinement__header-grade-cell.student-refinement__header-grade-cell {
+  padding-right: 0;
+  padding-left: var(--eds-size-2);
+}
+
+.student-refinement__header-avg-cell.student-refinement__header-avg-cell {
+  padding-right: var(--eds-size-1);
+  padding-left: 0;
+}
+
+.student-refinement__header-project-cell.student-refinement__header-project-cell {
+  padding-right: 0;
+  padding-left: var(--eds-size-1-and-half);
+}
+
+.student-refinement__header-area-cell.student-refinement__header-area-cell {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.student-refinement__name-cell.student-refinement__name-cell {
+  display: grid;
+  grid-template-columns: 7rem auto;
+  align-items: center;
+}
+
+.student-refinement__body-cell.student-refinement__body-cell {
+  padding: 0;
+  display: grid;
+  grid-template-columns: 0.875rem auto;
+  align-items: center;
+  gap: 0;
+}
+
+.student-refinement__body-area-cell.student-refinement__body-area-cell {
+  padding-left: var(--eds-size-2);
+}
+
+.student-refinement__grade {
+  display: inline-flex;
+  width: 1.125rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.student-refinement__second-item {
+  grid-column: 2;
 }
