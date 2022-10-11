@@ -72,37 +72,45 @@
 
 /**
 * Baseline card link (based on WordPress' .screen-reader-text class)
-* 1) On a clickable card, the link should be visually hidden but still
+* 
+* On a clickable card, the link should be visually hidden but still
 * accessible to screen readers. It should also become visible when it 
 * receives keyboard focus, i.e. using the Tab key
-* 2) Set width and height to 1px; some screen readers don't announce 
-* an element with a size of 0 px
-* 3) Hide the link
-* 4) Prevent screen readers reading the text letter for letter, as the
-* text is placed in a 1 pixel wide space. Many screen reader and browser
-* combinations announce broken words as they would appear visually.
-* 5) Clip is deprecated, but is added to support older browsers that don't support clip-path yet.
-* 
-* See https://make.wordpress.org/accessibility/handbook/markup/the-css-class-screen-reader-text/
 */
-
 .baseline-card__link {
   border: 0;
+  /**
+   * Clip is deprecated, but is added to support older browsers that don't support clip-path yet.
+   * 
+   * See https://make.wordpress.org/accessibility/handbook/markup/the-css-class-screen-reader-text/
+   */
   clip: rect(1px, 1px, 1px, 1px);
   clip-path: inset(50%);
-  width: 1px; /* 2 */
+  /**
+   * Set width and height to 1px; some screen readers don't announce 
+   * an element with a size of 0 px
+   */
+  width: 1px;
   height: 1px;
-  margin: -1px; /* 3 */
+  /**
+   * Hide the link
+   */
+  margin: -1px;
   padding: 0;
   position: absolute;
   overflow: hidden;
-  word-wrap: normal !important; /* 4 */
+  /**
+   * Prevent screen readers reading the text letter for letter, as the
+   * text is placed in a 1 pixel wide space. Many screen reader and browser
+   * combinations announce broken words as they would appear visually.
+   */
+  word-wrap: normal !important;
 }
 
 .baseline-card__link:focus {
   @mixin eds-theme-typography-body-text-sm;
   background-color: var(--eds-theme-color-background-neutral-default);
-  clip: auto !important; /* 5 */
+  clip: auto !important;
   clip-path: none;
   color: var(--eds-theme-color-text-neutral-default);
   display: block;
@@ -114,7 +122,7 @@
   text-decoration: none;
   top: var(--eds-size-half);
   width: auto;
-  z-index: var(--eds-z-index-top); /* 1 */
+  z-index: var(--eds-z-index-top);
 }
 
 /**

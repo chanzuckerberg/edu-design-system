@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import debounce from 'lodash.debounce';
-import React, { ReactNode } from 'react';
+import React, { type ReactNode } from 'react';
 import { useUID } from 'react-uid';
 import styles from './Breadcrumbs.module.css';
 import { flattenReactChildren } from '../../util/flattenReactChildren';
@@ -47,39 +47,35 @@ export const Breadcrumbs = ({
   const ref = React.useRef<HTMLUListElement>(null);
 
   /**
-   * Checks if breadcrumbs would overflow
-   */
-  const updateShouldTruncate = () => {
-    setShouldTruncate(false);
-    if (
-      ref &&
-      ref.current &&
-      ref.current.clientWidth < ref.current.scrollWidth
-    ) {
-      setShouldTruncate(true);
-    }
-  };
-  const debouncedUpdateShouldTruncate = debounce(updateShouldTruncate, 200);
-
-  /**
    * Needs useLayoutEffect over useEffect since it needs to be run before paint.
    * TODO: with React 18, might be able to use useEffect https://github.com/reactjs/reactjs.org/blob/d14cbdca2445cd676526c4c52e1e106342ff7bb3/content/docs/hooks-reference.md?plain=1#L155
    */
   React.useLayoutEffect(() => {
+    const updateShouldTruncate = () => {
+      const willOverflow = ref.current
+        ? ref.current.clientWidth < ref.current.scrollWidth
+        : false;
+
+      setShouldTruncate(willOverflow);
+    };
+
+    const debouncedUpdateShouldTruncate = debounce(updateShouldTruncate, 200);
+
     updateShouldTruncate();
     window.addEventListener('resize', debouncedUpdateShouldTruncate);
     return () => {
       window.removeEventListener('resize', debouncedUpdateShouldTruncate);
     };
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  }, []);
 
   /**
-   * 1) Flattens breadcrumb items that may be wrapped in React.Fragment into an array so they can be manipulated easily
-   * 2) Finds the second to last breadcrumb item for mobile Breadcrumbs back icon
-   * 3) Finds all the breadcrumb items between the first and last breadcrumb items so they can be placed in the dropdown.
+   * Flattens breadcrumb items that may be wrapped in React.Fragment into an array so they can be manipulated easily.
    */
-  const breadcrumbsItems = flattenBreadcrumbsItems(children); /* 1 */
-  /* 2 */
+  const breadcrumbsItems = flattenBreadcrumbsItems(children);
+
+  /**
+   * Finds the second to last breadcrumb item for mobile Breadcrumbs back icon.
+   */
   const backBreadCrumb =
     breadcrumbsItems.length > 1
       ? React.cloneElement(
@@ -91,7 +87,10 @@ export const Breadcrumbs = ({
           },
         )
       : null;
-  /* 3 */
+
+  /**
+   * Finds all the breadcrumb items between the first and last breadcrumb items so they can be placed in the dropdown.
+   */
   const dropdownMenuItems = breadcrumbsItems
     .slice(1, breadcrumbsItems.length - 1)
     .map((breadcrumbItem, index) => {
@@ -117,15 +116,14 @@ export const Breadcrumbs = ({
       id={breadcrumbsId}
       {...other}
     >
-      {/**
-       * 1) Back icon breadcrumb always exists, just hidden via css depending on breakpoint to increase performance
-       * 2) The ellipsis breadcrumb with dropdown only exists if there would be overflow and there are 3 or more breadcrumb items
-       * 3) If (2) conditions aren't met, display all breadcrumbs
-       */}
       <ul className={styles['breadcrumbs__list']} ref={ref}>
-        {/* 1 */}
+        {/**
+         * Back icon breadcrumb always exists, just hidden via css depending on breakpoint to increase performance
+         */}
         {backBreadCrumb}
-        {/* 2 */}
+        {/**
+         * The ellipsis breadcrumb with dropdown only exists if there would be overflow and there are 3 or more breadcrumb items.
+         */}
         {shouldTruncate && breadcrumbsItems.length > 2 ? (
           <>
             {breadcrumbsItems[0]}
@@ -137,7 +135,9 @@ export const Breadcrumbs = ({
             {breadcrumbsItems[breadcrumbsItems.length - 1]}
           </>
         ) : (
-          /* 3 */
+          /**
+           * If the above conditions aren't met, display all breadcrumbs.
+           */
           breadcrumbsItems
         )}
       </ul>

@@ -27,6 +27,7 @@ exports[`<ButtonDropdown /> ComponentWrapped story renders snapshot 1`] = `
       >
         <button
           class="dropdown-menu__link"
+          tabindex="-1"
         >
           <svg
             aria-hidden="true"
@@ -50,6 +51,7 @@ exports[`<ButtonDropdown /> ComponentWrapped story renders snapshot 1`] = `
       >
         <button
           class="dropdown-menu__link"
+          tabindex="-1"
         >
           <div
             style="background-color: blanchedalmond;"
@@ -77,6 +79,7 @@ exports[`<ButtonDropdown /> ComponentWrapped story renders snapshot 1`] = `
       >
         <button
           class="dropdown-menu__link"
+          tabindex="-1"
         >
           <svg
             aria-hidden="true"
@@ -100,6 +103,7 @@ exports[`<ButtonDropdown /> ComponentWrapped story renders snapshot 1`] = `
       >
         <button
           class="dropdown-menu__link"
+          tabindex="-1"
         >
           <div
             style="background-color: blanchedalmond;"
@@ -153,6 +157,7 @@ exports[`<ButtonDropdown /> Default story renders snapshot 1`] = `
       >
         <button
           class="dropdown-menu__link"
+          tabindex="-1"
         >
           <svg
             aria-hidden="true"
@@ -176,6 +181,7 @@ exports[`<ButtonDropdown /> Default story renders snapshot 1`] = `
       >
         <button
           class="dropdown-menu__link"
+          tabindex="-1"
         >
           <svg
             aria-hidden="true"
@@ -199,6 +205,7 @@ exports[`<ButtonDropdown /> Default story renders snapshot 1`] = `
       >
         <button
           class="dropdown-menu__link"
+          tabindex="-1"
         >
           <svg
             aria-hidden="true"
@@ -222,6 +229,7 @@ exports[`<ButtonDropdown /> Default story renders snapshot 1`] = `
       >
         <button
           class="dropdown-menu__link"
+          tabindex="-1"
         >
           <svg
             aria-hidden="true"
@@ -271,6 +279,7 @@ exports[`<ButtonDropdown /> PositionBottomRight story renders snapshot 1`] = `
       >
         <button
           class="dropdown-menu__link"
+          tabindex="-1"
         >
           <svg
             aria-hidden="true"
@@ -294,6 +303,7 @@ exports[`<ButtonDropdown /> PositionBottomRight story renders snapshot 1`] = `
       >
         <button
           class="dropdown-menu__link"
+          tabindex="-1"
         >
           <svg
             aria-hidden="true"
@@ -317,6 +327,7 @@ exports[`<ButtonDropdown /> PositionBottomRight story renders snapshot 1`] = `
       >
         <button
           class="dropdown-menu__link"
+          tabindex="-1"
         >
           <svg
             aria-hidden="true"
@@ -340,6 +351,7 @@ exports[`<ButtonDropdown /> PositionBottomRight story renders snapshot 1`] = `
       >
         <button
           class="dropdown-menu__link"
+          tabindex="-1"
         >
           <svg
             aria-hidden="true"
@@ -389,6 +401,7 @@ exports[`<ButtonDropdown /> PositionTopLeft story renders snapshot 1`] = `
       >
         <button
           class="dropdown-menu__link"
+          tabindex="-1"
         >
           <svg
             aria-hidden="true"
@@ -412,6 +425,7 @@ exports[`<ButtonDropdown /> PositionTopLeft story renders snapshot 1`] = `
       >
         <button
           class="dropdown-menu__link"
+          tabindex="-1"
         >
           <svg
             aria-hidden="true"
@@ -435,6 +449,7 @@ exports[`<ButtonDropdown /> PositionTopLeft story renders snapshot 1`] = `
       >
         <button
           class="dropdown-menu__link"
+          tabindex="-1"
         >
           <svg
             aria-hidden="true"
@@ -458,6 +473,7 @@ exports[`<ButtonDropdown /> PositionTopLeft story renders snapshot 1`] = `
       >
         <button
           class="dropdown-menu__link"
+          tabindex="-1"
         >
           <svg
             aria-hidden="true"
@@ -507,6 +523,7 @@ exports[`<ButtonDropdown /> PositionTopRight story renders snapshot 1`] = `
       >
         <button
           class="dropdown-menu__link"
+          tabindex="-1"
         >
           <svg
             aria-hidden="true"
@@ -530,6 +547,7 @@ exports[`<ButtonDropdown /> PositionTopRight story renders snapshot 1`] = `
       >
         <button
           class="dropdown-menu__link"
+          tabindex="-1"
         >
           <svg
             aria-hidden="true"
@@ -553,6 +571,7 @@ exports[`<ButtonDropdown /> PositionTopRight story renders snapshot 1`] = `
       >
         <button
           class="dropdown-menu__link"
+          tabindex="-1"
         >
           <svg
             aria-hidden="true"
@@ -576,6 +595,7 @@ exports[`<ButtonDropdown /> PositionTopRight story renders snapshot 1`] = `
       >
         <button
           class="dropdown-menu__link"
+          tabindex="-1"
         >
           <svg
             aria-hidden="true"

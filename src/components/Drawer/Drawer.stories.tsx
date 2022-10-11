@@ -47,24 +47,25 @@ export default {
 
 type Args = React.ComponentProps<typeof Drawer>;
 
-/**
- * 1) Axe testing throws error due to Drawer component not being controlled, but this story is mostly for testing as the interactive story would only capture the toggle button.
- */
 export const Default: StoryObj<Args> = {
   parameters: {
     axe: {
-      disabledRules: ['aria-allowed-role'] /* 1 */,
+      /**
+       * Axe testing throws error due to Drawer component not being controlled,
+       * but this story is mostly for testing as the interactive story would only
+       * capture the toggle button.
+       */
+      disabledRules: ['aria-allowed-role'],
     },
   },
 };
 
-/**
- * 1) No point snapping the button as this story is an interaction example.
- */
 export const DefaultInteractive: StoryObj = {
   render: () => <DrawerExample />,
   parameters: {
-    /* 1 */
+    /**
+     * No point snapping the button as this story is an interaction example.
+     */
     snapshot: { skip: true },
     chromatic: { disableSnapshot: true },
   },

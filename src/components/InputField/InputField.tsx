@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { ChangeEventHandler } from 'react';
+import React, { ChangeEventHandler, forwardRef } from 'react';
 import styles from './InputField.module.css';
 
 export type InputFieldProps = React.InputHTMLAttributes<HTMLInputElement> & {
@@ -121,25 +121,23 @@ export type InputFieldProps = React.InputHTMLAttributes<HTMLInputElement> & {
  *
  * Text input component for one line of text. For multiple lines, consider the Textarea component.
  */
-export const InputField = ({
-  className,
-  disabled,
-  id,
-  isError,
-  ...other
-}: InputFieldProps) => {
-  const componentClassName = clsx(
-    styles['input-field'],
-    isError && styles['error'],
-    className,
-  );
+export const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
+  ({ className, disabled, id, isError, ...other }, ref) => {
+    const componentClassName = clsx(
+      styles['input-field'],
+      isError && styles['error'],
+      className,
+    );
 
-  return (
-    <input
-      className={componentClassName}
-      disabled={disabled}
-      id={id}
-      {...other}
-    />
-  );
-};
+    return (
+      <input
+        className={componentClassName}
+        disabled={disabled}
+        id={id}
+        ref={ref}
+        {...other}
+      />
+    );
+  },
+);
+InputField.displayName = 'InputField';

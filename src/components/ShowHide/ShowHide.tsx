@@ -80,25 +80,29 @@ export const ShowHide = ({
   }, []);
 
   /**
-   * Handle click outside the component
-   * 1) Close the show hide panel on click outside
+   * Handle click outside the component.
    */
   const handleOnClickOutside = (event: MouseEvent | TouchEvent) => {
     if (
       dropdownRef.current &&
       !dropdownRef.current.contains(event.target as HTMLElement)
     ) {
-      setIsActive(false); /* 1 */
+      /**
+       * Close the show hide panel on click outside
+       */
+      setIsActive(false);
     }
   };
 
   /**
    * Handle onKeyDown
-   * 1) If escape button is struck, close the show hide contents
    */
   function handleOnKeyDown(e: KeyboardEvent<HTMLElement>) {
     if (e.key === ESCAPE_KEYCODE) {
-      setIsActive(false); /* 1 */
+      /**
+       * If escape button is struck, close the show hide contents
+       */
+      setIsActive(false);
     }
   }
 

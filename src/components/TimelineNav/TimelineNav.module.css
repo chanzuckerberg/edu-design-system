@@ -107,8 +107,9 @@
 
 /**
 * Timeline nav back button
-* 1) On smaller viewports, a back button is placed at the top of the 
-* body to allow navigation back to the list of links
+* 
+* On smaller viewports, a back button is placed at the top of the 
+* body to allow navigation back to the list of links.
 */
 .timeline-nav__back {
   text-decoration: none;
@@ -136,12 +137,11 @@
 
 /**
  * Timeline nav item
- *
- * Flex shrink 0 keeps timeline-nav from expanding to fill up the space of the container.
  */
 .timeline-nav__item {
   position: relative;
-  flex-shrink: 0; /* 1 */
+  /* Flex shrink 0 keeps timeline-nav from expanding to fill up the space of the container. */
+  flex-shrink: 0;
   padding-bottom: var(--eds-size-5);
 
   @media all and (min-width: $eds-bp-lg) {
@@ -151,7 +151,8 @@
 
 /**
   * Timeline nav item after
-  * When list variant is 'ordered', add a line between items that shouldn't link out unlike the bullet
+  *
+  * When list variant is 'ordered', add a line between items that shouldn't link out unlike the bullet.
   */
 .timeline-nav__list--ordered .timeline-nav__item {
   &:after {
@@ -159,35 +160,35 @@
     position: absolute;
     top: 0;
     /**
-    * This sets the size of the gap above the vertical line by determining the top of the line relative to the top of the current 
-    * list item; a value of 0 would position the line at the top of the current list item; 100% would position it at the bottom of
-    * the current list item. We want a small visual gap between the bullet/icon and the top of the line 
-    */
+     * This sets the size of the gap above the vertical line by determining the top of the line relative to the top of the current 
+     * list item; a value of 0 would position the line at the top of the current list item; 100% would position it at the bottom of
+     * the current list item. We want a small visual gap between the bullet/icon and the top of the line 
+     */
     left: 0.75rem;
     /**
-    * This sets the height of the vertical line relative to the height of the current list item.
-    * We want a small visual gap between the bottom of the line and the next bullet/icon.
-    */
+     * This sets the height of the vertical line relative to the height of the current list item.
+     * We want a small visual gap between the bottom of the line and the next bullet/icon.
+     */
     height: 100%;
     width: 0.0625rem;
     /**
-    * Using a border color here because this is a vertical line, similar to a border
-    */
+     * Using a border color here because this is a vertical line, similar to a border
+     */
     background: var(--eds-theme-color-border-neutral-subtle);
     border-radius: var(--eds-border-radius-md);
   }
 
   /**
-    * Last Timeline nav item
-    */
+   * Last Timeline nav item
+   */
   &:last-child {
     padding-bottom: 0;
 
     /**
-      * List Timeline nav item after
-      *
-      * Don't add a line after the last list item.
-      */
+     * List Timeline nav item after
+     *
+     * Don't add a line after the last list item.
+     */
     &:after {
       content: none;
     }
@@ -207,7 +208,7 @@
   align-items: baseline;
   gap: var(--eds-size-1);
   text-decoration: none;
-  color: var(--eds-theme-color-text-neutral-subtle); /* 2 */
+  color: var(--eds-theme-color-text-neutral-subtle);
   cursor: pointer;
   transition: color var(--eds-anim-fade-quick) var(--eds-anim-ease),
     box-shadow var(--eds-anim-fade-quick) var(--eds-anim-ease),
@@ -273,13 +274,13 @@
 }
 /**
  * Timeline nav link-left 
- * 1) Provides white background to fake a visual gap in the vertical line between nav items
  */
 .timeline-nav__link-left {
   position: relative;
   height: fit-content;
   padding: var(--eds-size-half) 0;
-  background: var(--eds-theme-color-background-neutral-default); /* 1 */
+  /* Provides white background to fake a visual gap in the vertical line between nav items. */
+  background: var(--eds-theme-color-background-neutral-default);
   z-index: var(--eds-z-index-100);
 }
 
@@ -295,7 +296,7 @@
 .timeline-nav__link-title {
   display: block;
   overflow: hidden;
-  text-overflow: ellipsis; /* 2 */
+  text-overflow: ellipsis;
 }
 
 /**Timeline nav title after
@@ -318,7 +319,7 @@
 .timeline-nav__link-arrow {
   margin-left: auto;
   align-self: center;
-  flex-shrink: 0; /* 2 */
+  flex-shrink: 0;
 
   @media all and (min-width: $eds-bp-lg) {
     display: none;

@@ -17,7 +17,7 @@ export const ModalFinalStep = () => (
   >
     <Modal.Header>
       <div
-        className="u-display-flex u-flex-direction-column u-justify-content-center u-align-items-center"
+        className="flex flex-col justify-center items-center"
         style={{ height: '25rem' }}
       >
         <img alt="a checkmark" src={CadSuccess} />
@@ -27,7 +27,7 @@ export const ModalFinalStep = () => (
     <Modal.Body>
       <Text>Supporting copy goes here</Text>
     </Modal.Body>
-    <Modal.Footer className="u-display-flex u-justify-content-flex-end">
+    <Modal.Footer className="flex justify-end">
       <Button
         onClick={
           () => {} /* eslint-disable-line @typescript-eslint/no-empty-function */

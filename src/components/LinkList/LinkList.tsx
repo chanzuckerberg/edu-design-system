@@ -18,10 +18,6 @@ export interface Props {
    */
   className?: string;
   /**
-   * Color theme for the component. "inverted" theme is for use on dark backgrounds
-   */
-  inverted?: boolean;
-  /**
    * Size variants:
    * - **sm** yields a link list with smaller typography
    */
@@ -44,7 +40,6 @@ export const LinkList = ({
   behavior,
   children,
   className,
-  inverted,
   size,
   variant,
   ...other
@@ -52,7 +47,6 @@ export const LinkList = ({
   const componentClassName = clsx(
     styles['link-list'],
     size === 'sm' && styles['link-list--sm'],
-    inverted && styles['link-list--inverted'],
     variant === 'lined' && styles['link-list--lined'],
     behavior === 'responsive' && styles['link-list--responsive'],
     behavior === 'horizontal' && styles['link-list--horizontal'],

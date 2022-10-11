@@ -129,9 +129,6 @@ export const Mobile: StoryObj<Args> = {
   },
 };
 
-/**
- * 1) Chromatic sets viewport height to 900px, hence won't snap as necessary
- */
 export const MobileLandscape: StoryObj<Args> = {
   ...Default,
   parameters: {
@@ -147,7 +144,9 @@ export const MobileLandscape: StoryObj<Args> = {
           },
         },
       },
-      /* 1 */
+      /**
+       * Chromatic sets viewport height to 900px, hence won't snap as necessary
+       */
       chromatic: { disableSnapshot: true },
     },
   },
@@ -445,14 +444,13 @@ const InteractiveModalStepperComponent = () => {
   );
 };
 
-/**
- * 1) For interactive purposes only, low value in snapping or checking for visual regression since they should be covered in the other stories.
- */
 export const InteractiveModalStepper: StoryObj<ModalStepperArgs> = {
   ...ModalStepper,
   render: () => <InteractiveModalStepperComponent />,
   parameters: {
-    /* 1 */
+    /**
+     * For interactive purposes only, low value in snapping or checking for visual regression since they should be covered in the other stories.
+     */
     snapshot: {
       skip: true,
     },

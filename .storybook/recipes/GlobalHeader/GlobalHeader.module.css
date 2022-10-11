@@ -41,9 +41,6 @@
 
 /**
  * Menu Button 
- * 1) Menu button triggers the navigation container
- *    on small screens, but is hidden when the nav
- *    can be exposed
  */
 .global-header__menu-button.global-header__menu-button {
   padding: var(--eds-size-half);
@@ -72,7 +69,12 @@
   }
 
   @media all and (min-width: $eds-bp-xl) {
-    display: none; /* 1 */
+    /**
+     * Menu button triggers the navigation container
+     * on small screens, but is hidden when the nav
+     * can be exposed
+     */
+    display: none;
   }
 }
 
@@ -91,12 +93,14 @@
 
 /**
  * Utility nav popover
- * 1) On small screens, create a max width so that the popover flexes to accommodate small screens
  */
 .global-header__popover {
   max-height: 28rem;
   width: max-content;
-  max-width: calc(100vw - 2rem); /* 1 */
+  /**
+   * On small screens, create a max width so that the popover flexes to accommodate small screens
+   */
+  max-width: calc(100vw - 2rem);
 
   @media all and (min-width: $eds-bp-xl) {
     max-width: initial;

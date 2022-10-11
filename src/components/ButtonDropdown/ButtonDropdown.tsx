@@ -1,21 +1,14 @@
 import clsx from 'clsx';
-import React, { ReactNode, SyntheticEvent } from 'react';
+import React, { ReactNode } from 'react';
 import styles from './ButtonDropdown.module.css';
 import { DropdownMenu } from '../..';
-import { ESCAPE_KEYCODE } from '../../util/keycodes';
 import type { ClickableStyleProps } from '../ClickableStyle';
 
-interface FocusEvent<T = Element> extends SyntheticEvent<T> {
-  relatedTarget: EventTarget | null;
-  target: EventTarget & T;
-}
-
 export interface Props {
-  buttonAriaLabel?: string;
   /**
-   * Makes button full width
+   * Aria label to be attacehd to the dropdown trigger button.
    */
-  fullWidth?: boolean;
+  buttonAriaLabel?: string;
   /**
    * Adds status to the button (e.g. error, success)
    */
@@ -29,9 +22,27 @@ export interface Props {
    */
   buttonVariant?: ClickableStyleProps<'button'>['variant'];
   /**
+   * Prop used to pass in `DropdownMenuItem` child components
+   */
+  children?: ReactNode;
+  /**
+   * CSS class names that can be appended to the component.
+   */
+  className?: string;
+  /**
    * Disables the field and prevents editing the contents
    */
   disabled?: boolean;
+  /**
+   * Prop used to pass in the dropdown menu trigger (dropdownTrigger={<Button />}). This
+   * allows for maximum flexbility with extending the button and passing in props from the
+   * outside
+   */
+  dropdownMenuTrigger?: ReactNode;
+  /**
+   * Makes button full width
+   */
+  fullWidth?: boolean;
   /**
    * Determines type of clickable
    * - default renders a dropdown menu to the bottom left of the button
@@ -47,20 +58,6 @@ export interface Props {
    * - **reset** The clickable is a reset clickable (resets the form-data to its initial values)
    */
   type?: 'button' | 'reset' | 'submit';
-  /**
-   * Prop used to pass in the dropdown menu trigger (dropdownTrigger={<Button />}). This
-   * allows for maximum flexbility with extending the button and passing in props from the
-   * outside
-   */
-  dropdownMenuTrigger?: ReactNode;
-  /**
-   * Prop used to pass in `DropdownMenuItem` child components
-   */
-  children?: ReactNode;
-  /**
-   * CSS class names that can be appended to the component.
-   */
-  className?: string;
 }
 
 /**
@@ -87,7 +84,6 @@ export const ButtonDropdown = ({
 
   /**
    * On component load/updated
-   * * 1) Handle click outside panel event handling for both tap and mouse events
    */
   React.useEffect(() => {
     if (isActiveVar) {
@@ -95,58 +91,44 @@ export const ButtonDropdown = ({
       const el = ref.current.querySelector<HTMLElement>('.sparky-c-dropdown');
       if (el) el.focus();
     }
-    document.addEventListener('mousedown', handleOnClickOutside, false); /* 1 */
-    document.addEventListener(
-      'touchstart',
-      handleOnClickOutside,
-      false,
-    ); /* 1 */
+    /**
+     * Handle click outside panel event handling for both tap and mouse events
+     */
+    document.addEventListener('mousedown', handleOnClickOutside, false);
+    document.addEventListener('touchstart', handleOnClickOutside, false);
     return () => {
-      document.removeEventListener(
-        'mousedown',
-        handleOnClickOutside,
-        false,
-      ); /* 1 */
-      document.removeEventListener(
-        'touchstart',
-        handleOnClickOutside,
-        false,
-      ); /* 1 */
+      document.removeEventListener('mousedown', handleOnClickOutside, false);
+      document.removeEventListener('touchstart', handleOnClickOutside, false);
     };
   });
 
   /**
    * Handle click outside function
-   * 1) If the event isn't inside to the dropdown button itself or the entire
-   * component, then close the panel
    */
   const handleOnClickOutside = (event: MouseEvent | TouchEvent) => {
     if (ref.current && !ref.current.contains(event.target as HTMLElement)) {
-      closePanel(); /* 1 */
+      /**
+       * If the event isn't inside to the dropdown button itself or the entire
+       * component, then close the panel
+       */
+      closePanel();
     }
   };
 
   /**
    * Close the panel
-   * 1) Set active state to false
-   * 2) Return the focus to the button that triggered the dropdown when closed
    */
   function closePanel() {
-    setIsActive(false); /* 1 */
+    /**
+     * Set active state to false
+     */
+    setIsActive(false);
 
     if (isActiveVar && buttonRef.current) {
-      buttonRef.current.focus(); /* 2 */
-    }
-  }
-
-  /**
-   * Handle keydown function
-   *
-   * If the escape key is struck, close the panel.
-   */
-  function handleKeyDown(e: React.KeyboardEvent) {
-    if (e.key === ESCAPE_KEYCODE) {
-      closePanel();
+      /**
+       * Return the focus to the button that triggered the dropdown when closed
+       */
+      buttonRef.current.focus();
     }
   }
 
@@ -160,7 +142,7 @@ export const ButtonDropdown = ({
   const dropdownMenuTriggerWithProps = React.Children.map(
     dropdownMenuTrigger,
     // TODO: improve `any` type
-    (child: any, i: number) => {
+    (child: any) => {
       // Checking isValidElement is the safe way and avoids a typescript
       // error too.
       if (React.isValidElement(child)) {
@@ -176,14 +158,6 @@ export const ButtonDropdown = ({
     },
   );
 
-  const handleBlur = (event: FocusEvent<HTMLDivElement>) => {
-    if (!event.currentTarget.contains(event.relatedTarget as HTMLElement)) {
-      if (isActiveVar) {
-        closePanel();
-      }
-    }
-  };
-
   const componentClassName = clsx(
     styles['button-dropdown'],
     isActiveVar && styles['eds-is-active'],
@@ -193,18 +167,11 @@ export const ButtonDropdown = ({
     className,
   );
   return (
-    <div
-      className={componentClassName}
-      /* TODO: Figure out role that allows blur to entire menu
-      /* eslint-disable-next-line jsx-a11y/no-static-element-interactions */
-      onBlur={handleBlur}
-      ref={ref}
-      {...other}
-    >
+    <div className={componentClassName} ref={ref} {...other}>
       {dropdownMenuTriggerWithProps}
       <DropdownMenu
         className={styles['button-dropdown__dropdown-menu']}
-        handleOnEscDown={(e: React.KeyboardEvent) => handleKeyDown(e)}
+        closeDropdownMenu={closePanel}
         isActive={isActiveVar}
       >
         {children}

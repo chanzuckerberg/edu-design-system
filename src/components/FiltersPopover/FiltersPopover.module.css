@@ -11,13 +11,6 @@
 }
 
 /**
- * Trigger button that opens the filters popover.
- */
-.filters-popover__button {
-  gap: var(--eds-size-1);
-}
-
-/**
  * The button group of the houses the apply and clear all buttons.
  */
 .footer__button-group {

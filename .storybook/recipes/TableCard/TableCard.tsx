@@ -68,7 +68,7 @@ export const TableCard = ({
       <CardBody>
         <Heading
           as="h2"
-          className="u-margin-bottom-md"
+          className="mb-4"
           size="title-sm"
           variant="neutral-strong"
         >

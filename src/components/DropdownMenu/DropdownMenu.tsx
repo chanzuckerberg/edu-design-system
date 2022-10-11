@@ -6,6 +6,7 @@ import React, {
   useEffect,
   KeyboardEvent,
   HTMLAttributes,
+  MouseEventHandler,
 } from 'react';
 import styles from './DropdownMenu.module.css';
 import {
@@ -16,6 +17,7 @@ import {
   ESCAPE_KEYCODE,
   HOME_KEYCODE,
   END_KEYCODE,
+  TAB_KEYCODE,
 } from '../../util/keycodes';
 
 export type Props = {
@@ -32,9 +34,9 @@ export type Props = {
    */
   isActive?: boolean;
   /**
-   * Invoked when the escape key is pressed.
+   * Callback used to close the dropdown menu. Typically sets active state to false in parent.
    */
-  handleOnEscDown?: (e: React.KeyboardEvent) => void;
+  closeDropdownMenu?: () => void;
 } & HTMLAttributes<HTMLElement>;
 
 type Refs = {
@@ -57,8 +59,8 @@ export const DropdownMenuContext = createContext<ContextRefs | null>(null);
 export const DropdownMenu: React.FC<Props> = ({
   children,
   className,
+  closeDropdownMenu,
   isActive,
-  handleOnEscDown,
   ...other
 }) => {
   const refs = useRef<Refs>({
@@ -80,9 +82,14 @@ export const DropdownMenu: React.FC<Props> = ({
   }, [isActive]);
 
   const onKeyDown = (e: KeyboardEvent<HTMLUListElement>) => {
-    // Calls callback on escape key trigger, typically to close the menu.
-    if (e.key === ESCAPE_KEYCODE && handleOnEscDown) {
-      handleOnEscDown(e);
+    // Calls callback on escape or tab key, typically to close the menu.
+    if (
+      (e.key === ESCAPE_KEYCODE || e.key === TAB_KEYCODE) &&
+      closeDropdownMenu
+    ) {
+      closeDropdownMenu();
+      // Prevents focus from moving onto next element in tab order and keeps it on trigger button.
+      e.preventDefault();
     }
 
     // Focus next element with right or down arrow key.
@@ -128,12 +135,20 @@ export const DropdownMenu: React.FC<Props> = ({
     }
   };
 
+  const handleOnClick: MouseEventHandler = (e) => {
+    focusIndex = refs.current.list.findIndex((ref) =>
+      ref.contains(e.target as HTMLElement),
+    );
+    focusItem(focusIndex);
+  };
+
   const componentClassName = clsx(styles['dropdown-menu'], className);
   return (
     <DropdownMenuContext.Provider value={{ refs }}>
       <div className={componentClassName} {...other}>
         <ul
           className={styles['dropdown-menu__list']}
+          onClick={handleOnClick}
           onKeyDown={onKeyDown}
           role="menu"
         >

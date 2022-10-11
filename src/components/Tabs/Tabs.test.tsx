@@ -9,6 +9,7 @@ const { Default } = composeStories(stories);
 
 describe('<Tabs />', () => {
   generateSnapshots(stories);
+
   it('should focus and select with keyboard controls', () => {
     render(<Default />);
     const firstTab = screen.getByRole('tab', { name: 'Tab Title 1' });
@@ -31,5 +32,13 @@ describe('<Tabs />', () => {
       'aria-selected',
       'true',
     );
+  });
+
+  it('changes the active tab when activeIndex changes', () => {
+    const { rerender } = render(<Default activeIndex={0} />);
+    expect(screen.getByRole('heading', { name: 'Tab 1' })).toBeInTheDocument();
+
+    rerender(<Default activeIndex={1} />);
+    expect(screen.getByRole('heading', { name: 'Tab 2' })).toBeInTheDocument();
   });
 });

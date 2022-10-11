@@ -63,18 +63,6 @@
     border-bottom-color: var(--eds-theme-color-border-neutral-subtle);
   }
 
-  /**
-   * link within an inverted link list
-   */
-  .link-list--inverted & {
-    color: var(--eds-theme-color-text-neutral-default-inverse);
-    text-decoration: none;
-
-    &:focus {
-      @mixin focusInverted;
-    }
-  }
-
   .link-list--lined .link-list__item:last-child & {
     border-bottom: none;
   }

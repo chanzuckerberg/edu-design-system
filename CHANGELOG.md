@@ -2,6 +2,44 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [5.2.1](https://github.com/chanzuckerberg/edu-design-system/compare/v5.2.0...v5.2.1) (2022-10-07)
+
+
+### Chores
+
+* clean up types and onclick, forward ref ([fd5b65d](https://github.com/chanzuckerberg/edu-design-system/commit/fd5b65d68b745e532eeb876efe557e77fb174a62))
+
+## [5.2.0](https://github.com/chanzuckerberg/edu-design-system/compare/v5.1.1-alpha.0...v5.2.0) (2022-10-06)
+
+
+### Features
+
+* remove inverted variants from existing components ([dd6c550](https://github.com/chanzuckerberg/edu-design-system/commit/dd6c5504a291f0b77716daad31f862c6782f10c9)), closes [Shortcut#213036](https://github.com/chanzuckerberg/Shortcut/issues/213036)
+* remove overflow inversion from TimelineNav ([b8e0c55](https://github.com/chanzuckerberg/edu-design-system/commit/b8e0c55bc7ae691258757d9268c09ec2fe08cf0f))
+* **Tabs:** remove and clean up props for Tabs (sub-)components ([1e5bfa5](https://github.com/chanzuckerberg/edu-design-system/commit/1e5bfa59b345a4d852163a9d5d8c30ee85627592))
+
+
+### Bug Fixes
+
+* apply stricter types to refs and hooks ([24a3363](https://github.com/chanzuckerberg/edu-design-system/commit/24a3363c78d3f31c42eda43e5ab72cbfcc286c02))
+* don't generate <Tab> ids from the <Tabs>'s aria-labelledby ([99a1a12](https://github.com/chanzuckerberg/edu-design-system/commit/99a1a12d4eedddcad64d290e4ac74f0fe378fb76))
+* don't generate <Tab> ids from the <Tabs>'s aria-labelledby ([20859e9](https://github.com/chanzuckerberg/edu-design-system/commit/20859e9d020f3f9afb25b6b6b33b6cbf84123b90))
+* omit title from rest on Tab ([97c0d89](https://github.com/chanzuckerberg/edu-design-system/commit/97c0d89ec4ad51c5ca2c6d57eb1e798dc5ad32c4))
+* put aria-labelledby on the tablist, instead of a random <div> ([164cd46](https://github.com/chanzuckerberg/edu-design-system/commit/164cd4601bd9862567f687073c5e6472abd6c7da))
+* put aria-labelledby on the tablist, instead of a random <div> ([f2fc07f](https://github.com/chanzuckerberg/edu-design-system/commit/f2fc07f94e66d95d0248af7b70d1f7302809a994))
+* **tag:** allow data attributes on tag ([5aeaa9c](https://github.com/chanzuckerberg/edu-design-system/commit/5aeaa9ce2b0985e608bfc91aadae46dc60f8fbad))
+* **tag:** remove max-width ([6f787a5](https://github.com/chanzuckerberg/edu-design-system/commit/6f787a5e4c5f6d60b51a604d5f3aae1c8d80bbdc))
+* use Tab id if present ([5961658](https://github.com/chanzuckerberg/edu-design-system/commit/59616585f433f2ca07c95fc8be5ef7cf586f3479))
+* use Tab id if present ([0cd797a](https://github.com/chanzuckerberg/edu-design-system/commit/0cd797a2a1e36d7b06110d84bbe09d1795c158a3))
+
+### [5.1.1](https://github.com/chanzuckerberg/edu-design-system/compare/v5.1.1-alpha.0...v5.1.1) (2022-09-22)
+
+
+### Bug Fixes
+
+* **tag:** allow data attributes on tag ([5aeaa9c](https://github.com/chanzuckerberg/edu-design-system/commit/5aeaa9ce2b0985e608bfc91aadae46dc60f8fbad))
+* **tag:** remove max-width ([6f787a5](https://github.com/chanzuckerberg/edu-design-system/commit/6f787a5e4c5f6d60b51a604d5f3aae1c8d80bbdc))
+
 ## [5.1.0](https://github.com/chanzuckerberg/edu-design-system/compare/v5.0.1...v5.1.0) (2022-09-20)
 
 
