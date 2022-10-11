@@ -215,7 +215,10 @@ export const StudentRefinement = () => (
                     className={styles['student-refinement__name-cell']}
                     data-heading="Student"
                   >
-                    <Text as="span" size="sm">
+                    <Text
+                      as="span"
+                      className={styles['student-refinement__name-cell-text']}
+                    >
                       Caroline Garcia
                     </Text>
                     <Tag hasOutline text="Off Track" variant="warning" />
@@ -232,7 +235,11 @@ export const StudentRefinement = () => (
                       size="1.25rem"
                       title="off track"
                     />
-                    <Score text="53%" variant="table" />
+                    <Score
+                      className={styles['student-refinement__score']}
+                      text="53%"
+                      variant="table"
+                    />
                   </Table.Cell>
                   <Table.Cell
                     className={styles['student-refinement__body-cell']}
@@ -246,14 +253,18 @@ export const StudentRefinement = () => (
                       size="1.25rem"
                       title="off track"
                     />
-                    <Score text="30%" variant="table" />
+                    <Score
+                      className={styles['student-refinement__score']}
+                      text="30%"
+                      variant="table"
+                    />
                   </Table.Cell>
                   <Table.Cell
                     className={styles['student-refinement__body-cell']}
                     data-heading="Project"
                   >
                     <Score
-                      className={styles['student-refinement__second-item']}
+                      className={styles['student-refinement__score']}
                       text="3 / 3"
                       variant="table"
                     />
@@ -266,7 +277,7 @@ export const StudentRefinement = () => (
                     data-heading="Power Focus Area"
                   >
                     <Score
-                      className={styles['student-refinement__second-item']}
+                      className={styles['student-refinement__score']}
                       text="8 / 10"
                       variant="table"
                     />
@@ -277,7 +288,10 @@ export const StudentRefinement = () => (
                     className={styles['student-refinement__name-cell']}
                     data-heading="Student"
                   >
-                    <Text as="span" size="sm">
+                    <Text
+                      as="span"
+                      className={styles['student-refinement__name-cell-text']}
+                    >
                       Anthony Smith
                     </Text>
                   </Table.Cell>
@@ -291,14 +305,18 @@ export const StudentRefinement = () => (
                     >
                       A
                     </Text>
-                    <Score text="93%" variant="table" />
+                    <Score
+                      className={styles['student-refinement__score']}
+                      text="93%"
+                      variant="table"
+                    />
                   </Table.Cell>
                   <Table.Cell
                     className={styles['student-refinement__body-cell']}
                     data-heading="Cog Skill Avg"
                   >
                     <Score
-                      className={styles['student-refinement__second-item']}
+                      className={styles['student-refinement__score']}
                       text="84%"
                       variant="table"
                     />
@@ -315,7 +333,11 @@ export const StudentRefinement = () => (
                       size="1.25rem"
                       title="off track"
                     />
-                    <Score text="2 / 3" variant="table" />
+                    <Score
+                      className={styles['student-refinement__score']}
+                      text="2 / 3"
+                      variant="table"
+                    />
                   </Table.Cell>
                   <Table.Cell
                     className={clsx(
@@ -325,7 +347,7 @@ export const StudentRefinement = () => (
                     data-heading="Power Focus Area"
                   >
                     <Score
-                      className={styles['student-refinement__second-item']}
+                      className={styles['student-refinement__score']}
                       text="4 / 10"
                       variant="table"
                     />
@@ -336,7 +358,10 @@ export const StudentRefinement = () => (
                     className={styles['student-refinement__name-cell']}
                     data-heading="Student"
                   >
-                    <Text as="span" size="sm">
+                    <Text
+                      as="span"
+                      className={styles['student-refinement__name-cell-text']}
+                    >
                       Sai Kumar
                     </Text>
                   </Table.Cell>
@@ -350,14 +375,18 @@ export const StudentRefinement = () => (
                     >
                       B-
                     </Text>
-                    <Score text="81%" variant="table" />
+                    <Score
+                      className={styles['student-refinement__score']}
+                      text="81%"
+                      variant="table"
+                    />
                   </Table.Cell>
                   <Table.Cell
                     className={styles['student-refinement__body-cell']}
                     data-heading="Cog Skill Avg"
                   >
                     <Score
-                      className={styles['student-refinement__second-item']}
+                      className={styles['student-refinement__score']}
                       text="78%"
                       variant="table"
                     />
@@ -374,7 +403,11 @@ export const StudentRefinement = () => (
                       size="1.25rem"
                       title="off track"
                     />
-                    <Score text="1 / 3" variant="table" />
+                    <Score
+                      className={styles['student-refinement__score']}
+                      text="1 / 3"
+                      variant="table"
+                    />
                   </Table.Cell>
                   <Table.Cell
                     className={clsx(
@@ -384,7 +417,7 @@ export const StudentRefinement = () => (
                     data-heading="Power Focus Area"
                   >
                     <Score
-                      className={styles['student-refinement__second-item']}
+                      className={styles['student-refinement__score']}
                       text="7 / 10"
                       variant="table"
                     />
@@ -395,7 +428,10 @@ export const StudentRefinement = () => (
                     className={styles['student-refinement__name-cell']}
                     data-heading="Student"
                   >
-                    <Text as="span" size="sm">
+                    <Text
+                      as="span"
+                      className={styles['student-refinement__name-cell-text']}
+                    >
                       Rachel Campbell
                     </Text>
                   </Table.Cell>
@@ -411,14 +447,18 @@ export const StudentRefinement = () => (
                       size="1.25rem"
                       title="off track"
                     />
-                    <Score text="68%" variant="table" />
+                    <Score
+                      className={styles['student-refinement__score']}
+                      text="68%"
+                      variant="table"
+                    />
                   </Table.Cell>
                   <Table.Cell
                     className={styles['student-refinement__body-cell']}
                     data-heading="Cog Skill Avg"
                   >
                     <Score
-                      className={styles['student-refinement__second-item']}
+                      className={styles['student-refinement__score']}
                       text="73%"
                       variant="table"
                     />
@@ -428,7 +468,7 @@ export const StudentRefinement = () => (
                     data-heading="Project"
                   >
                     <Score
-                      className={styles['student-refinement__second-item']}
+                      className={styles['student-refinement__score']}
                       text="3 / 3"
                       variant="table"
                     />
@@ -441,7 +481,7 @@ export const StudentRefinement = () => (
                     data-heading="Power Focus Area"
                   >
                     <Score
-                      className={styles['student-refinement__second-item']}
+                      className={styles['student-refinement__score']}
                       text="5 / 10"
                       variant="table"
                     />
@@ -452,7 +492,10 @@ export const StudentRefinement = () => (
                     className={styles['student-refinement__name-cell']}
                     data-heading="Student"
                   >
-                    <Text as="span" size="sm">
+                    <Text
+                      as="span"
+                      className={styles['student-refinement__name-cell-text']}
+                    >
                       Emily Tran
                     </Text>
                     <Tag hasOutline text="Off Track" variant="warning" />
@@ -469,14 +512,18 @@ export const StudentRefinement = () => (
                       size="1.25rem"
                       title="off track"
                     />
-                    <Score text="30%" variant="table" />
+                    <Score
+                      className={styles['student-refinement__score']}
+                      text="30%"
+                      variant="table"
+                    />
                   </Table.Cell>
                   <Table.Cell
                     className={styles['student-refinement__body-cell']}
                     data-heading="Cog Skill Avg"
                   >
                     <Score
-                      className={styles['student-refinement__second-item']}
+                      className={styles['student-refinement__score']}
                       text="100%"
                       variant="table"
                     />
@@ -493,7 +540,11 @@ export const StudentRefinement = () => (
                       size="1.25rem"
                       title="off track"
                     />
-                    <Score text="2 / 3" variant="table" />
+                    <Score
+                      className={styles['student-refinement__score']}
+                      text="2 / 3"
+                      variant="table"
+                    />
                   </Table.Cell>
                   <Table.Cell
                     className={clsx(
@@ -510,7 +561,11 @@ export const StudentRefinement = () => (
                       size="1.25rem"
                       title="off track"
                     />
-                    <Score text="3 / 10" variant="table" />
+                    <Score
+                      className={styles['student-refinement__score']}
+                      text="3 / 10"
+                      variant="table"
+                    />
                   </Table.Cell>
                 </Table.Row>
                 <Table.Row className={styles['student-refinement__table-row']}>
@@ -518,7 +573,10 @@ export const StudentRefinement = () => (
                     className={styles['student-refinement__name-cell']}
                     data-heading="Student"
                   >
-                    <Text as="span" size="sm">
+                    <Text
+                      as="span"
+                      className={styles['student-refinement__name-cell-text']}
+                    >
                       Wei Zhang
                     </Text>
                   </Table.Cell>
@@ -532,14 +590,18 @@ export const StudentRefinement = () => (
                     >
                       C
                     </Text>
-                    <Score text="73%" variant="table" />
+                    <Score
+                      className={styles['student-refinement__score']}
+                      text="73%"
+                      variant="table"
+                    />
                   </Table.Cell>
                   <Table.Cell
                     className={styles['student-refinement__body-cell']}
                     data-heading="Cog Skill Avg"
                   >
                     <Score
-                      className={styles['student-refinement__second-item']}
+                      className={styles['student-refinement__score']}
                       text="75%"
                       variant="table"
                     />
@@ -549,7 +611,7 @@ export const StudentRefinement = () => (
                     data-heading="Project"
                   >
                     <Score
-                      className={styles['student-refinement__second-item']}
+                      className={styles['student-refinement__score']}
                       text="3 / 3"
                       variant="table"
                     />
@@ -562,7 +624,7 @@ export const StudentRefinement = () => (
                     data-heading="Power Focus Area"
                   >
                     <Score
-                      className={styles['student-refinement__second-item']}
+                      className={styles['student-refinement__score']}
                       text="6 / 10"
                       variant="table"
                     />
