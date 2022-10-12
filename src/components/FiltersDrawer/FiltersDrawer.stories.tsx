@@ -1,5 +1,5 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
-import { StoryObj, Meta } from '@storybook/react';
+import type { StoryObj, Meta } from '@storybook/react';
 import { within } from '@storybook/testing-library';
 import isChromatic from 'chromatic/isChromatic';
 import React from 'react';

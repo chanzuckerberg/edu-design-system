@@ -1,5 +1,6 @@
 import clsx from 'clsx';
-import React, { ChangeEventHandler, forwardRef } from 'react';
+import type { ChangeEventHandler } from 'react';
+import React, { forwardRef } from 'react';
 import styles from './InputField.module.css';
 
 export type InputFieldProps = React.InputHTMLAttributes<HTMLInputElement> & {

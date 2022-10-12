@@ -1,10 +1,11 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
-import { StoryObj, Meta } from '@storybook/react';
+import type { StoryObj, Meta } from '@storybook/react';
 import { within } from '@storybook/testing-library';
 import isChromatic from 'chromatic/isChromatic';
 import React from 'react';
 
-import { FiltersPopover, FiltersPopoverProps } from './FiltersPopover';
+import type { FiltersPopoverProps } from './FiltersPopover';
+import { FiltersPopover } from './FiltersPopover';
 import styles from './FiltersPopover.stories.module.css';
 import { Checkbox } from '../Checkbox/Checkbox';
 import { FiltersCheckboxField } from '../FiltersCheckboxField/FiltersCheckboxField';

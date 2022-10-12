@@ -1,6 +1,6 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
-import { StoryObj, Meta } from '@storybook/react';
-import React from 'react';
+import type { StoryObj, Meta } from '@storybook/react';
+import type React from 'react';
 
 import { StackedBlock } from './StackedBlock';
 

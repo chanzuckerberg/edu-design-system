@@ -1,5 +1,5 @@
-import { StoryObj, Meta } from '@storybook/react';
-import React from 'react';
+import type { StoryObj, Meta } from '@storybook/react';
+import type React from 'react';
 
 import { DataSummaryCard } from './DataSummaryCard';
 

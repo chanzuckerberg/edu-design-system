@@ -1,6 +1,7 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import clsx from 'clsx';
-import React, { ReactNode } from 'react';
+import type { ReactNode } from 'react';
+import React from 'react';
 import { useState } from 'react';
 import Modal, { ModalContent } from './Modal';
 import styles from './Modal.stories.module.css';

@@ -1,10 +1,8 @@
 import debounce from 'lodash.debounce';
 import React, { useEffect, useState } from 'react';
 import FiltersDrawer from '../../../src/components/FiltersDrawer';
-import {
-  FiltersPopover,
-  FiltersPopoverProps,
-} from '../../../src/components/FiltersPopover/FiltersPopover';
+import type { FiltersPopoverProps } from '../../../src/components/FiltersPopover/FiltersPopover';
+import { FiltersPopover } from '../../../src/components/FiltersPopover/FiltersPopover';
 
 import breakpoint from '../../../src/design-tokens/tier-1-definitions/breakpoints';
 type Props = {
