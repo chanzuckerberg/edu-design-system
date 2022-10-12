@@ -1,1 +1,1 @@
-export { FieldNote as default } from './FieldNote';
+export {FieldNote as default} from './FieldNote';

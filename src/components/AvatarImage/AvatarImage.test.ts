@@ -1,4 +1,4 @@
-import { generateSnapshots } from '@chanzuckerberg/story-utils';
+import {generateSnapshots} from '@chanzuckerberg/story-utils';
 import * as AvatarImageStoryFile from './AvatarImage.stories';
 
 describe('<AvatarImage />', () => {

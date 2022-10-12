@@ -1,4 +1,4 @@
-import { generateSnapshots } from '@chanzuckerberg/story-utils';
+import {generateSnapshots} from '@chanzuckerberg/story-utils';
 import * as PageLevelBannerStoryFile from './PageLevelBanner.stories';
 
 describe('<PageLevelBanner />', () => {

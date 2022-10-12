@@ -1,1 +1,1 @@
-export { PrimaryNavItem as default } from './PrimaryNavItem';
+export {PrimaryNavItem as default} from './PrimaryNavItem';

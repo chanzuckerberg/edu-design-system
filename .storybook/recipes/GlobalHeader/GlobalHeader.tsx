@@ -1,7 +1,7 @@
 import clsx from 'clsx';
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 import styles from './GlobalHeader.module.css';
-import { Button, Icon, Heading } from '../../../src';
+import {Button, Icon, Heading} from '../../../src';
 // Project Overview pilot components -- not yet exported from src/index.ts
 import Avatar from '../../../src/components/Avatar';
 import Header from '../../../src/components/Header';
@@ -14,7 +14,7 @@ import PrimaryNavItem from '../../../src/components/PrimaryNavItem';
 import UtilityNav from '../../../src/components/UtilityNav';
 
 import breakpoint from '../../../src/design-tokens/tier-1-definitions/breakpoints';
-import { EdsThemeColorIconNeutralDefaultInverse } from '../../../src/tokens-dist/ts/colors';
+import {EdsThemeColorIconNeutralDefaultInverse} from '../../../src/tokens-dist/ts/colors';
 
 export interface Props {
   /**
@@ -70,7 +70,7 @@ export const GlobalHeader = ({
   /**
    * Use the xl breakpoint to match the CSS breakpoint for the popover position change
    */
-  const popoverBreakpoint = parseInt(breakpoint['eds-bp-xl']) * 16;
+  const popoverBreakpoint = parseInt(breakpoint['eds-bp-xl'], 10) * 16;
 
   const toggleMenu = () => {
     setisActive(!isActive);

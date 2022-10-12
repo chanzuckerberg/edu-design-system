@@ -1,1 +1,1 @@
-export { CardHeader as default } from './CardHeader';
+export {CardHeader as default} from './CardHeader';

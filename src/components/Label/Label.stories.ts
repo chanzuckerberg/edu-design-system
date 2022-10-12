@@ -1,7 +1,7 @@
-import type { StoryObj, Meta } from '@storybook/react';
+import type {StoryObj, Meta} from '@storybook/react';
 import type React from 'react';
 
-import { Label } from './Label';
+import {Label} from './Label';
 
 export default {
   title: 'Atoms/Forms/Label',

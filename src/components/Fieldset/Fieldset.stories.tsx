@@ -1,15 +1,15 @@
-import type { StoryObj, Meta } from '@storybook/react';
-import React, { useState } from 'react';
-import { Fieldset } from './Fieldset';
+import type {StoryObj, Meta} from '@storybook/react';
+import React, {useState} from 'react';
+import {Fieldset} from './Fieldset';
 import Checkbox from '../Checkbox';
 import FieldsetItems from '../FieldsetItems';
-import type { FieldsetLegendProps } from '../FieldsetLegend';
+import type {FieldsetLegendProps} from '../FieldsetLegend';
 import FieldsetLegend from '../FieldsetLegend';
 
 export default {
   title: 'Atoms/Forms/Fieldset',
   component: Fieldset,
-  subcomponents: { FieldsetLegend, FieldsetItems },
+  subcomponents: {FieldsetLegend, FieldsetItems},
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Fieldset>;

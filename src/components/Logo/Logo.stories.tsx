@@ -1,7 +1,7 @@
-import type { StoryObj, Meta } from '@storybook/react';
+import type {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
 
-import { Logo } from './Logo';
+import {Logo} from './Logo';
 
 export default {
   title: 'Molecules/Global/Logo',
@@ -26,7 +26,7 @@ export default {
   },
   decorators: [
     (Story) => (
-      <div style={{ background: '#000' }}>
+      <div style={{background: '#000'}}>
         <Story />
       </div>
     ),

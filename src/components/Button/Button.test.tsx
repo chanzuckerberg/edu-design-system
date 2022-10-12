@@ -1,8 +1,8 @@
-import { generateSnapshots } from '@chanzuckerberg/story-utils';
-import { render, screen } from '@testing-library/react';
+import {generateSnapshots} from '@chanzuckerberg/story-utils';
+import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
-import { Button } from './Button';
+import {Button} from './Button';
 import * as ButtonStoryFile from './Button.stories';
 
 describe('<Button />', () => {

@@ -1,8 +1,8 @@
 import clsx from 'clsx';
-import type { ReactNode, KeyboardEvent } from 'react';
-import React, { useState, useRef, useEffect } from 'react';
+import type {ReactNode, KeyboardEvent} from 'react';
+import React, {useState, useRef, useEffect} from 'react';
 import styles from './ShowHide.module.css';
-import { ESCAPE_KEYCODE } from '../../util/keycodes';
+import {ESCAPE_KEYCODE} from '../../util/keycodes';
 
 export interface Props {
   /**

@@ -1,6 +1,6 @@
 import React from 'react';
-import { Icon } from '../../../src/components/Icon/Icon';
-import { ALL_ICONS } from '../../../src/util/allIcons';
+import {Icon} from '../../../src/components/Icon/Icon';
+import {ALL_ICONS} from '../../../src/util/allIcons';
 import './IconGrid.css';
 
 const IconGrid = () => (

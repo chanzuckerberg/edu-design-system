@@ -1,7 +1,7 @@
-import type { StoryObj, Meta } from '@storybook/react';
+import type {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
 
-import { ProjectCard } from './ProjectCard';
+import {ProjectCard} from './ProjectCard';
 import DropdownMenuItem from '../DropdownMenuItem';
 import Icon from '../Icon';
 

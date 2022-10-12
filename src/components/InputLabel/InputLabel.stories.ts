@@ -1,8 +1,8 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
-import type { StoryObj, Meta } from '@storybook/react';
-import type { ComponentProps } from 'react';
+import {BADGE} from '@geometricpanda/storybook-addon-badges';
+import type {StoryObj, Meta} from '@storybook/react';
+import type {ComponentProps} from 'react';
 
-import { InputLabel } from './InputLabel';
+import {InputLabel} from './InputLabel';
 
 export default {
   title: 'Atoms/Forms/InputLabel',

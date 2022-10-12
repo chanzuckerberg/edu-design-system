@@ -1,1 +1,1 @@
-export { TableObject as default } from './TableObject';
+export {TableObject as default} from './TableObject';

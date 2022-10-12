@@ -1,10 +1,10 @@
 import clsx from 'clsx';
 import React from 'react';
-import { useUID } from 'react-uid';
+import {useUID} from 'react-uid';
 import styles from './Checkbox.module.css';
-import type { CheckboxInputProps } from '../CheckboxInput';
+import type {CheckboxInputProps} from '../CheckboxInput';
 import CheckboxInput from '../CheckboxInput';
-import type { CheckboxLabelProps } from '../CheckboxLabel';
+import type {CheckboxLabelProps} from '../CheckboxLabel';
 import CheckboxLabel from '../CheckboxLabel';
 
 // id is required in CheckboxInputProps but optional in CheckboxProps, so we
@@ -46,7 +46,7 @@ export type CheckboxProps = Omit<CheckboxInputProps, 'id'> & {
 export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
   (props, ref) => {
     // All remaining props are passed to the `input` element
-    const { className, id, label, size = 'lg', disabled, ...other } = props;
+    const {className, id, label, size = 'lg', disabled, ...other} = props;
 
     // When possible, use a visible label through the `label` prop instead.
     // In rare cases where there's no visible label, you must provide an

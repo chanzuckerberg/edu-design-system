@@ -1,8 +1,8 @@
 import debounce from 'lodash.debounce';
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import FiltersDrawer from '../../../src/components/FiltersDrawer';
-import type { FiltersPopoverProps } from '../../../src/components/FiltersPopover/FiltersPopover';
-import { FiltersPopover } from '../../../src/components/FiltersPopover/FiltersPopover';
+import type {FiltersPopoverProps} from '../../../src/components/FiltersPopover/FiltersPopover';
+import {FiltersPopover} from '../../../src/components/FiltersPopover/FiltersPopover';
 
 import breakpoint from '../../../src/design-tokens/tier-1-definitions/breakpoints';
 type Props = {
@@ -15,9 +15,9 @@ type Props = {
 /**
  * Demonstrates usage of both FiltersPopover and FiltersDrawer depending on screensize.
  */
-export const Filters = ({ placement, ...other }: Props) => {
+export const Filters = ({placement, ...other}: Props) => {
   const [isLarge, setIsLarge] = useState(false);
-  const popoverBreakpoint = parseInt(breakpoint['eds-bp-md']) * 16;
+  const popoverBreakpoint = parseInt(breakpoint['eds-bp-md'], 10) * 16;
 
   // FIXME
   // eslint-disable-next-line @chanzuckerberg/edu-react/use-effect-deps-presence

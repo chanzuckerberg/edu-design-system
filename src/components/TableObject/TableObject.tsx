@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import type { ReactNode } from 'react';
+import type {ReactNode} from 'react';
 import React from 'react';
 import styles from './TableObject.module.css';
 import TableObjectBody from '../TableObjectBody';
@@ -25,7 +25,7 @@ export interface Props {
  *
  * Container for a data table and toolbars either above or below the table.
  */
-export const TableObject = ({ children, className, ...other }: Props) => {
+export const TableObject = ({children, className, ...other}: Props) => {
   const componentClassName = clsx(styles['table-object'], className);
   return (
     <div className={componentClassName} {...other}>

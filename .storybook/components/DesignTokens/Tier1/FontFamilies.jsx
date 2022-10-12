@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 
 export class FontFamilies extends Component {
   render() {
@@ -9,7 +9,7 @@ export class FontFamilies extends Component {
           return (
             <li
               key={listItem.value}
-              style={{ fontFamily: `var(${listItem.name})` }}
+              style={{fontFamily: `var(${listItem.name})`}}
             >
               {listItem.name}: {listItem.value}
             </li>

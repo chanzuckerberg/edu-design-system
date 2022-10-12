@@ -1,1 +1,1 @@
-export { NotificationListPopover as default } from './NotificationListPopover';
+export {NotificationListPopover as default} from './NotificationListPopover';

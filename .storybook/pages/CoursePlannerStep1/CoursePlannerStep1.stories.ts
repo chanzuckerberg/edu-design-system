@@ -1,7 +1,7 @@
-import type { StoryObj } from '@storybook/react';
-import type { ComponentProps } from 'react';
+import type {StoryObj} from '@storybook/react';
+import type {ComponentProps} from 'react';
 
-import { CoursePlannerStep1 } from './CoursePlannerStep1';
+import {CoursePlannerStep1} from './CoursePlannerStep1';
 
 export default {
   title: 'Pages/Course Planner/Step 1',

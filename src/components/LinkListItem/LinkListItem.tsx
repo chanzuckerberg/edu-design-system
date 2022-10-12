@@ -1,7 +1,7 @@
 import clsx from 'clsx';
-import type { MouseEventHandler } from 'react';
+import type {MouseEventHandler} from 'react';
 import React from 'react';
-import type { IconName } from '../Icon';
+import type {IconName} from '../Icon';
 import Icon from '../Icon';
 import styles from '../LinkList/LinkList.module.css';
 

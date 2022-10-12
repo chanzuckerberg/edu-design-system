@@ -1,8 +1,8 @@
-import type { StoryObj, Meta } from '@storybook/react';
+import type {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
 
-import { OverflowList } from './OverflowList';
-import { OverflowListItem } from '../OverflowListItem/OverflowListItem';
+import {OverflowList} from './OverflowList';
+import {OverflowListItem} from '../OverflowListItem/OverflowListItem';
 
 export default {
   title: 'Molecules/Lists/OverflowList',

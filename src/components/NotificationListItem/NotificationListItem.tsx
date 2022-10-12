@@ -1,7 +1,7 @@
 import clsx from 'clsx';
-import type { ReactNode } from 'react';
-import React, { useState } from 'react';
-import { Heading } from '../Heading/Heading';
+import type {ReactNode} from 'react';
+import React, {useState} from 'react';
+import {Heading} from '../Heading/Heading';
 import styles from '../NotificationList/NotificationList.module.css';
 
 export interface NotificationListItemProps {

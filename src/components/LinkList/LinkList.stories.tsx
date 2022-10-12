@@ -1,7 +1,7 @@
-import type { StoryObj, Meta } from '@storybook/react';
+import type {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
 
-import { LinkList } from './LinkList';
+import {LinkList} from './LinkList';
 import LinkListItem from '../LinkListItem';
 
 export default {

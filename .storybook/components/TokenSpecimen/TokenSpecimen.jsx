@@ -1,18 +1,18 @@
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import './TokenSpecimen.css';
 
 export class TokenSpecimen extends Component {
   render() {
     const componentClassName = clsx('token-specimen', this.props.className, {
-      'token-specimen--stacked': this.props.behavior == 'stacked',
+      'token-specimen--stacked': this.props.behavior === 'stacked',
       'token-specimen--inverted': this.props.name.includes('inverse'),
     });
 
     let sample;
 
-    if (this.props.variant == 'typography-title') {
+    if (this.props.variant === 'typography-title') {
       sample = (
         <div
           className={
@@ -26,7 +26,7 @@ export class TokenSpecimen extends Component {
           AaBbCcDdEeFfGg
         </div>
       );
-    } else if (this.props.variant == 'typography-body') {
+    } else if (this.props.variant === 'typography-body') {
       sample = (
         <div
           className={
@@ -40,7 +40,7 @@ export class TokenSpecimen extends Component {
           Almost before we knew it, we had left the ground.
         </div>
       );
-    } else if (this.props.variant == 'animation-fade') {
+    } else if (this.props.variant === 'animation-fade') {
       sample = (
         <div
           className={
@@ -50,7 +50,7 @@ export class TokenSpecimen extends Component {
           style={this.props.inlineStyles}
         ></div>
       );
-    } else if (this.props.variant == 'animation-move') {
+    } else if (this.props.variant === 'animation-move') {
       sample = (
         <div
           className={

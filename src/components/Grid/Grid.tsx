@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import type { ReactNode } from 'react';
+import type {ReactNode} from 'react';
 import React from 'react';
 import styles from './Grid.module.css';
 import GridItem from '../GridItem';
@@ -46,13 +46,7 @@ export interface Props {
  * Grid component used to layout GridItem components into a grid pattern. This is flexible component
  * allowing for a variety of responsive layout components.
  */
-export const Grid = ({
-  className,
-  variant,
-  children,
-  gap,
-  ...other
-}: Props) => {
+export const Grid = ({className, variant, children, gap, ...other}: Props) => {
   const componentClassName = clsx(
     styles['grid'],
     variant && styles[`grid--${variant}`],

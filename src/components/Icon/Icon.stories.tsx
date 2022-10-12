@@ -1,8 +1,8 @@
-import type { StoryObj, Meta } from '@storybook/react';
+import type {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
-import { Icon } from './Icon';
+import {Icon} from './Icon';
 import * as ColorTokens from '../../tokens-dist/ts/colors';
-import { ALL_ICONS } from '../../util/allIcons';
+import {ALL_ICONS} from '../../util/allIcons';
 import Text from '../Text';
 
 export default {
@@ -27,7 +27,9 @@ export default {
 type Args = React.ComponentProps<typeof Icon>;
 
 export const Default: StoryObj<Args> = {
-  render: ({ name, color, ...rest }) => {
+  render: ({name, color, ...rest}) => {
+    // ESlint can't tell if ColorTokens[color] is valid or not, since it's computed at runtime.
+    // eslint-disable-next-line import/namespace
     const computedColor = color && ColorTokens[color];
     return <Icon {...rest} color={computedColor} name={name} />;
   },

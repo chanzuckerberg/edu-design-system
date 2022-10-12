@@ -1,8 +1,8 @@
 import clsx from 'clsx';
-import type { ReactNode } from 'react';
-import React, { useRef, useState, useEffect, useCallback } from 'react';
-import { allByType } from 'react-children-by-type';
-import { useUIDSeed } from 'react-uid';
+import type {ReactNode} from 'react';
+import React, {useRef, useState, useEffect, useCallback} from 'react';
+import {allByType} from 'react-children-by-type';
+import {useUIDSeed} from 'react-uid';
 import styles from './TimelineNav.module.css';
 import {
   EdsThemeColorBackgroundGradeCompleteDefault,
@@ -21,7 +21,7 @@ import {
 import Button from '../Button';
 import Icon from '../Icon';
 import NumberIcon from '../NumberIcon';
-import type { TimelineNavPanelVariant } from '../TimelineNavPanel';
+import type {TimelineNavPanelVariant} from '../TimelineNavPanel';
 import TimelineNavPanel from '../TimelineNavPanel';
 
 export interface Props {

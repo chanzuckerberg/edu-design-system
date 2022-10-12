@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { Grid, GridItem, Section } from '../../../../src';
+import React, {Component} from 'react';
+import {Grid, GridItem, Section} from '../../../../src';
 import filterTokens from '../../../util/filterTokens';
-import { TokenSpecimen } from '../../TokenSpecimen/TokenSpecimen';
+import {TokenSpecimen} from '../../TokenSpecimen/TokenSpecimen';
 
 export class Tier1Shadows extends Component {
   render() {

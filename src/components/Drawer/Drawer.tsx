@@ -7,11 +7,11 @@ import React, {
   type ReactNode,
   type KeyboardEvent,
 } from 'react';
-import { oneByType } from 'react-children-by-type';
+import {oneByType} from 'react-children-by-type';
 import FocusLock from 'react-focus-lock';
-import { Portal } from 'react-portal';
+import {Portal} from 'react-portal';
 import styles from './Drawer.module.css';
-import { ESCAPE_KEYCODE } from '../../util/keycodes';
+import {ESCAPE_KEYCODE} from '../../util/keycodes';
 import DrawerBody from '../DrawerBody';
 import DrawerFooter from '../DrawerFooter';
 import DrawerHeader from '../DrawerHeader';

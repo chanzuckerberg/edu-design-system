@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 
 import {
   PageHeader,
@@ -22,7 +22,7 @@ import {
   ProjectCard,
   DropdownMenuItem,
 } from '../../../src';
-import type { NewState } from '../../../src/components/DragDrop/DragDrop';
+import type {NewState} from '../../../src/components/DragDrop/DragDrop';
 
 import '../../../src/components/Utilities/Spacing.css';
 import CardWithNotification from '../../recipes/CardWithNotification';
@@ -554,10 +554,10 @@ export const CoursePlannerEdit = () => {
                   label="Total instructional days"
                   max={60}
                   segments={[
-                    { value: 10, text: 'Project 1' },
-                    { value: 11, text: 'Project 2' },
-                    { value: 22, text: 'Project 3' },
-                    { value: 11, text: 'Project 4' },
+                    {value: 10, text: 'Project 1'},
+                    {value: 11, text: 'Project 2'},
+                    {value: 22, text: 'Project 3'},
+                    {value: 11, text: 'Project 4'},
                   ]}
                 />
               </CardWithNotification.Body>

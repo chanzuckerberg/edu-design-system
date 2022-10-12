@@ -1,4 +1,4 @@
-import type { StoryObj, Meta } from '@storybook/react';
+import type {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
 import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';

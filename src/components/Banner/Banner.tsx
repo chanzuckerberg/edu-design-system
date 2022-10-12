@@ -1,9 +1,9 @@
 import clsx from 'clsx';
-import type { ReactNode } from 'react';
+import type {ReactNode} from 'react';
 import React from 'react';
 import styles from './Banner.module.css';
 import Button from '../Button';
-import type { HeadingElement } from '../Heading';
+import type {HeadingElement} from '../Heading';
 import Heading from '../Heading';
 import Icon from '../Icon';
 import Text from '../Text';

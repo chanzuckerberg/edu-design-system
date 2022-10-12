@@ -1,5 +1,5 @@
 const pascalCase = require('pascal-case');
-const { snakeCase } = require('snake-case');
+const {snakeCase} = require('snake-case');
 
 module.exports = (plop) => {
   plop.setHelper('spacedUpperCase', (txt) =>

@@ -1,7 +1,7 @@
-import type { StoryObj, Meta } from '@storybook/react';
+import type {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
 
-import { DataBar } from './DataBar';
+import {DataBar} from './DataBar';
 import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';
 
@@ -12,9 +12,9 @@ export default {
     label: 'Data bar',
     max: 100,
     segments: [
-      { value: 25, text: 'Segment 1' },
-      { value: 10, text: 'Segment 2' },
-      { value: 15, text: 'Segment 3' },
+      {value: 25, text: 'Segment 1'},
+      {value: 10, text: 'Segment 2'},
+      {value: 15, text: 'Segment 3'},
     ],
   },
   decorators: [
@@ -35,28 +35,28 @@ type Args = React.ComponentProps<typeof DataBar>;
 export const TotalsLessThanMax: StoryObj<Args> = {};
 
 export const TotalsMax: StoryObj<Args> = {
-  args: { max: 50 },
+  args: {max: 50},
 };
 
 export const TotalsMoreThanMax: StoryObj<Args> = {
-  args: { max: 25 },
+  args: {max: 25},
 };
 
 export const TotalsRightUnderMax: StoryObj<Args> = {
-  args: { max: 51 },
+  args: {max: 51},
 };
 
 export const LargeValue: StoryObj<Args> = {
   args: {
     max: 100,
-    segments: [{ value: 96, text: 'Segment 1' }],
+    segments: [{value: 96, text: 'Segment 1'}],
   },
 };
 
 export const SmallValue: StoryObj<Args> = {
   args: {
     max: 100,
-    segments: [{ value: 1, text: 'Segment 1' }],
+    segments: [{value: 1, text: 'Segment 1'}],
   },
 };
 
@@ -69,9 +69,9 @@ export const NoSegments: StoryObj<Args> = {
 const Interactive = () => {
   const [max, setMax] = React.useState(100);
   const [segments, setSegments] = React.useState([
-    { value: 90, text: 'Segment value 90' },
-    { value: 1, text: 'Segment value 1' },
-    { value: 1, text: 'Segment value 1' },
+    {value: 90, text: 'Segment value 90'},
+    {value: 1, text: 'Segment value 1'},
+    {value: 1, text: 'Segment value 1'},
   ]);
 
   const [segmentValue, setSegmentValue] = React.useState(1);

@@ -1,10 +1,10 @@
-import { generateSnapshots } from '@chanzuckerberg/story-utils';
-import { composeStories } from '@storybook/testing-react';
-import { fireEvent, render, screen } from '@testing-library/react';
+import {generateSnapshots} from '@chanzuckerberg/story-utils';
+import {composeStories} from '@storybook/testing-react';
+import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
 import * as stories from './FiltersDrawer.stories';
 
-const { OverflowInteractive } = composeStories(stories);
+const {OverflowInteractive} = composeStories(stories);
 
 describe('<Filters />', () => {
   generateSnapshots(stories, {

@@ -1,7 +1,7 @@
-import type { StoryObj, Meta } from '@storybook/react';
+import type {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
 
-import { ShowHide } from './ShowHide';
+import {ShowHide} from './ShowHide';
 import Button from '../Button';
 import Icon from '../Icon';
 
@@ -16,7 +16,7 @@ export default {
   },
   decorators: [
     (Story) => (
-      <div style={{ margin: '10rem' }}>
+      <div style={{margin: '10rem'}}>
         <Story />
       </div>
     ),

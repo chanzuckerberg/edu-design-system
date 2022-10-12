@@ -1,7 +1,7 @@
-import type { StoryObj, Meta } from '@storybook/react';
-import type { ComponentProps } from 'react';
+import type {StoryObj, Meta} from '@storybook/react';
+import type {ComponentProps} from 'react';
 
-import { CoursePlannerEdit } from './CoursePlannerEdit';
+import {CoursePlannerEdit} from './CoursePlannerEdit';
 
 export default {
   title: 'Pages/Course Planner/Edit',

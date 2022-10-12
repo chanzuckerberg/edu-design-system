@@ -1,1 +1,1 @@
-export { ModalFooter as default } from './ModalFooter';
+export {ModalFooter as default} from './ModalFooter';
