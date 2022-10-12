@@ -1,6 +1,5 @@
 import clsx from 'clsx';
 import React, {useState, useEffect} from 'react';
-import styles from './GlobalHeader.module.css';
 import {Button, Icon, Heading} from '../../../src';
 // Project Overview pilot components -- not yet exported from src/index.ts
 import Avatar from '../../../src/components/Avatar';
@@ -15,6 +14,7 @@ import UtilityNav from '../../../src/components/UtilityNav';
 
 import breakpoint from '../../../src/design-tokens/tier-1-definitions/breakpoints';
 import {EdsThemeColorIconNeutralDefaultInverse} from '../../../src/tokens-dist/ts/colors';
+import styles from './GlobalHeader.module.css';
 
 export interface Props {
   /**

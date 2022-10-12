@@ -2,10 +2,10 @@ import {StoryObj, Meta} from '@storybook/react';
 import {within} from '@storybook/testing-library';
 import clsx from 'clsx';
 import React from 'react';
-import {Dropdown, OptionsAlignType, VariantType} from './Dropdown';
-import styles from './Dropdown.stories.module.css';
 import DropdownButton from '../DropdownButton';
 import Icon from '../Icon';
+import {Dropdown, OptionsAlignType, VariantType} from './Dropdown';
+import styles from './Dropdown.stories.module.css';
 
 export default {
   title: 'Molecules/Forms/Dropdown',

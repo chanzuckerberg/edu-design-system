@@ -1,11 +1,11 @@
 import {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
 
-import {HorizontalStepper} from './HorizontalStepper';
 import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';
 import HorizontalStep from '../HorizontalStep';
 import Icon from '../Icon';
+import {HorizontalStepper} from './HorizontalStepper';
 
 export default {
   title: 'Molecules/Lists/HorizontalStepper',

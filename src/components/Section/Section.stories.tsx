@@ -1,10 +1,10 @@
 import {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
-import {Section} from './Section';
 import Avatar from '../Avatar';
 import Button from '../Button';
 import Icon from '../Icon';
 import Text from '../Text';
+import {Section} from './Section';
 
 export default {
   title: 'Organisms/Sections/Section',

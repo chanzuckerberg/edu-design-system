@@ -1,8 +1,8 @@
 import {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
 
-import {Toolbar} from './Toolbar';
 import ToolbarItem from '../ToolbarItem';
+import {Toolbar} from './Toolbar';
 
 export default {
   title: 'Organisms/Toolbars/Toolbar',

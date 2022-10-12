@@ -4,9 +4,9 @@ import {render, screen} from '@testing-library/react';
 
 import userEvent from '@testing-library/user-event';
 import React from 'react';
+import consoleWarnMockHelper from '../../../jest/helpers/consoleWarnMock';
 import {Heading} from './Heading';
 import * as HeadingStoryFile from './Heading.stories';
-import consoleWarnMockHelper from '../../../jest/helpers/consoleWarnMock';
 
 describe('<Heading />', () => {
   const consoleWarnMock = consoleWarnMockHelper();

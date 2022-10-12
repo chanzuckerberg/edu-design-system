@@ -1,11 +1,11 @@
 import clsx from 'clsx';
 import React, {ReactNode} from 'react';
-import styles from './PageShell.module.css';
 import {Link, Layout, LayoutContainer, LayoutSection} from '../../../src';
 // Project Overview pilot components -- not yet exported from src/index.ts
 import Main from '../../../src/components/Main';
 
 import {GlobalHeader} from '../GlobalHeader/GlobalHeader';
+import styles from './PageShell.module.css';
 
 export interface Props {
   /**

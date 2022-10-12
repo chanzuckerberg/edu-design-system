@@ -1,9 +1,9 @@
 import {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
 
-import {Tabs} from './Tabs';
 import Tab from '../Tab';
 import Text from '../Text';
+import {Tabs} from './Tabs';
 
 export default {
   title: 'Organisms/Interactive/Tabs',

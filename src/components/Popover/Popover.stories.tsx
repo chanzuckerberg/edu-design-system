@@ -2,8 +2,8 @@ import {StoryObj, Meta} from '@storybook/react';
 import {within} from '@storybook/testing-library';
 import isChromatic from 'chromatic/isChromatic';
 import React from 'react';
-import {Popover} from './Popover';
 import Button from '../Button';
+import {Popover} from './Popover';
 
 export default {
   title: 'Organisms/Interactive/Popover',

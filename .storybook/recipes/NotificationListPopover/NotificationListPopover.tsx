@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './NotificationListPopover.module.css';
 import {Button, Heading, Popover} from '../../../src';
 import NotificationList from '../../../src/components/NotificationList';
+import styles from './NotificationListPopover.module.css';
 
 /**
  * Demonstrates usage of the Popover with NotificationList

@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 import React, {ReactNode} from 'react';
-import styles from './Fieldset.module.css';
 import FieldsetItems from '../FieldsetItems';
 import FieldsetLegend from '../FieldsetLegend';
+import styles from './Fieldset.module.css';
 
 type FieldsetProps = {
   /**

@@ -1,9 +1,9 @@
 import {generateSnapshots} from '@chanzuckerberg/story-utils';
 import {render} from '@testing-library/react';
 import React from 'react';
+import consoleWarnMockHelper from '../../../jest/helpers/consoleWarnMock';
 import {HorizontalStepper} from './HorizontalStepper';
 import * as stories from './HorizontalStepper.stories';
-import consoleWarnMockHelper from '../../../jest/helpers/consoleWarnMock';
 
 describe('<HorizontalStepper />', () => {
   const warnMock = consoleWarnMockHelper();

@@ -1,7 +1,7 @@
 import {StoryObj} from '@storybook/react';
 import React from 'react';
-import {GettingStartedDocumentation} from './GettingStartedDocumentation';
 import GettingStartedDocs from '../../../docs/GETTING_STARTED.md';
+import {GettingStartedDocumentation} from './GettingStartedDocumentation';
 
 export default {
   title: '',

@@ -1,9 +1,9 @@
 import {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
 
-import {ProjectCard} from './ProjectCard';
 import DropdownMenuItem from '../DropdownMenuItem';
 import Icon from '../Icon';
+import {ProjectCard} from './ProjectCard';
 
 export default {
   title: 'Recipes/ProjectCard',

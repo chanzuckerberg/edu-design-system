@@ -1,7 +1,5 @@
 import {StoryObj, Meta} from '@storybook/react';
 import React, {ComponentProps, useState} from 'react';
-import {DragDrop, NewState} from './DragDrop';
-import styles from './DragDrop.stories.module.css';
 
 import Button from '../Button';
 import Card from '../Card';
@@ -12,6 +10,8 @@ import Icon from '../Icon';
 import ProjectCard from '../ProjectCard';
 import Text from '../Text';
 import Toolbar from '../Toolbar';
+import {DragDrop, NewState} from './DragDrop';
+import styles from './DragDrop.stories.module.css';
 
 export default {
   title: 'Organisms/Interactive/Drag and Drop',

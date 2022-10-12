@@ -1,6 +1,5 @@
 import clsx from 'clsx';
 import React, {ReactNode} from 'react';
-import styles from './ProjectCard.module.css';
 
 import {
   Card,
@@ -14,6 +13,7 @@ import {
   ButtonDropdown,
 } from '../..';
 import {HeadingElement} from '../Heading';
+import styles from './ProjectCard.module.css';
 
 export interface Props {
   /**

@@ -7,12 +7,12 @@ import React, {
   useState,
 } from 'react';
 import {useUID} from 'react-uid';
-import styles from './FiltersDrawer.module.css';
 import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';
 import Drawer from '../Drawer';
 import FiltersButton from '../FiltersButton';
 import Heading from '../Heading';
+import styles from './FiltersDrawer.module.css';
 
 export type FiltersDrawerProps = {
   /**

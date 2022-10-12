@@ -1,6 +1,5 @@
 import clsx from 'clsx';
 import React, {ReactNode} from 'react';
-import styles from './CardWithNotification.module.css';
 
 import {
   Card,
@@ -10,6 +9,7 @@ import {
   InlineNotification,
 } from '../../../src';
 import {VARIANTS} from '../../../src/components/InlineNotification/InlineNotification';
+import styles from './CardWithNotification.module.css';
 
 export interface Props {
   /**

@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React, {ReactNode} from 'react';
-import styles from './Section.module.css';
 import Heading, {HeadingElement, HeadingSize} from '../Heading';
+import styles from './Section.module.css';
 export interface Props {
   /**
    * Align variations:

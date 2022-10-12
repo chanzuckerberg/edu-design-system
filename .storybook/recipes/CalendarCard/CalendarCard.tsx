@@ -1,9 +1,9 @@
 import clsx from 'clsx';
 import React, {ReactNode} from 'react';
-import styles from './CalendarCard.module.css';
 
 import {Card, Heading, Icon, Tag, Text} from '../../../src';
 import {Variant as TagVariant} from '../../../src/components/Tag/Tag';
+import styles from './CalendarCard.module.css';
 
 export const VARIANTS = ['brand', 'revise', 'success'] as const;
 

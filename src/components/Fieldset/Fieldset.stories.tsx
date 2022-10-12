@@ -1,9 +1,9 @@
 import type {StoryObj, Meta} from '@storybook/react';
 import React, {useState} from 'react';
-import {Fieldset} from './Fieldset';
 import Checkbox from '../Checkbox';
 import FieldsetItems from '../FieldsetItems';
 import FieldsetLegend, {FieldsetLegendProps} from '../FieldsetLegend';
+import {Fieldset} from './Fieldset';
 
 export default {
   title: 'Atoms/Forms/Fieldset',

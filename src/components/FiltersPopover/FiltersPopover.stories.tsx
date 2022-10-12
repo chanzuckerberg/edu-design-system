@@ -4,10 +4,10 @@ import {within} from '@storybook/testing-library';
 import isChromatic from 'chromatic/isChromatic';
 import React from 'react';
 
-import {FiltersPopover, FiltersPopoverProps} from './FiltersPopover';
-import styles from './FiltersPopover.stories.module.css';
 import {Checkbox} from '../Checkbox/Checkbox';
 import {FiltersCheckboxField} from '../FiltersCheckboxField/FiltersCheckboxField';
+import {FiltersPopover, FiltersPopoverProps} from './FiltersPopover';
+import styles from './FiltersPopover.stories.module.css';
 
 export default {
   title: 'Organisms/Interactive/FiltersPopover',

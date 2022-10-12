@@ -1,11 +1,11 @@
 import {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
 
-import {NavContainer} from './NavContainer';
 import PrimaryNav from '../PrimaryNav';
 import PrimaryNavItem from '../PrimaryNavItem';
 import UtilityNav from '../UtilityNav';
 import UtilityNavItem from '../UtilityNavItem';
+import {NavContainer} from './NavContainer';
 
 export default {
   title: 'Molecules/Global/NavContainer',

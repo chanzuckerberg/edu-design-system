@@ -3,8 +3,8 @@ import {userEvent} from '@storybook/testing-library';
 import {composeStories} from '@storybook/testing-react';
 import {render, screen} from '@testing-library/react';
 import React from 'react';
-import * as TooltipStoryFile from './Tooltip.stories';
 import consoleWarnMockHelper from '../../../jest/helpers/consoleWarnMock';
+import * as TooltipStoryFile from './Tooltip.stories';
 
 const {Interactive, InteractiveDisabledButton} =
   composeStories(TooltipStoryFile);

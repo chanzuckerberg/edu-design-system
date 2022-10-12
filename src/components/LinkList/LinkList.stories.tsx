@@ -1,8 +1,8 @@
 import {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
 
-import {LinkList} from './LinkList';
 import LinkListItem from '../LinkListItem';
+import {LinkList} from './LinkList';
 
 export default {
   title: 'Molecules/Navigation/LinkList',

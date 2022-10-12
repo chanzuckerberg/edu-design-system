@@ -1,8 +1,8 @@
 import {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
-import {Filters} from './Filters';
 import Checkbox from '../../../src/components/Checkbox';
 import FiltersCheckboxField from '../../../src/components/FiltersCheckboxField';
+import {Filters} from './Filters';
 
 export default {
   title: 'Recipes/Filters',

@@ -1,9 +1,9 @@
 import {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
 
-import {DataBar} from './DataBar';
 import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';
+import {DataBar} from './DataBar';
 
 export default {
   title: 'Molecules/Data/DataBar',

@@ -2,10 +2,10 @@ import type {StoryObj, Meta} from '@storybook/react';
 import clsx from 'clsx';
 import React, {ReactNode} from 'react';
 import {useState} from 'react';
-import Modal, {ModalContent} from './Modal';
-import styles from './Modal.stories.module.css';
 import {Button, ButtonGroup, Heading, Text, Tooltip} from '../../';
 import {VARIANTS} from '../Heading/Heading';
+import Modal, {ModalContent} from './Modal';
+import styles from './Modal.stories.module.css';
 
 export default {
   title: 'Organisms/Interactive/Modal',

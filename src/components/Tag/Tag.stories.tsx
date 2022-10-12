@@ -1,8 +1,8 @@
 import type {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
+import Icon from '../Icon';
 import Tag, {VARIANTS} from './Tag';
 import styles from './Tag.stories.module.css';
-import Icon from '../Icon';
 
 export default {
   title: 'Molecules/Messaging/Tag',

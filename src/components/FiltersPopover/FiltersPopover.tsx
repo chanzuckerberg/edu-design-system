@@ -1,10 +1,10 @@
 import clsx from 'clsx';
 import React, {type ReactNode, useEffect, useRef} from 'react';
-import styles from './FiltersPopover.module.css';
 import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';
 import FiltersButton from '../FiltersButton';
 import Popover, {PopoverProps} from '../Popover';
+import styles from './FiltersPopover.module.css';
 
 export type FiltersPopoverProps = {
   /**

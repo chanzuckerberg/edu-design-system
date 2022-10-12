@@ -1,8 +1,7 @@
 import clsx from 'clsx';
 import React from 'react';
-import styles from './DataSummaryCard.module.css';
-
 import {Card, Heading, Text} from '../../../src';
+import styles from './DataSummaryCard.module.css';
 
 export interface Props {
   /**

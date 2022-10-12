@@ -1,10 +1,10 @@
 import {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
 
-import {PageHeader} from './PageHeader';
 import Breadcrumbs from '../Breadcrumbs';
 import Tag from '../Tag';
 import Text from '../Text';
+import {PageHeader} from './PageHeader';
 
 export default {
   title: 'Molecules/Text/PageHeader',

@@ -1,12 +1,12 @@
 import {StoryObj} from '@storybook/react';
 import React from 'react';
-import {Documentation} from './Documentation';
 import Code from '../../../docs/CODE_GUIDELINES.md';
 import ComponentDocs from '../../../docs/COMPONENTS.md';
 import IconDocs from '../../../docs/ICONS.md';
 import LayoutDocs from '../../../docs/LAYOUT.md';
 import TokenDocs from '../../../docs/TOKENS.md';
 import TypographyDocs from '../../../docs/TYPOGRAPHY.md';
+import {Documentation} from './Documentation';
 
 export default {
   title: 'Documentation/Guidelines',

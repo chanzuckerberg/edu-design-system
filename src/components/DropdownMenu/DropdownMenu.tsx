@@ -8,7 +8,6 @@ import React, {
   HTMLAttributes,
   MouseEventHandler,
 } from 'react';
-import styles from './DropdownMenu.module.css';
 import {
   L_ARROW_KEYCODE,
   U_ARROW_KEYCODE,
@@ -19,6 +18,7 @@ import {
   END_KEYCODE,
   TAB_KEYCODE,
 } from '../../util/keycodes';
+import styles from './DropdownMenu.module.css';
 
 export type Props = {
   /**

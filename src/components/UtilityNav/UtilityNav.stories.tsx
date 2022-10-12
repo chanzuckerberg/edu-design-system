@@ -1,8 +1,8 @@
 import {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
 
-import {UtilityNav} from './UtilityNav';
 import {UtilityNavItem} from '../UtilityNavItem/UtilityNavItem';
+import {UtilityNav} from './UtilityNav';
 
 export default {
   title: 'Molecules/Navigation/UtilityNav',

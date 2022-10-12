@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React from 'react';
-import styles from './DataBarSegment.module.css';
 import Tooltip from '../Tooltip';
+import styles from './DataBarSegment.module.css';
 
 export type Variants = 'brand' | 'success';
 

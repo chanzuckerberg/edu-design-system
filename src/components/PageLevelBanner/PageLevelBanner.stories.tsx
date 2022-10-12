@@ -1,8 +1,8 @@
 import type {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
 
-import {PageLevelBanner} from './PageLevelBanner';
 import Button from '../Button';
+import {PageLevelBanner} from './PageLevelBanner';
 
 export default {
   title: 'Molecules/Messaging/PageLevelBanner',

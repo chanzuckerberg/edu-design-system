@@ -1,7 +1,7 @@
 import React, {ReactNode} from 'react';
-import styles from './StackedBlock.module.css';
 import Link from '../Link';
 import Text from '../Text';
+import styles from './StackedBlock.module.css';
 
 export interface Props {
   /**

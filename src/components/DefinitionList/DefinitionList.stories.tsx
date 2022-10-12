@@ -1,8 +1,8 @@
 import {Story, Meta} from '@storybook/react';
 import React from 'react';
 
-import {DefinitionList, Props} from './DefinitionList';
 import DefinitionListItem from '../DefinitionListItem';
+import {DefinitionList, Props} from './DefinitionList';
 
 export default {
   title: 'Molecules/Lists/DefinitionList',

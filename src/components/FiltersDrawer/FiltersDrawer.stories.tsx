@@ -4,10 +4,10 @@ import {within} from '@storybook/testing-library';
 import isChromatic from 'chromatic/isChromatic';
 import React from 'react';
 
-import {FiltersDrawer} from './FiltersDrawer';
-import styles from './FiltersDrawer.stories.module.css';
 import {Checkbox} from '../Checkbox/Checkbox';
 import {FiltersCheckboxField} from '../FiltersCheckboxField/FiltersCheckboxField';
+import {FiltersDrawer} from './FiltersDrawer';
+import styles from './FiltersDrawer.stories.module.css';
 
 export default {
   title: 'Organisms/Interactive/FiltersDrawer',

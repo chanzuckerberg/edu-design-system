@@ -2,8 +2,8 @@ import {BADGE} from '@geometricpanda/storybook-addon-badges';
 import {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
 
-import {TextField} from './TextField';
 import Button from '../../components/Button';
+import {TextField} from './TextField';
 
 export default {
   title: 'Molecules/Forms/TextField',

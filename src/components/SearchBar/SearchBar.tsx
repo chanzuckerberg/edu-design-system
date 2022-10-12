@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 import React, {ReactNode} from 'react';
-import styles from './SearchBar.module.css';
 import SearchButton from '../SearchButton';
 import SearchField from '../SearchField';
+import styles from './SearchBar.module.css';
 
 export type Props = {
   /**

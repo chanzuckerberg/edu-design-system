@@ -2,9 +2,9 @@ import {BADGE} from '@geometricpanda/storybook-addon-badges';
 import {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
 
-import {FieldNote} from './FieldNote';
 import Link from '../Link';
 import Text from '../Text';
+import {FieldNote} from './FieldNote';
 
 export default {
   title: 'Atoms/Forms/FieldNote',

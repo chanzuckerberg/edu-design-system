@@ -1,9 +1,9 @@
 import clsx from 'clsx';
 import React from 'react';
 import {useUID} from 'react-uid';
-import styles from './Checkbox.module.css';
 import CheckboxInput, {CheckboxInputProps} from '../CheckboxInput';
 import CheckboxLabel, {CheckboxLabelProps} from '../CheckboxLabel';
+import styles from './Checkbox.module.css';
 
 // id is required in CheckboxInputProps but optional in CheckboxProps, so we
 // first remove `id` from CheckboxInputProps before intersecting.

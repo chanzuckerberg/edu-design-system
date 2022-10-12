@@ -1,8 +1,8 @@
 import {Popover as HeadlessPopover} from '@headlessui/react';
 import clsx from 'clsx';
 import React, {useContext} from 'react';
-import styles from './PopoverContent.module.css';
 import {PopoverContext} from '../Popover';
+import styles from './PopoverContent.module.css';
 
 type RenderProps<RenderPropArgs> = {
   children: React.ReactNode | ((args: RenderPropArgs) => React.ReactElement);

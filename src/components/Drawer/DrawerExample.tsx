@@ -1,8 +1,8 @@
 import React, {useState, useRef} from 'react';
-import {Drawer} from './Drawer';
 import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';
 import Heading from '../Heading';
+import {Drawer} from './Drawer';
 
 /**
  * BETA: This component is still a work in progress and is subject to change.

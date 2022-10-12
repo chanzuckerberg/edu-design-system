@@ -1,12 +1,12 @@
 import {Listbox} from '@headlessui/react';
 import clsx from 'clsx';
 import React, {ReactNode, ElementType, useContext} from 'react';
-import styles from './Dropdown.module.css';
 
 import type {ExtractProps} from '../../util/utility-types';
 
 import DropdownButton from '../DropdownButton';
 import Icon from '../Icon';
+import styles from './Dropdown.module.css';
 
 export type OptionsAlignType = 'left' | 'right';
 export type VariantType = 'compact' | 'full';

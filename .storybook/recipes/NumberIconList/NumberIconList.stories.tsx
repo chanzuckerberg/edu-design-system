@@ -1,8 +1,8 @@
 import type {StoryObj} from '@storybook/react';
 import React from 'react';
 
-import {NumberIconList} from './NumberIconList';
 import {NumberIcon} from '../../../src';
+import {NumberIconList} from './NumberIconList';
 
 export default {
   title: 'Recipes/NumberIconList',

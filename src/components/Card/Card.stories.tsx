@@ -1,9 +1,9 @@
 import {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
-import {Card} from './Card';
 import CardBody from '../CardBody';
 import CardFooter from '../CardFooter';
 import CardHeader from '../CardHeader';
+import {Card} from './Card';
 
 export default {
   title: 'Molecules/Blocks/Card',

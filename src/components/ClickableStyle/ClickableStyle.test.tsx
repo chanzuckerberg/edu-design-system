@@ -1,7 +1,7 @@
 import {render} from '@testing-library/react';
 import React from 'react';
-import {ClickableStyle} from './ClickableStyle';
 import consoleWarnMockHelper from '../../../jest/helpers/consoleWarnMock';
+import {ClickableStyle} from './ClickableStyle';
 
 describe('<ClickableStyle />', () => {
   const consoleWarnMock = consoleWarnMockHelper();

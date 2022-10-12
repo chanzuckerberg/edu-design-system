@@ -1,10 +1,10 @@
 import {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
 
-import {ButtonDropdown} from './ButtonDropdown';
 import {Button} from '../Button/Button';
 import {DropdownMenuItem} from '../DropdownMenuItem/DropdownMenuItem';
 import {Icon} from '../Icon/Icon';
+import {ButtonDropdown} from './ButtonDropdown';
 
 export default {
   title: 'Organisms/Interactive/ButtonDropdown',

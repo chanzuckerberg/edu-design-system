@@ -1,9 +1,9 @@
 import {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
 
-import {DropdownMenu} from './DropdownMenu';
 import {DropdownMenuItem} from '../DropdownMenuItem/DropdownMenuItem';
 import {Icon} from '../Icon/Icon';
+import {DropdownMenu} from './DropdownMenu';
 
 export default {
   title: 'Molecules/Navigation/DropdownMenu',

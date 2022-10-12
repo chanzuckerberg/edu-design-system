@@ -1,9 +1,9 @@
 import clsx from 'clsx';
 import React, {ReactNode, forwardRef} from 'react';
-import styles from './Button.module.css';
 import ClickableStyle from '../ClickableStyle';
 import type {ClickableStyleProps} from '../ClickableStyle';
 import Icon from '../Icon';
+import styles from './Button.module.css';
 
 type ButtonHTMLElementProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
 

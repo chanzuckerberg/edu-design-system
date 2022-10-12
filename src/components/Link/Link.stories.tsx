@@ -1,9 +1,9 @@
 import {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
-import {Link} from './Link';
 import {SIZES, STATUSES, VARIANTS} from '../ClickableStyle';
 
 import Icon from '../Icon';
+import {Link} from './Link';
 
 export default {
   title: 'Molecules/Buttons/Link',

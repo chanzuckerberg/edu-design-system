@@ -1,10 +1,10 @@
 import {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
 
-import {NotificationList, Props} from './NotificationList';
 import NotificationListItem, {
   NotificationListItemProps,
 } from '../NotificationListItem';
+import {NotificationList, Props} from './NotificationList';
 
 export default {
   title: 'Molecules/Lists/NotificationList',

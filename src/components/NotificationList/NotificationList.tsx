@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React, {ReactNode} from 'react';
-import styles from './NotificationList.module.css';
 import NotificationListItem from '../NotificationListItem';
+import styles from './NotificationList.module.css';
 
 export interface Props {
   /**

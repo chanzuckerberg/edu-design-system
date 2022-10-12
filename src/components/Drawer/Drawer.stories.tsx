@@ -2,11 +2,11 @@ import {BADGE} from '@geometricpanda/storybook-addon-badges';
 import {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
 
-import {Drawer} from './Drawer';
-import {DrawerExample} from './DrawerExample';
 import {Button} from '../Button/Button';
 import {ButtonGroup} from '../ButtonGroup/ButtonGroup';
 import {Heading} from '../Heading/Heading';
+import {Drawer} from './Drawer';
+import {DrawerExample} from './DrawerExample';
 
 export default {
   title: 'Organisms/Interactive/Drawer',

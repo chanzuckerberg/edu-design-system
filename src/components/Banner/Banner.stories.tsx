@@ -2,10 +2,10 @@ import {BADGE} from '@geometricpanda/storybook-addon-badges';
 import type {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
 
-import {Banner, Variant} from './Banner';
-import styles from './Banner.stories.module.css';
 import Button from '../Button';
 import Heading from '../Heading';
+import {Banner, Variant} from './Banner';
+import styles from './Banner.stories.module.css';
 
 export default {
   title: 'Molecules/Messaging/Banner',

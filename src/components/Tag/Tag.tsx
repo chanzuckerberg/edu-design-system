@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React from 'react';
-import styles from './Tag.module.css';
 import Text from '../Text';
+import styles from './Tag.module.css';
 
 export const VARIANTS = [
   'neutral',

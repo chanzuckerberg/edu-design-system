@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 import React from 'react';
-import styles from './NumberIcon.module.css';
 import Icon from '../Icon';
 import Text from '../Text';
+import styles from './NumberIcon.module.css';
 
 export interface Props {
   /**

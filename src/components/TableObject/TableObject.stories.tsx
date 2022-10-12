@@ -2,7 +2,6 @@ import {BADGE} from '@geometricpanda/storybook-addon-badges';
 import {Story, Meta} from '@storybook/react';
 import React from 'react';
 
-import {TableObject, Props} from './TableObject';
 import Button from '../Button';
 import Heading from '../Heading';
 import Icon from '../Icon';
@@ -16,6 +15,7 @@ import TableObjectHeader from '../TableObjectHeader';
 import TableRow from '../TableRow';
 import Toolbar from '../Toolbar';
 import ToolbarItem from '../ToolbarItem';
+import {TableObject, Props} from './TableObject';
 
 export default {
   title: 'Organisms/Tables/Table Object',

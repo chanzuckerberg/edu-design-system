@@ -1,9 +1,9 @@
 import clsx from 'clsx';
 import React from 'react';
-import styles from './HorizontalStep.module.css';
 import Icon from '../Icon';
 import NumberIcon from '../NumberIcon';
 import Text from '../Text';
+import styles from './HorizontalStep.module.css';
 
 export type Props = {
   /**

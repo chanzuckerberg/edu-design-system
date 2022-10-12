@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React from 'react';
-import styles from './RadioLabel.module.css';
 import {InputLabel, InputLabelProps} from '../InputLabel/InputLabel';
+import styles from './RadioLabel.module.css';
 
 export type RadioLabelProps = InputLabelProps;
 

@@ -1,12 +1,12 @@
 import clsx from 'clsx';
 import React, {ReactNode} from 'react';
-import styles from './Table.module.css';
 import TableBody from '../TableBody';
 import TableCell from '../TableCell';
 import TableFooter from '../TableFooter';
 import TableHeader from '../TableHeader';
 import TableHeaderCell from '../TableHeaderCell';
 import TableRow from '../TableRow';
+import styles from './Table.module.css';
 
 export interface Props {
   /**

@@ -6,8 +6,8 @@ import React, {
   ReactNode,
   KeyboardEvent,
 } from 'react';
-import styles from './ShowHide.module.css';
 import {ESCAPE_KEYCODE} from '../../util/keycodes';
+import styles from './ShowHide.module.css';
 
 export interface Props {
   /**

@@ -1,8 +1,8 @@
 import {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
 
-import {CardWithNotification} from './CardWithNotification';
 import {DataBar} from '../../../src';
+import {CardWithNotification} from './CardWithNotification';
 import '../../../src/components/Utilities/Spacing.css';
 
 export default {

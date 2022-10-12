@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React, {ReactNode} from 'react';
-import styles from './ButtonActionCalloutCard.module.css';
 import {Card, Heading, Text} from '../../../src';
+import styles from './ButtonActionCalloutCard.module.css';
 
 export interface Props {
   /**

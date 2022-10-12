@@ -1,10 +1,10 @@
 import clsx from 'clsx';
 import React, {ReactNode} from 'react';
-import styles from './Banner.module.css';
 import Button from '../Button';
 import Heading, {HeadingElement} from '../Heading';
 import Icon from '../Icon';
 import Text from '../Text';
+import styles from './Banner.module.css';
 
 export type Variant = 'brand' | 'neutral' | 'success' | 'warning' | 'error';
 
