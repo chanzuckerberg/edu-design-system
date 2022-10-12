@@ -533,6 +533,126 @@ exports[`<Table /> Default story renders snapshot 1`] = `
 </table>
 `;
 
+exports[`<Table /> SortableInteractive story renders snapshot 1`] = `
+<table
+  class="table"
+>
+  <caption
+    class="table__caption u-is-vishidden"
+  >
+    This is a table caption and it is required
+  </caption>
+  <thead
+    class="table__header"
+  >
+    <tr
+      class="table__row"
+    >
+      <th
+        class="table__header-cell"
+      >
+        <button
+          class="table__header-cell-button"
+        >
+          Sortable
+          <div
+            class="table__header-cell-sort"
+          >
+            <svg
+              class="icon table__header-cell-icon"
+              fill="currentColor"
+              height="1rem"
+              role="img"
+              style="--icon-size: 1rem;"
+              width="1rem"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title
+                id="1"
+              >
+                Sort
+              </title>
+              <use
+                xlink:href="test-file-stub#unfold-more"
+              />
+            </svg>
+          </div>
+        </button>
+      </th>
+      <th
+        class="table__header-cell"
+      >
+        <div
+          class="table__header-cell-contents"
+        >
+          Not sortable
+        </div>
+      </th>
+    </tr>
+  </thead>
+  <tbody
+    class="table__body"
+  >
+    <tr
+      class="table__row"
+    >
+      <td
+        class="table__cell"
+      >
+        Value 1
+      </td>
+      <td
+        class="table__cell"
+      >
+        Value A
+      </td>
+    </tr>
+    <tr
+      class="table__row"
+    >
+      <td
+        class="table__cell"
+      >
+        Value 3
+      </td>
+      <td
+        class="table__cell"
+      >
+        Value B
+      </td>
+    </tr>
+    <tr
+      class="table__row"
+    >
+      <td
+        class="table__cell"
+      >
+        Value 2
+      </td>
+      <td
+        class="table__cell"
+      >
+        Value C
+      </td>
+    </tr>
+    <tr
+      class="table__row"
+    >
+      <td
+        class="table__cell"
+      >
+        Value 4
+      </td>
+      <td
+        class="table__cell"
+      >
+        Value D
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
 exports[`<Table /> Stacked story renders snapshot 1`] = `
 <table
   class="table table--stacked"

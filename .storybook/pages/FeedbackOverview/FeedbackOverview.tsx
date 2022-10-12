@@ -1,5 +1,5 @@
 import React from 'react';
-
+import styles from './FeedbackOverview.module.css';
 import {
   PageHeader,
   Breadcrumbs,
@@ -18,7 +18,6 @@ import {
   TableBody,
   TableCell,
   NumberIcon,
-  TableObject,
   Toolbar,
   ToolbarItem,
   Button,
@@ -69,1462 +68,1435 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
         <Tab title="Feedback">
           <TimelineNav activeIndex={activeIndex} variant="ordered">
             <TimelineNavPanel title="Overview">
-              <TableObject>
-                <TableObject.Header>
-                  <Toolbar variant="bare">
-                    <ToolbarItem>
-                      <Heading as="h2" size="headline-md">
-                        Feedback Overview
-                      </Heading>
-                    </ToolbarItem>
-                    <ToolbarItem align="right">
-                      <Button size="md" status="brand" variant="secondary">
-                        <Icon
-                          name="filter-list"
-                          purpose="decorative"
-                          size="1.375rem"
+              <Toolbar
+                className={styles['feedback-overview__toolbar']}
+                variant="bare"
+              >
+                <ToolbarItem>
+                  <Heading as="h2" size="headline-md">
+                    Feedback Overview
+                  </Heading>
+                </ToolbarItem>
+                <ToolbarItem align="right">
+                  <Button size="md" status="brand" variant="secondary">
+                    <Icon
+                      name="filter-list"
+                      purpose="decorative"
+                      size="1.375rem"
+                    />
+                    Filters
+                  </Button>
+                </ToolbarItem>
+              </Toolbar>
+              <Table
+                behavior="stacked"
+                caption="Feedback overview"
+                hideCaption
+                highlightFirstCell
+              >
+                <TableHeader>
+                  <TableRow>
+                    <TableHeaderCell>Student</TableHeaderCell>
+                    <TableHeaderCell>Checkpoints Status</TableHeaderCell>
+                    <TableHeaderCell>Final Product</TableHeaderCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableHeaderCell></TableHeaderCell>
+                    <TableHeaderCell>
+                      <NumberIconList>
+                        <NumberIcon aria-label="Item 1" number={1} size="sm" />
+                        <NumberIcon
+                          aria-label="Item 2"
+                          number={2}
+                          numberIconTitle="incomplete step 2"
+                          size="sm"
                         />
-                        Filters
-                      </Button>
-                    </ToolbarItem>
-                  </Toolbar>
-                </TableObject.Header>
-                <TableObject.Body>
-                  <Table
-                    behavior="stacked"
-                    caption="Feedback overview"
-                    hideCaption={true}
-                    highlightFirstCell={true}
-                  >
-                    <TableHeader>
-                      <TableRow>
-                        <TableHeaderCell>Student</TableHeaderCell>
-                        <TableHeaderCell>Checkpoints Status</TableHeaderCell>
-                        <TableHeaderCell>Final Product</TableHeaderCell>
-                      </TableRow>
-                      <TableRow>
-                        <TableHeaderCell></TableHeaderCell>
-                        <TableHeaderCell>
-                          <NumberIconList>
-                            <NumberIcon
-                              aria-label="Item 1"
-                              number={1}
-                              size="sm"
-                            />
-                            <NumberIcon
-                              aria-label="Item 2"
-                              number={2}
-                              numberIconTitle="incomplete step 2"
-                              size="sm"
-                            />
-                            <NumberIcon
-                              aria-label="Item 3"
-                              number={3}
-                              size="sm"
-                            />
-                            <NumberIcon
-                              aria-label="Item 4"
-                              number={4}
-                              numberIconTitle="incomplete step 4"
-                              size="sm"
-                            />
-                            <NumberIcon
-                              aria-label="Item 5"
-                              number={5}
-                              numberIconTitle="incomplete step 5"
-                              size="sm"
-                            />
-                            <NumberIcon
-                              aria-label="Item 6"
-                              number={6}
-                              numberIconTitle="incomplete step 6"
-                              size="sm"
-                            />
-                            <NumberIcon
-                              aria-label="Item 6"
-                              number={7}
-                              numberIconTitle="incomplete step 6"
-                              size="sm"
-                            />
-                            <NumberIcon
-                              aria-label="Item 6"
-                              number={8}
-                              numberIconTitle="incomplete step 6"
-                              size="sm"
-                            />
-                            <NumberIcon
-                              aria-label="Item 6"
-                              number={9}
-                              numberIconTitle="incomplete step 6"
-                              size="sm"
-                            />
-                            <NumberIcon
-                              aria-label="Item 6"
-                              number={10}
-                              numberIconTitle="incomplete step 6"
-                              size="sm"
-                            />
-                          </NumberIconList>
-                        </TableHeaderCell>
-                        <TableHeaderCell></TableHeaderCell>
-                      </TableRow>
-                    </TableHeader>
-                    <TableBody>
-                      <TableRow>
-                        <TableCell data-heading="Student">
-                          Araya, Raquel
-                        </TableCell>
-                        <TableCell data-heading="Checkpoint Status">
-                          <div
-                            style={{
-                              display: 'flex',
-                              gap: '0.25rem',
-                              flexWrap: 'wrap',
-                              alignItems: 'flex-start',
-                            }}
-                          >
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                          </div>
-                        </TableCell>
-                        <TableCell data-heading="Final product">
-                          {' '}
-                          <Icon
-                            color={EdsThemeColorIconNeutralSubtle}
-                            name="star-outline"
-                            purpose="decorative"
-                            size="1.5rem"
-                          />{' '}
-                          <Icon
-                            color={EdsThemeColorIconNeutralSubtle}
-                            name="star-outline"
-                            purpose="decorative"
-                            size="1.5rem"
-                          />{' '}
-                          <Icon
-                            color={EdsThemeColorIconNeutralSubtle}
-                            name="star-outline"
-                            purpose="decorative"
-                            size="1.5rem"
-                          />
-                        </TableCell>
-                      </TableRow>
-                      <TableRow>
-                        <TableCell data-heading="Student">
-                          Jesse Banet
-                        </TableCell>
-                        <TableCell data-heading="Checkpoint Status">
-                          <div
-                            style={{
-                              display: 'flex',
-                              gap: '0.25rem',
-                              flexWrap: 'wrap',
-                              alignItems: 'flex-start',
-                            }}
-                          >
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                          </div>
-                        </TableCell>
-                        <TableCell data-heading="Final product">
-                          {' '}
-                          <Icon
-                            color={EdsThemeColorIconNeutralSubtle}
-                            name="star-outline"
-                            purpose="decorative"
-                            size="1.5rem"
-                          />{' '}
-                          <Icon
-                            color={EdsThemeColorIconNeutralSubtle}
-                            name="star-outline"
-                            purpose="decorative"
-                            size="1.5rem"
-                          />{' '}
-                          <Icon
-                            color={EdsThemeColorIconNeutralSubtle}
-                            name="star-outline"
-                            purpose="decorative"
-                            size="1.5rem"
-                          />
-                        </TableCell>
-                      </TableRow>
-                      <TableRow>
-                        <TableCell data-heading="Student">
-                          Julie Davis
-                        </TableCell>
-                        <TableCell data-heading="Checkpoint status">
-                          <div
-                            style={{
-                              display: 'flex',
-                              gap: '0.25rem',
-                              flexWrap: 'wrap',
-                              alignItems: 'flex-start',
-                            }}
-                          >
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                          </div>
-                        </TableCell>
-                        <TableCell data-heading="Final product">
-                          {' '}
-                          <Icon
-                            color={EdsThemeColorIconNeutralSubtle}
-                            name="star-outline"
-                            purpose="decorative"
-                            size="1.5rem"
-                          />{' '}
-                          <Icon
-                            color={EdsThemeColorIconNeutralSubtle}
-                            name="star-outline"
-                            purpose="decorative"
-                            size="1.5rem"
-                          />{' '}
-                          <Icon
-                            color={EdsThemeColorIconNeutralSubtle}
-                            name="star-outline"
-                            purpose="decorative"
-                            size="1.5rem"
-                          />
-                        </TableCell>
-                      </TableRow>
-                      <TableRow>
-                        <TableCell data-heading="Student">
-                          Hussain, Adnan
-                        </TableCell>
-                        <TableCell data-heading="Checkpoint Status">
-                          <div
-                            style={{
-                              display: 'flex',
-                              gap: '0.25rem',
-                              flexWrap: 'wrap',
-                              alignItems: 'flex-start',
-                            }}
-                          >
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                          </div>
-                        </TableCell>
-                        <TableCell data-heading="Final product">
-                          {' '}
-                          <Icon
-                            color={EdsThemeColorIconNeutralSubtle}
-                            name="star-outline"
-                            purpose="decorative"
-                            size="1.5rem"
-                          />{' '}
-                          <Icon
-                            color={EdsThemeColorIconNeutralSubtle}
-                            name="star-outline"
-                            purpose="decorative"
-                            size="1.5rem"
-                          />{' '}
-                          <Icon
-                            color={EdsThemeColorIconNeutralSubtle}
-                            name="star-outline"
-                            purpose="decorative"
-                            size="1.5rem"
-                          />
-                        </TableCell>
-                      </TableRow>
-                      <TableRow>
-                        <TableCell data-heading="Student">
-                          Ilango, Megha
-                        </TableCell>
-                        <TableCell data-heading="Checkpoint Status">
-                          <div
-                            style={{
-                              display: 'flex',
-                              gap: '0.25rem',
-                              flexWrap: 'wrap',
-                              alignItems: 'flex-start',
-                            }}
-                          >
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                          </div>
-                        </TableCell>
-                        <TableCell data-heading="Final product">
-                          {' '}
-                          <Icon
-                            color={EdsThemeColorIconNeutralSubtle}
-                            name="star-outline"
-                            purpose="decorative"
-                            size="1.5rem"
-                          />{' '}
-                          <Icon
-                            color={EdsThemeColorIconNeutralSubtle}
-                            name="star-outline"
-                            purpose="decorative"
-                            size="1.5rem"
-                          />{' '}
-                          <Icon
-                            color={EdsThemeColorIconNeutralSubtle}
-                            name="star-outline"
-                            purpose="decorative"
-                            size="1.5rem"
-                          />
-                        </TableCell>
-                      </TableRow>
-                      <TableRow>
-                        <TableCell data-heading="Student">
-                          Jaffer, Arman
-                        </TableCell>
-                        <TableCell data-heading="Checkpoint Status">
-                          <div
-                            style={{
-                              display: 'flex',
-                              gap: '0.25rem',
-                              flexWrap: 'wrap',
-                              alignItems: 'flex-start',
-                            }}
-                          >
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                          </div>
-                        </TableCell>
-                        <TableCell data-heading="Final product">
-                          {' '}
-                          <Icon
-                            color={EdsThemeColorIconNeutralSubtle}
-                            name="star-outline"
-                            purpose="decorative"
-                            size="1.5rem"
-                          />{' '}
-                          <Icon
-                            color={EdsThemeColorIconNeutralSubtle}
-                            name="star-outline"
-                            purpose="decorative"
-                            size="1.5rem"
-                          />{' '}
-                          <Icon
-                            color={EdsThemeColorIconNeutralSubtle}
-                            name="star-outline"
-                            purpose="decorative"
-                            size="1.5rem"
-                          />
-                        </TableCell>
-                      </TableRow>
-                      <TableRow>
-                        <TableCell data-heading="Student">
-                          Kang, Michelle
-                        </TableCell>
-                        <TableCell data-heading="Checkpoint Status">
-                          <div
-                            style={{
-                              display: 'flex',
-                              gap: '0.25rem',
-                              flexWrap: 'wrap',
-                              alignItems: 'flex-start',
-                            }}
-                          >
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                          </div>
-                        </TableCell>
-                        <TableCell data-heading="Final product">
-                          {' '}
-                          <Icon
-                            color={EdsThemeColorIconNeutralSubtle}
-                            name="star-outline"
-                            purpose="decorative"
-                            size="1.5rem"
-                          />{' '}
-                          <Icon
-                            color={EdsThemeColorIconNeutralSubtle}
-                            name="star-outline"
-                            purpose="decorative"
-                            size="1.5rem"
-                          />{' '}
-                          <Icon
-                            color={EdsThemeColorIconNeutralSubtle}
-                            name="star-outline"
-                            purpose="decorative"
-                            size="1.5rem"
-                          />
-                        </TableCell>
-                      </TableRow>
-                      <TableRow>
-                        <TableCell data-heading="Student">
-                          Lewine, Chris
-                        </TableCell>
-                        <TableCell data-heading="Checkpoint Status">
-                          <div
-                            style={{
-                              display: 'flex',
-                              gap: '0.25rem',
-                              flexWrap: 'wrap',
-                              alignItems: 'flex-start',
-                            }}
-                          >
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                          </div>
-                        </TableCell>
-                        <TableCell data-heading="Final product">
-                          {' '}
-                          <Icon
-                            color={EdsThemeColorIconNeutralSubtle}
-                            name="star-outline"
-                            purpose="decorative"
-                            size="1.5rem"
-                          />{' '}
-                          <Icon
-                            color={EdsThemeColorIconNeutralSubtle}
-                            name="star-outline"
-                            purpose="decorative"
-                            size="1.5rem"
-                          />{' '}
-                          <Icon
-                            color={EdsThemeColorIconNeutralSubtle}
-                            name="star-outline"
-                            purpose="decorative"
-                            size="1.5rem"
-                          />
-                        </TableCell>
-                      </TableRow>
-                      <TableRow>
-                        <TableCell data-heading="Student">Luo, Celia</TableCell>
-                        <TableCell data-heading="Checkpoint Status">
-                          <div
-                            style={{
-                              display: 'flex',
-                              gap: '0.25rem',
-                              flexWrap: 'wrap',
-                              alignItems: 'flex-start',
-                            }}
-                          >
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                            <div
-                              className="fpo"
-                              style={{
-                                height: '1.25rem',
-                                width: '1.25rem',
-                                padding: 0,
-                                margin: 0,
-                                flexShrink: 0,
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                          </div>
-                        </TableCell>
-                        <TableCell data-heading="Final product">
-                          {' '}
-                          <Icon
-                            color={EdsThemeColorIconNeutralSubtle}
-                            name="star-outline"
-                            purpose="decorative"
-                            size="1.5rem"
-                          />{' '}
-                          <Icon
-                            color={EdsThemeColorIconNeutralSubtle}
-                            name="star-outline"
-                            purpose="decorative"
-                            size="1.5rem"
-                          />{' '}
-                          <Icon
-                            color={EdsThemeColorIconNeutralSubtle}
-                            name="star-outline"
-                            purpose="decorative"
-                            size="1.5rem"
-                          />
-                        </TableCell>
-                      </TableRow>
-                    </TableBody>
-                  </Table>
-                </TableObject.Body>
-              </TableObject>
+                        <NumberIcon aria-label="Item 3" number={3} size="sm" />
+                        <NumberIcon
+                          aria-label="Item 4"
+                          number={4}
+                          numberIconTitle="incomplete step 4"
+                          size="sm"
+                        />
+                        <NumberIcon
+                          aria-label="Item 5"
+                          number={5}
+                          numberIconTitle="incomplete step 5"
+                          size="sm"
+                        />
+                        <NumberIcon
+                          aria-label="Item 6"
+                          number={6}
+                          numberIconTitle="incomplete step 6"
+                          size="sm"
+                        />
+                        <NumberIcon
+                          aria-label="Item 6"
+                          number={7}
+                          numberIconTitle="incomplete step 6"
+                          size="sm"
+                        />
+                        <NumberIcon
+                          aria-label="Item 6"
+                          number={8}
+                          numberIconTitle="incomplete step 6"
+                          size="sm"
+                        />
+                        <NumberIcon
+                          aria-label="Item 6"
+                          number={9}
+                          numberIconTitle="incomplete step 6"
+                          size="sm"
+                        />
+                        <NumberIcon
+                          aria-label="Item 6"
+                          number={10}
+                          numberIconTitle="incomplete step 6"
+                          size="sm"
+                        />
+                      </NumberIconList>
+                    </TableHeaderCell>
+                    <TableHeaderCell></TableHeaderCell>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  <TableRow>
+                    <TableCell data-heading="Student">Araya, Raquel</TableCell>
+                    <TableCell data-heading="Checkpoint Status">
+                      <div
+                        style={{
+                          display: 'flex',
+                          gap: '0.25rem',
+                          flexWrap: 'wrap',
+                          alignItems: 'flex-start',
+                        }}
+                      >
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                      </div>
+                    </TableCell>
+                    <TableCell data-heading="Final product">
+                      {' '}
+                      <Icon
+                        color={EdsThemeColorIconNeutralSubtle}
+                        name="star-outline"
+                        purpose="decorative"
+                        size="1.5rem"
+                      />{' '}
+                      <Icon
+                        color={EdsThemeColorIconNeutralSubtle}
+                        name="star-outline"
+                        purpose="decorative"
+                        size="1.5rem"
+                      />{' '}
+                      <Icon
+                        color={EdsThemeColorIconNeutralSubtle}
+                        name="star-outline"
+                        purpose="decorative"
+                        size="1.5rem"
+                      />
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell data-heading="Student">Jesse Banet</TableCell>
+                    <TableCell data-heading="Checkpoint Status">
+                      <div
+                        style={{
+                          display: 'flex',
+                          gap: '0.25rem',
+                          flexWrap: 'wrap',
+                          alignItems: 'flex-start',
+                        }}
+                      >
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                      </div>
+                    </TableCell>
+                    <TableCell data-heading="Final product">
+                      {' '}
+                      <Icon
+                        color={EdsThemeColorIconNeutralSubtle}
+                        name="star-outline"
+                        purpose="decorative"
+                        size="1.5rem"
+                      />{' '}
+                      <Icon
+                        color={EdsThemeColorIconNeutralSubtle}
+                        name="star-outline"
+                        purpose="decorative"
+                        size="1.5rem"
+                      />{' '}
+                      <Icon
+                        color={EdsThemeColorIconNeutralSubtle}
+                        name="star-outline"
+                        purpose="decorative"
+                        size="1.5rem"
+                      />
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell data-heading="Student">Julie Davis</TableCell>
+                    <TableCell data-heading="Checkpoint status">
+                      <div
+                        style={{
+                          display: 'flex',
+                          gap: '0.25rem',
+                          flexWrap: 'wrap',
+                          alignItems: 'flex-start',
+                        }}
+                      >
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                      </div>
+                    </TableCell>
+                    <TableCell data-heading="Final product">
+                      {' '}
+                      <Icon
+                        color={EdsThemeColorIconNeutralSubtle}
+                        name="star-outline"
+                        purpose="decorative"
+                        size="1.5rem"
+                      />{' '}
+                      <Icon
+                        color={EdsThemeColorIconNeutralSubtle}
+                        name="star-outline"
+                        purpose="decorative"
+                        size="1.5rem"
+                      />{' '}
+                      <Icon
+                        color={EdsThemeColorIconNeutralSubtle}
+                        name="star-outline"
+                        purpose="decorative"
+                        size="1.5rem"
+                      />
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell data-heading="Student">Hussain, Adnan</TableCell>
+                    <TableCell data-heading="Checkpoint Status">
+                      <div
+                        style={{
+                          display: 'flex',
+                          gap: '0.25rem',
+                          flexWrap: 'wrap',
+                          alignItems: 'flex-start',
+                        }}
+                      >
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                      </div>
+                    </TableCell>
+                    <TableCell data-heading="Final product">
+                      {' '}
+                      <Icon
+                        color={EdsThemeColorIconNeutralSubtle}
+                        name="star-outline"
+                        purpose="decorative"
+                        size="1.5rem"
+                      />{' '}
+                      <Icon
+                        color={EdsThemeColorIconNeutralSubtle}
+                        name="star-outline"
+                        purpose="decorative"
+                        size="1.5rem"
+                      />{' '}
+                      <Icon
+                        color={EdsThemeColorIconNeutralSubtle}
+                        name="star-outline"
+                        purpose="decorative"
+                        size="1.5rem"
+                      />
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell data-heading="Student">Ilango, Megha</TableCell>
+                    <TableCell data-heading="Checkpoint Status">
+                      <div
+                        style={{
+                          display: 'flex',
+                          gap: '0.25rem',
+                          flexWrap: 'wrap',
+                          alignItems: 'flex-start',
+                        }}
+                      >
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                      </div>
+                    </TableCell>
+                    <TableCell data-heading="Final product">
+                      {' '}
+                      <Icon
+                        color={EdsThemeColorIconNeutralSubtle}
+                        name="star-outline"
+                        purpose="decorative"
+                        size="1.5rem"
+                      />{' '}
+                      <Icon
+                        color={EdsThemeColorIconNeutralSubtle}
+                        name="star-outline"
+                        purpose="decorative"
+                        size="1.5rem"
+                      />{' '}
+                      <Icon
+                        color={EdsThemeColorIconNeutralSubtle}
+                        name="star-outline"
+                        purpose="decorative"
+                        size="1.5rem"
+                      />
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell data-heading="Student">Jaffer, Arman</TableCell>
+                    <TableCell data-heading="Checkpoint Status">
+                      <div
+                        style={{
+                          display: 'flex',
+                          gap: '0.25rem',
+                          flexWrap: 'wrap',
+                          alignItems: 'flex-start',
+                        }}
+                      >
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                      </div>
+                    </TableCell>
+                    <TableCell data-heading="Final product">
+                      {' '}
+                      <Icon
+                        color={EdsThemeColorIconNeutralSubtle}
+                        name="star-outline"
+                        purpose="decorative"
+                        size="1.5rem"
+                      />{' '}
+                      <Icon
+                        color={EdsThemeColorIconNeutralSubtle}
+                        name="star-outline"
+                        purpose="decorative"
+                        size="1.5rem"
+                      />{' '}
+                      <Icon
+                        color={EdsThemeColorIconNeutralSubtle}
+                        name="star-outline"
+                        purpose="decorative"
+                        size="1.5rem"
+                      />
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell data-heading="Student">Kang, Michelle</TableCell>
+                    <TableCell data-heading="Checkpoint Status">
+                      <div
+                        style={{
+                          display: 'flex',
+                          gap: '0.25rem',
+                          flexWrap: 'wrap',
+                          alignItems: 'flex-start',
+                        }}
+                      >
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                      </div>
+                    </TableCell>
+                    <TableCell data-heading="Final product">
+                      {' '}
+                      <Icon
+                        color={EdsThemeColorIconNeutralSubtle}
+                        name="star-outline"
+                        purpose="decorative"
+                        size="1.5rem"
+                      />{' '}
+                      <Icon
+                        color={EdsThemeColorIconNeutralSubtle}
+                        name="star-outline"
+                        purpose="decorative"
+                        size="1.5rem"
+                      />{' '}
+                      <Icon
+                        color={EdsThemeColorIconNeutralSubtle}
+                        name="star-outline"
+                        purpose="decorative"
+                        size="1.5rem"
+                      />
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell data-heading="Student">Lewine, Chris</TableCell>
+                    <TableCell data-heading="Checkpoint Status">
+                      <div
+                        style={{
+                          display: 'flex',
+                          gap: '0.25rem',
+                          flexWrap: 'wrap',
+                          alignItems: 'flex-start',
+                        }}
+                      >
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                      </div>
+                    </TableCell>
+                    <TableCell data-heading="Final product">
+                      {' '}
+                      <Icon
+                        color={EdsThemeColorIconNeutralSubtle}
+                        name="star-outline"
+                        purpose="decorative"
+                        size="1.5rem"
+                      />{' '}
+                      <Icon
+                        color={EdsThemeColorIconNeutralSubtle}
+                        name="star-outline"
+                        purpose="decorative"
+                        size="1.5rem"
+                      />{' '}
+                      <Icon
+                        color={EdsThemeColorIconNeutralSubtle}
+                        name="star-outline"
+                        purpose="decorative"
+                        size="1.5rem"
+                      />
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell data-heading="Student">Luo, Celia</TableCell>
+                    <TableCell data-heading="Checkpoint Status">
+                      <div
+                        style={{
+                          display: 'flex',
+                          gap: '0.25rem',
+                          flexWrap: 'wrap',
+                          alignItems: 'flex-start',
+                        }}
+                      >
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          className="fpo"
+                          style={{
+                            height: '1.25rem',
+                            width: '1.25rem',
+                            padding: 0,
+                            margin: 0,
+                            flexShrink: 0,
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                      </div>
+                    </TableCell>
+                    <TableCell data-heading="Final product">
+                      {' '}
+                      <Icon
+                        color={EdsThemeColorIconNeutralSubtle}
+                        name="star-outline"
+                        purpose="decorative"
+                        size="1.5rem"
+                      />{' '}
+                      <Icon
+                        color={EdsThemeColorIconNeutralSubtle}
+                        name="star-outline"
+                        purpose="decorative"
+                        size="1.5rem"
+                      />{' '}
+                      <Icon
+                        color={EdsThemeColorIconNeutralSubtle}
+                        name="star-outline"
+                        purpose="decorative"
+                        size="1.5rem"
+                      />
+                    </TableCell>
+                  </TableRow>
+                </TableBody>
+              </Table>
             </TimelineNavPanel>
 
             <TimelineNavPanel
@@ -1540,150 +1512,131 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
               }
               variant="number"
             >
-              <TableObject>
-                <TableObject.Header>
-                  <Toolbar variant="bare">
-                    <ToolbarItem>
-                      <Heading as="h2" size="h3">
-                        Checkpoint Progress
-                      </Heading>
-                    </ToolbarItem>
-                    <ToolbarItem align="right">
-                      <Button size="md" status="brand" variant="secondary">
-                        <Icon
-                          name="filter-list"
-                          purpose="decorative"
-                          size="1.375rem"
-                        />
-                        Filters
-                      </Button>
-                    </ToolbarItem>
-                  </Toolbar>
-                </TableObject.Header>
-                <TableObject.Body>
-                  <Table
-                    behavior="stacked"
-                    caption="Feedback checkpoints"
-                    hideCaption={true}
-                    highlightFirstCell={true}
-                  >
-                    <TableHeader>
-                      <TableRow>
-                        <TableHeaderCell>Students</TableHeaderCell>
-                        <TableHeaderCell>Status</TableHeaderCell>
-                        <TableHeaderCell>Cog skill</TableHeaderCell>
-                        <TableHeaderCell>Time submitted</TableHeaderCell>
-                      </TableRow>
-                    </TableHeader>
-                    <TableBody>
-                      <TableRow>
-                        <TableCell data-heading="Students">
-                          Araya, Raquel
-                        </TableCell>
-                        <TableCell data-heading="Status">
-                          &quot;Stop and Revise&quot;
-                        </TableCell>
-                        <TableCell data-heading="Cog skill">3</TableCell>
-                        <TableCell data-heading="Time submitted">
-                          2 hours ago
-                        </TableCell>
-                      </TableRow>
-                      <TableRow>
-                        <TableCell data-heading="Students">
-                          Jesse Banet
-                        </TableCell>
-                        <TableCell data-heading="Status">
-                          &quot;Stop and Revise&quot;
-                        </TableCell>
-                        <TableCell data-heading="Cog skill">1</TableCell>
-                        <TableCell data-heading="Time submitted">
-                          3 days ago
-                        </TableCell>
-                      </TableRow>
-                      <TableRow>
-                        <TableCell data-heading="Students">
-                          Julie Davis
-                        </TableCell>
-                        <TableCell data-heading="Status">Working</TableCell>
-                        <TableCell data-heading="Cog skill">0</TableCell>
-                        <TableCell>3 days ago</TableCell>
-                      </TableRow>
-                      <TableRow>
-                        <TableCell data-heading="Students">
-                          Hussain, Adnan
-                        </TableCell>
-                        <TableCell data-heading="Status">
-                          &quot;Review Feedback&quot;
-                        </TableCell>
-                        <TableCell data-heading="Cog skill">0</TableCell>
-                        <TableCell data-heading="Time submitted">
-                          3 days ago
-                        </TableCell>
-                      </TableRow>
-                      <TableRow>
-                        <TableCell data-heading="Students">
-                          Ilango, Megha
-                        </TableCell>
-                        <TableCell data-heading="Status">
-                          &quot;Needs Feedback&quot;
-                        </TableCell>
-                        <TableCell data-heading="Cog skill">3</TableCell>
-                        <TableCell data-heading="Time submitted">
-                          3 days ago
-                        </TableCell>
-                      </TableRow>
-                      <TableRow>
-                        <TableCell data-heading="Students">
-                          Jaffer, Arman
-                        </TableCell>
-                        <TableCell data-heading="Status">
-                          Needs Feedback
-                        </TableCell>
-                        <TableCell data-heading="Cog skill">1</TableCell>
-                        <TableCell data-heading="Time submitted">
-                          3 days ago
-                        </TableCell>
-                      </TableRow>
-                      <TableRow>
-                        <TableCell data-heading="Students">
-                          Kang, Michelle
-                        </TableCell>
-                        <TableCell data-heading="Status">
-                          &quot;Review Feedback&quot;
-                        </TableCell>
-                        <TableCell data-heading="Cog skill">1</TableCell>
-                        <TableCell data-heading="Time submitted">
-                          3 days ago
-                        </TableCell>
-                      </TableRow>
-                      <TableRow>
-                        <TableCell data-heading="Students">
-                          Lewine, Chris
-                        </TableCell>
-                        <TableCell data-heading="Status">
-                          &quot;Continue Working&quot;
-                        </TableCell>
-                        <TableCell data-heading="Cog skill">2</TableCell>
-                        <TableCell data-heading="Time submitted">
-                          3 days ago
-                        </TableCell>
-                      </TableRow>
-                      <TableRow>
-                        <TableCell data-heading="Students">
-                          Luo, Celia
-                        </TableCell>
-                        <TableCell data-heading="Status">
-                          &quot;Review Feedback&quot;
-                        </TableCell>
-                        <TableCell data-heading="Cog skill">1</TableCell>
-                        <TableCell data-heading="Time submitted">
-                          3 days ago
-                        </TableCell>
-                      </TableRow>
-                    </TableBody>
-                  </Table>
-                </TableObject.Body>
-              </TableObject>
+              <Toolbar
+                className={styles['feedback-overview__toolbar']}
+                variant="bare"
+              >
+                <ToolbarItem>
+                  <Heading as="h2" size="h3">
+                    Checkpoint Progress
+                  </Heading>
+                </ToolbarItem>
+                <ToolbarItem align="right">
+                  <Button size="md" status="brand" variant="secondary">
+                    <Icon
+                      name="filter-list"
+                      purpose="decorative"
+                      size="1.375rem"
+                    />
+                    Filters
+                  </Button>
+                </ToolbarItem>
+              </Toolbar>
+              <Table
+                behavior="stacked"
+                caption="Feedback checkpoints"
+                hideCaption={true}
+                highlightFirstCell={true}
+              >
+                <TableHeader>
+                  <TableRow>
+                    <TableHeaderCell>Students</TableHeaderCell>
+                    <TableHeaderCell>Status</TableHeaderCell>
+                    <TableHeaderCell>Cog skill</TableHeaderCell>
+                    <TableHeaderCell>Time submitted</TableHeaderCell>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  <TableRow>
+                    <TableCell data-heading="Students">Araya, Raquel</TableCell>
+                    <TableCell data-heading="Status">
+                      &quot;Stop and Revise&quot;
+                    </TableCell>
+                    <TableCell data-heading="Cog skill">3</TableCell>
+                    <TableCell data-heading="Time submitted">
+                      2 hours ago
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell data-heading="Students">Jesse Banet</TableCell>
+                    <TableCell data-heading="Status">
+                      &quot;Stop and Revise&quot;
+                    </TableCell>
+                    <TableCell data-heading="Cog skill">1</TableCell>
+                    <TableCell data-heading="Time submitted">
+                      3 days ago
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell data-heading="Students">Julie Davis</TableCell>
+                    <TableCell data-heading="Status">Working</TableCell>
+                    <TableCell data-heading="Cog skill">0</TableCell>
+                    <TableCell>3 days ago</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell data-heading="Students">
+                      Hussain, Adnan
+                    </TableCell>
+                    <TableCell data-heading="Status">
+                      &quot;Review Feedback&quot;
+                    </TableCell>
+                    <TableCell data-heading="Cog skill">0</TableCell>
+                    <TableCell data-heading="Time submitted">
+                      3 days ago
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell data-heading="Students">Ilango, Megha</TableCell>
+                    <TableCell data-heading="Status">
+                      &quot;Needs Feedback&quot;
+                    </TableCell>
+                    <TableCell data-heading="Cog skill">3</TableCell>
+                    <TableCell data-heading="Time submitted">
+                      3 days ago
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell data-heading="Students">Jaffer, Arman</TableCell>
+                    <TableCell data-heading="Status">Needs Feedback</TableCell>
+                    <TableCell data-heading="Cog skill">1</TableCell>
+                    <TableCell data-heading="Time submitted">
+                      3 days ago
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell data-heading="Students">
+                      Kang, Michelle
+                    </TableCell>
+                    <TableCell data-heading="Status">
+                      &quot;Review Feedback&quot;
+                    </TableCell>
+                    <TableCell data-heading="Cog skill">1</TableCell>
+                    <TableCell data-heading="Time submitted">
+                      3 days ago
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell data-heading="Students">Lewine, Chris</TableCell>
+                    <TableCell data-heading="Status">
+                      &quot;Continue Working&quot;
+                    </TableCell>
+                    <TableCell data-heading="Cog skill">2</TableCell>
+                    <TableCell data-heading="Time submitted">
+                      3 days ago
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell data-heading="Students">Luo, Celia</TableCell>
+                    <TableCell data-heading="Status">
+                      &quot;Review Feedback&quot;
+                    </TableCell>
+                    <TableCell data-heading="Cog skill">1</TableCell>
+                    <TableCell data-heading="Time submitted">
+                      3 days ago
+                    </TableCell>
+                  </TableRow>
+                </TableBody>
+              </Table>
             </TimelineNavPanel>
 
             <TimelineNavPanel title="Research and Model Cells" variant="number">

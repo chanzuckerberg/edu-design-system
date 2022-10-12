@@ -1,11 +1,12 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { StoryObj, Meta } from '@storybook/react';
-import React from 'react';
+import React, { useState } from 'react';
 
 import { Table } from './Table';
 import TableBody from '../TableBody';
 import TableCell from '../TableCell';
 import TableHeader from '../TableHeader';
+import type { SortDirectionsType } from '../TableHeaderCell';
 import TableRow from '../TableRow';
 
 export default {
@@ -152,6 +153,12 @@ export const Stacked: StoryObj<Args> = {
       </>
     ),
   },
+  parameters: {
+    viewport: {
+      defaultViewport: 'mobile2',
+    },
+    chromatic: { viewports: [414] },
+  },
 };
 
 export const AlignTableCellContentCenter: StoryObj<Args> = {
@@ -242,4 +249,86 @@ export const AlignTableCellContentRight: StoryObj<Args> = {
       </>
     ),
   },
+};
+
+const SortableExample = () => {
+  const values = [
+    { col1: 'Value 1', col2: 'Value A' },
+    { col1: 'Value 3', col2: 'Value B' },
+    { col1: 'Value 2', col2: 'Value C' },
+    { col1: 'Value 4', col2: 'Value D' },
+  ];
+  const [sortDirection, setSortDirection] =
+    useState<SortDirectionsType>('default');
+  const [tableValues, setTableValues] = useState({ ...values });
+  const onSortClick = () => {
+    if (sortDirection === 'descending') {
+      setSortDirection('default');
+      values.sort((a, b) => {
+        if (a.col2 < b.col2) {
+          return -1;
+        } else {
+          return 1;
+        }
+      });
+    }
+    if (sortDirection === 'default') {
+      setSortDirection('ascending');
+      values.sort((a, b) => {
+        if (a.col1 < b.col1) {
+          return -1;
+        } else {
+          return 1;
+        }
+      });
+    }
+    if (sortDirection === 'ascending') {
+      setSortDirection('descending');
+      values.sort((a, b) => {
+        if (b.col1 < a.col1) {
+          return -1;
+        } else {
+          return 1;
+        }
+      });
+    }
+    setTableValues({ ...values });
+  };
+  return (
+    <Table caption="This is a table caption and it is required">
+      <Table.Header>
+        <Table.Row>
+          <Table.HeaderCell
+            onSortClick={onSortClick}
+            sortDirection={sortDirection}
+          >
+            Sortable
+          </Table.HeaderCell>
+          <Table.HeaderCell>Not sortable</Table.HeaderCell>
+        </Table.Row>
+      </Table.Header>
+      <TableBody>
+        <Table.Row>
+          <Table.Cell>{tableValues[0].col1}</Table.Cell>
+          <Table.Cell>{tableValues[0].col2}</Table.Cell>
+        </Table.Row>
+        <Table.Row>
+          <Table.Cell>{tableValues[1].col1}</Table.Cell>
+          <Table.Cell>{tableValues[1].col2}</Table.Cell>
+        </Table.Row>
+        <Table.Row>
+          <Table.Cell>{tableValues[2].col1}</Table.Cell>
+          <Table.Cell>{tableValues[2].col2}</Table.Cell>
+        </Table.Row>
+        <Table.Row>
+          <Table.Cell>{tableValues[3].col1}</Table.Cell>
+          <Table.Cell>{tableValues[3].col2}</Table.Cell>
+        </Table.Row>
+      </TableBody>
+    </Table>
+  );
+};
+
+export const SortableInteractive: StoryObj<Args> = {
+  render: () => <SortableExample />,
 };
