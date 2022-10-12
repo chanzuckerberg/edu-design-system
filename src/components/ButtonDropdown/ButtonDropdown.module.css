@@ -6,25 +6,20 @@
  * Combination of a trigger and a dropdownmenu
  */
 .button-dropdown {
-  display: flex;
-  flex-direction: column;
-  position: relative;
+  @apply flex flex-col relative;
 }
 
 /**
  * Button dropdown dropdown menu
  */
 .button-dropdown__dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  right: 0;
-  z-index: var(--eds-z-index-500);
+  @apply hidden absolute top-full right-0 z-500;
 
   /**
    * Button dropdown dropdown menu positioned to the top-left of the button
    */
   .button-dropdown--top-left & {
+    
     top: initial;
     bottom: 100%;
   }

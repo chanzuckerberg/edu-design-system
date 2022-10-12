@@ -34,8 +34,7 @@
  * Back variant of the breadcrumbs list item.
  */
 .breadcrumbs__item-back {
-  display: flex;
-  margin-right: var(--eds-size-1-and-half);
+  @apply flex mr-3;
 
   @media all and (min-width: $eds-bp-md) {
     /* Hidden for larger breakpoints. */
@@ -59,7 +58,7 @@
  * Breadcrumbs link.
  */
 .breadcrumbs__link {
-  color: var(--eds-theme-color-text-neutral-subtle);
+  @apply text-text-neutral-subtle;
   text-decoration: none;
   &:last-of-type {
     /* Truncate last link with ellipsis. */
@@ -91,8 +90,7 @@
  * Breadcrumbs Icon - a separator between breadcrumb links.
  */
 .breadcrumbs__separator {
-  color: var(--eds-theme-color-icon-neutral-subtle);
-  @apply ml-2 mr-2 cursor-default;
+  @apply text-icon-neutral-subtle-@ ml-2 mr-2 cursor-default;
 }
 
 /**
@@ -108,6 +106,5 @@
  */
 .breadcrumbs__back-icon {
   /* Transform over height due to icon being placed inside <a>. */
-  color: var(--eds-theme-color-icon-neutral-subtle);
-  @apply scale-150 relative bottom-0.5;
+  @apply text-icon-neutral-subtle-@ scale-150 relative bottom-0.5;
 }
