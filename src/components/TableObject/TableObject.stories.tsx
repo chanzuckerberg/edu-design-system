@@ -175,7 +175,7 @@ const SortableTemplate: Story<Props> = (args) => (
       <Table caption="This is a table caption and it is required">
         <TableHeader>
           <TableRow>
-            <TableHeaderCell sortDirection="default" sortable>
+            <TableHeaderCell sortable sortDirection="default">
               Sortable
             </TableHeaderCell>
             <TableHeaderCell>Not sortable</TableHeaderCell>

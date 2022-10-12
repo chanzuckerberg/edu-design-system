@@ -7,13 +7,13 @@ export class ColorList extends Component {
   render() {
     return (
       <Grid>
-        {this.props.listItems.map(function (listItem, index) {
+        {this.props.listItems.map(function (listItem) {
           return (
             <TokenSpecimen
               inlineStyles={{
                 backgroundColor: `var(${listItem.name})`,
               }}
-              key={index}
+              key={listItem.name}
               name={listItem.name}
               value={listItem.value}
             />

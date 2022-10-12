@@ -169,7 +169,7 @@ export const TextChild: StoryObj<Args> = {
         text={defaultArgs.text}
         visible={true}
       >
-        <>Tooltip trigger</>
+        <span>Tooltip trigger</span>
       </Tooltip>
     </div>
   ),

@@ -9,9 +9,9 @@ export class Tier1TypographyTokens extends Component {
       <div>
         <Section title="Font Family">
           <Grid>
-            {filterTokens(`eds-font-family`).map(function (listItem, index) {
+            {filterTokens(`eds-font-family`).map(function (listItem) {
               return (
-                <GridItem key={'font-family-' + index}>
+                <GridItem key={listItem.name}>
                   <TokenSpecimen
                     inlineStyles={{
                       fontFamily: `var(${listItem.name})`,
@@ -28,9 +28,9 @@ export class Tier1TypographyTokens extends Component {
 
         <Section title="Font Size">
           <Grid>
-            {filterTokens(`eds-font-size`).map(function (listItem, index) {
+            {filterTokens(`eds-font-size`).map(function (listItem) {
               return (
-                <GridItem key={'font-size-' + index}>
+                <GridItem key={listItem.name}>
                   <TokenSpecimen
                     inlineStyles={{
                       fontSize: `var(${listItem.name})`,
@@ -47,9 +47,9 @@ export class Tier1TypographyTokens extends Component {
 
         <Section title="Font Weight">
           <Grid>
-            {filterTokens(`eds-font-weight`).map(function (listItem, index) {
+            {filterTokens(`eds-font-weight`).map(function (listItem) {
               return (
-                <GridItem key={'font-weight-' + index}>
+                <GridItem key={listItem.name}>
                   <TokenSpecimen
                     inlineStyles={{
                       fontWeight: `var(${listItem.name})`,
@@ -66,9 +66,9 @@ export class Tier1TypographyTokens extends Component {
 
         <Section title="Line Height">
           <Grid>
-            {filterTokens(`eds-line-height`).map(function (listItem, index) {
+            {filterTokens(`eds-line-height`).map(function (listItem) {
               return (
-                <GridItem key={'line-height-' + index}>
+                <GridItem key={listItem.name}>
                   <TokenSpecimen
                     inlineStyles={{
                       lineHeight: `var(${listItem.name})`,

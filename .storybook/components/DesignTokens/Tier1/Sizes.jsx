@@ -3,24 +3,20 @@ import { Grid, GridItem, Section } from '../../../../src';
 import filterTokens from '../../../util/filterTokens';
 import { TokenSpecimen } from '../../TokenSpecimen/TokenSpecimen';
 
-export class Tier2Borders extends Component {
+export class Tier1Sizes extends Component {
   render() {
     return (
       <div>
-        <Section title="Border Width">
+        <Section title="Size">
           <Grid>
-            {filterTokens(`eds-theme-border-width`).map(function (
-              listItem,
-              index,
-            ) {
+            {filterTokens(`eds-size`).map(function (listItem) {
               return (
-                <GridItem key={'border-width-' + index}>
+                <GridItem key={listItem.name}>
                   <TokenSpecimen
                     inlineStyles={{
-                      backgroundColor: 'transparent',
-                      borderWidth: `var(${listItem.name})`,
-                      borderStyle: 'solid',
-                      borderColor: 'black',
+                      width: `var(${listItem.name})`,
+                      height: `var(${listItem.name})`,
+                      minHeight: '0',
                     }}
                     name={listItem.name}
                     value={listItem.value}

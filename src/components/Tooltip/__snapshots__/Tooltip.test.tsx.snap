@@ -454,7 +454,9 @@ exports[`<Tooltip /> TextChild story renders snapshot 1`] = `
         data-testid="disabled-child-tooltip-wrapper"
         tabindex="0"
       >
-        Tooltip trigger
+        <span>
+          Tooltip trigger
+        </span>
       </span>
     </div>
   </div>

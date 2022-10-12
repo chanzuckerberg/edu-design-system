@@ -123,6 +123,8 @@ export const Header = ({
   /**
    * Update sticky wrapper height on mount
    */
+  // FIXME
+  // eslint-disable-next-line @chanzuckerberg/edu-react/use-effect-deps-presence
   useEffect(() => {
     updateHeaderWrapperHeight();
   });
@@ -132,6 +134,8 @@ export const Header = ({
    *
    * Add scroll and window resize event to adjust values.
    */
+  // FIXME
+  // eslint-disable-next-line @chanzuckerberg/edu-react/use-effect-deps-presence
   useEffect(() => {
     window.addEventListener('scroll', handleWindowScroll, false);
     window.addEventListener('resize', updateHeaderWrapperHeight, false);

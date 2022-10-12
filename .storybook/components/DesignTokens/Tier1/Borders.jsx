@@ -9,9 +9,9 @@ export class Tier1Borders extends Component {
       <div>
         <Section title="Border Width">
           <Grid>
-            {filterTokens(`eds-border-width`).map(function (listItem, index) {
+            {filterTokens(`eds-border-width`).map(function (listItem) {
               return (
-                <GridItem key={'border-width-' + index}>
+                <GridItem key={listItem.name}>
                   <TokenSpecimen
                     inlineStyles={{
                       backgroundColor: 'transparent',
@@ -30,9 +30,9 @@ export class Tier1Borders extends Component {
 
         <Section title="Border Radius">
           <Grid>
-            {filterTokens(`eds-border-radius`).map(function (listItem, index) {
+            {filterTokens(`eds-border-radius`).map(function (listItem) {
               return (
-                <GridItem key={'border-radius-' + index}>
+                <GridItem key={listItem.name}>
                   <TokenSpecimen
                     inlineStyles={{
                       backgroundColor: 'transparent',

@@ -85,6 +85,8 @@ export const TableCard = ({
                 return (
                   <TableHeaderCell
                     className={styles['table-card__table-header-cell']}
+                    // FIXME
+                    // eslint-disable-next-line react/no-array-index-key
                     key={'table-header-cell-' + index}
                   >
                     {item.title}
@@ -96,6 +98,8 @@ export const TableCard = ({
           <TableBody>
             {tableRows.map((item, index) => {
               return (
+                // FIXME
+                // eslint-disable-next-line react/no-array-index-key
                 <TableRow key={`table-row-${index}`}>
                   <TableHeaderCell>{item.value1}</TableHeaderCell>
                   <TableCell>
@@ -105,6 +109,8 @@ export const TableCard = ({
                           <NumberIcon
                             aria-label={item['aria-label']}
                             incomplete={!item.complete}
+                            // FIXME
+                            // eslint-disable-next-line react/no-array-index-key
                             key={`number-icon-${index}`}
                             number={index + 1}
                             numberIconTitle={`incomplete step ${index + 1}`}

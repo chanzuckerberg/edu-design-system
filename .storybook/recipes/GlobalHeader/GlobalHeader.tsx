@@ -81,6 +81,8 @@ export const GlobalHeader = ({
     }
   };
 
+  // FIXME
+  // eslint-disable-next-line @chanzuckerberg/edu-react/use-effect-deps-presence
   useEffect(() => {
     updateScreenSize();
     window.addEventListener('resize', updateScreenSize);
