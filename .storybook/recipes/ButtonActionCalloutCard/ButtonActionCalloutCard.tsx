@@ -1,8 +1,8 @@
 import clsx from 'clsx';
-import type {ReactNode} from 'react';
+import type { ReactNode } from 'react';
 import React from 'react';
 import styles from './ButtonActionCalloutCard.module.css';
-import {Card, Heading, Text} from '../../../src';
+import { Card, Heading, Text } from '../../../src';
 
 export interface Props {
   /**

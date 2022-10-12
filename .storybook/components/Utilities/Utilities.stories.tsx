@@ -1,10 +1,10 @@
 import React from 'react';
-import {ColorUtilities} from './ColorUtilities';
-import {ShadowUtilities} from './ShadowUtilities';
-import {SpacingMarginUtilities} from './SpacingMarginUtilities';
-import {SpacingPaddingUtilities} from './SpacingPaddingUtilities';
-import {VisibilityUtilities} from './VisibilityUtilities';
-import {WidthUtilities} from './WidthUtilities';
+import { ColorUtilities } from './ColorUtilities';
+import { ShadowUtilities } from './ShadowUtilities';
+import { SpacingMarginUtilities } from './SpacingMarginUtilities';
+import { SpacingPaddingUtilities } from './SpacingPaddingUtilities';
+import { VisibilityUtilities } from './VisibilityUtilities';
+import { WidthUtilities } from './WidthUtilities';
 
 export default {
   component: ColorUtilities,

@@ -1,11 +1,11 @@
 import clsx from 'clsx';
-import type {ReactNode, CSSProperties} from 'react';
-import React, {useEffect} from 'react';
-import {useUID} from 'react-uid';
+import type { ReactNode, CSSProperties } from 'react';
+import React, { useEffect } from 'react';
+import { useUID } from 'react-uid';
 import svg4everybody from 'svg4everybody';
 import styles from './Icon.module.css';
 import icons from '../../icons/spritemap/spritemap.svg';
-import type {ALL_ICONS} from '../../util/allIcons';
+import type { ALL_ICONS } from '../../util/allIcons';
 
 // generates a union type of all possible icon names
 export type IconName = typeof ALL_ICONS[number];

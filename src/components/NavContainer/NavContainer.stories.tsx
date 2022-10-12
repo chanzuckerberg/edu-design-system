@@ -1,7 +1,7 @@
-import type {StoryObj, Meta} from '@storybook/react';
+import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
-import {NavContainer} from './NavContainer';
+import { NavContainer } from './NavContainer';
 import PrimaryNav from '../PrimaryNav';
 import PrimaryNavItem from '../PrimaryNavItem';
 import UtilityNav from '../UtilityNav';
@@ -10,7 +10,7 @@ import UtilityNavItem from '../UtilityNavItem';
 export default {
   title: 'Molecules/Global/NavContainer',
   component: NavContainer,
-  subcomponents: {PrimaryNav, UtilityNav},
+  subcomponents: { PrimaryNav, UtilityNav },
   args: {
     children: (
       <>
@@ -27,7 +27,7 @@ export default {
   },
   decorators: [
     (Story) => (
-      <div style={{background: '#000000'}}>
+      <div style={{ background: '#000000' }}>
         <Story />
       </div>
     ),

@@ -1,10 +1,10 @@
 import clsx from 'clsx';
-import type {ReactNode} from 'react';
+import type { ReactNode } from 'react';
 import React from 'react';
 import styles from './CalendarCard.module.css';
 
-import {Card, Heading, Icon, Tag, Text} from '../../../src';
-import type {Variant as TagVariant} from '../../../src/components/Tag/Tag';
+import { Card, Heading, Icon, Tag, Text } from '../../../src';
+import type { Variant as TagVariant } from '../../../src/components/Tag/Tag';
 
 export const VARIANTS = ['brand', 'revise', 'success'] as const;
 
@@ -99,7 +99,7 @@ export const CalendarCard = ({
           {dateStart} &mdash; {dateEnd} {meta}
         </Text>
         <div className={styles['calendar-card__tags']}>
-          {tags?.map(({hasOutline = true, text, variant = 'neutral'}) => (
+          {tags?.map(({ hasOutline = true, text, variant = 'neutral' }) => (
             <Tag
               hasOutline={hasOutline}
               key={text}

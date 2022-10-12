@@ -1,1 +1,1 @@
-export {StackedBlock as default} from './StackedBlock';
+export { StackedBlock as default } from './StackedBlock';

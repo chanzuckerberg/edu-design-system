@@ -1,1 +1,1 @@
-export {LayoutSection as default} from './LayoutSection';
+export { LayoutSection as default } from './LayoutSection';

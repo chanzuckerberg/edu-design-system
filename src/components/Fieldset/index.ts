@@ -1,1 +1,1 @@
-export {Fieldset as default} from './Fieldset';
+export { Fieldset as default } from './Fieldset';

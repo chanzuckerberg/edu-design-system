@@ -1,7 +1,7 @@
-import type {StoryObj, Meta} from '@storybook/react';
-import type {ComponentProps} from 'react';
+import type { StoryObj, Meta } from '@storybook/react';
+import type { ComponentProps } from 'react';
 
-import {DataSummaryCard} from './DataSummaryCard';
+import { DataSummaryCard } from './DataSummaryCard';
 
 export default {
   title: 'Recipes/DataSummaryCard',

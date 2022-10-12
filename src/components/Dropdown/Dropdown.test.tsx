@@ -1,11 +1,11 @@
-import {generateSnapshots} from '@chanzuckerberg/story-utils';
-import {composeStory} from '@storybook/testing-react';
-import {fireEvent, screen, render} from '@testing-library/react';
+import { generateSnapshots } from '@chanzuckerberg/story-utils';
+import { composeStory } from '@storybook/testing-react';
+import { fireEvent, screen, render } from '@testing-library/react';
 import React from 'react';
-import {Dropdown} from './Dropdown';
+import { Dropdown } from './Dropdown';
 import * as stories from './Dropdown.stories';
 
-const {OpenByDefault, ...closedStories} = stories;
+const { OpenByDefault, ...closedStories } = stories;
 
 const OpenByDefaultComponent = composeStory(OpenByDefault, stories.default);
 
@@ -35,8 +35,8 @@ describe('<Dropdown />', () => {
   });
 
   it('renders the OpenByDefault story', async () => {
-    const {container} = render(<OpenByDefaultComponent />);
-    await OpenByDefaultComponent.play({canvasElement: container});
+    const { container } = render(<OpenByDefaultComponent />);
+    await OpenByDefaultComponent.play({ canvasElement: container });
     expect(screen.getByTestId('dropdown')).toMatchSnapshot();
   });
 

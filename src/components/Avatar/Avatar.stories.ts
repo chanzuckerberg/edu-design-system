@@ -1,7 +1,7 @@
-import type {StoryObj, Meta} from '@storybook/react';
-import type {ComponentProps} from 'react';
+import type { StoryObj, Meta } from '@storybook/react';
+import type { ComponentProps } from 'react';
 
-import {Avatar} from './Avatar';
+import { Avatar } from './Avatar';
 
 export default {
   title: 'Atoms/Media/Avatar',

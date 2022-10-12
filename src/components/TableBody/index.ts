@@ -1,1 +1,1 @@
-export {TableBody as default} from './TableBody';
+export { TableBody as default } from './TableBody';

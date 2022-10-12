@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 import React from 'react';
 import styles from './PrimaryNavItem.module.css';
-import {EdsThemeColorIconNeutralDefaultInverse} from '../../tokens-dist/ts/colors';
-import type {IconName} from '../Icon';
+import { EdsThemeColorIconNeutralDefaultInverse } from '../../tokens-dist/ts/colors';
+import type { IconName } from '../Icon';
 import Icon from '../Icon';
 
 export interface Props {
@@ -37,7 +37,7 @@ export interface Props {
  */
 export const PrimaryNavItem = React.forwardRef<HTMLLIElement, Props>(
   function PrimaryNavItem(
-    {className, text, href, isActive, iconName, ...other},
+    { className, text, href, isActive, iconName, ...other },
     ref,
   ) {
     const TagName = createTagName();

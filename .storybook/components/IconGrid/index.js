@@ -1,1 +1,1 @@
-export {default} from './IconGrid';
+export { default } from './IconGrid';

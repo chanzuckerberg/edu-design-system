@@ -1,7 +1,7 @@
-import type {StoryObj, Meta} from '@storybook/react';
+import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
-import {Layout} from './Layout';
+import { Layout } from './Layout';
 import LayoutSection from '../LayoutSection';
 
 export default {

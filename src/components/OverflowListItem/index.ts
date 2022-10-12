@@ -1,1 +1,1 @@
-export {OverflowListItem as default} from './OverflowListItem';
+export { OverflowListItem as default } from './OverflowListItem';

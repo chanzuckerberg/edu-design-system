@@ -1,12 +1,12 @@
-import type {StoryObj, Meta} from '@storybook/react';
+import type { StoryObj, Meta } from '@storybook/react';
 import clsx from 'clsx';
-import type {ReactNode} from 'react';
+import type { ReactNode } from 'react';
 import React from 'react';
-import {useState} from 'react';
-import Modal, {ModalContent} from './Modal';
+import { useState } from 'react';
+import Modal, { ModalContent } from './Modal';
 import styles from './Modal.stories.module.css';
-import {Button, ButtonGroup, Heading, Text, Tooltip} from '../../';
-import {VARIANTS} from '../Heading/Heading';
+import { Button, ButtonGroup, Heading, Text, Tooltip } from '../../';
+import { VARIANTS } from '../Heading/Heading';
 
 export default {
   title: 'Organisms/Interactive/Modal',
@@ -14,7 +14,7 @@ export default {
   parameters: {
     // The modal is initially closed for most of these stories,
     // which renders testing it for visual regressions unhelpful.
-    chromatic: {disableSnapshot: true},
+    chromatic: { disableSnapshot: true },
   },
 } as Meta<Args>;
 
@@ -29,7 +29,7 @@ const getChildren = (
   <>
     <Modal.Header
       brandAsset={
-        <div className="fpo" style={{width: '100%', height: '100%'}}>
+        <div className="fpo" style={{ width: '100%', height: '100%' }}>
           Brand Asset
         </div>
       }
@@ -49,21 +49,11 @@ const getChildren = (
       <ButtonGroup className={styles['footer__button-group']}>
         {/* This has to be manually tested since Tooltip tests are flaky in Chromatic */}
         <Tooltip text="Tooltip should spawn on top of modal">
-          <Button
-            onClick={
-              () => {} /* eslint-disable-line @typescript-eslint/no-empty-function */
-            }
-            status="neutral"
-          >
+          <Button onClick={() => {}} status="neutral">
             Button 1
           </Button>
         </Tooltip>
-        <Button
-          onClick={
-            () => {} /* eslint-disable-line @typescript-eslint/no-empty-function */
-          }
-          variant="primary"
-        >
+        <Button onClick={() => {}} variant="primary">
           Button 2
         </Button>
       </ButtonGroup>
@@ -78,9 +68,7 @@ export const Default: StoryObj<Args> = {
       <ModalContent
         {...args}
         data-testid="non-interactive"
-        onClose={
-          () => {} /* eslint-disable-line @typescript-eslint/no-empty-function */
-        }
+        onClose={() => {}}
       />
     </div>
   ),
@@ -91,7 +79,7 @@ export const Default: StoryObj<Args> = {
   },
   parameters: {
     // This story shows the modal content by default, for visual regression testing purposes.
-    chromatic: {disableSnapshot: false},
+    chromatic: { disableSnapshot: false },
   },
 };
 
@@ -126,7 +114,7 @@ export const Mobile: StoryObj<Args> = {
     viewport: {
       defaultViewport: 'mobile2',
     },
-    chromatic: {disableSnapshot: false, viewports: [414]},
+    chromatic: { disableSnapshot: false, viewports: [414] },
   },
 };
 
@@ -148,7 +136,7 @@ export const MobileLandscape: StoryObj<Args> = {
       /**
        * Chromatic sets viewport height to 900px, hence won't snap as necessary
        */
-      chromatic: {disableSnapshot: true},
+      chromatic: { disableSnapshot: true },
     },
   },
 };
@@ -185,7 +173,7 @@ export const Tablet: StoryObj<Args> = {
         },
       },
     },
-    chromatic: {disableSnapshot: false, viewports: [768]},
+    chromatic: { disableSnapshot: false, viewports: [768] },
   },
 };
 
@@ -267,7 +255,7 @@ export const ControlHeadingInteractive: StoryObj<HeadingArgs> = {
       options: VARIANTS,
     },
   },
-  render: ({as, size, variant, ...args}) => (
+  render: ({ as, size, variant, ...args }) => (
     <InteractiveExample {...args}>
       <Modal.Header>
         <Modal.Title as={as} size={size} variant={variant}>
@@ -282,7 +270,7 @@ export const ControlHeadingInteractive: StoryObj<HeadingArgs> = {
    * Hence will snap similarly to the other stories has no value in snapping both unit and Chromatic.
    */
   parameters: {
-    snapshot: {skip: true},
+    snapshot: { skip: true },
   },
 };
 
@@ -293,7 +281,7 @@ export const WithoutCloseButton: StoryObj<InteractiveArgs> = {
     </InteractiveExample>
   ),
   parameters: {
-    snapshot: {skip: true},
+    snapshot: { skip: true },
   },
 };
 
@@ -414,14 +402,14 @@ export const ModalStepper: StoryObj<ModalStepperArgs> = {
     ),
   ],
   parameters: {
-    chromatic: {disableSnapshot: false},
+    chromatic: { disableSnapshot: false },
   },
 };
 
 const InteractiveModalStepperComponent = () => {
   const [activeStep, setActiveStep] = useState(1);
   return (
-    <div style={{display: 'flex', flexDirection: 'column', gap: '1rem'}}>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
       <Modal.Stepper activeStep={activeStep} totalSteps={5} />
       <ButtonGroup>
         {activeStep > 1 && (

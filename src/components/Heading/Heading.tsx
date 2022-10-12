@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, {forwardRef} from 'react';
+import React, { forwardRef } from 'react';
 import styles from './Heading.module.css';
 
 export const VARIANTS = [

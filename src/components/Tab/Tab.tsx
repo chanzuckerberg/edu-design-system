@@ -1,4 +1,4 @@
-import type {ReactNode} from 'react';
+import type { ReactNode } from 'react';
 import React from 'react';
 
 export interface Props {
@@ -40,7 +40,7 @@ export const Tab = ({
   className,
   id,
   // Destructure `title` so it is not applied to the rendered element
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+
   title,
   'aria-labelledby': ariaLabelledBy,
   ...other

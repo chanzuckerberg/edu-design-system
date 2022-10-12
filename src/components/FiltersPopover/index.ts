@@ -1,1 +1,1 @@
-export {FiltersPopover as default} from './FiltersPopover';
+export { FiltersPopover as default } from './FiltersPopover';

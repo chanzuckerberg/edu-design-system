@@ -1,10 +1,10 @@
-import {generateSnapshots} from '@chanzuckerberg/story-utils';
-import {composeStories} from '@storybook/testing-react';
-import {render, screen, waitFor} from '@testing-library/react';
+import { generateSnapshots } from '@chanzuckerberg/story-utils';
+import { composeStories } from '@storybook/testing-react';
+import { render, screen, waitFor } from '@testing-library/react';
 import React from 'react';
 import * as stories from './Breadcrumbs.stories';
 
-const {LongList} = composeStories(stories);
+const { LongList } = composeStories(stories);
 
 describe('<Breadcrumbs />', () => {
   generateSnapshots(stories);
@@ -14,8 +14,8 @@ describe('<Breadcrumbs />', () => {
       render(<LongList />);
       const list = screen.getByRole('list');
 
-      Object.defineProperty(list, 'clientWidth', {value: 100});
-      Object.defineProperty(list, 'scrollWidth', {value: 200});
+      Object.defineProperty(list, 'clientWidth', { value: 100 });
+      Object.defineProperty(list, 'scrollWidth', { value: 200 });
       expect(list.clientWidth).toBeLessThan(list.scrollWidth);
 
       window.dispatchEvent(new Event('resize'));
@@ -29,8 +29,8 @@ describe('<Breadcrumbs />', () => {
       render(<LongList />);
       const list = screen.getByRole('list');
 
-      Object.defineProperty(list, 'clientWidth', {value: 200});
-      Object.defineProperty(list, 'scrollWidth', {value: 200});
+      Object.defineProperty(list, 'clientWidth', { value: 200 });
+      Object.defineProperty(list, 'scrollWidth', { value: 200 });
       expect(list.clientWidth).toBeGreaterThanOrEqual(list.scrollWidth);
 
       window.dispatchEvent(new Event('resize'));

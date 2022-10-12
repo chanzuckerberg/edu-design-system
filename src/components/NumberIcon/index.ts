@@ -1,1 +1,1 @@
-export {NumberIcon as default} from './NumberIcon';
+export { NumberIcon as default } from './NumberIcon';

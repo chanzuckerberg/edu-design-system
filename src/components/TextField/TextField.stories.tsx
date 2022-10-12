@@ -1,8 +1,8 @@
-import {BADGE} from '@geometricpanda/storybook-addon-badges';
-import type {StoryObj, Meta} from '@storybook/react';
+import { BADGE } from '@geometricpanda/storybook-addon-badges';
+import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
-import {TextField} from './TextField';
+import { TextField } from './TextField';
 import Button from '../../components/Button';
 
 export default {
@@ -13,7 +13,7 @@ export default {
   },
   decorators: [
     (Story) => (
-      <div style={{padding: '0.5rem', backgroundColor: 'white'}}>
+      <div style={{ padding: '0.5rem', backgroundColor: 'white' }}>
         <Story />
       </div>
     ),

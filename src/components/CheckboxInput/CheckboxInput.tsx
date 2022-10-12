@@ -63,7 +63,7 @@ const CheckboxSvg = ({
 export const CheckboxInput = React.forwardRef<
   HTMLInputElement,
   CheckboxInputProps
->(({checked = false, className, disabled, ...other}, ref) => {
+>(({ checked = false, className, disabled, ...other }, ref) => {
   // Make indeterminate checkbox visually match the colors of a
   // checked state, but announce itself as "mixed" to screen readers
   const checkedProps =

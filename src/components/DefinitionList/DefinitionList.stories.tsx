@@ -1,14 +1,14 @@
-import type {Story, Meta} from '@storybook/react';
+import type { Story, Meta } from '@storybook/react';
 import React from 'react';
 
-import type {Props} from './DefinitionList';
-import {DefinitionList} from './DefinitionList';
+import type { Props } from './DefinitionList';
+import { DefinitionList } from './DefinitionList';
 import DefinitionListItem from '../DefinitionListItem';
 
 export default {
   title: 'Molecules/Lists/DefinitionList',
   component: DefinitionList,
-  subcomponents: {DefinitionListItem},
+  subcomponents: { DefinitionListItem },
 } as Meta;
 
 const Template: Story<Props> = (args) => (

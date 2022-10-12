@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
-import {Grid} from '../../../../src';
+import React, { Component } from 'react';
+import { Grid } from '../../../../src';
 import '../../../../src/components/Utilities/TypographyPresets.css';
-import {TokenSpecimen} from '../../TokenSpecimen/TokenSpecimen';
+import { TokenSpecimen } from '../../TokenSpecimen/TokenSpecimen';
 
 export const PRESET_SIZE_MAP = {
   '001': {
@@ -59,9 +59,9 @@ export class Tier1TypographyPresets extends Component {
     const renderTypeToken = (
       preset,
       index,
-      {boldVariant = true, lightVariant = false} = {},
+      { boldVariant = true, lightVariant = false } = {},
     ) => {
-      const {fontSize, lineHeight} = PRESET_SIZE_MAP[preset];
+      const { fontSize, lineHeight } = PRESET_SIZE_MAP[preset];
       const commonProps = {
         comment: 'font size / line height (px)',
         value: `${fontSize} / ${lineHeight}`,
@@ -97,7 +97,7 @@ export class Tier1TypographyPresets extends Component {
       <Grid>
         {Object.keys(PRESET_SIZE_MAP).map((preset, index) => {
           if (preset === '005') {
-            return renderTypeToken(preset, index, {lightVariant: true});
+            return renderTypeToken(preset, index, { lightVariant: true });
           }
           return renderTypeToken(preset, index);
         })}

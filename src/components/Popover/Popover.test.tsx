@@ -1,11 +1,11 @@
-import {generateSnapshots} from '@chanzuckerberg/story-utils';
-import {userEvent} from '@storybook/testing-library';
-import {composeStories} from '@storybook/testing-react';
-import {render, screen} from '@testing-library/react';
+import { generateSnapshots } from '@chanzuckerberg/story-utils';
+import { userEvent } from '@storybook/testing-library';
+import { composeStories } from '@storybook/testing-react';
+import { render, screen } from '@testing-library/react';
 import React from 'react';
 import * as stories from './Popover.stories';
 
-const {Default} = composeStories(stories);
+const { Default } = composeStories(stories);
 
 describe('<Popover />', () => {
   generateSnapshots(stories, {

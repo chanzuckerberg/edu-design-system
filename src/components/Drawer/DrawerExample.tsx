@@ -1,5 +1,5 @@
-import React, {useState, useRef} from 'react';
-import {Drawer} from './Drawer';
+import React, { useState, useRef } from 'react';
+import { Drawer } from './Drawer';
 import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';
 import Heading from '../Heading';

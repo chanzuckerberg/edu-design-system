@@ -1,7 +1,7 @@
-import type {StoryObj, Meta} from '@storybook/react';
+import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
-import {NumberIcon} from './NumberIcon';
+import { NumberIcon } from './NumberIcon';
 
 export default {
   title: 'Atoms/Icons/NumberIcon',

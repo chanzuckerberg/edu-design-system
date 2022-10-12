@@ -1,4 +1,4 @@
-import type {ReactNode} from 'react';
+import type { ReactNode } from 'react';
 import React from 'react';
 
 export interface Props {
@@ -21,7 +21,7 @@ export interface Props {
  *
  * HTML `tfoot` of the `Table` component
  */
-export const TableFooter = ({children, className, ...other}: Props) => {
+export const TableFooter = ({ children, className, ...other }: Props) => {
   return (
     <tfoot className={className} {...other}>
       {children}

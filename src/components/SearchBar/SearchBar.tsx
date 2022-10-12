@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import type {ReactNode} from 'react';
+import type { ReactNode } from 'react';
 import React from 'react';
 import styles from './SearchBar.module.css';
 import SearchButton from '../SearchButton';
@@ -25,7 +25,7 @@ export type Props = {
  *
  * Input field and button used for searching through various data fields.
  */
-export const SearchBar = ({children, className}: Props) => {
+export const SearchBar = ({ children, className }: Props) => {
   const componentClassName = clsx(styles['search-bar'], className);
 
   return <div className={componentClassName}>{children}</div>;

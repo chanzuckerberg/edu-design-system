@@ -10,7 +10,7 @@ type TokenTableProps = {
   renderExample: (name: string, value: string) => JSX.Element;
 };
 
-const TokenTable = ({tokens, renderExample}: TokenTableProps) => {
+const TokenTable = ({ tokens, renderExample }: TokenTableProps) => {
   return (
     <table className={styles['token-table']}>
       <thead>
@@ -21,7 +21,7 @@ const TokenTable = ({tokens, renderExample}: TokenTableProps) => {
         </tr>
       </thead>
       <tbody>
-        {tokens.map(({name, value}) => (
+        {tokens.map(({ name, value }) => (
           <tr key={name}>
             <th scope="row">{name}</th>
             <td>{value}</td>

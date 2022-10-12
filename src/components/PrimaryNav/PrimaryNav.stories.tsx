@@ -1,16 +1,16 @@
-import type {StoryObj, Meta} from '@storybook/react';
+import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
-import {PrimaryNav} from './PrimaryNav';
+import { PrimaryNav } from './PrimaryNav';
 import PrimaryNavItem from '../PrimaryNavItem';
 
 export default {
   title: 'Molecules/Navigation/PrimaryNav',
   component: PrimaryNav,
-  subcomponents: {PrimaryNavItem},
+  subcomponents: { PrimaryNavItem },
   decorators: [
     (Story) => (
-      <div style={{background: '#000'}}>
+      <div style={{ background: '#000' }}>
         <Story />
       </div>
     ),

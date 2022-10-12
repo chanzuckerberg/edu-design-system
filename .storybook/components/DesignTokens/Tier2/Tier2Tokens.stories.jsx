@@ -1,8 +1,8 @@
 import React from 'react';
-import {Tier2Borders} from './Borders';
-import {Tier2Colors} from './Colors';
-import {Tier2Forms} from './Forms';
-import {Tier2TypographyUsage} from './TypographyUsage';
+import { Tier2Borders } from './Borders';
+import { Tier2Colors } from './Colors';
+import { Tier2Forms } from './Forms';
+import { Tier2TypographyUsage } from './TypographyUsage';
 
 export default {
   title: 'Design Tokens/Tier 2: Usage',

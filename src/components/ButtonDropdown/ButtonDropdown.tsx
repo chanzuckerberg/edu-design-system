@@ -1,9 +1,9 @@
 import clsx from 'clsx';
-import type {ReactNode} from 'react';
+import type { ReactNode } from 'react';
 import React from 'react';
 import styles from './ButtonDropdown.module.css';
-import {DropdownMenu} from '../..';
-import type {ClickableStyleProps} from '../ClickableStyle';
+import { DropdownMenu } from '../..';
+import type { ClickableStyleProps } from '../ClickableStyle';
 
 export interface Props {
   /**
@@ -149,7 +149,6 @@ export const ButtonDropdown = ({
       // Checking isValidElement is the safe way and avoids a typescript
       // error too.
       if (React.isValidElement(child)) {
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-expect-error TODO: fix "No overload matches this call" error
         return React.cloneElement<Props>(child, {
           ref: buttonRef,

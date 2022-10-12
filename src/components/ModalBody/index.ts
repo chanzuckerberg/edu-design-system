@@ -1,1 +1,1 @@
-export {ModalBody as default} from './ModalBody';
+export { ModalBody as default } from './ModalBody';

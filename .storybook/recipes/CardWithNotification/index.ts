@@ -1,1 +1,1 @@
-export {CardWithNotification as default} from './CardWithNotification';
+export { CardWithNotification as default } from './CardWithNotification';

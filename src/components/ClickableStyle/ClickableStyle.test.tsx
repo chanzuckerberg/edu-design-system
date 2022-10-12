@@ -1,6 +1,6 @@
-import {render} from '@testing-library/react';
+import { render } from '@testing-library/react';
 import React from 'react';
-import {ClickableStyle} from './ClickableStyle';
+import { ClickableStyle } from './ClickableStyle';
 import consoleWarnMockHelper from '../../../jest/helpers/consoleWarnMock';
 
 describe('<ClickableStyle />', () => {

@@ -1,8 +1,8 @@
-import {generateSnapshots} from '@chanzuckerberg/story-utils';
-import {render, screen} from '@testing-library/react';
+import { generateSnapshots } from '@chanzuckerberg/story-utils';
+import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
-import {DataBar} from './DataBar';
+import { DataBar } from './DataBar';
 import * as stories from './DataBar.stories';
 
 describe('<DataBar />', () => {
@@ -15,9 +15,9 @@ describe('<DataBar />', () => {
         label="databar"
         max={100}
         segments={[
-          {value: 25, text: 'Segment 1'},
-          {value: 10, text: 'Segment 2'},
-          {value: 15, text: 'Segment 3'},
+          { value: 25, text: 'Segment 1' },
+          { value: 10, text: 'Segment 2' },
+          { value: 15, text: 'Segment 3' },
         ]}
       />,
     );

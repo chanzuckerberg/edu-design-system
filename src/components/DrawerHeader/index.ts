@@ -1,1 +1,1 @@
-export {DrawerHeader as default} from './DrawerHeader';
+export { DrawerHeader as default } from './DrawerHeader';

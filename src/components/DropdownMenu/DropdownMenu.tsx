@@ -5,7 +5,7 @@ import type {
   HTMLAttributes,
   MouseEventHandler,
 } from 'react';
-import React, {createContext, useRef, useEffect} from 'react';
+import React, { createContext, useRef, useEffect } from 'react';
 import styles from './DropdownMenu.module.css';
 import {
   L_ARROW_KEYCODE,
@@ -142,7 +142,7 @@ export const DropdownMenu: React.FC<Props> = ({
 
   const componentClassName = clsx(styles['dropdown-menu'], className);
   return (
-    <DropdownMenuContext.Provider value={{refs}}>
+    <DropdownMenuContext.Provider value={{ refs }}>
       <div className={componentClassName} {...other}>
         <ul
           className={styles['dropdown-menu__list']}

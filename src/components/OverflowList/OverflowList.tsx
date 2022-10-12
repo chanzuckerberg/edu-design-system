@@ -27,7 +27,7 @@ export interface Props {
  *
  * Component that is used to maintain the object body with content overflowed.
  */
-export const OverflowList = ({className, children, ...other}: Props) => {
+export const OverflowList = ({ className, children, ...other }: Props) => {
   /**
    * Set states and refs
    *

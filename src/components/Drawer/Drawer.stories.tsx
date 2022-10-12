@@ -1,12 +1,12 @@
-import {BADGE} from '@geometricpanda/storybook-addon-badges';
-import type {StoryObj, Meta} from '@storybook/react';
+import { BADGE } from '@geometricpanda/storybook-addon-badges';
+import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
-import {Drawer} from './Drawer';
-import {DrawerExample} from './DrawerExample';
-import {Button} from '../Button/Button';
-import {ButtonGroup} from '../ButtonGroup/ButtonGroup';
-import {Heading} from '../Heading/Heading';
+import { Drawer } from './Drawer';
+import { DrawerExample } from './DrawerExample';
+import { Button } from '../Button/Button';
+import { ButtonGroup } from '../ButtonGroup/ButtonGroup';
+import { Heading } from '../Heading/Heading';
 
 export default {
   title: 'Organisms/Interactive/Drawer',
@@ -66,7 +66,7 @@ export const DefaultInteractive: StoryObj = {
     /**
      * No point snapping the button as this story is an interaction example.
      */
-    snapshot: {skip: true},
-    chromatic: {disableSnapshot: true},
+    snapshot: { skip: true },
+    chromatic: { disableSnapshot: true },
   },
 };

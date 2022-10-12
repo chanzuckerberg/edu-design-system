@@ -1,8 +1,8 @@
-import {BADGE} from '@geometricpanda/storybook-addon-badges';
-import type {StoryObj, Meta} from '@storybook/react';
-import type {ComponentProps} from 'react';
+import { BADGE } from '@geometricpanda/storybook-addon-badges';
+import type { StoryObj, Meta } from '@storybook/react';
+import type { ComponentProps } from 'react';
 
-import {StackedBlock} from './StackedBlock';
+import { StackedBlock } from './StackedBlock';
 
 export default {
   title: 'Molecules/Blocks/StackedBlock',

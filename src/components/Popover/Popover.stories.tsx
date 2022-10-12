@@ -1,8 +1,8 @@
-import type {StoryObj, Meta} from '@storybook/react';
-import {within} from '@storybook/testing-library';
+import type { StoryObj, Meta } from '@storybook/react';
+import { within } from '@storybook/testing-library';
 import isChromatic from 'chromatic/isChromatic';
 import React from 'react';
-import {Popover} from './Popover';
+import { Popover } from './Popover';
 import Button from '../Button';
 
 export default {
@@ -23,7 +23,7 @@ export default {
           Open Popover
         </Popover.Button>
         <Popover.Content data-testid="popover-content">
-          <div style={{width: '250px'}}>
+          <div style={{ width: '250px' }}>
             My popover content Lorem ipsum dolor sit amet, consectetur
             adipiscing elit, sed do eiusmod
           </div>
@@ -36,7 +36,7 @@ export default {
 type Args = React.ComponentProps<typeof Popover>;
 
 export const Default: StoryObj<Args> = {
-  play: async ({canvasElement}) => {
+  play: async ({ canvasElement }) => {
     // We want to test visual regression for the Popover.Content as well as the button,
     // but don't want the drawer open initally outside Chromatic.
     if (isChromatic()) {
@@ -53,7 +53,7 @@ export const Arrow: StoryObj<Args> = {
       <>
         <Popover.Button as={Button}>Open Popover</Popover.Button>
         <Popover.Content showArrow>
-          <div style={{width: '250px'}}>
+          <div style={{ width: '250px' }}>
             My popover content Lorem ipsum dolor sit amet, consectetur
             adipiscing elit, sed do eiusmod
           </div>
