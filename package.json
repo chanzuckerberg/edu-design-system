@@ -96,7 +96,7 @@
   "types": "lib/index.d.ts",
   "devDependencies": {
     "@chanzuckerberg/axe-storybook-testing": "^6.1.0",
-    "@chanzuckerberg/eslint-plugin-edu-react": "^1.0.0",
+    "@chanzuckerberg/eslint-plugin-edu-react": "^1.0.1",
     "@chanzuckerberg/eslint-plugin-stories": "^3.2.2",
     "@chanzuckerberg/story-utils": "^3.0.8",
     "@commitlint/cli": "^16.2.1",
