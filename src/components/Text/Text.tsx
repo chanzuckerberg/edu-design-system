@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { forwardRef, ForwardedRef } from 'react';
+import React, {forwardRef, ForwardedRef} from 'react';
 import styles from './Text.module.css';
 import LayoutLinelengthContainer from '../LayoutLinelengthContainer';
 

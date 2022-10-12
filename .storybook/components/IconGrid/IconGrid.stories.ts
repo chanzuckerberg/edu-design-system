@@ -1,4 +1,4 @@
-import { StoryObj } from '@storybook/react';
+import {StoryObj} from '@storybook/react';
 import IconGrid from './IconGrid';
 
 export default {

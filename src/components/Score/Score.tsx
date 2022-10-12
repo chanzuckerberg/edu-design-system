@@ -31,7 +31,7 @@ export interface Props {
  *
  * A (pill shaped badge) wrapper intended for use with scores.
  */
-export const Score = ({ className, variant, ...other }: Props) => {
+export const Score = ({className, variant, ...other}: Props) => {
   const componentClassName = clsx(
     styles['score'],
     styles[`score--${variant}`],

@@ -1,9 +1,9 @@
-import { Dialog, Transition } from '@headlessui/react';
+import {Dialog, Transition} from '@headlessui/react';
 import clsx from 'clsx';
-import React, { MutableRefObject, ReactNode } from 'react';
+import React, {MutableRefObject, ReactNode} from 'react';
 import styles from './Modal.module.css';
-import { Icon } from '../Icon/Icon';
-import { ModalBody, Props as ModalBodyProps } from '../ModalBody/ModalBody';
+import {Icon} from '../Icon/Icon';
+import {ModalBody, Props as ModalBodyProps} from '../ModalBody/ModalBody';
 import {
   ModalFooter,
   Props as ModalFooterProps,
@@ -12,8 +12,8 @@ import {
   ModalHeader,
   Props as ModalHeaderProps,
 } from '../ModalHeader/ModalHeader';
-import { ModalStepper } from '../ModalStepper/ModalStepper';
-import { ModalTitle } from '../ModalTitle/ModalTitle';
+import {ModalStepper} from '../ModalStepper/ModalStepper';
+import {ModalTitle} from '../ModalTitle/ModalTitle';
 
 type Variant = 'brand' | undefined;
 
@@ -145,7 +145,7 @@ export const ModalContent = (props: ModalContentProps) => {
   );
 
   return (
-    <ModalContext.Provider value={{ isScrollable, variant }}>
+    <ModalContext.Provider value={{isScrollable, variant}}>
       <div className={componentClassName} {...other}>
         {!hideCloseButton && (
           <button className={styles['modal__close-button']} onClick={onClose}>
@@ -196,7 +196,7 @@ export const Modal = (props: ModalProps) => {
     open,
     ...rest
   } = props;
-  const { children } = rest;
+  const {children} = rest;
 
   if (process.env.NODE_ENV !== 'production') {
     const hasModalTitle = childrenHaveModalTitle(children);
@@ -240,17 +240,17 @@ export const Modal = (props: ModalProps) => {
  * Same prop passed directly to subcomponent has priority over prop passed from Modal component.
  */
 const VariantModalHeader = (props: ModalHeaderProps) => {
-  const { variant } = React.useContext(ModalContext);
+  const {variant} = React.useContext(ModalContext);
   return <ModalHeader variant={variant} {...props} />;
 };
 
 const FocusableModalBody = (props: ModalBodyProps) => {
-  const { isScrollable } = React.useContext(ModalContext);
+  const {isScrollable} = React.useContext(ModalContext);
   return <ModalBody isFocusable={isScrollable} {...props} />;
 };
 
 const StickyModalFooter = (props: ModalFooterProps) => {
-  const { isScrollable } = React.useContext(ModalContext);
+  const {isScrollable} = React.useContext(ModalContext);
   return <ModalFooter isSticky={isScrollable} {...props} />;
 };
 

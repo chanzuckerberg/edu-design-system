@@ -1,1 +1,1 @@
-export { TimelineNav as default } from './TimelineNav';
+export {TimelineNav as default} from './TimelineNav';

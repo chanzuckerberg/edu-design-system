@@ -1,7 +1,7 @@
-import { StoryObj, Meta } from '@storybook/react';
+import {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
 
-import { PageShell } from './PageShell';
+import {PageShell} from './PageShell';
 
 export default {
   title: 'Recipes/PageShell',

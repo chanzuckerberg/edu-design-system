@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { ReactNode, forwardRef } from 'react';
+import React, {ReactNode, forwardRef} from 'react';
 import styles from './DropdownButton.module.css';
 import Icon from '../Icon';
 
@@ -26,7 +26,7 @@ type Props = {
  * A styled button with an expand icon to be used in triggering Popovers, Dropdowns, etc.
  */
 export const DropdownButton = forwardRef<HTMLButtonElement, Props>(
-  ({ children, className, isOpen, ...other }, ref) => {
+  ({children, className, isOpen, ...other}, ref) => {
     const componentClassName = clsx(styles['dropdown-button'], className);
     const iconClassName = clsx(
       styles['dropdown-button__icon'],

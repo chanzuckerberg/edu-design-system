@@ -1,1 +1,1 @@
-export { DefinitionListItem as default } from './DefinitionListItem';
+export {DefinitionListItem as default} from './DefinitionListItem';

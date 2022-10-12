@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { MouseEventHandler } from 'react';
+import React, {MouseEventHandler} from 'react';
 import styles from './SearchButton.module.css';
 import Button from '../Button';
 
@@ -27,7 +27,7 @@ export type SearchButtonProps = {
  *
  * A button styled for use with the SearchBar.
  */
-export const SearchButton = ({ className, ...other }: SearchButtonProps) => {
+export const SearchButton = ({className, ...other}: SearchButtonProps) => {
   const componentClassName = clsx(styles['search-button'], className);
 
   return (

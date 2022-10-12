@@ -1,7 +1,7 @@
-import { StoryObj, Meta } from '@storybook/react';
+import {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
 
-import { LayoutContainer } from './LayoutContainer';
+import {LayoutContainer} from './LayoutContainer';
 
 export default {
   title: 'Molecules/Layout and Containers/Layout Container',

@@ -1,6 +1,6 @@
 import clsx from 'clsx';
-import React, { ReactNode } from 'react';
-import { useUID } from 'react-uid';
+import React, {ReactNode} from 'react';
+import {useUID} from 'react-uid';
 import styles from './UtilityNav.module.css';
 import UtilityNavItem from '../UtilityNavItem';
 

@@ -1,13 +1,13 @@
-import { StoryObj, Meta } from '@storybook/react';
+import {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
 
-import { Toolbar } from './Toolbar';
+import {Toolbar} from './Toolbar';
 import ToolbarItem from '../ToolbarItem';
 
 export default {
   title: 'Organisms/Toolbars/Toolbar',
   component: Toolbar,
-  subcomponents: { ToolbarItem },
+  subcomponents: {ToolbarItem},
   parameters: {
     axe: {
       // TODO: re-enable when component is worked on

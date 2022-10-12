@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { ReactNode } from 'react';
+import React, {ReactNode} from 'react';
 import styles from '../Card/Card.module.css';
 
 export interface Props {
@@ -16,7 +16,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const CardHeader = ({ children, className, ...other }: Props) => {
+export const CardHeader = ({children, className, ...other}: Props) => {
   const componentClassName = clsx(styles['card__header'], className);
   return (
     <header className={componentClassName} {...other}>

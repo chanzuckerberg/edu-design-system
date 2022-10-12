@@ -1,1 +1,1 @@
-export { ToolbarItem as default } from './ToolbarItem';
+export {ToolbarItem as default} from './ToolbarItem';

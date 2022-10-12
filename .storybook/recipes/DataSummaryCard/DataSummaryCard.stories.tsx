@@ -1,7 +1,7 @@
-import { StoryObj, Meta } from '@storybook/react';
+import {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
 
-import { DataSummaryCard } from './DataSummaryCard';
+import {DataSummaryCard} from './DataSummaryCard';
 
 export default {
   title: 'Recipes/DataSummaryCard',

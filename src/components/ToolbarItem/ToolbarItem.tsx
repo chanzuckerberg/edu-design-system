@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { ReactNode } from 'react';
+import React, {ReactNode} from 'react';
 import styles from '../Toolbar/Toolbar.module.css';
 
 export interface Props {
@@ -26,12 +26,7 @@ export interface Props {
  *
  * ToolbarItem component is used in the Toolbar component to filter the content based on alignment.
  */
-export const ToolbarItem = ({
-  align,
-  className,
-  children,
-  ...other
-}: Props) => {
+export const ToolbarItem = ({align, className, children, ...other}: Props) => {
   const componentClassName = clsx(
     'toolbar__item',
     align === 'center' && styles['toolbar__item--align-center'],

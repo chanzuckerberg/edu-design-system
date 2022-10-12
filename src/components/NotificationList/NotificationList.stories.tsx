@@ -1,7 +1,7 @@
-import { StoryObj, Meta } from '@storybook/react';
+import {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
 
-import { NotificationList, Props } from './NotificationList';
+import {NotificationList, Props} from './NotificationList';
 import NotificationListItem, {
   NotificationListItemProps,
 } from '../NotificationListItem';
@@ -9,7 +9,7 @@ import NotificationListItem, {
 export default {
   title: 'Molecules/Lists/NotificationList',
   component: NotificationList,
-  subcomponents: { NotificationListItem },
+  subcomponents: {NotificationListItem},
 } as Meta<Args>;
 
 type Args = Props & NotificationListItemProps;

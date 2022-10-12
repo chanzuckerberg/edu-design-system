@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { ReactNode } from 'react';
+import React, {ReactNode} from 'react';
 import styles from './ProjectCard.module.css';
 
 import {
@@ -13,7 +13,7 @@ import {
   NumberIcon,
   ButtonDropdown,
 } from '../..';
-import { HeadingElement } from '../Heading';
+import {HeadingElement} from '../Heading';
 
 export interface Props {
   /**

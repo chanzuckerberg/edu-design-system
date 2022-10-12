@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React from 'react';
 import styles from './InlineNotification.module.css';
-import { Icon, Text } from '../../';
+import {Icon, Text} from '../../';
 
 export const VARIANTS = ['brand', 'success', 'warning', 'yield'] as const;
 

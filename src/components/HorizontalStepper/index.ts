@@ -1,1 +1,1 @@
-export { HorizontalStepper as default } from './HorizontalStepper';
+export {HorizontalStepper as default} from './HorizontalStepper';

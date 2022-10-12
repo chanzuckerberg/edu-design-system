@@ -1,7 +1,7 @@
 import clsx from 'clsx';
-import React, { ReactNode, useEffect, useState, useRef } from 'react';
+import React, {ReactNode, useEffect, useState, useRef} from 'react';
 import styles from './UtilityNavItem.module.css';
-import { useMergedRefs } from '../../hooks';
+import {useMergedRefs} from '../../hooks';
 
 export interface Props {
   /**

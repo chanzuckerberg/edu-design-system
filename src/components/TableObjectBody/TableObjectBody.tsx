@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { ReactNode, useEffect, useState, useRef, UIEvent } from 'react';
+import React, {ReactNode, useEffect, useState, useRef, UIEvent} from 'react';
 import styles from '../TableObject/TableObject.module.css';
 
 export interface Props {

@@ -1,7 +1,7 @@
-import { StoryObj, Meta } from '@storybook/react';
+import {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
 
-import { NotificationListPopover } from './NotificationListPopover';
+import {NotificationListPopover} from './NotificationListPopover';
 
 export default {
   title: 'Recipes/NotificationListPopover',

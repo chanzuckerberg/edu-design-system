@@ -1,8 +1,8 @@
-import { StoryObj, Meta } from '@storybook/react';
+import {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
 
-import { CardWithNotification } from './CardWithNotification';
-import { DataBar } from '../../../src';
+import {CardWithNotification} from './CardWithNotification';
+import {DataBar} from '../../../src';
 import '../../../src/components/Utilities/Spacing.css';
 
 export default {
@@ -52,10 +52,10 @@ export const CADBrand: StoryObj<Args> = {
             label="Total instructional days"
             max={60}
             segments={[
-              { value: 10, text: 'Project 1' },
-              { value: 11, text: 'Project 2' },
-              { value: 22, text: 'Project 3' },
-              { value: 11, text: 'Project 4' },
+              {value: 10, text: 'Project 1'},
+              {value: 11, text: 'Project 2'},
+              {value: 22, text: 'Project 3'},
+              {value: 11, text: 'Project 4'},
             ]}
           />
         </CardWithNotification.Body>

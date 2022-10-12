@@ -1,8 +1,8 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
-import { Story, Meta } from '@storybook/react';
+import {BADGE} from '@geometricpanda/storybook-addon-badges';
+import {Story, Meta} from '@storybook/react';
 import React from 'react';
 
-import { TableObject, Props } from './TableObject';
+import {TableObject, Props} from './TableObject';
 import Button from '../Button';
 import Heading from '../Heading';
 import Icon from '../Icon';
@@ -20,7 +20,7 @@ import ToolbarItem from '../ToolbarItem';
 export default {
   title: 'Organisms/Tables/Table Object',
   component: TableObject,
-  subcomponents: { TableObjectBody, TableObjectHeader },
+  subcomponents: {TableObjectBody, TableObjectHeader},
   parameters: {
     axe: {
       // TODO: re-enable when component is worked on

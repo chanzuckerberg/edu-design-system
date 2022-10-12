@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { MouseEventHandler, ReactNode } from 'react';
+import React, {MouseEventHandler, ReactNode} from 'react';
 import styles from './ClickableStyle.module.css';
 
 export const VARIANTS = ['primary', 'secondary', 'icon', 'link'] as const;

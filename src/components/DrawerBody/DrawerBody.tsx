@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { ReactNode } from 'react';
+import React, {ReactNode} from 'react';
 import styles from '../Drawer/Drawer.module.css';
 
 export type Props = {
@@ -23,7 +23,7 @@ export type Props = {
  * The main center content of the Drawer component.
  */
 export const DrawerBody = React.forwardRef<HTMLDivElement, Props>(
-  ({ children, className }, ref) => {
+  ({children, className}, ref) => {
     const componentClassName = clsx(styles['drawer__body'], className);
     return (
       <div className={componentClassName} ref={ref}>

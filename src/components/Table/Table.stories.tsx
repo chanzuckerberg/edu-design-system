@@ -1,8 +1,8 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
-import { StoryObj, Meta } from '@storybook/react';
+import {BADGE} from '@geometricpanda/storybook-addon-badges';
+import {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
 
-import { Table } from './Table';
+import {Table} from './Table';
 import TableBody from '../TableBody';
 import TableCell from '../TableCell';
 import TableHeader from '../TableHeader';
@@ -11,7 +11,7 @@ import TableRow from '../TableRow';
 export default {
   title: 'Organisms/Tables/Table',
   component: Table,
-  subcomponents: { TableBody, TableCell, TableHeader, TableRow },
+  subcomponents: {TableBody, TableCell, TableHeader, TableRow},
   parameters: {
     badges: [BADGE.BETA],
   },

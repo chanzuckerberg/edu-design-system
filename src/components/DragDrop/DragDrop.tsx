@@ -13,7 +13,7 @@ import {
   DroppableProvided,
 } from 'react-beautiful-dnd';
 import styles from './DragDrop.module.css';
-import { Items, Containers } from './DragDropTypes';
+import {Items, Containers} from './DragDropTypes';
 import DragDropContainer from '../DragDropContainer';
 
 export interface Props {
@@ -171,19 +171,19 @@ export const DragDrop = ({
    */
   const containerOrder: string[] = [];
   Object.entries(items).forEach(([key, item]) => {
-    items[key] = { ...item, id: key };
+    items[key] = {...item, id: key};
   });
   Object.entries(containers).forEach(([key, item]) => {
-    containers[key] = { ...item, id: key };
+    containers[key] = {...item, id: key};
     containerOrder.push(key);
   });
-  const itemData = { items, containers, containerOrder };
+  const itemData = {items, containers, containerOrder};
 
   /**
    * A drag has 5 life cycle events that can be monitored: onBeforeCapture, onBeforeDragStart, onDragStart, onDragUpdate, and onDragEnd. We perform our reordering functions and update itemData when onDragEnd is fired
    */
   const onDragEnd = (result: DropResult) => {
-    const { destination, source, draggableId } = result;
+    const {destination, source, draggableId} = result;
 
     /**
      * If the drag ends over a page element that is not a destination within this context, no further action is required

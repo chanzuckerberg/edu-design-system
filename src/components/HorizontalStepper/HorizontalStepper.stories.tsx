@@ -1,7 +1,7 @@
-import { StoryObj, Meta } from '@storybook/react';
+import {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
 
-import { HorizontalStepper } from './HorizontalStepper';
+import {HorizontalStepper} from './HorizontalStepper';
 import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';
 import HorizontalStep from '../HorizontalStep';
@@ -46,7 +46,7 @@ export const CompletedAllSteps: StoryObj<Args> = {
   },
 };
 
-const InteractiveHorizontalStepper = ({ steps }: Args) => {
+const InteractiveHorizontalStepper = ({steps}: Args) => {
   const [activeIndex, setActiveIndex] = React.useState(0);
   const onClickBack = () => {
     if (activeIndex > 0) setActiveIndex(activeIndex - 1);
@@ -77,8 +77,8 @@ export const Interactive: StoryObj<Args> = {
   render: (args) => <InteractiveHorizontalStepper {...args} />,
   parameters: {
     // For interactive use, low value in snap testing again since already covered in other stories.
-    chromatic: { disableSnapshot: true },
-    snapshot: { skip: true },
+    chromatic: {disableSnapshot: true},
+    snapshot: {skip: true},
   },
 };
 

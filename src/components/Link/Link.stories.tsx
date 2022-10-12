@@ -1,7 +1,7 @@
-import { StoryObj, Meta } from '@storybook/react';
+import {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
-import { Link } from './Link';
-import { SIZES, STATUSES, VARIANTS } from '../ClickableStyle';
+import {Link} from './Link';
+import {SIZES, STATUSES, VARIANTS} from '../ClickableStyle';
 
 import Icon from '../Icon';
 
@@ -46,7 +46,7 @@ export default {
 type Args = React.ComponentProps<typeof Link>;
 
 export const Default: StoryObj<Args> = {
-  args: { variant: 'link' },
+  args: {variant: 'link'},
 };
 
 export const LinkRightIcon: StoryObj<Args> = {
@@ -73,7 +73,7 @@ export const LinkNeutral: StoryObj<Args> = {
 };
 
 export const Primary: StoryObj<Args> = {
-  args: { variant: 'primary' },
+  args: {variant: 'primary'},
 };
 
 export const PrimaryLeftIcon: StoryObj<Args> = {
@@ -101,11 +101,11 @@ export const PrimaryRightIcon: StoryObj<Args> = {
 };
 
 export const PrimaryMedium: StoryObj<Args> = {
-  args: { size: 'md', variant: 'primary' },
+  args: {size: 'md', variant: 'primary'},
 };
 
 export const PrimarySmall: StoryObj<Args> = {
-  args: { size: 'sm', variant: 'primary' },
+  args: {size: 'sm', variant: 'primary'},
 };
 
 export const Secondary: StoryObj<Args> = {};
@@ -274,7 +274,7 @@ export const DestructiveLeftIcon: StoryObj<Args> = {
 };
 
 export const FullWidth: StoryObj<Args> = {
-  args: { fullWidth: true, variant: 'secondary' },
+  args: {fullWidth: true, variant: 'secondary'},
 };
 
 export const SecondarySuccess: StoryObj<Args> = {

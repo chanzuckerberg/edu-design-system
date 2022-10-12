@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { ElementType, ReactNode } from 'react';
+import React, {ElementType, ReactNode} from 'react';
 import styles from './FieldsetItems.module.css';
 
 export type FieldsetItemsProps = {

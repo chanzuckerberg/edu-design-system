@@ -1,7 +1,7 @@
-import { StoryObj, Meta } from '@storybook/react';
+import {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
 
-import { LayoutLinelengthContainer } from './LayoutLinelengthContainer';
+import {LayoutLinelengthContainer} from './LayoutLinelengthContainer';
 
 export default {
   title: 'Molecules/Layout and Containers/Linelength Container',

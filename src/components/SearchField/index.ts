@@ -1,1 +1,1 @@
-export { SearchField as default } from './SearchField';
+export {SearchField as default} from './SearchField';

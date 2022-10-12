@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { ReactNode } from 'react';
+import React, {ReactNode} from 'react';
 import styles from '../Table/Table.module.css';
 
 export interface Props {
@@ -22,7 +22,7 @@ export interface Props {
  *
  * HTML `thead` of the `Table` component
  */
-export const TableHeader = ({ children, className, ...other }: Props) => {
+export const TableHeader = ({children, className, ...other}: Props) => {
   const componentClassName = clsx(styles['table__header'], className);
 
   return (

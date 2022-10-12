@@ -1,6 +1,6 @@
-import { StoryObj, Meta } from '@storybook/react';
+import {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
-import { Filters } from './Filters';
+import {Filters} from './Filters';
 import Checkbox from '../../../src/components/Checkbox';
 import FiltersCheckboxField from '../../../src/components/FiltersCheckboxField';
 
@@ -36,7 +36,7 @@ export default {
   },
   decorators: [
     (Story) => (
-      <div style={{ margin: '0.25rem', height: '100vh' }}>
+      <div style={{margin: '0.25rem', height: '100vh'}}>
         <p>Filters are popover when larger screen size and drawer when not</p>
         <Story />
       </div>

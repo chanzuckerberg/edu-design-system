@@ -6,8 +6,8 @@ import React, {
   useEffect,
   useCallback,
 } from 'react';
-import { allByType } from 'react-children-by-type';
-import { useUIDSeed } from 'react-uid';
+import {allByType} from 'react-children-by-type';
+import {useUIDSeed} from 'react-uid';
 import styles from './TimelineNav.module.css';
 import {
   EdsThemeColorBackgroundGradeCompleteDefault,
@@ -26,7 +26,7 @@ import {
 import Button from '../Button';
 import Icon from '../Icon';
 import NumberIcon from '../NumberIcon';
-import TimelineNavPanel, { TimelineNavPanelVariant } from '../TimelineNavPanel';
+import TimelineNavPanel, {TimelineNavPanelVariant} from '../TimelineNavPanel';
 
 export interface Props {
   /**

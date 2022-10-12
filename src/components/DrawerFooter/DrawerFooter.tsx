@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { ReactNode } from 'react';
+import React, {ReactNode} from 'react';
 
 export type Props = {
   /**
@@ -21,7 +21,7 @@ export type Props = {
  *
  * The footer content of the Drawer component. Usually houses interactible component controlling the Drawer functionality.
  */
-export const DrawerFooter = ({ children, className, ...other }: Props) => {
+export const DrawerFooter = ({children, className, ...other}: Props) => {
   const componentClassName = clsx('drawer__footer', className);
   return (
     <footer className={componentClassName} {...other}>

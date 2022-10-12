@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, {ReactNode} from 'react';
 import styles from './StackedBlock.module.css';
 import Link from '../Link';
 import Text from '../Text';

@@ -1,6 +1,6 @@
-import { StoryObj } from '@storybook/react';
+import {StoryObj} from '@storybook/react';
 import React from 'react';
-import { Documentation } from './Documentation';
+import {Documentation} from './Documentation';
 import Code from '../../../docs/CODE_GUIDELINES.md';
 import ComponentDocs from '../../../docs/COMPONENTS.md';
 import IconDocs from '../../../docs/ICONS.md';
@@ -12,7 +12,7 @@ export default {
   title: 'Documentation/Guidelines',
   component: Documentation,
   parameters: {
-    chromatic: { disableSnapshot: true },
+    chromatic: {disableSnapshot: true},
     axe: {
       skip: true,
     },

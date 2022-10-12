@@ -1,1 +1,1 @@
-export { UtilityNavItem as default } from './UtilityNavItem';
+export {UtilityNavItem as default} from './UtilityNavItem';

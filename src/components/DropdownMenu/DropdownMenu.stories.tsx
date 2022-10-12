@@ -1,14 +1,14 @@
-import { StoryObj, Meta } from '@storybook/react';
+import {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
 
-import { DropdownMenu } from './DropdownMenu';
-import { DropdownMenuItem } from '../DropdownMenuItem/DropdownMenuItem';
-import { Icon } from '../Icon/Icon';
+import {DropdownMenu} from './DropdownMenu';
+import {DropdownMenuItem} from '../DropdownMenuItem/DropdownMenuItem';
+import {Icon} from '../Icon/Icon';
 
 export default {
   title: 'Molecules/Navigation/DropdownMenu',
   component: DropdownMenu,
-  subcomponents: { DropdownMenuItem },
+  subcomponents: {DropdownMenuItem},
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof DropdownMenu>;

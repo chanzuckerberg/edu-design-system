@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { ReactNode } from 'react';
+import React, {ReactNode} from 'react';
 import styles from './Table.module.css';
 import TableBody from '../TableBody';
 import TableCell from '../TableCell';

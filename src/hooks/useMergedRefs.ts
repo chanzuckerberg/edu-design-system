@@ -1,4 +1,4 @@
-import type { RefCallback, Ref } from 'react';
+import type {RefCallback, Ref} from 'react';
 
 /**
  * Assign a value to a ref function or object.

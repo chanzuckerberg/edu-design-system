@@ -1,8 +1,8 @@
 import clsx from 'clsx';
-import React, { ReactNode, forwardRef } from 'react';
+import React, {ReactNode, forwardRef} from 'react';
 import styles from './Link.module.css';
 import ClickableStyle from '../ClickableStyle';
-import type { ClickableStyleProps } from '../ClickableStyle';
+import type {ClickableStyleProps} from '../ClickableStyle';
 
 type LinkHTMLElementProps = Omit<
   React.AnchorHTMLAttributes<HTMLAnchorElement>,
@@ -43,7 +43,7 @@ export type LinkProps = LinkHTMLElementProps & {
  */
 export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
   (
-    { className, variant = 'link', status = 'brand', size = 'lg', ...rest },
+    {className, variant = 'link', status = 'brand', size = 'lg', ...rest},
     ref,
   ) => {
     const componentClassName = clsx(

@@ -1,7 +1,7 @@
-import { StoryObj, Meta } from '@storybook/react';
+import {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
 
-import { BaselineCard } from './BaselineCard';
+import {BaselineCard} from './BaselineCard';
 
 export default {
   title: 'Recipes/BaselineCard',

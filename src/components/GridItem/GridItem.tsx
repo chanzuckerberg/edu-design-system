@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { ReactNode } from 'react';
+import React, {ReactNode} from 'react';
 import styles from './GridItem.module.css';
 
 export interface Props {
@@ -20,7 +20,7 @@ export interface Props {
  *
  * Single grid item to be used in the Grid component.
  */
-export const GridItem = ({ children, className, ...other }: Props) => {
+export const GridItem = ({children, className, ...other}: Props) => {
   const componentClassName = clsx(styles['grid__item'], className);
 
   return (

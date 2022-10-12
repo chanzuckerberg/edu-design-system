@@ -1,9 +1,9 @@
-import { Listbox } from '@headlessui/react';
+import {Listbox} from '@headlessui/react';
 import clsx from 'clsx';
-import React, { ReactNode, ElementType, useContext } from 'react';
+import React, {ReactNode, ElementType, useContext} from 'react';
 import styles from './Dropdown.module.css';
 
-import type { ExtractProps } from '../../util/utility-types';
+import type {ExtractProps} from '../../util/utility-types';
 
 import DropdownButton from '../DropdownButton';
 import Icon from '../Icon';
@@ -86,7 +86,7 @@ type DropdownOptionProps = {
   className?: string;
   children?:
     | ReactNode
-    | RenderProp<{ active: boolean; disabled: boolean; selected: boolean }>;
+    | RenderProp<{active: boolean; disabled: boolean; selected: boolean}>;
 };
 
 function childrenHaveLabelComponent(children?: ReactNode): boolean {
@@ -295,9 +295,9 @@ export function Dropdown(props: DropdownProps) {
   };
 
   const contextValue = Object.assign(
-    { compact },
-    optionsAlign ? { optionsAlign } : null,
-    optionsClassName ? { optionsClassName } : null,
+    {compact},
+    optionsAlign ? {optionsAlign} : null,
+    optionsClassName ? {optionsClassName} : null,
   );
 
   if (typeof children === 'function') {
@@ -327,7 +327,7 @@ export function Dropdown(props: DropdownProps) {
   const optionsList = options && (
     <DropdownOptions>
       {options.map((option) => {
-        const { label, ...other } = option;
+        const {label, ...other} = option;
         return (
           <DropdownOption value={option} {...other} key={option.key}>
             {label}
@@ -359,8 +359,8 @@ const DropdownContext = React.createContext<{
   optionsClassName?: string;
 }>({});
 
-const DropdownLabel = (props: { className?: string; children: ReactNode }) => {
-  const { children, className } = props;
+const DropdownLabel = (props: {className?: string; children: ReactNode}) => {
+  const {children, className} = props;
 
   const componentClassName = clsx(styles['label'], className);
   return (
@@ -369,10 +369,10 @@ const DropdownLabel = (props: { className?: string; children: ReactNode }) => {
 };
 
 const DropdownTrigger = function (
-  props: PropsWithRenderProp<{ disabled: boolean; open: boolean }>,
+  props: PropsWithRenderProp<{disabled: boolean; open: boolean}>,
 ) {
-  const { children, className, ...other } = props;
-  const { compact } = useContext(DropdownContext);
+  const {children, className, ...other} = props;
+  const {compact} = useContext(DropdownContext);
 
   const componentClassName = clsx(
     className,
@@ -388,7 +388,7 @@ const DropdownTrigger = function (
     >
       {typeof children === 'function'
         ? children
-        : ({ open }) => (
+        : ({open}) => (
             <DropdownButton className={componentClassName} isOpen={open}>
               {children}
             </DropdownButton>
@@ -397,12 +397,9 @@ const DropdownTrigger = function (
   );
 };
 
-const DropdownOptions = function (
-  props: PropsWithRenderProp<{ open: boolean }>,
-) {
-  const { className, ...other } = props;
-  const { compact, optionsAlign, optionsClassName } =
-    useContext(DropdownContext);
+const DropdownOptions = function (props: PropsWithRenderProp<{open: boolean}>) {
+  const {className, ...other} = props;
+  const {compact, optionsAlign, optionsClassName} = useContext(DropdownContext);
 
   const componentClassName = clsx(
     styles['dropdown__options'],
@@ -414,7 +411,7 @@ const DropdownOptions = function (
 };
 
 const DropdownOption = function (props: DropdownOptionProps) {
-  const { children, className, ...other } = props;
+  const {children, className, ...other} = props;
 
   type RenderProps = {
     active: boolean;
@@ -432,7 +429,7 @@ const DropdownOption = function (props: DropdownOptionProps) {
     >
       {typeof children === 'function'
         ? children
-        : ({ active, disabled, selected }: RenderProps) => {
+        : ({active, disabled, selected}: RenderProps) => {
             const componentClassName = clsx(
               styles['dropdown__option'],
               active && styles['dropdown__option--active'],

@@ -1,1 +1,1 @@
-export { BaselineCard as default } from './BaselineCard';
+export {BaselineCard as default} from './BaselineCard';

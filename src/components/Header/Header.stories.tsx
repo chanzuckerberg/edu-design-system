@@ -1,7 +1,7 @@
-import { StoryObj, Meta } from '@storybook/react';
+import {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
 
-import { Header } from './Header';
+import {Header} from './Header';
 
 export default {
   title: 'Organisms/Global/Header',

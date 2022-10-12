@@ -1,5 +1,5 @@
 import debounce from 'lodash.debounce';
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import FiltersDrawer from '../../../src/components/FiltersDrawer';
 import {
   FiltersPopover,
@@ -17,7 +17,7 @@ type Props = {
 /**
  * Demonstrates usage of both FiltersPopover and FiltersDrawer depending on screensize.
  */
-export const Filters = ({ placement, ...other }: Props) => {
+export const Filters = ({placement, ...other}: Props) => {
   const [isLarge, setIsLarge] = useState(false);
   const popoverBreakpoint = parseInt(breakpoint['eds-bp-md']) * 16;
   useEffect(() => {

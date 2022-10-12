@@ -1,8 +1,8 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
-import { StoryObj, Meta } from '@storybook/react';
+import {BADGE} from '@geometricpanda/storybook-addon-badges';
+import {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
 
-import { InputField } from './InputField';
+import {InputField} from './InputField';
 
 export default {
   title: 'Atoms/Forms/InputField',
@@ -16,7 +16,7 @@ export default {
   },
   decorators: [
     (Story) => (
-      <div style={{ padding: '0.5rem', backgroundColor: 'white' }}>
+      <div style={{padding: '0.5rem', backgroundColor: 'white'}}>
         <Story />
       </div>
     ),
@@ -36,7 +36,7 @@ export const Disabled: StoryObj<Args> = {
       <InputField
         defaultValue="Default Value"
         disabled
-        style={{ marginBottom: '0.5rem' }}
+        style={{marginBottom: '0.5rem'}}
       />
       <InputField disabled placeholder="Placeholder" />
     </>
@@ -45,7 +45,7 @@ export const Disabled: StoryObj<Args> = {
 export const Error: StoryObj<Args> = {
   render: () => (
     <>
-      <InputField isError style={{ marginBottom: '0.5rem' }} />
+      <InputField isError style={{marginBottom: '0.5rem'}} />
       <InputField isError placeholder="Placeholder" />
     </>
   ),

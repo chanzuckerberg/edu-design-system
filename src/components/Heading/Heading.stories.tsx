@@ -1,8 +1,8 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
-import { StoryObj, Meta } from '@storybook/react';
+import {BADGE} from '@geometricpanda/storybook-addon-badges';
+import {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
 
-import Heading, { VARIANTS } from './Heading';
+import Heading, {VARIANTS} from './Heading';
 import styles from './Heading.stories.module.css';
 
 export default {

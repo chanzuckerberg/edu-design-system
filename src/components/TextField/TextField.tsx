@@ -1,6 +1,6 @@
 import clsx from 'clsx';
-import React, { ChangeEventHandler, forwardRef, ReactNode } from 'react';
-import { useUID } from 'react-uid';
+import React, {ChangeEventHandler, forwardRef, ReactNode} from 'react';
+import {useUID} from 'react-uid';
 import styles from './TextField.module.css';
 import FieldNote from '../FieldNote';
 import InputField from '../InputField';

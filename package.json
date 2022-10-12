@@ -96,6 +96,7 @@
   "devDependencies": {
     "@chanzuckerberg/axe-storybook-testing": "^6.1.0",
     "@chanzuckerberg/eslint-plugin-stories": "^3.2.2",
+    "@chanzuckerberg/prettier-config-edu": "^1.0.0",
     "@chanzuckerberg/story-utils": "^3.0.8",
     "@commitlint/cli": "^16.2.1",
     "@commitlint/config-conventional": "^16.2.1",

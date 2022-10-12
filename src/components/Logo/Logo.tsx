@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, {ReactNode} from 'react';
 import styles from './Logo.module.css';
 
 export interface Props {

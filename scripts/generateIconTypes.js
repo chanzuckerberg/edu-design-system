@@ -1,12 +1,12 @@
 /* eslint-env node */
-const { execSync } = require('child_process');
+const {execSync} = require('child_process');
 const fs = require('fs');
 
 const ICON_FOLDER = 'src/icons';
 const OUTPUT_FILE = 'src/util/allIcons.ts';
 
 const iconFiles = fs
-  .readdirSync(ICON_FOLDER, { withFileTypes: true })
+  .readdirSync(ICON_FOLDER, {withFileTypes: true})
   .filter((dirent) => dirent.isFile());
 
 // convert 'close.svg' => 'close'

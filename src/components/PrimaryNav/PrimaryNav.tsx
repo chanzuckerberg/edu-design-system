@@ -1,6 +1,6 @@
 import clsx from 'clsx';
-import React, { ReactNode } from 'react';
-import { useUID } from 'react-uid';
+import React, {ReactNode} from 'react';
+import {useUID} from 'react-uid';
 import styles from './PrimaryNav.module.css';
 import PrimaryNavItem from '../PrimaryNavItem';
 

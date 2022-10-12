@@ -1,9 +1,9 @@
-import { Popover as HeadlessPopover } from '@headlessui/react';
-import type { Options as PopperJSOptions } from '@popperjs/core';
+import {Popover as HeadlessPopover} from '@headlessui/react';
+import type {Options as PopperJSOptions} from '@popperjs/core';
 import * as React from 'react';
-import { useState, createContext } from 'react';
-import { usePopper } from 'react-popper';
-import type { ExtractProps } from '../../util/utility-types';
+import {useState, createContext} from 'react';
+import {usePopper} from 'react-popper';
+import type {ExtractProps} from '../../util/utility-types';
 import PopoverButton from '../PopoverButton';
 import PopoverContent from '../PopoverContent';
 
@@ -43,7 +43,7 @@ export type PopoverProps = ExtractProps<typeof HeadlessPopover> & {
 type PopoverContextType = {
   placement?: PopoverProps['placement'];
   popperStyles?: React.CSSProperties;
-  popperAttributes?: { [key: string]: string };
+  popperAttributes?: {[key: string]: string};
   popperElement?: Element;
   setPopperElement?: React.Dispatch<
     React.SetStateAction<HTMLElement | null | undefined>
@@ -91,10 +91,10 @@ export const Popover = ({
   const [popperElement, setPopperElement] = useState<HTMLElement>();
 
   // Leverage usePopper hook from Popper js for additional popover behavior and adds behavior to context for consumption by subcomponents.
-  const { styles: popperStyles, attributes } = usePopper(
+  const {styles: popperStyles, attributes} = usePopper(
     referenceElement,
     popperElement,
-    { placement, modifiers, strategy, onFirstUpdate },
+    {placement, modifiers, strategy, onFirstUpdate},
   );
 
   return (

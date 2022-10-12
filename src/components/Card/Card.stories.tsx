@@ -1,6 +1,6 @@
-import { StoryObj, Meta } from '@storybook/react';
+import {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
-import { Card } from './Card';
+import {Card} from './Card';
 import CardBody from '../CardBody';
 import CardFooter from '../CardFooter';
 import CardHeader from '../CardHeader';
@@ -8,7 +8,7 @@ import CardHeader from '../CardHeader';
 export default {
   title: 'Molecules/Blocks/Card',
   component: Card,
-  subcomponents: { CardHeader, CardBody, CardFooter },
+  subcomponents: {CardHeader, CardBody, CardFooter},
   args: {
     children: (
       <>

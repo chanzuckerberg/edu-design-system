@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { ReactNode } from 'react';
+import React, {ReactNode} from 'react';
 import styles from '../TableObject/TableObject.module.css';
 
 export interface Props {
@@ -22,7 +22,7 @@ export interface Props {
  *
  * TableObjectHeadercomponent represents the header section of the TableObject container.
  */
-export const TableObjectHeader = ({ children, className, ...other }: Props) => {
+export const TableObjectHeader = ({children, className, ...other}: Props) => {
   const componentClassName = clsx(styles['table-object__header'], className);
   return (
     <div className={componentClassName} {...other}>

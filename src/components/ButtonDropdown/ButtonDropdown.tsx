@@ -1,8 +1,8 @@
 import clsx from 'clsx';
-import React, { ReactNode } from 'react';
+import React, {ReactNode} from 'react';
 import styles from './ButtonDropdown.module.css';
-import { DropdownMenu } from '../..';
-import type { ClickableStyleProps } from '../ClickableStyle';
+import {DropdownMenu} from '../..';
+import type {ClickableStyleProps} from '../ClickableStyle';
 
 export interface Props {
   /**

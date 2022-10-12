@@ -1,1 +1,1 @@
-export { TableCell as default } from './TableCell';
+export {TableCell as default} from './TableCell';

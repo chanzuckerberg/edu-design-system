@@ -1,7 +1,7 @@
 import clsx from 'clsx';
-import React, { ReactNode } from 'react';
+import React, {ReactNode} from 'react';
 import styles from './PageHeader.module.css';
-import Heading, { HeadingSize, HeadingElement } from '../Heading';
+import Heading, {HeadingSize, HeadingElement} from '../Heading';
 
 export interface Props {
   /**

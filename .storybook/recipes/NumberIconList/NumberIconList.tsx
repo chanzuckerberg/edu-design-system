@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { ReactNode } from 'react';
+import React, {ReactNode} from 'react';
 import styles from './NumberIconList.module.css';
 
 export interface Props {
@@ -16,7 +16,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction
  */
-export const NumberIconList = ({ className, children, ...other }: Props) => {
+export const NumberIconList = ({className, children, ...other}: Props) => {
   const componentClassName = clsx(styles['number-icon-list'], className);
   return (
     <div className={componentClassName} {...other}>

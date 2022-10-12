@@ -1,13 +1,13 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
-import { StoryObj, Meta } from '@storybook/react';
-import { within } from '@storybook/testing-library';
+import {BADGE} from '@geometricpanda/storybook-addon-badges';
+import {StoryObj, Meta} from '@storybook/react';
+import {within} from '@storybook/testing-library';
 import isChromatic from 'chromatic/isChromatic';
 import React from 'react';
 
-import { FiltersDrawer } from './FiltersDrawer';
+import {FiltersDrawer} from './FiltersDrawer';
 import styles from './FiltersDrawer.stories.module.css';
-import { Checkbox } from '../Checkbox/Checkbox';
-import { FiltersCheckboxField } from '../FiltersCheckboxField/FiltersCheckboxField';
+import {Checkbox} from '../Checkbox/Checkbox';
+import {FiltersCheckboxField} from '../FiltersCheckboxField/FiltersCheckboxField';
 
 export default {
   title: 'Organisms/Interactive/FiltersDrawer',
@@ -43,7 +43,7 @@ export default {
   },
   decorators: [
     (Story) => (
-      <div style={{ margin: '0.25rem', height: '100vh' }}>
+      <div style={{margin: '0.25rem', height: '100vh'}}>
         <Story />
       </div>
     ),
@@ -53,7 +53,7 @@ export default {
 type Args = React.ComponentProps<typeof FiltersDrawer>;
 
 export const Default: StoryObj<Args> = {
-  play: async ({ canvasElement }) => {
+  play: async ({canvasElement}) => {
     // We want to test visual regression for the drawer as well as the button, but don't want the drawer open initally outside Chromatic
     if (isChromatic()) {
       const canvas = within(canvasElement);
@@ -233,7 +233,7 @@ const OverflowCheckboxFields = () => {
 
 export const OverflowInteractive: StoryObj<Args> = {
   render: () => <OverflowCheckboxFields />,
-  play: async ({ canvasElement }) => {
+  play: async ({canvasElement}) => {
     // We want to test visual regression for the drawer as well as the button, but don't want the drawer open initally outside Chromatic
     if (isChromatic()) {
       const canvas = within(canvasElement);

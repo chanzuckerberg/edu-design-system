@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import '../DesignTokens.css';
-import { Section } from '../../../../src';
+import {Section} from '../../../../src';
 import filterTokens from '../../../util/filterTokens';
-import { ColorList } from '../../ColorList/ColorList';
+import {ColorList} from '../../ColorList/ColorList';
 
 export class Tier1Colors extends Component {
   render() {

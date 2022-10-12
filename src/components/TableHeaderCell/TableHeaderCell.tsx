@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { ReactNode, useState } from 'react';
+import React, {ReactNode, useState} from 'react';
 import Icon from '../Icon';
 import styles from '../Table/Table.module.css';
 

@@ -1,5 +1,5 @@
-import { generateSnapshots } from '@chanzuckerberg/story-utils';
-import { screen } from '@testing-library/react';
+import {generateSnapshots} from '@chanzuckerberg/story-utils';
+import {screen} from '@testing-library/react';
 import * as stories from './Drawer.stories';
 
 describe('<Drawer />', () => {

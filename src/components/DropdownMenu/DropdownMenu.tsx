@@ -144,7 +144,7 @@ export const DropdownMenu: React.FC<Props> = ({
 
   const componentClassName = clsx(styles['dropdown-menu'], className);
   return (
-    <DropdownMenuContext.Provider value={{ refs }}>
+    <DropdownMenuContext.Provider value={{refs}}>
       <div className={componentClassName} {...other}>
         <ul
           className={styles['dropdown-menu__list']}

@@ -26,7 +26,7 @@ export interface Props {
  *
  * Horizontal rule component to present a horizontal line separating content.
  */
-export const Hr = ({ className, size, variant, ...other }: Props) => {
+export const Hr = ({className, size, variant, ...other}: Props) => {
   const componentClassName = clsx(
     styles['hr'],
     size === 'lg' && styles['hr--lg'],

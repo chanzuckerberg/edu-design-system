@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { ReactNode, useEffect, useRef, useState } from 'react';
+import React, {ReactNode, useEffect, useRef, useState} from 'react';
 
 import styles from './Header.module.css';
 

@@ -1,13 +1,13 @@
-import { StoryObj, Meta } from '@storybook/react';
-import { within } from '@storybook/testing-library';
+import {StoryObj, Meta} from '@storybook/react';
+import {within} from '@storybook/testing-library';
 import React from 'react';
 
-import { Breadcrumbs } from './Breadcrumbs';
+import {Breadcrumbs} from './Breadcrumbs';
 
 export default {
   title: 'Molecules/Navigation/Breadcrumbs',
   component: Breadcrumbs,
-  subcomponents: { 'Breadcrumbs.Item': Breadcrumbs.Item },
+  subcomponents: {'Breadcrumbs.Item': Breadcrumbs.Item},
   args: {
     children: (
       <>
@@ -89,7 +89,7 @@ export const LongText: StoryObj<Args> = {
     ),
   },
   parameters: {
-    chromatic: { viewports: [414, 768, 1366] },
+    chromatic: {viewports: [414, 768, 1366]},
   },
 };
 
@@ -104,7 +104,7 @@ export const LongTextMenu: StoryObj<Args> = {
     viewport: {
       defaultViewport: 'tablet',
     },
-    chromatic: { viewports: [834] },
+    chromatic: {viewports: [834]},
     axe: {
       skip: true,
     },
@@ -112,7 +112,7 @@ export const LongTextMenu: StoryObj<Args> = {
       skip: true,
     },
   },
-  play: async ({ canvasElement }) => {
+  play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
     const dropdownMenuTrigger = await canvas.findByRole('button');
     dropdownMenuTrigger.click();

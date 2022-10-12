@@ -1,1 +1,1 @@
-export { PopoverButton as default } from './PopoverButton';
+export {PopoverButton as default} from './PopoverButton';

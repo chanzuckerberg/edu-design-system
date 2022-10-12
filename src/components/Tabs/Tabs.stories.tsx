@@ -1,14 +1,14 @@
-import { StoryObj, Meta } from '@storybook/react';
+import {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
 
-import { Tabs } from './Tabs';
+import {Tabs} from './Tabs';
 import Tab from '../Tab';
 import Text from '../Text';
 
 export default {
   title: 'Organisms/Interactive/Tabs',
   component: Tabs,
-  subcomponents: { Tabs },
+  subcomponents: {Tabs},
   args: {
     children: (
       <>

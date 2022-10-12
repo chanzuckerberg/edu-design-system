@@ -1,4 +1,4 @@
-import Tippy, { TippyProps } from '@tippyjs/react';
+import Tippy, {TippyProps} from '@tippyjs/react';
 import clsx from 'clsx';
 import * as React from 'react';
 import styles from './Tooltip.module.css';
@@ -128,7 +128,7 @@ export const Tooltip = ({
   const hideOnEsc: Plugin = {
     name: 'hideOnEsc',
     defaultValue: true,
-    fn: ({ hide }) => {
+    fn: ({hide}) => {
       function onKeyDown(event: KeyboardEvent) {
         if (event.key === 'Escape') {
           hide();

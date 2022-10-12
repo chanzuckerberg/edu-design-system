@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { ReactNode } from 'react';
+import React, {ReactNode} from 'react';
 import styles from '../Card/Card.module.css';
 
 export interface Props {
@@ -22,7 +22,7 @@ export interface Props {
  *
  * Body of the Card component.
  */
-export const CardBody = ({ children, className, ...other }: Props) => {
+export const CardBody = ({children, className, ...other}: Props) => {
   const componentClassName = clsx(styles['card__body'], className);
   return (
     <div className={componentClassName} {...other}>
