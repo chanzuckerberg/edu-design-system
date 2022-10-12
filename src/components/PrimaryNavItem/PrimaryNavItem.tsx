@@ -2,7 +2,8 @@ import clsx from 'clsx';
 import React from 'react';
 import styles from './PrimaryNavItem.module.css';
 import { EdsThemeColorIconNeutralDefaultInverse } from '../../tokens-dist/ts/colors';
-import Icon, { IconName } from '../Icon';
+import type { IconName } from '../Icon';
+import Icon from '../Icon';
 
 export interface Props {
   /**

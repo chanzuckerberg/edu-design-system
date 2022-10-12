@@ -3,7 +3,7 @@ import React, { type ReactNode, useEffect, useRef } from 'react';
 import styles from './BaselineCard.module.css';
 
 import { Card, CardBody, CardFooter, CardHeader, Score } from '../../../src';
-import { Variant } from '../../../src/components/Score/Score';
+import type { Variant } from '../../../src/components/Score/Score';
 
 interface Metadata {
   /**

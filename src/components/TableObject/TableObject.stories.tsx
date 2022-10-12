@@ -1,8 +1,9 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
-import { Story, Meta } from '@storybook/react';
+import type { Story, Meta } from '@storybook/react';
 import React from 'react';
 
-import { TableObject, Props } from './TableObject';
+import type { Props } from './TableObject';
+import { TableObject } from './TableObject';
 import Button from '../Button';
 import Heading from '../Heading';
 import Icon from '../Icon';

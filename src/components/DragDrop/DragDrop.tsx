@@ -6,14 +6,10 @@ import React, {
   useRef,
   type UIEvent,
 } from 'react';
-import {
-  DragDropContext,
-  DropResult,
-  Droppable,
-  DroppableProvided,
-} from 'react-beautiful-dnd';
+import type { DropResult, DroppableProvided } from 'react-beautiful-dnd';
+import { DragDropContext, Droppable } from 'react-beautiful-dnd';
 import styles from './DragDrop.module.css';
-import { Items, Containers } from './DragDropTypes';
+import type { Items, Containers } from './DragDropTypes';
 import DragDropContainer from '../DragDropContainer';
 
 export interface Props {
