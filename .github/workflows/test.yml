@@ -84,6 +84,11 @@ jobs:
       - name: Install Dependencies ⬆️
         run: yarn install --immutable
 
+      # Build the design tokens. Our Tailwind config imports these, and linting will fail if not
+      # present.
+      - name: Build design tokens (needed for linting to succeed)
+        run: yarn build:tokens
+
       - name: Lint Commit Messages 👕
         uses: wagoid/commitlint-github-action@v1
         env:
