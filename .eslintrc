@@ -4,7 +4,6 @@
     "browser": true,
     "node": true
   },
-  "parser": "@typescript-eslint/parser",
   "plugins": [
     "import",
     "testing-library",
@@ -12,6 +11,7 @@
   ],
   "extends": [
     "eslint:recommended",
+    "@chanzuckerberg/eslint-config-edu-ts",
     "plugin:jsx-a11y/recommended",
     "plugin:prettier/recommended",
     "plugin:react/recommended",
@@ -20,13 +20,6 @@
     "plugin:@chanzuckerberg/eslint-plugin-edu-react/recommended",
     "plugin:@chanzuckerberg/stories/strict"
   ],
-  "parserOptions": {
-    "ecmaVersion": 2018,
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true
-    }
-  },
   "settings": {
     "react": {
       "version": "16.12"
@@ -58,15 +51,6 @@
     "no-unused-vars": "warn"
   },
   "overrides": [
-    {
-      "files": ["*.ts", "*.tsx"],
-      "extends": ["plugin:@typescript-eslint/recommended"],
-      "rules": {
-        "@typescript-eslint/no-explicit-any": "off",
-        "@typescript-eslint/explicit-function-return-type": "off",
-        "@typescript-eslint/explicit-module-boundary-types": "off"
-      }
-    },
     {
       "files": ["*.test.ts", "*.test.tsx", "**/test/**"],
       "plugins": ["jest"],

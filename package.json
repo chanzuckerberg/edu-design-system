@@ -96,6 +96,7 @@
   "types": "lib/index.d.ts",
   "devDependencies": {
     "@chanzuckerberg/axe-storybook-testing": "^6.1.0",
+    "@chanzuckerberg/eslint-config-edu-ts": "^1.0.0",
     "@chanzuckerberg/eslint-plugin-edu-react": "^1.0.1",
     "@chanzuckerberg/eslint-plugin-stories": "^3.2.2",
     "@chanzuckerberg/story-utils": "^3.0.8",
@@ -125,8 +126,6 @@
     "@types/react-dom": "^17.0.13",
     "@types/react-portal": "^4.0.4",
     "@types/svg4everybody": "^2.1.2",
-    "@typescript-eslint/eslint-plugin": "^5.15.0",
-    "@typescript-eslint/parser": "^5.15.0",
     "axe-core": "^4.4.3",
     "chromatic": "^6.9.0",
     "codecov": "^3.8.3",
