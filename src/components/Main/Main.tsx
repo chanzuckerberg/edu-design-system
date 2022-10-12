@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import type {ReactNode} from 'react';
+import type { ReactNode } from 'react';
 import React from 'react';
 import styles from './Main.module.css';
 
@@ -21,7 +21,7 @@ export interface Props {
  *
  * Component defines the Main element inside layout.
  */
-export const Main = ({children, className, ...other}: Props) => {
+export const Main = ({ children, className, ...other }: Props) => {
   const componentClassName = clsx(styles['main'], className);
   return (
     <main className={componentClassName} id="main-content" {...other}>

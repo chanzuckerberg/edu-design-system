@@ -1,6 +1,6 @@
 import clsx from 'clsx';
-import type {ReactNode, UIEvent} from 'react';
-import React, {useEffect, useState, useRef} from 'react';
+import type { ReactNode, UIEvent } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import styles from '../TableObject/TableObject.module.css';
 
 export interface Props {

@@ -1,9 +1,9 @@
-import type {StoryObj, Meta} from '@storybook/react';
-import {within} from '@storybook/testing-library';
+import type { StoryObj, Meta } from '@storybook/react';
+import { within } from '@storybook/testing-library';
 import clsx from 'clsx';
 import React from 'react';
-import type {OptionsAlignType, VariantType} from './Dropdown';
-import {Dropdown} from './Dropdown';
+import type { OptionsAlignType, VariantType } from './Dropdown';
+import { Dropdown } from './Dropdown';
 import styles from './Dropdown.stories.module.css';
 import DropdownButton from '../DropdownButton';
 import Icon from '../Icon';
@@ -49,7 +49,7 @@ const exampleOptions = [
 ];
 
 function InteractiveExampleUsingSeparateProps(props: Props) {
-  const {optionsAlign, optionsClassName, variant} = props;
+  const { optionsAlign, optionsClassName, variant } = props;
   const compact = variant === 'compact';
 
   const [selectedOption, setSelectedOption] =
@@ -78,7 +78,7 @@ function InteractiveExampleUsingSeparateProps(props: Props) {
 }
 
 function InteractiveExampleUsingChildren(props: Props) {
-  const {variant} = props;
+  const { variant } = props;
   const compact = variant === 'compact';
 
   const [selectedOption, setSelectedOption] =
@@ -123,7 +123,7 @@ function InteractiveExampleUsingFunctionChildren() {
         onChange={setSelectedOption}
         value={selectedOption}
       >
-        {({open}) => (
+        {({ open }) => (
           <>
             <Dropdown.Button
               // Because we're using a render prop to completely control the styling and icon of the
@@ -229,7 +229,7 @@ export const UsingFunctionChildrenProp: StoryObj = {
 // This story just opens the dropdown automataically so chromatic can test it.
 export const OpenByDefault: StoryObj = {
   ...Default,
-  play: async ({canvasElement}) => {
+  play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
 
     // Open the dropdown.
@@ -252,6 +252,6 @@ export const DropdownButtonOnly = {
     </>
   ),
   parameters: {
-    snapshot: {skip: true}, // For visual regression purposes since button should be used in conjunction with the actual Dropdown.
+    snapshot: { skip: true }, // For visual regression purposes since button should be used in conjunction with the actual Dropdown.
   },
 };

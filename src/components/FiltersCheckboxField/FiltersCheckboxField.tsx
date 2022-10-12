@@ -29,7 +29,11 @@ export type Props = {
  *
  * Field of checkboxes that are placed within a FiltersDrawer component.
  */
-export const FiltersCheckboxField = ({className, children, legend}: Props) => {
+export const FiltersCheckboxField = ({
+  className,
+  children,
+  legend,
+}: Props) => {
   const componentClassName = clsx(styles['filters-fieldset'], className);
 
   return (

@@ -1,7 +1,7 @@
-import type {StoryObj, Meta} from '@storybook/react';
-import type {ComponentProps} from 'react';
+import type { StoryObj, Meta } from '@storybook/react';
+import type { ComponentProps } from 'react';
 
-import {Panel} from './Panel';
+import { Panel } from './Panel';
 
 export default {
   title: 'Molecules/Layout and Containers/Panel',

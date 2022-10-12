@@ -1,5 +1,5 @@
 import React from 'react';
-import {Hr} from '../../../src';
+import { Hr } from '../../../src';
 import './Utilities.css';
 
 export const WidthUtilities = () => (

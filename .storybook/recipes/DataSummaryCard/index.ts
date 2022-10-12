@@ -1,1 +1,1 @@
-export {DataSummaryCard as default} from './DataSummaryCard';
+export { DataSummaryCard as default } from './DataSummaryCard';

@@ -44,7 +44,14 @@ export type Props = {
  */
 export const DataBarSegment = React.forwardRef(
   (
-    {className, isRoundRight, text, width, variant = 'brand', ...other}: Props,
+    {
+      className,
+      isRoundRight,
+      text,
+      width,
+      variant = 'brand',
+      ...other
+    }: Props,
     ref: React.ForwardedRef<HTMLDivElement>,
   ) => {
     const componentClassName = clsx(
@@ -58,7 +65,7 @@ export const DataBarSegment = React.forwardRef(
       <div
         className={componentClassName}
         ref={ref}
-        style={{width: `${width}`}}
+        style={{ width: `${width}` }}
         {...other}
       />
     );

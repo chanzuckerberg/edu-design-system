@@ -1,7 +1,7 @@
-import type {StoryObj, Meta} from '@storybook/react';
-import type {ComponentProps} from 'react';
+import type { StoryObj, Meta } from '@storybook/react';
+import type { ComponentProps } from 'react';
 
-import {PageShell} from './PageShell';
+import { PageShell } from './PageShell';
 
 export default {
   title: 'Recipes/PageShell',

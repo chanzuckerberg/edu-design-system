@@ -1,1 +1,1 @@
-export {ShowHide as default} from './ShowHide';
+export { ShowHide as default } from './ShowHide';

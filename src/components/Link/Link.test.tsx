@@ -1,8 +1,8 @@
-import {generateSnapshots} from '@chanzuckerberg/story-utils';
-import {render, screen} from '@testing-library/react';
+import { generateSnapshots } from '@chanzuckerberg/story-utils';
+import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
-import {Link} from './Link';
+import { Link } from './Link';
 import * as ButtonStoryFile from './Link.stories';
 
 describe('<Link />', () => {
@@ -56,7 +56,6 @@ describe('<Link />', () => {
       </Link>,
     );
 
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     ref.current!.focus();
 
     const link = screen.getByRole('link');

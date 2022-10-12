@@ -1,1 +1,1 @@
-export {Hr as default} from './Hr';
+export { Hr as default } from './Hr';

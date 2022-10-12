@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 export class FontSizes extends Component {
   render() {
@@ -9,7 +9,7 @@ export class FontSizes extends Component {
           return (
             <li
               key={listItem.value}
-              style={{fontSize: `var(${listItem.name})`}}
+              style={{ fontSize: `var(${listItem.name})` }}
             >
               {listItem.name}: {listItem.value}
             </li>

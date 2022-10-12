@@ -1,1 +1,1 @@
-export {TableCard as default} from './TableCard';
+export { TableCard as default } from './TableCard';

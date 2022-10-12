@@ -1,7 +1,7 @@
-import type {StoryObj, Meta} from '@storybook/react';
+import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
-import {Button} from './Button';
-import {SIZES, STATUSES, VARIANTS} from '../ClickableStyle';
+import { Button } from './Button';
+import { SIZES, STATUSES, VARIANTS } from '../ClickableStyle';
 
 import Icon from '../Icon';
 
@@ -139,7 +139,7 @@ export const SecondaryMedium: StoryObj<Args> = {
 };
 
 export const SecondarySmall: StoryObj<Args> = {
-  args: {variant: 'secondary', size: 'sm'},
+  args: { variant: 'secondary', size: 'sm' },
 };
 
 export const Tertiary: StoryObj<Args> = {
@@ -272,11 +272,11 @@ export const IconButtonIconOnlySmall: StoryObj<Args> = {
 };
 
 export const Link: StoryObj<Args> = {
-  args: {variant: 'link'},
+  args: { variant: 'link' },
 };
 
 export const LinkDisabled: StoryObj<Args> = {
-  args: {variant: 'link', disabled: true},
+  args: { variant: 'link', disabled: true },
 };
 
 export const LinkRightIcon: StoryObj<Args> = {
@@ -323,7 +323,7 @@ export const DestructiveLeftIcon: StoryObj<Args> = {
 };
 
 export const FullWidth: StoryObj<Args> = {
-  args: {fullWidth: true},
+  args: { fullWidth: true },
 };
 
 export const Loading: StoryObj<Args> = {

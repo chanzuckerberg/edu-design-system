@@ -1,7 +1,7 @@
-import type {StoryObj, Meta} from '@storybook/react';
+import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
-import {TimelineNav} from './TimelineNav';
+import { TimelineNav } from './TimelineNav';
 import {
   EdsThemeColorIconBrandPrimary,
   EdsThemeColorIconUtilitySuccess,
@@ -13,7 +13,7 @@ import TimelineNavPanel from '../TimelineNavPanel';
 export default {
   title: 'Molecules/Navigation/TimelineNav',
   component: TimelineNav,
-  subcomponents: {TimelineNavPanel},
+  subcomponents: { TimelineNavPanel },
   args: {
     variant: 'ordered',
     children: (

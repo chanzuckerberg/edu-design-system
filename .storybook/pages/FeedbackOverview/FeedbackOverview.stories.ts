@@ -1,7 +1,7 @@
-import type {StoryObj} from '@storybook/react';
-import type {ComponentProps} from 'react';
+import type { StoryObj } from '@storybook/react';
+import type { ComponentProps } from 'react';
 
-import {FeedbackOverview} from './FeedbackOverview';
+import { FeedbackOverview } from './FeedbackOverview';
 
 export default {
   title: 'Pages/Projects/Feedback',

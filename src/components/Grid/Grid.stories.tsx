@@ -1,7 +1,7 @@
-import type {StoryObj, Meta} from '@storybook/react';
+import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
-import {Grid} from './Grid';
+import { Grid } from './Grid';
 import GridItem from '../GridItem';
 
 export default {
@@ -43,7 +43,7 @@ export default {
     ),
   },
   component: Grid,
-  subcomponents: {GridItem},
+  subcomponents: { GridItem },
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Grid>;
@@ -75,7 +75,7 @@ export const ThreeUpGrid: StoryObj<Args> = {
 };
 
 export const OneToTwoToFourUpGrid: StoryObj<Args> = {
-  args: {variant: '1-2-4up'},
+  args: { variant: '1-2-4up' },
 };
 
 export const FourUpGrid: StoryObj<Args> = {
@@ -85,5 +85,5 @@ export const FourUpGrid: StoryObj<Args> = {
 };
 
 export const OneToTwoToOneUpGrid: StoryObj<Args> = {
-  args: {variant: '1-2-1up'},
+  args: { variant: '1-2-1up' },
 };

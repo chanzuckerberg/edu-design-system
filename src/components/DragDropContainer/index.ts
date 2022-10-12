@@ -1,1 +1,1 @@
-export {DragDropContainer as default} from './DragDropContainer';
+export { DragDropContainer as default } from './DragDropContainer';

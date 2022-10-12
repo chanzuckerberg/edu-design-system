@@ -1,1 +1,1 @@
-export {ModalStepper as default} from './ModalStepper';
+export { ModalStepper as default } from './ModalStepper';

@@ -1,1 +1,1 @@
-export {DragDropItem as default} from './DragDropItem';
+export { DragDropItem as default } from './DragDropItem';

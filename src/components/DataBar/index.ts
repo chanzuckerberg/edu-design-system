@@ -1,1 +1,1 @@
-export {DataBar as default} from './DataBar';
+export { DataBar as default } from './DataBar';

@@ -1,8 +1,8 @@
-import type {StoryObj, Meta} from '@storybook/react';
-import type {ComponentProps} from 'react';
-import React, {useState} from 'react';
-import type {NewState} from './DragDrop';
-import {DragDrop} from './DragDrop';
+import type { StoryObj, Meta } from '@storybook/react';
+import type { ComponentProps } from 'react';
+import React, { useState } from 'react';
+import type { NewState } from './DragDrop';
+import { DragDrop } from './DragDrop';
 import styles from './DragDrop.stories.module.css';
 
 import Button from '../Button';

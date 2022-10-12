@@ -1,8 +1,8 @@
-import {generateSnapshots} from '@chanzuckerberg/story-utils';
-import {render, screen} from '@testing-library/react';
+import { generateSnapshots } from '@chanzuckerberg/story-utils';
+import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
-import {Button} from './Button';
+import { Button } from './Button';
 import * as ButtonStoryFile from './Button.stories';
 
 describe('<Button />', () => {
@@ -40,7 +40,6 @@ describe('<Button />', () => {
     const ref = React.createRef<HTMLButtonElement>();
     render(<Button ref={ref}>Click</Button>);
 
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     ref.current!.focus();
 
     const button = screen.getByRole('button');

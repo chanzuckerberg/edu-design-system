@@ -1,9 +1,9 @@
-import type {StoryObj, Meta} from '@storybook/react';
+import type { StoryObj, Meta } from '@storybook/react';
 import clsx from 'clsx';
 import React from 'react';
 
-import {Text} from './Text';
-import type {Variant} from './Text';
+import { Text } from './Text';
+import type { Variant } from './Text';
 import styles from './Text.stories.module.css';
 
 export default {

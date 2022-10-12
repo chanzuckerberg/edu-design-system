@@ -1,1 +1,1 @@
-export {DrawerBody as default} from './DrawerBody';
+export { DrawerBody as default } from './DrawerBody';

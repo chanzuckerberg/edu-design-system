@@ -1,1 +1,1 @@
-export {FiltersButton as default} from './FiltersButton';
+export { FiltersButton as default } from './FiltersButton';

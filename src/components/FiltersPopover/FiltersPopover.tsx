@@ -1,10 +1,10 @@
 import clsx from 'clsx';
-import React, {type ReactNode, useEffect, useRef} from 'react';
+import React, { type ReactNode, useEffect, useRef } from 'react';
 import styles from './FiltersPopover.module.css';
 import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';
 import FiltersButton from '../FiltersButton';
-import type {PopoverProps} from '../Popover';
+import type { PopoverProps } from '../Popover';
 import Popover from '../Popover';
 
 export type FiltersPopoverProps = {
@@ -174,7 +174,7 @@ export const FiltersPopover = ({
 }: FiltersPopoverProps) => {
   return (
     <Popover placement={placement}>
-      {({close, open}) => (
+      {({ close, open }) => (
         <FiltersPopoverRender close={close} open={open} {...other} />
       )}
     </Popover>

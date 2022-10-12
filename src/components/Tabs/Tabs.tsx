@@ -9,8 +9,8 @@ import React, {
   useState,
   type KeyboardEvent,
 } from 'react';
-import {allByType} from 'react-children-by-type';
-import {useUID, useUIDSeed} from 'react-uid';
+import { allByType } from 'react-children-by-type';
+import { useUID, useUIDSeed } from 'react-uid';
 import styles from './Tabs.module.css';
 import {
   L_ARROW_KEYCODE,
@@ -126,7 +126,7 @@ export const Tabs = ({
           }
         },
         100,
-        {leading: true},
+        { leading: true },
       );
 
       /**

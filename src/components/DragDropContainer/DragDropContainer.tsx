@@ -1,11 +1,11 @@
 import clsx from 'clsx';
-import type {ReactNode} from 'react';
+import type { ReactNode } from 'react';
 import React from 'react';
-import type {DroppableProvided} from 'react-beautiful-dnd';
-import {Droppable} from 'react-beautiful-dnd';
-import {oneByType} from 'react-children-by-type';
+import type { DroppableProvided } from 'react-beautiful-dnd';
+import { Droppable } from 'react-beautiful-dnd';
+import { oneByType } from 'react-children-by-type';
 import styles from '../DragDrop/DragDrop.module.css';
-import type {ContainerType, ItemType} from '../DragDrop/DragDropTypes';
+import type { ContainerType, ItemType } from '../DragDrop/DragDropTypes';
 import DragDropContainerHeader from '../DragDropContainerHeader';
 import DragDropItem from '../DragDropItem';
 
@@ -27,7 +27,11 @@ export interface Props {
 /**
  * Primary UI component for user interaction for draggable components to be dropped within the container.
  */
-export const DragDropContainer = ({container, items, emptyContent}: Props) => {
+export const DragDropContainer = ({
+  container,
+  items,
+  emptyContent,
+}: Props) => {
   const componentClassName = clsx(
     styles['drag-drop__container'],
     items.length < 1 && styles['drag-drop__container--empty'],

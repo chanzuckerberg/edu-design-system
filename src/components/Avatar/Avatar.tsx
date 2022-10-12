@@ -16,7 +16,7 @@ export interface Props {
  *
  * Component that presents the user's avatar image with additional styling passed in.
  */
-export const Avatar = ({className, ...other}: Props) => {
+export const Avatar = ({ className, ...other }: Props) => {
   return (
     <div className={className} {...other}>
       <AvatarImage />

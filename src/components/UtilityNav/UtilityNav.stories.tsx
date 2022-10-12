@@ -1,13 +1,13 @@
-import type {StoryObj, Meta} from '@storybook/react';
+import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
-import {UtilityNav} from './UtilityNav';
-import {UtilityNavItem} from '../UtilityNavItem/UtilityNavItem';
+import { UtilityNav } from './UtilityNav';
+import { UtilityNavItem } from '../UtilityNavItem/UtilityNavItem';
 
 export default {
   title: 'Molecules/Navigation/UtilityNav',
   component: UtilityNav,
-  subcomponents: {UtilityNavItem},
+  subcomponents: { UtilityNavItem },
   args: {
     children: (
       <>
@@ -19,7 +19,7 @@ export default {
   },
   decorators: [
     (Story) => (
-      <div style={{background: '#000'}}>
+      <div style={{ background: '#000' }}>
         <Story />
       </div>
     ),

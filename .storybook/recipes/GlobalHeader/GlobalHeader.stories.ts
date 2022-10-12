@@ -1,7 +1,7 @@
-import type {StoryObj, Meta} from '@storybook/react';
-import type {ComponentProps} from 'react';
+import type { StoryObj, Meta } from '@storybook/react';
+import type { ComponentProps } from 'react';
 
-import {GlobalHeader} from './GlobalHeader';
+import { GlobalHeader } from './GlobalHeader';
 
 export default {
   title: 'Recipes/GlobalHeader',

@@ -1,1 +1,1 @@
-export {FiltersCheckboxField as default} from './FiltersCheckboxField';
+export { FiltersCheckboxField as default } from './FiltersCheckboxField';

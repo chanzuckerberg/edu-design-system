@@ -24,7 +24,7 @@ import {
 import '../../../src/components/Utilities/Spacing.css';
 import ButtonActionCalloutCard from '../../recipes/ButtonActionCalloutCard';
 
-import {PageShell} from '../../recipes/PageShell/PageShell';
+import { PageShell } from '../../recipes/PageShell/PageShell';
 
 export interface Props {
   /**
@@ -33,7 +33,7 @@ export interface Props {
   activeIndex?: number;
 }
 
-export const ProjectOverview = ({activeIndex = 0}: Props) => {
+export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
   return (
     <PageShell className="body--alternate" mentoringIsActive={true}>
       <Breadcrumbs className="!mb-4">

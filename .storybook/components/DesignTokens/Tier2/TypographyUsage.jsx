@@ -1,15 +1,15 @@
-import React, {Component} from 'react';
-import {Grid, Section} from '../../../../src';
+import React, { Component } from 'react';
+import { Grid, Section } from '../../../../src';
 import '../../../../src/components/Utilities/TypographyUsage.css';
-import {TokenSpecimen} from '../../TokenSpecimen/TokenSpecimen';
-import {PRESET_SIZE_MAP} from '../Tier1/TypographyPresets';
+import { TokenSpecimen } from '../../TokenSpecimen/TokenSpecimen';
+import { PRESET_SIZE_MAP } from '../Tier1/TypographyPresets';
 
 export class Tier2TypographyUsage extends Component {
   render() {
     const renderTypeToken = (size, preset, legacySize) => {
       // remove variant suffix
       const normalizedPreset = preset.split('-')[0];
-      const {fontSize, lineHeight} = PRESET_SIZE_MAP[normalizedPreset];
+      const { fontSize, lineHeight } = PRESET_SIZE_MAP[normalizedPreset];
 
       const name =
         `eds-theme-typography-${size}` + (legacySize ? `/ ${legacySize}` : '');

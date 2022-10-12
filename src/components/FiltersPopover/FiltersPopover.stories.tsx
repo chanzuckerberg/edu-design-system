@@ -1,52 +1,37 @@
-import {BADGE} from '@geometricpanda/storybook-addon-badges';
-import type {StoryObj, Meta} from '@storybook/react';
-import {within} from '@storybook/testing-library';
+import { BADGE } from '@geometricpanda/storybook-addon-badges';
+import type { StoryObj, Meta } from '@storybook/react';
+import { within } from '@storybook/testing-library';
 import isChromatic from 'chromatic/isChromatic';
 import React from 'react';
 
-import type {FiltersPopoverProps} from './FiltersPopover';
-import {FiltersPopover} from './FiltersPopover';
+import type { FiltersPopoverProps } from './FiltersPopover';
+import { FiltersPopover } from './FiltersPopover';
 import styles from './FiltersPopover.stories.module.css';
-import {Checkbox} from '../Checkbox/Checkbox';
-import {FiltersCheckboxField} from '../FiltersCheckboxField/FiltersCheckboxField';
+import { Checkbox } from '../Checkbox/Checkbox';
+import { FiltersCheckboxField } from '../FiltersCheckboxField/FiltersCheckboxField';
 
 export default {
   title: 'Organisms/Interactive/FiltersPopover',
   component: FiltersPopover,
   parameters: {
     badges: [BADGE.BETA],
-    chromatic: {delay: 300},
+    chromatic: { delay: 300 },
   },
   args: {
     triggerText: 'Filters',
     hasSelectedFilters: false,
     children: (
       <FiltersCheckboxField legend="Filters Segment 1">
-        <Checkbox
-          label="Filters label 1"
-          onChange={
-            () => {} /* eslint-disable-line @typescript-eslint/no-empty-function */
-          }
-        />
-        <Checkbox
-          label="Filters label 2"
-          onChange={
-            () => {} /* eslint-disable-line @typescript-eslint/no-empty-function */
-          }
-        />
-        <Checkbox
-          label="Filters label 3"
-          onChange={
-            () => {} /* eslint-disable-line @typescript-eslint/no-empty-function */
-          }
-        />
+        <Checkbox label="Filters label 1" onChange={() => {}} />
+        <Checkbox label="Filters label 2" onChange={() => {}} />
+        <Checkbox label="Filters label 3" onChange={() => {}} />
       </FiltersCheckboxField>
     ),
     placement: 'bottom-start',
   },
   decorators: [
     (Story) => (
-      <div style={{margin: '0.25rem', height: '100vh'}}>
+      <div style={{ margin: '0.25rem', height: '100vh' }}>
         <Story />
       </div>
     ),
@@ -56,7 +41,7 @@ export default {
 type Args = React.ComponentProps<typeof FiltersPopover>;
 
 export const Default: StoryObj<Args> = {
-  play: async ({canvasElement}) => {
+  play: async ({ canvasElement }) => {
     // We want to test visual regression for the drawer as well as the button, but don't want the drawer open initally outside Chromatic
     if (isChromatic()) {
       const canvas = within(canvasElement);
@@ -69,8 +54,7 @@ export const Default: StoryObj<Args> = {
 export const WithOnClear: StoryObj<Args> = {
   ...Default,
   args: {
-    onClear:
-      () => {} /* eslint-disable-line @typescript-eslint/no-empty-function */,
+    onClear: () => {},
   },
 };
 
@@ -78,8 +62,7 @@ export const WithOnApplyAndCustomButtonGroup: StoryObj<Args> = {
   ...Default,
   args: {
     footerButtonGroupClassName: styles['button-group__apply-only'],
-    onApply:
-      () => {} /* eslint-disable-line @typescript-eslint/no-empty-function */,
+    onApply: () => {},
   },
 };
 
@@ -252,8 +235,8 @@ const OverflowCheckboxFields = ({
 };
 
 export const OverflowInteractive: StoryObj<Args> = {
-  render: ({placement}) => <OverflowCheckboxFields placement={placement} />,
-  play: async ({canvasElement}) => {
+  render: ({ placement }) => <OverflowCheckboxFields placement={placement} />,
+  play: async ({ canvasElement }) => {
     // We want to test visual regression for the drawer as well as the button, but don't want the drawer open initally outside Chromatic
     if (isChromatic()) {
       const canvas = within(canvasElement);

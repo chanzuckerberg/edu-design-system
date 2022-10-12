@@ -1,1 +1,1 @@
-export {LinkListItem as default} from './LinkListItem';
+export { LinkListItem as default } from './LinkListItem';

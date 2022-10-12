@@ -1,1 +1,1 @@
-export {DropdownButton as default} from './DropdownButton';
+export { DropdownButton as default } from './DropdownButton';

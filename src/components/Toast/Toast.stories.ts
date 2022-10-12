@@ -1,11 +1,11 @@
-import type {StoryObj, Meta} from '@storybook/react';
-import type {ComponentProps} from 'react';
+import type { StoryObj, Meta } from '@storybook/react';
+import type { ComponentProps } from 'react';
 import Toast from './Toast';
 
 export default {
   title: 'Molecules/Messaging/Toast',
   component: Toast,
-  argTypes: {onDismiss: {action: 'dismissed'}},
+  argTypes: { onDismiss: { action: 'dismissed' } },
   args: {
     children: "You've got toast!",
   },

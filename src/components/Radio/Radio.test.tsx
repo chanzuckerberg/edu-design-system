@@ -1,12 +1,12 @@
-import {generateSnapshots} from '@chanzuckerberg/story-utils';
-import {composeStories} from '@storybook/testing-react';
-import {render, screen} from '@testing-library/react';
+import { generateSnapshots } from '@chanzuckerberg/story-utils';
+import { composeStories } from '@storybook/testing-react';
+import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
-import {Radio} from './Radio';
+import { Radio } from './Radio';
 import * as stories from './Radio.stories';
 
-const {Default} = composeStories(stories);
+const { Default } = composeStories(stories);
 
 describe('<Radio />', () => {
   generateSnapshots(stories);

@@ -1,2 +1,2 @@
-export {CheckboxLabel as default} from './CheckboxLabel';
-export type {CheckboxLabelProps} from './CheckboxLabel';
+export { CheckboxLabel as default } from './CheckboxLabel';
+export type { CheckboxLabelProps } from './CheckboxLabel';

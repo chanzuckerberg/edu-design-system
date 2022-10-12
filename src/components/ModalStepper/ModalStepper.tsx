@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React from 'react';
 import styles from './ModalStepper.module.css';
-import {Icon} from '../Icon/Icon';
+import { Icon } from '../Icon/Icon';
 
 export interface Props {
   /**

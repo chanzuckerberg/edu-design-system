@@ -1,7 +1,7 @@
-import type {StoryObj, Meta} from '@storybook/react';
-import type {ComponentProps} from 'react';
+import type { StoryObj, Meta } from '@storybook/react';
+import type { ComponentProps } from 'react';
 
-import {Hr} from './Hr';
+import { Hr } from './Hr';
 
 export default {
   title: 'Atoms/Text/Hr',
