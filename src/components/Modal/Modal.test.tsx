@@ -1,12 +1,12 @@
-import { generateSnapshots } from '@chanzuckerberg/story-utils';
-import { composeStories } from '@storybook/testing-react';
-import { fireEvent, render, screen, waitFor } from '@testing-library/react';
+import {generateSnapshots} from '@chanzuckerberg/story-utils';
+import {composeStories} from '@storybook/testing-react';
+import {fireEvent, render, screen, waitFor} from '@testing-library/react';
 import React from 'react';
 import Modal from './Modal';
 import * as stories from './Modal.stories';
 import '../../../jest/helpers/removeModalTransitionStylesJestSerializer';
 
-const { DefaultInteractive } = composeStories(stories);
+const {DefaultInteractive} = composeStories(stories);
 
 // Required because the modal uses react portal under the hood.
 require('intersection-observer');

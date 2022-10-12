@@ -1,7 +1,7 @@
 import React from 'react';
-import { Text } from '../../../src';
+import {Text} from '../../../src';
 import './Utilities.css';
-import { Hr } from '../../../src';
+import {Hr} from '../../../src';
 import '../../../src/components/Utilities/Visibility.css';
 
 export const VisibilityUtilities = () => (

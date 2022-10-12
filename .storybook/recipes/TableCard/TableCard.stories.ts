@@ -1,7 +1,7 @@
-import type { StoryObj } from '@storybook/react';
-import type { ComponentProps } from 'react';
+import type {StoryObj} from '@storybook/react';
+import type {ComponentProps} from 'react';
 
-import { TableCard } from './TableCard';
+import {TableCard} from './TableCard';
 
 export default {
   title: 'Recipes/TableCard',

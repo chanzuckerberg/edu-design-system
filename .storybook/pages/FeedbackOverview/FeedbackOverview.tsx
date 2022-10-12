@@ -30,7 +30,7 @@ import {
   EdsThemeColorIconBrandPrimary,
 } from '../../../src/tokens-dist/ts/colors';
 import NumberIconList from '../../recipes/NumberIconList';
-import { PageShell } from '../../recipes/PageShell/PageShell';
+import {PageShell} from '../../recipes/PageShell/PageShell';
 
 export interface Props {
   /**
@@ -39,7 +39,7 @@ export interface Props {
   activeIndex?: number;
 }
 
-export const FeedbackOverview = ({ activeIndex = 0 }: Props) => (
+export const FeedbackOverview = ({activeIndex = 0}: Props) => (
   <PageShell className="body--alternate">
     <Breadcrumbs className="mb-4">
       <BreadcrumbsItem href="#" text="My Courses" />

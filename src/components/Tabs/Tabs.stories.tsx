@@ -1,15 +1,15 @@
-import type { StoryObj, Meta } from '@storybook/react';
-import { within } from '@storybook/testing-library';
+import type {StoryObj, Meta} from '@storybook/react';
+import {within} from '@storybook/testing-library';
 import React from 'react';
 
-import { Tabs } from './Tabs';
+import {Tabs} from './Tabs';
 import Tab from '../Tab';
 import Text from '../Text';
 
 export default {
   title: 'Organisms/Interactive/Tabs',
   component: Tabs,
-  subcomponents: { Tabs },
+  subcomponents: {Tabs},
   args: {
     children: (
       <>
@@ -129,7 +129,7 @@ type Args = React.ComponentProps<typeof Tabs>;
 
 export const Default: StoryObj<Args> = {
   parameters: {
-    chromatic: { viewports: [414, 1366] },
+    chromatic: {viewports: [414, 1366]},
   },
 };
 
@@ -139,10 +139,10 @@ export const ScrollMiddle: StoryObj<Args> = {
     viewport: {
       defaultViewport: 'mobile2',
     },
-    chromatic: { viewports: [414] },
-    snapshot: { skip: true },
+    chromatic: {viewports: [414]},
+    snapshot: {skip: true},
   },
-  play: async ({ canvasElement }) => {
+  play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
     const tablist = await canvas.findByRole('tablist');
     // eslint-disable-next-line testing-library/no-node-access
@@ -164,10 +164,10 @@ export const ScrollEnd: StoryObj<Args> = {
     viewport: {
       defaultViewport: 'mobile2',
     },
-    chromatic: { viewports: [414] },
-    snapshot: { skip: true },
+    chromatic: {viewports: [414]},
+    snapshot: {skip: true},
   },
-  play: async ({ canvasElement }) => {
+  play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
     const tablist = await canvas.findByRole('tablist');
     // eslint-disable-next-line testing-library/no-node-access

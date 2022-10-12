@@ -1,9 +1,9 @@
-import { generateSnapshots } from '@chanzuckerberg/story-utils';
-import { render, screen } from '@testing-library/react';
+import {generateSnapshots} from '@chanzuckerberg/story-utils';
+import {render, screen} from '@testing-library/react';
 
 import userEvent from '@testing-library/user-event';
 import React from 'react';
-import { Text } from './Text';
+import {Text} from './Text';
 import * as TextStoryFile from './Text.stories';
 
 describe('<Text />', () => {
@@ -19,7 +19,7 @@ describe('<Text />', () => {
   });
 
   it('should handle refs', async () => {
-    const HelperComponent = ({ as }: { as: 'p' | 'span' }) => {
+    const HelperComponent = ({as}: {as: 'p' | 'span'}) => {
       const refContainer = React.useRef(null);
       const onButtonClick = () => {
         expect(refContainer.current).toBe(
@@ -35,7 +35,7 @@ describe('<Text />', () => {
         </>
       );
     };
-    const { rerender } = render(<HelperComponent as="p" />);
+    const {rerender} = render(<HelperComponent as="p" />);
     expect(screen.getByText('Ref container parent test p')).toBeTruthy();
     userEvent.click(screen.getByRole('button'));
 

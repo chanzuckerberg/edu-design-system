@@ -1,7 +1,7 @@
 import clsx from 'clsx';
-import type { ReactElement, ReactNode } from 'react';
-import React, { useRef, useEffect, useState } from 'react';
-import { useUID } from 'react-uid';
+import type {ReactElement, ReactNode} from 'react';
+import React, {useRef, useEffect, useState} from 'react';
+import {useUID} from 'react-uid';
 import styles from './FiltersDrawer.module.css';
 import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';
@@ -126,7 +126,7 @@ export const FiltersDrawer = ({
     if (!React.isValidElement(trigger)) return;
 
     // Grabs the original onClick callback and calls it after toggling the FiltersDrawer
-    const { onClick } = (trigger as ReactElement).props;
+    const {onClick} = (trigger as ReactElement).props;
     return React.cloneElement(trigger as ReactElement, {
       onClick: (event: MouseEvent) => {
         setIsActive(true);

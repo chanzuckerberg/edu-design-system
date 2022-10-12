@@ -1,8 +1,8 @@
-import type { StoryObj, Meta } from '@storybook/react';
+import type {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
 
-import { ButtonActionCalloutCard } from './ButtonActionCalloutCard';
-import { Button } from '../../../src';
+import {ButtonActionCalloutCard} from './ButtonActionCalloutCard';
+import {Button} from '../../../src';
 
 export default {
   title: 'Recipes/ButtonActionCalloutCard',

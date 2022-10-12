@@ -1,8 +1,8 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
-import type { StoryObj, Meta } from '@storybook/react';
+import {BADGE} from '@geometricpanda/storybook-addon-badges';
+import type {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
 
-import { SearchBar } from '../SearchBar/SearchBar';
+import {SearchBar} from '../SearchBar/SearchBar';
 
 export default {
   title: 'Organisms/Interactive/SearchBar',
@@ -12,7 +12,7 @@ export default {
   },
   decorators: [
     (Story) => (
-      <div style={{ padding: '0.5rem', backgroundColor: 'white' }}>
+      <div style={{padding: '0.5rem', backgroundColor: 'white'}}>
         <Story />
       </div>
     ),
@@ -51,7 +51,7 @@ export const Disabled: StoryObj<Args> = {
 export const Custom: StoryObj<Args> = {
   render: () => (
     <>
-      <div style={{ marginBottom: '1rem' }}>
+      <div style={{marginBottom: '1rem'}}>
         <SearchBar.Button />
         <SearchBar.InputField />
       </div>
@@ -66,13 +66,13 @@ export const Custom: StoryObj<Args> = {
 export const SearchField: StoryObj<
   React.ComponentProps<typeof SearchBar.InputField>
 > = {
-  argTypes: { onChange: { action: 'onChange' } },
+  argTypes: {onChange: {action: 'onChange'}},
   render: (args) => <SearchBar.InputField {...args} />,
 };
 
 export const SearchButton: StoryObj<
   React.ComponentProps<typeof SearchBar.Button>
 > = {
-  argTypes: { onClick: { action: 'onClick' } },
+  argTypes: {onClick: {action: 'onClick'}},
   render: (args) => <SearchBar.Button {...args} />,
 };

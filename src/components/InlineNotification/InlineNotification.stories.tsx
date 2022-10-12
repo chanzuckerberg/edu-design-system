@@ -1,6 +1,6 @@
-import type { StoryObj, Meta } from '@storybook/react';
+import type {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
-import { InlineNotification, VARIANTS } from './InlineNotification';
+import {InlineNotification, VARIANTS} from './InlineNotification';
 
 export default {
   title: 'Molecules/Messaging/InlineNotification',
@@ -64,7 +64,7 @@ export const StrongVariants: StoryObj<Args> = {
         gap: '0.25rem',
       }}
     >
-      {getVariants({ isStrong: true })}
+      {getVariants({isStrong: true})}
     </div>
   ),
 };
@@ -91,7 +91,7 @@ export const FullWidthVariants: StoryObj<Args> = {
         gap: '0.25rem',
       }}
     >
-      {getVariants({ isFullWidth: true })}
+      {getVariants({isFullWidth: true})}
       <InlineNotification
         inactive
         isFullWidth
@@ -111,7 +111,7 @@ export const FullWidthStrongVariants: StoryObj<Args> = {
         gap: '0.25rem',
       }}
     >
-      {getVariants({ isFullWidth: true, isStrong: true })}
+      {getVariants({isFullWidth: true, isStrong: true})}
       <InlineNotification
         inactive
         isFullWidth

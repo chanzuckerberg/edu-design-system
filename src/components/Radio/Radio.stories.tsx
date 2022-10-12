@@ -1,8 +1,8 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
-import type { StoryObj, Meta } from '@storybook/react';
+import {BADGE} from '@geometricpanda/storybook-addon-badges';
+import type {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
 
-import { Radio } from './Radio';
+import {Radio} from './Radio';
 
 export default {
   title: 'Atoms/Forms/Radio',
@@ -16,7 +16,7 @@ export default {
   },
   decorators: [
     (Story) => (
-      <div style={{ margin: '0.25rem' }}>
+      <div style={{margin: '0.25rem'}}>
         <Story />
       </div>
     ),
@@ -120,7 +120,7 @@ export const LongLabels = {
 
 export const WithCustomPositioning = {
   render: () => (
-    <div style={{ display: 'flex', alignItems: 'center' }}>
+    <div style={{display: 'flex', alignItems: 'center'}}>
       <Radio.Label htmlFor="test">Label on Left</Radio.Label>
       <Radio.Input checked={false} id="test" readOnly />
     </div>

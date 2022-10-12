@@ -1,10 +1,10 @@
 import clsx from 'clsx';
 import React from 'react';
-import { useUID } from 'react-uid';
+import {useUID} from 'react-uid';
 import styles from './Radio.module.css';
-import type { RadioInputProps } from '../RadioInput';
+import type {RadioInputProps} from '../RadioInput';
 import RadioInput from '../RadioInput';
-import type { RadioLabelProps } from '../RadioLabel';
+import type {RadioLabelProps} from '../RadioLabel';
 import RadioLabel from '../RadioLabel';
 
 export type RadioProps = RadioInputProps & {

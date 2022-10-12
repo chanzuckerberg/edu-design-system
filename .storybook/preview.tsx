@@ -11,7 +11,7 @@ import '../src/design-tokens/tier-1-definitions/fonts.css';
 // Import storybook-specific CSS
 import './css/styleguide-only.css';
 
-import type { Story } from '@storybook/react';
+import type {Story} from '@storybook/react';
 import React from 'react';
 
 export const decorators = [

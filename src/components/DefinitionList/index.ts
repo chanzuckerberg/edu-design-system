@@ -1,1 +1,1 @@
-export { DefinitionList as default } from './DefinitionList';
+export {DefinitionList as default} from './DefinitionList';

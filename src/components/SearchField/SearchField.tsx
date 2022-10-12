@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import React from 'react';
 import styles from './SearchField.module.css';
 import Icon from '../Icon';
-import type { InputFieldProps } from '../InputField';
+import type {InputFieldProps} from '../InputField';
 import InputField from '../InputField';
 
 /**

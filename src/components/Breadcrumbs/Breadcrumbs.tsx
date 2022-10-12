@@ -1,9 +1,9 @@
 import clsx from 'clsx';
 import debounce from 'lodash.debounce';
-import React, { type ReactNode } from 'react';
-import { useUID } from 'react-uid';
+import React, {type ReactNode} from 'react';
+import {useUID} from 'react-uid';
 import styles from './Breadcrumbs.module.css';
-import { flattenReactChildren } from '../../util/flattenReactChildren';
+import {flattenReactChildren} from '../../util/flattenReactChildren';
 import BreadcrumbsItem from '../BreadcrumbsItem';
 import DropdownMenuItem from '../DropdownMenuItem';
 

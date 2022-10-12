@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import type {ReactNode} from 'react';
 import React from 'react';
 
 export interface Props {
@@ -21,7 +21,7 @@ export interface Props {
  *
  * TableObjectFooter component represents the footer section of the TableObject container.
  */
-export const TableObjectFooter = ({ children, className, ...other }: Props) => {
+export const TableObjectFooter = ({children, className, ...other}: Props) => {
   return (
     <div className={className} {...other}>
       {children}

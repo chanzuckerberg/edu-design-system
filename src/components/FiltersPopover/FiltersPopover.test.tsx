@@ -1,11 +1,11 @@
-import { generateSnapshots } from '@chanzuckerberg/story-utils';
-import { userEvent } from '@storybook/testing-library';
-import { composeStories } from '@storybook/testing-react';
-import { render, screen } from '@testing-library/react';
+import {generateSnapshots} from '@chanzuckerberg/story-utils';
+import {userEvent} from '@storybook/testing-library';
+import {composeStories} from '@storybook/testing-react';
+import {render, screen} from '@testing-library/react';
 import React from 'react';
 import * as stories from './FiltersPopover.stories';
 
-const { OverflowInteractive } = composeStories(stories);
+const {OverflowInteractive} = composeStories(stories);
 
 describe('<Filters />', () => {
   generateSnapshots(stories, {

@@ -1,10 +1,10 @@
 import clsx from 'clsx';
-import type { ReactNode } from 'react';
+import type {ReactNode} from 'react';
 import React from 'react';
-import type { DraggableProvided } from 'react-beautiful-dnd';
-import { Draggable } from 'react-beautiful-dnd';
+import type {DraggableProvided} from 'react-beautiful-dnd';
+import {Draggable} from 'react-beautiful-dnd';
 import styles from '../DragDrop/DragDrop.module.css';
-import type { ItemType } from '../DragDrop/DragDropTypes';
+import type {ItemType} from '../DragDrop/DragDropTypes';
 import Icon from '../Icon';
 
 export interface Props {
@@ -30,7 +30,7 @@ export interface Props {
 /**
  * Primary UI component for user interaction to be dragged and dropped in containers.
  */
-export const DragDropItem = ({ behavior, className, item, index }: Props) => {
+export const DragDropItem = ({behavior, className, item, index}: Props) => {
   const componentClassName = clsx(
     styles['drag-drop__item'],
     item.behavior === 'hover' && styles['drag-drop__item--hover'],

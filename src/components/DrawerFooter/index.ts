@@ -1,1 +1,1 @@
-export { DrawerFooter as default } from './DrawerFooter';
+export {DrawerFooter as default} from './DrawerFooter';

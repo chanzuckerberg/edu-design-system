@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Button, Modal, Text } from '../../../src';
+import {Button, Modal, Text} from '../../../src';
 
 import '../../../src/components/Utilities/Alignment.css';
 import '../../../src/components/Utilities/Display.css';
@@ -17,8 +17,8 @@ export const ModalFinalStep = () => (
   >
     <Modal.Header>
       <div
-        className="flex flex-col justify-center items-center"
-        style={{ height: '25rem' }}
+        className="flex flex-col items-center justify-center"
+        style={{height: '25rem'}}
       >
         <img alt="a checkmark" src={CadSuccess} />
       </div>

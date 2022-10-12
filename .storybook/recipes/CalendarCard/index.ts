@@ -1,1 +1,1 @@
-export { CalendarCard as default } from './CalendarCard';
+export {CalendarCard as default} from './CalendarCard';

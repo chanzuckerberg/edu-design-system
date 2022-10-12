@@ -1,1 +1,1 @@
-export { NavContainer as default } from './NavContainer';
+export {NavContainer as default} from './NavContainer';

@@ -1,7 +1,7 @@
 import clsx from 'clsx';
-import React, { forwardRef } from 'react';
+import React, {forwardRef} from 'react';
 import styles from './FiltersButton.module.css';
-import type { ButtonProps } from '../Button';
+import type {ButtonProps} from '../Button';
 import Button from '../Button';
 import Icon from '../Icon';
 
@@ -30,7 +30,7 @@ export type FiltersButtonProps = {
  * Default button for triggering Filters components.
  */
 export const FiltersButton = forwardRef<HTMLButtonElement, FiltersButtonProps>(
-  ({ className, hasSelectedFilters, triggerText, ...other }, ref) => {
+  ({className, hasSelectedFilters, triggerText, ...other}, ref) => {
     const componentClassName = clsx(styles['filters-button'], className);
 
     const buttonVariant = hasSelectedFilters ? 'primary' : 'secondary';

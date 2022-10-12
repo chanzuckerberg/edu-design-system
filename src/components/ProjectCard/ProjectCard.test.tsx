@@ -1,7 +1,7 @@
-import { generateSnapshots } from '@chanzuckerberg/story-utils';
-import { render } from '@testing-library/react';
+import {generateSnapshots} from '@chanzuckerberg/story-utils';
+import {render} from '@testing-library/react';
 import React from 'react';
-import { ProjectCard } from './ProjectCard';
+import {ProjectCard} from './ProjectCard';
 import * as stories from './ProjectCard.stories';
 
 describe('<ProjectCard />', () => {

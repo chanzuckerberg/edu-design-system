@@ -1,9 +1,9 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
-import type { StoryObj, Meta } from '@storybook/react';
+import {BADGE} from '@geometricpanda/storybook-addon-badges';
+import type {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
 
-import type { Variant } from './Banner';
-import { Banner } from './Banner';
+import type {Variant} from './Banner';
+import {Banner} from './Banner';
 import styles from './Banner.stories.module.css';
 import Button from '../Button';
 import Heading from '../Heading';
@@ -47,7 +47,7 @@ const dismissMethod = () => {
 };
 
 export const Brand: StoryObj<Args> = {
-  render: ({ variant, ...other }) => {
+  render: ({variant, ...other}) => {
     return (
       <Banner
         description={getDescription(variant)}

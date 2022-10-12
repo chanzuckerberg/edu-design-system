@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import { Grid } from '../../../src';
-import { TokenSpecimen } from '../TokenSpecimen/TokenSpecimen';
+import React, {Component} from 'react';
+import {Grid} from '../../../src';
+import {TokenSpecimen} from '../TokenSpecimen/TokenSpecimen';
 
 export class ColorList extends Component {
   render() {

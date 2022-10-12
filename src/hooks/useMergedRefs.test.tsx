@@ -1,10 +1,10 @@
-import { render } from '@testing-library/react';
-import React, { useRef, type RefObject } from 'react';
-import { useMergedRefs } from './useMergedRefs';
+import {render} from '@testing-library/react';
+import React, {useRef, type RefObject} from 'react';
+import {useMergedRefs} from './useMergedRefs';
 
 it('assigns a value to all provided refs', () => {
-  let refA: RefObject<HTMLElement> = { current: null };
-  let refB: RefObject<HTMLElement> = { current: null };
+  let refA: RefObject<HTMLElement> = {current: null};
+  let refB: RefObject<HTMLElement> = {current: null};
 
   function Component() {
     refA = useRef(null);

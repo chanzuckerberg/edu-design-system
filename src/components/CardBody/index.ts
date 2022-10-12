@@ -1,1 +1,1 @@
-export { CardBody as default } from './CardBody';
+export {CardBody as default} from './CardBody';

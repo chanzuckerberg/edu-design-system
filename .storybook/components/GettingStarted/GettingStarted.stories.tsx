@@ -1,13 +1,13 @@
-import type { StoryObj } from '@storybook/react';
+import type {StoryObj} from '@storybook/react';
 import React from 'react';
-import { GettingStartedDocumentation } from './GettingStartedDocumentation';
+import {GettingStartedDocumentation} from './GettingStartedDocumentation';
 import GettingStartedDocs from '../../../docs/GETTING_STARTED.md';
 
 export default {
   title: '',
   component: GettingStartedDocumentation,
   parameters: {
-    chromatic: { disableSnapshot: true },
+    chromatic: {disableSnapshot: true},
     axe: {
       skip: true,
     },

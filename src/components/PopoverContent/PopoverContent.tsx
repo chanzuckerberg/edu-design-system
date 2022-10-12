@@ -1,8 +1,8 @@
-import { Popover as HeadlessPopover } from '@headlessui/react';
+import {Popover as HeadlessPopover} from '@headlessui/react';
 import clsx from 'clsx';
-import React, { useContext } from 'react';
+import React, {useContext} from 'react';
 import styles from './PopoverContent.module.css';
-import { PopoverContext } from '../Popover';
+import {PopoverContext} from '../Popover';
 
 type RenderProps<RenderPropArgs> = {
   children: React.ReactNode | ((args: RenderPropArgs) => React.ReactElement);
@@ -61,7 +61,7 @@ export const PopoverContent = ({
   ...other
 }: PopoverContentProps) => {
   // Grabs popper behavior generated from usePopper hook from Popover parent component.
-  const { popperStyles, popperAttributes, setPopperElement } =
+  const {popperStyles, popperAttributes, setPopperElement} =
     useContext(PopoverContext);
   const allProps = {
     ...popperAttributes,

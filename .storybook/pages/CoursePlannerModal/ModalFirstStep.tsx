@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 
 import {
   Button,
@@ -66,7 +66,7 @@ export const ModalFirstStep = () => {
           </Fieldset.Items>
         </Fieldset>
       </Modal.Body>
-      <Modal.Footer className="flex justify-between items-center">
+      <Modal.Footer className="flex items-center justify-between">
         <Modal.Stepper activeStep={1} totalSteps={3} />
         <ButtonGroup className="justify-end">
           <Button

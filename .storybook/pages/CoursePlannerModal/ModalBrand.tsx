@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Button, Modal, Heading, Text } from '../../../src';
+import {Button, Modal, Heading, Text} from '../../../src';
 
 import '../../../src/components/Utilities/Alignment.css';
 import '../../../src/components/Utilities/Display.css';

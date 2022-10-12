@@ -1,1 +1,1 @@
-export { CoursePlannerEdit as default } from './CoursePlannerEdit';
+export {CoursePlannerEdit as default} from './CoursePlannerEdit';

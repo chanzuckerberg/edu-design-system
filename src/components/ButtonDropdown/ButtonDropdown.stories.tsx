@@ -1,10 +1,10 @@
-import type { StoryObj, Meta } from '@storybook/react';
+import type {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
 
-import { ButtonDropdown } from './ButtonDropdown';
-import { Button } from '../Button/Button';
-import { DropdownMenuItem } from '../DropdownMenuItem/DropdownMenuItem';
-import { Icon } from '../Icon/Icon';
+import {ButtonDropdown} from './ButtonDropdown';
+import {Button} from '../Button/Button';
+import {DropdownMenuItem} from '../DropdownMenuItem/DropdownMenuItem';
+import {Icon} from '../Icon/Icon';
 
 export default {
   title: 'Organisms/Interactive/ButtonDropdown',
@@ -12,7 +12,7 @@ export default {
     layout: 'centered',
   },
   component: ButtonDropdown,
-  subcomponents: { DropdownMenuItem },
+  subcomponents: {DropdownMenuItem},
   args: {
     children: (
       <>
@@ -62,7 +62,7 @@ export const PositionBottomRight: StoryObj<Args> = {
   },
 };
 
-const TestComponent = ({ color }: { color: string }) => {
+const TestComponent = ({color}: {color: string}) => {
   return (
     <>
       <DropdownMenuItem>
@@ -70,7 +70,7 @@ const TestComponent = ({ color }: { color: string }) => {
         Item 1
       </DropdownMenuItem>
       <DropdownMenuItem>
-        <div style={{ backgroundColor: color }}>
+        <div style={{backgroundColor: color}}>
           <Icon name="schedule" purpose="decorative" size="1.25rem" />
           Item 2
         </div>
@@ -80,7 +80,7 @@ const TestComponent = ({ color }: { color: string }) => {
         Item 3
       </DropdownMenuItem>
       <DropdownMenuItem>
-        <div style={{ backgroundColor: color }}>
+        <div style={{backgroundColor: color}}>
           <Icon name="schedule" purpose="decorative" size="1.25rem" />
           Item 4
         </div>

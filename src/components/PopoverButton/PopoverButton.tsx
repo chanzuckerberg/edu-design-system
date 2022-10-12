@@ -1,6 +1,6 @@
-import { Popover as HeadlessPopover } from '@headlessui/react';
-import React, { useContext } from 'react';
-import { PopoverContext } from '../Popover';
+import {Popover as HeadlessPopover} from '@headlessui/react';
+import React, {useContext} from 'react';
+import {PopoverContext} from '../Popover';
 
 type RenderProps<RenderPropArgs> = {
   children: React.ReactNode | ((args: RenderPropArgs) => React.ReactElement);
@@ -9,7 +9,7 @@ type RenderProps<RenderPropArgs> = {
 export type PopoverButtonProps = {
   as?: React.ElementType;
   className?: string;
-} & RenderProps<{ open: boolean }>;
+} & RenderProps<{open: boolean}>;
 
 /**
  * BETA: This component is still a work in progress and is subject to change.
@@ -52,7 +52,7 @@ export type PopoverButtonProps = {
  * ```
  */
 export const PopoverButton = (props: PopoverButtonProps) => {
-  const { setReferenceElement } = useContext(PopoverContext);
+  const {setReferenceElement} = useContext(PopoverContext);
   return <HeadlessPopover.Button {...props} ref={setReferenceElement} />;
 };
 

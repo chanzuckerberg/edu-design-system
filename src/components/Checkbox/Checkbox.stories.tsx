@@ -1,6 +1,6 @@
-import type { StoryObj, Meta } from '@storybook/react';
+import type {StoryObj, Meta} from '@storybook/react';
 import React from 'react';
-import { Checkbox } from './Checkbox';
+import {Checkbox} from './Checkbox';
 import styles from './Checkbox.stories.module.css';
 import CheckboxInput from '../CheckboxInput';
 import CheckboxLabel from '../CheckboxLabel';
@@ -76,7 +76,7 @@ export const Indeterminate: StoryObj<Args> = {
 
 export const Disabled: StoryObj<Args> = {
   render: () => (
-    <table style={{ borderSpacing: '2rem' }}>
+    <table style={{borderSpacing: '2rem'}}>
       <tbody>
         {[false, true, 'indeterminate' as const].map((checked, i) => (
           // FIXME
@@ -150,7 +150,7 @@ function CheckboxInputExample() {
 
 export const WithCustomPositioning = {
   render: () => (
-    <div style={{ display: 'flex', alignItems: 'center' }}>
+    <div style={{display: 'flex', alignItems: 'center'}}>
       <CheckboxLabel htmlFor="test">Label on Left</CheckboxLabel>
       <CheckboxInputExample />
     </div>
