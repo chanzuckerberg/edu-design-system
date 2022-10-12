@@ -20,9 +20,7 @@
 .button--primary.button--primary {
   &:disabled,
   &:disabled:hover {
-    border-color: var(--eds-theme-color-border-disabled);
-    background-color: var(--eds-theme-color-background-disabled);
-    color: var(--eds-theme-color-button-primary-brand-text);
+    @apply border-border-disabled bg-background-disabled text-button-primary-brand-text-@;
   }
 }
 
@@ -34,12 +32,10 @@
 .button--secondary.button--secondary {
   &:disabled,
   &:disabled:hover {
-    border-color: var(--eds-theme-color-border-disabled);
-    background-color: transparent;
-    color: var(--eds-theme-color-text-disabled);
+    @apply border-border-disabled bg-transparent text-text-disabled;
 
     svg {
-      color: var(--eds-theme-color-text-disabled);
+      @apply text-text-disabled;
     }
   }
 }
@@ -52,8 +48,7 @@
 .button--link.button--link {
   &:disabled,
   &:disabled:hover {
-    color: var(--eds-theme-color-text-disabled);
-    text-decoration-color: var(--eds-theme-color-text-disabled);
+    @apply text-text-disabled decoration-text-disabled;
   }
 }
 
@@ -65,12 +60,11 @@
 .button--icon.button--icon {
   &:disabled,
   &:disabled:hover {
-    border-color: var(--eds-theme-color-button-icon-brand-border);
-    background-color: var(--eds-theme-color-button-icon-background);
-    color: var(--eds-theme-color-text-disabled);
+    @apply border-button-icon-brand-border-@ text-text-disabled;
+    background-color: var(--eds-theme-color-button-icon-background); /* --eds-theme-color-button-icon-brand-background */
 
     svg {
-      color: var(--eds-theme-color-text-disabled);
+      @apply text-text-disabled;
     }
   }
 }

@@ -6,6 +6,5 @@
  * A custom individual checkbox control
  */
 .checkbox {
-  display: flex;
-  gap: var(--eds-size-1);
+  @apply flex gap-2;
 }

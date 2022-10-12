@@ -6,23 +6,15 @@
  * A card is a block that typically contains a title, image, text, and/or calls to action.
  */
 .card {
-  display: flex;
-  flex-direction: column;
-  padding: var(--eds-size-2);
-  height: 100%;
-  border-radius: var(--eds-border-radius-lg);
-  border-width: var(--eds-theme-border-width);
-  border-style: solid;
-  border-color: var(--eds-theme-color-border-neutral-subtle);
-  background-color: var(--eds-theme-color-background-neutral-default);
+  @apply flex flex-col pr-4 h-full rounded-lg border border-solid;
+  @apply border-border-neutral-subtle-@ bg-background-neutral-default-@;
 }
 
 /**
  * Card that appears raised to show interactivity/emphasis.
  */
 .card--raised {
-  box-shadow: var(--eds-box-shadow-md);
-  border-color: var(--eds-theme-color-background-neutral-default);
+  @apply shadow-md border-background-neutral-default-@;
 }
 
 /**
@@ -31,7 +23,7 @@
  * Passed down to card to be reused.
  */
 .card.eds-is-dragging {
-  box-shadow: var(--eds-box-shadow-xl);
+  @apply shadow-xl;
 }
 
 /**
@@ -64,8 +56,7 @@
     /**
      * Remove default spacing for vertical card. Add margin right for spacing between header and body
      */
-    margin-bottom: 0;
-    margin-right: var(--eds-size-2);
+    @apply mb-0 mr-4;
   }
 }
 
@@ -93,7 +84,6 @@
     /**
      * Using margin left to space away from card body. Zero out margin top.
      */
-    margin-top: 0;
-    margin-left: var(--eds-size-2);
+    @apply mt-0 ml-4;
   }
 }

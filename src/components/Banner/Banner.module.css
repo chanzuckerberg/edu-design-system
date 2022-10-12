@@ -38,7 +38,7 @@
 .banner__icon {
   /* Icon color matches the thick border (left for horizontal and top for vertical orientation) */
   color: var(--messaging-icon-color);
-  --icon-size-default: var(--eds-size-5); /* 2.5rem */
+  --icon-size-default: var(--eds-size-5);
 }
 
 .banner__text-and-action {
@@ -91,7 +91,7 @@
    * Add extra right padding to account for close button
    */
   .banner--dismissable.banner--horizontal {
-    padding-right: var(--eds-size-4); /* 2rem */
+    padding-right: var(--eds-size-4);
   }
 }
 
