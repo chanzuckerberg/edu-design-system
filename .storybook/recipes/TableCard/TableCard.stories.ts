@@ -1,5 +1,5 @@
 import type { StoryObj } from '@storybook/react';
-import type React from 'react';
+import type { ComponentProps } from 'react';
 
 import { TableCard } from './TableCard';
 
@@ -8,7 +8,7 @@ export default {
   component: TableCard,
 };
 
-type Args = React.ComponentProps<typeof TableCard>;
+type Args = ComponentProps<typeof TableCard>;
 
 const tableColumns = [
   {

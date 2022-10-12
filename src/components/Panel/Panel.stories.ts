@@ -1,5 +1,5 @@
 import type { StoryObj, Meta } from '@storybook/react';
-import type React from 'react';
+import type { ComponentProps } from 'react';
 
 import { Panel } from './Panel';
 
@@ -11,7 +11,7 @@ export default {
   },
 } as Meta<Args>;
 
-type Args = React.ComponentProps<typeof Panel>;
+type Args = ComponentProps<typeof Panel>;
 
 export const Default: StoryObj<Args> = {};
 

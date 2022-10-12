@@ -1,5 +1,5 @@
 import type { StoryObj } from '@storybook/react';
-import type React from 'react';
+import type { ComponentProps } from 'react';
 
 import { FeedbackOverview } from './FeedbackOverview';
 
@@ -8,7 +8,8 @@ export default {
   component: FeedbackOverview,
 };
 
-type Args = React.ComponentProps<typeof FeedbackOverview>;
+type Args = ComponentProps<typeof FeedbackOverview>;
+
 export const Overview: StoryObj<Args> = {};
 
 export const Checkpoint: StoryObj<Args> = {

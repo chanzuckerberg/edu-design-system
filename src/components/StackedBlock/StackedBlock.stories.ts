@@ -1,6 +1,6 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { StoryObj, Meta } from '@storybook/react';
-import type React from 'react';
+import type { ComponentProps } from 'react';
 
 import { StackedBlock } from './StackedBlock';
 
@@ -12,7 +12,7 @@ export default {
   },
 } as Meta<Args>;
 
-type Args = React.ComponentProps<typeof StackedBlock>;
+type Args = ComponentProps<typeof StackedBlock>;
 
 export const Default: StoryObj<Args> = {
   args: {
