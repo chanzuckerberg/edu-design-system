@@ -117,6 +117,8 @@ export const TableObjectBody = ({
   /**
    * Set shadows when component is updated/loaded
    */
+  // FIXME
+  // eslint-disable-next-line @chanzuckerberg/edu-react/use-effect-deps-presence
   useEffect(() => {
     if (behavior === 'overflow') {
       setShadows();

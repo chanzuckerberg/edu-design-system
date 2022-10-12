@@ -120,6 +120,8 @@ export const OverflowList = ({ className, children, ...other }: Props) => {
   /**
    * Set shadows when component is updated/loaded
    */
+  // FIXME
+  // eslint-disable-next-line @chanzuckerberg/edu-react/use-effect-deps-presence
   useEffect(() => {
     setShadows();
     window.addEventListener('resize', setShadows);

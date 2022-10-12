@@ -11,10 +11,9 @@ export class Tier2Forms extends Component {
           <Grid>
             {filterTokens(`eds-theme-form-border-width`).map(function (
               listItem,
-              index,
             ) {
               return (
-                <GridItem key={'form-input-border-width-' + index}>
+                <GridItem key={listItem.name}>
                   <TokenSpecimen
                     inlineStyles={{
                       backgroundColor: 'transparent',
@@ -31,10 +30,9 @@ export class Tier2Forms extends Component {
 
             {filterTokens(`eds-theme-form-border-radius`).map(function (
               listItem,
-              index,
             ) {
               return (
-                <GridItem key={'form-input-border-radius-' + index}>
+                <GridItem key={listItem.name}>
                   <TokenSpecimen
                     inlineStyles={{
                       backgroundColor: 'transparent',
@@ -55,9 +53,9 @@ export class Tier2Forms extends Component {
         <Section title="Form Label Colors">
           <Grid>
             {filterTokens(`eds-theme-color-form-label-foreground`).map(
-              function (listItem, index) {
+              function (listItem) {
                 return (
-                  <GridItem key={'form-label-foreground' + index}>
+                  <GridItem key={listItem.name}>
                     <TokenSpecimen
                       inlineStyles={{
                         color: `var(${listItem.name})`,
@@ -77,10 +75,9 @@ export class Tier2Forms extends Component {
           <Grid>
             {filterTokens(`eds-theme-color-form-input-border`).map(function (
               listItem,
-              index,
             ) {
               return (
-                <GridItem key={'form-input-border' + index}>
+                <GridItem key={listItem.name}>
                   <TokenSpecimen
                     inlineStyles={{
                       backgroundColor: 'transparent',

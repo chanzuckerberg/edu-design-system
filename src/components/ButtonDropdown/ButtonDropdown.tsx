@@ -85,6 +85,8 @@ export const ButtonDropdown = ({
   /**
    * On component load/updated
    */
+  // FIXME
+  // eslint-disable-next-line @chanzuckerberg/edu-react/use-effect-deps-presence
   React.useEffect(() => {
     if (isActiveVar) {
       if (!ref.current) return;

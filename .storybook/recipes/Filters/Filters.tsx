@@ -20,6 +20,9 @@ type Props = {
 export const Filters = ({ placement, ...other }: Props) => {
   const [isLarge, setIsLarge] = useState(false);
   const popoverBreakpoint = parseInt(breakpoint['eds-bp-md']) * 16;
+
+  // FIXME
+  // eslint-disable-next-line @chanzuckerberg/edu-react/use-effect-deps-presence
   useEffect(() => {
     updateScreenSize();
     window.addEventListener('resize', updateScreenSize);

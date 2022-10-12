@@ -83,50 +83,40 @@ export const InputWithin: StoryObj<Args> = {
 
 export const LabelFieldnoteVariants: StoryObj<Args> = {
   render: (args) => (
-    <>
-      <div
-        style={{
-          display: 'grid',
-          gridTemplateColumns: '1fr 2fr 2fr',
-          gap: '2rem',
-        }}
-      >
-        <div />
-        <p>Placeholder</p>
-        <p>No Placeholder</p>
+    <div
+      style={{
+        display: 'grid',
+        gridTemplateColumns: '1fr 2fr 2fr',
+        gap: '2rem',
+      }}
+    >
+      <div />
+      <p>Placeholder</p>
+      <p>No Placeholder</p>
 
-        <p>fieldNote, label</p>
-        <TextField
-          fieldNote="fieldNote text"
-          label="Label text"
-          placeholder="placeholder"
-          {...args}
-        />
-        <TextField fieldNote="fieldNote text" label="Label text" {...args} />
-        <p>no fieldNote, label</p>
-        <TextField label="Label text" placeholder="placeholder" {...args} />
-        <TextField label="Label text" {...args} />
-        <p>fieldNote, no label</p>
-        <TextField
-          aria-label="Label text"
-          fieldNote="fieldNote text"
-          placeholder="placeholder"
-          {...args}
-        />
-        <TextField
-          aria-label="Label text"
-          fieldNote="fieldNote text"
-          {...args}
-        />
-        <p>no fieldNote, no label</p>
-        <TextField
-          aria-label="Label text"
-          placeholder="placeholder"
-          {...args}
-        />
-        <TextField aria-label="Label text" {...args} />
-      </div>
-    </>
+      <p>fieldNote, label</p>
+      <TextField
+        fieldNote="fieldNote text"
+        label="Label text"
+        placeholder="placeholder"
+        {...args}
+      />
+      <TextField fieldNote="fieldNote text" label="Label text" {...args} />
+      <p>no fieldNote, label</p>
+      <TextField label="Label text" placeholder="placeholder" {...args} />
+      <TextField label="Label text" {...args} />
+      <p>fieldNote, no label</p>
+      <TextField
+        aria-label="Label text"
+        fieldNote="fieldNote text"
+        placeholder="placeholder"
+        {...args}
+      />
+      <TextField aria-label="Label text" fieldNote="fieldNote text" {...args} />
+      <p>no fieldNote, no label</p>
+      <TextField aria-label="Label text" placeholder="placeholder" {...args} />
+      <TextField aria-label="Label text" {...args} />
+    </div>
   ),
 };
 
@@ -155,78 +145,68 @@ export const RequiredVariants: StoryObj<Args> = {
     required: true,
   },
   render: (args) => (
-    <>
-      <div
-        style={{
-          display: 'grid',
-          gridTemplateColumns: '1fr 2fr 2fr',
-          gap: '2rem',
-        }}
-      >
-        <div />
-        <p>Placeholder</p>
-        <p>No Placeholder</p>
+    <div
+      style={{
+        display: 'grid',
+        gridTemplateColumns: '1fr 2fr 2fr',
+        gap: '2rem',
+      }}
+    >
+      <div />
+      <p>Placeholder</p>
+      <p>No Placeholder</p>
 
-        <p>fieldNote, label</p>
-        <TextField
-          fieldNote="fieldNote text"
-          label="Label text"
-          placeholder="placeholder"
-          {...args}
-        />
-        <TextField fieldNote="fieldNote text" label="Label text" {...args} />
-        <p>no fieldNote, label</p>
-        <TextField label="Label text" placeholder="placeholder" {...args} />
-        <TextField label="Label text" {...args} />
-        <p>fieldNote, no label</p>
-        <TextField
-          aria-label="Label text"
-          fieldNote="fieldNote text"
-          placeholder="placeholder"
-          {...args}
-        />
-        <TextField
-          aria-label="Label text"
-          fieldNote="fieldNote text"
-          {...args}
-        />
-        <p>no fieldNote, no label</p>
-        <TextField
-          aria-label="Label text"
-          placeholder="placeholder"
-          {...args}
-        />
-        <TextField aria-label="Label text" {...args} />
-        <p>fieldNote, label, isError</p>
-        <TextField
-          fieldNote="fieldNote text"
-          isError
-          label="Label text"
-          placeholder="placeholder"
-          {...args}
-        />
-        <TextField
-          fieldNote="fieldNote text"
-          isError
-          label="Label text"
-          {...args}
-        />
-        <p>fieldNote, label, disabled</p>
-        <TextField
-          disabled
-          fieldNote="fieldNote text"
-          label="Label text"
-          placeholder="placeholder"
-          {...args}
-        />
-        <TextField
-          disabled
-          fieldNote="fieldNote text"
-          label="Label text"
-          {...args}
-        />
-      </div>
-    </>
+      <p>fieldNote, label</p>
+      <TextField
+        fieldNote="fieldNote text"
+        label="Label text"
+        placeholder="placeholder"
+        {...args}
+      />
+      <TextField fieldNote="fieldNote text" label="Label text" {...args} />
+      <p>no fieldNote, label</p>
+      <TextField label="Label text" placeholder="placeholder" {...args} />
+      <TextField label="Label text" {...args} />
+      <p>fieldNote, no label</p>
+      <TextField
+        aria-label="Label text"
+        fieldNote="fieldNote text"
+        placeholder="placeholder"
+        {...args}
+      />
+      <TextField aria-label="Label text" fieldNote="fieldNote text" {...args} />
+      <p>no fieldNote, no label</p>
+      <TextField aria-label="Label text" placeholder="placeholder" {...args} />
+      <TextField aria-label="Label text" {...args} />
+      <p>fieldNote, label, isError</p>
+      <TextField
+        fieldNote="fieldNote text"
+        isError
+        label="Label text"
+        placeholder="placeholder"
+        {...args}
+      />
+      <TextField
+        fieldNote="fieldNote text"
+        isError
+        label="Label text"
+        {...args}
+      />
+      <p>fieldNote, label, disabled</p>
+      <TextField
+        disabled
+        fieldNote="fieldNote text"
+        label="Label text"
+        placeholder="placeholder"
+        {...args}
+      />
+      <TextField
+        disabled
+        fieldNote="fieldNote text"
+        label="Label text"
+        {...args}
+      />
+    </div>
   ),
   parameters: {
     axe: {

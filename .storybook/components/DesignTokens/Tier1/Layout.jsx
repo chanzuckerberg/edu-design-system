@@ -9,9 +9,9 @@ export class Tier1Layout extends Component {
       <div>
         <Section title="Layout">
           <Grid>
-            {filterTokens(`eds-l-`).map(function (listItem, index) {
+            {filterTokens(`eds-l-`).map(function (listItem) {
               return (
-                <GridItem key={'l-' + index}>
+                <GridItem key={listItem.name}>
                   <TokenSpecimen
                     inlineStyles={{
                       maxWidth: `var(${listItem.name})`,

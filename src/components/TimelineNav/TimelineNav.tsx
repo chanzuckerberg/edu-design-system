@@ -141,6 +141,7 @@ export const TimelineNav = ({
    * This is used to compare the previous prop to the current prop.
    */
   function usePrevious(activeIndex: number) {
+    // eslint-disable-next-line @chanzuckerberg/edu-react/use-effect-deps-presence
     useEffect(() => {
       ref.current = activeIndex;
     });
@@ -407,6 +408,8 @@ export const TimelineNav = ({
                   styles['timeline-nav__item'],
                   isActive && styles['eds-is-active'],
                 )}
+                // FIXME
+                // eslint-disable-next-line react/no-array-index-key
                 key={'timeline-nav-item-' + i}
                 role="presentation"
               >
@@ -417,6 +420,8 @@ export const TimelineNav = ({
                   className={styles['timeline-nav__link']}
                   href={`#${idVar[i]}`}
                   id={ariaLabelledByVar[i]}
+                  // FIXME
+                  // eslint-disable-next-line react/no-array-index-key
                   key={'timeline-nav-link' + i}
                   onClick={(e) => {
                     e.preventDefault();

@@ -76,6 +76,8 @@ export const Default: StoryObj<Args> = {
           <Table.Row>
             {tableColumns.map((item, index) => {
               return (
+                // FIXME
+                // eslint-disable-next-line react/no-array-index-key
                 <Table.Cell as="th" key={'table-header-row-' + index}>
                   {item.title}
                 </Table.Cell>
@@ -87,6 +89,8 @@ export const Default: StoryObj<Args> = {
         <Table.Body>
           {tableRows.map((item, index) => {
             return (
+              // FIXME
+              // eslint-disable-next-line react/no-array-index-key
               <Table.Row key={'table-row-' + index}>
                 <Table.Cell>{item.value1}</Table.Cell>
                 <Table.Cell>{item.value2}</Table.Cell>
@@ -118,6 +122,8 @@ export const Stacked: StoryObj<Args> = {
           <Table.Row>
             {tableColumns.map((item, index) => {
               return (
+                // FIXME
+                // eslint-disable-next-line react/no-array-index-key
                 <Table.Cell as="th" key={'table-header-row-' + index}>
                   {item.title}
                 </Table.Cell>
@@ -129,6 +135,8 @@ export const Stacked: StoryObj<Args> = {
         <Table.Body>
           {tableRows.map((item, index) => {
             return (
+              // FIXME
+              // eslint-disable-next-line react/no-array-index-key
               <Table.Row key={'table-row-' + index}>
                 <Table.Cell data-heading={tableColumns[0].title}>
                   {item.value1}
@@ -163,6 +171,8 @@ export const AlignTableCellContentCenter: StoryObj<Args> = {
           <Table.Row>
             {tableColumns.map(function (item, index) {
               return (
+                // FIXME
+                // eslint-disable-next-line react/no-array-index-key
                 <Table.Cell align="center" as="th" key={'table-cell-' + index}>
                   {item.title}
                 </Table.Cell>
@@ -174,6 +184,8 @@ export const AlignTableCellContentCenter: StoryObj<Args> = {
         <Table.Body>
           {tableRows.map(function (item, index) {
             return (
+              // FIXME
+              // eslint-disable-next-line react/no-array-index-key
               <Table.Row key={'table-row-' + index}>
                 <Table.Cell align="center" data-label={tableColumns[0].title}>
                   {item.value1}
@@ -208,6 +220,8 @@ export const AlignTableCellContentRight: StoryObj<Args> = {
           <Table.Row>
             {tableColumns.map(function (item, index) {
               return (
+                // FIXME
+                // eslint-disable-next-line react/no-array-index-key
                 <Table.Cell align="right" as="th" key={'table-cell-' + index}>
                   {item.title}
                 </Table.Cell>
@@ -219,6 +233,8 @@ export const AlignTableCellContentRight: StoryObj<Args> = {
         <Table.Body>
           {tableRows.map(function (item, index) {
             return (
+              // FIXME
+              // eslint-disable-next-line react/no-array-index-key
               <Table.Row key={'table-row-' + index}>
                 <Table.Cell align="right" data-label={tableColumns[0].title}>
                   {item.value1}
