@@ -1,5 +1,5 @@
 import type { StoryObj, Meta } from '@storybook/react';
-import type React from 'react';
+import type { ComponentProps } from 'react';
 
 import { BaselineCard } from './BaselineCard';
 
@@ -12,7 +12,7 @@ export default {
   },
 } as Meta<Args>;
 
-type Args = React.ComponentProps<typeof BaselineCard>;
+type Args = ComponentProps<typeof BaselineCard>;
 
 export const Default: StoryObj<Args> = {};
 

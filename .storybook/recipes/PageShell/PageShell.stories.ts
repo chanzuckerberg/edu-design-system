@@ -1,5 +1,5 @@
 import type { StoryObj, Meta } from '@storybook/react';
-import type React from 'react';
+import type { ComponentProps } from 'react';
 
 import { PageShell } from './PageShell';
 
@@ -11,5 +11,6 @@ export default {
   },
 } as Meta;
 
-type Args = React.ComponentProps<typeof PageShell>;
+type Args = ComponentProps<typeof PageShell>;
+
 export const Default: StoryObj<Args> = {};

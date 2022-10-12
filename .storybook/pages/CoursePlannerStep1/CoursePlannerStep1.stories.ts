@@ -1,5 +1,5 @@
 import type { StoryObj } from '@storybook/react';
-import type React from 'react';
+import type { ComponentProps } from 'react';
 
 import { CoursePlannerStep1 } from './CoursePlannerStep1';
 
@@ -8,6 +8,6 @@ export default {
   component: CoursePlannerStep1,
 };
 
-type Args = React.ComponentProps<typeof CoursePlannerStep1>;
+type Args = ComponentProps<typeof CoursePlannerStep1>;
 
 export const Default: StoryObj<Args> = {};

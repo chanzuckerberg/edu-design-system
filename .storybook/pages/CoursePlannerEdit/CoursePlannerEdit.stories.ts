@@ -1,5 +1,5 @@
 import type { StoryObj, Meta } from '@storybook/react';
-import type React from 'react';
+import type { ComponentProps } from 'react';
 
 import { CoursePlannerEdit } from './CoursePlannerEdit';
 
@@ -8,5 +8,6 @@ export default {
   component: CoursePlannerEdit,
 } as Meta<Args>;
 
-type Args = React.ComponentProps<typeof CoursePlannerEdit>;
+type Args = ComponentProps<typeof CoursePlannerEdit>;
+
 export const Default: StoryObj<Args> = {};

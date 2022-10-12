@@ -1,5 +1,5 @@
 import type { StoryObj, Meta } from '@storybook/react';
-import type React from 'react';
+import type { ComponentProps } from 'react';
 
 import { Hr } from './Hr';
 
@@ -8,7 +8,7 @@ export default {
   component: Hr,
 } as Meta<Args>;
 
-type Args = React.ComponentProps<typeof Hr>;
+type Args = ComponentProps<typeof Hr>;
 
 export const Default: StoryObj<Args> = {};
 
