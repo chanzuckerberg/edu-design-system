@@ -23,7 +23,7 @@
   "scripts": {
     "build": "yarn build:clean && yarn build:tokens && yarn build:js && yarn build:styles && yarn copy-to-lib",
     "build:clean": "rm -rf lib/",
-    "build:tokens": "rm -rf src/tokens-dist/ && node ./style-dictionary.config.js && yarn copy-tokens-to-lib",
+    "build:tokens": "rm -rf src/tokens-dist/ && node ./style-dictionary.config.js && yarn copy-tokens-to-lib && yarn prettier-tokens-dist",
     "build:icons": "svg-sprite-generate -d src/icons/ -o src/icons/spritemap/spritemap.svg && yarn generate-icon-types",
     "build:js": "tsc --project tsconfig.build.json",
     "build:storybook": "build-storybook -o storybook-static -s src/design-tokens/tier-1-definitions/fonts",
@@ -44,6 +44,7 @@
     "lint:scripts": "eslint --quiet --ignore-path .gitignore --ext=js,jsx,ts,tsx .",
     "lint:scripts:fix": "yarn run lint:scripts --fix",
     "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx}\"",
+    "prettier-tokens-dist": "prettier --write \"src/tokens-dist/**/*.{js,jsx,ts,tsx}\"",
     "release": "yarn build && standard-version",
     "release:major": "yarn release --release-as major",
     "release:minor": "yarn release --release-as minor",
