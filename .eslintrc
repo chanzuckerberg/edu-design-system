@@ -7,8 +7,6 @@
   "parser": "@typescript-eslint/parser",
   "plugins": [
     "import",
-    "jsx-a11y",
-    "react-hooks",
     "testing-library",
     "@chanzuckerberg/stories"
   ],
@@ -19,6 +17,7 @@
     "plugin:react/recommended",
     "plugin:storybook/recommended",
     "plugin:testing-library/react",
+    "plugin:@chanzuckerberg/eslint-plugin-edu-react/recommended",
     "plugin:@chanzuckerberg/stories/strict"
   ],
   "parserOptions": {
@@ -56,11 +55,7 @@
         "groups": ["builtin", "external", "sibling", "parent", "index"]
       }
     ],
-    "no-unused-vars": "warn",
-    "react/jsx-sort-props": "error",
-    "react/prop-types": "off",
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "error"
+    "no-unused-vars": "warn"
   },
   "overrides": [
     {
