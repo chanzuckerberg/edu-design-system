@@ -1,6 +1,7 @@
 storybook-static
 node_modules
 lib
+src/tokens-dist
 *.hbs
 .husky
 .prettierignore
