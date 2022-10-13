@@ -6,8 +6,9 @@
  * A card is a block that typically contains a title, image, text, and/or calls to action.
  */
 .card {
-  @apply flex flex-col pr-4 h-full rounded-lg border border-solid;
+  @apply flex flex-col p-4 rounded-lg border border-solid;
   @apply border-border-neutral-subtle-@ bg-background-neutral-default-@;
+  height: 100%;
 }
 
 /**
