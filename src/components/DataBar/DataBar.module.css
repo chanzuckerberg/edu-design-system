@@ -29,7 +29,10 @@
  * Wraps the label and the caption description.
  */
 .data-bar__label-wrapper {
-  @apply flex items-end justify-between mb-4;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: var(--eds-size-2);
 }
 
 /**
@@ -38,7 +41,11 @@
 .data-bar__segment-space {
   position: relative;
   /* Shifts a border width amount to completely overlay instead of being offset from the containing borders. */
-  @apply bottom-px right-px flex gap-1;
+  bottom: var(--eds-theme-border-width); 
+  right: var(--eds-theme-border-width);
+
+  display: flex;
+  gap: var(--eds-size-half);
   /* Makes the last segment overlap the containing bar right border. */
   width: calc(100% + 2 * var(--eds-theme-border-width)); 
 }

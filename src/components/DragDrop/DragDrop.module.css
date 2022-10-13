@@ -67,7 +67,8 @@
  */
 .drag-drop__container {
   /* Set to display flex so empty state can span entire column. */
-  @apply flex shrink-0 flex-col ml-4 w-80;
+  @apply flex shrink-0 flex-col ml-4;
+  width: 20rem;
   /* Padding added to the top to account for outline of button. */
   padding-top: var(--eds-size-half);
   /**
@@ -83,12 +84,15 @@
  * An area that can be dropped into.
  */
 .drag-drop__container-inner {
-  @apply flex flex-col flex-1;
+  @apply flex flex-col;
+  flex: 1;
   background-color: var(--eds-theme-color-background-neutral-subtle);
-  @apply list-none m-0 p-2 rounded;
+  list-style: none;
+  @apply m-0 p-2 rounded;
   /*  DragDropContainer styles are included here rather than in the /DragDropContainer directory as a workaround to CSS Modules' locally scoped class names. */
   .drag-drop__container--empty & {
-    @apply justify-center items-center p-8 text-text-neutral-subtle;
+    @apply justify-center items-center p-8;
+    color: var(--eds-theme-color-text-neutral-subtle);
   }
 
   /**
@@ -153,7 +157,9 @@
  * Wrapper for drag handle.
  */
 .drag-drop__item-handle {
-  @apply absolute top-px left-px flex justify-center items-center;
+  @apply absolute flex justify-center items-center;
+  top: 1px;
+  left: 1px;
   height: calc(100% - 2px);
   @apply p-2 z-400 rounded-lg;
   background: var(--eds-theme-color-background-neutral-default);

@@ -13,14 +13,16 @@
  * Rounds the left side of the first databar segment.
  */
 .data-bar-segment:first-child {
-  @apply rounded-tl-full rounded-bl-full;
+  border-top-left-radius: var(--eds-border-radius-full);
+  border-bottom-left-radius: var(--eds-border-radius-full);
 }
 
 /**
  * Rounds the right side of the last databar segment if progress is complete.
  */
 .data-bar-segment--round-right {
-  @apply rounded-tr-full rounded-br-full;
+  border-top-right-radius: var(--eds-border-radius-full);
+  border-bottom-right-radius: var(--eds-border-radius-full);
 }
 
 /**

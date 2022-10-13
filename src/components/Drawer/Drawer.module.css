@@ -8,26 +8,19 @@
  * Box that overlays the application's content, prompting a user to perform an action.
  */
 .drawer__container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: flex-end;
-  visibility: hidden;
+  @apply flex flex-col items-end justify-end invisible;
   width: 28rem;
   height: 100vh;
-  position: fixed;
   top: 0;
   right: 0;
-  z-index: var(--eds-z-index-bottom);
-  background-color: transparent;
+  @apply fixed z-bottom bg-transparent;
 }
 
 /**
  * Active drawer container
  */
 .drawer__container--is-active {
-  visibility: visible;
-  z-index: var(--eds-z-index-400);
+  @apply visible z-400;
 }
 
 /**
@@ -35,16 +28,14 @@
  * Actual box with content within
  */
 .drawer {
-  display: flex;
-  flex-direction: column;
+  @apply flex flex-col w-full;
   height: 100vh;
-  width: 100%;
   transform: translateX(100%);
   background: var(--eds-theme-color-background-neutral-default);
   border-left-width: var(--eds-theme-border-width);
   border-left-style: solid;
   border-left-color: var(--eds-theme-color-border-neutral-subtle);
-  box-shadow: var(--eds-box-shadow-md);
+  @apply shadow-md;
   transition: transform var(--eds-anim-move-quick) var(--eds-anim-ease);
 
   @media screen and (prefers-reduced-motion) {
@@ -75,14 +66,9 @@
  * Modal header
  */
 .drawer__header {
-  flex-shrink: 0;
-  height: var(--eds-size-9);
+  @apply shrink-0 h-9 flex items-center justify-between;
   border-bottom: var(--eds-theme-border-width) solid
     var(--eds-theme-color-border-neutral-subtle);
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
 /**
