@@ -16,8 +16,7 @@
     /* stylelint-disable-next-line max-nesting-depth */
     &:before {
       content: '';
-      display: block;
-      position: absolute;
+      @apply block absolute;
       background: linear-gradient(
         to left,
         rgba(255, 255, 255, 0.001) 50%,
@@ -26,8 +25,7 @@
       height: 100%;
       top: 0;
       left: 0;
-      width: var(--eds-size-4);
-      z-index: var(--eds-z-index-100);
+      @apply w-8 z-100;
     }
   }
 
@@ -41,8 +39,7 @@
     /* stylelint-disable-next-line max-nesting-depth */
     &:after {
       content: '';
-      display: block;
-      position: absolute;
+      @apply block absolute;
       background: linear-gradient(
         to right,
         rgba(255, 255, 255, 0.001) 50%,
@@ -51,8 +48,7 @@
       height: 100%;
       top: 0;
       right: 0;
-      width: var(--eds-size-4);
-      z-index: var(--eds-z-index-100);
+      @apply w-8 z-100;
     }
   }
 }
@@ -63,8 +59,7 @@
  */
 :where(.drag-drop__inner) {
   /* Uses a flex row to align containers. */
-  display: flex;
-  overflow: auto;
+  @apply flex overflow-auto;
 }
 
 /**
@@ -72,11 +67,7 @@
  */
 .drag-drop__container {
   /* Set to display flex so empty state can span entire column. */
-  display: flex;
-  flex-shrink: 0;
-  flex-direction: column;
-  margin-left: var(--eds-size-2);
-  width: 20rem;
+  @apply flex shrink-0 flex-col ml-4 w-80;
   /* Padding added to the top to account for outline of button. */
   padding-top: var(--eds-size-half);
   /**
@@ -92,21 +83,12 @@
  * An area that can be dropped into.
  */
 .drag-drop__container-inner {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
+  @apply flex flex-col flex-1;
   background-color: var(--eds-theme-color-background-neutral-subtle);
-  list-style: none;
-  margin: 0;
-  padding: var(--eds-size-1);
-  border-radius: var(--eds-border-radius-md);
-
+  @apply list-none m-0 p-2 rounded;
   /*  DragDropContainer styles are included here rather than in the /DragDropContainer directory as a workaround to CSS Modules' locally scoped class names. */
   .drag-drop__container--empty & {
-    justify-content: center;
-    align-items: center;
-    padding: var(--eds-size-4);
-    color: var(--eds-theme-color-text-neutral-subtle);
+    @apply justify-center items-center p-8 text-text-neutral-subtle;
   }
 
   /**
@@ -127,10 +109,7 @@
 .drag-drop__item {
   position: relative;
   /*  For best experience, use a margin on a single side of an item to add a gap between items. Using a margin on both top and bottom, or using flex or grid gap spacing in the drag-drop-container, cause jumpy behavior. */
-  margin-bottom: var(--eds-size-1);
-  background-color: var(--eds-color-neutral-100);
-  border-radius: var(--eds-border-radius-lg);
-  box-shadow: var(--eds-box-shadow-sm);
+  @apply mb-2 bg-neutral-100 rounded-lg shadow-sm;
   border: var(--eds-theme-border-width) solid transparent;
   transition: border-color var(--eds-anim-fade-quick) var(--eds-anim-ease);
 
@@ -174,16 +153,9 @@
  * Wrapper for drag handle.
  */
 .drag-drop__item-handle {
-  position: absolute;
-  top: 1px;
-  left: 1px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @apply absolute top-px left-px flex justify-center items-center;
   height: calc(100% - 2px);
-  padding: var(--eds-size-1);
-  z-index: var(--eds-z-index-400);
-  border-radius: var(--eds-border-radius-lg);
+  @apply p-2 z-400 rounded-lg;
   background: var(--eds-theme-color-background-neutral-default);
   transition: opacity var(--eds-anim-fade-quick) var(--eds-anim-ease);
 

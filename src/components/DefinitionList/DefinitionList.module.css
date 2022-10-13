@@ -8,14 +8,11 @@
  */
 .definition-list { 
   @mixin reset;
-  display: grid;
-  gap: var(--eds-size-2);
+  @apply grid gap-4;
 }
 
 .definition-list--horizontal {
-  display: flex;
-  gap: var(--eds-size-2);
-  flex-wrap: wrap;
+  @apply flex gap-4 flex-wrap;
 }
 
 /**
@@ -29,8 +26,7 @@
  * Definition list item
  */
 .definition-list__item {
-  display: flex;
-  gap: var(--eds-size-2);
+  @apply flex gap-4;
 
   /**
    * Definition list item within small definition list

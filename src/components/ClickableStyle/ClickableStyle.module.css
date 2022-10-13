@@ -11,7 +11,11 @@
   @mixin eds-theme-typography-button-label;
   @apply inline-flex justify-center items-center;
   /* Adds a gap between children to automatically handle spacing between icons and text. */
-  @apply gap-3 border border-solid rounded cursor-pointer;
+  gap: 0.75rem;
+  border-width: var(--eds-theme-border-width);
+  border-style: solid;
+  border-radius: var(--eds-border-radius-md);
+  cursor: pointer;
   /* Removes the underline in the case that the rendered element is an <a> tag. */
   text-decoration: none;
   transition-property: color, background-color, border-color;
@@ -477,7 +481,9 @@
   /**
    * Override default Clickable styles
    */
-  @apply border-0 rounded-none bg-transparent;
+   border: 0;
+   border-radius: 0;
+   background-color: transparent;
   /**
    * Smaller gap between text and icon in link button style
    */
@@ -528,7 +534,8 @@
    * Height is used instead of vertical padding because the icon size we use would
    * cause the height to expand
    */
-  @apply h-6 pt-0 pb-2;
+   height: var(--eds-size-3);
+   padding: 0 var(--eds-size-1);
 }
 
 /**
@@ -539,7 +546,8 @@
    * Height is used instead of vertical padding because the icon size we use would
    * cause the height to expand
    */
-  @apply h-8 pt-0 pb-2;
+   height: var(--eds-size-4);
+   padding: 0 var(--eds-size-1);
 }
 
 /**
@@ -550,7 +558,8 @@
    * Height is used instead of vertical padding because the icon size we use would
    * cause the height to expand
    */
-  @apply h-10 pt-0 pb-4;
+   height: var(--eds-size-5);
+   padding: 0 var(--eds-size-2);
 }
 
 /**
