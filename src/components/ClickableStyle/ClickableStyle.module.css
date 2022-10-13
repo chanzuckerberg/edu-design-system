@@ -249,15 +249,23 @@
   @apply border-button-icon-brand-border-@ text-button-icon-brand-text-@;
   @apply bg-button-icon-brand-background-@;
 
+  svg {
+    color: var(--eds-theme-color-button-icon-brand);
+  }
   &:hover {
     @apply border-button-icon-brand-border-hover text-button-icon-brand-text-hover;
     @apply bg-button-icon-brand-background-hover;
-  
+    svg {
+      color: var(--eds-theme-color-button-icon-brand-hover);
+    }
   }
 
   &:active {
     @apply border-button-icon-brand-border-active text-button-icon-brand-text-active;
     @apply bg-button-icon-brand-background-active;
+    svg {
+      color: var(--eds-theme-color-button-icon-brand-active);
+    }
   }
 }
 
@@ -272,14 +280,24 @@
   @apply border-button-icon-brand-border-@ text-button-icon-brand-text-@;
   @apply bg-button-icon-brand-background-@;
 
+  svg {
+    color: var(--eds-theme-color-button-icon-neutral);
+  }
+
   &:hover {
   @apply border-button-icon-neutral-border-hover text-button-icon-neutral-text-hover;
   @apply bg-button-icon-neutral-background-hover;
-}
+  svg {
+    color: var(--eds-theme-color-button-icon-neutral-hover);
+    }
+  }
 
   &:active {
     @apply border-button-icon-neutral-border-active text-button-icon-neutral-text-active;
     @apply bg-button-icon-neutral-background-active;
+    svg {
+      color: var(--eds-theme-color-button-icon-neutral-active);
+    }
   }
 }
 
@@ -294,14 +312,24 @@
   @apply border-button-icon-success-border-@ text-button-icon-success-text-@;
   @apply bg-button-icon-success-background-@;
 
+  svg {
+    color: var(--eds-theme-color-button-icon-success);
+  }
+
   &:hover {
     @apply border-button-icon-success-border-hover text-button-icon-success-text-hover;
     @apply bg-button-icon-success-background-hover;
+    svg {
+      color: var(--eds-theme-color-button-icon-success-hover);
+    }
   }
 
   &:active {
     @apply border-button-icon-success-border-active text-button-icon-success-text-active;
     @apply bg-button-icon-success-background-active;
+    svg {
+      color: var(--eds-theme-color-button-icon-success-active);
+    }
   }
 }
 
@@ -316,14 +344,24 @@
   @apply border-button-icon-warning-border-@ text-button-icon-warning-text-@;
   @apply bg-button-icon-warning-background-@;
 
+  svg {
+    color: var(--eds-theme-color-button-icon-warning);
+  }
+
   &:hover {
     @apply border-button-icon-warning-border-hover text-button-icon-warning-text-hover;
     @apply bg-button-icon-warning-background-hover;
+    svg {
+      color: var(--eds-theme-color-button-icon-warning-hover);
+    }
   }
 
   &:active {
     @apply border-button-icon-warning-border-active text-button-icon-warning-text-active;
     @apply bg-button-icon-warning-background-active;
+    svg {
+      color: var(--eds-theme-color-button-icon-warning-active);
+    }
   }
 }
 
@@ -338,14 +376,24 @@
   @apply border-button-icon-error-border-@ text-button-icon-error-text-@;
   @apply bg-button-icon-error-background-@;
 
+  svg {
+    color: var(--eds-theme-color-button-icon-error);
+  }
+
   &:hover {
     @apply border-button-icon-error-border-hover text-button-icon-error-text-hover;
     @apply bg-button-icon-error-background-hover;
+    svg {
+      color: var(--eds-theme-color-button-icon-error-hover);
+    }
   }
   
   &:active {
     @apply border-button-icon-error-border-active text-button-icon-error-text-active;
     @apply bg-button-icon-error-background-active;
+    svg {
+      color: var(--eds-theme-color-button-icon-error-active);
+    }
   }
 }
 
