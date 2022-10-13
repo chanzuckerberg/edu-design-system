@@ -64,9 +64,6 @@ module.exports = {
       boxShadow: {
         ...variableTokens.eds['box-shadow'],
       },
-      spacing: {
-        ...variableTokens.eds['size'],
-      },
       colors: {
         icon: {
           ...variableTokens.eds.theme.color.icon,
