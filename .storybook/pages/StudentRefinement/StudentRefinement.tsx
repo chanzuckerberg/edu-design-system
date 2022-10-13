@@ -272,7 +272,7 @@ export const StudentRefinement = () => (
                   <Table.Cell
                     className={clsx(
                       styles['student-refinement__body-cell'],
-                      styles['student-refinement__body-area-cell'],
+                      styles['student-refinement__body-focus-cell'],
                     )}
                     data-heading="Power Focus Area"
                   >
@@ -342,7 +342,7 @@ export const StudentRefinement = () => (
                   <Table.Cell
                     className={clsx(
                       styles['student-refinement__body-cell'],
-                      styles['student-refinement__body-area-cell'],
+                      styles['student-refinement__body-focus-cell'],
                     )}
                     data-heading="Power Focus Area"
                   >
@@ -412,7 +412,7 @@ export const StudentRefinement = () => (
                   <Table.Cell
                     className={clsx(
                       styles['student-refinement__body-cell'],
-                      styles['student-refinement__body-area-cell'],
+                      styles['student-refinement__body-focus-cell'],
                     )}
                     data-heading="Power Focus Area"
                   >
@@ -476,7 +476,7 @@ export const StudentRefinement = () => (
                   <Table.Cell
                     className={clsx(
                       styles['student-refinement__body-cell'],
-                      styles['student-refinement__body-area-cell'],
+                      styles['student-refinement__body-focus-cell'],
                     )}
                     data-heading="Power Focus Area"
                   >
@@ -549,7 +549,7 @@ export const StudentRefinement = () => (
                   <Table.Cell
                     className={clsx(
                       styles['student-refinement__body-cell'],
-                      styles['student-refinement__body-area-cell'],
+                      styles['student-refinement__body-focus-cell'],
                     )}
                     data-heading="Power Focus Area"
                   >
@@ -619,7 +619,7 @@ export const StudentRefinement = () => (
                   <Table.Cell
                     className={clsx(
                       styles['student-refinement__body-cell'],
-                      styles['student-refinement__body-area-cell'],
+                      styles['student-refinement__body-focus-cell'],
                     )}
                     data-heading="Power Focus Area"
                   >
