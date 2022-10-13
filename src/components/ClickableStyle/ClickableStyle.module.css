@@ -96,7 +96,7 @@
   @apply bg-button-secondary-brand-background-@;
 
   svg {
-    @apply text-button-secondary-brand-icon-@;
+    color: var(--eds-theme-color-button-secondary-brand-icon);
   }
 
   &:hover {
@@ -104,7 +104,7 @@
     @apply bg-button-secondary-brand-background-hover;
 
     svg {
-      @apply text-button-secondary-brand-icon-hover;
+      color: var(--eds-theme-color-button-secondary-brand-icon-hover);
     }
   }
 
@@ -113,7 +113,7 @@
     @apply bg-button-secondary-brand-background-active;
 
     svg {
-      @apply text-button-secondary-brand-icon-active;
+      color: var(--eds-theme-color-button-secondary-brand-icon-focus);
     }
   }
 }
@@ -126,7 +126,7 @@
   @apply bg-button-secondary-neutral-background-@;
 
   svg {
-    @apply text-button-secondary-neutral-icon-@;
+    color: var(--eds-theme-color-button-secondary-neutral-icon);
   }
 
   &:hover {
@@ -134,7 +134,7 @@
     @apply bg-button-secondary-neutral-background-hover;
   
     svg {
-      @apply text-button-secondary-neutral-icon-hover;
+      color: var(--eds-theme-color-button-secondary-neutral-icon-hover);
     }
   }
 
@@ -143,7 +143,7 @@
     @apply bg-button-secondary-neutral-background-active;
   
     svg {
-      @apply text-button-secondary-neutral-icon-active;
+      color: var(--eds-theme-color-button-secondary-neutral-icon-active);
     }
   }
 }
@@ -156,7 +156,7 @@
   @apply bg-button-secondary-success-background-@;
 
   svg {
-    @apply text-button-secondary-success-icon-@;
+    color: var(--eds-theme-color-button-secondary-success-icon);
   }
 
   &:hover {
@@ -164,7 +164,7 @@
     @apply bg-button-secondary-success-background-hover;
   
     svg {
-      @apply text-button-secondary-success-icon-hover;
+      color: var(--eds-theme-color-button-secondary-success-icon-hover);
     }
   }
 
@@ -173,7 +173,7 @@
     @apply bg-button-secondary-success-background-active;
   
     svg {
-      @apply text-button-secondary-success-icon-active;
+      color: var(--eds-theme-color-button-secondary-success-icon-active);
     }
   }
 }
@@ -186,7 +186,7 @@
   @apply bg-button-secondary-warning-background-@;
 
   svg {
-    @apply text-button-secondary-warning-icon-@;
+    color: var(--eds-theme-color-button-secondary-warning-icon);
   }
 
   &:hover {
@@ -194,16 +194,16 @@
     @apply bg-button-secondary-warning-background-hover;
   
     svg {
-      @apply text-button-secondary-warning-icon-hover;
+      color: var(--eds-theme-color-button-secondary-warning-icon-hover);
     }
   }
 
   &:active {
     @apply border-button-secondary-warning-border-active text-button-secondary-warning-text-active;
     @apply bg-button-secondary-warning-background-active;
-  
+
     svg {
-      @apply text-button-secondary-warning-icon-active;
+      color: var(--eds-theme-color-button-secondary-warning-icon-active);
     }
   }
 }
@@ -216,7 +216,7 @@
   @apply bg-button-secondary-error-background-@;
 
   svg {
-    @apply text-button-secondary-error-icon-@;
+    color: var(--eds-theme-color-button-secondary-error-icon);
   }
 
   &:hover {
@@ -224,7 +224,7 @@
     @apply bg-button-secondary-error-background-hover;
   
     svg {
-      @apply text-button-secondary-error-icon-hover;
+      color: var(--eds-theme-color-button-secondary-error-icon-hover);
     }
   }
 
@@ -233,7 +233,7 @@
     @apply bg-button-secondary-error-background-active;
   
     svg {
-      @apply text-button-secondary-error-icon-active;
+      color: var(--eds-theme-color-button-secondary-error-icon-active);
     }
   }
 }
