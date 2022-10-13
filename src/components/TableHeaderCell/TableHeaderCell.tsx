@@ -1,6 +1,5 @@
 import clsx from 'clsx';
-import type { ReactNode } from 'react';
-import React, { useState } from 'react';
+import React, { type ReactNode } from 'react';
 import Icon from '../Icon';
 import styles from '../Table/Table.module.css';
 
@@ -30,20 +29,22 @@ export interface Props {
    */
   rowSpan?: number;
   /**
+   * Callback called when the sort button is clicked.
+   */
+  onSortClick?: () => void;
+  /**
    * This enumerated attribute defines the cells that the header (defined in the `th`) element relates to.
    */
   scope?: 'row' | 'col' | 'colgroup';
   /**
-   * Boolean to enable sorting on a table column
+   * The direction the selected column will be sorted.
    */
-  sortable?: boolean;
-  /**
-   * The direction the selected column will be sorted
-   */
-  sortDirection?: SortOptions;
+  sortDirection?: SortDirectionsType;
 }
 
-type SortOptions = 'ascending' | 'descending' | 'default';
+export const SortDirections = ['ascending', 'descending', 'default'];
+
+export type SortDirectionsType = typeof SortDirections[number];
 
 /**
  * BETA: This component is still a work in progress and is subject to change.
@@ -55,53 +56,30 @@ type SortOptions = 'ascending' | 'descending' | 'default';
  * HTML `th` cell of the `Table` component
  */
 export const TableHeaderCell = ({
-  className,
-  rowSpan,
-  colSpan,
-  scope,
-  headers,
-  sortable,
-  sortDirection = 'default',
-  id,
   children,
+  className,
+  colSpan,
+  headers,
+  id,
+  onSortClick,
+  rowSpan,
+  scope,
+  sortDirection,
   ...other
 }: Props) => {
-  /**
-   * Sort status
-   *
-   * State variable to hold current sort direction. Initialized with value in sortDirection prop.
-   */
-  const [sortStatus, setSortStatus] = useState<SortOptions>(sortDirection);
-
-  const toggleSort = () => {
-    switch (sortStatus) {
-      case 'ascending':
-        setSortStatus('descending');
-        break;
-      case 'descending':
-        setSortStatus('default');
-        break;
-      case 'default':
-        setSortStatus('ascending');
-        break;
-      default:
-        setSortStatus('default');
-    }
-  };
-
   const componentClassName = clsx(styles['table__header-cell'], className);
 
   const iconName =
-    sortStatus === 'ascending'
+    sortDirection === 'ascending'
       ? 'arrow-narrow-up'
-      : sortStatus === 'descending'
+      : sortDirection === 'descending'
       ? 'arrow-narrow-down'
       : 'unfold-more';
 
   const iconTitle =
-    sortStatus === 'ascending'
+    sortDirection === 'ascending'
       ? 'Sorted, ascending'
-      : sortStatus === 'descending'
+      : sortDirection === 'descending'
       ? 'Sorted, descending'
       : 'Sort';
 
@@ -120,10 +98,10 @@ export const TableHeaderCell = ({
       scope={scope}
       {...other}
     >
-      {sortable ? (
+      {sortDirection ? (
         <button
           className={clsx(styles['table__header-cell-button'])}
-          onClick={toggleSort}
+          onClick={onSortClick}
         >
           {children}
           <div className={clsx(styles['table__header-cell-sort'])}>
