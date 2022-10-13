@@ -10,9 +10,7 @@
 .data-bar {
   --data-bar-height: var(--eds-size-2);
   height: var(--data-bar-height);
-
   background-color: var(--eds-theme-color-background-neutral-subtle);
-
   border: var(--eds-theme-color-border-neutral-default) solid
     var(--eds-theme-border-width);
   /* Rounds the sides rather than making the bar elliptical. */  
@@ -31,11 +29,7 @@
  * Wraps the label and the caption description.
  */
 .data-bar__label-wrapper {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-
-  margin-bottom: var(--eds-size-2);
+  @apply flex items-end justify-between mb-4;
 }
 
 /**
@@ -44,11 +38,7 @@
 .data-bar__segment-space {
   position: relative;
   /* Shifts a border width amount to completely overlay instead of being offset from the containing borders. */
-  bottom: var(--eds-theme-border-width); 
-  right: var(--eds-theme-border-width);
-
-  display: flex;
-  gap: var(--eds-size-half);
+  @apply bottom-px right-px flex gap-1;
   /* Makes the last segment overlap the containing bar right border. */
   width: calc(100% + 2 * var(--eds-theme-border-width)); 
 }
