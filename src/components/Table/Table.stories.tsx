@@ -276,40 +276,41 @@ const SortableExample = () => {
   ];
   const [sortDirection, setSortDirection] =
     useState<SortDirectionsType>('default');
-  const [tableValues, setTableValues] = useState({ ...values });
   const onSortClick = () => {
     if (sortDirection === 'descending') {
       setSortDirection('default');
-      values.sort((a, b) => {
-        if (a.col2 < b.col2) {
-          return -1;
-        } else {
-          return 1;
-        }
-      });
     }
     if (sortDirection === 'default') {
       setSortDirection('ascending');
-      values.sort((a, b) => {
-        if (a.col1 < b.col1) {
-          return -1;
-        } else {
-          return 1;
-        }
-      });
     }
     if (sortDirection === 'ascending') {
       setSortDirection('descending');
-      values.sort((a, b) => {
-        if (b.col1 < a.col1) {
-          return -1;
-        } else {
-          return 1;
-        }
-      });
     }
-    setTableValues({ ...values });
   };
+  const sortedValues = values.slice().sort((a, b) => {
+    if (sortDirection === 'default') {
+      if (a.col2 < b.col2) {
+        return -1;
+      } else {
+        return 1;
+      }
+    }
+    if (sortDirection === 'ascending') {
+      if (a.col1 < b.col1) {
+        return -1;
+      } else {
+        return 1;
+      }
+    }
+    if (sortDirection === 'descending') {
+      if (b.col1 < a.col1) {
+        return -1;
+      } else {
+        return 1;
+      }
+    }
+    return 0;
+  });
   return (
     <Table caption="This is a table caption and it is required">
       <Table.Header>
@@ -324,22 +325,12 @@ const SortableExample = () => {
         </Table.Row>
       </Table.Header>
       <TableBody>
-        <Table.Row>
-          <Table.Cell>{tableValues[0].col1}</Table.Cell>
-          <Table.Cell>{tableValues[0].col2}</Table.Cell>
-        </Table.Row>
-        <Table.Row>
-          <Table.Cell>{tableValues[1].col1}</Table.Cell>
-          <Table.Cell>{tableValues[1].col2}</Table.Cell>
-        </Table.Row>
-        <Table.Row>
-          <Table.Cell>{tableValues[2].col1}</Table.Cell>
-          <Table.Cell>{tableValues[2].col2}</Table.Cell>
-        </Table.Row>
-        <Table.Row>
-          <Table.Cell>{tableValues[3].col1}</Table.Cell>
-          <Table.Cell>{tableValues[3].col2}</Table.Cell>
-        </Table.Row>
+        {sortedValues.map(({ col1, col2 }) => (
+          <Table.Row key={`row-${col1}-${col2}`}>
+            <Table.Cell>{col1}</Table.Cell>
+            <Table.Cell>{col2}</Table.Cell>
+          </Table.Row>
+        ))}
       </TableBody>
     </Table>
   );

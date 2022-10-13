@@ -42,9 +42,9 @@ export interface Props {
   sortDirection?: SortDirectionsType;
 }
 
-export const SortDirections = ['ascending', 'descending', 'default'];
+export const SORT_DIRECTIONS = ['ascending', 'descending', 'default'] as const;
 
-export type SortDirectionsType = typeof SortDirections[number];
+export type SortDirectionsType = typeof SORT_DIRECTIONS[number];
 
 /**
  * BETA: This component is still a work in progress and is subject to change.
