@@ -481,9 +481,9 @@
   /**
    * Override default Clickable styles
    */
-   border: 0;
-   border-radius: 0;
-   background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
   /**
    * Smaller gap between text and icon in link button style
    */
@@ -534,8 +534,8 @@
    * Height is used instead of vertical padding because the icon size we use would
    * cause the height to expand
    */
-   height: var(--eds-size-3);
-   padding: 0 var(--eds-size-1);
+  height: var(--eds-size-3);
+  padding: 0 var(--eds-size-1);
 }
 
 /**
@@ -546,8 +546,8 @@
    * Height is used instead of vertical padding because the icon size we use would
    * cause the height to expand
    */
-   height: var(--eds-size-4);
-   padding: 0 var(--eds-size-1);
+  height: var(--eds-size-4);
+  padding: 0 var(--eds-size-1);
 }
 
 /**
@@ -558,8 +558,8 @@
    * Height is used instead of vertical padding because the icon size we use would
    * cause the height to expand
    */
-   height: var(--eds-size-5);
-   padding: 0 var(--eds-size-2);
+  height: var(--eds-size-5);
+  padding: 0 var(--eds-size-2);
 }
 
 /**

@@ -11,9 +11,9 @@
   @apply flex flex-col items-end justify-end invisible;
   width: 28rem;
   height: 100vh;
+  @apply fixed z-bottom bg-transparent;
   top: 0;
   right: 0;
-  @apply fixed z-bottom bg-transparent;
 }
 
 /**
@@ -66,7 +66,8 @@
  * Modal header
  */
 .drawer__header {
-  @apply shrink-0 h-9 flex items-center justify-between;
+  @apply shrink-0 flex items-center justify-between;
+  height: var(--eds-size-9);
   border-bottom: var(--eds-theme-border-width) solid
     var(--eds-theme-color-border-neutral-subtle);
 }
