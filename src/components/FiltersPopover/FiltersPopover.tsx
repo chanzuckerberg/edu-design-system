@@ -4,7 +4,8 @@ import styles from './FiltersPopover.module.css';
 import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';
 import FiltersButton from '../FiltersButton';
-import Popover, { PopoverProps } from '../Popover';
+import type { PopoverProps } from '../Popover';
+import Popover from '../Popover';
 
 export type FiltersPopoverProps = {
   /**

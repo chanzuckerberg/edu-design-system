@@ -1,17 +1,15 @@
 import { Dialog, Transition } from '@headlessui/react';
 import clsx from 'clsx';
-import React, { MutableRefObject, ReactNode } from 'react';
+import type { MutableRefObject, ReactNode } from 'react';
+import React from 'react';
 import styles from './Modal.module.css';
 import { Icon } from '../Icon/Icon';
-import { ModalBody, Props as ModalBodyProps } from '../ModalBody/ModalBody';
-import {
-  ModalFooter,
-  Props as ModalFooterProps,
-} from '../ModalFooter/ModalFooter';
-import {
-  ModalHeader,
-  Props as ModalHeaderProps,
-} from '../ModalHeader/ModalHeader';
+import type { Props as ModalBodyProps } from '../ModalBody/ModalBody';
+import { ModalBody } from '../ModalBody/ModalBody';
+import type { Props as ModalFooterProps } from '../ModalFooter/ModalFooter';
+import { ModalFooter } from '../ModalFooter/ModalFooter';
+import type { Props as ModalHeaderProps } from '../ModalHeader/ModalHeader';
+import { ModalHeader } from '../ModalHeader/ModalHeader';
 import { ModalStepper } from '../ModalStepper/ModalStepper';
 import { ModalTitle } from '../ModalTitle/ModalTitle';
 

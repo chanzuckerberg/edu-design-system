@@ -1,8 +1,10 @@
 import clsx from 'clsx';
-import React, { ReactNode } from 'react';
-import { Draggable, DraggableProvided } from 'react-beautiful-dnd';
+import type { ReactNode } from 'react';
+import React from 'react';
+import type { DraggableProvided } from 'react-beautiful-dnd';
+import { Draggable } from 'react-beautiful-dnd';
 import styles from '../DragDrop/DragDrop.module.css';
-import { ItemType } from '../DragDrop/DragDropTypes';
+import type { ItemType } from '../DragDrop/DragDropTypes';
 import Icon from '../Icon';
 
 export interface Props {
@@ -45,7 +47,6 @@ export const DragDropItem = ({ behavior, className, item, index }: Props) => {
             // Checking isValidElement is the safe way and avoids a typescript
             // error too.
             if (React.isValidElement(child)) {
-              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
               // @ts-expect-error TODO: fix "No overload matches this call" error
               return React.cloneElement<Props>(child, {
                 isDragging: snapshot.isDragging,

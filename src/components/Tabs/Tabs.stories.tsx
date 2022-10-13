@@ -1,4 +1,5 @@
-import { StoryObj, Meta } from '@storybook/react';
+import type { StoryObj, Meta } from '@storybook/react';
+import { within } from '@storybook/testing-library';
 import React from 'react';
 
 import { Tabs } from './Tabs';
@@ -126,4 +127,59 @@ export default {
 
 type Args = React.ComponentProps<typeof Tabs>;
 
-export const Default: StoryObj<Args> = {};
+export const Default: StoryObj<Args> = {
+  parameters: {
+    chromatic: { viewports: [414, 1366] },
+  },
+};
+
+// For visual regression testing of both masks
+export const ScrollMiddle: StoryObj<Args> = {
+  parameters: {
+    viewport: {
+      defaultViewport: 'mobile2',
+    },
+    chromatic: { viewports: [414] },
+    snapshot: { skip: true },
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const tablist = await canvas.findByRole('tablist');
+    // eslint-disable-next-line testing-library/no-node-access
+    tablist?.parentElement?.scroll(50, 0);
+  },
+  decorators: [
+    (Story) => (
+      <div>
+        For Chromatic visual regression testing of the masks on both sides of
+        the Tabs. Currently does not work properly on local.
+        <Story />
+      </div>
+    ),
+  ],
+};
+// For visual regression testing of the left mask
+export const ScrollEnd: StoryObj<Args> = {
+  parameters: {
+    viewport: {
+      defaultViewport: 'mobile2',
+    },
+    chromatic: { viewports: [414] },
+    snapshot: { skip: true },
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const tablist = await canvas.findByRole('tablist');
+    // eslint-disable-next-line testing-library/no-node-access
+    tablist?.parentElement?.scroll(1000, 0);
+  },
+  decorators: [
+    (Story) => (
+      <div>
+        For Chromatic visual regression testing of the masks on the left side of
+        the Tabs. Currently does not work properly on local.
+        <Story />
+      </div>
+    ),
+  ],
+};

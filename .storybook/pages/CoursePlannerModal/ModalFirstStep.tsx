@@ -22,13 +22,7 @@ export const ModalFirstStep = () => {
     setChecked(newChecked);
   };
   return (
-    <Modal
-      isScrollable
-      onClose={
-        () => {} /* eslint-disable-line @typescript-eslint/no-empty-function */
-      }
-      open
-    >
+    <Modal isScrollable onClose={() => {}} open>
       <Modal.Header>
         <Modal.Title className="!mb-4">
           Before we start, tell us your planning needs
@@ -66,24 +60,13 @@ export const ModalFirstStep = () => {
           </Fieldset.Items>
         </Fieldset>
       </Modal.Body>
-      <Modal.Footer className="flex justify-between items-center">
+      <Modal.Footer className="flex items-center justify-between">
         <Modal.Stepper activeStep={1} totalSteps={3} />
         <ButtonGroup className="justify-end">
-          <Button
-            onClick={
-              () => {} /* eslint-disable-line @typescript-eslint/no-empty-function */
-            }
-            status="neutral"
-          >
+          <Button onClick={() => {}} status="neutral">
             Not right now
           </Button>
-          <Button
-            disabled
-            onClick={
-              () => {} /* eslint-disable-line @typescript-eslint/no-empty-function */
-            }
-            variant="primary"
-          >
+          <Button disabled onClick={() => {}} variant="primary">
             Next
             <Icon name="arrow-forward" purpose="decorative" />
           </Button>

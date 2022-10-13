@@ -1,10 +1,11 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
-import { StoryObj, Meta } from '@storybook/react';
+import type { StoryObj, Meta } from '@storybook/react';
 import { within } from '@storybook/testing-library';
 import isChromatic from 'chromatic/isChromatic';
 import React from 'react';
 
-import { FiltersPopover, FiltersPopoverProps } from './FiltersPopover';
+import type { FiltersPopoverProps } from './FiltersPopover';
+import { FiltersPopover } from './FiltersPopover';
 import styles from './FiltersPopover.stories.module.css';
 import { Checkbox } from '../Checkbox/Checkbox';
 import { FiltersCheckboxField } from '../FiltersCheckboxField/FiltersCheckboxField';
@@ -21,24 +22,9 @@ export default {
     hasSelectedFilters: false,
     children: (
       <FiltersCheckboxField legend="Filters Segment 1">
-        <Checkbox
-          label="Filters label 1"
-          onChange={
-            () => {} /* eslint-disable-line @typescript-eslint/no-empty-function */
-          }
-        />
-        <Checkbox
-          label="Filters label 2"
-          onChange={
-            () => {} /* eslint-disable-line @typescript-eslint/no-empty-function */
-          }
-        />
-        <Checkbox
-          label="Filters label 3"
-          onChange={
-            () => {} /* eslint-disable-line @typescript-eslint/no-empty-function */
-          }
-        />
+        <Checkbox label="Filters label 1" onChange={() => {}} />
+        <Checkbox label="Filters label 2" onChange={() => {}} />
+        <Checkbox label="Filters label 3" onChange={() => {}} />
       </FiltersCheckboxField>
     ),
     placement: 'bottom-start',
@@ -68,8 +54,7 @@ export const Default: StoryObj<Args> = {
 export const WithOnClear: StoryObj<Args> = {
   ...Default,
   args: {
-    onClear:
-      () => {} /* eslint-disable-line @typescript-eslint/no-empty-function */,
+    onClear: () => {},
   },
 };
 
@@ -77,8 +62,7 @@ export const WithOnApplyAndCustomButtonGroup: StoryObj<Args> = {
   ...Default,
   args: {
     footerButtonGroupClassName: styles['button-group__apply-only'],
-    onApply:
-      () => {} /* eslint-disable-line @typescript-eslint/no-empty-function */,
+    onApply: () => {},
   },
 };
 

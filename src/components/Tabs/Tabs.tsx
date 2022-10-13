@@ -245,6 +245,7 @@ export const Tabs = ({
  */
 function usePrevious<T>(prop: T) {
   const ref = useRef<T>(prop);
+  // eslint-disable-next-line @chanzuckerberg/edu-react/use-effect-deps-presence
   useEffect(() => {
     ref.current = prop;
   });

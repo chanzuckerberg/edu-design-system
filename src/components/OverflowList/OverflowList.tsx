@@ -61,6 +61,7 @@ export const OverflowList = ({ className, children, ...other }: Props) => {
     overflowListItems.forEach(function (item) {
       const itemMarginLeft = parseInt(
         getComputedStyle(item).marginLeft.slice(0, -2),
+        10,
       );
       childrenWidth += item.clientWidth + itemMarginLeft;
     });
@@ -120,6 +121,8 @@ export const OverflowList = ({ className, children, ...other }: Props) => {
   /**
    * Set shadows when component is updated/loaded
    */
+  // FIXME
+  // eslint-disable-next-line @chanzuckerberg/edu-react/use-effect-deps-presence
   useEffect(() => {
     setShadows();
     window.addEventListener('resize', setShadows);

@@ -1,4 +1,4 @@
-import { StoryObj, Meta } from '@storybook/react';
+import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
 import { CardWithNotification } from './CardWithNotification';
@@ -46,20 +46,18 @@ export const Default: StoryObj<Args> = {
 export const CADBrand: StoryObj<Args> = {
   args: {
     children: (
-      <>
-        <CardWithNotification.Body>
-          <DataBar
-            label="Total instructional days"
-            max={60}
-            segments={[
-              { value: 10, text: 'Project 1' },
-              { value: 11, text: 'Project 2' },
-              { value: 22, text: 'Project 3' },
-              { value: 11, text: 'Project 4' },
-            ]}
-          />
-        </CardWithNotification.Body>
-      </>
+      <CardWithNotification.Body>
+        <DataBar
+          label="Total instructional days"
+          max={60}
+          segments={[
+            { value: 10, text: 'Project 1' },
+            { value: 11, text: 'Project 2' },
+            { value: 22, text: 'Project 3' },
+            { value: 11, text: 'Project 4' },
+          ]}
+        />
+      </CardWithNotification.Body>
     ),
     text: 'Summit recommends teaching at least five (5) projects for this course.',
     variant: 'brand',

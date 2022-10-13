@@ -70,7 +70,7 @@ export const GlobalHeader = ({
   /**
    * Use the xl breakpoint to match the CSS breakpoint for the popover position change
    */
-  const popoverBreakpoint = parseInt(breakpoint['eds-bp-xl']) * 16;
+  const popoverBreakpoint = parseInt(breakpoint['eds-bp-xl'], 10) * 16;
 
   const toggleMenu = () => {
     setisActive(!isActive);
@@ -81,6 +81,8 @@ export const GlobalHeader = ({
     }
   };
 
+  // FIXME
+  // eslint-disable-next-line @chanzuckerberg/edu-react/use-effect-deps-presence
   useEffect(() => {
     updateScreenSize();
     window.addEventListener('resize', updateScreenSize);

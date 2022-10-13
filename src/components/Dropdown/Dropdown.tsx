@@ -1,6 +1,7 @@
 import { Listbox } from '@headlessui/react';
 import clsx from 'clsx';
-import React, { ReactNode, ElementType, useContext } from 'react';
+import type { ReactNode, ElementType } from 'react';
+import React, { useContext } from 'react';
 import styles from './Dropdown.module.css';
 
 import type { ExtractProps } from '../../util/utility-types';

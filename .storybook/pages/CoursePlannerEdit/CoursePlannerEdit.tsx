@@ -22,7 +22,7 @@ import {
   ProjectCard,
   DropdownMenuItem,
 } from '../../../src';
-import { NewState } from '../../../src/components/DragDrop/DragDrop';
+import type { NewState } from '../../../src/components/DragDrop/DragDrop';
 
 import '../../../src/components/Utilities/Spacing.css';
 import CardWithNotification from '../../recipes/CardWithNotification';

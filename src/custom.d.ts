@@ -12,7 +12,7 @@ declare module '*.md';
 
 // Reference https://github.com/tshelburne/react-children-by-type
 declare module 'react-children-by-type' {
-  import * as React from 'react';
+  import type * as React from 'react';
 
   export function allByType<P>(
     children: React.ReactNode,
