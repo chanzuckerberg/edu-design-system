@@ -1,13 +1,11 @@
 import clsx from 'clsx';
-import React, {
+import type {
   ReactNode,
-  createContext,
-  useRef,
-  useEffect,
   KeyboardEvent,
   HTMLAttributes,
   MouseEventHandler,
 } from 'react';
+import React, { createContext, useRef, useEffect } from 'react';
 import styles from './DropdownMenu.module.css';
 import {
   L_ARROW_KEYCODE,

@@ -6,9 +6,9 @@ import './IconGrid.css';
 const IconGrid = () => (
   <div>
     <ul className="icon-grid">
-      {ALL_ICONS.map((name, index) => {
+      {ALL_ICONS.map((name) => {
         return (
-          <li className="icon-grid__item" key={`icon-grid-item-${index}`}>
+          <li className="icon-grid__item" key={name}>
             <Icon
               className="icon-grid__icon"
               name={name}

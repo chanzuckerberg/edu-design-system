@@ -1,6 +1,6 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
-import { StoryObj, Meta } from '@storybook/react';
-import React from 'react';
+import type { StoryObj, Meta } from '@storybook/react';
+import type { ComponentProps } from 'react';
 
 import { InputLabel } from './InputLabel';
 
@@ -15,7 +15,7 @@ export default {
   },
 } as Meta<Args>;
 
-type Args = React.ComponentProps<typeof InputLabel>;
+type Args = ComponentProps<typeof InputLabel>;
 
 export const Default: StoryObj<Args> = {};
 

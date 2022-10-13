@@ -1,5 +1,5 @@
-import { StoryObj } from '@storybook/react';
-import React from 'react';
+import type { StoryObj } from '@storybook/react';
+import type { ComponentProps } from 'react';
 
 import { ProjectOverview } from './ProjectOverview';
 
@@ -8,7 +8,8 @@ export default {
   component: ProjectOverview,
 };
 
-type Args = React.ComponentProps<typeof ProjectOverview>;
+type Args = ComponentProps<typeof ProjectOverview>;
+
 export const StudentView: StoryObj<Args> = {};
 
 export const ProjectCheckpoint: StoryObj<Args> = {

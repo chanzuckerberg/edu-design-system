@@ -98,6 +98,8 @@ export const Breadcrumbs = ({
       return (
         <DropdownMenuItem
           href={menuItem.props.href}
+          // FIXME
+          // eslint-disable-next-line react/no-array-index-key
           key={`breadcrumb-menu-item-${index}`}
         >
           {menuItem.props.text}

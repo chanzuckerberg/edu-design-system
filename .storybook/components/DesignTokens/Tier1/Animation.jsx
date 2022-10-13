@@ -9,9 +9,9 @@ export class Tier1Animation extends Component {
       <div>
         <Section title="Animation Fade">
           <Grid>
-            {filterTokens(`eds-anim-fade`).map(function (listItem, index) {
+            {filterTokens(`eds-anim-fade`).map(function (listItem) {
               return (
-                <GridItem key={'animation-ease-' + index}>
+                <GridItem key={listItem.name}>
                   <TokenSpecimen
                     inlineStyles={{
                       transitionDuration: `var(${listItem.name})`,
@@ -28,9 +28,9 @@ export class Tier1Animation extends Component {
 
         <Section title="Animation Movement">
           <Grid>
-            {filterTokens(`eds-anim-move`).map(function (listItem, index) {
+            {filterTokens(`eds-anim-move`).map(function (listItem) {
               return (
-                <GridItem key={'animation-ease-' + index}>
+                <GridItem key={listItem.name}>
                   <TokenSpecimen
                     inlineStyles={{
                       transitionDuration: `var(${listItem.name})`,
@@ -47,9 +47,9 @@ export class Tier1Animation extends Component {
 
         <Section title="Animation Timing Function">
           <Grid>
-            {filterTokens(`eds-anim-ease`).map(function (listItem, index) {
+            {filterTokens(`eds-anim-ease`).map(function (listItem) {
               return (
-                <GridItem key={'animation-ease-' + index}>
+                <GridItem key={listItem.name}>
                   <TokenSpecimen
                     inlineStyles={{
                       transitionTimingFunction: `var(${listItem.name})`,

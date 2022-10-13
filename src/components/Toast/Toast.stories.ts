@@ -1,5 +1,5 @@
 import type { StoryObj, Meta } from '@storybook/react';
-import React from 'react';
+import type { ComponentProps } from 'react';
 import Toast from './Toast';
 
 export default {
@@ -11,7 +11,7 @@ export default {
   },
 } as Meta<Args>;
 
-type Args = React.ComponentProps<typeof Toast>;
+type Args = ComponentProps<typeof Toast>;
 
 export const Success: StoryObj<Args> = {
   args: {

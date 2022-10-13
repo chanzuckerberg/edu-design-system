@@ -1,11 +1,6 @@
 import clsx from 'clsx';
-import React, {
-  useRef,
-  ReactElement,
-  ReactNode,
-  useEffect,
-  useState,
-} from 'react';
+import type { ReactElement, ReactNode } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { useUID } from 'react-uid';
 import styles from './FiltersDrawer.module.css';
 import Button from '../Button';

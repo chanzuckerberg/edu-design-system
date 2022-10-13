@@ -1,7 +1,9 @@
 import { Dialog } from '@headlessui/react';
-import React, { ReactNode } from 'react';
+import type { ReactNode } from 'react';
+import React from 'react';
 import type { ExtractProps } from '../../util/utility-types';
-import Heading, { HeadingSize } from '../Heading';
+import type { HeadingSize } from '../Heading';
+import Heading from '../Heading';
 
 type HeadingProps = ExtractProps<typeof Heading>;
 

@@ -1,6 +1,8 @@
 import clsx from 'clsx';
-import React, { MouseEventHandler } from 'react';
-import Icon, { IconName } from '../Icon';
+import type { MouseEventHandler } from 'react';
+import React from 'react';
+import type { IconName } from '../Icon';
+import Icon from '../Icon';
 import styles from '../LinkList/LinkList.module.css';
 
 export interface Props {

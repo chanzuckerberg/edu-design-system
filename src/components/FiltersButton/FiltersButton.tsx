@@ -1,7 +1,8 @@
 import clsx from 'clsx';
 import React, { forwardRef } from 'react';
 import styles from './FiltersButton.module.css';
-import Button, { ButtonProps } from '../Button';
+import type { ButtonProps } from '../Button';
+import Button from '../Button';
 import Icon from '../Icon';
 
 export type FiltersButtonProps = {

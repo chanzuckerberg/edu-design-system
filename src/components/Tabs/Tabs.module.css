@@ -34,7 +34,11 @@
 }
 
 .tabs--scrollable-right {
-  -webkit-mask-image: -webkit-linear-gradient(right, transparent);
+  -webkit-mask-image: -webkit-linear-gradient(
+    right,
+    transparent,
+    white var(--eds-size-8)
+  );
 }
 
 .tabs--scrollable-left.tabs--scrollable-right {

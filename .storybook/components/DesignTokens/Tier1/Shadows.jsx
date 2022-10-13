@@ -3,20 +3,19 @@ import { Grid, GridItem, Section } from '../../../../src';
 import filterTokens from '../../../util/filterTokens';
 import { TokenSpecimen } from '../../TokenSpecimen/TokenSpecimen';
 
-export class Tier1Sizes extends Component {
+export class Tier1Shadows extends Component {
   render() {
     return (
       <div>
-        <Section title="Size">
+        <Section title="Shadows">
           <Grid>
-            {filterTokens(`eds-size`).map(function (listItem, index) {
+            {filterTokens(`eds-box-shadow-`).map(function (listItem) {
               return (
-                <GridItem key={'size-' + index}>
+                <GridItem key={listItem.name}>
                   <TokenSpecimen
                     inlineStyles={{
-                      width: `var(${listItem.name})`,
-                      height: `var(${listItem.name})`,
-                      minHeight: '0',
+                      backgroundColor: '#fbfbfb',
+                      boxShadow: `var(${listItem.name})`,
                     }}
                     name={listItem.name}
                     value={listItem.value}

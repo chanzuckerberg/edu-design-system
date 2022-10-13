@@ -1,5 +1,6 @@
 import clsx from 'clsx';
-import React, { ReactNode } from 'react';
+import type { ReactNode } from 'react';
+import React from 'react';
 import styles from './LayoutContainer.module.css';
 
 export interface Props {

@@ -1,5 +1,5 @@
-import { StoryObj, Meta } from '@storybook/react';
-import React from 'react';
+import type { StoryObj, Meta } from '@storybook/react';
+import type { ComponentProps } from 'react';
 
 import { GlobalHeader } from './GlobalHeader';
 
@@ -8,5 +8,6 @@ export default {
   component: GlobalHeader,
 } as Meta;
 
-type Args = React.ComponentProps<typeof GlobalHeader>;
+type Args = ComponentProps<typeof GlobalHeader>;
+
 export const Default: StoryObj<Args> = {};

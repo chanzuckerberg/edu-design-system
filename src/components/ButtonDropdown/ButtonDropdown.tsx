@@ -1,5 +1,6 @@
 import clsx from 'clsx';
-import React, { ReactNode } from 'react';
+import type { ReactNode } from 'react';
+import React from 'react';
 import styles from './ButtonDropdown.module.css';
 import { DropdownMenu } from '../..';
 import type { ClickableStyleProps } from '../ClickableStyle';
@@ -85,6 +86,8 @@ export const ButtonDropdown = ({
   /**
    * On component load/updated
    */
+  // FIXME
+  // eslint-disable-next-line @chanzuckerberg/edu-react/use-effect-deps-presence
   React.useEffect(() => {
     if (isActiveVar) {
       if (!ref.current) return;

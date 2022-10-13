@@ -77,6 +77,7 @@ export const HorizontalStepper = ({
            * Hides the decorative line to prevent accessibility issue with it not being <li> in an <ol>.
            */
           className={stepperLinesClassName}
+          // eslint-disable-next-line react/no-array-index-key
           key={`horizontal-stepper__line-${index}`}
         />,
       );
@@ -97,6 +98,7 @@ export const HorizontalStepper = ({
      */
     stepComponents.push(
       <HorizontalStep
+        // eslint-disable-next-line react/no-array-index-key
         key={`horizontal-stepper__step-${index}`}
         stepNumber={index + 1}
         text={step}

@@ -1,5 +1,5 @@
-import { StoryObj, Meta } from '@storybook/react';
-import React from 'react';
+import type { StoryObj, Meta } from '@storybook/react';
+import type { ComponentProps } from 'react';
 
 import { DataSummaryCard } from './DataSummaryCard';
 
@@ -14,9 +14,10 @@ export default {
   },
 } as Meta<Args>;
 
-type Args = React.ComponentProps<typeof DataSummaryCard>;
+type Args = ComponentProps<typeof DataSummaryCard>;
 
 export const Default: StoryObj<Args> = {};
+
 export const OffTrack: StoryObj<Args> = {
   args: {
     variant: 'off-track',

@@ -79,6 +79,8 @@ export const Disabled: StoryObj<Args> = {
     <table style={{ borderSpacing: '2rem' }}>
       <tbody>
         {[false, true, 'indeterminate' as const].map((checked, i) => (
+          // FIXME
+          // eslint-disable-next-line react/no-array-index-key
           <tr key={i}>
             <td>
               <Checkbox checked={checked} disabled label="Disabled" />
