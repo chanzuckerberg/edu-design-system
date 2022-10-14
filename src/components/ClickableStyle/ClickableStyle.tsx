@@ -91,7 +91,8 @@ export type ClickableStyleProps<IComponent extends React.ElementType> = {
  * If you're styling a `<button>` or `<a>` element, you can use the `Button`
  * and `Link` components (respectively). `ClickableStyle` should only be used
  * directly when styling other elements or components (e.g. `Link` from `react-router`)
- * to look like a button or link.
+ * to look like a button or link. Use the exported `VariantStatus` to augment the type
+ * when using `ClickableStyle`.
  *
  * See the `Button` and `Link` stories for usage examples.
  */
