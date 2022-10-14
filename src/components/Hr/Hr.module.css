@@ -7,8 +7,7 @@
  * 
  */
 .hr {
-  margin-top: var(--eds-size-4);
-  margin-bottom: var(--eds-size-4);
+  @apply mt-8 mb-8;
   border-top: none;
   border-right: none;
   border-left: none;

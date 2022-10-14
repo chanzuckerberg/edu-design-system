@@ -8,9 +8,7 @@
  * Horizontal Stepper wraps multiple HorizontalStep instances and adds lines between steps.
  */
 .horizontal-stepper {
-  display: flex;
-  align-items: center;
-  width: 100%;
+  @apply flex items-center w-full;
 }
 
 /**
@@ -26,9 +24,8 @@
 .horizontal-stepper__line {
   border: var(--eds-theme-border-width) solid
     var(--eds-theme-color-border-neutral-default);
-  margin-left: var(--eds-size-1);
-  margin-right: var(--eds-size-1);
+  @apply ml-2 mr-2;
   /* Used to grow and shrink lines before wrapping step text. */
-  flex-grow: 1; 
-  min-width: var(--eds-size-2);
+  flex-grow: 1;
+  min-width: var(--eds-size-2)
 }
