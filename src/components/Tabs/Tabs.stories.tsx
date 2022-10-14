@@ -164,7 +164,7 @@ export const ScrollEnd: StoryObj<Args> = {
     viewport: {
       defaultViewport: 'mobile2',
     },
-    chromatic: { viewports: [414] },
+    chromatic: { delay: 300, viewports: [414] },
     snapshot: { skip: true },
   },
   play: async ({ canvasElement }) => {
