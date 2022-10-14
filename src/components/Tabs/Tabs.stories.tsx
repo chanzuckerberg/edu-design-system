@@ -158,28 +158,3 @@ export const ScrollMiddle: StoryObj<Args> = {
     ),
   ],
 };
-// For visual regression testing of the left mask
-export const ScrollEnd: StoryObj<Args> = {
-  parameters: {
-    viewport: {
-      defaultViewport: 'mobile2',
-    },
-    chromatic: { delay: 300, viewports: [414] },
-    snapshot: { skip: true },
-  },
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    const tablist = await canvas.findByRole('tablist');
-    // eslint-disable-next-line testing-library/no-node-access
-    tablist?.parentElement?.scroll(2000, 0);
-  },
-  decorators: [
-    (Story) => (
-      <div>
-        For Chromatic visual regression testing of the masks on the left side of
-        the Tabs. Currently does not work properly on local.
-        <Story />
-      </div>
-    ),
-  ],
-};
