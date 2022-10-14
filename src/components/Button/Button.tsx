@@ -17,10 +17,8 @@ export type ButtonProps = ButtonHTMLElementProps & {
    * Toggles clickable that fills the full width of its container
    */
   fullWidth?: boolean;
-
   'data-testid'?: string;
   size?: ClickableStyleProps<'button'>['size'];
-
   /**
    * Disables the field and prevents editing the contents
    */
