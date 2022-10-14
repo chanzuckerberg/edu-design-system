@@ -123,6 +123,8 @@ export const TimelineNav = ({
   }, [children]);
 
   const timelineNavItemRefs = timelineNavItems().map(() =>
+    // This usage of React.createRef is intentional.
+    // eslint-disable-next-line @chanzuckerberg/edu-react/no-create-ref-in-function-component
     React.createRef<HTMLAnchorElement>(),
   );
 
@@ -415,9 +417,6 @@ export const TimelineNav = ({
                   className={styles['timeline-nav__link']}
                   href={`#${idVar[i]}`}
                   id={ariaLabelledByVar[i]}
-                  // FIXME
-                  // eslint-disable-next-line react/no-array-index-key
-                  key={'timeline-nav-link' + i}
                   onClick={(e) => {
                     e.preventDefault();
                     onOpen(i);
