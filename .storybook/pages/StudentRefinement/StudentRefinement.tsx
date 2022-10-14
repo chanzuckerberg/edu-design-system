@@ -55,6 +55,7 @@ export const StudentRefinement = () => (
                 dataAmount="38"
                 dataUnit="%"
                 description="Off Track"
+                headingElement="h2"
                 title="Students"
                 variant="off-track"
               />
@@ -63,6 +64,7 @@ export const StudentRefinement = () => (
                 dataAmount="63"
                 dataUnit="%"
                 description="Below C-"
+                headingElement="h2"
                 title="Grade"
                 variant="off-track"
               />
@@ -71,6 +73,7 @@ export const StudentRefinement = () => (
                 dataAmount="41"
                 dataUnit="%"
                 description="Below 70%"
+                headingElement="h2"
                 title="Avg. Cog Skill Score"
                 variant="off-track"
               />
@@ -79,6 +82,7 @@ export const StudentRefinement = () => (
                 dataAmount="24"
                 dataUnit="/ 96"
                 description="Overdue"
+                headingElement="h2"
                 title="Projects"
                 variant="off-track"
               />
@@ -87,6 +91,7 @@ export const StudentRefinement = () => (
                 dataAmount="91"
                 dataUnit="%"
                 description="Students Off Track"
+                headingElement="h2"
                 title="Focus Area"
                 variant="off-track"
               />

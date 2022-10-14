@@ -384,27 +384,27 @@ exports[`<Table /> Default story renders snapshot 1`] = `
       class="table__row"
     >
       <th
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Name
       </th>
       <th
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Status
       </th>
       <th
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Chart
       </th>
       <th
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Window
       </th>
       <th
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Last Update
       </th>
@@ -417,27 +417,27 @@ exports[`<Table /> Default story renders snapshot 1`] = `
       class="table__row"
     >
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Table Row 1, Table Cell 1
       </td>
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Table Row 1, Table Cell 2
       </td>
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Table Row 1, Table Cell 3
       </td>
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Table Row 1, Table Cell 4
       </td>
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Table Row 1, Table Cell 5
       </td>
@@ -446,27 +446,27 @@ exports[`<Table /> Default story renders snapshot 1`] = `
       class="table__row"
     >
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Table Row 2, Table Cell 1
       </td>
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Table Row 2, Table Cell 2
       </td>
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Table Row 2, Table Cell 3
       </td>
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Table Row 2, Table Cell 4
       </td>
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Table Row 2, Table Cell 5
       </td>
@@ -475,27 +475,27 @@ exports[`<Table /> Default story renders snapshot 1`] = `
       class="table__row"
     >
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Table Row 3, Table Cell 1
       </td>
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Table Row 3, Table Cell 2
       </td>
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Table Row 3, Table Cell 3
       </td>
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Table Row 3, Table Cell 4
       </td>
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Table Row 3, Table Cell 5
       </td>
@@ -504,27 +504,27 @@ exports[`<Table /> Default story renders snapshot 1`] = `
       class="table__row"
     >
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Table Row 4, Table Cell 1
       </td>
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Table Row 4, Table Cell 2
       </td>
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Table Row 4, Table Cell 3
       </td>
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Table Row 4, Table Cell 4
       </td>
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Table Row 4, Table Cell 5
       </td>
@@ -597,12 +597,12 @@ exports[`<Table /> SortableInteractive story renders snapshot 1`] = `
       class="table__row"
     >
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Value 1
       </td>
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Value A
       </td>
@@ -611,12 +611,12 @@ exports[`<Table /> SortableInteractive story renders snapshot 1`] = `
       class="table__row"
     >
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Value 3
       </td>
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Value B
       </td>
@@ -625,12 +625,12 @@ exports[`<Table /> SortableInteractive story renders snapshot 1`] = `
       class="table__row"
     >
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Value 2
       </td>
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Value C
       </td>
@@ -639,12 +639,12 @@ exports[`<Table /> SortableInteractive story renders snapshot 1`] = `
       class="table__row"
     >
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Value 4
       </td>
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Value D
       </td>
@@ -667,27 +667,27 @@ exports[`<Table /> Stacked story renders snapshot 1`] = `
       class="table__row"
     >
       <th
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Name
       </th>
       <th
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Status
       </th>
       <th
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Chart
       </th>
       <th
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Window
       </th>
       <th
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Last Update
       </th>
@@ -700,31 +700,31 @@ exports[`<Table /> Stacked story renders snapshot 1`] = `
       class="table__row"
     >
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
         data-heading="Name"
       >
         Table Row 1, Table Cell 1
       </td>
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
         data-heading="Status"
       >
         Table Row 1, Table Cell 2
       </td>
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
         data-heading="Chart"
       >
         Table Row 1, Table Cell 3
       </td>
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
         data-heading="Window"
       >
         Table Row 1, Table Cell 4
       </td>
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
         data-heading="Last Update"
       >
         Table Row 1, Table Cell 5
@@ -734,31 +734,31 @@ exports[`<Table /> Stacked story renders snapshot 1`] = `
       class="table__row"
     >
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
         data-heading="Name"
       >
         Table Row 2, Table Cell 1
       </td>
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
         data-heading="Status"
       >
         Table Row 2, Table Cell 2
       </td>
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
         data-heading="Chart"
       >
         Table Row 2, Table Cell 3
       </td>
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
         data-heading="Window"
       >
         Table Row 2, Table Cell 4
       </td>
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
         data-heading="Last Update"
       >
         Table Row 2, Table Cell 5
@@ -768,31 +768,31 @@ exports[`<Table /> Stacked story renders snapshot 1`] = `
       class="table__row"
     >
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
         data-heading="Name"
       >
         Table Row 3, Table Cell 1
       </td>
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
         data-heading="Status"
       >
         Table Row 3, Table Cell 2
       </td>
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
         data-heading="Chart"
       >
         Table Row 3, Table Cell 3
       </td>
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
         data-heading="Window"
       >
         Table Row 3, Table Cell 4
       </td>
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
         data-heading="Last Update"
       >
         Table Row 3, Table Cell 5
@@ -802,31 +802,31 @@ exports[`<Table /> Stacked story renders snapshot 1`] = `
       class="table__row"
     >
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
         data-heading="Name"
       >
         Table Row 4, Table Cell 1
       </td>
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
         data-heading="Status"
       >
         Table Row 4, Table Cell 2
       </td>
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
         data-heading="Chart"
       >
         Table Row 4, Table Cell 3
       </td>
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
         data-heading="Window"
       >
         Table Row 4, Table Cell 4
       </td>
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
         data-heading="Last Update"
       >
         Table Row 4, Table Cell 5
@@ -850,27 +850,27 @@ exports[`<Table /> Zebra story renders snapshot 1`] = `
       class="table__row"
     >
       <th
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Name
       </th>
       <th
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Status
       </th>
       <th
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Chart
       </th>
       <th
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Window
       </th>
       <th
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Last Update
       </th>
@@ -883,27 +883,27 @@ exports[`<Table /> Zebra story renders snapshot 1`] = `
       class="table__row"
     >
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Table Row 1, Table Cell 1
       </td>
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Table Row 1, Table Cell 2
       </td>
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Table Row 1, Table Cell 3
       </td>
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Table Row 1, Table Cell 4
       </td>
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Table Row 1, Table Cell 5
       </td>
@@ -912,27 +912,27 @@ exports[`<Table /> Zebra story renders snapshot 1`] = `
       class="table__row"
     >
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Table Row 2, Table Cell 1
       </td>
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Table Row 2, Table Cell 2
       </td>
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Table Row 2, Table Cell 3
       </td>
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Table Row 2, Table Cell 4
       </td>
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Table Row 2, Table Cell 5
       </td>
@@ -941,27 +941,27 @@ exports[`<Table /> Zebra story renders snapshot 1`] = `
       class="table__row"
     >
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Table Row 3, Table Cell 1
       </td>
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Table Row 3, Table Cell 2
       </td>
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Table Row 3, Table Cell 3
       </td>
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Table Row 3, Table Cell 4
       </td>
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Table Row 3, Table Cell 5
       </td>
@@ -970,27 +970,27 @@ exports[`<Table /> Zebra story renders snapshot 1`] = `
       class="table__row"
     >
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Table Row 4, Table Cell 1
       </td>
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Table Row 4, Table Cell 2
       </td>
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Table Row 4, Table Cell 3
       </td>
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Table Row 4, Table Cell 4
       </td>
       <td
-        class="table__cell"
+        class="table__cell table__cell--align-left"
       >
         Table Row 4, Table Cell 5
       </td>
