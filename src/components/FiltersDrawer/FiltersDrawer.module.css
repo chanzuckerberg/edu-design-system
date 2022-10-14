@@ -44,7 +44,8 @@
  * The footer of the filters drawer that houses the apply and clear all button group.
  */
 .filters-drawer__footer {
-  @apply h-20 pt-5 pb-6;
+  @apply h-20;
+  padding: var(--eds-size-2-and-half) var(--eds-size-3);
 }
 
 /**

@@ -6,9 +6,7 @@
  * Horizontal Step displays the step text and associated decorative icon.
  */
 .horizontal-step {
-  display: flex;
-  align-items: center;
-  gap: var(--eds-size-1);
+  @apply flex items-center gap-2;
   /**
    * Required to prevent overflowing outside container.
    */
@@ -52,9 +50,7 @@
  * Horizontal Step Incomplete.
  */
 .horizontal-step__incomplete-icon {
-  margin-left: var(--eds-size-1);
-  margin-right: var(--eds-size-1);
-  fill: var(--eds-theme-color-icon-disabled);
+  @apply ml-2 mr-2 fill-icon-disabled;
 }
 
 /**
