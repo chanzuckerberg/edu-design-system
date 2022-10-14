@@ -3,7 +3,7 @@ import type { ReactNode } from 'react';
 import React, { forwardRef } from 'react';
 import styles from './Button.module.css';
 import ClickableStyle from '../ClickableStyle';
-import type { ClickableStyleProps } from '../ClickableStyle';
+import type { ClickableStyleProps, VariantStatus } from '../ClickableStyle';
 import Icon from '../Icon';
 
 type ButtonHTMLElementProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
@@ -17,10 +17,8 @@ export type ButtonProps = ButtonHTMLElementProps & {
    * Toggles clickable that fills the full width of its container
    */
   fullWidth?: boolean;
-  status?: ClickableStyleProps<'button'>['status'];
   'data-testid'?: string;
   size?: ClickableStyleProps<'button'>['size'];
-  variant?: ClickableStyleProps<'button'>['variant'];
   /**
    * Disables the field and prevents editing the contents
    */
@@ -36,7 +34,7 @@ export type ButtonProps = ButtonHTMLElementProps & {
    * - **reset** The clickable is a reset clickable (resets the form-data to its initial values)
    */
   type?: 'button' | 'reset' | 'submit';
-};
+} & VariantStatus;
 
 /**
  * ```ts

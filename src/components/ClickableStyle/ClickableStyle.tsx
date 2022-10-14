@@ -18,6 +18,33 @@ export type Status = typeof STATUSES[number];
 export const SIZES = ['sm', 'md', 'lg'] as const;
 export type Size = typeof SIZES[number];
 
+// Define Discriminating unions for the valid statuses based on variant
+type IconStatus = {
+  variant?: Extract<Variant, 'icon'>;
+  status?: Status;
+};
+
+type SecondaryStatus = {
+  variant?: Extract<Variant, 'secondary'>;
+  status?: Status;
+};
+
+type PrimaryStatus = {
+  variant?: Extract<Variant, 'primary'>;
+  status?: Extract<Status, 'brand' | 'error'>;
+};
+
+type LinkStatus = {
+  variant?: Extract<Variant, 'link'>;
+  status?: Extract<Status, 'brand' | 'neutral'>;
+};
+
+export type VariantStatus =
+  | IconStatus
+  | SecondaryStatus
+  | LinkStatus
+  | PrimaryStatus;
+
 export type ClickableStyleProps<IComponent extends React.ElementType> = {
   /**
    * Visually hidden clickable text (but text is still accessible to assistive technology).
@@ -54,47 +81,6 @@ export type ClickableStyleProps<IComponent extends React.ElementType> = {
   variant?: Variant;
 } & React.ComponentProps<IComponent>;
 
-const getPropCombinationIsValid = (variant: Variant, status: Status) => {
-  const nonPrimaryStatuses = ['neutral', 'success', 'warning'];
-  const nonLinkStatuses = ['success', 'warning', 'error'];
-
-  if (
-    (variant === 'primary' && nonPrimaryStatuses.includes(status)) ||
-    (variant === 'link' && nonLinkStatuses.includes(status))
-  ) {
-    return false;
-  }
-
-  return true;
-};
-
-const throwInvalidPropComboError = (variant: Variant, status: Status) => {
-  const primaryStatuses = ['brand', 'error'];
-  const linkStatuses = ['brand', 'neutral'];
-
-  const getValidStatusesString = () => {
-    const validStatuses =
-      variant === 'primary' ? primaryStatuses : linkStatuses;
-
-    return `'${validStatuses[0]}' and '${validStatuses[1]}'`;
-  };
-
-  // TODO: change to `throw new Error()` when invalid combos have been removed from downstream product
-  console.warn(
-    // We have to add the strings and variables together because string interpolation doesn't work in console messages.
-    "\n*** Invalid prop combo ***:\n\nThe `Button` and `Link` components do not support using the '" +
-      variant +
-      "' variant with a '" +
-      status +
-      "' status." +
-      "\n\nThe '" +
-      variant +
-      "' variant can only be used with the " +
-      getValidStatusesString() +
-      ' statuses.\n',
-  );
-};
-
 /**
  * ```ts
  * import {ClickableStyle} from "@chanzuckerberg/eds";
@@ -105,13 +91,17 @@ const throwInvalidPropComboError = (variant: Variant, status: Status) => {
  * If you're styling a `<button>` or `<a>` element, you can use the `Button`
  * and `Link` components (respectively). `ClickableStyle` should only be used
  * directly when styling other elements or components (e.g. `Link` from `react-router`)
- * to look like a button or link.
+ * to look like a button or link. Use the exported `VariantStatus` to augment the type
+ * when using `ClickableStyle`.
  *
  * See the `Button` and `Link` stories for usage examples.
  */
 export const ClickableStyle = React.forwardRef(
   <IComponent extends React.ElementType>(
-    {
+    props: ClickableStyleProps<IComponent>,
+    ref: React.ForwardedRef<HTMLElement>,
+  ) => {
+    const {
       as: Component = 'button',
       className,
       fullWidth,
@@ -119,15 +109,7 @@ export const ClickableStyle = React.forwardRef(
       status = 'brand',
       variant = 'secondary',
       ...other
-    }: ClickableStyleProps<IComponent>,
-    ref: React.ForwardedRef<HTMLElement>,
-  ) => {
-    if (
-      !getPropCombinationIsValid(variant, status) &&
-      process.env.NODE_ENV !== 'production'
-    ) {
-      throwInvalidPropComboError(variant, status);
-    }
+    } = props;
 
     const componentClassName = clsx(
       // Base styles
