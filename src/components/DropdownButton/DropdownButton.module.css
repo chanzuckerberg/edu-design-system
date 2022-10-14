@@ -12,21 +12,15 @@
   /* Allow Dropdown font to shrink in contexts where body font size is smaller. */
   font-size: inherit; 
 
-  width: 100%;
-  padding: var(--eds-size-1);
+  @apply w-full p-2;
 
   border: var(--eds-theme-border-width) solid
     var(--eds-theme-color-border-neutral-strong);
   border-radius: var(--eds-border-radius-md);
 
-  display: flex;
   /* Place button text on the left and the expand more icon on the right. */
-  justify-content: space-between; 
-  align-items: center;
-
-  cursor: pointer;
-
-  background-color: var(--eds-theme-color-background-neutral-default);
+  @apply flex justify-center items-center cursor-pointer;
+  @apply bg-background-neutral-default-@;
 }
 
 /**
