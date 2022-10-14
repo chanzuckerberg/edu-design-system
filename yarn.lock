@@ -1986,7 +1986,7 @@ __metadata:
     "@chanzuckerberg/axe-storybook-testing": ^6.1.0
     "@chanzuckerberg/eslint-config-edu-js": ^1.0.1
     "@chanzuckerberg/eslint-config-edu-ts": ^1.0.0
-    "@chanzuckerberg/eslint-plugin-edu-react": ^1.0.1
+    "@chanzuckerberg/eslint-plugin-edu-react": ^1.1.0
     "@chanzuckerberg/eslint-plugin-stories": ^3.2.2
     "@chanzuckerberg/story-utils": ^3.0.8
     "@commitlint/cli": ^16.2.1
@@ -2098,16 +2098,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@chanzuckerberg/eslint-plugin-edu-react@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "@chanzuckerberg/eslint-plugin-edu-react@npm:1.0.1"
+"@chanzuckerberg/eslint-plugin-edu-react@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "@chanzuckerberg/eslint-plugin-edu-react@npm:1.1.0"
   dependencies:
     eslint-plugin-jsx-a11y: ^6.6.1
     eslint-plugin-react: ^7.31.8
     eslint-plugin-react-hooks: ^4.6.0
   peerDependencies:
     eslint: ">= 8"
-  checksum: be9e8af32f9a811a831d09ae7c2ff8536242130fc2592643661062a0a91501e8634f27c9de77aeca53b74795f2ad6ccd541d28bc693ba530e68d71fc3afb31c5
+  checksum: ce85a5f8bb8f1cabb5ecdf1acbda0ac9ab119842dfed1f9effcf4fe157bec5be8321c13511fa778083592d1ee76ffbc9da98d02bad7fd5836b0c9a3668e83812
   languageName: node
   linkType: hard
 

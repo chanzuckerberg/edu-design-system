@@ -75,6 +75,8 @@ export const Tabs = ({
   }, [children]);
 
   const tabRefs = useMemo(
+    // This usage of React.createRef is intentional.
+    // eslint-disable-next-line @chanzuckerberg/edu-react/no-create-ref-in-function-component
     () => tabs.map(() => React.createRef<HTMLAnchorElement>()),
     [tabs],
   );
