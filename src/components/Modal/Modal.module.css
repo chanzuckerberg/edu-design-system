@@ -9,11 +9,8 @@
  */
 .modal,
 .modal__overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
+  @apply fixed top-0 left-0 w-full;
   height: 100vh;
-  width: 100%;
 }
 
 /**
@@ -28,10 +25,7 @@
  * The modal container which positions the modal in the center of the screen.
  */
 .modal {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: var(--eds-size-2);
+  @apply flex items-center justify-center p-4;
   /**
    * Ensures modal is above other components. This is not a design token for now since we need to align on 
    * z-indeces across the app and in the platform. https://app.shortcut.com/czi-edu/story/203871.
@@ -89,8 +83,7 @@
   * The body can scroll when content goes beyond the component,
   * while the footer remains static (if scrollable).
   */
-  display: flex;
-  flex-direction: column;
+  @apply flex flex-col;
 
   width: 22.5rem;
   --modal-horizontal-padding: var(--eds-size-4);
@@ -131,19 +124,10 @@
  */
 .modal__close-button {
   @mixin reset;
-  border: 0;
-  background-color: transparent;
-
-  position: absolute;
-  top: 0;
-  right: 0;
+  @apply border-0 bg-transparent absolute top-0 right-0;
 
   /* Minimum button target size is 44px, but 3rem (48px) is next closest ramp size. */
-  width: var(--eds-size-6);
-  height: var(--eds-size-6);
-
-  cursor: pointer;
-
+  @apply w-12 h-12 cursor-pointer;
   z-index: 1;
 }
 
@@ -151,10 +135,7 @@
  * The modal close icon that resides in the close button.
  */
 .modal__close-icon {
-  position: absolute;
-  top: var(--eds-size-1);
-  right: var(--eds-size-1);
-  color: var(--eds-theme-color-icon-neutral-subtle);
+  @apply absolute top-2 right-2 text-icon-neutral-subtle-@;
 }
 
 /**

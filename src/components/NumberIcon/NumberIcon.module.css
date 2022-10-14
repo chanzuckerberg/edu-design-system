@@ -11,12 +11,8 @@
 .number-icon {
   @mixin eds-theme-typography-body-text-sm;
   /* Line height set to 1 here since this should only ever be on 1 line and it evens out padding in circle. */
-  line-height: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: var(--eds-size-3);
-  width: var(--eds-size-3);
+  @apply leading-none flex justify-center items-center;
+  @apply h-6 w-6;
   min-width: var(--eds-size-3);
 
   /* The circle part of the icon, made with borders. */
@@ -41,8 +37,7 @@
   /* Line height set to 1 here since this should only ever be on 1 line and it evens out padding in circle. */
   line-height: 1;
   /* Height and width should be the same to make the icon a circle and not oblong. */
-  height: var(--eds-size-2-and-half);
-  width: var(--eds-size-2-and-half);
+  @apply h-5 w-5;
   min-width: var(--eds-size-2-and-half);
 }
 
@@ -54,6 +49,5 @@
 }
 
 .number-icon--success {
-  background-color: var(--eds-theme-color-icon-utility-success);
-  border-color: var(--eds-theme-color-icon-utility-success);
+  @apply bg-icon-utility-success-@ border-icon-utility-success-@;
 }

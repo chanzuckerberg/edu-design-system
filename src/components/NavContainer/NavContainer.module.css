@@ -6,16 +6,9 @@
  * Container that houses navigation to be toggled on and off on small screens.
  */
 .nav-container {
-  position: absolute;
-  top: 100%;
-  left: 0;
+  @apply absolute top-full left-0;
   /* Hide by default on small screens. */
-  visibility: hidden;
-  opacity: 0;
-  height: 0;
-  width: 100%;
-  padding: var(--eds-size-1);
-  z-index: var(--eds-z-index-bottom);
+  @apply invisible opacity-0 h-0 w-full p-2 z-bottom;
   transition: all var(--eds-anim-move-quick) var(--eds-anim-ease);
 
   @media screen and (prefers-reduced-motion) {
@@ -29,11 +22,8 @@
     /* Un-hide navcontainer to display nav by default on larger screens. */
     display: flex;
     /* Display children as horizontal flex items. */
-    justify-content: space-between;
-    position: static;
-    visibility: visible;
+    @apply justify-between static visible p-0;
     opacity: 1;
-    padding: 0;
     height: auto;
     margin-bottom: var(--eds-size-6);
   }
@@ -49,9 +39,7 @@
 
   @media all and (max-width: $eds-bp-xl) {
     opacity: 1;
-    visibility: visible;
-    display: flex;
-    flex-direction: column;
+    @apply visible flex flex-col;
     overflow: auto;
     gap: var(--eds-size-8);
     height: calc(100vh - 3rem);

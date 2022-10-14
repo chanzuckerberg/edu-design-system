@@ -30,10 +30,7 @@
  * Typically used to present tooltips by the labels.
  */
 .label__after {
-  display: inline-block;
-  position: relative;
-  top: 3px;
-  margin-left: var(--eds-size-1);
+  @apply inline-block relative top-[3px] ml-2;
 }
 
 /**

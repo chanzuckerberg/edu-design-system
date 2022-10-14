@@ -23,11 +23,7 @@
         rgba(255, 255, 255, 0.001) 50%,
         var(--eds-theme-color-background-neutral-default)
       );
-      height: 100%;
-      top: 0;
-      left: 0;
-      width: var(--eds-size-4);
-      z-index: var(--eds-z-index-100);
+      @apply h-full top-0 left-0 w-8 z-100;
     }
   }
 
@@ -48,11 +44,7 @@
         rgba(255, 255, 255, 0.001) 50%,
         var(--eds-theme-color-background-neutral-default)
       );
-      height: 100%;
-      top: 0;
-      right: 0;
-      width: var(--eds-size-4);
-      z-index: var(--eds-z-index-100);
+      @apply h-full top-0 right-0 w-8 z-100;
     }
   }
 }

@@ -15,13 +15,8 @@
   max-width: calc(var(--eds-l-max-width) + var(--eds-size-6));
   margin-left: auto;
   margin-right: auto;
-  padding-left: var(--eds-size-2);
-  padding-right: var(--eds-size-2);
-
-  @media all and (min-width: $eds-bp-lg) {
-    padding-left: var(--eds-size-3);
-    padding-right: var(--eds-size-3);
-  }
+  @apply pl-4 pr-4;
+  @apply lg:pl-6 pr-6;
 }
 
 /**
@@ -30,9 +25,7 @@
  * Used for pages that don't contain the header or the footer.
  */
 .eds-l-container--center {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  @apply flex flex-col justify-center;
   padding-left: 0;
   padding-right: 0;
   height: 100vh;

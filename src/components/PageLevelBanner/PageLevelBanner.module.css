@@ -11,8 +11,7 @@
   /* Position is relative to allow for absolute-positioned close button. */
   position: relative;
   /* Grid is used to separate the icon from the text with correct spacing. */
-  display: grid;
-  gap: var(--eds-size-2);
+  @apply grid gap-4;
   grid-template-columns: min-content 1fr;
   padding: var(--eds-size-2) var(--eds-size-4);
   background-color: var(--eds-theme-color-neutral-subtle-background);
@@ -35,9 +34,7 @@
  * Button used to dismiss dismissable banners.
  */
 .banner__close-btn.banner__close-btn {
-  position: absolute;
-  top: var(--eds-size-half);
-  right: var(--eds-size-half);
+  @apply absolute top-1 right-1;
 }
 
 /**

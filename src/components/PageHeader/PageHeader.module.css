@@ -8,15 +8,8 @@
  * Container that consists of a page header title and description.
  */
 .page-header {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  margin-bottom: var(--eds-size-3);
-
-  @media all and (min-width: $eds-bp-md) {
-    flex-direction: row;
-    align-items: center;
-  }
+  @apply flex items-start flex-col mb-6;
+  @apply md:flex-row items-center;
 }
 
 /**
@@ -36,9 +29,7 @@
  * Center-aligned page header
  */
 .page-header--center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @apply flex flex-col items-center;
 }
 
 /**

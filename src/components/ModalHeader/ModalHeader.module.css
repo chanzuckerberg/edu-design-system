@@ -6,9 +6,7 @@
  * Header for the modal.
  */
 .modal-header {
-  width: 100%;
-  background-color: var(--eds-theme-color-background-neutral-default);
-  padding-top: var(--eds-size-7);
+  @apply w-full bg-background-neutral-default-@ pt-14;
   padding-left: var(--modal-horizontal-padding);
   padding-right: var(--modal-horizontal-padding);
 }
@@ -17,9 +15,7 @@
  * Brand variant for the header.
  */
 .modal-header--brand {
-  display: flex;
-  flex-direction: column;
-
+  @apply flex flex-col;
   min-height: 10.75rem;
 
   @media all and (min-height: $eds-bp-sm-2) {
@@ -54,10 +50,7 @@
  * Specific asset placement for brand.
  */
 .modal-header__brand-asset {
-  align-self: flex-end;
-  position: relative;
-  top: var(--eds-size-2);
-  left: var(--eds-size-2);
+  @apply self-end relative top-4 left-4;
 
   width: 8.5rem;
   height: 8.5rem;
@@ -73,7 +66,7 @@
     height: 14rem;
     left: var(--eds-size-3);
   }
-
+  
   @media all and (min-width: $eds-bp-xl) {
     width: 16.5rem;
     height: 16.5rem;

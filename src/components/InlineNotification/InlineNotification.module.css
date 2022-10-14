@@ -8,9 +8,8 @@
  * A messaging element that is used inline.
  */
 .inline-notification {
-  display: inline-flex;
+  @apply inline-flex rounded;
   padding: var(--eds-size-quarter) var(--eds-size-half);
-  border-radius: var(--eds-border-radius-md);
 }
 
 /**
@@ -82,6 +81,5 @@
 }
 .inline-notification__text--inactive {
   /* Creates enough space to keep text in the same place. */
-  padding-left: var(--eds-size-3); 
-  color: var(--eds-theme-color-text-neutral-subtle);
+  @apply pl-6 text-text-neutral-subtle;
 }

@@ -10,9 +10,7 @@
 .link-list {
   @mixin reset;
   list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: var(--eds-size-2);
+  @apply flex flex-col gap-4;
 }
 
 /**
