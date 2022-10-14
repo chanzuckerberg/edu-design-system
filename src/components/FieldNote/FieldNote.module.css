@@ -16,9 +16,7 @@
  */
 .field-note__icon {
   /* Centers icon with accompanying text */
-  position: relative;
-  bottom: 1px;
-  margin-right: var(--eds-size-half);
+  @apply relative bottom-px mr-1;
 }
 
 /**

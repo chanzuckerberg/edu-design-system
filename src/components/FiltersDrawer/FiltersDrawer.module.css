@@ -36,12 +36,8 @@
  */
 .filters-drawer__body {
   overflow: auto;
-
   padding: var(--eds-size-5) var(--eds-size-4);
-  @media all and (min-width: $eds-bp-md) {
-    padding-top: var(--eds-size-6);
-    padding-bottom: var(--eds-size-6);
-  }
+  @apply md:py-12;
 }
 
 /**

@@ -14,10 +14,8 @@
 .dropdown-menu {
   /* Set a minimum width for the dropdown menu. */
   @apply w-64 rounded shadow-md;
-  background: var(--eds-theme-color-background-neutral-default);
+  @apply bg-background-neutral-default-@;
   border: 1px solid var(--eds-theme-color-border-neutral-subtle);
-  border-radius: var(--eds-border-radius-md);
-  box-shadow: var(--eds-box-shadow-md);
 
   /**
    * Dropdown menu within active dropdown menu item.
@@ -49,8 +47,7 @@
  * Dropdown menu item.
  */
 .dropdown-menu__item {
-  position: relative;
-  width: 100%;
+  @apply relative w-full;
 }
 
 /**
