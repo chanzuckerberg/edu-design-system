@@ -136,7 +136,6 @@ export const ProjectCard = ({
       {buttonDropdownItems && (
         <CardFooter className={styles['project-card__footer']}>
           <ButtonDropdown
-            className={styles['project-card__button-dropdown']}
             dropdownMenuTrigger={
               <Button
                 aria-label="Open project dropdown"
