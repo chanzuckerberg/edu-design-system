@@ -14,7 +14,5 @@
  * The button group of the houses the apply and clear all buttons.
  */
 .footer__button-group {
-  margin-top: var(--eds-size-3);
-  display: flex;
-  justify-content: flex-end;
+  @apply mt-6 flex justify-end;
 }

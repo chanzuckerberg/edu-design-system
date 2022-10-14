@@ -6,12 +6,8 @@
  */
 .grid__item {
   .grid & {
-    padding: var(--eds-size-1-and-half);
-    width: 100%;
-
-    @supports (display: grid) {
-      padding: 0;
-    }
+    @apply p-3 w-full;
+    @apply [@supports(display:grid)]:p-0
   }
 
   /**
@@ -19,78 +15,36 @@
    */
   &.grid__item.grid__item--span-2 {
     width: 100%;
-
-    @supports (display: grid) {
-      grid-column: 1 / -1;
-    }
+    @apply [@supports(display:grid)]:col-span-full
   }
 
   .grid--1-3up & {
     margin: 0 -1.5rem;
-
-    @media all and (min-width: $eds-bp-lg) {
-      width: 33.33%;
-    }
-
-    @supports (display: grid) {
-      width: 100%;
-      margin: 0;
-    }
+    @apply lg:w-1/3;
+    @apply [@supports(display:grid)]:w-full m-0;
   }
 
   .grid--2up & {
-    @media all and (min-width: $eds-bp-md) {
-      width: 50%;
-    }
-
-    @supports (display: grid) {
-      width: 100%;
-    }
+    @apply md:w-1/2;
+    @apply [@supports(display:grid)]:w-full;
   }
 
   .grid--3up & {
-    @media all and (min-width: $eds-bp-md) {
-      width: 50%;
-    }
-
-    @media all and (min-width: $eds-bp-lg) {
-      width: 33.33%;
-    }
-
-    @supports (display: grid) {
-      width: 100%;
-    }
+    @apply md:w-1/2;
+    @apply lg:w-1/3;
+    @apply [@supports(display:grid)]:w-full;
   }
 
   .grid--3up-alt & {
-    @media all and (min-width: $eds-bp-md) {
-      width: 50%;
-    }
-
-    @media all and (min-width: $eds-bp-lg) {
-      width: 33.33%;
-    }
-
-    @supports (display: grid) {
-      width: 100%;
-    }
+    @apply md:w-1/2;
+    @apply lg:w-1/3;
+    @apply [@supports(display:grid)]:w-full;
   }
 
   .grid--4up & {
-    @media all and (min-width: $eds-bp-md) {
-      width: 50%;
-    }
-
-    @media all and (min-width: $eds-bp-lg) {
-      width: 33.33%;
-    }
-
-    @media all and (min-width: $eds-bp-xl) {
-      width: 25%;
-    }
-
-    @supports (display: grid) {
-      width: 100%;
-    }
+    @apply md:w-1/2;
+    @apply lg:w-1/3;
+    @apply xl:w-1/4;
+    @apply [@supports(display:grid)]:w-full;
   }
 }
