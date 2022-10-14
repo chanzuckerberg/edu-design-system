@@ -171,7 +171,7 @@ export const ScrollEnd: StoryObj<Args> = {
     const canvas = within(canvasElement);
     const tablist = await canvas.findByRole('tablist');
     // eslint-disable-next-line testing-library/no-node-access
-    tablist?.parentElement?.scroll(1000, 0);
+    tablist?.parentElement?.scroll(2000, 0);
   },
   decorators: [
     (Story) => (
