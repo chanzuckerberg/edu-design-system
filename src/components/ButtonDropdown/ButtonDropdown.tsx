@@ -27,7 +27,7 @@ export interface Props {
    */
   children?: ReactNode;
   /**
-   * CSS class names that can be appended to the component.
+   * CSS class names that can be appended to the component to further style the dropdown menu.
    */
   className?: string;
   /**
@@ -166,13 +166,18 @@ export const ButtonDropdown = ({
     position === 'top-left' && styles['button-dropdown--top-left'],
     position === 'top-right' && styles['button-dropdown--top-right'],
     position === 'bottom-right' && styles['button-dropdown--bottom-right'],
+  );
+
+  const dropdownMenuClassName = clsx(
+    styles['button-dropdown__dropdown-menu'],
     className,
   );
+
   return (
     <div className={componentClassName} ref={ref} {...other}>
       {dropdownMenuTriggerWithProps}
       <DropdownMenu
-        className={styles['button-dropdown__dropdown-menu']}
+        className={dropdownMenuClassName}
         closeDropdownMenu={closePanel}
         isActive={isActiveVar}
       >
