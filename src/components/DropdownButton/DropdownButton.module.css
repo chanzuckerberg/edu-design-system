@@ -20,7 +20,7 @@
 
   /* Place button text on the left and the expand more icon on the right. */
   @apply flex justify-center items-center cursor-pointer;
-  @apply bg-background-neutral-default-@;
+  background-color: var(--eds-theme-color-background-neutral-default);
 }
 
 /**

@@ -13,6 +13,7 @@
  */
 .dropdown-menu {
   /* Set a minimum width for the dropdown menu. */
+  @apply w-64 rounded shadow-md;
   width: 16rem; 
   background: var(--eds-theme-color-background-neutral-default);
   border: 1px solid var(--eds-theme-color-border-neutral-subtle);
