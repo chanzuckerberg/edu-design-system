@@ -81,47 +81,6 @@ export type ClickableStyleProps<IComponent extends React.ElementType> = {
   variant?: Variant;
 } & React.ComponentProps<IComponent>;
 
-const getPropCombinationIsValid = (variant: Variant, status: Status) => {
-  const nonPrimaryStatuses = ['neutral', 'success', 'warning'];
-  const nonLinkStatuses = ['success', 'warning', 'error'];
-
-  if (
-    (variant === 'primary' && nonPrimaryStatuses.includes(status)) ||
-    (variant === 'link' && nonLinkStatuses.includes(status))
-  ) {
-    return false;
-  }
-
-  return true;
-};
-
-const throwInvalidPropComboError = (variant: Variant, status: Status) => {
-  const primaryStatuses = ['brand', 'error'];
-  const linkStatuses = ['brand', 'neutral'];
-
-  const getValidStatusesString = () => {
-    const validStatuses =
-      variant === 'primary' ? primaryStatuses : linkStatuses;
-
-    return `'${validStatuses[0]}' and '${validStatuses[1]}'`;
-  };
-
-  // TODO: change to `throw new Error()` when invalid combos have been removed from downstream product
-  console.warn(
-    // We have to add the strings and variables together because string interpolation doesn't work in console messages.
-    "\n*** Invalid prop combo ***:\n\nThe `Button` and `Link` components do not support using the '" +
-      variant +
-      "' variant with a '" +
-      status +
-      "' status." +
-      "\n\nThe '" +
-      variant +
-      "' variant can only be used with the " +
-      getValidStatusesString() +
-      ' statuses.\n',
-  );
-};
-
 /**
  * ```ts
  * import {ClickableStyle} from "@chanzuckerberg/eds";
@@ -150,13 +109,6 @@ export const ClickableStyle = React.forwardRef(
       variant = 'secondary',
       ...other
     } = props;
-
-    if (
-      !getPropCombinationIsValid(variant, status) &&
-      process.env.NODE_ENV !== 'production'
-    ) {
-      throwInvalidPropComboError(variant, status);
-    }
 
     const componentClassName = clsx(
       // Base styles
