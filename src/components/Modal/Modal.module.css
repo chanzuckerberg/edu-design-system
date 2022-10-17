@@ -9,7 +9,9 @@
  */
 .modal,
 .modal__overlay {
-  @apply fixed top-0 left-0 w-full;
+  @apply fixed w-full;
+  top: 0;
+  left: 0;
   height: 100vh;
 }
 
@@ -124,8 +126,9 @@
  */
 .modal__close-button {
   @mixin reset;
-  @apply border-0 bg-transparent absolute top-0 right-0;
-
+  @apply border-0 bg-transparent absolute;
+  top: 0;
+  right: 0;
   /* Minimum button target size is 44px, but 3rem (48px) is next closest ramp size. */
   @apply w-12 h-12 cursor-pointer;
   z-index: 1;

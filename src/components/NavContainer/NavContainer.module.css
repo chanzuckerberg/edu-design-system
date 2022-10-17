@@ -38,12 +38,12 @@
   display: block;
 
   @media all and (max-width: $eds-bp-xl) {
+    
     opacity: 1;
     @apply visible flex flex-col;
-    overflow: auto;
-    gap: var(--eds-size-8);
+    @apply overflow-auto gap-16;
+    @apply bg-background-brand-primary-strong-@ z-400;
     height: calc(100vh - 3rem);
-    background-color: var(--eds-theme-color-background-brand-primary-strong);
-    z-index: var(--eds-z-index-400);
+
   }
 }
