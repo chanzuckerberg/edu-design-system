@@ -77,12 +77,12 @@ function minifyCSSVarDictionary(obj) {
     return obj;
   }
 
-  var toRet = {};
+  const toRet = {};
 
   if (obj.value) {
     return `var(--${obj.name})`;
   } else {
-    for (var name in obj) {
+    for (const name in obj) {
       toRet[name] = minifyCSSVarDictionary(obj[name]);
     }
   }

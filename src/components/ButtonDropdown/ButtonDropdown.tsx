@@ -1,5 +1,6 @@
 import clsx from 'clsx';
-import React, { ReactNode } from 'react';
+import type { ReactNode } from 'react';
+import React from 'react';
 import styles from './ButtonDropdown.module.css';
 import { DropdownMenu } from '../..';
 import type { ClickableStyleProps } from '../ClickableStyle';
@@ -26,7 +27,7 @@ export interface Props {
    */
   children?: ReactNode;
   /**
-   * CSS class names that can be appended to the component.
+   * CSS class names that can be appended to the component to further style the dropdown menu.
    */
   className?: string;
   /**
@@ -85,6 +86,8 @@ export const ButtonDropdown = ({
   /**
    * On component load/updated
    */
+  // FIXME
+  // eslint-disable-next-line @chanzuckerberg/edu-react/use-effect-deps-presence
   React.useEffect(() => {
     if (isActiveVar) {
       if (!ref.current) return;
@@ -146,7 +149,6 @@ export const ButtonDropdown = ({
       // Checking isValidElement is the safe way and avoids a typescript
       // error too.
       if (React.isValidElement(child)) {
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-expect-error TODO: fix "No overload matches this call" error
         return React.cloneElement<Props>(child, {
           ref: buttonRef,
@@ -164,13 +166,18 @@ export const ButtonDropdown = ({
     position === 'top-left' && styles['button-dropdown--top-left'],
     position === 'top-right' && styles['button-dropdown--top-right'],
     position === 'bottom-right' && styles['button-dropdown--bottom-right'],
+  );
+
+  const dropdownMenuClassName = clsx(
+    styles['button-dropdown__dropdown-menu'],
     className,
   );
+
   return (
     <div className={componentClassName} ref={ref} {...other}>
       {dropdownMenuTriggerWithProps}
       <DropdownMenu
-        className={styles['button-dropdown__dropdown-menu']}
+        className={dropdownMenuClassName}
         closeDropdownMenu={closePanel}
         isActive={isActiveVar}
       >

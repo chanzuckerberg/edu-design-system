@@ -1,7 +1,8 @@
 import clsx from 'clsx';
 import React from 'react';
 import styles from './CheckboxLabel.module.css';
-import { InputLabel, InputLabelProps } from '../InputLabel/InputLabel';
+import type { InputLabelProps } from '../InputLabel/InputLabel';
+import { InputLabel } from '../InputLabel/InputLabel';
 
 export type CheckboxLabelProps = InputLabelProps;
 

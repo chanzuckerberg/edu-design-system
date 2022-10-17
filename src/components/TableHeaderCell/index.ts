@@ -1,1 +1,2 @@
-export { TableHeaderCell as default } from './TableHeaderCell';
+export { TableHeaderCell as default, SORT_DIRECTIONS } from './TableHeaderCell';
+export type { SortDirectionsType } from './TableHeaderCell';

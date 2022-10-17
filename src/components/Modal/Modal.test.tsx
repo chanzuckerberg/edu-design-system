@@ -76,12 +76,7 @@ describe('Modal', () => {
 
   it('does not throw an error if modal uses <Modal.Title>', () => {
     const modalWithTitle = (
-      <Modal
-        onClose={
-          () => {} /* eslint-disable-line @typescript-eslint/no-empty-function */
-        }
-        open={true}
-      >
+      <Modal onClose={() => {}} open={true}>
         <Modal.Header>
           <Modal.Title>Modal Title</Modal.Title>
         </Modal.Header>
@@ -98,13 +93,7 @@ describe('Modal', () => {
 
   it('does not throw an error if modal uses aria-label', () => {
     const modalWithAriaLabel = (
-      <Modal
-        aria-label="aria label"
-        onClose={
-          () => {} /* eslint-disable-line @typescript-eslint/no-empty-function */
-        }
-        open={true}
-      >
+      <Modal aria-label="aria label" onClose={() => {}} open={true}>
         <Modal.Header>Modal Title</Modal.Header>
         <Modal.Body>Modal body content.</Modal.Body>
         <Modal.Footer>Modal footer content.</Modal.Footer>
@@ -119,12 +108,7 @@ describe('Modal', () => {
 
   it('does throw an error if modal does not use <Modal.Title> or aria-label', () => {
     const modalWithoutTitleOrAriaLabel = (
-      <Modal
-        onClose={
-          () => {} /* eslint-disable-line @typescript-eslint/no-empty-function */
-        }
-        open={true}
-      >
+      <Modal onClose={() => {}} open={true}>
         <Modal.Header>Modal Title</Modal.Header>
         <Modal.Body>Modal body content.</Modal.Body>
         <Modal.Footer>Modal footer content.</Modal.Footer>

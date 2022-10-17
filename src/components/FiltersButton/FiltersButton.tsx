@@ -1,7 +1,8 @@
 import clsx from 'clsx';
 import React, { forwardRef } from 'react';
 import styles from './FiltersButton.module.css';
-import Button, { ButtonProps } from '../Button';
+import Button, { type ButtonProps } from '../Button';
+import type { VariantStatus } from '../ClickableStyle';
 import Icon from '../Icon';
 
 export type FiltersButtonProps = {
@@ -17,7 +18,7 @@ export type FiltersButtonProps = {
    * Text to be placed in the button that activates the Filters.
    */
   triggerText: string;
-} & Omit<ButtonProps, 'children'>;
+} & Omit<ButtonProps, 'children' | 'variant' | 'status'>;
 
 /**
  * BETA: This component is still a work in progress and is subject to change.
@@ -32,16 +33,22 @@ export const FiltersButton = forwardRef<HTMLButtonElement, FiltersButtonProps>(
   ({ className, hasSelectedFilters, triggerText, ...other }, ref) => {
     const componentClassName = clsx(styles['filters-button'], className);
 
-    const buttonVariant = hasSelectedFilters ? 'primary' : 'secondary';
-    const buttonStatus = hasSelectedFilters ? 'brand' : 'neutral';
+    const variantStatus: VariantStatus = hasSelectedFilters
+      ? {
+          variant: 'primary',
+          status: 'brand',
+        }
+      : {
+          variant: 'secondary',
+          status: 'neutral',
+        };
 
     return (
       <Button
         className={componentClassName}
         ref={ref}
-        status={buttonStatus}
-        variant={buttonVariant}
         {...other}
+        {...variantStatus}
       >
         <Icon name="filter-list" purpose="decorative" size="1.5rem" />
         {triggerText}

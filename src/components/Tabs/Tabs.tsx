@@ -75,6 +75,8 @@ export const Tabs = ({
   }, [children]);
 
   const tabRefs = useMemo(
+    // This usage of React.createRef is intentional.
+    // eslint-disable-next-line @chanzuckerberg/edu-react/no-create-ref-in-function-component
     () => tabs.map(() => React.createRef<HTMLAnchorElement>()),
     [tabs],
   );
@@ -245,6 +247,7 @@ export const Tabs = ({
  */
 function usePrevious<T>(prop: T) {
   const ref = useRef<T>(prop);
+  // eslint-disable-next-line @chanzuckerberg/edu-react/use-effect-deps-presence
   useEffect(() => {
     ref.current = prop;
   });

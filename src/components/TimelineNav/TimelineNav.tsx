@@ -1,11 +1,6 @@
 import clsx from 'clsx';
-import React, {
-  ReactNode,
-  useRef,
-  useState,
-  useEffect,
-  useCallback,
-} from 'react';
+import type { ReactNode } from 'react';
+import React, { useRef, useState, useEffect, useCallback } from 'react';
 import { allByType } from 'react-children-by-type';
 import { useUIDSeed } from 'react-uid';
 import styles from './TimelineNav.module.css';
@@ -26,7 +21,8 @@ import {
 import Button from '../Button';
 import Icon from '../Icon';
 import NumberIcon from '../NumberIcon';
-import TimelineNavPanel, { TimelineNavPanelVariant } from '../TimelineNavPanel';
+import type { TimelineNavPanelVariant } from '../TimelineNavPanel';
+import TimelineNavPanel from '../TimelineNavPanel';
 
 export interface Props {
   /**
@@ -127,6 +123,8 @@ export const TimelineNav = ({
   }, [children]);
 
   const timelineNavItemRefs = timelineNavItems().map(() =>
+    // This usage of React.createRef is intentional.
+    // eslint-disable-next-line @chanzuckerberg/edu-react/no-create-ref-in-function-component
     React.createRef<HTMLAnchorElement>(),
   );
 
@@ -141,6 +139,7 @@ export const TimelineNav = ({
    * This is used to compare the previous prop to the current prop.
    */
   function usePrevious(activeIndex: number) {
+    // eslint-disable-next-line @chanzuckerberg/edu-react/use-effect-deps-presence
     useEffect(() => {
       ref.current = activeIndex;
     });
@@ -247,7 +246,6 @@ export const TimelineNav = ({
       // Checking isValidElement is the safe way and avoids a typescript
       // error too.
       if (React.isValidElement(child)) {
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-expect-error TODO: fix "No overload matches this call" error
         return React.cloneElement<Props>(child, {
           id: idVar[i],
@@ -407,6 +405,8 @@ export const TimelineNav = ({
                   styles['timeline-nav__item'],
                   isActive && styles['eds-is-active'],
                 )}
+                // FIXME
+                // eslint-disable-next-line react/no-array-index-key
                 key={'timeline-nav-item-' + i}
                 role="presentation"
               >
@@ -417,7 +417,6 @@ export const TimelineNav = ({
                   className={styles['timeline-nav__link']}
                   href={`#${idVar[i]}`}
                   id={ariaLabelledByVar[i]}
-                  key={'timeline-nav-link' + i}
                   onClick={(e) => {
                     e.preventDefault();
                     onOpen(i);

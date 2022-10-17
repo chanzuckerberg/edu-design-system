@@ -1,5 +1,6 @@
 import clsx from 'clsx';
-import React, { ReactNode, useEffect, useRef, useState } from 'react';
+import type { ReactNode } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 import styles from './Header.module.css';
 
@@ -123,6 +124,8 @@ export const Header = ({
   /**
    * Update sticky wrapper height on mount
    */
+  // FIXME
+  // eslint-disable-next-line @chanzuckerberg/edu-react/use-effect-deps-presence
   useEffect(() => {
     updateHeaderWrapperHeight();
   });
@@ -132,6 +135,8 @@ export const Header = ({
    *
    * Add scroll and window resize event to adjust values.
    */
+  // FIXME
+  // eslint-disable-next-line @chanzuckerberg/edu-react/use-effect-deps-presence
   useEffect(() => {
     window.addEventListener('scroll', handleWindowScroll, false);
     window.addEventListener('resize', updateHeaderWrapperHeight, false);

@@ -1,5 +1,6 @@
 import clsx from 'clsx';
-import React, { ReactNode } from 'react';
+import type { ReactNode } from 'react';
+import React from 'react';
 import styles from './ProjectCard.module.css';
 
 import {
@@ -13,7 +14,7 @@ import {
   NumberIcon,
   ButtonDropdown,
 } from '../..';
-import { HeadingElement } from '../Heading';
+import type { HeadingElement } from '../Heading';
 
 export interface Props {
   /**
@@ -135,7 +136,6 @@ export const ProjectCard = ({
       {buttonDropdownItems && (
         <CardFooter className={styles['project-card__footer']}>
           <ButtonDropdown
-            className={styles['project-card__button-dropdown']}
             dropdownMenuTrigger={
               <Button
                 aria-label="Open project dropdown"

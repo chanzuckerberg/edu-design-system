@@ -1,8 +1,10 @@
 import clsx from 'clsx';
-import React, { ReactNode } from 'react';
+import type { ReactNode } from 'react';
+import React from 'react';
 import styles from './PageLevelBanner.module.css';
 import Button from '../Button';
-import Heading, { HeadingElement } from '../Heading';
+import type { HeadingElement } from '../Heading';
+import Heading from '../Heading';
 import Icon from '../Icon';
 import Text from '../Text';
 

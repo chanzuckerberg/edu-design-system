@@ -1,8 +1,9 @@
-import { StoryObj, Meta } from '@storybook/react';
+import type { StoryObj, Meta } from '@storybook/react';
 import { within } from '@storybook/testing-library';
 import clsx from 'clsx';
 import React from 'react';
-import { Dropdown, OptionsAlignType, VariantType } from './Dropdown';
+import type { OptionsAlignType, VariantType } from './Dropdown';
+import { Dropdown } from './Dropdown';
 import styles from './Dropdown.stories.module.css';
 import DropdownButton from '../DropdownButton';
 import Icon from '../Icon';

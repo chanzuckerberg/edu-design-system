@@ -31,7 +31,7 @@ export const DrawerExample = () => {
     setDrawerOpen(false);
   }
   return (
-    <div className="p-4 min-h-[500px]">
+    <div className="min-h-[500px] p-4">
       <Button onClick={openDrawerExample} ref={drawerButton} variant="primary">
         Open Drawer
       </Button>

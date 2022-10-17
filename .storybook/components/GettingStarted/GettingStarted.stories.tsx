@@ -1,4 +1,4 @@
-import { StoryObj } from '@storybook/react';
+import type { StoryObj } from '@storybook/react';
 import React from 'react';
 import { GettingStartedDocumentation } from './GettingStartedDocumentation';
 import GettingStartedDocs from '../../../docs/GETTING_STARTED.md';

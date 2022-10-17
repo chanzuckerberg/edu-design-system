@@ -1,6 +1,7 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import clsx from 'clsx';
-import React, { ReactNode } from 'react';
+import type { ReactNode } from 'react';
+import React from 'react';
 import { useState } from 'react';
 import Modal, { ModalContent } from './Modal';
 import styles from './Modal.stories.module.css';
@@ -48,21 +49,11 @@ const getChildren = (
       <ButtonGroup className={styles['footer__button-group']}>
         {/* This has to be manually tested since Tooltip tests are flaky in Chromatic */}
         <Tooltip text="Tooltip should spawn on top of modal">
-          <Button
-            onClick={
-              () => {} /* eslint-disable-line @typescript-eslint/no-empty-function */
-            }
-            status="neutral"
-          >
+          <Button onClick={() => {}} status="neutral">
             Button 1
           </Button>
         </Tooltip>
-        <Button
-          onClick={
-            () => {} /* eslint-disable-line @typescript-eslint/no-empty-function */
-          }
-          variant="primary"
-        >
+        <Button onClick={() => {}} variant="primary">
           Button 2
         </Button>
       </ButtonGroup>
@@ -77,9 +68,7 @@ export const Default: StoryObj<Args> = {
       <ModalContent
         {...args}
         data-testid="non-interactive"
-        onClose={
-          () => {} /* eslint-disable-line @typescript-eslint/no-empty-function */
-        }
+        onClose={() => {}}
       />
     </div>
   ),

@@ -1,5 +1,6 @@
 import clsx from 'clsx';
-import React, { ReactNode, MouseEventHandler, useContext } from 'react';
+import type { ReactNode, MouseEventHandler } from 'react';
+import React, { useContext } from 'react';
 import { DropdownMenuContext } from '../DropdownMenu';
 import styles from '../DropdownMenu/DropdownMenu.module.css';
 
