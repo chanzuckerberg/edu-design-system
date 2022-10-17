@@ -64,7 +64,7 @@
  * Section title
  */
 .section__title {
-  @apply flex flex-col items-center;
+  @apply flex justify-start items-center;
 }
 
 /**
