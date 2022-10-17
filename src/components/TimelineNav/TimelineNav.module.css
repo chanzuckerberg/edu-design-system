@@ -60,7 +60,9 @@
  */
 .timeline-nav__body {
   @apply block invisible z-bottom absolute;
-  @apply h-0 w-0 overflow-hidden shrink-0;
+  @apply overflow-hidden shrink-0;
+  height: 0;
+  width: 0;
   padding: var(--eds-size-2) 0;
 
   @media all and (min-width: $eds-bp-lg) {
@@ -117,7 +119,6 @@
  * Timeline nav item
  */
 .timeline-nav__item {
-  position: relative;
   /* Flex shrink 0 keeps timeline-nav from expanding to fill up the space of the container. */
   @apply relative shrink-0 pb-10;
 
