@@ -6,5 +6,6 @@
  * Stepper that resides in the modal footer.
  */
 .modal-stepper {
-  @apply text-icon-neutral-default-@ flex gap-3;
+  color: var(--eds-theme-color-icon-neutral-default);
+  @apply flex gap-3;
 }
