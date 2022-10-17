@@ -8,9 +8,7 @@
  * Important for uses like filtering and pagination.
  */
 .table-object {
-  width: 100%;
-  overflow-x: hidden;
-  border-radius: var(--eds-border-radius-md);
+  @apply w-full overflow-x-hidden rounded;
 }
 
 .table-object__header {
@@ -39,18 +37,13 @@
      */
     &:before {
       content: '';
-      display: block;
-      position: absolute;
+      @apply block absolute;
       background: linear-gradient(
         to left,
         rgba(255, 255, 255, 0.001) 50%,
         rgba(0, 0, 0, 0.1)
       );
-      height: 100%;
-      top: 0;
-      left: 0;
-      width: var(--eds-size-4);
-      z-index: var(--eds-z-index-100);
+      @apply h-full top-0 left-0 w-8 z-100;
     }
   }
 
@@ -63,18 +56,13 @@
      */
     &:after {
       content: '';
-      display: block;
-      position: absolute;
+      @apply block absolute;
       background: linear-gradient(
         to right,
         rgba(255, 255, 255, 0.001) 50%,
         rgba(0, 0, 0, 0.1)
       );
-      height: 100%;
-      top: 0;
-      right: 0;
-      width: var(--eds-size-4);
-      z-index: var(--eds-z-index-100);
+      @apply h-full top-0 right-0 w-8 z-100;
     }
   }
 }

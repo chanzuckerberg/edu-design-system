@@ -8,11 +8,7 @@
  * Data Table
  */
 .table {
-  border-collapse: collapse;
-  border-spacing: 0;
-  width: 100%;
-  margin-bottom: var(--eds-size-2);
-  position: relative;
+  @apply border-collapse border-spacing-0 w-full mb-4 relative;
 }
 
 /**
@@ -35,8 +31,7 @@
  */
 .table__caption {
   @mixin eds-theme-typography-body-text-sm;
-  text-align: left;
-  margin-bottom: var(--eds-size-1);
+  @apply text-left mb-2;
 }
 
 /**
@@ -65,8 +60,7 @@
  */
 .table__body {
   .table--stacked > & {
-    display: block;
-    width: 100%;
+    @apply block w-full;
 
     @media all and (min-width: $eds-bp-md) {
       display: table-row-group;
@@ -206,9 +200,7 @@
  * the bottom when one or more titles breaks into multiple lines .
  */
 .table__header-cell-contents {
-  display: flex;
-  align-items: flex-end;
-  gap: var(--eds-size-1-and-half);
+  @apply flex items-end gap-3;
 }
 
 /**
@@ -271,11 +263,7 @@
    * Table cell inside a stacked table
    */
   .table--stacked & {
-    display: flex;
-    gap: var(--eds-size-1);
-    width: 100%;
-    padding-left: 0;
-    padding-right: 0;
+    @apply flex gap-2 w-full px-0;
 
     &:before {
       /**
@@ -446,15 +434,11 @@
  * Table header cell within a nested table
  */
 .table .table th.table__cell {
-  padding-top: 0;
-  padding-bottom: 0;
-  text-align: left;
+  @apply py-0 text-left;
   @mixin eds-theme-typography-overline-sm;
 
   @media all and (min-width: $eds-bp-md) {
-    width: 60%;
-    padding-top: var(--eds-size-2);
-    padding-bottom: var(--eds-size-2);
+    @apply w-3/5 py-4;
     @mixin eds-theme-typography-overline-sm;
   }
 }

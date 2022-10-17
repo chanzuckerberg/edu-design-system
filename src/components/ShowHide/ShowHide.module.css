@@ -13,8 +13,7 @@
    * Button that toggles open and closes a panel.
    */
   .show-hide.eds-is-active & {
-    margin-top: var(--eds-size-1);
-    display: block;
+    @apply mt-2 block;
   }
 }
 

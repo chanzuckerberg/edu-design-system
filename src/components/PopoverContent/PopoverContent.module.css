@@ -14,19 +14,14 @@
  * Body popover content, as opposed to the visual indicator arrow.
  */
 .popover-content__body {
-  border-radius: var(--eds-border-radius-md);
-  overflow: auto;
-  box-shadow: var(--eds-box-shadow-md);
-  background-color: var(--eds-theme-color-background-neutral-default);
+  @apply rounded overflow-auto shadow-md bg-background-neutral-default-@;
 }
 
 /**
  * Decorative arrow pointing the Popover to the trigger element.
  */
 .popover-content__arrow {
-  position: absolute;
-  width: 0;
-  height: 0;
+  @apply absolute w-0 h-0;
 }
 
 /**

@@ -8,10 +8,7 @@
  * List of of links where each link toggles open associated information
  */
 .timeline-nav {
-  display: flex;
-  gap: var(--eds-size-2);
-  width: 100%;
-  overflow: hidden;
+  @apply flex gap-4 w-full overflow-hidden;
   transition: transform var(--eds-anim-fade-long) var(--eds-anim-ease);
 
   @media all and (min-width: $eds-bp-lg) {
@@ -48,15 +45,11 @@
  * Tab overflow behavior.
  */
 .timeline-nav__nav {
-  display: block;
-  width: 100%;
-  flex-shrink: 0;
+  @apply block w-full shrink-0;
   padding: var(--eds-size-4) 0;
 
   @media all and (min-width: $eds-bp-lg) {
-    position: relative;
-    padding: var(--eds-size-5);
-    width: 33.33%;
+    @apply relative p-10 w-1/3;
     min-width: 20rem;
     flex-shrink: initial;
   }
@@ -66,25 +59,15 @@
  * Timeline nav body 
  */
 .timeline-nav__body {
-  display: block;
-  visibility: hidden;
-  z-index: var(--eds-z-index-bottom);
-  position: absolute;
-  height: 0;
-  width: 0;
-  overflow: hidden;
-  flex-shrink: 0;
+  @apply block invisible z-bottom absolute;
+  @apply h-0 w-0 overflow-hidden shrink-0;
   padding: var(--eds-size-2) 0;
 
   @media all and (min-width: $eds-bp-lg) {
-    display: block;
-    position: static;
-    z-index: var(--eds-z-index-0);
+    @apply block static z-0 w-full;
     flex: 1;
-    width: 100%;
     height: auto;
-    overflow: visible;
-    visibility: visible;
+    @apply overflow-visible visible;
     transform: translateX(0);
     padding: var(--eds-size-5) var(--eds-size-8);
     box-shadow: 0px 2px 8px var(--eds-theme-color-border-neutral-subtle); /* TODO: Tokenize the box shadow */
@@ -92,12 +75,7 @@
 }
 
 .timeline-nav__body.eds-is-active {
-  position: static;
-  z-index: var(--eds-z-index-0);
-  width: 100%;
-  height: 100%;
-  overflow: visible;
-  visibility: visible;
+  @apply static z-0 w-full h-full overflow-visible visible;
 
   @media all and (min-width: $eds-bp-lg) {
     transform: unset;
@@ -141,8 +119,7 @@
 .timeline-nav__item {
   position: relative;
   /* Flex shrink 0 keeps timeline-nav from expanding to fill up the space of the container. */
-  flex-shrink: 0;
-  padding-bottom: var(--eds-size-5);
+  @apply relative shrink-0 pb-10;
 
   @media all and (min-width: $eds-bp-lg) {
     padding-bottom: var(--eds-size-10);
@@ -203,13 +180,9 @@
  * Using disabled text color here because all links are "inactive" until selected and this color is overridden.
  */
 .timeline-nav__link {
-  position: relative;
-  display: flex;
-  align-items: baseline;
-  gap: var(--eds-size-1);
+  @apply relative flex items-baseline gap-2;
   text-decoration: none;
-  color: var(--eds-theme-color-text-neutral-subtle);
-  cursor: pointer;
+  @apply text-text-neutral-subtle cursor-pointer;
   transition: color var(--eds-anim-fade-quick) var(--eds-anim-ease),
     box-shadow var(--eds-anim-fade-quick) var(--eds-anim-ease),
     background-color var(--eds-anim-fade-quick) var(--eds-anim-ease);
@@ -250,11 +223,8 @@
  * Timeline nav number
  */
 .timeline-nav__number {
-  position: relative;
   /* Using flex to keep the number centered */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @apply relative flex justify-center items-center;
   left: -4px;
   /* Since this will display as a cirlce, keep height and width equal; should be wide enough to fit a two-digit number */
   width: 1.5rem;

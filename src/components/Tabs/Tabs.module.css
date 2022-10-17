@@ -15,9 +15,7 @@
  */
 .tabs__header {
   /* Tab overflow behavior*/
-  overflow-x: auto;
-  position: relative;
-  padding-bottom: var(--eds-size-2);
+  @apply overflow-x-auto relative pb-4;
 }
 
 /**

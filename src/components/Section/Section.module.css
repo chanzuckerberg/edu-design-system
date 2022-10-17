@@ -8,8 +8,7 @@
  * A section is a discrete section of a web page.
  */
 .section {
-  padding-top: var(--eds-size-4);
-  padding-bottom: var(--eds-size-4);
+  @apply py-8;
 }
 
 /**
@@ -18,11 +17,7 @@
  * contains section header inner, left, and right elements.
  */
 .section__header {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  gap: var(--eds-size-1);
-  margin-bottom: var(--eds-size-3);
+  @apply flex flex-row justify-start gap-2 mb-6;
 
   /**
    * Section header within centered section
@@ -42,10 +37,7 @@
    * Flex grow only has an effect if there is content in the section__right slot;
    * section_right gets forced to the right edge of the header 
    */
-  flex-grow: 1;
-  display: flex;
-  flex-direction: row;
-  gap: var(--eds-size-1);
+  @apply grow flex flex-row gap-2;
   /*  To center the header, flex-grow must be disabled. */
   .section--center & {
     flex-grow: 0;
@@ -58,10 +50,7 @@
 * Contains the section title, overline, and description in a column..
 */
 .section__title-inner {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  @apply flex flex-col justify-center items-start;
 
   .section--center & {
     /* When variant === center, the title inner container gets centered in the header inner container */
@@ -75,9 +64,7 @@
  * Section title
  */
 .section__title {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  @apply flex flex-col items-center;
 }
 
 /**
@@ -89,10 +76,7 @@
 */
 .section__title-before,
 .section__title-after {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  @apply flex flex-col items-center justify-center;
 }
 
 /**
@@ -101,8 +85,7 @@
 * Optional string that appears above the section title.
 */
 .section__overline {
-  margin-top: 0;
-  margin-bottom: var(--eds-size-1);
+  @apply mt-0 mb-2;
 }
 
 /**
@@ -111,8 +94,7 @@
  * Optional string that appears beneath the section title.
  */
 .section__description {
-  margin-top: var(--eds-size-half);
-  margin-bottom: 0;
+  @apply mt-1 mb-0;
 }
 
 /**
@@ -121,6 +103,5 @@
 * Optional area to put right-aligned content after section title.
 **/
 .section__right {
-  display: flex;
-  align-items: center;
+  @apply flex items-center;
 }

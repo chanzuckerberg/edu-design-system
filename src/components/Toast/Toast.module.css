@@ -50,15 +50,12 @@
  * The toast content, usually an icon and text message. Does not include the optional close button
  */
 .toast__content {
-  padding-top: var(--eds-size-2);
-  padding-bottom: var(--eds-size-2);
+  @apply py-4;
   /**
    * Grid places the icon on the left and message on the right, with both vertically aligned to the center.   
    */
-  display: grid;
-  gap: var(--eds-size-2);
+  @apply grid gap-4 items-center;
   grid-template-columns: min-content 1fr;
-  align-items: center;
 }
 
 /**
