@@ -6,7 +6,8 @@
  * Footer for the modal.
  */
 .modal-footer {
-  @apply pt-5 pb-5 pl-8 pr-6;
+  @apply pt-5 pb-5 pr-6;
+  padding-left: var(--modal-horizontal-padding);
   @apply w-full bg-background-neutral-default-@;
   border-bottom-left-radius: var(--eds-border-radius-lg);
   border-bottom-right-radius: var(--eds-border-radius-lg);
