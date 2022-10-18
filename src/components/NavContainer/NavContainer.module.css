@@ -44,6 +44,5 @@
     @apply overflow-auto gap-16;
     @apply bg-background-brand-primary-strong-@ z-400;
     height: calc(100vh - 3rem);
-
   }
 }

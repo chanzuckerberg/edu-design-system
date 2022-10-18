@@ -10,10 +10,9 @@
 .drawer__container {
   @apply flex flex-col items-end justify-end invisible;
   width: 28rem;
-  height: 100vh;
+  @apply h-screen;
   @apply fixed z-bottom bg-transparent;
-  top: 0;
-  right: 0;
+  @apply top-0 right-0;
 }
 
 /**
@@ -29,7 +28,7 @@
  */
 .drawer {
   @apply flex flex-col w-full;
-  height: 100vh;
+  @apply h-screen;
   transform: translateX(100%);
   background: var(--eds-theme-color-background-neutral-default);
   border-left-width: var(--eds-theme-border-width);

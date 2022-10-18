@@ -18,9 +18,9 @@
    */
 
   
-  box-shadow: var(--eds-box-shadow-md); /* 0px 0px 2px rgba(0, 0, 0, 0.2), 0px 2px 8px rgba(0, 0, 0, 0.08) */
-  margin-bottom: var(--eds-size-2); /* 1rem */
-  @apply border-solid rounded border-[1px];
+  box-shadow: var(--eds-box-shadow-md);
+  margin-bottom: var(--eds-size-2); 
+  @apply border-solid rounded border;
   border-color: var(--messaging-border-color); 
 
   /* Vertical-specific styles */
@@ -60,7 +60,7 @@
     # HORIZONTAL ORIENTATION
 \*------------------------------------*/
 
-@media screen and (min-width: $eds-bp-md) { /*  '48rem', // 768px */
+@media screen and (min-width: $eds-bp-md) {
   /**
    * Banner horizontal orientation.
    */
@@ -69,16 +69,16 @@
     /* Everything is left-aligned and Padding is reduced */
     @apply text-left justify-items-start p-4;
     /* Left border is thick and dark instead of the top border */
-    @apply border-t-[1px] border-l-4;
+    @apply border-t border-l-4;
     border-top-color: var(--messaging-border-color);
     border-left-color: var(--messaging-icon-color);
     /* Icon is smaller to match the heading line height */
     .banner__icon {
-      --icon-size-default: var(--eds-size-3); /* 1.5rem */
+      --icon-size-default: var(--eds-size-3); 
     }
     /* Gap between text and action button is reduced */
     .banner__text-and-action {
-      gap: var(--eds-size-1); /* 0.5rem */
+      gap: var(--eds-size-1);
     }
 
     .banner__action {

@@ -9,7 +9,7 @@
  */
 .link-list {
   @mixin reset;
-  list-style: none;
+  @apply list-none;
   @apply flex flex-col gap-4;
 }
 

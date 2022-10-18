@@ -13,8 +13,7 @@
   * to ensure content doesn't butt up against viewport edge.
   */
   max-width: calc(var(--eds-l-max-width) + var(--eds-size-6));
-  margin-left: auto;
-  margin-right: auto;
+  @apply mx-auto;
   @apply pl-4 pr-4;
   @apply lg:pl-6 pr-6;
 }
@@ -26,7 +25,6 @@
  */
 .eds-l-container--center {
   @apply flex flex-col justify-center;
-  padding-left: 0;
-  padding-right: 0;
-  height: 100vh;
+  @apply px-0;
+  @apply h-screen;
 }

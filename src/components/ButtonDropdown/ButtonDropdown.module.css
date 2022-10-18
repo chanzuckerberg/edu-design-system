@@ -19,7 +19,6 @@
    * Button dropdown dropdown menu positioned to the top-left of the button
    */
   .button-dropdown--top-left & {
-    
     top: initial;
     bottom: 100%;
   }

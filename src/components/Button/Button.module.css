@@ -61,7 +61,7 @@
   &:disabled,
   &:disabled:hover {
     @apply border-button-icon-brand-border-@ text-text-disabled;
-    background-color: var(--eds-theme-color-button-icon-background); /* --eds-theme-color-button-icon-brand-background */
+    background-color: var(--eds-theme-color-button-icon-background); 
 
     svg {
       @apply text-text-disabled;
