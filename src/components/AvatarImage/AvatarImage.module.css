@@ -10,7 +10,6 @@
 .avatar-image {
   @apply flex flex-col justify-center;
   @apply w-9 h-9 rounded-[50%];
-  /* background: white; */
   @apply bg-neutral-white;
 }
 
