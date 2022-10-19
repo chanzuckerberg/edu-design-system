@@ -1,7 +1,7 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 import { Icon } from './Icon';
-import * as ColorTokens from '../../tokens-dist/ts/colors';
+import * as ColorTokens from '../../tokens/ts/colors';
 import { ALL_ICONS } from '../../util/allIcons';
 import Text from '../Text';
 

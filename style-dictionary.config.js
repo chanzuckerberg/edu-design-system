@@ -14,7 +14,7 @@ const EDSStyleDictionary = StyleDictionary.extend({
     },
     css: {
       transforms: [...StyleDictionary.transformGroup.css, 'name/cti/kebab'],
-      buildPath: 'src/tokens-dist/',
+      buildPath: 'src/tokens/',
       files: [
         {
           format: 'css/variables',
@@ -32,7 +32,7 @@ const EDSStyleDictionary = StyleDictionary.extend({
     },
     js: {
       transformGroup: 'js',
-      buildPath: 'src/tokens-dist/',
+      buildPath: 'src/tokens/',
       files: [
         {
           format: 'javascript/es6',
@@ -46,7 +46,7 @@ const EDSStyleDictionary = StyleDictionary.extend({
     },
     json: {
       transformGroup: 'js',
-      buildPath: 'src/tokens-dist/',
+      buildPath: 'src/tokens/',
       files: [
         {
           format: 'json/nested',
@@ -57,7 +57,7 @@ const EDSStyleDictionary = StyleDictionary.extend({
     },
     scss: {
       transforms: [...StyleDictionary.transformGroup.scss, 'name/cti/kebab'],
-      buildPath: 'src/tokens-dist/',
+      buildPath: 'src/tokens/',
       files: [
         {
           format: 'scss/map-deep',

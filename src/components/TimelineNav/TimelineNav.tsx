@@ -9,7 +9,7 @@ import {
   EdsThemeColorBackgroundGradeReviseDefault,
   EdsThemeColorBackgroundGradeStopDefault,
   EdsThemeColorBorderNeutralSubtle,
-} from '../../tokens-dist/ts/colors';
+} from '../../tokens/ts/colors';
 import {
   L_ARROW_KEYCODE,
   U_ARROW_KEYCODE,

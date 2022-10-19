@@ -27,7 +27,7 @@ import {
 import {
   EdsThemeColorIconNeutralSubtle,
   EdsThemeColorIconBrandPrimary,
-} from '../../../src/tokens-dist/ts/colors';
+} from '../../../src/tokens/ts/colors';
 import NumberIconList from '../../recipes/NumberIconList';
 import { PageShell } from '../../recipes/PageShell/PageShell';
 

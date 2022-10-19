@@ -14,7 +14,7 @@ import PrimaryNavItem from '../../../src/components/PrimaryNavItem';
 import UtilityNav from '../../../src/components/UtilityNav';
 
 import breakpoint from '../../../src/design-tokens/tier-1-definitions/breakpoints';
-import { EdsThemeColorIconNeutralDefaultInverse } from '../../../src/tokens-dist/ts/colors';
+import { EdsThemeColorIconNeutralDefaultInverse } from '../../../src/tokens/ts/colors';
 
 export interface Props {
   /**

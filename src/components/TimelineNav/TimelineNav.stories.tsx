@@ -5,7 +5,7 @@ import { TimelineNav } from './TimelineNav';
 import {
   EdsThemeColorIconBrandPrimary,
   EdsThemeColorIconUtilitySuccess,
-} from '../../tokens-dist/ts/colors';
+} from '../../tokens/ts/colors';
 import Icon from '../Icon';
 import Text from '../Text';
 import TimelineNavPanel from '../TimelineNavPanel';

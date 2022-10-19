@@ -287,7 +287,7 @@ Use:
 Use:
 
 ```tsx
-import { EdsThemeColorUtilitySuccessForeground } from 'src/tokens-dist/ts/colors';
+import { EdsThemeColorUtilitySuccessForeground } from 'src/tokens/ts/colors';
 
 <Icon color={EdsThemeColorUtilitySuccessForeground} />;
 ```
