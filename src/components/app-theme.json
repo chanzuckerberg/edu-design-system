@@ -1,0 +1,1395 @@
+{
+  "eds": {
+    "anim": {
+      "fade": {
+        "quick": {
+          "value": "0.15s"
+        },
+        "long": {
+          "value": "0.4s"
+        }
+      },
+      "move": {
+        "quick": {
+          "value": "0.15s"
+        },
+        "medium": {
+          "value": "0.3s"
+        },
+        "long": {
+          "value": "0.4s"
+        }
+      },
+      "ease": {
+        "value": "ease"
+      }
+    },
+    "border": {
+      "width": {
+        "sm": {
+          "value": "1px"
+        },
+        "md": {
+          "value": "2px"
+        },
+        "lg": {
+          "value": "4px"
+        },
+        "xl": {
+          "value": "8px"
+        }
+      },
+      "radius": {
+        "md": {
+          "value": "4px"
+        },
+        "lg": {
+          "value": "8px"
+        },
+        "xl": {
+          "value": "20px"
+        },
+        "round": {
+          "value": "50%"
+        },
+        "full": {
+          "value": "9999px"
+        }
+      }
+    },
+    "color": {
+      "brand": {
+        "grape": {
+          "100": {
+            "value": "#F0F0FC"
+          },
+          "200": {
+            "value": "#E0E0F9"
+          },
+          "300": {
+            "value": "#C4C1F3"
+          },
+          "400": {
+            "value": "#A6A3EE"
+          },
+          "500": {
+            "value": "#8984E8"
+          },
+          "600": {
+            "value": "#6B65E2"
+          },
+          "700": {
+            "value": "#5751D2"
+          },
+          "800": {
+            "value": "#3E42B1"
+          }
+        }
+      },
+      "neutral": {
+        "100": {
+          "value": "#F4F6F8"
+        },
+        "200": {
+          "value": "#E7E8EA"
+        },
+        "300": {
+          "value": "#C0C4C8"
+        },
+        "400": {
+          "value": "#999EA3"
+        },
+        "500": {
+          "value": "#878C90"
+        },
+        "600": {
+          "value": "#5D6369"
+        },
+        "700": {
+          "value": "#383C43"
+        },
+        "800": {
+          "value": "#21272D"
+        },
+        "white": {
+          "value": "#FFFFFF"
+        },
+        "black": {
+          "value": "#161B1F"
+        }
+      },
+      "other": {
+        "mint": {
+          "100": {
+            "value": "#ECFFF5"
+          },
+          "200": {
+            "value": "#B7E9CE"
+          },
+          "300": {
+            "value": "#8FDCB3"
+          },
+          "400": {
+            "value": "#59C88C"
+          },
+          "500": {
+            "value": "#00A56A"
+          },
+          "600": {
+            "value": "#008656"
+          },
+          "700": {
+            "value": "#007249"
+          },
+          "800": {
+            "value": "#005939"
+          }
+        },
+        "yellow": {
+          "100": {
+            "value": "#FDF1D0"
+          },
+          "200": {
+            "value": "#FFEBB3"
+          },
+          "300": {
+            "value": "#FFDD80"
+          },
+          "400": {
+            "value": "#F7BE2D"
+          },
+          "500": {
+            "value": "#D18400"
+          },
+          "600": {
+            "value": "#BF7300"
+          },
+          "700": {
+            "value": "#9E5B03"
+          },
+          "800": {
+            "value": "#854C03"
+          }
+        },
+        "lemon": {
+          "value": "#F5FF8F"
+        },
+        "eraser": {
+          "value": "#F3DCE2"
+        },
+        "orange": {
+          "100": {
+            "value": "#FFF1E9"
+          },
+          "200": {
+            "value": "#FFCBA5"
+          },
+          "300": {
+            "value": "#FFAF76"
+          },
+          "400": {
+            "value": "#F6924A"
+          },
+          "500": {
+            "value": "#E06B00"
+          },
+          "600": {
+            "value": "#C64600"
+          },
+          "700": {
+            "value": "#AC3400"
+          },
+          "800": {
+            "value": "#842800"
+          }
+        },
+        "ruby": {
+          "100": {
+            "value": "#FFF0F4"
+          },
+          "200": {
+            "value": "#FFCBD7"
+          },
+          "300": {
+            "value": "#FB90B0"
+          },
+          "400": {
+            "value": "#F76C96"
+          },
+          "500": {
+            "value": "#F1497B"
+          },
+          "600": {
+            "value": "#D41E52"
+          },
+          "700": {
+            "value": "#BD0044"
+          },
+          "800": {
+            "value": "#8F0134"
+          }
+        }
+      },
+      "highlight": {
+        "100": {
+          "value": "#FF9FEC"
+        },
+        "200": {
+          "value": "#FFBEAA"
+        },
+        "300": {
+          "value": "#FCFF00"
+        },
+        "400": {
+          "value": "#9DFFA4"
+        },
+        "500": {
+          "value": "#00F1FF"
+        },
+        "600": {
+          "value": "#CFC9FF"
+        }
+      },
+      "info": {
+        "100": {
+          "value": "#F1F9FF"
+        },
+        "200": {
+          "value": "#B0D5FF"
+        },
+        "300": {
+          "value": "#7FB9FD"
+        },
+        "400": {
+          "value": "#5CA7FF"
+        },
+        "500": {
+          "value": "#328EFB"
+        },
+        "600": {
+          "value": "#1977CD"
+        },
+        "700": {
+          "value": "#0563B8"
+        }
+      }
+    },
+    "l": {
+      "max-width": {
+        "value": "71.25rem"
+      },
+      "sidebar-width": {
+        "value": "13.5rem"
+      },
+      "linelength-width": {
+        "value": "36rem"
+      }
+    },
+    "box-shadow": {
+      "sm": {
+        "value": "0px 0px 1px rgba(0, 0, 0, 0.25), 0px 2px 1px rgba(0, 0, 0, 0.05)"
+      },
+      "md": {
+        "value": "0px 0px 2px rgba(0, 0, 0, 0.2), 0px 2px 8px rgba(0, 0, 0, 0.08)"
+      },
+      "lg": {
+        "value": "0px 4px 12px rgba(0, 0, 0, 0.16)"
+      },
+      "xl": {
+        "value": "0px 6px 20px rgba(0, 0, 0, 0.2)"
+      }
+    },
+    "size": {
+      "1": {
+        "value": "0.5rem"
+      },
+      "2": {
+        "value": "1rem"
+      },
+      "3": {
+        "value": "1.5rem"
+      },
+      "4": {
+        "value": "2rem"
+      },
+      "5": {
+        "value": "2.5rem"
+      },
+      "6": {
+        "value": "3rem"
+      },
+      "7": {
+        "value": "3.5rem"
+      },
+      "8": {
+        "value": "4rem"
+      },
+      "9": {
+        "value": "4.5rem"
+      },
+      "10": {
+        "value": "5rem"
+      },
+      "12": {
+        "value": "6rem"
+      },
+      "base-unit": {
+        "value": "0.5rem"
+      },
+      "half": {
+        "value": "0.25rem"
+      },
+      "quarter": {
+        "value": "0.125rem"
+      },
+      "1-and-half": {
+        "value": "0.75rem"
+      },
+      "2-and-half": {
+        "value": "1.25rem"
+      }
+    },
+    "font-family": {
+      "primary": {
+        "value": "'Graphik', sans-serif"
+      },
+      "secondary": {
+        "value": "'Open Sans', sans-serif"
+      }
+    },
+    "font-size": {
+      "11": {
+        "value": "0.688rem"
+      },
+      "12": {
+        "value": "0.75rem"
+      },
+      "14": {
+        "value": "0.875rem"
+      },
+      "16": {
+        "value": "1rem"
+      },
+      "18": {
+        "value": "1.125rem"
+      },
+      "24": {
+        "value": "1.5rem"
+      },
+      "28": {
+        "value": "1.75rem"
+      },
+      "32": {
+        "value": "2rem"
+      },
+      "40": {
+        "value": "2.5rem"
+      },
+      "base": {
+        "value": "16px"
+      }
+    },
+    "font-weight": {
+      "light": {
+        "value": "400"
+      },
+      "medium": {
+        "value": "500"
+      },
+      "bold": {
+        "value": "600"
+      }
+    },
+    "letter-spacing": {
+      "sm": {
+        "value": "0.5px"
+      }
+    },
+    "z-index": {
+      "0": {
+        "value": "0"
+      },
+      "100": {
+        "value": "100"
+      },
+      "200": {
+        "value": "200"
+      },
+      "300": {
+        "value": "300"
+      },
+      "400": {
+        "value": "400"
+      },
+      "500": {
+        "value": "500"
+      },
+      "top": {
+        "value": "99999"
+      },
+      "bottom": {
+        "value": "-100"
+      }
+    },
+    "theme": {
+      "border": {
+        "width": {
+          "value": "1px"
+        }
+      },
+      "color": {
+        "background": {
+          "neutral": {
+            "default": {
+              "@": {
+                "value": "#FFFFFF"
+              },
+              "hover": {
+                "value": "#F4F6F8"
+              }
+            },
+            "subtle": {
+              "@": {
+                "value": "#F4F6F8"
+              },
+              "hover": {
+                "value": "#E7E8EA"
+              }
+            },
+            "medium": {
+              "@": {
+                "value": "#E7E8EA"
+              },
+              "hover": {
+                "value": "#C0C4C8"
+              }
+            }
+          },
+          "brand": {
+            "primary": {
+              "default": {
+                "value": "#F0F0FC"
+              },
+              "strong": {
+                "@": {
+                  "value": "#6B65E2"
+                },
+                "hover": {
+                  "value": "#3E42B1"
+                }
+              }
+            }
+          },
+          "utility": {
+            "success": {
+              "value": "#ECFFF5"
+            },
+            "warning": {
+              "value": "#FFF1E9"
+            },
+            "error": {
+              "value": "#FFF0F4"
+            }
+          },
+          "grade": {
+            "complete": {
+              "default": {
+                "value": "#008656"
+              },
+              "subtle": {
+                "value": "#ECFFF5"
+              }
+            },
+            "revise": {
+              "default": {
+                "value": "#F7BE2D"
+              },
+              "subtle": {
+                "value": "#FDF1D0"
+              }
+            },
+            "stop": {
+              "default": {
+                "value": "#D41E52"
+              },
+              "subtle": {
+                "value": "#FFF0F4"
+              }
+            }
+          },
+          "disabled": {
+            "value": "#C0C4C8"
+          }
+        },
+        "border": {
+          "link": {
+            "neutral": {
+              "value": "#21272D"
+            },
+            "brand": {
+              "value": "#5751D2"
+            }
+          },
+          "neutral": {
+            "subtle": {
+              "@": {
+                "value": "#E7E8EA"
+              },
+              "hover": {
+                "value": "#C0C4C8"
+              }
+            },
+            "default": {
+              "@": {
+                "value": "#C0C4C8"
+              },
+              "hover": {
+                "value": "#999EA3"
+              }
+            },
+            "strong": {
+              "@": {
+                "value": "#999EA3"
+              },
+              "hover": {
+                "value": "#878C90"
+              }
+            }
+          },
+          "brand": {
+            "primary": {
+              "subtle": {
+                "value": "#E0E0F9"
+              },
+              "@": {
+                "value": "#C4C1F3"
+              },
+              "strong": {
+                "value": "#A6A3EE"
+              }
+            }
+          },
+          "utility": {
+            "success": {
+              "subtle": {
+                "value": "#B7E9CE"
+              },
+              "default": {
+                "value": "#8FDCB3"
+              },
+              "strong": {
+                "value": "#59C88C"
+              }
+            },
+            "warning": {
+              "subtle": {
+                "value": "#FFCBA5"
+              },
+              "default": {
+                "value": "#FFAF76"
+              },
+              "strong": {
+                "value": "#F6924A"
+              }
+            },
+            "error": {
+              "subtle": {
+                "value": "#FFCBD7"
+              },
+              "default": {
+                "value": "#FB90B0"
+              },
+              "strong": {
+                "value": "#F76C96"
+              }
+            }
+          },
+          "grade": {
+            "complete": {
+              "value": "#8FDCB3"
+            },
+            "revise": {
+              "subtle": {
+                "value": "#FFEBB3"
+              },
+              "default": {
+                "value": "#FFDD80"
+              },
+              "strong": {
+                "value": "#F7BE2D"
+              }
+            },
+            "stop": {
+              "value": "#FB90B0"
+            }
+          },
+          "disabled": {
+            "value": "#C0C4C8"
+          }
+        },
+        "icon": {
+          "neutral": {
+            "default": {
+              "@": {
+                "value": "#5D6369"
+              },
+              "inverse": {
+                "value": "#FFFFFF"
+              },
+              "hover": {
+                "value": "#383C43"
+              }
+            },
+            "strong": {
+              "@": {
+                "value": "#383C43"
+              },
+              "hover": {
+                "value": "#21272D"
+              }
+            },
+            "subtle": {
+              "@": {
+                "value": "#878C90"
+              },
+              "hover": {
+                "value": "#5D6369"
+              }
+            }
+          },
+          "link": {
+            "default": {
+              "@": {
+                "value": "#8984E8"
+              },
+              "hover": {
+                "value": "#6B65E2"
+              }
+            }
+          },
+          "brand": {
+            "primary": {
+              "@": {
+                "value": "#8984E8"
+              },
+              "hover": {
+                "value": "#6B65E2"
+              }
+            }
+          },
+          "utility": {
+            "success": {
+              "@": {
+                "value": "#00A56A"
+              },
+              "hover": {
+                "value": "#008656"
+              }
+            },
+            "warning": {
+              "@": {
+                "value": "#E06B00"
+              },
+              "hover": {
+                "value": "#C64600"
+              }
+            },
+            "error": {
+              "@": {
+                "value": "#F1497B"
+              },
+              "hover": {
+                "value": "#D41E52"
+              }
+            }
+          },
+          "grade": {
+            "complete": {
+              "@": {
+                "value": "#00A56A"
+              },
+              "hover": {
+                "value": "#00A56A"
+              }
+            },
+            "revise": {
+              "@": {
+                "value": "#21272D"
+              },
+              "hover": {
+                "value": "#161B1F"
+              }
+            },
+            "stop": {
+              "@": {
+                "value": "#F1497B"
+              },
+              "hover": {
+                "value": "#D41E52"
+              }
+            }
+          },
+          "disabled": {
+            "value": "#C0C4C8"
+          }
+        },
+        "text": {
+          "neutral": {
+            "default": {
+              "@": {
+                "value": "#383C43"
+              },
+              "inverse": {
+                "value": "#FFFFFF"
+              }
+            },
+            "strong": {
+              "value": "#21272D"
+            },
+            "subtle": {
+              "value": "#5D6369"
+            }
+          },
+          "link": {
+            "neutral": {
+              "value": "#21272D"
+            },
+            "brand": {
+              "value": "#5751D2"
+            }
+          },
+          "utility": {
+            "success": {
+              "value": "#007249"
+            },
+            "warning": {
+              "value": "#AC3400"
+            },
+            "error": {
+              "value": "#BD0044"
+            }
+          },
+          "grade": {
+            "complete": {
+              "value": "#007249"
+            },
+            "revise": {
+              "value": "#21272D"
+            },
+            "stop": {
+              "value": "#BD0044"
+            }
+          },
+          "disabled": {
+            "value": "#C0C4C8"
+          },
+          "brand": {
+            "primary": {
+              "value": "#5751D2"
+            }
+          }
+        },
+        "transparent": {
+          "black": {
+            "0": {
+              "value": "rgba(0, 0, 0, 0)"
+            },
+            "30": {
+              "value": "rgba(0, 0, 0, .3)"
+            }
+          },
+          "white": {
+            "0": {
+              "value": "rgba(255, 255, 255, 0)"
+            }
+          }
+        },
+        "body": {
+          "background": {
+            "@": {
+              "value": "#F4F6F8"
+            },
+            "inverted": {
+              "value": "#383C43"
+            }
+          }
+        },
+        "button": {
+          "primary": {
+            "brand": {
+              "background": {
+                "@": {
+                  "value": "#6B65E2"
+                },
+                "hover": {
+                  "value": "#5751D2"
+                },
+                "active": {
+                  "value": "#3E42B1"
+                }
+              },
+              "border": {
+                "@": {
+                  "value": "#6B65E2"
+                },
+                "hover": {
+                  "value": "#5751D2"
+                },
+                "active": {
+                  "value": "#3E42B1"
+                }
+              },
+              "text": {
+                "@": {
+                  "value": "#FFFFFF"
+                },
+                "hover": {
+                  "value": "#FFFFFF"
+                },
+                "active": {
+                  "value": "#FFFFFF"
+                }
+              }
+            },
+            "error": {
+              "background": {
+                "@": {
+                  "value": "#D41E52"
+                },
+                "hover": {
+                  "value": "#BD0044"
+                },
+                "active": {
+                  "value": "#8F0134"
+                }
+              },
+              "border": {
+                "@": {
+                  "value": "#D41E52"
+                },
+                "hover": {
+                  "value": "#BD0044"
+                },
+                "active": {
+                  "value": "#8F0134"
+                }
+              },
+              "text": {
+                "@": {
+                  "value": "#FFFFFF"
+                },
+                "hover": {
+                  "value": "#FFFFFF"
+                },
+                "active": {
+                  "value": "#FFFFFF"
+                }
+              }
+            }
+          },
+          "secondary": {
+            "brand": {
+              "background": {
+                "@": {
+                  "value": "rgba(0, 0, 0, 0)"
+                },
+                "hover": {
+                  "value": "#5751D2"
+                },
+                "active": {
+                  "value": "#3E42B1"
+                }
+              },
+              "border": {
+                "@": {
+                  "value": "#6B65E2"
+                },
+                "hover": {
+                  "value": "#5751D2"
+                },
+                "active": {
+                  "value": "#3E42B1"
+                }
+              },
+              "text": {
+                "@": {
+                  "value": "#5751D2"
+                },
+                "hover": {
+                  "value": "#FFFFFF"
+                },
+                "active": {
+                  "value": "#FFFFFF"
+                }
+              },
+              "icon": {
+                "@": {
+                  "value": "#6B65E2"
+                },
+                "hover": {
+                  "value": "#FFFFFF"
+                },
+                "active": {
+                  "value": "#FFFFFF"
+                }
+              }
+            },
+            "neutral": {
+              "background": {
+                "@": {
+                  "value": "rgba(0, 0, 0, 0)"
+                },
+                "hover": {
+                  "value": "#E7E8EA"
+                },
+                "active": {
+                  "value": "#383C43"
+                }
+              },
+              "border": {
+                "@": {
+                  "value": "#5D6369"
+                },
+                "hover": {
+                  "value": "#5D6369"
+                },
+                "active": {
+                  "value": "#383C43"
+                }
+              },
+              "text": {
+                "@": {
+                  "value": "#5D6369"
+                },
+                "hover": {
+                  "value": "#5D6369"
+                },
+                "active": {
+                  "value": "#FFFFFF"
+                }
+              },
+              "icon": {
+                "@": {
+                  "value": "#999EA3"
+                },
+                "hover": {
+                  "value": "#999EA3"
+                },
+                "active": {
+                  "value": "#FFFFFF"
+                }
+              }
+            },
+            "success": {
+              "background": {
+                "@": {
+                  "value": "rgba(0, 0, 0, 0)"
+                },
+                "hover": {
+                  "value": "#007249"
+                },
+                "active": {
+                  "value": "#005939"
+                }
+              },
+              "border": {
+                "@": {
+                  "value": "#008656"
+                },
+                "hover": {
+                  "value": "#007249"
+                },
+                "active": {
+                  "value": "#005939"
+                }
+              },
+              "text": {
+                "@": {
+                  "value": "#007249"
+                },
+                "hover": {
+                  "value": "#FFFFFF"
+                },
+                "active": {
+                  "value": "#FFFFFF"
+                }
+              },
+              "icon": {
+                "@": {
+                  "value": "#008656"
+                },
+                "hover": {
+                  "value": "#FFFFFF"
+                },
+                "active": {
+                  "value": "#FFFFFF"
+                }
+              }
+            },
+            "warning": {
+              "background": {
+                "@": {
+                  "value": "rgba(0, 0, 0, 0)"
+                },
+                "hover": {
+                  "value": "#AC3400"
+                },
+                "active": {
+                  "value": "#842800"
+                }
+              },
+              "border": {
+                "@": {
+                  "value": "#C64600"
+                },
+                "hover": {
+                  "value": "#AC3400"
+                },
+                "active": {
+                  "value": "#842800"
+                }
+              },
+              "text": {
+                "@": {
+                  "value": "#AC3400"
+                },
+                "hover": {
+                  "value": "#FFFFFF"
+                },
+                "active": {
+                  "value": "#FFFFFF"
+                }
+              },
+              "icon": {
+                "@": {
+                  "value": "#C64600"
+                },
+                "hover": {
+                  "value": "#FFFFFF"
+                },
+                "active": {
+                  "value": "#FFFFFF"
+                }
+              }
+            },
+            "error": {
+              "background": {
+                "@": {
+                  "value": "rgba(0, 0, 0, 0)"
+                },
+                "hover": {
+                  "value": "#BD0044"
+                },
+                "active": {
+                  "value": "#8F0134"
+                }
+              },
+              "border": {
+                "@": {
+                  "value": "#D41E52"
+                },
+                "hover": {
+                  "value": "#BD0044"
+                },
+                "active": {
+                  "value": "#8F0134"
+                }
+              },
+              "text": {
+                "@": {
+                  "value": "#BD0044"
+                },
+                "hover": {
+                  "value": "#FFFFFF"
+                },
+                "active": {
+                  "value": "#FFFFFF"
+                }
+              },
+              "icon": {
+                "@": {
+                  "value": "#D41E52"
+                },
+                "hover": {
+                  "value": "#FFFFFF"
+                },
+                "active": {
+                  "value": "#FFFFFF"
+                }
+              }
+            }
+          },
+          "icon": {
+            "brand": {
+              "@": {
+                "value": "#6B65E2"
+              },
+              "hover": {
+                "value": "#6B65E2"
+              },
+              "active": {
+                "value": "#FFFFFF"
+              },
+              "background": {
+                "@": {
+                  "value": "rgba(0, 0, 0, 0)"
+                },
+                "hover": {
+                  "value": "#E0E0F9"
+                },
+                "active": {
+                  "value": "#5751D2"
+                }
+              },
+              "border": {
+                "@": {
+                  "value": "rgba(0, 0, 0, 0)"
+                },
+                "hover": {
+                  "value": "#E0E0F9"
+                },
+                "active": {
+                  "value": "#5751D2"
+                }
+              },
+              "text": {
+                "@": {
+                  "value": "#5751D2"
+                },
+                "hover": {
+                  "value": "#5751D2"
+                },
+                "active": {
+                  "value": "#FFFFFF"
+                }
+              }
+            },
+            "neutral": {
+              "@": {
+                "value": "#5D6369"
+              },
+              "hover": {
+                "value": "#5D6369"
+              },
+              "active": {
+                "value": "#FFFFFF"
+              },
+              "background": {
+                "@": {
+                  "value": "rgba(0, 0, 0, 0)"
+                },
+                "hover": {
+                  "value": "#E7E8EA"
+                },
+                "active": {
+                  "value": "#5D6369"
+                }
+              },
+              "border": {
+                "@": {
+                  "value": "rgba(0, 0, 0, 0)"
+                },
+                "hover": {
+                  "value": "#E7E8EA"
+                },
+                "active": {
+                  "value": "#5D6369"
+                }
+              },
+              "text": {
+                "@": {
+                  "value": "#5D6369"
+                },
+                "hover": {
+                  "value": "#5D6369"
+                },
+                "active": {
+                  "value": "#FFFFFF"
+                }
+              }
+            },
+            "success": {
+              "@": {
+                "value": "#008656"
+              },
+              "hover": {
+                "value": "#008656"
+              },
+              "active": {
+                "value": "#FFFFFF"
+              },
+              "background": {
+                "@": {
+                  "value": "rgba(0, 0, 0, 0)"
+                },
+                "hover": {
+                  "value": "#B7E9CE"
+                },
+                "active": {
+                  "value": "#007249"
+                }
+              },
+              "border": {
+                "@": {
+                  "value": "rgba(0, 0, 0, 0)"
+                },
+                "hover": {
+                  "value": "#B7E9CE"
+                },
+                "active": {
+                  "value": "#007249"
+                }
+              },
+              "text": {
+                "@": {
+                  "value": "#007249"
+                },
+                "hover": {
+                  "value": "#007249"
+                },
+                "active": {
+                  "value": "#FFFFFF"
+                }
+              }
+            },
+            "warning": {
+              "@": {
+                "value": "#C64600"
+              },
+              "hover": {
+                "value": "#C64600"
+              },
+              "active": {
+                "value": "#FFFFFF"
+              },
+              "background": {
+                "@": {
+                  "value": "rgba(0, 0, 0, 0)"
+                },
+                "hover": {
+                  "value": "#FFF1E9"
+                },
+                "active": {
+                  "value": "#AC3400"
+                }
+              },
+              "border": {
+                "@": {
+                  "value": "rgba(0, 0, 0, 0)"
+                },
+                "hover": {
+                  "value": "#FFF1E9"
+                },
+                "active": {
+                  "value": "#AC3400"
+                }
+              },
+              "text": {
+                "@": {
+                  "value": "#AC3400"
+                },
+                "hover": {
+                  "value": "#AC3400"
+                },
+                "active": {
+                  "value": "#FFFFFF"
+                }
+              }
+            },
+            "error": {
+              "@": {
+                "value": "#D41E52"
+              },
+              "hover": {
+                "value": "#D41E52"
+              },
+              "active": {
+                "value": "#FFFFFF"
+              },
+              "background": {
+                "@": {
+                  "value": "rgba(0, 0, 0, 0)"
+                },
+                "hover": {
+                  "value": "#FFCBD7"
+                },
+                "active": {
+                  "value": "#BD0044"
+                }
+              },
+              "border": {
+                "@": {
+                  "value": "rgba(0, 0, 0, 0)"
+                },
+                "hover": {
+                  "value": "#FFCBD7"
+                },
+                "active": {
+                  "value": "#BD0044"
+                }
+              },
+              "text": {
+                "@": {
+                  "value": "#BD0044"
+                },
+                "hover": {
+                  "value": "#BD0044"
+                },
+                "active": {
+                  "value": "#FFFFFF"
+                }
+              }
+            }
+          }
+        },
+        "focus-ring": {
+          "@": {
+            "value": "#6B65E2"
+          },
+          "inverted": {
+            "value": "#FFFFFF"
+          }
+        },
+        "form": {
+          "border": {
+            "@": {
+              "value": "#878C90"
+            },
+            "hover": {
+              "value": "#21272D"
+            }
+          },
+          "background": {
+            "@": {
+              "value": "#FFFFFF"
+            },
+            "hover": {
+              "value": "#F4F6F8"
+            }
+          },
+          "label": {
+            "value": "#383C43"
+          }
+        },
+        "text-highlight": {
+          "foreground": {
+            "value": "#21272D"
+          },
+          "background": {
+            "value": "#F5FF8F"
+          }
+        }
+      },
+      "form": {
+        "border": {
+          "width": {
+            "value": "1px"
+          },
+          "radius": {
+            "value": "4px"
+          }
+        }
+      }
+    }
+  }
+}

@@ -30,9 +30,14 @@
     "url": "https://github.com/chanzuckerberg/edu-design-system/issues"
   },
   "files": [
+    "/bin",
     "/lib",
     "tailwind.config.*"
   ],
+  "bin": {
+    "eds-apply-theme": "bin/eds-apply-theme.js",
+    "eds-init": "bin/eds-init.js"
+  },
   "scripts": {
     "build": "yarn build:clean && yarn build:tokens && yarn build:declarations && yarn build:js && yarn copy-fonts-to-lib",
     "build:clean": "rm -rf lib/",
@@ -89,12 +94,16 @@
     "@types/lodash": "^4.14.197",
     "clsx": "^1.2.1",
     "graphemer": "^1.4.0",
+    "lilconfig": "^2.0.6",
     "lodash": "^4.17.21",
     "react-beautiful-dnd": "^13.1.1",
     "react-children-by-type": "^1.1.0",
     "react-focus-lock": "^2.9.5",
     "react-popper": "^2.3.0",
-    "react-portal": "^4.2.2"
+    "react-portal": "^4.2.2",
+    "react-uid": "^2.3.2",
+    "style-dictionary": "^3.7.0",
+    "svg4everybody": "^2.1.9"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.22.14",
@@ -181,6 +190,10 @@
     "*.css": [
       "stylelint --fix"
     ]
+  },
+  "eds": {
+    "json": "src/components/",
+    "css": "src/components/"
   },
   "packageManager": "yarn@3.6.3"
 }

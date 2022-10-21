@@ -2469,6 +2469,7 @@ __metadata:
     jest: ^29.6.4
     jest-environment-jsdom: ^29.6.4
     jest-preset-stylelint: ^6.2.0
+    lilconfig: ^2.0.6
     lint-staged: ^13.3.0
     lodash: ^4.17.21
     pascal-case: ^3.1.2
@@ -2487,6 +2488,7 @@ __metadata:
     react-focus-lock: ^2.9.5
     react-popper: ^2.3.0
     react-portal: ^4.2.2
+    react-uid: ^2.3.2
     rollup: ^3.28.1
     rollup-plugin-postcss: ^4.0.2
     size-limit: ^8.2.6
@@ -2496,12 +2498,16 @@ __metadata:
     style-dictionary: ^3.8.0
     stylelint: ^15.10.3
     stylelint-config-recommended: ^10.0.1
+    svg4everybody: ^2.1.9
     tailwindcss: ^3.3.3
     ts-jest: ^29.1.1
     typescript: ^4.9.5
   peerDependencies:
     react: ">= 17"
     react-dom: ">= 17"
+  bin:
+    eds-apply-theme: bin/eds-apply-theme.js
+    eds-init: bin/eds-init.js
   languageName: unknown
   linkType: soft
 
@@ -14593,7 +14599,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lilconfig@npm:2.1.0, lilconfig@npm:^2.0.3, lilconfig@npm:^2.1.0":
+"lilconfig@npm:2.1.0, lilconfig@npm:^2.0.3, lilconfig@npm:^2.0.6, lilconfig@npm:^2.1.0":
   version: 2.1.0
   resolution: "lilconfig@npm:2.1.0"
   checksum: 8549bb352b8192375fed4a74694cd61ad293904eee33f9d4866c2192865c44c4eb35d10782966242634e0cbc1e91fe62b1247f148dc5514918e3a966da7ea117
@@ -18002,6 +18008,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-uid@npm:^2.3.2":
+  version: 2.3.3
+  resolution: "react-uid@npm:2.3.3"
+  dependencies:
+    tslib: ^2.0.0
+  peerDependencies:
+    "@types/react": ^16.8.0 || ^17.0.0 || ^18.0.0
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: d8f1a90043800d0d4854445534bdb997b71335eaca40017240a49aedadf1ea7f6c1b3fce150188d8ea726650e1cb4c7d7991c699d9713d16244bf4abb7fff12c
+  languageName: node
+  linkType: hard
+
 "react@npm:^18.2.0":
   version: 18.2.0
   resolution: "react@npm:18.2.0"
@@ -19801,6 +19822,13 @@ __metadata:
   version: 1.0.0
   resolution: "svg-tags@npm:1.0.0"
   checksum: 407e5ef87cfa2fb81c61d738081c2decd022ce13b922d035b214b49810630bf5d1409255a4beb3a940b77b32f6957806deff16f1bf0ce1ab11c7a184115a0b7f
+  languageName: node
+  linkType: hard
+
+"svg4everybody@npm:^2.1.9":
+  version: 2.1.9
+  resolution: "svg4everybody@npm:2.1.9"
+  checksum: 11c4445517676d28fa46c3df63ee728575eb2261db1c1f36b04fcc8fb33b7f497bb0dcb37ed2a119820fb2f04f929b76f4b3a192a0ca197f08905dea31a13b06
   languageName: node
   linkType: hard
 
