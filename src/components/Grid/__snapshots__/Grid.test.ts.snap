@@ -49,6 +49,15 @@ exports[`<Grid /> Default story renders snapshot 1`] = `
       Grid Item
     </div>
   </div>
+  <div
+    class="grid__item"
+  >
+    <div
+      class="fpo !mt-0 !mb-0"
+    >
+      Grid Item
+    </div>
+  </div>
 </div>
 `;
 
@@ -56,6 +65,15 @@ exports[`<Grid /> FourUpGrid story renders snapshot 1`] = `
 <div
   class="grid grid--4up"
 >
+  <div
+    class="grid__item"
+  >
+    <div
+      class="fpo !mt-0 !mb-0"
+    >
+      Grid Item
+    </div>
+  </div>
   <div
     class="grid__item"
   >
@@ -153,6 +171,15 @@ exports[`<Grid /> OneToThreeUpGrid story renders snapshot 1`] = `
       Grid Item
     </div>
   </div>
+  <div
+    class="grid__item"
+  >
+    <div
+      class="fpo !mt-0 !mb-0"
+    >
+      Grid Item
+    </div>
+  </div>
 </div>
 `;
 
@@ -160,6 +187,15 @@ exports[`<Grid /> OneToTwoToFourUpGrid story renders snapshot 1`] = `
 <div
   class="grid grid--1-2-4up"
 >
+  <div
+    class="grid__item"
+  >
+    <div
+      class="fpo !mt-0 !mb-0"
+    >
+      Grid Item
+    </div>
+  </div>
   <div
     class="grid__item"
   >
@@ -257,6 +293,15 @@ exports[`<Grid /> OneToTwoToOneUpGrid story renders snapshot 1`] = `
       Grid Item
     </div>
   </div>
+  <div
+    class="grid__item"
+  >
+    <div
+      class="fpo !mt-0 !mb-0"
+    >
+      Grid Item
+    </div>
+  </div>
 </div>
 `;
 
@@ -264,6 +309,15 @@ exports[`<Grid /> SideBySide story renders snapshot 1`] = `
 <div
   class="grid grid--side-by-side"
 >
+  <div
+    class="grid__item"
+  >
+    <div
+      class="fpo !mt-0 !mb-0"
+    >
+      Grid Item
+    </div>
+  </div>
   <div
     class="grid__item"
   >
@@ -361,6 +415,15 @@ exports[`<Grid /> ThreeUpGrid story renders snapshot 1`] = `
       Grid Item
     </div>
   </div>
+  <div
+    class="grid__item"
+  >
+    <div
+      class="fpo !mt-0 !mb-0"
+    >
+      Grid Item
+    </div>
+  </div>
 </div>
 `;
 
@@ -368,6 +431,15 @@ exports[`<Grid /> TwoUpGrid story renders snapshot 1`] = `
 <div
   class="grid grid--2up"
 >
+  <div
+    class="grid__item"
+  >
+    <div
+      class="fpo !mt-0 !mb-0"
+    >
+      Grid Item
+    </div>
+  </div>
   <div
     class="grid__item"
   >
