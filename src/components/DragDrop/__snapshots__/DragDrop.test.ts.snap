@@ -253,7 +253,7 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
           data-rbd-droppable-id="container-2"
         >
           <div
-            class="layout-linelength-container text text--body text-passage text-passage--body u-margin-bottom-xl"
+            class="layout-linelength-container text text--body text-passage text-passage--body !mb-8"
           >
             <p>
               Drag in available projects to build your couse plan
@@ -707,7 +707,7 @@ exports[`<DragDrop /> HoveredHandle story renders snapshot 1`] = `
           data-rbd-droppable-id="container-2"
         >
           <div
-            class="layout-linelength-container text text--body text-passage text-passage--body u-margin-bottom-xl"
+            class="layout-linelength-container text text--body text-passage text-passage--body !mb-8"
           >
             <p>
               Drag in available projects to build your couse plan
@@ -865,7 +865,7 @@ exports[`<DragDrop /> Interactive story renders snapshot 1`] = `
       >
         <header>
           <div
-            class="toolbar toolbar--bare u-margin-bottom-md"
+            class="toolbar toolbar--bare !mb-4"
           >
             <div
               class="toolbar__item"
@@ -1271,7 +1271,7 @@ exports[`<DragDrop /> Interactive story renders snapshot 1`] = `
       >
         <header>
           <div
-            class="toolbar toolbar--bare u-margin-bottom-md"
+            class="toolbar toolbar--bare !mb-4"
           >
             <div
               class="toolbar__item"
@@ -1311,7 +1311,7 @@ exports[`<DragDrop /> Interactive story renders snapshot 1`] = `
           data-rbd-droppable-id="container-2"
         >
           <p
-            class="text text--body u-margin-bottom-xl"
+            class="text text--body !mb-8"
           >
             Empty Content
           </p>
@@ -1322,7 +1322,7 @@ exports[`<DragDrop /> Interactive story renders snapshot 1`] = `
       >
         <header>
           <div
-            class="toolbar toolbar--bare u-margin-bottom-md"
+            class="toolbar toolbar--bare !mb-4"
           >
             <div
               class="toolbar__item"
@@ -1362,7 +1362,7 @@ exports[`<DragDrop /> Interactive story renders snapshot 1`] = `
           data-rbd-droppable-id="container-3"
         >
           <p
-            class="text text--body u-margin-bottom-xl"
+            class="text text--body !mb-8"
           >
             Empty Content
           </p>
@@ -1373,7 +1373,7 @@ exports[`<DragDrop /> Interactive story renders snapshot 1`] = `
       >
         <header>
           <div
-            class="toolbar toolbar--bare u-margin-bottom-md"
+            class="toolbar toolbar--bare !mb-4"
           >
             <div
               class="toolbar__item"
@@ -1413,7 +1413,7 @@ exports[`<DragDrop /> Interactive story renders snapshot 1`] = `
           data-rbd-droppable-id="container-4"
         >
           <p
-            class="text text--body u-margin-bottom-xl"
+            class="text text--body !mb-8"
           >
             Empty Content
           </p>

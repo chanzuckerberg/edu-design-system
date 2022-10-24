@@ -8,7 +8,7 @@ exports[`<Grid /> Default story renders snapshot 1`] = `
     class="grid__item"
   >
     <div
-      class="fpo u-margin-top-none u-margin-bottom-none"
+      class="fpo !mt-0 !mb-0"
     >
       Grid Item
     </div>
@@ -17,7 +17,7 @@ exports[`<Grid /> Default story renders snapshot 1`] = `
     class="grid__item"
   >
     <div
-      class="fpo u-margin-top-none u-margin-bottom-none"
+      class="fpo !mt-0 !mb-0"
     >
       Grid Item
     </div>
@@ -26,7 +26,7 @@ exports[`<Grid /> Default story renders snapshot 1`] = `
     class="grid__item"
   >
     <div
-      class="fpo u-margin-top-none u-margin-bottom-none"
+      class="fpo !mt-0 !mb-0"
     >
       Grid Item
     </div>
@@ -35,7 +35,7 @@ exports[`<Grid /> Default story renders snapshot 1`] = `
     class="grid__item"
   >
     <div
-      class="fpo u-margin-top-none u-margin-bottom-none"
+      class="fpo !mt-0 !mb-0"
     >
       Grid Item
     </div>
@@ -44,16 +44,7 @@ exports[`<Grid /> Default story renders snapshot 1`] = `
     class="grid__item"
   >
     <div
-      class="fpo u-margin-top-none u-margin-bottom-none"
-    >
-      Grid Item
-    </div>
-  </div>
-  <div
-    class="grid__item"
-  >
-    <div
-      class="fpo u-margin-top-none u-margin-bottom-none"
+      class="fpo !mt-0 !mb-0"
     >
       Grid Item
     </div>
@@ -69,7 +60,7 @@ exports[`<Grid /> FourUpGrid story renders snapshot 1`] = `
     class="grid__item"
   >
     <div
-      class="fpo u-margin-top-none u-margin-bottom-none"
+      class="fpo !mt-0 !mb-0"
     >
       Grid Item
     </div>
@@ -78,7 +69,7 @@ exports[`<Grid /> FourUpGrid story renders snapshot 1`] = `
     class="grid__item"
   >
     <div
-      class="fpo u-margin-top-none u-margin-bottom-none"
+      class="fpo !mt-0 !mb-0"
     >
       Grid Item
     </div>
@@ -87,7 +78,7 @@ exports[`<Grid /> FourUpGrid story renders snapshot 1`] = `
     class="grid__item"
   >
     <div
-      class="fpo u-margin-top-none u-margin-bottom-none"
+      class="fpo !mt-0 !mb-0"
     >
       Grid Item
     </div>
@@ -96,7 +87,7 @@ exports[`<Grid /> FourUpGrid story renders snapshot 1`] = `
     class="grid__item"
   >
     <div
-      class="fpo u-margin-top-none u-margin-bottom-none"
+      class="fpo !mt-0 !mb-0"
     >
       Grid Item
     </div>
@@ -105,16 +96,7 @@ exports[`<Grid /> FourUpGrid story renders snapshot 1`] = `
     class="grid__item"
   >
     <div
-      class="fpo u-margin-top-none u-margin-bottom-none"
-    >
-      Grid Item
-    </div>
-  </div>
-  <div
-    class="grid__item"
-  >
-    <div
-      class="fpo u-margin-top-none u-margin-bottom-none"
+      class="fpo !mt-0 !mb-0"
     >
       Grid Item
     </div>
@@ -130,7 +112,7 @@ exports[`<Grid /> OneToThreeUpGrid story renders snapshot 1`] = `
     class="grid__item"
   >
     <div
-      class="fpo u-margin-top-none u-margin-bottom-none"
+      class="fpo !mt-0 !mb-0"
     >
       Grid Item
     </div>
@@ -139,7 +121,7 @@ exports[`<Grid /> OneToThreeUpGrid story renders snapshot 1`] = `
     class="grid__item"
   >
     <div
-      class="fpo u-margin-top-none u-margin-bottom-none"
+      class="fpo !mt-0 !mb-0"
     >
       Grid Item
     </div>
@@ -148,7 +130,7 @@ exports[`<Grid /> OneToThreeUpGrid story renders snapshot 1`] = `
     class="grid__item"
   >
     <div
-      class="fpo u-margin-top-none u-margin-bottom-none"
+      class="fpo !mt-0 !mb-0"
     >
       Grid Item
     </div>
@@ -157,7 +139,7 @@ exports[`<Grid /> OneToThreeUpGrid story renders snapshot 1`] = `
     class="grid__item"
   >
     <div
-      class="fpo u-margin-top-none u-margin-bottom-none"
+      class="fpo !mt-0 !mb-0"
     >
       Grid Item
     </div>
@@ -166,16 +148,7 @@ exports[`<Grid /> OneToThreeUpGrid story renders snapshot 1`] = `
     class="grid__item"
   >
     <div
-      class="fpo u-margin-top-none u-margin-bottom-none"
-    >
-      Grid Item
-    </div>
-  </div>
-  <div
-    class="grid__item"
-  >
-    <div
-      class="fpo u-margin-top-none u-margin-bottom-none"
+      class="fpo !mt-0 !mb-0"
     >
       Grid Item
     </div>
@@ -191,7 +164,7 @@ exports[`<Grid /> OneToTwoToFourUpGrid story renders snapshot 1`] = `
     class="grid__item"
   >
     <div
-      class="fpo u-margin-top-none u-margin-bottom-none"
+      class="fpo !mt-0 !mb-0"
     >
       Grid Item
     </div>
@@ -200,7 +173,7 @@ exports[`<Grid /> OneToTwoToFourUpGrid story renders snapshot 1`] = `
     class="grid__item"
   >
     <div
-      class="fpo u-margin-top-none u-margin-bottom-none"
+      class="fpo !mt-0 !mb-0"
     >
       Grid Item
     </div>
@@ -209,7 +182,7 @@ exports[`<Grid /> OneToTwoToFourUpGrid story renders snapshot 1`] = `
     class="grid__item"
   >
     <div
-      class="fpo u-margin-top-none u-margin-bottom-none"
+      class="fpo !mt-0 !mb-0"
     >
       Grid Item
     </div>
@@ -218,7 +191,7 @@ exports[`<Grid /> OneToTwoToFourUpGrid story renders snapshot 1`] = `
     class="grid__item"
   >
     <div
-      class="fpo u-margin-top-none u-margin-bottom-none"
+      class="fpo !mt-0 !mb-0"
     >
       Grid Item
     </div>
@@ -227,16 +200,7 @@ exports[`<Grid /> OneToTwoToFourUpGrid story renders snapshot 1`] = `
     class="grid__item"
   >
     <div
-      class="fpo u-margin-top-none u-margin-bottom-none"
-    >
-      Grid Item
-    </div>
-  </div>
-  <div
-    class="grid__item"
-  >
-    <div
-      class="fpo u-margin-top-none u-margin-bottom-none"
+      class="fpo !mt-0 !mb-0"
     >
       Grid Item
     </div>
@@ -252,7 +216,7 @@ exports[`<Grid /> OneToTwoToOneUpGrid story renders snapshot 1`] = `
     class="grid__item"
   >
     <div
-      class="fpo u-margin-top-none u-margin-bottom-none"
+      class="fpo !mt-0 !mb-0"
     >
       Grid Item
     </div>
@@ -261,7 +225,7 @@ exports[`<Grid /> OneToTwoToOneUpGrid story renders snapshot 1`] = `
     class="grid__item"
   >
     <div
-      class="fpo u-margin-top-none u-margin-bottom-none"
+      class="fpo !mt-0 !mb-0"
     >
       Grid Item
     </div>
@@ -270,7 +234,7 @@ exports[`<Grid /> OneToTwoToOneUpGrid story renders snapshot 1`] = `
     class="grid__item"
   >
     <div
-      class="fpo u-margin-top-none u-margin-bottom-none"
+      class="fpo !mt-0 !mb-0"
     >
       Grid Item
     </div>
@@ -279,7 +243,7 @@ exports[`<Grid /> OneToTwoToOneUpGrid story renders snapshot 1`] = `
     class="grid__item"
   >
     <div
-      class="fpo u-margin-top-none u-margin-bottom-none"
+      class="fpo !mt-0 !mb-0"
     >
       Grid Item
     </div>
@@ -288,16 +252,7 @@ exports[`<Grid /> OneToTwoToOneUpGrid story renders snapshot 1`] = `
     class="grid__item"
   >
     <div
-      class="fpo u-margin-top-none u-margin-bottom-none"
-    >
-      Grid Item
-    </div>
-  </div>
-  <div
-    class="grid__item"
-  >
-    <div
-      class="fpo u-margin-top-none u-margin-bottom-none"
+      class="fpo !mt-0 !mb-0"
     >
       Grid Item
     </div>
@@ -313,7 +268,7 @@ exports[`<Grid /> SideBySide story renders snapshot 1`] = `
     class="grid__item"
   >
     <div
-      class="fpo u-margin-top-none u-margin-bottom-none"
+      class="fpo !mt-0 !mb-0"
     >
       Grid Item
     </div>
@@ -322,7 +277,7 @@ exports[`<Grid /> SideBySide story renders snapshot 1`] = `
     class="grid__item"
   >
     <div
-      class="fpo u-margin-top-none u-margin-bottom-none"
+      class="fpo !mt-0 !mb-0"
     >
       Grid Item
     </div>
@@ -331,7 +286,7 @@ exports[`<Grid /> SideBySide story renders snapshot 1`] = `
     class="grid__item"
   >
     <div
-      class="fpo u-margin-top-none u-margin-bottom-none"
+      class="fpo !mt-0 !mb-0"
     >
       Grid Item
     </div>
@@ -340,7 +295,7 @@ exports[`<Grid /> SideBySide story renders snapshot 1`] = `
     class="grid__item"
   >
     <div
-      class="fpo u-margin-top-none u-margin-bottom-none"
+      class="fpo !mt-0 !mb-0"
     >
       Grid Item
     </div>
@@ -349,16 +304,7 @@ exports[`<Grid /> SideBySide story renders snapshot 1`] = `
     class="grid__item"
   >
     <div
-      class="fpo u-margin-top-none u-margin-bottom-none"
-    >
-      Grid Item
-    </div>
-  </div>
-  <div
-    class="grid__item"
-  >
-    <div
-      class="fpo u-margin-top-none u-margin-bottom-none"
+      class="fpo !mt-0 !mb-0"
     >
       Grid Item
     </div>
@@ -374,7 +320,7 @@ exports[`<Grid /> ThreeUpGrid story renders snapshot 1`] = `
     class="grid__item"
   >
     <div
-      class="fpo u-margin-top-none u-margin-bottom-none"
+      class="fpo !mt-0 !mb-0"
     >
       Grid Item
     </div>
@@ -383,7 +329,7 @@ exports[`<Grid /> ThreeUpGrid story renders snapshot 1`] = `
     class="grid__item"
   >
     <div
-      class="fpo u-margin-top-none u-margin-bottom-none"
+      class="fpo !mt-0 !mb-0"
     >
       Grid Item
     </div>
@@ -392,7 +338,7 @@ exports[`<Grid /> ThreeUpGrid story renders snapshot 1`] = `
     class="grid__item"
   >
     <div
-      class="fpo u-margin-top-none u-margin-bottom-none"
+      class="fpo !mt-0 !mb-0"
     >
       Grid Item
     </div>
@@ -401,7 +347,7 @@ exports[`<Grid /> ThreeUpGrid story renders snapshot 1`] = `
     class="grid__item"
   >
     <div
-      class="fpo u-margin-top-none u-margin-bottom-none"
+      class="fpo !mt-0 !mb-0"
     >
       Grid Item
     </div>
@@ -410,16 +356,7 @@ exports[`<Grid /> ThreeUpGrid story renders snapshot 1`] = `
     class="grid__item"
   >
     <div
-      class="fpo u-margin-top-none u-margin-bottom-none"
-    >
-      Grid Item
-    </div>
-  </div>
-  <div
-    class="grid__item"
-  >
-    <div
-      class="fpo u-margin-top-none u-margin-bottom-none"
+      class="fpo !mt-0 !mb-0"
     >
       Grid Item
     </div>
@@ -435,7 +372,7 @@ exports[`<Grid /> TwoUpGrid story renders snapshot 1`] = `
     class="grid__item"
   >
     <div
-      class="fpo u-margin-top-none u-margin-bottom-none"
+      class="fpo !mt-0 !mb-0"
     >
       Grid Item
     </div>
@@ -444,7 +381,7 @@ exports[`<Grid /> TwoUpGrid story renders snapshot 1`] = `
     class="grid__item"
   >
     <div
-      class="fpo u-margin-top-none u-margin-bottom-none"
+      class="fpo !mt-0 !mb-0"
     >
       Grid Item
     </div>
@@ -453,7 +390,7 @@ exports[`<Grid /> TwoUpGrid story renders snapshot 1`] = `
     class="grid__item"
   >
     <div
-      class="fpo u-margin-top-none u-margin-bottom-none"
+      class="fpo !mt-0 !mb-0"
     >
       Grid Item
     </div>
@@ -462,7 +399,7 @@ exports[`<Grid /> TwoUpGrid story renders snapshot 1`] = `
     class="grid__item"
   >
     <div
-      class="fpo u-margin-top-none u-margin-bottom-none"
+      class="fpo !mt-0 !mb-0"
     >
       Grid Item
     </div>
@@ -471,16 +408,7 @@ exports[`<Grid /> TwoUpGrid story renders snapshot 1`] = `
     class="grid__item"
   >
     <div
-      class="fpo u-margin-top-none u-margin-bottom-none"
-    >
-      Grid Item
-    </div>
-  </div>
-  <div
-    class="grid__item"
-  >
-    <div
-      class="fpo u-margin-top-none u-margin-bottom-none"
+      class="fpo !mt-0 !mb-0"
     >
       Grid Item
     </div>
