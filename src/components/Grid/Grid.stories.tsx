@@ -10,34 +10,19 @@ export default {
     children: (
       <>
         <Grid.Item>
-          <div className="fpo u-margin-top-none u-margin-bottom-none">
-            Grid Item
-          </div>
+          <div className="fpo !mt-0 !mb-0">Grid Item</div>
         </Grid.Item>
         <Grid.Item>
-          <div className="fpo u-margin-top-none u-margin-bottom-none">
-            Grid Item
-          </div>
+          <div className="fpo !mt-0 !mb-0">Grid Item</div>
         </Grid.Item>
         <Grid.Item>
-          <div className="fpo u-margin-top-none u-margin-bottom-none">
-            Grid Item
-          </div>
+          <div className="fpo !mt-0 !mb-0">Grid Item</div>
         </Grid.Item>
         <Grid.Item>
-          <div className="fpo u-margin-top-none u-margin-bottom-none">
-            Grid Item
-          </div>
+          <div className="fpo !mt-0 !mb-0">Grid Item</div>
         </Grid.Item>
         <Grid.Item>
-          <div className="fpo u-margin-top-none u-margin-bottom-none">
-            Grid Item
-          </div>
-        </Grid.Item>
-        <Grid.Item>
-          <div className="fpo u-margin-top-none u-margin-bottom-none">
-            Grid Item
-          </div>
+          <div className="fpo !mt-0 !mb-0">Grid Item</div>
         </Grid.Item>
       </>
     ),
