@@ -94,7 +94,7 @@ export const Default: StoryObj<Args> = {
         itemIds: [],
         emptyContent: (
           <>
-            <Text as="div" className="u-margin-bottom-xl">
+            <Text as="div" className="!mb-8">
               <p>Drag in available projects to build your couse plan</p>
             </Text>
             <svg
@@ -368,7 +368,7 @@ export const HoveredHandle: StoryObj<Args> = {
         itemIds: [],
         emptyContent: (
           <>
-            <Text as="div" className="u-margin-bottom-xl">
+            <Text as="div" className="!mb-8">
               <p>Drag in available projects to build your couse plan</p>
             </Text>
             <svg
@@ -498,7 +498,7 @@ export const HoveredHandle: StoryObj<Args> = {
 
 const InteractiveDragDrop = () => {
   const emptyContent = () => (
-    <Text as="p" className="u-margin-bottom-xl">
+    <Text as="p" className="!mb-8">
       Empty Content
     </Text>
   );
@@ -511,7 +511,7 @@ const InteractiveDragDrop = () => {
       itemIds: ['item-1', 'item-2', 'item-3', 'item-4', 'item-5'],
       header: (
         <DragDropContainerHeader>
-          <Toolbar className="u-margin-bottom-md" variant="bare">
+          <Toolbar className="!mb-4" variant="bare">
             <Toolbar.Item>
               <Heading as="h2" size="title-sm" variant="neutral-strong">
                 Available projects
@@ -534,7 +534,7 @@ const InteractiveDragDrop = () => {
       itemIds: [],
       header: (
         <DragDropContainerHeader>
-          <Toolbar className="u-margin-bottom-md" variant="bare">
+          <Toolbar className="!mb-4" variant="bare">
             <Toolbar.Item>
               <Heading as="h2" size="title-sm" variant="neutral-strong">
                 Planned projects
@@ -557,7 +557,7 @@ const InteractiveDragDrop = () => {
       itemIds: [],
       header: (
         <DragDropContainerHeader>
-          <Toolbar className="u-margin-bottom-md" variant="bare">
+          <Toolbar className="!mb-4" variant="bare">
             <Toolbar.Item>
               <Heading as="h2" size="title-sm" variant="neutral-strong">
                 Planned projects
@@ -580,7 +580,7 @@ const InteractiveDragDrop = () => {
       itemIds: [],
       header: (
         <DragDropContainerHeader>
-          <Toolbar className="u-margin-bottom-md" variant="bare">
+          <Toolbar className="!mb-4" variant="bare">
             <Toolbar.Item>
               <Heading as="h2" size="title-sm" variant="neutral-strong">
                 Planned projects
