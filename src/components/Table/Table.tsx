@@ -12,26 +12,17 @@ import TableRow from '../TableRow';
 export interface Props {
   /**
    * Behavior variations:
-   * - **overflow** renders a table with a max width to overflow
    * - **stacked** renders a table that stacks its content into a card on small screens
    */
-  behavior?: 'overflow' | 'stacked';
+  behavior?: 'stacked';
   /**
-   * HTML caption property for table
+   * Child node(s) that can be nested inside component.
    */
-  caption: string;
-  /**
-   * Child node(s) that can be nested inside component. `TableHeader`, `TableFooter`, and `TableBody` are the only permissable children of Table
-   */
-  children?: ReactNode;
+  children: ReactNode;
   /**
    * CSS class names that can be appended to the component.
    */
   className?: string;
-  /**
-   * Boolean to determine if caption should be displayed visibly.
-   */
-  hideCaption?: boolean;
   /**
    * Highlight first cell
    *
@@ -56,10 +47,8 @@ export interface Props {
  */
 export const Table = ({
   behavior,
-  caption,
   children,
   className,
-  hideCaption = true,
   highlightFirstCell,
   variant,
   ...other
@@ -67,20 +56,12 @@ export const Table = ({
   const componentClassName = clsx(
     styles['table'],
     variant === 'zebra' && styles['table--zebra'],
-    behavior === 'overflow' && styles['table--overflow'],
     behavior === 'stacked' && styles['table--stacked'],
-    highlightFirstCell === true && styles['table--highlight-first-cell'],
     className,
-  );
-
-  const captionClassName = clsx(
-    'table__caption',
-    hideCaption && 'u-is-vishidden',
   );
 
   return (
     <table className={componentClassName} {...other}>
-      <caption className={captionClassName}>{caption}</caption>
       {children}
     </table>
   );

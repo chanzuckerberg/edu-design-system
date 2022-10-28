@@ -171,7 +171,6 @@ export const Stacked: StoryObj<Args> = {
 
 export const AlignTableCellContentCenter: StoryObj<Args> = {
   args: {
-    caption: 'This is a table caption and it is required',
     children: (
       <>
         <Table.Header>
@@ -220,7 +219,6 @@ export const AlignTableCellContentCenter: StoryObj<Args> = {
 
 export const AlignTableCellContentRight: StoryObj<Args> = {
   args: {
-    caption: 'This is a table caption and it is required',
     children: (
       <>
         <Table.Header>
@@ -312,7 +310,7 @@ const SortableExample = () => {
     return 0;
   });
   return (
-    <Table caption="This is a table caption and it is required">
+    <Table>
       <Table.Header>
         <Table.Row>
           <Table.HeaderCell
