@@ -384,6 +384,7 @@ export const CoursePlannerEdit = () => {
           behavior="draggable"
           buttonDropdownItems={projectCardMenuItemsWithDelete()}
           meta="12 days"
+          metaIconName="event-note"
           number={1}
           numberAriaLabel="Project 1"
           title="Longer project card title that wraps"
@@ -397,6 +398,7 @@ export const CoursePlannerEdit = () => {
           behavior="draggable"
           buttonDropdownItems={projectCardMenuItems()}
           meta="12 days"
+          metaIconName="event-note"
           number={indexState}
           numberAriaLabel="Project 2"
           title="Project card title"
@@ -410,6 +412,7 @@ export const CoursePlannerEdit = () => {
           behavior="draggable"
           buttonDropdownItems={projectCardMenuItems()}
           meta="12 days"
+          metaIconName="event-note"
           number={3}
           numberAriaLabel="Project 3"
           title="Project card title"
@@ -423,6 +426,7 @@ export const CoursePlannerEdit = () => {
           behavior="draggable"
           buttonDropdownItems={projectCardMenuItems()}
           meta="12 days"
+          metaIconName="event-note"
           number={4}
           numberAriaLabel="Project 4"
           title="Project card title"
@@ -437,6 +441,7 @@ export const CoursePlannerEdit = () => {
           buttonDropdownItems={projectCardMenuItems()}
           buttonDropdownPosition="top-left"
           meta="12 days"
+          metaIconName="event-note"
           number={5}
           numberAriaLabel="Project 5"
           title="Project card title"
@@ -451,6 +456,7 @@ export const CoursePlannerEdit = () => {
           buttonDropdownItems={projectCardMenuItems()}
           buttonDropdownPosition="top-left"
           meta="12 days"
+          metaIconName="event-note"
           number={6}
           numberAriaLabel="Project 6"
           title="Project card title"

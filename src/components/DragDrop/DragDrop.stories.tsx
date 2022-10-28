@@ -604,6 +604,7 @@ const InteractiveDragDrop = () => {
         <ProjectCard
           behavior="draggable"
           meta="12 days"
+          metaIconName="event-note"
           number={1}
           numberAriaLabel="Project 1"
           title="Longer project card title that wraps lorem ipsum dolor"
@@ -616,6 +617,7 @@ const InteractiveDragDrop = () => {
         <ProjectCard
           behavior="draggable"
           meta="12 days"
+          metaIconName="event-note"
           number={indexState}
           numberAriaLabel="Project 2"
           title="Project card title"
@@ -628,6 +630,7 @@ const InteractiveDragDrop = () => {
         <ProjectCard
           behavior="draggable"
           meta="12 days"
+          metaIconName="event-note"
           number={3}
           numberAriaLabel="Project 3"
           title="Project card title"
@@ -639,7 +642,8 @@ const InteractiveDragDrop = () => {
       children: (
         <ProjectCard
           behavior="draggable"
-          meta="12 days"
+          meta="face icon"
+          metaIconName="face"
           number={4}
           numberAriaLabel="Project 4"
           title="Project card title"
@@ -651,22 +655,10 @@ const InteractiveDragDrop = () => {
       children: (
         <ProjectCard
           behavior="draggable"
-          meta="12 days"
+          meta="no icon"
           number={5}
           numberAriaLabel="Project 5"
-          title="Project card title"
-        />
-      ),
-    },
-    'item-6': {
-      title: 'Project #6',
-      children: (
-        <ProjectCard
-          behavior="draggable"
-          meta="12 days"
-          number={6}
-          numberAriaLabel="Project 6"
-          title="Project card title"
+          title="Hi"
         />
       ),
     },
