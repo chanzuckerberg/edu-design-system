@@ -26,19 +26,6 @@ exports[`<ProjectCard /> Default story renders snapshot 1`] = `
     <div
       class="project-card__meta"
     >
-      <svg
-        aria-hidden="true"
-        class="icon project-card__meta-icon"
-        fill="currentColor"
-        height="0.875rem"
-        style="--icon-size: 0.875rem;"
-        width="0.875rem"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <use
-          xlink:href="test-file-stub#event-note"
-        />
-      </svg>
       12 days
     </div>
   </div>
@@ -195,19 +182,6 @@ exports[`<ProjectCard /> Draggable story renders snapshot 1`] = `
     <div
       class="project-card__meta"
     >
-      <svg
-        aria-hidden="true"
-        class="icon project-card__meta-icon"
-        fill="currentColor"
-        height="0.875rem"
-        style="--icon-size: 0.875rem;"
-        width="0.875rem"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <use
-          xlink:href="test-file-stub#event-note"
-        />
-      </svg>
       12 days
     </div>
   </div>
@@ -372,19 +346,6 @@ exports[`<ProjectCard /> WithoutDropdown story renders snapshot 1`] = `
     <div
       class="project-card__meta"
     >
-      <svg
-        aria-hidden="true"
-        class="icon project-card__meta-icon"
-        fill="currentColor"
-        height="0.875rem"
-        style="--icon-size: 0.875rem;"
-        width="0.875rem"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <use
-          xlink:href="test-file-stub#event-note"
-        />
-      </svg>
       12 days
     </div>
   </div>
