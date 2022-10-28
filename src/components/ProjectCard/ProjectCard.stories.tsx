@@ -16,7 +16,6 @@ type Args = React.ComponentProps<typeof ProjectCard>;
 export const Default: StoryObj<Args> = {
   args: {
     title: 'Project card title',
-    meta: '12 days',
     number: 1,
     numberAriaLabel: 'Project 1',
     buttonDropdownItems: (
@@ -46,6 +45,34 @@ export const Draggable: StoryObj<Args> = {
   args: {
     behavior: 'draggable',
     title: 'DragDropItem provides handle to the left',
+    numberAriaLabel: 'Project 1',
+    buttonDropdownItems: (
+      <>
+        <DropdownMenuItem>
+          <Icon name="schedule" purpose="decorative" size="1.25rem" />
+          Move to other section
+        </DropdownMenuItem>
+        <DropdownMenuItem>
+          <Icon name="schedule" purpose="decorative" size="1.25rem" />
+          Move up
+        </DropdownMenuItem>
+        <DropdownMenuItem>
+          <Icon name="schedule" purpose="decorative" size="1.25rem" />
+          Move down
+        </DropdownMenuItem>
+        <DropdownMenuItem>
+          <Icon name="schedule" purpose="decorative" size="1.25rem" />
+          Move view details
+        </DropdownMenuItem>
+      </>
+    ),
+  },
+};
+
+export const WithMeta: StoryObj<Args> = {
+  args: {
+    number: 1,
+    title: 'Project card title',
     meta: '12 days',
     numberAriaLabel: 'Project 1',
     buttonDropdownItems: (
@@ -71,31 +98,10 @@ export const Draggable: StoryObj<Args> = {
   },
 };
 
-export const WithoutMeta: StoryObj<Args> = {
+export const WithMetaIcon: StoryObj<Args> = {
   args: {
-    number: 1,
-    title: 'Project card title',
-    numberAriaLabel: 'Project 1',
-    buttonDropdownItems: (
-      <>
-        <DropdownMenuItem>
-          <Icon name="schedule" purpose="decorative" size="1.25rem" />
-          Move to other section
-        </DropdownMenuItem>
-        <DropdownMenuItem>
-          <Icon name="schedule" purpose="decorative" size="1.25rem" />
-          Move up
-        </DropdownMenuItem>
-        <DropdownMenuItem>
-          <Icon name="schedule" purpose="decorative" size="1.25rem" />
-          Move down
-        </DropdownMenuItem>
-        <DropdownMenuItem>
-          <Icon name="schedule" purpose="decorative" size="1.25rem" />
-          Move view details
-        </DropdownMenuItem>
-      </>
-    ),
+    ...WithMeta.args,
+    metaIconName: 'event-note',
   },
 };
 
@@ -103,7 +109,6 @@ export const WithoutDropdown: StoryObj<Args> = {
   args: {
     number: 1,
     title: 'DragDropItem provides handle to the left',
-    meta: '12 days',
     numberAriaLabel: 'Project 1',
   },
 };
