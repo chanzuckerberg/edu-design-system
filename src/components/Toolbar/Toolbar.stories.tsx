@@ -18,16 +18,16 @@ export default {
     children: (
       <>
         <Toolbar.Item>
-          <div className="fpo u-margin-none">Left</div>
+          <div className="fpo !m-0">Left</div>
         </Toolbar.Item>
         <Toolbar.Item>
-          <div className="fpo u-margin-none">Left</div>
+          <div className="fpo !m-0">Left</div>
         </Toolbar.Item>
         <Toolbar.Item>
-          <div className="fpo u-margin-none">Left</div>
+          <div className="fpo !m-0">Left</div>
         </Toolbar.Item>
         <Toolbar.Item align="right">
-          <div className="fpo u-margin-none">Right</div>
+          <div className="fpo !m-0">Right</div>
         </Toolbar.Item>
       </>
     ),

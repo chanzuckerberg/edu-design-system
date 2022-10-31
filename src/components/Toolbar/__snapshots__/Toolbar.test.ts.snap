@@ -8,7 +8,7 @@ exports[`<Toolbar /> AlignBottom story renders snapshot 1`] = `
     class="toolbar__item"
   >
     <div
-      class="fpo u-margin-none"
+      class="fpo !m-0"
     >
       Left
     </div>
@@ -17,7 +17,7 @@ exports[`<Toolbar /> AlignBottom story renders snapshot 1`] = `
     class="toolbar__item"
   >
     <div
-      class="fpo u-margin-none"
+      class="fpo !m-0"
     >
       Left
     </div>
@@ -26,7 +26,7 @@ exports[`<Toolbar /> AlignBottom story renders snapshot 1`] = `
     class="toolbar__item"
   >
     <div
-      class="fpo u-margin-none"
+      class="fpo !m-0"
     >
       Left
     </div>
@@ -35,7 +35,7 @@ exports[`<Toolbar /> AlignBottom story renders snapshot 1`] = `
     class="toolbar__item toolbar__item--align-right"
   >
     <div
-      class="fpo u-margin-none"
+      class="fpo !m-0"
     >
       Right
     </div>
@@ -51,7 +51,7 @@ exports[`<Toolbar /> AlignTop story renders snapshot 1`] = `
     class="toolbar__item"
   >
     <div
-      class="fpo u-margin-none"
+      class="fpo !m-0"
     >
       Left
     </div>
@@ -60,7 +60,7 @@ exports[`<Toolbar /> AlignTop story renders snapshot 1`] = `
     class="toolbar__item"
   >
     <div
-      class="fpo u-margin-none"
+      class="fpo !m-0"
     >
       Left
     </div>
@@ -69,7 +69,7 @@ exports[`<Toolbar /> AlignTop story renders snapshot 1`] = `
     class="toolbar__item"
   >
     <div
-      class="fpo u-margin-none"
+      class="fpo !m-0"
     >
       Left
     </div>
@@ -78,7 +78,7 @@ exports[`<Toolbar /> AlignTop story renders snapshot 1`] = `
     class="toolbar__item toolbar__item--align-right"
   >
     <div
-      class="fpo u-margin-none"
+      class="fpo !m-0"
     >
       Right
     </div>
@@ -94,7 +94,7 @@ exports[`<Toolbar /> Bare story renders snapshot 1`] = `
     class="toolbar__item"
   >
     <div
-      class="fpo u-margin-none"
+      class="fpo !m-0"
     >
       Left
     </div>
@@ -103,7 +103,7 @@ exports[`<Toolbar /> Bare story renders snapshot 1`] = `
     class="toolbar__item"
   >
     <div
-      class="fpo u-margin-none"
+      class="fpo !m-0"
     >
       Left
     </div>
@@ -112,7 +112,7 @@ exports[`<Toolbar /> Bare story renders snapshot 1`] = `
     class="toolbar__item"
   >
     <div
-      class="fpo u-margin-none"
+      class="fpo !m-0"
     >
       Left
     </div>
@@ -121,7 +121,7 @@ exports[`<Toolbar /> Bare story renders snapshot 1`] = `
     class="toolbar__item toolbar__item--align-right"
   >
     <div
-      class="fpo u-margin-none"
+      class="fpo !m-0"
     >
       Right
     </div>
@@ -137,7 +137,7 @@ exports[`<Toolbar /> Default story renders snapshot 1`] = `
     class="toolbar__item"
   >
     <div
-      class="fpo u-margin-none"
+      class="fpo !m-0"
     >
       Left
     </div>
@@ -146,7 +146,7 @@ exports[`<Toolbar /> Default story renders snapshot 1`] = `
     class="toolbar__item"
   >
     <div
-      class="fpo u-margin-none"
+      class="fpo !m-0"
     >
       Left
     </div>
@@ -155,7 +155,7 @@ exports[`<Toolbar /> Default story renders snapshot 1`] = `
     class="toolbar__item"
   >
     <div
-      class="fpo u-margin-none"
+      class="fpo !m-0"
     >
       Left
     </div>
@@ -164,7 +164,7 @@ exports[`<Toolbar /> Default story renders snapshot 1`] = `
     class="toolbar__item toolbar__item--align-right"
   >
     <div
-      class="fpo u-margin-none"
+      class="fpo !m-0"
     >
       Right
     </div>
