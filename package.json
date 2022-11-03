@@ -1,6 +1,6 @@
 {
   "name": "@chanzuckerberg/eds",
-  "version": "5.2.1",
+  "version": "6.0.1",
   "description": "The React-powered design system library for Chan Zuckerberg Initiative education web applications",
   "author": "CZI <edu-frontend-infra@chanzuckerberg.com>",
   "homepage": "https://github.com/chanzuckerberg/edu-design-system",
@@ -98,7 +98,7 @@
     "@chanzuckerberg/axe-storybook-testing": "^6.1.0",
     "@chanzuckerberg/eslint-config-edu-js": "^1.0.1",
     "@chanzuckerberg/eslint-config-edu-ts": "^1.0.0",
-    "@chanzuckerberg/eslint-plugin-edu-react": "^1.0.1",
+    "@chanzuckerberg/eslint-plugin-edu-react": "^1.1.0",
     "@chanzuckerberg/eslint-plugin-stories": "^3.2.2",
     "@chanzuckerberg/story-utils": "^3.0.8",
     "@commitlint/cli": "^16.2.1",

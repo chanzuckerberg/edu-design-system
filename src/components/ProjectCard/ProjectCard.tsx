@@ -16,6 +16,8 @@ import {
 } from '../..';
 import type { HeadingElement } from '../Heading';
 
+import type { IconName } from '../Icon';
+
 export interface Props {
   /**
    * Determines type of clickable
@@ -54,6 +56,10 @@ export interface Props {
    */
   meta?: string;
   /**
+   * Project card meta icon name. Should be appropriate EDS icon name.
+   */
+  metaIconName?: IconName;
+  /**
    * Project card number
    */
   number?: number;
@@ -76,6 +82,7 @@ export const ProjectCard = ({
   className,
   title,
   meta,
+  metaIconName,
   number,
   headingAs = 'h3',
   buttonDropdownItems,
@@ -123,12 +130,14 @@ export const ProjectCard = ({
         </Heading>
         {meta && (
           <div className={styles['project-card__meta']}>
-            <Icon
-              className={styles['project-card__meta-icon']}
-              name="event-note"
-              purpose="decorative"
-              size="0.875rem"
-            />
+            {metaIconName && (
+              <Icon
+                className={styles['project-card__meta-icon']}
+                name={metaIconName}
+                purpose="decorative"
+                size="0.875rem"
+              />
+            )}
             {meta}
           </div>
         )}
@@ -136,7 +145,6 @@ export const ProjectCard = ({
       {buttonDropdownItems && (
         <CardFooter className={styles['project-card__footer']}>
           <ButtonDropdown
-            className={styles['project-card__button-dropdown']}
             dropdownMenuTrigger={
               <Button
                 aria-label="Open project dropdown"

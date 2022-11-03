@@ -18,11 +18,14 @@ View the "Icon Grid" story in Storybook for a visualization of all available ico
 
 ### Adding a new icon
 
-1. Export SVG icon assets from Figma according to icon workflow (TODO: formalize this process in design workflow)
-2. In a new feature branch, locate `src/icons` and add new icon to the directory.
-3. Run `yarn build:icons` in the terminal to build the new icon sprite.
-4. In Storybook, view the "Icon Grid" component to see the new component added to the available list of icons, which is now ready to use in EDS components.
-5. Submit PR in accordance with [workflow guidelines](./WORKFLOW.md) and release in order to make icon available to consuming applications
+**TODO: formalize this process with design in the Icon design workflow**
+
+1. Export SVG icon asset(s) from Figma
+2. If necessary, remove the `fill` attribute on the `<path>` in the exported SVG file(s).
+3. In a new feature branch, locate `src/icons` and add new icon to the directory.
+4. Run `yarn build:icons` in the terminal to build the new icon sprite.
+5. In Storybook, view the "Icon Grid" component to see the new component added to the available list of icons, which is now ready to use in EDS components.
+6. Submit PR in accordance with [workflow guidelines](./WORKFLOW.md) and release in order to make icon available to consuming applications
 
 ### Modifiying icons
 

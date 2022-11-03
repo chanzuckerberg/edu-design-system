@@ -27,6 +27,8 @@ We follow a [git-flow](https://nvie.com/posts/a-successful-git-branching-model/)
 
 #### Cutting a release branch
 
+_Warning: In step 4 you will see a message in your terminal with instructions on publising the package. Ignore the message in your terminal and follow the instructions in this guide instead. We send the release branch through the pull request review process before publishing._
+
 1. Confirm that all checks are green on CI.
 2. Run `git checkout next && git pull origin next` to ensure you have the most up-to-date changes.
 3. Run `git checkout -b release-v<version>`
@@ -52,7 +54,7 @@ git push --follow-tags origin <branch>
 #### Merging a release branch
 
 6. Open a pull request for the release branch, merging into **`main`**. Merge the PR through a **merge commit**:
-   ![Screen Shot 2022-05-26 at 10 56 20 AM](https://user-images.githubusercontent.com/15840841/170514789-4f936ba2-c63d-486c-827a-b9e9e86b612e.png)
+   ![github user interface showing a dropdown with the different merge options. the option "create a merge commit" is highlighted](https://user-images.githubusercontent.com/15840841/170514789-4f936ba2-c63d-486c-827a-b9e9e86b612e.png)
 
 This is important to ensure `next` and `main` stay in sync!
 

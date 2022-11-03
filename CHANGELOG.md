@@ -2,6 +2,62 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [6.0.1](https://github.com/chanzuckerberg/edu-design-system/compare/v6.0.0...v6.0.1) (2022-11-03)
+
+## [6.0.0](https://github.com/chanzuckerberg/edu-design-system/compare/v5.2.1...v6.0.0) (2022-10-28)
+
+
+### ⚠ BREAKING CHANGES
+
+* **projectcard:** add metaIconName to allow custom meta icons and remove if not present
+
+### Features
+
+* **ClickableStyle:** use type check on status and variant ([488784b](https://github.com/chanzuckerberg/edu-design-system/commit/488784b46b96ff41eb0a18d21e0fe0ae90a9a201))
+
+
+### Bug Fixes
+
+* address PR comments ([10332d4](https://github.com/chanzuckerberg/edu-design-system/commit/10332d460259e381ec40e2e83a6434c601fa2f61))
+* **icons:** remove mask from play icon ([425822f](https://github.com/chanzuckerberg/edu-design-system/commit/425822fbf0e67c3fc95f3d7fc7575163bf3d3ce5))
+* **icons:** remove play-arrow hard-coded fill color ([7cdbf89](https://github.com/chanzuckerberg/edu-design-system/commit/7cdbf897b7a91e94b5eb707e50071809ba4eb187))
+
+
+* **projectcard:** add metaIconName to allow custom meta icons and remove if not present ([fa6787d](https://github.com/chanzuckerberg/edu-design-system/commit/fa6787dabe43aeec7e8c4f84307bfcae732824f2))
+
+### [5.3.1](https://github.com/chanzuckerberg/edu-design-system/compare/v5.3.0...v5.3.1) (2022-10-20)
+
+
+### Bug Fixes
+
+* **icons:** remove play-arrow hard-coded fill color ([7cdbf89](https://github.com/chanzuckerberg/edu-design-system/commit/7cdbf897b7a91e94b5eb707e50071809ba4eb187))
+
+## [5.3.0](https://github.com/chanzuckerberg/edu-design-system/compare/v5.1.1...v5.3.0) (2022-10-17)
+
+
+### Features
+
+* **ClickableStyle:** use type check on status and variant ([488784b](https://github.com/chanzuckerberg/edu-design-system/commit/488784b46b96ff41eb0a18d21e0fe0ae90a9a201))
+* remove inverted variants from existing components ([dd6c550](https://github.com/chanzuckerberg/edu-design-system/commit/dd6c5504a291f0b77716daad31f862c6782f10c9)), closes [Shortcut#213036](https://github.com/chanzuckerberg/Shortcut/issues/213036)
+* remove overflow inversion from TimelineNav ([b8e0c55](https://github.com/chanzuckerberg/edu-design-system/commit/b8e0c55bc7ae691258757d9268c09ec2fe08cf0f))
+* **Tabs:** remove and clean up props for Tabs (sub-)components ([1e5bfa5](https://github.com/chanzuckerberg/edu-design-system/commit/1e5bfa59b345a4d852163a9d5d8c30ee85627592))
+
+
+### Bug Fixes
+
+* address PR comments ([10332d4](https://github.com/chanzuckerberg/edu-design-system/commit/10332d460259e381ec40e2e83a6434c601fa2f61))
+* apply stricter types to refs and hooks ([24a3363](https://github.com/chanzuckerberg/edu-design-system/commit/24a3363c78d3f31c42eda43e5ab72cbfcc286c02))
+* don't generate <Tab> ids from the <Tabs>'s aria-labelledby ([99a1a12](https://github.com/chanzuckerberg/edu-design-system/commit/99a1a12d4eedddcad64d290e4ac74f0fe378fb76))
+* don't generate <Tab> ids from the <Tabs>'s aria-labelledby ([20859e9](https://github.com/chanzuckerberg/edu-design-system/commit/20859e9d020f3f9afb25b6b6b33b6cbf84123b90))
+* **icons:** remove mask from play icon ([425822f](https://github.com/chanzuckerberg/edu-design-system/commit/425822fbf0e67c3fc95f3d7fc7575163bf3d3ce5))
+* omit title from rest on Tab ([97c0d89](https://github.com/chanzuckerberg/edu-design-system/commit/97c0d89ec4ad51c5ca2c6d57eb1e798dc5ad32c4))
+* put aria-labelledby on the tablist, instead of a random <div> ([164cd46](https://github.com/chanzuckerberg/edu-design-system/commit/164cd4601bd9862567f687073c5e6472abd6c7da))
+* put aria-labelledby on the tablist, instead of a random <div> ([f2fc07f](https://github.com/chanzuckerberg/edu-design-system/commit/f2fc07f94e66d95d0248af7b70d1f7302809a994))
+* remove Tabs scroll styling ([2d212f3](https://github.com/chanzuckerberg/edu-design-system/commit/2d212f3f897435fff74d85c2b2fb9d88917a684a))
+* remove Tabs scroll styling ([38cdaa2](https://github.com/chanzuckerberg/edu-design-system/commit/38cdaa28eed42606d862471673de28cfda789833))
+* use Tab id if present ([5961658](https://github.com/chanzuckerberg/edu-design-system/commit/59616585f433f2ca07c95fc8be5ef7cf586f3479))
+* use Tab id if present ([0cd797a](https://github.com/chanzuckerberg/edu-design-system/commit/0cd797a2a1e36d7b06110d84bbe09d1795c158a3))
+
 ### [5.2.1](https://github.com/chanzuckerberg/edu-design-system/compare/v5.2.0...v5.2.1) (2022-10-07)
 
 
