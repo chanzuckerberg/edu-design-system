@@ -31,8 +31,9 @@ _Warning: In step 4 you will see a message in your terminal with instructions on
 
 1. Confirm that all checks are green on CI.
 2. Run `git checkout next && git pull origin next` to ensure you have the most up-to-date changes.
-3. Run `git checkout -b release-v<version>`
-4. Run:
+3. Determine the next version that will be released. An easy way to do this is with `yarn release --dry-run`
+4. Run `git checkout -b release-v<version>`
+5. Run:
 
 ```
 yarn release
