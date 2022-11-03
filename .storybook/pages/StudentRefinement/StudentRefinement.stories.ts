@@ -9,4 +9,8 @@ export default {
 
 type Args = React.ComponentProps<typeof StudentRefinement>;
 
-export const Default: StoryObj<Args> = {};
+export const Default: StoryObj<Args> = {
+  parameters: {
+    chromatic: { viewports: [414, 768, 1366] },
+  },
+};

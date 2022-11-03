@@ -32,7 +32,7 @@ export const StudentRefinement = () => (
       <Breadcrumbs.Item href="#" text="My Courses" />
     </Breadcrumbs>
     <div className={styles['student-refinement__header']}>
-      <PageHeader title="Page title" />
+      <PageHeader title="Disciplinary Science 7 (Life Science Focus)" />
       <Button
         className={styles['student-refinement__more-options']}
         status="neutral"

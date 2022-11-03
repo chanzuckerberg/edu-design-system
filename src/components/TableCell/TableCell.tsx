@@ -7,7 +7,7 @@ export interface Props {
   /**
    * The alignment of the text in the cell
    */
-  align?: 'insetLeft' | 'left' | 'right' | 'center';
+  align?: 'left' | 'right' | 'center';
   /**
    * Behavior variation pulled in from table row
    */

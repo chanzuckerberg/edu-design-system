@@ -134,7 +134,6 @@
 
   .student-refinement__name-cell-text.student-refinement__name-cell-text {
     @mixin eds-theme-typography-body-text-sm;
-    font-weight: 400;
   }
 
   .student-refinement__body-cell.student-refinement__body-cell {
