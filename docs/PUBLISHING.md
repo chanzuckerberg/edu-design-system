@@ -6,7 +6,7 @@ EDS uses [SemVer](https://semver.org/) semantic versioning to keep track of ongo
 - **Minor (x.Y.z)** - Minor versions add new features or deprecate existing features without breaking changes.
 - **Patch (x.y.Z)** - Patch versions fix defects or optimize existing features without breaking changes.
 
-Look to [this helpful document](http://designsystem.morningstar.com/about/versioning.html) from the Morning Star design system for detailed guidance on versioning.
+Look to [this helpful document](https://designsystem.morningstar.com/getting-started/versioning-and-breaking-changes/) from the Morning Star design system for detailed guidance on versioning.
 
 ---
 
