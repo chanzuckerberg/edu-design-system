@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [6.0.1](https://github.com/chanzuckerberg/edu-design-system/compare/v6.0.0...v6.0.1) (2022-11-03)
+
+## [6.0.0](https://github.com/chanzuckerberg/edu-design-system/compare/v5.2.1...v6.0.0) (2022-10-28)
+
+
+### ⚠ BREAKING CHANGES
+
+* **projectcard:** add metaIconName to allow custom meta icons and remove if not present
+
+### Features
+
+* **ClickableStyle:** use type check on status and variant ([488784b](https://github.com/chanzuckerberg/edu-design-system/commit/488784b46b96ff41eb0a18d21e0fe0ae90a9a201))
+
+
+### Bug Fixes
+
+* address PR comments ([10332d4](https://github.com/chanzuckerberg/edu-design-system/commit/10332d460259e381ec40e2e83a6434c601fa2f61))
+* **icons:** remove mask from play icon ([425822f](https://github.com/chanzuckerberg/edu-design-system/commit/425822fbf0e67c3fc95f3d7fc7575163bf3d3ce5))
+* **icons:** remove play-arrow hard-coded fill color ([7cdbf89](https://github.com/chanzuckerberg/edu-design-system/commit/7cdbf897b7a91e94b5eb707e50071809ba4eb187))
+
+
+* **projectcard:** add metaIconName to allow custom meta icons and remove if not present ([fa6787d](https://github.com/chanzuckerberg/edu-design-system/commit/fa6787dabe43aeec7e8c4f84307bfcae732824f2))
+
 ### [5.3.1](https://github.com/chanzuckerberg/edu-design-system/compare/v5.3.0...v5.3.1) (2022-10-20)
 
 

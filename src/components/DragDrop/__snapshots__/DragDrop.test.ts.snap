@@ -1184,10 +1184,10 @@ exports[`<DragDrop /> Interactive story renders snapshot 1`] = `
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <use
-                      xlink:href="test-file-stub#event-note"
+                      xlink:href="test-file-stub#face"
                     />
                   </svg>
-                  12 days
+                  face icon
                 </div>
               </div>
             </article>
@@ -1241,25 +1241,12 @@ exports[`<DragDrop /> Interactive story renders snapshot 1`] = `
                 <h3
                   class="heading heading--size-body-sm heading--neutral-strong project-card__title"
                 >
-                  Project card title
+                  Hi
                 </h3>
                 <div
                   class="project-card__meta"
                 >
-                  <svg
-                    aria-hidden="true"
-                    class="icon project-card__meta-icon"
-                    fill="currentColor"
-                    height="0.875rem"
-                    style="--icon-size: 0.875rem;"
-                    width="0.875rem"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <use
-                      xlink:href="test-file-stub#event-note"
-                    />
-                  </svg>
-                  12 days
+                  no icon
                 </div>
               </div>
             </article>
