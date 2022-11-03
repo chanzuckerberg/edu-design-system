@@ -82,7 +82,7 @@ Please refer to the following documentation to learn how to work with this codeb
 ## Workflow
 
 - [Contribution guidelines](./docs/CONTRIBUTING.md) - Please refer to these guidelines to learn how to contribute to the library.
-- [Release guidelines](.docs/PUBLISHING.md) - Please refer to these guidelines for instructions on how to publish a new version of the library.
+- [Release guidelines](./docs/PUBLISHING.md) - Please refer to these guidelines for instructions on how to publish a new version of the library.
 
 ## Support
 
