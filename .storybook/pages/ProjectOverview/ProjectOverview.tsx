@@ -241,7 +241,7 @@ export const ProjectOverview = ({ activeIndex = 0, className }: Props) => {
             <Text as="div" className="!mb-4">
               <p>
                 Students individually develop a follow up question that builds
-                from their group’s experiments and describe their follow up
+                from their group’s experiment and describe their follow up
                 question in their conclusion. Students craft evidence-supported
                 explanations of how the body is organized and functions.
               </p>
