@@ -31,8 +31,7 @@ export interface Props {
 
 export const CoursePlannerStep1 = (className: Props) => {
   const textClassName = clsx(
-    styles['coursePlannerStep1__text'],
-    '{!mb-2}',
+    `${styles['coursePlannerStep1__text']} !mb-2`,
     className,
   );
   return (
