@@ -34,11 +34,7 @@ export const Center: StoryObj<Args> = {
     ),
     title: 'Section Title',
     description: (
-      <Text
-        as="p"
-        className={styles['u-theme-typography-body-text-xs-bold']}
-        size="sm"
-      >
+      <Text as="p" className={styles['section__text']} size="sm">
         This is a description of what the section is
       </Text>
     ),
@@ -49,11 +45,7 @@ export const WithDescription: StoryObj<Args> = {
   args: {
     title: 'Section Title',
     description: (
-      <Text
-        as="p"
-        className={styles['u-theme-typography-body-text-xs-bold']}
-        size="sm"
-      >
+      <Text as="p" className={styles['section__text']} size="sm">
         This is a description of what the section is
       </Text>
     ),
