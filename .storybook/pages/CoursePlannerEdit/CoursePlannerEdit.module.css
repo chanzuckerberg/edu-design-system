@@ -1,0 +1,16 @@
+/*-----------------------------------------*\
+    # SPACING COURSE PLANNER EDIT CLASSES
+\*-----------------------------------------*/
+
+/**
+ * Margin top xl mobile
+ * 
+ * Forces margin top to 2rem (on smaller viewports only).
+ */
+ .button--mobile {
+    margin-top: var(--eds-size-4) !important;
+  
+    @media all and (min-width: $eds-bp-md) {
+      margin-top: unset !important;
+    }
+  }

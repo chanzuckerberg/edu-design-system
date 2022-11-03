@@ -1,4 +1,6 @@
+import clsx from 'clsx';
 import React from 'react';
+import styles from './ProjectOverview.module.css';
 
 import {
   PageHeader,
@@ -31,9 +33,14 @@ export interface Props {
    * Passed down to initially set the activeIndex state
    */
   activeIndex?: number;
+  /**
+   * CSS class names that can be appended to the component.
+   */
+  className?: string;
 }
 
-export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
+export const ProjectOverview = ({ activeIndex = 0, className }: Props) => {
+  const textClassName = clsx(styles['projectOverview__text'], className);
   return (
     <PageShell className="body--alternate" mentoringIsActive={true}>
       <Breadcrumbs className="!mb-4">
@@ -212,7 +219,7 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
         <TimelineNavPanel title="Expectations of Samuri in Feudal Japan and Wars of 5th Century">
           <Section
             description={
-              <Text as="p" className="u-theme-typography-body-text-xs-bold">
+              <Text as="p" className={textClassName}>
                 Estimated schedule: Days 4,5,6
               </Text>
             }
@@ -234,7 +241,7 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
             <Text as="div" className="!mb-4">
               <p>
                 Students individually develop a follow up question that builds
-                from their group’s experiment and describe their follow up
+                from their group’s experimentsy and describe their follow up
                 question in their conclusion. Students craft evidence-supported
                 explanations of how the body is organized and functions.
               </p>
@@ -339,7 +346,7 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
         <TimelineNavPanel title="Expectations of Samuri in Feudal Japan">
           <Section
             description={
-              <Text as="p" className="u-theme-typography-body-text-xs-bold">
+              <Text as="p" className={textClassName}>
                 Estimated schedule: Days 4,5,6
               </Text>
             }
@@ -363,7 +370,7 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
         <TimelineNavPanel title="Expectations of Samuri in Feudal Japan">
           <Section
             description={
-              <Text as="p" className="u-theme-typography-body-text-xs-bold">
+              <Text as="p" className={textClassName}>
                 Estimated schedule: Days 4,5,6
               </Text>
             }
@@ -387,7 +394,7 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
         <TimelineNavPanel title="Expectations of Samuri in Feudal Japan">
           <Section
             description={
-              <Text as="p" className="u-theme-typography-body-text-xs-bold">
+              <Text as="p" className={textClassName}>
                 Estimated schedule: Days 4,5,6
               </Text>
             }

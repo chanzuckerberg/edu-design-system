@@ -1,4 +1,6 @@
+import clsx from 'clsx';
 import React, { useState } from 'react';
+import styles from './CoursePlannerEdit.module.css';
 
 import {
   PageHeader,
@@ -29,6 +31,13 @@ import CardWithNotification from '../../recipes/CardWithNotification';
 import TableCard from '../../recipes/TableCard';
 
 import EmptyImage from '../../static/hand-pencil.svg';
+
+export interface Props {
+  /**
+   * CSS class names that can be appended to the component.
+   */
+  className?: string;
+}
 
 const CognitiveSkillColumns = [
   {
@@ -262,7 +271,7 @@ const StandardsRows = [
   },
 ];
 
-export const CoursePlannerEdit = () => {
+export const CoursePlannerEdit = (className: Props) => {
   const container1EmptyContent = () => {
     return (
       <>
@@ -476,7 +485,7 @@ export const CoursePlannerEdit = () => {
       },
     );
   };
-
+  const buttonClassName = clsx(styles['button--mobile'], className);
   return (
     <>
       <Panel className="!mb-6" variant="squared">
@@ -499,7 +508,7 @@ export const CoursePlannerEdit = () => {
               // above it only when the flex-direction is column, so
               // this utility class was written with a media query
               // that matches the behavior of .page-header
-              <ButtonGroup className="u-margin-top-xl-mobile">
+              <ButtonGroup className={buttonClassName}>
                 <Button>
                   <Icon name="arrow-narrow-left" purpose="decorative" />
                   Back

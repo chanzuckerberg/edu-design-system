@@ -1,6 +1,7 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 import { Section } from './Section';
+import styles from './Section.stories.module.css';
 import Avatar from '../Avatar';
 import Button from '../Button';
 import Icon from '../Icon';
@@ -33,7 +34,11 @@ export const Center: StoryObj<Args> = {
     ),
     title: 'Section Title',
     description: (
-      <Text as="p" className="u-theme-typography-body-text-xs-bold" size="sm">
+      <Text
+        as="p"
+        className={styles['u-theme-typography-body-text-xs-bold']}
+        size="sm"
+      >
         This is a description of what the section is
       </Text>
     ),
@@ -44,7 +49,11 @@ export const WithDescription: StoryObj<Args> = {
   args: {
     title: 'Section Title',
     description: (
-      <Text as="p" className="u-theme-typography-body-text-xs-bold" size="sm">
+      <Text
+        as="p"
+        className={styles['u-theme-typography-body-text-xs-bold']}
+        size="sm"
+      >
         This is a description of what the section is
       </Text>
     ),
