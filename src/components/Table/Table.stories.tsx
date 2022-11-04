@@ -3,6 +3,7 @@ import type { StoryObj, Meta } from '@storybook/react';
 import React, { useState } from 'react';
 
 import { Table } from './Table';
+import styles from './Table.stories.module.css';
 import TableBody from '../TableBody';
 import TableCell from '../TableCell';
 import TableHeader from '../TableHeader';
@@ -16,6 +17,17 @@ export default {
   parameters: {
     badges: [BADGE.BETA],
   },
+  decorators: [
+    (Story) => (
+      <div
+        style={{
+          backgroundColor: 'white',
+        }}
+      >
+        <Story />
+      </div>
+    ),
+  ],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Table>;
@@ -74,25 +86,21 @@ export const Default: StoryObj<Args> = {
     children: (
       <>
         <Table.Header>
-          <Table.Row>
-            {tableColumns.map((item, index) => {
+          <Table.Row variant="header">
+            {tableColumns.map((item) => {
               return (
-                // FIXME
-                // eslint-disable-next-line react/no-array-index-key
-                <Table.Cell as="th" key={'table-header-row-' + index}>
+                <Table.HeaderCell key={'table-header-row-' + item.title}>
                   {item.title}
-                </Table.Cell>
+                </Table.HeaderCell>
               );
             })}
           </Table.Row>
         </Table.Header>
 
         <Table.Body>
-          {tableRows.map((item, index) => {
+          {tableRows.map((item) => {
             return (
-              // FIXME
-              // eslint-disable-next-line react/no-array-index-key
-              <Table.Row key={'table-row-' + index}>
+              <Table.Row key={item.value1.slice(0, 11)}>
                 <Table.Cell>{item.value1}</Table.Cell>
                 <Table.Cell>{item.value2}</Table.Cell>
                 <Table.Cell>{item.value3}</Table.Cell>
@@ -107,53 +115,72 @@ export const Default: StoryObj<Args> = {
   },
 };
 
-export const Zebra: StoryObj<Args> = {
+export const TableWithCaption: StoryObj<Args> = {
   args: {
-    ...Default.args,
-    variant: 'zebra',
-  },
-};
-
-export const Stacked: StoryObj<Args> = {
-  args: {
-    behavior: 'stacked',
     children: (
       <>
+        <Table.Caption>
+          Optional caption for the table. Must be first descendant of Table if
+          used.
+        </Table.Caption>
+
         <Table.Header>
-          <Table.Row>
-            {tableColumns.map((item, index) => {
+          <Table.Row variant="header">
+            {tableColumns.map((item) => {
               return (
-                // FIXME
-                // eslint-disable-next-line react/no-array-index-key
-                <Table.Cell as="th" key={'table-header-row-' + index}>
+                <Table.HeaderCell key={'table-header-row-' + item.title}>
                   {item.title}
-                </Table.Cell>
+                </Table.HeaderCell>
               );
             })}
           </Table.Row>
         </Table.Header>
 
         <Table.Body>
-          {tableRows.map((item, index) => {
+          {tableRows.map((item) => {
             return (
-              // FIXME
-              // eslint-disable-next-line react/no-array-index-key
-              <Table.Row key={'table-row-' + index}>
-                <Table.Cell data-heading={tableColumns[0].title}>
-                  {item.value1}
-                </Table.Cell>
-                <Table.Cell data-heading={tableColumns[1].title}>
-                  {item.value2}
-                </Table.Cell>
-                <Table.Cell data-heading={tableColumns[2].title}>
-                  {item.value3}
-                </Table.Cell>
-                <Table.Cell data-heading={tableColumns[3].title}>
-                  {item.value4}
-                </Table.Cell>
-                <Table.Cell data-heading={tableColumns[4].title}>
-                  {item.value5}
-                </Table.Cell>
+              <Table.Row key={item.value1.slice(0, 11)}>
+                <Table.Cell>{item.value1}</Table.Cell>
+                <Table.Cell>{item.value2}</Table.Cell>
+                <Table.Cell>{item.value3}</Table.Cell>
+                <Table.Cell>{item.value4}</Table.Cell>
+                <Table.Cell>{item.value5}</Table.Cell>
+              </Table.Row>
+            );
+          })}
+        </Table.Body>
+      </>
+    ),
+  },
+};
+export const ZebraHover: StoryObj<Args> = {
+  args: {
+    children: (
+      <>
+        <Table.Header>
+          <Table.Row className={styles['table__row--zebra']} variant="header">
+            {tableColumns.map((item) => {
+              return (
+                <Table.HeaderCell key={'table-header-row-' + item.title}>
+                  {item.title}
+                </Table.HeaderCell>
+              );
+            })}
+          </Table.Row>
+        </Table.Header>
+
+        <Table.Body>
+          {tableRows.map((item) => {
+            return (
+              <Table.Row
+                className={styles['table__row--zebra']}
+                key={item.value1.slice(0, 11)}
+              >
+                <Table.Cell>{item.value1}</Table.Cell>
+                <Table.Cell>{item.value2}</Table.Cell>
+                <Table.Cell>{item.value3}</Table.Cell>
+                <Table.Cell>{item.value4}</Table.Cell>
+                <Table.Cell>{item.value5}</Table.Cell>
               </Table.Row>
             );
           })}
@@ -162,53 +189,39 @@ export const Stacked: StoryObj<Args> = {
     ),
   },
   parameters: {
-    viewport: {
-      defaultViewport: 'mobile2',
-    },
-    chromatic: { viewports: [414] },
+    // No hover functionality on chromatic, no need to snap.
+    chromatic: { disableSnapshot: true },
   },
 };
 
 export const AlignTableCellContentCenter: StoryObj<Args> = {
   args: {
-    caption: 'This is a table caption and it is required',
     children: (
       <>
         <Table.Header>
-          <Table.Row>
-            {tableColumns.map(function (item, index) {
+          <Table.Row variant="header">
+            {tableColumns.map(function (item) {
               return (
-                // FIXME
-                // eslint-disable-next-line react/no-array-index-key
-                <Table.Cell align="center" as="th" key={'table-cell-' + index}>
+                <Table.HeaderCell
+                  className="text-center"
+                  key={'table-cell-' + item.title}
+                >
                   {item.title}
-                </Table.Cell>
+                </Table.HeaderCell>
               );
             })}
           </Table.Row>
         </Table.Header>
 
         <Table.Body>
-          {tableRows.map(function (item, index) {
+          {tableRows.map(function (item) {
             return (
-              // FIXME
-              // eslint-disable-next-line react/no-array-index-key
-              <Table.Row key={'table-row-' + index}>
-                <Table.Cell align="center" data-label={tableColumns[0].title}>
-                  {item.value1}
-                </Table.Cell>
-                <Table.Cell align="center" data-label={tableColumns[1].title}>
-                  {item.value2}
-                </Table.Cell>
-                <Table.Cell align="center" data-label={tableColumns[2].title}>
-                  {item.value3}
-                </Table.Cell>
-                <Table.Cell align="center" data-label={tableColumns[3].title}>
-                  {item.value4}
-                </Table.Cell>
-                <Table.Cell align="center" data-label={tableColumns[4].title}>
-                  {item.value5}
-                </Table.Cell>
+              <Table.Row key={item.value1.slice(0, 11)}>
+                <Table.Cell>{item.value1}</Table.Cell>
+                <Table.Cell>{item.value2}</Table.Cell>
+                <Table.Cell>{item.value3}</Table.Cell>
+                <Table.Cell>{item.value4}</Table.Cell>
+                <Table.Cell>{item.value5}</Table.Cell>
               </Table.Row>
             );
           })}
@@ -220,18 +233,18 @@ export const AlignTableCellContentCenter: StoryObj<Args> = {
 
 export const AlignTableCellContentRight: StoryObj<Args> = {
   args: {
-    caption: 'This is a table caption and it is required',
     children: (
       <>
         <Table.Header>
-          <Table.Row>
-            {tableColumns.map(function (item, index) {
+          <Table.Row variant="header">
+            {tableColumns.map(function (item) {
               return (
-                // FIXME
-                // eslint-disable-next-line react/no-array-index-key
-                <Table.Cell align="right" as="th" key={'table-cell-' + index}>
+                <Table.HeaderCell
+                  className="text-right"
+                  key={'table-cell-' + item.title}
+                >
                   {item.title}
-                </Table.Cell>
+                </Table.HeaderCell>
               );
             })}
           </Table.Row>
@@ -240,24 +253,12 @@ export const AlignTableCellContentRight: StoryObj<Args> = {
         <Table.Body>
           {tableRows.map(function (item, index) {
             return (
-              // FIXME
-              // eslint-disable-next-line react/no-array-index-key
-              <Table.Row key={'table-row-' + index}>
-                <Table.Cell align="right" data-label={tableColumns[0].title}>
-                  {item.value1}
-                </Table.Cell>
-                <Table.Cell align="right" data-label={tableColumns[1].title}>
-                  {item.value2}
-                </Table.Cell>
-                <Table.Cell align="right" data-label={tableColumns[2].title}>
-                  {item.value3}
-                </Table.Cell>
-                <Table.Cell align="right" data-label={tableColumns[3].title}>
-                  {item.value4}
-                </Table.Cell>
-                <Table.Cell align="right" data-label={tableColumns[4].title}>
-                  {item.value5}
-                </Table.Cell>
+              <Table.Row key={item.value1.slice(0, 11)}>
+                <Table.Cell>{item.value1}</Table.Cell>
+                <Table.Cell>{item.value2}</Table.Cell>
+                <Table.Cell>{item.value3}</Table.Cell>
+                <Table.Cell>{item.value4}</Table.Cell>
+                <Table.Cell>{item.value5}</Table.Cell>
               </Table.Row>
             );
           })}
@@ -312,9 +313,9 @@ const SortableExample = () => {
     return 0;
   });
   return (
-    <Table caption="This is a table caption and it is required">
+    <Table>
       <Table.Header>
-        <Table.Row>
+        <Table.Row variant="header">
           <Table.HeaderCell
             onSortClick={onSortClick}
             sortDirection={sortDirection}
