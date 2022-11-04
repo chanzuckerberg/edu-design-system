@@ -3,6 +3,7 @@ import type { StoryObj, Meta } from '@storybook/react';
 import React, { useState } from 'react';
 
 import { Table } from './Table';
+import styles from './Table.stories.module.css';
 import TableBody from '../TableBody';
 import TableCell from '../TableCell';
 import TableHeader from '../TableHeader';
@@ -16,6 +17,17 @@ export default {
   parameters: {
     badges: [BADGE.BETA],
   },
+  decorators: [
+    (Story) => (
+      <div
+        style={{
+          backgroundColor: 'white',
+        }}
+      >
+        <Story />
+      </div>
+    ),
+  ],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Table>;
@@ -91,6 +103,45 @@ export const Default: StoryObj<Args> = {
               // FIXME
               // eslint-disable-next-line react/no-array-index-key
               <Table.Row key={'table-row-' + index}>
+                <Table.Cell>{item.value1}</Table.Cell>
+                <Table.Cell>{item.value2}</Table.Cell>
+                <Table.Cell>{item.value3}</Table.Cell>
+                <Table.Cell>{item.value4}</Table.Cell>
+                <Table.Cell>{item.value5}</Table.Cell>
+              </Table.Row>
+            );
+          })}
+        </Table.Body>
+      </>
+    ),
+  },
+};
+
+export const ZebraHover: StoryObj<Args> = {
+  args: {
+    children: (
+      <>
+        <Table.Header>
+          <Table.Row className={styles['table__row--zebra']} variant="header">
+            {tableColumns.map((item) => {
+              return (
+                <Table.HeaderCell key={'table-header-row-' + item.title}>
+                  {item.title}
+                </Table.HeaderCell>
+              );
+            })}
+          </Table.Row>
+        </Table.Header>
+
+        <Table.Body>
+          {tableRows.map((item, index) => {
+            return (
+              <Table.Row
+                className={styles['table__row--zebra']}
+                // FIXME
+                // eslint-disable-next-line react/no-array-index-key
+                key={'table-row-' + index}
+              >
                 <Table.Cell>{item.value1}</Table.Cell>
                 <Table.Cell>{item.value2}</Table.Cell>
                 <Table.Cell>{item.value3}</Table.Cell>

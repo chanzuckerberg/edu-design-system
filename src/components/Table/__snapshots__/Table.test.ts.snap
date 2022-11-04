@@ -1,582 +1,760 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Table /> AlignTableCellContentCenter story renders snapshot 1`] = `
-<table
-  class="table"
+<div
+  style="background-color: white;"
 >
-  <thead>
-    <tr
-      class="table-row table-row--header"
-    >
-      <th
-        class="table-header-cell text-center"
-      >
-        Name
-      </th>
-      <th
-        class="table-header-cell text-center"
-      >
-        Status
-      </th>
-      <th
-        class="table-header-cell text-center"
-      >
-        Chart
-      </th>
-      <th
-        class="table-header-cell text-center"
-      >
-        Window
-      </th>
-      <th
-        class="table-header-cell text-center"
-      >
-        Last Update
-      </th>
-    </tr>
-  </thead>
-  <tbody
-    class="table__body"
+  <table
+    class="table"
   >
-    <tr
-      class="table-row"
+    <thead>
+      <tr
+        class="table-row table-row--header"
+      >
+        <th
+          class="table-header-cell text-center"
+        >
+          Name
+        </th>
+        <th
+          class="table-header-cell text-center"
+        >
+          Status
+        </th>
+        <th
+          class="table-header-cell text-center"
+        >
+          Chart
+        </th>
+        <th
+          class="table-header-cell text-center"
+        >
+          Window
+        </th>
+        <th
+          class="table-header-cell text-center"
+        >
+          Last Update
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      class="table__body"
     >
-      <td
-        class="table-cell"
+      <tr
+        class="table-row"
       >
-        Table Row 1, Table Cell 1
-      </td>
-      <td
-        class="table-cell"
+        <td
+          class="table-cell"
+        >
+          Table Row 1, Table Cell 1
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 1, Table Cell 2
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 1, Table Cell 3
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 1, Table Cell 4
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 1, Table Cell 5
+        </td>
+      </tr>
+      <tr
+        class="table-row"
       >
-        Table Row 1, Table Cell 2
-      </td>
-      <td
-        class="table-cell"
+        <td
+          class="table-cell"
+        >
+          Table Row 2, Table Cell 1
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 2, Table Cell 2
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 2, Table Cell 3
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 2, Table Cell 4
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 2, Table Cell 5
+        </td>
+      </tr>
+      <tr
+        class="table-row"
       >
-        Table Row 1, Table Cell 3
-      </td>
-      <td
-        class="table-cell"
+        <td
+          class="table-cell"
+        >
+          Table Row 3, Table Cell 1
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 3, Table Cell 2
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 3, Table Cell 3
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 3, Table Cell 4
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 3, Table Cell 5
+        </td>
+      </tr>
+      <tr
+        class="table-row"
       >
-        Table Row 1, Table Cell 4
-      </td>
-      <td
-        class="table-cell"
-      >
-        Table Row 1, Table Cell 5
-      </td>
-    </tr>
-    <tr
-      class="table-row"
-    >
-      <td
-        class="table-cell"
-      >
-        Table Row 2, Table Cell 1
-      </td>
-      <td
-        class="table-cell"
-      >
-        Table Row 2, Table Cell 2
-      </td>
-      <td
-        class="table-cell"
-      >
-        Table Row 2, Table Cell 3
-      </td>
-      <td
-        class="table-cell"
-      >
-        Table Row 2, Table Cell 4
-      </td>
-      <td
-        class="table-cell"
-      >
-        Table Row 2, Table Cell 5
-      </td>
-    </tr>
-    <tr
-      class="table-row"
-    >
-      <td
-        class="table-cell"
-      >
-        Table Row 3, Table Cell 1
-      </td>
-      <td
-        class="table-cell"
-      >
-        Table Row 3, Table Cell 2
-      </td>
-      <td
-        class="table-cell"
-      >
-        Table Row 3, Table Cell 3
-      </td>
-      <td
-        class="table-cell"
-      >
-        Table Row 3, Table Cell 4
-      </td>
-      <td
-        class="table-cell"
-      >
-        Table Row 3, Table Cell 5
-      </td>
-    </tr>
-    <tr
-      class="table-row"
-    >
-      <td
-        class="table-cell"
-      >
-        Table Row 4, Table Cell 1
-      </td>
-      <td
-        class="table-cell"
-      >
-        Table Row 4, Table Cell 2
-      </td>
-      <td
-        class="table-cell"
-      >
-        Table Row 4, Table Cell 3
-      </td>
-      <td
-        class="table-cell"
-      >
-        Table Row 4, Table Cell 4
-      </td>
-      <td
-        class="table-cell"
-      >
-        Table Row 4, Table Cell 5
-      </td>
-    </tr>
-  </tbody>
-</table>
+        <td
+          class="table-cell"
+        >
+          Table Row 4, Table Cell 1
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 4, Table Cell 2
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 4, Table Cell 3
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 4, Table Cell 4
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 4, Table Cell 5
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 `;
 
 exports[`<Table /> AlignTableCellContentRight story renders snapshot 1`] = `
-<table
-  class="table"
+<div
+  style="background-color: white;"
 >
-  <thead>
-    <tr
-      class="table-row table-row--header"
-    >
-      <th
-        class="table-header-cell text-right"
-      >
-        Name
-      </th>
-      <th
-        class="table-header-cell text-right"
-      >
-        Status
-      </th>
-      <th
-        class="table-header-cell text-right"
-      >
-        Chart
-      </th>
-      <th
-        class="table-header-cell text-right"
-      >
-        Window
-      </th>
-      <th
-        class="table-header-cell text-right"
-      >
-        Last Update
-      </th>
-    </tr>
-  </thead>
-  <tbody
-    class="table__body"
+  <table
+    class="table"
   >
-    <tr
-      class="table-row"
+    <thead>
+      <tr
+        class="table-row table-row--header"
+      >
+        <th
+          class="table-header-cell text-right"
+        >
+          Name
+        </th>
+        <th
+          class="table-header-cell text-right"
+        >
+          Status
+        </th>
+        <th
+          class="table-header-cell text-right"
+        >
+          Chart
+        </th>
+        <th
+          class="table-header-cell text-right"
+        >
+          Window
+        </th>
+        <th
+          class="table-header-cell text-right"
+        >
+          Last Update
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      class="table__body"
     >
-      <td
-        class="table-cell"
+      <tr
+        class="table-row"
       >
-        Table Row 1, Table Cell 1
-      </td>
-      <td
-        class="table-cell"
+        <td
+          class="table-cell"
+        >
+          Table Row 1, Table Cell 1
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 1, Table Cell 2
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 1, Table Cell 3
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 1, Table Cell 4
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 1, Table Cell 5
+        </td>
+      </tr>
+      <tr
+        class="table-row"
       >
-        Table Row 1, Table Cell 2
-      </td>
-      <td
-        class="table-cell"
+        <td
+          class="table-cell"
+        >
+          Table Row 2, Table Cell 1
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 2, Table Cell 2
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 2, Table Cell 3
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 2, Table Cell 4
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 2, Table Cell 5
+        </td>
+      </tr>
+      <tr
+        class="table-row"
       >
-        Table Row 1, Table Cell 3
-      </td>
-      <td
-        class="table-cell"
+        <td
+          class="table-cell"
+        >
+          Table Row 3, Table Cell 1
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 3, Table Cell 2
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 3, Table Cell 3
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 3, Table Cell 4
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 3, Table Cell 5
+        </td>
+      </tr>
+      <tr
+        class="table-row"
       >
-        Table Row 1, Table Cell 4
-      </td>
-      <td
-        class="table-cell"
-      >
-        Table Row 1, Table Cell 5
-      </td>
-    </tr>
-    <tr
-      class="table-row"
-    >
-      <td
-        class="table-cell"
-      >
-        Table Row 2, Table Cell 1
-      </td>
-      <td
-        class="table-cell"
-      >
-        Table Row 2, Table Cell 2
-      </td>
-      <td
-        class="table-cell"
-      >
-        Table Row 2, Table Cell 3
-      </td>
-      <td
-        class="table-cell"
-      >
-        Table Row 2, Table Cell 4
-      </td>
-      <td
-        class="table-cell"
-      >
-        Table Row 2, Table Cell 5
-      </td>
-    </tr>
-    <tr
-      class="table-row"
-    >
-      <td
-        class="table-cell"
-      >
-        Table Row 3, Table Cell 1
-      </td>
-      <td
-        class="table-cell"
-      >
-        Table Row 3, Table Cell 2
-      </td>
-      <td
-        class="table-cell"
-      >
-        Table Row 3, Table Cell 3
-      </td>
-      <td
-        class="table-cell"
-      >
-        Table Row 3, Table Cell 4
-      </td>
-      <td
-        class="table-cell"
-      >
-        Table Row 3, Table Cell 5
-      </td>
-    </tr>
-    <tr
-      class="table-row"
-    >
-      <td
-        class="table-cell"
-      >
-        Table Row 4, Table Cell 1
-      </td>
-      <td
-        class="table-cell"
-      >
-        Table Row 4, Table Cell 2
-      </td>
-      <td
-        class="table-cell"
-      >
-        Table Row 4, Table Cell 3
-      </td>
-      <td
-        class="table-cell"
-      >
-        Table Row 4, Table Cell 4
-      </td>
-      <td
-        class="table-cell"
-      >
-        Table Row 4, Table Cell 5
-      </td>
-    </tr>
-  </tbody>
-</table>
+        <td
+          class="table-cell"
+        >
+          Table Row 4, Table Cell 1
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 4, Table Cell 2
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 4, Table Cell 3
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 4, Table Cell 4
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 4, Table Cell 5
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 `;
 
 exports[`<Table /> Default story renders snapshot 1`] = `
-<table
-  class="table"
+<div
+  style="background-color: white;"
 >
-  <thead>
-    <tr
-      class="table-row table-row--header"
-    >
-      <th
-        class="table-header-cell"
-      >
-        Name
-      </th>
-      <th
-        class="table-header-cell"
-      >
-        Status
-      </th>
-      <th
-        class="table-header-cell"
-      >
-        Chart
-      </th>
-      <th
-        class="table-header-cell"
-      >
-        Window
-      </th>
-      <th
-        class="table-header-cell"
-      >
-        Last Update
-      </th>
-    </tr>
-  </thead>
-  <tbody
-    class="table__body"
+  <table
+    class="table"
   >
-    <tr
-      class="table-row"
+    <thead>
+      <tr
+        class="table-row table-row--header"
+      >
+        <th
+          class="table-header-cell"
+        >
+          Name
+        </th>
+        <th
+          class="table-header-cell"
+        >
+          Status
+        </th>
+        <th
+          class="table-header-cell"
+        >
+          Chart
+        </th>
+        <th
+          class="table-header-cell"
+        >
+          Window
+        </th>
+        <th
+          class="table-header-cell"
+        >
+          Last Update
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      class="table__body"
     >
-      <td
-        class="table-cell"
+      <tr
+        class="table-row"
       >
-        Table Row 1, Table Cell 1
-      </td>
-      <td
-        class="table-cell"
+        <td
+          class="table-cell"
+        >
+          Table Row 1, Table Cell 1
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 1, Table Cell 2
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 1, Table Cell 3
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 1, Table Cell 4
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 1, Table Cell 5
+        </td>
+      </tr>
+      <tr
+        class="table-row"
       >
-        Table Row 1, Table Cell 2
-      </td>
-      <td
-        class="table-cell"
+        <td
+          class="table-cell"
+        >
+          Table Row 2, Table Cell 1
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 2, Table Cell 2
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 2, Table Cell 3
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 2, Table Cell 4
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 2, Table Cell 5
+        </td>
+      </tr>
+      <tr
+        class="table-row"
       >
-        Table Row 1, Table Cell 3
-      </td>
-      <td
-        class="table-cell"
+        <td
+          class="table-cell"
+        >
+          Table Row 3, Table Cell 1
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 3, Table Cell 2
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 3, Table Cell 3
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 3, Table Cell 4
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 3, Table Cell 5
+        </td>
+      </tr>
+      <tr
+        class="table-row"
       >
-        Table Row 1, Table Cell 4
-      </td>
-      <td
-        class="table-cell"
-      >
-        Table Row 1, Table Cell 5
-      </td>
-    </tr>
-    <tr
-      class="table-row"
-    >
-      <td
-        class="table-cell"
-      >
-        Table Row 2, Table Cell 1
-      </td>
-      <td
-        class="table-cell"
-      >
-        Table Row 2, Table Cell 2
-      </td>
-      <td
-        class="table-cell"
-      >
-        Table Row 2, Table Cell 3
-      </td>
-      <td
-        class="table-cell"
-      >
-        Table Row 2, Table Cell 4
-      </td>
-      <td
-        class="table-cell"
-      >
-        Table Row 2, Table Cell 5
-      </td>
-    </tr>
-    <tr
-      class="table-row"
-    >
-      <td
-        class="table-cell"
-      >
-        Table Row 3, Table Cell 1
-      </td>
-      <td
-        class="table-cell"
-      >
-        Table Row 3, Table Cell 2
-      </td>
-      <td
-        class="table-cell"
-      >
-        Table Row 3, Table Cell 3
-      </td>
-      <td
-        class="table-cell"
-      >
-        Table Row 3, Table Cell 4
-      </td>
-      <td
-        class="table-cell"
-      >
-        Table Row 3, Table Cell 5
-      </td>
-    </tr>
-    <tr
-      class="table-row"
-    >
-      <td
-        class="table-cell"
-      >
-        Table Row 4, Table Cell 1
-      </td>
-      <td
-        class="table-cell"
-      >
-        Table Row 4, Table Cell 2
-      </td>
-      <td
-        class="table-cell"
-      >
-        Table Row 4, Table Cell 3
-      </td>
-      <td
-        class="table-cell"
-      >
-        Table Row 4, Table Cell 4
-      </td>
-      <td
-        class="table-cell"
-      >
-        Table Row 4, Table Cell 5
-      </td>
-    </tr>
-  </tbody>
-</table>
+        <td
+          class="table-cell"
+        >
+          Table Row 4, Table Cell 1
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 4, Table Cell 2
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 4, Table Cell 3
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 4, Table Cell 4
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 4, Table Cell 5
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 `;
 
 exports[`<Table /> SortableInteractive story renders snapshot 1`] = `
-<table
-  class="table"
+<div
+  style="background-color: white;"
 >
-  <thead>
-    <tr
-      class="table-row table-row--header"
-    >
-      <th
-        class="table-header-cell"
-      >
-        <button
-          class="clickable-style clickable-style--link clickable-style--brand button button--link table-header-cell__sort-button"
-          data-bootstrap-override="clickable-style-link"
-          type="button"
-        >
-          Sortable
-          <svg
-            class="icon"
-            fill="currentColor"
-            height="1rem"
-            role="img"
-            style="--icon-size: 1rem;"
-            width="1rem"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <title
-              id="1"
-            >
-              Sort
-            </title>
-            <use
-              xlink:href="test-file-stub#unfold-more"
-            />
-          </svg>
-        </button>
-      </th>
-      <th
-        class="table-header-cell"
-      >
-        Not sortable
-      </th>
-    </tr>
-  </thead>
-  <tbody
-    class="table__body"
+  <table
+    class="table"
   >
-    <tr
-      class="table-row"
+    <thead>
+      <tr
+        class="table-row table-row--header"
+      >
+        <th
+          class="table-header-cell"
+        >
+          <button
+            class="clickable-style clickable-style--link clickable-style--brand button button--link table-header-cell__sort-button"
+            data-bootstrap-override="clickable-style-link"
+            type="button"
+          >
+            Sortable
+            <svg
+              class="icon"
+              fill="currentColor"
+              height="1rem"
+              role="img"
+              style="--icon-size: 1rem;"
+              width="1rem"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title
+                id="1"
+              >
+                Sort
+              </title>
+              <use
+                xlink:href="test-file-stub#unfold-more"
+              />
+            </svg>
+          </button>
+        </th>
+        <th
+          class="table-header-cell"
+        >
+          Not sortable
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      class="table__body"
     >
-      <td
-        class="table-cell"
+      <tr
+        class="table-row"
       >
-        Value 1
-      </td>
-      <td
-        class="table-cell"
+        <td
+          class="table-cell"
+        >
+          Value 1
+        </td>
+        <td
+          class="table-cell"
+        >
+          Value A
+        </td>
+      </tr>
+      <tr
+        class="table-row"
       >
-        Value A
-      </td>
-    </tr>
-    <tr
-      class="table-row"
+        <td
+          class="table-cell"
+        >
+          Value 3
+        </td>
+        <td
+          class="table-cell"
+        >
+          Value B
+        </td>
+      </tr>
+      <tr
+        class="table-row"
+      >
+        <td
+          class="table-cell"
+        >
+          Value 2
+        </td>
+        <td
+          class="table-cell"
+        >
+          Value C
+        </td>
+      </tr>
+      <tr
+        class="table-row"
+      >
+        <td
+          class="table-cell"
+        >
+          Value 4
+        </td>
+        <td
+          class="table-cell"
+        >
+          Value D
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`<Table /> ZebraHover story renders snapshot 1`] = `
+<div
+  style="background-color: white;"
+>
+  <table
+    class="table"
+  >
+    <thead>
+      <tr
+        class="table-row table-row--header table__row--zebra"
+      >
+        <th
+          class="table-header-cell"
+        >
+          Name
+        </th>
+        <th
+          class="table-header-cell"
+        >
+          Status
+        </th>
+        <th
+          class="table-header-cell"
+        >
+          Chart
+        </th>
+        <th
+          class="table-header-cell"
+        >
+          Window
+        </th>
+        <th
+          class="table-header-cell"
+        >
+          Last Update
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      class="table__body"
     >
-      <td
-        class="table-cell"
+      <tr
+        class="table-row table__row--zebra"
       >
-        Value 3
-      </td>
-      <td
-        class="table-cell"
+        <td
+          class="table-cell"
+        >
+          Table Row 1, Table Cell 1
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 1, Table Cell 2
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 1, Table Cell 3
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 1, Table Cell 4
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 1, Table Cell 5
+        </td>
+      </tr>
+      <tr
+        class="table-row table__row--zebra"
       >
-        Value B
-      </td>
-    </tr>
-    <tr
-      class="table-row"
-    >
-      <td
-        class="table-cell"
+        <td
+          class="table-cell"
+        >
+          Table Row 2, Table Cell 1
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 2, Table Cell 2
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 2, Table Cell 3
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 2, Table Cell 4
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 2, Table Cell 5
+        </td>
+      </tr>
+      <tr
+        class="table-row table__row--zebra"
       >
-        Value 2
-      </td>
-      <td
-        class="table-cell"
+        <td
+          class="table-cell"
+        >
+          Table Row 3, Table Cell 1
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 3, Table Cell 2
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 3, Table Cell 3
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 3, Table Cell 4
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 3, Table Cell 5
+        </td>
+      </tr>
+      <tr
+        class="table-row table__row--zebra"
       >
-        Value C
-      </td>
-    </tr>
-    <tr
-      class="table-row"
-    >
-      <td
-        class="table-cell"
-      >
-        Value 4
-      </td>
-      <td
-        class="table-cell"
-      >
-        Value D
-      </td>
-    </tr>
-  </tbody>
-</table>
+        <td
+          class="table-cell"
+        >
+          Table Row 4, Table Cell 1
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 4, Table Cell 2
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 4, Table Cell 3
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 4, Table Cell 4
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 4, Table Cell 5
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 `;
