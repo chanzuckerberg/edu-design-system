@@ -10,10 +10,17 @@ export default {
 
 type Args = ComponentProps<typeof FeedbackOverview>;
 
-export const Overview: StoryObj<Args> = {};
+export const Overview: StoryObj<Args> = {
+  parameters: {
+    chromatic: { viewports: [414, 768, 1366] },
+  },
+};
 
 export const Checkpoint: StoryObj<Args> = {
   args: {
     activeIndex: 1,
+  },
+  parameters: {
+    chromatic: { viewports: [414, 768, 1366] },
   },
 };
