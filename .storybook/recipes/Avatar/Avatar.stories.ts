@@ -4,7 +4,7 @@ import type { ComponentProps } from 'react';
 import { Avatar } from './Avatar';
 
 export default {
-  title: 'Atoms/Media/Avatar',
+  title: 'Recipes/Avatar',
   component: Avatar,
 } as Meta<Args>;
 

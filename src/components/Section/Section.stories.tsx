@@ -2,7 +2,6 @@ import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 import { Section } from './Section';
 import styles from './Section.stories.module.css';
-import Avatar from '../Avatar';
 import Button from '../Button';
 import Icon from '../Icon';
 import Text from '../Text';
@@ -17,6 +16,10 @@ export default {
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Section>;
+
+const HelpIcon = (
+  <Icon name="help" purpose="informative" size="1.375rem" title="help" />
+);
 
 export const Default: StoryObj<Args> = {
   args: {
@@ -76,18 +79,14 @@ export const WithRight: StoryObj<Args> = {
 
 export const WithTitleAfter: StoryObj<Args> = {
   args: {
-    titleAfter: (
-      <Button size="sm" variant="icon">
-        <Icon name="help" purpose="informative" size="1.375rem" title="help" />
-      </Button>
-    ),
+    titleAfter: HelpIcon,
     title: 'Section Title',
   },
 };
 
 export const WithTitleBefore: StoryObj<Args> = {
   args: {
-    titleBefore: <Avatar />,
+    titleBefore: HelpIcon,
     title: 'Section Title',
     headingSize: 'h4',
     headingAs: 'h4',

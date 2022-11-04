@@ -111,8 +111,6 @@ export type { BannerProps } from './components/Banner';
  * ensures we don't unintentionally blow up the bundle size of
  * consuming apps.
  */
-// export { default as Avatar } from './components/Avatar';
-// export { default as AvatarImage } from './components/AvatarImage';
 // export { default as Header } from './components/Header';
 // export { default as Main } from './components/Main';
 // export { default as NavContainer } from './components/NavContainer';

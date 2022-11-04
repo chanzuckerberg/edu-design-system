@@ -10,11 +10,7 @@ export interface Props {
 }
 
 /**
- * ```ts
- * import {AvatarImage} from "@chanzuckerberg/eds";
- * ```
- *
- * Component that presents the user's avatar SVG.
+ * Helper for the Avatar component that contains the svg image.
  */
 export const AvatarImage = ({ className, ...other }: Props) => {
   const componentClassName = clsx(styles['avatar-image'], className);

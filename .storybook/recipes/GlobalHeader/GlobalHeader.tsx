@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import styles from './GlobalHeader.module.css';
 import { Button, Icon, Heading } from '../../../src';
 // Project Overview pilot components -- not yet exported from src/index.ts
-import Avatar from '../../../src/components/Avatar';
 import Header from '../../../src/components/Header';
 import Logo from '../../../src/components/Logo';
 import NavContainer from '../../../src/components/NavContainer';
@@ -15,6 +14,7 @@ import UtilityNav from '../../../src/components/UtilityNav';
 
 import breakpoint from '../../../src/design-tokens/tier-1-definitions/breakpoints';
 import { EdsThemeColorIconNeutralDefaultInverse } from '../../../src/tokens-dist/ts/colors';
+import Avatar from '../Avatar';
 
 export interface Props {
   /**
