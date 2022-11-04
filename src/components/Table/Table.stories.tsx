@@ -75,13 +75,11 @@ export const Default: StoryObj<Args> = {
       <>
         <Table.Header>
           <Table.Row variant="header">
-            {tableColumns.map((item, index) => {
+            {tableColumns.map((item) => {
               return (
-                // FIXME
-                // eslint-disable-next-line react/no-array-index-key
-                <Table.Cell as="th" key={'table-header-row-' + index}>
+                <Table.HeaderCell key={'table-header-row-' + item.title}>
                   {item.title}
-                </Table.Cell>
+                </Table.HeaderCell>
               );
             })}
           </Table.Row>
@@ -113,13 +111,14 @@ export const AlignTableCellContentCenter: StoryObj<Args> = {
       <>
         <Table.Header>
           <Table.Row variant="header">
-            {tableColumns.map(function (item, index) {
+            {tableColumns.map(function (item) {
               return (
-                // FIXME
-                // eslint-disable-next-line react/no-array-index-key
-                <Table.Cell align="center" as="th" key={'table-cell-' + index}>
+                <Table.HeaderCell
+                  className="text-center"
+                  key={'table-cell-' + item.title}
+                >
                   {item.title}
-                </Table.Cell>
+                </Table.HeaderCell>
               );
             })}
           </Table.Row>
@@ -131,21 +130,11 @@ export const AlignTableCellContentCenter: StoryObj<Args> = {
               // FIXME
               // eslint-disable-next-line react/no-array-index-key
               <Table.Row key={'table-row-' + index}>
-                <Table.Cell align="center" data-label={tableColumns[0].title}>
-                  {item.value1}
-                </Table.Cell>
-                <Table.Cell align="center" data-label={tableColumns[1].title}>
-                  {item.value2}
-                </Table.Cell>
-                <Table.Cell align="center" data-label={tableColumns[2].title}>
-                  {item.value3}
-                </Table.Cell>
-                <Table.Cell align="center" data-label={tableColumns[3].title}>
-                  {item.value4}
-                </Table.Cell>
-                <Table.Cell align="center" data-label={tableColumns[4].title}>
-                  {item.value5}
-                </Table.Cell>
+                <Table.Cell>{item.value1}</Table.Cell>
+                <Table.Cell>{item.value2}</Table.Cell>
+                <Table.Cell>{item.value3}</Table.Cell>
+                <Table.Cell>{item.value4}</Table.Cell>
+                <Table.Cell>{item.value5}</Table.Cell>
               </Table.Row>
             );
           })}
@@ -161,13 +150,14 @@ export const AlignTableCellContentRight: StoryObj<Args> = {
       <>
         <Table.Header>
           <Table.Row variant="header">
-            {tableColumns.map(function (item, index) {
+            {tableColumns.map(function (item) {
               return (
-                // FIXME
-                // eslint-disable-next-line react/no-array-index-key
-                <Table.Cell align="right" as="th" key={'table-cell-' + index}>
+                <Table.HeaderCell
+                  className="text-right"
+                  key={'table-cell-' + item.title}
+                >
                   {item.title}
-                </Table.Cell>
+                </Table.HeaderCell>
               );
             })}
           </Table.Row>
@@ -179,21 +169,11 @@ export const AlignTableCellContentRight: StoryObj<Args> = {
               // FIXME
               // eslint-disable-next-line react/no-array-index-key
               <Table.Row key={'table-row-' + index}>
-                <Table.Cell align="right" data-label={tableColumns[0].title}>
-                  {item.value1}
-                </Table.Cell>
-                <Table.Cell align="right" data-label={tableColumns[1].title}>
-                  {item.value2}
-                </Table.Cell>
-                <Table.Cell align="right" data-label={tableColumns[2].title}>
-                  {item.value3}
-                </Table.Cell>
-                <Table.Cell align="right" data-label={tableColumns[3].title}>
-                  {item.value4}
-                </Table.Cell>
-                <Table.Cell align="right" data-label={tableColumns[4].title}>
-                  {item.value5}
-                </Table.Cell>
+                <Table.Cell>{item.value1}</Table.Cell>
+                <Table.Cell>{item.value2}</Table.Cell>
+                <Table.Cell>{item.value3}</Table.Cell>
+                <Table.Cell>{item.value4}</Table.Cell>
+                <Table.Cell>{item.value5}</Table.Cell>
               </Table.Row>
             );
           })}

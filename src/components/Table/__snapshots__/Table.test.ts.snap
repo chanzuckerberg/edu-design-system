@@ -9,27 +9,27 @@ exports[`<Table /> AlignTableCellContentCenter story renders snapshot 1`] = `
       class="table-row table-row--header"
     >
       <th
-        class="table__cell table__cell--align-center"
+        class="table-header-cell text-center"
       >
         Name
       </th>
       <th
-        class="table__cell table__cell--align-center"
+        class="table-header-cell text-center"
       >
         Status
       </th>
       <th
-        class="table__cell table__cell--align-center"
+        class="table-header-cell text-center"
       >
         Chart
       </th>
       <th
-        class="table__cell table__cell--align-center"
+        class="table-header-cell text-center"
       >
         Window
       </th>
       <th
-        class="table__cell table__cell--align-center"
+        class="table-header-cell text-center"
       >
         Last Update
       </th>
@@ -42,32 +42,27 @@ exports[`<Table /> AlignTableCellContentCenter story renders snapshot 1`] = `
       class="table-row"
     >
       <td
-        class="table__cell table__cell--align-center"
-        data-label="Name"
+        class="table-cell"
       >
         Table Row 1, Table Cell 1
       </td>
       <td
-        class="table__cell table__cell--align-center"
-        data-label="Status"
+        class="table-cell"
       >
         Table Row 1, Table Cell 2
       </td>
       <td
-        class="table__cell table__cell--align-center"
-        data-label="Chart"
+        class="table-cell"
       >
         Table Row 1, Table Cell 3
       </td>
       <td
-        class="table__cell table__cell--align-center"
-        data-label="Window"
+        class="table-cell"
       >
         Table Row 1, Table Cell 4
       </td>
       <td
-        class="table__cell table__cell--align-center"
-        data-label="Last Update"
+        class="table-cell"
       >
         Table Row 1, Table Cell 5
       </td>
@@ -76,32 +71,27 @@ exports[`<Table /> AlignTableCellContentCenter story renders snapshot 1`] = `
       class="table-row"
     >
       <td
-        class="table__cell table__cell--align-center"
-        data-label="Name"
+        class="table-cell"
       >
         Table Row 2, Table Cell 1
       </td>
       <td
-        class="table__cell table__cell--align-center"
-        data-label="Status"
+        class="table-cell"
       >
         Table Row 2, Table Cell 2
       </td>
       <td
-        class="table__cell table__cell--align-center"
-        data-label="Chart"
+        class="table-cell"
       >
         Table Row 2, Table Cell 3
       </td>
       <td
-        class="table__cell table__cell--align-center"
-        data-label="Window"
+        class="table-cell"
       >
         Table Row 2, Table Cell 4
       </td>
       <td
-        class="table__cell table__cell--align-center"
-        data-label="Last Update"
+        class="table-cell"
       >
         Table Row 2, Table Cell 5
       </td>
@@ -110,32 +100,27 @@ exports[`<Table /> AlignTableCellContentCenter story renders snapshot 1`] = `
       class="table-row"
     >
       <td
-        class="table__cell table__cell--align-center"
-        data-label="Name"
+        class="table-cell"
       >
         Table Row 3, Table Cell 1
       </td>
       <td
-        class="table__cell table__cell--align-center"
-        data-label="Status"
+        class="table-cell"
       >
         Table Row 3, Table Cell 2
       </td>
       <td
-        class="table__cell table__cell--align-center"
-        data-label="Chart"
+        class="table-cell"
       >
         Table Row 3, Table Cell 3
       </td>
       <td
-        class="table__cell table__cell--align-center"
-        data-label="Window"
+        class="table-cell"
       >
         Table Row 3, Table Cell 4
       </td>
       <td
-        class="table__cell table__cell--align-center"
-        data-label="Last Update"
+        class="table-cell"
       >
         Table Row 3, Table Cell 5
       </td>
@@ -144,32 +129,27 @@ exports[`<Table /> AlignTableCellContentCenter story renders snapshot 1`] = `
       class="table-row"
     >
       <td
-        class="table__cell table__cell--align-center"
-        data-label="Name"
+        class="table-cell"
       >
         Table Row 4, Table Cell 1
       </td>
       <td
-        class="table__cell table__cell--align-center"
-        data-label="Status"
+        class="table-cell"
       >
         Table Row 4, Table Cell 2
       </td>
       <td
-        class="table__cell table__cell--align-center"
-        data-label="Chart"
+        class="table-cell"
       >
         Table Row 4, Table Cell 3
       </td>
       <td
-        class="table__cell table__cell--align-center"
-        data-label="Window"
+        class="table-cell"
       >
         Table Row 4, Table Cell 4
       </td>
       <td
-        class="table__cell table__cell--align-center"
-        data-label="Last Update"
+        class="table-cell"
       >
         Table Row 4, Table Cell 5
       </td>
@@ -187,27 +167,27 @@ exports[`<Table /> AlignTableCellContentRight story renders snapshot 1`] = `
       class="table-row table-row--header"
     >
       <th
-        class="table__cell table__cell--align-right"
+        class="table-header-cell text-right"
       >
         Name
       </th>
       <th
-        class="table__cell table__cell--align-right"
+        class="table-header-cell text-right"
       >
         Status
       </th>
       <th
-        class="table__cell table__cell--align-right"
+        class="table-header-cell text-right"
       >
         Chart
       </th>
       <th
-        class="table__cell table__cell--align-right"
+        class="table-header-cell text-right"
       >
         Window
       </th>
       <th
-        class="table__cell table__cell--align-right"
+        class="table-header-cell text-right"
       >
         Last Update
       </th>
@@ -220,32 +200,27 @@ exports[`<Table /> AlignTableCellContentRight story renders snapshot 1`] = `
       class="table-row"
     >
       <td
-        class="table__cell table__cell--align-right"
-        data-label="Name"
+        class="table-cell"
       >
         Table Row 1, Table Cell 1
       </td>
       <td
-        class="table__cell table__cell--align-right"
-        data-label="Status"
+        class="table-cell"
       >
         Table Row 1, Table Cell 2
       </td>
       <td
-        class="table__cell table__cell--align-right"
-        data-label="Chart"
+        class="table-cell"
       >
         Table Row 1, Table Cell 3
       </td>
       <td
-        class="table__cell table__cell--align-right"
-        data-label="Window"
+        class="table-cell"
       >
         Table Row 1, Table Cell 4
       </td>
       <td
-        class="table__cell table__cell--align-right"
-        data-label="Last Update"
+        class="table-cell"
       >
         Table Row 1, Table Cell 5
       </td>
@@ -254,32 +229,27 @@ exports[`<Table /> AlignTableCellContentRight story renders snapshot 1`] = `
       class="table-row"
     >
       <td
-        class="table__cell table__cell--align-right"
-        data-label="Name"
+        class="table-cell"
       >
         Table Row 2, Table Cell 1
       </td>
       <td
-        class="table__cell table__cell--align-right"
-        data-label="Status"
+        class="table-cell"
       >
         Table Row 2, Table Cell 2
       </td>
       <td
-        class="table__cell table__cell--align-right"
-        data-label="Chart"
+        class="table-cell"
       >
         Table Row 2, Table Cell 3
       </td>
       <td
-        class="table__cell table__cell--align-right"
-        data-label="Window"
+        class="table-cell"
       >
         Table Row 2, Table Cell 4
       </td>
       <td
-        class="table__cell table__cell--align-right"
-        data-label="Last Update"
+        class="table-cell"
       >
         Table Row 2, Table Cell 5
       </td>
@@ -288,32 +258,27 @@ exports[`<Table /> AlignTableCellContentRight story renders snapshot 1`] = `
       class="table-row"
     >
       <td
-        class="table__cell table__cell--align-right"
-        data-label="Name"
+        class="table-cell"
       >
         Table Row 3, Table Cell 1
       </td>
       <td
-        class="table__cell table__cell--align-right"
-        data-label="Status"
+        class="table-cell"
       >
         Table Row 3, Table Cell 2
       </td>
       <td
-        class="table__cell table__cell--align-right"
-        data-label="Chart"
+        class="table-cell"
       >
         Table Row 3, Table Cell 3
       </td>
       <td
-        class="table__cell table__cell--align-right"
-        data-label="Window"
+        class="table-cell"
       >
         Table Row 3, Table Cell 4
       </td>
       <td
-        class="table__cell table__cell--align-right"
-        data-label="Last Update"
+        class="table-cell"
       >
         Table Row 3, Table Cell 5
       </td>
@@ -322,32 +287,27 @@ exports[`<Table /> AlignTableCellContentRight story renders snapshot 1`] = `
       class="table-row"
     >
       <td
-        class="table__cell table__cell--align-right"
-        data-label="Name"
+        class="table-cell"
       >
         Table Row 4, Table Cell 1
       </td>
       <td
-        class="table__cell table__cell--align-right"
-        data-label="Status"
+        class="table-cell"
       >
         Table Row 4, Table Cell 2
       </td>
       <td
-        class="table__cell table__cell--align-right"
-        data-label="Chart"
+        class="table-cell"
       >
         Table Row 4, Table Cell 3
       </td>
       <td
-        class="table__cell table__cell--align-right"
-        data-label="Window"
+        class="table-cell"
       >
         Table Row 4, Table Cell 4
       </td>
       <td
-        class="table__cell table__cell--align-right"
-        data-label="Last Update"
+        class="table-cell"
       >
         Table Row 4, Table Cell 5
       </td>
@@ -365,27 +325,27 @@ exports[`<Table /> Default story renders snapshot 1`] = `
       class="table-row table-row--header"
     >
       <th
-        class="table__cell"
+        class="table-header-cell"
       >
         Name
       </th>
       <th
-        class="table__cell"
+        class="table-header-cell"
       >
         Status
       </th>
       <th
-        class="table__cell"
+        class="table-header-cell"
       >
         Chart
       </th>
       <th
-        class="table__cell"
+        class="table-header-cell"
       >
         Window
       </th>
       <th
-        class="table__cell"
+        class="table-header-cell"
       >
         Last Update
       </th>
@@ -398,27 +358,27 @@ exports[`<Table /> Default story renders snapshot 1`] = `
       class="table-row"
     >
       <td
-        class="table__cell"
+        class="table-cell"
       >
         Table Row 1, Table Cell 1
       </td>
       <td
-        class="table__cell"
+        class="table-cell"
       >
         Table Row 1, Table Cell 2
       </td>
       <td
-        class="table__cell"
+        class="table-cell"
       >
         Table Row 1, Table Cell 3
       </td>
       <td
-        class="table__cell"
+        class="table-cell"
       >
         Table Row 1, Table Cell 4
       </td>
       <td
-        class="table__cell"
+        class="table-cell"
       >
         Table Row 1, Table Cell 5
       </td>
@@ -427,27 +387,27 @@ exports[`<Table /> Default story renders snapshot 1`] = `
       class="table-row"
     >
       <td
-        class="table__cell"
+        class="table-cell"
       >
         Table Row 2, Table Cell 1
       </td>
       <td
-        class="table__cell"
+        class="table-cell"
       >
         Table Row 2, Table Cell 2
       </td>
       <td
-        class="table__cell"
+        class="table-cell"
       >
         Table Row 2, Table Cell 3
       </td>
       <td
-        class="table__cell"
+        class="table-cell"
       >
         Table Row 2, Table Cell 4
       </td>
       <td
-        class="table__cell"
+        class="table-cell"
       >
         Table Row 2, Table Cell 5
       </td>
@@ -456,27 +416,27 @@ exports[`<Table /> Default story renders snapshot 1`] = `
       class="table-row"
     >
       <td
-        class="table__cell"
+        class="table-cell"
       >
         Table Row 3, Table Cell 1
       </td>
       <td
-        class="table__cell"
+        class="table-cell"
       >
         Table Row 3, Table Cell 2
       </td>
       <td
-        class="table__cell"
+        class="table-cell"
       >
         Table Row 3, Table Cell 3
       </td>
       <td
-        class="table__cell"
+        class="table-cell"
       >
         Table Row 3, Table Cell 4
       </td>
       <td
-        class="table__cell"
+        class="table-cell"
       >
         Table Row 3, Table Cell 5
       </td>
@@ -485,27 +445,27 @@ exports[`<Table /> Default story renders snapshot 1`] = `
       class="table-row"
     >
       <td
-        class="table__cell"
+        class="table-cell"
       >
         Table Row 4, Table Cell 1
       </td>
       <td
-        class="table__cell"
+        class="table-cell"
       >
         Table Row 4, Table Cell 2
       </td>
       <td
-        class="table__cell"
+        class="table-cell"
       >
         Table Row 4, Table Cell 3
       </td>
       <td
-        class="table__cell"
+        class="table-cell"
       >
         Table Row 4, Table Cell 4
       </td>
       <td
-        class="table__cell"
+        class="table-cell"
       >
         Table Row 4, Table Cell 5
       </td>
@@ -565,12 +525,12 @@ exports[`<Table /> SortableInteractive story renders snapshot 1`] = `
       class="table-row"
     >
       <td
-        class="table__cell"
+        class="table-cell"
       >
         Value 1
       </td>
       <td
-        class="table__cell"
+        class="table-cell"
       >
         Value A
       </td>
@@ -579,12 +539,12 @@ exports[`<Table /> SortableInteractive story renders snapshot 1`] = `
       class="table-row"
     >
       <td
-        class="table__cell"
+        class="table-cell"
       >
         Value 3
       </td>
       <td
-        class="table__cell"
+        class="table-cell"
       >
         Value B
       </td>
@@ -593,12 +553,12 @@ exports[`<Table /> SortableInteractive story renders snapshot 1`] = `
       class="table-row"
     >
       <td
-        class="table__cell"
+        class="table-cell"
       >
         Value 2
       </td>
       <td
-        class="table__cell"
+        class="table-cell"
       >
         Value C
       </td>
@@ -607,12 +567,12 @@ exports[`<Table /> SortableInteractive story renders snapshot 1`] = `
       class="table-row"
     >
       <td
-        class="table__cell"
+        class="table-cell"
       >
         Value 4
       </td>
       <td
-        class="table__cell"
+        class="table-cell"
       >
         Value D
       </td>

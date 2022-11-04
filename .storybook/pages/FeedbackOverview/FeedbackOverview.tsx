@@ -13,12 +13,7 @@ import {
   Panel,
   Tab,
   Tabs,
-  TableHeaderCell,
-  TableRow,
   Table,
-  TableBody,
-  TableCell,
-  TableHeader,
   Text,
   TimelineNav,
   TimelineNavPanel,
@@ -1093,15 +1088,15 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => {
                 </Toolbar>
                 {isTable && (
                   <Table>
-                    <TableHeader>
-                      <TableRow variant="header">
-                        <TableHeaderCell>Student</TableHeaderCell>
-                        <TableHeaderCell>Checkpoints Status</TableHeaderCell>
-                        <TableHeaderCell>Final Product</TableHeaderCell>
-                      </TableRow>
-                      <TableRow variant="header">
-                        <TableCell></TableCell>
-                        <TableCell>
+                    <Table.Header>
+                      <Table.Row variant="header">
+                        <Table.HeaderCell>Student</Table.HeaderCell>
+                        <Table.HeaderCell>Checkpoints Status</Table.HeaderCell>
+                        <Table.HeaderCell>Final Product</Table.HeaderCell>
+                      </Table.Row>
+                      <Table.Row variant="header">
+                        <Table.Cell className="py-2"></Table.Cell>
+                        <Table.Cell className="py-2">
                           <NumberIconList>
                             <NumberIcon
                               aria-label="Item 1"
@@ -1162,18 +1157,20 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => {
                               size="sm"
                             />
                           </NumberIconList>
-                        </TableCell>
-                        <TableCell></TableCell>
-                      </TableRow>
-                    </TableHeader>
-                    <TableBody>
+                        </Table.Cell>
+                        <Table.Cell className="py-2"></Table.Cell>
+                      </Table.Row>
+                    </Table.Header>
+                    <Table.Body>
                       {feedbackOverviews.map((overview) => (
-                        <TableRow key={`feedback-overview-${overview.student}`}>
-                          <TableCell>{overview.student}</TableCell>
-                          <TableCell className="flex gap-1">
+                        <Table.Row
+                          key={`feedback-overview-${overview.student}`}
+                        >
+                          <Table.Cell>{overview.student}</Table.Cell>
+                          <Table.Cell className="flex gap-1">
                             {overview.checkpointsStatus}
-                          </TableCell>
-                          <TableCell>
+                          </Table.Cell>
+                          <Table.Cell>
                             <Icon
                               color={EdsThemeColorIconNeutralSubtle}
                               name="star-outline"
@@ -1192,10 +1189,10 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => {
                               purpose="decorative"
                               size="1.5rem"
                             />
-                          </TableCell>
-                        </TableRow>
+                          </Table.Cell>
+                        </Table.Row>
                       ))}
-                    </TableBody>
+                    </Table.Body>
                   </Table>
                 )}
                 {!isTable &&
@@ -1288,24 +1285,24 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => {
                 </Toolbar>
                 {isTable && (
                   <Table>
-                    <TableHeader>
-                      <TableRow variant="header">
-                        <TableHeaderCell>Students</TableHeaderCell>
-                        <TableHeaderCell>Status</TableHeaderCell>
-                        <TableHeaderCell>Cog skill</TableHeaderCell>
-                        <TableHeaderCell>Time submitted</TableHeaderCell>
-                      </TableRow>
-                    </TableHeader>
-                    <TableBody>
+                    <Table.Header>
+                      <Table.Row variant="header">
+                        <Table.HeaderCell>Students</Table.HeaderCell>
+                        <Table.HeaderCell>Status</Table.HeaderCell>
+                        <Table.HeaderCell>Cog skill</Table.HeaderCell>
+                        <Table.HeaderCell>Time submitted</Table.HeaderCell>
+                      </Table.Row>
+                    </Table.Header>
+                    <Table.Body>
                       {checkpointProgresses.map((progress) => (
-                        <TableRow key={`progress-${progress.student}`}>
-                          <TableCell>{progress.student}</TableCell>
-                          <TableCell>{progress.status}</TableCell>
-                          <TableCell>{progress.cogSkill}</TableCell>
-                          <TableCell>{progress.timeSubmitted}</TableCell>
-                        </TableRow>
+                        <Table.Row key={`progress-${progress.student}`}>
+                          <Table.Cell>{progress.student}</Table.Cell>
+                          <Table.Cell>{progress.status}</Table.Cell>
+                          <Table.Cell>{progress.cogSkill}</Table.Cell>
+                          <Table.Cell>{progress.timeSubmitted}</Table.Cell>
+                        </Table.Row>
                       ))}
-                    </TableBody>
+                    </Table.Body>
                   </Table>
                 )}
                 {!isTable &&
