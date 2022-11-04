@@ -1,565 +1,513 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Table /> AlignTableCellContentCenter story renders snapshot 1`] = `
-<table
-  class="table"
+<div
+  style="background-color: white;"
 >
-  <caption
-    class="table__caption u-is-vishidden"
+  <table
+    class="table"
   >
-    This is a table caption and it is required
-  </caption>
-  <thead
-    class="table__header"
-  >
-    <tr
-      class="table__row"
+    <thead>
+      <tr
+        class="table-row table-row--header"
+      >
+        <th
+          class="table-header-cell text-center"
+        >
+          Name
+        </th>
+        <th
+          class="table-header-cell text-center"
+        >
+          Status
+        </th>
+        <th
+          class="table-header-cell text-center"
+        >
+          Chart
+        </th>
+        <th
+          class="table-header-cell text-center"
+        >
+          Window
+        </th>
+        <th
+          class="table-header-cell text-center"
+        >
+          Last Update
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      class="table__body"
     >
-      <th
-        class="table__cell table__cell--align-center"
+      <tr
+        class="table-row"
       >
-        Name
-      </th>
-      <th
-        class="table__cell table__cell--align-center"
+        <td
+          class="table-cell"
+        >
+          Table Row 1, Table Cell 1
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 1, Table Cell 2
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 1, Table Cell 3
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 1, Table Cell 4
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 1, Table Cell 5
+        </td>
+      </tr>
+      <tr
+        class="table-row"
       >
-        Status
-      </th>
-      <th
-        class="table__cell table__cell--align-center"
+        <td
+          class="table-cell"
+        >
+          Table Row 2, Table Cell 1
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 2, Table Cell 2
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 2, Table Cell 3
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 2, Table Cell 4
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 2, Table Cell 5
+        </td>
+      </tr>
+      <tr
+        class="table-row"
       >
-        Chart
-      </th>
-      <th
-        class="table__cell table__cell--align-center"
+        <td
+          class="table-cell"
+        >
+          Table Row 3, Table Cell 1
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 3, Table Cell 2
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 3, Table Cell 3
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 3, Table Cell 4
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 3, Table Cell 5
+        </td>
+      </tr>
+      <tr
+        class="table-row"
       >
-        Window
-      </th>
-      <th
-        class="table__cell table__cell--align-center"
-      >
-        Last Update
-      </th>
-    </tr>
-  </thead>
-  <tbody
-    class="table__body"
-  >
-    <tr
-      class="table__row"
-    >
-      <td
-        class="table__cell table__cell--align-center"
-        data-label="Name"
-      >
-        Table Row 1, Table Cell 1
-      </td>
-      <td
-        class="table__cell table__cell--align-center"
-        data-label="Status"
-      >
-        Table Row 1, Table Cell 2
-      </td>
-      <td
-        class="table__cell table__cell--align-center"
-        data-label="Chart"
-      >
-        Table Row 1, Table Cell 3
-      </td>
-      <td
-        class="table__cell table__cell--align-center"
-        data-label="Window"
-      >
-        Table Row 1, Table Cell 4
-      </td>
-      <td
-        class="table__cell table__cell--align-center"
-        data-label="Last Update"
-      >
-        Table Row 1, Table Cell 5
-      </td>
-    </tr>
-    <tr
-      class="table__row"
-    >
-      <td
-        class="table__cell table__cell--align-center"
-        data-label="Name"
-      >
-        Table Row 2, Table Cell 1
-      </td>
-      <td
-        class="table__cell table__cell--align-center"
-        data-label="Status"
-      >
-        Table Row 2, Table Cell 2
-      </td>
-      <td
-        class="table__cell table__cell--align-center"
-        data-label="Chart"
-      >
-        Table Row 2, Table Cell 3
-      </td>
-      <td
-        class="table__cell table__cell--align-center"
-        data-label="Window"
-      >
-        Table Row 2, Table Cell 4
-      </td>
-      <td
-        class="table__cell table__cell--align-center"
-        data-label="Last Update"
-      >
-        Table Row 2, Table Cell 5
-      </td>
-    </tr>
-    <tr
-      class="table__row"
-    >
-      <td
-        class="table__cell table__cell--align-center"
-        data-label="Name"
-      >
-        Table Row 3, Table Cell 1
-      </td>
-      <td
-        class="table__cell table__cell--align-center"
-        data-label="Status"
-      >
-        Table Row 3, Table Cell 2
-      </td>
-      <td
-        class="table__cell table__cell--align-center"
-        data-label="Chart"
-      >
-        Table Row 3, Table Cell 3
-      </td>
-      <td
-        class="table__cell table__cell--align-center"
-        data-label="Window"
-      >
-        Table Row 3, Table Cell 4
-      </td>
-      <td
-        class="table__cell table__cell--align-center"
-        data-label="Last Update"
-      >
-        Table Row 3, Table Cell 5
-      </td>
-    </tr>
-    <tr
-      class="table__row"
-    >
-      <td
-        class="table__cell table__cell--align-center"
-        data-label="Name"
-      >
-        Table Row 4, Table Cell 1
-      </td>
-      <td
-        class="table__cell table__cell--align-center"
-        data-label="Status"
-      >
-        Table Row 4, Table Cell 2
-      </td>
-      <td
-        class="table__cell table__cell--align-center"
-        data-label="Chart"
-      >
-        Table Row 4, Table Cell 3
-      </td>
-      <td
-        class="table__cell table__cell--align-center"
-        data-label="Window"
-      >
-        Table Row 4, Table Cell 4
-      </td>
-      <td
-        class="table__cell table__cell--align-center"
-        data-label="Last Update"
-      >
-        Table Row 4, Table Cell 5
-      </td>
-    </tr>
-  </tbody>
-</table>
+        <td
+          class="table-cell"
+        >
+          Table Row 4, Table Cell 1
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 4, Table Cell 2
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 4, Table Cell 3
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 4, Table Cell 4
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 4, Table Cell 5
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 `;
 
 exports[`<Table /> AlignTableCellContentRight story renders snapshot 1`] = `
-<table
-  class="table"
+<div
+  style="background-color: white;"
 >
-  <caption
-    class="table__caption u-is-vishidden"
+  <table
+    class="table"
   >
-    This is a table caption and it is required
-  </caption>
-  <thead
-    class="table__header"
-  >
-    <tr
-      class="table__row"
+    <thead>
+      <tr
+        class="table-row table-row--header"
+      >
+        <th
+          class="table-header-cell text-right"
+        >
+          Name
+        </th>
+        <th
+          class="table-header-cell text-right"
+        >
+          Status
+        </th>
+        <th
+          class="table-header-cell text-right"
+        >
+          Chart
+        </th>
+        <th
+          class="table-header-cell text-right"
+        >
+          Window
+        </th>
+        <th
+          class="table-header-cell text-right"
+        >
+          Last Update
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      class="table__body"
     >
-      <th
-        class="table__cell table__cell--align-right"
+      <tr
+        class="table-row"
       >
-        Name
-      </th>
-      <th
-        class="table__cell table__cell--align-right"
+        <td
+          class="table-cell"
+        >
+          Table Row 1, Table Cell 1
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 1, Table Cell 2
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 1, Table Cell 3
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 1, Table Cell 4
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 1, Table Cell 5
+        </td>
+      </tr>
+      <tr
+        class="table-row"
       >
-        Status
-      </th>
-      <th
-        class="table__cell table__cell--align-right"
+        <td
+          class="table-cell"
+        >
+          Table Row 2, Table Cell 1
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 2, Table Cell 2
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 2, Table Cell 3
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 2, Table Cell 4
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 2, Table Cell 5
+        </td>
+      </tr>
+      <tr
+        class="table-row"
       >
-        Chart
-      </th>
-      <th
-        class="table__cell table__cell--align-right"
+        <td
+          class="table-cell"
+        >
+          Table Row 3, Table Cell 1
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 3, Table Cell 2
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 3, Table Cell 3
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 3, Table Cell 4
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 3, Table Cell 5
+        </td>
+      </tr>
+      <tr
+        class="table-row"
       >
-        Window
-      </th>
-      <th
-        class="table__cell table__cell--align-right"
-      >
-        Last Update
-      </th>
-    </tr>
-  </thead>
-  <tbody
-    class="table__body"
-  >
-    <tr
-      class="table__row"
-    >
-      <td
-        class="table__cell table__cell--align-right"
-        data-label="Name"
-      >
-        Table Row 1, Table Cell 1
-      </td>
-      <td
-        class="table__cell table__cell--align-right"
-        data-label="Status"
-      >
-        Table Row 1, Table Cell 2
-      </td>
-      <td
-        class="table__cell table__cell--align-right"
-        data-label="Chart"
-      >
-        Table Row 1, Table Cell 3
-      </td>
-      <td
-        class="table__cell table__cell--align-right"
-        data-label="Window"
-      >
-        Table Row 1, Table Cell 4
-      </td>
-      <td
-        class="table__cell table__cell--align-right"
-        data-label="Last Update"
-      >
-        Table Row 1, Table Cell 5
-      </td>
-    </tr>
-    <tr
-      class="table__row"
-    >
-      <td
-        class="table__cell table__cell--align-right"
-        data-label="Name"
-      >
-        Table Row 2, Table Cell 1
-      </td>
-      <td
-        class="table__cell table__cell--align-right"
-        data-label="Status"
-      >
-        Table Row 2, Table Cell 2
-      </td>
-      <td
-        class="table__cell table__cell--align-right"
-        data-label="Chart"
-      >
-        Table Row 2, Table Cell 3
-      </td>
-      <td
-        class="table__cell table__cell--align-right"
-        data-label="Window"
-      >
-        Table Row 2, Table Cell 4
-      </td>
-      <td
-        class="table__cell table__cell--align-right"
-        data-label="Last Update"
-      >
-        Table Row 2, Table Cell 5
-      </td>
-    </tr>
-    <tr
-      class="table__row"
-    >
-      <td
-        class="table__cell table__cell--align-right"
-        data-label="Name"
-      >
-        Table Row 3, Table Cell 1
-      </td>
-      <td
-        class="table__cell table__cell--align-right"
-        data-label="Status"
-      >
-        Table Row 3, Table Cell 2
-      </td>
-      <td
-        class="table__cell table__cell--align-right"
-        data-label="Chart"
-      >
-        Table Row 3, Table Cell 3
-      </td>
-      <td
-        class="table__cell table__cell--align-right"
-        data-label="Window"
-      >
-        Table Row 3, Table Cell 4
-      </td>
-      <td
-        class="table__cell table__cell--align-right"
-        data-label="Last Update"
-      >
-        Table Row 3, Table Cell 5
-      </td>
-    </tr>
-    <tr
-      class="table__row"
-    >
-      <td
-        class="table__cell table__cell--align-right"
-        data-label="Name"
-      >
-        Table Row 4, Table Cell 1
-      </td>
-      <td
-        class="table__cell table__cell--align-right"
-        data-label="Status"
-      >
-        Table Row 4, Table Cell 2
-      </td>
-      <td
-        class="table__cell table__cell--align-right"
-        data-label="Chart"
-      >
-        Table Row 4, Table Cell 3
-      </td>
-      <td
-        class="table__cell table__cell--align-right"
-        data-label="Window"
-      >
-        Table Row 4, Table Cell 4
-      </td>
-      <td
-        class="table__cell table__cell--align-right"
-        data-label="Last Update"
-      >
-        Table Row 4, Table Cell 5
-      </td>
-    </tr>
-  </tbody>
-</table>
+        <td
+          class="table-cell"
+        >
+          Table Row 4, Table Cell 1
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 4, Table Cell 2
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 4, Table Cell 3
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 4, Table Cell 4
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 4, Table Cell 5
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 `;
 
 exports[`<Table /> Default story renders snapshot 1`] = `
-<table
-  class="table"
+<div
+  style="background-color: white;"
 >
-  <caption
-    class="table__caption u-is-vishidden"
-  />
-  <thead
-    class="table__header"
+  <table
+    class="table"
   >
-    <tr
-      class="table__row"
+    <thead>
+      <tr
+        class="table-row table-row--header"
+      >
+        <th
+          class="table-header-cell"
+        >
+          Name
+        </th>
+        <th
+          class="table-header-cell"
+        >
+          Status
+        </th>
+        <th
+          class="table-header-cell"
+        >
+          Chart
+        </th>
+        <th
+          class="table-header-cell"
+        >
+          Window
+        </th>
+        <th
+          class="table-header-cell"
+        >
+          Last Update
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      class="table__body"
     >
-      <th
-        class="table__cell"
+      <tr
+        class="table-row"
       >
-        Name
-      </th>
-      <th
-        class="table__cell"
+        <td
+          class="table-cell"
+        >
+          Table Row 1, Table Cell 1
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 1, Table Cell 2
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 1, Table Cell 3
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 1, Table Cell 4
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 1, Table Cell 5
+        </td>
+      </tr>
+      <tr
+        class="table-row"
       >
-        Status
-      </th>
-      <th
-        class="table__cell"
+        <td
+          class="table-cell"
+        >
+          Table Row 2, Table Cell 1
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 2, Table Cell 2
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 2, Table Cell 3
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 2, Table Cell 4
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 2, Table Cell 5
+        </td>
+      </tr>
+      <tr
+        class="table-row"
       >
-        Chart
-      </th>
-      <th
-        class="table__cell"
+        <td
+          class="table-cell"
+        >
+          Table Row 3, Table Cell 1
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 3, Table Cell 2
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 3, Table Cell 3
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 3, Table Cell 4
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 3, Table Cell 5
+        </td>
+      </tr>
+      <tr
+        class="table-row"
       >
-        Window
-      </th>
-      <th
-        class="table__cell"
-      >
-        Last Update
-      </th>
-    </tr>
-  </thead>
-  <tbody
-    class="table__body"
-  >
-    <tr
-      class="table__row"
-    >
-      <td
-        class="table__cell"
-      >
-        Table Row 1, Table Cell 1
-      </td>
-      <td
-        class="table__cell"
-      >
-        Table Row 1, Table Cell 2
-      </td>
-      <td
-        class="table__cell"
-      >
-        Table Row 1, Table Cell 3
-      </td>
-      <td
-        class="table__cell"
-      >
-        Table Row 1, Table Cell 4
-      </td>
-      <td
-        class="table__cell"
-      >
-        Table Row 1, Table Cell 5
-      </td>
-    </tr>
-    <tr
-      class="table__row"
-    >
-      <td
-        class="table__cell"
-      >
-        Table Row 2, Table Cell 1
-      </td>
-      <td
-        class="table__cell"
-      >
-        Table Row 2, Table Cell 2
-      </td>
-      <td
-        class="table__cell"
-      >
-        Table Row 2, Table Cell 3
-      </td>
-      <td
-        class="table__cell"
-      >
-        Table Row 2, Table Cell 4
-      </td>
-      <td
-        class="table__cell"
-      >
-        Table Row 2, Table Cell 5
-      </td>
-    </tr>
-    <tr
-      class="table__row"
-    >
-      <td
-        class="table__cell"
-      >
-        Table Row 3, Table Cell 1
-      </td>
-      <td
-        class="table__cell"
-      >
-        Table Row 3, Table Cell 2
-      </td>
-      <td
-        class="table__cell"
-      >
-        Table Row 3, Table Cell 3
-      </td>
-      <td
-        class="table__cell"
-      >
-        Table Row 3, Table Cell 4
-      </td>
-      <td
-        class="table__cell"
-      >
-        Table Row 3, Table Cell 5
-      </td>
-    </tr>
-    <tr
-      class="table__row"
-    >
-      <td
-        class="table__cell"
-      >
-        Table Row 4, Table Cell 1
-      </td>
-      <td
-        class="table__cell"
-      >
-        Table Row 4, Table Cell 2
-      </td>
-      <td
-        class="table__cell"
-      >
-        Table Row 4, Table Cell 3
-      </td>
-      <td
-        class="table__cell"
-      >
-        Table Row 4, Table Cell 4
-      </td>
-      <td
-        class="table__cell"
-      >
-        Table Row 4, Table Cell 5
-      </td>
-    </tr>
-  </tbody>
-</table>
+        <td
+          class="table-cell"
+        >
+          Table Row 4, Table Cell 1
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 4, Table Cell 2
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 4, Table Cell 3
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 4, Table Cell 4
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 4, Table Cell 5
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 `;
 
 exports[`<Table /> SortableInteractive story renders snapshot 1`] = `
-<table
-  class="table"
+<div
+  style="background-color: white;"
 >
-  <caption
-    class="table__caption u-is-vishidden"
+  <table
+    class="table"
   >
-    This is a table caption and it is required
-  </caption>
-  <thead
-    class="table__header"
-  >
-    <tr
-      class="table__row"
-    >
-      <th
-        class="table__header-cell"
+    <thead>
+      <tr
+        class="table-row table-row--header"
       >
-        <button
-          class="table__header-cell-button"
+        <th
+          class="table-header-cell"
         >
-          Sortable
-          <div
-            class="table__header-cell-sort"
+          <button
+            class="clickable-style clickable-style--link clickable-style--brand button button--link table-header-cell__sort-button"
+            data-bootstrap-override="clickable-style-link"
+            type="button"
           >
+            Sortable
             <svg
-              class="icon table__header-cell-icon"
+              class="icon"
               fill="currentColor"
               height="1rem"
               role="img"
@@ -576,425 +524,402 @@ exports[`<Table /> SortableInteractive story renders snapshot 1`] = `
                 xlink:href="test-file-stub#unfold-more"
               />
             </svg>
-          </div>
-        </button>
-      </th>
-      <th
-        class="table__header-cell"
-      >
-        <div
-          class="table__header-cell-contents"
+          </button>
+        </th>
+        <th
+          class="table-header-cell"
         >
           Not sortable
-        </div>
-      </th>
-    </tr>
-  </thead>
-  <tbody
-    class="table__body"
-  >
-    <tr
-      class="table__row"
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      class="table__body"
     >
-      <td
-        class="table__cell"
+      <tr
+        class="table-row"
       >
-        Value 1
-      </td>
-      <td
-        class="table__cell"
+        <td
+          class="table-cell"
+        >
+          Value 1
+        </td>
+        <td
+          class="table-cell"
+        >
+          Value A
+        </td>
+      </tr>
+      <tr
+        class="table-row"
       >
-        Value A
-      </td>
-    </tr>
-    <tr
-      class="table__row"
-    >
-      <td
-        class="table__cell"
+        <td
+          class="table-cell"
+        >
+          Value 3
+        </td>
+        <td
+          class="table-cell"
+        >
+          Value B
+        </td>
+      </tr>
+      <tr
+        class="table-row"
       >
-        Value 3
-      </td>
-      <td
-        class="table__cell"
+        <td
+          class="table-cell"
+        >
+          Value 2
+        </td>
+        <td
+          class="table-cell"
+        >
+          Value C
+        </td>
+      </tr>
+      <tr
+        class="table-row"
       >
-        Value B
-      </td>
-    </tr>
-    <tr
-      class="table__row"
-    >
-      <td
-        class="table__cell"
-      >
-        Value 2
-      </td>
-      <td
-        class="table__cell"
-      >
-        Value C
-      </td>
-    </tr>
-    <tr
-      class="table__row"
-    >
-      <td
-        class="table__cell"
-      >
-        Value 4
-      </td>
-      <td
-        class="table__cell"
-      >
-        Value D
-      </td>
-    </tr>
-  </tbody>
-</table>
+        <td
+          class="table-cell"
+        >
+          Value 4
+        </td>
+        <td
+          class="table-cell"
+        >
+          Value D
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 `;
 
-exports[`<Table /> Stacked story renders snapshot 1`] = `
-<table
-  class="table table--stacked"
+exports[`<Table /> TableWithCaption story renders snapshot 1`] = `
+<div
+  style="background-color: white;"
 >
-  <caption
-    class="table__caption u-is-vishidden"
-  />
-  <thead
-    class="table__header"
+  <table
+    class="table"
   >
-    <tr
-      class="table__row"
+    <caption>
+      Optional caption for the table. Must be first descendant of Table if used.
+    </caption>
+    <thead>
+      <tr
+        class="table-row table-row--header"
+      >
+        <th
+          class="table-header-cell"
+        >
+          Name
+        </th>
+        <th
+          class="table-header-cell"
+        >
+          Status
+        </th>
+        <th
+          class="table-header-cell"
+        >
+          Chart
+        </th>
+        <th
+          class="table-header-cell"
+        >
+          Window
+        </th>
+        <th
+          class="table-header-cell"
+        >
+          Last Update
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      class="table__body"
     >
-      <th
-        class="table__cell"
+      <tr
+        class="table-row"
       >
-        Name
-      </th>
-      <th
-        class="table__cell"
+        <td
+          class="table-cell"
+        >
+          Table Row 1, Table Cell 1
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 1, Table Cell 2
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 1, Table Cell 3
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 1, Table Cell 4
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 1, Table Cell 5
+        </td>
+      </tr>
+      <tr
+        class="table-row"
       >
-        Status
-      </th>
-      <th
-        class="table__cell"
+        <td
+          class="table-cell"
+        >
+          Table Row 2, Table Cell 1
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 2, Table Cell 2
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 2, Table Cell 3
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 2, Table Cell 4
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 2, Table Cell 5
+        </td>
+      </tr>
+      <tr
+        class="table-row"
       >
-        Chart
-      </th>
-      <th
-        class="table__cell"
+        <td
+          class="table-cell"
+        >
+          Table Row 3, Table Cell 1
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 3, Table Cell 2
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 3, Table Cell 3
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 3, Table Cell 4
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 3, Table Cell 5
+        </td>
+      </tr>
+      <tr
+        class="table-row"
       >
-        Window
-      </th>
-      <th
-        class="table__cell"
-      >
-        Last Update
-      </th>
-    </tr>
-  </thead>
-  <tbody
-    class="table__body"
-  >
-    <tr
-      class="table__row"
-    >
-      <td
-        class="table__cell"
-        data-heading="Name"
-      >
-        Table Row 1, Table Cell 1
-      </td>
-      <td
-        class="table__cell"
-        data-heading="Status"
-      >
-        Table Row 1, Table Cell 2
-      </td>
-      <td
-        class="table__cell"
-        data-heading="Chart"
-      >
-        Table Row 1, Table Cell 3
-      </td>
-      <td
-        class="table__cell"
-        data-heading="Window"
-      >
-        Table Row 1, Table Cell 4
-      </td>
-      <td
-        class="table__cell"
-        data-heading="Last Update"
-      >
-        Table Row 1, Table Cell 5
-      </td>
-    </tr>
-    <tr
-      class="table__row"
-    >
-      <td
-        class="table__cell"
-        data-heading="Name"
-      >
-        Table Row 2, Table Cell 1
-      </td>
-      <td
-        class="table__cell"
-        data-heading="Status"
-      >
-        Table Row 2, Table Cell 2
-      </td>
-      <td
-        class="table__cell"
-        data-heading="Chart"
-      >
-        Table Row 2, Table Cell 3
-      </td>
-      <td
-        class="table__cell"
-        data-heading="Window"
-      >
-        Table Row 2, Table Cell 4
-      </td>
-      <td
-        class="table__cell"
-        data-heading="Last Update"
-      >
-        Table Row 2, Table Cell 5
-      </td>
-    </tr>
-    <tr
-      class="table__row"
-    >
-      <td
-        class="table__cell"
-        data-heading="Name"
-      >
-        Table Row 3, Table Cell 1
-      </td>
-      <td
-        class="table__cell"
-        data-heading="Status"
-      >
-        Table Row 3, Table Cell 2
-      </td>
-      <td
-        class="table__cell"
-        data-heading="Chart"
-      >
-        Table Row 3, Table Cell 3
-      </td>
-      <td
-        class="table__cell"
-        data-heading="Window"
-      >
-        Table Row 3, Table Cell 4
-      </td>
-      <td
-        class="table__cell"
-        data-heading="Last Update"
-      >
-        Table Row 3, Table Cell 5
-      </td>
-    </tr>
-    <tr
-      class="table__row"
-    >
-      <td
-        class="table__cell"
-        data-heading="Name"
-      >
-        Table Row 4, Table Cell 1
-      </td>
-      <td
-        class="table__cell"
-        data-heading="Status"
-      >
-        Table Row 4, Table Cell 2
-      </td>
-      <td
-        class="table__cell"
-        data-heading="Chart"
-      >
-        Table Row 4, Table Cell 3
-      </td>
-      <td
-        class="table__cell"
-        data-heading="Window"
-      >
-        Table Row 4, Table Cell 4
-      </td>
-      <td
-        class="table__cell"
-        data-heading="Last Update"
-      >
-        Table Row 4, Table Cell 5
-      </td>
-    </tr>
-  </tbody>
-</table>
+        <td
+          class="table-cell"
+        >
+          Table Row 4, Table Cell 1
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 4, Table Cell 2
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 4, Table Cell 3
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 4, Table Cell 4
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 4, Table Cell 5
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 `;
 
-exports[`<Table /> Zebra story renders snapshot 1`] = `
-<table
-  class="table table--zebra"
+exports[`<Table /> ZebraHover story renders snapshot 1`] = `
+<div
+  style="background-color: white;"
 >
-  <caption
-    class="table__caption u-is-vishidden"
-  />
-  <thead
-    class="table__header"
+  <table
+    class="table"
   >
-    <tr
-      class="table__row"
+    <thead>
+      <tr
+        class="table-row table-row--header table__row--zebra"
+      >
+        <th
+          class="table-header-cell"
+        >
+          Name
+        </th>
+        <th
+          class="table-header-cell"
+        >
+          Status
+        </th>
+        <th
+          class="table-header-cell"
+        >
+          Chart
+        </th>
+        <th
+          class="table-header-cell"
+        >
+          Window
+        </th>
+        <th
+          class="table-header-cell"
+        >
+          Last Update
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      class="table__body"
     >
-      <th
-        class="table__cell"
+      <tr
+        class="table-row table__row--zebra"
       >
-        Name
-      </th>
-      <th
-        class="table__cell"
+        <td
+          class="table-cell"
+        >
+          Table Row 1, Table Cell 1
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 1, Table Cell 2
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 1, Table Cell 3
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 1, Table Cell 4
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 1, Table Cell 5
+        </td>
+      </tr>
+      <tr
+        class="table-row table__row--zebra"
       >
-        Status
-      </th>
-      <th
-        class="table__cell"
+        <td
+          class="table-cell"
+        >
+          Table Row 2, Table Cell 1
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 2, Table Cell 2
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 2, Table Cell 3
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 2, Table Cell 4
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 2, Table Cell 5
+        </td>
+      </tr>
+      <tr
+        class="table-row table__row--zebra"
       >
-        Chart
-      </th>
-      <th
-        class="table__cell"
+        <td
+          class="table-cell"
+        >
+          Table Row 3, Table Cell 1
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 3, Table Cell 2
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 3, Table Cell 3
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 3, Table Cell 4
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 3, Table Cell 5
+        </td>
+      </tr>
+      <tr
+        class="table-row table__row--zebra"
       >
-        Window
-      </th>
-      <th
-        class="table__cell"
-      >
-        Last Update
-      </th>
-    </tr>
-  </thead>
-  <tbody
-    class="table__body"
-  >
-    <tr
-      class="table__row"
-    >
-      <td
-        class="table__cell"
-      >
-        Table Row 1, Table Cell 1
-      </td>
-      <td
-        class="table__cell"
-      >
-        Table Row 1, Table Cell 2
-      </td>
-      <td
-        class="table__cell"
-      >
-        Table Row 1, Table Cell 3
-      </td>
-      <td
-        class="table__cell"
-      >
-        Table Row 1, Table Cell 4
-      </td>
-      <td
-        class="table__cell"
-      >
-        Table Row 1, Table Cell 5
-      </td>
-    </tr>
-    <tr
-      class="table__row"
-    >
-      <td
-        class="table__cell"
-      >
-        Table Row 2, Table Cell 1
-      </td>
-      <td
-        class="table__cell"
-      >
-        Table Row 2, Table Cell 2
-      </td>
-      <td
-        class="table__cell"
-      >
-        Table Row 2, Table Cell 3
-      </td>
-      <td
-        class="table__cell"
-      >
-        Table Row 2, Table Cell 4
-      </td>
-      <td
-        class="table__cell"
-      >
-        Table Row 2, Table Cell 5
-      </td>
-    </tr>
-    <tr
-      class="table__row"
-    >
-      <td
-        class="table__cell"
-      >
-        Table Row 3, Table Cell 1
-      </td>
-      <td
-        class="table__cell"
-      >
-        Table Row 3, Table Cell 2
-      </td>
-      <td
-        class="table__cell"
-      >
-        Table Row 3, Table Cell 3
-      </td>
-      <td
-        class="table__cell"
-      >
-        Table Row 3, Table Cell 4
-      </td>
-      <td
-        class="table__cell"
-      >
-        Table Row 3, Table Cell 5
-      </td>
-    </tr>
-    <tr
-      class="table__row"
-    >
-      <td
-        class="table__cell"
-      >
-        Table Row 4, Table Cell 1
-      </td>
-      <td
-        class="table__cell"
-      >
-        Table Row 4, Table Cell 2
-      </td>
-      <td
-        class="table__cell"
-      >
-        Table Row 4, Table Cell 3
-      </td>
-      <td
-        class="table__cell"
-      >
-        Table Row 4, Table Cell 4
-      </td>
-      <td
-        class="table__cell"
-      >
-        Table Row 4, Table Cell 5
-      </td>
-    </tr>
-  </tbody>
-</table>
+        <td
+          class="table-cell"
+        >
+          Table Row 4, Table Cell 1
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 4, Table Cell 2
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 4, Table Cell 3
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 4, Table Cell 4
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 4, Table Cell 5
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 `;
