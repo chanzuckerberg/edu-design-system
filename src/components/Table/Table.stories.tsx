@@ -74,7 +74,7 @@ export const Default: StoryObj<Args> = {
     children: (
       <>
         <Table.Header>
-          <Table.Row>
+          <Table.Row variant="header">
             {tableColumns.map((item, index) => {
               return (
                 // FIXME
@@ -112,7 +112,7 @@ export const AlignTableCellContentCenter: StoryObj<Args> = {
     children: (
       <>
         <Table.Header>
-          <Table.Row>
+          <Table.Row variant="header">
             {tableColumns.map(function (item, index) {
               return (
                 // FIXME
@@ -160,7 +160,7 @@ export const AlignTableCellContentRight: StoryObj<Args> = {
     children: (
       <>
         <Table.Header>
-          <Table.Row>
+          <Table.Row variant="header">
             {tableColumns.map(function (item, index) {
               return (
                 // FIXME
@@ -250,7 +250,7 @@ const SortableExample = () => {
   return (
     <Table>
       <Table.Header>
-        <Table.Row>
+        <Table.Row variant="header">
           <Table.HeaderCell
             onSortClick={onSortClick}
             sortDirection={sortDirection}

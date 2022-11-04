@@ -8,7 +8,7 @@ exports[`<Table /> AlignTableCellContentCenter story renders snapshot 1`] = `
     class="table__header"
   >
     <tr
-      class="table__row"
+      class="table-row table-row--header"
     >
       <th
         class="table__cell table__cell--align-center"
@@ -41,7 +41,7 @@ exports[`<Table /> AlignTableCellContentCenter story renders snapshot 1`] = `
     class="table__body"
   >
     <tr
-      class="table__row"
+      class="table-row"
     >
       <td
         class="table__cell table__cell--align-center"
@@ -75,7 +75,7 @@ exports[`<Table /> AlignTableCellContentCenter story renders snapshot 1`] = `
       </td>
     </tr>
     <tr
-      class="table__row"
+      class="table-row"
     >
       <td
         class="table__cell table__cell--align-center"
@@ -109,7 +109,7 @@ exports[`<Table /> AlignTableCellContentCenter story renders snapshot 1`] = `
       </td>
     </tr>
     <tr
-      class="table__row"
+      class="table-row"
     >
       <td
         class="table__cell table__cell--align-center"
@@ -143,7 +143,7 @@ exports[`<Table /> AlignTableCellContentCenter story renders snapshot 1`] = `
       </td>
     </tr>
     <tr
-      class="table__row"
+      class="table-row"
     >
       <td
         class="table__cell table__cell--align-center"
@@ -188,7 +188,7 @@ exports[`<Table /> AlignTableCellContentRight story renders snapshot 1`] = `
     class="table__header"
   >
     <tr
-      class="table__row"
+      class="table-row table-row--header"
     >
       <th
         class="table__cell table__cell--align-right"
@@ -221,7 +221,7 @@ exports[`<Table /> AlignTableCellContentRight story renders snapshot 1`] = `
     class="table__body"
   >
     <tr
-      class="table__row"
+      class="table-row"
     >
       <td
         class="table__cell table__cell--align-right"
@@ -255,7 +255,7 @@ exports[`<Table /> AlignTableCellContentRight story renders snapshot 1`] = `
       </td>
     </tr>
     <tr
-      class="table__row"
+      class="table-row"
     >
       <td
         class="table__cell table__cell--align-right"
@@ -289,7 +289,7 @@ exports[`<Table /> AlignTableCellContentRight story renders snapshot 1`] = `
       </td>
     </tr>
     <tr
-      class="table__row"
+      class="table-row"
     >
       <td
         class="table__cell table__cell--align-right"
@@ -323,7 +323,7 @@ exports[`<Table /> AlignTableCellContentRight story renders snapshot 1`] = `
       </td>
     </tr>
     <tr
-      class="table__row"
+      class="table-row"
     >
       <td
         class="table__cell table__cell--align-right"
@@ -368,7 +368,7 @@ exports[`<Table /> Default story renders snapshot 1`] = `
     class="table__header"
   >
     <tr
-      class="table__row"
+      class="table-row table-row--header"
     >
       <th
         class="table__cell"
@@ -401,7 +401,7 @@ exports[`<Table /> Default story renders snapshot 1`] = `
     class="table__body"
   >
     <tr
-      class="table__row"
+      class="table-row"
     >
       <td
         class="table__cell"
@@ -430,7 +430,7 @@ exports[`<Table /> Default story renders snapshot 1`] = `
       </td>
     </tr>
     <tr
-      class="table__row"
+      class="table-row"
     >
       <td
         class="table__cell"
@@ -459,7 +459,7 @@ exports[`<Table /> Default story renders snapshot 1`] = `
       </td>
     </tr>
     <tr
-      class="table__row"
+      class="table-row"
     >
       <td
         class="table__cell"
@@ -488,7 +488,7 @@ exports[`<Table /> Default story renders snapshot 1`] = `
       </td>
     </tr>
     <tr
-      class="table__row"
+      class="table-row"
     >
       <td
         class="table__cell"
@@ -528,7 +528,7 @@ exports[`<Table /> SortableInteractive story renders snapshot 1`] = `
     class="table__header"
   >
     <tr
-      class="table__row"
+      class="table-row table-row--header"
     >
       <th
         class="table__header-cell"
@@ -576,7 +576,7 @@ exports[`<Table /> SortableInteractive story renders snapshot 1`] = `
     class="table__body"
   >
     <tr
-      class="table__row"
+      class="table-row"
     >
       <td
         class="table__cell"
@@ -590,7 +590,7 @@ exports[`<Table /> SortableInteractive story renders snapshot 1`] = `
       </td>
     </tr>
     <tr
-      class="table__row"
+      class="table-row"
     >
       <td
         class="table__cell"
@@ -604,7 +604,7 @@ exports[`<Table /> SortableInteractive story renders snapshot 1`] = `
       </td>
     </tr>
     <tr
-      class="table__row"
+      class="table-row"
     >
       <td
         class="table__cell"
@@ -618,7 +618,7 @@ exports[`<Table /> SortableInteractive story renders snapshot 1`] = `
       </td>
     </tr>
     <tr
-      class="table__row"
+      class="table-row"
     >
       <td
         class="table__cell"

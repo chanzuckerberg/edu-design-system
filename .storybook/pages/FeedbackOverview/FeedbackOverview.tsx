@@ -1090,12 +1090,12 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => {
                 {isTable && (
                   <Table className="w-full">
                     <TableHeader>
-                      <TableRow>
+                      <TableRow variant="header">
                         <TableHeaderCell>Student</TableHeaderCell>
                         <TableHeaderCell>Checkpoints Status</TableHeaderCell>
                         <TableHeaderCell>Final Product</TableHeaderCell>
                       </TableRow>
-                      <TableRow>
+                      <TableRow variant="header">
                         <TableCell></TableCell>
                         <TableCell>
                           <NumberIconList>
@@ -1285,7 +1285,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => {
                 {isTable && (
                   <Table className="w-full">
                     <TableHeader>
-                      <TableRow>
+                      <TableRow variant="header">
                         <TableHeaderCell>Students</TableHeaderCell>
                         <TableHeaderCell>Status</TableHeaderCell>
                         <TableHeaderCell>Cog skill</TableHeaderCell>

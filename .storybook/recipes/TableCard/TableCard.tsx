@@ -77,7 +77,7 @@ export const TableCard = ({
         </Heading>
         <Table className={styles['table-card__table']} title={title}>
           <TableHeader>
-            <TableRow>
+            <TableRow variant="header">
               {tableColumns.map((item, index) => {
                 return (
                   <TableHeaderCell

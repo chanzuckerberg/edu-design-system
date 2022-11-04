@@ -15,6 +15,7 @@
 */
 .table-card__table {
   color: var(--eds-theme-color-text-neutral-subtle);
+  margin-bottom: var(--eds-size-2);
 }
 
 /**

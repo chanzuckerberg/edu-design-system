@@ -1,0 +1,17 @@
+/*------------------------------------*\
+    # TABLE ROW
+\*------------------------------------*/
+
+.table-row {
+  vertical-align: top;
+  border-bottom-width: var(--eds-theme-border-width);
+  border-bottom-style: solid;
+  border-bottom-color: var(--eds-theme-color-border-neutral-subtle);
+}
+
+/**
+ * Header variant has darker bottom border color for distingushment.
+ */
+.table-row--header {
+  border-bottom-color: var(--eds-theme-color-border-neutral-default);
+}

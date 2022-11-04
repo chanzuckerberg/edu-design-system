@@ -1,7 +1,7 @@
 @import '../../design-tokens/mixins.css';
 
 /*------------------------------------*\
-	#TABLE
+    # TABLE
 \*------------------------------------*/
 
 /**
@@ -9,39 +9,6 @@
  */
 .table {
   border-collapse: collapse;
-}
-
-/**
- * Table Row
- */
-.table__row {
-  vertical-align: top;
-  border-bottom-width: var(--eds-theme-border-width);
-  border-bottom-style: solid;
-  border-bottom-color: var(--eds-theme-color-border-neutral-subtle);
-
-  .table__header & {
-    border-bottom-color: var(--eds-theme-color-border-neutral-default);
-  }
-}
-
-/**
- * Bare table row.
- */
-.table__row--bare {
-  /* Removes border. */
-  border-bottom: none;
-}
-
-/**
- * Clickable table row
- */
-.table__row--clickable {
-  cursor: pointer;
-
-  &:hover {
-    background: var(--eds-theme-color-background-neutral-subtle);
-  }
 }
 
 /**
@@ -182,14 +149,6 @@
   }
 
   /**
-   * Table cell inside a clickable table row.
-   */
-  .table__row--clickable & {
-    /* Mimic clickable link styles. */
-    @mixin textLink;
-  }
-
-  /**
    * Lists inside table
    *
    * If text wraps onto a new line, it gets indented.
@@ -238,16 +197,5 @@
     padding-top: var(--eds-size-2);
     padding-bottom: var(--eds-size-2);
     @mixin eds-theme-typography-overline-sm;
-  }
-}
-
-/**
- * Table header cell within a nested table
- */
-.table .table .table__row:first-child th.table__cell {
-  padding-top: 0;
-
-  @media all and (min-width: $eds-bp-md) {
-    padding-top: var(--eds-size-2);
   }
 }
