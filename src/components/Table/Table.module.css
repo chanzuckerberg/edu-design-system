@@ -11,58 +11,6 @@
   border-collapse: collapse;
 }
 
-.table--stacked {
-  display: block;
-
-  @media all and (min-width: $eds-bp-md) {
-    display: table;
-  }
-}
-
-/**
- * Table Caption
- */
-.table__caption {
-  @mixin eds-theme-typography-body-text-sm;
-  text-align: left;
-  margin-bottom: var(--eds-size-1);
-}
-
-/**
- * Table Header
- * 
- * First row of a table that contains the table header cells.
- */
-.table__header {
-  /**
-   * Table header inside a stacked table.
-   */
-  .table--stacked & {
-    display: none;
-
-    @media all and (min-width: $eds-bp-md) {
-      /* Hide on small screens */
-      display: table-header-group;
-    }
-  }
-}
-
-/**
- * Table body
- * 
- * <tbody> tag, contains the table rows in the body of the table.
- */
-.table__body {
-  .table--stacked > & {
-    display: block;
-    width: 100%;
-
-    @media all and (min-width: $eds-bp-md) {
-      display: table-row-group;
-    }
-  }
-}
-
 /**
  * Table Row
  */
@@ -74,43 +22,6 @@
 
   .table__header & {
     border-bottom-color: var(--eds-theme-color-border-neutral-default);
-  }
-
-  /**
-   * Table row within zebra table
-   */
-  .table--zebra & {
-    /**
-     * Even table rows within zebra table
-     */
-    &:nth-child(even) {
-      background: var(--eds-theme-color-background-neutral-medium);
-    }
-  }
-
-  .table--stacked > .table__body & {
-    display: block;
-    width: 100%;
-    border-top: var(--eds-theme-border-width) solid
-      var(--eds-theme-color-border-neutral-subtle);
-    border-right: var(--eds-theme-border-width) solid
-      var(--eds-theme-color-border-neutral-subtle);
-    border-bottom: var(--eds-theme-border-width) solid
-      var(--eds-theme-color-border-neutral-subtle);
-    border-left: var(--eds-theme-border-width) solid
-      var(--eds-theme-color-border-neutral-subtle);
-    border-radius: var(--eds-border-radius-lg);
-    margin-bottom: var(--eds-size-2);
-    padding: var(--eds-size-4) var(--eds-size-2);
-
-    @media all and (min-width: $eds-bp-md) {
-      display: table-row;
-      border-top: none;
-      border-right: none;
-      border-left: none;
-      border-radius: 0;
-      padding: 0;
-    }
   }
 }
 
@@ -211,14 +122,6 @@
   }
 
   /**
-   * Condensed table.
-   */
-  .table--condensed & {
-    /*  shrinks padding between table rows. */
-    padding: var(--eds-size-1) var(--eds-size-1);
-  }
-
-  /**
    * Table header cells
    */
   .table__header & {
@@ -241,56 +144,6 @@
 
     &.table__cell--valign-center {
       vertical-align: middle;
-    }
-  }
-
-  /**
-   * Header table cells in a stacked table
-   */
-  .table--stacked .table__header & {
-    @media all and (max-width: $eds-bp-md) {
-      /* stylelint-disable-next-line max-nesting-depth */
-      &:after {
-        content: none;
-      }
-    }
-  }
-
-  /**
-   * Table cell inside a stacked table
-   */
-  .table--stacked & {
-    display: flex;
-    gap: var(--eds-size-1);
-    width: 100%;
-    padding-left: 0;
-    padding-right: 0;
-
-    &:before {
-      /**
-     * Take data-heading attribute and display
-     * that value as a block-level title above
-     * each table cell.
-     */
-      content: attr(data-heading);
-      display: block;
-      margin-right: auto;
-      @mixin eds-theme-typography-body-text-sm-bold;
-
-      /* stylelint-disable-next-line max-nesting-depth */
-      @media all and (min-width: $eds-bp-md) {
-        /**
-         * Hide data-heading on large screens since
-         * table header cells become visible 
-         */
-        content: none;
-      }
-    }
-
-    @media all and (min-width: $eds-bp-md) {
-      display: table-cell;
-      width: auto;
-      padding: var(--eds-size-2) var(--eds-size-1);
     }
   }
 
@@ -325,20 +178,6 @@
 
     &:after {
       content: none;
-    }
-  }
-
-  /**
-   * Table cell inside a lined table with stacked behavior.
-   */
-  .table--stacked.table--lined & {
-    @media all and (max-width: $eds-bp-md) {
-      /**
-       * Remove table cell borders on small screens since
-       * cells stack on top of each other and are displayed
-       * as a single cluster with headings
-       */
-      border: 0;
     }
   }
 
@@ -383,17 +222,6 @@
  */
 .table .table {
   margin-bottom: 0;
-}
-
-/**
- * Table cell within a nested table that isn't a table header cell
- */
-.table--stacked .table .table__cell:not(th) {
-  padding-top: 0;
-
-  @media all and (min-width: $eds-bp-md) {
-    padding-top: var(--eds-size-2);
-  }
 }
 
 /**

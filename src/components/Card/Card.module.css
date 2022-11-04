@@ -5,7 +5,7 @@
 /**
  * A card is a block that typically contains a title, image, text, and/or calls to action.
  */
-.card {
+:where(.card) {
   display: flex;
   flex-direction: column;
   padding: var(--eds-size-2);

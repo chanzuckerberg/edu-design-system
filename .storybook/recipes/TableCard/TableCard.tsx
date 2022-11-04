@@ -75,11 +75,7 @@ export const TableCard = ({
         >
           {title}
         </Heading>
-        <Table
-          caption="Standards coverage"
-          className={styles['table-card__table']}
-          hideCaption={true}
-        >
+        <Table className={styles['table-card__table']} title={title}>
           <TableHeader>
             <TableRow>
               {tableColumns.map((item, index) => {

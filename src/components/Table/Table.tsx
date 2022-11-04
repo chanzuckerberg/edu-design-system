@@ -9,12 +9,7 @@ import TableHeader from '../TableHeader';
 import TableHeaderCell from '../TableHeaderCell';
 import TableRow from '../TableRow';
 
-export interface Props {
-  /**
-   * Behavior variations:
-   * - **stacked** renders a table that stacks its content into a card on small screens
-   */
-  behavior?: 'stacked';
+export type Props = React.TableHTMLAttributes<HTMLTableElement> & {
   /**
    * Child node(s) that can be nested inside component.
    */
@@ -23,18 +18,7 @@ export interface Props {
    * CSS class names that can be appended to the component.
    */
   className?: string;
-  /**
-   * Highlight first cell
-   *
-   * Make the first cell more prominent on smaller screens in stacked variant.
-   */
-  highlightFirstCell?: boolean;
-  /**
-   * Stylistic variations:
-   * - **zebra** yields a data table alternating colors every row
-   */
-  variant?: 'zebra';
-}
+};
 
 /**
  * BETA: This component is still a work in progress and is subject to change.
@@ -45,21 +29,8 @@ export interface Props {
  *
  * HTML table component
  */
-export const Table = ({
-  behavior,
-  children,
-  className,
-  highlightFirstCell,
-  variant,
-  ...other
-}: Props) => {
-  const componentClassName = clsx(
-    styles['table'],
-    variant === 'zebra' && styles['table--zebra'],
-    behavior === 'stacked' && styles['table--stacked'],
-    className,
-  );
-
+export const Table = ({ children, className, ...other }: Props) => {
+  const componentClassName = clsx(styles['table'], className);
   return (
     <table className={componentClassName} {...other}>
       {children}

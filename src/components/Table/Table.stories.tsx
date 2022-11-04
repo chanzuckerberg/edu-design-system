@@ -107,68 +107,6 @@ export const Default: StoryObj<Args> = {
   },
 };
 
-export const Zebra: StoryObj<Args> = {
-  args: {
-    ...Default.args,
-    variant: 'zebra',
-  },
-};
-
-export const Stacked: StoryObj<Args> = {
-  args: {
-    behavior: 'stacked',
-    children: (
-      <>
-        <Table.Header>
-          <Table.Row>
-            {tableColumns.map((item, index) => {
-              return (
-                // FIXME
-                // eslint-disable-next-line react/no-array-index-key
-                <Table.Cell as="th" key={'table-header-row-' + index}>
-                  {item.title}
-                </Table.Cell>
-              );
-            })}
-          </Table.Row>
-        </Table.Header>
-
-        <Table.Body>
-          {tableRows.map((item, index) => {
-            return (
-              // FIXME
-              // eslint-disable-next-line react/no-array-index-key
-              <Table.Row key={'table-row-' + index}>
-                <Table.Cell data-heading={tableColumns[0].title}>
-                  {item.value1}
-                </Table.Cell>
-                <Table.Cell data-heading={tableColumns[1].title}>
-                  {item.value2}
-                </Table.Cell>
-                <Table.Cell data-heading={tableColumns[2].title}>
-                  {item.value3}
-                </Table.Cell>
-                <Table.Cell data-heading={tableColumns[3].title}>
-                  {item.value4}
-                </Table.Cell>
-                <Table.Cell data-heading={tableColumns[4].title}>
-                  {item.value5}
-                </Table.Cell>
-              </Table.Row>
-            );
-          })}
-        </Table.Body>
-      </>
-    ),
-  },
-  parameters: {
-    viewport: {
-      defaultViewport: 'mobile2',
-    },
-    chromatic: { viewports: [414] },
-  },
-};
-
 export const AlignTableCellContentCenter: StoryObj<Args> = {
   args: {
     children: (
