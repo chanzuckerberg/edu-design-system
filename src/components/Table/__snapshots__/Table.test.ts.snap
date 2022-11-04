@@ -4,9 +4,7 @@ exports[`<Table /> AlignTableCellContentCenter story renders snapshot 1`] = `
 <table
   class="table"
 >
-  <thead
-    class="table__header"
-  >
+  <thead>
     <tr
       class="table-row table-row--header"
     >
@@ -184,9 +182,7 @@ exports[`<Table /> AlignTableCellContentRight story renders snapshot 1`] = `
 <table
   class="table"
 >
-  <thead
-    class="table__header"
-  >
+  <thead>
     <tr
       class="table-row table-row--header"
     >
@@ -364,9 +360,7 @@ exports[`<Table /> Default story renders snapshot 1`] = `
 <table
   class="table"
 >
-  <thead
-    class="table__header"
-  >
+  <thead>
     <tr
       class="table-row table-row--header"
     >
@@ -524,51 +518,43 @@ exports[`<Table /> SortableInteractive story renders snapshot 1`] = `
 <table
   class="table"
 >
-  <thead
-    class="table__header"
-  >
+  <thead>
     <tr
       class="table-row table-row--header"
     >
       <th
-        class="table__header-cell"
+        class="table-header-cell"
       >
         <button
-          class="table__header-cell-button"
+          class="clickable-style clickable-style--link clickable-style--brand button button--link table-header-cell__sort-button"
+          data-bootstrap-override="clickable-style-link"
+          type="button"
         >
           Sortable
-          <div
-            class="table__header-cell-sort"
+          <svg
+            class="icon"
+            fill="currentColor"
+            height="1rem"
+            role="img"
+            style="--icon-size: 1rem;"
+            width="1rem"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <svg
-              class="icon table__header-cell-icon"
-              fill="currentColor"
-              height="1rem"
-              role="img"
-              style="--icon-size: 1rem;"
-              width="1rem"
-              xmlns="http://www.w3.org/2000/svg"
+            <title
+              id="1"
             >
-              <title
-                id="1"
-              >
-                Sort
-              </title>
-              <use
-                xlink:href="test-file-stub#unfold-more"
-              />
-            </svg>
-          </div>
+              Sort
+            </title>
+            <use
+              xlink:href="test-file-stub#unfold-more"
+            />
+          </svg>
         </button>
       </th>
       <th
-        class="table__header-cell"
+        class="table-header-cell"
       >
-        <div
-          class="table__header-cell-contents"
-        >
-          Not sortable
-        </div>
+        Not sortable
       </th>
     </tr>
   </thead>
