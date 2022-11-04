@@ -6,7 +6,7 @@ EDS uses [SemVer](https://semver.org/) semantic versioning to keep track of ongo
 - **Minor (x.Y.z)** - Minor versions add new features or deprecate existing features without breaking changes.
 - **Patch (x.y.Z)** - Patch versions fix defects or optimize existing features without breaking changes.
 
-Look to [this helpful document](http://designsystem.morningstar.com/about/versioning.html) from the Morning Star design system for detailed guidance on versioning.
+Look to [this helpful document](https://designsystem.morningstar.com/getting-started/versioning-and-breaking-changes/) from the Morning Star design system for detailed guidance on versioning.
 
 ---
 
@@ -31,8 +31,9 @@ _Warning: In step 4 you will see a message in your terminal with instructions on
 
 1. Confirm that all checks are green on CI.
 2. Run `git checkout next && git pull origin next` to ensure you have the most up-to-date changes.
-3. Run `git checkout -b release-v<version>`
-4. Run:
+3. Determine the next version that will be released. An easy way to do this is with `yarn release --dry-run`
+4. Run `git checkout -b release-v<version>`
+5. Run:
 
 ```
 yarn release
@@ -65,13 +66,15 @@ This is important to ensure `next` and `main` stay in sync!
 8. Get the most up-to-date version of main: `git checkout main && git pull && yarn build`
 9. Publish the package with `npm publish`
 10. Communicate the changes via all appropriate channels (if this is a breaking package update that the broader team needs to know about):
-
-- Slack channels
-  - #eng-announcements in the Summit Learning workspace
-  - #eng-n00bs in the Summit Learning workspace
-  - #proj-edu-design-system in the CZI Education workspace
-- next EDS newsletter
-- next "What's New" update in Zeroheight
+    - Slack channels
+      - #eng-announcements in the Summit Learning workspace
+      - #eng-n00bs in the Summit Learning workspace
+      - #proj-edu-design-system in the CZI Education workspace
+    - next EDS newsletter
+    - next "What's New" update in Zeroheight
+11. Update the package in the main apps that use it
+    - [Learning Platform](https://github.com/FB-PLP/traject)
+    - (for major versions) [cra-template-edu](https://github.com/chanzuckerberg/frontend-libs/tree/main/packages/cra-template-edu) - in the template.json and package.json
 
 #### Alpha release
 

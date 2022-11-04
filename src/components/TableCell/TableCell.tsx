@@ -1,17 +1,9 @@
 import clsx from 'clsx';
 import type { ReactNode } from 'react';
 import React from 'react';
-import styles from '../Table/Table.module.css';
+import styles from './TableCell.module.css';
 
-export interface Props {
-  /**
-   * The alignment of the text in the cell
-   */
-  align?: 'left' | 'right' | 'center';
-  /**
-   * Behavior variation pulled in from table row
-   */
-  behavior?: string;
+export type Props = React.TdHTMLAttributes<HTMLTableCellElement> & {
   /**
    * Child node(s) that can be nested inside component
    */
@@ -40,19 +32,7 @@ export interface Props {
    * This enumerated attribute defines the cells that the header (defined in the `th`) element relates to.
    */
   scope?: 'row' | 'col' | 'colgroup';
-  /**
-   * The as name for the table cell
-   */
-  as?: 'td' | 'th';
-  /**
-   * The vertical alignment of the text in the cell
-   */
-  verticalAlign?: 'center';
-  /**
-   * Wraps the content in table cells within table headers. By default white-space is set to nowrap.
-   */
-  wrap?: boolean;
-}
+};
 
 /**
  * BETA: This component is still a work in progress and is subject to change.
@@ -63,43 +43,12 @@ export interface Props {
  *
  * HTML table cell of the `Table` component
  */
-export const TableCell = ({
-  children,
-  className,
-  as = 'td',
-  rowSpan,
-  colSpan,
-  scope,
-  headers,
-  align = 'left',
-  verticalAlign,
-  id,
-  wrap,
-  ...other
-}: Props) => {
-  const componentClassName = clsx(
-    styles['table__cell'],
-    align === 'left' && styles['table__cell--align-left'],
-    align === 'right' && styles['table__cell--align-right'],
-    align === 'center' && styles['table__cell--align-center'],
-    verticalAlign === 'center' && styles['table__cell--valign-center'],
-    wrap && styles['table__cell--wrap'],
-    className,
-  );
-
-  const TagName = as;
+export const TableCell = ({ children, className, ...other }: Props) => {
+  const componentClassName = clsx(styles['table-cell'], className);
 
   return (
-    <TagName
-      className={componentClassName}
-      colSpan={colSpan}
-      headers={headers}
-      id={id}
-      rowSpan={rowSpan}
-      scope={scope}
-      {...other}
-    >
+    <td className={componentClassName} {...other}>
       {children}
-    </TagName>
+    </td>
   );
 };

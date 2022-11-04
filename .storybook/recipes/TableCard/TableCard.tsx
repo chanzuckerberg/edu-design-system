@@ -75,20 +75,14 @@ export const TableCard = ({
         >
           {title}
         </Heading>
-        <Table
-          caption="Standards coverage"
-          className={styles['table-card__table']}
-          hideCaption={true}
-        >
+        <Table className={styles['table-card__table']} title={title}>
           <TableHeader>
-            <TableRow>
+            <TableRow variant="header">
               {tableColumns.map((item, index) => {
                 return (
                   <TableHeaderCell
                     className={styles['table-card__table-header-cell']}
-                    // FIXME
-                    // eslint-disable-next-line react/no-array-index-key
-                    key={'table-header-cell-' + index}
+                    key={'table-header-cell-' + item.title}
                   >
                     {item.title}
                   </TableHeaderCell>
@@ -97,12 +91,12 @@ export const TableCard = ({
             </TableRow>
           </TableHeader>
           <TableBody>
-            {tableRows.map((item, index) => {
+            {tableRows.map((item) => {
               return (
-                // FIXME
-                // eslint-disable-next-line react/no-array-index-key
-                <TableRow key={`table-row-${index}`}>
-                  <TableHeaderCell>{item.value1}</TableHeaderCell>
+                <TableRow key={`table-row-${item.value1}`}>
+                  <TableHeaderCell variant="body">
+                    {item.value1}
+                  </TableHeaderCell>
                   <TableCell>
                     <NumberIconList>
                       {item.projects.map((item, index) => {
@@ -110,9 +104,7 @@ export const TableCard = ({
                           <NumberIcon
                             aria-label={item['aria-label']}
                             incomplete={!item.complete}
-                            // FIXME
-                            // eslint-disable-next-line react/no-array-index-key
-                            key={`number-icon-${index}`}
+                            key={`number-icon-${item['aria-label']}`}
                             number={index + 1}
                             numberIconTitle={`incomplete step ${index + 1}`}
                             size="sm"
