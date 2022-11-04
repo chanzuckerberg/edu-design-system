@@ -1,4 +1,3 @@
-import clsx from 'clsx';
 import React from 'react';
 import styles from './ProjectOverview.module.css';
 
@@ -33,14 +32,9 @@ export interface Props {
    * Passed down to initially set the activeIndex state
    */
   activeIndex?: number;
-  /**
-   * CSS class names that can be appended to the component.
-   */
-  className?: string;
 }
 
-export const ProjectOverview = ({ activeIndex = 0, className }: Props) => {
-  const textClassName = clsx(styles['projectOverview__text'], className);
+export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
   return (
     <PageShell className="body--alternate" mentoringIsActive={true}>
       <Breadcrumbs className="!mb-4">
@@ -219,7 +213,7 @@ export const ProjectOverview = ({ activeIndex = 0, className }: Props) => {
         <TimelineNavPanel title="Expectations of Samuri in Feudal Japan and Wars of 5th Century">
           <Section
             description={
-              <Text as="p" className={textClassName}>
+              <Text as="p" className={styles['project-overview__text']}>
                 Estimated schedule: Days 4,5,6
               </Text>
             }
@@ -346,7 +340,7 @@ export const ProjectOverview = ({ activeIndex = 0, className }: Props) => {
         <TimelineNavPanel title="Expectations of Samuri in Feudal Japan">
           <Section
             description={
-              <Text as="p" className={textClassName}>
+              <Text as="p" className={styles['project-overview__text']}>
                 Estimated schedule: Days 4,5,6
               </Text>
             }
@@ -370,7 +364,7 @@ export const ProjectOverview = ({ activeIndex = 0, className }: Props) => {
         <TimelineNavPanel title="Expectations of Samuri in Feudal Japan">
           <Section
             description={
-              <Text as="p" className={textClassName}>
+              <Text as="p" className={styles['project-overview__text']}>
                 Estimated schedule: Days 4,5,6
               </Text>
             }
@@ -394,7 +388,7 @@ export const ProjectOverview = ({ activeIndex = 0, className }: Props) => {
         <TimelineNavPanel title="Expectations of Samuri in Feudal Japan">
           <Section
             description={
-              <Text as="p" className={textClassName}>
+              <Text as="p" className={styles['project-overview__text']}>
                 Estimated schedule: Days 4,5,6
               </Text>
             }

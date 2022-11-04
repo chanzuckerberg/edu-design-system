@@ -3,6 +3,6 @@
 /**
  *  Utility classes to apply typography usage mixins to Project Overview in body text xs bold
  */
-.projectOverview__text {
+.project-overview__text {
     @mixin eds-theme-typography-body-text-xs-bold;
   }

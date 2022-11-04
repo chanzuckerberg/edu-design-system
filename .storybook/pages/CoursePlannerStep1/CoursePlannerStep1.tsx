@@ -22,18 +22,8 @@ import '../../../src/components/Utilities/Spacing.css';
 import '../../../src/components/Utilities/TypographyUsage.css';
 import CompassCenter from '../../static/compass-center.svg';
 
-export interface Props {
-  /**
-   * CSS class names that can be appended to the component.
-   */
-  className?: string;
-}
-
-export const CoursePlannerStep1 = (className: Props) => {
-  const textClassName = clsx(
-    `${styles['coursePlannerStep1__text']} !mb-2`,
-    className,
-  );
+export const CoursePlannerStep1 = () => {
+  const textClassName = clsx(styles['course-planner-step1__text'], '!mb-2');
   return (
     <>
       <Panel className="!mb-8" variant="squared">
