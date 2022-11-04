@@ -6,6 +6,7 @@
 
 /**
  * Table header cell
+ * The `:where` pseudo class function allows easy overriding via className.
  */
 :where(.table-header-cell) {
   @mixin eds-theme-typography-label-sm;
