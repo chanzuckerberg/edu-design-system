@@ -48,14 +48,18 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => {
    * Display data as cards if mobile, table if not.
    */
   const tableBreakpoint = parseInt(breakpoint['eds-bp-md'], 10) * 16;
-  const updateScreenSize = debounce(() => {
-    if (window.innerWidth >= tableBreakpoint && !isTable) {
-      setIsTable(true);
-    }
-    if (window.innerWidth < tableBreakpoint && isTable) {
-      setIsTable(false);
-    }
-  }, 200);
+  const updateScreenSize = debounce(
+    () => {
+      if (window.innerWidth >= tableBreakpoint && !isTable) {
+        setIsTable(true);
+      }
+      if (window.innerWidth < tableBreakpoint && isTable) {
+        setIsTable(false);
+      }
+    },
+    200,
+    { leading: true },
+  );
   useEffect(() => {
     updateScreenSize();
     window.addEventListener('resize', updateScreenSize);
