@@ -1088,7 +1088,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => {
                   </ToolbarItem>
                 </Toolbar>
                 {isTable && (
-                  <Table className="w-full">
+                  <Table>
                     <TableHeader>
                       <TableRow variant="header">
                         <TableHeaderCell>Student</TableHeaderCell>
@@ -1283,7 +1283,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => {
                   </ToolbarItem>
                 </Toolbar>
                 {isTable && (
-                  <Table className="w-full">
+                  <Table>
                     <TableHeader>
                       <TableRow variant="header">
                         <TableHeaderCell>Students</TableHeaderCell>
