@@ -15,6 +15,7 @@ export type Props = React.HTMLAttributes<HTMLTableCaptionElement> & {
  * ```
  *
  * HTML caption cell for the `Table` component.
+ * Must be first descendant of the `Table` component.
  */
 export const TableCaption = ({ children, ...other }: Props) => {
   return <caption {...other}>{children}</caption>;

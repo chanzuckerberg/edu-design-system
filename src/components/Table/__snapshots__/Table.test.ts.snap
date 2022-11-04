@@ -597,6 +597,171 @@ exports[`<Table /> SortableInteractive story renders snapshot 1`] = `
 </div>
 `;
 
+exports[`<Table /> TableWithCaption story renders snapshot 1`] = `
+<div
+  style="background-color: white;"
+>
+  <table
+    class="table"
+  >
+    <caption>
+      Optional caption for the table. Must be first descendant of Table if used.
+    </caption>
+    <thead>
+      <tr
+        class="table-row table-row--header"
+      >
+        <th
+          class="table-header-cell"
+        >
+          Name
+        </th>
+        <th
+          class="table-header-cell"
+        >
+          Status
+        </th>
+        <th
+          class="table-header-cell"
+        >
+          Chart
+        </th>
+        <th
+          class="table-header-cell"
+        >
+          Window
+        </th>
+        <th
+          class="table-header-cell"
+        >
+          Last Update
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      class="table__body"
+    >
+      <tr
+        class="table-row"
+      >
+        <td
+          class="table-cell"
+        >
+          Table Row 1, Table Cell 1
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 1, Table Cell 2
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 1, Table Cell 3
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 1, Table Cell 4
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 1, Table Cell 5
+        </td>
+      </tr>
+      <tr
+        class="table-row"
+      >
+        <td
+          class="table-cell"
+        >
+          Table Row 2, Table Cell 1
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 2, Table Cell 2
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 2, Table Cell 3
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 2, Table Cell 4
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 2, Table Cell 5
+        </td>
+      </tr>
+      <tr
+        class="table-row"
+      >
+        <td
+          class="table-cell"
+        >
+          Table Row 3, Table Cell 1
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 3, Table Cell 2
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 3, Table Cell 3
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 3, Table Cell 4
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 3, Table Cell 5
+        </td>
+      </tr>
+      <tr
+        class="table-row"
+      >
+        <td
+          class="table-cell"
+        >
+          Table Row 4, Table Cell 1
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 4, Table Cell 2
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 4, Table Cell 3
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 4, Table Cell 4
+        </td>
+        <td
+          class="table-cell"
+        >
+          Table Row 4, Table Cell 5
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
 exports[`<Table /> ZebraHover story renders snapshot 1`] = `
 <div
   style="background-color: white;"

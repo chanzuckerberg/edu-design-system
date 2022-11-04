@@ -98,11 +98,9 @@ export const Default: StoryObj<Args> = {
         </Table.Header>
 
         <Table.Body>
-          {tableRows.map((item, index) => {
+          {tableRows.map((item) => {
             return (
-              // FIXME
-              // eslint-disable-next-line react/no-array-index-key
-              <Table.Row key={'table-row-' + index}>
+              <Table.Row key={item.value1.slice(0, 11)}>
                 <Table.Cell>{item.value1}</Table.Cell>
                 <Table.Cell>{item.value2}</Table.Cell>
                 <Table.Cell>{item.value3}</Table.Cell>
@@ -117,6 +115,44 @@ export const Default: StoryObj<Args> = {
   },
 };
 
+export const TableWithCaption: StoryObj<Args> = {
+  args: {
+    children: (
+      <>
+        <Table.Caption>
+          Optional caption for the table. Must be first descendant of Table if
+          used.
+        </Table.Caption>
+
+        <Table.Header>
+          <Table.Row variant="header">
+            {tableColumns.map((item) => {
+              return (
+                <Table.HeaderCell key={'table-header-row-' + item.title}>
+                  {item.title}
+                </Table.HeaderCell>
+              );
+            })}
+          </Table.Row>
+        </Table.Header>
+
+        <Table.Body>
+          {tableRows.map((item) => {
+            return (
+              <Table.Row key={item.value1.slice(0, 11)}>
+                <Table.Cell>{item.value1}</Table.Cell>
+                <Table.Cell>{item.value2}</Table.Cell>
+                <Table.Cell>{item.value3}</Table.Cell>
+                <Table.Cell>{item.value4}</Table.Cell>
+                <Table.Cell>{item.value5}</Table.Cell>
+              </Table.Row>
+            );
+          })}
+        </Table.Body>
+      </>
+    ),
+  },
+};
 export const ZebraHover: StoryObj<Args> = {
   args: {
     children: (
@@ -134,13 +170,11 @@ export const ZebraHover: StoryObj<Args> = {
         </Table.Header>
 
         <Table.Body>
-          {tableRows.map((item, index) => {
+          {tableRows.map((item) => {
             return (
               <Table.Row
                 className={styles['table__row--zebra']}
-                // FIXME
-                // eslint-disable-next-line react/no-array-index-key
-                key={'table-row-' + index}
+                key={item.value1.slice(0, 11)}
               >
                 <Table.Cell>{item.value1}</Table.Cell>
                 <Table.Cell>{item.value2}</Table.Cell>
@@ -180,11 +214,9 @@ export const AlignTableCellContentCenter: StoryObj<Args> = {
         </Table.Header>
 
         <Table.Body>
-          {tableRows.map(function (item, index) {
+          {tableRows.map(function (item) {
             return (
-              // FIXME
-              // eslint-disable-next-line react/no-array-index-key
-              <Table.Row key={'table-row-' + index}>
+              <Table.Row key={item.value1.slice(0, 11)}>
                 <Table.Cell>{item.value1}</Table.Cell>
                 <Table.Cell>{item.value2}</Table.Cell>
                 <Table.Cell>{item.value3}</Table.Cell>
@@ -221,9 +253,7 @@ export const AlignTableCellContentRight: StoryObj<Args> = {
         <Table.Body>
           {tableRows.map(function (item, index) {
             return (
-              // FIXME
-              // eslint-disable-next-line react/no-array-index-key
-              <Table.Row key={'table-row-' + index}>
+              <Table.Row key={item.value1.slice(0, 11)}>
                 <Table.Cell>{item.value1}</Table.Cell>
                 <Table.Cell>{item.value2}</Table.Cell>
                 <Table.Cell>{item.value3}</Table.Cell>

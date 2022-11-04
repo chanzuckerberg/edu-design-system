@@ -5,7 +5,7 @@ import { Card, Table, Text } from '../../../src';
 import breakpoint from '../../../src/design-tokens/tier-1-definitions/breakpoints';
 
 /**
- * Primary UI component for user interaction
+ * Demonstrates usage of stacked <Card> components for smaller breakpoints and <Table> component for larger breakpoints.
  */
 export const StackedCardsToTable = () => {
   const [isTable, setIsTable] = useState(false);
