@@ -34,7 +34,7 @@ exports[`<Section /> Center story renders snapshot 1`] = `
             class="section__description"
           >
             <p
-              class="text text--sm u-theme-typography-body-text-xs-bold"
+              class="text text--sm section__text"
             >
               This is a description of what the section is
             </p>
@@ -109,7 +109,7 @@ exports[`<Section /> WithDescription story renders snapshot 1`] = `
             class="section__description"
           >
             <p
-              class="text text--sm u-theme-typography-body-text-xs-bold"
+              class="text text--sm section__text"
             >
               This is a description of what the section is
             </p>
