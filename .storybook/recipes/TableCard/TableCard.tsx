@@ -93,8 +93,6 @@ export const TableCard = ({
           <TableBody>
             {tableRows.map((item) => {
               return (
-                // FIXME
-
                 <TableRow key={`table-row-${item.value1}`}>
                   <TableHeaderCell variant="body">
                     {item.value1}
