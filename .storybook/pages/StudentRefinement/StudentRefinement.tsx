@@ -1,11 +1,13 @@
 import clsx from 'clsx';
-import React from 'react';
+import debounce from 'lodash.debounce';
+import React, { useEffect, useState } from 'react';
 import styles from './StudentRefinement.module.css';
 
 import {
   Breadcrumbs,
   Button,
   ButtonGroup,
+  Card,
   Checkbox,
   FiltersCheckboxField,
   FiltersDrawer,
@@ -21,12 +23,40 @@ import {
   Tag,
   Text,
 } from '../../../src';
+
+import breakpoint from '../../../src/design-tokens/tier-1-definitions/breakpoints';
+
 import { EdsThemeColorIconUtilityWarning } from '../../../src/tokens-dist/ts/colors';
 
 import { DataSummaryCard } from '../../recipes/DataSummaryCard/DataSummaryCard';
 import { PageShell } from '../../recipes/PageShell/PageShell';
 
 export const StudentRefinement = () => {
+  const [isTable, setIsTable] = useState(false);
+  /**
+   * Display data as cards if mobile, table if not.
+   */
+  const tableBreakpoint = parseInt(breakpoint['eds-bp-md'], 10) * 16;
+  const updateScreenSize = debounce(
+    () => {
+      if (window.innerWidth >= tableBreakpoint && !isTable) {
+        setIsTable(true);
+      }
+      if (window.innerWidth < tableBreakpoint && isTable) {
+        setIsTable(false);
+      }
+    },
+    200,
+    { leading: true },
+  );
+  useEffect(() => {
+    updateScreenSize();
+    window.addEventListener('resize', updateScreenSize);
+    return () => {
+      window.removeEventListener('resize', updateScreenSize);
+    };
+  }, [updateScreenSize]);
+
   const students = [
     {
       name: 'Caroline Garcia',
@@ -241,6 +271,130 @@ export const StudentRefinement = () => {
       </Table.Body>
     </Table>
   );
+  const studentsCards = (
+    <div>
+      {students.map((student) => (
+        <Card key={'card-' + student.name}>
+          <Card.Header>
+            <Text as="span" size="lg" weight="bold">
+              {student.name}
+            </Text>
+            {student.offTrack && (
+              <Tag
+                className="ml-2"
+                hasOutline
+                text="Off Track"
+                variant="warning"
+              />
+            )}
+          </Card.Header>
+          <Card.Body>
+            <div className="flex justify-between">
+              <Text as="span" size="sm" weight="bold">
+                Grade
+              </Text>
+              <div className="flex items-center justify-between w-20">
+                {student.grade.offTrack && (
+                  <Icon
+                    className={styles['student-refinement__grade']}
+                    color={EdsThemeColorIconUtilityWarning}
+                    name="circle-small"
+                    purpose="informative"
+                    size="1.25rem"
+                    title="off track"
+                  />
+                )}
+                {student.grade.grade && (
+                  <Text
+                    as="span"
+                    className={styles['student-refinement__grade']}
+                  >
+                    {student.grade.grade}
+                  </Text>
+                )}
+                <Score text={student.grade.score} variant="table" />
+              </div>
+            </div>
+            <div className="flex justify-between">
+              <Text as="span" size="sm" weight="bold">
+                Cog Skill Avg
+              </Text>
+              <div
+                className={clsx(
+                  'flex items-center',
+                  !student.cogSkillAvg.offTrack && 'justify-end',
+                  student.cogSkillAvg.offTrack && 'justify-between w-20',
+                )}
+              >
+                {student.cogSkillAvg.offTrack && (
+                  <Icon
+                    className={styles['student-refinement__grade']}
+                    color={EdsThemeColorIconUtilityWarning}
+                    name="circle-small"
+                    purpose="informative"
+                    size="1.25rem"
+                    title="off track"
+                  />
+                )}
+                <Score text={student.cogSkillAvg.score} variant="table" />
+              </div>
+            </div>
+            <div className="flex justify-between">
+              <Text as="span" size="sm" weight="bold">
+                Project
+              </Text>
+              <div
+                className={clsx(
+                  'flex items-center',
+                  !student.projects.offTrack && 'justify-end',
+                  student.projects.offTrack && 'justify-between w-20',
+                )}
+              >
+                {student.projects.offTrack && (
+                  <Icon
+                    className={styles['student-refinement__grade']}
+                    color={EdsThemeColorIconUtilityWarning}
+                    name="circle-small"
+                    purpose="informative"
+                    size="1.25rem"
+                    title="off track"
+                  />
+                )}
+                <Score text={`${student.projects.score} / 3`} variant="table" />
+              </div>
+            </div>
+            <div className="flex justify-between">
+              <Text as="span" size="sm" weight="bold">
+                Power Focus Area
+              </Text>
+              <div
+                className={clsx(
+                  'flex items-center',
+                  !student.powerFocusAreas.offTrack && 'justify-end',
+                  student.powerFocusAreas.offTrack && 'justify-between w-20',
+                )}
+              >
+                {student.powerFocusAreas.offTrack && (
+                  <Icon
+                    className={styles['student-refinement__grade']}
+                    color={EdsThemeColorIconUtilityWarning}
+                    name="circle-small"
+                    purpose="informative"
+                    size="1.25rem"
+                    title="off track"
+                  />
+                )}
+                <Score
+                  text={`${student.powerFocusAreas.score} / 10`}
+                  variant="table"
+                />
+              </div>
+            </div>
+          </Card.Body>
+        </Card>
+      ))}
+    </div>
+  );
   return (
     <PageShell>
       <Breadcrumbs>
@@ -374,7 +528,8 @@ export const StudentRefinement = () => {
                   <Button>Export</Button>
                 </ButtonGroup>
               </Layout>
-              {studentsTable}
+              {isTable && studentsTable}
+              {!isTable && studentsCards}
             </div>
           </Tab>
           <Tab title="Assessments">
