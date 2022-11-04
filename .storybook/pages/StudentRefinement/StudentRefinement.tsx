@@ -159,79 +159,37 @@ export const StudentRefinement = () => (
                 <Button>Export</Button>
               </ButtonGroup>
             </Layout>
-            <Table behavior="stacked" caption="Student Data">
-              <Table.Header>
-                <Table.Row
-                  className={clsx(
-                    styles['student-refinement__table-row'],
-                    styles['student-refinement__header-row'],
-                  )}
-                >
-                  <Table.Cell
-                    as="th"
-                    className={clsx(
-                      styles['student-refinement__header-cell'],
-                      styles['student-refinement__header-name-cell'],
-                    )}
-                  >
-                    Students (32)
-                  </Table.Cell>
-                  <Table.Cell
-                    as="th"
-                    className={clsx(
-                      styles['student-refinement__header-cell'],
-                      styles['student-refinement__header-grade-cell'],
-                    )}
-                  >
+            <Table>
+              <Table.Header
+                className={styles['student-refinement__header-row']}
+              >
+                <Table.Row variant="header">
+                  <Table.HeaderCell>Students (32)</Table.HeaderCell>
+                  <Table.HeaderCell className="text-center">
                     Grade
-                  </Table.Cell>
-                  <Table.Cell
-                    as="th"
-                    className={clsx(
-                      styles['student-refinement__header-cell'],
-                      styles['student-refinement__header-avg-cell'],
-                    )}
-                  >
+                  </Table.HeaderCell>
+                  <Table.HeaderCell className="text-center">
                     Cog Skill Avg
-                  </Table.Cell>
-                  <Table.Cell
-                    as="th"
-                    className={clsx(
-                      styles['student-refinement__header-cell'],
-                      styles['student-refinement__header-project-cell'],
-                    )}
-                  >
+                  </Table.HeaderCell>
+                  <Table.HeaderCell className="text-center">
                     Projects
-                  </Table.Cell>
-                  <Table.Cell
-                    as="th"
-                    className={clsx(
-                      styles['student-refinement__header-cell'],
-                      styles['student-refinement__header-area-cell'],
-                    )}
-                  >
+                  </Table.HeaderCell>
+                  <Table.HeaderCell className="text-center">
                     Power Focus Areas
-                  </Table.Cell>
+                  </Table.HeaderCell>
                 </Table.Row>
               </Table.Header>
               <Table.Body>
-                <Table.Row className={styles['student-refinement__table-row']}>
+                <Table.Row>
                   <Table.Cell
                     className={styles['student-refinement__name-cell']}
-                    data-heading="Student"
                   >
-                    <Text
-                      as="span"
-                      className={styles['student-refinement__name-cell-text']}
-                    >
+                    <Text as="span" size="sm">
                       Caroline Garcia
                     </Text>
                     <Tag hasOutline text="Off Track" variant="warning" />
                   </Table.Cell>
-                  <Table.Cell
-                    className={styles['student-refinement__body-cell']}
-                    data-heading="Grade"
-                  >
+                  <Table.Cell className="text-center">
                     <Icon
                       className={styles['student-refinement__grade']}
                       color={EdsThemeColorIconUtilityWarning}
@@ -240,95 +198,56 @@ export const StudentRefinement = () => (
                       size="1.25rem"
                       title="off track"
                     />
-                    <Score
-                      className={styles['student-refinement__score']}
-                      text="53%"
-                      variant="table"
-                    />
-                  </Table.Cell>
-                  <Table.Cell
-                    className={styles['student-refinement__body-cell']}
-                    data-heading="Cog Skill Avg"
-                  >
-                    <Icon
-                      className={styles['student-refinement__grade']}
-                      color={EdsThemeColorIconUtilityWarning}
-                      name="circle-small"
-                      purpose="informative"
-                      size="1.25rem"
-                      title="off track"
-                    />
-                    <Score
-                      className={styles['student-refinement__score']}
-                      text="30%"
-                      variant="table"
-                    />
-                  </Table.Cell>
-                  <Table.Cell
-                    className={styles['student-refinement__body-cell']}
-                    data-heading="Project"
-                  >
-                    <Score
-                      className={styles['student-refinement__score']}
-                      text="3 / 3"
-                      variant="table"
-                    />
+                    <Score text="53%" variant="table" />
                   </Table.Cell>
                   <Table.Cell
                     className={clsx(
-                      styles['student-refinement__body-cell'],
-                      styles['student-refinement__body-focus-cell'],
+                      'text-center',
+                      styles['student-refinement__cell--inset-left'],
                     )}
-                    data-heading="Power Focus Area"
                   >
-                    <Score
-                      className={styles['student-refinement__score']}
-                      text="8 / 10"
-                      variant="table"
+                    <Icon
+                      className={styles['student-refinement__grade']}
+                      color={EdsThemeColorIconUtilityWarning}
+                      name="circle-small"
+                      purpose="informative"
+                      size="1.25rem"
+                      title="off track"
                     />
+                    <Score text="30%" variant="table" />
+                  </Table.Cell>
+                  <Table.Cell className="text-center">
+                    <Score text="3 / 3" variant="table" />
+                  </Table.Cell>
+                  <Table.Cell className="text-center">
+                    <Score text="8 / 10" variant="table" />
                   </Table.Cell>
                 </Table.Row>
-                <Table.Row className={styles['student-refinement__table-row']}>
+                <Table.Row>
                   <Table.Cell
                     className={styles['student-refinement__name-cell']}
-                    data-heading="Student"
                   >
-                    <Text
-                      as="span"
-                      className={styles['student-refinement__name-cell-text']}
-                    >
+                    <Text as="span" size="sm">
                       Anthony Smith
                     </Text>
                   </Table.Cell>
-                  <Table.Cell
-                    className={styles['student-refinement__body-cell']}
-                    data-heading="Grade"
-                  >
+                  <Table.Cell className="text-center">
                     <Text
                       as="span"
                       className={styles['student-refinement__grade']}
                     >
                       A
                     </Text>
-                    <Score
-                      className={styles['student-refinement__score']}
-                      text="93%"
-                      variant="table"
-                    />
+                    <Score text="93%" variant="table" />
+                  </Table.Cell>
+                  <Table.Cell className="text-center">
+                    <Score text="84%" variant="table" />
                   </Table.Cell>
                   <Table.Cell
-                    className={styles['student-refinement__body-cell']}
-                    data-heading="Cog Skill Avg"
-                  >
-                    <Score
-                      className={styles['student-refinement__score']}
-                      text="84%"
-                      variant="table"
-                    />
-                  </Table.Cell>
-                  <Table.Cell
-                    className={styles['student-refinement__body-cell']}
-                    data-heading="Project"
+                    className={clsx(
+                      'text-center',
+                      styles['student-refinement__cell--inset-left'],
+                    )}
                   >
                     <Icon
                       className={styles['student-refinement__grade']}
@@ -338,67 +257,37 @@ export const StudentRefinement = () => (
                       size="1.25rem"
                       title="off track"
                     />
-                    <Score
-                      className={styles['student-refinement__score']}
-                      text="2 / 3"
-                      variant="table"
-                    />
+                    <Score text="2 / 3" variant="table" />
                   </Table.Cell>
-                  <Table.Cell
-                    className={clsx(
-                      styles['student-refinement__body-cell'],
-                      styles['student-refinement__body-focus-cell'],
-                    )}
-                    data-heading="Power Focus Area"
-                  >
-                    <Score
-                      className={styles['student-refinement__score']}
-                      text="4 / 10"
-                      variant="table"
-                    />
+                  <Table.Cell className="text-center">
+                    <Score text="4 / 10" variant="table" />
                   </Table.Cell>
                 </Table.Row>
-                <Table.Row className={styles['student-refinement__table-row']}>
+                <Table.Row>
                   <Table.Cell
                     className={styles['student-refinement__name-cell']}
-                    data-heading="Student"
                   >
-                    <Text
-                      as="span"
-                      className={styles['student-refinement__name-cell-text']}
-                    >
+                    <Text as="span" size="sm">
                       Sai Kumar
                     </Text>
                   </Table.Cell>
-                  <Table.Cell
-                    className={styles['student-refinement__body-cell']}
-                    data-heading="Grade"
-                  >
+                  <Table.Cell className="text-center">
                     <Text
                       as="span"
                       className={styles['student-refinement__grade']}
                     >
                       B-
                     </Text>
-                    <Score
-                      className={styles['student-refinement__score']}
-                      text="81%"
-                      variant="table"
-                    />
+                    <Score text="81%" variant="table" />
+                  </Table.Cell>
+                  <Table.Cell className="text-center">
+                    <Score text="78%" variant="table" />
                   </Table.Cell>
                   <Table.Cell
-                    className={styles['student-refinement__body-cell']}
-                    data-heading="Cog Skill Avg"
-                  >
-                    <Score
-                      className={styles['student-refinement__score']}
-                      text="78%"
-                      variant="table"
-                    />
-                  </Table.Cell>
-                  <Table.Cell
-                    className={styles['student-refinement__body-cell']}
-                    data-heading="Project"
+                    className={clsx(
+                      'text-center',
+                      styles['student-refinement__cell--inset-left'],
+                    )}
                   >
                     <Icon
                       className={styles['student-refinement__grade']}
@@ -408,42 +297,21 @@ export const StudentRefinement = () => (
                       size="1.25rem"
                       title="off track"
                     />
-                    <Score
-                      className={styles['student-refinement__score']}
-                      text="1 / 3"
-                      variant="table"
-                    />
+                    <Score text="1 / 3" variant="table" />
                   </Table.Cell>
-                  <Table.Cell
-                    className={clsx(
-                      styles['student-refinement__body-cell'],
-                      styles['student-refinement__body-focus-cell'],
-                    )}
-                    data-heading="Power Focus Area"
-                  >
-                    <Score
-                      className={styles['student-refinement__score']}
-                      text="7 / 10"
-                      variant="table"
-                    />
+                  <Table.Cell className="text-center">
+                    <Score text="7 / 10" variant="table" />
                   </Table.Cell>
                 </Table.Row>
-                <Table.Row className={styles['student-refinement__table-row']}>
+                <Table.Row>
                   <Table.Cell
                     className={styles['student-refinement__name-cell']}
-                    data-heading="Student"
                   >
-                    <Text
-                      as="span"
-                      className={styles['student-refinement__name-cell-text']}
-                    >
+                    <Text as="span" size="sm">
                       Rachel Campbell
                     </Text>
                   </Table.Cell>
-                  <Table.Cell
-                    className={styles['student-refinement__body-cell']}
-                    data-heading="Grade"
-                  >
+                  <Table.Cell className="text-center">
                     <Icon
                       className={styles['student-refinement__grade']}
                       color={EdsThemeColorIconUtilityWarning}
@@ -452,63 +320,28 @@ export const StudentRefinement = () => (
                       size="1.25rem"
                       title="off track"
                     />
-                    <Score
-                      className={styles['student-refinement__score']}
-                      text="68%"
-                      variant="table"
-                    />
+                    <Score text="68%" variant="table" />
                   </Table.Cell>
-                  <Table.Cell
-                    className={styles['student-refinement__body-cell']}
-                    data-heading="Cog Skill Avg"
-                  >
-                    <Score
-                      className={styles['student-refinement__score']}
-                      text="73%"
-                      variant="table"
-                    />
+                  <Table.Cell className="text-center">
+                    <Score text="73%" variant="table" />
                   </Table.Cell>
-                  <Table.Cell
-                    className={styles['student-refinement__body-cell']}
-                    data-heading="Project"
-                  >
-                    <Score
-                      className={styles['student-refinement__score']}
-                      text="3 / 3"
-                      variant="table"
-                    />
+                  <Table.Cell className="text-center">
+                    <Score text="3 / 3" variant="table" />
                   </Table.Cell>
-                  <Table.Cell
-                    className={clsx(
-                      styles['student-refinement__body-cell'],
-                      styles['student-refinement__body-focus-cell'],
-                    )}
-                    data-heading="Power Focus Area"
-                  >
-                    <Score
-                      className={styles['student-refinement__score']}
-                      text="5 / 10"
-                      variant="table"
-                    />
+                  <Table.Cell className="text-center">
+                    <Score text="5 / 10" variant="table" />
                   </Table.Cell>
                 </Table.Row>
-                <Table.Row className={styles['student-refinement__table-row']}>
+                <Table.Row>
                   <Table.Cell
                     className={styles['student-refinement__name-cell']}
-                    data-heading="Student"
                   >
-                    <Text
-                      as="span"
-                      className={styles['student-refinement__name-cell-text']}
-                    >
+                    <Text as="span" size="sm">
                       Emily Tran
                     </Text>
                     <Tag hasOutline text="Off Track" variant="warning" />
                   </Table.Cell>
-                  <Table.Cell
-                    className={styles['student-refinement__body-cell']}
-                    data-heading="Grade"
-                  >
+                  <Table.Cell className="text-center">
                     <Icon
                       className={styles['student-refinement__grade']}
                       color={EdsThemeColorIconUtilityWarning}
@@ -517,46 +350,16 @@ export const StudentRefinement = () => (
                       size="1.25rem"
                       title="off track"
                     />
-                    <Score
-                      className={styles['student-refinement__score']}
-                      text="30%"
-                      variant="table"
-                    />
+                    <Score text="30%" variant="table" />
                   </Table.Cell>
-                  <Table.Cell
-                    className={styles['student-refinement__body-cell']}
-                    data-heading="Cog Skill Avg"
-                  >
-                    <Score
-                      className={styles['student-refinement__score']}
-                      text="100%"
-                      variant="table"
-                    />
-                  </Table.Cell>
-                  <Table.Cell
-                    className={styles['student-refinement__body-cell']}
-                    data-heading="Project"
-                  >
-                    <Icon
-                      className={styles['student-refinement__grade']}
-                      color={EdsThemeColorIconUtilityWarning}
-                      name="circle-small"
-                      purpose="informative"
-                      size="1.25rem"
-                      title="off track"
-                    />
-                    <Score
-                      className={styles['student-refinement__score']}
-                      text="2 / 3"
-                      variant="table"
-                    />
+                  <Table.Cell className="text-center">
+                    <Score text="100%" variant="table" />
                   </Table.Cell>
                   <Table.Cell
                     className={clsx(
-                      styles['student-refinement__body-cell'],
-                      styles['student-refinement__body-focus-cell'],
+                      'text-center',
+                      styles['student-refinement__cell--inset-left'],
                     )}
-                    data-heading="Power Focus Area"
                   >
                     <Icon
                       className={styles['student-refinement__grade']}
@@ -566,73 +369,50 @@ export const StudentRefinement = () => (
                       size="1.25rem"
                       title="off track"
                     />
-                    <Score
-                      className={styles['student-refinement__score']}
-                      text="3 / 10"
-                      variant="table"
+                    <Score text="2 / 3" variant="table" />
+                  </Table.Cell>
+                  <Table.Cell
+                    className={clsx(
+                      'text-center',
+                      styles['student-refinement__cell--inset-left'],
+                    )}
+                  >
+                    <Icon
+                      className={styles['student-refinement__grade']}
+                      color={EdsThemeColorIconUtilityWarning}
+                      name="circle-small"
+                      purpose="informative"
+                      size="1.25rem"
+                      title="off track"
                     />
+                    <Score text="3 / 10" variant="table" />
                   </Table.Cell>
                 </Table.Row>
-                <Table.Row className={styles['student-refinement__table-row']}>
+                <Table.Row>
                   <Table.Cell
                     className={styles['student-refinement__name-cell']}
-                    data-heading="Student"
                   >
-                    <Text
-                      as="span"
-                      className={styles['student-refinement__name-cell-text']}
-                    >
+                    <Text as="span" size="sm">
                       Wei Zhang
                     </Text>
                   </Table.Cell>
-                  <Table.Cell
-                    className={styles['student-refinement__body-cell']}
-                    data-heading="Grade"
-                  >
+                  <Table.Cell className="text-center">
                     <Text
                       as="span"
                       className={styles['student-refinement__grade']}
                     >
                       C
                     </Text>
-                    <Score
-                      className={styles['student-refinement__score']}
-                      text="73%"
-                      variant="table"
-                    />
+                    <Score text="73%" variant="table" />
                   </Table.Cell>
-                  <Table.Cell
-                    className={styles['student-refinement__body-cell']}
-                    data-heading="Cog Skill Avg"
-                  >
-                    <Score
-                      className={styles['student-refinement__score']}
-                      text="75%"
-                      variant="table"
-                    />
+                  <Table.Cell className="text-center">
+                    <Score text="75%" variant="table" />
                   </Table.Cell>
-                  <Table.Cell
-                    className={styles['student-refinement__body-cell']}
-                    data-heading="Project"
-                  >
-                    <Score
-                      className={styles['student-refinement__score']}
-                      text="3 / 3"
-                      variant="table"
-                    />
+                  <Table.Cell className="text-center">
+                    <Score text="3 / 3" variant="table" />
                   </Table.Cell>
-                  <Table.Cell
-                    className={clsx(
-                      styles['student-refinement__body-cell'],
-                      styles['student-refinement__body-focus-cell'],
-                    )}
-                    data-heading="Power Focus Area"
-                  >
-                    <Score
-                      className={styles['student-refinement__score']}
-                      text="6 / 10"
-                      variant="table"
-                    />
+                  <Table.Cell className="text-center">
+                    <Score text="6 / 10" variant="table" />
                   </Table.Cell>
                 </Table.Row>
               </Table.Body>

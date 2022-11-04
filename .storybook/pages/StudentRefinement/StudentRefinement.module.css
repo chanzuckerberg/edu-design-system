@@ -46,113 +46,28 @@
   margin-top: var(--eds-size-6);
 }
 
-.student-refinement__table-row.student-refinement__table-row.student-refinement__table-row {
-  padding: var(--eds-size-3);
-}
-
-.student-refinement__name-cell.student-refinement__name-cell {
-  margin-bottom: var(--eds-size-1-and-half);
-}
-
-.student-refinement__name-cell.student-refinement__name-cell:before {
-  display: none;
-}
-
-.student-refinement__name-cell-text.student-refinement__name-cell-text {
-  @mixin eds-theme-typography-body-text-md;
-  font-weight: 600;
-}
-
-.student-refinement__body-cell.student-refinement__body-cell {
-  display: grid;
-  grid-template-columns: auto var(--eds-size-2-and-half) var(--eds-size-10);
-  align-items: center;
-  gap: 0;
-  padding: 0;
-}
-
-.student-refinement__grade {
-  grid-column: 2;
-  text-align: center;
-}
-
-.student-refinement__score {
-  grid-column: 3;
-}
-
 .student-refinement__header-row {
   border-top: var(--eds-theme-border-width) solid
     var(--eds-theme-color-border-neutral-strong);
 }
 
-@media all and (min-width: $eds-bp-md) {
-  .student-refinement__table-row.student-refinement__table-row.student-refinement__table-row {
-    display: grid;
-    align-items: center;
-    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
-    margin-bottom: 0;
-    padding: 0;
-  }
+.student-refinement__name-cell {
+  display: grid;
+  grid-template-columns: 7rem auto;
+  align-items: center;
+}
 
-  .student-refinement__header-cell.student-refinement__header-cell {
-    padding-top: var(--eds-size-2);
-    padding-bottom: var(--eds-size-2);
-    border-bottom: none;
-  }
+.student-refinement__grade {
+  display: inline-flex;
+  justify-content: center;
+  width: var(--eds-size-2-and-half);
+}
 
-  .student-refinement__header-name-cell.student-refinement__header-name-cell {
-    padding-right: var(--eds-size-1);
-    padding-left: var(--eds-size-1);
-  }
-
-  .student-refinement__header-grade-cell.student-refinement__header-grade-cell {
-    padding-right: 0;
-    padding-left: var(--eds-size-2);
-  }
-
-  .student-refinement__header-avg-cell.student-refinement__header-avg-cell {
-    padding-right: var(--eds-size-1);
-    padding-left: 0;
-  }
-
-  .student-refinement__header-project-cell.student-refinement__header-project-cell {
-    padding-right: 0;
-    padding-left: var(--eds-size-1-and-half);
-  }
-
-  .student-refinement__header-area-cell.student-refinement__header-area-cell {
-    padding-right: 0;
-    padding-left: 0;
-  }
-
-  .student-refinement__name-cell.student-refinement__name-cell {
-    display: grid;
-    grid-template-columns: 7rem auto;
-    align-items: center;
-    margin-bottom: 0;
-  }
-
-  .student-refinement__name-cell-text.student-refinement__name-cell-text {
-    @mixin eds-theme-typography-body-text-sm;
-  }
-
-  .student-refinement__body-cell.student-refinement__body-cell {
-    grid-template-columns: 0.875rem auto;
-  }
-
-  .student-refinement__grade {
-    grid-column: 1;
-    display: inline-flex;
-    width: 1.125rem;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .student-refinement__score {
-    grid-column: 2;
-  }
-
-  .student-refinement__body-focus-cell.student-refinement__body-focus-cell {
-    padding-left: var(--eds-size-2);
-  }
+/**
+ * Shifts score left to align with scores without grades.
+ */
+.student-refinement__cell--inset-left::after {
+  display: inline-block;
+  content: '';
+  width: var(--eds-size-2-and-half);
 }
