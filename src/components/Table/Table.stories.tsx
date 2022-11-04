@@ -154,6 +154,10 @@ export const ZebraHover: StoryObj<Args> = {
       </>
     ),
   },
+  parameters: {
+    // No hover functionality on chromatic, no need to snap.
+    chromatic: { disableSnapshot: true },
+  },
 };
 
 export const AlignTableCellContentCenter: StoryObj<Args> = {
