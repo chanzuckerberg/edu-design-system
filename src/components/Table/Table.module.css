@@ -1,5 +1,3 @@
-@import '../../design-tokens/mixins.css';
-
 /*------------------------------------*\
     # TABLE
 \*------------------------------------*/
@@ -10,30 +8,4 @@
 .table {
   border-collapse: collapse;
   width: 100%;
-}
-
-/**
- * Table Cell
- */
-.table__cell {
-  @mixin eds-theme-typography-body-text-sm;
-
-  @media all and (min-width: $eds-bp-md) {
-    padding: var(--eds-size-2) var(--eds-size-1);
-  }
-
-  /**
-   * Table header cells
-   */
-  .table__header & {
-    text-align: left;
-    position: relative;
-    padding: var(--eds-size-2) var(--eds-size-1-and-half) var(--eds-size-2)
-      var(--eds-size-1);
-    @mixin eds-theme-typography-overline-sm;
-    border-bottom-width: var(--eds-theme-border-width);
-    border-bottom-style: solid;
-    border-bottom-color: var(--eds-theme-color-border-neutral-subtle);
-    background-clip: padding-box;
-  }
 }
