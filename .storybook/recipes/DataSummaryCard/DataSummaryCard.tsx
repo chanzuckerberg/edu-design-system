@@ -2,7 +2,9 @@ import clsx from 'clsx';
 import React from 'react';
 import styles from './DataSummaryCard.module.css';
 
-import { Card, Heading, Text } from '../../../src';
+import { Card, Text } from '../../../src';
+import type { HeadingElement } from '../../../src/components/Heading';
+import Heading from '../../../src/components/Heading';
 
 export interface Props {
   /**
@@ -22,6 +24,10 @@ export interface Props {
    */
   description?: string;
   /**
+   * Specifies the heading element to render the card heading as.
+   */
+  headingElement?: HeadingElement;
+  /**
    * Title text of the data represented.
    */
   title: string;
@@ -39,6 +45,7 @@ export const DataSummaryCard = ({
   dataAmount,
   dataUnit,
   description,
+  headingElement,
   title,
   variant,
   ...other
@@ -47,7 +54,11 @@ export const DataSummaryCard = ({
   return (
     <Card className={componentClassName} {...other}>
       <Card.Header className={styles['data-summary-card__header']}>
-        <Heading className={styles['data-summary-card__title']} size="h3">
+        <Heading
+          as={headingElement}
+          className={styles['data-summary-card__title']}
+          size="h3"
+        >
           {title}
         </Heading>
       </Card.Header>

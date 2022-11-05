@@ -38,9 +38,7 @@ exports[`<Table /> AlignTableCellContentCenter story renders snapshot 1`] = `
         </th>
       </tr>
     </thead>
-    <tbody
-      class="table__body"
-    >
+    <tbody>
       <tr
         class="table-row"
       >
@@ -200,9 +198,7 @@ exports[`<Table /> AlignTableCellContentRight story renders snapshot 1`] = `
         </th>
       </tr>
     </thead>
-    <tbody
-      class="table__body"
-    >
+    <tbody>
       <tr
         class="table-row"
       >
@@ -362,9 +358,7 @@ exports[`<Table /> Default story renders snapshot 1`] = `
         </th>
       </tr>
     </thead>
-    <tbody
-      class="table__body"
-    >
+    <tbody>
       <tr
         class="table-row"
       >
@@ -533,9 +527,7 @@ exports[`<Table /> SortableInteractive story renders snapshot 1`] = `
         </th>
       </tr>
     </thead>
-    <tbody
-      class="table__body"
-    >
+    <tbody>
       <tr
         class="table-row"
       >
@@ -638,9 +630,7 @@ exports[`<Table /> TableWithCaption story renders snapshot 1`] = `
         </th>
       </tr>
     </thead>
-    <tbody
-      class="table__body"
-    >
+    <tbody>
       <tr
         class="table-row"
       >
@@ -800,9 +790,7 @@ exports[`<Table /> ZebraHover story renders snapshot 1`] = `
         </th>
       </tr>
     </thead>
-    <tbody
-      class="table__body"
-    >
+    <tbody>
       <tr
         class="table-row table__row--zebra"
       >

@@ -1,0 +1,38 @@
+.student-refinement__summary-cards {
+  display: flex;
+  gap: var(--eds-size-2);
+  margin-bottom: 2.875rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.student-refinement__summary-card.student-refinement__summary-card {
+  width: 11rem;
+  flex-shrink: 0;
+}
+
+@media all and (min-width: $eds-bp-xl) {
+  .student-refinement__table-control-button-group {
+    justify-content: flex-end;
+  }
+}
+
+.student-refinement__header-row {
+  border-top: var(--eds-theme-border-width) solid
+    var(--eds-theme-color-border-neutral-strong);
+}
+
+.student-refinement__name-cell {
+  display: grid;
+  grid-template-columns: 7rem auto;
+  align-items: center;
+}
+
+/**
+ * Shifts score left to align with scores without grades.
+ */
+.student-refinement__cell--inset-left::after {
+  display: inline-block;
+  content: '';
+  width: var(--eds-size-2-and-half);
+}
