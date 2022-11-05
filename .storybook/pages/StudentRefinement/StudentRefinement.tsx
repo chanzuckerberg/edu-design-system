@@ -191,7 +191,7 @@ export const StudentRefinement = () => {
             <Table.Cell className="text-center">
               {student.grade.offTrack && (
                 <Icon
-                  className={styles['student-refinement__grade']}
+                  className="inline-flex justify-center w-5"
                   color={EdsThemeColorIconUtilityWarning}
                   name="circle-small"
                   purpose="informative"
@@ -200,7 +200,7 @@ export const StudentRefinement = () => {
                 />
               )}
               {student.grade.grade && (
-                <Text as="span" className={styles['student-refinement__grade']}>
+                <Text as="span" className="inline-flex justify-center w-5">
                   {student.grade.grade}
                 </Text>
               )}
@@ -215,7 +215,7 @@ export const StudentRefinement = () => {
             >
               {student.cogSkillAvg.offTrack && (
                 <Icon
-                  className={styles['student-refinement__grade']}
+                  className="inline-flex justify-center w-5"
                   color={EdsThemeColorIconUtilityWarning}
                   name="circle-small"
                   purpose="informative"
@@ -234,7 +234,7 @@ export const StudentRefinement = () => {
             >
               {student.projects.offTrack && (
                 <Icon
-                  className={styles['student-refinement__grade']}
+                  className="inline-flex justify-center w-5"
                   color={EdsThemeColorIconUtilityWarning}
                   name="circle-small"
                   purpose="informative"
@@ -253,7 +253,7 @@ export const StudentRefinement = () => {
             >
               {student.powerFocusAreas.offTrack && (
                 <Icon
-                  className={styles['student-refinement__grade']}
+                  className="inline-flex justify-center w-5"
                   color={EdsThemeColorIconUtilityWarning}
                   name="circle-small"
                   purpose="informative"
@@ -272,9 +272,9 @@ export const StudentRefinement = () => {
     </Table>
   );
   const studentsCards = (
-    <div>
+    <div className="flex flex-col gap-4">
       {students.map((student) => (
-        <Card key={'card-' + student.name}>
+        <Card className="p-6" key={'card-' + student.name}>
           <Card.Header>
             <Text as="span" size="lg" weight="bold">
               {student.name}
@@ -293,10 +293,10 @@ export const StudentRefinement = () => {
               <Text as="span" size="sm" weight="bold">
                 Grade
               </Text>
-              <div className="flex items-center justify-between w-20">
+              <div className="flex items-center justify-between w-16">
                 {student.grade.offTrack && (
                   <Icon
-                    className={styles['student-refinement__grade']}
+                    className="inline-flex justify-center w-5"
                     color={EdsThemeColorIconUtilityWarning}
                     name="circle-small"
                     purpose="informative"
@@ -305,14 +305,15 @@ export const StudentRefinement = () => {
                   />
                 )}
                 {student.grade.grade && (
-                  <Text
-                    as="span"
-                    className={styles['student-refinement__grade']}
-                  >
+                  <Text as="span" className="inline-flex justify-center w-5">
                     {student.grade.grade}
                   </Text>
                 )}
-                <Score text={student.grade.score} variant="table" />
+                <Score
+                  className="!pl-2 !pr-0"
+                  text={student.grade.score}
+                  variant="table"
+                />
               </div>
             </div>
             <div className="flex justify-between">
@@ -323,12 +324,12 @@ export const StudentRefinement = () => {
                 className={clsx(
                   'flex items-center',
                   !student.cogSkillAvg.offTrack && 'justify-end',
-                  student.cogSkillAvg.offTrack && 'justify-between w-20',
+                  student.cogSkillAvg.offTrack && 'justify-between w-16',
                 )}
               >
                 {student.cogSkillAvg.offTrack && (
                   <Icon
-                    className={styles['student-refinement__grade']}
+                    className="inline-flex justify-center w-5"
                     color={EdsThemeColorIconUtilityWarning}
                     name="circle-small"
                     purpose="informative"
@@ -336,7 +337,11 @@ export const StudentRefinement = () => {
                     title="off track"
                   />
                 )}
-                <Score text={student.cogSkillAvg.score} variant="table" />
+                <Score
+                  className="!pl-2 !pr-0"
+                  text={student.cogSkillAvg.score}
+                  variant="table"
+                />
               </div>
             </div>
             <div className="flex justify-between">
@@ -347,12 +352,12 @@ export const StudentRefinement = () => {
                 className={clsx(
                   'flex items-center',
                   !student.projects.offTrack && 'justify-end',
-                  student.projects.offTrack && 'justify-between w-20',
+                  student.projects.offTrack && 'justify-between w-16',
                 )}
               >
                 {student.projects.offTrack && (
                   <Icon
-                    className={styles['student-refinement__grade']}
+                    className="inline-flex justify-center w-5"
                     color={EdsThemeColorIconUtilityWarning}
                     name="circle-small"
                     purpose="informative"
@@ -360,7 +365,11 @@ export const StudentRefinement = () => {
                     title="off track"
                   />
                 )}
-                <Score text={`${student.projects.score} / 3`} variant="table" />
+                <Score
+                  className="!pl-2 !pr-0"
+                  text={`${student.projects.score} / 3`}
+                  variant="table"
+                />
               </div>
             </div>
             <div className="flex justify-between">
@@ -371,12 +380,12 @@ export const StudentRefinement = () => {
                 className={clsx(
                   'flex items-center',
                   !student.powerFocusAreas.offTrack && 'justify-end',
-                  student.powerFocusAreas.offTrack && 'justify-between w-20',
+                  student.powerFocusAreas.offTrack && 'justify-between w-16',
                 )}
               >
                 {student.powerFocusAreas.offTrack && (
                   <Icon
-                    className={styles['student-refinement__grade']}
+                    className="inline-flex justify-center w-5"
                     color={EdsThemeColorIconUtilityWarning}
                     name="circle-small"
                     purpose="informative"
@@ -385,6 +394,7 @@ export const StudentRefinement = () => {
                   />
                 )}
                 <Score
+                  className="!pl-2 !pr-0"
                   text={`${student.powerFocusAreas.score} / 10`}
                   variant="table"
                 />
@@ -400,24 +410,20 @@ export const StudentRefinement = () => {
       <Breadcrumbs>
         <Breadcrumbs.Item href="#" text="My Courses" />
       </Breadcrumbs>
-      <div className={styles['student-refinement__header']}>
+      <div className="flex items-center justify-between">
         <PageHeader title="Disciplinary Science 7 (Life Science Focus)" />
-        <Button
-          className={styles['student-refinement__more-options']}
-          status="neutral"
-          variant="icon"
-        >
+        <Button className="gap-2" status="neutral" variant="icon">
           More options
           <Icon name="dots-vertical" purpose="decorative" />
         </Button>
       </div>
       <Panel flush>
-        <Tabs activeIndex={1} className={styles['student-refinement__tabs']}>
+        <Tabs activeIndex={1} className="pt-2">
           <Tab title="Overview">
             <div className="fpo">Overview</div>
           </Tab>
           <Tab title="Students">
-            <div className={styles['student-refinement__students-page']}>
+            <div className="pt-8 px-12 pb-12">
               <div className={styles['student-refinement__summary-cards']}>
                 <DataSummaryCard
                   className={styles['student-refinement__summary-card']}
@@ -465,10 +471,7 @@ export const StudentRefinement = () => {
                   variant="off-track"
                 />
               </div>
-              <Layout
-                className={styles['student-refinement__table-controls']}
-                variant="50-50"
-              >
+              <Layout className="mb-8" variant="50-50">
                 <SearchBar>
                   <SearchBar.InputField />
                   <SearchBar.Button />
@@ -484,39 +487,25 @@ export const StudentRefinement = () => {
                   >
                     <div className="fpo">Toggle Switch FPO</div>
                     <FiltersCheckboxField
-                      className={
-                        styles['student-refinement__filters-checkbox-field']
-                      }
+                      className="mt-12"
                       legend="Student Status"
                     >
                       <Checkbox label="On Track" />
                       <Checkbox label="Off Track" />
                     </FiltersCheckboxField>
-                    <FiltersCheckboxField
-                      className={
-                        styles['student-refinement__filters-checkbox-field']
-                      }
-                      legend="Section"
-                    >
+                    <FiltersCheckboxField className="mt-12" legend="Section">
                       <Checkbox label="Label" />
                       <Checkbox label="Label" />
                       <Checkbox label="Label" />
                     </FiltersCheckboxField>
-                    <FiltersCheckboxField
-                      className={
-                        styles['student-refinement__filters-checkbox-field']
-                      }
-                      legend="Grade"
-                    >
+                    <FiltersCheckboxField className="mt-12" legend="Grade">
                       <Checkbox label="90-100%" />
                       <Checkbox label="80-90%" />
                       <Checkbox label="70-80%" />
                       <Checkbox label="Below 70%" />
                     </FiltersCheckboxField>
                     <FiltersCheckboxField
-                      className={
-                        styles['student-refinement__filters-checkbox-field']
-                      }
+                      className="mt-12"
                       legend="Average Cognitive Skill Balance"
                     >
                       <Checkbox label="90-100%" />

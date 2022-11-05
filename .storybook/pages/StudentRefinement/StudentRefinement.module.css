@@ -1,24 +1,3 @@
-@import '../../../src/design-tokens/mixins.css';
-
-.student-refinement__header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.student-refinement__more-options {
-  gap: var(--eds-size-1);
-}
-
-.student-refinement__tabs {
-  padding-top: var(--eds-size-1);
-}
-
-.student-refinement__students-page {
-  padding: var(--eds-size-4) var(--eds-size-6) var(--eds-size-6)
-    var(--eds-size-6);
-}
-
 .student-refinement__summary-cards {
   display: flex;
   gap: var(--eds-size-2);
@@ -32,18 +11,10 @@
   flex-shrink: 0;
 }
 
-.student-refinement__table-controls {
-  margin-bottom: var(--eds-size-4);
-}
-
 @media all and (min-width: $eds-bp-xl) {
   .student-refinement__table-control-button-group {
     justify-content: flex-end;
   }
-}
-
-.student-refinement__filters-checkbox-field {
-  margin-top: var(--eds-size-6);
 }
 
 .student-refinement__header-row {
@@ -55,12 +26,6 @@
   display: grid;
   grid-template-columns: 7rem auto;
   align-items: center;
-}
-
-.student-refinement__grade {
-  display: inline-flex;
-  justify-content: center;
-  width: var(--eds-size-2-and-half);
 }
 
 /**
