@@ -1,3 +1,4 @@
+export { default as Accordion } from './components/Accordion';
 export { default as Banner } from './components/Banner';
 export { default as Breadcrumbs } from './components/Breadcrumbs';
 export { default as BreadcrumbsItem } from './components/BreadcrumbsItem';

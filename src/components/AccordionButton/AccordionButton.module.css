@@ -1,0 +1,10 @@
+/*------------------------------------*\
+    # ACCORDION BUTTON
+\*------------------------------------*/
+
+/**
+ * Accordion Button, wraps the heading
+ */
+.accordion-button {
+  padding: var(--eds-size-1);
+}
