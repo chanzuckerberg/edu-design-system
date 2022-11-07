@@ -23,9 +23,7 @@ export type FiltersButtonProps = {
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
- * ```ts
- * import {FiltersButton} from "@chanzuckerberg/eds";
- * ```
+ * `import {FiltersButton} from "@chanzuckerberg/eds";`
  *
  * Default button for triggering Filters components.
  */

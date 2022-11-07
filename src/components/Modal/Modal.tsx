@@ -164,9 +164,7 @@ export const ModalContent = (props: ModalContentProps) => {
 };
 
 /**
- * ```ts
- * import {Modal} from "@chanzuckerberg/eds";
- * ```
+ * `import {Modal} from "@chanzuckerberg/eds";`
  *
  * Modal wrapping the Headless UI Diaglog component https://headlessui.dev/react/dialog
  *

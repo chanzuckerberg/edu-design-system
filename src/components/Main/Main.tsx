@@ -15,9 +15,7 @@ export interface Props {
 }
 
 /**
- * ```ts
- * import {Main} from "@chanzuckerberg/eds";
- * ```
+ * `import {Main} from "@chanzuckerberg/eds";`
  *
  * Component defines the Main element inside layout.
  */

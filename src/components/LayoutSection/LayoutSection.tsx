@@ -19,9 +19,7 @@ export interface Props {
 }
 
 /**
- * ```ts
- * import {LayoutSection} from "@chanzuckerberg/eds";
- * ```
+ * `import {LayoutSection} from "@chanzuckerberg/eds";`
  *
  * Layout section.
  */

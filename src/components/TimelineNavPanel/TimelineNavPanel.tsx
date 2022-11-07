@@ -47,9 +47,7 @@ export interface Props {
 }
 
 /**
- * ```ts
- * import {TimelineNavPanel} from "@chanzuckerberg/eds";
- * ```
+ * `import {TimelineNavPanel} from "@chanzuckerberg/eds";`
  *
  * Panel to be used inside of the TimelineNav component.
  */

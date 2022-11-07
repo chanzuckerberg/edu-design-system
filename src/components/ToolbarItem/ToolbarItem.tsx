@@ -21,9 +21,7 @@ export interface Props {
 }
 
 /**
- * ```ts
- * import {ToolbarItem} from "@chanzuckerberg/eds";
- * ```
+ * `import {ToolbarItem} from "@chanzuckerberg/eds";`
  *
  * ToolbarItem component is used in the Toolbar component to filter the content based on alignment.
  */

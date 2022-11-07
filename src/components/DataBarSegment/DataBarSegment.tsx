@@ -30,9 +30,7 @@ export type Props = {
 } & React.HTMLAttributes<HTMLElement>;
 
 /**
- * ```ts
- * import {DataBarSegment} from "@chanzuckerberg/eds";
- * ```
+ * `import {DataBarSegment} from "@chanzuckerberg/eds";`
  *
  * A segment sub component for the <DataBar>.
  *

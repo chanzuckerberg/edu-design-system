@@ -27,9 +27,7 @@ type Props = {
 };
 
 /**
- * ```ts
- * import {ButtonGroup} from "@chanzuckerberg/eds";
- * ```
+ * `import {ButtonGroup} from "@chanzuckerberg/eds";`
  *
  * A container for buttons grouped together horizontally or vertically.
  *

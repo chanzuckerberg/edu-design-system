@@ -25,9 +25,7 @@ export interface Props {
 }
 
 /**
- * ```ts
- * import {PrimaryNav} from "@chanzuckerberg/eds";
- * ```
+ * `import {PrimaryNav} from "@chanzuckerberg/eds";`
  *
  * Primary navigation existing in the header and maybe the footer.
  */

@@ -84,9 +84,7 @@ export interface TimelineNavItem {
 }
 
 /**
- * ```ts
- * import {TimelineNav} from "@chanzuckerberg/eds";
- * ```
+ * `import {TimelineNav} from "@chanzuckerberg/eds";`
  *
  * Timeline nav Component
  *

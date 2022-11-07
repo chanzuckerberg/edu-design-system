@@ -16,9 +16,7 @@ export interface Props {
 }
 
 /**
- * ```ts
- * import {NotificationList} from "@chanzuckerberg/eds";
- * ```
+ * `import {NotificationList} from "@chanzuckerberg/eds";`
  *
  * List of NotificationListItem components.
  */

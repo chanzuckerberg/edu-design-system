@@ -53,9 +53,7 @@ export interface Props {
 }
 
 /**
- * ```ts
- * import {Section} from "@chanzuckerberg/eds";
- * ```
+ * `import {Section} from "@chanzuckerberg/eds";`
  *
  * Section component contains a section header and body.
  *

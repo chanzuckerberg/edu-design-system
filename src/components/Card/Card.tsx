@@ -33,9 +33,7 @@ export interface Props {
 }
 
 /**
- * ```ts
- * import {Card} from "@chanzuckerberg/eds";
- * ```
+ * `import {Card} from "@chanzuckerberg/eds";`
  *
  * Card component is the outer wrapper for the block that typically contains a title, image,
  *    text, and/or calls to action.

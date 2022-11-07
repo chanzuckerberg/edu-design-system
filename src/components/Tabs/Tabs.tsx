@@ -48,9 +48,7 @@ export interface Props {
 }
 
 /**
- * ```ts
- * import {Tabs} from "@chanzuckerberg/eds";
- * ```
+ * `import {Tabs} from "@chanzuckerberg/eds";`
  *
  * List of of links where each link toggles open associated information in a tab panel.
  */

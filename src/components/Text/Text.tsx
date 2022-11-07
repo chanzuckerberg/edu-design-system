@@ -54,9 +54,7 @@ export type Props = {
 } & React.HTMLAttributes<HTMLElement>;
 
 /**
- * ```ts
- * import {Text} from "@chanzuckerberg/eds";
- * ```
+ * `import {Text} from "@chanzuckerberg/eds";`
  *
  * There are two perceived use cases for the text component.
  * One is to decorate <p> and <span> with thematic variants.

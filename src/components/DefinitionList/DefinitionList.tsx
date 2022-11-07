@@ -25,9 +25,7 @@ export interface Props {
 }
 
 /**
- * ```ts
- * import {DefinitionList} from "@chanzuckerberg/eds";
- * ```
+ * `import {DefinitionList} from "@chanzuckerberg/eds";`
  *
  * DefinitionList is the wrapper component that contains the definition term (`dt`)
  * and a definition description (`dd`)

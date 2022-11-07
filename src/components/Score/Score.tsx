@@ -25,9 +25,7 @@ export interface Props {
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
- * ```ts
- * import {Score} from "@chanzuckerberg/eds";
- * ```
+ * `import {Score} from "@chanzuckerberg/eds";`
  *
  * A (pill shaped badge) wrapper intended for use with scores.
  */

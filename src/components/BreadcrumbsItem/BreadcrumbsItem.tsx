@@ -33,9 +33,7 @@ type Props = {
 };
 
 /**
- * ```ts
- * import {BreadcrumbsItem} from "@chanzuckerberg/eds";
- * ```
+ * `import {BreadcrumbsItem} from "@chanzuckerberg/eds";`
  *
  * A single breadcrumb subcomponent, to be used in the Breadcrumbs component.
  */

@@ -15,9 +15,7 @@ export type Props = React.HTMLAttributes<HTMLTableSectionElement> & {
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
- * ```ts
- * import {TableHeader} from "@chanzuckerberg/eds";
- * ```
+ * `import {TableHeader} from "@chanzuckerberg/eds";`
  *
  * HTML `thead` of the `Table` component
  */

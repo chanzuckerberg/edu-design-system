@@ -31,9 +31,7 @@ export interface Props {
 }
 
 /**
- * ```ts
- * import {LinkList} from "@chanzuckerberg/eds";
- * ```
+ * `import {LinkList} from "@chanzuckerberg/eds";`
  *
  * List of links.
  */

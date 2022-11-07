@@ -67,9 +67,7 @@ export interface Props {
 }
 
 /**
- * ```ts
- * import {PageHeader} from "@chanzuckerberg/eds";
- * ```
+ * `import {PageHeader} from "@chanzuckerberg/eds";`
  *
  * Header to be used at the top of a page.
  */

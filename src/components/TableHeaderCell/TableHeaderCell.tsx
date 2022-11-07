@@ -56,9 +56,7 @@ export type SortDirectionsType = typeof SORT_DIRECTIONS[number];
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
- * ```ts
- * import {TableHeaderCell} from "@chanzuckerberg/eds";
- * ```
+ * `import {TableHeaderCell} from "@chanzuckerberg/eds";`
  *
  * HTML `th` cell of the `Table` component
  */

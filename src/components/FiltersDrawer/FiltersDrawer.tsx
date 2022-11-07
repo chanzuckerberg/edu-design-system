@@ -56,9 +56,7 @@ export type FiltersDrawerProps = {
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
- * ```ts
- * import {FiltersDrawer} from "@chanzuckerberg/eds";
- * ```
+ * `import {FiltersDrawer} from "@chanzuckerberg/eds";`
  *
  * A drawer component with fields of checkboxes to select filters.
  */

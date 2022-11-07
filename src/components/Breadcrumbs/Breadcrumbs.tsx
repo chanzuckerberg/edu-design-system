@@ -28,9 +28,7 @@ type Props = {
 };
 
 /**
- * ```ts
- * import {Breadcrumbs} from "@chanzuckerberg/eds";
- * ```
+ * `import {Breadcrumbs} from "@chanzuckerberg/eds";`
  *
  * List of Breadcrumb components showing the user where they are in the system and allow them
  * to navigate to parent pages.

@@ -18,9 +18,7 @@ export interface FieldsetLegendProps {
 }
 
 /**
- * ```ts
- * import {FieldsetLegend} from "@chanzuckerberg/eds";
- * ```
+ * `import {FieldsetLegend} from "@chanzuckerberg/eds";`
  *
  * Helper sub-component for styling the legend in a fieldset.
  */

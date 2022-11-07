@@ -54,9 +54,7 @@ export type Props = {
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
- * ```ts
- * import {Drawer} from "@chanzuckerberg/eds";
- * ```
+ * `import {Drawer} from "@chanzuckerberg/eds";`
  *
  * A window component that slides from and out of the right side of the screen.
  */

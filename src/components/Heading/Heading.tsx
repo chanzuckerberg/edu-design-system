@@ -58,9 +58,7 @@ const getComputedAs = (size: HeadingSize) => {
 };
 
 /**
- * ```ts
- * import {Heading} from "@chanzuckerberg/eds";
- * ```
+ * `import {Heading} from "@chanzuckerberg/eds";`
  */
 
 export const Heading = forwardRef(

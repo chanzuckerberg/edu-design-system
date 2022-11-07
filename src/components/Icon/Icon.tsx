@@ -90,9 +90,7 @@ interface SvgStyle extends CSSProperties {
 }
 
 /**
- * ```ts
- * import {Icon} from "@chanzuckerberg/eds";
- * ```
+ * `import {Icon} from "@chanzuckerberg/eds";`
  *
  * Render arbitrary SVG path data while enforcing good accessibility practices.
  *

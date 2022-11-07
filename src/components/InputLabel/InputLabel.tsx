@@ -28,9 +28,7 @@ export type InputLabelProps = {
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
- * ```ts
- * import {InputLabel} from "@chanzuckerberg/eds";
- * ```
+ * `import {InputLabel} from "@chanzuckerberg/eds";`
  *
  * Label associated with an input element such as a radio or checkbox.
  */

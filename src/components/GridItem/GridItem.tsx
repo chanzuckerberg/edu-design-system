@@ -15,9 +15,7 @@ export interface Props {
 }
 
 /**
- * ```ts
- * import {GridItem} from "@chanzuckerberg/eds";
- * ```
+ * `import {GridItem} from "@chanzuckerberg/eds";`
  *
  * Single grid item to be used in the Grid component.
  */

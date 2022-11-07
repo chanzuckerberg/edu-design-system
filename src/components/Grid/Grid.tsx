@@ -39,9 +39,7 @@ export interface Props {
 }
 
 /**
- * ```ts
- * import {Grid} from "@chanzuckerberg/eds";
- * ```
+ * `import {Grid} from "@chanzuckerberg/eds";`
  *
  * Grid component used to layout GridItem components into a grid pattern. This is flexible component
  * allowing for a variety of responsive layout components.

@@ -35,9 +35,7 @@ export interface Props {
 }
 
 /**
- * ```ts
- * import {Layout} from "@chanzuckerberg/eds";
- * ```
+ * `import {Layout} from "@chanzuckerberg/eds";`
  *
  * Component that controls an overarching page layout. By default, the layout renders
  * a fixed-position left sidebar on larger screens.

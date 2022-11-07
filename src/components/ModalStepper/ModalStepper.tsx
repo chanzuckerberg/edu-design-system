@@ -20,9 +20,7 @@ export interface Props {
 }
 
 /**
- * ```ts
- * import {ModalStepper} from "@chanzuckerberg/eds";
- * ```
+ * `import {ModalStepper} from "@chanzuckerberg/eds";`
  *
  * Stepper for the modal to indicate page status.
  */

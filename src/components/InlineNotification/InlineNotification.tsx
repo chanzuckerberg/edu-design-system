@@ -64,9 +64,7 @@ type Props = {
 };
 
 /**
- * ```ts
- * import {InlineNotification} from "@chanzuckerberg/eds";
- * ```
+ * `import {InlineNotification} from "@chanzuckerberg/eds";`
  *
  * This component provides an inline banner accompanied with an icon for messaging users.
  */
