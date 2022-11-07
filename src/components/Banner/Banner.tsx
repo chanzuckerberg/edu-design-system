@@ -91,7 +91,8 @@ const variantToIconAssetsMap: {
 };
 
 /**
- * @deprecated The Banner component is deprecated and will be removed in an upcoming release.
+ * The Banner component is deprecated and will be removed in an upcoming release.
+ *
  * Please visit Zeroheight to find the right notification component for your needs: https://eds.czi.design/
  *
  * `import {Banner} from "@chanzuckerberg/eds";`
@@ -108,6 +109,8 @@ const variantToIconAssetsMap: {
  *   action={<Button onClick={handleAction}>Action</Button>}
  * />
  * ```
+ *
+ * @deprecated
  */
 export const Banner = ({
   action,

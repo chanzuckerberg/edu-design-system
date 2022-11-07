@@ -128,6 +128,8 @@ export type Props = React.InputHTMLAttributes<HTMLInputElement> & {
  * BETA: This component is still a work in progress and is subject to change.
  *
  * `import {TextField} from "@chanzuckerberg/eds";`
+ *
+ * A text input with optional labels and error messaging built-in.
  */
 export const TextField = forwardRef<HTMLInputElement, Props>(
   (

@@ -3,6 +3,9 @@ import { Icon } from '../../../src/components/Icon/Icon';
 import { ALL_ICONS } from '../../../src/util/allIcons';
 import './IconGrid.css';
 
+/**
+ * Grid of all the available icons.
+ */
 const IconGrid = () => (
   <div>
     <ul className="icon-grid">
