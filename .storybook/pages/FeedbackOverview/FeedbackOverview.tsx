@@ -239,8 +239,8 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => {
                         <Table.HeaderCell>Final Product</Table.HeaderCell>
                       </Table.Row>
                       <Table.Row variant="header">
-                        <Table.Cell className="py-2"></Table.Cell>
-                        <Table.Cell className="py-2">
+                        <Table.Cell className="!py-2"></Table.Cell>
+                        <Table.Cell className="!py-2">
                           <NumberIconList>
                             <NumberIcon
                               aria-label="Item 1"
@@ -302,7 +302,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => {
                             />
                           </NumberIconList>
                         </Table.Cell>
-                        <Table.Cell className="py-2"></Table.Cell>
+                        <Table.Cell className="!py-2"></Table.Cell>
                       </Table.Row>
                     </Table.Header>
                     <Table.Body>
@@ -342,7 +342,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => {
                 {!isTable &&
                   feedbackOverviews.map((overview) => (
                     <Card
-                      className="py-8 mb-4"
+                      className="!py-8 mb-4"
                       key={`feedback-overview-${overview.student}`}
                     >
                       <Card.Header
@@ -452,7 +452,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => {
                 {!isTable &&
                   checkpointProgresses.map((progress) => (
                     <Card
-                      className="py-8 mb-4"
+                      className="!py-8 mb-4"
                       key={`progress-${progress.student}`}
                     >
                       <Card.Header

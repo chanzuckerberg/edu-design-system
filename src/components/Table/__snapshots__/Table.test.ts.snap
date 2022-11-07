@@ -12,27 +12,27 @@ exports[`<Table /> AlignTableCellContentCenter story renders snapshot 1`] = `
         class="table-row table-row--header"
       >
         <th
-          class="table-header-cell text-center"
+          class="table-header-cell !text-center"
         >
           Name
         </th>
         <th
-          class="table-header-cell text-center"
+          class="table-header-cell !text-center"
         >
           Status
         </th>
         <th
-          class="table-header-cell text-center"
+          class="table-header-cell !text-center"
         >
           Chart
         </th>
         <th
-          class="table-header-cell text-center"
+          class="table-header-cell !text-center"
         >
           Window
         </th>
         <th
-          class="table-header-cell text-center"
+          class="table-header-cell !text-center"
         >
           Last Update
         </th>
@@ -172,27 +172,27 @@ exports[`<Table /> AlignTableCellContentRight story renders snapshot 1`] = `
         class="table-row table-row--header"
       >
         <th
-          class="table-header-cell text-right"
+          class="table-header-cell !text-right"
         >
           Name
         </th>
         <th
-          class="table-header-cell text-right"
+          class="table-header-cell !text-right"
         >
           Status
         </th>
         <th
-          class="table-header-cell text-right"
+          class="table-header-cell !text-right"
         >
           Chart
         </th>
         <th
-          class="table-header-cell text-right"
+          class="table-header-cell !text-right"
         >
           Window
         </th>
         <th
-          class="table-header-cell text-right"
+          class="table-header-cell !text-right"
         >
           Last Update
         </th>

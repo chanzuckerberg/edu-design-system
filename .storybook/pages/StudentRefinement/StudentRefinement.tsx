@@ -167,12 +167,12 @@ export const StudentRefinement = () => {
       <Table.Header className={styles['student-refinement__header-row']}>
         <Table.Row variant="header">
           <Table.HeaderCell>Students (32)</Table.HeaderCell>
-          <Table.HeaderCell className="text-center">Grade</Table.HeaderCell>
-          <Table.HeaderCell className="text-center">
+          <Table.HeaderCell className="!text-center">Grade</Table.HeaderCell>
+          <Table.HeaderCell className="!text-center">
             Cog Skill Avg
           </Table.HeaderCell>
-          <Table.HeaderCell className="text-center">Projects</Table.HeaderCell>
-          <Table.HeaderCell className="text-center">
+          <Table.HeaderCell className="!text-center">Projects</Table.HeaderCell>
+          <Table.HeaderCell className="!text-center">
             Power Focus Areas
           </Table.HeaderCell>
         </Table.Row>
@@ -274,7 +274,7 @@ export const StudentRefinement = () => {
   const studentsCards = (
     <div className="flex flex-col gap-4">
       {students.map((student) => (
-        <Card className="p-6" key={'card-' + student.name}>
+        <Card className="!p-6" key={'card-' + student.name}>
           <Card.Header>
             <Text as="span" size="lg" weight="bold">
               {student.name}
