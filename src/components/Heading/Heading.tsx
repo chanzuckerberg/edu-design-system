@@ -64,7 +64,6 @@ const getComputedAs = (size: HeadingSize) => {
  *
  * Be careful to pass the correct heading element via the `as` prop to avoid skipping heading levels because [heading levels increasing by only one level at a time is important for screen reader users.](https://www.w3.org/WAI/tutorials/page-structure/headings/)
  */
-
 export const Heading = forwardRef(
   (
     {
