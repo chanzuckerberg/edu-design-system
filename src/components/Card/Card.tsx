@@ -38,10 +38,6 @@ export interface Props {
  * Card component is the outer wrapper for the block that typically contains a title, image,
  *    text, and/or calls to action.
  */
-
-/**
- * Primary UI component for user interaction
- */
 export const Card = ({
   className,
   children,

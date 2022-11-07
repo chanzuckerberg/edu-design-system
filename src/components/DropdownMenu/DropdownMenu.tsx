@@ -50,7 +50,7 @@ export const DropdownMenuContext = createContext<ContextRefs | null>(null);
 /**
  * `import {DropdownMenu} from "@chanzuckerberg/eds";`
  *
- * Dropdown menu with actions list
+ * Dropdown menu with actions list.
  */
 export const DropdownMenu: React.FC<Props> = ({
   children,

@@ -75,7 +75,7 @@ export const defaultPopoverModifiers = [
  *
  * `import {Popover} from "@chanzuckerberg/eds";`
  *
- * A styled popover built on 'headless UI' popover. Consider using the Dropdown component, instead.
+ * A styled popover built on 'headless UI' popover. Consider using the Dropdown component instead.
  */
 export const Popover = ({
   placement,

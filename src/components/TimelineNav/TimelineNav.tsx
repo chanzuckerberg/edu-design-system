@@ -86,8 +86,6 @@ export interface TimelineNavItem {
 /**
  * `import {TimelineNav} from "@chanzuckerberg/eds";`
  *
- * Timeline nav Component
- *
  * Provides a list-view pane for item labels/titles, and a details pane for each item's content.
  * When an item in the list is selected, the details pane is updated.
  */

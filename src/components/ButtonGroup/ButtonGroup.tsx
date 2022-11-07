@@ -33,7 +33,7 @@ type Props = {
  *
  * Example usage:
  *
- * ```ts
+ * ```tsx
  * <ButtonGroup
  *   className={componentClassName}
  *   spacing='1x'

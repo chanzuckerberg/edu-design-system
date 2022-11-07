@@ -28,7 +28,7 @@ export interface Props {
  * `import {DefinitionList} from "@chanzuckerberg/eds";`
  *
  * DefinitionList is the wrapper component that contains the definition term (`dt`)
- * and a definition description (`dd`)
+ * and a definition description (`dd`).
  */
 export const DefinitionList = ({
   orientation,

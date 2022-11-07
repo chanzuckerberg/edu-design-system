@@ -22,8 +22,9 @@ export type Props = {
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
- * ```ts
+ * ```tsx
  * import {Filters} from "@chanzuckerberg/eds";
+ *
  * <Filters.CheckboxField>
  * ```
  *

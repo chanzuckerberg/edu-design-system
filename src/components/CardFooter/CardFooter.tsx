@@ -15,8 +15,6 @@ export interface Props {
 }
 
 /**
- * Primary UI component for user interaction
- *
  * `import {CardFooter} from "@chanzuckerberg/eds";`
  *
  * Footer of the Card component.
