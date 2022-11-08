@@ -86,7 +86,18 @@ function minifyCSSVarDictionary(obj) {
       toRet[name] = minifyCSSVarDictionary(obj[name]);
     }
   }
+  // replacing the '@' to 'default' in css-variables-nested.json
+  replaceWithDefault(toRet);
+  console.log('toRet.....', toRet);
+
   return toRet;
+}
+
+function replaceWithDefault(toRet) {
+  if (toRet['@'] != null) {
+    toRet['default'] = toRet['@'];
+    delete toRet['@'];
+  }
 }
 
 EDSStyleDictionary.registerFormat({
