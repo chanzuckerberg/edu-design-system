@@ -96,6 +96,7 @@ export const TableHeaderCell = ({
           : undefined
       }
       className={componentClassName}
+      data-bootstrap-override="table-header-cell"
       {...other}
     >
       {sortDirection ? (
