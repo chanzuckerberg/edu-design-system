@@ -6,11 +6,8 @@ import AccordionButton from '../AccordionButton';
 import AccordionPanel from '../AccordionPanel';
 import AccordionTitle from '../AccordionTitle';
 
-type RenderProps<RenderPropArgs> = {
-  children: React.ReactNode | ((args: RenderPropArgs) => React.ReactNode);
-};
-
-type Props = RenderProps<{ open: boolean }> & {
+type Props = {
+  children: React.ReactNode;
   /**
    * Additional classnames passed in for styling.
    */
@@ -47,7 +44,7 @@ export const AccordionContext = createContext<{ variant: Props['variant'] }>({
  * <Accordion>
  *   <Accordion.Button>
  *      <Accordion.Title>
- *          Title
+ *        Title
  *      <Accordion.Title>
  *   </Accordion.Button>
  *   <Accordion.Panel>
@@ -75,7 +72,7 @@ export const Accordion = ({
             !open && classNameClosed,
           )}
         >
-          {typeof children === 'function' ? children({ open }) : children}
+          {children}
         </div>
       )}
     </Disclosure>

@@ -4,10 +4,6 @@ import React, { useContext } from 'react';
 import styles from './AccordionPanel.module.css';
 import { AccordionContext } from '../Accordion';
 
-type RenderProps<RenderPropArgs> = {
-  children: React.ReactNode | ((args: RenderPropArgs) => React.ReactNode);
-};
-
 export type Props = {
   /**
    * Child node(s) that can be nested inside component.
@@ -17,19 +13,12 @@ export type Props = {
    * Additional classnames passed in for styling
    */
   className?: string;
-} & RenderProps<{
-  open: boolean;
-  close: (
-    focusableElement?: HTMLElement | React.RefObject<HTMLElement>,
-  ) => void;
-}>;
+};
 
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
- * ```ts
- * import {AccordionPanel} from "@chanzuckerberg/eds";
- * ```
+ * `import {AccordionPanel} from "@chanzuckerberg/eds";`
  *
  * TODO: update this comment with a description of the component.
  */

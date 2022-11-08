@@ -1,3 +1,5 @@
+@import '../../design-tokens/mixins.css';
+
 /*------------------------------------*\
     # ACCORDION PANEL
 \*------------------------------------*/
@@ -7,6 +9,13 @@
  */
 .accordion-panel {
   padding-left: var(--eds-size-1);
-  padding-right: var(--eds-size-2);
+  padding-right: var(--eds-size-3);
   padding-bottom: 1.625rem;
+
+  @mixin eds-theme-typography-body-text-sm;
+  color: var(--eds-theme-color-text-neutral-strong);
+}
+
+.accordion-panel--compact {
+  @mixin eds-theme-typography-body-text-xs;
 }

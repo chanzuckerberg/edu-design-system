@@ -7,13 +7,14 @@
 /**
  * Accordion Title is the heading housed by the Accordion Button.
  */
-.accordion-title {
+.accordion-title.accordion-title {
   @mixin eds-theme-typography-body-text-sm;
+  color: var(--eds-theme-color-text-neutral-strong);
 }
 
 /**
  * Accordion Title compact variant is smaller.
  */
-.accordion-title--compact {
+.accordion-title--compact.accordion-title--compact {
   @mixin eds-theme-typography-body-text-xs;
 }

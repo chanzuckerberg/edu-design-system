@@ -2,42 +2,36 @@ import { Disclosure } from '@headlessui/react';
 import clsx from 'clsx';
 import React, { useContext } from 'react';
 import styles from './AccordionButton.module.css';
+import { ENTER_KEYCODE, SPACEBAR_KEYCODE } from '../../util/keycodes';
 import { AccordionContext } from '../Accordion';
+import Button from '../Button';
 import Icon from '../Icon';
 
-type RenderProps<RenderPropArgs> = {
-  children: React.ReactNode | ((args: RenderPropArgs) => React.ReactNode);
-};
-
 export type Props = {
-  as?: React.ElementType;
+  /**
+   * Child node(s) that can be nested inside component.
+   */
+  children: React.ReactNode;
   /**
    * Additional classnames passed in for styling
    */
   className?: string;
   /**
-   * color passed in for styling icon
-   */
-  iconColor?: string;
-  /**
-   * On click callback function
+   * Callback called when accordion is closed.
    */
   onClose?: () => void;
-} & RenderProps<{ open: boolean }>;
+};
 
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
- * ```ts
- * import {AccordionButton} from "@chanzuckerberg/eds";
- * ```
+ * `import {AccordionButton} from "@chanzuckerberg/eds";`
  *
  * TODO: update this comment with a description of the component.
  */
 export const AccordionButton = ({
   children,
   className,
-  iconColor,
   onClose,
   ...other
 }: Props) => {
@@ -48,37 +42,40 @@ export const AccordionButton = ({
     variant === 'compact' && styles['accordion-button--compact'],
     className,
   );
+
   return (
     <Disclosure.Button as={React.Fragment}>
       {({ open }) => (
-        <button
+        <Button
           className={componentClassName}
+          fullWidth
           onClick={() => {
             if (open && onClose) {
               onClose();
             }
           }}
           onKeyDown={(e) => {
-            if (e.key === ' ' || e.key === 'Enter') {
+            if (e.key === SPACEBAR_KEYCODE || e.key === ENTER_KEYCODE) {
               if (open && onClose) {
                 onClose();
               }
             }
           }}
+          status="neutral"
+          variant="icon"
         >
-          {typeof children === 'function' ? children({ open }) : children}
+          {children}
           <Icon
             className={clsx(
               styles['accordion-button__icon'],
-              open && styles['accordion-button__icon--reversed'],
+              open && styles['accordion-button__icon--open'],
             )}
-            color={iconColor || 'neutral'}
             name="expand-more"
             purpose="informative"
-            size="1.5rem"
+            size="1.625rem"
             title={open ? 'hide content' : 'show content'}
           />
-        </button>
+        </Button>
       )}
     </Disclosure.Button>
   );
