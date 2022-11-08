@@ -88,8 +88,6 @@ function minifyCSSVarDictionary(obj) {
   }
   // replacing the '@' to 'default' in css-variables-nested.json
   replaceWithDefault(toRet);
-  console.log('toRet.....', toRet);
-
   return toRet;
 }
 
