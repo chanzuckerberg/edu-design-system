@@ -52,7 +52,7 @@ interface Column {
 export type Columns = Column[];
 
 /**
- * Primary UI component for user interaction
+ * A Card containing a Table.
  */
 export const TableCard = ({
   className,

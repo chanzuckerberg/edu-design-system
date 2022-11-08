@@ -13,9 +13,6 @@ export interface Props {
   children?: ReactNode;
 }
 
-/**
- * Primary UI component for user interaction
- */
 export const GettingStartedDocumentation: React.FC<Props> = ({ children }) => {
   useEffect(() => {
     Prism.highlightAll();

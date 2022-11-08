@@ -48,7 +48,7 @@ export interface Props {
 }
 
 /**
- * Primary UI component for user interaction
+ * A general wrapper for pages, comes with the GlobalHeader component baked in.
  */
 export const PageShell = ({
   children,
