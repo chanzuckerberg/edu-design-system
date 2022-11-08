@@ -21,9 +21,7 @@ export interface Props {
 }
 
 /**
- * ```ts
- * import {OverflowList} from "@chanzuckerberg/eds";
- * ```
+ * `import {OverflowList} from "@chanzuckerberg/eds";`
  *
  * Component that is used to maintain the object body with content overflowed.
  */

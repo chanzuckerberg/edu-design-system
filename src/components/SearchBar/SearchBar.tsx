@@ -19,9 +19,7 @@ export type Props = {
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
- * ```ts
- * import {SearchBar} from "@chanzuckerberg/eds";
- * ```
+ * `import {SearchBar} from "@chanzuckerberg/eds";`
  *
  * Input field and button used for searching through various data fields.
  */

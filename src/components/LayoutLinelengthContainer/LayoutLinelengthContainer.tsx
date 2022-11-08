@@ -15,9 +15,7 @@ export interface Props {
 }
 
 /**
- * ```ts
- * import {LayoutLinelengthContainer} from "@chanzuckerberg/eds";
- * ```
+ * `import {LayoutLinelengthContainer} from "@chanzuckerberg/eds";`
  *
  * Component that caps the length of an excerpt of text to be easily readable.
  */

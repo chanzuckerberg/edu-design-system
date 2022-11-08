@@ -15,9 +15,7 @@ export interface Props {
 }
 
 /**
- * ```ts
- * import {OverflowListItem} from "@chanzuckerberg/eds";
- * ```
+ * `import {OverflowListItem} from "@chanzuckerberg/eds";`
  *
  * OverflowListItem to be used in the OverflowList component to maintain the body of the elements overflow.
  */

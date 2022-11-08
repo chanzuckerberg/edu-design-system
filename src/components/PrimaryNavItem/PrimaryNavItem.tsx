@@ -29,9 +29,7 @@ export interface Props {
 }
 
 /**
- * ```ts
- * import {PrimaryNavItem} from "@chanzuckerberg/eds";
- * ```
+ * `import {PrimaryNavItem} from "@chanzuckerberg/eds";`
  *
  * Individual item within the PrimaryNav.
  */

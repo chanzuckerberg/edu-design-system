@@ -25,9 +25,7 @@ export type Props = {
 };
 
 /**
- * ```ts
- * import {HorizontalStep} from "@chanzuckerberg/eds";
- * ```
+ * `import {HorizontalStep} from "@chanzuckerberg/eds";`
  *
  * A step sub component for the <HorizontalStepper>.
  * Determines which icon to use and places the text next to it.

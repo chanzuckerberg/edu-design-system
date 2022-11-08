@@ -30,9 +30,7 @@ export interface Props {
 }
 
 /**
- * ```ts
- * import {Logo} from "@chanzuckerberg/eds";
- * ```
+ * `import {Logo} from "@chanzuckerberg/eds";`
  *
  * Branding image or text of the site.
  */

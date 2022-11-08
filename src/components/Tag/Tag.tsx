@@ -40,9 +40,7 @@ type Props = {
 };
 
 /**
- * ```ts
- * import {Tag} from "@chanzuckerberg/eds";
- * ```
+ * `import {Tag} from "@chanzuckerberg/eds";`
  *
  * This component provides a tag (pill shaped badge) wrapper.
  */

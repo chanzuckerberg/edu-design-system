@@ -27,9 +27,7 @@ export type Props = {
 };
 
 /**
- * ```ts
- * import {Toast} from "@chanzuckerberg/eds";
- * ```
+ * `import {Toast} from "@chanzuckerberg/eds";`
  *
  * A toast used to provide information on the state of the page, usually in response to a
  * user action. Ex: The user updates their profile, and a toast pop-up informs them that the

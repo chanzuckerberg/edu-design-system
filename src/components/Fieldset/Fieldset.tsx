@@ -21,9 +21,7 @@ type FieldsetProps = {
 } & React.HTMLAttributes<HTMLFieldSetElement>;
 
 /**
- * ```ts
- * import {Fieldset} from "@chanzuckerberg/eds";
- * ```
+ * `import {Fieldset} from "@chanzuckerberg/eds";`
  *
  * A container for a fieldset that includes a legend and one or more form inputs.
  */

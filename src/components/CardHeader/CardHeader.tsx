@@ -15,6 +15,8 @@ export interface Props {
 }
 
 /**
+ * `import {CardHeader} from "@chanzuckerberg/eds";`
+ *
  * Primary UI component for user interaction
  */
 export const CardHeader = ({ children, className, ...other }: Props) => {

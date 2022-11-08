@@ -20,9 +20,7 @@ export interface Props {
 }
 
 /**
- * ```ts
- * import {Hr} from "@chanzuckerberg/eds";
- * ```
+ * `import {Hr} from "@chanzuckerberg/eds";`
  *
  * Horizontal rule component to present a horizontal line separating content.
  */

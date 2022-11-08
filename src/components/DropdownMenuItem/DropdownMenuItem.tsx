@@ -51,9 +51,7 @@ export type DropdownMenuItemProps = {
 };
 
 /**
- * ```ts
- * import {DropdownMenuItem} from "@chanzuckerberg/eds";
- * ```
+ * `import {DropdownMenuItem} from "@chanzuckerberg/eds";`
  *
  * Dropdown menu item within `DropdownMenu`
  */

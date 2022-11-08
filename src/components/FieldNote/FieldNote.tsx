@@ -30,9 +30,7 @@ export interface Props {
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
- * ```ts
- * import {FieldNote} from "@chanzuckerberg/eds";
- * ```
+ * `import {FieldNote} from "@chanzuckerberg/eds";`
  *
  * Fieldnote component wraps text to describe other components.
  */

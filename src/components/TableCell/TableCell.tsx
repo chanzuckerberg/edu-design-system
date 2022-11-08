@@ -37,9 +37,7 @@ export type Props = React.TdHTMLAttributes<HTMLTableCellElement> & {
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
- * ```ts
- * import {TableCell} from "@chanzuckerberg/eds";
- * ```
+ * `import {TableCell} from "@chanzuckerberg/eds";`
  *
  * HTML table cell of the `Table` component
  */

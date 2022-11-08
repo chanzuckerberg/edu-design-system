@@ -49,9 +49,7 @@ export interface Props {
 }
 
 /**
- * ```ts
- * import {LinkListItem} from "@chanzuckerberg/eds";
- * ```
+ * `import {LinkListItem} from "@chanzuckerberg/eds";`
  *
  * Link list item to be used inside the LinkList component.
  */

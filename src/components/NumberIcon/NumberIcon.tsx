@@ -36,9 +36,7 @@ export interface Props {
 }
 
 /**
- * ```ts
- * import {NumberIcon} from "@chanzuckerberg/eds";
- * ```
+ * `import {NumberIcon} from "@chanzuckerberg/eds";`
  *
  * Encloses a number in a circle to be used as an icon.
  *

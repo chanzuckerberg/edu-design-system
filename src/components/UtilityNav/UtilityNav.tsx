@@ -29,9 +29,7 @@ export interface Props {
 }
 
 /**
- * ```ts
- * import {UtilityNav} from "@chanzuckerberg/eds";
- * ```
+ * `import {UtilityNav} from "@chanzuckerberg/eds";`
  *
  * Utility navigation existing in the header and maybe the footer.
  */
