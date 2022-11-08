@@ -203,7 +203,7 @@ export const AlignTableCellContentCenter: StoryObj<Args> = {
             {tableColumns.map(function (item) {
               return (
                 <Table.HeaderCell
-                  className="!text-center"
+                  className="text-center"
                   key={'table-cell-' + item.title}
                 >
                   {item.title}
@@ -240,7 +240,7 @@ export const AlignTableCellContentRight: StoryObj<Args> = {
             {tableColumns.map(function (item) {
               return (
                 <Table.HeaderCell
-                  className="!text-right"
+                  className="text-right"
                   key={'table-cell-' + item.title}
                 >
                   {item.title}

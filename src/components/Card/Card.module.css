@@ -4,8 +4,9 @@
 
 /**
  * A card is a block that typically contains a title, image, text, and/or calls to action.
+ * The `:where` pseudo class function allows easy overriding via className.
  */
-.card {
+:where(.card) {
   display: flex;
   flex-direction: column;
   padding: var(--eds-size-2);
