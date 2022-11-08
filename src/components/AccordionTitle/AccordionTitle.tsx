@@ -1,10 +1,19 @@
-import React from 'react';
+import clsx from 'clsx';
+import React, { useContext } from 'react';
+import styles from './AccordionTitle.module.css';
+import { AccordionContext } from '../Accordion';
+import type { HeadingElement } from '../Heading';
 import Heading from '../Heading';
+
 type RenderProps<RenderPropArgs> = {
   children: React.ReactNode | ((args: RenderPropArgs) => React.ReactNode);
 };
 
 export type Props = {
+  /**
+   * Used to specify which heading element should be rendered.
+   */
+  as: HeadingElement;
   /**
    * Child node(s) that can be nested inside component.
    */
@@ -24,9 +33,20 @@ export type Props = {
  *
  * TODO: update this comment with a description of the component.
  */
-export const AccordionTitle = ({ children, className, ...other }: Props) => {
+export const AccordionTitle = ({
+  as,
+  children,
+  className,
+  ...other
+}: Props) => {
+  const { variant } = useContext(AccordionContext);
+  const componentClassName = clsx(
+    styles['accordion-title'],
+    variant === 'compact' && styles['accordion-title--compact'],
+    className,
+  );
   return (
-    <Heading className={className} size="h4" {...other} as="h2">
+    <Heading className={componentClassName} size={as} {...other}>
       {children}
     </Heading>
   );

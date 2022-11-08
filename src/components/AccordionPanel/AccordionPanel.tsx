@@ -1,7 +1,8 @@
 import { Disclosure } from '@headlessui/react';
 import clsx from 'clsx';
-import React from 'react';
+import React, { useContext } from 'react';
 import styles from './AccordionPanel.module.css';
+import { AccordionContext } from '../Accordion';
 
 type RenderProps<RenderPropArgs> = {
   children: React.ReactNode | ((args: RenderPropArgs) => React.ReactNode);
@@ -33,7 +34,14 @@ export type Props = {
  * TODO: update this comment with a description of the component.
  */
 export const AccordionPanel = ({ className, children, ...other }: Props) => {
-  const componentClassName = clsx(styles['accordion-panel'], className);
+  const { variant } = useContext(AccordionContext);
+
+  const componentClassName = clsx(
+    styles['accordion-panel'],
+    variant === 'compact' && styles['accordion-panel--compact'],
+    className,
+  );
+
   return (
     <Disclosure.Panel className={componentClassName} {...other}>
       {children}

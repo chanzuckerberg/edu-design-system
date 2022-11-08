@@ -1,7 +1,8 @@
 import { Disclosure } from '@headlessui/react';
 import clsx from 'clsx';
-import React from 'react';
+import React, { useContext } from 'react';
 import styles from './AccordionButton.module.css';
+import { AccordionContext } from '../Accordion';
 import Icon from '../Icon';
 
 type RenderProps<RenderPropArgs> = {
@@ -40,11 +41,18 @@ export const AccordionButton = ({
   onClose,
   ...other
 }: Props) => {
+  const { variant } = useContext(AccordionContext);
+
+  const componentClassName = clsx(
+    styles['accordion-button'],
+    variant === 'compact' && styles['accordion-button--compact'],
+    className,
+  );
   return (
     <Disclosure.Button as={React.Fragment}>
       {({ open }) => (
         <button
-          className={clsx(styles.header, className)}
+          className={componentClassName}
           onClick={() => {
             if (open && onClose) {
               onClose();
@@ -60,7 +68,10 @@ export const AccordionButton = ({
         >
           {typeof children === 'function' ? children({ open }) : children}
           <Icon
-            className={clsx(styles.icon, open && styles.iconReversed)}
+            className={clsx(
+              styles['accordion-button__icon'],
+              open && styles['accordion-button__icon--reversed'],
+            )}
             color={iconColor || 'neutral'}
             name="expand-more"
             purpose="informative"

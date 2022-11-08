@@ -1,6 +1,6 @@
 import { Disclosure } from '@headlessui/react';
 import clsx from 'clsx';
-import * as React from 'react';
+import React, { createContext } from 'react';
 import styles from './Accordion.module.css';
 import AccordionButton from '../AccordionButton';
 import AccordionPanel from '../AccordionPanel';
@@ -12,22 +12,30 @@ type RenderProps<RenderPropArgs> = {
 
 type Props = RenderProps<{ open: boolean }> & {
   /**
-   * Additional classnames passed in for styling
+   * Additional classnames passed in for styling.
    */
   className?: string;
   /**
-   * Additional classnames passed in for styling active only when open
+   * Additional classnames passed in for styling active only when open.
    */
   classNameOpen?: string;
   /**
-   * Additional classnames passed in for styling active only when not open
+   * Additional classnames passed in for styling active only when not open.
    */
   classNameClosed?: string;
   /**
-   * Whether body is expanded by default
+   * Whether panel is expanded by default.
    */
   defaultOpen?: boolean;
+  /**
+   * Compact variant shrinks the Accordion size.
+   */
+  variant?: 'compact';
 };
+
+export const AccordionContext = createContext<{ variant: Props['variant'] }>({
+  variant: undefined,
+});
 
 /**
  * `import Accordion from 'v2/core/EDSCandidates/Accordion';`
@@ -37,14 +45,14 @@ type Props = RenderProps<{ open: boolean }> & {
  * Usage:
  * ```
  * <Accordion>
- *   <Accordion.Header>
+ *   <Accordion.Button>
  *      <Accordion.Title>
  *          Title
  *      <Accordion.Title>
- *   </Accordion.Header>
- *   <Accordion.Body>
+ *   </Accordion.Button>
+ *   <Accordion.Panel>
  *     Content
- *   </Accordion.Body>
+ *   </Accordion.Panel>
  * </Accordion>
  * ```
  */
@@ -53,22 +61,25 @@ export const Accordion = ({
   classNameOpen,
   classNameClosed,
   children,
+  variant,
   ...other
 }: Props) => (
-  <Disclosure {...other}>
-    {({ open }) => (
-      <div
-        className={clsx(
-          styles['accordion'],
-          className,
-          open && classNameOpen,
-          !open && classNameClosed,
-        )}
-      >
-        {typeof children === 'function' ? children({ open }) : children}
-      </div>
-    )}
-  </Disclosure>
+  <AccordionContext.Provider value={{ variant }}>
+    <Disclosure {...other}>
+      {({ open }) => (
+        <div
+          className={clsx(
+            styles['accordion'],
+            className,
+            open && classNameOpen,
+            !open && classNameClosed,
+          )}
+        >
+          {typeof children === 'function' ? children({ open }) : children}
+        </div>
+      )}
+    </Disclosure>
+  </AccordionContext.Provider>
 );
 
 Accordion.Button = AccordionButton;

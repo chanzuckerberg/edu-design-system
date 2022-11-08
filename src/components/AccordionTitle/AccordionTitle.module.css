@@ -1,0 +1,19 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    # ACCORDION TITLE
+\*------------------------------------*/
+
+/**
+ * Accordion Title is the heading housed by the Accordion Button.
+ */
+.accordion-title {
+  @mixin eds-theme-typography-body-text-sm;
+}
+
+/**
+ * Accordion Title compact variant is smaller.
+ */
+.accordion-title--compact {
+  @mixin eds-theme-typography-body-text-xs;
+}
