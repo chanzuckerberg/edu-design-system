@@ -13,26 +13,31 @@ exports[`<Table /> AlignTableCellContentCenter story renders snapshot 1`] = `
       >
         <th
           class="table-header-cell text-center"
+          data-bootstrap-override="table-header-cell"
         >
           Name
         </th>
         <th
           class="table-header-cell text-center"
+          data-bootstrap-override="table-header-cell"
         >
           Status
         </th>
         <th
           class="table-header-cell text-center"
+          data-bootstrap-override="table-header-cell"
         >
           Chart
         </th>
         <th
           class="table-header-cell text-center"
+          data-bootstrap-override="table-header-cell"
         >
           Window
         </th>
         <th
           class="table-header-cell text-center"
+          data-bootstrap-override="table-header-cell"
         >
           Last Update
         </th>
@@ -44,26 +49,31 @@ exports[`<Table /> AlignTableCellContentCenter story renders snapshot 1`] = `
       >
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 1, Table Cell 1
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 1, Table Cell 2
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 1, Table Cell 3
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 1, Table Cell 4
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 1, Table Cell 5
         </td>
@@ -73,26 +83,31 @@ exports[`<Table /> AlignTableCellContentCenter story renders snapshot 1`] = `
       >
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 2, Table Cell 1
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 2, Table Cell 2
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 2, Table Cell 3
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 2, Table Cell 4
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 2, Table Cell 5
         </td>
@@ -102,26 +117,31 @@ exports[`<Table /> AlignTableCellContentCenter story renders snapshot 1`] = `
       >
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 3, Table Cell 1
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 3, Table Cell 2
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 3, Table Cell 3
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 3, Table Cell 4
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 3, Table Cell 5
         </td>
@@ -131,26 +151,31 @@ exports[`<Table /> AlignTableCellContentCenter story renders snapshot 1`] = `
       >
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 4, Table Cell 1
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 4, Table Cell 2
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 4, Table Cell 3
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 4, Table Cell 4
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 4, Table Cell 5
         </td>
@@ -173,26 +198,31 @@ exports[`<Table /> AlignTableCellContentRight story renders snapshot 1`] = `
       >
         <th
           class="table-header-cell text-right"
+          data-bootstrap-override="table-header-cell"
         >
           Name
         </th>
         <th
           class="table-header-cell text-right"
+          data-bootstrap-override="table-header-cell"
         >
           Status
         </th>
         <th
           class="table-header-cell text-right"
+          data-bootstrap-override="table-header-cell"
         >
           Chart
         </th>
         <th
           class="table-header-cell text-right"
+          data-bootstrap-override="table-header-cell"
         >
           Window
         </th>
         <th
           class="table-header-cell text-right"
+          data-bootstrap-override="table-header-cell"
         >
           Last Update
         </th>
@@ -204,26 +234,31 @@ exports[`<Table /> AlignTableCellContentRight story renders snapshot 1`] = `
       >
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 1, Table Cell 1
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 1, Table Cell 2
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 1, Table Cell 3
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 1, Table Cell 4
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 1, Table Cell 5
         </td>
@@ -233,26 +268,31 @@ exports[`<Table /> AlignTableCellContentRight story renders snapshot 1`] = `
       >
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 2, Table Cell 1
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 2, Table Cell 2
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 2, Table Cell 3
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 2, Table Cell 4
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 2, Table Cell 5
         </td>
@@ -262,26 +302,31 @@ exports[`<Table /> AlignTableCellContentRight story renders snapshot 1`] = `
       >
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 3, Table Cell 1
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 3, Table Cell 2
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 3, Table Cell 3
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 3, Table Cell 4
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 3, Table Cell 5
         </td>
@@ -291,26 +336,31 @@ exports[`<Table /> AlignTableCellContentRight story renders snapshot 1`] = `
       >
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 4, Table Cell 1
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 4, Table Cell 2
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 4, Table Cell 3
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 4, Table Cell 4
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 4, Table Cell 5
         </td>
@@ -333,26 +383,31 @@ exports[`<Table /> Default story renders snapshot 1`] = `
       >
         <th
           class="table-header-cell"
+          data-bootstrap-override="table-header-cell"
         >
           Name
         </th>
         <th
           class="table-header-cell"
+          data-bootstrap-override="table-header-cell"
         >
           Status
         </th>
         <th
           class="table-header-cell"
+          data-bootstrap-override="table-header-cell"
         >
           Chart
         </th>
         <th
           class="table-header-cell"
+          data-bootstrap-override="table-header-cell"
         >
           Window
         </th>
         <th
           class="table-header-cell"
+          data-bootstrap-override="table-header-cell"
         >
           Last Update
         </th>
@@ -364,26 +419,31 @@ exports[`<Table /> Default story renders snapshot 1`] = `
       >
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 1, Table Cell 1
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 1, Table Cell 2
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 1, Table Cell 3
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 1, Table Cell 4
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 1, Table Cell 5
         </td>
@@ -393,26 +453,31 @@ exports[`<Table /> Default story renders snapshot 1`] = `
       >
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 2, Table Cell 1
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 2, Table Cell 2
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 2, Table Cell 3
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 2, Table Cell 4
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 2, Table Cell 5
         </td>
@@ -422,26 +487,31 @@ exports[`<Table /> Default story renders snapshot 1`] = `
       >
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 3, Table Cell 1
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 3, Table Cell 2
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 3, Table Cell 3
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 3, Table Cell 4
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 3, Table Cell 5
         </td>
@@ -451,26 +521,31 @@ exports[`<Table /> Default story renders snapshot 1`] = `
       >
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 4, Table Cell 1
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 4, Table Cell 2
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 4, Table Cell 3
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 4, Table Cell 4
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 4, Table Cell 5
         </td>
@@ -493,6 +568,7 @@ exports[`<Table /> SortableInteractive story renders snapshot 1`] = `
       >
         <th
           class="table-header-cell"
+          data-bootstrap-override="table-header-cell"
         >
           <button
             class="clickable-style clickable-style--link clickable-style--brand button button--link table-header-cell__sort-button"
@@ -522,6 +598,7 @@ exports[`<Table /> SortableInteractive story renders snapshot 1`] = `
         </th>
         <th
           class="table-header-cell"
+          data-bootstrap-override="table-header-cell"
         >
           Not sortable
         </th>
@@ -533,11 +610,13 @@ exports[`<Table /> SortableInteractive story renders snapshot 1`] = `
       >
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Value 1
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Value A
         </td>
@@ -547,11 +626,13 @@ exports[`<Table /> SortableInteractive story renders snapshot 1`] = `
       >
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Value 3
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Value B
         </td>
@@ -561,11 +642,13 @@ exports[`<Table /> SortableInteractive story renders snapshot 1`] = `
       >
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Value 2
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Value C
         </td>
@@ -575,11 +658,13 @@ exports[`<Table /> SortableInteractive story renders snapshot 1`] = `
       >
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Value 4
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Value D
         </td>
@@ -605,26 +690,31 @@ exports[`<Table /> TableWithCaption story renders snapshot 1`] = `
       >
         <th
           class="table-header-cell"
+          data-bootstrap-override="table-header-cell"
         >
           Name
         </th>
         <th
           class="table-header-cell"
+          data-bootstrap-override="table-header-cell"
         >
           Status
         </th>
         <th
           class="table-header-cell"
+          data-bootstrap-override="table-header-cell"
         >
           Chart
         </th>
         <th
           class="table-header-cell"
+          data-bootstrap-override="table-header-cell"
         >
           Window
         </th>
         <th
           class="table-header-cell"
+          data-bootstrap-override="table-header-cell"
         >
           Last Update
         </th>
@@ -636,26 +726,31 @@ exports[`<Table /> TableWithCaption story renders snapshot 1`] = `
       >
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 1, Table Cell 1
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 1, Table Cell 2
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 1, Table Cell 3
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 1, Table Cell 4
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 1, Table Cell 5
         </td>
@@ -665,26 +760,31 @@ exports[`<Table /> TableWithCaption story renders snapshot 1`] = `
       >
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 2, Table Cell 1
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 2, Table Cell 2
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 2, Table Cell 3
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 2, Table Cell 4
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 2, Table Cell 5
         </td>
@@ -694,26 +794,31 @@ exports[`<Table /> TableWithCaption story renders snapshot 1`] = `
       >
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 3, Table Cell 1
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 3, Table Cell 2
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 3, Table Cell 3
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 3, Table Cell 4
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 3, Table Cell 5
         </td>
@@ -723,26 +828,31 @@ exports[`<Table /> TableWithCaption story renders snapshot 1`] = `
       >
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 4, Table Cell 1
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 4, Table Cell 2
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 4, Table Cell 3
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 4, Table Cell 4
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 4, Table Cell 5
         </td>
@@ -765,26 +875,31 @@ exports[`<Table /> ZebraHover story renders snapshot 1`] = `
       >
         <th
           class="table-header-cell"
+          data-bootstrap-override="table-header-cell"
         >
           Name
         </th>
         <th
           class="table-header-cell"
+          data-bootstrap-override="table-header-cell"
         >
           Status
         </th>
         <th
           class="table-header-cell"
+          data-bootstrap-override="table-header-cell"
         >
           Chart
         </th>
         <th
           class="table-header-cell"
+          data-bootstrap-override="table-header-cell"
         >
           Window
         </th>
         <th
           class="table-header-cell"
+          data-bootstrap-override="table-header-cell"
         >
           Last Update
         </th>
@@ -796,26 +911,31 @@ exports[`<Table /> ZebraHover story renders snapshot 1`] = `
       >
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 1, Table Cell 1
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 1, Table Cell 2
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 1, Table Cell 3
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 1, Table Cell 4
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 1, Table Cell 5
         </td>
@@ -825,26 +945,31 @@ exports[`<Table /> ZebraHover story renders snapshot 1`] = `
       >
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 2, Table Cell 1
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 2, Table Cell 2
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 2, Table Cell 3
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 2, Table Cell 4
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 2, Table Cell 5
         </td>
@@ -854,26 +979,31 @@ exports[`<Table /> ZebraHover story renders snapshot 1`] = `
       >
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 3, Table Cell 1
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 3, Table Cell 2
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 3, Table Cell 3
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 3, Table Cell 4
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 3, Table Cell 5
         </td>
@@ -883,26 +1013,31 @@ exports[`<Table /> ZebraHover story renders snapshot 1`] = `
       >
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 4, Table Cell 1
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 4, Table Cell 2
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 4, Table Cell 3
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 4, Table Cell 4
         </td>
         <td
           class="table-cell"
+          data-bootstrap-override="table-cell"
         >
           Table Row 4, Table Cell 5
         </td>
