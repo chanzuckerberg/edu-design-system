@@ -18,9 +18,7 @@ export type Props = {
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
- * `import {AccordionPanel} from "@chanzuckerberg/eds";`
- *
- * TODO: update this comment with a description of the component.
+ * The heading text subcomponent for the Accordion.Button subcomponent for the EDS Accordion component.
  */
 export const AccordionPanel = ({ className, children, ...other }: Props) => {
   const { variant } = useContext(AccordionContext);

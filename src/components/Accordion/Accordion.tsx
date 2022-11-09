@@ -35,12 +35,14 @@ export const AccordionContext = createContext<{ variant: Props['variant'] }>({
 });
 
 /**
- * `import Accordion from 'v2/core/EDSCandidates/Accordion';`
+ * BETA: This component is still a work in progress and is subject to change.
  *
- * EDS Accordion.
+ * `import {Accordion} from "@chanzuckerberg/eds;`
  *
- * Usage:
- * ```
+ * An interactive heading that reveals or hides associated content.
+ * Built on 'headless UI' Disclosure.
+ *
+ * ```tsx
  * <Accordion>
  *   <Accordion.Button>
  *      <Accordion.Title>

@@ -3,7 +3,7 @@
 \*------------------------------------*/
 
 /**
- * Accordion Button, wraps the heading
+ * Accordion Button, wraps the heading and open indicator icon.
  */
 .accordion-button.accordion-button {
   display: flex;
@@ -12,19 +12,32 @@
   height: 3.375rem;
 }
 
+/**
+ * Compact variant.
+ */
 .accordion-button--compact.accordion-button--compact {
   padding: var(--eds-size-1);
   height: 2.25rem;
 }
 
+/**
+ * Expand more (chevron) icon indicates open or closed status.
+ *
+ * This nonrotated icon points down and represents closed status.
+ */
 .accordion-button__icon {
   transform: rotate(0);
 }
-
+/**
+ * This rotated icon points up and represents open status.
+ */
 .accordion-button__icon--open {
   transform: rotate(180deg);
 }
 
+/**
+ * Animates the icon rotation when opening and closing.
+ */
 .accordion-button > .accordion-button__icon {
   transition-property: transform;
   transition-duration: var(--eds-anim-move-medium);

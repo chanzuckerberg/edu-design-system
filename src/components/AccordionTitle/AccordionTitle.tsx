@@ -22,9 +22,7 @@ export type Props = {
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
- * `import {AccordionTitle} from "@chanzuckerberg/eds";`
- *
- * TODO: update this comment with a description of the component.
+ * The panel subcomponent that is hidden or revealed for the EDS Accordion component.
  */
 export const AccordionTitle = ({
   as,

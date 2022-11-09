@@ -5,7 +5,7 @@
 \*------------------------------------*/
 
 /**
- * Accordion Title is the heading housed by the Accordion Button.
+ * Accordion Title is the heading text housed by the Accordion Button.
  */
 .accordion-title.accordion-title {
   @mixin eds-theme-typography-body-text-sm;
@@ -13,7 +13,7 @@
 }
 
 /**
- * Accordion Title compact variant is smaller.
+ * Compact variant.
  */
 .accordion-title--compact.accordion-title--compact {
   @mixin eds-theme-typography-body-text-xs;
