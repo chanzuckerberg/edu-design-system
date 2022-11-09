@@ -24,3 +24,13 @@
 .accordion-button__icon--open {
   transform: rotate(180deg);
 }
+
+.accordion-button > .accordion-button__icon {
+  transition-property: transform;
+  transition-duration: var(--eds-anim-move-medium);
+  transition-timing-function: var(--eds-anim-ease);
+
+  @media screen and (prefers-reduced-motion) {
+    transition: none;
+  }
+}
