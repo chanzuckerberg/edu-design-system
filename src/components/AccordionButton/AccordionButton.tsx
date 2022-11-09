@@ -63,6 +63,7 @@ export const AccordionButton = ({
           }}
           status="neutral"
           variant="icon"
+          {...other}
         >
           {children}
           <Icon

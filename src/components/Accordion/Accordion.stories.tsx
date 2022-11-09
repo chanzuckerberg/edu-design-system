@@ -13,10 +13,10 @@ export default {
   args: {
     children: (
       <>
-        <Accordion.Button>
+        <Accordion.Button data-testid="accordion-button">
           <Accordion.Title as="h2">Massa quam egestas massa.</Accordion.Title>
         </Accordion.Button>
-        <Accordion.Panel>
+        <Accordion.Panel data-testid="accordion-panel">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet,
           massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At
           tristique et ullamcorper rhoncus amet pharetra aliquet tortor.

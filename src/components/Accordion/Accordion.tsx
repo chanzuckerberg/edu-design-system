@@ -57,12 +57,13 @@ export const Accordion = ({
   className,
   classNameOpen,
   classNameClosed,
+  defaultOpen,
   children,
   variant,
   ...other
 }: Props) => (
   <AccordionContext.Provider value={{ variant }}>
-    <Disclosure {...other}>
+    <Disclosure defaultOpen={defaultOpen}>
       {({ open }) => (
         <div
           className={clsx(
@@ -71,6 +72,7 @@ export const Accordion = ({
             open && classNameOpen,
             !open && classNameClosed,
           )}
+          {...other}
         >
           {children}
         </div>

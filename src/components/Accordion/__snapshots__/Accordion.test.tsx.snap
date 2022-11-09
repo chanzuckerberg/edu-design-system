@@ -8,6 +8,7 @@ exports[`<Accordion /> Compact story renders snapshot 1`] = `
     aria-expanded="false"
     class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button accordion-button--compact"
     data-bootstrap-override="clickable-style-icon"
+    data-testid="accordion-button"
     id="headlessui-disclosure-button-3"
     type="button"
   >
@@ -47,6 +48,7 @@ exports[`<Accordion /> CompactOpen story renders snapshot 1`] = `
     aria-expanded="true"
     class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button accordion-button--compact"
     data-bootstrap-override="clickable-style-icon"
+    data-testid="accordion-button"
     id="headlessui-disclosure-button-23"
     type="button"
   >
@@ -76,6 +78,7 @@ exports[`<Accordion /> CompactOpen story renders snapshot 1`] = `
   </button>
   <div
     class="accordion-panel accordion-panel--compact"
+    data-testid="accordion-panel"
     id="headlessui-disclosure-panel-24"
   >
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
@@ -91,6 +94,7 @@ exports[`<Accordion /> Default story renders snapshot 1`] = `
     aria-expanded="false"
     class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button"
     data-bootstrap-override="clickable-style-icon"
+    data-testid="accordion-button"
     id="headlessui-disclosure-button-1"
     type="button"
   >
@@ -130,6 +134,7 @@ exports[`<Accordion /> DefaultOpen story renders snapshot 1`] = `
     aria-expanded="true"
     class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button"
     data-bootstrap-override="clickable-style-icon"
+    data-testid="accordion-button"
     id="headlessui-disclosure-button-21"
     type="button"
   >
@@ -159,6 +164,7 @@ exports[`<Accordion /> DefaultOpen story renders snapshot 1`] = `
   </button>
   <div
     class="accordion-panel"
+    data-testid="accordion-panel"
     id="headlessui-disclosure-panel-22"
   >
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
