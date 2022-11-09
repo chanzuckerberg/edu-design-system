@@ -4,6 +4,7 @@ import React, { createContext } from 'react';
 import styles from './Accordion.module.css';
 import AccordionButton from '../AccordionButton';
 import AccordionPanel from '../AccordionPanel';
+import AccordionRow from '../AccordionRow';
 import AccordionTitle from '../AccordionTitle';
 
 type Props = {
@@ -87,5 +88,6 @@ export const Accordion = ({
 );
 
 Accordion.Button = AccordionButton;
+Accordion.Row = AccordionRow;
 Accordion.Title = AccordionTitle;
 Accordion.Panel = AccordionPanel;
