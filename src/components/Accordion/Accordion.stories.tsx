@@ -25,6 +25,13 @@ export default {
       </>
     ),
   },
+  decorators: [
+    (Story) => (
+      <div style={{ margin: '0.5rem' }}>
+        <Story />
+      </div>
+    ),
+  ],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Accordion>;
