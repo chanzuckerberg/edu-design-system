@@ -16,14 +16,6 @@ type Props = {
    */
   className?: string;
   /**
-   * Additional classnames passed in for styling active only when open.
-   */
-  classNameOpen?: string;
-  /**
-   * Additional classnames passed in for styling active only when not open.
-   */
-  classNameClosed?: string;
-  /**
    * Whether panel is expanded by default.
    */
   defaultOpen?: boolean;
@@ -60,8 +52,6 @@ export const AccordionContext = createContext<{ variant: Props['variant'] }>({
  */
 export const Accordion = ({
   className,
-  classNameOpen,
-  classNameClosed,
   defaultOpen,
   children,
   variant,
@@ -73,9 +63,9 @@ export const Accordion = ({
         <div
           className={clsx(
             styles['accordion'],
+            open && 'eds-accordion--open',
+            !open && 'eds-accordion--closed',
             className,
-            open && classNameOpen,
-            !open && classNameClosed,
           )}
           {...other}
         >
