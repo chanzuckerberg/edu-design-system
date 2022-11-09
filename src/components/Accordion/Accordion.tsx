@@ -1,4 +1,3 @@
-import { Disclosure } from '@headlessui/react';
 import clsx from 'clsx';
 import React, { createContext } from 'react';
 import styles from './Accordion.module.css';
@@ -17,24 +16,20 @@ type Props = {
    */
   className?: string;
   /**
-   * Additional classnames passed in for styling active only when open.
+   * Outline variant adds extra padding and a rounded border.
    */
-  classNameOpen?: string;
-  /**
-   * Additional classnames passed in for styling active only when not open.
-   */
-  classNameClosed?: string;
-  /**
-   * Whether panel is expanded by default.
-   */
-  defaultOpen?: boolean;
+  hasOutline?: boolean;
   /**
    * Compact variant shrinks the Accordion size.
    */
   variant?: 'compact';
 };
 
-export const AccordionContext = createContext<{ variant: Props['variant'] }>({
+export const AccordionContext = createContext<{
+  hasOutline: Props['hasOutline'];
+  variant: Props['variant'];
+}>({
+  hasOutline: undefined,
   variant: undefined,
 });
 
@@ -48,44 +43,45 @@ export const AccordionContext = createContext<{ variant: Props['variant'] }>({
  *
  * ```tsx
  * <Accordion>
- *   <Accordion.Button>
- *      <Accordion.Title>
- *        Title
- *      <Accordion.Title>
- *   </Accordion.Button>
- *   <Accordion.Panel>
- *     Content
- *   </Accordion.Panel>
+ *   <Accordion.Row>
+ *     <Accordion.Button>
+ *        <Accordion.Title>
+ *          Title 1
+ *        <Accordion.Title>
+ *     </Accordion.Button>
+ *     <Accordion.Panel>
+ *       Content 1
+ *     </Accordion.Panel>
+ *   </Accordion.Row>
+ *   <Accordion.Row>
+ *     <Accordion.Button>
+ *        <Accordion.Title>
+ *          Title 2
+ *        <Accordion.Title>
+ *     </Accordion.Button>
+ *     <Accordion.Panel>
+ *       Content 2
+ *     </Accordion.Panel>
+ *   </Accordion.Row>
  * </Accordion>
  * ```
  */
 export const Accordion = ({
-  className,
-  classNameOpen,
-  classNameClosed,
-  defaultOpen,
   children,
+  className,
+  hasOutline,
   variant,
   ...other
-}: Props) => (
-  <AccordionContext.Provider value={{ variant }}>
-    <Disclosure defaultOpen={defaultOpen}>
-      {({ open }) => (
-        <div
-          className={clsx(
-            styles['accordion'],
-            className,
-            open && classNameOpen,
-            !open && classNameClosed,
-          )}
-          {...other}
-        >
-          {children}
-        </div>
-      )}
-    </Disclosure>
-  </AccordionContext.Provider>
-);
+}: Props) => {
+  const componentClassName = clsx(styles['accordion'], className);
+  return (
+    <AccordionContext.Provider value={{ hasOutline, variant }}>
+      <div className={componentClassName} {...other}>
+        {children}
+      </div>
+    </AccordionContext.Provider>
+  );
+};
 
 Accordion.Button = AccordionButton;
 Accordion.Row = AccordionRow;
