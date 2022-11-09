@@ -88,9 +88,6 @@ export const Stacked: StoryObj<Args> = {
   ),
 };
 
-/**
- * The following stories are mostly for visual regression testing to capture the open state.
- */
 export const StackedCompact: StoryObj<Args> = {
   ...Stacked,
   args: {
@@ -98,6 +95,9 @@ export const StackedCompact: StoryObj<Args> = {
   },
 };
 
+/**
+ * The following stories are mostly for visual regression testing to capture the open state.
+ */
 export const DefaultOpen: StoryObj<Args> = {
   args: {
     defaultOpen: true,

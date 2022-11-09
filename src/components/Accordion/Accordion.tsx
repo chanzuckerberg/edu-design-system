@@ -7,6 +7,9 @@ import AccordionPanel from '../AccordionPanel';
 import AccordionTitle from '../AccordionTitle';
 
 type Props = {
+  /**
+   * Child node(s) that can be nested inside component.
+   */
   children: React.ReactNode;
   /**
    * Additional classnames passed in for styling.

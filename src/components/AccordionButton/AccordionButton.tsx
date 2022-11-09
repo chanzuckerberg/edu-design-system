@@ -25,7 +25,7 @@ export type Props = {
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
- * The interactive button subcomponent that houses the heading text and open indicator icon for the EDS Accordion component.
+ * The button subcomponent that houses the heading text and open indicator icon for the EDS Accordion component.
  */
 export const AccordionButton = ({
   children,
