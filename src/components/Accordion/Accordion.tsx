@@ -16,14 +16,6 @@ type Props = {
    */
   className?: string;
   /**
-   * Additional classnames passed in for styling active only when open.
-   */
-  classNameOpen?: string;
-  /**
-   * Additional classnames passed in for styling active only when not open.
-   */
-  classNameClosed?: string;
-  /**
    * Whether panel is expanded by default.
    */
   defaultOpen?: boolean;
@@ -60,31 +52,22 @@ export const AccordionContext = createContext<{ variant: Props['variant'] }>({
  */
 export const Accordion = ({
   className,
-  classNameOpen,
-  classNameClosed,
   defaultOpen,
   children,
   variant,
   ...other
-}: Props) => (
-  <AccordionContext.Provider value={{ variant }}>
-    <Disclosure defaultOpen={defaultOpen}>
-      {({ open }) => (
-        <div
-          className={clsx(
-            styles['accordion'],
-            className,
-            open && classNameOpen,
-            !open && classNameClosed,
-          )}
-          {...other}
-        >
+}: Props) => {
+  const componentClassName = clsx(styles['accordion'], className);
+  return (
+    <AccordionContext.Provider value={{ variant }}>
+      <Disclosure defaultOpen={defaultOpen}>
+        <div className={componentClassName} {...other}>
           {children}
         </div>
-      )}
-    </Disclosure>
-  </AccordionContext.Provider>
-);
+      </Disclosure>
+    </AccordionContext.Provider>
+  );
+};
 
 Accordion.Button = AccordionButton;
 Accordion.Title = AccordionTitle;
