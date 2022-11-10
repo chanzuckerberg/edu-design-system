@@ -25,7 +25,7 @@ export interface Props {
 }
 
 /**
- * Primary UI component for user interaction for draggable components to be dropped within the container.
+ * Container for draggable components to be dropped within the container.
  */
 export const DragDropContainer = ({
   container,

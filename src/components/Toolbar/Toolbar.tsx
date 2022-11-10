@@ -29,7 +29,7 @@ export interface Props {
 /**
  * `import {Toolbar} from "@chanzuckerberg/eds";`
  *
- * Toolbar component is a container that houses form controls for filtering a data table based on the conditional props passed through.
+ * A container that houses form controls for filtering a data table based on the conditional props passed through.
  */
 export const Toolbar = ({
   className,

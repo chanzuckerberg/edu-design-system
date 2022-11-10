@@ -26,7 +26,7 @@ export type Props = React.TableHTMLAttributes<HTMLTableElement> & {
  *
  * `import {Table} from "@chanzuckerberg/eds";`
  *
- * HTML table component
+ * HTML table component.
  */
 export const Table = ({ children, className, ...other }: Props) => {
   const componentClassName = clsx(styles['table'], className);

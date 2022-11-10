@@ -171,7 +171,9 @@ export const ModalContent = (props: ModalContentProps) => {
  * NOTE: You must have at least one focusable element in the modal contents, for keyboard
  * accessibility reasons. (The close button counts as a focusable element.)
  *
- * @example
+ * Example usage:
+ *
+ * ```tsx
  * <Modal>
  *   <Modal.Header>
  *     <Modal.Title>{modalTitle}</Modal.Title>
@@ -182,6 +184,7 @@ export const ModalContent = (props: ModalContentProps) => {
  *     {modalFooterContent}
  *   </Modal.Footer>
  * </Modal>
+ * ```
  */
 export const Modal = (props: ModalProps) => {
   const {
