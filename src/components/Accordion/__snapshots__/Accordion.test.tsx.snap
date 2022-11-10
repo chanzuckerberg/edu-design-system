@@ -1,107 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Accordion /> Compact story renders snapshot 1`] = `
-<div
-  style="margin: 0.5rem;"
->
-  <div
-    class=""
-  >
-    <div
-      class="accordion-row"
-    >
-      <button
-        aria-expanded="false"
-        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button accordion-button--compact"
-        data-bootstrap-override="clickable-style-icon"
-        data-testid="accordion-button"
-        id="headlessui-disclosure-button-3"
-        type="button"
-      >
-        <h2
-          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--compact"
-        >
-          Massa quam egestas massa.
-        </h2>
-        <svg
-          class="icon accordion-button__icon"
-          fill="currentColor"
-          height="1.625rem"
-          role="img"
-          style="--icon-size: 1.625rem;"
-          width="1.625rem"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title
-            id="4"
-          >
-            show content
-          </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
-          />
-        </svg>
-      </button>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`<Accordion /> CompactOpen story renders snapshot 1`] = `
-<div
-  style="margin: 0.5rem;"
->
-  <div
-    class=""
-  >
-    <div
-      class="accordion-row"
-    >
-      <button
-        aria-controls="headlessui-disclosure-panel-40"
-        aria-expanded="true"
-        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button accordion-button--compact"
-        data-bootstrap-override="clickable-style-icon"
-        data-testid="accordion-button"
-        id="headlessui-disclosure-button-39"
-        type="button"
-      >
-        <h2
-          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--compact"
-        >
-          Massa quam egestas massa.
-        </h2>
-        <svg
-          class="icon accordion-button__icon accordion-button__icon--open"
-          fill="currentColor"
-          height="1.625rem"
-          role="img"
-          style="--icon-size: 1.625rem;"
-          width="1.625rem"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title
-            id="23"
-          >
-            hide content
-          </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
-          />
-        </svg>
-      </button>
-      <div
-        class="accordion-panel accordion-panel--compact"
-        data-testid="accordion-panel"
-        id="headlessui-disclosure-panel-40"
-      >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
 exports[`<Accordion /> Default story renders snapshot 1`] = `
 <div
   style="margin: 0.5rem;"
@@ -196,6 +94,108 @@ exports[`<Accordion /> DefaultOpen story renders snapshot 1`] = `
         class="accordion-panel"
         data-testid="accordion-panel"
         id="headlessui-disclosure-panel-38"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Accordion /> Small story renders snapshot 1`] = `
+<div
+  style="margin: 0.5rem;"
+>
+  <div
+    class=""
+  >
+    <div
+      class="accordion-row"
+    >
+      <button
+        aria-expanded="false"
+        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button accordion-button--sm"
+        data-bootstrap-override="clickable-style-icon"
+        data-testid="accordion-button"
+        id="headlessui-disclosure-button-3"
+        type="button"
+      >
+        <h2
+          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--sm"
+        >
+          Massa quam egestas massa.
+        </h2>
+        <svg
+          class="icon accordion-button__icon"
+          fill="currentColor"
+          height="1.625rem"
+          role="img"
+          style="--icon-size: 1.625rem;"
+          width="1.625rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title
+            id="4"
+          >
+            show content
+          </title>
+          <use
+            xlink:href="test-file-stub#expand-more"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Accordion /> SmallOpen story renders snapshot 1`] = `
+<div
+  style="margin: 0.5rem;"
+>
+  <div
+    class=""
+  >
+    <div
+      class="accordion-row"
+    >
+      <button
+        aria-controls="headlessui-disclosure-panel-40"
+        aria-expanded="true"
+        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button accordion-button--sm"
+        data-bootstrap-override="clickable-style-icon"
+        data-testid="accordion-button"
+        id="headlessui-disclosure-button-39"
+        type="button"
+      >
+        <h2
+          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--sm"
+        >
+          Massa quam egestas massa.
+        </h2>
+        <svg
+          class="icon accordion-button__icon accordion-button__icon--open"
+          fill="currentColor"
+          height="1.625rem"
+          role="img"
+          style="--icon-size: 1.625rem;"
+          width="1.625rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title
+            id="23"
+          >
+            hide content
+          </title>
+          <use
+            xlink:href="test-file-stub#expand-more"
+          />
+        </svg>
+      </button>
+      <div
+        class="accordion-panel accordion-panel--sm"
+        data-testid="accordion-panel"
+        id="headlessui-disclosure-panel-40"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
       </div>
@@ -350,666 +350,6 @@ exports[`<Accordion /> Stacked story renders snapshot 1`] = `
           />
         </svg>
       </button>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`<Accordion /> StackedCompact story renders snapshot 1`] = `
-<div
-  style="margin: 0.5rem;"
->
-  <div
-    class=""
-  >
-    <div
-      class="accordion-row"
-    >
-      <button
-        aria-expanded="false"
-        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button accordion-button--compact"
-        data-bootstrap-override="clickable-style-icon"
-        id="headlessui-disclosure-button-13"
-        type="button"
-      >
-        <h2
-          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--compact"
-        >
-          Massa quam egestas massa.
-        </h2>
-        <svg
-          class="icon accordion-button__icon"
-          fill="currentColor"
-          height="1.625rem"
-          role="img"
-          style="--icon-size: 1.625rem;"
-          width="1.625rem"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title
-            id="9"
-          >
-            show content
-          </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
-          />
-        </svg>
-      </button>
-    </div>
-    <div
-      class="accordion-row"
-    >
-      <button
-        aria-expanded="false"
-        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button accordion-button--compact"
-        data-bootstrap-override="clickable-style-icon"
-        id="headlessui-disclosure-button-15"
-        type="button"
-      >
-        <h2
-          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--compact"
-        >
-          Massa quam egestas massa.
-        </h2>
-        <svg
-          class="icon accordion-button__icon"
-          fill="currentColor"
-          height="1.625rem"
-          role="img"
-          style="--icon-size: 1.625rem;"
-          width="1.625rem"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title
-            id="10"
-          >
-            show content
-          </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
-          />
-        </svg>
-      </button>
-    </div>
-    <div
-      class="accordion-row"
-    >
-      <button
-        aria-expanded="false"
-        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button accordion-button--compact"
-        data-bootstrap-override="clickable-style-icon"
-        id="headlessui-disclosure-button-17"
-        type="button"
-      >
-        <h2
-          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--compact"
-        >
-          Massa quam egestas massa.
-        </h2>
-        <svg
-          class="icon accordion-button__icon"
-          fill="currentColor"
-          height="1.625rem"
-          role="img"
-          style="--icon-size: 1.625rem;"
-          width="1.625rem"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title
-            id="11"
-          >
-            show content
-          </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
-          />
-        </svg>
-      </button>
-    </div>
-    <div
-      class="accordion-row"
-    >
-      <button
-        aria-expanded="false"
-        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button accordion-button--compact"
-        data-bootstrap-override="clickable-style-icon"
-        id="headlessui-disclosure-button-19"
-        type="button"
-      >
-        <h2
-          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--compact"
-        >
-          Massa quam egestas massa.
-        </h2>
-        <svg
-          class="icon accordion-button__icon"
-          fill="currentColor"
-          height="1.625rem"
-          role="img"
-          style="--icon-size: 1.625rem;"
-          width="1.625rem"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title
-            id="12"
-          >
-            show content
-          </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
-          />
-        </svg>
-      </button>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`<Accordion /> StackedCompactOpen story renders snapshot 1`] = `
-<div
-  style="margin: 0.5rem;"
->
-  <div
-    class=""
-  >
-    <div
-      class="accordion-row"
-    >
-      <button
-        aria-controls="headlessui-disclosure-panel-50"
-        aria-expanded="true"
-        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button accordion-button--compact"
-        data-bootstrap-override="clickable-style-icon"
-        id="headlessui-disclosure-button-49"
-        type="button"
-      >
-        <h2
-          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--compact"
-        >
-          Massa quam egestas massa.
-        </h2>
-        <svg
-          class="icon accordion-button__icon accordion-button__icon--open"
-          fill="currentColor"
-          height="1.625rem"
-          role="img"
-          style="--icon-size: 1.625rem;"
-          width="1.625rem"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title
-            id="33"
-          >
-            hide content
-          </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
-          />
-        </svg>
-      </button>
-      <div
-        class="accordion-panel accordion-panel--compact"
-        id="headlessui-disclosure-panel-50"
-      >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
-      </div>
-    </div>
-    <div
-      class="accordion-row"
-    >
-      <button
-        aria-controls="headlessui-disclosure-panel-52"
-        aria-expanded="true"
-        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button accordion-button--compact"
-        data-bootstrap-override="clickable-style-icon"
-        id="headlessui-disclosure-button-51"
-        type="button"
-      >
-        <h2
-          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--compact"
-        >
-          Massa quam egestas massa.
-        </h2>
-        <svg
-          class="icon accordion-button__icon accordion-button__icon--open"
-          fill="currentColor"
-          height="1.625rem"
-          role="img"
-          style="--icon-size: 1.625rem;"
-          width="1.625rem"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title
-            id="34"
-          >
-            hide content
-          </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
-          />
-        </svg>
-      </button>
-      <div
-        class="accordion-panel accordion-panel--compact"
-        id="headlessui-disclosure-panel-52"
-      >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
-      </div>
-    </div>
-    <div
-      class="accordion-row"
-    >
-      <button
-        aria-controls="headlessui-disclosure-panel-54"
-        aria-expanded="true"
-        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button accordion-button--compact"
-        data-bootstrap-override="clickable-style-icon"
-        id="headlessui-disclosure-button-53"
-        type="button"
-      >
-        <h2
-          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--compact"
-        >
-          Massa quam egestas massa.
-        </h2>
-        <svg
-          class="icon accordion-button__icon accordion-button__icon--open"
-          fill="currentColor"
-          height="1.625rem"
-          role="img"
-          style="--icon-size: 1.625rem;"
-          width="1.625rem"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title
-            id="35"
-          >
-            hide content
-          </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
-          />
-        </svg>
-      </button>
-      <div
-        class="accordion-panel accordion-panel--compact"
-        id="headlessui-disclosure-panel-54"
-      >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
-      </div>
-    </div>
-    <div
-      class="accordion-row"
-    >
-      <button
-        aria-controls="headlessui-disclosure-panel-56"
-        aria-expanded="true"
-        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button accordion-button--compact"
-        data-bootstrap-override="clickable-style-icon"
-        id="headlessui-disclosure-button-55"
-        type="button"
-      >
-        <h2
-          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--compact"
-        >
-          Massa quam egestas massa.
-        </h2>
-        <svg
-          class="icon accordion-button__icon accordion-button__icon--open"
-          fill="currentColor"
-          height="1.625rem"
-          role="img"
-          style="--icon-size: 1.625rem;"
-          width="1.625rem"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title
-            id="36"
-          >
-            hide content
-          </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
-          />
-        </svg>
-      </button>
-      <div
-        class="accordion-panel accordion-panel--compact"
-        id="headlessui-disclosure-panel-56"
-      >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`<Accordion /> StackedCompactOutline story renders snapshot 1`] = `
-<div
-  style="margin: 0.5rem;"
->
-  <div
-    class="accordion--outline"
-  >
-    <div
-      class="accordion-row accordion-row--outline"
-    >
-      <button
-        aria-expanded="false"
-        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button accordion-button--compact accordion-button--outline"
-        data-bootstrap-override="clickable-style-icon"
-        id="headlessui-disclosure-button-29"
-        type="button"
-      >
-        <h2
-          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--compact"
-        >
-          Massa quam egestas massa.
-        </h2>
-        <svg
-          class="icon accordion-button__icon"
-          fill="currentColor"
-          height="1.625rem"
-          role="img"
-          style="--icon-size: 1.625rem;"
-          width="1.625rem"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title
-            id="17"
-          >
-            show content
-          </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
-          />
-        </svg>
-      </button>
-    </div>
-    <div
-      class="accordion-row accordion-row--outline"
-    >
-      <button
-        aria-expanded="false"
-        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button accordion-button--compact accordion-button--outline"
-        data-bootstrap-override="clickable-style-icon"
-        id="headlessui-disclosure-button-31"
-        type="button"
-      >
-        <h2
-          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--compact"
-        >
-          Massa quam egestas massa.
-        </h2>
-        <svg
-          class="icon accordion-button__icon"
-          fill="currentColor"
-          height="1.625rem"
-          role="img"
-          style="--icon-size: 1.625rem;"
-          width="1.625rem"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title
-            id="18"
-          >
-            show content
-          </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
-          />
-        </svg>
-      </button>
-    </div>
-    <div
-      class="accordion-row accordion-row--outline"
-    >
-      <button
-        aria-expanded="false"
-        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button accordion-button--compact accordion-button--outline"
-        data-bootstrap-override="clickable-style-icon"
-        id="headlessui-disclosure-button-33"
-        type="button"
-      >
-        <h2
-          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--compact"
-        >
-          Massa quam egestas massa.
-        </h2>
-        <svg
-          class="icon accordion-button__icon"
-          fill="currentColor"
-          height="1.625rem"
-          role="img"
-          style="--icon-size: 1.625rem;"
-          width="1.625rem"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title
-            id="19"
-          >
-            show content
-          </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
-          />
-        </svg>
-      </button>
-    </div>
-    <div
-      class="accordion-row accordion-row--outline"
-    >
-      <button
-        aria-expanded="false"
-        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button accordion-button--compact accordion-button--outline"
-        data-bootstrap-override="clickable-style-icon"
-        id="headlessui-disclosure-button-35"
-        type="button"
-      >
-        <h2
-          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--compact"
-        >
-          Massa quam egestas massa.
-        </h2>
-        <svg
-          class="icon accordion-button__icon"
-          fill="currentColor"
-          height="1.625rem"
-          role="img"
-          style="--icon-size: 1.625rem;"
-          width="1.625rem"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title
-            id="20"
-          >
-            show content
-          </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
-          />
-        </svg>
-      </button>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`<Accordion /> StackedCompactOutlineOpen story renders snapshot 1`] = `
-<div
-  style="margin: 0.5rem;"
->
-  <div
-    class="accordion--outline"
-  >
-    <div
-      class="accordion-row accordion-row--outline"
-    >
-      <button
-        aria-controls="headlessui-disclosure-panel-66"
-        aria-expanded="true"
-        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button accordion-button--compact accordion-button--outline"
-        data-bootstrap-override="clickable-style-icon"
-        id="headlessui-disclosure-button-65"
-        type="button"
-      >
-        <h2
-          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--compact"
-        >
-          Massa quam egestas massa.
-        </h2>
-        <svg
-          class="icon accordion-button__icon accordion-button__icon--open"
-          fill="currentColor"
-          height="1.625rem"
-          role="img"
-          style="--icon-size: 1.625rem;"
-          width="1.625rem"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title
-            id="49"
-          >
-            hide content
-          </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
-          />
-        </svg>
-      </button>
-      <div
-        class="accordion-panel accordion-panel--compact accordion-panel--outline"
-        id="headlessui-disclosure-panel-66"
-      >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
-      </div>
-    </div>
-    <div
-      class="accordion-row accordion-row--outline"
-    >
-      <button
-        aria-controls="headlessui-disclosure-panel-68"
-        aria-expanded="true"
-        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button accordion-button--compact accordion-button--outline"
-        data-bootstrap-override="clickable-style-icon"
-        id="headlessui-disclosure-button-67"
-        type="button"
-      >
-        <h2
-          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--compact"
-        >
-          Massa quam egestas massa.
-        </h2>
-        <svg
-          class="icon accordion-button__icon accordion-button__icon--open"
-          fill="currentColor"
-          height="1.625rem"
-          role="img"
-          style="--icon-size: 1.625rem;"
-          width="1.625rem"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title
-            id="50"
-          >
-            hide content
-          </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
-          />
-        </svg>
-      </button>
-      <div
-        class="accordion-panel accordion-panel--compact accordion-panel--outline"
-        id="headlessui-disclosure-panel-68"
-      >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
-      </div>
-    </div>
-    <div
-      class="accordion-row accordion-row--outline"
-    >
-      <button
-        aria-controls="headlessui-disclosure-panel-70"
-        aria-expanded="true"
-        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button accordion-button--compact accordion-button--outline"
-        data-bootstrap-override="clickable-style-icon"
-        id="headlessui-disclosure-button-69"
-        type="button"
-      >
-        <h2
-          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--compact"
-        >
-          Massa quam egestas massa.
-        </h2>
-        <svg
-          class="icon accordion-button__icon accordion-button__icon--open"
-          fill="currentColor"
-          height="1.625rem"
-          role="img"
-          style="--icon-size: 1.625rem;"
-          width="1.625rem"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title
-            id="51"
-          >
-            hide content
-          </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
-          />
-        </svg>
-      </button>
-      <div
-        class="accordion-panel accordion-panel--compact accordion-panel--outline"
-        id="headlessui-disclosure-panel-70"
-      >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
-      </div>
-    </div>
-    <div
-      class="accordion-row accordion-row--outline"
-    >
-      <button
-        aria-controls="headlessui-disclosure-panel-72"
-        aria-expanded="true"
-        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button accordion-button--compact accordion-button--outline"
-        data-bootstrap-override="clickable-style-icon"
-        id="headlessui-disclosure-button-71"
-        type="button"
-      >
-        <h2
-          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--compact"
-        >
-          Massa quam egestas massa.
-        </h2>
-        <svg
-          class="icon accordion-button__icon accordion-button__icon--open"
-          fill="currentColor"
-          height="1.625rem"
-          role="img"
-          style="--icon-size: 1.625rem;"
-          width="1.625rem"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title
-            id="52"
-          >
-            hide content
-          </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
-          />
-        </svg>
-      </button>
-      <div
-        class="accordion-panel accordion-panel--compact accordion-panel--outline"
-        id="headlessui-disclosure-panel-72"
-      >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
-      </div>
     </div>
   </div>
 </div>
@@ -1516,6 +856,666 @@ exports[`<Accordion /> StackedOutlineOpen story renders snapshot 1`] = `
       <div
         class="accordion-panel accordion-panel--outline"
         id="headlessui-disclosure-panel-64"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Accordion /> StackedSmall story renders snapshot 1`] = `
+<div
+  style="margin: 0.5rem;"
+>
+  <div
+    class=""
+  >
+    <div
+      class="accordion-row"
+    >
+      <button
+        aria-expanded="false"
+        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button accordion-button--sm"
+        data-bootstrap-override="clickable-style-icon"
+        id="headlessui-disclosure-button-13"
+        type="button"
+      >
+        <h2
+          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--sm"
+        >
+          Massa quam egestas massa.
+        </h2>
+        <svg
+          class="icon accordion-button__icon"
+          fill="currentColor"
+          height="1.625rem"
+          role="img"
+          style="--icon-size: 1.625rem;"
+          width="1.625rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title
+            id="9"
+          >
+            show content
+          </title>
+          <use
+            xlink:href="test-file-stub#expand-more"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="accordion-row"
+    >
+      <button
+        aria-expanded="false"
+        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button accordion-button--sm"
+        data-bootstrap-override="clickable-style-icon"
+        id="headlessui-disclosure-button-15"
+        type="button"
+      >
+        <h2
+          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--sm"
+        >
+          Massa quam egestas massa.
+        </h2>
+        <svg
+          class="icon accordion-button__icon"
+          fill="currentColor"
+          height="1.625rem"
+          role="img"
+          style="--icon-size: 1.625rem;"
+          width="1.625rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title
+            id="10"
+          >
+            show content
+          </title>
+          <use
+            xlink:href="test-file-stub#expand-more"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="accordion-row"
+    >
+      <button
+        aria-expanded="false"
+        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button accordion-button--sm"
+        data-bootstrap-override="clickable-style-icon"
+        id="headlessui-disclosure-button-17"
+        type="button"
+      >
+        <h2
+          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--sm"
+        >
+          Massa quam egestas massa.
+        </h2>
+        <svg
+          class="icon accordion-button__icon"
+          fill="currentColor"
+          height="1.625rem"
+          role="img"
+          style="--icon-size: 1.625rem;"
+          width="1.625rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title
+            id="11"
+          >
+            show content
+          </title>
+          <use
+            xlink:href="test-file-stub#expand-more"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="accordion-row"
+    >
+      <button
+        aria-expanded="false"
+        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button accordion-button--sm"
+        data-bootstrap-override="clickable-style-icon"
+        id="headlessui-disclosure-button-19"
+        type="button"
+      >
+        <h2
+          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--sm"
+        >
+          Massa quam egestas massa.
+        </h2>
+        <svg
+          class="icon accordion-button__icon"
+          fill="currentColor"
+          height="1.625rem"
+          role="img"
+          style="--icon-size: 1.625rem;"
+          width="1.625rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title
+            id="12"
+          >
+            show content
+          </title>
+          <use
+            xlink:href="test-file-stub#expand-more"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Accordion /> StackedSmallOpen story renders snapshot 1`] = `
+<div
+  style="margin: 0.5rem;"
+>
+  <div
+    class=""
+  >
+    <div
+      class="accordion-row"
+    >
+      <button
+        aria-controls="headlessui-disclosure-panel-50"
+        aria-expanded="true"
+        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button accordion-button--sm"
+        data-bootstrap-override="clickable-style-icon"
+        id="headlessui-disclosure-button-49"
+        type="button"
+      >
+        <h2
+          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--sm"
+        >
+          Massa quam egestas massa.
+        </h2>
+        <svg
+          class="icon accordion-button__icon accordion-button__icon--open"
+          fill="currentColor"
+          height="1.625rem"
+          role="img"
+          style="--icon-size: 1.625rem;"
+          width="1.625rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title
+            id="33"
+          >
+            hide content
+          </title>
+          <use
+            xlink:href="test-file-stub#expand-more"
+          />
+        </svg>
+      </button>
+      <div
+        class="accordion-panel accordion-panel--sm"
+        id="headlessui-disclosure-panel-50"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+      </div>
+    </div>
+    <div
+      class="accordion-row"
+    >
+      <button
+        aria-controls="headlessui-disclosure-panel-52"
+        aria-expanded="true"
+        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button accordion-button--sm"
+        data-bootstrap-override="clickable-style-icon"
+        id="headlessui-disclosure-button-51"
+        type="button"
+      >
+        <h2
+          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--sm"
+        >
+          Massa quam egestas massa.
+        </h2>
+        <svg
+          class="icon accordion-button__icon accordion-button__icon--open"
+          fill="currentColor"
+          height="1.625rem"
+          role="img"
+          style="--icon-size: 1.625rem;"
+          width="1.625rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title
+            id="34"
+          >
+            hide content
+          </title>
+          <use
+            xlink:href="test-file-stub#expand-more"
+          />
+        </svg>
+      </button>
+      <div
+        class="accordion-panel accordion-panel--sm"
+        id="headlessui-disclosure-panel-52"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+      </div>
+    </div>
+    <div
+      class="accordion-row"
+    >
+      <button
+        aria-controls="headlessui-disclosure-panel-54"
+        aria-expanded="true"
+        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button accordion-button--sm"
+        data-bootstrap-override="clickable-style-icon"
+        id="headlessui-disclosure-button-53"
+        type="button"
+      >
+        <h2
+          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--sm"
+        >
+          Massa quam egestas massa.
+        </h2>
+        <svg
+          class="icon accordion-button__icon accordion-button__icon--open"
+          fill="currentColor"
+          height="1.625rem"
+          role="img"
+          style="--icon-size: 1.625rem;"
+          width="1.625rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title
+            id="35"
+          >
+            hide content
+          </title>
+          <use
+            xlink:href="test-file-stub#expand-more"
+          />
+        </svg>
+      </button>
+      <div
+        class="accordion-panel accordion-panel--sm"
+        id="headlessui-disclosure-panel-54"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+      </div>
+    </div>
+    <div
+      class="accordion-row"
+    >
+      <button
+        aria-controls="headlessui-disclosure-panel-56"
+        aria-expanded="true"
+        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button accordion-button--sm"
+        data-bootstrap-override="clickable-style-icon"
+        id="headlessui-disclosure-button-55"
+        type="button"
+      >
+        <h2
+          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--sm"
+        >
+          Massa quam egestas massa.
+        </h2>
+        <svg
+          class="icon accordion-button__icon accordion-button__icon--open"
+          fill="currentColor"
+          height="1.625rem"
+          role="img"
+          style="--icon-size: 1.625rem;"
+          width="1.625rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title
+            id="36"
+          >
+            hide content
+          </title>
+          <use
+            xlink:href="test-file-stub#expand-more"
+          />
+        </svg>
+      </button>
+      <div
+        class="accordion-panel accordion-panel--sm"
+        id="headlessui-disclosure-panel-56"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Accordion /> StackedSmallOutline story renders snapshot 1`] = `
+<div
+  style="margin: 0.5rem;"
+>
+  <div
+    class="accordion--outline"
+  >
+    <div
+      class="accordion-row accordion-row--outline"
+    >
+      <button
+        aria-expanded="false"
+        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button accordion-button--sm accordion-button--outline"
+        data-bootstrap-override="clickable-style-icon"
+        id="headlessui-disclosure-button-29"
+        type="button"
+      >
+        <h2
+          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--sm"
+        >
+          Massa quam egestas massa.
+        </h2>
+        <svg
+          class="icon accordion-button__icon"
+          fill="currentColor"
+          height="1.625rem"
+          role="img"
+          style="--icon-size: 1.625rem;"
+          width="1.625rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title
+            id="17"
+          >
+            show content
+          </title>
+          <use
+            xlink:href="test-file-stub#expand-more"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="accordion-row accordion-row--outline"
+    >
+      <button
+        aria-expanded="false"
+        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button accordion-button--sm accordion-button--outline"
+        data-bootstrap-override="clickable-style-icon"
+        id="headlessui-disclosure-button-31"
+        type="button"
+      >
+        <h2
+          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--sm"
+        >
+          Massa quam egestas massa.
+        </h2>
+        <svg
+          class="icon accordion-button__icon"
+          fill="currentColor"
+          height="1.625rem"
+          role="img"
+          style="--icon-size: 1.625rem;"
+          width="1.625rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title
+            id="18"
+          >
+            show content
+          </title>
+          <use
+            xlink:href="test-file-stub#expand-more"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="accordion-row accordion-row--outline"
+    >
+      <button
+        aria-expanded="false"
+        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button accordion-button--sm accordion-button--outline"
+        data-bootstrap-override="clickable-style-icon"
+        id="headlessui-disclosure-button-33"
+        type="button"
+      >
+        <h2
+          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--sm"
+        >
+          Massa quam egestas massa.
+        </h2>
+        <svg
+          class="icon accordion-button__icon"
+          fill="currentColor"
+          height="1.625rem"
+          role="img"
+          style="--icon-size: 1.625rem;"
+          width="1.625rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title
+            id="19"
+          >
+            show content
+          </title>
+          <use
+            xlink:href="test-file-stub#expand-more"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="accordion-row accordion-row--outline"
+    >
+      <button
+        aria-expanded="false"
+        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button accordion-button--sm accordion-button--outline"
+        data-bootstrap-override="clickable-style-icon"
+        id="headlessui-disclosure-button-35"
+        type="button"
+      >
+        <h2
+          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--sm"
+        >
+          Massa quam egestas massa.
+        </h2>
+        <svg
+          class="icon accordion-button__icon"
+          fill="currentColor"
+          height="1.625rem"
+          role="img"
+          style="--icon-size: 1.625rem;"
+          width="1.625rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title
+            id="20"
+          >
+            show content
+          </title>
+          <use
+            xlink:href="test-file-stub#expand-more"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Accordion /> StackedSmallOutlineOpen story renders snapshot 1`] = `
+<div
+  style="margin: 0.5rem;"
+>
+  <div
+    class="accordion--outline"
+  >
+    <div
+      class="accordion-row accordion-row--outline"
+    >
+      <button
+        aria-controls="headlessui-disclosure-panel-66"
+        aria-expanded="true"
+        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button accordion-button--sm accordion-button--outline"
+        data-bootstrap-override="clickable-style-icon"
+        id="headlessui-disclosure-button-65"
+        type="button"
+      >
+        <h2
+          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--sm"
+        >
+          Massa quam egestas massa.
+        </h2>
+        <svg
+          class="icon accordion-button__icon accordion-button__icon--open"
+          fill="currentColor"
+          height="1.625rem"
+          role="img"
+          style="--icon-size: 1.625rem;"
+          width="1.625rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title
+            id="49"
+          >
+            hide content
+          </title>
+          <use
+            xlink:href="test-file-stub#expand-more"
+          />
+        </svg>
+      </button>
+      <div
+        class="accordion-panel accordion-panel--sm accordion-panel--outline"
+        id="headlessui-disclosure-panel-66"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+      </div>
+    </div>
+    <div
+      class="accordion-row accordion-row--outline"
+    >
+      <button
+        aria-controls="headlessui-disclosure-panel-68"
+        aria-expanded="true"
+        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button accordion-button--sm accordion-button--outline"
+        data-bootstrap-override="clickable-style-icon"
+        id="headlessui-disclosure-button-67"
+        type="button"
+      >
+        <h2
+          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--sm"
+        >
+          Massa quam egestas massa.
+        </h2>
+        <svg
+          class="icon accordion-button__icon accordion-button__icon--open"
+          fill="currentColor"
+          height="1.625rem"
+          role="img"
+          style="--icon-size: 1.625rem;"
+          width="1.625rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title
+            id="50"
+          >
+            hide content
+          </title>
+          <use
+            xlink:href="test-file-stub#expand-more"
+          />
+        </svg>
+      </button>
+      <div
+        class="accordion-panel accordion-panel--sm accordion-panel--outline"
+        id="headlessui-disclosure-panel-68"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+      </div>
+    </div>
+    <div
+      class="accordion-row accordion-row--outline"
+    >
+      <button
+        aria-controls="headlessui-disclosure-panel-70"
+        aria-expanded="true"
+        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button accordion-button--sm accordion-button--outline"
+        data-bootstrap-override="clickable-style-icon"
+        id="headlessui-disclosure-button-69"
+        type="button"
+      >
+        <h2
+          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--sm"
+        >
+          Massa quam egestas massa.
+        </h2>
+        <svg
+          class="icon accordion-button__icon accordion-button__icon--open"
+          fill="currentColor"
+          height="1.625rem"
+          role="img"
+          style="--icon-size: 1.625rem;"
+          width="1.625rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title
+            id="51"
+          >
+            hide content
+          </title>
+          <use
+            xlink:href="test-file-stub#expand-more"
+          />
+        </svg>
+      </button>
+      <div
+        class="accordion-panel accordion-panel--sm accordion-panel--outline"
+        id="headlessui-disclosure-panel-70"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+      </div>
+    </div>
+    <div
+      class="accordion-row accordion-row--outline"
+    >
+      <button
+        aria-controls="headlessui-disclosure-panel-72"
+        aria-expanded="true"
+        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button accordion-button--sm accordion-button--outline"
+        data-bootstrap-override="clickable-style-icon"
+        id="headlessui-disclosure-button-71"
+        type="button"
+      >
+        <h2
+          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--sm"
+        >
+          Massa quam egestas massa.
+        </h2>
+        <svg
+          class="icon accordion-button__icon accordion-button__icon--open"
+          fill="currentColor"
+          height="1.625rem"
+          role="img"
+          style="--icon-size: 1.625rem;"
+          width="1.625rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title
+            id="52"
+          >
+            hide content
+          </title>
+          <use
+            xlink:href="test-file-stub#expand-more"
+          />
+        </svg>
+      </button>
+      <div
+        class="accordion-panel accordion-panel--sm accordion-panel--outline"
+        id="headlessui-disclosure-panel-72"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet, massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At tristique et ullamcorper rhoncus amet pharetra aliquet tortor. Suscipit dui, nunc sit dui tellus massa laoreet tellus.
       </div>

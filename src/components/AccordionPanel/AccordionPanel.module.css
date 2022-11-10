@@ -18,9 +18,9 @@
 }
 
 /**
- * Compact variant.
+ * Small variant.
  */
-.accordion-panel--compact {
+.accordion-panel--sm {
   @mixin eds-theme-typography-body-text-xs;
 }
 
@@ -33,9 +33,9 @@
 }
 
 /**
- * Compact outline variant.
+ * Small outline variant.
  */
-.accordion-panel--compact.accordion-panel--outline {
+.accordion-panel--sm.accordion-panel--outline {
   padding-left: var(--eds-size-2);
   padding-right: var(--eds-size-4);
 }

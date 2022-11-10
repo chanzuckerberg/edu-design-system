@@ -19,9 +19,9 @@
 }
 
 /**
- * Compact variant.
+ * Small variant.
  */
-.accordion-button--compact.accordion-button--compact {
+.accordion-button--sm.accordion-button--sm {
   padding: var(--eds-size-1);
   height: 2.25rem;
 }
@@ -34,9 +34,9 @@
 }
 
 /**
- * Compact outline variant.
+ * Small outline variant.
  */
-.accordion-button--compact.accordion-button--outline {
+.accordion-button--sm.accordion-button--outline {
   padding: var(--eds-size-1) var(--eds-size-2);
 }
 
@@ -49,9 +49,9 @@
 }
 
 /**
- * Compact variant of the heading text.
+ * Small variant of the heading text.
  */
-.accordion-button__heading--compact.accordion-button__heading--compact {
+.accordion-button__heading--sm.accordion-button__heading--sm {
   @mixin eds-theme-typography-body-text-xs;
 }
 

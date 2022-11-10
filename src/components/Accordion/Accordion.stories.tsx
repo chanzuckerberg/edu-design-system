@@ -44,9 +44,9 @@ type Args = React.ComponentProps<typeof Accordion>;
 
 export const Default: StoryObj<Args> = {};
 
-export const Compact: StoryObj<Args> = {
+export const Small: StoryObj<Args> = {
   args: {
-    variant: 'compact',
+    size: 'sm',
   },
 };
 
@@ -95,10 +95,10 @@ export const Stacked: StoryObj<Args> = {
   },
 };
 
-export const StackedCompact: StoryObj<Args> = {
+export const StackedSmall: StoryObj<Args> = {
   args: {
     ...Stacked.args,
-    variant: 'compact',
+    size: 'sm',
   },
 };
 
@@ -109,10 +109,10 @@ export const StackedOutline: StoryObj<Args> = {
   },
 };
 
-export const StackedCompactOutline: StoryObj<Args> = {
+export const StackedSmallOutline: StoryObj<Args> = {
   args: {
     ...Stacked.args,
-    variant: 'compact',
+    size: 'sm',
     hasOutline: true,
   },
 };
@@ -138,10 +138,10 @@ export const DefaultOpen: StoryObj<Args> = {
   },
 };
 
-export const CompactOpen: StoryObj<Args> = {
+export const SmallOpen: StoryObj<Args> = {
   args: {
     ...DefaultOpen.args,
-    variant: 'compact',
+    size: 'sm',
   },
 };
 
@@ -190,10 +190,10 @@ export const StackedOpen: StoryObj<Args> = {
   },
 };
 
-export const StackedCompactOpen: StoryObj<Args> = {
+export const StackedSmallOpen: StoryObj<Args> = {
   args: {
     ...StackedOpen.args,
-    variant: 'compact',
+    size: 'sm',
   },
 };
 
@@ -204,10 +204,10 @@ export const StackedOutlineOpen: StoryObj<Args> = {
   },
 };
 
-export const StackedCompactOutlineOpen: StoryObj<Args> = {
+export const StackedSmallOutlineOpen: StoryObj<Args> = {
   args: {
     ...StackedOpen.args,
-    variant: 'compact',
+    size: 'sm',
     hasOutline: true,
   },
 };

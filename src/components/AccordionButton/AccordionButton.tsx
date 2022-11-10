@@ -43,19 +43,19 @@ export const AccordionButton = ({
   const {
     hasOutline,
     headingAs: contextHeadingAs,
-    variant,
+    size,
   } = useContext(AccordionContext);
 
   const componentClassName = clsx(
     styles['accordion-button'],
-    variant === 'compact' && styles['accordion-button--compact'],
+    size === 'sm' && styles['accordion-button--sm'],
     hasOutline && styles['accordion-button--outline'],
     className,
   );
 
   const headingClassName = clsx(
     styles['accordion-button__heading'],
-    variant === 'compact' && styles['accordion-button__heading--compact'],
+    size === 'sm' && styles['accordion-button__heading--sm'],
   );
 
   return (

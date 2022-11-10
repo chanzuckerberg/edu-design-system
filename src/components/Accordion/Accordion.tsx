@@ -24,15 +24,15 @@ type Props = {
    */
   headingAs: HeadingElement;
   /**
-   * Compact variant shrinks the Accordion size.
+   * Various Accordion sizes. Defaults to 'md'.
    */
-  variant?: 'compact';
+  size?: 'sm' | 'md';
 };
 
 export const AccordionContext = createContext<{
   headingAs: HeadingElement;
   hasOutline?: Props['hasOutline'];
-  variant?: Props['variant'];
+  size?: Props['size'];
 }>({
   headingAs: 'h2',
 });
@@ -70,7 +70,7 @@ export const Accordion = ({
   className,
   hasOutline,
   headingAs,
-  variant,
+  size = 'md',
   ...other
 }: Props) => {
   const componentClassName = clsx(
@@ -78,7 +78,7 @@ export const Accordion = ({
     className,
   );
   return (
-    <AccordionContext.Provider value={{ headingAs, hasOutline, variant }}>
+    <AccordionContext.Provider value={{ headingAs, hasOutline, size }}>
       <div className={componentClassName} {...other}>
         {children}
       </div>

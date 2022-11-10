@@ -21,11 +21,11 @@ export type Props = {
  * The heading text subcomponent for the Accordion.Button subcomponent for the EDS Accordion component.
  */
 export const AccordionPanel = ({ className, children, ...other }: Props) => {
-  const { hasOutline, variant } = useContext(AccordionContext);
+  const { hasOutline, size } = useContext(AccordionContext);
 
   const componentClassName = clsx(
     styles['accordion-panel'],
-    variant === 'compact' && styles['accordion-panel--compact'],
+    size === 'sm' && styles['accordion-panel--sm'],
     hasOutline && styles['accordion-panel--outline'],
     className,
   );
