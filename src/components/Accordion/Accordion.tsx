@@ -2,8 +2,8 @@ import clsx from 'clsx';
 import React, { createContext } from 'react';
 import styles from './Accordion.module.css';
 import AccordionButton from '../AccordionButton';
-import AccordionItem from '../AccordionItem';
 import AccordionPanel from '../AccordionPanel';
+import AccordionRow from '../AccordionRow';
 import type { HeadingElement } from '../Heading';
 
 type Props = {
@@ -87,5 +87,5 @@ export const Accordion = ({
 };
 
 Accordion.Button = AccordionButton;
-Accordion.Item = AccordionItem;
 Accordion.Panel = AccordionPanel;
+Accordion.Row = AccordionRow;

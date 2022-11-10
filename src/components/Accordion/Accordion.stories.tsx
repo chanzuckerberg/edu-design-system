@@ -8,7 +8,7 @@ export default {
   title: 'Organisms/Interactive/Accordion',
   component: Accordion,
   subcomponents: {
-    'Accordion.Item': Accordion.Item,
+    'Accordion.Row': Accordion.Row,
     'Accordion.Panel': Accordion.Panel,
     'Accordion.Button': Accordion.Button,
   },
@@ -18,7 +18,7 @@ export default {
   args: {
     headingAs: 'h2',
     children: (
-      <Accordion.Item>
+      <Accordion.Row>
         <Accordion.Button data-testid="accordion-button">
           Massa quam egestas massa.
         </Accordion.Button>
@@ -28,7 +28,7 @@ export default {
           tristique et ullamcorper rhoncus amet pharetra aliquet tortor.
           Suscipit dui, nunc sit dui tellus massa laoreet tellus.
         </Accordion.Panel>
-      </Accordion.Item>
+      </Accordion.Row>
     ),
   },
   decorators: [
@@ -54,7 +54,7 @@ export const Stacked: StoryObj<Args> = {
   args: {
     children: (
       <>
-        <Accordion.Item>
+        <Accordion.Row>
           <Accordion.Button>Massa quam egestas massa.</Accordion.Button>
           <Accordion.Panel>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet,
@@ -62,8 +62,8 @@ export const Stacked: StoryObj<Args> = {
             tristique et ullamcorper rhoncus amet pharetra aliquet tortor.
             Suscipit dui, nunc sit dui tellus massa laoreet tellus.
           </Accordion.Panel>
-        </Accordion.Item>
-        <Accordion.Item>
+        </Accordion.Row>
+        <Accordion.Row>
           <Accordion.Button>Massa quam egestas massa.</Accordion.Button>
           <Accordion.Panel>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet,
@@ -71,8 +71,8 @@ export const Stacked: StoryObj<Args> = {
             tristique et ullamcorper rhoncus amet pharetra aliquet tortor.
             Suscipit dui, nunc sit dui tellus massa laoreet tellus.
           </Accordion.Panel>
-        </Accordion.Item>
-        <Accordion.Item>
+        </Accordion.Row>
+        <Accordion.Row>
           <Accordion.Button>Massa quam egestas massa.</Accordion.Button>
           <Accordion.Panel>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet,
@@ -80,8 +80,8 @@ export const Stacked: StoryObj<Args> = {
             tristique et ullamcorper rhoncus amet pharetra aliquet tortor.
             Suscipit dui, nunc sit dui tellus massa laoreet tellus.
           </Accordion.Panel>
-        </Accordion.Item>
-        <Accordion.Item>
+        </Accordion.Row>
+        <Accordion.Row>
           <Accordion.Button>Massa quam egestas massa.</Accordion.Button>
           <Accordion.Panel>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet,
@@ -89,7 +89,7 @@ export const Stacked: StoryObj<Args> = {
             tristique et ullamcorper rhoncus amet pharetra aliquet tortor.
             Suscipit dui, nunc sit dui tellus massa laoreet tellus.
           </Accordion.Panel>
-        </Accordion.Item>
+        </Accordion.Row>
       </>
     ),
   },
@@ -123,7 +123,7 @@ export const StackedCompactOutline: StoryObj<Args> = {
 export const DefaultOpen: StoryObj<Args> = {
   args: {
     children: (
-      <Accordion.Item defaultOpen>
+      <Accordion.Row defaultOpen>
         <Accordion.Button data-testid="accordion-button">
           Massa quam egestas massa.
         </Accordion.Button>
@@ -133,7 +133,7 @@ export const DefaultOpen: StoryObj<Args> = {
           tristique et ullamcorper rhoncus amet pharetra aliquet tortor.
           Suscipit dui, nunc sit dui tellus massa laoreet tellus.
         </Accordion.Panel>
-      </Accordion.Item>
+      </Accordion.Row>
     ),
   },
 };
@@ -149,7 +149,7 @@ export const StackedOpen: StoryObj<Args> = {
   args: {
     children: (
       <>
-        <Accordion.Item defaultOpen>
+        <Accordion.Row defaultOpen>
           <Accordion.Button>Massa quam egestas massa.</Accordion.Button>
           <Accordion.Panel>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet,
@@ -157,8 +157,8 @@ export const StackedOpen: StoryObj<Args> = {
             tristique et ullamcorper rhoncus amet pharetra aliquet tortor.
             Suscipit dui, nunc sit dui tellus massa laoreet tellus.
           </Accordion.Panel>
-        </Accordion.Item>
-        <Accordion.Item defaultOpen>
+        </Accordion.Row>
+        <Accordion.Row defaultOpen>
           <Accordion.Button>Massa quam egestas massa.</Accordion.Button>
           <Accordion.Panel>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet,
@@ -166,8 +166,8 @@ export const StackedOpen: StoryObj<Args> = {
             tristique et ullamcorper rhoncus amet pharetra aliquet tortor.
             Suscipit dui, nunc sit dui tellus massa laoreet tellus.
           </Accordion.Panel>
-        </Accordion.Item>
-        <Accordion.Item defaultOpen>
+        </Accordion.Row>
+        <Accordion.Row defaultOpen>
           <Accordion.Button>Massa quam egestas massa.</Accordion.Button>
           <Accordion.Panel>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet,
@@ -175,8 +175,8 @@ export const StackedOpen: StoryObj<Args> = {
             tristique et ullamcorper rhoncus amet pharetra aliquet tortor.
             Suscipit dui, nunc sit dui tellus massa laoreet tellus.
           </Accordion.Panel>
-        </Accordion.Item>
-        <Accordion.Item defaultOpen>
+        </Accordion.Row>
+        <Accordion.Row defaultOpen>
           <Accordion.Button>Massa quam egestas massa.</Accordion.Button>
           <Accordion.Panel>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet,
@@ -184,7 +184,7 @@ export const StackedOpen: StoryObj<Args> = {
             tristique et ullamcorper rhoncus amet pharetra aliquet tortor.
             Suscipit dui, nunc sit dui tellus massa laoreet tellus.
           </Accordion.Panel>
-        </Accordion.Item>
+        </Accordion.Row>
       </>
     ),
   },
@@ -216,7 +216,7 @@ export const StackedCompactOutlineOpen: StoryObj<Args> = {
 export const UsingRenderProp: StoryObj<Args> = {
   render: () => (
     <Accordion headingAs="h2">
-      <Accordion.Item>
+      <Accordion.Row>
         {({ open }) => (
           <>
             <Accordion.Button data-testid="accordion-button">
@@ -225,7 +225,7 @@ export const UsingRenderProp: StoryObj<Args> = {
             <Accordion.Panel>Accordion Panel</Accordion.Panel>
           </>
         )}
-      </Accordion.Item>
+      </Accordion.Row>
     </Accordion>
   ),
   parameters: {

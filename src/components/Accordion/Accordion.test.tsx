@@ -39,12 +39,12 @@ describe('<Accordion />', () => {
     const onClose = jest.fn();
     render(
       <Accordion headingAs="h2">
-        <Accordion.Item defaultOpen>
+        <Accordion.Row defaultOpen>
           <Accordion.Button data-testid="accordion-button" onClose={onClose}>
             Accordion Button
           </Accordion.Button>
           <Accordion.Panel>Accordion Panel</Accordion.Panel>
-        </Accordion.Item>
+        </Accordion.Row>
       </Accordion>,
     );
     const accordionButton = screen.getByTestId('accordion-button');

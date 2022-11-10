@@ -1,7 +1,7 @@
 import { Disclosure } from '@headlessui/react';
 import clsx from 'clsx';
 import React, { useContext } from 'react';
-import styles from './AccordionItem.module.css';
+import styles from './AccordionRow.module.css';
 import { AccordionContext } from '../Accordion';
 
 type RenderProps<RenderPropArgs> = {
@@ -34,7 +34,7 @@ type Props = {
  * The individual interactive heading subcomponent of the EDS Accordion that reveals or hides its associated content.
  * Built on 'headless UI' Disclosure.
  */
-export const AccordionItem = ({
+export const AccordionRow = ({
   className,
   defaultOpen,
   children,
@@ -42,8 +42,8 @@ export const AccordionItem = ({
 }: Props) => {
   const { hasOutline } = useContext(AccordionContext);
   const componentClassName = clsx(
-    styles['accordion-item'],
-    hasOutline && styles['accordion-item--outline'],
+    styles['accordion-row'],
+    hasOutline && styles['accordion-row--outline'],
     className,
   );
   return (

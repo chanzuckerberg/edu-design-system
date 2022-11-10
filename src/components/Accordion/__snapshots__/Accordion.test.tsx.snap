@@ -8,7 +8,7 @@ exports[`<Accordion /> Compact story renders snapshot 1`] = `
     class=""
   >
     <div
-      class="accordion-item"
+      class="accordion-row"
     >
       <button
         aria-expanded="false"
@@ -55,7 +55,7 @@ exports[`<Accordion /> CompactOpen story renders snapshot 1`] = `
     class=""
   >
     <div
-      class="accordion-item"
+      class="accordion-row"
     >
       <button
         aria-controls="headlessui-disclosure-panel-40"
@@ -110,7 +110,7 @@ exports[`<Accordion /> Default story renders snapshot 1`] = `
     class=""
   >
     <div
-      class="accordion-item"
+      class="accordion-row"
     >
       <button
         aria-expanded="false"
@@ -157,7 +157,7 @@ exports[`<Accordion /> DefaultOpen story renders snapshot 1`] = `
     class=""
   >
     <div
-      class="accordion-item"
+      class="accordion-row"
     >
       <button
         aria-controls="headlessui-disclosure-panel-38"
@@ -212,7 +212,7 @@ exports[`<Accordion /> Stacked story renders snapshot 1`] = `
     class=""
   >
     <div
-      class="accordion-item"
+      class="accordion-row"
     >
       <button
         aria-expanded="false"
@@ -247,7 +247,7 @@ exports[`<Accordion /> Stacked story renders snapshot 1`] = `
       </button>
     </div>
     <div
-      class="accordion-item"
+      class="accordion-row"
     >
       <button
         aria-expanded="false"
@@ -282,7 +282,7 @@ exports[`<Accordion /> Stacked story renders snapshot 1`] = `
       </button>
     </div>
     <div
-      class="accordion-item"
+      class="accordion-row"
     >
       <button
         aria-expanded="false"
@@ -317,7 +317,7 @@ exports[`<Accordion /> Stacked story renders snapshot 1`] = `
       </button>
     </div>
     <div
-      class="accordion-item"
+      class="accordion-row"
     >
       <button
         aria-expanded="false"
@@ -363,7 +363,7 @@ exports[`<Accordion /> StackedCompact story renders snapshot 1`] = `
     class=""
   >
     <div
-      class="accordion-item"
+      class="accordion-row"
     >
       <button
         aria-expanded="false"
@@ -398,7 +398,7 @@ exports[`<Accordion /> StackedCompact story renders snapshot 1`] = `
       </button>
     </div>
     <div
-      class="accordion-item"
+      class="accordion-row"
     >
       <button
         aria-expanded="false"
@@ -433,7 +433,7 @@ exports[`<Accordion /> StackedCompact story renders snapshot 1`] = `
       </button>
     </div>
     <div
-      class="accordion-item"
+      class="accordion-row"
     >
       <button
         aria-expanded="false"
@@ -468,7 +468,7 @@ exports[`<Accordion /> StackedCompact story renders snapshot 1`] = `
       </button>
     </div>
     <div
-      class="accordion-item"
+      class="accordion-row"
     >
       <button
         aria-expanded="false"
@@ -514,7 +514,7 @@ exports[`<Accordion /> StackedCompactOpen story renders snapshot 1`] = `
     class=""
   >
     <div
-      class="accordion-item"
+      class="accordion-row"
     >
       <button
         aria-controls="headlessui-disclosure-panel-50"
@@ -556,7 +556,7 @@ exports[`<Accordion /> StackedCompactOpen story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="accordion-item"
+      class="accordion-row"
     >
       <button
         aria-controls="headlessui-disclosure-panel-52"
@@ -598,7 +598,7 @@ exports[`<Accordion /> StackedCompactOpen story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="accordion-item"
+      class="accordion-row"
     >
       <button
         aria-controls="headlessui-disclosure-panel-54"
@@ -640,7 +640,7 @@ exports[`<Accordion /> StackedCompactOpen story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="accordion-item"
+      class="accordion-row"
     >
       <button
         aria-controls="headlessui-disclosure-panel-56"
@@ -693,7 +693,7 @@ exports[`<Accordion /> StackedCompactOutline story renders snapshot 1`] = `
     class="accordion--outline"
   >
     <div
-      class="accordion-item accordion-item--outline"
+      class="accordion-row accordion-row--outline"
     >
       <button
         aria-expanded="false"
@@ -728,7 +728,7 @@ exports[`<Accordion /> StackedCompactOutline story renders snapshot 1`] = `
       </button>
     </div>
     <div
-      class="accordion-item accordion-item--outline"
+      class="accordion-row accordion-row--outline"
     >
       <button
         aria-expanded="false"
@@ -763,7 +763,7 @@ exports[`<Accordion /> StackedCompactOutline story renders snapshot 1`] = `
       </button>
     </div>
     <div
-      class="accordion-item accordion-item--outline"
+      class="accordion-row accordion-row--outline"
     >
       <button
         aria-expanded="false"
@@ -798,7 +798,7 @@ exports[`<Accordion /> StackedCompactOutline story renders snapshot 1`] = `
       </button>
     </div>
     <div
-      class="accordion-item accordion-item--outline"
+      class="accordion-row accordion-row--outline"
     >
       <button
         aria-expanded="false"
@@ -844,7 +844,7 @@ exports[`<Accordion /> StackedCompactOutlineOpen story renders snapshot 1`] = `
     class="accordion--outline"
   >
     <div
-      class="accordion-item accordion-item--outline"
+      class="accordion-row accordion-row--outline"
     >
       <button
         aria-controls="headlessui-disclosure-panel-66"
@@ -886,7 +886,7 @@ exports[`<Accordion /> StackedCompactOutlineOpen story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="accordion-item accordion-item--outline"
+      class="accordion-row accordion-row--outline"
     >
       <button
         aria-controls="headlessui-disclosure-panel-68"
@@ -928,7 +928,7 @@ exports[`<Accordion /> StackedCompactOutlineOpen story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="accordion-item accordion-item--outline"
+      class="accordion-row accordion-row--outline"
     >
       <button
         aria-controls="headlessui-disclosure-panel-70"
@@ -970,7 +970,7 @@ exports[`<Accordion /> StackedCompactOutlineOpen story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="accordion-item accordion-item--outline"
+      class="accordion-row accordion-row--outline"
     >
       <button
         aria-controls="headlessui-disclosure-panel-72"
@@ -1023,7 +1023,7 @@ exports[`<Accordion /> StackedOpen story renders snapshot 1`] = `
     class=""
   >
     <div
-      class="accordion-item"
+      class="accordion-row"
     >
       <button
         aria-controls="headlessui-disclosure-panel-42"
@@ -1065,7 +1065,7 @@ exports[`<Accordion /> StackedOpen story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="accordion-item"
+      class="accordion-row"
     >
       <button
         aria-controls="headlessui-disclosure-panel-44"
@@ -1107,7 +1107,7 @@ exports[`<Accordion /> StackedOpen story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="accordion-item"
+      class="accordion-row"
     >
       <button
         aria-controls="headlessui-disclosure-panel-46"
@@ -1149,7 +1149,7 @@ exports[`<Accordion /> StackedOpen story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="accordion-item"
+      class="accordion-row"
     >
       <button
         aria-controls="headlessui-disclosure-panel-48"
@@ -1202,7 +1202,7 @@ exports[`<Accordion /> StackedOutline story renders snapshot 1`] = `
     class="accordion--outline"
   >
     <div
-      class="accordion-item accordion-item--outline"
+      class="accordion-row accordion-row--outline"
     >
       <button
         aria-expanded="false"
@@ -1237,7 +1237,7 @@ exports[`<Accordion /> StackedOutline story renders snapshot 1`] = `
       </button>
     </div>
     <div
-      class="accordion-item accordion-item--outline"
+      class="accordion-row accordion-row--outline"
     >
       <button
         aria-expanded="false"
@@ -1272,7 +1272,7 @@ exports[`<Accordion /> StackedOutline story renders snapshot 1`] = `
       </button>
     </div>
     <div
-      class="accordion-item accordion-item--outline"
+      class="accordion-row accordion-row--outline"
     >
       <button
         aria-expanded="false"
@@ -1307,7 +1307,7 @@ exports[`<Accordion /> StackedOutline story renders snapshot 1`] = `
       </button>
     </div>
     <div
-      class="accordion-item accordion-item--outline"
+      class="accordion-row accordion-row--outline"
     >
       <button
         aria-expanded="false"
@@ -1353,7 +1353,7 @@ exports[`<Accordion /> StackedOutlineOpen story renders snapshot 1`] = `
     class="accordion--outline"
   >
     <div
-      class="accordion-item accordion-item--outline"
+      class="accordion-row accordion-row--outline"
     >
       <button
         aria-controls="headlessui-disclosure-panel-58"
@@ -1395,7 +1395,7 @@ exports[`<Accordion /> StackedOutlineOpen story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="accordion-item accordion-item--outline"
+      class="accordion-row accordion-row--outline"
     >
       <button
         aria-controls="headlessui-disclosure-panel-60"
@@ -1437,7 +1437,7 @@ exports[`<Accordion /> StackedOutlineOpen story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="accordion-item accordion-item--outline"
+      class="accordion-row accordion-row--outline"
     >
       <button
         aria-controls="headlessui-disclosure-panel-62"
@@ -1479,7 +1479,7 @@ exports[`<Accordion /> StackedOutlineOpen story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="accordion-item accordion-item--outline"
+      class="accordion-row accordion-row--outline"
     >
       <button
         aria-controls="headlessui-disclosure-panel-64"
@@ -1532,7 +1532,7 @@ exports[`<Accordion /> UsingRenderProp story renders snapshot 1`] = `
     class=""
   >
     <div
-      class="accordion-item"
+      class="accordion-row"
     >
       <button
         aria-expanded="false"
