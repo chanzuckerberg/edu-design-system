@@ -384,9 +384,9 @@ All component props must be defined with appropriate [TypeScript type](https://w
 
 ### Component comments
 
-All components should be documented with a comment directly before the component declaration. (It's important that there are no spaces between the comment and the component so that the comment will appear in storybook.)
+All components should be documented with a comment directly before the component declaration.
 
-The comment should begin with an import example, include a general description of the component, possibly note behavior that may not be obvious to developers (so they don't have to dig through the code to understand what it does), and end with example usage.
+The comment should begin with an import example, include a general description of the component, possibly note behavior that may not be obvious to developers (so they don't have to dig through the code to understand what it does), and end with example usage for complex components (such as compound components).
 
 Example:
 
@@ -410,6 +410,35 @@ Example:
  * ```
  */
  export const ButtonGroup = ({
+````
+
+Do not use [jsdoc tags](https://devhints.io/jsdoc) (e.g. `@example`) if possible because these will break the documentation in storybook and cause all following text to not be shown on the page. For important jsdoc tags that we really want to include, place them at the end of the comment to avoid hiding comment content. For example, we use the `@deprecated` tag so Visual Studio Code will indicate a component is deprecated for developers, but we place that at the end of a component's docstring to avoid disrupting any of the other text.
+
+Example:
+
+````
+/**
+ * The Banner component is deprecated and will be removed in an upcoming release.
+ *
+ * Please visit Zeroheight to find the right notification component for your needs: https://eds.czi.design/
+ *
+ * `import {Banner} from "@chanzuckerberg/eds";`
+ *
+ * A banner used to provide and highlight information to a user or ask for a decision or action.
+ *
+ * Example usage:
+ *
+ * ```tsx
+ * <Banner
+ *   onDismiss={handleDismiss}
+ *   title="Some Title"
+ *   description={<>Some description, possibly with a <Link href="https://go.czi.team/eds">link to some other resource</Link>.</>}
+ *   action={<Button onClick={handleAction}>Action</Button>}
+ * />
+ * ```
+ *
+ * @deprecated
+ */
 ````
 
 ### Export module
