@@ -5,6 +5,8 @@ import styles from './AccordionButton.module.css';
 import { ENTER_KEYCODE, SPACEBAR_KEYCODE } from '../../util/keycodes';
 import { AccordionContext } from '../Accordion';
 import Button from '../Button';
+import type { HeadingElement } from '../Heading';
+import Heading from '../Heading';
 import Icon from '../Icon';
 
 export type Props = {
@@ -16,6 +18,10 @@ export type Props = {
    * Additional classnames passed in for styling
    */
   className?: string;
+  /**
+   * Used to specify which heading element should be rendered for the title.
+   */
+  headingAs?: HeadingElement;
   /**
    * Callback called when accordion is closed.
    */
@@ -30,16 +36,26 @@ export type Props = {
 export const AccordionButton = ({
   children,
   className,
+  headingAs,
   onClose,
   ...other
 }: Props) => {
-  const { hasOutline, variant } = useContext(AccordionContext);
+  const {
+    hasOutline,
+    headingAs: contextHeadingAs,
+    variant,
+  } = useContext(AccordionContext);
 
   const componentClassName = clsx(
     styles['accordion-button'],
     variant === 'compact' && styles['accordion-button--compact'],
     hasOutline && styles['accordion-button--outline'],
     className,
+  );
+
+  const headingClassName = clsx(
+    styles['accordion-button__heading'],
+    variant === 'compact' && styles['accordion-button__heading--compact'],
   );
 
   return (
@@ -64,7 +80,12 @@ export const AccordionButton = ({
           variant="icon"
           {...other}
         >
-          {children}
+          <Heading
+            className={headingClassName}
+            size={headingAs || contextHeadingAs}
+          >
+            {children}
+          </Heading>
           <Icon
             className={clsx(
               styles['accordion-button__icon'],

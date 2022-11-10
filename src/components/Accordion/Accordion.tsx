@@ -4,7 +4,6 @@ import styles from './Accordion.module.css';
 import AccordionButton from '../AccordionButton';
 import AccordionItem from '../AccordionItem';
 import AccordionPanel from '../AccordionPanel';
-import AccordionTitle from '../AccordionTitle';
 import type { HeadingElement } from '../Heading';
 
 type Props = {
@@ -49,9 +48,7 @@ export const AccordionContext = createContext<{
  * <Accordion>
  *   <Accordion.Item>
  *     <Accordion.Button>
- *        <Accordion.Title>
- *          Title 1
- *        <Accordion.Title>
+ *       Title 1
  *     </Accordion.Button>
  *     <Accordion.Panel>
  *       Content 1
@@ -59,9 +56,7 @@ export const AccordionContext = createContext<{
  *   </Accordion.Item>
  *   <Accordion.Item>
  *     <Accordion.Button>
- *        <Accordion.Title>
- *          Title 2
- *        <Accordion.Title>
+ *       Title 2
  *     </Accordion.Button>
  *     <Accordion.Panel>
  *       Content 2
@@ -93,5 +88,4 @@ export const Accordion = ({
 
 Accordion.Button = AccordionButton;
 Accordion.Item = AccordionItem;
-Accordion.Title = AccordionTitle;
 Accordion.Panel = AccordionPanel;

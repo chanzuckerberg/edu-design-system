@@ -41,7 +41,7 @@ describe('<Accordion />', () => {
       <Accordion headingAs="h2">
         <Accordion.Item defaultOpen>
           <Accordion.Button data-testid="accordion-button" onClose={onClose}>
-            <Accordion.Title>Accordion Button</Accordion.Title>
+            Accordion Button
           </Accordion.Button>
           <Accordion.Panel>Accordion Panel</Accordion.Panel>
         </Accordion.Item>

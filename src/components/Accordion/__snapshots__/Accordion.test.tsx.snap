@@ -19,7 +19,7 @@ exports[`<Accordion /> Compact story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--size-h2 accordion-title accordion-title--compact"
+          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--compact"
         >
           Massa quam egestas massa.
         </h2>
@@ -67,7 +67,7 @@ exports[`<Accordion /> CompactOpen story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--size-h2 accordion-title accordion-title--compact"
+          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--compact"
         >
           Massa quam egestas massa.
         </h2>
@@ -121,7 +121,7 @@ exports[`<Accordion /> Default story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--size-h2 accordion-title"
+          class="heading heading--size-h2 accordion-button__heading"
         >
           Massa quam egestas massa.
         </h2>
@@ -169,7 +169,7 @@ exports[`<Accordion /> DefaultOpen story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--size-h2 accordion-title"
+          class="heading heading--size-h2 accordion-button__heading"
         >
           Massa quam egestas massa.
         </h2>
@@ -222,7 +222,7 @@ exports[`<Accordion /> Stacked story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--size-h2 accordion-title"
+          class="heading heading--size-h2 accordion-button__heading"
         >
           Massa quam egestas massa.
         </h2>
@@ -257,7 +257,7 @@ exports[`<Accordion /> Stacked story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--size-h2 accordion-title"
+          class="heading heading--size-h2 accordion-button__heading"
         >
           Massa quam egestas massa.
         </h2>
@@ -292,7 +292,7 @@ exports[`<Accordion /> Stacked story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--size-h2 accordion-title"
+          class="heading heading--size-h2 accordion-button__heading"
         >
           Massa quam egestas massa.
         </h2>
@@ -327,7 +327,7 @@ exports[`<Accordion /> Stacked story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--size-h2 accordion-title"
+          class="heading heading--size-h2 accordion-button__heading"
         >
           Massa quam egestas massa.
         </h2>
@@ -373,7 +373,7 @@ exports[`<Accordion /> StackedCompact story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--size-h2 accordion-title accordion-title--compact"
+          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--compact"
         >
           Massa quam egestas massa.
         </h2>
@@ -408,7 +408,7 @@ exports[`<Accordion /> StackedCompact story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--size-h2 accordion-title accordion-title--compact"
+          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--compact"
         >
           Massa quam egestas massa.
         </h2>
@@ -443,7 +443,7 @@ exports[`<Accordion /> StackedCompact story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--size-h2 accordion-title accordion-title--compact"
+          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--compact"
         >
           Massa quam egestas massa.
         </h2>
@@ -478,7 +478,7 @@ exports[`<Accordion /> StackedCompact story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--size-h2 accordion-title accordion-title--compact"
+          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--compact"
         >
           Massa quam egestas massa.
         </h2>
@@ -525,7 +525,7 @@ exports[`<Accordion /> StackedCompactOpen story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--size-h2 accordion-title accordion-title--compact"
+          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--compact"
         >
           Massa quam egestas massa.
         </h2>
@@ -567,7 +567,7 @@ exports[`<Accordion /> StackedCompactOpen story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--size-h2 accordion-title accordion-title--compact"
+          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--compact"
         >
           Massa quam egestas massa.
         </h2>
@@ -609,7 +609,7 @@ exports[`<Accordion /> StackedCompactOpen story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--size-h2 accordion-title accordion-title--compact"
+          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--compact"
         >
           Massa quam egestas massa.
         </h2>
@@ -651,7 +651,7 @@ exports[`<Accordion /> StackedCompactOpen story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--size-h2 accordion-title accordion-title--compact"
+          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--compact"
         >
           Massa quam egestas massa.
         </h2>
@@ -703,7 +703,7 @@ exports[`<Accordion /> StackedCompactOutline story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--size-h2 accordion-title accordion-title--compact"
+          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--compact"
         >
           Massa quam egestas massa.
         </h2>
@@ -738,7 +738,7 @@ exports[`<Accordion /> StackedCompactOutline story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--size-h2 accordion-title accordion-title--compact"
+          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--compact"
         >
           Massa quam egestas massa.
         </h2>
@@ -773,7 +773,7 @@ exports[`<Accordion /> StackedCompactOutline story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--size-h2 accordion-title accordion-title--compact"
+          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--compact"
         >
           Massa quam egestas massa.
         </h2>
@@ -808,7 +808,7 @@ exports[`<Accordion /> StackedCompactOutline story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--size-h2 accordion-title accordion-title--compact"
+          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--compact"
         >
           Massa quam egestas massa.
         </h2>
@@ -855,7 +855,7 @@ exports[`<Accordion /> StackedCompactOutlineOpen story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--size-h2 accordion-title accordion-title--compact"
+          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--compact"
         >
           Massa quam egestas massa.
         </h2>
@@ -897,7 +897,7 @@ exports[`<Accordion /> StackedCompactOutlineOpen story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--size-h2 accordion-title accordion-title--compact"
+          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--compact"
         >
           Massa quam egestas massa.
         </h2>
@@ -939,7 +939,7 @@ exports[`<Accordion /> StackedCompactOutlineOpen story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--size-h2 accordion-title accordion-title--compact"
+          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--compact"
         >
           Massa quam egestas massa.
         </h2>
@@ -981,7 +981,7 @@ exports[`<Accordion /> StackedCompactOutlineOpen story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--size-h2 accordion-title accordion-title--compact"
+          class="heading heading--size-h2 accordion-button__heading accordion-button__heading--compact"
         >
           Massa quam egestas massa.
         </h2>
@@ -1034,7 +1034,7 @@ exports[`<Accordion /> StackedOpen story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--size-h2 accordion-title"
+          class="heading heading--size-h2 accordion-button__heading"
         >
           Massa quam egestas massa.
         </h2>
@@ -1076,7 +1076,7 @@ exports[`<Accordion /> StackedOpen story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--size-h2 accordion-title"
+          class="heading heading--size-h2 accordion-button__heading"
         >
           Massa quam egestas massa.
         </h2>
@@ -1118,7 +1118,7 @@ exports[`<Accordion /> StackedOpen story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--size-h2 accordion-title"
+          class="heading heading--size-h2 accordion-button__heading"
         >
           Massa quam egestas massa.
         </h2>
@@ -1160,7 +1160,7 @@ exports[`<Accordion /> StackedOpen story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--size-h2 accordion-title"
+          class="heading heading--size-h2 accordion-button__heading"
         >
           Massa quam egestas massa.
         </h2>
@@ -1212,7 +1212,7 @@ exports[`<Accordion /> StackedOutline story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--size-h2 accordion-title"
+          class="heading heading--size-h2 accordion-button__heading"
         >
           Massa quam egestas massa.
         </h2>
@@ -1247,7 +1247,7 @@ exports[`<Accordion /> StackedOutline story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--size-h2 accordion-title"
+          class="heading heading--size-h2 accordion-button__heading"
         >
           Massa quam egestas massa.
         </h2>
@@ -1282,7 +1282,7 @@ exports[`<Accordion /> StackedOutline story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--size-h2 accordion-title"
+          class="heading heading--size-h2 accordion-button__heading"
         >
           Massa quam egestas massa.
         </h2>
@@ -1317,7 +1317,7 @@ exports[`<Accordion /> StackedOutline story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--size-h2 accordion-title"
+          class="heading heading--size-h2 accordion-button__heading"
         >
           Massa quam egestas massa.
         </h2>
@@ -1364,7 +1364,7 @@ exports[`<Accordion /> StackedOutlineOpen story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--size-h2 accordion-title"
+          class="heading heading--size-h2 accordion-button__heading"
         >
           Massa quam egestas massa.
         </h2>
@@ -1406,7 +1406,7 @@ exports[`<Accordion /> StackedOutlineOpen story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--size-h2 accordion-title"
+          class="heading heading--size-h2 accordion-button__heading"
         >
           Massa quam egestas massa.
         </h2>
@@ -1448,7 +1448,7 @@ exports[`<Accordion /> StackedOutlineOpen story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--size-h2 accordion-title"
+          class="heading heading--size-h2 accordion-button__heading"
         >
           Massa quam egestas massa.
         </h2>
@@ -1490,7 +1490,7 @@ exports[`<Accordion /> StackedOutlineOpen story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--size-h2 accordion-title"
+          class="heading heading--size-h2 accordion-button__heading"
         >
           Massa quam egestas massa.
         </h2>
@@ -1543,7 +1543,7 @@ exports[`<Accordion /> UsingRenderProp story renders snapshot 1`] = `
         type="button"
       >
         <h2
-          class="heading heading--size-h2 accordion-title"
+          class="heading heading--size-h2 accordion-button__heading"
         >
           Accordion Button 
           closed
