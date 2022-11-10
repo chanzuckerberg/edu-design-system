@@ -4,7 +4,7 @@ import { RecipesDocumentation } from './RecipesDocumentation';
 import RecipesDocs from '../../../docs/RECIPES.md';
 
 export default {
-  title: '',
+  title: 'Documentation/Recipes',
   component: RecipesDocumentation,
   parameters: {
     chromatic: { disableSnapshot: true },
