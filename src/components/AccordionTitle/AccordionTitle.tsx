@@ -7,8 +7,9 @@ import Heading from '../Heading';
 export type Props = {
   /**
    * Used to specify which heading element should be rendered.
+   * If provided, overrides parent <Accordion> headingAs prop.
    */
-  as: HeadingElement;
+  as?: HeadingElement;
   /**
    * Child node(s) that can be nested inside component.
    */
@@ -30,7 +31,7 @@ export const AccordionTitle = ({
   className,
   ...other
 }: Props) => {
-  const { variant } = useContext(AccordionContext);
+  const { headingAs, variant } = useContext(AccordionContext);
 
   const componentClassName = clsx(
     styles['accordion-title'],
@@ -39,7 +40,7 @@ export const AccordionTitle = ({
   );
 
   return (
-    <Heading className={componentClassName} size={as} {...other}>
+    <Heading className={componentClassName} size={as || headingAs} {...other}>
       {children}
     </Heading>
   );

@@ -2,9 +2,10 @@ import clsx from 'clsx';
 import React, { createContext } from 'react';
 import styles from './Accordion.module.css';
 import AccordionButton from '../AccordionButton';
+import AccordionItem from '../AccordionItem';
 import AccordionPanel from '../AccordionPanel';
-import AccordionRow from '../AccordionRow';
 import AccordionTitle from '../AccordionTitle';
+import type { HeadingElement } from '../Heading';
 
 type Props = {
   /**
@@ -20,17 +21,21 @@ type Props = {
    */
   hasOutline?: boolean;
   /**
+   * Used to specify which heading element should be rendered for each Accordion.Title child.
+   */
+  headingAs: HeadingElement;
+  /**
    * Compact variant shrinks the Accordion size.
    */
   variant?: 'compact';
 };
 
 export const AccordionContext = createContext<{
-  hasOutline: Props['hasOutline'];
-  variant: Props['variant'];
+  headingAs: HeadingElement;
+  hasOutline?: Props['hasOutline'];
+  variant?: Props['variant'];
 }>({
-  hasOutline: undefined,
-  variant: undefined,
+  headingAs: 'h2',
 });
 
 /**
@@ -38,12 +43,11 @@ export const AccordionContext = createContext<{
  *
  * `import {Accordion} from "@chanzuckerberg/eds;`
  *
- * An interactive heading that reveals or hides associated content.
- * Built on 'headless UI' Disclosure.
+ * One or multiple interactive headings that reveal or hide associated content.
  *
  * ```tsx
  * <Accordion>
- *   <Accordion.Row>
+ *   <Accordion.Item>
  *     <Accordion.Button>
  *        <Accordion.Title>
  *          Title 1
@@ -52,8 +56,8 @@ export const AccordionContext = createContext<{
  *     <Accordion.Panel>
  *       Content 1
  *     </Accordion.Panel>
- *   </Accordion.Row>
- *   <Accordion.Row>
+ *   </Accordion.Item>
+ *   <Accordion.Item>
  *     <Accordion.Button>
  *        <Accordion.Title>
  *          Title 2
@@ -62,7 +66,7 @@ export const AccordionContext = createContext<{
  *     <Accordion.Panel>
  *       Content 2
  *     </Accordion.Panel>
- *   </Accordion.Row>
+ *   </Accordion.Item>
  * </Accordion>
  * ```
  */
@@ -70,12 +74,16 @@ export const Accordion = ({
   children,
   className,
   hasOutline,
+  headingAs,
   variant,
   ...other
 }: Props) => {
-  const componentClassName = clsx(styles['accordion'], className);
+  const componentClassName = clsx(
+    hasOutline && styles['accordion--outline'],
+    className,
+  );
   return (
-    <AccordionContext.Provider value={{ hasOutline, variant }}>
+    <AccordionContext.Provider value={{ headingAs, hasOutline, variant }}>
       <div className={componentClassName} {...other}>
         {children}
       </div>
@@ -84,6 +92,6 @@ export const Accordion = ({
 };
 
 Accordion.Button = AccordionButton;
-Accordion.Row = AccordionRow;
+Accordion.Item = AccordionItem;
 Accordion.Title = AccordionTitle;
 Accordion.Panel = AccordionPanel;

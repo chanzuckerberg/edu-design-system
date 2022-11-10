@@ -38,11 +38,13 @@ describe('<Accordion />', () => {
   it('should call onClose callback when accordion closes', () => {
     const onClose = jest.fn();
     render(
-      <Accordion defaultOpen>
-        <Accordion.Button data-testid="accordion-button" onClose={onClose}>
-          <Accordion.Title as="h2">Accordion Button</Accordion.Title>
-        </Accordion.Button>
-        <Accordion.Panel>Accordion Panel</Accordion.Panel>
+      <Accordion headingAs="h2">
+        <Accordion.Item defaultOpen>
+          <Accordion.Button data-testid="accordion-button" onClose={onClose}>
+            <Accordion.Title>Accordion Button</Accordion.Title>
+          </Accordion.Button>
+          <Accordion.Panel>Accordion Panel</Accordion.Panel>
+        </Accordion.Item>
       </Accordion>,
     );
     const accordionButton = screen.getByTestId('accordion-button');

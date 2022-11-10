@@ -33,11 +33,12 @@ export const AccordionButton = ({
   onClose,
   ...other
 }: Props) => {
-  const { variant } = useContext(AccordionContext);
+  const { hasOutline, variant } = useContext(AccordionContext);
 
   const componentClassName = clsx(
     styles['accordion-button'],
     variant === 'compact' && styles['accordion-button--compact'],
+    hasOutline && styles['accordion-button--outline'],
     className,
   );
 

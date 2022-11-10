@@ -1,0 +1,19 @@
+/*------------------------------------*\
+    # ACCORDION ITEM
+\*------------------------------------*/
+
+/**
+ * Accordion Item houses one Accordion Button subcomponent and respect Accordion Panel subcomponent.
+ */
+.accordion-item {
+  border-bottom: var(--eds-border-width-sm) solid
+    var(--eds-theme-color-border-neutral-subtle);
+}
+
+/**
+ * Variant with outline.
+ * Removes bottom border on the last Accordion Item so there aren't two borders at the bottom of the Accordion.
+ */
+.accordion-item--outline:last-of-type {
+  border-bottom: 0;
+}
