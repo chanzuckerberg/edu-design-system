@@ -39,8 +39,12 @@ describe('<Accordion />', () => {
     const onClose = jest.fn();
     render(
       <Accordion defaultOpen>
-        <Accordion.Button data-testid="accordion-button" onClose={onClose}>
-          <Accordion.Title as="h2">Accordion Button</Accordion.Title>
+        <Accordion.Button
+          data-testid="accordion-button"
+          headingAs="h2"
+          onClose={onClose}
+        >
+          Accordion Button
         </Accordion.Button>
         <Accordion.Panel>Accordion Panel</Accordion.Panel>
       </Accordion>,

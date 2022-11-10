@@ -1,3 +1,5 @@
+@import '../../design-tokens/mixins.css';
+
 /*------------------------------------*\
     # ACCORDION BUTTON
 \*------------------------------------*/
@@ -8,6 +10,8 @@
 .accordion-button.accordion-button {
   display: flex;
   justify-content: space-between;
+  border: 0;
+
   padding: var(--eds-size-2) var(--eds-size-1);
   height: 3.375rem;
 }
@@ -18,6 +22,21 @@
 .accordion-button--compact.accordion-button--compact {
   padding: var(--eds-size-1);
   height: 2.25rem;
+}
+
+/**
+ * The heading text.
+ */
+.accordion-button__heading.accordion-button__heading {
+  @mixin eds-theme-typography-body-text-sm;
+  color: var(--eds-theme-color-text-neutral-strong);
+}
+
+/**
+ * Compact variant of the heading text.
+ */
+.accordion-button__heading--compact.accordion-button__heading--compact {
+  @mixin eds-theme-typography-body-text-xs;
 }
 
 /**

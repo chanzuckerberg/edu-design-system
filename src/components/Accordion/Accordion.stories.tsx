@@ -13,8 +13,8 @@ export default {
   args: {
     children: (
       <>
-        <Accordion.Button data-testid="accordion-button">
-          <Accordion.Title as="h2">Massa quam egestas massa.</Accordion.Title>
+        <Accordion.Button data-testid="accordion-button" headingAs="h2">
+          Massa quam egestas massa.
         </Accordion.Button>
         <Accordion.Panel data-testid="accordion-panel">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet,
@@ -48,8 +48,8 @@ export const Stacked: StoryObj<Args> = {
   render: ({ variant, defaultOpen }) => (
     <div>
       <Accordion defaultOpen={defaultOpen} variant={variant}>
-        <Accordion.Button>
-          <Accordion.Title as="h2">Massa quam egestas massa.</Accordion.Title>
+        <Accordion.Button headingAs="h2">
+          Massa quam egestas massa.
         </Accordion.Button>
         <Accordion.Panel>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet,
@@ -59,8 +59,8 @@ export const Stacked: StoryObj<Args> = {
         </Accordion.Panel>
       </Accordion>
       <Accordion defaultOpen={defaultOpen} variant={variant}>
-        <Accordion.Button>
-          <Accordion.Title as="h2">Massa quam egestas massa.</Accordion.Title>
+        <Accordion.Button headingAs="h2">
+          Massa quam egestas massa.
         </Accordion.Button>
         <Accordion.Panel>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet,
@@ -70,8 +70,8 @@ export const Stacked: StoryObj<Args> = {
         </Accordion.Panel>
       </Accordion>
       <Accordion defaultOpen={defaultOpen} variant={variant}>
-        <Accordion.Button>
-          <Accordion.Title as="h2">Massa quam egestas massa.</Accordion.Title>
+        <Accordion.Button headingAs="h2">
+          Massa quam egestas massa.
         </Accordion.Button>
         <Accordion.Panel>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet,
@@ -81,8 +81,8 @@ export const Stacked: StoryObj<Args> = {
         </Accordion.Panel>
       </Accordion>
       <Accordion defaultOpen={defaultOpen} variant={variant}>
-        <Accordion.Button>
-          <Accordion.Title as="h2">Massa quam egestas massa.</Accordion.Title>
+        <Accordion.Button headingAs="h2">
+          Massa quam egestas massa.
         </Accordion.Button>
         <Accordion.Panel>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet,
@@ -139,10 +139,8 @@ export const UsingRenderProp: StoryObj<Args> = {
     <Accordion>
       {({ open }) => (
         <>
-          <Accordion.Button data-testid="accordion-button">
-            <Accordion.Title as="h2">
-              Accordion Button {(open && 'open') || 'closed'}
-            </Accordion.Title>
+          <Accordion.Button data-testid="accordion-button" headingAs="h2">
+            Accordion Button {(open && 'open') || 'closed'}
           </Accordion.Button>
           <Accordion.Panel>Accordion Panel</Accordion.Panel>
         </>

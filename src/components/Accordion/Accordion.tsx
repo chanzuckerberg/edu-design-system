@@ -4,7 +4,6 @@ import React, { createContext } from 'react';
 import styles from './Accordion.module.css';
 import AccordionButton from '../AccordionButton';
 import AccordionPanel from '../AccordionPanel';
-import AccordionTitle from '../AccordionTitle';
 
 type RenderProps<RenderPropArgs> = {
   children: React.ReactNode | ((args: RenderPropArgs) => React.ReactElement);
@@ -49,9 +48,7 @@ export const AccordionContext = createContext<{ variant: Props['variant'] }>({
  * ```tsx
  * <Accordion>
  *   <Accordion.Button>
- *      <Accordion.Title>
- *        Title
- *      <Accordion.Title>
+ *      Title
  *   </Accordion.Button>
  *   <Accordion.Panel>
  *     Content
@@ -81,5 +78,4 @@ export const Accordion = ({
 };
 
 Accordion.Button = AccordionButton;
-Accordion.Title = AccordionTitle;
 Accordion.Panel = AccordionPanel;
