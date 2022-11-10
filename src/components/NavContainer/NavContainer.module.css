@@ -55,7 +55,7 @@
     overflow: auto;
     gap: var(--eds-size-8);
     height: calc(100vh - 3rem);
-    background-color: var(--eds-theme-color-background-brand-primary-strong);
+    @apply bg-background-brand-primary-strong-default;
     z-index: var(--eds-z-index-400);
   }
 }

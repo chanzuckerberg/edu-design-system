@@ -7,7 +7,7 @@
  */
 .modal-header {
   width: 100%;
-  background-color: var(--eds-theme-color-background-neutral-default);
+  @apply bg-background-neutral-default-default;
   padding-top: var(--eds-size-7);
   padding-left: var(--modal-horizontal-padding);
   padding-right: var(--modal-horizontal-padding);

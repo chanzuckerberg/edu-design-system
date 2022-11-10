@@ -57,5 +57,30 @@ module.exports = {
       xl: '1200px',
       xxl: '1400px',
     },
+    extend: {
+      zIndex: {
+        ...variableTokens.eds['z-index'],
+      },
+      boxShadow: {
+        ...variableTokens.eds['box-shadow'],
+      },
+      colors: {
+        icon: {
+          ...variableTokens.eds.theme.color.icon,
+        },
+        text: {
+          ...variableTokens.eds.theme.color.text,
+        },
+        border: {
+          ...variableTokens.eds.theme.color.border,
+        },
+        background: {
+          ...variableTokens.eds.theme.color.background,
+        },
+        button: {
+          ...variableTokens.eds.theme.color.button,
+        },
+      },
+    },
   },
 };

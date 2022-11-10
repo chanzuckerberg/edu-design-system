@@ -14,7 +14,7 @@
 .dropdown-menu {
   /* Set a minimum width for the dropdown menu. */
   width: 16rem;
-  background: var(--eds-theme-color-background-neutral-default);
+  @apply bg-background-neutral-default-default;
   border: 1px solid var(--eds-theme-color-border-neutral-subtle);
   border-radius: var(--eds-border-radius-md);
   box-shadow: var(--eds-box-shadow-md);

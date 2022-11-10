@@ -154,7 +154,7 @@
   position: absolute;
   top: var(--eds-size-1);
   right: var(--eds-size-1);
-  color: var(--eds-theme-color-icon-neutral-subtle);
+  @apply text-icon-neutral-subtle-default;
 }
 
 /**

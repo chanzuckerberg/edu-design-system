@@ -6,7 +6,7 @@
  * A container for content.
  */
 .panel {
-  background: var(--eds-theme-color-background-neutral-default);
+  @apply bg-background-neutral-default-default;
   border-radius: var(--eds-border-radius-xl);
   padding: var(--eds-size-3);
 }

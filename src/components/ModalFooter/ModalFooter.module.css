@@ -12,7 +12,7 @@
   padding-right: var(--eds-size-3);
 
   width: 100%;
-  background-color: var(--eds-theme-color-background-neutral-default);
+  @apply bg-background-neutral-default-default;
 
   border-bottom-left-radius: var(--eds-border-radius-lg);
   border-bottom-right-radius: var(--eds-border-radius-lg);

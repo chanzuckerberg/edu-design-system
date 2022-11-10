@@ -102,7 +102,7 @@
  * Breadcrumbs Icon - a separator between breadcrumb links.
  */
 .breadcrumbs__separator {
-  color: var(--eds-theme-color-icon-neutral-subtle);
+  @apply text-icon-neutral-subtle-default;
   margin-left: var(--eds-size-1);
   margin-right: var(--eds-size-1);
   cursor: default;

@@ -54,6 +54,5 @@
 }
 
 .number-icon--success {
-  background-color: var(--eds-theme-color-icon-utility-success);
-  border-color: var(--eds-theme-color-icon-utility-success);
+  @apply bg-icon-utility-success-default border-icon-utility-success-default;
 }
