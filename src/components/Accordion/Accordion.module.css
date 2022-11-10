@@ -1,0 +1,11 @@
+/*------------------------------------*\
+    # ACCORDION
+\*------------------------------------*/
+
+/**
+ * Accordion used to hide or reveal content downwards when interacted.
+ */
+.accordion {
+  border-bottom: var(--eds-border-width-sm) solid
+    var(--eds-theme-color-border-neutral-subtle);
+}
