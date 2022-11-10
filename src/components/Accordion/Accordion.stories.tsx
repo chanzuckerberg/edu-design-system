@@ -132,3 +132,24 @@ export const StackedCompactOpen: StoryObj<Args> = {
     variant: 'compact',
   },
 };
+
+// Visual regression testing unhelpful since story value is in interaction and as a code example.
+export const UsingRenderProp: StoryObj<Args> = {
+  render: () => (
+    <Accordion>
+      {({ open }) => (
+        <>
+          <Accordion.Button data-testid="accordion-button">
+            <Accordion.Title as="h2">
+              Accordion Button {(open && 'open') || 'closed'}
+            </Accordion.Title>
+          </Accordion.Button>
+          <Accordion.Panel>Accordion Panel</Accordion.Panel>
+        </>
+      )}
+    </Accordion>
+  ),
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
+};

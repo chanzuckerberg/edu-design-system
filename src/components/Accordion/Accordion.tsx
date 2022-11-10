@@ -29,7 +29,7 @@ type Props = {
   variant?: 'compact';
 } & RenderProps<{
   /**
-   * Render prop indicating popover open status.
+   * Render prop indicating Accordion open status.
    */
   open: boolean;
 }>;
@@ -70,9 +70,11 @@ export const Accordion = ({
   return (
     <AccordionContext.Provider value={{ variant }}>
       <Disclosure defaultOpen={defaultOpen}>
-        <div className={componentClassName} {...other}>
-          {children}
-        </div>
+        {({ open }) => (
+          <div className={componentClassName} {...other}>
+            {typeof children === 'function' ? children({ open }) : children}
+          </div>
+        )}
       </Disclosure>
     </AccordionContext.Provider>
   );
