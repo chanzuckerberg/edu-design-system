@@ -6,6 +6,10 @@ import AccordionButton from '../AccordionButton';
 import AccordionPanel from '../AccordionPanel';
 import AccordionTitle from '../AccordionTitle';
 
+type RenderProps<RenderPropArgs> = {
+  children: React.ReactNode | ((args: RenderPropArgs) => React.ReactElement);
+};
+
 type Props = {
   /**
    * Child node(s) that can be nested inside component.
@@ -23,7 +27,12 @@ type Props = {
    * Compact variant shrinks the Accordion size.
    */
   variant?: 'compact';
-};
+} & RenderProps<{
+  /**
+   * Render prop indicating popover open status.
+   */
+  open: boolean;
+}>;
 
 export const AccordionContext = createContext<{ variant: Props['variant'] }>({
   variant: undefined,
