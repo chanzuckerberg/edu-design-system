@@ -1523,3 +1523,51 @@ exports[`<Accordion /> StackedOutlineOpen story renders snapshot 1`] = `
   </div>
 </div>
 `;
+
+exports[`<Accordion /> UsingRenderProp story renders snapshot 1`] = `
+<div
+  style="margin: 0.5rem;"
+>
+  <div
+    class=""
+  >
+    <div
+      class="accordion-item"
+    >
+      <button
+        aria-expanded="false"
+        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral clickable-style--full-width button button--icon accordion-button"
+        data-bootstrap-override="clickable-style-icon"
+        data-testid="accordion-button"
+        id="headlessui-disclosure-button-73"
+        type="button"
+      >
+        <h2
+          class="heading heading--size-h2 accordion-title"
+        >
+          Accordion Button 
+          closed
+        </h2>
+        <svg
+          class="icon accordion-button__icon"
+          fill="currentColor"
+          height="1.625rem"
+          role="img"
+          style="--icon-size: 1.625rem;"
+          width="1.625rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title
+            id="57"
+          >
+            show content
+          </title>
+          <use
+            xlink:href="test-file-stub#expand-more"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+`;

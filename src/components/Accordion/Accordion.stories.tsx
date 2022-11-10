@@ -228,3 +228,26 @@ export const StackedCompactOutlineOpen: StoryObj<Args> = {
     hasOutline: true,
   },
 };
+
+// Visual regression testing unhelpful since story value is in interaction and as a code example.
+export const UsingRenderProp: StoryObj<Args> = {
+  render: () => (
+    <Accordion headingAs="h2">
+      <Accordion.Item>
+        {({ open }) => (
+          <>
+            <Accordion.Button data-testid="accordion-button">
+              <Accordion.Title as="h2">
+                Accordion Button {(open && 'open') || 'closed'}
+              </Accordion.Title>
+            </Accordion.Button>
+            <Accordion.Panel>Accordion Panel</Accordion.Panel>
+          </>
+        )}
+      </Accordion.Item>
+    </Accordion>
+  ),
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
+};

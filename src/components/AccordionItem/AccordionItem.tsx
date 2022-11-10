@@ -48,9 +48,11 @@ export const AccordionItem = ({
   );
   return (
     <Disclosure defaultOpen={defaultOpen}>
-      <div className={componentClassName} {...other}>
-        {children}
-      </div>
+      {({ open }) => (
+        <div className={componentClassName} {...other}>
+          {typeof children === 'function' ? children({ open }) : children}
+        </div>
+      )}
     </Disclosure>
   );
 };
