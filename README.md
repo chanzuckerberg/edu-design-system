@@ -1,6 +1,6 @@
 # Education Design System
 
-![Test CI](https://github.com/chanzuckerberg/edu-design-system/workflows/Test%20CI/badge.svg)
+![Test CI](https://github.com/chanzuckerberg/edu-design-system/actions/workflows/test.yml/badge.svg)
 
 Education Design System (EDS) is a repository of [presentational](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0) components used to build React-based products for [Chan Zuckerberg Initiative](https://chanzuckerberg.com/education/).
 
@@ -17,6 +17,7 @@ yarn add @chanzuckerberg/eds
 ```
 
 Import the CSS tokens somewhere in your app, e.g. an `init.ts` or `app.ts` file:
+
 ```js
 import '@chanzuckerberg/eds/lib/tokens/css/variables.css';
 // optionally import EDS font faces
