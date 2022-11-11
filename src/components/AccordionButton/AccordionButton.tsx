@@ -20,6 +20,7 @@ export type Props = {
   className?: string;
   /**
    * Used to specify which heading element should be rendered for the title.
+   * If provided, overrides parent <Accordion> headingAs prop.
    */
   headingAs?: HeadingElement;
   /**
