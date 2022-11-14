@@ -44,7 +44,7 @@
 .dropdown__options {
   @mixin eds-theme-typography-body-text-md;
   /* Allow Dropdown font to shrink in contexts where body font size is smaller. */
-  font-size: inherit; 
+  font-size: inherit;
 
   position: absolute;
 
@@ -56,7 +56,7 @@
   border-radius: var(--eds-border-radius-md);
   box-shadow: var(--eds-box-shadow-md);
   /* Ensures the options display over the underlying body elements. */
-  z-index: var(--eds-z-index-100); 
+  z-index: var(--eds-z-index-100);
 }
 
 /**
@@ -81,7 +81,7 @@
   padding: var(--eds-size-1) var(--eds-size-3) var(--eds-size-1)
     var(--eds-size-6);
   /* Allow the option text and the selected icon to be easily aligned. */
-  display: flex; 
+  display: flex;
 }
 
 /**
@@ -115,13 +115,13 @@
 .selected-icon__container {
   color: var(--eds-theme-color-icon-brand-primary);
   /* Take up the same amount of space as an unselected option's padding-left. */
-  flex-shrink: 0; 
+  flex-shrink: 0;
   width: var(--eds-size-6);
   /**
    * Position the contained icon. It's shifted slightly to the right from center so that the 
    * checkmark's visual "center of mass" is centered. 
    */
-  padding-left: var(--eds-size-1); 
+  padding-left: var(--eds-size-1);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -135,6 +135,6 @@
    * Wrap overflowing content onto multiple lines. We're doing this instead of truncating so that
    * users can still see all the content. 
    */
-  overflow-wrap: normal; 
+  overflow-wrap: normal;
   word-break: normal;
 }

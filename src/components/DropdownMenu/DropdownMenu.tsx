@@ -18,6 +18,7 @@ import {
   TAB_KEYCODE,
 } from '../../util/keycodes';
 
+// This component is deprecated and will be replaced by the Menu component
 export type Props = {
   /**
    * Child node(s) that can be nested inside component

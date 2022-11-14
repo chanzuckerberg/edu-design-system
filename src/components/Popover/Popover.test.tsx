@@ -17,6 +17,7 @@ describe('<Popover />', () => {
   });
 
   it('should open Popover with trigger button', () => {
+    // this test is redundant b/c of the snapshot above
     render(<Default />);
     expect(screen.queryByTestId('popover-content')).not.toBeInTheDocument();
     const triggerButton = screen.getByTestId('popover-trigger-button');
