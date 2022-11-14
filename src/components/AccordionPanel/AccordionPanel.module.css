@@ -18,8 +18,24 @@
 }
 
 /**
- * Compact variant.
+ * Small variant.
  */
-.accordion-panel--compact {
+.accordion-panel--sm {
   @mixin eds-theme-typography-body-text-xs;
+}
+
+/**
+ * Outline variant.
+ */
+.accordion-panel--outline {
+  padding-left: var(--eds-size-3);
+  padding-right: var(--eds-size-5);
+}
+
+/**
+ * Small outline variant.
+ */
+.accordion-panel--sm.accordion-panel--outline {
+  padding-left: var(--eds-size-2);
+  padding-right: var(--eds-size-4);
 }

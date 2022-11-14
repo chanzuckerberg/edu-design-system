@@ -7,13 +7,19 @@ import { Accordion } from './Accordion';
 export default {
   title: 'Organisms/Interactive/Accordion',
   component: Accordion,
+  subcomponents: {
+    'Accordion.Row': Accordion.Row,
+    'Accordion.Panel': Accordion.Panel,
+    'Accordion.Button': Accordion.Button,
+  },
   parameters: {
     badges: [BADGE.BETA],
   },
   args: {
+    headingAs: 'h2',
     children: (
-      <>
-        <Accordion.Button data-testid="accordion-button" headingAs="h2">
+      <Accordion.Row>
+        <Accordion.Button data-testid="accordion-button">
           Massa quam egestas massa.
         </Accordion.Button>
         <Accordion.Panel data-testid="accordion-panel">
@@ -22,7 +28,7 @@ export default {
           tristique et ullamcorper rhoncus amet pharetra aliquet tortor.
           Suscipit dui, nunc sit dui tellus massa laoreet tellus.
         </Accordion.Panel>
-      </>
+      </Accordion.Row>
     ),
   },
   decorators: [
@@ -38,67 +44,76 @@ type Args = React.ComponentProps<typeof Accordion>;
 
 export const Default: StoryObj<Args> = {};
 
-export const Compact: StoryObj<Args> = {
+export const Small: StoryObj<Args> = {
   args: {
-    variant: 'compact',
+    size: 'sm',
   },
 };
 
 export const Stacked: StoryObj<Args> = {
-  render: ({ variant, defaultOpen }) => (
-    <div>
-      <Accordion defaultOpen={defaultOpen} variant={variant}>
-        <Accordion.Button headingAs="h2">
-          Massa quam egestas massa.
-        </Accordion.Button>
-        <Accordion.Panel>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet,
-          massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At
-          tristique et ullamcorper rhoncus amet pharetra aliquet tortor.
-          Suscipit dui, nunc sit dui tellus massa laoreet tellus.
-        </Accordion.Panel>
-      </Accordion>
-      <Accordion defaultOpen={defaultOpen} variant={variant}>
-        <Accordion.Button headingAs="h2">
-          Massa quam egestas massa.
-        </Accordion.Button>
-        <Accordion.Panel>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet,
-          massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At
-          tristique et ullamcorper rhoncus amet pharetra aliquet tortor.
-          Suscipit dui, nunc sit dui tellus massa laoreet tellus.
-        </Accordion.Panel>
-      </Accordion>
-      <Accordion defaultOpen={defaultOpen} variant={variant}>
-        <Accordion.Button headingAs="h2">
-          Massa quam egestas massa.
-        </Accordion.Button>
-        <Accordion.Panel>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet,
-          massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At
-          tristique et ullamcorper rhoncus amet pharetra aliquet tortor.
-          Suscipit dui, nunc sit dui tellus massa laoreet tellus.
-        </Accordion.Panel>
-      </Accordion>
-      <Accordion defaultOpen={defaultOpen} variant={variant}>
-        <Accordion.Button headingAs="h2">
-          Massa quam egestas massa.
-        </Accordion.Button>
-        <Accordion.Panel>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet,
-          massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At
-          tristique et ullamcorper rhoncus amet pharetra aliquet tortor.
-          Suscipit dui, nunc sit dui tellus massa laoreet tellus.
-        </Accordion.Panel>
-      </Accordion>
-    </div>
-  ),
+  args: {
+    children: (
+      <>
+        <Accordion.Row>
+          <Accordion.Button>Massa quam egestas massa.</Accordion.Button>
+          <Accordion.Panel>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet,
+            massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At
+            tristique et ullamcorper rhoncus amet pharetra aliquet tortor.
+            Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+          </Accordion.Panel>
+        </Accordion.Row>
+        <Accordion.Row>
+          <Accordion.Button>Massa quam egestas massa.</Accordion.Button>
+          <Accordion.Panel>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet,
+            massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At
+            tristique et ullamcorper rhoncus amet pharetra aliquet tortor.
+            Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+          </Accordion.Panel>
+        </Accordion.Row>
+        <Accordion.Row>
+          <Accordion.Button>Massa quam egestas massa.</Accordion.Button>
+          <Accordion.Panel>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet,
+            massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At
+            tristique et ullamcorper rhoncus amet pharetra aliquet tortor.
+            Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+          </Accordion.Panel>
+        </Accordion.Row>
+        <Accordion.Row>
+          <Accordion.Button>Massa quam egestas massa.</Accordion.Button>
+          <Accordion.Panel>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet,
+            massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At
+            tristique et ullamcorper rhoncus amet pharetra aliquet tortor.
+            Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+          </Accordion.Panel>
+        </Accordion.Row>
+      </>
+    ),
+  },
 };
 
-export const StackedCompact: StoryObj<Args> = {
-  ...Stacked,
+export const StackedSmall: StoryObj<Args> = {
   args: {
-    variant: 'compact',
+    ...Stacked.args,
+    size: 'sm',
+  },
+};
+
+export const StackedOutline: StoryObj<Args> = {
+  args: {
+    ...Stacked.args,
+    hasOutline: true,
+  },
+};
+
+export const StackedSmallOutline: StoryObj<Args> = {
+  args: {
+    ...Stacked.args,
+    size: 'sm',
+    hasOutline: true,
   },
 };
 
@@ -107,44 +122,110 @@ export const StackedCompact: StoryObj<Args> = {
  */
 export const DefaultOpen: StoryObj<Args> = {
   args: {
-    defaultOpen: true,
+    children: (
+      <Accordion.Row defaultOpen>
+        <Accordion.Button data-testid="accordion-button">
+          Massa quam egestas massa.
+        </Accordion.Button>
+        <Accordion.Panel data-testid="accordion-panel">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet,
+          massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At
+          tristique et ullamcorper rhoncus amet pharetra aliquet tortor.
+          Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+        </Accordion.Panel>
+      </Accordion.Row>
+    ),
   },
 };
 
-export const CompactOpen: StoryObj<Args> = {
+export const SmallOpen: StoryObj<Args> = {
   args: {
-    variant: 'compact',
-    defaultOpen: true,
+    ...DefaultOpen.args,
+    size: 'sm',
   },
 };
 
 export const StackedOpen: StoryObj<Args> = {
-  ...Stacked,
   args: {
-    defaultOpen: true,
+    children: (
+      <>
+        <Accordion.Row defaultOpen>
+          <Accordion.Button>Massa quam egestas massa.</Accordion.Button>
+          <Accordion.Panel>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet,
+            massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At
+            tristique et ullamcorper rhoncus amet pharetra aliquet tortor.
+            Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+          </Accordion.Panel>
+        </Accordion.Row>
+        <Accordion.Row defaultOpen>
+          <Accordion.Button>Massa quam egestas massa.</Accordion.Button>
+          <Accordion.Panel>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet,
+            massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At
+            tristique et ullamcorper rhoncus amet pharetra aliquet tortor.
+            Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+          </Accordion.Panel>
+        </Accordion.Row>
+        <Accordion.Row defaultOpen>
+          <Accordion.Button>Massa quam egestas massa.</Accordion.Button>
+          <Accordion.Panel>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet,
+            massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At
+            tristique et ullamcorper rhoncus amet pharetra aliquet tortor.
+            Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+          </Accordion.Panel>
+        </Accordion.Row>
+        <Accordion.Row defaultOpen>
+          <Accordion.Button>Massa quam egestas massa.</Accordion.Button>
+          <Accordion.Panel>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla amet,
+            massa ultricies iaculis. Quam lacus maecenas nibh malesuada. At
+            tristique et ullamcorper rhoncus amet pharetra aliquet tortor.
+            Suscipit dui, nunc sit dui tellus massa laoreet tellus.
+          </Accordion.Panel>
+        </Accordion.Row>
+      </>
+    ),
   },
 };
 
-export const StackedCompactOpen: StoryObj<Args> = {
-  ...Stacked,
+export const StackedSmallOpen: StoryObj<Args> = {
   args: {
-    defaultOpen: true,
-    variant: 'compact',
+    ...StackedOpen.args,
+    size: 'sm',
+  },
+};
+
+export const StackedOutlineOpen: StoryObj<Args> = {
+  args: {
+    ...StackedOpen.args,
+    hasOutline: true,
+  },
+};
+
+export const StackedSmallOutlineOpen: StoryObj<Args> = {
+  args: {
+    ...StackedOpen.args,
+    size: 'sm',
+    hasOutline: true,
   },
 };
 
 // Visual regression testing unhelpful since story value is in interaction and as a code example.
 export const UsingRenderProp: StoryObj<Args> = {
   render: () => (
-    <Accordion>
-      {({ open }) => (
-        <>
-          <Accordion.Button data-testid="accordion-button" headingAs="h2">
-            Accordion Button {(open && 'open') || 'closed'}
-          </Accordion.Button>
-          <Accordion.Panel>Accordion Panel</Accordion.Panel>
-        </>
-      )}
+    <Accordion headingAs="h2">
+      <Accordion.Row>
+        {({ open }) => (
+          <>
+            <Accordion.Button data-testid="accordion-button">
+              Accordion Button {(open && 'open') || 'closed'}
+            </Accordion.Button>
+            <Accordion.Panel>Accordion Panel</Accordion.Panel>
+          </>
+        )}
+      </Accordion.Row>
     </Accordion>
   ),
   parameters: {

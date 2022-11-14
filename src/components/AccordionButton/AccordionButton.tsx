@@ -20,8 +20,9 @@ export type Props = {
   className?: string;
   /**
    * Used to specify which heading element should be rendered for the title.
+   * If provided, overrides parent <Accordion> headingAs prop.
    */
-  headingAs: HeadingElement;
+  headingAs?: HeadingElement;
   /**
    * Callback called when accordion is closed.
    */
@@ -40,17 +41,22 @@ export const AccordionButton = ({
   onClose,
   ...other
 }: Props) => {
-  const { variant } = useContext(AccordionContext);
+  const {
+    hasOutline,
+    headingAs: contextHeadingAs,
+    size,
+  } = useContext(AccordionContext);
 
   const componentClassName = clsx(
     styles['accordion-button'],
-    variant === 'compact' && styles['accordion-button--compact'],
+    size === 'sm' && styles['accordion-button--sm'],
+    hasOutline && styles['accordion-button--outline'],
     className,
   );
 
   const headingClassName = clsx(
     styles['accordion-button__heading'],
-    variant === 'compact' && styles['accordion-button__heading--compact'],
+    size === 'sm' && styles['accordion-button__heading--sm'],
   );
 
   return (
@@ -75,7 +81,10 @@ export const AccordionButton = ({
           variant="icon"
           {...other}
         >
-          <Heading className={headingClassName} size={headingAs}>
+          <Heading
+            className={headingClassName}
+            size={headingAs || contextHeadingAs}
+          >
             {children}
           </Heading>
           <Icon

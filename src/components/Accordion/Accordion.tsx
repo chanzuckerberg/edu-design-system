@@ -1,13 +1,10 @@
-import { Disclosure } from '@headlessui/react';
 import clsx from 'clsx';
 import React, { createContext } from 'react';
 import styles from './Accordion.module.css';
 import AccordionButton from '../AccordionButton';
 import AccordionPanel from '../AccordionPanel';
-
-type RenderProps<RenderPropArgs> = {
-  children: React.ReactNode | ((args: RenderPropArgs) => React.ReactElement);
-};
+import AccordionRow from '../AccordionRow';
+import type { HeadingElement } from '../Heading';
 
 type Props = {
   /**
@@ -19,22 +16,25 @@ type Props = {
    */
   className?: string;
   /**
-   * Whether panel is expanded by default.
+   * Outline variant adds extra padding and a rounded border.
    */
-  defaultOpen?: boolean;
+  hasOutline?: boolean;
   /**
-   * Compact variant shrinks the Accordion size.
+   * Used to specify which heading element should be rendered for each Accordion.Title child.
    */
-  variant?: 'compact';
-} & RenderProps<{
+  headingAs: HeadingElement;
   /**
-   * Render prop indicating Accordion open status.
+   * Various Accordion sizes. Defaults to 'md'.
    */
-  open: boolean;
-}>;
+  size?: 'sm' | 'md';
+};
 
-export const AccordionContext = createContext<{ variant: Props['variant'] }>({
-  variant: undefined,
+export const AccordionContext = createContext<{
+  headingAs: HeadingElement;
+  hasOutline?: Props['hasOutline'];
+  size?: Props['size'];
+}>({
+  headingAs: 'h2',
 });
 
 /**
@@ -42,40 +42,50 @@ export const AccordionContext = createContext<{ variant: Props['variant'] }>({
  *
  * `import {Accordion} from "@chanzuckerberg/eds;`
  *
- * An interactive heading that reveals or hides associated content.
- * Built on 'headless UI' Disclosure.
+ * One or multiple interactive headings that reveal or hide associated content.
  *
  * ```tsx
  * <Accordion>
- *   <Accordion.Button>
- *      Title
- *   </Accordion.Button>
- *   <Accordion.Panel>
- *     Content
- *   </Accordion.Panel>
+ *   <Accordion.Item>
+ *     <Accordion.Button>
+ *       Title 1
+ *     </Accordion.Button>
+ *     <Accordion.Panel>
+ *       Content 1
+ *     </Accordion.Panel>
+ *   </Accordion.Item>
+ *   <Accordion.Item>
+ *     <Accordion.Button>
+ *       Title 2
+ *     </Accordion.Button>
+ *     <Accordion.Panel>
+ *       Content 2
+ *     </Accordion.Panel>
+ *   </Accordion.Item>
  * </Accordion>
  * ```
  */
 export const Accordion = ({
-  className,
-  defaultOpen,
   children,
-  variant,
+  className,
+  hasOutline,
+  headingAs,
+  size = 'md',
   ...other
 }: Props) => {
-  const componentClassName = clsx(styles['accordion'], className);
+  const componentClassName = clsx(
+    hasOutline && styles['accordion--outline'],
+    className,
+  );
   return (
-    <AccordionContext.Provider value={{ variant }}>
-      <Disclosure defaultOpen={defaultOpen}>
-        {({ open }) => (
-          <div className={componentClassName} {...other}>
-            {typeof children === 'function' ? children({ open }) : children}
-          </div>
-        )}
-      </Disclosure>
+    <AccordionContext.Provider value={{ headingAs, hasOutline, size }}>
+      <div className={componentClassName} {...other}>
+        {children}
+      </div>
     </AccordionContext.Provider>
   );
 };
 
 Accordion.Button = AccordionButton;
 Accordion.Panel = AccordionPanel;
+Accordion.Row = AccordionRow;

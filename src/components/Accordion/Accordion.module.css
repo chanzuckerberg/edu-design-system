@@ -3,9 +3,12 @@
 \*------------------------------------*/
 
 /**
- * Accordion used to hide or reveal content downwards when interacted.
+ * Accordion is one or multiple interactive headings that reveal or hide associated content.
+ *
+ * Outline variant.
  */
-.accordion {
-  border-bottom: var(--eds-border-width-sm) solid
-    var(--eds-theme-color-border-neutral-subtle);
+.accordion--outline {
+  border: var(--eds-theme-color-border-neutral-subtle) solid
+    var(--eds-border-width-sm);
+  border-radius: var(--eds-border-radius-md);
 }
