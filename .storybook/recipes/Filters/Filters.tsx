@@ -1,9 +1,13 @@
 import debounce from 'lodash.debounce';
 import React, { useEffect, useState } from 'react';
-import Checkbox from '../../../src/components/Checkbox';
-import FiltersCheckboxField from '../../../src/components/FiltersCheckboxField';
-import FiltersDrawer from '../../../src/components/FiltersDrawer';
-import { FiltersPopover } from '../../../src/components/FiltersPopover/FiltersPopover';
+import {
+  Checkbox,
+  FiltersCheckboxField,
+  FiltersDrawer,
+  FiltersPopover,
+  Icon,
+  Table,
+} from '../../../src';
 
 import breakpoint from '../../../src/design-tokens/tier-1-definitions/breakpoints';
 
@@ -33,12 +37,16 @@ export const Filters = ({ ...other }) => {
     }
   }, 200);
 
-  const initialCheckedState = [false, false, false];
+  const initialCheckedState = {
+    salad: false,
+    sandwich: false,
+    soup: false,
+  };
   const [checked, setChecked] = useState(initialCheckedState);
 
-  const onCheckboxChange = (index: number) => {
-    const newChecked = [...checked];
-    newChecked[index] = !checked[index];
+  const onCheckboxChange = (food: string) => {
+    const newChecked = { ...checked };
+    newChecked[food] = !checked[food];
     setChecked(newChecked);
   };
 
@@ -58,21 +66,109 @@ export const Filters = ({ ...other }) => {
   const checkboxes = (
     <FiltersCheckboxField legend="Filters Segment 1">
       <Checkbox
-        checked={checked[0]}
-        label="Filters label 1"
-        onChange={() => onCheckboxChange(0)}
+        checked={checked.soup}
+        label="Soup"
+        onChange={() => onCheckboxChange('soup')}
       />
       <Checkbox
-        checked={checked[1]}
-        label="Filters label 2"
-        onChange={() => onCheckboxChange(1)}
+        checked={checked.salad}
+        label="Salad"
+        onChange={() => onCheckboxChange('salad')}
       />
       <Checkbox
-        checked={checked[2]}
-        label="Filters label 3"
-        onChange={() => onCheckboxChange(2)}
+        checked={checked.sandwich}
+        label="Sandwich"
+        onChange={() => onCheckboxChange('sandwich')}
       />
     </FiltersCheckboxField>
+  );
+
+  const foods = [
+    {
+      name: 'Cereal',
+      isSoup: true,
+      isSalad: true,
+      isSandwich: false,
+    },
+    {
+      name: 'Fried Rice',
+      isSoup: false,
+      isSalad: true,
+      isSandwich: false,
+    },
+    {
+      name: 'Hot Dog',
+      isSoup: false,
+      isSalad: false,
+      isSandwich: true,
+    },
+    {
+      name: 'Mashed Potatoes',
+      isSoup: true,
+      isSalad: true,
+      isSandwich: false,
+    },
+    {
+      name: 'Nigiri',
+      isSoup: false,
+      isSalad: true,
+      isSandwich: true,
+    },
+    {
+      name: 'Oatmeal',
+      isSoup: true,
+      isSalad: false,
+      isSandwich: false,
+    },
+    {
+      name: 'Soup in Bread Bowl',
+      isSoup: true,
+      isSalad: false,
+      isSandwich: true,
+    },
+    {
+      name: 'Sloppy Joe',
+      isSoup: true,
+      isSalad: true,
+      isSandwich: true,
+    },
+  ];
+  const foodTable = (
+    <Table>
+      <Table.Header>
+        <Table.Row variant="header">
+          <Table.HeaderCell>Food</Table.HeaderCell>
+          <Table.HeaderCell className="text-center">Soup</Table.HeaderCell>
+          <Table.HeaderCell className="text-center">Salad</Table.HeaderCell>
+          <Table.HeaderCell className="text-center">Sandwich</Table.HeaderCell>
+        </Table.Row>
+      </Table.Header>
+      <Table.Body>
+        {foods.map((food) => (
+          <Table.Row key={'table-row-' + food.name}>
+            <Table.Cell>{food.name}</Table.Cell>
+            <Table.Cell className="text-center">
+              {(food.isSoup && (
+                <Icon name="star" purpose="informative" title="is soup" />
+              )) ||
+                ''}
+            </Table.Cell>
+            <Table.Cell className="text-center">
+              {(food.isSalad && (
+                <Icon name="star" purpose="informative" title="is salad" />
+              )) ||
+                ''}
+            </Table.Cell>
+            <Table.Cell className="text-center">
+              {(food.isSandwich && (
+                <Icon name="star" purpose="informative" title="is sandwich" />
+              )) ||
+                ''}
+            </Table.Cell>
+          </Table.Row>
+        ))}
+      </Table.Body>
+    </Table>
   );
 
   const sharedProps = {
@@ -87,6 +183,7 @@ export const Filters = ({ ...other }) => {
       {isLarge && (
         <FiltersPopover placement="bottom-start" {...sharedProps} {...other} />
       )}
+      {foodTable}
     </div>
   );
 };
