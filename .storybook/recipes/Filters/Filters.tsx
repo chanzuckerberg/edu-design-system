@@ -37,12 +37,11 @@ export const Filters = ({ ...other }) => {
     }
   }, 200);
 
-  const initialCheckedState = {
+  const [checked, setChecked] = useState({
     salad: false,
     sandwich: false,
     soup: false,
-  };
-  const [checked, setChecked] = useState(initialCheckedState);
+  });
 
   const onCheckboxChange = (food: string) => {
     const newChecked = { ...checked };
@@ -133,21 +132,35 @@ export const Filters = ({ ...other }) => {
       isSandwich: true,
     },
   ];
+
+  const filteredFoods = foods
+    .filter((food) => (checked.salad ? checked.salad === food.isSalad : true))
+    .filter((food) => (checked.soup ? checked.soup === food.isSoup : true))
+    .filter((food) =>
+      checked.sandwich ? checked.sandwich === food.isSandwich : true,
+    );
+
   const foodTable = (
     <Table>
       <Table.Header>
         <Table.Row variant="header">
-          <Table.HeaderCell>Food</Table.HeaderCell>
-          <Table.HeaderCell className="text-center">Soup</Table.HeaderCell>
-          <Table.HeaderCell className="text-center">Salad</Table.HeaderCell>
-          <Table.HeaderCell className="text-center">Sandwich</Table.HeaderCell>
+          <Table.HeaderCell className="w-1/4">Food</Table.HeaderCell>
+          <Table.HeaderCell className="text-center w-1/4">
+            Soup
+          </Table.HeaderCell>
+          <Table.HeaderCell className="text-center w-1/4">
+            Salad
+          </Table.HeaderCell>
+          <Table.HeaderCell className="text-center w-1/4">
+            Sandwich
+          </Table.HeaderCell>
         </Table.Row>
       </Table.Header>
       <Table.Body>
-        {foods.map((food) => (
+        {filteredFoods.map((food) => (
           <Table.Row key={'table-row-' + food.name}>
             <Table.Cell>{food.name}</Table.Cell>
-            <Table.Cell className="text-center">
+            <Table.Cell className="text-center w-1/4">
               {(food.isSoup && (
                 <Icon name="star" purpose="informative" title="is soup" />
               )) ||
