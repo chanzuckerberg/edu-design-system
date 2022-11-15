@@ -18,16 +18,6 @@ export const Filters = ({ ...other }) => {
   const [isLarge, setIsLarge] = useState(false);
   const popoverBreakpoint = parseInt(breakpoint['eds-bp-md'], 10) * 16;
 
-  // FIXME
-  // eslint-disable-next-line @chanzuckerberg/edu-react/use-effect-deps-presence
-  useEffect(() => {
-    updateScreenSize();
-    window.addEventListener('resize', updateScreenSize);
-    return () => {
-      window.removeEventListener('resize', updateScreenSize);
-    };
-  });
-
   const updateScreenSize = debounce(() => {
     if (window.innerWidth >= popoverBreakpoint && !isLarge) {
       setIsLarge(true);
@@ -36,6 +26,14 @@ export const Filters = ({ ...other }) => {
       setIsLarge(false);
     }
   }, 200);
+
+  useEffect(() => {
+    updateScreenSize();
+    window.addEventListener('resize', updateScreenSize);
+    return () => {
+      window.removeEventListener('resize', updateScreenSize);
+    };
+  }, [updateScreenSize]);
 
   const [checked, setChecked] = useState({
     salad: false,
@@ -53,8 +51,7 @@ export const Filters = ({ ...other }) => {
    * Counts how many filters have been applied.
    */
   const filterCount = Object.values(checked).reduce((count: number, status) => {
-    if (status) return count + 1;
-    else return count;
+    return status ? count + 1 : count;
   }, 0);
 
   const hasSelectedFilters = filterCount > 0;
@@ -131,14 +128,26 @@ export const Filters = ({ ...other }) => {
       isSalad: true,
       isSandwich: true,
     },
+    {
+      name: 'Vanilla Soy Latte',
+      isSoup: true,
+      isSalad: false,
+      isSandwich: false,
+    },
   ];
 
+  /**
+   * Utility function for checking if filter category has been applied.
+   * If filter has not been applied, should not filter for the food.
+   */
+  const whenChecked = (filter: boolean | undefined, data: boolean) =>
+    filter ? filter === data : true;
+
+  // Filter for foods that have been checked.
   const filteredFoods = foods
-    .filter((food) => (checked.salad ? checked.salad === food.isSalad : true))
-    .filter((food) => (checked.soup ? checked.soup === food.isSoup : true))
-    .filter((food) =>
-      checked.sandwich ? checked.sandwich === food.isSandwich : true,
-    );
+    .filter((food) => whenChecked(checked.salad, food.isSalad))
+    .filter((food) => whenChecked(checked.soup, food.isSoup))
+    .filter((food) => whenChecked(checked.sandwich, food.isSandwich));
 
   const foodTable = (
     <Table>
@@ -188,14 +197,13 @@ export const Filters = ({ ...other }) => {
     hasSelectedFilters,
     triggerText,
     children: checkboxes,
+    ...other,
   };
 
   return (
     <div>
-      {!isLarge && <FiltersDrawer {...sharedProps} {...other} />}
-      {isLarge && (
-        <FiltersPopover placement="bottom-start" {...sharedProps} {...other} />
-      )}
+      {!isLarge && <FiltersDrawer {...sharedProps} />}
+      {isLarge && <FiltersPopover placement="bottom-start" {...sharedProps} />}
       {foodTable}
     </div>
   );
