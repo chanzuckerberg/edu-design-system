@@ -140,7 +140,7 @@ export const Filters = ({ ...other }) => {
    * Utility function for checking if filter category has been applied.
    * If filter has not been applied, should not filter for the food.
    */
-  const whenChecked = (filter: boolean | undefined, data: boolean) =>
+  const whenChecked = (filter: boolean, data: boolean) =>
     filter ? filter === data : true;
 
   // Filter for foods that have been checked.
