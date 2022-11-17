@@ -376,7 +376,7 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
             styles['watch-page__textarea'],
             styles['watch-page__teacher-notes-textarea'],
           )}
-          placeholder="Add any notes about Benjamin here. Only you can see them."
+          placeholder="Add any notes about Mikaela here. Only you can see them."
         ></textarea>
         <Button className="w-full mt-2 mb-16" variant="secondary">
           Save
