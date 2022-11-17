@@ -158,7 +158,7 @@
 
 .watch-page__teacher-notes-tooltip {
   /**
-   * NOTE: You should never use a tier 1 token like this, but it's necessary
+   * NOTE: We would normally use a token here, but we're using the raw value
    * for this demo because the tooltip is being rendered outside of this storybook
    * page and is therefore also outside of the context in which our themed variables
    * are defined. In the context of a different app where the themed variables are
