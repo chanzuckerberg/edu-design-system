@@ -27,8 +27,8 @@
 }
 
 .logged-out-page__header-img {
+  height: 10rem;
   display: none;
-  width: 8rem;
 
   @media screen and (min-width: $eds-bp-md) {
     display: block;
