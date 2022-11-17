@@ -90,9 +90,29 @@ function minifyCSSVarDictionary(obj) {
 }
 
 /**
- * Tokens with key '@' mean the value of the parent is the value of '@', e.g.:
- * {background: {neutral: {@: 'value' }}} is compiled to `background-neutral-default-@: 'value'`
+ * Tokens with key '@' are the base value of the parent, e.g.
+ * {background: {neutral: {@: 'value' }}} is compiled to `background-neutral-default-@: 'value'`,
  * but we want this to look like `background-neutral: 'value'`.
+ *
+ * This function moves the '@' token out to be a sibling of the parent with the '@' part of
+ * the name removed.
+ *
+ * Example:
+ * "neutral": {
+ *   "default": {
+ *     "@": "var(--eds-theme-color-border-neutral-default)",
+ *     "hover": "var(--eds-theme-color-border-neutral-default-hover)"
+ *   },
+ * },
+ *
+ * will be changed to
+ *
+ * "neutral": {
+ *   "default": {
+ *     "hover": "var(--eds-theme-color-border-neutral-default-hover)"
+ *   },
+ * },
+ * "neutral-default": "var(--eds-theme-color-border-neutral-default)",
  *
  * This helper function makes this happen by
  * 1) Scanning great grandchildren for the key '@'
