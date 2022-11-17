@@ -1,11 +1,14 @@
 import type { StoryObj } from '@storybook/react';
-import React from 'react';
-import { ThemingDocumentation } from './ThemingDocumentation';
+import React, { useEffect } from 'react';
 import ThemingDocs from '../../../docs/THEMING.md';
+import { LayoutContainer } from '../../../src/components/LayoutContainer/LayoutContainer';
+import { LayoutLinelengthContainer } from '../../../src/components/LayoutLinelengthContainer/LayoutLinelengthContainer';
+// @ts-expect-error prism.js must be in JS
+import Prism from '../Docs/prism';
 
 export default {
   title: 'Documentation/Theming',
-  component: ThemingDocumentation,
+  component: ThemingDocs,
   parameters: {
     chromatic: { disableSnapshot: true },
     axe: {
@@ -14,10 +17,19 @@ export default {
   },
 };
 
-type Args = React.ComponentProps<typeof ThemingDocumentation>;
+const ThemingDocumentation: React.FC = () => {
+  useEffect(() => {
+    Prism.highlightAll();
+  }, []);
+  return (
+    <LayoutContainer>
+      <LayoutLinelengthContainer>
+        <ThemingDocs />
+      </LayoutLinelengthContainer>
+    </LayoutContainer>
+  );
+};
 
-export const Theming: StoryObj<Args> = {
-  args: {
-    children: <ThemingDocs />,
-  },
+export const Theming: StoryObj = {
+  render: () => <ThemingDocumentation />,
 };
