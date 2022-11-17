@@ -47,7 +47,7 @@
   src: url('./fonts/MintGroteskV1.1-Medium.woff2') format('woff2');
 }
 
-/* TODO: move these into .storybook/ and update build:storybook to load these static files as well */
+/* TODO: move these into .storybook/ */
 @font-face {
   font-family: 'Balsamiq Sans';
   font-weight: 400;
