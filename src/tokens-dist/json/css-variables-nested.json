@@ -185,15 +185,12 @@
         "background": {
           "neutral": {
             "default": {
-              "@": "var(--eds-theme-color-background-neutral-default)",
               "hover": "var(--eds-theme-color-background-neutral-default-hover)"
             },
             "subtle": {
-              "@": "var(--eds-theme-color-background-neutral-subtle)",
               "hover": "var(--eds-theme-color-background-neutral-subtle-hover)"
             },
             "medium": {
-              "@": "var(--eds-theme-color-background-neutral-medium)",
               "hover": "var(--eds-theme-color-background-neutral-medium-hover)"
             }
           },
@@ -201,10 +198,10 @@
             "primary": {
               "default": "var(--eds-theme-color-background-brand-primary-default)",
               "strong": {
-                "@": "var(--eds-theme-color-background-brand-primary-strong)",
                 "hover": "var(--eds-theme-color-background-brand-primary-strong-hover)"
               }
-            }
+            },
+            "primary-strong": "var(--eds-theme-color-background-brand-primary-strong)"
           },
           "utility": {
             "success": "var(--eds-theme-color-background-utility-success)",
@@ -225,7 +222,10 @@
               "subtle": "var(--eds-theme-color-background-grade-stop-subtle)"
             }
           },
-          "disabled": "var(--eds-theme-color-background-disabled)"
+          "disabled": "var(--eds-theme-color-background-disabled)",
+          "neutral-default": "var(--eds-theme-color-background-neutral-default)",
+          "neutral-subtle": "var(--eds-theme-color-background-neutral-subtle)",
+          "neutral-medium": "var(--eds-theme-color-background-neutral-medium)"
         },
         "border": {
           "link": {
@@ -234,22 +234,18 @@
           },
           "neutral": {
             "subtle": {
-              "@": "var(--eds-theme-color-border-neutral-subtle)",
               "hover": "var(--eds-theme-color-border-neutral-subtle-hover)"
             },
             "default": {
-              "@": "var(--eds-theme-color-border-neutral-default)",
               "hover": "var(--eds-theme-color-border-neutral-default-hover)"
             },
             "strong": {
-              "@": "var(--eds-theme-color-border-neutral-strong)",
               "hover": "var(--eds-theme-color-border-neutral-strong-hover)"
             }
           },
           "brand": {
             "primary": {
               "subtle": "var(--eds-theme-color-border-brand-primary-subtle)",
-              "@": "var(--eds-theme-color-border-brand-primary)",
               "strong": "var(--eds-theme-color-border-brand-primary-strong)"
             }
           },
@@ -279,70 +275,73 @@
             },
             "stop": "var(--eds-theme-color-border-grade-stop)"
           },
-          "disabled": "var(--eds-theme-color-border-disabled)"
+          "disabled": "var(--eds-theme-color-border-disabled)",
+          "neutral-subtle": "var(--eds-theme-color-border-neutral-subtle)",
+          "neutral-default": "var(--eds-theme-color-border-neutral-default)",
+          "neutral-strong": "var(--eds-theme-color-border-neutral-strong)",
+          "brand-primary": "var(--eds-theme-color-border-brand-primary)"
         },
         "icon": {
           "neutral": {
             "default": {
-              "@": "var(--eds-theme-color-icon-neutral-default)",
               "inverse": "var(--eds-theme-color-icon-neutral-default-inverse)",
               "hover": "var(--eds-theme-color-icon-neutral-default-hover)"
             },
             "strong": {
-              "@": "var(--eds-theme-color-icon-neutral-strong)",
               "hover": "var(--eds-theme-color-icon-neutral-strong-hover)"
             },
             "subtle": {
-              "@": "var(--eds-theme-color-icon-neutral-subtle)",
               "hover": "var(--eds-theme-color-icon-neutral-subtle-hover)"
             }
           },
           "link": {
             "default": {
-              "@": "var(--eds-theme-color-icon-link-default)",
               "hover": "var(--eds-theme-color-icon-link-default-hover)"
             }
           },
           "brand": {
             "primary": {
-              "@": "var(--eds-theme-color-icon-brand-primary)",
               "hover": "var(--eds-theme-color-icon-brand-primary-hover)"
             }
           },
           "utility": {
             "success": {
-              "@": "var(--eds-theme-color-icon-utility-success)",
               "hover": "var(--eds-theme-color-icon-utility-success-hover)"
             },
             "warning": {
-              "@": "var(--eds-theme-color-icon-utility-warning)",
               "hover": "var(--eds-theme-color-icon-utility-warning-hover)"
             },
             "error": {
-              "@": "var(--eds-theme-color-icon-utility-error)",
               "hover": "var(--eds-theme-color-icon-utility-error-hover)"
             }
           },
           "grade": {
             "complete": {
-              "@": "var(--eds-theme-color-icon-grade-complete)",
               "hover": "var(--eds-theme-color-icon-grade-complete-hover)"
             },
             "revise": {
-              "@": "var(--eds-theme-color-icon-grade-revise)",
               "hover": "var(--eds-theme-color-icon-grade-revise-hover)"
             },
             "stop": {
-              "@": "var(--eds-theme-color-icon-grade-stop)",
               "hover": "var(--eds-theme-color-icon-grade-stop-hover)"
             }
           },
-          "disabled": "var(--eds-theme-color-icon-disabled)"
+          "disabled": "var(--eds-theme-color-icon-disabled)",
+          "neutral-default": "var(--eds-theme-color-icon-neutral-default)",
+          "neutral-strong": "var(--eds-theme-color-icon-neutral-strong)",
+          "neutral-subtle": "var(--eds-theme-color-icon-neutral-subtle)",
+          "link-default": "var(--eds-theme-color-icon-link-default)",
+          "brand-primary": "var(--eds-theme-color-icon-brand-primary)",
+          "utility-success": "var(--eds-theme-color-icon-utility-success)",
+          "utility-warning": "var(--eds-theme-color-icon-utility-warning)",
+          "utility-error": "var(--eds-theme-color-icon-utility-error)",
+          "grade-complete": "var(--eds-theme-color-icon-grade-complete)",
+          "grade-revise": "var(--eds-theme-color-icon-grade-revise)",
+          "grade-stop": "var(--eds-theme-color-icon-grade-stop)"
         },
         "text": {
           "neutral": {
             "default": {
-              "@": "var(--eds-theme-color-text-neutral-default)",
               "inverse": "var(--eds-theme-color-text-neutral-default-inverse)"
             },
             "strong": "var(--eds-theme-color-text-neutral-strong)",
@@ -365,7 +364,8 @@
           "disabled": "var(--eds-theme-color-text-disabled)",
           "brand": {
             "primary": "var(--eds-theme-color-text-brand-primary)"
-          }
+          },
+          "neutral-default": "var(--eds-theme-color-text-neutral-default)"
         },
         "transparent": {
           "black": {
@@ -378,7 +378,6 @@
         },
         "body": {
           "background": {
-            "@": "var(--eds-theme-color-body-background)",
             "inverted": "var(--eds-theme-color-body-background-inverted)"
           }
         },
@@ -386,265 +385,262 @@
           "primary": {
             "brand": {
               "background": {
-                "@": "var(--eds-theme-color-button-primary-brand-background)",
                 "hover": "var(--eds-theme-color-button-primary-brand-background-hover)",
                 "active": "var(--eds-theme-color-button-primary-brand-background-active)"
               },
               "border": {
-                "@": "var(--eds-theme-color-button-primary-brand-border)",
                 "hover": "var(--eds-theme-color-button-primary-brand-border-hover)",
                 "active": "var(--eds-theme-color-button-primary-brand-border-active)"
               },
               "text": {
-                "@": "var(--eds-theme-color-button-primary-brand-text)",
                 "hover": "var(--eds-theme-color-button-primary-brand-text-hover)",
                 "active": "var(--eds-theme-color-button-primary-brand-text-active)"
               }
             },
             "error": {
               "background": {
-                "@": "var(--eds-theme-color-button-primary-error-background)",
                 "hover": "var(--eds-theme-color-button-primary-error-background-hover)",
                 "active": "var(--eds-theme-color-button-primary-error-background-active)"
               },
               "border": {
-                "@": "var(--eds-theme-color-button-primary-error-border)",
                 "hover": "var(--eds-theme-color-button-primary-error-border-hover)",
                 "active": "var(--eds-theme-color-button-primary-error-border-active)"
               },
               "text": {
-                "@": "var(--eds-theme-color-button-primary-error-text)",
                 "hover": "var(--eds-theme-color-button-primary-error-text-hover)",
                 "active": "var(--eds-theme-color-button-primary-error-text-active)"
               }
-            }
+            },
+            "brand-background": "var(--eds-theme-color-button-primary-brand-background)",
+            "brand-border": "var(--eds-theme-color-button-primary-brand-border)",
+            "brand-text": "var(--eds-theme-color-button-primary-brand-text)",
+            "error-background": "var(--eds-theme-color-button-primary-error-background)",
+            "error-border": "var(--eds-theme-color-button-primary-error-border)",
+            "error-text": "var(--eds-theme-color-button-primary-error-text)"
           },
           "secondary": {
             "brand": {
               "background": {
-                "@": "var(--eds-theme-color-button-secondary-brand-background)",
                 "hover": "var(--eds-theme-color-button-secondary-brand-background-hover)",
                 "active": "var(--eds-theme-color-button-secondary-brand-background-active)"
               },
               "border": {
-                "@": "var(--eds-theme-color-button-secondary-brand-border)",
                 "hover": "var(--eds-theme-color-button-secondary-brand-border-hover)",
                 "active": "var(--eds-theme-color-button-secondary-brand-border-active)"
               },
               "text": {
-                "@": "var(--eds-theme-color-button-secondary-brand-text)",
                 "hover": "var(--eds-theme-color-button-secondary-brand-text-hover)",
                 "active": "var(--eds-theme-color-button-secondary-brand-text-active)"
               },
               "icon": {
-                "@": "var(--eds-theme-color-button-secondary-brand-icon)",
                 "hover": "var(--eds-theme-color-button-secondary-brand-icon-hover)",
                 "active": "var(--eds-theme-color-button-secondary-brand-icon-active)"
               }
             },
             "neutral": {
               "background": {
-                "@": "var(--eds-theme-color-button-secondary-neutral-background)",
                 "hover": "var(--eds-theme-color-button-secondary-neutral-background-hover)",
                 "active": "var(--eds-theme-color-button-secondary-neutral-background-active)"
               },
               "border": {
-                "@": "var(--eds-theme-color-button-secondary-neutral-border)",
                 "hover": "var(--eds-theme-color-button-secondary-neutral-border-hover)",
                 "active": "var(--eds-theme-color-button-secondary-neutral-border-active)"
               },
               "text": {
-                "@": "var(--eds-theme-color-button-secondary-neutral-text)",
                 "hover": "var(--eds-theme-color-button-secondary-neutral-text-hover)",
                 "active": "var(--eds-theme-color-button-secondary-neutral-text-active)"
               },
               "icon": {
-                "@": "var(--eds-theme-color-button-secondary-neutral-icon)",
                 "hover": "var(--eds-theme-color-button-secondary-neutral-icon-hover)",
                 "active": "var(--eds-theme-color-button-secondary-neutral-icon-active)"
               }
             },
             "success": {
               "background": {
-                "@": "var(--eds-theme-color-button-secondary-success-background)",
                 "hover": "var(--eds-theme-color-button-secondary-success-background-hover)",
                 "active": "var(--eds-theme-color-button-secondary-success-background-active)"
               },
               "border": {
-                "@": "var(--eds-theme-color-button-secondary-success-border)",
                 "hover": "var(--eds-theme-color-button-secondary-success-border-hover)",
                 "active": "var(--eds-theme-color-button-secondary-success-border-active)"
               },
               "text": {
-                "@": "var(--eds-theme-color-button-secondary-success-text)",
                 "hover": "var(--eds-theme-color-button-secondary-success-text-hover)",
                 "active": "var(--eds-theme-color-button-secondary-success-text-active)"
               },
               "icon": {
-                "@": "var(--eds-theme-color-button-secondary-success-icon)",
                 "hover": "var(--eds-theme-color-button-secondary-success-icon-hover)",
                 "active": "var(--eds-theme-color-button-secondary-success-icon-active)"
               }
             },
             "warning": {
               "background": {
-                "@": "var(--eds-theme-color-button-secondary-warning-background)",
                 "hover": "var(--eds-theme-color-button-secondary-warning-background-hover)",
                 "active": "var(--eds-theme-color-button-secondary-warning-background-active)"
               },
               "border": {
-                "@": "var(--eds-theme-color-button-secondary-warning-border)",
                 "hover": "var(--eds-theme-color-button-secondary-warning-border-hover)",
                 "active": "var(--eds-theme-color-button-secondary-warning-border-active)"
               },
               "text": {
-                "@": "var(--eds-theme-color-button-secondary-warning-text)",
                 "hover": "var(--eds-theme-color-button-secondary-warning-text-hover)",
                 "active": "var(--eds-theme-color-button-secondary-warning-text-active)"
               },
               "icon": {
-                "@": "var(--eds-theme-color-button-secondary-warning-icon)",
                 "hover": "var(--eds-theme-color-button-secondary-warning-icon-hover)",
                 "active": "var(--eds-theme-color-button-secondary-warning-icon-active)"
               }
             },
             "error": {
               "background": {
-                "@": "var(--eds-theme-color-button-secondary-error-background)",
                 "hover": "var(--eds-theme-color-button-secondary-error-background-hover)",
                 "active": "var(--eds-theme-color-button-secondary-error-background-active)"
               },
               "border": {
-                "@": "var(--eds-theme-color-button-secondary-error-border)",
                 "hover": "var(--eds-theme-color-button-secondary-error-border-hover)",
                 "active": "var(--eds-theme-color-button-secondary-error-border-active)"
               },
               "text": {
-                "@": "var(--eds-theme-color-button-secondary-error-text)",
                 "hover": "var(--eds-theme-color-button-secondary-error-text-hover)",
                 "active": "var(--eds-theme-color-button-secondary-error-text-active)"
               },
               "icon": {
-                "@": "var(--eds-theme-color-button-secondary-error-icon)",
                 "hover": "var(--eds-theme-color-button-secondary-error-icon-hover)",
                 "active": "var(--eds-theme-color-button-secondary-error-icon-active)"
               }
-            }
+            },
+            "brand-background": "var(--eds-theme-color-button-secondary-brand-background)",
+            "brand-border": "var(--eds-theme-color-button-secondary-brand-border)",
+            "brand-text": "var(--eds-theme-color-button-secondary-brand-text)",
+            "brand-icon": "var(--eds-theme-color-button-secondary-brand-icon)",
+            "neutral-background": "var(--eds-theme-color-button-secondary-neutral-background)",
+            "neutral-border": "var(--eds-theme-color-button-secondary-neutral-border)",
+            "neutral-text": "var(--eds-theme-color-button-secondary-neutral-text)",
+            "neutral-icon": "var(--eds-theme-color-button-secondary-neutral-icon)",
+            "success-background": "var(--eds-theme-color-button-secondary-success-background)",
+            "success-border": "var(--eds-theme-color-button-secondary-success-border)",
+            "success-text": "var(--eds-theme-color-button-secondary-success-text)",
+            "success-icon": "var(--eds-theme-color-button-secondary-success-icon)",
+            "warning-background": "var(--eds-theme-color-button-secondary-warning-background)",
+            "warning-border": "var(--eds-theme-color-button-secondary-warning-border)",
+            "warning-text": "var(--eds-theme-color-button-secondary-warning-text)",
+            "warning-icon": "var(--eds-theme-color-button-secondary-warning-icon)",
+            "error-background": "var(--eds-theme-color-button-secondary-error-background)",
+            "error-border": "var(--eds-theme-color-button-secondary-error-border)",
+            "error-text": "var(--eds-theme-color-button-secondary-error-text)",
+            "error-icon": "var(--eds-theme-color-button-secondary-error-icon)"
           },
           "icon": {
             "brand": {
-              "@": "var(--eds-theme-color-button-icon-brand)",
               "hover": "var(--eds-theme-color-button-icon-brand-hover)",
               "active": "var(--eds-theme-color-button-icon-brand-active)",
               "background": {
-                "@": "var(--eds-theme-color-button-icon-brand-background)",
                 "hover": "var(--eds-theme-color-button-icon-brand-background-hover)",
                 "active": "var(--eds-theme-color-button-icon-brand-background-active)"
               },
               "border": {
-                "@": "var(--eds-theme-color-button-icon-brand-border)",
                 "hover": "var(--eds-theme-color-button-icon-brand-border-hover)",
                 "active": "var(--eds-theme-color-button-icon-brand-border-active)"
               },
               "text": {
-                "@": "var(--eds-theme-color-button-icon-brand-text)",
                 "hover": "var(--eds-theme-color-button-icon-brand-text-hover)",
                 "active": "var(--eds-theme-color-button-icon-brand-text-active)"
               }
             },
             "neutral": {
-              "@": "var(--eds-theme-color-button-icon-neutral)",
               "hover": "var(--eds-theme-color-button-icon-neutral-hover)",
               "active": "var(--eds-theme-color-button-icon-neutral-active)",
               "background": {
-                "@": "var(--eds-theme-color-button-icon-neutral-background)",
                 "hover": "var(--eds-theme-color-button-icon-neutral-background-hover)",
                 "active": "var(--eds-theme-color-button-icon-neutral-background-active)"
               },
               "border": {
-                "@": "var(--eds-theme-color-button-icon-neutral-border)",
                 "hover": "var(--eds-theme-color-button-icon-neutral-border-hover)",
                 "active": "var(--eds-theme-color-button-icon-neutral-border-active)"
               },
               "text": {
-                "@": "var(--eds-theme-color-button-icon-neutral-text)",
                 "hover": "var(--eds-theme-color-button-icon-neutral-text-hover)",
                 "active": "var(--eds-theme-color-button-icon-neutral-text-active)"
               }
             },
             "success": {
-              "@": "var(--eds-theme-color-button-icon-success)",
               "hover": "var(--eds-theme-color-button-icon-success-hover)",
               "active": "var(--eds-theme-color-button-icon-success-active)",
               "background": {
-                "@": "var(--eds-theme-color-button-icon-success-background)",
                 "hover": "var(--eds-theme-color-button-icon-success-background-hover)",
                 "active": "var(--eds-theme-color-button-icon-success-background-active)"
               },
               "border": {
-                "@": "var(--eds-theme-color-button-icon-success-border)",
                 "hover": "var(--eds-theme-color-button-icon-success-border-hover)",
                 "active": "var(--eds-theme-color-button-icon-success-border-active)"
               },
               "text": {
-                "@": "var(--eds-theme-color-button-icon-success-text)",
                 "hover": "var(--eds-theme-color-button-icon-success-text-hover)",
                 "active": "var(--eds-theme-color-button-icon-success-text-active)"
               }
             },
             "warning": {
-              "@": "var(--eds-theme-color-button-icon-warning)",
               "hover": "var(--eds-theme-color-button-icon-warning-hover)",
               "active": "var(--eds-theme-color-button-icon-warning-active)",
               "background": {
-                "@": "var(--eds-theme-color-button-icon-warning-background)",
                 "hover": "var(--eds-theme-color-button-icon-warning-background-hover)",
                 "active": "var(--eds-theme-color-button-icon-warning-background-active)"
               },
               "border": {
-                "@": "var(--eds-theme-color-button-icon-warning-border)",
                 "hover": "var(--eds-theme-color-button-icon-warning-border-hover)",
                 "active": "var(--eds-theme-color-button-icon-warning-border-active)"
               },
               "text": {
-                "@": "var(--eds-theme-color-button-icon-warning-text)",
                 "hover": "var(--eds-theme-color-button-icon-warning-text-hover)",
                 "active": "var(--eds-theme-color-button-icon-warning-text-active)"
               }
             },
             "error": {
-              "@": "var(--eds-theme-color-button-icon-error)",
               "hover": "var(--eds-theme-color-button-icon-error-hover)",
               "active": "var(--eds-theme-color-button-icon-error-active)",
               "background": {
-                "@": "var(--eds-theme-color-button-icon-error-background)",
                 "hover": "var(--eds-theme-color-button-icon-error-background-hover)",
                 "active": "var(--eds-theme-color-button-icon-error-background-active)"
               },
               "border": {
-                "@": "var(--eds-theme-color-button-icon-error-border)",
                 "hover": "var(--eds-theme-color-button-icon-error-border-hover)",
                 "active": "var(--eds-theme-color-button-icon-error-border-active)"
               },
               "text": {
-                "@": "var(--eds-theme-color-button-icon-error-text)",
                 "hover": "var(--eds-theme-color-button-icon-error-text-hover)",
                 "active": "var(--eds-theme-color-button-icon-error-text-active)"
               }
-            }
-          }
+            },
+            "brand-background": "var(--eds-theme-color-button-icon-brand-background)",
+            "brand-border": "var(--eds-theme-color-button-icon-brand-border)",
+            "brand-text": "var(--eds-theme-color-button-icon-brand-text)",
+            "neutral-background": "var(--eds-theme-color-button-icon-neutral-background)",
+            "neutral-border": "var(--eds-theme-color-button-icon-neutral-border)",
+            "neutral-text": "var(--eds-theme-color-button-icon-neutral-text)",
+            "success-background": "var(--eds-theme-color-button-icon-success-background)",
+            "success-border": "var(--eds-theme-color-button-icon-success-border)",
+            "success-text": "var(--eds-theme-color-button-icon-success-text)",
+            "warning-background": "var(--eds-theme-color-button-icon-warning-background)",
+            "warning-border": "var(--eds-theme-color-button-icon-warning-border)",
+            "warning-text": "var(--eds-theme-color-button-icon-warning-text)",
+            "error-background": "var(--eds-theme-color-button-icon-error-background)",
+            "error-border": "var(--eds-theme-color-button-icon-error-border)",
+            "error-text": "var(--eds-theme-color-button-icon-error-text)"
+          },
+          "icon-brand": "var(--eds-theme-color-button-icon-brand)",
+          "icon-neutral": "var(--eds-theme-color-button-icon-neutral)",
+          "icon-success": "var(--eds-theme-color-button-icon-success)",
+          "icon-warning": "var(--eds-theme-color-button-icon-warning)",
+          "icon-error": "var(--eds-theme-color-button-icon-error)"
         },
         "focus-ring": {
-          "@": "var(--eds-theme-color-focus-ring)",
           "inverted": "var(--eds-theme-color-focus-ring-inverted)"
         },
         "form": {
           "border": {
-            "@": "var(--eds-theme-color-form-border)",
             "hover": "var(--eds-theme-color-form-border-hover)"
           },
           "background": {
-            "@": "var(--eds-theme-color-form-background)",
             "hover": "var(--eds-theme-color-form-background-hover)"
           },
           "label": "var(--eds-theme-color-form-label)"
@@ -652,14 +648,18 @@
         "text-highlight": {
           "foreground": "var(--eds-theme-color-text-highlight-foreground)",
           "background": "var(--eds-theme-color-text-highlight-background)"
-        }
+        },
+        "body-background": "var(--eds-theme-color-body-background)",
+        "form-border": "var(--eds-theme-color-form-border)",
+        "form-background": "var(--eds-theme-color-form-background)"
       },
       "form": {
         "border": {
           "width": "var(--eds-theme-form-border-width)",
           "radius": "var(--eds-theme-form-border-radius)"
         }
-      }
+      },
+      "color-focus-ring": "var(--eds-theme-color-focus-ring)"
     }
   },
   "legacy": {
