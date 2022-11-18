@@ -7,7 +7,17 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### ⚠ BREAKING CHANGES
 
-* **table:** don't require caption
+* **table:**
+  * removes `caption` and `hideCaption` prop in favor of `<TableCaption>` subcomponent and native `table` element attributes such as title
+  * removes `behavior` prop and hence the `stacked` variant. Similar behavior is represented in `StackedCardsToTable` recipe
+  * removes `variant` prop and hence `zebra` variant, since rows can be styled for it
+  * removes `highlightFirstCell` prop 
+* **table-cell:**
+  * removes `align` and `verticalAlign` prop since deprecated on MDN, can be styled with CSS
+  * removes `behavior` prop which was not used in the component
+  * removes `wrap` prop since not native `<td>` attribute. Can be styled with CSS
+* **table-row:**
+  * removes `behavior`, `variant` props which were never used in the component
 
 ### Features
 
