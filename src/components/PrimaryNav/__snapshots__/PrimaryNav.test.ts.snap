@@ -23,7 +23,7 @@ exports[`<PrimaryNav /> Default story renders snapshot 1`] = `
           <svg
             aria-hidden="true"
             class="icon primary-nav__icon"
-            fill="#FFFFFF"
+            fill="currentColor"
             height="1.25rem"
             style="--icon-size: 1.25rem;"
             width="1.25rem"
@@ -48,7 +48,7 @@ exports[`<PrimaryNav /> Default story renders snapshot 1`] = `
           <svg
             aria-hidden="true"
             class="icon primary-nav__icon"
-            fill="#FFFFFF"
+            fill="currentColor"
             height="1.25rem"
             style="--icon-size: 1.25rem;"
             width="1.25rem"
@@ -73,7 +73,7 @@ exports[`<PrimaryNav /> Default story renders snapshot 1`] = `
           <svg
             aria-hidden="true"
             class="icon primary-nav__icon"
-            fill="#FFFFFF"
+            fill="currentColor"
             height="1.25rem"
             style="--icon-size: 1.25rem;"
             width="1.25rem"
