@@ -21,9 +21,7 @@ import {
 
 import AlongFooterPaper from '../../static/along-footer-paper.svg';
 import AlongLogoBulb from '../../static/along-logo-bulb.svg';
-// @ts-expect-error Cannot find module '../../static/along-user-illustration-1.png' or its corresponding type declarations.
 import AlongUserIllustration1 from '../../static/along-user-illustration-1.png';
-// @ts-expect-error Cannot find module '../../static/along-user-illustration-2.png' or its corresponding type declarations.
 import AlongUserIllustration2 from '../../static/along-user-illustration-2.png';
 import GoogleLogo from '../../static/google-logo.svg';
 import MicrosoftLogo from '../../static/microsoft-logo.svg';
