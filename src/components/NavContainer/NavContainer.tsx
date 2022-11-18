@@ -21,9 +21,7 @@ export interface Props {
 }
 
 /**
- * ```ts
- * import {NavContainer} from "@chanzuckerberg/eds";
- * ```
+ * `import {NavContainer} from "@chanzuckerberg/eds";`
  *
  * Container that houses navigation to be toggled on and off on small screens.
  */

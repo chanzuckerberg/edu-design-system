@@ -27,9 +27,7 @@ export interface Props {
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
- * ```ts
- * import {StackedBlock} from "@chanzuckerberg/eds";
- * ```
+ * `import {StackedBlock} from "@chanzuckerberg/eds";`
  *
  * A stacked block is a block that contains stacked text content, with a
  * text link around the title and a description.

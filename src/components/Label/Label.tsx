@@ -43,9 +43,8 @@ export interface Props {
 }
 
 /**
- * ```ts
- * import {Label} from "@chanzuckerberg/eds";
- * ```
+ * `import {Label} from "@chanzuckerberg/eds";`
+ *
  * Component Label used as legends for field groups (i.e. radio field).
  */
 export const Label = ({

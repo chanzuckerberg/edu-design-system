@@ -8,9 +8,7 @@ import InputField from '../InputField';
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
- * ```ts
- * import {SearchField} from "@chanzuckerberg/eds";
- * ```
+ * `import {SearchField} from "@chanzuckerberg/eds";`
  *
  * A search InputField component styled for use with the SearchBar.
  */

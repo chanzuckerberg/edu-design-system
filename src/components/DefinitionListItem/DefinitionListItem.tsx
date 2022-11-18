@@ -19,9 +19,8 @@ export interface Props {
 }
 
 /**
- * ```ts
- * import {DefinitionListItem} from "@chanzuckerberg/eds";
- * ```
+ * `import {DefinitionListItem} from "@chanzuckerberg/eds";`
+ *
  * DefinitionListItem is the component to show the definition term (`dt`)
  * and a definition description (`dd`)
  */

@@ -15,11 +15,7 @@ export interface Props {
 }
 
 /**
- * Primary UI component for user interaction
- *
- * ```ts
- * import {CardFooter} from "@chanzuckerberg/eds";
- * ```
+ * `import {CardFooter} from "@chanzuckerberg/eds";`
  *
  * Footer of the Card component.
  */

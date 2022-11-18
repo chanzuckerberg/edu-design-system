@@ -37,9 +37,7 @@ export type ButtonProps = ButtonHTMLElementProps & {
 } & VariantStatus;
 
 /**
- * ```ts
- * import {Button} from "@chanzuckerberg/eds";
- * ```
+ * `import {Button} from "@chanzuckerberg/eds";`
  *
  * Component for making buttons that do not navigate the user to another page.
  *

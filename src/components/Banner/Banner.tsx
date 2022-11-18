@@ -91,12 +91,11 @@ const variantToIconAssetsMap: {
 };
 
 /**
- * @deprecated The Banner component is deprecated and will be removed in an upcoming release.
+ * The Banner component is deprecated and will be removed in an upcoming release.
+ *
  * Please visit Zeroheight to find the right notification component for your needs: https://eds.czi.design/
  *
- * ```ts
- * import {Banner} from "@chanzuckerberg/eds";
- * ```
+ * `import {Banner} from "@chanzuckerberg/eds";`
  *
  * A banner used to provide and highlight information to a user or ask for a decision or action.
  *
@@ -110,6 +109,8 @@ const variantToIconAssetsMap: {
  *   action={<Button onClick={handleAction}>Action</Button>}
  * />
  * ```
+ *
+ * @deprecated
  */
 export const Banner = ({
   action,

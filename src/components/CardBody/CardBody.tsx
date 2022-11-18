@@ -15,11 +15,7 @@ export interface Props {
 }
 
 /**
- * Primary UI component for user interaction
- *
- * ```ts
- * import {CardBody} from "@chanzuckerberg/eds";
- * ```
+ * `import {CardBody} from "@chanzuckerberg/eds";`
  *
  * Body of the Card component.
  */

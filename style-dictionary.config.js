@@ -89,14 +89,58 @@ function minifyCSSVarDictionary(obj) {
   return toRet;
 }
 
+/**
+ * Tokens with key '@' are the base value of the parent, e.g.
+ * {background: {neutral: {@: 'value' }}} is compiled to `background-neutral-default-@: 'value'`,
+ * but we want this to look like `background-neutral: 'value'`.
+ *
+ * This function moves the '@' token out to be a sibling of the parent with the '@' part of
+ * the name removed.
+ *
+ * Example:
+ * "neutral": {
+ *   "default": {
+ *     "@": "var(--eds-theme-color-border-neutral-default)",
+ *     "hover": "var(--eds-theme-color-border-neutral-default-hover)"
+ *   },
+ * },
+ *
+ * will be changed to
+ *
+ * "neutral": {
+ *   "default": {
+ *     "hover": "var(--eds-theme-color-border-neutral-default-hover)"
+ *   },
+ * },
+ * "neutral-default": "var(--eds-theme-color-border-neutral-default)",
+ *
+ * This helper function makes this happen by
+ * 1) Scanning great grandchildren for the key '@'
+ * 2) If such key exists, child and grandchild names are combined to make the new child key and value of the great grandchild '@' key is assigned to the new child key
+ * 2.5) The great grandchild '@' key/value pair is deleted for housekeeping.
+ * 3) If such key does not exist, but grand child is an object, recurses with the child to repeat this process.
+ */
+function formatEdsTokens(obj) {
+  for (const name in obj) {
+    if (typeof obj[name] === 'object') {
+      for (const nestedName in obj[name]) {
+        if (obj[name][nestedName]['@']) {
+          obj[name + '-' + nestedName] = obj[name][nestedName]['@'];
+          delete obj[name][nestedName]['@'];
+        } else if (typeof obj[name][nestedName] === 'object') {
+          formatEdsTokens(obj[name]);
+        }
+      }
+    }
+  }
+}
+
 EDSStyleDictionary.registerFormat({
   name: 'json/nested-css-variables',
   formatter: function (dictionary) {
-    return JSON.stringify(
-      minifyCSSVarDictionary(dictionary.properties),
-      null,
-      2,
-    );
+    const minifiedCssDictionary = minifyCSSVarDictionary(dictionary.properties);
+    formatEdsTokens(minifiedCssDictionary);
+    return JSON.stringify(minifiedCssDictionary, null, 2);
   },
 });
 

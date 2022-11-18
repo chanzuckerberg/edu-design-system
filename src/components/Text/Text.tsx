@@ -54,23 +54,24 @@ export type Props = {
 } & React.HTMLAttributes<HTMLElement>;
 
 /**
- * ```ts
- * import {Text} from "@chanzuckerberg/eds";
- * ```
+ * `import {Text} from "@chanzuckerberg/eds";`
  *
  * There are two perceived use cases for the text component.
- * One is to decorate <p> and <span> with thematic variants.
- * Defaults to <p> and should pass as="span" to set as <span>
+ * One is to decorate `<p>` and `<span>` with thematic variants.
+ * Defaults to `<p>` and should pass `as="span"` to set as `<span>`.
  *
  * The second is to provide a wrapper for multiple text elements in usage as a text passage.
- * For such use, should pass as="div" and wrap various <p>, <h1>-<h6>, <a>, <ol>, <ul>, <blockquote>, <hr>.
- * Ex:
- * ```
+ * For such use, should pass as="div" and wrap various elements like `<p>`, `<h1>`-`<h6>`, `<a>`, `<ol>`, `<ul>`, `<blockquote>`, and `<hr>`.
+ *
+ * Example usage:
+ *
+ * ```tsx
  * <Text as="div">
  *   <h1>Heading for the text passage</h1>
  *   <p>First paragraph copy of the text passage</p>
  *   <p>Second paragraph copy of the text passage</p>
  * </Text>
+ * ```
  */
 export const Text = forwardRef(
   (

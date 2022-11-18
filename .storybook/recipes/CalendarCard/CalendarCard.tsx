@@ -52,7 +52,7 @@ interface TagType {
 }
 
 /**
- * Recipe for a Card component to represent an event within calendar UI
+ * Recipe for a Card component to represent an event within calendar UI.
  */
 export const CalendarCard = ({
   children,

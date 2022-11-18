@@ -1,0 +1,14 @@
+/*------------------------------------*\
+    # ACCORDION
+\*------------------------------------*/
+
+/**
+ * Accordion is one or multiple interactive headings that reveal or hide associated content.
+ *
+ * Outline variant.
+ */
+.accordion--outline {
+  border: var(--eds-theme-color-border-neutral-subtle) solid
+    var(--eds-border-width-sm);
+  border-radius: var(--eds-border-radius-md);
+}

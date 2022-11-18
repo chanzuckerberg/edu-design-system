@@ -48,11 +48,9 @@ type ContextRefs = {
 export const DropdownMenuContext = createContext<ContextRefs | null>(null);
 
 /**
- * ```ts
- * import {DropdownMenu} from "@chanzuckerberg/eds";
- * ```
+ * `import {DropdownMenu} from "@chanzuckerberg/eds";`
  *
- * Dropdown menu with actions list
+ * Dropdown menu with actions list.
  */
 export const DropdownMenu: React.FC<Props> = ({
   children,

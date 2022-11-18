@@ -16,9 +16,7 @@ export type Props = {
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
- * ```ts
- * import {DrawerFooter} from "@chanzuckerberg/eds";
- * ```
+ * `import {DrawerFooter} from "@chanzuckerberg/eds";`
  *
  * The footer content of the Drawer component. Usually houses interactible component controlling the Drawer functionality.
  */

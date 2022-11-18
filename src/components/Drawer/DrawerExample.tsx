@@ -7,9 +7,7 @@ import Heading from '../Heading';
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
- * ```ts
- * import {DrawerExample} from "@chanzuckerberg/eds";
- * ```
+ * `import {DrawerExample} from "@chanzuckerberg/eds";`
  *
  * An example of a controlled Drawer for use as a story.
  */

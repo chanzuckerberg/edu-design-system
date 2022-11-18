@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import styles from './CoursePlannerEdit.module.css';
 
 import {
   PageHeader,
@@ -476,7 +477,6 @@ export const CoursePlannerEdit = () => {
       },
     );
   };
-
   return (
     <>
       <Panel className="!mb-6" variant="squared">
@@ -499,7 +499,7 @@ export const CoursePlannerEdit = () => {
               // above it only when the flex-direction is column, so
               // this utility class was written with a media query
               // that matches the behavior of .page-header
-              <ButtonGroup className="u-margin-top-xl-mobile">
+              <ButtonGroup className={styles['button--mobile']}>
                 <Button>
                   <Icon name="arrow-narrow-left" purpose="decorative" />
                   Back

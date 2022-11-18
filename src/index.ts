@@ -1,3 +1,4 @@
+export { default as Accordion } from './components/Accordion';
 export { default as Banner } from './components/Banner';
 export { default as Breadcrumbs } from './components/Breadcrumbs';
 export { default as BreadcrumbsItem } from './components/BreadcrumbsItem';
@@ -78,6 +79,7 @@ export { default as StackedBlock } from './components/StackedBlock';
 export { default as Tab } from './components/Tab';
 export { default as Table } from './components/Table';
 export { default as TableBody } from './components/TableBody';
+export { default as TableCaption } from './components/TableCaption';
 export { default as TableCell } from './components/TableCell';
 export { default as TableFooter } from './components/TableFooter';
 export { default as TableHeader } from './components/TableHeader';
@@ -110,8 +112,6 @@ export type { BannerProps } from './components/Banner';
  * ensures we don't unintentionally blow up the bundle size of
  * consuming apps.
  */
-// export { default as Avatar } from './components/Avatar';
-// export { default as AvatarImage } from './components/AvatarImage';
 // export { default as Header } from './components/Header';
 // export { default as Main } from './components/Main';
 // export { default as NavContainer } from './components/NavContainer';

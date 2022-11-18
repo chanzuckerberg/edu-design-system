@@ -116,9 +116,7 @@ export type InputFieldProps = React.InputHTMLAttributes<HTMLInputElement> & {
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
- * ```ts
- * import {InputField} from "@chanzuckerberg/eds";
- * ```
+ * `import {InputField} from "@chanzuckerberg/eds";`
  *
  * Text input component for one line of text. For multiple lines, consider the Textarea component.
  */

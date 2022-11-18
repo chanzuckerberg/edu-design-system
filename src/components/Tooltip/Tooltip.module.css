@@ -37,17 +37,17 @@
  * Color Variants
  */
 .tooltip--light {
-  border-color: var(--eds-color-neutral-300);
-  color: var(--eds-color-neutral-700);
-  background-color: var(--eds-color-neutral-100);
-  --arrow-color: var(--eds-color-neutral-300);
+  border-color: var(--eds-theme-color-border-neutral-default);
+  color: var(--eds-theme-color-text-neutral-default);
+  background-color: var(--eds-theme-color-background-neutral-subtle);
+  --arrow-color: var(--eds-theme-color-border-neutral-default);
 }
 
 .tooltip--dark {
-  border-color: var(--eds-color-neutral-700);
-  color: var(--eds-color-neutral-white);
-  background-color: var(--eds-color-neutral-700);
-  --arrow-color: var(--eds-color-neutral-700);
+  border-color: var(--eds-theme-color-body-background-inverted);
+  color: var(--eds-theme-color-text-neutral-default-inverse);
+  background-color: var(--eds-theme-color-body-background-inverted);
+  --arrow-color: var(--eds-theme-color-body-background-inverted);
 }
 
 /**

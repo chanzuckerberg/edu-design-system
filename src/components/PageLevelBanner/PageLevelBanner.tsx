@@ -70,9 +70,7 @@ const variantToIconAssetsMap: {
 };
 
 /**
- * ```ts
- * import {PageLevelBanner} from "@chanzuckerberg/eds";
- * ```
+ * `import {PageLevelBanner} from "@chanzuckerberg/eds";`
  *
  * A banner placed at the top of the page with important information.
  *

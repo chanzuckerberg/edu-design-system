@@ -43,9 +43,7 @@ export type Props = {
 } & React.HTMLAttributes<HTMLElement>;
 
 /**
- * ```ts
- * import {DataBar} from "@chanzuckerberg/eds";
- * ```
+ * `import {DataBar} from "@chanzuckerberg/eds";`
  *
  * A data bar component that represents the relative completion of a task represented by one or more segments.
  *

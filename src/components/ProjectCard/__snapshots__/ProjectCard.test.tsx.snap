@@ -3,6 +3,7 @@
 exports[`<ProjectCard /> Default story renders snapshot 1`] = `
 <article
   class="card card--horizontal card--raised project-card"
+  data-bootstrap-override="card"
 >
   <header
     class="card__header project-card__header"
@@ -162,6 +163,7 @@ exports[`<ProjectCard /> Default story renders snapshot 1`] = `
 exports[`<ProjectCard /> Draggable story renders snapshot 1`] = `
 <article
   class="card card--horizontal card--raised project-card project-card--draggable"
+  data-bootstrap-override="card"
 >
   <header
     class="card__header project-card__header"
@@ -313,6 +315,7 @@ exports[`<ProjectCard /> Draggable story renders snapshot 1`] = `
 exports[`<ProjectCard /> WithMeta story renders snapshot 1`] = `
 <article
   class="card card--horizontal card--raised project-card"
+  data-bootstrap-override="card"
 >
   <header
     class="card__header project-card__header"
@@ -477,6 +480,7 @@ exports[`<ProjectCard /> WithMeta story renders snapshot 1`] = `
 exports[`<ProjectCard /> WithMetaIcon story renders snapshot 1`] = `
 <article
   class="card card--horizontal card--raised project-card"
+  data-bootstrap-override="card"
 >
   <header
     class="card__header project-card__header"
@@ -654,6 +658,7 @@ exports[`<ProjectCard /> WithMetaIcon story renders snapshot 1`] = `
 exports[`<ProjectCard /> WithoutDropdown story renders snapshot 1`] = `
 <article
   class="card card--horizontal card--raised project-card"
+  data-bootstrap-override="card"
 >
   <header
     class="card__header project-card__header"

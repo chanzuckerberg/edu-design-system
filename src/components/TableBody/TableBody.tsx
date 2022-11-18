@@ -1,7 +1,5 @@
-import clsx from 'clsx';
 import type { ReactNode } from 'react';
 import React from 'react';
-import styles from '../Table/Table.module.css';
 
 export interface Props {
   /**
@@ -17,18 +15,10 @@ export interface Props {
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
- * ```ts
- * import {TableBody} from "@chanzuckerberg/eds";
- * ```
+ * `import {TableBody} from "@chanzuckerberg/eds";`
  *
  * HTML `tbody` of the `Table` component
  */
-export const TableBody = ({ children, className, ...other }: Props) => {
-  const componentClassName = clsx(styles['table__body'], className);
-
-  return (
-    <tbody className={componentClassName} {...other}>
-      {children}
-    </tbody>
-  );
+export const TableBody = ({ children, ...other }: Props) => {
+  return <tbody {...other}>{children}</tbody>;
 };

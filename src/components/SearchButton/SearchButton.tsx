@@ -22,9 +22,7 @@ export type SearchButtonProps = {
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
- * ```ts
- * import {SearchButton} from "@chanzuckerberg/eds";
- * ```
+ * `import {SearchButton} from "@chanzuckerberg/eds";`
  *
  * A button styled for use with the SearchBar.
  */

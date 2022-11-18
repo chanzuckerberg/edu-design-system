@@ -1,9 +1,11 @@
 import clsx from 'clsx';
-import React, { type ReactNode } from 'react';
+import React from 'react';
+import type { ReactNode, MouseEventHandler } from 'react';
+import styles from './TableHeaderCell.module.css';
+import Button from '../Button';
 import Icon from '../Icon';
-import styles from '../Table/Table.module.css';
 
-export interface Props {
+export type Props = React.ThHTMLAttributes<HTMLTableCellElement> & {
   /**
    * Child node(s) that can be nested inside component
    */
@@ -31,7 +33,7 @@ export interface Props {
   /**
    * Callback called when the sort button is clicked.
    */
-  onSortClick?: () => void;
+  onSortClick?: MouseEventHandler;
   /**
    * This enumerated attribute defines the cells that the header (defined in the `th`) element relates to.
    */
@@ -40,7 +42,12 @@ export interface Props {
    * The direction the selected column will be sorted.
    */
   sortDirection?: SortDirectionsType;
-}
+  /**
+   * Variant for table header cell within table body.
+   * Matches <TableCell> padding for alignment.
+   */
+  variant?: 'body';
+};
 
 export const SORT_DIRECTIONS = ['ascending', 'descending', 'default'] as const;
 
@@ -49,25 +56,23 @@ export type SortDirectionsType = typeof SORT_DIRECTIONS[number];
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
- * ```ts
- * import {TableHeaderCell} from "@chanzuckerberg/eds";
- * ```
+ * `import {TableHeaderCell} from "@chanzuckerberg/eds";`
  *
  * HTML `th` cell of the `Table` component
  */
 export const TableHeaderCell = ({
   children,
   className,
-  colSpan,
-  headers,
-  id,
   onSortClick,
-  rowSpan,
-  scope,
   sortDirection,
+  variant,
   ...other
 }: Props) => {
-  const componentClassName = clsx(styles['table__header-cell'], className);
+  const componentClassName = clsx(
+    styles['table-header-cell'],
+    variant === 'body' && styles['table-header-cell--body'],
+    className,
+  );
 
   const iconName =
     sortDirection === 'ascending'
@@ -91,33 +96,25 @@ export const TableHeaderCell = ({
           : undefined
       }
       className={componentClassName}
-      colSpan={colSpan}
-      headers={headers}
-      id={id}
-      rowSpan={rowSpan}
-      scope={scope}
+      data-bootstrap-override="table-header-cell"
       {...other}
     >
       {sortDirection ? (
-        <button
-          className={clsx(styles['table__header-cell-button'])}
+        <Button
+          className={clsx(styles['table-header-cell__sort-button'])}
           onClick={onSortClick}
+          variant="link"
         >
           {children}
-          <div className={clsx(styles['table__header-cell-sort'])}>
-            <Icon
-              className={styles['table__header-cell-icon']}
-              name={iconName}
-              purpose="informative"
-              size="1rem"
-              title={iconTitle}
-            />
-          </div>
-        </button>
+          <Icon
+            name={iconName}
+            purpose="informative"
+            size="1rem"
+            title={iconTitle}
+          />
+        </Button>
       ) : (
-        <div className={clsx(styles['table__header-cell-contents'])}>
-          {children}
-        </div>
+        children
       )}
     </th>
   );

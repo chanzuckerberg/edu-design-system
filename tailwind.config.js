@@ -27,6 +27,7 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       ...variableTokens.eds.color,
+      ...variableTokens.eds.theme.color,
     },
     fontSize: {
       // provide values for both font-size and line-height

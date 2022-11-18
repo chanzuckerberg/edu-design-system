@@ -24,9 +24,7 @@ export interface Props {
 }
 
 /**
- * ```ts
- * import {LayoutContainer} from "@chanzuckerberg/eds";
- * ```
+ * `import {LayoutContainer} from "@chanzuckerberg/eds";`
  *
  * Layout container. Caps the width of the content to the maximum width and centers the container.
  */

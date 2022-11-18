@@ -26,12 +26,9 @@ export type CheckboxProps = Omit<CheckboxInputProps, 'id'> & {
 };
 
 /**
- * ```ts
- * import {Checkbox} from "@chanzuckerberg/eds";
- * ```
- * ```ts
- * import {CheckboxInput, CheckboxLabel} from '@chanzuckerberg/eds';
- * ```
+ * `import {Checkbox} from "@chanzuckerberg/eds";`
+ *
+ * `import {CheckboxInput, CheckboxLabel} from '@chanzuckerberg/eds';`
  *
  * Checkbox control indicating if something is selected or unselected.
  *

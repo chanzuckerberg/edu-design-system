@@ -29,9 +29,7 @@ export interface Props {
 }
 
 /**
- * ```ts
- * import {Tab} from "@chanzuckerberg/eds";
- * ```
+ * `import {Tab} from "@chanzuckerberg/eds";`
  *
  * Individual tab within the Tabs component.
  */

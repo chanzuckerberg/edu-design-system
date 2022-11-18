@@ -1,7 +1,7 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 import { Section } from './Section';
-import Avatar from '../Avatar';
+import styles from './Section.stories.module.css';
 import Button from '../Button';
 import Icon from '../Icon';
 import Text from '../Text';
@@ -16,6 +16,10 @@ export default {
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Section>;
+
+const HelpIcon = (
+  <Icon name="help" purpose="informative" size="1.375rem" title="help" />
+);
 
 export const Default: StoryObj<Args> = {
   args: {
@@ -33,7 +37,7 @@ export const Center: StoryObj<Args> = {
     ),
     title: 'Section Title',
     description: (
-      <Text as="p" className="u-theme-typography-body-text-xs-bold" size="sm">
+      <Text as="p" className={styles['section__text']} size="sm">
         This is a description of what the section is
       </Text>
     ),
@@ -44,7 +48,7 @@ export const WithDescription: StoryObj<Args> = {
   args: {
     title: 'Section Title',
     description: (
-      <Text as="p" className="u-theme-typography-body-text-xs-bold" size="sm">
+      <Text as="p" className={styles['section__text']} size="sm">
         This is a description of what the section is
       </Text>
     ),
@@ -75,18 +79,14 @@ export const WithRight: StoryObj<Args> = {
 
 export const WithTitleAfter: StoryObj<Args> = {
   args: {
-    titleAfter: (
-      <Button size="sm" variant="icon">
-        <Icon name="help" purpose="informative" size="1.375rem" title="help" />
-      </Button>
-    ),
+    titleAfter: HelpIcon,
     title: 'Section Title',
   },
 };
 
 export const WithTitleBefore: StoryObj<Args> = {
   args: {
-    titleBefore: <Avatar />,
+    titleBefore: HelpIcon,
     title: 'Section Title',
     headingSize: 'h4',
     headingAs: 'h4',

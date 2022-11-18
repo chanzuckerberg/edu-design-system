@@ -4,7 +4,7 @@ import { Button, Heading, Popover } from '../../../src';
 import NotificationList from '../../../src/components/NotificationList';
 
 /**
- * Demonstrates usage of the Popover with NotificationList
+ * Demonstrates usage of the Popover with NotificationList.
  */
 export const NotificationListPopover = () => (
   <Popover placement="top-start">

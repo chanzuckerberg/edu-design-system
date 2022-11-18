@@ -62,7 +62,9 @@ export interface Props {
 }
 
 /**
- * Contains the button and the dropdown
+ * `import {ButtonDropdown} from "@chanzuckerberg/eds";`
+ *
+ * Contains the button and the dropdown.
  */
 export const ButtonDropdown = ({
   fullWidth,

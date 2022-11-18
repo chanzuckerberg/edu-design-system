@@ -42,9 +42,7 @@ interface State {
 }
 
 /**
- * ```ts
- * import {NotificationListItem} from "@chanzuckerberg/eds";
- * ```
+ * `import {NotificationListItem} from "@chanzuckerberg/eds";`
  *
  * Single notification item to be used in NotificationList.
  */

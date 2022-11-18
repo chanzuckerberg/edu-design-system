@@ -46,3 +46,18 @@
   font-style: normal;
   src: url('./fonts/MintGroteskV1.1-Medium.woff2') format('woff2');
 }
+
+/* TODO: move these into .storybook/ */
+@font-face {
+  font-family: 'Balsamiq Sans';
+  font-weight: 400;
+  font-style: normal;
+  src: url('./fonts/BalsamiqSans-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Redacted Script';
+  font-weight: 400;
+  font-style: normal;
+  src: url('./fonts/RedactedScript-Regular.woff2') format('woff2');
+}

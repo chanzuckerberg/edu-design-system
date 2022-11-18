@@ -24,9 +24,7 @@ export type Props = {
 };
 
 /**
- * ```ts
- * import {HorizontalStepper} from "@chanzuckerberg/eds";
- * ```
+ * `import {HorizontalStepper} from "@chanzuckerberg/eds";`
  *
  * A stepper component used to display which steps have been completed, the current active step, and possible remaining steps.
  *

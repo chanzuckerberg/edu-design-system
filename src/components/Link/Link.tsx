@@ -24,9 +24,7 @@ export type LinkProps = LinkHTMLElementProps & {
 } & VariantStatus;
 
 /**
- * ```ts
- * import {Link} from "@chanzuckerberg/eds";
- * ```
+ * `import {Link} from "@chanzuckerberg/eds";`
  *
  * Component for making styled anchor tags.
  *

@@ -38,9 +38,7 @@ export interface Props {
 }
 
 /**
- * ```ts
- * import {Header} from "@chanzuckerberg/eds";
- * ```
+ * `import {Header} from "@chanzuckerberg/eds";`
  *
  * Global container for the header component. This helps set the stage for header recipes across applications.
  */

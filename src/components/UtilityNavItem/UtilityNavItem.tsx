@@ -34,9 +34,7 @@ export interface Props {
 }
 
 /**
- * ```ts
- * import {UtilityNavItem} from "@chanzuckerberg/eds";
- * ```
+ * `import {UtilityNavItem} from "@chanzuckerberg/eds";`
  *
  * Individual item within the UtilityNav component.
  */

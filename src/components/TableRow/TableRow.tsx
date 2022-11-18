@@ -1,14 +1,9 @@
 import clsx from 'clsx';
 import type { ReactNode } from 'react';
 import React from 'react';
-import styles from '../Table/Table.module.css';
+import styles from './TableRow.module.css';
 
-export interface Props {
-  /**
-   * Behavior variations:
-   * - **clickable** yields a table row that has a click event attached to it
-   */
-  behavior?: 'clickable';
+export type Props = React.HTMLAttributes<HTMLTableRowElement> & {
   /**
    * Child node(s) that can be nested inside component
    */
@@ -18,32 +13,22 @@ export interface Props {
    */
   className?: string;
   /**
-   * Stylistic variations:
-   * - **bare** yields a table row without any bottom border
+   * Header variant has a darker bottom border to distinguish itself as a header.
    */
-  variant?: 'bare';
-}
+  variant?: 'header';
+};
 
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
- * ```ts
- * import {TableRow} from "@chanzuckerberg/eds";
- * ```
+ * `import {TableRow} from "@chanzuckerberg/eds";`
  *
  * HTML `tr` of the `Table` component
  */
-export const TableRow = ({
-  children,
-  className,
-  variant,
-  behavior,
-  ...other
-}: Props) => {
+export const TableRow = ({ children, className, variant, ...other }: Props) => {
   const componentClassName = clsx(
-    styles['table__row'],
-    variant === 'bare' && styles['table__row--bare'],
-    behavior === 'clickable' && styles['table__row--clickable'],
+    styles['table-row'],
+    variant === 'header' && styles['table-row--header'],
     className,
   );
 
