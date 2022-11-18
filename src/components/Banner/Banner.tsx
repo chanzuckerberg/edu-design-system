@@ -145,7 +145,7 @@ export const Banner = ({
   const variantComputed = variant === 'neutral' ? 'neutral-strong' : variant;
 
   return (
-    <article className={componentClassName}>
+    <aside className={componentClassName}>
       <Icon
         className={styles['banner__icon']}
         name={variantToIconAssetsMap[variant].name}
@@ -186,7 +186,7 @@ export const Banner = ({
           />
         </Button>
       )}
-    </article>
+    </aside>
   );
 };
 Banner.displayName = 'Banner';
