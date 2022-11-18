@@ -59,4 +59,5 @@
  */
 .primary-nav__icon {
   margin-right: var(--eds-size-2-and-half);
+  color: var(--eds-theme-color-text-neutral-default-inverse);
 }
