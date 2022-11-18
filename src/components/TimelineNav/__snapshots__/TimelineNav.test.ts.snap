@@ -166,8 +166,8 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="icon timeline-nav__icon"
-              fill="#D41E52"
+              class="icon timeline-nav__icon timeline-nav__icon--error"
+              fill="currentColor"
               xmlns="http://www.w3.org/2000/svg"
             >
               <use
@@ -218,8 +218,8 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="icon timeline-nav__icon"
-              fill="#F7BE2D"
+              class="icon timeline-nav__icon timeline-nav__icon--warning"
+              fill="currentColor"
               xmlns="http://www.w3.org/2000/svg"
             >
               <use
@@ -294,8 +294,8 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="icon timeline-nav__icon"
-              fill="#008656"
+              class="icon timeline-nav__icon timeline-nav__icon--success"
+              fill="currentColor"
               xmlns="http://www.w3.org/2000/svg"
             >
               <use
@@ -461,8 +461,8 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="icon timeline-nav__icon"
-              fill="#008656"
+              class="icon timeline-nav__icon timeline-nav__icon--success"
+              fill="currentColor"
               xmlns="http://www.w3.org/2000/svg"
             >
               <use
