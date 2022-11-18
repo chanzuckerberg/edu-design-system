@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [7.0.0](https://github.com/chanzuckerberg/edu-design-system/compare/v6.0.1...v7.0.0) (2022-11-18)
+
+
+### ⚠ BREAKING CHANGES
+
+* **table:** don't require caption
+
+### Features
+
+* **accordion:** init accordion ([4087186](https://github.com/chanzuckerberg/edu-design-system/commit/408718663ce3c4ae0a0fff48c6cacf307b7fc0cb))
+* **accordionrow:** init accordionrow ([d6df05f](https://github.com/chanzuckerberg/edu-design-system/commit/d6df05fe0d4412e7992608943b047434f454739b))
+* **studentrefinementpage:** add student refinement page ([4c1c6b0](https://github.com/chanzuckerberg/edu-design-system/commit/4c1c6b0753c102773b6d333181615623f3d05ed2))
+* **tablecaption:** add TableCaption component ([f063dae](https://github.com/chanzuckerberg/edu-design-system/commit/f063dae0ba4d5b41c927588439bee4bac7b39809))
+
+
+### Bug Fixes
+
+* **readme:** update workflow badge directory ([12cd9f4](https://github.com/chanzuckerberg/edu-design-system/commit/12cd9f4a606b6b8905134b870aab24d8c19ce2d3))
+
+
+* **table:** don't require caption ([2ff8dcc](https://github.com/chanzuckerberg/edu-design-system/commit/2ff8dcc749f35c5695dbac61f0a72f13e75ec266))
+
 ### [6.0.1](https://github.com/chanzuckerberg/edu-design-system/compare/v6.0.0...v6.0.1) (2022-11-03)
 
 ## [6.0.0](https://github.com/chanzuckerberg/edu-design-system/compare/v5.2.1...v6.0.0) (2022-10-28)
