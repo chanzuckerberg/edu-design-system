@@ -107,7 +107,7 @@ export const PageLevelBanner = ({
   );
 
   return (
-    <article className={componentClassName}>
+    <aside className={componentClassName}>
       <Icon
         className={styles['banner__icon']}
         name={variantToIconAssetsMap[variant].name}
@@ -142,7 +142,7 @@ export const PageLevelBanner = ({
           />
         </Button>
       )}
-    </article>
+    </aside>
   );
 };
 PageLevelBanner.displayName = 'PageLevelBanner';

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<PageLevelBanner /> Brand story renders snapshot 1`] = `
-<article
+<aside
   class="banner banner--brand"
 >
   <svg
@@ -39,11 +39,11 @@ exports[`<PageLevelBanner /> Brand story renders snapshot 1`] = `
       </button>
     </p>
   </div>
-</article>
+</aside>
 `;
 
 exports[`<PageLevelBanner /> BrandDismissable story renders snapshot 1`] = `
-<article
+<aside
   class="banner banner--brand banner--dismissable"
 >
   <svg
@@ -102,11 +102,11 @@ exports[`<PageLevelBanner /> BrandDismissable story renders snapshot 1`] = `
       />
     </svg>
   </button>
-</article>
+</aside>
 `;
 
 exports[`<PageLevelBanner /> Error story renders snapshot 1`] = `
-<article
+<aside
   class="banner banner--error"
 >
   <svg
@@ -144,11 +144,11 @@ exports[`<PageLevelBanner /> Error story renders snapshot 1`] = `
       </button>
     </p>
   </div>
-</article>
+</aside>
 `;
 
 exports[`<PageLevelBanner /> ErrorDismissable story renders snapshot 1`] = `
-<article
+<aside
   class="banner banner--error banner--dismissable"
 >
   <svg
@@ -207,11 +207,11 @@ exports[`<PageLevelBanner /> ErrorDismissable story renders snapshot 1`] = `
       />
     </svg>
   </button>
-</article>
+</aside>
 `;
 
 exports[`<PageLevelBanner /> NoDescription story renders snapshot 1`] = `
-<article
+<aside
   class="banner banner--brand"
 >
   <svg
@@ -236,11 +236,11 @@ exports[`<PageLevelBanner /> NoDescription story renders snapshot 1`] = `
       New curriculum updates are available for one or more of your courses.
     </h3>
   </div>
-</article>
+</aside>
 `;
 
 exports[`<PageLevelBanner /> NoTitle story renders snapshot 1`] = `
-<article
+<aside
   class="banner banner--brand"
 >
   <svg
@@ -273,11 +273,11 @@ exports[`<PageLevelBanner /> NoTitle story renders snapshot 1`] = `
       </button>
     </p>
   </div>
-</article>
+</aside>
 `;
 
 exports[`<PageLevelBanner /> Success story renders snapshot 1`] = `
-<article
+<aside
   class="banner banner--success"
 >
   <svg
@@ -315,11 +315,11 @@ exports[`<PageLevelBanner /> Success story renders snapshot 1`] = `
       </button>
     </p>
   </div>
-</article>
+</aside>
 `;
 
 exports[`<PageLevelBanner /> SuccessDismissable story renders snapshot 1`] = `
-<article
+<aside
   class="banner banner--success banner--dismissable"
 >
   <svg
@@ -378,11 +378,11 @@ exports[`<PageLevelBanner /> SuccessDismissable story renders snapshot 1`] = `
       />
     </svg>
   </button>
-</article>
+</aside>
 `;
 
 exports[`<PageLevelBanner /> Warning story renders snapshot 1`] = `
-<article
+<aside
   class="banner banner--warning"
 >
   <svg
@@ -420,11 +420,11 @@ exports[`<PageLevelBanner /> Warning story renders snapshot 1`] = `
       </button>
     </p>
   </div>
-</article>
+</aside>
 `;
 
 exports[`<PageLevelBanner /> WarningDismissable story renders snapshot 1`] = `
-<article
+<aside
   class="banner banner--warning banner--dismissable"
 >
   <svg
@@ -483,5 +483,5 @@ exports[`<PageLevelBanner /> WarningDismissable story renders snapshot 1`] = `
       />
     </svg>
   </button>
-</article>
+</aside>
 `;
