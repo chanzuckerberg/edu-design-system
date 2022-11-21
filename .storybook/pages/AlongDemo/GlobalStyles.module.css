@@ -1,7 +1,7 @@
 @import '../../../src/design-tokens/mixins.css';
 
 /*------------------------------------*\
-    # GLOBAL STYLES FOR WIREFRAME DEMO
+    # GLOBAL STYLES FOR ALONG DEMO
 \*------------------------------------*/
 
 /**
@@ -62,75 +62,71 @@
   --along-color-sky-500: #d8f6fd;
   --along-color-eraser-red-200: #cd2026;
 
-  /* Level 1 EDS tokens */
+  /* Override EDS tokens to apply the Along theme */
   --eds-border-radius-md: 0.5rem;
-
-  /* Level 2 tokens */
   --eds-font-family-primary: 'Untitled Sans', sans-serif;
   --eds-font-family-secondary: 'Moranga', serif;
-  --eds-theme-color-focus-ring: var(--along-color-blurple-500);
-  --eds-theme-color-text-neutral-default: var(--along-color-space-500);
+  --eds-theme-color-background-brand-primary-default: var(--along-color-white);
   --eds-theme-color-background-disabled: var(--along-color-space-100);
-  --eds-theme-color-border-disabled: var(--along-color-space-100);
-  --eds-theme-color-icon-disabled: var(--along-color-space-100);
-  --eds-theme-color-text-disabled: var(--along-color-space-100);
+  --eds-theme-color-background-neutral-medium: var(--along-color-sneaker-100);
   --eds-theme-color-background-neutral-subtle: var(--along-color-sneaker-100);
+  --eds-theme-color-border-brand-primary-strong: var(--along-color-blurple-500);
+  --eds-theme-color-border-disabled: var(--along-color-space-100);
   --eds-theme-color-border-link-brand: var(--along-color-space-500);
   --eds-theme-color-border-link-neutral: var(--along-color-space-500);
-  --eds-theme-color-icon-link-default: var(--along-color-space-500);
-  --eds-theme-color-icon-link-default-hover: var(--along-color-space-500);
-  --eds-theme-color-text-link-brand: var(--along-color-space-500);
-  --eds-theme-color-text-link-neutral: var(--along-color-space-500);
-  --eds-theme-color-background-brand-primary-default: var(--along-color-white);
-  --eds-theme-color-border-brand-primary-strong: var(--along-color-blurple-500);
-  --eds-theme-color-form-border: var(--along-color-sneaker-300);
-  --eds-theme-color-icon-brand-primary: var(--along-color-blurple-500);
-  --eds-theme-color-background-neutral-medium: var(--along-color-sneaker-100);
   --eds-theme-color-border-neutral-default: var(--along-color-space-200);
-
-  /* Level 3 tokens */
-  --eds-theme-color-button-primary-brand-background: var(
-    --along-color-space-500
+  --eds-theme-color-button-primary-brand-background-active: var(
+    --along-color-blurple-500
   );
   --eds-theme-color-button-primary-brand-background-hover: var(
     --along-color-blurple-500
   );
-  --eds-theme-color-button-primary-brand-background-active: var(
-    --along-color-blurple-500
-  );
-  --eds-theme-color-button-primary-brand-border: var(--along-color-space-500);
-  --eds-theme-color-button-primary-brand-border-hover: var(
-    --along-color-blurple-500
+  --eds-theme-color-button-primary-brand-background: var(
+    --along-color-space-500
   );
   --eds-theme-color-button-primary-brand-border-active: var(
     --along-color-blurple-500
   );
-  --eds-theme-color-button-primary-brand-text: var(--along-color-white);
-  --eds-theme-color-button-primary-brand-text-hover: var(--along-color-white);
-  --eds-theme-color-button-primary-brand-text-active: var(--along-color-white);
-  --eds-theme-color-button-secondary-brand-background-hover: transparent;
-  --eds-theme-color-button-secondary-brand-background-active: transparent;
-  --eds-theme-color-button-secondary-brand-border: var(--along-color-space-500);
-  --eds-theme-color-button-secondary-brand-border-hover: var(
+  --eds-theme-color-button-primary-brand-border-hover: var(
     --along-color-blurple-500
   );
+  --eds-theme-color-button-primary-brand-border: var(--along-color-space-500);
+  --eds-theme-color-button-primary-brand-text-active: var(--along-color-white);
+  --eds-theme-color-button-primary-brand-text-hover: var(--along-color-white);
+  --eds-theme-color-button-primary-brand-text: var(--along-color-white);
+  --eds-theme-color-button-secondary-brand-background-active: transparent;
+  --eds-theme-color-button-secondary-brand-background-hover: transparent;
   --eds-theme-color-button-secondary-brand-border-active: var(
     --along-color-blurple-500
   );
-  --eds-theme-color-button-secondary-brand-text: var(--along-color-space-500);
-  --eds-theme-color-button-secondary-brand-text-hover: var(
+  --eds-theme-color-button-secondary-brand-border-hover: var(
     --along-color-blurple-500
   );
-  --eds-theme-color-button-secondary-brand-text-active: var(
-    --along-color-blurple-500
-  );
-  --eds-theme-color-button-secondary-brand-icon: var(--along-color-space-500);
-  --eds-theme-color-button-secondary-brand-icon-hover: var(
-    --along-color-blurple-500
-  );
+  --eds-theme-color-button-secondary-brand-border: var(--along-color-space-500);
   --eds-theme-color-button-secondary-brand-icon-active: var(
     --along-color-blurple-500
   );
+  --eds-theme-color-button-secondary-brand-icon-hover: var(
+    --along-color-blurple-500
+  );
+  --eds-theme-color-button-secondary-brand-icon: var(--along-color-space-500);
+  --eds-theme-color-button-secondary-brand-text-active: var(
+    --along-color-blurple-500
+  );
+  --eds-theme-color-button-secondary-brand-text-hover: var(
+    --along-color-blurple-500
+  );
+  --eds-theme-color-button-secondary-brand-text: var(--along-color-space-500);
+  --eds-theme-color-focus-ring: var(--along-color-blurple-500);
+  --eds-theme-color-form-border: var(--along-color-sneaker-300);
+  --eds-theme-color-icon-brand-primary: var(--along-color-blurple-500);
+  --eds-theme-color-icon-disabled: var(--along-color-space-100);
+  --eds-theme-color-icon-link-default-hover: var(--along-color-space-500);
+  --eds-theme-color-icon-link-default: var(--along-color-space-500);
+  --eds-theme-color-text-disabled: var(--along-color-space-100);
+  --eds-theme-color-text-link-brand: var(--along-color-space-500);
+  --eds-theme-color-text-link-neutral: var(--along-color-space-500);
+  --eds-theme-color-text-neutral-default: var(--along-color-space-500);
 
   /**
    * Global style overrides
