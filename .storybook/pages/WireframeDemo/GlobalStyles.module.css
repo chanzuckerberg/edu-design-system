@@ -11,6 +11,9 @@
  */
 .root {
   /* Level 1 wireframe theme tokens */
+  --wireframe-anim-duration: 0;
+  --wireframe-font-family-primary: 'Balsamiq Sans', sans-serif;
+  --wireframe-font-family-secondary: 'Redacted Script', sans-serif;
   --wireframe-white: #ffffff;
   --wireframe-black: #000000;
   --wireframe-gray-a: #f4f6f8;
@@ -19,435 +22,326 @@
   --wireframe-gray-d: #383c43;
   --wireframe-gray-e: #161b1f;
 
-  /* Level 1 EDS tokens */
-  --eds-anim-fade-quick: 0;
-  --eds-anim-fade-long: 0;
-  --eds-anim-move-quick: 0;
-  --eds-anim-move-medium: 0;
-  --eds-anim-move-long: 0;
-
-  /* Level 2 tokens */
-  --eds-font-family-primary: 'Balsamiq Sans', sans-serif;
-  --eds-font-family-secondary: 'Redacted Script', sans-serif;
-  --eds-theme-color-focus-ring: var(--wireframe-gray-c);
-  --eds-theme-color-background-disabled: var(--wireframe-gray-b);
-  --eds-theme-color-border-disabled: var(--wireframe-gray-b);
-  --eds-theme-color-icon-disabled: var(--wireframe-gray-b);
-  --eds-theme-color-text-disabled: var(--wireframe-gray-b);
-  --eds-theme-color-background-neutral-subtle: var(--wireframe-gray-a);
-  --eds-theme-color-background-brand-primary-strong: var(--wireframe-gray-b);
-  --eds-theme-color-border-link-brand: var(--wireframe-gray-c);
-  --eds-theme-color-icon-link-default: var(--wireframe-gray-d);
-  --eds-theme-color-icon-link-default-hover: var(--wireframe-gray-e);
-  --eds-theme-color-text-link-brand: var(--wireframe-gray-c);
+  /* Override EDS tokens to apply wireframe theme */
+  --eds-anim-fade-long: var(--wireframe-anim-duration);
+  --eds-anim-fade-quick: var(--wireframe-anim-duration);
+  --eds-anim-move-long: var(--wireframe-anim-duration);
+  --eds-anim-move-medium: var(--wireframe-anim-duration);
+  --eds-anim-move-quick: var(--wireframe-anim-duration);
+  --eds-font-family-primary: var(--wireframe-font-family-primary);
+  --eds-font-family-secondary: var(--wireframe-font-family-secondary);
   --eds-theme-color-background-brand-primary-default: var(--wireframe-white);
+  --eds-theme-color-background-brand-primary-strong-hover: var(
+    --wireframe-gray-e
+  );
+  --eds-theme-color-background-brand-primary-strong: var(--wireframe-gray-b);
+  --eds-theme-color-background-disabled: var(--wireframe-gray-b);
+  --eds-theme-color-background-grade-complete-default: var(--wireframe-gray-c);
+  --eds-theme-color-background-grade-complete-subtle: var(--wireframe-gray-a);
+  --eds-theme-color-background-grade-revise-default: var(--wireframe-gray-b);
+  --eds-theme-color-background-grade-revise-subtle: var(--wireframe-gray-a);
+  --eds-theme-color-background-grade-stop-default: var(--wireframe-gray-c);
+  --eds-theme-color-background-grade-stop-subtle: var(--wireframe-gray-a);
+  --eds-theme-color-background-neutral-default-hover: var(--wireframe-gray-a);
+  --eds-theme-color-background-neutral-default: var(--wireframe-white);
+  --eds-theme-color-background-neutral-medium-hover: var(--wireframe-gray-b);
+  --eds-theme-color-background-neutral-medium: var(--wireframe-gray-a);
+  --eds-theme-color-background-neutral-subtle-hover: var(--wireframe-gray-a);
+  --eds-theme-color-background-neutral-subtle: var(--wireframe-gray-a);
+  --eds-theme-color-background-utility-error: var(--wireframe-gray-a);
+  --eds-theme-color-background-utility-success: var(--wireframe-gray-a);
+  --eds-theme-color-background-utility-warning: var(--wireframe-gray-a);
+  --eds-theme-color-body-background-inverted: var(--wireframe-gray-d);
+  --eds-theme-color-body-background: var(--wireframe-gray-a);
   --eds-theme-color-border-brand-primary-strong: var(--wireframe-gray-c);
-
-  /* Level 3 tokens */
-  --eds-theme-color-button-primary-brand-background: var(--wireframe-gray-c);
-  --eds-theme-color-button-primary-brand-background-hover: var(
-    --wireframe-gray-d
-  );
-  --eds-theme-color-button-primary-brand-background-active: var(
-    --wireframe-gray-e
-  );
-  --eds-theme-color-button-primary-brand-border: var(--wireframe-gray-c);
-  --eds-theme-color-button-primary-brand-border-hover: var(--wireframe-gray-d);
-  --eds-theme-color-button-primary-brand-border-active: var(--wireframe-gray-e);
-  --eds-theme-color-button-primary-brand-text: var(--wireframe-white);
-  --eds-theme-color-button-primary-brand-text-hover: var(--wireframe-white);
-  --eds-theme-color-button-primary-brand-text-active: var(--wireframe-white);
-  --eds-theme-color-button-secondary-brand-background-hover: var(
-    --wireframe-gray-d
-  );
-  --eds-theme-color-button-secondary-brand-background-active: var(
-    --wireframe-gray-e
-  );
-  --eds-theme-color-button-secondary-brand-border: var(--wireframe-gray-c);
-  --eds-theme-color-button-secondary-brand-border-hover: var(
-    --wireframe-gray-d
-  );
-  --eds-theme-color-button-secondary-brand-border-active: var(
-    --wireframe-gray-e
-  );
-  --eds-theme-color-button-secondary-brand-text: var(--wireframe-gray-c);
-  --eds-theme-color-button-secondary-brand-text-hover: var(--wireframe-white);
-  --eds-theme-color-button-secondary-brand-text-active: var(--wireframe-white);
-  --eds-theme-color-button-secondary-brand-icon: var(--wireframe-gray-c);
-  --eds-theme-color-button-secondary-brand-icon-hover: var(--wireframe-white);
-  --eds-theme-color-button-secondary-brand-icon-active: var(--wireframe-white);
-  --eds-theme-color-button-icon-brand: var(--wireframe-gray-c);
-  --eds-theme-color-button-icon-brand-hover: var(--wireframe-gray-c);
+  --eds-theme-color-border-brand-primary-subtle: var(--wireframe-gray-a);
+  --eds-theme-color-border-brand-primary: var(--wireframe-gray-b);
+  --eds-theme-color-border-disabled: var(--wireframe-gray-b);
+  --eds-theme-color-border-grade-complete: var(--wireframe-gray-b);
+  --eds-theme-color-border-grade-revise-default: var(--wireframe-gray-b);
+  --eds-theme-color-border-grade-revise-strong: var(--wireframe-gray-b);
+  --eds-theme-color-border-grade-revise-subtle: var(--wireframe-gray-a);
+  --eds-theme-color-border-grade-stop: var(--wireframe-gray-b);
+  --eds-theme-color-border-link-brand: var(--wireframe-gray-c);
+  --eds-theme-color-border-link-neutral: var(--wireframe-gray-e);
+  --eds-theme-color-border-neutral-default-hover: var(--wireframe-gray-b);
+  --eds-theme-color-border-neutral-default: var(--wireframe-gray-b);
+  --eds-theme-color-border-neutral-strong-hover: var(--wireframe-gray-c);
+  --eds-theme-color-border-neutral-strong: var(--wireframe-gray-b);
+  --eds-theme-color-border-neutral-subtle-hover: var(--wireframe-gray-b);
+  --eds-theme-color-border-neutral-subtle: var(--wireframe-gray-a);
+  --eds-theme-color-border-utility-error-default: var(--wireframe-gray-b);
+  --eds-theme-color-border-utility-error-strong: var(--wireframe-gray-b);
+  --eds-theme-color-border-utility-error-subtle: var(--wireframe-gray-a);
+  --eds-theme-color-border-utility-success-default: var(--wireframe-gray-b);
+  --eds-theme-color-border-utility-success-strong: var(--wireframe-gray-b);
+  --eds-theme-color-border-utility-success-subtle: var(--wireframe-gray-a);
+  --eds-theme-color-border-utility-warning-default: var(--wireframe-gray-b);
+  --eds-theme-color-border-utility-warning-strong: var(--wireframe-gray-b);
+  --eds-theme-color-border-utility-warning-subtle: var(--wireframe-gray-a);
   --eds-theme-color-button-icon-brand-active: var(--wireframe-white);
-  --eds-theme-color-button-icon-brand-background-hover: var(--wireframe-gray-c);
   --eds-theme-color-button-icon-brand-background-active: var(
     --wireframe-gray-d
   );
-  --eds-theme-color-button-icon-brand-border-hover: var(--wireframe-gray-c);
+  --eds-theme-color-button-icon-brand-background-hover: var(--wireframe-gray-a);
+  --eds-theme-color-button-icon-brand-background: transparent;
   --eds-theme-color-button-icon-brand-border-active: var(--wireframe-gray-d);
-  --eds-theme-color-button-icon-brand-text: var(--wireframe-gray-c);
-  --eds-theme-color-button-icon-brand-text-hover: var(--wireframe-white);
+  --eds-theme-color-button-icon-brand-border-hover: var(--wireframe-gray-a);
+  --eds-theme-color-button-icon-brand-border: transparent;
+  --eds-theme-color-button-icon-brand-hover: var(--wireframe-gray-c);
   --eds-theme-color-button-icon-brand-text-active: var(--wireframe-white);
+  --eds-theme-color-button-icon-brand-text-hover: var(--wireframe-gray-d);
+  --eds-theme-color-button-icon-brand-text: var(--wireframe-gray-d);
+  --eds-theme-color-button-icon-brand: var(--wireframe-gray-c);
+  --eds-theme-color-button-icon-error-active: var(--wireframe-white);
+  --eds-theme-color-button-icon-error-background-active: var(
+    --wireframe-gray-d
+  );
+  --eds-theme-color-button-icon-error-background-hover: var(--wireframe-gray-a);
+  --eds-theme-color-button-icon-error-background: transparent;
+  --eds-theme-color-button-icon-error-border-active: var(--wireframe-gray-d);
+  --eds-theme-color-button-icon-error-border-hover: var(--wireframe-gray-a);
+  --eds-theme-color-button-icon-error-border: transparent;
+  --eds-theme-color-button-icon-error-hover: var(--wireframe-gray-c);
+  --eds-theme-color-button-icon-error-text-active: var(--wireframe-white);
+  --eds-theme-color-button-icon-error-text-hover: var(--wireframe-gray-d);
+  --eds-theme-color-button-icon-error-text: var(--wireframe-gray-d);
+  --eds-theme-color-button-icon-error: var(--wireframe-gray-c);
+  --eds-theme-color-button-icon-neutral-active: var(--wireframe-white);
+  --eds-theme-color-button-icon-neutral-background-active: var(
+    --wireframe-gray-d
+  );
+  --eds-theme-color-button-icon-neutral-background-hover: var(
+    --wireframe-gray-a
+  );
+  --eds-theme-color-button-icon-neutral-background: transparent;
+  --eds-theme-color-button-icon-neutral-border-active: var(--wireframe-gray-d);
+  --eds-theme-color-button-icon-neutral-border-hover: var(--wireframe-gray-a);
+  --eds-theme-color-button-icon-neutral-border: transparent;
+  --eds-theme-color-button-icon-neutral-hover: var(--wireframe-gray-c);
+  --eds-theme-color-button-icon-neutral-text-active: var(--wireframe-white);
+  --eds-theme-color-button-icon-neutral-text-hover: var(--wireframe-gray-d);
+  --eds-theme-color-button-icon-neutral-text: var(--wireframe-gray-d);
+  --eds-theme-color-button-icon-neutral: var(--wireframe-gray-c);
+  --eds-theme-color-button-icon-success-active: var(--wireframe-white);
+  --eds-theme-color-button-icon-success-background-active: var(
+    --wireframe-gray-d
+  );
+  --eds-theme-color-button-icon-success-background-hover: var(
+    --wireframe-gray-a
+  );
+  --eds-theme-color-button-icon-success-background: transparent;
+  --eds-theme-color-button-icon-success-border-active: var(--wireframe-gray-d);
+  --eds-theme-color-button-icon-success-border-hover: var(--wireframe-gray-a);
+  --eds-theme-color-button-icon-success-border: transparent;
+  --eds-theme-color-button-icon-success-hover: var(--wireframe-gray-c);
+  --eds-theme-color-button-icon-success-text-active: var(--wireframe-white);
+  --eds-theme-color-button-icon-success-text-hover: var(--wireframe-gray-d);
+  --eds-theme-color-button-icon-success-text: var(--wireframe-gray-d);
+  --eds-theme-color-button-icon-success: var(--wireframe-gray-c);
+  --eds-theme-color-button-icon-warning-active: var(--wireframe-white);
+  --eds-theme-color-button-icon-warning-background-active: var(
+    --wireframe-gray-d
+  );
+  --eds-theme-color-button-icon-warning-background-hover: var(
+    --wireframe-gray-a
+  );
+  --eds-theme-color-button-icon-warning-background: transparent;
+  --eds-theme-color-button-icon-warning-border-active: var(--wireframe-gray-d);
+  --eds-theme-color-button-icon-warning-border-hover: var(--wireframe-gray-a);
+  --eds-theme-color-button-icon-warning-border: transparent;
+  --eds-theme-color-button-icon-warning-hover: var(--wireframe-gray-c);
+  --eds-theme-color-button-icon-warning-text-active: var(--wireframe-white);
+  --eds-theme-color-button-icon-warning-text-hover: var(--wireframe-gray-d);
+  --eds-theme-color-button-icon-warning-text: var(--wireframe-gray-d);
+  --eds-theme-color-button-icon-warning: var(--wireframe-gray-c);
+  --eds-theme-color-button-primary-brand-background-active: var(
+    --wireframe-gray-e
+  );
+  --eds-theme-color-button-primary-brand-background-hover: var(
+    --wireframe-gray-d
+  );
+  --eds-theme-color-button-primary-brand-background: var(--wireframe-gray-c);
+  --eds-theme-color-button-primary-brand-border-active: var(--wireframe-gray-e);
+  --eds-theme-color-button-primary-brand-border-hover: var(--wireframe-gray-d);
+  --eds-theme-color-button-primary-brand-border: var(--wireframe-gray-c);
+  --eds-theme-color-button-primary-brand-text-active: var(--wireframe-white);
+  --eds-theme-color-button-primary-brand-text-hover: var(--wireframe-white);
+  --eds-theme-color-button-primary-brand-text: var(--wireframe-white);
+  --eds-theme-color-button-primary-error-background-active: var(
+    --wireframe-gray-e
+  );
+  --eds-theme-color-button-primary-error-background-hover: var(
+    --wireframe-gray-d
+  );
+  --eds-theme-color-button-primary-error-background: var(--wireframe-gray-c);
+  --eds-theme-color-button-primary-error-border-active: var(--wireframe-gray-e);
+  --eds-theme-color-button-primary-error-border-hover: var(--wireframe-gray-d);
+  --eds-theme-color-button-primary-error-border: var(--wireframe-gray-c);
+  --eds-theme-color-button-primary-error-text-active: var(--wireframe-white);
+  --eds-theme-color-button-primary-error-text-hover: var(--wireframe-white);
+  --eds-theme-color-button-primary-error-text: var(--wireframe-white);
+  --eds-theme-color-button-secondary-brand-background-active: var(
+    --wireframe-gray-e
+  );
+  --eds-theme-color-button-secondary-brand-background-hover: var(
+    --wireframe-gray-d
+  );
+  --eds-theme-color-button-secondary-brand-background: transparent;
+  --eds-theme-color-button-secondary-brand-border-active: var(
+    --wireframe-gray-e
+  );
+  --eds-theme-color-button-secondary-brand-border-hover: var(
+    --wireframe-gray-d
+  );
+  --eds-theme-color-button-secondary-brand-border: var(--wireframe-gray-c);
+  --eds-theme-color-button-secondary-brand-icon-active: var(--wireframe-white);
+  --eds-theme-color-button-secondary-brand-icon-hover: var(--wireframe-white);
+  --eds-theme-color-button-secondary-brand-icon: var(--wireframe-gray-c);
+  --eds-theme-color-button-secondary-brand-text-active: var(--wireframe-white);
+  --eds-theme-color-button-secondary-brand-text-hover: var(--wireframe-white);
+  --eds-theme-color-button-secondary-brand-text: var(--wireframe-gray-c);
+  --eds-theme-color-button-secondary-error-background-active: var(
+    --wireframe-gray-e
+  );
+  --eds-theme-color-button-secondary-error-background-hover: var(
+    --wireframe-gray-d
+  );
+  --eds-theme-color-button-secondary-error-background: transparent;
+  --eds-theme-color-button-secondary-error-border-active: var(
+    --wireframe-gray-e
+  );
+  --eds-theme-color-button-secondary-error-border-hover: var(
+    --wireframe-gray-d
+  );
+  --eds-theme-color-button-secondary-error-border: var(--wireframe-gray-c);
+  --eds-theme-color-button-secondary-error-icon-active: var(--wireframe-white);
+  --eds-theme-color-button-secondary-error-icon-hover: var(--wireframe-white);
+  --eds-theme-color-button-secondary-error-icon: var(--wireframe-gray-c);
+  --eds-theme-color-button-secondary-error-text-active: var(--wireframe-white);
+  --eds-theme-color-button-secondary-error-text-hover: var(--wireframe-white);
+  --eds-theme-color-button-secondary-error-text: var(--wireframe-gray-c);
+  --eds-theme-color-button-secondary-neutral-background-active: var(
+    --wireframe-gray-e
+  );
+  --eds-theme-color-button-secondary-neutral-background-hover: var(
+    --wireframe-gray-d
+  );
+  --eds-theme-color-button-secondary-neutral-background: transparent;
+  --eds-theme-color-button-secondary-neutral-border-active: var(
+    --wireframe-gray-e
+  );
+  --eds-theme-color-button-secondary-neutral-border-hover: var(
+    --wireframe-gray-d
+  );
+  --eds-theme-color-button-secondary-neutral-border: var(--wireframe-gray-c);
+  --eds-theme-color-button-secondary-neutral-icon-active: var(
+    --wireframe-white
+  );
+  --eds-theme-color-button-secondary-neutral-icon-hover: var(--wireframe-white);
+  --eds-theme-color-button-secondary-neutral-icon: var(--wireframe-gray-c);
+  --eds-theme-color-button-secondary-neutral-text-active: var(
+    --wireframe-white
+  );
+  --eds-theme-color-button-secondary-neutral-text-hover: var(--wireframe-white);
+  --eds-theme-color-button-secondary-neutral-text: var(--wireframe-gray-c);
+  --eds-theme-color-button-secondary-success-background-active: var(
+    --wireframe-gray-e
+  );
+  --eds-theme-color-button-secondary-success-background-hover: var(
+    --wireframe-gray-d
+  );
+  --eds-theme-color-button-secondary-success-background: transparent;
+  --eds-theme-color-button-secondary-success-border-active: var(
+    --wireframe-gray-e
+  );
+  --eds-theme-color-button-secondary-success-border-hover: var(
+    --wireframe-gray-d
+  );
+  --eds-theme-color-button-secondary-success-border: var(--wireframe-gray-c);
+  --eds-theme-color-button-secondary-success-icon-active: var(
+    --wireframe-white
+  );
+  --eds-theme-color-button-secondary-success-icon-hover: var(--wireframe-white);
+  --eds-theme-color-button-secondary-success-icon: var(--wireframe-gray-c);
+  --eds-theme-color-button-secondary-success-text-active: var(
+    --wireframe-white
+  );
+  --eds-theme-color-button-secondary-success-text-hover: var(--wireframe-white);
+  --eds-theme-color-button-secondary-success-text: var(--wireframe-gray-c);
+  --eds-theme-color-button-secondary-warning-background-active: var(
+    --wireframe-gray-e
+  );
+  --eds-theme-color-button-secondary-warning-background-hover: var(
+    --wireframe-gray-d
+  );
+  --eds-theme-color-button-secondary-warning-background: transparent;
+  --eds-theme-color-button-secondary-warning-border-active: var(
+    --wireframe-gray-e
+  );
+  --eds-theme-color-button-secondary-warning-border-hover: var(
+    --wireframe-gray-d
+  );
+  --eds-theme-color-button-secondary-warning-border: var(--wireframe-gray-c);
+  --eds-theme-color-button-secondary-warning-icon-active: var(
+    --wireframe-white
+  );
+  --eds-theme-color-button-secondary-warning-icon-hover: var(--wireframe-white);
+  --eds-theme-color-button-secondary-warning-icon: var(--wireframe-gray-c);
+  --eds-theme-color-button-secondary-warning-text-active: var(
+    --wireframe-white
+  );
+  --eds-theme-color-button-secondary-warning-text-hover: var(--wireframe-white);
+  --eds-theme-color-button-secondary-warning-text: var(--wireframe-gray-c);
+  --eds-theme-color-focus-ring-inverted: var(--wireframe-white);
+  --eds-theme-color-focus-ring: var(--wireframe-gray-c);
+  --eds-theme-color-form-background-hover: var(--wireframe-gray-a);
+  --eds-theme-color-form-background: var(--wireframe-white);
+  --eds-theme-color-form-border-hover: var(--wireframe-gray-e);
+  --eds-theme-color-form-border: var(--wireframe-gray-c);
+  --eds-theme-color-form-label: var(--wireframe-gray-d);
+  --eds-theme-color-icon-brand-primary-hover: var(--wireframe-gray-c);
+  --eds-theme-color-icon-brand-primary: var(--wireframe-gray-c);
+  --eds-theme-color-icon-disabled: var(--wireframe-gray-b);
+  --eds-theme-color-icon-grade-complete-hover: var(--wireframe-gray-c);
+  --eds-theme-color-icon-grade-complete: var(--wireframe-gray-c);
+  --eds-theme-color-icon-grade-revise-hover: var(--wireframe-gray-e);
+  --eds-theme-color-icon-grade-revise: var(--wireframe-gray-e);
+  --eds-theme-color-icon-grade-stop-hover: var(--wireframe-gray-c);
+  --eds-theme-color-icon-grade-stop: var(--wireframe-gray-c);
+  --eds-theme-color-icon-link-default-hover: var(--wireframe-gray-e);
+  --eds-theme-color-icon-link-default: var(--wireframe-gray-d);
+  --eds-theme-color-icon-neutral-default-hover: var(--wireframe-gray-d);
+  --eds-theme-color-icon-neutral-default-inverse: var(--wireframe-white);
+  --eds-theme-color-icon-neutral-default: var(--wireframe-gray-c);
+  --eds-theme-color-icon-neutral-strong-hover: var(--wireframe-gray-e);
+  --eds-theme-color-icon-neutral-strong: var(--wireframe-gray-d);
+  --eds-theme-color-icon-neutral-subtle-hover: var(--wireframe-gray-c);
+  --eds-theme-color-icon-neutral-subtle: var(--wireframe-gray-c);
+  --eds-theme-color-icon-utility-error-hover: var(--wireframe-gray-c);
+  --eds-theme-color-icon-utility-error: var(--wireframe-gray-c);
+  --eds-theme-color-icon-utility-success-hover: var(--wireframe-gray-c);
+  --eds-theme-color-icon-utility-success: var(--wireframe-gray-c);
+  --eds-theme-color-icon-utility-warning-hover: var(--wireframe-gray-c);
+  --eds-theme-color-icon-utility-warning: var(--wireframe-gray-c);
+  --eds-theme-color-modal-brand-header-background: var(--wireframe-gray-c);
+  --eds-theme-color-text-brand-primary: var(--wireframe-gray-d);
+  --eds-theme-color-text-disabled: var(--wireframe-gray-b);
+  --eds-theme-color-text-grade-complete: var(--wireframe-gray-d);
+  --eds-theme-color-text-grade-revise: var(--wireframe-gray-e);
+  --eds-theme-color-text-grade-stop: var(--wireframe-gray-d);
+  --eds-theme-color-text-highlight-background: var(--wireframe-gray-a);
+  --eds-theme-color-text-highlight-foreground: var(--wireframe-gray-e);
+  --eds-theme-color-text-link-brand: var(--wireframe-gray-c);
+  --eds-theme-color-text-link-neutral: var(--wireframe-gray-e);
+  --eds-theme-color-text-neutral-default-inverse: var(--wireframe-white);
+  --eds-theme-color-text-neutral-default: var(--wireframe-gray-d);
+  --eds-theme-color-text-neutral-strong: var(--wireframe-gray-e);
+  --eds-theme-color-text-neutral-subtle: var(--wireframe-gray-c);
+  --eds-theme-color-text-utility-error: var(--wireframe-gray-d);
+  --eds-theme-color-text-utility-success: var(--wireframe-gray-d);
+  --eds-theme-color-text-utility-warning: var(--wireframe-gray-d);
 
-  /*
-    Currently unused variables
-
-    --eds-theme-color-background-neutral-default: #ffffff;
-    --eds-theme-color-background-neutral-default-hover: #f4f6f8;
-    --eds-theme-color-background-neutral-subtle-hover: #e7e8ea;
-    --eds-theme-color-background-neutral-medium: #e7e8ea;
-    --eds-theme-color-background-neutral-medium-hover: #c0c4c8;
-    --eds-theme-color-background-brand-primary-strong-hover: #3e42b1;
-    --eds-theme-color-background-utility-success: #ecfff5;
-    --eds-theme-color-background-utility-warning: #fff1e9;
-    --eds-theme-color-background-utility-error: #fff0f4;
-    --eds-theme-color-background-grade-complete-default: #008656;
-    --eds-theme-color-background-grade-complete-subtle: #ecfff5;
-    --eds-theme-color-background-grade-revise-default: #f7be2d;
-    --eds-theme-color-background-grade-revise-subtle: #fdf1d0;
-    --eds-theme-color-background-grade-stop-default: #d41e52;
-    --eds-theme-color-background-grade-stop-subtle: #fff0f4;
-    --eds-theme-color-border-neutral-subtle: #e7e8ea;
-    --eds-theme-color-border-neutral-subtle-hover: #c0c4c8;
-    --eds-theme-color-border-neutral-default: #c0c4c8;
-    --eds-theme-color-border-neutral-default-hover: #999ea3;
-    --eds-theme-color-border-neutral-strong: #999ea3;
-    --eds-theme-color-border-neutral-strong-hover: #878c90;
-    --eds-theme-color-border-brand-primary-subtle: #e0e0f9;
-    --eds-theme-color-border-brand-primary: #c4c1f3;
-    --eds-theme-color-border-utility-success-subtle: #b7e9ce;
-    --eds-theme-color-border-utility-success-default: #8fdcb3;
-    --eds-theme-color-border-utility-success-strong: #59c88c;
-    --eds-theme-color-border-utility-warning-subtle: #ffcba5;
-    --eds-theme-color-border-utility-warning-default: #ffaf76;
-    --eds-theme-color-border-utility-warning-strong: #f6924a;
-    --eds-theme-color-border-utility-error-subtle: #ffcbd7;
-    --eds-theme-color-border-utility-error-default: #fb90b0;
-    --eds-theme-color-border-utility-error-strong: #f76c96;
-    --eds-theme-color-border-grade-complete: #8fdcb3;
-    --eds-theme-color-border-grade-revise-subtle: #ffebb3;
-    --eds-theme-color-border-grade-revise-default: #ffdd80;
-    --eds-theme-color-border-grade-revise-strong: #f7be2d;
-    --eds-theme-color-border-grade-stop: #fb90b0;
-    --eds-theme-color-icon-neutral-default: #5d6369;
-    --eds-theme-color-icon-neutral-default-inverse: #ffffff;
-    --eds-theme-color-icon-neutral-default-hover: #383c43;
-    --eds-theme-color-icon-neutral-strong: #383c43;
-    --eds-theme-color-icon-neutral-strong-hover: #21272d;
-    --eds-theme-color-icon-neutral-subtle: #878c90;
-    --eds-theme-color-icon-neutral-subtle-hover: #5d6369;
-    --eds-theme-color-icon-brand-primary: #8984e8;
-    --eds-theme-color-icon-brand-primary-hover: #6b65e2;
-    --eds-theme-color-icon-utility-success: #00a56a;
-    --eds-theme-color-icon-utility-success-hover: #008656;
-    --eds-theme-color-icon-utility-warning: #e06b00;
-    --eds-theme-color-icon-utility-warning-hover: #c64600;
-    --eds-theme-color-icon-utility-error: #f1497b;
-    --eds-theme-color-icon-utility-error-hover: #d41e52;
-    --eds-theme-color-icon-grade-complete: #00a56a;
-    --eds-theme-color-icon-grade-complete-hover: #00a56a;
-    --eds-theme-color-icon-grade-revise: #21272d;
-    --eds-theme-color-icon-grade-revise-hover: #161b1f;
-    --eds-theme-color-icon-grade-stop: #f1497b;
-    --eds-theme-color-icon-grade-stop-hover: #d41e52;
-    --eds-theme-color-text-neutral-default: #383c43;
-    --eds-theme-color-text-neutral-default-inverse: #ffffff;
-    --eds-theme-color-text-neutral-strong: #21272d;
-    --eds-theme-color-text-neutral-subtle: #5d6369;
-    --eds-theme-color-text-utility-success: #007249;
-    --eds-theme-color-text-utility-warning: #ac3400;
-    --eds-theme-color-text-utility-error: #bd0044;
-    --eds-theme-color-text-grade-complete: #007249;
-    --eds-theme-color-text-grade-revise: #21272d;
-    --eds-theme-color-text-grade-stop: #bd0044;
-    --eds-theme-color-text-brand-primary: #5751d2;
-    --eds-theme-color-transparent-black-0: rgba(0, 0, 0, 0);
-    --eds-theme-color-transparent-black-30: rgba(0, 0, 0, 0.3);
-    --eds-theme-color-transparent-white-0: rgba(255, 255, 255, 0);
-    --eds-theme-color-body-background: #f4f6f8;
-    --eds-theme-color-body-background-inverted: #383c43;
-    --eds-theme-color-focus-ring-inverted: #ffffff;
-    --eds-theme-color-form-border: #878c90;
-    --eds-theme-color-form-border-hover: #21272d;
-    --eds-theme-color-form-background: #ffffff;
-    --eds-theme-color-form-background-hover: #f4f6f8;
-    --eds-theme-color-form-label: #383c43;
-    --eds-theme-color-text-highlight-foreground: #21272d;
-    --eds-theme-color-text-highlight-background: #f5ff8f;
-
-
-
-    Level 1 color tokens
-
-    --eds-color-brand-grape-100: #f0f0fc;
-    --eds-color-brand-grape-200: #e0e0f9;
-    --eds-color-brand-grape-300: #c4c1f3;
-    --eds-color-brand-grape-400: #a6a3ee;
-    --eds-color-brand-grape-500: #8984e8;
-    --eds-color-brand-grape-600: #6b65e2;
-    --eds-color-brand-grape-700: #5751d2;
-    --eds-color-brand-grape-800: #3e42b1;
-    --eds-color-neutral-100: #f4f6f8;
-    --eds-color-neutral-200: #e7e8ea;
-    --eds-color-neutral-300: #c0c4c8;
-    --eds-color-neutral-400: #999ea3;
-    --eds-color-neutral-500: #878c90;
-    --eds-color-neutral-600: #5d6369;
-    --eds-color-neutral-700: #383c43;
-    --eds-color-neutral-800: #21272d;
-    --eds-color-neutral-white: #ffffff;
-    --eds-color-neutral-black: #161b1f;
-    --eds-color-other-mint-100: #ecfff5;
-    --eds-color-other-mint-200: #b7e9ce;
-    --eds-color-other-mint-300: #8fdcb3;
-    --eds-color-other-mint-400: #59c88c;
-    --eds-color-other-mint-500: #00a56a;
-    --eds-color-other-mint-600: #008656;
-    --eds-color-other-mint-700: #007249;
-    --eds-color-other-mint-800: #005939;
-    --eds-color-other-yellow-100: #fdf1d0;
-    --eds-color-other-yellow-200: #ffebb3;
-    --eds-color-other-yellow-300: #ffdd80;
-    --eds-color-other-yellow-400: #f7be2d;
-    --eds-color-other-yellow-500: #d18400;
-    --eds-color-other-yellow-600: #bf7300;
-    --eds-color-other-yellow-700: #9e5b03;
-    --eds-color-other-yellow-800: #854c03;
-    --eds-color-other-lemon: #f5ff8f;
-    --eds-color-other-eraser: #f3dce2;
-    --eds-color-other-orange-100: #fff1e9;
-    --eds-color-other-orange-200: #ffcba5;
-    --eds-color-other-orange-300: #ffaf76;
-    --eds-color-other-orange-400: #f6924a;
-    --eds-color-other-orange-500: #e06b00;
-    --eds-color-other-orange-600: #c64600;
-    --eds-color-other-orange-700: #ac3400;
-    --eds-color-other-orange-800: #842800;
-    --eds-color-other-ruby-100: #fff0f4;
-    --eds-color-other-ruby-200: #ffcbd7;
-    --eds-color-other-ruby-300: #fb90b0;
-    --eds-color-other-ruby-400: #f76c96;
-    --eds-color-other-ruby-500: #f1497b;
-    --eds-color-other-ruby-600: #d41e52;
-    --eds-color-other-ruby-700: #bd0044;
-    --eds-color-other-ruby-800: #8f0134;
-    --eds-color-highlight-100: #ff9fec;
-    --eds-color-highlight-200: #ffbeaa;
-    --eds-color-highlight-300: #fcff00;
-    --eds-color-highlight-400: #9dffa4;
-    --eds-color-highlight-500: #00f1ff;
-    --eds-color-highlight-600: #cfc9ff;
-    --eds-color-info-100: #f1f9ff;
-    --eds-color-info-200: #b0d5ff;
-    --eds-color-info-300: #7fb9fd;
-    --eds-color-info-400: #5ca7ff;
-    --eds-color-info-500: #328efb;
-    --eds-color-info-600: #1977cd;
-    --eds-color-info-700: #0563b8;
-
-
-
-    Variables I don't think I'll need
-
-    --eds-theme-color-button-icon-brand-border: rgba(0, 0, 0, 0);
-    --eds-theme-color-button-secondary-brand-background: rgba(0, 0, 0, 0);
-    --eds-theme-color-button-icon-brand-background: rgba(0, 0, 0, 0);
-    --eds-anim-ease: ease;
-    --eds-border-width-sm: 1px;
-    --eds-border-width-md: 2px;
-    --eds-border-width-lg: 4px;
-    --eds-border-width-xl: 8px;
-    --eds-border-radius-md: 4px;
-    --eds-border-radius-lg: 8px;
-    --eds-border-radius-xl: 20px;
-    --eds-border-radius-round: 50%;
-    --eds-border-radius-full: 9999px;
-    --eds-font-size-11: 0.688rem;
-    --eds-font-size-12: 0.75rem;
-    --eds-font-size-14: 0.875rem;
-    --eds-font-size-16: 1rem;
-    --eds-font-size-18: 1.125rem;
-    --eds-font-size-24: 1.5rem;
-    --eds-font-size-28: 1.75rem;
-    --eds-font-size-32: 2rem;
-    --eds-font-size-40: 2.5rem;
-    --eds-font-size-base: 16px;
-    --eds-font-weight-light: 400;
-    --eds-font-weight-medium: 500;
-    --eds-font-weight-bold: 600;
-    --eds-letter-spacing-sm: 0.5px;
-    --eds-l-max-width: 71.25rem;
-    --eds-l-sidebar-width: 13.5rem;
-    --eds-l-linelength-width: 36rem;
-    --eds-box-shadow-sm: 0px 0px 1px rgba(0, 0, 0, 0.25),
-      0px 2px 1px rgba(0, 0, 0, 0.05);
-    --eds-box-shadow-md: 0px 0px 2px rgba(0, 0, 0, 0.2),
-      0px 2px 8px rgba(0, 0, 0, 0.08);
-    --eds-box-shadow-lg: 0px 4px 12px rgba(0, 0, 0, 0.16);
-    --eds-box-shadow-xl: 0px 6px 20px rgba(0, 0, 0, 0.2);
-    --eds-size-1: 0.5rem;
-    --eds-size-2: 1rem;
-    --eds-size-3: 1.5rem;
-    --eds-size-4: 2rem;
-    --eds-size-5: 2.5rem;
-    --eds-size-6: 3rem;
-    --eds-size-7: 3.5rem;
-    --eds-size-8: 4rem;
-    --eds-size-9: 4.5rem;
-    --eds-size-10: 5rem;
-    --eds-size-12: 6rem;
-    --eds-size-base-unit: 0.5rem;
-    --eds-size-half: 0.25rem;
-    --eds-size-quarter: 0.125rem;
-    --eds-size-1-and-half: 0.75rem;
-    --eds-size-2-and-half: 1.25rem;
-    --eds-theme-border-width: 1px;
-    --eds-z-index-0: 0;
-    --eds-z-index-100: 100;
-    --eds-z-index-200: 200;
-    --eds-z-index-300: 300;
-    --eds-z-index-400: 400;
-    --eds-z-index-500: 500;
-    --eds-z-index-top: 99999;
-    --eds-z-index-bottom: -100;
-    --eds-theme-color-button-primary-error-background: #d41e52;
-    --eds-theme-color-button-primary-error-background-hover: #bd0044;
-    --eds-theme-color-button-primary-error-background-active: #8f0134;
-    --eds-theme-color-button-primary-error-border: #d41e52;
-    --eds-theme-color-button-primary-error-border-hover: #bd0044;
-    --eds-theme-color-button-primary-error-border-active: #8f0134;
-    --eds-theme-color-button-primary-error-text: #ffffff;
-    --eds-theme-color-button-primary-error-text-hover: #ffffff;
-    --eds-theme-color-button-primary-error-text-active: #ffffff;
-    --eds-theme-color-button-secondary-neutral-background: rgba(0, 0, 0, 0);
-    --eds-theme-color-button-secondary-neutral-background-hover: #e7e8ea;
-    --eds-theme-color-button-secondary-neutral-background-active: #383c43;
-    --eds-theme-color-button-secondary-neutral-border: #5d6369;
-    --eds-theme-color-button-secondary-neutral-border-hover: #5d6369;
-    --eds-theme-color-button-secondary-neutral-border-active: #383c43;
-    --eds-theme-color-button-secondary-neutral-text: #5d6369;
-    --eds-theme-color-button-secondary-neutral-text-hover: #5d6369;
-    --eds-theme-color-button-secondary-neutral-text-active: #ffffff;
-    --eds-theme-color-button-secondary-neutral-icon: #999ea3;
-    --eds-theme-color-button-secondary-neutral-icon-hover: #999ea3;
-    --eds-theme-color-button-secondary-neutral-icon-active: #ffffff;
-    --eds-theme-color-button-secondary-success-background: rgba(0, 0, 0, 0);
-    --eds-theme-color-button-secondary-success-background-hover: #007249;
-    --eds-theme-color-button-secondary-success-background-active: #005939;
-    --eds-theme-color-button-secondary-success-border: #008656;
-    --eds-theme-color-button-secondary-success-border-hover: #007249;
-    --eds-theme-color-button-secondary-success-border-active: #005939;
-    --eds-theme-color-button-secondary-success-text: #007249;
-    --eds-theme-color-button-secondary-success-text-hover: #ffffff;
-    --eds-theme-color-button-secondary-success-text-active: #ffffff;
-    --eds-theme-color-button-secondary-success-icon: #008656;
-    --eds-theme-color-button-secondary-success-icon-hover: #ffffff;
-    --eds-theme-color-button-secondary-success-icon-active: #ffffff;
-    --eds-theme-color-button-secondary-warning-background: rgba(0, 0, 0, 0);
-    --eds-theme-color-button-secondary-warning-background-hover: #ac3400;
-    --eds-theme-color-button-secondary-warning-background-active: #842800;
-    --eds-theme-color-button-secondary-warning-border: #c64600;
-    --eds-theme-color-button-secondary-warning-border-hover: #ac3400;
-    --eds-theme-color-button-secondary-warning-border-active: #842800;
-    --eds-theme-color-button-secondary-warning-text: #ac3400;
-    --eds-theme-color-button-secondary-warning-text-hover: #ffffff;
-    --eds-theme-color-button-secondary-warning-text-active: #ffffff;
-    --eds-theme-color-button-secondary-warning-icon: #c64600;
-    --eds-theme-color-button-secondary-warning-icon-hover: #ffffff;
-    --eds-theme-color-button-secondary-warning-icon-active: #ffffff;
-    --eds-theme-color-button-secondary-error-background: rgba(0, 0, 0, 0);
-    --eds-theme-color-button-secondary-error-background-hover: #bd0044;
-    --eds-theme-color-button-secondary-error-background-active: #8f0134;
-    --eds-theme-color-button-secondary-error-border: #d41e52;
-    --eds-theme-color-button-secondary-error-border-hover: #bd0044;
-    --eds-theme-color-button-secondary-error-border-active: #8f0134;
-    --eds-theme-color-button-secondary-error-text: #bd0044;
-    --eds-theme-color-button-secondary-error-text-hover: #ffffff;
-    --eds-theme-color-button-secondary-error-text-active: #ffffff;
-    --eds-theme-color-button-secondary-error-icon: #d41e52;
-    --eds-theme-color-button-secondary-error-icon-hover: #ffffff;
-    --eds-theme-color-button-secondary-error-icon-active: #ffffff;
-    --eds-theme-color-button-icon-neutral: #5d6369;
-    --eds-theme-color-button-icon-neutral-hover: #5d6369;
-    --eds-theme-color-button-icon-neutral-active: #ffffff;
-    --eds-theme-color-button-icon-neutral-background: rgba(0, 0, 0, 0);
-    --eds-theme-color-button-icon-neutral-background-hover: #e7e8ea;
-    --eds-theme-color-button-icon-neutral-background-active: #5d6369;
-    --eds-theme-color-button-icon-neutral-border: rgba(0, 0, 0, 0);
-    --eds-theme-color-button-icon-neutral-border-hover: #e7e8ea;
-    --eds-theme-color-button-icon-neutral-border-active: #5d6369;
-    --eds-theme-color-button-icon-neutral-text: #5d6369;
-    --eds-theme-color-button-icon-neutral-text-hover: #5d6369;
-    --eds-theme-color-button-icon-neutral-text-active: #ffffff;
-    --eds-theme-color-button-icon-success: #008656;
-    --eds-theme-color-button-icon-success-hover: #008656;
-    --eds-theme-color-button-icon-success-active: #ffffff;
-    --eds-theme-color-button-icon-success-background: rgba(0, 0, 0, 0);
-    --eds-theme-color-button-icon-success-background-hover: #b7e9ce;
-    --eds-theme-color-button-icon-success-background-active: #007249;
-    --eds-theme-color-button-icon-success-border: rgba(0, 0, 0, 0);
-    --eds-theme-color-button-icon-success-border-hover: #b7e9ce;
-    --eds-theme-color-button-icon-success-border-active: #007249;
-    --eds-theme-color-button-icon-success-text: #007249;
-    --eds-theme-color-button-icon-success-text-hover: #007249;
-    --eds-theme-color-button-icon-success-text-active: #ffffff;
-    --eds-theme-color-button-icon-warning: #c64600;
-    --eds-theme-color-button-icon-warning-hover: #c64600;
-    --eds-theme-color-button-icon-warning-active: #ffffff;
-    --eds-theme-color-button-icon-warning-background: rgba(0, 0, 0, 0);
-    --eds-theme-color-button-icon-warning-background-hover: #fff1e9;
-    --eds-theme-color-button-icon-warning-background-active: #ac3400;
-    --eds-theme-color-button-icon-warning-border: rgba(0, 0, 0, 0);
-    --eds-theme-color-button-icon-warning-border-hover: #fff1e9;
-    --eds-theme-color-button-icon-warning-border-active: #ac3400;
-    --eds-theme-color-button-icon-warning-text: #ac3400;
-    --eds-theme-color-button-icon-warning-text-hover: #ac3400;
-    --eds-theme-color-button-icon-warning-text-active: #ffffff;
-    --eds-theme-color-button-icon-error: #d41e52;
-    --eds-theme-color-button-icon-error-hover: #d41e52;
-    --eds-theme-color-button-icon-error-active: #ffffff;
-    --eds-theme-color-button-icon-error-background: rgba(0, 0, 0, 0);
-    --eds-theme-color-button-icon-error-background-hover: #ffcbd7;
-    --eds-theme-color-button-icon-error-background-active: #bd0044;
-    --eds-theme-color-button-icon-error-border: rgba(0, 0, 0, 0);
-    --eds-theme-color-button-icon-error-border-hover: #ffcbd7;
-    --eds-theme-color-button-icon-error-border-active: #bd0044;
-    --eds-theme-color-button-icon-error-text: #bd0044;
-    --eds-theme-color-button-icon-error-text-hover: #bd0044;
-    --eds-theme-color-button-icon-error-text-active: #ffffff;
-    --eds-theme-color-border-link-neutral: #21272d;
-    --eds-theme-color-text-link-neutral: #21272d;
-    --eds-theme-form-border-width: 1px;
-    --eds-theme-form-border-radius: 4px;
-    --legacy-color-gray-50: #f8f9fc;
-    --legacy-color-gray-100: #ebebec;
-    --legacy-color-gray-200: #d8d8d9;
-    --legacy-color-gray-300: #c5c5c6;
-    --legacy-color-gray-500: #9f9fa0;
-    --legacy-color-gray-700: #78797a;
-    --legacy-color-gray-1000: #3f4041;
-    --legacy-color-black: #2c2d2e;
-    --legacy-color-red-100: #f7dddd;
-    --legacy-color-red-200: #f25252;
-    --legacy-color-green-100: #e1f0e7;
-    --legacy-color-green-200: #6cc188;
-    --legacy-color-green-300: #457b57;
-    --legacy-color-yellow-200: #ffc55b;
-    --legacy-color-yellow-300: #a46900;
-    --legacy-color-yellow-400: #644c1f;
-    --legacy-color-purple-200: #7686d3;
-    --legacy-color-purple-300: #5761ba;
-    --legacy-color-purple-400: #32417c;
-    --legacy-size-font-h1: 1.5rem;
-    --legacy-size-font-h2: 1.125rem;
-    --legacy-size-font-body: 1rem;
-    --legacy-size-font-sm: 0.875rem;
-    --legacy-size-font-xs: 0.75rem;
-    --legacy-size-line-height-h1: 2rem;
-    --legacy-size-line-height-body: 1.5rem;
-    --legacy-size-line-height-sm: 1.25rem;
-    --legacy-size-line-height-xs: 1rem;
-    */
-
+  /* Set default font family for text in the demo */
   font-family: var(--eds-font-family-primary);
 }
