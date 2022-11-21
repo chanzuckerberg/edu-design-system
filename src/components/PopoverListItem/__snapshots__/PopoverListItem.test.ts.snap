@@ -32,9 +32,7 @@ exports[`<PopoverListItem /> Default story renders snapshot 1`] = `
   <div
     class="popover-list-item__no-icon"
   />
-  <span>
-    Default list item
-  </span>
+  Default list item
 </div>
 `;
 
