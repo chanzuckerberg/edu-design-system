@@ -16,7 +16,6 @@ export type PopoverContentProps = {
   arrowClassName?: string;
   /**
    * Custom classname for additional styles on the generic popover container.
-   * TODO: rename to be popoverContainer or similar?
    */
   bodyClassName?: string;
   /**

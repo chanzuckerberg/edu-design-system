@@ -16,7 +16,7 @@ type Args = React.ComponentProps<typeof PopoverListItem>;
 
 export const Default: StoryObj<Args> = {
   args: {
-    children: <span>Default list item</span>,
+    children: <>Default list item</>,
   },
 };
 

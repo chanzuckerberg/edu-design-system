@@ -7,13 +7,22 @@ import Icon from '../Icon';
 import type { IconName } from '../Icon';
 
 export interface Props {
+  /**
+   * Whether the list item is treated as highlighted in its container
+   */
   active?: boolean;
   children: ReactNode;
+  /**
+   * Whether the list item is treated as disabled
+   */
   disabled?: boolean;
   /**
    * CSS class names that can be appended to the component.
    */
   className?: string;
+  /**
+   * Icon from the set of defined EDS icon set
+   */
   icon?: IconName;
 }
 
@@ -24,10 +33,8 @@ export interface Props {
  *
  * This abstracts the structure of a item in a popover, when the popover contains a
  * list of items (e.g., Menus and Selects)
- * - Contains styles for when active or not
- * - Contains styles for when hover'd
- * - contains styles for when there is an icon on the left (or right?)
- * - handles truncating text to ellipse
+ * - Contains styles for when active/disabled or not
+ * - contains styles for when there is an icon on the left
  *
  * Given headless implements listbox options as a renderProp, this can work for both
  * Listbox and Menu examples, in the latter case not specifying an icon
