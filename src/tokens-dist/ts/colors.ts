@@ -296,6 +296,7 @@ export const EdsThemeColorFormBorderHover = '#21272D';
 export const EdsThemeColorFormBackground = '#FFFFFF';
 export const EdsThemeColorFormBackgroundHover = '#F4F6F8';
 export const EdsThemeColorFormLabel = '#383C43';
+export const EdsThemeColorModalBrandHeaderBackground = '#8984E8';
 export const EdsThemeColorTextHighlightForeground = '#21272D';
 export const EdsThemeColorTextHighlightBackground = '#F5FF8F';
 export const LegacyColorGray50 = '#F8F9FC';

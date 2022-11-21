@@ -645,6 +645,14 @@
           },
           "label": "var(--eds-theme-color-form-label)"
         },
+        "modal": {
+          "brand": {
+            "header": {
+              "background": {}
+            },
+            "header-background": "var(--eds-theme-color-modal-brand-header-background)"
+          }
+        },
         "text-highlight": {
           "foreground": "var(--eds-theme-color-text-highlight-foreground)",
           "background": "var(--eds-theme-color-text-highlight-background)"

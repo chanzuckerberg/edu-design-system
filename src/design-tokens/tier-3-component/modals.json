@@ -1,0 +1,19 @@
+{
+  "eds": {
+    "theme": {
+      "color": {
+        "modal": {
+          "brand": {
+            "header": {
+              "background": {
+                "@": {
+                  "value": "{eds.color.brand.grape.500}"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

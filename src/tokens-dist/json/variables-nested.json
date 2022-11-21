@@ -649,6 +649,15 @@
           },
           "label": "#383C43"
         },
+        "modal": {
+          "brand": {
+            "header": {
+              "background": {
+                "@": "#8984E8"
+              }
+            }
+          }
+        },
         "text-highlight": {
           "foreground": "#21272D",
           "background": "#F5FF8F"
