@@ -84,6 +84,23 @@
           }
         ]
       }
+    },
+    {
+      "files": ["src/**/*.{ts,tsx}"],
+      "excludedFiles": ["src/**/*.stories.{ts,tsx}"],
+      "rules": {
+        "no-restricted-imports": [
+          "error",
+          {
+            "patterns": [
+              {
+                "group": ["**/tokens-dist/ts/colors"],
+                "message": "Do not import JavaScript color variables into component files. Use CSS variables in styles instead."
+              }
+            ]
+          }
+        ]
+      }
     }
   ],
   "ignorePatterns": ["!.storybook", ".storybook/components/Docs/prism.js"]
