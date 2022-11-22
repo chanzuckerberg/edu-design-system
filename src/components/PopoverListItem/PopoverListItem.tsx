@@ -11,6 +11,9 @@ export interface Props {
    * Whether the list item is treated as highlighted in its container
    */
   active?: boolean;
+  /**
+   * Child node(s) that can be nested inside component
+   */
   children: ReactNode;
   /**
    * Whether the list item is treated as disabled
@@ -31,7 +34,7 @@ export interface Props {
  *
  * `import {PopoverListItem} from "@chanzuckerberg/eds";`
  *
- * This abstracts the structure of a item in a popover, when the popover contains a
+ * This abstracts the structure of an item in a popover, when the popover contains a
  * list of items (e.g., Menus and Selects)
  * - Contains styles for when active/disabled or not
  * - contains styles for when there is an icon on the left
@@ -48,9 +51,19 @@ export const PopoverListItem = React.forwardRef<HTMLDivElement, Props>(
       className,
     );
 
-    // use `as` to use a/button when appropriate
+    const ariaIsDisabled = disabled
+      ? {
+          'aria-disabled': true,
+        }
+      : {};
+
     return (
-      <div className={componentClassName} {...other} ref={ref}>
+      <div
+        className={componentClassName}
+        {...other}
+        {...ariaIsDisabled}
+        ref={ref}
+      >
         {icon ? (
           <div className={styles['popover-list-item__icon']}>
             <Icon name={icon} purpose="decorative" size="1.5rem" />

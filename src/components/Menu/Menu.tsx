@@ -1,6 +1,7 @@
 import { Menu as HeadlessMenu } from '@headlessui/react';
 import clsx from 'clsx';
 import React from 'react';
+import type { MouseEventHandler } from 'react';
 
 import styles from './Menu.module.css';
 import type { ExtractProps } from '../../util/utility-types';
@@ -22,7 +23,7 @@ export type MenuProps = ExtractProps<typeof HeadlessMenu> & {
 export type MenuItemProps = ExtractProps<typeof HeadlessMenu.Item> & {
   href?: string;
   icon?: IconName;
-  onClick?: () => any;
+  onClick?: MouseEventHandler<HTMLAnchorElement>;
 };
 
 export type MenuButtonProps = ExtractProps<typeof HeadlessMenu.Button>;
@@ -74,7 +75,6 @@ const MenuItems = (props: MenuItemsProps) => (
   <HeadlessMenu.Items
     as={PopoverContainer}
     className={clsx(styles['menu__popover'])}
-    data-testid="menu-content"
     {...props}
   />
 );

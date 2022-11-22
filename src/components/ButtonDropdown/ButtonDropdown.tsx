@@ -5,7 +5,6 @@ import styles from './ButtonDropdown.module.css';
 import { DropdownMenu } from '../..';
 import type { ClickableStyleProps } from '../ClickableStyle';
 
-// TODO: This component is deprecated and will be replaced by the Menu component
 export interface Props {
   /**
    * Aria label to be attacehd to the dropdown trigger button.
@@ -63,9 +62,13 @@ export interface Props {
 }
 
 /**
+ * The ButtonDropdown component is deprecated and will be removed in a future release.
+ *
  * `import {ButtonDropdown} from "@chanzuckerberg/eds";`
  *
  * Contains the button and the dropdown.
+ *
+ * @deprecated
  */
 export const ButtonDropdown = ({
   fullWidth,

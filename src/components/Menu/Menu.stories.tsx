@@ -24,7 +24,7 @@ export const Default: StoryObj<Args> = {
   render: (args) => (
     <Menu {...args}>
       <Menu.Button>Documentation Links</Menu.Button>
-      <Menu.Items>
+      <Menu.Items data-testid="menu-content">
         <Menu.Item
           href="https://headlessui.com/react/menu#menu-button"
           icon="link"

@@ -38,6 +38,7 @@ exports[`<PopoverListItem /> Default story renders snapshot 1`] = `
 
 exports[`<PopoverListItem /> Disabled story renders snapshot 1`] = `
 <div
+  aria-disabled="true"
   class="popover-list-item popover-list-item--disabled"
 >
   <div

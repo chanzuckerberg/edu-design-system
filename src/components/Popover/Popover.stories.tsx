@@ -49,7 +49,6 @@ export const Default: StoryObj<Args> = {
 
 export const Arrow: StoryObj<Args> = {
   args: {
-    // maybe gets shallow merged with the default args (?)
     children: (
       <>
         <Popover.Button as={Button}>Open Popover</Popover.Button>

@@ -16,12 +16,12 @@
 }
 
 .menu__button {
-  background-color: var(--light-color-button-background);
+  background-color: var(--eds-theme-color-form-background);
 }
 
-/* // is getting overridden by a style in clickablestyle */
-.menu__button--icon {
-  color: var(--eds-theme-color-button-secondary-neutral-text);
+/* Needed to create higher specificity than ClickableStyle. TODO: improve */
+.menu__button--icon.menu__button--icon.menu__button--icon {
+  color: var(--eds-theme-color-icon-neutral-default);
 }
 
 .menu__item {

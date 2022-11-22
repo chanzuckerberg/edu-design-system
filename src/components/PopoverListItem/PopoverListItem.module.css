@@ -19,7 +19,7 @@
 
 .popover-list-item--disabled {
   color: var(--eds-theme-color-text-disabled);
-  pointer-events: none;
+  cursor: not-allowed;
 }
 
 .popover-list-item__icon {
