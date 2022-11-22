@@ -117,7 +117,8 @@ function minifyCSSVarDictionary(obj) {
  * This helper function makes this happen by
  * 1) Scanning great grandchildren for the key '@'
  * 2) If such key exists, child and grandchild names are combined to make the new child key and value of the great grandchild '@' key is assigned to the new child key
- * 2.5) The great grandchild '@' key/value pair is deleted for housekeeping.
+ * 2.1) The great grandchild '@' key/value pair is deleted for housekeeping.
+ * 2.2) If objects are now empty, deletes them to prevent potential token name clashing which could cause Tailwind bugs.
  * 3) If such key does not exist, but grand child is an object, recurses with the child to repeat this process.
  */
 function formatEdsTokens(obj) {
@@ -127,6 +128,12 @@ function formatEdsTokens(obj) {
         if (obj[name][nestedName]['@']) {
           obj[name + '-' + nestedName] = obj[name][nestedName]['@'];
           delete obj[name][nestedName]['@'];
+          if (Object.keys(obj[name][nestedName]).length === 0) {
+            delete obj[name][nestedName];
+          }
+          if (Object.keys(obj[name]).length === 0) {
+            delete obj[name];
+          }
         } else if (typeof obj[name][nestedName] === 'object') {
           formatEdsTokens(obj[name]);
         }

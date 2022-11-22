@@ -647,9 +647,6 @@
         },
         "modal": {
           "brand": {
-            "header": {
-              "background": {}
-            },
             "header-background": "var(--eds-theme-color-modal-brand-header-background)"
           }
         },
