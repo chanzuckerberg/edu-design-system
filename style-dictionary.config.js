@@ -127,6 +127,12 @@ function formatEdsTokens(obj) {
         if (obj[name][nestedName]['@']) {
           obj[name + '-' + nestedName] = obj[name][nestedName]['@'];
           delete obj[name][nestedName]['@'];
+          if (Object.keys(obj[name][nestedName]).length === 0) {
+            delete obj[name][nestedName];
+          }
+          if (Object.keys(obj[name]).length === 0) {
+            delete obj[name];
+          }
         } else if (typeof obj[name][nestedName] === 'object') {
           formatEdsTokens(obj[name]);
         }
