@@ -89,6 +89,7 @@ const MenuItem = ({
   onClick,
   ...other
 }: MenuItemProps) => {
+  // If we have an event handler, avoid navigation by discarding the href
   const destinationUrl = !onClick ? href : undefined;
   return (
     <HeadlessMenu.Item {...other}>

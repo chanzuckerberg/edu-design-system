@@ -26,7 +26,7 @@
   padding-right: var(--eds-size-1-and-half);
 }
 
-/* right padding applies space for the icon and the padding for that icon container */
 .popover-list-item__no-icon {
+  /* right padding applies space for the icon itself and the padding for that icon container */
   padding-right: calc(var(--eds-size-3) + var(--eds-size-1-and-half));
 }
