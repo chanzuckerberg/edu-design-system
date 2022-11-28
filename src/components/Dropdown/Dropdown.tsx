@@ -9,6 +9,8 @@ import type { ExtractProps } from '../../util/utility-types';
 import DropdownButton from '../DropdownButton';
 import Icon from '../Icon';
 
+// TODO: this is going to be renamed to be a new Select component
+// and refactored to align with the Menu component (use PopoverContainer, PopoverListItem)
 export type OptionsAlignType = 'left' | 'right';
 export type VariantType = 'compact' | 'full';
 

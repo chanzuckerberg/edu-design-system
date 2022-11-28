@@ -18,6 +18,7 @@ import {
   TAB_KEYCODE,
 } from '../../util/keycodes';
 
+// This component is deprecated and will be replaced by the Menu component
 export type Props = {
   /**
    * Child node(s) that can be nested inside component
@@ -48,9 +49,13 @@ type ContextRefs = {
 export const DropdownMenuContext = createContext<ContextRefs | null>(null);
 
 /**
+ * The DropdownMenu component is deprecated and will be removed in a future release.
+ *
  * `import {DropdownMenu} from "@chanzuckerberg/eds";`
  *
  * Dropdown menu with actions list.
+ *
+ * @deprecated
  */
 export const DropdownMenu: React.FC<Props> = ({
   children,

@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PopoverListItem /> Active story renders snapshot 1`] = `
+<div
+  class="popover-list-item popover-list-item--active"
+>
+  <div
+    class="popover-list-item__icon"
+  >
+    <svg
+      aria-hidden="true"
+      class="icon"
+      fill="currentColor"
+      height="1.5rem"
+      style="--icon-size: 1.5rem;"
+      width="1.5rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <use
+        xlink:href="test-file-stub#check"
+      />
+    </svg>
+  </div>
+  Active Row with Icon
+</div>
+`;
+
+exports[`<PopoverListItem /> Default story renders snapshot 1`] = `
+<div
+  class="popover-list-item"
+>
+  <div
+    class="popover-list-item__no-icon"
+  />
+  Default list item
+</div>
+`;
+
+exports[`<PopoverListItem /> Disabled story renders snapshot 1`] = `
+<div
+  aria-disabled="true"
+  class="popover-list-item popover-list-item--disabled"
+>
+  <div
+    class="popover-list-item__no-icon"
+  />
+  Disabled
+</div>
+`;
+
+exports[`<PopoverListItem /> WithAnIcon story renders snapshot 1`] = `
+<div
+  class="popover-list-item"
+>
+  <div
+    class="popover-list-item__icon"
+  >
+    <svg
+      aria-hidden="true"
+      class="icon"
+      fill="currentColor"
+      height="1.5rem"
+      style="--icon-size: 1.5rem;"
+      width="1.5rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <use
+        xlink:href="test-file-stub#add-circle"
+      />
+    </svg>
+  </div>
+  Test with Icon
+</div>
+`;

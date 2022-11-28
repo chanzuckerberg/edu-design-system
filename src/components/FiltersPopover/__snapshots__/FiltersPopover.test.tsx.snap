@@ -35,7 +35,7 @@ exports[`<Filters /> Default story renders snapshot 1`] = `
     tabindex="-1"
   >
     <div
-      class="popover-content__body filters-popover"
+      class="popover-container filters-popover"
     >
       <div>
         <fieldset
@@ -195,7 +195,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
     tabindex="-1"
   >
     <div
-      class="popover-content__body filters-popover"
+      class="popover-container filters-popover"
     >
       <div
         class="filters-popover"
@@ -825,7 +825,7 @@ exports[`<Filters /> WithOnApplyAndCustomButtonGroup story renders snapshot 1`] 
     tabindex="-1"
   >
     <div
-      class="popover-content__body filters-popover"
+      class="popover-container filters-popover"
     >
       <div>
         <fieldset
@@ -996,7 +996,7 @@ exports[`<Filters /> WithOnClear story renders snapshot 1`] = `
     tabindex="-1"
   >
     <div
-      class="popover-content__body filters-popover"
+      class="popover-container filters-popover"
     >
       <div>
         <fieldset

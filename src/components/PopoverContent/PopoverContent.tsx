@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import React, { useContext } from 'react';
 import styles from './PopoverContent.module.css';
 import { PopoverContext } from '../Popover';
+import PopoverContainer from '../PopoverContainer';
 
 type RenderProps<RenderPropArgs> = {
   children: React.ReactNode | ((args: RenderPropArgs) => React.ReactElement);
@@ -14,7 +15,7 @@ export type PopoverContentProps = {
    */
   arrowClassName?: string;
   /**
-   * Custom classname for additional styles for the scroll area.
+   * Custom classname for additional styles on the generic popover container.
    */
   bodyClassName?: string;
   /**
@@ -72,11 +73,6 @@ export const PopoverContent = ({
 
   const componentClassName = clsx(styles['popover-content'], className);
 
-  const bodyComponentClassName = clsx(
-    styles['popover-content__body'],
-    bodyClassName,
-  );
-
   const arrowComponentClassName = clsx(
     styles['popover-content__arrow'],
     arrowClassName,
@@ -88,7 +84,7 @@ export const PopoverContent = ({
       as="article"
       className={componentClassName}
     >
-      <div className={bodyComponentClassName}>{children}</div>
+      <PopoverContainer className={bodyClassName}>{children}</PopoverContainer>
       {showArrow && (
         <div
           aria-hidden
