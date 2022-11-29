@@ -4,7 +4,7 @@ on:
   schedule:
     # The "*" (#42, asterisk) character has special semantics in YAML, so this
     # string has to be quoted.
-    - cron: '0 13,19 * * MON' # Monday, 6am and 12pm (PST)
+    - cron: '0 13 * * MON' # Monday, 6am (PST)
 
 jobs:
   renovate:
