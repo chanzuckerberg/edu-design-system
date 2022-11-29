@@ -1,0 +1,113 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    # DROPDOWN
+\*------------------------------------*/
+
+/**
+ * Dropdown used to select one option from a list of options.
+ */
+.dropdown {
+  position: relative;
+}
+
+/**
+ * Compact variant.
+ */
+.dropdown--compact {
+  width: min-content;
+}
+.dropdown-button--compact {
+  padding: var(--eds-size-half);
+}
+
+/**
+ * Label on top of the dropdown button to label the dropdown.
+ */
+.label {
+  @mixin eds-theme-typography-label-md;
+  color: var(--eds-theme-color-form-label);
+  margin-bottom: var(--eds-size-half);
+}
+
+/**
+ * Visually hides the label element if a aria-label is passed,
+ * but element is kept for screen reading accessibility.
+ */
+.u-is-vishidden {
+  @mixin visuallyHide;
+}
+
+/**
+ * The container for the individual dropdown options. 
+ */
+.dropdown__options {
+  margin-top: var(--eds-size-1);
+  max-width: var(--eds-l-max-width);
+  position: absolute;
+  z-index: var(--eds-z-index-100);
+}
+
+.dropdown__options--compact {
+  width: 200%;
+}
+
+/**
+ * Full variant styling for the dropdown options
+ */
+.dropdown__options--full-width {
+  width: 100%;
+}
+
+/**
+ * Places the options on the right side of the container.
+ */
+.dropdown__options--align-right {
+  right: 0;
+}
+
+/*------------------------------------*\
+    # DROPDOWN BUTTON
+\*------------------------------------*/
+
+/**
+ * The button to trigger the display of the dropdown.
+ */
+.dropdown-button {
+  @mixin eds-theme-typography-body-text-md;
+  /* Allow Dropdown font to shrink in contexts where body font size is smaller. */
+  font-size: inherit;
+
+  width: 100%;
+  padding: var(--eds-size-1);
+
+  border: var(--eds-theme-border-width) solid
+    var(--eds-theme-color-border-neutral-strong);
+  border-radius: var(--eds-border-radius-md);
+
+  display: flex;
+  /* Place button text on the left and the expand more icon on the right. */
+  justify-content: space-between;
+  align-items: center;
+
+  cursor: pointer;
+
+  background-color: var(--eds-theme-color-background-neutral-default);
+}
+
+/**
+ * The caret icon to decorate the dropdown button, animated to rotate.
+ */
+.dropdown-button__icon {
+  transform: rotate(0);
+
+  transition: transform var(--eds-anim-move-medium) ease-out;
+  @media (prefers-reduced-motion) {
+    /* Turns off animation if user prefers reduced motion. */
+    transition: none;
+  }
+}
+
+.dropdown-button__icon--reversed {
+  transform: rotate(180deg);
+}
