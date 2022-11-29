@@ -8,7 +8,7 @@
   internalChecksFilter: 'strict', // PRs will be skipped unless a non-pending version is available (applies to "stabilityDays" check only)
   labels: ['npm-dependencies'],
   prConcurrentLimit: 1,
-  repositories: ['FB-PLP/traject'],
+  repositories: ['chanzuckerberg/edu-design-system'],
   rangeStrategy: 'bump', // Always bump minor/patch to latest
   reviewers: ['team:edu-design-system'],
 
