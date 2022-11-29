@@ -69,16 +69,19 @@
     {
       matchPackagePatterns: ['prettier'],
       groupName: 'prettier',
+      enabled: true,
     },
     // Update typescript separately because typescript updates can create new
     // typescript errors that need to be manually resolved.
     {
       matchPackageNames: ['typescript'],
       groupName: 'typescript',
+      enabled: true,
     },
     {
       matchDepTypes: ['devDependencies'],
       groupName: 'devDependencies',
+      enabled: true,
     },
   ],
 
