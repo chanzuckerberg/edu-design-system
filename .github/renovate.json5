@@ -1,7 +1,7 @@
 {
   $schema: 'https://docs.renovatebot.com/renovate-schema.json',
 
-  baseBranches: ['next'],
+  baseBranches: ['jlee/renovate-run'],
   enabledManagers: ['npm'],
   extends: ['config:base', 'group:allNonMajor'],
   fetchReleaseNotes: false, // Only fetch release notes for breaking changes

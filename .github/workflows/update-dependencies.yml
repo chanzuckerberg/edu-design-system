@@ -14,7 +14,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           # We want this running on the development 'next' branch
-          ref: 'next'
+          ref: 'jlee/renovate-run'
 
       - name: Renovate
         # The version of renovatebot should be kept up-to-date
