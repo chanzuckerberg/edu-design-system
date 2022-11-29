@@ -4,7 +4,7 @@
   onboarding: false, // Disables the onboarding pr as this config should work
   requireConfig: 'optional',
 
-  baseBranches: ['next'],
+  baseBranches: ['jlee/renovate-run'],
   enabledManagers: ['npm'],
   extends: ['config:base', 'group:allNonMajor'],
   fetchReleaseNotes: false, // Only fetch release notes for breaking changes
