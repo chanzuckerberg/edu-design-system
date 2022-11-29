@@ -10,6 +10,7 @@
   prConcurrentLimit: 1,
   repositories: ['FB-PLP/traject'],
   rangeStrategy: 'bump', // Always bump minor/patch to latest
+  reviewers: ['team:edu-design-system'],
 
   major: {
     rangeStrategy: 'replace',
