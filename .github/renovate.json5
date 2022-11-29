@@ -1,6 +1,8 @@
 {
   $schema: 'https://docs.renovatebot.com/renovate-schema.json',
 
+  onboarding: false, // disables the onboarding pr as this config should work
+
   baseBranches: ['next'],
   enabledManagers: ['npm'],
   extends: ['config:base', 'group:allNonMajor'],
