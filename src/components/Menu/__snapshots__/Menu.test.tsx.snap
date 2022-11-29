@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Menu /> Default story renders snapshot 1`] = `
-<div>
+<div
+  class="menu"
+>
   <button
     aria-controls="headlessui-menu-items-2"
     aria-expanded="true"

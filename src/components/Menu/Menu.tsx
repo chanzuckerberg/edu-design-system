@@ -39,7 +39,8 @@ export type MenuItemsProps = ExtractProps<typeof HeadlessMenu.Items>;
  * a profile menu with links to settings) or a set of actions
  */
 export const Menu = (props: MenuProps) => {
-  return <HeadlessMenu {...props} />;
+  const menuClassNames = clsx(props.className, styles['menu']);
+  return <HeadlessMenu as="div" className={menuClassNames} {...props} />;
 };
 
 /**
