@@ -3,14 +3,14 @@ import type { StoryObj, Meta } from '@storybook/react';
 import { within } from '@storybook/testing-library';
 import clsx from 'clsx';
 import React from 'react';
-import type { OptionsAlignType, VariantType } from './Dropdown';
-import { Dropdown } from './Dropdown';
-import styles from './Dropdown.stories.module.css';
+import type { OptionsAlignType, VariantType } from './Select';
+import { Select } from './Select';
+import styles from './Select.stories.module.css';
 import Icon from '../Icon';
 
 export default {
   title: 'Molecules/Forms/Select',
-  component: Dropdown,
+  component: Select,
   parameters: {
     badges: [BADGE.BETA],
     layout: 'centered',
@@ -65,7 +65,7 @@ function InteractiveExampleUsingSeparateProps(props: Props) {
   );
   return (
     <div className={componentClassName}>
-      <Dropdown
+      <Select
         buttonText={selectedOption?.label || 'Select'}
         className={clsx(!compact && styles['dropdown--non-compact'])}
         data-testid="dropdown"
@@ -90,7 +90,7 @@ function InteractiveExampleUsingChildren(props: Props) {
 
   return (
     <div className={styles['interactive-example']}>
-      <Dropdown
+      <Select
         aria-label={props['aria-label']}
         className={clsx(!compact && styles['dropdown--non-compact'])}
         data-testid="dropdown"
@@ -99,15 +99,15 @@ function InteractiveExampleUsingChildren(props: Props) {
         variant={variant}
       >
         {props.labelComponent}
-        <Dropdown.Button>{selectedOption?.label || 'Select'}</Dropdown.Button>
-        <Dropdown.Options>
+        <Select.Button>{selectedOption?.label || 'Select'}</Select.Button>
+        <Select.Options>
           {exampleOptions.map((option) => (
-            <Dropdown.Option key={option.key} value={option}>
+            <Select.Option key={option.key} value={option}>
               {option.label}
-            </Dropdown.Option>
+            </Select.Option>
           ))}
-        </Dropdown.Options>
-      </Dropdown>
+        </Select.Options>
+      </Select>
     </div>
   );
 }
@@ -119,7 +119,7 @@ function InteractiveExampleUsingFunctionChildren() {
 
   return (
     <div className={styles['interactive-example']}>
-      <Dropdown
+      <Select
         aria-label="Favorite Animal"
         as="div"
         className={styles['dropdown--non-compact']}
@@ -129,7 +129,7 @@ function InteractiveExampleUsingFunctionChildren() {
       >
         {({ open }) => (
           <>
-            <Dropdown.Button
+            <Select.Button
               // Because we're using a render prop to completely control the styling and icon of the
               // button, we need to configure this component to render as a Fragment. Otherwise we'd
               // render two, nested buttons.
@@ -148,17 +148,17 @@ function InteractiveExampleUsingFunctionChildren() {
                   />
                 </button>
               )}
-            </Dropdown.Button>
-            <Dropdown.Options>
+            </Select.Button>
+            <Select.Options>
               {exampleOptions.map((option) => (
-                <Dropdown.Option key={option.key} value={option}>
+                <Select.Option key={option.key} value={option}>
                   {option.label}
-                </Dropdown.Option>
+                </Select.Option>
               ))}
-            </Dropdown.Options>
+            </Select.Options>
           </>
         )}
-      </Dropdown>
+      </Select>
     </div>
   );
 }
@@ -206,7 +206,7 @@ export const SeparateButtonAndMenuWidth: StoryObj = {
 export const UsingChildrenProp: StoryObj = {
   render: () => (
     <InteractiveExampleUsingChildren
-      labelComponent={<Dropdown.Label>Favorite Animal</Dropdown.Label>}
+      labelComponent={<Select.Label>Favorite Animal</Select.Label>}
     />
   ),
 };
@@ -250,9 +250,9 @@ export const OpenByDefault: StoryObj = {
 export const DropdownButtonOnly = {
   render: () => (
     <>
-      <Dropdown.Button isOpen={false}>Dropdown button closed</Dropdown.Button>
+      <Select.Button isOpen={false}>Dropdown button closed</Select.Button>
       <br />
-      <Dropdown.Button isOpen={true}>Dropdown button open</Dropdown.Button>
+      <Select.Button isOpen={true}>Dropdown button open</Select.Button>
     </>
   ),
   parameters: {

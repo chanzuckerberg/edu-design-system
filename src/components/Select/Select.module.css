@@ -43,13 +43,15 @@
  */
 .dropdown__options {
   margin-top: var(--eds-size-1);
+  min-width: max-content;
   max-width: var(--eds-l-max-width);
   position: absolute;
   z-index: var(--eds-z-index-100);
 }
 
 .dropdown__options--compact {
-  width: 200%;
+  min-width: max-content;
+  width: 100%;
 }
 
 /**

@@ -2,8 +2,8 @@ import { generateSnapshots } from '@chanzuckerberg/story-utils';
 import { composeStory } from '@storybook/testing-react';
 import { fireEvent, screen, render } from '@testing-library/react';
 import React from 'react';
-import { Dropdown } from './Dropdown';
-import * as stories from './Dropdown.stories';
+import { Select } from './Select';
+import * as stories from './Select.stories';
 
 const { OpenByDefault, ...closedStories } = stories;
 
@@ -42,21 +42,21 @@ describe('<Dropdown />', () => {
 
   it('throws an error if children is used with labelText', () => {
     const dropdownWithChildrenAndLabelText = (
-      <Dropdown
+      <Select
         labelText="Options:"
         onChange={() => undefined}
         value={exampleOptions[0]}
       >
-        <Dropdown.Button>Select</Dropdown.Button>
+        <Select.Button>Select</Select.Button>
 
-        <Dropdown.Options>
+        <Select.Options>
           {exampleOptions.map((option) => (
-            <Dropdown.Option key={option.key} value={option}>
+            <Select.Option key={option.key} value={option}>
               {option.label}
-            </Dropdown.Option>
+            </Select.Option>
           ))}
-        </Dropdown.Options>
-      </Dropdown>
+        </Select.Options>
+      </Select>
     );
     const renderMethod = () => {
       render(dropdownWithChildrenAndLabelText);
@@ -67,21 +67,21 @@ describe('<Dropdown />', () => {
 
   it('throws an error if children is used with buttonText', () => {
     const dropdownWithChildrenAndButtonText = (
-      <Dropdown
+      <Select
         buttonText="Select"
         onChange={() => undefined}
         value={exampleOptions[0]}
       >
-        <Dropdown.Label>Options:</Dropdown.Label>
+        <Select.Label>Options:</Select.Label>
 
-        <Dropdown.Options>
+        <Select.Options>
           {exampleOptions.map((option) => (
-            <Dropdown.Option key={option.key} value={option}>
+            <Select.Option key={option.key} value={option}>
               {option.label}
-            </Dropdown.Option>
+            </Select.Option>
           ))}
-        </Dropdown.Options>
-      </Dropdown>
+        </Select.Options>
+      </Select>
     );
     const renderMethod = () => {
       render(dropdownWithChildrenAndButtonText);
@@ -92,14 +92,14 @@ describe('<Dropdown />', () => {
 
   it('throws an error if children is used with options', () => {
     const dropdownWithChildrenAndOptions = (
-      <Dropdown
+      <Select
         onChange={() => undefined}
         options={exampleOptions}
         value={exampleOptions[0]}
       >
-        <Dropdown.Label>Options:</Dropdown.Label>
-        <Dropdown.Button>Select</Dropdown.Button>
-      </Dropdown>
+        <Select.Label>Options:</Select.Label>
+        <Select.Button>Select</Select.Button>
+      </Select>
     );
     const renderMethod = () => {
       render(dropdownWithChildrenAndOptions);
@@ -110,7 +110,7 @@ describe('<Dropdown />', () => {
 
   it('does not throw an error if dropdown uses labelText', () => {
     const dropdownWithLabelText = (
-      <Dropdown
+      <Select
         buttonText="Select"
         labelText="Options:"
         onChange={() => undefined}
@@ -127,7 +127,7 @@ describe('<Dropdown />', () => {
 
   it('does not throw an error if dropdown uses aria-label', () => {
     const dropdownWithAriaLabel = (
-      <Dropdown
+      <Select
         buttonText="Select"
         labelText="Options:"
         onChange={() => undefined}
@@ -144,18 +144,18 @@ describe('<Dropdown />', () => {
 
   it('does not throw an error if dropdown uses <Dropdown.Label>', () => {
     const dropdownWithDropdownLabel = (
-      <Dropdown onChange={() => undefined} value={exampleOptions[0]}>
-        <Dropdown.Label>Options:</Dropdown.Label>
-        <Dropdown.Button>Select</Dropdown.Button>
+      <Select onChange={() => undefined} value={exampleOptions[0]}>
+        <Select.Label>Options:</Select.Label>
+        <Select.Button>Select</Select.Button>
 
-        <Dropdown.Options>
+        <Select.Options>
           {exampleOptions.map((option) => (
-            <Dropdown.Option key={option.key} value={option}>
+            <Select.Option key={option.key} value={option}>
               {option.label}
-            </Dropdown.Option>
+            </Select.Option>
           ))}
-        </Dropdown.Options>
-      </Dropdown>
+        </Select.Options>
+      </Select>
     );
     const renderMethod = () => {
       render(dropdownWithDropdownLabel);
@@ -166,7 +166,7 @@ describe('<Dropdown />', () => {
 
   it('does throw an error if dropdown does not use <Dropdown.Label>, labelText, or aria-label', () => {
     const dropdownWithoutLabel = (
-      <Dropdown
+      <Select
         buttonText="Select"
         onChange={() => undefined}
         options={exampleOptions}
