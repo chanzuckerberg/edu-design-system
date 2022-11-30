@@ -38,9 +38,9 @@ export type MenuItemsProps = ExtractProps<typeof HeadlessMenu.Items>;
  * be used when there is a discrete number of actions such as user navigations (e.g.,
  * a profile menu with links to settings) or a set of actions
  */
-export const Menu = (props: MenuProps) => {
-  const menuClassNames = clsx(props.className, styles['menu']);
-  return <HeadlessMenu as="div" className={menuClassNames} {...props} />;
+export const Menu = ({ className, ...other }: MenuProps) => {
+  const menuClassNames = clsx(className, styles['menu']);
+  return <HeadlessMenu as="div" className={menuClassNames} {...other} />;
 };
 
 /**
