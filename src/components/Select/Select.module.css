@@ -1,28 +1,28 @@
 @import '../../design-tokens/mixins.css';
 
 /*------------------------------------*\
-    # DROPDOWN
+    # SELECT
 \*------------------------------------*/
 
 /**
- * Dropdown used to select one option from a list of options.
+ * Select field used to select one option from a list of options.
  */
-.dropdown {
+.select {
   position: relative;
 }
 
 /**
  * Compact variant.
  */
-.dropdown--compact {
+.select--compact {
   width: min-content;
 }
-.dropdown-button--compact {
+.select-button--compact {
   padding: var(--eds-size-half);
 }
 
 /**
- * Label on top of the dropdown button to label the dropdown.
+ * Label on top of the select trigger button to label the select field.
  */
 .label {
   @mixin eds-theme-typography-label-md;
@@ -39,9 +39,9 @@
 }
 
 /**
- * The container for the individual dropdown options. 
+ * The container for the individual select options. 
  */
-.dropdown__options {
+.select__options {
   margin-top: var(--eds-size-1);
   min-width: max-content;
   max-width: var(--eds-l-max-width);
@@ -49,22 +49,22 @@
   z-index: var(--eds-z-index-100);
 }
 
-.dropdown__options--compact {
+.select__options--compact {
   min-width: max-content;
   width: 100%;
 }
 
 /**
- * Full variant styling for the dropdown options
+ * Full variant styling for the select options
  */
-.dropdown__options--full-width {
+.select__options--full-width {
   width: 100%;
 }
 
 /**
  * Places the options on the right side of the container.
  */
-.dropdown__options--align-right {
+.select__options--align-right {
   right: 0;
 }
 
@@ -75,7 +75,7 @@
 /**
  * The button to trigger the display of the dropdown.
  */
-.dropdown-button {
+.select-button {
   @mixin eds-theme-typography-body-text-md;
   /* Allow Dropdown font to shrink in contexts where body font size is smaller. */
   font-size: inherit;
@@ -98,9 +98,9 @@
 }
 
 /**
- * The caret icon to decorate the dropdown button, animated to rotate.
+ * The caret icon to decorate the select trigger button, animated to rotate.
  */
-.dropdown-button__icon {
+.select-button__icon {
   transform: rotate(0);
 
   transition: transform var(--eds-anim-move-medium) ease-out;
@@ -110,6 +110,6 @@
   }
 }
 
-.dropdown-button__icon--reversed {
+.select-button__icon--reversed {
   transform: rotate(180deg);
 }

@@ -283,8 +283,8 @@ export function Select(props: SelectProps) {
   }
 
   const componentClassName = clsx(
-    styles['dropdown'],
-    compact && styles['dropdown--compact'],
+    styles['select'],
+    compact && styles['select--compact'],
     className,
   );
   const sharedProps = {
@@ -378,7 +378,7 @@ const SelectTrigger = function (
 
   const componentClassName = clsx(
     className,
-    compact && styles['dropdown-button--compact'],
+    compact && styles['select-button--compact'],
   );
   return (
     <Listbox.Button
@@ -405,11 +405,11 @@ const SelectOptions = function (props: PropsWithRenderProp<{ open: boolean }>) {
 
   // TODO-AH: fix how the width works
   const componentClassName = clsx(
-    styles['dropdown__options'],
+    styles['select__options'],
     className,
-    optionsAlign === 'right' && styles['dropdown__options--align-right'],
-    optionsClassName || (!compact && styles['dropdown__options--full-width']),
-    compact && styles['dropdown__options--compact'],
+    optionsAlign === 'right' && styles['select__options--align-right'],
+    optionsClassName || (!compact && styles['select__options--full-width']),
+    compact && styles['select__options--compact'],
   );
   return (
     <Listbox.Options
@@ -477,10 +477,10 @@ export const SelectButton = React.forwardRef<
   HTMLButtonElement,
   SelecButtonProps
 >(({ children, className, isOpen, ...other }, ref) => {
-  const componentClassName = clsx(styles['dropdown-button'], className);
+  const componentClassName = clsx(styles['select-button'], className);
   const iconClassName = clsx(
-    styles['dropdown-button__icon'],
-    isOpen && styles['dropdown-button__icon--reversed'],
+    styles['select-button__icon'],
+    isOpen && styles['select-button__icon--reversed'],
   );
   return (
     <button className={componentClassName} ref={ref} {...other}>

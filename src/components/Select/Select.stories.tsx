@@ -19,7 +19,7 @@ export default {
     (Story) => (
       <div
         style={{
-          margin: '1rem', // Provides spacing to see activity around dropdown.
+          margin: '1rem', // Provides spacing to see activity around the select field
         }}
       >
         <Story />
@@ -67,7 +67,7 @@ function InteractiveExampleUsingSeparateProps(props: Props) {
     <div className={componentClassName}>
       <Select
         buttonText={selectedOption?.label || 'Select'}
-        className={clsx(!compact && styles['dropdown--non-compact'])}
+        className={clsx(!compact && styles['select--non-compact'])}
         data-testid="dropdown"
         onChange={setSelectedOption}
         options={exampleOptions}

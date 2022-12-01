@@ -10,7 +10,7 @@
   padding-left: var(--eds-size-4);
 }
 
-.dropdown--non-compact {
+.select--non-compact {
   width: 15rem;
 }
 
