@@ -11,10 +11,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - name: Setup node 😻
+        uses: actions/setup-node@v3
         with:
-          node-version: 16.x
-          cache: "yarn"
+          node-version-file: '.node-version'
+          cache: 'yarn'
 
       - name: Install Dependencies ⬆️
         run: yarn install --immutable
