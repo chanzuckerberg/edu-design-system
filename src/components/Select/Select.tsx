@@ -471,6 +471,7 @@ type SelecButtonProps = {
 
 /**
  * A styled button with an expand icon to be used for triggering
+ * TODO-AH: merge this into trigger, and rename trigger to .Button
  */
 export const SelectButton = React.forwardRef<
   HTMLButtonElement,
@@ -496,7 +497,8 @@ export const SelectButton = React.forwardRef<
   );
 });
 
-Select.Button = SelectButton;
+// TODO-AH: fix exports to match menu export names
+Select.ButtonComponent = SelectButton;
 Select.Button = SelectTrigger;
 Select.Label = SelectLabel;
 Select.Option = SelectOption;

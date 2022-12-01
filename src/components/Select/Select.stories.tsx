@@ -117,6 +117,7 @@ function InteractiveExampleUsingFunctionChildren() {
   const [selectedOption, setSelectedOption] =
     React.useState<typeof exampleOptions[0]>();
 
+  // TODO-AH: rename to Select.Button once button/trigger refactoring is done
   return (
     <div className={styles['interactive-example']}>
       <Select
@@ -247,12 +248,17 @@ export const OpenByDefault: StoryObj = {
   },
 };
 
+// TODO-AH: remove, as the actual button cannot be exported if not wrapped in the right component
 export const DropdownButtonOnly = {
   render: () => (
     <>
-      <Select.Button isOpen={false}>Dropdown button closed</Select.Button>
+      <Select.ButtonComponent isOpen={false}>
+        Dropdown button closed
+      </Select.ButtonComponent>
       <br />
-      <Select.Button isOpen={true}>Dropdown button open</Select.Button>
+      <Select.ButtonComponent isOpen={true}>
+        Dropdown button open
+      </Select.ButtonComponent>
     </>
   ),
   parameters: {
