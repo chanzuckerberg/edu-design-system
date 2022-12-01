@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Dropdown /> Compact story renders snapshot 1`] = `
+exports[`<Select /> Compact story renders snapshot 1`] = `
 <div
   class="select select--compact"
   data-testid="dropdown"
@@ -82,7 +82,7 @@ exports[`<Dropdown /> Compact story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Dropdown /> CompactUsingChildrenPropAndNoVisibleLabel story renders snapshot 1`] = `
+exports[`<Select /> CompactUsingChildrenPropAndNoVisibleLabel story renders snapshot 1`] = `
 <div
   class="select select--compact"
   data-testid="dropdown"
@@ -164,7 +164,7 @@ exports[`<Dropdown /> CompactUsingChildrenPropAndNoVisibleLabel story renders sn
 </div>
 `;
 
-exports[`<Dropdown /> CompactWithOptionsRightAligned story renders snapshot 1`] = `
+exports[`<Select /> CompactWithOptionsRightAligned story renders snapshot 1`] = `
 <div
   class="select select--compact"
   data-testid="dropdown"
@@ -246,7 +246,7 @@ exports[`<Dropdown /> CompactWithOptionsRightAligned story renders snapshot 1`] 
 </div>
 `;
 
-exports[`<Dropdown /> Default story renders snapshot 1`] = `
+exports[`<Select /> Default story renders snapshot 1`] = `
 <div
   class="select select--non-compact"
   data-testid="dropdown"
@@ -328,7 +328,7 @@ exports[`<Dropdown /> Default story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Dropdown /> DefaultWithoutVisibleLabel story renders snapshot 1`] = `
+exports[`<Select /> DefaultWithoutVisibleLabel story renders snapshot 1`] = `
 <div
   class="select select--non-compact"
   data-testid="dropdown"
@@ -410,7 +410,7 @@ exports[`<Dropdown /> DefaultWithoutVisibleLabel story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Dropdown /> SeparateButtonAndMenuWidth story renders snapshot 1`] = `
+exports[`<Select /> SeparateButtonAndMenuWidth story renders snapshot 1`] = `
 <div
   class="select select--non-compact"
   data-testid="dropdown"
@@ -492,7 +492,7 @@ exports[`<Dropdown /> SeparateButtonAndMenuWidth story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Dropdown /> UsingChildrenProp story renders snapshot 1`] = `
+exports[`<Select /> UsingChildrenProp story renders snapshot 1`] = `
 <div
   class="select dropdown--non-compact"
   data-testid="dropdown"
@@ -574,7 +574,7 @@ exports[`<Dropdown /> UsingChildrenProp story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Dropdown /> UsingChildrenPropAndNoVisibleLabel story renders snapshot 1`] = `
+exports[`<Select /> UsingChildrenPropAndNoVisibleLabel story renders snapshot 1`] = `
 <div
   class="select dropdown--non-compact"
   data-testid="dropdown"
@@ -656,7 +656,7 @@ exports[`<Dropdown /> UsingChildrenPropAndNoVisibleLabel story renders snapshot 
 </div>
 `;
 
-exports[`<Dropdown /> UsingFunctionChildrenProp story renders snapshot 1`] = `
+exports[`<Select /> UsingFunctionChildrenProp story renders snapshot 1`] = `
 <div
   aria-label="Favorite Animal"
   class="select dropdown--non-compact"
@@ -727,7 +727,7 @@ exports[`<Dropdown /> UsingFunctionChildrenProp story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Dropdown /> renders the OpenByDefault story 1`] = `
+exports[`<Select /> renders the OpenByDefault story 1`] = `
 <div
   class="select select--non-compact"
   data-testid="dropdown"

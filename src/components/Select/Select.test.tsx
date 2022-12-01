@@ -24,7 +24,7 @@ const exampleOptions = [
   },
 ];
 
-describe('<Dropdown />', () => {
+describe('<Select />', () => {
   generateSnapshots(closedStories, {
     getElement: async () => {
       const openButton = await screen.findByRole('button');
@@ -125,7 +125,7 @@ describe('<Dropdown />', () => {
     expect(renderMethod).not.toThrow(Error);
   });
 
-  it('does not throw an error if dropdown uses aria-label', () => {
+  it('does not throw an error if select uses aria-label', () => {
     const dropdownWithAriaLabel = (
       <Select
         buttonText="Select"
@@ -142,7 +142,7 @@ describe('<Dropdown />', () => {
     expect(renderMethod).not.toThrow(Error);
   });
 
-  it('does not throw an error if dropdown uses <Dropdown.Label>', () => {
+  it('does not throw an error if select uses <Select.Label>', () => {
     const dropdownWithDropdownLabel = (
       <Select onChange={() => undefined} value={exampleOptions[0]}>
         <Select.Label>Options:</Select.Label>
@@ -164,7 +164,7 @@ describe('<Dropdown />', () => {
     expect(renderMethod).not.toThrow(Error);
   });
 
-  it('does throw an error if dropdown does not use <Dropdown.Label>, labelText, or aria-label', () => {
+  it('does throw an error if dropdown does not use <Select.Label>, labelText, or aria-label', () => {
     const dropdownWithoutLabel = (
       <Select
         buttonText="Select"
