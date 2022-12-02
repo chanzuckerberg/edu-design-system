@@ -11,20 +11,17 @@ import Icon from '../Icon';
 import PopoverContainer from '../PopoverContainer';
 import PopoverListItem from '../PopoverListItem';
 
-// TODO: this is going to be copied to be a new Select component
 export type OptionsAlignType = 'left' | 'right';
 export type VariantType = 'compact' | 'full';
 
-type ListboxProps = ExtractProps<typeof Listbox>;
-type SelectProps = ListboxProps & {
-  /**
-   * Text for the select label.
-   *
-   * This is an alternative to passing <Select.Label> in via `children`.
-   * If you pass in `labelText`, we expect `buttonText` and `options` props
-   * as well and no `children`.
-   */
-  labelText?: ReactNode | string;
+type RenderProp<Arg> = (arg: Arg) => ReactNode;
+type PropsWithRenderProp<RenderPropArg> = {
+  children?: ReactNode | RenderProp<RenderPropArg>;
+  className?: string;
+  as?: ElementType;
+};
+
+type SelectProps = ExtractProps<typeof Listbox> & {
   /**
    * Screen-reader text for the select's label.
    *
@@ -34,26 +31,6 @@ type SelectProps = ListboxProps & {
    * If you pass in an `aria-label`, you don't need `labelText` or <Select.Label>.
    */
   'aria-label'?: string;
-  /**
-   * Text for the select label.
-   *
-   * This is an alternative to passing <Select.Button> in via children.
-   * If you pass in `buttonText`, we expect `labelText` (or `aria-label`)
-   * and `options` props as well and no `children`.
-   */
-  buttonText?: ReactNode | string;
-  /**
-   * All options to be displayed in the listbox, passed in as
-   * an array of objects.
-   *
-   * This is an alternative to passing in the options via children.
-   * If you pass in `options`, we expect `labelText` (or `aria-label`)
-   * and `buttonText` props as well and no `children`.
-   */
-  options?: Array<{
-    key: string | number;
-    label: string;
-  }>;
   /**
    * Optional className for additional styling.
    */
@@ -75,22 +52,6 @@ type SelectProps = ListboxProps & {
    * include the width property to define the options menu width.
    */
   optionsClassName?: string;
-};
-
-type RenderProp<Arg> = (arg: Arg) => ReactNode;
-type PropsWithRenderProp<RenderPropArg> = {
-  children?: ReactNode | RenderProp<RenderPropArg>;
-  className?: string;
-  as?: ElementType;
-};
-
-type SelectOptionProps = {
-  value: any;
-  disabled?: boolean;
-  className?: string;
-  children?:
-    | ReactNode
-    | RenderProp<{ active: boolean; disabled: boolean; selected: boolean }>;
 };
 
 function childrenHaveLabelComponent(children?: ReactNode): boolean {
@@ -119,15 +80,12 @@ function childrenHaveLabelComponent(children?: ReactNode): boolean {
  *
  * Built on top of the Headless UI Listbox: https://headlessui.dev/react/listbox#basic-example
  *
+ * TODO-AH: document using class names to alter widths
+ *
  * You can pass in the <Select.Label>, <Select.Button>, and options
  * (using <Select.Options> and <Select.Option>) through `children` to
  * have more control and customization over each aspect of the Select's
  * appearance.
- *
- * Alternatively, you can pass all of these in using the `labelText`
- * (or `aria-label`), `buttonText`, and `options` props if you just want
- * the default styling and don't need to customize the appearance. If you
- * pass any of these props in, we expect all of them and no `children`.
  *
  * Examples:
  *
@@ -160,37 +118,6 @@ function childrenHaveLabelComponent(children?: ReactNode): boolean {
  * );
  * ```
  *
- * ```
- * const options = [
- *   {
- *     key: 'option1',
- *     label: 'Option 1',
- *   },
- *   {
- *     key: 'option2',
- *     label: 'Option 2',
- *   },
- *   {
- *     key: 'option3',
- *     label: 'Option 3',
- *   },
- * ];
- *
- * return (
- *   <Select labelText="Options:" buttonText="Select" options={options} />
- * );
- * ```
- *
- * ```
- * const options = [
- *   ...
- * ];
- *
- * return (
- *   <Select aria-label="Options:" buttonText="Select" options={options} />
- * );
- * ```
- *
  * For compact variant, add variant="compact" and optionally optionsAlign.
  *
  * Examples:
@@ -210,49 +137,10 @@ function childrenHaveLabelComponent(children?: ReactNode): boolean {
  *   </Select>
  * );
  * ```
- *
- * ```
- * const options = [
- *   ...
- * ];
- *
- * return (
- *   <Select
- *     aria-label="Options"
- *     options={options}
- *     optionsAlign="right"
- *     variant="compact"
- *   />
- * );
- * ```
- *
- * For selects that differs in button and options menu width, style button
- * width with className and options menu width with optionsClassName.
- *
- * Example:
- *
- * ```
- * const options = [
- *   ...
- * ];
- *
- * return (
- *   <Select
- *     aria-label="Options"
- *     className="dropdown--width-15rem"
- *     options={options}
- *     optionsAlign="right"
- *     optionsClassName="dropdown__options--width-24rem"
- *   />
- * );
- * ```
  */
 export function Select(props: SelectProps) {
   const {
     className,
-    labelText,
-    buttonText,
-    options,
     children,
     'aria-label': ariaLabel,
     variant,
@@ -264,20 +152,8 @@ export function Select(props: SelectProps) {
   const compact = variant === 'compact';
 
   if (process.env.NODE_ENV !== 'production') {
-    if (children && [labelText, buttonText, options].some((prop) => !!prop)) {
-      throw new Error(
-        'If you use the `labelText`, `buttonText`, or `options` props, you cannot use the `children` prop.',
-      );
-    }
-
-    if (!children && (!buttonText || !options)) {
-      throw new Error(
-        'If you do not pass in `children`, you must pass in both `buttonText` and `options`.',
-      );
-    }
-
     const childrenHaveLabel = children && childrenHaveLabelComponent(children);
-    if (!labelText && !props['aria-label'] && !childrenHaveLabel) {
+    if (!props['aria-label'] && !childrenHaveLabel) {
       throw new Error('You must provide a visible label or `aria-label`.');
     }
   }
@@ -318,39 +194,9 @@ export function Select(props: SelectProps) {
     );
   }
 
-  const label = (labelText || ariaLabel) && (
-    <SelectLabel className={ariaLabel && styles['u-is-vishidden']}>
-      {labelText || ariaLabel}
-    </SelectLabel>
-  );
-
-  const trigger = buttonText && <SelectTrigger>{buttonText}</SelectTrigger>;
-
-  const optionsList = options && (
-    <SelectOptions>
-      {options.map((option) => {
-        const { label, ...other } = option;
-        return (
-          <SelectOption value={option} {...other} key={option.key}>
-            {label}
-          </SelectOption>
-        );
-      })}
-    </SelectOptions>
-  );
-
-  const childrenToUse = (
-    <>
-      {label}
-      {trigger}
-      {optionsList}
-      {children}
-    </>
-  );
-
   return (
     <SelectContext.Provider value={contextValue}>
-      <Listbox {...sharedProps}>{childrenToUse}</Listbox>
+      <Listbox {...sharedProps}>{children}</Listbox>
     </SelectContext.Provider>
   );
 }
@@ -420,6 +266,15 @@ const SelectOptions = function (props: PropsWithRenderProp<{ open: boolean }>) {
   );
 };
 
+type SelectOptionProps = {
+  value: any;
+  disabled?: boolean;
+  className?: string;
+  children?:
+    | ReactNode
+    | RenderProp<{ active: boolean; disabled: boolean; selected: boolean }>;
+};
+
 const SelectOption = function (props: SelectOptionProps) {
   const { children, className, ...other } = props;
 
@@ -471,7 +326,6 @@ type SelecButtonProps = {
 
 /**
  * A styled button with an expand icon to be used for triggering
- * TODO-AH: merge this into trigger, and rename trigger to .Button
  */
 export const SelectButton = React.forwardRef<
   HTMLButtonElement,
@@ -497,7 +351,6 @@ export const SelectButton = React.forwardRef<
   );
 });
 
-// TODO-AH: fix exports to match menu export names
 Select.Button = SelectTrigger;
 Select.Label = SelectLabel;
 Select.Option = SelectOption;

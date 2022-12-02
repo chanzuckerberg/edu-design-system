@@ -29,7 +29,6 @@ export default {
 } as Meta;
 
 type Props = {
-  labelText?: string;
   'aria-label'?: string;
   labelComponent?: React.ReactNode;
   optionsAlign?: OptionsAlignType;
@@ -51,35 +50,6 @@ const exampleOptions = [
     label: 'Birds',
   },
 ];
-
-function InteractiveExampleUsingSeparateProps(props: Props) {
-  const { optionsAlign, optionsClassName, variant } = props;
-  const compact = variant === 'compact';
-
-  const [selectedOption, setSelectedOption] =
-    React.useState<typeof exampleOptions[0]>();
-
-  const componentClassName = clsx(
-    styles['interactive-example'],
-    optionsAlign === 'right' && styles['interactive-example--align-right'],
-  );
-  return (
-    <div className={componentClassName}>
-      <Select
-        buttonText={selectedOption?.label || 'Select'}
-        className={clsx(!compact && styles['select--non-compact'])}
-        data-testid="dropdown"
-        onChange={setSelectedOption}
-        options={exampleOptions}
-        optionsAlign={optionsAlign}
-        optionsClassName={optionsClassName}
-        value={selectedOption}
-        variant={variant}
-        {...props}
-      />
-    </div>
-  );
-}
 
 function InteractiveExampleUsingChildren(props: Props) {
   const { variant } = props;
@@ -117,7 +87,6 @@ function InteractiveExampleUsingFunctionChildren() {
   const [selectedOption, setSelectedOption] =
     React.useState<typeof exampleOptions[0]>();
 
-  // TODO-AH: rename to Select.Button once button/trigger refactoring is done
   return (
     <div className={styles['interactive-example']}>
       <Select
@@ -166,28 +135,32 @@ function InteractiveExampleUsingFunctionChildren() {
 
 export const Default: StoryObj = {
   render: () => (
-    <InteractiveExampleUsingSeparateProps labelText="Favorite Animal" />
+    <InteractiveExampleUsingChildren aria-label="Favorite Animal" />
   ),
 };
 
-export const DefaultWithoutVisibleLabel: StoryObj = {
+export const DefaultWithVisibleLabel: StoryObj = {
   render: () => (
-    <InteractiveExampleUsingSeparateProps aria-label="Favorite Animal" />
+    <InteractiveExampleUsingChildren
+      aria-label="Favorite Animal"
+      labelComponent={<Select.Label>Favorite Animal</Select.Label>}
+    />
   ),
 };
 
 export const Compact: StoryObj = {
   render: () => (
-    <InteractiveExampleUsingSeparateProps
+    <InteractiveExampleUsingChildren
       aria-label="Favorite Animal"
       variant="compact"
     />
   ),
 };
 
+// TODO-AH: fix
 export const CompactWithOptionsRightAligned: StoryObj = {
   render: () => (
-    <InteractiveExampleUsingSeparateProps
+    <InteractiveExampleUsingChildren
       aria-label="Favorite Animal"
       optionsAlign="right"
       variant="compact"
@@ -195,9 +168,10 @@ export const CompactWithOptionsRightAligned: StoryObj = {
   ),
 };
 
+// TODO-AH: fix
 export const SeparateButtonAndMenuWidth: StoryObj = {
   render: () => (
-    <InteractiveExampleUsingSeparateProps
+    <InteractiveExampleUsingChildren
       aria-label="Favorite Animal"
       optionsClassName={styles['separate-button-and-menu-width']}
     />
@@ -231,7 +205,7 @@ export const UsingFunctionChildrenProp: StoryObj = {
   render: () => <InteractiveExampleUsingFunctionChildren />,
 };
 
-// This story just opens the dropdown automataically so chromatic can test it.
+// This story just opens the dropdown automatically so chromatic can test it.
 export const OpenByDefault: StoryObj = {
   ...Default,
   play: async ({ canvasElement }) => {
