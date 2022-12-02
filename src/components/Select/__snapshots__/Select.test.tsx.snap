@@ -494,7 +494,7 @@ exports[`<Select /> SeparateButtonAndMenuWidth story renders snapshot 1`] = `
 
 exports[`<Select /> UsingChildrenProp story renders snapshot 1`] = `
 <div
-  class="select dropdown--non-compact"
+  class="select select--non-compact"
   data-testid="dropdown"
 >
   <label
@@ -576,7 +576,7 @@ exports[`<Select /> UsingChildrenProp story renders snapshot 1`] = `
 
 exports[`<Select /> UsingChildrenPropAndNoVisibleLabel story renders snapshot 1`] = `
 <div
-  class="select dropdown--non-compact"
+  class="select select--non-compact"
   data-testid="dropdown"
 >
   <label
@@ -659,7 +659,7 @@ exports[`<Select /> UsingChildrenPropAndNoVisibleLabel story renders snapshot 1`
 exports[`<Select /> UsingFunctionChildrenProp story renders snapshot 1`] = `
 <div
   aria-label="Favorite Animal"
-  class="select dropdown--non-compact"
+  class="select select--non-compact"
   data-testid="dropdown"
 >
   <button

@@ -92,7 +92,7 @@ function InteractiveExampleUsingChildren(props: Props) {
     <div className={styles['interactive-example']}>
       <Select
         aria-label={props['aria-label']}
-        className={clsx(!compact && styles['dropdown--non-compact'])}
+        className={clsx(!compact && styles['select--non-compact'])}
         data-testid="dropdown"
         onChange={setSelectedOption}
         value={selectedOption}
@@ -123,7 +123,7 @@ function InteractiveExampleUsingFunctionChildren() {
       <Select
         aria-label="Favorite Animal"
         as="div"
-        className={styles['dropdown--non-compact']}
+        className={styles['select--non-compact']}
         data-testid="dropdown"
         onChange={setSelectedOption}
         value={selectedOption}
