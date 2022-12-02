@@ -65,7 +65,7 @@ export const ProgressBar = ({
   const totalSegmentValue = segmentCount * segmentValue;
   let caption: string = totalSegmentValue + '/' + max;
   if (unit) {
-    caption += unit;
+    caption += ' ' + unit;
   }
   if (process.env.NODE_ENV !== 'production' && totalSegmentValue > max) {
     throw new Error('Total progress cannot exceed max');
