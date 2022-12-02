@@ -70,10 +70,6 @@
       matchPackageNames: ['typescript'],
       groupName: 'typescript',
     },
-    {
-      matchDepTypes: ['devDependencies'],
-      groupName: 'devDependencies',
-    },
   ],
 
   // Customize how PRs are displayed
