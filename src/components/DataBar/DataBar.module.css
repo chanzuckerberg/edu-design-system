@@ -8,7 +8,10 @@
  * The data bar represents the relative completion of a task.
  */
 .data-bar {
-  --data-bar-height: 0.875rem;
+  /* 0.875rem, a summation of the data bar height of 0.75rem and the border width 1px */
+  --data-bar-height: calc(
+    var(--eds-size-1-and-half) + 2 * var(--eds-theme-border-width)
+  );
   height: var(--data-bar-height);
 
   background-color: var(--eds-theme-color-background-neutral-subtle);
@@ -26,7 +29,7 @@
  * The label title above the data bar that provides an accessible name.
  */
 .data-bar__label {
-  @mixin eds-theme-typography-title-sm;
+  @mixin eds-theme-typography-label-md;
   color: var(--eds-theme-color-text-neutral-strong);
 
   margin-bottom: 0;
