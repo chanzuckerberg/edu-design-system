@@ -247,21 +247,3 @@ export const OpenByDefault: StoryObj = {
     dropdownButton.click();
   },
 };
-
-// TODO-AH: remove, as the actual button cannot be exported if not wrapped in the right component
-export const DropdownButtonOnly = {
-  render: () => (
-    <>
-      <Select.ButtonComponent isOpen={false}>
-        Dropdown button closed
-      </Select.ButtonComponent>
-      <br />
-      <Select.ButtonComponent isOpen={true}>
-        Dropdown button open
-      </Select.ButtonComponent>
-    </>
-  ),
-  parameters: {
-    snapshot: { skip: true }, // For visual regression purposes since button should be used in conjunction with the actual Dropdown.
-  },
-};

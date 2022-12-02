@@ -498,7 +498,6 @@ export const SelectButton = React.forwardRef<
 });
 
 // TODO-AH: fix exports to match menu export names
-Select.ButtonComponent = SelectButton;
 Select.Button = SelectTrigger;
 Select.Label = SelectLabel;
 Select.Option = SelectOption;
