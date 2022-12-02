@@ -1,6 +1,7 @@
-import clsx from 'clsx';
 import React from 'react';
+import { useUID } from 'react-uid';
 import styles from './ProgressBar.module.css';
+import Text from '../Text';
 
 export type Props = {
   /**
@@ -17,6 +18,7 @@ export type Props = {
   max: number;
   /**
    * The amount of segments to be represented by the progress bar.
+   * Recommended max number of segments is 10.
    */
   segmentCount: number;
   /**
@@ -38,15 +40,60 @@ export type Props = {
  */
 export const ProgressBar = ({
   className,
+  label,
   segmentCount,
   segmentValue,
+  max,
+  unit,
   ...other
 }: Props) => {
-  const componentClassName = clsx(styles['progress-bar'], className);
+  if (process.env.NODE_ENV !== 'production' && segmentCount > 10) {
+    console.warn('Progress bar segment count should be capped at 10');
+  }
+
+  const segments =
+    segmentCount &&
+    Array.from({ length: segmentCount }, (_, index) => (
+      <div
+        className={styles['progress-bar__segment']}
+        key={'progress-bar__segment-' + index}
+        style={{ width: `${(segmentValue / max) * 100}%` }}
+      />
+    ));
+
+  const totalSegmentValue = segmentCount * segmentValue;
+  let caption: string = totalSegmentValue + '/' + max;
+  if (unit) {
+    caption += unit;
+  }
+  if (process.env.NODE_ENV !== 'production' && totalSegmentValue > max) {
+    throw new Error('Total progress cannot exceed max');
+  }
+
+  const labelId = useUID();
+  const captionId = useUID();
 
   return (
-    <div className={componentClassName} {...other}>
-      {segments}
+    <div className={className} {...other}>
+      <div className={styles['progress-bar__label-wrapper']}>
+        <label className={styles['progress-bar__label']} id={labelId}>
+          {label}
+        </label>
+        <Text as="span" id={captionId} size="caption">
+          {caption}
+        </Text>
+      </div>
+      <div
+        aria-describedby={captionId}
+        aria-labelledby={labelId}
+        aria-valuemax={max}
+        aria-valuenow={totalSegmentValue}
+        aria-valuetext={unit}
+        className={styles['progress-bar']}
+        role="progressbar"
+      >
+        {segments}
+      </div>
     </div>
   );
 };

@@ -6,13 +6,21 @@
  * Progress Bar
  */
 .progress-bar {
-  height: var(--eds-size-1-and-half);
-  width: 100%;
-  background-color: var(--eds-theme-color-background-neutral-medium);
+  display: flex;
+  gap: var(--eds-size-half);
 
   border: var(--eds-theme-color-border-neutral-subtle) solid
     var(--eds-border-width-sm);
+  border-radius: var(--eds-border-radius-full);
+
+  /* Prevents child segments from clipping outside the borders */
+  overflow: hidden;
+
+  height: 0.875rem;
+  width: 100%;
+  background-color: var(--eds-theme-color-background-neutral-medium);
 }
 
 .progress-bar__segment {
+  background-color: var(--eds-theme-color-background-brand-primary-strong);
 }
