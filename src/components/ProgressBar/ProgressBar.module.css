@@ -46,4 +46,5 @@
  */
 .progress-bar__label {
   @mixin eds-theme-typography-title-md;
+  margin-bottom: 0;
 }
