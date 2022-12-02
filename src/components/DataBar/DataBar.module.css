@@ -8,15 +8,17 @@
  * The data bar represents the relative completion of a task.
  */
 .data-bar {
-  --data-bar-height: var(--eds-size-2);
+  --data-bar-height: 0.875rem;
   height: var(--data-bar-height);
 
   background-color: var(--eds-theme-color-background-neutral-subtle);
 
   border: var(--eds-theme-color-border-neutral-default) solid
     var(--eds-theme-border-width);
-  /* Rounds the sides rather than making the bar elliptical. */  
-  border-radius: var(--eds-border-radius-full); 
+  /* Rounds the sides rather than making the bar elliptical. */
+  border-radius: var(--eds-border-radius-full);
+
+  overflow: hidden;
 }
 
 /**
@@ -35,22 +37,19 @@
   align-items: flex-end;
   justify-content: space-between;
 
-  margin-bottom: var(--eds-size-2);
+  margin-bottom: var(--eds-size-1);
 }
 
 /**
  * The amount of space the segments can consume. Is overlayed on top of the containing bar.
  */
 .data-bar__segment-space {
-  position: relative;
-  /* Shifts a border width amount to completely overlay instead of being offset from the containing borders. */
-  bottom: var(--eds-theme-border-width); 
-  right: var(--eds-theme-border-width);
+  height: 100%;
 
   display: flex;
   gap: var(--eds-size-half);
   /* Makes the last segment overlap the containing bar right border. */
-  width: calc(100% + 2 * var(--eds-theme-border-width)); 
+  width: calc(100% + 2 * var(--eds-theme-border-width));
 }
 /**
  * Shortens the amount of space the segments consume by an amount equal to the radius of the semicircle end of the containing bar (half the height of the bar).
