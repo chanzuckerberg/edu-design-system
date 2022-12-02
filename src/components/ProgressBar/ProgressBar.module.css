@@ -3,7 +3,7 @@
 \*------------------------------------*/
 
 /**
- * Progress Bar
+ * Progress Bar indicates the completion progress of a task.
  */
 .progress-bar {
   display: flex;
@@ -21,6 +21,9 @@
   background-color: var(--eds-theme-color-background-neutral-medium);
 }
 
+/**
+ * Progress bar segment indicating progress of a subtask.
+ */
 .progress-bar__segment {
   background-color: var(--eds-theme-color-background-brand-primary-strong);
 }

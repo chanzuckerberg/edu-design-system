@@ -36,7 +36,7 @@ export type Props = {
  *
  * `import {ProgressBar} from "@chanzuckerberg/eds";`
  *
- * TODO: update this comment with a description of the component.
+ * A progress bar component that indicating the completion progress of a task.
  */
 export const ProgressBar = ({
   className,
@@ -90,6 +90,7 @@ export const ProgressBar = ({
         aria-valuenow={totalSegmentValue}
         aria-valuetext={unit}
         className={styles['progress-bar']}
+        // INFO: All descendants of role="progressbar" are presentational
         role="progressbar"
       >
         {segments}
