@@ -1,3 +1,5 @@
+@import '../../design-tokens/mixins.css';
+
 /*------------------------------------*\
     # PROGRESS BAR
 \*------------------------------------*/
@@ -26,4 +28,22 @@
  */
 .progress-bar__segment {
   background-color: var(--eds-theme-color-background-brand-primary-strong);
+}
+
+/**
+ * Progress bar label wrapper wraps the label and the progress caption.
+ */
+.progress-bar__label-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: var(--eds-size-1);
+}
+
+/**
+ * Progress bar label.
+ */
+.progress-bar__label {
+  @mixin eds-theme-typography-title-md;
 }

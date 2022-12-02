@@ -51,15 +51,16 @@ export const ProgressBar = ({
     console.warn('Progress bar segment count should be capped at 10');
   }
 
-  const segments =
-    segmentCount &&
-    Array.from({ length: segmentCount }, (_, index) => (
-      <div
-        className={styles['progress-bar__segment']}
-        key={'progress-bar__segment-' + index}
-        style={{ width: `${(segmentValue / max) * 100}%` }}
-      />
-    ));
+  // Creates an array of length segmentCount and fills them with styled divs to represent the segments.
+  const segments = segmentCount
+    ? Array.from({ length: segmentCount }, (_, index) => (
+        <div
+          className={styles['progress-bar__segment']}
+          key={'progress-bar__segment-' + index}
+          style={{ width: `${(segmentValue / max) * 100}%` }}
+        />
+      ))
+    : undefined;
 
   const totalSegmentValue = segmentCount * segmentValue;
   let caption: string = totalSegmentValue + '/' + max;
