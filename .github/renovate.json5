@@ -30,9 +30,6 @@
       matchDatasources: ['npm'],
       stabilityDays: 3,
     },
-    {
-      enabled: false,
-    },
     // Our peerDependencies for React are as low as 16.8.0, so we should support React v16
     {
       matchPackageNames: ['react', 'react-dom'],
