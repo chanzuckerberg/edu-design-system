@@ -18,6 +18,7 @@
   /* Rounds the sides rather than making the bar elliptical. */
   border-radius: var(--eds-border-radius-full);
 
+  /* Prevents segments from overflowing outside borders */
   overflow: hidden;
 }
 
