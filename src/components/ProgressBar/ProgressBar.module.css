@@ -1,0 +1,18 @@
+/*------------------------------------*\
+    # PROGRESS BAR
+\*------------------------------------*/
+
+/**
+ * Progress Bar
+ */
+.progress-bar {
+  height: var(--eds-size-1-and-half);
+  width: 100%;
+  background-color: var(--eds-theme-color-background-neutral-medium);
+
+  border: var(--eds-theme-color-border-neutral-subtle) solid
+    var(--eds-border-width-sm);
+}
+
+.progress-bar__segment {
+}
