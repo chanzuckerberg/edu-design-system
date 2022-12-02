@@ -67,9 +67,6 @@ export const ProgressBar = ({
   if (unit) {
     caption += ' ' + unit;
   }
-  if (process.env.NODE_ENV !== 'production' && totalSegmentValue > max) {
-    throw new Error('Total progress cannot exceed max');
-  }
 
   const labelId = useUID();
   const captionId = useUID();
