@@ -18,9 +18,9 @@ export type Props = {
   max: number;
   /**
    * The amount of segments to be represented by the progress bar.
-   * Recommended max number of segments is 10.
+   * Recommended max number of segments is 10 and cannot be a negative number.
    */
-  segmentCount: number;
+  segmentCount: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
   /**
    * The value that each segment represents.
    */
