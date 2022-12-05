@@ -80,7 +80,7 @@ function childrenHaveLabelComponent(children?: ReactNode): boolean {
  *
  * Built on top of the Headless UI Listbox: https://headlessui.dev/react/listbox#basic-example
  *
- * TODO-AH: document using class names to alter widths
+ * TODO: document using class names to alter widths
  *
  * You can pass in the <Select.Label>, <Select.Button>, and options
  * (using <Select.Options> and <Select.Option>) through `children` to

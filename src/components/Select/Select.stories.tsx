@@ -148,7 +148,6 @@ export const Compact: StoryObj = {
   ),
 };
 
-// TODO-AH: fix
 export const CompactWithOptionsRightAligned: StoryObj = {
   render: () => (
     <InteractiveExampleUsingChildren
@@ -159,7 +158,6 @@ export const CompactWithOptionsRightAligned: StoryObj = {
   ),
 };
 
-// TODO-AH: fix
 export const SeparateButtonAndMenuWidth: StoryObj = {
   render: () => (
     <InteractiveExampleUsingChildren
