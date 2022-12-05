@@ -249,7 +249,6 @@ const SelectOptions = function (props: PropsWithRenderProp<{ open: boolean }>) {
   const { className, ...other } = props;
   const { compact, optionsAlign, optionsClassName } = useContext(SelectContext);
 
-  // TODO-AH: fix how the width works
   const componentClassName = clsx(
     styles['select__options'],
     className,
@@ -257,6 +256,7 @@ const SelectOptions = function (props: PropsWithRenderProp<{ open: boolean }>) {
     optionsClassName || (!compact && styles['select__options--full-width']),
     compact && styles['select__options--compact'],
   );
+
   return (
     <Listbox.Options
       as={PopoverContainer}

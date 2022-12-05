@@ -183,7 +183,7 @@ exports[`<Select /> CompactWithOptionsRightAligned story renders snapshot 1`] = 
   <div
     aria-labelledby="headlessui-listbox-button-17"
     aria-orientation="vertical"
-    class="popover-container select__options select__options--compact"
+    class="popover-container select__options select__options--align-right select__options--compact"
     id="headlessui-listbox-options-18"
     role="listbox"
     tabindex="0"
@@ -415,7 +415,7 @@ exports[`<Select /> SeparateButtonAndMenuWidth story renders snapshot 1`] = `
   <div
     aria-labelledby="headlessui-listbox-button-22"
     aria-orientation="vertical"
-    class="popover-container select__options select__options--full-width"
+    class="popover-container select__options separate-button-and-menu-width"
     id="headlessui-listbox-options-23"
     role="listbox"
     tabindex="0"

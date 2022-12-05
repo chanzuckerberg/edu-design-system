@@ -1,7 +1,6 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { StoryObj, Meta } from '@storybook/react';
 import { within } from '@storybook/testing-library';
-import isChromatic from 'chromatic';
 import clsx from 'clsx';
 import React from 'react';
 import type { OptionsAlignType, VariantType } from './Select';
@@ -42,7 +41,7 @@ const exampleOptions = [
 ];
 
 function InteractiveExampleUsingChildren(props: Props) {
-  const { variant } = props;
+  const { variant, optionsAlign, optionsClassName } = props;
   const compact = variant === 'compact';
 
   const [selectedOption, setSelectedOption] =
@@ -55,6 +54,8 @@ function InteractiveExampleUsingChildren(props: Props) {
         className={clsx(!compact && styles['select--non-compact'])}
         data-testid="dropdown"
         onChange={setSelectedOption}
+        optionsAlign={optionsAlign}
+        optionsClassName={optionsClassName}
         value={selectedOption}
         variant={variant}
       >
@@ -202,14 +203,12 @@ export const OpenByDefault: StoryObj = {
     const canvas = within(canvasElement);
 
     // Open the dropdown.
-    if (isChromatic()) {
-      const dropdownButton = await canvas.findByRole('button');
-      dropdownButton.click();
-      // Select the best option.
-      const bestOption = await canvas.findByText('Cats');
-      bestOption.click();
-      // Reopen the dropdown; selecting an option closed it.
-      dropdownButton.click();
-    }
+    const dropdownButton = await canvas.findByRole('button');
+    dropdownButton.click();
+    // Select the best option.
+    const bestOption = await canvas.findByText('Cats');
+    bestOption.click();
+    // Reopen the dropdown; selecting an option closed it.
+    dropdownButton.click();
   },
 };
