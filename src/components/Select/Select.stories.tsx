@@ -1,6 +1,7 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { StoryObj, Meta } from '@storybook/react';
 import { within } from '@storybook/testing-library';
+import isChromatic from 'chromatic';
 import clsx from 'clsx';
 import React from 'react';
 import type { OptionsAlignType, VariantType } from './Select';
@@ -15,17 +16,6 @@ export default {
     badges: [BADGE.BETA],
     layout: 'centered',
   },
-  decorators: [
-    (Story) => (
-      <div
-        style={{
-          margin: '1rem', // Provides spacing to see activity around the select field
-        }}
-      >
-        <Story />
-      </div>
-    ),
-  ],
 } as Meta;
 
 type Props = {
@@ -212,12 +202,14 @@ export const OpenByDefault: StoryObj = {
     const canvas = within(canvasElement);
 
     // Open the dropdown.
-    const dropdownButton = await canvas.findByRole('button');
-    dropdownButton.click();
-    // Select the best option.
-    const bestOption = await canvas.findByText('Cats');
-    bestOption.click();
-    // Reopen the dropdown; selecting an option closed it.
-    dropdownButton.click();
+    if (isChromatic()) {
+      const dropdownButton = await canvas.findByRole('button');
+      dropdownButton.click();
+      // Select the best option.
+      const bestOption = await canvas.findByText('Cats');
+      bestOption.click();
+      // Reopen the dropdown; selecting an option closed it.
+      dropdownButton.click();
+    }
   },
 };
