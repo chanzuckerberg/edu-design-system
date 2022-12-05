@@ -23,41 +23,51 @@ import PlaceholderImage from '../../static/placeholder-image.svg';
 import PlaceholderVideo from '../../static/placeholder-video.svg';
 
 const GlobalFooter = () => (
-  <div className={styles['wireframe-demo__footer']}>
-    <Link>
-      Privacy Policy{' '}
-      <Icon
-        name="open-in-new"
-        purpose="informative"
-        title="opens in a new tab"
-      />
-    </Link>
-    <Link>Cookie Settings</Link>
-    <Link>
-      User Agreement{' '}
-      <Icon
-        name="open-in-new"
-        purpose="informative"
-        title="opens in a new tab"
-      />
-    </Link>
-    <Link>
-      Code of Conduct{' '}
-      <Icon
-        name="open-in-new"
-        purpose="informative"
-        title="opens in a new tab"
-      />
-    </Link>
-    <Link>
-      Help Center{' '}
-      <Icon
-        name="open-in-new"
-        purpose="informative"
-        title="opens in a new tab"
-      />
-    </Link>
-  </div>
+  <ul className={styles['wireframe-demo__footer']}>
+    <li>
+      <Link>
+        Privacy Policy{' '}
+        <Icon
+          name="open-in-new"
+          purpose="informative"
+          title="opens in a new tab"
+        />
+      </Link>
+    </li>
+    <li>
+      <Link>Cookie Settings</Link>
+    </li>
+    <li>
+      <Link>
+        User Agreement{' '}
+        <Icon
+          name="open-in-new"
+          purpose="informative"
+          title="opens in a new tab"
+        />
+      </Link>
+    </li>
+    <li>
+      <Link>
+        Code of Conduct{' '}
+        <Icon
+          name="open-in-new"
+          purpose="informative"
+          title="opens in a new tab"
+        />
+      </Link>
+    </li>
+    <li>
+      <Link>
+        Help Center{' '}
+        <Icon
+          name="open-in-new"
+          purpose="informative"
+          title="opens in a new tab"
+        />
+      </Link>
+    </li>
+  </ul>
 );
 
 const LoggedOutPage = ({ onLogin }: { onLogin: () => void }) => (
@@ -178,7 +188,7 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
   };
 
   return (
-    <div className="">
+    <div className={styles['watch-page']}>
       <div className={styles['watch-page__main-section']}>
         <div className="ml-10 mr-8 flex gap-4">
           <Button onClick={onLogout} variant="secondary">
@@ -230,7 +240,7 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
         </div>
 
         <div className={styles['watch-page__reflection']}>
-          <div className="w-full">
+          <div className="w-full mt-2 lg:w-[31.25rem]">
             <div className="flex cursor-pointer">
               <div
                 className={clsx(styles['watch-page__avatar'], 'mr-2 w-9 h-9')}
@@ -245,12 +255,10 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
             </div>
             <img
               alt="placeholder for video player"
-              className="w-full mt-2 lg:w-[31.25rem]"
+              className="w-full"
               src={PlaceholderVideo}
             />
-          </div>
 
-          <div className="w-[26.8125rem]">
             <div className="flex gap-4 mt-4 ml-8">
               <Icon
                 className="min-w-[1rem]"

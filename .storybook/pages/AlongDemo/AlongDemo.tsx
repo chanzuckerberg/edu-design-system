@@ -28,45 +28,55 @@ import MicrosoftLogo from '../../static/microsoft-logo.svg';
 import Sprout from '../../static/sprout.svg';
 
 const GlobalFooter = ({ className }: { className?: string }) => (
-  <div className={clsx(styles['wireframe-demo__footer'], className)}>
-    <Link>
-      Privacy Policy{' '}
-      <Icon
-        name="open-in-new"
-        purpose="informative"
-        size="0.8em"
-        title="opens in a new tab"
-      />
-    </Link>
-    <Link>Cookie Settings</Link>
-    <Link>
-      User Agreement{' '}
-      <Icon
-        name="open-in-new"
-        purpose="informative"
-        size="0.8em"
-        title="opens in a new tab"
-      />
-    </Link>
-    <Link>
-      Code of Conduct{' '}
-      <Icon
-        name="open-in-new"
-        purpose="informative"
-        size="0.8em"
-        title="opens in a new tab"
-      />
-    </Link>
-    <Link>
-      Help Center{' '}
-      <Icon
-        name="open-in-new"
-        purpose="informative"
-        size="0.8em"
-        title="opens in a new tab"
-      />
-    </Link>
-  </div>
+  <ul className={clsx(styles['wireframe-demo__footer'], className)}>
+    <li className={styles['wireframe-demo__footer-link']}>
+      <Link>
+        Privacy Policy{' '}
+        <Icon
+          name="open-in-new"
+          purpose="informative"
+          size="0.8em"
+          title="opens in a new tab"
+        />
+      </Link>
+    </li>
+    <li className={styles['wireframe-demo__footer-link']}>
+      <Link>Cookie Settings</Link>
+    </li>
+    <li className={styles['wireframe-demo__footer-link']}>
+      <Link>
+        User Agreement{' '}
+        <Icon
+          name="open-in-new"
+          purpose="informative"
+          size="0.8em"
+          title="opens in a new tab"
+        />
+      </Link>
+    </li>
+    <li className={styles['wireframe-demo__footer-link']}>
+      <Link>
+        Code of Conduct{' '}
+        <Icon
+          name="open-in-new"
+          purpose="informative"
+          size="0.8em"
+          title="opens in a new tab"
+        />
+      </Link>
+    </li>
+    <li className={styles['wireframe-demo__footer-link']}>
+      <Link>
+        Help Center{' '}
+        <Icon
+          name="open-in-new"
+          purpose="informative"
+          size="0.8em"
+          title="opens in a new tab"
+        />
+      </Link>
+    </li>
+  </ul>
 );
 
 const LoggedOutPage = ({ onLogin }: { onLogin: () => void }) => (
@@ -74,7 +84,7 @@ const LoggedOutPage = ({ onLogin }: { onLogin: () => void }) => (
     <div className="flex flex-col items-center mb-16 p-8 grow">
       <header className="flex gap-4">
         <img
-          alt="placeholder for decorative illustration"
+          alt="A studious youth with specs smiling and looking at his laptop"
           className={styles['logged-out-page__header-img']}
           height="160"
           src={AlongUserIllustration1}
@@ -88,7 +98,7 @@ const LoggedOutPage = ({ onLogin }: { onLogin: () => void }) => (
           <Text>Remember to use your school email to sign in:</Text>
         </div>
         <img
-          alt="placeholder for decorative illustration"
+          alt="Girl with red headphones smiling and looking at mobile phone"
           className={styles['logged-out-page__header-img']}
           height="160"
           src={AlongUserIllustration2}
@@ -234,7 +244,7 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
   };
 
   return (
-    <div className="h-screen">
+    <div>
       <div className={styles['watch-page__main-section']}>
         <div className="ml-10 mr-8 flex gap-4">
           <Button
@@ -245,8 +255,8 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
             <Icon name="arrow-back" purpose="informative" title="go back" />
           </Button>
           <div>
-            <Text className="mb-2">Playing reflections in response to:</Text>
-            <Heading as="h1" size="h3">
+            <Text className="!mb-2">Playing reflections in response to:</Text>
+            <Heading as="h1" className="!font-normal" size="h3">
               What's something in your life, big or small, that you're proud of?
               Why are you proud of it?
             </Heading>
@@ -258,7 +268,6 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
             <Dropdown
               aria-label="student groups"
               buttonText={selectedOption.label}
-              // TODO: why isn't the selected styling showing up when selecting a new option?
               onChange={setSelectedOption}
               options={studentGroupOptions}
               value={selectedOption}
@@ -298,7 +307,7 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
         </div>
 
         <div className={styles['watch-page__reflection']}>
-          <div className="w-full">
+          <div className="w-full mt-2 lg:w-[31.25rem]">
             <div className="flex cursor-pointer">
               <div
                 className={clsx(
@@ -319,7 +328,7 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
             </div>
             <video
               aria-label="student makes the sign for the word 'along' in american sign language"
-              className="w-full mt-2 lg:w-[31.25rem]"
+              className="w-full"
               controls
               muted
               src="https://ia801706.us.archive.org/18/items/stringalongtagalong-accompanyASL/string%20along%2Ctag%20along-accompany.ia.mp4"
@@ -330,9 +339,7 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
                 video on archive.org.
               </a>
             </video>
-          </div>
 
-          <div className="w-[26.8125rem]">
             <div className="flex gap-4 mt-4 ml-2">
               {ReplyIcon}
               <Text>
@@ -460,12 +467,9 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
 };
 
 /**
- * A page demoing what a wireframe demo could look like in a pilot prototype. Best viewed on the "canvas" tab in storybook.
+ * A page demoing what it looks like when you apply a mature brand theme to the EDS components. We're using the Along product as an example. Best viewed on the "canvas" tab in storybook.
  *
  * See the [theming documentation](./?path=/docs/documentation-theming--theming) for more information on the purpose of this demo.
- *
- * Just for the purpose of demonstration, we're using the logged out homepage and
- * the teacher watch page in the Along app.
  */
 export const AlongDemo = () => {
   const [currentPage, setCurrentPage] = useState<'loggedOut' | 'watch'>(
