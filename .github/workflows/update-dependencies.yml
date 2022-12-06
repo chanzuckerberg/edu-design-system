@@ -1,10 +1,9 @@
 name: Update NPM Dependencies
 
 on:
-  schedule:
-    # The "*" (#42, asterisk) character has special semantics in YAML, so this
-    # string has to be quoted.
-    - cron: '0 13 * * MON' # Monday, 6am (PST)
+  push:
+    branches:
+      - jlee/testRenovate
 
 jobs:
   renovate:
