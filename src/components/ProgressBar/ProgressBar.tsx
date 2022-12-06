@@ -49,13 +49,19 @@ export const ProgressBar = ({
 }: Props) => {
   // Creates an array of length segmentCount and fills them with styled divs to represent the segments.
   const segments = segmentCount
-    ? Array.from({ length: segmentCount }, (_, index) => (
-        <div
-          className={styles['progress-bar__segment']}
-          key={'progress-bar__segment-' + index}
-          style={{ width: `${(segmentValue / max) * 100}%` }}
-        />
-      ))
+    ? Array.from({ length: segmentCount }, (_, index) => {
+        const segmentsPerBar = Math.ceil(max / segmentValue);
+        const gapMultiplier = (segmentsPerBar - 1) / segmentsPerBar;
+        const segmentWidthBeforeGap = (segmentValue / max) * 100;
+        const segmentWidth = `calc(${segmentWidthBeforeGap}% - var(--eds-size-half) * ${gapMultiplier})`;
+        return (
+          <div
+            className={styles['progress-bar__segment']}
+            key={'progress-bar__segment-' + index}
+            style={{ width: segmentWidth }}
+          />
+        );
+      })
     : undefined;
 
   const totalSegmentValue = segmentCount * segmentValue;

@@ -62,6 +62,8 @@ export const Complete: StoryObj<Args> = {
 };
 
 const InteractiveProgressBar = () => {
+  const [segmentValue, setSegmentValue] = React.useState(1);
+  const [max, setMax] = React.useState(10);
   const [count, setCount] = React.useState(0);
   const increase = () => {
     if (count < 10) {
@@ -77,10 +79,30 @@ const InteractiveProgressBar = () => {
     <div>
       <ProgressBar
         label="Interactive progress bar"
-        max={10}
+        max={max}
         segmentCount={count}
-        segmentValue={1}
+        segmentValue={segmentValue}
       />
+      <br />
+      <label htmlFor="segment-value-input">Segment value: </label>
+      <input
+        id="segment-value-input"
+        onChange={(e) => {
+          setCount(0);
+          setSegmentValue(Number(e?.target?.value));
+        }}
+        value={segmentValue}
+      ></input>
+      <br />
+      <label htmlFor="max-input">Max value: </label>
+      <input
+        id="max-input"
+        onChange={(e) => {
+          setCount(0);
+          setMax(Number(e?.target?.value));
+        }}
+        value={max}
+      ></input>
       <br />
       <ButtonGroup>
         {count > 0 && (
