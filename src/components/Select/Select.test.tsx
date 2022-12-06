@@ -8,6 +8,7 @@ import * as stories from './Select.stories';
 const { OpenByDefault, Disabled, ...closedStories } = stories;
 
 const OpenByDefaultComponent = composeStory(OpenByDefault, stories.default);
+const DisabledComponent = composeStory(Disabled, stories.default);
 
 const exampleOptions = [
   {
@@ -32,6 +33,16 @@ describe('<Select />', () => {
       await screen.findAllByRole('option');
       return screen.getByTestId('dropdown');
     },
+  });
+
+  it('does not open a list when clicked and disabled', async () => {
+    render(<DisabledComponent />);
+
+    const openTrigger = await screen.findByRole('button');
+    fireEvent.click(openTrigger);
+
+    // see if there are any options, which there should not be
+    expect(screen.queryByRole('option')).not.toBeInTheDocument();
   });
 
   it('renders the OpenByDefault story', async () => {

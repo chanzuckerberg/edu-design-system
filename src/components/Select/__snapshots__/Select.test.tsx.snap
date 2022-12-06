@@ -691,11 +691,11 @@ exports[`<Select /> renders the OpenByDefault story 1`] = `
   data-testid="dropdown"
 >
   <button
-    aria-controls="headlessui-listbox-options-49"
+    aria-controls="headlessui-listbox-options-51"
     aria-expanded="true"
     aria-haspopup="true"
     class="select-button"
-    id="headlessui-listbox-button-48"
+    id="headlessui-listbox-button-50"
     type="button"
   >
     <span>
@@ -716,17 +716,17 @@ exports[`<Select /> renders the OpenByDefault story 1`] = `
     </svg>
   </button>
   <div
-    aria-activedescendant="headlessui-listbox-option-54"
-    aria-labelledby="headlessui-listbox-button-48"
+    aria-activedescendant="headlessui-listbox-option-56"
+    aria-labelledby="headlessui-listbox-button-50"
     aria-orientation="vertical"
     class="popover-container select__options select__options--full-width"
-    id="headlessui-listbox-options-49"
+    id="headlessui-listbox-options-51"
     role="listbox"
     tabindex="0"
   >
     <div
       class="popover-list-item"
-      id="headlessui-listbox-option-53"
+      id="headlessui-listbox-option-55"
       role="option"
       tabindex="-1"
     >
@@ -738,7 +738,7 @@ exports[`<Select /> renders the OpenByDefault story 1`] = `
     <div
       aria-selected="true"
       class="popover-list-item popover-list-item--active"
-      id="headlessui-listbox-option-54"
+      id="headlessui-listbox-option-56"
       role="option"
       tabindex="-1"
     >
@@ -763,7 +763,7 @@ exports[`<Select /> renders the OpenByDefault story 1`] = `
     </div>
     <div
       class="popover-list-item"
-      id="headlessui-listbox-option-55"
+      id="headlessui-listbox-option-57"
       role="option"
       tabindex="-1"
     >
