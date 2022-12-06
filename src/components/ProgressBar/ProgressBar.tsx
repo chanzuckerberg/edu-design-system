@@ -50,6 +50,7 @@ export const ProgressBar = ({
   // Creates an array of length segmentCount and fills them with styled divs to represent the segments.
   const segments = segmentCount
     ? Array.from({ length: segmentCount }, (_, index) => {
+        // Calculates the segment width to prevent jumping once progress bar is full
         const segmentsPerBar = Math.ceil(max / segmentValue);
         const gapMultiplier = (segmentsPerBar - 1) / segmentsPerBar;
         const segmentWidthBeforeGap = (segmentValue / max) * 100;
