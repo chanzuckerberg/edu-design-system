@@ -31,14 +31,6 @@
 }
 
 /**
- * Visually hides the label element if a aria-label is passed,
- * but element is kept for screen reading accessibility.
- */
-.u-is-vishidden {
-  @mixin visuallyHide;
-}
-
-/**
  * The container for the individual select options. 
  */
 .select__options {
