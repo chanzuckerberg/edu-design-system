@@ -23,6 +23,7 @@ type Props = {
   optionsAlign?: OptionsAlignType;
   optionsClassName?: string;
   variant?: VariantType;
+  disabled?: boolean;
 };
 
 const exampleOptions = [
@@ -41,7 +42,7 @@ const exampleOptions = [
 ];
 
 function InteractiveExampleUsingChildren(props: Props) {
-  const { variant, optionsAlign, optionsClassName } = props;
+  const { variant, optionsAlign, optionsClassName, disabled } = props;
   const compact = variant === 'compact';
 
   const [selectedOption, setSelectedOption] =
@@ -53,6 +54,7 @@ function InteractiveExampleUsingChildren(props: Props) {
         aria-label={props['aria-label']}
         className={clsx(!compact && styles['select--non-compact'])}
         data-testid="dropdown"
+        disabled={disabled}
         onChange={setSelectedOption}
         optionsAlign={optionsAlign}
         optionsClassName={optionsClassName}
@@ -127,6 +129,12 @@ function InteractiveExampleUsingFunctionChildren() {
 export const Default: StoryObj = {
   render: () => (
     <InteractiveExampleUsingChildren aria-label="Favorite Animal" />
+  ),
+};
+
+export const Disabled: StoryObj = {
+  render: () => (
+    <InteractiveExampleUsingChildren aria-label="Favorite Animal" disabled />
   ),
 };
 

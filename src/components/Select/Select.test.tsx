@@ -5,7 +5,7 @@ import React from 'react';
 import { Select } from './Select';
 import * as stories from './Select.stories';
 
-const { OpenByDefault, ...closedStories } = stories;
+const { OpenByDefault, Disabled, ...closedStories } = stories;
 
 const OpenByDefaultComponent = composeStory(OpenByDefault, stories.default);
 

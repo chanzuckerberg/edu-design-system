@@ -39,6 +39,10 @@
   max-width: var(--eds-l-max-width);
   position: absolute;
   z-index: var(--eds-z-index-100);
+
+  &:focus-visible {
+    @mixin focus;
+  }
 }
 
 .select__options--compact {
@@ -69,7 +73,7 @@
  */
 .select-button {
   @mixin eds-theme-typography-body-text-md;
-  /* Allow Dropdown font to shrink in contexts where body font size is smaller. */
+  /* Allow select component font to shrink in contexts where body font size is smaller. */
   font-size: inherit;
 
   width: 100%;
@@ -87,6 +91,15 @@
   cursor: pointer;
 
   background-color: var(--eds-theme-color-background-neutral-default);
+
+  &:focus-visible {
+    @mixin focus;
+    border-color: var(--eds-theme-color-focus-ring);
+  }
+}
+
+.select-button:disabled {
+  cursor: not-allowed;
 }
 
 /**
