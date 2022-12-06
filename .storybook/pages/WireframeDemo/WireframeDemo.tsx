@@ -266,22 +266,9 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
                 purpose="decorative"
               />
               <Text className={styles['watch-page__text-reflection-text']}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet
-                volutpat consequat mauris nunc congue nisi vitae suscipit
-                tellus. Et odio pellentesque diam volutpat commodo sed egestas
-                egestas fringilla. Pretium vulputate sapien nec sagittis aliquam
-                malesuada. Ut sem viverra aliquet eget sit amet tellus. Lacus
-                sed turpis tincidunt id aliquet risus feugiat. Libero justo
-                laoreet sit amet cursus sit amet. Luctus venenatis lectus magna
-                fringilla. Vitae purus faucibus ornare suspendisse. Enim blandit
-                volutpat maecenas volutpat. Bibendum arcu vitae elementum
-                curabitur vitae. Condimentum mattis pellentesque id nibh tortor.
-                Scelerisque in dictum non consectetur a erat nam. Ornare quam
-                viverra orci sagittis eu volutpat odio. Sollicitudin nibh sit
-                amet commodo nulla facilisi nullam vehicula ipsum. Diam
-                vulputate ut pharetra sit amet aliquam id diam maecenas. Non
-                enim praesent elementum facilisis.
+                My greatest accomplishment this year was in math, because I
+                wasn't that good at math in the first place and now I am good at
+                math. It is because my teacher, Mr. S. taught me how to do math.
               </Text>
             </div>
 
