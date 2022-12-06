@@ -13,6 +13,7 @@
   gap: 3rem;
   flex-wrap: wrap;
   justify-content: center;
+  list-style-type: none;
   /* Pushes footer to bottom of the page if there's more vertical space than content */
   flex-grow: 1;
   align-items: flex-end;
@@ -120,7 +121,6 @@
   margin-left: 1.5rem;
   display: flex;
   flex-direction: column;
-  width: 24.125rem;
 }
 
 .watch-page__sidebar {

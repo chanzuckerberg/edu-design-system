@@ -11,11 +11,6 @@ export type Props = {
    */
   className?: string;
   /**
-   * Indicates if this segment should be rounded on the right side.
-   * Used for data bars that are 100% complete.
-   */
-  isRoundRight?: boolean;
-  /**
    * Tooltip text to be displayed when the segment is hovered.
    */
   text?: string;
@@ -42,21 +37,13 @@ export type Props = {
  */
 export const DataBarSegment = React.forwardRef(
   (
-    {
-      className,
-      isRoundRight,
-      text,
-      width,
-      variant = 'brand',
-      ...other
-    }: Props,
+    { className, text, width, variant = 'brand', ...other }: Props,
     ref: React.ForwardedRef<HTMLDivElement>,
   ) => {
     const componentClassName = clsx(
       styles['data-bar-segment'],
       styles[`data-bar-segment--${variant}`],
       text && styles['data-bar-segment--hoverable'],
-      isRoundRight && styles['data-bar-segment--round-right'],
       className,
     );
     const segmentComponent = (

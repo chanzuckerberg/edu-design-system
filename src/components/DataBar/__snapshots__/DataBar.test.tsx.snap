@@ -234,7 +234,7 @@ exports[`<DataBar /> TotalsMax story renders snapshot 1`] = `
         />
         <div
           aria-label="Segment 3"
-          class="data-bar-segment data-bar-segment--brand data-bar-segment--hoverable data-bar-segment--round-right"
+          class="data-bar-segment data-bar-segment--brand data-bar-segment--hoverable"
           role="gridcell"
           style="width: 30%;"
           tabindex="-1"
@@ -278,7 +278,7 @@ exports[`<DataBar /> TotalsMoreThanMax story renders snapshot 1`] = `
       >
         <div
           aria-label="Segment 1"
-          class="data-bar-segment data-bar-segment--brand data-bar-segment--hoverable data-bar-segment--round-right"
+          class="data-bar-segment data-bar-segment--brand data-bar-segment--hoverable"
           role="gridcell"
           style="width: 100%;"
           tabindex="0"
