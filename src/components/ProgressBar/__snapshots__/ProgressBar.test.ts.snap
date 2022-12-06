@@ -32,43 +32,33 @@ exports[`<ProgressBar /> Complete story renders snapshot 1`] = `
       >
         <div
           class="progress-bar__segment"
-          style="width: 10%;"
         />
         <div
           class="progress-bar__segment"
-          style="width: 10%;"
         />
         <div
           class="progress-bar__segment"
-          style="width: 10%;"
         />
         <div
           class="progress-bar__segment"
-          style="width: 10%;"
         />
         <div
           class="progress-bar__segment"
-          style="width: 10%;"
         />
         <div
           class="progress-bar__segment"
-          style="width: 10%;"
         />
         <div
           class="progress-bar__segment"
-          style="width: 10%;"
         />
         <div
           class="progress-bar__segment"
-          style="width: 10%;"
         />
         <div
           class="progress-bar__segment"
-          style="width: 10%;"
         />
         <div
           class="progress-bar__segment"
-          style="width: 10%;"
         />
       </div>
     </div>
@@ -99,7 +89,6 @@ exports[`<ProgressBar /> Complete story renders snapshot 1`] = `
       >
         <div
           class="progress-bar__segment"
-          style="width: 100%;"
         />
       </div>
     </div>
@@ -138,11 +127,9 @@ exports[`<ProgressBar /> Default story renders snapshot 1`] = `
     >
       <div
         class="progress-bar__segment"
-        style="width: 10%;"
       />
       <div
         class="progress-bar__segment"
-        style="width: 10%;"
       />
     </div>
   </div>
@@ -214,11 +201,9 @@ exports[`<ProgressBar /> WithUnit story renders snapshot 1`] = `
     >
       <div
         class="progress-bar__segment"
-        style="width: 10%;"
       />
       <div
         class="progress-bar__segment"
-        style="width: 10%;"
       />
     </div>
   </div>
