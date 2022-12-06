@@ -47,10 +47,6 @@ export const ProgressBar = ({
   unit,
   ...other
 }: Props) => {
-  if (process.env.NODE_ENV !== 'production' && segmentCount > 10) {
-    console.warn('Progress bar segment count should be capped at 10');
-  }
-
   // Creates an array of length segmentCount and fills them with styled divs to represent the segments.
   const segments = segmentCount
     ? Array.from({ length: segmentCount }, (_, index) => (
