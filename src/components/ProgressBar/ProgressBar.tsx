@@ -9,6 +9,10 @@ export type Props = {
    */
   className?: string;
   /**
+   * Overrides the default "totalValue / max" in cases where a different caption may be desired.
+   */
+  caption?: string;
+  /**
    * Label associated with naming the progress bar.
    */
   label: string;
@@ -25,10 +29,6 @@ export type Props = {
    * The value that each segment represents.
    */
   segmentValue: number;
-  /**
-   * An optional unit of measurement to describe the progress.
-   */
-  unit?: string;
 };
 
 /**
@@ -39,12 +39,12 @@ export type Props = {
  * A progress bar component that indicates how much progress has been made on a task.
  */
 export const ProgressBar = ({
+  caption,
   className,
   label,
   segmentCount,
   segmentValue,
   max,
-  unit,
   ...other
 }: Props) => {
   // Creates an array of length segmentCount and fills them with styled divs to represent the segments.
@@ -66,10 +66,7 @@ export const ProgressBar = ({
     : undefined;
 
   const totalSegmentValue = segmentCount * segmentValue;
-  let caption: string = totalSegmentValue + '/' + max;
-  if (unit) {
-    caption += ' ' + unit;
-  }
+  const progressBarCaption = caption || totalSegmentValue + '/' + max;
 
   const labelId = useUID();
   const captionId = useUID();
@@ -81,7 +78,7 @@ export const ProgressBar = ({
           {label}
         </label>
         <Text as="span" id={captionId} size="caption">
-          {caption}
+          {progressBarCaption}
         </Text>
       </div>
       <div
@@ -89,7 +86,6 @@ export const ProgressBar = ({
         aria-labelledby={labelId}
         aria-valuemax={max}
         aria-valuenow={totalSegmentValue}
-        aria-valuetext={unit}
         className={styles['progress-bar']}
         // INFO: All descendants of role="progressbar" are presentational
         role="progressbar"

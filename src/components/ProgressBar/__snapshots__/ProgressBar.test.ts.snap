@@ -187,7 +187,7 @@ exports[`<ProgressBar /> WithUnit story renders snapshot 1`] = `
         class="text text--caption"
         id="4"
       >
-        20/100 %
+        20 %
       </span>
     </div>
     <div
@@ -195,7 +195,6 @@ exports[`<ProgressBar /> WithUnit story renders snapshot 1`] = `
       aria-labelledby="3"
       aria-valuemax="100"
       aria-valuenow="20"
-      aria-valuetext="%"
       class="progress-bar"
       role="progressbar"
     >

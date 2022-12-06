@@ -30,9 +30,9 @@ type Args = React.ComponentProps<typeof ProgressBar>;
 
 export const Default: StoryObj<Args> = {};
 
-export const WithUnit: StoryObj<Args> = {
+export const WithCustomCaption: StoryObj<Args> = {
   args: {
-    unit: '%',
+    caption: '20 %',
   },
 };
 
