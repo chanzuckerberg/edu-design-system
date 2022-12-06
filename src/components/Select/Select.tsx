@@ -82,8 +82,6 @@ function childrenHaveLabelComponent(children?: ReactNode): boolean {
  *
  * Built on top of the Headless UI Listbox: https://headlessui.dev/react/listbox#basic-example
  *
- * TODO: document using class names to alter widths
- *
  * You can pass in the <Select.Label>, <Select.Button>, and options
  * (using <Select.Options> and <Select.Option>) through `children` to
  * have more control and customization over each aspect of the Select's
@@ -122,7 +120,7 @@ function childrenHaveLabelComponent(children?: ReactNode): boolean {
  *
  * For compact variant, add variant="compact" and optionally optionsAlign.
  *
- * Examples:
+ * Example:
  *
  * ```
  * return (
@@ -130,6 +128,29 @@ function childrenHaveLabelComponent(children?: ReactNode): boolean {
  *     aria-label="Options"
  *     optionsAlign="right"
  *     variant="compact"
+ *   >
+ *     <Select.Options>
+ *       <Select.Option>Option 1</Select.Option>
+ *       <Select.Option>Option 2</Select.Option>
+ *       <Select.Option>Option 3</Select.Option>
+ *     </Select.Options>
+ *   </Select>
+ * );
+ * ```
+ *
+ * For select components that differs in button and option popoover width, style
+ * width with `className` and options popover width with `optionsClassName`.
+ *
+ * Example:
+ *
+ * ```
+ * return (
+ *   <Select
+ *     aria-label="Options"
+ *     optionsAlign="right"
+ *     variant="compact"
+ *     className="select--width-15em"
+ *     optionsClassName="select__options--width-24rem"
  *   >
  *     <Select.Options>
  *       <Select.Option>Option 1</Select.Option>
