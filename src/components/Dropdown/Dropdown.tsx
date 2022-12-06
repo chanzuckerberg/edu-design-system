@@ -246,6 +246,8 @@ function childrenHaveLabelComponent(children?: ReactNode): boolean {
  *     optionsClassName="dropdown__options--width-24rem"
  *   />
  * );
+ *
+ * @deprecated
  * ```
  */
 export function Dropdown(props: DropdownProps) {
