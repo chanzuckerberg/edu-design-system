@@ -7,6 +7,9 @@ import { WireframeDemo } from './WireframeDemo';
 export default {
   title: 'Pages/Theming/WireframeDemo',
   component: WireframeDemo,
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof WireframeDemo>;
