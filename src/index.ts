@@ -22,6 +22,7 @@ export { default as DragDropContainerHeader } from './components/DragDropContain
 export { default as DragDropItem } from './components/DragDropItem';
 export { default as Drawer } from './components/Drawer';
 export { default as Dropdown } from './components/Dropdown';
+export { default as Select } from './components/Select';
 export { default as DropdownButton } from './components/DropdownButton';
 export { default as DropdownMenu } from './components/DropdownMenu';
 export { default as DropdownMenuItem } from './components/DropdownMenuItem';
