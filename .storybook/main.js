@@ -42,9 +42,6 @@ module.exports = {
       },
     },
   ],
-  core: {
-    builder: 'webpack5',
-  },
   webpackFinal: async (config) => {
     const SVGSpritesPlugin = new SVGSpritemapPlugin(
       path.resolve(__dirname, '../src/icons/**/*.svg'),
