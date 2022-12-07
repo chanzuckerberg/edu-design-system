@@ -12,6 +12,7 @@
   rangeStrategy: 'bump', // Always bump minor/patch to latest
   reviewers: ['team:edu-design-system'],
 
+  // Required to prevent onboarding pr and generation of new config file https://github.com/renovatebot/github-action#configurationfile
   onboarding: false,
   requireConfig: false,
 
