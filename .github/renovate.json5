@@ -12,6 +12,9 @@
   rangeStrategy: 'bump', // Always bump minor/patch to latest
   reviewers: ['team:edu-design-system'],
 
+  onboarding: false,
+  requireConfig: false,
+
   major: {
     rangeStrategy: 'replace',
     fetchReleaseNotes: true,
