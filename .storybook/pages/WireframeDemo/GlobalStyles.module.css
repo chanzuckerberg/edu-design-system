@@ -23,6 +23,13 @@
   --wireframe-gray-e: #161b1f;
 
   /* Override EDS tokens to apply wireframe theme */
+  /**
+   * The following tokens are commented out because they were causing issues for
+   * EDS chromatic testing. If you're using these variables in a different app,
+   * uncomment-out those lines and remove this comment.
+   */
+  /* --eds-theme-color-form-border: var(--wireframe-gray-c); */
+  /* --eds-theme-color-border-neutral-strong: var(--wireframe-gray-b); */
   --eds-anim-fade-long: var(--wireframe-anim-duration);
   --eds-anim-fade-quick: var(--wireframe-anim-duration);
   --eds-anim-move-long: var(--wireframe-anim-duration);
@@ -67,7 +74,6 @@
   --eds-theme-color-border-neutral-default-hover: var(--wireframe-gray-b);
   --eds-theme-color-border-neutral-default: var(--wireframe-gray-b);
   --eds-theme-color-border-neutral-strong-hover: var(--wireframe-gray-c);
-  --eds-theme-color-border-neutral-strong: var(--wireframe-gray-b);
   --eds-theme-color-border-neutral-subtle-hover: var(--wireframe-gray-b);
   --eds-theme-color-border-neutral-subtle: var(--wireframe-gray-a);
   --eds-theme-color-border-utility-error-default: var(--wireframe-gray-b);
@@ -298,7 +304,6 @@
   --eds-theme-color-form-background-hover: var(--wireframe-gray-a);
   --eds-theme-color-form-background: var(--wireframe-white);
   --eds-theme-color-form-border-hover: var(--wireframe-gray-e);
-  --eds-theme-color-form-border: var(--wireframe-gray-c);
   --eds-theme-color-form-label: var(--wireframe-gray-d);
   --eds-theme-color-icon-brand-primary-hover: var(--wireframe-gray-c);
   --eds-theme-color-icon-brand-primary: var(--wireframe-gray-c);
