@@ -169,7 +169,7 @@ exports[`<ProgressBar /> Empty story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<ProgressBar /> WithUnit story renders snapshot 1`] = `
+exports[`<ProgressBar /> WithCustomCaption story renders snapshot 1`] = `
 <div
   style="background-color: white; padding: 0.5rem;"
 >
