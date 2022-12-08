@@ -131,7 +131,6 @@
     "chromatic": "^6.9.0",
     "codecov": "^3.8.3",
     "copyfiles": "^2.4.1",
-    "dedent": "^0.7.0",
     "eslint": "^8.23.1",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-jest": "^27.0.4",
