@@ -349,3 +349,19 @@
     border-color: 1px solid var(--eds-theme-color-text-neutral-strong);
   }
 }
+
+.timeline-nav__icon--success {
+  color: var(--eds-theme-color-background-grade-complete-default);
+}
+
+.timeline-nav__icon--warning {
+  color: var(--eds-theme-color-background-grade-revise-default);
+}
+
+.timeline-nav__icon--error {
+  color: var(--eds-theme-color-background-grade-stop-default);
+}
+
+.timeline-nav__icon--incomplete {
+  color: var(--eds-theme-color-border-neutral-subtle);
+}

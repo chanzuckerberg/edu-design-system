@@ -5,12 +5,6 @@ import { allByType } from 'react-children-by-type';
 import { useUIDSeed } from 'react-uid';
 import styles from './TimelineNav.module.css';
 import {
-  EdsThemeColorBackgroundGradeCompleteDefault,
-  EdsThemeColorBackgroundGradeReviseDefault,
-  EdsThemeColorBackgroundGradeStopDefault,
-  EdsThemeColorBorderNeutralSubtle,
-} from '../../tokens-dist/ts/colors';
-import {
   L_ARROW_KEYCODE,
   U_ARROW_KEYCODE,
   R_ARROW_KEYCODE,
@@ -262,8 +256,10 @@ export const TimelineNav = ({
       case 'success':
         return (
           <Icon
-            className={styles['timeline-nav__icon']}
-            color={EdsThemeColorBackgroundGradeCompleteDefault}
+            className={clsx(
+              styles['timeline-nav__icon'],
+              styles['timeline-nav__icon--success'],
+            )}
             name="check-circle"
             purpose="decorative"
           />
@@ -271,8 +267,10 @@ export const TimelineNav = ({
       case 'warning':
         return (
           <Icon
-            className={styles['timeline-nav__icon']}
-            color={EdsThemeColorBackgroundGradeReviseDefault}
+            className={clsx(
+              styles['timeline-nav__icon'],
+              styles['timeline-nav__icon--warning'],
+            )}
             name="error"
             purpose="decorative"
           />
@@ -280,8 +278,10 @@ export const TimelineNav = ({
       case 'error':
         return (
           <Icon
-            className={styles['timeline-nav__icon']}
-            color={EdsThemeColorBackgroundGradeStopDefault}
+            className={clsx(
+              styles['timeline-nav__icon'],
+              styles['timeline-nav__icon--error'],
+            )}
             name="cancel"
             purpose="decorative"
           />
@@ -298,8 +298,10 @@ export const TimelineNav = ({
       case 'incomplete':
         return (
           <Icon
-            className={styles['timeline-nav__icon']}
-            color={EdsThemeColorBorderNeutralSubtle}
+            className={clsx(
+              styles['timeline-nav__icon'],
+              styles['timeline-nav__icon--incomplete'],
+            )}
             name="star-outline"
             purpose="decorative"
           />
@@ -307,8 +309,10 @@ export const TimelineNav = ({
       case 'complete':
         return (
           <Icon
-            className={styles['timeline-nav__icon']}
-            color={EdsThemeColorBackgroundGradeCompleteDefault}
+            className={clsx(
+              styles['timeline-nav__icon'],
+              styles['timeline-nav__icon--success'],
+            )}
             name="star"
             purpose="decorative"
           />

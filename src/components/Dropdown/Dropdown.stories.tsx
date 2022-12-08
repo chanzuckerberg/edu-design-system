@@ -1,3 +1,4 @@
+import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { StoryObj, Meta } from '@storybook/react';
 import { within } from '@storybook/testing-library';
 import clsx from 'clsx';
@@ -11,6 +12,9 @@ import Icon from '../Icon';
 export default {
   title: 'Molecules/Forms/Dropdown',
   component: Dropdown,
+  parameters: {
+    badges: [BADGE.DEPRECATED],
+  },
   decorators: [
     (Story) => (
       <div

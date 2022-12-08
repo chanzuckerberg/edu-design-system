@@ -1,0 +1,120 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    # SELECT
+\*------------------------------------*/
+
+/**
+ * Select field used to select one option from a list of options.
+ */
+.select {
+  position: relative;
+}
+
+/**
+ * Compact variant.
+ */
+.select--compact {
+  width: min-content;
+}
+.select-button--compact {
+  padding: var(--eds-size-half);
+}
+
+/**
+ * Label on top of the select trigger button to label the select field.
+ */
+.label {
+  @mixin eds-theme-typography-label-md;
+  color: var(--eds-theme-color-form-label);
+  margin-bottom: var(--eds-size-half);
+}
+
+/**
+ * The container for the individual select options. 
+ */
+.select__options {
+  margin-top: var(--eds-size-1);
+  min-width: max-content;
+  max-width: var(--eds-l-max-width);
+  position: absolute;
+  z-index: var(--eds-z-index-100);
+
+  &:focus-visible {
+    @mixin focus;
+  }
+}
+
+.select__options--compact {
+  min-width: max-content;
+  width: 100%;
+}
+
+/**
+ * Full variant styling for the select options
+ */
+.select__options--full-width {
+  width: 100%;
+}
+
+/**
+ * Places the options on the right side of the container.
+ */
+.select__options--align-right {
+  right: 0;
+}
+
+/*------------------------------------*\
+    # DROPDOWN BUTTON
+\*------------------------------------*/
+
+/**
+ * The button to trigger the display of the dropdown.
+ */
+.select-button {
+  @mixin eds-theme-typography-body-text-md;
+  /* Allow select component font to shrink in contexts where body font size is smaller. */
+  font-size: inherit;
+
+  width: 100%;
+  padding: var(--eds-size-1);
+
+  border: var(--eds-theme-border-width) solid
+    var(--eds-theme-color-border-neutral-strong);
+  border-radius: var(--eds-border-radius-md);
+
+  display: flex;
+  /* Place button text on the left and the expand more icon on the right. */
+  justify-content: space-between;
+  align-items: center;
+
+  cursor: pointer;
+
+  background-color: var(--eds-theme-color-background-neutral-default);
+
+  &:focus-visible {
+    @mixin focus;
+    border-color: var(--eds-theme-color-focus-ring);
+  }
+}
+
+.select-button:disabled {
+  cursor: not-allowed;
+}
+
+/**
+ * The caret icon to decorate the select trigger button, animated to rotate.
+ */
+.select-button__icon {
+  transform: rotate(0);
+
+  transition: transform var(--eds-anim-move-medium) ease-out;
+  @media (prefers-reduced-motion) {
+    /* Turns off animation if user prefers reduced motion. */
+    transition: none;
+  }
+}
+
+.select-button__icon--reversed {
+  transform: rotate(180deg);
+}

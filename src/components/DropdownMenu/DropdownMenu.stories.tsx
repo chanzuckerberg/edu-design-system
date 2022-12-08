@@ -1,3 +1,4 @@
+import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
@@ -9,6 +10,9 @@ export default {
   title: 'Molecules/Navigation/DropdownMenu',
   component: DropdownMenu,
   subcomponents: { DropdownMenuItem },
+  parameters: {
+    badges: [BADGE.DEPRECATED],
+  },
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof DropdownMenu>;

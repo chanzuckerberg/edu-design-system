@@ -118,12 +118,9 @@ export const DataBar = ({
     accumulator += segment.value;
     /* Ensures a minimumum width of 5% for the segment. */
     const percentage = Math.max(5, (segment.value / max) * 100);
-    /* Rounds the right side of the segment if it completes the data bar. */
-    const isRoundRight = accumulator >= max;
     segmentComponents.push(
       <DataBarSegment
         aria-label={segment.text}
-        isRoundRight={isRoundRight}
         key={`segment-${index}`}
         onKeyDown={(e) => handleOnKeyDown(e, index)}
         ref={(el) => (segmentsRef.current[index] = el)}

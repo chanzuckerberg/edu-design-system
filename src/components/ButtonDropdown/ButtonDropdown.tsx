@@ -62,9 +62,13 @@ export interface Props {
 }
 
 /**
+ * The ButtonDropdown component is deprecated and will be removed in a future release.
+ *
  * `import {ButtonDropdown} from "@chanzuckerberg/eds";`
  *
  * Contains the button and the dropdown.
+ *
+ * @deprecated
  */
 export const ButtonDropdown = ({
   fullWidth,

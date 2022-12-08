@@ -1,0 +1,13 @@
+/*------------------------------------*\
+ # POPOVER CONTAINER
+\*------------------------------------*/
+
+/**
+ * Popover container
+ */
+.popover-container {
+  border-radius: var(--eds-border-radius-md);
+  overflow: auto;
+  box-shadow: var(--eds-box-shadow-md);
+  background-color: var(--eds-theme-color-background-neutral-default);
+}

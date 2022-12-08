@@ -276,7 +276,17 @@ Use:
 }
 ```
 
-- Avoid using classes on one component to alter the styling of a different component. For example, instead of:
+- Use CSS variables instead of JavaScript variables for styling in components. This enables theming the components because our theming system relies on overrides CSS variables.
+
+Instead of:
+
+```tsx
+import { EdsThemeColorUtilitySuccessForeground } from 'src/tokens-dist/ts/colors';
+
+<Icon color={EdsThemeColorUtilitySuccessForeground} />;
+```
+
+Use:
 
 ```css
 .banner__icon {
@@ -284,13 +294,7 @@ Use:
 }
 ```
 
-Use:
-
-```tsx
-import { EdsThemeColorUtilitySuccessForeground } from 'src/tokens-dist/ts/colors';
-
-<Icon color={EdsThemeColorUtilitySuccessForeground} />;
-```
+You can continue to use the `Icon` components' `color` prop with JavaScript variables in storybook (including recipes and pages) because those will not be imported and themed in other prodcuts.
 
 ## Utility classes <a name="utility-classes"></a>
 

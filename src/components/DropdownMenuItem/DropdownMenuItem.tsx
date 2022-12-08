@@ -4,6 +4,7 @@ import React, { useContext } from 'react';
 import { DropdownMenuContext } from '../DropdownMenu';
 import styles from '../DropdownMenu/DropdownMenu.module.css';
 
+// TODO: This component will be deprecated in favor of PopoverListItem
 export type DropdownMenuItemProps = {
   /**
    * Stylistic variations for the Box

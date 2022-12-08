@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Banner /> Brand story renders snapshot 1`] = `
-<article
+<aside
   class="banner banner--brand banner--horizontal"
 >
   <svg
@@ -43,11 +43,11 @@ exports[`<Banner /> Brand story renders snapshot 1`] = `
       </p>
     </div>
   </div>
-</article>
+</aside>
 `;
 
 exports[`<Banner /> BrandDismissable story renders snapshot 1`] = `
-<article
+<aside
   class="banner banner--brand banner--horizontal banner--dismissable"
 >
   <svg
@@ -110,11 +110,11 @@ exports[`<Banner /> BrandDismissable story renders snapshot 1`] = `
       />
     </svg>
   </button>
-</article>
+</aside>
 `;
 
 exports[`<Banner /> BrandWithAction story renders snapshot 1`] = `
-<article
+<aside
   class="banner banner--brand banner--horizontal"
 >
   <svg
@@ -167,7 +167,7 @@ exports[`<Banner /> BrandWithAction story renders snapshot 1`] = `
       </button>
     </div>
   </div>
-</article>
+</aside>
 `;
 
 exports[`<Banner /> DismissableBelowContent story renders snapshot 1`] = `
@@ -179,7 +179,7 @@ exports[`<Banner /> DismissableBelowContent story renders snapshot 1`] = `
 `;
 
 exports[`<Banner /> DismissableWithAction story renders snapshot 1`] = `
-<article
+<aside
   class="banner banner--brand banner--horizontal banner--dismissable"
 >
   <svg
@@ -253,11 +253,11 @@ exports[`<Banner /> DismissableWithAction story renders snapshot 1`] = `
       />
     </svg>
   </button>
-</article>
+</aside>
 `;
 
 exports[`<Banner /> Error story renders snapshot 1`] = `
-<article
+<aside
   class="banner banner--error banner--horizontal"
 >
   <svg
@@ -299,11 +299,11 @@ exports[`<Banner /> Error story renders snapshot 1`] = `
       </p>
     </div>
   </div>
-</article>
+</aside>
 `;
 
 exports[`<Banner /> ErrorDismissable story renders snapshot 1`] = `
-<article
+<aside
   class="banner banner--error banner--horizontal banner--dismissable"
 >
   <svg
@@ -366,11 +366,11 @@ exports[`<Banner /> ErrorDismissable story renders snapshot 1`] = `
       />
     </svg>
   </button>
-</article>
+</aside>
 `;
 
 exports[`<Banner /> ErrorWithAction story renders snapshot 1`] = `
-<article
+<aside
   class="banner banner--error banner--horizontal"
 >
   <svg
@@ -423,11 +423,11 @@ exports[`<Banner /> ErrorWithAction story renders snapshot 1`] = `
       </button>
     </div>
   </div>
-</article>
+</aside>
 `;
 
 exports[`<Banner /> Flat story renders snapshot 1`] = `
-<article
+<aside
   class="banner banner--brand banner--horizontal banner--flat"
 >
   <svg
@@ -469,11 +469,11 @@ exports[`<Banner /> Flat story renders snapshot 1`] = `
       </p>
     </div>
   </div>
-</article>
+</aside>
 `;
 
 exports[`<Banner /> Neutral story renders snapshot 1`] = `
-<article
+<aside
   class="banner banner--neutral banner--horizontal"
 >
   <svg
@@ -515,11 +515,11 @@ exports[`<Banner /> Neutral story renders snapshot 1`] = `
       </p>
     </div>
   </div>
-</article>
+</aside>
 `;
 
 exports[`<Banner /> NeutralDismissable story renders snapshot 1`] = `
-<article
+<aside
   class="banner banner--neutral banner--horizontal banner--dismissable"
 >
   <svg
@@ -582,11 +582,11 @@ exports[`<Banner /> NeutralDismissable story renders snapshot 1`] = `
       />
     </svg>
   </button>
-</article>
+</aside>
 `;
 
 exports[`<Banner /> NeutralWithAction story renders snapshot 1`] = `
-<article
+<aside
   class="banner banner--neutral banner--horizontal"
 >
   <svg
@@ -639,11 +639,11 @@ exports[`<Banner /> NeutralWithAction story renders snapshot 1`] = `
       </button>
     </div>
   </div>
-</article>
+</aside>
 `;
 
 exports[`<Banner /> NoDescription story renders snapshot 1`] = `
-<article
+<aside
   class="banner banner--brand banner--horizontal"
 >
   <svg
@@ -672,11 +672,11 @@ exports[`<Banner /> NoDescription story renders snapshot 1`] = `
       </h3>
     </div>
   </div>
-</article>
+</aside>
 `;
 
 exports[`<Banner /> NoTitle story renders snapshot 1`] = `
-<article
+<aside
   class="banner banner--brand banner--horizontal"
 >
   <svg
@@ -713,11 +713,11 @@ exports[`<Banner /> NoTitle story renders snapshot 1`] = `
       </p>
     </div>
   </div>
-</article>
+</aside>
 `;
 
 exports[`<Banner /> Success story renders snapshot 1`] = `
-<article
+<aside
   class="banner banner--success banner--horizontal"
 >
   <svg
@@ -759,11 +759,11 @@ exports[`<Banner /> Success story renders snapshot 1`] = `
       </p>
     </div>
   </div>
-</article>
+</aside>
 `;
 
 exports[`<Banner /> SuccessDismissable story renders snapshot 1`] = `
-<article
+<aside
   class="banner banner--success banner--horizontal banner--dismissable"
 >
   <svg
@@ -826,11 +826,11 @@ exports[`<Banner /> SuccessDismissable story renders snapshot 1`] = `
       />
     </svg>
   </button>
-</article>
+</aside>
 `;
 
 exports[`<Banner /> SuccessWithAction story renders snapshot 1`] = `
-<article
+<aside
   class="banner banner--success banner--horizontal"
 >
   <svg
@@ -883,11 +883,11 @@ exports[`<Banner /> SuccessWithAction story renders snapshot 1`] = `
       </button>
     </div>
   </div>
-</article>
+</aside>
 `;
 
 exports[`<Banner /> Vertical story renders snapshot 1`] = `
-<article
+<aside
   class="banner banner--brand"
 >
   <svg
@@ -929,11 +929,11 @@ exports[`<Banner /> Vertical story renders snapshot 1`] = `
       </p>
     </div>
   </div>
-</article>
+</aside>
 `;
 
 exports[`<Banner /> VerticalDismissable story renders snapshot 1`] = `
-<article
+<aside
   class="banner banner--brand banner--dismissable"
 >
   <svg
@@ -996,11 +996,11 @@ exports[`<Banner /> VerticalDismissable story renders snapshot 1`] = `
       />
     </svg>
   </button>
-</article>
+</aside>
 `;
 
 exports[`<Banner /> VerticalDismissableWithAction story renders snapshot 1`] = `
-<article
+<aside
   class="banner banner--brand banner--dismissable"
 >
   <svg
@@ -1074,11 +1074,11 @@ exports[`<Banner /> VerticalDismissableWithAction story renders snapshot 1`] = `
       />
     </svg>
   </button>
-</article>
+</aside>
 `;
 
 exports[`<Banner /> VerticalWithAction story renders snapshot 1`] = `
-<article
+<aside
   class="banner banner--brand"
 >
   <svg
@@ -1131,11 +1131,11 @@ exports[`<Banner /> VerticalWithAction story renders snapshot 1`] = `
       </button>
     </div>
   </div>
-</article>
+</aside>
 `;
 
 exports[`<Banner /> Warning story renders snapshot 1`] = `
-<article
+<aside
   class="banner banner--warning banner--horizontal"
 >
   <svg
@@ -1177,11 +1177,11 @@ exports[`<Banner /> Warning story renders snapshot 1`] = `
       </p>
     </div>
   </div>
-</article>
+</aside>
 `;
 
 exports[`<Banner /> WarningDismissable story renders snapshot 1`] = `
-<article
+<aside
   class="banner banner--warning banner--horizontal banner--dismissable"
 >
   <svg
@@ -1244,11 +1244,11 @@ exports[`<Banner /> WarningDismissable story renders snapshot 1`] = `
       />
     </svg>
   </button>
-</article>
+</aside>
 `;
 
 exports[`<Banner /> WarningWithAction story renders snapshot 1`] = `
-<article
+<aside
   class="banner banner--warning banner--horizontal"
 >
   <svg
@@ -1301,5 +1301,5 @@ exports[`<Banner /> WarningWithAction story renders snapshot 1`] = `
       </button>
     </div>
   </div>
-</article>
+</aside>
 `;

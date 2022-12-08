@@ -90,6 +90,7 @@
 .heading--brand {
   color: var(--eds-theme-color-text-brand-primary);
 }
+/* stylelint-disable-next-line eds/no-tier-1-color-variable */
 .heading--info {
   color: var(--eds-color-info-700);
 }

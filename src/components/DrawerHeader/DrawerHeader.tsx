@@ -3,7 +3,6 @@ import type { MouseEventHandler, ReactNode } from 'react';
 import React from 'react';
 import Button from '../../components/Button';
 import Icon from '../../components/Icon';
-import { EdsThemeColorIconNeutralSubtle } from '../../tokens-dist/ts/colors';
 import styles from '../Drawer/Drawer.module.css';
 
 export type Props = {
@@ -51,7 +50,6 @@ export const DrawerHeader = ({
       {dismissible && (
         <Button onClick={onClick} status="neutral" variant="icon">
           <Icon
-            color={EdsThemeColorIconNeutralSubtle}
             name="close"
             purpose="informative"
             size="1.5rem"

@@ -1,0 +1,421 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Menu /> Default story renders snapshot 1`] = `
+<div
+  class="menu"
+>
+  <button
+    aria-controls="headlessui-menu-items-2"
+    aria-expanded="true"
+    aria-haspopup="true"
+    class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral menu__button"
+    data-bootstrap-override="clickable-style-secondary"
+    id="headlessui-menu-button-1"
+    type="button"
+  >
+    Documentation Links
+    <svg
+      aria-hidden="true"
+      class="icon menu__button--icon"
+      fill="currentColor"
+      height="1.5rem"
+      style="--icon-size: 1.5rem;"
+      width="1.5rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <use
+        xlink:href="test-file-stub#expand-more"
+      />
+    </svg>
+  </button>
+  <div
+    aria-labelledby="headlessui-menu-button-1"
+    class="popover-container menu__popover"
+    data-testid="menu-content"
+    id="headlessui-menu-items-2"
+    role="menu"
+    tabindex="0"
+  >
+    <a
+      class="menu__item"
+      href="https://headlessui.com/react/menu#menu-button"
+      id="headlessui-menu-item-3"
+      role="menuitem"
+      tabindex="-1"
+    >
+      <div
+        class="popover-list-item"
+      >
+        <div
+          class="popover-list-item__icon"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon"
+            fill="currentColor"
+            height="1.5rem"
+            style="--icon-size: 1.5rem;"
+            width="1.5rem"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="test-file-stub#link"
+            />
+          </svg>
+        </div>
+        Headless UI Docs
+      </div>
+    </a>
+    <a
+      class="menu__item"
+      href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu"
+      id="headlessui-menu-item-4"
+      role="menuitem"
+      tabindex="-1"
+    >
+      <div
+        class="popover-list-item"
+      >
+        <div
+          class="popover-list-item__icon"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon"
+            fill="currentColor"
+            height="1.5rem"
+            style="--icon-size: 1.5rem;"
+            width="1.5rem"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="test-file-stub#link"
+            />
+          </svg>
+        </div>
+        MDN: Menu
+      </div>
+    </a>
+    <a
+      class="menu__item"
+      id="headlessui-menu-item-5"
+      role="menuitem"
+      tabindex="-1"
+    >
+      <div
+        class="popover-list-item"
+      >
+        <div
+          class="popover-list-item__no-icon"
+        />
+        Trigger Action
+      </div>
+    </a>
+    <div
+      aria-disabled="true"
+      class="popover-list-item popover-list-item--disabled"
+      id="headlessui-menu-item-6"
+      role="menuitem"
+    >
+      <div
+        class="popover-list-item__icon"
+      >
+        <svg
+          aria-hidden="true"
+          class="icon"
+          fill="currentColor"
+          height="1.5rem"
+          style="--icon-size: 1.5rem;"
+          width="1.5rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="test-file-stub#warning"
+          />
+        </svg>
+      </div>
+      Not Possible (disabled)
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Menu /> WithLongButtonText story renders snapshot 1`] = `
+<div
+  class="menu"
+>
+  <button
+    aria-controls="headlessui-menu-items-8"
+    aria-expanded="true"
+    aria-haspopup="true"
+    class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral menu__button"
+    data-bootstrap-override="clickable-style-secondary"
+    id="headlessui-menu-button-7"
+    type="button"
+  >
+    Long Trigger Button Text to Demonstrate Popover Matching
+    <svg
+      aria-hidden="true"
+      class="icon menu__button--icon"
+      fill="currentColor"
+      height="1.5rem"
+      style="--icon-size: 1.5rem;"
+      width="1.5rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <use
+        xlink:href="test-file-stub#expand-more"
+      />
+    </svg>
+  </button>
+  <div
+    aria-labelledby="headlessui-menu-button-7"
+    class="popover-container menu__popover"
+    data-testid="menu-content"
+    id="headlessui-menu-items-8"
+    role="menu"
+    tabindex="0"
+  >
+    <a
+      class="menu__item"
+      href="https://headlessui.com/react/menu#menu-button"
+      id="headlessui-menu-item-9"
+      role="menuitem"
+      tabindex="-1"
+    >
+      <div
+        class="popover-list-item"
+      >
+        <div
+          class="popover-list-item__icon"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon"
+            fill="currentColor"
+            height="1.5rem"
+            style="--icon-size: 1.5rem;"
+            width="1.5rem"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="test-file-stub#link"
+            />
+          </svg>
+        </div>
+        Headless UI Docs
+      </div>
+    </a>
+    <a
+      class="menu__item"
+      href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu"
+      id="headlessui-menu-item-10"
+      role="menuitem"
+      tabindex="-1"
+    >
+      <div
+        class="popover-list-item"
+      >
+        <div
+          class="popover-list-item__icon"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon"
+            fill="currentColor"
+            height="1.5rem"
+            style="--icon-size: 1.5rem;"
+            width="1.5rem"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="test-file-stub#link"
+            />
+          </svg>
+        </div>
+        MDN: Menu
+      </div>
+    </a>
+    <a
+      class="menu__item"
+      id="headlessui-menu-item-11"
+      role="menuitem"
+      tabindex="-1"
+    >
+      <div
+        class="popover-list-item"
+      >
+        <div
+          class="popover-list-item__no-icon"
+        />
+        Trigger Action
+      </div>
+    </a>
+    <div
+      aria-disabled="true"
+      class="popover-list-item popover-list-item--disabled"
+      id="headlessui-menu-item-12"
+      role="menuitem"
+    >
+      <div
+        class="popover-list-item__icon"
+      >
+        <svg
+          aria-hidden="true"
+          class="icon"
+          fill="currentColor"
+          height="1.5rem"
+          style="--icon-size: 1.5rem;"
+          width="1.5rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="test-file-stub#warning"
+          />
+        </svg>
+      </div>
+      Not Possible (disabled)
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Menu /> WithShortButtonText story renders snapshot 1`] = `
+<div
+  class="menu"
+>
+  <button
+    aria-controls="headlessui-menu-items-14"
+    aria-expanded="true"
+    aria-haspopup="true"
+    class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral menu__button"
+    data-bootstrap-override="clickable-style-secondary"
+    id="headlessui-menu-button-13"
+    type="button"
+  >
+    Menu
+    <svg
+      aria-hidden="true"
+      class="icon menu__button--icon"
+      fill="currentColor"
+      height="1.5rem"
+      style="--icon-size: 1.5rem;"
+      width="1.5rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <use
+        xlink:href="test-file-stub#expand-more"
+      />
+    </svg>
+  </button>
+  <div
+    aria-labelledby="headlessui-menu-button-13"
+    class="popover-container menu__popover"
+    data-testid="menu-content"
+    id="headlessui-menu-items-14"
+    role="menu"
+    tabindex="0"
+  >
+    <a
+      class="menu__item"
+      href="https://headlessui.com/react/menu#menu-button"
+      id="headlessui-menu-item-15"
+      role="menuitem"
+      tabindex="-1"
+    >
+      <div
+        class="popover-list-item"
+      >
+        <div
+          class="popover-list-item__icon"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon"
+            fill="currentColor"
+            height="1.5rem"
+            style="--icon-size: 1.5rem;"
+            width="1.5rem"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="test-file-stub#link"
+            />
+          </svg>
+        </div>
+        Headless UI Docs
+      </div>
+    </a>
+    <a
+      class="menu__item"
+      href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu"
+      id="headlessui-menu-item-16"
+      role="menuitem"
+      tabindex="-1"
+    >
+      <div
+        class="popover-list-item"
+      >
+        <div
+          class="popover-list-item__icon"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon"
+            fill="currentColor"
+            height="1.5rem"
+            style="--icon-size: 1.5rem;"
+            width="1.5rem"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="test-file-stub#link"
+            />
+          </svg>
+        </div>
+        MDN: Menu
+      </div>
+    </a>
+    <a
+      class="menu__item"
+      id="headlessui-menu-item-17"
+      role="menuitem"
+      tabindex="-1"
+    >
+      <div
+        class="popover-list-item"
+      >
+        <div
+          class="popover-list-item__no-icon"
+        />
+        Trigger Action
+      </div>
+    </a>
+    <div
+      aria-disabled="true"
+      class="popover-list-item popover-list-item--disabled"
+      id="headlessui-menu-item-18"
+      role="menuitem"
+    >
+      <div
+        class="popover-list-item__icon"
+      >
+        <svg
+          aria-hidden="true"
+          class="icon"
+          fill="currentColor"
+          height="1.5rem"
+          style="--icon-size: 1.5rem;"
+          width="1.5rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="test-file-stub#warning"
+          />
+        </svg>
+      </div>
+      Not Possible (disabled)
+    </div>
+  </div>
+</div>
+`;

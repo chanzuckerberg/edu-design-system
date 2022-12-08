@@ -28,7 +28,7 @@ exports[`<Filters /> Default story renders snapshot 1`] = `
       >
         <svg
           class="icon"
-          fill="#878C90"
+          fill="currentColor"
           height="1.5rem"
           role="img"
           style="--icon-size: 1.5rem;"
@@ -198,7 +198,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
       >
         <svg
           class="icon"
-          fill="#878C90"
+          fill="currentColor"
           height="1.5rem"
           role="img"
           style="--icon-size: 1.5rem;"
@@ -840,7 +840,7 @@ exports[`<Filters /> WithOnApplyAndCustomButtonGroup story renders snapshot 1`] 
       >
         <svg
           class="icon"
-          fill="#878C90"
+          fill="currentColor"
           height="1.5rem"
           role="img"
           style="--icon-size: 1.5rem;"
@@ -1025,7 +1025,7 @@ exports[`<Filters /> WithOnClear story renders snapshot 1`] = `
       >
         <svg
           class="icon"
-          fill="#878C90"
+          fill="currentColor"
           height="1.5rem"
           role="img"
           style="--icon-size: 1.5rem;"

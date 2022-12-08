@@ -1,0 +1,27 @@
+name: Update NPM Dependencies
+
+on:
+  schedule:
+    # The "*" (#42, asterisk) character has special semantics in YAML, so this
+    # string has to be quoted.
+    - cron: '0 13 * * MON' # Monday, 6am (PST)
+
+jobs:
+  renovate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          # We want this running on the development 'next' branch
+          ref: 'next'
+
+      - name: Renovate
+        # The version of renovatebot should be kept up-to-date with major releases
+        # https://github.com/renovatebot/github-action/blob/release/CHANGELOG.md
+        uses: renovatebot/github-action@v34.50.1
+        with:
+          configurationFile: .github/renovate.json5
+          token: ${{ secrets.RENOVATE_TOKEN }}
+        env:
+          LOG_LEVEL: 'debug'

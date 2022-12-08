@@ -112,6 +112,10 @@ function childrenHaveLabelComponent(children?: ReactNode): boolean {
 /**
  * `import {Dropdown} from "@chanzuckerberg/eds";`
  *
+ * Note: this component has been deprecated and will be removed in a future release.
+ * Please use the Select component instead for forms, and the Menu component for other
+ * types of popover-like dropdowns.
+ *
  * EDS Dropdown. Used to select one option from a list of options.
  *
  * Built on top of the Headless UI Listbox: https://headlessui.dev/react/listbox#basic-example
@@ -242,6 +246,8 @@ function childrenHaveLabelComponent(children?: ReactNode): boolean {
  *     optionsClassName="dropdown__options--width-24rem"
  *   />
  * );
+ *
+ * @deprecated
  * ```
  */
 export function Dropdown(props: DropdownProps) {

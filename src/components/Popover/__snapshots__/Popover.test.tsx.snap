@@ -22,7 +22,7 @@ exports[`<Popover /> Arrow story renders snapshot 1`] = `
     tabindex="-1"
   >
     <div
-      class="popover-content__body"
+      class="popover-container"
     >
       <div
         style="width: 250px;"
@@ -63,7 +63,7 @@ exports[`<Popover /> Bottom story renders snapshot 1`] = `
     tabindex="-1"
   >
     <div
-      class="popover-content__body"
+      class="popover-container"
     >
       <div
         style="width: 250px;"
@@ -99,7 +99,7 @@ exports[`<Popover /> BottomEnd story renders snapshot 1`] = `
     tabindex="-1"
   >
     <div
-      class="popover-content__body"
+      class="popover-container"
     >
       <div
         style="width: 250px;"
@@ -135,7 +135,7 @@ exports[`<Popover /> BottomStart story renders snapshot 1`] = `
     tabindex="-1"
   >
     <div
-      class="popover-content__body"
+      class="popover-container"
     >
       <div
         style="width: 250px;"
@@ -171,7 +171,7 @@ exports[`<Popover /> Default story renders snapshot 1`] = `
     tabindex="-1"
   >
     <div
-      class="popover-content__body"
+      class="popover-container"
     >
       <div
         style="width: 250px;"
@@ -207,7 +207,7 @@ exports[`<Popover /> Left story renders snapshot 1`] = `
     tabindex="-1"
   >
     <div
-      class="popover-content__body"
+      class="popover-container"
     >
       <div
         style="width: 250px;"
@@ -243,7 +243,7 @@ exports[`<Popover /> LeftEnd story renders snapshot 1`] = `
     tabindex="-1"
   >
     <div
-      class="popover-content__body"
+      class="popover-container"
     >
       <div
         style="width: 250px;"
@@ -279,7 +279,7 @@ exports[`<Popover /> LeftStart story renders snapshot 1`] = `
     tabindex="-1"
   >
     <div
-      class="popover-content__body"
+      class="popover-container"
     >
       <div
         style="width: 250px;"
@@ -315,7 +315,7 @@ exports[`<Popover /> Right story renders snapshot 1`] = `
     tabindex="-1"
   >
     <div
-      class="popover-content__body"
+      class="popover-container"
     >
       <div
         style="width: 250px;"
@@ -351,7 +351,7 @@ exports[`<Popover /> RightEnd story renders snapshot 1`] = `
     tabindex="-1"
   >
     <div
-      class="popover-content__body"
+      class="popover-container"
     >
       <div
         style="width: 250px;"
@@ -387,7 +387,7 @@ exports[`<Popover /> RightStart story renders snapshot 1`] = `
     tabindex="-1"
   >
     <div
-      class="popover-content__body"
+      class="popover-container"
     >
       <div
         style="width: 250px;"
@@ -423,7 +423,7 @@ exports[`<Popover /> Top story renders snapshot 1`] = `
     tabindex="-1"
   >
     <div
-      class="popover-content__body"
+      class="popover-container"
     >
       <div
         style="width: 250px;"
@@ -459,7 +459,7 @@ exports[`<Popover /> TopEnd story renders snapshot 1`] = `
     tabindex="-1"
   >
     <div
-      class="popover-content__body"
+      class="popover-container"
     >
       <div
         style="width: 250px;"
@@ -495,7 +495,7 @@ exports[`<Popover /> TopStart story renders snapshot 1`] = `
     tabindex="-1"
   >
     <div
-      class="popover-content__body"
+      class="popover-container"
     >
       <div
         style="width: 250px;"

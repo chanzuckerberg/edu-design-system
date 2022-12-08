@@ -360,6 +360,7 @@ $eds-theme-color-form-border-hover: #21272D !default;
 $eds-theme-color-form-background: #FFFFFF !default;
 $eds-theme-color-form-background-hover: #F4F6F8 !default;
 $eds-theme-color-form-label: #383C43 !default;
+$eds-theme-color-modal-brand-header-background: #8984E8 !default;
 $eds-theme-color-text-highlight-foreground: #21272D !default;
 $eds-theme-color-text-highlight-background: #F5FF8F !default;
 $eds-theme-form-border-width: 1px !default;
@@ -1043,6 +1044,15 @@ $tokens: (
             'hover': $eds-theme-color-form-background-hover
           ),
           'label': $eds-theme-color-form-label
+        ),
+        'modal': (
+          'brand': (
+            'header': (
+              'background': (
+                '@': $eds-theme-color-modal-brand-header-background
+              )
+            )
+          )
         ),
         'text-highlight': (
           'foreground': $eds-theme-color-text-highlight-foreground,

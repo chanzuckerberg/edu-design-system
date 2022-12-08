@@ -1,0 +1,32 @@
+/*------------------------------------*\
+    # MENU
+\*------------------------------------*/
+
+/**
+ * Menu
+ */
+.menu {
+  position: relative;
+}
+
+.menu__popover {
+  margin-top: var(--eds-size-1);
+  min-width: max-content;
+  max-width: var(--eds-l-max-width);
+  position: absolute;
+  width: 100%;
+}
+
+.menu__button.menu__button {
+  background-color: var(--eds-theme-color-form-background);
+}
+
+/* Needed to create higher specificity than ClickableStyle. TODO: improve */
+.menu__button--icon.menu__button--icon.menu__button--icon.menu__button--icon {
+  color: var(--eds-theme-color-icon-neutral-default);
+}
+
+.menu__item {
+  text-decoration: none;
+  color: inherit;
+}

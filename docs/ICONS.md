@@ -21,7 +21,7 @@ View the "Icon Grid" story in Storybook for a visualization of all available ico
 **TODO: formalize this process with design in the Icon design workflow**
 
 1. Export SVG icon asset(s) from Figma
-2. If necessary, remove the `fill` attribute on the `<path>` in the exported SVG file(s).
+2. If necessary, remove the `fill` attribute on the `<path>` in the exported SVG file(s). In the very rare case that an icon needs colors defined in the icon (like the `status-` icons), only use tier 2 or tier 3 CSS variables for the color.
 3. In a new feature branch, locate `src/icons` and add new icon to the directory.
 4. Run `yarn build:icons` in the terminal to build the new icon sprite.
 5. In Storybook, view the "Icon Grid" component to see the new component added to the available list of icons, which is now ready to use in EDS components.

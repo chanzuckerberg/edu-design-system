@@ -29,7 +29,7 @@ exports[`<Drawer /> Default story renders snapshot 1`] = `
       >
         <svg
           class="icon"
-          fill="#878C90"
+          fill="currentColor"
           height="1.5rem"
           role="img"
           style="--icon-size: 1.5rem;"

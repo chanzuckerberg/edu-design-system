@@ -5,6 +5,7 @@ import { useState, createContext } from 'react';
 import { usePopper } from 'react-popper';
 import type { ExtractProps } from '../../util/utility-types';
 import PopoverButton from '../PopoverButton';
+import { defaultPopoverModifiers } from '../PopoverContainer';
 import PopoverContent from '../PopoverContent';
 
 export type PopoverProps = ExtractProps<typeof HeadlessPopover> & {
@@ -54,21 +55,6 @@ type PopoverContextType = {
 };
 
 export const PopoverContext = createContext<PopoverContextType>({});
-
-export const defaultPopoverModifiers = [
-  {
-    name: 'offset',
-    options: {
-      offset: [0, 10], // spaces the popover from the trigger element
-    },
-  },
-  {
-    name: 'preventOverflow',
-    options: {
-      mainAxis: false, // prevents popover from offsetting to prevent overflow. Turned off due to resulting misalignment of popover arrow.
-    },
-  },
-];
 
 /**
  * BETA: This component is still a work in progress and is subject to change.

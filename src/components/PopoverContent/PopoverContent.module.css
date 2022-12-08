@@ -3,24 +3,6 @@
 \*------------------------------------*/
 
 /**
- * A floating panel component with arbitrary content.
- * Styling for the Popover component since the parent <Popover> component provides functionality.
- */
-.popover-content {
-  z-index: var(--eds-z-index-top);
-}
-
-/**
- * Body popover content, as opposed to the visual indicator arrow.
- */
-.popover-content__body {
-  border-radius: var(--eds-border-radius-md);
-  overflow: auto;
-  box-shadow: var(--eds-box-shadow-md);
-  background-color: var(--eds-theme-color-background-neutral-default);
-}
-
-/**
  * Decorative arrow pointing the Popover to the trigger element.
  */
 .popover-content__arrow {

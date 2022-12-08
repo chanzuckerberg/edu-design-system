@@ -1,0 +1,82 @@
+{
+  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+
+  baseBranches: ['next'],
+  enabledManagers: ['npm'],
+  extends: ['config:base', 'group:allNonMajor'],
+  fetchReleaseNotes: false, // Only fetch release notes for breaking changes
+  internalChecksFilter: 'strict', // PRs will be skipped unless a non-pending version is available (applies to "stabilityDays" check only)
+  labels: ['npm-dependencies'],
+  prConcurrentLimit: 1,
+  repositories: ['chanzuckerberg/edu-design-system'],
+  rangeStrategy: 'bump', // Always bump minor/patch to latest
+  reviewers: ['team:edu-design-system'],
+
+  // Required to prevent onboarding pr and generation of new config file https://github.com/renovatebot/github-action#configurationfile
+  onboarding: false,
+  requireConfig: false,
+
+  major: {
+    rangeStrategy: 'replace',
+    fetchReleaseNotes: true,
+  },
+
+  ignoreDeps: [
+    // svg-spritemap-webpack-plugin v4 requires webpack 5 but EDS currently uses webpack 4 for storybook
+    'svg-spritemap-webpack-plugin',
+  ],
+
+  packageRules: [
+    {
+      // Hold back from creating branches until 3 or more days have elapsed since the version
+      // was released. Note: this only works for packages that provide a release timestamp header
+      // and does not ensure all updates are "stable".
+      matchDatasources: ['npm'],
+      stabilityDays: 3,
+    },
+    // Our peerDependencies for React are as low as 16.8.0, so we should support React v16
+    {
+      matchPackageNames: ['react', 'react-dom'],
+      groupName: 'react',
+      allowedVersions: '<17.0.0',
+    },
+    // Handle patch updates under 0.1.0 as potentially breaking and group them separately.
+    // Workaround for https://github.com/renovatebot/renovate/issues/3588
+    {
+      matchManagers: ['npm'],
+      matchCurrentVersion: '<0.1.0',
+      rangeStrategy: 'replace',
+      groupName: 'maybe breaking patch updates',
+      groupSlug: 'maybe-breaking-patch',
+      fetchReleaseNotes: true,
+    },
+    // Handle minor updates under 1.0.0 as potentially breaking and group them separately.
+    // Workaround for https://github.com/renovatebot/renovate/issues/3588
+    {
+      matchManagers: ['npm'],
+      matchCurrentVersion: '<1.0.0 >=0.1.0',
+      rangeStrategy: 'replace',
+      minor: {
+        groupName: 'maybe breaking minor updates',
+        groupSlug: 'maybe-breaking-minor',
+        fetchReleaseNotes: true,
+      },
+    },
+    // Updating packages with 'prettier' separately because updates to these packages often
+    // require modifying code to satistfy the new formatting rules.
+    {
+      matchPackagePatterns: ['prettier'],
+      groupName: 'prettier',
+    },
+    // Update typescript separately because typescript updates can create new
+    // typescript errors that need to be manually resolved.
+    {
+      matchPackageNames: ['typescript'],
+      groupName: 'typescript',
+    },
+  ],
+
+  // Customize how PRs are displayed
+  prBodyTemplate: '{{{table}}}{{{notes}}}{{{changelogs}}}{{{controls}}}{{{footer}}}',
+  prBodyColumns: ['Package', 'Type', 'Change'],
+}

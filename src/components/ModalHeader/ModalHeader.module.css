@@ -32,7 +32,7 @@
   flex-shrink: 0;
 
   color: var(--eds-theme-color-text-neutral-default-inverse);
-  background-color: var(--eds-color-brand-grape-500);
+  background-color: var(--eds-theme-color-modal-brand-header-background);
   h2 {
     /**
      * Brand specific font for the title.
