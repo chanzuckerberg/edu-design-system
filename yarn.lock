@@ -2053,6 +2053,7 @@ __metadata:
     react-children-by-type: ^1.1.0
     react-dom: ^16.14.0
     react-focus-lock: ^2.9.2
+    react-loader-spinner: ^5.3.4
     react-popper: ^2.3.0
     react-portal: ^4.2.2
     react-uid: ^2.3.2
@@ -18569,10 +18570,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-is@npm:^18.0.0":
+"react-is@npm:^18.0.0, react-is@npm:^18.2.0":
   version: 18.2.0
   resolution: "react-is@npm:18.2.0"
   checksum: e72d0ba81b5922759e4aff17e0252bd29988f9642ed817f56b25a3e217e13eea8a7f2322af99a06edb779da12d5d636e9fda473d620df9a3da0df2a74141d53e
+  languageName: node
+  linkType: hard
+
+"react-loader-spinner@npm:^5.3.4":
+  version: 5.3.4
+  resolution: "react-loader-spinner@npm:5.3.4"
+  dependencies:
+    react-is: ^18.2.0
+    styled-components: ^5.3.5
+    styled-tools: ^1.7.2
+  peerDependencies:
+    react: ^16.0.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.0.0 || ^17.0.0 || ^18.0.0
+  checksum: 429ee74233b2a225164bd77cce94459c20443411248e00604a21752fabf31a36749cc4d52c2a2cf194b98b37c543e0cbb9b76a0e49188acd1f17087035544ca6
   languageName: node
   linkType: hard
 
@@ -20716,6 +20731,35 @@ __metadata:
     react-dom: ">= 16.8.0"
     react-is: ">= 16.8.0"
   checksum: 05a664dfe423c2906959a0f3f47f9b1ad630e493eb2e06deea0dc0906af33ba5ca17277b98948a6c9642e73894d6533391aebf45576489f5afe920c974e9f8eb
+  languageName: node
+  linkType: hard
+
+"styled-components@npm:^5.3.5":
+  version: 5.3.6
+  resolution: "styled-components@npm:5.3.6"
+  dependencies:
+    "@babel/helper-module-imports": ^7.0.0
+    "@babel/traverse": ^7.4.5
+    "@emotion/is-prop-valid": ^1.1.0
+    "@emotion/stylis": ^0.8.4
+    "@emotion/unitless": ^0.7.4
+    babel-plugin-styled-components: ">= 1.12.0"
+    css-to-react-native: ^3.0.0
+    hoist-non-react-statics: ^3.0.0
+    shallowequal: ^1.1.0
+    supports-color: ^5.5.0
+  peerDependencies:
+    react: ">= 16.8.0"
+    react-dom: ">= 16.8.0"
+    react-is: ">= 16.8.0"
+  checksum: 68eac1e451be81d66739cf86de8ec9e72f46e7584aa359271761a2437468210bd7cf0a864281fc97dab08c32b35e6bf7513dc8b4104ed6b196cf8d65674dd289
+  languageName: node
+  linkType: hard
+
+"styled-tools@npm:^1.7.2":
+  version: 1.7.2
+  resolution: "styled-tools@npm:1.7.2"
+  checksum: 00cc1796085589b8d95d5a4183806d45b1d332fbc1dcf19922b01b81bd871c5a499fce64e82bb63bbead5bb8fe317f60a6e91c2fe01bf1ed79f5953977a05065
   languageName: node
   linkType: hard
 

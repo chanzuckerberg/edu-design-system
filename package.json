@@ -87,6 +87,7 @@
     "react-beautiful-dnd": "^13.1.1",
     "react-children-by-type": "^1.1.0",
     "react-focus-lock": "^2.9.2",
+    "react-loader-spinner": "^5.3.4",
     "react-popper": "^2.3.0",
     "react-portal": "^4.2.2",
     "react-uid": "^2.3.2",
