@@ -2035,6 +2035,7 @@ __metadata:
     intersection-observer: ^0.12.2
     jest: ^29.0.3
     jest-environment-jsdom: ^29.0.3
+    jest-preset-stylelint: ^6.0.0
     lint-staged: ^13.0.3
     lodash.debounce: ^4.0.8
     pascal-case: ^3.1.2
@@ -13961,6 +13962,15 @@ __metadata:
     jest-resolve:
       optional: true
   checksum: bd85dcc0e76e0eb0c3d56382ec140f08d25ff4068cda9d0e360bb78fb176cb726d0beab82dc0e8694cafd09f55fee7622b8bcb240afa5fad301f4ed3eebb4f47
+  languageName: node
+  linkType: hard
+
+"jest-preset-stylelint@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "jest-preset-stylelint@npm:6.0.0"
+  peerDependencies:
+    jest: ^29.0.2
+  checksum: d468bac4986049cef30b86c39dbc1420f698802911847dd8f98a291d2e645bffe0c2e6824ad4a432d69c8b9d5328f211906af9b8dedd1f25894be6f6092d7eee
   languageName: node
   linkType: hard
 

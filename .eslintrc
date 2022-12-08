@@ -4,10 +4,7 @@
     "browser": true,
     "node": true
   },
-  "plugins": [
-    "testing-library",
-    "@chanzuckerberg/stories"
-  ],
+  "plugins": ["testing-library", "@chanzuckerberg/stories"],
   "extends": [
     "@chanzuckerberg/eslint-config-edu-js",
     "@chanzuckerberg/eslint-config-edu-ts",
@@ -28,6 +25,7 @@
           "**/*.config.{js,ts}",
           "**/*.setup.{js,ts}",
           ".storybook/**",
+          "scripts/stylelint/**",
           "plopfile.js"
         ]
       }

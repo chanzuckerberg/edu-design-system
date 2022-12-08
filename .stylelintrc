@@ -1,6 +1,8 @@
 {
   "extends": ["stylelint-config-recommended"],
+  "plugins": ["./scripts/stylelint/index.js"],
   "rules": {
+    "eds/no-tier-1-color-variable": true,
     "at-rule-no-unknown": [
       true,
       {
