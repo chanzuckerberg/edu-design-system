@@ -2,25 +2,25 @@ import { Switch } from '@headlessui/react';
 import clsx from 'clsx';
 import React from 'react';
 import styles from './Toggle.module.css';
-import type { ExtractProps } from '../../util/utility-types';
 
 type ToggleLabelProps = {
   /**
    * Visible text label for the toggle.
    */
   children: React.ReactNode;
-} & ExtractProps<typeof Switch.Label>;
-
-type ToggleInputProps = ExtractProps<typeof Switch> & {
   /**
-   * Additional classnames passed in for styling the toggle.
-   * To target the circular part of the toggle, use `.container > .toggle`
+   * Additional classnames passed in for styling the toggle label.
+   */
+  className?: string;
+};
+
+type ToggleButtonProps = {
+  /**
+   * Additional classnames passed in for styling the toggle button.
    */
   className?: string;
   /**
    * Whether toggle is checked or unchecked.
-   * As a controlled component, and following data down / actions up,
-   * both checked and onChange are required to manage toggle state.
    */
   checked: boolean;
   /**
@@ -33,7 +33,7 @@ type ToggleInputProps = ExtractProps<typeof Switch> & {
   disabled?: boolean;
 };
 
-type ToggleProps = ToggleInputProps & {
+type ToggleProps = ToggleButtonProps & {
   /**
    * When possible, use a visible label through the `label` prop instead.
    * In rare cases where there's no visible label, you must provide an
@@ -43,73 +43,77 @@ type ToggleProps = ToggleInputProps & {
   /**
    * Visible text label for the toggle.
    */
+  children?: React.ReactNode;
+  /**
+   * Visible text label for the toggle.
+   */
   label?: React.ReactNode;
 };
 
-export const ToggleLabel = ({ children }: ToggleLabelProps) => {
-  return <Switch.Label className={styles.label}>{children}</Switch.Label>;
+const ToggleLabel = ({ children, className }: ToggleLabelProps) => {
+  const componentClassName = (styles['toggle__label'], className);
+  return <Switch.Label className={componentClassName}>{children}</Switch.Label>;
 };
 
-export const ToggleInput = ({
-  className,
-  checked,
-  ...rest
-}: ToggleInputProps) => {
-  return (
-    <Switch
-      checked={checked}
-      className={clsx(
-        className,
-        styles.container,
-        checked ? styles.containerChecked : styles.containerUnchecked,
-      )}
-      {...rest}
-    >
-      {/* This span is the circular part of the toggle */}
-      <span className={styles.toggle} />
-    </Switch>
-  );
-};
+const ToggleButton = ({ className, checked, ...other }: ToggleButtonProps) => (
+  <Switch
+    checked={checked}
+    className={clsx(
+      styles['toggle__button'],
+      checked
+        ? styles['toggle__button--checked']
+        : styles['toggle__button--unchecked'],
+      className,
+    )}
+    {...other}
+  >
+    {/* This span is the circular part of the toggle */}
+    <span className={styles['toggle__button-circle']} />
+  </Switch>
+);
 
-export const ToggleWrapper = Switch.Group;
+const ToggleWrapper = Switch.Group;
 
 /**
  * ```ts
  * import Toggle from 'v2/core/EDSCandidates/Toggle';
  * ```
  * ```ts
- * import {ToggleWrapper, ToggleLabel, ToggleInput} from 'v2/core/EDSCandidates/Toggle';
+ * import {ToggleWrapper, ToggleLabel, ToggleButton} from 'v2/core/EDSCandidates/Toggle';
  * ```
  *
  * Toggle wrapping the Headless UI Switch component https://headlessui.dev/react/switch
  *
  *
  * @example
- * <Toggle label="Lorem Ipsum" />
+ * <Toggle checked={checked} label="Lorem Ipsum" onChange={onChange} />
  *
  * @example
- * <ToggleWrapper as="div" className={styles.customWrapperStyles}>
- *   <ToggleLabel> Some label </ToggleLabel>
- *   <ToggleInput onChange={onChange} checked={checked} className={styles.customToggleStyles} />
- * </ToggleWrapper>
+ * <Toggle.Wrapper as="Fragment" className={styles.customWrapperStyles}>
+ *   <Toggle.Label> Some label </Toggle.Label>
+ *   <Toggle.Button onChange={onChange} checked={checked} className={customCssModulesClassname} />
+ * </Toggle.Wrapper>
  *
  */
-const Toggle = ({ checked = false, label, ...rest }: ToggleProps) => {
+export const Toggle = ({ label, ...other }: ToggleProps) => {
+  // TODO-JL: Consider if (children) return <Switch.Group>{children}</Switch.Group>
   if (
     process.env.NODE_ENV !== 'production' &&
     !label &&
-    !('aria-label' in rest)
+    !('aria-label' in other)
   ) {
     throw new Error('You must provide a visible label or aria-label');
   }
+
   return label ? (
-    <ToggleWrapper as="div" className={styles.switchWrapper}>
-      <ToggleInput checked={checked} {...rest} />
+    <ToggleWrapper as="div" className={styles['toggle__wrapper']}>
+      <Toggle.Button {...other} />
       <ToggleLabel>{label}</ToggleLabel>
     </ToggleWrapper>
   ) : (
-    <ToggleInput checked={checked} {...rest} />
+    <ToggleButton {...other} />
   );
 };
-
-export default Toggle;
+Toggle.Label = ToggleLabel;
+Toggle.Button = ToggleButton;
+Toggle.Wrapper = ToggleWrapper;

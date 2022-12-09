@@ -1,9 +1,45 @@
-/*------------------------------------*\
-    # TOGGLE
-\*------------------------------------*/
+.toggle__button {
+  @apply relative inline-flex h-6 w-12 shrink-0 items-center rounded-full;
+  @apply transition-colors duration-200 ease-out motion-reduce:transition-none;
+}
 
-/**
- * Toggle
- */
-.toggle {
+.toggle__button:disabled {
+  @apply bg-neutral-300;
+}
+
+.toggle__button:disabled ~ .toggle__label {
+  @apply text-neutral-300;
+}
+
+.toggle__button:focus {
+  @apply outline-none ring ring-info-400;
+}
+
+.toggle__button--unchecked {
+  @apply bg-neutral-500;
+}
+
+.toggle__button--checked {
+  @apply bg-brand-grape-600;
+}
+
+.toggle__label {
+  @apply mb-0 flex items-center text-body text-neutral-black;
+}
+
+.toggle__wrapper {
+  @apply flex items-center gap-2;
+}
+
+.toggle__button-circle {
+  @apply inline-block h-5 w-5 transform rounded-full bg-neutral-white;
+  @apply transition-transform duration-200 ease-out motion-reduce:transition-none;
+}
+
+.toggle__button--unchecked > .toggle__button-circle {
+  @apply translate-x-0.5;
+}
+
+.toggle__button--checked > .toggle__button-circle {
+  @apply translate-x-[1.625rem];
 }

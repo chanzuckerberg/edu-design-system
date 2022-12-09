@@ -7,6 +7,11 @@ import { Toggle } from './Toggle';
 export default {
   title: 'PleaseUpdateThisToADifferentFolder/Toggle',
   component: Toggle,
+  args: {
+    label: 'Lorem ipsum',
+    checked: false,
+    onChange: () => {},
+  },
   parameters: {
     badges: [BADGE.BETA],
   },
@@ -14,6 +19,4 @@ export default {
 
 type Args = React.ComponentProps<typeof Toggle>;
 
-export const Default: StoryObj<Args> = {
-  args: {},
-};
+export const Default: StoryObj<Args> = {};
