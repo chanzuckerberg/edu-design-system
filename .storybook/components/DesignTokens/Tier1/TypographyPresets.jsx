@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
+import styles from './TypographyPresets.module.css';
 import { Grid } from '../../../../src';
-import '../../../../src/components/Utilities/TypographyPresets.css';
 import { TokenSpecimen } from '../../TokenSpecimen/TokenSpecimen';
 
 export const PRESET_SIZE_MAP = {
@@ -72,20 +72,20 @@ export class Tier1TypographyPresets extends Component {
         <Grid key={`tier-1-typography-preset-${index}`}>
           <TokenSpecimen
             name={`eds-typography-preset-${preset}`}
-            specimenClassName={`u-typography-preset-${preset}`}
+            specimenClassName={styles[`u-typography-preset-${preset}`]}
             {...commonProps}
           />
           {lightVariant && (
             <TokenSpecimen
               name={`eds-typography-preset-${preset}-light`}
-              specimenClassName={`u-typography-preset-${preset}-light`}
+              specimenClassName={styles[`u-typography-preset-${preset}-light`]}
               {...commonProps}
             />
           )}
           {boldVariant && (
             <TokenSpecimen
               name={`eds-typography-preset-${preset}-bold`}
-              specimenClassName={`u-typography-preset-${preset}-bold`}
+              specimenClassName={styles[`u-typography-preset-${preset}-bold`]}
               {...commonProps}
             />
           )}
