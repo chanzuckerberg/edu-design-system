@@ -2,6 +2,37 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [7.1.0](https://github.com/chanzuckerberg/edu-design-system/compare/v7.0.0...v7.1.0) (2022-12-08)
+
+
+### Features
+
+* **menu,select:** add HeadlessUI-based menu and select components ([c70f59b](https://github.com/chanzuckerberg/edu-design-system/commit/c70f59b3b7d2a686ed7d79ff19b449fb68b5b621))
+* **renovate:** introduce renovate for keeping deps upto date ([027f4dc](https://github.com/chanzuckerberg/edu-design-system/commit/027f4dceb2fa4f0640a1c41d79b1610650d740dd))
+* **Select:** add select component ([21390cf](https://github.com/chanzuckerberg/edu-design-system/commit/21390cfced4681caa5e493dd98ec54a5f10de800))
+
+
+### Bug Fixes
+
+* add test for disabled Select ([de528be](https://github.com/chanzuckerberg/edu-design-system/commit/de528bedefde88665d06866e3e6b155de974f358))
+* add updates from design self-review ([08ddc3b](https://github.com/chanzuckerberg/edu-design-system/commit/08ddc3ba897c7c741b1377e4fd6a618705a4f74f))
+* address PR comments ([e543e5b](https://github.com/chanzuckerberg/edu-design-system/commit/e543e5b32af9e700a965a6827360bafc564b4628))
+* address PR comments ([a5bca10](https://github.com/chanzuckerberg/edu-design-system/commit/a5bca105ffa294b83f76bc4883527e657aa83bba))
+* address PR comments ([41448f3](https://github.com/chanzuckerberg/edu-design-system/commit/41448f302c3a279f3b3de2b61f03540e1c75a6de))
+* address PR comments ([f47f4c8](https://github.com/chanzuckerberg/edu-design-system/commit/f47f4c8fcc8c1621e8f103f2e8a830dfcd1ede8e))
+* adjust exports from component ([1e3c640](https://github.com/chanzuckerberg/edu-design-system/commit/1e3c640f857e3decf2fa939f3924eb25988cb2f4))
+* adopt new class names in storybook ([8ae43cc](https://github.com/chanzuckerberg/edu-design-system/commit/8ae43ccb6d57791cde896252aa19019a708bfb2a))
+* **banner, page-level-banner:** use aside instead of article ([43d1b39](https://github.com/chanzuckerberg/edu-design-system/commit/43d1b39f0bb997f28ade775b7d3217d041d49a4e))
+* **databar:** make height a calc and correct label size ([303e307](https://github.com/chanzuckerberg/edu-design-system/commit/303e307b1ea7d9425d94402877458d7278a50b36))
+* **databar:** make label margin bottom 0 ([b9d9d02](https://github.com/chanzuckerberg/edu-design-system/commit/b9d9d02ca3863782d3e3a9720bf01199eff5ee65))
+* **databar:** sync data bar styles with mocks ([c3ba9f9](https://github.com/chanzuckerberg/edu-design-system/commit/c3ba9f9ae1a259f1557f4fdeb2fcc8f95f52d46f))
+* **Menu:** add and test CSS changes ([8177327](https://github.com/chanzuckerberg/edu-design-system/commit/8177327b7cac61bc1dc93089dee465b46ed016aa))
+* **Menu:** sync width of trigger and popover ([0f330d1](https://github.com/chanzuckerberg/edu-design-system/commit/0f330d1f8e9348ff2241daa3acd0211aa8200aae))
+* **renovate:** remove remnant disable ([93375f6](https://github.com/chanzuckerberg/edu-design-system/commit/93375f60a28d1ea5c371bc737e6fdc43f4b60716))
+* respect options props in tests ([162dcbd](https://github.com/chanzuckerberg/edu-design-system/commit/162dcbd909c43eeffcf5486513c1e98954414c56))
+* **style-dictionary:** delete empty object in css-variables-nested ([38e67aa](https://github.com/chanzuckerberg/edu-design-system/commit/38e67aa2590eff5a19929a72e233d2b13a9baa30))
+* update snapshots ([d3701fe](https://github.com/chanzuckerberg/edu-design-system/commit/d3701fec852287ee26780b6026f1f6575c552712))
+
 ## [7.0.0](https://github.com/chanzuckerberg/edu-design-system/compare/v6.0.1...v7.0.0) (2022-11-18)
 
 
