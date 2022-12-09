@@ -22,7 +22,6 @@ import {
   Grid,
 } from '../../../src';
 // Project Overview pilot components -- not yet exported from src/index.ts
-import '../../../src/components/Utilities/Spacing.css';
 import ButtonActionCalloutCard from '../../recipes/ButtonActionCalloutCard';
 
 import { PageShell } from '../../recipes/PageShell/PageShell';

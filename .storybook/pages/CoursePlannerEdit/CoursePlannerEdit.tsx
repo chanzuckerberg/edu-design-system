@@ -25,7 +25,6 @@ import {
 } from '../../../src';
 import type { NewState } from '../../../src/components/DragDrop/DragDrop';
 
-import '../../../src/components/Utilities/Spacing.css';
 import CardWithNotification from '../../recipes/CardWithNotification';
 import TableCard from '../../recipes/TableCard';
 
