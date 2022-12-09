@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [7.1.1](https://github.com/chanzuckerberg/edu-design-system/compare/v7.1.0...v7.1.1) (2022-12-09)
+
+
+### Bug Fixes
+
+* **deploy:** apply workaround for node 18 ([ccb3517](https://github.com/chanzuckerberg/edu-design-system/commit/ccb3517fbad0d4e93507d2512e4eb4f3d6764473))
+
 ## [7.1.0](https://github.com/chanzuckerberg/edu-design-system/compare/v7.0.0...v7.1.0) (2022-12-08)
 
 
