@@ -1,6 +1,6 @@
 {
   "name": "@chanzuckerberg/eds",
-  "version": "7.1.0",
+  "version": "7.1.1",
   "description": "The React-powered design system library for Chan Zuckerberg Initiative education web applications",
   "author": "CZI <edu-frontend-infra@chanzuckerberg.com>",
   "homepage": "https://github.com/chanzuckerberg/edu-design-system",
@@ -35,7 +35,7 @@
     "copy-icons-to-lib": "copyfiles -u 1 src/icons/spritemap/**/* lib",
     "copy-tokens-to-lib": "copyfiles -u 2 src/tokens-dist/**/* lib/tokens",
     "create-component": "plop",
-    "deploy:docs": "storybook-to-ghpages --ci",
+    "deploy:docs": "NODE_OPTIONS=--openssl-legacy-provider storybook-to-ghpages --ci",
     "generate-icon-types": "node ./scripts/generateIconTypes.js",
     "lint": "yarn run lint:styles && yarn run lint:scripts",
     "lint:fix": "yarn run lint:styles:fix && yarn run lint:scripts:fix",
