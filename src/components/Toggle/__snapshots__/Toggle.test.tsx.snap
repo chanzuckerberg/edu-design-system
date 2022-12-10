@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Toggle /> CheckedTrue story renders snapshot 1`] = `
+<div
+  class="toggle__wrapper"
+>
+  <button
+    aria-checked="true"
+    aria-labelledby="headlessui-label-4"
+    class="toggle__button toggle__button--checked"
+    id="headlessui-switch-3"
+    role="switch"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      class="toggle__button-circle"
+    />
+  </button>
+  <label
+    class="toggle__label"
+    id="headlessui-label-4"
+  >
+    Lorem ipsum
+  </label>
+</div>
+`;
+
+exports[`<Toggle /> CustomPositioning story renders snapshot 1`] = `
+<div
+  class="flex flex-col items-center"
+>
+  <label
+    class="toggle__label"
+    id="headlessui-label-8"
+  >
+    Custom positioned label
+  </label>
+  <button
+    aria-checked="false"
+    aria-labelledby="headlessui-label-8"
+    class="toggle__button toggle__button--unchecked"
+    id="headlessui-switch-9"
+    role="switch"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      class="toggle__button-circle"
+    />
+  </button>
+</div>
+`;
+
+exports[`<Toggle /> Default story renders snapshot 1`] = `
+<div
+  class="toggle__wrapper"
+>
+  <button
+    aria-checked="false"
+    aria-labelledby="headlessui-label-2"
+    class="toggle__button toggle__button--unchecked"
+    id="headlessui-switch-1"
+    role="switch"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      class="toggle__button-circle"
+    />
+  </button>
+  <label
+    class="toggle__label"
+    id="headlessui-label-2"
+  >
+    Lorem ipsum
+  </label>
+</div>
+`;
+
+exports[`<Toggle /> Disabled story renders snapshot 1`] = `
+<div
+  class="toggle__wrapper"
+>
+  <button
+    aria-checked="false"
+    aria-labelledby="headlessui-label-6"
+    class="toggle__button toggle__button--unchecked"
+    disabled=""
+    id="headlessui-switch-5"
+    role="switch"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      class="toggle__button-circle"
+    />
+  </button>
+  <label
+    class="toggle__label"
+    id="headlessui-label-6"
+  >
+    Lorem ipsum
+  </label>
+</div>
+`;
+
+exports[`<Toggle /> WithoutLabel story renders snapshot 1`] = `
+<button
+  aria-checked="false"
+  aria-label="Lorem ipsum"
+  class="toggle__button toggle__button--unchecked"
+  id="headlessui-switch-7"
+  role="switch"
+  tabindex="0"
+  type="button"
+>
+  <span
+    class="toggle__button-circle"
+  />
+</button>
+`;

@@ -1,45 +1,85 @@
+@import '../../design-tokens/mixins.css';
+
 .toggle__button {
-  @apply relative inline-flex h-6 w-12 shrink-0 items-center rounded-full;
-  @apply transition-colors duration-200 ease-out motion-reduce:transition-none;
-}
+  border: 0;
+  padding: 0;
 
-.toggle__button:disabled {
-  @apply bg-neutral-300;
-}
+  position: relative;
+  display: inline-flex;
 
-.toggle__button:disabled ~ .toggle__label {
-  @apply text-neutral-300;
+  height: var(--eds-size-3);
+  width: var(--eds-size-6);
+
+  flex-shrink: 0;
+  align-items: center;
+
+  border-radius: var(--eds-border-radius-full);
+
+  cursor: pointer;
+
+  transition: background-color var(--eds-anim-move-quick) var(--eds-anim-ease);
+
+  @media screen and (prefers-reduced-motion) {
+    transition: none;
+  }
 }
 
 .toggle__button:focus {
-  @apply outline-none ring ring-info-400;
+  @mixin focus;
 }
 
 .toggle__button--unchecked {
-  @apply bg-neutral-500;
+  background-color: var(--eds-theme-color-icon-neutral-subtle);
 }
 
 .toggle__button--checked {
-  @apply bg-brand-grape-600;
+  background-color: var(--eds-theme-color-icon-brand-primary);
+}
+
+.toggle__button:disabled {
+  background-color: var(--eds-theme-color-icon-disabled);
+  cursor: not-allowed;
+}
+
+.toggle__button:disabled ~ .toggle__label {
+  color: var(--eds-theme-color-text-disabled);
 }
 
 .toggle__label {
-  @apply mb-0 flex items-center text-body text-neutral-black;
+  margin-bottom: 0;
+
+  color: var(--eds-theme-color-text-neutral-default);
+  @mixin eds-theme-typography-body-text-md;
 }
 
 .toggle__wrapper {
-  @apply flex items-center gap-2;
+  display: flex;
+  align-items: center;
+
+  gap: var(--eds-size-1);
 }
 
 .toggle__button-circle {
-  @apply inline-block h-5 w-5 transform rounded-full bg-neutral-white;
-  @apply transition-transform duration-200 ease-out motion-reduce:transition-none;
+  display: inline-block;
+
+  height: var(--eds-size-2-and-half);
+  width: var(--eds-size-2-and-half);
+
+  border-radius: var(--eds-border-radius-round);
+
+  background-color: var(--eds-theme-color-text-neutral-default-inverse);
+
+  transition: transform var(--eds-anim-move-quick) var(--eds-anim-ease);
+
+  @media screen and (prefers-reduced-motion) {
+    transition: none;
+  }
 }
 
 .toggle__button--unchecked > .toggle__button-circle {
-  @apply translate-x-0.5;
+  transform: translateX(0.125rem);
 }
 
 .toggle__button--checked > .toggle__button-circle {
-  @apply translate-x-[1.625rem];
+  transform: translateX(1.625rem);
 }

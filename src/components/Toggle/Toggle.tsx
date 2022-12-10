@@ -51,7 +51,7 @@ type ToggleProps = ToggleButtonProps & {
 };
 
 const ToggleLabel = ({ children, className }: ToggleLabelProps) => {
-  const componentClassName = (styles['toggle__label'], className);
+  const componentClassName = clsx(styles['toggle__label'], className);
   return <Switch.Label className={componentClassName}>{children}</Switch.Label>;
 };
 
@@ -75,14 +75,11 @@ const ToggleButton = ({ className, checked, ...other }: ToggleButtonProps) => (
 const ToggleWrapper = Switch.Group;
 
 /**
- * ```ts
- * import Toggle from 'v2/core/EDSCandidates/Toggle';
- * ```
- * ```ts
- * import {ToggleWrapper, ToggleLabel, ToggleButton} from 'v2/core/EDSCandidates/Toggle';
- * ```
+ * BETA: This component is still a work in progress and is subject to change.
  *
- * Toggle wrapping the Headless UI Switch component https://headlessui.dev/react/switch
+ * `import {Toggle} from "@chanzuckerberg/eds";`
+ *
+ * Toggle wrapping the Headless UI Switch component https://headlessui.dev/react/switch, generally used as an input for controlling between two states.
  *
  *
  * @example
@@ -107,7 +104,7 @@ export const Toggle = ({ label, ...other }: ToggleProps) => {
 
   return label ? (
     <ToggleWrapper as="div" className={styles['toggle__wrapper']}>
-      <Toggle.Button {...other} />
+      <ToggleButton {...other} />
       <ToggleLabel>{label}</ToggleLabel>
     </ToggleWrapper>
   ) : (
