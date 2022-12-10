@@ -72,20 +72,20 @@ export class Tier1TypographyPresets extends Component {
         <Grid key={`tier-1-typography-preset-${index}`}>
           <TokenSpecimen
             name={`eds-typography-preset-${preset}`}
-            specimenClassName={styles[`u-typography-preset-${preset}`]}
+            specimenClassName={styles[`typography-presets--${preset}`]}
             {...commonProps}
           />
           {lightVariant && (
             <TokenSpecimen
               name={`eds-typography-preset-${preset}-light`}
-              specimenClassName={styles[`u-typography-preset-${preset}-light`]}
+              specimenClassName={styles[`typography-presets--${preset}-light`]}
               {...commonProps}
             />
           )}
           {boldVariant && (
             <TokenSpecimen
               name={`eds-typography-preset-${preset}-bold`}
-              specimenClassName={styles[`u-typography-preset-${preset}-bold`]}
+              specimenClassName={styles[`typography-presets--${preset}-bold`]}
               {...commonProps}
             />
           )}

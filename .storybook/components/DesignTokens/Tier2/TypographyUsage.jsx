@@ -18,7 +18,7 @@ export class Tier2TypographyUsage extends Component {
         <TokenSpecimen
           comment={`Ref: preset-${preset}`}
           name={name}
-          specimenClassName={styles[`u-theme-typography-${size}`]}
+          specimenClassName={styles[`typography-usage--${size}`]}
           value={`${fontSize} / ${lineHeight}`}
           variant="typography-body"
         />
