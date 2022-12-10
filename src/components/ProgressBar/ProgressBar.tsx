@@ -13,22 +13,22 @@ export type Props = {
    */
   caption?: string;
   /**
+   * The current amount of progress that has been made.
+   */
+  currentValue: number;
+  /**
    * Label associated with naming the progress bar.
    */
   label: string;
   /**
-   * Max value to be represented by the progress bar.
+   * Max possible value to be represented by the progress bar.
    */
-  max: number;
+  maxValue: number;
   /**
-   * The amount of segments to be represented by the progress bar.
-   * Recommended max number of segments is 10.
+   * The amount of segments that make up the progress made.
+   * Defaults to 1 and recommended max number of segments is 10.
    */
-  segmentCount: number;
-  /**
-   * The value that each segment represents.
-   */
-  segmentValue: number;
+  totalSegments?: number;
 };
 
 /**
@@ -42,33 +42,31 @@ export const ProgressBar = ({
   caption,
   className,
   label,
-  segmentCount,
-  segmentValue,
-  max,
+  currentValue,
+  maxValue,
+  totalSegments = 1,
   ...other
 }: Props) => {
-  // Creates an array of length segmentCount and fills them with styled divs to represent the segments.
-  const segments = segmentCount
-    ? Array.from({ length: segmentCount }, (_, index) => {
-        // Calculates the segment width to prevent jumping once progress bar is full.
-        // Creates a percentage for the segment width and subtracts the space gaps would take via css calc.
-        const segmentsPerFullBar = Math.ceil(max / segmentValue);
-        const gapMultiplier = (segmentsPerFullBar - 1) / segmentsPerFullBar;
-        const segmentWidthBeforeGap = (segmentValue / max) * 100;
-        const segmentWidth = `calc(${segmentWidthBeforeGap}% - var(--eds-size-half) * ${gapMultiplier})`;
+  // Creates list of segment divs depending on the number of totalSegments.
+  const segments = Array.from({ length: totalSegments }, (_, index) => (
+    <div
+      className={styles['progress-bar__segment']}
+      key={'progress-bar__segment-' + index}
+    />
+  ));
 
-        return (
-          <div
-            className={styles['progress-bar__segment']}
-            key={'progress-bar__segment-' + index}
-            style={{ width: segmentWidth }}
-          />
-        );
-      })
-    : undefined;
+  // Creates a div to represent progress made with width currentProgress over maxProgress as a percent.
+  // It is the parent to the segments.
+  const segmentsWrapper = (
+    <div
+      className={styles['progress-bar__segments-wrapper']}
+      style={{ width: (currentValue / maxValue) * 100 + '%' }}
+    >
+      {segments}
+    </div>
+  );
 
-  const totalSegmentValue = segmentCount * segmentValue;
-  const progressBarCaption = caption || totalSegmentValue + '/' + max;
+  const progressBarCaption = caption || currentValue + '/' + maxValue;
 
   const labelId = useUID();
   const captionId = useUID();
@@ -86,13 +84,13 @@ export const ProgressBar = ({
       <div
         aria-describedby={captionId}
         aria-labelledby={labelId}
-        aria-valuemax={max}
-        aria-valuenow={totalSegmentValue}
+        aria-valuemax={maxValue}
+        aria-valuenow={currentValue}
         className={styles['progress-bar']}
         // INFO: All descendants of role="progressbar" are presentational
         role="progressbar"
       >
-        {segments}
+        {segmentsWrapper}
       </div>
     </div>
   );

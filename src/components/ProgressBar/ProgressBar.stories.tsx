@@ -2,17 +2,14 @@ import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 import { ProgressBar } from './ProgressBar';
-import Button from '../Button';
-import ButtonGroup from '../ButtonGroup';
 
 export default {
   title: 'Molecules/Progress/ProgressBar',
   component: ProgressBar,
   args: {
     label: 'Progress Bar Label',
-    max: 100,
-    segmentCount: 2,
-    segmentValue: 10,
+    currentValue: 20,
+    maxValue: 100,
   },
   parameters: {
     badges: [BADGE.BETA],
@@ -30,15 +27,21 @@ type Args = React.ComponentProps<typeof ProgressBar>;
 
 export const Default: StoryObj<Args> = {};
 
+export const Empty: StoryObj<Args> = {
+  args: {
+    currentValue: 0,
+  },
+};
+
 export const WithCustomCaption: StoryObj<Args> = {
   args: {
     caption: '20 %',
   },
 };
 
-export const Empty: StoryObj<Args> = {
+export const TwoSegments: StoryObj<Args> = {
   args: {
-    segmentCount: 0,
+    totalSegments: 2,
   },
 };
 
@@ -46,76 +49,62 @@ export const Complete: StoryObj<Args> = {
   render: () => (
     <div>
       <ProgressBar
+        currentValue={100}
         label="Progress Bar Label"
-        max={100}
-        segmentCount={10}
-        segmentValue={10}
+        maxValue={100}
       />
       <ProgressBar
+        currentValue={100}
         label="Progress Bar Label"
-        max={100}
-        segmentCount={1}
-        segmentValue={100}
+        maxValue={100}
+        totalSegments={4}
       />
     </div>
   ),
 };
 
 const InteractiveProgressBar = () => {
-  const [segmentValue, setSegmentValue] = React.useState(1);
-  const [max, setMax] = React.useState(10);
-  const [count, setCount] = React.useState(0);
-  const increase = () => {
-    if (count < 10) {
-      setCount(count + 1);
-    }
-  };
-  const decrease = () => {
-    if (count > 0) {
-      setCount(count - 1);
-    }
-  };
+  const [currentValue, setCurrentValue] = React.useState(1);
+  const [maxValue, setMaxValue] = React.useState(10);
+  const [totalSegments, setTotalSegments] = React.useState(0);
   return (
     <div>
       <ProgressBar
+        currentValue={currentValue}
         label="Interactive progress bar"
-        max={max}
-        segmentCount={count}
-        segmentValue={segmentValue}
+        maxValue={maxValue}
+        totalSegments={totalSegments}
       />
       <br />
-      <label htmlFor="segment-value-input">Segment value: </label>
+      <label htmlFor="segment-value-input">Current value: </label>
       <input
         id="segment-value-input"
         onChange={(e) => {
-          setCount(0);
-          setSegmentValue(Number(e?.target?.value));
+          setCurrentValue(Number(e?.target?.value));
         }}
-        value={segmentValue}
+        value={currentValue}
       ></input>
       <br />
       <label htmlFor="max-input">Max value: </label>
       <input
         id="max-input"
         onChange={(e) => {
-          setCount(0);
-          setMax(Number(e?.target?.value));
+          setMaxValue(Number(e?.target?.value));
         }}
-        value={max}
+        value={maxValue}
       ></input>
       <br />
-      <ButtonGroup>
-        {count > 0 && (
-          <Button onClick={decrease} variant="primary">
-            Decrease Segment Count
-          </Button>
-        )}
-        {count < 10 && (
-          <Button onClick={increase} variant="secondary">
-            Increase Segment Count
-          </Button>
-        )}
-      </ButtonGroup>
+      <label htmlFor="max-input">Total number of segments: </label>
+      <input
+        id="max-input"
+        max={10}
+        min={0}
+        onChange={(e) => {
+          setTotalSegments(Number(e?.target?.value));
+        }}
+        type="number"
+        value={totalSegments}
+      ></input>
     </div>
   );
 };

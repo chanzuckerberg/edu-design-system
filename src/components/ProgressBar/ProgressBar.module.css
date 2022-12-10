@@ -8,9 +8,6 @@
  * Progress Bar indicates the completion progress of a task.
  */
 .progress-bar {
-  display: flex;
-  gap: var(--eds-size-half);
-
   border: var(--eds-theme-color-border-neutral-subtle) solid
     var(--eds-border-width-sm);
   border-radius: var(--eds-border-radius-full);
@@ -24,9 +21,21 @@
 }
 
 /**
+ * Wraps all the segments and divides them evenly using flex.
+ * Has an inline style width proportionate to progress made over total progress possible.
+ */
+.progress-bar__segments-wrapper {
+  display: flex;
+  gap: var(--eds-size-half);
+
+  height: 100%;
+}
+
+/**
  * Progress bar segment indicating progress of a subtask.
  */
 .progress-bar__segment {
+  flex: 1;
   background-color: var(--eds-theme-color-background-brand-primary-strong);
 }
 
