@@ -16,9 +16,11 @@ npm install --save @chanzuckerberg/eds
 yarn add @chanzuckerberg/eds
 ```
 
-Import the CSS tokens somewhere in your app, e.g. an `init.ts` or `app.ts` file:
+Import the CSS stylesheet and tokens somewhere in your app, e.g. an `init.ts` or `app.ts` file:
 
 ```js
+import '@chanzuckerberg/eds/lib/index.css';
+
 import '@chanzuckerberg/eds/lib/tokens/css/variables.css';
 // optionally import EDS font faces
 // import '@chanzuckerberg/eds/lib/tokens/fonts.css';
