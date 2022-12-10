@@ -94,9 +94,9 @@ const InteractiveProgressBar = () => {
         value={maxValue}
       ></input>
       <br />
-      <label htmlFor="max-input">Total number of segments: </label>
+      <label htmlFor="total-segments-input">Total number of segments: </label>
       <input
-        id="max-input"
+        id="total-segments-input"
         max={10}
         min={0}
         onChange={(e) => {
