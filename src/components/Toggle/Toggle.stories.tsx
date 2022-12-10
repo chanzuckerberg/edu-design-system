@@ -19,7 +19,7 @@ const InteractiveToggle = ({ checked = false, onChange, ...other }: Args) => {
 };
 
 export default {
-  title: 'PleaseUpdateThisToADifferentFolder/Toggle',
+  title: 'Organisms/Interactive/Toggle',
   component: Toggle,
   args: {
     label: 'Lorem ipsum',
