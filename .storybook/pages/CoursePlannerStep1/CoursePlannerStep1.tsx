@@ -18,8 +18,6 @@ import {
   TextField,
 } from '../../../src';
 
-import '../../../src/components/Utilities/Spacing.css';
-import '../../../src/components/Utilities/TypographyUsage.css';
 import CompassCenter from '../../static/compass-center.svg';
 
 export const CoursePlannerStep1 = () => {
