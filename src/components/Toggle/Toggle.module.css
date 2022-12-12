@@ -8,7 +8,7 @@
   display: inline-flex;
 
   height: var(--eds-size-3);
-  width: var(--eds-size-6);
+  width: var(--eds-size-7);
 
   flex-shrink: 0;
   align-items: center;
@@ -33,7 +33,7 @@
 }
 
 .toggle__button--checked {
-  background-color: var(--eds-theme-color-icon-brand-primary);
+  background-color: var(--eds-theme-color-icon-link-default);
 }
 
 .toggle__button:disabled {
@@ -82,5 +82,5 @@
 }
 
 .toggle__button--checked > .toggle__button-circle {
-  transform: translateX(1.5625rem);
+  transform: translateX(2.0625rem);
 }
