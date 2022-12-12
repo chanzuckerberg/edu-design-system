@@ -1,105 +1,105 @@
-@import '../../design-tokens/mixins.css';
+@import '../../../../src/design-tokens/mixins.css';
 
 /*------------------------------------*\
-  # TYPOGRAPHY USAGE UTILITY CLASSES
+  # TYPOGRAPHY USAGE
 \*------------------------------------*/
 
 /**
- *  Utility classes to apply typography usage mixins to elements
+ *  Use typography mixins to display the type ramp
  */
 
-.u-theme-typography-headline-lg {
+.typography-usage--headline-lg {
   @mixin eds-typography-preset-001-bold;
 }
 
-.u-theme-typography-headline-md {
+.typography-usage--headline-md {
   @mixin eds-typography-preset-002-bold;
 }
 
-.u-theme-typography-headline-sm {
+.typography-usage--headline-sm {
   @mixin eds-typography-preset-003-bold;
 }
 
-.u-theme-typography-title-md {
+.typography-usage--title-md {
   @mixin eds-typography-preset-004-bold;
 }
 
-.u-theme-typography-title-sm {
+.typography-usage--title-sm {
   @mixin eds-typography-preset-005-bold;
 }
 
-.u-theme-typography-title-xs {
+.typography-usage--title-xs {
   @mixin eds-typography-preset-007-bold;
 }
 
-.u-theme-typography-label-lg-subtle {
+.typography-usage--label-lg-subtle {
   @mixin eds-typography-preset-005;
 }
 
-.u-theme-typography-label-md-subtle {
+.typography-usage--label-md-subtle {
   @mixin eds-typography-preset-007;
 }
 
-.u-theme-typography-label-md {
+.typography-usage--label-md {
   @mixin eds-typography-preset-007-bold;
 }
 
-.u-theme-typography-label-sm {
+.typography-usage--label-sm {
   @mixin eds-typography-preset-009-bold;
 }
 
-.u-theme-typography-body-text-lg {
+.typography-usage--body-text-lg {
   @mixin eds-typography-preset-004;
 }
 
-.u-theme-typography-body-text-md {
+.typography-usage--body-text-md {
   @mixin eds-typography-preset-005-light;
 }
 
-.u-theme-typography-body-text-sm {
+.typography-usage--body-text-sm {
   @mixin eds-typography-preset-006;
 }
 
-.u-theme-typography-body-text-xs {
+.typography-usage--body-text-xs {
   @mixin eds-typography-preset-008;
 }
 
-.u-theme-typography-caption-text-lg {
+.typography-usage--caption-text-lg {
   @mixin eds-typography-preset-006;
 }
 
-.u-theme-typography-caption-text-md {
+.typography-usage--caption-text-md {
   @mixin eds-typography-preset-008;
 }
 
-.u-theme-typography-caption-text-sm {
+.typography-usage--caption-text-sm {
   @mixin eds-typography-preset-010;
 }
 
-.u-theme-typography-button-label {
+.typography-usage--button-label {
   @mixin eds-typography-preset-006-bold;
 }
 
-.u-theme-typography-form-label {
+.typography-usage--form-label {
   @mixin eds-typography-preset-006-bold;
 }
 
-.u-theme-typography-form-input {
+.typography-usage--form-input {
   @mixin eds-typography-preset-005;
 }
 
-.u-theme-typography-overline {
+.typography-usage--overline {
   @mixin eds-typography-preset-011-bold;
 }
 
-.u-theme-typography-overline-sm {
+.typography-usage--overline-sm {
   @mixin eds-typography-preset-012-bold;
 }
 
-.u-theme-typography-tag {
+.typography-usage--tag {
   @mixin eds-typography-preset-009-bold;
 }
-.u-theme-typography-callout {
+.typography-usage--callout {
   @mixin eds-typography-preset-002-light;
 }
 
@@ -111,69 +111,69 @@
 /**
  * Body text bold
  */
-.u-theme-typography-body-text-bold {
+.typography-usage--body-text-bold {
   @mixin eds-theme-typography-body-text-md;
 }
 
 /**
  *  Body text sm bold
  */
-.u-theme-typography-body-text-sm-bold {
+.typography-usage--body-text-sm-bold {
   @mixin eds-theme-typography-body-text-sm;
 }
 
 /**
  *  Body text xs bold
  */
-.u-theme-typography-body-text-xs-bold {
+.typography-usage--body-text-xs-bold {
   @mixin eds-theme-typography-body-text-xs-bold;
 }
 
 /**
  *  Body text lg bold
  */
-.u-theme-typography-body-text-lg-bold {
+.typography-usage--body-text-lg-bold {
   @mixin eds-theme-typography-body-text-lg-bold;
 }
 
 /**
  * Heading 1
  */
-.u-theme-typography-heading-1 {
+.typography-usage--heading-1 {
   @mixin eds-theme-typography-heading-1;
 }
 
 /**
  * Heading 2
  */
-.u-theme-typography-heading-2 {
+.typography-usage--heading-2 {
   @mixin eds-theme-typography-heading-2;
 }
 
 /**
  * Heading 3
  */
-.u-theme-typography-heading-3 {
+.typography-usage--heading-3 {
   @mixin eds-theme-typography-heading-3;
 }
 
 /**
  * Heading 4
  */
-.u-theme-typography-heading-4 {
+.typography-usage--heading-4 {
   @mixin eds-theme-typography-heading-4;
 }
 
 /**
  * Heading 5
  */
-.u-theme-typography-heading-5 {
+.typography-usage--heading-5 {
   @mixin eds-theme-typography-heading-5;
 }
 
 /**
  * Heading 6
  */
-.u-theme-typography-heading-6 {
+.typography-usage--heading-6 {
   @mixin eds-theme-typography-heading-6;
 }
