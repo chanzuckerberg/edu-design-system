@@ -324,10 +324,13 @@ const SelectOption = function (props: SelectOptionProps) {
             return (
               <PopoverListItem
                 active={active}
+                className={styles['select__option-item']}
                 disabled={disabled}
                 icon={selected ? 'check' : undefined}
               >
-                {children}
+                <span className={styles['select__option-text']}>
+                  {children}
+                </span>
               </PopoverListItem>
             );
           }}
