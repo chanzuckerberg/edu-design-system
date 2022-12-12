@@ -37,8 +37,8 @@ module.exports = (plop) => {
       },
       {
         type: 'add',
-        path: 'src/components/{{pascalCase name}}/{{pascalCase name}}.test.tsx',
-        templateFile: 'plop-templates/Component/Component.test.tsx.hbs',
+        path: 'src/components/{{pascalCase name}}/{{pascalCase name}}.test.ts',
+        templateFile: 'plop-templates/Component/Component.test.ts.hbs',
       },
       {
         type: 'add',
@@ -51,7 +51,7 @@ module.exports = (plop) => {
         separator: '',
         path: 'src/index.ts',
         template:
-          'export { default as {{pascalCase name}} } from "./components/{{pascalCase name}}";',
+          "export { default as {{pascalCase name}} } from './components/{{pascalCase name}}';",
       },
       // From https://github.com/bradfrost/czi-vanilla-storybook
       function sortIndex() {

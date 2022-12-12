@@ -3,7 +3,6 @@ import React from 'react';
 
 import { CardWithNotification } from './CardWithNotification';
 import { DataBar } from '../../../src';
-import '../../../src/components/Utilities/Spacing.css';
 
 export default {
   title: 'Recipes/CardWithNotification',
