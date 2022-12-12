@@ -72,6 +72,10 @@ const ToggleButton = ({ className, checked, ...other }: ToggleButtonProps) => (
   </Switch>
 );
 
+/**
+ * In order to use the individual <Toggle.Label> and <Toggle.Button> subcomponents for customization,
+ * they need to be wrapped in this <ToggleWrapper> component for some functionality HeadlessUI provides.
+ */
 const ToggleWrapper = Switch.Group;
 
 /**
@@ -81,19 +85,18 @@ const ToggleWrapper = Switch.Group;
  *
  * Toggle wrapping the Headless UI Switch component https://headlessui.dev/react/switch, generally used as an input for controlling between two states.
  *
+ * Example Usage:
  *
- * @example
+ * ```tsx
  * <Toggle checked={checked} label="Lorem Ipsum" onChange={onChange} />
  *
- * @example
- * <Toggle.Wrapper as="Fragment" className={styles.customWrapperStyles}>
+ * <Toggle.Wrapper as="div" className={styles.customWrapperStyles}>
  *   <Toggle.Label> Some label </Toggle.Label>
  *   <Toggle.Button onChange={onChange} checked={checked} className={customCssModulesClassname} />
  * </Toggle.Wrapper>
- *
+ * ```
  */
 export const Toggle = ({ label, ...other }: ToggleProps) => {
-  // TODO-JL: Consider if (children) return <Switch.Group>{children}</Switch.Group>
   if (
     process.env.NODE_ENV !== 'production' &&
     !label &&
