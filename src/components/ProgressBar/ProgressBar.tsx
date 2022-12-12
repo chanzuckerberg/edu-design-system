@@ -9,7 +9,7 @@ export type Props = {
    */
   className?: string;
   /**
-   * Overrides the default "totalValue / max" in cases where a different caption may be desired.
+   * Overrides the default "currentValue / maxValue" in cases where a different caption may be desired.
    */
   caption?: string;
   /**
