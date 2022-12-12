@@ -1,0 +1,260 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProgressBar /> Complete story renders snapshot 1`] = `
+<div
+  style="background-color: white; padding: 0.5rem;"
+>
+  <div>
+    <div>
+      <div
+        class="progress-bar__label-wrapper"
+      >
+        <label
+          class="progress-bar__label"
+          id="9"
+        >
+          Progress Bar Label
+        </label>
+        <span
+          class="text text--caption"
+          id="10"
+        >
+          100/100
+        </span>
+      </div>
+      <div
+        aria-describedby="10"
+        aria-labelledby="9"
+        aria-valuemax="100"
+        aria-valuenow="100"
+        class="progress-bar"
+        role="progressbar"
+      >
+        <div
+          class="progress-bar__segments-wrapper"
+          style="width: 100%;"
+        >
+          <div
+            class="progress-bar__segment"
+          />
+        </div>
+      </div>
+    </div>
+    <div>
+      <div
+        class="progress-bar__label-wrapper"
+      >
+        <label
+          class="progress-bar__label"
+          id="11"
+        >
+          Progress Bar Label
+        </label>
+        <span
+          class="text text--caption"
+          id="12"
+        >
+          100/100
+        </span>
+      </div>
+      <div
+        aria-describedby="12"
+        aria-labelledby="11"
+        aria-valuemax="100"
+        aria-valuenow="100"
+        class="progress-bar"
+        role="progressbar"
+      >
+        <div
+          class="progress-bar__segments-wrapper"
+          style="width: 100%;"
+        >
+          <div
+            class="progress-bar__segment"
+          />
+          <div
+            class="progress-bar__segment"
+          />
+          <div
+            class="progress-bar__segment"
+          />
+          <div
+            class="progress-bar__segment"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ProgressBar /> Default story renders snapshot 1`] = `
+<div
+  style="background-color: white; padding: 0.5rem;"
+>
+  <div>
+    <div
+      class="progress-bar__label-wrapper"
+    >
+      <label
+        class="progress-bar__label"
+        id="1"
+      >
+        Progress Bar Label
+      </label>
+      <span
+        class="text text--caption"
+        id="2"
+      >
+        20/100
+      </span>
+    </div>
+    <div
+      aria-describedby="2"
+      aria-labelledby="1"
+      aria-valuemax="100"
+      aria-valuenow="20"
+      class="progress-bar"
+      role="progressbar"
+    >
+      <div
+        class="progress-bar__segments-wrapper"
+        style="width: 20%;"
+      >
+        <div
+          class="progress-bar__segment"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ProgressBar /> Empty story renders snapshot 1`] = `
+<div
+  style="background-color: white; padding: 0.5rem;"
+>
+  <div>
+    <div
+      class="progress-bar__label-wrapper"
+    >
+      <label
+        class="progress-bar__label"
+        id="3"
+      >
+        Progress Bar Label
+      </label>
+      <span
+        class="text text--caption"
+        id="4"
+      >
+        0/100
+      </span>
+    </div>
+    <div
+      aria-describedby="4"
+      aria-labelledby="3"
+      aria-valuemax="100"
+      aria-valuenow="0"
+      class="progress-bar"
+      role="progressbar"
+    >
+      <div
+        class="progress-bar__segments-wrapper"
+        style="width: 0%;"
+      >
+        <div
+          class="progress-bar__segment"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ProgressBar /> TwoSegments story renders snapshot 1`] = `
+<div
+  style="background-color: white; padding: 0.5rem;"
+>
+  <div>
+    <div
+      class="progress-bar__label-wrapper"
+    >
+      <label
+        class="progress-bar__label"
+        id="7"
+      >
+        Progress Bar Label
+      </label>
+      <span
+        class="text text--caption"
+        id="8"
+      >
+        20/100
+      </span>
+    </div>
+    <div
+      aria-describedby="8"
+      aria-labelledby="7"
+      aria-valuemax="100"
+      aria-valuenow="20"
+      class="progress-bar"
+      role="progressbar"
+    >
+      <div
+        class="progress-bar__segments-wrapper"
+        style="width: 20%;"
+      >
+        <div
+          class="progress-bar__segment"
+        />
+        <div
+          class="progress-bar__segment"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ProgressBar /> WithCustomCaption story renders snapshot 1`] = `
+<div
+  style="background-color: white; padding: 0.5rem;"
+>
+  <div>
+    <div
+      class="progress-bar__label-wrapper"
+    >
+      <label
+        class="progress-bar__label"
+        id="5"
+      >
+        Progress Bar Label
+      </label>
+      <span
+        class="text text--caption"
+        id="6"
+      >
+        20 %
+      </span>
+    </div>
+    <div
+      aria-describedby="6"
+      aria-labelledby="5"
+      aria-valuemax="100"
+      aria-valuenow="20"
+      class="progress-bar"
+      role="progressbar"
+    >
+      <div
+        class="progress-bar__segments-wrapper"
+        style="width: 20%;"
+      >
+        <div
+          class="progress-bar__segment"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
