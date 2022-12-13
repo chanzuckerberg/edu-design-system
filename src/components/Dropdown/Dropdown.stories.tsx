@@ -73,7 +73,7 @@ function InteractiveExampleUsingSeparateProps(props: Props) {
         options={exampleOptions}
         optionsAlign={optionsAlign}
         optionsClassName={optionsClassName}
-        value={selectedOption?.label || null}
+        value={selectedOption}
         variant={variant}
         {...props}
       />
