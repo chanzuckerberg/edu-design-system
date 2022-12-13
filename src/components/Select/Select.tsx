@@ -166,6 +166,7 @@ export function Select(props: SelectProps) {
     className,
     children,
     'aria-label': ariaLabel,
+    // Defaulting to null is required to explicitly state that this component is controlled, and prevents warning from Headless
     value = null,
     variant,
     optionsAlign,
