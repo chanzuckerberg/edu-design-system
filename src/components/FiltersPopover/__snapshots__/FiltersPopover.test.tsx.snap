@@ -1,13 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Filters /> Default story renders snapshot 1`] = `
-<div>
+<div
+  data-headlessui-state="open"
+>
   <button
-    aria-controls="headlessui-popover-panel-5"
+    aria-controls="headlessui-popover-panel-3"
     aria-expanded="true"
     class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary filters-button"
     data-bootstrap-override="clickable-style-secondary"
-    id="headlessui-popover-button-4"
+    data-headlessui-state="open"
+    id="headlessui-popover-button-1"
     type="button"
   >
     <svg
@@ -27,10 +30,11 @@ exports[`<Filters /> Default story renders snapshot 1`] = `
   </button>
   <article
     class="popover-content"
+    data-headlessui-state="open"
     data-popper-escaped="true"
     data-popper-placement="bottom-start"
     data-popper-reference-hidden="true"
-    id="headlessui-popover-panel-5"
+    id="headlessui-popover-panel-3"
     style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 10px);"
     tabindex="-1"
   >
@@ -161,12 +165,15 @@ exports[`<Filters /> Default story renders snapshot 1`] = `
 `;
 
 exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
-<div>
+<div
+  data-headlessui-state="open"
+>
   <button
-    aria-controls="headlessui-popover-panel-17"
+    aria-controls="headlessui-popover-panel-18"
     aria-expanded="true"
     class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary filters-button"
     data-bootstrap-override="clickable-style-secondary"
+    data-headlessui-state="open"
     id="headlessui-popover-button-16"
     type="button"
   >
@@ -187,10 +194,11 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
   </button>
   <article
     class="popover-content"
+    data-headlessui-state="open"
     data-popper-escaped="true"
     data-popper-placement="bottom-start"
     data-popper-reference-hidden="true"
-    id="headlessui-popover-panel-17"
+    id="headlessui-popover-panel-18"
     style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 10px);"
     tabindex="-1"
   >
@@ -791,12 +799,15 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
 `;
 
 exports[`<Filters /> WithOnApplyAndCustomButtonGroup story renders snapshot 1`] = `
-<div>
+<div
+  data-headlessui-state="open"
+>
   <button
-    aria-controls="headlessui-popover-panel-12"
+    aria-controls="headlessui-popover-panel-13"
     aria-expanded="true"
     class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary filters-button"
     data-bootstrap-override="clickable-style-secondary"
+    data-headlessui-state="open"
     id="headlessui-popover-button-11"
     type="button"
   >
@@ -817,10 +828,11 @@ exports[`<Filters /> WithOnApplyAndCustomButtonGroup story renders snapshot 1`] 
   </button>
   <article
     class="popover-content"
+    data-headlessui-state="open"
     data-popper-escaped="true"
     data-popper-placement="bottom-start"
     data-popper-reference-hidden="true"
-    id="headlessui-popover-panel-12"
+    id="headlessui-popover-panel-13"
     style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 10px);"
     tabindex="-1"
   >
@@ -962,12 +974,15 @@ exports[`<Filters /> WithOnApplyAndCustomButtonGroup story renders snapshot 1`] 
 `;
 
 exports[`<Filters /> WithOnClear story renders snapshot 1`] = `
-<div>
+<div
+  data-headlessui-state="open"
+>
   <button
-    aria-controls="headlessui-popover-panel-7"
+    aria-controls="headlessui-popover-panel-8"
     aria-expanded="true"
     class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary filters-button"
     data-bootstrap-override="clickable-style-secondary"
+    data-headlessui-state="open"
     id="headlessui-popover-button-6"
     type="button"
   >
@@ -988,10 +1003,11 @@ exports[`<Filters /> WithOnClear story renders snapshot 1`] = `
   </button>
   <article
     class="popover-content"
+    data-headlessui-state="open"
     data-popper-escaped="true"
     data-popper-placement="bottom-start"
     data-popper-reference-hidden="true"
-    id="headlessui-popover-panel-7"
+    id="headlessui-popover-panel-8"
     style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 10px);"
     tabindex="-1"
   >

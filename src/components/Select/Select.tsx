@@ -166,6 +166,7 @@ export function Select(props: SelectProps) {
     className,
     children,
     'aria-label': ariaLabel,
+    value = null,
     variant,
     optionsAlign,
     optionsClassName,
@@ -192,6 +193,7 @@ export function Select(props: SelectProps) {
     // passed directly to this component have a corresponding DOM element to receive them.
     // Otherwise we get an error.
     as: 'div' as const,
+    value,
     ...other,
   };
 
