@@ -884,6 +884,7 @@ exports[`<Dropdown /> renders the OpenByDefault story 1`] = `
     </svg>
   </button>
   <ul
+    aria-activedescendant="headlessui-listbox-option-61"
     aria-labelledby="headlessui-listbox-label-54"
     aria-orientation="vertical"
     class="dropdown__options dropdown__options--full-width"
@@ -907,13 +908,30 @@ exports[`<Dropdown /> renders the OpenByDefault story 1`] = `
       </span>
     </li>
     <li
-      aria-selected="false"
-      class="dropdown__option"
-      data-headlessui-state=""
+      aria-selected="true"
+      class="dropdown__option dropdown__option--active dropdown__option--selected"
+      data-headlessui-state="active selected"
       id="headlessui-listbox-option-61"
       role="option"
       tabindex="-1"
     >
+      <span
+        class="selected-icon__container"
+      >
+        <svg
+          aria-hidden="true"
+          class="icon"
+          fill="currentColor"
+          height="1.25rem"
+          style="--icon-size: 1.25rem;"
+          width="1.25rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="test-file-stub#check"
+          />
+        </svg>
+      </span>
       <span
         class="option__content"
       >
