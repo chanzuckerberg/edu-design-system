@@ -99,7 +99,7 @@
     "@chanzuckerberg/eslint-config-edu-js": "^1.0.2",
     "@chanzuckerberg/eslint-config-edu-ts": "^1.0.4",
     "@chanzuckerberg/eslint-plugin-edu-react": "^1.1.7",
-    "@chanzuckerberg/eslint-plugin-stories": "^3.2.7",
+    "@chanzuckerberg/eslint-plugin-stories": "^3.2.2",
     "@chanzuckerberg/story-utils": "^3.0.10",
     "@commitlint/cli": "^16.3.0",
     "@commitlint/config-conventional": "^16.2.4",

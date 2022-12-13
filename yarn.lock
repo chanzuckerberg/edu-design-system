@@ -1987,7 +1987,7 @@ __metadata:
     "@chanzuckerberg/eslint-config-edu-js": ^1.0.2
     "@chanzuckerberg/eslint-config-edu-ts": ^1.0.4
     "@chanzuckerberg/eslint-plugin-edu-react": ^1.1.7
-    "@chanzuckerberg/eslint-plugin-stories": ^3.2.7
+    "@chanzuckerberg/eslint-plugin-stories": ^3.2.2
     "@chanzuckerberg/story-utils": ^3.0.10
     "@commitlint/cli": ^16.3.0
     "@commitlint/config-conventional": ^16.2.4
@@ -2112,10 +2112,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@chanzuckerberg/eslint-plugin-stories@npm:^3.2.7":
-  version: 3.2.7
-  resolution: "@chanzuckerberg/eslint-plugin-stories@npm:3.2.7"
-  checksum: 3b17ebdfcba22e52f34260d814b2cec3a881de3bd7ccf0280bf61ad5e74750d2268d28779d77c89a96a1040b73a2b83e7dd3488c9dfc11d42bb7040fa6a7fe20
+"@chanzuckerberg/eslint-plugin-stories@npm:^3.2.2":
+  version: 3.2.2
+  resolution: "@chanzuckerberg/eslint-plugin-stories@npm:3.2.2"
+  checksum: f212df21b69f8b02c48a09ff5b10ba76b0464e6f5a82d6279400f26bde1e1fd1d3484fa4e27c70a037697793916893dc483cdba10cb12f531b6b4868f7a8a447
   languageName: node
   linkType: hard
 
