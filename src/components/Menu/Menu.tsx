@@ -21,6 +21,7 @@ export type MenuProps = ExtractProps<typeof HeadlessMenu> & {
 };
 
 export type MenuItemProps = ExtractProps<typeof HeadlessMenu.Item> & {
+  className?: string;
   href?: string;
   icon?: IconName;
   onClick?: MouseEventHandler<HTMLAnchorElement>;
@@ -60,7 +61,7 @@ const MenuButton = ({ children, className, ...other }: MenuButtonProps) => {
         className={styles['menu__button--icon']}
         name="expand-more"
         purpose="decorative"
-        size="1.5rem"
+        size="1.25rem"
       />
     </HeadlessMenu.Button>
   );
@@ -85,6 +86,7 @@ const MenuItems = (props: MenuItemsProps) => (
  */
 const MenuItem = ({
   children,
+  className,
   href,
   icon,
   onClick,
@@ -96,7 +98,12 @@ const MenuItem = ({
     <HeadlessMenu.Item {...other}>
       {({ active, disabled }) => {
         const listItemView = (
-          <PopoverListItem active={active} disabled={disabled} icon={icon}>
+          <PopoverListItem
+            active={active}
+            className={className}
+            disabled={disabled}
+            icon={icon}
+          >
             {children}
           </PopoverListItem>
         );

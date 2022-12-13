@@ -1,3 +1,5 @@
+@import '../../design-tokens/mixins.css';
+
 /*------------------------------------*\
  # POPOVER CONTAINER
 \*------------------------------------*/
@@ -10,4 +12,8 @@
   overflow: auto;
   box-shadow: var(--eds-box-shadow-md);
   background-color: var(--eds-theme-color-background-neutral-default);
+
+  &:focus-visible {
+    @mixin focus;
+  }
 }

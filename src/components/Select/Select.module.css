@@ -39,10 +39,6 @@
   max-width: var(--eds-l-max-width);
   position: absolute;
   z-index: var(--eds-z-index-100);
-
-  &:focus-visible {
-    @mixin focus;
-  }
 }
 
 .select__options--compact {
@@ -64,33 +60,43 @@
   right: 0;
 }
 
+.select__option-text {
+  color: var(--eds-theme-color-text-neutral-default);
+}
+
+.select__option-item {
+  color: var(--eds-theme-color-icon-brand-primary);
+}
+
 /*------------------------------------*\
-    # DROPDOWN BUTTON
+    # SELECT BUTTON
 \*------------------------------------*/
 
 /**
- * The button to trigger the display of the dropdown.
+ * The button to trigger the display of the select field.
  */
 .select-button {
   @mixin eds-theme-typography-body-text-md;
   /* Allow select component font to shrink in contexts where body font size is smaller. */
   font-size: inherit;
+  color: var(--eds-theme-text-neutral-subtle);
 
+  height: var(--eds-size-5);
   width: 100%;
-  padding: var(--eds-size-1);
+  padding: 0 var(--eds-size-2);
 
-  border: var(--eds-theme-border-width) solid
-    var(--eds-theme-color-border-neutral-strong);
+  border: var(--eds-theme-border-width) solid var(--eds-theme-color-form-border);
   border-radius: var(--eds-border-radius-md);
 
   display: flex;
   /* Place button text on the left and the expand more icon on the right. */
   justify-content: space-between;
   align-items: center;
+  gap: 0.75rem;
 
   cursor: pointer;
 
-  background-color: var(--eds-theme-color-background-neutral-default);
+  background-color: var(--eds-theme-color-form-background);
 
   &:focus-visible {
     @mixin focus;
@@ -100,6 +106,7 @@
 
 .select-button:disabled {
   cursor: not-allowed;
+  color: var(--eds-theme-color-text-disabled);
 }
 
 /**
