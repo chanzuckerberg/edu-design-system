@@ -2,4 +2,4 @@
 # Any line with invalid syntax will invalidate the entire file.
 
 # Frontend infra
-package.json chanzuckerberg/edu-frontend-infra
+package.json @chanzuckerberg/edu-frontend-infra
