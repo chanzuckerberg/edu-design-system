@@ -1,0 +1,5 @@
+# Overview: https://help.github.com/en/github/creating-cloning-and-archiving-repositories/about-code-owners
+# Any line with invalid syntax will invalidate the entire file.
+
+# Frontend infra
+package.json chanzuckerberg/edu-frontend-infra
