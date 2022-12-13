@@ -46,7 +46,7 @@
  * Checked state of the toggle button.
  */
 .toggle__button--checked {
-  background-color: var(--eds-theme-color-icon-link-default);
+  background-color: var(--eds-theme-color-background-brand-primary-strong);
 }
 
 /**
