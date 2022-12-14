@@ -3,6 +3,7 @@ import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
 import { Menu } from './Menu';
+import type { MenuProps } from './Menu';
 
 export default {
   title: 'Organisms/Interactive/Menu',
@@ -16,11 +17,9 @@ export default {
     badges: [BADGE.BETA],
     layout: 'centered',
   },
-} as Meta<Args>;
+} as Meta<MenuProps>;
 
-type Args = React.ComponentProps<typeof Menu>;
-
-export const Default: StoryObj<Args> = {
+export const Default: StoryObj<MenuProps> = {
   render: (args) => (
     <Menu {...args}>
       <Menu.Button>Documentation Links</Menu.Button>
@@ -49,7 +48,7 @@ export const Default: StoryObj<Args> = {
   ),
 };
 
-export const WithLongButtonText: StoryObj<Args> = {
+export const WithLongButtonText: StoryObj<MenuProps> = {
   render: (args) => (
     <Menu {...args}>
       <Menu.Button>
@@ -80,7 +79,7 @@ export const WithLongButtonText: StoryObj<Args> = {
   ),
 };
 
-export const WithShortButtonText: StoryObj<Args> = {
+export const WithShortButtonText: StoryObj<MenuProps> = {
   render: (args) => (
     <Menu {...args}>
       <Menu.Button>Menu</Menu.Button>
