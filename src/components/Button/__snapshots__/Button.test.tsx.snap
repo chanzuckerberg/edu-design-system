@@ -30,10 +30,11 @@ exports[`<Button /> DestructiveLeftIcon story renders snapshot 1`] = `
     aria-hidden="true"
     class="icon"
     fill="currentColor"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <use
-      xlink:href="test-file-stub#arrow-back"
+    <path
+      d="M12 20L4 12L12 4L13.425 5.4L7.825 11H20V13H7.825L13.425 18.6L12 20Z"
     />
   </svg>
   Button
@@ -62,10 +63,11 @@ exports[`<Button /> IconButtonDisabled story renders snapshot 1`] = `
     aria-hidden="true"
     class="icon"
     fill="currentColor"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <use
-      xlink:href="test-file-stub#arrow-back"
+    <path
+      d="M12 20L4 12L12 4L13.425 5.4L7.825 11H20V13H7.825L13.425 18.6L12 20Z"
     />
   </svg>
   Button
@@ -82,6 +84,7 @@ exports[`<Button /> IconButtonIconOnly story renders snapshot 1`] = `
     class="icon"
     fill="currentColor"
     role="img"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
     <title
@@ -89,8 +92,8 @@ exports[`<Button /> IconButtonIconOnly story renders snapshot 1`] = `
     >
       go back
     </title>
-    <use
-      xlink:href="test-file-stub#arrow-back"
+    <path
+      d="M12 20L4 12L12 4L13.425 5.4L7.825 11H20V13H7.825L13.425 18.6L12 20Z"
     />
   </svg>
 </button>
@@ -106,6 +109,7 @@ exports[`<Button /> IconButtonIconOnlySmall story renders snapshot 1`] = `
     class="icon"
     fill="currentColor"
     role="img"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
     <title
@@ -113,8 +117,8 @@ exports[`<Button /> IconButtonIconOnlySmall story renders snapshot 1`] = `
     >
       go back
     </title>
-    <use
-      xlink:href="test-file-stub#arrow-back"
+    <path
+      d="M12 20L4 12L12 4L13.425 5.4L7.825 11H20V13H7.825L13.425 18.6L12 20Z"
     />
   </svg>
 </button>
@@ -130,10 +134,11 @@ exports[`<Button /> IconButtonLeftIcon story renders snapshot 1`] = `
     aria-hidden="true"
     class="icon"
     fill="currentColor"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <use
-      xlink:href="test-file-stub#arrow-back"
+    <path
+      d="M12 20L4 12L12 4L13.425 5.4L7.825 11H20V13H7.825L13.425 18.6L12 20Z"
     />
   </svg>
   Button
@@ -150,10 +155,11 @@ exports[`<Button /> IconButtonLeftIconSmall story renders snapshot 1`] = `
     aria-hidden="true"
     class="icon"
     fill="currentColor"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <use
-      xlink:href="test-file-stub#arrow-back"
+    <path
+      d="M12 20L4 12L12 4L13.425 5.4L7.825 11H20V13H7.825L13.425 18.6L12 20Z"
     />
   </svg>
   Button
@@ -171,10 +177,11 @@ exports[`<Button /> IconButtonRightIcon story renders snapshot 1`] = `
     aria-hidden="true"
     class="icon"
     fill="currentColor"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <use
-      xlink:href="test-file-stub#arrow-forward"
+    <path
+      d="M12 20L10.575 18.6L16.175 13H4V11H16.175L10.575 5.4L12 4L20 12L12 20Z"
     />
   </svg>
 </button>
@@ -191,10 +198,11 @@ exports[`<Button /> IconButtonRightIconSmall story renders snapshot 1`] = `
     aria-hidden="true"
     class="icon"
     fill="currentColor"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <use
-      xlink:href="test-file-stub#arrow-forward"
+    <path
+      d="M12 20L10.575 18.6L16.175 13H4V11H16.175L10.575 5.4L12 4L20 12L12 20Z"
     />
   </svg>
 </button>
@@ -211,10 +219,11 @@ exports[`<Button /> IconError story renders snapshot 1`] = `
     aria-hidden="true"
     class="icon"
     fill="currentColor"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <use
-      xlink:href="test-file-stub#arrow-forward"
+    <path
+      d="M12 20L10.575 18.6L16.175 13H4V11H16.175L10.575 5.4L12 4L20 12L12 20Z"
     />
   </svg>
 </button>
@@ -231,10 +240,11 @@ exports[`<Button /> IconNeutral story renders snapshot 1`] = `
     aria-hidden="true"
     class="icon"
     fill="currentColor"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <use
-      xlink:href="test-file-stub#arrow-forward"
+    <path
+      d="M12 20L10.575 18.6L16.175 13H4V11H16.175L10.575 5.4L12 4L20 12L12 20Z"
     />
   </svg>
 </button>
@@ -251,10 +261,11 @@ exports[`<Button /> IconSuccess story renders snapshot 1`] = `
     aria-hidden="true"
     class="icon"
     fill="currentColor"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <use
-      xlink:href="test-file-stub#arrow-forward"
+    <path
+      d="M12 20L10.575 18.6L16.175 13H4V11H16.175L10.575 5.4L12 4L20 12L12 20Z"
     />
   </svg>
 </button>
@@ -271,10 +282,11 @@ exports[`<Button /> IconWarning story renders snapshot 1`] = `
     aria-hidden="true"
     class="icon"
     fill="currentColor"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <use
-      xlink:href="test-file-stub#arrow-forward"
+    <path
+      d="M12 20L10.575 18.6L16.175 13H4V11H16.175L10.575 5.4L12 4L20 12L12 20Z"
     />
   </svg>
 </button>
@@ -323,6 +335,7 @@ exports[`<Button /> LinkRightIcon story renders snapshot 1`] = `
     class="icon"
     fill="currentColor"
     role="img"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
     <title
@@ -330,8 +343,8 @@ exports[`<Button /> LinkRightIcon story renders snapshot 1`] = `
     >
       opens in a new tab
     </title>
-    <use
-      xlink:href="test-file-stub#open-in-new"
+    <path
+      d="M3 21V3H12V5H5V19H19V12H21V21H3ZM9.7 15.7L8.3 14.3L17.6 5H14V3H21V10H19V6.4L9.7 15.7Z"
     />
   </svg>
 </button>
@@ -351,6 +364,7 @@ exports[`<Button /> Loading story renders snapshot 1`] = `
     height="1.5em"
     role="img"
     style="--icon-size: 1.5em;"
+    viewBox="0 0 32 32"
     width="1.5em"
     xmlns="http://www.w3.org/2000/svg"
   >
@@ -359,8 +373,8 @@ exports[`<Button /> Loading story renders snapshot 1`] = `
     >
       loading
     </title>
-    <use
-      xlink:href="test-file-stub#spinner"
+    <path
+      d="M16 31.9995C11.726 31.9995 7.708 30.3355 4.686 27.3135C1.664 24.2915 0 20.2735 0 15.9995C0 12.9735 0.849 10.0265 2.456 7.47752C4.019 4.99952 6.227 2.99752 8.842 1.68652L10.186 4.36852C8.06 5.43352 6.264 7.06152 4.994 9.07652C3.689 11.1455 3 13.5385 3 15.9985C3 23.1665 8.832 28.9985 16 28.9985C23.168 28.9985 29 23.1665 29 15.9985C29 13.5395 28.31 11.1455 27.006 9.07652C25.735 7.06152 23.94 5.43352 21.814 4.36852L23.158 1.68652C25.773 2.99652 27.982 4.99952 29.544 7.47752C31.151 10.0265 32 12.9725 32 15.9995C32 20.2735 30.336 24.2915 27.314 27.3135C24.292 30.3355 20.274 31.9995 16 31.9995Z"
     />
   </svg>
   Button
@@ -399,10 +413,11 @@ exports[`<Button /> PrimaryLeftIcon story renders snapshot 1`] = `
     aria-hidden="true"
     class="icon"
     fill="currentColor"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <use
-      xlink:href="test-file-stub#arrow-back"
+    <path
+      d="M12 20L4 12L12 4L13.425 5.4L7.825 11H20V13H7.825L13.425 18.6L12 20Z"
     />
   </svg>
   Button
@@ -430,10 +445,11 @@ exports[`<Button /> PrimaryRightIcon story renders snapshot 1`] = `
     aria-hidden="true"
     class="icon"
     fill="currentColor"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <use
-      xlink:href="test-file-stub#arrow-forward"
+    <path
+      d="M12 20L10.575 18.6L16.175 13H4V11H16.175L10.575 5.4L12 4L20 12L12 20Z"
     />
   </svg>
 </button>
@@ -481,10 +497,11 @@ exports[`<Button /> SecondaryLeftIcon story renders snapshot 1`] = `
     aria-hidden="true"
     class="icon"
     fill="currentColor"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <use
-      xlink:href="test-file-stub#arrow-back"
+    <path
+      d="M12 20L4 12L12 4L13.425 5.4L7.825 11H20V13H7.825L13.425 18.6L12 20Z"
     />
   </svg>
   Button
@@ -512,10 +529,11 @@ exports[`<Button /> SecondaryRightIcon story renders snapshot 1`] = `
     aria-hidden="true"
     class="icon"
     fill="currentColor"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <use
-      xlink:href="test-file-stub#arrow-forward"
+    <path
+      d="M12 20L10.575 18.6L16.175 13H4V11H16.175L10.575 5.4L12 4L20 12L12 20Z"
     />
   </svg>
 </button>
@@ -583,10 +601,11 @@ exports[`<Button /> TertiaryLeftIcon story renders snapshot 1`] = `
     aria-hidden="true"
     class="icon"
     fill="currentColor"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <use
-      xlink:href="test-file-stub#arrow-back"
+    <path
+      d="M12 20L4 12L12 4L13.425 5.4L7.825 11H20V13H7.825L13.425 18.6L12 20Z"
     />
   </svg>
   Button
@@ -614,10 +633,11 @@ exports[`<Button /> TertiaryRightIcon story renders snapshot 1`] = `
     aria-hidden="true"
     class="icon"
     fill="currentColor"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <use
-      xlink:href="test-file-stub#arrow-forward"
+    <path
+      d="M12 20L10.575 18.6L16.175 13H4V11H16.175L10.575 5.4L12 4L20 12L12 20Z"
     />
   </svg>
 </button>

@@ -15,6 +15,7 @@ exports[`Modal Brand story renders snapshot 1`] = `
       height="1.5rem"
       role="img"
       style="--icon-size: 1.5rem;"
+      viewBox="0 0 24 24"
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -23,8 +24,8 @@ exports[`Modal Brand story renders snapshot 1`] = `
       >
         close modal
       </title>
-      <use
-        xlink:href="test-file-stub#close"
+      <path
+        d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
       />
     </svg>
   </button>
@@ -92,6 +93,7 @@ exports[`Modal Default story renders snapshot 1`] = `
       height="1.5rem"
       role="img"
       style="--icon-size: 1.5rem;"
+      viewBox="0 0 24 24"
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -100,8 +102,8 @@ exports[`Modal Default story renders snapshot 1`] = `
       >
         close modal
       </title>
-      <use
-        xlink:href="test-file-stub#close"
+      <path
+        d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
       />
     </svg>
   </button>
@@ -172,6 +174,7 @@ exports[`Modal DefaultInteractive story renders snapshot 1`] = `
         height="1.5rem"
         role="img"
         style="--icon-size: 1.5rem;"
+        viewBox="0 0 24 24"
         width="1.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -180,8 +183,8 @@ exports[`Modal DefaultInteractive story renders snapshot 1`] = `
         >
           close modal
         </title>
-        <use
-          xlink:href="test-file-stub#close"
+        <path
+          d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
         />
       </svg>
     </button>
@@ -242,6 +245,7 @@ exports[`Modal Medium story renders snapshot 1`] = `
       height="1.5rem"
       role="img"
       style="--icon-size: 1.5rem;"
+      viewBox="0 0 24 24"
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -250,8 +254,8 @@ exports[`Modal Medium story renders snapshot 1`] = `
       >
         close modal
       </title>
-      <use
-        xlink:href="test-file-stub#close"
+      <path
+        d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
       />
     </svg>
   </button>
@@ -309,6 +313,7 @@ exports[`Modal Mobile story renders snapshot 1`] = `
       height="1.5rem"
       role="img"
       style="--icon-size: 1.5rem;"
+      viewBox="0 0 24 24"
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -317,8 +322,8 @@ exports[`Modal Mobile story renders snapshot 1`] = `
       >
         close modal
       </title>
-      <use
-        xlink:href="test-file-stub#close"
+      <path
+        d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
       />
     </svg>
   </button>
@@ -376,6 +381,7 @@ exports[`Modal MobileBrand story renders snapshot 1`] = `
       height="1.5rem"
       role="img"
       style="--icon-size: 1.5rem;"
+      viewBox="0 0 24 24"
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -384,8 +390,8 @@ exports[`Modal MobileBrand story renders snapshot 1`] = `
       >
         close modal
       </title>
-      <use
-        xlink:href="test-file-stub#close"
+      <path
+        d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
       />
     </svg>
   </button>
@@ -453,6 +459,7 @@ exports[`Modal MobileLandscape story renders snapshot 1`] = `
       height="1.5rem"
       role="img"
       style="--icon-size: 1.5rem;"
+      viewBox="0 0 24 24"
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -461,8 +468,8 @@ exports[`Modal MobileLandscape story renders snapshot 1`] = `
       >
         close modal
       </title>
-      <use
-        xlink:href="test-file-stub#close"
+      <path
+        d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
       />
     </svg>
   </button>
@@ -520,6 +527,7 @@ exports[`Modal MobileLandscapeBrand story renders snapshot 1`] = `
       height="1.5rem"
       role="img"
       style="--icon-size: 1.5rem;"
+      viewBox="0 0 24 24"
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -528,8 +536,8 @@ exports[`Modal MobileLandscapeBrand story renders snapshot 1`] = `
       >
         close modal
       </title>
-      <use
-        xlink:href="test-file-stub#close"
+      <path
+        d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
       />
     </svg>
   </button>
@@ -593,6 +601,7 @@ exports[`Modal ModalStepper story renders snapshot 1`] = `
     height="0.5rem"
     role="img"
     style="--icon-size: 0.5rem;"
+    viewBox="0 0 24 24"
     width="0.5rem"
     xmlns="http://www.w3.org/2000/svg"
   >
@@ -601,8 +610,8 @@ exports[`Modal ModalStepper story renders snapshot 1`] = `
     >
       Active Step 1
     </title>
-    <use
-      xlink:href="test-file-stub#circle"
+    <path
+      d="M12 22C10.6167 22 9.31667 21.7373 8.1 21.212C6.88333 20.6873 5.825 19.975 4.925 19.075C4.025 18.175 3.31267 17.1167 2.788 15.9C2.26267 14.6833 2 13.3833 2 12C2 10.6167 2.26267 9.31667 2.788 8.1C3.31267 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.31233 8.1 2.787C9.31667 2.26233 10.6167 2 12 2C13.3833 2 14.6833 2.26233 15.9 2.787C17.1167 3.31233 18.175 4.025 19.075 4.925C19.975 5.825 20.6873 6.88333 21.212 8.1C21.7373 9.31667 22 10.6167 22 12C22 13.3833 21.7373 14.6833 21.212 15.9C20.6873 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6873 15.9 21.212C14.6833 21.7373 13.3833 22 12 22Z"
     />
   </svg>
   <svg
@@ -611,6 +620,7 @@ exports[`Modal ModalStepper story renders snapshot 1`] = `
     height="0.5rem"
     role="img"
     style="--icon-size: 0.5rem;"
+    viewBox="0 0 24 24"
     width="0.5rem"
     xmlns="http://www.w3.org/2000/svg"
   >
@@ -619,8 +629,16 @@ exports[`Modal ModalStepper story renders snapshot 1`] = `
     >
       Step 2
     </title>
-    <use
-      xlink:href="test-file-stub#empty-circle"
+    <circle
+      cx="12"
+      cy="12"
+      r="8"
+    />
+    <circle
+      cx="12"
+      cy="12"
+      fill="var(--eds-theme-color-icon-neutral-default-inverse)"
+      r="6"
     />
   </svg>
   <svg
@@ -629,6 +647,7 @@ exports[`Modal ModalStepper story renders snapshot 1`] = `
     height="0.5rem"
     role="img"
     style="--icon-size: 0.5rem;"
+    viewBox="0 0 24 24"
     width="0.5rem"
     xmlns="http://www.w3.org/2000/svg"
   >
@@ -637,8 +656,16 @@ exports[`Modal ModalStepper story renders snapshot 1`] = `
     >
       Step 3
     </title>
-    <use
-      xlink:href="test-file-stub#empty-circle"
+    <circle
+      cx="12"
+      cy="12"
+      r="8"
+    />
+    <circle
+      cx="12"
+      cy="12"
+      fill="var(--eds-theme-color-icon-neutral-default-inverse)"
+      r="6"
     />
   </svg>
 </div>
@@ -659,6 +686,7 @@ exports[`Modal Small story renders snapshot 1`] = `
       height="1.5rem"
       role="img"
       style="--icon-size: 1.5rem;"
+      viewBox="0 0 24 24"
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -667,8 +695,8 @@ exports[`Modal Small story renders snapshot 1`] = `
       >
         close modal
       </title>
-      <use
-        xlink:href="test-file-stub#close"
+      <path
+        d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
       />
     </svg>
   </button>
@@ -726,6 +754,7 @@ exports[`Modal Tablet story renders snapshot 1`] = `
       height="1.5rem"
       role="img"
       style="--icon-size: 1.5rem;"
+      viewBox="0 0 24 24"
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -734,8 +763,8 @@ exports[`Modal Tablet story renders snapshot 1`] = `
       >
         close modal
       </title>
-      <use
-        xlink:href="test-file-stub#close"
+      <path
+        d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
       />
     </svg>
   </button>
@@ -793,6 +822,7 @@ exports[`Modal TabletBrand story renders snapshot 1`] = `
       height="1.5rem"
       role="img"
       style="--icon-size: 1.5rem;"
+      viewBox="0 0 24 24"
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -801,8 +831,8 @@ exports[`Modal TabletBrand story renders snapshot 1`] = `
       >
         close modal
       </title>
-      <use
-        xlink:href="test-file-stub#close"
+      <path
+        d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
       />
     </svg>
   </button>
@@ -883,6 +913,7 @@ exports[`Modal WithLongText story renders snapshot 1`] = `
         height="1.5rem"
         role="img"
         style="--icon-size: 1.5rem;"
+        viewBox="0 0 24 24"
         width="1.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -891,8 +922,8 @@ exports[`Modal WithLongText story renders snapshot 1`] = `
         >
           close modal
         </title>
-        <use
-          xlink:href="test-file-stub#close"
+        <path
+          d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
         />
       </svg>
     </button>
@@ -984,6 +1015,7 @@ exports[`Modal WithLongTextScrollable story renders snapshot 1`] = `
         height="1.5rem"
         role="img"
         style="--icon-size: 1.5rem;"
+        viewBox="0 0 24 24"
         width="1.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -992,8 +1024,8 @@ exports[`Modal WithLongTextScrollable story renders snapshot 1`] = `
         >
           close modal
         </title>
-        <use
-          xlink:href="test-file-stub#close"
+        <path
+          d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
         />
       </svg>
     </button>
@@ -1073,6 +1105,7 @@ exports[`Modal WithStepper story renders snapshot 1`] = `
       height="1.5rem"
       role="img"
       style="--icon-size: 1.5rem;"
+      viewBox="0 0 24 24"
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -1081,8 +1114,8 @@ exports[`Modal WithStepper story renders snapshot 1`] = `
       >
         close modal
       </title>
-      <use
-        xlink:href="test-file-stub#close"
+      <path
+        d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
       />
     </svg>
   </button>
@@ -1112,6 +1145,7 @@ exports[`Modal WithStepper story renders snapshot 1`] = `
         height="0.5rem"
         role="img"
         style="--icon-size: 0.5rem;"
+        viewBox="0 0 24 24"
         width="0.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -1120,8 +1154,16 @@ exports[`Modal WithStepper story renders snapshot 1`] = `
         >
           Step 1
         </title>
-        <use
-          xlink:href="test-file-stub#empty-circle"
+        <circle
+          cx="12"
+          cy="12"
+          r="8"
+        />
+        <circle
+          cx="12"
+          cy="12"
+          fill="var(--eds-theme-color-icon-neutral-default-inverse)"
+          r="6"
         />
       </svg>
       <svg
@@ -1130,6 +1172,7 @@ exports[`Modal WithStepper story renders snapshot 1`] = `
         height="0.5rem"
         role="img"
         style="--icon-size: 0.5rem;"
+        viewBox="0 0 24 24"
         width="0.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -1138,8 +1181,8 @@ exports[`Modal WithStepper story renders snapshot 1`] = `
         >
           Active Step 2
         </title>
-        <use
-          xlink:href="test-file-stub#circle"
+        <path
+          d="M12 22C10.6167 22 9.31667 21.7373 8.1 21.212C6.88333 20.6873 5.825 19.975 4.925 19.075C4.025 18.175 3.31267 17.1167 2.788 15.9C2.26267 14.6833 2 13.3833 2 12C2 10.6167 2.26267 9.31667 2.788 8.1C3.31267 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.31233 8.1 2.787C9.31667 2.26233 10.6167 2 12 2C13.3833 2 14.6833 2.26233 15.9 2.787C17.1167 3.31233 18.175 4.025 19.075 4.925C19.975 5.825 20.6873 6.88333 21.212 8.1C21.7373 9.31667 22 10.6167 22 12C22 13.3833 21.7373 14.6833 21.212 15.9C20.6873 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6873 15.9 21.212C14.6833 21.7373 13.3833 22 12 22Z"
         />
       </svg>
       <svg
@@ -1148,6 +1191,7 @@ exports[`Modal WithStepper story renders snapshot 1`] = `
         height="0.5rem"
         role="img"
         style="--icon-size: 0.5rem;"
+        viewBox="0 0 24 24"
         width="0.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -1156,8 +1200,16 @@ exports[`Modal WithStepper story renders snapshot 1`] = `
         >
           Step 3
         </title>
-        <use
-          xlink:href="test-file-stub#empty-circle"
+        <circle
+          cx="12"
+          cy="12"
+          r="8"
+        />
+        <circle
+          cx="12"
+          cy="12"
+          fill="var(--eds-theme-color-icon-neutral-default-inverse)"
+          r="6"
         />
       </svg>
       <svg
@@ -1166,6 +1218,7 @@ exports[`Modal WithStepper story renders snapshot 1`] = `
         height="0.5rem"
         role="img"
         style="--icon-size: 0.5rem;"
+        viewBox="0 0 24 24"
         width="0.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -1174,8 +1227,16 @@ exports[`Modal WithStepper story renders snapshot 1`] = `
         >
           Step 4
         </title>
-        <use
-          xlink:href="test-file-stub#empty-circle"
+        <circle
+          cx="12"
+          cy="12"
+          r="8"
+        />
+        <circle
+          cx="12"
+          cy="12"
+          fill="var(--eds-theme-color-icon-neutral-default-inverse)"
+          r="6"
         />
       </svg>
       <svg
@@ -1184,6 +1245,7 @@ exports[`Modal WithStepper story renders snapshot 1`] = `
         height="0.5rem"
         role="img"
         style="--icon-size: 0.5rem;"
+        viewBox="0 0 24 24"
         width="0.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -1192,8 +1254,16 @@ exports[`Modal WithStepper story renders snapshot 1`] = `
         >
           Step 5
         </title>
-        <use
-          xlink:href="test-file-stub#empty-circle"
+        <circle
+          cx="12"
+          cy="12"
+          r="8"
+        />
+        <circle
+          cx="12"
+          cy="12"
+          fill="var(--eds-theme-color-icon-neutral-default-inverse)"
+          r="6"
         />
       </svg>
     </div>
@@ -1247,6 +1317,7 @@ exports[`Modal WithoutHeaderAndFooter story renders snapshot 1`] = `
         height="1.5rem"
         role="img"
         style="--icon-size: 1.5rem;"
+        viewBox="0 0 24 24"
         width="1.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -1255,8 +1326,8 @@ exports[`Modal WithoutHeaderAndFooter story renders snapshot 1`] = `
         >
           close modal
         </title>
-        <use
-          xlink:href="test-file-stub#close"
+        <path
+          d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
         />
       </svg>
     </button>

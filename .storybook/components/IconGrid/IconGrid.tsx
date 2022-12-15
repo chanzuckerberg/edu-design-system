@@ -1,6 +1,6 @@
 import React from 'react';
 import { Icon } from '../../../src/components/Icon/Icon';
-import { ALL_ICONS } from '../../../src/util/allIcons';
+import icons, { type IconName } from '../../../src/icons/spritemap/spritemap';
 import './IconGrid.css';
 
 /**
@@ -9,7 +9,7 @@ import './IconGrid.css';
 const IconGrid = () => (
   <div>
     <ul className="icon-grid">
-      {ALL_ICONS.map((name) => {
+      {(Object.keys(icons) as IconName[]).map((name) => {
         return (
           <li className="icon-grid__item" key={name}>
             <Icon

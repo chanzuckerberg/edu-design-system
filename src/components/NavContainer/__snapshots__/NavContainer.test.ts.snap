@@ -31,11 +31,7 @@ exports[`<NavContainer /> Default story renders snapshot 1`] = `
               style="--icon-size: 1.25rem;"
               width="1.25rem"
               xmlns="http://www.w3.org/2000/svg"
-            >
-              <use
-                xlink:href="test-file-stub#undefined"
-              />
-            </svg>
+            />
             <span>
               Nav Item
             </span>
@@ -56,11 +52,7 @@ exports[`<NavContainer /> Default story renders snapshot 1`] = `
               style="--icon-size: 1.25rem;"
               width="1.25rem"
               xmlns="http://www.w3.org/2000/svg"
-            >
-              <use
-                xlink:href="test-file-stub#undefined"
-              />
-            </svg>
+            />
             <span>
               Nav Item
             </span>
@@ -81,11 +73,7 @@ exports[`<NavContainer /> Default story renders snapshot 1`] = `
               style="--icon-size: 1.25rem;"
               width="1.25rem"
               xmlns="http://www.w3.org/2000/svg"
-            >
-              <use
-                xlink:href="test-file-stub#undefined"
-              />
-            </svg>
+            />
             <span>
               Nav Item
             </span>

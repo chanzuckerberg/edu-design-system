@@ -120,11 +120,12 @@ exports[`<LinkList /> IconAfterText story renders snapshot 1`] = `
         fill="currentColor"
         height="0.875rem"
         style="--icon-size: 0.875rem;"
+        viewBox="0 0 24 24"
         width="0.875rem"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <use
-          xlink:href="test-file-stub#chevron-right"
+        <path
+          d="M8.025 22L6.25 20.225L14.475 12L6.25 3.775L8.025 2L18.025 12L8.025 22Z"
         />
       </svg>
     </a>
@@ -147,11 +148,12 @@ exports[`<LinkList /> IconAfterText story renders snapshot 1`] = `
         fill="currentColor"
         height="0.875rem"
         style="--icon-size: 0.875rem;"
+        viewBox="0 0 24 24"
         width="0.875rem"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <use
-          xlink:href="test-file-stub#chevron-right"
+        <path
+          d="M8.025 22L6.25 20.225L14.475 12L6.25 3.775L8.025 2L18.025 12L8.025 22Z"
         />
       </svg>
     </a>
@@ -174,11 +176,12 @@ exports[`<LinkList /> IconAfterText story renders snapshot 1`] = `
         fill="currentColor"
         height="0.875rem"
         style="--icon-size: 0.875rem;"
+        viewBox="0 0 24 24"
         width="0.875rem"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <use
-          xlink:href="test-file-stub#chevron-right"
+        <path
+          d="M8.025 22L6.25 20.225L14.475 12L6.25 3.775L8.025 2L18.025 12L8.025 22Z"
         />
       </svg>
     </a>

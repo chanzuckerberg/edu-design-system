@@ -30,6 +30,7 @@ exports[`<Accordion /> Default story renders snapshot 1`] = `
           height="1.625rem"
           role="img"
           style="--icon-size: 1.625rem;"
+          viewBox="0 0 24 24"
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -38,8 +39,8 @@ exports[`<Accordion /> Default story renders snapshot 1`] = `
           >
             show content
           </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
+          <path
+            d="M12 15.3746L6 9.37461L7.4 7.97461L12 12.5746L16.6 7.97461L18 9.37461L12 15.3746Z"
           />
         </svg>
       </button>
@@ -79,6 +80,7 @@ exports[`<Accordion /> DefaultOpen story renders snapshot 1`] = `
           height="1.625rem"
           role="img"
           style="--icon-size: 1.625rem;"
+          viewBox="0 0 24 24"
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -87,8 +89,8 @@ exports[`<Accordion /> DefaultOpen story renders snapshot 1`] = `
           >
             hide content
           </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
+          <path
+            d="M12 15.3746L6 9.37461L7.4 7.97461L12 12.5746L16.6 7.97461L18 9.37461L12 15.3746Z"
           />
         </svg>
       </button>
@@ -135,6 +137,7 @@ exports[`<Accordion /> Small story renders snapshot 1`] = `
           height="1.625rem"
           role="img"
           style="--icon-size: 1.625rem;"
+          viewBox="0 0 24 24"
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -143,8 +146,8 @@ exports[`<Accordion /> Small story renders snapshot 1`] = `
           >
             show content
           </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
+          <path
+            d="M12 15.3746L6 9.37461L7.4 7.97461L12 12.5746L16.6 7.97461L18 9.37461L12 15.3746Z"
           />
         </svg>
       </button>
@@ -184,6 +187,7 @@ exports[`<Accordion /> SmallOpen story renders snapshot 1`] = `
           height="1.625rem"
           role="img"
           style="--icon-size: 1.625rem;"
+          viewBox="0 0 24 24"
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -192,8 +196,8 @@ exports[`<Accordion /> SmallOpen story renders snapshot 1`] = `
           >
             hide content
           </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
+          <path
+            d="M12 15.3746L6 9.37461L7.4 7.97461L12 12.5746L16.6 7.97461L18 9.37461L12 15.3746Z"
           />
         </svg>
       </button>
@@ -239,6 +243,7 @@ exports[`<Accordion /> Stacked story renders snapshot 1`] = `
           height="1.625rem"
           role="img"
           style="--icon-size: 1.625rem;"
+          viewBox="0 0 24 24"
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -247,8 +252,8 @@ exports[`<Accordion /> Stacked story renders snapshot 1`] = `
           >
             show content
           </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
+          <path
+            d="M12 15.3746L6 9.37461L7.4 7.97461L12 12.5746L16.6 7.97461L18 9.37461L12 15.3746Z"
           />
         </svg>
       </button>
@@ -275,6 +280,7 @@ exports[`<Accordion /> Stacked story renders snapshot 1`] = `
           height="1.625rem"
           role="img"
           style="--icon-size: 1.625rem;"
+          viewBox="0 0 24 24"
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -283,8 +289,8 @@ exports[`<Accordion /> Stacked story renders snapshot 1`] = `
           >
             show content
           </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
+          <path
+            d="M12 15.3746L6 9.37461L7.4 7.97461L12 12.5746L16.6 7.97461L18 9.37461L12 15.3746Z"
           />
         </svg>
       </button>
@@ -311,6 +317,7 @@ exports[`<Accordion /> Stacked story renders snapshot 1`] = `
           height="1.625rem"
           role="img"
           style="--icon-size: 1.625rem;"
+          viewBox="0 0 24 24"
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -319,8 +326,8 @@ exports[`<Accordion /> Stacked story renders snapshot 1`] = `
           >
             show content
           </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
+          <path
+            d="M12 15.3746L6 9.37461L7.4 7.97461L12 12.5746L16.6 7.97461L18 9.37461L12 15.3746Z"
           />
         </svg>
       </button>
@@ -347,6 +354,7 @@ exports[`<Accordion /> Stacked story renders snapshot 1`] = `
           height="1.625rem"
           role="img"
           style="--icon-size: 1.625rem;"
+          viewBox="0 0 24 24"
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -355,8 +363,8 @@ exports[`<Accordion /> Stacked story renders snapshot 1`] = `
           >
             show content
           </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
+          <path
+            d="M12 15.3746L6 9.37461L7.4 7.97461L12 12.5746L16.6 7.97461L18 9.37461L12 15.3746Z"
           />
         </svg>
       </button>
@@ -395,6 +403,7 @@ exports[`<Accordion /> StackedOpen story renders snapshot 1`] = `
           height="1.625rem"
           role="img"
           style="--icon-size: 1.625rem;"
+          viewBox="0 0 24 24"
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -403,8 +412,8 @@ exports[`<Accordion /> StackedOpen story renders snapshot 1`] = `
           >
             hide content
           </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
+          <path
+            d="M12 15.3746L6 9.37461L7.4 7.97461L12 12.5746L16.6 7.97461L18 9.37461L12 15.3746Z"
           />
         </svg>
       </button>
@@ -439,6 +448,7 @@ exports[`<Accordion /> StackedOpen story renders snapshot 1`] = `
           height="1.625rem"
           role="img"
           style="--icon-size: 1.625rem;"
+          viewBox="0 0 24 24"
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -447,8 +457,8 @@ exports[`<Accordion /> StackedOpen story renders snapshot 1`] = `
           >
             hide content
           </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
+          <path
+            d="M12 15.3746L6 9.37461L7.4 7.97461L12 12.5746L16.6 7.97461L18 9.37461L12 15.3746Z"
           />
         </svg>
       </button>
@@ -483,6 +493,7 @@ exports[`<Accordion /> StackedOpen story renders snapshot 1`] = `
           height="1.625rem"
           role="img"
           style="--icon-size: 1.625rem;"
+          viewBox="0 0 24 24"
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -491,8 +502,8 @@ exports[`<Accordion /> StackedOpen story renders snapshot 1`] = `
           >
             hide content
           </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
+          <path
+            d="M12 15.3746L6 9.37461L7.4 7.97461L12 12.5746L16.6 7.97461L18 9.37461L12 15.3746Z"
           />
         </svg>
       </button>
@@ -527,6 +538,7 @@ exports[`<Accordion /> StackedOpen story renders snapshot 1`] = `
           height="1.625rem"
           role="img"
           style="--icon-size: 1.625rem;"
+          viewBox="0 0 24 24"
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -535,8 +547,8 @@ exports[`<Accordion /> StackedOpen story renders snapshot 1`] = `
           >
             hide content
           </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
+          <path
+            d="M12 15.3746L6 9.37461L7.4 7.97461L12 12.5746L16.6 7.97461L18 9.37461L12 15.3746Z"
           />
         </svg>
       </button>
@@ -581,6 +593,7 @@ exports[`<Accordion /> StackedOutline story renders snapshot 1`] = `
           height="1.625rem"
           role="img"
           style="--icon-size: 1.625rem;"
+          viewBox="0 0 24 24"
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -589,8 +602,8 @@ exports[`<Accordion /> StackedOutline story renders snapshot 1`] = `
           >
             show content
           </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
+          <path
+            d="M12 15.3746L6 9.37461L7.4 7.97461L12 12.5746L16.6 7.97461L18 9.37461L12 15.3746Z"
           />
         </svg>
       </button>
@@ -617,6 +630,7 @@ exports[`<Accordion /> StackedOutline story renders snapshot 1`] = `
           height="1.625rem"
           role="img"
           style="--icon-size: 1.625rem;"
+          viewBox="0 0 24 24"
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -625,8 +639,8 @@ exports[`<Accordion /> StackedOutline story renders snapshot 1`] = `
           >
             show content
           </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
+          <path
+            d="M12 15.3746L6 9.37461L7.4 7.97461L12 12.5746L16.6 7.97461L18 9.37461L12 15.3746Z"
           />
         </svg>
       </button>
@@ -653,6 +667,7 @@ exports[`<Accordion /> StackedOutline story renders snapshot 1`] = `
           height="1.625rem"
           role="img"
           style="--icon-size: 1.625rem;"
+          viewBox="0 0 24 24"
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -661,8 +676,8 @@ exports[`<Accordion /> StackedOutline story renders snapshot 1`] = `
           >
             show content
           </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
+          <path
+            d="M12 15.3746L6 9.37461L7.4 7.97461L12 12.5746L16.6 7.97461L18 9.37461L12 15.3746Z"
           />
         </svg>
       </button>
@@ -689,6 +704,7 @@ exports[`<Accordion /> StackedOutline story renders snapshot 1`] = `
           height="1.625rem"
           role="img"
           style="--icon-size: 1.625rem;"
+          viewBox="0 0 24 24"
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -697,8 +713,8 @@ exports[`<Accordion /> StackedOutline story renders snapshot 1`] = `
           >
             show content
           </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
+          <path
+            d="M12 15.3746L6 9.37461L7.4 7.97461L12 12.5746L16.6 7.97461L18 9.37461L12 15.3746Z"
           />
         </svg>
       </button>
@@ -737,6 +753,7 @@ exports[`<Accordion /> StackedOutlineOpen story renders snapshot 1`] = `
           height="1.625rem"
           role="img"
           style="--icon-size: 1.625rem;"
+          viewBox="0 0 24 24"
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -745,8 +762,8 @@ exports[`<Accordion /> StackedOutlineOpen story renders snapshot 1`] = `
           >
             hide content
           </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
+          <path
+            d="M12 15.3746L6 9.37461L7.4 7.97461L12 12.5746L16.6 7.97461L18 9.37461L12 15.3746Z"
           />
         </svg>
       </button>
@@ -781,6 +798,7 @@ exports[`<Accordion /> StackedOutlineOpen story renders snapshot 1`] = `
           height="1.625rem"
           role="img"
           style="--icon-size: 1.625rem;"
+          viewBox="0 0 24 24"
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -789,8 +807,8 @@ exports[`<Accordion /> StackedOutlineOpen story renders snapshot 1`] = `
           >
             hide content
           </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
+          <path
+            d="M12 15.3746L6 9.37461L7.4 7.97461L12 12.5746L16.6 7.97461L18 9.37461L12 15.3746Z"
           />
         </svg>
       </button>
@@ -825,6 +843,7 @@ exports[`<Accordion /> StackedOutlineOpen story renders snapshot 1`] = `
           height="1.625rem"
           role="img"
           style="--icon-size: 1.625rem;"
+          viewBox="0 0 24 24"
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -833,8 +852,8 @@ exports[`<Accordion /> StackedOutlineOpen story renders snapshot 1`] = `
           >
             hide content
           </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
+          <path
+            d="M12 15.3746L6 9.37461L7.4 7.97461L12 12.5746L16.6 7.97461L18 9.37461L12 15.3746Z"
           />
         </svg>
       </button>
@@ -869,6 +888,7 @@ exports[`<Accordion /> StackedOutlineOpen story renders snapshot 1`] = `
           height="1.625rem"
           role="img"
           style="--icon-size: 1.625rem;"
+          viewBox="0 0 24 24"
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -877,8 +897,8 @@ exports[`<Accordion /> StackedOutlineOpen story renders snapshot 1`] = `
           >
             hide content
           </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
+          <path
+            d="M12 15.3746L6 9.37461L7.4 7.97461L12 12.5746L16.6 7.97461L18 9.37461L12 15.3746Z"
           />
         </svg>
       </button>
@@ -923,6 +943,7 @@ exports[`<Accordion /> StackedSmall story renders snapshot 1`] = `
           height="1.625rem"
           role="img"
           style="--icon-size: 1.625rem;"
+          viewBox="0 0 24 24"
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -931,8 +952,8 @@ exports[`<Accordion /> StackedSmall story renders snapshot 1`] = `
           >
             show content
           </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
+          <path
+            d="M12 15.3746L6 9.37461L7.4 7.97461L12 12.5746L16.6 7.97461L18 9.37461L12 15.3746Z"
           />
         </svg>
       </button>
@@ -959,6 +980,7 @@ exports[`<Accordion /> StackedSmall story renders snapshot 1`] = `
           height="1.625rem"
           role="img"
           style="--icon-size: 1.625rem;"
+          viewBox="0 0 24 24"
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -967,8 +989,8 @@ exports[`<Accordion /> StackedSmall story renders snapshot 1`] = `
           >
             show content
           </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
+          <path
+            d="M12 15.3746L6 9.37461L7.4 7.97461L12 12.5746L16.6 7.97461L18 9.37461L12 15.3746Z"
           />
         </svg>
       </button>
@@ -995,6 +1017,7 @@ exports[`<Accordion /> StackedSmall story renders snapshot 1`] = `
           height="1.625rem"
           role="img"
           style="--icon-size: 1.625rem;"
+          viewBox="0 0 24 24"
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -1003,8 +1026,8 @@ exports[`<Accordion /> StackedSmall story renders snapshot 1`] = `
           >
             show content
           </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
+          <path
+            d="M12 15.3746L6 9.37461L7.4 7.97461L12 12.5746L16.6 7.97461L18 9.37461L12 15.3746Z"
           />
         </svg>
       </button>
@@ -1031,6 +1054,7 @@ exports[`<Accordion /> StackedSmall story renders snapshot 1`] = `
           height="1.625rem"
           role="img"
           style="--icon-size: 1.625rem;"
+          viewBox="0 0 24 24"
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -1039,8 +1063,8 @@ exports[`<Accordion /> StackedSmall story renders snapshot 1`] = `
           >
             show content
           </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
+          <path
+            d="M12 15.3746L6 9.37461L7.4 7.97461L12 12.5746L16.6 7.97461L18 9.37461L12 15.3746Z"
           />
         </svg>
       </button>
@@ -1079,6 +1103,7 @@ exports[`<Accordion /> StackedSmallOpen story renders snapshot 1`] = `
           height="1.625rem"
           role="img"
           style="--icon-size: 1.625rem;"
+          viewBox="0 0 24 24"
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -1087,8 +1112,8 @@ exports[`<Accordion /> StackedSmallOpen story renders snapshot 1`] = `
           >
             hide content
           </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
+          <path
+            d="M12 15.3746L6 9.37461L7.4 7.97461L12 12.5746L16.6 7.97461L18 9.37461L12 15.3746Z"
           />
         </svg>
       </button>
@@ -1123,6 +1148,7 @@ exports[`<Accordion /> StackedSmallOpen story renders snapshot 1`] = `
           height="1.625rem"
           role="img"
           style="--icon-size: 1.625rem;"
+          viewBox="0 0 24 24"
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -1131,8 +1157,8 @@ exports[`<Accordion /> StackedSmallOpen story renders snapshot 1`] = `
           >
             hide content
           </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
+          <path
+            d="M12 15.3746L6 9.37461L7.4 7.97461L12 12.5746L16.6 7.97461L18 9.37461L12 15.3746Z"
           />
         </svg>
       </button>
@@ -1167,6 +1193,7 @@ exports[`<Accordion /> StackedSmallOpen story renders snapshot 1`] = `
           height="1.625rem"
           role="img"
           style="--icon-size: 1.625rem;"
+          viewBox="0 0 24 24"
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -1175,8 +1202,8 @@ exports[`<Accordion /> StackedSmallOpen story renders snapshot 1`] = `
           >
             hide content
           </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
+          <path
+            d="M12 15.3746L6 9.37461L7.4 7.97461L12 12.5746L16.6 7.97461L18 9.37461L12 15.3746Z"
           />
         </svg>
       </button>
@@ -1211,6 +1238,7 @@ exports[`<Accordion /> StackedSmallOpen story renders snapshot 1`] = `
           height="1.625rem"
           role="img"
           style="--icon-size: 1.625rem;"
+          viewBox="0 0 24 24"
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -1219,8 +1247,8 @@ exports[`<Accordion /> StackedSmallOpen story renders snapshot 1`] = `
           >
             hide content
           </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
+          <path
+            d="M12 15.3746L6 9.37461L7.4 7.97461L12 12.5746L16.6 7.97461L18 9.37461L12 15.3746Z"
           />
         </svg>
       </button>
@@ -1265,6 +1293,7 @@ exports[`<Accordion /> StackedSmallOutline story renders snapshot 1`] = `
           height="1.625rem"
           role="img"
           style="--icon-size: 1.625rem;"
+          viewBox="0 0 24 24"
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -1273,8 +1302,8 @@ exports[`<Accordion /> StackedSmallOutline story renders snapshot 1`] = `
           >
             show content
           </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
+          <path
+            d="M12 15.3746L6 9.37461L7.4 7.97461L12 12.5746L16.6 7.97461L18 9.37461L12 15.3746Z"
           />
         </svg>
       </button>
@@ -1301,6 +1330,7 @@ exports[`<Accordion /> StackedSmallOutline story renders snapshot 1`] = `
           height="1.625rem"
           role="img"
           style="--icon-size: 1.625rem;"
+          viewBox="0 0 24 24"
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -1309,8 +1339,8 @@ exports[`<Accordion /> StackedSmallOutline story renders snapshot 1`] = `
           >
             show content
           </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
+          <path
+            d="M12 15.3746L6 9.37461L7.4 7.97461L12 12.5746L16.6 7.97461L18 9.37461L12 15.3746Z"
           />
         </svg>
       </button>
@@ -1337,6 +1367,7 @@ exports[`<Accordion /> StackedSmallOutline story renders snapshot 1`] = `
           height="1.625rem"
           role="img"
           style="--icon-size: 1.625rem;"
+          viewBox="0 0 24 24"
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -1345,8 +1376,8 @@ exports[`<Accordion /> StackedSmallOutline story renders snapshot 1`] = `
           >
             show content
           </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
+          <path
+            d="M12 15.3746L6 9.37461L7.4 7.97461L12 12.5746L16.6 7.97461L18 9.37461L12 15.3746Z"
           />
         </svg>
       </button>
@@ -1373,6 +1404,7 @@ exports[`<Accordion /> StackedSmallOutline story renders snapshot 1`] = `
           height="1.625rem"
           role="img"
           style="--icon-size: 1.625rem;"
+          viewBox="0 0 24 24"
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -1381,8 +1413,8 @@ exports[`<Accordion /> StackedSmallOutline story renders snapshot 1`] = `
           >
             show content
           </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
+          <path
+            d="M12 15.3746L6 9.37461L7.4 7.97461L12 12.5746L16.6 7.97461L18 9.37461L12 15.3746Z"
           />
         </svg>
       </button>
@@ -1421,6 +1453,7 @@ exports[`<Accordion /> StackedSmallOutlineOpen story renders snapshot 1`] = `
           height="1.625rem"
           role="img"
           style="--icon-size: 1.625rem;"
+          viewBox="0 0 24 24"
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -1429,8 +1462,8 @@ exports[`<Accordion /> StackedSmallOutlineOpen story renders snapshot 1`] = `
           >
             hide content
           </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
+          <path
+            d="M12 15.3746L6 9.37461L7.4 7.97461L12 12.5746L16.6 7.97461L18 9.37461L12 15.3746Z"
           />
         </svg>
       </button>
@@ -1465,6 +1498,7 @@ exports[`<Accordion /> StackedSmallOutlineOpen story renders snapshot 1`] = `
           height="1.625rem"
           role="img"
           style="--icon-size: 1.625rem;"
+          viewBox="0 0 24 24"
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -1473,8 +1507,8 @@ exports[`<Accordion /> StackedSmallOutlineOpen story renders snapshot 1`] = `
           >
             hide content
           </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
+          <path
+            d="M12 15.3746L6 9.37461L7.4 7.97461L12 12.5746L16.6 7.97461L18 9.37461L12 15.3746Z"
           />
         </svg>
       </button>
@@ -1509,6 +1543,7 @@ exports[`<Accordion /> StackedSmallOutlineOpen story renders snapshot 1`] = `
           height="1.625rem"
           role="img"
           style="--icon-size: 1.625rem;"
+          viewBox="0 0 24 24"
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -1517,8 +1552,8 @@ exports[`<Accordion /> StackedSmallOutlineOpen story renders snapshot 1`] = `
           >
             hide content
           </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
+          <path
+            d="M12 15.3746L6 9.37461L7.4 7.97461L12 12.5746L16.6 7.97461L18 9.37461L12 15.3746Z"
           />
         </svg>
       </button>
@@ -1553,6 +1588,7 @@ exports[`<Accordion /> StackedSmallOutlineOpen story renders snapshot 1`] = `
           height="1.625rem"
           role="img"
           style="--icon-size: 1.625rem;"
+          viewBox="0 0 24 24"
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -1561,8 +1597,8 @@ exports[`<Accordion /> StackedSmallOutlineOpen story renders snapshot 1`] = `
           >
             hide content
           </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
+          <path
+            d="M12 15.3746L6 9.37461L7.4 7.97461L12 12.5746L16.6 7.97461L18 9.37461L12 15.3746Z"
           />
         </svg>
       </button>
@@ -1609,6 +1645,7 @@ exports[`<Accordion /> UsingRenderProp story renders snapshot 1`] = `
           height="1.625rem"
           role="img"
           style="--icon-size: 1.625rem;"
+          viewBox="0 0 24 24"
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -1617,8 +1654,8 @@ exports[`<Accordion /> UsingRenderProp story renders snapshot 1`] = `
           >
             show content
           </title>
-          <use
-            xlink:href="test-file-stub#expand-more"
+          <path
+            d="M12 15.3746L6 9.37461L7.4 7.97461L12 12.5746L16.6 7.97461L18 9.37461L12 15.3746Z"
           />
         </svg>
       </button>

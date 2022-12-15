@@ -21,8 +21,6 @@
   },
 
   ignoreDeps: [
-    // svg-spritemap-webpack-plugin v4 requires webpack 5 but EDS currently uses webpack 4 for storybook
-    'svg-spritemap-webpack-plugin',
     // axe-core starting v4.5 causes some axe-storybook tests to time out, ticket: EDS-779
     'axe-core',
   ],

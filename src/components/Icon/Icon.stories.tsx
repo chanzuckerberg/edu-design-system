@@ -1,8 +1,8 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 import { Icon } from './Icon';
+import icons from '../../icons/spritemap/spritemap';
 import * as ColorTokens from '../../tokens-dist/ts/colors';
-import { ALL_ICONS } from '../../util/allIcons';
 import Text from '../Text';
 
 export default {
@@ -13,7 +13,7 @@ export default {
       control: {
         type: 'select',
       },
-      options: ALL_ICONS,
+      options: Object.keys(icons),
     },
     color: {
       control: {
