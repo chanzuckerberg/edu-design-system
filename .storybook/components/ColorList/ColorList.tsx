@@ -1,9 +1,17 @@
-import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { Grid } from '../../../src';
 import { TokenSpecimen } from '../TokenSpecimen/TokenSpecimen';
 
-export class ColorList extends Component {
+type ListItem = {
+  name: string;
+  value: any;
+};
+
+type Props = {
+  listItems: ListItem[];
+};
+
+export class ColorList extends Component<Props> {
   render() {
     return (
       <Grid>
@@ -23,12 +31,3 @@ export class ColorList extends Component {
     );
   }
 }
-
-ColorList.propTypes = {
-  listItems: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      value: PropTypes.any.isRequired,
-    }),
-  ).isRequired,
-};

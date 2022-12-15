@@ -1,7 +1,15 @@
-import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
-export class FontSizes extends Component {
+type ListItem = {
+  name: string;
+  value: any;
+};
+
+type Props = {
+  listItems: ListItem[];
+};
+
+export class FontSizes extends Component<Props> {
   render() {
     return (
       <ul>
@@ -19,12 +27,3 @@ export class FontSizes extends Component {
     );
   }
 }
-
-FontSizes.propTypes = {
-  listItems: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      value: PropTypes.any.isRequired,
-    }),
-  ).isRequired,
-};

@@ -1,7 +1,24 @@
-import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
-export class FontFamilies extends Component {
+type ListItem = {
+  name: string;
+  value: any;
+};
+
+type Props = {
+  listItems: ListItem[];
+};
+
+export class FontFamilies extends Component<Props> {
+  static defaultProps = {
+    listItems: [
+      {
+        name: '$font-family-primary',
+        value: 'HelveticaNeue", "Helvetica", "Arial", sans-serif',
+      },
+    ],
+  };
+
   render() {
     return (
       <ul>
@@ -19,16 +36,3 @@ export class FontFamilies extends Component {
     );
   }
 }
-
-FontFamilies.propTypes = {
-  listItems: PropTypes.array,
-};
-
-FontFamilies.defaultProps = {
-  listItems: [
-    {
-      name: '$font-family-primary',
-      value: 'HelveticaNeue", "Helvetica", "Arial", sans-serif',
-    },
-  ],
-};

@@ -2047,7 +2047,6 @@ __metadata:
     postcss-nested: ^5.0.6
     postcss-simple-vars: ^6.0.3
     prettier: ^2.7.1
-    prop-types: ^15.8.1
     react: ^16.14.0
     react-beautiful-dnd: ^13.1.1
     react-children-by-type: ^1.1.0
