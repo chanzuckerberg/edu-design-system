@@ -1,8 +1,16 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 
-class StateContainer extends React.Component {
-  constructor(props) {
+type Props = {
+  children: (value: any, setValue: (value: any) => void) => JSX.Element;
+  initialValue: any;
+};
+
+type State = {
+  value: any;
+};
+
+class StateContainer extends React.Component<Props, State> {
+  constructor(props: Props) {
     super(props);
 
     this.state = { value: props.initialValue };
@@ -10,7 +18,7 @@ class StateContainer extends React.Component {
     this.setValue = this.setValue.bind(this);
   }
 
-  setValue(value) {
+  setValue(value: any) {
     this.setState({ value });
   }
 
@@ -21,9 +29,5 @@ class StateContainer extends React.Component {
     return children(value, this.setValue);
   }
 }
-
-StateContainer.propTypes = {
-  initialValue: PropTypes.any.isRequired,
-};
 
 export default StateContainer;

@@ -1,9 +1,19 @@
 import clsx from 'clsx';
-import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import './TokenSpecimen.css';
 
-export class TokenSpecimen extends Component {
+type Props = {
+  name: string;
+  value: any;
+  comment?: string;
+  inlineStyles?: Record<string, string>;
+  variant?: string;
+  className?: string;
+  specimenClassName?: string;
+  behavior?: 'stacked';
+};
+
+export class TokenSpecimen extends Component<Props> {
   render() {
     const componentClassName = clsx('token-specimen', this.props.className, {
       'token-specimen--stacked': this.props.behavior === 'stacked',
@@ -86,12 +96,3 @@ export class TokenSpecimen extends Component {
     );
   }
 }
-
-TokenSpecimen.propTypes = {
-  name: PropTypes.string.isRequired,
-  value: PropTypes.any.isRequired,
-  comment: PropTypes.string,
-  inlineStyles: PropTypes.objectOf(PropTypes.string),
-  variant: PropTypes.string,
-  specimenClassName: PropTypes.string,
-};
