@@ -1,6 +1,6 @@
 import React from 'react';
 import { Icon } from '../../../src/components/Icon/Icon';
-import icons, { type IconName } from '../../../src/icons/spritemap/spritemap';
+import icons, { type IconName } from '../../../src/icons/spritemap';
 import './IconGrid.css';
 
 /**

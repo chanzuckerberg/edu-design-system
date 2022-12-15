@@ -4,9 +4,9 @@ import React, { useEffect } from 'react';
 import { useUID } from 'react-uid';
 import svg4everybody from 'svg4everybody';
 import styles from './Icon.module.css';
-import icons, { type IconName } from '../../icons/spritemap/spritemap';
+import icons, { type IconName } from '../../icons/spritemap';
 
-export type { IconName } from '../../icons/spritemap/spritemap';
+export type { IconName } from '../../icons/spritemap';
 
 interface IconPropsBase {
   /**
