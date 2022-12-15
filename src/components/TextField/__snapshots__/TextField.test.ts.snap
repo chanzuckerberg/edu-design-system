@@ -337,6 +337,7 @@ exports[`<TextField /> Error story renders snapshot 1`] = `
         height="1rem"
         role="img"
         style="--icon-size: 1rem;"
+        viewBox="0 0 24 24"
         width="1rem"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -345,8 +346,8 @@ exports[`<TextField /> Error story renders snapshot 1`] = `
         >
           error
         </title>
-        <use
-          xlink:href="test-file-stub#dangerous"
+        <path
+          d="M8.25 21L3 15.75V8.25L8.25 3H15.75L21 8.25V15.75L15.75 21H8.25ZM9.15 16.25L12 13.4L14.85 16.25L16.25 14.85L13.4 12L16.25 9.15L14.85 7.75L12 10.6L9.15 7.75L7.75 9.15L10.6 12L7.75 14.85L9.15 16.25Z"
         />
       </svg>
       This is a fieldnote with an error.
@@ -407,6 +408,7 @@ exports[`<TextField /> ErrorVariants story renders snapshot 1`] = `
           height="1rem"
           role="img"
           style="--icon-size: 1rem;"
+          viewBox="0 0 24 24"
           width="1rem"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -415,8 +417,8 @@ exports[`<TextField /> ErrorVariants story renders snapshot 1`] = `
           >
             error
           </title>
-          <use
-            xlink:href="test-file-stub#dangerous"
+          <path
+            d="M8.25 21L3 15.75V8.25L8.25 3H15.75L21 8.25V15.75L15.75 21H8.25ZM9.15 16.25L12 13.4L14.85 16.25L16.25 14.85L13.4 12L16.25 9.15L14.85 7.75L12 10.6L9.15 7.75L7.75 9.15L10.6 12L7.75 14.85L9.15 16.25Z"
           />
         </svg>
         fieldNote text
@@ -456,6 +458,7 @@ exports[`<TextField /> ErrorVariants story renders snapshot 1`] = `
           height="1rem"
           role="img"
           style="--icon-size: 1rem;"
+          viewBox="0 0 24 24"
           width="1rem"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -464,8 +467,8 @@ exports[`<TextField /> ErrorVariants story renders snapshot 1`] = `
           >
             error
           </title>
-          <use
-            xlink:href="test-file-stub#dangerous"
+          <path
+            d="M8.25 21L3 15.75V8.25L8.25 3H15.75L21 8.25V15.75L15.75 21H8.25ZM9.15 16.25L12 13.4L14.85 16.25L16.25 14.85L13.4 12L16.25 9.15L14.85 7.75L12 10.6L9.15 7.75L7.75 9.15L10.6 12L7.75 14.85L9.15 16.25Z"
           />
         </svg>
         fieldNote text
@@ -551,6 +554,7 @@ exports[`<TextField /> ErrorVariants story renders snapshot 1`] = `
           height="1rem"
           role="img"
           style="--icon-size: 1rem;"
+          viewBox="0 0 24 24"
           width="1rem"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -559,8 +563,8 @@ exports[`<TextField /> ErrorVariants story renders snapshot 1`] = `
           >
             error
           </title>
-          <use
-            xlink:href="test-file-stub#dangerous"
+          <path
+            d="M8.25 21L3 15.75V8.25L8.25 3H15.75L21 8.25V15.75L15.75 21H8.25ZM9.15 16.25L12 13.4L14.85 16.25L16.25 14.85L13.4 12L16.25 9.15L14.85 7.75L12 10.6L9.15 7.75L7.75 9.15L10.6 12L7.75 14.85L9.15 16.25Z"
           />
         </svg>
         fieldNote text
@@ -590,6 +594,7 @@ exports[`<TextField /> ErrorVariants story renders snapshot 1`] = `
           height="1rem"
           role="img"
           style="--icon-size: 1rem;"
+          viewBox="0 0 24 24"
           width="1rem"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -598,8 +603,8 @@ exports[`<TextField /> ErrorVariants story renders snapshot 1`] = `
           >
             error
           </title>
-          <use
-            xlink:href="test-file-stub#dangerous"
+          <path
+            d="M8.25 21L3 15.75V8.25L8.25 3H15.75L21 8.25V15.75L15.75 21H8.25ZM9.15 16.25L12 13.4L14.85 16.25L16.25 14.85L13.4 12L16.25 9.15L14.85 7.75L12 10.6L9.15 7.75L7.75 9.15L10.6 12L7.75 14.85L9.15 16.25Z"
           />
         </svg>
         fieldNote text
@@ -1297,6 +1302,7 @@ exports[`<TextField /> RequiredVariants story renders snapshot 1`] = `
           height="1rem"
           role="img"
           style="--icon-size: 1rem;"
+          viewBox="0 0 24 24"
           width="1rem"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -1305,8 +1311,8 @@ exports[`<TextField /> RequiredVariants story renders snapshot 1`] = `
           >
             error
           </title>
-          <use
-            xlink:href="test-file-stub#dangerous"
+          <path
+            d="M8.25 21L3 15.75V8.25L8.25 3H15.75L21 8.25V15.75L15.75 21H8.25ZM9.15 16.25L12 13.4L14.85 16.25L16.25 14.85L13.4 12L16.25 9.15L14.85 7.75L12 10.6L9.15 7.75L7.75 9.15L10.6 12L7.75 14.85L9.15 16.25Z"
           />
         </svg>
         fieldNote text
@@ -1352,6 +1358,7 @@ exports[`<TextField /> RequiredVariants story renders snapshot 1`] = `
           height="1rem"
           role="img"
           style="--icon-size: 1rem;"
+          viewBox="0 0 24 24"
           width="1rem"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -1360,8 +1367,8 @@ exports[`<TextField /> RequiredVariants story renders snapshot 1`] = `
           >
             error
           </title>
-          <use
-            xlink:href="test-file-stub#dangerous"
+          <path
+            d="M8.25 21L3 15.75V8.25L8.25 3H15.75L21 8.25V15.75L15.75 21H8.25ZM9.15 16.25L12 13.4L14.85 16.25L16.25 14.85L13.4 12L16.25 9.15L14.85 7.75L12 10.6L9.15 7.75L7.75 9.15L10.6 12L7.75 14.85L9.15 16.25Z"
           />
         </svg>
         fieldNote text

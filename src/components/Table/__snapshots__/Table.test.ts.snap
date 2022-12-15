@@ -582,6 +582,7 @@ exports[`<Table /> SortableInteractive story renders snapshot 1`] = `
               height="1rem"
               role="img"
               style="--icon-size: 1rem;"
+              viewBox="0 0 24 24"
               width="1rem"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -590,8 +591,8 @@ exports[`<Table /> SortableInteractive story renders snapshot 1`] = `
               >
                 Sort
               </title>
-              <use
-                xlink:href="test-file-stub#unfold-more"
+              <path
+                d="M8.95 9.04961L7.5 7.59961L12 3.09961L16.5 7.59961L15.05 9.04961L12 5.99961L8.95 9.04961ZM12 20.9996L7.5 16.4996L8.95 15.0496L12 18.0996L15.05 15.0496L16.5 16.4996L12 20.9996Z"
               />
             </svg>
           </button>

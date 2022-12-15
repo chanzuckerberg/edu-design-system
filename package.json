@@ -21,7 +21,7 @@
     "tailwind.config.js"
   ],
   "scripts": {
-    "build": "yarn build:clean && yarn build:tokens && yarn build:js && yarn build:styles && yarn copy-to-lib",
+    "build": "yarn build:clean && yarn build:tokens && yarn build:js && yarn build:styles && yarn copy-fonts-to-lib",
     "build:clean": "rm -rf lib/",
     "build:tokens": "rm -rf src/tokens-dist/ && node ./style-dictionary.config.js && yarn prettier-tokens-dist && yarn copy-tokens-to-lib",
     "build:js": "tsc --project tsconfig.build.json",
@@ -29,9 +29,7 @@
     "build:styles": "postcss \"src/components/**/*.css\" --dir lib/ --base src/ --verbose",
     "chromatic": "chromatic",
     "commit": "./node_modules/.bin/cz",
-    "copy-to-lib": "yarn copy-icons-to-lib && yarn copy-fonts-to-lib",
     "copy-fonts-to-lib": "copyfiles -u 3 src/design-tokens/tier-1-definitions/fonts.css src/design-tokens/tier-1-definitions/fonts/**/* lib/tokens",
-    "copy-icons-to-lib": "copyfiles -u 1 src/icons/spritemap/**/* lib",
     "copy-tokens-to-lib": "copyfiles -u 2 src/tokens-dist/**/* lib/tokens",
     "create-component": "plop",
     "deploy:docs": "NODE_OPTIONS=--openssl-legacy-provider storybook-to-ghpages --ci",
@@ -162,7 +160,6 @@
     "style-dictionary": "^3.7.1",
     "stylelint": "^14.16.0",
     "stylelint-config-recommended": "^9.0.0",
-    "svg-spritemap-webpack-plugin": "^3.9.1",
     "tailwindcss": "^3.2.4",
     "ts-jest": "^29.0.3",
     "typescript": "^4.8.3"

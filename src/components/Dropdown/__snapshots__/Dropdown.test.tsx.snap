@@ -32,11 +32,12 @@ exports[`<Dropdown /> Compact story renders snapshot 1`] = `
       fill="currentColor"
       height="1.25rem"
       style="--icon-size: 1.25rem;"
+      viewBox="0 0 24 24"
       width="1.25rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <use
-        xlink:href="test-file-stub#expand-more"
+      <path
+        d="M12 15.3746L6 9.37461L7.4 7.97461L12 12.5746L16.6 7.97461L18 9.37461L12 15.3746Z"
       />
     </svg>
   </button>
@@ -127,11 +128,12 @@ exports[`<Dropdown /> CompactUsingChildrenPropAndNoVisibleLabel story renders sn
       fill="currentColor"
       height="1.25rem"
       style="--icon-size: 1.25rem;"
+      viewBox="0 0 24 24"
       width="1.25rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <use
-        xlink:href="test-file-stub#expand-more"
+      <path
+        d="M12 15.3746L6 9.37461L7.4 7.97461L12 12.5746L16.6 7.97461L18 9.37461L12 15.3746Z"
       />
     </svg>
   </button>
@@ -222,11 +224,12 @@ exports[`<Dropdown /> CompactWithOptionsRightAligned story renders snapshot 1`] 
       fill="currentColor"
       height="1.25rem"
       style="--icon-size: 1.25rem;"
+      viewBox="0 0 24 24"
       width="1.25rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <use
-        xlink:href="test-file-stub#expand-more"
+      <path
+        d="M12 15.3746L6 9.37461L7.4 7.97461L12 12.5746L16.6 7.97461L18 9.37461L12 15.3746Z"
       />
     </svg>
   </button>
@@ -317,11 +320,12 @@ exports[`<Dropdown /> Default story renders snapshot 1`] = `
       fill="currentColor"
       height="1.25rem"
       style="--icon-size: 1.25rem;"
+      viewBox="0 0 24 24"
       width="1.25rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <use
-        xlink:href="test-file-stub#expand-more"
+      <path
+        d="M12 15.3746L6 9.37461L7.4 7.97461L12 12.5746L16.6 7.97461L18 9.37461L12 15.3746Z"
       />
     </svg>
   </button>
@@ -412,11 +416,12 @@ exports[`<Dropdown /> DefaultWithoutVisibleLabel story renders snapshot 1`] = `
       fill="currentColor"
       height="1.25rem"
       style="--icon-size: 1.25rem;"
+      viewBox="0 0 24 24"
       width="1.25rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <use
-        xlink:href="test-file-stub#expand-more"
+      <path
+        d="M12 15.3746L6 9.37461L7.4 7.97461L12 12.5746L16.6 7.97461L18 9.37461L12 15.3746Z"
       />
     </svg>
   </button>
@@ -507,11 +512,12 @@ exports[`<Dropdown /> SeparateButtonAndMenuWidth story renders snapshot 1`] = `
       fill="currentColor"
       height="1.25rem"
       style="--icon-size: 1.25rem;"
+      viewBox="0 0 24 24"
       width="1.25rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <use
-        xlink:href="test-file-stub#expand-more"
+      <path
+        d="M12 15.3746L6 9.37461L7.4 7.97461L12 12.5746L16.6 7.97461L18 9.37461L12 15.3746Z"
       />
     </svg>
   </button>
@@ -602,11 +608,12 @@ exports[`<Dropdown /> UsingChildrenProp story renders snapshot 1`] = `
       fill="currentColor"
       height="1.25rem"
       style="--icon-size: 1.25rem;"
+      viewBox="0 0 24 24"
       width="1.25rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <use
-        xlink:href="test-file-stub#expand-more"
+      <path
+        d="M12 15.3746L6 9.37461L7.4 7.97461L12 12.5746L16.6 7.97461L18 9.37461L12 15.3746Z"
       />
     </svg>
   </button>
@@ -697,11 +704,12 @@ exports[`<Dropdown /> UsingChildrenPropAndNoVisibleLabel story renders snapshot 
       fill="currentColor"
       height="1.25rem"
       style="--icon-size: 1.25rem;"
+      viewBox="0 0 24 24"
       width="1.25rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <use
-        xlink:href="test-file-stub#expand-more"
+      <path
+        d="M12 15.3746L6 9.37461L7.4 7.97461L12 12.5746L16.6 7.97461L18 9.37461L12 15.3746Z"
       />
     </svg>
   </button>
@@ -781,10 +789,11 @@ exports[`<Dropdown /> UsingFunctionChildrenProp story renders snapshot 1`] = `
       aria-hidden="true"
       class="icon function-children__icon"
       fill="currentColor"
+      viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <use
-        xlink:href="test-file-stub#filter-list"
+      <path
+        d="M10 18V16H14V18H10ZM3 8V6H21V8H3ZM6 13V11H18V13H6Z"
       />
     </svg>
   </button>
@@ -875,11 +884,12 @@ exports[`<Dropdown /> renders the OpenByDefault story 1`] = `
       fill="currentColor"
       height="1.25rem"
       style="--icon-size: 1.25rem;"
+      viewBox="0 0 24 24"
       width="1.25rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <use
-        xlink:href="test-file-stub#expand-more"
+      <path
+        d="M12 15.3746L6 9.37461L7.4 7.97461L12 12.5746L16.6 7.97461L18 9.37461L12 15.3746Z"
       />
     </svg>
   </button>
@@ -924,11 +934,12 @@ exports[`<Dropdown /> renders the OpenByDefault story 1`] = `
           fill="currentColor"
           height="1.25rem"
           style="--icon-size: 1.25rem;"
+          viewBox="0 0 24 24"
           width="1.25rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <use
-            xlink:href="test-file-stub#check"
+          <path
+            d="M9.55001 17.9996L3.85001 12.2996L5.27501 10.8746L9.55001 15.1496L18.725 5.97461L20.15 7.39961L9.55001 17.9996Z"
           />
         </svg>
       </span>

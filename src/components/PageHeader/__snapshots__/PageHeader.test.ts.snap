@@ -123,6 +123,7 @@ exports[`<PageHeader /> WithBreadcrumbs story renders snapshot 1`] = `
               class="icon breadcrumbs__back-icon"
               fill="currentColor"
               role="img"
+              viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
             >
               <title
@@ -130,8 +131,8 @@ exports[`<PageHeader /> WithBreadcrumbs story renders snapshot 1`] = `
               >
                 My Courses
               </title>
-              <use
-                xlink:href="test-file-stub#chevron-left"
+              <path
+                d="M16 22L6 12L16 2L17.775 3.775L9.55 12L17.775 20.225L16 22Z"
               />
             </svg>
           </a>
