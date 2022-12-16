@@ -65,8 +65,6 @@ export { default as PageHeader } from './components/PageHeader';
 export { default as PageLevelBanner } from './components/PageLevelBanner';
 export { default as Panel } from './components/Panel';
 export { default as Popover } from './components/Popover';
-export { default as PopoverButton } from './components/PopoverButton';
-export { default as PopoverContent } from './components/PopoverContent';
 export { default as PopoverListItem } from './components/PopoverListItem';
 export { default as ProgressBar } from './components/ProgressBar';
 export { default as ProjectCard } from './components/ProjectCard';
