@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Badge /> Default story renders snapshot 1`] = `
+<span
+  class="badge__wrapper"
+>
+  <div
+    class="badge"
+  />
+  <div
+    class="fpo flex items-center justify-center h-8 w-8"
+  >
+    Ava
+  </div>
+</span>
+`;
+
+exports[`<Badge /> IconBadge story renders snapshot 1`] = `
+<span
+  class="badge__wrapper"
+>
+  <div
+    class="badge"
+  >
+    <svg
+      aria-hidden="true"
+      class="icon"
+      fill="currentColor"
+      height="1rem"
+      style="--icon-size: 1rem;"
+      width="1rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <use
+        xlink:href="test-file-stub#alarm"
+      />
+    </svg>
+  </div>
+  <div
+    class="fpo flex items-center justify-center h-8 w-8"
+  >
+    Ava
+  </div>
+</span>
+`;
+
+exports[`<Badge /> LargeBadgeableObject story renders snapshot 1`] = `
+<span
+  class="badge__wrapper"
+>
+  <div
+    class="badge"
+  >
+    10
+  </div>
+  <div
+    class="fpo flex items-center justify-center w-96 h-96"
+  >
+    Badge-able Obj
+  </div>
+</span>
+`;
+
+exports[`<Badge /> LargeNumber story renders snapshot 1`] = `
+<span
+  class="badge__wrapper"
+>
+  <div
+    class="badge"
+  >
+    999
+  </div>
+  <div
+    class="fpo flex items-center justify-center h-8 w-8"
+  >
+    Ava
+  </div>
+</span>
+`;
+
+exports[`<Badge /> LargerThanLargeNumber story renders snapshot 1`] = `
+<span
+  class="badge__wrapper"
+>
+  <div
+    class="badge"
+  >
+    99+
+  </div>
+  <div
+    class="fpo flex items-center justify-center h-8 w-8"
+  >
+    Ava
+  </div>
+</span>
+`;
+
+exports[`<Badge /> SmallNumber story renders snapshot 1`] = `
+<span
+  class="badge__wrapper"
+>
+  <div
+    class="badge"
+  >
+    1
+  </div>
+  <div
+    class="fpo flex items-center justify-center h-8 w-8"
+  >
+    Ava
+  </div>
+</span>
+`;
