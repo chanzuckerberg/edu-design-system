@@ -6,7 +6,7 @@ export interface Props {
   /**
    * Text or icon to be placed on the upper right corner of the badgeable element.
    *
-   * TODO-JL: prop naming
+   * TODO-JL: prop naming / typing
    */
   badge?: React.ReactNode;
   /**
@@ -28,7 +28,11 @@ export interface Props {
  * A badge indicates something has changed in regards to the attached element.
  */
 export const Badge = ({ badge, children, className, ...other }: Props) => {
-  const componentClassName = clsx(styles['badge'], className);
+  const componentClassName = clsx(
+    styles['badge'],
+    !badge && styles['badge--empty'],
+    className,
+  );
 
   return (
     <span className={styles['badge__wrapper']}>

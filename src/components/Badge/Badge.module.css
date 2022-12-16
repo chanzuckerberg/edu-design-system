@@ -46,3 +46,11 @@
 
   @mixin eds-theme-typography-caption-text-sm;
 }
+
+/**
+ * Empty badge variant for visual indication purposes.
+ */
+.badge--empty {
+  --badge-height: var(--eds-size-2);
+  padding: 0;
+}

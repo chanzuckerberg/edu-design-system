@@ -6,7 +6,8 @@ import { Badge } from './Badge';
 import Icon from '../Icon';
 
 export default {
-  title: 'PleaseUpdateThisToADifferentFolder/Badge',
+  // TODO-JL: Appropriate storybook folder?
+  title: 'Molecules/Messaging/Badge',
   component: Badge,
   args: {
     children: (
