@@ -2002,7 +2002,7 @@ __metadata:
     "@commitlint/config-conventional": ^16.2.4
     "@commitlint/prompt-cli": ^16.3.0
     "@geometricpanda/storybook-addon-badges": ^0.2.2
-    "@headlessui/react": ^1.7.6
+    "@headlessui/react": ^1.7.7
     "@popperjs/core": ^2.11.6
     "@size-limit/preset-small-lib": ^4.12.0
     "@storybook/addon-a11y": ^6.5.14
@@ -2027,7 +2027,7 @@ __metadata:
     "@types/react-dom": ^17.0.18
     "@types/react-portal": ^4.0.4
     "@types/svg4everybody": ^2.1.2
-    axe-core: ^4.6.1
+    axe-core: ^4.4.3
     chromatic: ^6.13.1
     clsx: ^1.2.1
     codecov: ^3.8.3
@@ -2588,7 +2588,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@headlessui/react@npm:^1.7.6":
+"@headlessui/react@npm:^1.7.7":
   version: 1.7.7
   resolution: "@headlessui/react@npm:1.7.7"
   dependencies:
@@ -7166,13 +7166,6 @@ __metadata:
   version: 4.4.3
   resolution: "axe-core@npm:4.4.3"
   checksum: c3ea000d9ace3ba0bc747c8feafc24b0de62a0f7d93021d0f77b19c73fca15341843510f6170da563d51535d6cfb7a46c5fc0ea36170549dbb44b170208450a2
-  languageName: node
-  linkType: hard
-
-"axe-core@npm:^4.6.1":
-  version: 4.6.1
-  resolution: "axe-core@npm:4.6.1"
-  checksum: a376c9e29499711d67219b9f9b5e97bcf9d8e4cd11316e4d68807054a1eae5054d93ccb37785851c0db64e54d132586ded807d18fb206c668138b53c6ae24d4d
   languageName: node
   linkType: hard
 

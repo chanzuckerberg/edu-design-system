@@ -16,7 +16,7 @@ exports[`<Dropdown /> Compact story renders snapshot 1`] = `
   <button
     aria-controls="headlessui-listbox-options-15"
     aria-expanded="true"
-    aria-haspopup="true"
+    aria-haspopup="listbox"
     aria-labelledby="headlessui-listbox-label-13 headlessui-listbox-button-14"
     class="dropdown-button dropdown-button--compact"
     data-headlessui-state="open"
@@ -111,7 +111,7 @@ exports[`<Dropdown /> CompactUsingChildrenPropAndNoVisibleLabel story renders sn
   <button
     aria-controls="headlessui-listbox-options-45"
     aria-expanded="true"
-    aria-haspopup="true"
+    aria-haspopup="listbox"
     aria-labelledby="headlessui-listbox-label-43 headlessui-listbox-button-44"
     class="dropdown-button dropdown-button--compact"
     data-headlessui-state="open"
@@ -206,7 +206,7 @@ exports[`<Dropdown /> CompactWithOptionsRightAligned story renders snapshot 1`] 
   <button
     aria-controls="headlessui-listbox-options-21"
     aria-expanded="true"
-    aria-haspopup="true"
+    aria-haspopup="listbox"
     aria-labelledby="headlessui-listbox-label-19 headlessui-listbox-button-20"
     class="dropdown-button dropdown-button--compact"
     data-headlessui-state="open"
@@ -301,7 +301,7 @@ exports[`<Dropdown /> Default story renders snapshot 1`] = `
   <button
     aria-controls="headlessui-listbox-options-3"
     aria-expanded="true"
-    aria-haspopup="true"
+    aria-haspopup="listbox"
     aria-labelledby="headlessui-listbox-label-1 headlessui-listbox-button-2"
     class="dropdown-button"
     data-headlessui-state="open"
@@ -396,7 +396,7 @@ exports[`<Dropdown /> DefaultWithoutVisibleLabel story renders snapshot 1`] = `
   <button
     aria-controls="headlessui-listbox-options-9"
     aria-expanded="true"
-    aria-haspopup="true"
+    aria-haspopup="listbox"
     aria-labelledby="headlessui-listbox-label-7 headlessui-listbox-button-8"
     class="dropdown-button"
     data-headlessui-state="open"
@@ -491,7 +491,7 @@ exports[`<Dropdown /> SeparateButtonAndMenuWidth story renders snapshot 1`] = `
   <button
     aria-controls="headlessui-listbox-options-27"
     aria-expanded="true"
-    aria-haspopup="true"
+    aria-haspopup="listbox"
     aria-labelledby="headlessui-listbox-label-25 headlessui-listbox-button-26"
     class="dropdown-button"
     data-headlessui-state="open"
@@ -586,7 +586,7 @@ exports[`<Dropdown /> UsingChildrenProp story renders snapshot 1`] = `
   <button
     aria-controls="headlessui-listbox-options-33"
     aria-expanded="true"
-    aria-haspopup="true"
+    aria-haspopup="listbox"
     aria-labelledby="headlessui-listbox-label-31 headlessui-listbox-button-32"
     class="dropdown-button"
     data-headlessui-state="open"
@@ -681,7 +681,7 @@ exports[`<Dropdown /> UsingChildrenPropAndNoVisibleLabel story renders snapshot 
   <button
     aria-controls="headlessui-listbox-options-39"
     aria-expanded="true"
-    aria-haspopup="true"
+    aria-haspopup="listbox"
     aria-labelledby="headlessui-listbox-label-37 headlessui-listbox-button-38"
     class="dropdown-button"
     data-headlessui-state="open"
@@ -770,7 +770,7 @@ exports[`<Dropdown /> UsingFunctionChildrenProp story renders snapshot 1`] = `
   <button
     aria-controls="headlessui-listbox-options-50"
     aria-expanded="true"
-    aria-haspopup="true"
+    aria-haspopup="listbox"
     class="function-children__button"
     data-headlessui-state="open"
     id="headlessui-listbox-button-49"
@@ -859,7 +859,7 @@ exports[`<Dropdown /> renders the OpenByDefault story 1`] = `
   <button
     aria-controls="headlessui-listbox-options-56"
     aria-expanded="true"
-    aria-haspopup="true"
+    aria-haspopup="listbox"
     aria-labelledby="headlessui-listbox-label-54 headlessui-listbox-button-55"
     class="dropdown-button"
     data-headlessui-state="open"
