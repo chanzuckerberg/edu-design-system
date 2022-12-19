@@ -36,10 +36,10 @@ export const Badge = ({ badge, children, className, ...other }: Props) => {
 
   return (
     <span className={styles['badge__wrapper']}>
+      {children}
       <div className={componentClassName} {...other}>
         {badge}
       </div>
-      {children}
     </span>
   );
 };

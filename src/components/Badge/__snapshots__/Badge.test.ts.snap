@@ -5,13 +5,13 @@ exports[`<Badge /> Default story renders snapshot 1`] = `
   class="badge__wrapper"
 >
   <div
-    class="badge badge--empty"
-  />
-  <div
     class="fpo flex items-center justify-center h-8 w-8"
   >
     Ava
   </div>
+  <div
+    class="badge badge--empty"
+  />
 </span>
 `;
 
@@ -19,6 +19,11 @@ exports[`<Badge /> IconBadge story renders snapshot 1`] = `
 <span
   class="badge__wrapper"
 >
+  <div
+    class="fpo flex items-center justify-center h-8 w-8"
+  >
+    Ava
+  </div>
   <div
     class="badge"
   >
@@ -36,11 +41,6 @@ exports[`<Badge /> IconBadge story renders snapshot 1`] = `
       />
     </svg>
   </div>
-  <div
-    class="fpo flex items-center justify-center h-8 w-8"
-  >
-    Ava
-  </div>
 </span>
 `;
 
@@ -49,14 +49,14 @@ exports[`<Badge /> LargeBadgeableObject story renders snapshot 1`] = `
   class="badge__wrapper"
 >
   <div
-    class="badge"
-  >
-    10
-  </div>
-  <div
     class="fpo flex items-center justify-center w-96 h-96"
   >
     Badge-able Obj
+  </div>
+  <div
+    class="badge"
+  >
+    10
   </div>
 </span>
 `;
@@ -66,14 +66,14 @@ exports[`<Badge /> LargeNumber story renders snapshot 1`] = `
   class="badge__wrapper"
 >
   <div
-    class="badge"
-  >
-    999
-  </div>
-  <div
     class="fpo flex items-center justify-center h-8 w-8"
   >
     Ava
+  </div>
+  <div
+    class="badge"
+  >
+    999
   </div>
 </span>
 `;
@@ -83,14 +83,14 @@ exports[`<Badge /> LargerThanLargeNumber story renders snapshot 1`] = `
   class="badge__wrapper"
 >
   <div
-    class="badge"
-  >
-    99+
-  </div>
-  <div
     class="fpo flex items-center justify-center h-8 w-8"
   >
     Ava
+  </div>
+  <div
+    class="badge"
+  >
+    99+
   </div>
 </span>
 `;
@@ -100,14 +100,14 @@ exports[`<Badge /> SmallNumber story renders snapshot 1`] = `
   class="badge__wrapper"
 >
   <div
-    class="badge"
-  >
-    1
-  </div>
-  <div
     class="fpo flex items-center justify-center h-8 w-8"
   >
     Ava
+  </div>
+  <div
+    class="badge"
+  >
+    1
   </div>
 </span>
 `;
