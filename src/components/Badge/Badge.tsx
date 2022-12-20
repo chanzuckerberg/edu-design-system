@@ -15,7 +15,7 @@ type BadgeProps = {
   className?: string;
   // TODO-JL: appropriate prop name? i.e. variant?: 'empty' or empty?: boolean?
   /**
-   * Empty variant of the badge with a smaller badge circle.
+   * Empty variant of the badge with a smaller badge circle and no content.
    */
   empty?: boolean;
 };
@@ -31,7 +31,7 @@ type BadgeTextProps = {
   /**
    * Text to be placed on the upper right corner of the badgeable element.
    */
-  children: string;
+  children?: string;
   /**
    * CSS class names that can be appended to the component.
    */
@@ -56,7 +56,11 @@ const BadgeText = ({ children, className, ...other }: BadgeTextProps) => {
   /**
    * Throws error if string length is too long for badge.
    */
-  if (process.env.NODE_ENV !== 'production' && children.length > 3) {
+  if (
+    process.env.NODE_ENV !== 'production' &&
+    children &&
+    children.length > 3
+  ) {
     throw 'Max badge text length is 3';
   }
   return (
