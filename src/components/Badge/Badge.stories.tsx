@@ -9,10 +9,8 @@ export default {
   // TODO-JL: Appropriate storybook folder?
   title: 'Molecules/Messaging/Badge',
   component: Badge,
-  args: {
-    children: (
-      <div className="fpo flex items-center justify-center h-8 w-8">Ava</div>
-    ),
+  subcomponents: {
+    'Badge.Wrapper': Badge.Wrapper,
   },
   parameters: {
     layout: 'centered',
@@ -22,40 +20,60 @@ export default {
 
 type Args = React.ComponentProps<typeof Badge>;
 
-export const Default: StoryObj<Args> = {};
+export const Default: StoryObj<Args> = {
+  render: () => (
+    <Badge.Wrapper>
+      <div className="fpo flex items-center justify-center h-8 w-8">Ava</div>
+      <Badge />
+    </Badge.Wrapper>
+  ),
+};
 
 export const SmallNumber: StoryObj<Args> = {
-  args: {
-    badge: '1',
-  },
+  render: () => (
+    <Badge.Wrapper>
+      <div className="fpo flex items-center justify-center h-8 w-8">Ava</div>
+      <Badge>1</Badge>
+    </Badge.Wrapper>
+  ),
 };
 
 export const LargeNumber: StoryObj<Args> = {
-  args: {
-    badge: '999',
-  },
+  render: () => (
+    <Badge.Wrapper>
+      <div className="fpo flex items-center justify-center h-8 w-8">Ava</div>
+      <Badge>999</Badge>
+    </Badge.Wrapper>
+  ),
 };
 
-// TODO-JL: cheeky story naming
-export const LargerThanLargeNumber: StoryObj<Args> = {
-  args: {
-    badge: '99+',
-  },
+export const OverNineThousand: StoryObj<Args> = {
+  render: () => (
+    <Badge.Wrapper>
+      <div className="fpo flex items-center justify-center h-8 w-8">Ava</div>
+      <Badge>99+</Badge>
+    </Badge.Wrapper>
+  ),
 };
 
 export const IconBadge: StoryObj<Args> = {
-  args: {
-    badge: <Icon name="alarm" purpose="decorative" size="1rem" />,
-  },
+  render: () => (
+    <Badge.Wrapper>
+      <div className="fpo flex items-center justify-center h-8 w-8">Ava</div>
+      <Badge>
+        <Icon name="alarm" purpose="decorative" size="1rem" />
+      </Badge>
+    </Badge.Wrapper>
+  ),
 };
 
 export const LargeBadgeableObject: StoryObj<Args> = {
-  args: {
-    badge: '10',
-    children: (
+  render: () => (
+    <Badge.Wrapper>
       <div className="fpo flex items-center justify-center w-96 h-96">
         Badge-able Obj
       </div>
-    ),
-  },
+      <Badge>10</Badge>
+    </Badge.Wrapper>
+  ),
 };

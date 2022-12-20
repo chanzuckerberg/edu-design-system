@@ -2,13 +2,7 @@ import clsx from 'clsx';
 import React from 'react';
 import styles from './Badge.module.css';
 
-export interface Props {
-  /**
-   * Text or icon to be placed on the upper right corner of the badgeable element.
-   *
-   * TODO-JL: prop naming / typing
-   */
-  badge?: React.ReactNode;
+type BadgeWrapperProps = {
   /**
    * Child node to apply the badge to.
    */
@@ -17,7 +11,31 @@ export interface Props {
    * CSS class names that can be appended to the component.
    */
   className?: string;
-}
+};
+
+type BadgeProps = {
+  /**
+   * Text or icon to be placed on the upper right corner of the badgeable element.
+   */
+  children?: React.ReactNode;
+  /**
+   * CSS class names that can be appended to the component.
+   */
+  className?: string;
+};
+
+/**
+ * Helper to the Badge component to wrap the Badge and associated badge-able object.
+ */
+const BadgeWrapper = ({ children, className, ...other }: BadgeWrapperProps) => {
+  const componentClassName = clsx(styles['badge__wrapper'], className);
+
+  return (
+    <div className={componentClassName} {...other}>
+      {children}
+    </div>
+  );
+};
 
 /**
  * BETA: This component is still a work in progress and is subject to change.
@@ -26,20 +44,28 @@ export interface Props {
  *
  * Wraps an element to apply a small pill shaped container (Badge) on the upper righthand corner of the element.
  * A badge indicates something has changed in regards to the attached element.
+ *
+ * Example usage:
+ *
+ * ```tsx
+ * <Badge.Wrapper>
+ *   {badgeableObject}
+ *   <Badge>1</Badge>
+ * </Badge.Wrapper>
+ * ```
  */
-export const Badge = ({ badge, children, className, ...other }: Props) => {
+export const Badge = ({ children, className, ...other }: BadgeProps) => {
   const componentClassName = clsx(
     styles['badge'],
-    !badge && styles['badge--empty'],
+    !children && styles['badge--empty'],
     className,
   );
 
   return (
-    <span className={styles['badge__wrapper']}>
+    <div className={componentClassName} {...other}>
       {children}
-      <div className={componentClassName} {...other}>
-        {badge}
-      </div>
-    </span>
+    </div>
   );
 };
+
+Badge.Wrapper = BadgeWrapper;

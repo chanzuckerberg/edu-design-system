@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Badge /> Default story renders snapshot 1`] = `
-<span
+<div
   class="badge__wrapper"
 >
   <div
@@ -12,11 +12,11 @@ exports[`<Badge /> Default story renders snapshot 1`] = `
   <div
     class="badge badge--empty"
   />
-</span>
+</div>
 `;
 
 exports[`<Badge /> IconBadge story renders snapshot 1`] = `
-<span
+<div
   class="badge__wrapper"
 >
   <div
@@ -41,11 +41,11 @@ exports[`<Badge /> IconBadge story renders snapshot 1`] = `
       />
     </svg>
   </div>
-</span>
+</div>
 `;
 
 exports[`<Badge /> LargeBadgeableObject story renders snapshot 1`] = `
-<span
+<div
   class="badge__wrapper"
 >
   <div
@@ -58,11 +58,11 @@ exports[`<Badge /> LargeBadgeableObject story renders snapshot 1`] = `
   >
     10
   </div>
-</span>
+</div>
 `;
 
 exports[`<Badge /> LargeNumber story renders snapshot 1`] = `
-<span
+<div
   class="badge__wrapper"
 >
   <div
@@ -75,11 +75,11 @@ exports[`<Badge /> LargeNumber story renders snapshot 1`] = `
   >
     999
   </div>
-</span>
+</div>
 `;
 
-exports[`<Badge /> LargerThanLargeNumber story renders snapshot 1`] = `
-<span
+exports[`<Badge /> OverNineThousand story renders snapshot 1`] = `
+<div
   class="badge__wrapper"
 >
   <div
@@ -92,11 +92,11 @@ exports[`<Badge /> LargerThanLargeNumber story renders snapshot 1`] = `
   >
     99+
   </div>
-</span>
+</div>
 `;
 
 exports[`<Badge /> SmallNumber story renders snapshot 1`] = `
-<span
+<div
   class="badge__wrapper"
 >
   <div
@@ -109,5 +109,5 @@ exports[`<Badge /> SmallNumber story renders snapshot 1`] = `
   >
     1
   </div>
-</span>
+</div>
 `;
