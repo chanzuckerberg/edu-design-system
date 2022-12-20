@@ -1,17 +1,8 @@
 import clsx from 'clsx';
 import React from 'react';
 import styles from './Badge.module.css';
-
-type BadgeWrapperProps = {
-  /**
-   * Child node to apply the badge to.
-   */
-  children: React.ReactNode;
-  /**
-   * CSS class names that can be appended to the component.
-   */
-  className?: string;
-};
+import Icon from '../Icon';
+import type { IconName, IconProps } from '../Icon';
 
 type BadgeProps = {
   /**
@@ -22,16 +13,54 @@ type BadgeProps = {
    * CSS class names that can be appended to the component.
    */
   className?: string;
+  // TODO-JL: appropriate prop name? i.e. variant?: 'empty' or empty?: boolean?
+  /**
+   * Empty variant of the badge with a smaller badge circle.
+   */
+  empty?: boolean;
 };
 
-/**
- * Helper to the Badge component to wrap the Badge and associated badge-able object.
- */
-const BadgeWrapper = ({ children, className, ...other }: BadgeWrapperProps) => {
-  const componentClassName = clsx(styles['badge__wrapper'], className);
+type BadgeIconProps = Omit<IconProps, 'purpose' | 'name'> & {
+  /**
+   * Name of icon to render.
+   */
+  name: IconName;
+};
 
+type BadgeTextProps = {
+  /**
+   * Text to be placed on the upper right corner of the badgeable element.
+   */
+  children: string;
+  /**
+   * CSS class names that can be appended to the component.
+   */
+  className?: string;
+};
+
+const BadgeIcon = ({ className, ...other }: BadgeIconProps) => {
+  const componentClassName = clsx(styles['badge'], className);
   return (
-    <div className={componentClassName} {...other}>
+    <div aria-hidden className={componentClassName}>
+      <Icon purpose="decorative" size="1rem" {...other} />
+    </div>
+  );
+};
+
+const BadgeText = ({ children, className, ...other }: BadgeTextProps) => {
+  const componentClassName = clsx(
+    styles['badge'],
+    !children && styles['badge--empty'],
+    className,
+  );
+  /**
+   * Throws error if string length is too long for badge.
+   */
+  if (process.env.NODE_ENV !== 'production' && children.length > 3) {
+    throw 'Max badge text length is 3';
+  }
+  return (
+    <div aria-hidden className={componentClassName} {...other}>
       {children}
     </div>
   );
@@ -45,27 +74,36 @@ const BadgeWrapper = ({ children, className, ...other }: BadgeWrapperProps) => {
  * Wraps an element to apply a small pill shaped container (Badge) on the upper righthand corner of the element.
  * A badge indicates something has changed in regards to the attached element.
  *
+ * The attached element MUST have accessible name and other relevant aria properties in relevance to the badge.
+ *
  * Example usage:
  *
  * ```tsx
- * <Badge.Wrapper>
+ * <Badge empty>
+ *  {badgeableObject}
+ * </Badge>
+ *
+ * <Badge>
  *   {badgeableObject}
- *   <Badge>1</Badge>
- * </Badge.Wrapper>
+ *   <Badge.Text>1</Badge.Text>
+ * </Badge>
+ *
+ * <Badge>
+ *   {badgeableObject}
+ *   <Badge.Icon name="alarm"/>
+ * </Badge>
  * ```
  */
-export const Badge = ({ children, className, ...other }: BadgeProps) => {
-  const componentClassName = clsx(
-    styles['badge'],
-    !children && styles['badge--empty'],
-    className,
-  );
-
+export const Badge = ({ children, className, empty, ...other }: BadgeProps) => {
+  const componentClassName = clsx(styles['badge__wrapper'], className);
+  const emptyBadgeClassName = clsx(styles['badge'], styles['badge--empty']);
   return (
     <div className={componentClassName} {...other}>
       {children}
+      {empty && <div aria-hidden className={emptyBadgeClassName} {...other} />}
     </div>
   );
 };
 
-Badge.Wrapper = BadgeWrapper;
+Badge.Icon = BadgeIcon;
+Badge.Text = BadgeText;

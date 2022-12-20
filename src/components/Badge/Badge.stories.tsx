@@ -3,14 +3,13 @@ import type { StoryObj, Meta } from '@storybook/react';
 
 import React from 'react';
 import { Badge } from './Badge';
-import Icon from '../Icon';
 
 export default {
-  // TODO-JL: Appropriate storybook folder?
   title: 'Molecules/Messaging/Badge',
   component: Badge,
   subcomponents: {
-    'Badge.Wrapper': Badge.Wrapper,
+    'Badge.Icon': Badge.Icon,
+    'Badge.Text': Badge.Text,
   },
   parameters: {
     layout: 'centered',
@@ -20,60 +19,79 @@ export default {
 
 type Args = React.ComponentProps<typeof Badge>;
 
-export const Default: StoryObj<Args> = {
-  render: () => (
-    <Badge.Wrapper>
+export const Empty: StoryObj<Args> = {
+  args: {
+    empty: true,
+    children: (
       <div className="fpo flex items-center justify-center h-8 w-8">Ava</div>
-      <Badge />
-    </Badge.Wrapper>
-  ),
+    ),
+  },
+};
+
+export const EmptyText: StoryObj<Args> = {
+  args: {
+    children: (
+      <>
+        <div className="fpo flex items-center justify-center h-8 w-8">Ava</div>
+        <Badge.Text>{''}</Badge.Text>
+      </>
+    ),
+  },
 };
 
 export const SmallNumber: StoryObj<Args> = {
-  render: () => (
-    <Badge.Wrapper>
-      <div className="fpo flex items-center justify-center h-8 w-8">Ava</div>
-      <Badge>1</Badge>
-    </Badge.Wrapper>
-  ),
+  args: {
+    children: (
+      <>
+        <div className="fpo flex items-center justify-center h-8 w-8">Ava</div>
+        <Badge.Text>1</Badge.Text>
+      </>
+    ),
+  },
 };
 
 export const LargeNumber: StoryObj<Args> = {
-  render: () => (
-    <Badge.Wrapper>
-      <div className="fpo flex items-center justify-center h-8 w-8">Ava</div>
-      <Badge>999</Badge>
-    </Badge.Wrapper>
-  ),
+  args: {
+    children: (
+      <>
+        <div className="fpo flex items-center justify-center h-8 w-8">Ava</div>
+        <Badge.Text>999</Badge.Text>
+      </>
+    ),
+  },
 };
 
 export const OverNineThousand: StoryObj<Args> = {
-  render: () => (
-    <Badge.Wrapper>
-      <div className="fpo flex items-center justify-center h-8 w-8">Ava</div>
-      <Badge>99+</Badge>
-    </Badge.Wrapper>
-  ),
+  args: {
+    children: (
+      <>
+        <div className="fpo flex items-center justify-center h-8 w-8">Ava</div>
+        <Badge.Text>99+</Badge.Text>
+      </>
+    ),
+  },
 };
 
 export const IconBadge: StoryObj<Args> = {
-  render: () => (
-    <Badge.Wrapper>
-      <div className="fpo flex items-center justify-center h-8 w-8">Ava</div>
-      <Badge>
-        <Icon name="alarm" purpose="decorative" size="1rem" />
-      </Badge>
-    </Badge.Wrapper>
-  ),
+  args: {
+    children: (
+      <>
+        <div className="fpo flex items-center justify-center h-8 w-8">Ava</div>
+        <Badge.Icon name="alarm" />
+      </>
+    ),
+  },
 };
 
 export const LargeBadgeableObject: StoryObj<Args> = {
-  render: () => (
-    <Badge.Wrapper>
-      <div className="fpo flex items-center justify-center w-96 h-96">
-        Badge-able Obj
-      </div>
-      <Badge>10</Badge>
-    </Badge.Wrapper>
-  ),
+  args: {
+    children: (
+      <>
+        <div className="fpo flex items-center justify-center w-96 h-96">
+          Badge-able Obj
+        </div>
+        <Badge.Text>10</Badge.Text>
+      </>
+    ),
+  },
 };
