@@ -6,18 +6,14 @@ import type { IconName, IconProps } from '../Icon';
 
 type BadgeProps = {
   /**
-   * Text or icon to be placed on the upper right corner of the badgeable element.
+   * Badgeable object MUST have accessible name describing the attached badge.
+   * Wraps the badgeable object and the element on its upper right corner.
    */
   children?: React.ReactNode;
   /**
    * CSS class names that can be appended to the component.
    */
   className?: string;
-  // TODO-JL: appropriate prop name? i.e. variant?: 'empty' or empty?: boolean?
-  /**
-   * Empty variant of the badge with a smaller badge circle and no content.
-   */
-  empty?: boolean;
 };
 
 type BadgeIconProps = Omit<IconProps, 'purpose' | 'name'> & {
@@ -70,6 +66,8 @@ const BadgeText = ({ children, className, ...other }: BadgeTextProps) => {
   );
 };
 
+const BadgeDot = () => <BadgeText />;
+
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
@@ -83,8 +81,9 @@ const BadgeText = ({ children, className, ...other }: BadgeTextProps) => {
  * Example usage:
  *
  * ```tsx
- * <Badge empty>
+ * <Badge>
  *  {badgeableObject}
+ *  <Badge.Dot />
  * </Badge>
  *
  * <Badge>
@@ -98,16 +97,15 @@ const BadgeText = ({ children, className, ...other }: BadgeTextProps) => {
  * </Badge>
  * ```
  */
-export const Badge = ({ children, className, empty, ...other }: BadgeProps) => {
+export const Badge = ({ children, className, ...other }: BadgeProps) => {
   const componentClassName = clsx(styles['badge__wrapper'], className);
-  const emptyBadgeClassName = clsx(styles['badge'], styles['badge--empty']);
   return (
     <div className={componentClassName} {...other}>
       {children}
-      {empty && <div aria-hidden className={emptyBadgeClassName} {...other} />}
     </div>
   );
 };
 
+Badge.Dot = BadgeDot;
 Badge.Icon = BadgeIcon;
 Badge.Text = BadgeText;

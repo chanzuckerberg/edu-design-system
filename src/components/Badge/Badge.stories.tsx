@@ -8,6 +8,7 @@ export default {
   title: 'Molecules/Messaging/Badge',
   component: Badge,
   subcomponents: {
+    'Badge.Dot': Badge.Dot,
     'Badge.Icon': Badge.Icon,
     'Badge.Text': Badge.Text,
   },
@@ -19,16 +20,18 @@ export default {
 
 type Args = React.ComponentProps<typeof Badge>;
 
-export const Empty: StoryObj<Args> = {
+export const Dot: StoryObj<Args> = {
   args: {
-    empty: true,
     children: (
-      <div
-        aria-label="Ava has notification"
-        className="fpo flex items-center justify-center h-8 w-8"
-      >
-        Ava
-      </div>
+      <>
+        <div
+          aria-label="Ava has notification"
+          className="fpo flex items-center justify-center h-8 w-8"
+        >
+          Ava
+        </div>
+        <Badge.Dot />
+      </>
     ),
   },
 };
