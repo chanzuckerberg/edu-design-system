@@ -70,4 +70,6 @@ const IconGrid = () => (
   </div>
 );
 
+// Stories exist as mdx extension
+// eslint-disable-next-line @chanzuckerberg/stories/no-components-without-story
 export default IconGrid;
