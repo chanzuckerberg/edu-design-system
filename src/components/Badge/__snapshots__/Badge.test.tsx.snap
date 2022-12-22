@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Badge /> Dot story renders snapshot 1`] = `
+<div
+  class="badge__wrapper"
+>
+  <div
+    aria-label="Ava has notification"
+    class="fpo flex items-center justify-center h-8 w-8"
+  >
+    Ava
+  </div>
+  <div
+    aria-hidden="true"
+    class="badge badge--empty"
+  />
+</div>
+`;
+
+exports[`<Badge /> IconBadge story renders snapshot 1`] = `
+<div
+  class="badge__wrapper"
+>
+  <div
+    aria-label="Ava alert"
+    class="fpo flex items-center justify-center h-8 w-8"
+  >
+    Ava
+  </div>
+  <div
+    aria-hidden="true"
+    class="badge"
+  >
+    <svg
+      aria-hidden="true"
+      class="icon"
+      fill="currentColor"
+      height="1rem"
+      style="--icon-size: 1rem;"
+      width="1rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <use
+        xlink:href="test-file-stub#alarm"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`<Badge /> LargeBadgeableObject story renders snapshot 1`] = `
+<div
+  class="badge__wrapper"
+>
+  <div
+    aria-label="Badge-able Obj has 10 notifications"
+    class="fpo flex items-center justify-center w-96 h-96"
+  >
+    Badge-able Obj
+  </div>
+  <div
+    aria-hidden="true"
+    class="badge"
+  >
+    10
+  </div>
+</div>
+`;
+
+exports[`<Badge /> LargeNumber story renders snapshot 1`] = `
+<div
+  class="badge__wrapper"
+>
+  <div
+    aria-label="Ava has 999 notifications"
+    class="fpo flex items-center justify-center h-8 w-8"
+  >
+    Ava
+  </div>
+  <div
+    aria-hidden="true"
+    class="badge"
+  >
+    999
+  </div>
+</div>
+`;
+
+exports[`<Badge /> OverNineThousand story renders snapshot 1`] = `
+<div
+  class="badge__wrapper"
+>
+  <div
+    aria-label="Ava has more than 99 notifications"
+    class="fpo flex items-center justify-center h-8 w-8"
+  >
+    Ava
+  </div>
+  <div
+    aria-hidden="true"
+    class="badge"
+  >
+    99+
+  </div>
+</div>
+`;
+
+exports[`<Badge /> SmallNumber story renders snapshot 1`] = `
+<div
+  class="badge__wrapper"
+>
+  <div
+    aria-label="Ava has 1 notification"
+    class="fpo flex items-center justify-center h-8 w-8"
+  >
+    Ava
+  </div>
+  <div
+    aria-hidden="true"
+    class="badge"
+  >
+    1
+  </div>
+</div>
+`;
