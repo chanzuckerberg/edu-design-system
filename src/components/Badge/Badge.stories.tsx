@@ -36,22 +36,6 @@ export const Dot: StoryObj<Args> = {
   },
 };
 
-export const EmptyText: StoryObj<Args> = {
-  args: {
-    children: (
-      <>
-        <div
-          aria-label="Ava has notification"
-          className="fpo flex items-center justify-center h-8 w-8"
-        >
-          Ava
-        </div>
-        <Badge.Text>{''}</Badge.Text>
-      </>
-    ),
-  },
-};
-
 export const SmallNumber: StoryObj<Args> = {
   args: {
     children: (

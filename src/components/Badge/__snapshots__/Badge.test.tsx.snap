@@ -17,23 +17,6 @@ exports[`<Badge /> Dot story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Badge /> EmptyText story renders snapshot 1`] = `
-<div
-  class="badge__wrapper"
->
-  <div
-    aria-label="Ava has notification"
-    class="fpo flex items-center justify-center h-8 w-8"
-  >
-    Ava
-  </div>
-  <div
-    aria-hidden="true"
-    class="badge badge--empty"
-  />
-</div>
-`;
-
 exports[`<Badge /> IconBadge story renders snapshot 1`] = `
 <div
   class="badge__wrapper"
