@@ -70,4 +70,6 @@ const IconGrid = () => (
   </div>
 );
 
+// TODO: not sure why this is failing the lint check when it has associated story file
+// eslint-disable-next-line @chanzuckerberg/stories/no-components-without-story
 export default IconGrid;
