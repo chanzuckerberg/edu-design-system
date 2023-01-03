@@ -19,3 +19,10 @@
   stroke: var(--eds-theme-color-background-neutral-medium);
   stroke-opacity: 1;
 }
+
+@media screen and (prefers-reduced-motion: reduce) {
+  /* if reducing motion, don't show the moving portion */
+  .loading-indicator > svg path {
+    stroke: none;
+  }
+}
