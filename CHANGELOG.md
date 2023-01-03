@@ -2,6 +2,34 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [7.2.0](https://github.com/chanzuckerberg/edu-design-system/compare/v7.1.1...v7.2.0) (2023-01-03)
+
+
+### Features
+
+* **badge:** add badge component ([45ffbab](https://github.com/chanzuckerberg/edu-design-system/commit/45ffbab24814009f36ad3799de0a8cc2f4600516))
+* **badge:** clarify empty state and place stories in folder ([5e390a4](https://github.com/chanzuckerberg/edu-design-system/commit/5e390a4e2228fab97952b051bb978d412fef98ab))
+* **LoadingIndicator:** add loading indicator component ([cf32129](https://github.com/chanzuckerberg/edu-design-system/commit/cf32129bcb953c4c1249f09bdf1d4a00042b6ba2))
+* **progressbar:** init progress bar ([9ae77fd](https://github.com/chanzuckerberg/edu-design-system/commit/9ae77fdb626bb809eba42e271dc9ae4168a10ea6))
+* **Skeleton:** add skeleton components ([4516e7e](https://github.com/chanzuckerberg/edu-design-system/commit/4516e7e12173601fdbf440c326d862fb9b8a416e))
+* **toggle:** init toggle ([7ed06c0](https://github.com/chanzuckerberg/edu-design-system/commit/7ed06c01691593f67e1b2eff373694dde766a65b))
+* **toggle:** provide toggle functionality and add stories ([c2c58e8](https://github.com/chanzuckerberg/edu-design-system/commit/c2c58e8c2d8e392773846d0cc101c5212fba4dc3))
+
+
+### Bug Fixes
+
+* apply consistency updates to popovers ([61cae9d](https://github.com/chanzuckerberg/edu-design-system/commit/61cae9dc4c88d319319ecf4c9a24d703373d94bb))
+* **colors:** align link color with figma ([0dc461f](https://github.com/chanzuckerberg/edu-design-system/commit/0dc461fe072c30fdac4ef627bc719ed79593a1d1))
+* **icons:** get icons from .js instead of .svg files to support SSR ([9fcc875](https://github.com/chanzuckerberg/edu-design-system/commit/9fcc875495d5ca26ceeb5dc86a8462cf480536c0))
+* **LoadingIndicator:** add reduced motion behavior ([b3342b5](https://github.com/chanzuckerberg/edu-design-system/commit/b3342b519ae40f90f21043fadd8b55014a6d187b))
+* **progressbar:** account for gap in segment width ([4331e9a](https://github.com/chanzuckerberg/edu-design-system/commit/4331e9a09aa1038744943c1c55ce4aefb965f35c))
+* **renovate:** reviewers option not working, using codeowners ([0999fe0](https://github.com/chanzuckerberg/edu-design-system/commit/0999fe0fb4146a9703fd6230e1d17efe0f12a782))
+* **select, dropdown:** default value to null ([74693b5](https://github.com/chanzuckerberg/edu-design-system/commit/74693b5b414a97c070ade84710d87f6f7b9c0542))
+* set axe-core to 4.4.3 due to stories timing out with 4.5 ([4862f03](https://github.com/chanzuckerberg/edu-design-system/commit/4862f030fb8340221d03661179cbbf04cfaa9525))
+* set czi/eslint-plugin-stories to 3.2.2 until ts stories supported ([281ffb1](https://github.com/chanzuckerberg/edu-design-system/commit/281ffb1622d58b909f11faba3e8cf148c9887939))
+* **toggle:** add transparent borders ([94a21aa](https://github.com/chanzuckerberg/edu-design-system/commit/94a21aa6761b019d46c3452e32514cb94519652b))
+* **toggle:** sync width and color with mocks ([c6e92c8](https://github.com/chanzuckerberg/edu-design-system/commit/c6e92c83218f2183b14fd2d27a37744d2b7ee213))
+
 ### [7.1.1](https://github.com/chanzuckerberg/edu-design-system/compare/v7.1.0...v7.1.1) (2022-12-09)
 
 
