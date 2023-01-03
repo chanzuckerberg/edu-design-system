@@ -4,11 +4,9 @@ import React, { useEffect } from 'react';
 import { useUID } from 'react-uid';
 import svg4everybody from 'svg4everybody';
 import styles from './Icon.module.css';
-import icons from '../../icons/spritemap/spritemap.svg';
-import type { ALL_ICONS } from '../../util/allIcons';
+import icons, { type IconName } from '../../icons/spritemap';
 
-// generates a union type of all possible icon names
-export type IconName = typeof ALL_ICONS[number];
+export type { IconName } from '../../icons/spritemap';
 
 interface IconPropsBase {
   /**
@@ -140,11 +138,12 @@ export const Icon = (props: IconProps) => {
     style,
     width: size,
     xmlns: 'http://www.w3.org/2000/svg',
-    viewBox,
+    viewBox: name ? icons[name].viewBox : viewBox,
   };
+
   // allow passing custom SVGs to render, otherwise
   // load from the spritemap of EDS icons
-  const computedSvg = children || <use xlinkHref={`${icons}#${name}`} />;
+  const computedSvg = name ? icons[name].content : children;
 
   if (purpose === 'informative') {
     return (

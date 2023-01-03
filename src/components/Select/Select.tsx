@@ -166,6 +166,8 @@ export function Select(props: SelectProps) {
     className,
     children,
     'aria-label': ariaLabel,
+    // Defaulting to null is required to explicitly state that this component is controlled, and prevents warning from Headless
+    value = null,
     variant,
     optionsAlign,
     optionsClassName,
@@ -192,6 +194,7 @@ export function Select(props: SelectProps) {
     // passed directly to this component have a corresponding DOM element to receive them.
     // Otherwise we get an error.
     as: 'div' as const,
+    value,
     ...other,
   };
 
@@ -321,10 +324,13 @@ const SelectOption = function (props: SelectOptionProps) {
             return (
               <PopoverListItem
                 active={active}
+                className={styles['select__option-item']}
                 disabled={disabled}
                 icon={selected ? 'check' : undefined}
               >
-                {children}
+                <span className={styles['select__option-text']}>
+                  {children}
+                </span>
               </PopoverListItem>
             );
           }}

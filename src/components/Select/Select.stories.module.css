@@ -2,10 +2,6 @@
     # SELECT STORIES
 \*------------------------------------*/
 
-.interactive-example {
-  height: 12rem;
-}
-
 .interactive-example--align-right {
   padding-left: var(--eds-size-4);
 }

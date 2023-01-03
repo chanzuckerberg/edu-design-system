@@ -23,11 +23,12 @@ exports[`<Checkbox /> Checked story renders snapshot 1`] = `
         fill="currentColor"
         height="1.5rem"
         style="--icon-size: 1.5rem;"
+        viewBox="0 0 24 24"
         width="1.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <use
-          xlink:href="test-file-stub#checkbox-checked"
+        <path
+          d="M10.6 16.2L17.65 9.15L16.25 7.75L10.6 13.4L7.75 10.55L6.35 11.95L10.6 16.2ZM3 21V3H21V21H3Z"
         />
       </svg>
     </span>
@@ -64,11 +65,12 @@ exports[`<Checkbox /> Default story renders snapshot 1`] = `
         fill="currentColor"
         height="1.5rem"
         style="--icon-size: 1.5rem;"
+        viewBox="0 0 24 24"
         width="1.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <use
-          xlink:href="test-file-stub#checkbox-unchecked"
+        <path
+          d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
         />
       </svg>
     </span>
@@ -112,11 +114,12 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
                 fill="currentColor"
                 height="1.5rem"
                 style="--icon-size: 1.5rem;"
+                viewBox="0 0 24 24"
                 width="1.5rem"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <use
-                  xlink:href="test-file-stub#checkbox-unchecked"
+                <path
+                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
                 />
               </svg>
             </span>
@@ -149,11 +152,12 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
                 fill="currentColor"
                 height="1.5rem"
                 style="--icon-size: 1.5rem;"
+                viewBox="0 0 24 24"
                 width="1.5rem"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <use
-                  xlink:href="test-file-stub#checkbox-unchecked"
+                <path
+                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
                 />
               </svg>
             </span>
@@ -189,11 +193,12 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
                 fill="currentColor"
                 height="1.5rem"
                 style="--icon-size: 1.5rem;"
+                viewBox="0 0 24 24"
                 width="1.5rem"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <use
-                  xlink:href="test-file-stub#checkbox-checked"
+                <path
+                  d="M10.6 16.2L17.65 9.15L16.25 7.75L10.6 13.4L7.75 10.55L6.35 11.95L10.6 16.2ZM3 21V3H21V21H3Z"
                 />
               </svg>
             </span>
@@ -227,11 +232,12 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
                 fill="currentColor"
                 height="1.5rem"
                 style="--icon-size: 1.5rem;"
+                viewBox="0 0 24 24"
                 width="1.5rem"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <use
-                  xlink:href="test-file-stub#checkbox-checked"
+                <path
+                  d="M10.6 16.2L17.65 9.15L16.25 7.75L10.6 13.4L7.75 10.55L6.35 11.95L10.6 16.2ZM3 21V3H21V21H3Z"
                 />
               </svg>
             </span>
@@ -268,11 +274,12 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
                 fill="currentColor"
                 height="1.5rem"
                 style="--icon-size: 1.5rem;"
+                viewBox="0 0 24 24"
                 width="1.5rem"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <use
-                  xlink:href="test-file-stub#checkbox-indeterminate"
+                <path
+                  d="M7 13H17V11H7V13ZM3 21V3H21V21H3Z"
                 />
               </svg>
             </span>
@@ -307,11 +314,12 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
                 fill="currentColor"
                 height="1.5rem"
                 style="--icon-size: 1.5rem;"
+                viewBox="0 0 24 24"
                 width="1.5rem"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <use
-                  xlink:href="test-file-stub#checkbox-indeterminate"
+                <path
+                  d="M7 13H17V11H7V13ZM3 21V3H21V21H3Z"
                 />
               </svg>
             </span>
@@ -350,11 +358,12 @@ exports[`<Checkbox /> Disabled story renders snapshot 2`] = `
       fill="currentColor"
       height="1.5rem"
       style="--icon-size: 1.5rem;"
+      viewBox="0 0 24 24"
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <use
-        xlink:href="test-file-stub#checkbox-unchecked"
+      <path
+        d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
       />
     </svg>
   </span>
@@ -393,11 +402,12 @@ exports[`<Checkbox /> Indeterminate story renders snapshot 1`] = `
         fill="currentColor"
         height="1.5rem"
         style="--icon-size: 1.5rem;"
+        viewBox="0 0 24 24"
         width="1.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <use
-          xlink:href="test-file-stub#checkbox-indeterminate"
+        <path
+          d="M7 13H17V11H7V13ZM3 21V3H21V21H3Z"
         />
       </svg>
     </span>
@@ -438,11 +448,12 @@ exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
           fill="currentColor"
           height="1.5rem"
           style="--icon-size: 1.5rem;"
+          viewBox="0 0 24 24"
           width="1.5rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <use
-            xlink:href="test-file-stub#checkbox-unchecked"
+          <path
+            d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
           />
         </svg>
       </span>
@@ -473,11 +484,12 @@ exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
           fill="currentColor"
           height="1.5rem"
           style="--icon-size: 1.5rem;"
+          viewBox="0 0 24 24"
           width="1.5rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <use
-            xlink:href="test-file-stub#checkbox-unchecked"
+          <path
+            d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
           />
         </svg>
       </span>
@@ -508,11 +520,12 @@ exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
           fill="currentColor"
           height="1.5rem"
           style="--icon-size: 1.5rem;"
+          viewBox="0 0 24 24"
           width="1.5rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <use
-            xlink:href="test-file-stub#checkbox-unchecked"
+          <path
+            d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
           />
         </svg>
       </span>
@@ -543,11 +556,12 @@ exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
           fill="currentColor"
           height="1.5rem"
           style="--icon-size: 1.5rem;"
+          viewBox="0 0 24 24"
           width="1.5rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <use
-            xlink:href="test-file-stub#checkbox-unchecked"
+          <path
+            d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
           />
         </svg>
       </span>
@@ -585,11 +599,12 @@ exports[`<Checkbox /> Medium story renders snapshot 1`] = `
         fill="currentColor"
         height="1.5rem"
         style="--icon-size: 1.5rem;"
+        viewBox="0 0 24 24"
         width="1.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <use
-          xlink:href="test-file-stub#checkbox-unchecked"
+        <path
+          d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
         />
       </svg>
     </span>
@@ -627,11 +642,12 @@ exports[`<Checkbox /> MediumChecked story renders snapshot 1`] = `
         fill="currentColor"
         height="1.5rem"
         style="--icon-size: 1.5rem;"
+        viewBox="0 0 24 24"
         width="1.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <use
-          xlink:href="test-file-stub#checkbox-checked"
+        <path
+          d="M10.6 16.2L17.65 9.15L16.25 7.75L10.6 13.4L7.75 10.55L6.35 11.95L10.6 16.2ZM3 21V3H21V21H3Z"
         />
       </svg>
     </span>
@@ -675,11 +691,12 @@ exports[`<Checkbox /> WithCustomPositioning story renders snapshot 1`] = `
         fill="currentColor"
         height="1.5rem"
         style="--icon-size: 1.5rem;"
+        viewBox="0 0 24 24"
         width="1.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <use
-          xlink:href="test-file-stub#checkbox-unchecked"
+        <path
+          d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
         />
       </svg>
     </span>
@@ -711,11 +728,12 @@ exports[`<Checkbox /> WithoutVisibleLabel story renders snapshot 1`] = `
         fill="currentColor"
         height="1.5rem"
         style="--icon-size: 1.5rem;"
+        viewBox="0 0 24 24"
         width="1.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <use
-          xlink:href="test-file-stub#checkbox-unchecked"
+        <path
+          d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
         />
       </svg>
     </span>
@@ -741,11 +759,12 @@ exports[`<Checkbox /> WithoutVisibleLabel story renders snapshot 1`] = `
         fill="currentColor"
         height="1.5rem"
         style="--icon-size: 1.5rem;"
+        viewBox="0 0 24 24"
         width="1.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <use
-          xlink:href="test-file-stub#checkbox-checked"
+        <path
+          d="M10.6 16.2L17.65 9.15L16.25 7.75L10.6 13.4L7.75 10.55L6.35 11.95L10.6 16.2ZM3 21V3H21V21H3Z"
         />
       </svg>
     </span>
@@ -772,11 +791,12 @@ exports[`<Checkbox /> WithoutVisibleLabel story renders snapshot 1`] = `
         fill="currentColor"
         height="1.5rem"
         style="--icon-size: 1.5rem;"
+        viewBox="0 0 24 24"
         width="1.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <use
-          xlink:href="test-file-stub#checkbox-indeterminate"
+        <path
+          d="M7 13H17V11H7V13ZM3 21V3H21V21H3Z"
         />
       </svg>
     </span>
@@ -801,11 +821,12 @@ exports[`<Checkbox /> WithoutVisibleLabel story renders snapshot 1`] = `
         fill="currentColor"
         height="1.5rem"
         style="--icon-size: 1.5rem;"
+        viewBox="0 0 24 24"
         width="1.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <use
-          xlink:href="test-file-stub#checkbox-unchecked"
+        <path
+          d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
         />
       </svg>
     </span>
@@ -831,11 +852,12 @@ exports[`<Checkbox /> WithoutVisibleLabel story renders snapshot 1`] = `
         fill="currentColor"
         height="1.5rem"
         style="--icon-size: 1.5rem;"
+        viewBox="0 0 24 24"
         width="1.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <use
-          xlink:href="test-file-stub#checkbox-checked"
+        <path
+          d="M10.6 16.2L17.65 9.15L16.25 7.75L10.6 13.4L7.75 10.55L6.35 11.95L10.6 16.2ZM3 21V3H21V21H3Z"
         />
       </svg>
     </span>
@@ -862,11 +884,12 @@ exports[`<Checkbox /> WithoutVisibleLabel story renders snapshot 1`] = `
         fill="currentColor"
         height="1.5rem"
         style="--icon-size: 1.5rem;"
+        viewBox="0 0 24 24"
         width="1.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <use
-          xlink:href="test-file-stub#checkbox-indeterminate"
+        <path
+          d="M7 13H17V11H7V13ZM3 21V3H21V21H3Z"
         />
       </svg>
     </span>

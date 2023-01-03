@@ -11,6 +11,12 @@ import Icon from '../Icon';
 export default {
   title: 'Molecules/Forms/Select',
   component: Select,
+  subcomponents: {
+    'Select.Button': Select.Button,
+    'Select.Label': Select.Label,
+    'Select.Options': Select.Options,
+    'Select.Option': Select.Option,
+  },
   parameters: {
     badges: [BADGE.BETA],
     layout: 'centered',

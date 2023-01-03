@@ -23,6 +23,7 @@ exports[`<Breadcrumbs /> Default story renders snapshot 1`] = `
             class="icon breadcrumbs__back-icon"
             fill="currentColor"
             role="img"
+            viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
           >
             <title
@@ -30,8 +31,8 @@ exports[`<Breadcrumbs /> Default story renders snapshot 1`] = `
             >
               Child
             </title>
-            <use
-              xlink:href="test-file-stub#chevron-left"
+            <path
+              d="M16 22L6 12L16 2L17.775 3.775L9.55 12L17.775 20.225L16 22Z"
             />
           </svg>
         </a>
@@ -118,6 +119,7 @@ exports[`<Breadcrumbs /> LongList story renders snapshot 1`] = `
             class="icon breadcrumbs__back-icon"
             fill="currentColor"
             role="img"
+            viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
           >
             <title
@@ -125,8 +127,8 @@ exports[`<Breadcrumbs /> LongList story renders snapshot 1`] = `
             >
               Breadcrumb 9
             </title>
-            <use
-              xlink:href="test-file-stub#chevron-left"
+            <path
+              d="M16 22L6 12L16 2L17.775 3.775L9.55 12L17.775 20.225L16 22Z"
             />
           </svg>
         </a>
@@ -341,6 +343,7 @@ exports[`<Breadcrumbs /> LongText story renders snapshot 1`] = `
             class="icon breadcrumbs__back-icon"
             fill="currentColor"
             role="img"
+            viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
           >
             <title
@@ -348,8 +351,8 @@ exports[`<Breadcrumbs /> LongText story renders snapshot 1`] = `
             >
               Breadcrumb 2 Lorem ipsum dolor sit amet, no overflow is two lines at 320px
             </title>
-            <use
-              xlink:href="test-file-stub#chevron-left"
+            <path
+              d="M16 22L6 12L16 2L17.775 3.775L9.55 12L17.775 20.225L16 22Z"
             />
           </svg>
         </a>
@@ -485,6 +488,7 @@ exports[`<Breadcrumbs /> TwoCrumbs story renders snapshot 1`] = `
             class="icon breadcrumbs__back-icon"
             fill="currentColor"
             role="img"
+            viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
           >
             <title
@@ -492,8 +496,8 @@ exports[`<Breadcrumbs /> TwoCrumbs story renders snapshot 1`] = `
             >
               Breadcrumb 1
             </title>
-            <use
-              xlink:href="test-file-stub#chevron-left"
+            <path
+              d="M16 22L6 12L16 2L17.775 3.775L9.55 12L17.775 20.225L16 22Z"
             />
           </svg>
         </a>

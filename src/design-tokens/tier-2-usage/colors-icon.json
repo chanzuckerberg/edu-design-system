@@ -35,10 +35,10 @@
           "link": {
             "default": {
               "@": {
-                "value": "{eds.color.brand.grape.500}"
+                "value": "{eds.color.brand.grape.600}"
               },
               "hover": {
-                "value": "{eds.color.brand.grape.600}"
+                "value": "{eds.color.brand.grape.700}"
               }
             }
           },

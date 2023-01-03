@@ -258,6 +258,8 @@ export function Dropdown(props: DropdownProps) {
     options,
     children,
     'aria-label': ariaLabel,
+    // Defaulting to null is required to explicitly state that this component is controlled, and prevents warning from Headless
+    value = null,
     variant,
     optionsAlign,
     optionsClassName,
@@ -296,6 +298,7 @@ export function Dropdown(props: DropdownProps) {
     // passed directly to this component have a corresponding DOM element to receive them.
     // Otherwise we get an error.
     as: 'div' as const,
+    value,
     ...other,
   };
 

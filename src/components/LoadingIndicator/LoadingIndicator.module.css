@@ -1,0 +1,28 @@
+/*------------------------------------*\
+    # LOADINGINDICATOR
+\*------------------------------------*/
+
+/**
+ * LoadingIndicator
+ */
+.loading-indicator {
+  background-color: transparent;
+}
+
+/* override for `color` */
+.loading-indicator > svg path {
+  stroke: var(--eds-theme-color-background-brand-primary-strong);
+}
+
+/* override for `secondaryColor` */
+.loading-indicator > svg circle {
+  stroke: var(--eds-theme-color-background-neutral-medium);
+  stroke-opacity: 1;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  /* if reducing motion, don't show the moving portion */
+  .loading-indicator > svg path {
+    stroke: none;
+  }
+}

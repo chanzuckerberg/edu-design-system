@@ -2,9 +2,6 @@ import React from 'react';
 
 import { Button, Modal, Text } from '../../../src';
 
-import '../../../src/components/Utilities/Alignment.css';
-import '../../../src/components/Utilities/Display.css';
-
 import CadSuccess from '../../static/cad-success.svg';
 
 export const ModalFinalStep = () => (

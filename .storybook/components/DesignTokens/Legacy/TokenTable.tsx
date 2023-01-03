@@ -33,4 +33,6 @@ const TokenTable = ({ tokens, renderExample }: TokenTableProps) => {
   );
 };
 
+// Stories exist as mdx extension
+// eslint-disable-next-line @chanzuckerberg/stories/no-components-without-story
 export default TokenTable;

@@ -7,7 +7,7 @@ EDS follows these principles and conventions for HTML, CSS, and JavaScript/TypeS
   - [CSS design principles](#css-design-principles)
   - [CSS tools](#css-tools)
   - [CSS conventions](#css-conventions)
-  - [Utility classes](#utility-classes)
+  - [Tailwind utility classes](#tailwind-utility-classes)
   - [Theming conventions](#theming-conventions)
   - [Design tokens](#design-tokens)
 - [JavaScript/TypeScript](#js)
@@ -296,12 +296,9 @@ Use:
 
 You can continue to use the `Icon` components' `color` prop with JavaScript variables in storybook (including recipes and pages) because those will not be imported and themed in other prodcuts.
 
-## Utility classes <a name="utility-classes"></a>
+## Tailwind utility classes <a name="tailwind-utility-classes"></a>
 
-EDS provides a number of utility classes (e.g. `u-margin-bottom-xl` and `u-padding-none`) that can be appended to components (e.g. `<TableCell className="u-padding-none">`) in order to achieve certain style results. Utility classes provide an additional layer to help "massage" components into place without having to overwhelm component styles with too many style variants.
-
-- Utility classes can be found in `src/components/Utilities`
-- Utility classes use the `!important` declaration to override any existing component styles
+EDS uses [tailwind utility classes](https://tailwindcss.com/docs/padding) (e.g. `mb-0` and `p-0`) inline in `*.stories.tsx` files to quickly add small styling tweaks, like spacing (e.g. `<TableCell className="p-0">`). This reduces the need for CSS module files made specifically for stories. Use the `!` modifier to override default component styles (e.g. `<TableCell className="!p-0">`).
 
 ## Theming conventions <a name="theming-conventions"></a>
 

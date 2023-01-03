@@ -10,10 +10,6 @@ import {
   Fieldset,
 } from '../../../src';
 
-import '../../../src/components/Utilities/Alignment.css';
-import '../../../src/components/Utilities/Display.css';
-import '../../../src/components/Utilities/Spacing.css';
-
 export const ModalFirstStep = () => {
   const [checked, setChecked] = useState([false, false, false]);
   const handleChange = (index: number) => {

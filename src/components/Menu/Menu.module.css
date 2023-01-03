@@ -1,3 +1,5 @@
+@import '../../design-tokens/mixins.css';
+
 /*------------------------------------*\
     # MENU
 \*------------------------------------*/
@@ -18,7 +20,12 @@
 }
 
 .menu__button.menu__button {
+  @mixin eds-theme-typography-body-text-md;
+
+  color: var(--eds-theme-text-neutral-subtle);
   background-color: var(--eds-theme-color-form-background);
+  border-color: var(--eds-theme-color-form-border);
+  font-weight: var(--eds-font-weight-light);
 }
 
 /* Needed to create higher specificity than ClickableStyle. TODO: improve */

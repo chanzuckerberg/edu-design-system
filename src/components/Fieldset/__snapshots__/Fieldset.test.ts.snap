@@ -31,11 +31,12 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
           fill="currentColor"
           height="1.5rem"
           style="--icon-size: 1.5rem;"
+          viewBox="0 0 24 24"
           width="1.5rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <use
-            xlink:href="test-file-stub#checkbox-unchecked"
+          <path
+            d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
           />
         </svg>
       </span>
@@ -65,11 +66,12 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
           fill="currentColor"
           height="1.5rem"
           style="--icon-size: 1.5rem;"
+          viewBox="0 0 24 24"
           width="1.5rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <use
-            xlink:href="test-file-stub#checkbox-unchecked"
+          <path
+            d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
           />
         </svg>
       </span>
@@ -99,11 +101,12 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
           fill="currentColor"
           height="1.5rem"
           style="--icon-size: 1.5rem;"
+          viewBox="0 0 24 24"
           width="1.5rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <use
-            xlink:href="test-file-stub#checkbox-unchecked"
+          <path
+            d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
           />
         </svg>
       </span>
@@ -133,11 +136,12 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
           fill="currentColor"
           height="1.5rem"
           style="--icon-size: 1.5rem;"
+          viewBox="0 0 24 24"
           width="1.5rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <use
-            xlink:href="test-file-stub#checkbox-unchecked"
+          <path
+            d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
           />
         </svg>
       </span>
@@ -167,11 +171,12 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
           fill="currentColor"
           height="1.5rem"
           style="--icon-size: 1.5rem;"
+          viewBox="0 0 24 24"
           width="1.5rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <use
-            xlink:href="test-file-stub#checkbox-unchecked"
+          <path
+            d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
           />
         </svg>
       </span>
