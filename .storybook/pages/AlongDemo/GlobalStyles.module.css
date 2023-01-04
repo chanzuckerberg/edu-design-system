@@ -4,6 +4,39 @@
     # GLOBAL STYLES FOR ALONG DEMO
 \*------------------------------------*/
 
+@font-face {
+  font-family: 'Moranga';
+  src: url(./fonts/moranga-medium.woff) format('woff'),
+    url(./fonts/moranga-medium.woff2) format('woff2');
+  font-weight: 500 900;
+}
+
+@font-face {
+  font-family: 'Moranga';
+  src: url(./fonts/moranga-light.woff) format('woff'),
+    url(./fonts/moranga-light.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'NB International Pro Mono';
+  src: url(./fonts/nb-international-pro-mono.woff) format('woff'),
+    url(./fonts/nb-international-pro-mono.woff2) format('woff2'),
+    url(./fonts/nb-international-pro-mono.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: 'Untitled Sans';
+  src: url(./fonts/untitled-sans-medium.woff) format('woff'),
+    url(./fonts/untitled-sans-medium.woff2) format('woff2');
+  font-weight: 500 900;
+}
+
+@font-face {
+  font-family: 'Untitled Sans';
+  src: url(./fonts/untitled-sans-regular.woff) format('woff'),
+    url(./fonts/untitled-sans-regular.woff2) format('woff2');
+}
+
 /**
  * Global styles for AlongDemo
  *
