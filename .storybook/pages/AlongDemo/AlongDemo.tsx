@@ -214,9 +214,9 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
   const ReplyIcon = (
     <svg className="min-w-[1rem] h-4" viewBox="0 0 16 16">
       <path
-        clip-rule="inherit"
+        clipRule="inherit"
         d="M6.53086 5.19809V4.13809C6.53086 3.54476 5.81086 3.24476 5.39086 3.66476L2.33086 6.72476C2.07086 6.98476 2.07086 7.40476 2.33086 7.66476L5.39086 10.7248C5.81086 11.1448 6.53086 10.8514 6.53086 10.2581V9.13142C9.8642 9.13142 12.1975 10.1981 13.8642 12.5314C13.1975 9.19809 11.1975 5.86476 6.53086 5.19809Z"
-        fill-rule="inherit"
+        fillRule="inherit"
       ></path>
     </svg>
   );
