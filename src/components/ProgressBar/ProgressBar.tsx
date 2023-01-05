@@ -36,7 +36,7 @@ export type Props = {
  *
  * `import {ProgressBar} from "@chanzuckerberg/eds";`
  *
- * A progress bar component that indicates how much progress has been made on a task.
+ * Show the progression of a system operation: downloading, uploading, processing, etc., in a visual way
  */
 export const ProgressBar = ({
   caption,

@@ -78,14 +78,7 @@ function childrenHaveLabelComponent(children?: ReactNode): boolean {
  *
  * `import {Select} from "@chanzuckerberg/eds";`
  *
- * EDS Select. Used to select one option from a list of options.
- *
- * Built on top of the Headless UI Listbox: https://headlessui.dev/react/listbox#basic-example
- *
- * You can pass in the <Select.Label>, <Select.Button>, and options
- * (using <Select.Options> and <Select.Option>) through `children` to
- * have more control and customization over each aspect of the Select's
- * appearance.
+ * A dropdown that reveals or hides a list of options to select
  *
  * Examples:
  *
@@ -271,6 +264,9 @@ const SelectTrigger = function (
   );
 };
 
+/**
+ * The content container showing the available options when the trigger is activated
+ */
 const SelectOptions = function (props: PropsWithRenderProp<{ open: boolean }>) {
   const { className, ...other } = props;
   const { compact, optionsAlign, optionsClassName } = useContext(SelectContext);
@@ -301,6 +297,9 @@ type SelectOptionProps = {
     | RenderProp<{ active: boolean; disabled: boolean; selected: boolean }>;
 };
 
+/**
+ * Represents one of the available options for selection
+ */
 const SelectOption = function (props: SelectOptionProps) {
   const { children, className, ...other } = props;
 
@@ -354,7 +353,7 @@ type SelecButtonProps = {
 };
 
 /**
- * A styled button with an expand icon to be used for triggering
+ * The component functioning as a trigger, which also shows the current selection
  */
 export const SelectButton = React.forwardRef<
   HTMLButtonElement,

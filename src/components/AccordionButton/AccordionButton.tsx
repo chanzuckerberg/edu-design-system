@@ -32,7 +32,7 @@ export type Props = {
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
- * The button subcomponent that houses the heading text and open indicator icon for the EDS Accordion component.
+ * Contains the subject of hidden content and a down/up or chevron icon to signify that the row can expand or collapse.
  */
 export const AccordionButton = ({
   children,

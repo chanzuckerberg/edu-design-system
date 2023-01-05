@@ -73,10 +73,9 @@ const BadgeDot = () => <BadgeText />;
  *
  * `import {Badge} from "@chanzuckerberg/eds";`
  *
- * Wraps an element to apply a small pill shaped container (Badge) on the upper righthand corner of the element.
- * A badge indicates something has changed in regards to the attached element.
+ * A badge is used to communicate an update or change to an object since the last interaction.
  *
- * The attached element MUST have accessible name and other relevant aria properties in relevance to the badge.
+ * A badged object MUST have screen reader text describing the attached badge (i.e. dot: has notification, number: has number updates)
  *
  * Example usage:
  *
