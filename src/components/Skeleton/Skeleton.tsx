@@ -24,13 +24,7 @@ type SkeletonProps = BaseProps & {
  *
  * `import {Skeleton} from "@chanzuckerberg/eds";`
  *
- * Skeleton states allow for hinting at the layout of pending content before the
- * content is available. The different shapes allow for representation of different
- * types of content. Mix and match to create a layout that mimicks the pending data.
- *
- * Skeletons come in a variety of shapes. The default is a round rect, and there are
- * others for circular objects, or text layouts. Use any meaningful CSS length values
- * (e.g., rem, ch, px, etc.)
+ * Skeleton states inform users about the wait time, reason, and status of ongoing processes, showing the expected layout
  *
  * Examples:
  *
@@ -38,7 +32,7 @@ type SkeletonProps = BaseProps & {
  *
  * For circular objects, use `Skeleton.Circle' and specify the width (which is the same as the height).
  *
- * For all other shapes, use `Skeleton.Rect` (or just Skeleton) and specify the width and height.
+ * For all other objects, use `Skeleton.Rect` (or just `Skeleton`) and specify the width and height.
  */
 export const Skeleton = ({
   className,

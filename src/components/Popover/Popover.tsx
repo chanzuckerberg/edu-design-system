@@ -63,7 +63,7 @@ export const PopoverContext = createContext<PopoverContextType>({});
  *
  * `import {Popover} from "@chanzuckerberg/eds";`
  *
- * A styled popover built on 'headless UI' popover. Consider using the Dropdown component instead.
+ * General-purpose floating menus that appear proximal to a trigger point
  */
 export const Popover = ({
   placement,
@@ -159,6 +159,9 @@ export type PopoverContentProps = {
   ) => void;
 }>;
 
+/**
+ * A floating container that can be resized to fit content inside
+ */
 const PopoverContent = ({
   arrowClassName,
   bodyClassName,
@@ -203,17 +206,14 @@ const PopoverContent = ({
 };
 
 /**
- * BETA: This component is still a work in progress and is subject to change.
- *
- * Popover trigger button.
- *
- * By default will render a button, so you shouldn't pass a button component as its children.
- * Instead, pass the contents of the button.
+ * A button that when clicked, can show or hide the Popover Menu
+ * (Product teams can decide how a Popover will close, if it is on click, release, hover, etc.)
  *
  * If you need to use some sort of special button, pass it as the `as` prop. Make sure the
  * component accepts `aria-expanded` and `aria-controls` props for accessibility.
  *
- * @example
+ * Examples:
+ *
  * ```ts
  * import {Popover} from "@chanzuckerberg/eds";
  *
@@ -224,7 +224,6 @@ const PopoverContent = ({
  * </Popover.Button>
  * ```
  *
- * @example
  * ```ts
  * import {Popover} from "@chanzuckerberg/eds";
  *
@@ -243,16 +242,14 @@ const PopoverContent = ({
  */
 Popover.Button = PopoverButton;
 /**
- * BETA: This component is still a work in progress and is subject to change.
- *
- * The floating panel container for the Popover.
+ * A floating container that can be resized to fit content inside
  *
  * @example
  * ```ts
  * import {Popover} from "@chanzuckerberg/eds";
  *
  * <Popover.Content>
- *  {Possible Popover Elements}
+ *  {children}
  * </Popover.Content>
  * ```
  */
