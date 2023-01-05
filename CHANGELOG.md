@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [7.2.1](https://github.com/chanzuckerberg/edu-design-system/compare/v7.2.0...v7.2.1) (2023-01-05)
+
+
+### Bug Fixes
+
+* don't ship theming demo fonts in the package ([a0d6143](https://github.com/chanzuckerberg/edu-design-system/commit/a0d61431d04def96e554933629b77cb7eee4a0a8))
+* pin @headlessui/react to 1.7.5 ([9539229](https://github.com/chanzuckerberg/edu-design-system/commit/95392290273bb4b84f5a4b76d0a671a416430958))
+
 ## [7.2.0](https://github.com/chanzuckerberg/edu-design-system/compare/v7.1.1...v7.2.0) (2023-01-03)
 
 

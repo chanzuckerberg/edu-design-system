@@ -1,6 +1,6 @@
 {
   "name": "@chanzuckerberg/eds",
-  "version": "7.2.0",
+  "version": "7.2.1",
   "description": "The React-powered design system library for Chan Zuckerberg Initiative education web applications",
   "author": "CZI <edu-frontend-infra@chanzuckerberg.com>",
   "homepage": "https://github.com/chanzuckerberg/edu-design-system",
@@ -75,7 +75,7 @@
     "react": ">= 16.8.0"
   },
   "dependencies": {
-    "@headlessui/react": "^1.7.7",
+    "@headlessui/react": "1.7.5",
     "@popperjs/core": "^2.11.6",
     "@tippyjs/react": "^4.2.6",
     "clsx": "^1.2.1",
