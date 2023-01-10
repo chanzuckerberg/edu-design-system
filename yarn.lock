@@ -2038,7 +2038,6 @@ __metadata:
     eslint-plugin-prettier: ^4.2.1
     eslint-plugin-storybook: ^0.6.4
     eslint-plugin-testing-library: ^5.9.1
-    flowgen: ^1.21.0
     husky: ^4.3.8
     identity-obj-proxy: ^3.0.0
     intersection-observer: ^0.12.2
@@ -8635,7 +8634,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commander@npm:^6.1.0, commander@npm:^6.2.1":
+"commander@npm:^6.2.1":
   version: 6.2.1
   resolution: "commander@npm:6.2.1"
   checksum: d7090410c0de6bc5c67d3ca41c41760d6d268f3c799e530aafb73b7437d1826bbf0d2a3edac33f8b57cc9887b4a986dce307fa5557e109be40eadb7c43b21742
@@ -11487,24 +11486,6 @@ __metadata:
   version: 3.2.5
   resolution: "flatted@npm:3.2.5"
   checksum: 3c436e9695ccca29620b4be5671dd72e5dd0a7500e0856611b7ca9bd8169f177f408c3b9abfa78dfe1493ee2d873e2c119080a8a9bee4e1a186a9e60ca6c89f1
-  languageName: node
-  linkType: hard
-
-"flowgen@npm:^1.21.0":
-  version: 1.21.0
-  resolution: "flowgen@npm:1.21.0"
-  dependencies:
-    "@babel/code-frame": ^7.16.7
-    "@babel/highlight": ^7.16.7
-    commander: ^6.1.0
-    lodash: ^4.17.20
-    prettier: ^2.5.1
-    shelljs: ^0.8.4
-    typescript: ~4.4.4
-    typescript-compiler: ^1.4.1-2
-  bin:
-    flowgen: lib/cli/index.js
-  checksum: 6f4e904a3c29e2095ce2122136f9575e51dd2ca930854d3aa8e24d63b404c91d1b69609833cd34796c0bf69e6c6389818322a6dcf792b9e51014511baf614fef
   languageName: node
   linkType: hard
 
@@ -18373,15 +18354,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^2.5.1":
-  version: 2.6.2
-  resolution: "prettier@npm:2.6.2"
-  bin:
-    prettier: bin-prettier.js
-  checksum: 48d08dde8e9fb1f5bccdd205baa7f192e9fc8bc98f86e1b97d919de804e28c806b0e6cc685e4a88211aa7987fa9668f30baae19580d87ced3ed0f2ec6572106f
-  languageName: node
-  linkType: hard
-
 "prettier@npm:^2.7.1":
   version: 2.7.1
   resolution: "prettier@npm:2.7.1"
@@ -20206,7 +20178,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"shelljs@npm:^0.8.1, shelljs@npm:^0.8.4":
+"shelljs@npm:^0.8.1":
   version: 0.8.5
   resolution: "shelljs@npm:0.8.5"
   dependencies:
@@ -22115,13 +22087,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript-compiler@npm:^1.4.1-2":
-  version: 1.4.1
-  resolution: "typescript-compiler@npm:1.4.1"
-  checksum: 160c148d263f8feda3777c3043040a61d7f4eccf127c459012ef6a0ad2158dc9888e0dec40e0ea14194edb1a7a5113bc120eef6f71cf36c723319a8345d05238
-  languageName: node
-  linkType: hard
-
 "typescript@npm:^4.4.3":
   version: 4.6.4
   resolution: "typescript@npm:4.6.4"
@@ -22142,16 +22107,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:~4.4.4":
-  version: 4.4.4
-  resolution: "typescript@npm:4.4.4"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: 89ecb8436bb48ef5594d49289f5f89103071716b6e4844278f4fb3362856e31203e187a9c76d205c3f0b674d221a058fd28310dbcbcf5d95e9a57229bb5203f1
-  languageName: node
-  linkType: hard
-
 "typescript@patch:typescript@^4.4.3#~builtin<compat/typescript>":
   version: 4.6.4
   resolution: "typescript@patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=5d3a66"
@@ -22169,16 +22124,6 @@ __metadata:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: 2222d2382fb3146089b1d27ce2b55e9d1f99cc64118f1aba75809b693b856c5d3c324f052f60c75b577947fc538bc1c27bad0eb76cbdba9a63a253489504ba7e
-  languageName: node
-  linkType: hard
-
-"typescript@patch:typescript@~4.4.4#~builtin<compat/typescript>":
-  version: 4.4.4
-  resolution: "typescript@patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=bbeadb"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: 3d1b04449662193544b81d055479d03b4c5dca95f1a82f8922596f089d894c9fefbe16639d1d9dfe26a7054419645530cef44001bc17aed1fe1eb3c237e9b3c7
   languageName: node
   linkType: hard
 
