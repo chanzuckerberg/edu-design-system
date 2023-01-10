@@ -208,7 +208,6 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
             <Dropdown
               aria-label="student groups"
               buttonText={selectedOption.label}
-              // TODO: why isn't the selected styling showing up when selecting a new option?
               onChange={setSelectedOption}
               options={studentGroupOptions}
               value={selectedOption}

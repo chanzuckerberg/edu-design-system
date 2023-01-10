@@ -10,7 +10,6 @@ export default {
   subcomponents: { ToolbarItem },
   parameters: {
     axe: {
-      // TODO: re-enable when component is worked on
       skip: true,
     },
   },

@@ -87,7 +87,7 @@
     visibility: visible;
     transform: translateX(0);
     padding: var(--eds-size-5) var(--eds-size-8);
-    box-shadow: 0px 2px 8px var(--eds-theme-color-border-neutral-subtle); /* TODO: Tokenize the box shadow */
+    box-shadow: 0px 2px 8px var(--eds-theme-color-border-neutral-subtle);
   }
 }
 

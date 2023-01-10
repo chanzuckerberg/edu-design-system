@@ -150,12 +150,11 @@ export const ButtonDropdown = ({
 
   const dropdownMenuTriggerWithProps = React.Children.map(
     dropdownMenuTrigger,
-    // TODO: improve `any` type
     (child: any) => {
       // Checking isValidElement is the safe way and avoids a typescript
       // error too.
       if (React.isValidElement(child)) {
-        // @ts-expect-error TODO: fix "No overload matches this call" error
+        // @ts-expect-error "No overload matches this call" error
         return React.cloneElement<Props>(child, {
           ref: buttonRef,
           onClick: togglePanel,

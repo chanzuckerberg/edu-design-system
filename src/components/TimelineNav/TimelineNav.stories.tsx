@@ -125,7 +125,7 @@ export default {
 
         <TimelineNavPanel title="TimelineNavPanel 6" variant="number">
           <Text as="div">
-            <h3>TimelineNavPanel 5</h3>
+            <h3>TimelineNavPanel 6</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut

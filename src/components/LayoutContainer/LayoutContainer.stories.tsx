@@ -8,7 +8,6 @@ export default {
   component: LayoutContainer,
   parameters: {
     axe: {
-      // TODO: re-enable when component is worked on
       skip: true,
     },
   },
