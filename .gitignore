@@ -34,7 +34,6 @@ yarn-error.log*
 !prism.css
 !DesignTokens.css
 !Utilities.css
-!IconGrid.css
 
 # VS Code workspace file
 *.code-workspace
