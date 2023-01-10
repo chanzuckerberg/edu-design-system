@@ -5,7 +5,7 @@ import type { ComponentProps } from 'react';
 import { InputLabel } from './InputLabel';
 
 export default {
-  title: 'Atoms/Forms/InputLabel',
+  title: 'Components/InputLabel',
   component: InputLabel,
   args: {
     children: 'Label',

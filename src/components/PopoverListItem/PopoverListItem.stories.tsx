@@ -5,7 +5,7 @@ import React from 'react';
 import { PopoverListItem } from './PopoverListItem';
 
 export default {
-  title: 'Molecules/Blocks/PopoverListItem',
+  title: 'Components/PopoverListItem',
   component: PopoverListItem,
   parameters: {
     badges: [BADGE.BETA],

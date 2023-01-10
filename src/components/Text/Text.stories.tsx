@@ -7,7 +7,7 @@ import type { Variant } from './Text';
 import styles from './Text.stories.module.css';
 
 export default {
-  title: 'Atoms/Text/Text',
+  title: 'Components/Text',
   component: Text,
   argTypes: {
     children: {

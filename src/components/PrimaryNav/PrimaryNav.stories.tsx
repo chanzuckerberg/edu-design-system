@@ -5,7 +5,7 @@ import { PrimaryNav } from './PrimaryNav';
 import PrimaryNavItem from '../PrimaryNavItem';
 
 export default {
-  title: 'Molecules/Navigation/PrimaryNav',
+  title: 'Components/PrimaryNav',
   component: PrimaryNav,
   subcomponents: { PrimaryNavItem },
   decorators: [

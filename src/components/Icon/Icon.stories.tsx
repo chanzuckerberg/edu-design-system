@@ -7,7 +7,7 @@ import * as ColorTokens from '../../tokens-dist/ts/colors';
 import Text from '../Text';
 
 export default {
-  title: 'Atoms/Icons/Icon',
+  title: 'Components/Icon',
   component: Icon,
   argTypes: {
     name: {

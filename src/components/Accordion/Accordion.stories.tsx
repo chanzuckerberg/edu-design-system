@@ -5,7 +5,7 @@ import React from 'react';
 import { Accordion } from './Accordion';
 
 export default {
-  title: 'Organisms/Interactive/Accordion',
+  title: 'Components/Accordion',
   component: Accordion,
   subcomponents: {
     'Accordion.Row': Accordion.Row,

@@ -7,7 +7,7 @@ import { DropdownMenuItem } from '../DropdownMenuItem/DropdownMenuItem';
 import { Icon } from '../Icon/Icon';
 
 export default {
-  title: 'Molecules/Navigation/DropdownMenu',
+  title: 'Components/DropdownMenu',
   component: DropdownMenu,
   subcomponents: { DropdownMenuItem },
   parameters: {

@@ -6,7 +6,7 @@ import Heading, { VARIANTS } from './Heading';
 import styles from './Heading.stories.module.css';
 
 export default {
-  title: 'Atoms/Text/Heading',
+  title: 'Components/Heading',
   component: Heading,
 } as Meta<Args>;
 

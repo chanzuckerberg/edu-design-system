@@ -8,7 +8,7 @@ import UtilityNav from '../UtilityNav';
 import UtilityNavItem from '../UtilityNavItem';
 
 export default {
-  title: 'Molecules/Global/NavContainer',
+  title: 'Components/NavContainer',
   component: NavContainer,
   subcomponents: { PrimaryNav, UtilityNav },
   args: {

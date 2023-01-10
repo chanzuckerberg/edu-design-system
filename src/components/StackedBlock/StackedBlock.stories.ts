@@ -5,7 +5,7 @@ import type { ComponentProps } from 'react';
 import { StackedBlock } from './StackedBlock';
 
 export default {
-  title: 'Molecules/Blocks/StackedBlock',
+  title: 'Components/StackedBlock',
   component: StackedBlock,
   parameters: {
     badges: [BADGE.BETA],

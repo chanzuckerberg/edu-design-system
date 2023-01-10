@@ -7,7 +7,7 @@ import type { PopoverProps } from './Popover';
 import Button from '../Button';
 
 export default {
-  title: 'Organisms/Interactive/Popover',
+  title: 'Components/Popover',
   component: Popover,
   subcomponents: {
     'Popover.Button': Popover.Button,

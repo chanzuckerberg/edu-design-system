@@ -4,7 +4,7 @@ import React from 'react';
 import { NumberIcon } from './NumberIcon';
 
 export default {
-  title: 'Atoms/Icons/NumberIcon',
+  title: 'Components/NumberIcon',
   component: NumberIcon,
   args: {
     'aria-label': 'Step 1',

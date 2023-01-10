@@ -6,7 +6,7 @@ import Button from '../Button';
 import Icon from '../Icon';
 
 export default {
-  title: 'Molecules/Interactive/ShowHide',
+  title: 'Components/ShowHide',
   component: ShowHide,
   parameters: {
     axe: {

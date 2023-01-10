@@ -19,7 +19,7 @@ const InteractiveToggle = ({ checked = false, onChange, ...other }: Args) => {
 };
 
 export default {
-  title: 'Organisms/Interactive/Toggle',
+  title: 'Components/Toggle',
   component: Toggle,
   args: {
     label: 'Lorem ipsum',

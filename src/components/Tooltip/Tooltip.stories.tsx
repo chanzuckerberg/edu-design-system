@@ -27,7 +27,7 @@ const defaultArgs = {
 };
 
 export default {
-  title: 'Molecules/Messaging/Tooltip',
+  title: 'Components/Tooltip',
   component: Tooltip,
   args: defaultArgs,
   parameters: {

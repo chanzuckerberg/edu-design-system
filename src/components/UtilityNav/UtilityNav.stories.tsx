@@ -5,7 +5,7 @@ import { UtilityNav } from './UtilityNav';
 import { UtilityNavItem } from '../UtilityNavItem/UtilityNavItem';
 
 export default {
-  title: 'Molecules/Navigation/UtilityNav',
+  title: 'Components/UtilityNav',
   component: UtilityNav,
   subcomponents: { UtilityNavItem },
   args: {

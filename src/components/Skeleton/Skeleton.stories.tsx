@@ -6,7 +6,7 @@ import { Skeleton } from './Skeleton';
 import PopoverContainer from '../PopoverContainer';
 
 export default {
-  title: 'Atoms/Skeleton',
+  title: 'Components/Skeleton',
   component: Skeleton,
   subcomponents: {
     'Skeleton.Circle': Skeleton.Circle,

@@ -5,7 +5,7 @@ import { Toolbar } from './Toolbar';
 import ToolbarItem from '../ToolbarItem';
 
 export default {
-  title: 'Organisms/Toolbars/Toolbar',
+  title: 'Components/Toolbar',
   component: Toolbar,
   subcomponents: { ToolbarItem },
   parameters: {

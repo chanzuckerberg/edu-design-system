@@ -3,7 +3,7 @@ import React from 'react';
 import { InlineNotification, VARIANTS } from './InlineNotification';
 
 export default {
-  title: 'Molecules/Messaging/InlineNotification',
+  title: 'Components/InlineNotification',
   component: InlineNotification,
   args: {
     text: 'Inline notifications lorem ipsum text',

@@ -11,7 +11,7 @@ import { Checkbox } from '../Checkbox/Checkbox';
 import { FiltersCheckboxField } from '../FiltersCheckboxField/FiltersCheckboxField';
 
 export default {
-  title: 'Organisms/Interactive/FiltersPopover',
+  title: 'Components/FiltersPopover',
   component: FiltersPopover,
   parameters: {
     badges: [BADGE.BETA],

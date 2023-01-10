@@ -9,7 +9,7 @@ import styles from './Select.stories.module.css';
 import Icon from '../Icon';
 
 export default {
-  title: 'Molecules/Forms/Select',
+  title: 'Components/Select',
   component: Select,
   subcomponents: {
     'Select.Button': Select.Button,

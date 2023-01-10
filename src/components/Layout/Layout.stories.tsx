@@ -5,7 +5,7 @@ import { Layout } from './Layout';
 import LayoutSection from '../LayoutSection';
 
 export default {
-  title: 'Molecules/Layout and Containers/Layout',
+  title: 'Components/Layout',
   component: Layout,
   args: {
     children: (

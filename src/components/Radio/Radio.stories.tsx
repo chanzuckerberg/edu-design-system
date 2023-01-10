@@ -5,7 +5,7 @@ import React from 'react';
 import { Radio } from './Radio';
 
 export default {
-  title: 'Atoms/Forms/Radio',
+  title: 'Components/Radio',
   component: Radio,
   args: {
     label: 'Option 1',

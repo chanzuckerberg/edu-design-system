@@ -11,7 +11,7 @@ import type { SortDirectionsType } from '../TableHeaderCell';
 import TableRow from '../TableRow';
 
 export default {
-  title: 'Organisms/Tables/Table',
+  title: 'Components/Table',
   component: Table,
   subcomponents: { TableBody, TableCell, TableHeader, TableRow },
   parameters: {

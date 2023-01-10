@@ -5,7 +5,7 @@ import type React from 'react';
 import { LoadingIndicator } from './LoadingIndicator';
 
 export default {
-  title: 'Atoms/LoadingIndicator',
+  title: 'Components/LoadingIndicator',
   component: LoadingIndicator,
   parameters: {
     layout: 'centered',

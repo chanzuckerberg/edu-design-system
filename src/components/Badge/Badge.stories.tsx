@@ -5,7 +5,7 @@ import React from 'react';
 import { Badge } from './Badge';
 
 export default {
-  title: 'Molecules/Messaging/Badge',
+  title: 'Components/Badge',
   component: Badge,
   subcomponents: {
     'Badge.Dot': Badge.Dot,
@@ -26,7 +26,7 @@ export const Dot: StoryObj<Args> = {
       <>
         <div
           aria-label="Ava has notification"
-          className="fpo flex items-center justify-center h-8 w-8"
+          className="fpo flex h-8 w-8 items-center justify-center"
         >
           Ava
         </div>
@@ -42,7 +42,7 @@ export const SmallNumber: StoryObj<Args> = {
       <>
         <div
           aria-label="Ava has 1 notification"
-          className="fpo flex items-center justify-center h-8 w-8"
+          className="fpo flex h-8 w-8 items-center justify-center"
         >
           Ava
         </div>
@@ -58,7 +58,7 @@ export const LargeNumber: StoryObj<Args> = {
       <>
         <div
           aria-label="Ava has 999 notifications"
-          className="fpo flex items-center justify-center h-8 w-8"
+          className="fpo flex h-8 w-8 items-center justify-center"
         >
           Ava
         </div>
@@ -74,7 +74,7 @@ export const OverNineThousand: StoryObj<Args> = {
       <>
         <div
           aria-label="Ava has more than 99 notifications"
-          className="fpo flex items-center justify-center h-8 w-8"
+          className="fpo flex h-8 w-8 items-center justify-center"
         >
           Ava
         </div>
@@ -90,7 +90,7 @@ export const IconBadge: StoryObj<Args> = {
       <>
         <div
           aria-label="Ava alert"
-          className="fpo flex items-center justify-center h-8 w-8"
+          className="fpo flex h-8 w-8 items-center justify-center"
         >
           Ava
         </div>
@@ -106,7 +106,7 @@ export const LargeBadgeableObject: StoryObj<Args> = {
       <>
         <div
           aria-label="Badge-able Obj has 10 notifications"
-          className="fpo flex items-center justify-center w-96 h-96"
+          className="fpo flex h-96 w-96 items-center justify-center"
         >
           Badge-able Obj
         </div>

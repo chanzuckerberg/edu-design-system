@@ -7,7 +7,7 @@ import Tab from '../Tab';
 import Text from '../Text';
 
 export default {
-  title: 'Organisms/Interactive/Tabs',
+  title: 'Components/Tabs',
   component: Tabs,
   subcomponents: { Tabs },
   args: {

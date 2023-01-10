@@ -4,7 +4,7 @@ import React from 'react';
 import { Main } from './Main';
 
 export default {
-  title: 'Molecules/Layout and Containers/Main',
+  title: 'Components/Main',
   component: Main,
   parameters: {
     axe: {
