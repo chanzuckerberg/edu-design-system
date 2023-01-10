@@ -47,7 +47,7 @@ export const LayoutExample: StoryObj<Args> = {
   render: (args) => {
     return (
       <div aria-label="Loading example profile card" role="status">
-        <PopoverContainer className="p-3 m-2">
+        <PopoverContainer className="m-2 p-3">
           <Skeleton.Circle className="mb-3" width="50px" />
           <Skeleton.Text className="mt-2 mb-2" height="4rem" width="15ch" />
           <Skeleton.Text className="mt-2 mb-2" height="1.5rem" width="30ch" />
