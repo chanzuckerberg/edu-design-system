@@ -13,12 +13,6 @@ export default {
       disableSnapshot: true,
     },
   },
-} as Meta<Args>;
-
-type Args = React.ComponentProps<typeof NotificationListPopover>;
-
-export const Default: StoryObj<Args> = {
-  args: {},
   decorators: [
     (Story) => (
       <div
@@ -34,4 +28,10 @@ export const Default: StoryObj<Args> = {
       </div>
     ),
   ],
+} as Meta<Args>;
+
+type Args = React.ComponentProps<typeof NotificationListPopover>;
+
+export const Default: StoryObj = {
+  render: () => <NotificationListPopover />,
 };
