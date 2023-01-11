@@ -154,13 +154,13 @@ export const Filters = ({ ...other }) => {
       <Table.Header>
         <Table.Row variant="header">
           <Table.HeaderCell className="w-1/4">Food</Table.HeaderCell>
-          <Table.HeaderCell className="text-center w-1/4">
+          <Table.HeaderCell className="w-1/4 text-center">
             Soup
           </Table.HeaderCell>
-          <Table.HeaderCell className="text-center w-1/4">
+          <Table.HeaderCell className="w-1/4 text-center">
             Salad
           </Table.HeaderCell>
-          <Table.HeaderCell className="text-center w-1/4">
+          <Table.HeaderCell className="w-1/4 text-center">
             Sandwich
           </Table.HeaderCell>
         </Table.Row>
@@ -169,7 +169,7 @@ export const Filters = ({ ...other }) => {
         {filteredFoods.map((food) => (
           <Table.Row key={'table-row-' + food.name}>
             <Table.Cell>{food.name}</Table.Cell>
-            <Table.Cell className="text-center w-1/4">
+            <Table.Cell className="w-1/4 text-center">
               {(food.isSoup && (
                 <Icon name="star" purpose="informative" title="is soup" />
               )) ||

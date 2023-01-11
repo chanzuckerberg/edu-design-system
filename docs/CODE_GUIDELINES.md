@@ -300,6 +300,8 @@ You can continue to use the `Icon` components' `color` prop with JavaScript vari
 
 EDS uses [tailwind utility classes](https://tailwindcss.com/docs/padding) (e.g. `mb-0` and `p-0`) inline in `*.stories.tsx` files to quickly add small styling tweaks, like spacing (e.g. `<TableCell className="p-0">`). This reduces the need for CSS module files made specifically for stories. Use the `!` modifier to override default component styles (e.g. `<TableCell className="!p-0">`).
 
+Consider installing the VSCode extension [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) for autocomplete, linting, and hover previews.
+
 ## Theming conventions <a name="theming-conventions"></a>
 
 EDS is a [themeable design system](https://bradfrost.com/blog/post/creating-themeable-design-systems/) that incorporates some high-level UI application variables to make easy systematic changes to the UI.
