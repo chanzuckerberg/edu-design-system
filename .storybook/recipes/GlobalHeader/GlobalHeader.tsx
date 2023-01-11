@@ -227,7 +227,7 @@ export const GlobalHeader = ({
         placement={isLarge ? 'top-start' : 'bottom-end'}
       >
         <Popover.Button
-          as="li"
+          as={React.Fragment}
           className={styles['global-header__avatar-button']}
         >
           <Button aria-label="Notifications" variant="icon">
