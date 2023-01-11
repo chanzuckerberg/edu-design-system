@@ -32,6 +32,4 @@ export default {
 
 type Args = React.ComponentProps<typeof NotificationListPopover>;
 
-export const Default: StoryObj = {
-  render: () => <NotificationListPopover />,
-};
+export const Default: StoryObj = {};
