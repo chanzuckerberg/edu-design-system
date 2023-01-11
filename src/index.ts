@@ -115,7 +115,6 @@ export type { BannerProps } from './components/Banner';
  * consuming apps.
  */
 // export { default as Header } from './components/Header';
-// export { default as Main } from './components/Main';
 // export { default as NavContainer } from './components/NavContainer';
 // export { default as PrimaryNav } from './components/PrimaryNav';
 // export { default as PrimaryNavItem } from './components/PrimaryNavItem';

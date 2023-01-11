@@ -32,6 +32,7 @@
 }
 
 .page-shell__main {
+  padding-bottom: var(--eds-size-8);
   padding-top: var(--eds-size-4);
 
   @media all and (min-width: $eds-bp-xl) {
