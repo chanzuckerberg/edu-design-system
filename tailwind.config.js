@@ -1,5 +1,5 @@
-const variableTokens = require('./lib/tokens/json/css-variables-nested.json');
-const staticTokens = require('./lib/tokens/json/variables-nested.json');
+const variableTokens = require('./src/tokens-dist/json/css-variables-nested.json');
+const staticTokens = require('./src/tokens-dist/json/variables-nested.json');
 
 module.exports = {
   /**

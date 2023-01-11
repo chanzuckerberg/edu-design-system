@@ -342,7 +342,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => {
                 {!isTable &&
                   feedbackOverviews.map((overview) => (
                     <Card
-                      className="py-8 mb-4"
+                      className="mb-4 py-8"
                       key={`feedback-overview-${overview.student}`}
                     >
                       <Card.Header
@@ -452,7 +452,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => {
                 {!isTable &&
                   checkpointProgresses.map((progress) => (
                     <Card
-                      className="py-8 mb-4"
+                      className="mb-4 py-8"
                       key={`progress-${progress.student}`}
                     >
                       <Card.Header

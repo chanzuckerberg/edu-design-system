@@ -116,7 +116,7 @@ export const StackedCardsToTable = () => {
       )}
       {!isTable &&
         checkpointProgresses.map((progress) => (
-          <Card className="py-8 mb-4" key={`progress-${progress.student}`}>
+          <Card className="mb-4 py-8" key={`progress-${progress.student}`}>
             <Card.Header>
               <Text as="p" size="lg" weight="bold">
                 {progress.student}

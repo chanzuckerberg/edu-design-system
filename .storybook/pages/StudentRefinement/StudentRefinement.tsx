@@ -191,7 +191,7 @@ export const StudentRefinement = () => {
             <Table.Cell className="text-center">
               {student.grade.offTrack && (
                 <Icon
-                  className="inline-flex justify-center w-5"
+                  className="inline-flex w-5 justify-center"
                   color={EdsThemeColorIconUtilityWarning}
                   name="circle-small"
                   purpose="informative"
@@ -200,7 +200,7 @@ export const StudentRefinement = () => {
                 />
               )}
               {student.grade.grade && (
-                <Text as="span" className="inline-flex justify-center w-5">
+                <Text as="span" className="inline-flex w-5 justify-center">
                   {student.grade.grade}
                 </Text>
               )}
@@ -215,7 +215,7 @@ export const StudentRefinement = () => {
             >
               {student.cogSkillAvg.offTrack && (
                 <Icon
-                  className="inline-flex justify-center w-5"
+                  className="inline-flex w-5 justify-center"
                   color={EdsThemeColorIconUtilityWarning}
                   name="circle-small"
                   purpose="informative"
@@ -234,7 +234,7 @@ export const StudentRefinement = () => {
             >
               {student.projects.offTrack && (
                 <Icon
-                  className="inline-flex justify-center w-5"
+                  className="inline-flex w-5 justify-center"
                   color={EdsThemeColorIconUtilityWarning}
                   name="circle-small"
                   purpose="informative"
@@ -253,7 +253,7 @@ export const StudentRefinement = () => {
             >
               {student.powerFocusAreas.offTrack && (
                 <Icon
-                  className="inline-flex justify-center w-5"
+                  className="inline-flex w-5 justify-center"
                   color={EdsThemeColorIconUtilityWarning}
                   name="circle-small"
                   purpose="informative"
@@ -293,10 +293,10 @@ export const StudentRefinement = () => {
               <Text as="span" size="sm" weight="bold">
                 Grade
               </Text>
-              <div className="flex items-center justify-between w-16">
+              <div className="flex w-16 items-center justify-between">
                 {student.grade.offTrack && (
                   <Icon
-                    className="inline-flex justify-center w-5"
+                    className="inline-flex w-5 justify-center"
                     color={EdsThemeColorIconUtilityWarning}
                     name="circle-small"
                     purpose="informative"
@@ -305,7 +305,7 @@ export const StudentRefinement = () => {
                   />
                 )}
                 {student.grade.grade && (
-                  <Text as="span" className="inline-flex justify-center w-5">
+                  <Text as="span" className="inline-flex w-5 justify-center">
                     {student.grade.grade}
                   </Text>
                 )}
@@ -324,12 +324,12 @@ export const StudentRefinement = () => {
                 className={clsx(
                   'flex items-center',
                   !student.cogSkillAvg.offTrack && 'justify-end',
-                  student.cogSkillAvg.offTrack && 'justify-between w-16',
+                  student.cogSkillAvg.offTrack && 'w-16 justify-between',
                 )}
               >
                 {student.cogSkillAvg.offTrack && (
                   <Icon
-                    className="inline-flex justify-center w-5"
+                    className="inline-flex w-5 justify-center"
                     color={EdsThemeColorIconUtilityWarning}
                     name="circle-small"
                     purpose="informative"
@@ -352,12 +352,12 @@ export const StudentRefinement = () => {
                 className={clsx(
                   'flex items-center',
                   !student.projects.offTrack && 'justify-end',
-                  student.projects.offTrack && 'justify-between w-16',
+                  student.projects.offTrack && 'w-16 justify-between',
                 )}
               >
                 {student.projects.offTrack && (
                   <Icon
-                    className="inline-flex justify-center w-5"
+                    className="inline-flex w-5 justify-center"
                     color={EdsThemeColorIconUtilityWarning}
                     name="circle-small"
                     purpose="informative"
@@ -380,12 +380,12 @@ export const StudentRefinement = () => {
                 className={clsx(
                   'flex items-center',
                   !student.powerFocusAreas.offTrack && 'justify-end',
-                  student.powerFocusAreas.offTrack && 'justify-between w-16',
+                  student.powerFocusAreas.offTrack && 'w-16 justify-between',
                 )}
               >
                 {student.powerFocusAreas.offTrack && (
                   <Icon
-                    className="inline-flex justify-center w-5"
+                    className="inline-flex w-5 justify-center"
                     color={EdsThemeColorIconUtilityWarning}
                     name="circle-small"
                     purpose="informative"
@@ -423,7 +423,7 @@ export const StudentRefinement = () => {
             <div className="fpo">Overview</div>
           </Tab>
           <Tab title="Students">
-            <div className="pt-8 px-12 pb-12">
+            <div className="px-12 pt-8 pb-12">
               <div className={styles['student-refinement__summary-cards']}>
                 <DataSummaryCard
                   className={styles['student-refinement__summary-card']}
