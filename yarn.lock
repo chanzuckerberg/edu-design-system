@@ -1997,6 +1997,7 @@ __metadata:
     "@chanzuckerberg/eslint-config-edu-ts": ^1.0.4
     "@chanzuckerberg/eslint-plugin-edu-react": ^1.1.7
     "@chanzuckerberg/eslint-plugin-stories": ^3.2.9
+    "@chanzuckerberg/prettier-config-edu": ^1.0.2
     "@chanzuckerberg/story-utils": ^3.0.10
     "@commitlint/cli": ^16.3.0
     "@commitlint/config-conventional": ^16.2.4
@@ -2055,7 +2056,6 @@ __metadata:
     postcss-nested: ^5.0.6
     postcss-simple-vars: ^6.0.3
     prettier: ^2.7.1
-    prettier-plugin-tailwindcss: ^0.2.1
     react: ^16.14.0
     react-beautiful-dnd: ^13.1.1
     react-children-by-type: ^1.1.0
@@ -2123,6 +2123,17 @@ __metadata:
   version: 3.2.9
   resolution: "@chanzuckerberg/eslint-plugin-stories@npm:3.2.9"
   checksum: dc2bd8064c84170f55b388f456fe436b36c0c5d8aaf75d7588fc1b3f1470adf881199b9c0eee0ed357afa079ee98518eeea03d0862e6354cdefbe6ea0029f718
+  languageName: node
+  linkType: hard
+
+"@chanzuckerberg/prettier-config-edu@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "@chanzuckerberg/prettier-config-edu@npm:1.0.2"
+  dependencies:
+    prettier-plugin-tailwindcss: ^0.2.1
+  peerDependencies:
+    prettier: ">= 2"
+  checksum: 6b5a21cfaf81a28d811a2d84342610487b0ab7f6b8667a874ef7cac0ec1e3dc946b1ad5c1c949b26b620c56e161dddb836f09d960c4172f60f93f2266126ad5e
   languageName: node
   linkType: hard
 
