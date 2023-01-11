@@ -81,28 +81,6 @@ exports[`<NavContainer /> Default story renders snapshot 1`] = `
         </li>
       </ul>
     </nav>
-    <nav
-      class="utility-nav"
-      id="5"
-    >
-      <ul
-        class="utility-nav__list"
-      >
-        <li
-          class="utility-nav__item"
-        >
-          <button
-            class="utility-nav__link"
-          >
-            <span
-              class="utility-nav__text"
-            >
-              Utility Nav
-            </span>
-          </button>
-        </li>
-      </ul>
-    </nav>
   </div>
 </div>
 `;
