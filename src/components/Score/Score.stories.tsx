@@ -5,7 +5,7 @@ import React from 'react';
 import { Score } from './Score';
 
 export default {
-  title: 'Molecules/Messaging/Score',
+  title: 'Components/Score',
   component: Score,
   parameters: {
     badges: [BADGE.BETA],

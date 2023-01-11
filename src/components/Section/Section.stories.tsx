@@ -7,7 +7,7 @@ import Icon from '../Icon';
 import Text from '../Text';
 
 export default {
-  title: 'Organisms/Sections/Section',
+  title: 'Components/Section',
   component: Section,
   args: {
     children:

@@ -3,7 +3,7 @@ import type { ComponentProps } from 'react';
 import Toast from './Toast';
 
 export default {
-  title: 'Molecules/Messaging/Toast',
+  title: 'Components/Toast',
   component: Toast,
   argTypes: { onDismiss: { action: 'dismissed' } },
   args: {

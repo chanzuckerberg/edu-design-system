@@ -6,7 +6,7 @@ exports[`<Badge /> Dot story renders snapshot 1`] = `
 >
   <div
     aria-label="Ava has notification"
-    class="fpo flex items-center justify-center h-8 w-8"
+    class="fpo flex h-8 w-8 items-center justify-center"
   >
     Ava
   </div>
@@ -23,7 +23,7 @@ exports[`<Badge /> IconBadge story renders snapshot 1`] = `
 >
   <div
     aria-label="Ava alert"
-    class="fpo flex items-center justify-center h-8 w-8"
+    class="fpo flex h-8 w-8 items-center justify-center"
   >
     Ava
   </div>
@@ -55,7 +55,7 @@ exports[`<Badge /> LargeBadgeableObject story renders snapshot 1`] = `
 >
   <div
     aria-label="Badge-able Obj has 10 notifications"
-    class="fpo flex items-center justify-center w-96 h-96"
+    class="fpo flex h-96 w-96 items-center justify-center"
   >
     Badge-able Obj
   </div>
@@ -74,7 +74,7 @@ exports[`<Badge /> LargeNumber story renders snapshot 1`] = `
 >
   <div
     aria-label="Ava has 999 notifications"
-    class="fpo flex items-center justify-center h-8 w-8"
+    class="fpo flex h-8 w-8 items-center justify-center"
   >
     Ava
   </div>
@@ -93,7 +93,7 @@ exports[`<Badge /> OverNineThousand story renders snapshot 1`] = `
 >
   <div
     aria-label="Ava has more than 99 notifications"
-    class="fpo flex items-center justify-center h-8 w-8"
+    class="fpo flex h-8 w-8 items-center justify-center"
   >
     Ava
   </div>
@@ -112,7 +112,7 @@ exports[`<Badge /> SmallNumber story renders snapshot 1`] = `
 >
   <div
     aria-label="Ava has 1 notification"
-    class="fpo flex items-center justify-center h-8 w-8"
+    class="fpo flex h-8 w-8 items-center justify-center"
   >
     Ava
   </div>

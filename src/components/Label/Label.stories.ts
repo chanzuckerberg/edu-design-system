@@ -4,7 +4,7 @@ import type React from 'react';
 import { Label } from './Label';
 
 export default {
-  title: 'Atoms/Forms/Label',
+  title: 'Components/Label',
   component: Label,
 } as Meta<Args>;
 

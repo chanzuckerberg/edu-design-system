@@ -5,7 +5,7 @@ import React from 'react';
 import { InputField } from './InputField';
 
 export default {
-  title: 'Atoms/Forms/InputField',
+  title: 'Components/InputField',
   component: InputField,
   parameters: {
     badges: [BADGE.BETA],

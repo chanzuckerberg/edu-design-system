@@ -6,7 +6,7 @@ import { DefinitionList } from './DefinitionList';
 import DefinitionListItem from '../DefinitionListItem';
 
 export default {
-  title: 'Molecules/Lists/DefinitionList',
+  title: 'Components/DefinitionList',
   component: DefinitionList,
   subcomponents: { DefinitionListItem },
 } as Meta;

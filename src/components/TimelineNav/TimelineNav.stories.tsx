@@ -11,7 +11,7 @@ import Text from '../Text';
 import TimelineNavPanel from '../TimelineNavPanel';
 
 export default {
-  title: 'Molecules/Navigation/TimelineNav',
+  title: 'Components/TimelineNav',
   component: TimelineNav,
   subcomponents: { TimelineNavPanel },
   args: {

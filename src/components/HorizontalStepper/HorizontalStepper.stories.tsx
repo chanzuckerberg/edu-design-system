@@ -8,7 +8,7 @@ import HorizontalStep from '../HorizontalStep';
 import Icon from '../Icon';
 
 export default {
-  title: 'Molecules/Lists/HorizontalStepper',
+  title: 'Components/HorizontalStepper',
   component: HorizontalStepper,
   args: {
     activeIndex: 0,

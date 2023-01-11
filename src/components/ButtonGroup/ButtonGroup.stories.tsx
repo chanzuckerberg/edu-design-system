@@ -4,7 +4,7 @@ import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';
 
 export default {
-  title: 'Organisms/Buttons/ButtonGroup',
+  title: 'Components/ButtonGroup',
   component: ButtonGroup,
   args: {
     spacing: '1x' as const,

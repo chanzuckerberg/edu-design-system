@@ -5,7 +5,7 @@ import { OverflowList } from './OverflowList';
 import { OverflowListItem } from '../OverflowListItem/OverflowListItem';
 
 export default {
-  title: 'Molecules/Lists/OverflowList',
+  title: 'Components/OverflowList',
   component: OverflowList,
 } as Meta<Args>;
 

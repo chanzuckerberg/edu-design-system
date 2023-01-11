@@ -4,7 +4,7 @@ import React from 'react';
 import { Logo } from './Logo';
 
 export default {
-  title: 'Molecules/Global/Logo',
+  title: 'Components/Logo',
   component: Logo,
   args: {
     children: (

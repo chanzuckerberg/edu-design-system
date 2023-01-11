@@ -6,7 +6,7 @@ import CardFooter from '../CardFooter';
 import CardHeader from '../CardHeader';
 
 export default {
-  title: 'Molecules/Blocks/Card',
+  title: 'Components/Card',
   component: Card,
   subcomponents: { CardHeader, CardBody, CardFooter },
   args: {

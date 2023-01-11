@@ -7,7 +7,7 @@ import type { NotificationListItemProps } from '../NotificationListItem';
 import NotificationListItem from '../NotificationListItem';
 
 export default {
-  title: 'Molecules/Lists/NotificationList',
+  title: 'Components/NotificationList',
   component: NotificationList,
   subcomponents: { NotificationListItem },
 } as Meta<Args>;

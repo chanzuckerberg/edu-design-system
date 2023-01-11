@@ -5,7 +5,7 @@ import { LinkList } from './LinkList';
 import LinkListItem from '../LinkListItem';
 
 export default {
-  title: 'Molecules/Navigation/LinkList',
+  title: 'Components/LinkList',
   component: LinkList,
   args: {
     children: (

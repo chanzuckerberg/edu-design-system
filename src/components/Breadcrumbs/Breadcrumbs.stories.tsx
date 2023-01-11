@@ -5,7 +5,7 @@ import React from 'react';
 import { Breadcrumbs } from './Breadcrumbs';
 
 export default {
-  title: 'Molecules/Navigation/Breadcrumbs',
+  title: 'Components/Breadcrumbs',
   component: Breadcrumbs,
   subcomponents: { 'Breadcrumbs.Item': Breadcrumbs.Item },
   args: {

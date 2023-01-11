@@ -16,7 +16,7 @@ import Text from '../Text';
 import Toolbar from '../Toolbar';
 
 export default {
-  title: 'Organisms/Interactive/Drag and Drop',
+  title: 'Components/Drag and Drop',
   component: DragDrop,
   decorators: [
     (Story) => (

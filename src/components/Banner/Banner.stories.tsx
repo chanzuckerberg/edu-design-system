@@ -9,7 +9,7 @@ import Button from '../Button';
 import Heading from '../Heading';
 
 export default {
-  title: 'Molecules/Messaging/Banner',
+  title: 'Components/Banner',
   component: Banner,
   args: {
     title:

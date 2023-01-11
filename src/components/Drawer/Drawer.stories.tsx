@@ -9,7 +9,7 @@ import { ButtonGroup } from '../ButtonGroup/ButtonGroup';
 import { Heading } from '../Heading/Heading';
 
 export default {
-  title: 'Organisms/Interactive/Drawer',
+  title: 'Components/Drawer',
   component: Drawer,
   parameters: {
     badges: [BADGE.BETA],

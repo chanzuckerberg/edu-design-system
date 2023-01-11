@@ -5,7 +5,7 @@ import styles from './Tag.stories.module.css';
 import Icon from '../Icon';
 
 export default {
-  title: 'Molecules/Messaging/Tag',
+  title: 'Components/Tag',
   component: Tag,
   argTypes: {
     variant: {

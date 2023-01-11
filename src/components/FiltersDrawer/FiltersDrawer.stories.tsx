@@ -10,7 +10,7 @@ import { Checkbox } from '../Checkbox/Checkbox';
 import { FiltersCheckboxField } from '../FiltersCheckboxField/FiltersCheckboxField';
 
 export default {
-  title: 'Organisms/Interactive/FiltersDrawer',
+  title: 'Components/FiltersDrawer',
   component: FiltersDrawer,
   parameters: {
     badges: [BADGE.BETA],

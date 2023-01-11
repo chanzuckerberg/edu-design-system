@@ -5,7 +5,7 @@ import { Grid } from './Grid';
 import GridItem from '../GridItem';
 
 export default {
-  title: 'Molecules/Layout and Containers/Grid',
+  title: 'Components/Grid',
   args: {
     children: (
       <>
