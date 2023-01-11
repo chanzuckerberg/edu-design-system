@@ -52,7 +52,6 @@ export { default as LayoutSection } from './components/LayoutSection';
 export { default as Link } from './components/Link';
 export { default as LinkList } from './components/LinkList';
 export { default as LoadingIndicator } from './components/LoadingIndicator';
-export { default as Logo } from './components/Logo';
 export { default as Menu } from './components/Menu';
 export { default as Modal } from './components/Modal';
 export { default as ModalBody } from './components/ModalBody';

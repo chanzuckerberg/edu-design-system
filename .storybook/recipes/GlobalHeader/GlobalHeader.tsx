@@ -4,7 +4,7 @@ import styles from './GlobalHeader.module.css';
 import { Button, Icon, Heading } from '../../../src';
 // Project Overview pilot components -- not yet exported from src/index.ts
 import Header from '../../../src/components/Header';
-import Logo from '../../../src/components/Logo';
+import Link from '../../../src/components/Link';
 import NavContainer from '../../../src/components/NavContainer';
 import NotificationList from '../../../src/components/NotificationList';
 import Popover from '../../../src/components/Popover';
@@ -139,7 +139,7 @@ export const GlobalHeader = ({
   });
   return (
     <Header behavior="sticky" className={componentClassName} {...other}>
-      <Logo
+      <Link
         aria-label="Learning Platform Homepage"
         className={styles['global-header__logo']}
         href="#"
@@ -159,7 +159,7 @@ export const GlobalHeader = ({
             fillRule="evenodd"
           />
         </svg>
-      </Logo>
+      </Link>
 
       <Button
         className={styles['global-header__menu-button']}
