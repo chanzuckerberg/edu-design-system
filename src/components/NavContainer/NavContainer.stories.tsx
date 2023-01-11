@@ -4,25 +4,18 @@ import React from 'react';
 import { NavContainer } from './NavContainer';
 import PrimaryNav from '../PrimaryNav';
 import PrimaryNavItem from '../PrimaryNavItem';
-import UtilityNav from '../UtilityNav';
-import UtilityNavItem from '../UtilityNavItem';
 
 export default {
   title: 'Components/NavContainer',
   component: NavContainer,
-  subcomponents: { PrimaryNav, UtilityNav },
+  subcomponents: { PrimaryNav },
   args: {
     children: (
-      <>
-        <PrimaryNav>
-          <PrimaryNavItem href="#" text="Nav Item" />
-          <PrimaryNavItem href="#" isActive={true} text="Nav Item" />
-          <PrimaryNavItem href="#" text="Nav Item" />
-        </PrimaryNav>
-        <UtilityNav>
-          <UtilityNavItem text="Utility Nav"></UtilityNavItem>
-        </UtilityNav>
-      </>
+      <PrimaryNav>
+        <PrimaryNavItem href="#" text="Nav Item" />
+        <PrimaryNavItem href="#" isActive={true} text="Nav Item" />
+        <PrimaryNavItem href="#" text="Nav Item" />
+      </PrimaryNav>
     ),
   },
   decorators: [

@@ -122,10 +122,3 @@ export type { BannerProps } from './components/Banner';
 // export { default as PrimaryNav } from './components/PrimaryNav';
 // export { default as PrimaryNavItem } from './components/PrimaryNavItem';
 // export { default as ShowHide } from './components/ShowHide';
-// export { default as UtilityNav } from './components/UtilityNav';
-// export { default as UtilityNavItem } from './components/UtilityNavItem';
-
-/**
- * Utility hooks. Currently only used in <UtilityNavItem />
- */
-// export * from './hooks';
