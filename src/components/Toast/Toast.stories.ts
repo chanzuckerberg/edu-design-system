@@ -1,6 +1,6 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import type { ComponentProps } from 'react';
-import Toast from './Toast';
+import { Toast } from './Toast';
 
 export default {
   title: 'Components/Toast',
