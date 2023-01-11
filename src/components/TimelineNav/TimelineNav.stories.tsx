@@ -14,6 +14,11 @@ export default {
   title: 'Components/TimelineNav',
   component: TimelineNav,
   subcomponents: { TimelineNavPanel },
+  parameters: {
+    backgrounds: {
+      default: 'white',
+    },
+  },
   args: {
     variant: 'ordered',
     children: (

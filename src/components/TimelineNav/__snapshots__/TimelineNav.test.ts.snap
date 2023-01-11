@@ -3,6 +3,7 @@
 exports[`<TimelineNav /> Default story renders snapshot 1`] = `
 <div
   class="timeline-nav"
+  variant="ordered"
 >
   <div
     class="timeline-nav__nav"
