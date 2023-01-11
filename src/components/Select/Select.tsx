@@ -25,10 +25,9 @@ type SelectProps = ExtractProps<typeof Listbox> & {
   /**
    * Screen-reader text for the select's label.
    *
-   * When possible, use a visible label through the `labelText` prop or
-   * by passing a <Select.Label> into `chidren`. In rare cases where there's no
-   * visible label, you must provide an `aria-label` for screen readers.
-   * If you pass in an `aria-label`, you don't need `labelText` or <Select.Label>.
+   * When possible, use a visible label by passing a <Select.Label> into `chidren`.
+   * In rare cases where there's no visible label, you must provide an `aria-label` for screen readers.
+   * If you pass in an `aria-label`, <Select.Label>.
    */
   'aria-label'?: string;
   /**
