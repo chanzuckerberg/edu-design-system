@@ -59,8 +59,6 @@ export { default as ModalHeader } from './components/ModalHeader';
 export { default as ModalStepper } from './components/ModalStepper';
 export { default as ModalTitle } from './components/ModalTitle';
 export { default as NumberIcon } from './components/NumberIcon';
-export { default as OverflowList } from './components/OverflowList';
-export { default as OverflowListItem } from './components/OverflowListItem';
 export { default as PageHeader } from './components/PageHeader';
 export { default as PageLevelBanner } from './components/PageLevelBanner';
 export { default as Panel } from './components/Panel';
