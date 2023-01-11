@@ -44,14 +44,6 @@ export interface Props {
    */
   id?: string;
   /**
-   * Indicates that field is required for form to be successfully submitted
-   */
-  required?: boolean;
-  /**
-   * Function passed down from higher level component into TimelineNav
-   */
-  timelineNavOnClick?: () => void;
-  /**
    * Timeline nav item tab name
    */
   title?: string;
@@ -59,11 +51,6 @@ export interface Props {
    * Slot for node to appear to the right of the title. Typically used to include a Badge, Button, or other component
    */
   titleAfter?: ReactNode;
-  /**
-   * Stylistic variations:
-   * - **ordered** uses a ordered list <ol> instead of the default unordered list <ul>, and allows for icons, bullets, or numbers
-   */
-  variant?: 'ordered';
 }
 
 export interface TimelineNavItem {
@@ -89,11 +76,8 @@ export const TimelineNav = ({
   className,
   id,
   onChange,
-  required,
-  timelineNavOnClick,
   title,
   titleAfter,
-  variant,
   ...other
 }: Props) => {
   /**
@@ -233,10 +217,8 @@ export const TimelineNav = ({
   const childrenWithProps = React.Children.map(
     timelineNavItems(),
     (child, i) => {
-      // Checking isValidElement is the safe way and avoids a typescript
-      // error too.
+      // Checking isValidElement is the safe way and avoids a typescript error too.
       if (React.isValidElement(child)) {
-        // @ts-expect-error TODO: fix "No overload matches this call" error
         return React.cloneElement<Props>(child, {
           id: idVar[i],
           ['aria-labelledby']: ariaLabelledByVar[i],
@@ -389,16 +371,14 @@ export const TimelineNav = ({
         <ol
           className={clsx(
             styles['timeline-nav__list'],
+            styles['timeline-nav__list--ordered'],
             isActive && styles['eds-is-active'],
-            {
-              [styles['timeline-nav__list--ordered']]: variant === 'ordered',
-            },
           )}
           role="tablist"
         >
           {timelineNavItems().map((tab, i) => {
             const isActive = activeIndexState === i;
-            const itemVariant = variant && tab.props.variant;
+            const itemVariant = tab.props.variant;
             return (
               <li
                 className={clsx(

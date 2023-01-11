@@ -208,7 +208,7 @@ export const FeedbackOverview = ({ activeIndex = 0 }: Props) => {
             <div className="fpo">Plans</div>
           </Tab>
           <Tab title="Feedback">
-            <TimelineNav activeIndex={activeIndex} variant="ordered">
+            <TimelineNav activeIndex={activeIndex}>
               <TimelineNavPanel title="Overview">
                 <Toolbar
                   className={styles['feedback-overview__toolbar']}
