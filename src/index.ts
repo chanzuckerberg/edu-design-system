@@ -121,4 +121,3 @@ export type { BannerProps } from './components/Banner';
 // export { default as NotificationListItem } from './components/NotificationListItem';
 // export { default as PrimaryNav } from './components/PrimaryNav';
 // export { default as PrimaryNavItem } from './components/PrimaryNavItem';
-// export { default as ShowHide } from './components/ShowHide';
