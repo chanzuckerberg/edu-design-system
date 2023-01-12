@@ -79,19 +79,6 @@
 }
 
 /**
- * Global header utility nav
- */
-.global-header__utility-nav {
-  position: relative;
-  margin-left: auto;
-
-  @media all and (min-width: $eds-bp-xl) {
-    margin-left: 0;
-    margin-top: auto;
-  }
-}
-
-/**
  * Utility nav popover
  */
 .global-header__popover {
@@ -114,11 +101,16 @@
 }
 
 .global-header__avatar-button {
+  margin-left: auto;
+
   display: flex;
   position: relative;
   border: 0;
   left: var(--eds-size-2);
   @media all and (min-width: $eds-bp-xl) {
+    margin-left: 0;
+    margin-top: auto;
+
     left: -1rem;
   }
 }
