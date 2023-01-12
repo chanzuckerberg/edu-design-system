@@ -1,6 +1,6 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
-import Tag, { VARIANTS } from './Tag';
+import { Tag, VARIANTS } from './Tag';
 import styles from './Tag.stories.module.css';
 import Icon from '../Icon';
 

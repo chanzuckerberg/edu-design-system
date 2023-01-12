@@ -393,7 +393,7 @@ The comment should begin with an import example, include a general description o
 
 Example:
 
-````
+````tsx
 /**
  * `import {ButtonGroup} from "@chanzuckerberg/eds";`
  *
@@ -419,7 +419,7 @@ Do not use [jsdoc tags](https://devhints.io/jsdoc) (e.g. `@example`) if possible
 
 Example:
 
-````
+````tsx
 /**
  * The Banner component is deprecated and will be removed in an upcoming release.
  *
@@ -458,6 +458,22 @@ export const ComponentName = ({
 ```
 
 This defines the component name and passes in all the `Props`.
+
+The `src/components/{componentFolder}/index.ts` file should should import and re-export the component `as default`. The `src/index.ts` file should re-export the component for an easy way to consume it downstream.
+
+i.e. in `src/components/{componentFolder}/index.ts`
+
+```ts
+export { ComponentName as default } from './ComponentName';
+```
+
+and in `src/index.ts`
+
+```ts
+...
+export { default as ComponentName } from './components/ComponentName';
+...
+```
 
 ### Children
 
