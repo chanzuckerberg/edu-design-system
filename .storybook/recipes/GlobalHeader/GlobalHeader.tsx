@@ -237,7 +237,6 @@ export const GlobalHeader = ({
         <Popover.Content
           arrowClassName={styles['popover__arrow']}
           bodyClassName={styles['global-header__popover']}
-          showArrow
         >
           <header className={styles['global-header__popover-header']}>
             <Heading as="h3" id="popover-heading-1" size="body-sm">

@@ -141,11 +141,6 @@ export type PopoverContentProps = {
    * Custom classname for additional styles for the entire popover content.
    */
   className?: string;
-  /**
-   * Displays arrow that points to the popover trigger.
-   * @deprecated
-   */
-  showArrow?: boolean;
 } & RenderProps<{
   /**
    * Render prop indicating popover open status.
@@ -167,7 +162,6 @@ const PopoverContent = ({
   bodyClassName,
   children,
   className,
-  showArrow,
   ...other
 }: PopoverContentProps) => {
   // Grabs popper behavior generated from usePopper hook from Popover parent component.
@@ -182,11 +176,6 @@ const PopoverContent = ({
 
   const componentClassName = clsx(styles['popover-content'], className);
 
-  const arrowComponentClassName = clsx(
-    styles['popover-content__arrow'],
-    arrowClassName,
-  );
-
   return (
     <HeadlessPopover.Panel
       {...allProps}
@@ -194,13 +183,6 @@ const PopoverContent = ({
       className={componentClassName}
     >
       <PopoverContainer className={bodyClassName}>{children}</PopoverContainer>
-      {showArrow && (
-        <div
-          aria-hidden
-          className={arrowComponentClassName}
-          data-popper-arrow
-        />
-      )}
     </HeadlessPopover.Panel>
   );
 };
