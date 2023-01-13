@@ -37,7 +37,7 @@
     "lint:fix": "yarn run lint:styles:fix && yarn run lint:scripts:fix",
     "lint:styles": "stylelint --ignore-path .gitignore src/**/*.css .storybook/**/*.css",
     "lint:styles:fix": "yarn run lint:styles --fix",
-    "lint:scripts": "eslint --quiet --ignore-path .gitignore --ext=js,jsx,ts,tsx .",
+    "lint:scripts": "eslint --ignore-path .gitignore --ext=js,jsx,ts,tsx .",
     "lint:scripts:fix": "yarn run lint:scripts --fix",
     "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx}\"",
     "prettier-tokens-dist": "prettier --write \"src/tokens-dist/**/*.{js,jsx,ts,tsx}\"",

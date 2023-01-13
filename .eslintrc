@@ -39,7 +39,8 @@
         "groups": ["builtin", "external", "sibling", "parent", "index"]
       }
     ],
-    "no-unused-vars": "warn"
+    "@typescript-eslint/no-unused-vars": "warn",
+    "no-unused-vars": "off"
   },
   "overrides": [
     {

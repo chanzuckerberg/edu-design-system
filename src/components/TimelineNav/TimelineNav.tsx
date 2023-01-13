@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import type { ReactNode } from 'react';
+import type { KeyboardEventHandler, ReactNode } from 'react';
 import React, { useRef, useState, useEffect, useCallback } from 'react';
 import { allByType } from 'react-children-by-type';
 import { useUIDSeed } from 'react-uid';
@@ -175,12 +175,8 @@ export const TimelineNav = ({
    * On KeyDown
    *
    * Find active tab. If there isn't one, do nothing on Keydown.
-   *
-   * TODO: determine why backRef.current?.focus() needs to be in a callback
-   *
-   * TODO: improve `any` type
    */
-  function onKeyDown(e: any) {
+  const onKeyDown: KeyboardEventHandler = function (e) {
     let activeTimelineNavPanel = null;
     timelineNavItemRefs.map((item) => {
       if (item.current === document.activeElement) {
@@ -208,11 +204,13 @@ export const TimelineNav = ({
          * If enter or spacebar keyed, set focus to the 'Back' button. This
          * is wrapped in a setTimeout() method to ensure that document.activeElement
          * gets set properly.
+         *
+         * Note: this may be improved by identifying what has a delayed rendering
          */
         backRef.current?.focus();
       }, 500);
     }
-  }
+  };
 
   const childrenWithProps = React.Children.map(
     timelineNavItems(),

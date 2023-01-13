@@ -121,7 +121,7 @@
  */
 .layout--sidebar-wide > .layout__section--sidebar {
   @media all and (min-width: $eds-bp-xl) {
-    width: 22rem; /* TODO: Make more dynamic */
+    width: 22rem;
   }
 }
 

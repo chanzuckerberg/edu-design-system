@@ -63,8 +63,10 @@ export type LinkType = {
 /**
  * Recipe for a Card component that displays a common card use case.
  * A link may be added to the card to create a clickable card.
+ *
  * NOTE: when card is clickable, it does not support links or buttons
- * in the contents of the card.
+ * in the contents of the card. Users will not be able to click on these inner
+ * links without an event to stop propagation.
  */
 export const BaselineCard = ({
   className,
@@ -83,11 +85,6 @@ export const BaselineCard = ({
 
   /**
    * Hook up the link functionality on component mount if a link is present
-   *
-   * TODO: If the visible text of the card also contains links, these will
-   * need to have an event listener added to them to stop propagation of the
-   * click event; otherwise, users will not be able to click on these inner
-   * links.
    */
   useEffect(() => {
     /**
