@@ -153,4 +153,8 @@ export default {
 
 type Args = React.ComponentProps<typeof TimelineNavPanel>;
 
-export const Default: StoryObj<Args> = {};
+export const Default: StoryObj<Args> = {
+  parameters: {
+    chromatic: { viewports: [414, 1366] },
+  },
+};
