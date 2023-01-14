@@ -6,7 +6,6 @@ import {
   BreadcrumbsItem,
   Button,
   Card,
-  DefinitionList,
   Grid,
   GridItem,
   Heading,
@@ -237,11 +236,12 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
                 explanations of how the body is organized and functions.
               </p>
             </Text>
-            <DefinitionList className="!mb-6" orientation="horizontal">
-              <DefinitionList.Item title="Term 1:">
+            <dl className="mt-0 mb-6 flex">
+              <dt>Term 1:</dt>
+              <dd className="ml-4">
                 <Link>Constructing and Evidence based Explanation</Link>
-              </DefinitionList.Item>
-            </DefinitionList>
+              </dd>
+            </dl>
 
             <Text as="div" className="!mb-4">
               <p>
@@ -250,11 +250,12 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
                 group research question in the introduction.
               </p>
             </Text>
-            <DefinitionList className="!mb-8" orientation="horizontal">
-              <DefinitionList.Item title="Term 1:">
+            <dl className="mt-0 mb-8 flex">
+              <dt>Term 1:</dt>
+              <dd className="ml-4">
                 <Link>Constructing and Evidence based Explanation</Link>
-              </DefinitionList.Item>
-            </DefinitionList>
+              </dd>
+            </dl>
 
             <ButtonActionCalloutCard
               actions={<Button variant="primary">Preview</Button>}
