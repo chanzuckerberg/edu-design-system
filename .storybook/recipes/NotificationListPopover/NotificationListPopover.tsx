@@ -133,10 +133,7 @@ export const NotificationLists = () => (
 export const NotificationListPopover = () => (
   <Popover placement="top-start">
     <Popover.Button as={Button}>Open Popover</Popover.Button>
-    <Popover.Content
-      bodyClassName={styles['notifications-list-popover']}
-      showArrow
-    >
+    <Popover.Content bodyClassName={styles['notifications-list-popover']}>
       <header className={styles['notifications-list-popover__header']}>
         <Heading as="h3" id="popover-heading-1" size="body-sm">
           Notifications (4)

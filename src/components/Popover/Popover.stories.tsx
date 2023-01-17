@@ -49,20 +49,6 @@ export const Default: StoryObj<PopoverProps> = {
   },
 };
 
-export const Arrow: StoryObj<PopoverProps> = {
-  args: {
-    children: (
-      <>
-        <Popover.Button as={Button}>Open Popover</Popover.Button>
-        <Popover.Content showArrow>
-          <div className="fpo m-2 p-6">Popover Content goes here</div>
-        </Popover.Content>
-      </>
-    ),
-  },
-  ...Default,
-};
-
 export const Top: StoryObj<PopoverProps> = {
   args: {
     placement: 'top',
