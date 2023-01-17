@@ -16,7 +16,7 @@ export default {
   subcomponents: { TimelineNavPanel },
   parameters: {
     backgrounds: {
-      default: 'white',
+      default: 'eds-color-neutral-white',
     },
   },
   args: {
