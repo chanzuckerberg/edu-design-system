@@ -16,7 +16,6 @@ export { default as CheckboxLabel } from './components/CheckboxLabel';
 export { default as ClickableStyle } from './components/ClickableStyle';
 export { default as DataBar } from './components/DataBar';
 export { default as DataBarSegment } from './components/DataBarSegment';
-export { default as DefinitionList } from './components/DefinitionList';
 export { default as DragDrop } from './components/DragDrop';
 export { default as DragDropContainer } from './components/DragDropContainer';
 export { default as DragDropContainerHeader } from './components/DragDropContainerHeader';
@@ -76,7 +75,6 @@ export { default as SearchField } from './components/SearchField';
 export { default as Section } from './components/Section';
 export { default as Select } from './components/Select';
 export { default as Skeleton } from './components/Skeleton';
-export { default as StackedBlock } from './components/StackedBlock';
 export { default as Tab } from './components/Tab';
 export { default as Table } from './components/Table';
 export { default as TableBody } from './components/TableBody';
@@ -115,6 +113,5 @@ export type { BannerProps } from './components/Banner';
  * consuming apps.
  */
 // export { default as Header } from './components/Header';
-// export { default as NavContainer } from './components/NavContainer';
 // export { default as PrimaryNav } from './components/PrimaryNav';
 // export { default as PrimaryNavItem } from './components/PrimaryNavItem';

@@ -5,7 +5,6 @@ import { Button, Icon, Heading } from '../../../src';
 // Project Overview pilot components -- not yet exported from src/index.ts
 import Header from '../../../src/components/Header';
 import Link from '../../../src/components/Link';
-import NavContainer from '../../../src/components/NavContainer';
 import Popover from '../../../src/components/Popover';
 import PrimaryNav from '../../../src/components/PrimaryNav';
 import PrimaryNavItem from '../../../src/components/PrimaryNavItem';
@@ -173,9 +172,11 @@ export const GlobalHeader = ({
         />
       </Button>
 
-      <NavContainer
-        className={styles['global-header__nav-container']}
-        isActive={isActive}
+      <div
+        className={clsx(
+          styles['global-header__nav-container'],
+          isActive && styles['global-header__nav-container--active'],
+        )}
       >
         <PrimaryNav>
           <PrimaryNavItem
@@ -221,7 +222,7 @@ export const GlobalHeader = ({
             text="Curriculum"
           />
         </PrimaryNav>
-      </NavContainer>
+      </div>
       <Popover
         as={React.Fragment}
         placement={isLarge ? 'top-start' : 'bottom-end'}

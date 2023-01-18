@@ -2,24 +2,21 @@ import React from 'react';
 import styles from './ProjectOverview.module.css';
 
 import {
-  PageHeader,
-  Text,
   Breadcrumbs,
   BreadcrumbsItem,
   Button,
+  Card,
+  Grid,
+  GridItem,
   Heading,
   Hr,
-  Card,
-  CardBody,
   Icon,
+  Link,
+  PageHeader,
   Section,
+  Text,
   TimelineNav,
   TimelineNavPanel,
-  DefinitionList,
-  StackedBlock,
-  Link,
-  GridItem,
-  Grid,
 } from '../../../src';
 // Project Overview pilot components -- not yet exported from src/index.ts
 import ButtonActionCalloutCard from '../../recipes/ButtonActionCalloutCard';
@@ -125,7 +122,7 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
             }
           >
             <Card className="!mb-4">
-              <CardBody>
+              <Card.Body>
                 <Heading
                   as="h3"
                   className="!mb-2"
@@ -138,10 +135,10 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
                   In this Focus Area, you explore the main question: How does
                   the structures of organisms enable life’s functions?
                 </Text>
-              </CardBody>
+              </Card.Body>
             </Card>
             <Card className="!mb-4">
-              <CardBody>
+              <Card.Body>
                 <Heading
                   as="h3"
                   className="!mb-2"
@@ -154,10 +151,10 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
                   In this Focus Area, you explore the main question: How does
                   the structures of organisms enable life’s functions?
                 </Text>
-              </CardBody>
+              </Card.Body>
             </Card>
             <Card>
-              <CardBody>
+              <Card.Body>
                 <Heading
                   as="h3"
                   className="!mb-2"
@@ -170,12 +167,12 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
                   In this Focus Area, you explore the main question: How does
                   the structures of organisms enable life’s functions?
                 </Text>
-              </CardBody>
+              </Card.Body>
             </Card>
           </Section>
           <Section headingSize="headline-sm" title="Additional Focus Areas">
             <Card className="!mb-4">
-              <CardBody>
+              <Card.Body>
                 <Heading
                   as="h3"
                   className="!mb-2"
@@ -188,10 +185,10 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
                   In this Focus Area, you explore the main question: How does
                   the structures of organisms enable life’s functions?
                 </Text>
-              </CardBody>
+              </Card.Body>
             </Card>
             <Card>
-              <CardBody>
+              <Card.Body>
                 <Heading
                   as="h3"
                   className="!mb-2"
@@ -204,7 +201,7 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
                   In this Focus Area, you explore the main question: How does
                   the structures of organisms enable life’s functions?
                 </Text>
-              </CardBody>
+              </Card.Body>
             </Card>
           </Section>
         </TimelineNavPanel>
@@ -239,11 +236,12 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
                 explanations of how the body is organized and functions.
               </p>
             </Text>
-            <DefinitionList className="!mb-6" orientation="horizontal">
-              <DefinitionList.Item title="Term 1:">
+            <dl className="mt-0 mb-6 flex">
+              <dt>Term 1:</dt>
+              <dd className="ml-4">
                 <Link>Constructing and Evidence based Explanation</Link>
-              </DefinitionList.Item>
-            </DefinitionList>
+              </dd>
+            </dl>
 
             <Text as="div" className="!mb-4">
               <p>
@@ -252,11 +250,12 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
                 group research question in the introduction.
               </p>
             </Text>
-            <DefinitionList className="!mb-8" orientation="horizontal">
-              <DefinitionList.Item title="Term 1:">
+            <dl className="mt-0 mb-8 flex">
+              <dt>Term 1:</dt>
+              <dd className="ml-4">
                 <Link>Constructing and Evidence based Explanation</Link>
-              </DefinitionList.Item>
-            </DefinitionList>
+              </dd>
+            </dl>
 
             <ButtonActionCalloutCard
               actions={<Button variant="primary">Preview</Button>}
@@ -280,24 +279,28 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
 
             <Grid className="!mb-8">
               <GridItem>
-                <StackedBlock href="#" title="This is a link">
+                <Link href="#">This is a link</Link>
+                <Text className={styles['project-overview__link-description']}>
                   This is a stacked block description
-                </StackedBlock>
-              </GridItem>{' '}
-              <GridItem>
-                <StackedBlock href="#" title="This is a link">
-                  This is a stacked block description
-                </StackedBlock>
+                </Text>
               </GridItem>
               <GridItem>
-                <StackedBlock href="#" title="This is a link">
+                <Link href="#">This is a link</Link>
+                <Text className={styles['project-overview__link-description']}>
                   This is a stacked block description
-                </StackedBlock>
+                </Text>
               </GridItem>
               <GridItem>
-                <StackedBlock href="#" title="This is a link">
+                <Link href="#">This is a link</Link>
+                <Text className={styles['project-overview__link-description']}>
                   This is a stacked block description
-                </StackedBlock>
+                </Text>
+              </GridItem>
+              <GridItem>
+                <Link href="#">This is a link</Link>
+                <Text className={styles['project-overview__link-description']}>
+                  This is a stacked block description
+                </Text>
               </GridItem>
             </Grid>
 
@@ -312,24 +315,28 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
 
             <Grid className="!mb-8">
               <GridItem>
-                <StackedBlock href="#" title="This is a link">
+                <Link href="#">This is a link</Link>
+                <Text className={styles['project-overview__link-description']}>
                   This is a stacked block description
-                </StackedBlock>
-              </GridItem>{' '}
-              <GridItem>
-                <StackedBlock href="#" title="This is a link">
-                  This is a stacked block description
-                </StackedBlock>
+                </Text>
               </GridItem>
               <GridItem>
-                <StackedBlock href="#" title="This is a link">
+                <Link href="#">This is a link</Link>
+                <Text className={styles['project-overview__link-description']}>
                   This is a stacked block description
-                </StackedBlock>
+                </Text>
               </GridItem>
               <GridItem>
-                <StackedBlock href="#" title="This is a link">
+                <Link href="#">This is a link</Link>
+                <Text className={styles['project-overview__link-description']}>
                   This is a stacked block description
-                </StackedBlock>
+                </Text>
+              </GridItem>
+              <GridItem>
+                <Link href="#">This is a link</Link>
+                <Text className={styles['project-overview__link-description']}>
+                  This is a stacked block description
+                </Text>
               </GridItem>
             </Grid>
             <Hr className="!mt-12" />
