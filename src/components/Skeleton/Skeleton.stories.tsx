@@ -31,29 +31,71 @@ export const Default: StoryObj<Args> = {
   },
 };
 
-export const Circle: StoryObj<Args> = {
+export const Circle: StoryObj<React.ComponentProps<typeof Skeleton.Circle>> = {
+  args: {
+    width: 100,
+  },
   render: (args) => {
-    return <Skeleton.Circle width={100} />;
+    return <Skeleton.Circle {...args} />;
   },
 };
 
-export const Text: StoryObj<Args> = {
+export const Text: StoryObj<React.ComponentProps<typeof Skeleton.Text>> = {
+  args: {
+    width: '30ch',
+    height: '1.5rem',
+  },
   render: (args) => {
-    return <Skeleton.Text height="1.5rem" width="30ch" />;
+    return <Skeleton.Text {...args} />;
   },
 };
 
 export const LayoutExample: StoryObj<Args> = {
-  render: (args) => {
+  argTypes: {
+    className: {
+      control: false,
+    },
+    width: {
+      control: false,
+    },
+    height: {
+      control: false,
+    },
+  },
+  render: ({ isAnimating }) => {
     return (
       <div aria-label="Loading example profile card" role="status">
         <PopoverContainer className="m-2 p-3">
-          <Skeleton.Circle className="mb-3" width="50px" />
-          <Skeleton.Text className="mt-2 mb-2" height="4rem" width="15ch" />
-          <Skeleton.Text className="mt-2 mb-2" height="1.5rem" width="30ch" />
-          <Skeleton.Text className="mt-2 mb-2" height="1.5rem" width="25ch" />
-          <Skeleton.Text className="mt-2 mb-8" height="1.5rem" width="10ch" />
-          <Skeleton height={50} width="100%" />
+          <Skeleton.Circle
+            className="mb-3"
+            isAnimating={isAnimating}
+            width="50px"
+          />
+          <Skeleton.Text
+            className="mt-2 mb-2"
+            height="4rem"
+            isAnimating={isAnimating}
+            width="15ch"
+          />
+          <Skeleton.Text
+            className="mt-2 mb-2"
+            height="1.5rem"
+            isAnimating={isAnimating}
+            width="30ch"
+          />
+          <Skeleton.Text
+            className="mt-2 mb-2"
+            height="1.5rem"
+            isAnimating={isAnimating}
+            width="25ch"
+          />
+          <Skeleton.Text
+            className="mt-2 mb-8"
+            height="1.5rem"
+            isAnimating={isAnimating}
+            width="10ch"
+          />
+          <Skeleton height={50} isAnimating={isAnimating} width="100%" />
         </PopoverContainer>
       </div>
     );
