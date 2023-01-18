@@ -14,6 +14,8 @@ import './css/styleguide-only.css';
 import type { Story } from '@storybook/react';
 import React from 'react';
 
+import viewports from './util/viewports';
+
 export const decorators = [
   (Story: Story) => (
     <div dir="ltr">
@@ -23,19 +25,22 @@ export const decorators = [
 ];
 
 export const parameters = {
+  viewport: {
+    viewports,
+  },
   backgrounds: {
     values: [
       {
-        name: 'white',
+        name: 'eds-color-neutral-white',
         value: '#ffffff',
       },
       {
-        name: 'gray',
-        value: '#f3f3f3',
+        name: 'eds-color-neutral-100',
+        value: '#f4f6f8',
       },
       {
-        name: 'dark',
-        value: '#21272D', // eds-color-neutral-700
+        name: 'eds-color-neutral-700',
+        value: '#21272D',
       },
     ],
   },

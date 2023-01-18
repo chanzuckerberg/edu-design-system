@@ -17,7 +17,7 @@ export default {
     badges: [BADGE.BETA],
     layout: 'centered',
     backgrounds: {
-      default: 'white',
+      default: 'eds-color-neutral-white',
     },
   },
 } as Meta<Args>;
