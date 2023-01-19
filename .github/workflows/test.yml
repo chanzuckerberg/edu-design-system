@@ -54,6 +54,8 @@ jobs:
         run: yarn build:tokens
       - name: Build Storybook 📚
         run: yarn build:storybook
+        with:
+          node-version: 16.15.0
       # Note: Since the storybook builds to root now, no longer need to fiddle with "--storybook-base-dir", "--webpack-stats-json",
       # and other related storybook/chromatic flags, explore turning TurboSnap back on with "--only-changed".
       # https://app.shortcut.com/czi-edu/story/203071
