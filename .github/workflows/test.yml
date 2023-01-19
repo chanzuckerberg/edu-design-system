@@ -65,6 +65,7 @@ jobs:
             --exit-zero-on-changes \
             --exit-once-uploaded \
             --auto-accept-changes '{main,next}' \
+            --only-changed \
             --skip 'dependabot/**'
       - name: Run Accessibility Tests 💛
         run: yarn run storybook:axeOnly
