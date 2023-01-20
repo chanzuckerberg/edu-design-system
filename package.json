@@ -25,7 +25,7 @@
     "build:clean": "rm -rf lib/",
     "build:tokens": "rm -rf src/tokens-dist/ && node ./style-dictionary.config.js && yarn prettier-tokens-dist && yarn copy-tokens-to-lib",
     "build:js": "tsc --project tsconfig.build.json",
-    "build:storybook": "NODE_OPTIONS=--openssl-legacy-provider build-storybook -o storybook-static -s src/design-tokens/tier-1-definitions/fonts --webpack-stats-json",
+    "build:storybook": "build-storybook -o storybook-static -s src/design-tokens/tier-1-definitions/fonts",
     "build:styles": "postcss \"src/components/**/*.css\" --dir lib/ --base src/ --verbose",
     "chromatic": "chromatic",
     "commit": "./node_modules/.bin/cz",
