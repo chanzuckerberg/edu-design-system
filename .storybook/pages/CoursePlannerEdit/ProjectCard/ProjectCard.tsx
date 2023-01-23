@@ -6,17 +6,15 @@ import styles from './ProjectCard.module.css';
 import {
   Card,
   CardHeader,
-  CardBody,
-  CardFooter,
   Heading,
   Icon,
   Button,
   NumberIcon,
   ButtonDropdown,
-} from '../..';
-import type { HeadingElement } from '../Heading';
+} from '../../../../src';
+import type { HeadingElement } from '../../../../src/components/Heading';
 
-import type { IconName } from '../Icon';
+import type { IconName } from '../../../../src/components/Icon';
 
 export interface Props {
   /**
@@ -118,7 +116,7 @@ export const ProjectCard = ({
           />
         )}
       </CardHeader>
-      <CardBody className={styles['project-card__body']}>
+      <Card.Body className={styles['project-card__body']}>
         <Heading
           as={headingAs}
           className={styles['project-card__title']}
@@ -140,9 +138,9 @@ export const ProjectCard = ({
             {meta}
           </div>
         )}
-      </CardBody>
+      </Card.Body>
       {buttonDropdownItems && (
-        <CardFooter className={styles['project-card__footer']}>
+        <Card.Footer className={styles['project-card__footer']}>
           <ButtonDropdown
             dropdownMenuTrigger={
               <Button
@@ -159,7 +157,7 @@ export const ProjectCard = ({
           >
             {buttonDropdownItems}
           </ButtonDropdown>
-        </CardFooter>
+        </Card.Footer>
       )}
     </Card>
   );
