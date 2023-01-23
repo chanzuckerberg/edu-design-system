@@ -110,5 +110,3 @@ export const Heading = forwardRef(
 );
 
 Heading.displayName = 'Heading'; // Satisfy eslint.
-
-export default Heading;

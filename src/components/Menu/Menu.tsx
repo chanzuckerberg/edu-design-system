@@ -21,9 +21,21 @@ export type MenuProps = ExtractProps<typeof HeadlessMenu> & {
 };
 
 export type MenuItemProps = ExtractProps<typeof HeadlessMenu.Item> & {
+  /**
+   * Allow custom classes to be applied to the menu container.
+   */
   className?: string;
+  /**
+   * Target URL for the menu item action
+   */
   href?: string;
+  /**
+   * Icons are able to appear next to each Option in the Options list if it is relevant; before using any icons, please refer to the appropriate icon usage guidelines
+   */
   icon?: IconName;
+  /**
+   * Configurable action for the menu item action. If both `href` and `onClick` are used, `onClick` takes precedent.
+   */
   onClick?: MouseEventHandler<HTMLAnchorElement>;
 };
 
@@ -35,9 +47,7 @@ export type MenuItemsProps = ExtractProps<typeof HeadlessMenu.Items>;
  *
  * `import {Menu} from "@chanzuckerberg/eds";`
  *
- * Creates a list of actions which appear next to a trigger component. This should
- * be used when there is a discrete number of actions such as user navigations (e.g.,
- * a profile menu with links to settings) or a set of actions
+ * A dropdown that reveals or hides a list of actions
  */
 export const Menu = ({ className, ...other }: MenuProps) => {
   const menuClassNames = clsx(className, styles['menu']);
@@ -45,7 +55,7 @@ export const Menu = ({ className, ...other }: MenuProps) => {
 };
 
 /**
- * Trigger for the popover menu (dropdown)
+ * A button that when clicked, shows or hides the Options
  */
 const MenuButton = ({ children, className, ...other }: MenuButtonProps) => {
   const buttonClassNames = clsx(styles['menu__button'], className);
@@ -68,7 +78,7 @@ const MenuButton = ({ children, className, ...other }: MenuButtonProps) => {
 };
 
 /**
- * A set of menu items in the Menu
+ * A list of actions that are revealed in the menu
  *
  * @param props Props used on the set of menu items
  * @see https://headlessui.com/react/menu#menu-items
@@ -82,7 +92,7 @@ const MenuItems = (props: MenuItemsProps) => (
 );
 
 /**
- * Individual menu items, styled with the popover list item component
+ * An individual option that represent an action in the menu
  */
 const MenuItem = ({
   children,

@@ -5,7 +5,7 @@ import React from 'react';
 import { SearchBar } from '../SearchBar/SearchBar';
 
 export default {
-  title: 'Organisms/Interactive/SearchBar',
+  title: 'Components/SearchBar',
   component: SearchBar,
   parameters: {
     badges: [BADGE.BETA],

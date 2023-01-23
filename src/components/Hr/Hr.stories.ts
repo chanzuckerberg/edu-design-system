@@ -4,7 +4,7 @@ import type { ComponentProps } from 'react';
 import { Hr } from './Hr';
 
 export default {
-  title: 'Atoms/Text/Hr',
+  title: 'Components/Hr',
   component: Hr,
 } as Meta<Args>;
 

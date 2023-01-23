@@ -11,9 +11,14 @@ import Text from '../Text';
 import TimelineNavPanel from '../TimelineNavPanel';
 
 export default {
-  title: 'Molecules/Navigation/TimelineNav',
+  title: 'Components/TimelineNav',
   component: TimelineNav,
   subcomponents: { TimelineNavPanel },
+  parameters: {
+    backgrounds: {
+      default: 'eds-color-neutral-white',
+    },
+  },
   args: {
     variant: 'ordered',
     children: (
@@ -120,7 +125,7 @@ export default {
 
         <TimelineNavPanel title="TimelineNavPanel 6" variant="number">
           <Text as="div">
-            <h3>TimelineNavPanel 5</h3>
+            <h3>TimelineNavPanel 6</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -148,4 +153,8 @@ export default {
 
 type Args = React.ComponentProps<typeof TimelineNavPanel>;
 
-export const Default: StoryObj<Args> = {};
+export const Default: StoryObj<Args> = {
+  parameters: {
+    chromatic: { viewports: [414, 1366] },
+  },
+};

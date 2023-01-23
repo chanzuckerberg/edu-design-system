@@ -7,7 +7,7 @@ import Tag from '../Tag';
 import Text from '../Text';
 
 export default {
-  title: 'Molecules/Text/PageHeader',
+  title: 'Components/PageHeader',
   component: PageHeader,
 } as Meta<Args>;
 

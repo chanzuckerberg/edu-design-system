@@ -16,7 +16,6 @@ export { default as CheckboxLabel } from './components/CheckboxLabel';
 export { default as ClickableStyle } from './components/ClickableStyle';
 export { default as DataBar } from './components/DataBar';
 export { default as DataBarSegment } from './components/DataBarSegment';
-export { default as DefinitionList } from './components/DefinitionList';
 export { default as DragDrop } from './components/DragDrop';
 export { default as DragDropContainer } from './components/DragDropContainer';
 export { default as DragDropContainerHeader } from './components/DragDropContainerHeader';
@@ -50,9 +49,7 @@ export { default as LayoutContainer } from './components/LayoutContainer';
 export { default as LayoutLinelengthContainer } from './components/LayoutLinelengthContainer';
 export { default as LayoutSection } from './components/LayoutSection';
 export { default as Link } from './components/Link';
-export { default as LinkList } from './components/LinkList';
 export { default as LoadingIndicator } from './components/LoadingIndicator';
-export { default as Logo } from './components/Logo';
 export { default as Menu } from './components/Menu';
 export { default as Modal } from './components/Modal';
 export { default as ModalBody } from './components/ModalBody';
@@ -61,15 +58,12 @@ export { default as ModalHeader } from './components/ModalHeader';
 export { default as ModalStepper } from './components/ModalStepper';
 export { default as ModalTitle } from './components/ModalTitle';
 export { default as NumberIcon } from './components/NumberIcon';
-export { default as OverflowList } from './components/OverflowList';
-export { default as OverflowListItem } from './components/OverflowListItem';
 export { default as PageHeader } from './components/PageHeader';
 export { default as PageLevelBanner } from './components/PageLevelBanner';
 export { default as Panel } from './components/Panel';
 export { default as Popover } from './components/Popover';
 export { default as PopoverListItem } from './components/PopoverListItem';
 export { default as ProgressBar } from './components/ProgressBar';
-export { default as ProjectCard } from './components/ProjectCard';
 export { default as Radio } from './components/Radio';
 export { default as RadioInput } from './components/RadioInput';
 export { default as RadioLabel } from './components/RadioLabel';
@@ -80,7 +74,6 @@ export { default as SearchField } from './components/SearchField';
 export { default as Section } from './components/Section';
 export { default as Select } from './components/Select';
 export { default as Skeleton } from './components/Skeleton';
-export { default as StackedBlock } from './components/StackedBlock';
 export { default as Tab } from './components/Tab';
 export { default as Table } from './components/Table';
 export { default as TableBody } from './components/TableBody';
@@ -119,17 +112,5 @@ export type { BannerProps } from './components/Banner';
  * consuming apps.
  */
 // export { default as Header } from './components/Header';
-// export { default as Main } from './components/Main';
-// export { default as NavContainer } from './components/NavContainer';
-// export { default as NotificationList } from './components/NotificationList';
-// export { default as NotificationListItem } from './components/NotificationListItem';
 // export { default as PrimaryNav } from './components/PrimaryNav';
 // export { default as PrimaryNavItem } from './components/PrimaryNavItem';
-// export { default as ShowHide } from './components/ShowHide';
-// export { default as UtilityNav } from './components/UtilityNav';
-// export { default as UtilityNavItem } from './components/UtilityNavItem';
-
-/**
- * Utility hooks. Currently only used in <UtilityNavItem />
- */
-// export * from './hooks';

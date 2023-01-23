@@ -7,7 +7,7 @@ import Link from '../Link';
 import Text from '../Text';
 
 export default {
-  title: 'Atoms/Forms/FieldNote',
+  title: 'Components/FieldNote',
   component: FieldNote,
   parameters: {
     badges: [BADGE.BETA],

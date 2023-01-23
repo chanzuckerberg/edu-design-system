@@ -4,7 +4,7 @@ import type { ComponentProps } from 'react';
 import { Panel } from './Panel';
 
 export default {
-  title: 'Molecules/Layout and Containers/Panel',
+  title: 'Components/Panel',
   component: Panel,
   args: {
     children: 'A Panel is a generic bordered container for content.',

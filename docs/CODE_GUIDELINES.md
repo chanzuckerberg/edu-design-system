@@ -300,6 +300,8 @@ You can continue to use the `Icon` components' `color` prop with JavaScript vari
 
 EDS uses [tailwind utility classes](https://tailwindcss.com/docs/padding) (e.g. `mb-0` and `p-0`) inline in `*.stories.tsx` files to quickly add small styling tweaks, like spacing (e.g. `<TableCell className="p-0">`). This reduces the need for CSS module files made specifically for stories. Use the `!` modifier to override default component styles (e.g. `<TableCell className="!p-0">`).
 
+Consider installing the VSCode extension [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) for autocomplete, linting, and hover previews.
+
 ## Theming conventions <a name="theming-conventions"></a>
 
 EDS is a [themeable design system](https://bradfrost.com/blog/post/creating-themeable-design-systems/) that incorporates some high-level UI application variables to make easy systematic changes to the UI.
@@ -391,7 +393,7 @@ The comment should begin with an import example, include a general description o
 
 Example:
 
-````
+````tsx
 /**
  * `import {ButtonGroup} from "@chanzuckerberg/eds";`
  *
@@ -417,7 +419,7 @@ Do not use [jsdoc tags](https://devhints.io/jsdoc) (e.g. `@example`) if possible
 
 Example:
 
-````
+````tsx
 /**
  * The Banner component is deprecated and will be removed in an upcoming release.
  *
@@ -456,6 +458,22 @@ export const ComponentName = ({
 ```
 
 This defines the component name and passes in all the `Props`.
+
+The `src/components/{componentFolder}/index.ts` file should should import and re-export the component `as default`. The `src/index.ts` file should re-export the component for an easy way to consume it downstream.
+
+i.e. in `src/components/{componentFolder}/index.ts`
+
+```ts
+export { ComponentName as default } from './ComponentName';
+```
+
+and in `src/index.ts`
+
+```ts
+...
+export { default as ComponentName } from './components/ComponentName';
+...
+```
 
 ### Children
 

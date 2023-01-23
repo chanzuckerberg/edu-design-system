@@ -258,5 +258,3 @@ Modal.Title = ModalTitle;
 Modal.Body = FocusableModalBody;
 Modal.Footer = StickyModalFooter;
 Modal.Stepper = ModalStepper;
-
-export default Modal;

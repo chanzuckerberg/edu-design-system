@@ -6,7 +6,7 @@ import { Icon, Text } from '../../';
 export const VARIANTS = ['brand', 'success', 'warning', 'yield'] as const;
 
 const variantToIconAssetsMap: {
-  [key in 'brand' | 'success' | 'warning' | 'yield']: {
+  [key in Variant]: {
     name: 'info' | 'check-circle' | 'warning' | 'error-inverted';
     title: 'info' | 'success' | 'alert' | 'yield';
   };

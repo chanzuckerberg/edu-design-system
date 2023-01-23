@@ -45,7 +45,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0 # 👈 Required to retrieve git history
       - name: Install dependencies
@@ -53,10 +53,7 @@ jobs:
       - name: Build design tokens
         run: yarn build:tokens
       - name: Build Storybook 📚
-        run: yarn build:storybook
-      # TODO: Since the storybook builds to root now, no longer need to fiddle with "--storybook-base-dir", "--webpack-stats-json",
-      # and other related storybook/chromatic flags, explore turning TurboSnap back on with "--only-changed".
-      # https://app.shortcut.com/czi-edu/story/203071
+        run: yarn build:storybook --webpack-stats-json
       - name: Publish to Chromatic 🦄
         run: |
           yarn run chromatic \
@@ -65,6 +62,7 @@ jobs:
             --exit-zero-on-changes \
             --exit-once-uploaded \
             --auto-accept-changes '{main,next}' \
+            --only-changed \
             --skip 'dependabot/**'
       - name: Run Accessibility Tests 💛
         run: yarn run storybook:axeOnly
@@ -91,5 +89,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Lint Javascript + SCSS 👕
-        # TODO: enable --max-warnings=0
-        run: yarn run lint
+        run: yarn run lint --max-warnings=0

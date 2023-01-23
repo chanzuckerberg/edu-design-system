@@ -72,5 +72,3 @@ export const Tag = ({
     </Text>
   );
 };
-
-export default Tag;

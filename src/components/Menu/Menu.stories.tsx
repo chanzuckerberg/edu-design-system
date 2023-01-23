@@ -6,7 +6,7 @@ import { Menu } from './Menu';
 import type { MenuProps } from './Menu';
 
 export default {
-  title: 'Organisms/Interactive/Menu',
+  title: 'Components/Menu',
   component: Menu,
   subcomponents: {
     'Menu.Button': Menu.Button,

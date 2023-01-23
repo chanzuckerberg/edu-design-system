@@ -4,11 +4,10 @@ import React from 'react';
 import { LayoutContainer } from './LayoutContainer';
 
 export default {
-  title: 'Molecules/Layout and Containers/Layout Container',
+  title: 'Components/Layout Container',
   component: LayoutContainer,
   parameters: {
     axe: {
-      // TODO: re-enable when component is worked on
       skip: true,
     },
   },

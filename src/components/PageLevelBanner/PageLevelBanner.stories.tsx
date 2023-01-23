@@ -5,7 +5,7 @@ import { PageLevelBanner } from './PageLevelBanner';
 import Button from '../Button';
 
 export default {
-  title: 'Molecules/Messaging/PageLevelBanner',
+  title: 'Components/PageLevelBanner',
   component: PageLevelBanner,
   args: {
     title:

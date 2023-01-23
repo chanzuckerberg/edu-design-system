@@ -4,7 +4,7 @@ import React from 'react';
 import { ProgressBar } from './ProgressBar';
 
 export default {
-  title: 'Molecules/Progress/ProgressBar',
+  title: 'Components/ProgressBar',
   component: ProgressBar,
   args: {
     label: 'Progress Bar Label',

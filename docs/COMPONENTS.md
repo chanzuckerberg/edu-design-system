@@ -6,19 +6,18 @@ This codebase contains all the components, [recipes](https://bradfrost.com/blog/
 
 ### Using components
 
-TODO: define this process
-
 Using EDS components in your React application involves first installing the EDS package as a dependency:
 
-```
-npm install @/EDS
-yarn add @/EDS
+```sh
+npm install @chanzuckerberg/eds
+# or
+yarn add @chanzuckerberg/eds
 ```
 
 Next, import any needed components from the EDS component library into your application like so:
 
 ```js
-import { Button, Grid, GridItem } from '@/EDS';
+import { Button, Grid, GridItem } from '@chanzuckerberg/eds';
 ```
 
 From there, call EDS components in your React application and pass in the desired values into each component's API:
@@ -33,7 +32,7 @@ From there, call EDS components in your React application and pass in the desire
 </Button>
 ```
 
-Each EDS component is documented in Storybook, which surfaces each component's API and provides copy-and-paste code snippets. If you have questions or are experiencing any issues when working with EDS's components, please [reach out for support](#) (TODO: provide support link) and the team will be happy to help.
+Each EDS component is documented in Storybook, which surfaces each component's API and provides copy-and-paste code snippets. If you have questions or are experiencing any issues when working with EDS's components, please reach out for support via slack and the team will be happy to help.
 
 ### Creating a component
 
@@ -99,27 +98,9 @@ Pages
 
 ## Working with recipes
 
-TODO: discuss recipes and EDS candidates; ratify recipe location
+**[Recipes](https://bradfrost.com/blog/post/design-system-components-recipes-and-snowflakes/)** are mainly compositions of design system components that are to be consistently used across products, but aren’t agnostic enough to live in core component library. Like pages, recipes live in the `.storybook` directory of the project since they are not packaged up with the design system. Recipe components may be revisited and pulled into EDS at a later date if they are deemed to be reusable enough to move into the design system library.
 
-**[Recipes](https://bradfrost.com/blog/post/design-system-components-recipes-and-snowflakes/)** are mainly compositions of design system components that are to be consistently used across a product, but aren’t agnostic enough to live in core component library. Like pages, recipes live in the `.storybook` directory of the project since they are not packaged up with the design system. Recipe components may be revisited and pulled into EDS at a later date if they are deemed to be reusable enough to move into the design system library.
-
-### Using recipes
-
-TODO: Need to establish the location of where recipes should live. Options include:
-
-1. The downstream application codebase
-2. A `design-system-extras` sibling repository
-3. In a directory in the `EDS` library (not recommended)
-
-### Creating a recipe
-
-1. Run `plop recipe` in the command line.
-2. Provide a name when asked "What is your recipe name?"
-3. Plop will generate a recipe and accompanying stories file at `./storybook/recipes/[YourRecipeName]/[YourRecipeName].tsx`
-4. Begin editing the recipe, importing any necessary components and other recipes.
-5. Create relevant stories for all recipe variants
-
-Note: Recipe components live in `.storybook/recipes` and take the following shape in Storybook:
+**Note**: Recipe components live in `.storybook/recipes` and take the following shape in Storybook:
 
 ```
 Recipes

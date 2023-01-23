@@ -72,7 +72,7 @@ const GlobalFooter = () => (
 
 const LoggedOutPage = ({ onLogin }: { onLogin: () => void }) => (
   <div className={styles['logged-out-page']}>
-    <div className="flex flex-col items-center mb-16">
+    <div className="mb-16 flex flex-col items-center">
       <header className="flex gap-4">
         <img
           alt="placeholder for decorative illustration"
@@ -126,7 +126,7 @@ const LoggedOutPage = ({ onLogin }: { onLogin: () => void }) => (
     <div className="flex flex-col items-center gap-2">
       <img
         alt="placeholder for decorative illustration"
-        className="w-16 mb-2"
+        className="mb-2 w-16"
         src={PlaceholderImage}
       />
       <Text>Don't have an account?</Text>
@@ -153,7 +153,7 @@ const StudentTab = ({
       active && styles['student-tab--active'],
     )}
   >
-    <div className={clsx(styles['watch-page__avatar'], 'w-10 h-10')}>
+    <div className={clsx(styles['watch-page__avatar'], 'h-10 w-10')}>
       <Text size="sm">{studentName.slice(0, 1)}</Text>
     </div>
     <Text className="!mt-2 truncate" size="xs">
@@ -208,7 +208,6 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
             <Dropdown
               aria-label="student groups"
               buttonText={selectedOption.label}
-              // TODO: why isn't the selected styling showing up when selecting a new option?
               onChange={setSelectedOption}
               options={studentGroupOptions}
               value={selectedOption}
@@ -240,10 +239,10 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
         </div>
 
         <div className={styles['watch-page__reflection']}>
-          <div className="w-full mt-2 lg:w-[31.25rem]">
+          <div className="mt-2 w-full lg:w-[31.25rem]">
             <div className="flex cursor-pointer">
               <div
-                className={clsx(styles['watch-page__avatar'], 'mr-2 w-9 h-9')}
+                className={clsx(styles['watch-page__avatar'], 'mr-2 h-9 w-9')}
               >
                 <Text size="sm">M</Text>
               </div>
@@ -259,7 +258,7 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
               src={PlaceholderVideo}
             />
 
-            <div className="flex gap-4 mt-4 ml-8">
+            <div className="mt-4 ml-8 flex gap-4">
               <Icon
                 className="min-w-[1rem]"
                 name="circle"
@@ -305,7 +304,7 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
         <div
           className={clsx(
             styles['watch-page__avatar'],
-            'm-4 w-[6.25rem] h-[6.25rem]',
+            'm-4 h-[6.25rem] w-[6.25rem]',
           )}
         >
           <Text size="lg">M</Text>
@@ -373,7 +372,7 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
           )}
           placeholder="Add any notes about Mikaela here. Only you can see them."
         ></textarea>
-        <Button className="w-full mt-2 mb-16" variant="secondary">
+        <Button className="mt-2 mb-16 w-full" variant="secondary">
           Save
         </Button>
       </aside>

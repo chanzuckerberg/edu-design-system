@@ -5,18 +5,18 @@ import type { NewState } from './DragDrop';
 import { DragDrop } from './DragDrop';
 import styles from './DragDrop.stories.module.css';
 
-import Button from '../Button';
-import Card from '../Card';
-import CardBody from '../CardBody';
-import DragDropContainerHeader from '../DragDropContainerHeader';
-import Heading from '../Heading';
-import Icon from '../Icon';
-import ProjectCard from '../ProjectCard';
-import Text from '../Text';
-import Toolbar from '../Toolbar';
+import {
+  Button,
+  Card,
+  DragDropContainerHeader,
+  Heading,
+  Icon,
+  Text,
+  Toolbar,
+} from '../..';
 
 export default {
-  title: 'Organisms/Interactive/Drag and Drop',
+  title: 'Components/Drag and Drop',
   component: DragDrop,
   decorators: [
     (Story) => (
@@ -40,7 +40,7 @@ export const Default: StoryObj<Args> = {
         title: 'Project #1',
         children: (
           <Card className={styles['example-card']} elevation="raised">
-            <CardBody>Card 1</CardBody>
+            <Card.Body>Card 1</Card.Body>
           </Card>
         ),
       },
@@ -48,7 +48,7 @@ export const Default: StoryObj<Args> = {
         title: 'Project #2',
         children: (
           <Card className={styles['example-card']} elevation="raised">
-            <CardBody>Card 2</CardBody>
+            <Card.Body>Card 2</Card.Body>
           </Card>
         ),
       },
@@ -56,7 +56,7 @@ export const Default: StoryObj<Args> = {
         title: 'Project #3',
         children: (
           <Card className={styles['example-card']} elevation="raised">
-            <CardBody>Card 3</CardBody>
+            <Card.Body>Card 3</Card.Body>
           </Card>
         ),
       },
@@ -64,7 +64,7 @@ export const Default: StoryObj<Args> = {
         title: 'Project #4',
         children: (
           <Card className={styles['example-card']} elevation="raised">
-            <CardBody>Card 4</CardBody>
+            <Card.Body>Card 4</Card.Body>
           </Card>
         ),
       },
@@ -72,7 +72,7 @@ export const Default: StoryObj<Args> = {
         title: 'Project #5',
         children: (
           <Card className={styles['example-card']} elevation="raised">
-            <CardBody>Card 5</CardBody>
+            <Card.Body>Card 5</Card.Body>
           </Card>
         ),
       },
@@ -310,7 +310,7 @@ export const HoveredHandle: StoryObj<Args> = {
         title: 'Project #1',
         children: (
           <Card className={styles['example-card']} elevation="raised">
-            <CardBody>Card 1</CardBody>
+            <Card.Body>Card 1</Card.Body>
           </Card>
         ),
       },
@@ -319,7 +319,7 @@ export const HoveredHandle: StoryObj<Args> = {
         title: 'Project #2',
         children: (
           <Card className={styles['example-card']} elevation="raised">
-            <CardBody>Card 2</CardBody>
+            <Card.Body>Card 2</Card.Body>
           </Card>
         ),
       },
@@ -328,7 +328,7 @@ export const HoveredHandle: StoryObj<Args> = {
         title: 'Project #3',
         children: (
           <Card className={styles['example-card']} elevation="raised">
-            <CardBody>Card 3</CardBody>
+            <Card.Body>Card 3</Card.Body>
           </Card>
         ),
       },
@@ -337,7 +337,7 @@ export const HoveredHandle: StoryObj<Args> = {
         title: 'Project #4',
         children: (
           <Card className={styles['example-card']} elevation="raised">
-            <CardBody>Card 4</CardBody>
+            <Card.Body>Card 4</Card.Body>
           </Card>
         ),
       },
@@ -346,7 +346,7 @@ export const HoveredHandle: StoryObj<Args> = {
         title: 'Project #5',
         children: (
           <Card className={styles['example-card']} elevation="raised">
-            <CardBody>Card 5</CardBody>
+            <Card.Body>Card 5</Card.Body>
           </Card>
         ),
       },
@@ -601,65 +601,41 @@ const InteractiveDragDrop = () => {
     'item-1': {
       title: 'Project #1',
       children: (
-        <ProjectCard
-          behavior="draggable"
-          meta="12 days"
-          metaIconName="event-note"
-          number={1}
-          numberAriaLabel="Project 1"
-          title="Longer project card title that wraps lorem ipsum dolor"
-        />
+        <Card className={styles['example-card']} elevation="raised">
+          <Card.Body>Card 1</Card.Body>
+        </Card>
       ),
     },
     'item-2': {
       title: 'Project #2',
       children: (
-        <ProjectCard
-          behavior="draggable"
-          meta="12 days"
-          metaIconName="event-note"
-          number={indexState}
-          numberAriaLabel="Project 2"
-          title="Project card title"
-        />
+        <Card className={styles['example-card']} elevation="raised">
+          <Card.Body>Card 2: {indexState}</Card.Body>
+        </Card>
       ),
     },
     'item-3': {
       title: 'Project #3',
       children: (
-        <ProjectCard
-          behavior="draggable"
-          meta="12 days"
-          metaIconName="event-note"
-          number={3}
-          numberAriaLabel="Project 3"
-          title="Project card title"
-        />
+        <Card className={styles['example-card']} elevation="raised">
+          <Card.Body>Card 3</Card.Body>
+        </Card>
       ),
     },
     'item-4': {
       title: 'Project #4',
       children: (
-        <ProjectCard
-          behavior="draggable"
-          meta="face icon"
-          metaIconName="face"
-          number={4}
-          numberAriaLabel="Project 4"
-          title="Project card title"
-        />
+        <Card className={styles['example-card']} elevation="raised">
+          <Card.Body>Card 4</Card.Body>
+        </Card>
       ),
     },
     'item-5': {
       title: 'Project #5',
       children: (
-        <ProjectCard
-          behavior="draggable"
-          meta="no icon"
-          number={5}
-          numberAriaLabel="Project 5"
-          title="Hi"
-        />
+        <Card className={styles['example-card']} elevation="raised">
+          <Card.Body>Card 5</Card.Body>
+        </Card>
       ),
     },
   });

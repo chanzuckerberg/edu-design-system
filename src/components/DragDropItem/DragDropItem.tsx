@@ -47,7 +47,7 @@ export const DragDropItem = ({ behavior, className, item, index }: Props) => {
             // Checking isValidElement is the safe way and avoids a typescript
             // error too.
             if (React.isValidElement(child)) {
-              // @ts-expect-error TODO: fix "No overload matches this call" error
+              // @ts-expect-error "No overload matches this call" error due to type mismatch
               return React.cloneElement<Props>(child, {
                 isDragging: snapshot.isDragging,
                 number: index + 1,

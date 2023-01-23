@@ -52,8 +52,10 @@ const loaderStrokeSize = {
  *
  * `import {LoadingIndicator} from "@chanzuckerberg/eds";`
  *
- * Show a loading state within a component container, or a specific page or area, where
- * arbitrary content will appear once some request has completed.
+ * Loading indicators inform users about the wait time, reason, and status of ongoing processes when the layout is unknown
+ *
+ * For screen readers, add an `aria-label` to describe what is loading.
+ *
  */
 export const LoadingIndicator = ({
   ariaLabel = 'loading',

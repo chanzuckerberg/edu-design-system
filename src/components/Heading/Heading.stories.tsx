@@ -2,11 +2,11 @@ import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
-import Heading, { VARIANTS } from './Heading';
+import { Heading, VARIANTS } from './Heading';
 import styles from './Heading.stories.module.css';
 
 export default {
-  title: 'Atoms/Text/Heading',
+  title: 'Components/Heading',
   component: Heading,
 } as Meta<Args>;
 

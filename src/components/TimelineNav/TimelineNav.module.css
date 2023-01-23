@@ -87,7 +87,7 @@
     visibility: visible;
     transform: translateX(0);
     padding: var(--eds-size-5) var(--eds-size-8);
-    box-shadow: 0px 2px 8px var(--eds-theme-color-border-neutral-subtle); /* TODO: Tokenize the box shadow */
+    box-shadow: 0px 2px 8px var(--eds-theme-color-border-neutral-subtle);
   }
 }
 
@@ -156,9 +156,10 @@
   */
 .timeline-nav__list--ordered .timeline-nav__item {
   &:after {
+    --line-spacing: var(--eds-size-4);
     content: '';
     position: absolute;
-    top: 0;
+    top: var(--line-spacing);
     /**
      * This sets the size of the gap above the vertical line by determining the top of the line relative to the top of the current 
      * list item; a value of 0 would position the line at the top of the current list item; 100% would position it at the bottom of
@@ -169,7 +170,7 @@
      * This sets the height of the vertical line relative to the height of the current list item.
      * We want a small visual gap between the bottom of the line and the next bullet/icon.
      */
-    height: 100%;
+    height: calc(100% - var(--line-spacing));
     width: 0.0625rem;
     /**
      * Using a border color here because this is a vertical line, similar to a border
@@ -204,8 +205,9 @@
  */
 .timeline-nav__link {
   position: relative;
+  padding: var(--eds-size-half) 0;
   display: flex;
-  align-items: baseline;
+  align-items: flex-start;
   gap: var(--eds-size-1);
   text-decoration: none;
   color: var(--eds-theme-color-text-neutral-subtle);
@@ -277,10 +279,6 @@
  */
 .timeline-nav__link-left {
   position: relative;
-  height: fit-content;
-  padding: var(--eds-size-half) 0;
-  /* Provides white background to fake a visual gap in the vertical line between nav items. */
-  background: var(--eds-theme-color-background-neutral-default);
   z-index: var(--eds-z-index-100);
 }
 
@@ -337,31 +335,30 @@
   border-color: var(--eds-theme-color-border-neutral-default);
   position: relative;
   margin-right: var(--eds-size-half);
-  background: var(--eds-theme-color-background-neutral-default);
   border-radius: 100%;
 
-  @media all and (min-width: $eds-bp-lg) {
-    background: var(--eds-theme-color-background-neutral-default);
-  }
-
   .timeline-nav__item.eds-is-active & {
-    color: 1px solid var(--eds-theme-color-text-neutral-default);
+    color: var(--eds-theme-color-text-neutral-default);
     border-color: 1px solid var(--eds-theme-color-text-neutral-strong);
   }
 }
 
 .timeline-nav__icon--success {
+  margin-top: calc(-1 * var(--eds-size-half));
   color: var(--eds-theme-color-background-grade-complete-default);
 }
 
 .timeline-nav__icon--warning {
+  margin-top: calc(-1 * var(--eds-size-half));
   color: var(--eds-theme-color-background-grade-revise-default);
 }
 
 .timeline-nav__icon--error {
+  margin-top: calc(-1 * var(--eds-size-half));
   color: var(--eds-theme-color-background-grade-stop-default);
 }
 
 .timeline-nav__icon--incomplete {
+  margin-top: calc(-1 * var(--eds-size-half));
   color: var(--eds-theme-color-border-neutral-subtle);
 }

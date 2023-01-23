@@ -7,7 +7,7 @@ import type { PopoverProps } from './Popover';
 import Button from '../Button';
 
 export default {
-  title: 'Organisms/Interactive/Popover',
+  title: 'Components/Popover',
   component: Popover,
   subcomponents: {
     'Popover.Button': Popover.Button,
@@ -47,20 +47,6 @@ export const Default: StoryObj<PopoverProps> = {
       filtersTrigger.click();
     }
   },
-};
-
-export const Arrow: StoryObj<PopoverProps> = {
-  args: {
-    children: (
-      <>
-        <Popover.Button as={Button}>Open Popover</Popover.Button>
-        <Popover.Content showArrow>
-          <div className="fpo m-2 p-6">Popover Content goes here</div>
-        </Popover.Content>
-      </>
-    ),
-  },
-  ...Default,
 };
 
 export const Top: StoryObj<PopoverProps> = {

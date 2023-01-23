@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import styles from './CoursePlannerEdit.module.css';
 
+import ProjectCard from './ProjectCard';
+
 import {
   PageHeader,
   Panel,
@@ -20,9 +22,9 @@ import {
   Grid,
   GridItem,
   Text,
-  ProjectCard,
   DropdownMenuItem,
 } from '../../../src';
+
 import type { NewState } from '../../../src/components/DragDrop/DragDrop';
 
 import CardWithNotification from '../../recipes/CardWithNotification';

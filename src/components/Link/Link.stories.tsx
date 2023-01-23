@@ -6,7 +6,7 @@ import { SIZES, STATUSES, VARIANTS } from '../ClickableStyle';
 import Icon from '../Icon';
 
 export default {
-  title: 'Molecules/Buttons/Link',
+  title: 'Components/Link',
   component: Link,
   args: {
     children: 'Link',

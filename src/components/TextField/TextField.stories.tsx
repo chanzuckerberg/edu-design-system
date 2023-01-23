@@ -6,7 +6,7 @@ import { TextField } from './TextField';
 import Button from '../../components/Button';
 
 export default {
-  title: 'Molecules/Forms/TextField',
+  title: 'Components/TextField',
   component: TextField,
   parameters: {
     badges: [BADGE.BETA],

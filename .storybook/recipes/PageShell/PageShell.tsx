@@ -3,8 +3,6 @@ import type { ReactNode } from 'react';
 import React from 'react';
 import styles from './PageShell.module.css';
 import { Link, Layout, LayoutContainer, LayoutSection } from '../../../src';
-// Project Overview pilot components -- not yet exported from src/index.ts
-import Main from '../../../src/components/Main';
 
 import { GlobalHeader } from '../GlobalHeader/GlobalHeader';
 
@@ -86,9 +84,9 @@ export const PageShell = ({
           />
         </LayoutSection>
         <LayoutSection region="main">
-          <Main className={styles['page-shell__main']}>
+          <main className={styles['page-shell__main']}>
             <LayoutContainer>{children}</LayoutContainer>
-          </Main>
+          </main>
         </LayoutSection>
       </Layout>
     </body>

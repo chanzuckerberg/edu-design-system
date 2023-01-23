@@ -28,7 +28,7 @@
   font-weight: var(--eds-font-weight-light);
 }
 
-/* Needed to create higher specificity than ClickableStyle. TODO: improve */
+/* Needed to create higher specificity than ClickableStyle. */
 .menu__button--icon.menu__button--icon.menu__button--icon.menu__button--icon {
   color: var(--eds-theme-color-icon-neutral-default);
 }

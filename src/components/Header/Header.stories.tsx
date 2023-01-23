@@ -4,7 +4,7 @@ import React from 'react';
 import { Header } from './Header';
 
 export default {
-  title: 'Organisms/Global/Header',
+  title: 'Components/Header',
   component: Header,
   args: {
     children: <div className="fpo">Header children</div>,

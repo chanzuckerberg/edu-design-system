@@ -10,7 +10,7 @@ import DropdownButton from '../DropdownButton';
 import Icon from '../Icon';
 
 export default {
-  title: 'Molecules/Forms/Dropdown',
+  title: 'Components/Dropdown',
   component: Dropdown,
   parameters: {
     badges: [BADGE.DEPRECATED],

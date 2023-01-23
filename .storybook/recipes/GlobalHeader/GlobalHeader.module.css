@@ -79,19 +79,6 @@
 }
 
 /**
- * Global header utility nav
- */
-.global-header__utility-nav {
-  position: relative;
-  margin-left: auto;
-
-  @media all and (min-width: $eds-bp-xl) {
-    margin-left: 0;
-    margin-top: auto;
-  }
-}
-
-/**
  * Utility nav popover
  */
 .global-header__popover {
@@ -114,11 +101,16 @@
 }
 
 .global-header__avatar-button {
+  margin-left: auto;
+
   display: flex;
   position: relative;
   border: 0;
   left: var(--eds-size-2);
   @media all and (min-width: $eds-bp-xl) {
+    margin-left: 0;
+    margin-top: auto;
+
     left: -1rem;
   }
 }
@@ -159,4 +151,62 @@
 /* Legs of the avatar image. */
 .global-header__avatar-image__legs {
   height: 10px;
+}
+
+/**
+ * Container that houses navigation to be toggled on and off on small screens.
+ */
+.global-header__nav-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  /* Hide by default on small screens. */
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  width: 100%;
+  padding: var(--eds-size-1);
+  z-index: var(--eds-z-index-bottom);
+  transition: all var(--eds-anim-move-quick) var(--eds-anim-ease);
+
+  @media screen and (prefers-reduced-motion) {
+    transition: none;
+  }
+
+  /**
+   * Large screen styles.
+  */
+  @media all and (min-width: $eds-bp-xl) {
+    /* Un-hide navcontainer to display nav by default on larger screens. */
+    display: flex;
+    /* Display children as horizontal flex items. */
+    justify-content: space-between;
+    position: static;
+    visibility: visible;
+    opacity: 1;
+    padding: 0;
+    height: auto;
+    margin-bottom: var(--eds-size-6);
+  }
+}
+
+/**
+* Active nav container
+*
+* Open state on small screens.
+*/
+.global-header__nav-container--active {
+  display: block;
+
+  @media all and (max-width: $eds-bp-xl) {
+    opacity: 1;
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    gap: var(--eds-size-8);
+    height: calc(100vh - 3rem);
+    background-color: var(--eds-theme-color-background-brand-primary-strong);
+    z-index: var(--eds-z-index-400);
+  }
 }
