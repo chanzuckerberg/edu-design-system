@@ -64,7 +64,6 @@ export { default as Panel } from './components/Panel';
 export { default as Popover } from './components/Popover';
 export { default as PopoverListItem } from './components/PopoverListItem';
 export { default as ProgressBar } from './components/ProgressBar';
-export { default as ProjectCard } from './components/ProjectCard';
 export { default as Radio } from './components/Radio';
 export { default as RadioInput } from './components/RadioInput';
 export { default as RadioLabel } from './components/RadioLabel';
