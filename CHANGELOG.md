@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.0.0](https://github.com/chanzuckerberg/edu-design-system/compare/v7.2.1...v8.0.0) (2023-01-23)
+
+
+### ⚠ BREAKING CHANGES
+
+* remove export of ProjectCard from EDS (#1470)
+* remove unused components 2/n (#1463)
+* **Popover:** remove showArrow from popover (#1461)
+* remove unused components 1/n (#1460)
+
+### Features
+
+* **tailwind:** prettify class order ([b1ae6b7](https://github.com/chanzuckerberg/edu-design-system/commit/b1ae6b766450c4b99591bb9186d37d0cdef00a25))
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([e7627a6](https://github.com/chanzuckerberg/edu-design-system/commit/e7627a6cfa9b07a7d65cd386430e84d5d1df6e3e))
+* **lint:** reorders tailwind class ([17648fa](https://github.com/chanzuckerberg/edu-design-system/commit/17648fa82291437165cb916e6214a9a9987c0974))
+* **TimelineNav:** remove unused props and styles ([4d48892](https://github.com/chanzuckerberg/edu-design-system/commit/4d4889277ad5ae14dcb412ed6b140064a3b32e63))
+
+
+* **Popover:** remove showArrow from popover ([#1461](https://github.com/chanzuckerberg/edu-design-system/issues/1461)) ([07396ff](https://github.com/chanzuckerberg/edu-design-system/commit/07396ffc169aac91c71caab43764a499f9b59e96))
+* remove export of ProjectCard from EDS ([#1470](https://github.com/chanzuckerberg/edu-design-system/issues/1470)) ([080c376](https://github.com/chanzuckerberg/edu-design-system/commit/080c376004d814449a79281186d1089eb7baa28a))
+* remove unused components 1/n ([#1460](https://github.com/chanzuckerberg/edu-design-system/issues/1460)) ([c26b8f6](https://github.com/chanzuckerberg/edu-design-system/commit/c26b8f6b4f559e5123530e3e8a8fd7a1fb74001c))
+* remove unused components 2/n ([#1463](https://github.com/chanzuckerberg/edu-design-system/issues/1463)) ([23d58e9](https://github.com/chanzuckerberg/edu-design-system/commit/23d58e9dc1beaf23bab9d2f95a32b4852948bb9d))
+
 ### [7.2.1](https://github.com/chanzuckerberg/edu-design-system/compare/v7.2.0...v7.2.1) (2023-01-05)
 
 
