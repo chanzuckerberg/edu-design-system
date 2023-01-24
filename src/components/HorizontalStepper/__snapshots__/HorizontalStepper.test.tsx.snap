@@ -45,9 +45,7 @@ exports[`<HorizontalStepper /> CappedLine story renders snapshot 1`] = `
           width="0.5rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title
-            id="20"
-          >
+          <title>
             incomplete step 2 Step 2
           </title>
           <path
@@ -83,9 +81,7 @@ exports[`<HorizontalStepper /> CappedLine story renders snapshot 1`] = `
           width="0.5rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title
-            id="21"
-          >
+          <title>
             incomplete step 3 Step 3
           </title>
           <path
@@ -121,9 +117,7 @@ exports[`<HorizontalStepper /> CappedLine story renders snapshot 1`] = `
           width="0.5rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title
-            id="22"
-          >
+          <title>
             incomplete step 4 Step 4
           </title>
           <path
@@ -159,9 +153,7 @@ exports[`<HorizontalStepper /> CappedLine story renders snapshot 1`] = `
           width="0.5rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title
-            id="23"
-          >
+          <title>
             incomplete step 5 Step 5
           </title>
           <path
@@ -199,9 +191,7 @@ exports[`<HorizontalStepper /> CompletedAllSteps story renders snapshot 1`] = `
         width="1.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title
-          id="13"
-        >
+        <title>
           completed step 1 Step 1
         </title>
         <path
@@ -231,9 +221,7 @@ exports[`<HorizontalStepper /> CompletedAllSteps story renders snapshot 1`] = `
         width="1.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title
-          id="14"
-        >
+        <title>
           completed step 2 Step 2
         </title>
         <path
@@ -263,9 +251,7 @@ exports[`<HorizontalStepper /> CompletedAllSteps story renders snapshot 1`] = `
         width="1.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title
-          id="15"
-        >
+        <title>
           completed step 3 Step 3
         </title>
         <path
@@ -295,9 +281,7 @@ exports[`<HorizontalStepper /> CompletedAllSteps story renders snapshot 1`] = `
         width="1.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title
-          id="16"
-        >
+        <title>
           completed step 4 Step 4
         </title>
         <path
@@ -327,9 +311,7 @@ exports[`<HorizontalStepper /> CompletedAllSteps story renders snapshot 1`] = `
         width="1.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title
-          id="17"
-        >
+        <title>
           completed step 5 Step 5
         </title>
         <path
@@ -371,9 +353,7 @@ exports[`<HorizontalStepper /> HorizontalSteps story renders snapshot 1`] = `
           width="0.5rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title
-            id="18"
-          >
+          <title>
             incomplete step 1 Horizontal step
           </title>
           <path
@@ -416,9 +396,7 @@ exports[`<HorizontalStepper /> HorizontalSteps story renders snapshot 1`] = `
         width="1.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title
-          id="19"
-        >
+        <title>
           completed step 1 Horizontal step
         </title>
         <path
@@ -731,9 +709,7 @@ exports[`<HorizontalStepper /> OnFirstStep story renders snapshot 1`] = `
           width="0.5rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title
-            id="1"
-          >
+          <title>
             incomplete step 2 Step 2
           </title>
           <path
@@ -769,9 +745,7 @@ exports[`<HorizontalStepper /> OnFirstStep story renders snapshot 1`] = `
           width="0.5rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title
-            id="2"
-          >
+          <title>
             incomplete step 3 Step 3
           </title>
           <path
@@ -807,9 +781,7 @@ exports[`<HorizontalStepper /> OnFirstStep story renders snapshot 1`] = `
           width="0.5rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title
-            id="3"
-          >
+          <title>
             incomplete step 4 Step 4
           </title>
           <path
@@ -845,9 +817,7 @@ exports[`<HorizontalStepper /> OnFirstStep story renders snapshot 1`] = `
           width="0.5rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title
-            id="4"
-          >
+          <title>
             incomplete step 5 Step 5
           </title>
           <path
@@ -885,9 +855,7 @@ exports[`<HorizontalStepper /> OnLastStep story renders snapshot 1`] = `
         width="1.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title
-          id="9"
-        >
+        <title>
           completed step 1 Step 1
         </title>
         <path
@@ -917,9 +885,7 @@ exports[`<HorizontalStepper /> OnLastStep story renders snapshot 1`] = `
         width="1.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title
-          id="10"
-        >
+        <title>
           completed step 2 Step 2
         </title>
         <path
@@ -949,9 +915,7 @@ exports[`<HorizontalStepper /> OnLastStep story renders snapshot 1`] = `
         width="1.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title
-          id="11"
-        >
+        <title>
           completed step 3 Step 3
         </title>
         <path
@@ -981,9 +945,7 @@ exports[`<HorizontalStepper /> OnLastStep story renders snapshot 1`] = `
         width="1.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title
-          id="12"
-        >
+        <title>
           completed step 4 Step 4
         </title>
         <path
@@ -1040,9 +1002,7 @@ exports[`<HorizontalStepper /> SomeCompletedSteps story renders snapshot 1`] = `
         width="1.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title
-          id="5"
-        >
+        <title>
           completed step 1 Step 1
         </title>
         <path
@@ -1072,9 +1032,7 @@ exports[`<HorizontalStepper /> SomeCompletedSteps story renders snapshot 1`] = `
         width="1.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title
-          id="6"
-        >
+        <title>
           completed step 2 Step 2
         </title>
         <path
@@ -1129,9 +1087,7 @@ exports[`<HorizontalStepper /> SomeCompletedSteps story renders snapshot 1`] = `
           width="0.5rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title
-            id="7"
-          >
+          <title>
             incomplete step 4 Step 4
           </title>
           <path
@@ -1167,9 +1123,7 @@ exports[`<HorizontalStepper /> SomeCompletedSteps story renders snapshot 1`] = `
           width="0.5rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title
-            id="8"
-          >
+          <title>
             incomplete step 5 Step 5
           </title>
           <path

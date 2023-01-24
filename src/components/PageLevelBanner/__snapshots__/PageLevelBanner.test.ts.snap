@@ -11,9 +11,7 @@ exports[`<PageLevelBanner /> Brand story renders snapshot 1`] = `
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="1"
-    >
+    <title>
       attention
     </title>
     <path
@@ -54,9 +52,7 @@ exports[`<PageLevelBanner /> BrandDismissable story renders snapshot 1`] = `
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="7"
-    >
+    <title>
       attention
     </title>
     <path
@@ -95,9 +91,7 @@ exports[`<PageLevelBanner /> BrandDismissable story renders snapshot 1`] = `
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="8"
-      >
+      <title>
         dismiss notification
       </title>
       <path
@@ -119,9 +113,7 @@ exports[`<PageLevelBanner /> Error story renders snapshot 1`] = `
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="4"
-    >
+    <title>
       error
     </title>
     <path
@@ -162,9 +154,7 @@ exports[`<PageLevelBanner /> ErrorDismissable story renders snapshot 1`] = `
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="13"
-    >
+    <title>
       error
     </title>
     <path
@@ -203,9 +193,7 @@ exports[`<PageLevelBanner /> ErrorDismissable story renders snapshot 1`] = `
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="14"
-      >
+      <title>
         dismiss notification
       </title>
       <path
@@ -227,9 +215,7 @@ exports[`<PageLevelBanner /> NoDescription story renders snapshot 1`] = `
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="5"
-    >
+    <title>
       attention
     </title>
     <path
@@ -257,9 +243,7 @@ exports[`<PageLevelBanner /> NoTitle story renders snapshot 1`] = `
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="6"
-    >
+    <title>
       attention
     </title>
     <path
@@ -295,9 +279,7 @@ exports[`<PageLevelBanner /> Success story renders snapshot 1`] = `
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="2"
-    >
+    <title>
       success
     </title>
     <path
@@ -338,9 +320,7 @@ exports[`<PageLevelBanner /> SuccessDismissable story renders snapshot 1`] = `
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="9"
-    >
+    <title>
       success
     </title>
     <path
@@ -379,9 +359,7 @@ exports[`<PageLevelBanner /> SuccessDismissable story renders snapshot 1`] = `
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="10"
-      >
+      <title>
         dismiss notification
       </title>
       <path
@@ -403,9 +381,7 @@ exports[`<PageLevelBanner /> Warning story renders snapshot 1`] = `
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="3"
-    >
+    <title>
       warning
     </title>
     <path
@@ -446,9 +422,7 @@ exports[`<PageLevelBanner /> WarningDismissable story renders snapshot 1`] = `
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="11"
-    >
+    <title>
       warning
     </title>
     <path
@@ -487,9 +461,7 @@ exports[`<PageLevelBanner /> WarningDismissable story renders snapshot 1`] = `
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="12"
-      >
+      <title>
         dismiss notification
       </title>
       <path

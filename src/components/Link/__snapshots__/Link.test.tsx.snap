@@ -64,9 +64,7 @@ exports[`<Link /> IconClickableStyleIconOnly story renders snapshot 1`] = `
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="10"
-    >
+    <title>
       go back
     </title>
     <path
@@ -89,9 +87,7 @@ exports[`<Link /> IconClickableStyleIconOnlySmall story renders snapshot 1`] = `
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="13"
-    >
+    <title>
       go back
     </title>
     <path
@@ -327,9 +323,7 @@ exports[`<Link /> LinkRightIcon story renders snapshot 1`] = `
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="1"
-    >
+    <title>
       opens in a new tab
     </title>
     <path

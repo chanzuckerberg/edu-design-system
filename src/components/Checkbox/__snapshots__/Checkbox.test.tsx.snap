@@ -14,7 +14,7 @@ exports[`<Checkbox /> Checked story renders snapshot 1`] = `
         checked=""
         class="checkbox__input"
         data-bootstrap-override="checkbox"
-        id="3"
+        id="2"
         type="checkbox"
       />
       <svg
@@ -35,7 +35,7 @@ exports[`<Checkbox /> Checked story renders snapshot 1`] = `
     <label
       class="label label--lg"
       data-bootstrap-override="label"
-      for="3"
+      for="2"
     >
       Checkbox
     </label>
@@ -105,7 +105,7 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
                 class="checkbox__input"
                 data-bootstrap-override="checkbox"
                 disabled=""
-                id="11"
+                id="6"
                 type="checkbox"
               />
               <svg
@@ -125,208 +125,208 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
             </span>
             <label
               class="label label--lg label--disabled"
+              data-bootstrap-override="label"
+              for="6"
+            >
+              Disabled
+            </label>
+          </div>
+        </td>
+        <td>
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="7"
+                readonly=""
+                type="checkbox"
+              />
+              <svg
+                aria-hidden="true"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                viewBox="0 0 24 24"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--lg"
+              data-bootstrap-override="label"
+              for="7"
+            >
+              Default
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper input__wrapper--disabled"
+            >
+              <input
+                checked=""
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                disabled=""
+                id="8"
+                type="checkbox"
+              />
+              <svg
+                aria-hidden="true"
+                class="icon checkbox__icon checkbox__icon--disabled"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                viewBox="0 0 24 24"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10.6 16.2L17.65 9.15L16.25 7.75L10.6 13.4L7.75 10.55L6.35 11.95L10.6 16.2ZM3 21V3H21V21H3Z"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--lg label--disabled"
+              data-bootstrap-override="label"
+              for="8"
+            >
+              Disabled
+            </label>
+          </div>
+        </td>
+        <td>
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+            >
+              <input
+                checked=""
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="9"
+                readonly=""
+                type="checkbox"
+              />
+              <svg
+                aria-hidden="true"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                viewBox="0 0 24 24"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10.6 16.2L17.65 9.15L16.25 7.75L10.6 13.4L7.75 10.55L6.35 11.95L10.6 16.2ZM3 21V3H21V21H3Z"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--lg"
+              data-bootstrap-override="label"
+              for="9"
+            >
+              Default
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper input__wrapper--disabled"
+            >
+              <input
+                aria-checked="mixed"
+                checked=""
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                disabled=""
+                id="10"
+                type="checkbox"
+              />
+              <svg
+                aria-hidden="true"
+                class="icon checkbox__icon checkbox__icon--disabled"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                viewBox="0 0 24 24"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7 13H17V11H7V13ZM3 21V3H21V21H3Z"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--lg label--disabled"
+              data-bootstrap-override="label"
+              for="10"
+            >
+              Disabled
+            </label>
+          </div>
+        </td>
+        <td>
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+            >
+              <input
+                aria-checked="mixed"
+                checked=""
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="11"
+                readonly=""
+                type="checkbox"
+              />
+              <svg
+                aria-hidden="true"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                viewBox="0 0 24 24"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7 13H17V11H7V13ZM3 21V3H21V21H3Z"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--lg"
               data-bootstrap-override="label"
               for="11"
-            >
-              Disabled
-            </label>
-          </div>
-        </td>
-        <td>
-          <div
-            class="checkbox"
-          >
-            <span
-              class="input__wrapper"
-            >
-              <input
-                class="checkbox__input"
-                data-bootstrap-override="checkbox"
-                id="13"
-                readonly=""
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                />
-              </svg>
-            </span>
-            <label
-              class="label label--lg"
-              data-bootstrap-override="label"
-              for="13"
-            >
-              Default
-            </label>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <div
-            class="checkbox"
-          >
-            <span
-              class="input__wrapper input__wrapper--disabled"
-            >
-              <input
-                checked=""
-                class="checkbox__input"
-                data-bootstrap-override="checkbox"
-                disabled=""
-                id="15"
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon checkbox__icon--disabled"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M10.6 16.2L17.65 9.15L16.25 7.75L10.6 13.4L7.75 10.55L6.35 11.95L10.6 16.2ZM3 21V3H21V21H3Z"
-                />
-              </svg>
-            </span>
-            <label
-              class="label label--lg label--disabled"
-              data-bootstrap-override="label"
-              for="15"
-            >
-              Disabled
-            </label>
-          </div>
-        </td>
-        <td>
-          <div
-            class="checkbox"
-          >
-            <span
-              class="input__wrapper"
-            >
-              <input
-                checked=""
-                class="checkbox__input"
-                data-bootstrap-override="checkbox"
-                id="17"
-                readonly=""
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M10.6 16.2L17.65 9.15L16.25 7.75L10.6 13.4L7.75 10.55L6.35 11.95L10.6 16.2ZM3 21V3H21V21H3Z"
-                />
-              </svg>
-            </span>
-            <label
-              class="label label--lg"
-              data-bootstrap-override="label"
-              for="17"
-            >
-              Default
-            </label>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <div
-            class="checkbox"
-          >
-            <span
-              class="input__wrapper input__wrapper--disabled"
-            >
-              <input
-                aria-checked="mixed"
-                checked=""
-                class="checkbox__input"
-                data-bootstrap-override="checkbox"
-                disabled=""
-                id="19"
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon checkbox__icon--disabled"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M7 13H17V11H7V13ZM3 21V3H21V21H3Z"
-                />
-              </svg>
-            </span>
-            <label
-              class="label label--lg label--disabled"
-              data-bootstrap-override="label"
-              for="19"
-            >
-              Disabled
-            </label>
-          </div>
-        </td>
-        <td>
-          <div
-            class="checkbox"
-          >
-            <span
-              class="input__wrapper"
-            >
-              <input
-                aria-checked="mixed"
-                checked=""
-                class="checkbox__input"
-                data-bootstrap-override="checkbox"
-                id="21"
-                readonly=""
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M7 13H17V11H7V13ZM3 21V3H21V21H3Z"
-                />
-              </svg>
-            </span>
-            <label
-              class="label label--lg"
-              data-bootstrap-override="label"
-              for="21"
             >
               Default
             </label>
@@ -349,7 +349,7 @@ exports[`<Checkbox /> Disabled story renders snapshot 2`] = `
       class="checkbox__input"
       data-bootstrap-override="checkbox"
       disabled=""
-      id="44"
+      id="22"
       type="checkbox"
     />
     <svg
@@ -370,7 +370,7 @@ exports[`<Checkbox /> Disabled story renders snapshot 2`] = `
   <label
     class="label label--lg label--disabled"
     data-bootstrap-override="label"
-    for="44"
+    for="22"
   >
     Disabled
   </label>
@@ -392,7 +392,7 @@ exports[`<Checkbox /> Indeterminate story renders snapshot 1`] = `
         checked=""
         class="checkbox__input"
         data-bootstrap-override="checkbox"
-        id="9"
+        id="5"
         readonly=""
         type="checkbox"
       />
@@ -414,7 +414,7 @@ exports[`<Checkbox /> Indeterminate story renders snapshot 1`] = `
     <label
       class="label label--lg"
       data-bootstrap-override="label"
-      for="9"
+      for="5"
     >
       Checkbox
     </label>
@@ -438,7 +438,7 @@ exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
         <input
           class="checkbox__input"
           data-bootstrap-override="checkbox"
-          id="35"
+          id="18"
           readonly=""
           type="checkbox"
         />
@@ -460,7 +460,7 @@ exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
       <label
         class="label label--lg"
         data-bootstrap-override="label"
-        for="35"
+        for="18"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit
       </label>
@@ -474,7 +474,7 @@ exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
         <input
           class="checkbox__input"
           data-bootstrap-override="checkbox"
-          id="37"
+          id="19"
           readonly=""
           type="checkbox"
         />
@@ -496,7 +496,7 @@ exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
       <label
         class="label label--md checkbox__label--md"
         data-bootstrap-override="label"
-        for="37"
+        for="19"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit
       </label>
@@ -511,7 +511,7 @@ exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
           class="checkbox__input"
           data-bootstrap-override="checkbox"
           disabled=""
-          id="39"
+          id="20"
           type="checkbox"
         />
         <svg
@@ -532,7 +532,7 @@ exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
       <label
         class="label label--lg label--disabled"
         data-bootstrap-override="label"
-        for="39"
+        for="20"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit
       </label>
@@ -547,7 +547,7 @@ exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
           class="checkbox__input"
           data-bootstrap-override="checkbox"
           disabled=""
-          id="41"
+          id="21"
           type="checkbox"
         />
         <svg
@@ -568,7 +568,7 @@ exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
       <label
         class="label label--md label--disabled checkbox__label--md"
         data-bootstrap-override="label"
-        for="41"
+        for="21"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit
       </label>
@@ -590,7 +590,7 @@ exports[`<Checkbox /> Medium story renders snapshot 1`] = `
       <input
         class="checkbox__input"
         data-bootstrap-override="checkbox"
-        id="5"
+        id="3"
         type="checkbox"
       />
       <svg
@@ -611,7 +611,7 @@ exports[`<Checkbox /> Medium story renders snapshot 1`] = `
     <label
       class="label label--md checkbox__label--md"
       data-bootstrap-override="label"
-      for="5"
+      for="3"
     >
       Checkbox
     </label>
@@ -633,7 +633,7 @@ exports[`<Checkbox /> MediumChecked story renders snapshot 1`] = `
         checked=""
         class="checkbox__input"
         data-bootstrap-override="checkbox"
-        id="7"
+        id="4"
         type="checkbox"
       />
       <svg
@@ -654,7 +654,7 @@ exports[`<Checkbox /> MediumChecked story renders snapshot 1`] = `
     <label
       class="label label--md checkbox__label--md"
       data-bootstrap-override="label"
-      for="7"
+      for="4"
     >
       Checkbox
     </label>
@@ -718,7 +718,7 @@ exports[`<Checkbox /> WithoutVisibleLabel story renders snapshot 1`] = `
         aria-label="a checkbox has no name"
         class="checkbox__input"
         data-bootstrap-override="checkbox"
-        id="23"
+        id="12"
         readonly=""
         type="checkbox"
       />
@@ -749,7 +749,7 @@ exports[`<Checkbox /> WithoutVisibleLabel story renders snapshot 1`] = `
         checked=""
         class="checkbox__input"
         data-bootstrap-override="checkbox"
-        id="25"
+        id="13"
         readonly=""
         type="checkbox"
       />
@@ -781,7 +781,7 @@ exports[`<Checkbox /> WithoutVisibleLabel story renders snapshot 1`] = `
         checked=""
         class="checkbox__input"
         data-bootstrap-override="checkbox"
-        id="27"
+        id="14"
         readonly=""
         type="checkbox"
       />
@@ -812,7 +812,7 @@ exports[`<Checkbox /> WithoutVisibleLabel story renders snapshot 1`] = `
         class="checkbox__input"
         data-bootstrap-override="checkbox"
         disabled=""
-        id="29"
+        id="15"
         type="checkbox"
       />
       <svg
@@ -843,7 +843,7 @@ exports[`<Checkbox /> WithoutVisibleLabel story renders snapshot 1`] = `
         class="checkbox__input"
         data-bootstrap-override="checkbox"
         disabled=""
-        id="31"
+        id="16"
         type="checkbox"
       />
       <svg
@@ -875,7 +875,7 @@ exports[`<Checkbox /> WithoutVisibleLabel story renders snapshot 1`] = `
         class="checkbox__input"
         data-bootstrap-override="checkbox"
         disabled=""
-        id="33"
+        id="17"
         type="checkbox"
       />
       <svg

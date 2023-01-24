@@ -36,9 +36,7 @@ exports[`<Filters /> Default story renders snapshot 1`] = `
           width="1.5rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title
-            id="3"
-          >
+          <title>
             close filters
           </title>
           <path
@@ -62,6 +60,76 @@ exports[`<Filters /> Default story renders snapshot 1`] = `
         <div
           class="fieldset-items filters-fieldset__checkboxes"
         >
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="2"
+                type="checkbox"
+              />
+              <svg
+                aria-hidden="true"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                viewBox="0 0 24 24"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--lg"
+              data-bootstrap-override="label"
+              for="2"
+            >
+              Filters label 1
+            </label>
+          </div>
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="3"
+                type="checkbox"
+              />
+              <svg
+                aria-hidden="true"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                viewBox="0 0 24 24"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--lg"
+              data-bootstrap-override="label"
+              for="3"
+            >
+              Filters label 2
+            </label>
+          </div>
           <div
             class="checkbox"
           >
@@ -94,76 +162,6 @@ exports[`<Filters /> Default story renders snapshot 1`] = `
               data-bootstrap-override="label"
               for="4"
             >
-              Filters label 1
-            </label>
-          </div>
-          <div
-            class="checkbox"
-          >
-            <span
-              class="input__wrapper"
-            >
-              <input
-                class="checkbox__input"
-                data-bootstrap-override="checkbox"
-                id="6"
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                />
-              </svg>
-            </span>
-            <label
-              class="label label--lg"
-              data-bootstrap-override="label"
-              for="6"
-            >
-              Filters label 2
-            </label>
-          </div>
-          <div
-            class="checkbox"
-          >
-            <span
-              class="input__wrapper"
-            >
-              <input
-                class="checkbox__input"
-                data-bootstrap-override="checkbox"
-                id="8"
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                />
-              </svg>
-            </span>
-            <label
-              class="label label--lg"
-              data-bootstrap-override="label"
-              for="8"
-            >
               Filters label 3
             </label>
           </div>
@@ -180,7 +178,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
   class="drawer__container drawer__container--is-active filters-drawer__container"
 >
   <article
-    aria-labelledby="37"
+    aria-labelledby="16"
     aria-modal="true"
     class="drawer filters-drawer"
     role="dialog"
@@ -191,7 +189,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
     >
       <h3
         class="heading heading--size-headline-sm filters-drawer__title"
-        id="37"
+        id="16"
       >
         Filters
       </h3>
@@ -210,9 +208,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
           width="1.5rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title
-            id="39"
-          >
+          <title>
             close filters
           </title>
           <path
@@ -245,7 +241,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
               <input
                 class="checkbox__input"
                 data-bootstrap-override="checkbox"
-                id="40"
+                id="17"
                 type="checkbox"
               />
               <svg
@@ -266,856 +262,9 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
             <label
               class="label label--lg"
               data-bootstrap-override="label"
-              for="40"
+              for="17"
             >
               Filters long label 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            </label>
-          </div>
-          <div
-            class="checkbox"
-          >
-            <span
-              class="input__wrapper"
-            >
-              <input
-                class="checkbox__input"
-                data-bootstrap-override="checkbox"
-                id="42"
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                />
-              </svg>
-            </span>
-            <label
-              class="label label--lg"
-              data-bootstrap-override="label"
-              for="42"
-            >
-              Filters label 2
-            </label>
-          </div>
-          <div
-            class="checkbox"
-          >
-            <span
-              class="input__wrapper"
-            >
-              <input
-                class="checkbox__input"
-                data-bootstrap-override="checkbox"
-                id="44"
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                />
-              </svg>
-            </span>
-            <label
-              class="label label--lg"
-              data-bootstrap-override="label"
-              for="44"
-            >
-              Filters label 3
-            </label>
-          </div>
-        </div>
-      </fieldset>
-      <fieldset
-        class="fieldset filters-fieldset"
-      >
-        <legend
-          class="fieldset-legend filters-fieldset__legend"
-        >
-          Filters Segment 2
-           
-        </legend>
-        <div
-          class="fieldset-items filters-fieldset__checkboxes"
-        >
-          <div
-            class="checkbox"
-          >
-            <span
-              class="input__wrapper"
-            >
-              <input
-                class="checkbox__input"
-                data-bootstrap-override="checkbox"
-                id="46"
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                />
-              </svg>
-            </span>
-            <label
-              class="label label--lg"
-              data-bootstrap-override="label"
-              for="46"
-            >
-              Filters label 1
-            </label>
-          </div>
-          <div
-            class="checkbox"
-          >
-            <span
-              class="input__wrapper"
-            >
-              <input
-                class="checkbox__input"
-                data-bootstrap-override="checkbox"
-                id="48"
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                />
-              </svg>
-            </span>
-            <label
-              class="label label--lg"
-              data-bootstrap-override="label"
-              for="48"
-            >
-              Filters long label 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            </label>
-          </div>
-          <div
-            class="checkbox"
-          >
-            <span
-              class="input__wrapper"
-            >
-              <input
-                class="checkbox__input"
-                data-bootstrap-override="checkbox"
-                id="50"
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                />
-              </svg>
-            </span>
-            <label
-              class="label label--lg"
-              data-bootstrap-override="label"
-              for="50"
-            >
-              Filters label 3
-            </label>
-          </div>
-        </div>
-      </fieldset>
-      <fieldset
-        class="fieldset filters-fieldset"
-      >
-        <legend
-          class="fieldset-legend filters-fieldset__legend"
-        >
-          Filters Segment 3
-           
-        </legend>
-        <div
-          class="fieldset-items filters-fieldset__checkboxes"
-        >
-          <div
-            class="checkbox"
-          >
-            <span
-              class="input__wrapper"
-            >
-              <input
-                class="checkbox__input"
-                data-bootstrap-override="checkbox"
-                id="52"
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                />
-              </svg>
-            </span>
-            <label
-              class="label label--lg"
-              data-bootstrap-override="label"
-              for="52"
-            >
-              Filters label 1
-            </label>
-          </div>
-          <div
-            class="checkbox"
-          >
-            <span
-              class="input__wrapper"
-            >
-              <input
-                class="checkbox__input"
-                data-bootstrap-override="checkbox"
-                id="54"
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                />
-              </svg>
-            </span>
-            <label
-              class="label label--lg"
-              data-bootstrap-override="label"
-              for="54"
-            >
-              Filters label 2
-            </label>
-          </div>
-          <div
-            class="checkbox"
-          >
-            <span
-              class="input__wrapper"
-            >
-              <input
-                class="checkbox__input"
-                data-bootstrap-override="checkbox"
-                id="56"
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                />
-              </svg>
-            </span>
-            <label
-              class="label label--lg"
-              data-bootstrap-override="label"
-              for="56"
-            >
-              Filters long label 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            </label>
-          </div>
-        </div>
-      </fieldset>
-      <fieldset
-        class="fieldset filters-fieldset"
-      >
-        <legend
-          class="fieldset-legend filters-fieldset__legend"
-        >
-          Filters Segment 4
-           
-        </legend>
-        <div
-          class="fieldset-items filters-fieldset__checkboxes"
-        >
-          <div
-            class="checkbox"
-          >
-            <span
-              class="input__wrapper"
-            >
-              <input
-                class="checkbox__input"
-                data-bootstrap-override="checkbox"
-                id="58"
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                />
-              </svg>
-            </span>
-            <label
-              class="label label--lg"
-              data-bootstrap-override="label"
-              for="58"
-            >
-              Filters label 1
-            </label>
-          </div>
-          <div
-            class="checkbox"
-          >
-            <span
-              class="input__wrapper"
-            >
-              <input
-                class="checkbox__input"
-                data-bootstrap-override="checkbox"
-                id="60"
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                />
-              </svg>
-            </span>
-            <label
-              class="label label--lg"
-              data-bootstrap-override="label"
-              for="60"
-            >
-              Filters label 2
-            </label>
-          </div>
-          <div
-            class="checkbox"
-          >
-            <span
-              class="input__wrapper"
-            >
-              <input
-                class="checkbox__input"
-                data-bootstrap-override="checkbox"
-                id="62"
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                />
-              </svg>
-            </span>
-            <label
-              class="label label--lg"
-              data-bootstrap-override="label"
-              for="62"
-            >
-              Filters label 3
-            </label>
-          </div>
-          <div
-            class="checkbox"
-          >
-            <span
-              class="input__wrapper"
-            >
-              <input
-                class="checkbox__input"
-                data-bootstrap-override="checkbox"
-                id="64"
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                />
-              </svg>
-            </span>
-            <label
-              class="label label--lg"
-              data-bootstrap-override="label"
-              for="64"
-            >
-              Filters label 4
-            </label>
-          </div>
-          <div
-            class="checkbox"
-          >
-            <span
-              class="input__wrapper"
-            >
-              <input
-                class="checkbox__input"
-                data-bootstrap-override="checkbox"
-                id="66"
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                />
-              </svg>
-            </span>
-            <label
-              class="label label--lg"
-              data-bootstrap-override="label"
-              for="66"
-            >
-              Filters label 5
-            </label>
-          </div>
-          <div
-            class="checkbox"
-          >
-            <span
-              class="input__wrapper"
-            >
-              <input
-                class="checkbox__input"
-                data-bootstrap-override="checkbox"
-                id="68"
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                />
-              </svg>
-            </span>
-            <label
-              class="label label--lg"
-              data-bootstrap-override="label"
-              for="68"
-            >
-              Filters label 6
-            </label>
-          </div>
-        </div>
-      </fieldset>
-    </div>
-    <footer
-      class="drawer__footer filters-drawer__footer"
-    >
-      <div
-        class="button-group button-group--spacing-1x footer__button-group"
-      >
-        <button
-          class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary footer__button"
-          data-bootstrap-override="clickable-style-secondary"
-          type="button"
-        >
-          Clear All
-        </button>
-        <button
-          class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary footer__button"
-          data-bootstrap-override="clickable-style-primary"
-          type="button"
-        >
-          Apply
-        </button>
-      </div>
-    </footer>
-  </article>
-</div>
-`;
-
-exports[`<Filters /> WithOnApplyAndCustomButtonGroup story renders snapshot 1`] = `
-<div
-  aria-hidden="false"
-  class="drawer__container drawer__container--is-active filters-drawer__container"
->
-  <article
-    aria-labelledby="25"
-    aria-modal="true"
-    class="drawer filters-drawer"
-    role="dialog"
-    tabindex="0"
-  >
-    <header
-      class="drawer__header"
-    >
-      <h3
-        class="heading heading--size-headline-sm filters-drawer__title"
-        id="25"
-      >
-        Filters
-      </h3>
-      <button
-        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button button--icon"
-        data-bootstrap-override="clickable-style-icon"
-        type="button"
-      >
-        <svg
-          class="icon"
-          fill="currentColor"
-          height="1.5rem"
-          role="img"
-          style="--icon-size: 1.5rem;"
-          viewBox="0 0 24 24"
-          width="1.5rem"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title
-            id="27"
-          >
-            close filters
-          </title>
-          <path
-            d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
-          />
-        </svg>
-      </button>
-    </header>
-    <div
-      class="drawer__body filters-drawer__body"
-    >
-      <fieldset
-        class="fieldset filters-fieldset"
-      >
-        <legend
-          class="fieldset-legend filters-fieldset__legend"
-        >
-          Filters Segment 1
-           
-        </legend>
-        <div
-          class="fieldset-items filters-fieldset__checkboxes"
-        >
-          <div
-            class="checkbox"
-          >
-            <span
-              class="input__wrapper"
-            >
-              <input
-                class="checkbox__input"
-                data-bootstrap-override="checkbox"
-                id="28"
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                />
-              </svg>
-            </span>
-            <label
-              class="label label--lg"
-              data-bootstrap-override="label"
-              for="28"
-            >
-              Filters label 1
-            </label>
-          </div>
-          <div
-            class="checkbox"
-          >
-            <span
-              class="input__wrapper"
-            >
-              <input
-                class="checkbox__input"
-                data-bootstrap-override="checkbox"
-                id="30"
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                />
-              </svg>
-            </span>
-            <label
-              class="label label--lg"
-              data-bootstrap-override="label"
-              for="30"
-            >
-              Filters label 2
-            </label>
-          </div>
-          <div
-            class="checkbox"
-          >
-            <span
-              class="input__wrapper"
-            >
-              <input
-                class="checkbox__input"
-                data-bootstrap-override="checkbox"
-                id="32"
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                />
-              </svg>
-            </span>
-            <label
-              class="label label--lg"
-              data-bootstrap-override="label"
-              for="32"
-            >
-              Filters label 3
-            </label>
-          </div>
-        </div>
-      </fieldset>
-    </div>
-    <footer
-      class="drawer__footer filters-drawer__footer"
-    >
-      <div
-        class="button-group button-group--spacing-1x footer__button-group button-group__apply-only"
-      >
-        <button
-          class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary footer__button"
-          data-bootstrap-override="clickable-style-primary"
-          type="button"
-        >
-          Apply
-        </button>
-      </div>
-    </footer>
-  </article>
-</div>
-`;
-
-exports[`<Filters /> WithOnClear story renders snapshot 1`] = `
-<div
-  aria-hidden="false"
-  class="drawer__container drawer__container--is-active filters-drawer__container"
->
-  <article
-    aria-labelledby="13"
-    aria-modal="true"
-    class="drawer filters-drawer"
-    role="dialog"
-    tabindex="0"
-  >
-    <header
-      class="drawer__header"
-    >
-      <h3
-        class="heading heading--size-headline-sm filters-drawer__title"
-        id="13"
-      >
-        Filters
-      </h3>
-      <button
-        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button button--icon"
-        data-bootstrap-override="clickable-style-icon"
-        type="button"
-      >
-        <svg
-          class="icon"
-          fill="currentColor"
-          height="1.5rem"
-          role="img"
-          style="--icon-size: 1.5rem;"
-          viewBox="0 0 24 24"
-          width="1.5rem"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title
-            id="15"
-          >
-            close filters
-          </title>
-          <path
-            d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
-          />
-        </svg>
-      </button>
-    </header>
-    <div
-      class="drawer__body filters-drawer__body"
-    >
-      <fieldset
-        class="fieldset filters-fieldset"
-      >
-        <legend
-          class="fieldset-legend filters-fieldset__legend"
-        >
-          Filters Segment 1
-           
-        </legend>
-        <div
-          class="fieldset-items filters-fieldset__checkboxes"
-        >
-          <div
-            class="checkbox"
-          >
-            <span
-              class="input__wrapper"
-            >
-              <input
-                class="checkbox__input"
-                data-bootstrap-override="checkbox"
-                id="16"
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                />
-              </svg>
-            </span>
-            <label
-              class="label label--lg"
-              data-bootstrap-override="label"
-              for="16"
-            >
-              Filters label 1
             </label>
           </div>
           <div
@@ -1162,6 +311,55 @@ exports[`<Filters /> WithOnClear story renders snapshot 1`] = `
               <input
                 class="checkbox__input"
                 data-bootstrap-override="checkbox"
+                id="19"
+                type="checkbox"
+              />
+              <svg
+                aria-hidden="true"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                viewBox="0 0 24 24"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--lg"
+              data-bootstrap-override="label"
+              for="19"
+            >
+              Filters label 3
+            </label>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset
+        class="fieldset filters-fieldset"
+      >
+        <legend
+          class="fieldset-legend filters-fieldset__legend"
+        >
+          Filters Segment 2
+           
+        </legend>
+        <div
+          class="fieldset-items filters-fieldset__checkboxes"
+        >
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
                 id="20"
                 type="checkbox"
               />
@@ -1184,6 +382,800 @@ exports[`<Filters /> WithOnClear story renders snapshot 1`] = `
               class="label label--lg"
               data-bootstrap-override="label"
               for="20"
+            >
+              Filters label 1
+            </label>
+          </div>
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="21"
+                type="checkbox"
+              />
+              <svg
+                aria-hidden="true"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                viewBox="0 0 24 24"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--lg"
+              data-bootstrap-override="label"
+              for="21"
+            >
+              Filters long label 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            </label>
+          </div>
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="22"
+                type="checkbox"
+              />
+              <svg
+                aria-hidden="true"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                viewBox="0 0 24 24"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--lg"
+              data-bootstrap-override="label"
+              for="22"
+            >
+              Filters label 3
+            </label>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset
+        class="fieldset filters-fieldset"
+      >
+        <legend
+          class="fieldset-legend filters-fieldset__legend"
+        >
+          Filters Segment 3
+           
+        </legend>
+        <div
+          class="fieldset-items filters-fieldset__checkboxes"
+        >
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="23"
+                type="checkbox"
+              />
+              <svg
+                aria-hidden="true"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                viewBox="0 0 24 24"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--lg"
+              data-bootstrap-override="label"
+              for="23"
+            >
+              Filters label 1
+            </label>
+          </div>
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="24"
+                type="checkbox"
+              />
+              <svg
+                aria-hidden="true"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                viewBox="0 0 24 24"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--lg"
+              data-bootstrap-override="label"
+              for="24"
+            >
+              Filters label 2
+            </label>
+          </div>
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="25"
+                type="checkbox"
+              />
+              <svg
+                aria-hidden="true"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                viewBox="0 0 24 24"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--lg"
+              data-bootstrap-override="label"
+              for="25"
+            >
+              Filters long label 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            </label>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset
+        class="fieldset filters-fieldset"
+      >
+        <legend
+          class="fieldset-legend filters-fieldset__legend"
+        >
+          Filters Segment 4
+           
+        </legend>
+        <div
+          class="fieldset-items filters-fieldset__checkboxes"
+        >
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="26"
+                type="checkbox"
+              />
+              <svg
+                aria-hidden="true"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                viewBox="0 0 24 24"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--lg"
+              data-bootstrap-override="label"
+              for="26"
+            >
+              Filters label 1
+            </label>
+          </div>
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="27"
+                type="checkbox"
+              />
+              <svg
+                aria-hidden="true"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                viewBox="0 0 24 24"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--lg"
+              data-bootstrap-override="label"
+              for="27"
+            >
+              Filters label 2
+            </label>
+          </div>
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="28"
+                type="checkbox"
+              />
+              <svg
+                aria-hidden="true"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                viewBox="0 0 24 24"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--lg"
+              data-bootstrap-override="label"
+              for="28"
+            >
+              Filters label 3
+            </label>
+          </div>
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="29"
+                type="checkbox"
+              />
+              <svg
+                aria-hidden="true"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                viewBox="0 0 24 24"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--lg"
+              data-bootstrap-override="label"
+              for="29"
+            >
+              Filters label 4
+            </label>
+          </div>
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="30"
+                type="checkbox"
+              />
+              <svg
+                aria-hidden="true"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                viewBox="0 0 24 24"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--lg"
+              data-bootstrap-override="label"
+              for="30"
+            >
+              Filters label 5
+            </label>
+          </div>
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="31"
+                type="checkbox"
+              />
+              <svg
+                aria-hidden="true"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                viewBox="0 0 24 24"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--lg"
+              data-bootstrap-override="label"
+              for="31"
+            >
+              Filters label 6
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <footer
+      class="drawer__footer filters-drawer__footer"
+    >
+      <div
+        class="button-group button-group--spacing-1x footer__button-group"
+      >
+        <button
+          class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--brand button button--secondary footer__button"
+          data-bootstrap-override="clickable-style-secondary"
+          type="button"
+        >
+          Clear All
+        </button>
+        <button
+          class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary footer__button"
+          data-bootstrap-override="clickable-style-primary"
+          type="button"
+        >
+          Apply
+        </button>
+      </div>
+    </footer>
+  </article>
+</div>
+`;
+
+exports[`<Filters /> WithOnApplyAndCustomButtonGroup story renders snapshot 1`] = `
+<div
+  aria-hidden="false"
+  class="drawer__container drawer__container--is-active filters-drawer__container"
+>
+  <article
+    aria-labelledby="11"
+    aria-modal="true"
+    class="drawer filters-drawer"
+    role="dialog"
+    tabindex="0"
+  >
+    <header
+      class="drawer__header"
+    >
+      <h3
+        class="heading heading--size-headline-sm filters-drawer__title"
+        id="11"
+      >
+        Filters
+      </h3>
+      <button
+        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button button--icon"
+        data-bootstrap-override="clickable-style-icon"
+        type="button"
+      >
+        <svg
+          class="icon"
+          fill="currentColor"
+          height="1.5rem"
+          role="img"
+          style="--icon-size: 1.5rem;"
+          viewBox="0 0 24 24"
+          width="1.5rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            close filters
+          </title>
+          <path
+            d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
+          />
+        </svg>
+      </button>
+    </header>
+    <div
+      class="drawer__body filters-drawer__body"
+    >
+      <fieldset
+        class="fieldset filters-fieldset"
+      >
+        <legend
+          class="fieldset-legend filters-fieldset__legend"
+        >
+          Filters Segment 1
+           
+        </legend>
+        <div
+          class="fieldset-items filters-fieldset__checkboxes"
+        >
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="12"
+                type="checkbox"
+              />
+              <svg
+                aria-hidden="true"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                viewBox="0 0 24 24"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--lg"
+              data-bootstrap-override="label"
+              for="12"
+            >
+              Filters label 1
+            </label>
+          </div>
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="13"
+                type="checkbox"
+              />
+              <svg
+                aria-hidden="true"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                viewBox="0 0 24 24"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--lg"
+              data-bootstrap-override="label"
+              for="13"
+            >
+              Filters label 2
+            </label>
+          </div>
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="14"
+                type="checkbox"
+              />
+              <svg
+                aria-hidden="true"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                viewBox="0 0 24 24"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--lg"
+              data-bootstrap-override="label"
+              for="14"
+            >
+              Filters label 3
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <footer
+      class="drawer__footer filters-drawer__footer"
+    >
+      <div
+        class="button-group button-group--spacing-1x footer__button-group button-group__apply-only"
+      >
+        <button
+          class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary footer__button"
+          data-bootstrap-override="clickable-style-primary"
+          type="button"
+        >
+          Apply
+        </button>
+      </div>
+    </footer>
+  </article>
+</div>
+`;
+
+exports[`<Filters /> WithOnClear story renders snapshot 1`] = `
+<div
+  aria-hidden="false"
+  class="drawer__container drawer__container--is-active filters-drawer__container"
+>
+  <article
+    aria-labelledby="6"
+    aria-modal="true"
+    class="drawer filters-drawer"
+    role="dialog"
+    tabindex="0"
+  >
+    <header
+      class="drawer__header"
+    >
+      <h3
+        class="heading heading--size-headline-sm filters-drawer__title"
+        id="6"
+      >
+        Filters
+      </h3>
+      <button
+        class="clickable-style clickable-style--lg clickable-style--icon clickable-style--neutral button button--icon"
+        data-bootstrap-override="clickable-style-icon"
+        type="button"
+      >
+        <svg
+          class="icon"
+          fill="currentColor"
+          height="1.5rem"
+          role="img"
+          style="--icon-size: 1.5rem;"
+          viewBox="0 0 24 24"
+          width="1.5rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            close filters
+          </title>
+          <path
+            d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
+          />
+        </svg>
+      </button>
+    </header>
+    <div
+      class="drawer__body filters-drawer__body"
+    >
+      <fieldset
+        class="fieldset filters-fieldset"
+      >
+        <legend
+          class="fieldset-legend filters-fieldset__legend"
+        >
+          Filters Segment 1
+           
+        </legend>
+        <div
+          class="fieldset-items filters-fieldset__checkboxes"
+        >
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="7"
+                type="checkbox"
+              />
+              <svg
+                aria-hidden="true"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                viewBox="0 0 24 24"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--lg"
+              data-bootstrap-override="label"
+              for="7"
+            >
+              Filters label 1
+            </label>
+          </div>
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="8"
+                type="checkbox"
+              />
+              <svg
+                aria-hidden="true"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                viewBox="0 0 24 24"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--lg"
+              data-bootstrap-override="label"
+              for="8"
+            >
+              Filters label 2
+            </label>
+          </div>
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper"
+            >
+              <input
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                id="9"
+                type="checkbox"
+              />
+              <svg
+                aria-hidden="true"
+                class="icon checkbox__icon"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                viewBox="0 0 24 24"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--lg"
+              data-bootstrap-override="label"
+              for="9"
             >
               Filters label 3
             </label>

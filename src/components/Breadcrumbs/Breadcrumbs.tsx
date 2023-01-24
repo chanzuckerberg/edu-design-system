@@ -1,7 +1,6 @@
 import clsx from 'clsx';
 import debounce from 'lodash.debounce';
 import React, { type ReactNode } from 'react';
-import { useUID } from 'react-uid';
 import styles from './Breadcrumbs.module.css';
 import { flattenReactChildren } from '../../util/flattenReactChildren';
 import BreadcrumbsItem from '../BreadcrumbsItem';
@@ -105,15 +104,12 @@ export const Breadcrumbs = ({
       );
     });
 
-  const generatedId = useUID();
-  const breadcrumbsId = id || generatedId;
-
   const componentClassName = clsx(styles['breadcrumbs'], className);
   return (
     <nav
       aria-label={ariaLabel}
       className={componentClassName}
-      id={breadcrumbsId}
+      id={id}
       {...other}
     >
       <ul className={styles['breadcrumbs__list']} ref={ref}>
