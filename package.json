@@ -6,6 +6,7 @@
   "homepage": "https://github.com/chanzuckerberg/edu-design-system",
   "license": "MIT",
   "main": "lib/index.js",
+  "sideEffects": false,
   "publishConfig": {
     "access": "public"
   },
