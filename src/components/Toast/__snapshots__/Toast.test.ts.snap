@@ -17,9 +17,7 @@ exports[`<Toast /> Error story renders snapshot 1`] = `
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="2"
-      >
+      <title>
         error
       </title>
       <path
@@ -52,9 +50,7 @@ exports[`<Toast /> NotDismissable story renders snapshot 1`] = `
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="3"
-      >
+      <title>
         success
       </title>
       <path
@@ -87,9 +83,7 @@ exports[`<Toast /> Success story renders snapshot 1`] = `
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="1"
-      >
+      <title>
         success
       </title>
       <path

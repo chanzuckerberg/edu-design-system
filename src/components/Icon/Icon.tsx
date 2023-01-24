@@ -1,7 +1,6 @@
 import clsx from 'clsx';
 import type { ReactNode, CSSProperties } from 'react';
 import React, { useEffect } from 'react';
-import { useUID } from 'react-uid';
 import svg4everybody from 'svg4everybody';
 import styles from './Icon.module.css';
 import icons, { type IconName } from '../../icons/spritemap';
@@ -112,8 +111,6 @@ export const Icon = (props: IconProps) => {
     size,
     viewBox,
   } = props;
-  const generatedId = useUID();
-  const idVar = id || generatedId;
 
   useEffect(() => {
     svg4everybody(); // Required to get IE to render icon sprites
@@ -148,7 +145,7 @@ export const Icon = (props: IconProps) => {
   if (purpose === 'informative') {
     return (
       <svg {...svgCommonProps} role="img">
-        <title id={idVar}>{props.title}</title>
+        <title id={id}>{props.title}</title>
         {computedSvg}
       </svg>
     );

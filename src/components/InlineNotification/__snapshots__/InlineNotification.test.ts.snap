@@ -14,9 +14,7 @@ exports[`<InlineNotification /> FullWidthLongText story renders snapshot 1`] = `
     width="1.5rem"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="12"
-    >
+    <title>
       success
     </title>
     <path
@@ -48,9 +46,7 @@ exports[`<InlineNotification /> FullWidthStrongVariants story renders snapshot 1
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="18"
-      >
+      <title>
         info
       </title>
       <path
@@ -76,9 +72,7 @@ exports[`<InlineNotification /> FullWidthStrongVariants story renders snapshot 1
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="19"
-      >
+      <title>
         success
       </title>
       <path
@@ -104,9 +98,7 @@ exports[`<InlineNotification /> FullWidthStrongVariants story renders snapshot 1
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="20"
-      >
+      <title>
         alert
       </title>
       <path
@@ -132,9 +124,7 @@ exports[`<InlineNotification /> FullWidthStrongVariants story renders snapshot 1
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="21"
-      >
+      <title>
         yield
       </title>
       <circle
@@ -166,9 +156,7 @@ exports[`<InlineNotification /> FullWidthStrongVariants story renders snapshot 1
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="22"
-      >
+      <title>
         success
       </title>
       <path
@@ -198,9 +186,7 @@ exports[`<InlineNotification /> FullWidthSuccess story renders snapshot 1`] = `
     width="1.5rem"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="11"
-    >
+    <title>
       success
     </title>
     <path
@@ -232,9 +218,7 @@ exports[`<InlineNotification /> FullWidthVariants story renders snapshot 1`] = `
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="13"
-      >
+      <title>
         info
       </title>
       <path
@@ -260,9 +244,7 @@ exports[`<InlineNotification /> FullWidthVariants story renders snapshot 1`] = `
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="14"
-      >
+      <title>
         success
       </title>
       <path
@@ -288,9 +270,7 @@ exports[`<InlineNotification /> FullWidthVariants story renders snapshot 1`] = `
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="15"
-      >
+      <title>
         alert
       </title>
       <path
@@ -316,9 +296,7 @@ exports[`<InlineNotification /> FullWidthVariants story renders snapshot 1`] = `
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="16"
-      >
+      <title>
         yield
       </title>
       <circle
@@ -350,9 +328,7 @@ exports[`<InlineNotification /> FullWidthVariants story renders snapshot 1`] = `
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="17"
-      >
+      <title>
         success
       </title>
       <path
@@ -382,9 +358,7 @@ exports[`<InlineNotification /> LongText story renders snapshot 1`] = `
     width="1.5rem"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="2"
-    >
+    <title>
       success
     </title>
     <path
@@ -416,9 +390,7 @@ exports[`<InlineNotification /> StrongVariants story renders snapshot 1`] = `
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="7"
-      >
+      <title>
         info
       </title>
       <path
@@ -444,9 +416,7 @@ exports[`<InlineNotification /> StrongVariants story renders snapshot 1`] = `
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="8"
-      >
+      <title>
         success
       </title>
       <path
@@ -472,9 +442,7 @@ exports[`<InlineNotification /> StrongVariants story renders snapshot 1`] = `
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="9"
-      >
+      <title>
         alert
       </title>
       <path
@@ -500,9 +468,7 @@ exports[`<InlineNotification /> StrongVariants story renders snapshot 1`] = `
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="10"
-      >
+      <title>
         yield
       </title>
       <circle
@@ -541,9 +507,7 @@ exports[`<InlineNotification /> SubtleVariants story renders snapshot 1`] = `
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="3"
-      >
+      <title>
         info
       </title>
       <path
@@ -569,9 +533,7 @@ exports[`<InlineNotification /> SubtleVariants story renders snapshot 1`] = `
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="4"
-      >
+      <title>
         success
       </title>
       <path
@@ -597,9 +559,7 @@ exports[`<InlineNotification /> SubtleVariants story renders snapshot 1`] = `
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="5"
-      >
+      <title>
         alert
       </title>
       <path
@@ -625,9 +585,7 @@ exports[`<InlineNotification /> SubtleVariants story renders snapshot 1`] = `
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="6"
-      >
+      <title>
         yield
       </title>
       <circle
@@ -663,9 +621,7 @@ exports[`<InlineNotification /> Success story renders snapshot 1`] = `
     width="1.5rem"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="1"
-    >
+    <title>
       success
     </title>
     <path

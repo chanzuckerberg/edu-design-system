@@ -2734,9 +2734,7 @@ exports[`<Icon /> InText story renders snapshot 1`] = `
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="6"
-    >
+    <title>
       icon with 1em line height
     </title>
     <path
@@ -2754,9 +2752,7 @@ exports[`<Icon /> InText story renders snapshot 1`] = `
     width="2em"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="7"
-    >
+    <title>
       icon with 2em line height
     </title>
     <path

@@ -1,7 +1,6 @@
 import clsx from 'clsx';
 import type { ReactNode } from 'react';
 import React from 'react';
-import { useUID } from 'react-uid';
 import styles from './PrimaryNav.module.css';
 import PrimaryNavItem from '../PrimaryNavItem';
 
@@ -36,16 +35,13 @@ export const PrimaryNav = ({
   'aria-label': ariaLabel,
   ...other
 }: Props) => {
-  const generatedId = useUID();
-  const idVar = id || generatedId;
-
   const componentClassName = clsx(styles['primary-nav'], className);
 
   return (
     <nav
       aria-label={ariaLabel}
       className={componentClassName}
-      id={idVar}
+      id={id}
       role="navigation"
       title="Primary navigation"
       {...other}

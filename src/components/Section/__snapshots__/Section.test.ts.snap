@@ -245,9 +245,7 @@ exports[`<Section /> WithTitleAfter story renders snapshot 1`] = `
                 width="1.375rem"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <title
-                  id="1"
-                >
+                <title>
                   help
                 </title>
                 <path
@@ -294,9 +292,7 @@ exports[`<Section /> WithTitleBefore story renders snapshot 1`] = `
             width="1.375rem"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <title
-              id="2"
-            >
+            <title>
               help
             </title>
             <path

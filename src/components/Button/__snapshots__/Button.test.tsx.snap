@@ -87,9 +87,7 @@ exports[`<Button /> IconButtonIconOnly story renders snapshot 1`] = `
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="10"
-    >
+    <title>
       go back
     </title>
     <path
@@ -112,9 +110,7 @@ exports[`<Button /> IconButtonIconOnlySmall story renders snapshot 1`] = `
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="13"
-    >
+    <title>
       go back
     </title>
     <path
@@ -338,9 +334,7 @@ exports[`<Button /> LinkRightIcon story renders snapshot 1`] = `
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="14"
-    >
+    <title>
       opens in a new tab
     </title>
     <path
@@ -368,9 +362,7 @@ exports[`<Button /> Loading story renders snapshot 1`] = `
     width="1.5em"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="16"
-    >
+    <title>
       loading
     </title>
     <path

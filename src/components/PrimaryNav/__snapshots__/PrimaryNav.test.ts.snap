@@ -6,7 +6,6 @@ exports[`<PrimaryNav /> Default story renders snapshot 1`] = `
 >
   <nav
     class="primary-nav"
-    id="1"
     role="navigation"
     title="Primary navigation"
   >

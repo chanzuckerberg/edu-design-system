@@ -57,6 +57,41 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
         <input
           class="checkbox__input"
           data-bootstrap-override="checkbox"
+          id="2"
+          type="checkbox"
+        />
+        <svg
+          aria-hidden="true"
+          class="icon checkbox__icon"
+          fill="currentColor"
+          height="1.5rem"
+          style="--icon-size: 1.5rem;"
+          viewBox="0 0 24 24"
+          width="1.5rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
+          />
+        </svg>
+      </span>
+      <label
+        class="label label--lg"
+        data-bootstrap-override="label"
+        for="2"
+      >
+        Checkbox label 2
+      </label>
+    </div>
+    <div
+      class="checkbox"
+    >
+      <span
+        class="input__wrapper"
+      >
+        <input
+          class="checkbox__input"
+          data-bootstrap-override="checkbox"
           id="3"
           type="checkbox"
         />
@@ -80,7 +115,42 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
         data-bootstrap-override="label"
         for="3"
       >
-        Checkbox label 2
+        Checkbox label 3
+      </label>
+    </div>
+    <div
+      class="checkbox"
+    >
+      <span
+        class="input__wrapper"
+      >
+        <input
+          class="checkbox__input"
+          data-bootstrap-override="checkbox"
+          id="4"
+          type="checkbox"
+        />
+        <svg
+          aria-hidden="true"
+          class="icon checkbox__icon"
+          fill="currentColor"
+          height="1.5rem"
+          style="--icon-size: 1.5rem;"
+          viewBox="0 0 24 24"
+          width="1.5rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
+          />
+        </svg>
+      </span>
+      <label
+        class="label label--lg"
+        data-bootstrap-override="label"
+        for="4"
+      >
+        Checkbox label 4
       </label>
     </div>
     <div
@@ -114,76 +184,6 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
         class="label label--lg"
         data-bootstrap-override="label"
         for="5"
-      >
-        Checkbox label 3
-      </label>
-    </div>
-    <div
-      class="checkbox"
-    >
-      <span
-        class="input__wrapper"
-      >
-        <input
-          class="checkbox__input"
-          data-bootstrap-override="checkbox"
-          id="7"
-          type="checkbox"
-        />
-        <svg
-          aria-hidden="true"
-          class="icon checkbox__icon"
-          fill="currentColor"
-          height="1.5rem"
-          style="--icon-size: 1.5rem;"
-          viewBox="0 0 24 24"
-          width="1.5rem"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-          />
-        </svg>
-      </span>
-      <label
-        class="label label--lg"
-        data-bootstrap-override="label"
-        for="7"
-      >
-        Checkbox label 4
-      </label>
-    </div>
-    <div
-      class="checkbox"
-    >
-      <span
-        class="input__wrapper"
-      >
-        <input
-          class="checkbox__input"
-          data-bootstrap-override="checkbox"
-          id="9"
-          type="checkbox"
-        />
-        <svg
-          aria-hidden="true"
-          class="icon checkbox__icon"
-          fill="currentColor"
-          height="1.5rem"
-          style="--icon-size: 1.5rem;"
-          viewBox="0 0 24 24"
-          width="1.5rem"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-          />
-        </svg>
-      </span>
-      <label
-        class="label label--lg"
-        data-bootstrap-override="label"
-        for="9"
       >
         Checkbox label 5
       </label>
