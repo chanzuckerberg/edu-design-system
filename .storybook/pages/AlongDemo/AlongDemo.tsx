@@ -1,6 +1,6 @@
+import { useId } from '@reach/auto-id';
 import clsx from 'clsx';
 import React, { useState } from 'react';
-import { useUID } from 'react-uid';
 
 import styles from './AlongDemo.module.css';
 import globalStyles from './GlobalStyles.module.css';
@@ -208,8 +208,8 @@ const StudentTab = ({
 );
 
 const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
-  const responseTextareaId = useUID();
-  const notesTextareaId = useUID();
+  const responseTextareaId = useId();
+  const notesTextareaId = useId();
 
   const ReplyIcon = (
     <svg className="h-4 min-w-[1rem]" viewBox="0 0 16 16">

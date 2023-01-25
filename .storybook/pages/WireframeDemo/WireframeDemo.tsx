@@ -1,6 +1,6 @@
+import { useId } from '@reach/auto-id';
 import clsx from 'clsx';
 import React, { useState } from 'react';
-import { useUID } from 'react-uid';
 
 import globalStyles from './GlobalStyles.module.css';
 import styles from './WireframeDemo.module.css';
@@ -163,7 +163,7 @@ const StudentTab = ({
 );
 
 const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
-  const responseTextareaId = useUID();
+  const responseTextareaId = useId();
 
   const studentGroupOptions = [
     {

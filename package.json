@@ -78,6 +78,7 @@
   "dependencies": {
     "@headlessui/react": "1.7.5",
     "@popperjs/core": "^2.11.6",
+    "@reach/auto-id": "^0.18.0",
     "@tippyjs/react": "^4.2.6",
     "clsx": "^1.2.1",
     "lodash.debounce": "^4.0.8",
@@ -87,7 +88,6 @@
     "react-loader-spinner": "^5.3.4",
     "react-popper": "^2.3.0",
     "react-portal": "^4.2.2",
-    "react-uid": "^2.3.2",
     "svg4everybody": "^2.1.9"
   },
   "entry": "lib/index.js",

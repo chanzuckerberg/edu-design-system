@@ -1,7 +1,7 @@
+import { useId } from '@reach/auto-id';
 import clsx from 'clsx';
 import type { ReactElement, ReactNode } from 'react';
 import React, { useRef, useEffect, useState } from 'react';
-import { useUID } from 'react-uid';
 import styles from './FiltersDrawer.module.css';
 import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';
@@ -155,7 +155,7 @@ export const FiltersDrawer = ({
     footerButtonGroupClassName,
   );
 
-  const generatedId = useUID();
+  const generatedId = useId();
 
   return (
     <div>

@@ -1,7 +1,7 @@
+import { useId } from '@reach/auto-id';
 import clsx from 'clsx';
 import type { ChangeEventHandler, ReactNode } from 'react';
 import React, { forwardRef } from 'react';
-import { useUID } from 'react-uid';
 import styles from './TextField.module.css';
 import FieldNote from '../FieldNote';
 import InputField from '../InputField';
@@ -163,12 +163,12 @@ export const TextField = forwardRef<HTMLInputElement, Props>(
       disabled && styles['text-field__overline--disabled'],
     );
 
-    const generatedId = useUID();
-    const idVar = id || generatedId;
+    const generatedIdVar = useId(id);
+    const idVar = String(generatedIdVar);
 
-    const generatedAriaDescribedById = useUID();
+    const generatedAriaDescribedById = useId(ariaDescribedBy);
     const ariaDescribedByVar = fieldNote
-      ? ariaDescribedBy || generatedAriaDescribedById
+      ? ariaDescribedBy || String(generatedAriaDescribedById)
       : undefined;
 
     return (
