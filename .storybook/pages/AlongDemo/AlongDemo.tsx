@@ -1,4 +1,3 @@
-import { useId } from '@reach/auto-id';
 import clsx from 'clsx';
 import React, { useState } from 'react';
 
@@ -18,6 +17,7 @@ import {
   Text,
   Tooltip,
 } from '../../../src';
+import { useId } from '../../../src/util/useId';
 
 import AlongFooterPaper from '../../static/along-footer-paper.svg';
 import AlongLogoBulb from '../../static/along-logo-bulb.svg';

@@ -1,8 +1,8 @@
-import { useId } from '@reach/auto-id';
 import clsx from 'clsx';
 import type { ChangeEventHandler, ReactNode } from 'react';
 import React, { forwardRef } from 'react';
 import styles from './TextField.module.css';
+import { useId } from '../../util/useId';
 import FieldNote from '../FieldNote';
 import InputField from '../InputField';
 import Label from '../Label';

@@ -1,4 +1,3 @@
-import { useId } from '@reach/auto-id';
 import clsx from 'clsx';
 import React, { useState } from 'react';
 
@@ -18,6 +17,7 @@ import {
   Text,
   Tooltip,
 } from '../../../src';
+import { useId } from '../../../src/util/useId';
 
 import PlaceholderImage from '../../static/placeholder-image.svg';
 import PlaceholderVideo from '../../static/placeholder-video.svg';

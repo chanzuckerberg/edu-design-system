@@ -1,4 +1,3 @@
-import { useId } from '@reach/auto-id';
 import clsx from 'clsx';
 import type { KeyboardEventHandler, ReactNode } from 'react';
 import React, { useRef, useState, useEffect, useCallback } from 'react';
@@ -12,6 +11,7 @@ import {
   ENTER_KEYCODE,
   SPACEBAR_KEYCODE,
 } from '../../util/keycodes';
+import { useId } from '../../util/useId';
 import Button from '../Button';
 import Icon from '../Icon';
 import NumberIcon from '../NumberIcon';

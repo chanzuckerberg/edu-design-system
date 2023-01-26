@@ -1,7 +1,7 @@
-import { useId } from '@reach/auto-id';
 import clsx from 'clsx';
 import React from 'react';
 import styles from './Checkbox.module.css';
+import { useId } from '../../util/useId';
 import type { CheckboxInputProps } from '../CheckboxInput';
 import CheckboxInput from '../CheckboxInput';
 import type { CheckboxLabelProps } from '../CheckboxLabel';

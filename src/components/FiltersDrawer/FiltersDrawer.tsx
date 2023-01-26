@@ -1,8 +1,8 @@
-import { useId } from '@reach/auto-id';
 import clsx from 'clsx';
 import type { ReactElement, ReactNode } from 'react';
 import React, { useRef, useEffect, useState } from 'react';
 import styles from './FiltersDrawer.module.css';
+import { useId } from '../../util/useId';
 import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';
 import Drawer from '../Drawer';

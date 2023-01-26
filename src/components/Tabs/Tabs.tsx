@@ -1,4 +1,3 @@
-import { useId } from '@reach/auto-id';
 import clsx from 'clsx';
 import debounce from 'lodash.debounce';
 import React, {
@@ -18,6 +17,7 @@ import {
   R_ARROW_KEYCODE,
   D_ARROW_KEYCODE,
 } from '../../util/keycodes';
+import { useId } from '../../util/useId';
 import Tab from '../Tab';
 
 export interface Props {
