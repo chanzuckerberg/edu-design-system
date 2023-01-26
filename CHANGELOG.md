@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.1.0-alpha.0](https://github.com/chanzuckerberg/edu-design-system/compare/v8.0.0...v8.1.0-alpha.0) (2023-01-26)
+
+
+### Features
+
+* support Remix SSR ([9549383](https://github.com/chanzuckerberg/edu-design-system/commit/9549383c3e6052ecf3b8532e3caa874197ded3ea))
+* **useid:** use react.useid if exists, fallback to dep ([471c6b7](https://github.com/chanzuckerberg/edu-design-system/commit/471c6b7d46e9f01ea2e55f93fc0ba061858df562))
+
+
+### Bug Fixes
+
+* specify that the EDS package does not have side effects ([#1473](https://github.com/chanzuckerberg/edu-design-system/issues/1473)) ([c4a0cfb](https://github.com/chanzuckerberg/edu-design-system/commit/c4a0cfb6438f1cba234f0aa275a871cfb0694fa7))
+
 ## [8.0.0](https://github.com/chanzuckerberg/edu-design-system/compare/v7.2.1...v8.0.0) (2023-01-23)
 
 
