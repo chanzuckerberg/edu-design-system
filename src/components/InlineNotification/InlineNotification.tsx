@@ -29,7 +29,7 @@ const variantToIconAssetsMap: {
   },
 };
 
-type Variant = typeof VARIANTS[number];
+type Variant = (typeof VARIANTS)[number];
 
 type Props = {
   /**

@@ -32,7 +32,7 @@ export interface Props {
   /**
    * Notification variant for the card.
    */
-  variant: typeof VARIANTS[number];
+  variant: (typeof VARIANTS)[number];
 }
 
 /**

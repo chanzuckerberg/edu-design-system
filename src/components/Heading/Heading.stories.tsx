@@ -110,8 +110,8 @@ export const Variants: StoryObj<Args> = {
 export const Sizes: StoryObj<Args> = {
   render: () => {
     const sizes = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'] as const;
-    const combinations = sizes.map((as: typeof sizes[number]) => {
-      const headings = sizes.map((size: typeof sizes[number]) => (
+    const combinations = sizes.map((as: (typeof sizes)[number]) => {
+      const headings = sizes.map((size: (typeof sizes)[number]) => (
         <Heading as={as} key={`as${as}size${size}`} size={size}>
           as: {as} size: {size}
         </Heading>

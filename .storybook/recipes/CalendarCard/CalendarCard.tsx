@@ -8,7 +8,7 @@ import type { Variant as TagVariant } from '../../../src/components/Tag/Tag';
 
 export const VARIANTS = ['brand', 'revise', 'success'] as const;
 
-export type Variant = typeof VARIANTS[number];
+export type Variant = (typeof VARIANTS)[number];
 
 export interface Props {
   /**

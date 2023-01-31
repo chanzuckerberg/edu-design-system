@@ -4,7 +4,7 @@ import React from 'react';
 import styles from './ClickableStyle.module.css';
 
 export const VARIANTS = ['primary', 'secondary', 'icon', 'link'] as const;
-export type Variant = typeof VARIANTS[number];
+export type Variant = (typeof VARIANTS)[number];
 
 export const STATUSES = [
   'brand',
@@ -13,10 +13,10 @@ export const STATUSES = [
   'warning',
   'error',
 ] as const;
-export type Status = typeof STATUSES[number];
+export type Status = (typeof STATUSES)[number];
 
 export const SIZES = ['sm', 'md', 'lg'] as const;
-export type Size = typeof SIZES[number];
+export type Size = (typeof SIZES)[number];
 
 // Define Discriminating unions for the valid statuses based on variant
 type IconStatus = {
