@@ -606,32 +606,16 @@ EDS adheres to the following API naming conventions:
 
 ID attributes used for accessibility (e.g. associating `<label>` and `<input>` elements) should be unique and stable.
 
-We currently use [react-uid](https://www.npmjs.com/package/react-uid) hooks for ID generation. To ensure stable results, they cannot be invoked within conditionals or callbacks.
+We currently use [@reach/auto-id](https://www.npmjs.com/package/@reach/auto-id) `useId` hook for ID generation. To ensure stable results, they cannot be invoked within conditionals or callbacks.
 
-- `useUID()` is the most common usage.
-
-```tsx
-const generatedId = useUID();
-```
-
-- `useUIDSeed()` generates a stable seed generator for use in iterators.
+- `useId()` is the most common usage.
 
 ```tsx
-const getUID = useUIDSeed();
-// you should either pass an object to getUID:
-items.forEach((item) => {
-  const generatedId = getUID(item);
-});
+const generatedId = useId();
 
-// or pass a constructed string:
-items.forEach((item, index) => {
-  const generatedId = getUID(`item-${index}-aria-labelledby`);
-});
-
-// interpolating an object into a string will NOT work:
-// items.forEach((item) => {
-//   const generatedId = getUID(`${item}-id`);
-// });
+// ensuring the id is of type string
+const generatedId = useId(props.id);
+const checkboxId = String(generatedId);
 ```
 
 ## Tools <a name="accessibility-tools"></a>

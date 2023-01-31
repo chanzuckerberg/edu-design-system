@@ -14,7 +14,7 @@ exports[`<Checkbox /> Checked story renders snapshot 1`] = `
         checked=""
         class="checkbox__input"
         data-bootstrap-override="checkbox"
-        id="2"
+        id="3"
         type="checkbox"
       />
       <svg
@@ -35,7 +35,7 @@ exports[`<Checkbox /> Checked story renders snapshot 1`] = `
     <label
       class="label label--lg"
       data-bootstrap-override="label"
-      for="2"
+      for="3"
     >
       Checkbox
     </label>
@@ -105,7 +105,7 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
                 class="checkbox__input"
                 data-bootstrap-override="checkbox"
                 disabled=""
-                id="6"
+                id="7"
                 type="checkbox"
               />
               <svg
@@ -125,71 +125,30 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
             </span>
             <label
               class="label label--lg label--disabled"
-              data-bootstrap-override="label"
-              for="6"
-            >
-              Disabled
-            </label>
-          </div>
-        </td>
-        <td>
-          <div
-            class="checkbox"
-          >
-            <span
-              class="input__wrapper"
-            >
-              <input
-                class="checkbox__input"
-                data-bootstrap-override="checkbox"
-                id="7"
-                readonly=""
-                type="checkbox"
-              />
-              <svg
-                aria-hidden="true"
-                class="icon checkbox__icon"
-                fill="currentColor"
-                height="1.5rem"
-                style="--icon-size: 1.5rem;"
-                viewBox="0 0 24 24"
-                width="1.5rem"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                />
-              </svg>
-            </span>
-            <label
-              class="label label--lg"
               data-bootstrap-override="label"
               for="7"
             >
-              Default
+              Disabled
             </label>
           </div>
         </td>
-      </tr>
-      <tr>
         <td>
           <div
             class="checkbox"
           >
             <span
-              class="input__wrapper input__wrapper--disabled"
+              class="input__wrapper"
             >
               <input
-                checked=""
                 class="checkbox__input"
                 data-bootstrap-override="checkbox"
-                disabled=""
                 id="8"
+                readonly=""
                 type="checkbox"
               />
               <svg
                 aria-hidden="true"
-                class="icon checkbox__icon checkbox__icon--disabled"
+                class="icon checkbox__icon"
                 fill="currentColor"
                 height="1.5rem"
                 style="--icon-size: 1.5rem;"
@@ -198,15 +157,56 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M10.6 16.2L17.65 9.15L16.25 7.75L10.6 13.4L7.75 10.55L6.35 11.95L10.6 16.2ZM3 21V3H21V21H3Z"
+                  d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
                 />
               </svg>
             </span>
             <label
-              class="label label--lg label--disabled"
+              class="label label--lg"
               data-bootstrap-override="label"
               for="8"
             >
+              Default
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div
+            class="checkbox"
+          >
+            <span
+              class="input__wrapper input__wrapper--disabled"
+            >
+              <input
+                checked=""
+                class="checkbox__input"
+                data-bootstrap-override="checkbox"
+                disabled=""
+                id="9"
+                type="checkbox"
+              />
+              <svg
+                aria-hidden="true"
+                class="icon checkbox__icon checkbox__icon--disabled"
+                fill="currentColor"
+                height="1.5rem"
+                style="--icon-size: 1.5rem;"
+                viewBox="0 0 24 24"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10.6 16.2L17.65 9.15L16.25 7.75L10.6 13.4L7.75 10.55L6.35 11.95L10.6 16.2ZM3 21V3H21V21H3Z"
+                />
+              </svg>
+            </span>
+            <label
+              class="label label--lg label--disabled"
+              data-bootstrap-override="label"
+              for="9"
+            >
               Disabled
             </label>
           </div>
@@ -222,7 +222,7 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
                 checked=""
                 class="checkbox__input"
                 data-bootstrap-override="checkbox"
-                id="9"
+                id="10"
                 readonly=""
                 type="checkbox"
               />
@@ -244,7 +244,7 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
             <label
               class="label label--lg"
               data-bootstrap-override="label"
-              for="9"
+              for="10"
             >
               Default
             </label>
@@ -265,7 +265,7 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
                 class="checkbox__input"
                 data-bootstrap-override="checkbox"
                 disabled=""
-                id="10"
+                id="11"
                 type="checkbox"
               />
               <svg
@@ -286,7 +286,7 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
             <label
               class="label label--lg label--disabled"
               data-bootstrap-override="label"
-              for="10"
+              for="11"
             >
               Disabled
             </label>
@@ -304,7 +304,7 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
                 checked=""
                 class="checkbox__input"
                 data-bootstrap-override="checkbox"
-                id="11"
+                id="12"
                 readonly=""
                 type="checkbox"
               />
@@ -326,7 +326,7 @@ exports[`<Checkbox /> Disabled story renders snapshot 1`] = `
             <label
               class="label label--lg"
               data-bootstrap-override="label"
-              for="11"
+              for="12"
             >
               Default
             </label>
@@ -349,7 +349,7 @@ exports[`<Checkbox /> Disabled story renders snapshot 2`] = `
       class="checkbox__input"
       data-bootstrap-override="checkbox"
       disabled=""
-      id="22"
+      id="23"
       type="checkbox"
     />
     <svg
@@ -370,7 +370,7 @@ exports[`<Checkbox /> Disabled story renders snapshot 2`] = `
   <label
     class="label label--lg label--disabled"
     data-bootstrap-override="label"
-    for="22"
+    for="23"
   >
     Disabled
   </label>
@@ -392,7 +392,7 @@ exports[`<Checkbox /> Indeterminate story renders snapshot 1`] = `
         checked=""
         class="checkbox__input"
         data-bootstrap-override="checkbox"
-        id="5"
+        id="6"
         readonly=""
         type="checkbox"
       />
@@ -414,7 +414,7 @@ exports[`<Checkbox /> Indeterminate story renders snapshot 1`] = `
     <label
       class="label label--lg"
       data-bootstrap-override="label"
-      for="5"
+      for="6"
     >
       Checkbox
     </label>
@@ -429,42 +429,6 @@ exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
   <div
     class="longlabels--grid"
   >
-    <div
-      class="checkbox"
-    >
-      <span
-        class="input__wrapper"
-      >
-        <input
-          class="checkbox__input"
-          data-bootstrap-override="checkbox"
-          id="18"
-          readonly=""
-          type="checkbox"
-        />
-        <svg
-          aria-hidden="true"
-          class="icon checkbox__icon"
-          fill="currentColor"
-          height="1.5rem"
-          style="--icon-size: 1.5rem;"
-          viewBox="0 0 24 24"
-          width="1.5rem"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-          />
-        </svg>
-      </span>
-      <label
-        class="label label--lg"
-        data-bootstrap-override="label"
-        for="18"
-      >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit
-      </label>
-    </div>
     <div
       class="checkbox"
     >
@@ -494,7 +458,7 @@ exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
         </svg>
       </span>
       <label
-        class="label label--md checkbox__label--md"
+        class="label label--lg"
         data-bootstrap-override="label"
         for="19"
       >
@@ -505,18 +469,18 @@ exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
       class="checkbox"
     >
       <span
-        class="input__wrapper input__wrapper--disabled"
+        class="input__wrapper"
       >
         <input
           class="checkbox__input"
           data-bootstrap-override="checkbox"
-          disabled=""
           id="20"
+          readonly=""
           type="checkbox"
         />
         <svg
           aria-hidden="true"
-          class="icon checkbox__icon checkbox__icon--disabled"
+          class="icon checkbox__icon"
           fill="currentColor"
           height="1.5rem"
           style="--icon-size: 1.5rem;"
@@ -530,7 +494,7 @@ exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
         </svg>
       </span>
       <label
-        class="label label--lg label--disabled"
+        class="label label--md checkbox__label--md"
         data-bootstrap-override="label"
         for="20"
       >
@@ -566,9 +530,45 @@ exports[`<Checkbox /> LongLabels story renders snapshot 1`] = `
         </svg>
       </span>
       <label
-        class="label label--md label--disabled checkbox__label--md"
+        class="label label--lg label--disabled"
         data-bootstrap-override="label"
         for="21"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+      </label>
+    </div>
+    <div
+      class="checkbox"
+    >
+      <span
+        class="input__wrapper input__wrapper--disabled"
+      >
+        <input
+          class="checkbox__input"
+          data-bootstrap-override="checkbox"
+          disabled=""
+          id="22"
+          type="checkbox"
+        />
+        <svg
+          aria-hidden="true"
+          class="icon checkbox__icon checkbox__icon--disabled"
+          fill="currentColor"
+          height="1.5rem"
+          style="--icon-size: 1.5rem;"
+          viewBox="0 0 24 24"
+          width="1.5rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
+          />
+        </svg>
+      </span>
+      <label
+        class="label label--md label--disabled checkbox__label--md"
+        data-bootstrap-override="label"
+        for="22"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit
       </label>
@@ -590,7 +590,7 @@ exports[`<Checkbox /> Medium story renders snapshot 1`] = `
       <input
         class="checkbox__input"
         data-bootstrap-override="checkbox"
-        id="3"
+        id="4"
         type="checkbox"
       />
       <svg
@@ -611,7 +611,7 @@ exports[`<Checkbox /> Medium story renders snapshot 1`] = `
     <label
       class="label label--md checkbox__label--md"
       data-bootstrap-override="label"
-      for="3"
+      for="4"
     >
       Checkbox
     </label>
@@ -633,7 +633,7 @@ exports[`<Checkbox /> MediumChecked story renders snapshot 1`] = `
         checked=""
         class="checkbox__input"
         data-bootstrap-override="checkbox"
-        id="4"
+        id="5"
         type="checkbox"
       />
       <svg
@@ -654,7 +654,7 @@ exports[`<Checkbox /> MediumChecked story renders snapshot 1`] = `
     <label
       class="label label--md checkbox__label--md"
       data-bootstrap-override="label"
-      for="4"
+      for="5"
     >
       Checkbox
     </label>
@@ -718,7 +718,7 @@ exports[`<Checkbox /> WithoutVisibleLabel story renders snapshot 1`] = `
         aria-label="a checkbox has no name"
         class="checkbox__input"
         data-bootstrap-override="checkbox"
-        id="12"
+        id="13"
         readonly=""
         type="checkbox"
       />
@@ -749,7 +749,7 @@ exports[`<Checkbox /> WithoutVisibleLabel story renders snapshot 1`] = `
         checked=""
         class="checkbox__input"
         data-bootstrap-override="checkbox"
-        id="13"
+        id="14"
         readonly=""
         type="checkbox"
       />
@@ -781,7 +781,7 @@ exports[`<Checkbox /> WithoutVisibleLabel story renders snapshot 1`] = `
         checked=""
         class="checkbox__input"
         data-bootstrap-override="checkbox"
-        id="14"
+        id="15"
         readonly=""
         type="checkbox"
       />
@@ -812,7 +812,7 @@ exports[`<Checkbox /> WithoutVisibleLabel story renders snapshot 1`] = `
         class="checkbox__input"
         data-bootstrap-override="checkbox"
         disabled=""
-        id="15"
+        id="16"
         type="checkbox"
       />
       <svg
@@ -843,7 +843,7 @@ exports[`<Checkbox /> WithoutVisibleLabel story renders snapshot 1`] = `
         class="checkbox__input"
         data-bootstrap-override="checkbox"
         disabled=""
-        id="16"
+        id="17"
         type="checkbox"
       />
       <svg
@@ -875,7 +875,7 @@ exports[`<Checkbox /> WithoutVisibleLabel story renders snapshot 1`] = `
         class="checkbox__input"
         data-bootstrap-override="checkbox"
         disabled=""
-        id="17"
+        id="18"
         type="checkbox"
       />
       <svg

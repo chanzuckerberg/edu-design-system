@@ -234,125 +234,6 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
                 <input
                   class="checkbox__input"
                   data-bootstrap-override="checkbox"
-                  id="10"
-                  type="checkbox"
-                />
-                <svg
-                  aria-hidden="true"
-                  class="icon checkbox__icon"
-                  fill="currentColor"
-                  height="1.5rem"
-                  style="--icon-size: 1.5rem;"
-                  viewBox="0 0 24 24"
-                  width="1.5rem"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                  />
-                </svg>
-              </span>
-              <label
-                class="label label--lg"
-                data-bootstrap-override="label"
-                for="10"
-              >
-                Filters long label 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              </label>
-            </div>
-            <div
-              class="checkbox"
-            >
-              <span
-                class="input__wrapper"
-              >
-                <input
-                  class="checkbox__input"
-                  data-bootstrap-override="checkbox"
-                  id="11"
-                  type="checkbox"
-                />
-                <svg
-                  aria-hidden="true"
-                  class="icon checkbox__icon"
-                  fill="currentColor"
-                  height="1.5rem"
-                  style="--icon-size: 1.5rem;"
-                  viewBox="0 0 24 24"
-                  width="1.5rem"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                  />
-                </svg>
-              </span>
-              <label
-                class="label label--lg"
-                data-bootstrap-override="label"
-                for="11"
-              >
-                Filters label 2
-              </label>
-            </div>
-            <div
-              class="checkbox"
-            >
-              <span
-                class="input__wrapper"
-              >
-                <input
-                  class="checkbox__input"
-                  data-bootstrap-override="checkbox"
-                  id="12"
-                  type="checkbox"
-                />
-                <svg
-                  aria-hidden="true"
-                  class="icon checkbox__icon"
-                  fill="currentColor"
-                  height="1.5rem"
-                  style="--icon-size: 1.5rem;"
-                  viewBox="0 0 24 24"
-                  width="1.5rem"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                  />
-                </svg>
-              </span>
-              <label
-                class="label label--lg"
-                data-bootstrap-override="label"
-                for="12"
-              >
-                Filters label 3
-              </label>
-            </div>
-          </div>
-        </fieldset>
-        <fieldset
-          class="fieldset filters-fieldset filters-popover__checkbox-field"
-        >
-          <legend
-            class="fieldset-legend filters-fieldset__legend"
-          >
-            Filters Segment 2
-             
-          </legend>
-          <div
-            class="fieldset-items filters-fieldset__checkboxes"
-          >
-            <div
-              class="checkbox"
-            >
-              <span
-                class="input__wrapper"
-              >
-                <input
-                  class="checkbox__input"
-                  data-bootstrap-override="checkbox"
                   id="13"
                   type="checkbox"
                 />
@@ -376,7 +257,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
                 data-bootstrap-override="label"
                 for="13"
               >
-                Filters label 1
+                Filters long label 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
               </label>
             </div>
             <div
@@ -411,7 +292,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
                 data-bootstrap-override="label"
                 for="14"
               >
-                Filters long label 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                Filters label 2
               </label>
             </div>
             <div
@@ -457,7 +338,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
           <legend
             class="fieldset-legend filters-fieldset__legend"
           >
-            Filters Segment 3
+            Filters Segment 2
              
           </legend>
           <div
@@ -530,7 +411,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
                 data-bootstrap-override="label"
                 for="17"
               >
-                Filters label 2
+                Filters long label 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
               </label>
             </div>
             <div
@@ -565,7 +446,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
                 data-bootstrap-override="label"
                 for="18"
               >
-                Filters long label 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                Filters label 3
               </label>
             </div>
           </div>
@@ -576,7 +457,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
           <legend
             class="fieldset-legend filters-fieldset__legend"
           >
-            Filters Segment 4
+            Filters Segment 3
              
           </legend>
           <div
@@ -684,9 +565,23 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
                 data-bootstrap-override="label"
                 for="21"
               >
-                Filters label 3
+                Filters long label 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
               </label>
             </div>
+          </div>
+        </fieldset>
+        <fieldset
+          class="fieldset filters-fieldset filters-popover__checkbox-field"
+        >
+          <legend
+            class="fieldset-legend filters-fieldset__legend"
+          >
+            Filters Segment 4
+             
+          </legend>
+          <div
+            class="fieldset-items filters-fieldset__checkboxes"
+          >
             <div
               class="checkbox"
             >
@@ -719,7 +614,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
                 data-bootstrap-override="label"
                 for="22"
               >
-                Filters label 4
+                Filters label 1
               </label>
             </div>
             <div
@@ -754,7 +649,7 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
                 data-bootstrap-override="label"
                 for="23"
               >
-                Filters label 5
+                Filters label 2
               </label>
             </div>
             <div
@@ -788,6 +683,111 @@ exports[`<Filters /> OverflowInteractive story renders snapshot 1`] = `
                 class="label label--lg"
                 data-bootstrap-override="label"
                 for="24"
+              >
+                Filters label 3
+              </label>
+            </div>
+            <div
+              class="checkbox"
+            >
+              <span
+                class="input__wrapper"
+              >
+                <input
+                  class="checkbox__input"
+                  data-bootstrap-override="checkbox"
+                  id="25"
+                  type="checkbox"
+                />
+                <svg
+                  aria-hidden="true"
+                  class="icon checkbox__icon"
+                  fill="currentColor"
+                  height="1.5rem"
+                  style="--icon-size: 1.5rem;"
+                  viewBox="0 0 24 24"
+                  width="1.5rem"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
+                  />
+                </svg>
+              </span>
+              <label
+                class="label label--lg"
+                data-bootstrap-override="label"
+                for="25"
+              >
+                Filters label 4
+              </label>
+            </div>
+            <div
+              class="checkbox"
+            >
+              <span
+                class="input__wrapper"
+              >
+                <input
+                  class="checkbox__input"
+                  data-bootstrap-override="checkbox"
+                  id="26"
+                  type="checkbox"
+                />
+                <svg
+                  aria-hidden="true"
+                  class="icon checkbox__icon"
+                  fill="currentColor"
+                  height="1.5rem"
+                  style="--icon-size: 1.5rem;"
+                  viewBox="0 0 24 24"
+                  width="1.5rem"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
+                  />
+                </svg>
+              </span>
+              <label
+                class="label label--lg"
+                data-bootstrap-override="label"
+                for="26"
+              >
+                Filters label 5
+              </label>
+            </div>
+            <div
+              class="checkbox"
+            >
+              <span
+                class="input__wrapper"
+              >
+                <input
+                  class="checkbox__input"
+                  data-bootstrap-override="checkbox"
+                  id="27"
+                  type="checkbox"
+                />
+                <svg
+                  aria-hidden="true"
+                  class="icon checkbox__icon"
+                  fill="currentColor"
+                  height="1.5rem"
+                  style="--icon-size: 1.5rem;"
+                  viewBox="0 0 24 24"
+                  width="1.5rem"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
+                  />
+                </svg>
+              </span>
+              <label
+                class="label label--lg"
+                data-bootstrap-override="label"
+                for="27"
               >
                 Filters label 6
               </label>
@@ -854,6 +854,185 @@ exports[`<Filters /> WithOnApplyAndCustomButtonGroup story renders snapshot 1`] 
     data-popper-placement="bottom-start"
     data-popper-reference-hidden="true"
     id="headlessui-popover-panel-13"
+    style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 10px);"
+    tabindex="-1"
+  >
+    <div
+      class="popover-container filters-popover"
+    >
+      <div>
+        <fieldset
+          class="fieldset filters-fieldset"
+        >
+          <legend
+            class="fieldset-legend filters-fieldset__legend"
+          >
+            Filters Segment 1
+             
+          </legend>
+          <div
+            class="fieldset-items filters-fieldset__checkboxes"
+          >
+            <div
+              class="checkbox"
+            >
+              <span
+                class="input__wrapper"
+              >
+                <input
+                  class="checkbox__input"
+                  data-bootstrap-override="checkbox"
+                  id="10"
+                  type="checkbox"
+                />
+                <svg
+                  aria-hidden="true"
+                  class="icon checkbox__icon"
+                  fill="currentColor"
+                  height="1.5rem"
+                  style="--icon-size: 1.5rem;"
+                  viewBox="0 0 24 24"
+                  width="1.5rem"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
+                  />
+                </svg>
+              </span>
+              <label
+                class="label label--lg"
+                data-bootstrap-override="label"
+                for="10"
+              >
+                Filters label 1
+              </label>
+            </div>
+            <div
+              class="checkbox"
+            >
+              <span
+                class="input__wrapper"
+              >
+                <input
+                  class="checkbox__input"
+                  data-bootstrap-override="checkbox"
+                  id="11"
+                  type="checkbox"
+                />
+                <svg
+                  aria-hidden="true"
+                  class="icon checkbox__icon"
+                  fill="currentColor"
+                  height="1.5rem"
+                  style="--icon-size: 1.5rem;"
+                  viewBox="0 0 24 24"
+                  width="1.5rem"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
+                  />
+                </svg>
+              </span>
+              <label
+                class="label label--lg"
+                data-bootstrap-override="label"
+                for="11"
+              >
+                Filters label 2
+              </label>
+            </div>
+            <div
+              class="checkbox"
+            >
+              <span
+                class="input__wrapper"
+              >
+                <input
+                  class="checkbox__input"
+                  data-bootstrap-override="checkbox"
+                  id="12"
+                  type="checkbox"
+                />
+                <svg
+                  aria-hidden="true"
+                  class="icon checkbox__icon"
+                  fill="currentColor"
+                  height="1.5rem"
+                  style="--icon-size: 1.5rem;"
+                  viewBox="0 0 24 24"
+                  width="1.5rem"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
+                  />
+                </svg>
+              </span>
+              <label
+                class="label label--lg"
+                data-bootstrap-override="label"
+                for="12"
+              >
+                Filters label 3
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <div
+        class="button-group button-group--spacing-1x footer__button-group button-group__apply-only"
+      >
+        <button
+          class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
+          data-bootstrap-override="clickable-style-primary"
+          type="button"
+        >
+          Apply
+        </button>
+      </div>
+    </div>
+  </article>
+</div>
+`;
+
+exports[`<Filters /> WithOnClear story renders snapshot 1`] = `
+<div
+  data-headlessui-state="open"
+>
+  <button
+    aria-controls="headlessui-popover-panel-8"
+    aria-expanded="true"
+    class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary filters-button"
+    data-bootstrap-override="clickable-style-secondary"
+    data-headlessui-state="open"
+    id="headlessui-popover-button-6"
+    type="button"
+  >
+    <svg
+      aria-hidden="true"
+      class="icon"
+      fill="currentColor"
+      height="1.5rem"
+      style="--icon-size: 1.5rem;"
+      viewBox="0 0 24 24"
+      width="1.5rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M10 18V16H14V18H10ZM3 8V6H21V8H3ZM6 13V11H18V13H6Z"
+      />
+    </svg>
+    Filters
+  </button>
+  <article
+    class="popover-content"
+    data-headlessui-state="open"
+    data-popper-escaped="true"
+    data-popper-placement="bottom-start"
+    data-popper-reference-hidden="true"
+    id="headlessui-popover-panel-8"
     style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 10px);"
     tabindex="-1"
   >
@@ -974,185 +1153,6 @@ exports[`<Filters /> WithOnApplyAndCustomButtonGroup story renders snapshot 1`] 
                 class="label label--lg"
                 data-bootstrap-override="label"
                 for="9"
-              >
-                Filters label 3
-              </label>
-            </div>
-          </div>
-        </fieldset>
-      </div>
-      <div
-        class="button-group button-group--spacing-1x footer__button-group button-group__apply-only"
-      >
-        <button
-          class="clickable-style clickable-style--lg clickable-style--primary clickable-style--brand button button--primary"
-          data-bootstrap-override="clickable-style-primary"
-          type="button"
-        >
-          Apply
-        </button>
-      </div>
-    </div>
-  </article>
-</div>
-`;
-
-exports[`<Filters /> WithOnClear story renders snapshot 1`] = `
-<div
-  data-headlessui-state="open"
->
-  <button
-    aria-controls="headlessui-popover-panel-8"
-    aria-expanded="true"
-    class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral button button--secondary filters-button"
-    data-bootstrap-override="clickable-style-secondary"
-    data-headlessui-state="open"
-    id="headlessui-popover-button-6"
-    type="button"
-  >
-    <svg
-      aria-hidden="true"
-      class="icon"
-      fill="currentColor"
-      height="1.5rem"
-      style="--icon-size: 1.5rem;"
-      viewBox="0 0 24 24"
-      width="1.5rem"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M10 18V16H14V18H10ZM3 8V6H21V8H3ZM6 13V11H18V13H6Z"
-      />
-    </svg>
-    Filters
-  </button>
-  <article
-    class="popover-content"
-    data-headlessui-state="open"
-    data-popper-escaped="true"
-    data-popper-placement="bottom-start"
-    data-popper-reference-hidden="true"
-    id="headlessui-popover-panel-8"
-    style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 10px);"
-    tabindex="-1"
-  >
-    <div
-      class="popover-container filters-popover"
-    >
-      <div>
-        <fieldset
-          class="fieldset filters-fieldset"
-        >
-          <legend
-            class="fieldset-legend filters-fieldset__legend"
-          >
-            Filters Segment 1
-             
-          </legend>
-          <div
-            class="fieldset-items filters-fieldset__checkboxes"
-          >
-            <div
-              class="checkbox"
-            >
-              <span
-                class="input__wrapper"
-              >
-                <input
-                  class="checkbox__input"
-                  data-bootstrap-override="checkbox"
-                  id="4"
-                  type="checkbox"
-                />
-                <svg
-                  aria-hidden="true"
-                  class="icon checkbox__icon"
-                  fill="currentColor"
-                  height="1.5rem"
-                  style="--icon-size: 1.5rem;"
-                  viewBox="0 0 24 24"
-                  width="1.5rem"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                  />
-                </svg>
-              </span>
-              <label
-                class="label label--lg"
-                data-bootstrap-override="label"
-                for="4"
-              >
-                Filters label 1
-              </label>
-            </div>
-            <div
-              class="checkbox"
-            >
-              <span
-                class="input__wrapper"
-              >
-                <input
-                  class="checkbox__input"
-                  data-bootstrap-override="checkbox"
-                  id="5"
-                  type="checkbox"
-                />
-                <svg
-                  aria-hidden="true"
-                  class="icon checkbox__icon"
-                  fill="currentColor"
-                  height="1.5rem"
-                  style="--icon-size: 1.5rem;"
-                  viewBox="0 0 24 24"
-                  width="1.5rem"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                  />
-                </svg>
-              </span>
-              <label
-                class="label label--lg"
-                data-bootstrap-override="label"
-                for="5"
-              >
-                Filters label 2
-              </label>
-            </div>
-            <div
-              class="checkbox"
-            >
-              <span
-                class="input__wrapper"
-              >
-                <input
-                  class="checkbox__input"
-                  data-bootstrap-override="checkbox"
-                  id="6"
-                  type="checkbox"
-                />
-                <svg
-                  aria-hidden="true"
-                  class="icon checkbox__icon"
-                  fill="currentColor"
-                  height="1.5rem"
-                  style="--icon-size: 1.5rem;"
-                  viewBox="0 0 24 24"
-                  width="1.5rem"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M3 21V3H21V21H3ZM5 19H19V5H5V19Z"
-                  />
-                </svg>
-              </span>
-              <label
-                class="label label--lg"
-                data-bootstrap-override="label"
-                for="6"
               >
                 Filters label 3
               </label>
