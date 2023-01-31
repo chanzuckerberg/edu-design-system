@@ -40,6 +40,9 @@
     "lint:styles:fix": "yarn run lint:styles --fix",
     "lint:scripts": "eslint --ignore-path .gitignore --ext=js,jsx,ts,tsx .",
     "lint:scripts:fix": "yarn run lint:scripts --fix",
+    "postinstall": "husky install",
+    "postpack": "pinst --enable",
+    "prepack": "pinst --disable",
     "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx}\"",
     "prettier-tokens-dist": "prettier --write \"src/tokens-dist/**/*.{js,jsx,ts,tsx}\"",
     "release": "yarn build && standard-version",
@@ -136,7 +139,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-storybook": "^0.6.4",
     "eslint-plugin-testing-library": "^5.10.0",
-    "husky": "^4.3.8",
+    "husky": "^8.0.0",
     "identity-obj-proxy": "^3.0.0",
     "intersection-observer": "^0.12.2",
     "jest": "^29.4.1",
@@ -144,6 +147,7 @@
     "jest-preset-stylelint": "^6.0.0",
     "lint-staged": "^13.1.0",
     "pascal-case": "^3.1.2",
+    "pinst": "^3.0.0",
     "plop": "^3.1.1",
     "postcss": "^8.4.21",
     "postcss-cli": "^9.1.0",
@@ -164,13 +168,6 @@
     "tailwindcss": "^3.2.4",
     "ts-jest": "^29.0.5",
     "typescript": "^4.8.3"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "yarn test",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
