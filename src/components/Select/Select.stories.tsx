@@ -52,7 +52,7 @@ function InteractiveExampleUsingChildren(props: Props) {
   const compact = variant === 'compact';
 
   const [selectedOption, setSelectedOption] =
-    React.useState<typeof exampleOptions[0]>();
+    React.useState<(typeof exampleOptions)[0]>();
 
   return (
     <div className={styles['interactive-example']}>
@@ -84,7 +84,7 @@ function InteractiveExampleUsingChildren(props: Props) {
 // This story just tests the case where a function in passed in that wraps the children.
 function InteractiveExampleUsingFunctionChildren() {
   const [selectedOption, setSelectedOption] =
-    React.useState<typeof exampleOptions[0]>();
+    React.useState<(typeof exampleOptions)[0]>();
 
   return (
     <div className={styles['interactive-example']}>
