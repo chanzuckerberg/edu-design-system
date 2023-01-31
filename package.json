@@ -129,7 +129,7 @@
     "@types/react-dom": "^17.0.18",
     "@types/react-portal": "^4.0.4",
     "@types/svg4everybody": "^2.1.2",
-    "axe-core": "^4.6.3",
+    "axe-core": "4.4.3",
     "chromatic": "^6.15.0",
     "codecov": "^3.8.3",
     "copyfiles": "^2.4.1",
