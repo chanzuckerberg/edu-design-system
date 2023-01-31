@@ -12,7 +12,7 @@ export const VARIANTS = [
   'brand',
 ] as const;
 
-export type Variant = typeof VARIANTS[number];
+export type Variant = (typeof VARIANTS)[number];
 
 type Props = {
   /**
