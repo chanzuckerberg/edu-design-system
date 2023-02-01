@@ -32,7 +32,7 @@ export interface Props {
 
 export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
   return (
-    <PageShell className="body--alternate" mentoringIsActive={true}>
+    <PageShell className="body--alternate" mentoringIsActive>
       <Breadcrumbs className="!mb-4">
         <BreadcrumbsItem href="#" text="My Courses" />
         <BreadcrumbsItem href="#" text="Disciplinary Science 7" />

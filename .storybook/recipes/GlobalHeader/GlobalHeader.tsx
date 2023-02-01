@@ -6,7 +6,6 @@ import { Button, Icon, Heading } from '../../../src';
 import Link from '../../../src/components/Link';
 import Popover from '../../../src/components/Popover';
 import PrimaryNav from '../../../src/components/PrimaryNav';
-import PrimaryNavItem from '../../../src/components/PrimaryNavItem';
 
 import breakpoint from '../../../src/design-tokens/tier-1-definitions/breakpoints';
 import { EdsThemeColorIconNeutralDefaultInverse } from '../../../src/tokens-dist/ts/colors';
@@ -30,7 +29,7 @@ type HeaderProps = {
    */
   className?: string;
   /**
-   * Child node(s) that can be nested inside component. `PrimaryNavItem` the only permissible children of the PrimaryNav
+   * Child node(s) that can be nested inside component. `PrimaryNav.Item` the only permissible children of the PrimaryNav
    */
   children?: ReactNode;
 };
@@ -323,43 +322,43 @@ export const GlobalHeader = ({
         )}
       >
         <PrimaryNav>
-          <PrimaryNavItem
+          <PrimaryNav.Item
             href="#"
             iconName="search"
             isActive={searchStudentsIsActive}
             text="Search Students"
           />
-          <PrimaryNavItem
+          <PrimaryNav.Item
             href="#"
             iconName="class-copy"
             isActive={announcementsIsActive}
             text="Announcements"
           />
-          <PrimaryNavItem
+          <PrimaryNav.Item
             href="#"
             iconName="mood"
             isActive={subjectIsActive}
             text="Math 7 (IM)"
           />
-          <PrimaryNavItem
+          <PrimaryNav.Item
             href="#"
             iconName="account-circle"
             isActive={mentoringIsActive}
             text="Mentoring"
           />
-          <PrimaryNavItem
+          <PrimaryNav.Item
             href="#"
             iconName="school"
             isActive={studentProgressIsActive}
             text="Student Progress"
           />
-          <PrimaryNavItem
+          <PrimaryNav.Item
             href="#"
             iconName="view-module"
             isActive={educatorToolsIsActive}
             text="Educator Tools"
           />
-          <PrimaryNavItem
+          <PrimaryNav.Item
             href="#"
             iconName="business-center"
             isActive={curriculumIsActive}
