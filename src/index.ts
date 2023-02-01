@@ -111,6 +111,5 @@ export type { BannerProps } from './components/Banner';
  * ensures we don't unintentionally blow up the bundle size of
  * consuming apps.
  */
-// export { default as Header } from './components/Header';
 // export { default as PrimaryNav } from './components/PrimaryNav';
 // export { default as PrimaryNavItem } from './components/PrimaryNavItem';

@@ -1,9 +1,8 @@
 import clsx from 'clsx';
-import React, { useState, useEffect } from 'react';
+import type { ReactNode } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import styles from './GlobalHeader.module.css';
 import { Button, Icon, Heading } from '../../../src';
-// Project Overview pilot components -- not yet exported from src/index.ts
-import Header from '../../../src/components/Header';
 import Link from '../../../src/components/Link';
 import Popover from '../../../src/components/Popover';
 import PrimaryNav from '../../../src/components/PrimaryNav';
@@ -13,7 +12,152 @@ import breakpoint from '../../../src/design-tokens/tier-1-definitions/breakpoint
 import { EdsThemeColorIconNeutralDefaultInverse } from '../../../src/tokens-dist/ts/colors';
 import { NotificationLists } from '../NotificationListPopover/NotificationListPopover';
 
-export interface Props {
+type HeaderProps = {
+  /**
+   * Pinned stop property
+   *
+   * Pixel value from the top of the page scrolled before the header goes away.
+   */
+  pinnedStop?: number;
+  /**
+   * Unpinned property
+   *
+   * Used to move the header offscreen but have it ready to move back in.
+   */
+  unpinned?: boolean;
+  /**
+   * CSS class names that can be appended to the component.
+   */
+  className?: string;
+  /**
+   * Child node(s) that can be nested inside component. `PrimaryNavItem` the only permissible children of the PrimaryNav
+   */
+  children?: ReactNode;
+};
+
+/**
+ * Header component used in the Global Header.
+ */
+export const Header = ({
+  className,
+  children,
+  pinnedStop = 150,
+  ...other
+}: HeaderProps) => {
+  const headerRef = useRef<HTMLElement>(null);
+  const headerWrapperRef = useRef<HTMLDivElement>(null);
+
+  const [pinned, setPinned] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [scrollPos, setScrollPos] = useState(0);
+  const [unpinned, setUnpinned] = useState(false);
+
+  /**
+   * Update the header wrapper height
+   */
+  const updateHeaderWrapperHeight = useCallback(() => {
+    if (headerWrapperRef.current) {
+      /**
+       * Set the height of the header wrapper so that the spacing stays consistent when
+       * the header gets pinned to the top of the page.
+       */
+      headerWrapperRef.current.style.height =
+        headerRef?.current?.clientHeight + 'px';
+    }
+  }, []);
+
+  /**
+   * Handle window scroll
+   */
+  const handleWindowScroll = useCallback(() => {
+    if (
+      document.body.getBoundingClientRect().top > scrollPos &&
+      headerWrapperRef.current &&
+      headerWrapperRef.current.getBoundingClientRect().bottom < 0
+    ) {
+      /**
+       * On scroll up below the bottom of the header position, pin the header to the top of the page.
+       */
+      setUnpinned(false);
+      setPinned(true);
+    } else if (
+      headerWrapperRef.current &&
+      headerWrapperRef.current.getBoundingClientRect().top < 0 &&
+      window.scrollY <= pinnedStop
+    ) {
+      /**
+       * Else if on scroll down below the header position and above the pinnedStop prop, pin the header to the top of the page.
+       */
+      setUnpinned(false);
+      setPinned(true);
+    } else if (
+      headerWrapperRef.current &&
+      headerWrapperRef.current.getBoundingClientRect().bottom < 0
+    ) {
+      /**
+       * Else if on scroll down below the header position, remove the pin.
+       */
+      setUnpinned(true);
+      setPinned(false);
+      setTimeout(() => {
+        setScrolled(true);
+      }, 300);
+    } else {
+      /**
+       * Otherwise, remove the pin and scrolled classes.
+       */
+      setPinned(false);
+      setUnpinned(false);
+      setScrolled(false);
+    }
+    setScrollPos(document.body.getBoundingClientRect().top);
+  }, [pinnedStop, scrollPos]);
+
+  /**
+   * Update wrapper height on mount
+   */
+  useEffect(() => {
+    updateHeaderWrapperHeight();
+  }, [updateHeaderWrapperHeight]);
+
+  /**
+   * Use effect lifecycle hook
+   *
+   * Add scroll and window resize event to adjust values.
+   */
+  useEffect(() => {
+    window.addEventListener('scroll', handleWindowScroll, false);
+    window.addEventListener('resize', updateHeaderWrapperHeight, false);
+
+    return () => {
+      window.removeEventListener('scroll', handleWindowScroll, false);
+      window.removeEventListener('resize', updateHeaderWrapperHeight, false);
+    };
+  }, [handleWindowScroll, updateHeaderWrapperHeight]);
+
+  const componentClassName = clsx(
+    styles['header'],
+    unpinned && styles['header--unpinned'],
+    pinned && styles['header--pinned'],
+    scrolled && styles['header--scrolled'],
+    className,
+  );
+
+  return (
+    <div className={styles['header__wrapper']} ref={headerWrapperRef}>
+      <header
+        className={componentClassName}
+        ref={headerRef}
+        role="banner"
+        {...other}
+      >
+        {children}
+      </header>
+    </div>
+  );
+};
+
+export type GlobalHeaderProps = {
   /**
    * CSS class names that can be appended to the component.
    */
@@ -46,7 +190,7 @@ export interface Props {
    * Search students primary nav item is active
    */
   curriculumIsActive?: boolean;
-}
+};
 
 const Avatar = () => (
   <div className={styles['global-header__avatar-image']}>
@@ -97,7 +241,7 @@ export const GlobalHeader = ({
   educatorToolsIsActive,
   curriculumIsActive,
   ...other
-}: Props) => {
+}: GlobalHeaderProps) => {
   const [isActive, setisActive] = useState(false);
   const [isLarge, setIsLarge] = useState(false);
   /**
@@ -136,7 +280,7 @@ export const GlobalHeader = ({
     [styles['is-active']]: isActive,
   });
   return (
-    <Header behavior="sticky" className={componentClassName} {...other}>
+    <Header className={componentClassName} {...other}>
       <Link
         aria-label="Learning Platform Homepage"
         className={styles['global-header__logo']}
