@@ -2,8 +2,8 @@ import clsx from 'clsx';
 import type { ReactNode } from 'react';
 import React from 'react';
 import styles from './PrimaryNav.module.css';
-import type { IconName } from '../Icon';
-import Icon from '../Icon';
+import type { IconName } from '../../../src';
+import { Icon } from '../../../src';
 
 export type PrimaryNavItemProps = {
   /**
