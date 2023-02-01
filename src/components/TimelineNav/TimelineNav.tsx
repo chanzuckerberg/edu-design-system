@@ -306,7 +306,7 @@ export const TimelineNav = ({
           <NumberIcon
             aria-label="incomplete step"
             className={styles['timeline-nav__icon']}
-            incomplete={true}
+            incomplete
             number={i}
             numberIconTitle="incomplete step"
           />

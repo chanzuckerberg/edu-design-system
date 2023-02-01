@@ -92,9 +92,7 @@ export const WithLongTextAndIcon: StoryObj<Args> = {
   render: (args) => (
     <div className={styles.tagList}>
       {VARIANTS.map((variant) => {
-        return (
-          <Tag key={variant} {...args} hasOutline={true} variant={variant} />
-        );
+        return <Tag key={variant} {...args} hasOutline variant={variant} />;
       })}
     </div>
   ),

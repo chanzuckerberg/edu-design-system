@@ -141,12 +141,7 @@ export const DisabledButton: StoryObj<Args> = {
         styles['trigger--spacing-left'],
       )}
     >
-      <Tooltip
-        align="top"
-        childNotInteractive={true}
-        text={defaultArgs.text}
-        visible={true}
-      >
+      <Tooltip align="top" childNotInteractive text={defaultArgs.text} visible>
         <Button disabled variant="primary">
           Tooltip trigger
         </Button>
@@ -163,12 +158,7 @@ export const TextChild: StoryObj<Args> = {
         styles['trigger--spacing-left'],
       )}
     >
-      <Tooltip
-        align="top"
-        childNotInteractive={true}
-        text={defaultArgs.text}
-        visible={true}
-      >
+      <Tooltip align="top" childNotInteractive text={defaultArgs.text} visible>
         <span>Tooltip trigger</span>
       </Tooltip>
     </div>
@@ -210,7 +200,7 @@ export const InteractiveDisabledButton: StoryObj<Args> = {
     >
       <Tooltip
         align="top"
-        childNotInteractive={true}
+        childNotInteractive
         duration={args.duration}
         text={defaultArgs.text}
       >
