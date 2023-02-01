@@ -276,7 +276,7 @@ export const ControlHeadingInteractive: StoryObj<HeadingArgs> = {
 
 export const WithoutCloseButton: StoryObj<InteractiveArgs> = {
   render: (args) => (
-    <InteractiveExample {...args} hideCloseButton={true}>
+    <InteractiveExample {...args} hideCloseButton>
       {getChildren()}
     </InteractiveExample>
   ),

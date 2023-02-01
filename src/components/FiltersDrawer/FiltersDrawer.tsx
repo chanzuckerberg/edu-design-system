@@ -163,7 +163,7 @@ export const FiltersDrawer = ({
       <Drawer
         aria-labelledby={generatedId}
         className={styles['filters-drawer']}
-        dismissible={true}
+        dismissible
         drawerContainerClassName={styles['filters-drawer__container']}
         isActive={isActive}
         onClose={closeFilters}

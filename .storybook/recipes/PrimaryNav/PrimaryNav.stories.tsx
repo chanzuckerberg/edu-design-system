@@ -18,7 +18,7 @@ export default {
     children: (
       <>
         <PrimaryNav.Item href="#" text="Nav Item" />
-        <PrimaryNav.Item href="#" isActive={true} text="Nav Item" />
+        <PrimaryNav.Item href="#" isActive text="Nav Item" />
         <PrimaryNav.Item href="#" text="Nav Item" />
       </>
     ),
