@@ -22,4 +22,4 @@ In order to contribute to EDS, please follow this workflow:
 2. Do feature work in accordance to the library's [code guidelines](./CODE_GUIDELINES.md). EDS uses [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/), so each commit should follow commit guidelines reflecting the nature of the work.
 3. When work is ready for review, issue a pull request into `next` following the pull request guidelines. Tag `chanzuckerberg/edu-design-system` as reviewers for every PR.
 4. The library owners and trusted contributors will review the work and suggest revisions or approve the pull request
-5. Upon approval, feature gets merged into `next` to be slated for the next library release
+5. Upon approval, feature gets **Squash and merged** into `next` to be slated for the next library release
