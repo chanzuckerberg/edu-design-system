@@ -2,7 +2,7 @@ import { useId } from '@reach/auto-id';
 import clsx from 'clsx';
 import type { ChangeEventHandler, ReactNode } from 'react';
 import React, { forwardRef } from 'react';
-import styles from './TextField.module.css';
+import styles from './InputField.module.css';
 import FieldNote from '../FieldNote';
 import Input from '../Input';
 import Label from '../Label';
@@ -46,7 +46,7 @@ export type Props = React.InputHTMLAttributes<HTMLInputElement> & {
     | 'numeric'
     | 'decimal';
   /**
-   * Node(s) that can be nested within the text field
+   * Node(s) that can be nested within the input field
    */
   inputWithin?: ReactNode;
   /**
@@ -121,11 +121,11 @@ export type Props = React.InputHTMLAttributes<HTMLInputElement> & {
 };
 
 /**
- * `import {TextField} from "@chanzuckerberg/eds";`
+ * `import {InputField} from "@chanzuckerberg/eds";`
  *
- * A text input with optional labels and error messaging built-in.
+ * An input with optional labels and error messaging built-in.
  */
-export const TextField = forwardRef<HTMLInputElement, Props>(
+export const InputField = forwardRef<HTMLInputElement, Props>(
   (
     {
       'aria-describedby': ariaDescribedBy,
@@ -152,9 +152,9 @@ export const TextField = forwardRef<HTMLInputElement, Props>(
 
     const shouldRenderOverline = !!(label || required);
     const overlineClassName = clsx(
-      styles['text-field__overline'],
-      !label && styles['text-field__overline--no-label'],
-      disabled && styles['text-field__overline--disabled'],
+      styles['input-field__overline'],
+      !label && styles['input-field__overline--no-label'],
+      disabled && styles['input-field__overline--disabled'],
     );
 
     const generatedIdVar = useId(id);
@@ -178,7 +178,7 @@ export const TextField = forwardRef<HTMLInputElement, Props>(
           </div>
         )}
 
-        <div className={styles['text-field__body']}>
+        <div className={styles['input-field__body']}>
           <Input
             aria-describedby={ariaDescribedByVar}
             aria-invalid={!!isError}
@@ -192,7 +192,7 @@ export const TextField = forwardRef<HTMLInputElement, Props>(
             {...other}
           />
           {inputWithin && (
-            <div className={styles['text-field__input-within']}>
+            <div className={styles['input-field__input-within']}>
               {inputWithin}
             </div>
           )}
@@ -210,4 +210,4 @@ export const TextField = forwardRef<HTMLInputElement, Props>(
     );
   },
 );
-TextField.displayName = 'TextField';
+InputField.displayName = 'InputField';

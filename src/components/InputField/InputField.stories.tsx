@@ -2,12 +2,12 @@ import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
-import { TextField } from './TextField';
-import Button from '../../components/Button';
+import { InputField } from './InputField';
+import Button from '../Button';
 
 export default {
-  title: 'Components/TextField',
-  component: TextField,
+  title: 'Components/InputField',
+  component: InputField,
   parameters: {
     badges: [BADGE.BETA],
   },
@@ -20,18 +20,18 @@ export default {
   ],
 } as Meta<Args>;
 
-type Args = React.ComponentProps<typeof TextField>;
+type Args = React.ComponentProps<typeof InputField>;
 
 export const Default: StoryObj<Args> = {
   args: {
-    label: 'Default text field',
+    label: 'Default input field',
     fieldNote: 'This is a fieldnote.',
   },
 };
 
 export const Error: StoryObj<Args> = {
   args: {
-    label: 'Error text field',
+    label: 'Error input field',
     isError: true,
     fieldNote: 'This is a fieldnote with an error.',
   },
@@ -39,9 +39,9 @@ export const Error: StoryObj<Args> = {
 
 export const Disabled: StoryObj<Args> = {
   args: {
-    label: 'Disabled text field',
+    label: 'Disabled input field',
     disabled: true,
-    fieldNote: 'This TextField is disabled',
+    fieldNote: 'This InputField is disabled',
   },
   parameters: {
     axe: {
@@ -53,23 +53,23 @@ export const Disabled: StoryObj<Args> = {
 
 export const Required: StoryObj<Args> = {
   args: {
-    label: 'Text field with fieldNote',
+    label: 'Input field with fieldNote',
     required: true,
-    fieldNote: 'This is a fieldnote for a required text field.',
+    fieldNote: 'This is a fieldnote for a required input field.',
   },
 };
 
 export const NoVisibleLabel: StoryObj<Args> = {
   args: {
     'aria-label': 'Input for no visible label',
-    fieldNote: 'This text field has no visible label',
+    fieldNote: 'This input field has no visible label',
     required: true,
   },
 };
 
 export const InputWithin: StoryObj<Args> = {
   render: () => (
-    <TextField
+    <InputField
       inputWithin={
         <Button size="sm" variant="icon">
           Button
@@ -95,27 +95,31 @@ export const LabelFieldnoteVariants: StoryObj<Args> = {
       <p>No Placeholder</p>
 
       <p>fieldNote, label</p>
-      <TextField
+      <InputField
         fieldNote="fieldNote text"
         label="Label text"
         placeholder="placeholder"
         {...args}
       />
-      <TextField fieldNote="fieldNote text" label="Label text" {...args} />
+      <InputField fieldNote="fieldNote text" label="Label text" {...args} />
       <p>no fieldNote, label</p>
-      <TextField label="Label text" placeholder="placeholder" {...args} />
-      <TextField label="Label text" {...args} />
+      <InputField label="Label text" placeholder="placeholder" {...args} />
+      <InputField label="Label text" {...args} />
       <p>fieldNote, no label</p>
-      <TextField
+      <InputField
         aria-label="Label text"
         fieldNote="fieldNote text"
         placeholder="placeholder"
         {...args}
       />
-      <TextField aria-label="Label text" fieldNote="fieldNote text" {...args} />
+      <InputField
+        aria-label="Label text"
+        fieldNote="fieldNote text"
+        {...args}
+      />
       <p>no fieldNote, no label</p>
-      <TextField aria-label="Label text" placeholder="placeholder" {...args} />
-      <TextField aria-label="Label text" {...args} />
+      <InputField aria-label="Label text" placeholder="placeholder" {...args} />
+      <InputField aria-label="Label text" {...args} />
     </div>
   ),
 };
@@ -157,50 +161,54 @@ export const RequiredVariants: StoryObj<Args> = {
       <p>No Placeholder</p>
 
       <p>fieldNote, label</p>
-      <TextField
+      <InputField
         fieldNote="fieldNote text"
         label="Label text"
         placeholder="placeholder"
         {...args}
       />
-      <TextField fieldNote="fieldNote text" label="Label text" {...args} />
+      <InputField fieldNote="fieldNote text" label="Label text" {...args} />
       <p>no fieldNote, label</p>
-      <TextField label="Label text" placeholder="placeholder" {...args} />
-      <TextField label="Label text" {...args} />
+      <InputField label="Label text" placeholder="placeholder" {...args} />
+      <InputField label="Label text" {...args} />
       <p>fieldNote, no label</p>
-      <TextField
+      <InputField
         aria-label="Label text"
         fieldNote="fieldNote text"
         placeholder="placeholder"
         {...args}
       />
-      <TextField aria-label="Label text" fieldNote="fieldNote text" {...args} />
+      <InputField
+        aria-label="Label text"
+        fieldNote="fieldNote text"
+        {...args}
+      />
       <p>no fieldNote, no label</p>
-      <TextField aria-label="Label text" placeholder="placeholder" {...args} />
-      <TextField aria-label="Label text" {...args} />
+      <InputField aria-label="Label text" placeholder="placeholder" {...args} />
+      <InputField aria-label="Label text" {...args} />
       <p>fieldNote, label, isError</p>
-      <TextField
+      <InputField
         fieldNote="fieldNote text"
         isError
         label="Label text"
         placeholder="placeholder"
         {...args}
       />
-      <TextField
+      <InputField
         fieldNote="fieldNote text"
         isError
         label="Label text"
         {...args}
       />
       <p>fieldNote, label, disabled</p>
-      <TextField
+      <InputField
         disabled
         fieldNote="fieldNote text"
         label="Label text"
         placeholder="placeholder"
         {...args}
       />
-      <TextField
+      <InputField
         disabled
         fieldNote="fieldNote text"
         label="Label text"

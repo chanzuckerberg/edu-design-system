@@ -1,6 +1,6 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
-import * as TextFieldStoryFile from './TextField.stories';
+import * as InputFieldStoryFile from './InputField.stories';
 
 describe('<TextField />', () => {
-  generateSnapshots(TextFieldStoryFile);
+  generateSnapshots(InputFieldStoryFile);
 });
