@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<TextField /> Default story renders snapshot 1`] = `
+exports[`<InputField /> Default story renders snapshot 1`] = `
 <div
   style="padding: 0.5rem; background-color: white;"
 >
@@ -38,7 +38,7 @@ exports[`<TextField /> Default story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<TextField /> Disabled story renders snapshot 1`] = `
+exports[`<InputField /> Disabled story renders snapshot 1`] = `
 <div
   style="padding: 0.5rem; background-color: white;"
 >
@@ -77,7 +77,7 @@ exports[`<TextField /> Disabled story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<TextField /> DisabledVariants story renders snapshot 1`] = `
+exports[`<InputField /> DisabledVariants story renders snapshot 1`] = `
 <div
   style="padding: 0.5rem; background-color: white;"
 >
@@ -299,7 +299,7 @@ exports[`<TextField /> DisabledVariants story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<TextField /> Error story renders snapshot 1`] = `
+exports[`<InputField /> Error story renders snapshot 1`] = `
 <div
   style="padding: 0.5rem; background-color: white;"
 >
@@ -354,7 +354,7 @@ exports[`<TextField /> Error story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<TextField /> ErrorVariants story renders snapshot 1`] = `
+exports[`<InputField /> ErrorVariants story renders snapshot 1`] = `
 <div
   style="padding: 0.5rem; background-color: white;"
 >
@@ -636,7 +636,7 @@ exports[`<TextField /> ErrorVariants story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<TextField /> InputWithin story renders snapshot 1`] = `
+exports[`<InputField /> InputWithin story renders snapshot 1`] = `
 <div
   style="padding: 0.5rem; background-color: white;"
 >
@@ -678,7 +678,7 @@ exports[`<TextField /> InputWithin story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<TextField /> LabelFieldnoteVariants story renders snapshot 1`] = `
+exports[`<InputField /> LabelFieldnoteVariants story renders snapshot 1`] = `
 <div
   style="padding: 0.5rem; background-color: white;"
 >
@@ -892,7 +892,7 @@ exports[`<TextField /> LabelFieldnoteVariants story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<TextField /> NoVisibleLabel story renders snapshot 1`] = `
+exports[`<InputField /> NoVisibleLabel story renders snapshot 1`] = `
 <div
   style="padding: 0.5rem; background-color: white;"
 >
@@ -930,7 +930,7 @@ exports[`<TextField /> NoVisibleLabel story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<TextField /> Required story renders snapshot 1`] = `
+exports[`<InputField /> Required story renders snapshot 1`] = `
 <div
   style="padding: 0.5rem; background-color: white;"
 >
@@ -974,7 +974,7 @@ exports[`<TextField /> Required story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<TextField /> RequiredVariants story renders snapshot 1`] = `
+exports[`<InputField /> RequiredVariants story renders snapshot 1`] = `
 <div
   style="padding: 0.5rem; background-color: white;"
 >
