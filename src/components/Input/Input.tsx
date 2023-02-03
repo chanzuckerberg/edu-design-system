@@ -1,24 +1,23 @@
 import clsx from 'clsx';
 import type { ChangeEventHandler } from 'react';
 import React, { forwardRef } from 'react';
-import styles from './InputField.module.css';
+import styles from './Input.module.css';
 
-export type InputFieldProps = React.InputHTMLAttributes<HTMLInputElement> & {
-  /**
-   * String that describes a type of file that may be selected by the user
-   * https://developer.mozilla.org/en-US/docs/Web/*HTML/Element/input/file#Unique_file_type_specifiers
-   */
-  accept?: string;
+export type InputProps = React.InputHTMLAttributes<HTMLInputElement> & {
   /**
    * HTML id of the helper text used to describe the component
    */
   'aria-describedby'?: string;
   /**
+   * Aria-label to provide an accesible name for the text input if no visible label is provided.
+   */
+  'aria-label'?: string;
+  /**
    * CSS class names that can be appended to the component.
    */
   className?: string;
   /**
-   * Disables the field and prevents editing the contents
+   * Disables the input and prevents editing the contents
    */
   disabled?: boolean;
   /**
@@ -46,17 +45,9 @@ export type InputFieldProps = React.InputHTMLAttributes<HTMLInputElement> & {
    */
   max?: number;
   /**
-   * Max number of characters for the text input
-   */
-  maxLength?: number;
-  /**
    * Minimum number the input can take. When this number equals the input value, the minus button becomes disabled.
    */
   min?: number;
-  /**
-   * Multiple is a boolean to allow multiple files to be uploaded
-   */
-  multiple?: boolean;
   /**
    * HTML name attribute for the input
    */
@@ -65,10 +56,6 @@ export type InputFieldProps = React.InputHTMLAttributes<HTMLInputElement> & {
    * Function that fires when field value has changed
    */
   onChange?: ChangeEventHandler;
-  /**
-   * Defines a regular expression that the input's value must match in order for the value to pass constraint validation.
-   */
-  pattern?: string;
   /**
    * Placeholder attribute for input. Note: placeholder should be used sparingly
    */
@@ -94,7 +81,6 @@ export type InputFieldProps = React.InputHTMLAttributes<HTMLInputElement> & {
     | 'datetime'
     | 'datetime-local'
     | 'date'
-    | 'file'
     | 'month'
     | 'time'
     | 'week'
@@ -114,16 +100,12 @@ export type InputFieldProps = React.InputHTMLAttributes<HTMLInputElement> & {
 };
 
 /**
- * BETA: This component is still a work in progress and is subject to change.
- *
- * `import {InputField} from "@chanzuckerberg/eds";`
- *
- * Text input component for one line of text. For multiple lines, consider the Textarea component.
+ * Input component for one line of text.
  */
-export const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
+export const Input = forwardRef<HTMLInputElement, InputProps>(
   ({ className, disabled, id, isError, ...other }, ref) => {
     const componentClassName = clsx(
-      styles['input-field'],
+      styles['input'],
       isError && styles['error'],
       className,
     );
@@ -139,4 +121,4 @@ export const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
     );
   },
 );
-InputField.displayName = 'InputField';
+Input.displayName = 'Input';

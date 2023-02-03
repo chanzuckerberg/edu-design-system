@@ -41,7 +41,7 @@ export { default as HorizontalStepper } from './components/HorizontalStepper';
 export { default as Hr } from './components/Hr';
 export { default as Icon } from './components/Icon';
 export { default as InlineNotification } from './components/InlineNotification';
-export { default as InputField } from './components/InputField';
+export { default as Input } from './components/Input';
 export { default as InputLabel } from './components/InputLabel';
 export { default as Label } from './components/Label';
 export { default as Layout } from './components/Layout';

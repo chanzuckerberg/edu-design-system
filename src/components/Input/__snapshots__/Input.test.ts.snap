@@ -1,44 +1,44 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<InputField /> Default story renders snapshot 1`] = `
+exports[`<Input /> Default story renders snapshot 1`] = `
 <div
   style="padding: 0.5rem; background-color: white;"
 >
   <input
-    class="input-field"
+    class="input"
     placeholder="Placeholder"
   />
 </div>
 `;
 
-exports[`<InputField /> Disabled story renders snapshot 1`] = `
+exports[`<Input /> Disabled story renders snapshot 1`] = `
 <div
   style="padding: 0.5rem; background-color: white;"
 >
   <input
-    class="input-field"
+    class="input"
     disabled=""
     style="margin-bottom: 0.5rem;"
     value="Default Value"
   />
   <input
-    class="input-field"
+    class="input"
     disabled=""
     placeholder="Placeholder"
   />
 </div>
 `;
 
-exports[`<InputField /> Error story renders snapshot 1`] = `
+exports[`<Input /> Error story renders snapshot 1`] = `
 <div
   style="padding: 0.5rem; background-color: white;"
 >
   <input
-    class="input-field error"
+    class="input error"
     style="margin-bottom: 0.5rem;"
   />
   <input
-    class="input-field error"
+    class="input error"
     placeholder="Placeholder"
   />
 </div>

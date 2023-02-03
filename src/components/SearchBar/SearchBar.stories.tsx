@@ -25,7 +25,7 @@ export const Default: StoryObj<Args> = {
   args: {
     children: (
       <>
-        <SearchBar.InputField />
+        <SearchBar.Field />
         <SearchBar.Button />
       </>
     ),
@@ -36,7 +36,7 @@ export const Disabled: StoryObj<Args> = {
   args: {
     children: (
       <>
-        <SearchBar.InputField disabled />
+        <SearchBar.Field disabled />
         <SearchBar.Button disabled />
       </>
     ),
@@ -53,10 +53,10 @@ export const Custom: StoryObj<Args> = {
     <>
       <div style={{ marginBottom: '1rem' }}>
         <SearchBar.Button />
-        <SearchBar.InputField />
+        <SearchBar.Field />
       </div>
       <div>
-        <SearchBar.InputField />
+        <SearchBar.Field />
         <SearchBar.Button />
       </div>
     </>
@@ -64,10 +64,10 @@ export const Custom: StoryObj<Args> = {
 };
 
 export const SearchField: StoryObj<
-  React.ComponentProps<typeof SearchBar.InputField>
+  React.ComponentProps<typeof SearchBar.Field>
 > = {
   argTypes: { onChange: { action: 'onChange' } },
-  render: (args) => <SearchBar.InputField {...args} />,
+  render: (args) => <SearchBar.Field {...args} />,
 };
 
 export const SearchButton: StoryObj<

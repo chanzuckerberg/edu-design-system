@@ -473,7 +473,7 @@ export const StudentRefinement = () => {
               </div>
               <Layout className="mb-8" variant="50-50">
                 <SearchBar>
-                  <SearchBar.InputField />
+                  <SearchBar.Field />
                   <SearchBar.Button />
                 </SearchBar>
                 <ButtonGroup

@@ -4,7 +4,7 @@ import type { ChangeEventHandler, ReactNode } from 'react';
 import React, { forwardRef } from 'react';
 import styles from './TextField.module.css';
 import FieldNote from '../FieldNote';
-import InputField from '../InputField';
+import Input from '../Input';
 import Label from '../Label';
 import Text from '../Text';
 
@@ -61,10 +61,6 @@ export type Props = React.InputHTMLAttributes<HTMLInputElement> & {
    * Maximum value allowed for the input, if type is 'number'. When the input value matches this maximum, the plus button becomes disabled.
    */
   max?: number;
-  /**
-   * Max number of characters for the text input
-   */
-  maxLength?: number;
   /**
    * Minimum value allowed for the input, if type is 'number'. When the input value matches this minimum, the minus button becomes disabled.
    */
@@ -125,8 +121,6 @@ export type Props = React.InputHTMLAttributes<HTMLInputElement> & {
 };
 
 /**
- * BETA: This component is still a work in progress and is subject to change.
- *
  * `import {TextField} from "@chanzuckerberg/eds";`
  *
  * A text input with optional labels and error messaging built-in.
@@ -185,7 +179,7 @@ export const TextField = forwardRef<HTMLInputElement, Props>(
         )}
 
         <div className={styles['text-field__body']}>
-          <InputField
+          <Input
             aria-describedby={ariaDescribedByVar}
             aria-invalid={!!isError}
             data-bootstrap-override="inputfield"
