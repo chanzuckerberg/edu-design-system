@@ -46,7 +46,8 @@ export type Props = {
   variant?: Variant;
   size?: Size;
   /**
-   * Adds margin bottom spacing to the <Text> component.
+   * Deprecated. Adds margin bottom spacing to the <Text> component. Use utility classes instead.
+   * @deprecated
    */
   spacing?: 'half' | '1x' | '2x';
   tabIndex?: number;

@@ -115,6 +115,9 @@ export const Spacing: StoryObj<Args> = {
       </Text>
     </div>
   ),
+  parameters: {
+    badges: [BADGE.DEPRECATED],
+  },
 };
 
 /**
