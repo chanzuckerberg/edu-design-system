@@ -1675,7 +1675,6 @@ __metadata:
     "@types/react-beautiful-dnd": ^13.1.3
     "@types/react-dom": ^17.0.18
     "@types/react-portal": ^4.0.4
-    "@types/svg4everybody": ^2.1.2
     axe-core: 4.4.3
     chromatic: ^6.15.0
     clsx: ^1.2.1
@@ -1720,7 +1719,6 @@ __metadata:
     style-dictionary: ^3.7.2
     stylelint: ^14.16.1
     stylelint-config-recommended: ^9.0.0
-    svg4everybody: ^2.1.9
     tailwindcss: ^3.2.4
     ts-jest: ^29.0.5
     typescript: ^4.9.5
@@ -4877,13 +4875,6 @@ __metadata:
   version: 2.0.1
   resolution: "@types/stack-utils@npm:2.0.1"
   checksum: 205fdbe3326b7046d7eaf5e494d8084f2659086a266f3f9cf00bccc549c8e36e407f88168ad4383c8b07099957ad669f75f2532ed4bc70be2b037330f7bae019
-  languageName: node
-  linkType: hard
-
-"@types/svg4everybody@npm:^2.1.2":
-  version: 2.1.2
-  resolution: "@types/svg4everybody@npm:2.1.2"
-  checksum: ca1f2f02f4835540e38df3dd8069798fa7229db5edde0eea054db8ef7afb5888d8c52148cb7cc1d5694ea3d24fc213e43c6a4a6654ffdfd78591ab7a87db5402
   languageName: node
   linkType: hard
 
@@ -19660,13 +19651,6 @@ __metadata:
   version: 1.0.0
   resolution: "svg-tags@npm:1.0.0"
   checksum: 407e5ef87cfa2fb81c61d738081c2decd022ce13b922d035b214b49810630bf5d1409255a4beb3a940b77b32f6957806deff16f1bf0ce1ab11c7a184115a0b7f
-  languageName: node
-  linkType: hard
-
-"svg4everybody@npm:^2.1.9":
-  version: 2.1.9
-  resolution: "svg4everybody@npm:2.1.9"
-  checksum: 11c4445517676d28fa46c3df63ee728575eb2261db1c1f36b04fcc8fb33b7f497bb0dcb37ed2a119820fb2f04f929b76f4b3a192a0ca197f08905dea31a13b06
   languageName: node
   linkType: hard
 
