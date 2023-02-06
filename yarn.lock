@@ -1639,12 +1639,12 @@ __metadata:
   resolution: "@chanzuckerberg/eds@workspace:."
   dependencies:
     "@chanzuckerberg/axe-storybook-testing": ^6.3.0
-    "@chanzuckerberg/eslint-config-edu-js": ^1.0.2
-    "@chanzuckerberg/eslint-config-edu-ts": ^1.0.5
-    "@chanzuckerberg/eslint-plugin-edu-react": ^1.1.8
-    "@chanzuckerberg/eslint-plugin-stories": ^3.2.10
+    "@chanzuckerberg/eslint-config-edu-js": ^1.0.3
+    "@chanzuckerberg/eslint-config-edu-ts": ^1.0.6
+    "@chanzuckerberg/eslint-plugin-edu-react": ^1.1.9
+    "@chanzuckerberg/eslint-plugin-stories": ^3.2.11
     "@chanzuckerberg/prettier-config-edu": ^1.0.2
-    "@chanzuckerberg/story-utils": ^3.0.11
+    "@chanzuckerberg/story-utils": ^3.0.12
     "@commitlint/cli": ^17.4.2
     "@commitlint/config-conventional": ^17.4.2
     "@commitlint/prompt-cli": ^17.4.2
@@ -1710,7 +1710,7 @@ __metadata:
     react-beautiful-dnd: ^13.1.1
     react-children-by-type: ^1.1.0
     react-dom: ^16.14.0
-    react-focus-lock: ^2.9.2
+    react-focus-lock: ^2.9.3
     react-loader-spinner: ^5.3.4
     react-popper: ^2.3.0
     react-portal: ^4.2.2
@@ -1730,48 +1730,48 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@chanzuckerberg/eslint-config-edu-js@npm:^1.0.2":
-  version: 1.0.2
-  resolution: "@chanzuckerberg/eslint-config-edu-js@npm:1.0.2"
+"@chanzuckerberg/eslint-config-edu-js@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "@chanzuckerberg/eslint-config-edu-js@npm:1.0.3"
   dependencies:
-    eslint-plugin-import: ^2.26.0
+    eslint-plugin-import: ^2.27.5
   peerDependencies:
     eslint: ">= 8"
-  checksum: a8f142fa78c5b9d786b6216298a21df50e6d109c1a0c1efd49627a29fffa91472fd0c0bc217a2b51e3871c79c7e206e5c5893923138730f73f190319e2429740
+  checksum: ef3041e06b35b11e324ac44172873e40cf57dd9a913bbdd31bf61e18d2d144776f9286cdc4838bf4f124a6ade5108ccd3e0f3604802b7823d931fb2c820cc6d2
   languageName: node
   linkType: hard
 
-"@chanzuckerberg/eslint-config-edu-ts@npm:^1.0.5":
-  version: 1.0.5
-  resolution: "@chanzuckerberg/eslint-config-edu-ts@npm:1.0.5"
+"@chanzuckerberg/eslint-config-edu-ts@npm:^1.0.6":
+  version: 1.0.6
+  resolution: "@chanzuckerberg/eslint-config-edu-ts@npm:1.0.6"
   dependencies:
-    "@typescript-eslint/eslint-plugin": ^5.48.1
-    "@typescript-eslint/parser": ^5.48.1
+    "@typescript-eslint/eslint-plugin": ^5.50.0
+    "@typescript-eslint/parser": ^5.50.0
     eslint-import-resolver-typescript: ^3.5.3
-    eslint-plugin-import: ^2.26.0
+    eslint-plugin-import: ^2.27.5
   peerDependencies:
     eslint: ">= 8"
-  checksum: 215a13dc6fd67de6b92763a9422fc17a9b1914ec9a2ef0444016659067c068817cea9e7c435e57e80945c18c1217362b15d6cd097101dc582794967f9df0be2e
+  checksum: 28edf0cc771a211bf29d78f17da3a815a4a27d3ef1f3c02402e7ff9c7df5e23404ea95537d326272d7162db0525746a65bfac2b4243685b380166fd15ccbe37b
   languageName: node
   linkType: hard
 
-"@chanzuckerberg/eslint-plugin-edu-react@npm:^1.1.8":
-  version: 1.1.8
-  resolution: "@chanzuckerberg/eslint-plugin-edu-react@npm:1.1.8"
+"@chanzuckerberg/eslint-plugin-edu-react@npm:^1.1.9":
+  version: 1.1.9
+  resolution: "@chanzuckerberg/eslint-plugin-edu-react@npm:1.1.9"
   dependencies:
-    eslint-plugin-jsx-a11y: ^6.7.0
-    eslint-plugin-react: ^7.32.0
+    eslint-plugin-jsx-a11y: ^6.7.1
+    eslint-plugin-react: ^7.32.2
     eslint-plugin-react-hooks: ^4.6.0
   peerDependencies:
     eslint: ">= 8"
-  checksum: 6204751c5c921e39bb3bdf2bfeee5f6d9c6796d3ca03efc9da925b10f778cf125c8859bcb9ef7450ebeacfb44bce1093301bd3330acfc39ed8a1190c441da181
+  checksum: 2cb58e5347dd572a3f40fa9a1f4bbffdc2f560fdb19e1c55dc8f1a3361bebe1cee07824fdb49ea784601168c6e2e324824908aeae76b48c9a864de20e99b0956
   languageName: node
   linkType: hard
 
-"@chanzuckerberg/eslint-plugin-stories@npm:^3.2.10":
-  version: 3.2.10
-  resolution: "@chanzuckerberg/eslint-plugin-stories@npm:3.2.10"
-  checksum: 71f8f3ee652b05d70b445f6223aa02dc431b01720117e3df216e12a8bd179bfd4bbce5f8908e42ecbeef51ddfd0f48772c7531c6c8a7b1e47b782c805bac0cfb
+"@chanzuckerberg/eslint-plugin-stories@npm:^3.2.11":
+  version: 3.2.11
+  resolution: "@chanzuckerberg/eslint-plugin-stories@npm:3.2.11"
+  checksum: eda861ffa5480c8e8ed1e78480b418eec68d19b01878af79c169543bd5af5dd9f8b25cf09b8f65d442d94e4fa7c51b6f27981a72f6fc92b2ec2883f2bebf8f3c
   languageName: node
   linkType: hard
 
@@ -1786,15 +1786,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@chanzuckerberg/story-utils@npm:^3.0.11":
-  version: 3.0.11
-  resolution: "@chanzuckerberg/story-utils@npm:3.0.11"
+"@chanzuckerberg/story-utils@npm:^3.0.12":
+  version: 3.0.12
+  resolution: "@chanzuckerberg/story-utils@npm:3.0.12"
   dependencies:
     "@storybook/testing-react": ^1.3.0
   peerDependencies:
     "@testing-library/react": ">=11.0.0"
     react: "*"
-  checksum: 0082101241152010a3a0082754253b601ad4a9f89874bf7bcc02e5e53b57ad6231e6fe55d1f75f87f7912399740b9ac021a2dd44481a039c5c80a7fbb4c64345
+  checksum: 2b8a0f606c71d07ed556de040301b16e7227a69445aa01d9f03082be1d0b65be6bf1f72c83eca4bfd4acc34bc6592f067e92ef24022131ea64b3aeaecebbd9eb
   languageName: node
   linkType: hard
 
@@ -5035,7 +5035,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/eslint-plugin@npm:^5.48.1":
+"@typescript-eslint/eslint-plugin@npm:^5.50.0":
   version: 5.50.0
   resolution: "@typescript-eslint/eslint-plugin@npm:5.50.0"
   dependencies:
@@ -5059,7 +5059,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:^5.48.1":
+"@typescript-eslint/parser@npm:^5.50.0":
   version: 5.50.0
   resolution: "@typescript-eslint/parser@npm:5.50.0"
   dependencies:
@@ -9709,7 +9709,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-import@npm:^2.26.0":
+"eslint-plugin-import@npm:^2.27.5":
   version: 2.27.5
   resolution: "eslint-plugin-import@npm:2.27.5"
   dependencies:
@@ -9751,7 +9751,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-jsx-a11y@npm:^6.7.0":
+"eslint-plugin-jsx-a11y@npm:^6.7.1":
   version: 6.7.1
   resolution: "eslint-plugin-jsx-a11y@npm:6.7.1"
   dependencies:
@@ -9801,7 +9801,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-react@npm:^7.32.0":
+"eslint-plugin-react@npm:^7.32.2":
   version: 7.32.2
   resolution: "eslint-plugin-react@npm:7.32.2"
   dependencies:
@@ -17557,7 +17557,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-focus-lock@npm:^2.9.2":
+"react-focus-lock@npm:^2.9.3":
   version: 2.9.3
   resolution: "react-focus-lock@npm:2.9.3"
   dependencies:
@@ -20594,11 +20594,11 @@ __metadata:
 
 "typescript@patch:typescript@^4.6.4#~builtin<compat/typescript>, typescript@patch:typescript@^4.9.5#~builtin<compat/typescript>":
   version: 4.9.5
-  resolution: "typescript@patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=ad5954"
+  resolution: "typescript@patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 8f6260acc86b56bfdda6004bc53f32ea548f543e8baef7071c8e34d29d292f3e375c8416556c8de10b24deef6933cd1c16a8233dc84a3dd43a13a13265d0faab
+  checksum: ab417a2f398380c90a6cf5a5f74badd17866adf57f1165617d6a551f059c3ba0a3e4da0d147b3ac5681db9ac76a303c5876394b13b3de75fdd5b1eaa06181c9d
   languageName: node
   linkType: hard
 
