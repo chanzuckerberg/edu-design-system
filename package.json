@@ -88,7 +88,7 @@
     "lodash.debounce": "^4.0.8",
     "react-beautiful-dnd": "^13.1.1",
     "react-children-by-type": "^1.1.0",
-    "react-focus-lock": "^2.9.2",
+    "react-focus-lock": "^2.9.3",
     "react-loader-spinner": "^5.3.4",
     "react-popper": "^2.3.0",
     "react-portal": "^4.2.2",
@@ -98,12 +98,12 @@
   "types": "lib/index.d.ts",
   "devDependencies": {
     "@chanzuckerberg/axe-storybook-testing": "^6.3.0",
-    "@chanzuckerberg/eslint-config-edu-js": "^1.0.2",
-    "@chanzuckerberg/eslint-config-edu-ts": "^1.0.5",
-    "@chanzuckerberg/eslint-plugin-edu-react": "^1.1.8",
-    "@chanzuckerberg/eslint-plugin-stories": "^3.2.10",
+    "@chanzuckerberg/eslint-config-edu-js": "^1.0.3",
+    "@chanzuckerberg/eslint-config-edu-ts": "^1.0.6",
+    "@chanzuckerberg/eslint-plugin-edu-react": "^1.1.9",
+    "@chanzuckerberg/eslint-plugin-stories": "^3.2.11",
     "@chanzuckerberg/prettier-config-edu": "^1.0.2",
-    "@chanzuckerberg/story-utils": "^3.0.11",
+    "@chanzuckerberg/story-utils": "^3.0.12",
     "@commitlint/cli": "^17.4.2",
     "@commitlint/config-conventional": "^17.4.2",
     "@commitlint/prompt-cli": "^17.4.2",
@@ -181,5 +181,5 @@
       "stylelint --fix"
     ]
   },
-  "packageManager": "yarn@3.3.1"
+  "packageManager": "yarn@3.4.1"
 }
