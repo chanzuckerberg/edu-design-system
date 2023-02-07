@@ -1,3 +1,4 @@
+import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { StoryObj, Meta } from '@storybook/react';
 import clsx from 'clsx';
 import React from 'react';
@@ -114,6 +115,9 @@ export const Spacing: StoryObj<Args> = {
       </Text>
     </div>
   ),
+  parameters: {
+    badges: [BADGE.DEPRECATED],
+  },
 };
 
 /**
@@ -271,12 +275,21 @@ const TextPassageTemplate = (args: Args) => (
 
 export const TextPassage: StoryObj<Args> = {
   render: (args) => <TextPassageTemplate {...args} as="div" />,
+  parameters: {
+    badges: [BADGE.DEPRECATED],
+  },
 };
 
 export const TextPassageSmall: StoryObj<Args> = {
   render: (args) => <TextPassageTemplate {...args} as="div" size="sm" />,
+  parameters: {
+    badges: [BADGE.DEPRECATED],
+  },
 };
 
 export const TextPassageLarge: StoryObj<Args> = {
   render: (args) => <TextPassageTemplate {...args} as="div" size="lg" />,
+  parameters: {
+    badges: [BADGE.DEPRECATED],
+  },
 };
