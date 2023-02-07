@@ -10,10 +10,6 @@ import Text from '../Text';
 
 export type Props = React.InputHTMLAttributes<HTMLInputElement> & {
   /**
-   * Aria-describedby id string
-   */
-  'aria-describedby'?: string;
-  /**
    * Aria-label to provide an accesible name for the text input if no visible label is provided.
    */
   'aria-label'?: string;
