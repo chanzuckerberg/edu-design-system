@@ -1,13 +1,44 @@
-@import '../../design-tokens/mixins.css';
-
 /*------------------------------------*\
-    #TEXT INPUT
+    # INPUT FIELD
 \*------------------------------------*/
 
 /**
- * Default text input styles 
+ * Wraps the Label and the optional/required indicator.
  */
-:where(.input-field) {
-  @mixin inputStyles;
-  padding-left: var(--eds-size-2);
+.input-field__overline {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--eds-size-half);
+  color: var(--eds-theme-color-form-label);
+}
+.input-field__overline--no-label {
+  justify-content: flex-end;
+}
+.input-field__overline--disabled {
+  color: var(--eds-theme-color-text-disabled);
+}
+
+/**
+ * Input field body
+ */
+.input-field__body {
+  position: relative;
+  margin-bottom: var(--eds-size-half);
+}
+
+/**
+ * Input Field Within
+ *
+ * A slot to put arbitrary content that appears within the input field border to the right. 
+ *
+ * Typically used for buttons and icon buttons to enable things like show/hide password buttons .
+ */
+.input-field__input-within {
+  position: absolute;
+  right: var(--eds-size-2);
+  top: 0;
+  bottom: 0;
+  display: grid;
+  align-items: center;
+  justify-content: center;
 }

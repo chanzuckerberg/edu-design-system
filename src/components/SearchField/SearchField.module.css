@@ -11,7 +11,7 @@
 }
 
 /**
- * The InputField component.
+ * The Input component.
  */
 .search-field__input {
   padding-left: 2.25rem;
@@ -21,7 +21,7 @@
 }
 
 /**
- * The search icon that overlays the InputField.
+ * The search icon that overlays the Input.
  */
 .search-field__icon {
   color: var(--eds-theme-color-icon-neutral-default);

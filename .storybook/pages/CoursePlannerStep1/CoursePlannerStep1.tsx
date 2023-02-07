@@ -9,13 +9,13 @@ import {
   Heading,
   HorizontalStepper,
   Icon,
+  InputField,
   Layout,
   LayoutContainer,
   LayoutSection,
   PageHeader,
   Panel,
   Text,
-  TextField,
 } from '../../../src';
 
 import CompassCenter from '../../static/compass-center.svg';
@@ -78,7 +78,7 @@ export const CoursePlannerStep1 = () => {
             <Text className={textClassName}>
               How many times per week do you have class?
             </Text>
-            <TextField
+            <InputField
               aria-label="times per week"
               className="!mb-8"
               min={0}
@@ -88,7 +88,7 @@ export const CoursePlannerStep1 = () => {
             <Text className={textClassName}>
               How many minutes is each class?
             </Text>
-            <TextField
+            <InputField
               aria-label="minutes"
               className="!mb-8"
               min={0}
