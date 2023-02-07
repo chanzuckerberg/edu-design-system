@@ -119,73 +119,70 @@ export const BaselineCard = ({
      * Wrapping the Card component in a container for attaching cardRef
      * to the card without adding a ref prop to <Card />
      */
-
-    <div className={styles['baseline-card__container']}>
-      <div className={styles['baseline-card__clickable-wrapper']} ref={cardRef}>
-        <Card className={componentClassName} {...other}>
-          <CardHeader className={styles['baseline-card__label']}>
-            {label}
-          </CardHeader>
-          <CardBody className={styles['baseline-card__body']}>
-            {body}
-            {linkProps && (
-              <a
-                className={styles['baseline-card__link']}
-                href={linkProps.href}
-                ref={linkRef}
-                target={linkProps.target ? linkProps.target : '_self'}
-              >
-                {linkProps.text}
-              </a>
-            )}
-          </CardBody>
-          {metadata && (
-            <CardFooter className={styles['baseline-card__footer']}>
-              <table className={styles['baseline-card__table']}>
-                <tbody className={styles['baseline-card__table-body']}>
-                  <tr className={styles['baseline-card__table-row']}>
-                    <th
-                      className={styles['baseline-card__table-label']}
-                      scope="row"
-                    >
-                      Score
-                    </th>
-                    <td>
-                      <Score
-                        className={styles['baseline-card__score']}
-                        text={metadata.score}
-                        variant={metadata.variant}
-                      />
-                    </td>
-                  </tr>
-                  <tr className={styles['baseline-card__table-row']}>
-                    <th
-                      className={styles['baseline-card__table-label']}
-                      scope="row"
-                    >
-                      Attempts
-                    </th>
-                    <td className={styles['baseline-card__table-data']}>
-                      {metadata.attempts}
-                    </td>
-                  </tr>
-                  <tr className={styles['baseline-card__table-row']}>
-                    <th
-                      className={styles['baseline-card__table-label']}
-                      scope="row"
-                    >
-                      Line Passes On
-                    </th>
-                    <td className={styles['baseline-card__table-data']}>
-                      {metadata.deadline}
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </CardFooter>
+    <div className={styles['baseline-card__clickable-wrapper']} ref={cardRef}>
+      <Card className={componentClassName} {...other}>
+        <CardHeader className={styles['baseline-card__label']}>
+          {label}
+        </CardHeader>
+        <CardBody className={styles['baseline-card__body']}>
+          {body}
+          {linkProps && (
+            <a
+              className={styles['baseline-card__link']}
+              href={linkProps.href}
+              ref={linkRef}
+              target={linkProps.target ? linkProps.target : '_self'}
+            >
+              {linkProps.text}
+            </a>
           )}
-        </Card>
-      </div>
+        </CardBody>
+        {metadata && (
+          <CardFooter className={styles['baseline-card__footer']}>
+            <table className={styles['baseline-card__table']}>
+              <tbody className={styles['baseline-card__table-body']}>
+                <tr className={styles['baseline-card__table-row']}>
+                  <th
+                    className={styles['baseline-card__table-label']}
+                    scope="row"
+                  >
+                    Score
+                  </th>
+                  <td>
+                    <Score
+                      className={styles['baseline-card__score']}
+                      text={metadata.score}
+                      variant={metadata.variant}
+                    />
+                  </td>
+                </tr>
+                <tr className={styles['baseline-card__table-row']}>
+                  <th
+                    className={styles['baseline-card__table-label']}
+                    scope="row"
+                  >
+                    Attempts
+                  </th>
+                  <td className={styles['baseline-card__table-data']}>
+                    {metadata.attempts}
+                  </td>
+                </tr>
+                <tr className={styles['baseline-card__table-row']}>
+                  <th
+                    className={styles['baseline-card__table-label']}
+                    scope="row"
+                  >
+                    Line Passes On
+                  </th>
+                  <td className={styles['baseline-card__table-data']}>
+                    {metadata.deadline}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </CardFooter>
+        )}
+      </Card>
     </div>
   );
 };

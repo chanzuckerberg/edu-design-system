@@ -14,13 +14,6 @@
 }
 
 /**
- * Removes default browser spacing for the Horizontal Stepper while keeping 0 specificity.
- */
-:where(.horizontal-stepper) {
-  @mixin reset;
-}
-
-/**
  * The decorative line between steps.
  */
 .horizontal-stepper__line {
@@ -29,6 +22,6 @@
   margin-left: var(--eds-size-1);
   margin-right: var(--eds-size-1);
   /* Used to grow and shrink lines before wrapping step text. */
-  flex-grow: 1; 
+  flex-grow: 1;
   min-width: var(--eds-size-2);
 }

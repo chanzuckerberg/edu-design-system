@@ -4,15 +4,6 @@
     # HEADING
 \*------------------------------------*/
 
-/**
- * Remove top and bottom margins applied by browser for headings.
- */
-:where(.heading) {
-  /* Needs `:where` pseudoclass to reduce specificity so class overrides for margin can happen where used. */
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
 /* New type ramp sizes */
 .heading--size-headline-lg {
   @mixin eds-theme-typography-headline-lg;

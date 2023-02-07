@@ -13,16 +13,6 @@
 }
 
 /**
-* Baseline card container
-*
-* Used to pass the cardRef object to Card component.
-*/
-.baseline-card__container {
-  @mixin reset;
-  display: block;
-}
-
-/**
  * Inner wrapper that is also clickable
  *
  * This is needed because the outermost div may extend beyond the visible card,
