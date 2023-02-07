@@ -13,7 +13,7 @@
 /**
  * The Input component.
  */
-.search-field__input {
+.search-field > .search-field__input {
   padding-left: 2.25rem;
 }
 .search-field__input::-webkit-search-cancel-button {

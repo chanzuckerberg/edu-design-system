@@ -4,6 +4,7 @@ import { Icon } from './Icon';
 import styles from './Icon.stories.module.css';
 import icons, { type IconName } from '../../icons/spritemap';
 import * as ColorTokens from '../../tokens-dist/ts/colors';
+import Link from '../Link';
 import Text from '../Text';
 
 export default {
@@ -99,13 +100,13 @@ export const InText: StoryObj<Args> = {
         />
         ; 2em) which is harder to determine. Take a look at the icons available
         in{' '}
-        <a
+        <Link
           href="https://material-ui.com/components/material-icons/"
           rel="noreferrer"
           target="_blank"
         >
           https://material-ui.com/components/material-icons/
-        </a>
+        </Link>
         , currently we only support the filled icons.
       </Text>
     );

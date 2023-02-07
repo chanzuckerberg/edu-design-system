@@ -36,7 +36,9 @@ export const Table: StoryObj<Args> = {
   decorators: [
     (Story) => (
       <div>
-        <p>Score has transparent border for use in Table component</p>
+        <p className="mb-4">
+          Score has transparent border for use in Table component
+        </p>
         <Story />
       </div>
     ),
