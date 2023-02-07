@@ -1,7 +1,6 @@
 import clsx from 'clsx';
 import type { ReactNode, CSSProperties } from 'react';
-import React, { useEffect } from 'react';
-import svg4everybody from 'svg4everybody';
+import React from 'react';
 import styles from './Icon.module.css';
 import icons, { type IconName } from '../../icons/spritemap';
 
@@ -111,10 +110,6 @@ export const Icon = (props: IconProps) => {
     size,
     viewBox,
   } = props;
-
-  useEffect(() => {
-    svg4everybody(); // Required to get IE to render icon sprites
-  }, []);
 
   const componentClassName = clsx(
     styles['icon'],
