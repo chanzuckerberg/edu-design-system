@@ -9,11 +9,10 @@ EDS follows these principles and conventions for HTML, CSS, and JavaScript/TypeS
   - [CSS conventions](#css-conventions)
   - [Tailwind utility classes](#tailwind-utility-classes)
   - [Theming conventions](#theming-conventions)
-  - [Design tokens](#design-tokens)
 - [JavaScript/TypeScript](#js)
   - [JavaScript principles](#js-principles)
-  - [JavaScript tools](#js-tools)
   - [TypeScript/React conventions](#ts-conventions)
+  - [Anatomy of a component](#anatomy)
   - [Component rules and considerations](#component-rules)
   - [Component API naming conventions](#api-naming)
 - [Accessibility](#accessibility)
@@ -22,9 +21,9 @@ EDS follows these principles and conventions for HTML, CSS, and JavaScript/TypeS
 # HTML principles and conventions <a name="html"></a>
 
 - **Use semantic markup.** That means using the `<button>` tag rather than `<div onClick={toggle}>` when a button is required, an `<a>` tag when a link is required, and so on.
-- **Clarity over brevity** Developers should be able to understand what's going on with markup at a glance. Avoid cryptic abbreviations and nicknames, add proper indenting & spacing, and use clear comments.
+- **Clarity over brevity.** Developers should be able to understand what's going on with markup at a glance. Avoid cryptic abbreviations and nicknames, add proper indenting & spacing, and use clear comments.
 - **Accessibility.** Markup should be accessible and [follow best practices](https://www.a11yproject.com/checklist/). Use (but [don't abuse](https://www.deque.com/blog/top-5-rules-of-aria/)) <abbr title="Accessible Rich Internet Applications">ARIA</abbr> attributes. See [Accessibility](#accessibility).
-- Native HTML elements (e.g. `<input>`, `<select>`) should be preferred over custom elements whenever possible. Native elements provide a slew of functionality and accessibility best practices out of the box.
+- **Native HTML elements** (e.g. `<input>`, `<select>`) should be preferred over custom elements whenever possible. Native elements provide a slew of functionality and accessibility best practices out of the box.
 
 ---
 
@@ -308,28 +307,19 @@ EDS is a [themeable design system](https://bradfrost.com/blog/post/creating-them
 
 This is a "lightly" themed system, meaning that only a few variables (such as key UI colors and other properties like border radius) are available for theming.
 
-### Themeable component conventions
-
-Components that ingest theme variables (defined in [design tokens](#design-tokens)) should follow these conventions:
-
-## Design Tokens <a name="design-tokens"></a>
+### Design Tokens <a name="design-tokens"></a>
 
 Please refer to the [design tokens documentation](./TOKENS.md) to learn how to use design tokens in EDS.
 
 ---
 
-# JavaScript <a name="js"></a>
+# JavaScript/Typescript <a name="js"></a>
 
-## JavaScript/React principles <a name="js-principles"></a>
+## JavaScript principles <a name="js-principles"></a>
 
-- **Presentational Components Only** - EDS provides a library of reusable [presentational UI components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0) that are consumed by CZI applications. These presentational components are "dumb" and don't contain any application business logic and aren't hooked up to any data models.
+- **Presentational Components Only** - EDS provides a library of reusable [presentational UI components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0) that are consumed by CZI applications. These presentational components don't contain any application business logic and aren't hooked up to any data models.
 - **Predictable APIs** - EDS provides consistent, clear [component APIs](#component-naming) in order to provide a consistent and intuitive user developer experience.
-- **Composition over inheritance** EDS adheres to the [composition over inheritance](https://en.wikipedia.org/wiki/Composition_over_inheritance) principle in order to create clean, extensible components that aren't tied to specific contexts or content.
-
-## JavaScript Tools <a name="js-tools"></a>
-
-- [React](https://reactjs.org/)
-- [TypeScript](https://www.typescriptlang.org/)
+- **Composition over inheritance** - EDS adheres to the [composition over inheritance](https://en.wikipedia.org/wiki/Composition_over_inheritance) principle in order to create clean, extensible components that aren't tied to specific contexts or content.
 
 ## TypeScript Conventions <a name="ts-conventions"></a>
 
@@ -350,7 +340,7 @@ The design system's component directory contains all of the design system's comp
 - `ComponentName.module.css`contains the styles for the component. All components must include a `.module.css` file.
 - `ComponentName.stories.js` contains all the [stories](https://storybook.js.org/basics/writing-stories/) for the component.
 
-## Anatomy of a component
+## Anatomy of a component <a name="anatomy"></a>
 
 ### Imports
 
@@ -577,6 +567,7 @@ EDS follows specific front-end API naming conventions. Authoring a consistent AP
 EDS adheres to the following API naming conventions:
 
 ### Variants
+The default option should be the one most commonly used in order to reduce friction for developers using the components.
 
 - `variant` should be used for primary _stylistic_ variations of a component, such as (e.g. `<Card variant="bordered">` or `<Button variant="secondary">`). `variant` should be used if there is primarily one variable used to manipulate the component style.
 - `inverted` should be used consistently for stylistic `variation`s that "invert" the color schemes (e.g. `inverted=true`) to work on a darker background.
@@ -586,7 +577,6 @@ EDS adheres to the following API naming conventions:
 - `disabled` boolean should be used to control the interactivity of a component (e.g. `<Button disabled={true} />`)
 - `align` should be used for aligning content, and should include `left` (default), `center`, `right` if needed.
 - `verticalAlign` should be used for vertically aligning content, and should include `top`, `middle`, `bottom` if needed.
-- The default option should be the one most commonly used in order to reduce friction for developers using the components.
 
 ### Text, Labels, Titles, and Children
 
