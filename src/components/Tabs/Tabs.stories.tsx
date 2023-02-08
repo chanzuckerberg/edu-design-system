@@ -143,7 +143,7 @@ export const Default: StoryObj<Args> = {
 export const ScrollMiddle: StoryObj<Args> = {
   parameters: {
     viewport: {
-      defaultViewport: 'mobile2',
+      defaultViewport: 'googlePixel2',
     },
     chromatic: { viewports: [chromaticViewports.googlePixel2] },
     snapshot: { skip: true },

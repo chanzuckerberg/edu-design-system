@@ -109,7 +109,7 @@ export const LongTextMenu: StoryObj<Args> = {
   },
   parameters: {
     viewport: {
-      defaultViewport: 'tablet',
+      defaultViewport: 'ipadMini',
     },
     chromatic: { viewports: [chromaticViewports.ipadMini] },
     axe: {

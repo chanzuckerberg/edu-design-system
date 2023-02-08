@@ -113,7 +113,7 @@ export const Mobile: StoryObj<Args> = {
   parameters: {
     ...Default.parameters,
     viewport: {
-      defaultViewport: 'mobile2',
+      defaultViewport: 'googlePixel2',
     },
     chromatic: {
       disableSnapshot: false,
@@ -166,7 +166,7 @@ export const Tablet: StoryObj<Args> = {
   parameters: {
     ...Default.parameters,
     viewport: {
-      defaultViewport: 'mobilelandscape',
+      defaultViewport: 'ipadMini',
       viewports: {
         mobilelandscape: storybookViewports.ipadMini,
       },
