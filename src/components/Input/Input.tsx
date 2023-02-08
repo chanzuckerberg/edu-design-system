@@ -5,10 +5,6 @@ import styles from './Input.module.css';
 
 export type InputProps = React.InputHTMLAttributes<HTMLInputElement> & {
   /**
-   * HTML id of the helper text used to describe the component
-   */
-  'aria-describedby'?: string;
-  /**
    * Aria-label to provide an accesible name for the text input if no visible label is provided.
    */
   'aria-label'?: string;
