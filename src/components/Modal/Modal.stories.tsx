@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { Modal, ModalContent } from './Modal';
 import styles from './Modal.stories.module.css';
 import { Button, ButtonGroup, Heading, Text, Tooltip } from '../../';
+import { chromaticViewports, storybookViewports } from '../../util/viewports';
 import { VARIANTS } from '../Heading/Heading';
 
 export default {
@@ -114,7 +115,10 @@ export const Mobile: StoryObj<Args> = {
     viewport: {
       defaultViewport: 'mobile2',
     },
-    chromatic: { disableSnapshot: false, viewports: [414] },
+    chromatic: {
+      disableSnapshot: false,
+      viewports: [chromaticViewports.googlePixel2],
+    },
   },
 };
 
@@ -164,16 +168,13 @@ export const Tablet: StoryObj<Args> = {
     viewport: {
       defaultViewport: 'mobilelandscape',
       viewports: {
-        mobilelandscape: {
-          name: 'Mobile Landscape',
-          styles: {
-            width: '768px',
-            height: '1024px',
-          },
-        },
+        mobilelandscape: storybookViewports.ipadMini,
       },
     },
-    chromatic: { disableSnapshot: false, viewports: [768] },
+    chromatic: {
+      disableSnapshot: false,
+      viewports: [chromaticViewports.ipadMini],
+    },
   },
 };
 
