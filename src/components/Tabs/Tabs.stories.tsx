@@ -3,6 +3,7 @@ import { within } from '@storybook/testing-library';
 import React from 'react';
 
 import { Tabs } from './Tabs';
+import { chromaticViewports } from '../../util/viewports';
 import Tab from '../Tab';
 import Text from '../Text';
 
@@ -129,7 +130,12 @@ type Args = React.ComponentProps<typeof Tabs>;
 
 export const Default: StoryObj<Args> = {
   parameters: {
-    chromatic: { viewports: [414, 1366] },
+    chromatic: {
+      viewports: [
+        chromaticViewports.googlePixel2,
+        chromaticViewports.chromebook,
+      ],
+    },
   },
 };
 
@@ -137,9 +143,9 @@ export const Default: StoryObj<Args> = {
 export const ScrollMiddle: StoryObj<Args> = {
   parameters: {
     viewport: {
-      defaultViewport: 'mobile2',
+      defaultViewport: 'googlePixel2',
     },
-    chromatic: { viewports: [414] },
+    chromatic: { viewports: [chromaticViewports.googlePixel2] },
     snapshot: { skip: true },
   },
   play: async ({ canvasElement }) => {

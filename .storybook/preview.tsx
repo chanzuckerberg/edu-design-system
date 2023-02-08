@@ -14,7 +14,7 @@ import './css/styleguide-only.css';
 import type { Story } from '@storybook/react';
 import React from 'react';
 
-import viewports from './util/viewports';
+import { storybookViewports } from '../src/util/viewports';
 
 export const decorators = [
   (Story: Story) => (
@@ -26,7 +26,7 @@ export const decorators = [
 
 export const parameters = {
   viewport: {
-    viewports,
+    viewports: storybookViewports,
   },
   backgrounds: {
     values: [
