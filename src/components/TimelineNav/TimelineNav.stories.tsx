@@ -6,6 +6,7 @@ import {
   EdsThemeColorIconBrandPrimary,
   EdsThemeColorIconUtilitySuccess,
 } from '../../tokens-dist/ts/colors';
+import { chromaticViewports } from '../../util/viewports';
 import Icon from '../Icon';
 import Text from '../Text';
 import TimelineNavPanel from '../TimelineNavPanel';
@@ -155,6 +156,11 @@ type Args = React.ComponentProps<typeof TimelineNavPanel>;
 
 export const Default: StoryObj<Args> = {
   parameters: {
-    chromatic: { viewports: [414, 1366] },
+    chromatic: {
+      viewports: [
+        chromaticViewports.googlePixel2,
+        chromaticViewports.chromebook,
+      ],
+    },
   },
 };

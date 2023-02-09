@@ -546,7 +546,7 @@ export const CoursePlannerEdit = () => {
                 }
                 items={items}
                 multipleContainers={false}
-                unstyledItems={true}
+                unstyledItems
               />
             </Panel>
           </LayoutSection>

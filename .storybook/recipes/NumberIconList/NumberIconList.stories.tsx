@@ -17,7 +17,7 @@ export const Default: StoryObj<Args> = {
         <NumberIcon aria-label="Item 1" number={1} size="sm" />
         <NumberIcon
           aria-label="Item 2"
-          incomplete={true}
+          incomplete
           number={2}
           numberIconTitle="incomplete step 2"
           size="sm"
@@ -25,21 +25,21 @@ export const Default: StoryObj<Args> = {
         <NumberIcon aria-label="Item 3" number={3} size="sm" />
         <NumberIcon
           aria-label="Item 4"
-          incomplete={true}
+          incomplete
           number={4}
           numberIconTitle="incomplete step 4"
           size="sm"
         />
         <NumberIcon
           aria-label="Item 5"
-          incomplete={true}
+          incomplete
           number={5}
           numberIconTitle="incomplete step 5"
           size="sm"
         />
         <NumberIcon
           aria-label="Item 6"
-          incomplete={true}
+          incomplete
           number={6}
           numberIconTitle="incomplete step 6"
           size="sm"

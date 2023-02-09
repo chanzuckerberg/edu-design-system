@@ -252,7 +252,7 @@ export const DropdownButtonOnly = {
     <>
       <DropdownButton isOpen={false}>Dropdown button closed</DropdownButton>
       <br />
-      <DropdownButton isOpen={true}>Dropdown button open</DropdownButton>
+      <DropdownButton isOpen>Dropdown button open</DropdownButton>
     </>
   ),
   parameters: {

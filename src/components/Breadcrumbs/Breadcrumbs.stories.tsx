@@ -3,6 +3,7 @@ import { within } from '@storybook/testing-library';
 import React from 'react';
 
 import { Breadcrumbs } from './Breadcrumbs';
+import { chromaticViewports } from '../../util/viewports';
 
 export default {
   title: 'Components/Breadcrumbs',
@@ -89,7 +90,13 @@ export const LongText: StoryObj<Args> = {
     ),
   },
   parameters: {
-    chromatic: { viewports: [414, 768, 1366] },
+    chromatic: {
+      viewports: [
+        chromaticViewports.googlePixel2,
+        chromaticViewports.ipadMini,
+        chromaticViewports.chromebook,
+      ],
+    },
   },
 };
 
@@ -102,9 +109,9 @@ export const LongTextMenu: StoryObj<Args> = {
   },
   parameters: {
     viewport: {
-      defaultViewport: 'tablet',
+      defaultViewport: 'ipadMini',
     },
-    chromatic: { viewports: [834] },
+    chromatic: { viewports: [chromaticViewports.ipadMini] },
     axe: {
       skip: true,
     },

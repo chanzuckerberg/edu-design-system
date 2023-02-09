@@ -40,7 +40,8 @@
       }
     ],
     "@typescript-eslint/no-unused-vars": "warn",
-    "no-unused-vars": "off"
+    "no-unused-vars": "off",
+    "react/jsx-boolean-value": "warn"
   },
   "overrides": [
     {

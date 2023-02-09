@@ -2,12 +2,11 @@ import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
 import { PrimaryNav } from './PrimaryNav';
-import PrimaryNavItem from '../PrimaryNavItem';
 
 export default {
   title: 'Components/PrimaryNav',
   component: PrimaryNav,
-  subcomponents: { PrimaryNavItem },
+  subcomponents: { 'PrimaryNav.Item': PrimaryNav.Item },
   decorators: [
     (Story) => (
       <div style={{ background: '#000' }}>
@@ -19,7 +18,7 @@ export default {
     children: (
       <>
         <PrimaryNav.Item href="#" text="Nav Item" />
-        <PrimaryNav.Item href="#" isActive={true} text="Nav Item" />
+        <PrimaryNav.Item href="#" isActive text="Nav Item" />
         <PrimaryNav.Item href="#" text="Nav Item" />
       </>
     ),

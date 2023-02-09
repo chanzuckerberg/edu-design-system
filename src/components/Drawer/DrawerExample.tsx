@@ -37,7 +37,7 @@ export const DrawerExample = () => {
       <Drawer
         aria-describedby="drawer-description-1"
         aria-labelledby="drawer-heading-1"
-        dismissible={true}
+        dismissible
         isActive={drawerOpen}
         onClose={closeDrawerExample}
       >
