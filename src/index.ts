@@ -100,17 +100,3 @@ export { default as Tooltip } from './components/Tooltip';
  */
 export type { IconName } from './components/Icon';
 export type { BannerProps } from './components/Banner';
-
-/**
- * Project Overview Pilot components.
- *
- * These are unused at the moment -- we can re-add
- * the exports once we confirm this package is set
- * up correctly to be tree shaken.
- * In the meantime, leaving them commented out
- * ensures we don't unintentionally blow up the bundle size of
- * consuming apps.
- */
-// export { default as Header } from './components/Header';
-// export { default as PrimaryNav } from './components/PrimaryNav';
-// export { default as PrimaryNavItem } from './components/PrimaryNavItem';

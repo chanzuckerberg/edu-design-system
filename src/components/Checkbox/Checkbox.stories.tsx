@@ -55,7 +55,7 @@ export const Default: StoryObj<Args> = {
 };
 
 export const Checked: StoryObj<Args> = {
-  render: (args) => <CheckboxExample {...args} checked={true} />,
+  render: (args) => <CheckboxExample {...args} checked />,
 };
 
 export const Medium: StoryObj<Args> = {
@@ -63,7 +63,7 @@ export const Medium: StoryObj<Args> = {
 };
 
 export const MediumChecked: StoryObj<Args> = {
-  render: (args) => <CheckboxExample {...args} checked={true} size="md" />,
+  render: (args) => <CheckboxExample {...args} checked size="md" />,
 };
 
 export const Indeterminate: StoryObj<Args> = {

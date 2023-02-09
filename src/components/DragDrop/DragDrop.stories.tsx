@@ -658,7 +658,7 @@ const InteractiveDragDrop = () => {
       getNewState={(updatedItems: NewState) => returnUpdatedItems(updatedItems)}
       items={items}
       multipleContainers={false}
-      unstyledItems={true}
+      unstyledItems
     />
   );
 };
