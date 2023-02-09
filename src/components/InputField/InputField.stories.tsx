@@ -3,16 +3,13 @@ import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 
 import { InputField } from './InputField';
+import Button from '../Button';
 
 export default {
   title: 'Components/InputField',
   component: InputField,
   parameters: {
     badges: [BADGE.BETA],
-    axe: {
-      // InputField component independent of label, expected accessibility error
-      disabledRules: ['label'],
-    },
   },
   decorators: [
     (Story) => (
@@ -27,26 +24,202 @@ type Args = React.ComponentProps<typeof InputField>;
 
 export const Default: StoryObj<Args> = {
   args: {
-    placeholder: 'Placeholder',
+    label: 'Default input field',
+    fieldNote: 'This is a fieldnote.',
   },
 };
+
+export const Error: StoryObj<Args> = {
+  args: {
+    label: 'Error input field',
+    isError: true,
+    fieldNote: 'This is a fieldnote with an error.',
+  },
+};
+
 export const Disabled: StoryObj<Args> = {
+  args: {
+    label: 'Disabled input field',
+    disabled: true,
+    fieldNote: 'This InputField is disabled',
+  },
+  parameters: {
+    axe: {
+      // Disabled input does not need to meet color contrast
+      disabledRules: ['color-contrast'],
+    },
+  },
+};
+
+export const Required: StoryObj<Args> = {
+  args: {
+    label: 'Input field with fieldNote',
+    required: true,
+    fieldNote: 'This is a fieldnote for a required input field.',
+  },
+};
+
+export const NoVisibleLabel: StoryObj<Args> = {
+  args: {
+    'aria-label': 'Input for no visible label',
+    fieldNote: 'This input field has no visible label',
+    required: true,
+  },
+};
+
+export const InputWithin: StoryObj<Args> = {
   render: () => (
-    <>
-      <InputField
-        defaultValue="Default Value"
-        disabled
-        style={{ marginBottom: '0.5rem' }}
-      />
-      <InputField disabled placeholder="Placeholder" />
-    </>
+    <InputField
+      inputWithin={
+        <Button size="sm" variant="icon">
+          Button
+        </Button>
+      }
+      label="Input field with button inside"
+      type="text"
+    />
   ),
 };
-export const Error: StoryObj<Args> = {
-  render: () => (
-    <>
-      <InputField isError style={{ marginBottom: '0.5rem' }} />
-      <InputField isError placeholder="Placeholder" />
-    </>
+
+export const LabelFieldnoteVariants: StoryObj<Args> = {
+  render: (args) => (
+    <div
+      style={{
+        display: 'grid',
+        gridTemplateColumns: '1fr 2fr 2fr',
+        gap: '2rem',
+      }}
+    >
+      <div />
+      <p>Placeholder</p>
+      <p>No Placeholder</p>
+
+      <p>fieldNote, label</p>
+      <InputField
+        fieldNote="fieldNote text"
+        label="Label text"
+        placeholder="placeholder"
+        {...args}
+      />
+      <InputField fieldNote="fieldNote text" label="Label text" {...args} />
+      <p>no fieldNote, label</p>
+      <InputField label="Label text" placeholder="placeholder" {...args} />
+      <InputField label="Label text" {...args} />
+      <p>fieldNote, no label</p>
+      <InputField
+        aria-label="Label text"
+        fieldNote="fieldNote text"
+        placeholder="placeholder"
+        {...args}
+      />
+      <InputField
+        aria-label="Label text"
+        fieldNote="fieldNote text"
+        {...args}
+      />
+      <p>no fieldNote, no label</p>
+      <InputField aria-label="Label text" placeholder="placeholder" {...args} />
+      <InputField aria-label="Label text" {...args} />
+    </div>
   ),
+};
+
+export const ErrorVariants: StoryObj<Args> = {
+  args: {
+    isError: true,
+  },
+  ...LabelFieldnoteVariants,
+};
+
+export const DisabledVariants: StoryObj<Args> = {
+  args: {
+    disabled: true,
+  },
+  ...LabelFieldnoteVariants,
+  parameters: {
+    axe: {
+      // Disabled input does not need to meet color contrast
+      disabledRules: ['color-contrast'],
+    },
+  },
+};
+
+export const RequiredVariants: StoryObj<Args> = {
+  args: {
+    required: true,
+  },
+  render: (args) => (
+    <div
+      style={{
+        display: 'grid',
+        gridTemplateColumns: '1fr 2fr 2fr',
+        gap: '2rem',
+      }}
+    >
+      <div />
+      <p>Placeholder</p>
+      <p>No Placeholder</p>
+
+      <p>fieldNote, label</p>
+      <InputField
+        fieldNote="fieldNote text"
+        label="Label text"
+        placeholder="placeholder"
+        {...args}
+      />
+      <InputField fieldNote="fieldNote text" label="Label text" {...args} />
+      <p>no fieldNote, label</p>
+      <InputField label="Label text" placeholder="placeholder" {...args} />
+      <InputField label="Label text" {...args} />
+      <p>fieldNote, no label</p>
+      <InputField
+        aria-label="Label text"
+        fieldNote="fieldNote text"
+        placeholder="placeholder"
+        {...args}
+      />
+      <InputField
+        aria-label="Label text"
+        fieldNote="fieldNote text"
+        {...args}
+      />
+      <p>no fieldNote, no label</p>
+      <InputField aria-label="Label text" placeholder="placeholder" {...args} />
+      <InputField aria-label="Label text" {...args} />
+      <p>fieldNote, label, isError</p>
+      <InputField
+        fieldNote="fieldNote text"
+        isError
+        label="Label text"
+        placeholder="placeholder"
+        {...args}
+      />
+      <InputField
+        fieldNote="fieldNote text"
+        isError
+        label="Label text"
+        {...args}
+      />
+      <p>fieldNote, label, disabled</p>
+      <InputField
+        disabled
+        fieldNote="fieldNote text"
+        label="Label text"
+        placeholder="placeholder"
+        {...args}
+      />
+      <InputField
+        disabled
+        fieldNote="fieldNote text"
+        label="Label text"
+        {...args}
+      />
+    </div>
+  ),
+  parameters: {
+    axe: {
+      // Disabled input does not need to meet color contrast
+      disabledRules: ['color-contrast'],
+    },
+  },
 };
