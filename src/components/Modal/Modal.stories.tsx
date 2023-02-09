@@ -203,7 +203,7 @@ function InteractiveExample(args: InteractiveArgs) {
 
   return (
     <>
-      <Text size="sm" spacing="2x" weight="bold">
+      <Text className="mb-4" size="sm" weight="bold">
         Please note: opening the modal only works in the Canvas tab.
       </Text>
       <Button onClick={() => setOpen(true)} variant="primary">

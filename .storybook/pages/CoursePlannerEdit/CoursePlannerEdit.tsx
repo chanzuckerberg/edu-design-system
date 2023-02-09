@@ -268,8 +268,8 @@ export const CoursePlannerEdit = () => {
   const container1EmptyContent = () => {
     return (
       <>
-        <Text as="div" className="!mb-8">
-          <p>There are no more available projects to create your course plan</p>
+        <Text className="mb-8 max-w-xl">
+          There are no more available projects to create your course plan
         </Text>
         <img alt="hand with pencil" src={EmptyImage} />
       </>
@@ -279,8 +279,8 @@ export const CoursePlannerEdit = () => {
   const container2EmptyContent = () => {
     return (
       <>
-        <Text as="div" className="!mb-8">
-          <p>Drag in available projects to build your course plan</p>
+        <Text className="mb-8 max-w-xl">
+          Drag in available projects to build your course plan
         </Text>
         <img alt="hand with pencil" src={EmptyImage} />
       </>
@@ -526,18 +526,18 @@ export const CoursePlannerEdit = () => {
               >
                 Select projects for your History 6 plan
               </Heading>
-              <Text as="div" className="!mb-6">
-                <p>
+              <div className="mb-6 max-w-xl">
+                <Text className="mb-6">
                   Make a plan so that you can stay connected to learning
                   objectives even as changes occur throughout the year.
-                </p>
-                <p>
+                </Text>
+                <Text>
                   Room for more instructional copy per Content Strategy lorem
                   ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
                   est quam, consequat iaculis pretium accumsan, fringilla id
                   ligula.
-                </p>
-              </Text>
+                </Text>
+              </div>
 
               <DragDrop
                 containers={containers}

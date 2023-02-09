@@ -72,17 +72,21 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
           >
             Essential Questions
           </Heading>
-          <Text as="div" className="!mb-8">
-            <ul>
-              <li>How are structures in the body organized?</li>
-              <li>
+          <div className="mb-8 max-w-xl">
+            <ul className="ml-4 list-disc">
+              <li className="mb-2">
+                How are structures in the body organized?
+              </li>
+              <li className="mb-2">
                 How do these structures work together to support life? But
                 really need to see what it looks like if we have an extra long
                 question.
               </li>
-              <li>How are structures in the body organized?</li>
+              <li className="mb-2">
+                How are structures in the body organized?
+              </li>
             </ul>
-          </Text>
+          </div>
           <Heading
             as="h3"
             className="!mb-2"
@@ -91,19 +95,21 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
           >
             Key Take Aways
           </Heading>
-          <Text as="div" className="!mb-8">
-            <ol>
-              <li>
+          <div className="mb-8 max-w-xl">
+            <ol className="ml-4 list-decimal">
+              <li className="mb-2">
                 Groups of specialized cells make up organs and body systems,
                 which work together to support an organism’s survival.
               </li>
-              <li>
+              <li className="mb-2">
                 How are structures in the body organized? More text blah blah
                 blah.
               </li>
-              <li>How are structures in the body organized?</li>
+              <li className="mb-2">
+                How are structures in the body organized?
+              </li>
             </ol>
-          </Text>
+          </div>
           <Hr className="!mb-0" />
 
           <div className="fpo">FPO Brand asset</div>
@@ -213,11 +219,7 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
                 Estimated schedule: Days 4,5,6
               </Text>
             }
-            overline={
-              <Text as="div" size="overline">
-                Overline above title
-              </Text>
-            }
+            overline={<Text size="overline">Overline above title</Text>}
             title="Expectations of Samuri in Feudal Japan"
           >
             <Heading
@@ -228,13 +230,11 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
             >
               What to Focus on this Checkpoint
             </Heading>
-            <Text as="div" className="!mb-4">
-              <p>
-                Students individually develop a follow up question that builds
-                from their group’s experiment and describe their follow up
-                question in their conclusion. Students craft evidence-supported
-                explanations of how the body is organized and functions.
-              </p>
+            <Text className="mb-4 max-w-xl">
+              Students individually develop a follow up question that builds
+              from their group’s experiment and describe their follow up
+              question in their conclusion. Students craft evidence-supported
+              explanations of how the body is organized and functions.
             </Text>
             <dl className="mt-0 mb-6 flex">
               <dt>Term 1:</dt>
@@ -243,12 +243,10 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
               </dd>
             </dl>
 
-            <Text as="div" className="!mb-4">
-              <p>
-                Students collaboratively develop a single group research
-                question to frame their shared experiment, then describe the
-                group research question in the introduction.
-              </p>
+            <Text className="mb-4 max-w-xl">
+              Students collaboratively develop a single group research question
+              to frame their shared experiment, then describe the group research
+              question in the introduction.
             </Text>
             <dl className="mt-0 mb-8 flex">
               <dt>Term 1:</dt>
@@ -350,20 +348,14 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
                 Estimated schedule: Days 4,5,6
               </Text>
             }
-            overline={
-              <Text as="div" size="overline">
-                Checkpoint 2
-              </Text>
-            }
+            overline={<Text size="overline">Checkpoint 2</Text>}
             title="Expectations of Samuri in Feudal Japan"
           >
-            <Text as="div">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex
-              </p>
+            <Text className="max-w-xl">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex
             </Text>
           </Section>
         </TimelineNavPanel>
@@ -374,20 +366,14 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
                 Estimated schedule: Days 4,5,6
               </Text>
             }
-            overline={
-              <Text as="div" size="overline">
-                Checkpoint 3
-              </Text>
-            }
+            overline={<Text size="overline">Checkpoint 3</Text>}
             title="Expectations of Samuri in Feudal Japan"
           >
-            <Text as="div">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex
-              </p>
+            <Text className="max-w-xl">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex
             </Text>
           </Section>
         </TimelineNavPanel>
@@ -398,20 +384,14 @@ export const ProjectOverview = ({ activeIndex = 0 }: Props) => {
                 Estimated schedule: Days 4,5,6
               </Text>
             }
-            overline={
-              <Text as="div" size="overline">
-                Checkpoint 4
-              </Text>
-            }
+            overline={<Text size="overline">Checkpoint 4</Text>}
             title="Expectations of Samuri in Feudal Japan"
           >
-            <Text as="div">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex
-              </p>
+            <Text className="max-w-xl">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex
             </Text>
           </Section>
         </TimelineNavPanel>

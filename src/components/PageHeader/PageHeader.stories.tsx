@@ -27,11 +27,7 @@ export const WithDescription: StoryObj<Args> = {
 };
 export const WithOverline: StoryObj<Args> = {
   args: {
-    overline: (
-      <Text as="div" size="overline">
-        Overline above title
-      </Text>
-    ),
+    overline: <Text size="overline">Overline above title</Text>,
     title: 'Page header title',
     description:
       'This is a description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',

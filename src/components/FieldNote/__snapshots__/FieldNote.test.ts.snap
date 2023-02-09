@@ -15,19 +15,29 @@ exports[`<FieldNote /> WithText story renders snapshot 1`] = `
   id="field-1"
 >
   <div
-    class="layout-linelength-container text text--sm text-passage text-passage--sm"
+    class="max-w-xl"
   >
-    <p>
+    <p
+      class="text text--body mb-6"
+    >
       Here is a field note that involves:
     </p>
-    <ul>
-      <li>
+    <ul
+      class="ml-4 list-disc"
+    >
+      <li
+        class="mb-0"
+      >
         Multiple lines
       </li>
-      <li>
+      <li
+        class="mb-0"
+      >
         Arbitrary HTML text
       </li>
-      <li>
+      <li
+        class="mb-0"
+      >
         Even 
         <a
           class="clickable-style clickable-style--link clickable-style--brand link--link"

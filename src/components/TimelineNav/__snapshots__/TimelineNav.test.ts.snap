@@ -519,20 +519,21 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
     <div
       aria-hidden="false"
       aria-labelledby="2-0"
+      class="max-w-xl"
       id="1-0"
       role="tabpanel"
     >
-      <div
-        class="layout-linelength-container text text--body text-passage text-passage--body"
+      <h3
+        class="heading heading--size-h3 mb-6"
       >
-        <h3>
-          Overview
-        </h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-           
-        </p>
-      </div>
+        Overview
+      </h3>
+      <p
+        class="text text--body"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+         
+      </p>
     </div>
   </div>
 </div>
