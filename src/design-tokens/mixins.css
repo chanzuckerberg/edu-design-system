@@ -133,13 +133,15 @@
    * Input error state
    */
   &.error {
+    /* TODO: should this color be applied when a field is in an :invalid state */
     border-color: var(--eds-theme-color-border-utility-error-strong);
   }
 
   /**
-   * Disabled state
+   * Disabled/read-only state
    */
   &:disabled,
+  &:read-only,
   &:disabled::placeholder {
     border-color: var(--eds-theme-color-border-disabled);
     color: var(--eds-theme-color-text-disabled);
