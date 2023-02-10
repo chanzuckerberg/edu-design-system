@@ -29,9 +29,9 @@ export const WithText: StoryObj<Args> = {
       <div className="max-w-xl">
         <Text className="mb-6">Here is a field note that involves:</Text>
         <ul className="ml-4 list-disc">
-          <li className="mb-0">Multiple lines</li>
-          <li className="mb-0">Arbitrary HTML text</li>
-          <li className="mb-0">
+          <li>Multiple lines</li>
+          <li>Arbitrary HTML text</li>
+          <li>
             Even <Link href="#">text links</Link>
           </li>
         </ul>

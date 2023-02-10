@@ -37,11 +37,6 @@ export type Props = {
   className?: string;
   variant?: Variant;
   size?: Size;
-  /**
-   * Deprecated. Adds margin bottom spacing to the <Text> component. Use utility classes instead.
-   * @deprecated
-   */
-  spacing?: 'half' | '1x' | '2x';
   tabIndex?: number;
   weight?: 'bold' | 'normal' | null;
 } & React.HTMLAttributes<HTMLElement>;
@@ -67,12 +62,11 @@ export type Props = {
 export const Text = forwardRef(
   (
     {
-      as = 'p',
+      as: TagName = 'p',
       children,
       className,
       variant,
       size = 'body',
-      spacing,
       weight,
       /**
        * Components that wrap typography sometimes requires props such as event handlers
@@ -88,7 +82,6 @@ export const Text = forwardRef(
         'Info variant is deprecated, please consider another variant.',
       );
     }
-    const TagName = as;
     const componentClassName = clsx(
       styles['text'],
       styles[`text--${size}`],

@@ -25,19 +25,13 @@ exports[`<FieldNote /> WithText story renders snapshot 1`] = `
     <ul
       class="ml-4 list-disc"
     >
-      <li
-        class="mb-0"
-      >
+      <li>
         Multiple lines
       </li>
-      <li
-        class="mb-0"
-      >
+      <li>
         Arbitrary HTML text
       </li>
-      <li
-        class="mb-0"
-      >
+      <li>
         Even 
         <a
           class="clickable-style clickable-style--link clickable-style--brand link--link"
