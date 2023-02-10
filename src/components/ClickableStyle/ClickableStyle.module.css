@@ -494,9 +494,10 @@
 
 /**
  * Needs `:where` pseudoclass to reduce specificity so class overrides
- * for margin can happen where used.
+ * for margin can happen where used, but needs to be specific enough to override preflight.
  */
-:where(.clickable-style--link) {
+a:where(.clickable-style--link),
+button:where(.clickable-style--link) {
   /* 2px padding gives the text breathing room in the focus state */
   padding: 2px;
   /**

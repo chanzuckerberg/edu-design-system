@@ -7,7 +7,7 @@
 /**
  * Default input styles 
  */
-:where(.input) {
+.input {
   @mixin inputStyles;
   padding-left: var(--eds-size-2);
 }

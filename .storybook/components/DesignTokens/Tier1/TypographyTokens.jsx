@@ -63,25 +63,6 @@ export class Tier1TypographyTokens extends Component {
             })}
           </Grid>
         </Section>
-
-        <Section title="Line Height">
-          <Grid>
-            {filterTokens(`eds-line-height`).map(function (listItem) {
-              return (
-                <GridItem key={listItem.name}>
-                  <TokenSpecimen
-                    inlineStyles={{
-                      lineHeight: `var(${listItem.name})`,
-                    }}
-                    name={listItem.name}
-                    value={listItem.value}
-                    variant="typography-body"
-                  />
-                </GridItem>
-              );
-            })}
-          </Grid>
-        </Section>
       </div>
     );
   }
