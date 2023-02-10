@@ -262,13 +262,11 @@ exports[`<DragDrop /> Default story renders snapshot 1`] = `
           data-rbd-droppable-context-id="0"
           data-rbd-droppable-id="container-2"
         >
-          <div
-            class="layout-linelength-container text text--body text-passage text-passage--body !mb-8"
+          <p
+            class="text text--body mb-8 max-w-xl"
           >
-            <p>
-              Drag in available projects to build your couse plan
-            </p>
-          </div>
+            Drag in available projects to build your couse plan
+          </p>
           <svg
             fill="none"
             height="122"
@@ -726,13 +724,11 @@ exports[`<DragDrop /> HoveredHandle story renders snapshot 1`] = `
           data-rbd-droppable-context-id="1"
           data-rbd-droppable-id="container-2"
         >
-          <div
-            class="layout-linelength-container text text--body text-passage text-passage--body !mb-8"
+          <p
+            class="text text--body mb-8 max-w-xl"
           >
-            <p>
-              Drag in available projects to build your couse plan
-            </p>
-          </div>
+            Drag in available projects to build your couse plan
+          </p>
           <svg
             fill="none"
             height="164"

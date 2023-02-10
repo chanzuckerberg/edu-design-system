@@ -2,7 +2,6 @@ import clsx from 'clsx';
 import type { ForwardedRef } from 'react';
 import React, { forwardRef } from 'react';
 import styles from './Text.module.css';
-import LayoutLinelengthContainer from '../LayoutLinelengthContainer';
 
 export type Size =
   | 'body'
@@ -32,24 +31,12 @@ export type Variant =
 export type Props = {
   /**
    * Controls whether to render text inline (defaults to "p").
-   *
-   * "div" variant is deprecated.
    */
-  as?: 'p' | 'span' | 'div';
-  /**
-   * Flags if the length of the text passage should be capped.
-   * Used only with as="div" and defaults to true
-   */
-  capLinelength?: boolean;
+  as?: 'p' | 'span';
   children: React.ReactNode;
   className?: string;
   variant?: Variant;
   size?: Size;
-  /**
-   * Deprecated. Adds margin bottom spacing to the <Text> component. Use utility classes instead.
-   * @deprecated
-   */
-  spacing?: 'half' | '1x' | '2x';
   tabIndex?: number;
   weight?: 'bold' | 'normal' | null;
 } & React.HTMLAttributes<HTMLElement>;
@@ -75,13 +62,11 @@ export type Props = {
 export const Text = forwardRef(
   (
     {
-      as = 'p',
-      capLinelength = true,
+      as: TagName = 'p',
       children,
       className,
       variant,
       size = 'body',
-      spacing,
       weight,
       /**
        * Components that wrap typography sometimes requires props such as event handlers
@@ -97,16 +82,11 @@ export const Text = forwardRef(
         'Info variant is deprecated, please consider another variant.',
       );
     }
-    const TagName =
-      capLinelength && as === 'div' ? LayoutLinelengthContainer : as;
     const componentClassName = clsx(
       styles['text'],
       styles[`text--${size}`],
       variant && styles[`text--${variant}`],
       weight && styles[`text--${weight}-weight`],
-      spacing && styles[`text--${spacing}-spacing`],
-      as === 'div' && styles['text-passage'],
-      as === 'div' && styles[`text-passage--${size}`],
       className,
     );
     return (

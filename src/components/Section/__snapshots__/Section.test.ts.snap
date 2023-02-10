@@ -19,11 +19,11 @@ exports[`<Section /> Center story renders snapshot 1`] = `
           <div
             class="section__overline"
           >
-            <div
-              class="layout-linelength-container text text--overline text-passage text-passage--overline"
+            <p
+              class="text text--overline"
             >
               Overline above title
-            </div>
+            </p>
           </div>
           <h2
             class="heading heading--size-h2 section__title"
@@ -145,11 +145,11 @@ exports[`<Section /> WithOverline story renders snapshot 1`] = `
           <div
             class="section__overline"
           >
-            <div
-              class="layout-linelength-container text text--overline text-passage text-passage--overline"
+            <p
+              class="text text--overline"
             >
               Overline above title
-            </div>
+            </p>
           </div>
           <h2
             class="heading heading--size-h2 section__title"

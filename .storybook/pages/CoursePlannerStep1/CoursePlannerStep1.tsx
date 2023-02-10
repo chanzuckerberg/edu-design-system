@@ -63,18 +63,20 @@ export const CoursePlannerStep1 = () => {
             </Text>
           </LayoutSection>
           <LayoutSection region="main">
-            <Text as="div" className="!mb-8">
-              <h3>Tell us how often your course meets.</h3>
-              <p>
+            <div className="mb-8 max-w-xl">
+              <Heading className="mb-6" size="h3">
+                Tell us how often your course meets.
+              </Heading>
+              <Text className="mb-6">
                 We’ll adjust project plans based on your schedule. This way, you
                 can get a more accurate estimate of how long the course will
                 actually take.
-              </p>
-              <p>
+              </Text>
+              <Text>
                 If you teach multiple sections of this course, you can enter the
                 average amounts for each question below.
-              </p>
-            </Text>
+              </Text>
+            </div>
             <Text className={textClassName}>
               How many times per week do you have class?
             </Text>
