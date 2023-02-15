@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.0.0](https://github.com/chanzuckerberg/edu-design-system/compare/v8.0.0...v9.0.0) (2023-02-14)
+
+
+### ⚠ BREAKING CHANGES
+
+* **text:** fully remove spacing and text passage variants ([#1492](https://github.com/chanzuckerberg/edu-design-system/issues/1492)) ([07c4406](https://github.com/chanzuckerberg/edu-design-system/commit/07c440648e200b5d038b1786bff18206d7879a52))
+* **preflight:** turn on TW preflight ([#1490](https://github.com/chanzuckerberg/edu-design-system/issues/1490)) ([a5c3966](https://github.com/chanzuckerberg/edu-design-system/commit/a5c39661a81fa1b4b9dcd6a8c32f59e5667fad62))
+* rename inputfield to input and textfield to inputfield ([#1485](https://github.com/chanzuckerberg/edu-design-system/issues/1485)) ([8d6c120](https://github.com/chanzuckerberg/edu-design-system/commit/8d6c1202b15dfcf45876c7f6217b9b7ba8dce057))
+* remove unused components 3/3 ([#1483](https://github.com/chanzuckerberg/edu-design-system/issues/1483)) ([8856c21](https://github.com/chanzuckerberg/edu-design-system/commit/8856c217b4415087cf41ab86382e8ce5d5fa5227))
+
+### Features
+
+* **preflight:** turn on TW preflight ([#1490](https://github.com/chanzuckerberg/edu-design-system/issues/1490)) ([a5c3966](https://github.com/chanzuckerberg/edu-design-system/commit/a5c39661a81fa1b4b9dcd6a8c32f59e5667fad62))
+* support Remix SSR ([9549383](https://github.com/chanzuckerberg/edu-design-system/commit/9549383c3e6052ecf3b8532e3caa874197ded3ea))
+
+
+### Bug Fixes
+
+* **build:** add css files as having side effects ([#1481](https://github.com/chanzuckerberg/edu-design-system/issues/1481)) ([ab07cee](https://github.com/chanzuckerberg/edu-design-system/commit/ab07cee267de31153c36004be68ebbad9fc3756b))
+* specify that the EDS package does not have side effects ([#1473](https://github.com/chanzuckerberg/edu-design-system/issues/1473)) ([c4a0cfb](https://github.com/chanzuckerberg/edu-design-system/commit/c4a0cfb6438f1cba234f0aa275a871cfb0694fa7))
+
 ## [8.0.0](https://github.com/chanzuckerberg/edu-design-system/compare/v7.2.1...v8.0.0) (2023-01-23)
 
 
