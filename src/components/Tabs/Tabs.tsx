@@ -1,3 +1,4 @@
+import { useId } from '@reach/auto-id';
 import clsx from 'clsx';
 import debounce from 'lodash.debounce';
 import React, {
@@ -10,7 +11,6 @@ import React, {
   type KeyboardEvent,
 } from 'react';
 import { allByType } from 'react-children-by-type';
-import { useUID, useUIDSeed } from 'react-uid';
 import styles from './Tabs.module.css';
 import {
   L_ARROW_KEYCODE,
@@ -60,8 +60,7 @@ export const Tabs = ({
   onChange,
   ...other
 }: Props) => {
-  const getUID = useUIDSeed();
-  const activeTabPanelId = useUID();
+  const activeTabPanelId = useId();
   const headerRef = useRef<HTMLDivElement>(null);
   const [activeIndexState, setActiveIndexState] = useState(activeIndex);
   const [scrollableLeft, setScrollableLeft] = useState<boolean>(false);
@@ -79,9 +78,11 @@ export const Tabs = ({
     [tabs],
   );
 
+  const generatedId = useId(other.id);
+  const tabIdPrefix = String(generatedId);
   const tabIds = useMemo(
-    () => tabs.map((tab) => tab.props.id || getUID(tab)),
-    [tabs, getUID],
+    () => tabs.map((tab) => `${tabIdPrefix}-${tab.props.title}`),
+    [tabs, tabIdPrefix],
   );
 
   // Set the active tab if the `activeIndex` prop changes.

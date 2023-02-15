@@ -26,16 +26,16 @@ export const Default: StoryObj<Args> = {
 export const WithText: StoryObj<Args> = {
   args: {
     children: (
-      <Text as="div" size="sm">
-        <p>Here is a field note that involves:</p>
-        <ul>
+      <div className="max-w-xl">
+        <Text className="mb-6">Here is a field note that involves:</Text>
+        <ul className="ml-4 list-disc">
           <li>Multiple lines</li>
           <li>Arbitrary HTML text</li>
           <li>
             Even <Link href="#">text links</Link>
           </li>
         </ul>
-      </Text>
+      </div>
     ),
     id: 'field-1',
   },

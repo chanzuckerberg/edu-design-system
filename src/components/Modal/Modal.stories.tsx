@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { Modal, ModalContent } from './Modal';
 import styles from './Modal.stories.module.css';
 import { Button, ButtonGroup, Heading, Text, Tooltip } from '../../';
+import { chromaticViewports, storybookViewports } from '../../util/viewports';
 import { VARIANTS } from '../Heading/Heading';
 
 export default {
@@ -112,9 +113,12 @@ export const Mobile: StoryObj<Args> = {
   parameters: {
     ...Default.parameters,
     viewport: {
-      defaultViewport: 'mobile2',
+      defaultViewport: 'googlePixel2',
     },
-    chromatic: { disableSnapshot: false, viewports: [414] },
+    chromatic: {
+      disableSnapshot: false,
+      viewports: [chromaticViewports.googlePixel2],
+    },
   },
 };
 
@@ -162,18 +166,15 @@ export const Tablet: StoryObj<Args> = {
   parameters: {
     ...Default.parameters,
     viewport: {
-      defaultViewport: 'mobilelandscape',
+      defaultViewport: 'ipadMini',
       viewports: {
-        mobilelandscape: {
-          name: 'Mobile Landscape',
-          styles: {
-            width: '768px',
-            height: '1024px',
-          },
-        },
+        mobilelandscape: storybookViewports.ipadMini,
       },
     },
-    chromatic: { disableSnapshot: false, viewports: [768] },
+    chromatic: {
+      disableSnapshot: false,
+      viewports: [chromaticViewports.ipadMini],
+    },
   },
 };
 
@@ -202,7 +203,7 @@ function InteractiveExample(args: InteractiveArgs) {
 
   return (
     <>
-      <Text size="sm" spacing="2x" weight="bold">
+      <Text className="mb-4" size="sm" weight="bold">
         Please note: opening the modal only works in the Canvas tab.
       </Text>
       <Button onClick={() => setOpen(true)} variant="primary">
@@ -276,7 +277,7 @@ export const ControlHeadingInteractive: StoryObj<HeadingArgs> = {
 
 export const WithoutCloseButton: StoryObj<InteractiveArgs> = {
   render: (args) => (
-    <InteractiveExample {...args} hideCloseButton={true}>
+    <InteractiveExample {...args} hideCloseButton>
       {getChildren()}
     </InteractiveExample>
   ),

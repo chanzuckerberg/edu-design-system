@@ -2734,9 +2734,7 @@ exports[`<Icon /> InText story renders snapshot 1`] = `
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="6"
-    >
+    <title>
       icon with 1em line height
     </title>
     <path
@@ -2754,9 +2752,7 @@ exports[`<Icon /> InText story renders snapshot 1`] = `
     width="2em"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="7"
-    >
+    <title>
       icon with 2em line height
     </title>
     <path
@@ -2766,6 +2762,8 @@ exports[`<Icon /> InText story renders snapshot 1`] = `
   ; 2em) which is harder to determine. Take a look at the icons available in
    
   <a
+    class="clickable-style clickable-style--link clickable-style--brand link--link"
+    data-bootstrap-override="clickable-style-link"
     href="https://material-ui.com/components/material-icons/"
     rel="noreferrer"
     target="_blank"

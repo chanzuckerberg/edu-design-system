@@ -94,8 +94,8 @@ export const Default: StoryObj<Args> = {
         itemIds: [],
         emptyContent: (
           <>
-            <Text as="div" className="!mb-8">
-              <p>Drag in available projects to build your couse plan</p>
+            <Text className="mb-8 max-w-xl">
+              Drag in available projects to build your couse plan
             </Text>
             <svg
               fill="none"
@@ -368,8 +368,8 @@ export const HoveredHandle: StoryObj<Args> = {
         itemIds: [],
         emptyContent: (
           <>
-            <Text as="div" className="!mb-8">
-              <p>Drag in available projects to build your couse plan</p>
+            <Text className="mb-8 max-w-xl">
+              Drag in available projects to build your couse plan
             </Text>
             <svg
               fill="none"
@@ -658,7 +658,7 @@ const InteractiveDragDrop = () => {
       getNewState={(updatedItems: NewState) => returnUpdatedItems(updatedItems)}
       items={items}
       multipleContainers={false}
-      unstyledItems={true}
+      unstyledItems
     />
   );
 };

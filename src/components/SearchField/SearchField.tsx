@@ -2,21 +2,17 @@ import clsx from 'clsx';
 import React from 'react';
 import styles from './SearchField.module.css';
 import Icon from '../Icon';
-import type { InputFieldProps } from '../InputField';
-import InputField from '../InputField';
+import type { InputProps } from '../Input';
+import Input from '../Input';
 
 /**
  * BETA: This component is still a work in progress and is subject to change.
  *
  * `import {SearchField} from "@chanzuckerberg/eds";`
  *
- * A search InputField component styled for use with the SearchBar.
+ * A search Input component styled for use with the SearchBar.
  */
-export const SearchField = ({
-  className,
-  disabled,
-  ...other
-}: InputFieldProps) => {
+export const SearchField = ({ className, disabled, ...other }: InputProps) => {
   const inputClassName = clsx(styles['search-field__input'], className);
   const iconClassName = clsx(
     styles['search-field__icon'],
@@ -25,7 +21,7 @@ export const SearchField = ({
 
   return (
     <div className={styles['search-field']}>
-      <InputField
+      <Input
         className={inputClassName}
         disabled={disabled}
         placeholder="Search"

@@ -19,9 +19,7 @@ exports[`Modal Brand story renders snapshot 1`] = `
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="4"
-      >
+      <title>
         close modal
       </title>
       <path
@@ -97,9 +95,7 @@ exports[`Modal Default story renders snapshot 1`] = `
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="1"
-      >
+      <title>
         close modal
       </title>
       <path
@@ -178,9 +174,7 @@ exports[`Modal DefaultInteractive story renders snapshot 1`] = `
         width="1.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title
-          id="17"
-        >
+        <title>
           close modal
         </title>
         <path
@@ -249,9 +243,7 @@ exports[`Modal Medium story renders snapshot 1`] = `
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="2"
-      >
+      <title>
         close modal
       </title>
       <path
@@ -317,9 +309,7 @@ exports[`Modal Mobile story renders snapshot 1`] = `
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="5"
-      >
+      <title>
         close modal
       </title>
       <path
@@ -385,9 +375,7 @@ exports[`Modal MobileBrand story renders snapshot 1`] = `
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="7"
-      >
+      <title>
         close modal
       </title>
       <path
@@ -463,9 +451,7 @@ exports[`Modal MobileLandscape story renders snapshot 1`] = `
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="6"
-      >
+      <title>
         close modal
       </title>
       <path
@@ -531,9 +517,7 @@ exports[`Modal MobileLandscapeBrand story renders snapshot 1`] = `
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="8"
-      >
+      <title>
         close modal
       </title>
       <path
@@ -605,9 +589,7 @@ exports[`Modal ModalStepper story renders snapshot 1`] = `
     width="0.5rem"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="21"
-    >
+    <title>
       Active Step 1
     </title>
     <path
@@ -624,9 +606,7 @@ exports[`Modal ModalStepper story renders snapshot 1`] = `
     width="0.5rem"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="22"
-    >
+    <title>
       Step 2
     </title>
     <circle
@@ -651,9 +631,7 @@ exports[`Modal ModalStepper story renders snapshot 1`] = `
     width="0.5rem"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title
-      id="23"
-    >
+    <title>
       Step 3
     </title>
     <circle
@@ -690,9 +668,7 @@ exports[`Modal Small story renders snapshot 1`] = `
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="3"
-      >
+      <title>
         close modal
       </title>
       <path
@@ -758,9 +734,7 @@ exports[`Modal Tablet story renders snapshot 1`] = `
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="9"
-      >
+      <title>
         close modal
       </title>
       <path
@@ -826,9 +800,7 @@ exports[`Modal TabletBrand story renders snapshot 1`] = `
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="10"
-      >
+      <title>
         close modal
       </title>
       <path
@@ -917,9 +889,7 @@ exports[`Modal WithLongText story renders snapshot 1`] = `
         width="1.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title
-          id="18"
-        >
+        <title>
           close modal
         </title>
         <path
@@ -1019,9 +989,7 @@ exports[`Modal WithLongTextScrollable story renders snapshot 1`] = `
         width="1.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title
-          id="19"
-        >
+        <title>
           close modal
         </title>
         <path
@@ -1109,9 +1077,7 @@ exports[`Modal WithStepper story renders snapshot 1`] = `
       width="1.5rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="11"
-      >
+      <title>
         close modal
       </title>
       <path
@@ -1149,9 +1115,7 @@ exports[`Modal WithStepper story renders snapshot 1`] = `
         width="0.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title
-          id="12"
-        >
+        <title>
           Step 1
         </title>
         <circle
@@ -1176,9 +1140,7 @@ exports[`Modal WithStepper story renders snapshot 1`] = `
         width="0.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title
-          id="13"
-        >
+        <title>
           Active Step 2
         </title>
         <path
@@ -1195,9 +1157,7 @@ exports[`Modal WithStepper story renders snapshot 1`] = `
         width="0.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title
-          id="14"
-        >
+        <title>
           Step 3
         </title>
         <circle
@@ -1222,9 +1182,7 @@ exports[`Modal WithStepper story renders snapshot 1`] = `
         width="0.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title
-          id="15"
-        >
+        <title>
           Step 4
         </title>
         <circle
@@ -1249,9 +1207,7 @@ exports[`Modal WithStepper story renders snapshot 1`] = `
         width="0.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title
-          id="16"
-        >
+        <title>
           Step 5
         </title>
         <circle
@@ -1321,9 +1277,7 @@ exports[`Modal WithoutHeaderAndFooter story renders snapshot 1`] = `
         width="1.5rem"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title
-          id="20"
-        >
+        <title>
           close modal
         </title>
         <path

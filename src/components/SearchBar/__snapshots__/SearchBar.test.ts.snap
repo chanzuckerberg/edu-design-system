@@ -18,7 +18,7 @@ exports[`<SearchField /> Custom story renders snapshot 1`] = `
       class="search-field"
     >
       <input
-        class="input-field search-field__input"
+        class="input search-field__input"
         placeholder="Search"
         type="search"
       />
@@ -32,9 +32,7 @@ exports[`<SearchField /> Custom story renders snapshot 1`] = `
         width="1.25rem"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title
-          id="3"
-        >
+        <title>
           search
         </title>
         <path
@@ -48,7 +46,7 @@ exports[`<SearchField /> Custom story renders snapshot 1`] = `
       class="search-field"
     >
       <input
-        class="input-field search-field__input"
+        class="input search-field__input"
         placeholder="Search"
         type="search"
       />
@@ -62,9 +60,7 @@ exports[`<SearchField /> Custom story renders snapshot 1`] = `
         width="1.25rem"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title
-          id="4"
-        >
+        <title>
           search
         </title>
         <path
@@ -94,7 +90,7 @@ exports[`<SearchField /> Default story renders snapshot 1`] = `
       class="search-field"
     >
       <input
-        class="input-field search-field__input"
+        class="input search-field__input"
         placeholder="Search"
         type="search"
       />
@@ -108,9 +104,7 @@ exports[`<SearchField /> Default story renders snapshot 1`] = `
         width="1.25rem"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title
-          id="1"
-        >
+        <title>
           search
         </title>
         <path
@@ -140,7 +134,7 @@ exports[`<SearchField /> Disabled story renders snapshot 1`] = `
       class="search-field"
     >
       <input
-        class="input-field search-field__input"
+        class="input search-field__input"
         disabled=""
         placeholder="Search"
         type="search"
@@ -155,9 +149,7 @@ exports[`<SearchField /> Disabled story renders snapshot 1`] = `
         width="1.25rem"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title
-          id="2"
-        >
+        <title>
           search
         </title>
         <path
@@ -200,7 +192,7 @@ exports[`<SearchField /> SearchField story renders snapshot 1`] = `
     class="search-field"
   >
     <input
-      class="input-field search-field__input"
+      class="input search-field__input"
       placeholder="Search"
       type="search"
     />
@@ -214,9 +206,7 @@ exports[`<SearchField /> SearchField story renders snapshot 1`] = `
       width="1.25rem"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title
-        id="5"
-      >
+      <title>
         search
       </title>
       <path

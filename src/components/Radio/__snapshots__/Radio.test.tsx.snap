@@ -14,7 +14,7 @@ exports[`<Radio /> Checked story renders snapshot 1`] = `
         checked=""
         class="radio__input"
         data-bootstrap-override="radio"
-        id="5"
+        id="4"
         type="radio"
       />
       <svg
@@ -35,7 +35,7 @@ exports[`<Radio /> Checked story renders snapshot 1`] = `
     <label
       class="label label--lg radio__label radio__label--lg"
       data-bootstrap-override="label"
-      for="5"
+      for="4"
     >
       Option 1
     </label>
@@ -57,7 +57,7 @@ exports[`<Radio /> CheckedMedium story renders snapshot 1`] = `
         checked=""
         class="radio__input"
         data-bootstrap-override="radio"
-        id="7"
+        id="5"
         type="radio"
       />
       <svg
@@ -78,7 +78,7 @@ exports[`<Radio /> CheckedMedium story renders snapshot 1`] = `
     <label
       class="label label--md radio__label radio__label--md"
       data-bootstrap-override="label"
-      for="7"
+      for="5"
     >
       Option 1
     </label>
@@ -142,7 +142,7 @@ exports[`<Radio /> Disabled story renders snapshot 1`] = `
         class="radio__input"
         data-bootstrap-override="radio"
         disabled=""
-        id="9"
+        id="6"
         type="radio"
       />
       <svg
@@ -163,7 +163,7 @@ exports[`<Radio /> Disabled story renders snapshot 1`] = `
     <label
       class="label label--lg label--disabled radio__label radio__label--lg"
       data-bootstrap-override="label"
-      for="9"
+      for="6"
     >
       Option 1
     </label>
@@ -187,7 +187,7 @@ exports[`<Radio /> LongLabels story renders snapshot 1`] = `
         <input
           class="radio__input"
           data-bootstrap-override="radio"
-          id="19"
+          id="11"
           readonly=""
           type="radio"
         />
@@ -209,7 +209,7 @@ exports[`<Radio /> LongLabels story renders snapshot 1`] = `
       <label
         class="label label--lg radio__label radio__label--lg"
         data-bootstrap-override="label"
-        for="19"
+        for="11"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit
       </label>
@@ -223,7 +223,7 @@ exports[`<Radio /> LongLabels story renders snapshot 1`] = `
         <input
           class="radio__input"
           data-bootstrap-override="radio"
-          id="21"
+          id="12"
           readonly=""
           type="radio"
         />
@@ -245,7 +245,7 @@ exports[`<Radio /> LongLabels story renders snapshot 1`] = `
       <label
         class="label label--md radio__label radio__label--md"
         data-bootstrap-override="label"
-        for="21"
+        for="12"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit
       </label>
@@ -260,7 +260,7 @@ exports[`<Radio /> LongLabels story renders snapshot 1`] = `
           class="radio__input"
           data-bootstrap-override="radio"
           disabled=""
-          id="23"
+          id="13"
           type="radio"
         />
         <svg
@@ -281,7 +281,7 @@ exports[`<Radio /> LongLabels story renders snapshot 1`] = `
       <label
         class="label label--lg label--disabled radio__label radio__label--lg"
         data-bootstrap-override="label"
-        for="23"
+        for="13"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit
       </label>
@@ -296,7 +296,7 @@ exports[`<Radio /> LongLabels story renders snapshot 1`] = `
           class="radio__input"
           data-bootstrap-override="radio"
           disabled=""
-          id="25"
+          id="14"
           type="radio"
         />
         <svg
@@ -317,7 +317,7 @@ exports[`<Radio /> LongLabels story renders snapshot 1`] = `
       <label
         class="label label--md label--disabled radio__label radio__label--md"
         data-bootstrap-override="label"
-        for="25"
+        for="14"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit
       </label>
@@ -425,7 +425,7 @@ exports[`<Radio /> WithoutVisibleLabel story renders snapshot 1`] = `
         aria-label="unchecked radio"
         class="radio__input"
         data-bootstrap-override="radio"
-        id="11"
+        id="7"
         readonly=""
         type="radio"
       />
@@ -447,7 +447,7 @@ exports[`<Radio /> WithoutVisibleLabel story renders snapshot 1`] = `
     <label
       class="label label--lg radio__label radio__label--lg"
       data-bootstrap-override="label"
-      for="11"
+      for="7"
     />
   </div>
   <div
@@ -461,7 +461,7 @@ exports[`<Radio /> WithoutVisibleLabel story renders snapshot 1`] = `
         checked=""
         class="radio__input"
         data-bootstrap-override="radio"
-        id="13"
+        id="8"
         readonly=""
         type="radio"
       />
@@ -483,7 +483,7 @@ exports[`<Radio /> WithoutVisibleLabel story renders snapshot 1`] = `
     <label
       class="label label--lg radio__label radio__label--lg"
       data-bootstrap-override="label"
-      for="13"
+      for="8"
     />
   </div>
   <div
@@ -497,7 +497,7 @@ exports[`<Radio /> WithoutVisibleLabel story renders snapshot 1`] = `
         class="radio__input"
         data-bootstrap-override="radio"
         disabled=""
-        id="15"
+        id="9"
         type="radio"
       />
       <svg
@@ -518,7 +518,7 @@ exports[`<Radio /> WithoutVisibleLabel story renders snapshot 1`] = `
     <label
       class="label label--lg label--disabled radio__label radio__label--lg"
       data-bootstrap-override="label"
-      for="15"
+      for="9"
     />
   </div>
   <div
@@ -533,7 +533,7 @@ exports[`<Radio /> WithoutVisibleLabel story renders snapshot 1`] = `
         class="radio__input"
         data-bootstrap-override="radio"
         disabled=""
-        id="17"
+        id="10"
         type="radio"
       />
       <svg
@@ -554,7 +554,7 @@ exports[`<Radio /> WithoutVisibleLabel story renders snapshot 1`] = `
     <label
       class="label label--lg label--disabled radio__label radio__label--lg"
       data-bootstrap-override="label"
-      for="17"
+      for="10"
     />
   </div>
 </div>

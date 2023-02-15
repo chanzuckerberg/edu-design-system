@@ -1,8 +1,8 @@
+import { useId } from '@reach/auto-id';
 import clsx from 'clsx';
 import type { KeyboardEventHandler, ReactNode } from 'react';
 import React, { useRef, useState, useEffect, useCallback } from 'react';
 import { allByType } from 'react-children-by-type';
-import { useUIDSeed } from 'react-uid';
 import styles from './TimelineNav.module.css';
 import {
   L_ARROW_KEYCODE,
@@ -105,7 +105,6 @@ export const TimelineNav = ({
   // we can't use the hook in an iterator like this, so generate the base and increment if needed
   const [idVar, setId] = useState<string[]>([]);
   const [ariaLabelledByVar, setAriaLabelledBy] = useState<string[]>([]);
-  const getUID = useUIDSeed();
 
   /**
    * Get previous prop
@@ -139,23 +138,28 @@ export const TimelineNav = ({
     }
   }, [prevActiveIndex, activeIndex, timelineNavItemRefs]);
 
+  const generatedId = useId(id);
+  const idPrefix = String(generatedId);
+  const generatedAriaLabelledBy = useId(other['aria-labelledby']);
+  const ariaLabelledByPrefix = String(generatedAriaLabelledBy);
+
   /**
    * Autogenerate ids on tabs if not defined.
    */
   useEffect(() => {
     setId(
-      timelineNavItems().map((item) =>
-        item.props.id ? item.props.id : getUID(item),
+      timelineNavItems().map((item, index) =>
+        item.props.id ? item.props.id : `${idPrefix}-${index}`,
       ),
     );
     setAriaLabelledBy(
-      timelineNavItems().map((item) =>
+      timelineNavItems().map((item, index) =>
         item.props['aria-labelledby']
           ? item.props['aria-labelledby']
-          : getUID(item),
+          : `${ariaLabelledByPrefix}-${index}`,
       ),
     );
-  }, [timelineNavItems, getUID]);
+  }, [timelineNavItems, idPrefix, ariaLabelledByPrefix]);
 
   /**
    * On open
@@ -302,7 +306,7 @@ export const TimelineNav = ({
           <NumberIcon
             aria-label="incomplete step"
             className={styles['timeline-nav__icon']}
-            incomplete={true}
+            incomplete
             number={i}
             numberIconTitle="incomplete step"
           />

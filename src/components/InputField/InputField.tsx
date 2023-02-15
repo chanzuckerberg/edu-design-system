@@ -1,18 +1,18 @@
+import { useId } from '@reach/auto-id';
 import clsx from 'clsx';
-import type { ChangeEventHandler } from 'react';
+import type { ChangeEventHandler, ReactNode } from 'react';
 import React, { forwardRef } from 'react';
 import styles from './InputField.module.css';
+import FieldNote from '../FieldNote';
+import Input from '../Input';
+import Label from '../Label';
+import Text from '../Text';
 
-export type InputFieldProps = React.InputHTMLAttributes<HTMLInputElement> & {
+export type Props = React.InputHTMLAttributes<HTMLInputElement> & {
   /**
-   * String that describes a type of file that may be selected by the user
-   * https://developer.mozilla.org/en-US/docs/Web/*HTML/Element/input/file#Unique_file_type_specifiers
+   * Aria-label to provide an accesible name for the text input if no visible label is provided.
    */
-  accept?: string;
-  /**
-   * HTML id of the helper text used to describe the component
-   */
-  'aria-describedby'?: string;
+  'aria-label'?: string;
   /**
    * CSS class names that can be appended to the component.
    */
@@ -21,6 +21,10 @@ export type InputFieldProps = React.InputHTMLAttributes<HTMLInputElement> & {
    * Disables the field and prevents editing the contents
    */
   disabled?: boolean;
+  /**
+   * Text under the text input used to provide a description or error message to describe the input.
+   */
+  fieldNote?: ReactNode;
   /**
    * HTML id for the component
    */
@@ -38,37 +42,33 @@ export type InputFieldProps = React.InputHTMLAttributes<HTMLInputElement> & {
     | 'numeric'
     | 'decimal';
   /**
+   * Node(s) that can be nested within the input field
+   */
+  inputWithin?: ReactNode;
+  /**
    * Error state of the form field
    */
   isError?: boolean;
   /**
-   * Maximum number the input can take. When this number equals the input value, the plus button becomes disabled.
+   * HTML label text
+   */
+  label?: string;
+  /**
+   * Maximum value allowed for the input, if type is 'number'. When the input value matches this maximum, the plus button becomes disabled.
    */
   max?: number;
   /**
-   * Max number of characters for the text input
-   */
-  maxLength?: number;
-  /**
-   * Minimum number the input can take. When this number equals the input value, the minus button becomes disabled.
+   * Minimum value allowed for the input, if type is 'number'. When the input value matches this minimum, the minus button becomes disabled.
    */
   min?: number;
-  /**
-   * Multiple is a boolean to allow multiple files to be uploaded
-   */
-  multiple?: boolean;
   /**
    * HTML name attribute for the input
    */
   name?: string;
   /**
-   * Function that fires when field value has changed
+   * Function that runs on change of the input
    */
   onChange?: ChangeEventHandler;
-  /**
-   * Defines a regular expression that the input's value must match in order for the value to pass constraint validation.
-   */
-  pattern?: string;
   /**
    * Placeholder attribute for input. Note: placeholder should be used sparingly
    */
@@ -82,6 +82,10 @@ export type InputFieldProps = React.InputHTMLAttributes<HTMLInputElement> & {
    */
   required?: boolean;
   /**
+   * String for the required label to add additional information if needed.
+   */
+  requiredLabel?: string;
+  /**
    * Title attribute on input
    */
   title?: string;
@@ -94,7 +98,6 @@ export type InputFieldProps = React.InputHTMLAttributes<HTMLInputElement> & {
     | 'datetime'
     | 'datetime-local'
     | 'date'
-    | 'file'
     | 'month'
     | 'time'
     | 'week'
@@ -104,38 +107,102 @@ export type InputFieldProps = React.InputHTMLAttributes<HTMLInputElement> & {
     | 'search'
     | 'tel';
   /**
-   * The value of the input
+   * Value passed down from higher levels for initial state
    */
   value?: string | number;
   /**
-   * The default value of the input
+   * Default value passed down from higher levels for initial state
    */
   defaultValue?: string | number;
 };
 
 /**
- * BETA: This component is still a work in progress and is subject to change.
- *
  * `import {InputField} from "@chanzuckerberg/eds";`
  *
- * Text input component for one line of text. For multiple lines, consider the Textarea component.
+ * An input with optional labels and error messaging built-in.
  */
-export const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
-  ({ className, disabled, id, isError, ...other }, ref) => {
-    const componentClassName = clsx(
-      styles['input-field'],
-      isError && styles['error'],
+export const InputField = forwardRef<HTMLInputElement, Props>(
+  (
+    {
+      'aria-describedby': ariaDescribedBy,
       className,
+      disabled,
+      fieldNote,
+      id,
+      inputWithin,
+      isError,
+      label,
+      required,
+      type = 'text',
+      ...other
+    },
+    ref,
+  ) => {
+    if (
+      process.env.NODE_ENV !== 'production' &&
+      !label &&
+      !other['aria-label']
+    ) {
+      throw new Error('You must provide a visible label or aria-label');
+    }
+
+    const shouldRenderOverline = !!(label || required);
+    const overlineClassName = clsx(
+      styles['input-field__overline'],
+      !label && styles['input-field__overline--no-label'],
+      disabled && styles['input-field__overline--disabled'],
     );
 
+    const generatedIdVar = useId(id);
+    const idVar = String(generatedIdVar);
+
+    const generatedAriaDescribedById = useId(ariaDescribedBy);
+    const ariaDescribedByVar = fieldNote
+      ? ariaDescribedBy || String(generatedAriaDescribedById)
+      : undefined;
+
     return (
-      <input
-        className={componentClassName}
-        disabled={disabled}
-        id={id}
-        ref={ref}
-        {...other}
-      />
+      <div className={className}>
+        {shouldRenderOverline && (
+          <div className={overlineClassName}>
+            {label && <Label htmlFor={idVar} text={label} />}
+            {required && (
+              <Text as="p" size="sm">
+                Required
+              </Text>
+            )}
+          </div>
+        )}
+
+        <div className={styles['input-field__body']}>
+          <Input
+            aria-describedby={ariaDescribedByVar}
+            aria-invalid={!!isError}
+            data-bootstrap-override="inputfield"
+            disabled={disabled}
+            id={idVar}
+            isError={isError}
+            ref={ref}
+            required={required}
+            type={type}
+            {...other}
+          />
+          {inputWithin && (
+            <div className={styles['input-field__input-within']}>
+              {inputWithin}
+            </div>
+          )}
+        </div>
+        {fieldNote && (
+          <FieldNote
+            disabled={disabled}
+            id={ariaDescribedByVar}
+            isError={isError}
+          >
+            {fieldNote}
+          </FieldNote>
+        )}
+      </div>
     );
   },
 );

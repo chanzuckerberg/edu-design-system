@@ -44,7 +44,9 @@ yarn release
 yarn release:major
 ```
 
-We use [standard-version](https://github.com/conventional-changelog/standard-version) to increment the version number in `package.json`, create a git tag for the new release, and update `CHANGELOG.md` based on the commit log. The package is not published, yet. If needed, you can [make changes to the CHANGELOG now](#editing-the-changelog).
+We use [standard-version](https://github.com/conventional-changelog/standard-version) to increment the version number in `package.json`, create a git tag for the new release, and update `CHANGELOG.md` based on the commit log. The package is not published, yet. If needed, you can [make additional changes to the CHANGELOG now](#editing-the-changelog).
+
+**NOTE**: running this command will print a command to run to complete the process. IGNORE THIS. Continue following the directions below.
 
 5. Push the release branch up, including tags:
 
@@ -54,17 +56,19 @@ git push --follow-tags origin <branch>
 
 #### Merging a release branch
 
-6. Open a pull request for the release branch, merging into **`main`**. Merge the PR through a **merge commit**:
+6. Open a pull request for the release branch, merging into **`main`**. 
+
+For the commit message, use the new version's content in the [CHANGELOG.md](../CHANGELOG.md) (e.g., all the changes for version 9.0.0).
+
+Merge the PR through a **merge commit**:
    ![github user interface showing a dropdown with the different merge options. the option "create a merge commit" is highlighted](https://user-images.githubusercontent.com/15840841/170514789-4f936ba2-c63d-486c-827a-b9e9e86b612e.png)
 
-This is important to ensure `next` and `main` stay in sync!
-
-7. Once that PR is merged, click "Restore branch" and open another pull request, merging the release branch into **`next`**. Again, merge the PR through a merge commit.
+7. Once that PR is merged, click "Restore branch" and open another pull request, this time merging the release branch into **`next`**. Again, merge the PR through a **merge commit**. This will make sure the release details are merged into `next` and keeps the contents of `next` and `main` in sync.
 
 #### Publishing the package
 
-8. Get the most up-to-date version of main: `git checkout main && git pull && yarn build`
-9. Publish the package with `npm publish`
+8. Pull down the most up-to-date version of main: `git checkout main && git pull && yarn build`
+9. Publish the package: `npm publish`
 10. Communicate the changes via all appropriate channels (if this is a breaking package update that the broader team needs to know about):
     - Slack channels
       - #eng-announcements in the Summit Learning workspace

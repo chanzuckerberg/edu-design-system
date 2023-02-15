@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Section, Grid, GridItem } from '../../../../src';
+import { Section, Grid, GridItem, Heading } from '../../../../src';
 import filterTokens from '../../../util/filterTokens';
 import { TokenSpecimen } from '../../TokenSpecimen/TokenSpecimen';
 
@@ -116,7 +116,9 @@ export class Tier2Colors extends Component {
         </Section>
 
         <Section title="Form Colors">
-          <h3>Form Label</h3>
+          <Heading className="my-4" size="h3">
+            Form Label
+          </Heading>
           <Grid>
             {filterTokens(`eds-theme-color-form-label`).map(function (
               listItem,
@@ -136,7 +138,9 @@ export class Tier2Colors extends Component {
             })}
           </Grid>
 
-          <h3>Form Input Borders</h3>
+          <Heading className="my-4" size="h3">
+            Form Input Borders
+          </Heading>
           <Grid>
             {filterTokens(`eds-theme-color-form-border`).map(function (
               listItem,
@@ -158,7 +162,9 @@ export class Tier2Colors extends Component {
             })}
           </Grid>
 
-          <h3>Form Background</h3>
+          <Heading className="my-4" size="h3">
+            Form Background
+          </Heading>
           <Grid>
             {filterTokens(`eds-theme-color-form-background`).map(function (
               listItem,
@@ -179,7 +185,9 @@ export class Tier2Colors extends Component {
         </Section>
 
         <Section title="Focus Ring">
-          <h3>Focus Ring</h3>
+          <Heading className="my-4" size="h3">
+            Focus Ring
+          </Heading>
           <Grid>
             {filterTokens(`eds-theme-color-focus-ring`).map(function (
               listItem,

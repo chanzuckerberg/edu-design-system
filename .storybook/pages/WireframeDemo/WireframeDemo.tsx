@@ -1,6 +1,6 @@
+import { useId } from '@reach/auto-id';
 import clsx from 'clsx';
 import React, { useState } from 'react';
-import { useUID } from 'react-uid';
 
 import globalStyles from './GlobalStyles.module.css';
 import styles from './WireframeDemo.module.css';
@@ -163,7 +163,7 @@ const StudentTab = ({
 );
 
 const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
-  const responseTextareaId = useUID();
+  const responseTextareaId = useId();
 
   const studentGroupOptions = [
     {
@@ -217,7 +217,7 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
           <Tabs className="mt-4">
             <Tab title="All (3)">
               <div className="flex">
-                <StudentTab active={true} studentName="Mikaela" />
+                <StudentTab active studentName="Mikaela" />
                 <StudentTab studentName="Cesar" />
                 <StudentTab studentName="Truman" />
               </div>
@@ -225,7 +225,7 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
 
             <Tab title="New (1)">
               <div className="flex">
-                <StudentTab active={true} studentName="Mikaela" />
+                <StudentTab active studentName="Mikaela" />
               </div>
             </Tab>
 
@@ -352,7 +352,7 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
         <div className={styles['watch-page__teacher-notes-heading']}>
           <Text size="xs">Your personal notes</Text>
           <Tooltip
-            childNotInteractive={true}
+            childNotInteractive
             text={
               <Text className={styles['watch-page__teacher-notes-tooltip']}>
                 Only you can see your notes when you review Mikaela's

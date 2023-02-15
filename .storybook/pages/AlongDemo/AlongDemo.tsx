@@ -1,6 +1,6 @@
+import { useId } from '@reach/auto-id';
 import clsx from 'clsx';
 import React, { useState } from 'react';
-import { useUID } from 'react-uid';
 
 import styles from './AlongDemo.module.css';
 import globalStyles from './GlobalStyles.module.css';
@@ -208,8 +208,8 @@ const StudentTab = ({
 );
 
 const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
-  const responseTextareaId = useUID();
-  const notesTextareaId = useUID();
+  const responseTextareaId = useId();
+  const notesTextareaId = useId();
 
   const ReplyIcon = (
     <svg className="h-4 min-w-[1rem]" viewBox="0 0 16 16">
@@ -277,11 +277,7 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
           <Tabs className={clsx(styles['watch-page__tabs'], 'mt-4')}>
             <Tab title="All (3)">
               <div className="flex">
-                <StudentTab
-                  active={true}
-                  avatarColor="pine"
-                  studentName="Mikaela"
-                />
+                <StudentTab active avatarColor="pine" studentName="Mikaela" />
                 <StudentTab avatarColor="sneaker" studentName="Cesar" />
                 <StudentTab avatarColor="carrot" studentName="Truman" />
               </div>
@@ -289,11 +285,7 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
 
             <Tab title="New (1)">
               <div className="flex">
-                <StudentTab
-                  active={true}
-                  avatarColor="pine"
-                  studentName="Mikaela"
-                />
+                <StudentTab active avatarColor="pine" studentName="Mikaela" />
               </div>
             </Tab>
 
@@ -436,7 +428,7 @@ const WatchPage = ({ onLogout }: { onLogout: () => void }) => {
           </label>
           <Tooltip
             align="bottom"
-            childNotInteractive={true}
+            childNotInteractive
             className={styles['watch-page__tooltip-container']}
             text={
               <Text className={styles['watch-page__tooltip-content']}>

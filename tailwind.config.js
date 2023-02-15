@@ -12,17 +12,6 @@ module.exports = {
     './src/components/**/*Example.tsx',
     './.storybook/**/*.{js,jsx,ts,tsx}',
   ],
-  corePlugins: {
-    /**
-     * Disable Tailwind's preflight (CSS reset) styles.
-     * We're only using Tailwind for stories/recipes, and some of those
-     * (esp. documentation pages) depend on browser default styles.
-     *
-     * Remove this setting if we are turning on Tailwind for component styles,
-     * so we will better match consuming apps.
-     */
-    preflight: false,
-  },
   theme: {
     colors: {
       transparent: 'transparent',

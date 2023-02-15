@@ -42,7 +42,6 @@ export { default as Hr } from './components/Hr';
 export { default as Icon } from './components/Icon';
 export { default as InlineNotification } from './components/InlineNotification';
 export { default as InputField } from './components/InputField';
-export { default as InputLabel } from './components/InputLabel';
 export { default as Label } from './components/Label';
 export { default as Layout } from './components/Layout';
 export { default as LayoutContainer } from './components/LayoutContainer';
@@ -86,7 +85,6 @@ export { default as TableRow } from './components/TableRow';
 export { default as Tabs } from './components/Tabs';
 export { default as Tag } from './components/Tag';
 export { default as Text } from './components/Text';
-export { default as TextField } from './components/TextField';
 export { default as TimelineNav } from './components/TimelineNav';
 export { default as TimelineNavPanel } from './components/TimelineNavPanel';
 export { default as Toast } from './components/Toast';
@@ -100,17 +98,3 @@ export { default as Tooltip } from './components/Tooltip';
  */
 export type { IconName } from './components/Icon';
 export type { BannerProps } from './components/Banner';
-
-/**
- * Project Overview Pilot components.
- *
- * These are unused at the moment -- we can re-add
- * the exports once we confirm this package is set
- * up correctly to be tree shaken.
- * In the meantime, leaving them commented out
- * ensures we don't unintentionally blow up the bundle size of
- * consuming apps.
- */
-// export { default as Header } from './components/Header';
-// export { default as PrimaryNav } from './components/PrimaryNav';
-// export { default as PrimaryNavItem } from './components/PrimaryNavItem';

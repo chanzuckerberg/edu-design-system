@@ -5,7 +5,7 @@ import Tag from '../Tag';
 
 export const VARIANTS = ['table', 'error', 'success'] as const;
 
-export type Variant = typeof VARIANTS[number];
+export type Variant = (typeof VARIANTS)[number];
 
 export interface Props {
   /**

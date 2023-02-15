@@ -1,5 +1,5 @@
+import { useId } from '@reach/auto-id';
 import React from 'react';
-import { useUID } from 'react-uid';
 import styles from './ProgressBar.module.css';
 import Text from '../Text';
 
@@ -68,8 +68,8 @@ export const ProgressBar = ({
 
   const progressBarCaption = caption || currentValue + '/' + maxValue;
 
-  const labelId = useUID();
-  const captionId = useUID();
+  const labelId = useId();
+  const captionId = useId();
 
   return (
     <div className={className} {...other}>

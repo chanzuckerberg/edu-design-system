@@ -34,9 +34,7 @@ exports[`<Accordion /> Default story renders snapshot 1`] = `
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title
-            id="1"
-          >
+          <title>
             show content
           </title>
           <path
@@ -84,9 +82,7 @@ exports[`<Accordion /> DefaultOpen story renders snapshot 1`] = `
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title
-            id="38"
-          >
+          <title>
             hide content
           </title>
           <path
@@ -141,9 +137,7 @@ exports[`<Accordion /> Small story renders snapshot 1`] = `
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title
-            id="4"
-          >
+          <title>
             show content
           </title>
           <path
@@ -191,9 +185,7 @@ exports[`<Accordion /> SmallOpen story renders snapshot 1`] = `
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title
-            id="40"
-          >
+          <title>
             hide content
           </title>
           <path
@@ -247,9 +239,7 @@ exports[`<Accordion /> Stacked story renders snapshot 1`] = `
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title
-            id="6"
-          >
+          <title>
             show content
           </title>
           <path
@@ -284,9 +274,7 @@ exports[`<Accordion /> Stacked story renders snapshot 1`] = `
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title
-            id="7"
-          >
+          <title>
             show content
           </title>
           <path
@@ -321,9 +309,7 @@ exports[`<Accordion /> Stacked story renders snapshot 1`] = `
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title
-            id="8"
-          >
+          <title>
             show content
           </title>
           <path
@@ -358,9 +344,7 @@ exports[`<Accordion /> Stacked story renders snapshot 1`] = `
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title
-            id="9"
-          >
+          <title>
             show content
           </title>
           <path
@@ -407,9 +391,7 @@ exports[`<Accordion /> StackedOpen story renders snapshot 1`] = `
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title
-            id="42"
-          >
+          <title>
             hide content
           </title>
           <path
@@ -452,9 +434,7 @@ exports[`<Accordion /> StackedOpen story renders snapshot 1`] = `
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title
-            id="43"
-          >
+          <title>
             hide content
           </title>
           <path
@@ -497,9 +477,7 @@ exports[`<Accordion /> StackedOpen story renders snapshot 1`] = `
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title
-            id="44"
-          >
+          <title>
             hide content
           </title>
           <path
@@ -542,9 +520,7 @@ exports[`<Accordion /> StackedOpen story renders snapshot 1`] = `
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title
-            id="45"
-          >
+          <title>
             hide content
           </title>
           <path
@@ -597,9 +573,7 @@ exports[`<Accordion /> StackedOutline story renders snapshot 1`] = `
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title
-            id="22"
-          >
+          <title>
             show content
           </title>
           <path
@@ -634,9 +608,7 @@ exports[`<Accordion /> StackedOutline story renders snapshot 1`] = `
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title
-            id="23"
-          >
+          <title>
             show content
           </title>
           <path
@@ -671,9 +643,7 @@ exports[`<Accordion /> StackedOutline story renders snapshot 1`] = `
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title
-            id="24"
-          >
+          <title>
             show content
           </title>
           <path
@@ -708,9 +678,7 @@ exports[`<Accordion /> StackedOutline story renders snapshot 1`] = `
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title
-            id="25"
-          >
+          <title>
             show content
           </title>
           <path
@@ -757,9 +725,7 @@ exports[`<Accordion /> StackedOutlineOpen story renders snapshot 1`] = `
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title
-            id="58"
-          >
+          <title>
             hide content
           </title>
           <path
@@ -802,9 +768,7 @@ exports[`<Accordion /> StackedOutlineOpen story renders snapshot 1`] = `
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title
-            id="59"
-          >
+          <title>
             hide content
           </title>
           <path
@@ -847,9 +811,7 @@ exports[`<Accordion /> StackedOutlineOpen story renders snapshot 1`] = `
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title
-            id="60"
-          >
+          <title>
             hide content
           </title>
           <path
@@ -892,9 +854,7 @@ exports[`<Accordion /> StackedOutlineOpen story renders snapshot 1`] = `
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title
-            id="61"
-          >
+          <title>
             hide content
           </title>
           <path
@@ -947,9 +907,7 @@ exports[`<Accordion /> StackedSmall story renders snapshot 1`] = `
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title
-            id="14"
-          >
+          <title>
             show content
           </title>
           <path
@@ -984,9 +942,7 @@ exports[`<Accordion /> StackedSmall story renders snapshot 1`] = `
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title
-            id="15"
-          >
+          <title>
             show content
           </title>
           <path
@@ -1021,9 +977,7 @@ exports[`<Accordion /> StackedSmall story renders snapshot 1`] = `
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title
-            id="16"
-          >
+          <title>
             show content
           </title>
           <path
@@ -1058,9 +1012,7 @@ exports[`<Accordion /> StackedSmall story renders snapshot 1`] = `
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title
-            id="17"
-          >
+          <title>
             show content
           </title>
           <path
@@ -1107,9 +1059,7 @@ exports[`<Accordion /> StackedSmallOpen story renders snapshot 1`] = `
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title
-            id="50"
-          >
+          <title>
             hide content
           </title>
           <path
@@ -1152,9 +1102,7 @@ exports[`<Accordion /> StackedSmallOpen story renders snapshot 1`] = `
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title
-            id="51"
-          >
+          <title>
             hide content
           </title>
           <path
@@ -1197,9 +1145,7 @@ exports[`<Accordion /> StackedSmallOpen story renders snapshot 1`] = `
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title
-            id="52"
-          >
+          <title>
             hide content
           </title>
           <path
@@ -1242,9 +1188,7 @@ exports[`<Accordion /> StackedSmallOpen story renders snapshot 1`] = `
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title
-            id="53"
-          >
+          <title>
             hide content
           </title>
           <path
@@ -1297,9 +1241,7 @@ exports[`<Accordion /> StackedSmallOutline story renders snapshot 1`] = `
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title
-            id="30"
-          >
+          <title>
             show content
           </title>
           <path
@@ -1334,9 +1276,7 @@ exports[`<Accordion /> StackedSmallOutline story renders snapshot 1`] = `
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title
-            id="31"
-          >
+          <title>
             show content
           </title>
           <path
@@ -1371,9 +1311,7 @@ exports[`<Accordion /> StackedSmallOutline story renders snapshot 1`] = `
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title
-            id="32"
-          >
+          <title>
             show content
           </title>
           <path
@@ -1408,9 +1346,7 @@ exports[`<Accordion /> StackedSmallOutline story renders snapshot 1`] = `
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title
-            id="33"
-          >
+          <title>
             show content
           </title>
           <path
@@ -1457,9 +1393,7 @@ exports[`<Accordion /> StackedSmallOutlineOpen story renders snapshot 1`] = `
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title
-            id="66"
-          >
+          <title>
             hide content
           </title>
           <path
@@ -1502,9 +1436,7 @@ exports[`<Accordion /> StackedSmallOutlineOpen story renders snapshot 1`] = `
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title
-            id="67"
-          >
+          <title>
             hide content
           </title>
           <path
@@ -1547,9 +1479,7 @@ exports[`<Accordion /> StackedSmallOutlineOpen story renders snapshot 1`] = `
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title
-            id="68"
-          >
+          <title>
             hide content
           </title>
           <path
@@ -1592,9 +1522,7 @@ exports[`<Accordion /> StackedSmallOutlineOpen story renders snapshot 1`] = `
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title
-            id="69"
-          >
+          <title>
             hide content
           </title>
           <path
@@ -1649,9 +1577,7 @@ exports[`<Accordion /> UsingRenderProp story renders snapshot 1`] = `
           width="1.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title
-            id="74"
-          >
+          <title>
             show content
           </title>
           <path
