@@ -1,6 +1,6 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { StoryObj, Meta } from '@storybook/react';
-import { within } from '@storybook/testing-library';
+import { userEvent, within } from '@storybook/testing-library';
 import isChromatic from 'chromatic/isChromatic';
 import React from 'react';
 
@@ -15,7 +15,7 @@ export default {
   component: FiltersPopover,
   parameters: {
     badges: [BADGE.BETA],
-    chromatic: { delay: 300 },
+    chromatic: { disableSnapshot: true },
   },
   args: {
     triggerText: 'Filters',
@@ -46,7 +46,7 @@ export const Default: StoryObj<Args> = {
     if (isChromatic()) {
       const canvas = within(canvasElement);
       const filtersTrigger = await canvas.findByRole('button');
-      filtersTrigger.click();
+      userEvent.click(filtersTrigger);
     }
   },
 };
@@ -241,7 +241,7 @@ export const OverflowInteractive: StoryObj<Args> = {
     if (isChromatic()) {
       const canvas = within(canvasElement);
       const filtersTrigger = await canvas.findByRole('button');
-      filtersTrigger.click();
+      userEvent.click(filtersTrigger);
     }
   },
 };

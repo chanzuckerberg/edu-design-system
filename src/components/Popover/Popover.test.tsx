@@ -1,7 +1,7 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
-import { userEvent } from '@storybook/testing-library';
 import { composeStories } from '@storybook/testing-react';
 import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import React from 'react';
 import * as stories from './Popover.stories';
 
@@ -10,25 +10,28 @@ const { Default } = composeStories(stories);
 describe('<Popover />', () => {
   generateSnapshots(stories, {
     getElement: async () => {
+      const user = userEvent.setup();
       const triggerButton = await screen.findByRole('button');
-      userEvent.click(triggerButton);
+      await user.click(triggerButton);
       return triggerButton.parentElement; // eslint-disable-line testing-library/no-node-access
     },
   });
 
-  it('should open Popover with trigger button', () => {
+  it('should open Popover with trigger button', async () => {
+    const user = userEvent.setup();
     render(<Default />);
     expect(screen.queryByTestId('popover-content')).not.toBeInTheDocument();
     const triggerButton = screen.getByTestId('popover-trigger-button');
-    userEvent.click(triggerButton);
+    await user.click(triggerButton);
     expect(screen.getByTestId('popover-content')).toBeInTheDocument();
   });
 
   it('should close Popover via escape key', async () => {
+    const user = userEvent.setup();
     render(<Default />);
     const triggerButton = screen.getByTestId('popover-trigger-button');
-    userEvent.click(triggerButton);
-    userEvent.keyboard('{esc}');
+    await user.click(triggerButton);
+    await user.keyboard('{Escape}');
     expect(screen.queryByTestId('popover-content')).not.toBeInTheDocument();
   });
 });

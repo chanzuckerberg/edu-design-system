@@ -17,11 +17,11 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
         role="presentation"
       >
         <a
-          aria-controls="1-0"
+          aria-controls=":r0:-0"
           aria-selected="true"
           class="timeline-nav__link"
-          href="#1-0"
-          id="2-0"
+          href="#:r0:-0"
+          id=":r1:-0"
           role="tab"
           tabindex="0"
         >
@@ -81,11 +81,11 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
         role="presentation"
       >
         <a
-          aria-controls="1-1"
+          aria-controls=":r0:-1"
           aria-selected="false"
           class="timeline-nav__link"
-          href="#1-1"
-          id="2-1"
+          href="#:r0:-1"
+          id=":r1:-1"
           role="tab"
           tabindex="-1"
         >
@@ -150,11 +150,11 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
         role="presentation"
       >
         <a
-          aria-controls="1-2"
+          aria-controls=":r0:-2"
           aria-selected="false"
           class="timeline-nav__link"
-          href="#1-2"
-          id="2-2"
+          href="#:r0:-2"
+          id=":r1:-2"
           role="tab"
           tabindex="-1"
         >
@@ -202,11 +202,11 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
         role="presentation"
       >
         <a
-          aria-controls="1-3"
+          aria-controls=":r0:-3"
           aria-selected="false"
           class="timeline-nav__link"
-          href="#1-3"
-          id="2-3"
+          href="#:r0:-3"
+          id=":r1:-3"
           role="tab"
           tabindex="-1"
         >
@@ -277,11 +277,11 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
         role="presentation"
       >
         <a
-          aria-controls="1-4"
+          aria-controls=":r0:-4"
           aria-selected="false"
           class="timeline-nav__link"
-          href="#1-4"
-          id="2-4"
+          href="#:r0:-4"
+          id=":r1:-4"
           role="tab"
           tabindex="-1"
         >
@@ -329,11 +329,11 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
         role="presentation"
       >
         <a
-          aria-controls="1-5"
+          aria-controls=":r0:-5"
           aria-selected="false"
           class="timeline-nav__link"
-          href="#1-5"
-          id="2-5"
+          href="#:r0:-5"
+          id=":r1:-5"
           role="tab"
           tabindex="-1"
         >
@@ -393,11 +393,11 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
         role="presentation"
       >
         <a
-          aria-controls="1-6"
+          aria-controls=":r0:-6"
           aria-selected="false"
           class="timeline-nav__link"
-          href="#1-6"
-          id="2-6"
+          href="#:r0:-6"
+          id=":r1:-6"
           role="tab"
           tabindex="-1"
         >
@@ -441,11 +441,11 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
         role="presentation"
       >
         <a
-          aria-controls="1-7"
+          aria-controls=":r0:-7"
           aria-selected="false"
           class="timeline-nav__link"
-          href="#1-7"
-          id="2-7"
+          href="#:r0:-7"
+          id=":r1:-7"
           role="tab"
           tabindex="-1"
         >
@@ -518,9 +518,9 @@ exports[`<TimelineNav /> Default story renders snapshot 1`] = `
     </button>
     <div
       aria-hidden="false"
-      aria-labelledby="2-0"
+      aria-labelledby=":r1:-0"
       class="max-w-xl"
-      id="1-0"
+      id=":r0:-0"
       role="tabpanel"
     >
       <h3

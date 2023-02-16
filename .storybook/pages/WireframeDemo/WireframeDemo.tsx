@@ -1,6 +1,5 @@
-import { useId } from '@reach/auto-id';
 import clsx from 'clsx';
-import React, { useState } from 'react';
+import React, { useId, useState } from 'react';
 
 import globalStyles from './GlobalStyles.module.css';
 import styles from './WireframeDemo.module.css';

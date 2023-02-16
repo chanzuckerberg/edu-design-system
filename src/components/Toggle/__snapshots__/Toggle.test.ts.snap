@@ -6,10 +6,10 @@ exports[`<Toggle /> CheckedTrue story renders snapshot 1`] = `
 >
   <button
     aria-checked="true"
-    aria-labelledby="headlessui-label-4"
+    aria-labelledby="headlessui-label-:r3:"
     class="toggle__button toggle__button--checked"
     data-headlessui-state="checked"
-    id="headlessui-switch-3"
+    id="headlessui-switch-:r2:"
     role="switch"
     tabindex="0"
     type="button"
@@ -20,7 +20,7 @@ exports[`<Toggle /> CheckedTrue story renders snapshot 1`] = `
   </button>
   <label
     class="toggle__label"
-    id="headlessui-label-4"
+    id="headlessui-label-:r3:"
   >
     Lorem ipsum
   </label>
@@ -33,16 +33,16 @@ exports[`<Toggle /> CustomPositioning story renders snapshot 1`] = `
 >
   <label
     class="toggle__label"
-    id="headlessui-label-8"
+    id="headlessui-label-:r7:"
   >
     Custom positioned label
   </label>
   <button
     aria-checked="false"
-    aria-labelledby="headlessui-label-8"
+    aria-labelledby="headlessui-label-:r7:"
     class="toggle__button toggle__button--unchecked"
     data-headlessui-state=""
-    id="headlessui-switch-9"
+    id="headlessui-switch-:r8:"
     role="switch"
     tabindex="0"
     type="button"
@@ -60,10 +60,10 @@ exports[`<Toggle /> Default story renders snapshot 1`] = `
 >
   <button
     aria-checked="false"
-    aria-labelledby="headlessui-label-2"
+    aria-labelledby="headlessui-label-:r1:"
     class="toggle__button toggle__button--unchecked"
     data-headlessui-state=""
-    id="headlessui-switch-1"
+    id="headlessui-switch-:r0:"
     role="switch"
     tabindex="0"
     type="button"
@@ -74,7 +74,7 @@ exports[`<Toggle /> Default story renders snapshot 1`] = `
   </button>
   <label
     class="toggle__label"
-    id="headlessui-label-2"
+    id="headlessui-label-:r1:"
   >
     Lorem ipsum
   </label>
@@ -87,11 +87,11 @@ exports[`<Toggle /> Disabled story renders snapshot 1`] = `
 >
   <button
     aria-checked="false"
-    aria-labelledby="headlessui-label-6"
+    aria-labelledby="headlessui-label-:r5:"
     class="toggle__button toggle__button--unchecked"
     data-headlessui-state=""
     disabled=""
-    id="headlessui-switch-5"
+    id="headlessui-switch-:r4:"
     role="switch"
     tabindex="0"
     type="button"
@@ -102,7 +102,7 @@ exports[`<Toggle /> Disabled story renders snapshot 1`] = `
   </button>
   <label
     class="toggle__label"
-    id="headlessui-label-6"
+    id="headlessui-label-:r5:"
   >
     Lorem ipsum
   </label>
@@ -115,7 +115,7 @@ exports[`<Toggle /> WithoutLabel story renders snapshot 1`] = `
   aria-label="Lorem ipsum"
   class="toggle__button toggle__button--unchecked"
   data-headlessui-state=""
-  id="headlessui-switch-7"
+  id="headlessui-switch-:r6:"
   role="switch"
   tabindex="0"
   type="button"

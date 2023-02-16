@@ -1,6 +1,7 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
 import { composeStory } from '@storybook/testing-react';
-import { fireEvent, screen, render } from '@testing-library/react';
+import { screen, render } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import React from 'react';
 import { Dropdown } from './Dropdown';
 import * as stories from './Dropdown.stories';
@@ -27,8 +28,9 @@ const exampleOptions = [
 describe('<Dropdown />', () => {
   generateSnapshots(closedStories, {
     getElement: async () => {
+      const user = userEvent.setup();
       const openButton = await screen.findByRole('button');
-      fireEvent.click(openButton);
+      await user.click(openButton);
       await screen.findAllByRole('option');
       return screen.getByTestId('dropdown');
     },
@@ -61,8 +63,11 @@ describe('<Dropdown />', () => {
     const renderMethod = () => {
       render(dropdownWithChildrenAndLabelText);
     };
-
+    // expect console error from react, suppressed.
+    const consoleErrorMock = jest.spyOn(console, 'error');
+    consoleErrorMock.mockImplementation();
     expect(renderMethod).toThrow(Error);
+    consoleErrorMock.mockRestore();
   });
 
   it('throws an error if children is used with buttonText', () => {
@@ -86,8 +91,11 @@ describe('<Dropdown />', () => {
     const renderMethod = () => {
       render(dropdownWithChildrenAndButtonText);
     };
-
+    // expect console error from react, suppressed.
+    const consoleErrorMock = jest.spyOn(console, 'error');
+    consoleErrorMock.mockImplementation();
     expect(renderMethod).toThrow(Error);
+    consoleErrorMock.mockRestore();
   });
 
   it('throws an error if children is used with options', () => {
@@ -104,8 +112,11 @@ describe('<Dropdown />', () => {
     const renderMethod = () => {
       render(dropdownWithChildrenAndOptions);
     };
-
+    // expect console error from react, suppressed.
+    const consoleErrorMock = jest.spyOn(console, 'error');
+    consoleErrorMock.mockImplementation();
     expect(renderMethod).toThrow(Error);
+    consoleErrorMock.mockRestore();
   });
 
   it('does not throw an error if dropdown uses labelText', () => {
@@ -176,7 +187,10 @@ describe('<Dropdown />', () => {
     const renderMethod = () => {
       render(dropdownWithoutLabel);
     };
-
+    // expect console error from react, suppressed.
+    const consoleErrorMock = jest.spyOn(console, 'error');
+    consoleErrorMock.mockImplementation();
     expect(renderMethod).toThrow(Error);
+    consoleErrorMock.mockRestore();
   });
 });

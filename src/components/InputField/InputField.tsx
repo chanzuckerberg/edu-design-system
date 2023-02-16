@@ -1,7 +1,6 @@
-import { useId } from '@reach/auto-id';
 import clsx from 'clsx';
 import type { ChangeEventHandler, ReactNode } from 'react';
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useId } from 'react';
 import styles from './InputField.module.css';
 import FieldNote from '../FieldNote';
 import Input from '../Input';
@@ -153,12 +152,12 @@ export const InputField = forwardRef<HTMLInputElement, Props>(
       disabled && styles['input-field__overline--disabled'],
     );
 
-    const generatedIdVar = useId(id);
-    const idVar = String(generatedIdVar);
+    const generatedIdVar = useId();
+    const idVar = id || generatedIdVar;
 
-    const generatedAriaDescribedById = useId(ariaDescribedBy);
+    const generatedAriaDescribedById = useId();
     const ariaDescribedByVar = fieldNote
-      ? ariaDescribedBy || String(generatedAriaDescribedById)
+      ? ariaDescribedBy || generatedAriaDescribedById
       : undefined;
 
     return (

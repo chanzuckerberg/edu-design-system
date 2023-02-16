@@ -1,5 +1,5 @@
 import type { StoryObj, Meta } from '@storybook/react';
-import { within } from '@storybook/testing-library';
+import { userEvent, within } from '@storybook/testing-library';
 import isChromatic from 'chromatic/isChromatic';
 import React from 'react';
 import { Popover } from './Popover';
@@ -44,7 +44,7 @@ export const Default: StoryObj<PopoverProps> = {
     if (isChromatic()) {
       const canvas = within(canvasElement);
       const filtersTrigger = await canvas.findByRole('button');
-      filtersTrigger.click();
+      userEvent.click(filtersTrigger);
     }
   },
 };

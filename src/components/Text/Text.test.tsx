@@ -19,6 +19,7 @@ describe('<Text />', () => {
   });
 
   it('should handle refs', async () => {
+    const user = userEvent.setup();
     const HelperComponent = ({ as }: { as: 'p' | 'span' }) => {
       const refContainer = React.useRef(null);
       const onButtonClick = () => {
@@ -37,11 +38,11 @@ describe('<Text />', () => {
     };
     const { rerender } = render(<HelperComponent as="p" />);
     expect(screen.getByText('Ref container parent test p')).toBeTruthy();
-    userEvent.click(screen.getByRole('button'));
+    await user.click(screen.getByRole('button'));
 
     rerender(<HelperComponent as="span" />);
     expect(screen.getByText('Ref container parent test span')).toBeTruthy();
-    userEvent.click(screen.getByRole('button'));
+    await user.click(screen.getByRole('button'));
   });
 
   it('should console warn if attempting to use "info" variant', () => {

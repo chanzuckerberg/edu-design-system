@@ -22,7 +22,7 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
         <input
           class="checkbox__input"
           data-bootstrap-override="checkbox"
-          id="1"
+          id=":r0:"
           type="checkbox"
         />
         <svg
@@ -43,7 +43,7 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
       <label
         class="label label--lg"
         data-bootstrap-override="label"
-        for="1"
+        for=":r0:"
       >
         Checkbox label 1
       </label>
@@ -57,7 +57,7 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
         <input
           class="checkbox__input"
           data-bootstrap-override="checkbox"
-          id="2"
+          id=":r1:"
           type="checkbox"
         />
         <svg
@@ -78,7 +78,7 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
       <label
         class="label label--lg"
         data-bootstrap-override="label"
-        for="2"
+        for=":r1:"
       >
         Checkbox label 2
       </label>
@@ -92,7 +92,7 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
         <input
           class="checkbox__input"
           data-bootstrap-override="checkbox"
-          id="3"
+          id=":r2:"
           type="checkbox"
         />
         <svg
@@ -113,7 +113,7 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
       <label
         class="label label--lg"
         data-bootstrap-override="label"
-        for="3"
+        for=":r2:"
       >
         Checkbox label 3
       </label>
@@ -127,7 +127,7 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
         <input
           class="checkbox__input"
           data-bootstrap-override="checkbox"
-          id="4"
+          id=":r3:"
           type="checkbox"
         />
         <svg
@@ -148,7 +148,7 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
       <label
         class="label label--lg"
         data-bootstrap-override="label"
-        for="4"
+        for=":r3:"
       >
         Checkbox label 4
       </label>
@@ -162,7 +162,7 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
         <input
           class="checkbox__input"
           data-bootstrap-override="checkbox"
-          id="5"
+          id=":r4:"
           type="checkbox"
         />
         <svg
@@ -183,7 +183,7 @@ exports[`<Fieldset /> Default story renders snapshot 1`] = `
       <label
         class="label label--lg"
         data-bootstrap-override="label"
-        for="5"
+        for=":r4:"
       >
         Checkbox label 5
       </label>

@@ -1,7 +1,6 @@
-import { useId } from '@reach/auto-id';
 import clsx from 'clsx';
 import type { KeyboardEventHandler, ReactNode } from 'react';
-import React, { useRef, useState, useEffect, useCallback } from 'react';
+import React, { useCallback, useId, useEffect, useRef, useState } from 'react';
 import { allByType } from 'react-children-by-type';
 import styles from './TimelineNav.module.css';
 import {
@@ -138,10 +137,11 @@ export const TimelineNav = ({
     }
   }, [prevActiveIndex, activeIndex, timelineNavItemRefs]);
 
-  const generatedId = useId(id);
-  const idPrefix = String(generatedId);
-  const generatedAriaLabelledBy = useId(other['aria-labelledby']);
-  const ariaLabelledByPrefix = String(generatedAriaLabelledBy);
+  const generatedId = useId();
+  const idPrefix = id || generatedId;
+  const generatedAriaLabelledBy = useId();
+  const ariaLabelledByPrefix =
+    other['aria-labelledby'] || generatedAriaLabelledBy;
 
   /**
    * Autogenerate ids on tabs if not defined.
