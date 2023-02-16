@@ -8,6 +8,7 @@ import * as stories from './FiltersDrawer.stories';
 const { OverflowInteractive } = composeStories(stories);
 
 describe('<Filters />', () => {
+  jest.setTimeout(50000);
   generateSnapshots(stories, {
     getElement: async () => {
       const user = userEvent.setup();

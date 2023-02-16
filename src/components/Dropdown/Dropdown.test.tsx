@@ -63,7 +63,8 @@ describe('<Dropdown />', () => {
     const renderMethod = () => {
       render(dropdownWithChildrenAndLabelText);
     };
-
+    // expect console error from react, suppressed.
+    jest.spyOn(console, 'error').mockImplementation();
     expect(renderMethod).toThrow(Error);
   });
 
@@ -88,7 +89,8 @@ describe('<Dropdown />', () => {
     const renderMethod = () => {
       render(dropdownWithChildrenAndButtonText);
     };
-
+    // expect console error from react, suppressed.
+    jest.spyOn(console, 'error').mockImplementation();
     expect(renderMethod).toThrow(Error);
   });
 
@@ -106,7 +108,8 @@ describe('<Dropdown />', () => {
     const renderMethod = () => {
       render(dropdownWithChildrenAndOptions);
     };
-
+    // expect console error from react, suppressed.
+    jest.spyOn(console, 'error').mockImplementation();
     expect(renderMethod).toThrow(Error);
   });
 
@@ -178,7 +181,8 @@ describe('<Dropdown />', () => {
     const renderMethod = () => {
       render(dropdownWithoutLabel);
     };
-
+    // expect console error from react, suppressed.
+    jest.spyOn(console, 'error').mockImplementation();
     expect(renderMethod).toThrow(Error);
   });
 });

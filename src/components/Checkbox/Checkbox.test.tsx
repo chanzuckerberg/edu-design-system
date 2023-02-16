@@ -12,6 +12,8 @@ describe('<Checkbox />', () => {
   generateSnapshots(stories);
 
   test('throws an error if no label or aria-label', () => {
+    // expect console error from react, suppressed.
+    jest.spyOn(console, 'error').mockImplementation();
     expect(() => {
       render(<Checkbox />);
     }).toThrow(/must provide a visible label or aria-label/);
@@ -23,8 +25,7 @@ describe('<Checkbox />', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  // eslint-disable-next-line jest/no-disabled-tests
-  test.skip('should toggle the checkbox with space', async () => {
+  test('should toggle the checkbox with space', async () => {
     const user = userEvent.setup();
     render(<Default />);
     const checkbox = screen.getByRole('checkbox');

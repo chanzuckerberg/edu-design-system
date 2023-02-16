@@ -4,10 +4,6 @@ import React, { useContext } from 'react';
 import styles from './AccordionRow.module.css';
 import { AccordionContext } from '../Accordion';
 
-type RenderProps<RenderPropArgs> = {
-  children: React.ReactNode | ((args: RenderPropArgs) => React.ReactElement);
-};
-
 type Props = {
   /**
    * Child node(s) that can be nested inside component.
@@ -23,12 +19,7 @@ type Props = {
    * Whether panel is expanded by default.
    */
   defaultOpen?: boolean;
-} & RenderProps<{
-  /**
-   * Render prop indicating popover open status.
-   */
-  open: boolean;
-}>;
+};
 
 /**
  * BETA: This component is still a work in progress and is subject to change.

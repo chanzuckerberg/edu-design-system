@@ -11,13 +11,14 @@ const { Default } = composeStories(stories);
 describe('<Radio />', () => {
   generateSnapshots(stories);
   test('throws an error if no label or aria-label', () => {
+    // expect console error from react, suppressed.
+    jest.spyOn(console, 'error').mockImplementation();
     expect(() => {
       render(<Radio />);
     }).toThrow(/must provide a visible label or aria-label/);
   });
 
-  // eslint-disable-next-line jest/no-disabled-tests
-  test.skip('should toggle the radio with space', async () => {
+  test('should toggle the radio with space', async () => {
     const user = userEvent.setup();
     render(<Default />);
     const radio = screen.getByRole('radio');

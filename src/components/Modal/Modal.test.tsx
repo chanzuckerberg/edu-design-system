@@ -117,6 +117,8 @@ describe('Modal', () => {
       render(modalWithoutTitleOrAriaLabel);
     };
 
+    // expect console error from react, suppressed.
+    jest.spyOn(console, 'error').mockImplementation();
     expect(renderMethod).toThrow(Error);
   });
 });
