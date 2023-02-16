@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.1.0](https://github.com/chanzuckerberg/edu-design-system/compare/v9.0.0...v9.1.0) (2023-02-16)
+
+
+### Features
+
+* bump to React 18 ([#1497](https://github.com/chanzuckerberg/edu-design-system/issues/1497)) ([d44b3db](https://github.com/chanzuckerberg/edu-design-system/commit/d44b3db4a1f683538daf74b0434e69d6df80620a))
+* bump to user-event v14 ([#1497](https://github.com/chanzuckerberg/edu-design-system/issues/1497)) ([d44b3db](https://github.com/chanzuckerberg/edu-design-system/commit/d44b3db4a1f683538daf74b0434e69d6df80620a))
+* remove reach/auto-id ([#1497](https://github.com/chanzuckerberg/edu-design-system/issues/1497)) ([d44b3db](https://github.com/chanzuckerberg/edu-design-system/commit/d44b3db4a1f683538daf74b0434e69d6df80620a))
+
 ## [9.0.0](https://github.com/chanzuckerberg/edu-design-system/compare/v8.0.0...v9.0.0) (2023-02-14)
 
 
