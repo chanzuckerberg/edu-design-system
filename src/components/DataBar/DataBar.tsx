@@ -1,6 +1,5 @@
-import { useId } from '@reach/auto-id';
 import clsx from 'clsx';
-import React from 'react';
+import React, { useId } from 'react';
 import styles from './DataBar.module.css';
 
 import DataBarSegment from '../DataBarSegment';

@@ -81,7 +81,6 @@
   "dependencies": {
     "@headlessui/react": "1.7.5",
     "@popperjs/core": "^2.11.6",
-    "@reach/auto-id": "^0.18.0",
     "@tippyjs/react": "^4.2.6",
     "clsx": "^1.2.1",
     "lodash.debounce": "^4.0.8",

@@ -1,6 +1,5 @@
-import { useId } from '@reach/auto-id';
 import clsx from 'clsx';
-import React from 'react';
+import React, { useId } from 'react';
 import styles from './Checkbox.module.css';
 import type { CheckboxInputProps } from '../CheckboxInput';
 import CheckboxInput from '../CheckboxInput';
@@ -55,8 +54,8 @@ export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
     ) {
       throw new Error('You must provide a visible label or aria-label');
     }
-    const generatedId = useId(id);
-    const checkboxId = String(generatedId);
+    const generatedId = useId();
+    const checkboxId = id || generatedId;
 
     const componentClassName = clsx(styles['checkbox'], className);
 
