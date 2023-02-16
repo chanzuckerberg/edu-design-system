@@ -1,6 +1,6 @@
 import { Listbox } from '@headlessui/react';
 import clsx from 'clsx';
-import type { ReactNode, ElementType } from 'react';
+import type { ReactElement, ReactNode, ElementType } from 'react';
 import React, { useContext } from 'react';
 import styles from './Dropdown.module.css';
 
@@ -74,7 +74,7 @@ type DropdownProps = ListboxProps & {
   optionsClassName?: string;
 };
 
-type RenderProp<Arg> = (arg: Arg) => ReactNode;
+type RenderProp<Arg> = (arg: Arg) => ReactElement;
 type PropsWithRenderProp<RenderPropArg> = {
   children?: ReactNode | RenderProp<RenderPropArg>;
   className?: string;
@@ -281,7 +281,8 @@ export function Dropdown(props: DropdownProps) {
       );
     }
 
-    const childrenHaveLabel = children && childrenHaveLabelComponent(children);
+    const childrenHaveLabel =
+      children && childrenHaveLabelComponent(children as ReactNode);
     if (!labelText && !props['aria-label'] && !childrenHaveLabel) {
       throw new Error('You must provide a visible label or `aria-label`.');
     }

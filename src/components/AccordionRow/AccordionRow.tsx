@@ -12,7 +12,9 @@ type Props = {
   /**
    * Child node(s) that can be nested inside component.
    */
-  children: React.ReactNode;
+  children:
+    | React.ReactNode
+    | (({ open }: { open: boolean }) => React.ReactNode);
   /**
    * Additional classnames passed in for styling.
    */

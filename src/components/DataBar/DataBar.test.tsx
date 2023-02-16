@@ -8,7 +8,8 @@ import * as stories from './DataBar.stories';
 describe('<DataBar />', () => {
   generateSnapshots(stories);
 
-  it('should focus with the tab key and the left and right arrow keys', () => {
+  it('should focus with the tab key and the left and right arrow keys', async () => {
+    const user = userEvent.setup();
     render(
       <DataBar
         data-testid="databar-test"
@@ -22,11 +23,11 @@ describe('<DataBar />', () => {
       />,
     );
     screen.getByTestId('databar-test').focus();
-    userEvent.tab();
+    await user.tab();
     expect(screen.getByLabelText('Segment 1')).toHaveFocus();
-    userEvent.keyboard('{arrowright}');
+    await user.keyboard('{arrowright}');
     expect(screen.getByLabelText('Segment 2')).toHaveFocus();
-    userEvent.keyboard('{arrowleft}');
+    await user.keyboard('{arrowleft}');
     expect(screen.getByLabelText('Segment 1')).toHaveFocus();
   });
 });

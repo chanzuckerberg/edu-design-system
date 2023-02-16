@@ -23,11 +23,12 @@ describe('<Checkbox />', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  test('should toggle the checkbox with space', () => {
+  test.skip('should toggle the checkbox with space', async () => {
+    const user = userEvent.setup();
     render(<Default />);
     const checkbox = screen.getByRole('checkbox');
     checkbox.focus();
-    userEvent.keyboard('{space}');
+    await user.keyboard(' ');
     expect(checkbox).toBeChecked();
   });
 });

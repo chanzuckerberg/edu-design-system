@@ -1,6 +1,7 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
 import { composeStory } from '@storybook/testing-react';
-import { fireEvent, screen, render } from '@testing-library/react';
+import { screen, render } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import React from 'react';
 import { Dropdown } from './Dropdown';
 import * as stories from './Dropdown.stories';
@@ -27,8 +28,9 @@ const exampleOptions = [
 describe('<Dropdown />', () => {
   generateSnapshots(closedStories, {
     getElement: async () => {
+      const user = userEvent.setup();
       const openButton = await screen.findByRole('button');
-      fireEvent.click(openButton);
+      await user.click(openButton);
       await screen.findAllByRole('option');
       return screen.getByTestId('dropdown');
     },

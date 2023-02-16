@@ -6,13 +6,13 @@ exports[`<Menu /> Default story renders snapshot 1`] = `
   data-headlessui-state="open"
 >
   <button
-    aria-controls="headlessui-menu-items-2"
+    aria-controls="headlessui-menu-items-:r1:"
     aria-expanded="true"
     aria-haspopup="true"
     class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral menu__button"
     data-bootstrap-override="clickable-style-secondary"
     data-headlessui-state="open"
-    id="headlessui-menu-button-1"
+    id="headlessui-menu-button-:r0:"
     type="button"
   >
     Documentation Links
@@ -32,11 +32,11 @@ exports[`<Menu /> Default story renders snapshot 1`] = `
     </svg>
   </button>
   <div
-    aria-labelledby="headlessui-menu-button-1"
+    aria-labelledby="headlessui-menu-button-:r0:"
     class="popover-container menu__popover"
     data-headlessui-state="open"
     data-testid="menu-content"
-    id="headlessui-menu-items-2"
+    id="headlessui-menu-items-:r1:"
     role="menu"
     tabindex="0"
   >
@@ -44,7 +44,7 @@ exports[`<Menu /> Default story renders snapshot 1`] = `
       class="menu__item"
       data-headlessui-state=""
       href="https://headlessui.com/react/menu#menu-button"
-      id="headlessui-menu-item-3"
+      id="headlessui-menu-item-:r2:"
       role="menuitem"
       tabindex="-1"
     >
@@ -76,7 +76,7 @@ exports[`<Menu /> Default story renders snapshot 1`] = `
       class="menu__item"
       data-headlessui-state=""
       href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu"
-      id="headlessui-menu-item-4"
+      id="headlessui-menu-item-:r3:"
       role="menuitem"
       tabindex="-1"
     >
@@ -107,7 +107,7 @@ exports[`<Menu /> Default story renders snapshot 1`] = `
     <a
       class="menu__item"
       data-headlessui-state=""
-      id="headlessui-menu-item-5"
+      id="headlessui-menu-item-:r4:"
       role="menuitem"
       tabindex="-1"
     >
@@ -124,7 +124,7 @@ exports[`<Menu /> Default story renders snapshot 1`] = `
       aria-disabled="true"
       class="popover-list-item popover-list-item--disabled"
       data-headlessui-state="disabled"
-      id="headlessui-menu-item-6"
+      id="headlessui-menu-item-:r5:"
       role="menuitem"
     >
       <div
@@ -157,13 +157,13 @@ exports[`<Menu /> WithLongButtonText story renders snapshot 1`] = `
   data-headlessui-state="open"
 >
   <button
-    aria-controls="headlessui-menu-items-8"
+    aria-controls="headlessui-menu-items-:r7:"
     aria-expanded="true"
     aria-haspopup="true"
     class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral menu__button"
     data-bootstrap-override="clickable-style-secondary"
     data-headlessui-state="open"
-    id="headlessui-menu-button-7"
+    id="headlessui-menu-button-:r6:"
     type="button"
   >
     Long Trigger Button Text to Demonstrate Popover Matching
@@ -183,11 +183,11 @@ exports[`<Menu /> WithLongButtonText story renders snapshot 1`] = `
     </svg>
   </button>
   <div
-    aria-labelledby="headlessui-menu-button-7"
+    aria-labelledby="headlessui-menu-button-:r6:"
     class="popover-container menu__popover"
     data-headlessui-state="open"
     data-testid="menu-content"
-    id="headlessui-menu-items-8"
+    id="headlessui-menu-items-:r7:"
     role="menu"
     tabindex="0"
   >
@@ -195,7 +195,7 @@ exports[`<Menu /> WithLongButtonText story renders snapshot 1`] = `
       class="menu__item"
       data-headlessui-state=""
       href="https://headlessui.com/react/menu#menu-button"
-      id="headlessui-menu-item-9"
+      id="headlessui-menu-item-:r8:"
       role="menuitem"
       tabindex="-1"
     >
@@ -227,7 +227,7 @@ exports[`<Menu /> WithLongButtonText story renders snapshot 1`] = `
       class="menu__item"
       data-headlessui-state=""
       href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu"
-      id="headlessui-menu-item-10"
+      id="headlessui-menu-item-:r9:"
       role="menuitem"
       tabindex="-1"
     >
@@ -258,7 +258,7 @@ exports[`<Menu /> WithLongButtonText story renders snapshot 1`] = `
     <a
       class="menu__item"
       data-headlessui-state=""
-      id="headlessui-menu-item-11"
+      id="headlessui-menu-item-:ra:"
       role="menuitem"
       tabindex="-1"
     >
@@ -275,7 +275,7 @@ exports[`<Menu /> WithLongButtonText story renders snapshot 1`] = `
       aria-disabled="true"
       class="popover-list-item popover-list-item--disabled"
       data-headlessui-state="disabled"
-      id="headlessui-menu-item-12"
+      id="headlessui-menu-item-:rb:"
       role="menuitem"
     >
       <div
@@ -308,13 +308,13 @@ exports[`<Menu /> WithShortButtonText story renders snapshot 1`] = `
   data-headlessui-state="open"
 >
   <button
-    aria-controls="headlessui-menu-items-14"
+    aria-controls="headlessui-menu-items-:rd:"
     aria-expanded="true"
     aria-haspopup="true"
     class="clickable-style clickable-style--lg clickable-style--secondary clickable-style--neutral menu__button"
     data-bootstrap-override="clickable-style-secondary"
     data-headlessui-state="open"
-    id="headlessui-menu-button-13"
+    id="headlessui-menu-button-:rc:"
     type="button"
   >
     Menu
@@ -334,11 +334,11 @@ exports[`<Menu /> WithShortButtonText story renders snapshot 1`] = `
     </svg>
   </button>
   <div
-    aria-labelledby="headlessui-menu-button-13"
+    aria-labelledby="headlessui-menu-button-:rc:"
     class="popover-container menu__popover"
     data-headlessui-state="open"
     data-testid="menu-content"
-    id="headlessui-menu-items-14"
+    id="headlessui-menu-items-:rd:"
     role="menu"
     tabindex="0"
   >
@@ -346,7 +346,7 @@ exports[`<Menu /> WithShortButtonText story renders snapshot 1`] = `
       class="menu__item"
       data-headlessui-state=""
       href="https://headlessui.com/react/menu#menu-button"
-      id="headlessui-menu-item-15"
+      id="headlessui-menu-item-:re:"
       role="menuitem"
       tabindex="-1"
     >
@@ -378,7 +378,7 @@ exports[`<Menu /> WithShortButtonText story renders snapshot 1`] = `
       class="menu__item"
       data-headlessui-state=""
       href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu"
-      id="headlessui-menu-item-16"
+      id="headlessui-menu-item-:rf:"
       role="menuitem"
       tabindex="-1"
     >
@@ -409,7 +409,7 @@ exports[`<Menu /> WithShortButtonText story renders snapshot 1`] = `
     <a
       class="menu__item"
       data-headlessui-state=""
-      id="headlessui-menu-item-17"
+      id="headlessui-menu-item-:rg:"
       role="menuitem"
       tabindex="-1"
     >
@@ -426,7 +426,7 @@ exports[`<Menu /> WithShortButtonText story renders snapshot 1`] = `
       aria-disabled="true"
       class="popover-list-item popover-list-item--disabled"
       data-headlessui-state="disabled"
-      id="headlessui-menu-item-18"
+      id="headlessui-menu-item-:rh:"
       role="menuitem"
     >
       <div

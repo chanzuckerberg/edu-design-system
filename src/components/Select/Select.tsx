@@ -1,6 +1,6 @@
 import { Listbox } from '@headlessui/react';
 import clsx from 'clsx';
-import type { ReactNode, ElementType } from 'react';
+import type { ReactElement, ReactNode, ElementType } from 'react';
 import React, { useContext } from 'react';
 import styles from './Select.module.css';
 
@@ -14,7 +14,7 @@ import PopoverListItem from '../PopoverListItem';
 export type OptionsAlignType = 'left' | 'right';
 export type VariantType = 'compact' | 'full';
 
-type RenderProp<Arg> = (arg: Arg) => ReactNode;
+type RenderProp<Arg> = (arg: Arg) => ReactElement;
 type PropsWithRenderProp<RenderPropArg> = {
   children?: ReactNode | RenderProp<RenderPropArg>;
   className?: string;
@@ -169,7 +169,8 @@ export function Select(props: SelectProps) {
   const compact = variant === 'compact';
 
   if (process.env.NODE_ENV !== 'production') {
-    const childrenHaveLabel = children && childrenHaveLabelComponent(children);
+    const childrenHaveLabel =
+      children && childrenHaveLabelComponent(children as ReactNode);
     if (!props['aria-label'] && !childrenHaveLabel) {
       throw new Error('You must provide a visible label or `aria-label`.');
     }

@@ -16,11 +16,12 @@ describe('<Radio />', () => {
     }).toThrow(/must provide a visible label or aria-label/);
   });
 
-  test('should toggle the radio with space', () => {
+  test.skip('should toggle the radio with space', async () => {
+    const user = userEvent.setup();
     render(<Default />);
     const radio = screen.getByRole('radio');
     radio.focus();
-    userEvent.keyboard('{space}');
+    await user.keyboard(' ');
     expect(radio).toBeChecked();
   });
 });

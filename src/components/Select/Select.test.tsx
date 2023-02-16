@@ -1,6 +1,7 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
 import { composeStory } from '@storybook/testing-react';
-import { fireEvent, screen, render } from '@testing-library/react';
+import { screen, render } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import React from 'react';
 import { Select } from './Select';
 import * as stories from './Select.stories';
@@ -28,18 +29,20 @@ const exampleOptions = [
 describe('<Select />', () => {
   generateSnapshots(closedStories, {
     getElement: async () => {
+      const user = userEvent.setup();
       const openButton = await screen.findByRole('button');
-      fireEvent.click(openButton);
+      await user.click(openButton);
       await screen.findAllByRole('option');
       return screen.getByTestId('dropdown');
     },
   });
 
   it('does not open a list when clicked and disabled', async () => {
+    const user = userEvent.setup();
     render(<DisabledComponent />);
 
     const openTrigger = await screen.findByRole('button');
-    fireEvent.click(openTrigger);
+    await user.click(openTrigger);
 
     // see if there are any options, which there should not be
     expect(screen.queryByRole('option')).not.toBeInTheDocument();

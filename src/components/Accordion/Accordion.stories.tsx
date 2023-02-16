@@ -217,7 +217,7 @@ export const UsingRenderProp: StoryObj<Args> = {
   render: () => (
     <Accordion headingAs="h2">
       <Accordion.Row>
-        {({ open }) => (
+        {({ open }: { open: boolean }) => (
           <>
             <Accordion.Button data-testid="accordion-button">
               Accordion Button {(open && 'open') || 'closed'}

@@ -1,6 +1,7 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
 import { composeStories } from '@storybook/testing-react';
-import { fireEvent, render, screen, waitFor } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import React from 'react';
 import { Modal } from './Modal';
 import * as stories from './Modal.stories';
@@ -14,13 +15,14 @@ require('intersection-observer');
 describe('Modal', () => {
   generateSnapshots(stories, {
     getElement: async () => {
+      const user = userEvent.setup();
       const nonInteractiveModal = screen.queryByTestId('non-interactive');
       if (nonInteractiveModal) return nonInteractiveModal;
 
       const openModalButton = await screen.findByRole('button', {
         name: 'Open the modal',
       });
-      fireEvent.click(openModalButton);
+      await user.click(openModalButton);
       const modal = await screen.findByRole('dialog');
       return modal;
     },
@@ -32,43 +34,40 @@ describe('Modal', () => {
   });
 
   it('shows the modal when the open modal button is clicked', async () => {
+    const user = userEvent.setup();
     render(<DefaultInteractive />);
     const openModalButton = await screen.findByRole('button', {
       name: 'Open the modal',
     });
-    fireEvent.click(openModalButton);
+    await user.click(openModalButton);
     const modal = await screen.findByRole('dialog');
     expect(modal).toBeTruthy();
   });
 
   it('closes the modal on close button click', async () => {
+    const user = userEvent.setup();
     render(<DefaultInteractive />);
     const openModalButton = await screen.findByRole('button', {
       name: 'Open the modal',
     });
-    fireEvent.click(openModalButton);
+    await user.click(openModalButton);
     const closeButton = await screen.findByRole('button', {
       name: 'close modal',
     });
-    fireEvent.click(closeButton);
+    await user.click(closeButton);
     await waitFor(() => {
       expect(screen.queryByRole('dialog')).toBeFalsy();
     });
   });
 
   it('closes the modal on ESC key press', async () => {
+    const user = userEvent.setup();
     render(<DefaultInteractive />);
     const openModalButton = await screen.findByRole('button', {
       name: 'Open the modal',
     });
-    fireEvent.click(openModalButton);
-    const modal = await screen.findByRole('dialog');
-    fireEvent.keyDown(modal, {
-      key: 'Escape',
-      code: 'Escape',
-      keyCode: 27,
-      charCode: 27,
-    });
+    await user.click(openModalButton);
+    await user.keyboard('{Escape}');
     await waitFor(() => {
       expect(screen.queryByRole('dialog')).toBeFalsy();
     });

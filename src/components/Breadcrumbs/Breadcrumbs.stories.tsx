@@ -1,5 +1,5 @@
 import type { StoryObj, Meta } from '@storybook/react';
-import { within } from '@storybook/testing-library';
+import { userEvent, within } from '@storybook/testing-library';
 import React from 'react';
 
 import { Breadcrumbs } from './Breadcrumbs';
@@ -122,6 +122,6 @@ export const LongTextMenu: StoryObj<Args> = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const dropdownMenuTrigger = await canvas.findByRole('button');
-    dropdownMenuTrigger.click();
+    userEvent.click(dropdownMenuTrigger);
   },
 };
