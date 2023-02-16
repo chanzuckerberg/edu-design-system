@@ -23,6 +23,7 @@ describe('<Checkbox />', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
+  // eslint-disable-next-line jest/no-disabled-tests
   test.skip('should toggle the checkbox with space', async () => {
     const user = userEvent.setup();
     render(<Default />);

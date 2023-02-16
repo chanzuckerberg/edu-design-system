@@ -16,6 +16,7 @@ describe('<Radio />', () => {
     }).toThrow(/must provide a visible label or aria-label/);
   });
 
+  // eslint-disable-next-line jest/no-disabled-tests
   test.skip('should toggle the radio with space', async () => {
     const user = userEvent.setup();
     render(<Default />);

@@ -5,6 +5,7 @@ import './TokenSpecimen.css';
 type Props = {
   name: string;
   value: any;
+  children?: React.ReactNode;
   comment?: string;
   inlineStyles?: Record<string, string>;
   variant?: string;
