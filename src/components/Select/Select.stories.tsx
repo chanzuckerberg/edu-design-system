@@ -216,11 +216,11 @@ export const OpenByDefault: StoryObj = {
 
     // Open the dropdown.
     const dropdownButton = await canvas.findByRole('button');
-    userEvent.click(dropdownButton);
+    await userEvent.click(dropdownButton);
     // Select the best option.
     const bestOption = await canvas.findByText('Cats');
-    userEvent.click(bestOption);
+    await userEvent.click(bestOption);
     // Reopen the dropdown; selecting an option closed it.
-    userEvent.click(dropdownButton);
+    await userEvent.click(dropdownButton);
   },
 };
