@@ -1,6 +1,6 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { StoryObj, Meta } from '@storybook/react';
-import type React from 'react';
+import React, { useState } from 'react';
 
 import { Slider } from './Slider';
 
@@ -8,12 +8,30 @@ export default {
   title: 'Components/Slider',
   component: Slider,
   parameters: {
+    layout: 'centered',
     badges: [BADGE.BETA],
   },
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Slider>;
 
+const InteractiveSlider = (args: Args) => {
+  const [value, setValue] = useState(args.value);
+  return (
+    <Slider
+      {...args}
+      onChange={(e) => setValue(Number(e.target.value))}
+      value={value}
+    />
+  );
+};
+
 export const Default: StoryObj<Args> = {
-  args: {},
+  args: {
+    label: 'Slider Label',
+    min: 1,
+    max: 5,
+    value: 3,
+  },
+  render: (args) => <InteractiveSlider {...args} />,
 };
