@@ -17,10 +17,6 @@ export type Props = {
    */
   className?: string;
   /**
-   * Disables the input and prevents editing the contents
-   */
-  disabled?: boolean;
-  /**
    * HTML id for the component
    */
   id?: string;
@@ -62,7 +58,6 @@ export type Props = {
  */
 export const Slider = ({
   className,
-  disabled,
   id,
   label,
   max,
@@ -83,7 +78,6 @@ export const Slider = ({
       {label && <Label htmlFor={sliderId} text={label} />}
       <input
         className={styles['slider__input']}
-        disabled={disabled}
         id={sliderId}
         max={max}
         min={min}
