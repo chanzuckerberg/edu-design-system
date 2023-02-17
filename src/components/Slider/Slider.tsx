@@ -1,5 +1,9 @@
 import clsx from 'clsx';
-import React, { useId, type ChangeEventHandler } from 'react';
+import React, {
+  useId,
+  type ChangeEventHandler,
+  type CSSProperties,
+} from 'react';
 import styles from './Slider.module.css';
 import Label from '../Label';
 
@@ -63,6 +67,7 @@ export const Slider = ({
   label,
   max,
   min,
+  value,
   ...other
 }: Props) => {
   if (process.env.NODE_ENV !== 'production' && !label && !other['aria-label']) {
@@ -82,7 +87,12 @@ export const Slider = ({
         id={sliderId}
         max={max}
         min={min}
+        style={
+          // calculate value as a ratio to color the track
+          { '--ratio': (value - min) / (max - min) } as CSSProperties
+        }
         type="range"
+        value={value}
         {...other}
       />
     </div>
