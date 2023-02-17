@@ -567,6 +567,7 @@ EDS follows specific front-end API naming conventions. Authoring a consistent AP
 EDS adheres to the following API naming conventions:
 
 ### Variants
+
 The default option should be the one most commonly used in order to reduce friction for developers using the components.
 
 - `variant` should be used for primary _stylistic_ variations of a component, such as (e.g. `<Card variant="bordered">` or `<Button variant="secondary">`). `variant` should be used if there is primarily one variable used to manipulate the component style.
@@ -596,16 +597,10 @@ The default option should be the one most commonly used in order to reduce frict
 
 ID attributes used for accessibility (e.g. associating `<label>` and `<input>` elements) should be unique and stable.
 
-We currently use [@reach/auto-id](https://www.npmjs.com/package/@reach/auto-id) `useId` hook for ID generation. To ensure stable results, they cannot be invoked within conditionals or callbacks.
-
-- `useId()` is the most common usage.
+We currently use the [`useId` hook](https://reactjs.org/docs/hooks-reference.html#useid) for ID generation. To ensure stable results, they cannot be invoked within conditionals or callbacks.
 
 ```tsx
 const generatedId = useId();
-
-// ensuring the id is of type string
-const generatedId = useId(props.id);
-const checkboxId = String(generatedId);
 ```
 
 ## Tools <a name="accessibility-tools"></a>

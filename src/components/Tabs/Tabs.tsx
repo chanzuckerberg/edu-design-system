@@ -1,10 +1,10 @@
-import { useId } from '@reach/auto-id';
 import clsx from 'clsx';
 import debounce from 'lodash.debounce';
 import React, {
   type ReactNode,
   useCallback,
   useEffect,
+  useId,
   useMemo,
   useRef,
   useState,
@@ -78,8 +78,8 @@ export const Tabs = ({
     [tabs],
   );
 
-  const generatedId = useId(other.id);
-  const tabIdPrefix = String(generatedId);
+  const generatedId = useId();
+  const tabIdPrefix = other.id || generatedId;
   const tabIds = useMemo(
     () => tabs.map((tab) => `${tabIdPrefix}-${tab.props.title}`),
     [tabs, tabIdPrefix],

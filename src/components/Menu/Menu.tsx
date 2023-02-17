@@ -66,13 +66,15 @@ const MenuButton = ({ children, className, ...other }: MenuButtonProps) => {
       status="neutral"
       {...other}
     >
-      {children}
-      <Icon
-        className={styles['menu__button--icon']}
-        name="expand-more"
-        purpose="decorative"
-        size="1.25rem"
-      />
+      <>
+        {children}
+        <Icon
+          className={styles['menu__button--icon']}
+          name="expand-more"
+          purpose="decorative"
+          size="1.25rem"
+        />
+      </>
     </HeadlessMenu.Button>
   );
 };
@@ -114,7 +116,7 @@ const MenuItem = ({
             disabled={disabled}
             icon={icon}
           >
-            {children}
+            {children as React.ReactNode}
           </PopoverListItem>
         );
         return disabled ? (

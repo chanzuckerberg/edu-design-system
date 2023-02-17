@@ -182,7 +182,9 @@ const PopoverContent = ({
       as="article"
       className={componentClassName}
     >
-      <PopoverContainer className={bodyClassName}>{children}</PopoverContainer>
+      <PopoverContainer className={bodyClassName}>
+        {children as React.ReactNode}
+      </PopoverContainer>
     </HeadlessPopover.Panel>
   );
 };

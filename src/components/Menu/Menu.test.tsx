@@ -1,7 +1,7 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
-import { userEvent } from '@storybook/testing-library';
 import { composeStories } from '@storybook/testing-react';
 import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 
 import React from 'react';
 import * as stories from './Menu.stories';
@@ -11,17 +11,19 @@ const { Default } = composeStories(stories);
 describe('<Menu />', () => {
   generateSnapshots(stories, {
     getElement: async () => {
+      const user = userEvent.setup();
       const triggerButton = await screen.findByRole('button');
-      userEvent.click(triggerButton);
+      await user.click(triggerButton);
       return triggerButton.parentElement; // eslint-disable-line testing-library/no-node-access
     },
   });
 
   it('should allow for keyboard navigation to enabled menu items', async () => {
+    const user = userEvent.setup();
     render(<Default />);
     const triggerButton = await screen.findByRole('button');
 
-    userEvent.click(triggerButton);
+    await user.click(triggerButton);
     const menuContainer = await screen.findByRole('menu');
 
     // a11y requires attaching the control dynamically, so confirm
@@ -31,16 +33,17 @@ describe('<Menu />', () => {
 
     expect(menuContainer.getAttribute('aria-activedescendant')).toBeNull();
 
-    userEvent.keyboard('{arrowdown}');
+    await user.keyboard('{arrowdown}');
 
     expect(menuContainer.getAttribute('aria-activedescendant')).not.toBeNull();
   });
 
   it('should close menu on keyboard escape key', async () => {
+    const user = userEvent.setup();
     render(<Default />);
     const triggerButton = await screen.findByRole('button');
 
-    userEvent.click(triggerButton);
+    await user.click(triggerButton);
     const menuContainer = await screen.findByRole('menu');
 
     // a11y attaches the control dynamically, so confirm
@@ -48,7 +51,7 @@ describe('<Menu />', () => {
       menuContainer.getAttribute('id'),
     );
 
-    userEvent.keyboard('{esc}');
+    await user.keyboard('{Escape}');
 
     expect(screen.queryByTestId('menu-content')).not.toBeInTheDocument();
   });

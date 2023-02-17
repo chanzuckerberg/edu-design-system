@@ -1,5 +1,4 @@
-import { useId } from '@reach/auto-id';
-import React from 'react';
+import React, { useId } from 'react';
 import styles from './ProgressBar.module.css';
 import Text from '../Text';
 

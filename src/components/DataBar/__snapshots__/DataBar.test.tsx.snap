@@ -10,21 +10,21 @@ exports[`<DataBar /> LargeValue story renders snapshot 1`] = `
     >
       <label
         class="data-bar__label"
-        for="11"
+        for=":r8:"
       >
         Data bar
       </label>
       <span
         class="text text--caption"
-        id="12"
+        id=":r9:"
       >
         96/100
       </span>
     </div>
     <div
-      aria-describedby="12"
+      aria-describedby=":r9:"
       class="data-bar"
-      id="11"
+      id=":r8:"
       role="grid"
     >
       <div
@@ -54,21 +54,21 @@ exports[`<DataBar /> NoSegments story renders snapshot 1`] = `
     >
       <label
         class="data-bar__label"
-        for="15"
+        for=":rc:"
       >
         Data bar
       </label>
       <span
         class="text text--caption"
-        id="16"
+        id=":rd:"
       >
         0/100
       </span>
     </div>
     <div
-      aria-describedby="16"
+      aria-describedby=":rd:"
       class="data-bar"
-      id="15"
+      id=":rc:"
       role="grid"
     >
       <div
@@ -95,21 +95,21 @@ exports[`<DataBar /> SmallValue story renders snapshot 1`] = `
     >
       <label
         class="data-bar__label"
-        for="13"
+        for=":ra:"
       >
         Data bar
       </label>
       <span
         class="text text--caption"
-        id="14"
+        id=":rb:"
       >
         1/100
       </span>
     </div>
     <div
-      aria-describedby="14"
+      aria-describedby=":rb:"
       class="data-bar"
-      id="13"
+      id=":ra:"
       role="grid"
     >
       <div
@@ -139,21 +139,21 @@ exports[`<DataBar /> TotalsLessThanMax story renders snapshot 1`] = `
     >
       <label
         class="data-bar__label"
-        for="1"
+        for=":r0:"
       >
         Data bar
       </label>
       <span
         class="text text--caption"
-        id="2"
+        id=":r1:"
       >
         50/100
       </span>
     </div>
     <div
-      aria-describedby="2"
+      aria-describedby=":r1:"
       class="data-bar"
-      id="1"
+      id=":r0:"
       role="grid"
     >
       <div
@@ -197,21 +197,21 @@ exports[`<DataBar /> TotalsMax story renders snapshot 1`] = `
     >
       <label
         class="data-bar__label"
-        for="5"
+        for=":r2:"
       >
         Data bar
       </label>
       <span
         class="text text--caption"
-        id="6"
+        id=":r3:"
       >
         50/50
       </span>
     </div>
     <div
-      aria-describedby="6"
+      aria-describedby=":r3:"
       class="data-bar"
-      id="5"
+      id=":r2:"
       role="grid"
     >
       <div
@@ -255,21 +255,21 @@ exports[`<DataBar /> TotalsMoreThanMax story renders snapshot 1`] = `
     >
       <label
         class="data-bar__label"
-        for="7"
+        for=":r4:"
       >
         Data bar
       </label>
       <span
         class="text text--caption"
-        id="8"
+        id=":r5:"
       >
         50/25
       </span>
     </div>
     <div
-      aria-describedby="8"
+      aria-describedby=":r5:"
       class="data-bar"
-      id="7"
+      id=":r4:"
       role="grid"
     >
       <div
@@ -299,21 +299,21 @@ exports[`<DataBar /> TotalsRightUnderMax story renders snapshot 1`] = `
     >
       <label
         class="data-bar__label"
-        for="9"
+        for=":r6:"
       >
         Data bar
       </label>
       <span
         class="text text--caption"
-        id="10"
+        id=":r7:"
       >
         50/51
       </span>
     </div>
     <div
-      aria-describedby="10"
+      aria-describedby=":r7:"
       class="data-bar"
-      id="9"
+      id=":r6:"
       role="grid"
     >
       <div

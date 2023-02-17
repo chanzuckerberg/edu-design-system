@@ -1,6 +1,6 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { StoryObj, Meta } from '@storybook/react';
-import { within } from '@storybook/testing-library';
+import { userEvent, within } from '@storybook/testing-library';
 import clsx from 'clsx';
 import React from 'react';
 import type { OptionsAlignType, VariantType } from './Dropdown';
@@ -238,12 +238,12 @@ export const OpenByDefault: StoryObj = {
 
     // Open the dropdown.
     const dropdownButton = await canvas.findByRole('button');
-    dropdownButton.click();
+    await userEvent.click(dropdownButton);
     // Select the best option.
     const bestOption = await canvas.findByText('Cats');
-    bestOption.click();
+    await userEvent.click(bestOption);
     // Reopen the dropdown; selecting an option closed it.
-    dropdownButton.click();
+    await userEvent.click(dropdownButton);
   },
 };
 

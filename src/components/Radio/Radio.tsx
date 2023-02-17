@@ -1,6 +1,5 @@
-import { useId } from '@reach/auto-id';
 import clsx from 'clsx';
-import React from 'react';
+import React, { useId } from 'react';
 import styles from './Radio.module.css';
 import type { RadioInputProps } from '../RadioInput';
 import RadioInput from '../RadioInput';
@@ -45,8 +44,8 @@ export const Radio = ({
   ) {
     throw new Error('You must provide a visible label or aria-label');
   }
-  const generatedId = useId(id);
-  const radioId = String(generatedId);
+  const generatedId = useId();
+  const radioId = id || generatedId;
 
   const componentClassName = clsx(styles['radio'], className);
 

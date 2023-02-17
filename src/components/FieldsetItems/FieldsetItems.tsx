@@ -38,7 +38,6 @@ export const FieldsetItems = <T extends ElementType = 'div'>({
   // and React 16. that library imports the latest react types regardless of
   // installed version.
   return (
-    // @ts-expect-error Mismatch between React.ReactNode and <react-beautiful-dnd>.ReactNode
     <Component className={componentClassName} {...props}>
       {children}
     </Component>

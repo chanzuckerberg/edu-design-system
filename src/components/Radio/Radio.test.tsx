@@ -11,16 +11,21 @@ const { Default } = composeStories(stories);
 describe('<Radio />', () => {
   generateSnapshots(stories);
   test('throws an error if no label or aria-label', () => {
+    // expect console error from react, suppressed.
+    const consoleErrorMock = jest.spyOn(console, 'error');
+    consoleErrorMock.mockImplementation();
     expect(() => {
       render(<Radio />);
     }).toThrow(/must provide a visible label or aria-label/);
+    consoleErrorMock.mockRestore();
   });
 
-  test('should toggle the radio with space', () => {
+  test('should toggle the radio with space', async () => {
+    const user = userEvent.setup();
     render(<Default />);
     const radio = screen.getByRole('radio');
     radio.focus();
-    userEvent.keyboard('{space}');
+    await user.keyboard(' ');
     expect(radio).toBeChecked();
   });
 });

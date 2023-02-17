@@ -11,20 +11,20 @@ exports[`<ProgressBar /> Complete story renders snapshot 1`] = `
       >
         <label
           class="progress-bar__label"
-          id="11"
+          id=":r8:"
         >
           Progress Bar Label
         </label>
         <span
           class="text text--caption"
-          id="12"
+          id=":r9:"
         >
           100/100
         </span>
       </div>
       <div
-        aria-describedby="12"
-        aria-labelledby="11"
+        aria-describedby=":r9:"
+        aria-labelledby=":r8:"
         aria-valuemax="100"
         aria-valuenow="100"
         class="progress-bar"
@@ -46,20 +46,20 @@ exports[`<ProgressBar /> Complete story renders snapshot 1`] = `
       >
         <label
           class="progress-bar__label"
-          id="13"
+          id=":ra:"
         >
           Progress Bar Label
         </label>
         <span
           class="text text--caption"
-          id="14"
+          id=":rb:"
         >
           100/100
         </span>
       </div>
       <div
-        aria-describedby="14"
-        aria-labelledby="13"
+        aria-describedby=":rb:"
+        aria-labelledby=":ra:"
         aria-valuemax="100"
         aria-valuenow="100"
         class="progress-bar"
@@ -98,20 +98,20 @@ exports[`<ProgressBar /> Default story renders snapshot 1`] = `
     >
       <label
         class="progress-bar__label"
-        id="1"
+        id=":r0:"
       >
         Progress Bar Label
       </label>
       <span
         class="text text--caption"
-        id="2"
+        id=":r1:"
       >
         20/100
       </span>
     </div>
     <div
-      aria-describedby="2"
-      aria-labelledby="1"
+      aria-describedby=":r1:"
+      aria-labelledby=":r0:"
       aria-valuemax="100"
       aria-valuenow="20"
       class="progress-bar"
@@ -140,20 +140,20 @@ exports[`<ProgressBar /> Empty story renders snapshot 1`] = `
     >
       <label
         class="progress-bar__label"
-        id="5"
+        id=":r2:"
       >
         Progress Bar Label
       </label>
       <span
         class="text text--caption"
-        id="6"
+        id=":r3:"
       >
         0/100
       </span>
     </div>
     <div
-      aria-describedby="6"
-      aria-labelledby="5"
+      aria-describedby=":r3:"
+      aria-labelledby=":r2:"
       aria-valuemax="100"
       aria-valuenow="0"
       class="progress-bar"
@@ -182,20 +182,20 @@ exports[`<ProgressBar /> TwoSegments story renders snapshot 1`] = `
     >
       <label
         class="progress-bar__label"
-        id="9"
+        id=":r6:"
       >
         Progress Bar Label
       </label>
       <span
         class="text text--caption"
-        id="10"
+        id=":r7:"
       >
         20/100
       </span>
     </div>
     <div
-      aria-describedby="10"
-      aria-labelledby="9"
+      aria-describedby=":r7:"
+      aria-labelledby=":r6:"
       aria-valuemax="100"
       aria-valuenow="20"
       class="progress-bar"
@@ -227,20 +227,20 @@ exports[`<ProgressBar /> WithCustomCaption story renders snapshot 1`] = `
     >
       <label
         class="progress-bar__label"
-        id="7"
+        id=":r4:"
       >
         Progress Bar Label
       </label>
       <span
         class="text text--caption"
-        id="8"
+        id=":r5:"
       >
         20 %
       </span>
     </div>
     <div
-      aria-describedby="8"
-      aria-labelledby="7"
+      aria-describedby=":r5:"
+      aria-labelledby=":r4:"
       aria-valuemax="100"
       aria-valuenow="20"
       class="progress-bar"

@@ -23,6 +23,7 @@ describe('<Heading />', () => {
   });
 
   it('should handle refs', async () => {
+    const user = userEvent.setup();
     const HelperComponent = () => {
       const refContainer = React.useRef(null);
       const onButtonClick = () => {
@@ -41,7 +42,7 @@ describe('<Heading />', () => {
     };
     render(<HelperComponent />);
     expect(screen.getByText('Ref container parent test')).toBeTruthy();
-    userEvent.click(screen.getByRole('button'));
+    await user.click(screen.getByRole('button'));
   });
 
   it('should display warning message when attempting to use h6 size', () => {
