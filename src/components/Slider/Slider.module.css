@@ -3,7 +3,58 @@
 \*------------------------------------*/
 
 /**
- * Slider
+ * Slider Input
  */
-.slider {
+.slider__input {
+  --slider-track-height: var(--eds-size-1);
+  --slider-thumb-size: var(--eds-size-2-and-half);
+
+  appearance: none;
+  background: transparent;
+
+  height: var(--slider-thumb-size);
+}
+
+/**
+ * Slider Input Track
+ */
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+.slider__input::-webkit-slider-runnable-track {
+  background: var(--eds-theme-color-background-neutral-medium);
+  height: var(--slider-track-height);
+  border-radius: 9999px;
+}
+/******** Firefox ********/
+.slider__input::-moz-range-track {
+  background: var(--eds-theme-color-background-neutral-medium);
+  height: var(--slider-track-height);
+  border-radius: 9999px;
+}
+
+/*
+ * Slider Input Thumb
+ */
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+.slider__input::-webkit-slider-thumb {
+  appearance: none;
+
+  height: var(--slider-thumb-size);
+  width: var(--slider-thumb-size);
+  background-color: var(--eds-theme-color-text-neutral-default-inverse);
+  border: var(--eds-border-width-md) solid
+    var(--eds-theme-color-border-neutral-default);
+  border-radius: var(--eds-border-radius-full);
+
+  margin-top: calc(
+    var(--slider-track-height) / 2 - var(--slider-thumb-size) / 2
+  ); /* Centers thumb on the track */
+}
+/***** Firefox *****/
+.slider__input::-moz-range-thumb {
+  height: var(--slider-thumb-size);
+  width: var(--slider-thumb-size);
+  background-color: var(--eds-theme-color-text-neutral-default-inverse);
+  border: var(--eds-border-width-md) solid
+    var(--eds-theme-color-border-neutral-default);
+  border-radius: var(--eds-border-radius-full);
 }

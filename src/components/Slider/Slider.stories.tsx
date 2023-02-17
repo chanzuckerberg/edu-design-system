@@ -29,9 +29,9 @@ const InteractiveSlider = (args: Args) => {
 export const Default: StoryObj<Args> = {
   args: {
     label: 'Slider Label',
-    min: 1,
-    max: 5,
-    value: 3,
+    min: 0,
+    max: 100,
+    value: 50,
   },
   render: (args) => <InteractiveSlider {...args} />,
 };

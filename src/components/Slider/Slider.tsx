@@ -56,6 +56,9 @@ export type Props = {
  *
  * `import {Slider} from "@chanzuckerberg/eds";`
  *
+ * Strict: This slider requires a visual indicator of value/markers.
+ * Please check out our recipes for possible ideas.
+ *
  * TODO: update this comment with a description of the component.
  */
 export const Slider = ({
@@ -97,6 +100,7 @@ export const Slider = ({
       {label && <Label htmlFor={sliderId} text={label} />}
       <div>
         <input
+          className={styles['slider__input']}
           disabled={disabled}
           id={sliderId}
           max={max}
