@@ -3,6 +3,14 @@
 \*------------------------------------*/
 
 /**
+ * Slider wrapping Label and Input
+ */
+.slider {
+  display: flex;
+  flex-direction: column;
+}
+
+/**
  * Slider Input
  */
 .slider__input {
@@ -51,6 +59,7 @@
 }
 /***** Firefox *****/
 .slider__input::-moz-range-thumb {
+  box-sizing: border-box;
   height: var(--slider-thumb-size);
   width: var(--slider-thumb-size);
   background-color: var(--eds-theme-color-text-neutral-default-inverse);

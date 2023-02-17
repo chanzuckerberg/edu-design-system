@@ -29,11 +29,6 @@ export type Props = {
    */
   onChange?: ChangeEventHandler<HTMLInputElement>;
   /**
-   * Optional markers to be placed in order under the slider. The markers are placed space-between under the slider.
-   * Defaults to the min and max values at opposite ends.
-   */
-  markers?: { label: string; value: number }[];
-  /**
    * Maximum value allowed for the slider.
    */
   max: number;
@@ -66,7 +61,6 @@ export const Slider = ({
   disabled,
   id,
   label,
-  markers,
   max,
   min,
   ...other
@@ -79,37 +73,18 @@ export const Slider = ({
   const generatedId = useId();
   const sliderId = id || generatedId;
 
-  const options = markers || [
-    { label: String(min), value: min },
-    { label: String(max), value: max },
-  ];
-  const datalist = (
-    <datalist className="flex w-full justify-between">
-      {options.map((option) => (
-        <option
-          key={'slider-option-' + option.label}
-          label={option.label}
-          value={option.value}
-        />
-      ))}
-    </datalist>
-  );
-
   return (
     <div className={componentClassName}>
       {label && <Label htmlFor={sliderId} text={label} />}
-      <div>
-        <input
-          className={styles['slider__input']}
-          disabled={disabled}
-          id={sliderId}
-          max={max}
-          min={min}
-          type="range"
-          {...other}
-        />
-        {datalist}
-      </div>
+      <input
+        className={styles['slider__input']}
+        disabled={disabled}
+        id={sliderId}
+        max={max}
+        min={min}
+        type="range"
+        {...other}
+      />
     </div>
   );
 };
