@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Slider /> Default story renders snapshot 1`] = `
+<div
+  class="slider"
+>
+  <label
+    class="label"
+    for=":r0:"
+  >
+    Slider Label
+     
+  </label>
+  <input
+    class="slider__input"
+    id=":r0:"
+    max="100"
+    min="0"
+    style="--ratio: 0.5;"
+    type="range"
+    value="50"
+  />
+</div>
+`;
+
+exports[`<Slider /> NoVisibleLabel story renders snapshot 1`] = `
+<div
+  class="slider"
+>
+  <input
+    aria-label="Not visible slider label"
+    class="slider__input"
+    id=":r1:"
+    max="100"
+    min="0"
+    style="--ratio: 0.5;"
+    type="range"
+    value="50"
+  />
+</div>
+`;

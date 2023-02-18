@@ -15,13 +15,20 @@ export default {
 
 type Args = React.ComponentProps<typeof Slider>;
 
-const InteractiveSlider = (args: Args) => {
-  const [value, setValue] = useState(args.value);
+const InteractiveSlider = ({
+  min = 0,
+  max = 100,
+  value = 50,
+  ...args
+}: Args) => {
+  const [sliderValue, setSliderValue] = useState(value);
   return (
     <Slider
+      max={max}
+      min={min}
       {...args}
-      onChange={(e) => setValue(Number(e.target.value))}
-      value={value}
+      onChange={(e) => setSliderValue(Number(e.target.value))}
+      value={sliderValue}
     />
   );
 };
@@ -29,9 +36,13 @@ const InteractiveSlider = (args: Args) => {
 export const Default: StoryObj<Args> = {
   args: {
     label: 'Slider Label',
-    min: 0,
-    max: 100,
-    value: 50,
+  },
+  render: (args) => <InteractiveSlider {...args} />,
+};
+
+export const NoVisibleLabel: StoryObj<Args> = {
+  args: {
+    'aria-label': 'Not visible slider label',
   },
   render: (args) => <InteractiveSlider {...args} />,
 };
