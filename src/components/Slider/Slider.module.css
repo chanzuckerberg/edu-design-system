@@ -25,7 +25,7 @@
 
   height: var(--slider-thumb-size);
 }
-.slider__input:focus-visible {
+.slider__input:focus {
   outline: none;
 }
 
@@ -76,8 +76,13 @@
   border-radius: var(--eds-border-radius-full);
 }
 /* Firefox Focus */
-.slider__input:focus::-moz-range-thumb {
+.slider__input:focus-visible::-moz-range-thumb {
   @mixin focus;
+}
+@supports not selector(:focus-visible) {
+  .slider__input:focus::-moz-range-thumb {
+    @mixin focus;
+  }
 }
 /* Chrome, Safari, Edge Chromium */
 .slider__input::-webkit-slider-thumb {
@@ -95,6 +100,11 @@
   ); /* Centers thumb on the track */
 }
 /* Chrome, Safari, Edge Chromium Focus */
-.slider__input:focus::-webkit-slider-thumb {
+.slider__input:focus-visible::-webkit-slider-thumb {
   @mixin focus;
+}
+@supports not selector(:focus-visible) {
+  .slider__input:focus::-webkit-slider-thumb {
+    @mixin focus;
+  }
 }
