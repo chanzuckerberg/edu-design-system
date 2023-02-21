@@ -19,6 +19,14 @@
 .slider__input {
   --slider-track-height: var(--eds-size-1);
   --slider-thumb-size: var(--eds-size-2-and-half);
+  /* fills left side of track as a percentage of the input value */
+  --slider-track-background: linear-gradient(
+    /* fill from left to right */ to right,
+    /* fill color */ var(--eds-theme-color-background-brand-primary-strong)
+      /* percent to fill */ calc(var(--ratio) * 100%),
+    /* unfilled color */ var(--eds-theme-color-background-neutral-medium)
+      /* don't blend the colors */ 0
+  );
 
   appearance: none;
   background: transparent;
@@ -29,36 +37,48 @@
   outline: none;
 }
 
-/**
- * Slider Input Track
- */
-/* Firefox */
-.slider__input::-moz-range-track {
-  /* fills left side of track as a percentage of the input value */
-  background: linear-gradient(
-    /* fill from left to right */ to right,
-    /* fill color */ var(--eds-theme-color-background-brand-primary-strong)
-      /* percent to fill */ calc(var(--ratio) * 100%),
-    /* unfilled color */ var(--eds-theme-color-background-neutral-medium)
-      /* don't blend the colors */ 0
-  );
-  height: var(--slider-track-height);
-  border-radius: var(--eds-border-radius-full);
-}
 /* 
  * Chrome, Safari, Edge Chromium
  * Although redundant with Firefox, has to be separate or else Chrome ignores
  */
 .slider__input::-webkit-slider-runnable-track {
-  background: linear-gradient(
-    /* fill from left to right */ to right,
-    /* fill color */ var(--eds-theme-color-background-brand-primary-strong)
-      /* percent to fill */ calc(var(--ratio) * 100%),
-    /* unfilled color */ var(--eds-theme-color-background-neutral-medium)
-      /* don't blend the colors */ 0
-  );
+  background: var(--slider-track-background);
   height: var(--slider-track-height);
   border-radius: var(--eds-border-radius-full);
+}
+/**
+ * Slider Input Track
+ */
+/* Firefox */
+.slider__input::-moz-range-track {
+  background: var(--slider-track-background);
+  height: var(--slider-track-height);
+  border-radius: var(--eds-border-radius-full);
+}
+
+/* Chrome, Safari, Edge Chromium */
+.slider__input::-webkit-slider-thumb {
+  appearance: none;
+
+  height: var(--slider-thumb-size);
+  width: var(--slider-thumb-size);
+  background: var(--eds-theme-color-text-neutral-default-inverse);
+  border: var(--eds-border-width-md) solid
+    var(--eds-theme-color-border-neutral-default);
+  border-radius: var(--eds-border-radius-full);
+
+  margin-top: calc(
+    var(--slider-track-height) / 2 - var(--slider-thumb-size) / 2
+  ); /* Centers thumb on the track */
+}
+/* Chrome, Safari, Edge Chromium Focus */
+.slider__input:focus-visible::-webkit-slider-thumb {
+  @mixin focus;
+}
+@supports not selector(:focus-visible) {
+  .slider__input:focus::-webkit-slider-thumb {
+    @mixin focus;
+  }
 }
 
 /*
@@ -81,30 +101,6 @@
 }
 @supports not selector(:focus-visible) {
   .slider__input:focus::-moz-range-thumb {
-    @mixin focus;
-  }
-}
-/* Chrome, Safari, Edge Chromium */
-.slider__input::-webkit-slider-thumb {
-  appearance: none;
-
-  height: var(--slider-thumb-size);
-  width: var(--slider-thumb-size);
-  background: var(--eds-theme-color-text-neutral-default-inverse);
-  border: var(--eds-border-width-md) solid
-    var(--eds-theme-color-border-neutral-default);
-  border-radius: var(--eds-border-radius-full);
-
-  margin-top: calc(
-    var(--slider-track-height) / 2 - var(--slider-thumb-size) / 2
-  ); /* Centers thumb on the track */
-}
-/* Chrome, Safari, Edge Chromium Focus */
-.slider__input:focus-visible::-webkit-slider-thumb {
-  @mixin focus;
-}
-@supports not selector(:focus-visible) {
-  .slider__input:focus::-webkit-slider-thumb {
     @mixin focus;
   }
 }
