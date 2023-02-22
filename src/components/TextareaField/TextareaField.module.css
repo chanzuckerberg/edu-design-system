@@ -1,0 +1,21 @@
+/*------------------------------------*\
+    # TEXTAREA FIELD
+\*------------------------------------*/
+
+/**
+ * Wraps the Label and the optional/required indicator.
+ */
+.textarea-field__overline {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--eds-size-half);
+  color: var(--eds-theme-color-form-label);
+}
+
+.textarea-field__overline--no-label {
+  justify-content: flex-end;
+}
+
+.textarea-field__overline--disabled {
+  color: var(--eds-theme-color-text-disabled);
+}
