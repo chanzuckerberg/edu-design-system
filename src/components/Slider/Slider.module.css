@@ -36,6 +36,16 @@
 .slider__input:focus {
   outline: none;
 }
+.slider__input:disabled {
+  --slider-track-background: linear-gradient(
+    /* fill from left to right */ to right,
+    /* fill color */ var(--eds-theme-color-background-disabled)
+      /* percent to fill */ calc(var(--ratio) * 100%),
+    /* unfilled color */ var(--eds-theme-color-background-neutral-medium)
+      /* don't blend the colors */ 0
+  );
+  cursor: not-allowed;
+}
 
 /* 
  * Chrome, Safari, Edge Chromium
@@ -71,6 +81,12 @@
     var(--slider-track-height) / 2 - var(--slider-thumb-size) / 2
   ); /* Centers thumb on the track */
 }
+.slider__input:not(:disabled)::-webkit-slider-thumb {
+  cursor: grab;
+}
+.slider__input:not(:disabled)::-webkit-slider-thumb:active {
+  cursor: grabbing;
+}
 /* Chrome, Safari, Edge Chromium Focus */
 .slider__input:focus-visible::-webkit-slider-thumb {
   @mixin focus;
@@ -94,6 +110,12 @@
   border: var(--eds-border-width-md) solid
     var(--eds-theme-color-border-neutral-default);
   border-radius: var(--eds-border-radius-full);
+}
+.slider__input:not(:disabled)::-moz-range-thumb {
+  cursor: grab;
+}
+.slider__input:not(:disabled)::-moz-range-thumb:active {
+  cursor: grabbing;
 }
 /* Firefox Focus */
 .slider__input:focus-visible::-moz-range-thumb {

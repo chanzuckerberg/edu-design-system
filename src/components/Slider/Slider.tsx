@@ -17,6 +17,10 @@ export type Props = {
    */
   className?: string;
   /**
+   * Disables the slider and prevents change.
+   */
+  disabled?: boolean;
+  /**
    * HTML id for the component
    */
   id?: string;
