@@ -394,13 +394,17 @@ exports[`<Select /> DefaultWithVisibleLabel story renders snapshot 1`] = `
   data-headlessui-state="open"
   data-testid="dropdown"
 >
-  <label
-    class="label"
-    data-headlessui-state="open"
-    id="headlessui-listbox-label-:r5:"
+  <div
+    class="select__overline"
   >
-    Favorite Animal
-  </label>
+    <label
+      class="select__label"
+      data-headlessui-state="open"
+      id="headlessui-listbox-label-:r5:"
+    >
+      Favorite Animal
+    </label>
+  </div>
   <button
     aria-controls="headlessui-listbox-options-:r7:"
     aria-expanded="true"
@@ -596,13 +600,17 @@ exports[`<Select /> UsingChildrenProp story renders snapshot 1`] = `
   data-headlessui-state="open"
   data-testid="dropdown"
 >
-  <label
-    class="label"
-    data-headlessui-state="open"
-    id="headlessui-listbox-label-:rq:"
+  <div
+    class="select__overline"
   >
-    Favorite Animal
-  </label>
+    <label
+      class="select__label"
+      data-headlessui-state="open"
+      id="headlessui-listbox-label-:rq:"
+    >
+      Favorite Animal
+    </label>
+  </div>
   <button
     aria-controls="headlessui-listbox-options-:rs:"
     aria-expanded="true"
