@@ -63,6 +63,25 @@ export const NoVisibleLabel: StoryObj<Args> = {
   render: (args) => <InteractiveSlider {...args} />,
 };
 
+export const MarkersSmallValues: StoryObj<Args> = {
+  args: {
+    label: 'Slider Label',
+    min: 1,
+    max: 5,
+    value: 3,
+    markers: ['1', '2', '3', '4', '5'],
+  },
+  render: (args) => <InteractiveSlider {...args} />,
+};
+
+export const MarkersLargeValues: StoryObj<Args> = {
+  args: {
+    label: 'Slider Label',
+    markers: ['0', '25', '50', '75', '100'],
+  },
+  render: (args) => <InteractiveSlider {...args} />,
+};
+
 // For visual regression test
 export const Focus: StoryObj<Args> = {
   args: {

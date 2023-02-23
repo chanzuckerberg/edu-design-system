@@ -29,9 +29,9 @@ export type Props = {
    */
   label?: string;
   /**
-   * Function that runs on change of the input
+   * List of markers to imply slider value.
    */
-  onChange?: ChangeEventHandler<HTMLInputElement>;
+  markers?: string[];
   /**
    * Maximum value allowed for the slider.
    */
@@ -40,6 +40,10 @@ export type Props = {
    * Minimum value allowed for the slider.
    */
   min: number;
+  /**
+   * Function that runs on change of the input
+   */
+  onChange?: ChangeEventHandler<HTMLInputElement>;
   /**
    * Amount to increment each step by.
    */
@@ -65,6 +69,7 @@ export const Slider = ({
   className,
   id,
   label,
+  markers,
   max,
   min,
   value,
@@ -94,6 +99,18 @@ export const Slider = ({
         value={value}
         {...other}
       />
+      {markers && (
+        <datalist className={styles['slider__datalist']}>
+          {markers.map((marker) => (
+            <option
+              className={styles['slider__option']}
+              key={'slider-option-' + marker}
+            >
+              {marker}
+            </option>
+          ))}
+        </datalist>
+      )}
     </div>
   );
 };

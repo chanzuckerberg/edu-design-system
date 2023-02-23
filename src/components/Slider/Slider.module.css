@@ -129,3 +129,17 @@
     @mixin focus;
   }
 }
+
+/**
+ * Slider Markers below the track
+ */
+.slider__datalist {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.slider__option {
+  @mixin eds-theme-typography-caption-text-sm;
+  color: var(--eds-theme-color-text-neutral-subtle);
+}
