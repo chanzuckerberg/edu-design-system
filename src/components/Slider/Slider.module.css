@@ -10,15 +10,18 @@
 .slider {
   display: flex;
   flex-direction: column;
-  gap: var(--eds-size-2-and-half);
+  gap: var(--eds-size-1-and-half);
 }
 
 /**
  * Slider Input
  */
 .slider__input {
+  /* increases vertical hitbox for target size accessibility */
+  padding-top: 22px;
+  padding-bottom: 22px;
   --slider-track-height: var(--eds-size-1);
-  --slider-thumb-size: var(--eds-size-2-and-half);
+  --slider-thumb-size: var(--eds-size-3);
   /* fills left side of track as a percentage of the input value */
   --slider-track-background: linear-gradient(
     /* fill from left to right */ to right,

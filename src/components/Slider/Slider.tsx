@@ -55,6 +55,7 @@ export type Props = {
  *
  * `import {Slider} from "@chanzuckerberg/eds";`
  *
+ * Allows input of a value via dragging a thumb along a track.
  * Strict: This slider requires a visual indicator of value/markers.
  * Please check out our recipes for possible ideas.
  *
