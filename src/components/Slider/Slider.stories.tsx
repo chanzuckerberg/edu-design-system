@@ -1,5 +1,6 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import type { StoryObj, Meta } from '@storybook/react';
+import { userEvent } from '@storybook/testing-library';
 import React, { useState } from 'react';
 
 import { Slider } from './Slider';
@@ -11,6 +12,13 @@ export default {
     layout: 'centered',
     badges: [BADGE.BETA],
   },
+  decorators: [
+    (Story) => (
+      <div className="w-96">
+        <Story />
+      </div>
+    ),
+  ],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Slider>;
@@ -40,9 +48,28 @@ export const Default: StoryObj<Args> = {
   render: (args) => <InteractiveSlider {...args} />,
 };
 
+export const Disabled: StoryObj<Args> = {
+  args: {
+    label: 'Slider Label',
+    disabled: true,
+  },
+  render: (args) => <InteractiveSlider {...args} />,
+};
+
 export const NoVisibleLabel: StoryObj<Args> = {
   args: {
     'aria-label': 'Not visible slider label',
   },
   render: (args) => <InteractiveSlider {...args} />,
+};
+
+// For visual regression test
+export const Focus: StoryObj<Args> = {
+  args: {
+    label: 'Slider Label',
+  },
+  render: (args) => <InteractiveSlider {...args} />,
+  play: () => {
+    userEvent.tab();
+  },
 };
