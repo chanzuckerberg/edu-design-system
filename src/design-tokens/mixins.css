@@ -153,11 +153,6 @@
   }
 }
 
-@define-mixin labelStyles {
-  @mixin eds-theme-typography-form-label;
-  display: inline-block;
-}
-
 @define-mixin placeholderStyles {
   color: var(--eds-theme-color-text-disabled);
 }

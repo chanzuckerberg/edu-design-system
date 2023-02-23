@@ -229,9 +229,12 @@ const SelectContext = React.createContext<{
 const SelectLabel = (props: { className?: string; children: ReactNode }) => {
   const { children, className } = props;
 
-  const componentClassName = clsx(styles['label'], className);
+  const componentClassName = clsx(styles['select__label'], className);
+  const overlineClassName = clsx(styles['select__overline']);
   return (
-    <Listbox.Label className={componentClassName}>{children}</Listbox.Label>
+    <div className={overlineClassName}>
+      <Listbox.Label className={componentClassName}>{children}</Listbox.Label>
+    </div>
   );
 };
 
