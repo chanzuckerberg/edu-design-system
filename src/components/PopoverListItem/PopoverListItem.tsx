@@ -1,10 +1,10 @@
 import clsx from 'clsx';
 import React from 'react';
 import type { ReactNode } from 'react';
-import styles from './PopoverListItem.module.css';
 
 import Icon from '../Icon';
 import type { IconName } from '../Icon';
+import styles from './PopoverListItem.module.css';
 
 export interface Props {
   /**

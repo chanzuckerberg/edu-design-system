@@ -19,7 +19,7 @@
   width: 100%;
 }
 
-.menu__button.menu__button {
+.menu__button {
   @mixin eds-theme-typography-body-text-md;
 
   color: var(--eds-theme-text-neutral-subtle);
@@ -29,7 +29,7 @@
 }
 
 /* Needed to create higher specificity than ClickableStyle. */
-.menu__button--icon.menu__button--icon.menu__button--icon.menu__button--icon {
+.menu__button--icon {
   color: var(--eds-theme-color-icon-neutral-default);
 }
 

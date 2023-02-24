@@ -1,9 +1,9 @@
 import clsx from 'clsx';
 import React from 'react';
 import type { ReactNode, MouseEventHandler } from 'react';
-import styles from './TableHeaderCell.module.css';
 import Button from '../Button';
 import Icon from '../Icon';
+import styles from './TableHeaderCell.module.css';
 
 export type Props = React.ThHTMLAttributes<HTMLTableCellElement> & {
   /**

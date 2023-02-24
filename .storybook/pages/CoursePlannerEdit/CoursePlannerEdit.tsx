@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import styles from './CoursePlannerEdit.module.css';
 
 import ProjectCard from './ProjectCard';
 
@@ -31,6 +30,7 @@ import CardWithNotification from '../../recipes/CardWithNotification';
 import TableCard from '../../recipes/TableCard';
 
 import EmptyImage from '../../static/hand-pencil.svg';
+import styles from './CoursePlannerEdit.module.css';
 
 const CognitiveSkillColumns = [
   {

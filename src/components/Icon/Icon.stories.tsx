@@ -1,11 +1,11 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 import { Icon } from './Icon';
-import styles from './Icon.stories.module.css';
 import icons, { type IconName } from '../../icons/spritemap';
 import * as ColorTokens from '../../tokens-dist/ts/colors';
 import Link from '../Link';
 import Text from '../Text';
+import styles from './Icon.stories.module.css';
 
 export default {
   title: 'Components/Icon',

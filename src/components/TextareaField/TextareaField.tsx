@@ -1,11 +1,11 @@
 import clsx from 'clsx';
 import type { ReactNode } from 'react';
 import React, { forwardRef, useId } from 'react';
-import styles from './TextareaField.module.css';
 import FieldNote from '../FieldNote';
 import Label from '../Label';
 import Text from '../Text';
 import TextArea from '../TextArea';
+import styles from './TextareaField.module.css';
 
 export type Props = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
   /**

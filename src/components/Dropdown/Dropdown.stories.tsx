@@ -5,9 +5,9 @@ import clsx from 'clsx';
 import React from 'react';
 import type { OptionsAlignType, VariantType } from './Dropdown';
 import { Dropdown } from './Dropdown';
-import styles from './Dropdown.stories.module.css';
 import DropdownButton from '../DropdownButton';
 import Icon from '../Icon';
+import styles from './Dropdown.stories.module.css';
 
 export default {
   title: 'Components/Dropdown',

@@ -1,7 +1,6 @@
 import clsx from 'clsx';
 import type { ReactNode } from 'react';
 import React from 'react';
-import styles from './ProjectCard.module.css';
 
 import {
   Card,
@@ -15,6 +14,7 @@ import {
 import type { HeadingElement } from '../../../../src/components/Heading';
 
 import type { IconName } from '../../../../src/components/Icon';
+import styles from './ProjectCard.module.css';
 
 export interface Props {
   /**

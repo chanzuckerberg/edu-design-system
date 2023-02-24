@@ -1,9 +1,9 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 import { Checkbox } from './Checkbox';
-import styles from './Checkbox.stories.module.css';
 import CheckboxInput from '../CheckboxInput';
 import CheckboxLabel from '../CheckboxLabel';
+import styles from './Checkbox.stories.module.css';
 
 const defaultArgs = {
   disabled: false,

@@ -1,10 +1,10 @@
 import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 import { Section } from './Section';
-import styles from './Section.stories.module.css';
 import Button from '../Button';
 import Icon from '../Icon';
 import Text from '../Text';
+import styles from './Section.stories.module.css';
 
 export default {
   title: 'Components/Section',

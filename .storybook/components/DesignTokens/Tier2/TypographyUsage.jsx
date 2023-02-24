@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import styles from './TypographyUsage.module.css';
 import { Grid, Section } from '../../../../src';
 import { TokenSpecimen } from '../../TokenSpecimen/TokenSpecimen';
 import { PRESET_SIZE_MAP } from '../Tier1/TypographyPresets';
+import styles from './TypographyUsage.module.css';
 
 export class Tier2TypographyUsage extends Component {
   render() {

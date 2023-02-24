@@ -4,10 +4,10 @@ import React from 'react';
 import type { DroppableProvided } from 'react-beautiful-dnd';
 import { Droppable } from 'react-beautiful-dnd';
 import { oneByType } from 'react-children-by-type';
-import styles from '../DragDrop/DragDrop.module.css';
 import type { ContainerType, ItemType } from '../DragDrop/DragDropTypes';
 import DragDropContainerHeader from '../DragDropContainerHeader';
 import DragDropItem from '../DragDropItem';
+import styles from '../DragDrop/DragDrop.module.css';
 
 export interface Props {
   /**

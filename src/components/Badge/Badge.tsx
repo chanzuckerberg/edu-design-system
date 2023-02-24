@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 import React from 'react';
-import styles from './Badge.module.css';
 import Icon from '../Icon';
 import type { IconName, IconProps } from '../Icon';
+import styles from './Badge.module.css';
 
 type BadgeProps = {
   /**
