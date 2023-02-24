@@ -2,40 +2,221 @@
 
 exports[`<Slider /> Default story renders snapshot 1`] = `
 <div
-  class="slider"
+  class="w-96"
 >
-  <label
-    class="label"
-    for=":r0:"
+  <div
+    class="slider"
   >
-    Slider Label
-     
-  </label>
-  <input
-    class="slider__input"
-    id=":r0:"
-    max="100"
-    min="0"
-    style="--ratio: 0.5;"
-    type="range"
-    value="50"
-  />
+    <label
+      class="label"
+      for=":r0:"
+    >
+      Slider Label
+       
+    </label>
+    <input
+      class="slider__input"
+      id=":r0:"
+      max="100"
+      min="0"
+      step="1"
+      style="--ratio: 0.5;"
+      type="range"
+      value="50"
+    />
+  </div>
+</div>
+`;
+
+exports[`<Slider /> Disabled story renders snapshot 1`] = `
+<div
+  class="w-96"
+>
+  <div
+    class="slider"
+  >
+    <label
+      class="label"
+      for=":r1:"
+    >
+      Slider Label
+       
+    </label>
+    <input
+      class="slider__input"
+      disabled=""
+      id=":r1:"
+      max="100"
+      min="0"
+      step="1"
+      style="--ratio: 0.5;"
+      type="range"
+      value="50"
+    />
+  </div>
+</div>
+`;
+
+exports[`<Slider /> Focus story renders snapshot 1`] = `
+<div
+  class="w-96"
+>
+  <div
+    class="slider"
+  >
+    <label
+      class="label"
+      for=":r5:"
+    >
+      Slider Label
+       
+    </label>
+    <input
+      class="slider__input"
+      id=":r5:"
+      max="100"
+      min="0"
+      step="1"
+      style="--ratio: 0.5;"
+      type="range"
+      value="50"
+    />
+  </div>
+</div>
+`;
+
+exports[`<Slider /> MarkersLargeValues story renders snapshot 1`] = `
+<div
+  class="w-96"
+>
+  <div
+    class="slider"
+  >
+    <label
+      class="label"
+      for=":r4:"
+    >
+      Slider Label
+       
+    </label>
+    <input
+      class="slider__input"
+      id=":r4:"
+      max="1000"
+      min="0"
+      step="250"
+      style="--ratio: 0.5;"
+      type="range"
+      value="500"
+    />
+    <div
+      class="slider__markers"
+    >
+      <p
+        class="slider__option"
+      >
+        0
+      </p>
+      <p
+        class="slider__option"
+      >
+        250
+      </p>
+      <p
+        class="slider__option"
+      >
+        500
+      </p>
+      <p
+        class="slider__option"
+      >
+        750
+      </p>
+      <p
+        class="slider__option"
+      >
+        1000
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Slider /> MarkersSmallValues story renders snapshot 1`] = `
+<div
+  class="w-96"
+>
+  <div
+    class="slider"
+  >
+    <label
+      class="label"
+      for=":r3:"
+    >
+      Slider Label
+       
+    </label>
+    <input
+      class="slider__input"
+      id=":r3:"
+      max="5"
+      min="1"
+      step="1"
+      style="--ratio: 0.5;"
+      type="range"
+      value="3"
+    />
+    <div
+      class="slider__markers"
+    >
+      <p
+        class="slider__option"
+      >
+        1
+      </p>
+      <p
+        class="slider__option"
+      >
+        2
+      </p>
+      <p
+        class="slider__option"
+      >
+        3
+      </p>
+      <p
+        class="slider__option"
+      >
+        4
+      </p>
+      <p
+        class="slider__option"
+      >
+        5
+      </p>
+    </div>
+  </div>
 </div>
 `;
 
 exports[`<Slider /> NoVisibleLabel story renders snapshot 1`] = `
 <div
-  class="slider"
+  class="w-96"
 >
-  <input
-    aria-label="Not visible slider label"
-    class="slider__input"
-    id=":r1:"
-    max="100"
-    min="0"
-    style="--ratio: 0.5;"
-    type="range"
-    value="50"
-  />
+  <div
+    class="slider"
+  >
+    <input
+      aria-label="Not visible slider label"
+      class="slider__input"
+      id=":r2:"
+      max="100"
+      min="0"
+      step="1"
+      style="--ratio: 0.5;"
+      type="range"
+      value="50"
+    />
+  </div>
 </div>
 `;
