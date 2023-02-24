@@ -1,6 +1,5 @@
 import clsx from 'clsx';
 import React from 'react';
-import styles from './CoursePlannerStep1.module.css';
 
 import {
   Button,
@@ -19,6 +18,7 @@ import {
 } from '../../../src';
 
 import CompassCenter from '../../static/compass-center.svg';
+import styles from './CoursePlannerStep1.module.css';
 
 export const CoursePlannerStep1 = () => {
   const textClassName = clsx(styles['course-planner-step1__text'], '!mb-2');

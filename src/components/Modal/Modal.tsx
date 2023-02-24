@@ -2,7 +2,6 @@ import { Dialog, Transition } from '@headlessui/react';
 import clsx from 'clsx';
 import type { MutableRefObject, ReactNode } from 'react';
 import React from 'react';
-import styles from './Modal.module.css';
 import { Icon } from '../Icon/Icon';
 import type { Props as ModalBodyProps } from '../ModalBody/ModalBody';
 import { ModalBody } from '../ModalBody/ModalBody';
@@ -12,6 +11,7 @@ import type { Props as ModalHeaderProps } from '../ModalHeader/ModalHeader';
 import { ModalHeader } from '../ModalHeader/ModalHeader';
 import { ModalStepper } from '../ModalStepper/ModalStepper';
 import { ModalTitle } from '../ModalTitle/ModalTitle';
+import styles from './Modal.module.css';
 
 type Variant = 'brand' | undefined;
 

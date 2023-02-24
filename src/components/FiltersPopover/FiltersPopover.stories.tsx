@@ -6,9 +6,9 @@ import React from 'react';
 
 import type { FiltersPopoverProps } from './FiltersPopover';
 import { FiltersPopover } from './FiltersPopover';
-import styles from './FiltersPopover.stories.module.css';
 import { Checkbox } from '../Checkbox/Checkbox';
 import { FiltersCheckboxField } from '../FiltersCheckboxField/FiltersCheckboxField';
+import styles from './FiltersPopover.stories.module.css';
 
 export default {
   title: 'Components/FiltersPopover',

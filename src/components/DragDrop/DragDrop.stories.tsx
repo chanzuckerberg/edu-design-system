@@ -3,8 +3,6 @@ import type { ComponentProps } from 'react';
 import React, { useState } from 'react';
 import type { NewState } from './DragDrop';
 import { DragDrop } from './DragDrop';
-import styles from './DragDrop.stories.module.css';
-
 import {
   Button,
   Card,
@@ -14,6 +12,7 @@ import {
   Text,
   Toolbar,
 } from '../..';
+import styles from './DragDrop.stories.module.css';
 
 export default {
   title: 'Components/Drag and Drop',

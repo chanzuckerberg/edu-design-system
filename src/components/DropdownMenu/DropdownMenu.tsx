@@ -6,7 +6,6 @@ import type {
   MouseEventHandler,
 } from 'react';
 import React, { createContext, useRef, useEffect } from 'react';
-import styles from './DropdownMenu.module.css';
 import {
   L_ARROW_KEYCODE,
   U_ARROW_KEYCODE,
@@ -17,6 +16,7 @@ import {
   END_KEYCODE,
   TAB_KEYCODE,
 } from '../../util/keycodes';
+import styles from './DropdownMenu.module.css';
 
 // This component is deprecated and will be replaced by the Menu component
 export type Props = {

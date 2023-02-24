@@ -3,7 +3,6 @@ import clsx from 'clsx';
 import React from 'react';
 import type { MouseEventHandler } from 'react';
 
-import styles from './Menu.module.css';
 import type { ExtractProps } from '../../util/utility-types';
 
 import ClickableStyle from '../ClickableStyle';
@@ -11,6 +10,7 @@ import Icon from '../Icon';
 import type { IconName } from '../Icon';
 import PopoverContainer from '../PopoverContainer';
 import PopoverListItem from '../PopoverListItem';
+import styles from './Menu.module.css';
 
 // Note: added className here to prevent private interface collision within HeadlessUI
 export type MenuProps = ExtractProps<typeof HeadlessMenu> & {

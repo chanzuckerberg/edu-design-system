@@ -5,8 +5,8 @@ import clsx from 'clsx';
 import React from 'react';
 import type { OptionsAlignType, VariantType } from './Select';
 import { Select } from './Select';
-import styles from './Select.stories.module.css';
 import Icon from '../Icon';
+import styles from './Select.stories.module.css';
 
 export default {
   title: 'Components/Select',

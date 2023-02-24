@@ -4,10 +4,10 @@ import type { ReactNode } from 'react';
 import React from 'react';
 import { useState } from 'react';
 import { Modal, ModalContent } from './Modal';
-import styles from './Modal.stories.module.css';
 import { Button, ButtonGroup, Heading, Text, Tooltip } from '../../';
 import { chromaticViewports, storybookViewports } from '../../util/viewports';
 import { VARIANTS } from '../Heading/Heading';
+import styles from './Modal.stories.module.css';
 
 export default {
   title: 'Components/Modal',

@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 import React from 'react';
-import styles from './BreadcrumbsItem.module.css';
 import ButtonDropdown from '../ButtonDropdown';
 import Icon from '../Icon';
+import styles from './BreadcrumbsItem.module.css';
 
 type Props = {
   /**

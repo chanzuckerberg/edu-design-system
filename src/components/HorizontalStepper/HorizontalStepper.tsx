@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React from 'react';
-import styles from './HorizontalStepper.module.css';
 import HorizontalStep from '../HorizontalStep';
+import styles from './HorizontalStepper.module.css';
 
 export type Props = {
   /**

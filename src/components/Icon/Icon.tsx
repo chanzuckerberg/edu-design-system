@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 import type { ReactNode, CSSProperties } from 'react';
 import React from 'react';
-import styles from './Icon.module.css';
 import icons, { type IconName } from '../../icons/spritemap';
+import styles from './Icon.module.css';
 
 export type { IconName } from '../../icons/spritemap';
 

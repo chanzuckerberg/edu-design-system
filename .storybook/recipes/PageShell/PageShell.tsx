@@ -1,10 +1,10 @@
 import clsx from 'clsx';
 import type { ReactNode } from 'react';
 import React from 'react';
-import styles from './PageShell.module.css';
 import { Link, Layout, LayoutContainer, LayoutSection } from '../../../src';
 
 import { GlobalHeader } from '../GlobalHeader/GlobalHeader';
+import styles from './PageShell.module.css';
 
 export interface Props {
   /**

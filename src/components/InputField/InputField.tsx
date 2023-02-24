@@ -1,11 +1,11 @@
 import clsx from 'clsx';
 import type { ChangeEventHandler, ReactNode } from 'react';
 import React, { forwardRef, useId } from 'react';
-import styles from './InputField.module.css';
 import FieldNote from '../FieldNote';
 import Input from '../Input';
 import Label from '../Label';
 import Text from '../Text';
+import styles from './InputField.module.css';
 
 export type Props = React.InputHTMLAttributes<HTMLInputElement> & {
   /**

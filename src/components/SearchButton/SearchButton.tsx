@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 import type { MouseEventHandler } from 'react';
 import React from 'react';
-import styles from './SearchButton.module.css';
 import Button from '../Button';
+import styles from './SearchButton.module.css';
 
 export type SearchButtonProps = {
   /**

@@ -1,10 +1,10 @@
 import clsx from 'clsx';
 import type { ReactNode } from 'react';
 import React from 'react';
-import styles from './Card.module.css';
 import CardBody from '../CardBody';
 import CardFooter from '../CardFooter';
 import CardHeader from '../CardHeader';
+import styles from './Card.module.css';
 
 export interface Props {
   /**

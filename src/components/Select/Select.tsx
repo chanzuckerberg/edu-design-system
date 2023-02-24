@@ -2,7 +2,6 @@ import { Listbox } from '@headlessui/react';
 import clsx from 'clsx';
 import type { ReactElement, ReactNode, ElementType } from 'react';
 import React, { useContext } from 'react';
-import styles from './Select.module.css';
 
 import type { ExtractProps } from '../../util/utility-types';
 
@@ -10,6 +9,7 @@ import Icon from '../Icon';
 
 import PopoverContainer from '../PopoverContainer';
 import PopoverListItem from '../PopoverListItem';
+import styles from './Select.module.css';
 
 export type OptionsAlignType = 'left' | 'right';
 export type VariantType = 'compact' | 'full';

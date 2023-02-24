@@ -1,9 +1,9 @@
 import clsx from 'clsx';
 import React, { type ReactNode, useEffect, useRef } from 'react';
-import styles from './BaselineCard.module.css';
 
 import { Card, CardBody, CardFooter, CardHeader, Score } from '../../../src';
 import type { Variant } from '../../../src/components/Score/Score';
+import styles from './BaselineCard.module.css';
 
 interface Metadata {
   /**

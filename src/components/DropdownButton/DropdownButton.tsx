@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 import type { ReactNode } from 'react';
 import React, { forwardRef } from 'react';
-import styles from './DropdownButton.module.css';
 import Icon from '../Icon';
+import styles from './DropdownButton.module.css';
 
 type Props = {
   /**
