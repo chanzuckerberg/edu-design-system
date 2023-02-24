@@ -146,7 +146,7 @@
 
 .slider__option {
   @mixin eds-theme-typography-caption-text-sm;
-  color: var(--eds-theme-color-text-neutral-subtle);
+  color: var(--eds-theme-color-text-neutral-default);
 
   /* Centers the text to the marker location */
   width: 0px;
