@@ -30,9 +30,15 @@ type Props = {
   optionsClassName?: string;
   variant?: VariantType;
   disabled?: boolean;
+  value?: SelectOption;
 };
 
-const exampleOptions = [
+type SelectOption = {
+  key: string;
+  label: string;
+};
+
+const exampleOptions: SelectOption[] = [
   {
     key: '1',
     label: 'Dogs',
@@ -48,11 +54,12 @@ const exampleOptions = [
 ];
 
 function InteractiveExampleUsingChildren(props: Props) {
-  const { variant, optionsAlign, optionsClassName, disabled } = props;
+  const { variant, optionsAlign, optionsClassName, disabled, value } = props;
   const compact = variant === 'compact';
 
-  const [selectedOption, setSelectedOption] =
-    React.useState<(typeof exampleOptions)[0]>();
+  const [selectedOption, setSelectedOption] = React.useState<
+    SelectOption | undefined
+  >(value);
 
   return (
     <div className={styles['interactive-example']}>
@@ -223,4 +230,17 @@ export const OpenByDefault: StoryObj = {
     // Reopen the dropdown; selecting an option closed it.
     await userEvent.click(dropdownButton);
   },
+};
+
+export const WithSelectedOption: StoryObj = {
+  args: {
+    value: exampleOptions[0],
+  },
+  render: ({ value }) => (
+    <InteractiveExampleUsingChildren
+      aria-label="Favorite Animal"
+      labelComponent={<Select.Label>Favorite Animal</Select.Label>}
+      value={value}
+    />
+  ),
 };
