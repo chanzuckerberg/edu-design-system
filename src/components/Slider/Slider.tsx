@@ -100,16 +100,16 @@ export const Slider = ({
         {...other}
       />
       {markers && (
-        <datalist className={styles['slider__datalist']}>
+        <div className={styles['slider__markers']}>
           {markers.map((marker) => (
-            <option
+            <p
               className={styles['slider__option']}
               key={'slider-option-' + marker}
             >
               {marker}
-            </option>
+            </p>
           ))}
-        </datalist>
+        </div>
       )}
     </div>
   );

@@ -8,6 +8,9 @@
  * Slider wrapping Label and Input
  */
 .slider {
+  --slider-track-height: var(--eds-size-1);
+  --slider-thumb-size: var(--eds-size-3);
+
   display: flex;
   flex-direction: column;
   gap: var(--eds-size-1-and-half);
@@ -20,8 +23,6 @@
   /* increases vertical hitbox for target size accessibility */
   padding-top: 22px;
   padding-bottom: 22px;
-  --slider-track-height: var(--eds-size-1);
-  --slider-thumb-size: var(--eds-size-3);
   /* fills left side of track as a percentage of the input value */
   --slider-track-background: linear-gradient(
     /* fill from left to right */ to right,
@@ -133,13 +134,22 @@
 /**
  * Slider Markers below the track
  */
-.slider__datalist {
+.slider__markers {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  /* Calculates offset of the markers to align with actual values */
+  padding-left: calc(var(--slider-thumb-size) / 2);
+  padding-right: calc(var(--slider-thumb-size) / 2);
 }
 
 .slider__option {
   @mixin eds-theme-typography-caption-text-sm;
   color: var(--eds-theme-color-text-neutral-subtle);
+
+  /* Centers the text to the marker location */
+  width: 0px;
+  display: flex;
+  justify-content: center;
 }

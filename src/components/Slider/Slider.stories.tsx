@@ -26,6 +26,7 @@ type Args = React.ComponentProps<typeof Slider>;
 const InteractiveSlider = ({
   min = 0,
   max = 100,
+  step = 1,
   value = 50,
   ...args
 }: Args) => {
@@ -34,6 +35,7 @@ const InteractiveSlider = ({
     <Slider
       max={max}
       min={min}
+      step={step}
       {...args}
       onChange={(e) => setSliderValue(Number(e.target.value))}
       value={sliderValue}
@@ -77,7 +79,11 @@ export const MarkersSmallValues: StoryObj<Args> = {
 export const MarkersLargeValues: StoryObj<Args> = {
   args: {
     label: 'Slider Label',
-    markers: ['0', '25', '50', '75', '100'],
+    min: 0,
+    max: 1000,
+    value: 500,
+    step: 250,
+    markers: ['0', '250', '500', '750', '1000'],
   },
   render: (args) => <InteractiveSlider {...args} />,
 };
