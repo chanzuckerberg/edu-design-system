@@ -34,34 +34,43 @@ export default {
 
 type Args = React.ComponentProps<typeof Checkbox>;
 
-/**
- * Controlled example to make checked stories interactive.
- */
-function CheckboxExample(args: Args) {
-  const [checked, setChecked] = React.useState<
-    boolean | 'indeterminate' | undefined
-  >(args.checked);
-  const handleChange = () => {
-    setChecked(!checked);
-  };
-
-  return <Checkbox checked={checked} onChange={handleChange} {...args} />;
-}
-
-export const Default: StoryObj<Args> = {
-  render: (args) => <CheckboxExample {...args} />,
-};
+export const Default: StoryObj<Args> = {};
 
 export const Checked: StoryObj<Args> = {
-  render: (args) => <CheckboxExample {...args} checked />,
+  ...Default,
+  args: {
+    checked: true,
+  },
 };
 
 export const Medium: StoryObj<Args> = {
-  render: (args) => <CheckboxExample {...args} size="md" />,
+  ...Default,
+  args: {
+    size: 'md',
+  },
 };
 
 export const MediumChecked: StoryObj<Args> = {
-  render: (args) => <CheckboxExample {...args} checked size="md" />,
+  ...Medium,
+  args: {
+    ...Checked.args,
+    ...Medium.args,
+  },
+};
+
+export const Large: StoryObj<Args> = {
+  ...Default,
+  args: {
+    size: 'lg',
+  },
+};
+
+export const LargeChecked: StoryObj<Args> = {
+  ...Large,
+  args: {
+    ...Checked.args,
+    ...Large.args,
+  },
 };
 
 export const Indeterminate: StoryObj<Args> = {
@@ -69,7 +78,6 @@ export const Indeterminate: StoryObj<Args> = {
     checked: 'indeterminate',
     readOnly: true,
   },
-  render: (args) => <CheckboxExample {...args} />,
 };
 
 export const Disabled: StoryObj<Args> = {
@@ -135,22 +143,11 @@ export const LongLabels = {
   },
 };
 
-function CheckboxInputExample() {
-  const [checked, setChecked] = React.useState<
-    boolean | 'indeterminate' | undefined
-  >(false);
-  const handleChange = () => {
-    setChecked(!checked);
-  };
-
-  return <CheckboxInput checked={checked} id="test" onChange={handleChange} />;
-}
-
 export const WithCustomPositioning = {
   render: () => (
     <div className="flex items-center">
       <CheckboxLabel htmlFor="test">Label on Left</CheckboxLabel>
-      <CheckboxInputExample />
+      <CheckboxInput id="test" />
     </div>
   ),
 };
